@@ -75,7 +75,7 @@ public class MyTestCase extends TestCase {
       that if a session test suite contains another session test suite (or any 
       other special types of test suite), the outer session test suite will rule.</p>
   </li>
-  <li><strong>Why do I get a <em>java.lang.IllegalArgumentException: Setup file 
+  <li><strong>Why do I get a <em>...SetupException: Setup file 
     '&lt;current dir&gt;/default-setup.xml' not found</em>?</strong>
     <p> You are running your session test suite as a regular <em>JUnit test</em> 
       instead of as a <em>Plug-in JUnit test</em>. A default setup (in other words, 
@@ -126,7 +126,8 @@ suite.setApplicationId(SessionTestSuite.UI_TEST_APPLICATION);</pre>
       Just look for the subclasses of <code>SessionTestSuite</code>.</p>
   </li>
   <li><strong>How do I configure a setup declaratively?</strong> 
-    <p>Look <a href="./default-setup.xml">here</a> for an example of a setup file.</p>
+    <p>Look <a href="./base-setup.xml">here</a> for an example of a base setup file and <a href="./user-setup.xml">here</a> 
+    for an example of a user setup file.</p>
   </li>
   <li><strong>How do I configure a setup programmaticaly?</strong> 
     <p>TBD</p>

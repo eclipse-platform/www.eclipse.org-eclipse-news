@@ -1,0 +1,45 @@
+<!-- 
+	Option sets are (as one can guess) sets of command line options for running Eclipse.
+	Named option sets must be explicitly selected to be used.
+	Unnamed ones are selected if the named option sets they require
+	are selected.
+	Option sets can extend other named option sets, inheriting all options from the ancestor.
+	A setup file can specify default option sets. Users can override the set of
+	default option sets by using the setup.optionSets property.
+	Setup files are specified by using the setup.files property.
+-->
+
+<setup>
+	<optionSet with="j9" name="J9 20040917">
+		<eclipseArg option="vm" value="d:\java\j9sc20040917\jre\bin\java"/>
+	</optionSet>	     
+
+	<optionSet name="Sun JDK 1.4.2_03" with="sun_1.4">
+		<eclipseArg option="vm" value="d:\java\sun jdk 1.4.2_03\jre\bin\java"/>
+	</optionSet>
+	
+	<optionSet name="Sun JDK 1.5.0" with="sun_1.5">
+		<eclipseArg option="vm" value="d:\java\sun jdk 1.5.0\jre\bin\java"/>
+	</optionSet>
+	
+	<optionSet name="Eclipse 3.0.0" with="eclipse_3.0.0">
+		<eclipseArg option="install" value="d:\eclipse\3.0.x\3.0\eclipse"/>
+	</optionSet>
+	<optionSet name="Eclipse 3.0.1" with="eclipse_3.0.1">
+		<eclipseArg option="install" value="d:\eclipse\3.0.x\3.0.1\eclipse"/>
+	</optionSet>	
+	<optionSet name="Eclipse 3.1 M1" with="eclipse_3.1_M1">
+		<eclipseArg option="install" value="d:\eclipse\3.1.x\m1\eclipse"/>
+	</optionSet>
+	<optionSet name="Eclipse 3.1 i20041019" with="eclipse_3.1">
+		<eclipseArg option="install" value="d:\eclipse\3.1.x\i20041019\eclipse"/>
+	</optionSet>	
+	
+	<optionSet with="basic_instance" name="Basic Instance">
+		<eclipseArg option="data" value="d:\temp\tests\basic tests"/>
+	</optionSet>	     
+	
+	<optionSet id="performance" name="Performance">	
+		<systemProperty key="perf_ctrl" value="dbloc=d:/temp/cloudscape;config=org.eclipse.core.tests.basic;build=base"/>
+	</optionSet>
+</setup>
