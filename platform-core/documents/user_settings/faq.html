@@ -1,0 +1,77 @@
+<title>User Settings: How-To</title>
+<h1>How do I...</h1>
+<p>...<a href="#get">get plug-in X's preferences</a>?</p>
+<p>...<a href="#set">set preference A on plug-in X's preferences</a>?</p>
+
+<hr>
+<h2><a name="get"></a>...get plug-in X's preferences?</h2>
+
+<h3>1. Through the backwards compatibility layer.</h3>
+<p>All the plug-in preference APIs which existed in Eclipse 2.1 still exist and 
+  are fully supported through a backwards compatibility layer.</p>
+<p> <code> <font size="-1"> org.eclipse.core.runtime.Preferences prefs = X.getPluginPreferences();<br>
+  int value = prefs.getInt(key);<br>
+  </font> </code> </p>
+<h3>2. Via navigation from the root node.</h3>
+<p>The new Eclipse preference mechanism is structured in a hierarchial means and 
+  therefore the user is able to retrieve the root of the hierarchy and navigate 
+  to the particular preference node that they desire. This is, of course, assuming 
+  the know the path structure of the node they are trying to retrieve.</p>
+<p> <code> <font size="-1"> String qualifier = X.getDescriptor().getUniqueIdentifier();<br>
+  IEclipsePreferences root = Platform.getPreferencesService().getRootNode();<br>
+  IEclipsePreferences node = root.node(Plugin.PLUGIN_PREFERENCE_SCOPE).node(qualifier);<br>
+  int value = node.getInt(key, defaultValue);<br>
+  </font> </code> </p>
+<h3>3a. Search through the preferences service. (manual lookup order)</h3>
+<p>Having preferences stored in a single location, although useful, is uninteresting 
+  compared to being able to store preferences in multiple scopes. If a user has 
+  a collection of multiple preference nodes that they would like to check for 
+  a particular preference value, then they are able to use the API on IPreferencesService 
+  to check the multiple nodes and return the first found value, or the specified 
+  default if it is not found.</p>
+<p> <code> <font size="-1"> IPreferencesService service = Platform.getPreferencesService();<br>
+  Preferences[] nodes = &lt;get the nodes&gt;;<br>
+  int value = service.get(key, defaultValue, nodes);<br>
+  </font> </code> </p>
+<h3>3b. Search through the preferences service. (default lookup order)</h3>
+<p>Navigation from the root node to other nodes in the preference hierarchy can 
+  be cumbersome so we expect most preference users to take advantage of this second 
+  API. It is a convenience method to the above method.</p>
+<p>First they set the scope lookup order (if none is specified then the default-default 
+  {project, instance, configuration, user, default} is used. </p>
+<p>Some scopes require extra context to determine which preference nodes are the 
+  right ones to look at. So if necessary, callers are able to create IScopeContext 
+  instances to aid in lookup. Note that these are not necessary for the &quot;instance&quot;, 
+  &quot;configuration&quot;, &quot;user&quot;, and &quot;default&quot; scopes.</p>
+<p> <code> <font size="-1"> String qualifier = X.getDescriptor().getUniqueIdentifier();<br>
+  IPreferencesService service = Platform.getPreferencesService();<br>
+  service.setDefaultLookupOrder(qualifier, key, new String[] {"project", "instance"});<br>
+  IScopeContext contexts = new IScopeContext[] {new ProjectScope(myProject)};<br>
+  int value = service.getInt(qualifier, key, defaultValue, contexts);<br>
+  </font> </code> </p>
+<hr>
+<h2><a name="set"></a>...set preference A on plug-in X's preferences?</h2>
+
+<h3>1. Through the backwards compatibility layer.</h3>
+<p>Again, all the old APIs exist and are fully functional.</p>
+<p> <code> <font size="-1"> org.eclipse.core.runtime.Preferences prefs = X.getPluginPreferences();<br>
+  prefs.setValue(key, value);<br>
+  </font> </code> </p>
+<h3>2. Via navigation from the root node.</h3>
+<p>If the user 1) knows which scope they wish to store the preference in and 2) 
+  knows the path structure for the hierarchy of that scope, then they are able 
+  to navigate directly to that preference node and set their preference value.</p>
+<p> <code> <font size="-1"> String qualifier = X.getDescriptor().getUniqueIdentifier();<br>
+  IEclipsePreferences root = Platform.getPreferencesService().getRootNode();<br>
+  IEclipsePreferences node = root.node(Plugin.PLUGIN_PREFERENCE_SCOPE).node(qualifier);<br>
+  node.putInt(key, value);<br>
+  </font> </code> </p>
+<h3>3. Through the scope context.</h3>
+<p>If the user knows which scope they wish to set the preference value in but 
+  doesn't know the path structure for that scope, then they can use the convenience 
+  methods in IScopeContext to determine the correct preference node. </p>
+<p> <code> <font size="-1"> String qualifier = X.getDescriptor().getUniqueIdentifier();<br>
+  IScopeContext context = new ProjectScope(MyProject);<br>
+  IEclipsePreferences node = context.getNode(qualifier);<br>
+  node.putInt(key, value);<br>
+  </font> </code> </p>
