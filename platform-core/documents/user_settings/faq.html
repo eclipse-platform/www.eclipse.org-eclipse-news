@@ -21,9 +21,9 @@ CODE { font-size: smaller }
 
   <tr>
     <td align="left" colspan="2"> 
-<script language="JavaScript">
-  document.write ("<p align='right'><i>    last updated: " + document.lastModified + "</i></p>")
-</script>
+		<script language="JavaScript">
+		  document.write ("<font size=-1><i>last updated: " + document.lastModified + "</i></font>")
+		</script>
 	</td>
   </tr>
 
@@ -52,11 +52,11 @@ CODE { font-size: smaller }
 	Nodes:
 	<ol>
 		<li><a href="#nodes">Why should I use nodes?</a></li>
-		<li>Why am I getting an IllegalStateException when calling APIs?</li>
+		<li><a href="#illegalStateException">Why am I getting an IllegalStateException when calling APIs?</a></li>
 	</ol>
 	Extensions:
 	<ol>
-        <li><a href="#extend">How do I extend the preferences and add my own scope?</a></li>
+        <li>How do I extend the preferences and add my own scope?</li>
 	</ol>
     </td>
   </tr>
@@ -486,21 +486,6 @@ Through the scope context.
   </tr>
   <tr> 
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../../Adarrow.gif" BORDER=0 height=16 width=16></td>
-    <td WIDTH="98%"><b><a name="extend"></a>How 
-      do I extend the preferences and add my own scope?</b></td>
-  </tr>
-  <tr>
-    <td width="2%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<td width="98%">
-	To be added...
-	</td>
-  </tr>
-
-  <tr> 
-    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2"><hr></td>
-  </tr>
-  <tr> 
-    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../../Adarrow.gif" BORDER=0 height=16 width=16></td>
     <td WIDTH="98%"><b><a name="flush"></a>When are my preference changes saved to disk?</b></td>
   </tr>
   <tr>
@@ -563,5 +548,32 @@ Through the scope context.
 	</td>
   </tr>
 
-
+  <tr> 
+    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2"><hr></td>
+  </tr>
+  <tr> 
+    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../../Adarrow.gif" BORDER=0 height=16 width=16></td>
+    <td WIDTH="98%"><b><a name="illegalStateException"></a>Why am I getting an IllegalStateException when calling APIs?</b></td>
+  </tr>
+  <tr>
+    <td width="2%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<td width="98%">
+		Since the Preferences APIs include the ability to add nodes to the hierarchy, they
+		also include methods to remove nodes from the hierarchy. If a node has been removed and
+		a client still has a reference to it, the client will get an
+		<code>IllegalStateException</code> when calling APIs on that node. The only valid methods
+		to call on a removed node are: <code>name(), absolutePath()</code> and <code>nodeExists()</code>.
+		<p>
+		If clients aren't sure whether or not their node may have been removed since the last
+		time they accessed it, they are encouraged to re-retrieve the node from the hierarchy.
+		</p><p>
+		<code>
+		if (!node.nodeExists(""))<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;node = service.getRootNode().node(node.absolutePath());<br>
+		</code>
+		</p>
+	</td>
+  </tr>
+  
+  
 </table>
