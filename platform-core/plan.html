@@ -58,11 +58,12 @@
         to do with workspace resources) so that a subset of it can be used as 
         a rich client platform for building applications. [Platform Core, Platform 
         UI, Platform Update] [Theme: Rich client platform] (bug <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=36967">36967</a>)</p>
-      <p>[plan item] <i>Provide user settings</i> - It should be possible to store 
-        user settings (preferences, compiler settings, repositories lists, etc.) 
-        that are not specific to a workspace separate from the workspace, so that 
-        they can be used in other workspaces or by other users. [Platform Core] 
-        [Themes: Rich client platform] (bug <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=36965">36965</a>)</p>
+      <p>[plan item] <i><a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-vcm-home/docs/online/team3.0/settings.html">Provide 
+        user settings</a></i> - It should be possible to store user settings (preferences, 
+        compiler settings, repositories lists, etc.) that are not specific to 
+        a workspace separate from the workspace, so that they can be used in other 
+        workspaces or by other users. [Platform Core] [Themes: Rich client platform] 
+        (bug <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=36965">36965</a>)</p>
       <p> [plan item] <i><a href="plan_xerces.html">Remove dependency on Xerces</a></i><a href="plan_xerces.html"> 
         </a>- The Xerces plug-in currently provides XML support for the Eclipse 
         platform. XML support is now incorporated into J2SE 1.4, and the presence 
@@ -162,17 +163,18 @@
         such as resource creation and copying. Eclipse should offer team providers 
         better control over resource operations. [Platform Core, Platform Team] 
         (bug <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=37722">37722</a>)</p>
-      <p>[plan item] <i>Support logical resources</i> - The Eclipse Platform supports 
-        a strong physical view of projects, files, and folders in the workspace. 
-        However, there are many situations where a physical view is not the most 
-        salient or useful for many purposes. In some cases, multiple distinct 
-        objects happen to be stored in a single file, like an archive. Conversely, 
-        in other cases, something that is logically a single object is stored 
-        across multiple files. This discrepancy between logical and physical creates 
-        problems for common operations such as searching, comparing, and versioning, 
-        which need to work in the physical realm. Eclipse should support some 
-        way of mapping between a logical view and the physical organization of 
-        files on disk. [Platform Core, Platform UI] (bug <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=37723">37723</a>)<br>
+      <p>[plan item] <i><a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-vcm-home/docs/online/team3.0/logical-physical.html">Support 
+        logical resources</a></i> - The Eclipse Platform supports a strong physical 
+        view of projects, files, and folders in the workspace. However, there 
+        are many situations where a physical view is not the most salient or useful 
+        for many purposes. In some cases, multiple distinct objects happen to 
+        be stored in a single file, like an archive. Conversely, in other cases, 
+        something that is logically a single object is stored across multiple 
+        files. This discrepancy between logical and physical creates problems 
+        for common operations such as searching, comparing, and versioning, which 
+        need to work in the physical realm. Eclipse should support some way of 
+        mapping between a logical view and the physical organization of files 
+        on disk. [Platform Core, Platform UI] (bug <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=37723">37723</a>)<br>
         <br>
       </p>
     </td>
@@ -282,7 +284,16 @@
     <td> 
       <p><b>Milestone Plans</b> </p>
       <p><i>Milestone 1 (3.0 M1) - June 6, 2003</i></p>
+	  <ul>
+	  <li>Investigation</li>
+	  <li>Planning</li>
+	  </ul>
+
       <p><i>Milestone 2 (3.0 M2) - July 18, 2003</i></p>
+	  <ul>
+	  <li>Concurrent Operations</li>
+	  <li>Dynamic Plug-ins</li>
+	  </ul>
       <p><i>Milestone 3 (3.0 M3) - August 29, 2003</i></p>
       <p><i>Milestone 4 (3.0 M4) - October 10, 2003</i></p>
       <p><i>Milestone 5 (3.0 M5) - November 21, 2003</i></p>
