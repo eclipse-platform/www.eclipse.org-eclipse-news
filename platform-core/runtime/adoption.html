@@ -1,0 +1,233 @@
+<html>
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<title>The Equinox Runtime - Adoption Guide</title>
+		<link rel="stylesheet" title="default" href="http://eclipse.org/default_style.css" type="text/css">
+		<style>
+			th,td { vertical-align:top; text-align=left}
+			.issue { font-style:oblique; width:200px;}
+			.box	{ background-color:#E0E0FF}
+		</style>
+	</head>
+	<body>
+		<table BORDER=0 CELLSPACING=5 CELLPADDING=2 WIDTH="100%" >
+			<tr> 
+				<td ALIGN=left width="60%">
+					<p><font class=indextop> equinox</font><br>
+        <font class=indexsub> adoption guide</font> </p>
+				</td>
+				<td WIDTH="40%">&nbsp; </td>
+			</tr>
+		</table>
+
+<blockquote> 
+  <p><b>Summary</b> <br>
+    This document details how to move from running the standard Eclipse runtime 
+    to using the new Equinox runtime. Any API changes are documented in the <a href="migration.html">Migration 
+    Guide</a> and information on how to use the new runtime is contained in the 
+    <a href="howto.html">Users Guide</a>.<br>
+    Last Modified: 2300 November 25, 2003</p>
+  <p><font color="#FF0000"><b>As of the nightly build on Nov 25, 2003, Eclipse 
+    includes the Equinox runtime as standard. That is, the original runtime has 
+    been replaced. M5 and the integration builds for Nov 25/26 still contain the 
+    original runtime. All later integration builds will contain the Equinox runtime.</b></font></p>
+</blockquote>
+
+<table border=0 cellspacing=0 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF"> 
+      Getting/installing the Equinox Runtime</font></b></td>
+  </tr>
+</table>
+<p>The Equinox project has developed an alternate runtime for Eclipse. Depending 
+  on the Eclipse build you are using the Equinox runtime may already be included. 
+  To check, look for a plug-in called org.eclipse.osgi in your install's plugins 
+  directory. If you have Equinox already, you can skip these steps.<br>
+</p>
+<p>The Equinox runtime is plug compatible with the standard Eclipse runtime subject 
+  to the changes detailed in the <a href="migration.html">Migration Guide</a>. 
+  To get, install and use the Equinox runtime, follow the steps below.</p>
+<ol>
+  <li><a href="http://eclipse.org/downloads/">Download</a> and unzip an Eclipse 
+    3.0 build from 20031111 or later</li>
+  <li><a href="http://dev.eclipse.org/viewcvs/indextech.cgi/%7Echeckout%7E/equinox-home/downloads.html">Download</a> 
+    the appropriate Equinox runtime and unzip over the previously installed Eclipse 
+    build. When prompted to overwrite, answer Yes to all.<br>
+    <b><font color="#FF0000"> Note that this destructively modifies the original 
+    Eclipse install.</font></b> The only option for reversing this operation is 
+    to re-unzip the original Eclipse installation.<br>
+  </li>
+  <li>Run Eclipse as normal<br>
+  </li>
+</ol>
+<table border=0 cellspacing=0 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF"> 
+      Setting up your workspace</font></b></td>
+  </tr>
+</table>
+<p>Users with existing workspaces should not encounter problems opening them with 
+  the Equinox runtme. However, since the runtime plug-in structure has changed, 
+  there some updating of classpaths may be required. In particular, developers 
+  setting up a runtime workspace (i.e., a workspace containing plug-ins) will 
+  need to either:</p>
+<ul>
+  <li>configure the target platform (Preferences-&gt;Plug-in Development-&gt;Target 
+    Platform) to include the required plug-ins and then use PDE &quot;required 
+    plugin&quot; classpath containers on their projects (recommended) or </li>
+  <li>add projects (binary or source) for the required plug-ins and setup explicit 
+    project dependencies for their projects</li>
+</ul>
+<p>Both of these can be accomplished using the PDE Tools-&gt;Update classpath 
+  project context menu. </p>
+<p>The following projects are needed (in addition to the normal set) :</p> 
+<ul>
+  <li>org.eclipse.osgi</li>
+  <li>org.eclipse.osgi.services</li>
+  <li>org.eclipse.osgi.util</li>
+  <li>org.eclipse.core.runtime.osgi</li>
+  <li>org.eclipse.core.runtime.compatibility</li>
+  <li>org.eclipse.update.configurator</li>
+</ul>
+<p>If you have an existing runtime workspace containing one of the following pre-existing 
+  plug-ins, it must be updated to accurately match their new contents</p>
+<ul>
+  <li>org.eclipse.core.boot</li>
+  <li>org.eclipse.core.runtime</li>
+</ul>
+<p>Note that org.eclipse.core.boot, org.eclipse.core.runtime and org.eclipse.core.runtime.compatibility 
+  are only required if your plug-in uses the old runtime API. If you have adopted 
+  the new API (see <a href="#updating">Updating your code</a>) then these projects/plug-ins 
+  are not needed.</p>
+<p>There should be no need to modify the launch configurations as the runtime 
+  is self-discovering.</p>
+<table border=0 cellspacing=0 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF"> 
+      Updating your build.xml files</font></b></td>
+  </tr>
+</table>
+<p>Developers maintaining scripts (e.g., Ant build.xml files) which compile code 
+  will most likely have to update the classpath entries for their &lt;javac&gt; 
+  tasks. In particular, a number of new plug-ins were introduced and some code 
+  moved around. For most people these changes are transparent. </p>
+<p>If you have custom build.xml scripts which compile code against <tt>org.eclipse.core.runtime</tt>, 
+  you will need to update the scripts. Typically your script will contain a classpath 
+  entry in a &lt;javac&gt; task that references <tt>org.eclipse.core.runtime</tt> 
+  as follows:</p>
+<pre>    ../org.eclipse.core.runtime/bin;../org.eclipse.core.runtime/runtime.jar</pre>
+<p>The runtime plug-in is now empty. The code has been replaced or moved to a 
+  number of other plug-ins/jars. While the complete set is listed below, typical 
+  uses require only a subset on the classpath at compile time. You should remove 
+  the runtime entries add the entries below as needed to make your &lt;javac&gt; 
+  tasks run without errors. As usual, the inclusion of the /bin directories is 
+  at your discretion. The entries are given here in logical groupings by supplying 
+  plug-in:</p>
+<ul>
+  <li>../org.eclipse.core.runtime.osgi/bin;../org.eclipse.core.runtime.osgi/runtime.jar;</li>
+  <li>../org.eclipse.core.runtime.compatibility/bin;../org.eclipse.core.runtime.compatibility/compatibility.jar;</li>
+  <li>../org.eclipse.osgi/bin;../org.eclipse.osgi/osgi.jar;../org.eclipse.osgi/core.jar; 
+    ../org.eclipse.osgi/resolver.jar;../org.eclipse.osgi/defaultAdaptor.jar; ../org.eclipse.osgi/eclipseAdaptor.jar;../org.eclipse.osgi/console.jar</li>
+  <li>../org.eclipse.update.configurator/bin;../org.eclipse.update.configurator/configurator.jar;</li>
+  <li>../org.eclipse.osgi.util/util.jar;</li>
+</ul>
+<p>While you are updating the script, you should also take the opportunity to 
+  clean up (i.e., remove) references to <tt>org.eclipse.core.boot</tt>. This plugin 
+  no longer contains any code. You can leave the entries on the classpath but 
+  they serve no purpose so should probably be removed. Look to remove:<br>
+</p>
+<pre>    ../org.eclipse.core.boot/bin;../org.eclipse.core.boot/boot.jar</pre>
+<table border=0 cellspacing=0 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF"> 
+      Getting the source</font></b></td>
+  </tr>
+</table>
+<p>Source is included in the Eclipse SDK drops as well as the Equinox alternative 
+  runtime drops. Developers can also browse the source in the CVS repository at:</p>
+<blockquote>
+  <p><a href="http://dev.eclipse.org/viewcvs/indextech.cgi/org.eclipse.equinox">http://dev.eclipse.org/viewcvs/index.cgi</a></p>
+</blockquote>
+<p>Or check-out the appropriate projects using anonymous access to the CVS repo 
+  as follows:</p>
+<blockquote>
+  <p>:pserver:anonymous@dev.eclipse.org/home/eclipse</p>
+</blockquote>
+<p></p>
+<p></p>
+<p>In either case, the projects of interest are listed below:</p>
+<ul>
+  <li>org.eclipse.core.applicationrunner</li>
+  <li>org.eclipse.core.runtime.osgi</li>
+  <li>org.eclipse.osgi</li>
+  <li>org.eclipse.osgi.services</li>
+  <li>org.eclipse.osgi.util</li>
+  <li>org.eclipse.update.configurator</li>
+</ul>
+<p>The following projects/plug-ins form the compatibility layer:</p>
+<ul>
+  <li>org.eclipse.core.boot</li>
+  <li>org.eclipse.core.runtime</li>
+  <li>org.eclipse.core.runtime.compatibility</li>
+</ul>
+<table border=0 cellspacing=0 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF"> 
+      <a name="updating"></a>Updating your code</font></b></td>
+  </tr>
+</table>
+<p>The new runtime is 99% binary compatible with the original Eclipse runtime. 
+  As such, <b>most existing plug-ins will continue to run unchanged.</b> </p>
+<p>Having said that, there are costs associated with the compatibilty layer and 
+  the full power of the new runtime is not available. Plug-in developers interested 
+  in additional performance and function should consider adopting the new APIs 
+  and removing their dependence on the compatibility layer.</p>
+<p>As outlined above, the following plug-ins are deprecated and are no longer 
+  part of the official runtime API:</p>
+<ul>
+  <li>org.eclipse.core.boot</li>
+  <li>org.eclipse.core.runtime</li>
+  <li>org.eclipse.core.runtime.compatibility</li>
+</ul>
+<p>All of the code in these plug-ins has been marked as deprecated so you should 
+  see compiler warnings if you are using the old function. If your code is typical 
+  and has not been migrated, you will see a number of the deprecations listed 
+  below. Also listed are the steps for updating your code to use the new API.</p>
+<h4>Class/Package name changes</h4>
+<p>In some cases it was necessary to rename packages and/or classes. Below are 
+  the mappings from orignal package/class to new package/class:</p>
+<h4>Method signature changes</h4>
+While we attempted to avoid gratuitous name changes, certain concepts and structures 
+were eliminated/changed such that references to their related terms had to be 
+removed from the API. This manifests itself in changes to method signatures (method 
+name, return type, argument count/types). The list below details the mapping from 
+original methods to new methods. 
+<h4>Model changes</h4>
+<p>Model changes are more fundamental. They represent a new way of doing something. 
+  Typically requiring new structures, new classes/methods and new algorithms.</p>
+<h4>Plugin registry</h4>
+<table border=0 cellspacing=0 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF"> 
+      Updating your plugin.xml/fragment.xml</font></b></td>
+  </tr>
+</table>
+<p>The new runtime is based on an implementation of the OSGi framework specification. 
+  The OSGi specificaiton mandates the use of manifest.mf files to define the execution 
+  of a plug-in. This conflicts with the Eclipse notion of plugin.xml as far as 
+  &lt;runtime&gt; and &lt;requires&gt; are concerned. To address this, the new 
+  runtime allows for either style of manifest.</p>
+<p>&nbsp;</p>
+<table border=0 cellspacing=0 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF"> 
+      Feedback</font></b></td>
+  </tr>
+</table>
+<p> Should you encounter any problems while using the Equinox runtime, you are 
+  encouraged to either log a bug report in the <a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Equinox">Equinox 
+  Bugzilla database</a> or make a posting to the Core <a href="http://dev.eclipse.org/mailman/listinfo/platform-core-dev">mailing 
+  list</a> or the Platform <a href="news://news.eclipse.org/eclipse.platform">newsgroup</a>. 
+</p>
+</body>
+</html>

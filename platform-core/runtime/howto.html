@@ -1,0 +1,92 @@
+<html>
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<title>The Equinox Runtime - Users Guide</title>
+		<link rel="stylesheet" title="default" href="http://eclipse.org/default_style.css" type="text/css">
+		<style>
+			th,td { vertical-align:top; text-align=left}
+			.issue { font-style:oblique; width:200px;}
+			.box	{ background-color:#E0E0FF}
+		</style>
+	</head>
+	<body>
+		<table BORDER=0 CELLSPACING=5 CELLPADDING=2 WIDTH="100%" >
+			<tr> 
+				<td ALIGN=left width="60%">
+					<p><font class=indextop> equinox</font><br>
+        <font class=indexsub> users guide</font> </p>
+				</td>
+				<td WIDTH="40%">&nbsp; </td>
+			</tr>
+		</table>
+
+<blockquote> 
+  <p><b>Summary</b> <br>
+    This document details how to run the new Equinox runtime. Information on migrating 
+    workspaces, code and general workspace setup can be found in the <a href="adoption.html">Adoption 
+    Guide</a>. <br>
+    Last Modified: 2300 November 25, 2003</p>
+</blockquote>
+
+<table border=0 cellspacing=0 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF"> 
+      Controlling the runtime</font></b></td>
+  </tr>
+</table>
+<p>Most of the command line arguments supported by the standard Eclipse runtime 
+  are supported in the new runtime. Any exceptions are listed below:</p>
+<p>&lt;exceptions here&gt;</p>
+<p>The runtime internals are have been reoriented somewhat to allow most aspects 
+  to be controlled via System properties (e.g., <tt>System.getProperties()</tt>). 
+  In general, any command line arguments are simply used to set the values of 
+  System properties. In fact, there are more System property settings than command 
+  line arguments. Users preferring to set properties rather than pass command 
+  line args can do so in the following ways:</p>
+<ul>
+  <li>use -DpropName=propValue as a VM argument to the Java VM</li>
+  <li>set the desired propert in the config.ini file in the appropriate configuration 
+    area (see <a href="#configurations">Configurations</a>)</li>
+  <li>set the appropriate OS envirionment variables</li>
+</ul>
+<p>The following System properties are observed by the runtime. Note that those 
+  starting with &quot;osgi&quot; are specific to the OSGi framework implementation 
+  while those starting with &quot;eclipse&quot; are particular to the Eclipse 
+  runtime layered on top of the OSGi framework.</p>
+<p>&nbsp;</p>
+<table border=0 cellspacing=0 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF"> 
+      <a name="configurations"></a>Configurations</font></b></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>Configurations</p>
+<p>configurators</p>
+<table border=0 cellspacing=0 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF"> 
+      Running out of jars</font></b></td>
+  </tr>
+</table>
+<p>running out of jars</p>
+<table border=0 cellspacing=0 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF"> 
+      The Console</font></b></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border=0 cellspacing=0 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF"> 
+      Feedback</font></b></td>
+  </tr>
+</table>
+<p> Should you encounter any problems while using the Equinox runtime, you are 
+  encouraged to either log a bug report in the <a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Equinox">Equinox 
+  Bugzilla database</a> or make a posting to the Core <a href="http://dev.eclipse.org/mailman/listinfo/platform-core-dev">mailing 
+  list</a> or the Platform <a href="news://news.eclipse.org/eclipse.platform">newsgroup</a>. 
+</p>
+</body>
+</html>
