@@ -43,9 +43,8 @@
     <td><p><strong>Current Status</strong></p>
       <p><em>July 21, 2003</em></p>
       <ul>
-        <li>We are still awaiting approval from the Open Source Committee as to 
-          whether or not we can include an XML Pull implementation in the SDK 
-          download</li>
+        <li>We are awaiting to see if we can get approval to include an XML Pull 
+          implementation in the SDK download</li>
         <li>Working out licensing issues with the developers of a particular XML 
           Pull implementation. (inconsistencies between code and web site)</li>
         <li>Have asked for the teams in the SDK to indicate where they use XML 
@@ -56,6 +55,19 @@
       <p><em>September 2, 2003</em></p>
       <ul>
         <li>Still waiting for approval before moving on.</li>
+      </ul>
+      <p><em>October 20, 2003</em></p>
+      <ul>
+        <li>Since Eclipse now requires a 1.4 VM, we have decided to program against 
+          the JAXP APIs for now rather than including a new XML Parser (like XML 
+          Pull) in the SDK.</li>
+        <li>Perhaps in the future we will switch to a highly performant parser 
+          in the Core Runtime to parse plugin.xml files.</li>
+        <li><a href="http://dev.eclipse.org/mhonarc/lists/eclipse-dev/msg04227.html">Message</a> 
+          sent to mailing list and newsgroup.</li>
+        <li>Core has removed their dependancy on Xerces and programmed against 
+          JAXP.</li>
+        <li>Other plug-ins in the SDK are following suit.</li>
       </ul></td>
   </tr>
   <tr> 
@@ -84,6 +96,12 @@
       <ul>
         <li>Get the code released into the repository. Still waiting on approval 
           before this can be done.</li>
+      </ul>
+      <p><em>3.0 M5 - November 21, 2003</em></p>
+      <ul>
+        <li>Remove dependancy on Xerces for all SDK plug-ins.</li>
+        <li>Remove Xerces plug-in from SDK download? Need approval from PMC before 
+          this can happen.</li>
       </ul></td>
   </tr>
 </table>
