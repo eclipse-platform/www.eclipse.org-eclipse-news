@@ -12,12 +12,63 @@
 <p>
 Users of the 2.1 method <tt>IWorkspace.run(IWorkspaceRunnable, IProgressMonitor)</tt>
 should revisit their uses of this method and consider using the richer method
-<tt>IWorkspace.run(IWorkspaceRunnable, ISchedulingRule, IProgressMonitor)</tt>.
+<tt>IWorkspace.run(IWorkspaceRunnable, ISchedulingRule, int, IProgressMonitor)</tt>.
 </p>
 <h4>Motivation</h4>
 <p>
 The old <tt>IWorkspace.run</tt> method acquires a lock on the entire workspace
-for the duration of the <tt>IWorkspaceRunnable</tt>.
+for the duration of the <tt>IWorkspaceRunnable</tt>.  This means that an operation
+run with this method will never be able to run concurrently with other operations that
+are changing the workspace.  In Eclipse 3.0, many long running operations have been
+moved into background threads, so the likelihood of conflicts between operations
+is greatly increased.  If a modal foreground operation is blocked by a long running
+background operation, the UI becomes blocked until the background operation
+completes, or until one of the operations is canceled.
+</p>
+<p>
+<h4>Solution</h4>
+<p>
+Switch all references to old <tt>IWorkspace.run</tt> to use new method with scheduling
+rule parameter.  The scheduling rule should be the most fine-grained resource that encompasses
+all changes by that operation.  If desired, a <tt>MultiRule</tt> can be used to specify
+multiple resource rules.  If the operation tries to modify resources outside of the scope
+of the scheduling rule, a runtime exception will occur. The following table summarizes 
+what scheduling rule is required for different types of resource operations:
+</p>
+<table BORDER CELLSPACING=2 CELLPADDING=2 >
+<th>Type of operation</th>
+<th>Rule required</th>
+<tr>
+<td>Create, modify, or delete file or folder</td>
+<td>Parent resource</td>
+</tr>
+<tr>
+<td>Create, delete, open or close project</td>
+<td>Project</td>
+</tr>
+<tr>
+<td>Change project description</td>
+<td>Workspace root</td>
+</tr>
+<tr>
+<td>Refresh local</td>
+<td>Resource</td>
+</tr>
+<tr>
+<td>Create, delete, or modify marker</td>
+<td><tt>null</tt></td>
+</tr>
+<tr>
+<td>Create, delete or modify sync info</td>
+<td>Resource</td>
+</tr>
+<tr>
+<td>Build workspace or project</td>
+<td>Workspace root</td>
+</tr>
+</table>
+
+
 
 
 
