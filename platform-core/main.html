@@ -54,75 +54,10 @@
   </tr>
   <tr> 
     <td> 
-      <p>Now that the 2.0 release and the 2.0.1 patch have been delivered, we are focusing on the 
-	  <a href="http://www.eclipse.org/eclipse/development/eclipse_project_plan_2_1.html">Eclipse 2.1</a> deliverable.
-	  Specifically, here are some of our goals for the next little while:</p>
-	  
-	  <p><a name="Milestone_Planning"></a><em>Milestone 1 (2.1 M1)</em> - September 20, 2002</p>
-      <ul>
-        <li>The rigid structure of projects in Eclipse is a problem with a lot of users' existing project layouts. 
-		See <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6664">bug 6664</a> for more information.
-		For this milestone we would like to have a proposal ready and posted to this web space for comment by the open source community.
-		Once posted, comments should be sent to the <a href="http://dev.eclipse.org/mailman/listinfo/platform-core-dev">platform-core-dev@eclipse.org</a> 
-		mailing list. <i>Note: this item has been pushed back to M2 with the creation of a new team to address the problem. See below for details.</i>
-		</li>
-		<li>Work towards building tools which will help with crash recovery and 
-          analysis of metadata files on disk.</li>
-        <li>General bug fixing.</li>
-      </ul>
-	  
-	  <p><em>Milestone 2 (2.1 M2)</em> - October 18, 2002</p>
-	  <ul>
-	  <li>Progress on the project structure problem has been made. A dynamic team has been formed and a "Problem Definition" document
-	  has been <a href="http://www.eclipse.org/eclipse/development/inflexible-projects-problem.html">posted</a> to eclipse.org. 
-	  The goal for M2 is to have the proposal (including solution) finalized and posted.</li>
-	  <li>Continued work on tools and examples. Check the <a href="dev.html">Development 
-       Resources</a> for progress...tools plug-ins will be posted there.</li>
-	  <li>General bug fixing and triage work on backlog of bugs in the Inbox.</li>
-	  </ul>
-	  
-	  <p><em>Milestone 3 (2.1 M3)</em> - November 15, 2002</p>
-	  <ul>
-	    <li>Project Structure - You've seen the links to the <a href="http://www.eclipse.org/eclipse/development/inflexible-projects-problem.html">problem 
-          definition</a> and <a href="http://www.eclipse.org/eclipse/development/towards-more-flexible-projects.html">possible 
-          solutions</a>. A third document with the <a href="http://www.eclipse.org/eclipse/development/flexible-projects-proposal.html">proposed 
-          solution</a> is now posted. The specific Platform/Core required work for M3 includes:
-		  <ul>
-            <li>new API for creating links to files and folders 
-            <li>javadoc changes to existing API (copy/move/delete) 
-            <li>ammended Natures doc - adding new attribute for veto-power 
-            <li>new API for workspace path variables to be used with linked resources
-            <li>new Team hook for link veto-power
-            <li>new API for mapping from a file-system location to workspace resource(s), 
-              and vice versa
-          </ul>		  
-        <li>Circular Build Dependancies - A dynamic team to address this problem has been created. The work required for the
-	  Platform/Core team for the M3 milestone consists of new API for computing the default project build order and a new
-	  algorithm for calculating the build order when there are cycles involved. (related bugs: 
-	  <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=25952">25952</a>,
-	  <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=10262">10262</a>) 
-	  <li>Features - A dynamic team consisting of Dean, Jeff, Dejan, Christophe, and DJ has been created to address all the problems
-	  that the Release Engineering team has with features. Once an appropriate solution has been identified, there will be 
-	  significant work in the PDE-Build component (which is owned by Platform/Core) for both the M3 and M4 milestones.
-	  <li>General Bug Fixing.
-	  </ul>
-	  
-	  <p><em>Milestone 4 (2.1 M4)</em> - December 13, 2002</p>
-	  <ul>
-	  <li>Project Structures - Finish up work related to flexible project layout. List includes multi-resource delta notification
-	  for over-lapping linked resources. (related bugs: <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=25993">25993</a>)
-	  <li>Classloader Performance - In M2 we put in a classloader performance enhancement in which the plug-in classloader
-	  used information in a file to determine whether or not it should look in itself for a particular class. We want to allow
-	  users to put this information in the mark-up in their plugin.xml files. (related bugs: <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=24667">24667</a>
-	  , <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=26011">26011</a>)
-	  <li>Continued progress on PDE-Build in the space related to the Features dynamic team.
-	  <li>New feature to allow local history to persist across certain refactoring actions. (related bug: 
-	  <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=24787">24787</a>)
-	  <li>General Bug Fixing
-	  </ul>
-	  <p>
-
-    </td>
+      <p><a name="Milestone_Planning"></a>Check out the <a href="plan.html">Core 
+        Component Planning</a> page for details of current work, milestone plans, 
+        and test plans.</p>
+      </td>
   </tr>
 </table>
 <table border=0 cellspacing=5 cellpadding=2 width="100%" >
