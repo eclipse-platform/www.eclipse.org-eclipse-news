@@ -1,0 +1,71 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.76 [en] (Windows NT 5.0; U) [Netscape]">
+   <title>RCP - Text Editor Example</title>
+</head>
+<body>
+
+<h2>
+<b>Example - RCP Text Editor</b></h2>
+
+<h3>
+Introduction</h3>
+The Text Editor Example shows how to integrate a text editor into an RCP 
+application with minimal effor.
+<h3>
+<b>Features demonstrated in the example rcp editor</b></h3>
+
+<ul>
+
+<li>
+creating a simple text editor application along the lines of the
+<a href="http://dev.eclipse.org/viewcvs/index.cgi/%7echeckout%7e/org.eclipse.ui.tutorials.rcp.part1/html/tutorial1.html">eclipse.org RCP tutorial</a>,</li>
+<li>
+implementation of a basic text editor based on <code>AbstractTextEditor</code>,</li>
+<li>
+implementation of a document provider based on <code>AbstractDocumentProvider</code> that operates on <code>IPath</code> as editor input,</li>
+<li>
+adding the most common actions to the application menu and toolbar,</li>
+<li>
+adding a simple xml editor based on the eclipse example project, offering syntax highlighting.</li>
+</ul>
+
+<h3>
+Running the example editor</h3>
+
+Start eclipse with the following paramter: <code>-application org.eclipse.ui.examples.rcp.texteditor.application</code>
+
+<h3>
+Classes:</h3>
+
+<h4>package org.eclipse.ui.examples.rcp.texteditor</h4>
+<ul>
+<li>TextEditorApplication - an application to be run, see the <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7echeckout%7e/org.eclipse.ui.tutorials.rcp.part1/html/tutorial1.html">eclipse.org RCP tutorial</a>
+for more details.</li>
+<li>TextEditorPerspective - a default perspective to be opened, see the <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7echeckout%7e/org.eclipse.ui.tutorials.rcp.part1/html/tutorial1.html">eclipse.org RCP tutorial</a>
+for more details.</li>
+<li>TextEditorWorkbenchAdvisor - configures the basic workbench behavior: toolbar, top level window style, title and icon, calls WorkbenchActionBuilder to install the menu actions.</li>
+</ul>
+<h4>package org.eclipse.ui.examples.rcp.texteditor.actions</h4>
+<ul>
+<li>WorkbenchActionBuilder - creates the actions typically seen in a text editor. This is copied and shortened from IDEWorbenchActionBuilder.</li>
+<li>OpenFileAction - action to open a file, which is not present as such in the eclipse IDE. The code is copied and modified from OpenExternalFileAction.</li>
+</ul>
+<h4>package org.eclipse.ui.examples.rcp.texteditor.editors</h4>
+<ul>
+<li>SimpleEditor - a simple text editor. All it does is setting the document provider and removing the smart insert mode.</li>
+<li>SimpleDocumentProvider - a simple document provider that takes IPath as editor input elements. It can open and save to files pointed to by IPaths. It also simplifies the read-only / state validation for basic usage without version control.</li>
+<li>PathEditorInput - an editor input implementing IPathEditorInput.</li>
+</ul>
+<h4>package org.eclipse.ui.examples.rcp.texteditor.editors.xml</h4>
+This package is copied as is from the example editor available from eclipse. The only thing that was changed are to let XMLEditor and XMLDocumentProvider inherit from SimpleEditor and SimpleDocumentProvider, respectively.
+<h4>plugin.xml</h4>
+The plugin.xml manifest adds the application, the perspective, the two editors and the open action.
+
+<br>&nbsp;
+<p><a href="hglegal2003.htm"><img src="ngibmcpy2003.gif" alt="Copyright IBM Corporation and others 2000, 2003" border="0" width="324" height="14"></a>
+</p>
+</body>
+</html>

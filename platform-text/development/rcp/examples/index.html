@@ -1,0 +1,75 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
+<title>Eclipse Rich Client Text Infrastructure</title>
+</head>
+
+<body>
+
+<h1>Eclipse Rich Client Platform - Text Infrastructure</h1>
+<p>The <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/platform-ui-home/rcp/index.html">
+rich client platform</a> (RCP) is a major theme for Eclipse 3.0. As many applications provide some sort
+of text editing, an optional RCP text editor component is provided.
+</p>
+<p>
+For more information about the RCP see the <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/platform-ui-home/rcp/index.html">RCP main page</a>,
+the <a href="faq.html">Rich Client Platform FAQ</a> and the <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7echeckout%7e/org.eclipse.ui.tutorials.rcp.part1/html/tutorial1.html">Rich Client Tutorial</a>.
+</p>
+
+<h4>Optional Text Editing Component</h4>
+Applications that want to offer text editing capabilities may include the following eclipse plug-ins which are
+an optional part of RCP (i.e. they are not included in the RCP drop available from the <a href="http://eclipse.org/downloads/index.php">Eclipse download site</a>):
+<ul>
+<li><tt>org.eclipse.text</tt></li>
+<li><tt>org.eclipse.jface.text</tt></li>
+<li><tt>org.eclipse.ui.workbench.texteditor</tt></li>
+</ul>
+
+<h4>Text Editor Example</h4>
+  The RCP Text Editor Example is an example of a simple RCP app that makes use of the text editing infrastructure (an optional RCP component).
+  <br>
+  Click <a href="texteditor/rcp_texteditor_ex.html">here</a> for the documentation for the example.
+  <p>
+  To run the example in binary form (last updated June 25, 2004 for the 3.0RC4 build):
+  <ol>
+    <li>Download the RCP Runtime build from the <a href="http://eclipse.org/downloads/index.php">Downloads</a> page, and extract it to a folder such as <em>c:\texteditor-example</em>.
+    <li>Download the <a href="texteditor/org.eclipse.rcp.text_3.0.0.zip">RCP text editing component zip</a> and extract it to the eclipse/plugins subfolder.
+    <li>Download the <a href="texteditor/org.eclipse.ui.examples.rcp.texteditor_1.0.0.zip">texteditor plugin zip</a> and extract it to the eclipse/plugins subfolder.
+    <li>Replace the eclipse/configuration/config.ini file with the appropriate config file from the texteditor plugin.  For example, on Windows,
+		     copy eclipse/plugins/org.eclipse.ui.examples.rcp.texteditor_1.0.0/config_win32.ini to eclipse/configuration/config.ini .
+    <li>Run the eclipse executable: For example, on Windows, run <code>eclipse.exe</code>.
+  </ol>
+  </p>
+  <p>
+  To load the text editor example source into your workspace:
+  <ol>
+  <li>Download the <a href="texteditor/org.eclipse.ui.examples.rcp.texteditor_1.0.0.src.zip">texteditor source plugin</a> and save it on your harddisk.</li>
+  <li>Create a new java project in your workspace and name it <code>org.eclipse.ui.examples.rcp.texteditor</code>. Choose to "Create separate source and output folders".
+  <li>Choose File > Import > Zip File.
+  <li>Use the Browse button to select the zip file you downloaded in step 1. Choose the plugin created in step 2 as destination folder.
+  <li>Press Finish.
+  </ol>
+  To run the example from your workspace:
+  <ol>
+  <li>Choose Run > Debug...
+  <li>Under Run-time Workbench, there should be two new configurations: RCP Text Editor (gtk) and RCP Text Editor (win32).
+  <li>Edit the appropriate one as follows:
+    <ul>
+	<li>on the Arguments tab, change the workspace location to some directory with write access (different than your host workspace, and different than the workspace used for other launch configs);
+	<li>in the Program to Run group, ensure that the application <b>org.eclipse.ui.workbench.rcp.texteditor.application</b> is selected;
+	<li>on the Plug-ins tab, press Deselect All, check org.eclipse.ui.workbench.rcp.texteditor, press Add Required Plug-ins, and also check org.eclipse.update.configurator.
+	</ul>
+  <li>Press Debug.
+  <li>When the RCP Text Editor Example window opens, use File > Open to open a plain text, .xml, or .html file.
+  </ol>
+	   
+  <p>
+  </p>
+</body>
+
+</html>
