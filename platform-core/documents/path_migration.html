@@ -39,20 +39,27 @@ underlying operating system. These included:
 These restrictions have been removed in Eclipse 3.1 when the platform's data
 location (workspace) is located on a file system that does not have these restrictions.
 <p>
-Plug-ins operating on Windows only are not affected. In addition, plug-ins that 
-have no need to support the full set of valid Unix paths are not affected.
+<b>Action required:</b> In order to enable the proper treatment of the expanded 
+range of paths, all usage of <tt>Path</tt> and <tt>IPath</tt> within plug-ins 
+should be reviewed and updated as described below. Most unmodified plug-ins 
+will continue to behave exactly as in 3.0 on all paths considered legal in 3.0. 
+However, unless these prescribed changes are made, they are likely to fail in 
+cases involving paths considered legal in 3.1 that were illegal in 3.0.
 <p>
-<b>Action required:</b> Plug-ins that store string representations of paths
-in a format that needs to be readable across different platforms should migrate to the 
-new <tt>Path.fromPortableString</tt> factory method. This method produces
+Plug-ins that store string representations of paths in a format that needs to be 
+readable across different platforms should migrate to the new 
+<tt>Path.fromPortableString</tt> factory method. This method produces
 an <tt>IPath</tt> instance from a platform-independent format. This string 
 representation of paths can be created using the <tt>IPath.toPortableString</tt> method.
-Plug-ins that do not migrate will continue to function normally for all paths that
-were valid in Eclipse 3.0, but may have problems with new paths that contain
-colon or backslash characters.
 Examples of metadata files that are affected include files that are stored inside Eclipse
 workspace projects (.project, .classpath, etc), and all paths stored in the preference
 store (<tt>org.eclipse.core.runtime.preferences.IPreferencesService</tt>). 
+<p>
+Note: <tt>fromPortableString</tt> will correctly read all path strings that were
+created using the Eclipse 3.0 <tt>IPath.toString</tt> method, but not the
+Eclipse 3.1 <tt>toString</tt> method. Thus in most cases no change is required 
+to existing metadata file formats except to begin writing paths with <tt>toPortableString</tt>
+and reading paths with <tt>fromPortableString</tt>.
 <p>
 Plug-ins that were creating paths from hard-coded string literals that assumed 
 ':' and '\' had special meaning on all platforms will need to migrate. The easiest
@@ -67,17 +74,11 @@ will now create a relative path with two segments on Unix platforms.  Similarly,
 on Unix platforms, and a path with two segments on Windows.
 <p>
 Plug-ins constructing paths using the <tt>IPath.append(String)</tt> method 
-that assumed ':' and '\' had special meaning on all platforms will need to migrate.
+that assumed ':' and '\' had special meaning on all platforms may need to update their code.
 In Eclipse 3.1, this method uses operating-system specific device and segment
 delimiters to interpret the provided path string.  For example, calling <tt>append("a\\b")</tt>
 on Unix platforms will now append a single segment, whereas on Windows it will
 continue to append two segments.
-<p>
-Note that <tt>fromPortableString</tt> will correctly read all path strings that were
-created using the Eclipse 3.0 <tt>IPath.toString</tt> method, but not the
-Eclipse 3.1 <tt>toString</tt> method. Thus in most cases no change is required 
-to existing metadata file formats except to begin writing paths with <tt>toPortableString</tt>
-and reading paths with <tt>fromPortableString</tt>.
 
 <h3>References</h3>
 <p>
