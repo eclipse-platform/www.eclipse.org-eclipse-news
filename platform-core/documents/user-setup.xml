@@ -1,14 +1,12 @@
 <!-- This is an example for the doc on the session test framework -->
 <!-- 
-	Option sets are sets of command line options for running Eclipse.
-	Named option sets must be explicitly selected by the user to be used.
-	Unnamed ones are selected if the named option sets they require
-	are selected.
-	Option sets can extend other named option sets, inheriting all options from the ancestor.
-	A setup file can specify default option sets. Users can override the set of
-	default option sets by using the setup.optionSets property.
-	Setup files are specified by using the setup.files property.
--->
+See the companion default-setup.xml file for an explanation on how to use
+setup files. 
+This file only provides overridings for location sensitive command line options.
+Note that all option sets are non-identified (they lack the "id" attribute), so they cannot be 
+explicitly chosen. The option set ids defined in the companion default-setup.xml file should be 
+used instead. The customizations defined here will be appropriately applied whenever the option sets 
+they relate to are specified. -->
 
 <setup>
 	<optionSet with="j9" name="J9 20040917">
@@ -40,7 +38,7 @@
 		<eclipseArg option="data" value="d:\temp\tests\basic tests"/>
 	</optionSet>	     
 	
-	<optionSet id="performance" name="Performance">	
+	<optionSet with="performance" name="Performance">	
 		<systemProperty key="perf_ctrl" value="dbloc=d:/temp/cloudscape;config=org.eclipse.core.tests.basic;build=base"/>
 	</optionSet>
 </setup>
