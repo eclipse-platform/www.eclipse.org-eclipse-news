@@ -88,7 +88,7 @@ public class MyTestCase extends TestCase {
     by using the <code>setup.file</code> system property. If not running in Eclipse, 
     and no setup file can be found, the execution fails with this exception.</p>
   <li> 
-  <p><strong>How do I run UI-oriented tests?</strong> </p>
+    <p><strong>How do I run UI-oriented tests?</strong> </p>
     <p>Make sure you also set the application when launching the target instance 
       to be <code>SessionTestSuite.UI_TEST_APPLICATION</code>:</p>
     <pre>SessionTestSuite suite = new SessionTestSuite("org.myplugin.tests", MyTestCase.class);
@@ -96,12 +96,19 @@ suite.setApplicationId(SessionTestSuite.UI_TEST_APPLICATION);</pre>
   </li>
   <li><strong>How do I run performance session tests?</strong> 
     <p>Use the <code>PerformanceSessionTestSuite</code> instead.</p>
-  </li>  
+  </li>
   <li><strong>How do I run session tests that have private instance locations?</strong> 
-    <p>Use the <code>WorkspaceSessionTestSuite</code> instead. Every test suite has its own instance 
-	location (workspace), all test cases are run on separate sessions on the same workspace. After 
-	the last test case is run, that location is deleted.</p>
-  </li>    
+    <p>Use the <code>WorkspaceSessionTestSuite</code> instead. Every test suite 
+      has its own instance location (workspace), all test cases are run on separate 
+      sessions on the same workspace. After the last test case is run, that location 
+      is deleted.</p>
+  </li>
+  <li><strong>I just want to try out some examples. Any pointers?</strong> 
+    <p>The <code>org.eclipse.core.tests.session.samples</code> package has some 
+      examples. If you load the org.eclipse.core.tests.runtime and org.eclipse.core.tests.resources 
+      projects, you will find real-world examples of how to use this framework. 
+      Just look for the subclasses of SessionTestSuite.</p>
+  </li>
   <li><strong>How do I configure a setup declaratively?</strong> 
     <p>Look <a href="./default-setup.xml">here</a> for an example of a setup file.</p>
   </li>
