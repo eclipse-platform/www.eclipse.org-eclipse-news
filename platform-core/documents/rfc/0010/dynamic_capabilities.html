@@ -18,7 +18,7 @@
 <blockquote> <b>Summary</b><br>
 This RFC highlights the need for bundles to express their dynamic capabilities and proposes a solution based on the introduction of a new header in the manifest.mf.
 <p>
-<font size="-1">Last modified: Decemver 1, 2004 - revision 1, <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/platform-core-home/documents/rfc/0010/dynamic_capabilities.html?rev=1.3">previous revision</a></font> 
+<font size="-1">Last modified: Decemver 1, 2004 - revision 2, <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/platform-core-home/documents/rfc/0010/dynamic_capabilities.html?rev=1.4">previous revision</a></font> 
 </blockquote>
 <p>
 <h3>Background</h3>
@@ -36,32 +36,81 @@ Plugins must be able to express their dynamic capabilities in order to enable ru
 will not interfere with the behavior of plugins. There is several levels of dynamic capabilities:
 <ul>
 	<li> A bundle / plugin can be dynamic enabled."Most importantly, to be dynamic enabled, your plug-in has to properly clean up after itself in the Plugin shutdown method." ( FAQ 117). This is the behavior that has been recommanded since eclipse 1.0.</li>
- 	<li> A bundle / plugin can be addition aware. It will take into account new bundles being added to the system.</li>
-	<li> A bundle / plugin can be removal aware. It will take into account bundles being removed from the system. </li>
+ 	<li> A bundle / plugin can be addition aware. It will take into account new bundles being added to the system. For example this means tracking extension / extension poins and/or new bundles being installed, started.</li>
+	<li> A bundle / plugin can be removal aware. It will take into account bundles being removed from the system. For example this means tracking extension / extension poins and releasing the objects from the bundles being uninstalled.</li>
 	<li> A bundle / plugin can be not dynamic at all.</li>
 </ul>
 <p>
-Because being dynamic is not a property reserved for bundles declaring extensions, this characteristic is being captured in the bundle manifest by the following header: <tt>Eclipse-Dynamic:</tt> whose values are either:
-<tt>enabled</tt>,  <tt>addition-aware</tt>, <tt>removal-aware</tt> or <tt>unspecified</tt> and are separated by semi colons.
+Because being dynamic is not a property reserved for bundles declaring extensions, this characteristic is being captured in the bundle manifest by the following header: <tt>Eclipse-Dynamic:</tt> whose values are either
+<tt>enabled</tt>, <tt>addition-aware</tt>, <tt>removal-aware</tt> or <tt>unspecified</tt> and are separated by semi colons. It is important to note that there is no relation among the values. For example being addition-aware
+does <u>not</u> include enabled.
 <p>
 Example, the manifest of org.eclipse.core.runtime manifest will have the following extra header:
 <tt>
-Eclipse-Dynamic: enabled; addition; removal
+Eclipse-Dynamic: enabled; addition-aware; removal-aware
 </tt>
 <p>
-The absence of header will be equivalent to specifying <tt>Eclipse-Dynamic: enabled</tt>. This will allow legacy osgi bundles to run unmodified.
-<p>
-<h3>Default value</h3>
-<p>
-For the manifests being generated from a plugin.xml the value generated will be <tt>Eclipse-Dynamic: unspecified</tt>.
-<p>
+<h3>Default values</h3>
+This section describes the default values that should be infered when the <code>Eclipse-Dynamic</code> is absent from the manifest.mf.<br>
+There are two types of things for which we need to have default values:
+<ul>
+<li>pure osgi bundles.</li>
+<li>plugins with a manifest.mf and a plugin.xml. (Note 2.1 and 3.0 plugins with only a plugin.xml don't need a default value since the runtime will
+have generated a manifest.mf with appropriate values.)</li>
+</ul>
+<br>
+Pure osgi bundles are unlikely to have the Eclipse-Dynamic header and we can not expect to be able to modify them. After all, they just happen to be running in 
+eclipse. In this case, the following value should be infered: "<tt>Eclipse-Dynamic: enabled, addition-aware, removal-aware</tt>.
+<br>
+For a plugin which has a manifest.mf and a plugin.xml if the manifest does not include a Manifest-Version header the default value to consider is: <tt>Eclipse-Dynamic: unspecified</tt> if the manifest.
+This case cover eclipse 3.0 bundles that shipped with a manifest.mf and have not updated their manifest.
+</p>
 <h3>Usage</h3>
-<p>
+<h4>Tools</h4>
 There are two main use cases for this markup:
 <ul>
 <li>PDE which given a target platform could check if all plugins are dynamic enabled, support removal, etc.</li>
 <li>Configurators and installers could check on addition or removal if the system needs to be restarted.</li>
 </ul>
+<p>
+<h4>Recommanded usage behavior</h4>
+When a plugin P is being added to a running instance of eclipse<br>
+<pre>
+	for all P's prerequisite (transitively)
+		if prereq is addition-aware
+			OK
+		else 
+			if prereq is not active
+				OK
+			else 
+				return Need to reboot
+			end if
+		end if
+	end for
+	return OK;
+</pre>
+<p>
+When a plugin P is being removed from a running instance of eclipse<br>
+<pre>
+	for all P's prerequisite (transitively)
+		if prereq is removal-aware
+			OK
+		else
+			if prereq is not active
+				OK
+			else 
+				return Need to reboot
+			end if
+		end if
+	end for
+	
+	for all plugins requiring P
+		if requiringPlugin is not enabled && requiringPlugin is active
+			return Need to reboot
+		end if
+	end for
+	return OK;
+</pre>
 <p>
 <h3>Changes required</h3>
 As a plug-in writer, no changes are absolutely required. If you are expecting your plug-ins to run in a dynamic environment, it might be a good thing
