@@ -356,6 +356,43 @@ jars.compile.order = yourFolder, library.jar, myFolder
    <li> export the "QualifiedFeature" feature and verify that the feature.xml has been updated properly</li>
 </ul>
 
+<h4>Test of optional matching rules</h4>
+<ul>
+<li>Create a plugin named Match1</li>
+<li>Create a plugin named Match2</li>
+<li>Update Match2 dependencies to optionaly requires Match1</li>
+<li>Close Match1 project</li>
+<li>Generate the build.xml (right click on plugin.xml)</li>
+<li>If the build.xml is generated it is ok</li>
+</ul>
+
+
+<h4>Tests of matching rules</h4>
+<ul>
+<li>Re-open the plugin named Match1</li>
+<li>Update Match2 dependencies to have a dependency on Match1 which is version="1.0.0" match="perfect"</li>
+<li>Generate the build.xml (right click on plugin.xml)</li>
+<li>If the build.xml is generated it is ok</li>
+
+<li>Repeat steps 2, 3 and 4 for the 3 different values for matching rules
+<pre>
+version="1.0.0" match="perfect"
+version="1.0.0" match="equivalent"
+version="1.0.0" match="compatible"
+version="1.0.0" match="greaterOrEquals"
+</pre>
+
+<li>Change Match1 version number to be 1.0.1 and repeat the "repeat section". The test with perfect match is expected to 
+
+fail.</li>
+<li>Change Match1 version number to be 1.1.0 and repeat the "repeat section". The tests with perfect and equivalent are 
+
+expected to fail.</li>
+<li>Change Match1 version number to be 2.0.0 and repeat the "repeat section". The tests with perfect, equivalent and 
+
+compatible are expected to fail.</li>
+</ul>
+
 <a href="#top">Back to top</a><br><hr>
 <h3><a name="performance"/>Performance</h3>	
   <h4>Startup</h4>
