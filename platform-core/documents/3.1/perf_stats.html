@@ -156,5 +156,14 @@ for the performance failure, computed based on the blame object provided
 to the performance stats API. Double-clicking on a performance failure in the log 
 view will show a stack trace of the execution state at the time of the failure.
 </p>
+<p>
+If you want to take some other action when performance failures occur, you can
+register a <code>PerformanceListener</code> with <code>PerformanceStats</code>
+that will be notified when performance
+events occur.  Performance listeners are notified periodically in a separate thread,
+to ensure they don't affect the performance of the event being measured.  Thus
+you can use a listener to write performance data to a file or database without fear
+of slowing anything else down.
+</p>
 </body>
 </html>
