@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN2">
+<html>
+<head>
+<title>Markup to express bundle dynamic capabilities.</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <link href="http://dev.eclipse.org/default_style.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#ffffff">
+
+<table width="100%">
+<tr><td style="background:#0080C0"><b><span style="color:white">RFC</span></b></td></tr>
+
+</table>
+ 
+<h1>Markup to express bundle dynamic capabilities.</h1>
+
+<blockquote> <b>Summary</b><br>
+This RFC highlights the need for bundle to express their dynamic capabilities and proposes a solution based on the introduction of a new header in the manifest.mf.
+<p>
+<font size="-1">Last modified: November 25, 2004</font> 
+</blockquote>
+<p>
+<h3>Background</h3>
+<p>
+In 3.0 the concept of dynamic plugin has been introduced. Even though some infrastructure has been added, plugins did not become automatically / magically dynamic. Some work was expected by the plugin writers.
+This resulted in the eclipse 3.0 SDK being only partially dynamic possibly leading to strange behavior. Indeed, because the runtime and some other plugins are dynamic, it is possible to install and uninstall plug-ins and be under the impression that everything worked fine. Unfortunately this is a false impression. For example if a new builder is being added, it will not be picked up because org.eclipse.core.resources is not dynamic aware. 
+<p>
+Being able to detect such things is important for the user, since it can lead to incorrect behavior of the system, and inappropriate user interactions.
+<p>
+Note that this problem exists as well for people putting together system based plugins.
+<p>
+
+<h3>Proposed solution</h3>
+<p>
+Plugin must be able to express their dynamic capabilities in order to enable runtime and development time checks.
+There is several levels of dynamic capabilities:
+<ul>
+	<li> A bundle / plugin can be dynamic enabled."Most importantly, to be dynamic enabled, your plug-in has to properly clean up after itself in the Plugin shutdown method." ( FAQ 117).</li>
+ 	<li> A bundle / plugin can be addition aware. It will take into account new bundles being added to the system.</li>
+	<li> A bundle / plugin can be removal aware. It will take into account bundles being removed from the system. </li>
+</ul>
+<p>
+Because being dynamic is not a property reserved to bundles declaring extensions, this characteristic is being captured in the bundle manifest by the following header: <tt>Eclipse-DynamicCapabilities:</tt> whose values are either:
+<tt>enabled</tt>,  <tt>addition</tt>, <tt>removal</tt> and are separated by semi colons.
+<p>
+Example, the manifest of org.eclipse.core.runtime manifest will have the following extra header:
+<tt>
+Eclipse-DynamicCapabilities: enabled; addition; removal
+</tt>
+<p>
+<h3>Default values</h3>
+<p>
+For the manifests being generated from a plugin.xml the value generated will be:<tt>Eclipse-DynamicCapabilities: enabled</tt>.
+<p>
+
+<h3>Usage</h3>
+<p>
+There are two main use cases for this markup:
+<ul>
+<li>PDE which given a target platform could check if all plugins are dynamic enabled, or support removal, etc.</li>
+<li>Configurators and installers could check on addition or removal if the system needs to be restarted.</li>
+</ul>
+
+<p> 
+<h3>Change required</h3>
+<p>
+Given that the format of a manifest.mf is open ended, the addition of this new header can be done immediatly. <br>
+The first change to do is to update the PluginManifest converter to generate default values.<br>
+PDE and other configurators can be updated at their own schedule.<br>
+<p>
+
+<h3>Drawback</h3>
+<p>
+By default all plugins will be considered as dynamic enabled only. This means that any plugins that is capable of 
+addition or removal will have to have a manifest.mf.
+<p>
+
+<h3>Other solutions considered</h3>
+<p>
+1 - Runtime defines an extension point and every plugin declares by an extension it dynamic capability. This has the drawback of forcing the addition of a plugin.xml in all pure bundle (like junit, tomcat, swt). <br>
+A varient on that was to provide a generic extension point for people to declare other capabilities such as "running without instance location" , "running without configuration location".<br>
+Given that the manifest is open ended, those capabilities can be expressed in the manifest if needed.<br>
+<p>
+
+2 - Special markup in the plugin.xml. Drawbacks are the same than in the previous solution and more over it was requiring PDE and runtime to change their plugin parsers.
+
