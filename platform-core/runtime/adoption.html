@@ -452,7 +452,7 @@ for people.
   extension/extension-point information in plugin.xml and also supplies translations 
   for various keys in the MANIFEST.MF.</p>
 <p>The build.properties file remains unchanged.</p>
-<p>NL fragment structure</p>
+<h3>NL fragment structure</h3>
 <p>In Eclipse 3.0 the NL fragment structure has been updated to be more consistent.
   Previously the translations for files like plugin.properties were assumed to
   be inside of JARs supplied by fragments. Since the original files are found
@@ -464,5 +464,9 @@ for people.
      plugin_pt_BR.properties
      ...
      nl1.jar</font></pre>
+Note here that the file nl1.jar previously would have contained the translations
+for plugin.properties. These files are now at the root of the fragment and the
+JAR contains translations of any translatable resources (i.e., files loaded via
+the classloader) in the host plug-in.
   </body>
 </html>
