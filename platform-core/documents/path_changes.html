@@ -251,7 +251,46 @@ option requires only a small set of localized changes in code that deals
 with serializing and deserializing paths in a platform-neutral manner. Based
 on testing the implementation of these two options, this proposal recommends
 option two.
-
+<h3>Examples</h3>
+<p>
+The following examples illustrate the behaviour of the various <tt>Path</tt>
+constructors and <tt>to*String</tt> methods.
+<p>
+Given the absolute path with device "C:" and single segment "foo", the following
+<tt>IPath</tt> methods will produce:
+<ul>
+<li>toString -> "C:/foo"</li>
+<li>toPortableString -> "C:/foo" </li>
+<li>toOSString (windows) -> "C:\foo" </li>
+<li>toOSString (Linux) -> "C:/foo" </li>
+<li>getDevice -> "C:"</li>
+</ul>
+Given the relative path with null device, and two segments "C:" and "foo":
+<ul>
+<li>toString -> "C:/foo"</li>
+<li>toPortableString -> "C::/foo"</li>
+<li>toOSString (windows) -> "C:\foo"</li>
+<li>toOSString (Linux) -> "C:/foo"</li>
+<li>getDevice -> (null)</li>
+</ul>
+Given the string "C:\\foo" (single backslash escaped in Java literal format), the following constructors will produce:
+<ul>
+<li>fromOSString and Path(String) (windows) -> Absolute path with device "C:" and single segment "foo"
+<li>fromOSString and Path(String) (Linux) -> Relative path with null device and single segment "C:\foo"
+<li>fromPortableString -> Relative path with device "C:" and single segment "\foo"
+</ul>
+Given the string "C:/foo":
+<ul>
+<li>fromOSString and Path(String) (windows) -> Absolute path with device "C:" and single segment "foo"
+<li>fromOSString and Path(String) (Linux) -> Relative path with null device and two segments "C:" and "foo"
+<li>fromPortableString -> Absolute path with device "C:" and single segment "foo"
+</ul>
+Given the string "C::/foo":
+<ul>
+<li>fromOSString and Path(String) (windows) -> Relative path with device "C:" and two segments ":" and "foo" (an invalid path)
+<li>fromOSString and Path(String) (Linux) -> Relative path with null device and two segments "C::" and "foo"
+<li>fromPortableString -> Relative path with null device and two segments "C:" and "foo"
+</ul>
 <h3>Other migration issues</h3>
 <p>
 All clients who store absolute <tt>IPath</tt> objects as platform-neutral 
@@ -306,9 +345,10 @@ In other words, under this proposal you cannot reliably manipulate paths contain
 backslash or colon using to/fromOSString on Windows. This seems to be an acceptable
 limitation.
 </p>
-<h3>Bug reference</h3>
+<h3>References</h3>
 <p>
 <ul>
+<li><a href="path_migration.html">Draft migration guide entry</a></li>
 <li><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=24152">bug 24152</a></li>
 </ul>
 </body>

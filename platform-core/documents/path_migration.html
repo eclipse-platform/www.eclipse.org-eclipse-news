@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN2">
+<html>
+<head>
+<title>Migration guide for <tt>Path</tt> changes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <link href="http://dev.eclipse.org/default_style.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#ffffff">
+
+<table width="100%">
+<tr><td style="background:#0080C0"><b><span style="color:white">Migration Guide</span></b></td></tr>
+</table>
+ 
+<h1>Migration guide for <tt>Path</tt> changes</h1>
+ 
+<blockquote> <b>Summary</b>  <br>
+Some changes are being made to the <tt>IPath</tt> and <tt>Path</tt>
+classes in Eclipse 3.1 to allow for creation of paths containing characters
+that were previously invalid.  See the <a href="path_changes_html">proposal</a>
+for more details. This document is a draft of a migration guide entry for current
+<tt>IPath</tt> users who need to migrate to accomodate these changes.
+<p>
+<font size="-1">Last modified: October 19, 2004</font> 
+</blockquote>
+<p>
+<h3>Incompatibilities</h3>
+<p>
+<b>What is affected:</b> Plug-ins that create, manipulate, or store <tt>IPath</tt> objects.
+<p>
+<b>Description:</b> In Eclipse 3.0, <tt>IPath</tt> had a number of restrictions
+on the segments of paths that were more restrictive than the restrictions of the
+underlying operating system. These included:
+<ul>
+<li>Leading and trailing whitespace in path segments were not allowed</li>
+<li>The colon character (':') was reserved as a device separator character</li>
+<li>The backslash character ('\') was reserved as a segment separator character</li>
+</ul>
+These restrictions have been removed in Eclipse 3.1 when the platform's data
+location (workspace) is located on a file system that does not have these restrictions.
+<p>
+<b>Action required:</b>
+<p>
+<h3>References</h3>
+<p>
+<ul>
+<li><a href="path_changes.html">Path changes proposal</a></li>
+<li><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=24152">bug 24152</a></li>
+</ul>
+</body>
+</html>
