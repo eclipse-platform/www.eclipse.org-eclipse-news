@@ -65,7 +65,7 @@
           <p> Improve overall integration with the workbench. This includes consolidation 
             of preferences and increased preference sharing as well as seamless 
             support for user configurable editor bindings. Investigate direct 
-            access to preferences where useful.<b>[Simple to use, Large-scale 
+            access to preferences where useful. <b>[Simple to use, Large-scale 
             development]</b> </p>
         </li>
         <li> 
@@ -86,13 +86,13 @@
         </li>
         <li>Help clients such as the Eclipse Web Tools Platform Project to improve 
           their overall integration with the Platform Text components and the 
-          workbench in general.<b> [Broadening the community]</b></li>
+          workbench in general. <b>[Broadening the community]</b></li>
         <ul>
         </ul>
       </ul>
       <h3>JDT</h3>
       <ul>
-        <li> Improve the Java editors.<b>[Simple to use, Large-scale development]</b> 
+        <li> Improve the Java editors. <b>[Simple to use, Large-scale development]</b> 
           <ul>
             <li>Provide additional convenience and productivity text manipulation 
               functions.</li>
@@ -110,9 +110,8 @@
           </ul>
         </li>
         <li> 
-          <p>Improve property-file editor. The initial set includes: encoding 
-            conversion, syntax coloring, spell checking, formatting/prefix based 
-            sorting, search references, quick fix, outline.<b>[Simple to use]</b></p>
+          <p>Improve string externalization. Possible work items are collected
+          in <a href="String_Externalization_Improvements.html">here</a>. <b>[Simple to use]</b></p>
         </li>
         <li> J2SE 5.0 Support<b> [J2SE 5 support] </b> 
           <ul>
@@ -192,7 +191,7 @@
             <li>provide a disconnect method that automatically calls commit in 
               case the file buffer is dirty and after the call no longer shared</li>
             <li>allow new implementations to be plugable (RCP does not include 
-              the IResouce based implementation, IDE does)</li>
+              the IResource based implementation, IDE does)</li>
             <li>clarify document creation and document setup extension points</li>
             <li>provide standard way to modify document provided by a text file 
               buffer in a non-UI thread</li>
@@ -800,22 +799,35 @@
         </li>
         <li>continue with encoding issues listed in the 3.1 plan 
           <ul>
-            <li>integrate the 'change encoding' action with the status editor 
+            <li>integrate the 'Change Encoding...' action with the status editor 
               shown in case of encoding errors</li>
-            <li>re-establish encoding support for external files</li>
+            <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> re-establish encoding support for external files</li>
+            <li>react to resource encoding changes in FileDocumentProvider</liY
           </ul>
         </li>
         <li>work with the Web Tools Platform project in order to improve overall 
           integration with Platform Text and the platform in general</li>
         <li>Java editor 
           <ul>
-            <li>implement &quot;Show implementers in file&quot; search</li>
+            <li>implement Search and Mark implementer occurrences</li>
             <li>revisit out-of-the-box colors and styles in the Java editor</li>
             <li>enable semantic syntax highlight per default</li>
           </ul>
         </li>
         <li>move Javadoc formatting to JDT Core</li>
-        <li>start work on improved properties file editor</li>
+        <li>start work on improved string externalization</li>
+		<ul>
+			<li>navigate from selected key in Java editor to definition in properties file editor</li>
+			<li>show value when hovering over key in Java editor</li>
+			<ul>
+				<li>show value as is in the properties file</li>
+				<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/glass.gif" nosave="" border="0" height="10" width="10"> show value as returned by the accessor class</li>
+			</ul>				
+			<li>syntax coloring for Properties File Editor (comments, keys and values)
+			<li>provide separate double-click strategy for key and value part in Properties File editor
+			<li>navigate from selected key and value in properties file to location in Java editor and Plug-in Manifest editor
+			<li>spell checking in Properties File editor and Externalize Strings wizard
+		</ul>
         <li>cross team issues 
           <ul>
             <li>contribute to the action contribution rework dynamic team</li>
@@ -861,6 +873,29 @@ PRs</a></li>
 </ul>
 </td>
 </tr>
+</table>
+<table border="0" cellpadding="2" cellspacing="5" width="100%"><tbody><tr><td colspan="4" align="left" bgcolor="#0080c0" valign="top" width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">Legend
+			</font></font></b></td>
+		</tr>
+		<tr>
+			<td valign="top"><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14"></td>
+			<td width="50%">item is under development.</td>
+			<td valign="top"><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/glass.gif" nosave="" border="0" height="10" width="10"></td>
+			<td width="50%">item is under investigation.</td>
+		</tr>
+		<tr>
+			<td valign="top"><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"></td>
+			<td width="50%">item is finished.</td>
+			<td valign="top">( )</td>
+			<td width="50%">item is time permitted.</td>
+		</tr>
+		<tr>
+			<td valign="top"><font class="indexsub" color="#8080ff">[&gt;3.1]</font></td>
+			<td width="50%">item is deferred.</td>
+			<td valign="top"><font class="indexsub"><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/new.gif" border="0"></font></td>
+			<td width="50%">new</td>
+		</tr>
+	</tbody>
 </table>
 
 <br>&nbsp;
