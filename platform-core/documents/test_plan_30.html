@@ -508,15 +508,33 @@ version="1.0.0" match="greaterOrEquals"
 </pre>
 
 <li>Change Match1 version number to be 1.0.1 and repeat the "repeat section". The test with perfect match is expected to 
-
 fail.</li>
 <li>Change Match1 version number to be 1.1.0 and repeat the "repeat section". The tests with perfect and equivalent are 
-
 expected to fail.</li>
 <li>Change Match1 version number to be 2.0.0 and repeat the "repeat section". The tests with perfect, equivalent and 
-
 compatible are expected to fail.</li>
 </ul>
+
+<h4>2.1.x test</h4>
+<ul>
+<li>Change your target platform to point to a 2.1.x eclipse install</li>
+<li>Create a new plugin using the wizard (check that the 2.1 flag is checked by default)</li>
+<li>Export the plugin and verify that no errors occured</li>
+<li>Manually create the build.xml, and verify that the classpath for the compilation target starts by and boot, runtime</li>
+</ul>
+
+<h4>Test with not matched fragments</h4>
+<ul>
+<li>Install the nl fragments</li>
+<li>Export a plugin that you have previously built and verify that no errors occured and that nothing in logged</li>
+</ul>
+
+<h4>Releng scenarios</h4>
+<ul>
+<li>Try to do an sdk build for win32</li>
+<li>Verify that the resulting zip is of the expected size (note that there might be a difference due to doc)</li>
+</ul>
+
 
 <a href="#top">Back to top</a><br><hr>
 <h3><a name="performance"/>Performance</h3>	
