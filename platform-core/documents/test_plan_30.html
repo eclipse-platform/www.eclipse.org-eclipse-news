@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
 </head>
 <body text="#000000" bgcolor="#FFFFFF">
-<body bgcolor="#FFFFFF" text="#000000">
+
 <h1><a name="top"></a>3.0 Core Test Plan</h1>
 <p>Testing will cover the functional areas on these platforms/VMs</p>
 <table border="1" width="63%">
@@ -154,11 +154,55 @@
   <li>do the same as above with a plugin and a fragment, where both contribute extensions/extension points.</li>
   <li>ensure plugin manifests with valid XML but missing required elements/attributes 
     in extensions/extension points markup are properly ignored/handled</li>
-  </li>
+  
 </ul>
 <p><strong>Note</strong>: use <code>org.eclipse.core.runtime/registry/debug/events/extension</code> debug option
 is useful to monitor registry change events when testing the registry in the context
 of dynamically installed plugins</p>
+<h4>Nested jars</h4>
+<ul>
+<li>Zip the Junit folder such that the files are at the root of the archive, and rename the archive to have .jar as extension</li>
+<li>Delete the JUnit folder</li>
+<li>Start eclipse</li>
+<li>In the console type 
+<pre>
+ install reference:file:/<junit.jar>
+ refresh <installNumber of the installed plugin>
+ ss
+</pre>
+Check that the junit plugin is installed and resolved.
+Run a Junit test.
+</ul>
+
+<h4>Code in folders</h4>
+<ul>
+<li>Unzip the content of the original JUnit.jar into a folder named "code"</li>
+<li>In the plugin.xml replace &gt;library name="junit.jar"&lt; by &gt;library name="code/"&lt;</li>
+<li>Start eclipse</li>
+<li>In the console type 
+<pre>
+ install reference:file:/<junit folder>
+ refresh <installNumber of the installed plugin>
+ ss
+</pre>
+Check that the junit plugin is installed and resolved.
+Run a Junit test.
+</ul>
+
+
+<h4>Folders in a Jar</h4>
+<ul>
+<li>Zip the content of the Junit folder from the previous test in such a way that plugin.xml is that the root of the archive</li>
+<li>Start eclipse</li>
+<li>In the console type 
+<pre>
+ install reference:file:/<junit folder>
+ refresh <installNumber of the installed plugin>
+ ss
+</pre>
+Check that the junit plugin is installed and resolved.
+Run a Junit test.
+</ul>
 <a href="#top">Back to top</a><br><hr>
 <h3><a name="jobs"/>Runtime - Jobs</h3>
   <h4>test1</h4>
