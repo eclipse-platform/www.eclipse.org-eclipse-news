@@ -11,7 +11,7 @@
 <h1>
 Eclipse Platform<br>
 Core Support for Validate Edit/Save</h1>
-Last revised 09:45 EST Tuesday December 4, 2001
+Last revised 11:03 EST Thursday December 6 2001
 <p>This proposal describes a Platform Core mechanism that allows clients
 to trigger VCM involvement in Core operations that change the content of
 file resources in the workspace. The mechanism is done in such a way that
@@ -26,7 +26,7 @@ to modify a file and would like to "tickle" the VCM component so that it
 has an opportunity to ask the user whether they would like to check out
 the file (or something along those lines). A typical text editor might
 invoke this mechanism the first time the user dirties an editor buffer
-that the user has opened on a file.</li>
+that the user has opened on a file that is read-only.</li>
 
 <li>
 <b>Validate-save</b> - Implicitly activated by clients as they modify the
@@ -70,7 +70,7 @@ Object context);</font>
 the given files and ask for permission to proceed. The files must all exist
 in the workspace. The mechanism allows the VCM component to provide the
 implementation of this method; a typical behavior would be to check out
-any files that haven't been modified before. The context passed in is a
+any files that haven't already been checked out. The context passed in is a
 SWT shell used to parent any windows that the implementation may need to
 bring up to interact with the user; if no context is supplied (null is
 passed in), the validation must be done in a headless manner. A returned
