@@ -573,13 +573,22 @@
           <ul>
             <li>We would like to be able to run from JARs rather than having a 
               scattered directory structure.</li>
+            <li>Investigation of running without a workspace (-nodata)</li>
           </ul>
         </li>
         <li><em>PDE-Build </em> [pascal] 
           <ul>
+            <li>Expected to continue into M8</li>
             <li>Work with new runtime. </li>
             <li>Among other items, we need to be able to build JARs if we plan 
-              on running from them.</li>
+              on running from them. 
+              <ul>
+                <li>Need to modify the classpath computation for the compiler</li>
+                <li>Need to be able to assemble the JARs in the required format</li>
+                <li>Would like to replace the constructed plug-in registry information 
+                  with State objects</li>
+              </ul>
+            </li>
           </ul>
         </li>
         <li><em>Documentation </em> [all] 
