@@ -483,6 +483,8 @@ Through the scope context.
 		&nbsp;&nbsp;writer.close();<br>
 		}<br>
 		MyPlugin.getDefault().getPluginPreferences().setValue(key, writer.toString());<br>
+		...<br>
+		MyPlugin.getDefault().savePluginPreferences();<br>
 		</code>
 	</p><p>
 	To set the same complex values using Eclipse 3.0 preferences:
@@ -501,6 +503,8 @@ Through the scope context.
 		&nbsp;&nbsp;example.put("connectionType", "pserver");<br>
 		&nbsp;&nbsp;example.put("login", "anonymous");<br>
 		&nbsp;&nbsp;example.put("path", "/home/cvs");<br>
+		&nbsp;&nbsp;...<br>
+		&nbsp;&nbsp;root.flush();<br>
 		}<br>
 		</code>
 	</p><p>
