@@ -15,7 +15,7 @@
 </tr>
 
   <tr> 
-    <td WIDTH="100%">
+    <td WIDTH="100%"> 
       <p>This plan is a proto plan. It is under continuous refinement. Feedback 
         welcome. </p>
       <h2><a NAME="Overall_Planning"></a>Overall goals </h2>
@@ -81,7 +81,7 @@
       </ul>
       <h3>JDT</h3>
       <ul>
-        <li> Improve usability of the Java editors.<b>[Simple to use]</b> 
+        <li> Improve the Java editors.<b>[Simple to use, Large-scale development]</b> 
           <ul>
             <li>Provide additional convenience and productivity text manipulation 
               functions.</li>
@@ -91,8 +91,10 @@
                 <li>Improve on rich visual modeless feedback.</li>
               </ul>
             </li>
+            <li> Investigate direct access to preferences where useful.</li>
             <li> 
-              <p>Investigate direct access to preferences where useful.</p>
+              <p>Provide extension point to allow for useful additions to the 
+                reconciling process such as running audits.</p>
             </li>
           </ul>
         </li>
@@ -175,20 +177,16 @@
             <li>allow validateEdit on a set of file buffers</li>
             <li> allow buffers for non-existing files that get automatically created 
               when committing the file buffer</li>
+            <li>provide setDirty on IFileBuffer</li>
+            <li>provide a disconnect method that automatically calls commit in 
+              case the file buffer is dirty and after the call no longer shared</li>
             <li>allow new implementations to be plugable (RCP does not include 
               the IResouce based implementation, IDE does)</li>
             <li>clarify document creation and document setup extension points</li>
-            <li>revisit synchronization issues between annotation model and document 
-              <ul>
-                <li>annotation map is synchronized but not operations on the annotation 
-                  model itself leaving a temporal gap in which concurrent modifications 
-                  can happen</li>
-              </ul>
-            </li>
             <li>provide standard way to modify document provided by a text file 
               buffer in a non-UI thread</li>
             <li>[investigate] provide implementation for IStorage</li>
-            <li>[investigate] is it possible to automate validateEdit on the first 
+            <li>[investigate] Is it possible to automate validateEdit on the first 
               document change?</li>
             <li>[investigate] on demand activation of partitioning (created only 
               when somebody asks for it)</li>
@@ -212,7 +210,19 @@
                   reconciling steps</li>
               </ul>
             </li>
-            <li>[investigate] adaptive reconciler timing </li>
+            <li>[investigate] adaptive reconciler timing</li>
+          </ul>
+        </li>
+        <li>headless text infrastructure 
+          <ul>
+            <li>revisit synchronization issues between annotation model and document 
+              <ul>
+                <li>annotation map is synchronized but not operations on the annotation 
+                  model itself leaving a temporal gap in which concurrent modifications 
+                  can happen</li>
+              </ul>
+            </li>
+            <li>[investigate] time stamped document events</li>
           </ul>
         </li>
         <li>encoding (cross team issue) 
@@ -557,6 +567,8 @@
             <li>support case-sensitive filtering</li>
             <li>introduce content assist processor extension point (already there 
               for Javadoc)</li>
+            <li>consolidate content assist infrastructure to cover the concept 
+              of presenting and choosing from parameter proposals</li>
             <li>auto activate content assist if completion trigger is also an 
               auto activation trigger</li>
             <li><font color="#000000">support code completion after &lt;code&gt;Te| 
@@ -718,7 +730,7 @@
         <li>global undo manager</li>
         <li>scripting strategy of the platform</li>
       </ul>
-      </td>
+    </td>
 </tr>
 
 <tr>
