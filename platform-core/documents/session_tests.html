@@ -17,7 +17,7 @@
     hopes of encouraging adoption of this framework not only by all the Platform/Core 
     team members but also by members of other Eclipse teams interested in developing 
     their own session tests. </p>
-  <p>Last Modified: November 19th, 2004</p>
+  <p>Last Modified: December 22nd, 2004</p>
 </blockquote>  
 <ol>
   <li> 
@@ -113,15 +113,21 @@ public class MyTestCase extends TestCase {
     <pre>SessionTestSuite suite = new SessionTestSuite("org.myplugin.tests", MyTestCase.class);
 suite.setApplicationId(SessionTestSuite.UI_TEST_APPLICATION);</pre>
   </li>
-  <li><strong>How do I run session tests in debug mode?</strong> 
-    <p>Use the <code>remote_debug</code> setup option (see the question on the 
-      supported options in this document). 
-      This is not much fun. Every 
-      single test case will be launched in a separate VM in remote debug mode. 
-      Thus, it will block, waiting for a client VM to connect. You will have to 
-      use a Remote Application Debug launch configuration for every test case 
-      to be run. There is no way to run only some of the test cases in a session 
-      suite in remote debug mode.</p>
+  <li><strong>How can I see the command-line used for the Eclipse instance where my session 
+    test runs?</strong>
+	<p>Use the <code>setup.debug</code> boolean system property (check the question about supported options).</p>
+	</li>
+  <li><strong>How do I debug a failing test case?</strong> 
+    <p><strong>The easy way:</strong> run the failing test case in isolation as 
+      a regular JUnit plug-in test. Ensure the command-line matches the one build 
+      by the session test framework when running it as a session test.</p>
+	<p><strong>The hard way:</strong> use the <code>remote_debug</code> setup 
+      option (see the question on the supported options in this document). This 
+      is not much fun. Every single test case will be launched in a separate VM 
+      in remote debug mode. Thus, it will block, waiting for a client VM to connect. 
+      You will have to use a Remote Application Debug launch configuration for 
+      every test case to be run. There is no way to run only some of the test 
+      cases in a session suite in remote debug mode.</p>
   </li>
   <li><strong>How do I run performance session tests?</strong> 
     <p>Use the <code>PerformanceSessionTestSuite</code> instead.</p>
@@ -139,10 +145,10 @@ suite.setApplicationId(SessionTestSuite.UI_TEST_APPLICATION);</pre>
       Just look for the subclasses of <code>SessionTestSuite</code>.</p>
   </li>
   <li><strong>What are all supported options and how to use them?</strong> 
-  	<p>The options for the session test framework are specified in the form of
-  	system properties. <em>You only have to use these options if running with
-  	the default settings (the currently target JRE and Eclipse and default 
-  	command line options) are not appropriate.</em></p>
+    <p>The options for the session test framework are specified in the form of 
+      system properties. <em>You only have to use these options if running with 
+      the default settings (the currently target JRE and Eclipse and default command 
+      line options) are not appropriate.</em></p>
     <ul>
       <li><strong>setup.options</strong> - only valid when setup files are available. 
         Setup files describe option sets, which are collections of command-line 
@@ -168,24 +174,30 @@ suite.setApplicationId(SessionTestSuite.UI_TEST_APPLICATION);</pre>
           merely overrides location sensitive options to adapt them to the user 
           specific file system layout. Look <a href="./default-setup.xml">here</a> 
           for an example of a default setup file and <a href="./user-setup.xml">here</a> 
-          for an example of a user custom setup file. These examples are intended to be self-explanatory and are actually useful as they are (the user-specifc setup file has to be tweaked 
-		  to support your specific file system layout.</p></li>
+          for an example of a user custom setup file. These examples are intended 
+          to be self-explanatory and are actually useful as they are (the user-specifc 
+          setup file has to be tweaked to support your specific file system layout.</p>
+      </li>
       <li><strong>setup.override.eclipseArgs</strong> - allows the user to manually 
-        override command-line options corresponding to Eclipse arguments. Example:
-        <p><code>-Dsetup.override.eclipseArgs=data=c:/workspace;debug;showlocation</code</p></li>
+        override command-line options corresponding to Eclipse arguments. Example: 
+        <p><code>-Dsetup.override.eclipseArgs=data=c:/workspace;debug;showlocation</code></p>
+      </li>
       <li><strong>setup.override.vmArgs</strong> - allows the user to manually 
         override command-line options corresponding to VM arguments (other than 
-        system properties). Example:
-        <p><code>-Dsetup.override.vmArgs=Xint;Xmx256m;hotspot;cp=startup.jar</code</p></li>
+        system properties). Example: 
+        <p><code>-Dsetup.override.vmArgs=Xint;Xmx256m;hotspot;cp=startup.jar</code></p>
+      </li>
       <li><strong>setup.override.systemProperties</strong> - allows the user to 
-        manually override command-line options corresponding to system properties. Example:
-        <p><code>-Dsetup.override.systemProperties=osgi.checkConfiguration;osgi.locking=none</code</p></li>
+        manually override command-line options corresponding to system properties. 
+        Example: 
+        <p><code>-Dsetup.override.systemProperties=osgi.checkConfiguration;osgi.locking=none</code></p>
+      </li>
       <li><strong>setup.debug</strong> - enables the session test framework debug 
         mode. In this mode, among other things, the command-line for every session 
-        launched is dumped to the console, so it is useful to verify which option
+        launched is dumped to the console, so it is useful to verify which option 
         sets are being selected and how they map to the command line.</li>
     </ul>
-	<p></p>
+    <p></p>
   </li>
   <li><strong>What if I find problems using the session test framework or would 
     like to request/propose an enhancement?</strong> 
