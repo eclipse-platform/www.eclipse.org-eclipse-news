@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<site>
+  <description url="index.html">Test update site</description> 
+
+  <feature url="features/org.eclipse.core.tools_1.1.0.jar" id="org.eclipse.core.tools" version="1.1.0">
+    <category name="Tools" /> 
+  </feature>
+  <category-def label="Tools" name="Tools">
+    <description>Tooling for plug-in developers by plug-in developers.</description> 
+  </category-def>
+</site>
