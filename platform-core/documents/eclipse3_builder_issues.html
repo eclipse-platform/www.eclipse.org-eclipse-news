@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Eclipse 3.0 builder issues</title>
+  <link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
+</head>
+<body text="#000000" bgcolor="#FFFFFF">
+ 
+<h1>Eclipse 3.0 builder issues</h1>
+<font size="-1">Last modified: November 7, 2003</font> 
+<p>
+It wouldn't feel like a real Eclipse release without some eleventh hour changes to the
+platform build infrastructure.  This document outlines the current pressing builder
+problems, maps out the solution space, and will eventually propose concrete changes
+for Eclipse 3.0 and if necessary for a 2.1.x maintenance release. Since this is not
+a committed plan item, no promises are being made at this point.
+</p>
+<h3>Problems</h3>
+<h4>1. Dynamic classpaths, static project references</h4>
+<p>
+There are many different PDE self-hosting styles.  Some build and run against
+plugins outside the workspace, some use binary or source projects in the workspace,
+and some use a combination of the two.  Every time a user switches from building
+against external libraries to building against internal projects, the classpaths of all
+downstream plugins need to be updated.  When the set of referenced projects on the
+classpath change, so do the platform project references.  These references are used
+by the platform when computing the default project build order.
+</p>
+<p>
+Before the Eclipse 2.1 release, JDT introduced the notion of classpath containers.
+Classpath containers abstract away volatile sets of references so that the .classpath
+file does not need to change every time these reference sets change.  The two common
+uses of containers are for JRE libraries, and PDE project references.  This approach 
+solves the problem of .classpath files constantly changing as the user's self-hosting
+style changes (or when the JRE changes).  The remaining problem is that the project 
+references, manifested in the .project file, do not have a corresponding dynamic 
+container facility.  Therefore the .project file continues to change whenever the 
+user switches between external and internal project references.
+</p>
+<h4>2. Builders need more context</h4>
+<p>
+Individual project builders are not supplied with enough context information when
+they are invoked.  In particular, they do not know whether the current build is a single
+project build or a workspace build.  Also, there is no consistent hook that builder
+implementors can use to be notified when the build process is starting and finishing.
+If this information was available, builder implementors would have more flexibility
+in optimizing multiple project builds.
+</p>
+<p>
+Without going into too much detail, consider a simple case of projects A and B,
+where B depends on A and so must be built after it.  When A is built, it could leave
+behind a structure that describes in more detail exactly what changes builder A made.
+Builder B could then read that information and optimize its build accordingly.  However,
+with manual project builds, project A could be built several times before project B is
+built.  In this simple case, builder A could incrementally update this structure until
+B is finally built.  However, if there is also project C that depends on A, it could be
+built at a different time.  In the general case, it is impossible for a builder to leave
+behind a cache for dependent builders to read, because it can never know the appropriate
+times to update or flush that cache.
+</p>
+<h4>3. Build scopes</h4>
+<p>
+Some Eclipse users work with massive workspaces of highly interconnected resources.
+These workspaces often take a very long time to build when a resource with a large
+number of downstream references changes.  Builder implementors are able to optimize
+these cases to some extent, but in cases where thousands of referenced resources are
+genuinely affected by a change, these optimizations can only go so far.
+</p>
+<p>
+One coping strategy that users have adopted is to only build small subsets of
+the workspace frequently, and perform full workspace builds less often.  This essentially
+batches changes so that a single long build can replace frequent long builds, thus
+freeing up more time for users.
+</p>
+<p>
+The current Eclipse build facilities are not well suited to this approach.  Autobuild
+and the incremental build command (invoked with Ctrl+B), work only at a workspace
+scope.  To build smaller sets of projects, users have to perform cumbersome manual
+steps involving multi-selecting the set of projects, and invoking &quot;Build Project&quot;
+from the &quot;Project&quot; context menu.  Autobuild has established a high
+expectation about the transparency of building, making these manual steps unacceptable.
+</p>
+
+<h3>Solutions</h3>
+<h4></h4>
+<p>
+</p>
+<h3>Proposed action</h3>
+<p>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
