@@ -27,6 +27,18 @@
   <li> comments are a good thing.</li>
   <li> comment all &quot;unobvious&quot; things (e.g. don't comment setters/getters)</li>
 </ul>
+<h3>The art of naming</h3>
+<ul>
+	<li>Chose class/method/field names that describe the purpose of the entire method/class</li>
+	<li>Don't use word fragments (getProjectValue is better than getProjVal)</li>
+	<li>Don't use generic variable names like &quot;temp&quot; or &quot;index&quot;
+	(Exception: really short methods where usage is very straight-forward.  Ok to use i,j, 
+	it for loop indexes)</li>
+	<li>Don't use get/set prefix unless the method really is just an accessor. If the
+	method does real work, it's not an accessor. (Note: we don't always follow
+	this rigorously, but we try).</li>
+</ul>
+
 <h3>General: (use the tool!)</h3>
 <ul>
   <li>Turn on all the compiler prefs including unused temps, synthetic accessor 
@@ -35,6 +47,7 @@
   <li> Compiler tasks. We have 3 that we use as a team (TODO, FIXME, XXX) Do not 
     add your own as this is unecessary and requires everyone on the team to change 
     their compiler settings in order to see these tasks.</li>
+   <li>Sort the methods within a class alphabetically (use the sort members action).</li>
   <li> All classes MUST have a copyright notice.</li>
   <li> data type size initialization -&gt; use meaningful values if possible, 
     not things like: new HashSet(65)</li>
