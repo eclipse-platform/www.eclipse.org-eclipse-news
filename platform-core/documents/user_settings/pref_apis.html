@@ -63,9 +63,10 @@ preference keys and should not be modifying any preference keys which are public
 <p><u>Solution:</u> Code in the preference initializer which accessed the instance and default
 scopes should be changed only to access the default scope and set the default preference values
 on that node directly. </p>
-<p><u>Status:</u> Bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=76506">76506</a>
-has been entered with a suggested implementation. There is one issue left with respect to the
-change listener that Tod and I will discuss.</p>
+<p><u>Status:</u> Done. Bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=76506">76506</a>
+was entered to track the last of the issues. It has been verified that all the plug-ins
+that are part of the RCP use the new preference APIs and don't access the instance
+area before it has been set.</p>
 <h2><a name="radar"></a>Issues on the Radar</h2>
 <h3>1). Property change listeners across scopes</h3>
 <p><u>Summary:</u> In the old code, clients registered property change listeners 
