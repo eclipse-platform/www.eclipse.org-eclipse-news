@@ -153,6 +153,8 @@
   <tr> 
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
     <td><a name="examples"></a><b>Examples/Contributions</b> <ul>
+	<li><img src="new.gif" width="31" height="14">The auto-refresh plug-in has been
+	integrated into the SDK and now is included as a part of the latest Eclipse 3.0 builds.</li>
         <li>Jed's <a href="downloads/examples/autorefresh/com.example.autorefresh-updatesite.zip"> 
           Auto-refresh plug-in v2.1</a> from June 18, 2003. As <a href="http://dev.eclipse.org/mhonarc/lists/platform-core-dev/msg00260.html">described</a> 
           on the platform-core-dev mailing list. For use with Eclipse 2.1 and 
@@ -525,8 +527,83 @@
   </tr>
   <tr>
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
-    <td> <p><a name="plan_milestone"></a> <strong>Milestone Plan (3.0 M8) - March 
-        26, 2004</strong></p>
+    <td> <p><a name="plan_milestone"></a><strong>Milestone Plan (3.0 M9) - May 
+        7, 2004</strong></p>
+      <ul>
+        <li><em><a href="plan_encoding.html">File Encoding &amp; Content Encoding</a></em> 
+          [rafael]</li>
+        <ul>
+          <li>Core APIs are implemented.</li>
+          <li>Framework for guessing encoding is in as well as a basic implementation.</li>
+          <li>org.eclipse.core.resources uses this.</li>
+          <li>Text is using new encoding work.</li>
+          <li>JDT/Core conversion is in progress.</li>
+        </ul>
+        <li><em><a href="documents/user_settings/index.html">User Settings</a></em> 
+          [dj]</li>
+        <ul>
+          <li>Thread safety review.</li>
+          <li>Flush out plug-in customization story.</li>
+          <li>Bug fixing as more people use it.</li>
+          <li>Documentation.</li>
+        </ul>
+        <li><em>Synchronization with the Filesystem</em> [john]</li>
+        <ul>
+          <li>Dropping FAM for Linux.</li>
+          <li>Improvements to polling support.</li>
+          <li>Finding a home in the preference pages.</li>
+        </ul>
+        <li><em><a href="plan_concurrency.html">Concurrent Operations</a></em> 
+          [john]</li>
+        <ul>
+          <li>Support and Documentation.</li>
+        </ul>
+        <li><em>Runtime</em> [pascal, rafael, jeff, tom, jenn]</li>
+        <ul>
+          <li>Code review. 
+            <ul>
+              <li>Remove TODOs.</li>
+              <li>Robustness.</li>
+              <li>Improved Logging.</li>
+            </ul>
+          </li>
+          <li>Reduce JRE requirements.</li>
+          <li>Shared location management.</li>
+          <li>Working with other teams to remove requirements on runtime.compatibility.</li>
+        </ul>
+        <li><em>PDE-Build</em> [pascal]</li>
+        <ul>
+          <li>Continued progress to work with new runtime.</li>
+          <li>Help RelEng with migration of work into the build process.</li>
+        </ul>
+        <li><em>Remove Dependancy on Xerces</em> [dj]</li>
+        <ul>
+          <li>SDK plug-ins removed dependancies a long time ago.</li>
+          <li>Will start removing org.apache.xerces plug-in from the build.</li>
+          <li>Need to update features (releng to release changes) and core.map 
+            file.</li>
+        </ul>
+        <li><em>Performance</em> [all]</li>
+        <ul>
+          <li>Performance pass on new runtime.</li>
+          <li>Use tooling to identify potential problem areas.</li>
+        </ul>
+        <li><em>Documentation</em> [all]</li>
+        <ul>
+          <li>Document new features.</li>
+          <li>Ensure old documentation still makes sense.</li>
+          <li>Ensure new APIs/javadoc is flushed out.</li>
+          <li>Extension point schemas for new extension points.</li>
+        </ul>
+        <li><em>Core Tools and Spies</em> [jeff]</li>
+        <ul>
+          <li>Use <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=56409">bug 
+            56409</a> to track progress.</li>
+          <li>Want to have tools working and "converted to 3.0" by second week 
+            of April.</li>
+        </ul>
+      </ul>
+      <p><strong>Milestone Plan (3.0 M8) - March 26, 2004</strong></p>
       <ul>
         <li> <em><a href="plan_encoding.html">File Encoding</a></em> [rafael] 
           <ul>
@@ -535,7 +612,8 @@
             <li>Modification of Resources implementation to use new APIs.</li>
           </ul>
         </li>
-        <li><em><a href="documents/user_settings/index.html">User Settings</a></em> [dj] 
+        <li><em><a href="documents/user_settings/index.html">User Settings</a></em> 
+          [dj] 
           <ul>
             <li>APIs released to HEAD immediately after M7</li>
             <li>Aid in client education and migration.</li>
@@ -553,7 +631,8 @@
               to HEAD.</li>
           </ul>
         </li>
-        <li><em><a href="plan_concurrency.html">Concurrent Operations</a></em> [johna] 
+        <li><em><a href="plan_concurrency.html">Concurrent Operations</a></em> 
+          [johna] 
           <ul>
             <li>Support and documentation.</li>
           </ul>
