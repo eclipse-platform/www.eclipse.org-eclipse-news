@@ -218,7 +218,9 @@
           editor by either checking the <code>META-INF</code> box on the Build 
           page or adding the entry manually on the <code>build.properties</code> 
           page.</li>
-        <li> Determine if you still need the <code>plugin.xml.</code></li>
+        <li> Determine if you still need the <code>plugin.xml.</code> (or <code>fragment.xml</code>)
+        If the file is empty (that is, you don't have any extensions or extension points) then it can be removed.
+        If you remove it, remember to remove the associated entries in the <code>build.properties</code> file too.</li>
       </ul>
       <p>If you have a custom build script (<code>build.xml</code>):</p>
       <ul>
