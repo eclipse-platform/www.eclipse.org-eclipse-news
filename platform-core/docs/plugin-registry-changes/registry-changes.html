@@ -1,8 +1,8 @@
 <html>
 <head><title>Planned changes to the plug-in registry APIs and their implementation</title></head>
 <body>
-<h1>Planned changes to the plug-in registry APIs and their implementation</h1>
-<EM>Last update: April 16, 2003</EM> 
+<h1>Planned changes to the plug-in registry API and implementation</h1>
+<EM>Last update: April 23, 2003</EM> 
 <h4>Summary of planned changes:</h4>
 
 <ul>
@@ -21,7 +21,7 @@
 	- Need a public API similer to FragmentDescriptor#getInstallURL()</li>
 </ul>
 
-<p>The platform registry API, whose starting point is the <code>IPluginRegistry</code>, 
+<p>The platform registry API, whose starting point is the <code>Platform.getPluginRegistry()</code>, 
 provides access to descriptors for the plug-ins in the registry but not for the fragments. Fragments 
 provide objects (pre-requisites, libraries, extensions, extension points) that are combined with those 
 in the plug-in they associate to during the registry resolution process.</p>
@@ -72,9 +72,9 @@ to be externalized and translated.&quot;</cite></p>
 
 
 <h4>Requisites:</h4><ul>
-	<li>UI needs to translate fragment name and fragment's provider name to show in the about dialog (bug 31094).</li>
-	<li>fragments may have their externalized strings provided by themselves, by the plug-in, or by other fragments 
-	(bugs 18617, 31596).</li>	
+  <li>UI needs to translate fragment name and fragment's provider name to show in the about dialog (bug 31094).</li>
+  <li>fragments should be able to have their externalized strings provided by 
+    themselves, by the plug-in, or by other fragments (bugs 18617, 31596).</li>	
 </ul>
 
 <h4>Proposed solution:</h4>
@@ -105,15 +105,19 @@ Clients that want those strings properly translated should (as suggested in bug 
 call <code>IPluginDescriptor#getResolvedString(String)</code>
 and the new proposed method <code>IFragmentDescriptor#getResolvedString(String)</code>.</p>
 
-<p>Also, since the ".properties" file may be anywhere in th plug-in's classpath, the 
-fragment descriptor implementation should ask its plug-in descriptor for the path where
-to look for it (what requires a fix for bug 35992).</p>
+<p>Also, since the &quot;.properties&quot; file may be anywhere in th plug-in's 
+  classpath, the fragment descriptor implementation should ask its plug-in descriptor 
+  for the path where to look for it (what requires a fix for bug 35992).</p>
 <ul>
-	<li>add new API methods <code>String getLabel()</code>, <code>String getProviderName()</code> and 
-	<code>String getResourceString(String)</code> to <code>IFragmentDescriptor</code>;</li>
-	<li>the internal implementation for <code>IPluginDescriptor</code> has to be refactored in order to share
-	the translation funcionality with the new method <code>getResourceString(String)</code> to be implemented
-	by <code>FragmentDescriptor</code>.</li>
+	
+  <li>add new API methods <code>String getLabel()</code>, <code>String getProviderName()</code> 
+    and <code>String getResourceString(String)</code> to <code>IFragmentDescriptor</code> 
+    - these methods would do the same thing as their counterparts in <code>IPluginDescriptor</code> 
+    but would take into consideration the bundle built on the corresponding <code>fragment.properties</code> 
+    file;</li>
+  <li>the internal implementation for <code>IPluginDescriptor</code> should be 
+    refactored in order to share the translation funcionality with the new method 
+    <code>getResourceString(String)</code> to be implemented by <code>FragmentDescriptor</code>.</li>
 </ul>
 
 <h3><a name="contributed_elements">Provide API for checking if a given plug-in descriptor element has been contributed by a fragment</a></h3>
@@ -123,25 +127,29 @@ to look for it (what requires a fix for bug 35992).</p>
 	- [runtime] Plug-in model objects should know where they are coming from</li>
 </ul>
 
-<p>The platform registry API, whose starting point is the <code>IPluginRegistry</code>, 
-provides access to descriptors for the plug-ins in the registry but not for the fragments. Fragments 
-provide objects (pre-requisites, libraries, extensions, extension points) that are combined with those 
-in the plug-in they associate to during the registry resolution process.</p>
+<p>Fragments provide objects (pre-requisites, libraries, extensions, extension 
+  points) that are combined with those in the plug-in they associate to during 
+  the registry resolution process.</p>
 
 <h4>Requisites:</h4><ul>
-	<li>it should be possible to tell apart elements provided by plug-ins from those contributed
-	by fragments: PDE currently casts the <code>IPluginRegistry</code> and <code>IPluginDescriptor</code> 
-	to their corresponding model objects (already in memory) to avoid reparsing the manifests. But PDE needs 
-	to know where the elements contributed by fragments came from (as if the registry were before resolution)</li>
+	
+  <li>it should be possible to tell apart elements provided by plug-ins from those 
+    contributed by fragments: PDE currently casts the <code>IPluginRegistry</code> 
+    and <code>IPluginDescriptor</code> to their corresponding model objects (already 
+    in memory) to avoid reparsing the manifests. But since the registry is already 
+    resolved, PDE does not know which elements were originally part of a plug-in. 
+    A simple <code>isFragmentContributed()</code> (in a sense that it is contributed 
+    by a fragment) in library, pre-requisite, extension and extension point model 
+    objects would be enough. To reduce memory footprint, the <code>PluginModelObject.flags</code> 
+    field could be used to store this information.</li>
 </ul>
 
 <h4>Proposed solution:</h4><ul>
-	<li>add new API class <code>ContributableModel</code> (sub-class of <code>PluginModelObject</code>);</li>
-	<li>add new API methods <code>boolean ContributableModel.isContributed()</code> and <code>void ContributableModel.markContributed()</code>;</li>	
-	<li>make <code>LibraryModel</code>, <code>PrerequisiteModel</code>, <code>ExtensionModel</code> and <code>ExtensionPointModel</code> sub-classes of <code>ContributableModel</code>;</li>
-	
+	<li>add new API class <code>FragmentContributableModel</code> (sub-class of <code>PluginModelObject</code>);</li>
+	<li>add new API methods <code>boolean FragmentContributableModel.isFragmentContributed()</code> and <code>void FragmentContributableModel.markFragmentContributed()</code>;</li>	
+	<li>make <code>LibraryModel</code>, <code>PrerequisiteModel</code>, <code>ExtensionModel</code> and <code>ExtensionPointModel</code> sub-classes of <code>FragmentContributableModel</code>;</li>
   <li>make <code>PluginModelObject.flags</code> package-private so they can be 
-    accessed from <code>ContributableModel</code>.</li>		
+    accessed from <code>FragmentContributableModel</code>.</li>		
 </ul>
 
 </body>

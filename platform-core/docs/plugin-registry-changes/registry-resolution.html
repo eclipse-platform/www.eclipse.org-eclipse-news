@@ -2,7 +2,7 @@
 <head><title>Plug-in registry resolution</title></head>
 <body>
 <h1>Plug-in registry resolution</h1>
-<EM>Last update: April 21, 2003</EM> 
+<EM>Last update: April 23, 2003</EM> 
 <p><cite>This document is intended as a home for gathering as much information 
   about the expected semantics for the registry resolution algorithm as possible. 
   The goal is to keep this knowledge separately from the implementation (which 
@@ -11,7 +11,8 @@
   are welcome. </cite></p>
 <h3>Soft pre-requisites</h3>
 
-<p>Soft pre-requisites are pre-requisites whose "optional" clause is "true". </p>
+<p>Soft pre-requisites are pre-requisites whose &quot;optional&quot; clause is 
+  &quot;true&quot;. </p>
 
 <p>Unsatisfied optional pre-requisites should be ignored (handled in the 
 same way as if they didn't exist at all).</p>
@@ -69,29 +70,29 @@ are integers and qualifier is a string.</p>
 enabled if they all are <cite>library plug-ins</cite> (they do not expose extension 
 points nor contribute extensions).</p>
 
-<p>If a highest version of a plug-in is disabled for some reason, the new 
-highest version (if available) should replace it (when possible) - all fragments 
-and plug-ins that required the disabled version should refer to the new one.</p>
+<p>If a highest version of a plug-in is disabled for some reason, the new highest 
+  version (if available) should replace it (when possible) - all plug-ins (not 
+  fragments) that required the disabled version should refer to the new one. </p>
+<h3>Questions to be answered</h3>
 
-<h3>What happens if...</h3>
-
-<ul>
-<li>...a fragment contributes pre-requisites to a plug-in that has multiple versions, 
-and these pre-requisites cannot be satisfied? Currently, the association of a fragment 
-and a plug-in happens before the resolution itself starts. So if a plug-in a fragment 
-contributes to is disabled, the fragment is lost (we don't try the next highest version).
-Should we? This would cause all versions compatible with the fragment to be 
-successively disabled, if the fragment contributes unsatisfiable pre-requisites. 
-Do we want that?</li>
-</ul>
+<ol>
+  <li>What happens if a fragment contributes pre-requisites to a plug-in that 
+    has multiple versions, and these pre-requisites cannot be satisfied? Currently, 
+    the association of a fragment and a plug-in happens before the resolution 
+    itself starts. So if a plug-in a fragment contributes to is disabled, the 
+    fragment is lost (we don't try the next highest version). Should we? This 
+    would cause all versions compatible with the fragment to be successively disabled, 
+    if the fragment contributes unsatisfiable pre-requisites. Do we want that?</li>
+</ol>
 
 <h3>Current registry resolution algorithm (RegistryResolver#resolve)</h3>
 
-<p>The existing resolution algorithm works based on a directed graph whose nodes represent
-all versions of a given plug-in, and arc from "a" to "b" means plug-in "a" requires plug-in "b". 
-The algorithm starting point is a set of root vertices (in-degree is 0) - plug-ins that are not required by any other
-plug-ins. The resolution is done through a depth-first traversal of the graph from the roots to their 
-pre-requisites.</p>
+<p>The existing resolution algorithm works based on a directed graph whose nodes 
+  represent all versions of a given plug-in, and arc from &quot;a&quot; to &quot;b&quot; 
+  means plug-in &quot;a&quot; requires plug-in &quot;b&quot;. The algorithm starting 
+  point is a set of root vertices (in-degree is 0) - plug-ins that are not required 
+  by any other plug-ins. The resolution is done through a depth-first traversal 
+  of the graph from the roots to their pre-requisites.</p>
 
 <ol>
 <li>Initial state: Registry initially contains all plug-ins and fragments 
@@ -132,20 +133,18 @@ points (#resolvePluginRegistry).</li>
 <h3>Problems in the current registry resolution algorithm</h3>
 
 <ol>
-<li>all versions of a plug-in are disabled when the version in use causes a conflict - when 
-a plug-in is disabled for causing a conflict, if there are different versions available, the highest one 
-should be selected and the resolution should try to enable that one;</li>
+  <li>all versions of a plug-in are disabled when the version in use causes a 
+    conflict - when a plug-in is disabled for causing a conflict, if there are 
+    different versions available, the highest one should be selected and the resolution 
+    should try to enable that one;</li>
   <li>order should not matter - for instance, when a conflict is detected, all 
     plug-ins involved should be disabled not only the one that introduced the 
     conflict (bug <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=34752">34752</a>);</li>
-<li>fragments not associated with a plug-in or fragments not used because another 
+  <li>fragments not associated with a plug-in or fragments not used because another 
     version of the same fragment exists should be trimmed when the user requests 
     it and currently are not (bug <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=33911">33911</a>).</li>
   <li>the resulting plug-in descriptor should indicate which portions came from 
-    fragments (feature request <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=23165">23165</a>)</li>
-<li>Incrementality (feature request)- it should be possible to resolve incrementally new 
-plug-ins that are added or to remove existing plug-ins and update the affected
-parts of the registry accordingly.</li>
+    fragments (feature request <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=23165">23165</a>).</li>
 </ol>
 </body>
 </html>
