@@ -145,6 +145,20 @@
     <li>check that the plugins and fragments did not get exploded</li>
     <li>confirm that the Core Tools function as expected</li>
   </ul>
+<h4>Extension registry</h4>
+<ul>
+  <li>install a plug-in dynamically and check whether its extensions and extension 
+    points are properly added to the registry</li>
+  <li>remove it and ensure its extensions and extension points go away</li>
+  <li>do the same as above with two plugins where one of them requires the other.</li>
+  <li>do the same as above with a plugin and a fragment, where both contribute extensions/extension points.</li>
+  <li>ensure plugin manifests with valid XML but missing required elements/attributes 
+    in extensions/extension points markup are properly ignored/handled</li>
+  </li>
+</ul>
+<p><strong>Note</strong>: use <code>org.eclipse.core.runtime/registry/debug/events/extension</code> debug option
+is useful to monitor registry change events when testing the registry in the context
+of dynamically installed plugins</p>
 <a href="#top">Back to top</a><br><hr>
 <h3><a name="jobs"/>Runtime - Jobs</h3>
   <h4>test1</h4>
@@ -165,6 +179,29 @@
   <ul>
     <li>item 1</li>
   </ul>
+
+<h4>Encoding - Content types</h4>
+<ul>
+  <li>confirm that the right content type is selected when a complex hierarchy 
+    of content types exist (use the resource properties dialog):<ul>
+	<li>a .xml file is recognized as XML</li>
+	  <li>a .xml file whose root element is &lt;project&gt; is recognized as an 
+        Ant Build Script</li>
+	<li>a plugin.xml file is recognized as a Plugin Manifest file</li>
+	  <li>a plugin.xml file whose root element is &lt;project&gt; is recognized 
+        as an Ant Build Script</li>
+  </ul>	
+  </li>
+  <li>confirm that the right encoding is picked for XML files containing a &quot;encoding&quot; 
+    attribute or not</li>
+</ul>
+<h4>Encoding - Preferences</h4>
+<ul>
+  <li>check the encoding-related info is properly updated when changes are made 
+    directly to the underlying preferences file (&lt;project&gt;/.settings/org.eclipse.core.resources.prefs) 
+    - try editing the file in a text editor, deleting the file, making the file 
+    out-of-sync</li>
+</ul>
 
 <a href="#top">Back to top</a><br><hr>
 <h3><a name="pde-build"/>PDE-Build</h3>	
