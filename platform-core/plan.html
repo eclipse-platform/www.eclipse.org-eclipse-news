@@ -103,10 +103,49 @@
   <tr> 
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
     <td><b>Test Plans</b> 
-      <ul>
-        <li>None yet.</li>
-      </ul>
-    </td>
+	  <blockquote> 
+        <p><b>Testing RC1</b> : When testing, we should specifically focus on 
+          areas which we have changed at the Platform/Core level since the last 
+          release. Some of these include:</p>
+		  
+		  
+        <ul>
+          <li><b>Linked Resources</b> : Users are now able to create first-level 
+            children (both files and folders) of a project and point them to any 
+            location on the file system. This removes the big requirement that 
+            we used to have of projects having to be rooted at a single point 
+            on disk.</li>
+          <li><b>Path Variables</b> : Workbench -> Preferences -> Workbench -> 
+            Path Variables. This preference page allows the user to create path 
+            variables and these then in turn can be used when creating linked 
+            resources. (see above) The path variables are stored in the preference 
+            store which means we can test all the usual suspects such as bogus 
+            values in the file, file corruption, etc etc.</li>
+          <li><b>DBCS</b> : A new core library was released which improved support 
+            for double-byte characters in file and path names. </li>
+          <li><b>Improved Delete Failure</b> : When problems occur during deletion, 
+            the tree that you are deleting should be pruned as best it can and 
+            then the errors are reported to the user.</li>
+          <li><b>Moving History</b> : When moving a resource to a different location 
+            in the workspace tree, the local history is now carried with it to 
+            the destination. </li>
+          <li><b>Circular Dependancies</b> : Improved support has been added for 
+            building workspaces containing projects with circular dependancies.</li>
+          <li><b>Performance</b> : Many improvments have been made in the area 
+            of performance. We need to ensure that (1) we are faster and smaller 
+            than we used to be and (2) people are taking advantage of the benefits 
+            that we offer them. This includes inspecting other teams' code in 
+            the SDK to ensure that they are, for instance, using the resource 
+            proxy visitor when they can.</li>
+        </ul>
+        <p> It's also important that when we test we have all the "bells and whistles" 
+          turned on in our development images. This includes (specifically) all 
+          label decorators. Decorators are run in a separate thread and it's important 
+          that we ensure our code is thread safe and we don't have any concurrent 
+          access or deadlock problems. </p>
+        <p>
+      </blockquote>
+      </td>
   </tr>
 </table>
 
