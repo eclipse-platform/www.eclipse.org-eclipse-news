@@ -75,7 +75,15 @@ and plug-ins that required the disabled version should refer to the new one.</p>
 
 <h3>What happens if...</h3>
 
-<p>(questions not answered yet)</p>
+<ul>
+<li>...a fragment contributes pre-requisites to a plug-in that has multiple versions, 
+and these pre-requisites cannot be satisfied? Currently, the association of a fragment 
+and a plug-in happens before the resolution itself starts. So if a plug-in a fragment 
+contributes to is disabled, the fragment is lost (we don't try the next highest version).
+Should we? This would cause all versions compatible with the fragment to be 
+successively disabled, if the fragment contributes unsatisfiable pre-requisites. 
+Do we want that?</li>
+</ul>
 
 <h3>Current registry resolution algorithm (RegistryResolver#resolve)</h3>
 
