@@ -169,12 +169,15 @@ suite.setApplicationId(SessionTestSuite.UI_TEST_APPLICATION);</pre>
           for an example of a user custom setup file. These examples are intended to be self-explanatory and are actually useful as they are (the user-specifc setup file has to be tweaked 
 		  to support your specific file system layout.</p></li>
       <li><strong>setup.override.eclipseArgs</strong> - allows the user to manually 
-        override command-line options corresponding to Eclipse arguments.</li>
+        override command-line options corresponding to Eclipse arguments. Example:
+        <p><code>-Dsetup.override.eclipseArgs=data=c:/workspace;debug;showlocation</code</p></li>
       <li><strong>setup.override.vmArgs</strong> - allows the user to manually 
         override command-line options corresponding to VM arguments (other than 
-        system properties).</li>
+        system properties). Example:
+        <p><code>-Dsetup.override.vmArgs=Xint;Xmx256m;hotspot;cp=startup.jar</code</p></li>
       <li><strong>setup.override.systemProperties</strong> - allows the user to 
-        manually override command-line options corresponding to system properties.</li>
+        manually override command-line options corresponding to system properties. Example:
+        <p><code>-Dsetup.override.systemProperties=osgi.checkConfiguration;osgi.locking=none</code</p></li>
       <li><strong>setup.debug</strong> - enables the session test framework debug 
         mode. In this mode, among other things, the command-line for every session 
         launched is dumped to the console.</li>
