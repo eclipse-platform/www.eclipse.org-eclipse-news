@@ -152,6 +152,8 @@
         <li><img src="../../images/small_progress.gif" width="14" height="5"> 
           [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=87973">bug 87973</a>] 
           - About content cannot be JAR'd</li>
+        <li>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=88254">bug 
+          88254</a>] - Test failures when running against a JAR'd Eclipse.</li>
       </ul>
       <p>&nbsp;</p></td>
   </tr>
@@ -258,9 +260,7 @@
   <tr>
     <td ALIGN=RIGHT VALIGN=TOP><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
     <td><strong>This table that shows the status of the plug-ins in the SDK relative 
-      to being shipped as JARs. Currently the list only contains those plug-ins 
-      who have agreed to participate in the early adoption of being shipped as 
-      a JAR file.</strong> 
+      to being shipped as JARs.</strong> 
       <p></p>
 	  <div align="center">
         <table width="75%" border="1">
@@ -392,45 +392,45 @@
           </tr>
           <tr> 
             <td>org.eclipse.help</td>
-            <td><div align="center">?</div></td>
+            <td><div align="center"><img src="../../images/small_check.gif" width="10" height="11"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
-            <td><div align="center"></div></td>
+            <td><div align="center">3.1 M6</div></td>
           </tr>
           <tr> 
             <td>org.eclipse.help.appserver</td>
-            <td><div align="center">?</div></td>
+            <td><div align="center"><img src="../../images/small_check.gif" width="10" height="11"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
-            <td><div align="center"></div></td>
+            <td><div align="center">3.1 M6</div></td>
           </tr>
           <tr> 
             <td>org.eclipse.help.base</td>
-            <td><div align="center">?</div></td>
+            <td><div align="center"><img src="../../images/small_check.gif" width="10" height="11"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
-            <td><div align="center"></div></td>
+            <td><div align="center">3.1 M6</div></td>
           </tr>
           <tr> 
             <td>org.eclipse.help.ui</td>
-            <td><div align="center">?</div></td>
+            <td><div align="center"><img src="../../images/small_check.gif" width="10" height="11"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
-            <td><div align="center"></div></td>
+            <td><div align="center">3.1 M6</div></td>
           </tr>
           <tr> 
             <td>org.eclipse.help.webapp</td>
-            <td><div align="center">?</div></td>
+            <td><div align="center"><img src="../../images/small_check.gif" width="10" height="11"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
-            <td><div align="center"></div></td>
+            <td><div align="center">3.1 M6</div></td>
           </tr>
           <tr> 
             <td>org.eclipse.jdt</td>
             <td><div align="center"><img src="../../images/small_check.gif" width="10" height="11"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
-            <td><div align="center"></div></td>
+            <td><div align="center">3.1 M6</div></td>
           </tr>
           <tr> 
             <td>org.eclipse.jdt.core</td>
@@ -476,10 +476,10 @@
           </tr>
           <tr> 
             <td>org.eclipse.jdt.junit.runtime</td>
-            <td><div align="center">?</div></td>
+            <td><div align="center"><img src="../../images/small_check.gif" width="10" height="11"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
-            <td><div align="center"></div></td>
+            <td><div align="center">3.1 M6</div></td>
           </tr>
           <tr> 
             <td>org.eclipse.jdt.launching</td>
@@ -497,10 +497,10 @@
           </tr>
           <tr> 
             <td>org.eclipse.jdt.source</td>
-            <td><div align="center"></div></td>
-            <td><div align="center"></div></td>
-            <td><div align="center"></div></td>
-            <td><div align="center"></div></td>
+            <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
+            <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
+            <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
+            <td><div align="center">N/A</div></td>
           </tr>
           <tr> 
             <td>org.eclipse.jdt.ui</td>
@@ -567,10 +567,10 @@
           </tr>
           <tr> 
             <td>org.eclipse.pde</td>
-            <td><div align="center">?</div></td>
+            <td><div align="center"><img src="../../images/small_check.gif" width="10" height="11"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
-            <td><div align="center"></div></td>
+            <td><div align="center">3.1 M6</div></td>
           </tr>
           <tr> 
             <td>org.eclipse.pde.build</td>
@@ -581,10 +581,10 @@
           </tr>
           <tr> 
             <td>org.eclipse.pde.core</td>
-            <td><div align="center">?</div></td>
+            <td><div align="center"><img src="../../images/small_check.gif" width="10" height="11"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
-            <td><div align="center"></div></td>
+            <td><div align="center">3.1 M6</div></td>
           </tr>
           <tr> 
             <td>org.eclipse.pde.doc.user</td>
@@ -595,38 +595,38 @@
           </tr>
           <tr> 
             <td>org.eclipse.pde.junit.runtime</td>
-            <td><div align="center">?</div></td>
+            <td><div align="center"><img src="../../images/small_check.gif" width="10" height="11"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
-            <td><div align="center"></div></td>
+            <td><div align="center">3.1 M6</div></td>
           </tr>
           <tr> 
             <td>org.eclipse.pde.runtime</td>
-            <td><div align="center">?</div></td>
+            <td><div align="center"><img src="../../images/small_check.gif" width="10" height="11"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
-            <td><div align="center"></div></td>
+            <td><div align="center">3.1 M6</div></td>
           </tr>
           <tr> 
             <td>org.eclipse.pde.source</td>
-            <td><div align="center">?</div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
-            <td><div align="center"></div></td>
+            <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
+            <td><div align="center">N/A</div></td>
           </tr>
           <tr> 
             <td>org.eclipse.pde.ui</td>
-            <td><div align="center">?</div></td>
+            <td><div align="center"><img src="../../images/small_check.gif" width="10" height="11"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
-            <td><div align="center"></div></td>
+            <td><div align="center">3.1 M6</div></td>
           </tr>
           <tr> 
             <td>org.eclipse.platform</td>
-            <td><div align="center"></div></td>
-            <td><div align="center"></div></td>
-            <td><div align="center"></div></td>
-            <td><div align="center"></div></td>
+            <td><div align="center"><img src="../../images/small_check.gif" width="10" height="11"></div></td>
+            <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
+            <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
+            <td><div align="center">3.1 M6</div></td>
           </tr>
           <tr> 
             <td>org.eclipse.platform.doc.isv</td>
@@ -644,17 +644,17 @@
           </tr>
           <tr> 
             <td>org.eclipse.platform.source</td>
-            <td><div align="center"></div></td>
-            <td><div align="center"></div></td>
-            <td><div align="center"></div></td>
-            <td><div align="center"></div></td>
+            <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
+            <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
+            <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
+            <td><div align="center">N/A</div></td>
           </tr>
           <tr> 
             <td>org.eclipse.sdk</td>
-            <td><div align="center"></div></td>
+            <td><div align="center"><img src="../../images/small_check.gif" width="10" height="11"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
-            <td><div align="center"></div></td>
+            <td><div align="center">3.1 M6</div></td>
           </tr>
           <tr> 
             <td>org.eclipse.search</td>
@@ -742,10 +742,10 @@
           </tr>
           <tr> 
             <td>org.eclipse.ui.cheatsheets</td>
-            <td><div align="center">?</div></td>
+            <td><div align="center"><img src="../../images/small_check.gif" width="10" height="11"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
-            <td><div align="center"></div></td>
+            <td><div align="center">3.1 M6</div></td>
           </tr>
           <tr> 
             <td>org.eclipse.ui.console</td>
@@ -770,10 +770,10 @@
           </tr>
           <tr> 
             <td>org.eclipse.ui.forms</td>
-            <td><div align="center">?</div></td>
+            <td><div align="center"><img src="../../images/small_check.gif" width="10" height="11"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
-            <td><div align="center"></div></td>
+            <td><div align="center">3.1 M6</div></td>
           </tr>
           <tr> 
             <td>org.eclipse.ui.ide</td>
@@ -784,17 +784,17 @@
           </tr>
           <tr> 
             <td>org.eclipse.ui.intro</td>
-            <td><div align="center">?</div></td>
+            <td><div align="center"><img src="../../images/small_check.gif" width="10" height="11"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
-            <td><div align="center"></div></td>
+            <td><div align="center">3.1 M6</div></td>
           </tr>
           <tr> 
             <td>org.eclipse.ui.presentations.r21</td>
-            <td><div align="center">?</div></td>
+            <td><div align="center"><img src="../../images/small_check.gif" width="10" height="11"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
-            <td><div align="center"></div></td>
+            <td><div align="center">3.1 M6</div></td>
           </tr>
           <tr> 
             <td>org.eclipse.ui.views</td>
@@ -815,7 +815,7 @@
             <td><div align="center"><img src="../../images/small_check.gif" width="10" height="11"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
-            <td><div align="center"></div></td>
+            <td><div align="center">3.1 M6</div></td>
           </tr>
           <tr> 
             <td>org.eclipse.ui.workbench.texteditor</td>
@@ -826,31 +826,31 @@
           </tr>
           <tr> 
             <td>org.eclipse.update.configurator</td>
-            <td><div align="center">?</div></td>
+            <td><div align="center"><img src="../../images/small_check.gif" width="10" height="11"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
-            <td><div align="center"></div></td>
+            <td><div align="center">3.1 M6</div></td>
           </tr>
           <tr> 
             <td>org.eclipse.update.core</td>
-            <td><div align="center">?</div></td>
+            <td><div align="center"><img src="../../images/small_check.gif" width="10" height="11"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
-            <td><div align="center"></div></td>
+            <td><div align="center">3.1 M6</div></td>
           </tr>
           <tr> 
             <td>org.eclipse.update.scheduler</td>
-            <td><div align="center">?</div></td>
+            <td><div align="center"><img src="../../images/small_check.gif" width="10" height="11"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
-            <td><div align="center"></div></td>
+            <td><div align="center">3.1 M6</div></td>
           </tr>
           <tr> 
             <td>org.eclipse.update.ui</td>
-            <td><div align="center">?</div></td>
+            <td><div align="center"><img src="../../images/small_check.gif" width="10" height="11"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
             <td><div align="center"><img src="../../images/small_x.gif" width="10" height="12"></div></td>
-            <td><div align="center"></div></td>
+            <td><div align="center">3.1 M6</div></td>
           </tr>
           <tr> 
             <td>org.junit</td>
