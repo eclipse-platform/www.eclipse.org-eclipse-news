@@ -22,11 +22,13 @@
 <h1 align="CENTER">Log File Retrieval</h1>
 <blockquote> 
   <p><b>Summary</b> <br>
-    There is a requirement to make it possible to read the platform log file back into memory.
+    There is a requirement to make available programatically the information that has 
+    been written to the platform log file.
     This RFC describes the proposed approach, which involves adding a new API method
-    for log retrieval, and changing the log file format to XML.
+    for obtaining the log file location, and changing the log file format to XML.
   <p><b> By John Arthorne, OTI.</b> <br>
     <font size="-1">Created: 28-NOV-2001.</font> <br>
+    <font size="-1">Modified 3-JAN-2002.  Removed API method for log retrieval.</font> <br>
     <font size="-1">Modified 5-DEC-2001.  Sample log file added.</font> <br>
   </blockquote>
 <hr>
@@ -48,57 +50,62 @@ keep their own list.  This leads to a duplication of the information available i
 </p>
 <h2>The Solution</h2>
 <p>
-The proposed solution is to add an API method to org.eclipse.core.runtime.Platform for reading the 
-log file back in from disk.  This API would be intended as a supplement to the existing listener mechanism.  
-That is, when a plug-in starts up, it can call the API method to read old log entries, then install a log listener for
-handling new entries as they occur.  The proposed API method is:
+The proposed solution is to add an API method to org.eclipse.core.runtime.Platform that returns
+the location of the log file, and to make the log file an XML file with a known DTD.  With a well known
+log file name and format, third parties can use Xerces to scan or parse the log file to retrieve 
+the information they are interested in.  The proposed API method is:
 <pre>
 /**
- * Returns all the status objects that have been logged during this invocation of the Platform.
- * If some entries could not be restored, the returned array may also include a status
- * object indicating what went wrong.
- * &lt;p&gt;Note: This is not a fast operation.  A log file will typically be retrieved from
- * disk and parsed each time this method is called.
- * &lt;/p&gt;
- * @return The status objects that have been logged.
- * @exception CoreException if the log entries could not be retrieved.
+ * Returns the location of the platform log file.  This file may contain information
+ * about errors that have previously occurred during this invocation of the Platform.
+ * @return the path of the log file on disk.
  */
-IStatus[] retrieveLogContents() throws CoreException;
+IPath getLogFileLocation();
 </pre>
 <p>
-The current log file format is not easy to read for humans or programs.  To resolve this,
-it is proposed that the log file be stored as an XML file.  Although the proposed document
-type definition for the file is provided below, this format will not be considered API.  That is,
-the log file name or storage format is subject to change without notice.
+The proposed document type definition for the log file is provided below.  This format will be 
+considered API.
 </p>
 <p>
-&lt;!ELEMENT LOG (LOG-ENTRY)*&gt;
+&lt;!ELEMENT log (entry)*&gt;
 <br>
-<br>&lt;!ELEMENT LOG-ENTRY (STATUS)&gt;
-<br>&lt;!ATTLIST LOG-ENTRY
-<br>&nbsp;&nbsp;&nbsp;&nbsp;DATE CDATA #REQUIRED&gt;
-<br>
-<br>&lt;!ELEMENT STATUS (STATUS)* (EXCEPTION)?&gt;
-<br>&lt;!ATTLIST STATUS
-<br>&nbsp;&nbsp;&nbsp;&nbsp;SEVERITY (Error | Info | Ok | Warning) #REQUIRED
-<br>&nbsp;&nbsp;&nbsp;&nbsp;PLUGIN-ID CDATA #REQUIRED
-<br>&nbsp;&nbsp;&nbsp;&nbsp;CODE CDATA #REQUIRED
-<br>&nbsp;&nbsp;&nbsp;&nbsp;MESSAGE CDATA #REQUIRED&gt;
-<br>
-<br>&lt;!ELEMENT EXCEPTION (EXCEPTION)? &gt;
-<br>&lt;!ATTLIST EXCEPTION
-<br>&nbsp;&nbsp;&nbsp;&nbsp;MESSAGE CDATA #REQUIRED
-<br>&nbsp;&nbsp;&nbsp;&nbsp;STACK-TRACE CDATA #REQUIRED&gt;
+<br>&lt;!ELEMENT entry (status)&gt;
+<br>&lt;!ATTLIST entry
+<br>&nbsp;&nbsp;&nbsp;&nbsp;date CDATA #REQUIRED&gt;
+<ul>
+<li><b>date -</b> the date this entry was logged, in the default java date format.</li>
+</ul>
+<br>&lt;!ELEMENT status (status)* (exception)?&gt;
+<br>&lt;!ATTLIST status
+<br>&nbsp;&nbsp;&nbsp;&nbsp;sev (ERROR | INFO | OK | WARNING) #REQUIRED
+<br>&nbsp;&nbsp;&nbsp;&nbsp;id CDATA #REQUIRED
+<br>&nbsp;&nbsp;&nbsp;&nbsp;code CDATA #REQUIRED
+<br>&nbsp;&nbsp;&nbsp;&nbsp;msg CDATA #REQUIRED&gt;
+<ul>
+<li><b>sev -</b> the problem severity.</li>
+<li><b>id -</b> the ID of the plug-in in which the error occurred.</li>
+<li><b>code -</b> the error code, an integer value that generally has some meaning
+for the plug-in that generated the error.  See <tt>org.eclipse.core.runtime.IStatus#getCode</tt>.</li>
+<li><b>msg -</b> the status message, describing the error that occurred.</li>
+</ul>
+<br>&lt;!ELEMENT exception (exception)? &gt;
+<br>&lt;!ATTLIST exception
+<br>&nbsp;&nbsp;&nbsp;&nbsp;msg CDATA #REQUIRED
+<br>&nbsp;&nbsp;&nbsp;&nbsp;trace CDATA #REQUIRED&gt;
+<ul>
+<li><b>msg -</b> the message associated with some <tt>java.lang.Throwable</tt> object.</li>
+<li><b>trace -</b> a stack trace provided by <tt>java.lang.Throwable#printStackTrace</tt>.</li>
+</ul>
 </p>
 <p>
 The log file would remain at its present location, and its name would remain the same (.log).
-While this name is not ideal, changing the log file name would be too disorienting for the large existing
-user base that is familiar with the current log location.  Here is a 
-<A HREF="sample.txt">sample log file</A> in the new XML format.
+Here is a <A HREF="sample.txt">sample log file</A> in the new XML format.
+</p>
 <h2>RFC Status</h2>
-<p>This proposal is currently soliciting comments.  Please provide comments by 7-DEC-2001.
-Please provide feedback early rather than waiting until the voting period.  Comments should be directed
-to the core mailing list: <a href="http://dev.eclipse.org/mailman/listinfo/platform-core-dev">platform-core-dev@eclipse.org</a> 
+<p>This proposal has been through one round of comments, and will soon be put
+to a vote.  Comments on the proposal between now and the voting period will still
+be considered.  Direct comments to the core mailing list: 
+<a href="http://dev.eclipse.org/mailman/listinfo/platform-core-dev">platform-core-dev@eclipse.org</a> 
 (<a href="mailto:platform-core-dev@eclipse.org">post</a>, <a href="http://dev.eclipse.org/mhonarc/lists/platform-core-dev/maillist.html">archives</a>).</p>
 </body>
 </html>
