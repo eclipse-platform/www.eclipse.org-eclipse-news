@@ -18,7 +18,7 @@ a committed plan item, no promises are being made at this point.
 <h3>Problems</h3>
 <h4>1. Dynamic classpaths, static project references</h4>
 <p>
-There are many different PDE self-hosting styles.  Some build and run against
+There are many different PDE self-hosting styles.  Some users build and run against
 plugins outside the workspace, some use binary or source projects in the workspace,
 and some use a combination of the two.  Every time a user switches from building
 against external libraries to building against internal projects, the classpaths of all
@@ -49,11 +49,11 @@ in optimizing multiple project builds.
 <p>
 Without going into too much detail, consider a simple case of projects A and B,
 where B depends on A and so must be built after it.  When A is built, it could leave
-behind a structure that describes in more detail exactly what changes builder A made.
-Builder B could then read that information and optimize its build accordingly.  However,
+behind a &quot;cache&quot; that describes in more detail exactly what changes builder A made.
+Builder B could then read the cached information and optimize its build accordingly.  However,
 with manual project builds, project A could be built several times before project B is
-built.  In this simple case, builder A could incrementally update this structure until
-B is finally built.  However, if there is also project C that depends on A, it could be
+built.  In this simple case, builder A could incrementally update this cache until
+B is finally built.  However, if there is also a project C that depends on A, it could be
 built at a different time.  In the general case, it is impossible for a builder to leave
 behind a cache for dependent builders to read, because it can never know the appropriate
 times to update or flush that cache.
