@@ -17,7 +17,7 @@
     hopes of encouraging adoption of this framework not only by all the Platform/Core 
     team members but also by members of other Eclipse teams interested in developing 
     their own session tests. </p>
-  <p>Last Modified: October 8, 2004</p>
+  <p>Last Modified: October 21, 2004</p>
 </blockquote>  
 <ol>
   <li> 
@@ -75,8 +75,8 @@ public class MyTestCase extends TestCase {
       that if a session test suite contains another session test suite (or any 
       other special types of test suite), the outer session test suite will rule.</p>
   </li>
-  <li><strong>Why do I get a <em>...SetupException: Setup file 
-    '&lt;current dir&gt;/default-setup.xml' not found</em>?</strong>
+  <li><strong>Why do I get a <em>&quot;...SetupException: No setup descriptions 
+    found. Ensure you are specifying the path for an existing setup file...</em>&quot;?</strong> 
     <p> You are running your session test suite as a regular <em>JUnit test</em> 
       instead of as a <em>Plug-in JUnit test</em>. A default setup (in other words, 
       command line) for launching new Eclipse sessions when running session tests 
@@ -93,15 +93,20 @@ public class MyTestCase extends TestCase {
   </li>
   <li> 
     <p><strong>Should I run my tests using a JUnit or PDE Junit launch configuration?</strong></p>
-    <p>Only running with a PDE Junit launch configuration will allow you to test code 
-	in your workspace (unless you use the simulated startup self-hosting style). Also,
-	launching with PDE JUnit frees you from having to provide configuration parameters, since
-	reasonable defaults will be obtained from the contrrolling Eclipse. If you are still interested in running your tests as a JUnit launch configuration, see
-	the next FAQ.</p>
-  </li>	
+    <p>Only running with a PDE Junit launch configuration will allow you to test 
+      code in your workspace (unless you use the simulated startup self-hosting 
+      style). Also, launching with PDE JUnit frees you from having to provide 
+      configuration parameters, since reasonable defaults will be obtained from 
+      the controlling Eclipse. If you are still interested in running your tests 
+      as a JUnit launch configuration, see the next FAQ.</p>
+  </li>
   <li> 
-    <p><strong>How do I run session tests from a JUnit (not PDE JUnit) launch configuration?</strong> </p>
-    <p>TBD</p>
+    <p><strong>How do I run session tests from a JUnit (not PDE JUnit) launch 
+      configuration?</strong> </p>
+    <p>Ensure you provide a valid set of setup files. Setup files describe option 
+      sets that can be used when launching Eclipse. Look <a href="./base-setup.xml">here</a> 
+      for an example of a base setup file and <a href="./user-setup.xml">here</a> 
+      for an example of a user custom setup file.</p>
   </li>
   <li> 
     <p><strong>How do I run UI-oriented tests?</strong> </p>
@@ -125,17 +130,12 @@ suite.setApplicationId(SessionTestSuite.UI_TEST_APPLICATION);</pre>
       projects, you will find real-world examples of how to use this framework. 
       Just look for the subclasses of <code>SessionTestSuite</code>.</p>
   </li>
-  <li><strong>How do I configure a setup declaratively?</strong> 
-    <p>Look <a href="./base-setup.xml">here</a> for an example of a base setup file and <a href="./user-setup.xml">here</a> 
-    for an example of a user setup file.</p>
-  </li>
   <li><strong>How do I configure a setup programmaticaly?</strong> 
     <p>TBD</p>
   </li>
   <li><strong>What if I find problems using the session test framework or would 
     like to request/propose an enhancement?</strong> 
-    <p>Please open a PR against Platform/Runtime and assign it to <code>rafael_chaves 
-      AT ca.ibm.com</code>.</p>
+    <p>Please send an e-mail to <code>rafael_chaves AT ca.ibm.com</code>.</p>
   </li>
 </ol>
 </body>

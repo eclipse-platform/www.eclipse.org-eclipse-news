@@ -12,14 +12,21 @@
 <setup>
 
 	<optionSet id="j9" name="J9">
+		<eclipseArg option="vm" value="d:\java\j9sc20040917\jre\bin\java"/>	
 		<vmArg option="Xj9"/>
 		<vmArg option="Xanother"/>		
 	</optionSet>	     
 
 	<optionSet id="sun" name="Sun JRE"/>
-	<optionSet id="sun_1.3" name="Sun JRE 1.3.*" base="sun"/>
-	<optionSet id="sun_1.4" name="Sun JRE 1.4.*" base="sun"/>	
-	<optionSet id="sun_1.5" name="Sun JRE 1.5.*" base="sun"/>
+	<optionSet id="sun_1.3" name="Sun JRE 1.3.*" base="sun">
+		<eclipseArg option="vm" value="x:\java\sun jdk 1.3.1_08\jre\bin\java"/>
+	</optionSet>	
+	<optionSet id="sun_1.4" name="Sun JRE 1.4.*" base="sun">	
+		<eclipseArg option="vm" value="x:\java\sun jdk 1.4.2_03\jre\bin\java"/>
+	</optionSet>	
+	<optionSet id="sun_1.5" name="Sun JRE 1.5.*" base="sun">
+		<eclipseArg option="vm" value="x:\java\sun jdk 1.5.0\jre\bin\java"/>
+	</optionSet>	
 	
 	<optionSet id="big_memory" name="Big Memory">
 		<vmArg option="Xmx256m"/>
@@ -62,6 +69,6 @@
 	</optionSet>	     
 	
 	<optionSet id="performance" name="Performance">	
-		<systemProperty key="perf_ctrl" value="dbloc=d:/temp/cloudscape;config=org.eclipse.core.tests.basic;build=base"/>
+		<systemProperty key="eclipse.perf.dbloc" value="d:/temp/cloudscape"/>
 	</optionSet>
 </setup>
