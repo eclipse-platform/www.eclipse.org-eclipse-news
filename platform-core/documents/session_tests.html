@@ -17,7 +17,7 @@
     hopes of encouraging adoption of this framework not only by all the Platform/Core 
     team members but also by members of other Eclipse teams interested in developing 
     their own session tests. </p>
-  <p>Last Modified: October 21, 2004</p>
+  <p>Last Modified: November 19th, 2004</p>
 </blockquote>  
 <ol>
   <li> 
@@ -93,20 +93,18 @@ public class MyTestCase extends TestCase {
   </li>
   <li> 
     <p><strong>Should I run my tests using a JUnit or PDE Junit launch configuration?</strong></p>
-    <p>Only running with a PDE Junit launch configuration will allow you to test 
-      code in your workspace (unless you use the simulated startup self-hosting 
-      style). Also, launching with PDE JUnit frees you from having to provide 
-      configuration parameters, since reasonable defaults will be obtained from 
-      the controlling Eclipse. If you are still interested in running your tests 
-      as a JUnit launch configuration, see the next FAQ.</p>
+    <p>Running with a PDE Junit launch configuration will allow you to test code 
+      in your workspace. Also, launching with PDE JUnit frees you from having 
+      to provide configuration parameters, since reasonable defaults will be obtained 
+      from the controlling Eclipse. If you are still interested in running your 
+      tests as a JUnit launch configuration, see the next FAQ.</p>
   </li>
   <li> 
     <p><strong>How do I run session tests from a JUnit (not PDE JUnit) launch 
       configuration?</strong> </p>
     <p>Ensure you provide a valid set of setup files. Setup files describe option 
-      sets that can be used when launching Eclipse. Look <a href="./base-setup.xml">here</a> 
-      for an example of a base setup file and <a href="./user-setup.xml">here</a> 
-      for an example of a user custom setup file.</p>
+      sets that can be used when launching Eclipse. See question about options 
+      supported by the framework.</p>
   </li>
   <li> 
     <p><strong>How do I run UI-oriented tests?</strong> </p>
@@ -114,6 +112,14 @@ public class MyTestCase extends TestCase {
       to be <code>SessionTestSuite.UI_TEST_APPLICATION</code>:</p>
     <pre>SessionTestSuite suite = new SessionTestSuite("org.myplugin.tests", MyTestCase.class);
 suite.setApplicationId(SessionTestSuite.UI_TEST_APPLICATION);</pre>
+  </li>
+  <li><strong>How do I run session tests in debug mode?</strong> 
+    <p>Use the <code>remote_debug</code> setup option. This is not much fun. Every 
+      single test case will be launched in a separate VM in remote debug mode. 
+      Thus, it will block, waiting for a client VM to connect. You will have to 
+      use a Remote Application Debug launch configuration for every test case 
+      to be run. There is no way to run only some of the test cases in a session 
+      suite in remote debug mode.</p>
   </li>
   <li><strong>How do I run performance session tests?</strong> 
     <p>Use the <code>PerformanceSessionTestSuite</code> instead.</p>
@@ -130,12 +136,51 @@ suite.setApplicationId(SessionTestSuite.UI_TEST_APPLICATION);</pre>
       projects, you will find real-world examples of how to use this framework. 
       Just look for the subclasses of <code>SessionTestSuite</code>.</p>
   </li>
-  <li><strong>How do I configure a setup programmaticaly?</strong> 
-    <p>TBD</p>
+  <li><strong>What are all supported options and how to use them?</strong> 
+  	<p></p>
+    <ul>
+      <li><strong>setup.options</strong> - only valid when setup files are available. 
+        Setup files describe option sets, which are collections of command-line 
+        options that can be used while running Eclipse. Examples: 
+        <p><code>-Dsetup.options=sun_1.5,eclipse_3.1_M1,big_memory</code></p>
+        <p>would run Eclipse 3.1 M1 using Sun JRE 1.5 with whatever amount of 
+          memory the <code>big_memory</code> option set specifies. While:</p>
+        <p><code>-Dsetup.options=ibm_1.4,eclipse_3.0,no_jit</code></p>
+        <p>would run Eclipse 3.0 on IBM JRE 1.4 with Just-in-Time compilation 
+          disabled</p>
+        <p>The meaning of every option set must be specified in setup files (see 
+          below).</p>
+      </li>
+      <li><strong>setup.files</strong> - setup files provide option set definitions 
+        for running the session tests. Setup files can be chained, so a more general 
+        setup file (used by the whole team) can be customized with a user specific 
+        setup file. This is useful since option sets must specify file system 
+        locations, and every user has its own layout for JRE and Eclipse installs. 
+        The expected use of this option is: 
+        <p><code>-Dsetup.files=/tmp/default-setup.xml,~/user-setup.xml</code></p>
+        <p>Here, the <code>default-setup.xml</code> file is shared by the whole 
+          team and defines all option sets that the team may use. The <code>user-setup.xml</code> 
+          merely overrides location sensitive options to adapt them to the user 
+          specific file system layout. Look <a href="./default-setup.xml">here</a> 
+          for an example of a default setup file and <a href="./user-setup.xml">here</a> 
+          for an example of a user custom setup file. These examples are intended to be self-explanatory and are actually useful as they are (the user-specifc setup file has to be tweaked 
+		  to support your specific file system layout.</p></li>
+      <li><strong>setup.override.eclipseArgs</strong> - allows the user to manually 
+        override command-line options corresponding to Eclipse arguments.</li>
+      <li><strong>setup.override.vmArgs</strong> - allows the user to manually 
+        override command-line options corresponding to VM arguments (other than 
+        system properties).</li>
+      <li><strong>setup.override.systemProperties</strong> - allows the user to 
+        manually override command-line options corresponding to system properties.</li>
+      <li><strong>setup.debug</strong> - enables the session test framework debug 
+        mode. In this mode, among other things, the command-line for every session 
+        launched is dumped to the console.</li>
+    </ul>
+	<p></p>
   </li>
   <li><strong>What if I find problems using the session test framework or would 
     like to request/propose an enhancement?</strong> 
-    <p>Please send an e-mail to <code>rafael_chaves AT ca.ibm.com</code>.</p>
+    <p>Please report them in Bugzilla against the Platform/Runtime component.</p>
   </li>
 </ol>
 </body>
