@@ -39,8 +39,25 @@
   <tr> 
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
     <td> 
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
+      <p><b>Progress updates</b></p>
+      <p>September 25, 2003 - New API for dynamically installing plug-ins is available.
+      API changes:
+      <ul>
+      <li>new package org.eclipse.core.runtime.registry - this package provides an extension 
+      registry, a simplified view of the plug-in registry. The extension registry (available 
+      through the org.eclipse.core.runtime.Platform class) provides a way for
+      plug-ins to be notified when extensions are added to or removed from extension points.
+      </li>
+      <li>new methods in org.eclipse.core.runtime.Platform - the added methods allow clients to 
+      install plug-ins dynamically and to listen to plug-in lifecycle events, such as
+      plug-in addition and activation.
+      </li>
+      </ul>
+      <b>N.B.</b> <i>-dynamic, a new command-line option was defined to put the platform in the 
+      "dynamic mode". Currently, this option is required so the APIs described above can be used. This option
+      is temporary and will not be supported in future builds.
+      </i>
+      </p>
     </td>
   </tr>
 </table>
