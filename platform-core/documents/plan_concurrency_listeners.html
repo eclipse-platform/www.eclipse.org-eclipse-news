@@ -184,6 +184,14 @@ via the <code>IWorkspace.checkpoint</code> API method.  Therefore, this API chan
 is not likely to be a breaking change for existing clients.  It is equivalent to the platform
 deciding to call <code>IWorkspace.checkpoint</code> periodically during a long running
 operations.</li>
+<li>
+The javadoc of <tt>IResourceChangeEvent</tt> states that <tt>POST_CHANGE</tt>
+events happen immediately after <tt>POST_AUTO_BUILD</tt> events.  This will no
+longer always be true.  The converse will still be true: <tt>POST_AUTO_BUILD</tt>
+events will always be followed immediately by a <tt>POST_CHANGE</tt> event.
+To boil it down: auto-build events still occur at the same time in relation to builds, they 
+still receive exactly the same information, but they just occur less frequently.
+</li>
 </ol>
 </p>
 <h3>How clients might be impacted</h3>
