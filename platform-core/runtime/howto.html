@@ -31,6 +31,72 @@
 <table border=0 cellspacing=0 cellpadding=2 width="100%" >
   <tr> 
     <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF"> 
+      Getting/installing the Equinox Runtime</font></b></td>
+  </tr>
+</table>
+<p>The Equinox project has developed an alternate runtime for Eclipse. Depending 
+  on the Eclipse build you are using the Equinox runtime may already be included. 
+  To check, look for a plug-in called org.eclipse.osgi in your install's plugins 
+  directory. If you have Equinox already, you can skip these steps.<br>
+</p>
+<p>The Equinox runtime is plug compatible with the standard Eclipse runtime subject 
+  to the changes detailed in the <a href="migration.html">Migration Guide</a>. 
+  To get, install and use the Equinox runtime, follow the steps below.</p>
+<ol>
+  <li><a href="http://eclipse.org/downloads/">Download</a> and unzip an Eclipse 
+    3.0 build from 20031111 or later</li>
+  <li><a href="http://dev.eclipse.org/viewcvs/indextech.cgi/%7Echeckout%7E/equinox-home/downloads.html">Download</a> 
+    the appropriate Equinox runtime and unzip over the previously installed Eclipse 
+    build. When prompted to overwrite, answer Yes to all.<br>
+    <b><font color="#FF0000"> Note that this destructively modifies the original 
+    Eclipse install.</font></b> The only option for reversing this operation is 
+    to re-unzip the original Eclipse installation.<br>
+  </li>
+  <li>Run Eclipse as normal<br>
+  </li>
+</ol>
+<table border=0 cellspacing=0 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF"> 
+      Setting up your workspace</font></b></td>
+  </tr>
+</table>
+<p>Users with existing workspaces should not encounter problems opening them with 
+  the Equinox runtme. However, since the runtime plug-in structure has changed, 
+  there some updating of classpaths may be required. In particular, developers 
+  setting up a runtime workspace (i.e., a workspace containing plug-ins) will 
+  need to either:</p>
+<ul>
+  <li>configure the target platform (Preferences-&gt;Plug-in Development-&gt;Target 
+    Platform) to include the required plug-ins and then use PDE &quot;required 
+    plugin&quot; classpath containers on their projects (recommended) or </li>
+  <li>add projects (binary or source) for the required plug-ins and setup explicit 
+    project dependencies for their projects</li>
+</ul>
+<p>Both of these can be accomplished using the PDE Tools-&gt;Update classpath 
+  project context menu. </p>
+<p>The following projects are needed (in addition to the normal set) :</p>
+<ul>
+  <li>org.eclipse.osgi</li>
+  <li>org.eclipse.osgi.services</li>
+  <li>org.eclipse.osgi.util</li>
+  <li>org.eclipse.core.runtime.compatibility</li>
+  <li>org.eclipse.update.configurator</li>
+</ul>
+<p>If you have an existing runtime workspace containing one of the following pre-existing 
+  plug-ins, it must be updated to accurately match their new contents</p>
+<ul>
+  <li>org.eclipse.core.boot</li>
+  <li>org.eclipse.core.runtime</li>
+</ul>
+<p>Note that these plug-ins are only required if your plug-in uses the old runtime 
+  API. If you have adopted the new API (see <a href="#updating">Updating your 
+  code</a>) then these projects/plug-ins are not needed.</p>
+<p>There should be no need to modify the launch configurations as the runtime 
+  is self-discovering.</p>
+<table border=0 cellspacing=0 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF"> 
       Controlling the runtime</font></b></td>
   </tr>
 </table>
@@ -53,7 +119,52 @@
   starting with &quot;osgi&quot; are specific to the OSGi framework implementation 
   while those starting with &quot;eclipse&quot; are particular to the Eclipse 
   runtime layered on top of the OSGi framework.</p>
-<p>&nbsp;</p>
+<dl> 
+  <dt>eclipse.dev</dt>
+  <dd>sets the development time classpath for plug-ins. This is equivalent to 
+    the -dev command line argument.</dd>
+  <dt>eclipse.application</dt>
+  <dd>&lt;description&gt;</dd>
+  <dt>eclipse.exitcode</dt>
+  <dd>&lt;description&gt;</dd>
+  <dt>eclipse.installURL</dt>
+  <dd>&lt;description&gt;</dd>
+  <dt>eclipse.noExtensionMunging</dt>
+  <dd>&lt;private?&gt; Will this stay?</dd>
+  <dt>eclipse.ignore</dt>
+  <dd>&lt;description&gt;</dd>
+  <dt>eclipse.manifestConverter</dt>
+  <dd>&lt;description&gt; must fix the casing in the code</dd>
+  <dt>eclipse.debug.startupTime</dt>
+  <dd>&lt;description&gt;</dd>
+  <dt>osgi.bundles</dt>
+  <dd>A comma-separated list of bundles to install in the framework at startup. 
+    These are installed before the runtime and any other Eclipse plugins are installed. 
+    Each entry in the list is of the form:<br>
+    <pre>    &lt;url to bundle&gt;[@&lt;start-level&gt;]</pre>
+  </dd>
+  <dt>osgi.debug</dt>
+  <dd>The URL of the debug .options file to use. Equivalent to -debug &lt;url&gt;.</dd>
+  <dt>osgi.configuration.area</dt>
+  <dd>The URL location of the configuration being run. </dd>
+  <dt>osgi.manifest.cache</dt>
+  <dd>&lt;xxx description&gt;</dd>
+  <dt>osgi.instance</dt>
+  <dd>&lt;xxx is this really still used?&gt;</dd>
+  <dt>osgi.syspath</dt>
+  <dd>&lt;xxx still used? fix the name&gt;</dd>
+  <dt>osgi.os</dt>
+  <dd>The OS on which the current platform is running. This is equivalent to the 
+    -os command line argument. <br>
+    &lt;xxx more data on how the value is derived&gt;</dd>
+  <dt>osgi.ws</dt>
+  <dd>sdf</dd>
+  <dt>osgi.nl</dt>
+  <dd>sdf</dd>
+  <dt>osgi.arch</dt>
+  <dd>dsf</dd>
+  <dt>&nbsp;</dt>
+</dl>
 <table border=0 cellspacing=0 cellpadding=2 width="100%" >
   <tr> 
     <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF"> 
