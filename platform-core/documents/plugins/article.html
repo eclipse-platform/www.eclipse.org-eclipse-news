@@ -37,7 +37,7 @@
   <p><b>Summary</b><br>
     <center><b>This is a draft document. </b></center><br>
     The Eclipse Platform is based on the notion of plug-ins. Plug-ins are a simple 
-    but powerful mechanism that allows developers and users to construct complex 
+    but powerful mechanism that allow developers and users to construct complex 
     tool sets by composing functionality (i.e., plug-ins). There are of course 
     a number of subtleties in how plug-ins are defined and how they interact. 
     This article attempts to demystify plug-ins and make it easier to create and 
@@ -68,8 +68,7 @@
 <p>It follows from this, that capabilities are added to the Platform incrementally, 
   by adding plug-ins. Each new plug-in ties into the API of existing plug-ins 
   and provides new functionality. Still other plug-ins then build on the API of 
-  these new plug-ins to add still more functionality to the Platform. And so on.. 
-</p>
+  these new plug-ins to add still more functionality to the Platform. And so on...</p>
                
   
 <p>Another design point that makes Eclipse extremely extensible is its policy 
@@ -96,7 +95,7 @@
 </p>
 <p>A typical plug-in consists of Java code in a JAR library, some read-only files, 
   and other resources such as images, web templates, message catalogs, native 
-  code libraries, translation files, etc. Most plug-ins contributed executable 
+  code libraries, translation files, etc. Most plug-ins contribute executable 
   code though not all. Documentation plug-ins, for example, contribute online 
   help in the form of HTML pages. If a plug-in does contain code it must either 
   be written in Java or be callable from Java. </p>
@@ -106,7 +105,7 @@
 <ul>
   <li><b>Libraries</b> define the location of executable code. </li>
   <li><b>Prerequisites</b> define dependencies between plug-ins. </li>
-  <li><b>Extension-points</b> allow other plug-ins to contribute information in 
+  <li><b>Extension points</b> allow other plug-ins to contribute information in 
     a well-defined manner. </li>
   <li><b>Extensions</b> contribute information to the extension points of other 
     plug-ins. </li>
@@ -171,10 +170,12 @@
 &lt;plugin
     id="com.example.myplugin"
     name="My Plugin"
-	version="2.0.0"
+	 version="2.0.0"
     provider-name="Example Plug-ins Inc."&gt;<br>
   <strong>&lt;requires&gt;
-    &lt;import plugin="com.example.anotherplugin"/&gt;
+    &lt;import plugin="com.example.anotherplugin"
+        version=&quot;2.1.3&quot;
+        match=&quot;equivalent&quot;/&gt;
   &lt;/requires&gt;
 </strong>
   &lt;runtime&gt;
@@ -186,8 +187,26 @@
 &lt;/plugin&gt;</pre>
 </blockquote>
 <p>In this example, <em>com.example.myplugin</em> (My Plugin) can access any of 
-  the classes in <em>com.example.anotherplugin</em> (Another Plugin) which is 
+  the classes in <em>com.example.anotherplugin</em> (Another Plugin) which are 
   explicitly exported in its library statements. </p>
+<p>Notice that the import statement is qualified by a version number and matching 
+  rule. Versions refine the dependencies between plugins and help the runtime 
+  choose between different installations of the same plug-in. In general the runtime 
+  picks the most recent version which matches given the matching rule. Eclipse 
+  version numbers are a four part string of the form <font face="Courier New, Courier, mono">major.minor.service.tag</font>. 
+  Versions are compared using one of four matching rules.</p>
+<dl> 
+  <dl>
+    <dt><b>perfect</b></dt>
+    <dd>All four components of the version must match.</dd>
+    <dt><b>equivalent</b></dt>
+    <dd>major and minor must match</dd>
+    <dt><b>compatible</b> (default)</dt>
+    <dd>major must match</dd>
+    <dt><b>greaterOrEqual</b></dt>
+    <dd>Any version which is a perfect match of sorts lexographically after</dd>
+  </dl>
+</dl>
 <p>Plug-in dependencies are transitive. That is, if Another Plugin requires some 
   plug-in, say Final Plugin, then My Plugin will not be enabled unless both Another 
   Plugin and Final Plugin are present. This is easy to see since Another Plugin 
@@ -197,10 +216,10 @@
   Any plug-in involved in a cycle will be disabled at runtime.</p>
 <p>Class visibility through the dependency chain is not transitive unless explicitly 
   stated. That is, My Plugin cannot see the classes in Final Plugin unless Another 
-  Plugin explicitly re-exports its import of Final Plugin. Where transitivity 
-  is required, the <em>export</em> attribute of the &lt;import&gt; tag is used 
-  to re-export the classes exported by imported plug-ins. (try saying that a few 
-  times quickly!). For example, </p>
+  Plugin explicitly re-exports its import of Final Plugin. This effectively encapsulates 
+  the implementation of Another Plugin. Where transitivity is required, the <em>export</em> 
+  attribute of the &lt;import&gt; tag is used to re-export the classes exported 
+  by imported plug-ins. (try saying that a few times quickly!). For example, </p>
  <blockquote>
   <pre>    &lt;import plugin="com.example.finalplugin" export=&quot;true&quot;/&gt;
 </pre>
@@ -216,30 +235,27 @@
   will occur when the optional plug-in is not present.</p>
 <pre>    &lt;import plugin="com.example.finalplugin" optional=&quot;true&quot;/&gt;
 </pre>
-<p>&nbsp;</p>
-<p>******* talk about versions</p>
-<p>&nbsp;</p>
-<h2>What are Extensions and Extension-Points?</h2>
-<p><em>Extension-points</em> are a mechanism used by plug-ins to indicate they 
+<h2>What are Extensions and Extension Points?</h2>
+<p><em>Extension points</em> are a mechanism used by plug-ins to indicate they 
   are willing to accept contributions from other plug-ins. An <em>extension</em> 
-  is a plug-in's way of contributing information to these extension-points. For 
-  example, a UI plug-in expose an extension-point for menu actions. A plug-in 
+  is a plug-in's way of contributing information to these extension points. For 
+  example, a UI plug-in might expose an extension point for menu actions. A plug-in 
   wishing to contribute an action to the UI would define an extension for the 
-  UI's menu action extension-point.</p>
-<p>Extension-points have a globally unique id constructed from the defining plug-id 
-  and a simple id specified in the extension-point itself. The example below is 
-  from the org.eclipse.ui plug-in. The full identifier of the extension-point 
-  is therefore org.eclipse.ui.actionSets. All extension-points have this relatively 
+  UI's menu action extension point.</p>
+<p>Extension points have a globally unique id constructed from the defining plug-id 
+  and a simple id specified in the extension point itself. The example below is 
+  from the org.eclipse.ui plug-in. The full identifier of the extension point 
+  is therefore org.eclipse.ui.actionSets. All extension points have this relatively 
   simple form.</p>
 <blockquote>
   <pre>  &lt;extension-point name="Action Sets" id="actionSets"/&gt;</pre>
 </blockquote>
-<p>The exact form of extensions is defined by the plug-in which defines the extension-point 
+<p>The exact form of extensions is defined by the plug-in which defines the extension point 
   being extended. In the above example, the UI plug-in specifies what information 
   is needed to define the menu action as well as the form of that information. 
   For example, the UI needs a class it can instantiate and run when the menu entry 
   is selected. The type characteristics (e.g., superclass, interfaces) of the 
-  class are also defined by the extension-point itself. Such an extension is called 
+  class are also defined by the extension point itself. Such an extension is called 
   an &quot;executable extension&quot;. The snippet below shows an example extension.</p>
 <blockquote> 
   <pre>  &lt;extension
@@ -259,13 +275,13 @@
   &lt;/extension&gt;
 </pre>
   </blockquote>
-<p>A plug-in can define any number of extension-points and extensions. Further, 
-  any given extension-point may be extended by any number of extensions (including 
-  0). Extensions can extend extension-points defined in their own plug-in or in 
-  others. It follows, therefore, that extension-points can accept extensions from 
-  its own plug-in or other plug-ins. </p>
-<p>Extending an extension-point does not imply a dependency relationship. Rather, 
-  it is a statement that if there is an extension-point with the given id (point 
+<p>A plug-in can define any number of extension points and extensions. Further, 
+  any given extension point may be extended by any number of extensions (including 
+  0). Extensions can extend extension points defined in their own plug-in or in 
+  others. It follows, therefore, that extension points can accept extensions from 
+  their own plug-in or other plug-ins. </p>
+<p>Extending an extension point does not imply a dependency relationship. Rather, 
+  it is a statement that if there is an extension point with the given id (point 
   attribute in the &lt;extension&gt; tag), add the given extension. Otherwise, 
   do nothing.</p>
 <h4></h4>
@@ -276,7 +292,7 @@
   French, Italian) without modifying the existing plug-ins. Note that fragments 
   can only add function/content to plug-ins. They cannot override that which the 
   plug-in already contains. Fragments are added to the base plug-in in no particular 
-  order.</p>
+  order and fragments for missing plug-ins are ignored.</p>
 <p>It is not surprising to find that fragments are very similar to plug-ins; they 
   are defined with a single manifest file, called <em>fragment.xml</em>, in a 
   file system directory which contains everything the fragment needs. Each fragment 
@@ -284,7 +300,7 @@
   any number of fragments associated with it. </p>
 <p>Further, fragments can contribute libraries, prerequisites, extension points 
   or extensions using standard syntax. These contributions are seamlessly merged 
-  into the fragment's base plug-in. That is, extensions and extension-points from 
+  into the fragment's base plug-in. That is, extensions and extension points from 
   a fragment appear to come from/be part of (respectively) the base plug-in; libraries 
   are put on the base plug-in's classpath and prerequisites contribute to the 
   plug-in's prerequisite chain.</p>
@@ -316,7 +332,7 @@
 <h4>The Plug-in Registry</h4>
 <p>When the Eclipse Platform starts, it first discovers all available plug-ins 
   and fragments. The install/update component of Eclipse and a user-defineable 
-  plug-in path are used to determine directories where to plug-ins and fragments 
+  plug-in path are used to determine directories where plug-ins and fragments 
   can be found. Each plug-in/fragment directory may contain exactly one manifest 
   file named <em>plugin.xml</em> or <em>fragment.xml</em>. If a directory contains 
   both files, only the <em>plugin.xml</em> file is used.<br>
@@ -358,7 +374,7 @@
 <ul>
   <li>resources can be loaded (either from a resource or code library) </li>
   <li>plug-in classloaders can ask other classloaders to load classes. </li>
-  <li>Extensions and extension-points can be examined without having to activate 
+  <li>Extensions and extension points can be examined without having to activate 
     the plug-in that contains the extension. </li>
 </ul>
 <p>Once a plug-in is activated it remains active until Eclipse shuts down. When 
@@ -377,7 +393,7 @@
   <dl>
     <dt><b>Parent</b> </dt>
     <dd>Each plug-in classloader has the Eclipse boot plug-in's classloader as 
-      its parent. The boot plug-in's loader's parent is the system classloader. 
+      its parent. The boot plug-in loader's parent is the system classloader. 
       Note that the standard Java AppClassloader (the one used to load the class 
       containing main()) is not added to the classloading chain. As a result, 
       the jars added to the JVM's classpath are ignored. Jars added to the JVM's 
@@ -387,14 +403,15 @@
     <dd>Self considers the libraries defined as part of this plug-in. All code 
       libraries contributed by fragments to this plug-in are also considered. 
       Libraries contributed by fragments appear after those contributed in the 
-      plug-in manifest. Libraries from the same manifest appear on the class path 
-      in the same order in which they were declared.</dd>
+      plug-in manifest (in indeterminant order). Libraries from the same manifest 
+      appear on the class path in the same order in which they were declared.</dd>
     <dt><b>Prerequisites</b></dt>
     <dd>Finally the exported libraries of the plug-in's prerequisites are considered. 
       Prerequisites are queried in the order in which they were declared with 
       the exception of the runtime plugin (org.eclipse.core.runtime). All plug-ins 
-      automatically have the runtime plug-in added to their prerequisite list 
-      as the first prerequisite. All imports of the runtime plug-in are ignored. 
+      automatically have the Eclipse runtime plug-in (<font face="Courier New, Courier, mono">org.eclipse.core.runtime</font>) 
+      added to their prerequisite list as the first prerequisite. All imports 
+      of the runtime plug-in are ignored. 
       <p> Note that prerequisite consultation is transitive. When locating a class, 
         a prerequisite plug-in will follow the same (though optimized) P-S-P model. 
         Since all plug-in classloaders have the same parent, prerequisite loaders 
@@ -468,377 +485,10 @@
   release.</p>
 <h2>Appendix: DTDs for plugin.xml and fragment.xml</h2>
                                        
-        <pre>&lt;?xml encoding="US-ASCII"?&gt;<br> &lt;!ELEMENT plugin (requires?, runtime?, extension-point*, extension*)&gt;<br> &lt;!ATTLIST plugin<br>   name                CDATA #REQUIRED<br>   id                  CDATA #REQUIRED<br>   version             CDATA #REQUIRED<br>   provider-name       CDATA #IMPLIED<br>   class               CDATA #IMPLIED<br> &gt;<br>  <br> &lt;!ELEMENT fragment (requires?, runtime?, extension-point*, extension*)&gt;<br> &lt;!ATTLIST fragment<br>   name                CDATA #REQUIRED<br>   id                  CDATA #REQUIRED<br>   version             CDATA #REQUIRED<br>   provider-name       CDATA #IMPLIED<br>   plugin-id           CDATA #REQUIRED<br>   plugin-version      CDATA #REQUIRED<br>   match               (perfect | equivalent | compatible | greaterOrEqual) "compatible"<br> &gt;<br>  <br> &lt;!ELEMENT requires (import+)&gt;<br> &lt;!ELEMENT import EMPTY&gt;<br> &lt;!ATTLIST import<br>  plugin               CDATA #REQUIRED<br>  version              CDATA #IMPLIED<br>  match                (perfect | equivalent | compatible | greaterOrEqual) "compatible"<br>  export               (true | false) "false"<br>  optional             (true | false) "false"<br> &gt;<br>  <br> &lt;!ELEMENT runtime library+)&gt;<br>  <br> &lt;!ELEMENT library (export*)&gt;<br> &lt;!ELEMENT export EMPTY&gt;<br> &lt;!ATTLIST library<br>   name                CDATA #REQUIRED<br>   type                (code | resource) "code"<br> &gt;<br>  <br> &lt;!ELEMENT export EMPTY&gt;<br> &lt;!ATTLIST export<br>  name                 CDATA #REQUIRED<br> &gt;<br>  <br> &lt;!ELEMENT extension-point EMPTY&gt;<br> &lt;!ATTLIST extension-point<br>   name                CDATA #REQUIRED<br>   id                  CDATA #REQUIRED<br>   schema              CDATA #IMPLIED<br> &gt;<br>  <br> &lt;!ELEMENT extension ANY&gt;<br> &lt;!ATTLIST extension<br>   point               CDATA #REQUIRED<br>   name                CDATA #IMPLIED<br>   id                  CDATA #IMPLIED<br> &gt;</pre>
-                                       
-        <h2>Appendix: Eclipse Platform Plug-in Manifest</h2>
-                                       
-        <p>The manifest markup definitions below make use of various naming 
-        tokens and identifiers. To eliminate ambiguity, here are some production 
-       rules for these [are referenced in text below]. In general, all identifiers 
-       are case-sensitive. </p>
-                                       
-        <pre>SimpleToken := sequence of characters from ('a-z','A-Z','0-9') <br>ComposedToken := SimpleToken | (SimpleToken '.' ComposedToken) <br>JavaClassName := ComposedToken <br>PlugInId := ComposedToken<br>PlugInPrereq := PlugInId | 'export' PlugInId <br>ExtensionId := SimpleToken <br>ExtensionPointId := SimpleToken <br>ExtensionPointReference := ExtensionPointID | (PlugInId '.' ExtensionPointId)</pre>
-                                       
-        <p>The remainder of this section describes the plugin.xml file structure
-       as  a series of DTD fragments. The appendix "DTDs for plugin.xml and
-  fragment.xml"          presents the DTD definition in its entirety. </p>
-                                       
-        <pre>&lt;?xml encoding="US-ASCII"?&gt; <br>&lt;!ELEMENT plugin (requires?, runtime?, extension-point*, extension*)&gt; <br>&lt;!ATTLIST plugin <br>  name                CDATA #REQUIRED <br>  id                  CDATA #REQUIRED <br>  version             CDATA #REQUIRED <br>  provider-name       CDATA #IMPLIED<br>  class               CDATA #IMPLIED <br>&gt;</pre>
-                                       
-        <p>The &lt;plugin&gt; element defines the body of the manifest. It 
-     optionally    contains definitions for the plug-in runtime, definitions 
-   of  other plug-ins    required by this one, declarations of any new extension 
-     points being introduced    by the plug-in, as well as configuration of
-  functional   extensions (configured    into extension points defined by
-other  plug-ins,   or introduced by this plug-in).   &lt;plugin&gt; attributes 
-are  as follows:           </p>
-                                       
-        <ul type="Disc">
-              <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-     mso-list:l2 level1 lfo3;tab-stops:list .5in"><b>
-                 name</b> - user      displayable (translatable) name for 
-the   plug-in</li>
-              <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-     mso-list:l2 level1 lfo3;tab-stops:list .5in"><b>
-                 id</b> - unique identifier      for the plug-in.</li>
-                                               
-          <ul type="Circle">
-                <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
-      auto;mso-list:l2 level2 lfo3;tab-stops:list 1.0in">
-                 To minimize potential       for naming collisions, the identifier
-     should    be derived from the internet       domain id of the supplying
-   provider  (reversing   the domain name tokens and       appending additional
-   name tokens  separated   by dot [.]). For example,       provider ibm.com
-   could define  plug-in identifier   com.ibm.db2</li>
-                <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
-      auto;mso-list:l2 level2 lfo3;tab-stops:list 1.0in">
-                 [production rule:       PlugInId]</li>
-                                               
-          </ul>
-              <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-     mso-list:l2 level1 lfo3;tab-stops:list .5in"><b>
-                 version </b>- plug-in      version number. See org.eclipse.core.runtime.PluginVersionIdentifier 
-        for      details. Plug-in version format is <b>major.minor.service.qualifier</b>
-                 .      Change in the major component is interpreted as an
- incompatible       version       change. Change in the minor component is
- interpreted as   a  compatible        version change. Change in the service
- component is interpreted    as             <i>   cumulative</i>      service
- applied to the minor version.<span style="mso-spacerun:
-     yes"></span>
-             Change in the qualifier component is interpreted as      different
-   source    code control version of the same component.</li>
-              <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-     mso-list:l2 level1 lfo3;tab-stops:list .5in"><b>
-                 provider-name</b><b>-</b>      user-displayable name of
-the   provider     supplying   the plug-in.</li>
-              <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-     mso-list:l2 level1 lfo3;tab-stops:list .5in"><b>
-                 class - </b>name of the      plug-in class for this plug-in. 
-  The   class    must  be a subclass of      org.eclipse.core.runtime.Plugin.</li>
-                                       
-        </ul>
-                                       
-        <p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">
-                 The XML DTD construction rule <tt><i><span style="font-size: 10pt; font-family: &quot;Courier New&quot;; ">
-                 element</span></i></tt><tt><span style="font-size: 10pt; font-family: &quot;Courier New&quot;; ">
-                 *</span></tt> means zero or more occurrences of the element; 
-          <tt><i><span style="font-size: 10pt; font-family: &quot;Courier New&quot;; ">
-                 element</span></i></tt><tt><span style="font-size: 10pt; font-family: &quot;Courier New&quot;; ">
-                 ?</span></tt> means zero or one occurrence of the element; 
- and           <tt><i><span style="font-size: 10pt; font-family: &quot;Courier New&quot;; ">
-                 element</span></i></tt><tt><span style="font-size: 10pt; font-family: &quot;Courier New&quot;; ">
-                 +</span></tt> (used below) means one or more occurrences 
-of  the   element.     Based on the &lt;plugin&gt; definition above, this 
-means,  for   example,  that   a plug-in containing only a run-time definition 
-and  no extension  point  declarations   or extension configurations is valid
- (for example, common libraries that  other plug-ins depend on). Similarly,
- a plug-in containing  only extension  configurations and no runtime or extension
- points of its own is also valid  (for example, configuring classes delivered
- in other plug-ins  into extension  points declared in other plug-ins). </p>
-                                       
-        <p style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">
-                 The &lt;requires&gt; section of the manifest declares any
- dependencies       on  other plug-ins. </p>
-                                       
-        <pre>&lt;!ELEMENT requires (import+)&gt;<br>&lt;!ELEMENT import EMPTY&gt;<br>&lt;!ATTLIST import<br> plugin               CDATA #REQUIRED<br> version              CDATA #IMPLIED<br> match<span style="mso-spacerun: yes">                </span>(perfect | equivalent | compatible | greaterOrEqual) "compatible"<br> export               (true | false) "false"<br> optional             (true | false) "false"<br>&gt;</pre>
-                                       
-        <p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">
-                 Each dependency is specified using an &lt;import&gt; element.
-   It  contains     the following attributes: </p>
-                                       
-        <ul type="Disc">
-              <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-     mso-list:l0 level1 lfo6;tab-stops:list .5in"><b>
-                 plugin</b> - identifier of      the required plug-in</li>
-              <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-     mso-list:l0 level1 lfo6;tab-stops:list .5in"><b>
-                 version</b> - optional      version specification</li>
-              <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-     mso-list:l0 level1 lfo6;tab-stops:list .5in"><b>
-                 match</b> - version      matching rule. Ignored if version 
- attribute      is  not specified. Determines      whether the dependency 
-is satisfied   only   with  a plug-in<span style="mso-spacerun: yes"></span>
-   that has this   exact<span style="mso-spacerun: yes"></span>        specified 
- version, with   a plug-in      that has a service or qualifier   more  recent 
- than this one,  with any      compatible version (including a  more recent 
- minor version  of the plug-in)      or with any more recent version   of 
-this plug-in</li>
-              <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-     mso-list:l0 level1 lfo6;tab-stops:list .5in"><b>
-                 export</b> - specifies      whether the dependent plug-in
- classes     are   made  visible (are (re)exported)      to users of this
-plug-in. By   default,   dependent  classes are not exported      (are not
-made visible)</li>
-              <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-     mso-list:l0 level1 lfo6;tab-stops:list .5in"><b>
-                 optional</b> - specifies      whether or not this dependency 
-  will   be  strictly   enforced.<span style="mso-spacerun: yes"></span>If 
- set to  &lt;true&gt;  and  this      dependency cannot be satisfied, the 
-dependency  will be ignored</li>
-                                       
-        </ul>
-                 The &lt;runtime&gt; section of the manifest contains a definition
-     of  one   or more libraries that make up the plug-in runtime. The referenced 
-     libraries   are used by the platform execution mechanisms (the plug-in 
-  class   loader)  to load and execute the correct code required by the plug-in. 
-                                                                         
-                                                                        
-        <pre>&lt;!ELEMENT runtime (library+)&gt; <br>&lt;!ELEMENT library (export*)&gt;<br>&lt;!ATTLIST library <br>  name               CDATA #REQUIRED <br><span style="mso-spacerun: yes">  </span>type<span style="mso-spacerun: yes">               </span>(code | resource) "code"<br>&gt;<br>&lt;!ELEMENT export EMPTY&gt; <br>&lt;!ATTLIST export<br>  name               CDATA #REQUIRED <br>&gt;</pre>
-                                       
-        <p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">
-                 The &lt;runtime&gt; element has no attributes. </p>
-                                       
-        <p style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">
-                 The &lt;library&gt; elements collectively define the plug-in 
-  runtime.     At  least one &lt;library&gt; must be specified. Each &lt;library&gt;
-   element     has the following attributes: </p>
-                                       
-        <ul type="Disc">
-              <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-     mso-list:l1 level1 lfo9;tab-stops:list .5in"><b>
-                 name - </b>string      reference to a library file or directory
-    containing     classes (relative to      the plug-in install directory).
-   Directory references     must contain trailing      file separator.</li>
-              <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-     mso-list:l1 level1 lfo9;tab-stops:list .5in"><b>
-                 type</b> - specifies      whether this library contains
-executable      code   (&lt;code&gt;) or just      resources.<span style="mso-spacerun: yes"></span>
-                If the library is      of type &lt;code&gt; accessing anything
-   in  this   library  will cause activation of      the plug-in.<span style="mso-spacerun: yes"></span>
-                Accessing a      &lt;resource&gt; will not cause plug-in
-activation      (a  potential  for significant      performance improvement).<span style="mso-spacerun: yes"></span>
-                It      should be noted that specifying a library of type 
-&lt;code&gt;       allows  it to      contain both code and resources.<span style="mso-spacerun: yes"></span>
-                But specifying a library of type &lt;resource&gt; assumes 
-it  will   only   be       used for resources.</li>
-                                       
-        </ul>
-                                       
-        <p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">
-                 Each &lt;library&gt; element can specify which portion of
- the   library     should  be exported. The export rules are specified as
-a set  of export  masks.   By default (no export rules specified), the library
- is  considered  to be private.  The &lt;export&gt; elements have the following
-  attributes:          </p>
-                                       
-        <ul type="Disc">
-              <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-     mso-list:l5 level1 lfo12;tab-stops:list .5in"><b>
-                 name - s</b>pecifies the      export mask. Valid values
-are:</li>
-                                               
-          <ul type="Circle">
-                <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
-      auto;mso-list:l5 level2 lfo12;tab-stops:list 1.0in"><b>
-                 *</b> - indicates       all contents of library are exported 
-  (public)</li>
-                                               
-          </ul>
-              <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-     mso-list:l5 level1 lfo12;tab-stops:list .5in"><b>
-                 package-name</b></li>
-                                               
-          <ul type="Circle">
-                <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
-      auto;mso-list:l5 level2 lfo12;tab-stops:list 1.0in"><b>
-                 * - </b>indicates       all classes in the specified package 
-  are   exported.     The matching rules are       the same as in the Java 
- import   statement.</li>
-                                               
-          </ul>
-              <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-     mso-list:l5 level1 lfo12;tab-stops:list .5in"><b>
-                 class-name - </b>fully      qualified java class name</li>
-                                       
-        </ul>
-                                       
-        <p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">
-                 The platform's architecture is based on the notion of configurable 
-     extension    points. The platform itself predefines a set of extension 
-  points   that cover   the task of extending the platform and desktop (for 
-  example,   adding menu  actions, contributing embedded editor). In addition 
-  to the predefined  extension  points, each supplied plug-in can declare 
-additional   extension  points. By  declaring an extension point the plug-in 
-is essentially   advertising  the ability  to configure the plug-in function 
-with externally   supplied extensions.  For  example, the Page Builder plug-in 
-may declare  an extension point for  adding  new Design Time Controls (DTCs) 
-into its builder palette. This means  that  the Page Builder has defined an
-architecture for what it means to be  a DTC  and has implemented the code 
-that looks for DTC extensions that have  been  configured into the extension 
-points. </p>
-                                       
-        <pre>&lt;!ELEMENT extension-point EMPTY&gt;  <br>&lt;!ATTLIST extension-point <br>  name               CDATA #REQUIRED <br>  id                 CDATA #REQUIRED    <br>  schema             CDATA #IMPLIED <br>&gt;</pre>
-                                       
-        <p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">
-                 The &lt;extension-point&gt; element has the following attributes:
-             </p>
-                                       
-        <ul type="Disc">
-              <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-     mso-list:l3 level1 lfo15;tab-stops:list .5in"><b>
-                 name - </b>user-displayable      (translatable) name for 
-the   extension      point</li>
-              <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-     mso-list:l3 level1 lfo15;tab-stops:list .5in"><b>
-                 id - </b>simple id token,      unique within this plug-in. 
- The   token    cannot   contain dot (.) or      whitespace.</li>
-                                               
-          <ul type="Circle">
-                <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
-      auto;mso-list:l3 level2 lfo15;tab-stops:list 1.0in">
-                 [production rule:       ExtensionPointId]</li>
-                                               
-          </ul>
-              <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-     mso-list:l3 level1 lfo15;tab-stops:list .5in"><b>
-                 schema</b> - schema      specification for this extension
- point.    The   exact   details are being      defined as part of the Plug-In
- Development      Environment   (PDE). The schema      is currently not used
- at runtime.   The   reference is   a file name relative to      the plug-in
- installation   location.</li>
-                                       
-        </ul>
-                                       
-        <p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">
-                 Actual extensions are configured into extension points (predefined,
-      or  newly  declared in this plug-in) in the &lt;extension&gt; section.
-   The   configuration    information is specified as well-formed XML contained
-   between   the &lt;extension&gt;    and &lt;/extension&gt; tags. The platform
-   does not  specify the actual form   of the configuration markup (other
-than   requiring   it to be well-formed XML).   The markup is defined by
-the supplier   of the   plug-in that declared the extension   point. The
-platform does not  actually   interpret the configuration markup.   It simply
-passes the configuration    information to the plug-in as part of  the extension
-point processing (at    the time the extension point logic queries   all
-of its configured extensions).            </p>
-                                       
-        <pre>&lt;!ELEMENT extension ANY&gt; <br>&lt;!ATTLIST extension <br>  point              CDATA #REQUIRED <br>  id                 CDATA #IMPLIED <br>  name               CDATA #IMPLIED <br>&gt;</pre>
-                                       
-        <p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">
-                 The &lt;extension&gt; element has the following attributes:
-          </p>
-                                       
-        <ul type="Disc">
-              <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-     mso-list:l4 level1 lfo18;tab-stops:list .5in"><b>
-                 point - </b>reference to      an extension point being configured. 
-     The   extension  point can be one      defined in this plug-in or another 
-     plug-in</li>
-                                               
-          <ul type="Circle">
-                <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
-      auto;mso-list:l4 level2 lfo18;tab-stops:list 1.0in">
-                 [production rule:       ExtensionPointReference]</li>
-                                               
-          </ul>
-              <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-     mso-list:l4 level1 lfo18;tab-stops:list .5in"><b>
-                 id - </b>optional      identifier for this extension point 
- configuration        instance. This is used      by extension points that 
- need to uniquely    identify    (rather than just      enumerate) the specific 
- configured extensions.    The    identifier is specified      as a simple 
- token unique within the  definition      of the declaring plug-in.      When
- used globally, the extension  identifier      is qualified by the plug-in 
-      identifier</li>
-                                               
-          <ul type="Circle">
-                <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
-      auto;mso-list:l4 level2 lfo18;tab-stops:list 1.0in">
-                 [production rule:       ExtensionId]</li>
-                                               
-          </ul>
-              <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-     mso-list:l4 level1 lfo18;tab-stops:list .5in"><b>
-                 name - </b>user-displayable      (translatable) name for 
-the   extension</li>
-                                       
-        </ul>
-                                       
-        <p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><b>
-                 Important:</b> The content of the &lt;extension&gt; element
-  is  declared     using the <tt><span style="font-size: 10pt; font-family: &quot;Courier New&quot;; ">
-                ANY</span></tt>  rule. This means that any well-formed XML
- can   be  specified    within the extension  configuration section (between
- &lt;extension&gt;     and   &lt;/extension&gt; tags).         </p>
-                                       
-        <pre><span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;; ">Fragments are used to increase the scope of a plug-in.<span style="mso-spacerun: yes">  </span>An example would be to incorporate data such as messages or labels in another language.</span></pre>
-                                       
-        <pre>&lt;?xml encoding="US-ASCII"?&gt; <br>&lt;!ELEMENT fragment (requires?, runtime?, extension-point*, extension*)&gt;<br>&lt;!ATTLIST fragment<br>  name                CDATA #REQUIRED<br>  id                  CDATA #REQUIRED<br>  version             CDATA #REQUIRED<br>  provider-name       CDATA #IMPLIED<br><span style="mso-spacerun: yes">  </span>plugin-id<span style="mso-spacerun: yes">           </span>CDATA #REQUIRED<br><span style="mso-spacerun: yes">  </span>plugin-version<span style="mso-spacerun: yes">      </span>CDATA #REQUIRED<br><span style="mso-spacerun: yes">  </span>match<span style="mso-spacerun: yes">               </span>(perfect | equivalent | compatible | greaterOrEqual) "compatible"<br>&gt;</pre>
-                                       
-        <p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">
-                 Each fragment must be associated with a specific plug-in.
-   The   associated     plug-in is identified with &lt;plugin-id&gt;, &lt;plugin-version&gt; 
-    and    optionally, &lt;match&gt;.   Note that if this specification matches 
-    more    than one plug-in, the matching plug-in with the highest version 
-  number  will   be used.</p>
-                  The &lt;requires&gt;, &lt;runtime&gt;, &lt;extension-point&gt;, 
-    and   &lt;extension&gt;   components of a fragment will be logically added
-    to the  matching plug-in.                                           
-                                                                        
-                                      
-        <p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">
-                 &lt;fragment&gt; attributes are as follows: </p>
-                                       
         
-<ul type="Disc">
-  <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-     mso-list:l2 level1 lfo3;tab-stops:list .5in"><b> name</b> - user displayable 
-    (translatable) name for the fragment</li>
-  <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-     mso-list:l2 level1 lfo3;tab-stops:list .5in"><b> id</b> - unique identifier 
-    for the fragment.</li>
-  <ul type="Circle">
-    <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
-      auto;mso-list:l2 level2 lfo3;tab-stops:list 1.0in"> To minimize potential 
-      for naming collisions, the identifier should be derived from the id of the 
-      associated plug-in in addition to something which identifies the scope of 
-      this fragment.<span style="mso-spacerun: yes"></span> For example, org.eclipse.core.runtime.nl1 
-      could define a natural language fragment for the org.eclipse.core.runtime 
-      plug-in</li>
-    <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
-      auto;mso-list:l2 level2 lfo3;tab-stops:list 1.0in"> [production rule: PlugInId]</li>
-  </ul>
-  <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-     mso-list:l2 level1 lfo3;tab-stops:list .5in"><b> version </b>- fragment version 
-    number. See org.eclipse.core.runtime.PluginVersionIdentifier for details. 
-    Fragment version format is the same as plug-in version format.</li>
-  <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-     mso-list:l2 level1 lfo3;tab-stops:list .5in"><b> provider-name</b><b>-</b> 
-    user-displayable name of the provider supplying the fragment.</li>
-  <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-     mso-list:l2 level1 lfo3;tab-stops:list .5in"><b> plugin-</b><b style="mso-bidi-font-weight:normal">id</b> 
-    - matches the id of the associated plug-in</li>
-  <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-     mso-list:l2 level1 lfo3;tab-stops:list .5in"><b> plugin-</b><b style="mso-bidi-font-weight:normal">version</b> 
-    - matches the version of the associated plug-in</li>
-  <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-     mso-list:l2 level1 lfo3;tab-stops:list .5in"><b> match</b><span style="mso-bidi-font-weight:bold"> 
-    - the matching rule used to find an associated plug-in using &lt;plugin-id&gt; 
-    and &lt;plugin-version&gt;.<span style="mso-spacerun: yes"></span> See the 
-    definition of &lt;match&gt; in the &lt;requires&gt; clause for complete details.</span></li>
-</ul>
-<p>&nbsp;</p>
-<p></p>
+<pre>&nbsp;</pre>
                                        
-        </body>
-        </html>
+<h2>Appendix: Eclipse Platform Plug-in Manifest</h2>
+                                       
+</body>
+</html>
