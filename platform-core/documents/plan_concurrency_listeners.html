@@ -7,16 +7,69 @@
 <body text="#000000" bgcolor="#FFFFFF">
  
 <h1>Resource change listeners in a concurrent world</h1>
- 
-<font size="-1">Last modified: July 21, 2003</font> 
+<font size="-1">[Draft copy] </font><br><br>
+<font size="-1">Last modified: July 23, 2003</font> 
 
 <p>In the context of the work on improving platform responsiveness,
 there will be some important changes to how resource change listeners
-operate.  This document describes the old
-behaviour in detail, and then describes the changes that are being introduced.
+operate.  This document describes and motivates these proposed changes.
+The existing (Eclipse 2.1) behavior of listeners will be described in detail, 
+along with a description of how this will change in Eclipse 3.0.
+Finally, a draft of the porting guide is included, describing how
+existing implementations might be impacted and 
+how they can adapt to the new behavior.
+<h3>Overview and motivation</h3>
+<p>
+The principal proposed change for release 3.0 is that resource change listeners will be 
+called in a separate thread from which the workspace change occurred.  This means 
+listeners will run concurrently with the thread that caused the change, and there will 
+be <b>no guarantee at all</b> about precisely when resource change listeners will 
+be called.  The only guarantee is that all resource change listeners will 
+<b>eventually</b> be notified of all workspace changes.</p>
+<p>
+There are a number of motivations for this change.  First, there is a need to minimize 
+the duration for which the workspace lock is held by an operation.  In Eclipse 2.1, 
+every workspace operation had an automatic resource change notification and 
+auto-build cycle attached to the end of it.  The operation did not complete until
+all notifications and auto-builds had finished.  For the entire duration of this cycle, 
+the workspace was locked to prevent concurrent changes in other threads.  
+This long term exclusive locking must be reduced if there is any hope to obtain 
+greater concurrency in Eclipse 3.0.  One way to shorten the duration of this locking
+is to split up the operation itself, the resource change notifications, and the auto-build
+into separate units of work.
+</p>
+<p>
+In addition, this rigid
+notification and build strategy resulted in poor performance if clients
+neglected to batch groups of changes into a single operation (via 
+<code>IWorkspaceRunnable</code>).  Decoupling the workspace operation
+from the build/notification phase allows us to employ strategies to limit the number
+of resource change notifications, and to lower the priority of notifications and builds
+to give precedence to other workspace changing operations.
+</p>
+<p>
+Moreover, since resource change notifications strongly impacted the
+duration of all workspace modifying operations, there were severe limits to 
+what resource change listeners could do.  Listener implementors had to consider
+performance as a primary design goal, and were not allowed to make modifications
+to the workspace.  With listeners running in a separate thread, performance
+is not as sensitive, and listeners can be allowed to run longer and make changes to 
+the workspace.
+</p>
+<p>
+Another change that will be made to improve responsiveness is to add notifications
+<b>during</b> long running operations.  An upper bound will be introduced on the
+delay between a workspace change and the notification.  This means that even if an 
+operation takes several minutes, it will be reporting incremental resource changes 
+periodically throughout the operation.  The increased notifications will act as an added
+feedback mechanism to show the user that progress is being made on an operation.
+This also allows the user to begin working with some of the output
+of the operation before it completes.  For example, a user will be able to begin 
+editing imported files before the import is complete, if the import is taking a long time.
+</p>
 
-<h3>Old behaviour of resource change listeners</h3>
-<p>We will begin with an overview of the API contract rules that are currently specified
+<h3>Old behavior of resource change listeners</h3>
+<p>The following list gives an overview of the API contract rules that are currently specified
 in Eclipse release 2.1.  The goal for any new listener implementation is to avoid breaking
 these rules in any significant way.
 </p>
@@ -36,10 +89,10 @@ changes must be made in the thread in which the notification occurs.</li>
 </code> in a given thread is finished, or until <code>IWorkspace.checkpoint</code> is called.</li>
 </ol>
 
-<p>In addition to these API rules, resource change listeners in Eclipse 2.1 have the
-following unspecified characteristics.  Although none of the following characteristics 
-are specified by API contract, current listener implementations may be relying on 
-some of these characteristics so it is important to outline them here.
+<p>In addition to these API rules, resource change listeners in Eclipse 2.1 have some
+other important characteristics.  Although these are not spelled out in
+the API, some listener implementations may be making assumptions based on
+this observed behavior, and could be affected if they change.
 
 <ol>
 <li>The operation that caused the resource change will not return until all listeners
@@ -49,7 +102,7 @@ change occurred.  From one change to the next, this thread can vary.</li>
 <li>The delta received by a listener precisely describes the differences between the
 current state of the workspace and the state of the workspace when the listener
 was last invoked.  For example, if the delta says a resource was added, then it
-is absolutely certain that the resource still exists at the time when the listener is
+is absolutely certain that the resource exists at the time when the listener is
 called, and that it did not exist at the time when the listener was last called.</li>
 <li>Listeners are never called concurrently with any workspace changing operation.</li>
 <li>Once registered, a resource change listener will receive notification of <b>all</b>
@@ -68,46 +121,33 @@ to influence or discover the ordering of listeners.</li>
 </ol>
 <h3>Overview of changes for listeners in Eclipse 3.0</h3>
 <p>
-The principal proposed change for release 3.0 is that resource change listeners will be 
-called in a separate thread from which the workspace change occurred.  This means 
-listeners will run concurrently with the thread that caused the change, and there will 
-be <b>no guarantee at all</b> about precisely when resource change listeners will 
-be called.  The only guarantee is that all resource change listeners will 
-<b>eventually</b> be notified of all workspace changes.  This change removes 
-the first two unspecified characteristics listed above. One notable instance is that 
+Under the proposed changes, the first four characteristics in the list above will
+no longer be true.  Workspace operations may now return before or during
+the resource change notification.  The change notifications will occur in a different
+thread from the one in which the operation ran.  One notable instance is that 
 when the workspace is changed from within the UI thread, it will NOT follow that 
 the resource change notification also occurs in the UI thread.
 </p>
 <p>
-Running listeners in the background will allow us to lift the old restriction that resource
+Running listeners in the background allows us to lift the restriction that resource
 change listeners not be allowed to modify the workspace (API contract rule #4 above).  
 Many clients wish to make minor changes to the workspace during notification, such as adding or
-removing markers.  This was not permitted in the past due to performance concerns,
-since slow listeners in the old world would slow down all workspace changing operations
-to which they listened.  This restriction will now be lifted since slow listeners will now
-run in a background thread.  All listeners will receive notification about changes
-made by other listeners, although this secondary notification won't happen immediately
-after the notification that caused the change.  This means that characteristic
-#3 listed above will no longer be true.  When the delta is received, it will not necesarily 
+removing markers.  This restriction will now be lifted since slow listeners will 
+no longer affect the duration of workspace operations.  All listeners will receive 
+notification about changes made by listeners, although this secondary 
+notification won't happen immediately after the notification that caused the change.  
+Listeners will also receive notification about changes they made themselves, 
+allowing us to maintain the invariant that listeners are notified of absolutely all 
+changes to the workspace.
+</p>
+<p>
+Since listeners will be allowed to make changes, and since our API specifies that
+all listeners receive exactly the same event and delta, characteristic #3 listed
+above can no longer hold.  When the delta is received, it will not necesarily 
 be true that the delta will describe the exact state of the world at that instant.  Further 
 changes may have been made that are not included in the current delta, but will be 
 included in a future delta.  In fact, resource changes may still be happening 
-in another thread at the time when the notification is received.  This is actually 
-specified clearly in the API of 
-<code>IResourceChangeListener.resourceChanged</code>, which states, 
-&quot;Notifies this listener that some resource changes are happening, or have 
-already happened.&quot;.
-</p>
-<p>
-Another change that will be made to improve responsiveness is to add notifications
-<b>during</b> long running operations.  An upper bound will be introduced on the
-delay between a workspace change and the notification.  This means that even if an 
-operation takes several minutes, it will be reporting incremental resource changes 
-periodically throughout the operation.  The increased notifications will act as an added
-feedback mechanism to show the user that progress is being made on an operation.
-This also allows the user to begin working with some of the output
-of the operation before it completes.  For example, a user will be able to begin 
-editing imported files before the import is complete, if the import is taking a long time.
+in another thread at the time when the notification is received.  
 </p>
 <h3>Summary of proposed API changes</h3>
 <p>
@@ -131,9 +171,8 @@ operations.</li>
 </p>
 <p>
 In addition to these API changes, there will be a number of changes to some of
-the unspecified characteristics of resource change listeners.  In particular, the following
-characteristics (based on the list of unspecified characteristics above), will be 
-new for Eclipse 3.0:
+the unspecified characteristics of resource change listeners.  Below is a summary
+of new characteristics of resource change listeners for Eclipse 3.0.
 <ol>
 <li>The operation that caused the resource change may return before any listeners
 have been notified.</li>
@@ -147,6 +186,26 @@ that a resource was added, it may have been deleted again by the time the listen
 receives the notification.</li>
 </ol>
 </p>
+<h3>How clients might be impacted</h3>
+<p>
+TBD
+</p>
+<h3>What to do about it</h3>
+<p>
+TBD
+</p>
+<h3>Status and schedule</h3>
+<p>
+Background resource change listeners and auto-build have been implemented
+and some basic testing has been done.  All work is currently in branch "Bug_36957" 
+of project org.eclipse.core.resources. Basic sanity checking of the SDK reveals no 
+significant problems.  All platform core test suites now pass with background 
+notification and build.  These changes will be rolled into integration builds over the 
+next two weeks:
+<ul>
+<li>Tuesday, July 29: release to HEAD stream for nightly build.</li>
+<li>Tuesday, August 5: release for 3.0 stream integration build.</li>
+</ul>
 (Plan item bug reference: <a
  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=36957">36957</a>)<br>
 </body>
