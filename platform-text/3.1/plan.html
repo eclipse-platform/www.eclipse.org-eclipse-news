@@ -16,9 +16,12 @@
 
   <tr> 
     <td WIDTH="100%">
+      <p>This plan is a proto plan. It is under continuous refinement. Feedback 
+        welcome. </p>
       <h2><a NAME="Overall_Planning"></a>Overall goals </h2>
-      <p>This section defines the committed goals for Eclipse 3.1 for the Platform/JDT 
-        Text components.</p>
+      <p>This section defines the committed goals for Eclipse 3.1 for the Platform 
+        Text and the JDT Text component. Each goal is annotated with the overall 
+        3.1 Eclipse theme it contributes to. </p>
       <h3>Platform</h3>
       <ul>
         <li> 
@@ -137,8 +140,10 @@
       <h2>Work items</h2>
       <p>Work items represent subjects on which the Platform/JDT Text team will 
         work in the course of the 3.1 development. The listed subitems represent 
-        the current state of knowledge. There might be shifts of focus during 
-        the development process.</p>
+        initial input based on the current state of knowledge. There might be 
+        shifts of focus during the development process. Items that are affected 
+        by the concrete resolution of cross team issues are marked as such. Items 
+        that are of exploratory nature are tagged with [investigate].</p>
       <h3>Component independent</h3>
       <ul>
         <li>code cleanup</li>
@@ -737,12 +742,54 @@
 
   <tr> 
     <td WIDTH="100%"> 
-      <h3><a name="Milestone_Planning"></a>Milestone M2</h3>
+      <h3><a name="Milestone_Planning"></a>Milestone M2 </h3>
+      <h4>Commitments</h4>
       <ul>
-        <li>under construction</li>
-        </ul>
+        <li> finish 3.1 plan 
+          <ul>
+            <li>work on resolving cross team issues</li>
+          </ul>
+        </li>
+        <li>PR triage 
+          <ul>
+            <li> PR that we definitively will not tackle for 3.1 will be resolved 
+              as Later</li>
+            <li>effectively communicate PR team guide lines to the community</li>
+          </ul>
+        </li>
+        <li>finish 3.0.1</li>
+        <li> bug fixing 
+          <ul>
+            <li>solve PRs that have been postponed between 3.0 RC1 - 3.0 GM</li>
+          </ul>
+        </li>
+        <li> continue performance tests 
+          <ul>
+            <li>grow number of available tests</li>
+            <li>investigate into interactive tests</li>
+            <li>collaborate with SWT to solve the issues with simulated user interaction</li>
+            <li>reflect about scope and applicability of test results (annotate 
+              test cases accordingly)</li>
+            <li>mature testing framework</li>
+          </ul>
+        </li>
+        <li> improve performance
+<ul>
+            <li>e.g., new line at end of commented StyledText.java</li>
+          </ul>
+        </li>
+        <li> increase correctness test coverage</li>
+        <li> provide J2SE 5 editor support</li>
+      </ul>
+      <h4>Proposed items</h4>
+      <ul>
+        <li>support @link in hovers</li>
+        <li>start with file buffer issues as outlined in the overall plan</li>
+        <li>start solved encoding issues listed in the plan</li>
+      </ul>
+      <h3>Previous milestones</h3>
       <p>Previous 3.1 milestones can be reviewed <a href="previous_plans.html">here</a>.</p>
-      </td>
+    </td>
 </tr>
 
 <tr>
