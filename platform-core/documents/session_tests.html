@@ -17,7 +17,7 @@
     hopes of encouraging adoption of this framework not only by all the Platform/Core 
     team members but also by members of other Eclipse teams interested in developing 
     their own session tests. </p>
-  <p>Last Modified: October 7, 2004</p>
+  <p>Last Modified: October 8, 2004</p>
 </blockquote>  
 <ol>
   <li> 
@@ -74,20 +74,35 @@ public class MyTestCase extends TestCase {
       in nested test suites) will be run in a separate Eclipse session. Note also 
       that if a session test suite contains another session test suite (or any 
       other special types of test suite), the outer session test suite will rule.</p>
+  </li>
   <li><strong>Why do I get a <em>java.lang.IllegalArgumentException: Setup file 
-    '&lt;current dir&gt;/default-setup.xml' not found</em>?</strong></li>
-  <p> You are running your session test suite as a regular <em>JUnit test</em> 
-    instead of as a <em>Plug-in JUnit test</em>. A default setup (in other words, 
-    command line) for launching new Eclipse sessions when running session tests 
-    can be computed when running the test suite as a plug-in test, so no further 
-    configuration is necessary. It basically contains the same parameters as the 
-    ones used to launch the controller instance, with a different instance location 
-    (the -data parameter). When launching the controller instance as a regular 
-    JUnit test suite, the setup for running session tests has to be configured 
-    manually. The framework looks for a <code>default-setup.xml</code> file in 
-    the current directory, but a different file name and location can be specified 
-    by using the <code>setup.file</code> system property. If not running in Eclipse, 
-    and no setup file can be found, the execution fails with this exception.</p>
+    '&lt;current dir&gt;/default-setup.xml' not found</em>?</strong>
+    <p> You are running your session test suite as a regular <em>JUnit test</em> 
+      instead of as a <em>Plug-in JUnit test</em>. A default setup (in other words, 
+      command line) for launching new Eclipse sessions when running session tests 
+      can be computed when running the test suite as a plug-in test, so no further 
+      configuration is necessary. It basically contains the same parameters as 
+      the ones used to launch the controller instance, with a different instance 
+      location (the -data parameter). When launching the controller instance as 
+      a regular JUnit test suite, the setup for running session tests has to be 
+      configured manually. The framework looks for a <code>default-setup.xml</code> 
+      file in the current directory, but a different file name and location can 
+      be specified by using the <code>setup.file</code> system property. If not 
+      running in Eclipse, and no setup file can be found, the execution fails 
+      with this exception. See also next FAQ.</p>
+  </li>
+  <li> 
+    <p><strong>Should I run my tests using a JUnit or PDE Junit launch configuration?</strong></p>
+    <p>Only running with a PDE Junit launch configuration will allow you to test code 
+	in your workspace (unless you use the simulated startup self-hosting style). Also,
+	launching with PDE JUnit frees you from having to provide configuration parameters, since
+	reasonable defaults will be obtained from the contrrolling Eclipse. If you are still interested in running your tests as a JUnit launch configuration, see
+	the next FAQ.</p>
+  </li>	
+  <li> 
+    <p><strong>How do I run session tests from a JUnit (not PDE JUnit) launch configuration?</strong> </p>
+    <p>TBD</p>
+  </li>
   <li> 
     <p><strong>How do I run UI-oriented tests?</strong> </p>
     <p>Make sure you also set the application when launching the target instance 
