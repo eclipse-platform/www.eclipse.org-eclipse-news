@@ -68,11 +68,12 @@ public class MyTestCase extends TestCase {
 }
 	  </pre>
     <p>The plug-in id is necessary so the plug-in which the class containing the 
-      test case should be loaded from can be determined. Note also that it is 
-      possible to build an empty suite and then manually add test cases and/or 
-      test suites. When running your tests again, every test case in the suite 
-      (included those in nested test suites) will be run in a separate Eclipse 
-      session.</p>
+      test case should be loaded from can be determined. Note hat it is possible 
+      to build an empty suite and then manually add test cases and/or test suites. 
+      When running your tests again, every test case in the suite (included those 
+      in nested test suites) will be run in a separate Eclipse session. Note also 
+      that if a session test suite contains another session test suite (or any 
+      other special types of test suite), the outer session test suite will rule.</p>
   <li><strong>Why do I get a <em>java.lang.IllegalArgumentException: Setup file 
     '&lt;current dir&gt;/default-setup.xml' not found</em>?</strong></li>
   <p> You are running your session test suite as a regular <em>JUnit test</em> 
