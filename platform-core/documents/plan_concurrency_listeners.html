@@ -232,8 +232,30 @@ receives the notification.</li>
 </p>
 <h3>How clients might be impacted</h3>
 <p>
-TBD
+Client code that makes assumptions about when resource change listeners run are
+likely to be broken by this change.  The following are some sample situations:
+<h4>Views not reflecting workspace model</h4>
+<p>
+UI components that display resources typically keep their view up to date by registering
+a resource change listener that reconciles workspace changes with the view contents.
+<tt>org.eclipse.ui.model.WorkbenchContentProvider</tt> is the most common 
+example of this idiom.  With listeners running asynchronously, there will be a period
+after a workspace change when the listeners have not yet been called.  During this 
+period, views will be out of date with the model.  For example, the following code 
+pattern (often found in wizards) will now be prone to failure:
+<ul>
+<li>create resource</li>
+<li>select and reveal resource in navigator</li>
+</ul>
+This will fail if the select and reveal code is run before the resource change
+notification is finished.  It will attempt to select a resource that is not yet 
+in the view.
 </p>
+<h4>Domain model out of sync with workspace</h4>
+<p>
+Similar to the above situation, client components often maintain the
+structure of a domain-specific model using resource change listeners.
+
 <h3>What to do about it</h3>
 <p>
 TBD
