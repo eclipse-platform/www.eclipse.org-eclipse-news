@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Resource change listeners in a concurrent world</title>
+  <link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
+</head>
+<body text="#000000" bgcolor="#FFFFFF">
+ 
+<h1>Resource change listeners in a concurrent world</h1>
+ 
+<font size="-1">Last modified: June 24, 2003</font> 
+
+<p>In the context of the work on improving platform responsiveness,
+we need to re-evaluate how resource change listeners operate.  Some 
+of the current characteristics of resource change listeners will be difficult
+to support in a more concurrent world, so we need to evaluate what existing
+characteristics need to be dropped or changed to support a concurrent
+platform architecture.</p>
+
+<h2>Current Behaviour</h2>
+
+<p>To begin, we will enumerate the current characteristics of resource change
+listeners.  Some of these items are explicitly specified by API contract, but most
+are only implied.  Regardless, current resource change listener implementations
+may be relying on this behaviour so we need to know the consequences of
+changing these rules.  In particular these rules focus on <code>POST_CHANGE</code>
+event listeners.
+<ol>
+<li>Once registered, a resource change listener will receive notification of <b>all</b>
+resource changes that occur in the workspace until it is removed, or until the
+resources plug-in shuts down.  If a listener is added in the middle of an operation,
+it will receive notification of all changes that occurred since the start of that operation.
+If a listener is removed in the middle of an operation, it will not receive notification of
+any changes that occurred during that operation.</li>
+<li>During notification, a listener is not permitted to modify the workspace in any way.</li>
+<li>Listeners are called sequentially in a consistent order.  There is no way for clients
+to influence or discover the ordering of listeners.</li>
+<li>All listeners are called in the same thread.  Listeners are called in the same
+thread in which the operation which caused the change occurred.  From one
+change to the next, there is no guarantee that this will be the same thread.</li>
+<li>All listeners receive exactly the same resource delta.</li>
+<li>Listeners are never called concurrently with any workspace changing operation.</li>
+<li>Resource changes are batched until the outermost IWorkspaceRunnable in a given
+thread is finished, or until IWorkspace.checkpoint is called.</li>
+<li>The delta received by a listener precisely describes the differences between the
+current state of the workspace and the state of the workspace when the listener
+was last invoked.  e.g., if the delta says a resource was added or changed, then it
+is absolutely certain that the resource still exists.</li>
+<li></li>
+</ol>
+ 
+ 
+<h2>Milestone targets</h2>
+
+(Plan item bug reference: <a>
+ href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=36957">36957</a>)<br>
+</body>
+</html>
