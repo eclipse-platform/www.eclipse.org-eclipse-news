@@ -54,9 +54,9 @@ CODE { font-size: smaller }
       <blockquote> 
         <p>The <code>org.eclipse.core.runtime.preferences</code> extension point 
           allows for an extension which defines a <code>initializer</code> element. 
-          This extension defines a class name which implements the <code>IPreferenceInitializer</code> 
-          interface. The <code>#initializeDefaultPreferences()</code> method is 
-          called on the implementing class.</p>
+          This extension defines a class which extends <code>AbstractPreferenceInitializer</code>. 
+          The <code>#initializeDefaultPreferences()</code> method is called on 
+          the subclass.</p>
         <p>If the bundle/plug-in doesn't define an extension then the <code>#initializeDefaultPluginPreferences() 
           </code> method is called on the plug-in class if the runtime compatibility 
           layer is present. Due to visibility restrictions, this is done via the 
