@@ -96,13 +96,12 @@
   <tr> 
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
     <td WIDTH="98%"><p><b>Issues</b> [main <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=85065">bug 
-        85065</a>] 
-        [<a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=%5Bjars%5D&product=JDT&product=PDE&product=Platform&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">Open</a>]
-        [<a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=%5Bjars%5D&product=JDT&product=PDE&product=Platform&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">Closed</a>]
-        </p>
+        85065</a>] [<a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=%5Bjars%5D&product=JDT&product=PDE&product=Platform&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">Open</a>] 
+        [<a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=%5Bjars%5D&product=JDT&product=PDE&product=Platform&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">Closed</a>] 
+      </p>
       <ul>
         <li><img src="../../images/small_progress.gif" width="14" height="5"> 
-          [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=83469">bug 83469</a>,
+          [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=83469">bug 83469</a>, 
           <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=88099">bug 88099</a>] 
           Cannot run with OSGi as a JAR - Currently the conversion tool hacks 
           the <code>eclipse.properties </code>file to set the <code>osgi.frameworkClassPath</code> 
@@ -159,32 +158,33 @@
   <tr> 
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
     <td WIDTH="98%"><p><b>Goals</b> </p>
-	  <ul>
-        <li><img src="../../images/small_progress.gif" width="14" height="5"> Running Eclipse on JAR'd plug-ins.</li>
-        <li><img src="../../images/small_progress.gif" width="14" height="5"> Running the test suites.</li>
-        <li><img src="../../images/small_progress.gif" width="14" height="5"> Targeting a JAR'd Eclipse install</li>
+      <ul>
+        <li><img src="../../images/small_progress.gif" width="14" height="5"> 
+          Running Eclipse on JAR'd plug-ins.</li>
+        <li><img src="../../images/small_progress.gif" width="14" height="5"> 
+          Running the test suites.</li>
+        <li><img src="../../images/small_progress.gif" width="14" height="5"> 
+          Targeting a JAR'd Eclipse install</li>
       </ul>
       <p>Milestones: Eclipse 3.1 M6 - Bundles which are part of the RCP to be 
         shipped as JARs</p>
       <p>&nbsp;</p></td>
   </tr>
-  
-    <tr> 
+  <tr> 
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
-    <td WIDTH="98%"><b>Downloads</b> 
-	<p>Conversion tool (<a href="../../downloads/tools/org.eclipse.core.tools.buildJARS_1.0.0.zip">v1.0.0</a>) 
+    <td WIDTH="98%"><b>Downloads</b> <p>Conversion tool (<a href="../../downloads/tools/org.eclipse.core.tools.buildJARS_1.0.0.zip">v1.0.0</a>) 
         - The tool is written as an Eclipse application. The easiest way to use 
         it is to: 
       <ul>
-	<li>Download tool.</li>
-	<li>Install tool.</li>
-	<li>Start Eclipse.</li>
-	<li>If tool isn't part of your Target Platform, then make it so.</li>
-	<li>Create a new Launch Configuration with the Conversion tool as the Eclipse application to run.</li>
-	</ul></p>
+        <li>Download tool.</li>
+        <li>Install tool.</li>
+        <li>Start Eclipse.</li>
+        <li>If tool isn't part of your Target Platform, then make it so.</li>
+        <li>Create a new Launch Configuration with the Conversion tool as the 
+          Eclipse application to run.</li>
+      </ul></p>
       <p>&nbsp;</p></td>
   </tr>
-  
   <tr> 
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
     <td WIDTH="98%"><b>Related Work</b> <ul>
@@ -195,6 +195,411 @@
           JARs, we would like to have features as JARs as well.</li>
       </ul>
       <p>&nbsp;</p></td>
+  </tr>
+  <tr> 
+    <td ALIGN=RIGHT VALIGN=TOP><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
+    <td><p><strong>Converting A Plug-in to be Shipped as a JAR</strong></p>
+      <ol>
+        <li>Change the classpath:</li>
+        <ul>
+          <li> If you have a <code>manifest.mf </code>then simply delete the <code>Bundle-Classpath</code> 
+            header.</li>
+          <li>Otherwise if you have a <code>plugin.xml</code> then change the 
+            library entry to be a dot. <code>(.)</code></li>
+          <li> If you have additional jars (e.g., ant tasks), consult an expert.</li>
+        </ul>
+        <li>Change the <code>build.properties</code>:</li>
+        <ul>
+          <li>Change all occurences of the old jar name to simply a dot. <code>(.)</code></li>
+          <li> There should be one on the <code>bin.includes</code> line.</li>
+          <li> Change <code>source.foo.jar= </code> to <code>source..= </code>(that 
+            is source dot dot)</li>
+          <li> Change <code>output.foo.jar= </code> to <code>output..= </code> 
+            (that is output dot dot)</li>
+          <li> If you newly generated a <code>manifest.mf</code>, add <code>META-INF/</code> 
+            to the <code>bin.includes</code>.</li>
+        </ul>
+        <li>Change the feature</li>
+        <ul>
+          <li>find all features that list your plug-in and add following to the 
+            related <code>&lt;plugin&gt;</code> tag:<br>
+            <code>&nbsp;&nbsp;&nbsp;&nbsp;unpack=&quot;false&quot;</code></li>
+        </ul>
+        <li>Change <code>about.html</code> linked content.</li>
+		<ul>
+		  <li>If you have content in your plug-in which is linked from your <code>about.html</code> 
+            file, then that content must be placed in a directory named <code>&quot;about&quot;</code> 
+            at the root of the plug-in.</li>
+		</ul>
+      </ol>
+      <p> If you are going to switch to using bundle manifests:</p>
+      <ul>
+        <li> Open your <code>plugin.xml</code> with the PDE editor.</li>
+        <li> On the &quot;Runtime&quot; tab, click on the &quot;Create a manifest 
+          file&quot; link.</li>
+        <li> Save.</li>
+        <li> Add <code>META-INF/</code> to the <code>bin.includes</code> line 
+          in your <code>build.properties</code> (can be done in the <code>plugin.xml</code> 
+          editor by either checking the <code>META-INF</code> box on the Build 
+          page or adding the entry manually on the <code>build.properties</code> 
+          page.</li>
+        <li> Determine if you still need the <code>plugin.xml.</code></li>
+      </ul>
+      <p>Things to update in 3.0 manifests:</p>
+      <ul>
+        <li> manifest version number (<code>Bundle-ManifestVersion: 2</code>)</li>
+        <li> singleton becomes a directive (<code>singleton=true</code> becomes 
+          <code>singleton:=true</code>)</li>
+        <li><code> Provide-Package</code> packages should be moved to the <code>Export-Package</code> 
+          header.</li>
+      </ul>
+      <p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td ALIGN=RIGHT VALIGN=TOP><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
+    <td><strong>This table that shows the status of the plug-ins in the SDK relative 
+      to being shipped as JARs. Currently the list only contains those plug-ins 
+      who have agreed to participate in the early adoption of being shipped as 
+      a JAR file.</strong> 
+      <p></p>
+	  <table width="100%" border="1">
+        <tr> 
+          <td><div align="center"><strong>Plug-in ID</strong></div></td>
+          <td><div align="center"><strong>JARable</strong></div></td>
+          <td><div align="center"><strong>JAR'd?</strong></div></td>
+          <td><div align="center"><strong>Manifest?</strong></div></td>
+          <td><div align="center"><strong>Target Milestone</strong></div></td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.ant.core </td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.ant.ui</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.compare</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.core.commands</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.core.expression</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.core.filebuffers</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.core.resources</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.core.resources.compatibility</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.core.runtime</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.core.runtime.compatibility</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.core.variables</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.debug.core</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.debug.ui</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.jdt.core</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.jdt.debug</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.jdt.debug.ui</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.jdt.launching</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.jdt.launching.macosx</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.jdt.ui</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.jdt.junit</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.jface</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.jface.text</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.ltk.core.refactoring</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.ltk.ui</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.ltk.ui.refactoring</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.osgi</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.osgi.services</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.osgi.util</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.pde.build</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.search</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.swt.*</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.team.core</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.team.cvs.core</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.team.cvs.ssh</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.team.cvs.ssh2</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.team.cvs.ui</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.team.ui</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.text</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.ui</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.ui.carbon</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.ui.console</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.ui.editors</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.ui.externaltools</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.ui.ide</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.ui.views</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.ui.workbench</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>org.eclipse.ui.workbench.texteditor</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+      </table></td>
   </tr>
 </table>
 
