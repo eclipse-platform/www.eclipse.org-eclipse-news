@@ -32,24 +32,31 @@
         with as little (conceptual/memory/execution) overhead as possible. </p>
 		
       <ul>
-        <li>October 29th - tested a file system based solution (<em>take 1</em>). 
-          Every project has its own history area. History for a file will be stored 
-          in a relative directory similar to where the file is. The difference 
-          is that, in order to prevent problems with path length limitations on 
-          Windows, every segment is translated to a short fixed length string 
-          (using a hash function). This opens opportunity for colisions, and it 
-          is an one-way translation, so we need to remember the original path 
-          for every state. We did this by keeping an additional .info file for 
-          each file state to maintain that information. Result: adding new state 
-          is really fast, but any tree traversals are very costly (we have to 
-          open all .info files in every directory we look).</li>
-        <li>November 2nd - tested an improved solution (<em>take 2</em>) based 
-          on the previous approach. Instead of keeping an individual .info file 
-          showing the original location for every state, we keep a index table 
-          per directory. This drastically reduces the number of file openings 
+        <li><em>October 29th</em> - tested a file system based solution (<em>take 
+          1</em>). Every project has its own history area. History for a file 
+          will be stored in a relative directory similar to where the file is. 
+          The difference is that, in order to prevent problems with path length 
+          limitations on Windows, every segment is translated to a short fixed 
+          length string (using a hash function). This opens opportunity for colisions, 
+          and it is an one-way translation, so we need to remember the original 
+          path for every state. We did this by keeping an additional .info file 
+          for each file state to maintain that information. Result: adding new 
+          state is really fast, but any tree traversals are very costly (we have 
+          to open all .info files in every directory we look).</li>
+        <li><em>November 2nd</em> - tested an improved solution (<em>take 2</em>) 
+          based on the previous approach. Instead of keeping an individual .info 
+          file showing the original location for every state, we keep a index 
+          table per directory. This drastically reduces the number of file openings 
           (not mentioning it takes much less space in the file system), having 
-          a better performance for tree based operations. There are still need 
-          to improve </li>
+          a better performance for tree based operations. The poor performance 
+          for copying history is understandable since we are actually copying 
+          the states as well, whereas the original implementation links them (maybe 
+          we should do the same). The bad performance when clearing the history 
+          for a given resource is due to having to delete multiple files/directories 
+          in a more complex directory structure than the original implementation 
+          (a two-level tree, directories are never deleted). We could improve 
+          that by postponing deleting directories to shutdown (making shutdown 
+          slower instead).</li>
       </ul>
 		</td>
 	</tr>
@@ -78,12 +85,12 @@
           <td><div align="center">20</div></td>
         </tr>
         <tr> 
-          <td><em>clear history</em></td>
+          <td><em>clear history of a directory tree</em></td>
           <td><div align="center">35</div></td>
           <td><div align="center"><font color="#FF0000">106</font></div></td>
         </tr>
         <tr> 
-          <td><em>copy history (applies cleaning policy)</em></td>
+          <td><em>copy history for a directory tree (applies cleaning policy)</em></td>
           <td><div align="center">682</div></td>
           <td><div align="center"><font color="#FF0000">1450</font></div></td>
         </tr>
