@@ -53,8 +53,8 @@ CODE { font-size: smaller }
       <p>1. Set preference values calculated at runtime.</p>
       <blockquote> 
         <p>The <code>org.eclipse.core.runtime.preferences</code> extension point 
-          allows for an extension which defines a <code>configuration</code> element. 
-          This extension defines a class name which implements the <code>IPreferenceCustomization</code> 
+          allows for an extension which defines a <code>initializer</code> element. 
+          This extension defines a class name which implements the <code>IPreferenceInitializer</code> 
           interface. The <code>#initializeDefaultPreferences()</code> method is 
           called on the implementing class.</p>
         <p>If the bundle/plug-in doesn't define an extension then the <code>#initializeDefaultPluginPreferences() 
