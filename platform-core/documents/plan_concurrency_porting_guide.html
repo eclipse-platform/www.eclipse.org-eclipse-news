@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>[DRAFT] Responsive UI porting guide</title>
+  <link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
+</head>
+<body text="#000000" bgcolor="#FFFFFF">
+ 
+<h1>[DRAFT] Responsive UI porting guide</h1>
+<font size="-1">Last modified: October 24, 2003</font> 
+<h3>IWorkspaceRunnable and IWorkspace.run</h3>
+<p>
+Users of the 2.1 method <tt>IWorkspace.run(IWorkspaceRunnable, IProgressMonitor)</tt>
+should revisit their uses of this method and consider using the richer method
+<tt>IWorkspace.run(IWorkspaceRunnable, ISchedulingRule, IProgressMonitor)</tt>.
+</p>
+<h4>Motivation</h4>
+<p>
+The old <tt>IWorkspace.run</tt> method acquires a lock on the entire workspace
+for the duration of the <tt>IWorkspaceRunnable</tt>.
+
+
+
+
+
+<hr>
+<p>
+Go <a href="../plan_concurrency.html">back to concurrency home</a>.
+</p>
+(Plan item bug reference: <a
+ href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=36957">36957</a>)<br>
+</body>
+</html>
