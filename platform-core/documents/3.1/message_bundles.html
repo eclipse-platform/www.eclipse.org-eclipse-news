@@ -79,7 +79,8 @@ Old Code:
       </p>
 
 New Code: 
-<p><pre><code>public class MyClass {
+<p><pre><code>
+public class MyClass {
 &nbsp;&nbsp;&nbsp;public void myMethod() {
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String message;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
@@ -113,7 +114,10 @@ Old Code:
 }</code></pre>
 
 New Code: 
-<pre><code>public class Messages extends NLS {
+<pre><code>
+import org.eclipse.osgi.util.NLS;
+
+public class Messages extends NLS {
 &nbsp;&nbsp;&nbsp;private static final String BUNDLE_NAME = &quot;org.eclipse.core.utils.messages&quot;; //$NON-NLS-1$
 &nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;public static String key_one;
