@@ -761,6 +761,7 @@
         </li>
         <li>global undo manager</li>
         <li>scripting strategy of the platform</li>
+        <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/new.gif" nosave="" border="0">compatibility layer for commands moved to LTK UI plug-in</li>
       </ul>
     </td>
 </tr>
@@ -772,166 +773,84 @@
 
   <tr> 
     <td WIDTH="100%"> 
-      <h3><a name="Milestone_Planning"></a>Milestone M4 Plan</h3>
+      <h3><a name="Milestone_Planning"></a><i>Draft</i> Milestone M5 Plan</h3>
       <h4>Top Five</h4>
       <ul>
-        <li> complete performance tests</li>
-        <li>rework preferences</li>
-        <li>finish file buffer operations</li>
+		<li>J2SE 5.0 support</li>
         <li>progress in consolidating the platform</li>
-        <li>improve NLS tooling</li>
+        <li>progress in improving NLS tooling</li>
+		<li>remove dependencies to internal code from other plug-ins</li>
+		<li>R3.0.2 related work items</li>
       </ul>
+      
       <h4>Committed items</h4>
-      <h5>Cross-team issues</h5>
-      <ul>
-        <li> consolidate Ant, Platform UI, WTP, VE feedback and issues</li>
-        <li> editor embedding and splitting 
-          <ul>
-            <li>provide prototype for services architecture</li>
-            <li>investigate how splitting would look like in a &quot;component&quot; 
-              world</li>
-          </ul>
-        </li>
-        <li> participate in preferences dynamic team</li>
-        <li> participate in the action contribution dynamic team</li>
-        <li> work on and adapt to the new undo story</li>
-        <li>migrate to the changed semantics of IPath</li>
-        <li> finish pushing down formatter to JDT core<br>
-        </li>
-      </ul>
-      <h5>Testing</h5>
-      <ul>
-        <li> complete performance tests for the published <a href="performance_scenarios.html">set 
-          of scenarios</a></li>
-      </ul>
-      <h5>Component work</h5>
-      <ul>
-        <li>rework preferences 
-          <ul>
-            <li>find all sharing scenarios (appearance, behavior, hovering, etc. 
-              ....)</li>
-            <li>functional categorization</li>
-            <li>check how WTP and other larger clients fit in</li>
-            <li>implement different scenarios</li>
-            <li>initiate review by usability team</li>
-          </ul>
-        </li>
-        <li>finish file buffer operations 
-          <ul>
-            <li>solve memory issues</li>
-            <li>improve test coverage</li>
-            <li>integrate with ltk core change architecture</li>
-            <li>solve typing raise conditions</li>
-          </ul>
-        </li>
-        <li>add document partitioning to StorageDocumentProvider 
-          <ul>
-            <li>[investigate] exploit the existing filebuffer extension points</li>
-          </ul>
-        </li>
-        <li>Java editor 
-          <ul>
-            <li>initial color settings</li>
-            <li>enable semantic highlighting by default</li>
-          </ul>
-        </li>
-        <li>Default text editor 
-          <ul>
-            <li>everything we push down while consolidating the platform needs 
-              to have a surfacing new function in the default text editor </li>
-            <li>pushing down spell checking allows us to check whether the push 
-              down of the quick fix infrastructure is successful<br>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <h5>Platform consolidation</h5>
-      <ul>
-        <li>create plug-in for 'Editing Source Scope' 
-          <ul>
-            <li>move Occurrences annotation type definition and annotation specification 
-              down to ltk.ui or editors.ui</li>
-          </ul>
-        </li>
-        <li>push down Ctrl-Click 
-          <ul>
-            <li>[investigate] general resolution infrastructure</li>
-          </ul>
-        </li>
-        <li>push down annotation navigation</li>
-        <li>push down spell checking</li>
-        <li>start adopting and pushing down Quick Fix infrastructure<br>
-        </li>
-      </ul>
-      <h5>Code cleanup</h5>
-      <ul>
-        <li>fix IEditorHelper 
-          <ul>
-            <li>use names that are selfdescribing and don't hamper further development</li>
-          </ul>
-        </li>
-        <li>finish work on new functions not yet API<br>
-        </li>
-      </ul>
-      <h5>NLS tooling</h5>
-      <ul>
-        <li>improve Properties File editor 
-          <ul>
-            <li>fix reported syntax coloring issues</li>
-            <li>navigate from selected key and value in a properties file to the 
-              location of usage in Java editor and Plug-in Manifest editor</li>
-            <li>spell checking</li>
-            <li>ensure correct ISO-8859-1 encoding when writing a properties file</li>
-          </ul>
-        </li>
-        <li>support new nls features in Class file editor 
-          <ul>
-            <li>coloring</li>
-            <li>hovering</li>
-            <li>navigation</li>
-          </ul>
-        </li>
-        <li>improve Externalize Strings wizard 
-          <ul>
-            <li>spell checking</li>
-            <li>ensure correct ISO-8859-1 encoding when writing a properties file</li>
-          </ul>
-        </li>
-        <li>investigate whether we can improve NLS tooling to support the string 
-          externalization approach used in TextOperationAction</li>
-      </ul>
-      <h4>Permanent items</h4>
-      <ul>
-        <li>bug fixing</li>
-        <li>increase correctness test coverage</li>
-      </ul>
+
+	<h5>Cross-team issues</h5>
+	<ul>
+		<li>resolve performance test problems</li>
+		<li>participate in the action contribution dynamic team</li>
+		<li>finish pushing down formatter to JDT Core</li>
+		<li>provide a compatibility layer for commands moved to LTK UI plug-in:<br>
+        	a hard-coded patch is ready but there should be support from the Platform
+        	for extension-point evolution.</li>
+	</ul>
+
+	<h5>J2SE 5.0 support</h5>
+	<ul>
+   	    <li>investigate impact on the following JDT Text areas:
+   	    <ul>
+			<li>syntax highlighting</li>
+			<li>content assist</li>
+			<li>hovering</li>
+			<li>comment formatting</li>
+			<li>typing</li>
+			<li>Java Outline page</li>
+			<li>folding</li>
+			<li>mark occurrences</li>
+   	    </ul></li>
+   	    <li>fix problems encountered in above investigation</li>
+   	    <li>provide new semantic highlightings</li>
+	</ul>
+
+	<h5>Platform consolidation</h5>
+	<ul>
+		<li>start adopting and pushing down Quick Assist and Quick Fix infrastructure</li>
+		<li>push down annotation hovers</li>
+		<li>offer spelling checking in Text editor</li>
+	</ul>
+
+	<h5>NLS tooling</h5>
+	<ul>
+		<li>reduce false positives when navigating from Properties file editor to key references</li>
+		<li>fix bugs reported in M4 test pass</li>
+		<li>(ensure correct ISO-8859-1 encoding when writing a properties file)</li>
+		<li>(spell checking in NLS wizard)</li>
+	</ul>
+
+	<h5>Code cleanup</h5>
+	<ul>
+		<li>remove dependencies to internal code from other plug-ins</li>
+	</ul>
+
+	<h5>R3.0.2 related work items</h5>
+	t.b.d.
+		
       <h4>Proposed items</h4>
-      <ul>
-        <li> implement a SaveAs dialog that allows to save inside and outside 
-          of the workspace 
-          <ul>
-            <li>involved parties: Platform UI, SWT, send patch to Platform UI</li>
-          </ul>
-        </li>
-        <li>lazy loading of document setup participants</li>
-        <li>allow for extending file buffers with custom implementations</li>
-        <li>allow templates in the default text editor</li>
-        <li>generalize and push down InformationDispatchAction</li>
-        <li>generalize push down quick view support 
-          <ul>
-            <li>Outline presentation control, AbstractInformationControl and related</li>
-          </ul>
-        </li>
-        <li>[investigate] Consolidate SourceViewerInformationControl and all of 
-          its copies</li>
-        <li>[investigate] allow for an outline mode in the default text editor 
-          <ul>
-            <li>folding just based on indentation</li>
-            <li>opens the way for using QuickOutline in the default text editor</li>
-          </ul>
-          <br>
-        </li>
-      </ul>
+		<ul>
+			<li>add new <code>org.eclipse.ltk.ui</code> plug-in to release<br>
+			<b>Note:</b> This item depends on the above mentioned cross team-issue</li>
+			<li>(Provide an example RCP text editor application with the following features:)<br>
+			<ul>
+				<li>open an external file</li>
+				<li>open an untitled (new & empty) text file</li>
+				<li>save</li>
+				<li>spell checking</li>
+				<li>quick fix to fix spelling problems</li>
+			</ul>
+			<b>Note:</b> it will require <code>org.eclipse.core.resources</code> plug-in
+			</li>
+		</ul>
+      
       <h3>Previous milestones</h3>
       <p>Previous 3.1 milestones can be reviewed <a href="previous_plans.html">here</a>.</p>
     </td>
