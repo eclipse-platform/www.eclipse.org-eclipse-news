@@ -36,18 +36,19 @@
 	<a href="#planning"><b>Component Planning</b></a>
 	<ul>
         <li><a href="#plan_current">Current Work</a></li>
-		<li>Eclipse 3.0 Plan</li>
-			<ul>
-		        <li><a href="#plan_committed">Committed Items</a></li>
-		        <li><a href="#plan_proposed">Proposed Items</a></li>
-		        <li><a href="#plan_other">Other Items</a></li>
-		        <li><a href="#plan_deferred">Deferred Items</a></li>
-			</ul>
+        <li>Eclipse 3.0 Plan</li>
+        <ul>
+          <li><a href="#plan_committed">Committed Items</a></li>
+          <li><a href="#plan_proposed">Proposed Items</a></li>
+          <li><a href="#plan_other">Other Items</a></li>
+          <li><a href="#plan_deferred">Deferred Items</a></li>
+        </ul>
+        <li><a href="#plan_top5">Eclipse 3.0 Top 5 Plan</a></li>
         <li><a href="#plan_milestone">Milestone Plans</a></li>
-		<li>Testing</li>
-		<ul>
-	        <li><a href="#plan_test">Test Plans</a></li>
-		</ul>
+        <li>Testing</li>
+        <ul>
+          <li><a href="#plan_test">Test Plans</a></li>
+        </ul>
       </ul>
 	</td>
 	</tr>
@@ -483,59 +484,156 @@
       </p>
     </td>
   </tr>
+  <tr> 
+    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
+    <td> <p><a name="plan_top5"></a><b>Eclipse 3.0 Top 5 Plan</b></p>
+      <p>This is a list of the top 5 items that we will be working on for the 
+        rest of the Eclipse 3.0 release cycle. (M7 -&gt; Release)</p>
+      <ol>
+        <li>Responsive UI 
+		<ul>
+		<li>Mainly documentation and client enablement left to do.</li>
+		</ul>
+		</li>
+        <li>User Settings</li>
+        <li>File Encodings</li>
+        <li>Runtime 
+          <ul>
+            <li>run from JARs</li>
+            <li>enablement (doc, articles, working with other teams, etc)</li>
+            <li>robustness/use case coverage</li>
+          </ul>
+        </li>
+        <li>PDE-Build 
+          <ul>
+            <li>bring up to speed with new runtime requirements (need to build 
+              JARs if want to run from JARs!)</li>
+          </ul>
+        </li>
+      </ol>
+      <p></p></td>
+  </tr>
   <tr>
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
-    <td>
-	 <p><a name="plan_milestone"></a>
-	 
-	 <strong>Milestone Plan (3.0 M6) - December 19, 2003</strong></p>
+    <td> <p><a name="plan_milestone"></a> <strong>Milestone Plan (3.0 M7) - February 
+        13, 2004</strong></p>
       <ul>
-	  	<li><em>Bug Fixing</em>
-			<ul>
+        <li><em>File Encoding</em> [rafael] 
+          <ul>
+            <li>Andre and Rafael to continue work based on Andre's proposal for 
+              file encoding support.</li>
+          </ul>
+        </li>
+        <li><em>User Settings</em> [dj] 
+          <ul>
+            <li>Proposal to be finished and available for comments.</li>
+            <li>Based on feedback from the proposal, initial implementation to 
+              be started.</li>
+          </ul>
+        </li>
+        <li><em>Concurrent Operations</em> [john] 
+          <ul>
+            <li>Continued effort on the &quot;Responsive UI&quot; plan item.</li>
+            <li>Main effort left is documentation.</li>
+            <li>See the <a href="plan_concurrency.html">details</a> page for more 
+              info.</li>
+          </ul>
+        </li>
+        <li><em>EclipseCon</em> [john, pascal] 
+          <ul>
+            <li>Preparations continue for the Eclipse conference (Feb 2 to Feb 
+              5)</li>
+          </ul>
+        </li>
+        <li><em>Auto-Refresh </em> [john] 
+          <ul>
+            <li>Continued from M6 plan.</li>
+            <li>Work has been done to integrate the Auto-Refresh plug-in with 
+              the Core.</li>
+            <li>It has also been modified to use the new JobManager APIs.</li>
+            <li>This work needs to be reviewed and released to the builds.</li>
+          </ul>
+        </li>
+        <li><em>Expressions in XML</em> [dj] 
+          <ul>
+            <li>As part of the work to allow third-party plug-ins to contribute 
+              to refactoring, Dirk has come up with a proposal for expression 
+              evaluation in plugin.xml files. Although most of this work will 
+              live in a separate plug-in, there is a certain degree of work which 
+              must be incorporated into the Core Runtime plug-in. Specifically 
+              the code for the enhancement <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=32498">bug 
+              32498</a>.</li>
+          </ul>
+        </li>
+        <li><em>Runtime</em> [pascal, rafael] 
+          <ul>
+            <li>We would like to be able to run from JARs rather than having a 
+              scattered directory structure.</li>
+          </ul>
+        </li>
+        <li><em>PDE-Build </em> [pascal] 
+          <ul>
+            <li>Work with new runtime. </li>
+            <li>Among other items, we need to be able to build JARs if we plan 
+              on running from them.</li>
+          </ul>
+        </li>
+        <li><em>Documentation </em> [all] 
+          <ul>
+            <li>We need to document all new function (this is a continuous item 
+              through all upcoming milestones)</li>
+          </ul>
+        </li>
+      </ul>
+      <p><strong>Milestone Plan (3.0 M6) - December 19, 2003</strong></p>
+      <ul>
+        <li><em>Bug Fixing</em> 
+          <ul>
             <li>Normally I don't include this as one of the things we are working 
               on, but the M6 milestone has been targeted as one in which the teams 
               will be making a conserted effort to reduce the defect backlog.</li>
-			</ul>
-		</li>
+          </ul>
+        </li>
         <li><em>Concurrent Operations</em> 
           <ul>
             <li>A dynamic team has been constructed to work towards solving the 
               remaining issues for the User Responsiveness plan item.</li>
-			<li>A new deadlock detection algorithm has been put into place and is being 
-			reviewed and tested.</li>
-            <li>See the <a href="plan_concurrency.html">details</a> page for more info.</li>
+            <li>A new deadlock detection algorithm has been put into place and 
+              is being reviewed and tested.</li>
+            <li>See the <a href="plan_concurrency.html">details</a> page for more 
+              info.</li>
           </ul>
         </li>
         <li> <em>Rich Client Platform</em> 
           <ul>
-		  	<li>We hope to have the new runtime as proposed by <a href="http://www.eclipse.org/equinox">Equinox</a>, 
-			integrated into the Core development stream.</li>
-			<li>Here is some <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-core-home/runtime/index.html">documentation</a>
-			 about the new runtime.</li>
+            <li>We hope to have the new runtime as proposed by <a href="http://www.eclipse.org/equinox">Equinox</a>, 
+              integrated into the Core development stream.</li>
+            <li>Here is some <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-core-home/runtime/index.html">documentation</a> 
+              about the new runtime.</li>
           </ul>
         </li>
         <li><em>User Settings</em> 
           <ul>
-			  <li>TBD</li>
+            <li>TBD</li>
           </ul>
         </li>
         <li><em>File Encodings</em> 
           <ul>
-		  <li>Andre is currently working on the File Encoding issue, with Rafael as
-		  his Core team contact.</li>
+            <li>Andre is currently working on the File Encoding issue, with Rafael 
+              as his Core team contact.</li>
           </ul>
         </li>
-		<li><em>Auto-Refresh</em>
-			<ul>
-			<li>Work has been done to integrate the Auto-Refresh plug-in with the Core.</li>
-			<li>It has also been modified to use the new JobManager APIs.</li>
-			<li>This work needs to be reviewed and released to the builds.</li>
-			</ul>
-		</li>
+        <li><em>Auto-Refresh</em> 
+          <ul>
+            <li>Work has been done to integrate the Auto-Refresh plug-in with 
+              the Core.</li>
+            <li>It has also been modified to use the new JobManager APIs.</li>
+            <li>This work needs to be reviewed and released to the builds.</li>
+          </ul>
+        </li>
       </ul>
-
-	 <strong>Milestone Plan (3.0 M5) - November 21, 2003</strong> (based on 4 people, 6 weeks each)</p>
-      <ul>
+      <strong>Milestone Plan (3.0 M5) - November 21, 2003</strong> (based on 4 
+      people, 6 weeks each)</p> <ul>
         <li><em>Concurrent Operations (6 weeks)</em> 
           <ul>
             <li>A dynamic team has been constructed to work towards solving the 
