@@ -95,30 +95,45 @@
   </tr>
   <tr> 
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
-    <td WIDTH="98%"><b>Issues</b> [main <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=85065">bug 85065</a>]<ul>
-        <li>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=83469">bug 
-          83469</a>] Cannot run with OSGi as a JAR.</li>
-        <li>Cannot run with SWT as a JAR.</li>
-        <li>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=78535">bug 
-          78535</a>] Problems running from JARs.</li>
+    <td WIDTH="98%"><p><b>Issues</b> [main <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=85065">bug 
+        85065</a>] </p>
+      <ul>
+        <li><img src="../../images/small_progress.gif" width="14" height="5"> 
+          [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=83469">bug 83469</a>] 
+          Cannot run with OSGi as a JAR - Currently the conversion tool hacks 
+          the <code>eclipse.properties </code>file to set the <code>osgi.frameworkClassPath</code> 
+          key's value to be empty rather than listing the JARs in the plug-in. 
+          (which no longer exist)</li>
+        <li><img src="../../images/small_progress.gif" width="14" height="5"> 
+          Cannot run with SWT as a JAR - </li>
+        <li><img src="../../images/small_progress.gif" width="14" height="5"> 
+          [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=78535">bug 78535</a>] 
+          Problems running from JARs.</li>
         <li>Performance - Need some numbers w.r.t. speed of running with JARs. 
           What about compressed JARs?</li>
-        <li>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=76653">bug 
-          76653</a>, <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=76436">bug 
-          76436</a>] Source code lookup</li>
+        <li><img src="../../images/small_progress.gif" width="14" height="5"> 
+          [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=76653">bug 76653</a>, 
+          <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=76436">bug 76436</a>, 
+          <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=86561">bug 86561</a>] 
+          Source code lookup</li>
         <li>Some plug-ins cannot be JAR'd - Note that this is ok because we can 
           run with a mixture of both JAR'd and non-JAR'd plug-ins.</li>
         <li>JARs within JARs - The JAR'd plug-in format requires the class files 
           to exist starting at the root of the JAR file. Some plug-ins have multiple 
           JARs and its an issue to have nested JARs. Have to come up with a strategy 
           for this.</li>
-        <li>Modification of classpath entries in manifest files. (work required 
-          by developers)</li>
+        <li>Modification of classpath entries in manifest files - This is added 
+          to this list not because it is a problem, but because it is work required 
+          by developers. For each plug-in, the <code>plugin.xml </code>or <code>manifest.mf 
+          </code>files need to be updated to let Eclipse know that the JARs should 
+          no longer be on the classpath and should be replaced with &quot;.&quot;.</li>
         <li>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=86492">bug 
           86492</a>] Icons shipped in fragments</li>
-        <li>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=85333">bug 85333</a>, 
-        <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=85507">bug 88507</a>] Plug-in holding the splash screen cannot be JAR'd</li>
-        <li>Plug-ins which provide intro content cannot be JAR'd</li>
+        <li>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=85333">bug 
+          85333</a>, <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=85507">bug 
+          88507</a>] Plug-in holding the splash screen cannot be JAR'd</li>
+        <li><img src="../../images/small_check.gif" width="10" height="11"> Plug-ins 
+          which provide intro content cannot be JAR'd</li>
       </ul>
       <p>&nbsp;</p></td>
   </tr>
