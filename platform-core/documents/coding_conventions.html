@@ -6,7 +6,7 @@
 <ul>
   <li>set line length to be something large (like 800)</li>
   <li>turn off formatting for comments</li>
-  <li> use the rest of the default settings</li>
+  <li> use the core formatting settings found <a href="core_formatting.xml">here</a></li>
 </ul>
 <h3>Organize imports:</h3>
 <ul>
@@ -43,11 +43,15 @@
 <ul>
   <li>Turn on all the compiler prefs including unused temps, synthetic accessor 
     methods, unused imports, unused parameters, non-NLS'd strings, etc etc</li>
+  <li>Turn on compiler warnings for javadoc<br>
+    &nbsp;&nbsp;Javadoc -&gt; Process Javadoc comments<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;- Malformed Javadoc comments -&gt; warning <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;- Report Errors in tags -&gt; true </li>
   <li> NLS your strings. Look at the Policy class.</li>
   <li> Compiler tasks. We have 3 that we use as a team (TODO, FIXME, XXX) Do not 
     add your own as this is unecessary and requires everyone on the team to change 
     their compiler settings in order to see these tasks.</li>
-   <li>Sort the methods within a class alphabetically (use the sort members action).</li>
+  <li>Sort the methods within a class alphabetically (use the sort members action).</li>
   <li> All classes MUST have a copyright notice.</li>
   <li> data type size initialization -&gt; use meaningful values if possible, 
     not things like: new HashSet(65)</li>
