@@ -24,20 +24,75 @@
 	<tr> 
 		<td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
     	<td WIDTH="98%"><b>Summary</b> 
-			<ul>
-				<li>item</li>
-			</ul>
-			<p>&nbsp;</p>
+		<p> The history store current implementation is said to be problem-prone 
+        (data corruption) and hard to maintain. There is an ongoing effort to 
+        replace it with something simpler. One of the options would be the adoption 
+        of a third-party provided storage engine, such as a embedded database 
+        or a b-tree engine. Another is to provide a very simple home-made solution 
+        with as little (conceptual/memory/execution) overhead as possible. </p>
+		
+      <ul>
+        <li>October 29th - tested a file system based solution (<em>take 1</em>). 
+          Every project has its own history area. History for a file will be stored 
+          in a relative directory similar to where the file is. The difference 
+          is that, in order to prevent problems with path length limitations on 
+          Windows, every segment is translated to a short fixed length string 
+          (using a hash function). This opens opportunity for colisions, and it 
+          is an one-way translation, so we need to remember the original path 
+          for every state. We did this by keeping an additional .info file for 
+          each file state to maintain that information. Result: adding new state 
+          is really fast, but any tree traversals are very costly (we have to 
+          open all .info files in every directory we look).</li>
+        <li>November 2nd - tested an improved solution (<em>take 2</em>) based 
+          on the previous approach. Instead of keeping an individual .info file 
+          showing the original location for every state, we keep a index table 
+          per directory. This drastically reduces the number of file openings 
+          (not mentioning it takes much less space in the file system), having 
+          a better performance for tree based operations. There are still need 
+          to improve </li>
+      </ul>
 		</td>
 	</tr>
 	<tr> 
 		<td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
-    	<td WIDTH="98%"><b>Performance Comparisons</b> 
-			<ul>
-				<li>item</li>
-			</ul>
-			<p>&nbsp;</p>
-		</td>
+    	
+    <td WIDTH="98%"><b>Performance Comparisons</b> <table width="100%" border="1">
+        <tr> 
+          <td><strong>Use cases</strong></td>
+          <td><strong>Original (ms)</strong></td>
+          <td><strong>Take 2 (ms)</strong></td>
+        </tr>
+        <tr> 
+          <td><em>add state</em></td>
+          <td><div align="center">117</div></td>
+          <td><div align="center"><font color="#00FF00">29</font></div></td>
+        </tr>
+        <tr> 
+          <td><em>get history for file</em></td>
+          <td><div align="center">9</div></td>
+          <td><div align="center">12</div></td>
+        </tr>
+        <tr> 
+          <td><em>find deleted members</em></td>
+          <td><div align="center">26</div></td>
+          <td><div align="center">20</div></td>
+        </tr>
+        <tr> 
+          <td><em>clear history</em></td>
+          <td><div align="center">35</div></td>
+          <td><div align="center"><font color="#FF0000">106</font></div></td>
+        </tr>
+        <tr> 
+          <td><em>copy history (applies cleaning policy)</em></td>
+          <td><div align="center">682</div></td>
+          <td><div align="center"><font color="#FF0000">1450</font></div></td>
+        </tr>
+        <tr> 
+          <td><em>apply cleaning policy</em></td>
+          <td><div align="center">not done yet</div></td>
+          <td><div align="center">not done yet</div></td>
+        </tr>
+      </table> </td>
 	</tr>
 </table>
 
