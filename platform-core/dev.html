@@ -121,13 +121,10 @@
     <td WIDTH="98%"><a name="plugins"></a><b>Plug-ins</b> <br>
       The Platform/Core component consists of the following plug-ins:&nbsp; 
       <ul>
-        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.core.boot" target="_top">org.eclipse.core.boot</a> 
-          (deprecated) </li>
-        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.core.runtime" target="_top">org.eclipse.core.runtime</a> 
-          (deprecated) </li>
-        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.core.resources" target="_top">org.eclipse.core.resources</a></li>
-        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.apache.xerces" target="_top">org.apache.xerces</a> 
-        </li>
+        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.apache.xerces" target="_top">org.apache.xerces</a> (recommend use JAXP instead)</li>
+        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.core.boot" target="_top">org.eclipse.core.boot</a> (deprecated) </li>
+        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.core.runtime" target="_top">org.eclipse.core.runtime</a> (deprecated) </li>
+        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.core.resources" target="_top">org.eclipse.core.resources</a></li>
         <li><img src="new.gif" width="31" height="14"><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.core.runtime.osgi" target="_top">org.eclipse.core.runtime.osgi</a></li>
         <li><img src="new.gif" width="31" height="14"><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.core.runtime.compatibility" target="_top">org.eclipse.core.runtime.compatibility</a></li>
         <li><img src="new.gif" width="31" height="14"><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.core.applicationrunner" target="_top">org.eclipse.core.applicationrunner</a></li>
@@ -149,7 +146,7 @@
   <tr> 
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
     <td><a name="examples"></a><b>Examples/Contributions</b> <ul>
-        <li><img src="new.gif" width="31" height="14">Jed's <a href="downloads/examples/autorefresh/com.example.autorefresh-updatesite.zip"> 
+        <li>Jed's <a href="downloads/examples/autorefresh/com.example.autorefresh-updatesite.zip"> 
           Auto-refresh plug-in v2.1</a> from June 18, 2003. As <a href="http://dev.eclipse.org/mhonarc/lists/platform-core-dev/msg00260.html">described</a> 
           on the platform-core-dev mailing list. For use with Eclipse 2.1 and 
           greater.</li>
@@ -179,17 +176,18 @@
           Eclipse 2.0.* and 2.1 prior to I20021127, get the patch below. Otherwise, 
           just fetch this download, follow the instructions in the <a href="downloads/tools/readme.html">readme</a> 
           (also in the org.eclipse.core.tools/doc directory) and enjoy.</li>
-        <li><img src="new.gif"/><b>Core Tools <a href="downloads/tools/org.eclipse.core.tools_1.0.2.zip">v1.0.2</a></b>
-          - This is the version of the core tools plugin that you should use for Eclipse release 2.1. The core tools patch
-          is not required for this version. This update fixes a non binary-compatible change that was made
-          within org.eclipse.core.resources, and appearing in all builds since I20030128. Some more
-          information has also been added to the element tree spy. Fixes
+        <li><b>Core Tools <a href="downloads/tools/org.eclipse.core.tools_1.0.2.zip">v1.0.2</a></b> 
+          - This is the version of the core tools plugin that you should use for 
+          Eclipse release 2.1. The core tools patch is not required for this version. 
+          This update fixes a non binary-compatible change that was made within 
+          org.eclipse.core.resources, and appearing in all builds since I20030128. 
+          Some more information has also been added to the element tree spy. Fixes 
           have been added on 2003/09/23 to fix a concurrency problem.</li>
         <li><b>Core Tools Patch <a href="downloads/tools/core-tools-patch_1.0.1.zip">v1.0.1</a></b> 
           - Apply this patch to<a href="core-tools-patch_1.0.1.zip"></a> if you 
           want to run the Core Tools on Eclipse builds earlier than I20021127 
           (including 2.0.*). See the Core Tools install notes for details.<br>
-        <li><img src="new.gif"/><b><a href="downloads/tools/org.eclipse.core.tools.restorer_1.0.0.zip">Workspace 
+        <li><b><a href="downloads/tools/org.eclipse.core.tools.restorer_1.0.0.zip">Workspace 
           Re-Builder</a></b> - Command-line utility program for basic restoration 
           of a corrupt workspace. This first version will re-create your projects 
           for you but will not restore your metadata. Check out the <a href="downloads/tools/readme_restorer_1.0.0.html">readme</a> 
@@ -486,8 +484,56 @@
   </tr>
   <tr>
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
-    <td> <p><a name="plan_milestone"></a><strong>Milestone Plan (3.0 M5) - November 
-        21, 2003</strong> (based on 4 people, 6 weeks each)</p>
+    <td>
+	 <p><a name="plan_milestone"></a>
+	 
+	 <strong>Milestone Plan (3.0 M6) - December 19, 2003</strong></p>
+      <ul>
+	  	<li><em>Bug Fixing</em>
+			<ul>
+            <li>Normally I don't include this as one of the things we are working 
+              on, but the M6 milestone has been targeted as one in which the teams 
+              will be making a conserted effort to reduce the defect backlog.</li>
+			</ul>
+		</li>
+        <li><em>Concurrent Operations</em> 
+          <ul>
+            <li>A dynamic team has been constructed to work towards solving the 
+              remaining issues for the User Responsiveness plan item.</li>
+			<li>A new deadlock detection algorithm has been put into place and is being 
+			reviewed and tested.</li>
+            <li>See the <a href="plan_concurrency.html">details</a> page for more info.</li>
+          </ul>
+        </li>
+        <li> <em>Rich Client Platform</em> 
+          <ul>
+		  	<li>We hope to have the new runtime as proposed by <a href="http://www.eclipse.org/equinox">Equinox</a>, 
+			integrated into the Core development stream.</li>
+			<li>Here is some <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-core-home/runtime/index.html">documentation</a>
+			 about the new runtime.</li>
+          </ul>
+        </li>
+        <li><em>User Settings</em> 
+          <ul>
+			  <li>TBD</li>
+          </ul>
+        </li>
+        <li><em>File Encodings</em> 
+          <ul>
+		  <li>Andre is currently working on the File Encoding issue, with Rafael as
+		  his Core team contact.</li>
+          </ul>
+        </li>
+		<li><em>Auto-Refresh</em>
+			<ul>
+			<li>Work has been done to integrate the Auto-Refresh plug-in with the Core.</li>
+			<li>It has also been modified to use the new JobManager APIs.</li>
+			<li>This work needs to be reviewed and released to the builds.</li>
+			</ul>
+		</li>
+      </ul>
+
+	 <strong>Milestone Plan (3.0 M5) - November 21, 2003</strong> (based on 4 people, 6 weeks each)</p>
       <ul>
         <li><em>Concurrent Operations (6 weeks)</em> 
           <ul>
