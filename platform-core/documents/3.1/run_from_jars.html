@@ -1,0 +1,163 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+<title>Eclipse Platform/Core</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
+</head>
+<body>
+<center>
+	<font class=indextop>core</font><br>
+	<font class=indexsub>the foundation of the platform</font><p></p>
+	
+  <a href="../../main.html">[home]</a> <a href="../../documents.html">[documents]</a> 
+  <a href="../../downloads.html">[downloads]</a> <a href="../../resources.html">[resources]</a> 
+  <a href="../../planning.html">[planning]</a> <a href="../../testing.html">[testing]</a> 
+</center>
+<br>
+<table BORDER=0 CELLPADDING=2 WIDTH="100%" >
+  <tr> 
+    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" BGCOLOR="#0080C0"><b><font face="Arial,Helvetica" color="#FFFFFF">Running 
+      Eclipse from JARs</font></b></td>
+  </tr>
+  <tr> 
+    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
+    <td WIDTH="98%"><b>Description</b> <p>Eclipse 3.0 and previous was shipped 
+        such that each plug-in was a directory that contained code in a JAR, along 
+        with multiple other files. In order to improve the number of files that 
+        we ship along with the size of the Eclipse distributions, we would like 
+        to be able to ship each plug-in as a single JAR file containing its code 
+        and other resources. This document describes the effort getting this item 
+        to happen, and lists the issues preventing success.</p>
+      <p>&nbsp;</p></td>
+  </tr>
+  <tr> 
+    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
+    <td WIDTH="98%"><b>Benefits</b> <ul>
+        <li><strong>File handles</strong> - There have been reports where people 
+          have been using very large products based on Eclipse and they have run 
+          out of file handles. If all plug-ins were shipped as JAR files, then 
+          at most you would only have one file handle per JAR file (if all plug-ins 
+          were activated).</li>
+        <li><strong>File size</strong> - If all files are in a single JAR file 
+          and that JAR is compressed, then it will take up less space than if 
+          the plug-in was extracted to disk. Note that the gain here is only the 
+          compression of the non-code files since the code in a normal install 
+          is in a JAR anyway.</li>
+        <li><strong>File size on the file-system</strong> - When plug-in are installed 
+          on a file-system, they can take up more space than just the file size. 
+          Depending on the file-system and the make-up of the plug-in, the size 
+          on disk can be upwards of 20% larger.</li>
+        <li><strong>Install time</strong> - For Eclipse and products built on 
+          top of Eclipse, we antcipate a shorter install time based on the fact 
+          that it is quicker to install (for instance) 100MB of data in 10 files 
+          than it is to install 100MB if data in 10,000 files.</li>
+        <li><strong>Un-install time</strong> - Similarly it is quicker to delete 
+          a smaller number of larger files than a large number of small files.</li>
+        <li><strong>Mixed Mode</strong> - It is important to note that plug-ins 
+          will be able to live in a mixed JAR'd and non-JAR'd world. For instance, 
+          in the /eclipse/plugins directory there will be a mixture of JAR files 
+          and directories, both containing plug-ins.</li>
+        <li><strong>Signing JARs</strong> - We are looking to sign jars. Permissions 
+          can be granted on a signer basis. Install integrity can be confirmed 
+          by checking signatures.</li>
+        <li><strong>Simple</strong> - This approach is consistent with the Java 
+          model of jars on a classpath.</li>
+      </ul>
+      <p>&nbsp;</p></td>
+  </tr>
+  <tr> 
+    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
+    <td WIDTH="98%"><b>Steps</b> <ol>
+        <li>Download Eclipse.</li>
+        <li>Run tool to convert plug-ins to JARs. The tool basically does the 
+          following: 
+          <ol>
+            <li>For each plug-in...</li>
+            <li>Extract all JARs to plug-in root dir</li>
+            <li>Generate manifest file from plugin.xml</li>
+            <li>Add &quot;.&quot; to the classpath</li>
+            <li>Zip up directory in a JAR</li>
+          </ol>
+        </li>
+        <li>Run Eclipse.</li>
+      </ol>
+      <p>&nbsp;</p></td>
+  </tr>
+  <tr> 
+    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
+    <td WIDTH="98%"><b>Common Problems</b> <ul>
+        <li>Missing images - If you are running a JAR'd Eclipse and there are 
+          missing images, it might be the case that the plug-in developer is trying 
+          to access the images via java.io.File API rather than by calling Bundle#getEntry.</li>
+      </ul>
+      <p>&nbsp;</p></td>
+  </tr>
+  <tr> 
+    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
+    <td WIDTH="98%"><b>Issues</b> <ul>
+        <li>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=83469">bug 
+          83469</a>] Cannot run with OSGi as a JAR.</li>
+        <li>Cannot run with SWT as a JAR.</li>
+        <li>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=78535">bug 
+          78535</a>] Problems running from JARs.</li>
+        <li>Performance - Need some numbers w.r.t. speed of running with JARs. 
+          What about compressed JARs?</li>
+        <li>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=76653">bug 
+          76653</a>, <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=76436">bug 
+          76436</a>] Source code lookup</li>
+        <li>Some plug-ins cannot be JAR'd - Note that this is ok because we can 
+          run with a mixture of both JAR'd and non-JAR'd plug-ins.</li>
+        <li>JARs within JARs - The JAR'd plug-in format requires the class files 
+          to exist starting at the root of the JAR file. Some plug-ins have multiple 
+          JARs and its an issue to have nested JARs. Have to come up with a strategy 
+          for this.</li>
+        <li>Modification of classpath entries in manifest files. (work required 
+          by developers)</li>
+        <li>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=86492">bug 
+          86492</a>] Icons shipped in fragments</li>
+        <li>Plug-in holding the splash screen cannot be JAR'd</li>
+        <li>Plug-ins which provide intro content cannot be JAR'd</li>
+      </ul>
+      <p>&nbsp;</p></td>
+  </tr>
+  <tr> 
+    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
+    <td WIDTH="98%"><p><b>Goals</b> </p>
+	  <ul>
+        <li><img src="../../images/small_progress.gif" width="14" height="5"> Running Eclipse on JAR'd plug-ins.</li>
+        <li><img src="../../images/small_progress.gif" width="14" height="5"> Running the test suites.</li>
+        <li><img src="../../images/small_progress.gif" width="14" height="5"> Targeting a JAR'd Eclipse install</li>
+      </ul>
+      <p>Milestones: Eclipse 3.1 M6 - Bundles which are part of the RCP to be 
+        shipped as JARs</p>
+      <p>&nbsp;</p></td>
+  </tr>
+  
+    <tr> 
+    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
+    <td WIDTH="98%"><b>Downloads</b> 
+	<p>Conversion tool - The tool is written as an Eclipse application. The easiest way to use it is to:
+	<ul>
+	<li>Download tool.</li>
+	<li>Install tool.</li>
+	<li>Start Eclipse.</li>
+	<li>If tool isn't part of your Target Platform, then make it so.</li>
+	<li>Create a new Launch Configuration with the Conversion tool as the Eclipse application to run.</li>
+	</ul></p>
+      <p>&nbsp;</p></td>
+  </tr>
+  
+  <tr> 
+    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
+    <td WIDTH="98%"><b>Related Work</b> <ul>
+        <li>Shipping Manifest files.</li>
+        <li>Features as JARs [note: need to talk to Dorian about this]</li>
+      </ul>
+      <p>&nbsp;</p></td>
+  </tr>
+</table>
+
+
+</body>
+</html>
