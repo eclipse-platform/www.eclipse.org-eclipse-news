@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Showing Modal Progress in Eclipse 3.0</title>
+  <link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
+</head>
+<body text="#000000" bgcolor="#FFFFFF">
+ 
+<h1>Showing Modal Progress in Eclipse 3.0</h1>
+<font size="-1">Last modified: May 11, 2004</font> 
+<p>
+A goal of the responsive UI plan item was to give the user the feeling of being in control 
+over things happening in the background. There is one scenario where 
+we need your help to achieve this goal. When a modal user operation is blocked by a
+background job, we want to show the running jobs and provide the option to cancel some of 
+them. The existing JFace <tt>ProgressMonitorDialog</tt> can only provide limited support to 
+do so. All it can do is inform the user that the current operation needs to wait. 
+See the following screenshot:
+<pre>
+   <img src="progress-images/progressdialog.gif"/>
+</pre>
+<p>
+What we really want to show is the progress view with the option to cancel a job:
+<pre>
+   <img src="progress-images/progressservice.gif"/>
+</pre>
+<p>
+You can get this additional support by migrating from <tt>ProgressMonitorDialog</tt> to 
+the new <tt>org.eclipse.ui.progress.IProgressService</tt>.
+<p>
+Here is how you can migrate:
+<ol>
+<li>
+Existing code:
+<pre>
+   ProgressMonitorDialog progress = new ProgressMonitorDialog(shell);				
+   progress.run(true, true, operation);	
+</pre>
+Replacement:
+<pre>
+   PlatformUI.getWorkbench().getProgressService().busyCursorWhile(operation);	
+</pre>
+<tt>busyCursorWhile</tt> shows the busy cursor and after some delay it shows
+an enhanced progress dialog as shown above.
+<p>
+</li>
+<li>
+Existing code:
+<pre>
+   ProgressMonitorDialog progress = new ProgressMonitorDialog(shell);				
+   progress.run(<b>false</b>, false, operation);	
+</pre>
+In this case the first parameter, <tt>fork</tt>, in <tt>dialog.run()</tt> is <b><tt>false</tt></b>,
+which means the operation isn't run in a separate thread but in the UI thread with 
+the consequence of preventing any UI refreshes.
+<p>
+Replacement:
+<pre>
+   PlatformUI.getWorkbench().getProgressService().run(false, false, operation);
+</pre>
+<p>		
+<b>Important:</b> whenever possible try to run your operation with <tt>fork==true</tt>.
+When converting to <tt>IProgressService</tt> please check whether you can
+convert from <tt>fork==false</tt> to <tt>fork==true</tt>. Using <tt>fork==false</tt> 
+simply because the operation needs to access some state from UI widgets is not an 
+excuse to not set <tt>fork==true</tt>. You should change your code so that you 
+can fetch the state from the widgets outside of the operation in the UI thread, or 
+gather all the necessary information from the UI before starting the operation.
+</li>
+<li>
+An API method expects a runnable context, e.g.:
+<pre>
+   createTypeDialog(Shell parent, IRunnableContext context, ...)	
+</pre>
+Existing code:
+<pre>
+   ProgressMonitorDialog progress= new ProgressMonitorDialog(shell);				
+   createTypeDialog(shell, progress, ...);
+</pre>
+Replacement:
+<pre>
+   createTypeDialog(shell, PlatformUI.getWorkbench().getProgressService());
+</pre>
+<p>
+In other words the <tt>IProgressService</tt> is a <tt>IRunnableContext</tt>.
+</li>
+</ol>
+Note that <tt>IProgressService.busyCursorWhile</tt> also serves as a good replacement
+for <tt>BusyIndicator.showWhile</tt>, and <tt>IStatusLineManager.getProgressMonitor()</tt>.
+The progress service will progressively switch from a busy cursor to a progress dialog
+if the operation exceeds a given duration, and will do a better job of reporting blockage
+than any existing progress mechanism. This takes the guess-work out of deciding what 
+progress mechanism to use for potentially long running operations.
+<p>
+&#147;The Eclipse 3.0 progress service, one-stop shopping for all your modal progress needs!&#148;
+<hr>
+</p>
+</body>
+</html>
