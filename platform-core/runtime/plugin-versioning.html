@@ -1,0 +1,126 @@
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+
+<h1>Eclipse Plug-in Versioning Proposal</h1>
+<blockquote> 
+  <p><b>Summary</b> <br>
+    Last Modified: 1100 February 17, 2004</p>
+</blockquote>
+
+<h2>Problem Definition</h2>
+<p>Current Eclipse practice calls for the teams to increment plugin version numbers
+  to match the upcoming release of Eclipse. For example, about 6 months ago we
+  changed our plugin version numbers from 2.1 to 3.0.0. In June 2004 we will
+  ship Eclipse 3.0.0 and all plugins (save a few third party ones) will be version
+  3.0.0. This is convenient because it allows people to look at the plugin version
+number and immediatly understand what version of Eclipse that plugin is from.</p>
+<p>This approach has several drawbacks however</p>
+<ul>
+  <li>Incrementing the major (first)
+      version segment renders the plugin &quot;incompatible&quot; with
+      all previous versions of that plugin. Dependent plugins which specify a version
+      number (e.g., &lt;import plugin=&quot;org.eclipse.foo&quot; version=&quot;2.1.0&quot;/&gt;)
+      will not resolve against version 3.0.0 of the prerequisite plugin. Unresolved
+      plugins cannot participate in a running Eclipse environment. Even though
+      we have worked hard to make the content of the 3.0 plugins binary backward
+      compatible,
+      2.1 based third party plugins (which specify prereq version numbers) require
+    changes to work in 3.0.</li>
+  <li>This approach does not set a good example. People building on top of
+      Eclipse look to us to understand how they should structure their world.
+    Following this
+        model, plugins like EMF and GEF should increment their version numbers
+      to match the Eclipse version numbers regardless of whether they changed
+    at all. This
+        has the nasty side effect of rendering all of their users incompatible
+      as well. It also does not scale well as a little change at the bottom then
+      ripples all
+      the way up.</li>
+  <li> Eclipse is getting away with this because a) we are at the bottom of
+      the stack, b) we ship a single wad that is built, packaged and distributed
+      in unison
+        and c) we do not use version numbered prerequisites ourselves. It is
+    really this last point which hurts the most. By not using versioned prereqs,
+    we
+      are not eating our own dog food. Clearly we do not mean that the resources
+      plugin
+        from 3.0 will run on ANY version of the Eclipse runtime. People who build
+      and distribute plugins are not generally able to play it quite so fast
+    and loose.</li>
+  <li> Features are not the cure. To address some of this, we use features and
+        their abilily to group plugins. The assumption is that if the feature
+    constraints are met, then the underlying plugins will all be happy and thus
+    versioned
+      plugin dependencies are not needed. This works but assumes that the feature
+      writer
+        (may not be related to the plugin authors) can understand the plugin
+    constraints well enough to define the feature. In practice this means that
+    the plugins
+        in the feature all have similar constraints such that they can be distilled
+        to a smaller set of inter feature constraints. Features are a packaging
+      mechanism for plugins. Pushing constraint satisfaction up to the packaging
+      layer puts
+        a significant load both on the people creating the packages (e.g., features)
+      as well as the packaging (e.g., feature) mechanism.</li>
+</ul>
+<h2>Proposal</h2>
+<p>  To address these concerns, we propose that the Eclipse SDK team start using
+    the version number semantics defined by Eclipse for all their plugins. The
+    numbering process works as follows:- new plugins start as 0.0.0 and go through
+    various version numbers (&lt;1.0.0)
+  until they are ready for their first release. At that time, developers may
+  choose to set the version number to 1.0.0. This is mostly cosmetic and is not
+  required. Prior to first release the numbering process depends mostly on how
+  widely availability and use of the early versions. For example, a beta at 0.9
+  sets a good tone and might encourage release at 1.0.0. </p>
+<ul>
+  <li> Immediately after a release, plugins continue with the same number as
+    they had in the release (e.g., 1.0.0). </li>
+  <li> As the plugin is developed for the next release, the version number is
+    changed to accurately reflect those changes. For example, if some minor fixes
+    are done,
+      the service (third) segment should be incremented (e.g., 1.0.1). If significant
+      but compatible rework is done and/or new function added, the minor (second)
+      segment should be incremented. (e.g., 1.1.0). Note that in this example,
+    the significant work overshadows the service fixes so the service (third)
+    segment
+      is set to 0. If major rework is done such that the new version is incompatible
+      with previous versions then the major (first) segment should be incremented
+      (e.g., 2.0.0) Note that the minor and service numbers are 0 here as well.</li>
+  <li> A plugin's version number need only be incremented to distinguish one
+    release from another. For example, if we release 1.0.0 of a plugin and then
+    do some
+      bug fixes for a milestone (say M3), we increment the version to 1.0.1.
+    If that plugin were eventually released, people could look at the version
+    number and
+      see that a) it is different from 1.0.0 and b) that some bug fixes were
+    done. If instead, further bug fixes are done for M5, there is no need to
+    further
+      increment in the version number (i.e., to 1.0.2). Leaving it at 1.0.1 still
+      conveys the important information to users of the next release. Between
+    releases the qualifier (fourth) version segment can be used (e.g., 1.0.1.M3
+    vs 1.0.1.M5)
+      to differentiate.</li>
+  <li> Plugin version number changes are solely at the discretion of the plugin
+      development team. They are in the best position to understand their changes
+      and the scope of impact.</li>
+  <li> Features are used to group together plugins and label them with a particular &quot;product&quot; release
+    version (e.g., 3.0). The org.eclipse.platform 3.0.0 feature contains a complete
+    and precise specification of the plugins in the 3.0 platform.</li>
+</ul>
+<h2>Action</h2>
+<p>The only action required is to decide we want to do this and refine/document
+  the details of the structure and process. There are no technological hurdles.
+  Just as teams are responsible updating their copyright dates, they would be
+  responsible for incrementing their plugin versions. These changes are done
+  very infrequently so will not be a particular burden.</p>
+<p>If we decide to follow this new policy we can retrofit the 3.0 plugins with &quot;correct&quot; version
+  numbers or start the new approach immediately following the release of Eclipes
+  3.0. Starting now avoids situations where Eclipse 2.1 based plugins do not
+  work on the released 3.0 because of resolution problems (rather than because
+  of actual incompatibilities). However, it may adversely affect people in the
+  community who have already come to know, like and use the 3.0.0 version numbers.<br>
+</p>
+</body>
+</html>
