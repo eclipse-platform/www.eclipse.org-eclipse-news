@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Gathering performance statistics</title>
+  <link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
+</head>
+<body text="#000000" bgcolor="#FFFFFF">
+
+<table width="100%">
+<tr><td style="background:#0080C0"><b><span style="color:white">Eclipse 3.1: Think Fast!</span></b></td></tr>
+</table>
+ 
+<h1>Gathering performance statistics</h1>
+<font size="-1">Last modified: February 22, 2005</font> 
+<h3>Introduction</h3>
+<p>
+The plugin-based nature of Eclipse makes for a highly dynamic execution environment.
+What happens when a context menu is opened in a view, or when the user switches
+to a different perspective, depends on the set of plug-ins that are installed and
+the set of plug-ins that are loaded at the time of the event. While this execution
+model has powerful advantages, it makes it difficult to track down performance
+problems in an Eclipse-based application.  For example, a user may report that
+it takes five seconds to open a view's context menu.  The long pause may be
+caused by:
+<ul>
+<li>A particular action that is computing its enablement criteria</li>
+<li>A plug-in that is trying to determine the content type of the selected files
+in the view, which in turn is used to decide what actions to provide to the menu.</li>
+<li>The right-click induced a part activation switch, and a part listener is performing 
+some other expensive calculation.</li>
+</ul>
+<p>
+The crux is that it is difficult to put a finger on exactly where all the time
+(or memory) is going in a particular user scenario.  While detailed analysis of 
+performance is properly the domain of dedicated profiling tools, some level
+of instrumentation in the Eclipse code can make it easier to narrow the scope
+of performance problems.  In other words,  if a user has downloaded a dozen
+different plug-ins from the web, and suddenly things get slow or memory usage
+shoots up, a quick tool is needed to help that user figure out who to report the
+performance problem to.
+<h3>Enter PerformanceStats</h3>
+<p>
+The new <tt>PerformanceStats</tt> class in Eclipse 3.1 is a light-weight API
+for tracking plug-in performance and reporting performance problems in a running
+Eclipse-based application. This API is used to track <i>performance events</i>,
+pieces of code that are potentially long-running or that involve calls across a 
+plug-in boundary.  These events often correspond to a user's interaction with an 
+application (an editor or menu being opened, a builder running, etc), or system 
+events such as event listeners being called.
+<p>
+The principle design characteristics of the <code>PerformanceStats</code> API are:
+<ul>
+<li>When turned off, introduce close to zero performance overhead of its own.</li>
+<li>When turned on, track minimal data on potentially long-running
+events in the system. Gather sufficient information to properly assign responsibility
+for any performance problem.</li>
+<li>An optional hook can be installed to perform further analysis or reporting
+on performance events: reporting failures to the user, logging to a database, etc.
+I.e., any expensive analysis is an optional add-on.</li>
+</ul>
+<p>
+The <tt>PerformanceStats</tt> infrastructure builds on the existing debug
+trace options and logging support in the platform, so its implementation is
+small and most of its function should be familiar for those acquainted with
+the Eclipse tracing and logging APIs.
+</p>
+<h3>Instrumenting Code</h3>
+<p>
+The first step to using <tt>PerformanceStats</tt> is to instrument potentially
+long-running code.  Here is an example snippet where code has been instrumented
+to gather performance statistics:
+<pre>
+	private static final String PERF_BUILDER = "org.eclipse.core.resources/perf/builders";
+	...
+	//instrumentation sample
+	PerformanceStats stats = PerformanceStats.getStats(PERF_BUILDER, builder);
+	stats.startRun();
+	builder.build(...);//this is the expensive code being called
+	stats.endRun();
+</pre>
+<p>
+A statistics instance is created by providing a symbolic name for the event,
+and an arbitrary object, called the <i>blame</i>, that identifies the party
+responsible for the event that is occurring.  This is typically the object on
+which a long-running method is being called.  If no object is applicable,
+a string can be provided that contains further details, such as an extension or 
+plug-in id.  Once created, the statistics instance can be held onto privately, or 
+looked up using the static <code>getStats</code> method whenever it is needed.
+<p>
+When a performance run is ended, an optional <i>context</i> string can be
+provided that contains more details about the event.  The context is provided
+by calling <code>endRun(String context)</code> rather than the no-argument
+<code>endRun()</code> method.  This context information is only stored
+and reported in the case of performance failures.  Performance statistics
+are not tracked separately for different contexts on the same statistics object.
+For example, the context for a part change event might be the kind of change
+and the name of the target part.  Thus while all invocations of a particular
+part listener are aggregated into a single statistic, further details are available
+in the case of a particular invocation whose duration is longer than acceptable.
+</p>
+<h3>Performance Failures</h3>
+<p>
+As a system runs, a large number of performance events will typically occur.
+Most of the time, these events occur quickly, and it is not interesting to
+track or report their occurrence.  The <code>PerformanceStats</code> mechanism
+uses the notion of <i>performance failure</i> to describe performance events
+that take longer than an acceptable duration.
+
+</body>
+</html>
