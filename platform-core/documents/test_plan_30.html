@@ -454,11 +454,11 @@ jars.compile.order = yourFolder, library.jar, myFolder
     <pre>qualifier = context</pre>
   </li>
   <li> Export &quot;deployable plug-in&quot; as zip and verify that the name of 
-    the zip has 1.0.0.<date Of The Day></li>
+    the zip has 1.0.0.&lt;date of the day&gt;</li>
   <li> Export &quot;deployable plug-in&quot; as folder and verify that the folder 
-    as the name 1.0.0.<date of the day></li>
-  <li> Verify that the version number of the feature in the feature.xml has been 
-    updated</li>
+    as the name 1.0.0.&lt;date of the day&gt;</li>
+  <li> Verify that the version number in the plugin.xml has been updated</li>
+  <br>
   <li> change the build.properties to 
     <pre>qualifier = NONE</pre>
   </li>
@@ -466,6 +466,7 @@ jars.compile.order = yourFolder, library.jar, myFolder
     the zip is 1.0.0</li>
   <li> Export &quot;deployable plug-in&quot; as folder and verify that the name 
     of the directory is 1.0.0</li>
+  <br>
   <li> change the build.properties to 
     <pre>qualifier = myValue</pre>
   </li>
@@ -473,6 +474,12 @@ jars.compile.order = yourFolder, library.jar, myFolder
     the zip is 1.0.0.myValue</li>
   <li> Export &quot;deployable plug-in&quot; as folder and verify that the name 
     of the directory is 1.0.0.myValue</li>
+</ul>
+
+<h4>Export of qualified fragments</h4>
+<ul>
+   <li> Create a fragment QualifiedFragment to any plugin, set the version number as 1.0.0.qualifier</li>
+   <li> repeat the same steps as in the test with plugin</li>
 </ul>
 
 
@@ -536,6 +543,12 @@ expected to fail.</li>
 compatible are expected to fail.</li>
 </ul>
 
+<h4>Export of binary plugins</h4>
+<ul>
+<li>Create a new feature BinFeature.</li>
+<li>In this feature add the plugins Dot1, org.eclipse.swt, org.eclipse.core.runtime.</li>
+<li>Export the feature and verify that the all the files from org.eclipse.swt and org.eclipse.core.runtime are here.</li>
+</ul>
 <h4>2.1.x test</h4>
 <ul>
 <li>Change your target platform to point to a 2.1.x eclipse install</li>
