@@ -86,9 +86,8 @@
   the parent's charset is returned. For the workspace root, a charset corresponding 
   to the workspace's default encoding preference is returned.</p>
 <p><code>public boolean IResource.isDefaultCharset() throws CoreException</code></p>
-<p>Returns <code>true</code> if the currently configured charset is set by the 
-  user or has a default value (either guessed by file contents, or inherited from 
-  parent).</p>
+<p>Returns <code>true</code> if the currently configured charset has a default value 
+(either guessed by file contents, or inherited from parent).</p>
 <p><code>public static final int IResourceDelta.ENCODING = 0x100000;</code></p>
 <p><code>public String IResourceDelta.getNewCharset();</code></p>
 <p><code>public String IResourceDelta.getOldCharset();</code></p>
