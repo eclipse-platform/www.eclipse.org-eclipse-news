@@ -25,7 +25,8 @@
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
     <td><b>Theme: Built to Last</b> <p><em>Platform/Runtime</em></p>
       <ul>
-        <li><em>(Performance)</em> Improvements on Registry Structure - Investigate 
+        <li><img src="../../images/small_progress.gif" width="14" height="5"> 
+          <em>(Performance)</em> Improvements on Registry Structure - Investigate 
           ways of making it smaller and more scalable. Consider radical changes. 
           Think outside the box.</li>
         <li> <em>(Performance)</em> Resource Bundles Implementation - Both speed 
@@ -82,7 +83,8 @@
           lot of disjoint functionality and can possibly be split up into separable 
           components along the lines of the extension registry, preferences, job 
           manager, content type, etc.</li>
-        <li>Rolling Log File - The Eclipse log file is ever-increasing and could 
+        <li><img src="../../images/small_x.gif" width="10" height="12"> <em>(Deferred)</em> 
+          Rolling Log File - The Eclipse log file is ever-increasing and could 
           be changed to roll and stay at a managable size. Note that this might 
           be deferred since users are able to delete/manage the log file via the 
           PDE Error Log View.</li>
@@ -92,11 +94,12 @@
           to fill in the implementation and then ensure that people are taking 
           advantage of it. (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=67884">bug 
           67884</a>)</li>
-        <li>Path issues: There are some user problems coming up where they have
-        already existing directory structures on disk and they would like to create these
-        project within Eclipse but we don't allow them because their path names contain
-        &quot;illegal&quot; characters such as slashes and colons.(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=24152">bug 24152</a>)
-        <a href="../documents/path_changes.html">See proposed solution</a>.</li>
+        <li><img src="../../images/small_check.gif" width="10" height="11"> Path 
+          issues: There are some user problems coming up where they have already 
+          existing directory structures on disk and they would like to create 
+          these project within Eclipse but we don't allow them because their path 
+          names contain &quot;illegal&quot; characters such as slashes and colons.(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=24152">bug 
+          24152</a>) <a href="../documents/path_changes.html">See proposed solution</a>.</li>
       </ul>
       <p><em>PDE/Build</em></p>
       <ul>
@@ -109,25 +112,35 @@
       </ul>
       <p><em>Platform/Resources</em></p>
       <ul>
-        <li>Improve IndexedStore - Cloudscape is a Java database implementation 
-          that has been donated to Apache by IBM. We should investigate making 
-          it an Eclipse plug-in and then using it for implementation of the IndexedStore. 
-          (which is the backing store for persistent properties and the history 
-          store)</li>
-        <li>Better story for external tool builders - There are bugs when people 
-          have multiple external tool builders on the same project. Namely, we 
-          have been using the builder-id as a unique way to identify the builder, 
-          but since the external tool builder is a wrapper for the script that 
-          is really doing the work, the id is not unique across the scripts. Fixing 
-          this problem will require a change in the workspace tree file format. 
-          (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=21029">bug 21029</a>)</li>
+        <li><img src="../../images/small_progress.gif" width="14" height="5"> 
+          Improve IndexedStore 
+          <ul>
+            <li><img src="../../images/small_x.gif" width="10" height="12"> <em>(Deferred)</em> 
+              Cloudscape is a Java database implementation that has been donated 
+              to Apache by IBM. We should investigate making it an Eclipse plug-in 
+              and then using it for implementation of the IndexedStore. (which 
+              is the backing store for persistent properties and the history store)</li>
+            <li><img src="../../images/small_progress.gif" width="14" height="5"> 
+              Investigate other alternatives for the history/property store implementation. 
+            </li>
+          </ul>
+        </li>
+        <li><img src="../../images/small_check.gif" width="10" height="11"> Better 
+          story for external tool builders - There are bugs when people have multiple 
+          external tool builders on the same project. Namely, we have been using 
+          the builder-id as a unique way to identify the builder, but since the 
+          external tool builder is a wrapper for the script that is really doing 
+          the work, the id is not unique across the scripts. Fixing this problem 
+          will require a change in the workspace tree file format. (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=21029">bug 
+          21029</a>)</li>
         <li>Allow merge for Copy/Move - Current implementation of copy/move requires 
           that the destination resource/path does not exist. We should investigate 
           allowing merge in the workspace tree. This would benefit refactoring 
           actions. (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=31883">bug 
           31883</a>, <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=29838">bug 
           29838</a>)</li>
-        <li>APIs for maintaining file permissions - There are currently bugs related 
+        <li><img src="../../images/small_check.gif" width="10" height="11"> APIs 
+          for maintaining file permissions - There are currently bugs related 
           to copying/moving resources on Linux machines and the file permissions 
           are not retained. This is especially apparent in the case where we end 
           up doing a copy/move by transferring stream data rather than a file-system 
@@ -158,10 +171,13 @@
           59899</a>)</li>
         <li>Project natures could give hints about the content type for files. 
           (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=69640">bug 69640</a>)</li>
-        <li>Convert our existing performance tests to take advantage of the new 
-          performance framework provided by RelEng.</li>
-          <li>Support overriding string values from properties files. Basically, if a plugin defines a string in plugin.properties 
-          or in a java resource file, someone should be able to provide alternate values for some strings. (request from Platform/Update)</li>
+        <li><img src="../../images/small_check.gif" width="10" height="11"> Convert 
+          our existing performance tests to take advantage of the new performance 
+          framework provided by RelEng.</li>
+        <li>Support overriding string values from properties files. Basically, 
+          if a plugin defines a string in plugin.properties or in a java resource 
+          file, someone should be able to provide alternate values for some strings. 
+          (request from Platform/Update)</li>
       </ul>
       <p>&nbsp;</p></td>
   </tr>
