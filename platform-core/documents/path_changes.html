@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Removing restrictions on valid characters in paths</title>
+  <link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
+</head>
+<body text="#000000" bgcolor="#FFFFFF">
+ 
+<h1>Removing restrictions on valid characters in paths</h1>
+ 
+<blockquote> <b>Summary</b>  <br>
+The data structure <tt>org.eclipse.core.runtime.IPath</tt> and its 
+canonical implementation, <tt>org.eclipse.core.runtime.Path</tt>, impose
+restrictions on segment names that can be more restrictive
+than those for file names in the underlying file system. When Eclipse paths
+are used to represent file system paths, these restrictions prevent 
+valid files from being added to the Eclipse workspace. This document
+describes the current set of restrictions in Eclipse 3.0, and proposes changes to
+lift these restrictions.
+<p>
+<font size="-1">Last modified: September 22, 2004</font> 
+</blockquote>
+<p>
+<h3>Background</h3>
+<p>
+<tt>IPath</tt> is an abstract data structure supplied by the <tt>org.eclipse.core.runtime</tt>
+plug-in, and consists of the following parts:
+<ul>
+<li>An optional device (a <tt>String</tt>)</li>
+<li>Zero or more ordered segments (represented as <tt>String</tt>)</li>
+<li>Optional leading, trailing, and UNC separators</li>
+</ul>
+<p>
+To facilitate conversion between <tt>IPath</tt> and <tt>String</tt>
+instances, <tt>IPath</tt> reserves the colon (':') character as the device
+delimiter, and the forward and back slash ('/' and '\') characters as segment delimiters.
+The API javadoc for <tt>IPath.isValidSegment</tt> outlines the complete set
+of restrictions:
+ <ul>
+ <li> the empty string is not valid
+ <li> any string containing the colon character (":") is not valid
+ <li> any string containing the slash character ("/") is not valid
+ <li> any string containing the backslash character ("\") is not valid
+ <li> any string starting or ending with a whitespace character is not valid
+ <li> all other strings are valid
+ </ul>
+Contrast this with the restrictions on file names in Unix (as defined in the "Base Definitions" volume 
+of IEEE Std. 1003.1-2001, section 3.169 Filename):
+ <ul>
+ <li> the empty string is not valid </li>
+ <li> any string containing the slash character ('/') is not valid</li>
+ <li> the strings "." and ".." have special meaning</li>
+ <li> any string containing the null byte is not valid</li>
+ <li> all other strings are valid</li>
+ </ul>
+Thus when Eclipse <tt>IPath</tt> objects are used to represent Unix file names,
+they are unable to represent file names containing '\' or ':', or file names with leading
+or trailing white space.
+
+<h3>Proposed Solution</h3>
+<p>
+Lifting the restriction on paths with leading or trailing whitespace and paths
+containing the '\' character is easily achieved by specifying a new constructor for 
+creation of paths.  Lifting the restriction on the ':' character is more
+difficult, since it is needed by the path constructor to delimit the optional device
+string. 
+<p>
+A possible solution is to make the path constructor platform dependent. Thus, the device
+separator would only be used on operating systems that specify a device
+in file names (i.e., Windows).  The major drawback of this approach is that it breaks existing
+clients of <tt>IPath</tt> that want to use paths in a platform-independent way.
+This includes not only plug-ins that are using the device portion of paths for other
+uses, but also plug-ins that want to treat paths in a platform-neutral way. For example,
+a plug-in running on Linux might want to read and manipulation paths that happen 
+to represent Windows paths with meaningful devices. Using the host operating
+system to make assumptions about data that might not be intended for that platform
+will result in unwanted side-effects.
+<p>
+The proposed solution acknowledges the fact that there are two legitimate groups 
+of <tt>IPath</tt> users:
+<ul>
+<li>Code that needs a platform-specific representation. In other words, someone that
+actually wants to open a stream on a file, delete a file, etc. They essentially need to
+translate between an <tt>IPath</tt> and a <tt>java.io.File</tt>.</li>
+<li>Code that is reading, storing, and manipulating file system paths, but does 
+not need the platform-specific manifestation. In particular, there is a strong need
+for a serialized representation of paths in a platform-neutral way so that they can 
+be later read and interpreted on a different platform (typically in the form of a path
+that is relative to some platform specific prefix represented by a variable).
+</ul>
+<tt>IPath</tt> already acknowledges these two uses in its <tt>toString</tt> methods.
+The standard <tt>toString</tt> method creates a platform-neutral encoding of
+the path as a <tt>String</tt>. The <tt>toOSString</tt> method creates a platform-specific
+encoding suitable for passing to <tt>java.io.File</tt> or other API that deals directly
+with the file system.
+<p>
+The proposed solution is to create two constructors for creating <tt>IPath</tt>:
+<ul>
+<li>A constructor that decodes a platform-specific string.  For example, this would 
+parse the output of a previous call to <tt>IPath.toOSString</tt>, or the value returned
+by <tt>java.io.File.getAbsolutePath</tt>.</li>
+<li>A constructor that decodes a platform-neutral string, such as the output of
+a previous call to <tt>IPath.toString</tt>.</li>
+</ul>
+<p>
+Most clients would continue to use the platform-neutral form of paths. The path
+can be converted to/from a platform-specific representation when interaction
+with the local file system is required. 
+<p>
+The platform-neutral encoding of paths (conversion from IPath to String) would allow
+all characters except slash ('/') in segment names, and include an optional device 
+separated from the segments by a double slash. The following are some examples
+of windows file system paths and the corresponding platform-neutral encoding:
+<ul>
+<li>"C:\folder\file.txt" becomes "C:///folder/file.txt"</li>
+<li>"C:folder\file.txt" becomes "C://folder/file.txt"</li>
+<li>"C:\folder\" becomes "C:///folder/"</li>
+<li>"C:\folder\file.txt" becomes "C:///folder/file.txt"</li>
+</ul>
+Canoncial Unix paths always look identical to their platform-neutral encoding. The lack
+of device is determined by the absence of a leading double-slash:
+<ul>
+<li>"/etc/" is encoded as "/etc/"</li>
+<li>"/etc/passwd" is encoded as "/etc/passwd"</li>
+<li>"/etc/timeNowIs4:25:12PM" is encoded as "/etc/timeNowIs4:25:12PM"</li>
+<li>"/etc/foo\bar" is encoded as "/etc/foo\bar"</li>
+</ul>
+<p>
+ UNC paths, which typically have no device but have a double leading separator 
+ would be encoded with four leading slashes:
+<ul>
+<li>"//Server/Volume" becomes "////Server/Volume"</li>
+</ul>
+If for some reason a UNC path had a device, it would preceed the slashes:
+<ul>
+<li>"C://Server/Volume" becomes "C:////Server/Volume"</li>
+</ul>
+<p>
+This platform-neutral encoding has a number of benefits. In particular, it is
+fully backwards compatible with the encoding produced by <tt>IPath.toString</tt>
+in the 3.0 release. If a plug-in in Eclipse 3.0 stored all possible paths in a file
+using the <tt>toString</tt> method, all of those strings would be readable
+by a plug-in in Eclipse 3.1. The reverse compatibility is of course not supported
+for paths created in Eclipse 3.1 that contain '\' or ':' characters in file or directory names.
+<p>
+In addition, if this platform-neutral encoding is
+passed to <tt>java.io.File</tt> on either Unix or Windows, it will be handled
+correctly.  The Windows implementation of the <tt>java.io.File</tt> constructor
+accepts front slashes as a path separator, and all plaforms collapse and ignore duplicate slashes.
+<p>
+The platform specific Path constructor would impose the minimum platform-specific
+requirements need to unambiguosly parse all possible paths on that platform. 
+The Windows implementation, for example, will interpret everything up to the
+first ':' as the device, and treat both '/' and '\' as path segment separators. No
+other rules would be imposed. Thus the existing restriction on paths that prevents
+path segments from having leading or trailing whitespace will no longer be enforced
+on any platform.
+<p>
+As before, detailed validation of all legal characters and names on that platform 
+will not be enforced. Some clients use technology such as Cygwin or Samba to 
+mount foreign file systems on a platform. In these situations, path name rules
+for the local file system do not apply. While it is difficult to fully support these users,
+any additional platform-specific verification performed on paths causes further
+problems for these users. Imposing the absolute minimum requirements for
+unamiguously parsing paths allows the majority of users to function without
+further impacting the corner cases.
+</p>
+<h3>API Details</h3>
+<p>
+
+</p>
+<h3>Impact</h3>
+<p>
+
+</p>
+<h3>Bug reference</h3>
+<p>
+<ul>
+<li>https://bugs.eclipse.org/bugs/show_bug.cgi?id=24152</li>
+</ul>
+</body>
+</html>
