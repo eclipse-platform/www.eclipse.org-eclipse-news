@@ -7,7 +7,7 @@
 <body text="#000000" bgcolor="#FFFFFF">
  
 <h1>Remaining Eclipse 3.0 responsiveness issues</h1>
-<font size="-1">Last modified: October 29, 2003</font> 
+<font size="-1">Last modified: November 6, 2003</font> 
 <p>
 This document outlines the remaining UI responsiveness issues at the start of the
 3.0 M5 cycle.  A dynamic team has been set up with representatives from Platform 
@@ -59,6 +59,15 @@ after a sufficient delay.  This avoids the distraction of a popping dialog for m
 but gives enough room to describe the progress for longer running cases and blocked
 operations.
 </p>
+<p>
+<img src="../new.gif" width="31" height="14"> We also need a story for how dialogs with embedded
+progress indicators will work (e.g.: wizards, launch configuration dialog, 
+preference dialog).  Having a nested progress dialog within another
+dialog does not look nice.  Need to revisit all implementors of IRunnableContext
+to see if new API is needed.  Dirk suggested keeping IRunnableContext for consistency,
+possibly just changing the javadoc to indicate that the &quot;cancel&quot; parameter 
+may be ignored (cancelation should always be possible).
+</p>
 <h3>Presentation of non-modal progress</h3>
 <p>
 We are learning about a number of situations where background operations
@@ -83,6 +92,15 @@ Examples:
 <li>Search view during a background search</li>
 </ul>
 </p>
+<p>
+<img src="../new.gif" width="31" height="14"> This new functionality should have a generic component
+that provides a uniform presentation of a busy view.  Possible solutions include
+an icon overlay, changing title bar gradient, changing appearance of part pane border,
+and changing the cursor.
+Could also use a *brief* flashing title bar to indicate completion of long running task.
+The mechanism should have a hook method on WorkbenchPart that allows subclasses
+to add additional busyness indicators within the view body.
+</p>
 <h4>2. Stale views</h4>
 <p>
 Many views contain information that is *possibly* incorrect during a background
@@ -97,7 +115,7 @@ to a missing marker, or open a missing file).
 <p>
 Examples:
 <ul>
-<li>Task and Problem views when a build is ocurring</li>
+<li>Task and Problem views when a build is occurring</li>
 <li>Editor marker bar when document is dirty and while build is ocurring</li>
 <li>Team Synchronize view while background refresh is running</li>
 <li>Navigator view during import or checkout</li>
@@ -132,7 +150,7 @@ any operation that may be blocked by a very long running activity must be run
 outside the UI thread. This includes all operations that modify resources and markers.
 </p>
 <p>
-(Updated Oct 29) As of I20031029, marker changes no longer require any scheduling rule.
+As of I20031029, marker changes no longer require any scheduling rule.
 This means there is nothing that will block marker changes for extended periods
 due to conflicts with ongoing background activity. The remaining problem is that almost
 all marker changes are wrapped within an <tt>IWorkspaceRunnable</tt>, which for backwards
@@ -150,7 +168,7 @@ be moved into a background thread using the new UI progress service.  This will
 allow users to cancel where the change is not compatible with background activity.
 </p>
 <p>
-(Updated Oct 29) A suggestion was made to resolve this issue by shifting the burden 
+A suggestion was made to resolve this issue by shifting the burden 
 to the implementors of background operations.  If the UI thread tries to make a 
 change that conflicts with the background operation, the background operation could 
 be suspended to allow the UI thread to proceed.  This would require that we provide
@@ -178,6 +196,12 @@ UI thread.  This can be achieved by adding a method to IProgressProvider to spec
 a default progress monitor when none is provided by the operation.  This monitor
 can then spin the event loop (ala EventLoopProgressMonitor), and open a dialog
 when the foreground operation is blocked.
+</p>
+<p>
+<img src="../new.gif" width="31" height="14"> A suggestion was raised that this support could work by
+opening a second display with its own event loop, just for the purpose of giving
+some form of progress feedback when people writing long running code in the 
+UI thread.  Mcq believes this will not work on all platforms.
 </p>
 <h3>Slow computer preference</h3>
 <p>
@@ -215,7 +239,7 @@ and increased activity in UI thread.</li>
 </ul>
 </p>
 <p>
-(Updated Oct 29) The new <tt>IWorkspace.run</tt> method now also takes a
+The new <tt>IWorkspace.run</tt> method now also takes a
 &quot;style bit&quot; that can be used to specify that periodic notifications are not
 wanted.  This allows clients to provide a hint to core that it doesn't make sense
 to perform resource change notfications during that operation.  The old <tt>run</tt>
@@ -227,7 +251,7 @@ and the other not, then periodic notifications will occur for the duration of th
 that did not specify <tt>AVOID_UPDATE</tt>.
 </p>
 <p>
-(Updated Oct 29) Another suggestion was to provide partial workspace updates.  
+Another suggestion was to provide partial workspace updates.  
 If a notifying operation runs concurrently with a non-notifying operation, the 
 workspace could broadcast a partial delta reflecting only the changes made by the 
 notifying operation. See the 
@@ -240,6 +264,26 @@ up new breaking changes for listeners.
 Enumerate API breakages and deprecations, and major non-API behaviour changes
 that may impact 2.1-based clients.  Begin drafting of 3.0 porting guide chapters
 for the responsive UI work.
+</p>
+<h3>Miscellaneous</h3>
+<h4>Posting behind current operation</h4>
+<p>
+<img src="../new.gif" width="31" height="14"> Dirk to provide more detail here since the phone connection 
+was breaking up.  The issue is when you want to &quot;post&quot; a chunk of
+code to run after the current operation is completed.  This is currently accomplished
+using asyncExec, but if the operation is run in the UI thread, then the asyncExec
+may be processed before the operation completes due to hacks like
+EventLoopProgressMonitor.  This is possible with operations built on the 3.0 jobs
+API, but not for foreground (non-job) operations.  For jobs, clients can call IJobManager.currentJob
+to find the currently running job, then hook a listener on the job to fire another 
+job/operation when the first job completes.  There were no recommendations for
+how to handle this for clients not using the jobs API.
+</p>
+<h4>Concurrency test harness</h4>
+<p>
+<img src="../new.gif" width="31" height="14"> The core concurrency test harness may have some pieces that can be generalized
+and pushed down into the test.harness project, to help other components in
+writing concurrency tests.
 </p>
 <hr>
 <p>
