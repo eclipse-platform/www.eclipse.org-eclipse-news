@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-  <title>Core Tools</title>
+  <title>Core Tools Readme</title>
 </head>
 
 <body>
@@ -14,18 +14,18 @@
   plugins or just wanting to know what is going on under the covers. Roughly speaking 
   there are three kinds of tools:</p>
 <dl> 
-  <dt>Runtime tools</dt>
+  <dt><b>Runtime tools</b></dt>
   <dd>The runtime tools expose the internal behaviour of the Platform runtime 
     as well as certain aspects of plugins (activation ordering, classes loaded, 
     relation to other plugins, ...) and classes (load order, load nesting, ...). 
     Plugin developers can use this information to ensure that their plugins/classes 
     are be activated/loaded as expected, and that they are not taking more time/space 
     than is warranted.</dd>
-  <dt>Resources tools</dt>
+  <dt><b>Resources tools</b></dt>
   <dd>The resources tools expose the behaviour/performance of installed builders 
     and listeners as well as the structure of the workspace, resources and resource 
     deltas.</dd>
-  <dt>Metadata tools</dt>
+  <dt><b>Metadata tools</b></dt>
   <dd>The metadata tools enable users to investigate the metadata files used to 
     maintain the resource model. Point these tools at a workspace and browse...</dd>
 </dl>
@@ -38,14 +38,15 @@
   boot, runtime and resources plugins. To install:</p>
 <ol>
   <li>To install the Core Tools, get org.eclipse.core.tools.zip and extract all 
-    files into the <b>parent</b> of your &lt;eclipse install&gt; directory (i.e., 
-    the one containing &quot;eclipse&quot;). This will a add the Core Tools feature 
-    as well as supporting plugins and fragments.</li>
+    files into the &lt;eclipse install&gt;/plugins directory. This will a add 
+    the Core Tools plugins and fragments to your install.</li>
   <li>If you are running an Eclipse build from before I20021127 (this includes 
     2.0.*) you will need to get the patched versions of the boot, runtime and 
     resources plugins. Get core-tools-patches.zip and extract all files into your 
     &lt;eclipse install&gt;/plugins directory. This will overwrite boot.jar, runtime.jar 
-    and resources.jar.</li>
+    and resources.jar. Note that if your install has version numbers in the plug-in 
+    directory names, you have to manually copy/extract the patch files into the 
+    corresponding versioned plug-in directory in your install.</li>
 </ol>
 <h4>Running Core Tools</h4>
 <p>After installing the Core Tools, you must enable them. The tools are enabled 
