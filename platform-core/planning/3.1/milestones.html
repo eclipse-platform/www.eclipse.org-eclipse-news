@@ -49,15 +49,15 @@
               compare against the M6 regular drop.</li>
           </ul>
         </li>
-        <li><strong>Content Type</strong>
-<ul>
+        <li><strong>Content Type</strong> 
+          <ul>
             <li>(bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=69640">69640</a>) 
               Finish implementation of nature -&gt; content type association.</li>
             <li>(bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=87447">87447</a>) 
               Project specific content type settings.</li>
           </ul>
         </li>
-        <li><strong>Shipping Manifest Files</strong> 
+        <li><strong>Shipping Manifest Files</strong> (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=83634">83634</a>) 
           <ul>
             <li>Continued from 3.1 M6.</li>
             <li> If a plug-in defines a legacy plug-in manifest rather than a 
@@ -71,44 +71,55 @@
           </ul>
         </li>
         <li><strong>PDE-Build</strong></li>
-			<ul>
-				<li>On plug-in export, the scripts are being executed in the workspace VM and we would like to move this to be in a separate VM. We will work with
-				the Ant team to make this happen. Also need involvment from PDE/UI team.</li>
-				<li>PDE/UI has a model of the target platform and currently PDE/Build makes their own model. We want to
-				investigate sharing of these models.</li>
-				<li>Cross platform export of RCP product - e.g. we would like to be able to export a Linux drop from a Windows machine.</li>
-			</ul>
-		<li><strong>Extension Registry</strong></li>
-			<ul>
-				<li>Investigate performance of non lazy loading of the registry. (e.g. when the registry is always in memory) This might be useful for small applications.</li>
-				<li>Investigate performance of the registry when it is located on a network drive.</li>
-				<li>Compare performance numbers of having the registry always in memory versus having parts flushed out to disk, Explore the idea 
-				of switching lazy on or off depending on the number of plug-ins.</li>
-			</ul>
-		<li><strong>OSGi</strong></li>
-			<ul>
-				<li>Investigate performance of the OSGi state when it is located on a network drive.</li>
-				<li>Investigate automatic closure of JAR files based on time-outs, etc.</li>
-				<li>Investigate buddy class-loading.</li>
-			</ul>
-		<li><strong>Documentation</strong></li>
-			<ul>
-				<li>Write a document describing how to setup eclipse install (in shared install, non local dirive, etc).</li>
-			</ul>
-        <li><strong>Bug Sorting</strong> 
+        <ul>
+          <li>On plug-in export, the scripts are being executed in the workspace 
+            VM and we would like to move this to be in a separate VM. We will 
+            work with the Ant team to make this happen. Also need involvment from 
+            PDE/UI team.</li>
+          <li>PDE/UI has a model of the target platform and currently PDE/Build 
+            makes their own model. We want to investigate sharing of these models.</li>
+          <li>Cross platform export of RCP product - e.g. we would like to be 
+            able to export a Linux drop from a Windows machine.</li>
+        </ul>
+        <li><strong>Extension Registry</strong></li>
+        <ul>
+          <li>(bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=89983">89983</a>) 
+            Investigate performance of non lazy loading of the registry. (e.g. 
+            when the registry is always in memory) This might be useful for small 
+            applications.</li>
+          <li>(bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=89986">89986</a>) 
+            Investigate performance of the registry when it is located on a network 
+            drive.</li>
+          <li>(bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=89984">89984</a>) 
+            Compare performance numbers of having the registry always in memory 
+            versus having parts flushed out to disk, Explore the idea of switching 
+            lazy on or off depending on the number of plug-ins.</li>
+        </ul>
+        <li><strong>OSGi</strong></li>
+        <ul>
+          <li>(bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=89988">89988</a>) 
+            Investigate performance of the OSGi state when it is located on a 
+            network drive.</li>
+          <li>(bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=84066">84066</a>) 
+            Investigate automatic closure of JAR files based on time-outs, etc.</li>
+          <li>Investigate buddy class-loading.</li>
+        </ul>
+        <li><strong>Documentation</strong></li>
+        <ul>
+          <li>Write a document describing how to setup eclipse install (in shared 
+            install, non local dirive, etc).</li>
+          <li>General documentation.</li>
+        </ul>
+        <li><strong>Bug Sorting</strong> - We are getting close to the release 
+          of 3.1 so we need to sort through our bug reports to... 
           <ul>
-            <li>We are getting close to the release of 3.1 so we need to sort 
-              through our bug reports to... 
-              <ul>
-                <li>...make sure we aren't missing important ones.</li>
-                <li>...ensure the milestones are set correctly.</li>
-                <li>...move all enhancements that we are going to defer so they 
-                  don't interfere with new bugs coming in.</li>
-              </ul>
-            </li>
+            <li>...make sure we aren't missing important ones.</li>
+            <li>...ensure the milestones are set correctly.</li>
+            <li>...move all enhancements that we are going to defer so they don't 
+              interfere with new bugs coming in.</li>
           </ul>
         </li>
-	</ul>
+      </ul>
       <p>&nbsp;</p></td>
   </tr>
   <tr>
