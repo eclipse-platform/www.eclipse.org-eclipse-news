@@ -3,149 +3,110 @@
 <head>
    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
    <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
-   <title>Core Component Planning</title>
+   <title>Platform/Core Component Planning</title>
 <link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
 </head>
 <body text="#000000" bgcolor="#FFFFFF">
 &nbsp;
 <table BORDER=0 CELLSPACING=5 CELLPADDING=2 WIDTH="100%" >
   <tr> 
-    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" BGCOLOR="#0080C0"><b><font face="Arial,Helvetica"><font color="#FFFFFF">Core 
+    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" BGCOLOR="#0080C0"><b><font face="Arial,Helvetica"><font color="#FFFFFF">Platform/Core 
       Component Planning</font></font></b></td>
   </tr>
   <tr> 
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
     <td WIDTH="98%">
       <p><b>Current Work</b> </p>
-      <p>Now that the 2.0 release and the 2.0.1 patch have been delivered, we 
-        are focusing on the <a href="http://www.eclipse.org/eclipse/development/eclipse_project_plan_2_1.html">Eclipse 
-        2.1</a> deliverable. Specifically, check out our Milestone plans to see 
-        some of our goals for the next little while.</p>
+      <p>Work will now be focused on Eclipse 3.0. Rather than rolling out version 
+        2.2 which would contain fixes and minor feature requests, it has been 
+        decided that we will take on more challenging problems. Please read <a href="http://www.eclipse.org/eclipse/development/why_eclipse_3_0.html">Why 
+        Eclipse &quot;3.0&quot;?</a> and the <a href="http://www.eclipse.org/eclipse/development/eclipse_project_plan_3_0.html">Eclipse 
+        3.0 Project Plan</a>.</p>
+      <p>Being done concurrently with the 3.0 work are bug fixes for service releases 
+        for Eclipse 2.1. For a list of problems which will be fixed for the Eclipse 
+        2.1.1 release, check out the Bugzilla bug reports by clicking <a href="https://bugs.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=Platform&component=Core&target_milestone=2.1.1&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&namedcmd=core-3.0&newqueryname=&order=Reuse%2Bsame%2Bsort%2Bas%2Blast%2Btime&field0-0-0=noop&type0-0-0=noop&value0-0-0=">here</a>.</p>
       </td>
+  </tr>
+  <tr> 
+    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
+    <td WIDTH="98%"> 
+      <p><b>Major work items</b></p>
+      <p><i><a href="plan_details.html">Concurrency/Background Operations</a></i> 
+        - One of the biggest complaints about Eclipse is that almost every user 
+        action locks the system for the duration of the operation. When you save 
+        a Java file you have to wait for the compiler to finish before you do 
+        anything, when you load a project from CVS you have to wait until it completes 
+        before you can edit code, etc. The limitations of the current model are 
+        increasingly evident in the context of the Rich Client Platform (RCP). 
+      </p>
+      <p><i><a href="plan_details.html">Dynamic Plug-ins</a></i> - The current 
+        Eclipse plug-in activation story is &quot;somewhat less than optimal&quot;. 
+        Plug-ins are automatically activated upon first reference and once a plug-in 
+        is started, it remains in that state for the duration of the Eclipse session. 
+        We would like to migrate to a model which would allow for plug-ins to 
+        be activated and de-activated within the same session. As well, when a 
+        user installs a new plug-in to their configuration, they must restart 
+        Eclipse in order for their changes to take effect. As part of the dynamic 
+        plug-in work, we are also investigating incremental registry resolution 
+        which means that users won't require a restart for new plug-in changes 
+        to take effect.</p>
+      <p></p>
+      <p><i><a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-vcm-home/docs/online/team3.0/resources.html">Team/Resource 
+        Integration</a></i> - There currently exists a few hooks in the core code 
+        which allow Team providers the opportunity to perform operations on resources 
+        before/instead of the core default. We wish to allow for a pluggable mechanism 
+        which provides more control over these operations. Check out the document 
+        link for a good description of this problem on the Platform/Team web page.</p>
+      <p></p>
+      <p><i><a href="plan_details.html">Improve User Experience</a></i> - As a 
+        first-time Eclipse user there are many non-obvious problems that you can 
+        run across and this plan item is being used to collect them all. Some 
+        current problems include (but are not limited to): default location of 
+        the workspace, separation of user settings and plug-in metadata, multiple 
+        workspaces, and translation of messages presented to the user from the 
+        Eclipse executable.</p>
+      <ul>
+      </ul>
+      <p></p>
+      <p><i><a href="plan_details.html">Remove Xerces Dependancy </a></i>- The 
+        Eclipse SDK is shipped with a Xerces implementation which is approximately 
+        3M in size. (source and binaries) This gets interesting as we move towards 
+        supporting a Rich Client Platform (RCP) and have applications which are 
+        interested in using minimal installs of Eclipse and perhaps even running 
+        Eclipse headless. In these cases 3M is a large percentage of the Eclipse 
+        base that they are using. In an effort to reduce the size of the standard 
+        Eclipse components required and to increase performance (speed) and size 
+        (memory), we are investigating removing our dependancy on the Xerces plug-in 
+        and instead including a light-weight, fast XML parser such as one based 
+        on the XMLPull technology.<br>
+      </p>
+      <p><i><a href="plan_details.html">Improve File Encoding Support </a></i>- 
+        Eclipse 2.1 uses a single global file encoding setting for reading and 
+        writing files in the workspace. This is problematic; for example, when 
+        Java source files in the workspace use OS default file encoding while 
+        XML files in the workspace use UTF-8 file encoding. The Platform should 
+        support non-uniform file encodings.</p>
+    </td>
   </tr>
   <tr> 
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
     <td WIDTH="98%">
       <p><b>Milestone Plans</b> </p>
-      <p><a name="Milestone_Planning"></a><em>Milestone 1 (2.1 M1)</em> - September 
-        20, 2002</p>
-      <ul>
-        <li>The rigid structure of projects in Eclipse is a problem with a lot 
-          of users' existing project layouts. See <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6664">bug 
-          6664</a> for more information. For this milestone we would like to have 
-          a proposal ready and posted to this web space for comment by the open 
-          source community. Once posted, comments should be sent to the <a href="http://dev.eclipse.org/mailman/listinfo/platform-core-dev">platform-core-dev@eclipse.org</a> 
-          mailing list. <i>Note: this item has been pushed back to M2 with the 
-          creation of a new team to address the problem. See below for details.</i> 
-        </li>
-        <li>Work towards building tools which will help with crash recovery and 
-          analysis of metadata files on disk.</li>
-        <li>General bug fixing.</li>
-      </ul>
-      <p><em>Milestone 2 (2.1 M2)</em> - October 18, 2002</p>
-      <ul>
-        <li>Progress on the project structure problem has been made. A dynamic 
-          team has been formed and a "Problem Definition" document has been <a href="http://www.eclipse.org/eclipse/development/inflexible-projects-problem.html">posted</a> 
-          to eclipse.org. The goal for M2 is to have the proposal (including solution) 
-          finalized and posted.</li>
-        <li>Continued work on tools and examples. Check the <a href="dev.html">Development 
-          Resources</a> for progress...tools plug-ins will be posted there.</li>
-        <li>General bug fixing and triage work on backlog of bugs in the Inbox.</li>
-      </ul>
-      <p><em>Milestone 3 (2.1 M3)</em> - November 15, 2002</p>
-      <ul>
-        <li>Project Structure - You've seen the links to the <a href="http://www.eclipse.org/eclipse/development/inflexible-projects-problem.html">problem 
-          definition</a> and <a href="http://www.eclipse.org/eclipse/development/towards-more-flexible-projects.html">possible 
-          solutions</a>. A third document with the <a href="http://www.eclipse.org/eclipse/development/flexible-projects-proposal.html">proposed 
-          solution</a> is now posted. The specific Platform/Core required work 
-          for M3 includes: 
-          <ul>
-            <li>new API for creating links to files and folders 
-            <li>javadoc changes to existing API (copy/move/delete) 
-            <li>ammended Natures doc - adding new attribute for veto-power 
-            <li>new API for workspace path variables to be used with linked resources 
-            <li>new Team hook for link veto-power 
-            <li>new API for mapping from a file-system location to workspace resource(s), 
-              and vice versa 
-          </ul>
-        <li>Circular Build Dependancies - A dynamic team to address this problem 
-          has been created. The work required for the Platform/Core team for the 
-          M3 milestone consists of new API for computing the default project build 
-          order and a new algorithm for calculating the build order when there 
-          are cycles involved. (related bugs: <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=25952">25952</a>, 
-          <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=10262">10262</a>) 
-        <li>Features - A dynamic team consisting of Dean, Jeff, Dejan, Christophe, 
-          and DJ has been created to address all the problems that the Release 
-          Engineering team has with features. Once an appropriate solution has 
-          been identified, there will be significant work in the PDE-Build component 
-          (which is owned by Platform/Core) for both the M3 and M4 milestones. 
-        <li>General Bug Fixing. 
-      </ul>
-      <p><em>Milestone 4 (2.1 M4)</em> - December 13, 2002</p>
-      <ul>
-        <li>Project Structures - Finish up work related to flexible project layout. 
-          List includes multi-resource delta notification for over-lapping linked 
-          resources. (related bugs: <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=25993">25993</a>) 
-        <li>Classloader Performance - In M2 we put in a classloader performance 
-          enhancement in which the plug-in classloader used information in a file 
-          to determine whether or not it should look in itself for a particular 
-          class. We want to allow users to put this information in the mark-up 
-          in their plugin.xml files. (related bugs: <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=24667">24667</a> 
-          , <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=26011">26011</a>) 
-        <li>Continued progress on PDE-Build in the space related to the Features 
-          dynamic team. 
-        <li>New feature to allow local history to persist across certain refactoring 
-          actions. (related bug: <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=24787">24787</a>) 
-        <li>General Bug Fixing
-      </ul>
-	  </td>
+      <p><a name="Milestone_Planning"></a><em>Milestone 1 (3.0 M1)</em> - June 
+        6, 2003</p>
+      <p><em>Milestone 2 (3.0 M2)</em> - July 18, 2003</p>
+      <p><em>Milestone 3 (3.0 M3)</em> - August 29, 2003</p>
+      <p><em>Milestone 4 (3.0 M4)</em> - October 10, 2003</p>
+      <p><em>Milestone 5 (3.0 M5)</em> - November 21, 2003</p>
+    </td>
   </tr>
   <tr> 
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
     <td><b>Test Plans</b> 
-	  <blockquote> 
-        <p><b>Testing RC1</b> : When testing, we should specifically focus on 
-          areas which we have changed at the Platform/Core level since the last 
-          release. Some of these include:</p>
-		  
-		  
-        <ul>
-          <li><b>Linked Resources</b> : Users are now able to create first-level 
-            children (both files and folders) of a project and point them to any 
-            location on the file system. This removes the big requirement that 
-            we used to have of projects having to be rooted at a single point 
-            on disk.</li>
-          <li><b>Path Variables</b> : Workbench -> Preferences -> Workbench -> 
-            Path Variables. This preference page allows the user to create path 
-            variables and these then in turn can be used when creating linked 
-            resources. (see above) The path variables are stored in the preference 
-            store which means we can test all the usual suspects such as bogus 
-            values in the file, file corruption, etc etc.</li>
-          <li><b>DBCS</b> : A new core library was released which improved support 
-            for double-byte characters in file and path names. </li>
-          <li><b>Improved Delete Failure</b> : When problems occur during deletion, 
-            the tree that you are deleting should be pruned as best it can and 
-            then the errors are reported to the user.</li>
-          <li><b>Moving History</b> : When moving a resource to a different location 
-            in the workspace tree, the local history is now carried with it to 
-            the destination. </li>
-          <li><b>Circular Dependancies</b> : Improved support has been added for 
-            building workspaces containing projects with circular dependancies.</li>
-          <li><b>Performance</b> : Many improvments have been made in the area 
-            of performance. We need to ensure that (1) we are faster and smaller 
-            than we used to be and (2) people are taking advantage of the benefits 
-            that we offer them. This includes inspecting other teams' code in 
-            the SDK to ensure that they are, for instance, using the resource 
-            proxy visitor when they can.</li>
-        </ul>
-        <p> It's also important that when we test we have all the "bells and whistles" 
-          activated in our development images. Some features (like decorators) 
-          run in a separate thread and it's important that we ensure our code 
-          is thread safe and we don't have any concurrent access or deadlock problems. 
-        </p>
-        <p>
-      </blockquote>
-      </td>
+      <ul>
+        <li>TBD</li>
+      </ul>
+    </td>
   </tr>
 </table>
 
