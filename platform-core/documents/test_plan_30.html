@@ -57,6 +57,7 @@
 </ul>
 <hr>
 
+
 	<h3><a name="launcher"/>Launcher</h3>
 	<h4>No config.ini</h4>
 	<ul>
@@ -205,6 +206,52 @@ Run a Junit test.
 </ul>
 <a href="#top">Back to top</a><br><hr>
 <h3><a name="jobs"/>Runtime - Jobs</h3>
+  <h4>Test concurrent operations in UI thread</h4>
+  <ul>
+    <li>Enable <b>Always run in background</b> preference </li>
+    <li>Start checkout of platform-core module from CVS</li>
+    <li>During checkout, switch to the Java perspective</li>
+    <li>UI may become blocked, but should eventually become responsive</li>
+    <li>Open Path.java in Java editor</li>
+    <li>Switch back to CVS perspective</li>
+    <li>Start checkout of org.eclipse.jdt.ui.tests.* (or other big project)</li>
+    <li>Open Navigator: New files should start appearing</li>
+    <li>Add breakpoint to a method in Path.java: should appear quickly</li>
+    <li>Remove breakpoint: should be responsive</li>
+    <li>Start typing in Path.java: Should not block</li>
+    <li>Save Path.java: Should not block</li>
+    <li>Start typing in Path.java again: Should not block</li>
+    <li>Revert file: Should not block</li>
+  </ul>
+  <h4>Many background tasks</h4>
+  <ul>
+    <li>Start CVS checkout of ten or more different projects</li>
+    <li>Open progress view (double-click in lower right hand corner of workbench window)</li>
+    <li>All checkout tasks should be making progress</li>
+    <li>Canceling the checkouts should respond in a timely manner.</li>
+  </ul>
+  <h4>Nested blocking acquires</h4>
+  <ul>
+    <li>Install the org.eclipse.ui.examples.job plugin</li>
+    <li>Load org.eclipse.ui.examples.job</li>
+    <li>Open the Job Factory view</li>
+    <li>Check "Lock the workspace"</li>
+    <li>Click "Create Jobs"</li>
+    <li>Change quantity to 3 and duration to 10 seconds</li>
+    <li>Click "Touch Workspace"</li>
+    <li>Cancel the Test Job</li>
+    <li>Dialog should close</li>
+    <li>Repeat all above steps except cancel the blocked operation instead of the test job (three times)</li>
+    <li>Dialog should close but test job should continue running</li>
+  </ul>
+  <h4>Shutdown while job is running</h4>
+  <ul>
+    <li>Start a long CVS checkout</li>
+    <li><b>File &gt; Exit</b>.</li>
+    <li>A progress dialog will appear indicating that the operation is waiting.</li>
+    <li>Expand <b>Details</b> area and cancel the CVS checkout</li>
+    <li>Exit should now complete in a timely manner</li>
+  </ul>
   <h4>test1</h4>
   <ul>
     <li>item 1</li>
