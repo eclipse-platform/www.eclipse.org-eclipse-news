@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Non-uniform file encodings in the Eclipse Platform</title>
+  <link rel="stylesheet" href="../default_style.css" type="text/css">
+</head>
+<body text="#000000" bgcolor="#ffffff">
+<h1>Session Test Framework</h1>
+<blockquote>
+<p><b>Summary</b><br>
+    Session tests in Eclipse are tests that require that a new Eclipse session 
+    be launched for every test case run. Thus, they have additional requirements 
+    regarding controling the environment test cases are run (VM, set of plug-ins 
+    available, configuration, instance location, command line parameters) and 
+    how results are communicated back to the test runner. This FAQ-like document describes 
+    how the Platform/Core implemented support for running session tests in the 
+    hopes of encouraging adoption of this framework not only by all the Platform/Core 
+    team members but also by members of other Eclipse teams interested in developing 
+    their own session tests. </p>
+  <p>Last Modified: October 7, 2004</p>
+</blockquote>  
+<ol>
+  <li> 
+    <p><strong>What is a session test?</strong></p>
+    <p>It is a test case that needs to be run isolated in a separate VM instance. 
+      Technical details: The VM running a set of test cases (the <em>controller 
+      VM</em>) will spawn a second instance (the <em>target VM</em>) for each 
+      session test case to be run. The test results are collected (by using a 
+      socket) and presented to the test runner as if the test had run in the same 
+      VM.</p>
+  </li>
+  <li> 
+    <p><strong>Where can I get the framework?</strong></p>
+    <p> Check out the <code>org.eclipse.core.tests.harness</code> project from 
+      dev.eclipse.org. The infrastructure for session tests is in the <code>org.eclipse.core.tests.session</code> 
+      package. It does not hurt mentioning that besides requiring this plug-in, 
+      you should have <code>org.junit</code> as a pre-requisite as well.</p>
+  </li>
+  <li> 
+    <p><strong>What it is the easiest way to transform my regular plug-in tests 
+      into session tests?</strong></p>
+    <p> Change the test suite creation to use <code>org.eclipse.core.tests.session.SessionTestSuite</code> 
+      instead of <code>junit.framework.TestSuite</code>. Like this:</p>
+    <p>Before:</p>
+    <pre>
+public class MyTestCase extends TestCase {
+	...
+	public void test1() {
+		...
+	}
+	...
+	public static Test suite() {
+		return new TestSuite(MyTestCase.class);
+	}
+}
+	  </pre>
+    <p>After:</p>
+    <pre>
+public class MyTestCase extends TestCase {
+	...
+	public void test1() {
+		...
+	}
+	...
+	public static Test suite() {
+		return new SessionTestSuite("org.myplugin.tests", MyTestCase.class);
+	}
+}
+	  </pre>
+    <p>The plug-in id is necessary so the plug-in which the class containing the 
+      test case should be loaded from can be determined. Note also that it is 
+      possible to build an empty suite and then manually add test cases and/or 
+      test suites. When running your tests again, every test case in the suite 
+      (included those in nested test suites) will be run in a separate Eclipse 
+      session.</p>
+  <li><strong>Why do I get a <em>java.lang.IllegalArgumentException: Setup file 
+    '&lt;current dir&gt;/default-setup.xml' not found</em>?</strong></li>
+  <p> You are running your session test suite as a regular <em>JUnit test</em> 
+    instead of as a <em>Plug-in JUnit test</em>. A default setup (in other words, 
+    command line) for launching new Eclipse sessions when running session tests 
+    can be computed when running the test suite as a plug-in test, so no further 
+    configuration is necessary. It basically contains the same parameters as the 
+    ones used to launch the controller instance, with a different instance location 
+    (the -data parameter). When launching the controller instance as a regular 
+    JUnit test suite, the setup for running session tests has to be configured 
+    manually. The framework looks for a <code>default-setup.xml</code> file in 
+    the current directory, but a different file name and location can be specified 
+    by using the <code>setup.file</code> system property. If not running in Eclipse, 
+    and no setup file can be found, the execution fails with this exception.</p>
+  <li> 
+  <p><strong>How do I run UI-oriented tests?</strong> </p>
+    <p>Make sure you also set the application when launching the target instance 
+      to be <code>SessionTestSuite.UI_TEST_APPLICATION</code>:</p>
+    <pre>SessionTestSuite suite = new SessionTestSuite("org.myplugin.tests", MyTestCase.class);
+suite.setApplicationId(SessionTestSuite.UI_TEST_APPLICATION);</pre>
+  </li>
+  <li><strong>How do I run performance session tests?</strong> 
+    <p>Use the <code>PerformanceSessionTestSuite</code> instead.</p>
+  </li>  
+  <li><strong>How do I run session tests that have private instance locations?</strong> 
+    <p>Use the <code>WorkspaceSessionTestSuite</code> instead. Every test suite has its own instance 
+	location (workspace), all test cases are run on separate sessions on the same workspace. After 
+	the last test case is run, that location is deleted.</p>
+  </li>    
+  <li><strong>How do I configure a setup declaratively?</strong> 
+    <p>Look <a href="./default-setup.xml">here</a> for an example of a setup file.</p>
+  </li>
+  <li><strong>How do I configure a setup programmaticaly?</strong> 
+    <p>TBD</p>
+  </li>
+  <li><strong>What if I find problems using the session test framework or would 
+    like to request/propose an enhancement?</strong> 
+    <p>Please open a PR against Platform/Runtime and assign it to <code>rafael_chaves 
+      AT ca.ibm.com</code>.</p>
+  </li>
+</ol>
+</body>
+</html>

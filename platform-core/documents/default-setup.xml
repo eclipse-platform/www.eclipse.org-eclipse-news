@@ -1,0 +1,54 @@
+<setup default="j9, eclipse_31M1">
+	<variant
+		id="j9" 
+		name="J9">
+		<eclipseArg option="vm" value="d:\java\j9sc20040917\jre\bin\java"/>
+		<vmArg option="Xj9"/>
+	</variant>	     
+	
+	<variant
+		id="sun_142_03"	
+		name="Sun JDK 1.4.2_03">
+		<eclipseArg option="vm" value="d:\java\sun jdk 1.4.2_03\jre\bin\java"/>	     
+	</variant>
+	
+	<variant
+		id="remote_debug"	
+		name="Remote Debugging"
+		timeout="0">	
+		<vmArg option="Xdebug"/>
+		<vmArg option="Xnoagent"/>
+		<vmArg option="Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000"/>
+		<property key="java.compiler" value="NONE"/>
+	</variant>
+	
+	<variant
+		id="eclipse_300"
+		name="Eclipse 3.0">		
+		<eclipseArg option="install" value="d:\eclipse\3.0.x\3.0\eclipse"/>
+	</variant>	     	
+	
+	<variant
+		id="eclipse_301" 
+		name="Eclipse 3.0.1">	
+		<eclipseArg option="install" value="d:\eclipse\3.0.x\3.0.1\eclipse"/>
+	</variant>	     	
+
+	<variant
+		id="eclipse_31M1" 
+		name="Eclipse 3.1 M1">
+		<eclipseArg option="install" value="d:\eclipse\3.1.x\m1\eclipse"/>
+	</variant>	     	
+
+	<variant
+		id="basicInstance" 
+		name="Basic Instance">
+		<eclipseArg option="data" value="d:\temp\tests\basic tests"/>		
+	</variant>	     
+	
+	<variant
+		id="performance"
+		name="Performance">	
+		<property key="perf_ctrl" value="dbloc=d:/temp/cloudscape;config=org.eclipse.core.tests.basic;build=base"/>
+	</variant>
+</setup>
