@@ -9,7 +9,7 @@
 <table width="100%">
 <tr><td style="background:#0080C0"><b><span style="color:white">Large-scale development issues</span></b></td></tr>
 </table>
-<font size="-1">Last modified: January 5, 2005</font> 
+<font size="-1">Last modified: January 14, 2005</font> 
 <p>
 One of the major development themes for Eclipse 3.1 is to improve support for 
 "Large-scale development" in Eclipse. This includes improving collaboration for 
@@ -44,7 +44,7 @@ reduce current footprint.
 	in memory about the synchronization and "dirty" state of each resource. Explore
 	reducing the footprint of this data or using lazy caching to only bring this information
 	into memory when needed.
-<li><img src="../../images/glass.gif"  height="10" width="10" border="0">
+<li><img src="../../images/progress.gif" height="5" width="14" border="0">
 	Message bundles. Most plug-ins store translated strings in <tt>ResourceBundle</tt>
 	objects.  These bundles are not space-efficient, and often use lengthy string-based
 	keys for message lookup.  Explore a more efficient representation, integer-based keys,
@@ -119,7 +119,7 @@ would them more powerful as a project interchange (sharing) mechanism.
 </ul>
 </p>
 <h3>4. Support for non-incremental builders</h3>
-<p><img src="../../images/glass.gif"  height="10" width="10" border="0">
+<p><img src="../../images/ok.gif"  height="10" width="10" border="0">
 	The workspace builder infrastructure is designed primarily with efficient
 	incremental compilers in mind.  Auto-build is turned on by default, and this
 	is only realistic for fast builders.  The workspace should have support
