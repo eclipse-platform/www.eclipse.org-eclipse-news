@@ -28,7 +28,7 @@
     on required and recommended changes to Eclipse 2.x plug-in writers to make 
     them run in the Eclipse 3.0 environment. Information on how to use the new 
     runtime is contained in the <a href="howto.html">Users Guide</a>.<br>
-    Last Modified: 0100 December 17, 2003</p>
+    Last Modified: 0100 December 8, 2003</p>
   
 </blockquote>
 
@@ -141,15 +141,6 @@
 <p><b>Action required:</b> Developers currently relying on this non-API relationship 
   will need to rework their code according to their usecase. More information 
   on this is given in the recommended changes section of this document.</p>
-<h3>ILibrary implementation incomplete</h3>
-<p><b>Who is affected:</b> User of <tt>org.eclipse.core.runtime.ILibrary</tt>.</p>
-<p><b>Description:</b> The new runtime maintains the classpath entries in a different 
-  and incompatible form from Eclipse. As a result, the compatibility layer is 
-  unable to correctly model the underlying OSGi structures as ILibrary objects.</p>
-<p><b>Action required:</b> Users of ILibrary should consider accessing the desired 
-  header values (e.g., <tt>Bundle-Classpath</tt>) from the appropriate Bundle 
-  (see <tt>Bundle.getHeaders()</tt>) and using the <tt>ManifestElement</tt> helper 
-  class to interpret the entries.</p>
 <h3>Invalid assumptions regarding the form of URLs</h3>
 <p><b>Who is affected:</b> Plug-ins which make assumptions regarding their installation 
   structure, location and the local file system layout.</p>
@@ -195,7 +186,8 @@
   the org.eclipse.core.runtime.compatibility plug-in (which depends on the runtime 
   plug-in). As such, any references to the Factory-related types cannot be resolved.</p>
 <p><b>Action required:</b> Users of the deleted method can use the same method 
-  on the class <tt>org.eclipse.core.runtime.model.PluginRegistryModel</tt>. </p>
+  on the class <tt>org.eclipse.core.runtime.CompatibilityPlatform</tt>. This requires 
+  only that the reference to <tt>Platform</tt> be changed to <tt>CompatibilityPlatform</tt>.</p>
 <h3>Changes to build scripts</h3>
 <p><b>Who is affected:</b> Developers maintaining scripts (e.g., Ant build.xml 
   files) which define classpaths containing runtime related jars and class directories. 
