@@ -8,7 +8,7 @@
 <body bgcolor="#ffffff" onload=""
         class="bugs-eclipse-org-bugs">
 <h1>Fixed Performance Bugs in Eclipse 3.1</h1>
-<p><b>Updated Tue Mar 15 11:39:30 EST 2005</b><br>
+<p><b>Updated Thursday March 31.</b><br>
 </p>
 <table class="bz_buglist" cellspacing="0" cellpadding="4" width="100%">
   <colgroup>
@@ -31,65 +31,214 @@
     </th>
   </tr>
   <tr class="bz_normal             bz_P3             bz_RESOLVED             bz_FIXED                          bz_odd             "> 
-    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=28018">28018</a> <span style="display: none"></span> 
-    </td>
+    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=84872">84872</a> 
+      <span style="display: none"></span> </td>
+    <td><nobr>JDT</nobr> </td>
+    <td><nobr>Core</nobr> </td>
+    <td>22.5% of memory used</td>
+    <td>Improve string sharing in JavaModelCache </td>
+  </tr>
+  <tr class="bz_normal             bz_P3             bz_RESOLVED             bz_FIXED                          bz_even             "> 
+    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=87762">87762</a> 
+      <span style="display: none"></span> </td>
+    <td><nobr>JDT</nobr> </td>
+    <td><nobr>Core</nobr> </td>
+    <td>&nbsp;</td>
+    <td>[model] suspicious huge amount of IPackageFragmentRoot[] </td>
+  </tr>
+  <tr class="bz_normal             bz_P3             bz_VERIFIED             bz_FIXED                          bz_odd             "> 
+    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=88428">88428</a> 
+      <span style="display: none"></span> </td>
+    <td><nobr>JDT</nobr> </td>
+    <td><nobr>Core</nobr> </td>
+    <td>&nbsp;</td>
+    <td>Class file reader's method info still hold on byte array </td>
+  </tr>
+  <tr class="bz_normal             bz_P3             bz_VERIFIED             bz_FIXED                          bz_even             "> 
+    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=88429">88429</a> 
+      <span style="display: none"></span> </td>
+    <td><nobr>JDT</nobr> </td>
+    <td><nobr>Core</nobr> </td>
+    <td>&nbsp;</td>
+    <td>Redundant information in SourceMethodElementInfo </td>
+  </tr>
+  <tr class="bz_normal             bz_P3             bz_VERIFIED             bz_FIXED                          bz_odd             "> 
+    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=89088">89088</a> 
+      <span style="display: none"></span> </td>
+    <td><nobr>JDT</nobr> </td>
+    <td><nobr>Core</nobr> </td>
+    <td>Tokenizing 47% faster. Building 2% faster overall.</td>
+    <td>[performance] Scanner is sending 2 messages per identifie... </td>
+  </tr>
+  <tr class="bz_normal             bz_P3             bz_VERIFIED             bz_FIXED                          bz_even             "> 
+    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=89090">89090</a> 
+      <span style="display: none"></span> </td>
+    <td><nobr>JDT</nobr> </td>
+    <td><nobr>Core</nobr> </td>
+    <td>See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=84872">84872</a></td>
+    <td>Redundant information in SourceFieldElementInfo </td>
+  </tr>
+  <tr class="bz_normal             bz_P3             bz_VERIFIED             bz_FIXED                          bz_odd             "> 
+    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=89092">89092</a> 
+      <span style="display: none"></span> </td>
+    <td><nobr>JDT</nobr> </td>
+    <td><nobr>Core</nobr> </td>
+    <td>See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=84872">84872</a></td>
+    <td>Redundant information in ImportDeclarationElementInfo </td>
+  </tr>
+  <tr class="bz_normal             bz_P3             bz_VERIFIED             bz_FIXED                          bz_even             "> 
+    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=89110">89110</a> 
+      <span style="display: none"></span> </td>
+    <td><nobr>JDT</nobr> </td>
+    <td><nobr>Core</nobr> </td>
+    <td> See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=84872">84872</a></td>
+    <td>Redundant information in SourceTypeElementInfo </td>
+  </tr>
+  <tr class="bz_normal             bz_P3             bz_RESOLVED             bz_FIXED                          bz_odd             "> 
+    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=28018">28018</a> 
+      <span style="display: none"></span> </td>
     <td><nobr>JDT</nobr> </td>
     <td><nobr>Text</nobr> </td>
     <td>300K of source</td>
     <td>[startup] CompilationUnitEditor activates compare plugin ... </td>
   </tr>
-  <tr class="bz_normal             bz_P1             bz_VERIFIED             bz_FIXED                          bz_odd             "> 
-    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=82802">82802</a> <span style="display: none"></span> 
-    </td>
-    <td><nobr>Platform</nobr> </td>
-    <td><nobr>UI</nobr> </td>
-    <td>570 Strings</td>
-    <td>[Commands] [Contexts] [Contributions] [KeyBindings] perfo... </td>
-  </tr>
-  <tr class="bz_normal             bz_P2             bz_VERIFIED             bz_FIXED                          bz_even             "> 
-    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=82854">82854</a> <span style="display: none"></span> 
-    </td>
-    <td><nobr>Platform</nobr> </td>
-    <td><nobr>UI</nobr> </td>
-    <td>2511 Hashmaps</td>
-    <td>[KeyBindings] performance: Large footprint on key classes </td>
-  </tr>
-  <tr class="bz_normal             bz_P2             bz_RESOLVED             bz_FIXED                          bz_odd             "> 
-    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=87324">87324</a> <span style="display: none"></span> 
-    </td>
-    <td><nobr>Platform</nobr> </td>
-    <td><nobr>UI</nobr> </td>
-    <td>300K of Strings</td>
-    <td>Should convert all message classes to NLS </td>
-  </tr>
   <tr class="bz_normal             bz_P2             bz_RESOLVED             bz_FIXED                          bz_even             "> 
-    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=87385">87385</a> <span style="display: none"></span> 
-    </td>
+    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=87385">87385</a> 
+      <span style="display: none"></span> </td>
     <td><nobr>Platform</nobr> </td>
     <td><nobr>Help</nobr> </td>
     <td>&nbsp;</td>
     <td>Should cache Collators for ViewerSorters </td>
   </tr>
-  <tr class="bz_normal             bz_P2             bz_RESOLVED             bz_FIXED                          bz_odd             "> 
-    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=87826">87826</a> <span style="display: none"></span> 
-    </td>
+  <tr class="bz_normal             bz_P3             bz_RESOLVED             bz_FIXED                          bz_odd             "> 
+    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=88813">88813</a> 
+      <span style="display: none"></span> </td>
+    <td><nobr>Platform</nobr> </td>
+    <td><nobr>Resource</nobr> </td>
+    <td>&nbsp;</td>
+    <td>Lazy initialize history store </td>
+  </tr>
+  <tr class="bz_normal             bz_P3             bz_RESOLVED             bz_FIXED                          bz_even             "> 
+    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=89196">89196</a> 
+      <span style="display: none"></span> </td>
+    <td><nobr>Platform</nobr> </td>
+    <td><nobr>Resource</nobr> </td>
+    <td>Rebuild 2-3% faster</td>
+    <td>Writing class files spends most time in #checkDoesNotExist </td>
+  </tr>
+  <tr class="bz_normal             bz_P3             bz_RESOLVED             bz_FIXED                          bz_even             "> 
+    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=85577">85577</a> 
+      <span style="display: none"></span> </td>
+    <td><nobr>Platform</nobr> </td>
+    <td><nobr>Runtime</nobr> </td>
+    <td>&nbsp;</td>
+    <td>Many duplicate strings from bundle manifests </td>
+  </tr>
+  <tr class="bz_normal             bz_P2             bz_RESOLVED             bz_FIXED                          bz_even             "> 
+    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=61899">61899</a> 
+      <span style="display: none"></span> </td>
+    <td><nobr>Platform</nobr> </td>
+    <td><nobr>UI</nobr> </td>
+    <td>&nbsp;</td>
+    <td>[Commands] performance: Investigate start-up performance ... </td>
+  </tr>
+  <tr class="bz_normal             bz_P2             bz_VERIFIED             bz_FIXED                          bz_odd             "> 
+    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=70856">70856</a> 
+      <span style="display: none"></span> </td>
+    <td><nobr>Platform</nobr> </td>
+    <td><nobr>UI</nobr> </td>
+    <td>&nbsp;</td>
+    <td>[Viewers] ComboViewer internalRefresh is slow </td>
+  </tr>
+  <tr class="bz_enhancement             bz_P3             bz_RESOLVED             bz_FIXED                          bz_even             "> 
+    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=74263">74263</a> 
+      <span style="display: none"></span> </td>
+    <td><nobr>Platform</nobr> </td>
+    <td><nobr>UI</nobr> </td>
+    <td>&nbsp;</td>
+    <td>[EditorMgmt] Allow customized matching of editor inputs </td>
+  </tr>
+  <tr class="bz_normal             bz_P3             bz_RESOLVED             bz_WORKSFORME                          bz_odd             "> 
+    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=78007">78007</a> 
+      <span style="display: none"></span> </td>
+    <td><nobr>Platform</nobr> </td>
+    <td><nobr>UI</nobr> </td>
+    <td>Removed 2 Leaked objects per invocation</td>
+    <td>[Commands] [Dialogs] Leak from WorkbenchContextSupport </td>
+  </tr>
+  <tr class="bz_normal             bz_P1             bz_VERIFIED             bz_FIXED                          bz_even             "> 
+    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=82802">82802</a> 
+      <span style="display: none"></span> </td>
+    <td><nobr>Platform</nobr> </td>
+    <td><nobr>UI</nobr> </td>
+    <td>570 Strings</td>
+    <td>[Commands] [Contexts] [Contributions] [KeyBindings] perfo... </td>
+  </tr>
+  <tr class="bz_normal             bz_P2             bz_VERIFIED             bz_FIXED                          bz_odd             "> 
+    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=82854">82854</a> 
+      <span style="display: none"></span> </td>
+    <td><nobr>Platform</nobr> </td>
+    <td><nobr>UI</nobr> </td>
+    <td>2511 Hashmaps</td>
+    <td>[KeyBindings] performance: Large footprint on key classes </td>
+  </tr>
+  <tr class="bz_major             bz_P2             bz_VERIFIED             bz_FIXED                          bz_even             "> 
+    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=84279">84279</a> 
+      <span style="display: none"></span> </td>
+    <td><nobr>Platform</nobr> </td>
+    <td><nobr>UI</nobr> </td>
+    <td>See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=78007">78007</a></td>
+    <td>[KeyBindings] assist: Leaks Shell and EnabledSubmissions </td>
+  </tr>
+  <tr class="bz_major             bz_P2             bz_VERIFIED             bz_FIXED                          bz_even             "> 
+    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=86610">86610</a> 
+      <span style="display: none"></span> </td>
+    <td><nobr>Platform</nobr> </td>
+    <td><nobr>UI</nobr> </td>
+    <td>Removed 4 Threads</td>
+    <td>Lots of Worker threads (around 100) </td>
+  </tr>
+  <tr class="bz_normal             bz_P2             bz_VERIFIED             bz_FIXED                          bz_odd             "> 
+    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=87324">87324</a> 
+      <span style="display: none"></span> </td>
+    <td><nobr>Platform</nobr> </td>
+    <td><nobr>UI</nobr> </td>
+    <td>300K of Strings</td>
+    <td>Should convert all message classes to NLS </td>
+  </tr>
+  <tr class="bz_normal             bz_P2             bz_VERIFIED             bz_FIXED                          bz_odd             "> 
+    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=87826">87826</a> 
+      <span style="display: none"></span> </td>
     <td><nobr>Platform</nobr> </td>
     <td><nobr>UI</nobr> </td>
     <td>254 Strings</td>
     <td>Need to improve image loading in Workbench </td>
   </tr>
   <tr class="bz_major             bz_P2             bz_VERIFIED             bz_FIXED                          bz_even             "> 
-    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=87856">87856</a> <span style="display: none"></span> 
-    </td>
+    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=87856">87856</a> 
+      <span style="display: none"></span> </td>
     <td><nobr>Platform</nobr> </td>
     <td><nobr>UI</nobr> </td>
     <td>&nbsp;</td>
     <td>[Commands] Last closed editor leaked due to reference by ... </td>
   </tr>
+  <tr class="bz_normal             bz_P2             bz_VERIFIED             bz_FIXED                          bz_even             "> 
+    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=88191">88191</a> 
+      <span style="display: none"></span> </td>
+    <td><nobr>Platform</nobr> </td>
+    <td><nobr>UI</nobr> </td>
+    <td>Removed a shell</td>
+    <td>[Preferences] Temporary shell created in PreferenceConverter </td>
+  </tr>
+  <tr class="bz_normal             bz_P3             bz_RESOLVED             bz_FIXED                          bz_even             "> 
+    <td class="first-child"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=88733">88733</a> 
+      <span style="display: none"></span> </td>
+    <td><nobr>Platform</nobr> </td>
+    <td><nobr>UI</nobr> </td>
+    <td>Reduced property sources from n to 1</td>
+    <td>[PropertiesView] ResourcePropertySource and FilePropertyS... </td>
+  </tr>
 </table>
-
-
-
 
 <br>
 
