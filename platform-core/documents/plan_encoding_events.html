@@ -5,7 +5,7 @@
 </head>
 <body text="#000000" bgcolor="#ffffff">
 <h1>Resource change events for encoding changes</h1>
-<p><font size="-1">Last modified: July 21st, 2004</font> </p>
+<p><font size="-1">Last modified: July 28th, 2004</font> </p>
 <p>This document is a place where to gather the requirements and plan a solution 
   for bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=59899">59899</a></p>
 <h3>Things that affect the encoding of files</h3>
@@ -196,5 +196,72 @@
     </em>
   </li>
 </ol>
+
+<hr>
+<h3>Notes from discussions on July 27th</h3>
+
+<h4>Content Type (Runtime)</h4>
+<ul>
+  <li>new API for notification</li>
+  <li>listener pattern</li>
+  <li>when do notifications happen?</li>
+  <li>no major technical difficulties</li>
+  </ul>
+  
+<h4>File Encoding (Resources)</h4>
+
+<p></p>
+1). Catch and wrap/translate runtime events
+<ul>
+  <li>catch events related to changes in the content type registry</li>
+  <li>potential for VERY long operations</li>
+  <li>walking the resource tree looking for matches based on file extension, etc</li>
+  </ul>
+  
+<p></p>
+2). React to preference changes
+<ul>
+  <li>changes are made via the preference API and through the resource API (#setContents 
+  and #refreshLocal)</li>
+  <li>we store the following values in prefs:</li>
+  <ol>
+  <li>workspace encoding (instance prefs)</li>
+  <li>non-default content types (instance prefs)</li>
+  <li>project+children encodings (project prefs)</li>
+  </ol>
+  <li>ignore preference change events</li>
+  <li>problem for #3 is that we need to generate a delta based on POST_CHANGE notification 
+  (workspace tree is locked)</li>
+  <li>project description file already has special code in #setContents and #refreshLocal 
+  (#updateProjectDescription is called and this method determines whether or not 
+  we are dealing with the project description file and if so then what action 
+  to take)</li>
+  <li>investigate adding a #updateProjectSettings method which does the same type 
+  of thing for project settings files</li>
+  </ul>
+
+<p></p>
+3). Implement new APIs
+<ul>
+  <li>follow the begin/end operation template</li>
+  <li>modify the ResourceInfos so they generate a delta</li>
+  <li>do we have deltas for the workspace root?</li>
+  <li>DeltaDataTree short-circuit returns in its compare</li>
+  <li>if deltas are deep, we might not care for case of root (except for consistency) 
+  - actually, although we spec'd more or less that we would do that, I don't actually 
+  think we should propagate change events when the default encoding for containers 
+  (root, projects, folders) change - only files. The specs can be reworded to 
+  have this meaning. Although it is not the main motivation, it makes this problem 
+  irrelevant.</li>
+</ul>
+
+<p></p>
+4). Constuct the delta
+<ul>
+  <li>do we need to hold onto an extra int/log in ResourceInfo as a timestamp/generation 
+  count for the encoding?</li>
+  <li>might be able to use bytes from the long we already have</li>
+  <li>change the ResourceComparator to set the appropriate flags</li>
+</ul>
 </body>
 </html>
