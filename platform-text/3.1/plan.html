@@ -763,50 +763,80 @@
 
   <tr> 
     <td WIDTH="100%"> 
-      <h3><a name="Milestone_Planning"></a>Milestone M2 </h3>
-      <h4>Commitments</h4>
+      <h3><a name="Milestone_Planning"></a>Milestone M3 Proto Plan</h3>
+      <h4>Committed items</h4>
       <ul>
-        <li> finish 3.1 plan 
+        <li>performance 
           <ul>
-            <li>work on resolving cross team issues</li>
+            <li> continue performance tests 
+              <ul>
+                <li>reflect about scope and applicability of test results (annotate 
+                  test cases accordingly)</li>
+                <li>complete performance tests for the published <a href="performance_scenarios.html">set 
+                  of scenarios</a></li>
+              </ul>
+            </li>
+            <li> improve performance 
+              <ul>
+                <li>e.g., new line at end of commented StyledText.java</li>
+              </ul>
+            </li>
           </ul>
         </li>
-        <li>PR triage 
+        <li>continue with file buffer issues as outlined in the 3.1 plan 
           <ul>
-            <li> PR that we definitively will not tackle for 3.1 will be resolved 
-              as Later</li>
-            <li>effectively communicate PR team guide lines to the community</li>
+            <li>adapt existing code to document rewrite sessions 
+              <ul>
+                <li>improve formatting performance</li>
+              </ul>
+            </li>
+            <li>simplify temporal suspension of document partitioners for performance 
+              reasons 
+              <ul>
+                <li>investigate lazy document partitioners</li>
+              </ul>
+            </li>
           </ul>
         </li>
-        <li>finish 3.0.1</li>
-        <li> bug fixing 
+        <li>continue with encoding issues listed in the 3.1 plan 
           <ul>
-            <li>solve PRs that have been postponed between 3.0 RC1 - 3.0 GM</li>
+            <li>integrate the 'change encoding' action with the status editor 
+              shown in case of encoding errors</li>
+            <li>re-establish encoding support for external files</li>
           </ul>
         </li>
-        <li> continue performance tests 
+        <li>work with the Web Tools Platform project in order to improve overall 
+          integration with Platform Text and the platform in general</li>
+        <li>Java editor 
           <ul>
-            <li>grow number of available tests</li>
-            <li>investigate into interactive tests</li>
-            <li>collaborate with SWT to solve the issues with simulated user interaction</li>
-            <li>reflect about scope and applicability of test results (annotate 
-              test cases accordingly)</li>
-            <li>mature testing framework</li>
+            <li>implement &quot;Show implementers in file&quot; search</li>
+            <li>revisit out-of-the-box colors and styles in the Java editor</li>
+            <li>enable semantic syntax highlight per default</li>
           </ul>
         </li>
-        <li> improve performance
-<ul>
-            <li>e.g., new line at end of commented StyledText.java</li>
+        <li>move Javadoc formatting to JDT Core</li>
+        <li>start work on improved properties file editor</li>
+        <li>cross team issues 
+          <ul>
+            <li>contribute to the action contribution rework dynamic team</li>
+            <li>contribute to the preferences rework dynamic team</li>
           </ul>
         </li>
-        <li> increase correctness test coverage</li>
-        <li> provide J2SE 5 editor support</li>
+        <li>PR triage </li>
+        <ul>
+          <li> PR that we definitively will not tackle for 3.1 will be resolved 
+            as LATER</li>
+          <li>effectively communicate the guide lines the team uses to the community</li>
+        </ul>
+      </ul>
+      <h4>Permanent items</h4>
+      <ul>
+        <li>bug fixing</li>
+        <li>increase correctness test coverag</li>
       </ul>
       <h4>Proposed items</h4>
       <ul>
-        <li>support @link in hovers</li>
-        <li>start with file buffer issues as outlined in the overall plan</li>
-        <li>start solving encoding issues listed in the plan</li>
+        <li>investigate lazy loading of document setup participants</li>
       </ul>
       <h3>Previous milestones</h3>
       <p>Previous 3.1 milestones can be reviewed <a href="previous_plans.html">here</a>.</p>
