@@ -759,14 +759,14 @@
 
   <tr> 
     <td WIDTH="100%"> 
-      <h3><a name="Milestone_Planning"></a><i>Draft</i> Milestone M6 Plan</h3>
+      <h3><a name="Milestone_Planning"></a>Milestone M6 Plan</h3>
       <h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Top five items</h4>
       <ul>
 		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> continue with J2SE 5.0 support (<a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/r3_1/j2se50/Status.html">JDT UI's overall status</a>)</li>
         <li>progress in consolidating the platform</li>
         <li>provide NLS tooling for new Platform Core's new message bundle approach</li>
-		<li>add all features that need new API (M6 is API freeze)</li>
-		<li>t.b.d.</li>
+		<li>finalize existing 3.1 APIs (M6 is API freeze)</li>
+		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> performance</li>
 
       </ul>
       
@@ -775,8 +775,8 @@
 <li>
 	<h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> Cross-team issues</h5>
 	<ul>
-		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> resolve performance test problems</li>
-        <li>release undo manager code</li>
+		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> resolve missing performance test fingerprints problem</li>
+        <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> adopt global operation history</li>
 		<li>help push down formatter to JDT Core</li>
 		<li>apply mixed indent patch for fomatter together with JDT Core</li>
 		<li>(provide a compatibility layer for commands moved to LTK UI plug-in)<br>
@@ -810,7 +810,7 @@
 </li><li>
 	<h5>Platform consolidation</h5>
 	<ul>
-		<li>push annotation types and annotation access down</li>
+		<li>push down annotation navigation</li>
 		<li>push down annotation hovers</li>
 		<li>adopt and push down Quick Assist and Quick Fix infrastructure</li>
 		<li>offer spelling checking in Text editor</li>
@@ -845,9 +845,9 @@
 </li><li>
 	<h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> R3.0.2 related work items</h5>
 	<ul>
-		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> testing</li>
-		<li>bug verification</li>
-		<li>ship 3.0.2</li>
+		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> testing</li>
+		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> bug verification</li>
+		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> ship 3.0.2</li>
 	</ul>
 </li></ul>
 
@@ -860,17 +860,24 @@
 	
       <h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Proposed items</h4>
 		<ul>
+			<li>add UI for Word Completion similar to code assist</li>
 			<li>add new <code>org.eclipse.ltk.ui</code> plug-in to release<br>
 			<b>Note:</b> This item depends on the above mentioned cross team-issue</li>
-			<li>(Provide an example RCP text editor application with the following features:)<br>
-			<ul>
-				<li>open an external file</li>
-				<li>open an untitled (new & empty) text file</li>
-				<li>save</li>
-				<li>spell checking</li>
-				<li>quick fix to fix spelling problems</li>
-			</ul>
-			<b>Note:</b> it will require <code>org.eclipse.core.resources</code> plug-in
+			<li>
+				<h5>(RCP)</h5>
+				<ul>
+					<li>add support for annotation presentation and navigation</li>
+					<li>investigate declaring <code>org.eclipse.resources</code> optional for <code>org.eclipse.core.filebuffers</code></li>
+					<li>provide an example RCP text editor application with the following features:<br>
+					<ul>
+						<li>open an external file</li>
+						<li>open an untitled (new & empty) text file</li>
+						<li>save</li>
+						<li>spell checking</li>
+						<li>quick fix to fix spelling problems</li>
+					</ul>
+					</li>
+				</ul>
 			</li>
 		</ul>
 
