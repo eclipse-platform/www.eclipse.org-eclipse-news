@@ -7,7 +7,7 @@
 <body text="#000000" bgcolor="#FFFFFF">
  
 <h1>Remaining Eclipse 3.0 responsiveness issues</h1>
-<font size="-1">Last modified: October 24, 2003</font> 
+<font size="-1">Last modified: October 29, 2003</font> 
 <p>
 This document outlines the remaining UI responsiveness issues at the start of the
 3.0 M5 cycle.  A dynamic team has been set up with representatives from Platform 
@@ -107,7 +107,7 @@ Examples:
 <h4>3. Inadequate indication of background activity</h4>
 <p>
 The current indication of background activity is weak.  It is important that the user
-is aware when background operations are going on.  If they know that *something*
+is aware when background operations are going on.  If they know that <b>something</b>
 is happening, they are more likely to tolerate stale information, busy views, pauses,
 etc.  Most applications use an animated 32x32 icon in the upper right hand corner of
 the window.  Eclipse currently uses a 16x16 icon in the lower left corner, due to layout
@@ -116,7 +116,7 @@ on the responsive UI have been in a state where they did not notice that backgro
 activity was happening, and were frustrated by stale information as a result.
 </p>
 <p>
-Suggestion from discussions this week: the "3.0 look" group should look into this.
+Suggestion from discussions this week: the &quot;3.0 look&quot; group should look into this.
 An indicator that &quot;breaks out&quot; of the workbench window using the new
 SWT non-rectangular shell support might give enough feedback (in addition to looking
 slick).
@@ -132,21 +132,22 @@ any operation that may be blocked by a very long running activity must be run
 outside the UI thread. This includes all operations that modify resources and markers.
 </p>
 <p>
-Update from discussion this week: core team is investigating the possibility of 
-supporting IMarker additions, changes, and removals even when the necessary
-locks are not available.  If this pans out, it might lead to a compromise development
-guideline: marker changes can happen in the UI thread, but all other IResource changes 
-should happen in a background thread.  
+(Updated Oct 29) As of I20031029, marker changes no longer require any scheduling rule.
+This means there is nothing that will block marker changes for extended periods
+due to conflicts with ongoing background activity. The remaining problem is that almost
+all marker changes are wrapped within an <tt>IWorkspaceRunnable</tt>, which for backwards
+compatibility reasons must lock the entire workspace.  A new <tt>IWorkspace.run</tt> method
+is now available that takes a resource scheduling rule.  This method is used for finer-grained
+locking of resources during the invocation of an <tt>IWorkspaceRunnable</tt>.  
+A 3.0 porting guide section will be needed to describe why clients should update their
+calls to <tt>IWorkspace.run</tt> to use the method that supports finer-grained locking.
+UI clients will need to do a sweep to begin using this method where applicable.
 </p>
 <p>
-The reason why UI operations are blocking on background activity is that use
-of IWorkspace.run is wide-spread.  Our backwards compatibility story is that this
-method attempts to lock the entire workspace.  Thus, it will block whenever
-<b>any</b> background activity is going on that is modifying or locking resources.
-The solution is to do a sweep of UI code to change to the new run method that takes
-a scheduling rule as parameter.  This requires education of other committers about
-how to use resource scheduling rules, and adding UI API that exposes scheduling
-rules in appropriate places (IProgressService, WorkspaceModifyOperation).
+Since marker changes are now less likely to block, it is ok for them to run in the
+UI thread.  However, it is still the case that all resource (file, folder) changes should
+be moved into a background thread using the new UI progress service.  This will
+allow users to cancel where the change is not compatible with background activity.
 </p>
 <p>
 We also discussed the possibility of hacking in support for cancelation even when
@@ -191,8 +192,18 @@ IWorkspaceRunnable.</li>
 and increased activity in UI thread.</li>
 <li>Flashy user interface</li>
 </ul>
-We need a compromise resource change notification story that balances these needs with
-the disadvantages of periodic notifications.
+</p>
+<p>
+(Updated Oct 29) The new <tt>IWorkspace.run</tt> method now also takes a
+&quot;style bit&quot; that can be used to specify that periodic notifications are not
+wanted.  This allows clients to provide a hint to core that it doesn't make sense
+to perform resource change notfications during that operation.  The old <tt>run</tt>
+method forwards to the new method and allows specifies the <tt>AVOID_UPDATE</tt>
+flag.  So, clients calling the old API will get old style batching for free.  This flag is phrased
+as a hint because notifications are sometimes required when multiple operations run
+concurrently.  I.e, if two threads are modifying the workspace, one using <tt>AVOID_UPDATE</tt>
+and the other not, then periodic notifications will occur for the duration of the operation
+that did not specify <tt>AVOID_UPDATE</tt>.
 </p>
 <h3>Porting guide</h3>
 <p>
@@ -200,7 +211,6 @@ Enumerate API breakages and deprecations, and major non-API behaviour changes
 that may impact 2.1-based clients.  Begin drafting of 3.0 porting guide chapters
 for the responsive UI work.
 </p>
-
 <hr>
 <p>
 Go <a href="../plan_concurrency.html">back to concurrency home</a>.
