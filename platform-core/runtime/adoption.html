@@ -34,7 +34,7 @@
     However, the new runtime offers significant new <i>experimental</i> function. 
     It is this function which is detailed here. </p>
   <p><b> By Jeff McAffer, IBM OTI Labs</b><br>
-    <font size="-1">January 27, 2004</font></p>
+    <font size="-1">February 24, 2004</font></p>
 </blockquote>
 <hr width="100%">
 
@@ -398,7 +398,7 @@ for people.
   </tr>
   <tr> 
     <td>&lt;plugin id=&gt;</td>
-    <td>Bundle-GlobalName</td>
+    <td>Bundle-SymbolicName</td>
   </tr>
   <tr> 
     <td>&lt;plugin version=&gt;</td>
@@ -415,6 +415,14 @@ for people.
   <tr> 
     <td>&lt;plugin class=&gt;</td>
     <td>Bundle-Activator</td>
+  </tr>
+  <tr>
+    <td>&lt;fragment plugin-id=&gt;</td>
+    <td>Fragment-Host</td>
+  </tr>
+  <tr>
+    <td>&lt;fragment plugin-version=&gt;</td>
+    <td>Fragment-Host: &lt;id&gt;; bundle-version=</td>
   </tr>
   <tr> 
     <td>&lt;requires&gt;, &lt;import&gt;</td>
