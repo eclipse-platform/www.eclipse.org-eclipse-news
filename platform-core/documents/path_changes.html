@@ -18,7 +18,7 @@ valid files from being added to the Eclipse workspace. This document
 describes the current set of restrictions in Eclipse 3.0, and proposes changes to
 lift these restrictions.
 <p>
-<font size="-1">Last modified: September 22, 2004</font> 
+<font size="-1">Last modified: September 27, 2004</font> 
 </blockquote>
 <p>
 <h3>Background</h3>
@@ -136,14 +136,8 @@ If for some reason a UNC path had a device, it would preceed the slashes:
 <li>"C://Server/Volume" becomes "C:////Server/Volume"</li>
 </ul>
 <p>
-This platform-neutral encoding has a number of benefits. In particular, it is
-fully backwards compatible with the encoding produced by <tt>IPath.toString</tt>
-in the 3.0 release. If a plug-in in Eclipse 3.0 stored all possible paths in a file
-using the <tt>toString</tt> method, all of those strings would be readable
-by a plug-in in Eclipse 3.1. The reverse compatibility is of course not supported
-for paths created in Eclipse 3.1 that contain '\' or ':' characters in file or directory names.
-<p>
-In addition, if this platform-neutral encoding is
+This platform-neutral encoding unambiguously encodes all possible paths on
+both Windows and Unix platforms.  In addition, if this platform-neutral encoding is
 passed to <tt>java.io.File</tt> on either Unix or Windows, it will be handled
 correctly.  The Windows implementation of the <tt>java.io.File</tt> constructor
 accepts front slashes as a path separator, and all plaforms collapse and ignore duplicate slashes.
@@ -167,11 +161,55 @@ further impacting the corner cases.
 </p>
 <h3>API Details</h3>
 <p>
-
+The following existing methods on <tt>IPath</tt> and <tt>Path</tt> would be affected:
+<ul>
+<li>isValidPath. This method is no longer needed. All <tt>String</tt> instances
+can now be interpreted as valid paths. In Eclipse 3.0 this method only enforces the
+restriction that segments cannot contain ':' and cannot begin or end in whitespace.  
+This method will be deprecated Eclipse 3.1, and its implementation left
+unchanged.</li>
+<li>isValidSegment. Since the only real restriction now is that segments cannot
+contain the '/' character, this method is also no longer needed. This method was
+previously only useful for clients wanting to call <tt>IPath.append(String)</tt>
+without the possibility of error.  This <tt>append</tt> method has always handled
+strings containing '/' by appending multiple segments to the receiver's path.
+This method will be deprecated Eclipse 3.1, and its implementation left
+unchanged.</li>
+<li>toString. The implementation of this method will be changed to the new format
+that uses the double front slash as the device separator.
+<li>Path constructors (<tt>Path(String)</tt> and <tt>Path(String,String)</tt>).
+These constructors are the root of the existing problems, since they are designed
+to accept both platform-specific paths, and platform-neutral paths produced by
+a previous call to <tt>IPath.toString</tt>.
+This method will be deprecated Eclipse 3.1, and its implementation left
+unchanged to avoid unnecessary breakage of existing callers.</li>
+</ul>
+New methods for Eclipse 3.1:
+<ul>
+<li><tt>Path.fromString</tt>. A factory method for producing an <tt>IPath</tt>
+given a platform-neutral encoding of a string. This is the inverse of the
+<tt>IPath.toString</tt> method.</li>
+<li><tt>Path.fromOSString</tt>. A factory method for producing an <tt>IPath</tt>
+given a platform-specific encoding of a string. This is the inverse of the
+<tt>IPath.toOSString</tt> method.</li>
+</ul>
 </p>
 <h3>Impact</h3>
 <p>
-
+All callers of the existing <tt>Path</tt> constructors will need to migrate to one
+of the two path factory methods, depending on the origin of the path string being
+used.  All clients who store absolute <tt>IPath</tt> objects as platform-neutral 
+strings in a serialized form (as produced by <tt>IPath.toString</tt> in Eclipse 3.0), 
+and require cross-platform interoperability, will need to migrate to the new 
+platform-neutral string representation of <tt>IPath</tt> as produced by the 
+revised <tt>toString</tt> implementation. Clients not requiring cross-platform
+compatibility can use the new <tt>Path.fromOSString</tt> method to parse
+previously stored strings. Note that this does not generally happen in practice. 
+I.e., absolute paths are almost never compatible across platforms due to the presence
+of the Windows device qualifier. Most serialized 
+paths that require cross-platform interoperability generally store paths that are 
+relative to a variable that expands to a platform-specific prefix.  The encoding of 
+relative paths with no device is unchanged from Eclipse 3.0.
 </p>
 <h3>Bug reference</h3>
 <p>
