@@ -7,7 +7,53 @@
 <link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
 </head>
 <body text="#000000" bgcolor="#FFFFFF">
-
+<body bgcolor="#FFFFFF" text="#000000">
+<h1><a name="top"></a>3.0 Core Test Plan</h1>
+<p>Testing will cover the functional areas in the following list on these platforms/VMs</p>
+<table border="1" width="50%">
+  <tr> 
+    <td>&nbsp;</td>
+    <td>JDK 1.4.2</td>
+    <td>SC1.4.1</td>
+  </tr>
+  <tr> 
+    <td>Windows 2000</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td>Windows XP</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td>Mac OSX</td>
+    <td>&nbsp;</td>
+    <td>N/A</td>
+  </tr>
+  <tr> 
+    <td>Linux</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<ul>
+  <li><a href="#launcher">Launcher</a></li>
+  <li><a href="#osgi">OSGi</a></li>
+  <li><a href="#runtime-equinox">Runtime - Equinox</a></li>
+  <li><a href="#runtime-jobs">Runtime - Jobs</a></li>
+  <li><a href="#runtime-preferences">Runtime - Preferences</a></li>
+  <li><a href="#resources">Resources</a></li>
+  <li><a href="#pde-build">PDE Build</a></li>
+  <li><a href="#performance">Performance</a></li>
+</ul>
+<p>While testing, ensure that keyboard navigation (is available and) works, in 
+  addition to using the mouse. Ensure that keyboard accelerators are available 
+  for each menu item, and that conflicts are not present. Also try assigning alternate 
+  keybindings to applicable actions. File a bug when something does not work. When 
+  a test can be automated and is not part of our test suite, add a JUnit test 
+  to the test suite.</p>
+<hr>
 
 	<h3><a name="launcher"/>Launcher</h3>
 	<blockquote>
@@ -24,6 +70,7 @@
 	  we could embed a valud in eclipse.properties if we had to.</li>
 	</ul>
 	</blockquote>
+<a href="#top">Back to top</a><br><hr>
 	
 	<h3><a name="osgi"/>OSGi</h3>
 <blockquote>
@@ -62,6 +109,7 @@
     <li>previoulsy installed features should NOT be present </li>
   </ul>
 </blockquote>
+<a href="#top">Back to top</a><br><hr>
 <h3><a name="equinox"/>Runtime - Equinox</h3>
 	
 <blockquote>
@@ -74,6 +122,7 @@
     <li>confirm that the Core Tools function as expected</li>
   </ul>
 </blockquote>
+<a href="#top">Back to top</a><br><hr>
 <h3><a name="jobs"/>Runtime - Jobs</h3>
 <blockquote>
   <h4>test1</h4>
@@ -81,6 +130,7 @@
     <li>item 1</li>
   </ul>
 </blockquote>
+<a href="#top">Back to top</a><br><hr>
 <h3><a name="preferences"/>Runtime - Preferences</h3>
 	
 <blockquote>
@@ -89,7 +139,8 @@
     <li>item 1</li>
   </ul>
 </blockquote>
-<h3><a name="preferences"/>Resources</h3>
+<a href="#top">Back to top</a><br><hr>
+<h3><a name="resources"/>Resources</h3>
 	
 <blockquote>
   <h4>test1</h4>
@@ -98,6 +149,7 @@
   </ul>
 </blockquote>
 
+<a href="#top">Back to top</a><br><hr>
 <h3><a name="pde-build"/>PDE-Build</h3>	
 <blockquote>
 <h4>Plugin with "." on the classpath</h4>
@@ -208,6 +260,7 @@ jars.compile.order = yourFolder, library.jar, myFolder
 </ul>
 </blockquote>
 
+<a href="#top">Back to top</a><br><hr>
 <h3><a name="performance"/>Performance</h3>	
 <blockquote>
   <h4>test1</h4>
@@ -215,6 +268,7 @@ jars.compile.order = yourFolder, library.jar, myFolder
     <li>item 1</li>
   </ul>
 </blockquote>
+<a href="#top">Back to top</a><br><hr>
 
 </body>
 </html>
