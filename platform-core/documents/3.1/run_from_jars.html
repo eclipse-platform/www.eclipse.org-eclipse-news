@@ -184,7 +184,9 @@
         <li>Change the <code>build.properties</code>:</li>
         <ul>
           <li>Change all occurences of the old jar name to simply a dot. <code>(.)</code></li>
-          <li> There should be one on the <code>bin.includes</code> line.</li>
+          <li> There should be one on the <code>bin.includes</code> line. For instance, if your
+          <code>bin.includes</code> line used to have <code>core.jar</code>, 
+          that will be replaced with a <code>.</code>.</li>
           <li> Change <code>source.foo.jar= </code> to <code>source..= </code>(that 
             is source dot dot)</li>
           <li> Change <code>output.foo.jar= </code> to <code>output..= </code> 
