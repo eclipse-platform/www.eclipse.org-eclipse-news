@@ -1,9 +1,9 @@
 <html>
-<header><title>Planned changes to the plug-in registry APIs and their implementation</title></header>
+<head><title>Planned changes to the plug-in registry APIs and their implementation</title></head>
 <body>
 <h1>Planned changes to the plug-in registry APIs and their implementation</h1>
 <EM>Last update: April 16, 2003</EM> 
-<h4>Summary of planned changes:</h3>
+<h4>Summary of planned changes:</h4>
 
 <ul>
 <li><a href="#fragments_api">Provide API for fragments in the platform registry</a></li>
@@ -11,33 +11,34 @@
 <li><a href="#contributed_elements">Provide API for checking if a given plug-in descriptor element has been contributed by a fragment</a></li>
 </ul>
 
-<a name="fragments_API"><h3>Provide API for fragments in the platform registry</h3></a>
+<h3><a name="fragments_API">Provide API for fragments in the platform registry</a></h3>
 
-<p><h4>Related bugs:</h4><ul>
+<h4>Related bugs:</h4>
+<ul>
 	<li><a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=14460">Bug 14460</a> 
 	- [runtime] No APIs for obtaining fragments installation directory for a given plugin</li>
 	<li><a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=20499">Bug 20499</a> 
 	- Need a public API similer to FragmentDescriptor#getInstallURL()</li>
-</ul></p>
+</ul>
 
 <p>The platform registry API, whose starting point is the <code>IPluginRegistry</code>, 
 provides access to descriptors for the plug-ins in the registry but not for the fragments. Fragments 
 provide objects (pre-requisites, libraries, extensions, extension points) that are combined with those 
 in the plug-in they associate to during the registry resolution process.</p>
 
-<p><h4>Requisites:</h4><ul>
+<h4>Requisites:</h4><ul>
 	<li>the install URL for a fragment is needed: the general use case is that plug-in's/fragment's code 
 	need to know the location of specific files contributed by fragments.</li>
-</ul></p>
+</ul>
 
-<p><h4>Proposed solution:</h4><ul>
+<h4>Proposed solution:</h4><ul>
 	<li>add new API interface <code>org.eclipse.core.runtime.IFragmentDescriptor</code>;</li>
 	<li>add new API method <code>URL[] getInstallURL()</code> to 
 	<code>IFragmentDescriptor</code>;</li>
 	<li>add new API methods <code>IFragmentDescriptor[] getFragments()</code> and 
 	<code>IFragmentDescriptor getFragment(String id)</code> 
-	to <code>IPluginDescriptor</code>;</li>
-</ul></p>
+	to <code>IPluginDescriptor</code>.</li>
+</ul>
 
 <h4>Notes:</h4>
 <p>Currently, clients rely on the fact that the implementations for plug-in registry interfaces in 
@@ -46,9 +47,9 @@ in the plug-in they associate to during the registry resolution process.</p>
 is expected or disallowed (and we would be able to change the implementation hierarchy for those classes).
 </p>
 
-<a name="fragments_NLS"><h3>Provide modular way to externalize strings in fragment.xml</h3></a>
+<h3><a name="fragments_NLS">Provide modular way to externalize strings in fragment.xml</a></h3>
 
-<p><h4>Related bugs:</h4><ul>
+<h4>Related bugs:</h4><ul>
 	<li><a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=18617">Bug 18617</a> 
 	- [runtime] modular way to externalize strings in fragment.xml</li>
 	<li><a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=18339">Bug 18339</a> 
@@ -59,30 +60,28 @@ is expected or disallowed (and we would be able to change the implementation hie
 	- fragment_*.properties should participate in the plugin resource bundle find path</li>
 	<li><a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=35992">Bug 35992</a> 
 	- [runtime] Fragments should know their plug-ins</li>
-</ul></p>
+</ul>
 
 <p>From Jeem's comments in bug 18617:</p>
 
-<cite>
-<p>"Externalized strings for all plug-in fragments must be placed in the
-their plug-in's "plugin.properties" resource bundle. In other words,
+<p><cite>&quot;Externalized strings for all plug-in fragments must be placed in the
+their plug-in's &quot;plugin.properties&quot; resource bundle. In other words,
 a fragment's strings must be merged into the main plug-in's file.
 Although this is not very modular, it does at least allow strings
-to be externalized and translated."</p>
-</cite>
+to be externalized and translated.&quot;</cite></p>
+
 
 <h4>Requisites:</h4><ul>
 	<li>UI needs to translate fragment name and fragment's provider name to show in the about dialog (bug 31094).</li>
 	<li>fragments may have their externalized strings provided by themselves, by the plug-in, or by other fragments 
 	(bugs 18617, 31596).</li>	
 </ul>
-</p>
 
-<p><h4>Proposed solution:</h4>
+<h4>Proposed solution:</h4>
 
 <p>From Jeem's comments in bug 18617:</p>
-<cite>
-<p>"In order to dovetail with existing mechanisms, each fragment must have its
+
+<p><cite>&quot;In order to dovetail with existing mechanisms, each fragment must have its
 own *.properties files. It would be a non-started if these *.properties
 files all had the same name (e.g., &quot;fragment.properties&quot;), since all 
 OS-specific fragments would collide on this name making it impossible
@@ -93,47 +92,57 @@ to specific the name of the properties file; e.g.,
    resource-bundle=&quot;win32fragment&quot;
 would mean that the file named &quot;win32fragment.properties&quot; would contain
 the translated strings (&quot;win32fragment&quot; is the base name of the property
-resource bundle, in Java parlance). </p>
+resource bundle, in Java parlance). </cite></p>
 
-<p>The attribute would also be meaningful on a &lt;plugin&gt; element. If the attribute 
+<p><cite>The attribute would also be meaningful on a &lt;plugin&gt; element. If the attribute 
 is omitted, the default resource bundle base name is &quot;plugin&quot;. This makes
 the new story upwards compatible with the current story where all &quot;%vars&quot; 
 in the plugin.xml and in all the fragment.xmls get resolved in the plug-in's 
-property resource bundle &quot;plugin.properties&quot;."</p>
-</cite>
+property resource bundle &quot;plugin.properties&quot;.&quot;</cite></p>
 
 <p>Methods in the model objects return strings as they appear in the manifest file.
 Clients that want those strings properly translated should (as suggested in bug 18339) 
 call <code>IPluginDescriptor#getResolvedString(String)</code>
 and the new proposed method <code>IFragmentDescriptor#getResolvedString(String)</code>.</p>
+
 <p>Also, since the ".properties" file may be anywhere in th plug-in's classpath, the 
 fragment descriptor implementation should ask its plug-in descriptor for the path where
 to look for it (what requires a fix for bug 35992).</p>
+<ul>
+	<li>add new API methods <code>String getLabel()</code>, <code>String getProviderName()</code> and 
+	<code>String getResourceString(String)</code> to <code>IFragmentDescriptor</code>;</li>
+	<li>the internal implementation for <code>IPluginDescriptor</code> has to be refactored in order to share
+	the translation funcionality with the new method <code>getResourceString(String)</code> to be implemented
+	by <code>FragmentDescriptor</code>.</li>
+</ul>
 
-<a name="contributed_elements"><h3>Provide API for checking if a given plug-in descriptor element has been contributed by a fragment</h3>
+<h3><a name="contributed_elements">Provide API for checking if a given plug-in descriptor element has been contributed by a fragment</a></h3>
 
-<p><h4>Related bugs:</h4><ul>
+<h4>Related bugs:</h4><ul>
 	<li><a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=23165">Bug 23165</a> 
 	- [runtime] Plug-in model objects should know where they are coming from</li>
-</ul></p>
+</ul>
 
 <p>The platform registry API, whose starting point is the <code>IPluginRegistry</code>, 
 provides access to descriptors for the plug-ins in the registry but not for the fragments. Fragments 
 provide objects (pre-requisites, libraries, extensions, extension points) that are combined with those 
 in the plug-in they associate to during the registry resolution process.</p>
 
-<p><h4>Requisites:</h4><ul>
+<h4>Requisites:</h4><ul>
 	<li>it should be possible to tell apart elements provided by plug-ins from those contributed
 	by fragments: PDE currently casts the <code>IPluginRegistry</code> and <code>IPluginDescriptor</code> 
 	to their corresponding model objects (already in memory) to avoid reparsing the manifests. But PDE needs 
 	to know where the elements contributed by fragments came from (as if the registry were before resolution)</li>
-</ul></p>
+</ul>
 
-<p><h4>Proposed solution:</h4><ul>
+<h4>Proposed solution:</h4><ul>
 	<li>add new API class <code>ContributableModel</code> (sub-class of <code>PluginModelObject</code>);</li>
 	<li>add new API methods <code>boolean ContributableModel.isContributed()</code> and <code>void ContributableModel.markContributed()</code>;</li>	
-	<li>make <code>LibraryModel</code>, <code>PrerequisiteModel</code>, <code>ExtensionModel</code> and <code>ExtensionPointModel</code> sub-classes of <code>ContributableModel</code>;
-	<li>make <code>PluginModelObject.flags</code> package-private so they can be accessed from <code>ContributableModel</code>;</li>		
-</ul></p>
+	<li>make <code>LibraryModel</code>, <code>PrerequisiteModel</code>, <code>ExtensionModel</code> and <code>ExtensionPointModel</code> sub-classes of <code>ContributableModel</code>;</li>
+	
+  <li>make <code>PluginModelObject.flags</code> package-private so they can be 
+    accessed from <code>ContributableModel</code>.</li>		
+</ul>
 
 </body>
+</html>

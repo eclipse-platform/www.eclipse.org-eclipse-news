@@ -1,15 +1,14 @@
 <html>
-<header><title>Plug-in registry resolution</title></header>
+<head><title>Plug-in registry resolution</title></head>
 <body>
 <h1>Plug-in registry resolution</h1>
-<EM>Last update: April 16, 2003</EM> 
-<p><cite>This document is intended as a home for gathering as much information about 
-the expected semantics for the registry resolution algorithm as possible. The goal is to
-keep this knowledge separately from the implementation (which may tell a different story), 
-in order to make easier for developers to enhance/fix it or to develop a new algorithm for 
-registry resolution. Comments and improvements are welcome.
-</cite></p>
-
+<EM>Last update: April 17, 2003</EM> 
+<p><cite>This document is intended as a home for gathering as much information 
+  about the expected semantics for the registry resolution algorithm as possible. 
+  The goal is to keep this knowledge separately from the implementation (which 
+  may tell a different story), in order to make easier for developers to enhance/fix 
+  it or to develop a new algorithm for registry resolution. Comments and improvements 
+  are welcome. </cite></p>
 <h3>Soft pre-requisites</h3>
 
 <p>Soft pre-requisites are pre-requisites whose "optional" clause is "true". </p>
@@ -18,7 +17,8 @@ registry resolution. Comments and improvements are welcome.
 same way as if they didn't exist at all).</p>
 
 <p>An optional pre-requisite will be ignored if any of the following 
-conditions apply:<ul>
+conditions apply:</p>
+<ul>
 	<li>the required plug-in does not exist at all;</li>
 	<li>the required plug-in does exist but there are no versions 
 	compatible with the required version;</li>
@@ -28,7 +28,7 @@ conditions apply:<ul>
 	of a given plug-in are required by other plug-ins, the versions are not compatible 
 	with each other, and at least one of the versions is not a library 
 	plug-in.</li>
-</ul></p>
+</ul>
 
 <p>If an optional pre-requisite is ignored for any of the reasons listed above no 
 error message is generated (but an informational message may be output to 
@@ -43,9 +43,9 @@ pre-requisite.</p>
 <p> The following applies for both plug-in pre-requisites and fragments matching their associated plug-ins.</p>
 
 <p>Versions have the following form: major.minor.service.qualifier, where major, minor and service 
-are integers and qualifier is a string.
+are integers and qualifier is a string.</p>
 
-<p>Version Numbers are matched as follows:<ul>
+<p>Version Numbers are matched as follows:</p><ul>
 	<li>if no version number is specified, pick the latest version that 
 	satisfies any other related constraints (which is not necessarily 
 	the latest one available in the registry);</li>
@@ -61,7 +61,7 @@ are integers and qualifier is a string.
 	<li>greaterOrEqual Version (a.b.c.q is a higher version than d.e.f.r) if: 
 	<p>a &gt; d or (a = d and b &gt; e) or (a = d and b = e and c &gt; f) or (a = d and b = e and c = f and q &gt;= r)</p>
 	</li>
-</ul></p>
+</ul>
 
 <p>Also:</p>
 
@@ -136,5 +136,5 @@ should be trimmed when the user requests it (and currently are not)</li>
 plug-ins that are added or to remove existing plug-ins and update the affected
 parts of the registry accordingly.</li>
 </ol>
-
 </body>
+</html>
