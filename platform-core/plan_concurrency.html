@@ -22,24 +22,24 @@
       <p><a href="documents/plan_concurrency_listeners.html">Proposed changes to builders and listeners</a>.  
       Describes the plan to make resource change listeners and incremental project
       builders run concurrently.  Includes an implementation and release schedule.</p>
-    </td>
-  </tr>
-  <tr> 
-    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
-    <td WIDTH="98%"> 
-      <p><b>Preview</b></p>
-      <p>This <a href="downloads/concurrent_build_preview/core.zip">preview patch</a>
-      can be installed on top of the latest integration build or the 3.0 M2 build.  It implements
-      auto-build and resource change notification in a background thread.  This code is
-      not yet extensively tested, so you should not use it on a workspace that you can't
-      easily recover!
-      </p>
+      <p><a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-vcm-home/docs/online/team3.0/progress_support.html">
+      Showing progress in Eclipse 3.0</a>.  Describes remaining issues in 3.0 M4 around
+      how progress is shown for modal and non-modal operations.
+      <p><a href="documents/plan_concurrency_issues.html">Remaining Eclipse 3.0 responsiveness issues</a>.  
+      Describes the remaining responsiveness work for the 3.0 M5 milestone.
     </td>
   </tr>
   <tr> 
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
     <td> 
       <p><b>Progress updates</b> </p>
+      <p>October 20, 2003 (M4 milestone) - Most existing background activity has
+      been moved to use the jobs API.  New feature work (such as quick diff) is also
+      using jobs extensively.  The UI now gives feedback when a modal operation
+      is blocked due to conflicts with a background operation, and the user is able to
+      cancel when in this state. A dynamic team has been setup to address the remaining
+      responsiveness issues for the M5 milestone.
+      </p>
       <p>
       July 14, 2003 - Several clients are now using the job manager for background 
       activity, including the UI decorator and various debug threads.  The CVS/Team

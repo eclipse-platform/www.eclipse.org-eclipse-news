@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Remaining Eclipse 3.0 responsiveness issues</title>
+  <link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
+</head>
+<body text="#000000" bgcolor="#FFFFFF">
+ 
+<h1>Remaining Eclipse 3.0 responsiveness issues</h1>
+<font size="-1">Last modified: October 20, 2003</font> 
+<p>
+This document outlines the remaining UI responsiveness issues at the start of the
+3.0 M5 cycle.  A dynamic team has been set up with representatives from Platform 
+Core, Platform UI, JDT Core, JDT UI, and Team to address these remaining issues during
+the M5 development cycle. 
+</p>
+<h3>Consistent progress API</h3>
+<p>
+There are currently at least three different APIs for reporting progress on a blocking
+(modal) operation: the SWT BusyIndicator, ProgressMonitorDialog, and IStatusLineManager.
+There are many more ad-hoc mechanisms used by different components, as well
+as various dialogs (such as wizard dialog) that have their own progress mechanisms.
+This results in inconsistent progress presentation for blocking operations.  Furthermore,
+BusyIndicator operates in the UI thread, and the other APIs provide an option to run
+in the current thread (fork=false).
+</p>
+<p>
+Proposed solution:<br>
+<ol>
+<li>Introduce new progress API  that doesn't commit to a particular presentation.
+Implementation will use a busy cursor, followed by some form of progress indicator
+after a sufficient delay.  Prototype API is included in current 3.0 stream I-builds.  See
+<tt>IWorkbench.getProgressManager</tt> and <tt>IProgressManager.busyCursorWhile</tt>.
+This should probably be renamed to <tt>IProgressService</tt> to be more consistent
+with other workbench APIs, and avoid committing to the busy cursor in the method name
+(e.g., <tt>IProgressService.busyRun(IRunnableWithProgress)</tt>).</li>
+<li>Decide what to do with remaining APIs.  Most likely deprecate. It may be possible
+to port some old APIs to forward to new APIs, but not BusyIndicator, and not ModalContext 
+in fork=false case.</li>
+<li>Port all existing uses of old progress mechanisms to use new progress service (TBD).</li>
+</ol>
+<h3>Presentation of modal progress</h3>
+<p>
+How should long running progress be presented by this new progress API?  The two
+likely candidates are progress dialog or status line progress indicator.  Tendency
+has been to move away from a modal dialog to the status line because a modal
+dialog has usability problems: breaks user's task concentration, hides information the 
+user may currently be reading.  Requirements for a progress presentation are:
+<ul>
+<li>Graphical presentation of progress</li>
+<li>A text message describing the current task</li>
+<li>Cancelation</li>
+<li>Indication when the foreground operation is blocked by a background operation</li>
+<li>A mechanism to allow the user to resolve the blockage (such as presentation of
+progress view to allow cancelation of background jobs).</li>
+</ul>
+<h3>Presentation of non-modal progress</h3>
+<p>
+We are learning about a number of situations where background operations
+are causing presentation problems in views. The following are descriptions of
+usability problems introduced by background activty. We are looking for input
+from other teams on other scenarios not covered here.
+</p>
+<h4>1. Incomplete/busy views</h4>
+<p>
+Some background jobs cause information to be incrementally added to a view.
+This results in a state where the view is &quote;busy&quote; for the duration of the job.
+During that period, the user needs to know that the information they are seeing is
+possibly incomplete.  They also need to be aware that the view is in a state where
+it may change suddenly, causing unexpected flashing and scrolling.  There also needs
+to be visible feedback when the view is no longer in this state.
+</p>
+<p>
+Examples:
+<ul>
+<li>JUnit view when tests are running</li>
+<li>CVS repository view when an element is being expanded</li>
+<li>Search view during a background search</li>
+</ul>
+</p>
+<h4>2. Stale views</h4>
+<p>
+Many views contain information that is *possibly* incorrect during a background
+job.  The important distinction from the busy view scenario is that the information
+in the view during the job may actually be valid before, during, and after the job
+has been run.  It is generally too much work to decide in advance what information
+is invalid so it can be hidden or removed.  Generally, the job is currently doing the 
+work to decide whether the information needs to be updated.  This leads to errors
+when the user tries to perform actions on this stale information (for example jumping
+to a missing marker, or open a missing file).
+</p>
+<p>
+Examples:
+<ul>
+<li>Task and Problem views when a build is ocurring</li>
+<li>Editor marker bar when document is dirty and while build is ocurring</li>
+<li>Team Synchronize view while background refresh is running</li>
+<li>Navigator view during import or checkout</li>
+</ul>
+</p>
+
+<h4>3. Inadequate indication of background activity</h4>
+<p>
+The current indication of background activity is weak.  It is important that the user
+is aware when background operations are going on.  If they know that *something*
+is happening, they are more likely to tolerate stale information, busy views, pauses,
+etc.  Most applications use an animated 32x32 icon in the upper right hand corner of
+the window.  Eclipse currently uses a 16x16 icon in the lower left corner, due to layout
+problems on certain platforms (i.e. Mac) with icons in the upper right.  Even people working 
+on the responsive UI have been in a state where they did not notice that background 
+activity was happening, and were frustrated by stale information as a result.
+</p>
+
+<h3>Long running activity in UI thread</h3>
+<p>
+Currently many &quot;short&quot; (1-10 seconds) operations run directly in the
+UI thread.  This causes the entire view to become unresponsive (no painting). 
+Further, this leaves absolutely no way for the UI to inform the user that they are
+blocked by background activity, and no way for the user to cancel.  For these reasons,
+any operation that may be blocked by a very long running activity must be run 
+outside the UI thread. This includes all operations that modify resources and markers.
+</p>
+<h3>Slow computer preference</h3>
+<p>
+In 3.0 M4 a slider preference was introduced to allow the user to indicate that they
+have a slow computer.  The intent is that highly CPU intensive features should consult
+this preference before deciding whether they should run.  This can also be used to
+throttle the amount of background activity, and to increase the sleep times used by non-critical
+background activities such as decoration, editor reconciling, and indexing. We need to
+identify what features should use this preference, and begin making use of it.
+</p>
+<h3>Periodic notifications</h3>
+<p>
+One of the items in the <a href="plan_concurrency_listeners.html">builders and listeners</a> proposal
+was to introduce resource change notifications during long running operations.  There
+are several motivations for this:
+<ul>
+<li>Provides additional feedback that the system is busy, since views will be updating more often</li>
+<li>Allows the user to begin working with the output of an operation before the operation
+completes. For example, the user may want to begin editing files in a project that is 
+currently being checked out from the repository.</li>
+<li>If short resource changing operations happen in one thread while a long running
+operation is happening in another, the results of the short operation need to be
+displayed in a timely manner.  For example, if a user adds a breakpoint during a CVS
+checkout, the breakpoint icon must appear quickly.  This requires a resource change
+notification.</li>
+</ul>
+Drawbacks of more frequent notifications include:
+<ul>
+<li>Breaking 2.1 API contracts that guarantee batching during invocation of an 
+IWorkspaceRunnable.</li>
+<li>Wasted listener update work when a resource changes several times during an operation.</li>
+<li>Hindered performance of background operation due to delta calculations and broadcast,
+and increased activity in UI thread.</li>
+<li>Flashy user interface</li>
+</ul>
+We need a compromise resource change notification story that balances these needs with
+the disadvantages of periodic notifications.
+</p>
+<h3>Porting guide</h3>
+<p>
+Enumerate API breakages and deprecations, and major non-API behaviour changes
+that may impact 2.1-based clients.  Begin drafting of 3.0 porting guide chapters
+for the responsive UI work.
+</p>
+
+<hr>
+<p>
+Go <a href="../plan_concurrency.html">back to concurrency home</a>.
+</p>
+(Plan item bug reference: <a
+ href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=36957">36957</a>)<br>
+</body>
+</html>
