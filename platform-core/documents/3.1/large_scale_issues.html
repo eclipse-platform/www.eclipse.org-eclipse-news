@@ -9,7 +9,7 @@
 <table width="100%">
 <tr><td style="background:#0080C0"><b><span style="color:white">Large-scale development issues</span></b></td></tr>
 </table>
-<font size="-1">Last modified: January 14, 2005</font> 
+<font size="-1">Last modified: February 24, 2005</font> 
 <p>
 One of the major development themes for Eclipse 3.1 is to improve support for 
 "Large-scale development" in Eclipse. This includes improving collaboration for 
@@ -44,8 +44,9 @@ reduce current footprint.
 	in memory about the synchronization and "dirty" state of each resource. Explore
 	reducing the footprint of this data or using lazy caching to only bring this information
 	into memory when needed.
-<li><img src="../../images/progress.gif" height="5" width="14" border="0">
-	Message bundles. Most plug-ins store translated strings in <tt>ResourceBundle</tt>
+<li><img src="../../images/ok.gif"  height="10" width="10" border="0">
+	Message bundles (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=37712">37712</a>). 
+	Most plug-ins store translated strings in <tt>ResourceBundle</tt>
 	objects.  These bundles are not space-efficient, and often use lengthy string-based
 	keys for message lookup.  Explore a more efficient representation, integer-based keys,
 	or a disk-based bundle for infrequently used messages.
@@ -65,13 +66,15 @@ and moving lengthy operations into a background thread.
 	all the files and to gather local information such as time stamps. This project
 	discovery can be moved into a background thread.
 </li>
-<li><img src="../../images/progress.gif" height="5" width="14" border="0">
+<li><img src="../../images/ok.gif"  height="10" width="10" border="0">
 	Resource copy, move, and delete.  Most operations that act on trees of resources
 	still cannot be run in the background.  When these operations take a long time,
 	the user is forced to wait until they complete. These should be converted to "user" jobs
 	that can optionally be run in the background.
 </li>
-<li>Recursive deletion.  Java provides no API for recursively deleting a directory
+<li><font class="indexsub" color="#8080ff">[&gt;3.1]</font>
+Recursive deletion 	(bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=10628">10628</a>).
+Java provides no API for recursively deleting a directory
 containing files and other directories. This means deleting a large resource tree
 requires two native I/O calls per directory (one to list the children, one to delete), and
 one native I/O call per file.  This particularly impacts compilation, which often needs
