@@ -43,7 +43,7 @@
     This article attempts to demystify plug-ins and make it easier to create and 
     manage Eclipse Platform configurations.</p>
   <p><b> By Debbie Wilson and Jeff McAffer, IBM OTI Labs</b><br>
-    <font size="-1">March 13, 2003</font></p>
+    <font size="-1">April 15, 2003</font></p>
       </blockquote>
                
   <hr width="100%">            
@@ -56,7 +56,7 @@
   can be added to the Platform. Tools or applications are constructed by creating 
   one or more plug-ins. How tools or applications are factored into plug-ins depends 
   on the nature of the tool or application. </p>
-<p>The Eclipse Platform itself, for example, is made up entirely of plug-ins; 
+<p>The Eclipse Platform itself, for example, is made up entirely of plug-ins: 
   some 50 or so in all. Even the runtime which manages plug-ins, is itself a plug-in! 
   Plug-ins interact via well defined API's. Since everything is a plug-in and 
   plug-ins interact via public interfaces, all plug-ins are equal in the system. 
@@ -136,11 +136,11 @@
 <p>&lt;library&gt; elements essentially specify a portion of the plug-in's local 
   classpath. Each plug-in has two classpaths: one for code libraries and one for 
   resource libraries. Correspondingly, &lt;library&gt; elements have a type attribute 
-  whose value is either <em>code</em> or <em>resource</em> (code is the default). 
-  Code libraries contain Java class files as well as any associated resources. 
-  There is no need to artificially separate resources from the code as code libraries 
-  can contain both. Libraries defined as type <em>resource</em> on the other hand, 
-  can contain only resources (properties files, images, ...).</p>
+  whose value is either <em>code</em> or <em>resource</em> (<em>code</em> is the 
+  default). Code libraries contain Java class files as well as any associated 
+  resources. There is no need to artificially separate resources from the code 
+  as code libraries can contain both. Libraries defined as type <em>resource</em> 
+  on the other hand, can contain only resources (properties files, images, ...).</p>
 <p>The distinction allows the classloaders to ignore resource libraries while 
   loading classes, as they are guaranteed to contain only resources (e.g., translated 
   properties files). This translates into performance improvements as there are 
@@ -204,7 +204,7 @@
     <dt><b>compatible</b> (default)</dt>
     <dd>major must match</dd>
     <dt><b>greaterOrEqual</b></dt>
-    <dd>Any version which is a perfect match of sorts lexographically after</dd>
+    <dd>Any version which is a perfect match or sorts lexographically after</dd>
   </dl>
 </dl>
 <p>Plug-in dependencies are transitive. That is, if Another Plugin requires some 
@@ -242,9 +242,9 @@
   example, a UI plug-in might expose an extension point for menu actions. A plug-in 
   wishing to contribute an action to the UI would define an extension for the 
   UI's menu action extension point.</p>
-<p>Extension points have a globally unique id constructed from the defining plug-id 
-  and a simple id specified in the extension point itself. The example below is 
-  from the org.eclipse.ui plug-in. The full identifier of the extension point 
+<p>Extension points have a globally unique id constructed from the defining plug-in 
+  id and a simple id specified in the extension point itself. The example below 
+  is from the org.eclipse.ui plug-in. The full identifier of the extension point 
   is therefore org.eclipse.ui.actionSets. All extension points have this relatively 
   simple form.</p>
 <blockquote>
@@ -287,12 +287,12 @@
 <h4></h4>
 <h2>What is a Fragment?</h2>
 <p>Fragments allow optional functionality/content to be <b>added</b> to existing 
-  plug-ins. For example, the base Eclipse drops contain only English messages. 
-  Fragments are used to add message catalogs containing other languages (e.g., 
-  French, Italian) without modifying the existing plug-ins. Note that fragments 
-  can only add function/content to plug-ins. They cannot override that which the 
-  plug-in already contains. Fragments are added to the base plug-in in no particular 
-  order and fragments for missing plug-ins are ignored.</p>
+  plug-ins. For example, the base Eclipse contains only English messages. Fragments 
+  are used to add message catalogs containing other languages (e.g., French, Italian) 
+  without modifying the existing plug-ins. Note that fragments can only add function/content 
+  to plug-ins. They cannot override that which the plug-in already contains. Fragments 
+  are added to the base plug-in in no particular order and fragments for missing 
+  plug-ins are ignored.</p>
 <p>It is not surprising to find that fragments are very similar to plug-ins; they 
   are defined with a single manifest file, called <em>fragment.xml</em>, in a 
   file system directory which contains everything the fragment needs. Each fragment 
@@ -301,7 +301,7 @@
 <p>Further, fragments can contribute libraries, prerequisites, extension points 
   or extensions using standard syntax. These contributions are seamlessly merged 
   into the fragment's base plug-in. That is, extensions and extension points from 
-  a fragment appear to come from/be part of (respectively) the base plug-in; libraries 
+  a fragment appear to come from/be part of (respectively) the base plug-in, libraries 
   are put on the base plug-in's classpath and prerequisites contribute to the 
   plug-in's prerequisite chain.</p>
 <p></p>
@@ -323,7 +323,7 @@
 <p>This fragment contributes additional jars which contain translations of the 
   messages used by the plug-in itself. In this case the jar contains files named 
   according to the standard Java locale-based lookup strategy (e.g., message_en_US.properties, 
-  message_jp_JP.properties, ...). Since the jars are added to the plug-in's classpath, 
+  message_jp_JP.properties). Since the jars are added to the plug-in's classpath, 
   the plug-in classloader will find these resources automatically. </p>
 <h2>The Plug-in Model at Runtime</h2>
 <p>All of the information we have discussed to date has dealt with physical plug-in 
@@ -374,7 +374,7 @@
 <ul>
   <li>resources can be loaded (either from a resource or code library) </li>
   <li>plug-in classloaders can ask other classloaders to load classes. </li>
-  <li>Extensions and extension points can be examined without having to activate 
+  <li>extensions and extension points can be examined without having to activate 
     the plug-in that contains the extension. </li>
 </ul>
 <p>Once a plug-in is activated it remains active until Eclipse shuts down. When 
@@ -409,7 +409,7 @@
     <dd>Finally the exported libraries of the plug-in's prerequisites are considered. 
       Prerequisites are queried in the order in which they were declared with 
       the exception of the runtime plugin (org.eclipse.core.runtime). All plug-ins 
-      automatically have the Eclipse runtime plug-in (<font face="Courier New, Courier, mono">org.eclipse.core.runtime</font>) 
+      automatically have the Eclipse runtime plug-in (<code>org.eclipse.core.runtime</code>) 
       added to their prerequisite list as the first prerequisite. All imports 
       of the runtime plug-in are ignored. 
       <p> Note that prerequisite consultation is transitive. When locating a class, 
@@ -439,21 +439,20 @@
   <dl>
     <dt><b>os</b></dt>
     <dd>The operating system on which Eclipse is currently running (e.g., win32, 
-      linux, solaris, ...)</dd>
+      linux, solaris)</dd>
     <dt><b>ws</b></dt>
-    <dd>The window system being used for the Eclipse UI (e.g., win32, motif, gtk, 
-      ...)</dd>
+    <dd>The window system being used for the Eclipse UI (e.g., win32, motif, gtk)</dd>
     <dt><b>arch</b></dt>
-    <dd>The type of processor in the machine (e.g., x86, ppc, sparc, ...)</dd>
+    <dd>The type of processor in the machine (e.g., x86, ppc, sparc)</dd>
     <dt><b>nl</b></dt>
-    <dd>The current locale (e.g., en_CA, jp_JP, ...)</dd>
+    <dd>The current locale (e.g., en_CA, jp_JP)</dd>
   </dl>
 </dl>
 <p>So, for example, if your plug-in uses windowing system-specific features, it 
   may be necessary to provide a different library for each configuration. Using<em> 
   $ws$/&lt;library name&gt;</em> in your plug-in manifest file directs Eclipse 
   to look for the library in a window system directory with the same name as the 
-  current window system. The <em>org.eclipse.swt</em> plug-in uses this mechanism 
+  current window system. The <code>org.eclipse.swt</code> plug-in uses this mechanism 
   as follows:</p>
 <blockquote>
   <pre>  &lt;runtime&gt;
