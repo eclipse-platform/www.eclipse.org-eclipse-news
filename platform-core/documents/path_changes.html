@@ -24,7 +24,7 @@ valid files from being added to the Eclipse workspace. This document
 describes the current set of restrictions in Eclipse 3.0, and proposes changes to
 lift these restrictions.
 <p>
-<font size="-1">Last modified: October 1, 2004</font> 
+<font size="-1">Last modified: October 5, 2004</font> 
 </blockquote>
 <p>
 <h3>Background</h3>
@@ -82,7 +82,7 @@ to represent Windows paths with meaningful devices. Using the host operating
 system to make assumptions about data that might not be intended for that platform
 will result in unwanted side-effects.
 <p>
-The proposed solution accomodates the two interesting categories 
+The solution must accomodate the two interesting categories 
 of <tt>IPath</tt> users:
 <ul>
 <li>Code that needs a platform-specific representation. In other words, someone that
@@ -103,56 +103,60 @@ with the file system.
 The proposed solution is to introduce two constructors for creating <tt>IPath</tt>
 that perform the inverse of the two existing <tt>toString</tt> methods:
 <ul>
-<li>A constructor that decodes a platform-specific string.  For example, this would 
+<li>A constructor that decodes a platform-specific string.  For example, this will 
 parse the output of a previous call to <tt>IPath.toOSString</tt>, or the value returned
 by <tt>java.io.File.getAbsolutePath</tt>.</li>
 <li>A constructor that decodes a platform-neutral string, such as the output of
 a previous call to <tt>IPath.toString</tt>.</li>
 </ul>
 <p>
-Most clients would continue to use the platform-neutral form of paths. The path
+Most clients will continue to use the platform-neutral form of paths. The path
 can be converted to/from a platform-specific representation when interaction
 with the local file system is required. 
 <p>
-The platform-neutral encoding of paths (conversion from IPath to String) would allow
+The platform-neutral encoding of paths (conversion from <tt>IPath</tt> to String) will allow
 all characters except slash ('/') in segment names, and include an optional device 
-separated from the segments by a double slash. The following are some examples
-of windows file system paths and the corresponding platform-neutral encoding:
+separated from the segments by a single colon character. Literal colon characters in path
+segments are escaped through doubling (one colon becomes two colons).
+The following are some examples of windows file system paths and the 
+corresponding platform-neutral encoding (output from <tt>IPath.toString</tt>):
 <ul>
-<li>"C:\folder\file.txt" becomes "C:///folder/file.txt"</li>
-<li>"C:folder\file.txt" becomes "C://folder/file.txt"</li>
-<li>"C:\folder\" becomes "C:///folder/"</li>
+<li>"C:\folder\file.txt" becomes "C:/folder/file.txt"</li>
+<li>"C:folder\file.txt" becomes "C:folder/file.txt"</li>
+<li>"C:\folder\" becomes "C:/folder/"</li>
 </ul>
-Canonical Unix paths always look identical to their platform-neutral encoding. The lack
-of device is determined by the absence of a leading double-slash:
+Canonical Unix paths look identical to their platform-neutral encoding, except
+in the presence of segments containing the colon character. The following are
+some Unix paths and the corresponding encoding by <tt>IPath.toString</tt>:
 <ul>
 <li>"/etc/" is encoded as "/etc/"</li>
 <li>"/etc/passwd" is encoded as "/etc/passwd"</li>
-<li>"/etc/timeNowIs4:25:12PM" is encoded as "/etc/timeNowIs4:25:12PM"</li>
-<li>"/etc/foo\bar" is encoded as "/etc/foo\bar"</li>
+<li>"/etc/timeNowIs4:25:12PM" is encoded as "/etc/timeNowIs4::25::12PM"</li>
+<li>"c:/folder/file.txt" is encoded as "c::/folder/file.txt"</li>
 </ul>
 <p>
  UNC paths, which typically have no device but have a double leading separator 
- would be encoded with four leading slashes:
+ will generally be the same
 <ul>
-<li>"//Server/Volume" becomes "////Server/Volume"</li>
+<li>"//Server/Volume" becomes "//Server/Volume"</li>
+<li>"//Server/TimeIs4:25:12PM" becomes "//Server/TimeIs4::25::12PM"</li>
 </ul>
-If for some reason a UNC path had a device, it would preceed the slashes:
+If for some reason a UNC path had a device, it will preceed the slashes:
 <ul>
-<li>"C://Server/Volume" becomes "C:////Server/Volume"</li>
+<li>"C://Server/Volume" becomes "C://Server/Volume"</li>
+<li>"C://Server/TimeIs4:25:12PM" becomes "C://Server/TimeIs4::25::12PM"</li>
 </ul>
 <p>
 This platform-neutral encoding unambiguously encodes all possible paths on
-all supported platforms.  In addition, if this platform-neutral encoding is
-passed to <tt>java.io.File</tt> on either Unix or Windows, it will be handled
-correctly.  The Windows implementation of the <tt>java.io.File</tt> constructor
-accepts front slashes as a path separator, and all plaforms collapse and ignore duplicate slashes.
+all supported platforms. Most importantly, this <tt>toString</tt> implementation
+is fully backward compatible with the Eclipse 3.0 implementation of <tt>IPath.toString</tt>
+for all paths that can be created in Eclipse 3.0.
 <p>
-The platform-specific Path constructor would impose the minimum platform-specific
+The platform-specific Path constructor will impose the minimum platform-specific
 requirements needed to unambiguosly parse all possible paths on that platform. 
 The Windows implementation, for example, will interpret everything up to the
 first ':' as the device, and treat both '/' and '\' as path segment separators. No
-other rules would be imposed. Thus the existing restriction on paths that prevents
+other rules will be imposed. Thus the existing restriction on paths that prevents
 path segments from having leading or trailing whitespace will no longer be enforced
 on any platform.
 <p>
@@ -167,22 +171,23 @@ further impacting the corner cases.
 </p>
 <h3>API Details</h3>
 <p>
-The following existing methods on <tt>IPath</tt> and <tt>Path</tt> would be affected:
+The following existing methods on <tt>IPath</tt> and <tt>Path</tt> are affected:
 <ul>
-<li>isValidPath. This method is no longer needed. All <tt>String</tt> instances
+<li><tt>isValidPath</tt>. This method is no longer needed. All <tt>String</tt> instances
 can now be interpreted as valid paths. In Eclipse 3.0 this method only enforces the
 restriction that segments cannot contain ':' and cannot begin or end in whitespace.  
 This method will be deprecated Eclipse 3.1, and its implementation left
 unchanged.</li>
-<li>isValidSegment. Since the only real restriction now is that segments cannot
+<li><tt>isValidSegment</tt>. Since the only real restriction now is that segments cannot
 contain the '/' character, this method is also no longer needed. This method was
 previously only useful for clients wanting to call <tt>IPath.append(String)</tt>
 without the possibility of error.  This <tt>append</tt> method has always handled
 strings containing '/' by appending multiple segments to the receiver's path.
 This method will be deprecated Eclipse 3.1, and its implementation left
 unchanged.</li>
-<li>toString. The implementation of this method will be changed to the new format
-that uses the double front slash as the device separator.
+<li><tt>toString</tt>. The implementation of this method will be changed to the new format
+that escapes literal colons in path segments using a double colon. (<tt>toOSString</tt>
+remains unchanged).</li>
 <li>Path constructors (<tt>Path(String)</tt> and <tt>Path(String,String)</tt>).
 These constructors are the root of the existing problems, since they are designed
 to accept both platform-specific paths, and platform-neutral paths produced by
@@ -194,10 +199,13 @@ New methods for Eclipse 3.1:
 <ul>
 <li><tt>Path.fromString</tt>. A factory method for producing an <tt>IPath</tt>
 given a platform-neutral encoding of a string. This is the inverse of the
-<tt>IPath.toString</tt> method.</li>
+<tt>IPath.toString</tt> method. In particular, double colons will be interpreted
+as single colon characters in segment names, and the first single colon (if any) 
+will be treated as the device separator.</li>
 <li><tt>Path.fromOSString</tt>. A factory method for producing an <tt>IPath</tt>
 given a platform-specific encoding of a string. This is the inverse of the
-<tt>IPath.toOSString</tt> method.</li>
+<tt>IPath.toOSString</tt> method. On Windows the colon character is treated
+as the device separator, and both varieties of slash are treated as segment separators.</li>
 </ul>
 </p>
 <h3>Impact</h3>
@@ -210,18 +218,54 @@ these methods, since all paths are now valid.
 <p>
 All clients who store absolute <tt>IPath</tt> objects as platform-neutral 
 strings in a serialized form (as produced by <tt>IPath.toString</tt> in Eclipse 3.0), 
-and require cross-platform interoperability, will need to migrate to the new 
-platform-neutral string representation of <tt>IPath</tt> as produced by the 
-revised <tt>toString</tt> implementation. Clients not requiring cross-platform
-compatibility can use the new <tt>Path.fromOSString</tt> method to parse
-previously stored strings. Note that this does not generally happen in practice. 
-I.e., absolute paths are almost never compatible across platforms due to the presence
-of the Windows device qualifier. Most serialized paths that require cross-platform 
-interoperability generally store paths that are relative to a variable that expands 
-to a platform-specific prefix.  The encoding of relative paths with no device is 
-unchanged from Eclipse 3.0.  Examples of files that contain string representations
-of paths that will need to migrate include the workspace <tt>.project</tt> and 
-<tt>.classpath</tt> files.
+should switch to the new <tt>fromString</tt> method rather than the <tt>Path</tt> 
+constructor. Backward compatibility with files written by Eclipse 3.0 is automatic 
+(no changes to file format or changing file format version numbers required).
+Examples of files that contain string representations of paths that will 
+need to migrate include the workspace <tt>.project</tt> and <tt>.classpath</tt> files.
+</p>
+<h3>Other Observations</h3>
+<p>
+Under this proposal <tt>IPath.toString</tt> and <tt>Path.fromString</tt>
+are perfect inverses of each other. In other words, the expression
+<pre>
+path.equals(Path.fromString(path.toString()))
+</pre>
+will be true for all paths, and
+<pre>
+string.equals(Path.fromString(string).toString())
+</pre>
+will be true for all strings that represent canonical paths (strings with duplicate slashes
+or "." and ".." references will turn out differently). Furthermore, the Eclipse 3.1 implementation of 
+<tt>Path.fromString</tt> will be the perfect inverse of the Eclipse 3.0 implementation
+of <tt>IPath.toString</tt>.
+<p>
+On Unix, the <tt>toOSString</tt> and <tt>fromOSString</tt> methods will be
+inverses of each other.  On Windows, the same can only be said for paths that
+do not contain colon or backslash characters within segment names (such paths
+are invalid on Windows anyway). Consider the following example:
+<pre>
+   String input = "foo::bar";
+   IPath pathOne = Path.fromString(input);
+   IPath pathTwo = Path.fromOSString(pathOne.toOSString());
+   pathOne.equals(pathTwo) -> false!
+</pre>
+The input string represents a path with no device, and a single segment whose
+name is "foo:bar" (invalid on Windows).  When this is output using <tt>toOSString</tt>,
+it is encoded as "foo:bar".  The <tt>fromOSString</tt> then interprets this as
+a path with device "foo:" and first segment "bar". Similar mangling occurs if you
+create a path with a segment containing the backslash character:
+<pre>
+   String input = "foo\\bar"; 
+   IPath pathOne = Path.fromString(input);
+   IPath pathTwo = Path.fromOSString(pathOne.toOSString());
+   pathOne.equals(pathTwo) -> false!
+</pre>
+In this case, the input is a path with one segment whose name is "foo\bar". This
+is interpreted by <tt>fromOSString</tt> as a path with two segments "foo" and "bar".
+In other words, under this proposal you cannot reliably manipulate paths containing
+backslash or colon using to/fromOSString on Windows. This seems to be an acceptable
+limitation.
 </p>
 <h3>Bug reference</h3>
 <p>
