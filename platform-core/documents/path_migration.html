@@ -39,8 +39,33 @@ underlying operating system. These included:
 These restrictions have been removed in Eclipse 3.1 when the platform's data
 location (workspace) is located on a file system that does not have these restrictions.
 <p>
-<b>Action required:</b>
+<b>Action required:</b> Plug-ins that need to create paths from a given 
+<tt>String</tt> in a platform-independent manner will need to migrate to the 
+new <tt>Path.fromPortableString</tt> factory method. This method produces
+an <tt>IPath</tt> instance from a platform-independent format. This string 
+representation of paths can be created using the <tt>IPath.toPortableString</tt> method.
+This principally affects plug-ins that store path strings in files that must be readable
+on multiple platforms.  This includes all metadata files that are stored inside Eclipse
+workspace projects (.project, .classpath, etc), and all paths stored in the preference
+store (<tt>org.eclipse.core.runtime.preferences.IPreferencesService</tt>). 
 <p>
+Plug-ins that were creating paths from hard-coded string literals that assumed 
+':' and '\' had special meaning on all platforms will need to migrate. The
+solution is to change <tt>String</tt> literals to use the portable path string format,
+which interprets the first single colon (':') as the device separator, slash ('/')
+as the segment separator, and double colon ("::") as a literal colon character.
+<p>
+Plug-ins constructing paths using the <tt>IPath.append(String)</tt> method 
+that assumed ':' and '\' had special meaning on all platforms will need to migrate.
+In Eclipse 3.1, this method uses operating-system specific device and segment
+delimiters to interpret the provided path string.
+<p>
+Note that <tt>fromPortableString</tt> will correctly read all path strings that were
+created using the Eclipse 3.0 <tt>IPath.toString</tt> method, but not the
+Eclipse 3.1 <tt>toString</tt> method. Thus in most cases no change is required 
+to existing metadata file formats except to begin writing paths with <tt>toPortableString</tt>
+and reading paths with <tt>fromPortableString</tt>.
+
 <h3>References</h3>
 <p>
 <ul>
