@@ -8,7 +8,7 @@
 <ul>
 <li><a href="#fragments_api">Provide API for fragments in the platform registry</a></li>
 <li><a href="#fragments_nls">Provide modular way to externalize strings in fragment.xml</a></li>
-<li><a href="#contributed_elements">Provide API for checking in a given plug-in descriptor element has been contributed by a fragment</a></li>
+<li><a href="#contributed_elements">Provide API for checking if a given plug-in descriptor element has been contributed by a fragment</a></li>
 </ul>
 
 <a name="fragments_API"><h3>Provide API for fragments in the platform registry</h3></a>
@@ -32,12 +32,11 @@ in the plug-in they associate to during the registry resolution process.</p>
 
 <p><h4>Proposed solution:</h4><ul>
 	<li>add new API interface <code>org.eclipse.core.runtime.IFragmentDescriptor</code>;</li>
-	<li>add new API method <code>java.net.URL[] getInstallURL()</code> to 
-	<code>org.eclipse.core.runtime.IFragmentDescriptor</code>;</li>
-	<li>add new API method <code>IFragmentDescriptor[] getFragments()</code> to 
-	<code>org.eclipse.core.runtime.IFragmentDescriptor</code>;</li>
-	<li>add new API methods <code>IFragmentDescriptor[] getFragment(String id)</code> 
-	to <code>org.eclipse.core.runtime.IFragmentDescriptor</code>;</li>
+	<li>add new API method <code>URL[] getInstallURL()</code> to 
+	<code>IFragmentDescriptor</code>;</li>
+	<li>add new API methods <code>IFragmentDescriptor[] getFragments()</code> and 
+	<code>IFragmentDescriptor getFragment(String id)</code> 
+	to <code>IPluginDescriptor</code>;</li>
 </ul></p>
 
 <h4>Notes:</h4>
@@ -111,7 +110,7 @@ and the new proposed method <code>IFragmentDescriptor#getResolvedString(String)<
 fragment descriptor implementation should ask its plug-in descriptor for the path where
 to look for it (what requires a fix for bug 35992).</p>
 
-<a name="contributed_elements"><h3>Provide API for checking in a given plug-in descriptor element has been contributed by a fragment</h3>
+<a name="contributed_elements"><h3>Provide API for checking if a given plug-in descriptor element has been contributed by a fragment</h3>
 
 <p><h4>Related bugs:</h4><ul>
 	<li><a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=23165">Bug 23165</a> 
