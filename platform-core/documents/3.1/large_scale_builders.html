@@ -9,7 +9,7 @@
 <table width="100%">
 <tr><td style="background:#0080C0"><b><span style="color:white">Large-scale builder issues</span></b></td></tr>
 </table>
-<font size="-1">Last modified: December 13, 2004</font> 
+<font size="-1">Last modified: December 22, 2004</font> 
 <p>
 The workspace builder infrastructure is designed primarily with efficient
 incremental compilers in mind.  Eclipse exposes just two fundamental build
@@ -77,15 +77,64 @@ run. This support needs to have the following characteristics:
 	available when one or more projects in the current selection has that characteristic.
 </li>
 </ul>
-
-
-
-
-
-(bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=60803">60803</a>).
+<h3>Proposed Solution</h3>
+<p>
+The builders extension point will introduce an "isConfigurable" attribute that 
+specifies whether a builder allows configuration of what build triggers it responds
+to. Here is an example of a builder definition using this new attribute:
+<pre>
+  &lt;extension point="org.eclipse.core.resources.builders" id="flexbuilder" name="Flexible Builder"&gt;
+    &lt;builder <b>isConfigurable="true"</b>&gt;
+      &lt;run class="org.eclipse.core.tests.internal.builders.FlexibleBuilder"/&gt;
+    &lt;/builder&gt;
+  &lt;/extension&gt;
+</pre>
+Builders that don't specify this attribute will never be configurable.
+<p>
+For configurable builders, new API on <tt>ICommand</tt> will allow a client
+to programmatically specify what triggers that command responds to.  The new
+methods on <tt>ICommand</tt> are:
+<ul>
+<li><tt><b>isConfigurable</b>()</tt> - returns the value of the <tt>isConfigurable</tt> attribute
+in the builder extension definition.</li>
+<li><tt><b>isBuilding</b>(int trigger)</tt> - Indicates if a build command is currently
+responding to a given build trigger.  Triggers are represented by the
+<tt>IncrementalProjectBuilder.*_BUILD</tt> constants.</li>
+<li><tt><b>setBuilding</b>(int trigger, boolean value)</tt> - Changes whether a build
+command responds to a given build trigger.  This method has no effect for builders
+that are not configurable.</li>
+</ul>
+<p>
+When a builder's triggers are configured, the result will be persisted in the
+<tt>.project</tt> file. This allows sharing of the custom build triggers with
+other team members. Here is an example of the build spec from a project description 
+file with a builder that does not respond to the autobuild trigger.  The new
+<tt>triggers</tt> element specifies the active triggers for the command:
+<pre>
+  &lt;buildSpec&gt;
+    &lt;buildCommand&gt;
+      &lt;name&gt;org.eclipse.core.tests.resources.flexbuilder&lt;/name&gt;
+      <b>&lt;triggers&gt;incremental,clean,full&lt;/triggers&gt;</b>
+      &lt;arguments&gt;
+      &lt;/arguments&gt;
+    &lt;/buildCommand&gt;
+  &lt;/buildSpec&gt;
+</pre>
+<p>
+The build infrastructure will consult the build command each time build API is called 
+(<tt>IWorkspace.build</tt> and <tt>IProject.build</tt>).  Builders will not be 
+called on build triggers that they are configured to not respond to.
+<p>
+The UI build actions will use the <tt>isBuilding</tt> method to determine
+whether various build commands are enabled for a particular selection.  For example,
+if the selected project responds to the incremental build trigger, but not the
+autobuild trigger, then the <b>Build Project</b> command will remain enabled
+even when autobuild is turned on.  This will allow the user to manually trigger "non-incremental"
+builders that are too slow to efficiently respond to the autobuild trigger, but allow
+autobuild to continue triggering other builders in the workspace.
+<p>
+<h3>References</h3>
+Bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=60803">60803</a>.
 </p>
-
-
-
 </body>
 </html>
