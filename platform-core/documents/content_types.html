@@ -313,7 +313,7 @@
   should be discussed in the platform-core-dev list, or bug <a
  href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=37668">37668</a>. </em></p>
 <h2>Addendum: issues to be addressed in the 3.1 cycle</h2>
-<p><font size="-1">Last modified: October 15th, 2004</font></p>
+<p><font size="-1">Last modified: January 17th, 2005</font></p>
 <p>The solution described above was implemented and relatively succesful. Some 
   components took advantage of the new content type infrastructure, but still 
   in many cases file-association is being done in an ad-hoc manner. Also, no UI 
@@ -333,19 +333,69 @@
     content types. </li>
 </ul>
 <h3>Support more use cases</h3>
-<p>Ensure the Content Type works for the SDK plug-ins and for products built on 
-  top of Eclipse.</p>
+<p>Ensure the content type support works for the SDK plug-ins and for products 
+  built on top of Eclipse.</p>
 <p>TBD</p>  
 <p><strong>Platform/UI - file/editor association</strong></p>
-<p>TBD</p>
+<p>Content type-editor association is definitely the most important use case for 
+  the content type support. The basic idea is that for a given file or stream 
+  of data, the UI should be able to:</p>
+<ol>
+  <li>provide a default editor to be used when opening the file</li>
+  <li>present any other editors that are also able to handle the file</li>
+  <li>allow the user to pick a completely unrelated file not initially suggested</li>
+  <li>remember the user decision (if the user wants so) so it becomes the default 
+    for that file</li>
+</ol>
+<p> <strong>1</strong>, <strong>2</strong> and <strong>4</strong> are currently 
+  supported by the existing file-editor association mechanism. <strong>3</strong> 
+  is being requested by users, and it is orthogonal (as 4 is) to the content type 
+  support provided by runtime.</p>
+<p>Content types add a level of indirection between files and editors. At a first 
+  glance, there is no reason why changing the default editor would affect what 
+  content type is assigned to a file, so users should be able to pick up any editors 
+  without affecting what content type detection.</p>
 <p><strong>Platform/Team - binary vs ascii files</strong></p>
-<p>TBD</p>
+<p>The Team plug-in keeps a catalog of file extensions and their expected content 
+  type (either binary or ASCII). If content types were broadly adopted throughout the rest
+  of Eclipse (so that most files dealt with by users have a content type), couldn't the Team
+  plug-in use content type based encoding determination to figure out a good default for this 
+  setting?</p>
 <h3>Give users more power</h3>
-<p>Ensure users have means to customize how the content type detection works 
-  for them.</p>
-<p>TBD</p>
-<h3>Improve conflict handling</h3>
+<p>Ensure users have means to customize how the content type detection works for 
+  them. Provide UI for content types. May provide some way of showing related 
+  objects for a given content type (editors, views, comparators, etc). Users cannot 
+  provide content type detection code, so user-defined content types would be 
+  useful only for cases where content type detection is file name based (like 
+  for non-formatted text files, such as source files, configuration files, etc). 
+</p>
+<h3>Improve content type determination</h3>
 <p>Ensure content type detection works (or can be made to work) appropriately 
   when incompatible products are deployed together.</p>
-<p>TBD</p> 
+<ol>
+  <li><strong>nature-specific content types</strong> - to reduce chances for collisions, 
+    there should be a way of constraining which content types are available on 
+    a project basis. One possible solution would be to have content type-nature 
+    associations. Natures could declare somre preferred content types, and those 
+    preferred content types would always win.</li>
+  <li><strong>user-defined content type determination - </strong>two plug-ins 
+    provide completely unrelated content types A and B for files with extension 
+    &quot;.foo&quot;. The current implementation will choose one of them (by priority, 
+    depth, or arbitrarily if they have the same priority and depth) and mark the 
+    other one as an alias, so if they have sub-content types, the two trees will 
+    be combined under the chosen one. If A is automatically chosen, the user might 
+    want to choose B instead as the default content type. </li>
+  <li><strong>fine-grained user-defined content type determination</strong> - 
+    if for some reason we have problems detecting the right content type for a 
+    file, the user should be able to fix that by saying: I want <em><strong>this</strong></em> 
+    content type for this file. This is similar to allowing users to specify encoding 
+    on a file basis. A possible implementation could be to use persistent properties 
+    for that. Another would be to use project preferences (because they are shared).</li>
+  <li><strong>product defined policies for overriding content types</strong> - 
+    a product may want to override some of the existing content type definitions. 
+    Products should be able to do that in a way that would circumvent the regular 
+    conflict resolution.</li>
+</ol>
+<p>See also corresponding PR <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=78654">78654</a>
+  - content type should be used universally</p>.
 </body></html>
