@@ -127,11 +127,14 @@ points (#resolvePluginRegistry).</li>
 <li>all versions of a plug-in are disabled when the version in use causes a conflict - when 
 a plug-in is disabled for causing a conflict, if there are different versions available, the highest one 
 should be selected and the resolution should try to enable that one;</li>
-<li>order should not matter - for instance, when a conflict is detected, all plug-ins involved 
-should be disabled not only the one that introduced the conflict;</li>
-<li>fragments not associated with a plug-in or fragments not used because another version of the same fragment exists 
-should be trimmed when the user requests it (and currently are not)</li>
-<li>the resulting plug-in descriptor should indicate which portions came from fragments (feature request)</li>
+  <li>order should not matter - for instance, when a conflict is detected, all 
+    plug-ins involved should be disabled not only the one that introduced the 
+    conflict (bug <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=34752">34752</a>);</li>
+<li>fragments not associated with a plug-in or fragments not used because another 
+    version of the same fragment exists should be trimmed when the user requests 
+    it and currently are not (bug <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=33911">33911</a>).</li>
+  <li>the resulting plug-in descriptor should indicate which portions came from 
+    fragments (feature request <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=23165">23165</a>)</li>
 <li>Incrementality (feature request)- it should be possible to resolve incrementally new 
 plug-ins that are added or to remove existing plug-ins and update the affected
 parts of the registry accordingly.</li>
