@@ -130,14 +130,25 @@
           by developers. For each plug-in, the <code>plugin.xml </code>or <code>manifest.mf 
           </code>files need to be updated to let Eclipse know that the JARs should 
           no longer be on the classpath and should be replaced with &quot;.&quot;.</li>
-        <li>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=86492">bug 
-          86492</a>] Icons shipped in fragments</li>
-        <li>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=85333">bug 
-          85333</a>] Plug-in holding the splash screen cannot be JAR'd</li>
+        <li><img src="../../images/small_progress.gif" width="14" height="5"> 
+          [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=86492">bug 86492</a>] 
+          Icons shipped in fragments - Tod and DJ have been talking about this 
+          and are making progress. Most likely we just have to ensure our callers 
+          are using the appropriate $nl$ method calls, etc.</li>
+        <li><img src="../../images/small_progress.gif" width="14" height="5"> 
+          [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=85333">bug 85333</a>] 
+          Plug-in holding the splash screen cannot be JAR'd - Lots of different 
+          options here, none of them good. Looks like we will add code to Main.java 
+          which temporairly extracts the splash screen and then deletes the temporary 
+          file when we are done. We would like to be able to display the splash 
+          using java code but its too hard to find SWT when you live in the startup.jar.</li>
         <li><img src="../../images/small_check.gif" width="10" height="11"> Plug-ins 
           which provide intro content cannot be JAR'd</li>
-          <li><img src="../../images/small_check.gif" width="10" height="11"> [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=85013">bug 85013</a>] Cannot build when target is JAR'd</li>
-          <li>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=87719">bug 87719</a>] Problems with Ant and classloaders</li>
+        <li><img src="../../images/small_check.gif" width="10" height="11"> [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=85013">bug 
+          85013</a>] Cannot build when target is JAR'd</li>
+        <li><img src="../../images/small_check.gif" width="10" height="11"> [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=87719">bug 
+          87719</a>] Problems with Ant and classloaders - Patch submitted to Platform/Ant 
+          team. </li>
       </ul>
       <p>&nbsp;</p></td>
   </tr>
