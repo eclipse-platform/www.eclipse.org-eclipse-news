@@ -18,7 +18,7 @@ valid files from being added to the Eclipse workspace. This document
 describes the current set of restrictions in Eclipse 3.0, and proposes changes to
 lift these restrictions.
 <p>
-<font size="-1">Last modified: September 27, 2004</font> 
+<font size="-1">Last modified: October 1, 2004</font> 
 </blockquote>
 <p>
 <h3>Background</h3>
@@ -76,7 +76,7 @@ to represent Windows paths with meaningful devices. Using the host operating
 system to make assumptions about data that might not be intended for that platform
 will result in unwanted side-effects.
 <p>
-The proposed solution acknowledges the fact that there are two legitimate groups 
+The proposed solution accomodates the two interesting categories 
 of <tt>IPath</tt> users:
 <ul>
 <li>Code that needs a platform-specific representation. In other words, someone that
@@ -94,7 +94,8 @@ the path as a <tt>String</tt>. The <tt>toOSString</tt> method creates a platform
 encoding suitable for passing to <tt>java.io.File</tt> or other API that deals directly
 with the file system.
 <p>
-The proposed solution is to create two constructors for creating <tt>IPath</tt>:
+The proposed solution is to introduce two constructors for creating <tt>IPath</tt>
+that perform the inverse of the two existing <tt>toString</tt> methods:
 <ul>
 <li>A constructor that decodes a platform-specific string.  For example, this would 
 parse the output of a previous call to <tt>IPath.toOSString</tt>, or the value returned
