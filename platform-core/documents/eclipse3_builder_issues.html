@@ -248,12 +248,13 @@ This option would only run builders on the specified set of projects, avoiding b
 of either prerequisite or downstream dependent projects.  This option could be
 made available in both autobuild and manual build modes.  While a manual working
 set build can be done using current API, it would be beneficial to introduce a new 
-core API method, IWorkspace.build(IProject[], int, IProgressMonitor).  This would
-ensure correct computation of build order, and allow for participation by other
-proposed mechanisms such as workspace builders or pluggable build strategies.
+core API method for working set builds.
+This would ensure correct computation of build order, and allow for participation 
+by other proposed mechanisms such as workspace builders or pluggable 
+build strategies.
 </p>
 <p>
-This solution aims to address only problem #3 listed above.  It may work in
+This solution aims to address only problem P3 listed above.  It may work in
 conjunction with other solutions listed in this document. 
 </p>
 <p>
@@ -278,6 +279,29 @@ assertion is difficult to verify if we introduce a dynamic build order such as
 workspace builders or pluggable build strategies.  Similar difficulties exist with 
 manual working set build.
 </p>
+<h4>S4. Disabling builders on a per-project basis</h4>
+<p>
+An alternative to working set build is to add new API for disabling build on a
+per-project (or even per-builder) basis.  The setting would apply to all forms of builds 
+(incremental ,full, auto, project, workspace).  The value would be persisted by the 
+platform.  Builds scoped at the workspace level (including autobulid) would simply omit 
+projects for which building is disabled.
+</p>
+<p>
+This solution is essentially equivalent in functionality to working set build.  It answers
+the question &quot;what not to build?&quot; rather than the question &quot;what
+to build?&quot;.  This is perhaps an easier story to explain to users (similar concept
+in some ways to project close/open). With working sets there is confusion about
+what types of builds it will apply to, in addition to overloading the working set 
+concept currently used in the UI for filtering views.
+</p>
+<p>
+If this solution was carefully implemented, it could also solve the long standing
+<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=21311">
+enhancement request</a> to be able to turn off the java builder (in order to replace it with
+javac or other compiler).
+</p>
+
 <h3>Proposed action</h3>
 <p>
 TBD
