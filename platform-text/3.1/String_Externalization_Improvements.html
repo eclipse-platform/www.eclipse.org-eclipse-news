@@ -1,41 +1,40 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><title>String Externalization Improvements</title>
-<link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
-</head>
+<link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css"></head>
 <body>
 &nbsp;
-<table BORDER=0 CELLSPACING=5 CELLPADDING=2 WIDTH="100%" >
-<tr>
-    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#0080C0"><b><font face="Arial,Helvetica"><font color="#FFFFFF">String Externalization Improvements</font></font></b></td>
+<table border="0" cellpadding="2" cellspacing="5" width="100%">
+<tbody><tr>
+    <td colspan="2" align="left" bgcolor="#0080c0" valign="top" width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">String Externalization Improvements</font></font></b></td>
 </tr>
   <tr> 
-    <td WIDTH="100%"> 
-
-This document contains possible work items to improve the externalization of strings. It is under continuous refinement. Feedback welcome.<br>
-Last edited: 29.09.2004
+    <td width="100%"> This document contains possible
+work items to improve the externalization of strings. It is under
+continuous refinement. Feedback welcome.<br>
+Last edited: 5.11.2004
 <h4>Possible Work Items</h4>
 <ul>
 <li style="font-weight: bold;">improve Java Editor<br style="font-weight: normal;">
 </li>
   <ul>
-    <li>navigate from selected key in Java editor to definition in properties file editor</li>
+    <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> navigate from selected key in Java editor to definition in properties file editor</li>
   </ul>
   <ul>
     <ul>
-      <li>navigate to end of file if the key is not yet defined<br>
+      <li>navigate to start of file if the key is not yet defined<br>
       </li>
     </ul>
   </ul>
 
   
   <ul>
-    <li>show value when hovering over key in Java editor</li>
+    <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14"> show value when hovering over key in Java editor</li>
   </ul>
 
   <ul style="font-weight: bold;">
     
     <ul style="font-weight: normal;">
-      <li>show value as is in the properties file</li>
+      <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> show value as is in the properties file</li>
     </ul>
 
     
@@ -62,8 +61,8 @@ Last edited: 29.09.2004
 
 </ul><li style="font-weight: bold;">improve Properties File editor</li>
   <ul>
-    <li>syntax coloring for Properties File Editor (comments, keys and values)<br>
-</li><li>provide separate double-click strategy for key and value part<br>
+    <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> syntax coloring for Properties File Editor (comments, keys and values)<br>
+</li><li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> provide separate double-click strategy for key and value part<br>
  </li>
 <li>navigate from selected key and value in properties file to location in Java editor and Plug-in Manifest editor<br>
 </li>
@@ -73,7 +72,7 @@ Last edited: 29.09.2004
     <li>allow to sort alphabetically</li>
   </ul>
   <ul>
-    <li>allow to group by first common prefix<br>
+    <li>allow to group by first common prefix up to a specified separator (preference)
     </li>
   </ul>
 
@@ -99,11 +98,7 @@ Last edited: 29.09.2004
 <li>remove unused key (plus value)</li><li>correct invalid strings that cause MessageFormat to fail<br>
     </li>
     </ul>
-    <li>offer folding via first common prefix<br>
-    </li>
-    <ul>
-<li>maybe a separator should be a preference</li>
-    </ul>
+    <li>offer folding via first common prefix up to a specified separator (preference)</li>
     <li>offer an Outline (request from Adam - asked him via e-mail)</li>
 
   </ul>
@@ -237,7 +232,7 @@ currently selected element</li>
 </ul><br>
     </td>
 </tr>
-</table>
+</tbody></table>
 <table border="0" cellpadding="2" cellspacing="5" width="100%"><tbody><tr><td colspan="4" align="left" bgcolor="#0080c0" valign="top" width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">Legend
 			</font></font></b></td>
 		</tr>
