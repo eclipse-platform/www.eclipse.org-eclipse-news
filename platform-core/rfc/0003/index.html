@@ -27,22 +27,31 @@
     for log retrieval, and changing the log file format to XML.
   <p><b> By John Arthorne, OTI.</b> <br>
     <font size="-1">Created: 28-NOV-2001.</font> <br>
-    <font size="-1">Modified 30-NOV-2001.  Sample log file added.</font> <br>
+    <font size="-1">Modified 5-DEC-2001.  Sample log file added.</font> <br>
   </blockquote>
 <hr>
 <h2>The Problem</h2>
-Currently, the only way to programatically access the platform log is by adding a listener through 
-a callback.  This approach has some drawbacks:
+<p>
+Currently, the only way to programatically access the platform log is by adding a listener by calling
+<code>Platform.addLogListener(ILogListener)</code>.  While this approach has many benefits,
+there are also some drawbacks:
 <ul>
 <li>If errors or warnings occur during platform startup, before listeners can be added, it is impossible
 to programatically obtain information about these errors.  It is even impossible to detect if startup
 errors have occurred.</li>
+<li>A listener has no access to errors that have been logged before that listener was activated.
+Since plug-ins cannot control when they are started, they may miss logged information that is
+interesting to them.</li>
 <li>Each listener that wants to maintain a representation of what has been logged must
-keep their own list.  This leads to a duplication of the information available in the log file on disk.
+keep their own list.  This leads to a duplication of the information available in the log file on disk.</li>
 </ul>
+</p>
 <h2>The Solution</h2>
-Add an API method to org.eclipse.core.runtime.Platform for reading the log file back in from disk.
-The proposed API method is:
+<p>
+The proposed solution is to add an API method to org.eclipse.core.runtime.Platform for reading the 
+log file back in from disk.  This API would be intended as a supplement to the existing listener mechanism.  
+That is, when a plug-in starts up, it can call the API method to read old log entries, then install a log listener for
+handling new entries as they occur.  The proposed API method is:
 <pre>
 /**
  * Returns all the status objects that have been logged during this invocation of the Platform.
@@ -76,17 +85,18 @@ the log file name or storage format is subject to change without notice.
 <br>&nbsp;&nbsp;&nbsp;&nbsp;CODE CDATA #REQUIRED
 <br>&nbsp;&nbsp;&nbsp;&nbsp;MESSAGE CDATA #REQUIRED&gt;
 <br>
-<br>&lt;!ELEMENT EXCEPTION&gt;
+<br>&lt;!ELEMENT EXCEPTION (EXCEPTION)? &gt;
 <br>&lt;!ATTLIST EXCEPTION
 <br>&nbsp;&nbsp;&nbsp;&nbsp;MESSAGE CDATA #REQUIRED
 <br>&nbsp;&nbsp;&nbsp;&nbsp;STACK-TRACE CDATA #REQUIRED&gt;
 </p>
 <p>
-The proposed name of the log file is log.xml.  The log file would continue to be 
-stored directly in the .metadata directory of the platform.  Here is a
-<A HREF="sample.txt">sample log file</A> in XML format.
+The log file would remain at its present location, and its name would remain the same (.log).
+While this name is not ideal, changing the log file name would be too disorienting for the large existing
+user base that is familiar with the current log location.  Here is a 
+<A HREF="sample.txt">sample log file</A> in the new XML format.
 <h2>RFC Status</h2>
-<p>This proposal is currently soliciting comments.  Please provide comments by 6-DEC-2001.
+<p>This proposal is currently soliciting comments.  Please provide comments by 7-DEC-2001.
 Please provide feedback early rather than waiting until the voting period.  Comments should be directed
 to the core mailing list: <a href="http://dev.eclipse.org/mailman/listinfo/platform-core-dev">platform-core-dev@eclipse.org</a> 
 (<a href="mailto:platform-core-dev@eclipse.org">post</a>, <a href="http://dev.eclipse.org/mhonarc/lists/platform-core-dev/maillist.html">archives</a>).</p>
