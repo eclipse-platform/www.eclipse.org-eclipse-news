@@ -131,10 +131,9 @@
         <li><img src="../../images/small_check.gif" width="10" height="11"> [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=87719">bug 
           87719</a>] Problems with Ant and classloaders - Patch submitted to Platform/Ant 
           team. </li>
-        <li><img src="../../images/small_progress.gif" width="14" height="5"> 
-          [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=87973">bug 87973</a>] 
-          - About content cannot be JAR'd</li>
-        <li>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=88254">bug 
+        <li><img src="../../images/small_check.gif" width="10" height="11"> [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=87973">bug 
+          87973</a>] - About content cannot be JAR'd</li>
+        <li><img src="../../images/small_check.gif" width="10" height="11"> [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=88254">bug 
           88254</a>] - Test failures when running against a JAR'd Eclipse.</li>
       </ul>
       <p>&nbsp;</p></td>
@@ -175,7 +174,7 @@
             header.</li>
           <li>Otherwise if you have a <code>plugin.xml</code> then change the 
             library entry to be a dot like this: <br>
-          <code>&nbsp;&nbsp;&nbsp;&lt;runtime&gt;<br>
+            <code>&nbsp;&nbsp;&nbsp;&lt;runtime&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;library name=&quot;.&quot;&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;export name=&quot;*&quot;/&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/library&gt;<br>
@@ -223,6 +222,12 @@
       <ul>
         <li>You need to ensure that your script will still work against plug-ins 
           that are JAR'd as well as plug-ins which aren't JAR'd.</li>
+      </ul>
+      <p>If you have other scripts (e.g. javadoc generation scripts):</p>
+      <ul>
+        <li>If the script assumes the layout of plug-ins and needs to add code 
+          JAR files to the classpath, then it must be modified to put the whole 
+          JAR'd plug-in on the classpath rather than the individual JARs.</li>
       </ul>
       <p>Things to update in 3.0 manifests:</p>
       <ul>
