@@ -47,7 +47,7 @@
 </ul>
 <h3>On automatic content type detection</h3>
 <p>Content types determine many properties and actions related to files such as 
-  encodings, associated editors, etc. Automatic content type determination allows 
+  encoding, associated editors, etc. Automatic content type determination allows 
   content type specific actions without requiring the user to manually define 
   the content type for a given file. Content type detection is based on:</p>
 <ul>
@@ -136,7 +136,7 @@
 <p>Content descriptions are obtained by calling <code>IContentTypeManager#getDescriptionFor</code> 
   method. A content description contains interesting information (such as encoding) 
   about an arbitrary stream of bytes. These information are filled partially by 
-  the platform and partially by the content describer ellected (if any).</p>
+  the platform and partially by the content describer elected (if any).</p>
 <h3>Conflict resolution</h3>
 <p>Content types are managed by the platform but, except for a few cases, plug-ins 
   are in charge of contributing content types. While this provides good flexibility, 
@@ -192,19 +192,19 @@
     </ul></p>
     </li>
   <li><a name="FAQ-hierarchy"></a>Why are content types hierarchical? 
-    <p>To allow important properties to be inherited by new, specialized content 
+    <p>To allow important properties to be inherited by new specialized content 
       types: 
     <ul>
       <li>the default charset</li>
       <li>text/binary nature</li>
       <li>content description</li>
-      <li>associations defined externally by plug-ins (for instanec, any editors 
+      <li>associations defined externally by plug-ins (for instance, any editors 
         associated with an ancestor should work with any descendants)</li>
     </ul></p>
     </li>
   <li> What happens if the base type for a new content type is not present in 
     the platform (the plug-in that provides it is not available)? 
-    <p>The content type (and conseq&uuml;ently any descendants) will be deemed 
+    <p>The content type (and consequently any descendants) will be deemed 
       invalid and ignored.</p>
   </li>
   <li><a name="FAQ-MIME"></a>Do Eclipse's content types have anything to do with 
@@ -231,7 +231,7 @@
     <p>What happens is that only one of the content types (arbitrarily selected) 
       will be enabled. If only one of them is declared as high priority, it will 
       be picked. Otherwise, one will be arbitrarily chosen by the platform. In 
-      either case, the others will be made into aliases for the ellected content 
+      either case, the others will be made into aliases for the elected content 
       type.</p>
   </li>
   <!--li>How are conflicts (two different content types associated to the same file) 
@@ -281,10 +281,10 @@
       <li>make your specialized content type have this placeholder as its base 
         type;</li>
     </ol>
-    <p>If the originally indended base type is available, your base type will 
+    <p>If the originally intended base type is available, your base type will 
       be marked as just an alias, and your specialized content type will be properly 
       attached to the official content type. Otherwise, the placeholder will be 
-      ellected, and although things might not be as great as intended (actions 
+      elected, and although things might not be as great as intended (actions 
       associated to the original content type will not be available), your content 
       type will still be enabled.</p>
   </li>
