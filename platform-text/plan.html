@@ -52,11 +52,13 @@
               an auto activation trigger</li>
           </ul>
         </li>
-        <li>interactive status bar 
+        <li><img src="progress.gif" height=5 width=16> interactive status bar 
           <ul>
-            <li>change overwrite mode on double click</li>
+            <li><img src="ok.gif" height=10 width=10> change overwrite mode on 
+              double click</li>
             <li>change read/only flag on double click</li>
-            <li>change raw/smart mode on double click (see smart typing section)</li>
+            <li><img src="ok.gif" height=10 width=10> change raw/smart mode on 
+              double click (see smart typing section)</li>
           </ul>
         </li>
         <li><font color="#000000">provide actions to show/hide vertical ruler 
@@ -80,14 +82,16 @@
       </ul>
       <h3>Information presentation</h3>
       <ul>
-        <li>generalize hover concept to show context information of elements and 
-          allow for configurable presentation 
+        <li><img src="progress.gif" height=5 width=16> generalize hover concept 
+          to show context information of elements and allow for configurable presentation 
           <ul>
             <li>control as hover or view part </li>
-            <li>content as text, list, or tree</li>
+            <li><img src="ok.gif" height=10 width=10> content as text, list, or 
+              tree</li>
           </ul>
         </li>
-        <li>change bar vertical ruler column 
+        <li><img src="progress.gif" height=5 width=16> change bar vertical ruler 
+          column 
           <ul>
             <li>shows difference to a selected revision/snapshot/saved state</li>
             <li>ruler hover shows original content</li>
@@ -102,15 +106,18 @@
       <h3>Typing</h3>
       <h4>Planned items</h4>
       <ul>
-        <li>smart insert new line before/after cursor line</li>
-        <li>duplicate selection/line</li>
-        <li>transpose lines/words/characters</li>
-        <li>change selection to upper/lower case</li>
+        <li><img src="ok.gif" height=10 width=10> smart insert new line before/after 
+          cursor line</li>
+        <li><img src="ok.gif" height=10 width=10> duplicate selection/line</li>
+        <li>(transpose lines/words/characters)</li>
+        <li><img src="ok.gif" height=10 width=10> move lines</li>
+        <li><img src="ok.gif" height=10 width=10> change selection to upper/lower 
+          case</li>
         <li>smart Backspace/Delete/yank line: will remove everything inserted 
           by an auto indent strategy</li>
         <li>delete block of empty lines (keep none or one)</li>
-        <li>introduce "raw" mode in which every key stroke is stripped down to 
-          its bare meaning 
+        <li><img src="ok.gif" height=10 width=10> introduce "raw" mode in which 
+          every key stroke is stripped down to its bare meaning 
           <ul>
             <li> mode is shown in the status line</li>
             <li>action with key binding to toggle mode</li>
@@ -122,7 +129,6 @@
       <h4>Investigation items</h4>
       <ul>
         <li>investigate macro support (requires command based text infrastructure)</li>
-        <li><font color="#000000">investigate Tab navigator contributions</font></li>
       </ul>
       <h3>Preference handling</h3>
       <ul>
@@ -183,24 +189,45 @@
 </tr>
 
   <tr> 
-    <td WIDTH="100%"> 
-      <h4> <a NAME="Milestone_Planning"></a>Milestone</h4>
+    <td WIDTH="100%">
+      <p>Milestone M2 is the first milestone whose plan items are annotated with 
+        estimates of the time it needs to fulfill them. The estimates are average 
+        times, i.e., they do not distinguish between experienced and less experienced 
+        developers. Also, the times does not sum up to the total time available 
+        for this milestone. The developers do not exclusively work for this component.</p>
+      <h3>Milestone M2 </h3>
+      <h2></h2>
       <ul>
-        <li>focus on the implementation and exploration of new functions 
+        <li> change bar vertical ruler (started in M1, 6 days)</li>
+        <li>smart delete (revers of Auto Indentation/ Auto Edit strategies) (3 
+          days)</li>
+        <li>introduce info squiggles (0.5 days)</li>
+        <li>editor view splitting (3 days)</li>
+        <li>gesture reduction using content assist (2 days) 
           <ul>
-            <li>generalized hover concept</li>
-            <li>smart typing</li>
-            <li>change bar vertical ruler column</li>
+            <li>autoactivation of content assist after completion insertion</li>
+            <li>identify and investigate bad scenarios for content assist</li>
           </ul>
         </li>
-        <li>initial round of code consolidation</li>
+        <li>investigate and design reconciling pipeline including nontrivial proof 
+          of concept implementation (20+ days)</li>
+        <li>code consolidation (15+ days) 
+          <ul>
+            <li>org.eclipse.text (5 days)</li>
+            <li>org.eclipse.jface.text (at least partially) (10 days)</li>
+          </ul>
+        </li>
+        <li>working copy plug-in (2 days)</li>
+        <li>PR pass (6 days)</li>
+        <li>bug fixing (9 days)</li>
+        <li>testing (3 day)</li>
       </ul>
     </td>
 </tr>
 
 <tr>
-<td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#0080C0"><b><font face="Arial,Helvetica"><font color="#FFFFFF">Bug
-Tracking</font></font></b></td>
+    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#0080C0"><b><font face="Arial,Helvetica"><font color="#FFFFFF">Bug 
+      Tracking</font></font></b></td>
 </tr>
 
 <tr>
