@@ -5,11 +5,6 @@
    <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
 <title>User Settings: FAQ</title>
 <link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
-<STYLE TYPE="text/css">
-<!--
-CODE { font-size: smaller }
--->
-</STYLE>
 </head>
 <body text="#000000" bgcolor="#FFFFFF">
 
@@ -21,7 +16,7 @@ CODE { font-size: smaller }
 
   <tr>
     <td align="left" colspan="2"> 
-		<font size=-1><i>last updated: April 2, 2004</i></font>
+		<font size=-1><i>last updated: January 19, 2005</i></font>
 	</td>
   </tr>
 
@@ -56,7 +51,7 @@ CODE { font-size: smaller }
 	</ol>
 	Extensions:
 	<ol>
-        <li>How do I extend the preferences and add my own scope?</li>
+        <li><a href="#extension">How do I extend the preferences and add my own scope?</a></li>
 	</ol>
     </td>
   </tr>
@@ -630,10 +625,39 @@ Through the scope context.
   </tr>
   <tr> 
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
-    <td WIDTH="98%"><b><a name="customization"></a>How does the plug-in customization story work?</b>
-	<p></p>
+    <td WIDTH="98%"><p><b><a name="customization"></a>How does the plug-in customization 
+        story work?</b> </p>
+      <p>Check out the separate <a href="plugin_customization.html">document</a> 
+        on plug-in customization. It explains the order that preference defaults are applied
+		and compares this to the way it worked in Eclipse 2.1.</p>
+      <p></p>
 	</td>
   </tr>
 
+  <tr> 
+    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2"><hr></td>
+  </tr>
+  <tr> 
+    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
+    <td WIDTH="98%"><p><b><a name="extension">How do I extend the preferences and add my own scope?</a></b> </p>
+		
+      <p>1. Extend the org.eclipse.core.runtime.preferences extension point. 
+	  <code><pre>
+	&lt;extension point=&quot;org.eclipse.core.runtime.preferences&quot;&gt;
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;scope name=&quot;myScope&quot; class=&quot;com.example.preferences.MyScope&quot;/&gt;
+	&lt;/extension&gt;
+      </pre></code>
+	  </p>
+	  <p>2. Have your class implement IScope and IEclipsePreferences.
+	  <code><pre>
+	  public class MyScope implements IScope, IEclipsePreferences {
+	  &nbsp;&nbsp;&nbsp;&nbsp;...
+	  }
+	  </pre></code>
+	  </p>
+      <p>Here is an <a href="example_scope.zip">example</a> plug-in which creates a new scope.</p>
+      <p></p>
+	</td>
+  </tr>
   
 </table>
