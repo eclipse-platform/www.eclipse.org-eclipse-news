@@ -29,7 +29,7 @@ Importing and Exporting Projects</h1></center>
 <br>The goal is to provide a basic and extensible way of sharing projects
 when a repository is not required.
 <p><b>By Rodrigo Peretti, OTI</b>
-<br><font size=-1>Last Modified: November 26, 2001</font></blockquote>
+<br><font size=-1>Last Modified: November 30, 2001</font></blockquote>
 
 <hr>
 <h2>
@@ -38,10 +38,12 @@ Sometimes when prototyping some features, developers do not want or do
 not need to use a repository. But the developer usually wants to have a
 way of sharing or persisting the projects that contain these features.
 This sharing can be something like sending an email with the project, moving
-the project to a new workspace, etc...
-<br>This RFC proposes APIs to allow this kind of sharing. One of the goals
-is to start persisting very few information and add more as more use cases
-come up.
+the project to a new workspace, etc... Moving projects from one workspace to
+another using copy/cut and paste could become possible through these APIs.
+<br>The current APIs available on Resources plug-in loosely expose ways of
+doing a feature similar do the one being proposed. This RFC proposes more 
+consistent APIs to allow this kind of sharing. One of the goals is to start
+with very few metadata information and add more as more use cases come up.
 <h2>
 Proposed API</h2>
 The current proposal is already in an API format. The API is going to be
