@@ -182,14 +182,14 @@
 <ol>
   <li> How will plugin providers benefit from a central content type catalog? 
     <p> Generally by using the same content type registry and sharing the same 
-      concept of content/file type. Other examples are: 
+      concept of content/file type. Other examples are:
     <ul>
       <li>a builder could use its well-known content type to filter out files 
         whose names don't match with the content type file section spec;</li>
       <li>the user interface could know what editors to offer for a given file 
         selected (associations between editors and content types should be kept 
         separately from the content type catalog);</li>
-    </ul></p>
+    </ul></p> 
     </li>
   <li><a name="FAQ-hierarchy"></a>Why are content types hierarchical? 
     <p>To allow important properties to be inherited by new specialized content 
@@ -212,14 +212,14 @@
     <p>Not so far.</p>
   </li>
   <li>How can users customize the way content types are chosen? 
-    <p>By: 
+    <p>By:
     <ul>
       <li>associating additional file specs to existing content types</li>
       <li>defining a content type as the default one for a given file spec (not 
         supported yet)</li>
       <li>overriding content type defined attributes, such as default encoding 
         (not supported yet)</li>
-    </ul></p>
+    </ul></p> 
     </li>
   <li>Can plug-ins override the content type describer for an existing content 
     type? 
@@ -260,7 +260,7 @@
   <li>What are content type aliases? 
     <p>When a content type is marked as an alias for another content type (due 
       to a file spec conflict), all of its properties are ignored, and any associations 
-      with it will actually be made on the target type.</li>
+      with it will actually be made on the target type.</p></li>
   <li>What are aliases for? 
     <p>It is a mechanism to prevent conflicts. When multiple plugins contribute 
       content types associated with the same file specs, we have a conflict. Conflicts 
@@ -299,10 +299,10 @@
   </li>
   <li>How does a client figure out whether a given file is a text file or not? 
     <p>The proposed approach is to check if the file's content type is a kind 
-      of the "org.eclipse.core.runtime.text" content type, which is intended to 
-      be the ancestor for all text oriented content types. If it turns out to 
-      be a very frequent idiom, we might consider proving a convenience API to 
-      do that.</p>
+      of the &quot;org.eclipse.core.runtime.text&quot; content type, which is 
+      intended to be the ancestor for all text oriented content types. If it turns 
+      out to be a very frequent idiom, we might consider proving a convenience 
+      API to do that.</p>
   </li>
   <li>Do content types have to contribute content describers?
     <p> No, although if the file has a identifiable signature/format, it is recommended, 
