@@ -60,7 +60,7 @@ but gives enough room to describe the progress for longer running cases and bloc
 operations.
 </p>
 <p>
-<img src="../new.gif" width="31" height="14"> We also need a story for how dialogs with embedded
+<img src="../images/new.gif" width="31" height="14"> We also need a story for how dialogs with embedded
 progress indicators will work (e.g.: wizards, launch configuration dialog, 
 preference dialog).  Having a nested progress dialog within another
 dialog does not look nice.  Need to revisit all implementors of IRunnableContext
@@ -93,7 +93,7 @@ Examples:
 </ul>
 </p>
 <p>
-<img src="../new.gif" width="31" height="14"> This new functionality should have a generic component
+<img src="../images/new.gif" width="31" height="14"> This new functionality should have a generic component
 that provides a uniform presentation of a busy view.  Possible solutions include
 an icon overlay, changing title bar gradient, changing appearance of part pane border,
 and changing the cursor.
@@ -198,7 +198,7 @@ can then spin the event loop (ala EventLoopProgressMonitor), and open a dialog
 when the foreground operation is blocked.
 </p>
 <p>
-<img src="../new.gif" width="31" height="14"> A suggestion was raised that this support could work by
+<img src="../images/new.gif" width="31" height="14"> A suggestion was raised that this support could work by
 opening a second display with its own event loop, just for the purpose of giving
 some form of progress feedback when people writing long running code in the 
 UI thread.  Mcq believes this will not work on all platforms.
@@ -268,7 +268,7 @@ for the responsive UI work.
 <h3>Miscellaneous</h3>
 <h4>Posting behind current operation</h4>
 <p>
-<img src="../new.gif" width="31" height="14"> Dirk to provide more detail here since the phone connection 
+<img src="../images/new.gif" width="31" height="14"> Dirk to provide more detail here since the phone connection 
 was breaking up.  The issue is when you want to &quot;post&quot; a chunk of
 code to run after the current operation is completed.  This is currently accomplished
 using asyncExec, but if the operation is run in the UI thread, then the asyncExec
@@ -281,13 +281,13 @@ how to handle this for clients not using the jobs API.
 </p>
 <h4>Concurrency test harness</h4>
 <p>
-<img src="../new.gif" width="31" height="14"> The core concurrency test harness may have some pieces that can be generalized
+<img src="../images/new.gif" width="31" height="14"> The core concurrency test harness may have some pieces that can be generalized
 and pushed down into the test.harness project, to help other components in
 writing concurrency tests.
 </p>
 <hr>
 <p>
-Go <a href="../plan_concurrency.html">back to concurrency home</a>.
+Go <a href="../planning/3.0/plan_concurrency.html">back to concurrency home</a>.
 </p>
 (Plan item bug reference: <a
  href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=36957">36957</a>)<br>
