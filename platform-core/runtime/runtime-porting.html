@@ -211,14 +211,13 @@
   are given here in logical groupings by supplying plug-in:</p>
 <ul>
   <li>../org.eclipse.core.runtime.compatibility/bin;../org.eclipse.core.runtime.compatibility/compatibility.jar;</li>
-  <li>../org.eclipse.osgi/bin;../org.eclipse.osgi/osgi.jar;../org.eclipse.osgi/core.jar; 
-  </li>
+  <li>../org.eclipse.osgi/bin;../org.eclipse.osgi/osgi.jar;</li>
   <li>../org.eclipse.update.configurator/bin;../org.eclipse.update.configurator/configurator.jar;</li>
   <li>../org.eclipse.osgi.util/util.jar;</li>
 </ul>
 <p>In addition the following jars may be required in special cases:</p>
 <ul>
-  <li> ../org.eclipse.osgi/resolver.jar; ../org.eclipse.osgi/defaultAdaptor.jar; 
+  <li> ../org.eclipse.osgi/core.jar; ../org.eclipse.osgi/resolver.jar; ../org.eclipse.osgi/defaultAdaptor.jar; 
     ../org.eclipse.osgi/eclipseAdaptor.jar; ../org.eclipse.osgi/console.jar</li>
 </ul>
 <p>While updating such scripts, you should also take the opportunity to clean 
@@ -287,146 +286,135 @@
   <li>Context - The standard <tt>Plugin</tt> class provides access to various 
     runtime-provided function such as preferences and logging.</li>
 </ul>
-<p>In the Eclipse 3.0 runtime picture, these roles and responsibities are factored 
-  somewhat into distinct objects.</p>
+<p>In the Eclipse 3.0 runtime picture, these roles and responsibilities are factored 
+  into distinct objects.</p>
 <dl> 
-  <dt><b>Bundle</b></dt>
-  <dd>Bundles are the OSGi unit of modularity. There is one classloader per bundle 
-    and Eclipse-like inter-bundle class loading dependency graphs can be constructed. 
-    Bundles have lifecycle for start and stop and the OSGi framework broadcasts 
-    bundle related events (e.g., install, resolve, start, stop, uninstall, ...) 
-    to interested parties. Unlike the Eclipse <tt>Plugin</tt> class, the OSGi 
-    <tt>Bundle</tt> class is not extensible. That is, developers do not have the 
-    opportunity to define their own bundle class.</dd>
-  <dt><b>BundleActivator</b></dt>
-  <dd>BundleActivator is an interface defined by the OSGi framework. Each bundle 
-    can define a bundle activator class much like a plug-in can define its <tt>Plugin</tt> 
-    class. This class is instantiated by the framework and used to implement the 
-    <tt>start()</tt> and <tt>stop()</tt> lifecycle processing. There is a major 
-    difference however in the nature of this lifecycle processing. In Eclipse 
-    it is common (though not recommended) to have the <tt>Plugin</tt> classes 
-    do both initialization and registration. In OSGi activators must only do registration. 
-    Doing large amounts of initialization (or any other work) in <tt>BundleActivator.start()</tt> 
-    threatens the liveness of the system.</dd>
-  <dt><b>BundleContext</b></dt>
-  <dd>BundleContexts are the OSGi mechanism for exposing general system function 
-    to individual bundles. Each bundle has a unique and private instance of BundleContext 
-    which they can use to access system function (e.g., getBundles() to discover 
-    all bundles in the system).</dd>
-  <dt><b>Plugin</b></dt>
-  <dd><tt>BundleHelper</tt> is an Eclipse class designed to file the gap between 
-    <tt>Plugin</tt> and <tt>Bundle/BundleContext</tt>. It provides methods such 
-    as <tt>getLog()</tt> and <tt>getStateLocation()</tt> which were previously 
-    found on <tt>Plugin</tt>.</dd>
+  <dl>
+    <dt><b>Bundle</b></dt>
+    <dd>Bundles are the OSGi unit of modularity. There is one classloader per 
+      bundle and Eclipse-like inter-bundle class loading dependency graphs can 
+      be constructed. Bundles have lifecycle for start and stop and the OSGi framework 
+      broadcasts bundle related events (e.g., install, resolve, start, stop, uninstall, 
+      ...) to interested parties. Unlike the Eclipse <tt>Plugin</tt> class, the 
+      OSGi <tt>Bundle</tt> class is not extensible. That is, developers do not 
+      have the opportunity to define their own bundle class.</dd>
+    <dt><b>BundleActivator</b></dt>
+    <dd>BundleActivator is an interface defined by the OSGi framework. Each bundle 
+      can define a bundle activator class much like a plug-in can define its <tt>Plugin</tt> 
+      class. This class is instantiated by the framework and used to implement 
+      the <tt>start()</tt> and <tt>stop()</tt> lifecycle processing. There is 
+      a major difference however in the nature of this lifecycle processing. In 
+      Eclipse it is common (though not recommended) to have the <tt>Plugin</tt> 
+      classes do both initialization and registration. In OSGi activators must 
+      only do registration. Doing large amounts of initialization (or any other 
+      work) in <tt>BundleActivator.start()</tt> threatens the liveness of the 
+      system.</dd>
+    <dt><b>BundleContext</b></dt>
+    <dd>BundleContexts are the OSGi mechanism for exposing general system function 
+      to individual bundles. Each bundle has a unique and private instance of 
+      BundleContext which they can use to access system function (e.g., getBundles() 
+      to discover all bundles in the system).</dd>
+    <dt><b>Plugin</b></dt>
+    <dd>The new <tt>Plugin</tt> is very much like the original Eclipse <tt>Plugin</tt> 
+      class with the following exceptions: <tt>Plugin</tt> objects are no longer 
+      a) required or b) managed by the runtime and various methods have been deprecated 
+      (see below). As such, Plugin continues to provide context access. It is 
+      essentially a convenience mechanism providing a host of useful function 
+      and mechanisms but is no longer absolutely required. Much of the function 
+      provided there is also available on the <tt>Platform</tt> class in the runtime. 
+      <p><tt>Plugin</tt> also implements <tt>BundleActivator</tt>. This recognizes 
+        the convenience of having one central object representing the lifecycle 
+        and semantic of a plug-in. Note that this does not however sanction the 
+        eager initialization of data structures that is common in plug-ins today. 
+        We cannot stress enough that plug-ins can be activated because a somewhat 
+        peripheral class was referenced during verification of a class in some 
+        other plug-in. That is, just because your plug-in has been activated does 
+        not necessarily mean that its function is needed. Note also that you are 
+        free to define a different <tt>BundleActivator</tt> class or not have 
+        a bundle activator at all.</p>
+    </dd>
+  </dl>
 </dl>
 <p>The steps required to port a 2.x <tt>Plugin</tt> class to Eclipse 3.0 depends 
   on what the class is doing. As outlined above, most startup lifecycle work falls 
   into one of the following categories:</p>
 <dl> 
-  <dt><b>Initialization</b></dt>
-  <dd>Datastructure and model initialization is quite often done in <tt>Plugin.startup()</tt>. 
-    The natural/obvious mapping would be to do this work in <tt>BundleActivator.start()</tt>. 
-    <b>This is strongly discouraged.</b> As with plug-ins, bundles may be started 
-    for many different reasons in many different circumstances. Unless is it utterly 
-    impossible for <i>any</i> of a plug-in/bundle's function to be used without 
-    such initialization, it should not be done in <tt>startup()/start()</tt>. 
-    <p> A classic real-world example from Eclipse 2.0 days is a plug-in which 
-      initialized a large model requiring the loading of some 11MB of <i>code</i> 
-      and many megabytes of data. There were quite common usecases where this 
-      plug-in was activated to discover if the project icon presented in the navigator 
-      should be decorated with a little check mark. This test did not require 
-      any of the initialization done in <tt>startup()</tt> but yet all users, 
-      in all usecases had to pay the memory and time penalty for this eager initialization.</p>
-The alternative approach is to do such initialization in a classic lazy style. 
-    For example, rather than having models initialized when the plug-in/bundle 
-    is activated, do it when they are actually needed (e.g., in a centralized 
-    model accessor method). For many usecases this will amount to nearly the same 
-    point in time but for other scenarios this approach will defer initialization 
-    (perhaps indefinitely). We recommend taking time while porting 2.1 plug-ins 
-    to reconsider the initialization strategy used.</dd>
-  <dt><b>Registration</b></dt>
-  <dd>Plug-in startup is a convenient time to register listeners, services etc. 
-    and start background processing threads (e.g., listening on a socket). The 
-    startup()/start() method is a reasonable place to do this work. It may also 
-    make sense to defer until some other trigger (e.g., the use of a particular 
-    function or data element).</dd>
+  <dl>
+    <dt><b>Initialization</b></dt>
+    <dd>Datastructure and model initialization is quite often done in <tt>Plugin.startup()</tt>. 
+      The natural/obvious mapping would be to do this work in a <tt>BundleActivator.start()</tt>, 
+      that is to leave the function on <tt>Plugin</tt>. <b> This is strongly discouraged.</b> 
+      As with 2.x plug-ins, 3.0 plug-ins/bundles may be started for many different 
+      reasons in many different circumstances. <br>
+      An actual example from Eclipse 2.0 days illuminates this case. There was 
+      a plug-in which initialized a large model requiring the loading of some 
+      11MB of <i>code</i> and many megabytes of data. There were quite common 
+      usecases where this plug-in was activated to discover if the project icon 
+      presented in the navigator should be decorated with a particular markup. 
+      This test did not require any of the initialization done in <tt>startup()</tt> 
+      but yet all users, in all usecases had to pay the memory and time penalty 
+      for this eager initialization.<br>
+      The alternative approach is to do such initialization in a classic lazy 
+      style. For example, rather than having models initialized when the plug-in/bundle 
+      is activated, do it when they are actually needed (e.g., in a centralized 
+      model accessor method). For many usecases this will amount to nearly the 
+      same point in time but for other scenarios this approach will defer initialization 
+      (perhaps indefinitely). We recommend taking time while porting 2.1 plug-ins 
+      to reconsider the initialization strategy used. </dd>
+    <dt><b>Registration</b></dt>
+    <dd>Plug-in startup is a convenient time to register listeners, services etc. 
+      and start background processing threads (e.g., listening on a socket). <tt>Plugin.start()</tt> 
+      may a reasonable place to do this work. It may also make sense to defer 
+      until some other trigger (e.g., the use of a particular function or data 
+      element).</dd>
+    <dt><b>Plug-in global data</b></dt>
+    <dd>Your <tt>Plugin</tt> class can continue to play this role. The main issue 
+      is that <tt>Plugin</tt> objects are no longer globally accessible via a 
+      system-managed list. In Eclipse 2.x you could discover any plug-in's <tt>Plugin</tt> 
+      ojbect via the plug-in registry. This is no longer possible. In most circumstances 
+      this type of access is not required. <tt>Plugins</tt> accessed via the registry 
+      are more typically used as generic <tt>Plugins</tt> rather than calling 
+      domain-specific methods.</dd>
+  </dl>
 </dl>
-<p>&nbsp;</p>
-<p>Scenarios</p>
+<h4>Scenarios</h4>
 <p>No plugin class</p>
 <p>initialization</p>
 <p>registration </p>
 <p>initialization + registration</p>
-<p>&nbsp;</p>
-<p>Because Eclipse 3.0 runs on top of OSGi, plugins have been seamlessly integrated 
-  with bundles.<br>
-  The immediate consequences are a restructuration of plugins and some subtle 
-  differences in the lifecycle of plugins. <br>
-  In order to make clear what we are talking about, we will use 'plugin' to refer 
-  to the eclipse 2.1 concepts and before, whereas bundle will refer to the new 
-  model in Eclipse 3.0.</p>
-<p>One important modification is in the separation of the activation code from 
-  the 'state'. <br>
-  In eclipse 2.1, the plugin class was being used both as a state keeper accessible 
-  from anywhere in the system, and as a life cycle handler. This merge was making 
-  easier the mixup of the two concepts resulting in too heavy initialization code.</p>
-<p>A Bundle is an object is a system object, and can not be customized. The bundle 
-  object can actually be assimilated to the IPluginDescriptor for all the information 
-  describing the bundle. The information about extension and extension points 
-  are now accessible from an IExtensionRegistry.</p>
-<p>&nbsp;</p>
-<p>Now bundles may have an activator class whose role is to initialize and uninitialize 
-  the state of bundle. This activator must be lightweight. It should simply try 
-  to declare and acquire services, and initialize basic data structures. This 
-  promotes the lazy initialization of most of the data structures.</p>
-<p>Platform</p>
-<ul>
-  <li>IPlatform</li>
-  <li>how to get access. (via the bundlehelper)</li>
-  <li>new API</li>
-</ul>
-<p>Plug-ins and bundles</p>
-<ul>
-  <li>bundle is defined by the system</li>
-  <li>activator classes are the closest thing to plugin classes</li>
-  <li>file structure</li>
-  <li>install locations etc</li>
-  <li>how to get the bundle</li>
-  <li>extensions registry </li>
-  <li>bundle descriptions from the state (this is dangerous if we want to unload 
-    the state)</li>
-  <li>bundlehelper</li>
-  <li>singletons usecases fro how to map a plugin into a combo of activator and 
-    helper</li>
-  <li>what is a context 
-    <ul>
-      <li>don't share</li>
-    </ul>
-  </li>
-  <li>where to put the startup code (activator vs plugin.startup)</li>
-  <li>plugin descriptor is now a bundle</li>
-  <li>import/export package???</li>
-  <li>
-    <p>manifest reorg</p>
-    
-  </li>
-</ul>
-<p>Plugin Model</p>
+<h3><a name="registries"></a>Registries </h3>
+<p>In the new runtime there is a separation between the information and structures 
+  needed to execute a plug-in and that related to a plug-in's extensions and extension 
+  points. The former is defined and managed by the OSGi framework specification. 
+  The latter are Eclipse-specific concepts and are added by they Eclipse runtime 
+  code. Accordingly, the original plug-in registy and related objects have been 
+  split into OSGi <i>bundles</i> and the Eclipse <i>extension registry</i>. </p>
+<p>The OSGi framework API defines ways of discovering and interrogating bundles. 
+  Methods such as BundleContext.getBundles() </p>
+<h3></h3>
+<h3>Plugin Model</h3>
 <ul>
   <li>where did it go?</li>
 </ul>
-<p>Startup sequence</p>
-<p>&nbsp;</p>
-<h4>Class/Package name changes</h4>
-<p>&nbsp;</p>
 <h3>Deprecations</h3>
-All of the plugin registry model API 
 <h4>org.eclipse.core.runtime.ILibrary (class)</h4>
 <p> In the original runtime, ILibrary is a representation of execution related 
   attributes. In the new runtime these are now handled by OSGi. While it is possible 
   to maintain some of the API for legacy plug-ins, it is not possible to do so 
   for OSGi-based plug-ins/bundles. Users of ILibrary should consider using Bundle.getHeader(Constants.BUNDLE_CLASSPATH) 
   and processing the results using the ManifestElement helper class.</p>
+<h4>org.eclipse.core.boot.BootLoader (class)</h4>
+<p>BootLoader has been completely deprecated and merged with <tt>org.eclipse.core.runtime.Platform</tt> 
+  since it no longer made sense to have a split between boot and runtime. Note 
+  that in fact, the org.eclipse.core.boot plug-in has been broken up and all its 
+  code moved to either the new runtime or the compatibility layer. </p>
+<h4>org.eclipse.core.boot.IPlatformConfiguration (class)</h4>
+<p><tt>IPlatformConfiguration</tt> has always been a type defined by and for the 
+  Ecliipse Install/Update component. With the reorganization of the runtime we 
+  are able to repatriate this type to its rightful home. This class remains largely 
+  unchanged and has been repackaged as <tt>org.eclipse.update.configurator.IPlatformConfiguration</tt>. 
+  The compatibility layer retains a deprecated copy of the original class.</p>
+<p></p>
 <h4>org.eclipse.core.runtime.IPrerequisite (class)</h4>
 <p>In the original runtime, IPrerequisite is a representation of execution related 
   attributes. In the new runtime these are now handled by OSGi. While it is possible 
@@ -437,32 +425,95 @@ All of the plugin registry model API
 <h4></h4>
 <h4>org.eclipse.core.runtime.Platform (methods)</h4>
 <ul>
-  <li>getPlugin(String)</li>
-  <li>getPluginRegistry()</li>
-  <li>getPluginStateLocation(Plugin)</li>
+  <li>getPlugin(String) 
+    <ul>
+      <li>In the new runtime, <tt>Plugin</tt> objects are no longer managed by 
+        the runtime and so cannot be accessed via this method. Use &lt;XXX tentative&gt; 
+        <tt>Platform.getBundle(String)</tt> instead. Note however that this returns 
+        only a generic Bundle object. Those wishing to use domain-specific function 
+        on a particular <tt>Plugin</tt> object must arrange for access with the 
+        plug-in in question. This is typically done via a singleton pattern (e.g., 
+        <tt>ResourcesPlugin.getDefault()</tt>).</li>
+    </ul>
+  </li>
+  <li>getPluginRegistry() 
+    <ul>
+      <li>The plug-in registry object has been deprecated. If you are looking 
+        for the registry of extensions and extension points use <tt>Platform.getExtensionRegistry()</tt>. 
+        If you are looking to find the static and generic representation of a 
+        plug-in, consider using &lt;XXX tentative&gt; <tt>Platform.getBundle(String)</tt>.</li>
+    </ul>
+  </li>
 </ul>
 <h4>org.eclipse.core.runtime.Plugin (methods)</h4>
 <ul>
-  <li>Plugin(IPluginDescriptor)</li>
-  <li>getPluginDescriptor()</li>
-  <li>getPluginPreferences()</li>
-  <li>savePluginPreferences()</li>
-  <li>initializeDefaultPluginPreferences()</li>
-  <li>shutdown()</li>
-  <li>startup()</li>
+  <li>Plugin(IPluginDescriptor) 
+    <ul>
+      <li>The <tt>Plugin</tt> object is no longer created or managed by the runtime 
+        and <tt>IPluginDescriptor</tt> is deprecated. <tt>Plugin</tt> class implementors 
+        may choose to use their <tt>Plugin</tt> as a bundle activator in which 
+        case they must implement (allow for) the default constructor. Users wishing 
+        to have a <tt>Plugin</tt> class but not use it as the bundle activator 
+        need to implement the appropriate constructor which at a minimum takes 
+        the <tt>BundleContext</tt> to be associated with the plug-in.</li>
+    </ul>
+  </li>
+  <li>getPluginDescriptor() 
+    <ul>
+      <li>IPluginDescriptor is now deprecated. Users of this method are looking 
+        for 
+        <ul>
+          <li>extension/extension point information: go directly to org.eclipse.core.runtime.IExtensionRegistry</li>
+          <li>manifest information: get the bundle for the plug-in (getBundle()) 
+            and access its manifest headers as required.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>getPluginPreferences() 
+    <ul>
+      <li>&lt;xxx the preference mechanism is still in play&gt;</li>
+    </ul>
+  </li>
+  <li>savePluginPreferences() 
+    <ul>
+      <li>&lt;xxx the preference mechanism is still in play&gt;</li>
+    </ul>
+  </li>
+  <li>initializeDefaultPluginPreferences() 
+    <ul>
+      <li>&lt;xxx the preference mechanism is still in play&gt;</li>
+    </ul>
+  </li>
+  <li>shutdown() and startup() 
+    <ul>
+      <li>These methods have been replaced with the OSGi standard <tt>start()</tt> 
+        and <tt>stop()</tt> methods. Note that the new lifecycle methods are only 
+        automatically called if the defining <tt>Plugin</tt> class is registered 
+        as the bundle activator in a bundle manifest (MANIFEST.MF) file. See the 
+        header Bundle-Activator.</li>
+      <li>OSGi (and Eclipse) coding practices <b>strongly</b> recommend against 
+        doing or triggering significant work in the <tt>start()</tt> methods. 
+        Doing excessive work here can damage startup time as well as overall responsiveness.</li>
+    </ul>
+  </li>
 </ul>
 <h4>org.eclipse.core.runtime.IExtension<br>
   org.eclipse.core.runtime.IExtensionPoint (methods) </h4>
 <ul>
-  <li>IExtension.getDeclaringPlugin()<br>
-    IExtensionPoint.getDeclaringPlugin() give upward links to the plug-in which 
-    declares the extension or extension-point (respectively). The new registry 
-    model separates the execution aspects of plug-ins from the extension/extension-point 
-    aspects and no longer contains IPluginDescriptors. Users of this API should 
-    consider the new method getParentIdentifier() found on both IExtension and 
-    IExtensionPoint. The returned value can be used directly or as a key in the 
-    compatibility IPluginRegistry or the OSGi framework's API for bundle discovery 
-    (e.g., BundleContext.getBundles(String)).</li>
+  <li>getDeclaringPlugin() 
+    <ul>
+      <li>This method (on both classes) gives an upward link to the plug-in which 
+        declares the extension or extension-point (respectively). The new registry 
+        model separates the execution aspects of plug-ins from the extension/extension-point 
+        aspects and no longer contains <tt>IPluginDescriptors</tt>. Users of this 
+        API should consider the new method <tt>getParentIdentifier()</tt> found 
+        on both <tt>IExtension</tt> and <tt>IExtensionPoint</tt>. The returned 
+        value can be used directly or as a key in the compatibility <tt>IPluginRegistry</tt> 
+        or the OSGi framework's API for bundle discovery (e.g., <tt>BundleContext.getBundles(String)</tt> 
+        &lt;XXX point to the Platofrm method&gt;).</li>
+    </ul>
+  </li>
 </ul>
 <h4>org.eclipse.core.runtime.IPluginRegistry (class)</h4>
 <p>The contents of the plug-in registry, like the runtime, has been split into 
@@ -475,50 +526,83 @@ All of the plugin registry model API
 <h4>org.eclipse.core.runtime.IPluginDescriptor (class)</h4>
 <p>Plug-in descriptors contain methods for a number of different purposes. These 
   are outlined below as well as the steps for updating their uses.</p>
+    
 <dl> 
-  <dt><b>extension-related</b> (e.g., getExtensions())</dt>
-  <dd>sdf</dd>
-  <dt><b>execution-related</b> (e.g., find() and getPluginClassLoader())</dt>
-  <dd>sdf</dd>
-  <dt> <b>accessors</b> (e.g., getLabel())</dt>
-  <dd>sdfsfd</dd>
+  <dl>
+    <dt><b>extension-related</b> (e.g., getExtensions())</dt>
+    <dd>Update such cases to use the IExtensionRegistry directly.</dd>
+    <dt><b>execution-related</b> (e.g., find() and getPluginClassLoader())</dt>
+    <dd>Use the related methods found on <tt>org.eclipse.core.runtime.Platform</tt></dd>
+    <dt><b>accessors</b> (e.g., getLabel())</dt>
+    <dd>Get the bundle associated with the descriptor and access the appropriate 
+      manifest header fields.</dd>
+  </dl>
 </dl>
-<p>&nbsp;</p>
 <h4>org.eclipse.core.runtime.model (package)</h4>
 <p>The plug-in registry has been deprecated </p>
 <p>Extension-related uses are updated by accessing the extension registry directly. 
 </p>
-<p>&nbsp;</p>
-<a name="registries"></a>Registries 
-<p>In the new runtime there is a separation between the information and structures 
-  needed to run a plug-in and that related to a plug-in's extensions and extension 
-  points. The former is defined and managed by the OSGi framework specification. 
-  The latter are Eclipse-specific concepts and are added by they Eclipse runtime 
-  code. Accordingly, the original plugin registy and related objects have been 
-  split into OSGi <i>bundles</i> and the Eclipse <i>extension registry</i>. </p>
-<p>The OSGi framework API defines ways of discovering and interrogating bundles. 
-  Methods such as BundleContext.getBundles() </p>
-<h3>Updating plugin.xml and fragment.xml</h3>
+<h4>org.eclipse.core.boot.IPlatformRunnable (class)</h4>
+&lt;XXX tentative&gt; This class has been deprecated in favour of the identical 
+class org.eclipse.core.runtime.IPlatformRunnable. 
+<h3>Updating plugin.xml, fragment.xml and plugin.properties</h3>
 <p>The new runtime is based on an implementation of the OSGi framework specification. 
-  The OSGi specification mandates the use of manifest.mf files to define the execution 
+  The OSGi specification mandates the use of MANIFEST.MF files to define the execution 
   of a plug-in. This conflicts with the Eclipse notion of plugin.xml as far as 
   &lt;runtime&gt; and &lt;requires&gt; elements are concerned. The easiest way 
   to update your plugin.xml or fragment.xml is to use the PDE Migration Tool (PDE 
   Tools-&gt;Convert to OSGi bundle).</p>
-<h3>Build-related issues</h3>
-<p><b>Who is affected:</b> Writers of bundles who want to make those bundles available 
-  people using plug-in oriented tooling.</p>
-<p><b>Description:</b> Current build structures (e.g., PDE, custom builds done 
-  by product teams, ...) are based on plug-ins, fragments and features. While 
-  the new runtime supports these components, it is bundle based. To support existing 
-  build structures we (and other bundle developers) must take care to include 
-  plugin.xml and fragment.xml files (as appropriate) for all bundles. This allows 
-  the tooling and build mechanisms to correctly interpret the content of the bundle 
-  and make it available.</p>
-<p><b>Analysis:</b> By maintaining the plugin.xml content, tooling and build mechanisms 
-  will continue to function. As these are updated to handle the new structures, 
-  the need to maintain plugin.xml and fragment.xml files will diminish.</p>
-<p>&nbsp;</p>
+<p>This tool will split your plugin.xml into two files, META-INF/MANIFEST.MF and 
+  eclipse.xml. The manifest is a standard Java Jar file manifest. It contains 
+  specifications for the execution elements of our plug-in (e.g., classpath, prerequisites, 
+  ...). A table of frequent mapping is included below while the full <a href="http://www.osgi.org">OSGi 
+  specification</a> has enumerates all pre-defined manifest headers.</p>
+<table width="100%" border="1">
+  <tr> 
+    <td>
+      <div align="center"><b>plugin.xml tag/attribute</b></div>
+    </td>
+    <td>
+      <div align="center"><b>manifest.mf header</b></div>
+    </td>
+  </tr>
+  <tr> 
+    <td>&lt;plugin id&gt;</td>
+    <td>Bundle-GlobalName</td>
+  </tr>
+  <tr> 
+    <td>&lt;plugin version&gt;</td>
+    <td>Bundle-Version</td>
+  </tr>
+  <tr> 
+    <td>&lt;plugin name&gt;</td>
+    <td>Bundle-Name</td>
+  </tr>
+  <tr> 
+    <td>&lt;plugin provider&gt;</td>
+    <td>Bundle-Vendor</td>
+  </tr>
+  <tr> 
+    <td>&lt;plugin class&gt;</td>
+    <td>Bundle-Activator</td>
+  </tr>
+  <tr> 
+    <td>&lt;requires&gt;, &lt;import&gt;</td>
+    <td>Require-Bundle</td>
+  </tr>
+  <tr> 
+    <td>&lt;runtime&gt;, &lt;library&gt;</td>
+    <td>Bundle-ClassPath</td>
+  </tr>
+</table>
+<p>The extension/extension-point related information in the plugin.xml moves directly 
+  and unchanged into the eclipse.xml file. The top level tag of this file is <tt>&lt;eclipse&gt;</tt> 
+  and there are no attributes defined at this point.</p>
+<p>In a related move, the plugin.properties file is deprecated and has been renamed 
+  to <tt>eclipse.properties</tt>. It continues to supply translations for both 
+  the execution information in the manifest file and the extension information 
+  in eclipse.xml.</p>
+<p>The build.properties file remains unchanged.</p>
 <table border=0 cellspacing=0 cellpadding=2 width="100%" >
   <tr> 
     <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF"> 
