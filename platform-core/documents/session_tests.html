@@ -140,7 +140,9 @@ suite.setApplicationId(SessionTestSuite.UI_TEST_APPLICATION);</pre>
   </li>
   <li><strong>What are all supported options and how to use them?</strong> 
   	<p>The options for the session test framework are specified in the form of
-  	system properties.</p>
+  	system properties. <em>You only have to use these options if running with
+  	the default settings (the currently target JRE and Eclipse and command line options) 
+  	are not appropriate.</em></p>
     <ul>
       <li><strong>setup.options</strong> - only valid when setup files are available. 
         Setup files describe option sets, which are collections of command-line 
@@ -180,7 +182,8 @@ suite.setApplicationId(SessionTestSuite.UI_TEST_APPLICATION);</pre>
         <p><code>-Dsetup.override.systemProperties=osgi.checkConfiguration;osgi.locking=none</code</p></li>
       <li><strong>setup.debug</strong> - enables the session test framework debug 
         mode. In this mode, among other things, the command-line for every session 
-        launched is dumped to the console.</li>
+        launched is dumped to the console, so it is useful to verify which option
+        sets are being selected and how they map to the command line.</li>
     </ul>
 	<p></p>
   </li>

@@ -1,10 +1,11 @@
 <!-- This is an example for the doc on the session test framework -->
 <!-- 
 	Option sets are sets of command line options for running Eclipse.
-	Named option sets must be explicitly selected to be used.
-	Unnamed ones are selected if the named option sets they require
+	Identified option sets must be explicitly selected to be used.
+	Unidentified ones are selected if the identified option sets they require
 	are selected.
-	Option sets can extend other named option sets, inheriting all options from the ancestor.
+	Option set names are only for documentation purpose. They are ignored.
+	Option sets can extend other identified option sets, inheriting all options from the ancestor.
 	A setup file can specify default option sets. Users can override the set of
 	default option sets by using the setup.override.* options.
 	Setup files are specified by using the setup.files property.
@@ -52,11 +53,11 @@
 	</optionSet>	
 	
 	<!-- The "No JIT" option set family. The syntax for disabling JIT is VM-specifc so there is 
-	a need to provide VM-specific option sets for this (see below).
+	a need to provide VM-specific option sets for this (see below).-->
 	<optionSet id="nojit" name="No JIT"/>
 	
 	<!-- This option set disables JIT on J9 VMs. It is a non-identified option set (lacks the "id" attribute). 
-	It is automatically selected when all option sets it requires (j9,nojit) are specified by the user.
+	It is automatically selected when all option sets it requires (j9,nojit) are specified by the user.-->
 	<optionSet name="No JIT on J9" with="j9,nojit">
 		<vmArg option="Xint"/>
 	</optionSet>	
@@ -64,7 +65,7 @@
 	<!-- This option set disables JIT on Sun VMs. It is an unnamed option set. It is automatically 
 	selected when all option sets it requires (sun,nojit) are specified by the user. Note that
 	actually users should specify "sun_1.3,nojit", "sun_1.4,nojit" or "sun_1.5,nojit". Since 
-	they all have "sun" as their base option set, this option set will be appropriately selected.
+	they all have "sun" as their base option set, this option set will be appropriately selected.-->
 	<optionSet name="No JIT on Sun" with="sun,nojit">	
 		<systemProperty key="java.compiler" value="none"/>	
 	</optionSet>
@@ -72,7 +73,7 @@
 	<!-- Enables remote debugging. Has "nojit" as base (JIT has to be disabled when debugging), 
 	so the appropriate syntax for disabling JIT will be picked depending on which VM is chosen.
 	The options specified here seem to be supported through all VMs we use, so no need for VM-specific
-	option sets.
+	option sets.-->
 	<optionSet id="remote_debug" name="Remote Debugging" timeout="0" base="nojit">
 		<vmArg option="Xdebug"/>
 		<vmArg option="Xnoagent"/>
@@ -99,12 +100,12 @@
 	</optionSet>	     	
 		
 	<!-- This option sets specifies the -data Eclipse command line option to be "workspace".
-	It is useful to avoid the "Workspace Chooser" to come up during automated tests.
+	It is useful to avoid the "Workspace Chooser" to come up during automated tests.-->
 	<optionSet id="basic_instance" name="Basic Instance">
 		<eclipseArg option="data" value="workspace"/>
 	</optionSet>	     
 	
-	<!-- This option set enables the use of the Cloudscape database.
+	<!-- This option set enables the use of the Cloudscape database.-->
 	<optionSet id="performance" name="Performance">	
 		<!-- The database location needs to be overriden. -->
 		<systemProperty key="eclipse.perf.dbloc" value="x:/temp/cloudscape"/>
