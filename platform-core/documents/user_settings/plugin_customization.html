@@ -60,7 +60,7 @@ CODE { font-size: smaller }
         <p>If the bundle/plug-in doesn't define an extension then the <code>#initializeDefaultPluginPreferences() 
           </code> method is called on the plug-in class if the runtime compatibility 
           layer is present. Due to visibility restrictions, this is done via the 
-          <code>Plugin#legacyInitializeDefaultPluginPreferences()</code> method.</p>
+          <code>Plugin#internalInitializeDefaultPluginPreferences()</code> method.</p>
       </blockquote>
       <p>2. Load from bundle/plug-in install dir.</p>
       <blockquote> 
