@@ -15,8 +15,7 @@
   </tr>
   <tr> 
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
-    <td> 
-      <p><b><a name="xerces"></a>Remove Dependancy on Xerces </b>(bugs <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=37696">37696</a>, 
+    <td> <p><b><a name="xerces"></a>Remove Dependancy on Xerces </b>(bugs <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=37696">37696</a>, 
         <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=36112">36112</a>)</p>
       <p><i>Checklist:</i></p>
       <ul>
@@ -29,20 +28,36 @@
           with new reader based on new APIs.</li>
         <li>Replace org.eclipse.core.internal.resources.ProjectDescriptionReader 
           with new reader based on new APIs.</li>
-		<li>Determine interaction with bootstrap process. Things to consider include
-		creating the bootstrap classloader, update/install, and org.eclipes.core.internal.boot.PlatformConfiguration.</li>
+        <li>Determine interaction with bootstrap process. Things to consider include 
+          creating the bootstrap classloader, update/install, and org.eclipes.core.internal.boot.PlatformConfiguration.</li>
         <li>Check test suites.</li>
         <li>Verify new work by completely removing the Xerces plug-in from the 
           environment. (is this possible with the other plug-ins' dependancies?</li>
         <li>Educate Platform/UI and other teams in SDK who rely on Xerces with 
           knowledge of new APIs. Note that most teams have updated the bug report 
           with explanations of their usage.</li>
-      </ul>
-    </td>
+      </ul></td>
   </tr>
   <tr>
+    <td ALIGN=RIGHT VALIGN=TOP><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
+    <td><p><strong>Current Status</strong></p>
+      <p><em>July 21, 2003</em></p>
+      <ul>
+        <li>We are still awaiting approval from the Open Source Committee as to 
+          whether or not we can include an XML Pull implementation in the SDK 
+          download</li>
+        <li>Working out licensing issues with the developers of a particular XML 
+          Pull implementation. (inconsistencies between code and web site)</li>
+        <li>Have asked for the teams in the SDK to indicate where they use XML 
+          in their code. Almost every single Eclipse team has replied that they 
+          use XML somewhere in their code! Still need to review these uses and 
+          plan for migration.</li>
+      </ul></td>
+  </tr>
+  <tr> 
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
-    <td><p><strong>Milestone Plan (3.0 M2) - July 18, 2003</strong></p>
+    <td><p><strong>Milestone Plans</strong></>
+	<p><em>3.0 M2 - July 18, 2003</em></p>
       <ul>
         <li>Goal is to complete all of the above work.</li>
         <li>We don't envision having all teams converted to new APIs but should 
@@ -54,6 +69,12 @@
           be a part of the Rich Client Platform (RCP) perform this transformation. 
           Reducing the size of the XML plug-in shipped with the RCP (3M for Xerces 
           vs 25K for XmlPull) is a big big win.</li>
+      </ul>
+      <p><em>3.0 M3 - August 29, 2003</em></p>
+      <ul>
+        <li>Continue towards completing the above outlined tasks.</li>
+        <li>Hope to have approval for XML Pull use shortly after 3.0 M2 and then 
+          will be able to release new code into HEAD.</li>
       </ul></td>
   </tr>
 </table>

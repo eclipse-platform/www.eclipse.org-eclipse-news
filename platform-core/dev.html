@@ -410,7 +410,7 @@
         <li>Remote resources -&gt; syncing on existence vs content.</li>
         <li>Make everything a linked resource?</li>
         <li>Add more to the move/delete hook (copy, create, etc). This is related 
-          to the Team/Resource Integration plan it. (bug <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=13530">13530</a>)</li>
+          to the Team/Resource Integration plan item. (bug <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=13530">13530</a>)</li>
         <li>Lifecycle of persistent/session properties -&gt; what happens on copy/move? 
         </li>
         <li>Lazy persistent properties -&gt; kept in memory and then written out 
@@ -464,49 +464,114 @@
   </tr>
   <tr>
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
-    <td> 
-      <p><a name="plan_milestone"></a><b>Milestone Plan (3.0 M2) - July 18, 2003</b> (based on 4 weeks before the milestone)</p>
-	  <ul>
-	  <li><i>Concurrent Operations (4 weeks)</i></li>
-	  <ul>
-	  <li> - See the <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-core-home/plan_concurrency_intro.html">details</a> page for more info.</li>
-	  </ul>
-	  <li><i>Rich Client Platform (8 weeks...2 people, full-time for 4 weeks)</i></li>
-	  <ul>
-	  <li>See the <a href="http://dev.eclipse.org/viewcvs/indextech.cgi/%7Echeckout%7E/equinox-home/plans/m2.html">details</a> page for more info.</li>
-	  </ul>
-	  <li><i>Remove Dependancy on Xerces (1 week)</i></li>
-	  <ul>
-	  <li>See the <a href="plan_xerces.html">details</a> page for more info.</li>
-	  </ul>
-	  <li><i>File Encoding (4 days) </i></li>
-	  <ul>
-	  <li>Gather requirements from community.</li>
-	  <li>Enhance RFC based on gathered information.</li>
-	  </ul>
-	  <li><i>User Settings (4 days) </i></li>
-	  <ul>
-	  <li>Participate in RFC discussions.</li>
-	  <li>Most likely there will be coding at the Core level, depending on which solution is decided on.</li>
-	  </ul>
-	  <li><i>Session Tests (3 days)</i></li>
-	  <ul>
-	  <li>Modify the Core session tests to be included in the RelEng automated tests.</li>
-	  </ul> 
-	  <li><i>PDE-Build (4 days)</i></li>
-	  <ul>
-	  <li>Bug fixing.</li>
-	  <li>Helping RelEng with integration of the new builder code into the build process.</li>
-	  <li>Releasing new PDE-Build into HEAD and the integration builds.</li>
-	  </ul>
-	  <li><i>Tools (3 days)</i></li>
-	  <ul>
-	  <li>Code review and (finally!) release the workspace restorer plug-in to the web site.</li>
-	  </ul>
-	  </ul>
-      <p><br>
-      </p>
-    </td>
+    <td> <p><a name="plan_milestone"></a><b>Milestone Plan (3.0 M2) - July 18, 
+        2003</b> (based on 4 weeks before the milestone)</p>
+      <ul>
+        <li><i>Concurrent Operations (4 weeks)</i></li>
+        <ul>
+          <li> See the <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-core-home/plan_concurrency_intro.html">details</a> 
+            page for more info.</li>
+        </ul>
+        <li><i>Rich Client Platform (8 weeks...2 people, full-time for 4 weeks)</i></li>
+        <ul>
+          <li>See the <a href="http://dev.eclipse.org/viewcvs/indextech.cgi/%7Echeckout%7E/equinox-home/plans/m2.html">details</a> 
+            page for more info.</li>
+        </ul>
+        <li><i>Remove Dependancy on Xerces (1 week)</i></li>
+        <ul>
+          <li>See the <a href="plan_xerces.html">details</a> page for more info.</li>
+        </ul>
+        <li><i>File Encoding (4 days) </i></li>
+        <ul>
+          <li>Gather requirements from community.</li>
+          <li>Enhance RFC based on gathered information.</li>
+        </ul>
+        <li><i>User Settings (4 days) </i></li>
+        <ul>
+          <li>Participate in RFC discussions.</li>
+          <li>Most likely there will be coding at the Core level, depending on 
+            which solution is decided on.</li>
+        </ul>
+        <li><i>Session Tests (3 days)</i></li>
+        <ul>
+          <li>Modify the Core session tests to be included in the RelEng automated 
+            tests.</li>
+        </ul>
+        <li><i>PDE-Build (4 days)</i></li>
+        <ul>
+          <li>Bug fixing.</li>
+          <li>Helping RelEng with integration of the new builder code into the 
+            build process.</li>
+          <li>Releasing new PDE-Build into HEAD and the integration builds.</li>
+        </ul>
+        <li><i>Tools (3 days)</i></li>
+        <ul>
+          <li>Code review and (finally!) release the workspace restorer plug-in 
+            to the web site.</li>
+        </ul>
+      </ul>
+      <p><strong>Milestone Plan (3.0 M3) - August 29, 2003</strong> (based on 
+        5 weeks before the milestone)</p>
+      <ul>
+        <li><em>Concurrent Operations (5 weeks) </em> 
+          <ul>
+            <li>Continued from M2 plan.</li>
+            <li>See the <a href="plan_concurrency.html">details</a> page for more 
+              info.</li>
+          </ul>
+        </li>
+        <li><em>Rich Client Platform (10 weeks) </em> 
+          <ul>
+            <li>Continued from M2 plan.</li>
+            <li>See the <a href="http://dev.eclipse.org/viewcvs/indextech.cgi/%7Echeckout%7E/equinox-home/plans/m3.html">details</a> 
+              page for more info.</li>
+          </ul>
+        </li>
+        <li><em>Remove Dependancy on Xerces (3 days)</em> 
+          <ul>
+            <li>Continued from M2 plan</li>
+            <li>See the <a href="plan_xerces.html">details</a> page for more info.</li>
+          </ul>
+        </li>
+        <li><em>File Encoding </em> 
+          <ul>
+            <li>Continued from M2 plan.</li>
+            <li>The RFC has been published to the web. </li>
+            <li>See the <a href="plan_encoding_intro.html">details</a> for more 
+              info.</li>
+          </ul>
+        </li>
+        <li><em>User Settings </em> 
+          <ul>
+            <li>Continued from M2 plan.</li>
+            <li>The RFC has been published by the Team team. During the M3 phase, 
+              we hope to provide more input and become more involved in the solution. 
+              (since most of it will be living in the Core Runtime space)</li>
+            <li>See the <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-vcm-home/docs/online/team3.0/settings.html">Team 
+              team</a> page for more details.</li>
+          </ul>
+        </li>
+        <li><em>Session Tests </em> 
+          <ul>
+            <li>Continued from M2 plan.</li>
+            <li>There has been more work than anticipated with co-ordinating the 
+              session tests and the automated test framework so work continues 
+              through to M3.</li>
+          </ul>
+        </li>
+        <li><em>Improved User Experience </em> 
+          <ul>
+            <li>See the <a href="plan_userexperience.html">details</a> page for 
+              more info.</li>
+          </ul>
+        </li>
+        <li><em>Vacation (4 weeks)</em> 
+          <ul>
+            <li>It's summer time!<br>
+            </li>
+          </ul>
+        </li>
+      </ul></td>
   </tr>
   <tr>
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
