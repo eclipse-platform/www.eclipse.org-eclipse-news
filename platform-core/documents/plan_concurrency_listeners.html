@@ -109,8 +109,7 @@ three characteristics of resource change listeners that have been true since Ecl
 changes that occur during the time they are registered.  This includes changes made
 by builders, and changes made by other listeners.</li>
 <li><tt>PRE_AUTO_BUILD</tt> listeners receive notification of all resource
-changes <b>except</b> changes made by builders and changes made by
-resource change listeners.
+changes <b>except</b> changes made by builders and resource change listeners.
 <li><tt>POST_AUTO_BUILD</tt> listeners receive notification of all resource
 changes <b>except</b> changes made by other <tt>POST_AUTO_BUILD</tt>
 listeners.
@@ -171,8 +170,9 @@ and no API changes are planned.
 
 <h3>Summary of proposed API changes</h3>
 <p>
-The proposed changes described in this document require two changes
-to the current API contract of resource change listeners:
+From a binary compatibility view, this proposal includes no new API, and no
+API changes.  The changes are 100% binary compatible with all prior Eclipse releases.
+There are two proposed changes to the API contract of resource change listeners:
 <ol>
 <li>It will no longer be guaranteed that all resource changes that occur during the
 dynamic scope of an <code>IWorkspaceRunnable</code> will be batched in a single
@@ -232,9 +232,10 @@ they may be broken.
 All described changes have been implemented. All work is currently in branch "Bug_36957" 
 of project org.eclipse.core.resources. Basic sanity checking of the SDK reveals no 
 significant problems, and some core team members are self-hosting with it.  
-All platform core test suites now pass with background 
-notification and build.  These changes will be rolled into integration builds as soon
-as possible.
+All platform core test suites now pass with background auto-building.  There are
+some failures in JDT core test suites where they make assumptions about the timing
+of auto-build deltas.  The JDT core team is investigating this.  The hope is to release
+these changes to integration builds before the 3.0 M3 milestone.
 <p>
 Go <a href="../plan_concurrency.html">back to concurrency home</a>.
 </p>
