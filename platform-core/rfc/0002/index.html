@@ -1,0 +1,76 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Build">
+   <meta name="GENERATOR" content="Mozilla/4.7 [en] (WinNT; I) [Netscape]">
+   <title>Eclipse Platform Core RFC 0002 - Importing and Exporting Projects</title>
+</head>
+<body bgcolor="#FFFFFF">
+&nbsp;&nbsp;
+<div ALIGN=right><table BORDER=0 CELLSPACING=0 CELLPADDING=2 WIDTH="100%" >
+<tr>
+<td ALIGN=LEFT VALIGN=TOP COLSPAN="2" BGCOLOR="#0080C0"><b><font face="Arial,Helvetica"><font color="#FFFFFF">Request
+For Comment&nbsp;</font></font></b></td>
+</tr>
+</table></div>
+
+<h1>
+<img SRC="idea.gif" height=86 width=120></h1>
+
+<center>
+<h1>
+Eclipse Platform Core RFC 0002</h1></center>
+
+<center>
+<h1>
+Importing and Exporting Projects</h1></center>
+
+<blockquote><b>Summary</b>
+<br>The goal is to provide a feature to make things easier when sharing
+or persisting a project without using VCM.
+<p><b>By Rodrigo Peretti, OTI</b>
+<br><font size=-1>Last Modified: November 26, 2001</font></blockquote>
+
+<hr>
+<h2>
+Proposed API</h2>
+The current proposal is already in an API format. The API is going to be
+added to IWorkspace and consists of:
+<p><b>Constants:</b>
+<ul>
+<li>
+<a href="IWorkspace.html#METADATA_ALL">METADATA_ALL</a></li>
+
+<li>
+<a href="IWorkspace.html#METADATA_PROJECT_DESCRIPTION">METADATA_PROJECT_DESCRIPTION</a></li>
+</ul>
+<b>Methods:</b>
+<ul>
+<li>
+<a href="IWorkspace.html#availableProjects(org.eclipse.core.resources.IPath, org.eclipse.core.resources.IProgressMonitor)">availableProjects</a></li>
+
+<li>
+<a href="IWorkspace.html#exportProjects(org.eclipse.core.resources.IPath, boolean, org.eclipse.core.resources.IProject[], int, org.eclipse.core.resources.IProgressMonitor)">exportProjects</a></li>
+
+<li>
+<a href="IWorkspace.html#importProjects(org.eclipse.core.resources.IPath, org.eclipse.core.resources.IProject[], int, org.eclipse.core.resources.IPath, boolean, org.eclipse.core.resources.IProgressMonitor)">importProjects</a></li>
+</ul>
+
+<h2>
+RFC Status</h2>
+This proposal is not currently being voted on. However, you should:
+<ul>
+<li>
+Provide all comments/feedback to the mailing list.</li>
+</ul>
+
+<ul>
+<li>
+Clearly indicate if you are fundamentally opposed to the proposal and provide
+reasons.</li>
+</ul>
+If you have serious concerns don't wait until there is a vote - speak up
+now!
+</body>
+</html>
