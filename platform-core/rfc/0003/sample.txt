@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <log>
 <entry date="Fri Nov 30 16:05:25 EST 2001">
-  <status id="org.eclipse.xyz.SomePlugin" sev="ERROR" msg="The Foo operation failed to complete." code="1">
-    <status id="org.eclipse.xyz.AnotherPlugin" sev="WARNING" msg="An internal error occurred while attempting to foo." code="1">
-      <exception msg="null" trace="
+  <status id="org.eclipse.xyz.SomePlugin" severity="ERROR" message="The Foo operation failed to complete." code="1">
+    <status id="org.eclipse.xyz.AnotherPlugin" severity="WARNING" message="An internal error occurred while attempting to foo." code="1">
+      <exception message="null" trace="
 java.lang.NullPointerException
 	at org.eclipse.core.tests.internal.runtime.LogSerializationTest.getInterestingStatuses(LogSerializationTest.java:97)
 	at org.eclipse.core.tests.internal.runtime.LogSerializationTest.getInterestingMultiStatuses(LogSerializationTest.java:73)
