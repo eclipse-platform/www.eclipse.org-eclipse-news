@@ -52,9 +52,9 @@ to loaded plug-ins will be consulted by the <tt>getAdapter*</tt> methods.  <tt>h
 both loaded and unloaded factories.
 </p>
 <p>
-The "adapters" extension would specify the name of the factory class, removing the 
-need for plug-ins to explicitly register their adapters on startup (they would be lazily 
-registered on the first lookup on that factory after the plug-in is loaded):
+A new "adapters" extension in the runtime plug-in will specify the name of the factory 
+class, removing the need for plug-ins to explicitly register their adapters on startup 
+(they would be lazily registered on the first lookup on that factory after the plug-in is loaded):
 <pre>
 &lt;extension point=&quot;org.eclipse.core.runtime.adapters&quot;&gt;
    &lt;factory 
@@ -69,7 +69,7 @@ registered on the first lookup on that factory after the plug-in is loaded):
 </pre>
 </p>
 <p>
-This point specifies a factory that adapts IJavaElement to IFile, IPropertySource, etc. 
+This extension point specifies a factory that adapts IJavaElement to IFile, IPropertySource, etc. 
 Of course, for backwards compatibility we will continue to support adapters 
 registered manually that do no have associated markup.
 </p>
