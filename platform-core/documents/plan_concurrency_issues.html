@@ -150,6 +150,27 @@ be moved into a background thread using the new UI progress service.  This will
 allow users to cancel where the change is not compatible with background activity.
 </p>
 <p>
+(Updated Oct 29) A suggestion was made to resolve this issue by shifting the burden 
+to the implementors of background operations.  If the UI thread tries to make a 
+change that conflicts with the background operation, the background operation could 
+be suspended to allow the UI thread to proceed.  This would require that we provide
+the background operation with a resource delta describing what changes occurred
+while it was suspended.  It could then decide whether it should proceed, abort, or
+rollback depending on the nature of the conflicting change.  However, even a resource
+delta would not always provide sufficient information for it to make a decision.  If
+the operation was in the middle of making a series of changes to a file when interrupted,
+it would not be able to rollback correctly without a binary delta describing how the file
+changed while it was interrupted.  These transaction semantics would be extremely 
+difficult to implement.  Another approach is to require the background operation
+to break up long running work into small transactions, and require the operation
+to support cancelation after each transaction.  This is the approach taken by the 
+automatic cancelation support in background autobuild.  To be effective, each transaction
+would need to be of sufficiently small duration that locking the UI for that duration
+would be acceptable.  It is not clear in the general case that all background operations
+could be implemented in this way.
+</p>
+
+<p>
 We also discussed the possibility of hacking in support for cancelation even when
 operations are run in the UI thread. This can be sold as a &quot;backwards compatibility&quot;
 story for UI components that do not move their long running operations out of the
@@ -204,6 +225,15 @@ as a hint because notifications are sometimes required when multiple operations 
 concurrently.  I.e, if two threads are modifying the workspace, one using <tt>AVOID_UPDATE</tt>
 and the other not, then periodic notifications will occur for the duration of the operation
 that did not specify <tt>AVOID_UPDATE</tt>.
+</p>
+<p>
+(Updated Oct 29) Another suggestion was to provide partial workspace updates.  
+If a notifying operation runs concurrently with a non-notifying operation, the 
+workspace could broadcast a partial delta reflecting only the changes made by the 
+notifying operation. See the 
+<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=43718#c13">bug report discussion</a>
+on this proposal.  In short, this would be quite complex to implement and would open
+up new breaking changes for listeners.
 </p>
 <h3>Porting guide</h3>
 <p>
