@@ -252,7 +252,36 @@ shareable configuration information. The suggested API is, in my opinion,
 another way of avoiding the issue of how to handle the problem in a more
 general way. So how can the general import/export mechanism support both
 VCM's and a zip/jar tool needs?
-<p>
+<blockquote><b>2.3.1 ( + )</b> Agreed that Eclipse should have a consistent
+story on how plug-ins can identify shareable config info. Here's a first
+try proposal. It is a mix of what has already been discussed. We do need
+feedback from everyone specially the VCM and UI in order to understand
+if it meet their needs.
+<br>Basically, a .metadata folder will exist under the content area of
+each project. It will hold all (or most of) the metadata provided by the
+resources plug-in plus any other metadata (like the .classpath file) provided
+by other plug-ins.
+<br>The interesting point is that some of these metadata will not (usually)
+make sense to be shareable via VCM but (usually) makes sense when a single
+user wants to move/copy a project from one workspace to another. Clear
+examples are markers and persistent properties. The metadata file that
+holds the markers cannot be merged. Thus, cannot be safelly used against
+a CVS repository by multiple users. Although, a user that wants to move
+a project to a new workspace and preserve bookmarks, tasks and breakpoints,
+etc... does want to move the markers metadata file.
+<br>What this approach requires from plugins (first cut, need more feedback):
+<br>* Resources: move all the metadata info to the new .metadata folder
+under the project content area. Provide a default state (plug into some
+VCM extension point) for each of these metadata files indicating which
+ones are appropriate to be shared in a team environment.
+<br>* VCM: It is already there but just to highlight it here. A way for
+plug-ins to say what files (or kind of files) should be ignored when dealing
+with the repository and make it possible for users to change this configuration
+as they need.
+<br>* UI: For the export wizards, the functionality might already be there.
+Also, the user should be able to point to a folder (project folder) or
+to a file (.prj file) and choose "create existing project from folder/file".</blockquote>
+
 <hr WIDTH="100%">
 <h2>
 RFC Status</h2>
