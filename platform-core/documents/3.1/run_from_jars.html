@@ -207,7 +207,12 @@
           <li> If you have a <code>manifest.mf </code>then simply delete the <code>Bundle-Classpath</code> 
             header.</li>
           <li>Otherwise if you have a <code>plugin.xml</code> then change the 
-            library entry to be a dot. <code>(.)</code></li>
+            library entry to be a dot like this: <br>
+          <code>&nbsp;&nbsp;&nbsp;&lt;runtime&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;library name=&quot;.&quot;&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;export name=&quot;*&quot;/&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/library&gt;<br>
+            &nbsp;&nbsp;&nbsp;&lt;/runtime&gt;</code></li>
           <li> If you have additional jars (e.g., ant tasks), consult an expert.</li>
         </ul>
         <li>Change the <code>build.properties</code>:</li>
