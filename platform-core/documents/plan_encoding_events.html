@@ -1,0 +1,115 @@
+<html>
+<head>
+  <title>Resource change events for encoding changes</title>
+  <link rel="stylesheet" href="default_style.css" type="text/css">
+</head>
+<body text="#000000" bgcolor="#ffffff">
+<h1>Resource change events for encoding changes</h1>
+<p><font size="-1">Last modified: July 13th, 2004</font> </p>
+<p>This document is a place where to gather the requirements and plan a solution 
+  for bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=59899">59899</a></p>
+<h3>Things that affect the encoding of files</h3>
+<ol>
+  <li>the file's encoding as set by the user</li>
+  <li>the file's content type 
+    <ol>
+      <li>the file's name</li>
+      <li>the list of file specifications for a content type</li>
+      <li>the content type default encoding</li>
+      <li>the encoding information embedded in the file's contents</li>
+    </ol>
+  </li>
+  <li>the parent's default encoding 
+    <ol>
+      <li>the file.encoding property</li>
+      <li>the workspace encoding preference</li>
+      <li>the project or folder default encoding project preference</li>
+    </ol>
+  </li>
+</ol>
+<h3>Scenarios where the encoding for a file could change</h3>
+<ol>
+  <li>the user changed the encoding (or set it to default) for a specific file 
+    using the file's properties dialog 
+    <p> <em>This is the most basic scenario - affects the IFile#setCharset operation. 
+      </em> </p>
+  </li>
+  <li>the user changed the encoding (or set it to default) for a specific file 
+    using the text editor action (Edit &gt; Encoding) 
+    <p> <em>Although the user action is different, this is similar to the scenario 
+      above. </em></p>
+  </li>
+  <li>the user changed the default encoding (or set it to default) for a container 
+    (folder, project) using the the resource's properties dialog 
+    <p><em>Although this may not be easy to support, it is also a basic requirement. 
+      Affected operation: IContainer#setDefaultCharset.</em></p>
+  </li>
+  <li>a file is moved to a different location, having a different file encoding 
+    inherited from the parent
+	<p> <em>It is not clear we need any special support here. Not sure whether 
+      builders and interesting listeners always simply treat a file being moved 
+      as a big change and rebuild the affected model, or they just adjust their 
+      model correspondingly (re: resource's path change), without recomputing 
+      anything. </em></p>
+  </li>
+  <li>a direct change to the preferences file for a project (e.g. by manually 
+    editing the file, or checking it out from the repository, etc), causing changes 
+    to the encoding settings of projects, folders and/or files 
+    <p><em>This would cause preference change events to be broadcast. We would 
+      have to capture such events and generate a corresponding resource change 
+      event. One problem here is that we are in the context of a POST_CHANGE/PRE_DELETE 
+      notification (workspace is closed for changes).</em></p>
+  </li>
+  <li>the user promotes direct changes to the corresponding project preferences 
+    file between two Eclipse sessions 
+    <p>
+	The changes will be caught when the file is refreshed. The same as above would happen.
+	</p>
+	</li>
+  <li>the user changed the default encoding (or set it to default, which is the 
+    value of the file.encoding property) for the workspace using the preferences 
+    dialog (Workbench &gt; Editors &gt; Text file encoding)
+	<p><em>a preference change listener would have to react appropriately by issuing 
+      a resource change event for the workspace root (and all affected children!). 
+      </em></p>
+  </li>
+  <li>the very same preference is changed by directly editing the corresponding 
+    preferences file between two Eclipse sessions 
+    <p> <em>We would have to keep a copy of the preference value somewhere and 
+      check it during startup. If it has changed, the same as above would have 
+      to be done. </em></p>
+  </li>
+  <li>the VM started with default default encoding (the value of the file.encoding 
+    system property) that was different than the one used in the previous session, 
+    and the workspace root default encoding was not set 
+    <p> <em>Similar to above. </em> </p>
+	</li>
+  <li>a file that has its encoding determined from its contents (e.g. a XML file) 
+    is modified, causing the resulting encoding to be different
+	<p> <em>A regular resource change event is already issued for the content 
+      change. Should not have to do anything else. </em> </p>
+  </li>
+  <li>a content type has its default encoding changed
+    <p> <em>A preference change listener would have to catch that and produce 
+      the approprate event for every affected resource in the whole workspace 
+      (!). </em></p>
+  </li>
+  <li>file specs are added to/removed from a content type that has a default encoding 
+    set 
+    <p> <em>Same as above. </em> </p>
+	</li>
+  <li>a file name changes, and it stops/starts belonging to a given 
+    content type
+	<p> <em>The move operation would have to check whether the content type for 
+      a file changed, and verify what the new encoding is.</em></p>
+  </li>
+  <li>a content type is added/removed between two sessions, causing the content 
+    types (and default encoding) of some files to change.</li>
+  <p> <em>There would be no property/registry change events for that. </em></p>
+  <li>a content type that has a default charset definition is dynamically installed. 
+    <p><em>The Resources plug-in is not expected to react properly on such situations 
+      (it is not supposed to be dynamic-aware).</em></p>
+  </li>
+</ol>
+</body>
+</html>
