@@ -15,6 +15,139 @@
   </tr>
   <tr> 
     <td WIDTH="100%"> 
+      <h3><a NAME="Milestone_Planning"></a>Milestone M5</h3>
+      <h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Original Plan</h4>
+      <h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Top five items</h4>
+      <ul>
+		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> start with J2SE 5.0 support (<a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/r3_1/j2se50/Status.html">JDT UI's overall status</a>)</li>
+        <li>progress in consolidating the platform</li>
+        <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> progress in improving NLS tooling</li>
+		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> remove dependencies to internal code from other plug-ins</li>
+		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> R3.0.2 related work items</li>
+      </ul>
+      
+   <h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Committed items</h4>
+<ul>
+<li>
+	<h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> Cross-team issues</h5>
+	<ul>
+		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> resolve performance test problems</li>
+		<li>participate in the action contribution dynamic team</li>
+        <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/new.gif" nosave="" border="0" align="middle"> <img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/glass.gif" nosave="" border="0" height="10" width="10"> harmonize with potential global undo manager<br>
+        The code is ready. We decided not to released it for M5 as it came close to the milestone. To be done at the beginning of M6.
+        </li>
+        <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/new.gif" nosave="" border="0" align="middle"> provide feedback for new Component Framework proposal (&rArr; editor splitting)</li>
+		<li>finish pushing down formatter to JDT Core</li>
+		<li>provide a compatibility layer for commands moved to LTK UI plug-in:<br>
+        	a hard-coded patch is ready but there should be support from the Platform
+        	for extension-point evolution.</li>
+	</ul>
+</li><li>
+	<h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> J2SE 5.0 support (<a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/r3_1/j2se50/Status.html">JDT UI's overall status</a>)</h5>
+	<ul>
+   	    <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> investigate impact on the following JDT Text areas:
+   	    <ul>
+			<li>syntax highlighting</li>
+			<li>content assist</li>
+			<li>hovering</li>
+			<li>comment formatting</li>
+			<li>typing</li>
+			<li>Java Outline page</li>
+			<li>folding</li>
+			<li>mark occurrences</li>
+   	    </ul></li>
+   	    <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> start to fix problems encountered in above investigation</li>
+   	    <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> provide new templates</li>
+   	    <li>provide new semantic highlightings</li>
+   	    <ul>
+			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> autoboxing</li>
+			<li>type bounds</li>
+			<li>enums</li>
+			<li>static imports</li>
+   	    </ul>
+	</ul>
+</li><li>
+	<h5>Platform consolidation</h5>
+	<ul>
+		<li>start adopting and pushing down Quick Assist and Quick Fix infrastructure</li>
+		<li>push down annotation hovers</li>
+		<li>offer spelling checking in Text editor</li>
+        <li>(move Occurrences annotation type definition and annotation specification down to ltk.ui or editors.ui)</li>
+        <li>(push down annotation navigation)</li>
+	</ul>
+</li><li>
+	<h5>(<img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10">) NLS tooling</h5>
+	<ul>
+		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> fix bugs reported in M4 test pass</li>
+        <li>(<img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10">) improve Properties File editor 
+          <ul>
+			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> improve detection of NLS accessor's resource bundle</li>
+			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> reduce false positives when navigating from Properties file editor to key references</li>
+            <li>(ensure correct ISO-8859-1 encoding when writing a properties file)</li>
+          </ul>
+        </li>
+        <li>(improve Externalize Strings wizard)
+          <ul>
+            <li>(spell checking)</li>
+            <li>(ensure correct ISO-8859-1 encoding when writing a properties file)</li>
+          </ul>
+        </li>
+        <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> investigate impact of Platform Core's new message bundle approach</li>
+	</ul>
+</li><li>
+	<h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> Code cleanup</h5>
+	<ul>
+		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> identify dependencies to other plug-ins and request API if appropriate<br>
+			The following API requests have been filed:
+			<ul>
+			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=79419">79419</a> [Preferences] Need a link component</li>
+			<li><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=82256">82256</a> [Contributions] Need EditorPluginAction and ActionDescriptor.ATT_DEFINITION_ID as API<br>
+				This will not be provided as there will be a new command story. We will keep the internal references until this is available.
+			</li>
+			</ul>
+		</li>
+		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> remove dependencies to internal code from other plug-ins</li>
+			Most of them got fixed in M5. Besides the one mentioned above remaion for M6:
+			<ul>
+				<li>reference to AnnotationExpandHover in JavaExpandHover</li>
+				<li>references to Search plug-in in PropertyKeyHyperlink</li>
+			</ul>
+	</ul>
+</li><li>
+	<h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> R3.0.2 related work items</h5>
+	Fixed two bugs.
+</li></ul>
+
+      <h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Permanent items</h4>
+      <ul>
+        <li>bugzilla inbox tracking</li>
+        <li>bug fixing</li>
+        <li>increase correctness test coverage</li>
+      </ul>
+	
+      <h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Proposed items</h4>
+		<ul>
+			<li>add new <code>org.eclipse.ltk.ui</code> plug-in to release<br>
+			<b>Note:</b> This item depends on the above mentioned cross team-issue</li>
+			<li>(Provide an example RCP text editor application with the following features:)<br>
+			<ul>
+				<li>open an external file</li>
+				<li>open an untitled (new & empty) text file</li>
+				<li>save</li>
+				<li>spell checking</li>
+				<li>quick fix to fix spelling problems</li>
+			</ul>
+			<b>Note:</b> it will require <code>org.eclipse.core.resources</code> plug-in
+			</li>
+		</ul>
+
+	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Absences</h4>
+	<ul>
+		<li>Tom: 3 days vacation</li>
+	</ul>
+
+<!----------------------------->      
+
       <h3><a NAME="Milestone_Planning"></a>Milestone M4</h3>
       <h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Original Plan</h4>
 
