@@ -59,7 +59,8 @@ CODE { font-size: smaller }
           called on the implementing class.</p>
         <p>If the bundle/plug-in doesn't define an extension then the <code>#initializeDefaultPluginPreferences() 
           </code> method is called on the plug-in class if the runtime compatibility 
-          layer is present.</p>
+          layer is present. Due to visibility restrictions, this is done via the 
+          <code>Plugin#legacyInitializeDefaultPluginPreferences()</code> method.</p>
       </blockquote>
       <p>2. Load from bundle/plug-in install dir.</p>
       <blockquote> 
@@ -68,7 +69,12 @@ CODE { font-size: smaller }
       </blockquote>
       <p>3. Load defaults from customization file as specified by the product.</p>
       <blockquote> 
-        <p>&nbsp;</p>
+        <p>Defaults are loaded from the URL as specified by the <code>org.eclipse.core.runtime.preferences.customization</code> 
+          property in the product.</p>
+        <p>For backwards compatibility if a feature does not define a product, 
+          then the Update code will automatically fill in this property value 
+          to be the <code>plugin_customization.ini</code> file in the primary 
+          feature's plug-in install directory.</p>
       </blockquote>
       <p>4. Load defaults from file specified by command-line option.</p>
       <blockquote>
