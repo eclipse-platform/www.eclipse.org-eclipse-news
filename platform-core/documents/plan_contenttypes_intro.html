@@ -100,8 +100,8 @@
   optionsMask) throws IOException;</code></p>
 <p>The first thing implementations for this method must do is to check if the 
   contents represent a valid sample for their corresponding content type file 
-  format. If not, this method should exit immediately, returning <code>IContentDescription.INVALID</code> 
-  or <code>IContentDescription.UNKNOWN</code>, depending on how strict the file 
+  format. If not (or if cannot be determined), this method should exit immediately, returning <code>IContentDescription.INVALID</code> 
+  or <code>IContentDescription.INDETERMINATE</code>, depending on how strict the file 
   format is. Otherwise, this method should return <code>IContentDescription.VALID</code>, 
   but only after trying to provide all required information (according to the 
   specified options, if any) by reading the contents and filling the <a href="#IContentDescription">content 
