@@ -143,7 +143,7 @@ If for some reason a UNC path had a device, it would preceed the slashes:
 </ul>
 <p>
 This platform-neutral encoding unambiguously encodes all possible paths on
-both Windows and Unix platforms.  In addition, if this platform-neutral encoding is
+all supported platforms.  In addition, if this platform-neutral encoding is
 passed to <tt>java.io.File</tt> on either Unix or Windows, it will be handled
 correctly.  The Windows implementation of the <tt>java.io.File</tt> constructor
 accepts front slashes as a path separator, and all plaforms collapse and ignore duplicate slashes.
@@ -187,7 +187,7 @@ that uses the double front slash as the device separator.
 These constructors are the root of the existing problems, since they are designed
 to accept both platform-specific paths, and platform-neutral paths produced by
 a previous call to <tt>IPath.toString</tt>.
-This method will be deprecated Eclipse 3.1, and its implementation left
+These constructors will be deprecated Eclipse 3.1, and their implementations left
 unchanged to avoid unnecessary breakage of existing callers.</li>
 </ul>
 New methods for Eclipse 3.1:
