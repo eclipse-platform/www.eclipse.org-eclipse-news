@@ -41,7 +41,7 @@
     files into the <b>parent</b> of your &lt;eclipse install&gt; directory (i.e., 
     the one containing &quot;eclipse&quot;). This will a add the Core Tools feature 
     as well as supporting plugins and fragments.</li>
-  <li>If you are running an Eclipse build from before 2002/11/26 (this includes 
+  <li>If you are running an Eclipse build from before I20021127 (this includes 
     2.0.*) you will need to get the patched versions of the boot, runtime and 
     resources plugins. Get core-tools-patches.zip and extract all files into your 
     &lt;eclipse install&gt;/plugins directory. This will overwrite boot.jar, runtime.jar 
@@ -58,7 +58,7 @@
   all options (except class load trace filters). To run Eclipse with the Core 
   Tools, either copy this file to your &lt;eclipse install&gt; directory or identify 
   it on the command line after -debug. For example, </p>
-<pre>    eclipse -debug &lt;URL location of .options&gt;</pre>
+<pre>    eclipse -debug file:d:/.options</pre>
 <p>Note that not all tools require enablement. You need only enable the debug 
   options required by the tools you choose to use. See the tool descriptions for 
   details.</p>
