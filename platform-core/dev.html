@@ -10,26 +10,26 @@
 
 <table BORDER=0 CELLSPACING=5 CELLPADDING=2 WIDTH="100%" >
 	<tr>
-	<td width="50%"><a href="#dev"><b>Development Resources</b></a>
-	<ul>
-		<li>Resources</li>
-			<ul>
-		        <li><a href="#bugs">Bugs</a></li>
-		        <li><a href="#plugins">Plug-ins</a></li>
-		        <li><a href="#mailinglists">Mailing Lists</a></li>
-			</ul>
-		<li>Documents</li>
-			
+	<td width="50%"><a href="#dev"><b>Development Resources</b></a> 
+      <ul>
+        <li>Resources</li>
         <ul>
+          <li><a href="#bugs">Bugs</a></li>
+          <li><a href="#plugins">Plug-ins</a></li>
+          <li><a href="#mailinglists">Mailing Lists</a></li>
+        </ul>
+        <li>Documents</li>
+        <ul>
+          <li><img src="new.gif" width="31" height="14"><a href="runtime/index.html">Runtime</a></li>
           <li><a href="#articles">Articles</a></li>
           <li><a href="#docs">Documents/Proposals</a></li>
         </ul>
-		<li>Downloads</li>
-			<ul>
-        		<li><a href="#examples">Examples/Contributions</a></li>
-    		   	<li><a href="#tools">Spies/Tools</a></li>
-	    	   	<li><a href="#patches">Patches</a></li>
-			</ul>
+        <li>Downloads</li>
+        <ul>
+          <li><a href="#examples">Examples/Contributions</a></li>
+          <li><a href="#tools">Spies/Tools</a></li>
+          <li><a href="#patches">Patches</a></li>
+        </ul>
       </ul>
 	</td>
 	<td width="50%">
@@ -98,8 +98,8 @@
     <td WIDTH="98%"><a name="docs"></a><b>Documents/Proposals</b> (<a href="rfc/index.html">archive</a>) 
       <ul>
         <li><a href="http://dev.eclipse.org/conventions.html">Eclipse Coding Conventions</a></li>
-        <li><img src="new.gif" width="31" height="14"><a href="documents/coding_conventions.html">Platform/Core 
-          Team Coding Conventions</a></li>
+        <li><a href="documents/coding_conventions.html">Platform/Core Team Coding 
+          Conventions</a></li>
         <li><a href="docs/eclipse-remote-dev-guidelines/remote-development.html"> 
           Eclipse Remote Development Guidelines</a> (draft) [Last modified April 
           2, 2002]</li>
@@ -111,6 +111,8 @@
           the Class Loader Properties File</a></li>
         <li><a href="docs/package-prefixes/prefixes.html">Using Package Prefixes 
           in the plugin.xml</a></li>
+        <li><img src="new.gif" width="31" height="14"><a href="runtime/index.html">The 
+          OSGi-based runtime</a></li>
       </ul>
     </td>
   </tr>
@@ -119,10 +121,19 @@
     <td WIDTH="98%"><a name="plugins"></a><b>Plug-ins</b> <br>
       The Platform/Core component consists of the following plug-ins:&nbsp; 
       <ul>
-        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.core.boot" target="_top">org.eclipse.core.boot</a></li>
-        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.core.runtime" target="_top">org.eclipse.core.runtime</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.core.boot" target="_top">org.eclipse.core.boot</a> 
+          (deprecated) </li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.core.runtime" target="_top">org.eclipse.core.runtime</a> 
+          (deprecated) </li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.core.resources" target="_top">org.eclipse.core.resources</a></li>
-        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.apache.xerces" target="_top">org.apache.xerces</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.apache.xerces" target="_top">org.apache.xerces</a> 
+        </li>
+        <li><img src="new.gif" width="31" height="14"><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.core.runtime.osgi" target="_top">org.eclipse.core.runtime.osgi</a></li>
+        <li><img src="new.gif" width="31" height="14"><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.core.runtime.compatibility" target="_top">org.eclipse.core.runtime.compatibility</a></li>
+        <li><img src="new.gif" width="31" height="14"><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.core.applicationrunner" target="_top">org.eclipse.core.applicationrunner</a></li>
+        <li><img src="new.gif" width="31" height="14"><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.osgi" target="_top">org.eclipse.osgi</a></li>
+        <li><img src="new.gif" width="31" height="14"><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.osgi.services" target="_top">org.eclipse.osgi.services</a></li>
+        <li><img src="new.gif" width="31" height="14"><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.osgi.util" target="_top">org.eclipse.osgi.util</a></li>
       </ul>
     </td>
   </tr>
@@ -375,7 +386,7 @@
         of the workspace, separation of user settings and plug-in metadata, multiple 
         workspaces, and translation of messages presented to the user from the 
         Eclipse executable.</p>
-      <p><a name="builder_issues">
+      <p><a name="builder_issues"></a>
         <i><a href="documents/eclipse3_builder_issues.html">Eclipse 3.0 Build Infrastructure</a></i>
         - It wouldn't feel like a real Eclipse release without some eleventh hour changes to the
 			platform build infrastructure.  This document outlines the current pressing builder
