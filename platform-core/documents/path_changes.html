@@ -204,7 +204,11 @@ given a platform-specific encoding of a string. This is the inverse of the
 <p>
 All callers of the existing <tt>Path</tt> constructors will need to migrate to one
 of the two path factory methods, depending on the origin of the path string being
-used.  All clients who store absolute <tt>IPath</tt> objects as platform-neutral 
+used.  All callers of the deprecated validation methods (<tt>isValidSegment</i>
+and <tt>isValidPath</tt>) should stop calling them. No replacement is necessary for
+these methods, since all paths are now valid.
+<p>
+All clients who store absolute <tt>IPath</tt> objects as platform-neutral 
 strings in a serialized form (as produced by <tt>IPath.toString</tt> in Eclipse 3.0), 
 and require cross-platform interoperability, will need to migrate to the new 
 platform-neutral string representation of <tt>IPath</tt> as produced by the 
@@ -212,10 +216,12 @@ revised <tt>toString</tt> implementation. Clients not requiring cross-platform
 compatibility can use the new <tt>Path.fromOSString</tt> method to parse
 previously stored strings. Note that this does not generally happen in practice. 
 I.e., absolute paths are almost never compatible across platforms due to the presence
-of the Windows device qualifier. Most serialized 
-paths that require cross-platform interoperability generally store paths that are 
-relative to a variable that expands to a platform-specific prefix.  The encoding of 
-relative paths with no device is unchanged from Eclipse 3.0.
+of the Windows device qualifier. Most serialized paths that require cross-platform 
+interoperability generally store paths that are relative to a variable that expands 
+to a platform-specific prefix.  The encoding of relative paths with no device is 
+unchanged from Eclipse 3.0.  Examples of files that contain string representations
+of paths that will need to migrate include the workspace <tt>.project</tt> and 
+<tt>.classpath</tt> files.
 </p>
 <h3>Bug reference</h3>
 <p>
