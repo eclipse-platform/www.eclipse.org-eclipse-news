@@ -74,14 +74,16 @@
             development]</b> </p>
         </li>
         <li> 
-          <p> Provide better text editor support for RCP. The list of functions 
+          <p> <img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14"> 
+          	Provide better text editor support for RCP. The list of functions 
             to add will grow over time. The initial set includes: annotation presentation 
             and navigation, user assigned colors and fonts, spell checking, user 
             defined, persistent folding, quick diff, templates, URL detection 
             and handling. <b>[Rich client platform]</b></p>
         </li>
         <li> 
-          <p>Make the Default Text editor your favorite text editor. From time 
+          <p> <img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14"> 
+          	Make the Default Text editor your favorite text editor. From time 
             to time users switch to an external text editor. The goal of this 
             plan item is to enhance the Text editor so that there is no longer 
             a need to switch. The list of functions to add will grow over time. 
@@ -98,7 +100,7 @@
       </ul>
       <h3>JDT</h3>
       <ul>
-        <li> Improve the Java editors. <b>[Simple to use, Large-scale development]</b> 
+        <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14"> Improve the Java editors. <b>[Simple to use, Large-scale development]</b> 
           <ul>
             <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14"> 
               Provide additional convenience and productivity text manipulation 
@@ -121,13 +123,13 @@
           </ul>
         </li>
         <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14"> 
-          Improve string externalization. Possible work items are collected in 
-          <a href="String_Externalization_Improvements.html">here</a>. <b>[Simple 
+          Improve string externalization. Possible work items are collected <a href="String_Externalization_Improvements.html">here</a>. <b>[Simple 
           to use]</b></li>
-        <li> <img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14"> 
-          J2SE 5.0 Support<b> [J2SE 5 support] </b> </li>
+        <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14"> 
+          J2SE 5.0 Support (<a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/r3_1/j2se50/Status.html">JDT UI's overall status</a>) <b>[J2SE 5 support]</b></li>
         <ul>
-          <li><span style="font-style: italic;">Ensure Java Editor and all its 
+          <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10">
+          <span style="font-style: italic;">Ensure Java Editor and all its 
             J2SE 1.4 coding features work with new JLS3 AST</span><br>
             The first priority is to get the same product quality when coding 
             against J2SE 1.4 as we have with Eclipse SDK 3.0. JDT text code needs 
@@ -135,13 +137,14 @@
             by new Java element types and deltas. Affected areas are syntax highlighting, 
             occurrence marking and Java outline page.<br>
           </li>
-          <li><span style="font-style: italic;">Enable Java coding against J2SE 
+          <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14"> 
+          <span style="font-style: italic;">Enable Java coding against J2SE 
             5.0</span><br>
             Existing features like syntax highlighting, occurrence marking, auto-indentation, 
-            Java Outline page and formatting need to be made J2SE 5.0 aware.<br>
+            Java Outline page and formatting need to be made J2SE 5.0 aware.
           </li>
-          <li> 
-            <p><span style="font-style: italic;">Add new features for J2SE 5.0</span><br>
+          <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14"> 
+            <span style="font-style: italic;">Add new features for J2SE 5.0</span><br>
               New features include annotation folding, matching &lt; bracket support, 
               auto insertion of closing &gt;, new keyword and syntax highlighting, 
               e.g. for generics and enums, and new templates. Provide hover support 
@@ -154,7 +157,7 @@
             <li> If a project is improperly setup, opening a file of that project 
               can result in lots of temporary problems. On open, the editor could 
               propose to filter all ripple errors and to show only relevant errors.</li>
-            <li>When autobuild is enabled, the editor can warn the user when a 
+            <li>When auto-build is enabled, the editor can warn the user when a 
               file is saved for which temporary errors exist.</li>
           </ul>
         </li>
@@ -168,12 +171,12 @@
         that are of exploratory nature are tagged with [investigate].</p>
       <h3>Component independent</h3>
       <ul>
-        <li>code cleanup</li>
+        <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14"> code cleanup</li>
         <ul>
           <li>cleanup implementation to only use up-to-date concepts</li>
           <li>cleanup plugin.xml files and code which still uses pre-3.0 extension 
             points and attributes (e.g. actionDefinitionId)</li>
-          <li>remove AbstractTextEditor dependency on internals of org.eclipse.ui</li>
+          <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14"> remove AbstractTextEditor dependency on internals of org.eclipse.ui</li>
           <li>Javadoc 
             <ul>
               <li>enforce uniform Javadoc style (usage of link, @value tag, etc.)</li>
@@ -251,8 +254,8 @@
           encoding (cross team issue) 
           <ul>
             <li>transfer encoding upon Save As...</li>
-            <li>listen to and handle encoding changes in the encoding UI</li>
-            <li>clarify BOM handling in case of encoding changes</li>
+            <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> listen to and handle encoding changes in the encoding UI</li>
+            <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> clarify BOM handling in case of encoding changes</li>
           </ul>
         </li>
         <li>folding 
@@ -338,13 +341,13 @@
           <ul>
             <li>allow interactive resizing of text and annotation hover popup 
               windows</li>
-            <li>roll over hovers 
+            <li>roll-over hovers 
               <ul>
                 <li> solve single-click/double-click issues </li>
                 <li>polish visual appearance such as asymmetric margins</li>
                 <li>implement delay free appearance when entering vertical ruler</li>
                 <li>solve accessibility issues</li>
-                <li>[investigate] provide roll overs for overview ruler</li>
+                <li>[investigate] provide roll-overs for overview ruler</li>
               </ul>
             </li>
           </ul>
@@ -352,7 +355,7 @@
         <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14"> 
           preferences 
           <ul>
-            <li> increase number of sharable editor preferences 
+            <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> increase number of sharable editor preferences 
               <ul>
                 <li>eventually there should be no initial need for a preference 
                   page when a new type of editor is created </li>
@@ -362,14 +365,14 @@
               vision (cross team issue)</li>
             <li>always split color settings in foreground/background, always allow 
               system/default color </li>
-            <li style="color: rgb(0, 0, 0);">revisit "spaces for tabs" preference 
+            <li style="color: rgb(0, 0, 0);"><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> revisit "spaces for tabs" preference 
               (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=19036">bug 
               19036</a>) 
               <ul>
                 <li>reduce confusion without loosing functionality</li>
               </ul>
             </li>
-            <li style="color: rgb(0, 0, 0);">[investigate] provide direct access 
+            <li style="color: rgb(0, 0, 0);"><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> provide direct access 
               to preferences where useful</li>
             <li>[investigate] add line delimiter preference for workspace and 
               project level (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=3970">bug 
@@ -448,7 +451,7 @@
           <li>[investigate] investigate chances of a SWT rich text widget</li>
           <li>[investigate] support for multiple clipboards</li>
         </ul>
-        <li>typing 
+        <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14"> typing 
           <ul>
             <li>smart typing 
               <ul>
@@ -460,7 +463,7 @@
             <li>introduce &quot;Remove block of empty lines&quot;</li>
             <li>revisit &quot;raw&quot; insert mode to be useful and not completely 
               dumb </li>
-            <li>introduce light weight &quot;Surround with&quot; and &quot;Search&quot; 
+            <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14"> introduce light weight &quot;Surround with&quot; and &quot;Search&quot; 
               menu (cross team issue)</li>
             <li>[investigate] auto correct on typing</li>
             <li>[investigate] auto format on typing</li>
@@ -481,10 +484,9 @@
         <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14"> 
           text manipulation 
           <ul>
-            <li>add "Remove Trailing space" command for files, folders, and projects</li>
-            <li>add &quot;Convert line delimiter&quot; command for files, folders, 
-              and projects</li>
-            <li>consolidate text manipulation infrastructure</li>
+            <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> add "Remove Trailing space" command for files, folders, and projects</li>
+            <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> add &quot;Convert line delimiter&quot; command for files, folders, and projects</li>
+            <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> consolidate text manipulation infrastructure</li>
             <li>[investigate] drag'n drop editing</li>
           </ul>
         </li>
@@ -509,12 +511,12 @@
             </li>
           </ul>
         </li>
-        <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14"> 
+        <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> 
           Quick diff 
           <ul>
-            <li>provide memory efficient quick diff algorithm</li>
-            <li>polish presentation of deleted lines in the line number ruler</li>
-            <li>[investigate] character level diff in hover<font color="#000000"></font></li>
+            <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> provide memory efficient quick diff algorithm</li>
+            <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> polish presentation of deleted lines in the line number ruler</li>
+            <li><font class="indexsub" color="#8080ff">[&gt;3.1]</font> [investigate] character level diff in hover<font color="#000000"></font></li>
           </ul>
         </li>
         <li>embedded content 
@@ -559,14 +561,14 @@
       <ul>
         <li>comment formatter</li>
         <ul>
-          <li>improve handling of spaces (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=49686">bug 
+          <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> improve handling of spaces (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=49686">bug 
             49686<span style="font-family: monospace;"></span></a>)</li>
           <li>provide support for custom tags</li>
           <li>provide support link tag</li>
           <li>improve HTML support<br>
           </li>
           <li>split general "comment" into Javadoc and code comments</li>
-          <li>[investigate] push down to JDT Core (cross team issue)</li>
+          <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14"> push down to JDT Core (cross team issue)</li>
           <li>[investigate] define formatting preference by providing an example</li>
         </ul>
         <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14"> 
@@ -611,7 +613,7 @@
             </li>
             <li><font color="#000000">[investigate] propose textual completion 
               based on file contents</font></li>
-            <li><font color="#000000">[investigate] reestablish linked mode for 
+            <li><font color="#000000">[investigate] re-establish linked mode for 
               method calls on Show context info</font></li>
             <li><font color="#000000">[investigate] code assist remembers previous 
               choices in its rating</font></li>
@@ -620,7 +622,7 @@
         <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14"> 
           syntax highlighting 
           <ul>
-            <li> semantic coloring of 'deprecated' declaration/reference </li>
+            <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> semantic coloring of 'deprecated' declaration/reference </li>
             <li>syntax highlighting preview on the preference page should background 
               highlight all occurrences of the selected type, also support backward 
               coupling</li>
@@ -634,11 +636,11 @@
               be pushed down to Platform Text </li>
           </ul>
         </li>
-        <li>spell checking 
+        <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14"> spell checking
           <ul>
             <li>improve spell checking to ignore defined Java symbols or mark 
               spelling errors in symbols differently</li>
-            <li>generalize spell checking for Platform Text 
+            <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> generalize spell checking for Platform Text 
               <ul>
                 <li>dictionaries can be shared between different editor types</li>
                 <li>enable more advanced checking such as grammar checking</li>
@@ -774,9 +776,9 @@
   <tr> 
     <td WIDTH="100%"> 
       <h3><a name="Milestone_Planning"></a><i>Draft</i> Milestone M5 Plan</h3>
-      <h4>Top Five</h4>
+      <h4>Top five items</h4>
       <ul>
-		<li>J2SE 5.0 support</li>
+		<li>start with J2SE 5.0 support (<a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/r3_1/j2se50/Status.html">JDT UI's overall status</a>)</li>
         <li>progress in consolidating the platform</li>
         <li>progress in improving NLS tooling</li>
 		<li>remove dependencies to internal code from other plug-ins</li>
@@ -795,7 +797,7 @@
         	for extension-point evolution.</li>
 	</ul>
 
-	<h5>J2SE 5.0 support</h5>
+	<h5>J2SE 5.0 support (<a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/r3_1/j2se50/Status.html">JDT UI's overall status</a>)</h5>
 	<ul>
    	    <li>investigate impact on the following JDT Text areas:
    	    <ul>
@@ -834,6 +836,13 @@
 
 	<h5>R3.0.2 related work items</h5>
 	t.b.d.
+
+      <h4>Permanent items</h4>
+      <ul>
+        <li>bugzilla inbox tracking</li>
+        <li>bug fixing</li>
+        <li>increase correctness test coverage</li>
+      </ul>
 		
       <h4>Proposed items</h4>
 		<ul>
@@ -850,6 +859,12 @@
 			<b>Note:</b> it will require <code>org.eclipse.core.resources</code> plug-in
 			</li>
 		</ul>
+
+	<h4>Absences</h4>
+	<ul>
+		<li><i>Tom: 15 days Swiss Military (tentative)</i></li>
+		<li>Tom: 3 days vacation</li>
+	</ul>
       
       <h3>Previous milestones</h3>
       <p>Previous 3.1 milestones can be reviewed <a href="previous_plans.html">here</a>.</p>
