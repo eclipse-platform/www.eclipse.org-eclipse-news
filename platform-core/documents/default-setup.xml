@@ -1,54 +1,73 @@
+<!-- 
+	Option sets are (as one can guess) sets of command line options for running Eclipse.
+	Named option sets must be explicitly selected to be used.
+	Unnamed ones are selected if the named option sets they require
+	are selected.
+	Option sets can extend other named option sets, inheriting all options from the ancestor.
+	A setup file can specify default option sets. Users can override the set of
+	default option sets by using the setup.optionSets property.
+	Setup files are specified by using the setup.files property.
+-->
+
 <setup default="j9, eclipse_31M1">
-	<variant
-		id="j9" 
-		name="J9">
+
+	<optionSet id="j9" name="J9">
 		<eclipseArg option="vm" value="d:\java\j9sc20040917\jre\bin\java"/>
 		<vmArg option="Xj9"/>
-	</variant>	     
+	</optionSet>	     
+
+	<optionSet id="sun" name="Sun JRE"/>
+	<optionSet id="sun_1.3" name="Sun JRE 1.3.*" base="sun"/>		
+	<optionSet id="sun_1.4" name="Sun JRE 1.4.*" base="sun"/>	
+	<optionSet id="sun_1.5" name="Sun JRE 1.5.*" base="sun"/>
+	<optionSet id="sun_1.4.2_03" name="Sun JDK 1.4.2_03" base="sun_1.4">
+		<eclipseArg option="vm" value="d:\java\sun jdk 1.4.2_03\jre\bin\java"/>
+	</optionSet>
+	<optionSet id="sun_1.5.0" name="Sun JDK 1.5.0" base="sun_1.5">
+		<eclipseArg option="vm" value="d:\java\sun jdk 1.5.0\jre\bin\java"/>
+	</optionSet>
 	
-	<variant
-		id="sun_142_03"	
-		name="Sun JDK 1.4.2_03">
-		<eclipseArg option="vm" value="d:\java\sun jdk 1.4.2_03\jre\bin\java"/>	     
-	</variant>
+	<optionSet id="big_memory" name="Big Memory">
+		<vmArg option="Xmx256m"/>
+	</optionSet>
 	
-	<variant
-		id="remote_debug"	
-		name="Remote Debugging"
-		timeout="0">	
+	<optionSet id="low_memory" name="Low Memory">
+		<vmArg option="Xmx32m"/>
+	</optionSet>	
+	
+	<optionSet id="nojit" name="No JIT"/>
+	
+	<optionSet name="No JIT on J9" with="j9,nojit">
+		<vmArg option="Xint"/>
+	</optionSet>	
+	
+	<optionSet name="No JIT on Sun" with="sun,nojit">	
+		<systemProperty key="java.compiler" value="none"/>	
+	</optionSet>
+	
+	<optionSet id="remote_debug" name="Remote Debugging" timeout="0" base="nojit">
 		<vmArg option="Xdebug"/>
 		<vmArg option="Xnoagent"/>
 		<vmArg option="Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000"/>
-		<property key="java.compiler" value="NONE"/>
-	</variant>
-	
-	<variant
-		id="eclipse_300"
-		name="Eclipse 3.0">		
+	</optionSet>
+
+	<optionSet id="eclipse_3.0"	name="Eclipse 3.0.x"/>
+	<optionSet id="eclipse_3.0.0" name="Eclipse 3.0.0" base="eclipse_3.0">
 		<eclipseArg option="install" value="d:\eclipse\3.0.x\3.0\eclipse"/>
-	</variant>	     	
-	
-	<variant
-		id="eclipse_301" 
-		name="Eclipse 3.0.1">	
+	</optionSet>
+	<optionSet id="eclipse_3.0.1" name="Eclipse 3.0.1" base="eclipse_3.0">
 		<eclipseArg option="install" value="d:\eclipse\3.0.x\3.0.1\eclipse"/>
-	</variant>	     	
-
-	<variant
-		id="eclipse_31M1" 
-		name="Eclipse 3.1 M1">
+	</optionSet>	
+	<optionSet id="eclipse_3.1" name="Eclipse 3.1"/>	
+	<optionSet id="eclipse_31M1" name="Eclipse 3.1 M1" base="eclipse_3.1">
 		<eclipseArg option="install" value="d:\eclipse\3.1.x\m1\eclipse"/>
-	</variant>	     	
-
-	<variant
-		id="basicInstance" 
-		name="Basic Instance">
-		<eclipseArg option="data" value="d:\temp\tests\basic tests"/>		
-	</variant>	     
+	</optionSet>	     	
 	
-	<variant
-		id="performance"
-		name="Performance">	
-		<property key="perf_ctrl" value="dbloc=d:/temp/cloudscape;config=org.eclipse.core.tests.basic;build=base"/>
-	</variant>
+	<optionSet id="basicInstance" name="Basic Instance">
+		<eclipseArg option="data" value="d:\temp\tests\basic tests"/>
+	</optionSet>	     
+	
+	<optionSet id="performance" name="Performance">	
+		<systemProperty key="perf_ctrl" value="dbloc=d:/temp/cloudscape;config=org.eclipse.core.tests.basic;build=base"/>
+	</optionSet>
 </setup>
