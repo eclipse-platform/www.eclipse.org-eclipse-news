@@ -13,12 +13,20 @@
     <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" BGCOLOR="#0080C0"><b><font face="Arial,Helvetica"><font color="#FFFFFF">Team/Resource 
       Integration Details</font></font></b></td>
   </tr>
+  <tr>
+    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
+    <td WIDTH="98%">
+      <p><b>Description</b></p>
+      <p>Described in detail on the <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-vcm-home/docs/online/team3.0/resources.html">Platform/Team 
+        team web</a> site.</p>
+      <p>See also bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=37722">37722</a>.</p>
+      <p>&nbsp;</p>
+    </td>
+  </tr>
   <tr> 
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
     <td WIDTH="98%"> 
-      <p><b>Team/Resource Integration </b>(bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=37722">37722</a>, 
-        described in detail <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-vcm-home/docs/online/team3.0/resources.html">here</a>)</p>
-      <p><i>Questions and Issues:</i></p>
+      <p><b>Questions and Issues</b></p>
       <ul>
         <li>How to manage the file system provider mapping to the resources? 
           <ul>
@@ -27,17 +35,36 @@
         </li>
         <li>How is this information persisted?</li>
         <li>Should this information be shared in the repository?</li>
-        <li>What differentiates a project from a folder?</li>
-        <li>How do we store folder-level metadata? (do we need to do this?)</li>
+        <li>How do we store folder-level metadata? (do we need to do this?) 
+          <ul>
+            <li>If so, then what differentiates a project from a folder?</li>
+          </ul>
+        </li>
         <li>How do we handle linked resources?</li>
         <li>How do we provide access to the Core library calls?</li>
         <li>Do we need startup/shutdown lifecycle events to allow for cleanup?</li>
         <li>How do we deal with missing providers?</li>
         <li>DefaultProvider could be an abstract class for others to inherit from.</li>
         <li>Register data providers via an extension point.</li>
+        <li>The relationship between TeamProviders and DataProviders is yet to 
+          be defined, but we would like to keep knowledge team out of Core as 
+          much as we can. It is thought that perhaps TeamProviders should be able 
+          to answer their &quot;preferred data provider&quot;.</li>
+        <li>Take a look at the current Move/Delete hook implementation. With this, 
+          there are basically 2 ways of doing things. You can either do some pre-processing 
+          and then defer the actual operation to the default (by calling IResourceTree.standardFileDelete, 
+          etc) or the operation is broken into 2 separate pieces. The implementor 
+          of the Move/Delete hook performs the file-system based part of the function 
+          and then makes the appropriate calls back into the resource tree in 
+          order to update the workspace.</li>
       </ul>
       <p>&nbsp;</p>
     </td>
+  </tr>
+  <tr>
+    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
+    <td WIDTH="98%"> 
+  </td>
   </tr>
 </table>
 

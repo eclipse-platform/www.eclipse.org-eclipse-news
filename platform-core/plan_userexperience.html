@@ -46,38 +46,17 @@
         The messages which are displayed by the Eclipse executable are currently 
         not translated. We need to define an external message story for this code, 
         as well as the code which is in the startup.jar.</p>
-      <p>&nbsp;</p>
+      <p><i>Show User Log File Location</i> - (bug <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=33974">33974</a>) 
+        When there is an error trying to start Eclipse we produce a dialog to 
+        the user telling them to check their log file but we don't print out the 
+        exact location of this file. If the user specified the -data command-line 
+        argument then the location of the file is easy to calculate. Otherwise, 
+        it is done through Java System properties which is much harder to do in 
+        C code. <br>
+      </p>
     </td>
   </tr>
-  <tr> 
-    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
-    <td> 
-      <p><b><a name="xerces"></a>Remove Dependancy on Xerces </b>(bugs <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=37696">37696</a>, 
-        <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=36112">36112</a>)</p>
-      <p><i>Checklist:</i></p>
-      <ul>
-        <li>Create new XML plug-in containing the XML Pull APIs.</li>
-        <li>Remove plug-in dependancies from org.eclipse.core.runtime and org.eclipse.core.resources.</li>
-        <li>Add new dependancy to new XML plug-in.</li>
-        <li>Replace org.eclipse.core.internal.plugins.PluginParser with a new 
-          parser using the new APIs.</li>
-        <li>Replace org.eclipse.core.internal.resources.WorkspaceDescriptionReader 
-          with new reader based on new APIs.</li>
-        <li>Check test suites.</li>
-        <li>Verify new work by completely removing the Xerces plug-in from the 
-          environment.</li>
-        <li>Educate Platform/UI and other teams in SDK who rely on Xerces with 
-          knowledge of new APIs.</li>
-      </ul>
-    </td>
-  </tr>
-    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
-	<td> 
-      <p><b><a name="encoding"></a>Improve File Encoding Support</b></p>
-      <p>&nbsp;</p>
-    </td>
-  <tr>
-  </tr>
+  <tr> </tr>
 </table>
 
 </body>
