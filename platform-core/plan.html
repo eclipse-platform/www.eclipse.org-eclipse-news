@@ -32,7 +32,7 @@
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
     <td WIDTH="98%"> 
       <p><b>Major work items</b></p>
-      <p><i><a href="plan_details.html">Concurrency/Background Operations</a></i> 
+      <p><i><a href="plan_concurrency.html">Concurrency/Background Operations</a></i> 
         - One of the biggest complaints about Eclipse is that almost every user 
         action locks the system for the duration of the operation. When you save 
         a Java file you have to wait for the compiler to finish before you do 
@@ -40,8 +40,8 @@
         before you can edit code, etc. The limitations of the current model are 
         increasingly evident in the context of the Rich Client Platform (RCP). 
       </p>
-      <p><i><a href="plan_details.html">Dynamic Plug-ins</a></i> - The current 
-        Eclipse plug-in activation story is &quot;somewhat less than optimal&quot;. 
+      <p><i><a href="plan_dynamic_plugins.html">Dynamic Plug-ins</a></i> - The 
+        current Eclipse plug-in activation story is &quot;somewhat less than optimal&quot;. 
         Plug-ins are automatically activated upon first reference and once a plug-in 
         is started, it remains in that state for the duration of the Eclipse session. 
         We would like to migrate to a model which would allow for plug-ins to 
@@ -52,16 +52,16 @@
         which means that users won't require a restart for new plug-in changes 
         to take effect.</p>
       <p></p>
-      <p><i><a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-vcm-home/docs/online/team3.0/resources.html">Team/Resource 
-        Integration</a></i> - There currently exists a few hooks in the core code 
-        which allow Team providers the opportunity to perform operations on resources 
-        before/instead of the core default. We wish to allow for a pluggable mechanism 
-        which provides more control over these operations. Check out the document 
-        link for a good description of this problem on the Platform/Team web page.</p>
+      <p><i><a href="plan_team_integration.html">Team/Resource Integration</a></i> 
+        - There currently exists a few hooks in the core code which allow Team 
+        providers the opportunity to perform operations on resources before/instead 
+        of the core default. We wish to allow for a pluggable mechanism which 
+        provides more control over these operations. Check out the document link 
+        for a good description of this problem on the Platform/Team web page.</p>
       <p></p>
-      <p><i><a href="plan_details.html">Improve User Experience</a></i> - As a 
-        first-time Eclipse user there are many non-obvious problems that you can 
-        run across and this plan item is being used to collect them all. Some 
+      <p><i><a href="plan_misc.html#user">Improve User Experience</a></i> - As 
+        a first-time Eclipse user there are many non-obvious problems that you 
+        can run across and this plan item is being used to collect them all. Some 
         current problems include (but are not limited to): default location of 
         the workspace, separation of user settings and plug-in metadata, multiple 
         workspaces, and translation of messages presented to the user from the 
@@ -69,8 +69,8 @@
       <ul>
       </ul>
       <p></p>
-      <p><i><a href="plan_details.html">Remove Xerces Dependancy </a></i>- The 
-        Eclipse SDK is shipped with a Xerces implementation which is approximately 
+      <p><i><a href="plan_misc.html#xerces">Remove Xerces Dependancy </a></i>- 
+        The Eclipse SDK is shipped with a Xerces implementation which is approximately 
         3M in size. (source and binaries) This gets interesting as we move towards 
         supporting a Rich Client Platform (RCP) and have applications which are 
         interested in using minimal installs of Eclipse and perhaps even running 
@@ -81,7 +81,7 @@
         and instead including a light-weight, fast XML parser such as one based 
         on the XMLPull technology.<br>
       </p>
-      <p><i><a href="plan_details.html">Improve File Encoding Support </a></i>- 
+      <p><i><a href="plan_misc.html#encoding">Improve File Encoding Support </a></i>- 
         Eclipse 2.1 uses a single global file encoding setting for reading and 
         writing files in the workspace. This is problematic; for example, when 
         Java source files in the workspace use OS default file encoding while 

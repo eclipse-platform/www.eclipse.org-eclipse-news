@@ -1,0 +1,47 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+   <title>Concurrency/Background Operation Details</title>
+<link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
+</head>
+<body text="#000000" bgcolor="#FFFFFF">
+&nbsp;
+<table BORDER=0 CELLSPACING=5 CELLPADDING=2 WIDTH="100%" >
+  <tr> 
+    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" BGCOLOR="#0080C0"><b><font face="Arial,Helvetica"><font color="#FFFFFF">Concurrency/Background 
+      Operation Details</font></font></b></td>
+  </tr>
+  <tr> 
+    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
+    <td WIDTH="98%"> 
+      <p><b>Concurrency/Background Operations</b></p>
+      <p><i>Workspace Lock Granularity</i> - Currently the Eclipse resource model 
+        locks the entire workspace for the duration of any workspace modifying 
+        operations. This approach does not lend itself to concurrent operations. 
+        We would like to have a different approach which allows locking to occur 
+        on a per resource or per resource sub-tree level, or something which will 
+        allow multiple operations to be performed on different parts of the resource 
+        tree at the same time.</p>
+      <p><i>Generalized Locking Mechanism</i> - Several Eclipse components and 
+        third-party plug-ins have locking mechanisms for serializing concurrent 
+        operations that could otherwise corrupt their internal state. Because 
+        of the lack of coordination across plug-ins, Eclipse is prone to deadlocks. 
+        Eclipse should provide a unified locking story, perhaps based on a mechanism 
+        for centrally registering and managing locks, so that plug-ins can coordinate 
+        their activities without risking deadlock.</p>
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+  <tr> 
+    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
+    <td> 
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
