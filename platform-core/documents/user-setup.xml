@@ -1,6 +1,7 @@
+<!-- This is an example for the doc on the session test framework -->
 <!-- 
-	Option sets are (as one can guess) sets of command line options for running Eclipse.
-	Named option sets must be explicitly selected to be used.
+	Option sets are sets of command line options for running Eclipse.
+	Named option sets must be explicitly selected by the user to be used.
 	Unnamed ones are selected if the named option sets they require
 	are selected.
 	Option sets can extend other named option sets, inheriting all options from the ancestor.
