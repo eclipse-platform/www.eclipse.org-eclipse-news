@@ -8,17 +8,15 @@
  
 <h1>Listeners and builders in a concurrent world</h1>
 <font size="-1">[Draft copy] </font><br><br>
-<font size="-1">Last modified: August 6, 2003</font> 
+<font size="-1">Last modified: August 7, 2003</font> 
 
 <p>In the context of the work on improving platform responsiveness,
-there will be some changes to how resource change listeners
+there are some proposed changes to how resource change listeners
 and incremental project builders operate.  This document describes and 
-motivates these proposed changes.
-The existing (Eclipse 2.1) behavior of listeners will be described in detail, 
-along with a description of how this will change in Eclipse 3.0.
-Finally, this document includes a description of how
-existing implementations might be impacted and 
-how they can adapt to the new behavior.
+motivates these changes. The existing (Eclipse 2.1) behavior of listeners and
+auto-build will be described, along with a description of how this will change in Eclipse 3.0.
+Finally, this document includes a description of how existing implementations might 
+be impacted and how they can adapt to the new behavior.
 <h3>Overview and motivation</h3>
 <p>
 The principal proposed change for release 3.0 is that auto-build will be called in a 
