@@ -179,6 +179,11 @@ certain characters are reserved on some operating systems. In implementation,
 it will just check for the device separator on operating systems that require it.
 The restriction on leading and trailing spaces in segment names will be 
 removed on all operating systems that allow such paths.</li>
+<li><tt>Path(String, String)</tt>. This constructor previously had the unspecified
+behaviour of extracting the device from the second argument when no device
+argument was supplied. This behaviour will change to no longer parse the 
+device from the second argument. This constructor will now handle literal
+colon characters in path segments on all platforms.</li>
 </ul>
 New methods for Eclipse 3.1:
 <ul>
@@ -197,15 +202,15 @@ given a platform-specific encoding of a string. This is the inverse of the
 as the device separator, and both varieties of slash are treated as segment separators.</li>
 </ul>
 </p>
-<h3>What do we do with the old Path constructors?</h3>
+<h3>What do we do with the <tt>Path(String</tt> constructor?</h3>
 <p>
 This proposal introduces two factory methods that clearly distinguish
 platform-neutral and platform-specific encodings of paths.  The difficult
-question is what to do with the current constructors. The two options are:
+question is what to do with old single argument <tt>Path</tt> constructor. The two options are:
 <ol>
 <li>
-Leave the implementation of existing path constructors unchanged, but deprecate
-them.  The advantage of this solution is that it does not break the API contract
+Leave the implementation of this constructor unchanged, but deprecate
+it.  The advantage of this solution is that it does not break the API contract
 spelled out in the current <code>Path</code> constructor, which explicitly
 states how it handles ':' and '\' characters.  The disadvantage is that this will 
 require all callers of the existing <tt>Path</tt> constructors 
@@ -222,7 +227,7 @@ introduction of previously invalid paths.  This presents a bleak picture
 for backwards-compatibility, regardless of the fact that no API contracts
 are broken.
 </li><li>
-The second option is to change the existing path constructors to be
+The second option is to change the existing single argument path constructor to be
 platform-specific. In other words, the Windows implementation of these
 methods would remain unchanged, but implementations on other platforms
 would stop treating ':' as the device separator, and no longer treat '\'
@@ -248,10 +253,6 @@ on testing the implementation of these two options, this proposal recommends
 option two.
 
 <h3>Other migration issues</h3>
-<p>
-All callers of the deprecated validation methods (<tt>isValidSegment</tt> 
-and <tt>isValidPath</tt>) should stop calling them. No replacement is 
-necessary for these methods, since all paths are now valid.
 <p>
 All clients who store absolute <tt>IPath</tt> objects as platform-neutral 
 strings in a serialized form (as produced by <tt>IPath.toString</tt> in Eclipse 3.0), 
