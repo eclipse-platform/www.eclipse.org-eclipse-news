@@ -274,17 +274,55 @@ Run a Junit test.
 <h4>Encoding - Content types</h4>
 <ul>
   <li>confirm that the right content type is selected when a complex hierarchy 
-    of content types exist (use the resource properties dialog):<ul>
-	<li>a .xml file is recognized as XML</li>
-	  <li>a .xml file whose root element is &lt;project&gt; is recognized as an 
+    of content types exist (use the resource properties dialog to see the content 
+    type that was chosen): 
+    <ul>
+      <li>a .xml file is recognized as XML</li>
+      <li>a .xml file whose root element is &lt;project&gt; is recognized as an 
         Ant Build Script</li>
-	<li>a plugin.xml file is recognized as a Plugin Manifest file</li>
-	  <li>a plugin.xml file whose root element is &lt;project&gt; is recognized 
+      <li>a plugin.xml file is recognized as a Plugin Manifest file</li>
+      <li>a plugin.xml file whose root element is &lt;project&gt; is recognized 
         as an Ant Build Script</li>
-  </ul>	
+    </ul>
   </li>
+  <li>try the same as above with partial/empty XML files - whenever a file has 
+    a .xml extension, it should at least be recognized as XML. If the contents 
+    are complete enough (root element can be parsed), more specific content types 
+    (such as Ant scripts) should be picked.</li>
   <li>confirm that the right encoding is picked for XML files containing a &quot;encoding&quot; 
-    attribute or not</li>
+    attribute or not (default is UTF-8)</li>
+  <li>this is a list of all content types in the SDK: 
+    <ul>
+      <li>org.eclipse.core.runtime.text 
+        <ul>
+          <li>org.eclipse.core.runtime.xml (*.xml, .classpath, .properties) 
+            <ul>
+              <li>org.eclipse.ant.core.antBuildFile (*.xml with a &lt;project&gt; 
+                root element)</li>
+              <li>org.eclipse.pde.core.pluginManifest (plugin.xml)</li>
+              <li>org.eclipse.pde.core.fragmentManifest (fragment.xml)</li>
+            </ul>
+          </li>
+          <li>org.eclipse.jdt.core.javaProperties (*.properties)
+            <ul>
+              <li>org.eclipse.pde.core.pluginProperties (plugin.properties)</li>
+            </ul>
+          </li>
+          <li>org.eclipse.jdt.core.JARManifest (MANIFEST.MF)</li>
+          <li>org.eclipse.jdt.core.javaSource</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<h4>Encoding - BOMs</h4>
+<ul>
+  <li>confirm text files (or any derived content types such as XML and Java source 
+    files) are said to have the right encoding when they present a Byte Order 
+    Mark (use Notepad to generate those)</li>
+  <li>confirm opening such files works ok</li>
+  <li>confirm encoding of files with BOM can be overridden by setting a user-specified 
+    encoding</li>
 </ul>
 <h4>Encoding - Preferences</h4>
 <ul>
