@@ -18,12 +18,40 @@
 	</blockquote>
 	
 	<h3><a name="osgi"/>OSGi</h3>
-	  
 <blockquote>
-  <h4>Shared Install</h4>
+  <h4>Shared Install 1</h4>
   <ul>
-    <li>item 1</li>
-    <li>item 2</li>
+    <li>install Eclipse on shared drive</li>
+    <li>run once with -initialize, mark read-only</li>
+    <li>run one instance, exit</li>
+    <li>run another instance (as different user or on different machine), exit</li>
+    <li>run two instances at the same time (as different users or on different
+      machines)</li>
+    <li>exit in same order as start (i.e., start 1, start 2, exit 1, exit 2)</li>
+  </ul>
+  <h4>Shared Install 2</h4>
+  <ul>
+    <li>install Eclipse on shared drive</li>
+    <li>run once with -initialize, mark read-only</li>
+    <li>run user instance, exit</li>
+    <li>start admin instance (with read/write permissions)</li>
+    <li>install new features using update manager, exit</li>
+    <li>restart previous user instance</li>
+    <li>confirm that newly installed features are present and funcitonal</li>
+    <li>check that no additional files have been written in the local configuration
+      area</li>
+  </ul>
+  <h4>Shared Install 3</h4>
+  <ul>
+    <li>install Eclipse on shared drive</li>
+    <li>run once with -initialize, mark read-only</li>
+    <li>run one instance</li>
+    <li>install new features using update manager</li>
+    <li>restart. New features should be there and totally functional</li>
+    <li>start another instance as the same user on the same machine</li>
+    <li>Previously installed features should be present and functional</li>
+    <li>start another instance on a different machine or as a different user</li>
+    <li>previoulsy installed features should NOT be present </li>
   </ul>
 </blockquote>
 <h3><a name="equinox"/>Runtime - Equinox</h3>
