@@ -16,24 +16,23 @@
 <h1>Markup to express bundle dynamic capabilities.</h1>
 
 <blockquote> <b>Summary</b><br>
-This RFC highlights the need for bundle to express their dynamic capabilities and proposes a solution based on the introduction of a new header in the manifest.mf.
+This RFC highlights the need for bundles to express their dynamic capabilities and proposes a solution based on the introduction of a new header in the manifest.mf.
 <p>
 <font size="-1">Last modified: November 25, 2004</font> 
 </blockquote>
 <p>
 <h3>Background</h3>
 <p>
-In 3.0 the concept of dynamic plugin has been introduced. Even though some infrastructure has been added, plugins did not become automatically / magically dynamic. Some work was expected by the plugin writers.
-This resulted in the eclipse 3.0 SDK being only partially dynamic possibly leading to strange behavior. Indeed, because the runtime and some other plugins are dynamic, it is possible to install and uninstall plug-ins and be under the impression that everything worked fine. Unfortunately this is a false impression. For example if a new builder is being added, it will not be picked up because org.eclipse.core.resources is not dynamic aware. 
+In 3.0 the concept of a dynamic plugin has been introduced. Even though some infrastructure has been added, plugins did not become automatically / magically dynamic. Some work was expected by the plugin writers.
+This resulted in the eclipse 3.0 SDK being only partially dynamic possibly leading to strange behavior. Indeed, because the runtime and some other plugins are dynamic, it is possible to install and uninstall plug-ins and be under the impression that everything worked fine. 
+For example if a new builder is being added, it will not be picked up because org.eclipse.core.resources is not dynamic aware. 
 <p>
-Being able to detect such things is important for the user, since it can lead to incorrect behavior of the system, and inappropriate user interactions.
-<p>
-Note that this problem exists as well for people putting together system based plugins.
+Being able to detect such things is important for the user, since they can lead to incorrect behavior of the system.
 <p>
 
 <h3>Proposed solution</h3>
 <p>
-Plugin must be able to express their dynamic capabilities in order to enable runtime and development time checks.
+Plugins must be able to express their dynamic capabilities in order to enable runtime and development time checks.
 There is several levels of dynamic capabilities:
 <ul>
 	<li> A bundle / plugin can be dynamic enabled."Most importantly, to be dynamic enabled, your plug-in has to properly clean up after itself in the Plugin shutdown method." ( FAQ 117).</li>
@@ -41,17 +40,20 @@ There is several levels of dynamic capabilities:
 	<li> A bundle / plugin can be removal aware. It will take into account bundles being removed from the system. </li>
 </ul>
 <p>
-Because being dynamic is not a property reserved to bundles declaring extensions, this characteristic is being captured in the bundle manifest by the following header: <tt>Eclipse-DynamicCapabilities:</tt> whose values are either:
-<tt>enabled</tt>,  <tt>addition</tt>, <tt>removal</tt> and are separated by semi colons.
+Because being dynamic is not a property reserved for bundles declaring extensions, this characteristic is being captured in the bundle manifest by the following header: <tt>Eclipse-Dynamic:</tt> whose values are either:
+<tt>enabled</tt>,  <tt>addition-aware</tt>, <tt>removal-aware</tt> and are separated by semi colons.
 <p>
 Example, the manifest of org.eclipse.core.runtime manifest will have the following extra header:
 <tt>
-Eclipse-DynamicCapabilities: enabled; addition; removal
+Eclipse-Dynamic: enabled; addition; removal
 </tt>
+<p>
+The absence of header will indicate that the plugin is neither dynamic addition or removal aware nor dynamic enabled.
 <p>
 <h3>Default values</h3>
 <p>
-For the manifests being generated from a plugin.xml the value generated will be:<tt>Eclipse-DynamicCapabilities: enabled</tt>.
+For the manifests being generated from a plugin.xml the value generated will be:<tt>Eclipse-Dynamic: enabled</tt>.
+This captures the good practice that has been indicated since eclipse 1.0 that plugins must clean up after them in the shutdown method.
 <p>
 
 <h3>Usage</h3>
