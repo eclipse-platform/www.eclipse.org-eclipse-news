@@ -309,9 +309,38 @@
       because improves the overall quality of content-based content type lookups.</p>
   </li>
 </ol>
-<p>
-<em>Note: comments are encouraged. Any questions/concerns not addressed here should be discussed in the platform-core-dev list,
-or bug <a
- href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=37668">37668</a>.
-</em></p>
+<p> <em>Note: comments are encouraged. Any questions/concerns not addressed here 
+  should be discussed in the platform-core-dev list, or bug <a
+ href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=37668">37668</a>. </em></p>
+<h2>Addendum: issues to be addressed in the 3.1 cycle</h2>
+<p><font size="-1">Last modified: October 15th, 2004</font></p>
+<p>The solution described above was implemented and relatively succesful. Some 
+  components took advantage of the new content type infrastructure, but still 
+  in many cases file-association is being done in an ad-hoc manner. Also, no UI 
+  was provided for customizing content types (such as changing the default encoding, 
+  adding associations with files) so the user has no control on how the content 
+  type detection mechanism works. Thus, the main issues to be addressed in the 
+  3.1 cycle are:</p>
+<ul>
+  <li>ensure the content type framework works for clients that have not adopted 
+    it yet, or at least we understand why it is not (cannot be made) suitable 
+    to them. Examples are: Platform/UI, Platform/CVS, and products built on top 
+    of Eclipse.</li>
+  <li>ensure users are granted appropriate means so they can customize the behavior 
+    of content type detection so things just work for them.</li>
+  <li>ensure content type resolution works (or can be made to work) appropriately 
+    in setups where multiple independently developed products contribute conflicting 
+    content types. </li>
+</ul>
+<h3>Support more use cases</h3>
+<p>Ensure the Content Type works for the SDK plug-ins and for products built on 
+  top of Eclipse.</p>
+<p><strong>Platform/UI - file/editor association</strong></p>
+<p><strong>Platform/Team - binary vs ascii files</strong></p>
+<h3>Give users more power</h3>
+<p>Ensure users have means to customize how the content type detection works 
+  for them.</p>
+<h3>Improve conflict handling</h3>
+<p>Ensure content type detection works (or can be made to work) appropriately 
+  when incompatible products are deployed together.</p>
 </body></html>
