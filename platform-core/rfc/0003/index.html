@@ -1,0 +1,89 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Build">
+   <title>Eclipse Platform Core RFC 0003 - Log File Retrieval</title>
+</head>
+<body bgcolor="#FFFFFF" >
+<div align="right">
+  <table border=0 cellspacing=0 cellpadding=2 width="100%">
+    <tr> 
+		<td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font face="Arial,Helvetica"><font color="#FFFFFF">
+			Request For Comment
+		</font></font></b></td>
+    </tr>
+  </table>
+</div>
+<div align="left"> 
+  <h1><img src="../images/idea.gif" width="120" height="86"></h1>
+</div>
+<h1 align="CENTER">Eclipse Platform Core RFC 0003</h1>
+<h1 align="CENTER">Log File Retrieval</h1>
+<blockquote> 
+  <p><b>Summary</b> <br>
+    There is a requirement to make it possible to read the platform log file back into memory.
+    This RFC describes the proposed approach and new API.
+  <p><b> By John Arthorne, OTI.</b> <br>
+    <font size="-1">Last Modified: November 28, 2001</font> <br>
+  </blockquote>
+<hr>
+<h2>The Problem</h2>
+Currently, the only way to programatically access the platform log is by adding a listener through 
+a callback.  This approach has some drawbacks:
+<ul>
+<li>If errors or warnings occur during platform startup, before listeners can be added, it is impossible
+to programatically obtain information about these errors.  It is even impossible to detect if startup
+errors have occurred.</li>
+<li>Each listener that wants to maintain a representation of what has been logged must
+keep their own list.  This leads to a duplication of the information available in the log file on disk.
+</ul>
+<h2>The Solution</h2>
+Add an API method to org.eclipse.core.runtime.Platform for reading the log file back in from disk.
+The proposed API method is:
+<pre>
+/**
+ * Returns all the status objects that have been logged during this invocation of the Platform.
+ * If some entries could not be restored, the returned array may also include a status
+ * object indicating what went wrong.
+ * &lt;p&gt;Note: This is not a fast operation.  A log file will typically be retrieved from
+ * disk and parsed each time this method is called.
+ * &lt;/p&gt;
+ * @return The status objects that have been logged.
+ * @exception CoreException if the log entries could not be retrieved.
+ */
+IStatus[] retrieveLogContents() throws CoreException;
+</pre>
+<p>
+The current log file format is not easy to read for humans or programs.  To resolve this,
+it is proposed that the log file be stored as an XML file.  Although the proposed document
+type definition for the file is provided below, this format will not be considered API.  That is,
+the log file name or storage format is subject to change without notice.
+</p>
+<p>
+&lt;!ELEMENT LOG (LOG-ENTRY)*&gt;
+<br>
+<br>&lt;!ELEMENT LOG-ENTRY (STATUS)&gt;
+<br>&lt;!ATTLIST LOG-ENTRY
+<br>&nbsp;&nbsp;&nbsp;&nbsp;DATE CDATA #REQUIRED&gt;
+<br>
+<br>&lt;!ELEMENT STATUS (STATUS)* (EXCEPTION)?&gt;
+<br>&lt;!ATTLIST STATUS
+<br>&nbsp;&nbsp;&nbsp;&nbsp;SEVERITY (Error | Info | Ok | Warning) #REQUIRED
+<br>&nbsp;&nbsp;&nbsp;&nbsp;PLUGIN-ID CDATA #REQUIRED
+<br>&nbsp;&nbsp;&nbsp;&nbsp;CODE CDATA #REQUIRED
+<br>&nbsp;&nbsp;&nbsp;&nbsp;MESSAGE CDATA #REQUIRED&gt;
+<br>
+<br>&lt;!ELEMENT EXCEPTION&gt;
+<br>&lt;!ATTLIST EXCEPTION
+<br>&nbsp;&nbsp;&nbsp;&nbsp;MESSAGE CDATA #REQUIRED
+<br>&nbsp;&nbsp;&nbsp;&nbsp;STACK-TRACE CDATA #REQUIRED&gt;
+</p>
+<p>
+The proposed name of the log file is logfile.xml.  The log file would continue to be 
+stored directly in the .metadata directory of the platform.
+<h2>RFC Status</h2>
+<p>This proposal is currently soliciting comments.  Please provide comments by 6-DEC-2001.
+Please provide feedback early rather than waiting until the voting period.</p>
+</body>
+</html>
