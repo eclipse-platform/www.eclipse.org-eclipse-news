@@ -6,7 +6,7 @@
 </head>
 <body text="#000000" bgcolor="#ffffff">
 <h1>A central content type catalog for Eclipse</h1>
-<p><font size="-1">Last modified: May 12th, 2004</font> </p>
+<p><font size="-1">Last modified: Feb 16, 2005</font></p>
 <p><cite><strong>Plan item description:</strong> Content-type-based editor lookup. 
   The choice of editor is currently based on file name pattern. This is not very 
   flexible, and breaks down when fundamentally different types of content are 
@@ -313,7 +313,6 @@
   should be discussed in the platform-core-dev list, or bug <a
  href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=37668">37668</a>. </em></p>
 <h2>Addendum: issues to be addressed in the 3.1 cycle</h2>
-<p><font size="-1">Last modified: January 17th, 2005</font></p>
 <p>The solution described above was implemented and relatively succesful. Some 
   components took advantage of the new content type infrastructure, but still 
   in many cases file-association is being done in an ad-hoc manner. Also, no UI 
@@ -367,8 +366,9 @@
   objects for a given content type (editors, views, comparators, etc). Users cannot 
   provide content type detection code, so user-defined content types would be 
   useful only for cases where content type detection is file name based (like 
-  for non-formatted text files, such as source files, configuration files, etc). 
-</p>
+  for non-formatted text files, such as source files, configuration files, etc).</p>
+<p>A simple plug-in that allows users to add/remove file associations is available 
+  in the <a href="../downloads.html">downloads page</a>.</p>
 <h3>Improve content type determination</h3>
 <p>Ensure content type detection works (or can be made to work) appropriately 
   when incompatible products are deployed together.</p>
