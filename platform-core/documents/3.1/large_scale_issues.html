@@ -27,24 +27,24 @@ Eclipse imposes a significant RAM footprint when working with a large workspace.
 Identify principal areas of memory consumption and explore opportunities to 
 reduce current footprint.
 <ul>
-<li><img src="images/ok.gif"  height="10" width="10" border="0">
+<li><img src="../../images/ok.gif"  height="10" width="10" border="0">
 	Extension registry footprint.  Eclipse maintains the registry of plug-ins, extensions,
 	and extension points in memory.  As the number of plug-ins and extensions
 	grows, so does this footprint.  Convert the registry to a cache structure that
 	stores infrequently referenced portions on disk and brings extensions into memory
 	in a lazy and transient manner.
 </li>
-<li><img src="images/glass.gif"  height="10" width="10" border="0">
+<li><img src="../../images/glass.gif"  height="10" width="10" border="0">
 	Workspace tree footprint.  The workspace is represented in memory as a tree
 	containing various data such as resource names, attributes, markers, etc.
 	Explore reducing the amount of data stored in memory for each resource, and
 	other optimizations such as uniquification of strings.
-<li><img src="images/glass.gif"  height="10" width="10" border="0">
+<li><img src="../../images/glass.gif"  height="10" width="10" border="0">
 	Team/CVS metadata footprint.  The CVS plug-ins store significant information
 	in memory about the synchronization and "dirty" state of each resource. Explore
 	reducing the footprint of this data or using lazy caching to only bring this information
 	into memory when needed.
-<li><img src="images/glass.gif"  height="10" width="10" border="0">
+<li><img src="../../images/glass.gif"  height="10" width="10" border="0">
 	Message bundles. Most plug-ins store translated strings in <tt>ResourceBundle</tt>
 	objects.  These bundles are not space-efficient, and often use lengthy string-based
 	keys for message lookup.  Explore a more efficient representation, integer-based keys,
@@ -59,13 +59,13 @@ and to simplify integration and building. I/O-bound operations in Eclipse are ty
 much slower in such environments.  Explore optimization of I/O-bound operations, 
 and moving lengthy operations into a background thread.
 <ul>
-<li><img src="images/ok.gif"  height="10" width="10" border="0">
+<li><img src="../../images/ok.gif"  height="10" width="10" border="0">
 	Project creation. Creating a project at a file system location that contains
 	a large number of existing files and folders requires significant I/O to discover
 	all the files and to gather local information such as time stamps. This project
 	discovery can be moved into a background thread.
 </li>
-<li><img src="images/progress.gif" height="5" width="14" border="0">
+<li><img src="../../images/progress.gif" height="5" width="14" border="0">
 	Resource copy, move, and delete.  Most operations that act on trees of resources
 	still cannot be run in the background.  When these operations take a long time,
 	the user is forced to wait until they complete. These should be converted to "user" jobs
@@ -107,7 +107,7 @@ would them more powerful as a project interchange (sharing) mechanism.
 	be made easier.  Similarly, it should be possible to import a ZIP containing multiple
 	projects.
 </li>
-<li><img src="images/progress.gif" height="5" width="14" border="0">
+<li><img src="../../images/progress.gif" height="5" width="14" border="0">
 	Rename project on import 
 	(bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=40493">40493</a>).
 	The "import existing project" wizard doesn't allow you to import a project but
@@ -119,7 +119,7 @@ would them more powerful as a project interchange (sharing) mechanism.
 </ul>
 </p>
 <h3>4. Support for non-incremental builders</h3>
-<p><img src="images/glass.gif"  height="10" width="10" border="0">
+<p><img src="../../images/glass.gif"  height="10" width="10" border="0">
 	The workspace builder infrastructure is designed primarily with efficient
 	incremental compilers in mind.  Auto-build is turned on by default, and this
 	is only realistic for fast builders.  The workspace should have support
@@ -165,13 +165,13 @@ as builds and searches. The current working set support has some problems:
 			</font></font></b></td>
 		</tr>
 		<tr>
-			<td valign="top"><img src="images/progress.gif" height="5" width="14" border="0"></td>
+			<td valign="top"><img src="../../images/progress.gif" height="5" width="14" border="0"></td>
 			<td width="50%">item is under development.</td>
-			<td valign="top"><img src="images/glass.gif"  height="10" width="10" border="0"></td>
+			<td valign="top"><img src="../../images/glass.gif"  height="10" width="10" border="0"></td>
 			<td width="50%">item is under investigation.</td>
 		</tr>
 		<tr>
-			<td valign="top"><img src="images/ok.gif"  height="10" width="10" border="0"></td>
+			<td valign="top"><img src="../../images/ok.gif"  height="10" width="10" border="0"></td>
 			<td width="50%">item is finished.</td>
 			<td valign="top">( )</td>
 			<td width="50%">item is time permitted.</td>
@@ -179,7 +179,7 @@ as builds and searches. The current working set support has some problems:
 		<tr>
 			<td valign="top"><font class="indexsub" color="#8080ff">[&gt;3.1]</font></td>
 			<td width="50%">item is deferred.</td>
-			<td valign="top"><font class="indexsub"><img border="0" src="images/new.gif"></font></td>
+			<td valign="top"><font class="indexsub"><img border="0" src="../../images/new.gif"></font></td>
 			<td width="50%">new</td>
 		</tr>
 	</tbody>
