@@ -66,12 +66,9 @@ Last edited: 29.09.2004
  </li>
 <li>navigate from selected key and value in properties file to location in Java editor and Plug-in Manifest editor<br>
 </li>
-    <li>spell checking</li><li>ensure correct ISO-8859-1 encoding when writing a properties file (use native2ascii tool)</li>
-    <ul>
-<li>if using native2ascii tool a preference is needed to specify the (try to auto-detected)<br>
+    <li>spell checking</li><li>ensure correct ISO-8859-1 encoding when writing a properties file. Convert to ascii
+    upon save. If using native2ascii tool a preference is needed to specify it (try to auto-detected).
     </li>
-    </ul>
-
     <li>allow to sort alphabetically</li>
   </ul>
   <ul>
@@ -142,11 +139,9 @@ Last edited: 29.09.2004
   <li style="font-weight: bold;">improve Externalize Strings wizard<br>
 </li>
   <ul>
-    <li>spell checking</li><li>ensure correct ISO-8859-1 encoding when writing a properties file (use native2ascii tool)</li>
-    <ul>
-<li>if using native2ascii tool a preference is needed to specify the (try to auto-detected)<br>
+    <li>spell checking</li><li>ensure correct ISO-8859-1 encoding when writing a properties file. Convert to ascii
+    upon save. If using native2ascii tool a preference is needed to specify it (try to auto-detected)
     </li>
-    </ul>
 
   </ul>
   <ul>
@@ -224,11 +219,11 @@ Last edited: 29.09.2004
   </ul>
   <li><span style="font-weight: bold;">investigate</span></li>
   <ul>
-    <li>provide
-the functionality of the Externalize Strings wizard through a new Java
+    <li>provide the functionality of the Externalize Strings wizard through a new Java
 Properties view which allows to externalize the strings of the
 currently selected element</li>
     <li>make the NLS hover an action hover: user can activate it and directly change the value</li>
+    <li>add a preview to the Properties File editor which shows the file in ascii mode</li>
     <li>show the UI (e.g. error dialog) where a select a property is used</li>
     <li>NLS manager which allows to manage key/values per Java project / plug-in</li>
     <ul>
