@@ -20,34 +20,61 @@ CODE { font-size: smaller }
 
   <tr> 
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../../Adarrow.gif" BORDER=0 height=16 width=16></td>
-    <td WIDTH="98%"> 
-	<p><b>Plug-in Customization in Eclipse 2.1</b></p>
-	<p>The <a href="http://help.eclipse.org/help21/topic/org.eclipse.platform.doc.isv/guide/product_config.htm?resultof=%22%70%6c%75%67%69%6e%5f%63%75%73%74%6f%6d%69%7a%61%74%69%6f%6e%22%20">Eclipse Help</a>
-	page describing how to customize your plug-in.</p>
-	
-	<p>
-	Plug-in Preference load order:
-	<ol>
-	<li>Load saved preferences from disk.<br>
-	- <code>c:/eclipse/workspace/.metadata/.plugins/org.eclipse.core.resources/prefs.ini</code></li>
-	<li>Call <code>Plugin#initializeDefaultPluginPreferences()</code>. <br>
-	- method implented by subclasses of <code>org.eclipse.core.runtime.Plugin</code></li>
-	<li>Load defaults from the <code>preferences.ini</code> file in the plug-in's installation directory. <br>
-	- <code>c:/eclipse/plugins/org.eclipse.core.resources_2.0.0/preferences.ini</code></li>
-	<li>Load defaults from the <code>plugin_customization.ini</code> file in the primary feature's plug-in directory. <br>
-	- <code>c:/eclipse/plugins/org.eclipse.platform_2.0.0/plugin_customization.ini</code></li>
-	<li>Load defaults from the file specified after the <code>-pluginCustomization</code> command-line argument.</li>
-	</ol>
-	</p>
-	
-	</td>
+    <td WIDTH="98%"> <p><b>Plug-in Customization in Eclipse 2.1</b></p>
+      <p>The <a href="http://help.eclipse.org/help21/topic/org.eclipse.platform.doc.isv/guide/product_config.htm?resultof=%22%70%6c%75%67%69%6e%5f%63%75%73%74%6f%6d%69%7a%61%74%69%6f%6e%22%20">Eclipse 
+        Help</a> page describing how to customize your plug-in.</p>
+      <p> 1. Set default preference values calculated at runtime.
+      <blockquote> 
+        <p>Call the <code>Plugin#initializeDefaultPluginPreferences() </code>method 
+          which is implemented by subclasses of <code>org.eclipse.core.runtime.Plugin</code>.</p>
+      </blockquote>
+      <p>2. Load from the plug-in install directory.</p>
+      <blockquote> 
+        <p>Load defaults from the <code>preferences.ini</code> file in the plug-in's 
+          installation directory such as: <code>c:/eclipse/plugins/org.eclipse.core.resources_2.0.0/preferences.ini</code></p>
+      </blockquote>
+      <p>3. Load from the primary feature's plug-in.</p>
+      <blockquote> 
+        <p>Load defaults from the <code>plugin_customization.ini</code> file in 
+          the primary feature's plug-in directory.<code> c:/eclipse/plugins/org.eclipse.platform_2.0.0/plugin_customization.ini</code></p>
+      </blockquote>
+      <p>4. Load defaults from the command line.</p>
+      <blockquote>
+        <p>Users are able to specify the <code>-pluginCustomization &lt;filename&gt;</code> 
+          command-line argument which tells the platform to load preference values 
+          from the specified file.</p>
+        <p>&nbsp;</p>
+      </blockquote></td>
   </tr>
 
   <tr> 
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../../Adarrow.gif" BORDER=0 height=16 width=16></td>
-    <td WIDTH="98%"> 
-	<p><b>Plug-in Customization in Eclipse 3.0</b></p>
-	</td>
+    <td WIDTH="98%"> <p><b>Plug-in Customization in Eclipse 3.0</b></p>
+      <p>1. Set preference values calculated at runtime.</p>
+      <blockquote> 
+        <p>The <code>org.eclipse.core.runtime.preferences</code> extension point 
+          allows for an extension which defines a <code>configuration</code> element. 
+          This extension defines a class name which implements the <code>IPreferenceCustomization</code> 
+          interface. The <code>#initializeDefaultPreferences()</code> method is 
+          called on the implementing class.</p>
+        <p>If the bundle/plug-in doesn't define an extension then the <code>#initializeDefaultPluginPreferences() 
+          </code> method is called on the plug-in class if the runtime compatibility 
+          layer is present.</p>
+      </blockquote>
+      <p>2. Load from bundle/plug-in install dir.</p>
+      <blockquote> 
+        <p>Same as with Eclipse 2.1. Load preference default values from the <code>preferences.ini</code> 
+          file in the bundle's install directory.</p>
+      </blockquote>
+      <p>3. Load defaults from customization file as specified by the product.</p>
+      <blockquote> 
+        <p>&nbsp;</p>
+      </blockquote>
+      <p>4. Load defaults from file specified by command-line option.</p>
+      <blockquote>
+        <p>Same as Eclipse 2.1. Load preference default values from the file specified 
+          by the <code>-pluginCustomization</code> command-line argument.</p>
+      </blockquote></td>
   </tr>
 
 </table>
