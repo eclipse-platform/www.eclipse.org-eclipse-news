@@ -4,6 +4,10 @@
 </head>
 <body>
 <h1>Using the Class Loader Properties File</h1>
+
+<em>Last update: October 25, 2002</em> 
+<p>
+
 Eclipse 2.0.2 includes many performance enhancements, including some in the area 
 of classloading. In order to help out with this a classloader properties file 
 was created and this file explains its use. 
@@ -15,6 +19,7 @@ was created and this file explains its use.
 <li><a href="#format">Format</a></li>
 <li><a href="#future">Future</a></li>
 <li><a href="#trouble">Trouble-Shooting</a></li>
+<li><a href="#example">Example File</a></li>
 </ul>
 <p>
 
@@ -38,6 +43,13 @@ If the user specifies the location of the file, it can be either a path or a URL
 &nbsp;&nbsp;&nbsp;&nbsp;-classloaderProperties c:/temp/myfile.properties<br>
 &nbsp;&nbsp;&nbsp;&nbsp;-classloaderProperties file:/c:/temp/myfile.properties
 </code>
+<p>
+
+It is important to note that the file which is used by the system (either the default or the one
+which is specified by the user) is <b>exclusive</b> and does <b>not</b> represent the intersection between
+multiple files. That being said, if the user specifies a particular file to use, then the contents of the default
+file must be merged with it in order for the class loader enhancements to take effect for the
+classes in the Eclipse Platform; the contents of the default file are not automatically used.
 <p>
 
 <h2><a name="format"></a>Format</h2>
@@ -92,6 +104,53 @@ If you get a <code>java.lang.ClassNotFoundException</code> then that is an indic
 with your entries in the properties file. The file could have the correct syntax, but the package prefixes in the
 comma-separated list might be missing some entries. To verify this is the problem, use a number sign (#) to comment
 out the line of the offending plug-in.
+<p>
+
+<h2><a name="example"></a>Example File</h2>
+Here is an example of the <code>classloader.properties</code> file which ships with
+Eclipse 2.0.2.
+<p>
+<code>
+<blockquote>
+<pre>
+org.apache.ant = org.apache.tools
+org.apache.lucene = org.apache.lucene
+org.apache.xerces = org.apache, org.w3c.dom, org.xml.sax, javax.xml
+org.eclipse.ant.core = org.eclipse.ant
+org.eclipse.compare = org.eclipse.compare
+org.eclipse.core.resources = org.eclipse.core
+org.eclipse.core.runtime = org.eclipse.core
+org.eclipse.debug.core = org.eclipse.debug.core, org.eclipse.debug.internal.core
+org.eclipse.debug.ui = org.eclipse.debug.ui, org.eclipse.debug.internal.ui
+org.eclipse.help = org.eclipse.help
+org.eclipse.help.ui = org.eclipse.help.ui
+org.eclipse.jdt.core = org.eclipse.jdt.core, org.eclipse.jdt.internal
+org.eclipse.jdt.debug = com.sun.jdi, org.eclipse.jdi, org.eclipse.jdt
+org.eclipse.jdt.debug.ui = org.eclipse.jdt.debug.ui, org.eclipse.jdt.internal.debug.ui
+org.eclipse.jdt.junit = org.eclipse.jdt.internal.junit
+org.eclipse.jdt.launching = org.eclipse.jdt.launching, org.eclipse.jdt.internal.launching
+org.eclipse.jdt.ui = org.eclipse.jdt.internal, org.eclipse.jdt.ui
+org.eclipse.pde.build = org.eclipse.pde.internal.build
+org.eclipse.pde.core = org.eclipse.pde.core, org.eclipse.pde.internal.core
+org.eclipse.pde.runtime = org.eclipse.pde.internal.runtime
+org.eclipse.pde.ui = org.eclipse.pde.ui, org.eclipse.pde.internal.ui
+org.eclipse.search = org.eclipse.search
+org.eclipse.swt = org.eclipse.swt
+org.eclipse.team.core = org.eclipse.team.core, org.eclipse.team.internal.core
+org.eclipse.team.cvs.core = org.eclipse.team.internal.ccvs.core
+org.eclipse.team.cvs.ssh = org.eclipse.team.internal.ccvs.ssh
+org.eclipse.team.cvs.ui = org.eclipse.team.internal.ccvs.ui
+org.eclipse.team.ui = org.eclipse.team.ui, org.eclipse.team.internal.ui
+org.eclipse.ui = org.eclipse.ui, org.eclipse.jface
+org.eclipse.ui.externaltools = org.eclipse.ui.externaltools
+org.eclipse.update.core = org.eclipse.update
+org.eclipse.update.ui = org.eclipse.update.internal.ui
+org.eclipse.update.forms = org.eclipse.update.ui.forms
+org.junit = junit
+</pre>
+</blockquote>
+</code>
+
 <p>
 
 </body>
