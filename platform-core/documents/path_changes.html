@@ -184,6 +184,10 @@ behaviour of extracting the device from the second argument when no device
 argument was supplied. This behaviour will change to no longer parse the 
 device from the second argument. This constructor will now handle literal
 colon characters in path segments on all platforms.</li>
+<li><tt>IPath.append(String). This method implicitly constructs or interprets
+a path literal from the provided parameter.  This method will use the os-specific
+rules when interpreting the provided path ('\' and ':' treated as segment and
+device delimiters on Windows only).</li>
 </ul>
 New methods for Eclipse 3.1:
 <ul>
