@@ -7,7 +7,7 @@
 <body text="#000000" bgcolor="#FFFFFF">
  
 <h1>Eclipse 3.0 builder issues</h1>
-<font size="-1">Last modified: November 10, 2003</font> 
+<font size="-1">Last modified: November 13, 2003</font> 
 <p>
 This document outlines the current pressing builder
 problems, maps out the solution space, and will eventually propose concrete changes
@@ -204,6 +204,11 @@ strategy runs to build the remaining unbuilt projects, using project references 
 the order.
 </p>
 <p>
+(Note: I am calling this solution &quot;build strategy&quot; to avoid confusing it with S1.  If we
+go with this route, it could easily be renamed to &quot;workspace builder&quot;
+since everyone seems to like that term.)
+</p>
+<p>
 <b>Pros:</b> A build strategy can be used as an alternative to project references
 for setting the project build order.  Since this mechanism is dynamic, it fits with the
 JDT dynamic build path story and avoids modifying the project description file every
@@ -277,7 +282,8 @@ be built. This story would be easier to explain if we required that the working 
 be internally consistent (not referencing projects outside the working set), but this
 assertion is difficult to verify if we introduce a dynamic build order such as 
 workspace builders or pluggable build strategies.  Similar difficulties exist with 
-manual working set build.
+manual working set build, but the notion of manual build at a different scope
+already exists.
 </p>
 <h4>S4. Disabling builders on a per-project basis</h4>
 <p>
