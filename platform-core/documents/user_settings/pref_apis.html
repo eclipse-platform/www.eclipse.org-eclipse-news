@@ -125,6 +125,33 @@ area before it has been set.</p><p>&nbsp;</p>
   54907</a>)</p><p>&nbsp;</p>
 		</td>
 	</tr>
+	<tr> 
+		<td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
+    	<td WIDTH="98%"><b>Batched Event Processing</b> 
+<p><u>Summary:</u> In the case where there are a lot of preference change events happening in sucession, clients
+are interested in receiving batch notification of these events. Fixing this will be tricky since we will have to 
+add new API to handle the batch requests but we don't want to break people who currently are expecting a single
+event at a time. (See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=77144">bug 77144</a>)</p><p>&nbsp;</p>
+		</td>
+	</tr>
+	<tr> 
+		<td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
+    	<td WIDTH="98%"><b>Metadata associated with preferences</b> 
+<p><u>Summary:</u> There are certain types of information that needs to be associated with preferences. Some examples of information are:
+<ul>
+<li>The user-interface needs to know a human-readable name to display to the user.</li>
+<li>The preference could be marked as read-only.</li>
+<li>The preference could be non-exportable.</li>
+<li>Preference groupings and dependencies.</li>
+</ul>
+
+In essence, preferences need to have metadata associated with them.  The problem is that Preferences are key/value pairs 
+on node objects and not real objects themselves. This means that we cannot store metadata directly with the preferences. What
+we need is a way to store an association between preference keys and a group of metadata. Perhaps if the metadata itself was keyed 
+and we used the full path of the node+key, we could use this (path -> metadata object) reference as a base for 
+searching/storage of this information.</p><p>&nbsp;</p>
+		</td>
+	</tr>
 </table>
 
 
