@@ -62,8 +62,14 @@
         user settings (preferences, compiler settings, repositories lists, etc.) 
         that are not specific to a workspace separate from the workspace, so that 
         they can be used in other workspaces or by other users. [Platform Core] 
-        [Themes: Rich client platform] (bug <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=36965">36965</a>)<br>
-        <br>
+        [Themes: Rich client platform] (bug <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=36965">36965</a>)</p>
+      <p> [plan item] <i><a href="plan_xerces.html">Remove dependency on Xerces</a></i><a href="plan_xerces.html"> 
+        </a>- The Xerces plug-in currently provides XML support for the Eclipse 
+        platform. XML support is now incorporated into J2SE 1.4, and the presence 
+        of the Xerces plug-in can create conflicts. Eclipse Platform should consistently 
+        use the built-in XML support that ships with JDK 1.4, or possibly an alternative 
+        XML parser such as XMLPull which has a much smaller footprint. [Platform 
+        Core] (bug <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=37696">37696</a>)<br>
         <br>
       </p>
     </td>
@@ -175,13 +181,6 @@
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
     <td WIDTH="98%"> 
       <p><b>Other Items</b></p>
-      <p>[plan item] <i><a href="plan_xerces.html">Remove dependency on Xerces</a></i><a href="plan_xerces.html"> 
-        </a>- The Xerces plug-in currently provides XML support for the Eclipse 
-        platform. XML support is now incorporated into J2SE 1.4, and the presence 
-        of the Xerces plug-in can create conflicts. Eclipse Platform should consistently 
-        use the built-in XML support that ships with JDK 1.4, or possibly an alternative 
-        XML parser such as XMLPull which has a much smaller footprint. [Platform 
-        Core] (bug <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=37696">37696</a>)</p>
       <p><i><a href="plan_userexperience.html">Improve User Experience</a></i> 
         - As a first-time Eclipse user there are many non-obvious problems that 
         you can run across and this plan item is being used to collect them all. 

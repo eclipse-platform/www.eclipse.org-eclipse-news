@@ -64,7 +64,31 @@
   <tr>
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
     <td WIDTH="98%"> 
-  </td>
+      <p><b>Sample Data Providers and their requirements</b></p>
+      <p><i>CVS</i> </p>
+      <ul>
+        <li>ignore files in all CVS folder subtrees</li>
+      </ul>
+      <p><i>ClearCase</i></p>
+      <ul>
+        <li>pre-notification of all resource operations</li>
+        <li>opportunity to override any/all resource operations (create, delete, move, copy)</li>
+      </ul>
+      <p><i>Zip File</i></p>
+      <ul>
+        <li>part of logical to physical problem?</li>
+        <li>#members looks inside a zip file, #create adds to the zip file, etc</li>
+        <li>how do you handle resource types? the zip file is a FILE but has members</li>
+      </ul>
+      <p><i>PDE Binary</i> </p>
+      <ul>
+        <li>don't allow modifications to project contents (treat projects as read-only)</li>
+      </ul>
+      <p><i>Misc</i></p>
+      <ul>
+        <li>ignore files based on type/extension</li>
+      </ul>
+    </td>
   </tr>
 </table>
 
