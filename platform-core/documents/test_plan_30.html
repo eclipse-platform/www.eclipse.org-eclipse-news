@@ -47,12 +47,14 @@
   <li><a href="#pde-build">PDE Build</a></li>
   <li><a href="#performance">Performance</a></li>
 </ul>
-<p>While testing, ensure that keyboard navigation (is available and) works, in 
-  addition to using the mouse. Ensure that keyboard accelerators are available 
-  for each menu item, and that conflicts are not present. Also try assigning alternate 
-  keybindings to applicable actions. File a bug when something does not work. When 
-  a test can be automated and is not part of our test suite, add a JUnit test 
-  to the test suite.</p>
+<p>Points to remember when testing</p>
+<ul>
+  <li>File a bug when something does not work. Do not try to fix the problem
+    unless it prohibits further testing.</li>
+  <li>When 
+        a test can be automated and is not part of our test suite, add a JUnit
+    test to the test suite.</li>
+</ul>
 <hr>
 
 	<h3><a name="launcher"/>Launcher</h3>
@@ -74,6 +76,19 @@
 	
 	<h3><a name="osgi"/>OSGi</h3>
 <blockquote>
+  <h4>Command line options</h4>
+  <ul>
+    <li>Try various command line options and ensure that the corresponding system
+      property values are set. In particular, 
+      <ul>
+        <li>-configuration</li>
+        <li>-product</li>
+        <li>-application</li>
+        <li>-install</li>
+        <li>-data</li>
+      </ul>
+    </li>
+  </ul>
   <h4>Shared Install 1</h4>
   <ul>
     <li>install Eclipse on shared drive</li>
