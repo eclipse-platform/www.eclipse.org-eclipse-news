@@ -8,7 +8,13 @@
 <body>
 <center>
 	<font class=indextop>core</font><br>
-	<font class=indexsub>the foundation of the platform</font><p></p>
+	<font class=indexsub>
+	<?php
+		$lines = file("quotes.txt");
+		echo array_rand($lines);
+	?>
+	the foundation of the platform
+	</font><p></p>
 	<a href="main.html">[home]</a>
 	<a href="documents.html">[documents]</a>
 	<a href="downloads.html">[downloads]</a>
