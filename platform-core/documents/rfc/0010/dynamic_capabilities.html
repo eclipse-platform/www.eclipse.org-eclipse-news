@@ -18,7 +18,7 @@
 <blockquote> <b>Summary</b><br>
 This RFC highlights the need for bundles to express their dynamic capabilities and proposes a solution based on the introduction of a new header in the manifest.mf.
 <p>
-<font size="-1">Last modified: November 30, 2004</font> 
+<font size="-1">Last modified: Decemver 1, 2004 - revision 1, <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/platform-core-home/documents/rfc/0010/dynamic_capabilities.html?rev=1.3">previous revision</a></font> 
 </blockquote>
 <p>
 <h3>Background</h3>
@@ -32,50 +32,44 @@ Being able to detect such things is important for the user, since they can lead 
 
 <h3>Proposed solution</h3>
 <p>
-Plugins must be able to express their dynamic capabilities in order to enable runtime and development time checks.
-There is several levels of dynamic capabilities:
+Plugins must be able to express their dynamic capabilities in order to enable runtime and development time checks. This markup is purely descriptive and 
+will not interfere with the behavior of plugins. There is several levels of dynamic capabilities:
 <ul>
-	<li> A bundle / plugin can be dynamic enabled."Most importantly, to be dynamic enabled, your plug-in has to properly clean up after itself in the Plugin shutdown method." ( FAQ 117).</li>
+	<li> A bundle / plugin can be dynamic enabled."Most importantly, to be dynamic enabled, your plug-in has to properly clean up after itself in the Plugin shutdown method." ( FAQ 117). This is the behavior that has been recommanded since eclipse 1.0.</li>
  	<li> A bundle / plugin can be addition aware. It will take into account new bundles being added to the system.</li>
 	<li> A bundle / plugin can be removal aware. It will take into account bundles being removed from the system. </li>
+	<li> A bundle / plugin can be not dynamic at all.</li>
 </ul>
 <p>
 Because being dynamic is not a property reserved for bundles declaring extensions, this characteristic is being captured in the bundle manifest by the following header: <tt>Eclipse-Dynamic:</tt> whose values are either:
-<tt>enabled</tt>,  <tt>addition-aware</tt>, <tt>removal-aware</tt> and are separated by semi colons.
+<tt>enabled</tt>,  <tt>addition-aware</tt>, <tt>removal-aware</tt> or <tt>unspecified</tt> and are separated by semi colons.
 <p>
 Example, the manifest of org.eclipse.core.runtime manifest will have the following extra header:
 <tt>
 Eclipse-Dynamic: enabled; addition; removal
 </tt>
 <p>
-The absence of header will indicate that the plugin is neither dynamic addition or removal aware nor dynamic enabled.
+The absence of header will be equivalent to specifying <tt>Eclipse-Dynamic: enabled</tt>. This will allow legacy osgi bundles to run unmodified.
 <p>
-<h3>Default values</h3>
+<h3>Default value</h3>
 <p>
-For the manifests being generated from a plugin.xml the value generated will be:<tt>Eclipse-Dynamic: enabled</tt>.
-This captures the good practice that has been indicated since eclipse 1.0 that plugins must clean up after them in the shutdown method.
+For the manifests being generated from a plugin.xml the value generated will be <tt>Eclipse-Dynamic: unspecified</tt>.
 <p>
-
 <h3>Usage</h3>
 <p>
 There are two main use cases for this markup:
 <ul>
-<li>PDE which given a target platform could check if all plugins are dynamic enabled, or support removal, etc.</li>
+<li>PDE which given a target platform could check if all plugins are dynamic enabled, support removal, etc.</li>
 <li>Configurators and installers could check on addition or removal if the system needs to be restarted.</li>
 </ul>
-
-<p> 
-<h3>Change required</h3>
+<p>
+<h3>Changes required</h3>
+As a plug-in writer, no changes are absolutely required. If you are expecting your plug-ins to run in a dynamic environment, it might be a good thing
+to review the code and set the appropriate value. If the dynamic capability is overstated by a plug-in and bugs results from that, this will be considered as a bug.
 <p>
 Given that the format of a manifest.mf is open ended, the addition of this new header can be done immediatly. <br>
 The first change to do is to update the PluginManifest converter to generate default values.<br>
 PDE and other configurators can be updated at their own schedule.<br>
-<p>
-
-<h3>Drawback</h3>
-<p>
-By default all plugins will be considered as dynamic enabled only. This means that any plugins that is capable of 
-addition or removal will have to have a manifest.mf.
 <p>
 
 <h3>Other solutions considered</h3>
