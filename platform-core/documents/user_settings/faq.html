@@ -127,18 +127,10 @@ CODE { font-size: smaller }
   <tr>
   	<td width="2%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<td width="98%">
-	USER - Settings stored in the user scope are shared in a location derived from 
-	the user area as defined by <code>org.eclipse.core.runtime.Platform#getUserLocation()</code>. 
-	They will be shared across invocations by the same user of multiple installs and
-	multiple workspaces.  
-    </td>
-  </tr>
-  <tr>
-  	<td width="2%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<td width="98%">
-	DEFAULT - The default preference scope was created to provide a backwards 
+	DEFAULT - The default preference scope was initially created to provide a backwards 
 	compatibility story for the plug-in customization code in Eclipse 2.1. Preferences 
-	stored in the default scope are not persisted to disk.
+	stored in the default scope are not persisted to disk and are a part of the plug-in
+	customization story.
     </td>
   </tr>
   <tr>
