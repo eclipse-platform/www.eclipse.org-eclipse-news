@@ -28,9 +28,7 @@ proto plan and input from the community is very welcome.
 <li>Improve global text replace<br>
 </li>
 
-<li>Support to search in background<br>
-</li><li>
-Bug fixing&nbsp;</li>
+<li>Support to search in background&nbsp;</li>
 </ul>
 
       <h4>
@@ -56,8 +54,6 @@ Regular expression support</li>
         <ul>
           <li>regular expression support in text search engine</li>
           <li>option to search for regular expression on File search page</li>
-          <li>allow regular expression in replace string<br>
-          </li>
           <li>get rid of the <code>StringMatcher</code> class</li>
         </ul>
 
@@ -66,28 +62,31 @@ Regular expression support</li>
 
 <ul></ul><li>Improved replace feature:</li>
         <ul>
-<li>make it more visible (currently one has to know that this function is available in the Search view's context menu)</li><li>offer automatic global replace (<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=24008">24008</a>)</li>
-          <li>allow regular expression in replace string</li>
+<li>make it more visible (currently one has to know that this function is available in the Search view's context menu)</li>
+          <li>offer automatic global replace (<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=24008">24008</a>)<br>
+</li>
         </ul>
 <li>Search comfort</li><ul>
 <li>
 add support for a project scope (<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=16287">16287</a>)<br>
-</li><li>add 'Text Search' to editor&nbsp;context menus</li><li>change history drop down into Previous and Next buttons like the navigation history</li>
-</ul><li>Improve file encoding support</li>
+</li><li>change history drop down into Previous and Next buttons like the navigation history</li><li>(add 'Text Search' to editor&nbsp;context menus (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=19068">19068</a>))<br>
+          </li>
+
+</ul><li>Improve file encoding support (<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=36950">36950</a>)<br>
+</li>
 </ul><h4>
 Investigations</h4>
 
 <ul>
-<li>search (for) files which are outside the workspace (<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=29389">29389</a>)</li><li>search in archives (<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=23341">23341</a>)</li>
-        <li>consider plug-able search result viewer (<a href="http://dev.eclipse.org/bugs/show_bug.cgi?id=8922">8922</a>)</li>
-        <li>change Search to be no longer marker based but directly report matches to the <code>SearchManager</code></li>
+<li>search (for) files which are outside the workspace (<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=29389">29389</a>)</li><li>search in archives (<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=23341">23341</a>)</li><li>(allow regular expression in replace string)</li>
+
 </ul><h4>
-Cross team issues</h4><ul>
-<li>
+Cross team dependencies<br>
+</h4><ul>
+<li>Search in the background depends on Platform Core and Platform UI support (<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=36957">36957</a>)</li><li>
 Support for regular expressions: JDT Core and JDT UI should also add support for regular expressions<br>
-</li><li>Search participants: plug-in which contribute to search should honour the new search participants extension point<br>
         </li>
-<ul>
+<li>Search participants: plug-in which contribute to search should honour the new search participants extension point</li><ul>
 </ul>
 </ul>
 </td>
