@@ -27,7 +27,7 @@ CODE { font-size: 80% }
 </table>
  
 <h1>Gathering performance statistics</h1>
-<font size="-1">Last modified: February 22, 2005</font> 
+<font size="-1">Last modified: March 14, 2005</font> 
 <h3>Introduction</h3>
 <p>
 The modular nature of Eclipse makes for a highly dynamic execution environment.
@@ -124,8 +124,8 @@ for a particular kind of event.  The name of the trace option is the same as the
 symbolic event name that is supplied when a <code>PerformanceStats</code> 
 instance is created.  For example, the following line from a debug trace
 options file (<code>.options</code>), indicates that activation of a workbench
-part must take less than 200 milliseconds. Part activations that take longer than the specified threshold will be recorded
-as failure events.
+part must take less than 200 milliseconds. Part activations that take longer than 
+the specified threshold will be recorded as failure events.
 
 <pre><code>
 org.eclipse.ui/perf/part.activate=200
@@ -144,7 +144,17 @@ in the case of a particular invocation whose duration is longer than the
 threshold value specified in the debug options file.
 </p>
 <p>
-Eclipse 3.1: Think Fast!
+Performance failures are written to a log file, <tt>performance.log</tt> in 
+the metadata area.  This log is found in the same directory as the error log (<tt>.log</tt>).
+The performance log has the same format as the error log, so it can be viewed in the PDE
+error log view by selecting "Import Log" from the tool bar:
+<p>
+<img src="log-view.jpg"/>
+<p>
+The "Plug-in" column in the log view will show what plugin is responsible
+for the performance failure, computed based on the blame object provided
+to the performance stats API. Double-clicking on a performance failure in the log 
+view will show a stack trace of the execution state at the time of the failure.
 </p>
 </body>
 </html>
