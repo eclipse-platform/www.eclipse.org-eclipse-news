@@ -30,7 +30,7 @@ CODE { font-size: 80% }
 <font size="-1">Last modified: February 22, 2005</font> 
 <h3>Introduction</h3>
 <p>
-The plugin-based nature of Eclipse makes for a highly dynamic execution environment.
+The modular nature of Eclipse makes for a highly dynamic execution environment.
 What happens when a context menu is opened in a view, or when the user switches
 to a different perspective, depends on the set of plug-ins that are installed and
 the set of plug-ins that are loaded at the time of the event. While this execution
@@ -78,22 +78,28 @@ I.e., any expensive analysis is an optional add-on.</li>
 The <code>PerformanceStats</code> infrastructure builds on the existing debug
 trace options and logging support in the platform, so its implementation is
 small and most of its function should be familiar for those acquainted with
-the Eclipse tracing and logging APIs.
+the Eclipse tracing and logging APIs.  Performance event tracking is only turned
+on when Eclipse is in debug mode (-debug command line argument), and the following
+line exists in the debug trace options file:
+<pre><code>
+org.eclipse.core.runtime/perf=true
+</code></pre>
+The constant field <code>PerformanceStats.ENABLED</code> can be used to quickly
+determine whether performance tracing is turned on.
 </p>
 <h3>Instrumenting Code</h3>
 <p>
 The first step to using <code>PerformanceStats</code> is to instrument potentially
 long-running code.  Here is an example snippet where code has been instrumented
 to gather performance statistics:
-<pre>
+<pre><code>
 	private static final String PERF_BUILDER = "org.eclipse.core.resources/perf/builders";
 	...
-	//instrumentation sample
 	PerformanceStats stats = PerformanceStats.getStats(PERF_BUILDER, builder);
 	stats.startRun();
 	builder.build(...);//this is the expensive code being called
 	stats.endRun();
-</pre>
+</code></pre>
 <p>
 A statistics instance is created by providing a symbolic name for the event,
 and an arbitrary object, called the <i>blame</i>, that identifies the party
@@ -116,14 +122,14 @@ Performance failures are calculated using threshold values supplied using a debu
 trace option.  The supplied value indicates the maximum acceptable duration
 for a particular kind of event.  The name of the trace option is the same as the
 symbolic event name that is supplied when a <code>PerformanceStats</code> 
-instance is created.  For example, here is a line from a debug trace
-options file (<code>.options</code>), indicating that activation of a workbench
-part must take less than 200 milliseconds:
-<pre>
-org.eclipse.ui/perf/part.activate=200
-</pre>
-Part activations that take longer than the specified threshold will be recorded
+instance is created.  For example, the following line from a debug trace
+options file (<code>.options</code>), indicates that activation of a workbench
+part must take less than 200 milliseconds. Part activations that take longer than the specified threshold will be recorded
 as failure events.
+
+<pre><code>
+org.eclipse.ui/perf/part.activate=200
+</code></pre>
 <p>
 When a performance run is ended, an optional <i>context</i> string can be
 provided that contains more details about the event.  The context is provided
