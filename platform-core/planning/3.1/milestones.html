@@ -21,6 +21,98 @@
   </tr>
   <tr>
     <td ALIGN=RIGHT VALIGN=TOP><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
+    <td><b>3.1 Milestone 7 - May 13, 2005</b> <ul>
+        <li><strong>Performance Dynamic Team</strong> 
+          <ul>
+            <li>Performance is THE top item which is going to be addressed for 
+              M7 by the Eclipse team as a whole. Tod and John have already been 
+              working together and identifying some performance problems and during 
+              this milestone more people are going to be added to the team.</li>
+            <li>Look at the posts about String#substring from the eclipse mailing 
+              lists and ensure that we are doing the right thing.</li>
+          </ul>
+        </li>
+        <li><strong>Performance Tests</strong> 
+          <ul>
+            <li>We need to identify more fingerprint tests for the Core component.</li>
+            <li>Should create some performance tests for OSGi class loading.</li>
+            <li>Test Eclipse start-up on a non-empty workspace.</li>
+          </ul>
+        </li>
+        <li><strong>Running from JARs </strong> (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=86236">85065</a>) 
+          <ul>
+            <li>All plug-ins included in the RCP SDK are being shipped as JARs 
+              (in all dev drops...Platform, JDT, etc) for M6.</li>
+            <li>Will convert more plug-ins for M7.</li>
+            <li>Need to get more performance numbers. Will fully JAR up the M6 
+              build and run the performance tests on the performance machine to 
+              compare against the M6 regular drop.</li>
+          </ul>
+        </li>
+        <li><strong>Content Type</strong>
+<ul>
+            <li>(bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=69640">69640</a>) 
+              Finish implementation of nature -&gt; content type association.</li>
+            <li>(bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=87447">87447</a>) 
+              Project specific content type settings.</li>
+          </ul>
+        </li>
+        <li><strong>Shipping Manifest Files</strong> 
+          <ul>
+            <li>Continued from 3.1 M6.</li>
+            <li> If a plug-in defines a legacy plug-in manifest rather than a 
+              bundle manifest, then on start-up we take a hit because we have 
+              to run through all the plug-in manifests and generate the corresponding 
+              bundle manifest file.</li>
+            <li> For 3.1, we would like to ship bundle manifest files for all 
+              plug-ins in the SDK.</li>
+            <li> Mostly this is an education item: educate the other teams and 
+              help them do what they need to do.</li>
+          </ul>
+        </li>
+        <li><strong>PDE-Build</strong></li>
+			<ul>
+				<li>On plug-in export, the scripts are being executed in the workspace VM and we would like to move this to be in a separate VM. We will work with
+				the Ant team to make this happen. Also need involvment from PDE/UI team.</li>
+				<li>PDE/UI has a model of the target platform and currently PDE/Build makes their own model. We want to
+				investigate sharing of these models.</li>
+				<li>Cross platform export of RCP product - e.g. we would like to be able to export a Linux drop from a Windows machine.</li>
+			</ul>
+		<li><strong>Extension Registry</strong></li>
+			<ul>
+				<li>Investigate performance of non lazy loading of the registry. (e.g. when the registry is always in memory) This might be useful for small applications.</li>
+				<li>Investigate performance of the registry when it is located on a network drive.</li>
+				<li>Compare performance numbers of having the registry always in memory versus having parts flushed out to disk, Explore the idea 
+				of switching lazy on or off depending on the number of plug-ins.</li>
+			</ul>
+		<li><strong>OSGi</strong></li>
+			<ul>
+				<li>Investigate performance of the OSGi state when it is located on a network drive.</li>
+				<li>Investigate automatic closure of JAR files based on time-outs, etc.</li>
+				<li>Investigate buddy class-loading.</li>
+			</ul>
+		<li><strong>Documentation</strong></li>
+			<ul>
+				<li>Write a document describing how to setup eclipse install (in shared install, non local dirive, etc).</li>
+			</ul>
+        <li><strong>Bug Sorting</strong> 
+          <ul>
+            <li>We are getting close to the release of 3.1 so we need to sort 
+              through our bug reports to... 
+              <ul>
+                <li>...make sure we aren't missing important ones.</li>
+                <li>...ensure the milestones are set correctly.</li>
+                <li>...move all enhancements that we are going to defer so they 
+                  don't interfere with new bugs coming in.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+	</ul>
+      <p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td ALIGN=RIGHT VALIGN=TOP><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
     <td><b>3.1 Milestone 6 - April 1, 2005</b> 
       <ul>
         <li><strong>Enhancing the createExecutableExtension mechanism</strong> <em>[pascal + jeff]</em> 
