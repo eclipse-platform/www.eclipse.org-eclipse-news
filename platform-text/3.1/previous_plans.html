@@ -16,8 +16,8 @@
   <tr> 
     <td WIDTH="100%"> 
       <h3><a NAME="Milestone_Planning"></a>Milestone M4</h3>
-      <h4>Original Plan</h4>
-      <h5>Commitments</h5>
+      <h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Original Plan</h4>
+
 <!----------------------------->      
       <h4>Top Five</h4>
       <ul>
@@ -113,7 +113,7 @@
       <ul>
         <li>fix IEditorHelper 
           <ul>
-            <li>use names that are selfdescribing and don't hamper further development</li>
+            <li>use names that are self-describing and don't hamper further development</li>
           </ul>
         </li>
         <li>finish work on new functions not yet API<br>
@@ -179,20 +179,122 @@
         </li>
       </ul>
 
-      <h4>Finished</h4>
-      t.b.d.
+      <h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Finished</h4>
+      <h5>Cross-team issues</h5>
       <ul>
+        <li>participate in preferences dynamic team</li>
+        <li>migrate to the changed semantics of IPath</li>
+      </ul>
+      <h5>Testing</h5>
+      <ul>
+        <li> complete performance tests for the published <a href="performance_scenarios.html">set 
+          of scenarios</a></li>
+      </ul>
+      <h5>Component work</h5>
+      <ul>
+        <li>rework preferences 
+          <ul>
+            <li>find all sharing scenarios (appearance, behavior, hovering, etc. 
+              ....)</li>
+            <li>functional categorization</li>
+            <li>check how WTP and other larger clients fit in</li>
+            <li>implement different scenarios</li>
+            <li>initiate review by usability team</li>
+          </ul>
+        </li>
+        <li>Java editor 
+          <ul>
+            <li>enable semantic highlighting by default</li>
+          </ul>
+        </li>
+      </ul>
+      <h5>Platform consolidation</h5>
+      <ul>
+        <li>create plug-in for 'Editing Source Scope'</li>
+        <li>push down Ctrl-Click 
+          <ul>
+            <li>[investigate] general resolution infrastructure</li>
+          </ul>
+        </li>
+      </ul>
+      <h5>Code cleanup</h5>
+      <ul>
+        <li>fix IEditorHelper 
+          <ul>
+            <li>use names that are self-describing and don't hamper further development</li>
+          </ul>
+        </li>
+      </ul>
+      <h5>NLS tooling</h5>
+      <ul>
+        <li>improve Properties File editor 
+          <ul>
+            <li>fix reported syntax coloring issues</li>
+            <li>navigate from selected key and value in a properties file to the 
+              location of usage in Java editor and Plug-in Manifest editor</li>
+            <li>spell checking</li>
+          </ul>
+        </li>
+        <li>support new nls features in Class file editor 
+          <ul>
+            <li>coloring</li>
+            <li>hovering</li>
+            <li>navigation</li>
+          </ul>
+        </li>
       </ul>
       
-      <h4>Not Finished / Deferred to M5</h4>
-      t.b.d.
+      
+      <h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Not Finished / Deferred to M5</h4>
+      <h5>Cross-team issues</h5>
       <ul>
+        <li>participate in the action contribution dynamic team</li>
+        <li>finish pushing down formatter to JDT Core</li>
+        <li>work on and adapt to the new undo story</li>
+      </ul>
+      <h5>Platform consolidation</h5>
+      <ul>
+        <li>move Occurrences annotation type definition and annotation specification down to ltk.ui or editors.ui</li>
+        <li>push down annotation navigation</li>
+        <li>push down spell checking</li>
+        <li>start adopting and pushing down Quick Fix infrastructure<br>
+        </li>
+      </ul>
+      <h5>NLS tooling</h5>
+      <ul>
+        <li>improve Properties File editor 
+          <ul>
+            <li>ensure correct ISO-8859-1 encoding when writing a properties file</li>
+          </ul>
+        </li>
+        <li>improve Externalize Strings wizard 
+          <ul>
+            <li>spell checking</li>
+            <li>ensure correct ISO-8859-1 encoding when writing a properties file</li>
+          </ul>
+        </li>
       </ul>
       
-      <h4>Deferred For Now</h4>
-      t.b.d.
+      
+      <h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Deferred For Now</h4>
+      <h5>Component work</h5>
       <ul>
+        <li>add document partitioning to StorageDocumentProvider 
+          <ul>
+            <li>[investigate] exploit the existing filebuffer extension points</li>
+          </ul>
+        </li>
+        <li>Java editor 
+          <ul>
+            <li>initial color settings</li>
+          </ul>
+        </li>
       </ul>
+      <h5>NLS tooling</h5>
+      <ul>
+        <li>investigate whether we can improve NLS tooling to support the string externalization approach used in TextOperationAction</li>
+      </ul>
+
 
       <h4>Testing</h4>
       <ul>
