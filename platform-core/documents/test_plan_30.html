@@ -11,9 +11,17 @@
 
 	<h3><a name="launcher"/>Launcher</h3>
 	<blockquote>
-	<h4>test1</h4>
+	<h4>No config.ini</h4>
 	<ul>
-	<li>item 1</li>
+	<li>install Eclipse</li>
+	<li>delete the configuration dir</li>
+	<li>start Eclipse</li>
+	<li>confirm that everything goes smoothly. The only thing that should be different
+	  is the lack of splash screen.</li>
+	<li>Note: There may be an issue with the eclipse.product not being set and the
+	  runtime not knowing which application to run. We may no longer be able
+	  to run without a config.ini. If there is a strong usecase for this then
+	  we could embed a valud in eclipse.properties if we had to.</li>
 	</ul>
 	</blockquote>
 	
@@ -53,13 +61,23 @@
     <li>start another instance on a different machine or as a different user</li>
     <li>previoulsy installed features should NOT be present </li>
   </ul>
+  <h4>Changing Install </h4>
+  <ul>
+    <li>install Eclipse</li>
+    <li>start and exit</li>
+    <li></li>
+  </ul>
 </blockquote>
 <h3><a name="equinox"/>Runtime - Equinox</h3>
 	
 <blockquote>
-  <h4>test1</h4>
+  <h4>JAR'd plugins</h4>
   <ul>
-    <li>item 1</li>
+    <li>populate an update site with the Core Tools feature and plugins/fragments.
+      mark the relevant feature entries as unpack=false.</li>
+    <li>start Eclipse and install the Core Tools feature using update manager</li>
+    <li>check that the plugins and fragments did not get exploded</li>
+    <li>confirm that the Core Tools function as expected</li>
   </ul>
 </blockquote>
 <h3><a name="jobs"/>Runtime - Jobs</h3>
@@ -88,10 +106,112 @@
 
 <h3><a name="pde-build"/>PDE-Build</h3>	
 <blockquote>
-  <h4>test1</h4>
-  <ul>
-    <li>item 1</li>
-  </ul>
+<h4>Plugin with "." on the classpath</h4>
+<ul>
+   <li> Using the "new plugin wizard" create a plugin named Dot1 with "." as a jar name. </li>
+   <li> Export it as a zip. Verify that the classes are not into a jar. </li>
+   <li> Export it as folder. Verify that the classes are at the root of the folder.</li>
+</ul>
+
+
+<h4>Compiling against a plugin with "." on the classpath</h4>
+<ul>
+   <li> Create a plugin named Normal</li>
+   <li> add a dependency to Dot1 in the plugin.xml</li>
+   <li> add a code dependency from a class in Normal to a class in Dot1</li>
+   <li> try to export Normal</li>
+   <li> try to export Normal and Dot1</li>
+   <li> confirm that no compile errors occured (if there were you would get an error dialog at the end of the export)</li>
+</ul>
+
+
+<h4>Plugin with a folder on the classpath</h4>
+<ul>
+   <li> Create a plugin named Folder1 with "myFolder" as a jar name</li>
+   <li> edit the build.properties and add a slash after myFolder in bin.includes property</li>
+   <li> Export as folder, verify that the class files are rooted in a folder called myFolder</li>
+</ul>
+
+
+<h4>Testing the build order</h4>
+<ul>
+   <li> in the plugin Folder1, add the following things in the runtime section of the plugin.xml</li>
+	<pre>
+      &lt;library name="yourFolder"&gt;
+         &lt;export name="*"/&gt;
+      &lt;/library&gt;
+      &lt;library name="library.jar"&gt;
+         export name="*"/&gt;
+      &lt;/library&gt;
+	</pre>
+   <li> replace the content of the build.properties by </li>
+<pre>
+source.myFolder = src/
+output.myFolder = bin/
+source.yourFolder = src/
+output.yourFolder = bin/
+source.library.jar = src/
+output.library.jar = bin/
+bin.includes = plugin.xml,\
+               myFolder/,
+               yourFolder/
+jars.compile.order = yourFolder, library.jar, myFolder
+</pre>
+   <li> generate manually the build.xml and verify that the build.jars target successively and in this order list yourFolder, library.jar and myFolder</li>
+</ul>
+
+<h4>Reuse the plugin Normal</h4>
+<ul>
+   <li> add a dependency to Folder1</li>
+   <li> add a code dependency from a class in Normal to a class in Folder1</li>
+   <li> Export Normal</li>
+   <li> Export Normal and Folder1</li>
+</ul>
+
+
+<h4>Export of qualified plugins</h4>
+<ul>
+   <li> Create a plugin Qualified where the version number ends is 1.0.0.qualifier.</li>
+   <li> open the build.properties and add
+	<pre>qualifier = context</pre></li>
+   <li> Export the plugin as zip and verify that the name of the zip has 1.0.0.<date Of The Day></li>
+   <li> Export the plugin as folder and verify that the folder as the name 1.0.0.<date of the day></li>
+   <li> Verify that the version number of the feature in the feature.xml has been updated</li>
+
+   <li> change the build.properties to
+	<pre>qualifier = NONE</pre></li>
+   <li> Export the plugin as zip and verify that the name of the zip is 1.0.0</li>
+   <li> Export the plugin as folder and verify that the name of the directory is 1.0.0</li>
+   <li> change the build.properties to 
+	<pre>qualifier = myValue</pre>
+   </li>
+   <li> Export the plugin as zip and verify that the name of the zip is 1.0.0.myValue</li>
+   <li> Export the plugin as folder and verify that the name of the directory is 1.0.0.myValue</li>
+</ul>
+
+
+<h4>Export of qualified features</h4>
+<ul>
+   <li> Create a feature QualifiedFeature, set the version number as 1.0.0.qualifier (don't need to add a plugin in the feature)</li>
+   <li> repeat the same steps as in the test with plugin</li>
+</ul>
+
+
+<h4>Export of qualified plugins and features</h4>
+<ul>
+   <li> Take the feature previously created</li>
+   <li> add the plugin "Qualified" in the feature</li>
+   <li> Export the feature and verify that the feature.xml content has been updated (the reference to Qualified has the number from the "Qualified" plugin)</li>
+   <li> Verify that the version number of the feature in the feature.xml has been updated</li>
+</ul>
+
+
+<h4>Export of nested features with qualifiers</h4>
+<ul>
+   <li> create a new feature (no importance in the name and version)</li>
+   <li> add the newly created feature to this feature</li>
+   <li> export the "QualifiedFeature" feature and verify that the feature.xml has been updated properly</li>
+</ul>
 </blockquote>
 
 <h3><a name="performance"/>Performance</h3>	
