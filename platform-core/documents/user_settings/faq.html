@@ -72,7 +72,7 @@ CODE { font-size: smaller }
       scope?</b></td>
   </tr>
   <tr>
-  	<td width="2%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  	<td width="2%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<td width="98%">
 	In Eclipse 2.1 there was only one place to store preferences via the Runtime APIs. 
 	Users would ask a particular plug-in for its preferences 
@@ -99,7 +99,7 @@ CODE { font-size: smaller }
       scopes are contributed by the Platform?</b></td>
   </tr>
   <tr>
-  	<td width="2%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  	<td width="2%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<td width="98%">
 	INSTANCE - 
 	The instance scope can also be thought of as "workspace". That is, the 
@@ -112,7 +112,7 @@ CODE { font-size: smaller }
 	</td>
   </tr>
   <tr>
-  	<td width="2%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  	<td width="2%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<td width="98%">
 	CONFIGURATION - The configuration scope is used to store preferences on a per 
 	configuration level. Being able store preferences per configuration means 
@@ -125,7 +125,7 @@ CODE { font-size: smaller }
     </td>
   </tr>
   <tr>
-  	<td width="2%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  	<td width="2%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<td width="98%">
 	DEFAULT - The default preference scope was initially created to provide a backwards 
 	compatibility story for the plug-in customization code in Eclipse 2.1. Preferences 
@@ -134,7 +134,7 @@ CODE { font-size: smaller }
     </td>
   </tr>
   <tr>
-  	<td width="2%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  	<td width="2%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<td width="98%">
 	PROJECT - There was a request for per project preferences so the project scope 
 	handles this. Preferences which are stored in this scope are shared stored in the 
@@ -153,7 +153,7 @@ CODE { font-size: smaller }
       is confusing, how can I picture this in my mind?</b></td>
   </tr>
   <tr>
-    <td width="2%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <td width="2%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <td width="98%"> The preferences can be thought of as a tree with each node 
       having a name and children. The "path" of a node is the names of it and 
       all its ancestors separated by a path separator. 
@@ -218,14 +218,30 @@ Via navigation from the root node.
     String qualifier = ResourcesPlugin.getDescriptor().getUniqueIdentifier();<br>
 	String key = ResourcesPlugin.PREF_AUTO_BUILDING;<br>
 	boolean defaultValue = false;<br>
-    org.osgi.service.prefs.Preferences node;<br>
-	node = Platform.getPreferencesService().getRootNode().node(InstanceScope.SCOPE).node(qualifier);<br>
+    Preferences node = Platform.getPreferencesService().getRootNode().node(InstanceScope.SCOPE).node(qualifier);<br>
     return node.getBoolean(key, defaultValue);</code> </p>
+  </td>
+  </tr>
+
+  <tr>
+    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%">3.</td>
+    <td WIDTH="98%"> 
+Through the context objects.
+<p>If the user knows which preference scope their preference is in but they don't know
+the hierarchy structure of the scope (or don't want to have to deal with it), then they
+are able to use the scope context API to retrieve the correct node for their preferences.</p>
+<p> <code>
+    String qualifier = ResourcesPlugin.getDescriptor().getUniqueIdentifier();<br>
+	String key = ResourcesPlugin.PREF_AUTO_BUILDING;<br>
+	boolean defaultValue = false;<br>
+    Preferences node = new InstanceScope().getNode(qualifier);<br>
+	if (node != null)<br>
+    &nbsp;&nbsp;return node.getBoolean(key, defaultValue);</code> </p>
   </td>
   </tr>
   
   <tr>
-    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%">3a.</td>
+    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%">4a.</td>
     <td WIDTH="98%"> 
 Search through the preferences service. (manual lookup order)
 <p>Having preferences stored in a single location, although useful, is uninteresting 
@@ -250,7 +266,7 @@ Search through the preferences service. (manual lookup order)
   </tr>
 
   <tr>
-    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%">3b.</td>
+    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%">4b.</td>
     <td WIDTH="98%"> 
 Search through the preferences service. (default lookup order)
 <p>Navigation from the root node to other nodes in the preference hierarchy can 
@@ -350,7 +366,7 @@ Through the scope context.
       should I do to convert my code to the new mechanism?</b></td>
   </tr>
   <tr>
-    <td width="2%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <td width="2%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<td width="98%">
 	<p>
 	Getting a value using the old code only checks the INSTANCE and DEFAULT scopes:<br>
@@ -390,7 +406,7 @@ Through the scope context.
       do I convert my project property page to use project preferences?</b></td>
   </tr>
   <tr>
-    <td width="2%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <td width="2%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<td width="98%">
 	Rather than use the generalized look-up mechanism to find out your project-specific
 	values, I would create a project context and do the lookup from there. This ensures
@@ -451,7 +467,7 @@ Through the scope context.
     <td WIDTH="98%"><b><a name="imemento"></a>How do I convert my IMemento values?</b></td>
   </tr>
   <tr>
-    <td width="2%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <td width="2%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<td width="98%">
 	Its easy! IMementos are a method of storing hierarchial data and that's just what the node
 	hierarchy is. 
@@ -536,7 +552,7 @@ Through the scope context.
       doesn't the backwards compatibility layer check all the scopes for a value?</b></td>
   </tr>
   <tr>
-    <td width="2%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <td width="2%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<td width="98%">
 	The backwards compatibility layer only checks for preference values in the INSTANCE and
 	DEFAULT scopes for two main reasons.
@@ -566,7 +582,7 @@ Through the scope context.
     <td WIDTH="98%"><b><a name="flush"></a>When are my preference changes saved to disk?</b></td>
   </tr>
   <tr>
-    <td width="2%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <td width="2%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<td width="98%">
 	The short answer is "whenever you change them you need to save them". In Eclipse 2.1 there 
 	was API to save plug-in preferences (<code>Plugin.savePluginPreferences()</code>) which clients
@@ -591,7 +607,7 @@ Through the scope context.
     <td WIDTH="98%"><b><a name="nodes"></a>Why should I use nodes?</b></td>
   </tr>
   <tr>
-    <td width="2%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <td width="2%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<td width="98%">
 	For most plug-ins, simple key/value pairs are well suited for their preference 
 	values and they will never have to take advantage of the node hierarchy other than
@@ -633,7 +649,7 @@ Through the scope context.
     <td WIDTH="98%"><b><a name="illegalStateException"></a>Why am I getting an IllegalStateException when calling APIs?</b></td>
   </tr>
   <tr>
-    <td width="2%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <td width="2%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<td width="98%">
 		Since the Preferences APIs include the ability to add nodes to the hierarchy, they
 		also include methods to remove nodes from the hierarchy. If a node has been removed and
