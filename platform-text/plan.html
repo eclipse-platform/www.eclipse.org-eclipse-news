@@ -43,7 +43,8 @@
             <li>vertical ruler column as folding control</li>
           </ul>
         </li>
-        <li>editor view splitting</li>
+        <li><font class="indexsub" color="#8080ff">[&gt;3.0]</font> editor view 
+          splitting</li>
         <li><img src="ok.gif" height=10 width=10>regex in Find/Replace dialog 
           (available, needs 1.4. runtime)</li>
         <li><img src="progress.gif" height=5 width=16> enable reducing the number 
@@ -58,7 +59,8 @@
           <ul>
             <li><img src="ok.gif" height=10 width=10> change overwrite mode on 
               double click</li>
-            <li>change read/only flag on double click</li>
+            <li><font class="indexsub" color="#8080ff">[&gt;3.0]</font> change 
+              read/only flag on double click</li>
             <li><img src="ok.gif" height=10 width=10> change raw/smart mode on 
               double click (see smart typing section)</li>
           </ul>
@@ -80,7 +82,8 @@
             <li>action hovers</li>
           </ul>
         </li>
-        <li><font color="#000000">support gestures</font></li>
+        <li><font class="indexsub" color="#8080ff">[&gt;3.0]</font> <font color="#000000">support 
+          gestures</font></li>
       </ul>
       <ul>
       </ul>
@@ -114,7 +117,8 @@
         <li><img src="ok.gif" height=10 width=10> smart insert new line before/after 
           cursor line</li>
         <li><img src="ok.gif" height=10 width=10> duplicate selection/line</li>
-        <li>(transpose lines/words/characters)</li>
+        <li><font class="indexsub" color="#8080ff">[&gt;3.0]</font> transpose 
+          lines/words/characters</li>
         <li><img src="ok.gif" height=10 width=10> move lines</li>
         <li><img src="ok.gif" height=10 width=10> copy lines</li>
         <li><img src="ok.gif" height=10 width=10> change selection to upper/lower 
@@ -134,7 +138,8 @@
       </ul>
       <h4>Investigation items</h4>
       <ul>
-        <li>investigate macro support (requires command based text infrastructure)</li>
+        <li><font class="indexsub" color="#8080ff">[&gt;3.0]</font> investigate 
+          macro support (requires command based text infrastructure)</li>
       </ul>
       <h3>Preference handling</h3>
       <ul>
@@ -156,8 +161,8 @@
       </ul>
       <h3>Architectural and implementation issues</h3>
       <ul>
-        <li>merge interfaces with their extensions including cleanup of replaced 
-          concepts </li>
+        <li><font class="indexsub" color="#8080ff">[&gt;3.0]</font> merge interfaces 
+          with their extensions including cleanup of replaced concepts </li>
         <li><img src="progress.gif" height=5 width=16> integrate command based 
           text manipulation with <font face="Courier New, Courier, mono">IDocument</font> 
           and related classes 
@@ -200,22 +205,25 @@
 
   <tr> 
     <td WIDTH="100%"> 
-      <h3><a name="Milestone_Planning"></a>Milestone M7</h3>
+      <h3><a name="Milestone_Planning"></a>Milestone M8</h3>
       <ul>
-        <li> implement headless annotation model support, PR <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=45123">45123</a> 
-        </li>
-        <li>integrate spell checking into HEAD stream, PR <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=47333">47333</a></li>
-        <li>collect and investigate solutions for language family editors</li>
-        <li>typing and redraw performance 
+        <li>introduce folding (to be continued in M9) 
           <ul>
-            <li>optimize annotation painting</li>
-            <li>reduce amount of temporary garbage</li>
-            <li>adapt all annotation model implementations to send out detailed 
-              annotation model change events</li>
+            <li>folding structure provider</li>
+            <li>vertical ruler column as folding control</li>
           </ul>
         </li>
+        <li>move templates to text infrastructure</li>
+        <li>move linked positions support to text infrastructure</li>
+        <li>use jobs for implementation of quick diff reference provider</li>
+        <li>provide standard way for manipulating documents in non-ui thread</li>
+        <li>implement headless annotation model support, PR <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=45123">45123</a> 
+        </li>
+        <li>revisit SWT Browser widget for hovers</li>
+        <li>prepare concolidated user preferences for editors</li>
         <li>improve initial size and remembered size of the content assist popup</li>
-        <li>internal code cleanup</li>
+        <li>internal code cleanup, PR <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=48883">48883</a></li>
+        <li>investigate time stamped documents</li>
         <li>bug fixing</li>
       </ul>
       <h3>Future 3.0 Milestones</h3>
