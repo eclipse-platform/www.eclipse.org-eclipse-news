@@ -5,7 +5,7 @@
 </head>
 <body text="#000000" bgcolor="#ffffff">
 <h1>Resource change events for encoding changes</h1>
-<p><font size="-1">Last modified: August 23rd, 2004</font> </p>
+<p><font size="-1">Last modified: August 27th, 2004</font> </p>
 <p>This document is a place where to gather the requirements and plan a solution 
   for bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=59899">59899</a></p>
 <h3>Things that affect the encoding of files</h3>
@@ -131,9 +131,12 @@
       to content changes considering that the encoding may have changed.</p>
     </em></li>
   <li>a content type has its default encoding changed <em> 
-    <p><strong>Fix</strong>: a preference change listener would have to catch 
-      the event and produce the appropriate event for every affected resource 
+    <p><strong>Planned fix</strong>: a preference change listener would have to 
+      catch the event and produce the appropriate delta for every affected resource 
       in the whole workspace.</p>
+    <p><strong>Actual fix</strong>: we listen for content type change events and produce the appropriate delta for every affected resource 
+      in the whole workspace. We are not smart enough to avoid generating deltas for 
+	  files that have a user-set encoding, which are not actually affected.</p>	  
     </em></li>
   <li>file specs are added to/removed from a content type that has a default encoding 
     set <em> 
