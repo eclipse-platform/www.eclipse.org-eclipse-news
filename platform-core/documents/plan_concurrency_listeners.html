@@ -8,7 +8,7 @@
  
 <h1>Listeners and builders in a concurrent world</h1>
 <font size="-1">[Draft copy] </font><br><br>
-<font size="-1">Last modified: August 5, 2003</font> 
+<font size="-1">Last modified: August 6, 2003</font> 
 
 <p>In the context of the work on improving platform responsiveness,
 there will be some changes to how resource change listeners
@@ -16,7 +16,7 @@ and incremental project builders operate.  This document describes and
 motivates these proposed changes.
 The existing (Eclipse 2.1) behavior of listeners will be described in detail, 
 along with a description of how this will change in Eclipse 3.0.
-Finally, a draft of the porting guide is included, describing how
+Finally, this document includes a description of how
 existing implementations might be impacted and 
 how they can adapt to the new behavior.
 <h3>Overview and motivation</h3>
@@ -130,7 +130,7 @@ post-change listeners will not.
 </p>
 <h3>Overview of changes for builders in Eclipse 3.0</h3>
 <p>
-The proposed changes for incremental project builders are much more conservative.
+The proposed changes for incremental project builders are conservative.
 The task of an incremental builder is to reconcile an arbitrary set of changes
 to a densely interconnected web of source files to produce an output that 
 is a consistent representation of the source.  This is a difficult enough task to achieve 
@@ -174,9 +174,6 @@ and no API changes are planned.
 The proposed changes described in this document require two changes
 to the current API contract of resource change listeners:
 <ol>
-<li>The restriction that resource changes not be allowed during certain resource change
-events will be removed.  Resource changes will be allowed during all resource change
-events.  Since this amounts to removing an API restriction, this is not a breaking change.</li>
 <li>It will no longer be guaranteed that all resource changes that occur during the
 dynamic scope of an <code>IWorkspaceRunnable</code> will be batched in a single
 notification.  This mechanism can still be used for batching changes to avoid unneccessary
@@ -201,49 +198,35 @@ since the last notification.
 <p>
 For listeners to auto-build events, the new structure has some signficant differences.
 Primarily, it will no longer be true that upon completion of a workspace changing
-operation, that auto-build listeners will have been notified.
-
-Client code that makes assumptions about when resource change listeners run are
-likely to be broken by this change.  The following are some sample situations:
-<h4>Views not reflecting workspace model</h4>
-<p>
-UI components that display resources typically keep their view up to date by registering
-a resource change listener that reconciles workspace changes with the view contents.
-<tt>org.eclipse.ui.model.WorkbenchContentProvider</tt> is the most common 
-example of this idiom.  With listeners running asynchronously, there will be a period
-after a workspace change when the listeners have not yet been called.  During this 
-period, views will be out of date with the model.  For example, the following code 
-pattern (often found in wizards) will now be prone to failure:
-<ul>
-<li>create resource</li>
-<li>select and reveal resource in navigator</li>
-</ul>
-This will fail if the select and reveal code is run before the resource change
-notification is finished.  It will attempt to select a resource that is not yet 
-in the view.
+operation, that auto-build listeners will have been notified.  Client code that makes 
+assumptions about when auto-build listeners run are likely to be broken by this change.  
+For example, if an auto-build listener is updating a domain model to reflect changes
+to the workspace, then this update might not have happened when the workspace
+changing operation returns.
 </p>
-<h4>Domain model out of sync with workspace</h4>
 <p>
-Similar to the above situation, client components often maintain the
-structure of a domain-specific model using resource change listeners.
-
-<h3>What to do about it</h3>
-<p>
-TBD
+It is worth noting that only UI-level code can be affected in this way.  Core-level
+code that is called via API may be called within the scope of an <tt>IWorkspaceRunnable</tt>,
+so it can never be sure about when resource change listeners will be called.  The suggested
+fix for this breakage is to use <tt>POST_CHANGE</tt> instead of build listeners if
+it is necessary to have notification occur before the operation completes.
 </p>
+<p>
+Another potential breakage is in clients that make assumptions about the ordering
+of resource change listeners.  Previously, <tt>PRE_AUTO_BUILD</tt>, <tt>POST_AUTO_BUILD</tt>,
+and <tt>POST_CHANGE</tt> events occurred in a strict linear order.  If listeners in 
+<tt>POST_CHANGE</tt> assume that the auto-build events have already fired,
+they may be broken.
+</p>
+
 <h3>Status and schedule</h3>
 <p>
-Background resource change listeners and auto-build have been implemented
-and some basic testing has been done.  All work is currently in branch "Bug_36957" 
+All described changes have been implemented. All work is currently in branch "Bug_36957" 
 of project org.eclipse.core.resources. Basic sanity checking of the SDK reveals no 
 significant problems, and some core team members are self-hosting with it.  
 All platform core test suites now pass with background 
-notification and build.  These changes will be rolled into integration builds over the 
-next two weeks:
-<ul>
-<li>Tuesday, July 29: release to HEAD stream for nightly build.</li>
-<li>Tuesday, August 5: release for 3.0 stream integration build.</li>
-</ul>
+notification and build.  These changes will be rolled into integration builds as soon
+as possible.
 <p>
 Go <a href="../plan_concurrency.html">back to concurrency home</a>.
 </p>
