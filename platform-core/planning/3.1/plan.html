@@ -71,8 +71,8 @@
         <li>evaluate the need of special support to allow automatic/product-driven/user-driven 
           integration of non-plug-in code into Eclipse - need to investigate community 
           needs, current workarounds, and carefully understand possible drawbacks. 
-          Use cases: providers of standard APIs (such as JDBC, JNDI, etc) (bug 
-          3074)</li>
+          Use cases: providers of standard APIs (such as JDBC, JNDI, etc) (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=3074">bug 
+          3074</a>)</li>
         <li>Programatically add registry entries - Currently the only way that 
           items are added to the extension registry is via files and parsing. 
           We need to investigate whether or not there is a need for being able 
@@ -88,6 +88,10 @@
           PDE Error Log View.</li>
         <li>Stub Plug-ins - Investigate shipping plug-ins which have only the 
           plugin.xml and code/resources are downloaded as you need them.</li>
+        <li>Content types - For 3.0 we created new content type APIs. We need 
+          to fill in the implementation and then ensure that people are taking 
+          advantage of it. (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=67884">bug 
+          67884</a>)</li>
       </ul>
       <p><em>PDE/Build</em></p>
       <ul>
@@ -111,11 +115,13 @@
           but since the external tool builder is a wrapper for the script that 
           is really doing the work, the id is not unique across the scripts. Fixing 
           this problem will require a change in the workspace tree file format. 
-          (bug 21029)</li>
+          (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=21029">bug 21029</a>)</li>
         <li>Allow merge for Copy/Move - Current implementation of copy/move requires 
           that the destination resource/path does not exist. We should investigate 
           allowing merge in the workspace tree. This would benefit refactoring 
-          actions. (bugs 31883, 29838)</li>
+          actions. (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=31883">bug 
+          31883</a>, <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=29838">bug 
+          29838</a>)</li>
         <li>APIs for maintaining file permissions - There are currently bugs related 
           to copying/moving resources on Linux machines and the file permissions 
           are not retained. This is especially apparent in the case where we end 
@@ -123,18 +129,27 @@
           level copy/move (for instance across volumes) and when we restore file 
           contents from local history. In these cases the file permissions are 
           not retained. This bug is a candidate for deferral as it can be argued 
-          that support should be in java.io.File. (bugs 20575, 26100)</li>
+          that support should be in java.io.File. (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=20575">bug 
+          20575</a>, <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=26100">bug 
+          26100</a>)</li>
         <li>Share metadata in the repository - In Eclipse 3.0 we enabled project 
           preferences which allows the sharing of project-level user settings. 
           We need to investigate taking this support further...for instance in 
           sharing markers, persistent properties, and other resource metadata. 
-          (bugs 21411, 26809)</li>
+          (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=21411">bug 21411</a>, 
+          <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=26809">bug 26809</a>)</li>
         <li>Improve Debugging Information - We need to improve some of the debugging 
           information in the Resources plug-in. One thing which people have been 
           asking for is a way to find out &quot;who triggered the build?&quot;.</li>
         <li><em>(Performance)</em> Fix ResourcesPlugin#startup code - The Resources 
           plug-in agressively tries to load the workspace during its startup but 
           that is not only unnecessary but also undesirable.</li>
+        <li>File encodings - For 3.0 we created new file encoding APIs to allow 
+          for encoding changes to be visible in resource deltas. We need to fill 
+          in this implementation. There are also new APIs for content type changes 
+          at the Runtime level. We need to react to these changes and reflect 
+          them in resource deltas. (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=59899">bug 
+          59899</a>)</li>
       </ul>
       <p>&nbsp;</p></td>
   </tr>
@@ -175,11 +190,14 @@
       </ul>
       <p><em>Platform/Resources</em></p>
       <ul>
-        <li>Logical vs Physical (bug 37723) - IResource on the physical side -&gt; 
-          create new logical layer and create a mapping (too many people already 
-          relying on IResource as is) (cross team - Platform/Resources, Platform/Team)</li>
-        <li>Improve team control over resource operations (bug 37722) (cross team 
-          - Platform/Resources, Platform/Team)</li>
+        <li>Logical vs Physical - IResource on the physical side -&gt; create 
+          new logical layer and create a mapping (too many people already relying 
+          on IResource as is) (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=37723">bug 
+          37723</a>) (cross team - Platform/Resources, Platform/Team)</li>
+        <li>Improve team control over resource operations - Investigate to see 
+          if we still need to add more control over other opertions. Essentially 
+          expanding the move/delete hook to include creation, etc. (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=37722">bug 
+          37722</a>) (cross team - Platform/Resources, Platform/Team)</li>
         <li>Remote workspace and remote resources - Investigate dealing with remote 
           workspaces and remote resources. (similar to support that was in Eclipse 
           0.5 where we had synchronizing on resource existance rather than content 
