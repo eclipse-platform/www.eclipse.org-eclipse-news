@@ -19,7 +19,7 @@
       <p><b><a name="xerces"></a>Remove Dependancy on Xerces </b>(bugs <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=37696">37696</a>, 
         <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=36112">36112</a>)</p>
       <p><i>Checklist:</i></p>
-      <ul type="circle">
+      <ul>
         <li>Create new XML plug-in containing the XML Pull APIs.</li>
         <li>Remove plug-in dependancies from org.eclipse.core.runtime and org.eclipse.core.resources.</li>
         <li>Add new dependancy to new XML plug-in.</li>
@@ -27,15 +27,35 @@
           parser using the new APIs.</li>
         <li>Replace org.eclipse.core.internal.resources.WorkspaceDescriptionReader 
           with new reader based on new APIs.</li>
+        <li>Replace org.eclipse.core.internal.resources.ProjectDescriptionReader 
+          with new reader based on new APIs.</li>
+		<li>Determine interaction with bootstrap process. Things to consider include
+		creating the bootstrap classloader, update/install, and org.eclipes.core.internal.boot.PlatformConfiguration.</li>
         <li>Check test suites.</li>
         <li>Verify new work by completely removing the Xerces plug-in from the 
-          environment.</li>
+          environment. (is this possible with the other plug-ins' dependancies?</li>
         <li>Educate Platform/UI and other teams in SDK who rely on Xerces with 
-          knowledge of new APIs.</li>
+          knowledge of new APIs. Note that most teams have updated the bug report 
+          with explanations of their usage.</li>
       </ul>
     </td>
   </tr>
-  <tr> </tr>
+  <tr>
+    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
+    <td><p><strong>Milestone Plan (3.0 M2) - July 18, 2003</strong></p>
+      <ul>
+        <li>Goal is to complete all of the above work.</li>
+        <li>We don't envision having all teams converted to new APIs but should 
+          at least be educated on how to convert their code. It is up to the individual 
+          teams to 1) determine whether or not they want to convert their code 
+          and 2) to actually change their code.</li>
+        <li>Note that although all plug-ins in the SDK are not required to convert 
+          their parsing, it is necessary that at least the plug-ins defined to 
+          be a part of the Rich Client Platform (RCP) perform this transformation. 
+          Reducing the size of the XML plug-in shipped with the RCP (3M for Xerces 
+          vs 25K for XmlPull) is a big big win.</li>
+      </ul></td>
+  </tr>
 </table>
 
 </body>
