@@ -57,6 +57,15 @@
           (a two-level tree, directories are never deleted). We could improve 
           that by postponing deleting directories to shutdown (making shutdown 
           slower instead).</li>
+        <li><em>November 17th</em> - using some ideas from the previous tries 
+          and the existing code, we got a solution (<em>take 3</em>) that seems 
+          to have all the characteristics we have been looking for: it is much 
+          simpler than the current story, and generally performs (sometimes much) 
+          better than the current implementation. We are using the existing BlobStore 
+          (as the existing implementation) and per-bucket indexes, as in the previous 
+          solutions. These indexes are just dictionaries having the file path 
+          as key and a pair &lt;UUID,timestamps&gt; for every state belonging 
+          to the file as value.</li>
       </ul>
 		</td>
 	</tr>
@@ -64,52 +73,94 @@
 		<td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
     	
     <td WIDTH="98%"><b>Performance Comparisons</b> 
-    <p>Following is a comparison of performance (execution time) for the most common use cases
-    using the different approaches tried.
-    </p>
+    <p>Following is a comparison of performance (execution time) for the most 
+        common use cases:</p>
     
-    <table width="100%" border="1">
+      <table width="100%" border="1">
         <tr> 
-          <td><strong><div align="center">Use cases</div></strong></td>
-          <td><strong><div align="center">Original (ms)</div></strong></td>
-          <td><strong><div align="center">Take 2 (ms)</div></strong></td>
-          <td><strong><div align="center">% Change</div></strong></td>
+          <td width="54%"><strong> 
+            <div align="center">Use cases</div>
+            </strong></td>
+          <td width="21%"><strong> 
+            <div align="center">Original (ms)</div>
+            </strong></td>
+          <td width="25%"><strong> 
+            <div align="center">Take 3 (ms)</div>
+            </strong></td>
         </tr>
         <tr> 
           <td><em>add state</em></td>
-          <td><div align="center">117</div></td>
-          <td><div align="center">29</div></td>
-          <td><div align="center"><font color="blue"><strong>-75%</strong></font></div></td>
+          <td align="center">
+<div align="center">498</div></td>
+          <td align="center">
+<div align="center">481</div></td>
         </tr>
         <tr> 
           <td><em>get history for file</em></td>
-          <td><div align="center">9</div></td>
-          <td><div align="center">12</div></td>
-          <td><div align="center"><font color="red"><strong>+33%</strong></font></div></td>
+          <td align="center">
+<div align="center">1280</div></td>
+          <td align="center">
+<div align="center">16</div></td>
         </tr>
         <tr> 
-          <td><em>find deleted members</em></td>
-          <td><div align="center">26</div></td>
-          <td><div align="center">20</div></td>
-          <td><div align="center"><font color="blue"><strong>-23%</strong></font></div></td>
+          <td><em>find deleted members (100 files, 4 states per file)</em></td>
+          <td align="center">914</td>
+          <td align="center">46</td>
         </tr>
         <tr> 
-          <td><em>clear history of a directory tree</em></td>
-          <td><div align="center">35</div></td>
-          <td><div align="center">106</div></td>
-          <td><div align="center"><font color="#FF0000"><strong>+203%</strong></font></div></td>
+          <td><em>find deleted members (20 files, 20 states per file)</em></td>
+          <td align="center">906</td>
+          <td align="center">15</td>
         </tr>
         <tr> 
-          <td><em>copy history for a directory tree (applies cleaning policy)</em></td>
-          <td><div align="center">682</div></td>
-          <td><div align="center">1450</div></td>
-          <td><div align="center"><font color="#FF0000"><strong>+113%</strong></font></div></td>
+          <td><em>find deleted members (4 files, 100 states per file)</em></td>
+          <td align="center">
+<div align="center">882</div></td>
+          <td align="center">
+<div align="center">15</div></td>
+        </tr>
+        <tr> 
+          <td><em>clear history of a directory tree (100 files, 4 states per file)</em></td>
+          <td align="center">367</td>
+          <td align="center">42</td>
+        </tr>
+        <tr> 
+          <td><em>clear history of a directory tree (20 files, 20 states per file)</em></td>
+          <td align="center">332</td>
+          <td align="center">187</td>
+        </tr>
+        <tr> 
+          <td><em>clear history of a directory tree (4 files, 100 states per file)</em></td>
+          <td align="center">
+<div align="center">379</div></td>
+          <td align="center">
+<div align="center">179</div></td>
+        </tr>
+        <tr>
+          <td><em>copy history for a directory tree (100 files, 4 states per file)</em></td>
+          <td align="center">3350</td>
+          <td align="center">3250</td>
+        </tr>
+        <tr> 
+          <td><em>copy history for a directory tree (20 files, 20 states per file)</em></td>
+          <td align="center">2210</td>
+          <td align="center">868</td>
+        </tr>
+        <tr> 
+          <td><em>copy history for a directory tree (4 files, 100 states per file)</em></td>
+          <td align="center">
+<div align="center">4720</div></td>
+          <td align="center">
+<div align="center"> 
+              <p>453</p>
+            </div></td>
         </tr>
         <tr> 
           <td><em>apply cleaning policy</em></td>
-          <td><div align="center">tbd</div></td>
-          <td><div align="center">tbd</div></td>
-          <td><div align="center">tbd</div></td>
+          <td align="center">
+<div align="center">tbd</div></td>
+          <td align="center">
+<div align="center">tbd</div></td>
         </tr>
       </table> </td>
 	</tr>
