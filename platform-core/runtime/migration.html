@@ -28,7 +28,7 @@
     and general workspace setup can be found in the <a href="adoption.html">Adoption 
     Guide</a> and information on how to use the new runtime is contained in the 
     <a href="howto.html">Users Guide</a>.<br>
-    Last Modified: 2300 November 25, 2003</p>
+    Last Modified: 1000 November 26, 2003</p>
 </blockquote>
 <table border=0 cellspacing=0 cellpadding=2 width="100%" >
   <tr> 
@@ -64,10 +64,6 @@
   Eclipse-based products (e.g., WSAD) failed to uncover any uses. Eclipse itself 
   uses this capability in the Help area (e.g., for help: and jndi: URLs). This 
   has usage has been updated as described above. </p>
-<p><b>Technical notes:</b> We continue to look for ways of wrappering supplied 
-  URLStreamHandlers and thus supplying full compatibility support. Failing this, 
-  the minor code changes described here are required.<br>
-</p>
 <h3>Classload order (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=43401">43401</a>)</h3>
 <p><b>Who is affected:</b> Plug-ins which supply packages provided which are also 
   supplied by other plug-ins.</p>
@@ -101,21 +97,27 @@
   Eclipse install.</p>
 <p><b>Description: </b>Eclipse allows multiple versions of the same plug-in to 
   co-exist. Since OSGi resolves package imports/exports to one version it does 
-  not support multiple plug-in versions. There are two proposals for adding multiversion 
-  support to the OSGi framework. Both are feasible but differ in how version differences 
-  are propogated. </p>
-<p><b>Analysis:</b> This usecase is real and the lack of support is temporary. 
-  The Equinox team is busily working on this issue and hope to resolve it shortly.</p>
-<h2></h2>
+  not support multiple plug-in versions. There are several proposals for adding 
+  multiversion support to the OSGi framework. To date, all have deficiencies. 
+  In the absence of a complete solution we are taking the simple approach and 
+  allowing behaviour which is similar to that of original Eclipse. That is, the 
+  resolver handles multiple versions and correctly binds dependencies. The runtime 
+  then constructs the defined structures and executes them. This implementation 
+  is in place though more work is needed to update the OSGi service mechanism 
+  to filter properly.</p>
 <h3>Package duplication (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=43403">43403</a>)</h3>
 <p><b>Who is affected:</b> Plug-ins which <i>export</i> whole packages which are 
   also exported by other plug-ins.</p>
 <p><b>Description: </b>Eclipse allows multiple copies of the same package to co-exist 
-  (in different plug-ins). Since OSGi resolves package imports/exports to one version 
-  it does not support multiple package copies. </p>
-<p><b>Analysis:</b> This usecase is real and the lack of support is temporary. 
-  A solution to this issue is currently being implemented by the Equinox team.</p>
-<h3>Default package content cannot be shared</h3>
+  (in different plug-ins). Since OSGi resolves package imports/exports to one 
+  version it does not support multiple package copies. Note that this issue is 
+  specific to package import and export. OSGi has been extended to include bundle 
+  requires and provides mechanisms which will be familiar to Eclipse users. This 
+  mechanism allows for package duplication (copies of the same package in multiple 
+  places) as well as package splitting (the distribution of a package's classes 
+  across several bundles). </p>
+<p><b>Analysis:</b> Typical Eclipse usecases are not affected.</p>
+<h3>Default package content cannot be shared (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=47517">47517</a>)</h3>
 <p><b>Who is affected:</b> Plug-ins which expect to use types or resources in the 
   default package of another plug-in</p>
 <p><b>Description:</b> In OSGi the only way for one bundle to access the code 
@@ -169,45 +171,16 @@
   invalid. Plug-in writers should ensure that the information to which they need 
   access is available via <tt>getResource()</tt>, use the relevant API for accessing 
   the contents of a bundle/plug-in.</p>
-<h3>Plug-ins hosting classpath entries for fragments (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=43406">43658</a>)</h3>
-<p><b>Who is affected:</b> Plug-ins which declare classpath entries in their plugin.xml 
-  file but where the actual jars are intended to be supplied by fragments to the 
-  plug-in and fragments which expect to see package visible code in their host. 
+<h3>BootLoader API removed (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=47516">47516</a>)</h3>
+<p><b>Who is affected:</b> Plug-ins which use certain API from the class <tt>BootLoader</tt>.</p>
+<p><b>Description:</b> Methods such as getRunnable(), startup(), shutdown() and 
+  run() were removed from the BootLoader class supplied in the compatibility layer. 
 </p>
-<p><b>Description:</b> Standard Eclipse manages fragments by seamlessly merging 
-  the entries in their fragment.xml files with those of the host plug-in's plugin.xml 
-  file. For example, at runtime only the host has a classloader. This classloader 
-  loads the classes from the plug-in as well as all the fragments. This leads 
-  to situations where the host specifies a classpath entry such as &quot;$ws$/swt.jar&quot; 
-  but does not in fact supply the swt.jar.</p>
-<p>Under this new model, there is no reason for the host to specify a vacuous 
-  classpath entry. Rather, it should remain silent about jars potentially supplied 
-  by fragments and leave them to specify their own classpath.</p>
-<p>The new fragment model sees fragments as first class entities which have classloaders 
-  of their own (if needed) but yet delegate class/resource discovery to the classloader 
-  of their host prior to consulting their own classpath. This is similar to the 
-  standard Eclipse approach but leads to a situation where package visible code 
-  in the host is not visible to code in the same package in fragments. This happens 
-  because the two packages in question are actually managed by different classloaders 
-  and so are in fact different packages.</p>
-<p><b>Analysis:</b> The current Eclipse behaviour is somewhat anomalous in that 
-  the runtime and the tooling have to take exceptional measures when computing 
-  the classpath related to a set of fragments and their host plug-in. The new 
-  approach simplifies this but does make it harder to generate the bundle manifests 
-  corresponding to the plugin.xml and fragment.xmls using the old model. For example, 
-  the current Equinox runtime relies on the SWT elements to include hand-crafted 
-  manifest files with the characteristics outlined above.</p>
-<p>The ability of fragments to see package visibility code in their host is an 
-  asset for people writing tests and tools. For example, the Core Tools use this 
-  to access internals of the runtime and resources plugins and interpret the behaviour 
-  of these components. Similarly, white box test suites can be constructed using 
-  package visible code and thus not forcing the exposure of internals as public 
-  code.</p>
-<p><b>Technical notes:</b> The Equinox team is investigating the fragment classloading 
-  semantics to see if it is possible to merge the fragment and host classpaths. 
-  They are also looking at enhancing the plug-in converter to analyze potential 
-  cases and generate the appropriate classpath entries in the bundle and fragment 
-  manifests.</p>
+<p><b>Analysis:</b> In general this API is used by very few people. It is intended 
+  as the interface between the main() in startup.jar and the Eclipse runtime. 
+  Having said that, in some cases this removal was too eager and the API should 
+  be added back. This is under investigation.</p>
+
 <table border=0 cellspacing=0 cellpadding=2 width="100%" >
   <tr> 
     <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF"> 

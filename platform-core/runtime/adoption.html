@@ -196,16 +196,38 @@
 <h4>Class/Package name changes</h4>
 <p>In some cases it was necessary to rename packages and/or classes. Below are 
   the mappings from orignal package/class to new package/class:</p>
+<p>&lt;list of changes here&gt;</p>
 <h4>Method signature changes</h4>
-While we attempted to avoid gratuitous name changes, certain concepts and structures 
-were eliminated/changed such that references to their related terms had to be 
-removed from the API. This manifests itself in changes to method signatures (method 
-name, return type, argument count/types). The list below details the mapping from 
-original methods to new methods. 
+<p>While we attempted to avoid gratuitous name changes, certain concepts and structures 
+  were eliminated/changed such that references to their related terms had to be 
+  removed from the API. This manifests itself in changes to method signatures 
+  (method name, return type, argument count/types). The list below details the 
+  mapping from original methods to new methods. </p>
+<p>&lt;list of changes here&gt;</p>
 <h4>Model changes</h4>
 <p>Model changes are more fundamental. They represent a new way of doing something. 
   Typically requiring new structures, new classes/methods and new algorithms.</p>
-<h4>Plugin registry</h4>
+<ul>
+  <li>&lt;list of changes here&gt;</li>
+  <li>IPlatform</li>
+  <li>Plugin </li>
+  <li>BundleHelper</li>
+</ul>
+<p>See <a href="#registry">Plug-in Registry</a> for additional model changes</p>
+<table border=0 cellspacing=0 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF"> 
+      <a name="registry"></a>Plug-in Registry</font></b></td>
+  </tr>
+</table>
+<p>In the new runtime there is a separation between the information and structures 
+  needed to run a plug-in and that related to a plug-in's extensions and extension 
+  points. The former is defined and managed by the OSGi framework specification. 
+  The latter are Eclipse-specific concepts and are added by they Eclipse runtime 
+  code. Accordingly, the original plugin registy and related objects have been 
+  split into OSGi <i>bundles</i> and the Eclipse <i>extension registry</i>. </p>
+<p>The OSGi framework API defines ways of discovering and interrogating bundles. 
+  Methods such as BundleContext.getBundles() </p>
 <table border=0 cellspacing=0 cellpadding=2 width="100%" >
   <tr> 
     <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF"> 
