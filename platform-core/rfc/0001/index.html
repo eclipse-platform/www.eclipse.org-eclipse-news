@@ -3,7 +3,7 @@
 <head>
    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
    <meta name="Author" content="Build">
-   <title>Eclipse Platform Core RFC 0001 - Title of Proposal</title>
+   <title>Eclipse Platform Core RFC 0001 - Handling Case Variant Collisions</title>
 </head>
 <body bgcolor="#FFFFFF" >
 <div align="right">
@@ -28,7 +28,7 @@
     This document discusses the problem and evaluates various approaches to solving it.
   <p><b>By John Arthorne, OTI.</b> <br>
     <font size="-1">Created: November 26, 2001</font> <br>
-    <font size="-1">Last Modified: November 26, 2001</font> <br>
+    <font size="-1">Last Modified: December 6, 2001</font> <br>
 </blockquote>
 <hr>
 <h2>The Problem</h2>
@@ -54,6 +54,15 @@ exist in the workspace, but is created externally in the filesystem.  In this ca
 behaviour when a client calls <tt>ABC.create()</tt> is consistent; it throws an exception 
 stating that the workspace is out of sync with the local filesystem.
 </p>
+<p>
+<font color="#F00D1E">New comment:
+It should be noted that this problem arises from the fact that the platform case sensitivity
+does not always match the case sensitivity of the underlying filesystem.  In most cases,
+this inconsistency can be handled by the platform core without requiring special handling
+by callers of core API.  However, this situation represents one rare corner case that cannot be 
+resolved silently.  This is because "under the covers" resolution would require core to 
+delete files from the filesystem without user awareness.</font>
+</p>
 <h2>Proposed Solution</h2>
 The proposal is to add a new core status code, IResourceStatus.CASE_VARIANT_EXISTS.
 This status code would be included in exceptions from all <tt>create</tt>, <tt>copy</tt>, 
@@ -78,7 +87,23 @@ thrown -- the only thing that has changed is the status code.</li>
 <li>Status codes are fuzzy API.  API methods do not formally guarantee what status
 codes will be returned for a given error condition.  The status codes could theoretically
 change at any time without warnings or deprecations.</li>
+<font color="#F00D1E">New comment: while the status codes returned by a particular
+method are technically fuzzy, we strive to avoid changing return status codes without a 
+very compelling reason and sufficient advance notice.  The code constant and value are API
+and will not change.</font>
+<li><font color="#0000FF">Feedback: There is still an inconsistency between the behaviour 
+of exists and create.</font></li>
 </ul>
+<font color="#0000FF">Feedback: Each project can be associated with a different repository 
+and the versioning abilities of that project are governed by the target repository (adapter). 
+It seems strange that we would not argue that a project's case sensitive behavior wouldn't 
+be based on the target file system it was stored on.</font>
+</p><p>
+<font color="#F00D1E">Response: Yes, you could argue that this approach would give a more
+consistent user experience.  However, this would unfortunately require a radical redesign 
+and a major overhaul of large amounts of platform code.  What this solution proposes
+is the best we could come up with under the constraints of the existing architecture.</font>
+</p>
 <h2>Alternative Solutions</h2>
 This section describes proposed alternative solutions, and some comments on them. 
 More alternative solutions will be added as they are raised during discussion.  Please
@@ -103,10 +128,13 @@ merely moves the file-system inconsistency problems up to other plugins.  Caller
 Core API can currently rely on it always being case-sensitive, and can act accordingly.
 Core is able to handle some of these inconsistent situations without involving client
 plug-ins.</li>
+<font color="#0000FF">Feedback: You could argue that providing a case sensitive workspace 
+in the absence of a case sensitive file system is also pushing up an inconsistency to layers 
+above that may also need to deal with external tools?</font>
 <li>Inconsistencies still possible when workspace spans filesystems.  If the
 user has a workspace where some projects are mounted on a case-sensitive
 filesystem, and others are mounted on a case-insensitive filesystem, there would still be
-an inconsistency.  Such a setup would undoubtedly case widespread problems for
+an inconsistency.  Such a setup would undoubtedly cause widespread problems for
 downstream plug-ins trying to manage such an inconsistent workspace.</li>
 </ul>
 <h2>Related Bugs:</h2>
@@ -115,9 +143,8 @@ downstream plug-ins trying to manage such an inconsistent workspace.</li>
 <li><a href="http://dev.eclipse.org/bugs/show_bug.cgi?id=3076">3076: Can't import com and COM</a></li>
 </ul>
 <h2>RFC Status</h2>
-<p>This proposal is currently soliciting comments.  Please provide comments by 4-DEC-2001</p>
-<p>In particular, if you have a suggestion for another way this problem could be addressed,
-or have reservations about the proposed approach, let us know!  Comments should be directed
+<p>This proposal is currently being voted on.  Voting period ends December 15, 2001.</p>
+Commiters should direct votes, and non-commiters may still direct comments,
 to the core mailing list: <a href="http://dev.eclipse.org/mailman/listinfo/platform-core-dev">platform-core-dev@eclipse.org</a> 
           (<a href="mailto:platform-core-dev@eclipse.org">post</a>, <a href="http://dev.eclipse.org/mhonarc/lists/platform-core-dev/maillist.html">archives</a>).
 </p>
