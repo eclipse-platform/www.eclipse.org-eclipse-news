@@ -7,6 +7,12 @@
 <body text="#000000" bgcolor="#ffffff">
 <h1>A central content type catalog for Eclipse</h1>
 <p><font size="-1">Last modified: Feb 16, 2005</font></p>
+<p><font size="-1"><strong>Note: this document has been updated/extended to depict 
+  the solution actually implemented in the 3.0 release and changes made during 
+  the 3.1 cycle. The <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-core-home/documents/content_types.html?rev=1.4"> 
+  original proposal written the 3.0 development cycle</a>, as well as <a href="http://dev.eclipse.org/viewcvs/index.cgi/platform-core-home/documents/content_types.html"> 
+  all versions of this document</a> are also available</strong> (<img src="../images/changed.gif" width="12" height="12"> 
+  marks interesting changes since the original proposal).</font></p>
 <p><cite><strong>Plan item description:</strong> Content-type-based editor lookup. 
   The choice of editor is currently based on file name pattern. This is not very 
   flexible, and breaks down when fundamentally different types of content are 
@@ -113,8 +119,8 @@
   such as what charset was used to encode the contents (for text files), and any 
   content type specific information that may be required.</p>
 <p>The main method in <code>IContentDescriber</code> is:</p>
-<p><code>int describe(InputStream contents, IContentDescription description, int 
-  optionsMask) throws IOException;</code></p>
+<p><code>int describe(InputStream contents, IContentDescription description, QualifiedName[] 
+  options) throws IOException;</code></p>
 <p>The first thing implementations for this method must do is to check if the 
   contents represent a valid sample for their corresponding content type file 
   format. If not (or if cannot be determined), this method should exit immediately, 
@@ -138,23 +144,19 @@
   about an arbitrary stream of bytes. These information are filled partially by 
   the platform and partially by the content describer elected (if any).</p>
 <h3>Conflict resolution</h3>
-<p>Content types are managed by the platform but plug-ins 
-  are in charge of contributing content types. While this provides good flexibility, 
-  it also opens oportunities for conflicts. There are a few scenarios where conflicts 
-  may arise:</p>
+<p>Content types are managed by the platform but plug-ins are in charge of contributing 
+  content types. While this provides good flexibility, it also opens oportunities 
+  for conflicts. There are a few scenarios where conflicts may arise:</p>
 <ol>
   <li><em>two content types provided by independently developed plug-ins intended 
     for the same file selection specification</em> - this may happen for popular 
     file types that are not provided by the platform. In this case, one of the 
-    content types will be automatically made into an alias for the other. The 
-    intended effect is that content types/code depending on the content type transformed 
-    into an alias should still work, acting on the alias target instead. Content 
-    type priorities help deciding which content type should be preserved, and 
-    which ones made into aliases. If a plug-in provider feels it should be the 
-    official provider of a content type, a high priority should be assigned to 
-    it. Usually, &quot;normal&quot; priorities (the default value) should be used, 
-    meaning that if a similar high priority content type is available, it should 
-    be picked instead. </li>
+    content types will be ellected arbitrarily. User intervention is required 
+    (by disabling one of the content types, for instance) if automatic determination 
+    does not choose the preferred content type If multiple content types can be 
+    returned by the API, both will appear in the list.<img src="../images/changed.gif" width="12" height="12"> (see 
+    bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=83004">83004</a>) <font size="-1">
+    </font></li>
   <li><em>two related (but different) content types that share a same file name/extension 
     specification</em> - think of general XML documents and Ant build scripts 
     (a sub-type of XML document, inheriting its file selection specifications). 
@@ -167,29 +169,27 @@
     more specific type will appear before the general one. For APIs that do content-based 
     analysis, if both content type describers deem the contents as valid, the 
     more specific content type will also appear first. For two sibling content 
-    types that deem a same set of bytes as valid, no ordering between them will 
-    be enforced (aliasing is not done since those types do not explicitly specify 
-    file specs - they inherit them instead).</li>
+    types that deem a same set of bytes as valid, an arbitrary order will be chosen.</li>
   <li><em>two completely unrelated content types that share a same file name/extension 
     specification</em> - this is the more unlikely scenario (imagine an image 
     file format and a word-processor file format sharing the same file extension). 
-    In this case, aliasing is not desirable (since the content types are fundamentally 
-    different). User intervention is required (by disabling one of the content 
-    types, for instance, and manually associating any editors, etc to the other 
-    content type) to avoid incorrect aliasing.</li>
+    In this case, one of the content types will be ellected arbitrarily. User 
+    intervention is required (by disabling one of the content types, for instance) 
+    if automatic determination does not choose the preferred content type.<img src="../images/changed.gif" width="12" height="12"> (see 
+    bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=83004">83004</a>) <font size="-1"></li>
 </ol>
 <h3>Frequently Asked Questions</h3>
 <ol>
   <li> How will plugin providers benefit from a central content type catalog? 
     <p> Generally by using the same content type registry and sharing the same 
-      concept of content/file type. Other examples are:
+      concept of content/file type. Other examples are: 
     <ul>
       <li>a builder could use its well-known content type to filter out files 
         whose names don't match with the content type file section spec;</li>
       <li>the user interface could know what editors to offer for a given file 
         selected (associations between editors and content types should be kept 
         separately from the content type catalog);</li>
-    </ul></p> 
+    </ul></p>
     </li>
   <li><a name="FAQ-hierarchy"></a>Why are content types hierarchical? 
     <p>To allow important properties to be inherited by new specialized content 
@@ -204,22 +204,28 @@
     </li>
   <li> What happens if the base type for a new content type is not present in 
     the platform (the plug-in that provides it is not available)? 
-    <p>The content type (and consequently any descendants) will be deemed 
-      invalid and ignored.</p>
+    <p>The content type (and consequently any descendants) will be deemed invalid 
+      and ignored.</p>
   </li>
   <li><a name="FAQ-MIME"></a>Do Eclipse's content types have anything to do with 
     IANA's MIME Media Types? 
-    <p>Not so far.</p>
+    <p>Not so far. The main reason is that not every file format with a content 
+      type in Eclipse will have a MIME type, so we could not use it as the main 
+      association mechanism between content types and applications. We considered 
+      keeping MIME-types as an optional property for each content type, and provide 
+      a method findContentTypesByMIMEType (or something like that), but decided 
+      removing it since there was no sound use case for that (and the idea in 
+      the initial proposal was to keep only the essential stuff to avoid distractions).<font size="-1"><strong><img src="../images/changed.gif" width="12" height="12"></strong></font></p>
   </li>
   <li>How can users customize the way content types are chosen? 
-    <p>By:
+    <p>By: 
     <ul>
       <li>associating additional file specs to existing content types</li>
       <li>defining a content type as the default one for a given file spec (not 
         supported yet)</li>
       <li>overriding content type defined attributes, such as default encoding 
         (not supported yet)</li>
-    </ul></p> 
+    </ul></p>
     </li>
   <li>Can plug-ins override the content type describer for an existing content 
     type? 
@@ -228,11 +234,9 @@
   </li>
   <li>Can two completely unrelated content types be associated with the same file 
     spec? 
-    <p>What happens is that only one of the content types (arbitrarily selected) 
-      will be enabled. If only one of them is declared as high priority, it will 
-      be picked. Otherwise, one will be arbitrarily chosen by the platform. In 
-      either case, the others will be made into aliases for the elected content 
-      type.</p>
+    <p>One of the content types (arbitrarily selected) will be chosen as the preferred 
+      one (the other will also be associated). Priorities are also taken into 
+      account.</p>
   </li>
   <!--li>How are conflicts (two different content types associated to the same file) 
     prevented? 
@@ -257,36 +261,40 @@
       This ensures that actions applicable to general XML documents will be applicable 
       to a plugin manifest.</p>
   </li>
-  <li>What are content type aliases? 
-    <p>When a content type is marked as an alias for another content type (due 
-      to a file spec conflict), all of its properties are ignored, and any associations 
-      with it will actually be made on the target type.</p></li>
-  <li>What are aliases for? 
+  <li>What are aliases for? <font size="-1"><strong><img src="../images/changed.gif" width="12" height="12"></strong></font> 
+    (see bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=83004">83004</a>) 
     <p>It is a mechanism to prevent conflicts. When multiple plugins contribute 
       content types associated with the same file specs, we have a conflict. Conflicts 
-      are bad because introduce ambiguity (which one is the right content type?). 
-      Most of times when such conflicts arise, it is a case of independently developed 
+      are bad because introduce ambiguity (what is the right content type?). Most 
+      of times when such conflicts arise, it is a case of independently developed 
       plugins trying to contribute the same content type (semantically speaking). 
-      Aliasing between conflicting content types will be automatically created 
-      when necessary.</p>
+      Imagine a plug-in com.examples.foo that wants to be associated to the Java 
+      Source content typ (org.eclipse.jdt.core.javaSource)e, provided by org.eclipse.jdt.core, 
+      but that does not require org.eclipse.jdt.core to be present to work. Such 
+      plug-in can contribute its own Java Source content type (com.examples.foo.java), 
+      and mark it as an alias for the content type provided by JDT/Core. If JDT/Core 
+      is present, the com.examples.foo.java will be omitted from the content type 
+      registry, and all references to it will be automatically interpreted as 
+      references to org.eclipse.jdt.core.javaSource instead.<font size="-1"></font></p>
   </li>
   <li>How do I prevent my specialized content-type to be disabled even if its 
-    parent is not available? 
+    parent is not available? <font size="-1"><strong><img src="../images/changed.gif" width="12" height="12"></strong></font> 
+    (see bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=83004">83004</a>) 
     <p> Sometimes a plugin A does not depend on plugin B, but declares a content 
       type which is intended to be a specialization of another content type declared 
       by B. To prevent the content type declared by A to be disabled: </p>
     <ol>
-      <li>declare a low priority content type associated with the same file specs 
-        the intended parent is usually associated with (a placeholder);</li>
+      <li>declare an alias content type having the intended parent as its target 
+        (a placeholder);</li>
       <li>make your specialized content type have this placeholder as its base 
         type;</li>
     </ol>
     <p>If the originally intended base type is available, your base type will 
       be marked as just an alias, and your specialized content type will be properly 
-      attached to the official content type. Otherwise, the placeholder will be 
-      elected, and although things might not be as great as intended (actions 
+      attached to the intended content type. Otherwise, the placeholder will be 
+      enabled, and although things might not be as great as intended (actions 
       associated to the original content type will not be available), your content 
-      type will still be enabled.</p>
+      type will still be enabled.<font size="-1"></font></p>
   </li>
   <li>When should a file-association be contributed instead of declaring a new 
     (derived) content type? 
@@ -304,7 +312,7 @@
       out to be a very frequent idiom, we might consider proving a convenience 
       API to do that.</p>
   </li>
-  <li>Do content types have to contribute content describers?
+  <li>Do content types have to contribute content describers? 
     <p> No, although if the file has a identifiable signature/format, it is recommended, 
       because improves the overall quality of content-based content type lookups.</p>
   </li>
@@ -312,7 +320,7 @@
 <p> <em>Note: comments are encouraged. Any questions/concerns not addressed here 
   should be discussed in the platform-core-dev list, or bug <a
  href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=37668">37668</a>. </em></p>
-<h2>Addendum: issues to be addressed in the 3.1 cycle</h2>
+<h2>Addendum: issues to be addressed in the 3.1 cycle<font size="-1"><strong><img src="../images/changed.gif" width="12" height="12"></strong></font></h2>
 <p>The solution described above was implemented and relatively succesful. Some 
   components took advantage of the new content type infrastructure, but still 
   in many cases file-association is being done in an ad-hoc manner. Also, no UI 
@@ -333,8 +341,7 @@
 </ul>
 <h3>Support more use cases</h3>
 <p>Ensure the content type support works for the SDK plug-ins and for products 
-  built on top of Eclipse.</p>
-<p>TBD</p>  
+  built on top of Eclipse (see bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=78654">78654</a>).</p>
 <p><strong>Platform/UI - file/editor association</strong></p>
 <p>Content type-editor association is definitely the most important use case for 
   the content type support. The basic idea is that for a given file or stream 
@@ -353,13 +360,13 @@
 <p>Content types add a level of indirection between files and editors. At a first 
   glance, there is no reason why changing the default editor would affect what 
   content type is assigned to a file, so users should be able to pick up any editors 
-  without affecting what content type detection.</p>
+  without affecting content type detection.</p>
 <p><strong>Platform/Team - binary vs ascii files</strong></p>
 <p>The Team plug-in keeps a catalog of file extensions and their expected content 
-  type (either binary or ASCII). If content types were broadly adopted throughout the rest
-  of Eclipse (so that most files dealt with by users have a content type), couldn't the Team
-  plug-in use content type based encoding determination to figure out a good default for this 
-  setting?</p>
+  type (either binary or ASCII). If content types were broadly adopted throughout 
+  the rest of Eclipse (so that most files dealt with by users have a content type), 
+  couldn't the Team plug-in use content type based encoding determination to figure 
+  out a good default for this setting? (see bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=85490">85490</a>)</p>
 <h3>Give users more power</h3>
 <p>Ensure users have means to customize how the content type detection works for 
   them. Provide UI for content types. May provide some way of showing related 
@@ -373,29 +380,25 @@
 <p>Ensure content type detection works (or can be made to work) appropriately 
   when incompatible products are deployed together.</p>
 <ol>
-  <li><strong>nature-specific content types</strong> - to reduce chances for collisions, 
-    there should be a way of constraining which content types are available on 
-    a project basis. One possible solution would be to have content type-nature 
-    associations. Natures could declare somre preferred content types, and those 
-    preferred content types would always win.</li>
+  <li><strong>project-specific content type resolution</strong> - to reduce chances 
+    for collisions, there should be a way of constraining which content types 
+    are available on a project basis. One possible solution would be to have content 
+    type-nature associations. Natures could declare some preferred content types, 
+    and those preferred content types would always win (see bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=69640">69640</a>)</li>
   <li><strong>user-defined content type determination - </strong>two plug-ins 
     provide completely unrelated content types A and B for files with extension 
     &quot;.foo&quot;. The current implementation will choose one of them (by priority, 
-    depth, or arbitrarily if they have the same priority and depth) and mark the 
-    other one as an alias, so if they have sub-content types, the two trees will 
-    be combined under the chosen one. If A is automatically chosen, the user might 
-    want to choose B instead as the default content type. </li>
-  <li><strong>fine-grained user-defined content type determination</strong> - 
-    if for some reason we have problems detecting the right content type for a 
-    file, the user should be able to fix that by saying: I want <em><strong>this</strong></em> 
-    content type for this file. This is similar to allowing users to specify encoding 
-    on a file basis. A possible implementation could be to use persistent properties 
-    for that. Another would be to use project preferences (because they are shared).</li>
+    depth, or arbitrarily if they have the same priority and depth). If A is automatically 
+    chosen, the user might want to choose B instead as the default content type. 
+    Instead of doing that on a file basis, it seems better to do it on a coarser 
+    granularity, such as at the project level or at the workspace level (see bug 
+    <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=85765">85765</a>). 
+  </li>
   <li><strong>product defined policies for overriding content types</strong> - 
     a product may want to override some of the existing content type definitions. 
     Products should be able to do that in a way that would circumvent the regular 
     conflict resolution.</li>
 </ol>
-<p>See also corresponding PR <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=78654">78654</a>
-  - content type should be used universally</p>.
+<p>See also corresponding PR <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=78654">78654</a> 
+  - content type should be used universally</p>
 </body></html>
