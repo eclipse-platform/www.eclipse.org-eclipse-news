@@ -314,9 +314,36 @@
       <ul>
         <li>investigate whether we can improve NLS tooling to support the string externalization approach used in TextOperationAction</li>
       </ul>
+      <h5>Proposed items</h5>
+      <ul>
+        <li> implement a SaveAs dialog that allows to save inside and outside 
+          of the workspace 
+          <ul>
+            <li>involved parties: Platform UI, SWT, send patch to Platform UI</li>
+          </ul>
+        </li>
+        <li>lazy loading of document setup participants</li>
+        <li>allow for extending file buffers with custom implementations</li>
+        <li>allow templates in the default text editor</li>
+        <li>generalize and push down InformationDispatchAction</li>
+        <li>generalize push down quick view support 
+          <ul>
+            <li>Outline presentation control, AbstractInformationControl and related</li>
+          </ul>
+        </li>
+        <li>[investigate] Consolidate SourceViewerInformationControl and all of 
+          its copies</li>
+        <li>[investigate] allow for an outline mode in the default text editor 
+          <ul>
+            <li>folding just based on indentation</li>
+            <li>opens the way for using QuickOutline in the default text editor</li>
+          </ul>
+          <br>
+        </li>
+      </ul>
 
 
-      <h4>Testing</h4>
+	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Testing</h4>
       <ul>
         <li> The <a href="testing/testpass_M4.html">test plan</a> for the M4 test 
           pass.</li>
