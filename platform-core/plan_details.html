@@ -13,27 +13,141 @@
     <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" BGCOLOR="#0080C0"><b><font face="Arial,Helvetica"><font color="#FFFFFF">Platform/Core 
       Component Planning Details</font></font></b></td>
   </tr>
+  <tr>
+    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%">&nbsp;</td>
+    <td WIDTH="98%">
+      <p><b>What is this page?</b></p>
+      <p>Listed below are some of the Platform/Core work items for the 3.0 release 
+        cycle. This page is to be used to collect information about the issues, 
+        list potential problems, timelines, etc.</p>
+      <p>&nbsp;</p>
+    </td>
+  </tr>
   <tr> 
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
-    <td WIDTH="98%">
+    <td WIDTH="98%"> 
       <p><b>Concurrency/Background Operations</b></p>
-      </td>
+      <p><i>Workspace Lock Granularity</i> - Currently the Eclipse resource model 
+        locks the entire workspace for the duration of any workspace modifying 
+        operations. This approach does not lend itself to concurrent operations. 
+        We would like to have a different approach which allows locking to occur 
+        on a per resource or per resource sub-tree level, or something which will 
+        allow multiple operations to be performed on different parts of the resource 
+        tree at the same time.</p>
+      <p><i>Generalized Locking Mechanism</i> - Several Eclipse components and 
+        third-party plug-ins have locking mechanisms for serializing concurrent 
+        operations that could otherwise corrupt their internal state. Because 
+        of the lack of coordination across plug-ins, Eclipse is prone to deadlocks. 
+        Eclipse should provide a unified locking story, perhaps based on a mechanism 
+        for centrally registering and managing locks, so that plug-ins can coordinate 
+        their activities without risking deadlock.</p>
+      <p>&nbsp;</p>
+    </td>
   </tr>
   <tr> 
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
-    <td WIDTH="98%">
+    <td WIDTH="98%"> 
       <p><b>Dynamic Plug-ins</b></p>
-      </td>
+      <p>This work is being done in conjunction with the <a href="http://www.eclipse.org/equinox">Equinox</a> 
+        project.</p>
+      <p><i>Plug-in Deactivation </i> - (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=36956">36956</a>) 
+        In Eclipse plug-ins are activated once referenced and they remain in that 
+        state for the duration of the user's Eclipse session. In an effort to 
+        reduce memory footprint (amung other reasons) we are investigating allowing 
+        plug-ins to become deactivated when they are not being used, and thus 
+        that amount of memory could be reclaimed for use by the system.</p>
+      <p><i>Incremental Registry Resolution</i> - When a user installs new plug-ins 
+        in Eclipse, they are currently forced to restart their system in order 
+        for their changes to take effect. This is because currently the plug-in 
+        registry is parsed when the system starts up and from that point forward 
+        it remains static. We would like to change the plug-in registry resolution 
+        to be dynamic, that is to allow the user to add new plug-ins to the system 
+        and remove plug-ins from the system at any given point in time and have 
+        the system react and behave appropriately.</p>
+      <p>&nbsp;</p>
+    </td>
   </tr>
   <tr> 
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
-    <td WIDTH="98%">
+    <td WIDTH="98%"> 
+      <p><b>Team/Resource Integration </b>(bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=37722">37722</a>, 
+        described in detail <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-vcm-home/docs/online/team3.0/resources.html">here</a>)</p>
+      <p><i>Questions and Issues:</i></p>
+      <ul>
+        <li>How to manage the file system provider mapping to the resources?
+          <ul>
+            <li>Needs to be performant.</li>
+          </ul>
+        </li>
+        <li>How is this information persisted?</li>
+        <li>Should this information be shared in the repository?</li>
+        <li>What differentiates a project from a folder?</li>
+        <li>How do we store folder-level metadata? (do we need to do this?)</li>
+        <li>How do we handle linked resources?</li>
+        <li>How do we provide access to the Core library calls?</li>
+        <li>Do we need startup/shutdown lifecycle events to allow for cleanup?</li>
+        <li>How do we deal with missing providers?</li>
+      </ul>
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+  <tr> 
+    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
+    <td WIDTH="98%"> 
       <p><b>Improve User Experience</b></p>
-      </td>
+      <p><i>Default Location of Workspace</i> - (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=33976">33976</a>, 
+        <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=34532">34532</a>) 
+        Currently if the user doesn't specify the location of their workspace, 
+        then the default is to place is in a &quot;workspace&quot; directory under 
+        the Eclipse install directory. (equivalent of using &quot;user.dir&quot; 
+        java System property) This is very problematic, especially in the cases 
+        where you have a multi-user system and a single shared installation (like 
+        Linux) where users don't have write access to the installation directory. 
+        A better solution would be to use the user's home directory (&quot;user.home&quot; 
+        java System property) as a default location. This would result in (for 
+        instance) <i>/usr/home/fred</i> (on Linux) or <i>C:/Documents and Settings/Fred/My 
+        Documents</i> (on Windows).</p>
+      <p><i>Separation of User Settings and Plug-in Metadata</i> - (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=36965">36965</a>) 
+        It is common for users to want to share some settings (like background 
+        colours and fonts) with all workspaces that they use with a particular 
+        Eclipse install, while other settings (like compiler settings) should 
+        be on a per workspace basis. Currently Eclipse all of these settings on 
+        a per workspace basis and we would like to remove this bundling.</p>
+      <p><i>Multiple Workspaces</i> - (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=37681">37681</a>, 
+        <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=5509">5509</a>) 
+        Users want to be able to better manage multiple workspace within the Eclipse 
+        environment. This could either mean coming up with a way to pretty a single 
+        Eclipse image running with 2 workspaces loaded, switching between multiple 
+        workspaces within the same session (via File -&gt; Open/Close for instance), 
+        etc.</p>
+      <p><i>Translation of Executable Messages</i> - (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=35135">35135</a>) 
+        The messages which are displayed by the Eclipse executable are currently 
+        not translated. We need to define an external message story for this code, 
+        as well as the code which is in the startup.jar.</p>
+      <p>&nbsp;</p>
+    </td>
   </tr>
   <tr> 
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
-    <td><b>Remove Dependancy on Xerces</b></td>
+    <td> 
+      <p><b>Remove Dependancy on Xerces </b>(bugs <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=37696">37696</a>, 
+        <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=36112">36112</a>)</p>
+      <p><i>Checklist:</i></p>
+      <ul>
+        <li>Create new XML plug-in containing the XML Pull APIs.</li>
+        <li>Remove plug-in dependancies from org.eclipse.core.runtime and org.eclipse.core.resources.</li>
+        <li>Add new dependancy to new XML plug-in.</li>
+        <li>Replace org.eclipse.core.internal.plugins.PluginParser with a new 
+          parser using the new APIs.</li>
+        <li>Replace org.eclipse.core.internal.resources.WorkspaceDescriptionReader 
+          with new reader based on new APIs.</li>
+        <li>Check test suites.</li>
+        <li>Verify new work by completely removing the Xerces plug-in from the 
+          environment.</li>
+        <li>Educate Platform/UI and other teams in SDK who rely on Xerces with 
+          knowledge of new APIs.</li>
+      </ul>
+    </td>
   </tr>
 </table>
 
