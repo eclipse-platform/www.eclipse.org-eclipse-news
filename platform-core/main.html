@@ -97,7 +97,10 @@
               and vice versa
           </ul>		  
         <li>Circular Build Dependancies - A dynamic team to address this problem has been created. The work required for the
-	  Platform/Core team for the M3 milestone is still TBD. 
+	  Platform/Core team for the M3 milestone consists of new API for computing the default project build order and a new
+	  algorithm for calculating the build order when there are cycles involved. (related bugs: 
+	  <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=25952">25952</a>,
+	  <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=10262">10262</a>) 
 	  <li>Features - A dynamic team consisting of Dean, Jeff, Dejan, Christophe, and DJ has been created to address all the problems
 	  that the Release Engineering team has with features. Once an appropriate solution has been identified, there will be 
 	  significant work in the PDE-Build component (which is owned by Platform/Core) for both the M3 and M4 milestones.
@@ -105,6 +108,16 @@
 	  </ul>
 	  
 	  <p><em>Milestone 4 (2.1 M4)</em> - December 13, 2002</p>
+	  <ul>
+	  <li>Project Structures - Finish up work related to flexible project layout. List includes multi-resource delta notification
+	  for over-lapping linked resources. (related bugs: <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=25993">25993</a>)
+	  <li>Classloader Performance - In M2 we put in a classloader performance enhancement in which the plug-in classloader
+	  used information in a file to determine whether or not it should look in itself for a particular class. We want to allow
+	  users to put this information in the mark-up in their plugin.xml files. (related bugs: <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=24667">24667</a>
+	  , <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=26011">26011</a>)
+	  <li>Continued progress on PDE-Build in the space related to the Features dynamic team.
+	  <li>General Bug Fixing
+	  </ul>
 	  <p>
 
     </td>
