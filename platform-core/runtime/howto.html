@@ -24,8 +24,7 @@
 <blockquote> 
   <p><b>Summary</b> <br>
     This document details how to run and control the Eclipse 3.0 runtime. <br>
-    Last Modified: 0100 December 8, 2003
-  </p>
+    Last Modified: 1700 February 23, 2004</p>
 </blockquote>
 
 <table border=0 cellspacing=0 cellpadding=2 width="100%" >
@@ -72,13 +71,10 @@
     shell if any). Handy when combined with -debug </dd>
   <dt>-data &lt;location&gt; {osgi.instance.area} (EclipseStarter and InternalPlatform)<br>
   </dt>
-  <dd>sets the instance data location for this session. Plug-ins use this location 
-    to store their data. For example, the Resources plug-in uses this as the default 
-    location for projects (aka the workspace). If the location is &quot;&lt;NONE&gt;&quot; 
-    then no instance data location is created/used. If the location is &quot;&lt;NO_DEFAULT&gt;&quot; 
-    then the platform runs only with an explicitly defined instance data location. 
-    That is, a default data location is not computed or used.</dd>
-  <dt></dt>
+  <dd>sets the instance data location for this session. Plug-ins use this location
+     to store their data. For example, the Resources plug-in uses this as the
+    default 
+    location for projects (aka the workspace). See <a href="#locations">Locations</a> for more details.</dd>
   <dt>-debug [options file] {osgi.debug} (EclipseStarter and InternalPlatform, 
     although never gets there)</dt>
   <dd> turns on debug mode for the platform and optionally specifies a location 
@@ -292,60 +288,221 @@
       <a name="locations"></a>Locations</font></b></td>
   </tr>
 </table>
-<p>The Eclipse runtime defines a number of <i>locations</i> which give plug-in 
-  developers context for reading/storing data.</p>
+<p>The Eclipse runtime defines a number of <i>locations</i> which give plug-in
+   developers context for reading/storing data and Eclipse users a control over
+  the scope of data sharing and visibility. Eclipse defines the following notions
+  of location:</p>
 <dl> 
   <dl> 
-    <dt>User</dt>
-    <dd>A user-specific location derived from the Java user.home system property.</dd>
-    <dt>Install</dt>
-    <dd>A location derived from the install location of the Eclipse platform. 
-      In practice this location is the &quot;eclipse&quot; directory which is 
-      the parent of the startup.jar or eclipse.exe being run. You should assume 
-      that this location is read-only as an install may be shared by many users 
-      or put in a location to which normal users do not have write access.</dd>
-    <dt>Configuration</dt>
-    <dd>A location related to the configuration being run. A configuration may 
-      identify a subset of an install as being the interesting plug-ins/fragments 
-      to run. An install may come with a default configuration area but typical 
-      startup scenarios involve the runtime attempting to find a writable configuration 
+    <dt>User (-user ???) {osgi.user.area} [&lt;none&gt;, &lt;noDefault&gt;, &lt;user.home&gt;,
+      &lt;user.dir&gt;, filepath, url]</dt>
+    <dd>User locations are specific to, go figure, users. Typically the user
+      location is based on the value of the Java <code>user.home</code> system
+      property but this can be overridden. Information such as user scoped preferences
+      and login information may be found in the user location.</dd>
+    <dt>Install (-install) {osgi.install.area} [&lt;user.home&gt;, &lt;user.dir&gt;,
+    filepath, url]</dt>
+    <dd>An install location is where Eclipse itself is installed. In practice
+      this location is the  directory
+      (typically &quot;eclipse&quot;) which is the parent of the startup.jar
+      or eclipse.exe being run. This location should be considered
+      read-only to normal users as an install may be shared by many users. It
+      is possible to set the install location and decouple startup.jar from the
+      rest of Eclipse.</dd>
+    <dt>Configuration (-configuration) {osgi.configuration.area} [&lt;none&gt;, &lt;noDefault&gt;, &lt;user.home&gt;, &lt;user.dir&gt;,
+    filepath, url]</dt>
+    <dd>Configuration locations contain files which identify and manage the (sub)set
+      of an install to run. As such, there may be many configurations
+      per install.
+      Installs may come with a default
+      configuration area but typical startup scenarios
+      involve
+      the
+      runtime
+      attempting
+      to find
+      a
+      more writable configuration
+      
       location. </dd>
-    <dt>Instance</dt>
-    <dd>The default location for user-defined data artifacts. For example, the 
-      Resources plug-in uses this location as the workspace location and thus 
-      the default location for projects. Other plugins are free to write whatever 
-      files they like in this location.</dd>
+    <dt>Instance (-data) {osgi.instance.area} [&lt;none&gt;, &lt;noDefault&gt;, &lt;user.home&gt;, &lt;user.dir&gt;,
+    filepath, url]</dt>
+    <dd>Instance locations contain user-defined data artifacts.
+      For example, the Resources plug-in uses the instance area as the workspace
+      location
+      and
+      thus
+      
+      the default home for projects. Other plugins are free to write whatever
+       files they like in this location.</dd>
   </dl>
 </dl>
-<p>When running Eclipse there will be a &quot;user&quot; as defined by the operating 
-  system and reflected in the user.home system property. That user will run a 
-  particular Eclipse executable (or startup.jar) from an Eclipse install on a 
-  particular configuration which indicates a set of plug-ins/fragments. They are 
-  also </p>
-<p>the notion of a <i>configuration area</i> (see <code>Platform.getConfigurationLocation()</code>). 
-  For the runtime, the configuration area contains a file called config.ini. This 
-  file, if present, contains a set of properties which control the construction 
-  and operation of the framework and runtime. For example, it is in this file 
+<p>While users can set any of these locations, Eclipse will compute reasonable
+  defaults if values are not given. The most common usecase for setting location
+  is the instance area or, in the IDE context, the workspace. To run the default
+  Eclipse configuration  on a specific data set you can specify:</p>
+<pre>    eclipse -data c:\mydata</pre>
+<h4>More detail</h4>
+<p>Locations are URLs. For simplicity, file paths
+      are also
+        accepted
+        and automatically
+        converted
+        to
+        file:
+        URLs. For better control and convenience, there
+        are
+        also
+        a number
+        of predefined
+        symbolic locations which can be used. Note that not all combinations
+  of location type and symbolic value are valid. A table below details which
+  combinations are possible. Since the default case is for all locations
+  to be set, valid and writable, some plug-ins
+  may
+  fail
+  in
+  other
+  setups even if they are listed as possible. For example, it is unreasonable
+  to expect a plugin focused on user data (e.g., the Eclipse Resources plugin)
+  to do much if the instance area is not defined. It is up to plug-in developers
+    to choose the setups they support and
+    design
+    their
+    function accordingly.</p>
+<dl>
+  <dl>
+    <dt>&lt;none&gt;</dt>
+    <dd>Indicates that the corresponding location should never be set either
+      explicitly or to its default value. For example, an RCP style application
+      which has no user data may use osgi.instance.area=&lt;none&gt; to prevent extraneous
+      files being written to disk.</dd>
+    <dt>&lt;noDefault&gt;</dt>
+    <dd>Forces a location to be undefined or explicitly defined (i.e., Eclipse
+      will not automatically compute a default value). This is useful where you
+      want to allow for data in the corresponding location but the Eclipse default
+      value is not appropriate.</dd>
+    <dt>&lt;user.home&gt;</dt>
+    <dd>Directs Eclipse to compute a location value relative to the user's home
+      directory. The resultant location is qualified by the identifier
+      and version number for the product being run and the type of location.
+      For example, setting osgi.configuration.area=&lt;user.home&gt; results in a value
+      of file:/users/bob/.eclipse/org.eclipse.platform_3.0.0/.config.</dd>
+    <dt>&lt;user.dir&gt;</dt>
+    <dd>Directs Eclipse to compute a location value relative to the current working
+      directory. The resultant location is qualified by the the type of location.
+      For example, setting osgi.configuration.area=&lt;user.dir&gt; results in
+      a value of file:c:/eclipse/.config.</dd>
+  </dl>
+</dl>
+<table width="100%" border="0" bgcolor="#FFFFFF">
+  <tr bgcolor="#CCCCCC">
+    <td width="10%">location/value</td>
+    <td width="17%"><div align="center">file/URL</div></td>
+    <td width="17%"><div align="center">&lt;none&gt;</div></td>
+    <td width="17%"><div align="center">&lt;noDefault&gt;</div></td>
+    <td width="17%"><div align="center">&lt;user.home&gt;</div></td>
+    <td width="17%"><div align="center">&lt;user.dir&gt;</div></td>
+  </tr>
+  <tr>
+    <td bgcolor="#CCCCCC"><div align="center">instance</div></td>
+    <td><div align="center">yes</div></td>
+    <td><div align="center">yes</div></td>
+    <td><div align="center">yes</div></td>
+    <td><div align="center">yes</div></td>
+    <td><div align="center">yes (default)</div></td>
+  </tr>
+  <tr>
+    <td bgcolor="#CCCCCC"><div align="center">configuration</div></td>
+    <td><div align="center">yes</div></td>
+    <td><div align="center">yes*</div></td>
+    <td><div align="center">yes*</div></td>
+    <td><div align="center">yes</div></td>
+    <td><div align="center">yes</div></td>
+  </tr>
+  <tr>
+    <td bgcolor="#CCCCCC"><div align="center">install</div></td>
+    <td><div align="center">yes</div></td>
+    <td><div align="center">no</div></td>
+    <td><div align="center">no</div></td>
+    <td><div align="center">yes</div></td>
+    <td><div align="center">yes</div></td>
+  </tr>
+  <tr>
+    <td bgcolor="#CCCCCC"><div align="center">user</div></td>
+    <td><div align="center">yes</div></td>
+    <td><div align="center">yes</div></td>
+    <td><div align="center">yes</div></td>
+    <td><div align="center">yes</div></td>
+    <td><div align="center">yes</div></td>
+  </tr>
+</table>
+<p>* indicates that this setup is technically possible but pragmatically quite
+  difficult to manage. In particular, without a configuration location the Eclipse
+  runtime may only get as far as starting the OSGi framework.</p>
+<p>&nbsp;</p>
+	<table border=0 cellspacing=0 cellpadding=2 width="100%" >
+  <tr>
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF"> Configurations</font></b></td>
+  </tr>
+</table>
+<p>Configurations define a (sub)set of plugins found in an install. Users can
+  then run a configuration on a data set (e.g., workspace). This is easy to see,
+  for example, in a corporate setting where all of the Eclipse-based products
+  might be installed and managed in one large install base. This install would
+  contain potentially thousands of plugins. The Eclipse runtime scales to handle
+  this but the resultant environment is likely not interesting for users. Such
+  shared installations reduce the effort required to manage
+  products as well as providing a centralized point for defining consistent
+  sets of function.</p>
+<p>For example,  users
+    from, say, accounting should run the &quot;accounting configuration&quot; which identifies
+  only those plugins useful to accountants. Similarly, the developers have their
+  configurations as do the sales team. Further, products typically ship with
+  predefined configuration(s) which define/suit their envisioned usecases. </p>
+<p>When the Eclipse runtime is run, agents (plugins, remote entities or humans)
+  can control the set of plugins that the runtime manages. Plugins managed by
+  the runtime are candidates for execution. A candidate must be resolved before
+  any of its code can be run or its presence (e.g., extensions) is made known.
+  The runtime keeps track of the set of managed plugins and associated information
+  in a configuration location. If there is no such location or the location is
+  readonly, the runtime will still run but may not be able to offer all function.
+  For example, it will not be able to remember between sessions which plugins
+  it manages.</p>
+<p>In a shared install the plugins themselves are shared as are the predefined
+  configurations but each user may have their own area in which configuration
+  values can be overridden and configuration-specific data can be stored. Eclipse
+  uses the notion of <em>cascading configurations</em> to layer configurations.</p>
+<p>freezing</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>To allow for shared installations and </p>
+<p>&nbsp;</p>
+<p>In </p>
+<p>the notion of a <i>configuration area</i> (see <code>Platform.getConfigurationLocation()</code>).
+  For the runtime, the configuration area contains a file called config.ini.
+  This file, if present, contains a set of properties which control the construction
+  and operation of the framework and runtime. For example, it is in this file
   that an initial set of bundles to load and start is defined.</p>
-<p>The runtime does not define how this file is managed, nor does it contain any 
-  mechanism for updating the file (i.e., the runtime never writes the file). Rather, 
-  this responsibility is left to the entity managing the configuration. In some 
-  scenarios the configuration is defined and locked during product build, in other 
-  cases a system administrator crafts the configuration and pushes it to machines 
-  (or it is shared), in still other situations the end user manages the config.ini 
-  (in)directly using a configuration management tool such as the Eclipse Update 
-  Manager.</p>
-<p>Any of these entities are free to put additional files and information in the 
-  configuration area. They should be careful however to consider cases where the 
-  configuration area is read-only. While it is not a requirement that plug-ins 
-  using the configuration area operate completely or partially when the area is 
-  read-only, your plug-in may not be usable in certain situations if it does not. 
-  For example, a typical tooling scenario includes a writable configuration area. 
-  If your plug-in is targetted at tooling environments, you are probably safe 
-  making that assumption. Note however that if somoene tries to use your plug-in 
-  in a constrained RCP scenario where there is no writable storage, they will 
-  likely be disappointed.</p>
-<p>Configurations</p>
+<p>The runtime does not define how this file is managed, nor does it contain
+  any mechanism for updating the file (i.e., the runtime never writes the file).
+  Rather, this responsibility is left to the entity managing the configuration.
+  In some scenarios the configuration is defined and locked during product build,
+  in other cases a system administrator crafts the configuration and pushes it
+  to machines (or it is shared), in still other situations the end user manages
+  the config.ini (in)directly using a configuration management tool such as the
+  Eclipse Update Manager.</p>
+<p>Any of these entities are free to put additional files and information in
+  the configuration area. They should be careful however to consider cases where
+  the configuration area is read-only. While it is not a requirement that plug-ins
+  using the configuration area operate completely or partially when the area
+  is read-only, your plug-in may not be usable in certain situations if it does
+  not. For example, a typical tooling scenario includes a writable configuration
+  area. If your plug-in is targetted at tooling environments, you are probably
+  safe making that assumption. Note however that if somoene tries to use your
+  plug-in in a constrained RCP scenario where there is no writable storage, they
+  will likely be disappointed.</p>
+<h4>cascading</h4>
 <p>configurators</p>
 <table border=0 cellspacing=0 cellpadding=2 width="100%" >
   <tr> 
