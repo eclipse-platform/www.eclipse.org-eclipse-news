@@ -7,35 +7,91 @@
 
 <body bgcolor="#FFFFFF" text="#000000">
 <table border=0 cellspacing=5 cellpadding=2 width="100%" >
-  <tr>
+  <tr> 
     <td align=left width="72%"> <font class=indextop> search</font> <br>
       <font class=indexsub> integrated search facility</font></td>
     <td width="28%"><img src="http://dev.eclipse.org/images/Idea.jpg" height=86 width=120></td>
   </tr>
 </table>
 <table border=0 cellspacing=5 cellpadding=2 width="100%" >
-  <tr>
-    <td align=LEFT valign=TOP bgcolor="#0080C0"><b><font color="#FFFFFF" face="Arial,Helvetica">Development
+  <tr> 
+    <td align=LEFT valign=TOP bgcolor="#0080C0"><b><font color="#FFFFFF" face="Arial,Helvetica">Development 
       Resources </font></b></td>
   </tr>
-  <tr>
-    <td>
-      <p>If you are already a Platform Search developer, check out the <a href="dev.html">Development
+  <tr> 
+    <td> 
+      <p>If you are already a Platform Search developer, check out the <a href="dev.html">Development 
         Resources</a>.</p>
       </td>
   </tr>
 </table>
 <table border=0 cellspacing=5 cellpadding=2 width="100%" >
-  <tr>
-    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF" face="Arial,Helvetica">Get
+  <tr> 
+    <td align=LEFT valign=TOP bgcolor="#0080C0"><b><font color="#FFFFFF" face="Arial,Helvetica">Search</font></b></td>
+  </tr>
+  <tr> 
+    <td> 
+      <p>The search facility defines the infrastructure for contributing search
+      functionality to the workbench. It is extensible and enables the
+      contribution of content type specific searching support. For example, the
+      JDT component contributes index based Java searching. The search component
+      itself provides textual searching. It makes the following contributions to
+      the workbench:</p>
+      <ul>
+        <li>
+          <p>A multi page dialog for defining the search arguments. When
+          contributing a new search kind, clients contribute a custom page to
+          this dialog.</p>
+        </li>
+        <li>
+          <p>A search results view that shows the search matches. When
+          contributing a new search kind, clients define how the matches are
+          presented, sorted, and how to navigate from a match to the
+          corresponding resource.</p>
+        </li>
+      </ul>
+      </td>
+  </tr>
+</table>
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font face="Arial,Helvetica" color="#FFFFFF">What's 
+      Happening? </font></b></td>
+  </tr>
+  <tr> 
+    <td> 
+      <p>Over the next 6 months the major focus points are:</p>
+      <ul>
+        <li>Add support for working set scoped searching</li>
+        <li>Improve the sorting support for search results</li>
+        <li>UI improvements</li>
+        </ul>
+      <p>In the more immediate term, efforts for the next milestone (end of November) 
+        are focused on:</p>
+      <ul>
+        <li>Working set scoped searching.</li>
+        </ul>
+      <p>For more detailed information, check out the <a href="dev.html">Development 
+        Resources</a>.</p>
+</td>
+  </tr>
+</table>
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF" face="Arial,Helvetica">Get 
       Involved!</font></b></td>
   </tr>
-  <tr>
-    <td>
-      <p>If you are interested in participating in the development of the Search
-        component, check out the developer's mailing list: <a href="http://dev.eclipse.org/mailman/listinfo/platform-search-dev">platform-search-dev@eclipse.org</a>.
-        Chat with people there about your problems and interests, and find out
-        what you can do to help. </p>
+  <tr> 
+    <td> 
+      <p>If you are interested in participating in the development of the Search component, 
+        check out the developer's mailing list: <a href="http://dev.eclipse.org/mailman/listinfo/platform-search-dev">platform-search-dev@eclipse.org</a>. 
+        Chat with people there about your problems and interests, and find out 
+        what you can do to help.</p>
+      <p>In particular, if you are interested in improving regular expression
+      matching for text search or adding search support for custom content types
+      then don't hesitate to contact us.</p>
+      <p>For more detailed information, check out the <a href="dev.html">Development 
+        Resources</a>.</p>
       </td>
   </tr>
 </table>
