@@ -63,7 +63,10 @@ Project creation and import wizards that create projects against existing conten
 on disk should switch to the use the new <tt>IResource#BACKGROUND_REFRESH</tt>
 update flag when opening projects for the first time.  Wizards that create projects
 directly from other sources, such as zip files or repositories, do not need to specify 
-this flag.
+this flag. Note that the <tt>open</tt> method optimizes these cases, so the 
+background refresh flag will have no effect when creating a project with no existing
+local contents, or when opening a project that has been opened before.  It is generally
+safe to always specify the background refresh flag in project creation wizards.
 </p>
 </body>
 </html>
