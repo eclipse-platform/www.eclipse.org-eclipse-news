@@ -24,7 +24,7 @@ valid files from being added to the Eclipse workspace. This document
 describes the current set of restrictions in Eclipse 3.0, and proposes changes to
 lift these restrictions.
 <p>
-<font size="-1">Last modified: October 14, 2004</font> 
+<font size="-1">Last modified: October 18, 2004</font> 
 </blockquote>
 <p>
 <h3>Background</h3>
@@ -68,8 +68,8 @@ or trailing white space.
 Lifting the restriction on paths with leading or trailing whitespace and paths
 containing the '\' character is easily achieved by specifying a new constructor for 
 creation of paths.  Lifting the restriction on the ':' character is more
-difficult, since it is needed by the path constructor to delimit the optional device
-string. 
+difficult, since it is needed as the path delimiter on operating systems that 
+support a device.
 <p>
 The solution must accomodate the two interesting categories 
 of <tt>IPath</tt> users:
@@ -167,19 +167,6 @@ unamiguously parsing paths allows the majority of users to function without
 further impacting the corner cases.
 </p>
 
-<p>
-A possible solution is to make the path constructor platform dependent. Thus, the device
-separator would only be used on operating systems that specify a device
-in file names (i.e., Windows).  The major drawback of this approach is that it breaks existing
-clients of <tt>IPath</tt> that want to use paths in a platform-independent way.
-This includes not only plug-ins that are using the device portion of paths for other
-uses, but also plug-ins that want to treat paths in a platform-neutral way. For example,
-a plug-in running on Linux might want to read and manipulate paths that happen 
-to represent Windows paths with meaningful devices. Using the host operating
-system to make assumptions about data that might not be intended for that platform
-will result in unwanted side-effects.
-
-
 <h3>API Details</h3>
 <p>
 The following existing methods on <tt>IPath</tt> and <tt>Path</tt> are affected:
@@ -191,8 +178,7 @@ The specification will change to a more ambiguous wording stating only that
 certain characters are reserved on some operating systems. In implementation, 
 it will just check for the device separator on operating systems that require it.
 The restriction on leading and trailing spaces in segment names will be 
-removed on all operating systems that allow such paths.</li><li>
-</li>
+removed on all operating systems that allow such paths.</li>
 </ul>
 New methods for Eclipse 3.1:
 <ul>
@@ -230,7 +216,7 @@ instances corresponding to file system paths that were previously treated as
 invalid. For example, the resources plugin would allow introduction of
 resources with the ':' and '\' characters.  Other plugins trying to create
 a path corresponding to those resources using the old constructors will
-fail.  Experiments with this solution showed that plug-in that failed to
+fail.  Experiments with this solution showed that plug-ins that failed to
 migrate to the new factory method were broken due to the unexpected
 introduction of previously invalid paths.  This presents a bleak picture
 for backwards-compatibility, regardless of the fact that no API contracts
@@ -257,7 +243,9 @@ the second option introduces the smallest breakage by far. For example,
 the first option requires almost all of the 600 references to the <code>Path</code>
 constructors found in the current edition of the Eclipse platform. The second
 option requires only a small set of localized changes in code that deals
-with serializing and deserializing paths in a platform-neutral manner.
+with serializing and deserializing paths in a platform-neutral manner. Based
+on testing the implementation of these two options, this proposal recommends
+option two.
 
 <h3>Other migration issues</h3>
 <p>
@@ -267,8 +255,9 @@ necessary for these methods, since all paths are now valid.
 <p>
 All clients who store absolute <tt>IPath</tt> objects as platform-neutral 
 strings in a serialized form (as produced by <tt>IPath.toString</tt> in Eclipse 3.0), 
-should switch to the new <tt>fromString</tt> method rather than the <tt>Path</tt> 
-constructor. Backward compatibility with files written by Eclipse 3.0 is automatic 
+should switch to the new <tt>fromPortableString/toPortableString</tt> methods 
+rather than the <tt>Path</tt> constructor and the <tt>toString</tt> method. 
+Backward compatibility with files written by Eclipse 3.0 is automatic 
 (no changes to file format or changing file format version numbers required).
 Examples of files that contain string representations of paths that will 
 need to migrate include the workspace <tt>.project</tt> and <tt>.classpath</tt> files.
@@ -295,7 +284,7 @@ do not contain colon or backslash characters within segment names (such paths
 are invalid on Windows anyway). Consider the following example:
 <pre>
    String input = "foo::bar";
-   IPath pathOne = Path.fromString(input);
+   IPath pathOne = Path.fromPortableString(input);
    IPath pathTwo = Path.fromOSString(pathOne.toOSString());
    pathOne.equals(pathTwo) -> false!
 </pre>
@@ -306,7 +295,7 @@ a path with device "foo:" and first segment "bar". Similar mangling occurs if yo
 create a path with a segment containing the backslash character:
 <pre>
    String input = "foo\\bar"; 
-   IPath pathOne = Path.fromString(input);
+   IPath pathOne = Path.fromPortableString(input);
    IPath pathTwo = Path.fromOSString(pathOne.toOSString());
    pathOne.equals(pathTwo) -> false!
 </pre>
