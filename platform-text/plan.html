@@ -1,0 +1,320 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.76 [en] (Windows NT 5.0; U) [Netscape]">
+   <title>JDT UI Component</title>
+<link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
+</head>
+<body text="#000000" bgcolor="#FFFFFF">
+&nbsp;
+<table BORDER=0 CELLSPACING=5 CELLPADDING=2 WIDTH="100%" >
+<tr>
+<td ALIGN=LEFT WIDTH="72%">Platform Text R2.1</td>
+
+<td WIDTH="28%"><img SRC="Idea.jpg" height=86 width=120></td>
+</tr>
+</table>
+
+<table BORDER=0 CELLSPACING=5 CELLPADDING=2 WIDTH="100%" >
+<tr>
+<td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#0080C0"><b><font face="Arial,Helvetica"><font color="#FFFFFF">Overall
+2.1 Plan</font></font></b></td>
+</tr>
+
+<tr>
+<td WIDTH="100%"><a NAME="Overall_Planning"></a>The 2.1 plan below is a
+proto plan and input from the community is very welcome.
+<h4>
+The overal themes for Platform Text are:</h4>
+
+<ul>
+<li>
+Increase editing comfort and usability&nbsp;</li>
+
+<li>
+Provide infrastructure for allowing custom editors to implement higher
+level comfort functions&nbsp;</li>
+
+<li>
+Increase degree of configurability&nbsp;</li>
+
+<li>
+Bug fixing&nbsp;</li>
+</ul>
+
+<h4>
+Planned items:</h4>
+
+<ul>
+<li>
+Architectural issues&nbsp;</li>
+
+<ul>
+<li>
+<img SRC="ok.gif" height=10 width=10> move text into a separate component&nbsp;</li>
+
+<li>
+<img SRC="ok.gif" height=10 width=10> allow the usage of the text model
+without introducing dependencies on UI elements&nbsp;</li>
+
+<li>
+generalize JDT editor concepts and integrate them into Platform Text&nbsp;</li>
+
+<ul>
+<li>
+JDT painter support (M4)</li>
+
+<li>
+JDT template engine with emphasis on separate linked position support (M4)</li>
+</ul>
+</ul>
+
+<li>
+<img SRC="progress.gif" height=5 width=16> Improve test infrastructure
+and increase test coverage&nbsp;</li>
+
+<li>
+Customization&nbsp;</li>
+
+<ul>
+<li>
+<img SRC="ok.gif" height=10 width=10> Eating content assist infrastructure&nbsp;</li>
+
+<li>
+<img SRC="progress.gif" height=5 width=16> Resizable content assist, info
+popups, and hovers (M3)</li>
+
+<li>
+- XML configurability (configuration dimensions as extension points, UI
+for selecting one if only one can be active at one point in time)&nbsp;</li>
+
+<li>
+Allow for an open number of content assists/information popups (different
+popups required such as tables and trees) (M3/4)</li>
+</ul>
+
+<li>
+Default text editor (M4)</li>
+
+<ul>
+<li>
+line numbers</li>
+
+<li>
+preference page&nbsp;</li>
+
+<li>
+line highlighting (depends on generalized painter support)</li>
+
+<li>
+error indication (depends on generalized painter support)</li>
+</ul>
+
+<li>
+Presentation&nbsp;</li>
+
+<ul>
+<li>
+support for highlighting a set of ranges (depends on generalized painter
+support) (M4)</li>
+
+<li>
+<img SRC="progress.gif" height=5 width=16> folded documents including ruler
+and API for defining folding regions (M3/4)</li>
+</ul>
+
+<li>
+Improved navigation and typing support&nbsp;</li>
+
+<ul>
+<li>
+<img SRC="progress.gif" height=5 width=16> edit position history / go to
+last edit position&nbsp;</li>
+
+<li>
+<img SRC="ok.gif" height=10 width=10> smart home/end&nbsp;</li>
+
+<li>
+- anonymous bookmarks (overlap with Platform UI)&nbsp;</li>
+
+<li>
+- editor as drop target&nbsp;</li>
+
+<li>
+allow custom editors to provide the logic for smart paste (M3)</li>
+
+<li>
+jump to last edit position (M4)</li>
+</ul>
+
+<li>
+(-) Editors and none resources&nbsp;</li>
+
+<ul>
+<li>
+open editor on a java.io.file rather than IFile&nbsp;</li>
+
+<li>
+support for more abstract editable source than IFile such as IEditableEditorInput</li>
+</ul>
+
+<li>
+validateEdit (M4)</li>
+</ul>
+
+<h4>
+Investigations</h4>
+
+<ul>
+<li>
+Generalization of JDT overview ruler&nbsp;</li>
+
+<li>
+Unification and simplification of painter and text presentation infrastructure&nbsp;</li>
+
+<li>
+Support for structure editing</li>
+</ul>
+
+<h4>
+Cross team issues with Platform Text involvement</h4>
+
+<ul>
+<li>
+<img SRC="progress.gif" height=5 width=16> Configurable key bindings (M3)</li>
+
+<li>
+<img SRC="ok.gif" height=10 width=10> Navigation history&nbsp;</li>
+
+<li>
+File encoding (M4)</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER>
+<table BORDER=0 CELLSPACING=5 CELLPADDING=0 >
+<tr>
+<td><img SRC="progress.gif" height=5 width=16> item is under development&nbsp;</td>
+
+<td><img SRC="ok.gif" height=10 width=10> item is finished&nbsp;</td>
+
+<td>&nbsp;- removed from plan</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#0080C0"><b><font face="Arial,Helvetica"><font color="#FFFFFF">2.1
+Development Effort - Milestone Plans</font></font></b></td>
+</tr>
+
+<tr>
+<td WIDTH="100%">
+<h4>
+<a NAME="Milestone_Planning"></a>Milestone M3</h4>
+
+<ul>
+<li>
+Resizable content assist, info popups, and hovers</li>
+
+<li>
+Allow custom editors to provide the logic for smart paste</li>
+
+<li>
+Jump to last edit position</li>
+
+<li>
+Configurable key bindings</li>
+
+<li>
+Continuous work items</li>
+
+<ul>
+<li>
+Allow for an open number of content assists/information popups (different
+popups required such as tables and trees)</li>
+
+<li>
+Folded documents including ruler and API for defining folding regions</li>
+</ul>
+</ul>
+
+<h4>
+Milestone M4</h4>
+
+<ul>
+<li>
+Allow for an open number of content assists/information popups (different
+popups required such as tables and trees)</li>
+
+<li>
+Folded documents including ruler and API for defining folding regions</li>
+
+<li>
+generalize JDT editor concepts and integrate them into Platform Text&nbsp;</li>
+
+<ul>
+<li>
+JDT painter support</li>
+
+<li>
+JDT template engine with emphasis on separate linked position support</li>
+</ul>
+
+<li>
+Default text editor</li>
+
+<ul>
+<li>
+line numbers</li>
+
+<li>
+preference page&nbsp;</li>
+
+<li>
+line highlighting (depends on generalized painter support)</li>
+
+<li>
+error indication (depends on generalized painter support)</li>
+</ul>
+
+<li>
+support for highlighting a set of ranges (depends on generalized painter
+support)</li>
+
+<li>
+validateEdit</li>
+
+<li>
+File encoding</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#0080C0"><b><font face="Arial,Helvetica"><font color="#FFFFFF">Bug
+Tracking</font></font></b></td>
+</tr>
+
+<tr>
+<td>
+<ul>
+<li>
+<a href="http://dev.eclipse.org/bugs/buglist.cgi?bug_status=NEW&bug_status=REOPENED&email1=platform-text-inbox@eclipse.org&emailtype1=exact&emailassigned_to1=1&email2=&emailtype2=substring&emailreporter2=1&bugidtype=include&bug_id=&changedin=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&product=Platform&component=Text&short_desc=&short_desc_type=allwordssubstr&long_desc=&long_desc_type=allwordssubstr&keywords=&keywords_type=anywords&field0-0-0=noop&type0-0-0=noop&value0-0-0=&namedcmd=All&newqueryname=Text%2BNew&tofooter=1&order=Reuse%2Bsame%2Bsort%2Bas%2Blast%2Btime">newly
+reported PRs</a></li>
+
+<li>
+<a href="http://dev.eclipse.org/bugs/buglist.cgi?bug_status=ASSIGNED&email1=platform-text-inbox@eclipse.org&emailtype1=exact&emailassigned_to1=1&email2=&emailtype2=substring&emailreporter2=1&bugidtype=include&bug_id=&changedin=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&product=Platform&component=Text&short_desc=&short_desc_type=allwordssubstr&long_desc=&long_desc_type=allwordssubstr&keywords=&keywords_type=anywords&field0-0-0=noop&type0-0-0=noop&value0-0-0=&namedcmd=All&newqueryname=Text%2BInbox&tofooter=1&order=Reuse%2Bsame%2Bsort%2Bas%2Blast%2Btime">assigned
+PRs</a></li>
+</ul>
+</td>
+</tr>
+</table>
+
+<br>&nbsp;
+</body>
+</html>
