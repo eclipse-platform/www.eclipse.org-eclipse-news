@@ -6,13 +6,14 @@
 </head>
 <body text="#000000" bgcolor="#FFFFFF">
  
-<h1>Resource change listeners in a concurrent world</h1>
+<h1>Listeners and builders in a concurrent world</h1>
 <font size="-1">[Draft copy] </font><br><br>
 <font size="-1">Last modified: July 23, 2003</font> 
 
 <p>In the context of the work on improving platform responsiveness,
 there will be some important changes to how resource change listeners
-operate.  This document describes and motivates these proposed changes.
+and incremental project builders operate.  This document describes and 
+motivates these proposed changes.
 The existing (Eclipse 2.1) behavior of listeners will be described in detail, 
 along with a description of how this will change in Eclipse 3.0.
 Finally, a draft of the porting guide is included, describing how
@@ -20,12 +21,14 @@ existing implementations might be impacted and
 how they can adapt to the new behavior.
 <h3>Overview and motivation</h3>
 <p>
-The principal proposed change for release 3.0 is that resource change listeners will be 
-called in a separate thread from which the workspace change occurred.  This means 
-listeners will run concurrently with the thread that caused the change, and there will 
-be <b>no guarantee at all</b> about precisely when resource change listeners will 
+The principal proposed change for release 3.0 is that resource change listeners 
+and auto-build will be called in a separate thread from which the workspace change 
+occurred.  This means listeners and builders will run concurrently with the thread that 
+caused the change, and there will 
+be <b>no guarantee at all</b> about precisely when listeners and builders will 
 be called.  The only guarantee is that all resource change listeners will 
-<b>eventually</b> be notified of all workspace changes.</p>
+<b>eventually</b> be notified of all workspace changes, and that all builders
+will eventually be run when auto-build is turned on.</p>
 <p>
 There are a number of motivations for this change.  First, there is a need to minimize 
 the duration for which the workspace lock is held by an operation.  In Eclipse 2.1, 
@@ -149,9 +152,50 @@ changes may have been made that are not included in the current delta, but will 
 included in a future delta.  In fact, resource changes may still be happening 
 in another thread at the time when the notification is received.  
 </p>
+<h3>Overview of changes for builders in Eclipse 3.0</h3>
+<p>
+The proposed changes for incremental project builders are much more conservative.
+The task of an incremental builder is to reconcile an arbitrary set of changes
+to a densely interconnected web of source files to produce an output that 
+is a consistent representation of the source.  This is a difficult enough task to achieve 
+in a single-threaded environment that to attempt it in a concurrent environment 
+would be courting disaster.  On the other hand, building can take a long time, and
+there is a very high value in moving this work to a non-blocking background thread
+to allow the user to continue working.
+</p>
+<p>
+With these factors in mind, the proposal is to move auto-build into a background
+thread, but to preempt the build when another operation attempts to modify the
+workspace.  A typical work flow would go like this:
+<ol>
+<li>A user modifies a file and saves the change.</li>
+<li>Auto-build starts.</li>
+<li>The user modifies the file again and attempts to save.</li>
+<li>The auto-build started in step 2 is halted at the nearest convenient stopping point.</li>
+<li>The file modification is allowed to proceed.</li>
+<li>Auto-build starts running again.</li>
+</ol>
+The &quot;nearest convenient stopping point&quot; in this case is at the end
+of the current builder invocation.  No builder will be halted in the middle of building
+a single project.  This strategy ensures that the user doesn't have to wait long before they
+are allowed to make their change, and that workspace changes don't happen in the
+middle of a single builder invocation.  When a preempted auto-build resumes, it must
+start again at the beginning of the build order to ensure that interdependent projects
+are built in the correct order.  However, builders that successfully ran
+before will not be given the same delta again.
+</p>
+<p>
+This new strategy is designed to have no impact on existing builder implementations.
+In essence, this approach is equivalent to a mode where auto-build is off, but a
+background thread is performing an incremental build periodically.  In other words, since this
+strategy (apart from the preemption) can be implemented using existing API, it 
+should have no impact on existing builders.  No new API is proposed for builders,
+and no API changes are planned.
+</p>
+
 <h3>Summary of proposed API changes</h3>
 <p>
-To be clear, the proposed changes described in this document require two changes
+The proposed changes described in this document require two changes
 to the current API contract of resource change listeners:
 <ol>
 <li>The restriction that resource changes not be allowed during certain resource change
@@ -199,7 +243,8 @@ TBD
 Background resource change listeners and auto-build have been implemented
 and some basic testing has been done.  All work is currently in branch "Bug_36957" 
 of project org.eclipse.core.resources. Basic sanity checking of the SDK reveals no 
-significant problems.  All platform core test suites now pass with background 
+significant problems, and some core team members are self-hosting with it.  
+All platform core test suites now pass with background 
 notification and build.  These changes will be rolled into integration builds over the 
 next two weeks:
 <ul>
