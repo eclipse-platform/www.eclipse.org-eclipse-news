@@ -21,7 +21,7 @@ that were previously invalid.  See the <a href="path_changes_html">proposal</a>
 for more details. This document is a draft of a migration guide entry for current
 <tt>IPath</tt> users who need to migrate to accomodate these changes.
 <p>
-<font size="-1">Last modified: October 19, 2004</font> 
+<font size="-1">Last modified: October 22, 2004</font> 
 </blockquote>
 <p>
 <h3>Incompatibilities</h3>
@@ -39,26 +39,39 @@ underlying operating system. These included:
 These restrictions have been removed in Eclipse 3.1 when the platform's data
 location (workspace) is located on a file system that does not have these restrictions.
 <p>
-<b>Action required:</b> Plug-ins that need to create paths from a given 
-<tt>String</tt> in a platform-independent manner will need to migrate to the 
+Plug-ins operating on Windows only are not affected. In addition, plug-ins that 
+have no need to support the full set of valid Unix paths are not affected.
+<p>
+<b>Action required:</b> Plug-ins that store string representations of paths
+in a format that needs to be readable across different platforms should migrate to the 
 new <tt>Path.fromPortableString</tt> factory method. This method produces
 an <tt>IPath</tt> instance from a platform-independent format. This string 
 representation of paths can be created using the <tt>IPath.toPortableString</tt> method.
-This principally affects plug-ins that store path strings in files that must be readable
-on multiple platforms.  This includes all metadata files that are stored inside Eclipse
+Plug-ins that do not migrate will continue to function normally for all paths that
+were valid in Eclipse 3.0, but may have problems with new paths that contain
+colon or backslash characters.
+Examples of metadata files that are affected include files that are stored inside Eclipse
 workspace projects (.project, .classpath, etc), and all paths stored in the preference
 store (<tt>org.eclipse.core.runtime.preferences.IPreferencesService</tt>). 
 <p>
 Plug-ins that were creating paths from hard-coded string literals that assumed 
-':' and '\' had special meaning on all platforms will need to migrate. The
-solution is to change <tt>String</tt> literals to use the portable path string format,
-which interprets the first single colon (':') as the device separator, slash ('/')
-as the segment separator, and double colon ("::") as a literal colon character.
+':' and '\' had special meaning on all platforms will need to migrate. The easiest
+solution is to restrict string path literals to the subset that is supported
+on all platforms (avoid colon and backslash characters).  Path literals can support
+the complete set of valid Unix paths by using the portable path string format produced
+by <tt>Path.toPortableString</tt>. This format interprets the first single colon (':') 
+as the device separator, slash ('/') as the segment separator, and double colon ("::") 
+as a literal colon character. For example, the code <tt>new Path("c:/temp")</tt>
+will now create a relative path with two segments on Unix platforms.  Similarly,
+<tt>new Path("a\\b")</tt> will now create a path with a single segment
+on Unix platforms, and a path with two segments on Windows.
 <p>
 Plug-ins constructing paths using the <tt>IPath.append(String)</tt> method 
 that assumed ':' and '\' had special meaning on all platforms will need to migrate.
 In Eclipse 3.1, this method uses operating-system specific device and segment
-delimiters to interpret the provided path string.
+delimiters to interpret the provided path string.  For example, calling <tt>append("a\\b")</tt>
+on Unix platforms will now append a single segment, whereas on Windows it will
+continue to append two segments.
 <p>
 Note that <tt>fromPortableString</tt> will correctly read all path strings that were
 created using the Eclipse 3.0 <tt>IPath.toString</tt> method, but not the
