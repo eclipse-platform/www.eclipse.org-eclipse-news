@@ -68,24 +68,6 @@
   </tr>
   <tr> 
     <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
-    <td WIDTH="98%"><b>Steps</b> <ol>
-        <li>Download Eclipse.</li>
-        <li>Run tool to convert plug-ins to JARs. The tool basically does the 
-          following: 
-          <ol>
-            <li>For each plug-in...</li>
-            <li>Extract all JARs to plug-in root dir</li>
-            <li>Generate manifest file from plugin.xml</li>
-            <li>Add &quot;.&quot; to the classpath</li>
-            <li>Zip up directory in a JAR</li>
-          </ol>
-        </li>
-        <li>Run Eclipse.</li>
-      </ol>
-      <p>&nbsp;</p></td>
-  </tr>
-  <tr> 
-    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
     <td WIDTH="98%"><b>Common Problems</b> <ul>
         <li>Missing images - If you are running a JAR'd Eclipse and there are 
           missing images, it might be the case that the plug-in developer is trying 
@@ -170,21 +152,6 @@
       </ul>
       <p>Milestones: Eclipse 3.1 M6 - Bundles which are part of the RCP to be 
         shipped as JARs</p>
-      <p>&nbsp;</p></td>
-  </tr>
-  <tr> 
-    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
-    <td WIDTH="98%"><b>Downloads</b> <p>Conversion tool (<a href="../../downloads/tools/org.eclipse.core.tools.buildJARS_1.0.0.zip">v1.0.0</a>) 
-        - The tool is written as an Eclipse application. The easiest way to use 
-        it is to: 
-      <ul>
-        <li>Download tool.</li>
-        <li>Install tool.</li>
-        <li>Start Eclipse.</li>
-        <li>If tool isn't part of your Target Platform, then make it so.</li>
-        <li>Create a new Launch Configuration with the Conversion tool as the 
-          Eclipse application to run.</li>
-      </ul></p>
       <p>&nbsp;</p></td>
   </tr>
   <tr> 
@@ -878,6 +845,38 @@
           </tr>
         </table>
       </div></td>
+  </tr>
+  <tr> 
+    <td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
+    <td WIDTH="98%"><b>Downloads</b> <p>Conversion tool (<a href="../../downloads/tools/org.eclipse.core.tools.buildJARS_1.0.0.zip">v1.0.0</a>) 
+        - The tool is written as an Eclipse application. It is used to JAR up an Eclipse install but the more plug-ins which are already JAR'd, 
+		the less useful this tool becomes. Our recommendation as of 3.1 M6 is to use the latest integration build to run on JAR's but if you want
+		to JAR up everything, then try this tool. The easiest way to use 
+        it is to: 
+      <ul>
+        <li>Download tool.</li>
+        <li>Install tool.</li>
+        <li>Start Eclipse.</li>
+        <li>If tool isn't part of your Target Platform, then make it so.</li>
+        <li>Create a new Launch Configuration with the Conversion tool as the 
+          Eclipse application to run.</li>
+      </ul></p>
+	  Steps:
+	  <ol>
+        <li>Download Eclipse.</li>
+        <li>Run tool to convert plug-ins to JARs. The tool basically does the 
+          following: 
+          <ol>
+            <li>For each plug-in...</li>
+            <li>Extract all JARs to plug-in root dir</li>
+            <li>Generate manifest file from plugin.xml</li>
+            <li>Add &quot;.&quot; to the classpath</li>
+            <li>Zip up directory in a JAR</li>
+          </ol>
+        </li>
+        <li>Run Eclipse.</li>
+      </ol>
+      <p>&nbsp;</p></td>
   </tr>
 </table>
 
