@@ -44,7 +44,7 @@
           </ul>
         </li>
         <li>editor view splitting</li>
-        <li><img src="progress.gif" height=5 width=16> regex in Find/Replace dialog 
+        <li><img src="ok.gif" height=10 width=10>regex in Find/Replace dialog 
           (available, needs 1.4. runtime)</li>
         <li><img src="progress.gif" height=5 width=16> enable reducing the number 
           of gestures required to insert a completion proposal and to continue 
@@ -146,7 +146,8 @@
         <li><font color="#000000">allow to specify line terminator for new files</font></li>
         <li><font color="#000000">e</font>ditors and none resources 
           <ul>
-            <li>open editor on a java.io.file rather than IFile </li>
+            <li><img src="ok.gif" height=10 width=10> open editor on a java.io.file 
+              rather than IFile </li>
             <li>support for more abstract editable source than IFile such as IEditableEditorInput 
             </li>
           </ul>
@@ -171,7 +172,8 @@
             <li>introduce nested partitions</li>
           </ul>
         </li>
-        <li>move templates to text infrastructure layer</li>
+        <li><img src="progress.gif" height=5 width=16> move templates to text 
+          infrastructure layer</li>
       </ul>
       </td>
 </tr>
@@ -197,18 +199,35 @@
 
   <tr> 
     <td WIDTH="100%"> 
-      <h3><a name="Milestone_Planning"></a>Milestone M5 (preliminary plan)</h3>
+      <h3><a name="Milestone_Planning"></a>Milestone M5</h3>
       <ul>
-        <li>editor splitting</li>
-        <li>background highlight painter</li>
-        <li>move &quot;Incremental Search&quot; interaction into separate status 
-          line contribution item</li>
-        <li>investigate improved support for annotation hovering and interaction</li>
-        <li>investigate action hovers</li>
-        <li> finish annotation management for file buffers and submit for approval</li>
-        <li> Merge RCP implementation of text components into HEAD stream</li>
+        <li>provide new default implementation for content formatter supporting 
+          master/slave model for formatting strategies</li>
+        <li>investigate improved support for annotation hovering and interaction, 
+          see PR <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=45082">45082</a>, 
+          (10 days)</li>
+        <li>finish reimplementation of text linking, see PR <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=45085">45085</a> 
+          (10 days)</li>
+        <li>move incremental search status information into separate status line 
+          item, PR <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=45124">45124</a> 
+          (2 days)</li>
+        <li>background highlight painter, see PR <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=45089">45089</a> 
+          (10 days)</li>
+        <li>publish the new generalized content assist, see PR <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=45096">45096</a> 
+          (3 days) </li>
+        <li>finish annotation handling improvements, see PR <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=40784">40784</a> 
+          (2 days) </li>
+        <li>merge RCP version of text plug-ins into HEAD enabling RCP, see PR 
+          <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=45101">45101</a> 
+          (3 days, cross team dependency)</li>
+        <li>finish headless annotation model implementation see PR <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=45123">45123</a> 
+          (5 days) 
+          <ul>
+            <li>submit annotation and annotation model API change request</li>
+          </ul>
+        </li>
       </ul>
-      </td>
+    </td>
 </tr>
 
 <tr>
