@@ -772,11 +772,19 @@
 
   <tr> 
     <td WIDTH="100%"> 
-      <h3><a name="Milestone_Planning"></a>Milestone M4 Proto Plan</h3>
+      <h3><a name="Milestone_Planning"></a>Milestone M4 Plan</h3>
+      <h4>Top Five</h4>
+      <ul>
+        <li> complete performance tests</li>
+        <li>rework preferences</li>
+        <li>finish file buffer operations</li>
+        <li>progress in concolidating the platform</li>
+        <li>improve NLS tooling</li>
+      </ul>
       <h4>Committed items</h4>
       <h5>Cross-team issues</h5>
       <ul>
-        <li> consolidate Ant, Platform UI, WTP, VC feedback and issues</li>
+        <li> consolidate Ant, Platform UI, WTP, VE feedback and issues</li>
         <li> editor embedding and splitting 
           <ul>
             <li>provide prototype for services architecture</li>
@@ -787,12 +795,6 @@
         <li> participate in preferences dynamic team</li>
         <li> participate in the action contribution dynamic team</li>
         <li> work on and adapt to the new undo story</li>
-        <li> implement a SaveAs dialog that allows to save inside and outside 
-          of the workspace 
-          <ul>
-            <li>involved parties: Platform UI, SWT, send patch to Platform UI</li>
-          </ul>
-        </li>
         <li>migrate to the changed semantics of IPath</li>
         <li> finish pushing down formatter to JDT core<br>
         </li>
@@ -835,20 +837,10 @@
         </li>
         <li>Default text editor 
           <ul>
-            <li>allow templates in the default text editor</li>
             <li>everything we push down while consolidating the platform needs 
-              to have a surfacing new function in the default text editor 
-              <ul>
-                <li>pushing down spell checking allows us to check whether the 
-                  push down of the quick fix infrastructure is successful</li>
-              </ul>
-            </li>
-            <li>[investigate] allow for an outline mode in the default text editor
-              <ul>
-                <li>folding just based on indentation</li>
-                <li>opens the way for using QuickOutline in the default text editor<br>
-                </li>
-              </ul>
+              to have a surfacing new function in the default text editor </li>
+            <li>pushing down spell checking allows us to check whether the push 
+              down of the quick fix infrastructure is successful<br>
             </li>
           </ul>
         </li>
@@ -867,16 +859,8 @@
           </ul>
         </li>
         <li>push down annotation navigation</li>
-        <li>generalize and push down InformationDispatchAction</li>
-        <li>push down quick view support 
-          <ul>
-            <li>Outline presentation control, AbstractInformationControl and related</li>
-          </ul>
-        </li>
-        <li>adopt and push down Quick Fix infrastructure</li>
         <li>push down spell checking</li>
-        <li>[investigate] Consolidate SourceViewerInformationControl and all of 
-          its copies<br>
+        <li>start adopting and pushing down Quick Fix infrastructure<br>
         </li>
       </ul>
       <h5>Code cleanup</h5>
@@ -923,8 +907,29 @@
       </ul>
       <h4>Proposed items</h4>
       <ul>
-        <li> lazy loading of document setup participants</li>
-        <li>allow for extending file buffers with custom implementations<br>
+        <li> implement a SaveAs dialog that allows to save inside and outside 
+          of the workspace 
+          <ul>
+            <li>involved parties: Platform UI, SWT, send patch to Platform UI</li>
+          </ul>
+        </li>
+        <li>lazy loading of document setup participants</li>
+        <li>allow for extending file buffers with custom implementations</li>
+        <li>allow templates in the default text editor</li>
+        <li>generalize and push down InformationDispatchAction</li>
+        <li>generalize push down quick view support 
+          <ul>
+            <li>Outline presentation control, AbstractInformationControl and related</li>
+          </ul>
+        </li>
+        <li>[investigate] Consolidate SourceViewerInformationControl and all of 
+          its copies</li>
+        <li>[investigate] allow for an outline mode in the default text editor 
+          <ul>
+            <li>folding just based on indentation</li>
+            <li>opens the way for using QuickOutline in the default text editor</li>
+          </ul>
+          <br>
         </li>
       </ul>
       <h3>Previous milestones</h3>
