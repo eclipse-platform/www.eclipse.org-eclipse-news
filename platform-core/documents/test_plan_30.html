@@ -376,40 +376,47 @@ Run a Junit test.
 <h3><a name="pde-build"/>PDE-Build</h3>	
 <h4>Plugin with "." on the classpath</h4>
 <ul>
-   <li> Using the "new plugin wizard" create a plugin named Dot1 with "." as a jar name. </li>
-   <li> Export it as a zip. Verify that the classes are not into a jar. </li>
-   <li> Export it as folder. Verify that the classes are at the root of the folder.</li>
+  <li> Using the "new plugin wizard" create a plugin named Dot1 with "." as a 
+    jar name. </li>
+  <li> Export &quot;deployable plug-in&quot; as a zip. Verify that the classes 
+    are not into a jar. </li>
+  <li> Export &quot;deployable plug-in&quot; as folder. Verify that the classes 
+    are at the root of the folder.</li>
 </ul>
 
 
 <h4>Compiling against a plugin with "." on the classpath</h4>
 <ul>
-   <li> Create a plugin named Normal</li>
-   <li> add a dependency to Dot1 in the plugin.xml</li>
-   <li> add a code dependency from a class in Normal to a class in Dot1</li>
-   <li> try to export Normal</li>
-   <li> try to export Normal and Dot1</li>
-   <li> confirm that no compile errors occured (if there were you would get an error dialog at the end of the export)</li>
+  <li> Create a plugin named Normal</li>
+  <li> add a dependency to Dot1 in the plugin.xml</li>
+  <li> add a code dependency from a class in Normal to a class in Dot1</li>
+  <li> try to export Normal as &quot;deployable plug-in&quot; </li>
+  <li> try to export Normal and Dot1as &quot;deployable plug-in&quot; </li>
+  <li> confirm that no compile errors occured (if there were you would get an 
+    error dialog at the end of the export)</li>
 </ul>
 
 
 <h4>Plugin with a folder on the classpath</h4>
 <ul>
-   <li> Create a plugin named Folder1 with "myFolder" as a jar name</li>
-   <li> edit the build.properties and add a slash after myFolder in bin.includes property</li>
-   <li> Export as folder, verify that the class files are rooted in a folder called myFolder</li>
+  <li> Create a plugin named Folder1 with "myFolder" as a jar name</li>
+  <li> edit the build.properties and add a slash after myFolder in bin.includes 
+    property</li>
+  <li> Export &quot;deployable plug-in&quot; as folder, verify that the class 
+    files are rooted in a folder called myFolder</li>
 </ul>
 
 
 <h4>Testing the build order</h4>
 <ul>
    <li> in the plugin Folder1, add the following things in the runtime section of the plugin.xml</li>
-	<pre>
+	
+  <pre>
       &lt;library name="yourFolder"&gt;
          &lt;export name="*"/&gt;
       &lt;/library&gt;
       &lt;library name="library.jar"&gt;
-         export name="*"/&gt;
+         &lt;export name="*"/&gt;
       &lt;/library&gt;
 	</pre>
    <li> replace the content of the build.properties by </li>
@@ -425,36 +432,47 @@ bin.includes = plugin.xml,\
                yourFolder/
 jars.compile.order = yourFolder, library.jar, myFolder
 </pre>
-   <li> generate manually the build.xml and verify that the build.jars target successively and in this order list yourFolder, library.jar and myFolder</li>
+   
+  <li> generate manually the build.xml (select plugin.xml, context menu, PDE Tools 
+    -&gt; Create Ant Build file) and verify that the build.jars target successively 
+    and in this order list yourFolder, library.jar and myFolder</li>
 </ul>
 
 <h4>Reuse the plugin Normal</h4>
 <ul>
-   <li> add a dependency to Folder1</li>
-   <li> add a code dependency from a class in Normal to a class in Folder1</li>
-   <li> Export Normal</li>
-   <li> Export Normal and Folder1</li>
+  <li> add a dependency to Folder1</li>
+  <li> add a code dependency from a class in Normal to a class in Folder1</li>
+  <li> Export Normal as &quot;deployable plug-in&quot; </li>
+  <li> Export Normal and Folder1 as &quot;deployable plug-in&quot; </li>
 </ul>
 
 
 <h4>Export of qualified plugins</h4>
 <ul>
-   <li> Create a plugin Qualified where the version number ends is 1.0.0.qualifier.</li>
-   <li> open the build.properties and add
-	<pre>qualifier = context</pre></li>
-   <li> Export the plugin as zip and verify that the name of the zip has 1.0.0.<date Of The Day></li>
-   <li> Export the plugin as folder and verify that the folder as the name 1.0.0.<date of the day></li>
-   <li> Verify that the version number of the feature in the feature.xml has been updated</li>
-
-   <li> change the build.properties to
-	<pre>qualifier = NONE</pre></li>
-   <li> Export the plugin as zip and verify that the name of the zip is 1.0.0</li>
-   <li> Export the plugin as folder and verify that the name of the directory is 1.0.0</li>
-   <li> change the build.properties to 
-	<pre>qualifier = myValue</pre>
-   </li>
-   <li> Export the plugin as zip and verify that the name of the zip is 1.0.0.myValue</li>
-   <li> Export the plugin as folder and verify that the name of the directory is 1.0.0.myValue</li>
+  <li> Create a plugin Qualified where the version number ends is 1.0.0.qualifier.</li>
+  <li> open the build.properties and add 
+    <pre>qualifier = context</pre>
+  </li>
+  <li> Export &quot;deployable plug-in&quot; as zip and verify that the name of 
+    the zip has 1.0.0.<date Of The Day></li>
+  <li> Export &quot;deployable plug-in&quot; as folder and verify that the folder 
+    as the name 1.0.0.<date of the day></li>
+  <li> Verify that the version number of the feature in the feature.xml has been 
+    updated</li>
+  <li> change the build.properties to 
+    <pre>qualifier = NONE</pre>
+  </li>
+  <li> Export &quot;deployable plug-in&quot; as zip and verify that the name of 
+    the zip is 1.0.0</li>
+  <li> Export &quot;deployable plug-in&quot; as folder and verify that the name 
+    of the directory is 1.0.0</li>
+  <li> change the build.properties to 
+    <pre>qualifier = myValue</pre>
+  </li>
+  <li> Export &quot;deployable plug-in&quot; as zip and verify that the name of 
+    the zip is 1.0.0.myValue</li>
+  <li> Export &quot;deployable plug-in&quot; as folder and verify that the name 
+    of the directory is 1.0.0.myValue</li>
 </ul>
 
 
@@ -469,7 +487,10 @@ jars.compile.order = yourFolder, library.jar, myFolder
 <ul>
    <li> Take the feature previously created</li>
    <li> add the plugin "Qualified" in the feature</li>
-   <li> Export the feature and verify that the feature.xml content has been updated (the reference to Qualified has the number from the "Qualified" plugin)</li>
+   
+  <li> Export &quot;as deployable feature&quot; and verify that the feature.xml 
+    content has been updated (the reference to Qualified has the number from the 
+    "Qualified" plugin)</li>
    <li> Verify that the version number of the feature in the feature.xml has been updated</li>
 </ul>
 
