@@ -493,7 +493,7 @@ Through the scope context.
 		// Note: can create other context here including Project<br>
 		IScopeContext context = new InstanceScope();<br>
 		Preferences root = context.getNode("org.eclipse.team");<br>
-		// Note: should never be null<br>
+		// Note: should not be null<br>
 		if (root != null) {<br>
 		&nbsp;&nbsp;Preferences dev = root.node("providers/dev.eclipse.org");<br>
 		&nbsp;&nbsp;dev.put("connectionType", "pserver");<br>
@@ -524,7 +524,7 @@ Through the scope context.
 		// Note: can create other context here including Project<br>
 		IScopeContext context = new InstanceScope();<br>
 		Preferences root = context.getNode("org.eclipse.team");<br>
-		// Note: should never be null<br>
+		// Note: should not be null<br>
 		if (root != null) {<br>
 		&nbsp;&nbsp;Preferences node = root.node("providers/dev.eclipse.org");<br>
 		&nbsp;&nbsp;return node.get("connectionType", null);<br>
