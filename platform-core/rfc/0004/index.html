@@ -50,7 +50,8 @@ to a java source file, it may be appropriate to move any breakpoints on that lin
 down to the next line with a valid java statement, but it might make sense to leave
 a bookmark at its original location.  In the current story, if marker-specific updates
 are needed, each component that manipulates files would need to know how to update
-each marker type.
+each marker type.  This knowledge is not always possible; for example the text editor
+does not know about java breakpoints.
 </p>
 <p>
 The purpose of this proposal is to provide a central point where components that
