@@ -206,7 +206,7 @@
       </ul>
       <p></p></td>
   </tr>
-  <tr>
+  <tr> 
     <td ALIGN=RIGHT VALIGN=TOP><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
     <td><p><strong>Theme: Broaden the Community</strong></p>
       <p><em>Platform/Runtime</em></p>
@@ -214,6 +214,42 @@
         <li>Real RCP web presence, book, articles (all teams)</li>
       </ul>
       <p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td ALIGN=RIGHT VALIGN=TOP><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
+    <td><p><strong>Other Components</strong></p>
+      <p>While coming up with our component plan, here are some potential issues/plan 
+        items that we have identified in other components.</p>
+      <p><em>Platform/Update</em></p>
+      <ul>
+        <li> Better support for creating/managing internal mirrors</li>
+        <li> More widespread use of Update - We should use the update manager 
+          to get milestone builds, etc. Use the technology we build!</li>
+        <li>Create an Eclipse Installer - We should be able to download a minimal 
+          application which uses update site + checkboxes to install what you 
+          want.</li>
+        <li>Adapt to OSGi R4 changes - Since a new version of the OSGi spec will 
+          be available, we need to react to the changes. </li>
+      </ul>
+      <p><em>PDE/UI</em> </p>
+      <ul>
+        <li>Wizards for RCP - Part of the end-to-end RCP story. We should have 
+          wizards for creating RCP applications, targeting an RCP platform, etc.</li>
+        <li>PDE to manage target manifests and make launching more efficient (incrementally 
+          generate/maintain the manifests rather than relying on the runtime to 
+          generate them on every launch). This improves performance and accuracy. 
+          No more need for -clean.</li>
+        <li>Improve Bundle Tooling - We need to improve the manifest editor, etc.</li>
+        <li>feature request: File -&gt; Export -&gt; Into my currently running 
+          dev (Java doits!)</li>
+        <li>Adapt to OSGi R4 changes - Since a new version of the OSGi spec will 
+          be available, we need to react to the changes.</li>
+        <li>Targetting JAR'd plug-ins - In Eclipse 3.0 we have the ability to 
+          run against (and update) plug-ins which are shipped as JAR files. We 
+          need to expand this support so they can be included in the target platform 
+          as well.<br>
+        </li>
+      </ul></td>
   </tr>
 </table>
 
