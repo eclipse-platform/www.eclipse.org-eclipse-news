@@ -1,0 +1,130 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Build">
+   <title>DRAFT for RFC 0004 - Marker Position Updates</title>
+</head>
+<body bgcolor="#FFFFFF" >
+<div align="right">
+  <table border=0 cellspacing=0 cellpadding=2 width="100%">
+    <tr> 
+		<td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font face="Arial,Helvetica"><font color="#FFFFFF">
+			Request For Comment
+		</font></font></b></td>
+    </tr>
+  </table>
+</div>
+<div align="left"> 
+  <h1><img src="../images/idea.gif" width="120" height="86"></h1>
+</div>
+<h1 align="CENTER">DRAFT of RFC 0004</h1>
+<h1 align="CENTER">Marker Position Updates</h1>
+<blockquote> 
+  <p><b>Summary</b> <br>
+    When files in the workspace are modified, the character and line positions
+    of any markers in those files can become invalid.  A general mechanism is needed
+    for updating marker character and line positions.
+  <p><b> By John Arthorne, OTI.</b> <br>
+    <font size="-1">Created: November 29, 2001</font><br>
+    <font size="-1">Last Modified: November 29, 2001</font><br>
+  </blockquote>
+<hr>
+<h2>The Problem</h2>
+<p>
+Many markers make use of the standard marker attributes <tt>CHAR_START</tt>,
+<tt>CHAR_END</tt>, and <tt>LINE_NUMBER</tt> defined on <tt>org.eclipse.core.resources.IMarker</tt>.
+When a file gets modified, these attributes may be invalidated.  Currently, it is mainly UI
+components that update marker positions as edits are made.  However, this approach doesn't
+work when files are modified at a lower level, such as by the refactoring and JDOM APIs.
+<br>Some initial thoughts on how this update mechanism would function:
+<ul>
+<li>Such a mechanism would require outside information about what types of edits
+occurred.  There can be no automatic marker updating after arbitrary resource changes,
+because not enough information will be available.  The updates would probably have to
+occur on demand, accompanied by information about what edits occurred.
+</li>
+<li>From Kai-Uwe: "Updating positions seems simple only at the first glance. Having user defined
+marker types, it is also part of the marker type definition how the marker 
+positions are updated. Assume a marker at [100, 150. Now assume an insert at 
+100. What happens to the marker? Is the marker moved or expanded? Well, you 
+can't answer. It depends on the marker type. Even worse, the updating of marker 
+positions might depend on the concrete changes, e.g., what was the content of 
+the text that has been deleted. The list of these issues can grow rather long. 
+Bottom line is that the core can not define the semantics of marker position 
+updating but must be open for custom made solutions."
+</li>
+<li>
+The update should be light-weight and as fast as possible.  These updates could
+potentially occur after every user edit, or during a large batch of refactoring changes.
+</ul>
+
+<h2>Proposed Solution</h2>
+<h3>Update API</h3>
+<p>
+Initial proposal is to add a method to IFile.  This is based on the description provided by Jeem:
+<pre>
+/**
+ * Updates the text markers in this file, based on the provided edit information.
+ * @param replaceStart The character position at the start of the replaced range. This value
+ *		is zero-relative and inclusive.
+ * @param replaceEnd The character position at the end of the replaced range.  This value
+ *		is zero-relative and exclusive.
+ * @param replaceSize The size of the new block that replaced the range described by
+ *		replaceStart and replaceEnd.
+ * @throws CoreException If this method fails.  Reasons include:
+ * &lt;ul&gt;
+ * &lt;li&gt;The given range is invalid.&lt;/li&gt;
+ * &lt;/ul&gt;
+ */
+public void updateMarkers(int replaceStart, int replaceEnd, int replaceSize) throws CoreException;
+</pre>
+The idea is that this API can describe any single edit to a file.  Examples (again from Jeem):
+<ol>
+<li>updateMarkers(0, 100, 10) - replace first 100 characters of file with ten characters.</li>
+<li>updateMarkers(200, 300, 0) - delete the character range from 200 to 300.</li>
+<li>updateMarkers(400,400, 1) - Add a character at position 400.</li>
+</ol>
+<h3>Extensibility API</h3>
+<p>
+Some marker types may require a special update algorithm.  The idea is to provide
+a way for marker types to define how marker updates occur through the markers
+extension point.  The proposal is to add an extra optional element to a marker definition,
+to plug in a marker update algorithm.  Here is an example marker definition:
+<pre>
+&lt;extension 
+	id="mycustommarker" 
+	point="org.eclipse.core.resources.markers" 
+	name="The Foo Marker"&gt;
+  &lt;super type="org.eclipse.core.resources.textmarker" /&gt;
+  &lt;persistent value="true" /&gt;
+  &lt;update class="org.xyz.foo.FooMarkerUpdate"&gt;
+  &lt;/extension&gt;
+</pre>
+The update class would implement a new interface, 
+<A HREF="IMarkerUpdate.html">IMarkerUpdate</A>.  This interface
+has a method similar to the updateMarkers method described above.  Markers
+with no update class specified inherit a marker update from one of their marker supertypes.
+Supertypes would be searched breadth-first, in the order the supertypes appear in the
+marker declaration (or perhaps in an indeterminate order).  Core will provide IMarkerUpdates
+for the standard marker types that it defines (marker, text marker, problem, task, bookmark).
+</p>
+<p>
+<b>Open Question:</b> Line number update.  How the LINE_NUMBER attribute will be
+updated is an open question.  One possibility is that there would be two separate
+methods, one for character updates, and one for line updates.  It is not known if or
+how the various marker types make use of the LINE_NUMBER attribute.  Perhaps it
+is redundant information and can be recomputed on demand when needed.  A character
+update algorithm could theoretically infer the line number changes, but this would require
+knowledge of line terminators, etc.  This would also be significantly slower if it required
+an independent scan of the file to recompute line numbers during update.
+</p>
+<h2>RFC Status</h2>
+<p>This RFC is currently an initial draft.  The draft will evolve based on feedback
+from the various users of IMarker.  Since Core doesn't use markers itself, we are
+not in the best position to drive requirements for this feature.  If you are responsible
+for code that manipulates markers in text files, please let us know if the proposed
+approach will be sufficient for your needs!
+</p>
+</body>
+</html>
