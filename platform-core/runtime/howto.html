@@ -294,14 +294,14 @@
   of location:</p>
 <dl> 
   <dl> 
-    <dt>User (-user ???) {osgi.user.area} [&lt;none&gt;, &lt;noDefault&gt;, &lt;user.home&gt;,
-      &lt;user.dir&gt;, filepath, url]</dt>
+    <dt>User (-user ???) {osgi.user.area} [@none, @noDefault, @user.home,
+      @user.dir, filepath, url]</dt>
     <dd>User locations are specific to, go figure, users. Typically the user
       location is based on the value of the Java <code>user.home</code> system
       property but this can be overridden. Information such as user scoped preferences
       and login information may be found in the user location.</dd>
-    <dt>Install (-install) {osgi.install.area} [&lt;user.home&gt;, &lt;user.dir&gt;,
-    filepath, url]</dt>
+    <dt>Install (-install) {osgi.install.area} [@user.home,
+    @user.dir, filepath, url]</dt>
     <dd>An install location is where Eclipse itself is installed. In practice
       this location is the  directory
       (typically &quot;eclipse&quot;) which is the parent of the startup.jar
@@ -309,8 +309,8 @@
       read-only to normal users as an install may be shared by many users. It
       is possible to set the install location and decouple startup.jar from the
       rest of Eclipse.</dd>
-    <dt>Configuration (-configuration) {osgi.configuration.area} [&lt;none&gt;, &lt;noDefault&gt;, &lt;user.home&gt;, &lt;user.dir&gt;,
-    filepath, url]</dt>
+    <dt>Configuration (-configuration) {osgi.configuration.area} [@none, @noDefault,
+    @user.home, @user.dir, filepath, url]</dt>
     <dd>Configuration locations contain files which identify and manage the (sub)set
       of an install to run. As such, there may be many configurations
       per install.
@@ -325,8 +325,8 @@
       more writable configuration
       
       location. </dd>
-    <dt>Instance (-data) {osgi.instance.area} [&lt;none&gt;, &lt;noDefault&gt;, &lt;user.home&gt;, &lt;user.dir&gt;,
-    filepath, url]</dt>
+    <dt>Instance (-data) {osgi.instance.area} [@none, @noDefault, @user.home,
+    @user.dir, filepath, url]</dt>
     <dd>Instance locations contain user-defined data artifacts.
       For example, the Resources plug-in uses the instance area as the workspace
       location
@@ -372,23 +372,23 @@
     function accordingly.</p>
 <dl>
   <dl>
-    <dt>&lt;none&gt;</dt>
+    <dt>@none</dt>
     <dd>Indicates that the corresponding location should never be set either
       explicitly or to its default value. For example, an RCP style application
       which has no user data may use osgi.instance.area=&lt;none&gt; to prevent extraneous
       files being written to disk.</dd>
-    <dt>&lt;noDefault&gt;</dt>
+    <dt>@noDefault</dt>
     <dd>Forces a location to be undefined or explicitly defined (i.e., Eclipse
       will not automatically compute a default value). This is useful where you
       want to allow for data in the corresponding location but the Eclipse default
       value is not appropriate.</dd>
-    <dt>&lt;user.home&gt;</dt>
+    <dt>@user.home</dt>
     <dd>Directs Eclipse to compute a location value relative to the user's home
       directory. The resultant location is qualified by the identifier
       and version number for the product being run and the type of location.
       For example, setting osgi.configuration.area=&lt;user.home&gt; results in a value
       of file:/users/bob/.eclipse/org.eclipse.platform_3.0.0/.config.</dd>
-    <dt>&lt;user.dir&gt;</dt>
+    <dt>@user.dir</dt>
     <dd>Directs Eclipse to compute a location value relative to the current working
       directory. The resultant location is qualified by the the type of location.
       For example, setting osgi.configuration.area=&lt;user.dir&gt; results in
@@ -399,10 +399,10 @@
   <tr bgcolor="#CCCCCC">
     <td width="10%">location/value</td>
     <td width="17%"><div align="center">file/URL</div></td>
-    <td width="17%"><div align="center">&lt;none&gt;</div></td>
-    <td width="17%"><div align="center">&lt;noDefault&gt;</div></td>
-    <td width="17%"><div align="center">&lt;user.home&gt;</div></td>
-    <td width="17%"><div align="center">&lt;user.dir&gt;</div></td>
+    <td width="17%"><div align="center">@none</div></td>
+    <td width="17%"><div align="center">@noDefault</div></td>
+    <td width="17%"><div align="center">@user.home</div></td>
+    <td width="17%"><div align="center">@user.dir</div></td>
   </tr>
   <tr>
     <td bgcolor="#CCCCCC"><div align="center">instance</div></td>
