@@ -261,7 +261,7 @@
           behaviour. If just one decorator in a chain returns a new image, then 
           the caching strategies of all following decorators are foiled and once 
           again resources are leaked.</li>
-        <li><b>Threading/races</b> Decorators run in foreground which causes problems 
+        <li><b>Threading </b>Decorators run in foreground which causes problems 
           for some people (e.g., CVS). To workaround this, heavy-weight decorators 
           have a background thread which computes the decorations and then issues 
           a label change event to update the UI. This does not scale. <br>
