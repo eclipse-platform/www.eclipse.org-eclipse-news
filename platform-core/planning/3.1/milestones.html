@@ -23,6 +23,16 @@
     <td ALIGN=RIGHT VALIGN=TOP><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
     <td><b>3.1 Milestone 6 - April 1, 2005</b> 
       <ul>
+        <li><strong>Enhancing the createExecutableExtension mechanism</strong> <em>[pascal + jeff]</em> 
+          <ul>
+            <li>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=86236">bug 
+              86236</a>] The way executable extensions are created is limited (instantiate 
+              the class using the default constructor). However lately several scenarios 
+              demonstrated that this limitation needed to be alleviated. We need to come 
+              up with a solution that will make the executable extension pluggable. 
+			</li>
+		  </ul>
+		</li>
         <li><strong>Running from JARs</strong> <em>[dj + pascal + jeff]</em> 
           <ul>
             <li>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=85065">bug 
