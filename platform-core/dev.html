@@ -29,6 +29,7 @@
           <li><a href="#examples">Examples/Contributions</a></li>
           <li><a href="#tools">Spies/Tools</a></li>
           <li><a href="#patches">Patches</a></li>
+          <li><a href="updates/index.html">Update Site</a></li>
         </ul>
       </ul>
 	</td>
@@ -167,14 +168,31 @@
       </ul>
     </td>
   </tr>
+  <tr>
+    <td ALIGN=RIGHT VALIGN=TOP><img SRC="Adarrow.gif" BORDER=0 height=16 width=16></td>
+    <td><p><a name="updates" id="updates"></a><b>Update Site</b> <br> 
+	  For Eclipse 3.0 we are pushing to use the update technology more
+              so the Core team now has an Update Site. Add the following URL to
+          the update manager:</p>
+      <blockquote>
+        <p>http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-core-home/updates</p>
+      </blockquote></td>
+  </tr>
   <tr> 
     <td align=RIGHT valign=TOP width="2%"><img src="Adarrow.gif" border=0 height=16 width=16></td>
     <td><a name="tools"></a><b>Spies/Tools</b><br>
-      The Platform/Core team has created a group of tools which help them when 
-      developing code or trying to debug problems and investigate bug reports. 
-      They have been developed as both plug-ins and headless utilities and are 
-      available here for download. 
+      The Platform/Core team has created a group of tools which help them when
+         developing code or trying to debug problems and investigate bug reports.
+         They have been developed as both plug-ins and headless utilities and are
+         available here for download. Also check the <a href="updates/index.html">Update
+         Site</a>.
       <ul>
+        <li><b>Core Tools <a href="downloads/tools/org.eclipse.core.tools_1.1.0.zip">v1.1.0</a></b> -
+          The first version of the tools to run on the Eclipse 3.0 runtime. This
+          is mostly a port of the original tools but there are some new views
+          (e.g., Eclipse Preferences view). There may be some issues... Works
+          with org.eclipse.osgi from HEAD as of 20040505 or I builds starting
+          the week of 05/10.</li>
         <li><b>Core Tools <a href="downloads/tools/org.eclipse.core.tools_1.0.0.zip">v1.0.0</a></b> 
           - A series of runtime and resource related views and perspectives. The 
           runtime tools allow users to look which plugins and classes are loaded, 
