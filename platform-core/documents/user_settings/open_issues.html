@@ -77,6 +77,17 @@ and we used the full path of the node+key, we could use this (path -> metadata o
 searching/storage of this information.</p><p>&nbsp;</p>
 		</td>
 	</tr>
+	<tr> 
+		<td ALIGN=RIGHT VALIGN=TOP WIDTH="2%"><img SRC="../../images/Adarrow.gif" BORDER=0 height=16 width=16></td>
+    	<td WIDTH="98%"><b>Change notification in the background</b> 
+		<p>
+		<u>Summary:</u> We would like to move preference change notification to the background to help prevent against bad client code.
+		We have to be careful though because there are existing clients who have change listeners who are expecting the notifications
+		to happen in the UI thread. In these cases they are making UI changes and will get an Invalid Thread Access error.
+		(See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=77280">bug 77280</a>)
+		</p><p>&nbsp;</p>
+		</td>
+	</tr>
 </table>
 
 
