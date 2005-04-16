@@ -82,25 +82,23 @@
         [<a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=%5Bjars%5D&product=JDT&product=PDE&product=Platform&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">Closed</a>] 
       </p>
       <ul>
-        <li><img src="../../images/small_progress.gif" width="14" height="5"> 
-          [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=83469">bug 83469</a>, 
-          <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=88099">bug 88099</a>] 
-          Cannot run with OSGi as a JAR - Currently the conversion tool hacks 
-          the <code>eclipse.properties </code>file to set the <code>osgi.frameworkClassPath</code> 
+        <li><img src="../../images/small_check.gif" width="10" height="11"> [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=83469">bug 
+          83469</a>, <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=88099">bug 
+          88099</a>] Cannot run with OSGi as a JAR - Currently the conversion 
+          tool hacks the <code>eclipse.properties </code>file to set the <code>osgi.frameworkClassPath</code> 
           key's value to be empty rather than listing the JARs in the plug-in. 
           (which no longer exist)</li>
-        <li><img src="../../images/small_progress.gif" width="14" height="5"> 
-          Cannot run with SWT as a JAR - </li>
+        <li><img src="../../images/small_check.gif" width="10" height="11"> Cannot 
+          run with SWT as a JAR</li>
         <li><img src="../../images/small_progress.gif" width="14" height="5"> 
           [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=78535">bug 78535</a>] 
           Problems running from JARs.</li>
         <li>Performance - Need some numbers w.r.t. speed of running with JARs. 
           What about compressed JARs?</li>
-        <li><img src="../../images/small_progress.gif" width="14" height="5"> 
-          [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=76653">bug 76653</a>, 
-          <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=76436">bug 76436</a>, 
-          <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=86561">bug 86561</a>] 
-          Source code lookup</li>
+        <li><img src="../../images/small_check.gif" width="10" height="11"> [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=76653">bug 
+          76653</a>, <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=76436">bug 
+          76436</a>, <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=86561">bug 
+          86561</a>] Source code lookup</li>
         <li>Some plug-ins cannot be JAR'd - Note that this is ok because we can 
           run with a mixture of both JAR'd and non-JAR'd plug-ins.</li>
         <li>JARs within JARs - The JAR'd plug-in format requires the class files 
@@ -117,15 +115,15 @@
           Icons shipped in fragments - Tod and DJ have been talking about this 
           and are making progress. Most likely we just have to ensure our callers 
           are using the appropriate $nl$ method calls, etc.</li>
-        <li><img src="../../images/small_progress.gif" width="14" height="5"> 
-          [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=85333">bug 85333</a>] 
-          Plug-in holding the splash screen cannot be JAR'd - Lots of different 
-          options here, none of them good. Looks like we will add code to Main.java 
-          which temporairly extracts the splash screen and then deletes the temporary 
-          file when we are done. We would like to be able to display the splash 
-          using java code but its too hard to find SWT when you live in the startup.jar.</li>
-        <li><img src="../../images/small_check.gif" width="10" height="11"> Plug-ins 
-          which provide intro content cannot be JAR'd</li>
+        <li><img src="../../images/small_check.gif" width="10" height="11"> [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=85333">bug 
+          85333</a>] Plug-in holding the splash screen cannot be JAR'd - Lots 
+          of different options here, none of them good. Looks like we will add 
+          code to Main.java which temporairly extracts the splash screen and then 
+          deletes the temporary file when we are done. We would like to be able 
+          to display the splash using java code but its too hard to find SWT when 
+          you live in the startup.jar.</li>
+        <li><img src="../../images/small_check.gif" width="10" height="11"> [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=91525">bug 
+          91525</a>] Plug-ins which provide intro content cannot be JAR'd</li>
         <li><img src="../../images/small_check.gif" width="10" height="11"> [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=85013">bug 
           85013</a>] Cannot build when target is JAR'd</li>
         <li><img src="../../images/small_check.gif" width="10" height="11"> [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=87719">bug 
