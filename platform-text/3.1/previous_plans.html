@@ -15,8 +15,143 @@
   </tr>
   <tr> 
     <td WIDTH="100%"> 
+
+      <h3><a name="Milestone_Planning"></a>Milestone M6 Plan</h3>
+      <h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Top five items</h4>
+      <ul>
+		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> continue with J2SE 5.0 support (<a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/r3_1/j2se50/Status.html">JDT UI's overall status</a>)</li>
+        <li><font class="indexsub" color="#8080ff">[&gt;3.1]</font> progress in consolidating the platform</li>
+        <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> provide NLS tooling for new Platform Core's new message bundle approach</li>
+		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> finalize existing 3.1 APIs (M6 is API freeze)</li>
+		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> performance</li>
+
+      </ul>
+      
+   <h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Committed items</h4>
+<ul>
+<li>
+	<h5>(<img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10">) Cross-team issues</h5>
+	<ul>
+		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> resolve missing performance test fingerprints problem</li>
+        <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> adopt global operation history</li>
+		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> help push down formatter to JDT Core</li>
+		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> apply mixed indent patch for fomatter together with JDT Core</li>
+		<li><font class="indexsub" color="#8080ff">[&gt;3.1]</font> (provide a compatibility layer for commands moved to LTK UI plug-in)<br>
+        	a hard-coded patch is ready but there should be support from the Platform
+        	for extension-point evolution.</li>
+	</ul>
+</li><li>
+	<h5>(<img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10">) J2SE 5.0 support (<a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/r3_1/j2se50/Status.html">JDT UI's overall status</a>)</h5>
+	<ul>
+   	    <li>(<img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10">) fix bugs introduced in M5
+	   	    <ul>
+				<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> performance impact due to parameter guessing</li>
+				<li><font class="indexsub" color="#8080ff">[3.1 M7]</font> improve accurracy of auto-boxing</li>
+				<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> problems introduced by new projection caption support</li>
+	   	    </ul>
+   	    </li>
+		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> improve content assist for generics (work together with David Audel / JDT Core):
+			<ul>
+				<li>better type parameter proposals</li>
+				<li>better enum constant proposals</li>
+			</ul>
+		</li>
+   	    
+   	    <li> <font class="indexsub" color="#8080ff">[&gt;3.1]</font> (provide new semantic highlightings) - will probably be moved to M7</li>
+   	    <ul>
+			<li>type bounds</li>
+			<li>enums</li>
+			<li>static imports</li>
+   	    </ul>
+	</ul>
+</li><li>
+	<h5><font class="indexsub" color="#8080ff">[&gt;3.1]</font> Platform consolidation</h5>
+	<ul>
+		<li>push down annotation navigation</li>
+		<li>push down annotation hovers</li>
+		<li>adopt and push down Quick Assist and Quick Fix infrastructure</li>
+		<li>offer spelling checking in Text editor</li>
+        <li>(move Occurrences annotation type definition and annotation specification down to ltk.ui or editors.ui)</li>
+        <li>(push down annotation navigation)</li>
+	</ul>
+</li><li>
+	<h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> NLS tooling</h5>
+	<ul>
+		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> provide tooling for Platform Core's new message bundle approach</li>
+			<ul>
+				<li>provide new back-end for the NLS wizard that can write the new format</li>
+			</ul>
+        <li><font class="indexsub" color="#8080ff">[&gt;3.1]</font> (improve Properties File editor)</li>
+          <ul>
+            <li>(ensure correct ISO-8859-1 encoding when writing a properties file)</li>
+          </ul>
+        </li>
+        <li><font class="indexsub" color="#8080ff">[&gt;3.1]</font> (improve Externalize Strings wizard)
+          <ul>
+            <li>(spell checking)</li>
+            <li>(ensure correct ISO-8859-1 encoding when writing a properties file)</li>
+          </ul>
+        </li>
+	</ul>
+</li><li>
+	<h5><font class="indexsub" color="#8080ff">[3.1 M7]</font> (Code cleanup)</h5>
+	<ul>
+		<li>reference to AnnotationExpandHover in JavaExpandHover</li>
+		<li>references to Search plug-in in PropertyKeyHyperlink</li>
+	</ul>
+</li><li>
+	<h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> R3.0.2 related work items</h5>
+	<ul>
+		<li>testing</li>
+		<li>bug verification</li>
+		<li>ship 3.0.2</li>
+	</ul>
+</li><li>
+	<h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> participate in writing an article for the JavaMagazin</h5>
+</li></ul>
+
+      <h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Permanent items</h4>
+      <ul>
+        <li>bugzilla inbox tracking</li>
+        <li>bug fixing</li>
+        <li>increase correctness test coverage</li>
+      </ul>
+	
+      <h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Proposed items</h4>
+		<ul>
+			<li><font class="indexsub" color="#8080ff">[&gt;3.1]</font> add UI for Word Completion similar to code assist</li>
+			<li><font class="indexsub" color="#8080ff">[&gt;3.1]</font> add new <code>org.eclipse.ltk.ui</code> plug-in to release<br>
+			<b>Note:</b> This item depends on the above mentioned cross team-issue</li>
+			<li>
+				<h5> <font class="indexsub" color="#8080ff">[&gt;3.1]</font> (RCP)</h5>
+				<ul>
+					<li>add support for annotation presentation and navigation</li>
+					<li>investigate declaring <code>org.eclipse.resources</code> optional for <code>org.eclipse.core.filebuffers</code></li>
+					<li>provide an example RCP text editor application with the following features:<br>
+					<ul>
+						<li>open an external file</li>
+						<li>open an untitled (new & empty) text file</li>
+						<li>save</li>
+						<li>spell checking</li>
+						<li>quick fix to fix spelling problems</li>
+					</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Absences</h4>
+	<ul>
+		<li>Dani: 5 days vacation</li>
+		<li>Tom: 5 days eclipseCon</li>
+		<li>Tom: 5 days vacation</li>
+		<li>2 public holidays</li>
+	</ul>
+
+
+<!----------------------------->      
+    
       <h3><a NAME="Milestone_Planning"></a>Milestone M5</h3>
-      <h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Original Plan</h4>
       <h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Top five items</h4>
       <ul>
 		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> start with J2SE 5.0 support (<a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/r3_1/j2se50/Status.html">JDT UI's overall status</a>)</li>
