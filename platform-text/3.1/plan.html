@@ -16,7 +16,7 @@
 
   <tr> 
     <td WIDTH="100%"> 
-    <p>Last revised 11:05 CET May 10, 2005
+    <p>Last revised 00:00 CET May 23, 2005
 
 
     
@@ -27,7 +27,7 @@
         3.1 Eclipse theme it contributes to. </p>
       <h3>Platform</h3>
       <ul>
-        <li> <img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> 
+        <li> <img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10">
           Improve overall performance and stabilize on memory consumption. This 
           includes open editor, quick diff, open quick outline, typing speed, 
           redraw behavior, scrolling. Define a set of scenarios and assign to 
@@ -51,7 +51,7 @@
             performance issues. <b>[Built to last]</b></p>
         </li>
         <li> 
-          <p><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> 
+          <p><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10">
             Increase correctness test coverage of the text infrastructure. <b>[Built 
             to last] </b></p>
         </li>
@@ -64,7 +64,7 @@
           <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> Improve code quality.</li>
         </ul>
         <li> 
-          <p> <img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> 
+          <p> <img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10">
             Improve overall integration with the workbench. This includes consolidation 
             of preferences and increased preference sharing as well as seamless 
             support for user configurable editor based on content types. Investigate direct 
@@ -783,17 +783,16 @@
 <li>
 	<h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> Adopt changes/features from other components</h5>
 	<ul>
-		<li>Help view: allow to contribute top-level section (depends on Platform Help <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=85721">bug 85721</a>). If fixed, promote "Java help:" to top-level section
-		</li>
-		<li>adopt new content-type editor lookup (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=37668">bug 37668</a>)</li>
+		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> Help view: allow to contribute top-level section (depends on Platform Help <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=85721">bug 85721</a>). If fixed, promote "Java help:" to top-level section</li>
+		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> adopt new content-type editor lookup (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=37668">bug 37668</a>)</li>
 		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> adapt new SelectionEvent#text field where we use the Link widget (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=86608">bug 86608</a>)</li>
 		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> remove deprecation form plugin.xml files i.e. switch to use org.eclipse.ui.bindings extension point</li>
 		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> use virtual table for code assist popup</li>
-		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> provide component.xml for text plug-ins</li>
-		<li> provide test coverage information for text plug-ins</li>
+		<li><font class="indexsub" color="#8080ff">[3.1 RC1]</font> <img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> provide component.xml for text plug-ins</li>
+		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> provide test coverage information for text plug-ins</li>
 		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> migrate to new bundle story i.e. provide MANIFEST.MF</li>
 		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> convert plug-ins to JARed format</li>
-		<li>adopt "showURL" API for URL hyperlink (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=69647">bug 69647</a>)</li>
+		<li><font class="indexsub" color="#8080ff">[3.1 RC1]</font> adopt "showURL" API for URL hyperlink (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=69647">bug 69647</a>)</li>
 		<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> adopt mixed indent support (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=73104">bug 73104</a>)</li>
 	</ul>
 </li>
