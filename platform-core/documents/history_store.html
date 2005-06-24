@@ -32,47 +32,60 @@
         with as little (conceptual/memory/execution) overhead as possible. </p>
 		
       <ul>
-        <li><p><em>October 29th</em> - tested a file system based solution (<em>take 
-          1</em>). Every project has its own history area. History for a file 
-          will be stored in a relative directory similar to where the file is. 
-          The difference is that, in order to prevent problems with path length 
-          limitations on Windows, every segment is translated to a short fixed 
-          length string (using a hash function). This opens opportunity for colisions, 
-          and it is an one-way translation, so we need to remember the original 
-          path for every state. We did this by keeping an additional .info file 
-          for each file state to maintain that information. Result: adding new 
-          state is really fast, but any tree traversals are very costly (we have 
-          to open all .info files in every directory we look).</p></li>
-        <li><p><em>November 2nd</em> - tested an improved solution (<em>take 2</em>) 
-          based on the previous approach. Instead of keeping an individual .info 
-          file showing the original location for every state, we keep a index 
-          table per directory. This drastically reduces the number of file openings 
-          (not mentioning it takes much less space in the file system), having 
-          a better performance for tree based operations. The poor performance 
-          for copying history is understandable since we are actually copying 
-          the states as well, whereas the original implementation links them (maybe 
-          we should do the same). The bad performance when clearing the history 
-          for a given resource is due to having to delete multiple files/directories 
-          in a more complex directory structure than the original implementation 
-          (a two-level tree, directories are never deleted). We could improve 
-          that by postponing deleting directories to shutdown (making shutdown 
-          slower instead).</p></li>
-        <li><p><em>November 17th</em> - using some ideas from the previous tries 
-          and the existing code, we got a solution (<em>take 3</em>) that seems 
-          to have all the characteristics we have been looking for: it is much 
-          simpler than the current story, and generally performs (sometimes much) 
-          better than the current implementation. We are using the existing BlobStore 
-          (as the existing implementation) and per-bucket indexes, as in the previous 
-          solutions. These indexes are just dictionaries having the file path 
-          as key and a pair &lt;UUID,timestamps&gt; for every state belonging 
-          to the file as value.</p></li>
-        <li><p><em>December 13th</em> - the solution above (known as <em>take 3</em>)
-        has been part of recent integration builds and will be in for M4. We are currently 
-        investigating its use as a replacement for the previous property store implementation as well.
-        There are concerns w.r.t. scalability in using a single file to store all properties 
-        for all files/folders under a given directory (since properties can be as big as 2K).
-        Some sort of segmentation strategy seems necessary to avoid such problems.
-        </p></li>
+        <li> 
+          <p><em>2004/10/29</em> - tested a file system based solution (<em>take 
+            1</em>). Every project has its own history area. History for a file 
+            will be stored in a relative directory similar to where the file is. 
+            The difference is that, in order to prevent problems with path length 
+            limitations on Windows, every segment is translated to a short fixed 
+            length string (using a hash function). This opens opportunity for 
+            colisions, and it is an one-way translation, so we need to remember 
+            the original path for every state. We did this by keeping an additional 
+            .info file for each file state to maintain that information. Result: 
+            adding new state is really fast, but any tree traversals are very 
+            costly (we have to open all .info files in every directory we look).</p>
+        </li>
+        <li> 
+          <p><em>2004/11/02</em> - tested an improved solution (<em>take 2</em>) 
+            based on the previous approach. Instead of keeping an individual .info 
+            file showing the original location for every state, we keep a index 
+            table per directory. This drastically reduces the number of file openings 
+            (not mentioning it takes much less space in the file system), having 
+            a better performance for tree based operations. The poor performance 
+            for copying history is understandable since we are actually copying 
+            the states as well, whereas the original implementation links them 
+            (maybe we should do the same). The bad performance when clearing the 
+            history for a given resource is due to having to delete multiple files/directories 
+            in a more complex directory structure than the original implementation 
+            (a two-level tree, directories are never deleted). We could improve 
+            that by postponing deleting directories to shutdown (making shutdown 
+            slower instead).</p>
+        </li>
+        <li> 
+          <p><em>2004/11/17</em> - using some ideas from the previous tries and 
+            the existing code, we got a solution (<em>take 3</em>) that seems 
+            to have all the characteristics we have been looking for: it is much 
+            simpler than the current story, and generally performs (sometimes 
+            much) better than the current implementation. We are using the existing 
+            BlobStore (as the existing implementation) and per-bucket indexes, 
+            as in the previous solutions. These indexes are just dictionaries 
+            having the file path as key and a pair &lt;UUID,timestamps&gt; for 
+            every state belonging to the file as value.</p>
+        </li>
+        <li> 
+          <p><em>2004/12/13</em> - the solution above (known as <em>take 3</em>) 
+            has been part of recent integration builds and will be in for M4. 
+            We are currently investigating its use as a replacement for the previous 
+            property store implementation as well. There are concerns w.r.t. scalability 
+            in using a single file to store all properties for all files/folders 
+            under a given directory (since properties can be as big as 2K). Some 
+            sort of segmentation strategy seems necessary to avoid such problems.</p>
+        </li>
+        <li><em>2005/02/02</em> - Eclipse 3.1 M5 - both history store and property 
+          store implementations were moved to a new infrastructure. The existing 
+          indexed store has been moved to a separate fragment, only used for supporting 
+          backward compatibility with old workspaces. Performance tests are part 
+          of the org.eclipse.core.tests.resources project.</li>
       </ul>
 		</td>
 	</tr>
