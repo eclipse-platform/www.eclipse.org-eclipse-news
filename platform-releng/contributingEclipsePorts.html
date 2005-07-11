@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+ <link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
+  <title>Contributing a port to an Eclipse build</title>
+</head>
+<body>
+<span style="font-weight: bold;">Contributing a port to an Eclipse build</span><br>
+<i><b>DRAFT</b></i>
+<p>Last updated: June 15, 2005</p>
+<br><p> 
+The Eclipse platform team has limited hardware and platform resources
+to compile and produce builds of Eclipse on a wide variety of
+platforms. This document describes the mechanism to provide a build for
+a opearating system-windowing system-architecture (os-ws-arch) that is
+not currently built by the platform team. In assuming this role, teams
+or individuals will be expected to perform the following tasks.&nbsp; <br>
+<ul>
+  <li>Meet eclipse.org&nbsp; <a href="http://eclipse.org/legal/">legal
+requirements.</a></li>
+  <li>Contribute patches required for build and run Eclipse on the
+new platform<br>
+    <a href="http://eclipse.org/legal/"></a></li>
+  <li>Run the build and conduct automated tests at a regular interval. </li>
+  <li>Resolve os-ws-arch specific bugs<br>
+  </li>
+  <li>Upload a tested build for inclusion in upcoming Eclipse
+platform milestones and releases to the eclipse.org infrastructure.<a
+ href="http://eclipse.org/legal/"></a><br>
+  </li>
+</ul>
+These conditions must be met for new port to be provided on eclipse.org.<br>
+<br>
+The process to include an external build on eclipse.org is a follows:<br>
+<ol>
+  <li>Open a bug with the Product Platform and Component Releng
+describing the os-ws-arch drop and type of drop you intend to provide.
+For instance, will you provide the SDK only?&nbsp; Or will you provide
+both the SDK and platorm runtime.&nbsp; The platform releng team will
+arrange for PMC approval of support of this new drop. This may also require that
+a new project is created to provide swt libraries for this platform.</li>
+  <li>Once approval is granted, use the&nbsp; <a
+ href="http://download.eclipse.org/downloads/drops/S-3.1M4-200412162000/srcIncludedBuildInstructions.html">Source
+Build</a> or <a
+ href="http://download.eclipse.org/downloads/drops/S-3.1M4-200412162000/srcFetchBuildInstructions.html">Source
+Fetch build</a> scripts to generate a build if you are contributing the
+SDK only.&nbsp; If you are interested in contributing other components,
+please use the instructions to generate a <a
+ href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.releng.eclipsebuilder/readme.html?rev=HEAD&amp;content-type=text/html">
+Eclipse components from the command line using Ant scripts in this
+project and org.eclipse.releng.basebuilder.</a> Incorporate platform
+specific patches in these scripts and test the resultant build.&nbsp; A
+bug describing the patches to ensure that the build runs should be
+opened with Product Platform and Component Releng.&nbsp; We will
+incorporate these patches into our build scripts or ensure that they
+are included in other teams code base as appropriate.  </li>
+  <li>The cvs tag of&nbsp; the builder projects (org.eclipse.releng,
+org.eclipse.releng.eclipsebuilder and org.eclipse.releng.basebuilder)
+that was used to create the build will be listed on the test results
+page of the build. Refer to the <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-releng-home/buildSchedule.html">platform
+releng build schedule</a> if you need additional information about upcoming builds </li>
+  <li><a mailto="webmaster@eclipse.org">Run the automated tests for
+your platform after you have
+successfully completed the build.</a></li>
+  <li>Request a ftp account on download1.eclipse.org from <a
+ href="mailto:webmaster@eclipse.org">
+webmaster@eclipse.org</a>  </li>
+  <li>Copy the build to the staging area for eclipse downloads. </li>
+  <p></p>
+  <tt>/home/data/httpd/download-staging.priv/eclipse/downloads/&lt;yourorganization&gt;</tt>
+  <p>
+  <li>Once you have pushed your
+  files to the server, notify the releng team that your file available.  They
+    will move it to the appropriate directory so it's available for download
+    from eclipse.org.<br>
+  </li>
+</ol>
+<a mailto="webmaster@eclipse.org"><br>
+<br>
+</a>
+</body>
+</html>

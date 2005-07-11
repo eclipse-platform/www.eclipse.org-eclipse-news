@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>Eclipse Build Schedule</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<table border=0 cellspacing=5 cellpadding=2 width="100%" > <tr> <td align=left width="72%"> 
+<font class=indextop> build schedule</font><br> <font class=indexsub>last updated 
+17/03/05 15:00 EDT</font></td><td width="28%"><img src="http://dev.eclipse.org/images/Idea.jpg" height=86 width=120></td></tr> 
+</table><font class=indextop> </font><table border=0 cellspacing=5 cellpadding=2 width="100%" > 
+<tr> <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font face="Arial,Helvetica" color="#FFFFFF"> 
+Regularly Scheduled Builds</font></b></td></tr> <tr> <table width="78%" border="1"> 
+<tr> <td width="53%"> <div align="center"><b>Build Type</b></div></td><td width="17%"> 
+<div align="center"><b>Date (Local)</b></div></td><td width="16%"> <div align="center"><b>Date 
+(UTC)</b></div></td><td width="14%"> <div align="center"><b>Failure Policy</b></div></td></tr> 
+<tr><td>3.0.2 Maintenance builds from *.map files</td><td>Wed 12:00 EDT</td><td>Wed 17:00 UTC</td><td>Same day rebuild.</td></tr>
+<td>3.1 Integration builds from *.map files</td><td>Tues 8:00 EDT</td>
+<td>Tues 13:00 UTC</td><td>Same day rebuild if compile errors, missing plugins, the build 
+is unusable or if the drops do not get posted.Otherwise, a rebuild will occur 
+Wednesday 8:00 EDT. </td></tr>
+<td>3.1 Integration builds from *.map files if requested</td><td>Wed 8:00 EDT</td>
+<td>Wed 13:00 UTC</td><td>Same day rebuild if compile errors, missing plugins, the build 
+is unusable or if the drops do not get posted.Otherwise, a rebuild will occur 
+Thursday 8:00 EDT. </td></tr> <tr> <td>3.1 Integration build from *.map files 
+if requested</td><td>Thurs 8:00 EDT</td><td>Thurs 13:00 UTC</td><td>Rebuild until 
+success.</td></tr> <tr> <td width="53%">3.1 Nightly Builds from HEAD</td><td width="17%">Mon 
+- Sun 00:10 EDT </td><td width="16%">Mon- Sun 05:10 UTC </td><td width="14%">Public 
+humiliation but no rebuild.</td></tr> </table> 
+<TABLE BORDER=0 CELLSPACING=5 CELLPADDING=2 WIDTH="100%" > 
+<TR> <TD ALIGN=LEFT VALIGN=TOP COLSPAN="2" BGCOLOR="#0080C0"><B><FONT FACE="Arial,Helvetica" COLOR="#FFFFFF">Additional 
+Upcoming Builds</FONT></B></TD></TR> <TR> <TD HEIGHT="19"> 
+Please see <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/platform-releng-home/3.1-endgame-buildschedule.html"/>3.1 Endgame Build Schedule</a>
+<table border=0 cellspacing=5 cellpadding=2 width="100%" > 
+<tr> <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font face="Arial,Helvetica" color="#FFFFFF">Build Retention 
+Policy</font></b></td></tr> <tr> <td height="19"> <p>In an effort to reduce our disk utilization on the eclipse.org infrastructure and reduce the amount of data sent to the mirrors, we have adopted the following build retention policy.</p>
+<li>Release builds are kept indefinitely</li><li>Four integration and nightly builds are retained</li><li>Maintenance builds are kept until a release of the maintenance stream is available.</li><li>Stable builds are retained until a release is available.</li></li></table>
+
+<table border=0 cellspacing=5 cellpadding=2 width="100%" > 
+<tr> <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font face="Arial,Helvetica" color="#FFFFFF">Build 
+Notes </font></b></td></tr> <tr> <td height="19"> We have decided to make some 
+minor changes in our build story in order to better focus the responsibility for 
+getting good integration builds on the developers: <p>For the 3.1 integration 
+builds: <br> - build time is 8:00 am (Eastern time) on Tuesday mornings. <br> 
+- in the event of an integration build failure due to compile errors, missing 
+plugins or if the drops are not posted,<br>there will be a same day rebuild upon 
+submission of a fix.<br> - Otherwise, there will be a rebuild at 8 am Wednesday morning
+to accommodate fixes that have a workaround or do not impact the general usability of the build.  <br>-Teams are expected to indicate on the platform-releng-dev mailing list if they intend to contribute to a rebuild. <br> - in the event of a double integration build failure, all other 
+work will stop until <br> guaranteed-to-be-successful build contributions are 
+prepared for a rebuild at 8:00 am Thursday morning. <br> - if the Thursday 8:00 
+am (Eastern time) integration build fails we will rebuild until success<br> - 
+once a good integration build is achieved, it will be marked as such on the website. 
+<br> -the releng team will often request a go/no go status from all teams to determine 
+if the build is suitable for the week's testing. If you provide status and then 
+recontribute to a subsequent build, you are required to revalidate the build and 
+provide an updated status.</p><p>For the 3.0.2 integration builds: <br> - build 
+time is noon Wednesday (Eastern time) <br> - because of the nature 
+of the fixes in this stream, these builds should not fail. <br> However, if a 
+rebuild is requested by one of the teams, it will take place as soon <br> as the 
+build contribution is available. <br> - once a good integration build is achieved, 
+it will be marked as such on the website. </p><p>In the above descriptions, a 
+build is considered to be a failure if there are &quot;Red X&quot;s that the developers 
+agree represent valid reasons for them to not begin using the integration build. 
+An example of a Red X which would *not* require a re-build would be a test which 
+failed because the test was bogus. </p><p>IMPORTANT: This strategy _requires_ 
+us to have good build inputs. All teams must use the tools to pre-build and test 
+their submissions. In addition, teams should track the nightly builds to detect 
+integration problems early on. What we want to achieve is for the Tuesday morning 
+3.1 build to typically be successful, with an infrequent requirement for a Wednesday 
+morning build. Failing the Wednesday morning rebuild should be treated as a catastrophic 
+failure. In other words, more than two or three of these per year is an unacceptable 
+failure rate. </p></td></tr> </table><p>&nbsp;</p></TABLE>
+
+
+</body>
+</html>
