@@ -10,98 +10,128 @@
 &nbsp;
 <table BORDER=0 CELLSPACING=5 CELLPADDING=2 WIDTH="100%" >
 <tr>
-    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#0080C0"><b><font face="Arial,Helvetica"><font color="#FFFFFF">Overall 
-      Platform Text 3.2 Plan</font></font></b></td>
+    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#0080C0"><b><font face="Arial,Helvetica"><font color="#FFFFFF">Combined  
+      Platform Text and JDT Text 3.2 Plan</font></font></b></td>
 </tr>
 
   <tr> 
     <td WIDTH="100%"> 
-    <p>Last revised 19:05 CET July 19, 2005
+    <p>Last revised 13:20 CET July 20, 2005
 
     
       <p>This plan is under continuous refinement. Please send comments about this draft plan to the <a href="mailto:platform-text@eclipse.org">platform-text@eclipse.org</a> developer mailing list.</p>
-      <h2><a NAME="Overall_Planning"></a>Overall goals </h2>
-      <p>This section defines the committed goals for Eclipse 3.2 for the Platform 
+      <h2><a NAME="Overall_Planning"></a>Overall Goals </h2>
+      <p>This section defines the goals for Eclipse 3.2 for the Platform 
         Text and the JDT Text component. Each goal is annotated with the overall 
-        3.2 Eclipse theme it contributes to. </p>
+        3.2 Eclipse theme (see <a href="http://www.eclipse.org/eclipse/development/eclipse_project_plan_3_2.html">Eclipse Project Draft 3.2 Plan</a> for details).</p>
       <h3>Platform</h3>
       <ul>
         <li>
-          Continue to improve overall performance and stabilize on memory consumption. This 
-          includes open editor, quick diff, open quick outline, typing speed, 
-          redraw behavior, scrolling. Define a set of scenarios and assign to 
-          each scenario a concrete performance goal.
-          <b>[Built to last]</b> 
+          Continue to monitor overall performance and memory consumption. This 
+          includes the addition of new performance tests for new features.
+          <b>[Scaling up]</b> 
+          <p>
         </li>
         <li> 
-          Increase correctness test coverage of the text infrastructure.
-          <b>[Built to last]</b>
+          Increase correctness test coverage of the text infrastructure. Besides providing tests for new
+          features new tests are needed for existing areas where we have few or no tests at all.
+          <b>[Scaling up]</b>
+          <p>
         </li>
         <li> 
-          <p> 
-          	Provide better text editor support for RCP. The list of functions 
+          	Provide better text editor support for RCP.<b>[Rich client platform, Design for Extensibility: Be a Better Platform]</b><br>
+          	The list of functions 
             to add will grow over time. The initial set includes: annotation presentation 
             and navigation, user assigned colors and fonts, spell checking, user 
-            defined, persistent folding, quick diff, templates.
-            <b>[Rich client platform]</b></p>
+            defined, persistent folding, quick diff, templates and investigate to
+            make file buffers work with RCP.
+          <p>
         </li>
+        <li>Innovate the existing editor look and feel. <b>[Simple to use, Scaling up]</b><br>
+         The list of feature will change over time. The initial set includes:
+        <ul>
+			<li>allow to click into hovers in order to click links and buttons</li>
+			<li>finish roll-over annotation work that was kicked off during 3.0</li>
+			<li>rework Find / Replace: get rid of the dialog, allow highlight all matches,  offer in-place rename of the highlighted matches</li>
+			<li>show the change history together with change comments in the text editor</li>
+			<li>enhance folding presentation: show nesting, place the icon on caption line and eventually add animation
+			<li>investigate auto-wrapping in text editor</li>
+			<li>investigate triple and 1 1/2 click</li>
+			<li>investigate to add text drag and drop</li>
+		</ul>
+         <p>
+        </li>
+        	
         <li> 
-          <p> 
           	Make the Default Text editor your favorite text editor. From time 
             to time users switch to an external text editor. The goal of this 
             plan item is to enhance the Text editor so that there is no longer 
             a need to switch. The list of functions to add will grow over time. 
             The initial set includes: annotation navigation, user assigned colors 
             and fonts, spell checking, user defined, persistent folding, templates.
-            <b>[Simple to use]</b></p>
+            <b>[Simple to use, Scaling up]</b>
+        <p>
         </li>
         <li>
           Help clients such as the Eclipse Web Tools Platform Project to improve 
           their overall integration with the Platform Text components and the 
-          workbench in general. <b>[Broadening the community]</b></li>
-        <ul>
-        </ul>
+          workbench in general. <b>[Broader community, Design for Extensibility: Be a Better Platform]</b></li>
+          <p></p>
+        </li>
       </ul>
       <h3>JDT</h3>
       <ul>
-        <li>Improve the Java editors. <b>[Simple to use, Large-scale development]</b> 
+        <li>Open up the Java editor. <b>[Design for Extensibility: Be a Better Platform]</b><br>
+          The components that become extensible might grow over time. The initial set includes:
           <ul>
-            <li>
-              Provide additional convenience and productivity text manipulation 
-              functions.</li>
-            <li> 
-              Continue the &quot;information at your finger tips&quot; and &quot;non-intrusive 
-              UI&quot; themes. 
-              <ul>
-                <li>Improve on rich visual modeless feedback.</li>
-              </ul>
-            </li>
-            <li>Provide extension point to allow for useful additions to the reconciling process such as running audits.</li>
-            <li>Provide extension point to allow for useful additions to the content assist and template proposals.</li>
+            <li>allow additions to the reconciling process such as running audits</li>
+            <li>allow additions to the content assist and template proposals</li>
           </ul>
+          <p></p>
         </li>
-        <li>
-          Improve string externalization. Possible work items are collected <a href="../development/String_Externalization_Improvements.html">here</a>.
-          <b>[Simple to use]</b></li>
-        <li> [investigate] Contribute to the resolution of the &quot;many errors&quot; 
-          issue. (cross team issue) 
-          <ul>
-            <li> If a project is improperly setup, opening a file of that project 
-              can result in lots of temporary problems. On open, the editor could 
-              propose to filter all ripple errors and to show only relevant errors.</li>
-            <li>When auto-build is enabled, the editor can warn the user when a 
-              file is saved for which temporary errors exist.</li>
-          </ul>
+        
+        <li>Enhance the Java editor. Push Java coding to the next level by polishing existing features and adding new ones. <b>[Simple to use, Scaling up]</b><br>
+        The currently planned improvements are:
+        	<ul>
+        		<li>code assist
+        		<ul>
+        			<li>integrate word completion into code assist popup</li>
+					<li>allow to auto-open code assist while typing i.e. not rely on special trigger characters</li>
+					<li>[investigate] allow to use without opening a popup</li>
+        		</ul>
+        		</li>
+        		<li>Quick views
+        		<ul>
+					<li>show additional info (e.g. Javadoc) for Quick views</li>
+					<li>allow to open Quick views for Java elements (e.g. from the Package Explorer or Outline view)</li>
+					<li>[investigate] context menu in Quick views</li>
+        		</ul>
+        		</li>
+				<li>show horizontal lines between members</li>
+				<li>add more occurrence markings, for example for 'break', 'continue', etc. </li>
+				<li>improve Javadoc view by adding support for links (relative URLs, @see, @link,...) and add navigation support (add back button / context menu)</li>
+				<li>add support to extract Javadoc from attached Javadoc (JDT UI?)</li>
+				<li>color schemes for syntax highlighting (cross team issue)</li>
+				<li>[investigate] improve support for code blocks</li>
+        	</ul>
+          <p></p>
+        </lu>
+        
+        <li>Improve the existing NLS tooling. The improvements added in 3.1 need also be provided for the new Eclipse string externalization
+   		  	   pattern. Additional tooling like a a builder that reports NLS problems for unused keys and unused property file entries should
+   	   		  be added. Further possible items are listed <a href=../development/String_Externalization_Improvements.html>here</a>.
+          <b>[Simple to use, Scaling up]</b>
+          <p></p>
         </li>
       </ul>
-      <h2><a NAME="Work_Items"></a>Work items</h2>
-      <p>Work items represent subjects on which the Platform/JDT Text team will 
-        work in the course of the 3.2 development. The listed subitems represent 
+      <h2><a NAME="Work_Items"></a>Possible Work Items</h2>
+      <p>This section represents subjects on which the Text team might 
+        work in the course of the 3.2 development. The items represent 
         initial input based on the current state of knowledge. There might be 
         shifts of focus during the development process. Items that are affected 
         by the concrete resolution of cross team issues are marked as such. Items 
         that are of exploratory nature are tagged with [investigate].</p>
-      <h3>Component independent</h3>
+      <h3>Component Independent</h3>
       <ul>
         <li>code cleanup</li>
         <ul>
@@ -149,7 +179,7 @@
         </li>
         <li>reconciler 
           <ul>
-            <li>clarify life cycle (multiple concurrent reconcilers on unconfigure/configure)</li>
+            <li>clarify life-cycle (multiple concurrent reconcilers on unconfigure/configure)</li>
             <li>dirty region management in the incremental reconciler 
               <ul>
                 <li>a reconciling strategy should cross out the dirty regions 
@@ -165,6 +195,8 @@
                   reconciling steps</li>
               </ul>
             </li>
+			<li>[investigate] have only one for all open Java editors
+			<li>[investigate] use job infrastructure instead of own thread</li>
             <li>[investigate] adaptive reconciler timing</li>
           </ul>
         </li>
@@ -178,7 +210,6 @@
                   can happen</li>
               </ul>
             </li>
-            <li>[investigate] time stamped document events</li>
           </ul>
         </li>
         <li>
@@ -230,11 +261,10 @@
         <li>
           Open External File 
           <ul>
-            <li> find a way to open external files also when registered editor 
-              does not support file buffers </li>
-            <li>support vertical ruler, overview ruler etc.; provide annotation 
-              model that is not resource dependent</li>
-            <li>generalize for non-text files (cross team issue)</li>
+            <li>improve opening of external files (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=58179">bug 58179</a>)</li>
+			<li>make it work for OLE documents, e.g. MS Word (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=74194">bug 74194</a>)</li>
+            <li>support vertical ruler, overview ruler etc.; provide annotation model that is not resource dependent</li>
+			<li>provide 'Open With' (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=98002">bug 98002</a>)</li>
           </ul>
         </li>
         <li>
@@ -281,6 +311,7 @@
         </li>
         <li>annotations / annotation presentation 
           <ul>
+          	<li>add annotation (selection) events (helps to finish the roll-over annotation work)</li>
             <li>all annotation types should support all presentation types (help 
               other teams porting to the new presentation types)</li>
             <li>allow annotations to be presented using text foreground/background 
@@ -365,6 +396,7 @@
               dumb </li>
             <li>introduce light weight &quot;Surround with&quot; and &quot;Search&quot; 
               menu (cross team issue)</li>
+            <li>[investigate] provide a "Source" &gt "Surround with" command (support for surround with is hidden)
             <li>[investigate] auto correct on typing</li>
             <li>[investigate] auto format on typing</li>
             <li>[investigate] direct interaction with auto edit strategies 
@@ -411,6 +443,7 @@
         <li>
           Quick diff 
           <ul>
+          	<li>[investigate] rewrite Quick Diff to use equivalence class
             <li>[investigate] character level diff in hover<font color="#000000"></font></li>
           </ul>
         </li>
@@ -480,6 +513,7 @@
         </li>
         <li>folding 
           <ul>
+          	<li>make folding more stable in case of typing errors: do not expand or collapse if errors get introduced</li>
           </ul>
         </li>
         <li>content assist 
@@ -508,11 +542,10 @@
           </ul>
         </li>
         <li>
-          syntax highlighting 
+          syntax coloring 
           <ul>
-            <li>syntax highlighting preview on the preference page should background 
-              highlight all occurrences of the selected type, also support backward 
-              coupling</li>
+            <li>improve preference page: preview should background highlight all occurrences of the selected type, also support backward coupling</li>
+            <li>improve preference page: find a way that users don't have to expand the nodes each time</li>
             <li>improve integration with the color and font preferences provided by the workbench (cross team issue)</li>
             <li>[investigate] support coloring schemes, scheme switch on tool bar (cross team issue)</li>
             <li>[investigate] semantic highlighting should use annotations instead of its own model and listener</li>
@@ -547,6 +580,7 @@
         <li>
           navigation 
           <ul>
+          	<li>subclassed/implemented/overriden member indicator in vertical ruler and allow to navigate to them</li>
             <li>generalize annotation navigation support to become part of Platform Text </li>
             <li>[investigate] support Move to next parameter (see content assist: re-establish linked mode)</li>
           </ul>
@@ -568,60 +602,64 @@
             </li>
           </ul>
         </li>
-        <li>reconciling 
+        <li>reconciler 
           <ul>
-            <li>provide extension point to allow for useful additions to the reconciling 
-              process such as running audits</li>
+            <li>provide extension point to allow for useful additions to the reconciling process such as running audits</li>
             <li>[investigate] generalize handling of temporary annotations implemented 
               in the CompilationUnitAnnotationModel to become part of Platform 
               Text</li>
           </ul>
         </li>
-        <li>[investigate] Quick fix 
+        <li>preferences
+        	<ul>
+		        <li>move tab to spaces to Platform Text preferences (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=82296">bug 82296</a>)</li>
+		        <li>allow to export syntax color preference on their own</li>
+	            <li>improve syntax coloring preference page: preview should background highlight all occurrences of the selected type, also support backward coupling</li>
+	            <li>improve syntax coloring preference page: find a way that users don't have to expand the nodes each time</li>
+		        
+		    </ul>
+        </li>
+        <li>Quick Assist and Quick Fix
           <ul>
-            <li>generalize QuickFix infrastructure to become part of Platform 
-              Text</li>
+            <li>generalize Quick Assist and Quick Fix infrastructure to become part of Platform Text</li>
           </ul>
         </li>
       </ul>
-      <h2>Cross team issues</h2>
+      <h2>Cross Team Issues</h2>
       <p>This section contains cross team issues that have to be clarified. The 
         concrete outcome effects the dependent work items listed above.</p>
       <ul>
-        <li>synchronized blocks compared to ILock</li>
-        <li>reveal file types in preferences, define editors for file types rather 
-          than extensions etc.</li>
-        <li>editor splitting (to be synchronized with the Component Framework and multipage editor efforts)</li>
-        <li>simplification/harmonizing of action contribution</li>
-        <li>harmonize with potential global undo manager</li>
-        <li>colors and fonts 
-          <ul>
-            <li>syntax color schemes</li>
-            <li>integration with the colors and fonts preference page</li>
-          </ul>
-        </li>
-        <li>gesture support/selection modes/hover configuration 
-          <ul>
-            <li>mouse/keyboard interaction is just a different kind of &quot;key&quot; 
-              binding, i.e. a different kind of activating a command. We should 
-              only provide the actions (command implementations) and the rest 
-              should be user configurable.</li>
-          </ul>
-        </li>
+      	<li>Platform UI
+	      <ul>
+	      	<li>continue simplification/harmonizing of action contribution</li>
+	        <li>synchronized blocks compared to ILock</li>
+	        <li>editor splitting (to be synchronized with the Component Framework and multipage editor efforts)</li>
+	        <li>compatibility layer for commands moved to LTK UI plug-in</li>
+            <li>[investigate] support coloring schemes, scheme switch on tool bar</li>
+			<li>enhanced 'Colors and Fonts preference' page support needed to show syntax and annotation coloring preferences</li>
+	        <li>gesture support/selection modes/hover configuration 
+	          <ul>
+	            <li>mouse/keyboard interaction is just a different kind of &quot;key&quot; 
+	              binding, i.e. a different kind of activating a command. We should 
+	              only provide the actions (command implementations) and the rest 
+	              should be user configurable.</li>
+	          </ul>
+	        </li>
+	        <li>light weight menus:
+	        	<ul>
+	        		<li>Go to</li>
+	        		<li>Surround with</li>
+	        		<li>...</li>
+	        	</ul>
+	        </li>
+	       </ul>
+	     </li>
         <li>JDT Core 
           <ul>
+            <li>adopt JDT Core handling CUs without *.java ending (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=71460">bug 71460</a>)</li>
             <li>check for <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=72234">bug 72234</a></li>
           </ul>
         </li>
-        <li> text independent editor layer implementing validateEdit</li>
-        <li>predefined line terminator for new files (to be specified similar 
-          to encoding)</li>
-        <li>light weight menus:
-        	<ul>
-        		<li>Go to</li>
-        		<li>Surround with</li>
-        		<li>...</li>
-        	</ul>
         <li>SWT 
           <ul>
             <li>SWT rich text widget providing different fonts, font styles, and 
@@ -630,8 +668,17 @@
               based folding)</li>
           </ul>
         </li>
+        <li> text independent editor layer implementing validateEdit</li>
         <li>scripting strategy of the platform</li>
-        <li>compatibility layer for commands moved to LTK UI plug-in</li>
+        <li> [investigate] contribute to the resolution of the &quot;many errors&quot; 
+           <ul>
+            <li> if a project is improperly setup, opening a file of that project 
+              can result in lots of temporary problems. On open, the editor could 
+              propose to filter all ripple errors and to show only relevant errors.</li>
+            <li>when auto-build is enabled, the editor can warn the user when a 
+              file is saved for which temporary errors exist.</li>
+          </ul>
+        </li>
       </ul>
     </td>
 </tr>
@@ -655,11 +702,11 @@
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Absences</h4>
 	<ul>
 		<li>Tom: 12 days</li>
-		<li>Dani: 7 days</li>
+		<li>Dani: 10 days</li>
 		<li>1 public holiday</li>
 	</ul>
       
-      <h3>Previous milestones</h3>
+      <h3>Previous Milestones</h3>
       <p>Previous 3.2 milestones can be reviewed <a href="previous_plans.html">here</a>.</p>
     </td>
 </tr>
@@ -672,13 +719,10 @@
 <tr>
 <td>
 <ul>
-<li>
-<a href="http://dev.eclipse.org/bugs/buglist.cgi?bug_status=NEW&bug_status=REOPENED&email1=platform-text-inbox@eclipse.org&emailtype1=exact&emailassigned_to1=1&email2=&emailtype2=substring&emailreporter2=1&bugidtype=include&bug_id=&changedin=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&product=Platform&component=Text&short_desc=&short_desc_type=allwordssubstr&long_desc=&long_desc_type=allwordssubstr&keywords=&keywords_type=anywords&field0-0-0=noop&type0-0-0=noop&value0-0-0=&namedcmd=All&newqueryname=Text%2BNew&tofooter=1&order=Reuse%2Bsame%2Bsort%2Bas%2Blast%2Btime">newly
-reported PRs</a></li>
-
-<li>
-<a href="http://dev.eclipse.org/bugs/buglist.cgi?bug_status=ASSIGNED&email1=platform-text-inbox@eclipse.org&emailtype1=exact&emailassigned_to1=1&email2=&emailtype2=substring&emailreporter2=1&bugidtype=include&bug_id=&changedin=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&product=Platform&component=Text&short_desc=&short_desc_type=allwordssubstr&long_desc=&long_desc_type=allwordssubstr&keywords=&keywords_type=anywords&field0-0-0=noop&type0-0-0=noop&value0-0-0=&namedcmd=All&newqueryname=Text%2BInbox&tofooter=1&order=Reuse%2Bsame%2Bsort%2Bas%2Blast%2Btime">assigned
-PRs</a></li>
+<li><a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&product=JDT&product=Platform&component=Text&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=REOPENED&emailassigned_to1=1&emailtype1=substring&email1=inbox&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=400d&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">new bug reports</a></li>
+<li><a href="http://dev.eclipse.org/bugs/buglist.cgi?bug_status=ASSIGNED&email1=platform-text-inbox@eclipse.org&emailtype1=exact&emailassigned_to1=1&email2=&emailtype2=substring&emailreporter2=1&bugidtype=include&bug_id=&changedin=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&product=Platform&component=Text&short_desc=&short_desc_type=allwordssubstr&long_desc=&long_desc_type=allwordssubstr&keywords=&keywords_type=anywords&field0-0-0=noop&type0-0-0=noop&value0-0-0=&namedcmd=All&newqueryname=Text%2BInbox&tofooter=1&order=Reuse%2Bsame%2Bsort%2Bas%2Blast%2Btime">accepted Platform Text bug reports</a></li>
+<li><a href="http://dev.eclipse.org/bugs/buglist.cgi?bug_status=ASSIGNED&email1=jdt-text-inbox@eclipse.org&emailtype1=exact&emailassigned_to1=1&email2=&emailtype2=substring&emailreporter2=1&bugidtype=include&bug_id=&changedin=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&product=JDT&component=Text&short_desc=&short_desc_type=allwordssubstr&long_desc=&long_desc_type=allwordssubstr&keywords=&keywords_type=anywords&field0-0-0=noop&type0-0-0=noop&value0-0-0=&namedcmd=All&newqueryname=Text%2BInbox&tofooter=1&order=Reuse%2Bsame%2Bsort%2Bas%2Blast%2Btime">accepted JDT Text bug reports</a></li>
+<li><a href="https://bugs.eclipse.org/bugs/query.cgi?short_desc_type=allwordssubstr&short_desc=&product=JDT&product=Platform&component=Text&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&namedcmd=Assigned&newqueryname=&field0-0-0=noop&type0-0-0=noop&value0-0-0=">find a bug report</a></li>
 </ul>
 </td>
 </tr>
