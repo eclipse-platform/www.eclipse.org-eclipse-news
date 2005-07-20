@@ -61,7 +61,7 @@
 			<li>enhance folding presentation: show nesting, place the icon on caption line and eventually add animation
 			<li>investigate auto-wrapping in text editor</li>
 			<li>investigate triple and 1 1/2 click</li>
-			<li>investigate to add text drag and drop</li>
+			<li>investigate to add text drag and drop (cross team issue)</li>
 		</ul>
          <p></p>
         </li>
@@ -99,8 +99,11 @@
         	<ul>
         		<li>code assist
         		<ul>
+        			<li>polish and fine tune existing features</li>
         			<li>integrate word completion into code assist popup</li>
+        			<li>automatically add imports while typing</li>
 					<li>allow to auto-open code assist while typing i.e. not rely on special trigger characters</li>
+					<li>[investigate] allow to click into additional hover window, use browser widget and allow navigation</li>
 					<li>[investigate] allow to use without opening a popup</li>
         		</ul>
         		</li>
@@ -113,9 +116,10 @@
         		</li>
 				<li>show horizontal lines between members</li>
 				<li>add more occurrence markings, for example for 'break', 'continue', etc. </li>
-				<li>improve Javadoc view by adding support for links (relative URLs, @see, @link,...) and add navigation support (add back button / context menu)</li>
-				<li>add support to extract Javadoc from attached Javadoc (JDT UI?)</li>
+				<li>improve Javadoc view by adding support for links (relative URLs, @see, @link,...) and add navigation and history support</li>
+				<li>add support to extract Javadoc from attached Javadoc (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=41421">bug 41421</a>) (JDT UI?)</li>
 				<li>color schemes for syntax highlighting (cross team issue)</li>
+				<li>Declaration and Javadoc view should allow to navigate to other members in hierarchy (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=82709">bug 82709</a>)</li>
 				<li>[investigate] better surface quick assists</li>
 				<li>[investigate] improve support for code blocks</li>
         	</ul>
@@ -131,7 +135,7 @@
       </ul>
       <h2><a NAME="Work_Items"></a>Possible Work Items</h2>
       <p>This section is a collection of work items collected over time.
-      Items on which the Text team plans to work in the course of the 3.2 development are marked with <font class="indexsub" color="#8080ff">[3.2]</font>.
+      Items on which the Text team plans to work in the course of the 3.2 development are marked with <font class="indexsub" color="#8080ff">[3.2]</font> (t.b.d).
 		There might be 
         shifts of focus during the development process. Items that are affected 
         by the concrete resolution of cross team issues are marked as such. Items 
@@ -448,8 +452,9 @@
         <li>
           Quick diff 
           <ul>
+			<li><font class="indexsub" color="#8080ff">[3.2]</font> [investigate] add next / prev change buttons (button list might be activated manually)</li>
           	<li>[investigate] rewrite Quick Diff to use equivalence class
-            <li>[investigate] character level diff in hover<font color="#000000"></font></li>
+            <li>[investigate] character level diff in hover</li>
           </ul>
         </li>
         <li>embedded content 
@@ -509,11 +514,10 @@
                 <li>support inherited Javadoc even without @inherit</li>
               </ul>
             </li>
-            <li>[investigate] extract information from external Javadoc</li>
+            <li>inform user how to correctly setup Javadoc and source hovers if no hover can be extracted (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=69623">bug 69623</a>)</li>
+            <li>[investigate] extract information from external Javadoc (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=41421">bug 41421</a>) (JDT UI?)</li>
             <li>[investigate] use <code>Browser</code> widget for Javadoc hover</li>
             <li>[investigate] allow to reach hover via mouse (i.e. F2 via mouse)</li>
-            <li>[investigate] if no hover can be extracted inform user how to 
-              correctly setup Javadoc and source hovers?</li>
           </ul>
         </li>
         <li>folding 
@@ -542,13 +546,14 @@
               based on file contents</font></li>
             <li><font color="#000000">[investigate] re-establish linked mode for 
               method calls on Show context info</font></li>
-            <li><font color="#000000">[investigate] code assist remembers previous 
-              choices in its rating</font></li>
+            <li><font color="#000000">[investigate] code assist remembers previous choices in its rating (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=32960">bug 32960</a>) (cross team issue)</font></li>
           </ul>
         </li>
         <li>
           syntax coloring 
           <ul>
+          	<li>add semantic highlighting for types (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=84769">bug 84769</a>)</li>
+          	<li>add semantic highlighting for component boundaries (project, working set)</li>
             <li>improve preference page: preview should background highlight all occurrences of the selected type, also support backward coupling</li>
             <li>improve preference page: find a way that users don't have to expand the nodes each time</li>
             <li>improve integration with the color and font preferences provided by the workbench (cross team issue)</li>
