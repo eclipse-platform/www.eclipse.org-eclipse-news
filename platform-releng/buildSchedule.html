@@ -9,7 +9,7 @@
 <table border=0 cellspacing=5 cellpadding=2 width="100%" > <tr> <td align=left width="72%"> 
 <font class=indextop> build schedule</font><br> 
 <font class=indexsub>last updated 
-20/07/20 17:00 EDT</font></td>
+20/07/20 17:00 </font></td>
     <td width="28%"><img src="http://dev.eclipse.org/images/Idea.jpg" height=86 width=120></td></tr> 
 </table><font class=indextop> </font><table border=0 cellspacing=5 cellpadding=2 width="100%" > 
 <tr> <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font face="Arial,Helvetica" color="#FFFFFF"> 
@@ -18,117 +18,127 @@ Regularly Scheduled Builds</font></b></td></tr>
 <p>  <br>
 
   N builds replace tags specified in org.eclipse.releng map files with HEAD.<br>
-  I builds use tags in org.eclipse.releng map files. Teams must update map files 
-  in time for I build start times.<br>
-Performance testing will only occur where indicated.</p>
-<p>Times are all EDT (GMT +5)<br>
-</p>
-<table width="100%" border="1" cellspacing="5">
+I builds use tags org.eclipse.releng map files.
+<br>M builds use tags in the R3_1_maintenance
+branch of org.eclipse.releng. 
+<br>Teams must update map files in time for I and M build start times.<br>
+  Performance testing will only occur where indicated.</p>
+<p>Times are all EDT (GMT +5)</p>
+<table width="100%" border="1">
   <tr>
     <td width="9%">&nbsp;</td>
-    <td width="28%"><strong>3.1.1 Stream builds</strong></td>
-    <td width="12%">Date (Local)</td>
-    <td width="13%">Date (UTC)</td>
-    <td width="38%">Rebuild Policy</td>
+    <td width="34%"><h4>Build</h4></td>
+    <td width="14%"><h4>Date (Local)</h4></td>
+    <td width="13%"><h4>Date (Local)</h4></td>
+    <td width="30%"><h4>Rebuild Policy</h4></td>
   </tr>
-  <tr> 
-    <td width="9%">Wednesday</td>
-    <td width="28%"> <p>M build toward eclipse 3.1.1 with performance testing
-        against 3.0 performance data.</p>
+  <tr>
+    <td>Monday</td>
+    <td> 3.2 N build<br>
     </td>
-    <td width="12%">12:00 EDT</td>
-    <td width="13%">Wed 17:00 UTC</td>
-    <td width="38%">Same Day Rebuild</td>
+    <td>00:10 </td>
+    <td>05:10 UTC</td>
+    <td>Public humiliation but no rebuild.</td>
   </tr>
-</table>
-<p>&nbsp; </p>
-<table width="100%" border="1" cellspacing="5">
   <tr>
     <td>&nbsp;</td>
-    <td><strong>3.2 Stream builds</strong></td>
-    <td>Date (Local)</td>
-    <td>Date (UTC)</td>
-    <td>Rebuild Policy</td>
+    <td>Performance testing on the previous weeks' declared 3.2 milestone when
+    applicable</td>
+    <td>12:00 </td>
+    <td>17:00 UTC</td>
+    <td>Rebuild until success</td>
   </tr>
   <tr>
-    <td width="9%">Monday-Sunday</td>
-    <td width="28%"> N build</td>
-    <td width="12%">00:10 EST</td>
-    <td width="13%">05:10 UTC</td>
-    <td width="38%">Public
-humiliation but no rebuild.</td>
+    <td>Tuesday</td>
+    <td>3.2 N build</td>
+    <td>00:10 </td>
+    <td>05:10 UTC</td>
+    <td>Public humiliation but no rebuild.</td>
   </tr>
-  <tr>
-    <td width="9%">Tuesday</td>
-    <td width="28%"><p>I build with performance testing against 3.1 performance data..</p>
-    </td>
-    <td width="12%">08:00 EST</td>
-    <td width="13%">13:00 UTC</td>
-    <td width="38%"><p>Same day rebuild if compile errors, missing plugins, the
-        build is unusable or if the drops do not get posted.Otherwise, a rebuild
-        will occur
-Wednesday 8:00 EDT. </p>
-    </td>
-  </tr>
-  <tr>
-    <td width="9%">Wednesday</td>
-    <td width="28%"><p>I  rebuild if requested</p>
-    </td>
-    <td width="12%">08:00  EST</td>
-    <td width="13%">13:00 UTC</td>
-    <td width="38%"><p>Same day rebuild if compile errors, missing plugins, the
-        build is unusable or if the drops do not get posted.Otherwise, a rebuild
-        will occur
-Thursday 8:00 EDT. </p>
-    </td>
-  </tr>
-  <tr>
-    <td width="9%">Thursday</td>
-    <td width="28%"><p> I rebuild if requested</p>
-    </td>
-    <td width="12%">08:00 EST</td>
-    <td width="13%">13:00 UTC</td>
-    <td width="38%"><p>Rebuild until
-success.</p>
-    </td>
-  </tr>
-</table>
-<p>&nbsp;</p>
-<table width="100%" border="1" cellspacing="5">
   <tr>
     <td>&nbsp;</td>
-    <td><strong>Additional Performance  Tests</strong></td>
-    <td>Date (local)</td>
-    <td>Date (UTC)</td>
-    <td>Rebuild Policy</td>
+    <td>3.2 I build with performance testing against 3.1 performance data..</td>
+    <td>08:00 </td>
+    <td>13:00 UTC</td>
+    <td>Same day rebuild if compile errors, missing plugins, the build is unusable
+      or if the drops do not get posted.Otherwise, a rebuild will occur Wednesday
+    8:00 . </td>
   </tr>
   <tr>
-    <td width="9%">Monday</td>
-    <td width="28%">performance testing on the previous weeks' declared milestone
-    when applicable</td>
-    <td width="12%">12:00 EST</td>
-    <td width="13%">17:00 UTC</td>
-    <td width="38%"><br>
-      Rebuild until
-success.      </td>
+    <td>Wednesday</td>
+    <td>3.2 N build</td>
+    <td>00:10 </td>
+    <td>05:10 UTC</td>
+    <td>Public humiliation but no rebuild.</td>
   </tr>
   <tr>
-    <td width="9%">Thursday</td>
-    <td width="28%"> performance re-testing on eclipse 3.0. Tests build from
-    30_perf stream of org.eclipse.releng map files</td>
-    <td width="12%">12:00 EST</td>
-    <td width="13%">17:00 UTC</td>
-    <td width="38%">Rebuild until
-success. </td>
+    <td>&nbsp;</td>
+    <td>3.2 I rebuild if requested</td>
+    <td>08:00 </td>
+    <td>13:00 </td>
+    <td>Same day rebuild if compile errors, missing plugins, the build is unusable
+      or if the drops do not get posted.Otherwise, a rebuild will occur Thursday
+    8:00 . </td>
   </tr>
   <tr>
-    <td width="9%">Friday</td>
-    <td width="28%">performance re-testing on eclipse 3.1. Tests built from R3_1_maintenance
+    <td>&nbsp;</td>
+    <td>3.1.1 M build  with performance testing against 3.0
+    performance data.</td>
+    <td>12:00 </td>
+    <td>17:00 UTC</td>
+    <td>Same day rebuild</td>
+  </tr>
+  <tr>
+    <td>Thursday</td>
+    <td>3.2 N build with performance tests</td>
+    <td>00:10 </td>
+    <td>05:10 UTC</td>
+    <td>Public humiliation but no rebuild.</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>3.2 I rebuild if requested</td>
+    <td>08:00</td>
+    <td>13:00 UTC</td>
+    <td>Rebuild until success</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>Performance re-testing on eclipse 3.0. Tests build from 30_perf
+      stream of org.eclipse.releng map files</td>
+    <td>12:00 </td>
+    <td>17:00 </td>
+    <td>Rebuild until success</td>
+  </tr>
+  <tr>
+    <td>Friday</td>
+    <td>3.2 N build</td>
+    <td>00:10 </td>
+    <td>05:10 UTC</td>
+    <td>Public humiliation but no rebuild.</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>Performance re-testing on eclipse 3.1. Tests built from R3_1_maintenance
     stream of org.eclipse.releng map files.</td>
-    <td width="12%">12:00 EST</td>
-    <td width="13%">17:00 UTC</td>
-    <td width="38%">Rebuild until
+    <td>12:00 </td>
+    <td>17:00 UTC</td>
+    <td>Rebuild until
 success.</td>
+  </tr>
+  <tr>
+    <td>Saturday</td>
+    <td>3.2 N build</td>
+    <td>00:10 </td>
+    <td>05:10 UTC</td>
+    <td>Public humiliation but no rebuild.</td>
+  </tr>
+  <tr>
+    <td>Sunday</td>
+    <td>3.2 N build</td>
+    <td>00:10 </td>
+    <td>05:10 UTC</td>
+    <td>Public humiliation but no rebuild.</td>
   </tr>
 </table>
 <p>&nbsp;</p>
@@ -140,7 +150,7 @@ Upcoming Builds</FONT></B></TD></TR> <TR> <TD HEIGHT="19">
 <tr> <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font face="Arial,Helvetica" color="#FFFFFF">Build Retention 
 Policy</font></b></td></tr> <tr> <td height="19"> <p>In an effort to reduce our disk utilization on the eclipse.org infrastructure and reduce the amount of data sent to the mirrors, we have adopted the following build retention policy.</p>
 <li>Release builds are kept indefinitely and moved to the eclipse.org archive
-  server when they are now longer current</li>
+  server as appropriate</li>
 <li>Four integration and nightly builds are retained</li><li>Maintenance builds are kept until a release of the maintenance stream is available.</li><li>Stable builds are retained until a release is available.</li></li></table>
 
 <table border=0 cellspacing=5 cellpadding=2 width="100%" > 
