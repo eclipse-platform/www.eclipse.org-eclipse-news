@@ -9,8 +9,24 @@
 <body>
 <H3>Eclipse Platform Release Engineering FAQ</H3>
 <H3>&nbsp;</H3>
+
+<H4>Table of contents</H4>
+<ol>
+<li><a href="#q1">What hardware comprises the platform-releng build infrastructure?</a></li>
+<li><a href="#q2">Is the Eclipse platform build process completely automated?</a></li>
+<li><a href="#q3">What's the difference between an integration
+    and nightly build?</a></li>
+<li><a href="#q4">I would like to recompile eclipse on a platform that is not currently supported.
+    What is the best approach to this? What is the best way to ensure that the
+    community can use my work?</a></li>
+<li><a href="#q5">How long does the build take to complete?</a></li>
+<li><a href="#q6">When is the next build?</a></li>
+<li><a href="#q7">I'm looking for an older build but can't find them on the download page?</a></li>
+<li><a href="#q8">Best releng practices from our Eclipsecon 2005 poster</a></li>
+<li><a href="#q9">Useful reference documents</a></li>
+</ol>
 <ol start=1>
-<li>What hardware comprises the platform-releng build infrastructure?
+<li><a name="q1">What hardware comprises the platform-releng build infrastructure?</a>
   <p>The eclipse platform build infrastructure consists of<br>
     2 linux build machines (2GHz, 1GB  and  PowerMac G5, 2GB )<br>
     2 junit test machines, one windows (2GHz, 1 GB) one linux (2.66
@@ -23,8 +39,8 @@
     (500MHz, 500MB)<br>
     1 database server with apache derby installed to store performance test
   results (2.5GHz, 500MB)
-</li><p></p>
-<li>Is the Eclipse platform build process completely automated?</li><p></p>
+</li><p></p><br>
+<li><a name="q2">Is the Eclipse platform build process completely automated?</a></li><p></p>
 
 
   Yes, the Eclipse
@@ -53,26 +69,27 @@ of drop
     begins. Tests occur over ssh for Linux machines, and rsh for Windows machines.
     Each component team contributes it's own tests. Once the tests are completed,
     the results are copied back to the build machine. Also, the images for the
-  performance tests are generated.</p>
-  <li>What's the difference between an integration
-    and nightly build? 
+  performance tests are generated.</p><p></p>
+  <li><a name="q3">What's the difference between an integration
+    and nightly build?</a>
       </p>
       <p>With
       integration builds, we specify a version of the plugin to retreive in the
     map files. (org.eclipse.releng/maps). With nightly builds, we retrieve
-      the plugins specified in the map files from the HEAD stream.      
-  </li>
-    <p></p>
-  <li>I would like to recompile eclipse on a platform that is not currently supported.
+      the plugins specified in the map files from the HEAD stream.   The types of builds we run are described  
+	   <a href="http://download.eclipse.org/eclipse/downloads/build_types.html">here</a>.   
+  </li><p></p>
+    <br>
+  <li><a name="q4">I would like to recompile eclipse on a platform that is not currently supported.
     What is the best approach to this? What is the best way to ensure that the
-    community can use my work? <p>The best approach is use the source build drop
+    community can use my work? </a><p>The best approach is use the source build drop
       and modify the scripts to support  that you are interested in. Then open
       a <a href="https://bugs.eclipse.org">bug</a> with product <i>platform</i> and
       component <i>releng</i> attaching the 
-	the patches to the scripts that were required to build the new drop.</b> </p>
+	the patches to the scripts that were required to build the new drop.</b><p></p>
   </li>
-  <p></p>
-  <li>How long does the build take to complete?</li>
+ <br>
+  <li><a name="q5">How long does the build take to complete?</a></li>
   <p></p>
   <p>It takes three hours for all the drops to be produced. Junit (five hours)
   and performance tests (eight hours) run in parallel after the drops have been
@@ -81,13 +98,16 @@ of drop
   two hours for the performance results to be generated. We will reduce the amount
   of time that  the build takes in the 3.2 timeframe by implementing faster hardware
   and more parallel ant tasks.
-</p>
-  <p><li>When is the next build?</li><p>Please refer to the <a href="buildSchedule.html">build
+</p><br>
+  <p><li><a name="q6">When is the next build?</a></li><p>Please refer to the <a href="buildSchedule.html">build
       schedule</a></p><br>
+	  
+	<li><a name="q7">I'm looking for an older build but can't find them on the download page?</a><p></p>
+	Check out the <a href="http://archive.eclipse.org/eclipse/downloads">archive site</a> for vintage builds.</li><p></p><br>
   
-  <li>Best releng practices from
-    our Eclipsecon </li>
-  2005 poster
+  <li><a name="q8">Best releng practices from
+    our Eclipsecon 
+  2005 poster</a></li><p></p>
   </p>
   <p>1. Automate the build process from end-to-end and automate early.<br>
     2. Use PDE Build in Eclipse to generate build scripts.<br>
@@ -99,9 +119,9 @@ of drop
     7. Schedule builds at regular intervals and enforce rebuild policies.<br>
     8. Use map files in a central cvs repository.<br>
     9. Build on Linux.<br>
-    10. Have fun! </p>
+    10. Have fun! </p><br>
   <p>    
-  <li>Useful reference documents  <p>
+  <li><a name="q9">Useful reference documents</a><p>
       <a href="http://dev.eclipse.org/viewcvs/index.cgi/*checkout*/org.eclipse.releng.eclipsebuilder/readme.html?rev=HEAD&amp;content-type=text/html">Running
       a build using the scripts in eclipsebuilder</a></p>
 
@@ -121,7 +141,7 @@ of drop
    
 
 
-  </li>
+  </li><p></p>
 </ol>
 </body>
 </html>
