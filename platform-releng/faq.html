@@ -24,8 +24,9 @@
 <li><a href="#q7">I'm looking for an older build but can't find them on the download page?</a></li>
 <li><a href="#q8">How do I run the performance tests from the zips provided on the download
   page?</a></li>
-<li><a href="#q9">Best releng practices from our Eclipsecon 2005 poster</a></li>
-<li><a href="#q10">Useful reference documents</a></li>
+<li><a href="#q9">What do I need to do to use org.eclipse.releng.basebuilder from HEAD now that the Xerces plugin has been removed?</a>
+<li><a href="#q10">Best releng practices from our Eclipsecon 2005 poster</a></li>
+<li><a href="#q11">Useful reference documents</a></li>
 </ol>
 <ol start=1>
 <li><a name="q1">What hardware comprises the platform-releng build infrastructure?</a>
@@ -78,14 +79,17 @@ of drop
       <p>With
       integration builds, we specify a version of the plugin to retreive in the
     map files. (org.eclipse.releng/maps). With nightly builds, we retrieve
-      the plugins specified in the map files from the HEAD stream.   The types of builds we run are described  
+      the plugins specified in the map files from the HEAD stream.   The types
+        of builds we run are described  
 	   <a href="http://download.eclipse.org/eclipse/downloads/build_types.html">here</a>.   
   </li><p></p>
     <br>
-  <li><a name="q4">I would like to recompile eclipse on a platform that is not currently supported.
-    What is the best approach to this? What is the best way to ensure that the
-    community can use my work? </a><p>The best approach is use the source build drop
-      and modify the scripts to support  that you are interested in. Then open
+  <li><a name="q4">I would like to recompile eclipse on a platform that is not
+      currently supported. What is the best approach to this? What is the best
+      way to ensure that the
+    community can use my work? </a><p>The best approach is use the source build
+      drop and modify the scripts to support that you are interested in. Then
+      open
       a <a href="https://bugs.eclipse.org">bug</a> with product <i>platform</i> and
       component <i>releng</i> attaching the 
 	the patches to the scripts that were required to build the new drop.</b><p></p>
@@ -104,14 +108,47 @@ of drop
   <p><li><a name="q6">When is the next build?</a></li><p>Please refer to the <a href="buildSchedule.html">build
       schedule</a></p><br>
 	  
-	<li><a name="q7">I'm looking for an older build but can't find them on the download page?</a><p></p>
-	Check out the <a href="http://archive.eclipse.org/eclipse/downloads">archive site</a> for vintage builds.</li><p></p><br>
-  <li><a name="q8"/>How do I run the performance tests from the zips provided on the download
-  page?<p></p>
+	<li><a name="q7">I'm looking for an older build but can't find them on the download
+	    page?</a><p></p>
+	Check out the <a href="http://archive.eclipse.org/eclipse/downloads">archive
+	site</a> for vintage builds.</li><p></p><br>
+  <li><a name="q8"/>How do I run the performance tests from the zips provided
+    on the download page?<p></p>
   Check out <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=91229#c3">this
   bug</a></li><br><p></p>
   
-  <li><a name="q9">Best releng practices from
+  <li><a name=q8>What do I need to do to use org.eclipse.releng.basebuilder from
+      HEAD now that the Xerces plugin has been removed?</a></li><p>If you use
+        the org.eclipse.releng.basebuilder from HEAD in your builds and you use
+        TestVersionTracker to create a test.properties file (search for &quot;TestVersionTracker&quot; in
+        your customTargets.xml build scripts), please read on.</p>
+  
+  
+  
+  
+	
+      <p>Some older versions of the TestVersionTracker class required xerces
+        on the classpath. On Monday, we will be removing the xerces jars from
+        the HEAD stream only of org.eclipse.releng.basebuilder.</p>
+      <p>For any team broken by this, a &lt;generateTestProperties&gt; custom
+        Ant task has been created which does the same. It is available in the
+        org.eclipse.releng.basebuilder/plugins/org.eclipse.build.tools plug-in
+        from HEAD. To use all you will need to do is the following replacement:</p>
+      <p>Replace text such as this (taken from GEF):</p>
+  <pre><blockquote><p>&lt;property name=&quot;build.compiler&quot; value=&quot;org.eclipse.jdt.core.JDTCompilerAdapter&quot;/&gt;<br>&lt;javac verbose=&quot;true&quot; failonerror=&quot;true&quot; srcdir=&quot;${builderDirectory}/tools&quot; destdir=&quot;${builderDirectory}/tools&quot; 
+  classpath=&quot;${eclipse.home}/plugins/org.apache.xerces_4.0.13/xercesImpl.jar:${eclipse.home}/plugins/org.apache.xerces_4.0.13/xmlParserAPIs.jar&quot;/&gt;<br>&lt;java classname=&quot;TestVersionTracker&quot; &gt;
+&lt;arg line=&quot;${workingDirectory}/eclipse/features/org.eclipse.gef.test_3.1.0/feature.xml
+${buildDirectory} ${workingDirectory}/gef-testing/test.properties&quot; /&gt; 
+&lt;classpath&gt;</p><p>
+&lt;pathelement path=&quot;${eclipse.home}/plugins/org.apache.xerces_4.0.13/xercesImpl.jar:${eclipse.home}/plugins/org.apache.xerces_4.0.13/xmlParserAPIs.jar:${builderDirectory}/tools&quot; /&gt;
+&lt;/classpath&gt;<br>&lt;/java&gt;</p><p></blockquote></pre>with this:
+</p>
+<p><pre><blockquote><p>&lt;generateTestProperties
+buildDirectory=&quot;${buildDirectory}&quot;
+featureId=&quot;org.eclipse.sdk.tests&quot;
+outputFile=&quot;${workingDirectory}/eclipse-testing/test.properties&quot;
+/&gt;</p></blockquote></pre></p>
+<li><a name="q10">Best releng practices from
     our Eclipsecon 
   2005 poster</a></li>
   <p>1. Automate the build process from end-to-end and automate early.<br>
@@ -124,9 +161,10 @@ of drop
     7. Schedule builds at regular intervals and enforce rebuild policies.<br>
     8. Use map files in a central cvs repository.<br>
     9. Build on Linux.<br>
-    10. Have fun! </p><br>
+    10. Have fun! </p>
+  <br>
   <p>    
-  <li><a name="q10">Useful reference documents</a><p>
+  <li><a name="q11">Useful reference documents</a><p>
       <a href="http://dev.eclipse.org/viewcvs/index.cgi/*checkout*/org.eclipse.releng.eclipsebuilder/readme.html?rev=HEAD&amp;content-type=text/html">Running
       a build using the scripts in eclipsebuilder</a></p>
 
