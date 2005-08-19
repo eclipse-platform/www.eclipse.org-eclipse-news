@@ -633,6 +633,7 @@
           </ul>
         </li>
       </ul>
+      
       <h2>Cross Team Issues</h2>
       <p>This section contains cross team issues that have to be clarified. The 
         concrete outcome effects the dependent work items listed above.</p>
@@ -699,19 +700,71 @@
   <tr> 
     <td WIDTH="100%"> 
 
-	<h3><a name="Milestone_Planning"></a>Milestone M1 Plan</h3>
+	<h3><a name="Milestone_Planning"></a>Milestone M2 Plan</h3>
 	
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Top items</h4>
 		<ul>
-			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> 3.2 planning</li>
+			<li>start improving content assist</li>
+			<li>start pushing down of spell checking</li>
 			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> 3.1.1 bug fixing</li>
 		</ul>
 	
+	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Committed items</h4>
+	<ul>
+	
+		<li><h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> 3.2 planning</h5></li>
+		
+		<li><h5>Cross-team issues</h5>
+		<ul>
+			<li>discuss with JDT Core who provides the extension-point for code assist (see also below)</li>
+			<li>discuss text drag & drop support with SWT</li>
+			<li>discuss tripple-click support in StyledText with SWT</li>
+		</ul>
+		</li>
+		
+		<li><h5>Start improving content assist</h5>
+		<ul>
+			<li>discuss with JDT Core who provides the extension-point for code assist</li>
+			<li>allow to plug-in content assist processors
+			<li>allow to trigger each content assist processor (templates, types, words,...) via command</li>
+			<li>provide a word completion processor as proof-of-concept</li>
+			<li>improve handling of different proposal kinds (Java code, templates, words,...) in the same list:
+				<ul>
+					<li>sorting/relevance issue</li>
+					<li>UI/core layer issues (images and labels)</li>
+					<li>LRU history</li>
+					<li>allow users to control this via preferences</li>
+				</ul>
+			</li>
+		</ul>
+		
+		<li><h5>Start pushing down spell checking</h5>
+		<ul>
+			<li>adopt and push down Quick Assist and Quick Fix infrastructure</li>
+			<li>offer spell checking in Text editors</li>
+		</ul>
+		</li>
+		
+		<li><h5>Code cleanup</h5>
+			<ul>
+				<li>finalize the folding commands and implementations that were introduced in M1</li>
+			</ul>
+		<ul>
+		</ul>
+		</li>
+	</ul>
+	
+      <h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Permanent items</h4>
+      <ul>
+        <li>bugzilla inbox tracking</li>
+        <li>bug fixing</li>
+        <li>increase correctness test coverage</li>
+      </ul>
+	
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Absences</h4>
 	<ul>
-		<li>Tom: 12 days</li>
-		<li>Dani: 10 days</li>
-		<li>1 public holiday</li>
+		<li>Tom: 1 days</li>
+		<li>&frac12 public holiday</li>
 	</ul>
       
       <h3>Previous Milestones</h3>
