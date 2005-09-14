@@ -28,13 +28,12 @@ not currently built by the platform team.
   <li>Meet eclipse.org&nbsp; <a href="http://eclipse.org/legal/">legal
 requirements.</a></li>
   <li>Contribute patches required for build and run Eclipse on the
-new platform<br>
-    <a href="http://eclipse.org/legal/"></a></li>
-  <li>Run the build and conduct automated tests at a regular intervals. </li>
-  <li>Resolve platform specific bugs<br>
-  </li>
+new platform    <a href="http://eclipse.org/legal/"></a></li>
+  <li>Run the build and conduct automated tests during the test pass of each    <a href="http://www.eclipse.org/eclipse/development/eclipse_project_plan_3_2.html#Milestones">milestone</a></li>
+  <li>Investigate, provide patches and resolve platform specific bugs.</li>
   <li>Upload a tested build for inclusion in upcoming Eclipse
-platform milestones and releases to the eclipse.org infrastructure.<a
+platform <a href="http://www.eclipse.org/eclipse/development/eclipse_project_plan_3_2.html#Milestones">milestones</a> and
+releases to the eclipse.org infrastructure.<a
  href="http://eclipse.org/legal/"></a><br>
   </li>
 </ul>
@@ -43,18 +42,16 @@ These conditions must be met before a port will be provided on eclipse.org.<br>
 The process to include an external build on eclipse.org is as follows:<br>
 <ol>
   <li>Open a <a href="http://bugs.eclipse.org/bugs">bug</a> with the
-    Product Platform and Component Releng describing the os-ws-arch drop and
-    type of
-    drop you intend to provide.
-For instance, will you provide the SDK only?&nbsp; Or will you provide
-both the SDK and platform runtime.&nbsp; The platform releng team will
-arrange for PMC approval of support of this new drop. Once approved, a 
+    Product Platform and Component Releng describing the os-ws-arch platform
+    to be used for the build.&nbsp; The
+    platform releng team will arrange for PMC approval of support of this new
+    drop. Once approved, a 
 new project may need to be created to provide swt libraries for this
 platform.
 You
 will also need to be approved as a committer by the PMC to have commit
 rights to new platform-specific libraries
-required by your contributed platform build. As part of this progress, you will
+required by your contributed build. As part of this progress, you will
 also
 agree to the <a href="http://www.eclipse.org/legal/committerguidelines.html">committer
   due diligence guidelines</a>.</li>
@@ -62,12 +59,7 @@ agree to the <a href="http://www.eclipse.org/legal/committerguidelines.html">com
  href="http://download.eclipse.org/downloads/drops/S-3.1M4-200412162000/srcIncludedBuildInstructions.html">Source
 Build</a> or <a
  href="http://download.eclipse.org/downloads/drops/S-3.1M4-200412162000/srcFetchBuildInstructions.html">Source
-Fetch build</a> scripts to generate a build if you are contributing the
-SDK only.&nbsp; If you are interested in contributing other components,
-please use the instructions to generate a <a
- href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.releng.eclipsebuilder/readme.html?rev=HEAD&amp;content-type=text/html">
-Eclipse components from the command line using Ant scripts in this
-project and org.eclipse.releng.basebuilder.</a> Incorporate platform
+Fetch build</a> scripts to generate a SDK build.&nbsp; Incorporate platform
 specific patches in these scripts and test the resultant build.&nbsp; A
 bug describing the patches to ensure that the build runs should be
 opened with Product Platform and Component Releng.&nbsp; We will
