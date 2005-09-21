@@ -5,7 +5,7 @@ To run the example:
 1.  Install eclipse, build 3.1M7 or later
 
 2.  Check out the "scripts" directory from platform-releng-home/examples/build_jdtcore
-	i.e. 	cvs -d :pserver:anonymous@dev.eclipse.org:/home/eclipse co -d scripts platform-releng-home/examples/build_jdtcore/scripts
+	i.e. 	cvs -d :pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse co -d scripts platform-releng-home/examples/build_jdtcore/scripts
 
 3.  To run build:
 	-cd to <eclipse install>/plugins/org.eclipse.pde.build_3.1.0/scripts

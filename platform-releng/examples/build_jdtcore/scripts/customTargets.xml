@@ -31,7 +31,7 @@
 	<target name="getMapFiles" depends="checkLocal" unless="mapsLocal">
 
 		<!-- ***  change the repo info -->
-		<property name="mapCvsRoot" value=":pserver:anonymous@dev.eclipse.org:/home/eclipse" />
+		<property name="mapCvsRoot" value=":pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse" />
 		<property name="mapVersionTag" value="HEAD" />
 
 		<!--get map file for this example.-->
