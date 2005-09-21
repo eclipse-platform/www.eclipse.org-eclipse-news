@@ -6,13 +6,13 @@
 </head>
 <frameset rows="48,*" frameborder=0 framespacing=0 border="0">
   <frame name="banner" scrolling="no" noresize target="home"
-                          src="../eproject-banner.html"  marginwidth="0" marginheight="0" frameborder="NO">
+                          src="/eproject-banner.html"  marginwidth="0" marginheight="0" frameborder="NO">
   <frameset cols="126,*" frameborder=0 framespacing=0 border="0">
     <frameset rows="220, *"  frameborder=0 framespacing=0 border="0">
       <frame name="home_nav" scrolling="no" noresize target="main"
-                          src="../home_nav.html"  marginwidth="0" marginheight="0" frameborder="NO">
+                          src="/home_nav.html"  marginwidth="0" marginheight="0" frameborder="NO">
       <frame name="nav" scrolling="no" noresize target="main"
-                          src="../eclipse/nav.html"  marginwidth="0" marginheight="0" frameborder="NO">
+                          src="/eclipse/nav.html"  marginwidth="0" marginheight="0" frameborder="NO">
     </frameset>
     <frame name="main" marginwidth=10 marginheight=10 noresize frameborder="NO" src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-core-home/main.html">
   </frameset>
