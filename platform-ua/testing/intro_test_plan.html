@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Welcome Framework Enhancements</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<link href="../Eclipse%20Doc%20Template/Eclipse%20Projects_files/dynamic_capabilities_files/default_style.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body bgcolor="#ffffff">
+
+<table width="100%">
+	<tr>
+		<td style="BACKGROUND: #0080c0"><span style="color: #FFFFFF"><b>Intro</b></span></td>
+	</tr>
+</table>
+<h1>SDK Intro Test Plan </h1>
+<h3>Objective</h3>
+<p>The objective of this test plan is to validate the functionality of the SDK Welcome. It is meant as a guide that outlines issues to be tested. </p>
+<h3>Setup</h3>
+<p>Please ensure that you run this test plan with the <code>org.eclipse.ui.intro/debug=true</code> debug option set. This is the only Intro debug option that you need turned on, and if there are any error or warning in the .log then this is a bug. Please open a defect and paste the log. </p>
+<p>&nbsp;</p>
+<h3> Scenario A: Basic behavior </h3>
+<ul>
+  <li> <strong>A.1 </strong>Launch a fresh workbench. Make sure that Intro is automatically opened and is in full mode. </li>
+  <li><strong>A.2 </strong>Test that root page come up/looks ok. Icons should be there. Hovering over icons changes there color and displays text. </li>
+  <li><strong>A.3 </strong>Test clicking on each of the links in the root page.</li>
+  <li><strong>A.4 </strong>In Overview page, test that each of the links brings you to a corresponding topic from the Help System documentation. The documentation should be embedded in the Welcome view. </li>
+  <li><strong>A.5 </strong>In the Tutorials page, make sure that clicking on each of the links brings you to the appropriate cheatsheet. Test that steps in the cheatsheet work.</li>
+  <li><strong>A.6 </strong>In the Samples page, click on any of the links, you should get a pop-up asking you to download the samples. Click on yes. Check that all samples can then be imported automatically into the workbench and that they can be run. </li>
+  <li><strong>A.7 </strong>In the What's New page, the New and Noteworthy links and the Migration link should launch the Help System and take you to the appropriate page. The New Updates link should launch an Install/Update dialog to update features.</li>
+  <li><strong>A.8 </strong>Click on the Eclipse Community link, it should open the eclipse.org web site embedded. Click on the back toolbar icon and make sure that it takes you back to the What's New page.</li>
+  <li><strong>A.9 </strong>Click on the Workbench icon (top right corner), make sure that you get the launch bar at the top right trim of the workbench window. It should have five icons and a close button. All should have tooltip, and clicking on each should open Intro in full mode and take you to the appropriate page. </li>
+  <li><strong>A.10 </strong>Hover over the Return to Workbench and the Close icons in the launch bar to get the &quot;move&quot; cursor. Test drag and drop of Launch bar.</li>
+</ul>
+<h3>&nbsp;</h3>
+<h3> Scenario B: Remembering state and Standby Behavior </h3>
+<ul>
+  <li><strong>B.1 </strong>Close  the workbench with the Intro view opened in full mode. Test that re-launching a workbench opens Intro.</li>
+  <li><strong>B.2 </strong>Close the workbench with the Intro view opened in standby mode on a cheatSheet (ie: go to Tutorials and click on any of the links). Test that re-launching a workbench opens Intro with the same cheatSheet opened in standby mode. </li>
+  <li><strong>B.3 </strong>Close the workbench with the Intro view opened in standby mode on the SDK Welcome standby page (ie: double click on the Intro view to bring it to the Standby page). Test that re-launching a workbench opens Intro with the SDK Welcome standby page opened. </li>
+  <li><strong>B.4 </strong>From a cheatSheet in standby mode, click on Return to Welcome and make sure it takes you back top the last page to where at. </li>
+</ul>
+<p>&nbsp;</p>
+<h3> Scenario C: Icons and Toolbar Icon behavior </h3>
+<ul>
+  <li><strong>C.1 </strong>Go to Help -&gt; Welcome, make sure that the Eclipse icon is used for the Welcome action. </li>
+  <li><strong>C.2 </strong>Make sure that the same icon is used for the Welcome view. </li>
+  <li><strong>C.3 </strong>In the welcome view toolbar, make sure that the Home icon is enabled and that it has tooltip. </li>
+  <li><strong>C.4 </strong>Make sure that the left and right icons are initially disabled, and are subsequently enabled when you navigate to some of the pages. These  icons should be disabled if there is no history to navigate to. </li>
+  <li><strong>C.5 </strong>When the welcome view is in standby mode (eg: when you open cheatsheet, or double click on Welcome view) all icons should be disabled. </li>
+</ul>
+<h3>&nbsp;</h3>
+<h3> Scenario D: Platforms </h3>
+<ul>
+  <li><strong>D.1 </strong>On Windows, Linux and Mac, Intro uses the HTML presentation. </li>
+  <li><strong>D.2</strong> On all other platforms, intro uses the SWT presentation.</li>
+  <li><strong>D.3 </strong>Click on any of the root page icons. If the links for all the pages (Overview, Tutorials,...) are at the top left corner of the page, you have HTML presentation. If they are centered at the bottom of the page, you have SWT. It is a bug if the correct presentation is not visible on the corresponding platform. </li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+
+</html>

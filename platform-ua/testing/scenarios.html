@@ -1,0 +1,615 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="Author" content="eclipse.org">
+  <meta name="GENERATOR"
+ content="Mozilla/4.79 [en] (Windows NT 5.0; U) [Netscape]">
+  <title>Testing Scenarios for Help</title>
+  <link rel="stylesheet" href="http://www.eclipse.org/default_style.css"
+ type="text/css">
+</head>
+<body>
+<h1
+ style="background-color: rgb(0, 128, 192); background-image: none; background-repeat: repeat; background-attachment: scroll; color: rgb(255, 255, 255);">
+Testing Scenarios for Help System</h1>
+<h2>
+<b>Objectives</b></h2>
+This is a quick run through most of the end-user functionality of the
+eclipse
+help system and the info-center scenario. The following are the main
+focus
+areas for testing help:
+<ol>
+  <li>
+integration with the workbench: launching help browser and help view
+from help menu, help search,
+and context-sensitive help (F1)</li>
+  <li>
+navigation and browsing of topics in the help browser and view<br>
+  </li>
+  <li>
+search support in the help browser and view<br>
+  </li>
+  <li>
+accessibility</li>
+</ol>
+<br>
+<h3>
+Integration with the workbench</h3>
+These tests exercise interactions with help system from workbench.
+<p>I1: Help browser preferences:
+</p>
+<ol>
+  <li>
+Launch "Window"-&gt;"Preferences".&nbsp; Preferences dialog will open.</li>
+  <li>Choose "Help" on the left.&nbsp; This should show help preference
+page
+on the right</li>
+  <li> On Windows and Linux help uses embedded browser, and the
+preference should contain a checkbox to use external browser.</li>
+  <li>
+Choose "Help"-&gt;"Help" Contents" from the workbench menu, ensure a
+browser
+opens and displays Help browser.</li>
+  <li>
+Go back to help preferences, select "Use external browser".&nbsp;
+Follow hyperlink to Workbench Browsers preference page.&nbsp; Choose a
+browser to use, Click "OK".</li>
+  <li>
+Choose "Help"-&gt;"Help" Contents" from the workbench menu, ensure a
+browser selected
+opens and displays Help.</li>
+  <li>
+Go back to help preferences.&nbsp; If you have more browser adapters
+available,
+try selecting each browser adapter and launch help.</li>
+</ol>
+I2: Displaying help preferences:
+<ol>
+  <li>
+Press "F1" key (Ctrl+F1 on GTK, Help on carbon) in the workbench
+"Navigator" view
+("Resources" perspective).
+This should open help view in the workbench, turned to Related Topics
+page.&nbsp; Verify "About ..." section displays description of
+workbench part in focus.</li>
+  <li>Click on one of the related links.&nbsp; A topic should open in
+the help view.</li>
+  <li>Change help preferences to open context help in an infopop,
+dialog context help in an infopop, help view document open mode - in
+editor.</li>
+  <li>Click "back" in the help view to arrive at Related Topics
+page.&nbsp; Select a link from Dynamic Help section.&nbsp; Verify it
+opens in the editor area.</li>
+  <li>Press "F1" key (Ctrl+F1 on GTK, Help on carbon) in the workbench
+"Navigator" view
+("Resources" perspective) again.&nbsp; <br>
+  </li>
+  <>This time it should open an infopop with a description and related
+links.&nbsp; Focus
+should be on the first link ("Views").</>
+  <li>Click "Navigator View" link.&nbsp; This should launch help web
+browser,
+and display "Navigator View" document on the right and the list of
+related
+topics on the left.&nbsp; The link called "Navigator View" should be
+selected.</li>
+  <li>Open help preferences, press "F1".&nbsp; and infopop should open.</li>
+  <li>Restore defaults in the the browser preference page, and apply.</li>
+  <li>Press F1 again.&nbsp; A small help view with Related Topics
+should open adjacent to the preferences dialog.<br>
+  </li>
+</ol>
+I3: Opening / closing help browser:
+<ol>
+  <li>
+Without closing the browser that opened in test case I1.4, choose
+"Help"-&gt;"Help"
+Contents" from the workbench menu.&nbsp; No new browser window should
+launch,
+and the existing help browser should load the table of contents, with
+lists
+of books on the left, and "Welcome to Eclipse help" document on the
+right.</li>
+  <li>
+Close the help browser.&nbsp; Browser window should close.</li>
+  <li>Open a workbench preferences, press F1 (Ctrl+F1 on GTK, Help on
+carbon). Select a related link. Help should open in external browser
+(even when help preference "always use external browser" checkbox is
+present on preference page and deselected).</li>
+</ol>
+I4: Search:
+<ol>
+  <li>
+Choose "Hep Search" from the workbench Help menu.&nbsp; Click "Help
+Search" tab.&nbsp; Help search page should open.</li>
+  <li>
+Type a query "open project" (without quotes), click "Go".</li>
+  <li>Choose a result.&nbsp; The document should open with occurrences
+of the words "open" and "project" highlighted.<br>
+  </li>
+</ol>
+I5:&nbsp; Search filtering:
+<ol>
+  <li>TODO</li>
+</ol>
+I7:&nbsp; Live help:
+<ol>
+  <li>
+Type "active link below" (no quotes) in the search field in the help
+view,
+and search.</li>
+  <li>
+Choose a document titled "Active help" from the search results.</li>
+  <li>
+Click once "Click here for a Message" link at the bottom of the
+document.</li>
+  <li>Ensure that a "Hello World" is being
+displayed in a dialog on top of the workbench.</li>
+</ol>
+I8:&nbsp; Appserver preferences:
+<ol>
+  <li> Launch "Window"-&gt;"Preferences".&nbsp; Preferences dialog will
+open.</li>
+  <li> Choose "Help/Help Server" on the left.&nbsp; Enter a port number
+(for example 2003), in the second field.&nbsp; Click O.K.</li>
+  <li> Restart workbench. Launch help from the menu.&nbsp; Ensure
+browser opens and displays help content.</li>
+  <li> Go back to Help Server preferences, click "Restore defaults"
+button, click "OK", restart workbench.</li>
+</ol>
+I9:&nbsp; Workbench Capabilities
+in Help
+<ol>
+  <li> Launch "Window"-&gt;"Preferences".&nbsp; Open
+"General"-&gt;"Capabilities" preference page.</li>
+  <li>Select all capabilities and deselect "Development".</li>
+  <li>Launch help , by selecting Help-&gt;Help Contents from the
+menu.&nbsp; Verify only two workbench books appear.<br>
+  </li>
+  <li>Select "Show All Topics" button in the navigation toolbar.&nbsp;
+Confirm.</li>
+  <li>Verify "Show All Topics" toolbar button appears pressed, and all
+books (including PDE Guide are displayed).</li>
+  <li>Search for "PDE".&nbsp; There should be large number of hits<br>
+  </li>
+  <li> Turn off showing all topics. Verify that PDE Guide disappeared,
+since it is does not belong to enabled workbench capabilities.</li>
+  <li>Perform search for "PDE". Verify search results were redisplayed
+and there are no or next to no results.</li>
+</ol>
+<br>
+<h3>
+Navigation and browsing</h3>
+The main things to look for here are:
+<ul>
+  <li>
+moving around the navigation views (Contents, Search Results, Links,
+Bookmarks)</li>
+  <li>
+opening a book, expanding/collapsing/selecting topic nodes</li>
+  <li>
+navigating links inside the help pages</li>
+  <li>
+using toolbar actions for displaying the main table of contents, for
+hiding or maximizing the navigation frame, for topic/navigation
+synchronization, printing</li>
+  <li>
+performing simple searching.</li>
+</ul>
+<p>Note: this test is to be done on browser adapters that are based on
+Internet Explorer or Mozilla. For other browser, refer to the "basic"
+test.</p>
+<p><br>
+N1: Basic topic navigation:
+</p>
+<ol>
+  <li>
+Launch help from the workbench menu: Help-&gt;Help Contents. This
+should open
+the help view to the main bookshelf that lists the available books.</li>
+  <li>
+In the Contents page select the Workbench User Guide book. This should
+expand that book and show it contents. All the other books must still
+be available in the navigation frame (i.e. only the select book
+expands).</li>
+  <li>
+In the table of contents tree navigate to Concepts -&gt;Workbench.
+Selecting the "Workbench" topic should show some content in the main
+help area.</li>
+  <li>
+Click on the "Features" link in the displayed document.
+This should load a new document.</li>
+</ol>
+N2: Document toolbar actions:
+<ol>
+  <li>Identify the 6 buttons on the content toolbar (the toolbar is
+located above
+the page displaying help pages): Go Back, Go Forward, Show in table of contents,
+Bookmark document, Print Page, and Maximize.</li>
+  <li>Click the Back button in the content toolbar. This should reload
+the previous document (Workbench).</li>
+  <li>Click the Forward button in the content toolbar. This should
+reload the
+document ("Features").</li>
+  <li>Click maximize icon on the toolbar of the main content frame.
+This should maximize that particular frame, and "Restore" icon should
+be shown in place of "Maximize". This time double click on the toolbar,
+it should restore the original layout. The behavior should be similar
+to that of the eclipse views.</li>
+  <li>Click on the "Synchronize Navigation" button on the toolbar. This
+should highlight the "Features" topic in the navigation tree.</li>
+  <li>Print the topic by clicking on the "Print Page" button on the
+toolbar. This should launch the system print dialog and if you click OK
+it should print the help page</li>
+  <li>Bookmark the current page, by pressing the "Bookmark document"
+button on the toolbar.</li>
+  <li>Turn to the Bookmarks tabs and verify it is added there.</li>
+  <li>Turn to the Contents tab and select another topic</li>
+  <li>Turn to the Bookmarks tab and click on the bookmarked topic
+(Features). This should load that topic in the main content area.</li>
+  <li>Remove bookmark: Select the bookmark topic, right click and
+select Remove, or choose "Delete bookmark" from the bookmark view
+toolbar.</li>
+  <li>Add more bookmarks, delete them all using "Remove all bookmarks"
+button or action on the pop-up menu.</li>
+</ol>
+N3: Searching documentation, basic scenario:
+<ol>
+  <li>
+In the Search entry field enter the word "participation" without the
+double
+quotes. The navigation frame should turn to the Search Results view,
+and if this was the
+first time you search the docs, you should see the indexing progress
+monitor
+in that page. When indexing is finished (or right away if other
+searches
+were performed before) you should get the results. In my case, I got 14
+hits, starting with "Synchronize View Integration".</li>
+  <li>
+Select a search result: "Workspace save participation". You should
+see the "participation" string highlighted, as well as "particip". This
+is because the search engine
+uses word stemming on English, so the highlighting respects the same
+stemming
+algorithm.</li>
+  <li>
+Click on each results. You should see the toolbar title changing to
+show
+the book containing the document.</li>
+  <li>
+Let's narrow the results by book: click on the "Scope" link in the
+search
+bar. This should launch the Select Scope Search dialog that let's use
+define search list. Click on "New" to launch the dialog for defining a
+new search list. Enter the name "workbench" and select the "Workbench
+User Guide", click OK to close the dialog. The name "workbench" should
+now be visible in the list in the Select Scope Search dialog. Select
+it, and click OK (or double click instead).</li>
+  <li>
+This should close the dialog and the Search Scope should now display
+the name "workbench". Note: Sometimes the search bar is not updated
+right away, so you may have to wait a bit. Search again for the same
+word, "participation". You should see fewer results (I see 2 hits only).</li>
+  <li>
+Select the "Crash recovery" hit, and click on "Synchronize Navigation"
+button
+on the navigation or content toolbar. This should switch the navigation
+view
+to
+the
+Contents
+view, and expand the Workbench User Guide down to the "Crash recovery"
+topic.</li>
+  <li>
+Click the "Search Results" tab at the bottom of the navigation tree.
+This
+should redisplay the search result you've seen in step 5.</li>
+  <li>
+Click on the "Contents" tab at the bottom of the navigation tree. This
+should redisplay the navigation tree as you left it after step 6.</li>
+</ol>
+<br>
+<h3>Search</h3>
+This part test support for advanced search.&nbsp; Perform search either
+from "Help" page on Eclipse "Search" dialog opened by
+"Search"-&gt;"Search..." and
+turning to Help page
+or from the browser opened by "Help"-"Help Contents".
+<p>S1: Boolean search:
+</p>
+<ol>
+  <li>
+Search for 'project close' (no quotes).&nbsp; Documents should be found
+containing both words.&nbsp; Selecting document should show its
+contents
+with occurrences of both words highlighted.</li>
+  <li>
+Search for 'project AND close' (no quotes).&nbsp; The results should be
+same as for the previous query</li>
+  <li>
+Search for 'project OR close' (no quotes).&nbsp; The list of hits
+should
+be much longer, with some documents at the top containing both words,
+and
+documents down the list containing only one of them.</li>
+  <li>
+Search for 'project close not navigator' (no quotes).&nbsp; The list of
+hits should be smaller than in step 1 of test S1.</li>
+</ol>
+S2: Exact search:
+<ol>
+  <li>
+Search for ' "close project" ' (in double quotes).&nbsp; The search
+results
+list should be shorter than in step 1 of test S1.</li>
+  <li>
+The documents should contain consecutive words close and project
+(possibly
+separated by a punctuation).</li>
+</ol>
+S3: Search scope
+<ol>
+  <li>
+Search for 'close project' (no quotes).&nbsp; The search results list
+will
+show hits.</li>
+  <li>
+Select a document.&nbsp; Note the book the topic belongs to.&nbsp; The
+book name is displayed on the toolbar in the browser, directly above
+the
+document.</li>
+  <li> Click "Search scope:".&nbsp; The scope selection window will
+open.&nbsp;
+Click "New", Select some books or sections, but leave the book that was
+noted in step 2 of test S3 unchecked.</li>
+  <li>
+Type a name for your new scope.&nbsp; Close dialog windows, ensure that
+the scope name appears on the search tool bar.</li>
+  <li>
+Click "Go".&nbsp; Verify that the document selected in step 3 of test
+S2
+does not appear in the list of search results.</li>
+  <li>Click the Search Scope again and remove the scope you just
+defined. Click OK to close the dialog. The search bar should now have
+"All topics" in the Search Scope.</li>
+</ol>
+<br>
+<h3>Customization</h3>
+<p>C1: Help preferences / large book browsing
+</p>
+Create a file plugin_customization.ini in the root of Eclipse
+installation.<br>
+<p>Edit the file and paste the following key/values pairs:
+</p>
+<p>org.eclipse.help/baseTOCS=/org.eclipse.pde.doc.user/toc.xml,/org.eclipse.jdt.doc.isv/toc.xml<br>
+org.eclipse.help/ignoredTOCS=/org.eclipse.platform.doc.user/toc.xml,/org.eclipse.jdt.doc.user/toc.xml,/org.eclipse.platform.doc.isv/toc.xml<br>
+<br>
+org.eclipse.help.base/banner=/org.eclipse.help.webapp/advanced/banner.html<br>
+org.eclipse.help.base/banner_height=60<br>
+org.eclipse.help.base/help_home=http://www.eclipse.org<br>
+org.eclipse.help.base/linksView=false<br>
+org.eclipse.help.base/bookmarksView=false<br>
+org.eclipse.help.base/windowTitlePrefix=false<br>
+org.eclipse.help.base/loadBookAtOnceLimit=10<br>
+org.eclipse.help.base/dynamicLoadDepthsHint=2<br>
+org.eclipse.help.base/advanced.toolbarBackground=green<br>
+org.eclipse.help.base/advanced.viewBackground=yellow<br>
+org.eclipse.help.base/advanced.toolbarFont=bold<br>
+org.eclipse.help.base/advanced.viewFont=italic<br>
+org.eclipse.help.base/showDisabledActivityTopics=never<br>
+org.eclipse.help.base/activeHelp=false
+</p>
+<ol>
+  <li>Launch Eclipse, pointing to the ppreferences customization, e.g.
+eclipse -pluginCustomization plugin_customization.ini</li>
+  <li>From the workbench menu: Help-&gt;Help Contents. This should open
+the help browser. Verify existence of banner frame above search toolbar.</li>
+  <li> The page displayed in the content frame should be eclipse.org
+page.</li>
+  <li>There should be only two Eclipse books displayed PDE Guide and
+JDT Development Guide, in that order.&nbsp; Other Eclipse books should
+not appear.</li>
+  <li>Search for "workbench".&nbsp; Verify there are no hits from
+Workbench User Guide that is not present.<br>
+  </li>
+  <li> Verify there is only Contents and Search tabs at the bottom of
+navigation frame, other views (Links and Bookmarks) are not present.</li>
+  <li> Verify the browser title shows product name.</li>
+  <li>Browse navigation tree. There can be small delay expanding
+second, fourth, etc level of topics. Verify branches expand correctly.</li>
+  <li>Verify help UI background is yellow, and green in the toolbars.</li>
+  <li>Verify fonts are bold in the toolbars, and italic in the rest of
+the UI.</li>
+  <li>Launch "Window"-&gt;"Preferences".&nbsp; Open
+"Workbench"-&gt;"Capabilities preference page. Select all capabilities
+and deselect "Development".</li>
+  <li>Re launch Help. Verify no books are displayed and "Show All
+Topics" button is not displayed.</li>
+  <li> Type "active link below" (no quotes) in the search field in the
+browser, and search.</li>
+  <li> Choose a document titled "Active help" from the search results.</li>
+  <li> Click once "Click here for a Message" link at the bottom of the
+document.</li>
+  <li>Verify a message informing that active help is not enabled is
+displayed, and "Hello World" workbench dialog does not appear.</li>
+</ol>
+<p>C2: BIDI
+</p>
+<ol>
+  <li> Launch eclipse passing "-dir rtl" option on the command line.
+Open Help.</li>
+  <li>Verify Help UI is rendered right to left.</li>
+</ol>
+<br>
+<h3>Accessibility</h3>
+Accessibility support should test for how the help view
+<ul>
+  <li>
+uses system colors and fonts,</li>
+  <li>
+uses browser's accessibility support,</li>
+  <li>
+can be navigated using only the keyboard.</li>
+</ul>
+<b>Note: Platform considerations for the accessibility tests:</b>
+<ul>
+  <li>
+    <b>on Windows things should work as described;</b></li>
+  <li>
+    <b>on Linux using the Mozilla browser adapter keyboard navigation
+works slightly
+different: Ctrl-Tab and Ctrl-Shift-Tab are to be replaced by Ctrl-F6
+and Ctrl-Shift-F6
+(this is for frame navigation, see below).</b></li>
+  <li>
+    <b>on Solaris/AIX/HP, unless you use Mozilla, the default browser
+adapter
+for Netscape 4.x has very little accessibility support, both for
+fonts/colors
+and for keyboard navigation.</b></li>
+</ul>
+A1: System colors and fonts:
+<ol>
+  <li>
+Observe if the colors and fonts match your system settings. Window
+backgrounds
+for navigation views (Contents/Search Results/Links/Bookmarks) should
+match the
+system window color (usually white on Windows and gray on Linux). The
+toolbars
+should match the button face co lour (usually gray). The font should
+match
+the system icon font. Highlight co lour should match the system
+highlight co lour.</li>
+  <li>
+Change your system colors/font settings and see if the changes take
+effect.</li>
+  <li>
+On Windows, try the high contrast settings: Control Panel -&gt;
+Accessibility
+Options -&gt; Display - &gt; Use high contrast.</li>
+</ol>
+A2: Browser accessibility support:
+<ol>
+  <li>
+Windows: in IE - &gt; Tools-&gt; Internet Options -&gt; General
+-&gt;Accessibility
+play with the settings for Format. Help should behave accordingly.</li>
+  <li>
+DO NOT turn off style sheet support, help will not work well.</li>
+</ol>
+A3: Navigation with keyboard only:
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Here are the keyboard navigation rules
+for help (as supported by browsers):
+<blockquote>
+  <p>- To move to the next topic in the left frame, press TAB or DOWN
+arrow. <br>
+- To move to the previous topic , press SHIFT-TAB or UP arrow. <br>
+- To expand/collapse a tree node press RIGHT/LEFT arrow. <br>
+- Press Enter to select a topic and have its content displayed <br>
+- To scroll all the way up/down press HOME/END. <br>
+- To go back/forward press ALT-LEFT/RIGHT ARROW <br>
+- To go to the next frame (there are quite a number of frames in the
+help <br>
+system) press CTRL-TAB (On Mozilla 1.2 press Ctrl-F6). <br>
+- To move to previous frame, press SHIFT-CTRL-TAB (On Mozilla &gt;1.2
+press Ctrl-Shift-F6).<br>
+- To move to content frame, press ALT-K, and press Tab to place focus
+inside the topic<br>
+- To print the current page or active frame, press CTRL-P.</p>
+</blockquote>
+A4: F1 infopop keyboard accessibility:
+<ol>
+  <li>
+Press F1 (on GTK - Ctrl-F1, on carbon - Help key) in the workbench
+Navigator view (Resources perspective). This should launch the infopop
+with some text and two related links. Focus should
+be on the first link ("Views"). Click and the help view should open to
+the selected topic.</li>
+  <li>
+Get back to the workbench and press F1 again, in the Navigator view.
+When the
+infopop comes up, press down/up arrows (or tab) to cycle around the
+links. Press Esc to dismiss
+the infopop.</li>
+</ol>
+A5: On Windows, use Windows Narrator (or JAWS if installed ), repeat
+the
+same
+tests
+and
+see
+if
+description an links read out correctly.<br>
+<br>
+<h3>Other Scenarios</h3>
+<p>In addition to the eclipse workbench help scenario, there are two
+other
+help uses scenarios: <a
+ href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.platform.doc.isv/reference/misc/help_standalone.html">standalone
+help</a> and <a
+ href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.platform.doc.isv/reference/misc/help_infocenter.html">info-center</a>
+(server based) help.<br>
+<br>
+<br>
+IC: Infocenter</p>
+<ol>
+  <li>Assuming eclipse is installed as d:\eclipse, change directory to
+d:\eclipse and run the following command: java -cp
+plugins/org.eclipse.help.base_3.1.0.jar
+org.eclipse.help.standalone.Infocenter -command start -data infocenter
+-port 8888</li>
+  <li>Open a browser and navigate to http://localhost:8888/help. You
+should see the help system, but without the links and bookmarks tabs.</li>
+  <li>Define a working set, search help. Close the browser and reopen.
+Verify working sets are remembered.</li>
+  <li>Perform ad-hoc testing or follow the steps for the regular
+workbench scenarios, with the exception of bookmarks, infopop and
+active help.</li>
+  <li>Shutdown the infocenter by running: java -cp
+plugins/org.eclipse.help.base_3.1.0.jar
+org.eclipse.help.standalone.Infocenter -command shutdown -data
+infocenter</li>
+</ol>
+<p><br>
+SA: Stand-alone help
+</p>
+<ol>
+  <li>Assuming eclipse is installed as d:\eclipse, change directory to
+d:\eclipse and run the following command: java -cp
+plugins/org.eclipse.help.base_3.1.0.jar
+org.eclipse.help.standalone.Help -command displayHelp -data standalone</li>
+  <li>The above command should automatically open the browser so you
+can browse the help. Perform ad-hoc testing or follow the steps in the
+regular workbench scenario, with the exception of infopop and active
+help.</li>
+  <li>Shutdown the standalone help by running: java -cp
+plugins/org.eclipse.help.base_3.1.0.jar
+org.eclipse.help.standalone.Help -command shutdown -data standalone</li>
+</ol>
+<p><br>
+B: Basic help ui (any browser with Javascript disabled or browsers
+other than IE, Mozilla or Netscape6+)
+</p>
+<ol>
+  <li>Disable javascript in the browser that is used by the default
+browser adapter (normally, that's IE on Windows, Mozilla on Linux and
+Netscape6+ on others)</li>
+  <li>Launch help and you should see a simple 3-frame layout with links
+instead of tabs and just the synchronize navigation button available.
+Books are always expanded and there is no state preservation across
+views (i.e. when switching between contents/links/search/bookmarks) the
+page always reloads)</li>
+  <li>Try ad-hoc testing or follow the regular workbench scenario steps
+above.</li>
+  <li>Instead of step 1, you can launch Netscape 4.7 and navigate to
+the help system URL. To get this URL, right click in the help browser
+and select "Properties". Check what the URL is.</li>
+</ol>
+</body>
+</html>

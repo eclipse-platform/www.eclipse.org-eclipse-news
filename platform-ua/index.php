@@ -16,7 +16,7 @@
       <frame name="nav" scrolling="no" noresize target="main"
                           src="/eclipse/nav.html"  marginwidth="0" marginheight="0" frameborder="NO">
     </frameset>
-    <frame name="main" marginwidth=10 marginheight=10 noresize frameborder="NO" src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-help-home/main.html">
+    <frame name="main" marginwidth=10 marginheight=10 noresize frameborder="NO" src="main.html">
   </frameset>
   <noframes>
   <body>
