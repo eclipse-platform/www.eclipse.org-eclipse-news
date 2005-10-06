@@ -1,0 +1,475 @@
+<html>
+<head>
+<title>Eclipse Performance</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=left width="72%"> <font class=indextop> eclipse performance bloopers</font><br>
+      <font class=indexsub> confessions of the newly performant</font></td>
+    <td width="28%"><img src="http://dev.eclipse.org/images/Idea.jpg" height=86 width=120></td>
+  </tr>
+</table>
+<font size="-1">Last updated: April 20, 2005</font>
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP bgcolor="#0080C0"><b><font color="#FFFFFF" face="Arial,Helvetica">Eclipse 
+      Performance Bloopers</font></b></td>
+  </tr>
+  <tr> 
+    <td>
+      <p>Below is a collection of goofs, mistakes, and bad decisions made in 
+        developing plugins for the Eclipse platform. Many are standard Java programming 
+        problems, some are specific to Eclipse. The intent here is not to pick 
+        on the perpetrators (in most cases they in fact eagerly contributed the 
+        blooper information!) but rather to help other developers avoid similar 
+        pitfalls. The bloopers have been contributed from the community and may 
+        have been discovered in Eclipse SDK code or in third party plugins. Since 
+        all of Eclipse is implemented as plugins, the issues are usually generally 
+        relevant.</p>
+      <p>Each blooper is structured as a statement of the scenario followed by 
+        suggested techniques for avoiding the problem(s). In some cases there are 
+        clear steps, in others there really is no solution except to follow the 
+        advice of a wise doctor and &quot;don't do that&quot;. </p>
+      <p>The set of bloopers is (sadly) always growing. This site is intended 
+        as a resource for developers to consult to build their general knowledge 
+        of problems, techniques, etc. Check back often and contribute your own 
+        bloopers.</p>
+      </td>
+  </tr>
+</table>
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP bgcolor="#0080C0"><b><font color="#FFFFFF" face="Arial,Helvetica">Blooper: 
+      <tt>String.substring()</tt></font></b></td>
+  </tr>
+  <tr> 
+    <td> 
+      <p>The <tt>java.lang.String.substring(...)</tt> method is usually implemented by creating
+      a new <tt>String</tt> object that points back to the same underlying <tt>char[]</tt>
+      as the receiver, but with different offset and length values.  Therefore, if you
+      take a very large string, create a substring of length 1, then discard the large
+      string, the little substring may still hold onto the very large <tt>char[]</tt>.
+      </p>
+      <p>
+      A nasty variant of this blooper is when the substring is later interned by
+      calling <tt>String.intern()</tt>. On some VMs, this means the large
+      <tt>char[]</tt> object is now held onto forever by the VM's intern pool.
+      Kiss that memory good-bye, because there's no way to free it again.
+      </p>
+      <h4>Avoidance techniques:</h4>
+      <p>In situations where you know you are creating a small substring and then
+      throwing the large string away, force a copy of the string to be created by 
+      calling <tt>new String(substring)</tt>.  This seems counter-intuitive
+      from a performance perspective because it creates extra objects, but it 
+      can be worthwhile if the substring is being retained for a long period.
+      In one particular case in the Eclipse JDT plugins, copying the substring yielded a 550KB space
+      savings.  Not bad for a one line fix!
+    </td>
+  </tr>
+</table>
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP bgcolor="#0080C0"><b><font color="#FFFFFF" face="Arial,Helvetica">Blooper: 
+      <tt>Unbuffered I/O</tt></font></b></td>
+  </tr>
+  <tr> 
+    <td> 
+      <p>With most flavours of <tt>java.io.InputStream</tt> and <tt>java.io.OutputStream</tt>,
+      buffering doesn't come for free.  This means that every single read and write
+      call may result in disk or network I/O.  Similarly in Eclipse, the streams
+      returned by methods such as <tt>org.eclipse.core.resources.IFile#getContents</tt>,
+      or created by opening an <tt>InputStream</tt> on an Eclipse <tt>URL</tt>
+      are not buffered.
+      </p>
+      <p>
+      <h4>Avoidance techniques:</h4>
+      <p>The solution in this case is simple.  Just wrap the stream in a
+      <tt>java.io.BufferedInputStream</tt> or <tt>BufferedOutputStream</tt>.
+      If you have a good idea of the amount of bytes that need
+      reading or writing, you can even set the stream's buffer size appropriately.
+    </td>
+  </tr>
+</table>
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP bgcolor="#0080C0"><b><font color="#FFFFFF" face="Arial,Helvetica">Blooper: 
+      Strings in the plug-in registry</font></b></td>
+  </tr>
+  <tr> 
+    <td>
+		<p>In Eclipse 2.0.* and before, it was generally assumed that there would 
+		  be hundreds of plugins and that the plugin registry, while sizeable, could 
+		  reasonably be held in memory. As Eclipse-based products came to market 
+		  we discovered that developers were taking the plugin model to heart and 
+		  were creating hundreds of plugins for one produce. Our assumptions were 
+		  being tested...</p>
+		<p>One of the key failings in this area was the use of Strings. (Note this is 
+		  actually a more general problem but reared its ugly head in a very tangible 
+		  way here) All aspects of plugins (extensions, extension points, plugins/fragments, 
+		  ...) are defined in terms of String identifiers. When the platform starts it 
+		  parses the plugin.xml/fragment.xml files and builds a regstry. This registry 
+		  is essentially a complete parse tree of all parsed files (i.e., a mess of Strings). 
+		  In general the String identifiers are not needed for human readability but rather 
+		  code based access and matching. Unfortunately, Strings are one of the least 
+		  space efficient data forms in Java (e.g., a 25 character string requires approximately 
+		  90 bytes of storage). </p>
+		<p>Further, typical code patterns for registry access involve the declaration 
+		  of some constant, for example</p>
+		<pre>    public static final String ID = &quot;org.eclipse.core.resources&quot;;</pre>
+		<p>and then the use of this constant to access the registry</p>
+		<pre>    Platform.getRegistry().getPlugin(ID);</pre>
+		<p>In this case, the character sequence &quot;org.eclipse.core.resources&quot; 
+		  (26 characters) is stored as UTF8 in constant pool of each class using the constant 
+		  and, in typical JVMs, on first use, the UTF8 encoding is used to create and 
+		  intern a real String object. Note that this String object is equal but not identical 
+		  to the one created during registry parsing. The net result is that the total 
+		  space required for this identifier usecase is:</p>
+		<pre>	(space for &quot;org.eclipse.core.resources&quot; * 2) + (space for UTF8 * number, N, of loaded referencing classes)<br>    ((44 + 2 * 26) * 2) + (26 * N) = 192 + 26 = 218bytes (where N &gt; 1)</pre>
+		<p>Obviously as platform installs move from hundreds to thousands of plugins this 
+		  approach does not scale. </p>
+		<h4>Avoidance Techniques:</h4>
+		<p>The first thing to observe is that this was a design flaw. The initial design 
+		  should not have relied on the registry being omni-present. The second observation 
+		  is that Strings as identifiers are easy to read but terribly inefficient. Third, 
+		  changing the behaviour in a fundamental way is difficult as much of the implementation 
+		  is dictated by API (which cannot be changed).</p>
+		<p>With those points in mind, there are several possible approaches for better 
+		  performance. </p>
+		<ol>
+		  <li>Intern the registry strings: This is perhaps the easiest to implement. Since 
+		    the strings used in the methods are intern()'d in the system's symbol table, 
+		    the registry can share the strings by intern()'ing its strings there as well. 
+		    This costs a little more at parse time but saves one copy of the string or 
+		    (44 + 2 * M) bytes. One side effect of this is the performance degradation 
+		    of intern(). On some JVM implementations the performance of intern() degrades 
+		    dramatically. Interning the registry strings eagerly and early seeds the intern() 
+		    table increasing the collision rate.</li>
+		  <li>Use a private intern table: Within the registry there are many duplicate 
+		    strings. These can be eliminated without overloading the system's intern() 
+		    table by using a secondary table. The duplication between the strings in the 
+		    code and those in the registry would not be eliminated.</li>
+		  <li>Avoid strings: In general the ids are used for matching/looking elements 
+		    in the registry. The only compelling reason to use Strings is so they are 
+		    humanly readable in the plugin.xml files. Some sort of mechanism which retains 
+		    the needed information but uses primitive types (e.g., int) as keys would 
+		    address the issue without losing the useability. Unfortunately, this approach 
+		    is very attractive but difficult after the fact as most of the platform runtime's 
+		    API is specified in terms of string ids. </li>
+		  <li>Swap out the registry: The registry is typically used only when plugins 
+		    are activated. As such, most or all of it could be written to disk and reread 
+		    on demand. </li>
+		</ol>
+		<p>In Eclipse 3.1, the fourth approach was taken.  All registry data structures
+		 are now loaded from disk on demand, and flushed from memory when not
+		 in use by employing soft references (<tt>java.lang.ref.SoftReference</tt>).  For an 
+		 application that is not consulting the registry, memory usage for the extension
+		 registry has effectively been reduced to zero.
+		</p>
+      </td>
+  </tr>
+</table>
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP bgcolor="#0080C0"><b><font color="#FFFFFF" face="Arial,Helvetica">Blooper: 
+      Excessive crawling of the extension registry</font></b></td>
+  </tr>
+  <tr> 
+    <td> 
+      <p>As described in the previous blooper, the Eclipse extension registry is now
+      loaded from disk on demand, and discarded when no longer referenced.  This
+      speed/space trade-off has created the possibility of a whole new category of 
+      performance blooper for clients of the registry.  For example, here is a block
+      of code that was actually discovered in a third-party plugin:
+<code><pre>
+	IExtensionRegistry registry = Platform.getExtensionRegistry();
+	IExtensionPoint[] points = registry.getExtensionPoints();
+	for (int i = 0; i < points.length; i++) {
+		IExtension[] extensions = points[i].getExtensions();
+		for (int j = 0; j < extensions.length; j++) {
+			IConfigurationElement[] configs = extensions[j].getConfigurationElements();
+			for (int k = 0; k < configs.length; k++) {
+				if (configs[k].getName().equals("some.name"))
+					//do something with this config
+			}
+		}
+	}
+</pre></code>
+		<p>Prior to Eclipse 3.1, the above code was actually not that terrible.
+		Though the extension registry has been loaded lazily since Eclipse 2.1,
+		it always stayed in memory once loaded.  If the above code ran after
+		the registry was in memory, most of the registry API calls were quite
+		fast.  This is no longer true.  In Eclipse 3.1, the above code will now cause the entire
+		extension registry, several megabytes for a large Eclipse-based product,
+		to be loaded into memory. While this is an extreme case, there are plenty of examples of
+	    code that is performing more registry access than necessary.  These
+	    inefficiences were not apparent with a memory-resident extension registry.
+      <h4>Avoidance techniques:</h4>
+      	<p>Avoid calling extension registry API when not needed.  Use shortcuts
+      	as much as possible.  For example, directly call <tt>IExtensionRegistry.getExtension(...)</tt>
+      	rather than <tt>IExtensionRegistry.getExtensionPoint(...).getExtension(...)</tt>.
+      	<p>
+      	Some extra shortcut methods were added in Eclipse 3.1 to help clients avoid
+      	unnecessary registry access.  For example, to find the plugin ID (namespace)
+      	for a configuration element, clients would previously call
+      	<tt>IConfigurationElement.getDeclaringExtension().getNamespace()</tt>.
+      	It is much more efficient to call the new <tt>IConfigurationElement.getNamespace()</tt>
+      	method directly, saving the <tt>IExtension</tt> object from potentially being
+      	loaded from disk.
+    </td>
+  </tr>
+</table>
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP bgcolor="#0080C0"><b><font color="#FFFFFF" face="Arial,Helvetica">Blooper: 
+      Message catalog keys</font></b></td>
+  </tr>
+  <tr> 
+    <td> The text messages required for a particular plugin are typically contained 
+      in one or more Java properties files. These message bundles have key-value 
+      pairs where the key is some useful token that humans can read and the value 
+      is the translated text of the message. Plugins are responsible for loading 
+      and maintaining the messags. Typically this is done on demand either when 
+      the plugin is started or when the first message from a particular bundle 
+      is needed. Loading one message typically loads all messages in the same 
+      bundle.
+<p>There are several problems with this situation:</p>
+<ol>
+  <li> Again we have the inefficient use of Strings as identifiers. Other than 
+    readability in the properties file, having human readable keys is not particularly 
+    compelling. Assuming the use of constants, int values would be just as functional.</li>
+  <li>Similarly, the use of String keys requires the use of Hashtables to store 
+    the loaded message bundles. Some array based structure would be more efficient.</li>
+  <li>The Eclipse SDK contains tooling which helps users &quot;externalize&quot; 
+    their Strings. That is, it replaces embedded Strings with message references 
+    and builds the entries in the message bundles. This tool can generate the 
+    keys for the messages as they are discovered. Unfortunately, the generated 
+    keys are based on the fully qualified class/method name where the string was 
+    discovered. This makes for quite long keys (e.g., keys greater than 90 characters 
+    long were discovered in some of the Debug plugins). </li>
+</ol>
+<h4>Avoidance Techniques:</h4>
+<p>There are several facets to this problem but the basic lesson here is to understand 
+  the space you are using. Long keys are not particularly useful and just waste 
+  space. String keys are good for developers but end-users pay the space cost. 
+  Mechanisms like bundle loading/management which are going to be used through 
+  out the entire system should be well thought out and supplied to developers 
+  rather than leaving it up to each to do their own (inefficient) implementation.</p>
+<p>With that in mind, below are some of the many possible alternatives:</p>
+<ol>
+  <li>Shorter keys: Clearly the message keys should be useful but not excessively 
+    long. </li>
+  <li>Use the Eclipse 3.1
+  <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-core-home/documents/3.1/message_bundles.html">message bundle</a>
+  facility, <tt>org.eclipse.osgi.util.NLS</tt>.
+  This API binds each message in your catalog to a Java field, eliminating the notion
+  of keys entirely, yielding a huge memory improvement over the basic Java
+  <tt>PropertyResourceBundle</tt>.</li>
+</ol>
+      </td>
+  </tr>
+</table>
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP bgcolor="#0080C0"><b><font color="#FFFFFF" face="Arial,Helvetica">Blooper: 
+      Eager preference pages</font></b></td>
+  </tr>
+  <tr> 
+    <td>
+      <p>(In Eclipse 2.*) The JDT UI plugin has a number of preference pages each 
+        represented by a class. Each set of preferences has a set of default values. 
+        The preference pages have methods which set the preferences to their default 
+        value. When the JDT UI plugin starts, it calls the preference initialization 
+        method on the various preference page classes. As a result, the preference 
+        page classes are loaded. It turns out that a) there are many preference 
+        pages and b) the classes sometimes contain extensive UI code. The net 
+        result is some 250Kb of code is loaded and typically never used since 
+        users rarely consult preferences pages once acceptable values are set.</p>
+<h4>Avoidance Techniques:</h4>
+<p>Refactor the code to move the preference initialization code onto dedicated 
+  or pre-existing classes. Preference page classes can then be loaded on demand 
+  by the workbench's lazy loading mechanism.</p>
+<p><b>Note:</b> This problem has been seen in other plugins. Likely as a result 
+  of cut and paste coding with JDT as a base.</p>
+      </td>
+  </tr>
+</table>
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP bgcolor="#0080C0"><b><font color="#FFFFFF" face="Arial,Helvetica">Blooper: 
+      Too much work on activation</font></b></td>
+  </tr>
+  <tr> 
+    <td>
+<p>Plugins are activated as needed. Typically this means that a plugin is activated 
+  the first time one of its classes is loaded. On activation, the plugin's runtime 
+  class (aka plugin class) is loaded and instantiated and the startup() lifecycle 
+  method called. This gives the plugin a chance to do rudimentary initialization 
+  and hook itself into the platform more tightly than is allowed by the extension 
+  mechanisms in the plugin.xmls.</p>
+      <p>Unfortunately, developers seize the opportunity and do all manner of 
+        work. Also unfortunate is the fact that activation is done in a context 
+        free manner. For example, at activation time the JDT Core plugin, for 
+        example, does not know why it is being activated. It might be because 
+        someone is trying to compile/build some Java, or it might be because class 
+        C in some other plugin subclasses a JDT class and C is being loaded. In 
+        the former case it would be reasonable for JDT Core to load/initialize 
+        required state, create new structures etc. In the latter this would be 
+        completely unreasonable. </p>
+      <p>We have seen cases where literally hundreds of classes and <b>megabytes 
+        of code</b> have been loaded (not to mention all the objects created) 
+        just to check and see that there was nothing to do.</p>
+      <p>This behavior impacts platform startup time if the plugins in question 
+        contribute to the current UI/project structure or imposes lengthy delays 
+        in the user's workflow when they suddenly (often unknowingly) invoke some 
+        new function requiring the errant plugin to be activated.</p>
+<h4>Avoidance Techniques:</h4>
+      <p>The platform provides lazy activation of plugins. Plugins are responsible 
+        for efficiently creating their internal structures according to the function 
+        required. The startup() method is <b>not</b> the time or place to be doing 
+        large scale initialization.</p>
+      </td>
+  </tr>
+</table>
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP bgcolor="#0080C0"><b><font color="#FFFFFF" face="Arial,Helvetica">Blooper: 
+      Decorators </font></b></td>
+  </tr>
+  <tr> 
+    <td> 
+      <p>The UI plugin provides a mechanism for decorating resources with icons 
+        and text (e.g., adding the little 'J' on Java projects or the CVS version 
+        number to the resource label). Plugins contribute decorators by extending 
+        a UI extension point specifying the kind of element they would like to 
+        decorate. When a resource of the identified is displayed, all installed 
+        decorators are given a chance to add their bit to the visual presentation. 
+        This model/mechanism is simple and clean. </p>
+      <p>There are performance consequences however:</p>
+      <ul>
+        <li><b>Early plugin activation</b> In many scenarios, plugins get activated 
+          well before their function is actually needed. Further, because of the 
+          &quot;Too much work at activation&quot; blooper, the activated plugins 
+          often did way more work than was required. In many cases whether or 
+          not a resource should be decorated is predicated on a simple test (e.g., 
+          does it have a particular persistant property). These require almost 
+          not code and certainly no complicated domain/model structures.</li>
+        <li><b>Resource leaks</b> The mechanism can leak images even if individual 
+          decorators are careful. decorateImage() wants to return an image. If 
+          a decorator simply creates a new image and returns it (i.e., without 
+          remembering it) then there is no way of disposing it. To counter this, 
+          decorators typically maintain a list of the images they have provided. 
+          Unfortunately, this list is monotonically increasing if they still create 
+          (but remember) a new image for every decoration request.<br>
+          <br>
+          To counter this, well-behaved decorators cache the images they supply 
+          based on some key. The key is typically a combination of the base image 
+          provided and the decoration they add. This key then allows decorators 
+          to return an already allocated image if the net result of the requested 
+          decoration is the same as some previous result.<br>
+          <br>
+          Since decorators are chained, <b>all</b> decorators must have this good 
+          behaviour. If just one decorator in a chain returns a new image, then 
+          the caching strategies of all following decorators are foiled and once 
+          again resources are leaked.</li>
+        <li><b>Threading </b>Decorators run in foreground which causes problems 
+          for some people (e.g., CVS). To workaround this, heavy-weight decorators 
+          have a background thread which computes the decorations and then issues 
+          a label change event to update the UI. This does not scale. <br>
+          <br>
+          When a label changed event is posted, all decorators are run again. 
+          This allows the decorators following the heavy-weight contributor to 
+          add their decoration. The net result is a flurry of label change events, 
+          decoration requests and UI updates, most of which do little or nothing. 
+          Further, the problem gets worse quickly as heavy-weight decorators are 
+          added.</li>
+        <li><b>Code complexity</b> While this is not directly a performance problem, 
+          it does lead to performance issues as the code here is complex and hard 
+          to test. To do decorators correctly, plugin writers have to write their 
+          own caching code as well as their own threading code (assuming they 
+          have heavy decorator logic). Both chunks of code are complicated, error 
+          prone and likely very much the same from plugin to plugin. Prime candidates 
+          for inclusion in the base mechanism.<br>
+        </li>
+      </ul>
+      <h4>Avoidance techniques:</h4>
+      <p>The UI team tackled this problem by providing more decorator infrastructure.</p>
+      <ul>
+        <li>The semantic level of the decorator API was raised so that decorators 
+          described their decorations rather than directly acting. This allows 
+          the UI mechanisms to manage a central image cache and create fewer intermediate 
+          image results by applying all decorations at once.</li>
+        <li>The Workbench also manages a background decoration thread. All heavy-weight 
+          decorators are run together in the background and their results combined 
+          and presented in one label changed event.</li>
+        <li>Static decoration information can now be declared in the plugin.xml. 
+          This allows plugins to contribute decorators without loading/running 
+          any of their code (a big win!!). The plugin describes the conditions 
+          for decoration (based on the existence of properties, resource types, 
+          etc) and the decoration image and position. The Workbench does the rest.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP bgcolor="#0080C0"><b><font color="#FFFFFF" face="Arial,Helvetica">Blooper: 
+      PDE cycle detection</font></b></td>
+  </tr>
+  <tr> 
+    <td> 
+      <p>PDE Core used to have a linear list of plug-in models generated by parsing 
+        manifest files. Meanwhile, manifest editor has a small 'Issues and Action 
+        Items' area in the Overview page. Among other things, this area shows 
+        problems related to the plug-in to which the manifest file belongs. One 
+        of the problems that can be detected is cyclical plug-in dependencies. 
+        When opened, this section will initiate a cycle detection computation.</p>
+      <p>Cycle detection computation follows the dependency graphs trying to find 
+        closures. It follows the graph by looping through the plug-in IDs, looking 
+        up plug-in models that match the IDs, then recursively follows their dependencies. 
+        In the original implementation, each ID-&gt;model lookup was done linearly 
+        (by iterating over the flat list of models).</p>
+      <h4>Avoidance techniques:</h4>
+      <p>In a large product with 600 plug-ins and convoluted dependency tree, 
+        we got complaints that manifest editor takes 3 minutes to open in some 
+        cases!! After performance analysis, we changed the linear lookup with 
+        a hash table (using plug-in ID as the lookup key). The opening time was 
+        reduced to 3 seconds (worst case scenario) !!!! And we already had this 
+        table in place for other purposes. The actual fix took 2 minutes to do.</p>
+    </td>
+  </tr>
+</table>
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP bgcolor="#0080C0"><b><font color="#FFFFFF" face="Arial,Helvetica">Blooper: 
+      Too many resource change listeners</font></b></td>
+  </tr>
+  <tr> 
+    <td> 
+      <p>PRE_AUTO_BUILD and POST_AUTO_BUILD resource change listeners have a non-trivial 
+        cost associated with them. This is because a new tree layer must be created 
+        to allow the listener to make changes to the tree. Of the five BUILD listeners 
+        that are typically running, four of them from the org.eclipse.team.cvs 
+        plug-ins. </p>
+      <p><b>Bug report: </b><a href="http://dev.eclipse.org/bugs/show_bug.cgi?id=27351">http://dev.eclipse.org/bugs/show_bug.cgi?id=27351</a></p>
+      <h4>Avoidance techniques:</h4>
+      <p>Minimize use of these listeners. Some ideas:</p>
+      <ul>
+        <li>POST_CHANGE listeners have trivial cost... switch to POST_CHANGE where 
+          possible</li>
+        <li>Two listeners cost more than one. Try to create just one and delegate 
+          the work from there.</li>
+        <li>Consider removing listeners when they are not applicable. For example, 
+          if there are no .vcm_meta files, you may be able to get rid of the listener 
+          for it</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+<hr>
+<p>Return to the <a href="index.html">Performance Page</a>.
+</body>
+</html>

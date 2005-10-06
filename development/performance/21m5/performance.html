@@ -1,0 +1,189 @@
+<html>
+<head>
+<title>2.1 M5 Performance</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=left width="72%"> <font class=indextop> 2.1 M5 performance</font> 
+      <br>
+      <font class=indexsub> smaller, faster, scalable</font></td>
+    <td width="28%"><img src="http://dev.eclipse.org/images/Idea.jpg" height=86 width=120></td>
+  </tr>
+</table>
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP bgcolor="#0080C0"><b><font color="#FFFFFF" face="Arial,Helvetica">Performance 
+      in Eclipse 2.1 M5</font></b></td>
+  </tr>
+  <tr> 
+    <td> 
+      <p>Performance continues to be a strong focus for Eclipse development. The 
+        passing of the M5 milestone gives us a chance to check progress and look 
+        for additional opportunities/directions. Individual components are creating 
+        and running &quot;unit benchmarks&quot; (similar to unit tests) to test 
+        their performance. Below is a set of scenario-based benchmarks which try 
+        to capture some performance from the user's perspective. </p>
+      <p>Eclipse is a large, complex system so overall benchmarks are difficult 
+        and sensitive. The data shown here should be treated accordingly.</p>
+      </td>
+  </tr>
+</table>
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP bgcolor="#0080C0"><b><font color="#FFFFFF" face="Arial,Helvetica">Methodology</font></b></td>
+  </tr>
+</table>
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td> <b>Terminolgy </b> 
+      <dl> 
+        <dt><b>warm run</b></dt>
+        <dd><b></b>A test run where the data is collected on the second or subsequent 
+          run. This eliminates any one-time costs such as disk caching, data conversions, 
+          ...</dd>
+        <dt><b>cold run</b></dt>
+        <dd>A test run immediately following system initialization/startup. Before 
+          a cold run test, the system's hard drive cache and any relevant cached 
+          data structures must be flushed.</dd>
+      </dl>
+      <p><b>Setup and procedures</b></p>
+      <ol>
+        <li>Install all desired builds and JREs.</li>
+        <li>Create a .options file (say c:\.options) with the following line to 
+          turn on startup time reporting:<br>
+          <pre>  org.eclipse.core.runtime/debug=true</pre>
+        </li>
+        <li> Create shortcuts for each combination explicitly identifying the 
+          vm, debug mode and the workspace dir. No other command line options 
+          should be used (no vmargs unless it is a special case test). Example: 
+          <pre>  eclipse -vm c:\jre\bin\java.exe -debug file:c:/.options -data c:\test</pre>
+        </li>
+        <li>Create the workspace directory. Use either a new empty dir or populate 
+          a directory with the test data (e.g., the big workspace).<br>
+        </li>
+        <li>Start Eclipse and arrange the perspectives, views, ... as desired 
+          and exit.<br>
+        </li>
+        <li>For a given workbench configuration, run the test scenario with for 
+          each VM for one build. At the end of each run, exit normally. This resaves 
+          the Eclipse state but killing the VM may leave various snapshot files 
+          and partially saved state to be processed on the next run.<br>
+        </li>
+        <li>For warm runs always run each test on each build on each VM at least 
+          twice. The first run will likely see more disk activity etc. while the 
+          second will get more from the disk cache. Also, any workspace conversions 
+          will be completed on the first run.<br>
+        </li>
+        <li>When switching between builds, Eclipse will perceive an installation 
+          change and rebuild the install configuration. A configuration history 
+          is retained and can affect startup time. To eliminate this, delete the 
+          .metadata/.config directory between finishing with build A and starting 
+          with build B. The first run after switching should be discarded. <br>
+        </li>
+        <li>Always work from oldest to newest in terms of builds. Eclipse is backwards 
+          compatible, not forwards compatible.</li>
+      </ol>
+    </td>
+  </tr>
+</table>
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP bgcolor="#0080C0"><b><font color="#FFFFFF" face="Arial,Helvetica">Scenario: 
+      Empty workspace startup</font></b></td>
+  </tr>
+  <tr> 
+    <td> 
+      <p>This scenario models a user starting Eclipse where the workspace is empty. 
+        For example, the first startup. Within this scenario there are two workbench 
+        configurations: </p>
+      <dl> 
+        <dt><b>Resource</b></dt>
+        <dd>The workbench consists of one Resource perspective with no open editors, 
+          welcome pages, ... All views are in their standard confiigurations.</dd>
+        <dt><b>Dev</b></dt>
+        <dd>The workbench contains Resource, Java and Debug perspectives each 
+          in their own window. All perspectives are in their default configuration 
+          and no additional views or editors are open.</dd>
+      </dl>
+      <p>All tests were warm runs on a 2GHz P4 512MB. The tests track startup 
+        time as well as memory footprint for runs on two different Java VMs over 
+        several different builds of Eclipse.</p>
+      <p><b>Summary:</b> Startup time increased slightly from M4 while footprint 
+        dropped slightly. While this is unfortunate, the performance work was 
+        focused more on scalability rather than minimal footprint/startup time 
+        in the trivial cases. The platform team is aware of several areas where 
+        this base overhead can be reduced but the risk is too high to include 
+        those changes for 2.1.</p>
+      <p><img src="image007.gif" width="610" height="369"></p>
+      <p><img src="image008.gif" width="611" height="370"></p>
+    </td>
+  </tr>
+</table>
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b> <font color="#FFFFFF" face="Arial,Helvetica">Scenario: 
+      Big workspace startup</font></b></td>
+  </tr>
+  <tr> 
+    <td>
+      <p>This scenario models a user starting Eclipse on a large working set. 
+        The &quot;<a href="../big-workspace.html">big workspace</a>&quot; is used. 
+        Within this scenario there are two workbench configurations: </p>
+      <dl> 
+        <dt><b>Resource</b></dt>
+        <dd>The workbench consists of one Resource perspective with no open editors, 
+          welcome pages, ... All views are in their standard confiigurations.</dd>
+        <dt><b>Dev</b></dt>
+        <dd>The workbench contains Resource, Java and Debug perspectives each 
+          in their own window. All perspectives are in their default configuration 
+          and the Java perspective has org.eclipse.core.boot.BootLoader.java open 
+          in a Java editor. No additional views or editors are open.</dd>
+      </dl>
+      <p>All tests warm runs on a 2GHz P4 512MB. The tests track startup time 
+        as well as memory footprint for runs on two different Java VMs over several 
+        different builds of Eclipse.</p>
+      <p><b>Summary:</b> Startup times continued their downward trend from M4 
+        with single digit percentage improvements. Memory footprint showed strong 
+        improvement with a 15-20% drop. This translates into tangible drops of 
+        10-15MB! </p>
+      <p><img src="image009.gif" width="611" height="370"></p>
+      <p><img src="image010.gif" width="612" height="371"></p>
+      </td>
+  </tr>
+</table>
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b> <font color="#FFFFFF" face="Arial,Helvetica">Scenario: 
+      Checkout 5000 files from CVS</font></b></td>
+  </tr>
+  <tr> 
+    <td>
+      <p>This scenario models a user loading many projects/resources from a local 
+        CVS repository. The test was done starting with an empty workspace with 
+        the Java perspective open, autobuild off and CVS decorations on. </p>
+      <p>Using the CVS Repository view, 30 plug-in (i.e., Java) projects were 
+        selected and checked out. This downloaded some 5000 resources and performed 
+        all updates. Java building was not done as autobuild was turned off. (side 
+        note: separate timings of Java building shows that M5 performance is comparable 
+        with 2.0.2 in both speed and space). The times measured are elapsed wallclock 
+        time and the memory footprint is the total Java projects &quot;VM Memory&quot; 
+        as reported by the Windows Task Manager. The results given are the average 
+        of six runs. </p>
+      <p><b>Summary:</b> M5 is roughly 9% faster and 14-28% slimmer than 2.0.2 
+        depending on the Java VM used. While this result is in itself promising, 
+        there is further good news. The measurements for individual runs were 
+        more stable/repeatable on M5. This is often an indication of reduced garbage 
+        creation. We also noted that eventhough execution time is dominated by 
+        network I/O (which remained constant), there were still substantial improvements.</p>
+      <p align="center"><img src="image001.gif"></p>
+      <p align="center"><img src="image002.gif"></p>
+      </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html>
