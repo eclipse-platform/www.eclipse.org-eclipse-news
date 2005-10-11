@@ -7,7 +7,7 @@
 <body text="#000000" bgcolor="#FFFFFF">
  
 <h1>Migration to flexible workspaces</h1>
-<font size="-1">Last modified: October 6, 2005</font> 
+<font size="-1">Last modified: October 11, 2005</font> 
 <h3>Overview</h3>
 <p>
 In Eclipse 3.1 and earlier, the <tt>org.eclipse.core.resources</tt> plugin was tightly
@@ -80,6 +80,7 @@ that have equivalent methods on <tt>IFileInfo</tt>:
 <tr><td>getName</td><td>getName</td></tr>
 <tr><td>isDirectory</td><td>isDirectory</td></tr>
 <tr><td>isFile</td><td>!isDirectory()</td></tr>
+<tr><td>isHidden</td><td>isHidden</td></tr>
 <tr><td>lastModified</td><td>getLastModified</td></tr>
 <tr><td>length</td><td>getLength</td></tr>
 <tr><td>setLastModified</td><td>setLastModified</td></tr>
@@ -94,7 +95,8 @@ method. For example, this snippet flips the read only attribute on a file
 <pre>
    IFileStore store = ...;//some file store
    IFileInfo info = store.fetchInfo();
-   info.setAttribute(EFS.ATTRIBUTE_READ_ONLY, !info.isReadOnly());
+   boolean readOnly = info.getAttribute(EFS.ATTRIBUTE_READ_ONLY);
+   info.setAttribute(EFS.ATTRIBUTE_READ_ONLY, !readOnly);
    store.putInfo(info, EFS.SET_ATTRIBUTES, null);
 </pre>
 </p>
