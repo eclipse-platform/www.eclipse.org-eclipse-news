@@ -6,22 +6,14 @@
 </head>
 <body text="#000000" bgcolor="#FFFFFF">
  
-<h1>Migration to flexible workspaces</h1>
-<font size="-1">Last modified: October 11, 2005</font> 
-<h3>Overview</h3>
+<table width="100%">
+<tr><td style="background:#0080C0"><b><span style="color:white">Migration to flexible workspaces</span></b></td></tr>
+</table>
+<font size=-1>[<a href="index.html">Flexible workspaces home</a>]</font><br>
+<font size="-1">Last modified: October 12, 2005</font> 
 <p>
-In Eclipse 3.1 and earlier, the <tt>org.eclipse.core.resources</tt> plugin was tightly
-coupled with the local file system.  Each project and linked resource was mapped 
-to a particular file or directory in the local file system.  In Eclipse 3.2, support
-was added to create resources that are stored in an arbitrary file system.
-For example, a project can now be created whose files and directories are stored on a network,
-in a database, or any facility capable of storing hierarchies of files and directories.
-This new ability to decouple resources in the workspace from the local file system is 
-called <i>flexible workspaces</i>.
-</p>
-<p>
-Existing clients of <tt>org.eclipse.core.resources</tt> might not support this
-new flexibility.  Client code that assumes each <tt>IResource</tt> is located
+Existing clients of <tt>org.eclipse.core.resources</tt> might not support the
+new flexibility afforded by flexible workspaces.  Client code that assumes each <tt>IResource</tt> is located
 in the local file system will likely no longer work when resources are stored
 in other kinds of file systems.  This guide describes the migration steps
 for clients that want to start supporting these new flexible workspaces.
