@@ -643,7 +643,9 @@
 	      	<li>continue simplification/harmonizing of action contribution</li>
 	        <li>synchronized blocks compared to ILock</li>
 	        <li>editor splitting (to be synchronized with the Component Framework and multipage editor efforts)</li>
-	        <li>compatibility layer for commands moved to LTK UI plug-in</li>
+	        <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> compatibility layer for commands moved to LTK UI plug-in<br>
+	        	&rArr; Platform UI decided that they do not want to provide such a layer/infrastructure (too complicated)
+	        </li>
             <li>[investigate] support coloring schemes, scheme switch on tool bar</li>
 			<li>enhanced 'Colors and Fonts preference' page support needed to show syntax and annotation coloring preferences</li>
 	        <li>gesture support/selection modes/hover configuration 
@@ -745,7 +747,19 @@
 		
 		<li><h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> adopt Platform UI&#39;s new PopupDialog</h5>
 		
-		<li><h5>(Start undo manager rework) (see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=89599">bug 89599</a>)</h5>
+		<li><h5>leverage JDT Core support to extract Javadoc from attached HTML</h5>
+			<ul>
+				<li>add support to Javadoc access helper</li>
+				<li>verify that helper works in Javadoc hover</li>
+				<li>verify new support in code assist</li>
+			</ul>
+		
+		<li><h5>leverage JDT Core support to extract Javadoc from attached HTML</h5>
+		
+		<li><h5>(introduce LTK UI plug-in)</h5>
+		use existing command IDs which contain 'jdt'
+		
+		<li><h5>(start undo manager rework) (see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=89599">bug 89599</a>)</h5>
 		
 		</li>
 	</ul>
