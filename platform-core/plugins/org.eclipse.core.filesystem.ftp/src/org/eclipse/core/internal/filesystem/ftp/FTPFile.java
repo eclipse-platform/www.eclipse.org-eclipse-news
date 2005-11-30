@@ -12,6 +12,7 @@ package org.eclipse.core.internal.filesystem.ftp;
 import java.io.*;
 import java.net.*;
 import org.eclipse.core.filesystem.*;
+import org.eclipse.core.filesystem.provider.FileInfo;
 import org.eclipse.core.filesystem.provider.FileStore;
 import org.eclipse.core.runtime.*;
 import org.eclipse.ftp.*;
@@ -52,7 +53,7 @@ public class FTPFile extends FileStore {
 	}
 
 	private IFileInfo createMissingInfo(String myName) {
-		IFileInfo info = FileSystemCore.createFileInfo();
+		FileInfo info = new FileInfo();
 		info.setName(myName);
 		info.setExists(false);
 		return info;
@@ -100,7 +101,7 @@ public class FTPFile extends FileStore {
 		IDirectoryEntry[] entries = listFiles(monitor, true);
 		for (int i = 0; i < entries.length; i++) {
 			if (entries[i].getName().equals(".")) {//$NON-NLS-1$
-				IFileInfo info = FTPUtil.entryToFileInfo(entries[i]);
+				FileInfo info = (FileInfo)FTPUtil.entryToFileInfo(entries[i]);
 				info.setName(getName());
 				return info;
 			}
@@ -158,7 +159,7 @@ public class FTPFile extends FileStore {
 		if (fileInfo.exists()) {
 			if (!fileInfo.isDirectory()) {
 				String message = "A directory could not be created because a file exists with the same name: " + toString();
-				Policy.error(IFileStoreConstants.WRONG_TYPE_LOCAL, message);
+				Policy.error(EFS.ERROR_WRONG_TYPE, message);
 			}
 			return this;
 		}
@@ -196,7 +197,7 @@ public class FTPFile extends FileStore {
 	}
 
 	public void putInfo(IFileInfo info, int options, IProgressMonitor monitor) throws CoreException {
-		Policy.error(IFileStoreConstants.FAILED_WRITE_LOCAL, "The putInfo method is not implemented");
+		Policy.error(EFS.ERROR_WRITE, "The putInfo method is not implemented");
 	}
 
 	/* (non-Javadoc)

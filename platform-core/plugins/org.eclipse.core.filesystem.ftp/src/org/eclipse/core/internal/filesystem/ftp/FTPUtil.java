@@ -10,7 +10,9 @@
 package org.eclipse.core.internal.filesystem.ftp;
 
 import java.net.URL;
-import org.eclipse.core.filesystem.*;
+import org.eclipse.core.filesystem.EFS;
+import org.eclipse.core.filesystem.IFileInfo;
+import org.eclipse.core.filesystem.provider.FileInfo;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.SubProgressMonitor;
 import org.eclipse.ftp.*;
@@ -63,12 +65,12 @@ public class FTPUtil {
 	 * @return The file information for a directory entry
 	 */
 	public static IFileInfo entryToFileInfo(IDirectoryEntry entry) {
-		IFileInfo info = FileSystemCore.createFileInfo();
+		FileInfo info = new FileInfo();
 		info.setExists(true);
 		info.setName(entry.getName());
 		info.setLastModified(entry.getModTime().getTime());
 		info.setLength(entry.getSize());
-		info.setAttribute(IFileStoreConstants.ATTRIBUTE_DIRECTORY, entry.hasDirectorySemantics());
+		info.setDirectory(entry.hasDirectorySemantics());
 		return info;
 	}
 }
