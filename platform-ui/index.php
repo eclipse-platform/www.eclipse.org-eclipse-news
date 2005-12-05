@@ -74,8 +74,8 @@
 	  <A HREF="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-ui-home/rcp/index.html">RCP Home Page</A> 
 	  and the <A HREF="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-ui-home/rcp/faq.html">RCP FAQ</A>.
 	  </p>
-	  <hr class="clearer" />
-	  <div id="homeitem3col">
+
+	  <div class="homeitem3col">
 	  	<h3>Talks</h3><dl>
 			<dt><a href="http://www.desktopcon.org/2005">Desktop Developers'Conference 2005</a></dt>
 			<dd><p>Billy Biggs (SWT) and Douglas Pollock (UI) gave a <a href="talks/desktopDevelopersConference2005.sxi">talk</a> on Eclipse 3.1.  The talk gave a general overview of Eclipse, and then focused in on specific changes and problems with SWT's implementation on GTK+.</p>
