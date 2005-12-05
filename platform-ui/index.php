@@ -34,8 +34,7 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<h2>Platform UI</h2>
-		<div class="homeitem">
-			<h3>Components</h3>
+		
 		<p>Platform UI consists of several components, which provide the basic building blocks for user
       interfaces built with Eclipse.  Some of these can be reused in arbitrary applications, while others are specific to the Eclipse IDE.</p>
 
@@ -75,9 +74,12 @@
 	  <A HREF="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-ui-home/rcp/index.html">RCP Home Page</A> 
 	  and the <A HREF="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-ui-home/rcp/faq.html">RCP FAQ</A>.
 	  </p>
-	  </div>
 
-		<div class="homeitem">
+		
+		<hr class="clearer" />
+	</div>
+	<div id="rightcolumn">
+		<div class="sideitem">
 			<h3>What's Happening</h3>
 			<ul>
 				<li>R3.2 Development
@@ -102,9 +104,6 @@
       			</li>
 			</ul>
 		</div>
-		<hr class="clearer" />
-	</div>
-	<div id="rightcolumn">
 		<div class="sideitem">
 			<h6>Development Resources</h6>
 			<ul>
