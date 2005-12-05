@@ -34,7 +34,7 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<h2>Platform UI</h2>
-		<div class="homeitem2col">
+		<div class="homeitem">
 			<h3>Components</h3>
 		<p>Platform UI consists of several components, which provide the basic building blocks for user
       interfaces built with Eclipse.  Some of these can be reused in arbitrary applications, while others are specific to the Eclipse IDE.</p>
