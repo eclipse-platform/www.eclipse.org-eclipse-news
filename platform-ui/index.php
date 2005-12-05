@@ -74,9 +74,16 @@
 	  <A HREF="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-ui-home/rcp/index.html">RCP Home Page</A> 
 	  and the <A HREF="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-ui-home/rcp/faq.html">RCP FAQ</A>.
 	  </p>
+	  <hr class="clearer" />
+	  <div id="homeitem3col">
+	  	<h3>Talks</h3><dl>
+			<dt><a href="http://www.desktopcon.org/2005">Desktop Developers'Conference 2005</a></dt>
+			<dd><p>Billy Biggs (SWT) and Douglas Pollock (UI) gave a <a href="talks/desktopDevelopersConference2005.sxi">talk</a> on Eclipse 3.1.  The talk gave a general overview of Eclipse, and then focused in on specific changes and problems with SWT's implementation on GTK+.</p>
 
-		
-		<hr class="clearer" />
+			<dt><a href="http://eclipsecon.org/2005">EclipseCon 2005</a></dt>
+			<dd><p>The majority of the Platform UI team attended EclipseCon 2005.  Supplemental materials relating to our talks can be found <a href="eclipsecon/index.html">here</a>.</p></dd>						
+			</dl>
+	  </div>
 	</div>
 	<div id="rightcolumn">
 		<div class="sideitem">
@@ -89,15 +96,7 @@
           			<li>The 3.1 builds are available in the <a href="http://www.eclipse.org/downloads/index.php" target="newdownload&quot;">download</a> area.</li>
         				</ul>
         			</li>
-				<li>R3.1 Maintenance</b> <ul><li>Release 3.0 and 3.0.1 maintenance builds are available in the <a href="http://www.eclipse.org/downloads/index.php" target="newdownload&quot;"> download</a> area.</li></li>
-				<li>Talks<dl>
-    					<dt><a href="http://www.desktopcon.org/2005">Desktop Developers'Conference 2005</a></dt>
-    					<dd><p>Billy Biggs (SWT) and Douglas Pollock (UI) gave a <a href="talks/desktopDevelopersConference2005.sxi">talk</a> on Eclipse 3.1.  The talk gave a general overview of Eclipse, and then focused in on specific changes and problems with SWT's implementation on GTK+.</p>
-    	
-    					<dt><a href="http://eclipsecon.org/2005">EclipseCon 2005</a></dt>
-    					<dd><p>The majority of the Platform UI team attended EclipseCon 2005.  Supplemental materials relating to our talks can be found <a href="eclipsecon/index.html">here</a>.</p></dd>						
-    					</dl>
-    				</li>
+				<li>R3.1 Maintenance</b> <ul><li>Release 3.0 and 3.0.1 maintenance builds are available in the <a href="http://www.eclipse.org/downloads/index.php" target="newdownload&quot;"> download</a> area.</li></ul></li>
     				<li><p>Get Involved! If you are interested in participating in the development of the UI component, check out the developer's mailing list: <a href="http://dev.eclipse.org/mailman/listinfo/platform-ui-dev">platform-ui-dev@eclipse.org</a>. Chat with people there about your problems and interests, and find out what you can do to help. </p>
       				<p>In particular, if you have experience in developing user interfaces, are interested in accessibility and usability issues please consider joining the UI team. If you enjoy working with COM to support OLE documents and ActiveX controls we really want to get to know you. </p>
       				<p>For more detailed information, check out the <a href="dev.html">Development Resources</a>.</p>
