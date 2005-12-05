@@ -1,8 +1,7 @@
 package org.eclipse.ui.examples.filesystem;
 
 import java.net.URI;
-import java.net.URISyntaxException;
-import org.eclipse.core.filesystem.EFS;
+import org.eclipse.core.internal.filesystem.zip.ZipFileSystem;
 import org.eclipse.core.resources.*;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.jface.action.IAction;
@@ -26,7 +25,7 @@ public class ExpandZipAction implements IObjectActionDelegate {
 
 	private void expandZip(IFile file) {
 		try {
-			URI zipURI = new URI(EFS.SCHEME_ZIP, null, "/", file.getLocationURI().toString(), null);
+			URI zipURI = new URI(ZipFileSystem.SCHEME_ZIP, null, "/", file.getLocationURI().toString(), null);
 			IFolder link = file.getParent().getFolder(new Path(file.getName()));
 			link.createLink(zipURI, IResource.REPLACE_RESOURCE, null);
 		} catch (Exception e) {
