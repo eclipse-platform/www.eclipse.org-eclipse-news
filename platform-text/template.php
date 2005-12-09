@@ -61,7 +61,7 @@
 		</div>
 		<hr class="clearer" />
 		<p>Some free text</p>
-		<ul class="midlist">
+		<ul>
 			<li>list of items in free text</li>
 			<li>list of items in free text</li>
 			<li>list of items in free text</li>
