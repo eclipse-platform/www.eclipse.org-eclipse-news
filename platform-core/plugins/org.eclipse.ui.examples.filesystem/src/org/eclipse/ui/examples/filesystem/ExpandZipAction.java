@@ -27,7 +27,7 @@ public class ExpandZipAction implements IObjectActionDelegate {
 		try {
 			URI zipURI = new URI(ZipFileSystem.SCHEME_ZIP, null, "/", file.getLocationURI().toString(), null);
 			IFolder link = file.getParent().getFolder(new Path(file.getName()));
-			link.createLink(zipURI, IResource.REPLACE_RESOURCE, null);
+			link.createLink(zipURI, IResource.REPLACE, null);
 		} catch (Exception e) {
 			MessageDialog.openError(getShell(), "Error", "Error opening zip file");
 			e.printStackTrace();

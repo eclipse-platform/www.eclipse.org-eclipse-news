@@ -28,10 +28,10 @@ public class ExcludeResourceAction implements IObjectActionDelegate {
 			URI nullURI= new URI(EFS.SCHEME_NULL, null, resource.getFullPath().toString(), null, null);
 			if (resource.getType() == IResource.FILE) {
 				IFile link = (IFile)resource;
-				link.createLink(nullURI, IResource.REPLACE_RESOURCE | IResource.ALLOW_MISSING_LOCAL, null);
+				link.createLink(nullURI, IResource.REPLACE | IResource.ALLOW_MISSING_LOCAL, null);
 			} else {
 				IFolder link = (IFolder)resource;
-				link.createLink(nullURI, IResource.REPLACE_RESOURCE | IResource.ALLOW_MISSING_LOCAL, null);
+				link.createLink(nullURI, IResource.REPLACE | IResource.ALLOW_MISSING_LOCAL, null);
 			}
 		} catch (Exception e) {
 			MessageDialog.openError(getShell(), "Error", "Error excluding resource");
