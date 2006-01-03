@@ -2,6 +2,13 @@
 <?eclipse version="3.0"?>
 <plugin>
    <extension
+         id="org.eclipse.core.filesystem.zip"
+         point="org.eclipse.core.filesystem.filesystems">
+      <filesystem scheme="zip">
+         <run class="org.eclipse.core.internal.filesystem.zip.ZipFileSystem"/>
+      </filesystem>
+   </extension>
+   <extension
          point="org.eclipse.ui.popupMenus">
       <objectContribution
             id="org.eclipse.ui.examples.filesystem.contribution1"
