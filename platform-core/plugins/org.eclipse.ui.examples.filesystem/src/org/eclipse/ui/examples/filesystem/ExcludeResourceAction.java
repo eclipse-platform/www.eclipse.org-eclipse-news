@@ -25,7 +25,7 @@ public class ExcludeResourceAction implements IObjectActionDelegate {
 
 	private void exclude(IResource resource) {
 		try {
-			URI nullURI= new URI(EFS.SCHEME_NULL, null, resource.getFullPath().toString(), null, null);
+			URI nullURI= new URI(EFS.SCHEME_NULL, null, "/", null, null);
 			if (resource.getType() == IResource.FILE) {
 				IFile link = (IFile)resource;
 				link.createLink(nullURI, IResource.REPLACE | IResource.ALLOW_MISSING_LOCAL, null);
