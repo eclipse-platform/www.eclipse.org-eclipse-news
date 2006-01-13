@@ -13,7 +13,7 @@
       <objectContribution
             id="org.eclipse.ui.examples.filesystem.contribution1"
             objectClass="org.eclipse.core.resources.IFile">
-						    		     <enablement>
+         		<enablement>
 		            <or>
 		               <objectState name="extension" value="jar"/>
    		            <objectState name="extension" value="zip"/>
@@ -32,7 +32,7 @@
       <objectContribution
             id="org.eclipse.ui.examples.filesystem.contribution2"
             objectClass="org.eclipse.core.resources.IFolder">
-						    		     <enablement>
+         		<enablement>
 		            <or>
 		               <objectState name="extension" value="jar"/>
    		            <objectState name="extension" value="zip"/>
@@ -62,6 +62,19 @@
                enablesFor="1"
                id="org.eclipse.ui.examples.filesystem.excludeResource"
                label="Exclude Resource"
+               menubarPath="additions"/>
+      </objectContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            id="org.eclipse.ui.examples.filesystem.contribution4"
+            objectClass="org.eclipse.core.resources.IProject">
+         <action
+               class="org.eclipse.ui.examples.filesystem.CreatedNestedProjectsAction"
+               enablesFor="1"
+               id="org.eclipse.ui.examples.filesystem.createdNested"
+               label="Create Nested Projects"
                menubarPath="additions"/>
       </objectContribution>
    </extension>
