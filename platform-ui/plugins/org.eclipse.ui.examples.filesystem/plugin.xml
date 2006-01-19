@@ -82,8 +82,8 @@
          point="org.eclipse.ui.ide.filesystemSupport">
       <filesystemContributor
             class="org.eclipse.ui.examples.filesystem.ZipFileSystemContributor"
-            filesystem="org.eclipse.core.filesystem.zip"
-            label="zip"/>
+            label="zip"
+            scheme="zip"/>
    </extension>
 
 </plugin>
