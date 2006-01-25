@@ -49,7 +49,7 @@ ob_start();
       	   <li><a href="development/main.html">Eclipse Project Development</a><br>
 				Release plans and other information about the Eclipse Project development process.
       	   </li>
-      	   <li><a href="documentation/main.html">Documentation</a><br>
+      	   <li><a href="../documentation/main.html">Documentation</a><br>
 				Browse the documentation included with Eclipse Project releases.
       	   </li>
       	 </ul>
