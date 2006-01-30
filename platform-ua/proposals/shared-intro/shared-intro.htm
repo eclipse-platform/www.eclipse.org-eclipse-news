@@ -263,6 +263,41 @@ handling this situation as follows:</p>
 	(background, title, branding image) will be taken from the active product 
 	only.</li>
 </ul>
+<H3>Following links from the main Welcome pages</H3>
+<p>Most of the extensions coming into the main Welcome pages offer links to open 
+further pages contributed by the extensions themselves. It is recommended to 
+create these pages in such a way as to continue with the shared Welcome visual 
+design. The main requirement is to show the appropriate navigator at the top of 
+the page.</p>
+<p>It is fairly easy to do that using the 'include' element. The idea is to 
+include the navigation content at the beginning of contributed page. Unlike the 
+current Welcome implementation, shared Welcome main pages have navigation 
+section that is different for each page. For this reason, pages that branch off 
+these pages should include the navigation from the parent page. For example:</p>
+<blockquote>
+	<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+&lt;introContent&gt;
+   &lt;extensionContent id=&quot;extra&quot; alt-style=&quot;css/swt.properties&quot; style=&quot;css/overview.css&quot; path=&quot;overview/@&quot;&gt;
+      &lt;link label=&quot;Extra Overview link&quot; url=&quot;<a href="http://org.eclipse.ui.intro/showPage?id=extraOverview">http://org.eclipse.ui.intro/showPage?id=extraOverview</a>&quot; 
+					  id=&quot;extra-overview&quot;&gt;
+      		&lt;text&gt;Showing the third-level extra page for overview&lt;/text&gt;
+      &lt;/link&gt;
+   &lt;/extensionContent&gt;
+   &lt;page id=&quot;extraOverview&quot; style-id=&quot;page&quot;&gt;
+      <b>&lt;include path=&quot;overview/navigation-links&quot;/&gt;</b>
+      &lt;group id=&quot;page-content&quot;&gt;
+            &lt;group id=&quot;content-header&quot; label=&quot;EXTRA OVERVIEW&quot; filteredFrom=&quot;swt&quot;&gt;
+            &lt;/group&gt;
+            &lt;text style-id=&quot;page-title&quot; id=&quot;page-title&quot; filteredFrom=&quot;html&quot;&gt;EXTRA OVERVIEW&lt;/text&gt;
+            &lt;text style-id=&quot;page-description&quot; id=&quot;page-description&quot;&gt;Extra overview page description.&lt;/text&gt;
+      &lt;/group&gt;
+   &lt;/page&gt;
+&lt;/introContent&gt;</pre>
+</blockquote>
+<p>The extension above contributed into the overview page contributes a link 
+that shows another page whose definition is part of the extension. Note how we 
+include the group 'navigation-links' that belongs to the 'overview' page at the 
+beginning of the page content definition.</p>
 <H3>Standard Welcome Presentation</H3>
 <P>[We need to define how CSSs will be applied to control the look of the 
 high/mid/low sections and overall Welcome]</P>
