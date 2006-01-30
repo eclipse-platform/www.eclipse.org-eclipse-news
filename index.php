@@ -46,7 +46,7 @@ ob_start();
       	  Eclipse itself.
       	 </p>
       	 <ul>
-      	   <li><a href="development/main.html">Eclipse Project Development</a><br>
+      	   <li><a href="development/">Eclipse Project Development</a><br>
 				Release plans and other information about the Eclipse Project development process.
       	   </li>
       	   <li><a href="../documentation/main.html">Documentation</a><br>
