@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML><HEAD>
 <META http-equiv=Content-Type content="text/html; charset=windows-1252">
-<META content="MSHTML 6.00.2800.1528" name=GENERATOR></HEAD>
+<META content="Microsoft FrontPage 6.0" name=GENERATOR></HEAD>
 <BODY>
 <H1>Shared Eclipse Welcome</H1>
 <H2>Background</H2>
@@ -156,69 +156,113 @@ supported:</p>
 that all of the second level page that branch off the root page have an empty 
 content area. This is because shared Welcome does not have content of its own. 
 These areas are populated using intro config extensions.</p>
-<p>[old content continues]</p>
-<P>The dynamic path resolution capability will be added to the Welcome 
-framework. The generic Welcome implementation will take advantage of this new 
-feature to contribute a metadata-driven resolver. This resolver will resolve 
-contribution paths and priority based on the XML file authored by the product 
-author. The file can look like this:</P>
-<BLOCKQUOTE><PRE>&lt;contributions&gt;
+<p>The traditional way of contributing config extensions is to specify a full 
+path of the anchor element in the target page. This method is still supported 
+but it has proven to be somewhat fragile. As mentioned before, specifying an 
+exact place where the extension will end up in the target is premature for 
+extension authors. They may not know all the products in which their extension 
+will end up, and therefore don't know where they should appear according to each 
+product's focus. In the shared Welcome, this decision is left to product 
+authors. Extension authors now have the option of specifying an incomplete 
+target path, allowing the product author to fill in the blanks.</p>
+<p>Config extensions that want to use late target path resolution need to 
+fulfill two conditions:</p>
+<ol>
+	<li>Config extension needs to specify a unique identifier using the 'id' 
+	attribute. Extensions without the id will be ignored. This is important 
+	because id will be used to refer to the extenstion by the product author.</li>
+	<li>The target path should have the following form: &quot;page_id/@&quot; where 'page_id' 
+	is the identifier of the target page. When '@' is detected in the target 
+	path, an attempt will be made to dynamically resolve the path into the 
+	expected full form.</li>
+</ol>
+<P>The ability to resolve extension target paths is a new intro support feature 
+in Eclipse 3.2 added to make shared Welcome more powerful. The feature itself is 
+generic in that it can be used in other Welcome implementations, not just the 
+shared one. In Eclipse 3.2, CustomizableIntroPart can accept an optional intro 
+customizer class that can affect its behavior in several ways. One of the roles 
+of the customizer is to perform late target path resolution. Of course, as far 
+as product authors are concerned, this is all just implementation detail because 
+in shared Welcome implementation performs its late target path resolution using 
+the data file mentioned earlier. This file is specified in the product extension 
+using the 'introData' property.</P>
+<P>The 'introData' file uses XML format and allows product authors to control 
+the content of the main Welcome pages. Welcome contribution authors are required 
+to specify only the page Id in their target paths. The rest is defined in this 
+file. The file contains a sequence of 'page' elements, each containing a number 
+of 'group' elements. Group elements specify page-relative path and have 
+contributions for children. Contribution elements are used to specify two 
+aspects:&nbsp; </P>
+<BLOCKQUOTE><PRE>&lt;extensions&gt;
    &lt;page id="overview"&gt;
-      &lt;section id="page-content/prioritySections/high"&gt;
-          &lt;contribution id="foo"/&gt;
-          &lt;contribution id="bar"/&gt;
-      &lt;/section&gt;
-      &lt;section id="page-content/prioritySections/medium"&gt;
-           &lt;contribution id="foo1"/&gt;
-           &lt;contribution id="foo2"/&gt;
-      &lt;/section&gt;
-      &lt;section id="page-content/prioritySections/low"&gt;
-           &lt;contribution id="foo5"/&gt;
-      &lt;/section&gt;
+      &lt;group path="page-content/left"&gt;
+          &lt;extension id="foo1" importance=&quot;high&quot;/&gt;
+          &lt;extension id="bar"  importance=&quot;high&quot;/&gt;
+	  &lt;extension id=&quot;foo2&quot; importance=&quot;medium&quot;/&gt;
+      &lt;/group&gt;
+      &lt;group path="page-content/right"&gt;
+           &lt;extension id="foo3" importance=&quot;low&quot;/&gt;
+           &lt;extension id="foo4" importance=&quot;low&quot;/&gt;
+           &lt;extension id=&quot;foo5&quot; importance=&quot;callout&quot;/&gt;
+      &lt;/group&gt;
       &lt;hidden&gt;
-            &lt;contribution id="foo3"/&gt;
-            &lt;contribution id="foo4"/&gt;
+            &lt;extension id="foo6"/&gt;
+            &lt;extension id="foo7"/&gt;
       &lt;/hidden&gt;
    &lt;/page&gt;
-   &lt;page id="news"&gt;
+   &lt;page id="whatsnew"&gt;
+       ...
    &lt;/page&gt;
-&lt;/contributions&gt; </PRE></BLOCKQUOTE>
-<P>The resolver will simply load the file and when asked to resolve paths or 
-priority of contribution items, it will consult the data loaded from the file. 
-For example, if the contribution with the id 'foo' was contributed into the 
-'overview' page, the resolver will return 
-"overview/page-content/prioritySections/high" for its path, and its priority 
-will be 0. Similarly, 'foo2' path will be 
-"overview/page-content/prioritySection/medium" and priority will be 1 (because 
-foo1 will have priority 0).</P>
-<P>Note how certain contributions are explicitly hidden. This is to allow 
-product authors the freedom to omit certain contributions while at the same time 
-allow third-party contributions added to the product in the field to appear. If 
-the resolver finds a contribution that is neither in one of the section nor in 
-the 'hidden' list, it will be resolved into the 'low' section with a priority 
-Integer.MAX_VALUE. In case of a missing resolver metadata file, all the 
-contribution will be resolved this way (low importance with Integer.MAX_VALUE 
-priority).</P>
+&lt;/extensions&gt;</PRE></BLOCKQUOTE>
+<p>In the example above, contributions 'foo1', 'bar' and foo2' will be in the 
+left, and 'foo3', 'foo4' and 'foo5' in the right column on the page. The 
+relative order of contributions is also extracted from this file. In addition, 
+contributions are classified based on the <code>importance</code> attribute that 
+can have four valid values: <b>high</b>, <b>medium</b>, <b>low</b> and <b>
+callout</b>, with <b>low</b> as the default. Each value has matching 
+presentation that makes it stand out on the page. First three are simply 
+different levels of importance according to the product author (note that the 
+same contribution may receive a different importance classification in two 
+separate products). The last one (<b>callout</b>) is used to single out 
+contributions that are of a completely different nature (for example, a 
+contribution that offers links to videos or animation).</p>
+<p>Contributions that are not listed are appended after the listed contributions 
+and assigned a low importance value. This is important for contributions added 
+after the product has shipped - they still need to show up.</p>
+<p>Contributions not relevant to the project can be hidden by explicitly listing 
+them as children of the 'hidden' element.</p>
+<H3>Seeding the introData file</H3>
+<p>One of the difficulties with the intro data file is that it is time consuming 
+to find all the intro extensions available in the product. For this reason, we 
+have provided a utility application that writes the initial file you can use as 
+a starting point. The utility application's id is <b>
+org.eclipse.ui.intro.introData.</b> Start Eclipse with all the plug-ins that 
+comprise your product by passing this application (either as a command line 
+argument or by selecting it from PDE's launch configuration) and the application 
+will write the content of the file to the console. Copy the content of the 
+console and paste it into the file that <b>introData</b> property in your 
+product extension is pointing et.</p>
 <H3>Handling multiple products</H3>
-<P>The current Welcome implementation supports product-&gt;welcome binding such 
-that only one of several contributed welcomes is shown for each product.</P>
-<P>We will augment this to show content from other existing products using one 
-of the the following two options:</P>
-<OL>
-  <LI>At the end of each page receiving the treatment shown above (the 
-  high/medium/low sections and dynamic path resolution), a dynamic content 
-  section will add links to matching pages in other welcomes found in the 
-  registry but not bound to the currently running product. For example, at the 
-  bottom of the 'Overview' page, we can have 'See also' with a link to the 
-  'Overview' page of each product in the registry. 
-  <LI>At the bottom of each high/med/low section in the page, a dynamic content 
-  element can be placed that will search for contributions into other 'Overview' 
-  pages, use the resolver to get the once applicable to the high/mid/low section 
-  and add them there. 
-  <LI>Similar to (2), but achieve the merging directly in the Intro model for 
-  all contributions that use the same page id (regardless of the product 
-  binding). The resolver can automatically give higher priority to items coming 
-  from the current product. </LI></OL>
+<p>The intent of the shared Welcome implementation is that all products that 
+want intelligent content merging point at it instead of creating their own. This 
+implies that it is possible to end up in a situation where multiple products all 
+pointing at the same shared Welcome coexist in the Eclipse workbench. Intro is 
+handling this situation as follows:</p>
+<ul>
+	<li>Individual introData files associated with products in the workbench 
+	will all be honored. </li>
+	<li>Content from multiple products will be merged in the main Welcome pages.</li>
+	<li>The extensions that belong to the currently active product will be given 
+	precedance. For example, when there are two products 'Bar' and 'Foo', and 
+	workbench has been launched with 'Bar' being the active product, 'Bar's 
+	extensions will show up before 'Foo's extension <b>within the same 
+	importance level</b>. This means that although Bar's extensions are shown 
+	before Foo's, Foo's extensions of <b>high</b> importance will be positioned 
+	before Bar's <b>medium</b> or <b>low</b> importance items.</li>
+	<li>Other intro properties passed from the product extension point 
+	(background, title, branding image) will be taken from the active product 
+	only.</li>
+</ul>
 <H3>Standard Welcome Presentation</H3>
 <P>[We need to define how CSSs will be applied to control the look of the 
 high/mid/low sections and overall Welcome]</P>
