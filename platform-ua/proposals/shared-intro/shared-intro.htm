@@ -26,7 +26,7 @@ Welcome contribution:</P>
   must know about the page identifiers for each of the products upfront. 
   <LI>It is entirely possible that one of the products will have a Welcome 
   implementation that is completely different from what the feature provider 
-  expects; the contribution will now show up in these products 
+  expects; the contribution will not show up in these products 
   <LI>Even if the products share a common Welcome implementation, the importance 
   of the feature (and hence its relative position on the page) is not going to 
   be the same. The feature can be one of the most important components in the 
@@ -35,12 +35,12 @@ Welcome contribution:</P>
 <P>It is clearly obvious that the Welcome contribution of a reusable feature 
 would be much easier to develop with the following conditions in place:</P>
 <UL>
-  <LI>Common Welcome implementation that can be counted on (as a form of API) 
+  <LI>Common Welcome implementation that can be counted on (as a form of an API) 
   <LI>Delayed target page resolution (so that the decision of the final position 
-  of the contribution is left to the product assemblers) </LI></UL>
+  of the contribution is left to the product assemblers)</LI></UL>
 <H2>The Solution</H2>
-<P>Based on the conclusions made on the previous section, the User Assistance 
-team will provide a recommended Welcome implementation that will be used by all products that want 
+<P>Based on the conclusions made in the previous section, the User Assistance 
+team now provides a recommended Welcome implementation that will be used by all products that want 
 to support better Welcome control. Eclipse Platform and SDK products will switch 
 to this implementation and others will be encouraged to follow suit.</P>
 <P>The shared Welcome solution is based on our experience with Welcome 
@@ -48,8 +48,8 @@ implementations and the need to have an implementation in place that
 contributors can count on. The implementation is built using the current Welcome 
 framework which has been minimally enhanced to better support it. For this 
 reason, all existing Welcome implementation will continue to work and clients 
-will be able to switch to the new shared model at their schedule. Of course, as 
-long as they don't switch, they will not be reap benefits of the new 
+will be able to switch to the new shared model according to their schedules. Of course, as 
+long as they don't switch, they will not reap benefits of the new 
 implementation such as intelligent content merging, new visual solution etc.</P>
 <h3>Design Principles</h3>
 <P>While designing the shared welcome implementation, we started from the 
@@ -115,11 +115,11 @@ several ways, and the configuration starts by using the product properties:</p>
                name=&quot;introBrandingImage&quot;
                value=&quot;bundle:eclipse.png&quot;/&gt;
          &lt;property
-         	   name=&quot;introBrandingText&quot;
-         	   value=&quot;XYZ Company&quot;/&gt;
+       	       name=&quot;introBrandingText&quot;
+               value=&quot;XYZ Company&quot;/&gt;
          &lt;property
-         	   name=&quot;introRootPages&quot;
-         	   value=&quot;overview,firststeps,tutorials,samples,whatsnew,migrate,webresources&quot;/&gt;
+               name=&quot;introRootPages&quot;
+               value=&quot;overview,firststeps,tutorials,samples,whatsnew,migrate,webresources&quot;/&gt;
       &lt;/product&gt;</pre>
 <p>Product properties whose values represent a file name relative to the product 
 bundle must be qualified with the 'bundle:' prefix. The following properties are 
@@ -172,7 +172,7 @@ fulfill two conditions:</p>
 	attribute. Extensions without the id will be ignored. This is important 
 	because id will be used to refer to the extenstion by the product author.</li>
 	<li>The target path should have the following form: &quot;page_id/@&quot; where 'page_id' 
-	is the identifier of the target page. When '@' is detected in the target 
+	is the identifier of the target page. When '/@' is detected in the target 
 	path, an attempt will be made to dynamically resolve the path into the 
 	expected full form.</li>
 </ol>
@@ -183,7 +183,7 @@ shared one. In Eclipse 3.2, CustomizableIntroPart can accept an optional intro
 customizer class that can affect its behavior in several ways. One of the roles 
 of the customizer is to perform late target path resolution. Of course, as far 
 as product authors are concerned, this is all just implementation detail because 
-in shared Welcome implementation performs its late target path resolution using 
+in shared Welcome implementation, late target path resolution is performed using 
 the data file mentioned earlier. This file is specified in the product extension 
 using the 'introData' property.</P>
 <P>The 'introData' file uses XML format and allows product authors to control 
@@ -241,7 +241,7 @@ comprise your product by passing this application (either as a command line
 argument or by selecting it from PDE's launch configuration) and the application 
 will write the content of the file to the console. Copy the content of the 
 console and paste it into the file that <b>introData</b> property in your 
-product extension is pointing et.</p>
+product extension is pointing at.</p>
 <H3>Handling multiple products</H3>
 <p>The intent of the shared Welcome implementation is that all products that 
 want intelligent content merging point at it instead of creating their own. This 
