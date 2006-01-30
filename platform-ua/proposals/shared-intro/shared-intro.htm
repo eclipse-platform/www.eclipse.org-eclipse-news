@@ -250,18 +250,24 @@ pointing at the same shared Welcome coexist in the Eclipse workbench. Intro is
 handling this situation as follows:</p>
 <ul>
 	<li>Individual introData files associated with products in the workbench 
-	will all be honored. </li>
+	will all be honored.</li>
 	<li>Content from multiple products will be merged in the main Welcome pages.</li>
 	<li>The extensions that belong to the currently active product will be given 
-	precedance. For example, when there are two products 'Bar' and 'Foo', and 
+	precedence. For example, when there are two products 'Bar' and 'Foo', and 
 	workbench has been launched with 'Bar' being the active product, 'Bar's 
 	extensions will show up before 'Foo's extension <b>within the same 
 	importance level</b>. This means that although Bar's extensions are shown 
 	before Foo's, Foo's extensions of <b>high</b> importance will be positioned 
 	before Bar's <b>medium</b> or <b>low</b> importance items.</li>
-	<li>Other intro properties passed from the product extension point 
+	<li>Most of the intro properties passed from the product extension point 
 	(background, title, branding image) will be taken from the active product 
 	only.</li>
+	<li>Order and selection of root pages (specified using the <b>introRootPages</b> 
+	property) will be computed as a union of root pages in all the products. An 
+	attempt will be made to respect the order of root pages specified by the 
+	active product. Pages missing in the active product's list but existing in 
+	other products in the same workbench will be added at the most logical 
+	place.</li>
 </ul>
 <H3>Following links from the main Welcome pages</H3>
 <p>Most of the extensions coming into the main Welcome pages offer links to open 
