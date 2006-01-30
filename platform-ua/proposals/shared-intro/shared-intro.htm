@@ -1,0 +1,231 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 6.00.2800.1528" name=GENERATOR></HEAD>
+<BODY>
+<H1>Shared Eclipse Welcome</H1>
+<H2>Background</H2>
+<P>This document represents a description of a new welcome 
+implementation that will be used by Eclipse products that want to promote contributions 
+into the Welcome pages. The implementation will be provided by Eclipse platform 
+and available for use and configuration.</P>
+<H2>The Problem</H2>
+<P>The Welcome framework in Eclipse provides for defining welcome pages with 
+unique contribution points or 'anchors'. Other components can provide extensions 
+that add content into these anchors. Although this mechanism worked well for 
+closed solutions, it is increasingly hard to maintain for large products. Due to 
+the 'bottom-up' nature of contributions from clients into the welcome pages, it 
+is hard to control the final result and resolve conflicting contributions.</P>
+<P>Take a provider of a reusable Eclipse feature as an example. He/she has 
+created a useful feature consisting of a number of plug-ins. The feature can 
+take part in several products, each one having its own Welcome implementation. 
+There are several problems that the feature provider will face when creating 
+Welcome contribution:</P>
+<UL>
+  <LI>Since it must contribute into a number of different products, the feature 
+  must know about the page identifiers for each of the products upfront. 
+  <LI>It is entirely possible that one of the products will have a Welcome 
+  implementation that is completely different from what the feature provider 
+  expects; the contribution will now show up in these products 
+  <LI>Even if the products share a common Welcome implementation, the importance 
+  of the feature (and hence its relative position on the page) is not going to 
+  be the same. The feature can be one of the most important components in the 
+  product, or may be ranked as 'See Also'. Nevertheless, the feature provider is 
+  asked to fully spell out the location on the target page in advance. </LI></UL>
+<P>It is clearly obvious that the Welcome contribution of a reusable feature 
+would be much easier to develop with the following conditions in place:</P>
+<UL>
+  <LI>Common Welcome implementation that can be counted on (as a form of API) 
+  <LI>Delayed target page resolution (so that the decision of the final position 
+  of the contribution is left to the product assemblers) </LI></UL>
+<H2>The Solution</H2>
+<P>Based on the conclusions made on the previous section, the User Assistance 
+team will provide a recommended Welcome implementation that will be used by all products that want 
+to support better Welcome control. Eclipse Platform and SDK products will switch 
+to this implementation and others will be encouraged to follow suit.</P>
+<P>The shared Welcome solution is based on our experience with Welcome 
+implementations and the need to have an implementation in place that 
+contributors can count on. The implementation is built using the current Welcome 
+framework which has been minimally enhanced to better support it. For this 
+reason, all existing Welcome implementation will continue to work and clients 
+will be able to switch to the new shared model at their schedule. Of course, as 
+long as they don't switch, they will not be reap benefits of the new 
+implementation such as intelligent content merging, new visual solution etc.</P>
+<h3>Design Principles</h3>
+<P>While designing the shared welcome implementation, we started from the 
+following principles:</P>
+<ol>
+	<li>Products should be able to point at the shared implementation without 
+	the need to implement Welcome from scratch</li>
+	<li>Each product should be able to configure the shared implementation to a 
+	certain degree (root page background, title, branding image)</li>
+	<li>A number of root pages that cover most of the products' needs will be 
+	provided by the shared implementation. However, the pages to show and their 
+	order should be under individual product's control</li>
+	<li>Visual design of the shared Welcome implementation should be 
+	sufficiently product-agnostic to better suit the increasingly componentized 
+	world. It should work well with both monolithic products and 'best of bread' 
+	Eclipse products composed of components created by different companies.</li>
+</ol>
+<H3>Hooking to the shared Welcome implementation</H3>
+<p>In order to hook to the shared Welcome, developers should have a 
+product-based Eclipse application. This requires the use of the <b>
+org.eclipse.runtime.products</b> extension point (the assumption is that the 
+product has already been defined):</p>
+<blockquote>
+	<pre>&lt;extension
+	id=&quot;foo&quot;
+	point=&quot;org.eclipse.core.runtime.products&quot;&gt;
+   &lt;product
+      application=&quot;org.eclipse.ui.ide.workbench&quot;
+      description=&quot;Product Foo to use for testing the shared intro&quot;
+      name=&quot;Product Foo&quot;&gt;
+   &lt;/product&gt;
+&lt;/extension&gt;</pre>
+</blockquote>
+<p>For this example, assume that the extension is define in plugin.xml file 
+sitting in the bundle with the bundle id of <b>com.example.intro</b>. A 
+long-existing feature of the Eclipse intro support is the ability to hook 
+products and intros using the product-intro binding:</p>
+<blockquote>
+	<pre>&lt;extension
+	point=&quot;org.eclipse.ui.intro&quot;&gt;
+   &lt;introProductBinding
+      introId=&quot;org.eclipse.ui.intro.shared&quot;
+      productId=&quot;com.example.intro.foo&quot;/&gt;
+&lt;/extension&gt;</pre>
+</blockquote>
+<p>The extension above binds the shared intro implementation (<b>org.eclipse.ui.intro.shared</b>) 
+and our product id. Note however that the shared intro can be configured in 
+several ways, and the configuration starts by using the product properties:</p>
+<pre>      &lt;product
+            application=&quot;org.eclipse.ui.ide.workbench&quot;
+            description=&quot;Product Foo to use for testing the shared intro&quot;
+            name=&quot;Product Foo&quot;&gt;
+         &lt;property
+               name=&quot;introData&quot;
+               value=&quot;bundle:intro_data.xml&quot;/&gt;
+         &lt;property
+               name=&quot;introTitle&quot;
+               value=&quot;Welcome to Product Bar&quot;/&gt;
+         &lt;property
+               name=&quot;introBackgroundImage&quot;
+               value=&quot;bundle:welcomebckgrd.jpg&quot;/&gt;
+         &lt;property
+               name=&quot;introBrandingImage&quot;
+               value=&quot;bundle:eclipse.png&quot;/&gt;
+         &lt;property
+         	   name=&quot;introBrandingText&quot;
+         	   value=&quot;XYZ Company&quot;/&gt;
+         &lt;property
+         	   name=&quot;introRootPages&quot;
+         	   value=&quot;overview,firststeps,tutorials,samples,whatsnew,migrate,webresources&quot;/&gt;
+      &lt;/product&gt;</pre>
+<p>Product properties whose values represent a file name relative to the product 
+bundle must be qualified with the 'bundle:' prefix. The following properties are 
+supported:</p>
+<ul>
+	<li><b>introTitle</b> - the value of the property will be used at the top of 
+	the root page</li>
+	<li><b>introBackgroundImage</b> - the value of the property represents the 
+	file name of the image to use as the root page background. The background 
+	image should be of sufficient size to prevent tiling (suggested size 
+	1600x1200).</li>
+	<li><b>introBrandingImage</b> - the value of the property represents the 
+	file name of the image to be used as the root page brandmark. The image 
+	should ideally be PNG with alpha blending but other formats are also valid.</li>
+	<li><b>introBrandingText</b> - the alternative text to be used for the 
+	branding image.</li>
+	<li><b>introRootPages</b> - a comma-separated list indicating page links 
+	that should show up on the root page, as well as their order. The tokens in 
+	the list can be one of:<ul>
+		<li><b>overview</b></li>
+		<li><b>firststeps</b></li>
+		<li><b>tutorials</b></li>
+		<li><b>samples</b></li>
+		<li><b>whatsnew</b></li>
+		<li><b>migrate</b></li>
+		<li><b>webresources</b></li>
+	</ul>
+	</li>
+	<li><b>introData</b> - the name of the XML file containing additional 
+	configuring information (see further down).</li>
+</ul>
+<H3>Extending the shared Welcome</H3>
+<p>When launching the shared Welcome configured as shown above, you will notice 
+that all of the second level page that branch off the root page have an empty 
+content area. This is because shared Welcome does not have content of its own. 
+These areas are populated using intro config extensions.</p>
+<p>[old content continues]</p>
+<P>The dynamic path resolution capability will be added to the Welcome 
+framework. The generic Welcome implementation will take advantage of this new 
+feature to contribute a metadata-driven resolver. This resolver will resolve 
+contribution paths and priority based on the XML file authored by the product 
+author. The file can look like this:</P>
+<BLOCKQUOTE><PRE>&lt;contributions&gt;
+   &lt;page id="overview"&gt;
+      &lt;section id="page-content/prioritySections/high"&gt;
+          &lt;contribution id="foo"/&gt;
+          &lt;contribution id="bar"/&gt;
+      &lt;/section&gt;
+      &lt;section id="page-content/prioritySections/medium"&gt;
+           &lt;contribution id="foo1"/&gt;
+           &lt;contribution id="foo2"/&gt;
+      &lt;/section&gt;
+      &lt;section id="page-content/prioritySections/low"&gt;
+           &lt;contribution id="foo5"/&gt;
+      &lt;/section&gt;
+      &lt;hidden&gt;
+            &lt;contribution id="foo3"/&gt;
+            &lt;contribution id="foo4"/&gt;
+      &lt;/hidden&gt;
+   &lt;/page&gt;
+   &lt;page id="news"&gt;
+   &lt;/page&gt;
+&lt;/contributions&gt; </PRE></BLOCKQUOTE>
+<P>The resolver will simply load the file and when asked to resolve paths or 
+priority of contribution items, it will consult the data loaded from the file. 
+For example, if the contribution with the id 'foo' was contributed into the 
+'overview' page, the resolver will return 
+"overview/page-content/prioritySections/high" for its path, and its priority 
+will be 0. Similarly, 'foo2' path will be 
+"overview/page-content/prioritySection/medium" and priority will be 1 (because 
+foo1 will have priority 0).</P>
+<P>Note how certain contributions are explicitly hidden. This is to allow 
+product authors the freedom to omit certain contributions while at the same time 
+allow third-party contributions added to the product in the field to appear. If 
+the resolver finds a contribution that is neither in one of the section nor in 
+the 'hidden' list, it will be resolved into the 'low' section with a priority 
+Integer.MAX_VALUE. In case of a missing resolver metadata file, all the 
+contribution will be resolved this way (low importance with Integer.MAX_VALUE 
+priority).</P>
+<H3>Handling multiple products</H3>
+<P>The current Welcome implementation supports product-&gt;welcome binding such 
+that only one of several contributed welcomes is shown for each product.</P>
+<P>We will augment this to show content from other existing products using one 
+of the the following two options:</P>
+<OL>
+  <LI>At the end of each page receiving the treatment shown above (the 
+  high/medium/low sections and dynamic path resolution), a dynamic content 
+  section will add links to matching pages in other welcomes found in the 
+  registry but not bound to the currently running product. For example, at the 
+  bottom of the 'Overview' page, we can have 'See also' with a link to the 
+  'Overview' page of each product in the registry. 
+  <LI>At the bottom of each high/med/low section in the page, a dynamic content 
+  element can be placed that will search for contributions into other 'Overview' 
+  pages, use the resolver to get the once applicable to the high/mid/low section 
+  and add them there. 
+  <LI>Similar to (2), but achieve the merging directly in the Intro model for 
+  all contributions that use the same page id (regardless of the product 
+  binding). The resolver can automatically give higher priority to items coming 
+  from the current product. </LI></OL>
+<H3>Standard Welcome Presentation</H3>
+<P>[We need to define how CSSs will be applied to control the look of the 
+high/mid/low sections and overall Welcome]</P>
+<P>[We also need to talk about how items in 'high importance' section may 
+require larger icons]</P>
+<H3>SWT fallback presentation</H3>
+<P>[Need to talk a bit about the SWT fallback implementation for platforms that 
+do not support embedded Web browser; this already exists but will have to be 
+enhanced to support the high/med/low sections; it is possible that no changes 
+will be needed]</P></BODY></HTML>
