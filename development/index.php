@@ -2,7 +2,7 @@
 
 	#*****************************************************************************
 	#
-	# main.php
+	# index.php
 	#
 	# Author: 		
 	# Date:			2006-01-30
@@ -65,7 +65,7 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>Development Process</h3>
 			<ul>
-			<li><a href="http://dev.eclipse.org/conventions.html">
+			<li><a href="http://wiki.eclipse.org/index.php/Development_Conventions_and_Guidelines"
 				Conventions and Guidelines</a><br>
 		        Look here for the for the coding standards, naming conventions, and other 
 		        guidelines we use to help ensure eclipse presents to users and developers 
@@ -86,7 +86,7 @@ ob_start();
 		        and &quot;pserver&quot; type CVS connections - &quot;pserver&quot; only 
 		        works for anonymous access.
 			</li>
-			<li><a href="http://dev.eclipse.org/mailman/listinfo/">Mailing Lists</a><br>
+			<li><a href="http://www.eclipse.org/mail/">Mailing Lists</a><br>
 		        Eclipse uses mailing lists for development coordination, design discussions, 
 		        voting, announcements etc.
 			</li>
