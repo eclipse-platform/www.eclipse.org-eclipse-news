@@ -60,12 +60,14 @@ following principles:</P>
 	<li>Each product should be able to configure the shared implementation to a 
 	certain degree (root page background, title, branding image)</li>
 	<li>A number of root pages that cover most of the products' needs will be 
-	provided by the shared implementation. However, the pages to show and their 
-	order should be under individual product's control</li>
+	provided by the shared implementation. However, the pages to show will be 
+	configurable.</li>
 	<li>Visual design of the shared Welcome implementation should be 
 	sufficiently product-agnostic to better suit the increasingly componentized 
 	world. It should work well with both monolithic products and 'best of bread' 
 	Eclipse products composed of components created by different companies.</li>
+	<li>End-users should also be able to configure Welcome in a user-friendly 
+	way.</li>
 </ol>
 <H3>Hooking to the shared Welcome implementation</H3>
 <p>In order to hook to the shared Welcome, developers should have a 
@@ -96,49 +98,47 @@ products and intros using the product-intro binding:</p>
 &lt;/extension&gt;</pre>
 </blockquote>
 <p>The extension above binds the shared intro implementation (<b>org.eclipse.ui.intro.shared</b>) 
-and our product id. Note however that the shared intro can be configured in 
-several ways, and the configuration starts by using the product properties:</p>
+and our product id.</p>
+<p>Shared intro customization is split between product branding properties and 
+preferences. Product branding properties are set by the product and cannot be 
+modified. They include product title, branding image and branding image text:</p>
 <pre>      &lt;product
             application=&quot;org.eclipse.ui.ide.workbench&quot;
             description=&quot;Product Foo to use for testing the shared intro&quot;
             name=&quot;Product Foo&quot;&gt;
          &lt;property
-               name=&quot;introData&quot;
-               value=&quot;bundle:intro_data.xml&quot;/&gt;
-         &lt;property
                name=&quot;introTitle&quot;
                value=&quot;Welcome to Product Bar&quot;/&gt;
-         &lt;property
-               name=&quot;introBackgroundImage&quot;
-               value=&quot;bundle:welcomebckgrd.jpg&quot;/&gt;
          &lt;property
                name=&quot;introBrandingImage&quot;
                value=&quot;bundle:eclipse.png&quot;/&gt;
          &lt;property
        	       name=&quot;introBrandingText&quot;
                value=&quot;XYZ Company&quot;/&gt;
-         &lt;property
-               name=&quot;introRootPages&quot;
-               value=&quot;overview,firststeps,tutorials,samples,whatsnew,migrate,webresources&quot;/&gt;
       &lt;/product&gt;</pre>
 <p>Product properties whose values represent a file name relative to the product 
-bundle must be qualified with the 'bundle:' prefix. The following properties are 
+bundle must be qualified with the 'product:' prefix. The following properties are 
 supported:</p>
 <ul>
 	<li><b>introTitle</b> - the value of the property will be used at the top of 
 	the root page</li>
-	<li><b>introBackgroundImage</b> - the value of the property represents the 
-	file name of the image to use as the root page background. The background 
-	image should be of sufficient size to prevent tiling (suggested size 
-	1600x1200).</li>
 	<li><b>introBrandingImage</b> - the value of the property represents the 
-	file name of the image to be used as the root page brandmark. The image 
-	should ideally be PNG with alpha blending but other formats are also valid.</li>
-	<li><b>introBrandingText</b> - the alternative text to be used for the 
+	file name of the image to be used as the root page brand mark. The image 
+	should ideally be PNG with alpha blending but other formats are also valid. 
+	Image file names relative to the product bundle must have a 'product:' 
+	prefix.</li>
+	<li><b>introBrandingText</b> - an alternative text to be used for the 
 	branding image.</li>
-	<li><b>introRootPages</b> - a comma-separated list indicating page links 
-	that should show up on the root page, as well as their order. The tokens in 
-	the list can be one of:<ul>
+</ul>
+<p>Second half of shared intro variables are accessible as preferences. The 
+split is due to the fact that these variables can be configured by users and are 
+exposed in the Welcome preference page. The initial values for these preferences 
+should be placed in the 'plugin_customization.ini' file that is referenced from 
+the product extension. These preferences are:</p>
+<ul>
+	<li><b>org.eclipse.ui.intro/INTRO_ROOT_PAGES</b> - a comma-separated list of 
+	root page identifiers that should be visible in the home page. Valid values 
+	are:<ul>
 		<li><b>overview</b></li>
 		<li><b>firststeps</b></li>
 		<li><b>tutorials</b></li>
@@ -148,9 +148,42 @@ supported:</p>
 		<li><b>webresources</b></li>
 	</ul>
 	</li>
-	<li><b>introData</b> - the name of the XML file containing additional 
-	configuring information (see further down).</li>
+	<li><b>org.eclipse.ui.intro/</b><b>INTRO_DATA</b> - a file name pointing at 
+	the XML file with the page layout settings (see more about this below)</li>
+	<li><b>org.eclipse.ui.intro/INTRO_BACKGROUND_IMAGE</b> - a file name of the 
+	background image to be used for the root page</li>
+	<li><b>org.eclipse.ui.intro/INTRO_BACKGROUND_IMAGE_LIST</b> - a 
+	comma-separated list of file names to be presented to the user as a choice 
+	of background images in the preferences</li>
 </ul>
+<H3>Adding Welcome Customization preference page</H3>
+<p>The combination of product properties and default preference values can fully 
+configure the shared Welcome if no further customization is desired. For 
+products that want to allow users to customize Welcome, a preference page is 
+available. The following code should be added to the product's plugin.xml:</p>
+<pre>   &lt;extension
+         point=&quot;org.eclipse.ui.preferencePages&quot;&gt;
+      &lt;page
+            category=&quot;org.eclipse.ui.preferencePages.Workbench&quot;
+            class=&quot;org.eclipse.ui.intro.config.ExtensionFactory:welcomeCustomization&quot;
+            id=&quot;com.example.intro.foo.introCustomization&quot;
+            name=&quot;%introCustomizationPreference.name&quot;&gt;
+         &lt;keywordReference id=&quot;org.eclipse.ui.ide.appearance&quot;/&gt;
+      &lt;/page&gt;
+   &lt;/extension&gt;</pre>
+<p>This code will add the Welcome customization preference page:</p>
+<p align="center">
+<img border="0" src="home-page-prefs.png" width="598" height="525"></p>
+<p align="left">The page allows users to select an existing or add another 
+background image. The original choice is provided by the background image list 
+preference. In addition, users can choose from the list of available root pages. 
+Checking the root page causes the related tab to appear at the top of the 
+dialog.</p>
+<p align="left">When saved, this preference page will prefix the variables with 
+the product id so that it does not interfere with the settings made for other 
+products in the same workbench. Alternatively, selecting the checkbox above will 
+not prefix the variables, making the stored settings visible to all the 
+products.</p>
 <H3>Extending the shared Welcome</H3>
 <p>When launching the shared Welcome configured as shown above, you will notice 
 that all of the second level page that branch off the root page have an empty 
@@ -166,11 +199,14 @@ product's focus. In the shared Welcome, this decision is left to product
 authors. Extension authors now have the option of specifying an incomplete 
 target path, allowing the product author to fill in the blanks.</p>
 <p>Config extensions that want to use late target path resolution need to 
-fulfill two conditions:</p>
+fulfill three conditions:</p>
 <ol>
 	<li>Config extension needs to specify a unique identifier using the 'id' 
 	attribute. Extensions without the id will be ignored. This is important 
-	because id will be used to refer to the extenstion by the product author.</li>
+	because id will be used to refer to the extension by the product author.</li>
+	<li>Config extension needs to specify a user-friendly name using the 'name' 
+	attribute. This is important if the customization preference page will be 
+	used because extensions will show up in the UI.</li>
 	<li>The target path should have the following form: &quot;page_id/@&quot; where 'page_id' 
 	is the identifier of the target page. When '/@' is detected in the target 
 	path, an attempt will be made to dynamically resolve the path into the 
@@ -184,9 +220,9 @@ customizer class that can affect its behavior in several ways. One of the roles
 of the customizer is to perform late target path resolution. Of course, as far 
 as product authors are concerned, this is all just implementation detail because 
 in shared Welcome implementation, late target path resolution is performed using 
-the data file mentioned earlier. This file is specified in the product extension 
-using the 'introData' property.</P>
-<P>The 'introData' file uses XML format and allows product authors to control 
+the data file mentioned earlier. This file is stored using the 
+org.eclipse.ui.intro/INTRO_DATA preference.</P>
+<P>The 'INTRO_DATA' file uses XML format and allows product authors to control 
 the content of the main Welcome pages. Welcome contribution authors are required 
 to specify only the page Id in their target paths. The rest is defined in this 
 file. The file contains a sequence of 'page' elements, each containing a number 
@@ -229,19 +265,39 @@ contribution that offers links to videos or animation).</p>
 <p>Contributions that are not listed are appended after the listed contributions 
 and assigned a low importance value. This is important for contributions added 
 after the product has shipped - they still need to show up.</p>
+<p>[We are currently contemplating adding a fifth choice called '<b>new</b>'. 
+This value would be automatically assigned to extensions that are not accounted 
+for in the layout data, thus implying that they are placed in the page using 
+default mechanisms. This will allow us to highlight these 'orphaned' extensions. 
+We may add a timeout limit to the 'new' status; for example, an extension will 
+default to 'low' after 5 startups].</p>
 <p>Contributions not relevant to the project can be hidden by explicitly listing 
 them as children of the 'hidden' element.</p>
 <H3>Seeding the introData file</H3>
-<p>One of the difficulties with the intro data file is that it is time consuming 
-to find all the intro extensions available in the product. For this reason, we 
-have provided a utility application that writes the initial file you can use as 
-a starting point. The utility application's id is <b>
-org.eclipse.ui.intro.introData.</b> Start Eclipse with all the plug-ins that 
-comprise your product by passing this application (either as a command line 
-argument or by selecting it from PDE's launch configuration) and the application 
-will write the content of the file to the console. Copy the content of the 
-console and paste it into the file that <b>introData</b> property in your 
-product extension is pointing at.</p>
+<p>In addition to providing intro customization to the end users for the first 
+time, Welcome preference page will allow product authors to create the 
+introData.xml file to be used for the first startup. The procedure is simple:</p>
+<ol>
+	<li>Launch the product for the first time</li>
+	<li>Open the Welcome preference page</li>
+	<li>For each page, manipulate with the available extensions by moving them 
+	between 'Left', 'Right', 'Bottom' and 'Available' lists, or moving 
+	extensions up or down within the same list.</li>
+	<li>Press OK to see the preferences applied to Welcome.</li>
+	<li>If satisfied, open the preference page again and press 'Save As...' 
+	button.</li>
+	<li>Store the file as 'introData.xml' in the product plug-in.</li>
+	<li>Set org.eclipse.ui.intro/INTRO_DATA preference to the value 'product:introData.xml'.</li>
+	<li>Start the product on a fresh workspace to test if the data from the file 
+	has been picked up.</li>
+</ol>
+<H3 align="center">
+<img border="0" src="page-prefs.png" width="608" height="525"></H3>
+<p>List 'Available Extensions' holds all the extensions that are currently 
+hidden. They can be moved to 'Left', 'Right' or 'Bottom' section of each page.</p>
+<p>[Note: the page currently does not show importance settings. In the 
+production version, it will be possible to modify this value in addition to 
+moving extensions.]</p>
 <H3>Handling multiple products</H3>
 <p>The intent of the shared Welcome implementation is that all products that 
 want intelligent content merging point at it instead of creating their own. This 
@@ -251,19 +307,20 @@ handling this situation as follows:</p>
 <ul>
 	<li>Individual introData files associated with products in the workbench 
 	will all be honored.</li>
-	<li>Content from multiple products will be merged in the main Welcome pages.</li>
-	<li>The extensions that belong to the currently active product will be given 
-	precedence. For example, when there are two products 'Bar' and 'Foo', and 
-	workbench has been launched with 'Bar' being the active product, 'Bar's 
-	extensions will show up before 'Foo's extension <b>within the same 
-	importance level</b>. This means that although Bar's extensions are shown 
-	before Foo's, Foo's extensions of <b>high</b> importance will be positioned 
-	before Bar's <b>medium</b> or <b>low</b> importance items.</li>
-	<li>Most of the intro properties passed from the product extension point 
+	<li>Content from multiple products will be merged in the main Welcome pages. 
+	When computing the location and importance of each extension, active product 
+	data will be consulted first. Only when no information is found will other 
+	product data be used. This implies that if the same extension XYZ is marked 
+	as 'low importance' in the active product and 'high importance' in an 
+	inactive product, the active product's setting will be used ('low'). On the 
+	other hand, if XYZ is missing in the active product's data, but is marked as 
+	'high importance' in an inactive product's data, 'high' setting will be 
+	used.</li>
+	<li>All the single-setting properties 
 	(background, title, branding image) will be taken from the active product 
 	only.</li>
-	<li>Order and selection of root pages (specified using the <b>introRootPages</b> 
-	property) will be computed as a union of root pages in all the products. An 
+	<li>Root pages to show (specified using the <b>org.eclipse.ui.intro/INTRO_ROOT_PAGES</b> 
+	preference) will be computed as a union of root pages in all the products. An 
 	attempt will be made to respect the order of root pages specified by the 
 	active product. Pages missing in the active product's list but existing in 
 	other products in the same workbench will be added at the most logical 
@@ -283,7 +340,7 @@ these pages should include the navigation from the parent page. For example:</p>
 <blockquote>
 	<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
 &lt;introContent&gt;
-   &lt;extensionContent id=&quot;extra&quot; alt-style=&quot;css/swt.properties&quot; style=&quot;css/overview.css&quot; path=&quot;overview/@&quot;&gt;
+   &lt;extensionContent id=&quot;extra&quot; name=&quot;Extra&quot; alt-style=&quot;css/swt.properties&quot; style=&quot;css/overview.css&quot; path=&quot;overview/@&quot;&gt;
       &lt;link label=&quot;Extra Overview link&quot; url=&quot;<a href="http://org.eclipse.ui.intro/showPage?id=extraOverview">http://org.eclipse.ui.intro/showPage?id=extraOverview</a>&quot; 
 					  id=&quot;extra-overview&quot;&gt;
       		&lt;text&gt;Showing the third-level extra page for overview&lt;/text&gt;
@@ -304,6 +361,27 @@ these pages should include the navigation from the parent page. For example:</p>
 that shows another page whose definition is part of the extension. Note how we 
 include the group 'navigation-links' that belongs to the 'overview' page at the 
 beginning of the page content definition.</p>
+<H3>Enhancements of the Welcome framework in 3.2</H3>
+<p>In order to make shared welcome possible, we made small enhancements to the 
+Welcome framework. These enhancements are of general nature and are not tied to 
+the shared Welcome implementation:</p>
+<ul>
+	<li><b>configurer</b> attribute added to config element in 
+	org.eclipse.ui.intro.config extension point. The variable allows for 
+	plugging in an optional configurer that extends <b>
+	org.eclipse.ui.intro.config.IntroCofigurer</b> abstract class.</li>
+	<li><b>computed</b> attribute added to the <code>group</code> element in 
+	intro content schema. This attribute indicates that the children of the 
+	group will be dynamically computed by the intro configurer.</li>
+	<li><b>computed</b> attribute added to the <code>launchBar</code> element in 
+	the <b>org.eclipse.ui.intro.config </b>extension point. When true, the 
+	shortcuts will be computed by the intro configurer.</li>
+	<li><b>bgImage</b> attribute added to the <code>group</code> and <code>page</code> 
+	elements in the intro content schema. It provides for setting the background 
+	image on these elements.</li>
+	<li><b>id</b> and <b>name</b> attributes added to the extensionContent 
+	element in the intro content schema (see above for explanation).</li>
+</ul>
 <H3>Standard Welcome Presentation</H3>
 <P>[We need to define how CSSs will be applied to control the look of the 
 high/mid/low sections and overall Welcome]</P>
