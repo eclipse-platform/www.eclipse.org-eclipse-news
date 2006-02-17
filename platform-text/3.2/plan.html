@@ -16,7 +16,7 @@
 
   <tr> 
     <td WIDTH="100%"> 
-    <p>Last revised 17:20 CET December 16, 2005
+    <p>Last revised 17:43 CET February 16, 2005
 
     
       <p>This plan is under continuous refinement. Please send comments about this draft plan to the <a href="mailto:platform-text@eclipse.org">platform-text@eclipse.org</a> developer mailing list.</p>
@@ -701,77 +701,54 @@
   <tr> 
     <td WIDTH="100%"> 
 
-	<h3><a name="Milestone_Planning"></a>Milestone M5 Plan</h3>
+	<h3><a name="Milestone_Planning"></a>Milestone M6 Plan</h3>
 	
-	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Top items</h4>
+	<h4>Top items</h4>
 		<ul>
-			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> API work towards the API freeze</li>
-			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> performance pass</li>
+			<li>finish push down quick assist/fix and spell checking</li>
+			<li>adapt NLS tooling to Eclipse string externalization mechanism</li>
+			<li>open 3.2 bug fixing (we will first pass over them and defer some)</li>
+			<li>performance</li>
 			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> eclipseCon preparation</li>
-			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> push down quick assist/fix and spell checking</li>
-			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> shipping 3.1.2 including 1 full day test pass (<a href="../3.1/testing/3.1.2_Test_Plan1.html">test plan</a>)</li>
 		</ul>
 	
-	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Committed items</h4>
+	<h4>Committed items</h4>
 	<ul>
 	
-		<li><h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> Cross-team issues</h5>
-		<ul>
-			<li>discuss tripple-click support in StyledText with Platform SWT<br>
-			&rArr there will be no SWT support for this for 3.2
-			</li>
-			<li>discuss field assistance API with Platform UI</li>
-		</ul>
-		</li>
-		
-		<li><h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> adopt new APIs/features</h5>
-			<ul>
-				<li><font class="indexsub" color="#8080ff">[&gt;3.2]</font>  surface mixed font support</li>
-				<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> field assistance<br>
-				The field assist API has been settled together with Platform UI for M5 and the JFace content assist code in Platform Text has been
-				deprecated. A migration patch for FindReplaceDialog is ready but will be committed after M5 because there are still some bugs
-				to fix in Platform UI's field assist implementation.
-				</li>
-				<li><font class="indexsub" color="#8080ff">[3.2 M6]</font> ICU4J<br>
-				The ICU4J plug-in is not yet finalized in the builds.
-				</li>
-				<li><font class="indexsub" color="#8080ff">[3.2 M6]</font> (new Assert class from Platform)</li>
-				<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> (new ListenerList class from Platform)</li>
+		<li><h5>adopt new APIs/features</h5>
+			<ul><li>apply the migration patch for FindReplaceDialog once the bugs in Platform UI's field assist implementation are fixed</li>
+				<li>adopt ICU4J</li>
+				<li>switch to new Assert class from Platform</li>
 			</ul>
 		</li>
 		
-		<li><h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> undo manager improvements (see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=89599">bug 89599</a> and <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=93955">bug 93955</a>)</h5>
-
-		<li><h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> finish API for live annotate (embedding of history information into the editor)</h5>
-
-		<li><h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> revisit document creation and setup</h5>
+		<li><h5>investigate and fix red performance tests</h5>
 		
-		<li><h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> provide folding structure API (see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=66440">bug 66440</a>)</h5>
-		
-		<li><h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> initial support for @category tag</h5>
-		
-		<li><h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> investigate and fix red performance tests</h5>
-		
-		<li><h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> continue improving content assist</h5>
+		<li><h5>adapt NLS tooling to Eclipse string externalization mechanism (with help from JDT UI)</h5>
 		<ul>
-			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> improve handling of different proposal kinds (Java code, templates, words,...) in the same list:
+			<li>NLS hover in Java editor</li>
+			<li>hyperlink navigation for NLS keys in the Java editor</li>
+			<li>hyperlink navigation for NLS keys in the Java Properties file editor</li>
+		</ul>
+		
+		<li><h5>continue improving content assist</h5>
+		<ul>
+			<li>improve handling of different proposal kinds (Java code, templates, words,...) in the same list:
 				<ul>
-					<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> sorting/relevance issue</li>
-					<li><font class="indexsub" color="#8080ff">[3.2 M6]</font> find a better way to configure the processors (improve preference page)</li>
+					<li>find a better way to configure the processors (improve preference page)</li>
 				</ul>
 			</li>
 		</ul>
 		
-		<li><h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> continue pushing down spell checking</h5>
+		<li><h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> finish pushing down Quick Assist and spell checking</h5>
 		<ul>
-			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> adopt and push down Quick Assist and Quick Fix infrastructure</li>
-			<li><font class="indexsub" color="#8080ff">[3.2 M6]</font> (offer spell checking in Text editors)</li>
+			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> support the Quick Assist API introduced with M5</li>
+			<li>offer spell checking in Text editors</li>
 		</ul>
 		</li>
 		
-		<li><h5><font class="indexsub" color="#8080ff">[3.2 M6]</font> (investigate new look and feel for Find / Replace)</h5>
-		
-		<li><h5><font class="indexsub" color="#8080ff">[&gt;3.2]</font> (investigate improving text editor framework for RCP)</h5>
+		<li><h5>(investigate new look and feel for Find / Replace)</h5>
+		<li><h5>(improve @category tag support, e.g. with additional node in the Outline)</h5>
 		
 	</ul>
 	
@@ -784,9 +761,8 @@
 	
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Absences</h4>
 	<ul>
-		<li>Dani: 4 days</li>
+		<li>Dani: 5 days</li>
 		<li>Tom: 10 days</li>
-		<li>public holidays: 2</li>
 	</ul>
       
       <h3>Previous Milestones</h3>
