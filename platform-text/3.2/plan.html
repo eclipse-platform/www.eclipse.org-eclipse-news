@@ -16,7 +16,7 @@
 
   <tr> 
     <td WIDTH="100%"> 
-    <p>Last revised 17:43 CET February 16, 2005
+    <p>Last revised 15:32 CET February 23, 2006
 
     
       <p>This plan is under continuous refinement. Please send comments about this draft plan to the <a href="mailto:platform-text@eclipse.org">platform-text@eclipse.org</a> developer mailing list.</p>
@@ -24,47 +24,52 @@
       <p>This section defines the goals for Eclipse 3.2 for the Platform 
         Text and the JDT Text component. Each goal is annotated with the overall 
         3.2 Eclipse theme (see <a href="http://www.eclipse.org/eclipse/development/eclipse_project_plan_3_2.html">Eclipse Project Draft 3.2 Plan</a> for details).
-        <font color="#4eb153">Committed items are marked in green</font>.
         </p>
       <h3>Platform</h3>
       <ul>
-        <li><font color="#4eb153">
-          Continue to monitor overall performance and memory consumption. This 
+        <li>
+          <img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> Continue to monitor overall performance and memory consumption. This 
           includes the addition of new performance tests for new features.
           <b>[Scaling up]</b> 
           <p></p>
-          </font>
         </li>
-        <li><font color="#4eb153">
-          Increase correctness test coverage of the text infrastructure. Besides providing tests for new
+        <li>
+          <img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> Increase correctness test coverage of the text infrastructure. Besides providing tests for new
           features new tests are needed for existing areas where we have few or no tests at all.
           <b>[Scaling up]</b>
-          <p></p></font>
+          <p></p>
         </li>
-        <li><font color="#4eb153">Innovate the existing editor look and feel. <b>[Simple to use, Scaling up]</b></font><br>
+        <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> Innovate the existing editor look and feel. <b>[Simple to use, Scaling up]</b><br>
          The list of feature will change over time. The initial set includes:
         <ul>
 			<li>finish roll-over annotation work that was kicked off during 3.0</li>
-			<li>rework Find / Replace: get rid of the dialog, allow highlight all matches,  offer in-place rename of the highlighted matches</li>
-			<li>show the change history together with change comments in the text editor</li>
-			<li>enhance folding presentation: show nesting, place the icon on caption line and eventually add animation
-			<li>investigate action hovers i.e. allow to click into hovers in order to click links and buttons</li>
-			<li>investigate auto-wrapping in text editor</li>
-			<li>investigate triple and 1 1/2 click</li>
-			<li>investigate to add text drag and drop (cross team issue)</li>
+			<li><font class="indexsub" color="#8080ff">[&gt;3.2]</font> rework Find / Replace: get rid of the dialog, allow highlight all matches,  offer in-place rename of the highlighted matches</li>
+			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> show the change history together with change comments in the text editor<br>
+			&rArr; the text side is ready and a patch has been submitted to Platform CVS.
+			</li>
+			<li><font class="indexsub" color="#8080ff">[&gt;3.2]</font> enhance folding presentation: show nesting, place the icon on caption line and eventually add animation
+			<li><font class="indexsub" color="#8080ff">[&gt;3.2]</font> investigate action hovers i.e. allow to click into hovers in order to click links and buttons</li>
+			<li><font class="indexsub" color="#8080ff">[&gt;3.2]</font> investigate auto-wrapping in text editor</li>
+			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> investigate triple and 1 1/2 click<br>
+			&rArr; 1 1/2 click has been improved (it no longer jumps back to the word). Triple click has been deferred on the SWT side.
+			</li>
+			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> investigate to add text drag and drop (cross team issue)<br>
+			&rArr; SWT is working on this but not yet complete, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=23614">bug 23614</a> for details.
+			</li>
 		</ul>
          <p></p>
         </li>
-        <li>
+        <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle">
           	Provide better text editor support for RCP.<b>[Rich client platform, Design for Extensibility: Be a Better Platform]</b><br>
           	The list of functions 
             to add will grow over time. The initial set includes: annotation presentation 
             and navigation, user assigned colors and fonts, spell checking, user 
             defined, persistent folding, quick diff, templates and investigate to
-            make file buffers work with RCP.
+            make file buffers work with RCP.<br>
+            &rArr; parts of this have been delivered: annotation presentation and navigation, template support when writting an editor
           <p></p>
         </li>
-        <li> 
+        <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> 
           	Make the Default Text editor your favorite text editor. From time 
             to time users switch to an external text editor. The goal of this 
             plan item is to enhance the Text editor so that there is no longer 
@@ -72,9 +77,10 @@
             The initial set includes: annotation navigation, user assigned colors 
             and fonts, spell checking, user defined, persistent folding, templates.
             <b>[Simple to use, Scaling up]</b>
+            &rArr; parts of this have been delivered: annotation presentation and navigation, template support when writting an editor
         <p></p>
         </li>
-        <li>
+        <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle">
           Help clients such as the Eclipse Web Tools Platform Project to improve 
           their overall integration with the Platform Text components and the 
           workbench in general. <b>[Broader community, Design for Extensibility: Be a Better Platform]</b></li>
@@ -83,7 +89,7 @@
       </ul>
       <h3>JDT</h3>
       <ul>
-        <li><font color="#4eb153"><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> Open up the Java editor. <b>[Design for Extensibility: Be a Better Platform]</b></font><br>
+        <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> Open up the Java editor. <b>[Design for Extensibility: Be a Better Platform]</b><br>
           The components that become extensible might grow over time. The initial set includes:
           <ul>
             <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> allow additions to the reconciling process such as running audits</li>
@@ -92,39 +98,40 @@
           <p></p>
         </li>
         
-        <li><font color="#4eb153">Enhance the Java editor. Push Java coding to the next level by polishing existing features and adding new ones. <b>[Simple to use, Scaling up]</b></font><br>
+        <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> Enhance the Java editor. Push Java coding to the next level by polishing existing features and adding new ones. <b>[Simple to use, Scaling up]</b><br>
         The currently planned improvements are:
         	<ul>
-        		<li>code assist
+        		<li>(<img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10">) code assist
         		<ul>
         			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> polish and fine tune existing features</li>
         			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> integrate word completion into code assist popup</li>
-        			<li>automatically add imports while typing</li>
-					<li>allow to auto-open code assist while typing i.e. not rely on special trigger characters</li>
-					<li>[investigate] allow to click into additional hover window, use browser widget and allow navigation</li>
-					<li>[investigate] allow to use without opening a popup</li>
+        			<li><font class="indexsub" color="#8080ff">[&gt;3.2]</font> automatically add imports while typing</li>
+					<li><font class="indexsub" color="#8080ff">[&gt;3.2]</font> allow to auto-open code assist while typing i.e. not rely on special trigger characters</li>
+					<li><font class="indexsub" color="#8080ff">[&gt;3.2]</font> [investigate] allow to click into additional hover window, use browser widget and allow navigation</li>
+					<li><font class="indexsub" color="#8080ff">[&gt;3.2]</font> [investigate] allow to use without opening a popup</li>
         		</ul>
         		</li>
-        		<li>Quick views
+        		<li><font class="indexsub" color="#8080ff">[&gt;3.2]</font> Quick views
         		<ul>
 					<li>show additional info (e.g. Javadoc) for Quick views</li>
 					<li>allow to open Quick views for Java elements (e.g. from the Package Explorer or Outline view)</li>
 					<li>[investigate] context menu in Quick views</li>
         		</ul>
         		</li>
-				<li>show horizontal lines between members</li>
+				<li><font class="indexsub" color="#8080ff">[&gt;3.2]</font> show horizontal lines between members</li>
 				<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> add more occurrence markings, for example for 'break', 'continue', etc. </li>
-				<li>improve Javadoc view by adding support for links (relative URLs, @see, @link,...) and add navigation and history support</li>
+				<li><font class="indexsub" color="#8080ff">[&gt;3.2]</font> improve Javadoc view by adding support for links (relative URLs, @see, @link,...) and add navigation and history support</li>
 				<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> add support to extract Javadoc from attached Javadoc (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=41421">bug 41421</a>) (JDT UI?)</li>
-				<li>color schemes for syntax highlighting (cross team issue)</li>
-				<li>Declaration and Javadoc view should allow to navigate to other members in hierarchy (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=82709">bug 82709</a>)</li>
-				<li>[investigate] better surface quick assists</li>
-				<li>[investigate] improve support for code blocks</li>
+				<li><font class="indexsub" color="#8080ff">[&gt;3.2]</font> color schemes for syntax highlighting (cross team issue)</li>
+				<li><font class="indexsub" color="#8080ff">[&gt;3.2]</font> Declaration and Javadoc view should allow to navigate to other members in hierarchy (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=82709">bug 82709</a>)</li>
+				<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> [investigate] better surface quick assists</li>
+				<li><font class="indexsub" color="#8080ff">[&gt;3.2]</font> [investigate] improve support for code blocks</li>
         	</ul>
           <p></p>
         </lu>
         
-        <li>Improve the existing NLS tooling.<b>[Simple to use, Scaling up]</b><br>
+        <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle">
+        Improve the existing NLS tooling.<b>[Simple to use, Scaling up]</b><br>
         The improvements added in 3.1 need also be provided for the new Eclipse string externalization
    		  	   pattern. Additional tooling like a builder that reports NLS problems for unused keys and unused property file entries should
    	   		  be added. Further possible items are listed <a href=../development/String_Externalization_Improvements.html>here</a>.
@@ -705,10 +712,11 @@
 	
 	<h4>Top items</h4>
 		<ul>
-			<li>finish push down quick assist/fix and spell checking</li>
+			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> finish push down quick assist/fix and spell checking</li>
 			<li>adapt NLS tooling to Eclipse string externalization mechanism</li>
 			<li>open 3.2 bug fixing (we will first pass over them and defer some)</li>
-			<li>performance</li>
+			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> performance</li>
+			<li>polish</li>
 			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> eclipseCon preparation</li>
 		</ul>
 	
@@ -718,11 +726,11 @@
 		<li><h5>adopt new APIs/features</h5>
 			<ul><li>apply the migration patch for FindReplaceDialog once the bugs in Platform UI's field assist implementation are fixed</li>
 				<li>adopt ICU4J</li>
-				<li>switch to new Assert class from Platform</li>
+				<li>switch to new <code>Assert</code> class from Platform</li>
 			</ul>
 		</li>
 		
-		<li><h5>investigate and fix red performance tests</h5>
+		<li><h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> investigate and fix red performance tests</h5>
 		
 		<li><h5>adapt NLS tooling to Eclipse string externalization mechanism (with help from JDT UI)</h5>
 		<ul>
@@ -747,7 +755,7 @@
 		</ul>
 		</li>
 		
-		<li><h5>(investigate new look and feel for Find / Replace)</h5>
+		<li><h5>(finish roll-over annotation work that was kicked off during 3.0)</h5>
 		<li><h5>(improve @category tag support, e.g. with additional node in the Outline)</h5>
 		
 	</ul>
