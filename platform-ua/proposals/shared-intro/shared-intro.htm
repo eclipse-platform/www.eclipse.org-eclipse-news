@@ -3,7 +3,7 @@
 <META http-equiv=Content-Type content="text/html; charset=windows-1252">
 <META content="Microsoft FrontPage 6.0" name=GENERATOR></HEAD>
 <BODY>
-<H1>Shared Eclipse Welcome</H1>
+<H1>Universal Welcome</H1>
 <H2>Background</H2>
 <P>This document represents a description of a new welcome 
 implementation that will be used by Eclipse products that want to promote contributions 
@@ -43,34 +43,34 @@ would be much easier to develop with the following conditions in place:</P>
 team now provides a recommended Welcome implementation that will be used by all products that want 
 to support better Welcome control. Eclipse Platform and SDK products will switch 
 to this implementation and others will be encouraged to follow suit.</P>
-<P>The shared Welcome solution is based on our experience with Welcome 
+<P>The universal Welcome solution is based on our experience with Welcome 
 implementations and the need to have an implementation in place that 
 contributors can count on. The implementation is built using the current Welcome 
 framework which has been minimally enhanced to better support it. For this 
 reason, all existing Welcome implementation will continue to work and clients 
-will be able to switch to the new shared model according to their schedules. Of course, as 
-long as they don't switch, they will not reap benefits of the new 
+will be able to switch to the new model according to their schedules. Of course, as 
+long as they don't switch, they will not reap the benefits of the new 
 implementation such as intelligent content merging, new visual solution etc.</P>
 <h3>Design Principles</h3>
-<P>While designing the shared welcome implementation, we started from the 
+<P>While designing the universal welcome implementation, we started from the 
 following principles:</P>
 <ol>
-	<li>Products should be able to point at the shared implementation without 
+	<li>Products should be able to point at this implementation without 
 	the need to implement Welcome from scratch</li>
-	<li>Each product should be able to configure the shared implementation to a 
+	<li>Each product should be able to configure Welcome to a 
 	certain degree (root page background, title, branding image)</li>
 	<li>A number of root pages that cover most of the products' needs will be 
-	provided by the shared implementation. However, the pages to show will be 
+	provided. However, the list of pages to show will be 
 	configurable.</li>
-	<li>Visual design of the shared Welcome implementation should be 
+	<li>Visual design of the universal Welcome should be 
 	sufficiently product-agnostic to better suit the increasingly componentized 
 	world. It should work well with both monolithic products and 'best of bread' 
 	Eclipse products composed of components created by different companies.</li>
-	<li>End-users should also be able to configure Welcome in a user-friendly 
+	<li>End-users should also be able to configure universal Welcome in a user-friendly 
 	way.</li>
 </ol>
-<H3>Hooking to the shared Welcome implementation</H3>
-<p>In order to hook to the shared Welcome, developers should have a 
+<H3>Hooking to the universal Welcome</H3>
+<p>In order to hook to the universal Welcome, developers should have a 
 product-based Eclipse application. This requires the use of the <b>
 org.eclipse.runtime.products</b> extension point (the assumption is that the 
 product has already been defined):</p>
@@ -80,7 +80,7 @@ product has already been defined):</p>
 	point=&quot;org.eclipse.core.runtime.products&quot;&gt;
    &lt;product
       application=&quot;org.eclipse.ui.ide.workbench&quot;
-      description=&quot;Product Foo to use for testing the shared intro&quot;
+      description=&quot;Product Foo to use for testing the universal intro&quot;
       name=&quot;Product Foo&quot;&gt;
    &lt;/product&gt;
 &lt;/extension&gt;</pre>
@@ -93,18 +93,18 @@ products and intros using the product-intro binding:</p>
 	<pre>&lt;extension
 	point=&quot;org.eclipse.ui.intro&quot;&gt;
    &lt;introProductBinding
-      introId=&quot;org.eclipse.ui.intro.shared&quot;
+      introId=&quot;org.eclipse.ui.intro.universal&quot;
       productId=&quot;com.example.intro.foo&quot;/&gt;
 &lt;/extension&gt;</pre>
 </blockquote>
-<p>The extension above binds the shared intro implementation (<b>org.eclipse.ui.intro.shared</b>) 
+<p>The extension above binds the universal intro implementation (<b>org.eclipse.ui.intro.universal</b>) 
 and our product id.</p>
-<p>Shared intro customization is split between product branding properties and 
+<p>Universal intro customization is split between product branding properties and 
 preferences. Product branding properties are set by the product and cannot be 
 modified. They include product title, branding image and branding image text:</p>
 <pre>      &lt;product
             application=&quot;org.eclipse.ui.ide.workbench&quot;
-            description=&quot;Product Foo to use for testing the shared intro&quot;
+            description=&quot;Product Foo to use for testing the universal intro&quot;
             name=&quot;Product Foo&quot;&gt;
          &lt;property
                name=&quot;introTitle&quot;
@@ -130,9 +130,9 @@ supported:</p>
 	<li><b>introBrandingText</b> - an alternative text to be used for the 
 	branding image.</li>
 </ul>
-<p>Second half of shared intro variables are accessible as preferences. The 
+<p>Second half of universal intro variables are accessible as preferences. The 
 split is due to the fact that these variables can be configured by users and are 
-exposed in the Welcome preference page. The initial values for these preferences 
+exposed in the new Welcome preference page. The initial values for these preferences 
 should be placed in the 'plugin_customization.ini' file that is referenced from 
 the product extension. These preferences are:</p>
 <ul>
@@ -158,7 +158,7 @@ the product extension. These preferences are:</p>
 </ul>
 <H3>Adding Welcome Customization preference page</H3>
 <p>The combination of product properties and default preference values can fully 
-configure the shared Welcome if no further customization is desired. For 
+configure the universal Welcome if no further customization is desired. For 
 products that want to allow users to customize Welcome, a preference page is 
 available. The following code should be added to the product's plugin.xml:</p>
 <pre>   &lt;extension
@@ -184,8 +184,8 @@ the product id so that it does not interfere with the settings made for other
 products in the same workbench. Alternatively, selecting the checkbox above will 
 not prefix the variables, making the stored settings visible to all the 
 products.</p>
-<H3>Extending the shared Welcome</H3>
-<p>When launching the shared Welcome configured as shown above, you will notice 
+<H3>Extending the universal Welcome</H3>
+<p>When launching the universal Welcome configured as shown above, you will notice 
 that all of the second level page that branch off the root page have an empty 
 content area. This is because shared Welcome does not have content of its own. 
 These areas are populated using intro config extensions.</p>
@@ -195,7 +195,7 @@ but it has proven to be somewhat fragile. As mentioned before, specifying an
 exact place where the extension will end up in the target is premature for 
 extension authors. They may not know all the products in which their extension 
 will end up, and therefore don't know where they should appear according to each 
-product's focus. In the shared Welcome, this decision is left to product 
+product's focus. In the universal Welcome, this decision is left to product 
 authors. Extension authors now have the option of specifying an incomplete 
 target path, allowing the product author to fill in the blanks.</p>
 <p>Config extensions that want to use late target path resolution need to 
@@ -213,15 +213,14 @@ fulfill three conditions:</p>
 	expected full form.</li>
 </ol>
 <P>The ability to resolve extension target paths is a new intro support feature 
-in Eclipse 3.2 added to make shared Welcome more powerful. The feature itself is 
+in Eclipse 3.2 added to make universal Welcome more powerful. The feature itself is 
 generic in that it can be used in other Welcome implementations, not just the 
-shared one. In Eclipse 3.2, CustomizableIntroPart can accept an optional intro 
+universal one. In Eclipse 3.2, CustomizableIntroPart can accept an optional intro 
 customizer class that can affect its behavior in several ways. One of the roles 
 of the customizer is to perform late target path resolution. Of course, as far 
 as product authors are concerned, this is all just implementation detail because 
-in shared Welcome implementation, late target path resolution is performed using 
-the data file mentioned earlier. This file is stored using the 
-org.eclipse.ui.intro/INTRO_DATA preference.</P>
+in universal Welcome implementation, late target path resolution is performed using 
+the data file mentioned earlier. This file is stored using the org.eclipse.ui.intro/INTRO_DATA preference.</P>
 <P>The 'INTRO_DATA' file uses XML format and allows product authors to control 
 the content of the main Welcome pages. Welcome contribution authors are required 
 to specify only the page Id in their target paths. The rest is defined in this 
