@@ -374,7 +374,8 @@ these pages should include the navigation from the parent page. For example:</p>
       		&lt;text&gt;Showing the third-level extra page for overview&lt;/text&gt;
       &lt;/link&gt;
    &lt;/extensionContent&gt;
-   &lt;page id=&quot;extraOverview&quot; style-id=&quot;page&quot;&gt;
+   &lt;page id=&quot;extraOverview&quot; <b>style=&quot;$theme$/html/overview.css&quot;</b> style-id=&quot;page&quot;&gt;
+      <b>&lt;title style-id=&quot;intro-header&quot;&gt;$introTitle$&lt;/title&gt;</b>
       <b>&lt;group id=&quot;extra-group1&quot; filteredFrom=&quot;swt&quot;/&gt;</b>
       <b>&lt;include path=&quot;overview/navigation-links&quot;/&gt;</b>
       &lt;group id=&quot;page-content&quot;&gt;
@@ -389,10 +390,11 @@ these pages should include the navigation from the parent page. For example:</p>
 </blockquote>
 <p>The extension above contributed into the overview page contributes a link 
 that shows another page whose definition is part of the extension. Note how we 
-include the group 'navigation-links' that belongs to the 'overview' page at the 
+define the title element using substitution variable (the variable will be 
+resolved based on the product property). We also include the group 'navigation-links' that belongs to the 'overview' page at the 
 beginning of the page content definition. We also add the 'extra-group1' div 
 because it is can be used by some themes for adding additional page decoration 
-(indeed, it is used in 'Purple Mesh' theme for that purpose).</p>
+(indeed, it is used in 'Purple Mesh' theme for that exact purpose).</p>
 <h2><a name="enhancements"></a>Enhancements of the Welcome framework in 3.2</h2>
 <p>In order to make universal welcome possible, we made a number of enhancements 
 in the 
