@@ -13,7 +13,7 @@ package org.eclipse.ui.examples.filesystem;
 
 import java.net.URI;
 import java.net.URISyntaxException;
-
+import org.eclipse.core.filesystem.URIUtil;
 import org.eclipse.core.internal.filesystem.zip.ZipFileSystem;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Shell;
@@ -43,8 +43,12 @@ public class ZipFileSystemContributor extends FileSystemContributor {
 		String selectedFile = dialog.open();
 		if (selectedFile == null)
 			return null;
+		return getURI(selectedFile);
+	}
+	
+	public URI getURI(String path) {
 		try {
-			return new URI(ZipFileSystem.SCHEME_ZIP, null, "/", selectedFile, null);
+			return new URI(ZipFileSystem.SCHEME_ZIP, null, "/", URIUtil.toURI(path).toString(), null); //$NON-NLS-1$
 		} catch (URISyntaxException e) {
 			return null;
 		}
