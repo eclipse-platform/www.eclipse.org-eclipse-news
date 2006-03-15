@@ -109,7 +109,7 @@ ob_start();
 		<div class="sideitem">
 			<h6>Project Links</h6>
 			<ul>
-				<li><a href="faq/eclipse-faq.html">Project FAQ</a></li>
+				<li><a href="http://wiki.eclipse.org/index.php/Eclipse_FAQs">Project FAQ</a></li>
 				<li><a href="presentation/eclipse-slides.html">Slide Presentation</a><br>
 			      A presentation of the technical aspects of the Eclipse Project. (<a href="presentation/eclipse-slides.html" target="_blank">HTML</a>) 
 			      (<a href="presentation/eclipse-slides.ppt" target="_blank">Powerpoint</a>) 
