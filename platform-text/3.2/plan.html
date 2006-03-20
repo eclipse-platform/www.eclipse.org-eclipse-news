@@ -16,7 +16,7 @@
 
   <tr> 
     <td WIDTH="100%"> 
-    <p>Last revised 15:32 CET February 23, 2006
+    <p>Last revised 18:50 CET March 20, 2006
 
     
       <p>This plan is under continuous refinement. Please send comments about this draft plan to the <a href="mailto:platform-text@eclipse.org">platform-text@eclipse.org</a> developer mailing list.</p>
@@ -107,7 +107,8 @@
         			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> integrate word completion into code assist popup</li>
         			<li><font class="indexsub" color="#8080ff">[&gt;3.2]</font> automatically add imports while typing</li>
 					<li><font class="indexsub" color="#8080ff">[&gt;3.2]</font> allow to auto-open code assist while typing i.e. not rely on special trigger characters</li>
-					<li><font class="indexsub" color="#8080ff">[&gt;3.2]</font> [investigate] allow to click into additional hover window, use browser widget and allow navigation</li>
+					<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> use browser widget for Javadoc hovers</li>
+					<li><font class="indexsub" color="#8080ff">[&gt;3.2]</font> [investigate] allow to click into additional hover window and allow navigation</li>
 					<li><font class="indexsub" color="#8080ff">[&gt;3.2]</font> [investigate] allow to use without opening a popup</li>
         		</ul>
         		</li>
@@ -118,6 +119,7 @@
 					<li>[investigate] context menu in Quick views</li>
         		</ul>
         		</li>
+				<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> add support for categories (@category tag)</li>
 				<li><font class="indexsub" color="#8080ff">[&gt;3.2]</font> show horizontal lines between members</li>
 				<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> add more occurrence markings, for example for 'break', 'continue', etc. </li>
 				<li><font class="indexsub" color="#8080ff">[&gt;3.2]</font> improve Javadoc view by adding support for links (relative URLs, @see, @link,...) and add navigation and history support</li>
@@ -130,11 +132,13 @@
           <p></p>
         </lu>
         
-        <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle">
+        <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10">
         Improve the existing NLS tooling.<b>[Simple to use, Scaling up]</b><br>
         The improvements added in 3.1 need also be provided for the new Eclipse string externalization
    		  	   pattern. Additional tooling like a builder that reports NLS problems for unused keys and unused property file entries should
    	   		  be added. Further possible items are listed <a href=../development/String_Externalization_Improvements.html>here</a>.
+   	    <br>
+   	   	<em>Note:</em> A builder was be too expensive (took too long to complete) we added a <code>Source &gt; Find Broken NLS Keys</code action.
           <p></p>
         </li>
       </ul>
@@ -520,7 +524,7 @@
             </li>
             <li>inform user how to correctly setup Javadoc and source hovers if no hover can be extracted (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=69623">bug 69623</a>)</li>
             <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> extract information from external Javadoc (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=41421">bug 41421</a>) (JDT UI?)</li>
-            <li>[investigate] use <code>Browser</code> widget for Javadoc hover</li>
+            <li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> use <code>Browser</code> widget for Javadoc hover</li>
             <li>[investigate] allow to reach hover via mouse (i.e. F2 via mouse)</li>
           </ul>
         </li>
@@ -713,11 +717,11 @@
 	<h4>Top items</h4>
 		<ul>
 			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> finish push down quick assist/fix and spell checking</li>
-			<li>adapt NLS tooling to Eclipse string externalization mechanism</li>
+			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> adapt NLS tooling to Eclipse string externalization mechanism</li>
 			<li>open 3.2 bug fixing (we will first pass over them and defer some)</li>
 			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> performance</li>
-			<li>polish</li>
-			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> eclipseCon preparation</li>
+			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> polish</li>
+			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> eclipseCon preparation</li>
 		</ul>
 	
 	<h4>Committed items</h4>
@@ -732,7 +736,7 @@
 		
 		<li><h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"> investigate and fix red performance tests</h5>
 		
-		<li><h5>adapt NLS tooling to Eclipse string externalization mechanism (with help from JDT UI)</h5>
+		<li><h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> adapt NLS tooling to Eclipse string externalization mechanism (with help from JDT UI)</h5>
 		<ul>
 			<li>NLS hover in Java editor</li>
 			<li>hyperlink navigation for NLS keys in the Java editor</li>
@@ -756,7 +760,7 @@
 		</li>
 		
 		<li><h5>(finish roll-over annotation work that was kicked off during 3.0)</h5>
-		<li><h5>(improve @category tag support, e.g. with additional node in the Outline)</h5>
+		<li><h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> (improve @category tag support, e.g. with additional node in the Outline)</h5>
 		
 	</ul>
 	
