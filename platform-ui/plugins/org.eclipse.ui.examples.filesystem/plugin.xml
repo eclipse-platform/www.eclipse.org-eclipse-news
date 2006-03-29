@@ -8,6 +8,12 @@
          <run class="org.eclipse.core.internal.filesystem.zip.ZipFileSystem"/>
       </filesystem>
    </extension>
+	<extension
+	      point="org.eclipse.core.filesystem.filesystems">
+	   <filesystem scheme="memory">
+	      <run class="org.eclipse.core.internal.filesystem.memory.MemoryFileSystem"/>
+	   </filesystem>
+	</extension>
    <extension
          point="org.eclipse.ui.popupMenus">
       <objectContribution
@@ -81,9 +87,13 @@
    <extension
          point="org.eclipse.ui.ide.filesystemSupport">
       <filesystemContributor
-            class="org.eclipse.ui.examples.filesystem.ZipFileSystemContributor"
-            label="zip"
+            class="org.eclipse.core.internal.filesystem.zip.ZipFileSystemContributor"
+            label="Zip file"
             scheme="zip"/>
+      <filesystemContributor
+            class="org.eclipse.core.internal.filesystem.memory.MemoryFileSystemContributor"
+            label="In Memory"
+            scheme="memory"/>
    </extension>
 
 </plugin>
