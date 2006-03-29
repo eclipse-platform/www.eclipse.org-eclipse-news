@@ -9,12 +9,11 @@
  *     IBM Corporation - initial API and implementation
  *******************************************************************************/
 
-package org.eclipse.ui.examples.filesystem;
+package org.eclipse.core.internal.filesystem.zip;
 
 import java.net.URI;
 import java.net.URISyntaxException;
 import org.eclipse.core.filesystem.URIUtil;
-import org.eclipse.core.internal.filesystem.zip.ZipFileSystem;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.ide.fileSystem.FileSystemContributor;
