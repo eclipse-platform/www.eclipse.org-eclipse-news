@@ -48,18 +48,6 @@ ob_start();
 				Eclipse Project 3.2 Endgame Plan</a><br>
 				Information about how we plan to wrap up the 3.2 (Callisto) release of Eclipse.
 			</li>
-			<li><a href="eclipse_maintenance_schedule_3_1_x.html" >
-				Eclipse 3.1 Maintenance Release Schedule</a><br>
-      			Timeline for 3.1.x maintenance stream.
-      		</li>
-      		<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/eclipse-project-home/bugcounts/3_1/BugCountOverview.html">
-      			Eclipse Project Bugs Counts</a><br>
-      			Information on outstanding bugs in the Eclipse project main development stream.
-      		</li>
-      		<li><a href="eclipse_3_1_stats.html">
-      			Eclipse 3.1 by the numbers</a><br>
-      			Some light-hearted statistics for the 3.1 release cycle.
-			</li>
       		</ul>
       	</div>
 		<div class="homeitem3col">
@@ -125,6 +113,18 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>Historical information about past releases</h3>
 			<ul>
+			<li><a href="eclipse_maintenance_schedule_3_1_x.html" >
+				Eclipse 3.1 Maintenance Release Schedule</a><br>
+      			Timeline for 3.1.x maintenance stream.
+      		</li>
+      		<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/eclipse-project-home/bugcounts/3_1/BugCountOverview.html">
+      			Eclipse Project Bugs Counts</a><br>
+      			Information on outstanding bugs in the Eclipse project main development stream.
+      		</li>
+      		<li><a href="eclipse_3_1_stats.html">
+      			Eclipse 3.1 by the numbers</a><br>
+      			Some light-hearted statistics for the 3.1 release cycle.
+			</li>
 			<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/eclipse-project-home/plans/3_1/freeze_plan_3_1_2.html">
 				Eclipse Project 3.1.2 Endgame Plan</a><br>
 				Information about how we wrapped up the 3.1.2 maintenance release of Eclipse.
