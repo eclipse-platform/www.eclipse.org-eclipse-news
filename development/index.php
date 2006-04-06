@@ -53,7 +53,7 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>Development Process</h3>
 			<ul>
-			<li><a href="http://wiki.eclipse.org/index.php/Development_Conventions_and_Guidelines"
+			<li><a href="http://wiki.eclipse.org/index.php/Development_Conventions_and_Guidelines">
 				Conventions and Guidelines</a><br>
 		        Look here for the for the coding standards, naming conventions, and other 
 		        guidelines we use to help ensure eclipse presents to users and developers 
