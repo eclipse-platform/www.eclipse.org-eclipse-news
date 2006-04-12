@@ -542,8 +542,28 @@ the Eclipse Requirements Council (Themes and Priorities dated Dec. 15,
     for sharing state (such as Preferences) versus actual format converting
     operations, which are what import/export is traditionally used for. We
     should also investigate data synchronization as an alternative.
-	[UI, +all]
-	(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    [UI, +all]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Use SWT to build the splash screen.</strong>
+    The current splash screen is implemented by a wad of C code. This
+    is less than ideal for many reasons, including that it is platform
+    specific, not very flexible (e.g. no PNG images, does not support
+    non-rectangular areas) and difficult to update.
+    [UI, +all]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Finish re-work of commands and key bindings.</strong>
+    In 3.2, we built some important infrastructure that will allow
+    us to rationalize our commands and key bindings story. We need
+    to complete this effort, including building tools to improve 
+    the ease of adding key bindings.
+    [UI, +all]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
     [Theme: ]</p>
 
 </blockquote> 
@@ -618,6 +638,11 @@ services and other infrastructure for running OSGi-based systems. The
 following work items reflect new features of Equinox, or areas where
 existing features will be significantly reworked.
 
+<h4><em>Overall Theme: Components</em></h4>
+Enhance Eclipse's use of and support for software components.  This covers
+everything from component programming models such as Declarative Services
+and Spring to API tools to incremental building to fine-grained function delivery.
+
 <h4>Committed Items (Equinox project)</h4>
 <blockquote> 
 
@@ -627,8 +652,228 @@ existing features will be significantly reworked.
 <h4>Proposed Items (Equinox project)</h4>
 <blockquote>
 
-  <p><i>None at this time.</i></p>
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong></strong>
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    [Theme: ]</p>
   
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Ship Finer-grained Components</strong>
+    The Eclipse project produces three major outputs, the Platform, JDT and PDE.
+    These are exposed as zips on download sites and features on update sites.
+    Users wanting to get just part of one of these components (e.g., Help,
+    Update, JDT Core) must first discover which zip or feature contains the
+    desired function, acquire that container and finally identify and extract
+    the desired/needed plugins.  To make this easier we will revise the
+    feature/grouping structure to capture more independent and re-usable components. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Improved support for provisioning</strong>
+    Update Manager has evolved quite slowly while the world around it has
+    advanced quite quickly. New usecases (RCP, Equinox, server side, ...) and
+    technlogies (e.g., OSGi) have come to play in Eclipse but Update Manager
+    has not been enhanced to support or exploit these changes.  In 3.3 we
+    will undertake a significant effort to rework the Eclipse Update Manager
+    support to enhance workflows, efficiencies (download and disk footprint),
+    support fine-grained discovery and acquisition of function and facilitate
+    integration with a wide range of repositories.
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Complete Update Support</strong>
+    Most but not all of Eclipse is updateable.  The so-called "root files"
+    (e.g., startup.jar, eclipse.exe) typically cannot be updated in a reasonable
+    fashion.  In 3.3. we will make all aspects of Eclipse updatable.  Gone will
+    be the days of not being able to update from one release to the next.  
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Target provisioning</strong>
+    Currently, users wanting to use additional function supplied by others must
+    manually acquire and install these additional bundles in their target
+    platform.  This process is tiresome and error-prone.  As an extension
+    to the proposed provisioning work, we will add the ability to provision
+    targets directly from bundle repositories as well as from other locations
+    on the local machine.  As part of this the mechanism by which source is
+    packaged, acquired and looked up will be reviewed and streamlined.
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Incremental Plug-in Build</strong>
+    With the increase in plug-ins coming from and going to third parties the
+    development cycle needs to be more incremental.  In the Eclipse project
+    itself we have started to consume prebuilt plugins such as ICU4J and SSH2.
+    This trend is likely to continue as, for example, Apache seeks to deliver
+    their libraries as bundles and more people look to consume individual
+    bundles/components from Equinox and similar projects.  As such, the build
+    process should support the incremental building of plug-ins (that is
+    building plugins individually) based on a set of pre-built plugins kept
+    in some sort of provisioning repository.  Plug-ins coming out of the build
+    should feed into said repository to be used as a base for future builds.
+    This ability will in turn enable the more frequent building of whole
+    systems (since you build only what has changed) and simplify incremental,
+    milestone and release build cycles.
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>API tools</strong>
+    More components means more API and an elevated need for solid APIs,
+    evolved but compatible APIs and the correct and understood use of APIs.
+    This cannot be achieved without supporting tooling.  Today PDE includes
+    sophisticated support for classpath management and access rule management
+    based on information in the manifest of bundles to facilitate the capture
+    of  package and class references.  In 3.3. we will expand this to cover
+    finer-grained API contracts (e.g., clients should not call foo() or
+    extend Bar).  Similarly, developers will be given effective mechanisms
+    for discovering and minimizing dependencies and checking and managing
+    the evolution of component and package version numbers.
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Bundle Development Tools</strong>
+    In 3.1 and 3.2 PDE made gigantic strides in the area of support for
+    traditional OSGi bundle development.  Even still, in 3.3. we will improve
+    various workflows and classpath management strategies to promote the
+    development of robust and independent right-grained components.  This
+    covers everything from increased quick-fix and manifest editing support
+    to deeper integration with JDT.  In addition, as JSR 291 evolves and is
+    included in Java 6, PDE will be there to provide developer support.  3.3
+    will also see the need for tooling around OSGi Declarative Services and
+    the new application model.
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Application Model</strong>
+    The OSGi R4 MEG specification includes an application model that significantly
+    decouples the application from the rest of the system.  The net result is OSGi
+    (and thus Eclipse) as a more flexible application container for example allowing
+    multiple applications to run concurrently and improved lifecycle around the
+    application.  These characteristics are important both to the manageabilty of
+    the system (e.g., simplifying and clarifying the shutdown process0 but also to
+    various RCP scenarios such as Kiosk-mode and Application Container models.
+    In 3.3. we will implement and adopt the MEG application model.
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Runtime Refactoring</strong>
+    In 3.2. we were able to refactor the runtime to split out the registry,
+    jobs, content types, preferences, etc.  Unfortunately we were not able to
+    complete the job and the Runtime plugin itself still includes non-trivial
+    function around the notion of Eclipse applications and various static
+    helpers (e.g., Platform).  This introduces unfortunately broad couplings
+    between the former runtime elements and limits the usability of these
+    independent pieces in various scenarios.  Once the application model is
+    split out and the Platform helper methods are replaced with a simple to
+    use component discovery mechanism, the Runtime plugin will be a shell or
+    facade needed for legacy support.
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Component Programming Models</strong>
+    Eclipse has successfully put Java components on the map and made them
+    useful/relevant to normal programmers.  The decoupling of systems into
+    components has raised the need for composition coding patterns.
+    Traditional Eclipse uses the extension registry.  Traditional OSGi uses
+    the service registry.  Both have their benefits and drawbacks.  On the
+    whole, component programmers are not particularly well served.  The OSGi R4
+    platform specification introducted the notion of Declarative Services which
+    address some of these concerns.  Outside of Eclipse/OSGi, component containers
+    such as Spring have attracted significant interest.  To better facilitate
+    the creation and composition of components we will investigate programming
+    models using declarative services, Spring and other relevant component
+    mechanisms with a view to widespread use in Eclipse.
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>OSGi R5 Specification Work</strong>
+    Much of the success Eclipse has enjoyed with OSGi comes from the fact that the
+    Eclipse community has played a very active role in the evolution of various
+    OSGi specifications.  With increased interest in OSGi and Java modularity
+    (see JSR277, JSR291 and JSR232) this participation has never been more important.
+    In addition to promoting Eclipse usecases and the evolution of these standards
+    benefits Eclipse, there are a number of gaps in the OSGi specifications that
+    Eclipse is currently filling in specific ways and should be addressed in R5.
+    For example the management of API in metadata (x-friends and x-internal),
+    integration techniques for third party and legacy code, in-place execution of
+    bundles, basic notions of data location, ...  The Equinox team will continue
+    their active participation in these specification processes and keep Eclipse
+    on the leading edge of Java componentization.
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Server side</strong>
+    First it was tools, then it was applications, now server-side programmers are
+    waking up to the power of componentization delivered by Eclipse and OSGi.
+    In the 3.2 cycle an Equinox incubator was started to investigate the use of
+    Eclipse on the server.  It started as a very modest servlet bridge allowing
+    Eclipse to run inside a servlet engine and handle servlet requests and has been
+    evolving into a full-blown appreciation of what it means to componentize server
+    software.  There are many possible directions here and there is no way the
+    Equinox team proper will be able to track, support and participate in all.
+    However we will spend time understanding the basic requirements as they apply
+    to the base framework and add-on services and look to support the usecases
+    presented by various other Eclipse projects that are adopting Eclipse on the
+    server (e.g., ECF, ECP, Corona).
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Security</strong>
+    Towards the middle/end of the 3.2 cycle the Equinox Security incubator started
+    to produce secured versions of the base RCP plugins.  Various tests and benchmarks
+    were run to show the general feasibility of the approaches.  With the proof of
+    concept complete, we need to progress to understanding what it means for the
+    Eclipse team to write and maintain secure code and then look to secure a relevant
+    set of plugins using the tools and techniques developed in the incubator.
+    Similarly, various people have been working on login and authentication support.
+    In 3.3. we should finalize this work and actually include full support for these
+    vital parts of the RCP story.
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Overrides</strong>
+    Component development and use is frought with producer/consumer problems.  Component
+    producers implement solutions that address a number of usecases and scenarios but
+    inevitably consumers come up with additional, sometimes quite divergent requirements.
+    As such, the ability of component consumers to "override" or replace metadata
+    specifications in the components they are consuming allows them to better integrate
+    these components into their situations.  Further it has the potential to free component
+    producers and allow them to define default values or settings where previously such
+    settings were clearly a violation of their perspective.  This is done with the
+    undersanding that consumers are free to override such decisions.  Usecases range
+    from tweaking version ranges when bugs and patches are discovered to overriding
+    extension contributions, capability definitions, platform filters, ...  
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    [Theme: ]</p>
+
 </blockquote>
 <h4>Deferred Items (Equinox project)</h4>
 <blockquote>
