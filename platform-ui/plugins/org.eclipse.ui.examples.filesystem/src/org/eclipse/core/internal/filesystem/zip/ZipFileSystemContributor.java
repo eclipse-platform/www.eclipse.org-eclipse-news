@@ -30,10 +30,17 @@ public class ZipFileSystemContributor extends FileSystemContributor {
 	}
 
 	public URI getURI(String pathString) {
+		try {
+			if (pathString.startsWith(ZipFileSystem.SCHEME_ZIP))
+				return new URI(pathString);
+		} catch (URISyntaxException e1) {
+			return null;
+		}
 		if (File.separatorChar != '/')
 			pathString = pathString.replace(File.separatorChar, '/');
 		final int length = pathString.length();
 		StringBuffer pathBuf = new StringBuffer(length + 1);
+		pathBuf.append("file:"); //$NON-NLS-1$
 		// There must be a leading slash in a hierarchical URI
 		if (length > 0 && (pathString.charAt(0) != '/'))
 			pathBuf.append('/');
@@ -43,8 +50,8 @@ public class ZipFileSystemContributor extends FileSystemContributor {
 			pathBuf.append('/').append('/');
 		pathBuf.append(pathString);
 		try {
-			return new URI(ZipFileSystem.SCHEME_ZIP, null, pathBuf.toString(),
-					null);
+			//scheme, host, path, query, fragment
+			return new URI(ZipFileSystem.SCHEME_ZIP, null, "/", pathBuf.toString(), null); //$NON-NLS-1$
 		} catch (URISyntaxException e) {
 			return null;
 		}
@@ -66,8 +73,6 @@ public class ZipFileSystemContributor extends FileSystemContributor {
 		if (selectedFile == null)
 			return null;
 		return getURI(selectedFile);
-		
-	
 	}
 
 }
