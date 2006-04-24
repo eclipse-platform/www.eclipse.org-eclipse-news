@@ -10,7 +10,7 @@
 
 <h1>The Eclipse Project DRAFT 3.2 Plan</h1>
 
-<p>Last revised 17:03 EST April 20, 2006 
+<p>Last revised 15:00 EST April 24, 2006 
   (<img src="new.gif" alt="(new)" border="0" height="12" width="12">
   marks interesting changes since the previous 
   <a href="eclipse_project_plan_3_2_20060214.html">draft of Feb. 14, 2006</a>)
@@ -617,6 +617,29 @@ the Eclipse Requirements Council (Themes and Priorities dated Dec. 15,
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=106192">106192</a>) 
     [Theme: Scaling Up, Enterprise Ready]</p>
 
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Update Enhancements.</strong> As the number and range of Eclipse 
+    plug-ins continues to grow, it becomes increasingly important to have a powerful 
+    update/install story. For instance, if more information about an Eclipse install 
+    was available earlier, it would be possible to pre-validate that it would 
+    be a compatible location to install particular new features and plug-ins. 
+    This information could also be used to deal with conflicting contributions. 
+    Update should also be improved to reduce the volume of data that is transferred 
+    for a given update, and PDE should provide better tools for creating and deploying 
+    updates.
+    [Update, Runtime, PDE]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=106185">106185</a>) 
+    [Theme: Enterprise Ready]</p>
+
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Help System enhancements.</strong> Enhance the existing Help System functionality in 
+    several ways, including support for navigation bread crumbs, support for remote 
+    installation of Help documentation, documentation index, more extensible dynamic 
+    help view, and various other enhancements.
+    [UA]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=114243">114243)</a> 
+    [Theme: Design for Extensibility]</p>
+
   <p><strong>Improve cheat sheet support.</strong> The Eclipse cheat sheet
     infrastructure was implemented 3.0, but is still not widely used. For cheat
     sheets to be become more widely adopted, the base support should be enhanced
@@ -642,6 +665,22 @@ the Eclipse Requirements Council (Themes and Priorities dated Dec. 15,
     [Theme: Design for Extensibility]</p>
 
   <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Create Universal Welcome.</strong> 
+    Since Eclipse 3.0, it is possible to create a powerful Welcome using the
+    provided framework support. In the increasingly componentized environment,
+    it is more and more impractical to create extensions for separate
+    implementations in different products. Based on experience gained in
+    creating Welcome implementations so far, a universal Welcome implementation
+    will be provided that can be shared between many products. Universal
+    Welcome will be customizable by both products and users, and will
+    provide for intelligent merging of content in root pages. A selected
+    number of root pages that can cover the needs of most products will
+    be available.
+  [UA]
+  (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=127842">127842</a>) 
+  [Theme: Simple to Use, Design for Extensibility]</p>
+
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
     <strong>Deliver support for ICU4J with the Eclipse Platform.</strong> 
     Quality internationalization is very important in the modern software world.
     The ability to fully enable products and applications for double-byte and
@@ -664,42 +703,8 @@ the Eclipse Requirements Council (Themes and Priorities dated Dec. 15,
 <h4>Proposed Items (Eclipse Platform project)</h4>
 <blockquote>
 
-  <p><strong>Update Enhancements.</strong> As the number and range of Eclipse 
-    plug-ins continues to grow, it becomes increasingly important to have a powerful 
-    update/install story. For instance, if more information about an Eclipse install 
-    was available earlier, it would be possible to pre-validate that it would 
-    be a compatible location to install particular new features and plug-ins. 
-    This information could also be used to deal with conflicting contributions. 
-    Update should also be improved to reduce the volume of data that is transferred 
-    for a given update, and PDE should provide better tools for creating and deploying 
-    updates.
-    [Update, Runtime, PDE]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=106185">106185</a>) 
-    [Theme: Enterprise Ready]</p>
-
-  <p><strong>Help System enhancements.</strong> Enhance the existing Help System functionality in 
-    several ways, including support for navigation bread crumbs, support for remote 
-    installation of Help documentation, documentation index, more extensible dynamic 
-    help view, and various other enhancements.
-    [UA]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=114243">114243)</a> 
-    [Theme: Design for Extensibility]</p>
-
-  <p><strong>Create Universal Welcome.</strong> 
-    Since Eclipse 3.0, it is possible to create a powerful Welcome using the
-    provided framework support. In the increasingly componentized environment,
-    it is more and more impractical to create extensions for separate
-    implementations in different products. Based on experience gained in
-    creating Welcome implementations so far, a universal Welcome implementation
-    will be provided that can be shared between many products. Universal
-    Welcome will be customizable by both products and users, and will
-    provide for intelligent merging of content in root pages. A selected
-    number of root pages that can cover the needs of most products will
-    be available.
-  [UA]
-  (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=127842">127842</a>) 
-  [Theme: Simple to Use, Design for Extensibility]</p>
-
+  <p><i>None at this time.</i></p>
+  
 </blockquote>
 <h4>Deferred Items (Eclipse Platform project)</h4>
 <blockquote>
