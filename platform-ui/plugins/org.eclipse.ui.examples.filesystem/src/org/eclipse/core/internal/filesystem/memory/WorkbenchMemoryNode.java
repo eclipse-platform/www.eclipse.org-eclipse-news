@@ -18,7 +18,7 @@ import org.eclipse.ui.model.IWorkbenchAdapter;
 /**
  * 
  */
-public class WorkbenchFileStore implements IWorkbenchAdapter {
+public class WorkbenchMemoryNode implements IWorkbenchAdapter {
 
 	public Object[] getChildren(Object parent) {
 		try {

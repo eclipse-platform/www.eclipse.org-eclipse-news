@@ -15,8 +15,7 @@ import java.util.ArrayList;
 import org.eclipse.core.filesystem.EFS;
 import org.eclipse.core.filesystem.IFileInfo;
 import org.eclipse.core.filesystem.provider.FileInfo;
-import org.eclipse.core.runtime.CoreException;
-import org.eclipse.core.runtime.IPath;
+import org.eclipse.core.runtime.*;
 
 /**
  * An in-memory file system.
@@ -115,7 +114,7 @@ public class MemoryTree {
 		}
 	}
 
-	static abstract class Node {
+	static abstract class Node extends PlatformObject {
 		protected IFileInfo info;
 
 		Node(Node parent, String name) {

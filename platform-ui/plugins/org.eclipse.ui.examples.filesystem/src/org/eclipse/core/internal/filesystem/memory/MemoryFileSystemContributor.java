@@ -12,6 +12,7 @@
 package org.eclipse.core.internal.filesystem.memory;
 
 import java.net.URI;
+import java.net.URISyntaxException;
 import org.eclipse.core.filesystem.IFileStore;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.jface.window.Window;
@@ -47,6 +48,13 @@ public class MemoryFileSystemContributor extends FileSystemContributor {
 	 * @see org.eclipse.ui.ide.fileSystem.FileSystemContributor#getURI(java.lang.String)
 	 */
 	public URI getURI(String string) {
+		try {
+			if (string.startsWith(MemoryFileSystem.SCHEME_MEMORY))
+				return new URI(string);
+		} catch (URISyntaxException e) {
+			Policy.log(Policy.createStatus(e));
+			e.printStackTrace();
+		}
 		return MemoryFileSystem.toURI(new Path(string));
 	}
 }

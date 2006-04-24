@@ -13,7 +13,6 @@ package org.eclipse.core.internal.filesystem.memory;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URI;
-import java.net.URISyntaxException;
 import org.eclipse.core.filesystem.*;
 import org.eclipse.core.filesystem.provider.FileStore;
 import org.eclipse.core.runtime.*;
@@ -28,7 +27,7 @@ public class MemoryFileStore extends FileStore {
 
 	public MemoryFileStore(IPath path) {
 		super();
-		this.path = path;
+		this.path = path.setDevice(null);
 	}
 
 	public String[] childNames(int options, IProgressMonitor monitor) {
