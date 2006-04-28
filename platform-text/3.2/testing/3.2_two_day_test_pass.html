@@ -133,7 +133,18 @@ mode in the package explorer (Tom, Markus)<br>
 
 <h2>New 3.2 Functionality (except JUnit4) (Johannes, Benno)</h2>
 Test all new features that have been added during 3.2 development. Start by testing the features mentioned in the New and Noteworthy documents
-and the milestone test plans.
+and the milestone test plans.<br>
+Special items to test:
+<ul>
+	<li>Extract Superclass refactoring:
+	<ul>
+		<li>verify that the refactoring works as expected
+		<li>verify that navigation within wizard causes no problems</li>
+	</ul>
+	
+	<li> Refactoring Scripting:<br>
+	Verify that refactorings which produce errors (refactoring stati and unexpected exceptions) are handled gracefully by the scripting framework</li>
+</ul>
 
 <h2>JUnit4 Support (Dani, Tobias)</h2>
 Test the new JUnit4 integrations and verify that this doesn't break the previous JUnit3 support.
@@ -197,8 +208,8 @@ that an existing workspace can be started on the new version and is
 fully functional. Check the .log for serious problems.<br>
 
 <ul>
-  <li>upgrade a 3.0 workspace to 3.1</li>
-  <li>upgrade a 2.1 workspace to 3.1<br>
+  <li>upgrade a 3.1 workspace to 3.2</li>
+  <li>upgrade a 3.0 workspace to 3.2<br>
   </li>
 
 </ul>
