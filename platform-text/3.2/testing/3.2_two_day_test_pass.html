@@ -2,8 +2,7 @@
 <html><head>
   <meta http-equiv="Content-Language" content="en-us">
   <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-  <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
-  <meta name="ProgId" content="FrontPage.Editor.Document"><title>3.2 Two Day Test Pass</title></head>
+  <title>3.2 Two Day Test Pass</title></head>
 <body>
 <h1>3.2 Two Day Test Pass: JDT UI, JDT Text, Platform Compare, Platform Text,
 and Platform Search</h1>
@@ -14,12 +13,12 @@ and Platform Search</h1>
   <li>overall testing of the build</li>
   <li>test new 3.2 functionality</li>
   <li>test Java 5.0 functionality:
-  <br>Whenever you create some test code please use 5.0 language features whenever possible. For example add a
-  type parameter to every new class, ...</li>
+  <br>whenever you create some test code please use 5.0 language features whenever possible. For example add a
+  type parameter to every new class.</li>
   <li>test corner cases</li>
   <li>test setups which we typically don't use during development (for
 example no Plug-in development)</li>
-  <li>handling of error situations
+  <li>keep an eye on handling of error situations
     <ul>
       <li>watch log</li>
       <li>error messages</li>
@@ -29,7 +28,7 @@ example no Plug-in development)</li>
 
 <h2>Setup / Introduction</h2>
 <h3><span style="font-weight: bold;">Build</span></h3>
-&nbsp;&nbsp;&nbsp; Always use latest available Eclipse-SDK 3.2 RC2 candidate
+&nbsp;&nbsp;&nbsp; Always use latest available Eclipse-SDK 3.2 RC2 candidate (currently I20060428-0010)
 <h3>Platforms</h3>
 <ul>
   <li>Linux-GTK FedoraCore (Tom)</li>
@@ -41,8 +40,7 @@ example no Plug-in development)</li>
 <ul>
   <li>whenever you have to fill in data in dialogs try to fool the
 dialog by providing incomplete or bogus input</li>
-  <li>watch for view updating (package explorer, browsing perspective,
-outliner) when source content gets changed</li>
+  <li>watch for view updating (Package Explorer, Java Browsing perspective, Java Outline page) when source content gets changed</li>
 </ul>
 <h3>use of different fonts (everybody)</h3>
 <ul>
@@ -116,7 +114,7 @@ this workspace style:</p>
   <li>third of the team tests in browsing perspective (Dani, Johannes)<br>
   </li>
   <li>third of the team tests in Java perspective using project mode in
-package explorer (Markus, Tom)<br>
+package explorer (Tobias, Benno)<br>
   </li>
   
   <li>third of the team tests in Java perspective using the working set
@@ -153,7 +151,7 @@ Note, when testing Java 5.0 feature don't forget to test parameterized
 types that are subclasses of generic types as well as methods that use
 type parameters and varargs. For example MyList extends
 ArrayList&lt;String&gt; or &lt;X. void foo(X x, String...).<br>
-See also the <a href="5.0_Test_Items.html">detailed 5.0 test plan.</a>.
+See also the <a href="5.0_Test_Items.html">detailed 5.0 test plan</a>.
 </ul>
 
 <h2>General items (Markus, Tobias, Dani)<br>
