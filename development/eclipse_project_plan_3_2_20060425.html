@@ -10,10 +10,10 @@
 
 <h1>The Eclipse Project DRAFT 3.2 Plan</h1>
 
-<p>Last revised 10:00 EST May 9, 2006 
+<p>Last revised 16:00 EST April 25, 2006 
   (<img src="new.gif" alt="(new)" border="0" height="12" width="12">
   marks interesting changes since the previous 
-  <a href="eclipse_project_plan_3_2_20060425.html">draft of April 25, 2006</a>)
+  <a href="eclipse_project_plan_3_2_20060214.html">draft of Feb. 14, 2006</a>)
 </p>
 <p><i>&nbsp;&nbsp;&nbsp; Please send comments about this draft plan to the</i>
   <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a>
@@ -302,7 +302,7 @@
     <tr>
       <td width="205">Apple Mac OS X</td>
       <td width="59">10.4</td>
-      <td width="76">Power, Intel x86</td>
+      <td width="76">Power</td>
       <td width="59">Carbon</td>
       <td width="453">
         Java 2 Platform Standard Edition (J2SE) 1.4.2<br>service release 2 for Tiger
@@ -354,9 +354,7 @@
   2003; SWT HTML viewer requires Internet Explorer 5 (or higher). For GTK on other 
   Linux systems: version 2.2.1 of the GTK+ widget toolkit and associated libraries 
   (GLib, Pango); SWT HTML viewer requires Mozilla 1.4GTK2. For Motif on 
-  Linux systems: Open Motif 2.1 (included); SWT HTML viewer requires Mozilla 1.4GTK2.
-  People interested in other configurations, such as Motif on Solaris, should investigate
-  building from source.</p>
+  Linux systems: Open Motif 2.1 (included); SWT HTML viewer requires Mozilla 1.4GTK2.</p>
 
 <p>An early access version of the Eclipse SDK is also available for 64-bit 
   Linux GTK. Testing has been limited to early access 64-bit J2SEs running on 
@@ -1358,23 +1356,29 @@ two is valid for use in that plug-in. The situation is the same for Foundation 1
     <tr>
       <td>org.eclipse.help.base</td>
       <td>
-      <div align="center">1.4</div>
+      <div align="center">F1.0</div>
       </td>
     </tr>
     <tr>
       <td>org.eclipse.help.ui</td>
       <td>
-      <div align="center">1.4</div>
+      <div align="center">F1.0</div>
       </td>
     </tr>
     <tr>
       <td>org.eclipse.help.webapp</td>
       <td>
-      <div align="center">1.4</div>
+      <div align="center">F1.0</div>
       </td>
     </tr>
     <tr>
       <td>org.eclipse.jdt</td>
+      <td>
+      <div align="center">1.4</div>
+      </td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jdt.core</td>
       <td>
       <div align="center">1.4</div>
       </td>
@@ -1389,18 +1393,6 @@ two is valid for use in that plug-in. The situation is the same for Foundation 1
       <td>org.eclipse.jdt.apt.ui</td>
       <td>
       <div align="center">1.5</div>
-      </td>
-    </tr>
-    <tr>
-      <td>org.eclipse.jdt.core</td>
-      <td>
-      <div align="center">1.4</div>
-      </td>
-    </tr>
-    <tr>
-      <td>org.eclipse.jdt.core.manipulation</td>
-      <td>
-      <div align="center">1.4</div>
       </td>
     </tr>
     <tr>
@@ -1430,19 +1422,13 @@ two is valid for use in that plug-in. The situation is the same for Foundation 1
     <tr>
       <td>org.eclipse.jdt.junit</td>
       <td>
-      <div align="center">1.4</div>
+      <div align="center">1.4/1.5</div>
       </td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.junit.runtime</td>
       <td>
-      <div align="center">1.3</div>
-      </td>
-    </tr>
-    <tr>
-      <td>org.eclipse.jdt.junit4.runtime</td>
-      <td>
-      <div align="center">1.5</div>
+      <div align="center">1.4/1.5</div>
       </td>
     </tr>
     <tr>
@@ -1460,7 +1446,7 @@ two is valid for use in that plug-in. The situation is the same for Foundation 1
     <tr>
       <td>org.eclipse.jdt.ui</td>
       <td>
-      <div align="center">1.4</div>
+      <div align="center">1.4/1.5</div>
       </td>
     </tr>
     <tr>
@@ -1472,7 +1458,7 @@ two is valid for use in that plug-in. The situation is the same for Foundation 1
     <tr>
       <td>org.eclipse.jface.databinding</td>
       <td>
-      <div align="center">1.4</div>
+      <div align="center">n/a</div>
       </td>
     </tr>
     <tr>
@@ -1484,13 +1470,13 @@ two is valid for use in that plug-in. The situation is the same for Foundation 1
     <tr>
       <td>org.eclipse.ltk.core.refactoring</td>
       <td>
-      <div align="center">1.4</div>
+      <div align="center">1.4/1.5</div>
       </td>
     </tr>
     <tr>
       <td>org.eclipse.ltk.ui.refactoring</td>
       <td>
-      <div align="center">1.4</div>
+      <div align="center">1.4/1.5</div>
       </td>
     </tr>
     <tr>
@@ -1622,13 +1608,13 @@ two is valid for use in that plug-in. The situation is the same for Foundation 1
     <tr>
       <td>org.eclipse.swt</td>
       <td bgcolor="#ffffff">
-      <div align="center">F1.0</div>
+      <div align="center">M1.0</div>
       </td>
     </tr>
     <tr>
       <td>org.eclipse.swt.*</td>
       <td bgcolor="#ffffff">
-      <div align="center">F1.0</div>
+      <div align="center">M1.0</div>
       </td>
     </tr>
     <tr>
@@ -1676,7 +1662,7 @@ two is valid for use in that plug-in. The situation is the same for Foundation 1
     <tr>
       <td>org.eclipse.tomcat</td>
       <td>
-      <div align="center">1.4</div>
+      <div align="center">1.3</div>
       </td>
     </tr>
     <tr>
@@ -1764,12 +1750,6 @@ two is valid for use in that plug-in. The situation is the same for Foundation 1
       </td>
     </tr>
     <tr>
-      <td>org.eclipse.ui.views.properties.tabbed</td>
-      <td>
-      <div align="center">F1.0</div>
-      </td>
-    </tr>
-    <tr>
       <td>org.eclipse.ui.win32</td>
       <td>
       <div align="center">1.4</div>
@@ -1832,7 +1812,7 @@ two is valid for use in that plug-in. The situation is the same for Foundation 1
     <tr>
       <td>org.junit</td>
       <td>
-      <div align="center">1.3</div>
+      <div align="center">1.4</div>
       </td>
     </tr>
     <tr>
