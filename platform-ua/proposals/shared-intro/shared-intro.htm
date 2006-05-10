@@ -130,6 +130,11 @@ supported:</p>
 	prefix.</li>
 	<li><b>introBrandingImageText</b> - an alternative text to be used for the 
 	branding image.</li>
+	<li><b>introDescription-&lt;pageId&gt;</b> - an option description text that 
+	appears below the title on each of the sections, where pageId is one of the 
+	values listed further below (e.g. introDescription-overview, 
+	introDescription-samples etc.). This value should be translated in 
+	plugin.properties file.</li>
 </ul>
 <p>Second half of universal intro variables are accessible as preferences. The 
 split is due to the fact that these variables can be configured by users and are 
@@ -231,12 +236,12 @@ contributions for children. Contribution elements are used to specify two
 aspects:&nbsp; </P>
 <BLOCKQUOTE><PRE>&lt;extensions&gt;
    &lt;page id="overview"&gt;
-      &lt;group path="page-content/left"&gt;
+      &lt;group path="page-content/top-left"&gt;
           &lt;extension id="foo1" importance=&quot;high&quot;/&gt;
           &lt;extension id="bar"  importance=&quot;high&quot;/&gt;
 	  &lt;extension id=&quot;foo2&quot; importance=&quot;medium&quot;/&gt;
       &lt;/group&gt;
-      &lt;group path="page-content/right"&gt;
+      &lt;group path="page-content/top-right"&gt;
            &lt;extension id="foo3" importance=&quot;low&quot;/&gt;
            &lt;extension id="foo4" importance=&quot;low&quot;/&gt;
            &lt;extension id=&quot;foo5&quot; importance=&quot;callout&quot;/&gt;
@@ -267,7 +272,7 @@ and assigned a low importance value. This is important for contributions added
 after the product has shipped - they still need to show up.</p>
 <p>Contributions not relevant to the project can be hidden by explicitly listing 
 them as children of the 'hidden' element.</p>
-<p>Contributing into extensions</p>
+<h3>Contributing into extensions</h3>
 <p>An extension contributed into one of the root pages can itself contain 
 anchors, providing for others to add content. This causes a problem because the 
 final resolved path of the content in the extension is not known in advance. For 
