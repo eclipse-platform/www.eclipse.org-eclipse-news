@@ -284,8 +284,8 @@
 	<div id="rightcolumn">
 		<div class="sideitem">
 			<h6>CVS Related Links</h6>
-			<ul>
-				<li><a href="#">CVS FAQ Wiki</a></li>
+			<ul><li><a href="http://wiki.eclipse.org/index.php/CVS_FAQ">CVS FAQ Wiki</a></li>
+				<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-vcm-home/main.html">Team Support</a></li>
 			</ul>
 		</div>
 	</div>
