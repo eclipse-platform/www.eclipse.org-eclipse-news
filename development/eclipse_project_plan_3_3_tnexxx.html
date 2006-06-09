@@ -535,36 +535,298 @@ the Eclipse Requirements Council (Themes and Priorities dated Dec. 15,
 <h4>Proposed Items (Eclipse Platform project)</h4>
 <blockquote> 
 
+   <h2>Philippe's Items</h2>
+
 <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Re-think the Import/Export mechanism.</strong>
-    The current import/export dialogs include numerous capabilities that
-    users do not expect to see. We need to distinguish between mechanisms
-    for sharing state (such as Preferences) versus actual format converting
-    operations, which are what import/export is traditionally used for. We
-    should also investigate data synchronization as an alternative.
-    [UI, +all]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    <strong>Performance watch</strong>
+    Continue to monitor overall performance and memory consumption. This includes the addition of new performance tests for new features. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
     [Theme: ]</p>
 
 <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Use SWT to build the splash screen.</strong>
-    The current splash screen is implemented by a wad of C code. This
-    is less than ideal for many reasons, including that it is platform
-    specific, not very flexible (e.g. no PNG images, does not support
-    non-rectangular areas) and difficult to update.
-    [UI, +all]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    <strong>Add text editor productivity features</strong>
+    Provide some long awaited productivity features like text drag and drop, tripple-click and spell checking. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
     [Theme: ]</p>
 
 <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Finish re-work of commands and key bindings.</strong>
-    In 3.2, we built some important infrastructure that will allow
-    us to rationalize our commands and key bindings story. We need
-    to complete this effort, including building tools to improve 
-    the ease of adding key bindings.
-    [UI, +all]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    <strong>Text editor support for RCP</strong>
+    Make it easier for RCP developers to provide their own text editor. To support this some of the Platform Text and Platform UI code has to be refactored. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
     [Theme: ]</p>
+
+   <h2>Nick's Items</h2>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Improve Usability</strong>
+    Improve the usability of the fundamentals of the workbench: editor and view management, perspective management, other screen real-estate management (i.e. fix the broken minimize).  Also, for the new trim support, we need the ability to allow the end user to hide/show items.  There are also important requirements from existing clients: sidebar views (should look at integrating with sticky views), enable to programmatically control layout (e.g. to show 4 image editors arranged in a grid). For navigating the workspace (and/or Java model), we should explore other ways, e.g. web-style navigation with breadcrumbs bar at top, with either drop-downs or editors for picking items from containers. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Parameterize default presentation</strong>
+    For RCP applications we need to allow parameterization of the default presentation.  We've had three releases for the community to come up with decent presentation implementations, and it hasn't happened.  They're just hard to do, both technically, and graphic-design-wise.  This could be done using preferences (possibly hidden) for whether min/max buttons are shown, more control over tab compression, icon appearance, MRU ordering of tabs, support for large icons (kiosk mode) etc. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+    <h2>Boris/Tod/MVM Items</h2>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Improve serviceability.</strong>
+    When an end user encounters a problem with Eclipse, it is important for support teams to be able to diagnose the root cause of the failure, and identify the failing plug-in. Eclipse should have enhanced error reporting tools that make it easy for end users to report problems. Tools should be available at all times, so that knowledgeable users could diagnose unexpected behavior such as slowdowns or exceptional memory use. Error handling is done in a variety of ways within the platform which are not extensible to RCP applications. An improved story would allow for the inclusion of some sort of application defined error support (such as a link to a support centre for the product) and would tie the current error reporting story together into a solution with a more consistent look and fewer paths for developers to report errors to. (106193,124964) 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Presentation Refresh</strong>
+    Currently the Workbench Presentation is tied into the presentations API through workbench internals. This presentation should be split out into a 3.0 presentation. When this is done a refresh of the look of the IDE would be done in order to keep a modern, fresher look to the SDK. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Scoped Listeners</strong>
+    Currently the listener mechanism sends updates to all registered listeners regardless of how the update was created. In the workbench level mechanisms like the decorators mechanism this results in the update of every object that registers a listener, resulting in uneccessary updates. Providing some way of scoping these listeners that allows for reduced updates will allow for only those listeners interested to get updated. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Make Resource Dependant Components available for RCP</strong>
+    Currently anyone wanting to use the Progress, Problems, Tasks or Bookmarks view is required to also use the IDE application as the IDE is not an RCP component. Resource based components that could be used for RCP applications should be split out into another plug-in. A next step in this direction is to allow reuse of these views whithout having to depend on resources. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Re-think the Import/Export mechanism.  (this is an update from McQs original)</strong>
+    The current import/export dialogs include numerous capabilities that users do not expect to see. We need to distinguish between mechanisms for sharing state (such as Preferences) versus actual format converting operations, which are what import/export is traditionally used for. We should also investigate data synchronization as an alternative. The Platform currently provides dialogs for Import and Export of Files, Archives and Existing Projects. These can be combined into one dialog each so as to reduce confusion and to simplify our code base. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>JFace Components</strong>
+    Currently the reusable components in JFace focus on supporting the SWT widget set and adding functionality for the SDK. There are numerous other components that we do not use in the SDK currently that the community is requesting. Some examples would be: date and time field editors, spinners, secure editors (such as password entry fields) fields that enforce a format (such as field for currency and percentages), spreadsheet 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Support GB18030-2 (Deferred from 3.2)</strong>
+    The GB18030-2 Chinese character set is becoming increasingly important in the Java community. Eclipse should support GB18030-2 on platforms where it is supported natively. Because of the fundamental and far reaching impact of implementing this support, it is expected that it will require an SDK (and indeed entire Eclipse Foundation) wide strategy.(127864) 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Improved BIDI Support</strong>
+    There are still some holes in the BIDI story in the workbench to do with rendering of mixed RTL and LTR string. (130587) 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Use SWT to build the splash screen</strong>
+    The current splash screen is implemented by a wad of C code. This is less than ideal for many reasons, including that it is platform specific, not very flexible (e.g. no PNG images, does not support non-rectangular areas) and difficult to update. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Finish re-work of commands and key bindings</strong>
+    In 3.2, we built some important infrastructure that will allow us to rationalize our commands and key bindings story. We need to complete this effort, making sure the new story supports all of the existing functionality (e.g action sets), and migrating over to the new support. We also need to make it easier to add and edit key bindings. [Theme: Ease of Use] 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Customizable UI</strong>
+    Eclipse is not customizable enough from an end user's perspective. In 3.2, we made trim items draggable by the end user. We need to do the same for menus and tool bars, and allow users to show and hide actions over what is currently possible using action sets.  We also need to simply how the user makes these modification by replcing complicated UI elements like the Customize Perspective dialog 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Scripting</strong>
+    Based on the work in the Dash project on simple scripting, and the new command infrastructure, we are now in a much better position than ever to tackle the issue of making Eclipse scriptable. This includes providing useful DOMs for scripts to call into, but also providing events within Eclipse for scripts to hook into (e.g., onPartActivate, onOpenProject etc.), and a way to record scripts by collecting the executed commands and their parameters. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Workbench Refactoring</strong>
+    There are some areas where new API completely replaces old API, including but not limited to core expressions replacing common expressions and the new commands/keybindings story. We should refactor obsolete API and functionality into a separate plug-in, thereby making it easier to understand which API is recommended, reducing the size of the Workbench plug-in, and making the Workbench more maintainable in the long run. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Improved Workspace Launcher</strong>
+    The workspace chooser dialog where you select your workspace is confusing to first-time users, and not very useful for advanced users. The workspace launcher should be more helpful to first-time users, for exampe by moving parts of the Welcome view into it, and provide real value for advanced users, for example by enabling browsing of existing workspaces (and displaying information like unreleased outgoing changes). 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>JFace Data Binding</strong>
+    In 3.2, we developed a data binding framework for JFace but decided to not make it public API. We should finalize the API and start using it where appropriate. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Nesting parts (Deferred for 3.1 and 3.2)</strong>
+    Various problems are encountered when trying to nest workbench parts (editors or views). For example, the current compare infrastructure cannot reuse the existing Java editor to provide the regular editing experience including key bindings, content assist etc. The UI needs to support nesting of workbench parts, and reduce the coupling of parts to particular locations in the workbench, allowing for more flexible UI configurations. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+    <h2>Michael V's Items</h2>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Scalability (A UI item that relates to Team)</strong>
+    In general, we should look at ways of improving scalablility. One specific instance of this involves view defined by the Platform. We should investigate way to make these views tailorable to the context in which they appear. For instance, if the Problems view appears in a higher-level models perspective, errors from lower level models could be filtered out by default. The Project Explorer is another example view that, when shown in a higher-level models perspective, shoudl show the content from that model associated with the perspective and filter out unrelated models. These are just a couple of concrete examples. we should use Callisto and other clients as a testbed for experimentiong on these and other scalability scenarios to improve the user experience. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Team/CVS and Eclipse.org</strong>
+    We need to ensure that the Team platform and the CVS plugin meet the requirements of other Eclipse.org projects. Specifically, we need to ensure that the workspace structure required by the Eclipse.org projects is supported by the Team architecture and the CVS client. We also need to ensure that the CVS plugin continues to meet the needs of the Eclipse development teams. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Compare (A Compare item related to Team)</strong>
+    The Compare plugin has not undergone much work in the last few releases and is showing it. In the very least, there are several Compare internals that need to be made API in order to properly support clients. Also, there are also several polish items that have been identified by Eclipse development teams. However, there are also several architectural issues that could be addressed as well. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Adoption of new Platform APIs by Team/CVS</strong>
+    There have been several new APIs added in 3.2 that the Team/CVS component has not stepped up to. These include the Commands framework, field assist, SWT column sort indicators,etc. In 3.3, we should step up to the latest APIs and also adopt other API changes as they occur to ensure that any new APIs introduced in 3.3 get as much tesing as possible. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Cache Management</strong>
+    The CVS client uses several caching mechanisms. These include a sync info cache, file contents cache, project tag cache. The management of these caches is rather ad hoc at the moment. For instance, the file content cache will clear entries after a certain time and frees the entire cache across a restart. However, some cached file entries could be kept across restart to improve performance (i.e. the contents associated with the base revision of a modified workspace file). Some caches (e.g. sync info cache) are lazily loaded into memory but are never unloaded. The project tag cache is also lazily loaded and never unloaded with the added dimension that the on-disk cache could also be cleared if disk usage was too high. We should look at ways of providing cache management strategies that will help CVS with an eye towards whether the resulting mechanisms are more generally applicable. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Remote Explorer</strong>
+    With the introduction of the Common Navigator, it is now easy to define a generic remote explorer in the Team perspective (https://bugs.eclipse.org/bugs/show_bug.cgi?id=138583). The Remote Explorer would just define a place holder in the Team perspective to which repository providers or other tooling providers could contribute remote content as Common Navigator content extensions. The explorer would also need to provide support for the creation of new remote locations to be browsed using the Common Navigator wizard support. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Platform level proxy settings (Really a Runtime item)</strong>
+    There are at least 3 proxy settings pages in Callisto. There should be a Platform level setting and a single preference page to configure the proxy settings (https://bugs.eclipse.org/bugs/show_bug.cgi?id=119278) 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+    <h2>Steve's Items</h2>
+    
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Vista Port</strong>
+    SWT should be implemented on top of WinFX and WPF (Windows Presentation Framework). 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Theme and Branding</strong>
+    In order to allow the community to customize the look of Eclipse based applications we need the ability to draw custom controls that look like operating system controls, the ability to custom draw more native and custom controls (ToolBar, CTabFolder ...), and API's to support branding. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Graphics Improvements</strong>
+    The SWT graphics layer should provide support for fractional line widths, daches and fonts, the ability to flaten paths, and image loading/saving improvements, and similar enhancements. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Mozilla Everywhere</strong>
+    We should support embedding Mozilla on all platforms. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>GTK Printing</strong>
+    We should provide printing support on GTK. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Win64</strong>
+    We should support 64-bit windows. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>New Widgets</strong>
+    SWT should provide access to more native controls (Header, Date and Time picker ...). 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Mac Improvements</strong>
+    The Mac implementation of SWT should be brought up to the level of the other platforms by providing implementations for the following missing features: in-line IME, BIDI, accessibility, system tray, dock improvements. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+	<h2>Darin's Items</h2>
+	
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>APIs for custom debugger integration (was originally named "Enhance the debug platform")</strong>
+    Publish public APIs based on the provisional APIs introduced in 3.2 to support custom debugger integration. Features include flexible hierarchy in debug views; asynchronous, cancellable interactions when retrieving content and labels; model driven view updates; a debug context service for retartgettable actions, flexible view wiring and pluggable source lookup. [Theme: Design for Extensibility, Enterprise Ready] [Platform Debug] 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Simplify launching support (was originally named "Enhance launching support")</strong>
+    Simplify the launch experience for novice users with single click context sensitive launching. Allow launch configurations to be managed via resource properties. Support user configurable toolbar buttons to invoke favorite launch configurations. [Theme: Simple to Use][Platform Debug, JDT Debug] 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Launch support for RCP (was originally named "Enhance launching support")</strong>
+    Seperate launch support into a new plug-in such that launching can be performed without requiring debug plug-ins. Support launching in a combination of modes rather than the current mutually exclusive modes (for example, the ability to profile and debug an application at the same time). Investigate combining run, debug, and profile actions into a single execute action with launch modes being specified by a launch configuration. Support a launch configuration namespace allowing for more than one configuration with the same name. Support launch configuration templates allowing common launch settings to be shared among a group configurations. Allow clients to override standard console creation for system processes. [Theme: Design for Extensibility, Enterprise Ready] [Platform Debug] 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Extensible debug views with pin and clone support</strong>
+    Allow debug clients to plug custom controls into the variables view details pane (also registers view and expressions view). Support the ability to pin a debug view to a specific debug session and clone views to allow side by side comparison of different debug sessions. [Theme: Design for Extensibility, Enterprise Ready] [Platform Debug] 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
 
 </blockquote> 
   <h4>Deferred Items (Eclipse Platform project)</h4>
@@ -591,8 +853,108 @@ significantly reworked.</p>
 <h4>Proposed Items (Eclipse JDT project)</h4>
 <blockquote> 
 
-  <p><i>None at this time.</i></p>
-  
+    <h2>Philippe's Items</h2>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Polish the look and feel of JDT UI</strong>
+    The new SWT capabilities added late in 3.2 open new opportunities for the JDT views and dialogs. In 3.3 we would like to take advantage of custom rendering of tree and table items to better structure the presented information using different colors and styles. We also want to improve affordance for quick fix, quick hierarchy and outline to move towards a new, fast view oriented, Java perspective. We want to replace some of the refactoring dialogs with lighter versions, using the good experiences with quick hierarchy and quick outline. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Continuously improve refactorings.</strong>
+    We want to finish the fix deprecation refactorings which didn't make it into 3.2, and add the new refactoring 'Replace Invocation'. More refactoring API can now be offered in the new plug-in jdt.core.manipulation so the refactoring infrastructure can be used head-less. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Extending Clean Up</strong>
+    We want to add formatting, organize import and sort members to 'Clean up', offer clean up profiles, and invoke clean up on user defined events. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Code audit integration</strong>
+    The goal is to standardize how and when code audits (our own and contributed) are invoked and presented in the UI as well as to provide core infrastructure. Some code audits can be computed 'as you type', others require deep analysis that can't be done while building but has to be kicked on by the user or other events. We have to discuss where and how code audit result are presented (e.g. in the problems view or in a new code audit view) and if we want to provide infrastructure for the code audit preference pages. Core infrastructure would allow code audits to share resources as the AST. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>More flexible project layout</strong>
+    When adopting Eclipse, some pre-existing project layouts are hard to model in Eclipse. It feels this process could be eased by allowing more configurability of the Java project, such as allowing custom buildpath or settings on a per source folder basis; multiple source attachments per library; inclusion of external resources in workspace (as opposed to linking resources which is not seen by external tools); relax classpath container limitations, which currently do not allow nested containers, source folders etc... 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>APT command-line tool</strong>
+    Annotation processing tooling got integrated on top of the Java IDE within release 3.2. Looking further, it should also be made available as a command-line tool, as a complement to the batch compiler and/or Ant javac adapter. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Compiler API (JSR199)</strong>
+    In order to conform to the forthcoming tool API for compilers (JSR-199), the Eclipse compiler should provide a front-end implementing the tool API included in Java SE 6. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>More classfile targets for compiler</strong>
+    The compiler should support more configurable classfile targets, including CLDC 1.0, CLDC 1.1 and possibly JSR14 (generics experimentation for 1.4 VMs). 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Drive quick navigation support to the next level</strong>
+    While the current quick view support is nice it could be much better: show additional info (e.g. Javadoc), allow to open Quick views for a Java element (e.g. from the Package Explorer or Outline view) and eventually offer a context menu (investigation item). 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>New Annotation Processing API (JSR 269)</strong>
+    The initial implementation of APT used a provisional API from Sun. Java 6 introduced a standard API. APT should implement this. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Improve integration of annotation processing tooling</strong>
+    APT integration should improve in various areas, including editor reconciling and codeassist. The editor reconciling experience should work correctly even if the Java builder is not active. Currently, if a processor generates types, those types are ignored during reconcile. Instead, they should be modelled using working copies, and provide the same level of functionality of JDT when autobuild is turned off. Also, on codeassist front, we want to provide a simple API for processors to supply domain specific knowledge to completions inside annotation values. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Improve compiler fault-tolerance</strong>
+    Missing types can greatly deteriorate compiler output by producing too many secondary errors, surface suboptimal DOM bindings, or even abort entire compilation process when missing types are referenced from required classfiles. We should investigate ways to improve this situation, remembering that the APT Mirror API requires that bindings are still presented even in the presence of missing types. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Enhance launching support</strong>
+    Simplify the launch experience for novice users. Introduce single click context sensitive launching and investigate launching based on content types at different levels in the resource hierarchy. Allow launch configurations to be managed via a resource's properties. Investigate launch configuration templates allowing common launch settings to be shared among a group configurations. 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+    <h2>Darin's Item</h2>
+    
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Support for JavaSE6 debug features</strong>
+    Implement new JavaSE6 features in the Eclipse Java Debug Interface (JDI) client including support for heap walking (retrieve instance counts, all intances of specific types, and all references to an object), forcing an early return from a method with a specific return value, breakpoints for monitor acquisition and release, access to the constant pool, and improved class prepare event filtering. [Theme: Appealing to the Broader Community] [JDT Debug] 
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
 </blockquote>
 <h4>Deferred Items (Eclipse JDT project)</h4> 
 <blockquote> 
@@ -651,6 +1013,8 @@ and Spring to API tools to incremental building to fine-grained function deliver
 </blockquote>
 <h4>Proposed Items (Equinox project)</h4>
 <blockquote>
+
+<h2>Jeff's Items</h2>
 
 <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
     <strong></strong>
