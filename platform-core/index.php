@@ -70,12 +70,12 @@ ob_start();
 		<div class="sideitem">
 			<h6>Core links</h6>
 			<ul>
-				<li><a href="main.html">Home</a></li>
-				<li><a href="documents.html">Documents</a></li>
-				<li><a href="downloads.html">Downloads</a></li>
-				<li><a href="resources.html">Resources</a></li>
-				<li><a href="planning.html">Planning</a></li>
-				<li><a href="testing.html">Testing</a></li>
+				<li><a href="index.php">Home</a></li>
+				<li><a href="documents.php">Documents</a></li>
+				<li><a href="downloads.php">Downloads</a></li>
+				<li><a href="resources.php">Resources</a></li>
+				<li><a href="planning.php">Planning</a></li>
+				<li><a href="testing.php">Testing</a></li>
 			</ul>
 		</div>
 	</div>
