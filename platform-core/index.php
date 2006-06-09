@@ -25,22 +25,26 @@ ob_start();
 
 	<div id="midcolumn">
 		<h1><?= $pageTitle ?></h1>
-		<h2>the foundation of the platform</h2>
-		<p>The Core component forms the base of the Eclipse platform's runtime configuration. 
-		It includes mechanisms and facilities for:</p>
-		<ul>
-			<li>booting and running the platform</li>
-	        <li>plug-in declaration and management</li>
-	        <li>resource management</li>
-		</ul>
-		<p>The Core is excruciatingly generic -- all plug-ins installed and run 
-		on the Core infrastructure are treated equally. The contents of resources 
-		are never examined in any domain-specific way and the Core can run equally 
-		well with and without a UI. 
-		</p><p>
-	    Note that much of the Core component's function now falls under the 
-	    <a href="http://eclipse.org/equinox">Equinox OSGi project</a>
-	    </p>
+		<font class=indexsub>the foundation of the platform</font>
+		
+		<div class="homeitem3col">
+		  <h3>About the core component</h3>
+			<p>The Core component forms the base of the Eclipse platform's runtime configuration. 
+			It includes mechanisms and facilities for:</p>
+			<ul>
+				<li>booting and running the platform</li>
+		        <li>plug-in declaration and management</li>
+		        <li>resource management</li>
+			</ul>
+			<p>The Core is excruciatingly generic -- all plug-ins installed and run 
+			on the Core infrastructure are treated equally. The contents of resources 
+			are never examined in any domain-specific way and the Core can run equally 
+			well with and without a UI. 
+			</p><p>
+		    Note that much of the Core component's function now falls under the 
+		    <a href="http://eclipse.org/equinox">Equinox OSGi project</a>
+		    </p>
+	    </div>
 		
 		</p>
 		<div class="homeitem3col">
