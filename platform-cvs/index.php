@@ -80,7 +80,7 @@
 			</ul>
 			</p>
 			<p><img SRC="http://dev.eclipse.org/images/Adarrow.gif" NOSAVE BORDER=0 height=16 width=16>&nbsp;<b>Archived Releases</b></p>
-			<ul><li>Documents from <a href="previousreleases.php#docs">previous releases</a>.</li></ul>
+			<ul><li>Documents from <a href="archivedreleases.php#docs">previous releases</a>.</li></ul>
 		</div>
 		<div class="homeitem3col">
 			<h3>Get Involved</h3>
