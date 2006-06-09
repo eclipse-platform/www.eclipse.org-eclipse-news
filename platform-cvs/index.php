@@ -48,7 +48,7 @@
 			<a name="ABOUT"></a>
 			<p></p>
 			<ul>
-			  <li>This component is responsible for all org.eclipse.team.cvs.* <a href="dev.php#Plugins">plugins<a/></li>
+			  <li>This component is responsible for all org.eclipse.team.cvs.* <a href="dev.php#Plugins">plugins</a></li>
 			  <li>Everything you always wanted to know about the CVS plugin can be found over in the <a href="http://wiki.eclipse.org/index.php/CVS_FAQ">CVS
 			    FAQ Wiki</a>.</li>
 			  <li>Online user <a href="http://help.eclipse.org/help21/index.jsp?topic=/org.eclipse.platform.doc.user/gettingStarted/qs-60_team.htm">documentation</a>.</li>
@@ -108,7 +108,7 @@
 		<div class="sideitem">
 			<h6>CVS Related Links</h6>
 			<ul><li><a href="http://wiki.eclipse.org/index.php/CVS_FAQ">CVS FAQ Wiki</a></li>
-				<li><a href="http://www.eclipse.org/eclipse/platform-team/index.php">Team Support</a></li>
+				<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-vcm-home/main.html">Team Support</a></li>
 			</ul>
 		</div>
 	</div>
