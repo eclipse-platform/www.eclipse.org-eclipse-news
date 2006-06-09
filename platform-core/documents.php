@@ -7,7 +7,7 @@
 	
 	#
 	# Begin: page-specific settings.  Change these. 
-	$pageTitle 		= "Core";
+	$pageTitle 		= "Core documents";
 	$pageKeywords	= "core, runtime, resources, jobs, preferences";
 	
 	# Add page-specific Nav bars here
@@ -115,7 +115,6 @@ ob_start();
 
 	</div>
 
-	<!-- remove the entire <div> tag to omit the right column!  -->
 	<div id="rightcolumn">
 		<div class="sideitem">
 			<h6>Core links</h6>
