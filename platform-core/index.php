@@ -25,27 +25,31 @@ ob_start();
 
 	<div id="midcolumn">
 		<h1><?= $pageTitle ?></h1>
-		<font class=indexsub>the foundation of the platform</font>
-		
+
 		<div class="homeitem3col">
 		  <h3>About the core component</h3>
-			<p>The Core component forms the base of the Eclipse platform's runtime configuration. 
-			It includes mechanisms and facilities for:</p>
+			<p>The core component provides basic platform infrastructure that
+			does not involve any UI.  It is currently comprised of the following principal plug-ins:
+			</p>
 			<ul>
-				<li>booting and running the platform</li>
-		        <li>plug-in declaration and management</li>
-		        <li>resource management</li>
+				<li><b>org.eclipse.core.contenttype</b> - Support for defining and managing file content types</li>
+				<li><b>org.eclipse.core.expressions</b> - A generic XML-based expression language used in the
+				markup of various extension points.</li>
+				<li><b>org.eclipse.core.filesystem</b> - A generic file system API</li>
+				<li><b>org.eclipse.core.jobs</b> - Infrastructure for concurrent programming in Eclipse</li>
+				<li><b>org.eclipse.core.resources</b> - Management of resources - projects, folders, and files</li>
+				<li><b>org.eclipse.core.runtime</b> - Formerly the foundation of the platform, this plug-in
+				has largely been supplanted by the <a href="http://eclipse.org/equinox">Equinox</a> runtime</li>
 			</ul>
-			<p>The Core is excruciatingly generic -- all plug-ins installed and run 
-			on the Core infrastructure are treated equally. The contents of resources 
-			are never examined in any domain-specific way and the Core can run equally 
-			well with and without a UI. 
+			<p>These plug-ins are excruciatingly generic -- each provides a basic
+			set of services, and API and extension points for managing and interacting
+			with those services.  The contents of resources are never examined in 
+			any domain-specific way and the Core can run equally well with and without a UI. 
 			</p><p>
-		    Note that much of the Core component's function now falls under the 
+		    Note that much of the function previously provided by core now falls under the 
 		    <a href="http://eclipse.org/equinox">Equinox OSGi project</a>
 		    </p>
 	    </div>
-		
 		</p>
 		<div class="homeitem3col">
 		  <h3>Get involved!</h3>
@@ -58,7 +62,6 @@ ob_start();
 	        management on a variety of operating systems, Windows/Linux filesystem 
 	        callback management, or programming for speed/space, the Core team wants 
 	        to talk to you.</p>
-	      <p>Upcoming work is primarily in the details of currently supported function.</p>
 		</div>
 	</div>
 
@@ -67,12 +70,12 @@ ob_start();
 		<div class="sideitem">
 			<h6>Core links</h6>
 			<ul>
-				<li><a href="main.html">[home]</a></li>
-				<li><a href="documents.html">[documents]</a></li>
-				<li><a href="downloads.html">[downloads]</a></li>
-				<li><a href="resources.html">[resources]</a></li>
-				<li><a href="planning.html">[planning]</a></li>
-				<li><a href="testing.html">[testing]</a></li>
+				<li><a href="main.html">Home</a></li>
+				<li><a href="documents.html">Documents</a></li>
+				<li><a href="downloads.html">Downloads</a></li>
+				<li><a href="resources.html">Resources</a></li>
+				<li><a href="planning.html">Planning</a></li>
+				<li><a href="testing.html">Testing</a></li>
 			</ul>
 		</div>
 	</div>
