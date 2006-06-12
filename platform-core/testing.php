@@ -28,8 +28,8 @@ ob_start();
 		<div class="homeitem3col">
 		<h3>Test Plans</h3>
 			<ul>
-				<li><img src="images/new.gif" width="31" height="14"> <a href="documents/3.1/test_plan.html">Test 
-				plan</a> for Eclipse 3.1.</li>
+				<li><a href="documents/3.1/test_plan.html">Test 
+				plan</a> for core plug-ins</li>
 			</ul>
 		</div>
 
