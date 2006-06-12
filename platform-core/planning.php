@@ -28,7 +28,7 @@ ob_start();
 		<div class="homeitem3col">
 		<h3>3.3 release</h3>
 			<ul>
-				<li></li>
+				<li>Planning is currently under way for the 3.3 release.</li>
 			</ul>
 		</div>
 
