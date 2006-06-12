@@ -36,7 +36,7 @@ ob_start();
 		<h3>3.2 release</h3>
 			<ul>
 				<li><a href="planning/3.2/plan.html">General 3.2 Core Plan</a></li>
-				<li>Check out the <a href="documents.html">documents</a> page for links 
+				<li>Check out the <a href="documents.php">documents</a> page for links 
 				to some of the major items that we worked on.</li>
 			</ul>
 		</div>
@@ -55,7 +55,7 @@ ob_start();
 				<li><a href="planning/3.1/milestones.html">Milestone Plans</a></li>
 				<li><img src="images/new.gif" width="31" height="14"> Core team <a href="planning/3.1/documentation.html">3.1 
 				Documentation plan</a></li>
-				<li>Check out the <a href="documents.html">documents</a> page for links 
+				<li>Check out the <a href="documents.php">documents</a> page for links 
 				to some of the major items that we worked on.</li>
 			</ul>
 		</div>
