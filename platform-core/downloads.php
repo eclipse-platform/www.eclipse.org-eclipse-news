@@ -99,25 +99,9 @@ ob_start();
 
 		<div class="homeitem3col">
 		<h3>Patches</h3>
-		      <ul>
-			  <li>Patch for bug 83992.  This
-			  <a href="downloads/patches/bug83992/org.eclipse.core.resources_3.1.2.jar">patch</a>
-			  is for the 3.0 or 3.1 release.  Simply drop this JAR into your plugins directory, and restart
-			  with -clean.
-			  </li>
-			  <li>Patch for bug 116851.  This
-			  <a href="downloads/patches/bug116851/org.eclipse.core.resources_3.2.0.v200511171105.jar">patch</a>
-			  is for I20051115 or I20051116.  It fixes bug 116851, which occurred
-			  in those two builds.  Simply drop this JAR into your plugins directory, and restart
-			  with -clean.
-			  </li>
-			  <li>Patch for bug 86846.  This 
-			  <a href="downloads/patches/bug_86846/resources.jar">patch</a>
-			  fixes bug 86846 for either Eclipse 3.0.1 or 3.0.2.  Simply replace the resources.jar
-			  file in the directory eclipse/plugins/org.eclipse.core.resources_3.0.1 with the patched 
-			  jar file.
-			  </li>
-		      </ul>
+	      <ul>
+	      	<li>This is where you would find patches for current bugs.  Currently there are no active patches.</li>
+	      </ul>
 		</div>
 
 		<div class="homeitem3col">
