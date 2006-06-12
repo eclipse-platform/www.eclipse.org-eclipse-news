@@ -93,7 +93,7 @@ ob_start();
 		<h3>Update site</h3>
 			  The Core team has an update site where you can find various utility plug-ins:</p>
 		      <blockquote>
-		        <p>http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-core-home/updates</p>
+		        <p>http://eclipse.org/eclipse/platform-core/updates</p>
 		      </blockquote>
 		</div>
 
