@@ -39,7 +39,7 @@ ob_start();
 		<div class="homeitem3col">
 		<h3>General core documents</h3>
 			<ul>
-				<li><a href="http://dev.eclipse.org/conventions.html">Coding Conventions 
+				<li><a href="http://wiki.eclipse.org/index.php/Development_Conventions_and_Guidelines">Coding Conventions 
 				  - Eclipse</a></li>
 				<li><a href="documents/coding_conventions.html">Coding Conventions - Platform/Core 
 				  Team</a></li>
@@ -48,7 +48,7 @@ ob_start();
 				<li><a href="runtime/index.html">The OSGi-based runtime</a></li>
 				<li><a href="documents/core_overview.html">Core Overview</a></li>
 				<li><a href="documents/update.html">Eclipse Update Site</a></li>
-				<li><a href="documents/session_tests.html">Session Test Framework</a></li>
+				<li><a href="http://wiki.eclipse.org/index.php/Session_Tests">Session Test Framework</a></li>
 			</ul>
 		</div>
 
