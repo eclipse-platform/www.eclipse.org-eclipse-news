@@ -56,6 +56,7 @@
 			<ul>
 			<li>3.2 <a href="r3.2/plan.php">development</a> plan.<br>
 			3.2 <a href="r3.2/3_2_testing.html">testing</a> plan.</li>
+			<li>How to run the <a href="">CVS JUnit tests</a>.</li>
 			<li>Documents from <a href="archivedReleases.php">previous releases</a>.</li></ul>
 		</div>
 		<div class="homeitem3col">
