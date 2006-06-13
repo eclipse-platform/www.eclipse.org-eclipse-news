@@ -61,7 +61,6 @@
 		<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/platform-vcm-home/plugins/target/org.eclipse.target.ide/">org.eclipse.target.ide</a></li>
 		<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/platform-vcm-home/plugins/target/org.eclipse.target.iofile/">org.eclipse.target.iofile</a></li>
 		<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/platform-vcm-home/plugins/target/org.eclipse.target.rcp/">org.eclipse.target.rcp</a></li>
-		<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/platform-vcm-home/plugins/target/org.eclipse.team.target/">org.eclipse.team.target</a></li>
 		</ul>
 		<H4>Team</H4>
 		The Team plugins add Sync View support for WebDAV and FTP. They sit on top of the Target layer.
@@ -69,6 +68,7 @@
 		<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.team.ftp/">org.eclipse.team.ftp</a></li>
 		<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.team.webdav/">org.eclipse.team.webdav</a></li>
 		<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.team.extras/">org.eclipse.team.extras</a></li>
+		<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/platform-vcm-home/plugins/target/org.eclipse.team.target/">org.eclipse.team.target</a></li>
 		</ul>
 		</div>
 		
