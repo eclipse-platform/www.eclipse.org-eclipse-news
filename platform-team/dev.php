@@ -89,26 +89,22 @@
 			</dl>
 			<p>To facilitate bug searches, we try to place all incoming bugs into one of the following categories:</p>
 			<dl>
-				<dd><a href="">Connection</a> - bugs that deal with connecting to CVS</dd>
-				<dd><a href="">Commands</a> - bugs that deal with the CVS command infrastrucutre.</dd>
-				<dd><a href="">History</a> - bugs that deal with the History API</dd>
-			    <dd><a href = "">Subscriber</a> - bugs that deal with the Subscriber API</dd>
-				<dd><a href = "">Resources</a> - bugs that deal with CVS Resource</dd>
-				<dd><a href="">Sync Info</a> - bugs that deal with the Sync info infrastrcuture</dd>
-				<dd><a href="">Actions</a> - bugs that deal with CVS actions.</dd>
-				<dd><a href="">Operations</a> - bugs that deal with CVS operations.</dd>
-				<dd><a href="">Model Support</a> - bugs that deal with the model API</dd>
-				<dd><a href="">Repo View</a> - bugs that deal with the Repo View.</dd>
-				<dd><a href="">Sync View</a> - bugs that deal with the Sync View</dd>
-				<dd><a href="">Change Sets</a> - bugs that deal with Change Sets.</dd>
-				<dd><a href="">Console View</a> - bugs that deal with the Console View.</dd>
+				<dd><a href="">Actions</a> - bugs that deal with Team actions.</dd>
 				<dd><a href="">Annotate View</a> - bugs that deal with the Annotate View</dd>
+				<dd><a href="">Console View</a> - bugs that deal with the Console View.</dd>
+				<dd><a href="">History</a> - bugs that deal with the History API</dd>
 				<dd><a href="">History View</a> - bugs that deal with the History View</dd>
-				<dd><a href="">Patching</a> - bugs that deal with Patching</dd>
-				<dd><a href="">Wizards</a> - bugs that deal with the CVS Wizards</dd>
-				<dd><a href="">Tags</a> - bugs that deal with Tags</dd>
-				<dd><a href="">Preferences</a> - bugs that deal with the CVS preference page</dd>
-				<dd><a href="">Watch/Edit</a> - bugs that deal with the Watch/Edit feature</dd>
+				<dd><a href="">Misc</a> - bugs that defy categorization.</dd>
+				<dd><a href="">Operations</a> - bugs that deal with Team operations.</dd>	
+			    <dd><a href = "">Subscriber</a> - bugs that deal with the Subscriber API</dd>
+				<dd><a href="">Sync Info</a> - bugs that deal with the Sync info infrastrcuture</dd>
+				<dd><a href="">Sync View</a> - bugs that deal with the Sync View</dd>
+				<dd><a href="">Plugin</a> - bugs that deal with the Team plugin</dd>
+				<dd><a href="">Preferences</a> - bugs that deal with the Team preference page</dd>
+				<dd><a href="">Project Sets</a> - bugs that deal with Team Projet Sets</dd>
+				<dd><a href="">Wizards</a> - bugs that deal with the Team Wizards</dd>
+		
+				
 			</dl>
 		</div>
 		

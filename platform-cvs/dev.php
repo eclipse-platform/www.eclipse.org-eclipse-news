@@ -56,7 +56,7 @@
 			<ul>
 			<li>3.2 <a href="r3.2/plan.php">development</a> plan.<br>
 			3.2 <a href="r3.2/3_2_testing.html">testing</a> plan.</li>
-			<li>How to run the <a href="">CVS JUnit tests</a>.</li>
+			<li>How to run the <a href="junits.php">CVS JUnit tests</a>.</li>
 			<li>Documents from <a href="archivedReleases.php">previous releases</a>.</li></ul>
 		</div>
 		<div class="homeitem3col">
@@ -90,6 +90,7 @@
 				<dd><a href="">Console View</a> - bugs that deal with the Console View.</dd>
 				<dd><a href="">History</a> - bugs that deal with the CVS implementation of the History API</dd>
 				<dd><a href="">History View</a> - bugs that deal with the CVS implementation of the History View page</dd>
+				<dd><a href="">Misc</a> - bugs that defy categorization.</dd>
 				<dd><a href="">Model Support</a> - bugs that deal with the model API</dd>
 			   	<dd><a href="">Operations</a> - bugs that deal with CVS operations.</dd>
 			   	<dd><a href="">Patching</a> - bugs that deal with Patching</dd>

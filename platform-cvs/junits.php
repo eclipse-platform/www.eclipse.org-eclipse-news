@@ -40,26 +40,19 @@
 		<p>To test the CVS plugin using JUnit:</p>
 		<ol>
 		<li>If you haven't already done so, prepare a CVS repository that can be used for testing.</li>
-   
-          
-          <li>Before you start Eclipse,
-          obtain the JUnit PDE launcher from JDT (At the time of writing, this plugin is available 
-          <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/plugins/org.eclipse.jdt.junit/index.html">here</a>)
-          and install it in your Eclipse plugins directory.
-          </li>
-          <p/>
 
-          
           <li>Start Eclipse and setup your workspace for self-hosting.</li>
-          <p/>
-          
+         
           <li>Load the following tests plugins from dev.eclipse.org:
           <p/>
           <ul>
           <li>org.eclipse.core.tests.harness</li>
+          <li>org.eclipse.core.tests.resources</li>
+         <li>org.eclipse.team.tests.core</li>
+         <li>org.eclipse.team.tests.cvs.core</li>
+           <li>org.eclipse.team.tests.cvs.core</li>
           <li>org.eclipse.team.tests.core</li>
-          <li>org.eclipse.team.tests.cvs.core</li>
-
+    	  <li>org.eclipse.team.tests.cvs.core</li>
           </ul>
           </li>
           <p/>
