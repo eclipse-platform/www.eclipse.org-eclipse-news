@@ -989,8 +989,107 @@ where existing features will be significantly reworked.
 <h4>Proposed Items (Eclipse PDE project)</h4>
 <blockquote> 
 
-  <p><i>None at this time.</i></p>
-  
+<h2>Jeff and Wassim's Items</h2>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>API tools</strong>
+    More components means more API and an elevated need for solid APIs,
+    evolved but compatible APIs and the correct and understood use of APIs.
+    This cannot be achieved without supporting tooling.  Today PDE includes
+    sophisticated support for classpath management and access rule management
+    based on information in the manifest of bundles to facilitate the capture
+    of  package and class references.  In 3.3. we will expand this to cover
+    finer-grained API contracts (e.g., clients should not call foo() or
+    extend Bar).  Similarly, developers will be given effective mechanisms
+    for discovering, visualizing and minimizing dependencies in their code, 
+    bundle produced by third parties and non-bundlized code libraries.  Tooling in support
+    of checking and managing the evolution of component and package version numbers
+    will also be supplied.
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Bundle/Module Development Tools</strong>
+    In 3.1 and 3.2 PDE made gigantic strides in the area of support for
+    traditional OSGi bundle development.  Even still, in 3.3. we will improve
+    various workflows and classpath management strategies to promote the
+    development of robust and independent right-grained components.  This
+    covers everything from increased quick-fix and manifest editing support
+    to deeper integration with JDT (e.g., support for searching JARs that are 
+    not in the workspace (without implicitly importing the JARs).  In addition, as JSR 291 evolves and is
+    included in Java 6, PDE will be there to provide developer support.  3.3
+    will also see the need for tooling around OSGi Declarative Services and
+    the new application model.
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    [Theme: ]</p>
+    
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Improved Launching Support</strong>
+    PDE is the premier IDE-based OSGi bundle development environment however it currently only supports
+    launching of Equinox frameworks.  The PDE launching capabilities will be enhanced to allow
+    others to add in customized launch mechanism and we will work with communities such as Felix
+    and Knopflerfish to include support for launching their frameworks.  This support will also facilitate 
+    support for launching normal Java applications where the application classpath is 
+    based on the dependencies specified in bundle markup.  PDE will also include support for "hot launching"
+    whereby an already running OSGi framework is reconfigured to match the launch configuration
+    being invoked.  This enables users to test of code changes without going through potentially costly
+    restart procedures.
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Target Provisioning</strong>
+    Currently, users wanting to use additional function supplied by others must
+    manually acquire and install these additional bundles in their target
+    platform.  This process is tiresome and error-prone.  As an extension
+    to the proposed provisioning work, we will add the ability to provision
+    targets directly from bundle repositories as well as from other locations
+    on the local machine.  As part of this the mechanism by which source is
+    packaged, acquired and looked up will be reviewed and streamlined.
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Bundle Management</strong>
+    Managing even modest systems of bundles can be complex and error prone.  There are 
+    several places in PDE where developers need to list or select sets of bundles (e.g., launch configurations, 
+    target setup, etc).  In many cases the environment already includes relevant grouping constructs (e.g., features,
+    working sets, bundle groups).  PDE should surface these to developers in a clear, consistent and pervasive 
+    fashion.
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Incremental Plug-in Build</strong>
+    With the increase in plug-ins coming from and going to third parties the
+    development cycle needs to be more incremental.  In the Eclipse project
+    itself we have started to consume prebuilt plugins such as ICU4J and SSH2.
+    This trend is likely to continue as, for example, Apache seeks to deliver
+    their libraries as bundles and more people look to consume individual
+    bundles/components from Equinox and similar projects.  As such, the build
+    process should support the incremental building of plug-ins (that is
+    building plugins individually) based on a set of pre-built plugins kept
+    in some sort of provisioning repository.  Plug-ins coming out of the build
+    should feed into said repository to be used as a base for future builds.
+    This ability will in turn enable the more frequent building of whole
+    systems (since you build only what has changed) and simplify incremental,
+    milestone and release build cycles.
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>User-Assistance Tooling</strong>
+    https://bugs.eclipse.org/bugs/show_bug.cgi?id=146988
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    [Theme: ]</p>
+
 </blockquote>
 <h4>Deferred Items (Eclipse PDE project)</h4>
 <blockquote> 
@@ -1053,7 +1152,8 @@ and Spring to API tools to incremental building to fine-grained function deliver
     will undertake a significant effort to rework the Eclipse Update Manager
     support to enhance workflows, efficiencies (download and disk footprint),
     support fine-grained discovery and acquisition of function and facilitate
-    integration with a wide range of repositories.
+    integration with a wide range of repositories.  This effort also includes work 
+    to tool the new provisioning mechanisms.
     []
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
     [Theme: ]</p>
@@ -1064,69 +1164,6 @@ and Spring to API tools to incremental building to fine-grained function deliver
     (e.g., startup.jar, eclipse.exe) typically cannot be updated in a reasonable
     fashion.  In 3.3. we will make all aspects of Eclipse updatable.  Gone will
     be the days of not being able to update from one release to the next.  
-    []
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
-    [Theme: ]</p>
-
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Target provisioning</strong>
-    Currently, users wanting to use additional function supplied by others must
-    manually acquire and install these additional bundles in their target
-    platform.  This process is tiresome and error-prone.  As an extension
-    to the proposed provisioning work, we will add the ability to provision
-    targets directly from bundle repositories as well as from other locations
-    on the local machine.  As part of this the mechanism by which source is
-    packaged, acquired and looked up will be reviewed and streamlined.
-    []
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
-    [Theme: ]</p>
-
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Incremental Plug-in Build</strong>
-    With the increase in plug-ins coming from and going to third parties the
-    development cycle needs to be more incremental.  In the Eclipse project
-    itself we have started to consume prebuilt plugins such as ICU4J and SSH2.
-    This trend is likely to continue as, for example, Apache seeks to deliver
-    their libraries as bundles and more people look to consume individual
-    bundles/components from Equinox and similar projects.  As such, the build
-    process should support the incremental building of plug-ins (that is
-    building plugins individually) based on a set of pre-built plugins kept
-    in some sort of provisioning repository.  Plug-ins coming out of the build
-    should feed into said repository to be used as a base for future builds.
-    This ability will in turn enable the more frequent building of whole
-    systems (since you build only what has changed) and simplify incremental,
-    milestone and release build cycles.
-    []
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
-    [Theme: ]</p>
-
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>API tools</strong>
-    More components means more API and an elevated need for solid APIs,
-    evolved but compatible APIs and the correct and understood use of APIs.
-    This cannot be achieved without supporting tooling.  Today PDE includes
-    sophisticated support for classpath management and access rule management
-    based on information in the manifest of bundles to facilitate the capture
-    of  package and class references.  In 3.3. we will expand this to cover
-    finer-grained API contracts (e.g., clients should not call foo() or
-    extend Bar).  Similarly, developers will be given effective mechanisms
-    for discovering and minimizing dependencies and checking and managing
-    the evolution of component and package version numbers.
-    []
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
-    [Theme: ]</p>
-
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Bundle Development Tools</strong>
-    In 3.1 and 3.2 PDE made gigantic strides in the area of support for
-    traditional OSGi bundle development.  Even still, in 3.3. we will improve
-    various workflows and classpath management strategies to promote the
-    development of robust and independent right-grained components.  This
-    covers everything from increased quick-fix and manifest editing support
-    to deeper integration with JDT.  In addition, as JSR 291 evolves and is
-    included in Java 6, PDE will be there to provide developer support.  3.3
-    will also see the need for tooling around OSGi Declarative Services and
-    the new application model.
     []
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
     [Theme: ]</p>
@@ -1243,6 +1280,17 @@ and Spring to API tools to incremental building to fine-grained function deliver
     undersanding that consumers are free to override such decisions.  Usecases range
     from tweaking version ranges when bugs and patches are discovered to overriding
     extension contributions, capability definitions, platform filters, ...  
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Monitoring</strong>
+    Historically the Runtime team has developed and maintained a set of "Core Tools" that allow
+    developers to inspect and monitor some of the inner workings of a running Eclipse system.  These 
+    tools have fallen behind the current technology and usecases at a time when they are of increasing 
+    importance.  In 3.3 the tools will be updated and enhanced to include remote monitoring capabilities
+    and deeper inspection of a running Equinox-based system. 
     []
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
     [Theme: ]</p>
