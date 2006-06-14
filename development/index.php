@@ -107,9 +107,9 @@ ob_start();
 				Best practices for API development based, EclipseCON 2005 presentation by 
 				Jim des Rivieres
 			</li>
-			<li><a href="performance/index.html">Eclipse Performance</a><br>
+			<li><a href="http://wiki.eclipse.org/index.php/Performance">Eclipse Performance</a><br>
 				Poor performance is a bug and should be tested for, tracked and fixed in 
-				the same way. The Eclipse Performance area is a collection of resources 
+				the same way. The Eclipse Performance page is a collection of resources 
 				and information aimed at helping plug-in developers do just that.
 			</li>
       		</ul>
