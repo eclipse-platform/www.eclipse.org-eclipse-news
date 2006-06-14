@@ -88,6 +88,7 @@
 				<dd><a href="">Commands</a> - bugs that deal with the CVS command infrastrucutre.</dd>
 				<dd><a href="">Connection</a> - bugs that deal with connecting to CVS</dd>
 				<dd><a href="">Console View</a> - bugs that deal with the Console View.</dd>
+				<dd><a href="">Decorators</a> - bugs that deal with CVS decorators.</dd>
 				<dd><a href="">History</a> - bugs that deal with the CVS implementation of the History API</dd>
 				<dd><a href="">History View</a> - bugs that deal with the CVS implementation of the History View page</dd>
 				<dd><a href="">Misc</a> - bugs that defy categorization.</dd>
