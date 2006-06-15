@@ -101,7 +101,7 @@
 				<dd><a href="">Sync View</a> - bugs that deal with the Sync View</dd>
 				<dd><a href="">Plugin</a> - bugs that deal with the Team plugin</dd>
 				<dd><a href="">Preferences</a> - bugs that deal with the Team preference page</dd>
-				<dd><a href="">Project Sets</a> - bugs that deal with Team Projet Sets</dd>
+				<dd><a href="">Project Sets</a> - bugs that deal with Team Project Sets</dd>
 				<dd><a href="">Wizards</a> - bugs that deal with the Team Wizards</dd>
 		
 				
