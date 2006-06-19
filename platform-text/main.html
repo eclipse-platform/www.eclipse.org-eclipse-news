@@ -37,7 +37,7 @@ Text</font></font></b></td>
 <tr>
 <td HEIGHT="21">Platform Text provides the basic building blocks for text
 and text editors within Eclipse and contributes the Eclipse default text
-editor. Its framework component consists of three parts:&nbsp;
+editor. It consists of five parts:
 <ul>
 <li>
 The text infrastructure provides facilities for text manipulation, position
@@ -51,6 +51,14 @@ hover help, and vertical rulers.</li>
 <li>
 The text editor framework provides the abstract implementation of an Eclipse
 text editor.</li>
+
+<li>The File Buffers plug-in which introduces text file buffers for shared access to
+the content of a text file in form of an <tt>IDocument</tt> and and associated <tt>IAnnotationModel</tt>.
+</li>
+
+<li>A concrete editor implementation: the Eclipse default text editor.
+</li>
+
 </ul>
 Editors built with this toolkit are for example the JDT Editor or the CDT
 Editor. Take a look at the <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/screenCasts/screencasts.html">JDT screen casts</a> to see some
@@ -67,14 +75,14 @@ Happening?&nbsp;</font></font></b></td>
 
   <tr> 
     <td WIDTH="100%"> 
-      <h4> <a NAME="Milestone_Planning"></a>3.2 Development</h4>
+      <h4> <a NAME="Milestone_Planning"></a>3.3 Development</h4>
       <ul>
-        <li> The 3.2 plan is posted <a href="3.2/plan.html#Overall_Planning">here</a>.</li>
-        <li> The plan for the next milestone is posted <a href="3.2/plan.html#Milestone_Planning">here</a>.</li>
-        <li>The original plans for previous milestones can be found <a href="3.2/previous_plans.html#Milestone_Planning">here</a>.</li>
+        <li> The 3.3 plan is posted <a href="3.3/plan.html#Overall_Planning">here</a>.</li>
+        <li> The plan for the next milestone is posted <a href="3.3/plan.html#Milestone_Planning">here</a>.</li>
+        <li>The original plans for previous milestones can be found <a href="3.3/previous_plans.html#Milestone_Planning">here</a>.</li>
       </ul>
-      <h4> <a NAME="Maintenance_Planning"></a>3.1 Maintenance</h4>
-      	Information about 3.1 maintenance releases can be found <a href="http://eclipse.org/eclipse/development/eclipse_maintenance_schedule_3_1_x.html">here</a>.</p>
+      <h4> <a NAME="Maintenance_Planning"></a>3.2 Maintenance</h4>
+      	Information about 3.2 maintenance releases can be found <a href="http://eclipse.org/eclipse/development/eclipse_maintenance_schedule_3_2_x.html">here</a>.</p>
       <h4> <a NAME="Releases"></a>Previous Releases</h4>
       	Information about previous releases can be found <a href="releases.html">here</a>.</p>
     </td>
