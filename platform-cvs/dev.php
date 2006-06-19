@@ -93,6 +93,7 @@
 				<dd><a href="">History View</a> - bugs that deal with the CVS implementation of the History View page</dd>
 				<dd><a href="">Misc</a> - bugs that defy categorization.</dd>
 				<dd><a href="">Model Support</a> - bugs that deal with the model API</dd>
+				<dd><a href="">Modules</a> - bugs that deal with CVS Modules</dd>
 			   	<dd><a href="">Operations</a> - bugs that deal with CVS operations.</dd>
 			   	<dd><a href="">Patching</a> - bugs that deal with Patching</dd>
 			   	<dd><a href="">Preferences</a> - bugs that deal with the CVS preference page</dd>
@@ -101,7 +102,8 @@
 				<dd><a href = "">Subscriber</a> - bugs that deal with the Subscriber API</dd>
 				<dd><a href="">Sync Info</a> - bugs that deal with the Sync info infrastrcuture</dd>
 				<dd><a href="">Sync View</a> - bugs that deal with the Sync View</dd>
-				<dd><a href="">Tags</a> - bugs that deal with Tags</dd>				
+				<dd><a href="">Tags</a> - bugs that deal with Tags</dd>
+				<dd><a href="">Tests</a> - bugs that deal with CVS JUnit tests</dd>					
 				<dd><a href="">Watch/Edit</a> - bugs that deal with the Watch/Edit feature</dd>
 				<dd><a href="">Wizards</a> - bugs that deal with the CVS Wizards</dd>
 			</dl>

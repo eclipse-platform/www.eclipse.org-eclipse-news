@@ -96,12 +96,13 @@
 				<dd><a href="">History View</a> - bugs that deal with the History View</dd>
 				<dd><a href="">Misc</a> - bugs that defy categorization.</dd>
 				<dd><a href="">Operations</a> - bugs that deal with Team operations.</dd>	
-			    <dd><a href = "">Subscriber</a> - bugs that deal with the Subscriber API</dd>
-				<dd><a href="">Sync Info</a> - bugs that deal with the Sync info infrastrcuture</dd>
-				<dd><a href="">Sync View</a> - bugs that deal with the Sync View</dd>
 				<dd><a href="">Plugin</a> - bugs that deal with the Team plugin</dd>
 				<dd><a href="">Preferences</a> - bugs that deal with the Team preference page</dd>
 				<dd><a href="">Project Sets</a> - bugs that deal with Team Project Sets</dd>
+			    <dd><a href = "">Subscriber</a> - bugs that deal with the Subscriber API</dd>
+				<dd><a href="">Sync Info</a> - bugs that deal with the Sync info infrastrcuture</dd>
+				<dd><a href="">Sync View</a> - bugs that deal with the Sync View</dd>
+				<dd><a href="">Tests</a> - bugs that deal with Team tests</dd>
 				<dd><a href="">Wizards</a> - bugs that deal with the Team Wizards</dd>
 		
 				
