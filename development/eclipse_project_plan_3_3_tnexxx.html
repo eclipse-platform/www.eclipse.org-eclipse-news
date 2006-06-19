@@ -545,16 +545,8 @@ the Eclipse Requirements Council (Themes and Priorities dated Dec. 15,
     [Theme: ]</p>
 
 <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Add text editor productivity features</strong>
-    Provide some long awaited productivity features like text drag and drop, tripple-click and spell checking. 
-    []
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
-    [Theme: ]</p>
-
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Text editor support for RCP</strong>
-    Make it easier for RCP developers to provide their own text editor. To support this some of the Platform Text and Platform UI code has to be refactored. 
-    []
+    <strong>More text editor productivity features</strong>
+    Provide some long awaited productivity features like double-click-drag to select multiple words, tripple-click, extensible hyperlink support and spell checking. Some of the items depend on support from Platform UI and Platform SWT [Platform Text, Platform UI, Platform SWT]    []
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
     [Theme: ]</p>
 
@@ -563,6 +555,30 @@ the Eclipse Requirements Council (Themes and Priorities dated Dec. 15,
     We have numerous cases where our progress is poor, and does not provide more information than a busy cursor.
     We should invest for providing better heuristics. Polish item, but which likely needs decent attention upfront.
     (see for example <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><em>Better gauging of progress when building workspace</em></a>)
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+    <h2>Dani's Item</h2>
+    
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Polish / Wish List Pass</strong>
+    I suggest an additional polish / wish list pass early because in our normal polish pass, we often ignore items saying it's too late and/or too risky to do them so late in the game.
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+    
+   <h2>Martin's Items</h2>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Improve Search/Replace usability</strong>
+    In 3.2, we experimented with modeless UI, that didn't make it in the product as it was to judged to different to the existing views in the platform. However, especially the current replace UI is in very bad shape. We want to consult with the UI designers if it makes sense to embed input fields in the search result view. Other topic are to start showing line matches (new opportunities with custom tree item rendering) and to investigate how we can help the user with entering regular expressions.
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>RCP split for search plug-in</strong>
+    We have several requests (bug 77424) for splitting the search plug-in in a resource less part (dialogs, search result view framework) and a resource dependend part (file search functionality). First investigations have shown that this should be possible without breaking API. The split could even be used to separate the APIs of the 'old search' that was deprecated in 3.0.
     []
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
     [Theme: ]</p>
@@ -715,7 +731,21 @@ the Eclipse Requirements Council (Themes and Priorities dated Dec. 15,
 
 <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
     <strong>Compare (A Compare item related to Team)</strong>
-    The Compare plugin has not undergone much work in the last few releases and is showing it. In the very least, there are several Compare internals that need to be made API in order to properly support clients. Also, there are also several polish items that have been identified by Eclipse development teams. However, there are also several architectural issues that could be addressed as well. 
+    The Compare plugin has not undergone much work in the last few releases and is showing it. From an architectural standpoint, there are several Compare internals that need to be made API in order to properly support clients and there are also several polish items that have been identified by Eclipse development teams. In addition, new ISaveable support was added in 3.2 and we should investigate integrating this into Compare. From a usability standpoint, the compare editor uses a custom viewer for content which appears similar to the related editor but has a reduced capability which is often confusing for users. Smaller usability issues involve breaking out the outline from the editor into the Outline view. There is supported by compare but is not used by Team or other Platform clients.
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Improve Multi-instance view management</strong>
+    The Synchronize view uses a dropdown to manage multiple pages. Another possibility would be to use multiple view instances. However, the presentation and management of these two approaches are different. It would be nice if the decision to use multiple view instances still supported different view organizations. That is, the user (or product) could decide whether multiple views used a tab or dropdown. There are also shortcomings in multi-view management (i.e. views are managed at the perspective level but some tooling may require the ability to close a particular view in all perspectives).
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Improve job interaction</strong>
+    Improving Job interactions includes ensuring that the progress view is showing the user meaningful and up-to-date information. Another issue is the handling of prompting from a  background job. Currently, dialogs are shown directly from the job which can interrupt the users current task. A less intrusive but still effective means of notifying the user of the prompt would be good. Error reporting from background jobs should also be investigated. Currently, an error dialog is shown and the errors are written to the error log. As with other prompting, a less intrusive means is desirable and it would also be good if not all errors were logged (or perhaps a separate logging location could be used).
     []
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
     [Theme: ]</p>
@@ -922,7 +952,7 @@ significantly reworked.</p>
 
 <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
     <strong>Drive quick navigation support to the next level</strong>
-    While the current quick view support is nice it could be much better: show additional info (e.g. Javadoc), allow to open Quick views for a Java element (e.g. from the Package Explorer or Outline view) and eventually offer a context menu (investigation item). 
+    Use the new SWT custom rendering support to show the items as links, show additional info (e.g. Javadoc), allow to open Quick views from everywhere (e.g. from the Package Explorer or Outline view) and eventually offer a context menu (investigation item). [JDT Text]
     []
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
     [Theme: ]</p>
@@ -963,6 +993,14 @@ significantly reworked.</p>
     []
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
     [Theme: ]</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>SWT Launching/Building Support</strong>
+    <em>(No agreement between debug, jdt, and pde on this one)</em>Simplify SWT launching by replacing the 'SWT Application' launch configuration type with an 'SWT classpath container'. The SWT classpath container can be added to a project's build path to pick up the appropriate SWT libraries at build time and is associated with required native libraries for run and debug support. Running and debugging SWT applications would work with the 'Java Application' launch configuration type. Existing SWT launch configurations should be converted to Java launch configurations via the launch configuration migration support. [Theme: Appealing to the Broader Community, Simple to Use][JDT UI, JDT Debug]
+    []
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>)
+    [Theme: ]</p>
+
 
 </blockquote>
 <h4>Deferred Items (Eclipse JDT project)</h4> 
