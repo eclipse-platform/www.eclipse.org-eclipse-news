@@ -11,7 +11,83 @@
 <table BORDER=0 CELLSPACING=5 CELLPADDING=2 WIDTH="100%" >
   <tr> 
     <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#0080C0"><b><font face="Arial,Helvetica"><font color="#FFFFFF">3.2 
-      Development Effort - Previous Milestone Plans</font></font></b></td>
+      Development Effort - Milestone Plans</font></font></b></td>
+  </tr>
+
+
+  <tr> 
+    <td WIDTH="100%"> 
+
+	<h3><a name="Milestone_Planning"></a>Milestone M6 Plan</h3>
+	
+	<h4>Top items</h4>
+		<ul>
+			<li>(<img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10">) finish push down quick assist/fix and spell checking</li>
+			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> adapt NLS tooling to Eclipse string externalization mechanism</li>
+			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> open 3.2 bug fixing (we will first pass over them and defer some)</li>
+			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> performance</li>
+			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> polish</li>
+			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> eclipseCon preparation</li>
+		</ul>
+	
+	<h4>Committed items</h4>
+	<ul>
+	
+		<li><h5>(<img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10">) adopt new APIs/features</h5>
+			<ul><li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10">  apply the migration patch for FindReplaceDialog once the bugs in Platform UI's field assist implementation are fixed</li>
+				<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10">  adopt ICU4J</li>
+				<li><font class="indexsub" color="#8080ff">[&gt;3.2]</font> switch to new <code>Assert</code> class from Platform</li>
+			</ul>
+		</li>
+		
+		<li><h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> investigate and fix red performance tests</h5>
+		
+		<li><h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> adapt NLS tooling to Eclipse string externalization mechanism (with help from JDT UI)</h5>
+		<ul>
+			<li>NLS hover in Java editor</li>
+			<li>hyperlink navigation for NLS keys in the Java editor</li>
+			<li>hyperlink navigation for NLS keys in the Java Properties file editor</li>
+		</ul>
+		
+		<li><h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10">  continue improving content assist</h5>
+		<ul>
+			<li>improve handling of different proposal kinds (Java code, templates, words,...) in the same list:
+				<ul>
+					<li>find a better way to configure the processors (improve preference page)</li>
+				</ul>
+			</li>
+		</ul>
+		
+		<li><h5>(<img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10">) finish pushing down Quick Assist and spell checking</h5>
+		<ul>
+			<li><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> support the Quick Assist API introduced with M5</li>
+			<li><font class="indexsub" color="#8080ff">[3.3]</font> offer spell checking in Text editors</li>
+		</ul>
+		</li>
+		
+		<li><h5>(finish roll-over annotation work that was kicked off during 3.0)</h5>
+		<li><h5><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/ok.gif" nosave="" border="0" height="10" width="10"> (improve @category tag support, e.g. with additional node in the Outline)</h5>
+		
+	</ul>
+	
+      <h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Permanent items</h4>
+      <ul>
+        <li>bugzilla inbox tracking</li>
+        <li>bug fixing</li>
+        <li>increase correctness test coverage</li>
+      </ul>
+	
+	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Absences</h4>
+	<ul>
+		<li>Dani: 5 days</li>
+		<li>Tom: 10 days</li>
+	</ul>
+	
+   	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Testing</h4>
+      <ul>
+        <li><a href="testing/M6_Test_Plan.html">test plan</a> for the 3.2 M6 test pass.</li>
+      </ul>
+	
   </tr>
 
   <tr> 
