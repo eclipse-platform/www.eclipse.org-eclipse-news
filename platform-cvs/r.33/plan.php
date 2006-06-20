@@ -2,8 +2,8 @@
 
 	#
 	# Begin: page-specific settings.  Change these. 
-	$pageTitle 		= "Eclipse Team Component 3.3 Development Plan";
-	$pageKeywords	= "Eclipse, Team, 3.3, development plan";
+	$pageTitle 		= "Eclipse CVS Component 3.3 Development Plan";
+	$pageKeywords	= "Eclipse, CVS, 3.3, development plan";
 	$pageAuthor		= "Team/CVS team";
 	
 	# Add page-specific Nav bars here
@@ -18,7 +18,7 @@
 
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
-		<p>Back to the <a href="../dev.php">Team Component Page</a></p>
+		<p>Back to the <a href="../dev.php">CVS Component Page</a></p>
 
 			<table border="0" cellspacing="10" cellpadding="0">
 			  <tbody>
@@ -33,17 +33,20 @@
 			</table>
 			
 			<a name="Themes"></a>
-			<h1>Themes for Team 3.3</h1>
+			<h1>Themes for CVS 3.3</h1>
 			
 			<p>The overall themes for this release are detailed below:</p>
 			<ul>
 			  <li><strong>Logical Model Integration</strong>: There are several logical model integration related issues
 			  that were not addressed in 3.2 that we plan on addressing in 3.3.</li>
-			  <li><strong>Compare Improvements</strong>: The Compare infrastructure has not undrgone much change in
-			  the last few releases. We plan on addressing the more important issues that have accumulated in that time.</li>
 			  <li><strong>Generic Repositories view using Common Navigator framework</strong>: Currently, each repository
 			  provider must create their own view for remote browsing. We plan on using the Common Navigator framework
-			  to support the inclusion of content from multiple repository types into a single view.</li>
+			  to support the inclusion of content from multiple repository types into a single view. CVS
+			  will provider a content provider for browsing CVS repositories.</li>
+			  <li><strong>Support Eclipse.org projects</strong>: </li>
+			  <li><strong>Improve cache management</strong> </li>
+			  <li><strong>Improve error handling</strong> </li>
+			  <li><strong>Improve background prompting</strong> </li>
 			</ul>
 			
 			<h1>3.3 Development Effort - Milestone 1 (???) </h1>
@@ -52,9 +55,9 @@
 			<ul>
 			  <li><strong>Bug fixing</strong>: Target bugs are marked as 3.3 M1.
 			  </li>
-			  <li><strong>Add History View API that was missing from 3.2</strong>
-			  </li>
 			  <li><strong>Update actions to use the Commands framework</strong>
+			  </li>
+			  <li><strong>Improve the working off-line experience</strong>
 			  </li>
 			</ul>
 	</div>
@@ -78,8 +81,8 @@
 		<div class="sideitem">
 			<h6>Related Links</h6>
 			<ul>
-				<li><a href="../dev.php">Team Component</a></li>
-				<li><a href="../../platform-cvs">CVS Component</a></li>
+				<li><a href="../dev.php">CVS Component</a></li>
+				<li><a href="../../platform-team">Team Component</a></li>
 			</ul>
 		</div>
 	</div>
