@@ -95,7 +95,7 @@
 				<dd><a href="">Model Support</a> - bugs that deal with the model API</dd>
 				<dd><a href="">Modules</a> - bugs that deal with CVS Modules</dd>
 			   	<dd><a href="">Operations</a> - bugs that deal with CVS operations.</dd>
-			   	<dd><a href="">Patching</a> - bugs that deal with Patching</dd>
+			   	<dd><a href="">Patch</a> - bugs that deal with Patching</dd>
 			   	<dd><a href="">Preferences</a> - bugs that deal with the CVS preference page</dd>
 			   	<dd><a href="">Repo View</a> - bugs that deal with the Repo View.</dd>
 				<dd><a href = "">Resources</a> - bugs that deal with CVS Resource</dd>
