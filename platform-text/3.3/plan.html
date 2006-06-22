@@ -17,73 +17,246 @@
 
 <table BORDER=0 CELLSPACING=5 CELLPADDING=2 WIDTH="100%" >
 <tr>
-    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#0080C0"><b><font face="Arial,Helvetica"><font color="#FFFFFF">Combined  
-      Platform Text and JDT Text 3.3 Plan</font></font></b></td>
+    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#0080C0"><strong><font face="Arial,Helvetica"><font color="#FFFFFF">Combined  
+      Platform Text and JDT Text 3.3 Plan</font></font></strong></td>
 </tr>
 
   <tr> 
     <td WIDTH="100%"> 
-    <p>Last revised 18:20 CET June 19, 2006
+    <p>Last revised 15:47 CET June 22, 2006
 
     
       <p>This plan is under continuous refinement. Please send comments about this draft plan to the <a href="mailto:platform-text@eclipse.org">platform-text@eclipse.org</a> developer mailing list.</p>
       <h2><a NAME="Overall_Planning"></a>Overall Goals </h2>
-      <p>This section defines the goals for Eclipse 3.3 for the Platform 
-        Text and the JDT Text component. Each goal is annotated with the overall 
-        3.3 Eclipse theme (see <a href="http://www.eclipse.org/eclipse/development/eclipse_project_plan_3_3.html">Eclipse Project Draft 3.3 Plan</a> for details).
+      <p>This section lists the goals for Eclipse 3.3 for the Platform 
+        Text and the JDT Text component as listed on the 
+        <a href="http://www.eclipse.org/eclipse/development/eclipse_project_plan_3_3.html">Eclipse Project Draft 3.3 Plan</a>.
         </p>
-      <h3>Platform</h3>
-      <ul>
-        <li>
-          Continue to monitor overall performance and memory consumption. This 
-          includes the addition of new performance tests for new features.
-          <b>[Scaling up]</b> 
-          <p></p>
-        </li>
-        <li>
-          Increase correctness test coverage of the text infrastructure. Besides providing tests for new
-          features we need to add more tests for existing areas where we have only few or no tests.
-          <b>[Scaling up]</b>
-          <p></p>
-		<li style="color: red;">
-          more to come...
-          <p></p>
-        </li>
-      </ul>
-      <h3>JDT</h3>
-      <ul>
-		<li style="color: red;">
-          to be defined...
-          <p></p>
-        </li>
-        
-      </ul>
 
-     
-      <h2>Cross Team Issues</h2>
-      <p>This section contains cross team issues that have to be clarified. The 
-        concrete outcome effects the dependent plan items listed above.</p>
-      <ul>
-        <li>Platform SWT 
-          <ul>
-          </ul>
-        </li>
-        
-      	<li>Platform UI
-	      <ul>
-	      </ul>
-	    </li>
-        
-        <li>JDT Core 
-          <ul>
-          </ul>
-        </li>
-      </ul>
-    </td>
+
+		<p>
+		<strong>Keep the performance</strong>.
+		Continue to monitor overall performance and memory consumption. This includes the addition of new performance tests for new features. [Scaling Up, Enterprise Ready][all] 
+		</p>
+		
+		<p>
+		<strong>More text editor productivity features</strong>.
+		Provide some long awaited productivity features like double-click-drag to select multiple words, tripple-click, extensible hyperlink support and spell checking. Some of the items depend on support from Platform UI and Platform SWT [Platform Text, Platform UI, Platform SWT]
+		</p>
+
+		<p>
+		<strong>Drive quick navigation support to the next level</strong>.
+		Use the new SWT custom rendering support to show the items as links, show additional info (e.g. Javadoc), allow to open Quick views from everywhere (e.g. from the Package Explorer or Outline view) and eventually offer a context menu (investigation item). [JDT Text]
+		</p>
+
+
+
+	<h2><a NAME="Work_Items"></a><br>Work Items</h2>
+	<p>
+		This section defines the <em style="color: blue;">committed</em> and proposed work items for Eclipse 3.3 for
+		the Platform Text and the JDT Text component.
+	</p>
+
+
+	<h3>Platform Text</h3>
+	<ul>
+
+	<li><h4>Live Annotate</h4>
+	<ul>
+		<li><em style="color: blue;">support to color by age in addition to color by contributor (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147705">bug 147705</a>)</em></li>
+		<li><em style="color: blue;">fix hover sizing problems (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147709">bug 147709</a>)</em></li>
+	</ul></li>
+	
+	<li><h4>Hyperlinking</h4>
+	<ul>
+		<li><em style="color: blue;">allow to contribute (extension-point) and configure hyperlinking</em></li>
+		<li><em style="color: blue;">allow to present more than one hyperlink target for a given text range (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=88293">bug 88293</a>)</em></li>
+	</ul></li>
+	
+	<li><h4>Vertical Rulers</h4>
+	<ul>
+		<li><em style="color: blue;">vertical ruler column extension point (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=25793">bug 25793</a>)</li>
+		<ul>
+			<li>allow contributions for a certain editor (for all text editors?)</li>
+		</ul></em></li>
+		<li>provide toolkit for line-based information (good for coverage information etc.)</li>
+	</ul></li>
+
+	<li><h4>Spell Checking</h4>
+	<ul>
+		<li><em style="color: blue;">spelling for text editors</em></li>
+		<li><em style="color: blue;">make spell checking encoding aware</em></li>
+		<li><em style="color: blue;">provide an English dictionary out of the box</em></li>
+		<li>allow specific editors to install filters, e.g. to filter Javadoc tags</em></li>
+		<li>open up spell checking for other language stems</li>
+		<li>allow to spell-check a set of resources</li>
+	</ul></li>
+
+	<li><h4>Rich Hovers [experimental]</h4>
+	<ul>
+		<li><em style="color: blue;">links support in quick diff hovers so that you can navigate to things from there</em></li>
+		<li>to do this we might first need to finish/cleanup the roll-over annotation work that was kicked off during 3.0
+		<li>investigate better interaction for making hovers sticky (mouse path)</li>
+		<li>allow seamless transition from hover &gt; sticky hover &gt; javadoc view</li>
+		<li>investigate to use hovers as affordance for context sensitive actions (quick assist/fix, surround with...)</li>
+	</ul></li>
+
+	<li><h4>Typing</h4>
+	<ul>
+		<li><em style="color: blue;">Insert Spaces for Tab preference for text editors</em></li>
+		<li><em style="color: blue;">triple-click support (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=14654">bug 14654</a> - depends on SWT, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=23614">bug 23614</a>)</em></li>
+		<li>text drag and drop (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=11624">bug 11624</a> - depends on SWT, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=142845">bug 142845</a>)</li>
+		<li>show invisible characters (look at the provided patch) [experimental]</li>
+		<li>Last Edit Position history</li>
+		<li>word wrap: (this is a Google Summer of Code project)<br>
+		<ul>
+			<li>hard-wrap: auto-insert delimiters</li>
+			<li>soft-wrap: show long lines on several lines</li>
+		</ul></li>
+	</ul></li>
+
+	<li><h4>Navigation</h4>
+	<ul>
+		<li><em style="color: blue;">provide correct 1&frac12 click + drag to select words (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=5138">bug 5138</a> - depends on SWT, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=138579">bug 138579</a>)</em></li>
+		<li>provide modifier + mouse wheel support, e.g. allow to
+		<ul>
+			<li><em style="color: blue;">scroll by page</em></li>
+			<li>change font size</li>
+			<li>navigate in the history</li>
+			<li>make above features configurable</li>
+		</ul></li>
+		<li>ability to configure the annotation presentation layer via UI</li>
+	</ul></li>
+	
+	<li><h4>Find/Replace</h4>
+	<ul>
+		<li><em style="color: blue;">improve Find/Replace dialog: make resizable</em></li>
+		<li>find a solution to Find/Replace linebreaks, tabs, etc. in regular expressions</li>
+		<li>improve Find/Replace dialog: merge into editor area, ...</li>
+	</ul></li>
+	
+	<li><h4>Miscellaneous</h4>
+	<ul>
+		<li><em style="color: blue;">open up file buffers to URIs</em></li>
+		<li>revisit the text viewer's support for redraw, compound updates, and selection preservation
+		<ul>
+			<li><em style="color: blue;">check all setRedraw(on/off) users whether they really need that expensive operation (e.g. undo!)</em></li>
+			<li>separate selection preservation from redraw and compound command</li>
+		</ul></li>
+		<li>provide save a hook (maybe try out in JDT land first) [experimental]</li>
+		<li>push more JDT quick assist support to Platform Text (e.g. how to show the quick assists and their preview)</li>
+		<li>quick assist extension point</li>
+		<li>support styles (bold, italic) in text editor</li>
+		<li>provide multi-clipboard for text editors (emacs-style, rolling)</li>
+	</ul></li>
+
+	</ul>
+
+
+    <h3>JDT Text</h3>
+	<ul>
+	
+	<li><h4>Content Assist</h4>
+	<ul>
+		<li><em style="color: blue;">indicate match in proposal list</em></li>
+		<li><em style="color: blue;">enable navigation key bindings in proposal list (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=140550">bug 140550</a>)</em></li>
+		<li>automatically add imports (depends on JDT Core <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=44984">bug 44984</a>)</li>
+		<li>improve handling of constructor proposals</li>
+		<li>code assist for declarations (JDT Core, see JDT Summit document)</li>
+	</ul></li>
+	
+	<li><h4>Syntax Highlighting</h4>
+	<ul>
+		<li><em style="color: blue;">provide import/export</em></li>
+		<li>add coloring schemes and allow to switch them via toolbar</li>
+	</ul></li>
+	
+	<li><h4>Quick views</h4>
+	<ul>
+		<li><em style="color: blue;">allow to open on any Java element from any view (e.g. from the Package Explorer or Outline view)</em></li>
+		<li><em style="color: blue;">show additional info (e.g. Javadoc)</em></li>
+		<li>context menu on its items [experimental]</li>
+	</ul></li>
+
+	<li><h4>Declarations and Javadoc view and sticky Javadoc hover</h4>
+	<ul>
+		<li>allow to pin (in Javadoc view)</li>
+		<li>support to follow links (relative URLs, @see, @link,...)</li>
+		<li>support navigation and history support</li>
+		<li>Declaration and Javadoc view should allow to navigate to other members in hierarchy (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=82709">bug 82709</a>)</li>
+	</ul></li>
+	  
+	<li><h4>Outline and Members view</h4>
+	<ul>
+		<li>show categories as nodes</li>
+		<li>show properties as nodes (group getter/setter/field) (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=26618">bug 26618</a>)</li>
+		<li>drag-and-drop when unsorted (drop between elements)</li>
+	</ul>
+	  
+	<li><h4>Typing</h4>
+	<ul>
+		<li><em style="color: blue;">solve segmented mode user problem (toolbar button)</em></li>
+		<li><em style="color: blue;">typed templates</em>
+		<li>goto declaring type:
+		<br>F3 + Ctrl+Click go to the declaration - often going to the declared type is desired, see also <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=68144">bug 68144</a></li>
+		<li>permanent local rename mode [experimental]
+		<ul>
+			<li>editing always updates like "Local Rename" (automatically enter linked mode)</li>
+			<li>investigate interplay with "refactoring only" mode</li>
+		</ul></li>
+		<ul>
+			<li>template variables with parameters (e.g. Java type names)</li>
+		</ul></li>
+	</li></ul>
+
+	<li><h4>NLS Tooling</h4>
+	<ul>
+		<li>better support for Java properties files (<code>native2ascii</code> conversion)</li>
+	</li></ul>
+
+	</ul>
+
+
+    <h3>General Items</h3>
+	<ul>
+		<li><em style="color: blue;">3.2.x maintenance work</em></li>
+		<li><em style="color: blue;">switch to new Assert class from Platform</em></li>
+		<li>allow to get a graphical view of our performance tests i.e. fingerprint for all text tests</li>
+	</ul>
+	
+	</ul>
+
+
+
+	<h2><br>Cross Team Issues</h2>
+	<p>This section contains cross team issues that have to be clarified. The 
+	concrete outcome affects the plan items listed above.</p>
+	<ul>
+		<li>Platform SWT
+		<ul>
+			<li>triple-click support (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=14654">bug 14654</a> - depends on SWT, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=23614">bug 23614</a>)</li>
+			<li>provide correct 1&frac12 click + drag to select words (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=5138">bug 5138</a> - depends on SWT, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=138579">bug 138579</a>)</li>
+  			<li>text drag and drop (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=11624">bug 11624</a> - depends on SWT, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=142845">bug 142845</a>)</li>
+		</ul></li>
+
+		<li>Platform UI
+		<ul>
+			none at this time.
+		</ul></li>
+
+		<li>JDT Core
+		<ul>
+			<li>automatically add imports (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=44984">bug 44984</a>)</li>
+		</ul></li>
+
+	</ul>
+	</td>
 </tr>
 
+
+
 <tr>
-    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#0080C0"><b><font face="Arial,Helvetica"><font color="#FFFFFF">Milestone Plans</font></font></b></td>
+    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#0080C0"><strong><font face="Arial,Helvetica"><font color="#FFFFFF">Milestone Plans</font></font></strong></td>
 </tr>
 
   <tr> 
@@ -92,37 +265,51 @@
 	<h3><a name="Milestone_Planning"></a>Milestone M1 Plan</h3>
 	
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Top items</h4>
+	<ul>
+		<li>3.3 planning</li>
+		<li>3.2.1 bug fixing</li>
+		<li>JDT Summit preparation</li>
+		<li>typed templates: template variables with parameters (e.g. Java type names)
 		<ul>
-		</ul>
+			<li>create a prototype</li>
+			<li>define syntax (do a poll)</li>
+			<li>code assist support</li>
+			<li>add F1 help</li>
+		</ul></li>
+		<li>modifier + mouse wheel support
+		<ul>
+			  <li>investigate whether we need additional support from SWT</li>
+			  <li>scroll by page</li>
+		</ul></li>
+	</li></ul>
 	
-	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Committed items</h4>
+	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Additional work items</h4>
 	<ul>
-	</ul>
+		<li>talk preparation for <a href="http://www.java-forum-stuttgart.de/">Java Forum Stuttgart</a></li>
+	</li></ul>
 	
-	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Proposed items</h4>
+	
+	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Permanent items</h4>
 	<ul>
+		<li>bugzilla inbox tracking</li>
+		<li>bug fixing</li>
+		<li>watch performance tests</li>
+		<li>increase correctness test coverage</li>
 	</ul>
-	
-      <h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Permanent items</h4>
-      <ul>
-        <li>bugzilla inbox tracking</li>
-        <li>bug fixing</li>
-        <li>watch performance tests</li>
-        <li>increase correctness test coverage</li>
-      </ul>
 	
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Absences</h4>
 	<ul>
 	</ul>
       
-      <h3>Previous Milestones</h3>
-      <p>Previous 3.3 milestones can be reviewed <a href="previous_plans.html">here</a>.</p>
-    </td>
+	<h3>Previous Milestones</h3>
+	<p>Previous 3.3 milestones can be reviewed <a href="previous_plans.html">here</a>.</p>
+	</td>
 </tr>
 
+
   <tr> 
-    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#0080C0"><b><font face="Arial,Helvetica"><font color="#FFFFFF">Bug 
-      Tracking</font></font></b></td>
+    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#0080C0"><strong><font face="Arial,Helvetica"><font color="#FFFFFF">Bug 
+      Tracking</font></font></strong></td>
 </tr>
 
 <tr>
@@ -136,8 +323,8 @@
 </td>
 </tr>
 </table>
-<table border="0" cellpadding="2" cellspacing="5" width="100%"><tbody><tr><td colspan="4" align="left" bgcolor="#0080c0" valign="top" width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">Legend
-			</font></font></b></td>
+<table border="0" cellpadding="2" cellspacing="5" width="100%"><tbody><tr><td colspan="4" align="left" bgcolor="#0080c0" valign="top" width="100%"><strong><font face="Arial,Helvetica"><font color="#ffffff">Legend
+			</font></font></strong></td>
 		</tr>
 		<tr>
 			<td valign="center"><img src="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/jdt-ui-home/images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"></td>
