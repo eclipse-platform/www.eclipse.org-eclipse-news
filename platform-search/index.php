@@ -54,26 +54,9 @@ ob_start();
 			<h3>What's Happening?</h3>
 			
 			<br>
-			<h4> <a name="Milestone_Planning"></a>3.1 Development Effort</h4>
-			<ul>
-				<li>Most active development goes into this stream.</li>
-				<li>The 3.1 plan is posted <a href=plan.html#Overall_Planning>here</a>.</li>
-				<li>The 3.1 next-milestone plan is posted <a href=plan.html#Milestone_Planning>here</a>.</li>
-			</ul>
+			<p>Since 3.2, Platform Search is in maintenace mode. </p>
 			
-			<br>
-			<h4> 3.0.1 Maintenance effort</h4>
-			<ul>
-				<li> Corresponding sources are released in branch "R3_0_maintenance".</li>
-				<li> Bug resolution: 
-				(<a href="https://bugs.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=Platform&component=Search&target_milestone=3.0.1&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=anywords&keywords=&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&emailassigned_to1=1&emailtype1=substring&email1=&emailreporter2=1&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&namedcmd=Assigned&newqueryname=&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">resolved fixes</a>)
-				(<a href="https://bugs.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=Platform&component=Search&target_milestone=3.0.1&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=anywords&keywords=&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailassigned_to1=1&emailtype1=substring&email1=&emailreporter2=1&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&namedcmd=Assigned&newqueryname=&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">unresolved 
-				fixes</a>).&nbsp;</li>
-				<li> To find the latest Eclipse 3.0.x maintenance builds please go <a href="http://download.eclipse.org/downloads/index.php">here</a></li>
-			</ul>
-			
-			<p>For more detailed information, check out the <a href="dev.php">Development 
-			Resources</a>.</p>
+			<p>Check out the <a href="dev.php">Development Resources</a>.</p>
 		</div>
 		
 		<div class="homeitem3col">
@@ -82,12 +65,17 @@ ob_start();
 			<p>If you are interested in participating in the development of the Search component, 
 			check out the developer's mailing list: <a href="http://dev.eclipse.org/mailman/listinfo/platform-search-dev">platform-search-dev@eclipse.org</a>. 
 			Chat with people there about your problems and interests, and find out 
-			what you can do to help.</p>
-			<p>In particular, if you are interested in improving regular expression
-			matching for text search or adding search support for custom content types
-			then don't hesitate to contact us.</p>
-			<p>For more detailed information, check out the <a href="dev.html">Development 
-			Resources</a>.</p>
+			what you can do to help. Or pick a bug from the 
+			<a href="http://dev.eclipse.org/bugs/buglist.cgi?bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&bugidtype=include&product=Platform&component=Search&cmdtype=doit" target="_top">Search Inbox</a>
+			and help us fix bugs.</p>
+			Intersting areas for participation:
+			<ul>
+			<li>Better support when entering regex expressions: Help the user with examples and previews</li>
+			<li>Split the search plugin to a UI (RCP plugin) and a plugin containing file search</li>		
+			<li>Show line matches</li>
+			<li>Improve the replace UI</li>	
+			</ul>
+			<p>FMore information can be found on the <a href="dev.html">Development Resources</a>.</p>
 		</div>
 	</div>
 	
