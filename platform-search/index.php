@@ -53,10 +53,7 @@ ob_start();
 			<a name="happening"></a>
 			<h3>What's Happening?</h3>
 			
-			<br>
-			<p>Since 3.2, Platform Search is in maintenace mode. </p>
-			
-			<p>Check out the <a href="dev.php">Development Resources</a>.</p>
+			<p>Since 3.2, Platform Search is in maintenace mode. Help for new features is highly appreciated!</p>
 		</div>
 		
 		<div class="homeitem3col">
@@ -68,14 +65,14 @@ ob_start();
 			what you can do to help. Or pick a bug from the 
 			<a href="http://dev.eclipse.org/bugs/buglist.cgi?bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&bugidtype=include&product=Platform&component=Search&cmdtype=doit" target="_top">Search Inbox</a>
 			and help us fix bugs.</p>
-			Intersting areas for participation:
+			<p>Interesting areas for participation:</p>
 			<ul>
 			<li>Better support when entering regex expressions: Help the user with examples and previews</li>
 			<li>Split the search plugin to a UI (RCP plugin) and a plugin containing file search</li>		
 			<li>Show line matches</li>
 			<li>Improve the replace UI</li>	
 			</ul>
-			<p>FMore information can be found on the <a href="dev.html">Development Resources</a>.</p>
+			<p>More information can be found on the <a href="dev.html">Development Resources</a>.</p>
 		</div>
 	</div>
 	
