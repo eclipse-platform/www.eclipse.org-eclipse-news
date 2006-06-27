@@ -53,7 +53,8 @@ ob_start();
 			<a name="happening"></a>
 			<h3>What's Happening?</h3>
 			
-			<p>Since 3.2, Platform Search is in maintenace mode. Help for new features is highly appreciated!</p>
+			<p>Since 3.2, Platform Search is in maintenace mode.
+			Contact us if you want to help, contributions are highly appreciated!</p>
 		</div>
 		
 		<div class="homeitem3col">
@@ -67,7 +68,7 @@ ob_start();
 			and help us fix bugs.</p>
 			<p>Interesting areas for participation:</p>
 			<ul>
-			<li>Better support when entering regex expressions: Help the user with examples and previews</li>
+			<li>Better support the user with regex expressions: Help with examples and previews</li>
 			<li>Split the search plugin to a UI (RCP plugin) and a plugin containing file search</li>		
 			<li>Show line matches</li>
 			<li>Improve the replace UI</li>	
