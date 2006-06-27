@@ -38,7 +38,7 @@
 			  <li><strong>Logical Model Integration</strong></li>
 			  <ul>
 			    <li>Bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=37723">37723</a></li>
-			    <li>Requirements identified during 3.1 can be found <a href="../../source/logical-support.doc">here</a>.</li>
+			    <li>Requirements identified during 3.1 can be found <a href="http://www.eclipse.org/eclipse/platform-team/team3.2/logical-support.doc">here</a>.</li>
 			    <li><img src="../images/progress.gif" height="5" width="14">Publish proposed 
 			      solutions
 			      <ul>
@@ -200,7 +200,7 @@
 			</ul>
 			<h1>3.2 Development Effort - Milestone 5 (February 17, 2006) </h1>
 			<a name="m5"></a>
-			<p>See the <a href="logical-physical-mappings.html">Team Support for Logical Model 
+			<p>See the <a href="http://www.eclipse.org/eclipse/platform-team/team3.2/logical-physical-mappings.html">Team Support for Logical Model 
 			  Integration</a> document for a description of the state of the Team API as of 
 			  3.2. M4.</p>
 			<ul>
@@ -252,8 +252,8 @@
 			</ul>
 			<h1>3.2 Development Effort - Milestone 6 (March 31, 2006) </h1>
 			<a name="m6"></a>
-			<p>See the <a href="repoRoadMap.html">Repository Roadmap for Logical Model 
-			  Integration</a> and <a href="modelRoadMap.html">Model Roadmap for Logical Model 
+			<p>See the <a href="http://www.eclipse.org/eclipse/platform-team/team3.2/repoRoadMap.html">Repository Roadmap for Logical Model 
+			  Integration</a> and <a href="http://www.eclipse.org/eclipse/platform-team/team3.2/modelRoadMap.html">Model Roadmap for Logical Model 
 			  Integration</a> document for a description of the logica; model support that 
 			  was addd in 3.2.</p>
 			  <ul>

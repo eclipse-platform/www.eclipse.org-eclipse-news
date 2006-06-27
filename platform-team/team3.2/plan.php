@@ -38,7 +38,7 @@
 			  <li><strong>Logical Model Integration</strong></li>
 			  <ul>
 			    <li>Bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=37723">37723</a></li>
-			    <li>Requirements identified during 3.1 can be found <a href="../../source/logical-support.doc">here</a>.</li>
+			    <li>Requirements identified during 3.1 can be found <a href="logical-support.doc">here</a>.</li>
 			    <li><img src="../images/progress.gif" height="5" width="14">Publish proposed 
 			      solutions
 			      <ul>
