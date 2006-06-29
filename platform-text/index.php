@@ -13,8 +13,10 @@
 
 	# End: page-specific settings
 	#
+
+ob_start();
+?>
 		
-<div id="maincontent">
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		
@@ -81,7 +83,9 @@
 		</div>
 	</div>
 
-</div>
+<?php
+	$html = ob_get_contents();
+	ob_end_clean();
 
 	# Generate the web page
 	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
