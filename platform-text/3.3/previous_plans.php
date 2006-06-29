@@ -19,7 +19,7 @@ ob_start();
 		
 	<div id="midcolumn">
 		<h1><?= $pageTitle ?></h1>
-		<?php include("previous_plan.html"); ?>
+		<?php include("previous_plans.html"); ?>
 	</div>
 
 <?php
