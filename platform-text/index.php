@@ -57,7 +57,7 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>Development Resources</h3>
 			<p>
-			If you are already a Platform Text developer, check out the <a href="development/dev.html">Development Resources</a>.
+			If you are already a Platform Text developer, check out the <a href="development/dev.php">Development Resources</a>.
 		</div>
 		
 		
@@ -87,7 +87,7 @@ ob_start();
 				Chat with people there about your problems and interests, and find out
 				what you can do to help.
 			</p>
-	      <p>For more detailed information, check out the <a href="development/dev.html">Development Resources</a>.</p>
+	      <p>For more detailed information, check out the <a href="development/dev.php">Development Resources</a>.</p>
 		</div>
 	</div>
 
