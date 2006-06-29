@@ -63,19 +63,19 @@ ob_start();
 		
 		<div class="homeitem3col">
 			<h3>What's Happening?</h3>
-			<p>
 		      <h4> <a NAME="Milestone_Planning"></a>3.3 Development</h4>
+				<p>
 		      <ul>
 		        <li> The 3.3 plan is posted <a href="3.3/plan.html#Overall_Planning">here</a>.</li>
 		        <li> The plan for the next milestone is posted <a href="3.3/plan.html#Milestone_Planning">here</a>.</li>
 		        <li>The original plans for previous milestones can be found <a href="3.3/previous_plans.html#Milestone_Planning">here</a>.</li>
 		      </ul></p>
-		      <p>
+		      
 		      <h4> <a NAME="Maintenance_Planning"></a>3.2 Maintenance</h4>
-		      	Information about 3.2 maintenance releases can be found <a href="http://eclipse.org/eclipse/development/eclipse_maintenance_schedule_3_2_x.html">here</a>.</p>
-		      <p>
+		      <p>Information about 3.2 maintenance releases can be found <a href="http://eclipse.org/eclipse/development/eclipse_maintenance_schedule_3_2_x.html">here</a>.</p>
+
 		      <h4> <a NAME="Releases"></a>Previous Releases</h4>
-		      	Information about previous releases can be found <a href="releases.html">here</a>.</p>
+		      <p>Information about previous releases can be found <a href="releases.html">here</a>.</p>
 		</div>
 		
 		
