@@ -46,10 +46,11 @@ ob_start();
 					
 					<li>A concrete editor implementation: the Eclipse default text editor.
 					</li>
-				</ul>
+				</ul></p>
+				<p>
 				Editors built with this toolkit are for example the JDT Editor or the CDT
 				Editor. Take a look at the <a href="http://www.eclipse.org/jdt/ui/screenCasts/index.php">JDT screen casts</a> to see some
-				features like the new J2SE 5.0 editor support in action.
+				features like the new J2SE 5.0 editor support in action.</p>
 		</div>
 		
 		
@@ -68,9 +69,11 @@ ob_start();
 		        <li> The 3.3 plan is posted <a href="3.3/plan.html#Overall_Planning">here</a>.</li>
 		        <li> The plan for the next milestone is posted <a href="3.3/plan.html#Milestone_Planning">here</a>.</li>
 		        <li>The original plans for previous milestones can be found <a href="3.3/previous_plans.html#Milestone_Planning">here</a>.</li>
-		      </ul>
+		      </ul></p>
+		      <p>
 		      <h4> <a NAME="Maintenance_Planning"></a>3.2 Maintenance</h4>
 		      	Information about 3.2 maintenance releases can be found <a href="http://eclipse.org/eclipse/development/eclipse_maintenance_schedule_3_2_x.html">here</a>.</p>
+		      <p>
 		      <h4> <a NAME="Releases"></a>Previous Releases</h4>
 		      	Information about previous releases can be found <a href="releases.html">here</a>.</p>
 		</div>
@@ -83,7 +86,8 @@ ob_start();
 				Text component, check out the developer's mailing list: <a href="http://dev.eclipse.org/mailman/listinfo/platform-text-dev">platform-text-dev@eclipse.org</a>.
 				Chat with people there about your problems and interests, and find out
 				what you can do to help.
-				      <p>For more detailed information, check out the <a href="development/dev.html">Development Resources</a>.</p>
+			</p>
+	      <p>For more detailed information, check out the <a href="development/dev.html">Development Resources</a>.</p>
 		</div>
 	</div>
 
