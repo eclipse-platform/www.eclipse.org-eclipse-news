@@ -18,10 +18,11 @@ ob_start();
 ?>
 		
 	<div id="midcolumn">
-		<h1>$pageTitle</h1>
+		<h1><?= $pageTitle ?></h1>
 		
 		<div class="homeitem3col">
 			<h3>About Platform Text</h3>
+				<p>
 				Platform Text provides the basic building blocks for text
 				and text editors within Eclipse and contributes the Eclipse default text
 				editor. It consists of five parts:
@@ -54,12 +55,14 @@ ob_start();
 		
 		<div class="homeitem3col">
 			<h3>Development Resources</h3>
+			<p>
 			If you are already a Platform Text developer, check out the <a href="development/dev.html">Development Resources</a>.
 		</div>
 		
 		
 		<div class="homeitem3col">
 			<h3>What's Happening?</h3>
+			<p>
 		      <h4> <a NAME="Milestone_Planning"></a>3.3 Development</h4>
 		      <ul>
 		        <li> The 3.3 plan is posted <a href="3.3/plan.html#Overall_Planning">here</a>.</li>
@@ -75,6 +78,7 @@ ob_start();
 		
 		<div class="homeitem3col">
 			<h3>Get Involved!</h3>
+			<p>
 				If you are interested in participating in the development of the Platform
 				Text component, check out the developer's mailing list: <a href="http://dev.eclipse.org/mailman/listinfo/platform-text-dev">platform-text-dev@eclipse.org</a>.
 				Chat with people there about your problems and interests, and find out
