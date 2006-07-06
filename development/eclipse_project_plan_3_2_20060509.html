@@ -8,12 +8,12 @@
 </head>
 <body>
 
-<h1>The Eclipse Project 3.2 Plan (Final) </h1>
+<h1>The Eclipse Project DRAFT 3.2 Plan</h1>
 
-<p>Last revised 9:00 EST July 6, 2006 
+<p>Last revised 10:00 EST May 9, 2006 
   (<img src="new.gif" alt="(new)" border="0" height="12" width="12">
   marks interesting changes since the previous 
-  <a href="eclipse_project_plan_3_2_20060509.html">draft of May 9, 2006</a>)
+  <a href="eclipse_project_plan_3_2_20060425.html">draft of April 25, 2006</a>)
 </p>
 <p><i>&nbsp;&nbsp;&nbsp; Please send comments about this draft plan to the</i>
   <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a>
@@ -506,7 +506,8 @@ the Eclipse Requirements Council (Themes and Priorities dated Dec. 15,
 <h4>Committed Items (Eclipse Platform project)</h4>
 <blockquote> 
 
-  <p><strong>Support logical model integration.</strong> The Eclipse Platform 
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Support logical model integration.</strong> The Eclipse Platform 
     supports a strong physical view of projects containing resources (files and 
     folders) in the workspace. However, there are many situations where plug-in 
     developers would prefer to work with a logical model that is appropriate to 
@@ -519,11 +520,9 @@ the Eclipse Requirements Council (Themes and Priorities dated Dec. 15,
     should be generalized to handle logical artifacts and, in general, there should 
     be better control over what is displayed in views and editors based on the 
     logical models that the end user is working on.
-    [Resources, UI, Team]
+    [Resources, UI, Team] 
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=37723">37723</a>) 
-    [Theme: Design for Extensibility]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-</p>
+    [Theme: Design for Extensibility]</p>
 
   <p><strong>Provide more flexible workspaces.</strong> Currently in Eclipse there 
     is a direct connection between IResources and files and directories on the 
@@ -534,9 +533,7 @@ the Eclipse Requirements Council (Themes and Priorities dated Dec. 15,
     between the resources and the physical layout of the files.
     [Resources, Text, UI] 
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=106176">106176</a>) 
-    [Theme: Design for Extensibility, Enterprise Ready]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-</p>
+    [Theme: Design for Extensibility, Enterprise Ready]</p>
 
   <p><strong>Improve and extend the SWT widget set.</strong> Modern UI design 
     is a constantly moving target. SWT should provide the tools needed to implement 
@@ -544,9 +541,7 @@ the Eclipse Requirements Council (Themes and Priorities dated Dec. 15,
     coolbar behavior/appearance; and new controls such as collapsible groups.
     [SWT] 
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=106182">106182</a>) 
-    [Theme: Design for Extensibility, Appealing to the Broader Community]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-</p>
+    [Theme: Design for Extensibility, Appealing to the Broader Community]</p>
 
   <p><strong>Address new window system capabilities.</strong> SWT's basis in native 
     widgets is one of Eclipse's major strengths. For this to remain true, SWT 
@@ -555,9 +550,7 @@ the Eclipse Requirements Council (Themes and Priorities dated Dec. 15,
     provide support for Windows Vista. 
     [SWT]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=106184">106184</a>) 
-    [Theme: Appealing to the Broader Community]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-</p>
+    [Theme: Appealing to the Broader Community]</p>
 
   <p><strong>Enhance the text editor.</strong> The Eclipse Text component provides 
     a powerful editing framework that is useful in many contexts, but some of 
@@ -569,9 +562,7 @@ the Eclipse Requirements Council (Themes and Priorities dated Dec. 15,
     and annotation roll-overs.
     [Text] 
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=106194">106194</a>) 
-    [Theme: Design for Extensibility]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-</p>
+    [Theme: Design for Extensibility]</p>
     
   <p><strong>Improve task assistance in text fields.</strong> Eclipse has numerous 
     wizards and dialogs that contain text fields where there are constraints on 
@@ -580,9 +571,7 @@ the Eclipse Requirements Council (Themes and Priorities dated Dec. 15,
     text field that has indicators for required fields, and content assist.
     [UI]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=106199">106199</a>) 
-    [Theme: Simple to Use]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-</p>
+    [Theme: Simple to Use]</p>
     
   <p><strong>Enhance the debug platform.</strong> The debug support in Eclipse is 
 	increasingly being used in areas that require more flexible mechanisms 
@@ -596,9 +585,7 @@ the Eclipse Requirements Council (Themes and Priorities dated Dec. 15,
 	lookup.
 	[Debug]
 	(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=106205">106205</a>) 
-    [Theme: Design for Extensibility, Enterprise Ready]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-</p>
+    [Theme: Design for Extensibility, Enterprise Ready]</p>
 
   <p><strong>Provide a more customizable UI.</strong>
     Products often need direct control over the presence and arrangement of
@@ -610,9 +597,7 @@ the Eclipse Requirements Council (Themes and Priorities dated Dec. 15,
     and ordering of menu and toolbar items.
     [UI]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=106189">106189</a>) 
-    [Theme: Simple to Use]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-</p>
+    [Theme: Simple to Use]</p>
 
   <p><strong>Capabilities/Perspectives/Components.</strong> The UI component has 
     several frameworks for customizing the presentation, filtering the set of 
@@ -620,9 +605,7 @@ the Eclipse Requirements Council (Themes and Priorities dated Dec. 15,
     This support should be rationalized and better documented.
     [UI]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=80130">80130</a>) 
-    [Theme: Simple to Use]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-</p>
+    [Theme: Simple to Use]</p>
 
   <p><strong>Provide more support for large scale workspaces.</strong> In some 
     situations, users have workspaces containing hundreds of projects and hundreds 
@@ -634,11 +617,10 @@ the Eclipse Requirements Council (Themes and Priorities dated Dec. 15,
     performance issues.
     [UI, Resources]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=106192">106192</a>) 
-    [Theme: Scaling Up, Enterprise Ready]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-</p>
+    [Theme: Scaling Up, Enterprise Ready]</p>
 
-  <p><strong>Update Enhancements.</strong> As the number and range of Eclipse 
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Update Enhancements.</strong> As the number and range of Eclipse 
     plug-ins continues to grow, it becomes increasingly important to have a powerful 
     update/install story. For instance, if more information about an Eclipse install 
     was available earlier, it would be possible to pre-validate that it would 
@@ -649,19 +631,16 @@ the Eclipse Requirements Council (Themes and Priorities dated Dec. 15,
     updates.
     [Update, Runtime, PDE]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=106185">106185</a>) 
-    [Theme: Enterprise Ready]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-</p>
+    [Theme: Enterprise Ready]</p>
 
-  <p><strong>Help System enhancements.</strong> Enhance the existing Help System functionality in 
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Help System enhancements.</strong> Enhance the existing Help System functionality in 
     several ways, including support for navigation bread crumbs, support for remote 
     installation of Help documentation, documentation index, more extensible dynamic 
     help view, and various other enhancements.
     [UA]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=114243">114243)</a> 
-    [Theme: Design for Extensibility]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-</p>
+    [Theme: Design for Extensibility]</p>
 
   <p><strong>Improve cheat sheet support.</strong> The Eclipse cheat sheet
     infrastructure was implemented 3.0, but is still not widely used. For cheat
@@ -672,9 +651,7 @@ the Eclipse Requirements Council (Themes and Priorities dated Dec. 15,
     support working with modal dialogs.
     [UA, UI]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=106196">106196</a>) 
-    [Theme: Simple to Use, Design for Extensibility]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-</p>
+    [Theme: Simple to Use, Design for Extensibility]</p>
 
   <p><strong>Support dynamic and reusable content in User Assistance components.</strong> 
     In previous releases, Eclipse Help manipulated content as a reference. Although 
@@ -687,11 +664,10 @@ the Eclipse Requirements Council (Themes and Priorities dated Dec. 15,
     view.
     [UA]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=106201">106201</a>) 
-    [Theme: Design for Extensibility]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-</p>
+    [Theme: Design for Extensibility]</p>
 
-  <p><strong>Create Universal Welcome.</strong> 
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Create Universal Welcome.</strong> 
     Since Eclipse 3.0, it is possible to create a powerful Welcome using the
     provided framework support. In the increasingly componentized environment,
     it is more and more impractical to create extensions for separate
@@ -704,11 +680,10 @@ the Eclipse Requirements Council (Themes and Priorities dated Dec. 15,
     be available.
   [UA]
   (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=127842">127842</a>) 
-  [Theme: Simple to Use, Design for Extensibility]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-</p>
+  [Theme: Simple to Use, Design for Extensibility]</p>
 
-  <p><strong>Deliver support for ICU4J with the Eclipse Platform.</strong> 
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Deliver support for ICU4J with the Eclipse Platform.</strong> 
     Quality internationalization is very important in the modern software world.
     The ability to fully enable products and applications for double-byte and
     bi-directional languages is a requirement of any software platform. ICU4J 
@@ -723,9 +698,7 @@ the Eclipse Requirements Council (Themes and Priorities dated Dec. 15,
     they do not need full internationalization flexibility.
   [All]
   (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=127876">127876</a>) 
-  [Theme: Design for Extensibility, Enterprise Ready]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-</p>
+  [Theme: Design for Extensibility, Enterprise Ready]</p>
 
 
 </blockquote>
@@ -809,7 +782,8 @@ the Eclipse Requirements Council (Themes and Priorities dated Dec. 15,
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=106187">106187</a>) 
     [Theme: Rich Client Platform]</p>
     
-  <p><strong>Provide pervasive user-assistance search capabilities.</strong> An 
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> deferred)
+    <strong>Provide pervasive user-assistance search capabilities.</strong> An 
     important element of the user-assistance support in Eclipse is the federated 
     help search support that was added in R3.1. This support should be expanded 
     to pull in more useful results from various sources. It should also be made 
@@ -819,7 +793,8 @@ the Eclipse Requirements Council (Themes and Priorities dated Dec. 15,
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=106198">106198</a>) 
     [Theme: Simple to Use]</p>
 
-  <p><strong>Additional debug platform enhancements.</strong> The debug support in 
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> deferred)
+  <strong>Additional debug platform enhancements.</strong> The debug support in 
   Eclipse is increasingly being used in areas that require more flexible 
   mechanisms than those required by simple Java programs. Additional work 
   areas include: the introduction of table trees in standard debug views for 
@@ -853,16 +828,12 @@ significantly reworked.</p>
     APIs, all of which will require specific support.
     [JDT Core, JDT UI, JDT Text, JDT Debug]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=106206">106206</a>) 
-    [Theme: Appealing to the Broader Community]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-    </p>
+    [Theme: Appealing to the Broader Community]</p>
     
   <p><strong>Improve NLS tooling.</strong> The Eclipse NLS tooling should better 
     support the new Eclipse string externalization pattern added in 3.1. 
     [JDT Text] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=106210">106210</a>) 
-    [Theme: Simple to use, Scaling up]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-    </p>
+    [Theme: Simple to use, Scaling up]</p>
     
   <p><strong>Split refactoring.</strong> Refactoring currently relies on a closed 
 	world assumption. This means that all of the code to be refactored must be 
@@ -875,9 +846,7 @@ significantly reworked.</p>
 	references to the refactored element.
     [JDT Core/UI]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=106207">106207</a>) 
-    [Theme: Scaling Up]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-    </p>
+    [Theme: Scaling Up].</p>
 
   <p><strong>Enable compiler participation.</strong> JDT compilation technology will 
 	be opened to enable pluggable participation.Compilation takes place in 
@@ -887,9 +856,7 @@ significantly reworked.</p>
 	files.
     [JDT Core, JDT UI, JDT Text]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=127885">127885</a>) 
-    [Theme: Multi-Language Support, Enterprise Ready, Design for Extensibility]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-    </p>
+    [Theme: Multi-Language Support, Enterprise Ready, Design for Extensibility]</p>
     
   <p><strong>More static analysis.</strong> Code quality can be further improved by 
 	new advanced configurable compiler diagnostics, available either when 
@@ -904,9 +871,7 @@ significantly reworked.</p>
 	being non fatal, and thus allow valid classfile generations.
     [JDT Core]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=127887">127887</a>) 
-    [Theme: Appealing to the Broader Community]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-    </p>
+    [Theme: Appealing to the Broader Community]</p>
     
   <p><strong>Code style clean ups.</strong> We will provide new functionality to 
 	easily establish project wide code conventions. The 'Clean up' action will 
@@ -916,9 +881,7 @@ significantly reworked.</p>
 	migration to Java 5.0
     [JDT UI]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=127888">127888</a>) 
-    [Theme: Simple To Use]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-    </p>
+    [Theme: Simple To Use]</p>
     
   <p><strong>Improve JUnit support.</strong> The JUnit view will be improved to 
 	manage more than one set of results. This will allow running multiple 
@@ -927,9 +890,7 @@ significantly reworked.</p>
 	Eclipse itself.
     [JDT UI]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=127889">127889</a>) 
-    [Theme: Simple To Use]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-    </p>
+    [Theme: Simple To Use]</p>
     
   <p><strong>Support arbitrary Java content types.</strong> Add support for 
 	compilation units with extension different than ".java". This will for 
@@ -938,9 +899,7 @@ significantly reworked.</p>
 	extensions will be removed throughout the tools.
     [JDT UI, JDT Core, JDT Debug]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=127891">127891</a>) 
-    [Theme: Design for Extensibility: Be a Better Platform]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-    </p>
+    [Theme: Design for Extensibility: Be a Better Platform]</p>
     
   <p><strong>More refactorings.</strong> Various enhancements for existing 
 	refactorings including hierarchical package rename and delete, updating 
@@ -952,9 +911,7 @@ significantly reworked.</p>
 	investigate in a new refactoring 'Extract super class'.
     [JDT UI]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=127892">127892</a>) 
-    [Theme: Simple To Use]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-    </p>
+    [Theme: Simple To Use]</p>
     
   <p><strong>Improve user experience in presence of syntax errors.</strong> While 
 	editing code, all Java tools need to manipulate incomplete sources, 
@@ -969,9 +926,7 @@ significantly reworked.</p>
 	properly handle detailed recovered DOM AST.
     [JDT Core, JDT UI]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=127895">127895</a>) 
-    [Theme: Simple to Use]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-    </p>
+    [Theme: Simple to Use]</p>
     
   <p><strong>Enhance Java infrastructure.</strong> As part of its increased support 
 	for Javadoc, the model will support extracting Javadoc from attached 
@@ -983,9 +938,7 @@ significantly reworked.</p>
 	break/continue label.
     [JDT Core, JDT Text]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=127898">127898</a>) 
-    [Theme: Appealing to the Broader Community]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-    </p>
+    [Theme: Appealing to the Broader Community]</p>
     
   <p><strong>Support for execution environments.</strong> An execution environment 
 	describes the capabilities of a Java runtime environment. For example, an 
@@ -999,9 +952,7 @@ significantly reworked.</p>
 	contributed to the set of installed JREs via an extension point.
     [JDT Core, JDT Debug]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=127899">127899</a>) 
-    [Theme: Simple to Use]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-    </p>
+    [Theme: Simple to Use]</p>
     
 </blockquote>
 <h4>Proposed Items (Eclipse JDT project)</h4>
@@ -1053,18 +1004,14 @@ where existing features will be significantly reworked.
     having to change the Target Platform in the preferences.
     [PDE, Debug, Runtime] 
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=106212">106212</a>) 
-    [Theme: Scaling Up]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-    </p>
+    [Theme: Scaling Up]</p>
     
   <p><strong>Improve target support.</strong> PDE manages a model of the target 
     Eclipse for which you are developing. Targets may be complex and diverse, 
     and switching targets or launch configurations can be expensive. PDE should 
     be extended to support named targets and automatically track changes to the 
     workspace. [PDE, Runtime] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=106211">106211</a>) 
-    [Theme: Simple to Use, Enterprise Ready]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-    </p>
+    [Theme: Simple to Use, Enterprise Ready]</p>
 
   <p><strong>Improve PDE build.</strong> PDE Build is fundamental to how the Eclipse 
     Platform releases are produced. It is also increasingly being used by other 
@@ -1072,9 +1019,7 @@ where existing features will be significantly reworked.
     build include parallel cross-building, incremental building of plug-ins, increased 
     integration with the workspace model, and support for additional repository 
     providers. [PDE] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=106214">106214</a>) 
-    106214[Theme: Enterprise Ready]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-    </p>
+    106214[Theme: Enterprise Ready]</p>
 
 </blockquote>
 <h4>Proposed Items (Eclipse PDE project)</h4>
@@ -1116,9 +1061,7 @@ existing features will be significantly reworked.
     this, a separate OSGi download should be provided, as is done for SWT.
     [Runtime] 
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=106188">106188</a>) 
-    [Theme: Appealing to the Broader Community, Rich Client Platform]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-    </p>
+    [Theme: Appealing to the Broader Community, Rich Client Platform]</p>
     
   <p><strong>Refactor the runtime.</strong>
     The Eclipse runtime is currently one monolithic plugin that contains
@@ -1131,9 +1074,7 @@ existing features will be significantly reworked.
     OSGi (e.g., the OSGi MEG application model).
     [Framework, Bundles, Runtime] 
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=113663">113663</a>) 
-    [Theme: Appealing to the Broader Community, Rich Client Platform]
-    <em><img src="ok.gif" width="12" height="12"> Work completed</em>
-    </p>
+    [Theme: Appealing to the Broader Community, Rich Client Platform]</p>
 
 </blockquote>
 <h4>Proposed Items (Equinox project)</h4>
