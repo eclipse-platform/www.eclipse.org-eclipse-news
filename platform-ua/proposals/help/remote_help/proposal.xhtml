@@ -1,17 +1,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Proposal: Remote help (3.3)</title>
+<title>Remote Help proposal for Eclipse 3.3</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
 
 <h1>
-Proposal: Remote help (3.3)
+Remote Help proposal for Eclipse 3.3
 </h1>
 
 <p>
-Curtis d'Entremont, 07/05/2006
+Curtis d'Entremont, 07/06/2006
 </p>
 
 <h2>
@@ -101,19 +101,124 @@ more general in order to support this in the reference implementation. Here are
 the known required enhancements:
 </p>
 
-<ul>
-<li>TOC provider support - Currently the only way to contribute to the TOC
-(table of contents) is to supply an XML file in a local plug-in. Since this
-feature involves having books contributed from a remote source, this is not
-enough. To facilitate this, a general-purpose mechanism will be introduced to
-make contributions to the TOC. The API will allow any plug-in to contribute an
-<code>ITocProvider</code> via an extension point, which will be queried at
-runtime to supply TOC information. One such provider will be contributed by the
-reference implementation, so authoring and packaging remote help with this
-implementation will not require the addition of any extensions.</li>
-<li>Keyword index provider support - The same, but for keyword index content.
-</li>
-</ul>
+<h4>
+TOC provider support
+</h4>
+
+<p>
+Currently the only way to contribute to the TOC (table of contents) is to supply
+an XML file in a local plug-in. Since this feature involves having books
+contributed from a remote source, this is not enough. To facilitate this, a
+general-purpose mechanism will be introduced to make contributions to the TOC.
+The API will allow any plug-in to contribute an <code>ITocProvider</code> via an
+extension point, which will be queried at runtime to supply TOC information. One
+such provider will be contributed by the reference implementation, so authoring
+and packaging remote help with this implementation will not require the addition
+of any extensions.
+</p>
+
+<p>
+An <code>ITocProvider</code> is responsible for providing zero or more
+<code>ITocContribution</code>s:
+</p>
+
+<pre>
+/**
+ * An ITocProvider is a mechanism to provide arbitrary content to the table of
+ * contents (TOC). ITocProviders must be registered via the org.eclipse.help.toc
+ * extension point, and are queried once only per session when the TOC is about
+ * to be displayed.
+ * 
+ * This interface is to be implemented by clients.
+ * 
+ * @since 3.2
+ */
+public interface ITocProvider {
+
+	/**
+	 * Returns all ITocContributions for this provider. Providers are free to
+	 * provide any number of contributions (zero or more). A return value of
+	 * null will be treated the same as an array of size zero.
+	 * 
+	 * @return all the contributions for this provider
+	 */
+	public ITocContribution[] getTocContributions();
+}
+</pre>
+
+<p>
+An <code>ITocContribution</code> represents a complete book (top-level TOC)
+along with its metadata:
+</p>
+
+<pre>
+/**
+ * An ITocContribution represents a complete top-level TOC (a book)
+ * and its metadata.
+ * 
+ * This interface is intended to be implemented by clients.
+ * 
+ * @since 3.2
+ */
+public interface ITocContribution {
+
+	/**
+	 * Returns the TOC data for this contribution. This will be called only
+	 * once per session.
+	 * 
+	 * @return the TOC data for this contribution
+	 */
+	public IToc getToc();
+	
+	/**
+	 * Returns a unique identifier for this contribution.
+	 * 
+	 * @return the contribution's unique identifier
+	 */
+	public String getId();
+	
+	/**
+	 * Returns the TOC's category id. Categories are used to organize similar
+	 * books in categories.
+	 * 
+	 * @return the TOC's category id.
+	 */
+	public String getCategoryId();
+}
+</pre>
+
+<p>
+The getId() method is needed here for ordering books in the TOC. In order to
+have a way to specify an order of books, whether it be relative or a complete
+list, there must be a way to refer to a specific book.
+</p>
+
+<p>
+The provider must be registered as an extension using the
+<code>org.eclipse.help.toc</code> extension point, using the <code>tocProvider
+</code> element, as shown below:
+</p>
+
+<pre>
+&lt;extension
+      point=&quot;org.eclipse.help.toc&quot;&gt;
+   &lt;tocProvider
+         class=&quot;org.example.MyTocProvider&quot;/&gt;
+&lt;/extension&gt;
+</pre>
+
+<h4>
+Keyword index provider support
+</h4>
+
+<p>
+Keyword index has the same limitation as TOC - the only way to contribute to it
+is to provide an XML file in a local plug-in. The solution will be the same as
+with TOC, except for keyword index. For example, it will be an
+<code>IIndexProvider</code> which supplies <code>IIndexContributions</code>,
+and will be registered via the <code>org.eclipse.help.index</code> extension
+point using the <code>indexProvider</code>.
+</p>
 
 <h3>
 Limitations
