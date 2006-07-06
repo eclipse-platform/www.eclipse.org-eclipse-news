@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Proposal: Remote help (3.3)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<h1>
+Proposal: Remote help (3.3)
+</h1>
+
+<p>
+Curtis d'Entremont, 07/05/2006
+</p>
+
+<h2>
+The problem
+</h2>
+
+<p>
+Packaging a comprehensive set of help contents with a product can significantly
+increase its size. Consider the eclipse SDK as an example. The download size for
+3.2 on Windows is 120MB, of which 30MB is documentation (compressed). This
+results in longer downloads, larger media, and more required disk storage.
+</p>
+
+<h2>
+The solution
+</h2>
+
+<h3>
+Overview
+</h3>
+
+<p>
+Host the content on a dedicated server (a plain infocenter) and have each client
+workbench access the content remotely. Local content is also allowed and will be
+merged with the remote content. The goal is that the help system will behave as
+though it were all local, as far as the user is concerned.
+</p>
+
+<h3>
+Scope
+</h3>
+
+<p>
+Remote help will apply to all forms of help: online help (the documents
+themselves, be it html or anything else), table of contents, context help, help
+search, and keyword index. Dynamic content (e.g. filters) will still work on
+remote content, and will use information from the local machine, not the remote
+server. For example, if you have a paragraph to be displayed only on linux, and
+you're running the workbench on windows pointing to a remote help server running
+on linux, the paragraph will not be shown on the client machine. Since bookmarks
+are user-defined and per-user, remote help does not apply and they will continue
+to be stored locally.
+</p>
+
+<p>
+As far as precedence goes, if local content for a particular item is available,
+it will be used and remote help will not be consulted. For example, if you
+attempt to open a specific document, or summon context help on a particular UI,
+and that document or context help definition is available locally, it will be
+used and any remote content for that item will be ignored.
+</p>
+
+<h3>
+Configuration
+</h3>
+
+<p>
+Help needs to know the address (host name/IP) and port of the remote server.
+There will be two ways to configure which remote server to retrieve help from:
+</p>
+
+<ul>
+<li>Global default: Products/offerings will have a means to preconfigure the
+offering to point to a default server and port. This way the workbench will
+automatically retrieve remote content upon startup for the first time.</li>
+<li>User preference: A preference page will be available for the user allowing
+them to explicitly set or override the host address and port for the remote help
+server.</li>
+</ul>
+
+<p>
+In any case, if no port is specified, a default of 80 will be assumed.
+</p>
+
+<h3>
+Related enhancements
+</h3>
+
+<p>
+This is a feature of the reference help implementation provided by eclipse.
+There will be no API specifically for this in the help platform
+(org.eclipse.help) for help system implementations in general. The API (for
+specifying which server to use) will be at the org.eclipse.help.base level
+instead. If another implementation of help wishes to do the same, it will be up
+to them to implement this support. However the platform API needs to be made
+more general in order to support this in the reference implementation. Here are
+the known required enhancements:
+</p>
+
+<ul>
+<li>TOC provider support - Currently the only way to contribute to the TOC
+(table of contents) is to supply an XML file in a local plug-in. Since this
+feature involves having books contributed from a remote source, this is not
+enough. To facilitate this, a general-purpose mechanism will be introduced to
+make contributions to the TOC. The API will allow any plug-in to contribute an
+<code>ITocProvider</code> via an extension point, which will be queried at
+runtime to supply TOC information. One such provider will be contributed by the
+reference implementation, so authoring and packaging remote help with this
+implementation will not require the addition of any extensions.</li>
+<li>Keyword index provider support - The same, but for keyword index content.
+</li>
+</ul>
+
+<h3>
+Limitations
+</h3>
+
+<ul>
+<li>A network connection is required.</li>
+<li>The performance/responsiveness of help will be limited by the network
+connection.</li>
+<li>Progress monitoring during indexing may not be as accurate due to the
+distributed nature.</li>
+<li>Infocenter must be 3.3 or later.</li>
+</ul>
+
+<h3>
+Future considerations
+</h3>
+
+<p>
+In the future it may be desirable to allow multiple remote servers instead of
+just one. This will be taken into consideration during implementation.
+</p>
+
+</body>
+</html>
