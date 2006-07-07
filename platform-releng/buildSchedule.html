@@ -12,8 +12,6 @@
     <td width="28%"><img src="http://dev.eclipse.org/images/Idea.jpg" height=86 width=120></td></tr> 
 </table>
 
-<strong><font size=4>Please note - we are now in the 3.2 Endgame.  See the <a href="http://www.eclipse.org/eclipse/platform-releng/3.2-endgame-buildschedule.html">3.2 Endgame build schedule.</a> for more details.</font></strong>
-
 <font class=indextop> </font><table border=0 cellspacing=5 cellpadding=2 width="100%" > 
 <tr> <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font face="Arial,Helvetica" color="#FFFFFF"> 
 Regularly Scheduled Builds</font></b></td></tr> 
@@ -81,8 +79,15 @@ branch of org.eclipse.releng.
     <td>05:10 UTC</td>
     <td>No rebuild.</td>
   </tr>
+    <tr>
+    <td>3.2.1 build</td>
+	    <td>08:00 </td>
+    <td>13:00 UTC</td>
+    <td>Rebuild until success.</td>
+  </tr>
+
   <tr>
-    <td>3.2 I rebuild if requested</td>
+    <td>3.3 I rebuild if requested</td>
 	    <td>12:00 </td>
     <td>17:00 UTC</td>
     <td>Same day rebuild if compile errors, missing plugins, the build is unusable
@@ -178,7 +183,7 @@ once a good integration build is achieved, it will be marked as such on the webs
 if the build is suitable for the week's testing. If you provide status and then 
 recontribute to a subsequent build, you are required to revalidate the build and 
 provide an updated status.</p>
-<p>For the 3.2 maintenance builds: <br>
+<p>For the 3.2.1 maintenance builds: <br>
    - build 
 time is noon Wednesday (Eastern time) <br> - because of the nature 
 of the fixes in this stream, these builds should not fail. <br> However, if a 
