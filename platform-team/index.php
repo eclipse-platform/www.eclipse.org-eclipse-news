@@ -53,7 +53,7 @@
 			<a name="HAPPENING"></a>
 			<p><img SRC="http://dev.eclipse.org/images/Adarrow.gif" NOSAVE BORDER=0 height=16 width=16>&nbsp;<b>3.3 Development</b>
 			<ul>
-			<li>Team planning for the 3.3 release is underway. Stay tuned for details!</li>
+			<li>3.3 <a href="team3.3/plan.php">development</a> plan.</li>
 			</ul>
 			</p>
 			<p><img SRC="http://dev.eclipse.org/images/Adarrow.gif" NOSAVE BORDER=0 height=16 width=16>&nbsp;<b>3.2 Development</b>

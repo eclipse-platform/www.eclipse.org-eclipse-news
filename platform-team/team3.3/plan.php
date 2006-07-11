@@ -23,11 +23,11 @@
 			<table border="0" cellspacing="10" cellpadding="0">
 			  <tbody>
 			    <tr>
-			      <td><img src="../images/progress.gif" height="5" width="14"> item
+			      <td><img src="../images/progress.gif" alt="under development"> item
 			is under development</td>
-			      <td><img src="../images/ok.gif" height="10" width="10"> item is
+			      <td><img src="../images/ok.gif" alt="finished"> item is
 			finished</td>
-			      <td><font class="indexsub">[&gt;3.3]</font> item is deferred</td>
+			      <td><font class="indexsub" alt="deferred">[&gt;3.3]</font> item is deferred</td>
 			    </tr>
 			  </tbody>
 			</table>
@@ -37,16 +37,32 @@
 			
 			<p>The overall themes for this release are detailed below:</p>
 			<ul>
+			  <li><strong>Compare Improvements</strong>: The Compare infrastructure has not undrgone much change in
+			  the last few releases. We plan on addressing the more important issues that have accumulated in that time.
+			  Some of these include:
+			  <ul>
+			      <li>API for change navigation in Compare Editors and Viewers.</li>
+			      <li>Use ISaveable API that was introduced in 3.2.</li>
+			      <li>Asynchronous population of compare editor content and labels.</li>
+			      <li>Proper use of Commands (key bindings) for editor/viewer actions.</li>
+			      <li>Support selection of proper ancestor and/or remote within an editor/viewer.</li>
+			      <li>Use History view for local and model (e.g. Java) histories.</li>
+			      <li>Polish items from Wiki.</li>
+			  </ul>
+			  </li>
 			  <li><strong>Logical Model Integration</strong>: There are several logical model integration related issues
 			  that were not addressed in 3.2 that we plan on addressing in 3.3.</li>
-			  <li><strong>Compare Improvements</strong>: The Compare infrastructure has not undrgone much change in
-			  the last few releases. We plan on addressing the more important issues that have accumulated in that time.</li>
-			  <li><strong>Generic Repositories view using Common Navigator framework</strong>: Currently, each repository
-			  provider must create their own view for remote browsing. We plan on using the Common Navigator framework
-			  to support the inclusion of content from multiple repository types into a single view.</li>
+			  <li><strong>Improve multi-instance view management</strong>: The Synchronize view and History view are both page 
+			  based views but they use different mechanisms to support multiple active pages. In 3.3, we will use the same mechanism 
+			  for both and hep investigate improvements to multi-view management to improve the user experience.</li>
+			  <li><strong>Eclipse File System</strong>: The Eclipse File System (EFS) API was introduced in 3.2. In 3.3, we 
+			  will investigate ways of incorporating this into Team.</li>
+			  <li><strong>Configuring projects</strong>: Enabling new capabilities on existing projects, such as adding Java 
+              ompilation to a non-Java project, is currently not supported but will be investigatd in 3.3. Team will need to
+              partake in this to ensure that the story works for projects imported from a repository.</li>
 			</ul>
 			
-			<h1>3.3 Development Effort - Milestone 1 (???) </h1>
+			<h1>3.3 Development Effort - Milestone 1 (Friday, August 11, 2006) </h1>
 			<a name="m1"></a>
 			
 			<ul>
@@ -54,9 +70,13 @@
 			  </li>
 			  <li><strong>Add History View API that was missing from 3.2</strong>
 			  </li>
-			  <li><strong>Update actions to use the Commands framework</strong>
+			  <li><img src="../images/ok.gif" alt="finished"><strong>Update actions to use the Commands framework</strong>
+			  </li>
+			  <li><img src="../images/progress.gif" alt="finished"><strong>Working Wet import/export:</strong> Give the user the
+			  option to include working sets when exporting project sets.
 			  </li>
 			</ul>
+			<p></p>
 	</div>
 
 	<!-- remove the entire <div> tag to omit the right column!  -->
