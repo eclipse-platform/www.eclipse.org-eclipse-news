@@ -46,7 +46,11 @@
           		<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.team.core">org.eclipse.team.core</a></li>
           		<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.team.ui">org.eclipse.team.ui</a></li>
                 <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.team.tests.core">org.eclipse.team.tests.core</a></li>
-              
+                <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.team.tests.core">org.eclipse.team.examples.filesystem</a></li>
+                <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.compare">org.eclipse.compare</a></li>
+                <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.compare.tests">org.eclipse.compare.tests</a></li>
+                <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.compare.examples">org.eclipse.compare.examples</a></li>
+                <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.compare.examples.xml">org.eclipse.compare.examples.xml</a></li>
  			</ul>
  			<p> There is also an additional set of plugins available for working with <a href="target.php">WebDAV and FTP</a>. These plugins are not actively being developed but are in a 
  			functioning state.</p>

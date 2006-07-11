@@ -72,7 +72,7 @@
 			  </li>
 			  <li><img src="../images/ok.gif" height="10" width="10" alt="finished"><strong>Update actions to use the Commands framework</strong>
 			  </li>
-			  <li><img src="../images/progress.gif" alt="finished"><strong>Working Wet import/export:</strong> Give the user the
+			  <li><img src="../images/progress.gif" alt="finished"><strong>Working Set import/export:</strong> Give the user the
 			  option to include working sets when exporting project sets.
 			  </li>
 			</ul>

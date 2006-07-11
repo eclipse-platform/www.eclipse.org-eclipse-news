@@ -37,9 +37,9 @@
 			<a name="ABOUT"></a>
 			<p></p>
 			<ul>
-			  <li>This component is responsible for all org.eclipse.team.* <a href="dev.php#Plugins">plugins</a></li>
-			  <li>Have a question about the Team component? We might already have an answer for you in the <a href="http://wiki.eclipse.org/index.php/Team_FAQ">Team
-			    FAQ Wiki</a>.</li>
+			  <li>This component is responsible for all org.eclipse.team.* and org.eclipse.compare.* <a href="dev.php#Plugins">plugins</a></li>
+			  <li>Have a question about the Team component? We might already have an answer for you in the <a href="http://wiki.eclipse.org/index.php/Team">Team
+			    Wiki</a>.</li>
 			  <li>Online user <a href="http://help.eclipse.org/help31/topic/org.eclipse.platform.doc.isv/guide/team.htm">documentation</a>.</li>
 			</ul>
 		</div>
@@ -91,8 +91,10 @@
 			</ul>
 		</div>
 		<div class="sideitem">
-			<h6>CVS Related Links</h6>
-			<ul><li><a href="http://wiki.eclipse.org/index.php/Team_FAQ">Team FAQ Wiki</a></li>
+			<h6>Team Related Links</h6>
+			<ul>
+			<li><a href="http://wiki.eclipse.org/index.php/Team">Team Wiki</a></li>
+			<li><a href="http://wiki.eclipse.org/index.php/Team_FAQ">Team FAQ</a></li>
 			</ul>
 		</div>
 	</div>
