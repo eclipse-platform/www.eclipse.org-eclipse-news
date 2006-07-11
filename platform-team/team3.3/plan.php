@@ -25,7 +25,7 @@
 			    <tr>
 			      <td><img src="../images/progress.gif" alt="under development"> item
 			is under development</td>
-			      <td><img src="../images/ok.gif" alt="finished"> item is
+			      <td><img src="../images/ok.gif" height="10" width="10" alt="finished"> item is
 			finished</td>
 			      <td><font class="indexsub" alt="deferred">[&gt;3.3]</font> item is deferred</td>
 			    </tr>
@@ -70,7 +70,7 @@
 			  </li>
 			  <li><strong>Add History View API that was missing from 3.2</strong>
 			  </li>
-			  <li><img src="../images/ok.gif" alt="finished"><strong>Update actions to use the Commands framework</strong>
+			  <li><img src="../images/ok.gif" height="10" width="10" alt="finished"><strong>Update actions to use the Commands framework</strong>
 			  </li>
 			  <li><img src="../images/progress.gif" alt="finished"><strong>Working Wet import/export:</strong> Give the user the
 			  option to include working sets when exporting project sets.
