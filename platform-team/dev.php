@@ -87,7 +87,7 @@
 			<dt><b>3.2.1 Release</b></dt>
 			<dd><a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=Team&target_milestone=3.2.1&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailassigned_to1=1&emailtype1=notregexp&email1=platform-team&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">Assigned defects for 3.2.1</a></dd>
 			</dl>
-			<p>To facilitate bug searches, we try to place all incoming bugs into one of the following categories:</p>
+			<p>To facilitate bug searches, we try to place all incoming Team bugs into one of the following categories:</p>
 			<dl>
 				<dd><a href="">Actions</a> - bugs that deal with Team actions.</dd>
 				<dd><a href="">Annotate View</a> - bugs that deal with the Annotate View</dd>
@@ -104,8 +104,22 @@
 				<dd><a href="">Sync View</a> - bugs that deal with the Sync View</dd>
 				<dd><a href="">Tests</a> - bugs that deal with Team tests</dd>
 				<dd><a href="">Wizards</a> - bugs that deal with the Team Wizards</dd>
-		
-				
+			</dl>
+			<p>For Compare, we use the following categories</p>
+			<dl>
+				<dd><a href="">Actions</a> - bugs that deal with Compare actions.</dd>
+				<dd><a href="">Edit</a> - bugs that deal with Comapre editors.</dd>
+				<dd><a href="">Dialogs</a> - bugs that deal with Compare dialogs.</dd>
+				<dd><a href="">Viewers</a> - bugs that deal with Compare viewers.</dd>
+				<dd><a href="">Structure Compare</a> - bugs that deal with Strucutre Compare.</dd>
+				<dd><a href="">Java</a> - bugs that deal with Java comparisons.</dd>
+				<dd><a href="">Navigation</a> - bugs that deal with change/diff navigation.</dd>
+				<dd><a href="">History</a> - bugs that deal with the History</dd>
+				<dd><a href="">Patch</a> - bugs that deal with the patching and the Apply Patch wizard</dd>
+				<dd><a href="">Misc</a> - bugs that defy categorization.</dd>
+				<dd><a href="">Preferences</a> - bugs that deal with preference pages</dd>
+				<dd><a href="">Tests</a> - bugs that deal with Team tests</dd>
+				<dd><a href="">Examples</a> - bugs that deal with the Team Wizards</dd>
 			</dl>
 		</div>
 		
