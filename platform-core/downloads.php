@@ -41,7 +41,7 @@ ob_start();
 		      They have been developed as both plug-ins and headless utilities and are 
 		      available here for download. Also check the <a href="#updates">Update Site</a>. 
 		      <ul>
-		        <li><b><img src="images/new.gif" width="31" height="14">Core Tools <a href="downloads/tools/org.eclipse.core.tools_1.3.0.zip">v1.3.0</a></b> 
+		        <li><b>Core Tools <a href="downloads/tools/org.eclipse.core.tools_1.3.0.zip">v1.3.0</a></b> 
 		          - Updated version that works with the Eclipse 3.1 Release.</li>
 		        <li><b>Core Tools <a href="downloads/tools/org.eclipse.core.tools_1.2.0.zip">v1.2.0</a> 
 		          </b>- Updated version that works with the Eclipse 3.1 M5a build and 
@@ -73,10 +73,10 @@ ob_start();
 		          Eclipse 2.0.* and 2.1 prior to I20021127, get the patch below. Otherwise, 
 		          just fetch this download, follow the instructions in the <a href="downloads/tools/readme.html">readme</a> 
 		          (also in the org.eclipse.core.tools/doc directory) and enjoy.</li>
-		        <li><b><a href="downloads/tools/org.eclipse.core.tools.restorer_1.0.0.zip">Workspace 
+		        <li><b><img src="images/new.gif" width="31" height="14">Upgraded for Eclipse 3.x. <a href="downloads/tools/org.eclipse.core.tools.restorer_3.0.0.zip">Workspace 
 		          Re-Builder</a></b> - Command-line utility program for basic restoration 
 		          of a corrupt workspace. This first version will re-create your projects 
-		          for you but will not restore your metadata. Check out the <a href="downloads/tools/readme_restorer_1.0.0.html">readme</a> 
+		          for you but will not restore your metadata. Check out the <a href="downloads/tools/readme_restorer_3.0.0.html">readme</a> 
 		          for more details.</li>
 		        <li><img src="images/new.gif" width="31" height="14"> <a href="downloads/tools/message_bundles/com.ibm.zrh.eclipse.nls_1.0.0.zip"><strong>JDT/UI 
 		          NLS Convertor v1.0.0</strong></a> - Tool to convert your message bundle 
