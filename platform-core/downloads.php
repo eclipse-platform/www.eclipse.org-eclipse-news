@@ -75,7 +75,7 @@ ob_start();
 		          (also in the org.eclipse.core.tools/doc directory) and enjoy.</li>
 		        <li><b><img src="images/new.gif" width="31" height="14">Upgraded for Eclipse 3.x. <a href="downloads/tools/org.eclipse.core.tools.restorer_3.0.0.zip">Workspace 
 		          Re-Builder</a></b> - Command-line utility program for basic restoration 
-		          of a corrupt workspace. This first version will re-create your projects 
+		          of a corrupt workspace. This version will re-create your projects 
 		          for you but will not restore your metadata. Check out the <a href="downloads/tools/readme_restorer_3.0.0.html">readme</a> 
 		          for more details.</li>
 		        <li><img src="images/new.gif" width="31" height="14"> <a href="downloads/tools/message_bundles/com.ibm.zrh.eclipse.nls_1.0.0.zip"><strong>JDT/UI 
