@@ -41,6 +41,11 @@ ob_start();
 		      They have been developed as both plug-ins and headless utilities and are 
 		      available here for download. Also check the <a href="#updates">Update Site</a>. 
 		      <ul>
+		        <li><b>Core Tools <a href="downloads/tools/org.eclipse.core.tools_1.3.0.zip">v1.4.0</a></b> 
+		          - Updated version that works with the Eclipse 3.2 Release.  The "Find Unreferenced Members"
+		          tool has been improved to present results in the Search view, and to omit methods that override
+		          a supertype method. Simply select a Java element in the Package Explorer
+		          and choose "Find Unreferenced Members" from the context menu.</li>
 		        <li><b>Core Tools <a href="downloads/tools/org.eclipse.core.tools_1.3.0.zip">v1.3.0</a></b> 
 		          - Updated version that works with the Eclipse 3.1 Release.</li>
 		        <li><b>Core Tools <a href="downloads/tools/org.eclipse.core.tools_1.2.0.zip">v1.2.0</a> 
