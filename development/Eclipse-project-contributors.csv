@@ -15,7 +15,6 @@ component (CVS directory),bug #,contributor's name,contribution size,committer,d
 ,https://bugs.eclipse.org/bugs/show_bug.cgi?id=98388 ,Andy,,,(Malformed URLs in org.eclipse.core.launcher.Main.decode() cause Eclipse to crash) (3.2 M6)
 ,https://bugs.eclipse.org/bugs/show_bug.cgi?id=75086 ,Anton Leherbauer,,,([implementation] Request for a memory efficient...) (3.2 M5) -- provided patch to reduce problems caused by bug: 
 ,,Artyom Kuanbekov,,,Intel contribution of keyword Index support (ongoing)   Fixed 3.2 M4 and previous Milestones
-,https://bugs.eclipse.org/bugs/show_bug.cgi?id=103706 ,Ben,,,(indent empty lines)  Fixed in 3.2 M2
 ,https://bugs.eclipse.org/bugs/show_bug.cgi?id=81833,Ben Konrath,,, ([o.e.pde.build] dangling extensions) (3.2 M6)
 ,https://bugs.eclipse.org/bugs/show_bug.cgi?id=111428,Brock Janicyak,,, ([HeapStatus] Heap status is updated too frequently)  Fixed 3.2 M3
 ,https://bugs.eclipse.org/bugs/show_bug.cgi?id=115226,Brock Janiczak,,, (Show progress feedback in NewLocationWizard...)  Fixed in 3.2 M4
@@ -48,6 +47,7 @@ component (CVS directory),bug #,contributor's name,contribution size,committer,d
 ,https://bugs.eclipse.org/bugs/show_bug.cgi?id=129126 ,Hiroyuki Inaba,,,(When VerifyListener is added in org.eclipse.swt.widgets.Text...)  (3.2 M6)
 ,https://bugs.eclipse.org/bugs/show_bug.cgi?id=103374 ,Igor Fedorenko,,,(Can't view cvs history for locked files)  Fixed in 3.2 M1
 ,https://bugs.eclipse.org/bugs/show_bug.cgi?id=136921,Igor Fedorenko,,, ([IDE] New File dialog locks for 20 seconds) (3.2 RC2)
+,https://bugs.eclipse.org/bugs/show_bug.cgi?id=103706 ,Istvan Benedek,,,(indent empty lines)  Fixed in 3.2 M2
 ,https://bugs.eclipse.org/bugs/show_bug.cgi?id=57191 ,Jens Bensing,,,(Display of CVS tag property of a file in mixed project...) Fixed in 3.2 M3
 ,,Jens Lukowski,,, contribution was for 2.0
 ,https://bugs.eclipse.org/bugs/show_bug.cgi?id=76378 ,Jeremiah Lott ,,,(Initial implementation of ... NestedSyncExecDeadlockTest.java)  Fixed in 3.1 M4
@@ -76,10 +76,18 @@ component (CVS directory),bug #,contributor's name,contribution size,committer,d
 ,https://bugs.eclipse.org/bugs/show_bug.cgi?id=89977,Matt Chapman,,, (Make JDT .java agnostic)  Fixed in 3.2 M4
 ,https://bugs.eclipse.org/bugs/show_bug.cgi?id=46387,Matt Scarpino,,,(Patch for saving animated GIFs)  Fixed 3.2 M2
 ,https://bugs.eclipse.org/bugs/show_bug.cgi?id=87718  ,Mike Kaufman,,,"(Listener on build process on a per file basis)  Fixed in 3.2, Milestone unlisted -- as part of the effort for enabling APT extensions"
-,https://bugs.eclipse.org/bugs/show_bug.cgi?id=110227,Mikhail Khodjaiants,,,(Possible infinite loop in ProjectSourceContainer)   Fixed in 3.1.2/ 3.2.M3
+,https://bugs.eclipse.org/bugs/show_bug.cgi?id=78875,Michael Behm,,,help topics should validate: org.eclipse.platform.doc.user/reference/ref-72.htm
+,https://bugs.eclipse.org/bugs/show_bug.cgi?id=138194,Michael Behm,,,"typos, formatting inefficiencies in whatsNew/platform_whatsnew.html"
+,https://bugs.eclipse.org/bugs/show_bug.cgi?id=142765,Michael Behm,,,Icon descriptions should use consistent markup
+,https://bugs.eclipse.org/bugs/show_bug.cgi?id=148702,Michael Behm,,,"reference/ref-8.htm ""Crash recovery"" isn't about crash recovery"
+,https://bugs.eclipse.org/bugs/show_bug.cgi?id=149018,Michael Behm,,,ref-72.htm defines AB as the B that does A
+,https://bugs.eclipse.org/bugs/show_bug.cgi?id=149034,Michael Behm,,,Typo in ref-antprefs.htm
+,https://bugs.eclipse.org/bugs/show_bug.cgi?id=149075,Michael Behm,,,Unnecessary <br> in ref-16.htm
+,https://bugs.eclipse.org/bugs/show_bug.cgi?id=149474,Michael Behm,,,"Add ""preference page"" to ref-content-type.htm"
+,https://bugs.eclipse.org/bugs/show_bug.cgi?id=149495,Michael Behm,,,"ref-12.htm should include ""preference page"" in the title"
+,https://bugs.eclipse.org/bugs/show_bug.cgi?id=149600,Michael Behm,,,File menu description (ref-56.htm) should provide more detail
 ,https://bugs.eclipse.org/bugs/show_bug.cgi?id=114664,Mikhail Khodjaiants,,,"(No UI access to the ""Search Subfolders"" option);  Fixed in 3.2 M4"
 ,https://bugs.eclipse.org/bugs/show_bug.cgi?id=53260 ,Miklos Fazekas ,,,([launcher] Keeping Eclipse icon in dock does not work)  (3.2 RC2)
-,,Name :Shaun Skelton,,,Title Area Dialog enhancements
 ,https://bugs.eclipse.org/bugs/show_bug.cgi?id=125471 ,Nathan Beyer,,,(Unable to load resource using buddy classloading) (3.2 M6)
 ,https://bugs.eclipse.org/bugs/show_bug.cgi?id=118788 ,Oldrich Jedlicka,,,([PATCH] CVS diff command ends with: read lock failed - giving up)Sebastian   (3.2 RC1)
 ,https://bugs.eclipse.org/bugs/show_bug.cgi?id=113663 ,Oleg Besedin,,,(Refactor runtime into separate plugins)
@@ -118,6 +126,7 @@ component (CVS directory),bug #,contributor's name,contribution size,committer,d
 ,https://bugs.eclipse.org/bugs/show_bug.cgi?id=77336,Sebastian Davids,,, ([Markers] [Dialogs] TableSortDialog does not use dialog font) (3.2 RC1)
 ,https://bugs.eclipse.org/bugs/show_bug.cgi?id=82064 ,Sebastian Davids,,,([Dialogs] TitleAreaDialog#setTitleImage cannot...) (3.2 RC2)
 ,https://bugs.eclipse.org/bugs/show_bug.cgi?id=90273,Sebastian Davids,,, ([Dialogs] ListSelectionDialog dialog alignment) (3.2 M6)
+,https://bugs.eclipse.org/bugs/show_bug.cgi?id=129829,Shaun Skelton,,,Title Area Dialog enhancements
 ,https://bugs.eclipse.org/bugs/show_bug.cgi?id=105851 ,Simon Kaegi,,,(Allow per instance configuration of the framework) (3.2 M6)
 ,https://bugs.eclipse.org/bugs/show_bug.cgi?id=107909,Simon Kaegi,,,(Running without calling URL.setURLStreamHandlerFactory(...))  Fixed in 3.2 M4
 ,https://bugs.eclipse.org/bugs/show_bug.cgi?id=110994 ,Simon Kaegi,,,(Can't garbage collect a Plugin that uses PluginPreferences) (3.2 M6)
