@@ -22,7 +22,7 @@
 
   <tr> 
     <td WIDTH="100%"> 
-    <p>Last revised 18:15 CET August 9, 2006</p>
+    <p>Last revised 16:36 CET August 10, 2006</p>
 
     
       <p>This plan is under continuous refinement. Please send comments about this draft plan to the <a href="mailto:platform-text@eclipse.org">platform-text@eclipse.org</a> developer mailing list.</p>
@@ -80,10 +80,12 @@
 			<li>allow contributions for a content type</li>
 			<li>allow contributions for a certain editor hierarchy (class)</li>
 		</ul></em></li>
-		<li>provide toolkit for line-based information (good for coverage information etc.)</li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> provide toolkit for line-based information (good for coverage information etc.)
+			<br>&rArr; the <code>AbstractRulerColumn</code> base class for line-based rulers has been added
+		</li>
 	</ul></li>
 
-	<li><h4>Spell Checking</h4>
+	<li><h4>Spell Checking in Text Editors</h4>
 	<ul>
 		<li><em style="color: blue;">spelling for text editors</em></li>
 		<li><em style="color: blue;">make spell checking encoding aware</em></li>
@@ -166,7 +168,7 @@
 	
 	<li><h4>Syntax Highlighting</h4>
 	<ul>
-		<li><em style="color: blue;">provide import/export</em></li>
+		<li>provide import/export</li>
 		<li>add coloring schemes and allow to switch them via toolbar</li>
 	</ul></li>
 	
@@ -216,7 +218,7 @@
     <h3>General Items</h3>
 	<ul>
 		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> <em style="color: blue;">3.2.x maintenance work</em></li>
-		<li><em style="color: blue;">switch to new Assert class from Platform</em></li>
+		<li><em style="color: blue;">switch to new <code>Assert</code> class from Platform (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=135136">bug 135136</a>)</em></li>
 		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <em style="color: blue;">move web site from CVS to www</em></li>
 		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <em style="color: blue;">convert web site to phoenix</em></li>
 		<li>allow to get a graphical view of our performance tests i.e. fingerprint for all text tests</li>
@@ -255,49 +257,47 @@
 
 
 <tr>
-    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#595791"><font face="Arial,Helvetica"><font color="#FFFFFF">Milestone Plans</font></font></td>
+    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#595791"><font face="Arial,Helvetica"><font color="#FFFFFF"><a name="Milestone_Planning">Milestone M2</font></font></td>
 </tr>
 
   <tr> 
     <td WIDTH="100%"> 
 
-	<h3><a name="Milestone_Planning"></a>Milestone M1 Plan</h3>
-	
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Top items</h4>
 	<ul>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> 3.3 planning</li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> 3.2.1 bug fixing</li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <a href="http://www.eclipse.org/jdt/ui/r3_3/JDT-Summit.html">JDT Summit 2006</a></li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> typed templates: template variables with parameters (e.g. Java type names)
-		<ul>
-			<li>create a prototype</li>
-			<li>define syntax (do a poll)</li>
-			<li>code assist support</li>
-			<li>find a way to explain the new syntax to the user (description?)</li>
-			<li>add F1 help</li>
-			<li>rewrite existing templates</li>
-		</ul></li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> modifier + mouse wheel support
-		<ul>
-			<li>investigate whether we need additional support from SWT
-			<br>&rArr; existing support is sufficient
-			</li>
-			<li>scroll by page</li>
-		</ul></li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> start to investigate vertical ruler contribution
-		<br>&rArr; initial cut has been released for M1 including migration of our existing rulers
-		</li>
+		<li>Live Annotate enhancements</li>
+		<li>Typing stability & performance</li>
+		<li>start with spell checking support for text editors</li>
+		<li>3.2.1 bug fixing</li>
 	</ul>
+
+	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Live Annotate</h4>
+	<ul>
+		<li>support to color by age in addition to color by contributor (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147705">bug 147705</a>)</li>
+		<li>fix hover sizing problems (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147709">bug 147709</a>)</li>
+		<li>allow to access the quick diff info (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147316">bug 147316</a>)</li>
+	</ul></li>
+
+	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Typing stability & performance</h4>
+	<ul>
+		<li>scrolling when typing bug(s), e.g. <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=133146">bug 133146</a>)</li>
+		<li>fix import folding bug (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=104814">bug 104814</a>)</li>
+		<li>check all setRedraw(on/off) users whether they really need that expensive operation (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=121049">bug 121049</a>)</li>
+	</ul>
+	
+	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Spell Checking in Text Editors</h4>
+	<ul>
+		<li>provide a spelling reconcile strategy and a way to install the reconciler</li>
+		<li>add quick assist support</li>
+	</ul>
+	
 	
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Additional items</h4>
 	<ul>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> talk preparation for <a href="http://www.java-forum-stuttgart.de/">Java Forum Stuttgart</a></li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> move web site from CVS to www</li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> convert web site to phoenix</li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> fix multi-monitor problems</li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> host Boris from Platform UI team to discuss UI items</li>
-	</li></ul>
-	
+		<li>switch to new <code>Assert</code> class from Platform (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=135136">bug 135136</a>)</li>
+		<li>solve segmented mode toolbar button usability problem (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=20155">bug 20155</a>)</li>
+		</li>
+	</ul>
 	
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Permanent items</h4>
 	<ul>
@@ -309,11 +309,10 @@
 	
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Absences</h4>
 	<ul>
-		<li>1 public holiday</li>
-		<li>Dani: 6 days vacation</li>
-		<li>Dani: 4 days JDT Summit</li>
-		<li>Tom:  2 days vacation</li>
-		<li>Tom:  1 day conference</li>
+		<li>&frac12; day local holiday (Knabenschiessen)</li>
+		<li>Tom: 10 days vacation</li>
+		<li>Tom: 3 days compensation</li>
+		<li>Dani: 3 days compensation</li>
 	</ul>
       
 	<h3>Previous Milestones</h3>
