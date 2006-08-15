@@ -15,22 +15,23 @@ Bug reports and feature requests which do not provide enough information to be t
 It is the reporters task to first fill in all needed information which
 is necessary and then reopen the report. Missing important information includes:<br>
 <ul>
-  <li>Build id - the Build id can be found in the About dialog (<code>Help &gt; About Eclipse Platform</code>)</li>
-  <li>Are other plug-ins installed? If so, which ones?
+  <li>build id - the Build id can be found in the About dialog (<code>Help &gt; About Eclipse Platform</code>)</li>
+  <li>are other plug-ins installed? If so, which ones?
   <li>VM information - if not sure start eclipse using <code>-vmargs -showversion</code></li>
   <li>are there related entries in the .log file? - the log file is <code><span style="font-style: italic;">&lt;workspace location&gt;</span>/.metadata/.log</code><br>
   </li>
   <ul>
     <li>if no, write it in the bug report<br>
     </li>
-    <li>if yes, attach all related entries (it's better attach the whole .log than miss related entries)</li>
+    <li>if yes, attach all related entries (it's better to attach the whole .log than miss related entries)</li>
   </ul>
-  <li>attached VM dump in case of VM crashes - normally the dumps can be found in the Eclipse install location</li>
-  <li>attached stack dumps in case of deadlocks - use <code>Ctrl+Break</code> on Windows and <code>kill -3</code> or <code>kill -QUIT</code> on Linux</li>
-  <li>attached stack dumps in case things that take (too) long - use <code>Ctrl+Break</code> on Windows and <code>kill -3</code> or <code>kill -QUIT</code> on Linux</li>
-  <li>attached preferences - if you think it depends on some preferences (e.g. worked before)</li>
-  <li>attached formatter profile - if the report is about badly formatted code</li>
+  <li>attach VM dump in case of VM crashes - normally the dumps can be found in the Eclipse install location</li>
+  <li>attach stack dumps in case of deadlocks - use <code>Ctrl+Break</code> on Windows and <code>kill -3</code> or <code>kill -QUIT</code> on Linux</li>
+  <li>attach stack dumps in case things that take (too) long - use <code>Ctrl+Break</code> on Windows and <code>kill -3</code> or <code>kill -QUIT</code> on Linux</li>
+  <li>attach preferences - if you think it depends on some preferences (e.g. worked before)</li>
+  <li>attach formatter profile - if the report is about badly formatted code</li>
   <li>specify the concrete editor for editor bugs, e.g. "copy broken in Text editor" instead of "copy does not work in editor"</li>
+  <li>specify the keyboard and Locale if the bug is about key bindings not working or weird characters appearing on typing
   <li>try to provide steps to reproduce the problem and attach test resources (if possible)</li>
   <li>tell us if you write code against J2SE 5.0 i.e. compiler compliance level set to 1.5?</li>
 </ul>
