@@ -37,10 +37,8 @@ ob_start();
 			<h3>Releases currently under development</h3>
 			
     <ul>
-      <li><a href="eclipse_project_plan_3_2.html"> Eclipse Platform Project 3.2 
-        Plan</a><br>
-        This document lays out the feature and API set for the 3.2 release of 
-        Eclipse. </li>
+      <li><a href="eclipse_project_plan_3_3.html"> Eclipse Platform Project 3.3 Plan</a><br>
+        This document lays out the feature and API set for the 3.3 release of Eclipse. </li>
       <li><a href="http://www.eclipse.org/eclipse/platform-releng/buildSchedule.html"> 
         Release Engineering Build Schedule</a><br>
         Schedule for Eclipse Platform nightly, integration, and milestone builds. 
@@ -117,6 +115,8 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>Historical information about past releases</h3>
 			<ul>
+ 	        <li><a href="eclipse_project_plan_3_2.html"> Eclipse Platform Project 3.2 Plan</a><br>
+        	This document lays out the feature and API set for the 3.2 release of Eclipse. </li>
 			<li><a href="eclipse_maintenance_schedule_3_1_x.html" >
 				Eclipse 3.1 Maintenance Release Schedule</a><br>
       			Timeline for 3.1.x maintenance stream.
