@@ -14,12 +14,9 @@
 	#
 	#****************************************************************************
 	
-	$pageTitle 		= "Get Involved in the Debug Platform";
+	$pageTitle 		= "Get Involved in the Debug Project";
 	$pageKeywords	= "involved, debug, platform, debugging, debugger, jdt, breakpoints";
 	$pageAuthor		= "Debug Team";
-
-	$Nav->addCustomNav("Platform Debug Mailing List",	"http://dev.eclipse.org/mailman/listinfo/platform-debug-dev",	"_self", 2);
-	$Nav->addCustomNav("JDT Debug Mailing List",	"http://dev.eclipse.org/mailman/listinfo/jdt-debug-dev",	"_self", 2);	
 	
 	$html = <<<EOHTML
 

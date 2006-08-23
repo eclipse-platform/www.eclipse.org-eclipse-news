@@ -22,8 +22,8 @@
 <div id="maincontent">
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
-		<h2>The Debug Platform</h2>
-		<p><h3>New Website</h3><br/> The Debug team has moved to Phoenix. 
+		<h2>New Website</h2>
+		<p>The Debug team has moved to Phoenix. 
 			At this point our new home is still being built so we ask for your patience and understanding as we migrate all of our existing resources.</p>
 		<div class="homeitem3col">
 			<h3>Platform Debug Overview</h3>
