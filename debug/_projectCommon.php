@@ -1,8 +1,17 @@
 <?php
 
+	# Page updated by Michael Rennie
+	# Date: August 22, 2006
+	# Default page items include the following:
+	#	Home
+	#	Downloads
+	#	What's New
+	#	Get Involved!
+	#	Filing Bugs
 	# set default theme
-	$_theme = "";
-	$theme = "";
+	
+	$_theme = "Phoenix";
+	$theme = "Phoenix";
 	if(isset($_POST['theme'])) {
 		$_theme = $_POST['theme'];
 	}
@@ -15,15 +24,13 @@
 		$theme = $App->getUserPreferedTheme();
 	}
 
- 
-	
-
-	# Define your project-wide Nav bars here.
-	# Format is Link text, link URL (can be http://www.someothersite.com/), target (_self, _blank), level (1, 2 or 3)
-	$Nav->addNavSeparator("Phoenix Home", "/phoenix/");
-	$Nav->addCustomNav("About", 			"/phoenix/about.php",	 		"_self", 2);
-	$Nav->addCustomNav("Downloads", 		"/phoenix/downloads.php", 		"_self", 2);
-	$Nav->addCustomNav("Getting Started", 	"/phoenix/docs/",			 	"_self", 2);
-	$Nav->addCustomNav("Development", 		"/phoenix/development.php", 	"_self", 2);
+	# Defined project nav bar links
+	$Nav->addNavSeparator("Project Home", 	"/eclipse/debug/index.php",			"_self", 1);
+	# $Nav->addCustomNav("What's New",		"whats_new.php",	"_self", 2);
+	# $Nav->addCustomNav("Downloads", 		"downloads.php", 	"_self", 2);
+	# $Nav->addCustomNav("Installation", 		"install.php", 		"_self", 2);
+	$Nav->addCustomNav("Get Involved!",		"/eclipse/debug/get_involved.php",	"_self", 2);
+	# $Nav->addCustomNav("Filing Bugs",		"filing_bugs.php",	"_self", 2);
+	# $Nav->addCustomNav("FAQ", 				"faq.php", 			"_self", 2);
 
 ?>
