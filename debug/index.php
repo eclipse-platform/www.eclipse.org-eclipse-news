@@ -16,12 +16,6 @@
 	$pageTitle 		= "Eclipse Debug Project";
 	$pageKeywords	= "debug, platform, debugging, debugger, jdt, breakpoints";
 	$pageAuthor		= "Debug Team";
-	
-	# Add page-specific Nav bars here
-	# Format is Link text, link URL (can be http://www.someothersite.com/), target (_self, _blank), level (1, 2 or 3)
-	# $Nav->addNavSeparator("My Page Links", 	"downloads.php");
-	# $Nav->addCustomNav("My Link", "mypage.php", "_self", 3);
-	 $Nav->addCustomNav("Google", "http://www.google.com/", "_blank", 3);
 
 	$html = <<<EOHTML
 
@@ -29,10 +23,10 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<h2>The Debug Platform</h2>
-		<p>New Website<br /> The Debug team has moved to Phoenix. 
+		<p><h3>New Website</h3><br/> The Debug team has moved to Phoenix. 
 			At this point our new home is still being built so we ask for your patience and understanding as we migrate all of our existing resources.</p>
 		<div class="homeitem3col">
-			<h3>Debug Overview</h3>
+			<h3>Platform Debug Overview</h3>
 			<p>The Debug component of the platform defines language independent
 			    facilities and mechanisms for:</p>
 		    <ul>
@@ -49,21 +43,25 @@
 		    implementation of a debugger, it is the duty of other plug-ins to
 		    provide language specific implementations of debuggers.</p>
 		</div>
-		<div class="homeitem">
-			<h3>Narrow column</h3>
-			<ul>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-			</ul>
-		</div>
 		<div class="homeitem3col">
-			<h3>This is a wide column</h3>
-			<ul>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-			</ul>
+		<h3>JDT Debug Overview</h3>
+			<p> JDT Debug implements Java debugging support and works with any JDPA-compliant target 
+	      		Java VM. It is implemented on top of the language independent &quot;debug 
+	      		model&quot; provided by the platform debugger.</p>
+	      		
+      		<p>JDT debug provides the following debugging functionality:</font></p>
+	        <ul>
+		        <li>Launching of a Java VM in either run or debug mode</li> 
+		        <li>Attaching to a running Java VM</li>
+		        <li>Expression evaluation in the context of a stack frame</li> 
+		        <li>Scrapbook pages for interactive Java code snippet evaluation</li> 
+		        <li>Dynamic class reloading where supported by Java virtual machine</li>
+	        </ul>
+	        
+      		<p>Using a J9 vritual machine:</p>
+	        <ul>
+		        <li> <a href="plugins/org.eclipse.jdt.launching.j9/index.html">J9 launching support</a></li>
+	        </ul>
 		</div>
 	</div>
 </div>

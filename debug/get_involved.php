@@ -17,27 +17,33 @@
 	$pageTitle 		= "Get Involved in the Debug Platform";
 	$pageKeywords	= "involved, debug, platform, debugging, debugger, jdt, breakpoints";
 	$pageAuthor		= "Debug Team";
+
+	$Nav->addCustomNav("Platform Debug Mailing List",	"http://dev.eclipse.org/mailman/listinfo/platform-debug-dev",	"_self", 2);
+	$Nav->addCustomNav("JDT Debug Mailing List",	"http://dev.eclipse.org/mailman/listinfo/jdt-debug-dev",	"_self", 2);	
 	
 	$html = <<<EOHTML
 
 <div id="maincontent">
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
-		<h2>How you can get involved in the debug platform</h2>
-		<p>Intro text.<br /> <a href="#">more about something &raquo;</a> </p>
-		<div class="homeitem">
-			<h3>Narrow column</h3>
+		<div class="homeitem3col">
+			<h3>Platform Debug</h3>
 				<p>If you are interested in participating in the development of the Debug component, 
 	        	check out the developer's mailing list: <a href="http://dev.eclipse.org/mailman/listinfo/platform-debug-dev">platform-debug-dev@eclipse.org</a>. 
-	        	Chat with people there about your problems and interests, and find out 
-	        	what you can do to help. </p>
+	        	Chat with people there about your problems and interests, and find out what you can do to help. </p>
 	        	
 	        	<p>In particular, if you are interested in and familiar with debug
       			architectures and user interface design for one or more languages, the
       			Debug team wants to talk to you.</p>
+		</div>
+		<div class="homeitem3col">
+			<h3>JDT Debug</h3>
+				<p>If you are interested in participating in the development of the JDT Debug component, 
+        		check out the developer's mailing list: <a href="http://dev.eclipse.org/mailman/listinfo/jdt-debug-dev">jdt-debug-dev@eclipse.org</a>. 
+        		Chat with people there about your problems and interests, and find out what you can do to help.</p>
       			
-      			<p>For more detailed information, check out the <a href="dev.html">Development 
-        		Resources</a>.</p>
+      			<p>In particular, if you are interested in and familiar with the Java debug architecture,
+        		the JDT Debug team wants to talk to you.</p>
 		</div>
 	</div>
 </div>
