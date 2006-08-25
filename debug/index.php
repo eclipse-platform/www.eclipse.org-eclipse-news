@@ -22,11 +22,9 @@
 <div id="maincontent">
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
-		<h2>New Website</h2>
-		<p>The Debug team has moved to Phoenix. 
-			At this point our new home is still being built so we ask for your patience and understanding as we migrate all of our existing resources.</p>
 		<div class="homeitem3col">
 			<h3>Debug Project Overview</h3>
+			
 			<p>The Eclipse Debug Project is not a single project unto itself, it is in fact comprised of 
 			two distinct sub-projects: Platform Debug and JDT Debug.</p>
 			
@@ -61,6 +59,14 @@
 				</tr>
 				</tbody>
 			</table>
+		</div>
+	</div>
+	<div class="rightcolumn">
+		<div class="sideitem">
+			<h6>Quick Links</h6>
+			<ul>
+				<li><a href="/eclipse/debug/about.php">About this content</a></li>
+			</ul>
 		</div>
 	</div>
 </div>

@@ -44,6 +44,9 @@
 	<div id="rightcolumn">
 		<div class="sideitem">
 			<h6>Quick Links</h6>
+			<ul>
+				<li><a href="/eclipse/debug/about.php">About this content</a></li>
+			</ul>
 		</div>
 		<div class="sideitem">
 			<h6>Plugins</h6>

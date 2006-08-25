@@ -26,8 +26,8 @@
 
 	# Defined project nav bar links
 	$Nav->addNavSeparator("Project Home", 	"/eclipse/debug/index.php",			"_self", 1);
-	$Nav->addNavSeparator("Platform Debug", 	"/eclipse/debug/platform/index.php",	"_self", 2);
-	$Nav->addNavSeparator("JDT Debug", 	"/eclipse/debug/jdt/index.php",	"_self", 2);
+	$Nav->addCustomNav("Platform Debug", 	"/eclipse/debug/platform/index.php",	"_self", 2);
+	$Nav->addCustomNav("JDT Debug", 	"/eclipse/debug/jdt/index.php",	"_self", 2);
 	$Nav->addCustomNav("Get Involved!",		"/eclipse/debug/get_involved.php",	"_self", 2);
 	# $Nav->addNavSeparator("Project Home", 	"/eclipse/debug/index.php",			"_self", 1);
 	# $Nav->addCustomNav("What's New",		"whats_new.php",	"_self", 2);

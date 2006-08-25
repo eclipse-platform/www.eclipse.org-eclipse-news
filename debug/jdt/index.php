@@ -47,11 +47,14 @@
 	<div id="rightcolumn">
 		<div class="sideitem">
 			<h6>Quick Links</h6>
+			<ul>
+				<li><a href="/eclipse/debug/about.php">About this content</a></li>
+			</ul>
 		</div>
 		<div class="sideitem">
 			<h6>Plugins</h6>
 			<ul>
-				<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.debug" target="_top">org.eclipse.jdt.debug</a></li>
+				<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.debug" target="_top">jdt.debug</a></li>
 		        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.debug.ui" target="_top">jdt.debug.ui</a></li>
 		        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.launching" target="_top">jdt.launching</a></li>
 		        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.launching.j9" target="_top">jdt.launching.j9</a></li>
