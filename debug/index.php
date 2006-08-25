@@ -45,11 +45,10 @@
 			<p>As mentioned the Debug Project is broken down into two smaller sub-projects, each with 
 			its own set of committers, projects goals and plans, bug categories and mailing lists.</p>
 			<table width="100%" border="0" summary="The list of sub-projects for the Debug Project">
-				<caption>Debug Project Components</caption>
 				<thead>
 					<tr>
-					<th width="30%" colspan="1" rowspan="1">Name</th>
-					<th width="70%" colspan="1" rowspan="1">Description</th>
+					<th width="30%" colspan="1" rowspan="1" align="left">Name</th>
+					<th width="70%" colspan="1" rowspan="1" align="left">Description</th>
 					</tr>
 				</thead>
 				<tbody>
