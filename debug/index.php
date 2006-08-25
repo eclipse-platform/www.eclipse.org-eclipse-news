@@ -17,8 +17,8 @@
 	$pageKeywords	= "debug, platform, debugging, debugger, jdt, breakpoints";
 	$pageAuthor		= "Debug Team";
 
-	$Nav->addNavSeparator("Platform Debug", 	"/platform/index.php",	"_self", 2);
-		$Nav->addNavSeparator("JDT Debug", 	"/jdt/index.php",	"_self", 2);
+	$Nav->addNavSeparator("Platform Debug", 	"/eclipse/debug/platform/index.php",	"_self", 3);
+	$Nav->addNavSeparator("JDT Debug", 	"/eclipse/debug/jdt/index.php",	"_self", 3);
 	
 	$html = <<<EOHTML
 
@@ -42,8 +42,10 @@
 		</div>
 		<div class="homeitem3col">
 			<h3>Debug Components</h3>
+			
 			<p>As mentioned the Debug Project is broken down into two smaller sub-projects, each with 
 			its own set of committers, projects goals and plans, bug categories and mailing lists.</p>
+			
 			<table width="100%" border="0" summary="The list of sub-projects for the Debug Project">
 				<thead>
 					<tr>
