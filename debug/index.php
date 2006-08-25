@@ -61,7 +61,7 @@
 			</table>
 		</div>
 	</div>
-	<div class="rightcolumn">
+	<div id="rightcolumn">
 		<div class="sideitem">
 			<h6>Quick Links</h6>
 			<ul>
