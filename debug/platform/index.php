@@ -40,13 +40,16 @@
 		    implementation of a debugger, it is the duty of other plug-ins to
 		    provide language specific implementations of debuggers.</p>
 		</div>
+	</div>
 	<div id="rightcolumn">
 		<div class="sideitem">
+			<h6>Quick Links</h6>
+		</div>
+		<div class="sideitem">
 			<h6>Plugins</h6>
-			<p>The Platform Debug component consists of the following plug-ins: </p>
 			<ul>
-				<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.debug.core" target="_top">org.eclipse.debug.core</a></li>
-        		<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.debug.ui" target="_top">org.eclipse.debug.ui</a></li>
+				<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.debug.core" target="_top">debug.core</a></li>
+        		<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.debug.ui" target="_top">debug.ui</a></li>
 			</ul>
 		</div>
 	</div>

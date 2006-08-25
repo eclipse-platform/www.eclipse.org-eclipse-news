@@ -16,9 +16,6 @@
 	$pageTitle 		= "Eclipse Debug Project";
 	$pageKeywords	= "debug, platform, debugging, debugger, jdt, breakpoints";
 	$pageAuthor		= "Debug Team";
-
-	$Nav->addNavSeparator("Platform Debug", 	"/eclipse/debug/platform/index.php",	"_self", 3);
-	$Nav->addNavSeparator("JDT Debug", 	"/eclipse/debug/jdt/index.php",	"_self", 3);
 	
 	$html = <<<EOHTML
 
