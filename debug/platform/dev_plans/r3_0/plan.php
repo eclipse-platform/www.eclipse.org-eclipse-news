@@ -24,52 +24,45 @@
 		<div class="homeitem3col">
 			<h3>Overall 3.0 Plan</h3>
 			
-			<h4>The overall themes for platform debug are:</h4>
+			<h4>Overall Themes for Platform Debug:</h4>
 	      	<ul>
 		        <li>scalability and extensibility for many debuggers</li>
 		        <li>improved user experience</li>
 		        <li>concurrency</li>
 	      	</ul>
 	      	<h4>Top Work Items</h4>
-  			<ul>
-		        <li>Scalability Issues 
-		          	<ul>
-			            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Filter the Debug UI based 
-			              on dynamic debug contexts and activities</li>
-			            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Provide global retargettable 
-			              breakpoint creation/deletion actions</li>
-			            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Improve step filtering for 
-			              other debug models (toggle on/off to apply to all stepping actions)</li>
-		          	</ul>
-		        </li>
-		        <li>Concurrency 
-		          	<ul>
-			            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Background label generation 
-			              for Debug and Variables views</li>
-		          	</ul>
-		        </li>
-		        <li>Context Menu Launching 
-		          	<ul>
-			            <li><img src="/eclipse/debug/images/progress.gif"> Provide appropriate launch actions (Run, 
-			              Debug,...) in the context menu</li>
-		          	</ul>
-		        </li>
-		        <li>Generic Console Enhancements 
-		          	<ul>
-			            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> The console will support 
-			              buffering to support clients that produce console output quickly</li>
-			            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> The console will support 
-			              a maximum buffer size to support clients that produce large amounts 
-			              of output</li>
-		          	</ul>
-		        </li>
-		        <li>Platform Source Lookup Facilities 
-		          	<ul>
-			            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Provide common source lookup 
-			              facilities in the Debug platform for common source repositories</li>
-		          	</ul>
-		        </li>
-  			</ul>
+  			<h6>Scalability Issues </h6>
+	          	<ul>
+		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Filter the Debug UI based 
+		              on dynamic debug contexts and activities</li>
+		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Provide global retargettable 
+		              breakpoint creation/deletion actions</li>
+		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Improve step filtering for 
+		              other debug models (toggle on/off to apply to all stepping actions)</li>
+	          	</ul>
+	        <h6>Concurrency </h6>
+	          	<ul>
+		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Background label generation 
+		              for Debug and Variables views</li>
+	          	</ul>
+	        <h6>Context Menu Launching </h6>
+	          	<ul>
+		            <li><img src="/eclipse/debug/images/progress.gif"> Provide appropriate launch actions (Run, 
+		              Debug,...) in the context menu</li>
+	          	</ul>
+	        <h6>Generic Console Enhancements </h6>
+	          	<ul>
+		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> The console will support 
+		              buffering to support clients that produce console output quickly</li>
+		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> The console will support 
+		              a maximum buffer size to support clients that produce large amounts 
+		              of output</li>
+	          	</ul>
+	        <h6>Platform Source Lookup Facilities</h6>
+	          	<ul>
+		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Provide common source lookup 
+		              facilities in the Debug platform for common source repositories</li>
+	          	</ul>
   			
   			<h4>Planned Items</h4>
       		<ul>
