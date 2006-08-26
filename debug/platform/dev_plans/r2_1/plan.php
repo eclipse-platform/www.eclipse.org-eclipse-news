@@ -141,7 +141,7 @@
 		        <b> Actions</b>
 		          	<ul>
 			            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Workbench key binding support</li>
-			            <li><b>[Deferred]</b> Improve start-up performance of contributed toggle actions in debug views (lazy activation)</li>
+			            <li><img src="/eclipse/debug/images/defer.gif"> Improve start-up performance of contributed toggle actions in debug views (lazy activation)</li>
 			            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Support for new &quot;step debug&quot; interface/action</li>
 		          	</ul>
 		        <b> Variables</b>

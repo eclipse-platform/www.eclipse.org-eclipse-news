@@ -544,9 +544,9 @@
 	          <ul>
 	            <li><img src="/eclipse/debug/images/progress.gif"> Review and cleanup the launch variable 
 	              API and implementation</li>
-	            <li><img src="/eclipse/debug/images/defer.gif" height=10 width=10>Support for recursive variable resolution</li>
-	            <li><img src="/eclipse/debug/images/defer.gif" height=10 width=10>Improve UI for variable selection</li>
-	            <li><img src="/eclipse/debug/images/defer.gif" height=10 width=10>Identifiy areas where variables should be supported</li>
+	            <li><img src="/eclipse/debug/images/defer.gif">Support for recursive variable resolution</li>
+	            <li><img src="/eclipse/debug/images/defer.gif">Improve UI for variable selection</li>
+	            <li><img src="/eclipse/debug/images/defer.gif">Identifiy areas where variables should be supported</li>
 	          </ul>
 	        <b> Concurrency</b> [1 person day] [Jared B] 
 	          <ul>
@@ -555,14 +555,14 @@
 	          </ul>
 	        <b> Object Browsers</b> [1 person week] [Darin W] - Deferred to M4 
 	          <ul>
-	            <li><img src="/eclipse/debug/images/defer.gif" height=10 width=10>Review API and implementation</li>
-	            <li><img src="/eclipse/debug/images/defer.gif" height=10 width=10>Suggest new terminology/art work</li>
+	            <li><img src="/eclipse/debug/images/defer.gif">Review API and implementation</li>
+	            <li><img src="/eclipse/debug/images/defer.gif">Suggest new terminology/art work</li>
 	          </ul>
 	        <b> Watch Items</b> [2 person weeks] [Jared B] 
 	          <ul>
 	            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Define a common set of actions 
 	              for creating/editing watch items</li>
-	            <li><img src="/eclipse/debug/images/defer.gif" height=10 width=10>Provide an extension point for contributing a model specific UI 
+	            <li><img src="/eclipse/debug/images/defer.gif">Provide an extension point for contributing a model specific UI 
 	              for watch item creation/editing - <b>Deferred to M4</b></li>
 	            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Provide an extension point 
 	              for contributing a watch item delegate for a debug model (to compute 
@@ -575,7 +575,7 @@
 			<h3>History - Milestone 2 (Friday, July 18th)</h3>
 			<b> Generic Console</b> [4 person weeks] 
 	          <ul>
-	            <li><img src="/eclipse/debug/images/defer.gif" height=10 width=10><i>[Deferred to M3]</i> We envison a tabbed view of consoles driven 
+	            <li><img src="/eclipse/debug/images/defer.gif"><i>[Deferred to M3]</i> We envison a tabbed view of consoles driven 
 	              by &quot;console inputs&quot; (similar to the editor pane/editor 
 	              input model). The debug platform will provide an implementation 
 	              of a &quot;process console&quot; (i.e. a console that reads/writes 
@@ -583,7 +583,7 @@
 	          </ul>
 	        <b> Launch Variable Review</b> [1 person weeks] 
 	          <ul>
-	            <li><img src="/eclipse/debug/images/defer.gif" height=10 width=10><i>[Deferred to M3]</i> Review and cleanup the launch variable 
+	            <li><img src="/eclipse/debug/images/defer.gif"><i>[Deferred to M3]</i> Review and cleanup the launch variable 
 	              API and implementation</li>
 	          </ul>
 		</div>
@@ -599,7 +599,7 @@
 	          </ul>
 	        <b> Environment Variables</b> [Jared B] 
 	          <ul>
-	            <li><img src="/eclipse/debug/images/defer.gif" height=10 width=10><i>[Deferred]</i> support for setting environment variables per 
+	            <li><img src="/eclipse/debug/images/defer.gif"><i>[Deferred]</i> support for setting environment variables per 
 	              launch configuration</li>
 	            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> launch tab for specifying 
 	              environment settings</li>
