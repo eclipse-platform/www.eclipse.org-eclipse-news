@@ -31,7 +31,7 @@
 		        <li>concurrency</li>
 	      	</ul>
 	      	<h4>Top Work Items</h4>
-  			<h6>Scalability Issues </h6>
+  			<h5>Scalability Issues </h5>
 	          	<ul>
 		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Filter the Debug UI based 
 		              on dynamic debug contexts and activities</li>
