@@ -56,13 +56,14 @@
 				<li>Fixes released to the <a  href="https://bugs.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=Platform&component=Debug&target_milestone=3.2.1&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=VERIFIED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&namedcmd=2.0.1+Fixed%27n+Verified&newqueryname=&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">3.2.x</a> branch</li>
 				<li>Fixes released to the <a  href="https://bugs.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=Platform&component=Debug&target_milestone=3.3&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=VERIFIED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&namedcmd=2.0.1+Fixed%27n+Verified&newqueryname=&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">3.3</a> branch</li>
 	        </ul>
-			
-      		<p><b><a name="Milestone_Planning"></a>3.2 Development Effort</b></p>
+		</div>
+		<div class="homeitem3col">
+      		<h3>Development Efforts</h3>
 		    <ul>
 		    	<li>The overall 2.1 plan is posted <a href="/eclipse/debug/platform/r2_1/plan.php">here </a>.</li>
 		    	<li>The overall 3.0 plan is posted <a href="">here </a>.</li>
 				<li>The overall 3.2 plan is posted <a href="r3_2/plan.html#Overall_Planning">here</a>.</li>
-				<li>The next milestone plan is posted <a href="r3_2/plan.html#Milestone_Planning">here</a>.</li>
+				<li>3.2 milestone plan is posted <a href="r3_2/plan.html#Milestone_Planning">here</a>.</li>
 		    	<li>The overall 3.3 plan is posted <a href="">here </a>.</li>
 		    </ul>
 		    <p>For more detailed information, check out the <a href="/eclipse/debug/platform/dev_resources.php">Development Resources</a>.</p>
