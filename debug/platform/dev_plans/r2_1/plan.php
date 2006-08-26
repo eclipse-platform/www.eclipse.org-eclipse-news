@@ -130,7 +130,6 @@
 		<div class="homeitem3col">
 			<h3>2.1 Development Effort - Milestone 5 (February 7th, 2003)</h3>
 			<blockquote>
-	        	<a href="http://dev.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=Platform&component=Debug&target_milestone=2.1&target_milestone=2.1+M1&target_milestone=2.1+M2&target_milestone=2.1+M3&target_milestone=2.1+M4&target_milestone=2.1+M5&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&bug_severity=blocker&bug_severity=critical&bug_severity=major&bug_severity=normal&bug_severity=minor&bug_severity=trivial&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">Fixing defects</a><br>
 		        <b> Console</b>
 		          	<ul>
 		            	<li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Support for showing the output of a specific process with drop-down menu </li>
@@ -155,6 +154,7 @@
 			            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Remove support for working set filters in launch dialog</li>
 			            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Support for editing &amp; launching a single configuration from the dialog (for external tools/ant)</li>
 		          	</ul>
+		        <a href="http://dev.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=Platform&component=Debug&target_milestone=2.1&target_milestone=2.1+M1&target_milestone=2.1+M2&target_milestone=2.1+M3&target_milestone=2.1+M4&target_milestone=2.1+M5&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&bug_severity=blocker&bug_severity=critical&bug_severity=major&bug_severity=normal&bug_severity=minor&bug_severity=trivial&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">Fixing defects</a><br>
 		 	</blockquote>
 		 </div>
 		 <div class="homeitem3col">
@@ -167,9 +167,9 @@
 	<div id="rightcolumn">
 		<div class="sideitem">
 			<h6>Quick Links</h6>
-			<ul>
-				<li><a href="/eclipse/debug/about.php">About this content</a></li>
-			</ul>
+			<blockquote>
+				<a href="/eclipse/debug/about.php">About this content</a>
+			</blockquote>
 		</div>
 	</div>
 </div>
