@@ -273,7 +273,7 @@
   				</li>
     			<li>Concurrency
   				<ul>
-		            <li>[deferred background content, have background labels] Background 
+		            <li> [deferred background content, have background labels] Background 
 		              content provider for Debug and Variables Views</li>
   				</ul>
     			</li>
@@ -395,8 +395,7 @@
 		<div class="homeitem3col">
 			<h3>History - Milestone 6 (Friday, December 19)</h3>
 			<ul>
-		        <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Migrate to Equniox (OSGi) 
-		          Runtime  </li>
+		        <li>Migrate to Equniox (OSGi) Runtime  </li>
 		        <li>Bug Fixing
 		        <ul>
 		        	<li><img src="/eclipse/debug/images/progress.gif"> Reduce the bug backlog</li>
@@ -431,10 +430,8 @@
 		<div class="homeitem3col">
 			<h3>History - Milestone 5 (Friday, November 21st)</h3>
 			<ul>
-		        <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Remove Dependency on Xerces 
-		          plug-in</li>
-		        <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Variable Support (String 
-		          Substitution) 
+		        <li>Remove Dependency on Xerces plug-in</li>
+		        <li>Variable Support (String Substitution) 
 		          <ul>
 		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Create new plug-in 
 		              (<code>org.eclipse.core.variables</code>) to support generic string 
@@ -465,11 +462,9 @@
 		          <ul>
 		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Finalize API and 
 		              implementation</li>
+		            <li>New art work for toggle button in variable &amp; expression view</li>
 		          </ul>
 		        </li>
-		        <ul>
-		          <li>New art work for toggle button in variable &amp; expression view</li>
-		        </ul>
 		        <li>Source Lookup [<a href="source_lookup.php">Proposal</a>] 
 		          <ul>
 		            <li>Investigate the integration of &quot;source locations&quot; into 
@@ -484,7 +479,7 @@
 		              of visible views, actions, and launch configuration types</li>
 		          </ul>
 		        </li>
-		        <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Launch Tab Framework 
+		        <li>Launch Tab Framework 
 		          <ul>
 		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Improve efficiency 
 		              of launch dialog/tab interaction by adding more lifecycle methods 
@@ -500,8 +495,8 @@
 		<div class="homeitem3col">
 			<h3>History - Milestone 4 (Friday, October 10th)</h3>
 			<ul>
-		        <li>Generic Console [Darin S] [10 days] (<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=37263">bug 
-		          37263</a>) 
+		        <li>Generic Console [Darin S] [10 days] [<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=37263">bug 
+		          37263</a>]
 		          <ul>
 		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Create a new plug-in providing 
 		              extensible console support (org.eclipse.ui.console) via a page book 
@@ -524,8 +519,8 @@
 		            <li><i>[Deferred]</i> Identify areas where variables should be supported</li>
 		          </ul>
 		        </li>
-		        <li>Concurrency [Luc B] [10 days] (<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=16036">bug 
-		          16036</a>) 
+		        <li>Concurrency [Luc B] [10 days] [<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=16036">bug 
+		          16036</a>]
 		          <ul>
 		            <li><img src="/eclipse/debug/images/progress.gif"> Investigate use of jobs for updating 
 		              Debug view - determine whether support should exist in the debug 
@@ -549,8 +544,8 @@
 		              and launch config tabs to configure source lookup.</li>
 		          </ul>
 		        </li>
-		        <li>Scalability [Jared B] [10 days] (<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=36495">bug 
-		          36495</a>) 
+		        <li>Scalability [Jared B] [10 days] [<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=36495">bug 
+		          36495</a>]
 		          <ul>
 		            <li><img src="/eclipse/debug/images/progress.gif"> Investigate the use of contexts (provided 
 		              by the workbench) to filter the set of available actions and views 
@@ -564,8 +559,8 @@
 		              or views once they have been added.</li>
 		          </ul>
 		        </li>
-		        <li>Environment Variables [Jared B] [5 days] (<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=40863">bug 
-		          40863</a>) 
+		        <li>Environment Variables [Jared B] [5 days] [<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=40863">bug 
+		          40863</a>]
 		          <ul>
 		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Investigate support to append 
 		              to existing environment variables, rather than having to specify 
@@ -597,9 +592,9 @@
 		          <ul>
 		            <li><img src="/eclipse/debug/images/progress.gif"> Review and cleanup the launch variable 
 		              API and implementation</li>
-		            <li>Support for recursive variable resolution</li>
-		            <li>Improve UI for variable selection</li>
-		            <li>Identifiy areas where variables should be supported</li>
+		            <li><img src="/eclipse/debug/images/defer.gif" height=10 width=10>Support for recursive variable resolution</li>
+		            <li><img src="/eclipse/debug/images/defer.gif" height=10 width=10>Improve UI for variable selection</li>
+		            <li><img src="/eclipse/debug/images/defer.gif" height=10 width=10>Identifiy areas where variables should be supported</li>
 		          </ul>
 		        </li>
 		        <li>Concurrency [1 person day] [Jared B] 
@@ -611,15 +606,15 @@
 		        <li>Object Browsers [1 person week] [Darin W] - <b>Deferred to 
 		          M4</b> 
 		          <ul>
-		            <li>Review API and implementation</li>
-		            <li>Suggest new terminology/art work</li>
+		            <li><img src="/eclipse/debug/images/defer.gif" height=10 width=10>Review API and implementation</li>
+		            <li><img src="/eclipse/debug/images/defer.gif" height=10 width=10>Suggest new terminology/art work</li>
 		          </ul>
 		        </li>
 		        <li>Watch Items [2 person weeks] [Jared B] 
 		          <ul>
 		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Define a common set of actions 
 		              for creating/editing watch items</li>
-		            <li>Provide an extension point for contributing a model specific UI 
+		            <li><img src="/eclipse/debug/images/defer.gif" height=10 width=10>Provide an extension point for contributing a model specific UI 
 		              for watch item creation/editing - <b>Deferred to M4</b></li>
 		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Provide an extension point 
 		              for contributing a watch item delegate for a debug model (to compute 
@@ -635,7 +630,7 @@
 			<ul>
 		        <li>Generic Console [4 person weeks] 
 		          <ul>
-		            <li><i>[Deferred to M3]</i> We envison a tabbed view of consoles driven 
+		            <li><img src="/eclipse/debug/images/defer.gif" height=10 width=10><i>[Deferred to M3]</i> We envison a tabbed view of consoles driven 
 		              by &quot;console inputs&quot; (similar to the editor pane/editor 
 		              input model). The debug platform will provide an implementation 
 		              of a &quot;process console&quot; (i.e. a console that reads/writes 
@@ -644,7 +639,7 @@
 		        </li>
 		        <li>Launch Variable Review [1 person weeks] 
 		          <ul>
-		            <li><i>[Deferred to M3]</i> Review and cleanup the launch variable 
+		            <li><img src="/eclipse/debug/images/defer.gif" height=10 width=10><i>[Deferred to M3]</i> Review and cleanup the launch variable 
 		              API and implementation</li>
 		          </ul>
 		        </li>
@@ -664,7 +659,7 @@
 		        </li>
 		        <li>Environment Variables [Jared B] 
 		          <ul>
-		            <li><i>[Deferred]</i> support for setting environment variables per 
+		            <li><img src="/eclipse/debug/images/defer.gif" height=10 width=10><i>[Deferred]</i> support for setting environment variables per 
 		              launch configuration</li>
 		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> launch tab for specifying 
 		              environment settings</li>

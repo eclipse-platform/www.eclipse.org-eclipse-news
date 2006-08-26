@@ -1,0 +1,48 @@
+
+<h1>Launch Alternatives</h1>
+<p>This document describes some of the alternatives that have been considered 
+  for the launch configurations dialog that exists in Eclispe 3.0 and prior.</p>
+<p>The usability problems with the launch configruations dialog to be considered 
+  are:</p>
+<ul>
+  <li>Confusing and intimidating to novice users. When confronted with the dialog, 
+    users do not know what to do. The terminology is also intimidating and ambiguous 
+    - i.e. &quot;create, manage, and run configurations&quot;. The user does not 
+    know what a &quot;configuration&quot; is.</li>
+  <li>Scalability issues in regards to the number of lanuch configurations types 
+    and launch configuration instances. The tree on the left hand side of the 
+    dialog can get large quickly.</li>
+  <li>Making the &quot;copy/duplicate&quot; function more visible. The dialog 
+    only presents &quot;new&quot; and &quot;delete&quot; buttons. The &quot;duplciate&quot; 
+    action is hidden in the context menu of the tree (since there is not enough 
+    screen realestate to show the button at the bottom of the tree).</li>
+  <li>Consider the introdcution of launch config inheritance/templates.</li>
+</ul>
+<h2>A Launch Wizard</h2>
+<p>To make the launch process less intimidating, a launch wizard has been considered. 
+  Two pages are presented. The first page allows the user to select the application 
+  to run, and the second allows them to configure the application. The user can 
+  launch from the first page of the wizard by pressing &quot;Run&quot; (the Finish 
+  button).</p>
+<p><img src="launch-wiz-p1.JPG" width="440" height="424"><br>
+  <img src="launch-wiz-p2.JPG" width="555" height="609"> </p>
+<p>The benefits of this solution:</p>
+<ul>
+  <li>The wizard is less intimidating. The first page of the wizard tells the 
+    user what to do - &quot;select or configure an application to run&quot;. As 
+    the user selects different types of applications the message changes with 
+    a description of the appliaction type - for example, &quot;Run a Java application&quot;. 
+    The terminology of &quot;application&quot; is more descriptive than &quot;launch 
+    configuration&quot;. </li>
+  <li>There is room for a &quot;Copy&quot; button on the first page of the wizard.</li>
+  <li>The second page of the wizard has an application type specific banner image 
+    (just a polish item really)</li>
+</ul>
+<p>The drawbacks of this solution:</p>
+<ul>
+  <li>Copying attributes between configurations or moving from configuration to 
+    configuration becomes more tedious, as the user must go back and forth between 
+    the pages to move betwen configurations.</li>
+  <li>Non-standard buttons to enable single-click &quot;new&quot; and &quot;copy&quot; 
+    operations (i.e. create a new config and advance to the next page automatically).</li>
+</ul>
