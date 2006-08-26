@@ -251,6 +251,7 @@
 		</div>
 		<div class="homeitem3col">
 			<h3>3.0 Development Effort - Milestone 9 (Friday, May 7th)</h3>
+			<blockquote>
 			<b> Scalability Issues</b>
   				<ul>
 		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Experiment with contexts 
@@ -285,9 +286,11 @@
 		            <li><img src="/eclipse/debug/images/progress.gif"> Clean up TODO's</li>
           		</ul>
    			<b> Bug Fixing</b>
+   			</blockquote>
 		</div>
 		<div class="homeitem3col">
 			<h3>History - Milestone 8 (Friday, March 26th)</h3>
+			<blockquote>
 			<b> Scalability Issues </b>
 		          <ul>
 		            <li><img src="/eclipse/debug/images/progress.gif"> Experiment with contexts to dynamically 
@@ -332,9 +335,11 @@
 	            <li>Clean up TODO's</li>
 	          </ul>
 	        <b> Bug Fixing</b>
+	        </blockquote>
 		</div>
 		<div class="homeitem3col">
 			<h3>History - Milestone 7 (Friday, February 13th)</h3>
+			<blockquote>
 			<b> Scalability Issues</b>
 	          <ul>
 	            <li>Experiment with contexts to dynamically enable activities related 
@@ -363,12 +368,14 @@
 	            <li>Support maximum buffer size (i.e. bounded memory usage)</li>
 	          </ul>
 	        <b> Bug Fixing</b>
+	        </blockquote>
 		</div>
 		<div class="homeitem3col">
 			<h3>History - Milestone 6 (Friday, December 19)</h3>
+			<blockquote>
 			<b> Equniox (OSGi) Runtime</b>
 				<ul>
-					<li><img src="/eclipse/debug/images/ok.gif"> Migrate to the new Equinox Runtime</li>
+					<li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Migrate to the new Equinox Runtime</li>
 				</ul>
 	        <b> Bug Fixing</b>
 		        <ul>
@@ -395,12 +402,14 @@
 		        <ul>
 		        	<li><img src="/eclipse/debug/images/progress.gif"> Review Source Lookup Contribution [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=29890">Bug 29890</a>]</li>
 		        </ul>
+			</blockquote>
 		</div>
 		<div class="homeitem3col">
 			<h3>History - Milestone 5 (Friday, November 21st)</h3>
+			<blockquote>
 			<b> Xerces plug-in</b>
 				<ul>
-					<li><img src="/eclipse/debug/images/ok.gif"> Remove dependency on the Xerces plugin</li>
+					<li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Remove dependency on the Xerces plugin</li>
 				</ul>
 	        <b> Variable Support</b> (String Substitution) 
 	          <ul>
@@ -455,9 +464,11 @@
 	              explicit enter/exit information, allowing the tab to decide what 
 	              action to take rather than enforcing it to update and reinitialize.</li>
 	          </ul>
+	        </blockquote>
 		</div>
 		<div class="homeitem3col">
 			<h3>History - Milestone 4 (Friday, October 10th)</h3>
+			<blockquote>
 			<b> Generic Console </b>[Darin S] [10 days] [<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=37263">bug 
 		          37263</a>]
 		          <ul>
@@ -526,9 +537,11 @@
 	              should be able to specify if they want to append to an existing 
 	              environment or completely override an environment.</li>
 	          </ul>
+	          </blockquote>
 		</div>
 		<div class="homeitem3col">
 			<h3>History - Milestone 3 (Friday, August 29th)</h3>
+			<blockquote>
 			<b> Generic Console</b> [2 person weeks] [Darin W]
 		          <ul>
 		            <li><img src="/eclipse/debug/images/progress.gif"> We envison a page book view of consoles. 
@@ -570,9 +583,11 @@
 	            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Provide persistence of watch 
 	              items in the debug platform</li>
 	          </ul>
+	       </blockquote>
 		</div>
 		<div class="homeitem3col">
 			<h3>History - Milestone 2 (Friday, July 18th)</h3>
+			<blockquote>
 			<b> Generic Console</b> [4 person weeks] 
 	          <ul>
 	            <li><img src="/eclipse/debug/images/defer.gif"><i>[Deferred to M3]</i> We envison a tabbed view of consoles driven 
@@ -586,9 +601,11 @@
 	            <li><img src="/eclipse/debug/images/defer.gif"><i>[Deferred to M3]</i> Review and cleanup the launch variable 
 	              API and implementation</li>
 	          </ul>
+	       </blockquote>
 		</div>
 		<div class="homeitem3col">
 			<h3>History - Milestone 1</h3>
+			<blockquote>
 			<b> Extensible Launch Modes</b> [Darin W]  
 	          <ul>
 	            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> run, debug, ...</li>
@@ -623,11 +640,14 @@
 	            <li><i>[More work in M4, M5]</i> support for custom/extensible details 
 	              area based on selected variable</li>
 	          </ul>
+	       </blockquote>
 		</div>
 		<div class="homeitem3col">
 			<h3>Bug Resolution</h3>
+			<blockquote>
 				<a href="https://bugs.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=Platform&component=Debug&target_milestone=2.1.1&target_milestone=3.0&target_milestone=3.0+M1&target_milestone=3.0+M2&target_milestone=3.0+M3&target_milestone=3.0+M4&target_milestone=3.0+M5&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=VERIFIED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&namedcmd=2.0.1+Fixed%27n+Verified&newqueryname=&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0="> Fixes 
 		          released in 3.0</a></li>
+		    </blockquote>
 		</div>
 	</div>
 	<div id="rightcolumn">
