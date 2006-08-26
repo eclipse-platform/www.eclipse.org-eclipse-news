@@ -24,7 +24,7 @@
 		<div class="homeitem3col">
 			<h3>Overall 2.1 Plan</h3>
 			
-			<h4>The overall themes for platform debug are:</h4>
+			<h4>Overall Themes for Platform Debug:</h4>
 	        <ul>
 		        <li>robust and enhance</li>
 		        <li>reduce gestures, improve usability</li>
