@@ -24,7 +24,7 @@
 		<div class="homeitem3col">
 			<h3>Overall 3.0 Plan</h3>
 			
-			<h4>Overall Themes for Platform Debug:</h4>
+			<h2>Overall Themes for Platform Debug:</h2>
 	      	<ul>
 		        <li>scalability and extensibility for many debuggers</li>
 		        <li>improved user experience</li>
@@ -65,6 +65,7 @@
 			              facilities in the Debug platform for common source repositories</li>
 		          	</ul>
   			</blockquote>
+  			
   			<h4>Planned Items</h4>
       		<blockquote>
         		<b>Launch Framework</b>
@@ -122,7 +123,8 @@
               			</ul>
             		</li>
           		</ul>
-        		<li>Scalability Issues 
+          		
+        		<b>Scalability Issues </b>
       			<ul>
         			<li>Debug Contexts 
           				<ul>
@@ -181,8 +183,8 @@
 	              		</ul>
 	            	</li>
       			</ul>
-        		</li>
-        		<li>Debug Views 
+
+        		<b>Debug Views</b>
       			<ul>
         			<li>Variables View 
 	          			<ul>
@@ -212,8 +214,8 @@
               			</ul>
             		</li>
           		</ul>
-        		</li>
-        		<li>Concurrency 
+
+        		<b>Concurrency </b>
           		<ul>
             		<li>Views 
               			<ul>
@@ -232,11 +234,11 @@
               			</ul>
             		</li>
           		</ul>
-        		</li>
       		</blockquote>
+      		
       		<h4>Canceled Items</h4>
-      		<ul>
-        		<li> Watch Items 
+      		<blockquote>
+        		<b> Watch Items </b>
           			<ul>
 			            <li>Provide an extension point for contributing a model specific UI 
 			              for editing/creating watch items. Since watch items have a &quot;deferred&quot; 
@@ -245,8 +247,7 @@
 			              watch item. This would require separate actions to create watch 
 			              items, which is undesirable.</li>
           			</ul>
-        		</li>
-      		</ul>
+      		</blockquote>
 		</div>
 		<div class="homeitem3col">
 			<h3>3.0 Development Effort - Milestone 9 (Friday, May 7th)</h3>
