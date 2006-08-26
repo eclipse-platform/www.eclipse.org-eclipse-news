@@ -68,172 +68,142 @@
   			
   			<h4>Planned Items</h4>
       		<blockquote>
-        		<b>Launch Framework</b>
-          		<ul>
-            		<li>Extensible Launch Modes 
-	              		<ul>
-			                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> run, debug...</li>
-			                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> add &quot;profile&quot; 
-			                  mode to the debug platform</li>
-			                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> allow launch configuration 
-			                  tab groups to specify a set of tabs per launch mode</li>
-			                <li>launch actions should appear only when the mode is supported 
-			                  by something in the SDK (requires workbench visibility support)</li>
-	              		</ul>
-            		</li>
-            		<li>Environment Variables 
-	              		<ul>
-			                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> support for setting 
-			                  environment variables per launch configuration (must be done 
-			                  by each config type that requires it)</li>
-			                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> launch tab for specifying 
-			                  environment settings</li>
-	              		</ul>
-            		</li>
-            		<li>String Substitution Variables 
-	              		<ul>
-			                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> user defined variables 
-			                  that can be referenced in launch configurations - such as <i>${some_variable}</i></li>
-			                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> migrate string substitution 
-			                  support to new plug-in <code>org.eclipse.core.variables</code></li>
-			                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> extension point for 
-			                  variable definition supporting a default value, optional initializer 
-			                  (delegate), and optional resolver (allows resolution on each 
-			                  launch in the context of a launch configuration)</li>
-			                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> API for resolving variable 
-			                  values</li>
-			                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> review of API and implementation</li>
-	              		</ul>
-            		</li>
-            		<li>Usability 
-	              		<ul>
-			                <li><img src="/eclipse/debug/images/progress.gif"> investigate launching support from the context menu</li>
-	              		</ul>
-            		</li>
-            		<li>Launch Tab Framework 
-              			<ul>
-			                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Improve efficiency of 
-			                  launch dialog/tab interaction by adding more lifecycle methods 
-			                  to ILaunchConfigurationTab. The new methods will inform a tab 
-			                  when it is entered/exited, rather than calling initializeFrom/apply 
-			                  on the tab, which can be expensive calls. This provides the 
-			                  tab with explicit enter/exit information, allowing the tab to 
-			                  decide what action to take rather than enforcing it to update 
-			                  and reinitialize.</li>
-              			</ul>
-            		</li>
-          		</ul>
-          		
-        		<b>Scalability Issues </b>
-      			<ul>
-        			<li>Debug Contexts 
-          				<ul>
-			                <li><img src="/eclipse/debug/images/progress.gif"> investigate the use of <i>debug contexts</i> 
-			                  to dynamically filter the available set of views and actions 
-			                  in the debug perspective</li>
-			                <li><img src="/eclipse/debug/images/progress.gif"> investigate the use of <i>roles</i> 
-			                  to statically filter the set of available views and actions 
-			                  in the debugger</li>
-          				</ul>
-        			</li>
-	            	<li>Launch Configurations 
-	              		<ul>
-			                <li><img src="/eclipse/debug/images/progress.gif"> investigate ways to deal with the 
-			                  large number of launch configuration types, launch configurations, 
-			                  and launch shortcuts</li>
-	              		</ul>
-	            	</li>
-	            	<li>Retargettable Actions 
-	              		<ul>
-			                <li>create a set of actions in the debug platform that can be 
-			                  shared by other debuggers - add/remove breakpoint, run to line, 
-			                  etc. </li>
-	              		</ul>
-	            	</li>
-	            	<li>Source Lookup 
-	              		<ul>
-			                <li><img src="/eclipse/debug/images/progress.gif"> investigate needs for other debuggers 
-			                  to map to more than one source location for a stack frame</li>
-			                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> investigate support 
-			                  for graphical debuggers - enhancements via new IDebugEditorPresentation</li>
-			                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> investigate issues for 
-			                  improved source presentation (colors, highlighting, etc.), when 
-			                  debugging - via IDebugEditorPresentation</li>
-			                <li><img src="/eclipse/debug/images/progress.gif"> investigate the integration of &quot;source 
-			                  locations&quot; into the debug platform (currently implemented 
-			                  in JDT)</li>
-	              		</ul>
-	            	</li>
-	            	<li>Debug Events 
-	              		<ul>
-			                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> allow for an extensible 
-			                  set of debug events - i.e. application specific debug events</li>
-	              		</ul>
-	            	</li>
-	            	<li>Watch Items 
-	              		<ul>
-			                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> define generic watch 
-			                  items in the debug platform and a set of actions for creating 
-			                  watch items</li>
-			                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> provide an extension 
-			                  point for debug models to register a watch item delegate for 
-			                  a debug model (for value computation)</li>
-			                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> provide persistence 
-			                  of watch items in the debug platform</li>
-	              		</ul>
-	            	</li>
-      			</ul>
-
-        		<b>Debug Views</b>
-      			<ul>
-        			<li>Variables View 
-	          			<ul>
-			                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> migrate details area 
-			                  split setting (horizontal/vertical) to view menu</li>
-			                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> enhance variable expansion 
-			                  memory on iterative suspends</li>
-			                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> support custom content 
-			                  providers per debug model, to support &quot;logical view of 
-			                  Java objects&quot;</li>
-			                <li>investigate support for snapshot and compare facility</li>
-	          			</ul>
-            		</li>
-            		<li>Console View 
-              			<ul>
-			                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10>console consolidation 
-			                  - provide an API that allows other clients to use the console 
-			                  for message logging - without using the process model (standard 
-			                  in/out/err streams)</li>
-			                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> investigate a tabbed 
-			                  console - i.e. a tab per process/client using the console</li>
-			                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> create a new plug-in 
-			                  providing extensible console support</li>
-			                <li>investigate support for DBCS output (support for file encodings)</li>
-			                <li>investigate support for regular expression matching in the 
-			                  console for hyperlinks and coloring</li>
-              			</ul>
-            		</li>
-          		</ul>
-
-        		<b>Concurrency </b>
-          		<ul>
-            		<li>Views 
-              			<ul>
-			                <li><img src="/eclipse/debug/images/progress.gif"> using concurrency support from the 
-			                  workbench, update debug view content (model) in non UI threads</li>
-			                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> retrieve labels and 
-			                  icons for debug model elements in non-UI thread (workbench support)</li>
-			                <li>improve handling of transient debug model state - i.e. resilience 
-			                  to state changes in the debug model</li>
-              			</ul>
-            		</li>
-            		<li>Launching 
-              			<ul>
-			                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> launch in background 
-			                  (i.e. remove modal progress)</li>
-              			</ul>
-            		</li>
-          		</ul>
+        		<b>Extensible Launch Modes</b>
+              		<ul>
+		                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> run, debug...</li>
+		                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> add &quot;profile&quot; 
+		                  mode to the debug platform</li>
+		                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> allow launch configuration 
+		                  tab groups to specify a set of tabs per launch mode</li>
+		                <li>launch actions should appear only when the mode is supported 
+		                  by something in the SDK (requires workbench visibility support)</li>
+              		</ul>
+        		<b>Environment Variables</b>
+              		<ul>
+		                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> support for setting 
+		                  environment variables per launch configuration (must be done 
+		                  by each config type that requires it)</li>
+		                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> launch tab for specifying 
+		                  environment settings</li>
+              		</ul>
+        		<b>String Substitution Variables</b>
+              		<ul>
+		                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> user defined variables 
+		                  that can be referenced in launch configurations - such as <i>${some_variable}</i></li>
+		                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> migrate string substitution 
+		                  support to new plug-in <code>org.eclipse.core.variables</code></li>
+		                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> extension point for 
+		                  variable definition supporting a default value, optional initializer 
+		                  (delegate), and optional resolver (allows resolution on each 
+		                  launch in the context of a launch configuration)</li>
+		                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> API for resolving variable 
+		                  values</li>
+		                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> review of API and implementation</li>
+              		</ul>
+        		<b>Usability</b>
+              		<ul>
+		                <li><img src="/eclipse/debug/images/progress.gif"> investigate launching support from the context menu</li>
+              		</ul>
+        		<b>Launch Tab Framework</b>
+          			<ul>
+		                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Improve efficiency of 
+		                  launch dialog/tab interaction by adding more lifecycle methods 
+		                  to ILaunchConfigurationTab. The new methods will inform a tab 
+		                  when it is entered/exited, rather than calling initializeFrom/apply 
+		                  on the tab, which can be expensive calls. This provides the 
+		                  tab with explicit enter/exit information, allowing the tab to 
+		                  decide what action to take rather than enforcing it to update 
+		                  and reinitialize.</li>
+          			</ul>
+    			<b>Debug Contexts</b>
+      				<ul>
+		                <li><img src="/eclipse/debug/images/progress.gif"> investigate the use of <i>debug contexts</i> 
+		                  to dynamically filter the available set of views and actions 
+		                  in the debug perspective</li>
+		                <li><img src="/eclipse/debug/images/progress.gif"> investigate the use of <i>roles</i> 
+		                  to statically filter the set of available views and actions 
+		                  in the debugger</li>
+      				</ul>
+            	<b>Launch Configurations</b>
+              		<ul>
+		                <li><img src="/eclipse/debug/images/progress.gif"> investigate ways to deal with the 
+		                  large number of launch configuration types, launch configurations, 
+		                  and launch shortcuts</li>
+              		</ul>
+            	<b>Retargettable Actions</b>
+              		<ul>
+		                <li>create a set of actions in the debug platform that can be 
+		                  shared by other debuggers - add/remove breakpoint, run to line, 
+		                  etc. </li>
+              		</ul>
+            	<b>Source Lookup</b>
+              		<ul>
+		                <li><img src="/eclipse/debug/images/progress.gif"> investigate needs for other debuggers 
+		                  to map to more than one source location for a stack frame</li>
+		                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> investigate support 
+		                  for graphical debuggers - enhancements via new IDebugEditorPresentation</li>
+		                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> investigate issues for 
+		                  improved source presentation (colors, highlighting, etc.), when 
+		                  debugging - via IDebugEditorPresentation</li>
+		                <li><img src="/eclipse/debug/images/progress.gif"> investigate the integration of &quot;source 
+		                  locations&quot; into the debug platform (currently implemented 
+		                  in JDT)</li>
+              		</ul>
+            	<b>Debug Events</b>
+              		<ul>
+		                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> allow for an extensible 
+		                  set of debug events - i.e. application specific debug events</li>
+              		</ul>
+            	<b>Watch Items</b>
+              		<ul>
+		                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> define generic watch 
+		                  items in the debug platform and a set of actions for creating 
+		                  watch items</li>
+		                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> provide an extension 
+		                  point for debug models to register a watch item delegate for 
+		                  a debug model (for value computation)</li>
+		                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> provide persistence 
+		                  of watch items in the debug platform</li>
+              		</ul>
+    			<b>Variables View</b>
+          			<ul>
+		                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> migrate details area 
+		                  split setting (horizontal/vertical) to view menu</li>
+		                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> enhance variable expansion 
+		                  memory on iterative suspends</li>
+		                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> support custom content 
+		                  providers per debug model, to support &quot;logical view of 
+		                  Java objects&quot;</li>
+		                <li>investigate support for snapshot and compare facility</li>
+          			</ul>
+        		<b>Console View</b>
+          			<ul>
+		                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10>console consolidation 
+		                  - provide an API that allows other clients to use the console 
+		                  for message logging - without using the process model (standard 
+		                  in/out/err streams)</li>
+		                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> investigate a tabbed 
+		                  console - i.e. a tab per process/client using the console</li>
+		                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> create a new plug-in 
+		                  providing extensible console support</li>
+		                <li>investigate support for DBCS output (support for file encodings)</li>
+		                <li>investigate support for regular expression matching in the 
+		                  console for hyperlinks and coloring</li>
+          			</ul>
+        		<b>Views</b>
+          			<ul>
+		                <li><img src="/eclipse/debug/images/progress.gif"> using concurrency support from the 
+		                  workbench, update debug view content (model) in non UI threads</li>
+		                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> retrieve labels and 
+		                  icons for debug model elements in non-UI thread (workbench support)</li>
+		                <li>improve handling of transient debug model state - i.e. resilience 
+		                  to state changes in the debug model</li>
+          			</ul>
+        		<b>Launching</b>
+          			<ul>
+		                <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> launch in background 
+		                  (i.e. remove modal progress)</li>
+          			</ul>
       		</blockquote>
       		
       		<h4>Canceled Items</h4>
@@ -576,7 +546,7 @@
 	            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Define a common set of actions 
 	              for creating/editing watch items</li>
 	            <li><img src="/eclipse/debug/images/defer.gif">Provide an extension point for contributing a model specific UI 
-	              for watch item creation/editing - <b>Deferred to M4</b></li>
+	              for watch item creation/editing - Deferred to M4</li>
 	            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Provide an extension point 
 	              for contributing a watch item delegate for a debug model (to compute 
 	              a watch item value)</li>
