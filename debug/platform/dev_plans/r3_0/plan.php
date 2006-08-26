@@ -31,39 +31,40 @@
 		        <li>concurrency</li>
 	      	</ul>
 	      	<h4>Top Work Items</h4>
-  			<h5>Scalability Issues </h5>
-	          	<ul>
-		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Filter the Debug UI based 
-		              on dynamic debug contexts and activities</li>
-		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Provide global retargettable 
-		              breakpoint creation/deletion actions</li>
-		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Improve step filtering for 
-		              other debug models (toggle on/off to apply to all stepping actions)</li>
-	          	</ul>
-	        <h6>Concurrency </h6>
-	          	<ul>
-		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Background label generation 
-		              for Debug and Variables views</li>
-	          	</ul>
-	        <h6>Context Menu Launching </h6>
-	          	<ul>
-		            <li><img src="/eclipse/debug/images/progress.gif"> Provide appropriate launch actions (Run, 
-		              Debug,...) in the context menu</li>
-	          	</ul>
-	        <h6>Generic Console Enhancements </h6>
-	          	<ul>
-		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> The console will support 
-		              buffering to support clients that produce console output quickly</li>
-		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> The console will support 
-		              a maximum buffer size to support clients that produce large amounts 
-		              of output</li>
-	          	</ul>
-	        <h6>Platform Source Lookup Facilities</h6>
-	          	<ul>
-		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Provide common source lookup 
-		              facilities in the Debug platform for common source repositories</li>
-	          	</ul>
-  			
+	      	<blockquote>
+	  			<h5>Scalability Issues </h5>
+		          	<ul>
+			            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Filter the Debug UI based 
+			              on dynamic debug contexts and activities</li>
+			            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Provide global retargettable 
+			              breakpoint creation/deletion actions</li>
+			            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Improve step filtering for 
+			              other debug models (toggle on/off to apply to all stepping actions)</li>
+		          	</ul>
+		        <h6>Concurrency </h6>
+		          	<ul>
+			            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Background label generation 
+			              for Debug and Variables views</li>
+		          	</ul>
+		        <h6>Context Menu Launching </h6>
+		          	<ul>
+			            <li><img src="/eclipse/debug/images/progress.gif"> Provide appropriate launch actions (Run, 
+			              Debug,...) in the context menu</li>
+		          	</ul>
+		        <h6>Generic Console Enhancements </h6>
+		          	<ul>
+			            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> The console will support 
+			              buffering to support clients that produce console output quickly</li>
+			            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> The console will support 
+			              a maximum buffer size to support clients that produce large amounts 
+			              of output</li>
+		          	</ul>
+		        <h6>Platform Source Lookup Facilities</h6>
+		          	<ul>
+			            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Provide common source lookup 
+			              facilities in the Debug platform for common source repositories</li>
+		          	</ul>
+  			</blockquote>
   			<h4>Planned Items</h4>
       		<ul>
         		<li>Launch Framework 
