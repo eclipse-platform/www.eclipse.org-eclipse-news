@@ -71,7 +71,7 @@
 		        </li>
   			</ul>
   			
-  			<h4>Planned<b></b> Items</h4>
+  			<h4>Planned Items</h4>
       		<ul>
         		<li>Launch Framework 
           		<ul>
@@ -113,7 +113,7 @@
             		<li>Usability 
 	              		<ul>
 			                <li><img src="/eclipse/debug/images/progress.gif"> investigate launching support from the context menu</li>
-	              		/ul>
+	              		</ul>
             		</li>
             		<li>Launch Tab Framework 
               			<ul>
@@ -241,7 +241,6 @@
           		</ul>
         		</li>
       		</ul>
-      		
       		<h4>Canceled Items</h4>
       		<ul>
         		<li> Watch Items 
@@ -259,52 +258,52 @@
 		<div class="homeitem3col">
 			<h3>3.0 Development Effort - Milestone 9 (Friday, May 7th)</h3>
 			<ul>
-    			<li><b>Scalability Issues</b> 
-      				<ul>
-			            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Experiment with contexts 
-			              to dynamically reveal activities related to debugging. This allows 
-			              language specific debug actions/views to be displayed when relevant. 
-			              We have a solution for views and we are now working on action filtering. 
-			              [<i>Jared Burns</i>]</li>
-			            <li><img src="/eclipse/debug/images/progress.gif"> Enhance support for Run/Debug actions 
-			              in the context menu. Initial support is in place. We are investigating 
-			              the use case of multi-selection launching, and migrating other launch 
-			              shortcuts to use the new infrastructure. [<i>Chris Tilt</i>]</li>
-      				</ul>
+    			<li>Scalability Issues
+  				<ul>
+		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Experiment with contexts 
+		              to dynamically reveal activities related to debugging. This allows 
+		              language specific debug actions/views to be displayed when relevant. 
+		              We have a solution for views and we are now working on action filtering. 
+		              [<i>Jared Burns</i>]</li>
+		            <li><img src="/eclipse/debug/images/progress.gif"> Enhance support for Run/Debug actions 
+		              in the context menu. Initial support is in place. We are investigating 
+		              the use case of multi-selection launching, and migrating other launch 
+		              shortcuts to use the new infrastructure. [<i>Chris Tilt</i>]</li>
+  				</ul>
+  				</li>
+    			<li>Concurrency
+  				<ul>
+		            <li>[deferred background content, have background labels] Background 
+		              content provider for Debug and Variables Views</li>
+  				</ul>
     			</li>
-    			<li><b>Concurrency</b> 
-      				<ul>
-			            <li>[deferred background content, have background labels] Background 
-			              content provider for Debug and Variables Views</li>
-      				</ul>
-    			</li>
-	        	<li><b>Source Lookup</b> [<i>Darin Wright</i>] 
+	        	<li>Source Lookup [<i>Darin Wright</i>] 
 	          		<ul>
 			            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Code review generic source 
 			              lookup contribution and migrate Java debugger to use new support.</li>
 	          		</ul>
 	        	</li>
-	        	<li><b>Launching</b> 
+	        	<li>Launching 
 	          		<ul>
 			            <li><img src="/eclipse/debug/images/progress.gif"> Enhance support to build before launch 
 			              and detect compilation errors before launching, for contributed 
 			              launch delegates.</li>
 	          		</ul>
 	        	</li>
-	        	<li><b>API Cleanup</b> 
+	        	<li>API Cleanup 
 	          		<ul>
 			            <li><img src="/eclipse/debug/images/progress.gif"> Move new internal API to public API</li>
 			            <li><img src="/eclipse/debug/images/progress.gif"> Clean up TODO's</li>
 	          		</ul>
 	        	</li>
-    			<li><b>Bug Fixing</b>
+    			<li>Bug Fixing
     			</li>
   			</ul>
 		</div>
 		<div class="homeitem3col">
 			<h3>History - Milestone 8 (Friday, March 26th)</h3>
 			<ul>
-		        <li><b>Scalability Issues</b> 
+		        <li>Scalability Issues 
 		          <ul>
 		            <li><img src="/eclipse/debug/images/progress.gif"> Experiment with contexts to dynamically 
 		              reveal activities related to debugging. This allows language specific 
@@ -319,18 +318,18 @@
 		              retargettable breakpoint actions.</li>
 		          </ul>
 		        </li>
-		        <li><b>Concurrency</b> 
+		        <li>Concurrency 
 		          <ul>
 		            <li>Background content provider for Debug and Variables Views</li>
 		          </ul>
 		        </li>
-		        <li><b>Source Lookup</b> [<i>Darin Wright</i>] 
+		        <li>Source Lookup [<i>Darin Wright</i>] 
 		          <ul>
 		            <li><img src="/eclipse/debug/images/progress.gif"> Code review generic source lookup contribution 
 		              and migrate Java debugger to use new support.</li>
 		          </ul>
 		        </li>
-		        <li><b>Variables</b> 
+		        <li>Variables 
 		          <ul>
 		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Enhance new <font face="Courier New, Courier, mono"><code>IIndexedValue</code></font> 
 		              support to allow models to specify 0 or 1 based offsets. As well, 
@@ -338,7 +337,7 @@
 		              than only partition the first level). [<i>Darin Wright</i>]</li>
 		          </ul>
 		        </li>
-		        <li><b>Launching</b> 
+		        <li>Launching 
 		          <ul>
 		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Allow launch delegates to 
 		              reuse an existing launch. Currently, the launching framework forces 
@@ -347,19 +346,19 @@
 		              when connecting to an already running server.</li>
 		          </ul>
 		        </li>
-		        <li><b>API Cleanup</b> 
+		        <li>API Cleanup 
 		          <ul>
 		            <li>Move new internal API to public API</li>
 		            <li>Clean up TODO's</li>
 		          </ul>
 		        </li>
-		        <li><b>Bug Fixing</b></li>
+		        <li>Bug Fixing</li>
 		      </ul>
 		</div>
 		<div class="homeitem3col">
 			<h3>History - Milestone 7 (Friday, February 13th)</h3>
 			<ul>
-		        <li><b>Scalability Issues</b> 
+		        <li>Scalability Issues 
 		          <ul>
 		            <li>Experiment with contexts to dynamically enable activities related 
 		              to debugging. This allows language specific debug actions/views 
@@ -370,7 +369,7 @@
 		              Darin Wright]</li>
 		          </ul>
 		        </li>
-		        <li><b>Concurrency</b> [5 days, Jared Burns/Chris Tilt] 
+		        <li>Concurrency [5 days, Jared Burns/Chris Tilt] 
 		          <ul>
 		            <li>Background content provider for Debug and Variables Views [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=44724">Bug 
 		              44724</a>]</li>
@@ -379,28 +378,36 @@
 		              46363</a>]</li>
 		          </ul>
 		        </li>
-		        <li><b>Source Lookup</b> [3 days, Darin Wright] 
+		        <li>Source Lookup [3 days, Darin Wright] 
 		          <ul>
 		            <li>Integrate generic source lookup facilities contribution</li>
 		          </ul>
 		        </li>
-		        <li><b>Generic Console</b> [5 days, Kevin Barnes] 
+		        <li>Generic Console [5 days, Kevin Barnes] 
 		          <ul>
 		            <li>Support buffered output (i.e. process output in the background)</li>
 		            <li>Support maximum buffer size (i.e. bounded memory usage)</li>
 		          </ul>
 		        </li>
-		        <li><b>Bug Fixing</b></li>
+		        <li>Bug Fixing</li>
 		      </ul>
 		</div>
 		<div class="homeitem3col">
 			<h3>History - Milestone 6 (Friday, December 19)</h3>
 			<ul>
-		        <li><b><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Migrate to Equniox (OSGi) 
-		          Runtime </b> </li>
-		        <li><b><img src="/eclipse/debug/images/progress.gif"> Bug Fixing:</b> Reduce the bug backlog</li>
-		        <li><b>Leak Analysis: </b>Look for memory leaks</li>
-		        <li><b>Concurrency</b></li>
+		        <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Migrate to Equniox (OSGi) 
+		          Runtime  </li>
+		        <li>Bug Fixing
+		        <ul>
+		        	<li><img src="/eclipse/debug/images/progress.gif"> Reduce the bug backlog</li>
+		        </ul>
+		        </li>
+		        <li>Leak Analysis
+					<ul>
+						<li>Look for memory leaks</li>
+					</ul>
+				</li>
+		        <li>Concurrency
 		        <ul>
 		          <li>Background content providers - investigate a generic background 
 		            content provider for debug views. This allows debug views to be populated 
@@ -413,26 +420,30 @@
 		            job to avoid blocking the UI thread. [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=46363">Bug 
 		            46363</a>]</li>
 		        </ul>
-		        <li><img src="/eclipse/debug/images/progress.gif"> <b>Review Source Lookup Contribution </b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=29890">Bug 
-		          29890</a>]</li>
+		        </li>
+		        <li> Source Lookup
+		        <ul>
+		        	<li><img src="/eclipse/debug/images/progress.gif"> Review Source Lookup Contribution [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=29890">Bug 29890</a>]</li>
+		        </ul>
+		        </li>
 		      </ul>
 		</div>
 		<div class="homeitem3col">
 			<h3>History - Milestone 5 (Friday, November 21st)</h3>
 			<ul>
-		        <li><b><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Remove Dependency on Xerces 
-		          plug-in</b></li>
-		        <li><b><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Variable Support (String 
-		          Substitution)</b> 
+		        <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Remove Dependency on Xerces 
+		          plug-in</li>
+		        <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Variable Support (String 
+		          Substitution) 
 		          <ul>
-		            <li><b><img src="/eclipse/debug/images/ok.gif" height=10 width=10></b> Create new plug-in 
+		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Create new plug-in 
 		              (<code>org.eclipse.core.variables</code>) to support generic string 
 		              substitution, and migrate debug plug-ins to use the new plug-in.</li>
-		            <li><b><img src="/eclipse/debug/images/ok.gif" height=10 width=10></b> Identify areas in 
+		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Identify areas in 
 		              existing launch configurations where variables should be supported</li>
 		          </ul>
 		        </li>
-		        <li><b>Concurrency</b></li>
+		        <li>Concurrency
 		        <ul>
 		          <li>Background content providers - investigate a generic background 
 		            content provider for debug views. This allows debug views to be populated 
@@ -449,16 +460,17 @@
 		            before launching [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=44479">Bug 
 		            44479</a>]</li>
 		        </ul>
-		        <li><b>Logical Variable Structure</b> 
+		        </li>
+		        <li>Logical Variable Structure 
 		          <ul>
-		            <li><b><img src="/eclipse/debug/images/ok.gif" height=10 width=10></b> Finalize API and 
+		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Finalize API and 
 		              implementation</li>
 		          </ul>
 		        </li>
 		        <ul>
 		          <li>New art work for toggle button in variable &amp; expression view</li>
 		        </ul>
-		        <li><b>Source Lookup</b> [<a href="source_lookup.php">Proposal</a>] 
+		        <li>Source Lookup [<a href="source_lookup.php">Proposal</a>] 
 		          <ul>
 		            <li>Investigate the integration of &quot;source locations&quot; into 
 		              the debug platform. Determine if we can allow other debuggers to 
@@ -466,15 +478,15 @@
 		              tabs to configure source lookup.</li>
 		          </ul>
 		        </li>
-		        <li><b>Scalability</b> 
+		        <li>Scalability 
 		          <ul>
 		            <li>Use role support provided by the platform to restrict the set 
 		              of visible views, actions, and launch configuration types</li>
 		          </ul>
 		        </li>
-		        <li><b><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Launch Tab Framework</b> 
+		        <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Launch Tab Framework 
 		          <ul>
-		            <li><b><img src="/eclipse/debug/images/ok.gif" height=10 width=10></b> Improve efficiency 
+		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Improve efficiency 
 		              of launch dialog/tab interaction by adding more lifecycle methods 
 		              to ILaunchConfigurationTab. The new methods will inform a tab when 
 		              it is entered/exited, rather than calling initializeFrom/apply on 
@@ -488,7 +500,7 @@
 		<div class="homeitem3col">
 			<h3>History - Milestone 4 (Friday, October 10th)</h3>
 			<ul>
-		        <li><b>Generic Console </b>[Darin S] [10 days] (<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=37263">bug 
+		        <li>Generic Console [Darin S] [10 days] (<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=37263">bug 
 		          37263</a>) 
 		          <ul>
 		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Create a new plug-in providing 
@@ -501,7 +513,7 @@
 		              of a simple console that messages can be logged to</li>
 		          </ul>
 		        </li>
-		        <li><b>Launch Variable Review</b> [Darin W] [8 days] 
+		        <li>Launch Variable Review [Darin W] [8 days] 
 		          <ul>
 		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Review and cleanup the launch 
 		              variable API and implementation</li>
@@ -512,7 +524,7 @@
 		            <li><i>[Deferred]</i> Identify areas where variables should be supported</li>
 		          </ul>
 		        </li>
-		        <li><b>Concurrency</b> [Luc B] [10 days] (<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=16036">bug 
+		        <li>Concurrency [Luc B] [10 days] (<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=16036">bug 
 		          16036</a>) 
 		          <ul>
 		            <li><img src="/eclipse/debug/images/progress.gif"> Investigate use of jobs for updating 
@@ -523,13 +535,13 @@
 		              they are computed.</li>
 		          </ul>
 		        </li>
-		        <li><b>Object Browsers</b> [Darin W] [7 days] 
+		        <li>Object Browsers [Darin W] [7 days] 
 		          <ul>
 		            <li><img src="/eclipse/debug/images/progress.gif"> Review API and implementation</li>
 		            <li><img src="/eclipse/debug/images/progress.gif"> Suggest new terminology/art work</li>
 		          </ul>
 		        </li>
-		        <li><b>Source Lookup</b> [Darin W] [7 days] [<a href="source_lookup.php">Proposal</a>] 
+		        <li>Source Lookup [Darin W] [7 days] [<a href="source_lookup.php">Proposal</a>] 
 		          <ul>
 		            <li><img src="/eclipse/debug/images/progress.gif"> Investigate the integration of &quot;source 
 		              locations&quot; into the debug platform. Determine if we can allow 
@@ -537,7 +549,7 @@
 		              and launch config tabs to configure source lookup.</li>
 		          </ul>
 		        </li>
-		        <li><b>Scalability</b> [Jared B] [10 days] (<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=36495">bug 
+		        <li>Scalability [Jared B] [10 days] (<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=36495">bug 
 		          36495</a>) 
 		          <ul>
 		            <li><img src="/eclipse/debug/images/progress.gif"> Investigate the use of contexts (provided 
@@ -552,7 +564,7 @@
 		              or views once they have been added.</li>
 		          </ul>
 		        </li>
-		        <li><b>Environment Variables</b> [Jared B] [5 days] (<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=40863">bug 
+		        <li>Environment Variables [Jared B] [5 days] (<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=40863">bug 
 		          40863</a>) 
 		          <ul>
 		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Investigate support to append 
@@ -568,7 +580,7 @@
 		<div class="homeitem3col">
 			<h3>History - Milestone 3 (Friday, August 29th)</h3>
 			<ul>
-		        <li><b>Generic Console </b>[2 person weeks] [Darin W] - <b>In progress, 
+		        <li>Generic Console [2 person weeks] [Darin W] - <b>In progress, 
 		          more work in M4</b> 
 		          <ul>
 		            <li><img src="/eclipse/debug/images/progress.gif"> We envison a page book view of consoles. 
@@ -580,7 +592,7 @@
 		              such that console users do not need to prereq the debug plug-in.</li>
 		          </ul>
 		        </li>
-		        <li><b>Launch Variable Review</b> [2 person weeks] [Darin W, Jared B] 
+		        <li>Launch Variable Review [2 person weeks] [Darin W, Jared B] 
 		          - <b>Deferred to M4</b> 
 		          <ul>
 		            <li><img src="/eclipse/debug/images/progress.gif"> Review and cleanup the launch variable 
@@ -590,20 +602,20 @@
 		            <li>Identifiy areas where variables should be supported</li>
 		          </ul>
 		        </li>
-		        <li><b>Concurrency</b> [1 person day] [Jared B] 
+		        <li>Concurrency [1 person day] [Jared B] 
 		          <ul>
 		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Launch in the background 
 		              - avoid modal progress when launching</li>
 		          </ul>
 		        </li>
-		        <li><b>Object Browsers</b> [1 person week] [Darin W] - <b>Deferred to 
+		        <li>Object Browsers [1 person week] [Darin W] - <b>Deferred to 
 		          M4</b> 
 		          <ul>
 		            <li>Review API and implementation</li>
 		            <li>Suggest new terminology/art work</li>
 		          </ul>
 		        </li>
-		        <li><b>Watch Items</b> [2 person weeks] [Jared B] 
+		        <li>Watch Items [2 person weeks] [Jared B] 
 		          <ul>
 		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Define a common set of actions 
 		              for creating/editing watch items</li>
@@ -621,7 +633,7 @@
 		<div class="homeitem3col">
 			<h3>History - Milestone 2 (Friday, July 18th)</h3>
 			<ul>
-		        <li><b>Generic Console </b>[4 person weeks] 
+		        <li>Generic Console [4 person weeks] 
 		          <ul>
 		            <li><i>[Deferred to M3]</i> We envison a tabbed view of consoles driven 
 		              by &quot;console inputs&quot; (similar to the editor pane/editor 
@@ -630,7 +642,7 @@
 		              I/O to/from a system process).</li>
 		          </ul>
 		        </li>
-		        <li><b>Launch Variable Review</b> [1 person weeks] 
+		        <li>Launch Variable Review [1 person weeks] 
 		          <ul>
 		            <li><i>[Deferred to M3]</i> Review and cleanup the launch variable 
 		              API and implementation</li>
@@ -641,7 +653,7 @@
 		<div class="homeitem3col">
 			<h3>History - Milestone 1</h3>
 			<ul>
-		        <li>Extensible Launch Modes<b> [Darin W] </b> 
+		        <li>Extensible Launch Modes [Darin W]  
 		          <ul>
 		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> run, debug, ...</li>
 		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> add &quot;profile&quot; 
@@ -650,7 +662,7 @@
 		              tab groups to specify a set of tabs per launch mode</li>
 		          </ul>
 		        </li>
-		        <li>Environment Variables <b>[Jared B]</b> 
+		        <li>Environment Variables [Jared B] 
 		          <ul>
 		            <li><i>[Deferred]</i> support for setting environment variables per 
 		              launch configuration</li>
@@ -658,7 +670,7 @@
 		              environment settings</li>
 		          </ul>
 		        </li>
-		        <li>Launch Variables <b>[Jared B]</b> <i>[this work has continued as / 
+		        <li>Launch Variables [Jared B] <i>[this work has continued as / 
 		          been replaced by String Substitution Support]</i> 
 		          <ul>
 		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> user defined variables that 
@@ -671,7 +683,7 @@
 		              values</li>
 		          </ul>
 		        </li>
-		        <li>Variables View <b>[Joe S]</b> 
+		        <li>Variables View [Joe S] 
 		          <ul>
 		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> migrate details area split 
 		              setting (horizontal/vertical) to view menu</li>

@@ -31,7 +31,7 @@
 		        <li>write articles</li>
 	        </ul>
 	        
-	        <h4>Planned<b></b> Items</h4>
+	        <h4>Planned Items</h4>
 	        <ul>
 	        	<li>Architectural issues 
 	            	<ul>
