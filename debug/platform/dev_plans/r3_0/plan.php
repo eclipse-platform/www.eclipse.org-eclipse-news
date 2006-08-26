@@ -24,7 +24,7 @@
 		<div class="homeitem3col">
 			<h3>Overall 3.0 Plan</h3>
 			
-			<h2>Overall Themes for Platform Debug:</h2>
+			<h4>Overall Themes for Platform Debug:</h4>
 	      	<ul>
 		        <li>scalability and extensibility for many debuggers</li>
 		        <li>improved user experience</li>
@@ -251,8 +251,7 @@
 		</div>
 		<div class="homeitem3col">
 			<h3>3.0 Development Effort - Milestone 9 (Friday, May 7th)</h3>
-			<ul>
-    			<li>Scalability Issues
+			<b>Scalability Issues</b>
   				<ul>
 		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Experiment with contexts 
 		              to dynamically reveal activities related to debugging. This allows 
@@ -264,40 +263,32 @@
 		              the use case of multi-selection launching, and migrating other launch 
 		              shortcuts to use the new infrastructure. [<i>Chris Tilt</i>]</li>
   				</ul>
-  				</li>
-    			<li>Concurrency
+    		<b>Concurrency</b>
   				<ul>
 		            <li> [deferred background content, have background labels] Background 
 		              content provider for Debug and Variables Views</li>
   				</ul>
-    			</li>
-	        	<li>Source Lookup [<i>Darin Wright</i>] 
-	          		<ul>
-			            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Code review generic source 
-			              lookup contribution and migrate Java debugger to use new support.</li>
-	          		</ul>
-	        	</li>
-	        	<li>Launching 
-	          		<ul>
-			            <li><img src="/eclipse/debug/images/progress.gif"> Enhance support to build before launch 
-			              and detect compilation errors before launching, for contributed 
-			              launch delegates.</li>
-	          		</ul>
-	        	</li>
-	        	<li>API Cleanup 
-	          		<ul>
-			            <li><img src="/eclipse/debug/images/progress.gif"> Move new internal API to public API</li>
-			            <li><img src="/eclipse/debug/images/progress.gif"> Clean up TODO's</li>
-	          		</ul>
-	        	</li>
-    			<li>Bug Fixing
-    			</li>
-  			</ul>
+        	<b>Source Lookup</b> [Darin Wright] 
+          		<ul>
+		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Code review generic source 
+		              lookup contribution and migrate Java debugger to use new support.</li>
+          		</ul>
+        	<b>Launching </b>
+          		<ul>
+		            <li><img src="/eclipse/debug/images/progress.gif"> Enhance support to build before launch 
+		              and detect compilation errors before launching, for contributed 
+		              launch delegates.</li>
+          		</ul>
+        	<b>API Cleanup </b>
+          		<ul>
+		            <li><img src="/eclipse/debug/images/progress.gif"> Move new internal API to public API</li>
+		            <li><img src="/eclipse/debug/images/progress.gif"> Clean up TODO's</li>
+          		</ul>
+   			<b>Bug Fixing</b>
 		</div>
 		<div class="homeitem3col">
 			<h3>History - Milestone 8 (Friday, March 26th)</h3>
-			<ul>
-		        <li>Scalability Issues 
+			<b>Scalability Issues </b>
 		          <ul>
 		            <li><img src="/eclipse/debug/images/progress.gif"> Experiment with contexts to dynamically 
 		              reveal activities related to debugging. This allows language specific 
@@ -311,43 +302,36 @@
 		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Investigate support for 
 		              retargettable breakpoint actions.</li>
 		          </ul>
-		        </li>
-		        <li>Concurrency 
-		          <ul>
-		            <li>Background content provider for Debug and Variables Views</li>
-		          </ul>
-		        </li>
-		        <li>Source Lookup [<i>Darin Wright</i>] 
-		          <ul>
-		            <li><img src="/eclipse/debug/images/progress.gif"> Code review generic source lookup contribution 
-		              and migrate Java debugger to use new support.</li>
-		          </ul>
-		        </li>
-		        <li>Variables 
-		          <ul>
-		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Enhance new <font face="Courier New, Courier, mono"><code>IIndexedValue</code></font> 
-		              support to allow models to specify 0 or 1 based offsets. As well, 
-		              the variables view should recursively partition indexed values (rather 
-		              than only partition the first level). [<i>Darin Wright</i>]</li>
-		          </ul>
-		        </li>
-		        <li>Launching 
-		          <ul>
-		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Allow launch delegates to 
-		              reuse an existing launch. Currently, the launching framework forces 
-		              clients to use a new launch object on each launch invocation. However, 
-		              some clients would like to reuse an existing launch - for example, 
-		              when connecting to an already running server.</li>
-		          </ul>
-		        </li>
-		        <li>API Cleanup 
-		          <ul>
-		            <li>Move new internal API to public API</li>
-		            <li>Clean up TODO's</li>
-		          </ul>
-		        </li>
-		        <li>Bug Fixing</li>
-		      </ul>
+	        <b>Concurrency </b>
+	          <ul>
+	            <li>Background content provider for Debug and Variables Views</li>
+	          </ul>
+	        <b>Source Lookup </b>[Darin Wright] 
+	          <ul>
+	            <li><img src="/eclipse/debug/images/progress.gif"> Code review generic source lookup contribution 
+	              and migrate Java debugger to use new support.</li>
+	          </ul>
+	        <b>Variables </b>
+	          <ul>
+	            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Enhance new <font face="Courier New, Courier, mono"><code>IIndexedValue</code></font> 
+	              support to allow models to specify 0 or 1 based offsets. As well, 
+	              the variables view should recursively partition indexed values (rather 
+	              than only partition the first level). [<i>Darin Wright</i>]</li>
+	          </ul>
+	        <b>Launching </b>
+	          <ul>
+	            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Allow launch delegates to 
+	              reuse an existing launch. Currently, the launching framework forces 
+	              clients to use a new launch object on each launch invocation. However, 
+	              some clients would like to reuse an existing launch - for example, 
+	              when connecting to an already running server.</li>
+	          </ul>
+	        <b>API Cleanup </b>
+	          <ul>
+	            <li>Move new internal API to public API</li>
+	            <li>Clean up TODO's</li>
+	          </ul>
+	        <b>Bug Fixing</b>
 		</div>
 		<div class="homeitem3col">
 			<h3>History - Milestone 7 (Friday, February 13th)</h3>
