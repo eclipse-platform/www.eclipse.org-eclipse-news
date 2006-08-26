@@ -32,34 +32,30 @@
 	        </ul>
 	        
 	        <h4>Planned Items</h4>
-	        <ul>
-	        	<li>Architectural issues 
+	        <blockquote>
+	        	<b> Architectural issues</b>
 	            	<ul>
 	            		<li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> synchronization/serialization of runnables</li>
 	            		<li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> &quot;plural&quot; listener interfaces for breakpoints, launches, and expressions</li>
 	            		<li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> vulnerability to runtime exceptions in extension points and listeners</li>
 	            		<li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> incorporate step debug into debug core interfaces </li>
 	          		</ul>
-	          	</li>
-	        	<li>Performance 
+	        	<b> Performance</b>
 	          		<ul>
 	            		<li>memory leak pass</li>
 	          		</ul>
-	        	</li>
-	        	<li>Actions 
+	        	<b> Actions</b>
 	          		<ul>
 	            		<li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Workbench key binding support</li>
 	          		</ul>
-	        	</li>
-	        	<li>Launch configurations 
+	        	<b> Launch configurations</b>
 	          		<ul>
 	            		<li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> convenience action to open launch config dilaog from history menu (perhaps CTRL-click)</li>
 	            		<li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> dialog to support editing of single launch configuration</li>
 	            		<li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> support for launch configuration categories</li>
 	            		<li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> support for launch configuration groups</li>
 	          		</ul>
-	        	</li>
-	        	<li>Variables 
+	        	<b> Variables</b>
 	          		<ul>
 	            		<li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> support for multi-select details (i.e. details of more than one variable)</li>
 	            		<li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> support for wrapped details area rather than horizontal scrolling</li>
@@ -68,13 +64,11 @@
 	            		<li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> variables remain expanded on stack frame browsing</li>
 	            		<li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> variables remain expanded on iterative suspend/resume/suspend</li>
 	          		</ul>
-	        	</li>
-	        	<li>Presentation 
+	        	<b> Presentation</b>
 	          		<ul>
 	            		<li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> show sticky instruction pointers (via markers or highlighting), in all visible stack frames</li>
 	          		</ul>
-	        	</li>
-	        	<li>Console 
+	        	<b> Console</b>
 	          		<ul>
 	            		<li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> investigate extensible &quot;open&quot; 
 	              		menu actions - eg. &quot;Open on Type&quot;.[This is to be replaced 
@@ -87,94 +81,79 @@
 	              		as required.</li>
 	            		<li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> support for showing the output of a specific process without debug view interaction</li>
 	          		</ul>
-	        	</li>
-		        <li>Breakpoints 
+		        <b> Breakpoints</b>
 		          	<ul>
 		            	<li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> use platform support for selective persistence of breakpoints</li>
 	              	</ul>
-		        <li>Source lookup 
+		        <b> Source lookup</b>
 		          	<ul>
 		            	<li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> &quot;Source not found&quot; 
 		              	editor - opened when source is not located for the selected stack frame </li>
 		          	</ul>
-		        </li>
-		        <li>Articles 
+		        <b> Articles</b>
 		          	<ul>
 		            	<li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> We Have Liftoff: The Launching Framework in Eclipse</li>
 		          	</ul>
-		        </li>
-			</ul>
+			</blockquote>
 			
 			<h4>Deferred Items (Post 2.1)</h4>
-	      	<ul>
-		        <li> Launch Configurations 
+	      	<blockquote>
+		        <b> Launch Configurations</b>
 		          	<ul>
 			            <li>import/export</li>
 			            <li>support location history in common tab</li>
 			            <li>define common (optional) launch config attributes - such as project</li>
 			            <li>support for working sets in launch dialog (was experimented with, but was removed)</li>
 		          	</ul>
-		        </li>
-	        	<li>Source Lookup 
+	        	<b> Source Lookup</b>
 		          	<ul>
 		            	<li>Migrate local file storage &amp; zip storage to the platform</li>
 		          	</ul>
-	        	</li>
-		        <li>Actions 
+		        <b> Actions</b>
 		          	<ul>
 			            <li>Investigate set of retargetable actions - add/remove breakpoint, 
 			              run to line, etc. [Discovered the workbench does not support contribution 
 			              of target actions for retargettable actions].</li>
 			            <li>Improve start-up performance of contributed toggle actions in debug views (lazy activation)</li>
 		          	</ul>
-		        </li>
-		        <li>Console 
+		        <b> Console</b>
 		          	<ul>
 			            <li>Generic extension point for regular expression matching in console output, with marker creation and lifecycle</li>
 		          	</ul>
-		        </li>
-		        <li>Presentation 
+		        <b> Presentation</b>
 		          	<ul>
 			            <li>investigate scalibility issues - views, actions, menus for many debug models</li>
 		          	</ul>
-		        </li>
-	      	</ul>
+	      	</blockquote>
 		</div>
 		
 		<div class="homeitem3col">
 			<h3>2.1 Development Effort - Milestone 5 (February 7th, 2003)</h3>
-			<ul>
-	        	<li><a href="http://dev.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=Platform&component=Debug&target_milestone=2.1&target_milestone=2.1+M1&target_milestone=2.1+M2&target_milestone=2.1+M3&target_milestone=2.1+M4&target_milestone=2.1+M5&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&bug_severity=blocker&bug_severity=critical&bug_severity=major&bug_severity=normal&bug_severity=minor&bug_severity=trivial&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">Fixing defects</a></li>
-		        <li>Console 
+	        	<a href="http://dev.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=Platform&component=Debug&target_milestone=2.1&target_milestone=2.1+M1&target_milestone=2.1+M2&target_milestone=2.1+M3&target_milestone=2.1+M4&target_milestone=2.1+M5&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&bug_severity=blocker&bug_severity=critical&bug_severity=major&bug_severity=normal&bug_severity=minor&bug_severity=trivial&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">Fixing defects</a>
+		        <b> Console</b>
 		          	<ul>
 		            	<li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Support for showing the output of a specific process with drop-down menu </li>
 		          	</ul>
-		        </li>
-		        <li>Architecture 
+		        <b> Architecture</b>
 		          	<ul>
 		            	<li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Protect againt exceptions in listener lists and extension points</li>
 		          	</ul>
-		        </li>
-		        <li>Actions 
+		        <b> Actions</b>
 		          	<ul>
 			            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Workbench key binding support</li>
 			            <li><b>[Deferred]</b> Improve start-up performance of contributed toggle actions in debug views (lazy activation)</li>
 			            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Support for new &quot;step debug&quot; interface/action</li>
 		          	</ul>
-		        </li>
-		        <li>Variables 
+		        <b> Variables</b>
 		          	<ul>
 			            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Support for wrappered details area</li>
 			            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Support for font selection in the details area</li>
 		          	</ul>
-		        </li>
-		        <li>Launch Configurations 
+		        <b> Launch Configurations</b>
 		          	<ul>
 			            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Remove support for working set filters in launch dialog</li>
 			            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Support for editing &amp; launching a single configuration from the dialog (for external tools/ant)</li>
 		          	</ul>
-		        </li>
-		     </ul>
 		 </div>
 		 <div class="homeitem3col">
 			<h3>Bug Resolution</h3>
