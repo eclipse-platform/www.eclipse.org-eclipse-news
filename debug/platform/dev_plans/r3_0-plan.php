@@ -412,7 +412,7 @@
 	              implementation</li>
 	            <li>New art work for toggle button in variable &amp; expression view</li>
 	          </ul>
-	        <b> Source Lookup </b>[<a href="source_lookup.php">Proposal</a>] 
+	        <b> Source Lookup </b>[<a href="/eclipse/debug/documents/source_lookup.php">Proposal</a>] 
 	          <ul>
 	            <li>Investigate the integration of &quot;source locations&quot; into 
 	              the debug platform. Determine if we can allow other debuggers to 
@@ -476,7 +476,7 @@
 	            <li><img src="/eclipse/debug/images/progress.gif"> Review API and implementation</li>
 	            <li><img src="/eclipse/debug/images/progress.gif"> Suggest new terminology/art work</li>
 	          </ul>
-	        <b> Source Lookup</b> [Darin W] [7 days] [<a href="source_lookup.php">Proposal</a>] 
+	        <b> Source Lookup</b> [Darin W] [7 days] [<a href="/eclipse/debug/documents/source_lookup.php">Proposal</a>] 
 	          <ul>
 	            <li><img src="/eclipse/debug/images/progress.gif"> Investigate the integration of &quot;source 
 	              locations&quot; into the debug platform. Determine if we can allow 
@@ -624,7 +624,16 @@
 		<div class="sideitem">
 			<h6>Quick Links</h6>
 			<ul>
+				<li><a href="/eclipse/debug/documents.php">Articles & Documents</a></li>
+				<li><a href="/eclipse/debug/contribute.php">How To Contribute</a></li>
 				<li><a href="/eclipse/debug/about.php">About this content</a></li>
+			</ul>
+		</div>
+		<div class="sideitem">
+			<h6>Plugins</h6>
+			<ul>
+				<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.debug.core" target="_top">debug.core</a></li>
+        		<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.debug.ui" target="_top">debug.ui</a></li>
 			</ul>
 		</div>
 	</div>

@@ -43,6 +43,16 @@
         		the JDT Debug team wants to talk to you.</p>
 		</div>
 	</div>
+	<div id="rightcolumn">
+		<div class="sideitem">
+			<h6>Quick Links</h6>
+			<ul>
+				<li><a href="/eclipse/debug/documents.php">Articles & Documents</a></li>
+				<li><a href="/eclipse/debug/contribute.php">How To Contribute</a></li>
+				<li><a href="/eclipse/debug/about.php">About this content</a></li>
+			</ul>
+		</div>
+	</div>
 </div>
 
 
