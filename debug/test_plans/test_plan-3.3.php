@@ -73,9 +73,10 @@
 			</div>
 		</div>
 		<div class="homeitem3col">
+			<a name="top"></a>
 			<h3>Test Grid</h3>
 			<div align="center">
-			<table width="100%" border="1">
+			<table width="80%" border="1">
 			  <tr> 
 			    <td><b>Feature</b></td>
 			    <td><strong>Darin Wright</strong></td>
@@ -277,7 +278,7 @@
 				  <li>In a clean workspace, popups should size reasonable on the first use, afterwhich 
 				    the popup sizes are persisted and reused</li>
 				</ul>
-				<a href="#top">Back to top</a><br><hr>
+				<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Launch"></a>
 			<h4>Launch Options</h4>
 				<ul>
@@ -321,7 +322,7 @@
 				  <li>Save dirty editors</li>
 				  <li> Launch in foreground/background (controlled via common tab on launch config)</li>
 				</ul>
-			<a href="#top">Back to top</a><br><hr>
+			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Debug"></a>
 			<h4>Debug View Management </h4>
 				<ul>
@@ -349,7 +350,7 @@
 				  </li>
 				  <li>Activate the workbench when a breakpoint is hit</li>
 				</ul>
-			<a href="#top">Back to top</a><br><hr>
+			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Breakpoints"></a>
 			<h4>Breakpoints</h4>
 				<ul>
@@ -421,7 +422,7 @@
 				    </li>
 				  <li>Preference for suspending Thread by default on newly created breakpoints</li>
 				</ul>
-			<a href="#top">Back to top</a><br><hr>
+			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Run"></a>
 			<h4>Run to Line </h4>
 				<ul>
@@ -435,7 +436,7 @@
 				    </ul>
 				  </li>
 				</ul>
-			<a href="#top">Back to top</a><br><hr>
+			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Logical"></a> 
 			<h4>Logical Structures </h4>
 				<ul>
@@ -467,7 +468,7 @@
 				    </ul>
 				  </li>
 				</ul>
-			<a href="#top">Back to top</a><br><hr>
+			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Watch"></a>
 			<h4>Watch Items</h4>
 				<ul>
@@ -484,7 +485,7 @@
 				  <li>Errors appear as children of a watch expression (compilation errors, runtime 
 				    errors) </li>
 				</ul>
-			<a href="#top">Back to top</a><br><hr>
+			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Context"></a>
 			<h4>Context Menu Launching</h4>
 				<ul>
@@ -517,7 +518,7 @@
 				    </ul>
 				  </li>
 				</ul>
-			<a href="#top">Back to top</a><br><hr>
+			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Classpaths"></a>
 			<h4>Runtime Classpaths</h4>
 				<ul>
@@ -537,7 +538,7 @@
 				  <li>Option to only include exported items in runtime classpath (by default, 
 				    all items are included).</li>
 				</ul>
-			<a href="#top">Back to top</a><br><hr>
+			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Source"></a>
 			<h4>Source Lookup</h4>
 				<ul>
@@ -559,7 +560,7 @@
 				  </li>
 				  <li>Multiple source roots in archives</li>
 				</ul>
-			<a href="#top">Back to top</a><br><hr>
+			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Monitors"></a>
 			<h4>Threads &amp; Monitors &amp; Thread Groups </h4>
 				<ul>
@@ -582,7 +583,7 @@
 				    </ul>
 				  </li>
 				</ul>
-			<a href="#top">Back to top</a><br><hr>
+			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Hot"></a>
 			<h4>Hot Code Replace </h4>
 				<ul>
@@ -610,7 +611,7 @@
 				    </ul>
 				  </li>
 				</ul>
-			<a href="#top">Back to top</a><br><hr>
+			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="JREs"></a>
 			<h4>Installed JREs </h4>
 				<ul>
@@ -629,7 +630,7 @@
 				  <li>Copy a JRE definition</li>
 				  <li>Import/export of JRE preferences</li>
 				</ul>
-			<a href="#top">Back to top</a><br><hr>
+			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="EEs" id="EEs"></a>
 			<h4>Execution Environments </h4>
 				<ul>
@@ -644,7 +645,7 @@
 				    </ul>
 				  </li>
 				</ul>
-			<a href="#top">Back to top</a><br><hr>
+			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="String"></a>
 			<h4>String Variables </h4>
 				<ul>
@@ -655,7 +656,7 @@
 				  </li>
 				  <li>String Variable selection dialog</li>
 				</ul>
-			<a href="#top">Back to top</a><br><hr>
+			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Console"></a>
 			<h4>Console </h4>
 				<ul>
@@ -706,7 +707,7 @@
 				  </li>
 				  <li>Link to console preferences from context menu</li>
 				</ul>
-			<a href="#top">Back to top</a><br><hr>
+			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Variables"></a>
 			<h4>Variables</h4>
 				<ul>
@@ -752,7 +753,7 @@
 				    </ul>
 				  </li>
 				</ul>
-			<a href="#top">Back to top</a><br><hr>
+			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Refactoring"></a>
 			<h4>Refactoring</h4>
 				<ul>
@@ -776,7 +777,7 @@
 				    </ul>
 				  </li>
 				</ul>
-			<a href="#top">Back to top</a><br><hr>
+			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Applets"></a>
 			<h4>Applets</h4>
 				<ul>
@@ -809,7 +810,7 @@
 				    </ul>
 				  </li>
 				</ul>
-			<a href="#top">Back to top</a><br><hr>
+			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Remote"></a>
 			<h4>Remote Debugging</h4>
 				<ul>
@@ -824,7 +825,7 @@
 				  <li>terminate should only be enabled when the config specifies that terminate 
 				    is supported</li>
 				</ul>
-				<a href="#top">Back to top</a><br><hr>
+				<p><a href="#top">Back to top</a><br><hr></p>
 				<a name="JSP"></a>
 				<h4>JSP Example </h4>
 				<ul>
