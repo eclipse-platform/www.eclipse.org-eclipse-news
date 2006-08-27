@@ -59,6 +59,12 @@
 		</div>
 		<div class="homeitem3col">
 			<h3>Test Plans</h3>
+			<p>While testing, ensure that keyboard navigation is available and works, in 
+			  addition to using the mouse. Ensure that keyboard accelerators are available 
+			  for each menu item, and that conflicts are not present. Also try assigning alternate 
+			  keybindings to applicable actions. File a bug when something does not work. When 
+			  a test can be automated and is not part of our test suite, add a JUnit test 
+			  to the test suite.</p>
      		<ul>
 				<li>Test matrix for <a href="/eclipse/debug/test_plans/test_plan-2.1.php">2.1.x</a></li>
 				<li>Test matrix for <a href="/eclipse/debug/test_plans/test_plan-3.0.php">3.0.x</a></li>
