@@ -130,21 +130,21 @@
 		<a name="filing_bugs"></a>
 		<h3>Filing Bugs</h3>
 			<p>
-			When filing bugs against the Debug Project, we as ask that you use your better judgement, and most importantly 
+			When filing bugs against the Debug Project, we ask that you use your better judgement, and most importantly 
 			common sense before filing a bug. Specifically:
 			</p>
 			<ul>
 				<li>Search bugzilla for existing bugs like yours BEFORE you file it. Resolving duplicates is time consuming.</li>
 				<li>Be sure that what happened is really a bug. For example if all you see is an entry in the log files that mentions debug
-				(platform or otherwise) try to reproduce it, find out how it happened, or better yet come up with a test case. Some log entries are NOT bugs
-				but can be caused by incorrect workspace configuration, etc.</li>
+				(platform or otherwise) try to reproduce it, find out how it happened, or better yet come up with a test case. Some log entries are NOT bugs,
+				and can be caused by incorrect workspace configuration, etc.</li>
 				<li>Bugzilla is not a forum. Do not ask questions on bugzilla like "how do I create a launch configuration?". This is not a bug.</li>
 			</ul>
 			<p>Bugs that apply to the Debug Platform (breakpoints, debug views, and launch configurations), should be
 		      filed against the PLATFORM-DEBUG component. New feature requests should be filed with a severity of
 		      "enhancement". Similarly, those bugs that apply to JDT Debug should be filed against the JDT-DEBUG component.
 		      </p>
-		      <p>By default, bugs filed against the Debug component will be assigned to an inbox account. Interested parties
+		      <p>By default, bugs filed against a Debug component will be assigned to an inbox account. Interested parties
 		      watch this inbox user to see incoming bugs. Committers or the Debug team lead
 		      move bugs from the inbox account when someone is actively working on a bug.
 		      </p>
@@ -183,6 +183,8 @@
 			<h6>Quick Links</h6>
 			<ul>
 				<li><a href="/eclipse/debug/documents.php">Articles & Documents</a></li>
+				<li><a href="/eclipse/debug/get_involved.php">Get Involved!</a></li>
+				<li><a href="/eclipse/debug/who.php">Who We Are</a></li>
 				<li><a href="/eclipse/debug/about.php">About this content</a></li>
 			</ul>
 		</div>

@@ -49,6 +49,7 @@
 			<ul>
 				<li><a href="/eclipse/debug/documents.php">Articles & Documents</a></li>
 				<li><a href="/eclipse/debug/contribute.php">How To Contribute</a></li>
+				<li><a href="/eclipse/debug/who.php">Who We Are</a></li>
 				<li><a href="/eclipse/debug/about.php">About this content</a></li>
 			</ul>
 		</div>
