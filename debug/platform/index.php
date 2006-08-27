@@ -58,6 +58,15 @@
 		    <p>For more detailed information, check out the <a href="/eclipse/debug/platform/dev_resources.php">Development Resources</a>.</p>
 		</div>
 		<div class="homeitem3col">
+			<h3>Test Plans</h3>
+     		<ul>
+				<li>Test matrix for <a href="/eclipse/debug/test_plans/test_plan-2.1.php">2.1.x</a></li>
+				<li>Test matrix for <a href="/eclipse/debug/test_plans/test_plan-3.0.php">3.0.x</a></li>
+				<li>Test matrix for <a href="/eclipse/debug/test_plans/test_plan-3.1.php">3.1.x</a></li>
+				<li>Test matrix for <a href="/eclipse/debug/test_plans/test_plan-3.3.php">3.3.x</a></li>
+	        </ul>
+		</div>
+		<div class="homeitem3col">
 			<h3>Maintenance Efforts</h3>
      		<ul>
 				<li>Fixes for <a href="">2.0.x</a></li>
