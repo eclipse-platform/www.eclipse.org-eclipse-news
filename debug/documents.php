@@ -47,6 +47,7 @@
 				<li><a href="/eclipse/debug/get_involved.php">Get Involved!</a></li>
 				<li><a href="/eclipse/debug/contribute.php">How To Contribute</a></li>
 				<li><a href="/eclipse/debug/who.php">Who We Are</a></li>
+				<li><a href="http://eclipse-debug.blogspot.com/">Debug Team Blog</a></li>
 				<li><a href="/eclipse/debug/about.php">About this content</a></li>
 			</ul>
 		</div>
