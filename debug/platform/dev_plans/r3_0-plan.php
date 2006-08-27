@@ -30,6 +30,13 @@
 		        <li>improved user experience</li>
 		        <li>concurrency</li>
 	      	</ul>
+	      	<table>
+				<tr> 
+		          <td><img src="/eclipse/debug/images/defer.gif"> item is deferred</td>
+		          <td> <img src="/eclipse/debug/images/progress.gif"> item is under development </td>
+		          <td> <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> item is finished </td>
+		        </tr>
+			</table>
 	      	<h4>Top Work Items</h4>
 	      	<blockquote>
 	  			<b>Scalability Issues </b>
