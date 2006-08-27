@@ -52,7 +52,7 @@
 		    	<li>Overall <a href="/eclipse/debug/platform/dev_plans/r2_1-plan.php">2.1 plan</a></li>
 		    	<li>Overall <a href="/eclipse/debug/platform/dev_plans/r3_0-plan.php">3.0 plan</a></li>
 		    	<li>Overall <a href="/eclipse/debug/platform/dev_plans/r3_1-plan.php">3.1 plan</a></li>
-				<li>Overall <a href="r3_2/plan.html>3.2 plan</a></li>
+				<li>Overall <a href="/eclipse/debug/platform/dev_plans/r3_2-plan.html">3.2 plan</a></li>
 		    	<li>Overall <a href="">3.3 plan</a></li>
 		    </ul>
 		    <p>For more detailed information, check out the <a href="/eclipse/debug/platform/dev_resources.php">Development Resources</a>.</p>

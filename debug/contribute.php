@@ -26,7 +26,7 @@
 		<h3>Overview</h3>
 		<p>There are many ways that you as a member of the community can contribute to the Debug Project (either Platform or JDT Debug).</p>
 		
-		<p>If your goal is to develop source artifacts and patches for the project, than the applicable sections on <a href="#workspace_setup">workspace setup</a> and <a href="#requird_plugins">required
+		<p>If your goal is to develop source artifacts and patches for the project, than the applicable sections on <a href="#workspace_setup">workspace setup</a> and <a href="#required_plugins">required
 			plugins</a> will be of most notible interest. If however, your only interest is to aid the evolution of the project by reporting defects,
 			then the section on <a href="#filing_bugs">filing bugs</a> will be of most interest.</p>
 			
@@ -35,8 +35,8 @@
 			of submitted material.
 		</div>
 		<div class="homeitem3col">
-			<h3>Creating a Selfhosting Workspace</h3>
 			<a name="workspace_setup"></a>
+			<h3>Creating a Selfhosting Workspace</h3>
 			<p>All development on the Debug Platform is done using Eclipse. Code is checked out of
 		      the Eclipse CVS repository, edited using JDT, and then run by launching a second instance of
 		      Eclipse from within Eclipse.
@@ -98,8 +98,8 @@
 		      in the preferences under <b>Window > Preferences > Plug-in Development > Target Platform</b>.
 		</div>
 		<div class="homeitem3col">
+		<a name="required_plugins"></a>
 		<h3>Import Required Plug-ins</h3>
-			<a name="required_plugins"></a>
 			<p><font color="#ff0000"><b>NOTE</b>: You can probably skip this section. If you are compiling other projects that don't use the "Plug-in Dependencies" 
 		      library, you may need to import required plug-ins manually, as explained here. Otherwise, this step is not necessary.</font>
 		      </p>
@@ -126,10 +126,9 @@
 		      target. Test changes made in your host workspace by running and debugging programs in the target.
 		      </p>
 		</div>
-		
 		<div class="homeitem3col">
-		<h3>Filing Bugs</h3>
 		<a name="filing_bugs"></a>
+		<h3>Filing Bugs</h3>
 			<p>
 			When filing bugs against the Debug Project, we as ask that you use your better judgement, and most importantly 
 			common sense before filing a bug. Specifically:
