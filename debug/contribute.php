@@ -31,7 +31,7 @@
 			then the section on <a href="#filing_bugs">filing bugs</a> will be of most interest.</p>
 			
 		<p>It should be noted that if your interest is in the creation of source artifacts for the project (either JDT or Platform Debug),
-			we do require that you follow the <a href="http://dev.eclipse.org/conventions.html">coding guidelines</a> outlined on dev.eclipse.org. Failure to do so can mean the outright rejection
+			we do require that you follow the <a href="http://dev.eclipse.org/conventions.html" target="_blank">coding guidelines</a> outlined on dev.eclipse.org. Failure to do so can mean the outright rejection
 			of submitted material.
 		</div>
 		<div class="homeitem3col">
