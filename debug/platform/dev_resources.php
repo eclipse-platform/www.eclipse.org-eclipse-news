@@ -31,7 +31,7 @@
 		<div class="homeitem3col">
 			<h3>Documents</h3>
 			<ul>
-		        <li><a href="project/index.html">Contributing to the Debug Platform</a></li>
+		        <li><a href="/eclipse/debug/contribute.php">Contributing to the Debug Platform</a></li>
 		        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.debug.core/buildnotes_platform-debug.html">Up-to-the-minute build notes</a></li>
 		    </ul>
 		</div>
