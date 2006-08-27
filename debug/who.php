@@ -33,7 +33,7 @@
 			<table width="100%" border="0" summary="About Darin Wright">
 				<tbody>
 				<tr> 
-					<td width="30%" valign="top"><no picture available></td>
+					<td width="30%" valign="top">No Picture</td>
 					<td width="70%">Darin is currently a senior software developer with the IBM Rational Team, 
 					an Eclipse committer, and lead for the Eclipse Debug Platform and Java Debugger. 
 					For the better part of the last ten years, Darin has been working on IDE's such as Eclipse, 
@@ -56,7 +56,7 @@
 			<table width="100%" border="0" summary="About Michael Rennie">
 				<tbody>
 				<tr> 
-					<td width="30%" valign="top"><no picture available></td>
+					<td width="30%" valign="top">No Picture</td>
 					<td width="70%">Michael Rennie is an Debug platform committer working with the IBM Rational team. 
 					Before that he was a graduate student at the University of Manitoba, researching SOA and 
 					architecture description languages.</td>
@@ -77,7 +77,7 @@
 			<table width="100%" border="0" summary="About Samantha">
 				<tbody>
 				<tr> 
-					<td width="30%" valign="top"><no picture available></td>
+					<td width="30%" valign="top">No Picture</td>
 					<td width="70%">Samantha Chan is a developer from IBM Debug Team. 
 					She has been working with debug technologies for 4 years.</td>
 				</tr>
@@ -114,11 +114,11 @@
 			</table>
 		</div>
 		<div class="homeitem3col">
-			<h3>Darin_Swanson</h3>
+			<h3>Darin Swanson</h3>
 			<table width="100%" border="0" summary="About Darin Swanson">
 				<tbody>
 				<tr> 
-					<td width="30%" valign="top"><no picture available></td>
+					<td width="30%" valign="top">No Picture</td>
 					<td width="70%">Darin Swanson is one of the original committers on the Eclipse project, 
 					working as the Ant Component lead for the Eclipse Platform Project. He was also involved 
 					in the development of Eclipse's precursors: VisualAge Micro Edition Java IDE and the Visual 
