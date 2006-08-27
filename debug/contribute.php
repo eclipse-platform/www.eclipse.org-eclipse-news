@@ -7,13 +7,13 @@
 	# Author: 		Michael Rennie
 	# Date:			August 22, 2006
 	#
-	# Description: This is the page that describes how to contribut to either of the 
-	#				debug project JDT, or Platform
+	# Description: This is the page that describes how to contributs to either of the 
+	#				debug projects: JDT or Platform
 	#
 	#
 	#****************************************************************************
 	
-	$pageTitle 		= "Eclipse Debug Project";
+	$pageTitle 		= "How To Contribute";
 	$pageKeywords	= "debug, platform, debugging, debugger, jdt, breakpoints, contribute, contribution, contributing";
 	$pageAuthor		= "Debug Team";
 	
