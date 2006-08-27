@@ -32,12 +32,12 @@
 			      </ul>
 			<table>
 				<tr> 
-		          <td><img src="/eclipse/debug/images/defer.gif">item is deferred</td>
+		          <td><img src="/eclipse/debug/images/defer.gif"> item is deferred</td>
 		          <td> <img src="/eclipse/debug/images/progress.gif"> item is under development </td>
 		          <td> <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> item is finished </td>
 		        </tr>
 			<table>
-			<h4>Potential<b></b> Work Items</h4>
+			<h4>Potential Work Items</h4>
 			<blockquote>
 				<b>Additional breakpoint management enhancements</b> -
 					The debug platform provides ways to manage 
@@ -48,7 +48,7 @@
 	                <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> Import and export of 
 	                  breakpoints: allow breakpoints to be shared between users and 
 	                  persisted for later use.</li>
-	                <li><img src="/eclipse/debug/images/defer.gif">Breakpoint working 
+	                <li><img src="/eclipse/debug/images/defer.gif">B reakpoint working 
 	                  sets and launch configurations: allow breakpoint working sets 
 	                  to be associated with launch configurations for automatic enabling/disabling 
 	                  when launching</li>
@@ -59,25 +59,25 @@
 	              by simple Java programs. Potential areas of work and investigation 
 	              include: 
 		              <ul>
-		                <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Flow control: provide 
+		                <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> Flow control: provide 
 		                  a debug implementation with more control over the number and 
 		                  order of requests sent to a debugger, potentially allowing for 
 		                  coalescing of requests.</li>
-		                <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Asynchronous API's: provide 
+		                <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> Asynchronous API's: provide 
 		                  explicitly asynchronous API's for interactions with debuggers 
 		                  that require communication with a remote process and allow for 
 		                  cancellation of requests made against a target.</li>
-		                <li><img src="/eclipse/debug/images/defer.gif">Pluggable view 
+		                <li><img src="/eclipse/debug/images/defer.gif"> Pluggable view 
 		                  update policies: allow debuggers to provide custom update/refresh 
 		                  policies views provided by the debug platform. 
 		                  <ul>
-		                    <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Update policies have 
+		                    <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> Update policies have 
 		                      been replaced with model proxies - a model proxy interfaces 
 		                      a debug model with the debug user interface, firing incremental 
 		                      deltas describing elements that have changed in a model</li>
 		                  </ul>
 		                </li>
-		                <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Flexible element hierarchy: 
+		                <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> Flexible element hierarchy: 
 		                  support the presentation of different debug architectures in 
 		                  all views provided by the debug platform.</li>
 		                <li>Table trees: allow table trees to be used in the standard 
@@ -96,33 +96,34 @@
 	              user interface and the launching task flow can be fairly complex. 
 	              Potential areas of work and investigation include: 
 		              <ul>
-		                <li><img src="/eclipse/debug/images/defer.gif">Context sensitive 
+		                <li><img src="/eclipse/debug/images/defer.gif"> Context sensitive 
 		                  run/debug toolbar buttons: rather than forcing the user to choose 
 		                  the way to launch an application via cascade menus (as a Java 
 		                  Application, Java Applet, etc.), simply allow the user to press 
 		                  run or debug to launch the currently selected item with a single 
 		                  click, prompting the user for input only when necessary.</li>
-		                <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">User preferences to filter 
+		                <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> User preferences to filter 
 		                  type of launch configurations</li>
-		                <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Associate launch configurations 
+		                <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> ssociate launch configurations 
 		                  with files/projects 
 		                  <ul>
-		                    <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Support resource 
+		                    <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> Support resource 
 		                      based filtering - filters configurations from closed and 
 		                      unavailable projects</li>
-		                    <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Automatic deletion 
+		                    <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> Automatic deletion 
 		                      of configurations when a project is deleted (user configurable)</li>
 		                  </ul>
 		                </li>
 		                <li><img src="/eclipse/debug/images/defer.gif">Allow configurations 
 		                  to be associated with resources and viewed/managed via a resource's 
 		                  properties.</li>
-		                <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Simplify the launch dialog: 
+		                <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> Simplify the launch dialog: 
 		                  the perspective settings associated with launching should be 
 		                  an advanced option rather than the first thing a user sees when 
 		                  they open the launch dialog.</li>
 		              </ul> 
 			</blockquote>
+		</div>
 		</div>
 		<div class="homeitem3col">
 			<h3>3.2 Current Development Effort - Milestone 6 (Friday, March 31th)</h3>
@@ -131,7 +132,7 @@
 		          <ul>
 		            <li>Asynchronous capability adapters - provisional interfaces to allow 
 		              asynchronous action enablement (terminate, step, etc.)</li>
-		            <li><img src="/eclipse/debug/images/progress.gif">Support for columns in 'single model' 
+		            <li><img src="/eclipse/debug/images/progress.gif"> Support for columns in 'single model' 
 		              debug views</li>
 		          </ul>
 		        <b>Replace delegate actions</b> - (extensions) in debug view (menu/toolbar) 
@@ -141,8 +142,8 @@
 		              copy of each action)</li>
 		          </ul>
 		        <b>Clean up API access warnings</b> for clients subclassing public classes 
-		          that subclass internal implementations
-		        <b>Address performance test failures</b>
+		          that subclass internal implementations<br>
+		        <b>Address performance test failures</b><br>
 		        <b>Bug fixing</b>
 			</blockquote>
 		</div>
@@ -151,28 +152,28 @@
 			<blockquote>
 				<b>Flexible debug platform</b>
 		          <ul>
-		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Support for SWT virtual tree 
+		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> Support for SWT virtual tree 
 		              in the asynchronous tree viewer</li>
-		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Incremental content retrieval</li>
-		            <li><img src="/eclipse/debug/images/progress.gif">Support for table trees</li>
-		            <li><img src="/eclipse/debug/images/defer.gif">Pluggable cell editors 
+		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> Incremental content retrieval</li>
+		            <li><img src="/eclipse/debug/images/progress.gif"> Support for table trees</li>
+		            <li><img src="/eclipse/debug/images/defer.gif"> Pluggable cell editors 
 		              in asynchronous table viewer</li>
-		            <li><img src="/eclipse/debug/images/defer.gif">Investigate multiple 
+		            <li><img src="/eclipse/debug/images/defer.gif"> Investigate multiple 
 		              debug contexts, view sets, pin, etc.</li>
-		            <li><img src="/eclipse/debug/images/defer.gif">Investigate pluggable 
+		            <li><img src="/eclipse/debug/images/defer.gif"> Investigate pluggable 
 		              drag and drop between all debug views</li>
 		          </ul>
 		        <b>Launching enhancements</b>
 		          <ul>
-		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Add a toolbar to the launch 
+		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> Add a toolbar to the launch 
 		              dialog tree viewer - support new, copy, delete, and filters</li>
-		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Preferences for filter configurations 
+		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> Preferences for filter configurations 
 		              from the UI in the launch dialog and launch history - closed projects, 
 		              deleted projects, configuration types types, capabilities</li>
 		          </ul>
 		        <b>Debug view management</b>
 		          <ul>
-		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Rework debug view management 
+		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> Rework debug view management 
 		              support (automatically display views associated with debug contexts)</li>
 		          </ul>
         	</blockquote>
@@ -184,26 +185,26 @@
 		          The new API's will be internal for 3.2 to allow time for review and 
 		          use by community 
 		          <ul>
-		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Asynchronous viewer API - asynchronous structured viewers as API, including 
+		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> Asynchronous viewer API - asynchronous structured viewers as API, including 
 		                  an abstract structured asynchronous viewer and a tree viewer</li>
-		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Flexible hierarchy API - asynchronous label and tree content adapters as API. 
+		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> Flexible hierarchy API - asynchronous label and tree content adapters as API. 
 		            	Provide default implementation of adapters, registered for 
 		                  default debug model elements and allow clients to provide custom adapters to create custom 
 		                  content in all debug views</li>
-		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Pluggable model proxies - Allows debuggers to provide custom model proxies to control 
+		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> Pluggable model proxies - Allows debuggers to provide custom model proxies to control 
 		                  the update of elements in a debug viewer</li>
-		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Debug context API - Allows debuggers to drive debugging (source lookup, action 
+		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> Debug context API - Allows debuggers to drive debugging (source lookup, action 
 		                  enablement, etc.)</li>
 		          </ul>
 		        <b>Launching enhancements</b>
 		          <ul>
 		            <li>Investigate single click launching - goal is to replace the &quot;Run/Debug 
 		              As&quot; cascade menus with single actions - &quot;Run/Debug&quot;.</li>
-		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Add hyperlink from launch 
+		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> Add hyperlink from launch 
 		              dialog to perspective preferences</li>
 		            <li>Investigate ways for products to reduce the number of configuration 
 		              types visible in the launch dialog</li>
-		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Provide API to associated 
+		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> Provide API to associated 
 		              a resource with a launch configuration (allows filtering configurations 
 		              from closed projects)</li>
 		          </ul>
