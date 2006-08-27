@@ -173,7 +173,7 @@
 		<div class="homeitem3col">
 			<h3>Feature Testing</h3>
 			<h4><a name="Breakpoints"></a>Breakpoints</h4>
-				<b>Line Breakpoints</b>
+				<p>Line Breakpoints</p>
 				<ul>
 				  <li>creation - double-click in ruler, from &quot;Run&quot; menu, and key-binding 
 				    (Ctrl+Shift+B)</li>
@@ -193,7 +193,7 @@
 				  <li>skip all breakpoints</li>
 				  <li>breakpoint updates with refactorings</li>
 				</ul>
-				<b>Exception Breakpoints</b>
+				<p>Exception Breakpoints</p>
 				<ul>
 				  <li> creation - toolbar in breakpoints view, and from &quot;Run...&quot; menu, 
 				    try to assign keybinding</li>
@@ -211,7 +211,7 @@
 				  <li>skip all breakpoints</li>
 				  <li>breakpoint updates with refactorings</li>
 				</ul>
-				<b>Method Breakpoints</b>
+				<p>Method Breakpoints</p>
 				<ul>
 				  <li> creation - context menu in outliner, and from &quot;Run...&quot; menu, 
 				    try to assign keybinding</li>
@@ -230,7 +230,7 @@
 				  <li>skip all breakpoints</li>
 				  <li>breakpoint updates with refactorings</li>
 				</ul>
-				<b>Watchpoints</b>
+				<p>Watchpoints</p>
 				<ul>
 				  <li> creation - context menu in outliner, and from &quot;Run...&quot; menu, 
 				    try to assign keybinding</li>
@@ -246,13 +246,13 @@
 				  <li>skip all breakpoints</li>
 				  <li>breakpoint updates with refactorings</li>
 				</ul>
-				<b>Uncaught Exceptions &amp; Compilation Errors</b>
+				<p>Uncaught Exceptions &amp; Compilation Errors</p>
 				<ul>
 				  <li> all combinations of &quot;suspend on uncaught exceptions&quot; and &quot;suspend 
 				    on compilation errors&quot;</li>
 				  <li>should still work when &quot;skip all breakpoints&quot; is on</li>
 				</ul>
-				<b>Class Load Breakpoints</b>
+				<p>Class Load Breakpoints</p>
 				<ul>
 				  <li>creation - context menu in outliner, and &quot;Run &gt; Add Class Load Breakpoint&quot;</li>
 				  <li>deletion</li>
@@ -268,7 +268,7 @@
 				<p>Step tests should be performed in the debug perspective, and in a non-debug 
 				  perspective, with and without the debug view present. We do not expect stepping 
 				  to work without the debug view present.</p>
-				<b>Step Over</b>
+				<p>Step Over</p>
 				<ul>
 				  <li> via toolbar, &quot;Run&quot; menu, keybinding</li>
 				  <li>step over a line that will cause a breakpoint to be hit</li>
@@ -278,7 +278,7 @@
 				  <li>step over in a non-top stack frame</li>
 				  <li>&quot;Reuse editor when displaying source code&quot; preference</li>
 				</ul>
-				<b>Step Into</b>
+				<p>Step Into</p>
 				<ul>
 				  <li> via toolbar, &quot;Run&quot; menu, keybinding</li>
 				  <li>rapid stepping - hold down the step into hotkey</li>
@@ -286,7 +286,7 @@
 				    false conditions</li>
 				  <li>step into in a non-top stack frame (should not be enabled)</li>
 				</ul>
-				<b>Step Return</b>
+				<p>Step Return</p>
 				<ul>
 				  <li> via toolbar, &quot;Run&quot; menu, keybinding</li>
 				  <li>rapid stepping - hold down the step return hotkey</li>
@@ -298,7 +298,7 @@
 				  <li>step return from class loading code (ensure that you return to non-class 
 				    loading code)</li>
 				</ul>
-				<b>Step Filters</b>
+				<p>Step Filters</p>
 				<p>When the &quot;Step With Filters&quot; filters toggle is &quot;on&quot;, all 
 				  stepping actions continue stepping (over, into, return) until an unfiltered 
 				  location is reached. Filters are defined from the &quot;Java &gt; Debug &gt; 
@@ -319,7 +319,7 @@
 				  <li>Step return from a filtered location when the second method on the stack 
 				    is also filtered (should continue step return to the non-filtered location)</li>
 				</ul>
-				<b>Step Into Selection</b>
+				<p>Step Into Selection</p>
 				<p>Step Into Selection steps into the selected method (or the method that the 
 				  cursor is on).</p>
 				<ul>
@@ -333,7 +333,7 @@
 				  <li>Step into a method that is not on the current line</li>
 				  <li>Step into a method that is not in the top stack frame</li>
 				</ul>
-				<b>Run to Line</b>
+				<p>Run to Line</p>
 				<ul>
 				  <li>Use context menu and keybinding</li>
 				  <li>Class file and Compilation Unit editors</li>
@@ -348,14 +348,14 @@
 				    </ul>
 				  </li>
 				</ul>
-				<b>Show In...</b>
+				<p>Show In...</p>
 				<ul>
 				  <li> &quot;Show In...&quot; is offered for stack frames</li>
 				  <li>shows associated resource (if any) in the resource navigator</li>
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<h4><a name="Variables"></a>Variables</h4>
-				<b>Rendering</b>
+				<p>Rendering</p>
 				<ul>
 				  <li>show/hide qualified names</li>
 				  <li>show/hide static</li>
@@ -367,7 +367,7 @@
 				  <li>ensure method arguments appear for class libraries that do not have debug 
 				    attributes </li>
 				</ul>
-				<b>Updating</b>
+				<p>Updating</p>
 				<ul>
 				  <li>update while rapid stepping</li>
 				  <li>expansion remains while stepping</li>
@@ -377,7 +377,7 @@
 				  <li>changed variables render in preference specified color</li>
 				  <li>change a variable's value - primitives &amp; Strings</li>
 				</ul>
-				<b>Details</b>
+				<p>Details</p>
 				<ul>
 				  <li>view orientation</li>
 				  <li>show/hide details area</li>
@@ -388,13 +388,13 @@
 				  <li>edit detail formatter from variables view context menu</li>
 				  <li>remove detail formatter from variable view context menu</li>
 				</ul>
-				<b>Navigation</b>
+				<p>Navigation</p>
 				<ul>
 				  <li> open on declared/concrete type/type hierarchy</li>
 				  <li>inspect a variable</li>
 				  <li>watch a variable</li>
 				</ul>
-				<b>Logical Structures</b>
+				<p>Logical Structures</p>
 				<ul>
 				  <li> turn on logical structures</li>
 				  <li>ensure lists, maps, map entries and SWT composites show with logical structures</li>
@@ -434,7 +434,7 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<h4><a name="LaunchFramework"></a>Launching Framework</h4>
-				<b>Open Launch Dialog</b>
+				<p>Open Launch Dialog</p>
 				<ul>
 				  <li> Pressing run/debug in a new workspace with no launches opens launch dialog</li>
 				  <li>Using &quot;Run...&quot;/&quot;Debug...&quot; from drop-down menus &amp; 
@@ -443,7 +443,7 @@
 				  <li>Select a debug element in the debug view - context menu should contain launch 
 				    config name + &quot;...&quot;</li>
 				</ul>
-				<b>Manipulation</b>
+				<p>Manipulation</p>
 				<ul>
 				  <li> Delete a config</li>
 				  <li>Rename a config (also updated in history/favorites)</li>
@@ -457,7 +457,7 @@
 				    </ul>
 				  </li>
 				</ul>
-				<b>Launch History</b>
+				<p>Launch History</p>
 				<ul>
 				  <li>Create a favorite from the &quot;Common&quot; tab</li>
 				  <li>Reorder favorites and launch history</li>
@@ -465,7 +465,7 @@
 				  <li>Import a shared launch configuration (i.e. into the workspace) that is a 
 				    favorite (from file system or repository) - should show up in favorites</li>
 				</ul>
-				<b>Launching</b>
+				<p>Launching</p>
 				<ul>
 				  <li> Launching from history</li>
 				  <li>Re-launch last run/debug - hotkeys</li>
@@ -484,7 +484,7 @@
 				  <li>launch in foreground and background (controlled via common tab on launch 
 				    config) </li>
 				</ul>
-				<b>Context Menu Launch</b>
+				<p>Context Menu Launch</p>
 				<ul>
 				  <li> There is a launch cascade menu for each launch mode</li>
 				  <li>Ensure &quot;Run&quot; cascade menu displays appropriate choices for selection 
@@ -504,7 +504,7 @@
 				    they have a main method or not.</li>
 				  <li>Profile menu appears when a profiler is present in the SDK</li>
 				</ul>
-				<b>Perspective Switching/Debug View Management</b>
+				<p>Perspective Switching/Debug View Management</p>
 				<ul>
 				  <li> Ensure perspective switching preferences/dialogs prompt/switch as specified 
 				    <ul>
@@ -536,7 +536,7 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br></p>
 			<h4><a name="Evaluations"></a>Evaluations (in Debugger)</h4>
-				<b>Display View</b>
+				<p>Display View</p>
 				<ul>
 				  <li>evaluation actions only enabled when a stack frame is selected (in context 
 				    menu and Run menu)</li>
@@ -549,7 +549,7 @@
 				  <li>runtime error</li>
 				  <li>syntax error</li>
 				</ul>
-				<b>Details Area</b>
+				<p>Details Area</p>
 				<ul>
 				  <li> evaluation actions only enabled when a stack frame is selected (in context 
 				    menu and Run menu)</li>
@@ -563,7 +563,7 @@
 				  <li>runtime error</li>
 				  <li>syntax error</li>
 				</ul>
-				<b>Java Editor</b>
+				<p>Java Editor</p>
 				<ul>
 				  <li> for both compilation units (source) and class files (binaries)</li>
 				  <li>actions enable only when a stack frame is selected and expression is highlighted</li>
@@ -572,7 +572,7 @@
 				  <li>runtime error</li>
 				  <li>syntax error</li>
 				</ul>
-				<b>General Evaluation Support</b>
+				<p>General Evaluation Support</p>
 				<ul>
 				  <li>boolean expressions</li>
 				  <li>message sends</li>
@@ -615,14 +615,14 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<h4><a name="JavaApp"></a>Java Applications (Configurations)</h4>
-				<b>Creation</b>
+				<p>Creation</p>
 				<ul>
 				  <li> default config creation based on navigator selection</li>
 				  <li>default config creation based on active editor</li>
 				  <li>default config creation from launch short cut &quot;run/debug as -&gt; Java 
 				    Application&quot; </li>
 				</ul>
-				<b>Main</b>
+				<p>Main</p>
 				<ul>
 				  <li> specify a project by typing</li>
 				  <li>select a project from &quot;browse&quot; button</li>
@@ -637,19 +637,19 @@
 				  <li>use &quot;${java_type_name}&quot; variable to launch the selected compilation 
 				    unit</li>
 				</ul>
-				<b>VM/Program Arguments</b>
+				<p>VM/Program Arguments</p>
 				<ul>
 				  <li>Arguments with quotes and spaces are interpreted as single argument</li>
 				  <li>use of string variables as arguments</li>
 				</ul>
-				<b>JRE</b>
+				<p>JRE</p>
 				<ul>
 				  <li> default JRE - should track workspace/project default JRE as it changes</li>
 				  <li>explicit JRE - remains constant as workspace/project JRE changes</li>
 				  <li>specification of Java vs. javaw</li>
 				  <li>reference to a deleted/moved JRE</li>
 				</ul>
-				<b>Classpath</b>
+				<p>Classpath</p>
 				<ul>
 				  <li> default classpath updates as project's build path changes</li>
 				  <li>non-default classpath/bootpath 
@@ -671,7 +671,7 @@
 				    </ul>
 				  </li>
 				</ul>
-				<b>Source Lookup</b>
+				<p>Source Lookup</p>
 				<ul>
 				  <li> default source lookup path updates to mirror the configurations classpath</li>
 				  <li>duplicate source file prompting (select option in tab, and ensure there 
@@ -718,7 +718,7 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<h4><a name="Applets"></a>Applets</h4>
-				<b>Main</b>
+				<p>Main</p>
 				<ul>
 				  <li> specify a project via typing/browsing</li>
 				  <li>specify a nonexistent project (should see error if does not exist)</li>
@@ -729,7 +729,7 @@
 				  <li>specify default applet viewer class</li>
 				  <li>specify an explicit applet viewer class</li>
 				</ul>
-				<b>Parameters</b>
+				<p>Parameters</p>
 				<ul>
 				  <li> specify various width &amp; height</li>
 				  <li>specify parameters (available via Applet#getParameter(...))</li>
@@ -752,7 +752,7 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<h4><a name="Hot"></a>Hot Code Replace</h4>
-				<b>Positive</b>
+				<p>Positive</p>
 				<ul>
 				  <li>changes within pre-existing method</li>
 				  <li>changes within preexisting instance variable initializer (frames won't automatically 
@@ -763,7 +763,7 @@
 				  <li>default and non-default packages</li>
 				  <li>drop to frame (context menu and toolbar)</li>
 				</ul>
-				<b>Negative</b>
+				<p>Negative</p>
 				<ul>
 				  <li> Not supported by VM</li>
 				  <li>method addition/removal</li>
@@ -775,7 +775,7 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<h4><a name="JREs"></a>Installed JREs</h4>
-				<b>Basic</b>
+				<p>Basic</p>
 				<ul>
 				  <li> Add a JRE - Standard, 1.1.x, J9</li>
 				  <li>Rename a JRE</li>
@@ -785,7 +785,7 @@
 				  <li>Export JREs (workspace preferences)</li>
 				  <li>Import JREs (workspace preferences)</li>
 				</ul>
-				<b>Libraries</b>
+				<p>Libraries</p>
 				<ul>
 				  <li> Default libraries</li>
 				  <li>non-default system libraries</li>
@@ -796,7 +796,7 @@
 				  <li>noted in Java project build path when referenced explicitly (via container, 
 				    or workspace default)</li>
 				</ul>
-				<b>Rebuild</b>
+				<p>Rebuild</p>
 				<ul>
 				  <li> when a project references a JRE that is changed (renamed, removed, library 
 				    change), the project will need to be rebuilt
