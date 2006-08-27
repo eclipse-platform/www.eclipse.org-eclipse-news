@@ -534,7 +534,7 @@
 				    </ul>
 				  </li>
 				</ul>
-			<p><a href="#top">Back to top</a><br></p>
+			<p><a href="#top">Back to top</a><br><hr></p>
 			<h4><a name="Evaluations"></a>Evaluations (in Debugger)</h4>
 				<p>Display View</p>
 				<ul>
