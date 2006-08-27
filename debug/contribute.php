@@ -31,12 +31,12 @@
 			then the section on <a href="#filing_bugs>"filing bugs</a> will be of most interest.</p>
 			
 		<p>It should be noted that if your interest is in the creation of source artifacts for the project (either JDT or Platform Debug),
-			we do require that you follow the <a href="http://dev.eclipse.org/conventions.html">coding guidelines</a> outlined on dev.eclpe.org. Failure to do so can mean the outright rejection
+			we do require that you follow the <a href="http://dev.eclipse.org/conventions.html">coding guidelines</a> outlined on dev.eclipse.org. Failure to do so can mean the outright rejection
 			of submitted material.
 		</div>
 		<div class="homeitem3col">
 			<h3>Creating a Selfhosting Workspace</h3>
-			<a name="workspace_setup">
+			<a name="workspace_setup"></a>
 			<p>All development on the Debug Platform is done using Eclipse. Code is checked out of
 		      the Eclipse CVS repository, edited using JDT, and then run by launching a second instance of
 		      Eclipse from within Eclipse.
@@ -45,15 +45,40 @@
 		<div class="homeitem3col">
 		<h3>Connect to the Eclipse Repository</h3>
 			<p>Create a CVS Repository Location with the following information:</p>
-			
-			<pre>
-			Host:				dev.eclipse.org
-            Repository Path:	/cvsroot/eclipse
-            User:				anonymous
-            Password:			(default
-            Connection type:	extssh
-            Use default port:	ON (default)
-			</pre>
+			<table width="100%" border="0" summary="CVS location settings">
+				<thead>
+					<tr>
+						<th width="30%" colspan="1" rowspan="1" align="left">Attribute Name</th>
+						<th width="70%" colspan="1" rowspan="1" align="left">Value</th>
+					</tr>
+				</thead>
+				<tbody>
+				<tr> 
+					<td width="30%" valign="top">Host:</td>
+					<td width="70%">dev.eclipse.org</td>
+				</tr>
+				<tr> 
+					<td width="30%" valign="top">Repository Path:</td>
+					<td width="70%">/cvsroot/eclipse</td>
+				</tr>
+				<tr> 
+					<td width="30%" valign="top">User:</td>
+					<td width="70%">anonymous</td>
+				</tr>
+				<tr> 
+					<td width="30%" valign="top">Password:</td>
+					<td width="70%">(blank)</td>
+				</tr>
+				<tr> 
+					<td width="30%" valign="top">Connection Type:</td>
+					<td width="70%">extssh</td>
+				</tr>
+				<tr> 
+					<td width="30%" valign="top">Use Default Port:</td>
+					<td width="70%">ON (default)</td>
+				</tr>
+				</tbody>
+			</table>
 			
 			<p>You can check projects out of the HEAD stream of the newly created repository location by
 		      selecting them, then <b>Right Click > Check Out</b>. Check out the Debug Platform projects:</p>
@@ -74,7 +99,7 @@
 		</div>
 		<div class="homeitem3col">
 		<h3>Import Required Plug-ins</h3>
-			<a name="required_plugins">
+			<a name="required_plugins"></a>
 			<p><font color="#ff0000"><b>NOTE</b>: You can probably skip this section. If you are compiling other projects that don't use the "Plug-in Dependencies" 
 		      library, you may need to import required plug-ins manually, as explained here. Otherwise, this step is not necessary.</font>
 		      </p>
@@ -104,7 +129,7 @@
 		
 		<div class="homeitem3col">
 		<h3>Filing Bugs</h3>
-		<a name="filing_bugs">
+		<a name="filing_bugs"></a>
 			<p>
 			When filing bugs against the Debug Project, we as ask that you use your better judgement, and most importantly 
 			common sense before filing a bug. Specifically:
