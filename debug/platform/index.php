@@ -63,6 +63,7 @@
 				<li>Test matrix for <a href="/eclipse/debug/test_plans/test_plan-2.1.php">2.1.x</a></li>
 				<li>Test matrix for <a href="/eclipse/debug/test_plans/test_plan-3.0.php">3.0.x</a></li>
 				<li>Test matrix for <a href="/eclipse/debug/test_plans/test_plan-3.1.php">3.1.x</a></li>
+				<li>Test matrix for <a href="/eclipse/debug/test_plans/test_plan-3.2.php">3.2.x</a></li>
 				<li>Test matrix for <a href="/eclipse/debug/test_plans/test_plan-3.3.php">3.3.x</a></li>
 	        </ul>
 		</div>
