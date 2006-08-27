@@ -38,7 +38,7 @@
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%"><b>IBM 1.5</b></td>
 				    <td width="18%"><b>JDK 1.4.2</b></td>
-				    <td width="18%"><strong>JDK 1.5</strong></td>
+				    <td width="18%"><b>JDK 1.5</b></td>
 				    <td width="18%"><b>IBM 1.4.2</b></td>
 				  </tr>
 				  <tr> 
@@ -50,22 +50,22 @@
 				  </tr>
 				  <tr> 
 				    <td width="18%"><b>Win XP</b></td>
+				    <td width="18%">Darin Wright</td>
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
-				    <td width="18%">&nbsp;</td>
-				    <td width="18%">&nbsp;</td>
+				    <td width="18%">Samantha Chan</td>
 				  </tr>
 				  <tr> 
 				    <td width="18%"><b>Linux</b></td>
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
-				    <td width="18%">&nbsp;</td>
+				    <td width="18%">Michael Rennie</td>
 				    <td width="18%">&nbsp;</td>
 				  </tr>
 				  <tr> 
 				    <td width="18%"><b>Mac</b></td>
 				    <td width="18%">&nbsp;</td>
-				    <td width="18%">&nbsp;</td>
+				    <td width="18%">Kevin Barnes</td>
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
 				  </tr>
