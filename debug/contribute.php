@@ -26,9 +26,9 @@
 		<h3>Overview</h3>
 		<p>There are many ways that you as a member of the community can contribute to the Debug Project (either Platform or JDT Debug).</p>
 		
-		<p>If your goal is to develop source artifacts and patches for the project, than the applicable sections on <a href="#workspace_setup"workspace setup</a> and <a href="#requird_plugins>"required
+		<p>If your goal is to develop source artifacts and patches for the project, than the applicable sections on <a href="#workspace_setup">workspace setup</a> and <a href="#requird_plugins">required
 			plugins</a> will be of most notible interest. If however, your only interest is to aid the evolution of the project by reporting defects,
-			then the section on <a href="#filing_bugs>"filing bugs</a> will be of most interest.</p>
+			then the section on <a href="#filing_bugs">filing bugs</a> will be of most interest.</p>
 			
 		<p>It should be noted that if your interest is in the creation of source artifacts for the project (either JDT or Platform Debug),
 			we do require that you follow the <a href="http://dev.eclipse.org/conventions.html">coding guidelines</a> outlined on dev.eclipse.org. Failure to do so can mean the outright rejection
