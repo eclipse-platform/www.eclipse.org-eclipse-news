@@ -35,43 +35,45 @@
 			<p>The following JREs should be considered when testing. Committers have been 
 			  assigned a JRE and platform to test on. The community can chose any JRE and 
 			  platform. </p>
-			<table width="75%" border="1">
-			  <tr> 
-			    <td width="18%">&nbsp;</td>
-			    <td width="16%"><b>IBM 1.5</b></td>
-			    <td width="13%"><b>JDK 1.4.2</b></td>
-			    <td width="26%"><strong>JDK 1.5</strong></td>
-			    <td width="27%"><b>IBM 1.4.2</b></td>
-			  </tr>
-			  <tr> 
-			    <td width="18%"><b>Win 2000</b></td>
-			    <td width="16%">&nbsp;</td>
-			    <td width="13%">&nbsp;</td>
-			    <td width="26%">&nbsp;</td>
-			    <td width="27%">&nbsp;</td>
-			  </tr>
-			  <tr> 
-			    <td width="18%"><b>Win XP</b></td>
-			    <td width="16%">Darin Wright</td>
-			    <td width="13%">&nbsp;</td>
-			    <td width="26%">&nbsp;</td>
-			    <td width="27%">&nbsp;</td>
-			  </tr>
-			  <tr> 
-			    <td width="18%"><b>Linux</b></td>
-			    <td width="16%">&nbsp;</td>
-			    <td width="13%">&nbsp;</td>
-			    <td width="26%">&nbsp;</td>
-			    <td width="27%">&nbsp;</td>
-			  </tr>
-			  <tr> 
-			    <td width="18%"><b>Mac</b></td>
-			    <td width="16%">&nbsp;</td>
-			    <td width="13%">&nbsp;</td>
-			    <td width="26%">&nbsp;</td>
-			    <td width="27%">&nbsp;</td>
-			  </tr>
-			</table>
+			  <div align="center">
+				<table width="75%" border="1">
+				  <tr> 
+				    <td width="18%">&nbsp;</td>
+				    <td width="18%"><b>IBM 1.5</b></td>
+				    <td width="18%"><b>JDK 1.4.2</b></td>
+				    <td width="18%"><strong>JDK 1.5</strong></td>
+				    <td width="18%"><b>IBM 1.4.2</b></td>
+				  </tr>
+				  <tr> 
+				    <td width="18%"><b>Win 2000</b></td>
+				    <td width="18%">&nbsp;</td>
+				    <td width="18%">&nbsp;</td>
+				    <td width="18%">&nbsp;</td>
+				    <td width="18%">&nbsp;</td>
+				  </tr>
+				  <tr> 
+				    <td width="18%"><b>Win XP</b></td>
+				    <td width="18%">&nbsp;</td>
+				    <td width="18%">&nbsp;</td>
+				    <td width="18%">&nbsp;</td>
+				    <td width="18%">&nbsp;</td>
+				  </tr>
+				  <tr> 
+				    <td width="18%"><b>Linux</b></td>
+				    <td width="18%">&nbsp;</td>
+				    <td width="18%">&nbsp;</td>
+				    <td width="18%">&nbsp;</td>
+				    <td width="18%">&nbsp;</td>
+				  </tr>
+				  <tr> 
+				    <td width="18%"><b>Mac</b></td>
+				    <td width="18%">&nbsp;</td>
+				    <td width="18%">&nbsp;</td>
+				    <td width="18%">&nbsp;</td>
+				    <td width="18%">&nbsp;</td>
+				  </tr>
+				</table>
+			</div>
 		</div>
 		<div class="homeitem3col">
 			<h3>Feature Testing</h3>
