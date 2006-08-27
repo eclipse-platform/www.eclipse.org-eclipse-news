@@ -36,7 +36,7 @@
 		          <td> <img src="/eclipse/debug/images/progress.gif"> item is under development </td>
 		          <td> <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> item is finished </td>
 		        </tr>
-			<table>
+			</table>
 			<h4>Potential Work Items</h4>
 			<blockquote>
 				<b>Additional breakpoint management enhancements</b> -
@@ -124,7 +124,6 @@
 		              </ul> 
 			</blockquote>
 		</div>
-		</div>
 		<div class="homeitem3col">
 			<h3>3.2 Current Development Effort - Milestone 6 (Friday, March 31th)</h3>
 			<blockquote>
@@ -142,8 +141,8 @@
 		              copy of each action)</li>
 		          </ul>
 		        <b>Clean up API access warnings</b> for clients subclassing public classes 
-		          that subclass internal implementations<br>
-		        <b>Address performance test failures</b><br>
+		          that subclass internal implementations<br><br>
+		        <b>Address performance test failures</b><br><br>
 		        <b>Bug fixing</b>
 			</blockquote>
 		</div>
@@ -252,8 +251,8 @@
 		              hierarchy as described <a href="docs/flexible_hierarchy.html">here</a></li>
 		          </ul>
 
-        		<b>Prototype pluggable update policies</b>
-        		<b>Breakpoint import/export</b>
+        		<b>Prototype pluggable update policies</b><br><br>
+        		<b>Breakpoint import/export</b><br><br>
 		        <b>Support to remove a single process 
 		          console from the console view</b> (in addition to remove all terminated)
 			</blockquote>
