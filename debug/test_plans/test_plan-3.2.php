@@ -75,7 +75,7 @@
 		<div class="homeitem3col">
 			<h3>Test Grid</h3>
 			<div align="center">
-			<table width="100%" border="1">
+			<table width="90%" border="1">
 			  <tr> 
 			    <td><b>Feature</b></td>
 			    <td><strong>Darin Wright</strong></td>
