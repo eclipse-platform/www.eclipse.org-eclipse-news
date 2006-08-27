@@ -53,7 +53,7 @@
 				  </tr>
 				  <tr> 
 				    <td width="18%"><b>Win XP</b></td>
-				    <td width="18%">Darin Wright</td>
+				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
