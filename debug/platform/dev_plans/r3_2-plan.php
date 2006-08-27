@@ -34,7 +34,7 @@
 				<tr> 
 		          <td><img src="/eclipse/debug/images/defer.gif">item is deferred</td>
 		          <td> <img src="/eclipse/debug/images/progress.gif"> item is under development </td>
-		          <td> <img src="/eclipse/debug/images/ok.gif"> item is finished </td>
+		          <td> <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> item is finished </td>
 		        </tr>
 			<table>
 			<h4>Potential<b></b> Work Items</h4>
@@ -45,7 +45,7 @@
 	              efficient enabling and disabling logical sets of related breakpoints. 
 	              Additional features would be helpful:
 	              <ul>
-	                <li><img src="/eclipse/debug/images/ok.gif"> Import and export of 
+	                <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> Import and export of 
 	                  breakpoints: allow breakpoints to be shared between users and 
 	                  persisted for later use.</li>
 	                <li><img src="/eclipse/debug/images/defer.gif">Breakpoint working 
@@ -59,11 +59,11 @@
 	              by simple Java programs. Potential areas of work and investigation 
 	              include: 
 		              <ul>
-		                <li><img src="/eclipse/debug/images/ok.gif">Flow control: provide 
+		                <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Flow control: provide 
 		                  a debug implementation with more control over the number and 
 		                  order of requests sent to a debugger, potentially allowing for 
 		                  coalescing of requests.</li>
-		                <li><img src="/eclipse/debug/images/ok.gif">Asynchronous API's: provide 
+		                <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Asynchronous API's: provide 
 		                  explicitly asynchronous API's for interactions with debuggers 
 		                  that require communication with a remote process and allow for 
 		                  cancellation of requests made against a target.</li>
@@ -71,13 +71,13 @@
 		                  update policies: allow debuggers to provide custom update/refresh 
 		                  policies views provided by the debug platform. 
 		                  <ul>
-		                    <li><img src="/eclipse/debug/images/ok.gif">Update policies have 
+		                    <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Update policies have 
 		                      been replaced with model proxies - a model proxy interfaces 
 		                      a debug model with the debug user interface, firing incremental 
 		                      deltas describing elements that have changed in a model</li>
 		                  </ul>
 		                </li>
-		                <li><img src="/eclipse/debug/images/ok.gif">Flexible element hierarchy: 
+		                <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Flexible element hierarchy: 
 		                  support the presentation of different debug architectures in 
 		                  all views provided by the debug platform.</li>
 		                <li>Table trees: allow table trees to be used in the standard 
@@ -102,22 +102,22 @@
 		                  Application, Java Applet, etc.), simply allow the user to press 
 		                  run or debug to launch the currently selected item with a single 
 		                  click, prompting the user for input only when necessary.</li>
-		                <li><img src="/eclipse/debug/images/ok.gif">User preferences to filter 
+		                <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">User preferences to filter 
 		                  type of launch configurations</li>
-		                <li><img src="/eclipse/debug/images/ok.gif">Associate launch configurations 
+		                <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Associate launch configurations 
 		                  with files/projects 
 		                  <ul>
-		                    <li><img src="/eclipse/debug/images/ok.gif">Support resource 
+		                    <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Support resource 
 		                      based filtering - filters configurations from closed and 
 		                      unavailable projects</li>
-		                    <li><img src="/eclipse/debug/images/ok.gif">Automatic deletion 
+		                    <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Automatic deletion 
 		                      of configurations when a project is deleted (user configurable)</li>
 		                  </ul>
 		                </li>
 		                <li><img src="/eclipse/debug/images/defer.gif">Allow configurations 
 		                  to be associated with resources and viewed/managed via a resource's 
 		                  properties.</li>
-		                <li><img src="/eclipse/debug/images/ok.gif">Simplify the launch dialog: 
+		                <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Simplify the launch dialog: 
 		                  the perspective settings associated with launching should be 
 		                  an advanced option rather than the first thing a user sees when 
 		                  they open the launch dialog.</li>
@@ -151,9 +151,9 @@
 			<blockquote>
 				<b>Flexible debug platform</b>
 		          <ul>
-		            <li><img src="/eclipse/debug/images/ok.gif">Support for SWT virtual tree 
+		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Support for SWT virtual tree 
 		              in the asynchronous tree viewer</li>
-		            <li><img src="/eclipse/debug/images/ok.gif">Incremental content retrieval</li>
+		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Incremental content retrieval</li>
 		            <li><img src="/eclipse/debug/images/progress.gif">Support for table trees</li>
 		            <li><img src="/eclipse/debug/images/defer.gif">Pluggable cell editors 
 		              in asynchronous table viewer</li>
@@ -164,15 +164,15 @@
 		          </ul>
 		        <b>Launching enhancements</b>
 		          <ul>
-		            <li><img src="/eclipse/debug/images/ok.gif">Add a toolbar to the launch 
+		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Add a toolbar to the launch 
 		              dialog tree viewer - support new, copy, delete, and filters</li>
-		            <li><img src="/eclipse/debug/images/ok.gif">Preferences for filter configurations 
+		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Preferences for filter configurations 
 		              from the UI in the launch dialog and launch history - closed projects, 
 		              deleted projects, configuration types types, capabilities</li>
 		          </ul>
 		        <b>Debug view management</b>
 		          <ul>
-		            <li><img src="/eclipse/debug/images/ok.gif">Rework debug view management 
+		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Rework debug view management 
 		              support (automatically display views associated with debug contexts)</li>
 		          </ul>
         	</blockquote>
@@ -184,26 +184,26 @@
 		          The new API's will be internal for 3.2 to allow time for review and 
 		          use by community 
 		          <ul>
-		            <li><img src="/eclipse/debug/images/ok.gif">Asynchronous viewer API - asynchronous structured viewers as API, including 
+		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Asynchronous viewer API - asynchronous structured viewers as API, including 
 		                  an abstract structured asynchronous viewer and a tree viewer</li>
-		            <li><img src="/eclipse/debug/images/ok.gif">Flexible hierarchy API - asynchronous label and tree content adapters as API. 
+		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Flexible hierarchy API - asynchronous label and tree content adapters as API. 
 		            	Provide default implementation of adapters, registered for 
 		                  default debug model elements and allow clients to provide custom adapters to create custom 
 		                  content in all debug views</li>
-		            <li><img src="/eclipse/debug/images/ok.gif">Pluggable model proxies - Allows debuggers to provide custom model proxies to control 
+		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Pluggable model proxies - Allows debuggers to provide custom model proxies to control 
 		                  the update of elements in a debug viewer</li>
-		            <li><img src="/eclipse/debug/images/ok.gif">Debug context API - Allows debuggers to drive debugging (source lookup, action 
+		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Debug context API - Allows debuggers to drive debugging (source lookup, action 
 		                  enablement, etc.)</li>
 		          </ul>
 		        <b>Launching enhancements</b>
 		          <ul>
 		            <li>Investigate single click launching - goal is to replace the &quot;Run/Debug 
 		              As&quot; cascade menus with single actions - &quot;Run/Debug&quot;.</li>
-		            <li><img src="/eclipse/debug/images/ok.gif">Add hyperlink from launch 
+		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Add hyperlink from launch 
 		              dialog to perspective preferences</li>
 		            <li>Investigate ways for products to reduce the number of configuration 
 		              types visible in the launch dialog</li>
-		            <li><img src="/eclipse/debug/images/ok.gif">Provide API to associated 
+		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Provide API to associated 
 		              a resource with a launch configuration (allows filtering configurations 
 		              from closed projects)</li>
 		          </ul>
@@ -239,15 +239,15 @@
 			<blockquote>
 				<b>Prototype asynchronous tree viewer</b>
 		          <ul>
-		            <li><img src="/eclipse/debug/images/ok.gif"> interfaces (adapters) used to retrieve content and labels for 
+		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> interfaces (adapters) used to retrieve content and labels for 
 		              this view will be explicitly asynchronous to support latent content and provide context such that different content for the same element 
 		                  is possible in different views/contexts/settings</li>
-		            <li><img src="/eclipse/debug/images/ok.gif"> support duplicate elements</li>
-		            <li><img src="/eclipse/debug/images/ok.gif"> allow refresh calls to be made in a non-UI thread</li>
+		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> support duplicate elements</li>
+		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> allow refresh calls to be made in a non-UI thread</li>
 		          </ul>
 		        <b>Prototype flexible element hierarchy</b>
 		          <ul>
-		            <li><img src="/eclipse/debug/images/ok.gif"> the asynchronous tree will use adapters that support a flexible 
+		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> the asynchronous tree will use adapters that support a flexible 
 		              hierarchy as described <a href="docs/flexible_hierarchy.html">here</a></li>
 		          </ul>
 

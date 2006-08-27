@@ -97,7 +97,7 @@
 			<table width="100%" border="0" summary="About Kevin Barnes">
 				<tbody>
 				<tr> 
-					<td width="30%" valign="top"><no picture available></td>
+					<td width="30%" valign="top">No Picture</td>
 					<td width="70%">Kevin Barnes has been working with IBM on the Eclipse Debug Framework and 
 					JDT Debugger for the last 2 years. Before coming to IBM he was an integral member of the team 
 					at IAM Consulting, working on projects such as IAM->Developing - a collaborative java IDE.</td>
@@ -113,12 +113,38 @@
 				</tbody>
 			</table>
 		</div>
+		<div class="homeitem3col">
+			<h3>Darin_Swanson</h3>
+			<table width="100%" border="0" summary="About Darin Swanson">
+				<tbody>
+				<tr> 
+					<td width="30%" valign="top"><no picture available></td>
+					<td width="70%">Darin Swanson is one of the original committers on the Eclipse project, 
+					working as the Ant Component lead for the Eclipse Platform Project. He was also involved 
+					in the development of Eclipse's precursors: VisualAge Micro Edition Java IDE and the Visual 
+					Age for Java product. Darin has worked for Object Technology International in Victoria, Canada 
+					and Minneapolis. Darin is continuing to work on Eclipse in the debug, JDT debug and Ant 
+					components in the IBM Beaverton location. He is also happy to expound at length about his 
+					love of marathons and trail running.</td>
+				</tr>
+				<tr> 
+					<td width="30%" valign="top"><b>Status</b></td>
+					<td width="70%">Inactive</td>
+				</tr>
+				<tr> 
+					<td width="30%" valign="top"><b>Email</b></td>
+					<td width="70%">Darin_Swanson@us.ibm.com</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
 	</div>
 	<div id="rightcolumn">
 		<div class="sideitem">
 			<h6>Quick Links</h6>
 			<ul>
 				<li><a href="/eclipse/debug/documents.php">Articles & Documents</a></li>
+				<li><a href="/eclipse/debug/get_involved.php">Get Involved!</a></li>
 				<li><a href="/eclipse/debug/contribute.php">How To Contribute</a></li>
 				<li><a href="/eclipse/debug/about.php">About this content</a></li>
 			</ul>
