@@ -829,7 +829,7 @@
 				    </ul>
 				  </li>
 				</ul>
-				<a href="#top">Back to top</a><br>
+				<p><a href="#top">Back to top</a><br></p>
 		</div>
 	</div>
 	<div id="rightcolumn">
