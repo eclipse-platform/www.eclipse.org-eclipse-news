@@ -38,7 +38,7 @@
 	        	
 			</blockquote>
 			
-			<h4>Deferred Items (Post 2.1)</h4>
+			<h4>Deferred Items (Post 3.3)</h4>
 	      	
 	      	</blockquote>
 		</div>
