@@ -53,19 +53,19 @@
 				    <td width="18%">Darin Wright</td>
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
-				    <td width="18%">Samantha Chan</td>
+				    <td width="18%">&nbsp;</td>
 				  </tr>
 				  <tr> 
 				    <td width="18%"><b>Linux</b></td>
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">Michael Rennie</td>
-				    <td width="18%">&nbsp;</td>
+				    <td width="18%">Samantha Chan</td>
 				  </tr>
 				  <tr> 
 				    <td width="18%"><b>Mac</b></td>
 				    <td width="18%">&nbsp;</td>
-				    <td width="18%">Kevin Barnes</td>
+				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
 				  </tr>
@@ -148,7 +148,6 @@
 			    <td><div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Hot">HCR</a></td>
