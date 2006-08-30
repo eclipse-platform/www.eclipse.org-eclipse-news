@@ -32,6 +32,7 @@
 			  </tbody>
 			</table>
 			
+			<div class="homeitem3col">
 			<h3>Eclipse Project 3.3 Plan items that effect Team</h3>
 			
 			<p>The following items which appear on the 
@@ -65,6 +66,9 @@
 			</ul>
 			
 			The next section contains a description of the particular items we plan to address in 3.3.
+			</div>
+			
+			<div class="homeitem3col">
 			
 			<a name="Themes"></a>
 			<h3>Overall Team 3.3 Plan</h3>
@@ -93,6 +97,10 @@
 			  will investigate ways of incorporating this into Team.</li>
 			</ul>
 			
+			</div>
+			
+			<div class="homeitem3col">
+			
 			<h3>3.3 Development Effort - Milestone 1 (Friday, August 11, 2006) </h3>
 			<a name="m1"></a>
 			
@@ -107,7 +115,9 @@
 			  option to include working sets when exporting project sets.
 			  </li>
 			</ul>
+			</div>
 			
+			<div class="homeitem3col">
 			<h3>3.3 Development Effort - Milestone 2 (Friday, September 22, 2006) </h3>
 			<a name="m2"></a>
 			
@@ -126,6 +136,7 @@
 			  <li><img src="../images/progress.gif" alt="progress">Investigate the use of file buffers in Compare editors
 			  (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=114">114</a>).
 			</ul>
+			</div>
 			
 			<p></p>
 	</div>
