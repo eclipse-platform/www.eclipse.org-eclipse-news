@@ -32,8 +32,42 @@
 			  </tbody>
 			</table>
 			
+			<h3>Eclipse Project 3.3 Plan items that effect Team</h3>
+			
+			<p>The following items which appear on the 
+			<a href="http://www.eclipse.org/eclipse/development/eclipse_project_plan_3_3.html">Eclipse Project 3.3 Plan</a>
+			will have an effect on the Team/Compare/CVS component.<p>
+			<ul>
+			    <li><strong>Platform level proxy settings</strong>: When the proxy settings are made available by the
+			    Runtime component, the CVS and SSH2 plugins will need to be modified to use the Runtime settings.
+			    </li>
+			    <li><strong>Managing and sharing settings</strong>: Depending on the eventual solution for this, 
+			    there may be support required by Team or CVS.
+			    </li>
+			    <li><strong>Ship Finer-grained Components</strong>: It is not clear at this time whether this
+			    will have an impact on Team/Compare/CVS.
+			    </li>
+			    <li><strong>Performance focus</strong>: There will be an ongoing effort during 3.3 to assess the
+			    performance of existing an new features.
+			    </li>
+			    <li><strong>Improve multi-instance view management</strong>: Both the Synchronize view and the History
+			    view can benefit from improved multi-instane view management.
+			    </li>
+			    <li><strong>Adopt the Eclipse File System</strong>: The effects of EFS on Team and Compare will be 
+			    considered during 3.3.
+			    </li>
+			    <li><strong>Adopt the new UI features</strong>: The goal is to update the Team, Compare and CVS components
+			    to use new UI features that apply when they become available.
+			    </li>
+			    <li><strong>Improve compare</strong>: The Compare infrastructure has not undrgone much change in
+			  the last few releases. We plan on addressing the more important issues that have accumulated in that time.
+			    </li>
+			</ul>
+			
+			The next section contains a description of the particular items we plan to address in 3.3.
+			
 			<a name="Themes"></a>
-			<h1>Themes for Team 3.3</h1>
+			<h3>Overall Team 3.3 Plan</h3>
 			
 			<p>The overall themes for this release are detailed below:</p>
 			<ul>
@@ -57,12 +91,9 @@
 			  for both and hep investigate improvements to multi-view management to improve the user experience.</li>
 			  <li><strong>Eclipse File System</strong>: The Eclipse File System (EFS) API was introduced in 3.2. In 3.3, we 
 			  will investigate ways of incorporating this into Team.</li>
-			  <li><strong>Configuring projects</strong>: Enabling new capabilities on existing projects, such as adding Java 
-              ompilation to a non-Java project, is currently not supported but will be investigatd in 3.3. Team will need to
-              partake in this to ensure that the story works for projects imported from a repository.</li>
 			</ul>
 			
-			<h1>3.3 Development Effort - Milestone 1 (Friday, August 11, 2006) </h1>
+			<h3>3.3 Development Effort - Milestone 1 (Friday, August 11, 2006) </h3>
 			<a name="m1"></a>
 			
 			<ul>
@@ -77,7 +108,7 @@
 			  </li>
 			</ul>
 			
-			<h1>3.3 Development Effort - Milestone 2 (Friday, September 22, 2006) </h1>
+			<h3>3.3 Development Effort - Milestone 2 (Friday, September 22, 2006) </h3>
 			<a name="m2"></a>
 			
 			<ul>
