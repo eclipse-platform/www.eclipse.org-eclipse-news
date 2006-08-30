@@ -81,7 +81,8 @@
 			<a name="m2"></a>
 			
 			<ul>
-			  <li><img src="../images/progress.gif" alt="progress"><strong>Bug fixing</strong>: Target bugs are marked as 3.3 M2.
+			  <li><img src="../images/progress.gif" alt="progress"><strong>Bug fixing</strong>: Target bugs are marked as 
+			  <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=Compare&component=CVS&component=Team&target_milestone=3.3+M2&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">3.3 M2</a>.
 			  </li>
 			  <li><img src="../images/progress.gif" alt="progress">Investigate improvements to the Apply Patch wizard
 			       <ul>
