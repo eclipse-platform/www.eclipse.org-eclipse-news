@@ -53,16 +53,16 @@
       <p>The infrastructure is extensible to different content types. It defines
       extension points for type specific <i>ContentMergeViewers</i> <i>StructureMergeViewers</i> or
       <i> StructureCreators</i>.</p>
+			
+		<div class="homeitem3col">
+			<h3>About the Team component</h3>
+			<a name="ABOUT"></a>
 			<ul>
 			  <li>This component is responsible for all org.eclipse.team.* and org.eclipse.compare.* <a href="dev.php#Plugins">plugins</a></li>
 			  <li>Have a question about the Team component? We might already have an answer for you in the <a href="http://wiki.eclipse.org/index.php/Team">Team
 			    Wiki</a>.</li>
 			  <li>Online user <a href="http://help.eclipse.org/help31/topic/org.eclipse.platform.doc.isv/guide/team.htm">documentation</a>.</li>
 			</ul>
-			
-		<div class="homeitem3col">
-			<h3>About the Team component</h3>
-			<a name="ABOUT"></a>
 		</div>
 		<div class="homeitem3col">
 			<h3>Development Resources</h3>
