@@ -66,16 +66,35 @@
 			<a name="m1"></a>
 			
 			<ul>
-			  <li><strong>Bug fixing</strong>: Target bugs are marked as 3.3 M1.
+			  <li><img src="../images/ok.gif" height="10" width="10" alt="finished"><strong>Bug fixing</strong>: Target bugs are marked as 3.3 M1.
 			  </li>
-			  <li><strong>Add History View API that was missing from 3.2</strong>
+			  <li><img src="../images/ok.gif" height="10" width="10" alt="finished"><strong>Add History View API that was missing from 3.2</strong>
 			  </li>
 			  <li><img src="../images/ok.gif" height="10" width="10" alt="finished"><strong>Update actions to use the Commands framework</strong>
 			  </li>
-			  <li><img src="../images/progress.gif" alt="finished"><strong>Working Set import/export:</strong> Give the user the
+			  <li><img src="../images/ok.gif" height="10" width="10" alt="finished"><strong>Working Set import/export:</strong> Give the user the
 			  option to include working sets when exporting project sets.
 			  </li>
 			</ul>
+			
+			<h1>3.3 Development Effort - Milestone 2 (Friday, September 22, 2006) </h1>
+			<a name="m2"></a>
+			
+			<ul>
+			  <li><img src="../images/progress.gif" alt="progress"><strong>Bug fixing</strong>: Target bugs are marked as 3.3 M2.
+			  </li>
+			  <li><img src="../images/progress.gif" alt="progress">Investigate improvements to the Apply Patch wizard
+			       <ul>
+			       <li>Preview changes against workspace (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=40971">40971</a>)
+			       </li>
+			       <li>Support for manual merging (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=79372">79372</a>)
+			       </li>
+			     </ul>
+			  </li>
+			  <li><img src="../images/progress.gif" alt="progress">Investigate the use of file buffers in Compare editors
+			  (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=114">114</a>).
+			</ul>
+			
 			<p></p>
 	</div>
 
