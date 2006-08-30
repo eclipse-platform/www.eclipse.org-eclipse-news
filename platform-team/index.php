@@ -28,20 +28,41 @@
 	$html = <<<EOHTML
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
-		<h2>Platform Team Integration Framework</h2>
+		The Team coponent is responsible for providing repository tooling integration into Eclipse and 
+		a universal compare facility for use by repository tooling and others.
+		
+		<h2>Platform Team Repository Integration Framework</h2>
+		
 		<p> The goal of the Team component is to provide a mechanism by which repository tools can 
 		integrate the full, rich, functionality of their repository solution into the Eclipse 
 		workbench in a first class way.</p>
-		<div class="homeitem3col">
-			<h3>About the Team component</h3>
-			<a name="ABOUT"></a>
-			<p></p>
+		
+		<h2>Compare Framework</h2>
+		      <p>The universal Compare facility implements:</p>
+      <ul>
+        <li>Two and Three-way compare/merge components for hierarchical structures superimposed on text</li>
+        <li>Differencing engines for
+          <ul>
+            <li>hierarchical structures</li>
+            <li>character ranges, e.g. text lines or words</li>
+          </ul>
+        </li>
+        <li>Integration and creation of patch files</li>
+        <li>Comparison and merging with the local history.</li>
+      </ul>
+      <p>The infrastructure is extensible to different content types. It defines
+      extension points for type specific <i>ContentMergeViewers</i> <i>StructureMergeViewers</i> or
+      <i> StructureCreators</i>.</p>
 			<ul>
 			  <li>This component is responsible for all org.eclipse.team.* and org.eclipse.compare.* <a href="dev.php#Plugins">plugins</a></li>
 			  <li>Have a question about the Team component? We might already have an answer for you in the <a href="http://wiki.eclipse.org/index.php/Team">Team
 			    Wiki</a>.</li>
 			  <li>Online user <a href="http://help.eclipse.org/help31/topic/org.eclipse.platform.doc.isv/guide/team.htm">documentation</a>.</li>
 			</ul>
+			
+		<div class="homeitem3col">
+			<h3>About the Team component</h3>
+			<a name="ABOUT"></a>
 		</div>
 		<div class="homeitem3col">
 			<h3>Development Resources</h3>
