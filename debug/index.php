@@ -60,6 +60,10 @@
 				</tbody>
 			</table>
 		</div>
+		<div class="homeitem3col">
+			<h3>Up To The Minute</h3>
+			<p>The test pass for 3.2.1 is coming up. Get the <a href="/eclipse/debug/test_plans/test_plan-3_2.php">Test Plan</a> and pitch in.
+		</div>
 	</div>
 	<div id="rightcolumn">
 		<div class="sideitem">
