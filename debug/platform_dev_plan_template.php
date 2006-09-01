@@ -2,27 +2,28 @@
 
 	#*****************************************************************************
 	#
-	# index.php
+	# template.php
 	#
 	# Author: 		Michael Rennie
 	# Date:			August 25, 2006
 	#
-	# Description: This is the 3.3 plan item page, describing the items to be addressed in 
-	#			   the 3.3 release of eclipse
+	# Description: 
 	#
 	#
 	#****************************************************************************
-
-	$pageTitle 		= "Platform Debug 3.3 Release Plan";
-	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, release, 3.3, milestone, plan";
-	$pageAuthor		= "Debug Team";	
+	
+	
+	$pageTitle 		= "Platform Debug Release Plan";
+	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching";
+	$pageAuthor		= "Debug Team";
+	
 	$html = <<<EOHTML
 
 <div id="maincontent">
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
-			<h3>Overall 3.3 Plan</h3>
+			<h3>Overall  Plan</h3>
 			
 			<h4>Overall Themes for Platform Debug:</h4>
 	        
@@ -34,12 +35,11 @@
 		        </tr>
 			</table>
 	        <h4>Planned Items</h4>
-	        <blockquote>
-	        	
+	        <blockquote>	
 			</blockquote>
 			
-			<h4>Deferred Items (Post 3.3)</h4>
-	      	
+			<h4>Deferred Items </h4>
+	      	<blockquote>
 	      	</blockquote>
 		</div>
 	</div>
@@ -50,6 +50,7 @@
 				<li><a href="/eclipse/debug/documents.php">Articles & Documents</a></li>
 				<li><a href="/eclipse/debug/get_involved.php">Get Involved!</a></li>
 				<li><a href="/eclipse/debug/contribute.php">How To Contribute</a></li>
+				<li><a href="/eclipse/debug/who.php">Who We Are</a></li>
 				<li><a href="http://eclipse-debug.blogspot.com/">Debug Team Blog</a></li>
 				<li><a href="/eclipse/debug/about.php">About this content</a></li>
 			</ul>
