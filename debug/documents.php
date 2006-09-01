@@ -30,13 +30,31 @@
 		<div class="homeitem3col">
 			<h3>EclipseCon Presentations</h3>
 			<ul>
-				<li>EclipseCon 2005 - <a href="/eclipse/debug/documents/debugger_eclipsecon_2005.pdf">Debug Platform / Java Debugger 3.1</a></li>
+				<li>EclipseCon 2005 - <a target="_blank" href="/eclipse/debug/documents/debugger_eclipsecon_2005.pdf">Debug Platform / Java Debugger 3.1</a></li>
+				<li>EclipseCon 2006 - <a target="_blank" href="/eclipse/debug/documents/debugger_Supporting-a-Community-of-Debuggers.pdf">The Eclipse 3.2 Debug Platform: Supporting a community of debuggers</a></li>
+				<li>EclipseCon 2006 - <a target="_blank" href="/eclipse/debug/documents/debugger_Advanced-Debug-Tutorial.pdf">Integrating Custom Debuggers into the Eclipse Platform</a><br>
+					<blockquote>
+					<p>The associated exercises are available <a href="/eclipse/debug/documents/EC2006_exercises-advanced-tutorial.php">here</a></p>
+					</blockquote></li>
+				<li>EclipseCon 2006 - <a target="_blank" href="/eclipse/debug/documents/debugger_Basic-Debug-Tutorial.pdf"></a><br>
+					<blockquote>
+					<p>The associated exercises are available <a href="">here</a></p>
+					</blockquote></li>
 			</ul>
 		</div>
 		<div class="homeitem3col">
 			<h3>Miscellaneous Documents</h3>
 			<ul>
 				
+			</ul>
+		</div>
+		<div class="homeitem3col">
+			<h3>Miscellaneous Source Artifacts</h3>
+			<ul>
+				<li>Debug.util is a small helper plugin we use to update our build notes files once we verify bugs. To use it, simply download the plugin
+				<a href="/eclipse/debug/misc/org.elclipse.debug.util.101.zip">here</a> and enabled it in your workspace. Once that is done to actually 'use' it, place the cursor at the position in your
+				build notes document and click <b>Run->Verify Bug...</b> and enter the number of the bug you verified. The tool will then insert the 
+				corresponding html into the build notes document.<br> The source for the plugin is located <a href="/eclipse/debug/misc/utilsrc.zip">here</a> for interested parties.</li>
 			</ul>
 		</div>
 	</div>
