@@ -5,16 +5,16 @@
 	# template.php
 	#
 	# Author: 		Michael Rennie
-	# Date:			
+	# Date:			September 1, 2006
 	#
-	# Description: 
+	# Description: This page outlines the realease plan for JDT debug for the 3.3 release
 	#
 	#
 	#****************************************************************************
 	
 	
-	$pageTitle 		= "JDT Debug Release Plan";
-	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching, release, plan";
+	$pageTitle 		= "JDT Debug 3.3 Release Plan";
+	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching, release, plan, 3.3";
 	$pageAuthor		= "Debug Team";
 	
 	$html = <<<EOHTML

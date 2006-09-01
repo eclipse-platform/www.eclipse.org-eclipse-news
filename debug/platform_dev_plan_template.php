@@ -5,7 +5,7 @@
 	# template.php
 	#
 	# Author: 		Michael Rennie
-	# Date:			August 25, 2006
+	# Date:			
 	#
 	# Description: 
 	#
@@ -14,7 +14,7 @@
 	
 	
 	$pageTitle 		= "Platform Debug Release Plan";
-	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching";
+	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching, release, plan";
 	$pageAuthor		= "Debug Team";
 	
 	$html = <<<EOHTML
