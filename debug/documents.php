@@ -38,7 +38,7 @@
 					</blockquote></li>
 				<li>EclipseCon 2006 - <a target="_blank" href="/eclipse/debug/documents/debugger_Basic-Debug-Tutorial.pdf"></a><br>
 					<blockquote>
-					<p>The associated exercises are available <a href="">here</a></p>
+					<p>The associated exercises are available <a href="/eclipse/debug/documents/EC2006_exercises-basic-tutorial.php">here</a></p>
 					</blockquote></li>
 			</ul>
 		</div>
@@ -52,7 +52,7 @@
 			<h3>Miscellaneous Source Artifacts</h3>
 			<ul>
 				<li>Debug.util is a small helper plugin we use to update our build notes files once we verify bugs. To use it, simply download the plugin
-				<a href="/eclipse/debug/misc/org.elclipse.debug.util.101.zip">here</a> and enabled it in your workspace. Once that is done to actually 'use' it, place the cursor at the position in your
+				<a href="/eclipse/debug/misc/org.eclipse.debug.util.101.zip">here</a> and enabled it in your workspace. Once that is done to actually 'use' it, place the cursor at the position in your
 				build notes document and click <b>Run->Verify Bug...</b> and enter the number of the bug you verified. The tool will then insert the 
 				corresponding html into the build notes document.<br> The source for the plugin is located <a href="/eclipse/debug/misc/utilsrc.zip">here</a> for interested parties.</li>
 			</ul>
