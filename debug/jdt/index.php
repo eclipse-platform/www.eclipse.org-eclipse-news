@@ -44,6 +44,39 @@
 	        </ul>
 		</div>
 		<div class="homeitem3col">
+			<h3>New and Noteworthy</h3>
+			<p>The platform debug component is very responsive to new ideas, feature requests and bug reports. The following is a list of some 
+			of the newest and more interesting additions to the component.</p>
+			
+		</div>
+		<div class="homeitem3col">
+      		<h3>Development Efforts</h3>
+		    <ul>
+		    	<li>Overall <a href="/eclipse/debug/jdt/dev_plans/r2_1-plan.php">2.1 plan</a></li>
+		    	<li>Overall <a href="/eclipse/debug/jdt/dev_plans/r3_0-plan.php">3.0 plan</a></li>
+		    	<li>Overall <a href="/eclipse/debug/jdt/dev_plans/r3_1-plan.php">3.1 plan</a></li>
+				<li>Overall <a href="/eclipse/debug/jdt/dev_plans/r3_2-plan.php">3.2 plan</a></li>
+		    	<li>Overall <a href="/eclipse/debug/jdt/dev_plans/r3_3-plan.php">3.3 plan</a></li>
+		    </ul>
+		    <p>For more detailed information, check out the <a href="/eclipse/debug/jdt/dev_resources.php">Development Resources</a>.</p>
+		</div>
+		<div class="homeitem3col">
+			<h3>Test Plans</h3>
+			<p>While testing, ensure that keyboard navigation is available and works, in 
+			  addition to using the mouse. Ensure that keyboard accelerators are available 
+			  for each menu item, and that conflicts are not present. Also try assigning alternate 
+			  keybindings to applicable actions. File a bug when something does not work. When 
+			  a test can be automated and is not part of our test suite, add a JUnit test 
+			  to the test suite.</p>
+     		<ul>
+				<li>Test matrix for <a href="/eclipse/debug/test_plans/test_plan-2.1.php">2.1.x</a></li>
+				<li>Test matrix for <a href="/eclipse/debug/test_plans/test_plan-3.0.php">3.0.x</a></li>
+				<li>Test matrix for <a href="/eclipse/debug/test_plans/test_plan-3.1.php">3.1.x</a></li>
+				<li>Test matrix for <a href="/eclipse/debug/test_plans/test_plan-3.2.php">3.2.x</a></li>
+				<li>Test matrix for <a href="/eclipse/debug/test_plans/test_plan-3.3.php">3.3.x</a></li>
+	        </ul>
+		</div>
+		<div class="homeitem3col">
 			<h3>Maintenance Efforts</h3>
      		<ul>
 				<li>Fixes for <a target="_blank" href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=JDT&component=Debug&target_milestone=2.0+F1&target_milestone=2.0+F2&target_milestone=2.0+F3&target_milestone=2.0+F4&target_milestone=2.0+M1&target_milestone=2.0+M2&target_milestone=2.0+M3&target_milestone=2.0+M4&target_milestone=2.0+M5&target_milestone=2.0+M6&target_milestone=2.0.1&target_milestone=2.0.2&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Bug+Number&field0-0-0=noop&type0-0-0=noop&value0-0-0=">2.0.x</a></li>

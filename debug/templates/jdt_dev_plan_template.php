@@ -35,11 +35,34 @@
 			</table>
 	        <h4>Planned Items</h4>
 	        <blockquote>	
+	        	<b>Item Name</b>
+	        		<ul>
+	        			<li>work item</li>
+	        		</ul>
 			</blockquote>
 			
 			<h4>Deferred Items </h4>
 	      	<blockquote>
+	      		<b>Item Name</b>
+	        		<ul>
+	        			<li>work item</li>
+	        		</ul>
 	      	</blockquote>
+		</div>
+		<div class="homeitem3col">
+		<h3>#.# Development Effort - Milestone # (date)</h3>
+			<blockquote>
+				<b>Item Name</b>
+	        		<ul>
+	        			<li>work item</li>
+	        		</ul>
+			</blockquote>
+		</div>
+		<div class="homeitem3col">
+		<h3>Bug Resolution</h3>
+			<ul>
+				<li>Bug Fixes Released to #.#</li>
+			</ul>
 		</div>
 	</div>
 	<div id="rightcolumn">

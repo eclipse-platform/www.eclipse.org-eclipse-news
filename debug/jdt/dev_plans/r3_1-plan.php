@@ -12,7 +12,7 @@
 	#****************************************************************************
 	
 	
-	$pageTitle 		= "Platform Debug Release Plan";
+	$pageTitle 		= "JDT Debug Release Plan";
 	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching, release, plan";
 	$pageAuthor		= "Debug Team";
 	
@@ -24,10 +24,8 @@
 		<div class="homeitem3col">
 			<h3>Overall  Plan</h3>
 			
-			<h4>Overall Themes for Platform Debug:</h4>
-        		<ul>
-        			<li>theme item item</li>
-        		</ul>
+			<h4>Overall Themes for JDT Debug:</h4>
+	        
 	        <table>
 				<tr> 
 		          <td><img src="/eclipse/debug/images/defer.gif"> item is deferred</td>
@@ -37,34 +35,11 @@
 			</table>
 	        <h4>Planned Items</h4>
 	        <blockquote>	
-	        	<b>Item Name</b>
-	        		<ul>
-	        			<li>work item</li>
-	        		</ul>
 			</blockquote>
 			
 			<h4>Deferred Items </h4>
 	      	<blockquote>
-	      		<b>Item Name</b>
-	        		<ul>
-	        			<li>work item</li>
-	        		</ul>
 	      	</blockquote>
-		</div>
-		<div class="homeitem3col">
-		<h3>#.# Development Effort - Milestone # (date)</h3>
-			<blockquote>
-				<b>Item Name</b>
-	        		<ul>
-	        			<li>work item</li>
-	        		</ul>
-			</blockquote>
-		</div>
-		<div class="homeitem3col">
-		<h3>Bug Resolution</h3>
-			<ul>
-				<li>Bug Fixes Released to #.#</li>
-			</ul>
 		</div>
 	</div>
 	<div id="rightcolumn">
@@ -82,8 +57,13 @@
 		<div class="sideitem">
 			<h6>Plugins</h6>
 			<ul>
-				<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.debug.core" target="_blank">debug.core</a></li>
-        		<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.debug.ui" target="_blank">debug.ui</a></li>
+				<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.debug" target="_blank">jdt.debug</a></li>
+		        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.debug.ui" target="_blank">jdt.debug.ui</a></li>
+		        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.launching" target="_blank">jdt.launching</a></li>
+		        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.launching.j9" target="_blank">jdt.launching.j9</a></li>
+		        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.launching.macosx" target="_blank">jdt.launching.macosx</a></li>
+		        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.debug.tests." target="_blank">jdt.debug.tests</a></li>
+		        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.debug.jdi.tests" target="_blank">jdt.debug.jdi.tests</a></li>
 			</ul>
 		</div>
 	</div>
