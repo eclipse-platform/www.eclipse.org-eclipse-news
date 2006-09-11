@@ -45,6 +45,7 @@
 		<div class="homeitem3col">
 		<h3>Connect to the Eclipse Repository</h3>
 			<p>Create a CVS Repository Location with the following information:</p>
+			<blockquote>
 			<table width="100%" border="0" summary="CVS location settings">
 				<thead>
 					<tr>
@@ -79,6 +80,7 @@
 				</tr>
 				</tbody>
 			</table>
+			</blockquote>
 			
 			<p>You can check projects out of the HEAD stream of the newly created repository location by
 		      selecting them, then <b>Right Click > Check Out</b>. Check out the Debug Platform projects:</p>
