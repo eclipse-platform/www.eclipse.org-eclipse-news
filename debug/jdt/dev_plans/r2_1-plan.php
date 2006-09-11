@@ -253,7 +253,7 @@
 		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Address accessibility issues 
 		              with new vairable filters dialog</li>
 		          </ul>
-		        <b>Actions 
+		        <b>Actions</b>
 		          <ul>
 		            <li><img src="/eclipse/debug/images/ok.gif" height=10 width=10> Workbench key binding support</li>
 		          </ul>
