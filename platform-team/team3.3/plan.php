@@ -118,6 +118,7 @@
 			</div>
 			
 			<div class="homeitem3col">
+
 			<h3>3.3 Development Effort - Milestone 2 (Friday, September 22, 2006) </h3>
 			<a name="m2"></a>
 			
@@ -127,14 +128,57 @@
 			  </li>
 			  <li><img src="../images/progress.gif" alt="progress">Investigate improvements to the Apply Patch wizard
 			       <ul>
-			       <li>Preview changes against workspace (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=40971">40971</a>)
+			       <li><img src="../images/ok.gif" height="10" width="10" alt="finished">Preview changes against workspace (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=40971">40971</a>)
 			       </li>
-			       <li>Support for manual merging (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=79372">79372</a>)
+			       <li><em>[deferred to M3]</em> Support for manual merging (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=79372">79372</a>)
 			       </li>
 			     </ul>
 			  </li>
-			  <li><img src="../images/progress.gif" alt="progress">Investigate the use of file buffers in Compare editors
+			  <li><img src="../images/ok.gif" height="10" width="10" alt="finished">Investigate the use of file buffers in Compare editors
 			  (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=114">114</a>).
+			</ul>
+			</div>
+
+			<div class="homeitem3col">
+
+			<h3>3.3 Development Effort - Milestone 3 (Friday, November 3, 2006) </h3>
+			<a name="m3"></a>
+			
+			<ul>
+			  <li><img src="../images/progress.gif" alt="progress"><strong>Bug fixing</strong>: Target bugs are marked as 
+			  <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=Compare&component=CVS&component=Team&target_milestone=3.3+M3&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">3.3 M3</a>.
+			  </li>
+			  <li>Continue improvements to the Apply Patch wizard
+			    <ul>
+			       <li>Support for manual merging (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=79372">79372</a>)
+			       </li>
+			       <li>Provide a Command for Apply Patch.
+			       </li>
+			    </ul>
+			  </li>
+			  <li>Compare API
+			    <ul>
+			      <li>Allow clients to extend ContentNergeViewer to the same extent TextMergeViewer does 
+			      (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=144638">144638</a>).
+			      </li>
+			      <li>Give clients access to Compare viewer navigation (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=143858">143858</a>).
+			      </li>
+			      <li>Allow clients to contribute actions to a CompadeEditorInput.
+			    </ul>
+			  <li>
+			  <li>Improve Compare Editor Updating.
+			    <ul>
+			       <li>Update on save or edit (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=41564">41564</a>)
+			       </li>
+			       <li>Update in response to Team operations (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=39425">39425</a>)
+			       </li>
+			       <li>Update in response to Resource operations (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=157213">157213</a>)
+			       </li>
+			       <li>Asynchronous loading and update.
+			    </ul>
+			  </li>
+			  <li>Improve Compare Editor Accessibility.
+			  </li>
 			</ul>
 			</div>
 			
