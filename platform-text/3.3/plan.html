@@ -22,7 +22,7 @@
 
   <tr> 
     <td WIDTH="100%"> 
-    <p>Last revised 13:10 CET September 14, 2006</p>
+    <p>Last revised 18:40 CET September 14, 2006</p>
 
     
       <p>This plan is under continuous refinement. Please send comments about this draft plan to the <a href="mailto:platform-text@eclipse.org">platform-text@eclipse.org</a> developer mailing list.</p>
@@ -63,7 +63,7 @@
 	<li><h4>Live Annotate</h4>
 	<ul>
 		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <em style="color: blue;">support to color by age in addition to color by contributor (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147705">bug 147705</a>)</em></li>
-		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> <em style="color: blue;">fix hover sizing problems (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147709">bug 147709</a>)</em></li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <em style="color: blue;">fix hover sizing problems (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147709">bug 147709</a>)</em></li>
 	</ul></li>
 	
 	<li><h4>Hyperlinking</h4>
@@ -219,7 +219,8 @@
     <h3>General Items</h3>
 	<ul>
 		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> <em style="color: blue;">3.2.x maintenance work</em></li>
-		<li><em style="color: blue;">switch to new <code>Assert</code> class from Platform (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=135136">bug 135136</a>)</em></li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <em style="color: blue;">switch to new <code>Assert</code> class from Platform (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=135136">bug 135136</a>)</em></li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <em style="color: blue;">adopt ICU Collator and use new APIs on StructuredViewer (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=135136">bug 157093</a>)</em></li>
 		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <em style="color: blue;">move web site from CVS to www</em></li>
 		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <em style="color: blue;">convert web site to phoenix</em></li>
 		<li>allow to get a graphical view of our performance tests i.e. fingerprint for all text tests</li>
@@ -275,15 +276,20 @@
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Live Annotate</h4>
 	<ul>
 		<li><img src="../images/ok.gif" border="0" height="10" width="10"> support to color by age in addition to color by contributor (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147705">bug 147705</a>)</li>
-		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> fix hover sizing problems (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147709">bug 147709</a>)</li>
-		<li>allow to access the quick diff info (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147316">bug 147316</a>)</li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> fix hover sizing problems (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147709">bug 147709</a>)</li>
+		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> allow to access the quick diff info (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147316">bug 147316</a>)</li>
 	</ul></li>
 
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Typing stability & performance</h4>
 	<ul>
-		<li>scrolling when typing bug(s), e.g. <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=133146">bug 133146</a>)</li>
+		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> scrolling when typing bug(s):
+		  <ul>
+			<li><img src="../images/ok.gif" border="0" height="10" width="10"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=133146">bug 125114: [typing] Editor scrolls on its own accord during code completion</a></li>
+			<li><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=133146">bug 133146: [typing] Adding imports should avoid scrolling of the caret line</a></li>
+		  </ul>
+		</li>
 		<li>(fix import folding bug (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=104814">bug 104814</a>))</li>
-		<li>check all setRedraw(on/off) users whether they really need that expensive operation (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=121049">bug 121049</a>)</li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> check all setRedraw(on/off) users whether they really need that expensive operation (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=121049">bug 121049</a>)</li>
 		<li><img src="../images/ok.gif" border="0" height="10" width="10"> warn if the user types into a derived file (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=148931">bug 148931</a>)</li>
 	</ul>
 	
@@ -300,6 +306,7 @@
 	<ul>
 		<li><img src="../images/ok.gif" border="0" height="10" width="10"> switch to new <code>Assert</code> class from Platform (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=135136">bug 135136</a>)</li>
 		<li><img src="../images/ok.gif" border="0" height="10" width="10"> solve segmented mode toolbar button usability problem (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=72354">bug 72354</a>)</li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> adopt ICU Collator and use new APIs on StructuredViewer (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=72354">bug 157093</a>)</li>
 		</li>
 	</ul>
 	
