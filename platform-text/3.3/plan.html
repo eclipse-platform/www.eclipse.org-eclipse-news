@@ -22,7 +22,7 @@
 
   <tr> 
     <td WIDTH="100%"> 
-    <p>Last revised 15:13 CET September 8, 2006</p>
+    <p>Last revised 13:10 CET September 14, 2006</p>
 
     
       <p>This plan is under continuous refinement. Please send comments about this draft plan to the <a href="mailto:platform-text@eclipse.org">platform-text@eclipse.org</a> developer mailing list.</p>
@@ -63,7 +63,7 @@
 	<li><h4>Live Annotate</h4>
 	<ul>
 		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <em style="color: blue;">support to color by age in addition to color by contributor (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147705">bug 147705</a>)</em></li>
-		<li><em style="color: blue;">fix hover sizing problems (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147709">bug 147709</a>)</em></li>
+		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> <em style="color: blue;">fix hover sizing problems (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147709">bug 147709</a>)</em></li>
 	</ul></li>
 	
 	<li><h4>Hyperlinking</h4>
@@ -268,29 +268,31 @@
 	<ul>
 		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> Live Annotate enhancements</li>
 		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> Typing stability & performance</li>
-		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> start with spell checking support for text editors</li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> 3.2.1 bug fixing</li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <font class="indexsub" color="#8080ff">[3.3 M3]</font> start with spell checking support for text editors</li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> 3.2.1 bug fixing and testing</li>
 	</ul>
 
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Live Annotate</h4>
 	<ul>
 		<li><img src="../images/ok.gif" border="0" height="10" width="10"> support to color by age in addition to color by contributor (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147705">bug 147705</a>)</li>
-		<li>fix hover sizing problems (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147709">bug 147709</a>)</li>
+		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> fix hover sizing problems (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147709">bug 147709</a>)</li>
 		<li>allow to access the quick diff info (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147316">bug 147316</a>)</li>
 	</ul></li>
 
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Typing stability & performance</h4>
 	<ul>
 		<li>scrolling when typing bug(s), e.g. <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=133146">bug 133146</a>)</li>
-		<li>fix import folding bug (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=104814">bug 104814</a>)</li>
+		<li>(fix import folding bug (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=104814">bug 104814</a>))</li>
 		<li>check all setRedraw(on/off) users whether they really need that expensive operation (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=121049">bug 121049</a>)</li>
 		<li><img src="../images/ok.gif" border="0" height="10" width="10"> warn if the user types into a derived file (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=148931">bug 148931</a>)</li>
 	</ul>
 	
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Spell Checking in Text Editors</h4>
 	<ul>
-		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> provide a spelling reconcile strategy and a way to install the reconciler</li>
-		<li>(add quick assist support)</li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <font class="indexsub" color="#8080ff">[3.3 M3]</font> provide a spelling reconcile strategy and a way to install the reconciler<br>
+		&rArr; a first cut of the spelling reconcile strategy is committed to HEAD and works for textual editors if enabled in the <code>TextSourceViewerConfiguration</code>.
+		</li>
+		<li><font class="indexsub" color="#8080ff">[3.3 M3]</font> (add quick assist support)</li>
 	</ul>
 	
 	
