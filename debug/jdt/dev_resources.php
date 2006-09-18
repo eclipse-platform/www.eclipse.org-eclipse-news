@@ -34,7 +34,7 @@
 		   <h3>Documents</h3> 
 		      <ul>
 		        <li><a href="/eclipse/debug/contribute.php">Contributing to the JDT Debugger</a></li>
-		        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.jdt.debug/buildnotes_jdt-debug.html">Up-to-the-minute build notes</a></li>
+		        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.jdt.debug/buildnotes_jdt-debug.html" target="_self">Up-to-the-minute build notes</a></li>
 		      </ul>
 		 <h3>Plugins</h3>
 		      <p>The JDT Debug component consists of the following plug-ins: </p>
