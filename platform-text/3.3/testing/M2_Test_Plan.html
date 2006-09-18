@@ -62,7 +62,7 @@ that you are going to verify it.</span><br>
     <li>add a new example ruler to a new editor that inherits from <code>AbstractTextEditor</code> but not from <code>AbstractDecoratedTextEditor</code> using the extension point doc as start</li>
     
   </ul>
-<h4>Clean Up Profiles (Dani, Martin - FAQ: Benno)<br>
+<h4>Clean Up Profiles (Martin, Dani - FAQ: Benno)<br>
 </h4>
 <ul>
   <li>clean up projects with workspace settings</li>
@@ -71,7 +71,7 @@ that you are going to verify it.</span><br>
   <li>import/export clean up profiles<br>
   </li>
 </ul>
-<h4>Clean Up Formatting (Dani, Tobias - FAQ: Benno)<br>
+<h4>Clean Up Formatting (Tobias, Martin- FAQ: Benno)<br>
 </h4>
 <ul>
   <li>test code and comment formatting through clean up</li>
@@ -84,7 +84,7 @@ that you are going to verify it.</span><br>
   <li>verify that long content is correctly displayed</li>
   <li>verify that keyboard navigation (e.g. Page Up/Down) works</li>
 </ul>
-<span style="font-weight: bold;">Warning When Editing Derived Files (Martin, Tobias - FAQ: Dani)</span><br>
+<span style="font-weight: bold;">Warning When Editing Derived Files (Benno, Tom)- FAQ: Dani)</span><br>
 <ul>
   <li>verify that a warning dialog appears when editing a derived file</li>
   <li>verify that the checkbox in the dialog works<br>
@@ -93,9 +93,33 @@ that you are going to verify it.</span><br>
   <li>verify that the preference is coupled with the checkbox on the warning dialog<br>
   </li>
 </ul>
-<span style="font-weight: bold;">Recenter Command (Martin, Tobias - FAQ: Dani)</span><br>
+<span style="font-weight: bold;">Recenter Command (Benno, Tobias - FAQ: Dani)</span><br>
 
 <ul>
 <li>verify that <span style="font-weight: bold;">Ctrl+L</span> triggers the Recenter command when using Emacs scheme</li>
 </ul>
+<h4>Lightweight Rename (Tom, Dani - FAQ: Markus)</h4>
+<ul>
+  <li>enable in Preferences &gt; Java &gt; Refactoring Java Code &gt; Show Rename refactoring in editor</li>
+</ul>
+<h4>Polymorphic method reference search filter  (Tom, Benno) - FAQ: Markus)</h4>
+<ul>
+  <li>see bugs 156491, 73401</li>
+  <li>should filter out method references that point to methods that override / are overridden by the search target<br>
+  </li>
+</ul>
+<h4>JUnit launch shortcuts  (Dani, Tobias - FAQ: Markus)</h4>
+<ul>
+  <li>verify that 'Run/Debug As &gt; JUnit (Plug-in) Test' context menu
+items still work for JUnit 3 and JUnit 4 test methods, classes,
+packages, and source folders</li>
+</ul>
+<h4>Sanity check Project Navigator  (Tom, Markus - FAQ: Martin)</h4>
+<ul>
+  <li>test the ported fixes from 3.2.1 to 3.3</li>
+  <li>test e.g. working set mode, DND, action enablement<br>
+  </li>
+</ul>
+<br>
+
 </body></html>
