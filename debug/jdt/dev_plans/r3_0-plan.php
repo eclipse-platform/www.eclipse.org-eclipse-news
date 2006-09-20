@@ -171,6 +171,7 @@
 		        <b>Bug Fixing</b>
 			</blockquote>
 		</div>
+		<div class="homeitem3col">
 		<h3>3.0 Development Effort - Milestone 8 (Friday, March 26th)</h3>
 			<blockquote>
 				<b>Scalability Issues</b> 
@@ -214,6 +215,7 @@
 		        <b>Bug Fixing</b>
 			</blockquote>
 		</div>
+		<div class="homeitem3col">
 		<h3>3.0 Development Effort - Milestone 7 (Friday, February 13th)</h3>
 			<blockquote>
 				<b>Scalability Issues</b> [1 day, Jared Burns] 
@@ -241,6 +243,7 @@
 		        <b>Bug Fixing</b>
 			</blockquote>
 		</div>
+		<div class="homeitem3col">
 		<h3>3.0 Development Effort - Milestone 6 (Friday, December 19th)</h3>
 			<blockquote>
 				<img src="/eclipse/debug/images/ok.gif" width="10" height="10"> <b>Migrate to Equinox (OSGi) 
@@ -255,6 +258,7 @@
 		          </ul>
 			</blockquote>
 		</div>
+		<div class="homeitem3col">
 		<h3>3.0 Development Effort - Milestone 5 (Friday, November 21st)</h3>
 			<blockquote>
 				<b><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> Remove Dependency on Xerces 
@@ -267,6 +271,7 @@
 		          </ul>
 			</blockquote>
 		</div>
+		<div class="homeitem3col">
 		<h3>3.0 Development Effort - Milestone 4 (Friday, October 10th)</h3>
 			<blockquote>
 				<b>Classpath</b> [Darin S] [5 days] 
@@ -297,6 +302,7 @@
 		          </ul>
 			</blockquote>
 		</div>
+		<div class="homeitem3col">
 		<h3>3.0 Development Effort - Milestone 3 (Friday, August 29th)</h3>
 			<blockquote>
 				<b>Re-work Breakpoint Properties dialog</b> [1 person week] [Jared B] 
@@ -335,6 +341,7 @@
 		          </ul>
 			</blockquote>
 		</div>
+		<div class="homeitem3col">
 		<h3>3.0 Development Effort - Milestone 2 (Friday, July 18th)</h3>
 			<blockquote>
 				<b>Re-work Breakpoint Properties dialog</b> [1 person week] 
@@ -353,6 +360,7 @@
 		          </ul>
 			</blockquote>
 		</div>
+		<div class="homeitem3col">
 		<h3>3.0 Development Effort - Milestone 1</h3>
 			<blockquote>
 				<b>JSR045</b> [Luc B] 
