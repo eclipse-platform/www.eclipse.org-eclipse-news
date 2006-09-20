@@ -109,7 +109,7 @@
         			<li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> breakpoints</li>
 	                <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> evaluations 
 	                  <ul>
-	                    <li>>[M2] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
+	                    <li>[M2] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
 	                      generics</li>
 	                    <li>[M2] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
 	                      enhanced for loop</li>
