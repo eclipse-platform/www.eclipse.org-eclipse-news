@@ -48,7 +48,7 @@
         		
         		<b>JRE management</b>
         		<ul>
-        			<li><font color="#808080">[M6]</font> <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
+        			<li>[M6] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
                   support a javadoc location per library/jar</li>
         		</ul>
         		<b>Classpath management</b>
@@ -61,16 +61,16 @@
         		</ul>
         		<b>Evaluations</b>
         		<ul>
-        			 <li><font color="#808080">[M4]</font> <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
+        			 <li>[M4] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
 	                  support evaluations when assigning a value to a variable in 
 	                  the debugger</li>
 	        		</ul>
 	        		<b>Ease of use reviews/enhancements </b>
 	        		<ul>
-	        			li><font color="#808080">[M3]</font> <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
+	        			li>[M3] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
 	                  paste and navigate Java stack traces in the console (i.e. from 
 	                  Bugzilla)</li>
-	                <li> <font color="#808080">[M3]</font> <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
+	                <li> [M3] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
 	                  integrate monitor information in the debug view (to replace 
 	                  the Threads &amp; Monitors view)</li>
 	                <li><img src="/eclipse/debug/images/defer.gif">assist user in 
@@ -80,17 +80,17 @@
 	                <li> <img src="/eclipse/debug/images/ok.gif" width="10" height="10">extensible logical structures 
 	                  for Java debugger 
 	                  <ul>
-	                    <li><font color="#808080">[M3]</font> <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
+	                    <li>[M3] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
 	                      extension point tosupport contribution of logical structures 
 	                      via code snippets</li>
-	                    <li><font color="#808080">[M4]</font> <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
+	                    <li>[M4] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
 	                      user interface to allow user defined logical structures</li>
 	                  </ul>
 	                </li>
 	                <li><img src="/eclipse/debug/images/defer.gif">investigate enhancing 
 	                  Java editing features in debug contexts (conditional breakpoints, 
 	                  scrapbook, etc.)</li>
-	                <li><font color="#808080">[M6]</font> <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
+	                <li>[M6] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
 	                  improved JRE library editing, similar to buildpath jar editnig 
 	                  (source path, javadoc location)</li>
 	                <li><img src="/eclipse/debug/images/defer.gif"> [<i>PDE now supports 
@@ -98,17 +98,17 @@
         		</ul>
         		<b>J2SE 5 support - Upgrade JDI client to support new features</b>
         		<ul>
-        			<li><font color="#808080">[M1]</font> <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
+        			<li>[M1] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
 	                  generics</li>
-	                <li><font color="#808080">[M1]</font> <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
+	                <li>[M1] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
 	                  enums</li>
-	                <li><font color="#808080">[M1] </font><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
+	                <li>[M1] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
 	                  varargs</li>
-	                <li><font color="#808080">[M4]</font> <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
+	                <li>[M4] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
 	                  extensible connectors</li>
 	                <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> read-only VM (no work 
 	                  on our part, a read-only VM has its own JDI implementation)</li>
-	                <li><font color="#808080">[M4]</font> <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
+	                <li>[M4] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
 	                  timeout on connectors</li>
         		</ul>
         		<b>Support for J2SE5 language features in</b>
@@ -116,15 +116,15 @@
         			<li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> breakpoints</li>
 	                <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> evaluations 
 	                  <ul>
-	                    <li><font color="#808080">[M2]</font> <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
+	                    <li>>[M2] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
 	                      generics</li>
-	                    <li><font color="#808080">[M2]</font> <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
+	                    <li>[M2] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
 	                      enhanced for loop</li>
-	                    <li><font color="#808080">[M3]</font> <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
+	                    <li>[M3] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
 	                      varargs</li>
-	                    <li><font color="#808080">[M5]</font> <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
+	                    <li>[M5] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
 	                      autoboxing</li>
-	                    <li><font color="#808080">[M5]</font> <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
+	                    <li>[M5] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
 	                      enumerations</li>
 	                  </ul>
 	                </li>
@@ -207,9 +207,9 @@
 		          </ul>
 		        <b>Simple to use</b>
 		          <ul>
-		            <li> <img src="/eclipse/debug/images/defer.gif">investigate scoping 
+		            <li> <img src="/eclipse/debug/images/defer.gif"> investigate scoping 
 		              breakpoints based on call sequence [Luc Bourlier] </li>
-		            <li><img src="/eclipse/debug/images/defer.gif">investigate chaining 
+		            <li><img src="/eclipse/debug/images/defer.gif"> investigate chaining 
 		              breakpoints [Luc Bourlier]</li>
 		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> user defined logical structures 
 		              [Luc Bourlier]</li>
@@ -223,7 +223,7 @@
 		              Barnes]</li>
 		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> timeout on connectors [Kevin 
 		              Barnes]</li>
-		            <li><img src="/eclipse/debug/images/defer.gif">enumerations in evaluations 
+		            <li><img src="/eclipse/debug/images/defer.gif"> enumerations in evaluations 
 		              [Luc Bourlier]</li>
 		          </ul>
 			</blockquote>
