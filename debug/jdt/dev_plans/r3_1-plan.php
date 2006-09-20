@@ -238,7 +238,7 @@
 		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> paste and navigate Java 
 		              stack traces in the console (i.e. from Bugzilla/JUnit tests, etc.) 
 		              [Kevin Barnes]</li>
-		            <li><b>[deferred to M4]</b> assist user in scoping breakpoints based 
+		            <li><img src="/eclipse/debug/images/defer.gif"> [M4] assist user in scoping breakpoints based 
 		              on call sequence [Jared Burns]</li>
 		            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> support for user extensible 
 		              logical structures via extension point [Jared Burns, Luc Bourlier] 
@@ -253,8 +253,8 @@
 		          </ul>
 		        <b>JDI Client J2SE5 enhancements</b>
 		          <ul>
-		            <li><b>[deferred to M4]</b> extensible connectors [Luc Bourlier]</li>
-		            <li><b>[deferred to M4]</b> timeout on connectors [Luc Bourlier]</li>
+		            <li><img src="/eclipse/debug/images/defer.gif"> [M4] extensible connectors [Luc Bourlier]</li>
+		            <li><img src="/eclipse/debug/images/defer.gif"> [M4] timeout on connectors [Luc Bourlier]</li>
 		          </ul>
 		        <b>Bug Fixing Rotation</b>
 			</blockquote>
@@ -265,15 +265,15 @@
 				<b>Background communication</b>
 		          <ul>
 		            <li>background communication in the Threads and Monitors view to avoid 
-		              blocking the UI thread [<i>Jared Burns</i>] </li>
+		              blocking the UI thread [Jared Burns] </li>
 		          </ul>
 		        <b>Ease of use reviews/enhancements</b>
 		          <ul>
-		            <li><b>[deferred to M3]</b> rework the Threads and Monitors to be 
+		            <li><img src="/eclipse/debug/images/defer.gif"> [M3] rework the Threads and Monitors to be 
 		              task oriented [Jared Burns]</li>
-		            <li><b>[in progress, complete in M3]</b> paste and navigate Java stack 
+		            <li><img src="/eclipse/debug/images/progress.gif"> [complete in M3] paste and navigate Java stack 
 		              traces in the console (i.e. from Bugzilla) [Kevin Barnes]</li>
-		            <li><b>[in progress]</b> investigate scrapbook usage patterns and 
+		            <li><img src="/eclipse/debug/images/progress.gif"> investigate scrapbook usage patterns and 
 		              estimate work effort required to improve and/or rework it [Darin 
 		              Wright]</li>
 		          </ul>
@@ -289,7 +289,6 @@
 		            <li><img src="/eclipse/debug/images/progress.gif"> Java debug model API [Luc Bourlier]</li>
 		          </ul>
 			</blockquote>
-		</div>
 		</div>
 		<div class="homeitem3col">
 		<h3>Bug Resolution</h3>
