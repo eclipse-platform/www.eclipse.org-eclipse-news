@@ -195,7 +195,7 @@
 		          <ul>
 		            <li><img src="/eclipse/debug/images/progress.gif"> Breakpoints [Luc Bourlier]</li>
 		          </ul>
-		        <<b>Smart Fields</b> 
+		        <b>Smart Fields</b> 
 		          <ul>
 		            <li>Enhance dialogs with smart fields (code assist) where applicable: 
 		              Main tab, Detail formatter</li>
@@ -249,7 +249,7 @@
 				<img src="/eclipse/debug/images/ok.gif" width="10" height="10"> <b>Migrate to Equinox (OSGi) 
 		          Runtime </b><br><br>
 		        <img src="/eclipse/debug/images/progress.gif"> <b>Bug Fixing: Reduce the bug backlog</b><br><br>
-		        <b>Leak Analysis:</b><br><br>
+		        <b>Leak Analysis</b><br><br>
 		        <b>Revisit Runtime Classpath</b> 
 		          <ul>
 		            <li>There are various bugs relating to specifying runtime classpaths 
