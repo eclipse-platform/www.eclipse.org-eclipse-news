@@ -247,9 +247,9 @@
 		<h3>3.0 Development Effort - Milestone 6 (Friday, December 19th)</h3>
 			<blockquote>
 				<img src="/eclipse/debug/images/ok.gif" width="10" height="10"> <b>Migrate to Equinox (OSGi) 
-		          Runtime </b>
-		        <img src="/eclipse/debug/images/progress.gif"> <b>Bug Fixing: </b>Reduce the bug backlog</li>
-		        <b>Leak Analysis:</b>
+		          Runtime </b><br><br>
+		        <img src="/eclipse/debug/images/progress.gif"> <b>Bug Fixing: Reduce the bug backlog</b><br><br>
+		        <b>Leak Analysis:</b><br><br>
 		        <b>Revisit Runtime Classpath</b> 
 		          <ul>
 		            <li>There are various bugs relating to specifying runtime classpaths 
