@@ -121,7 +121,7 @@
 	                      enumerations</li>
 	                  </ul>
 	                </li>
-	                <li><font color="#808080">[M3]</font> <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
+	                <li>[M3] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
 	                  Java debug model API</li>
         		</ul>
 			</blockquote>
