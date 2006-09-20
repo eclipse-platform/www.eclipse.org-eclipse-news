@@ -64,7 +64,7 @@
 			        		</ul>
 			        <b>Enhance Java launch configuration editing</b>
 	        		<ul>
-	        			<li><img src="/eclipse/debug/images/defer.gif">Simplify reordering 
+	        			<li><img src="/eclipse/debug/images/defer.gif"> Simplify reordering 
 		                  and editing of runtime class paths</li>
 		                <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> Improve the UI for setting 
 		                  the working directory</li>
@@ -76,7 +76,7 @@
 	        		</ul>
 	        		<b>Enhance the Java scrapbook and Display view</b>
 	        		<ul>
-	        			<li><img src="/eclipse/debug/images/defer.gif">The Java scrapbook 
+	        			<li><img src="/eclipse/debug/images/defer.gif"> The Java scrapbook 
 		                  and Display view require extensive work to catch up with the 
 		                  Java editor in terms of features (quick fix, undo/redo, auto 
 		                  completion, support for import statements, etc.).</li>
@@ -101,17 +101,17 @@
 		<h3>3.2 Development Effort - Milestone 5 (Friday, February 17th)</h3>
 			<blockquote>
         		<ul>
-        			<li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">API to query a VM install's system 
+        			<li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> API to query a VM install's system 
 			          properties (IVMInstall3)</li>
-			        <li><img src="/eclipse/debug/images/defer.gif">Investigate use of content 
+			        <li><img src="/eclipse/debug/images/defer.gif"> Investigate use of content 
 			          types to identify launchable Java files (mains, Applets, etc.).</li>
-			        <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Display thread groups in the 
+			        <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> Display thread groups in the 
 			          debug view</li>
-			        <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Launch enhancements 
+			        <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> Launch enhancements 
 			          <ul>
-			            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Investigate ways to reduce 
+			            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> Investigate ways to reduce 
 			              the number of launch shortcuts applicable to selections</li>
-			            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Provide common &quot;Java&quot; 
+			            <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> Provide common &quot;Java&quot; 
 			              property tests for Java launch shortcuts, for use by JUnit, PDE, 
 			              SWT</li>
 			          </ul>
@@ -133,7 +133,7 @@
 				              shortcuts, for use by JUnit, PDE, SWT</li>
 				          </ul>
 				        </li>
-				        <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10">Extensible execution environments 
+				        <li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> Extensible execution environments 
 				          <ul>
 				            <li>Provide an extension to allow contribution of execution environment 
 				              descriptions (for JREs), and delegates to classify JREs</li>
@@ -159,10 +159,10 @@
 		<h3>3.2 Development Effort - Milestone 2 (Friday, September 23rd)</h3>
 			<blockquote>
 	        		<ul>
-	        			<li><img src="/eclipse/debug/images/defer.gif">Support to create Java 
+	        			<li><img src="/eclipse/debug/images/defer.gif"> Support to create Java 
 				          exception breakpoints from catch clauses and references to exceptions 
 				          in the Java editor</li>
-				        <li><img src="/eclipse/debug/images/defer.gif">Breakpoint decorators 
+				        <li><img src="/eclipse/debug/images/defer.gif"> Breakpoint decorators 
 				          in Java editor outline and variables view to show which members have 
 				          associated breakpoints</li>
 	        		</ul>
@@ -171,7 +171,7 @@
 		<div class="homeitem3col">
 		<h3>Bug Resolution</h3>
 			<ul>
-				<li><a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=JDT&component=Debug&version=3.2&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Bug+Number&field0-0-0=noop&type0-0-0=noop&value0-0-0=">Bug Fixes Released to 3.2</a></li>
+				<li><a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=JDT&component=Debug&version=3.2&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Bug+Number&field0-0-0=noop&type0-0-0=noop&value0-0-0=" target="_blank">Bug Fixes Released to 3.2</a></li>
 			</ul>
 		</div>
 	</div>
