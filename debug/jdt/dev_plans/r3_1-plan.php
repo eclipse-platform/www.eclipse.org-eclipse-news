@@ -48,8 +48,7 @@
         		
         		<b>JRE management</b>
         		<ul>
-        			<li>[M6] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
-                  support a javadoc location per library/jar</li>
+        			<li>[M6] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> support a javadoc location per library/jar</li>
         		</ul>
         		<b>Classpath management</b>
         		<ul>
@@ -61,37 +60,31 @@
         		</ul>
         		<b>Evaluations</b>
         		<ul>
-        			 <li>[M4] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
-	                  support evaluations when assigning a value to a variable in 
+        			 <li>[M4] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> support evaluations when assigning a value to a variable in 
 	                  the debugger</li>
 	        		</ul>
 	        		<b>Ease of use reviews/enhancements </b>
 	        		<ul>
-	        			li>[M3] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
-	                  paste and navigate Java stack traces in the console (i.e. from 
+	        			<li>[M3] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> paste and navigate Java stack traces in the console (i.e. from 
 	                  Bugzilla)</li>
-	                <li> [M3] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
-	                  integrate monitor information in the debug view (to replace 
+	                <li> [M3] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> integrate monitor information in the debug view (to replace 
 	                  the Threads &amp; Monitors view)</li>
-	                <li><img src="/eclipse/debug/images/defer.gif">assist user in 
+	                <li><img src="/eclipse/debug/images/defer.gif"> assist user in 
 	                  scoping breakpoints based on call sequence</li>
-	                <li><img src="/eclipse/debug/images/defer.gif">investigate tracepoints</li>
-	                <li><img src="/eclipse/debug/images/defer.gif">chaining breakpoints</li>
-	                <li> <img src="/eclipse/debug/images/ok.gif" width="10" height="10">extensible logical structures 
+	                <li><img src="/eclipse/debug/images/defer.gif"> investigate tracepoints</li>
+	                <li><img src="/eclipse/debug/images/defer.gif"> chaining breakpoints</li>
+	                <li> <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> extensible logical structures 
 	                  for Java debugger 
 	                  <ul>
-	                    <li>[M3] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
-	                      extension point tosupport contribution of logical structures 
+	                    <li>[M3] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> extension point tosupport contribution of logical structures 
 	                      via code snippets</li>
-	                    <li>[M4] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
-	                      user interface to allow user defined logical structures</li>
+	                    <li>[M4] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> user interface to allow user defined logical structures</li>
 	                  </ul>
 	                </li>
-	                <li><img src="/eclipse/debug/images/defer.gif">investigate enhancing 
+	                <li><img src="/eclipse/debug/images/defer.gif"> investigate enhancing 
 	                  Java editing features in debug contexts (conditional breakpoints, 
 	                  scrapbook, etc.)</li>
-	                <li>[M6] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> 
-	                  improved JRE library editing, similar to buildpath jar editnig 
+	                <li>[M6] <img src="/eclipse/debug/images/ok.gif" width="10" height="10"> improved JRE library editing, similar to buildpath jar editing 
 	                  (source path, javadoc location)</li>
 	                <li><img src="/eclipse/debug/images/defer.gif"> [<i>PDE now supports 
 	                  this</i>] better support for launching SWT based applications</li>
