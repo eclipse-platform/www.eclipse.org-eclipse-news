@@ -158,12 +158,12 @@
 			  </li>
 			  <li>Compare API
 			    <ul>
-			      <li>Allow clients to extend ContentNergeViewer to the same extent TextMergeViewer does 
+			      <li>Allow clients to extend ContentMergeViewer to the same extent TextMergeViewer does 
 			      (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=144638">144638</a>).
 			      </li>
 			      <li>Give clients access to Compare viewer navigation (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=143858">143858</a>).
 			      </li>
-			      <li>Allow clients to contribute actions to a CompadeEditorInput.
+			      <li>Allow clients to contribute actions to a CompareEditorInput.
 			    </ul>
 			  <li>
 			  <li>Improve Compare Editor Updating.
