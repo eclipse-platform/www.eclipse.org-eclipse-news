@@ -35,7 +35,7 @@
 			<h3>Documents</h3>
 			<ul>
 		        <li><a href="/eclipse/debug/contribute.php">Contributing to the Debug Platform</a></li>
-		        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.debug.core/buildnotes_platform-debug.html" target="_self">Up-to-the-minute build notes</a></li>
+		        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.debug.core/buildnotes_platform-debug.html" target="_blank">Up-to-the-minute build notes</a></li>
 		    </ul>
 		</div>
 		<div class="homeitem3col">
