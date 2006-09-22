@@ -16,7 +16,7 @@
 	$pageKeywords	= "debug, platform, debugging, debugger, jdt, breakpoints, developement, resources, dev";
 	$pageAuthor		= "Debug Team";
 	
-	include("/debug/_sideCommon.php");
+	include("../_sideCommon.php");
 	include("_pluginCommon.php");
 	
 	$html = <<<EOHTML
@@ -35,7 +35,7 @@
 			<h3>Documents</h3>
 			<ul>
 		        <li><a href="/eclipse/debug/contribute.php">Contributing to the Debug Platform</a></li>
-		        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.debug.core/buildnotes_platform-debug.html">Up-to-the-minute build notes</a></li>
+		        <li><a href="build_notes_proxy.php">Up-to-the-minute build notes</a></li>
 		    </ul>
 		</div>
 		<div class="homeitem3col">
