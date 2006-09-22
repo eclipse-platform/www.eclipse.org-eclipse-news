@@ -75,7 +75,7 @@
 		</div>
 	</div>
 	<div id="rightcolumn">
-		<?php echo include '_sideCommon.php'?>
+		<?php echo "foo" include '_sideCommon.php'?>
 	</div>
 </div>
 
