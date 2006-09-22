@@ -22,7 +22,7 @@
 
   <tr> 
     <td WIDTH="100%"> 
-    <p>Last revised 16:45 CET September 21, 2006</p>
+    <p>Last revised 15:28 CET September 22, 2006</p>
 
     
       <p>This plan is under continuous refinement. Please send comments about this draft plan to the <a href="mailto:platform-text@eclipse.org">platform-text@eclipse.org</a> developer mailing list.</p>
@@ -260,55 +260,41 @@
 
 
 <tr>
-    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#595791"><font face="Arial,Helvetica"><font color="#FFFFFF"><a name="Milestone_Planning">Milestone M2</font></font></td>
+    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#595791"><font face="Arial,Helvetica"><font color="#FFFFFF"><a name="Milestone_Planning">Milestone M3 (2006-11-3)</font></font></td>
 </tr>
 
   <tr> 
     <td WIDTH="100%"> 
 
-	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Top items</h4>
-	<ul>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> Live Annotate enhancements</li>
-		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> <font class="indexsub" color="#8080ff">[3.3 M3]</font> Typing stability & performance</li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <font class="indexsub" color="#8080ff">[3.3 M3]</font> start with spell checking support for text editors</li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> 3.2.1 bug fixing and testing</li>
-	</ul>
-
-	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Live Annotate</h4>
-	<ul>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> support to color by age in addition to color by contributor (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147705">bug 147705</a>)</li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> fix hover sizing problems (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147709">bug 147709</a>)</li>
-		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> <font class="indexsub" color="#8080ff">[3.3 M3]</font> allow to access the quick diff info (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147316">bug 147316</a>)</li>
-	</ul></li>
-
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Typing stability & performance</h4>
 	<ul>
-		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> <font class="indexsub" color="#8080ff">[3.3 M3]</font> scrolling when typing bug(s):
+		<li>scrolling when typing bug(s):
 		  <ul>
-			<li><img src="../images/ok.gif" border="0" height="10" width="10"> <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=133146">bug 125114: [typing] Editor scrolls on its own accord during code completion</a></li>
 			<li><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=133146">bug 133146: [typing] Adding imports should avoid scrolling of the caret line</a></li>
 		  </ul>
 		</li>
-		<li><font class="indexsub" color="#8080ff">[&gt;3.3 M2]</font> (fix import folding bug (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=104814">bug 104814</a>))</li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> check all setRedraw(on/off) users whether they really need that expensive operation (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=121049">bug 121049</a>)</li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> warn if the user types into a derived file (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=148931">bug 148931</a>)</li>
+		<li>fix import folding bug (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=104814">bug 104814</a>)</li>
 	</ul>
 	
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Spell Checking in Text Editors</h4>
 	<ul>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <font class="indexsub" color="#8080ff">[3.3 M3]</font> provide a spelling reconcile strategy and a way to install the reconciler<br>
-		&rArr; a first cut of the spelling reconcile strategy is committed to HEAD and works for textual editors if enabled in the <code>TextSourceViewerConfiguration</code>.
-		</li>
-		<li><font class="indexsub" color="#8080ff">[3.3 M3]</font> (add quick assist support)</li>
+		<li>configure textual editors to have spell checking (document must become synchronized)</li>
+		<li>add quick assist support</li>
+		<li>provide a spelling engine in Platform Text</li>
 	</ul>
 	
+	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Automatic import on content assist</h4>
+	<ul>
+		<li>negotiate API with JDT Core</li>
+		<li>adopt new API</li>
+	</ul>
 	
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Additional items</h4>
 	<ul>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> switch to new <code>Assert</code> class from Platform (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=135136">bug 135136</a>)</li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> solve segmented mode toolbar button usability problem (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=72354">bug 72354</a>)</li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> adopt ICU Collator and use new APIs on StructuredViewer (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=72354">bug 157093</a>)</li>
-		</li>
+		<li>surface Smart Home/End functionality in <em>Text Editors</em> preferences (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147941">bug 147941</a>)</li>
+		<li>(push down spaces for Tab preference to Platform Text)</li>
+		<li>make JFaceTextUtil API (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=157460">bug 157460</a>)</li>
+		<li>get rid of duplicate html rendering related classes (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=157461">bug 157461</a>)</li>
 	</ul>
 	
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Permanent items</h4>
@@ -321,10 +307,7 @@
 	
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Absences</h4>
 	<ul>
-		<li>&frac12; day local holiday (Knabenschiessen)</li>
-		<li>3 days compensation</li>
-		<li>Tom: 10 days vacation</li>
-		<li>Dani: 2 days training</li>
+		<li>Dani: 6 days vacation</li>
 	</ul>
       
 	<h3>Previous Milestones</h3>
