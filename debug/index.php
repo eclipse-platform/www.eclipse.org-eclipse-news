@@ -17,7 +17,7 @@
 	$pageKeywords	= "debug, platform, debugging, debugger, jdt, breakpoints";
 	$pageAuthor		= "Debug Team";
 	
-	include("/eclipse/debug/_sideCommon.php");
+	include("_sideCommon.php");
 	
 	$html = <<<EOHTML
 
