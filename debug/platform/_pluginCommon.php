@@ -20,5 +20,5 @@
         		<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.debug.ui" target="_blank">debug.ui</a></li>
 			</ul>
 		</div>
-	EOHTML
+EOHTML
 ?>

@@ -17,8 +17,8 @@
 	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching, release, plan, 3.3";
 	$pageAuthor		= "Debug Team";
 	
-	include("/debug/_sideCommon.php")
-	include("/debug/jdt/_pluginCommon.php")
+	include("/debug/_sideCommon.php");
+	include("/debug/jdt/_pluginCommon.php");
 	
 	$html = <<<EOHTML
 

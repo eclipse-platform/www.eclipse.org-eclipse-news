@@ -25,6 +25,6 @@
 	        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.debug.jdi.tests" target="_blank">jdt.debug.jdi.tests</a></li>
 		</ul>
 	</div>
-	EOHTML
+EOHTML
 ?>
 
