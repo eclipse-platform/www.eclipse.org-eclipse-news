@@ -17,6 +17,8 @@
 	$pageKeywords	= "debug, platform, debugging, debugger, jdt, breakpoints";
 	$pageAuthor		= "Debug Team";
 	
+	include($DOCUMENT_ROOT, "debug/_sideCommon.php");
+	
 	$html = <<<EOHTML
 
 <div id="maincontent">
@@ -73,7 +75,7 @@
 		</div>
 	</div>
 	<div id="rightcolumn">
-		include("_sideCommon.php");
+		$commonside
 	</div>
 </div>
 
