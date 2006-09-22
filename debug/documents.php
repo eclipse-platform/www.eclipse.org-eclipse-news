@@ -2,7 +2,7 @@
 
 	#*****************************************************************************
 	#
-	# index.php
+	# documents.php
 	#
 	# Author: 		Michael Rennie
 	# Date:			August 25, 2006

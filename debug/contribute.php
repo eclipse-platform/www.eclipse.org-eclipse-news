@@ -2,7 +2,7 @@
 
 	#*****************************************************************************
 	#
-	# index.php
+	# contribute.php
 	#
 	# Author: 		Michael Rennie
 	# Date:			August 22, 2006
