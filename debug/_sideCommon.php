@@ -24,5 +24,5 @@
 			<li><a href="/eclipse/debug/about.php">About this content</a></li>
 		</ul>
 	</div> 
-	EOHTML
+EOHTML
 ?>
