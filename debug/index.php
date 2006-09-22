@@ -75,12 +75,12 @@
 		</div>
 	</div>
 	<div id="rightcolumn">
-		{$commonside}
+		echo {$commonside}
 	</div>
 </div>
 
 EOHTML;
-echo $commonside
+
 	# Generate the web page
 	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
