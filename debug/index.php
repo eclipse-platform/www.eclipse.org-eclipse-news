@@ -75,7 +75,7 @@
 		</div>
 	</div>
 	<div id="rightcolumn">
-		echo {$commonside}
+		<?php include '_sideCommon.php'?>
 	</div>
 </div>
 
