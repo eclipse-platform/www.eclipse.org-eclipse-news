@@ -75,10 +75,9 @@
 		</div>
 	</div>
 	<div id="rightcolumn">
-		$commonside;
+		{$commonside}
 	</div>
 </div>
-
 
 EOHTML;
 
