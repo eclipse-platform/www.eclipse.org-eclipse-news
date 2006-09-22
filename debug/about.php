@@ -15,6 +15,8 @@
 	$pageKeywords	= "debug, platform, debugging, debugger, jdt, breakpoints, about, content, epl";
 	$pageAuthor		= "Debug Team";
 	
+	include("_sideCommon.php")
+	
 	$html = <<<EOHTML
 
 <div id="maincontent">
@@ -37,16 +39,7 @@
 		</div>
 	</div>
 	<div id="rightcolumn">
-		<div class="sideitem">
-			<h6>Quick Links</h6>
-			<ul>
-				<li><a href="/eclipse/debug/documents.php">Articles & Documents</a></li>
-				<li><a href="/eclipse/debug/get_involved.php">Get Involved!</a></li>
-				<li><a href="/eclipse/debug/contribute.php">How To Contribute</a></li>
-				<li><a href="/eclipse/debug/who.php">Who We Are</a></li>
-				<li><a href="http://eclipse-debug.blogspot.com/">Debug Team Blog</a></li>
-			</ul>
-		</div>
+		$commonside
 	</div>
 </div>
 

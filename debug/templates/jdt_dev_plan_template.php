@@ -16,6 +16,9 @@
 	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching, release, plan";
 	$pageAuthor		= "Debug Team";
 	
+	include("/debug/_sideCommon.php")
+	include("/debug/jdt/_pluginCommon.php")
+	
 	$html = <<<EOHTML
 
 <div id="maincontent">
@@ -66,29 +69,8 @@
 		</div>
 	</div>
 	<div id="rightcolumn">
-		<div class="sideitem">
-			<h6>Quick Links</h6>
-			<ul>
-				<li><a href="/eclipse/debug/documents.php">Articles & Documents</a></li>
-				<li><a href="/eclipse/debug/get_involved.php">Get Involved!</a></li>
-				<li><a href="/eclipse/debug/contribute.php">How To Contribute</a></li>
-				<li><a href="/eclipse/debug/who.php">Who We Are</a></li>
-				<li><a href="http://eclipse-debug.blogspot.com/">Debug Team Blog</a></li>
-				<li><a href="/eclipse/debug/about.php">About this content</a></li>
-			</ul>
-		</div>
-		<div class="sideitem">
-			<h6>Plugins</h6>
-			<ul>
-				<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.debug" target="_blank">jdt.debug</a></li>
-		        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.debug.ui" target="_blank">jdt.debug.ui</a></li>
-		        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.launching" target="_blank">jdt.launching</a></li>
-		        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.launching.j9" target="_blank">jdt.launching.j9</a></li>
-		        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.launching.macosx" target="_blank">jdt.launching.macosx</a></li>
-		        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.debug.tests." target="_blank">jdt.debug.tests</a></li>
-		        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.debug.jdi.tests" target="_blank">jdt.debug.jdi.tests</a></li>
-			</ul>
-		</div>
+		$commonside
+		$commonplugin
 	</div>
 </div>
 
