@@ -17,6 +17,8 @@
 	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching";
 	$pageAuthor		= "Debug Team";
 	
+	error_reporting(E_ALL);
+	
 	$filename = "http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.debug.core/buildnotes_platform-debug.html";
 	$dataFile = fopen( $filename, "r" ) ;
     if ( $dataFile )  {
