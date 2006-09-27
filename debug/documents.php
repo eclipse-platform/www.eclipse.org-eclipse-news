@@ -48,7 +48,16 @@
 		<div class="homeitem3col">
 			<h3>Miscellaneous Documents</h3>
 			<ul>
-				
+				<li>For the 3.3M3 release we are working on moving away from strict mode-based launching to an extensible 'options-based' scheme.
+				The following <a href="/eclipse/debug/documents/launch_option_migration_path.pdf" target="_blank">migration guide</a> describes how you can migrate your launching contributions to use the new scheme.
+				<br><br>
+				Information about the changes to the launching framework, and the sourcecode needed for the debug plugins can be found on the following 
+				<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=157059" target="_blank">bug report</a>.
+				<br>
+				<blockquote>
+					<p>An example project which contributes a tab to the Java Application tab group, a launch option called 'fooapplet', and a delegate can be found <a href="/eclipse/debug/misc/launch_option_example.zip" target="_blank">here</a>.</p>
+				</blockquote>
+				</li>
 			</ul>
 		</div>
 		<div class="homeitem3col">
