@@ -10,7 +10,7 @@
 	# Format is Link text, link URL (can be http://www.someothersite.com/), target (_self, _blank), level (1, 2 or 3)
 	# these are optional
 	$Nav->addCustomNav("Mailing Lists", 	"http://www.eclipse.org/mail/", "_self", 1);
-	$Nav->addNavSeparator("Components", 	"index.php");
+	$Nav->addNavSeparator("Sub-projects", 	"index.php");
 	$Nav->addCustomNav("Platform", "http://www.eclipse.org/platform/", "_self", 1);
 	$Nav->addCustomNav("Equinox", "http://www.eclipse.org/equinox/", "_self", 1);
 	$Nav->addCustomNav("JDT", "http://www.eclipse.org/jdt/", "_self", 1);
