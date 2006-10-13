@@ -92,6 +92,7 @@ ob_start();
 		    </ul>
 		    Eclipse 3.0:
 		    <ul>
+		        <li> <a href="documents/scoped_builds.html">Improving the Eclipse Build Story></li>
 		        <li> <a href="planning/3.0/plan_content_types.html">Content 
 		          Types</a></li>
 		        <li> <a href="planning/3.0/plan_encoding.html">File 
