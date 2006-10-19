@@ -57,206 +57,206 @@ ob_start();
   <table border=0 cellspacing=0 cellpadding=0 width="75%">
    <tr>
     <td width="24%">
-    <p>Ant</p>
+    Ant
     </td>
     <td width="74%">
-    <p>Ant
-    Java based build tool</p>
+    Ant
+    Java based build tool
     </td>
    </tr>
    <tr>
     <td width="24%">
-    <p>Compare</p>
+    Compare
     </td>
     <td width="74%">
-    <p>Universal
-    Compare Facility</p>
+    Universal
+    Compare Facility
     </td>
    </tr>
    <tr>
     <td width="24%">
-    <p>Core</p>
+    Core
     </td>
     <td width="74%">
-    <p>Core
-    libraries</p>
+    Core
+    libraries
     </td>
    </tr>
    <tr>
     <td width="24%">
-    <p>Debug</p>
+    Debug
     </td>
     <td width="74%">
-    <p>Universal
-    Debugger</p>
+    Universal
+    Debugger
     </td>
    </tr>
    <tr>
     <td width="24%">
-    <p>Doc</p>
+    Doc
     </td>
     <td width="74%">
-    <p>Documentation</p>
+    Documentation
     </td>
    </tr>
    <tr>
     <td width="24%">
-    <p>Help</p>
+    Help
     </td>
     <td width="74%">
-    <p>Help
-    system</p>
+    Help
+    system
     </td>
    </tr>
    <tr>
     <td width="24%">
-    <p>Releng</p>
+    Releng
     </td>
     <td width="74%">
-    <p>Release
-    Engineering</p>
+    Release
+    Engineering
     </td>
    </tr>
    <tr>
     <td width="24%">
-    <p>Scripting</p>
+    Scripting
     </td>
     <td width="74%">
-    <p>Scripting
-    support</p>
+    Scripting
+    support
     </td>
    </tr>
    <tr>
     <td width="24%">
-    <p>Search</p>
+    Search
     </td>
     <td width="74%">
-    <p>Integrated
-    Search Facility</p>
+    Integrated
+    Search Facility
     </td>
    </tr>
    <tr>
     <td width="24%">
-    <p>SWT</p>
+    SWT
     </td>
     <td width="74%">
-    <p>Standard
-    Widget Toolkit</p>
+    Standard
+    Widget Toolkit
     </td>
    </tr>
    <tr>
     <td width="24%">
-    <p>Text</p>
+    Text
     </td>
     <td width="74%">
-    <p>Text
-    Editor Framework</p>
+    Text
+    Editor Framework
     </td>
    </tr>
    <tr>
     <td width="24%">
-    <p>UI</p>
+    UI
     </td>
     <td width="74%">
-    <p>User
-    Interface libraries</p>
+    User
+    Interface libraries
     </td>
    </tr>
    <tr>
     <td width="24%">
-    <p>Update</p>
+    Update
     </td>
     <td width="74%">
-    <p>Dynamic
-    Update/Install/Field Service</p>
+    Dynamic
+    Update/Install/Field Service
     </td>
    </tr>
    <tr>
     <td width="24%">
-    <p>VCM</p>
+    VCM
     </td>
     <td width="74%">
-    <p>Versioning
-    and Configuration Management</p>
+    Versioning
+    and Configuration Management
     </td>
    </tr>
    <tr>
     <td width="24%">
-    <p>WebDAV</p>
+    WebDAV
     </td>
     <td width="74%">
-    <p>WebDAV
-    integration</p>
+    WebDAV
+    integration
     </td>
    </tr>
   </table>
-  <p>The JDT Project is further subdivided into the following components:</p>
+  <p>The JDT Project is further subdivided into the following components:
   <table border=0 cellspacing=3 cellpadding=0 width="75%">
    <tr>
     <td width="25%">
-    <p>JDT
-    Core</p>
+    JDT
+    Core
     </td>
     <td width="75%">
-    <p>Compiler
-    and Builder</p>
+    Compiler
+    and Builder
     </td>
    </tr>
    <tr>
     <td width="25%">
-    <p>JDT Doc</p>
+    JDT Doc
     </td>
     <td width="75%">
-    <p>Documentation</p>
+    Documentation
     </td>
    </tr>
    <tr>
     <td width="25%">
-    <p>JDT UI</p>
+    JDT UI
     </td>
     <td width="75%">
-    <p>Java
-    IDE User Interface</p>
+    Java
+    IDE User Interface
     </td>
    </tr>
    <tr>
     <td width="25%">
-    <p>JDT
-    Debug</p>
+    JDT
+    Debug
     </td>
     <td width="75%">
-    <p>Debug
-    support for Java</p>
+    Debug
+    support for Java
     </td>
    </tr>
   </table>
-  <p>The PDE Project is further subdivided into the following components:</p>
+  <p>The PDE Project is further subdivided into the following components:
   <table border=0 cellspacing=3 cellpadding=0 width="75%">
    <tr>
     <td width="25%">
-    <p>PDE
-    Build</p>
+    PDE
+    Build
     </td>
     <td width="75%">
-    <p>PDE
-    Build</p>
+    PDE
+    Build
     </td>
    </tr>
    <tr>
     <td width="25%">
-    <p>PDE Doc</p>
+    PDE Doc
     </td>
     <td width="75%">
-    <p>Documentation</p>
+    Documentation
     </td>
    </tr>
    <tr>
     <td width="25%">
-    <p>PDE UI</p>
+    PDE UI
     </td>
     <td width="75%">
-    <p>PDE
-    User Interface</p>
+    PDE
+    User Interface
     </td>
    </tr>
   </table>
