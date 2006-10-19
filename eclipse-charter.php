@@ -54,7 +54,7 @@ ob_start();
    <li>PDE - Plug-in development environment.</li>
   </ul>
   <p>The Platform Project is further subdivided into the following components:</p>
-  <table border=0 cellspacing=0 cellpadding=0 width="75%">
+  <table border=0 cellspacing=3 cellpadding=0 width="75%">
    <tr>
     <td width="24%">
     Ant
