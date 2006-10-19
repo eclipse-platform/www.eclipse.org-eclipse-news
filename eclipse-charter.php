@@ -53,213 +53,210 @@ ob_start();
    <li>JDT - The Java development tooling, or Java IDE.</li>
    <li>PDE - Plug-in development environment.</li>
   </ul>
-  <p>The Platform Project is further subdivided into the following components:<o:p></o:p></p>
-  <table border=0 cellspacing=3 cellpadding=0 width="75%" style='width:75.0%;
-   mso-cellspacing:1.5pt;mso-padding-alt:0in 0in 0in 0in'>
-   <tr style='mso-yfti-irow:0'>
-    <td width="24%" style='width:24.74%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>Ant<o:p></o:p></span></p>
+  <p>The Platform Project is further subdivided into the following components:</p>
+  <table border=0 cellspacing=3 cellpadding=0 width="75%">
+   <tr>
+    <td width="24%">
+    <p>Ant</p>
     </td>
-    <td width="74%" style='width:74.2%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>Ant
-    Java based build tool<o:p></o:p></span></p>
-    </td>
-   </tr>
-   <tr style='mso-yfti-irow:1'>
-    <td width="24%" style='width:24.74%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>Compare<o:p></o:p></span></p>
-    </td>
-    <td width="74%" style='width:74.2%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>Universal
-    Compare Facility<o:p></o:p></span></p>
+    <td width="74%">
+    <p>Ant
+    Java based build tool</p>
     </td>
    </tr>
-   <tr style='mso-yfti-irow:2'>
-    <td width="24%" style='width:24.74%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>Core<o:p></o:p></span></p>
+   <tr>
+    <td width="24%">
+    <p>Compare</p>
     </td>
-    <td width="74%" style='width:74.2%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>Core
-    libraries<o:p></o:p></span></p>
-    </td>
-   </tr>
-   <tr style='mso-yfti-irow:3'>
-    <td width="24%" style='width:24.74%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>Debug<o:p></o:p></span></p>
-    </td>
-    <td width="74%" style='width:74.2%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>Universal
-    Debugger<o:p></o:p></span></p>
+    <td width="74%">
+    <p>Universal
+    Compare Facility</p>
     </td>
    </tr>
-   <tr style='mso-yfti-irow:4'>
-    <td width="24%" style='width:24.74%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>Doc<o:p></o:p></span></p>
+   <tr>
+    <td width="24%">
+    <p>Core</p>
     </td>
-    <td width="74%" style='width:74.2%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>Documentation<o:p></o:p></span></p>
-    </td>
-   </tr>
-   <tr style='mso-yfti-irow:4'>
-    <td width="24%" style='width:24.74%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>Help<o:p></o:p></span></p>
-    </td>
-    <td width="74%" style='width:74.2%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>Help
-    system<o:p></o:p></span></p>
+    <td width="74%">
+    <p>Core
+    libraries</p>
     </td>
    </tr>
-   <tr style='mso-yfti-irow:5'>
-    <td width="24%" style='width:24.74%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>Releng<o:p></o:p></span></p>
+   <tr>
+    <td width="24%">
+    <p>Debug</p>
     </td>
-    <td width="74%" style='width:74.2%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>Release
-    Engineering<o:p></o:p></span></p>
-    </td>
-   </tr>
-   <tr style='mso-yfti-irow:5'>
-    <td width="24%" style='width:24.74%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>Scripting<o:p></o:p></span></p>
-    </td>
-    <td width="74%" style='width:74.2%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>Scripting
-    support<o:p></o:p></span></p>
+    <td width="74%">
+    <p>Universal
+    Debugger</p>
     </td>
    </tr>
-   <tr style='mso-yfti-irow:6'>
-    <td width="24%" style='width:24.74%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>Search<o:p></o:p></span></p>
+   <tr>
+    <td width="24%">
+    <p>Doc</p>
     </td>
-    <td width="74%" style='width:74.2%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>Integrated
-    Search Facility<o:p></o:p></span></p>
-    </td>
-   </tr>
-   <tr style='mso-yfti-irow:7'>
-    <td width="24%" style='width:24.74%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>SWT<o:p></o:p></span></p>
-    </td>
-    <td width="74%" style='width:74.2%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>Standard
-    Widget Toolkit<o:p></o:p></span></p>
+    <td width="74%">
+    <p>Documentation</p>
     </td>
    </tr>
-   <tr style='mso-yfti-irow:8'>
-    <td width="24%" style='width:24.74%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>Text<o:p></o:p></span></p>
+   <tr>
+    <td width="24%">
+    <p>Help</p>
     </td>
-    <td width="74%" style='width:74.2%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>Text
-    Editor Framework<o:p></o:p></span></p>
-    </td>
-   </tr>
-   <tr style='mso-yfti-irow:8'>
-    <td width="24%" style='width:24.74%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>UI<o:p></o:p></span></p>
-    </td>
-    <td width="74%" style='width:74.2%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>User
-    Interface libraries<o:p></o:p></span></p>
+    <td width="74%">
+    <p>Help
+    system</p>
     </td>
    </tr>
-   <tr style='mso-yfti-irow:9'>
-    <td width="24%" style='width:24.74%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>Update<o:p></o:p></span></p>
+   <tr>
+    <td width="24%">
+    <p>Releng</p>
     </td>
-    <td width="74%" style='width:74.2%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>Dynamic
-    Update/Install/Field Service<o:p></o:p></span></p>
-    </td>
-   </tr>
-   <tr style='mso-yfti-irow:10'>
-    <td width="24%" style='width:24.74%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>VCM<o:p></o:p></span></p>
-    </td>
-    <td width="74%" style='width:74.2%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>Versioning
-    and Configuration Management<o:p></o:p></span></p>
+    <td width="74%">
+    <p>Release
+    Engineering</p>
     </td>
    </tr>
-   <tr style='mso-yfti-irow:11;mso-yfti-lastrow:yes'>
-    <td width="24%" style='width:24.74%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>WebDAV<o:p></o:p></span></p>
+   <tr>
+    <td width="24%">
+    <p>Scripting</p>
     </td>
-    <td width="74%" style='width:74.2%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>WebDAV
-    integration<o:p></o:p></span></p>
-    </td>
-   </tr>
-  </table>
-  <p>The JDT Project is further subdivided into the following components:<o:p></o:p></p>
-  <table border=0 cellspacing=3 cellpadding=0 width="75%" style='width:75.0%;
-   mso-cellspacing:1.5pt;mso-padding-alt:0in 0in 0in 0in'>
-   <tr style='mso-yfti-irow:0'>
-    <td width="25%" style='width:25.0%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>JDT
-    Core<o:p></o:p></span></p>
-    </td>
-    <td width="75%" style='width:75.0%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>Compiler
-    and Builder<o:p></o:p></span></p>
+    <td width="74%">
+    <p>Scripting
+    support</p>
     </td>
    </tr>
-   <tr style='mso-yfti-irow:1'>
-    <td width="25%" style='width:25.0%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>JDT Doc<o:p></o:p></span></p>
+   <tr>
+    <td width="24%">
+    <p>Search</p>
     </td>
-    <td width="75%" style='width:75.0%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>Documentation<o:p></o:p></span></p>
-    </td>
-   </tr>
-   <tr style='mso-yfti-irow:1'>
-    <td width="25%" style='width:25.0%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>JDT UI<o:p></o:p></span></p>
-    </td>
-    <td width="75%" style='width:75.0%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>Java
-    IDE User Interface<o:p></o:p></span></p>
+    <td width="74%">
+    <p>Integrated
+    Search Facility</p>
     </td>
    </tr>
-   <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
-    <td width="25%" style='width:25.0%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>JDT
-    Debug<o:p></o:p></span></p>
+   <tr>
+    <td width="24%">
+    <p>SWT</p>
     </td>
-    <td width="75%" style='width:75.0%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>Debug
-    support for Java<o:p></o:p></span></p>
+    <td width="74%">
+    <p>Standard
+    Widget Toolkit</p>
+    </td>
+   </tr>
+   <tr>
+    <td width="24%">
+    <p>Text</p>
+    </td>
+    <td width="74%">
+    <p>Text
+    Editor Framework</p>
+    </td>
+   </tr>
+   <tr>
+    <td width="24%">
+    <p>UI</p>
+    </td>
+    <td width="74%">
+    <p>User
+    Interface libraries</p>
+    </td>
+   </tr>
+   <tr>
+    <td width="24%">
+    <p>Update</p>
+    </td>
+    <td width="74%">
+    <p>Dynamic
+    Update/Install/Field Service</p>
+    </td>
+   </tr>
+   <tr>
+    <td width="24%">
+    <p>VCM</p>
+    </td>
+    <td width="74%">
+    <p>Versioning
+    and Configuration Management</p>
+    </td>
+   </tr>
+   <tr>
+    <td width="24%">
+    <p>WebDAV</p>
+    </td>
+    <td width="74%">
+    <p>WebDAV
+    integration</p>
     </td>
    </tr>
   </table>
-  <p>The PDE Project is further subdivided into the following components:<o:p></o:p></p>
-  <table border=0 cellspacing=3 cellpadding=0 width="75%" style='width:75.0%;
-   mso-cellspacing:1.5pt;mso-padding-alt:0in 0in 0in 0in'>
-   <tr style='mso-yfti-irow:0'>
-    <td width="25%" style='width:25.0%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>PDE
-    Build<o:p></o:p></span></p>
+  <p>The JDT Project is further subdivided into the following components:</p>
+  <table border=0 cellspacing=3 cellpadding=0 width="75%">
+   <tr>
+    <td width="25%">
+    <p>JDT
+    Core</p>
     </td>
-    <td width="75%" style='width:75.0%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>PDE
-    Build<o:p></o:p></span></p>
-    </td>
-   </tr>
-   <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
-    <td width="25%" style='width:25.0%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>PDE Doc<o:p></o:p></span></p>
-    </td>
-    <td width="75%" style='width:75.0%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>Documentation<o:p></o:p></span></p>
+    <td width="75%">
+    <p>Compiler
+    and Builder</p>
     </td>
    </tr>
-   <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
-    <td width="25%" style='width:25.0%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>PDE UI<o:p></o:p></span></p>
+   <tr>
+    <td width="25%">
+    <p>JDT Doc</p>
     </td>
-    <td width="75%" style='width:75.0%;padding:.75pt .75pt .75pt .75pt'>
-    <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'>PDE
-    User Interface<o:p></o:p></span></p>
+    <td width="75%">
+    <p>Documentation</p>
+    </td>
+   </tr>
+   <tr>
+    <td width="25%">
+    <p>JDT UI</p>
+    </td>
+    <td width="75%">
+    <p>Java
+    IDE User Interface</p>
+    </td>
+   </tr>
+   <tr>
+    <td width="25%">
+    <p>JDT
+    Debug</p>
+    </td>
+    <td width="75%">
+    <p>Debug
+    support for Java</p>
+    </td>
+   </tr>
+  </table>
+  <p>The PDE Project is further subdivided into the following components:</p>
+  <table border=0 cellspacing=3 cellpadding=0 width="75%">
+   <tr>
+    <td width="25%">
+    <p>PDE
+    Build</p>
+    </td>
+    <td width="75%">
+    <p>PDE
+    Build</p>
+    </td>
+   </tr>
+   <tr>
+    <td width="25%">
+    <p>PDE Doc</p>
+    </td>
+    <td width="75%">
+    <p>Documentation</p>
+    </td>
+   </tr>
+   <tr>
+    <td width="25%">
+    <p>PDE UI</p>
+    </td>
+    <td width="75%">
+    <p>PDE
+    User Interface</p>
     </td>
    </tr>
   </table>
@@ -267,90 +264,52 @@ ob_start();
   The Projects under this Charter are managed by a group known as the Project
   Management Committee (the &#8220;PMC&#8221;).</p>
   <p>PMCs are expected to ensure that:</p>
-  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo5;
-  tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol'>·<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><![endif]>All Projects operate effectively by providing
+  <p>All Projects operate effectively by providing
   leadership to guide the Project&#8217;s overall direction and by removing
   obstacles, solving problems, and resolving conflicts.</p>
-  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo5;
-  tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol'>·<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><![endif]>All Project plans, technical documents and reports
-  are publicly available</p>
-  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo5;
-  tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol'>·<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><![endif]>All Projects operate using open source rules of
-  engagement: meritocracy, transparency, and open participation.<span
-  style="mso-spacerun: yes">&nbsp; </span>These principles work together.<span
-  style="mso-spacerun: yes">&nbsp; </span>Anyone can participate in a
-  Project.<span style="mso-spacerun: yes">&nbsp; </span>This open interaction,
+  <p>All Project plans, technical documents and reports are publicly available</p>
+  <p>All Projects operate using open source rules of
+  engagement: meritocracy, transparency, and open participation.
+  These principles work together. Anyone can participate in a
+  Project. This open interaction,
   from answering questions to reporting bugs to making code contributions to
   creating designs, enables everyone to recognize and utilize the contributions.</p>
   <p>The PMC has the following responsibilities:</p>
-  <ul type=disc>
-   <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
-       auto;mso-list:l0 level1 lfo8;tab-stops:list .5in'><span
-       style='font-size:10.0pt;font-family:Arial'>Providing the leadership and
+  <ul>
+   <li>Providing the leadership and
        vision to guide the Project's overall direction in a manner consistent
-       with the Eclipse Foundation Architectural Roadmap.<o:p></o:p></span></li>
-   <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
-       auto;mso-list:l0 level1 lfo8;tab-stops:list .5in'><span
-       style='font-size:10.0pt;font-family:Arial'>Providing assistance and
+       with the Eclipse Foundation Architectural Roadmap.</li>
+   <li>Providing assistance and
        support to the developers and researchers working on the Project by
-       removing obstacles, solving problems, and resolving conflicts. <o:p></o:p></span></li>
-   <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
-       auto;mso-list:l0 level1 lfo8;tab-stops:list .5in'><span
-       style='font-size:10.0pt;font-family:Arial'>Ensuring that Project plans
-       are produced.<o:p></o:p></span></li>
-   <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
-       auto;mso-list:l0 level1 lfo8;tab-stops:list .5in'><span
-       style='font-size:10.0pt;font-family:Arial'>Working with the Eclipse
+       removing obstacles, solving problems, and resolving conflicts.</li>
+   <li>Ensuring that Project plans
+       are produced.</li>
+   <li>Working with the Eclipse
        Management Organization (the &#8220;EMO&#8221;) to establish the development
        processes and infrastructure needed for the development team to be
-       effective. <o:p></o:p></span></li>
-   <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
-       auto;mso-list:l0 level1 lfo8;tab-stops:list .5in'><span
-       style='font-size:10.0pt;font-family:Arial'>Recommending new Projects to
-       the EMO.<o:p></o:p></span></li>
-   <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
-       auto;mso-list:l0 level1 lfo8;tab-stops:list .5in'><span
-       style='font-size:10.0pt;font-family:Arial'>Recommending the initial set
+       effective.</li>
+   <li>Recommending new Projects to the EMO.</li>
+   <li>Recommending the initial set
        of Project committers for each new Project overseen by the PMC, and
        establishing the procedures consistent with this Charter for voting in
-       new committers. <o:p></o:p></span></li>
-   <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
-       auto;mso-list:l0 level1 lfo8;tab-stops:list .5in'><span
-       style='font-size:10.0pt;font-family:Arial'>Helping to ensure that the
+       new committers.</li>
+   <li>Helping to ensure that the
        Projects overseen by the PMC have enough contributors, and working to
-       fill vacancies in roles. <o:p></o:p></span></li>
-   <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
-       auto;mso-list:l0 level1 lfo8;tab-stops:list .5in'><span
-       style='font-size:10.0pt;font-family:Arial'>Producing &#8220;how to get
-       involved&#8221; guidelines to help new potential contributors get started.<o:p></o:p></span></li>
-   <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
-       auto;mso-list:l0 level1 lfo8;tab-stops:list .5in'><span
-       style='font-size:10.0pt;font-family:Arial'>Coordinating relationships
-       with other Eclipse Foundation Projects. <o:p></o:p></span></li>
-   <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
-       auto;mso-list:l0 level1 lfo8;tab-stops:list .5in'><span
-       style='font-size:10.0pt;font-family:Arial'>Facilitating code or other
-       donations by individuals or companies. <o:p></o:p></span></li>
-   <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
-       auto;mso-list:l0 level1 lfo8;tab-stops:list .5in'><span
-       style='font-size:10.0pt;font-family:Arial'>Making recommendations to the
+       fill vacancies in roles.</li>
+   <li>Producing &#8220;how to get
+       involved&#8221; guidelines to help new potential contributors get started.</li>
+   <li>Coordinating relationships
+       with other Eclipse Foundation Projects.</li>
+   <li>Facilitating code or other
+       donations by individuals or companies.</li>
+   <li>Making recommendations to the
        Eclipse Foundation Board regarding contributions proposed under licenses
-       other than the EPL.<o:p></o:p></span></li>
-   <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
-       auto;mso-list:l0 level1 lfo8;tab-stops:list .5in'><span
-       style='font-size:10.0pt;font-family:Arial'>Working with the EMO and
+       other than the EPL.</li>
+   <li>Working with the EMO and
        Committers to ensure in-bound contributions are made in accordance with
-       the Eclipse Foundation IP Policy.<o:p></o:p></span></li>
-   <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
-       auto;mso-list:l0 level1 lfo8;tab-stops:list .5in'><span
-       style='font-size:10.0pt;font-family:Arial'>Acting as a focal point for
-       the community in representing the Projects it oversees.<o:p></o:p></span></li>
+       the Eclipse Foundation IP Policy.</li>
+   <li>Acting as a focal point for
+       the community in representing the Projects it oversees.</li>
   </ul>
   <p>The PMC Lead is appointed by the Board. The initial PMC is selected by the
   PMC Lead. Thereafter, to become a member of the PMC, an individual must be
@@ -358,13 +317,13 @@ ob_start();
   members.</p>
   <p>In the unlikely event that a member of the PMC becomes disruptive to the
   process or ceases to contribute for an extended period, the member may be
-  removed by unanimous vote of remaining PMC members.<span style="mso-spacerun:
-  yes">&nbsp; </span>PMC members may resign at any time by delivering notice of
+  removed by unanimous vote of remaining PMC members.
+  PMC members may resign at any time by delivering notice of
   their resignation to the PMC Lead.</p>
   <p>The PMC is responsible for producing and maintaining the Project Charter.
   Development must conform to any rules or processes outlined in the Charter,
   so a change to the development process may necessitate a change to the
-  Charter.<span style="mso-spacerun: yes">&nbsp; </span>Changes to the Charter
+  Charter. Changes to the Charter
   are approved by the Board.</p>
   <p>The work of the PMC is shared by the PMC members. All PMC members are
   expected to contribute actively. In particular, PMC members are expected to
@@ -448,8 +407,7 @@ ob_start();
   can be discontinued by decision of the Board.</p>
   <p>When a new Project is created, the PMC nominates a Project lead to act as
   the technical leader and nominates the initial set of Committers for the
-  Project, and these nominations are approved by the EMO.<span
-  style="mso-spacerun: yes">&nbsp; </span>Project leads are accountable to the
+  Project, and these nominations are approved by the EMO. Project leads are accountable to the
   PMC for the success of their Project.</p>
   <p><b>Project Components</b><br>
   The PMC may decide to divide a Project further into components. If a Project
@@ -476,38 +434,26 @@ ob_start();
   port. Normally the Component Lead will also be the Port Lead.</p>
   <p><b>Infrastructure</b><br>
   The PMC works with the EMO to ensure the required infrastructure for the
-  Project.<span style="mso-spacerun: yes">&nbsp; </span>The Project
+  Project. The Project
   infrastructure will include, at minimum:</p>
-  <ul type=disc>
-   <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
-       auto;mso-list:l3 level1 lfo11;tab-stops:list .5in'><span
-       style='font-size:10.0pt;font-family:Arial'>Bug Database - Bugzilla
-       database for tracking bugs and feature requests. <o:p></o:p></span></li>
-   <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
-       auto;mso-list:l3 level1 lfo11;tab-stops:list .5in'><span
-       style='font-size:10.0pt;font-family:Arial'>Source Repository -- One or
+  <ul>
+   <li>Bug Database - Bugzilla
+       database for tracking bugs and feature requests.</li>
+   <li>Source Repository -- One or
        more CVS repositories containing both the master source code and
-       documentation for the Projects. <o:p></o:p></span></li>
-   <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
-       auto;mso-list:l3 level1 lfo11;tab-stops:list .5in'><span
-       style='font-size:10.0pt;font-family:Arial'>Website - A website will
+       documentation for the Projects.</li>
+   <li>Website - A website will
        contain information about the Project, including documentation,
-       downloads of releases, and this Charter. <o:p></o:p></span></li>
-   <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
-       auto;mso-list:l3 level1 lfo11;tab-stops:list .5in'><span
-       style='font-size:10.0pt;font-family:Arial'>General Mailing List -
+       downloads of releases, and this Charter.</li>
+   <li>General Mailing List -
        Mailing list for development discussions pertaining to the Project as a
-       whole or that cross Projects. This mailing list is open to the public. <o:p></o:p></span></li>
-   <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
-       auto;mso-list:l3 level1 lfo11;tab-stops:list .5in'><span
-       style='font-size:10.0pt;font-family:Arial'>Project Mailing Lists -
+       whole or that cross Projects. This mailing list is open to the public.</li>
+   <li>Project Mailing Lists -
        Development mailing list for technical discussions related to the
-       Project. This mailing list is open to the public. <o:p></o:p></span></li>
-   <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
-       auto;mso-list:l3 level1 lfo11;tab-stops:list .5in'><span
-       style='font-size:10.0pt;font-family:Arial'>Component Mailing Lists --
+       Project. This mailing list is open to the public.</li>
+   <li>Component Mailing Lists --
        Development mailing list for technical discussions related to the
-       component. This mailing list is open to the public. <o:p></o:p></span></li>
+       component. This mailing list is open to the public.</li>
   </ul>
   <p><b>The Development Process</b><br>
   Each Project lead must produce a development plan for the release cycle, and
@@ -553,7 +499,6 @@ ob_start();
   </td>
  </tr>
 </table>
-
 	</div>
 <?php
 	$html = ob_get_contents();
