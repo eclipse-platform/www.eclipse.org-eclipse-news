@@ -35,7 +35,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<h2>Who's running this project?</h2>
       <p>This page lists the people that are currently playing the PMC and subproject 
-        leadership roles described in the <a href="eclipse-charter.html">project 
+        leadership roles described in the <a href="eclipse-charter.php">project 
         charter</a>. You will notice that there are many IBM people listed... 
         it's not because we want to do all the work (believe us!) - its just because 
         we built the first release of Eclipse before it became an open source 
@@ -47,7 +47,7 @@ ob_start();
         lists</a>. Mailing lists have been set up for each area of work, and are 
         the best way to get involved.</p>
       <p>The Eclipse Project is managed by a small group known as the Eclipse 
-        Project Management Committee (<a href="eclipse-charter.html#PMC">PMC</a>). 
+        Project Management Committee (<a href="eclipse-charter.php#PMC">PMC</a>). 
         The work of the Project is organized into subprojects. Each subproject 
         has a leader who has overall responsibility for its success. Large subprojects 
         are further divided into component teams, each of who has a leader that 

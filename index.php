@@ -37,7 +37,7 @@ ob_start();
     	<p>The Eclipse Project is an open source project of eclipse.org, overseen 
 	      by a <a href="team-leaders.html">Project Management Committee</a> (PMC) 
       	  and project leaders. The work is done in subprojects working against a <a href="http://dev.eclipse.org/viewcvs/">CVS 
-	      repository</a>. The <a href="eclipse-charter.html">Eclipse Project Charter</a> 
+	      repository</a>. The <a href="eclipse-charter.php">Eclipse Project Charter</a> 
       	  describes the organization of the project, roles and responsibilities of 
       	  the participants, and top level development process for the project. The 
       	  JDT and PDE are plug-in tools for the Eclipse Platform. Together, these 
