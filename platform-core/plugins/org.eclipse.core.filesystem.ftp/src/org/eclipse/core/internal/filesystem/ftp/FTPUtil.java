@@ -44,7 +44,7 @@ public class FTPUtil {
 	public static void run(URL url, IFtpRunnable runnable, IProgressMonitor monitor) throws FtpException {
 		monitor = Policy.monitorFor(monitor);
 		IClient openClient = (IClient) openClients.get();
-		monitor.beginTask(null, 100);
+		monitor.beginTask("", 100);
 		//if the wrong client is connected, disconnect before trying again
 		if (openClient != null && !openClient.getUrl().equals(url)) {
 			openClient.close(new SubProgressMonitor(monitor, 0));
