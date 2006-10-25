@@ -89,7 +89,7 @@ ob_start();
 				How to use the Eclipse API</a><br>
       			Guidelines for using Eclipse APIs to ensure that your code will keep working as Eclipse evolves.
       		</li>
-      		<li><a href="java-api-evolution.html">Evolving Java-based APIs</a><br>
+      		<li><a href="http://wiki.eclipse.org/index.php/Evolving_Java-based_APIs">Evolving Java-based APIs</a><br>
       			Guidelines for how to evolve Java-based APIs while maintaining compatibility 
 				with existing client code.
 			</li>
