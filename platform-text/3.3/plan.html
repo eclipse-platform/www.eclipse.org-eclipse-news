@@ -14,6 +14,13 @@
 	</style>
 	-->
 	
+	 <style type="text/css">
+  		committed {
+  			color: blue;
+  			font-style: italic;
+  		}
+	</style>	
+	
 </head>
 
 <body text="#000000" bgcolor="#FFFFFF">
@@ -22,7 +29,7 @@
 
   <tr> 
     <td WIDTH="100%"> 
-    <p>Last revised 18:12 CET September 27, 2006</p>
+    <p>Last revised 11:19 CET November 26, 2006</p>
 
     
       <p>This plan is under continuous refinement. Please send comments about this draft plan to the <a href="mailto:platform-text@eclipse.org">platform-text@eclipse.org</a> developer mailing list.</p>
@@ -52,7 +59,7 @@
 
 	<h2><a NAME="Work_Items"></a><br>Work Items</h2>
 	<p>
-		This section defines the <em style="color: blue;">committed</em> and proposed work items for Eclipse 3.3 for
+		This section defines the <committed>committed</committed> and proposed work items for Eclipse 3.3 for
 		the Platform Text and the JDT Text component.
 	</p>
 
@@ -62,24 +69,24 @@
 
 	<li><h4><img src="../images/ok.gif" border="0" height="10" width="10"> Live Annotate</h4>
 	<ul>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <em style="color: blue;">support to color by age in addition to color by contributor (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147705">bug 147705</a>)</em></li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <em style="color: blue;">fix hover sizing problems (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147709">bug 147709</a>)</em></li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <committed>support to color by age in addition to color by contributor (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147705">bug 147705</a>)</committed></li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <committed>fix hover sizing problems (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147709">bug 147709</a>)</committed></li>
 	</ul></li>
 	
 	<li><h4>Hyperlinking</h4>
 	<ul>
-		<li><em style="color: blue;">allow to contribute (extension-point) and configure hyperlinking (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=88293">bug 88293</a>)</em></li>
-		<li><em style="color: blue;">allow to present more than one hyperlink target for a given text range</em></li>
+		<li><committed>allow to contribute (extension-point) and configure hyperlinking (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=88293">bug 88293</a>)</committed></li>
+		<li><committed>allow to present more than one hyperlink target for a given text range</committed></li>
 	</ul></li>
 	
 	<li><h4><img src="../images/ok.gif" border="0" height="10" width="10"> Vertical Rulers</h4>
 	<ul>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <em style="color: blue;">vertical ruler column extension point (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=25793">bug 25793</a>)</li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <committed>vertical ruler column extension point (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=25793">bug 25793</a>)</committed></li>
 		<ul>
-			<li>allow contributions for a certain editor (id)</li>
-			<li>allow contributions for a content type</li>
-			<li>allow contributions for a certain editor hierarchy (class)</li>
-		</ul></em></li>
+			<li><committed>allow contributions for a certain editor (id)</committed></li>
+			<li><committed>allow contributions for a content type</committed></li>
+			<li><committed>allow contributions for a certain editor hierarchy (class)</committed></li>
+		</ul></li>
 		<li><img src="../images/ok.gif" border="0" height="10" width="10"> provide toolkit for line-based information (good for coverage information etc.)
 			<br>&rArr; the <code>AbstractRulerColumn</code> base class for line-based rulers has been added
 		</li>
@@ -87,17 +94,17 @@
 
 	<li><h4>Spell Checking in Text Editors</h4>
 	<ul>
-		<li><em style="color: blue;">spelling for text editors</em></li>
-		<li><em style="color: blue;">make spell checking encoding aware</em></li>
-		<li><em style="color: blue;">provide an English dictionary out of the box</em></li>
-		<li>allow specific editors to install filters, e.g. to filter Javadoc tags</em></li>
+		<li><committed>spelling for text editors</committed></li>
+		<li><committed>make spell checking encoding aware</committed></li>
+		<li><committed>provide an English dictionary out of the box</committed></li>
+		<li>allow specific editors to install filters, e.g. to filter Javadoc tags</li>
 		<li>open up spell checking for other language stems</li>
 		<li>allow to spell-check a set of resources</li>
 	</ul></li>
 
 	<li><h4>Rich Hovers [experimental]</h4>
 	<ul>
-		<li><em style="color: blue;">links support in quick diff hovers so that you can navigate to things from there</em></li>
+		<li><committed>links support in quick diff hovers so that you can navigate to things from there</committed></li>
 		<li>to do this we might first need to finish/cleanup the roll-over annotation work that was kicked off during 3.0
 		<li>investigate better interaction for making hovers sticky (mouse path)</li>
 		<li>allow seamless transition from hover &gt; sticky hover &gt; javadoc view</li>
@@ -106,10 +113,10 @@
 
 	<li><h4>Typing</h4>
 	<ul>
-		<li><em style="color: blue;">Insert Spaces for Tab preference for text editors</em></li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <em style="color: blue;">Smart Home/End preference for text editors</em></li>
-		<li><em style="color: blue;">triple-click support (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=14654">bug 14654</a> - depends on SWT, see <del><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=23614">bug 23614</a></del>)</em></li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <em style="color: blue;">warn if the user types into a derived file (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=148931">bug 148931</a>)</em></li>
+		<li><committed>Insert Spaces for Tab preference for text editors</committed></li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <committed>Smart Home/End preference for text editors</committed></li>
+		<li><committed>triple-click support (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=14654">bug 14654</a> - depends on SWT, see <del><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=23614">bug 23614</a></del>)</committed></li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <committed>warn if the user types into a derived file (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=148931">bug 148931</a>)</committed></li>
 		<li>text drag and drop (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=11624">bug 11624</a> - depends on SWT, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=142845">bug 142845</a> and/or <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=134127">bug 134127</a>)</li>
 		<li>show invisible characters (look at the provided patch) [experimental]</li>
 		<li>Last Edit Position history</li>
@@ -118,10 +125,10 @@
 
 	<li><h4>Navigation</h4>
 	<ul>
-		<li><em style="color: blue;">provide correct 1&frac12 click + drag to select words (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=5138">bug 5138</a> - depends on SWT, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=138579">bug 138579</a>)</em></li>
+		<li><committed>provide correct 1&frac12 click + drag to select words (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=5138">bug 5138</a> - depends on SWT, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=138579">bug 138579</a>)</committed></li>
 		<li>provide modifier + mouse wheel support, e.g. allow to
 		<ul>
-			<li><img src="../images/ok.gif" border="0" height="10" width="10"> <em style="color: blue;">scroll by page</em></li>
+			<li><img src="../images/ok.gif" border="0" height="10" width="10"> <committed>scroll by page</committed></li>
 			<li>change font size</li>
 			<li>navigate in the history</li>
 			<li>make above features configurable</li>
@@ -131,18 +138,18 @@
 	
 	<li><h4>Find/Replace</h4>
 	<ul>
-		<li><em style="color: blue;">improve Find/Replace dialog: make it resizable</em></li>
+		<li><committed>improve Find/Replace dialog: make it resizable</committed></li>
 		<li>find a solution to Find/Replace linebreaks, tabs, etc. in regular expressions</li>
 		<li>improve Find/Replace dialog: merge into editor area, ...</li>
 	</ul></li>
 	
 	<li><h4>Miscellaneous</h4>
 	<ul>
-		<li><em style="color: blue;">open up file buffers to URIs</em></li>
-		<li><em style="color: blue;">add support for <code>ISaveableModelSource</code> (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=131068">bug 131068</a>)</em></li>
+		<li><committed>open up file buffers to URIs</committed></li>
+		<li><committed>add support for <code>ISaveableModelSource</code> (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=131068">bug 131068</a>)</committed></li>
 		<li>revisit the text viewer's support for redraw, compound updates, and selection preservation
 		<ul>
-			<li><img src="../images/ok.gif" border="0" height="10" width="10"> <em style="color: blue;">check all setRedraw(on/off) users whether they really need that expensive operation (e.g. undo!)</em></li>
+			<li><img src="../images/ok.gif" border="0" height="10" width="10"> <committed>check all setRedraw(on/off) users whether they really need that expensive operation (e.g. undo!)</committed></li>
 			<li>separate selection preservation from redraw and compound command</li>
 		</ul></li>
 		<li>provide save a hook (maybe try out in JDT land first) [experimental]</li>
@@ -160,9 +167,9 @@
 	
 	<li><h4>Content Assist</h4>
 	<ul>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <em style="color: blue;">fix multi-monitor problems</em></li>
-		<li><em style="color: blue;">enable navigation key bindings in proposal list (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=140550">bug 140550</a>)</em></li>
-		<li>automatically add imports (depends on JDT Core <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=44984">bug 44984</a>)</li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <committed>fix multi-monitor problems</committed></li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <committed>automatically add imports (depends on JDT Core <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=44984">bug 44984</a>)</committed></li>
+		<li>enable navigation key bindings in proposal list (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=140550">bug 140550</a>)</li>
 		<li>indicate match in proposal list</li>
 		<li>improve handling of constructor proposals</li>
 		<li>code assist for declarations (JDT Core, see JDT Summit document)</li>
@@ -176,8 +183,8 @@
 	
 	<li><h4>Quick views</h4>
 	<ul>
-		<li><em style="color: blue;">allow to open on any Java element from any view (e.g. from the Package Explorer or Outline view)</em></li>
-		<li><em style="color: blue;">show additional info (e.g. Javadoc)</em></li>
+		<li><committed>allow to open on any Java element from any view (e.g. from the Package Explorer or Outline view)</committed></li>
+		<li><committed>show additional info (e.g. Javadoc)</committed></li>
 		<li>context menu on its items [experimental]</li>
 	</ul></li>
 
@@ -198,8 +205,8 @@
 	  
 	<li><h4>Typing</h4>
 	<ul>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <em style="color: blue;">solve segmented mode toolbar button usability problem</em> (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=72354">bug 72354</a>)</li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <em style="color: blue;">typed templates: template variables with parameters (e.g. Java type names)</em>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <committed>solve segmented mode toolbar button usability problem</committed> (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=72354">bug 72354</a>)</li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <committed>typed templates: template variables with parameters (e.g. Java type names)</committed>
 		<li>goto declaring type:
 		<br>F3 + Ctrl+Click go to the declaration - often going to the declared type is desired, see also <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=68144">bug 68144</a></li>
 		<li>permanent local rename mode [experimental]
@@ -219,11 +226,11 @@
 
     <h3>General Items</h3>
 	<ul>
-		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> <em style="color: blue;">3.2.x maintenance work</em></li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <em style="color: blue;">switch to new <code>Assert</code> class from Platform (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=135136">bug 135136</a>)</em></li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <em style="color: blue;">adopt ICU Collator and use new APIs on StructuredViewer (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=135136">bug 157093</a>)</em></li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <em style="color: blue;">move web site from CVS to www</em></li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <em style="color: blue;">convert web site to phoenix</em></li>
+		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> <committed>3.2.x maintenance work</committed></li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <committed>switch to new <code>Assert</code> class from Platform (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=135136">bug 135136</a>)</committed></li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <committed>adopt ICU Collator and use new APIs on StructuredViewer (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=135136">bug 157093</a>)</committed></li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <committed>move web site from CVS to www</committed></li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <committed>convert web site to phoenix</committed></li>
 		<li>allow to get a graphical view of our performance tests i.e. fingerprint for all text tests</li>
 		<li>solve outstanding accessibilty problems</li>
 	</ul>
@@ -250,7 +257,7 @@
 
 		<li>JDT Core
 		<ul>
-			<li>automatically add imports (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=44984">bug 44984</a>)</li>
+			<li><img src="../images/ok.gif" border="0" height="10" width="10"> <committed>automatically add imports (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=44984">bug 44984</a>)</committed></li>
 		</ul></li>
 
 	</ul>
@@ -268,33 +275,36 @@
 
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Typing stability & performance</h4>
 	<ul>
-		<li>scrolling when typing bug(s):
+		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> scrolling when typing bug(s):
 		  <ul>
 			<li><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=133146">bug 133146: [typing] Adding imports should avoid scrolling of the caret line</a></li>
 		  </ul>
 		</li>
-		<li>fix import folding bug (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=104814">bug 104814</a>)</li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> fix import folding bug (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=104814">bug 104814</a>)</li>
 	</ul>
 	
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Spell Checking in Text Editors</h4>
 	<ul>
 		<li>configure textual editors to have spell checking (document must become synchronized)</li>
-		<li>add quick assist support</li>
+		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> add quick assist support</li>
 		<li>provide a spelling engine in Platform Text</li>
 	</ul>
 	
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Automatic import on content assist</h4>
 	<ul>
-		<li>negotiate API with JDT Core</li>
-		<li>adopt new API</li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> negotiate API with JDT Core</li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> adopt new API</li>
 	</ul>
 	
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Additional items</h4>
 	<ul>
 		<li><img src="../images/ok.gif" border="0" height="10" width="10"> surface Smart Home/End functionality in <em>Text Editors</em> preferences (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147941">bug 147941</a>)</li>
-		<li>make JFaceTextUtil API (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=157460">bug 157460</a>)</li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> make JFaceTextUtil API (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=157460">bug 157460</a>)</li>
 		<li><img src="../images/ok.gif" border="0" height="10" width="10"> get rid of duplicate html rendering related classes (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=157461">bug 157461</a>)</li>
 		<li><img src="../images/ok.gif" border="0" height="10" width="10"> provide the slides for the <a href="http://www.ix-konferenz.de/konf.php?konferenzid=11">iX conference "Bessere Software!"</a></li>
+		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"><img src="../images/new.gif" border="0" align="center"> work with JDT UI to allow clean up on save</li>
+		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"><img src="../images/new.gif" border="0" align="center"> work with JDT Core to allow constructor proposals (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=6930">bug 6930</a>)</li>
+		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"><img src="../images/new.gif" border="0" align="center"> preparations for (<a href="http://www.eclipse.org/community/eclipsebirthday5/birthdayparties.php">Eclipse 5th Birthday Party</a>)</li>
 		<li>(push down spaces for Tab preference to Platform Text)</li>
 	</ul>
 	
@@ -350,7 +360,7 @@
 		<tr>
 			<td valign="center"><font class="indexsub" color="#8080ff">[xyz]</font></td>
 			<td width="50%">item is deferred (&gt;) from xyz or continues in xyz.</td>
-			<td valign="top"><font class="indexsub"><img src="../images/new.gif" border="0"></font></td>
+			<td valign="center"><font class="indexsub"><img src="../images/new.gif" border="0"></font></td>
 			<td width="50%">new</td>
 		</tr>
 	</tbody>
