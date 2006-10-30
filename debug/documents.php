@@ -58,6 +58,10 @@
 					<p>An example project which contributes some tabs to the Java Application tab group and some new modes and mode combinations can be found <a href="/eclipse/debug/misc/launch_option_example.zip" target="_blank">here</a>.</p>
 				</blockquote>
 				</li>
+				
+				<li> Also in 3.3M3, the Step commands have been updated to better reflect the usage of asynchronous adapters and virtual tree viewer implementations. More specific information about these
+					changes can be found in the <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.debug.core/buildnotes_platform-debug.html" target ="_blank">platform debug build notes</a>.
+				</li>
 			</ul>
 		</div>
 		<div class="homeitem3col">
