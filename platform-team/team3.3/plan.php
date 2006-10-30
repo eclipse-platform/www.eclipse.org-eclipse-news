@@ -165,7 +165,6 @@
 			      </li>
 			      <li>Allow clients to contribute actions to a CompareEditorInput.
 			    </ul>
-			  <li>
 			  <li><img src="../images/ok.gif" height="10" width="10" alt="finished">Improve Compare Editor Updating.
 			    <ul>
 			       <li>Update on save (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=41564">41564</a>)
