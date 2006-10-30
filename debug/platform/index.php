@@ -49,7 +49,7 @@
 			of the newest and more interesting additions to the component.</p>
 			<ul>
 				<li>In the 3.3M3 milestone we have made many changes to the way the step commands work as well as significant 
-				changes to the inner workings of the launching framework. More specific information can be found in the <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.debug.core/buildnotes_platform-debug.html" tagret="_blank">buld notes</a>.</li>
+				changes to the inner workings of the launching framework. More specific information can be found in the <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.debug.core/buildnotes_platform-debug.html" target="_blank">buld notes</a>.</li>
 			</ul>
 			
 		</div>
