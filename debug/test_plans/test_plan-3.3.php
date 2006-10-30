@@ -27,7 +27,7 @@
 		<div class="homeitem3col">
 			<h3>Testers</h3>
 			<p>Committers: Kevin Barnes, Darin Wright, Samantha Chan, Michael Rennie</p>
-			<p>Community: Anyone who wants to help</p>
+			<p>Community: Curtis Windatt, Anyone who wants to help</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>JRE Grid</h3>
@@ -53,7 +53,7 @@
 				  <tr> 
 				    <td width="18%"><b>Win XP</b></td>
 				    <td width="18%">Darin Wright</td>
-				    <td width="18%">&nbsp;</td>
+				    <td width="18%">Curtis Windatt</td>
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
 				  </tr>
@@ -68,7 +68,7 @@
 				    <td width="18%"><b>Mac</b></td>
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
-				    <td width="18%">&nbsp;</td>
+				    <td width="18%">Michael Rennie</td>
 				    <td width="18%">&nbsp;</td>
 				  </tr>
 				</table>
@@ -83,11 +83,13 @@
 			    <td><b>Feature</b></td>
 			    <td><strong>Darin Wright</strong></td>
 			    <td><b>Michael Rennie</b></td>
+			    <td><b>Curtis Windatt</b></td>
 			    <td><b>Samantha Chan</b></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Evaluations">Evaluations</a></td>
 			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
@@ -96,23 +98,34 @@
 			    <td><div align="center"></div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
+			  </tr>
+			  <tr> 
+			    <td><a href="#Launch_Modes">Launch Modes</a></td>
+			    <td><div align="center"></div></td>
+			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Debug">View Management</a></td>
 			    <td><div align="center"></div></td>
 			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Breakpoints">Breakpoints</a></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Run">Run to Line</a></td>
-			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td><div align="center"></div></td>
 			    <td> <div align="center"></div></td>
+			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
@@ -120,10 +133,12 @@
 			    <td><div align="center"></div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Watch">Watch Items</a></td>
 			    <td><div align="center"></div></td>
+			    <td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			  </tr>
@@ -132,10 +147,12 @@
 			    <td><div align="center"></div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Classpaths">Runtime Classpath</a></td>
 			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
@@ -144,47 +161,55 @@
 			    <td><div align="center"></div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Monitors">Monitor Information</a></td>
 			    <td><div align="center"></div></td>
 			    <td> <div align="center"></div></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
+			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Hot">HCR</a></td>
 			    <td><div align="center"></div></td>
 			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#JREs">Installed JREs</a></td>
-			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td><div align="center"></div></td>
 			    <td> <div align="center"></div></td>
+			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#EEs">Execution Environments</a></td>
 			    <td><div align="center"></div></td>
-			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td><div align="center"></div></td>
+			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#String">String Variables</a></td>
 			    <td><div align="center"></div></td>
 			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Console">Console</a></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Variables">Variables</a></td>
-			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td><div align="center"></div></td>
 			    <td> <div align="center"></div></td>
+			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
@@ -192,11 +217,13 @@
 			    <td><div align="center"></div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Applets">Applets</a></td>
 			    <td><div align="center"></div></td>
 			    <td><div align="center"></div></td>
+			    <td> <div align="center"></div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			  </tr>
 			  <tr> 
@@ -204,10 +231,12 @@
 			    <td><div align="center"></div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#JSP">JSP Example</a></td>
 			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
@@ -297,6 +326,40 @@
 				  </li>
 				  <li>Save dirty editors</li>
 				  <li> Launch in foreground/background (controlled via common tab on launch config)</li>
+				</ul>
+			<p><a href="#top">Back to top</a><br><hr></p>
+			<a name="Launch_Modes"></a>
+			<h4>Launch Modes</h4>
+				<ul>
+					<li> For this test, you require the use of the launch modes test plugin available <a href="http://www.eclipse.org/eclipse/debug/misc/launch_option_example.zip" target="_blank">here</a>.</li>
+					<li> Preferences Dialog
+					<ul>
+						<li>Ensure launch tool preferences page is available, even if there is no conflicting tooling</li>
+						<li>Ensure page can be searched for with tree viewer searching</li>
+						<li>Ensure there is a help topic for the page</li>
+						<li>With duplicate tooling select a variety of items in both viewers</li>
+						<li>Ensure once an item is selected in the prefrred tooling viewer it cannot be unselected (checked)</li>
+						<li>Ensure changeing between selected tooling without saving changes should not erase pending saved choices</li>
+						<li>Selecting preferred tooling from a quick launch or the launch configuraiton dialog should be reflected in the pref page (and changeable)</li>
+					</u>
+					</li>
+					<li> Launch Configuration Dialog
+					<ul>
+						<li>Ensure incompatible modes are flagged correctly (check the widget in all contributed tabs) with an error message and link</li>
+						<li>Link should present complete list of support mode combinations</li>
+						<li>Selection of mode set should update dialog and remove error</li>
+						<li>Duplicate delegates should be flagged correctly with error message and link</li>
+						<li>Link should present complete set of contributed launch tooling</li>
+						<li>Selection of tooling should remove error from dialog, and be reflected in the preference page</li>
+					</ul>
+					</li>				
+					<li> Launch History
+					<ul>
+						<li>Resolution dialog should be presented if duplicate tooling found and no choice has been made</li>
+						<li>Choice of tooling should allow launch to continue and be reflected in the preferences page</li>
+						<li>Cancelling either choice from the resolution dialog should cancel the launch as well</li>
+					</ul>
+					</li>
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Debug"></a>
