@@ -13,9 +13,13 @@ package org.eclipse.core.internal.filesystem.memory;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URI;
-import org.eclipse.core.filesystem.*;
+import org.eclipse.core.filesystem.EFS;
+import org.eclipse.core.filesystem.IFileInfo;
+import org.eclipse.core.filesystem.IFileStore;
 import org.eclipse.core.filesystem.provider.FileStore;
-import org.eclipse.core.runtime.*;
+import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.IPath;
+import org.eclipse.core.runtime.IProgressMonitor;
 
 /**
  * In memory file system implementation used for testing.
@@ -35,7 +39,8 @@ public class MemoryFileStore extends FileStore {
 		return names == null ? EMPTY_STRING_ARRAY : names;
 	}
 
-	public void delete(int options, IProgressMonitor monitor) throws CoreException {
+	public void delete(int options, IProgressMonitor monitor)
+			throws CoreException {
 		TREE.delete(path);
 	}
 
@@ -53,23 +58,29 @@ public class MemoryFileStore extends FileStore {
 	}
 
 	public IFileStore getParent() {
+		if (path.segmentCount() == 0)
+			return null;
 		return new MemoryFileStore(path.removeLastSegments(1));
 	}
 
-	public IFileStore mkdir(int options, IProgressMonitor monitor) throws CoreException {
+	public IFileStore mkdir(int options, IProgressMonitor monitor)
+			throws CoreException {
 		TREE.mkdir(path, (options & EFS.SHALLOW) == 0);
 		return this;
 	}
 
-	public InputStream openInputStream(int options, IProgressMonitor monitor) throws CoreException {
+	public InputStream openInputStream(int options, IProgressMonitor monitor)
+			throws CoreException {
 		return TREE.openInputStream(path);
 	}
 
-	public OutputStream openOutputStream(int options, IProgressMonitor monitor) throws CoreException {
+	public OutputStream openOutputStream(int options, IProgressMonitor monitor)
+			throws CoreException {
 		return TREE.openOutputStream(path, options);
 	}
 
-	public void putInfo(IFileInfo info, int options, IProgressMonitor monitor) throws CoreException {
+	public void putInfo(IFileInfo info, int options, IProgressMonitor monitor)
+			throws CoreException {
 		TREE.putInfo(path, info, options);
 	}
 
