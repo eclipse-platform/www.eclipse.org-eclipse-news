@@ -11,7 +11,6 @@
 package org.eclipse.core.internal.filesystem.memory;
 
 import org.eclipse.core.runtime.*;
-import org.eclipse.jface.dialogs.ErrorDialog;
 
 /**
  * 
@@ -26,13 +25,14 @@ public class Policy {
 	private Policy() {
 		super();
 	}
+
 	public static void log(IStatus status) {
 		Platform.getLog(Platform.getBundle(PI_FILESYSTEM_EXAMPLE)).log(status);
 	}
-	
+
 	public static IStatus createStatus(Throwable t) {
-		if (t instanceof CoreException) 
-			return ((CoreException)t).getStatus();
+		if (t instanceof CoreException)
+			return ((CoreException) t).getStatus();
 		return new Status(IStatus.ERROR, PI_FILESYSTEM_EXAMPLE, 1, "Internal Error: " + t.getMessage(), t);
 	}
 

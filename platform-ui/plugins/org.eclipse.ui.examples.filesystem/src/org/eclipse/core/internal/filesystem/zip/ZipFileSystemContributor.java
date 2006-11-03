@@ -56,18 +56,18 @@ public class ZipFileSystemContributor extends FileSystemContributor {
 			return null;
 		}
 	}
-	
+
 	/* (non-Javadoc)
 	 * @see org.eclipse.ui.ide.fileSystem.FileSystemContributor#browseFileSystem(java.lang.String, org.eclipse.swt.widgets.Shell)
 	 */
 	public URI browseFileSystem(String initialPath, Shell shell) {
 
 		FileDialog dialog = new FileDialog(shell);
-		
+
 		if (initialPath.length() > 0)
 			dialog.setFilterPath(initialPath);
 
-		dialog.setFilterExtensions(new String[] { "*.zip" });//$NON-NLS-1$		
+		dialog.setFilterExtensions(new String[] {"*.zip"});//$NON-NLS-1$		
 
 		String selectedFile = dialog.open();
 		if (selectedFile == null)

@@ -33,7 +33,7 @@ public class ExpandZipAction implements IObjectActionDelegate {
 			e.printStackTrace();
 		}
 	}
-	
+
 	private Shell getShell() {
 		return targetPart.getSite().getShell();
 	}

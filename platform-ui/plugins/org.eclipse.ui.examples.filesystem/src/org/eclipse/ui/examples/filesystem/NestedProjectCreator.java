@@ -285,7 +285,7 @@ public class NestedProjectCreator {
 	 * @return The descriptions that the user has selected for creation
 	 */
 	public IProjectDescription[] promptForCreation(Shell parentShell, IProjectDescription[] descriptions) {
-		String message = "The following projects were found. Select the projects to be created."; 
+		String message = "The following projects were found. Select the projects to be created.";
 		ListSelectionDialog dialog = new ListSelectionDialog(parentShell, descriptions, new ArrayContentProvider(), getProjectDescriptionLabelProvider(), message);
 		dialog.open();
 		Object[] result = dialog.getResult();

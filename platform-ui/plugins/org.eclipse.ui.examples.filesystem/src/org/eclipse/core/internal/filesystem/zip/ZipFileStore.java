@@ -63,7 +63,7 @@ public class ZipFileStore extends FileStore {
 				else if (isAncestor(myName, currentPath)) {
 					int myNameLength = myName.length() + 1;
 					int nameEnd = currentPath.indexOf('/', myNameLength);
-					String dirName = nameEnd == -1 ? currentPath : currentPath.substring(0, nameEnd+1);
+					String dirName = nameEnd == -1 ? currentPath : currentPath.substring(0, nameEnd + 1);
 					if (!entries.containsKey(dirName))
 						entries.put(dirName, new ZipEntry(dirName));
 				}
@@ -107,10 +107,10 @@ public class ZipFileStore extends FileStore {
 		//We need to strip off the trailing slash, and then take everything after the 
 		//last separator as the name
 		String name = entry.getName();
-		int end = name.length()-1;
+		int end = name.length() - 1;
 		if (name.charAt(end) == '/')
 			end--;
-		return name.substring(name.lastIndexOf('/', end) + 1, end+1);
+		return name.substring(name.lastIndexOf('/', end) + 1, end + 1);
 	}
 
 	/**
@@ -245,7 +245,7 @@ public class ZipFileStore extends FileStore {
 
 	public URI toURI() {
 		try {
-			return new URI(ZipFileSystem.SCHEME_ZIP, null, path.makeAbsolute().toString(), rootStore.toURI().toString(), null); //$NON-NLS-1$
+			return new URI(ZipFileSystem.SCHEME_ZIP, null, path.makeAbsolute().toString(), rootStore.toURI().toString(), null);
 		} catch (URISyntaxException e) {
 			//should not happen
 			throw new RuntimeException(e);

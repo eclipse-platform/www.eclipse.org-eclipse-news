@@ -22,7 +22,7 @@ public class WorkbenchMemoryNode implements IWorkbenchAdapter {
 
 	public Object[] getChildren(Object parent) {
 		try {
-			return ((MemoryFileStore)parent).childStores(EFS.NONE, null);
+			return ((MemoryFileStore) parent).childStores(EFS.NONE, null);
 		} catch (CoreException e) {
 			return new Object[0];
 		}
@@ -33,11 +33,11 @@ public class WorkbenchMemoryNode implements IWorkbenchAdapter {
 	}
 
 	public String getLabel(Object o) {
-		return ((MemoryFileStore)o).getName();
+		return ((MemoryFileStore) o).getName();
 	}
 
 	public Object getParent(Object o) {
-		return ((MemoryFileStore)o).getParent();
+		return ((MemoryFileStore) o).getParent();
 	}
 
 }
