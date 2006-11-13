@@ -6,18 +6,17 @@
 	# Author: 		Michael Rennie
 	# Date:			November 10, 2006
 	#
-	# Description: a new and noteworty entry for 3.0M9 JDT debug 
+	# Description: a new and noteworty entry for 3.0M9 debug 
 	#
 	#
 	#****************************************************************************
 	
 	
-	$pageTitle 		= "JDT Debug New and Noteworthy for 3.0M9";
-	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching";
+	$pageTitle 		= "Debug Project New and Noteworthy for 3.0M9";
+	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching, new, noteworthy";
 	$pageAuthor		= "Debug Team";
 	
-	include("../../../../_sideCommon.php");
-	include("../../../_pluginCommon.php");
+	include("../../../_sideCommon.php");
 	
 	$html = <<<EOHTML
 
@@ -181,7 +180,6 @@
 	</div>
 	<div id="rightcolumn">
 		$commonside
-		$commonplugin
 	</div>
 </div>
 
