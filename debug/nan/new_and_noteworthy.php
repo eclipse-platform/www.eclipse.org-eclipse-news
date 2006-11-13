@@ -23,7 +23,7 @@
 <div id="maincontent">
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
-		<p>The JDT debug component is very responsive to new ideas, feature requests and bug reports. The following is a list of some 
+		<p>The debug component is very responsive to new ideas, feature requests and bug reports. The following is a list of some 
 			of the newest and more interesting additions to the component.</p>
 		<div class="homeitem3col">
 			<h3>New and Noteworthy for 3.3</h3>
