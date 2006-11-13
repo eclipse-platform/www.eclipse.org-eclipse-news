@@ -12,7 +12,7 @@
 	#****************************************************************************
 	
 	
-	$pageTitle 		= "Debug Project New and Noteworthy for 3.3M7";
+	$pageTitle 		= "Debug Project New and Noteworthy for 3.0M7";
 	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching, new, noteworthy";
 	$pageAuthor		= "Debug Team";
 	
