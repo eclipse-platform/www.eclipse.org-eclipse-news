@@ -40,11 +40,21 @@
     	  <td valign="top"> <p>A new launch variable allows you to dynamically specify 
              system properties as program and VM arguments from the Eclipse runtime. 
              The variable accepts a single argument which is the name of the system 
-             property to be resolved at launch time. For example, <pre>&quot;\$\{system_property:java.home}&quot;</pre>.</p>
+             property to be resolved at launch time.</p>
       	  <p align="center"><img src="sys_prop.PNG"></p>
       	  <p>&nbsp;</p>
       	  <p>&nbsp;</p></td>
-  </tr>
+ 		  </tr>
+ 		  <tr> 
+		    <td width="30%" valign="top" align="left"> <p align="right"><b>Evaluation 
+		        support for arrays</b></td>
+		    <td width="70%" valign="top"> <p>Content assist and evaluations are now supported 
+		        for arrays. The debugger allows you to refer to the selected array as 
+		        'this'. </p>
+		      <p align="center"><img src="arr_eval.PNG"></p>
+		      <p>&nbsp;</p>
+		      <p>&nbsp;</p></td>
+		  </tr>
 		</table>
 	</div>
 	<div id="rightcolumn">
