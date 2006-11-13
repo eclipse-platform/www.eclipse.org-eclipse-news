@@ -6,14 +6,14 @@
 	# Author: 		Michael Rennie
 	# Date:			November 10, 2006
 	#
-	# Description: This is a main page listing all of the new and noteworthy entries for the JDT debug project
+	# Description: This is a main page listing all of the new and noteworthy entries for the debug project
 	#
 	#
 	#****************************************************************************
 	
 	
-	$pageTitle 		= "JDT Debug New and Noteworthy";
-	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching";
+	$pageTitle 		= "Debug Project New and Noteworthy";
+	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching, new, noteworthy, new and noteworthy";
 	$pageAuthor		= "Debug Team";
 	
 	include("../_sideCommon.php");
