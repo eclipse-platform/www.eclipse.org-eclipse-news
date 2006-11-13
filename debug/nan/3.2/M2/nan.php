@@ -41,7 +41,6 @@
              system properties as program and VM arguments from the Eclipse runtime. 
              The variable accepts a single argument which is the name of the system 
              property to be resolved at launch time. For example, &quot;\${system_property:java.home}&quot;.</p>
-             <p>&nbsp;</p>
       	  <p align="center"><img src="sys_prop.PNG"></p>
       	  <p>&nbsp;</p></td>
  		  </tr>
