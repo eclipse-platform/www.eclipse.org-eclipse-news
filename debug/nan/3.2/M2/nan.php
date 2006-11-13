@@ -35,6 +35,16 @@
 	        breakpoints.</p>
 	      <p align="center"><img src="brkpt_export.PNG"></p></td>
 	      </tr>
+	      <tr> 
+    	  <td valign="top" align="left"> <p align="right"><b>System property launch variable</b></td>
+    	  <td valign="top"> <p>A new launch variable allows you to dynamically specify 
+             system properties as program and VM arguments from the Eclipse runtime. 
+             The variable accepts a single argument which is the name of the system 
+             property to be resolved at launch time. For example, <pre>&quot;${system_property:java.home}&quot;</pre>.</p>
+      	  <p align="center"><img src="sys_prop.PNG"></p>
+      	  <p>&nbsp;</p>
+      	  <p>&nbsp;</p></td>
+  </tr>
 		</table>
 	</div>
 	<div id="rightcolumn">
