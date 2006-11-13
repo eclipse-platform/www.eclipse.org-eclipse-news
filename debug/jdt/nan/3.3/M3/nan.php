@@ -24,7 +24,6 @@
 <div id="maincontent">
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
-		<p>Last revised Feb. 9, 2005</p>
 		<table border="0" width="80%" cellpadding="10" cellspacing="0">
 		  <tr> 
 		    <td colspan="2"> <hr /> 

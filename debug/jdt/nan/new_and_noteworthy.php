@@ -47,6 +47,30 @@
 				</ul>
 			</p>
 		</div>
+		<div class="homeitem3col">
+			<h3>New and Noteworthy for 3.1</h3>
+			<p>Listing of new and noteworthy items separated by milestone:
+				<ul>
+					<li><a href="/eclipse/debug/jdt/nan/3.1/M1/nan.php">Milestone 1</a></li>
+					<li><a href="/eclipse/debug/jdt/nan/3.1/M2/nan.php">Milestone 2</a></li>
+					<li><a href="/eclipse/debug/jdt/nan/3.1/M3/nan.php">Milestone 3</a></li>
+					<li><a href="/eclipse/debug/jdt/nan/3.1/M4/nan.php">Milestone 4</a></li>
+					<li><a href="/eclipse/debug/jdt/nan/3.1/M5/nan.php">Milestone 5</a></li>
+					<li><a href="/eclipse/debug/jdt/nan/3.1/M6/nan.php">Milestone 6</a></li>
+					<li><a href="/eclipse/debug/jdt/nan/3.1/M7/nan.php">Milestone 7</a></li>
+				</ul>
+			</p>
+		</div>
+		<div class="homeitem3col">
+			<h3>New and Noteworthy for 3.0</h3>
+			<p>Listing of new and noteworthy items separated by milestone:
+				<ul>
+					<li><a href="/eclipse/debug/jdt/nan/3.0/M7/nan.php">Milestone 7</a></li>
+					<li><a href="/eclipse/debug/jdt/nan/3.0/M8/nan.php">Milestone 8</a></li>
+					<li><a href="/eclipse/debug/jdt/nan/3.0/M9/nan.php">Milestone 9</a></li>
+				</ul>
+			</p>
+		</div>
 	</div>
 	<div id="rightcolumn">
 		$commonside
