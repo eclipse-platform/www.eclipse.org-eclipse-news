@@ -1,20 +1,30 @@
-<html>
+<?php  																														require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());    # All on the same line to unclutter the user's desktop'
 
-<head>
-<meta http-equiv="Content-Language" content="en-us">
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
-<meta name="ProgId" content="FrontPage.Editor.Document">
-<title>Eclipse &quot;New and Noteworthy&quot; Template</title>
-</head>
+	#*****************************************************************************
+	#
+	#
+	# Author: 		Michael Rennie
+	# Date:			November 10, 2006
+	#
+	# Description: a new and noteworty entry for 3.1M5 JDT debug 
+	#
+	#
+	#****************************************************************************
+	
+	
+	$pageTitle 		= "JDT Debug New and Noteworthy for 3.1M5";
+	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching";
+	$pageAuthor		= "Debug Team";
+	
+	include("../../../../_sideCommon.php");
+	include("../../../_pluginCommon.php");
+	
+	$html = <<<EOHTML
 
-<body>
-
-<h1>Eclipse &quot;New and Noteworthy&quot; Template</h1>
-<p>Last revised Sept. 20, 2004</p>
-<p>This is the template for the &quot;New and Noteworthy&quot; document that
-accompanies each milestone build.</p>
-<table border="0" width="80%" cellpadding="10" cellspacing="0">
+<div id="maincontent">
+	<div id="midcolumn">
+		<h1>$pageTitle</h1>
+		<table border="0" width="80%" cellpadding="10" cellspacing="0">
   <tr> 
     <td colspan="2"> 
       <hr>
@@ -102,7 +112,15 @@ accompanies each milestone build.</p>
     <td width="70%" valign="top">&nbsp;</td>
   </tr>
 </table>
+	</div>
+	<div id="rightcolumn">
+		$commonside
+		$commonplugin
+	</div>
+</div>
 
-</body>
 
-</html>
+EOHTML;
+
+	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
+?>
