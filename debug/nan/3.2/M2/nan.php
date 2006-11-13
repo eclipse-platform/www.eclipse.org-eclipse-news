@@ -27,6 +27,14 @@
 		  <tr> 
 		    <td colspan="2"> <hr> </td>
 		  </tr>
+		  <tr> 
+	      <td valign="top" align="left"> <p align="right"><b>Breakpoint import and export</b></td>
+	      <td valign="top"> <p>Breakpoints can be exported to and imported from the 
+	        local file system. The export wizard allows you to select the breakpoints 
+	        to export. Breakpoint working sets can optionally be created when importing 
+	        breakpoints.</p>
+	      <p align="center"><img src="brkpt_export.PNG"></p></td>
+	      </tr>
 		</table>
 	</div>
 	<div id="rightcolumn">
