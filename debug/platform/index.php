@@ -51,6 +51,7 @@
 				<li>The latest entry of noteworthy interest is <a href="/eclipse/debug/nan/3.3/M3/nan.php">3.3 Milestone 3</a></li>
 				<li>In the 3.3M3 milestone we have made many changes to the way the step commands work as well as significant 
 				changes to the inner workings of the launching framework. More specific information can be found in the <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.debug.core/buildnotes_platform-debug.html" target="_blank">buld notes</a>.</li>
+				<li>For a complete listing of new and noteworthy entries check the <a href="/eclipse/debug/nan/new_and_noteworthy.php">New and Noteworthy</a> page.</li>
 			</ul>
 			
 		</div>
