@@ -443,7 +443,7 @@ Through the scope context.
 		IMemento dev = root.createChild("dev.eclipse.org");<br>
 		dev.putString("connnectionType", "pserver");<br>
 		dev.putString("login", "anonymous");<br>
-		dev.putString("path", "/home/eclipse");<br>
+		dev.putString("path", "/cvsroot/eclipse");<br>
 		IMemento example = root.createChild("cvs.example.com");<br>
 		example.putString("connnectionType", "pserver");<br>
 		example.putString("login", "anonymous");<br>
@@ -470,7 +470,7 @@ Through the scope context.
 		&nbsp;&nbsp;Preferences dev = root.node("providers/dev.eclipse.org");<br>
 		&nbsp;&nbsp;dev.put("connectionType", "pserver");<br>
 		&nbsp;&nbsp;dev.put("login", "anonymous");<br>
-		&nbsp;&nbsp;dev.put("path", "/home/eclipse");<br>
+		&nbsp;&nbsp;dev.put("path", "/cvsroot/eclipse");<br>
 		&nbsp;&nbsp;Preferences example = root.node("providers/cvs.example.com");<br>
 		&nbsp;&nbsp;example.put("connectionType", "pserver");<br>
 		&nbsp;&nbsp;example.put("login", "anonymous");<br>
@@ -582,10 +582,10 @@ Through the scope context.
 	be split across multiple nodes and be more accessible. For instance consider the
 	following:
 	<p>
-	<code>&nbsp;&nbsp;/instance/org.eclipse.team/providers/example.com/path=/home/eclipse</code><br>
+	<code>&nbsp;&nbsp;/instance/org.eclipse.team/providers/example.com/path=/cvsroot/eclipse</code><br>
 	<code>&nbsp;&nbsp;/instance/org.eclipse.team/providers/example.com/login=anonymous</code><br>
 	<code>&nbsp;&nbsp;/instance/org.eclipse.team/providers/example.com/connectionType=pserver</code><br>
-	<code>&nbsp;&nbsp;/instance/org.eclipse.team/providers/dev.eclipse.org/path=/home/eclipse</code><br>
+	<code>&nbsp;&nbsp;/instance/org.eclipse.team/providers/dev.eclipse.org/path=/cvsroot/eclipse</code><br>
 	<code>&nbsp;&nbsp;/instance/org.eclipse.team/providers/dev.eclipse.org/login=anonymous</code><br>
 	<code>&nbsp;&nbsp;/instance/org.eclipse.team/providers/dev.eclipse.org/connectionType=pserver</code><br>
 	</p>
