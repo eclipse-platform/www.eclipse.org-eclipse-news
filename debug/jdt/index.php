@@ -48,9 +48,10 @@
 		</div>
 		<div class="homeitem3col">
 			<h3>New and Noteworthy</h3>
-			<p>The platform debug component is very responsive to new ideas, feature requests and bug reports. The following is a list of some 
+			<p>The JDT debug component is very responsive to new ideas, feature requests and bug reports. The following is a list of some 
 			of the newest and more interesting additions to the component.</p>
-			
+			<p>The latest entry of noteworth interest is <a href="/eclipse/debug/jdt/nan/3.3/M3/nan.php">3.3 Milestone 3</a></p>
+			<p>For a complete listing of new and noteworthy entries check the <a href="/eclipse/debug/jdt/nan/new_and_noteworthy.php">JDT New and Noteworthy</a> page.</p>
 		</div>
 		<div class="homeitem3col">
       		<h3>Development Efforts</h3>
