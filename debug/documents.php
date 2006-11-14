@@ -37,11 +37,12 @@
 				<li>EclipseCon 2006 - <a target="_blank" href="/eclipse/debug/documents/debugger_Supporting-a-Community-of-Debuggers.pdf">The Eclipse 3.2 Debug Platform: Supporting a community of debuggers</a></li>
 				<li>EclipseCon 2006 - <a target="_blank" href="/eclipse/debug/documents/debugger_Advanced-Debug-Tutorial.pdf">Integrating Custom Debuggers into the Eclipse Platform</a><br>
 					<blockquote>
-					<p>The associated exercises are available <a href="/eclipse/debug/documents/EC2006_exercises-advanced-tutorial.php">here</a></p>
+					<p>The associated exercises are available <a href="/eclipse/debug/documents/EC2006_exercises-advanced-tutorial.php">here</a></p>					
 					</blockquote></li>
 				<li>EclipseCon 2006 - <a target="_blank" href="/eclipse/debug/documents/debugger_Basic-Debug-Tutorial.pdf">The Eclipse Debug Framework</a><br>
 					<blockquote>
 					<p>The associated exercises are available <a href="/eclipse/debug/documents/EC2006_exercises-basic-tutorial.php">here</a></p>
+					<p>The source code of the exercises are available <a target="_blank" href="/eclipse/debug/documents/example.zip">here</a></p>
 					</blockquote></li>
 			</ul>
 		</div>
