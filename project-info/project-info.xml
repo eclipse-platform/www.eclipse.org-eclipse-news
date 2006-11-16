@@ -68,13 +68,18 @@
              download="http://download.eclipse.org/eclipse/downloads/drops/R-3.1.2-200601181600/index.php"/>
     <release name="3.2"
              date="6/2006"
-             status="Planned"
-             plan="/eclipse/development/eclipse_project_plan_3_2.html"/>
+             status="Completed"
+             plan="/eclipse/development/eclipse_project_plan_3_2.html"
+             download="http://download.eclipse.org/eclipse/downloads/drops/R-3.2-200606291905/index.php"/>
     <release name="3.2.1"
              date="9/2006"
-             status="Tentative"/>
+             status="Completed"
+             download="http://download.eclipse.org/eclipse/downloads/drops/R-3.2.1-200609210945/index.php"/>
     <release name="3.2.2"
              date="1/2007"
-             status="Tentative"/>
+             status="Planned"/>
+    <release name="3.3"
+             date="6/2007"
+             status="Planned"/>
   </releases>
 </project>
