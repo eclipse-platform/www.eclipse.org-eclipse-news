@@ -29,7 +29,7 @@
 
   <tr> 
     <td WIDTH="100%"> 
-    <p>Last revised 17:32 CET November 17, 2006</p>
+    <p>Last revised 13:37 CET November 22, 2006</p>
 
     
       <p>This plan is under continuous refinement. Please send comments about this draft plan to the <a href="mailto:platform-text@eclipse.org">platform-text@eclipse.org</a> developer mailing list.</p>
@@ -95,8 +95,9 @@
 	<li><h4>Spell Checking in Text Editors</h4>
 	<ul>
 		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <committed>spelling for text editors</committed></li>
-		<li>make spell checking encoding aware</li>
+		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> make the JDT spell check engine encoding aware</li>
 		<li>provide an English dictionary out of the box</li>
+		<li><font class="indexsub" color="#8080ff">[&gt;3.3]</font> push down text spelling engine from JDT Text to Platform Text</li>
 		<li>allow specific editors to install filters, e.g. to filter Javadoc tags</li>
 		<li>open up spell checking for other language stems</li>
 		<li>allow to spell-check a set of resources</li>
@@ -118,7 +119,7 @@
 		<li><committed>triple-click support (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=14654">bug 14654</a> - depends on SWT, see <del><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=23614">bug 23614</a></del>)</committed></li>
 		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <committed>warn if the user types into a derived file (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=148931">bug 148931</a>)</committed></li>
 		<li>text drag and drop (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=11624">bug 11624</a> - depends on SWT, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=142845">bug 142845</a> and/or <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=134127">bug 134127</a>)</li>
-		<li>show invisible characters (look at the provided patch) [experimental]</li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> show invisible characters (look at the provided patch) [experimental]</li>
 		<li>Last Edit Position history</li>
 		<li>restore editor selection on restart (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=124615">bug 124615</a>, depends on Platform UI <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=44295">bug 44295</a>).</li>
 	</ul></li>
@@ -291,8 +292,9 @@
 	
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Spell Checking in Text Editors</h4>
 	<ul>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> configure textual editors to have spell checking (document must become synchronized)</li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> configure textual editors to have spell checking</li>
 		<li><img src="../images/ok.gif" border="0" height="10" width="10"> add quick assist support</li>
+		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> make the JDT spelling engine encoding aware</li>
 		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> improve JDT spelling engine</li>
 	</ul>
 	
@@ -302,6 +304,7 @@
 		<li><img src="../images/ok.gif" border="0" height="10" width="10"> improve annotation painting performance in rulers and text area</li>
 		<li>talk preparation for <a href="http://www.java-forum-stuttgart.de/">Java Forum Stuttgart</a></li>
 		<li><img src="../images/ok.gif" border="0" height="10" width="10"> provide feedback to Platform UI on the new menu placement story</li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> show invisible characters (look at the provided patch) [experimental]</li>
 		<li>(push down spaces for Tab preference to Platform Text)</li>
 	</ul>
 	
