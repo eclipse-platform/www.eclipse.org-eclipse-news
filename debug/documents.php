@@ -58,7 +58,7 @@
 				<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=157059" target="_blank">bug report</a>.
 				<br>
 				<blockquote>
-					<p>An example project which contributes some tabs to the Java Application tab group and some new modes and mode combinations can be found <a href="/eclipse/debug/misc/launch_option_example.zip" target="_blank">here</a>.</p>
+					<p>An example project which contributes some tabs to the Java Application tab group and some new modes and mode combinations can be found <a href="/eclipse/debug/misc/launch_mode_example.zip" target="_blank">here</a>.</p>
 				</blockquote>
 				</li>
 				
