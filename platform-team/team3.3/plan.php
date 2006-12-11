@@ -187,15 +187,29 @@
 			<a name="m4"></a>
 			
 			<ul>
-			  <li><strong>Bug fixing</strong>: Target bugs are marked as 
+			  <li><img src="../images/ok.gif" height="10" width="10" alt="finished"><strong>Bug fixing</strong>: Target bugs are marked as 
 			  <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=Compare&component=CVS&component=Team&target_milestone=3.3+M4&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">3.3 M4</a>.
 			  </li>
-			  <li>Unfify Compare Navigation UI affordances
+			  <li><img src="../images/ok.gif" height="10" width="10" alt="finished">Unfify Compare Navigation UI affordances
 			  </li>
-			  <li>Investigate making parts of Compare asynchronous.
+			  <li><img src="../images/ok.gif" height="10" width="10" alt="finished">Investigate making parts of Compare asynchronous.
 			      <ul>
-			       <li>Non-blocking opeing of Compare editor.</li>
+			       <li>Non-blocking opening of Compare editor.</li>
 			      </ul>
+			  </li>
+			</ul>
+			</div>
+			
+		    <div class="homeitem3col">
+
+			<h3>3.3 Development Effort - Milestone 5 (Friday, February 16, 2007?) </h3>
+			<a name="m5"></a>
+			
+			<ul>
+			  <li><strong>Bug fixing</strong>: Target bugs are marked as 
+			  <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=Compare&component=CVS&component=Team&target_milestone=3.3+M5&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">3.3 M5</a>.
+			  </li>
+			  <li>Investigate highlighting of word level diffs
 			  </li>
 			</ul>
 			</div>
