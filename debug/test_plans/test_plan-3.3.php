@@ -26,7 +26,7 @@
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
 			<h3>Testers</h3>
-			<p>Committers: Kevin Barnes, Darin Wright, Samantha Chan, Michael Rennie</p>
+			<p>Committers: Darin Wright, Samantha Chan, Michael Rennie</p>
 			<p>Community: Curtis Windatt, Anyone who wants to help</p>
 		</div>
 		<div class="homeitem3col">
