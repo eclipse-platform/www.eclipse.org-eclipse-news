@@ -29,7 +29,7 @@
 
   <tr> 
     <td WIDTH="100%"> 
-    <p>Last revised 14:14 CET December 18, 2006</p>
+    <p>Last revised 19:25 CET December 18, 2006</p>
 
     
       <p>This plan is under continuous refinement. Please send comments about this draft plan to the <a href="mailto:platform-text@eclipse.org">platform-text@eclipse.org</a> developer mailing list.</p>
@@ -71,6 +71,7 @@
 	<ul>
 		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <committed>support to color by age in addition to color by contributor (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147705">bug 147705</a>)</committed></li>
 		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <committed>fix hover sizing problems (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=147709">bug 147709</a>)</committed></li>
+		<li>allow the text (user, revision, ...) in the live annotate ruler to become a hyperlink on demand</li>
 	</ul></li>
 	
 	<li><h4>Hyperlinking</h4>
@@ -140,7 +141,7 @@
 	<li><h4>Find/Replace</h4>
 	<ul>
 		<li><committed>improve Find/Replace dialog: make it resizable</committed></li>
-		<li>find a solution to Find/Replace linebreaks, tabs, etc. in regular expressions</li>
+		<li>find a solution to Find/Replace line breaks, tabs, etc. in regular expressions</li>
 		<li>improve Find/Replace dialog: merge into editor area, ...</li>
 	</ul></li>
 	
@@ -159,6 +160,7 @@
 		<li>push more JDT quick assist support to Platform Text (e.g. how to show the quick assists and their preview)</li>
 		<li>quick assist extension point</li>
 		<li>support styles (bold, italic) in text editor</li>
+		<li><committed>push down F2 (Show Tooltip Description) feature for hovers to Platform Text</committed>
 		<li>provide multi-clipboard for text editors (emacs-style, rolling)</li>
 	</ul></li>
 
@@ -299,8 +301,9 @@
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Miscellaneous</h4>
 	<ul>
 		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> code assist for references that require static imports (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=152123">bug 152123</a>)</li>
-		<li>restore editor selection on restart (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=124615">bug 124615</a>)</li>
-		<li>only ask to save when last editor for a document gets closed (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=131068">bug 131068</a> and <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=167607">bug 167607</a>)</li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> fix high-contrast preference page layouting bugs</li>
+		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> restore editor selection on restart (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=124615">bug 124615</a>)</li>
+		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> only ask to save when last editor for a document gets closed (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=131068">bug 131068</a> and <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=167607">bug 167607</a>)</li>
 		<li>(text drag and drop (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=11624">bug 11624</a>))</li>
 		<li>(push down spaces for Tab preference to Platform Text)</li>
 	</ul>
