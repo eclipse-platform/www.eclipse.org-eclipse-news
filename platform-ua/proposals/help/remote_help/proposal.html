@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Remote Help proposal for Eclipse 3.3</title>
@@ -11,7 +11,7 @@ Remote Help proposal for Eclipse 3.3
 </h1>
 
 <p>
-Curtis d'Entremont, 07/06/2006
+Curtis d'Entremont, 01/02/2007
 </p>
 
 <h2>
@@ -45,6 +45,55 @@ Scope
 </h3>
 
 <p>
+Help will only show remote content pertaining to what the user has installed on
+the client side. That is, if the remote help server is used to serve help for
+several products, help will filter out all content except for the product(s) the
+user has installed.
+</p>
+
+<p>
+In order to achieve this, all help plug-ins must declare which bundles they are
+documenting via the new <code>org.eclipse.help.metadata</code> extension point.
+For example:
+</p>
+
+<pre>
+   &lt;extension
+         point=&quot;org.eclipse.help.metadata&quot;&gt;
+      &lt;documents&gt;
+         &lt;plugin id=&quot;org.eclipse.foo&quot;/&gt;
+         &lt;plugin id=&quot;org.eclipse.bar&quot;/&gt;
+      &lt;/documents&gt;
+   &lt;/extension&gt;
+</pre>
+
+<p>
+This tells the platform that this help plugin documents the
+<code>org.eclipse.foo</code> and <code>org.eclipse.bar</code> plug-ins. This is
+already being done implicitly by the documentation itself, we are just formalizing
+it in this metadata. When help is requested from the remote help server, the
+client will send a list of all installed plug-ins. The server will only send
+back help pertaining to those plug-ins. If a help plug-in doesn't declare what it
+documents, the help server will always send it.
+</p>
+
+<p>
+The benefits of this approach are:
+</p>
+
+<ul>
+<li>The help plug-in packaging is the same regardless of whether the help plug-in is
+installed locally or remotely. You don't need stubs.</li>
+<li>We already have implicit dependencies from the help plug-in to the code plug-in, so
+we're not adding much coupling between components.</li>
+<li>It is easy to patch a help plug-in that shipped without declaring the metadata without
+touching it - add a new fragment on the remote help server that declares the metadata. You
+don't need to touch the client installation.</li>
+<li>You can name your plug-ins however you want, and package your features however
+you want.</li>
+</ul>
+
+<p>
 Remote help will apply to all forms of help: online help (the documents
 themselves, be it html or anything else), table of contents, context help, help
 search, and keyword index. Dynamic content (e.g. filters) will still work on
@@ -56,12 +105,16 @@ are user-defined and per-user, remote help does not apply and they will continue
 to be stored locally.
 </p>
 
+<h3>
+Precedence
+</h3>
+
 <p>
-As far as precedence goes, if local content for a particular item is available,
-it will be used and remote help will not be consulted. For example, if you
-attempt to open a specific document, or summon context help on a particular UI,
-and that document or context help definition is available locally, it will be
-used and any remote content for that item will be ignored.
+If local content for a particular item is available, it will be used and remote
+help will not be consulted. For example, if you attempt to open a specific document,
+or open context help on a particular UI, and that document or context help definition
+is available locally, it will be used and any remote content for that item will be
+ignored. This is for performance.
 </p>
 
 <h3>
@@ -74,9 +127,9 @@ There will be two ways to configure which remote server to retrieve help from:
 </p>
 
 <ul>
-<li>Global default: Products/offerings will have a means to preconfigure the
-offering to point to a default server and port. This way the workbench will
-automatically retrieve remote content upon startup for the first time.</li>
+<li>Global default: Products can be preconfigured to point to a default server
+and port. This way the workbench will automatically retrieve remote content upon
+startup for the first time.</li>
 <li>User preference: A preference page will be available for the user allowing
 them to explicitly set or override the host address and port for the remote help
 server.</li>
@@ -118,71 +171,194 @@ of any extensions.
 </p>
 
 <p>
-An <code>ITocProvider</code> is responsible for providing zero or more
-<code>ITocContribution</code>s:
+An <code>AbstractTocProvider</code> is responsible for providing zero or more
+<code>TocContribution</code>s:
 </p>
 
 <pre>
 /**
- * An ITocProvider is a mechanism to provide arbitrary content to the table of
- * contents (TOC). ITocProviders must be registered via the org.eclipse.help.toc
- * extension point, and are queried once only per session when the TOC is about
- * to be displayed.
- * 
- * This interface is to be implemented by clients.
+ * An <code>AbstractTocProvider</code> is a mechanism to provide arbitrary
+ * content to the table of contents (TOC). <code>AbstractTocProvider</code>s
+ * must be registered via the <code>org.eclipse.help.toc</code> extension point.
  * 
  * @since 3.3
  */
-public interface ITocProvider {
+public abstract class AbstractTocProvider {
 
 	/**
-	 * Returns all ITocContributions for this provider. Providers are free to
-	 * provide any number of contributions (zero or more).
+	 * Returns all <code>TocContribution</code>s for this provider. Providers
+	 * are free to provide any number of contributions (zero or more).
 	 * 
+	 * @param locale the locale for which to get contributions
 	 * @return all the contributions for this provider
 	 */
-	public ITocContribution[] getTocContributions();
+	public abstract TocContribution[] getTocContributions(String locale);
+	
+	/**
+	 * Notifies the platform that the content managed by this provider may
+	 * have changed since the last time <code>getTocContributions()</code>
+	 * was called, and needs to be updated.
+	 */
+	protected void contentChanged() {
+		...
+	}
 }
 </pre>
 
-<p>
-An <code>ITocContribution</code> represents a complete book (top-level TOC)
-along with its metadata:
-</p>
-
 <pre>
 /**
- * An ITocContribution represents a complete top-level TOC (a book)
- * and its metadata.
- * 
- * This interface is intended to be implemented by clients.
+ * A <code>TocContribution</code> represents either a complete or partial
+ * table of contents, as well as its metadata.
  * 
  * @since 3.3
  */
-public interface ITocContribution {
+public class TocContribution extends Node {
+
+		...
 
 	/**
-	 * Returns the TOC data for this contribution. This will be called only
-	 * once per session.
-	 * 
-	 * @return the TOC data for this contribution
+	 * Constructs a new empty <code>TocContribution</code>. Use the
+	 * <code>set</code> methods to set the content. 
 	 */
-	public IToc getToc();
+	public TocContribution() {
+		...
+	}
+	
+	/**
+	 * Returns the contribution's category id. Contributions with the same
+	 * category id will be grouped together.
+	 * 
+	 * @return the contribution's category id.
+	 */
+	public String getCategoryId() {
+		...
+	}
+	
+	/**
+	 * Returns the symbolic name of the bundle that made this contribution,
+	 * e.g. "org.eclipse.help"
+	 * 
+	 * @return the contributor id, e.g. "org.eclipse.help"
+	 */
+	public String getContributorId() {
+		...
+	}
+	
+	/**
+	 * Returns the hrefs for any additional documents that are not in this TOC
+	 * but are associated with it, and should be indexed for searching.
+	 * 
+	 * @return any extra documents associated with the TOC
+	 */
+	public String[] getExtraDocuments() {
+		...
+	}
 	
 	/**
 	 * Returns a unique identifier for this contribution.
 	 * 
 	 * @return the contribution's unique identifier
 	 */
-	public String getId();
+	public String getId() {
+		...
+	}
 	
 	/**
-	 * Returns the TOC's category id. Categories are used to organize similar
-	 * books in categories.
+	 * Returns the locale for this contribution.
 	 * 
-	 * @return the TOC's category id.
+	 * @return the contribution's locale
 	 */
-	public String getCategoryId();
+	public String getLocale() {
+		...
+	}
+	
+	/**
+	 * Returns the TOC data for this contribution. The format is the same as
+	 * TOC XML file contributions, except the content is returned as
+	 * <code>Node</code>s that mirror the XML structure.
+	 * 
+	 * @return the TOC data for this contribution
+	 */
+	public Node getToc() {
+		...
+	}
+	
+	/**
+	 * Returns whether or not this is a top-level contribution (a book).
+	 * 
+	 * @return whether the contribution is top-level book
+	 */
+	public boolean isPrimary() {
+		...
+	}
+	
+	/**
+	 * Sets the contribution's category id. Contributions with the same
+	 * category id will be grouped together.
+	 * 
+	 * param categoryId the contribution's category id.
+	 */
+	public void setCategoryId(String categoryId) {
+		...
+	}
+	
+	/**
+	 * Sets the symbolic name of the bundle that made this contribution,
+	 * e.g. "org.eclipse.help"
+	 * 
+	 * @param contributorId the contributor id, e.g. "org.eclipse.help"
+	 */
+	public void setContributorId(String contributorId) {
+		...
+	}
+	
+	/**
+	 * Sets the hrefs for any additional documents that are not in this TOC
+	 * but are associated with it, and should be indexed for searching.
+	 * 
+	 * @param extraDocuments any extra documents associated with the TOC
+	 */
+	public void setExtraDocuments(String[] extraDocuments) {
+		...
+	}
+	
+	/**
+	 * Assigns a unique identifier to this contribution.
+	 * 
+	 * @param id the contribution's unique identifier
+	 */
+	public void setId(String id) {
+		...
+	}
+	
+	/**
+	 * Sets the locale for this contribution.
+	 * 
+	 * @param locale the contribution's locale
+	 */
+	public void setLocale(String locale) {
+		...
+	}
+	
+	/**
+	 * Sets whether or not this is a top-level contribution (a book).
+	 * 
+	 * @param isPrimary whether the contribution is top-level book
+	 */
+	public void setPrimary(boolean isPrimary) {
+		...
+	}
+	
+	/**
+	 * Sets the TOC data for this contribution. The format is the same as
+	 * TOC XML file contributions, except the content is returned as
+	 * <code>Node</code>s that mirror the XML structure.
+	 * 
+	 * @param toc the TOC data for this contribution
+	 */
+	public void setToc(Node toc) {
+		...
+	}
 }
 </pre>
 
@@ -214,7 +390,7 @@ Keyword index provider support
 Keyword index has the same limitation as TOC - the only way to contribute to it
 is to provide an XML file in a local plug-in. The solution will be the same as
 with TOC, except for keyword index. For example, it will be an
-<code>IIndexProvider</code> which supplies <code>IIndexContributions</code>,
+<code>AbstractIndexProvider</code> which supplies <code>IndexContributions</code>,
 and will be registered via the <code>org.eclipse.help.index</code> extension
 point using the <code>indexProvider</code>.
 </p>
