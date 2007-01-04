@@ -29,7 +29,7 @@
 
   <tr> 
     <td WIDTH="100%"> 
-    <p>Last revised 19:25 CET December 18, 2006</p>
+    <p>Last revised 15:15 CET January 4, 2007</p>
 
     
       <p>This plan is under continuous refinement. Please send comments about this draft plan to the <a href="mailto:platform-text@eclipse.org">platform-text@eclipse.org</a> developer mailing list.</p>
@@ -119,7 +119,7 @@
 		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <committed>Smart Home/End preference for text editors</committed></li>
 		<li><committed>triple-click support (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=14654">bug 14654</a> - depends on SWT, see <del><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=23614">bug 23614</a></del>)</committed></li>
 		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <committed>warn if the user types into a derived file (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=148931">bug 148931</a>)</committed></li>
-		<li>text drag and drop (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=11624">bug 11624</a> - depends on SWT, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=142845">bug 142845</a> and/or <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=134127">bug 134127</a>)</li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> text drag and drop (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=11624">bug 11624</a></li>
 		<li><img src="../images/ok.gif" border="0" height="10" width="10"> show invisible characters (look at the provided patch) [experimental]</li>
 		<li>Last Edit Position history</li>
 		<li>restore editor selection on restart (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=124615">bug 124615</a>, depends on Platform UI <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=44295">bug 44295</a>).</li>
@@ -206,7 +206,7 @@
 	<ul>
 		<li>show categories as nodes</li>
 		<li>show properties as nodes (group getter/setter/field) (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=26618">bug 26618</a>)</li>
-		<li>drag-and-drop when unsorted (drop between elements)</li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> drag-and-drop when unsorted (drop between elements)</li>
 	</ul>
 	  
 	<li><h4>Typing</h4>
@@ -253,7 +253,7 @@
 		<ul>
 			<li><img src="../images/ok.gif" border="0" height="10" width="10"> triple-click support (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=14654">bug 14654</a> - depends on SWT, see <del><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=23614">bug 23614</a></del>)</li>
 			<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> provide correct 1&frac12 click + drag to select words (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=5138">bug 5138</a> - depends on SWT, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=138579">bug 138579</a>)</li>
-  			<li>text drag and drop (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=11624">bug 11624</a> - depends on SWT, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=142845">bug 142845</a> and/or <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=134127">bug 134127</a>)</li>
+  			<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> text drag and drop issues (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=11624">bug 11624</a> depends on SWT - we need fixes for emerging problems, e.g. <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=169534">bug 169534</a>)</li>
 		</ul></li>
 
 		<li>Platform UI
@@ -300,11 +300,12 @@
 	
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Miscellaneous</h4>
 	<ul>
+		<li>finalize all APIs that have been introduced during 3.3</li>
 		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> code assist for references that require static imports (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=152123">bug 152123</a>)</li>
 		<li><img src="../images/ok.gif" border="0" height="10" width="10"> fix high-contrast preference page layouting bugs</li>
-		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> restore editor selection on restart (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=124615">bug 124615</a>)</li>
-		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> only ask to save when last editor for a document gets closed (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=131068">bug 131068</a> and <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=167607">bug 167607</a>)</li>
-		<li>(text drag and drop (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=11624">bug 11624</a>))</li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> restore editor selection on restart (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=124615">bug 124615</a>)</li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> only ask to save when last editor for a document gets closed (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=131068">bug 131068</a> and <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=167607">bug 167607</a>)</li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> text drag and drop (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=11624">bug 11624)</a></li>
 		<li>(push down spaces for Tab preference to Platform Text)</li>
 	</ul>
 	
