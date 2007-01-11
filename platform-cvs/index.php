@@ -51,7 +51,7 @@
 			  <li>This component is responsible for all org.eclipse.team.cvs.* <a href="dev.php#Plugins">plugins</a></li>
 			  <li>Everything you always wanted to know about the CVS plugin can be found over in the <a href="http://wiki.eclipse.org/index.php/CVS_FAQ">CVS
 			    FAQ Wiki</a>.</li>
-			  <li>Online user <a href="http://help.eclipse.org/help31/topic/org.eclipse.platform.doc.user/gettingStarted/qs-60_team.htm">documentation</a>.</li>
+			  <li>Online user <a href="http://help.eclipse.org/help32/topic/org.eclipse.platform.doc.user/gettingStarted/qs-60_team.htm">documentation</a>.</li>
 			  <li>The <a href="contributors.php">contributors</a>.</li>
 			  <li><a href="http://wiki.eclipse.org/index.php/CVS_Plugins">Links</a> to plug-ins 
 			    that improve Eclipse CVS<br>
