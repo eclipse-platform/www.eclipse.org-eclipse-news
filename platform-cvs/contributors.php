@@ -31,12 +31,12 @@
 		<dl><dt><b>Michael Valenta</b></dt>
 		<dd>Mike is the CVS hacker extraordinaire. Works on every part of the
 		plug-in.</dd></dl>
-		<dl><dt><b>Bogdan Gheorghe</b></dt>
-		<dd>Bogdan joined the Team for the 3.2 release. He's building up to work on every
-		part of the plug-in.</dd></dl>
 		</div>
 		<div class="homeitem3col">
 			<h3>Previous</h3>
+		    <dl><dt><b>Bogdan Gheorghe</b></dt>
+		    <dd>Bogdan joined the Team for the 3.2 and 3.3 releases but has since moved on to SWT.</dd></dl>
+		
 			<dl><dt><b>James Moody</b></dt>
 			<dd>James helped with the UI for the 2.0 release.</dd></dl>
 			
