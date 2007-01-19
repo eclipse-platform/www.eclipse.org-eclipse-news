@@ -18,7 +18,7 @@
 
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
-		<p>Back to the <a href="../dev.php">Team Component Page</a></p>
+		<p>Back to the <a href="../index.php">Team Component Page</a></p>
 
 			<table border="0" cellspacing="10" cellpadding="0">
 			  <tbody>
@@ -236,7 +236,7 @@
 		<div class="sideitem">
 			<h6>Related Links</h6>
 			<ul>
-				<li><a href="../dev.php">Team Component</a></li>
+				<li><a href="../index.php">Team Component</a></li>
 				<li><a href="../../platform-cvs">CVS Component</a></li>
 			</ul>
 		</div>

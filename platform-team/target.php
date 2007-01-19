@@ -32,7 +32,7 @@
 
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
-		<p>Back to the <a href="dev.php">Team Development Page</a></p>
+		<p>Back to the <a href="index.php">Team Page</a></p>
 		<p>These plugins provide Target management support. They will enable users to manage files between
 		a local location (either the local filesystem or an Eclipse workspace) and a remote location (by using
 		FTP or WebDAV). Note that these plugins <em>are not under active development</em>.

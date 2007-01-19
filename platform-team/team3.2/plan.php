@@ -18,7 +18,7 @@
 
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
-		<p>Back to the <a href="../dev.php">Team Dev Page</a></p>
+		<p>Back to the <a href="../index.php">Team Component Page</a></p>
 
 			<table border="0" cellspacing="10" cellpadding="0">
 			  <tbody>
