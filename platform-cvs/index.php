@@ -61,7 +61,7 @@
 		<div class="homeitem3col">
 			<h3>Development Resources</h3>
 			<a name="DEV"></a>
-			<p>If you are already a CVS developer, check out the <a href="dev.php">Development Resources</a>.</p>
+			<p>If you are already a CVS developer, check out the <a href="http://wiki.eclipse.org/index.php/CVS_Development">Development Resources</a>.</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>What's Happening</h3>
@@ -89,7 +89,7 @@
 			If you are interested in participating in the development of the CVS component, there are several ways of contributing:
 			<ul>
     		<li>Fix bugs/enhancement requests that we need <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=CVS&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=helpwanted&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">help</a> with.</li>
-		    <li>Check out our <a href="dev.php#Bugs">bug section</a> on the development page and pick something that interests you.</li>
+		    <li>Check out our <a href="http://wiki.eclipse.org/index.php/CVS_Development#Bugs">bug section</a> on the development page and pick something that interests you.</li>
     		<li>Also, check out the developer's mailing list: <a href="http://dev.eclipse.org/mailman/listinfo/platform-cvs-dev">platform-cvs-dev@eclipse.org</a>. Chat with people there about your problems and interests, and find out what you can do to help.</li>
 			</ul>
 		</div>
