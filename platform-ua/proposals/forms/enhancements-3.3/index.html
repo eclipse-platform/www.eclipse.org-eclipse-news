@@ -4,7 +4,7 @@
 </head>
 <body>
 <h1>UI Forms enhancements in release 3.3</h1>
-<address>Dejan Glozic, 01/22/2007</address>
+<address>Dejan Glozic and Kimberley Peter, 01/22/2007</address>
 <h2>Background</h2>
 <p>The document is meant to enumerate various enhancements that will be 
 available in Eclipse Platform release 3.3 from milestone 5. The readers are assumed 
@@ -35,8 +35,8 @@ well everywhere. The color used to render the title are stored in the <code>
 FormColors</code> class under the following keys (defined in <code>IFormColors</code> 
 interface):</p>
 <ul>
-	<li><code>H_GRADIENT_TOP</code></li>
-	<li><code>H_GRADIENT_BOTTOM</code></li>
+	<li><code>H_GRADIENT_START</code></li>
+	<li><code>H_GRADIENT_END</code></li>
 	<li><code>H_BOTTOM_KEYLINE1</code></li>
 	<li><code>H_BOTTOM_KEYLINE2</code></li>
 </ul>
@@ -176,7 +176,7 @@ an interface (<code>IMessageManager</code>) and has the following roles:</p>
 </ol>
 <p>The message manager uses JFace support for control decoration to render the 
 appropriate image near controls that have messages associated with them. What 
-makes message manager convinient is that clients only manipulate messages and 
+makes message manager convenient is that clients only manipulate messages and 
 message types, while the manager handles control decoration at the SWT/JFace 
 level. </p>
 <p>Clients who want to take advantage of this new facility should refrain from 
