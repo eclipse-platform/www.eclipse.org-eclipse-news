@@ -75,6 +75,26 @@
 			</table>
 		</div>
 		<div class="homeitem3col">
+			<h3>Curtis Windatt</h3>
+			<table width="100%" border="0" summary="About Curtis Windatt">
+				<tbody>
+				<tr> 
+					<td width="30%" valign="top">No Picture</td>
+					<td width="70%">Curtis Windatt is an Debug team member with the IBM Rational team. 
+					Before that he was a student at the University of Manitoba.</td>
+				</tr>
+				<tr> 
+					<td width="30%" valign="top"><b>Status</b></td>
+					<td width="70%">Active</td>
+				</tr>
+				<tr> 
+					<td width="30%" valign="top"><b>Email</b></td>
+					<td width="70%">cwindatt@ca.ibm.com</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="homeitem3col">
 			<h3>Samantha Chan</h3>
 			<table width="100%" border="0" summary="About Samantha">
 				<tbody>
