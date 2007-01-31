@@ -27,7 +27,7 @@
 		<div class="homeitem3col">
 			<h3>Testers</h3>
 			<p>Committers: Darin Wright, Samantha Chan, Michael Rennie</p>
-			<p>Community: Curtis Windatt, Anyone who wants to help</p>
+			<p>Community: Curtis Windatt, Natasha D'Silva, Anyone who wants to help</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>JRE Grid</h3>
@@ -62,7 +62,7 @@
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">Michael Rennie</td>
-				    <td width="18%">Samantha Chan</td>
+				    <td width="18%">Samantha Chan/Natasha D'Silva</td>
 				  </tr>
 				  <tr> 
 				    <td width="18%"><b>Mac</b></td>
@@ -85,26 +85,30 @@
 			    <td><b>Michael Rennie</b></td>
 			    <td><b>Curtis Windatt</b></td>
 			    <td><b>Samantha Chan</b></td>
+			    <td><b>Natasha D'Silva</b></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Evaluations">Evaluations</a></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
 			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Launch">Launch Options</a></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
 			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Launch_Modes">Launch Modes</a></td>
 			    <td><div align="center"></div></td>
-			    <td><div align="center"></div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td><div align="center"></div></td>
+			    <td><div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
@@ -113,33 +117,38 @@
 			    <td> <div align="center"></div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Breakpoints">Breakpoints</a></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Run">Run to Line</a></td>
 			    <td><div align="center"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Logical">Logical Structures</a></td>
-			    <td><div align="center"></div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td><div align="center"></div></td>
+			    <td><div align="center"></div></td>
+			    <td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Watch">Watch Items</a></td>
 			    <td><div align="center"></div></td>
-			    <td> <div align="center"></div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
@@ -148,47 +157,54 @@
 			    <td><div align="center"></div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Classpaths">Runtime Classpath</a></td>
 			    <td> <div align="center"></div></td>
-			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Source">Source Lookup</a></td>
 			    <td><div align="center"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Monitors">Monitor Information</a></td>
-			    <td><div align="center"></div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
+			    <td><div align="center"></div></td>
+			    <td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Hot">HCR</a></td>
 			    <td><div align="center"></div></td>
-			    <td> <div align="center"></div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#JREs">Installed JREs</a></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td><div align="center"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#EEs">Execution Environments</a></td>
 			    <td><div align="center"></div></td>
-			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td><div align="center"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
@@ -196,19 +212,22 @@
 			    <td><div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Console">Console</a></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Variables">Variables</a></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td><div align="center"></div></td>
+			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
@@ -216,14 +235,16 @@
 			    <td><a href="#Refactoring">Refactoring</a></td>
 			    <td><div align="center"></div></td>
 			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Applets">Applets</a></td>
+			    <td><div align="center"></div></td>
+			    <td><div align="center"></div></td>
+			    <td> <div align="center"></div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td><div align="center"></div></td>
-			    <td><div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
@@ -231,14 +252,16 @@
 			    <td><div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td> <div align="center"></div></td>
+			     <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#JSP">JSP Example</a></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
 			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
 			  </tr>
 			</table>
 			</div>
@@ -265,8 +288,8 @@
 				      <li>Display view</li>
 				      <li>Details area</li>
 				      <li>Snippet editor</li>
-				      <li>in class files without attached soruce</li>
-				      <li>for arrays as the receivnig 'this' context</li>
+				      <li>in class files without attached source</li>
+				      <li>for arrays as the receiving 'this' context</li>
 				    </ul>
 				  </li>
 				  <li>Use key bindings and context menus</li>
@@ -280,7 +303,7 @@
 				  </li>
 				  <li>Persisting the result - i.e. move the result to the Display view or Expressions 
 				    view</li>
-				  <li>In a clean workspace, popups should size reasonable on the first use, afterwhich 
+				  <li>In a clean workspace, popups should size reasonable on the first use, after which 
 				    the popup sizes are persisted and reused</li>
 				</ul>
 				<p><a href="#top">Back to top</a><br><hr></p>
@@ -314,8 +337,8 @@
 				  <li>Prompt to launch in face of compilation errors 
 				    <ul>
 				      <li>always/prompt</li>
-				      <li>NEW: prompt shuold tell you which project(s) contain errors</li>
-				      <li>irrelvant errors should not cause prompt (i.e. Ant errors should not 
+				      <li>NEW: prompt should tell you which project(s) contain errors</li>
+				      <li>irrelevant errors should not cause prompt (i.e. Ant errors should not 
 				        prevent Java launch)</li>
 				    </ul>
 				  </li>
@@ -338,10 +361,10 @@
 						<li>Ensure page can be searched for with tree viewer searching</li>
 						<li>Ensure there is a help topic for the page</li>
 						<li>With duplicate tooling select a variety of items in both viewers</li>
-						<li>Ensure once an item is selected in the prefrred tooling viewer it cannot be unselected (checked)</li>
-						<li>Ensure changeing between selected tooling without saving changes should not erase pending saved choices</li>
-						<li>Selecting preferred tooling from a quick launch or the launch configuraiton dialog should be reflected in the pref page (and changeable)</li>
-					</u>
+						<li>Ensure once an item is selected in the preferred tooling viewer it cannot be unselected (checked)</li>
+						<li>Ensure changing between selected tooling without saving changes should not erase pending saved choices</li>
+						<li>Selecting preferred tooling from a quick launch or the launch configuraiotn dialog should be reflected in the pref page (and changeable)</li>
+					</ul>
 					</li>
 					<li> Launch Configuration Dialog
 					<ul>
@@ -357,7 +380,7 @@
 					<ul>
 						<li>Resolution dialog should be presented if duplicate tooling found and no choice has been made</li>
 						<li>Choice of tooling should allow launch to continue and be reflected in the preferences page</li>
-						<li>Cancelling either choice from the resolution dialog should cancel the launch as well</li>
+						<li>Canceling either choice from the resolution dialog should cancel the launch as well</li>
 					</ul>
 					</li>
 				</ul>
@@ -378,9 +401,9 @@
 				      <li>Relevant debug views should automatically open when stack frame is selected 
 				        <ul>
 				          <li>In debug perspective by default</li>
-				          <li>In other perpectives as configured on the &quot;View Management&quot; 
+				          <li>In other perspectives as configured on the &quot;View Management&quot; 
 				            pref page (also available in Debug View drop down menu)</li>
-				          <li>Use PDA debugger to try debugging different langauges in same perspective 
+				          <li>Use PDA debugger to try debugging different languages in same perspective 
 				            (hope to have this available - example from draft debug article)</li>
 				          <li>Automatically opened views should close when debugging ends</li>
 				        </ul>
@@ -413,7 +436,7 @@
 				        &amp; keybinding), context menu in outline view</li>
 				      <li>Class Load Breakpoint - double click in ruler, Run menu action (menu 
 				        &amp; keybinding), context menu in outline view</li>
-				      <li>Togggle Watchpoints - double click in ruler, Run menu action (menu 
+				      <li>Toggle Watchpoints - double click in ruler, Run menu action (menu 
 				        &amp; keybinding), context menu in outline view
 				        <ul>
 				        	<li> watchpoint cannot appear on 'final' field</li>
@@ -480,7 +503,7 @@
 			<h4>Logical Structures </h4>
 				<ul>
 				  <li>View variables with logical structures on/off</li>
-				  <li>Stepping with logical strutures on/off</li>
+				  <li>Stepping with logical structures on/off</li>
 				  <li>Works for 
 				    <ul>
 				      <li>java.util.Collection (flat list)</li>
@@ -529,7 +552,7 @@
 			<h4>Context Menu Launching</h4>
 				<ul>
 				  <li>Run/Debug from the context and top level Run/Debug cascade menus. Note that 
-				    before a shortcut's propery tester is loaded, it will appear in the context 
+				    before a shortcut's property tester is loaded, it will appear in the context 
 				    menu by default. For example, the Java application shortcut requires the &quot;hasMain&quot; 
 				    tester from the Java debug plug-in, and thus, until the plug-in is loaded, 
 				    the shortcut will appear on all Java files whether they have a main method 
@@ -700,7 +723,7 @@
 			<h4>Console </h4>
 				<ul>
 				  <li>Show when output to standard out/err</li>
-				  <li>Console title bolds when content changes (but not if on top/auto activated)</li>
+				  <li>Console title becomes bold when content changes (but not if on top/auto activated)</li>
 				  <li>Console input - typing, pasting, pasting multiple lines</li>
 				  <li>CTRL-Z/D for EOF when doing console input</li>
 				  <li>Pin a console - pin action is specific to console view. When pinned, console 
@@ -857,7 +880,7 @@
 				    <ul>
 				      <li>try &quot;suspend=y&quot; and &quot;suspend =n&quot; options</li>
 				      <li>try different sockets</li>
-				      <li>try conneting to a socket that has no VM</li>
+				      <li>try connecting to a socket that has no VM</li>
 				      <li>try &quot;localhost&quot; and &quot;127.0.0.1&quot;</li>
 				    </ul>
 				  </li>
@@ -879,7 +902,7 @@
 				      <li>Changing the stratum displayed via context menu in debug view</li>
 				      <li>Stepping in a Java file from a JSP file and stepping back (source lookup 
 				        should work)</li>
-				      <li>Evaluation in the context of a JSP file (requries adding jsp-api.jar, 
+				      <li>Evaluation in the context of a JSP file (requires adding jsp-api.jar, 
 				        jasper-runtime.jar and servlet-api.jar from /common/lib to the project's 
 				        build path)</li>
 				    </ul>
