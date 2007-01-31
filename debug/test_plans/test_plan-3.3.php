@@ -90,10 +90,10 @@
 			  <tr> 
 			    <td><a href="#Evaluations">Evaluations</a></td>
 			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
 			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Launch">Launch Options</a></td>
@@ -203,8 +203,8 @@
 			    <td><a href="#EEs">Execution Environments</a></td>
 			    <td><div align="center"></div></td>
 			    <td><div align="center"></div></td>
-			    <td> <div align="center"></div></td>
 			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
@@ -243,17 +243,17 @@
 			    <td><a href="#Applets">Applets</a></td>
 			    <td><div align="center"></div></td>
 			    <td><div align="center"></div></td>
-			    <td> <div align="center"></div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Remote">Remote Debugging</a></td>
 			    <td><div align="center"></div></td>
+			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
-			     <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#JSP">JSP Example</a></td>
@@ -705,6 +705,21 @@
 				    <ul>
 				      <li>Changing the default JRE for an EE updates the default and/or selected EE runtime JRE</li>
 				    </ul>
+				  </li>
+				  <li> Modifying Access Rules 
+				  	<ul>
+				  		<li>Adding an access rule should cause a rebuild (if auto-build is enabled)</li>
+				  		<li>Ensure that the access rules defined in a system library are not editable/removable</li>
+				  		<li>Add a new forbidden rule, ensure accesses to forbidden types is flagged as an error</li>
+				  		<li>Add a new discouraged rule, ensure access to discouraged types is flagged as a warning</li>
+				  		<li>Ensure access rules can be removed</li>
+				  		<li>
+				  	</ul>
+				  </li>
+				  <li> Over-riding Access Rules
+				  	<ul>
+				  		<li> Create a rule that over-rides a system library rule, and ensure it works</li>
+				  	</ul>
 				  </li>
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
