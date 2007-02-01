@@ -138,11 +138,28 @@ tested it on.</p>
 <p align="center"><img border="0" src="dnd1.png" width="334" height="91"></p>
 <p align="center"><img border="0" src="dnd2.png" width="292" height="89"></p>
 <h2>Changes related to sections</h2>
+<p>New colors</p>
 <p>A new color computation algorithm is used for all colors allocated by<code> 
 FormColors</code> class. In addition, rendering of sections when <code>TITLE_BAR</code> 
 style is used has been slightly revised. Section headers are now using the same 
 color as the form title, which is also applied to the toggle button.</p>
 <p align="center"><img border="0" src="section.png" width="665" height="605"></p>
+<h2>Section text client height computation</h2>
+<p>When two sections are placed side by side, and only one of them has a text 
+client (e.g. a tool bar in the section title area), the height of the client 
+will make the title area higher than in the section without it. This is 
+unfortunate for most practical situations because the the title area has enough 
+clearance to accept regular 16x16 icons without this increase. In order to 
+remedy this problem, a new <code>ExpandableComposite</code> style constant has 
+been added - <code>IGNORE_TEXT_CLIENT_HEIGHT</code>. When this constant is OR-ed 
+with the other <code>ExpandableComposite</code> constants, the height of the 
+text client will be ignored and the section title bar will not grow in height 
+(width is still taken into account though).</p>
+<p>This constant should only be used when standard Eclipse 16x16 images are 
+used; taller text clients will start overlapping the description text or client 
+body area.</p>
+<p align="center">
+<img border="0" src="text-client-height.png" width="670" height="210"></p>
 <h2>Shared-header form editor</h2>
 <p>In most implementations of the multi-page form editor, each page contained a 
 separate form with its own title and other heading controls. There is a use case 
