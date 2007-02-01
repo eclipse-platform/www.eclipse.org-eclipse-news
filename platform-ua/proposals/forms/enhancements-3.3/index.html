@@ -138,13 +138,13 @@ tested it on.</p>
 <p align="center"><img border="0" src="dnd1.png" width="334" height="91"></p>
 <p align="center"><img border="0" src="dnd2.png" width="292" height="89"></p>
 <h2>Changes related to sections</h2>
-<p>New colors</p>
+<h3>New colors</h3>
 <p>A new color computation algorithm is used for all colors allocated by<code> 
 FormColors</code> class. In addition, rendering of sections when <code>TITLE_BAR</code> 
 style is used has been slightly revised. Section headers are now using the same 
 color as the form title, which is also applied to the toggle button.</p>
 <p align="center"><img border="0" src="section.png" width="665" height="605"></p>
-<h2>Section text client height computation</h2>
+<h3>Section text client height computation</h3>
 <p>When two sections are placed side by side, and only one of them has a text 
 client (e.g. a tool bar in the section title area), the height of the client 
 will make the title area higher than in the section without it. This is 
@@ -157,7 +157,23 @@ text client will be ignored and the section title bar will not grow in height
 (width is still taken into account though).</p>
 <p>This constant should only be used when standard Eclipse 16x16 images are 
 used; taller text clients will start overlapping the description text or client 
-body area.</p>
+body area. Local tool bars are normally created in two ways:</p>
+<ol>
+	<li>By placing a single <code>ImageHyperlink</code> control (this works well 
+	as-is - see picture below)</li>
+	<li>By placing a <code>ToolBar</code> control and creating several tool 
+	items in it. Tool bar control will be taller than a single <code>
+	ImageHyperlink</code>, creating problems for the description control below. 
+	In this scenario, you have two choices:<ol>
+		<li>Do not set description text and instead place the equivalent text at 
+		the top of the section body where you can add some top margin to clear 
+		the local tool bar</li>
+		<li>Set the custom description control that has top margin</li>
+		<li>Set the <code>FormText</code> control and use <code>
+		FormText.verticalMargin</code> to dial in some vertical clearance</li>
+	</ol>
+	</li>
+</ol>
 <p align="center">
 <img border="0" src="text-client-height.png" width="670" height="210"></p>
 <h2>Shared-header form editor</h2>
