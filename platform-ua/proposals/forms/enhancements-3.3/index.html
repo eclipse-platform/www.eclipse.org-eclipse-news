@@ -144,38 +144,43 @@ FormColors</code> class. In addition, rendering of sections when <code>TITLE_BAR
 style is used has been slightly revised. Section headers are now using the same 
 color as the form title, which is also applied to the toggle button.</p>
 <p align="center"><img border="0" src="section.png" width="665" height="605"></p>
-<h3>Section text client height computation</h3>
-<p>When two sections are placed side by side, and only one of them has a text 
-client (e.g. a tool bar in the section title area), the height of the client 
-will make the title area higher than in the section without it. This is 
-unfortunate for most practical situations because the the title area has enough 
-clearance to accept regular 16x16 icons without this increase. In order to 
-remedy this problem, a new <code>ExpandableComposite</code> style constant has 
-been added - <code>IGNORE_TEXT_CLIENT_HEIGHT</code>. When this constant is OR-ed 
-with the other <code>ExpandableComposite</code> constants, the height of the 
-text client will be ignored and the section title bar will not grow in height 
-(width is still taken into account though).</p>
-<p>This constant should only be used when standard Eclipse 16x16 images are 
-used; taller text clients will start overlapping the description text or client 
-body area. Local tool bars are normally created in two ways:</p>
+<h3>Section title bar rendering when text client is present</h3>
+<p>When some sections on a page have text client (a control that can be placed 
+in the section title bar on the right), two problems arise:</p>
 <ol>
-	<li>By placing a single <code>ImageHyperlink</code> control (this works well 
-	as-is - see picture below)</li>
-	<li>By placing a <code>ToolBar</code> control and creating several tool 
-	items in it. Tool bar control will be taller than a single <code>
-	ImageHyperlink</code>, creating problems for the description control below. 
-	In this scenario, you have two choices:<ol>
-		<li>Do not set description text and instead place the equivalent text at 
-		the top of the section body where you can add some top margin to clear 
-		the local tool bar</li>
-		<li>Set the custom description control that has top margin</li>
-		<li>Set the <code>FormText</code> control and use <code>
-		FormText.verticalMargin</code> to dial in some vertical clearance</li>
-	</ol>
-	</li>
+	<li>Sections that use <code>TITLE_BAR</code> style have the envelope and the 
+	gradient painted to include the text client, causing the title bar to be 
+	taller</li>
+	<li>Taller title bar pushes description and/or the section client down</li>
 </ol>
-<p align="center">
-<img border="0" src="text-client-height.png" width="670" height="210"></p>
+<p>Starting from release 3.3 M5, this problem has been addressed in two steps:</p>
+<ol>
+	<li>Gradient and envelope for the sections using the <code>TITLE_BAR</code> 
+	style are now painted without taking text client into account. This results 
+	in a uniform decoration height that is only controlled by the chosen font 
+	for the title text.</li>
+	<li>The description and/or the section body are still pushed down to 
+	accommodate the text client. However, it is possible to use public variables
+	<code>ExpandableComposite.clientVerticalSpacing</code> and <code>
+	ExpandableComposite.descriptionVerticalSpacing</code> to compensate for the 
+	difference so that the rest of the content in side-by-side sections lines 
+	up.</li>
+</ol>
+<p>Since the difference between text and text client heights is dynamic, it is 
+not possible to pick a 'magic number' to correct the vertical alignment issues 
+in a portable way. For that reason, a new method has been added to <code>
+ExpandableComposite</code> - <code>getTextClientHeightDifference()</code>. This 
+method will compute the currently valid difference that can be applied as 
+described above. Note that making modifications to the text client or changing 
+the text font invalidates this value and the method must be called again.</p>
+<p>The following sample code shows the application of this method for the 
+picture below:</p>
+<pre>		Section s1 = createTableSection(form, toolkit, &quot;First Table Section&quot;, true);
+		Section s2 = createTableSection(form, toolkit, &quot;Second Table Section&quot;, false);
+		s2.descriptionVerticalSpacing += s1.getTextClientHeightDifference();</pre>
+<p>As a result, the description of the section <code>s2</code> has been pushed 
+down to compensate for the tool bar set as a text client of the section <code>s1</code>:</p>
+<p align="center">&nbsp;<img border="0" src="text-client-height.png" width="673" height="264"></p>
 <h2>Shared-header form editor</h2>
 <p>In most implementations of the multi-page form editor, each page contained a 
 separate form with its own title and other heading controls. There is a use case 
