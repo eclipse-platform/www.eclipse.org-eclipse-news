@@ -121,7 +121,7 @@ NOT FOR EXTERNAL DISTRIBUTION
   <li> <img src="new.gif" alt="(new)" border="0" height="12" width="12"> 
        Friday Mar. 23, 2007 - Milestone 6 (3.3 M6) - stable build - API complete - API Freeze</li>
   <li> <img src="new.gif" alt="(new)" border="0" height="12" width="12"> 
-       Friday May 4, 2007 - Milestone 7 (3.3 M5) - stable build - feature complete - development 
+       Friday May 4, 2007 - Milestone 7 (3.3 M7) - stable build - feature complete - development 
     freeze - lock down and testing begins</li>
 </ul>
 <p>Our target is to complete 3.3 in late June 2007. All release deliverables will be available
@@ -269,8 +269,8 @@ NOT FOR EXTERNAL DISTRIBUTION
 <dt><em>Caveat: Using IBM 32-bit SDK for Windows, Java 2 Technology Edition 5.0, SR4 on Vista</em></dt>
 <dd>Although we expect this to be fixed in IBM Java5 SR5, there is currently a conflict between
 the use of DirectDraw by the <strong>AWT</strong> libraries in IBM Java5 SR4 and
-the Windows Vista "Aero" theme. Although, the Eclipse SDK itself does not use these libraries
-(and thus runs well on Windows Vista using that VM) other plug-ins that make use of the 
+the Windows Vista "Aero" theme. Although the Eclipse SDK itself does not use these libraries
+(and thus runs well on Windows Vista using that VM), other plug-ins that make use of the 
 conflicting AWT capabilities may cause the advanced features of Aero to be disabled. As a
 workaround to avoid this problem, you can add <code>-Dsun.java2d.noddraw=true</code> to the
 VM arguments when launching Eclipse, which will prevent the AWT libraries from using DirectDraw. 
@@ -286,7 +286,7 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
   platforms without significant community support for testing them.</i></p>
   
 <p>Similarly, although untested, the Eclipse SDK should work fine on other OSes that 
-  support the same window system. For Win32: Windows 98, ME, NT, 2000, and Server 
+  support the same window system. For Win32: NT, 2000, and Server 
   2003; SWT HTML viewer requires Internet Explorer 5 (or higher). For GTK on other 
   Linux systems: version 2.2.1 of the GTK+ widget toolkit and associated libraries 
   (GLib, Pango); SWT HTML viewer requires Mozilla 1.4GTK2. For Motif on 
@@ -335,7 +335,7 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
   Eclipse SDK 3.3 APIs. Downward contract compatibility is not supported.
   There is no guarantee that compliance with Eclipse SDK 3.3 
   APIs would ensure compliance with Eclipse SDK 3.2 APIs. Refer to 
-  <a href="http://eclipse.org/eclipse/development/java-api-evolution.html">
+  <a href="http://wiki.eclipse.org/index.php/Evolving_Java-based_APIs">
     <em>Evolving Java-based APIs</em>
   </a> for a discussion of the kinds of API changes that maintain 
   contract compatibility.
@@ -347,7 +347,7 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
   </a>. 
   Downward plug-in compatibility is not supported. Plug-ins for Eclipse SDK 3.3
   will not be usable in Eclipse SDK 3.2. Refer to
-  <a href="http://eclipse.org/eclipse/development/java-api-evolution.html">
+  <a href="http://wiki.eclipse.org/index.php/Evolving_Java-based_APIs">
     <em>Evolving Java-based APIs</em>
   </a> for a discussion of the kinds of API changes that maintain 
   binary compatibility. 
@@ -442,47 +442,7 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
 <h4>Committed Items (Components)</h4>
 <blockquote> 
 
-  <p><i>None at this time.</i></p>
-  
-</blockquote>
-
-<h4>Proposed Items (Components)</h4>
-<blockquote> 
-
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Improved support for provisioning.</strong>
-    Eclipse has advanced quite quickly with new use-cases (RCP, Equinox, 
-    server side, etc.) and new technologies (e.g., OSGi and OSGi's MEG) coming
-    into the picture.  To date Update Manager has not been enhanced to support
-    or exploit these changes. In 3.3 we will investigate provisioning support
-    for enhanced workflows, the ability to update the so-called "root files"
-    (e.g., startup.jar, eclipse.exe), improved efficiency (download and disk
-    footprint), support for right-grained discovery and acquisition of function
-    as well as integration with differing repository types. This effort also
-    includes enhancements to the tooling around provisioning.
-    [Update]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154077">154077</a>) 
-</p>
-
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>API tools.</strong>
-    More components means more API and an elevated need for solid APIs,
-    evolved but compatible APIs and the correct and understood use of APIs.
-    This cannot be achieved without supporting tooling.  Today PDE includes
-    sophisticated support for classpath management and access rule management
-    based on information in the manifest of bundles to facilitate the capture
-    of package and class references.  In 3.3. we will expand this to cover
-    finer-grained API contracts (e.g., clients should not call foo() or
-    extend Bar).  Similarly, developers will be given effective mechanisms
-    for discovering, visualizing and minimizing dependencies in their code, 
-    bundles produced by third parties and non-bundled code libraries.  Tooling in support
-    of checking and managing the evolution of component and package version numbers
-    will also be supplied.
-    [PDE]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154078">154078</a>) 
-</p>
-
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
     <strong>Bundle/Module Development Tools.</strong>
     In 3.1 and 3.2 PDE made gigantic strides in support for
     traditional OSGi bundle development. Even still, in 3.3. we will improve
@@ -499,8 +459,8 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     [PDE]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154079">154079</a>) 
 </p>
-    
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+      
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
     <strong>Target Provisioning.</strong>
     Currently, users wanting additional function supplied by others must
     manually acquire and install these additional bundles in their target
@@ -509,22 +469,143 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     targets directly from bundle repositories as well as from other locations
     on the local machine.  As part of this the mechanism by which source is
     packaged, acquired and looked up will be reviewed and streamlined.
-    [Update]
+    [<img src="new.gif" alt="(new)" border="0" height="12" width="12">
+    PDE]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154081">154081</a>) 
 </p>
 
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Bundle Management.</strong>
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Application Model.</strong>
+    The OSGi R4 MEG specification includes an application model that significantly
+    decouples the application from the rest of the system.  The net result is OSGi
+    (and thus Eclipse) as a more flexible application container, for example allowing
+    multiple applications to run concurrently and improved lifecycle around the
+    application.  These characteristics are important both to the manageability of
+    the system (e.g., simplifying and clarifying the shutdown process) but also to
+    various RCP scenarios such as Kiosk-mode and Application Container models.
+    In 3.3 we will implement and adopt the MEG application model.
+    [Equinox]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154084">154084</a>) 
+</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>OSGi R4.1 Specification Work.</strong>
+    Much of the success Eclipse has enjoyed with OSGi comes from the fact that the
+    Eclipse community has played a very active role in the evolution of various
+    OSGi specifications.  With increased interest in OSGi and Java modularity
+    (see JSR 277, JSR 291 and JSR 232) this participation has never been more important.
+    In addition to promoting Eclipse use-cases and the evolution of these standards
+    to benefit Eclipse, there are a number of gaps in the OSGi specifications that
+    Eclipse is currently filling in specific ways and should be addressed in R4.1.
+    For example the management of API in metadata (x-friends and x-internal),
+    integration techniques for third party and legacy code, in-place execution of
+    bundles, basic notions of data location, etc.  The Equinox team will continue
+    their active participation in these specification processes and keep Eclipse
+    on the leading edge of Java componentization.
+    <em>(<img src="new.gif" alt="(new)" border="0" height="12" width="12">
+    Note that originally this plan item targeted R5 but the next version of the
+    spec is going to be R4.1 so we have updated this item accordingly.)</em>
+    [Equinox]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154085">154085</a>) 
+</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Server side support.</strong>
+    First it was tools, then it was applications, now server-side programmers are
+    waking up to the power of componentization delivered by Eclipse and OSGi.
+    In the 3.2 cycle an Equinox incubator was started to investigate the use of
+    Eclipse on the server.  It started as a very modest servlet bridge allowing
+    Eclipse to run inside a servlet engine and handle servlet requests and has been
+    evolving into a full-blown appreciation of what it means to componentize server
+    software.  There are many possible directions here and there is no way the
+    Equinox team proper will be able to track, support and participate in all.
+    However we will spend time understanding the basic requirements as they apply
+    to the base framework and add-on services and look to support the use-cases
+    presented by various other Eclipse projects that are adopting Eclipse on the
+    server (e.g., ECF, ECP, Corona).
+    [Equinox]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154087">154087</a>) 
+</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Help content generated on-the-fly</strong>
+    Currently it is not possible to write all your help content in your own
+    format, and have it converted into HTML, TOC, keyword index, and context
+    help on-the-fly. For the table of contents you must supply the information
+    in the toc XML format, you cannot use any other format or write code to
+    contribute tocs. The same restriction exists with keyword index content.
+    This item consists of adding API for toc and keyword index providers,
+    and ensuring that a full end-to-end generated doc set is possible. We
+    will use DITA as a showcase XML content format.
+    [UA]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=175016">175016</a>) 
+</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Improve componentization of user assistance content</strong>
+    More flexibility for filtering, such as OR and IF/ELSE clauses in filter
+    condition, and ability to plug-in any type of filter. Adopt help's extension
+    features and content replace for all other forms of user assistance (e.g.
+    welcome, cheat sheets). Support for properties files for separating words
+    from content structure in all of UA. Also provide a better mechanism to
+    control how UA content is arranged and ordered (for example, the order of
+    books in the table of contents). 
+    [UA]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=175018">175018</a>) 
+</p>
+
+</blockquote>
+<h4>Proposed Items (Components)</h4>
+<blockquote> 
+
+<p><strong>Improved support for provisioning.</strong>
+    Eclipse has advanced quite quickly with new use-cases (RCP, Equinox, 
+    server side, etc.) and new technologies (e.g., OSGi and OSGi's MEG) coming
+    into the picture.  To date Update Manager has not been enhanced to support
+    or exploit these changes. In 3.3 we will investigate provisioning support
+    for enhanced workflows, the ability to update the so-called "root files"
+    (e.g., startup.jar, eclipse.exe), improved efficiency (download and disk
+    footprint), support for right-grained discovery and acquisition of function
+    as well as integration with differing repository types. This effort also
+    includes enhancements to the tooling around provisioning.
+    [Update]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154077">154077</a>) 
+</p>
+
+<p><strong>Bundle Management.</strong>
     Managing even modest systems of bundles can be complex and error prone.  There are 
-    several places in PDE where developers need to list or select sets of bundles (e.g., launch configurations, 
-    target setup, etc).  In many cases the environment already includes relevant grouping constructs (e.g., features,
-    working sets, bundle groups).  PDE should surface these to developers in a clear, consistent and pervasive 
+    several places in PDE where developers need to list or select sets of bundles (e.g.,
+    launch configurations, target setup, etc).  In many cases the environment already
+    includes relevant grouping constructs (e.g., features, working sets, bundle groups).
+    PDE should surface these to developers in a clear, consistent and pervasive 
     fashion.
     [PDE]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154082">154082</a>) 
 </p>
 
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+</blockquote>
+<h4>Defered Items (Components)</h4>
+<blockquote> 
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> defered)
+    <strong>API tools.</strong>
+    More components means more API and an elevated need for solid APIs,
+    evolved but compatible APIs and the correct and understood use of APIs.
+    This cannot be achieved without supporting tooling.  Today PDE includes
+    sophisticated support for classpath management and access rule management
+    based on information in the manifest of bundles to facilitate the capture
+    of package and class references.  In 3.3. we will expand this to cover
+    finer-grained API contracts (e.g., clients should not call foo() or
+    extend Bar).  Similarly, developers will be given effective mechanisms
+    for discovering, visualizing and minimizing dependencies in their code, 
+    bundles produced by third parties and non-bundled code libraries.  Tooling in support
+    of checking and managing the evolution of component and package version numbers
+    will also be supplied.
+    [PDE]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154078">154078</a>) 
+</p>
+  
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> defered)
     <strong>Incremental Plug-in Build.</strong>
     With the increase in plug-ins coming from and going to third parties the
     development cycle needs to be more incremental.  In the Eclipse project
@@ -543,90 +624,6 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154083">154083</a>) 
 </p>
 
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Application Model.</strong>
-    The OSGi R4 MEG specification includes an application model that significantly
-    decouples the application from the rest of the system.  The net result is OSGi
-    (and thus Eclipse) as a more flexible application container, for example allowing
-    multiple applications to run concurrently and improved lifecycle around the
-    application.  These characteristics are important both to the manageability of
-    the system (e.g., simplifying and clarifying the shutdown process) but also to
-    various RCP scenarios such as Kiosk-mode and Application Container models.
-    In 3.3 we will implement and adopt the MEG application model.
-    [Equinox]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154084">154084</a>) 
-</p>
-
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>OSGi R5 Specification Work.</strong>
-    Much of the success Eclipse has enjoyed with OSGi comes from the fact that the
-    Eclipse community has played a very active role in the evolution of various
-    OSGi specifications.  With increased interest in OSGi and Java modularity
-    (see JSR 277, JSR 291 and JSR 232) this participation has never been more important.
-    In addition to promoting Eclipse use-cases and the evolution of these standards
-    to benefit Eclipse, there are a number of gaps in the OSGi specifications that
-    Eclipse is currently filling in specific ways and should be addressed in R5.
-    For example the management of API in metadata (x-friends and x-internal),
-    integration techniques for third party and legacy code, in-place execution of
-    bundles, basic notions of data location, etc.  The Equinox team will continue
-    their active participation in these specification processes and keep Eclipse
-    on the leading edge of Java componentization.
-    [Equinox]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154085">154085</a>) 
-</p>
-
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Server side support.</strong>
-    First it was tools, then it was applications, now server-side programmers are
-    waking up to the power of componentization delivered by Eclipse and OSGi.
-    In the 3.2 cycle an Equinox incubator was started to investigate the use of
-    Eclipse on the server.  It started as a very modest servlet bridge allowing
-    Eclipse to run inside a servlet engine and handle servlet requests and has been
-    evolving into a full-blown appreciation of what it means to componentize server
-    software.  There are many possible directions here and there is no way the
-    Equinox team proper will be able to track, support and participate in all.
-    However we will spend time understanding the basic requirements as they apply
-    to the base framework and add-on services and look to support the use-cases
-    presented by various other Eclipse projects that are adopting Eclipse on the
-    server (e.g., ECF, ECP, Corona).
-    [Equinox]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154087">154087</a>) 
-</p>
-
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Help content generated on-the-fly</strong>
-    Currently it is not possible to write all your help content in your own
-    format, and have it converted into HTML, TOC, keyword index, and context
-    help on-the-fly. For the table of contents you must supply the information
-    in the toc XML format, you cannot use any other format or write code to
-    contribute tocs. The same restriction exists with keyword index content.
-    This item consists of adding API for toc and keyword index providers,
-    and ensuring that a full end-to-end generated doc set is possible. We
-    will use DITA as a showcase XML content format.
-    [UA]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
-</p>
-
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Improve componentization of user assistance content</strong>
-    More flexibility for filtering, such as OR and IF/ELSE clauses in filter
-    condition, and ability to plug-in any type of filter. Adopt help's extension
-    features and content replace for all other forms of user assistance (e.g.
-    welcome, cheat sheets). Support for properties files for separating words
-    from content structure in all of UA. Also provide a better mechanism to
-    control how UA content is arranged and ordered (for example, the order of
-    books in the table of contents). 
-    [UA]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
-</p>
-
-</blockquote>
-
-<h4>Defered Items (Components)</h4>
-<blockquote> 
-
-  <p><i>None at this time.</i></p>
-  
 </blockquote>
 
 <p>(End of items for Components.)</p>
@@ -644,14 +641,19 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
 <h4>Committed Items (Consumability)</h4>
 <blockquote> 
 
-  <p><i>None at this time.</i></p>
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Remote help</strong>
+    Packaging a comprehensive set of help content with a product can significantly
+    increase its size. Instead of bundling it with the product, allow help content
+    to be served from a remote infocenter. This includes all forms of help content:
+    documents, table of contents, keyword index, and context help. Local content is
+    also allowed alongside the remote content, and it should behave and appear to
+    the user as though it were installed locally. 
+    [UA, Releng]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=175006">175006</a>) 
+</p>
   
-</blockquote>
-
-<h4>Proposed Items (Consumability)</h4>
-<blockquote> 
-
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed, follow on work in next release)
     <strong>Improve the launching experience.</strong>
     We will look for ways to improve the current launching experience. This
     may include efforts such as using SWT to build the splash screen,
@@ -662,7 +664,7 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154088">154088</a>)
 </p>
 
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
    <strong>Improve serviceability.</strong>
    When an end user encounters a problem with Eclipse, it is important for
    support teams to be able to diagnose the root cause of the failure, and
@@ -680,7 +682,7 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154090">154090</a>)
 </p>
 
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
     <strong>Managing and sharing settings.</strong>
     Currently settings are either scoped at the workbench/workspace level or the
     project level. However, there are cases where associating settings with
@@ -693,7 +695,74 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154097">154097</a>)
 </p>
 
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Platform level proxy settings.</strong>
+    There are at least three proxy settings pages in Callisto. We will work with
+    the Eclipse community to make sure that the core capabilities from these
+    pages are made available at the Platform level, as a single settings
+    page that can be consumed by all.
+    [Runtime, Team, Update, UI]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154100">154100</a>)
+</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>GTK Printing.</strong>
+    We will provide printing support on GTK. 
+    [SWT]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154101">154101</a>)
+</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Search based navigation.</strong>
+    Because traditional navigation-by-browsing does not scale to large data
+    sets, we should generalize and extend the existing search-based
+    rapid navigation mechanisms (e.g. "Quick Find Class").
+    [UI, UA]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154104">154104</a>)
+</p>
+
+</blockquote>
+<h4>Proposed Items (Consumability)</h4>
+<blockquote> 
+
+<p><strong>Ship Finer-grained Components.</strong>
+    The Eclipse project produces three major outputs, the Platform, JDT and PDE.
+    These are exposed as zips on download sites and features on update sites.
+    Those wanting to get just part of one of these components (e.g., Help,
+    Update, JDT Core) must first discover which zip or feature contains the
+    desired function, acquire that container and finally identify and extract
+    the desired plug-ins.  To make this easier we will revise the grouping structure 
+    to capture more independent and re-usable components. 
+    [All components]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154102">154102</a>) 
+</p>
+
+<p><strong>Performance focus.</strong>
+    We must continue to improve overall performance and memory consumption,
+    with a particular focus on working with large numbers of plug-ins and 
+    large amounts of data.
+    [All components]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154106">154106</a>)
+</p>
+
 <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+    <strong>Help keyword index</strong>
+    In 3.2, keyword index support was added to the Help system. However, as yet the
+    Eclipse SDK does not have keyword index content. This item consists of
+    contributing a comprehensive and complete keyword index for Eclipse as
+    well as the necessary tooling to create it (e.g. ant task to extract meta
+    keywords from html, etc). This also includes UI enhancements for the overall
+    presentation of the keyword index and any necessary usability enhancements.
+    [UA, Doc]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=175008">175008</a>) 
+</p>
+
+</blockquote>
+
+<h4>Defered Items (Consumability)</h4>
+<blockquote> 
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> defered)
     <strong>Customization.</strong>
     Eclipse lacks customization capabilities aimed at end users and product
     packagers. More generally, component development and use is fraught with
@@ -709,84 +778,6 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154099">154099</a>)
 </p>
 
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Platform level proxy settings.</strong>
-    There are at least three proxy settings pages in Callisto. We will work with
-    the Eclipse community to make sure that the core capabilities from these
-    pages are made available at the Platform level, as a single settings
-    page that can be consumed by all.
-    [Runtime, Team, Update, UI]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154100">154100</a>)
- </p>
-
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>GTK Printing.</strong>
-    We will provide printing support on GTK. 
-    [SWT]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154101">154101</a>)
-</p>
-
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Ship Finer-grained Components.</strong>
-    The Eclipse project produces three major outputs, the Platform, JDT and PDE.
-    These are exposed as zips on download sites and features on update sites.
-    Those wanting to get just part of one of these components (e.g., Help,
-    Update, JDT Core) must first discover which zip or feature contains the
-    desired function, acquire that container and finally identify and extract
-    the desired plug-ins.  To make this easier we will revise the grouping structure 
-    to capture more independent and re-usable components. 
-    [All components]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154102">154102</a>) 
-</p>
-
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Search based navigation.</strong>
-    Because traditional navigation-by-browsing does not scale to large data
-    sets, we should generalize and extend the existing search-based
-    rapid navigation mechanisms (e.g. "Quick Find Class").
-    [UI, UA]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154104">154104</a>)
-</p>
-
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Performance focus.</strong>
-    We must continue to improve overall performance and memory consumption,
-    with a particular focus on working with large numbers of plug-ins and 
-    large amounts of data.
-    [All components]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154106">154106</a>)
-</p>
-
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Remote help</strong>
-    Packaging a comprehensive set of help content with a product can significantly
-    increase its size. Instead of bundling it with the product, allow help content
-    to be served from a remote infocenter. This includes all forms of help content:
-    documents, table of contents, keyword index, and context help. Local content is
-    also allowed alongside the remote content, and it should behave and appear to
-    the user as though it were installed locally. 
-    [UA, Releng]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
-</p>
-
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Help keyword index</strong>
-    In 3.2, keyword index support was added to the Help system. However, as yet the
-    Eclipse SDK does not have keyword index content. This item consists of
-    contributing a comprehensive and complete keyword index for Eclipse as
-    well as the necessary tooling to create it (e.g. ant task to extract meta
-    keywords from html, etc). This also includes UI enhancements for the overall
-    presentation of the keyword index and any necessary usability enhancements.
-    [UA, Doc]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
-</p>
-
-</blockquote>
-
-<h4>Defered Items (Consumability)</h4>
-<blockquote> 
-
-  <p><i>None at this time.</i></p>
   
 </blockquote>
 
@@ -803,14 +794,7 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
 <h4>Committed Items (Java)</h4>
 <blockquote> 
 
-  <p><i>None at this time.</i></p>
-  
-</blockquote>
-
-<h4>Proposed Items (Java)</h4>
-<blockquote> 
-
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
     <strong>Enhance launching support.</strong>
     We should simplify the launch experience for novice users with single
     click context sensitive launching, simple launch configurations
@@ -822,9 +806,41 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     [Debug]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154107">154107</a>)
 </p>
+  
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Extend Clean Up.</strong>
+    Add formatting, organize import and sort members to 'Clean up',
+    offer clean up profiles, and invoke clean up on user defined events. 
+    [JDT UI]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154109">154109</a>)
+</p>
 
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>More refactorings.</strong>
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Compiler API (JSR 199).</strong>
+    In order to conform to the forthcoming tool API for compilers (JSR 199),
+    the Eclipse compiler should provide a front-end implementing the tool API
+    included in Java SE 6. 
+    [JDT Core]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154111">154111</a>)
+</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Support for Java SE 6 debug features.</strong>
+    Implement new Java SE 6 features in the Eclipse Java Debug Interface (JDI)
+    client including support for heap walking (retrieve instance counts, all
+    intances of specific types, and all references to an object), forcing an
+    early return from a method with a specific return value, breakpoints for
+    monitor acquisition and release, access to the constant pool, and improved
+    class prepare event filtering.
+    [JDT Debug]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154115">154115</a>)
+</p>
+
+</blockquote>
+<h4>Proposed Items (Java)</h4>
+<blockquote> 
+
+<p><strong>More refactorings.</strong>
     We will finish the 'Fix Deprecation' refactoring that didn't make it
     into 3.2, and add the new refactoring 'Replace Invocation'. More
     refactoring API will be offered in the plug-in org.eclipse.jdt.core.manipulation
@@ -833,16 +849,7 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154108">154108</a>)
 </p>
 
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Extend Clean Up.</strong>
-    Add formatting, organize import and sort members to 'Clean up',
-    offer clean up profiles, and invoke clean up on user defined events. 
-    [JDT UI]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154109">154109</a>)
-</p>
-
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Enhance Annotation Processing Tooling.</strong>
+<p><strong>Enhance Annotation Processing Tooling.</strong>
     An APT command-line tool should be provided as a complement to the batch
     compiler and/or Ant javac adapter, in addition to the Java IDE support
     within release 3.2. APT should also support the new
@@ -861,34 +868,12 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154110">154110</a>)
 </p>
 
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Compiler API (JSR 199).</strong>
-    In order to conform to the forthcoming tool API for compilers (JSR 199),
-    the Eclipse compiler should provide a front-end implementing the tool API
-    included in Java SE 6. 
-    [JDT Core]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154111">154111</a>)
-</p>
-
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Add more class file targets for compiler.</strong>
+<p><strong>Add more class file targets for compiler.</strong>
     The compiler should support more configurable class file targets, including
     CLDC 1.0, CLDC 1.1 and possibly JSR 14 (generics experimentation for 1.4
     VMs). 
     [JDT Core]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154113">154113</a>)
-</p>
-
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Support for Java SE 6 debug features.</strong>
-    Implement new Java SE 6 features in the Eclipse Java Debug Interface (JDI)
-    client including support for heap walking (retrieve instance counts, all
-    intances of specific types, and all references to an object), forcing an
-    early return from a method with a specific return value, breakpoints for
-    monitor acquisition and release, access to the constant pool, and improved
-    class prepare event filtering.
-    [JDT Debug]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154115">154115</a>)
 </p>
 
 </blockquote>
@@ -914,14 +899,7 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
 <h4>Committed Items (Vista)</h4>
 <blockquote> 
 
-  <p><i>None at this time.</i></p>
-  
-</blockquote>
-
-<h4>Proposed Items (Vista)</h4>
-<blockquote> 
-
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
     <strong>Fully support the win32 version of SWT on Vista.</strong>
     We should ensure that applications built on the win32 version of
     SWT work as well as any other win32 API based application on 
@@ -930,16 +908,31 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154116">154116</a>)
 </p>
 
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed "early access" version)
     <strong>Port SWT to WinFX and WPF.</strong>
     We should port SWT to WinFX and the Windows Presentation Framework. Since
     64-bit systems are becoming increasingly prevalent on the desktop, we should
     ensure that this port is both 64-bit and 32-bit capable.
+    <em>(<img src="new.gif" alt="(new)" border="0" height="12" width="12">
+    Note: In the 3.3 timeframe, we are committed to producing a WPF port
+    that will be suitable for early access style investigation on the platform.
+    Significant follow on performance and feature completeness work (such as 64-bit
+    support) will occur in our next release.)</em>
     [SWT]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154117">154117</a>)
 </p>
 
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+</blockquote>
+<h4>Proposed Items (Vista)</h4>
+<blockquote> 
+
+  <p><i>None at this time.</i></p>
+
+</blockquote>
+<h4>Defered Items (Vista)</h4>
+<blockquote> 
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> defered)
     <strong>Generalize the win32 version of SWT to win64.</strong>
     We should merge the work being done by the Eclipse community to implement
     a win64 implementation of SWT into the main win32 code base. This will
@@ -948,13 +941,6 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     [SWT]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154118">154118</a>)
 </p>
-
-</blockquote>
-
-<h4>Defered Items (Vista)</h4>
-<blockquote> 
-
-  <p><i>None at this time.</i></p>
   
 </blockquote>
 
@@ -972,23 +958,16 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
 <h4>Committed Items (UI Evolution)</h4>
 <blockquote> 
 
-  <p><i>None at this time.</i></p>
-  
-</blockquote>
-
-<h4>Proposed Items (UI Evolution)</h4>
-<blockquote> 
-
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Implement missing text editor productivity features.</strong>
-    We should provide some of the long awaited productivity features that
-    the community has voted for. Examples include double-click-drag to
-    select multiple words, triple-click, extensible hyperlink support
-    and spell checking. [Platform Text, Platform UI, SWT]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154119">154119</a>)
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Investigate background saving of editors.</strong>
+    Modern applications allow editing sessions to be saved in the background,
+    allowing the user to continue editing or close the editor without waiting.
+    We should investigate whether this style of interaction can be built
+    on top of the Eclipse editor framework. [Platform Text, JDT Text, Platform UI]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154122">154122</a>)
 </p>
   
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
     <strong>Improve workbench usability.</strong>
     We should review how users interact with the workbench, such as
     how editors, views, and other screen real-estate are managed
@@ -1002,31 +981,7 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154120">154120</a>)
 </p>
 
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Improve multi-instance view management.</strong>
-    Views such as Search and Synchronize use a drop-down menu to manage 
-    multiple pages. Another possibility would be to use multiple view instances. 
-    However, the presentation and management of these two approaches are different.
-    Multiple view instances should support different view presentations. That is, 
-    the user (or product) should be able to decide whether multiple views use tabs 
-    or a drop-down menu. There are also shortcomings in multi-view management 
-    (e.g., views are managed at the perspective level but some tooling may require 
-    the ability to close a particular view in all perspectives).
-    [UI]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154121">154121</a>)
-</p>
-
-
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Investigate background saving of editors.</strong>
-    Modern applications allow editing sessions to be saved in the background,
-    allowing the user to continue editing or close the editor without waiting.
-    We should investigate whether this style of interaction can be built
-    on top of the Eclipse editor framework. [Platform Text, JDT Text, Platform UI]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154122">154122</a>)
-</p>
-
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
     <strong>JFace Enhancements.</strong>
     Ensure that the reusable components in JFace fully support the SWT
     widget set, such as support for the new custom draw capabilities
@@ -1039,7 +994,7 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154123">154123</a>)
 </p>
 
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
     <strong>Mozilla Everywhere.</strong>
     For situations where the existing, platform-browser-based Browser
     control is not sufficient, we should support embedding of Mozilla on all
@@ -1048,6 +1003,31 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     surface the browser's HTML editing support. 
     [SWT]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154124">154124</a>)
+</p>
+
+</blockquote>
+<h4>Proposed Items (UI Evolution)</h4>
+<blockquote> 
+
+<p><strong>Implement missing text editor productivity features.</strong>
+    We should provide some of the long awaited productivity features that
+    the community has voted for. Examples include double-click-drag to
+    select multiple words, triple-click, extensible hyperlink support
+    and spell checking. [Platform Text, Platform UI, SWT]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154119">154119</a>)
+</p>
+  
+<p><strong>Improve multi-instance view management.</strong>
+    Views such as Search and Synchronize use a drop-down menu to manage 
+    multiple pages. Another possibility would be to use multiple view instances. 
+    However, the presentation and management of these two approaches are different.
+    Multiple view instances should support different view presentations. That is, 
+    the user (or product) should be able to decide whether multiple views use tabs 
+    or a drop-down menu. There are also shortcomings in multi-view management 
+    (e.g., views are managed at the perspective level but some tooling may require 
+    the ability to close a particular view in all perspectives).
+    [UI]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154121">154121</a>)
 </p>
 
 <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
@@ -1059,7 +1039,7 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     presentation, accessibility issues, optional footer for legal information,
     automatic bread crumbs.
     [UA]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=175023">175023</a>) 
 </p>
 
 <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
@@ -1071,7 +1051,7 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     making a web-based cheat sheet renderer to expand their use beyond the
     workbench cheat sheet view.
     [UA, PDE, Doc]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX"><font color="red">XXXXX</font></a>) 
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=175024">175024</a>) 
 </p>
 
 </blockquote>
@@ -1101,14 +1081,7 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
 <h4>Committed Items (API)</h4>
 <blockquote> 
 
-  <p><i>None at this time.</i></p>
-  
-</blockquote>
-
-<h4>Proposed Items (API)</h4>
-<blockquote> 
-
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
     <strong>Generalize editor annotation and ruler support.</strong>
     We should allow plug-ins to contribute additional vertical rulers
     to show additional information (e.g. code coverage). We should
@@ -1118,16 +1091,7 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154125">154125</a>)
 </p>
   
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Adopt the Eclipse File System.</strong>
-    We should ensure that use of the Eclipse File System is pervasive
-    in the platform, and remove any barriers that prevent it from being
-    more widely adopted by the community. For example, we should provide
-    IFileStoreEditorInput and a matching default implementation.
-    [Workspace, UI, Platform Text]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154126">154126</a>)
-</p>
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
     <strong>Adopt the new UI features.</strong>
     We should adopt the following items across the entire SDK UI: the new
     command framework, preference initializers, field assist, SWT column
@@ -1135,8 +1099,8 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     [UI, JDT UI, PDE, Team, Text]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154127">154127</a>)
 </p>
-
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+  
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
     <strong>Provide access to more native controls.</strong>
     We should provide access to more of the native controls that are available
     on each platform, such as date and time pickers, and table header widgets. 
@@ -1146,7 +1110,7 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154128">154128</a>)
 </p>
 
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
     <strong>Custom widget API support.</strong>
     Investigate ways to simplify the process of writing custom widgets,
     including making available, as API, some of the currently internal
@@ -1156,7 +1120,7 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154129">154129</a>)
 </p>
 
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
     <strong>Finish re-work of commands and key bindings.</strong>
     In 3.2, we built some important infrastructure that will allows us to
     rationalize our commands and key bindings story. We need to complete this
@@ -1167,7 +1131,7 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154130">154130</a>)
 </p>
 
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
     <strong>JFace data binding.</strong>
     In 3.2, we developed a data binding framework for JFace but did not
     make it generally available. We should continue to work towards providing a 
@@ -1177,8 +1141,29 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154132">154132</a>)
 </p>
 
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Improve compare.</strong>
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Graphics Improvements.</strong>
+    The SWT graphics layer should provide support for fractional line widths,
+    dashes and fonts, the ability to flatten paths, image loading/saving
+    improvements, and other similar enhancements. 
+    [SWT]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154134">154134</a>)
+</p>
+
+</blockquote>
+<h4>Proposed Items (API)</h4>
+<blockquote> 
+
+<p><strong>Adopt the Eclipse File System.</strong>
+    We should ensure that use of the Eclipse File System is pervasive
+    in the platform, and remove any barriers that prevent it from being
+    more widely adopted by the community. For example, we should provide
+    IFileStoreEditorInput and a matching default implementation.
+    [Workspace, UI, Platform Text]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154126">154126</a>)
+</p>
+
+<p><strong>Improve compare.</strong>
     The Compare plugin has not undergone much work in the last few releases
     and is showing it. From an architectural standpoint, there are several
     Compare internals that need to be made API in order to properly support
@@ -1194,14 +1179,9 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154133">154133</a>)
 </p>
 
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>Graphics Improvements.</strong>
-    The SWT graphics layer should provide support for fractional line widths,
-    dashes and fonts, the ability to flatten paths, image loading/saving
-    improvements, and other similar enhancements. 
-    [SWT]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154134">154134</a>)
-</p>
+</blockquote>
+<h4>Defered Items (API)</h4>
+<blockquote> 
 
 <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
     <strong>APIs for custom debugger integration.</strong>
@@ -1214,17 +1194,8 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     [Platform Debug]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154135">154135</a>)
 </p>
-
-
-</blockquote>
-
-<h4>Defered Items (API)</h4>
-<blockquote> 
-
-  <p><i>None at this time.</i></p>
   
 </blockquote>
-
 <p>(End of items for API.)</p>
 
 <!-- End of Sections by Work Area -->
