@@ -696,16 +696,6 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
 </p>
 
 <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
-    <strong>Platform level proxy settings.</strong>
-    There are at least three proxy settings pages in Callisto. We will work with
-    the Eclipse community to make sure that the core capabilities from these
-    pages are made available at the Platform level, as a single settings
-    page that can be consumed by all.
-    [Runtime, Team, Update, UI]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154100">154100</a>)
-</p>
-
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
     <strong>GTK Printing.</strong>
     We will provide printing support on GTK. 
     [SWT]
@@ -743,6 +733,15 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     large amounts of data.
     [All components]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154106">154106</a>)
+</p>
+
+<p><strong>Platform level proxy settings.</strong>
+    There are at least three proxy settings pages in Callisto. We will work with
+    the Eclipse community to make sure that the core capabilities from these
+    pages are made available at the Platform level, as a single settings
+    page that can be consumed by all.
+    [Runtime, Team, Update, UI]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154100">154100</a>)
 </p>
 
 <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
@@ -1142,6 +1141,23 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
 </p>
 
 <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Improve compare.</strong>
+    The Compare plugin has not undergone much work in the last few releases
+    and is showing it. From an architectural standpoint, there are several
+    Compare internals that need to be made API in order to properly support
+    clients and there are also several polish items that have been identified
+    by Eclipse development teams. In addition, new ISaveable support was added
+    in 3.2 and we should investigate integrating this into Compare. From a
+    usability standpoint, the compare editor uses a custom viewer for content
+    which appears similar to the related editor but has a reduced capability
+    which is often confusing for users. Smaller usability issues involve
+    breaking out the outline from the editor into the Outline view. There is
+    supported by compare but is not used by Team or other Platform clients.
+    [Team]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154133">154133</a>)
+</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
     <strong>Graphics Improvements.</strong>
     The SWT graphics layer should provide support for fractional line widths,
     dashes and fonts, the ability to flatten paths, image loading/saving
@@ -1161,22 +1177,6 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     IFileStoreEditorInput and a matching default implementation.
     [Workspace, UI, Platform Text]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154126">154126</a>)
-</p>
-
-<p><strong>Improve compare.</strong>
-    The Compare plugin has not undergone much work in the last few releases
-    and is showing it. From an architectural standpoint, there are several
-    Compare internals that need to be made API in order to properly support
-    clients and there are also several polish items that have been identified
-    by Eclipse development teams. In addition, new ISaveable support was added
-    in 3.2 and we should investigate integrating this into Compare. From a
-    usability standpoint, the compare editor uses a custom viewer for content
-    which appears similar to the related editor but has a reduced capability
-    which is often confusing for users. Smaller usability issues involve
-    breaking out the outline from the editor into the Outline view. There is
-    supported by compare but is not used by Team or other Platform clients.
-    [Team]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154133">154133</a>)
 </p>
 
 </blockquote>
@@ -1350,6 +1350,12 @@ for the 3.3 release, where the value is one of:</p>
       </td>
     </tr>
     <tr>
+      <td>org.eclipse.core.contenttype</td>
+      <td>
+      <div align="center">F1.0</div>
+      </td>
+    </tr>
+    <tr>
       <td>org.eclipse.core.expressions</td>
       <td>
       <div align="center">F1.0</div>
@@ -1365,6 +1371,12 @@ for the 3.3 release, where the value is one of:</p>
       <td>org.eclipse.core.filesystem</td>
       <td>
       <div align="center">1.4</div>
+      </td>
+    </tr>
+    <tr>
+      <td>org.eclipse.core.jobs</td>
+      <td>
+      <div align="center">F1.0</div>
       </td>
     </tr>
     <tr>
@@ -1407,6 +1419,12 @@ for the 3.3 release, where the value is one of:</p>
       <td>org.eclipse.debug.ui</td>
       <td>
       <div align="center">1.4</div>
+      </td>
+    </tr>
+    <tr>
+      <td>org.eclipse.equinox.launcher</td>
+      <td>
+      <div align="center">F1.0</div>
       </td>
     </tr>
     <tr>
@@ -1875,12 +1893,6 @@ for the 3.3 release, where the value is one of:</p>
       <td>org.junit (JUnit4)</td>
       <td>
       <div align="center">1.5</div>
-      </td>
-    </tr>
-    <tr>
-      <td>startup.jar</td>
-      <td>
-      <div align="center">F1.0</div>
       </td>
     </tr>
   </tbody>
