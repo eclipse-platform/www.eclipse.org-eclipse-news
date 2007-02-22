@@ -1,13 +1,13 @@
-/*******************************************************************************
- * Copyright (c) 2005 IBM Corporation and others.
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
+/**********************************************************************
+ * Copyright (c) 2005, 2006 IBM Corporation and others. All rights reserved.   This
+ * program and the accompanying materials are made available under the terms of
+ * the Common Public License v1.0 which accompanies this distribution, and is
+ * available at http://www.eclipse.org/legal/cpl-v10.html
  * 
- * Contributors:
- *     IBM Corporation - initial API and implementation
- *******************************************************************************/
+ * Contributors: 
+ * IBM - Initial API and implementation
+ * Tianchao Li (lit@in.tum.de) - Partially fix bug #137878
+ **********************************************************************/
 package org.eclipse.core.internal.filesystem.ftp;
 
 import java.net.MalformedURLException;
@@ -34,7 +34,7 @@ public class FTPFileSystem extends FileSystem {
 
 	public IFileStore getStore(URI uri) {
 		try {
-			return new FTPFile(uri.toURL(), Path.ROOT);
+			return new FTPFile(uri.toURL(), Path.EMPTY);
 		} catch (MalformedURLException e) {
 			throw new IllegalArgumentException(e.getMessage());
 		}

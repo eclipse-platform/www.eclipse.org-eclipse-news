@@ -1,13 +1,13 @@
-/*******************************************************************************
- * Copyright (c) 2005 IBM Corporation and others.
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
+/**********************************************************************
+ * Copyright (c) 2005, 2006 IBM Corporation and others. All rights reserved.   This
+ * program and the accompanying materials are made available under the terms of
+ * the Common Public License v1.0 which accompanies this distribution, and is
+ * available at http://www.eclipse.org/legal/cpl-v10.html
  * 
- * Contributors:
- *     IBM Corporation - initial API and implementation
- *******************************************************************************/
+ * Contributors: 
+ * IBM - Initial API and implementation
+ * Tianchao Li (lit@in.tum.de) - Partially fix bug #137878
+ **********************************************************************/
 package org.eclipse.core.internal.filesystem.ftp;
 
 import java.io.*;
@@ -26,6 +26,23 @@ public class FTPFile extends FileStore {
 	protected final IPath relativePath;
 	protected final URL root;
 
+	/* requirement of root and relativePath
+	   root:
+	    (correct)
+	    "ftp://ftp.leo.org" 
+	    "ftp://ftp.leo.org/test" 
+	    (probably correct)
+	    "ftp://ftp.leo.org/"
+	    "ftp://ftp.leo.org/test/"
+	   relativePath:
+	    (correct)
+	    ""
+	    "test/welcome.txt"
+	    "welcome.txt"
+	    (probably wrong?)
+	    "/test/welcome.txt"
+	    "/welcome.txt"
+	*/
 	public FTPFile(URL root, IPath relativePath) {
 		this.root = root;
 		this.relativePath = relativePath;
@@ -54,8 +71,7 @@ public class FTPFile extends FileStore {
 	}
 
 	private IFileInfo createMissingInfo(String myName) {
-		FileInfo info = new FileInfo();
-		info.setName(myName);
+		FileInfo info = new FileInfo(myName);
 		info.setExists(false);
 		return info;
 	}
@@ -102,7 +118,7 @@ public class FTPFile extends FileStore {
 		IDirectoryEntry[] entries = listFiles(monitor, true);
 		for (int i = 0; i < entries.length; i++) {
 			if (entries[i].getName().equals(".")) {//$NON-NLS-1$
-				FileInfo info = (FileInfo)FTPUtil.entryToFileInfo(entries[i]);
+				FileInfo info = FTPUtil.entryToFileInfo(entries[i]);
 				info.setName(getName());
 				return info;
 			}
@@ -216,7 +232,7 @@ public class FTPFile extends FileStore {
 
 	public URI toURI() {
 		try {
-			return new URI("ftp", root.toExternalForm(), relativePath.toString(), null); //$NON-NLS-1$
+			return (new URI(toString()));
 		} catch (URISyntaxException e) {
 			throw new RuntimeException(e);
 		}

@@ -1,18 +1,17 @@
-/*******************************************************************************
- * Copyright (c) 2005 IBM Corporation and others.
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
+/**********************************************************************
+ * Copyright (c) 2005, 2006 IBM Corporation and others. All rights reserved.   This
+ * program and the accompanying materials are made available under the terms of
+ * the Common Public License v1.0 which accompanies this distribution, and is
+ * available at http://www.eclipse.org/legal/cpl-v10.html
  * 
- * Contributors:
- *     IBM Corporation - initial API and implementation
- *******************************************************************************/
+ * Contributors: 
+ * IBM - Initial API and implementation
+ * Tianchao Li (lit@in.tum.de) - Partially fix bug #137878
+ **********************************************************************/
 package org.eclipse.core.internal.filesystem.ftp;
 
 import java.net.URL;
 import org.eclipse.core.filesystem.EFS;
-import org.eclipse.core.filesystem.IFileInfo;
 import org.eclipse.core.filesystem.provider.FileInfo;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.SubProgressMonitor;
@@ -28,7 +27,7 @@ public class FTPUtil {
 		IClient client = Ftp.createClient(url);
 		client.setDataTransferMode(IClient.PASSIVE_DATA_TRANSFER, true);
 		client.setAuthentication(KeyRing.USER, KeyRing.PASS);
-		client.setTimeout(5);
+		client.setTimeout(30);
 		return client;
 	}
 
@@ -53,7 +52,14 @@ public class FTPUtil {
 		if (openClient == null) {
 			openClient = createClient(url);
 			openClient.open(new SubProgressMonitor(monitor, 5));
-			openClient.changeDirectory(url.getPath(), new SubProgressMonitor(monitor, 5));
+			String path = url.getPath();
+			if (path.length() >0) {
+				try {
+					openClient.changeDirectory(path, new SubProgressMonitor(monitor, 5));
+				} catch (Exception e) {
+					System.out.println("cannot change into path " + path);
+				}
+			}
 			openClients.set(openClient);
 		}
 		runnable.run(new SubProgressMonitor(monitor, 90));
@@ -65,10 +71,9 @@ public class FTPUtil {
 	 * @param entry
 	 * @return The file information for a directory entry
 	 */
-	public static IFileInfo entryToFileInfo(IDirectoryEntry entry) {
-		FileInfo info = new FileInfo();
+	public static FileInfo entryToFileInfo(IDirectoryEntry entry) {
+		FileInfo info = new FileInfo(entry.getName());
 		info.setExists(true);
-		info.setName(entry.getName());
 		info.setLastModified(entry.getModTime().getTime());
 		info.setLength(entry.getSize());
 		info.setDirectory(entry.hasDirectorySemantics());
