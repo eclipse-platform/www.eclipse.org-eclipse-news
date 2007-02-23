@@ -442,33 +442,14 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
 <h4>Committed Items (Components)</h4>
 <blockquote> 
 
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
-    <strong>Bundle/Module Development Tools.</strong>
-    In 3.1 and 3.2 PDE made gigantic strides in support for
-    traditional OSGi bundle development. Even still, in 3.3. we will improve
-    various workflows and classpath management strategies to promote the
-    development of robust and independent right-grained components. This
-    covers everything from increased quick-fix and manifest editing support
-    to deeper integration with JDT (e.g., support for searching JARs that
-    are not in the workspace without implicitly importing the JARs). In
-    addition, as JSR 291 evolves in the Java SE 6 time frame, PDE will be
-    there to provide developer support. 3.3 will include tooling around OSGi
-    Declarative Services and the new application model as well as improved
-    support for launching other frameworks, Java applications with bundle
-    based classpaths and "hot launching" frameworks.
-    [PDE]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154079">154079</a>) 
-</p>
-      
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed, wording has changed)
     <strong>Target Provisioning.</strong>
     Currently, users wanting additional function supplied by others must
     manually acquire and install these additional bundles in their target
     platform.  This process is tiresome and error-prone.  As an extension
     to the proposed provisioning work, we will add the ability to provision
     targets directly from bundle repositories as well as from other locations
-    on the local machine.  As part of this the mechanism by which source is
-    packaged, acquired and looked up will be reviewed and streamlined.
+    on the local machine.
     [<img src="new.gif" alt="(new)" border="0" height="12" width="12">
     PDE]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154081">154081</a>) 
@@ -503,8 +484,8 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     their active participation in these specification processes and keep Eclipse
     on the leading edge of Java componentization.
     <em>(<img src="new.gif" alt="(new)" border="0" height="12" width="12">
-    Note that originally this plan item targeted R5 but the next version of the
-    spec is going to be R4.1 so we have updated this item accordingly.)</em>
+    Note that originally this plan item referenced "OSGi R5" but the next version
+    of the spec is going to be called "R4.1" so we have updated the item accordingly.)</em>
     [Equinox]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154085">154085</a>) 
 </p>
@@ -606,6 +587,27 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
 </p>
   
 <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> defered)
+    <strong>Bundle/Module Development Tools.</strong>
+    In 3.1 and 3.2 PDE made gigantic strides in support for
+    traditional OSGi bundle development. Even still, in 3.3. we will improve
+    various workflows and classpath management strategies to promote the
+    development of robust and independent right-grained components. This
+    covers everything from increased quick-fix and manifest editing support
+    to deeper integration with JDT (e.g., support for searching JARs that
+    are not in the workspace without implicitly importing the JARs). In
+    addition, as JSR 291 evolves in the Java SE 6 time frame, PDE will be
+    there to provide developer support. 3.3 will include tooling around OSGi
+    Declarative Services and the new application model as well as improved
+    support for launching other frameworks, Java applications with bundle
+    based classpaths and "hot launching" frameworks.
+    <em>(<img src="new.gif" alt="(new)" border="0" height="12" width="12">
+    Note: significant work was done on this item, but not enough to cover
+    it's full scope. See the bug for more info.)</em>
+    [PDE]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154079">154079</a>) 
+</p>
+      
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> defered)
     <strong>Incremental Plug-in Build.</strong>
     With the increase in plug-ins coming from and going to third parties the
     development cycle needs to be more incremental.  In the Eclipse project
@@ -696,6 +698,16 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
 </p>
 
 <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Platform level proxy settings.</strong>
+    There are at least three proxy settings pages in Callisto. We will work with
+    the Eclipse community to make sure that the core capabilities from these
+    pages are made available at the Platform level, as a single settings
+    page that can be consumed by all.
+    [Runtime, Team, Update, UI]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154100">154100</a>)
+</p>
+
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
     <strong>GTK Printing.</strong>
     We will provide printing support on GTK. 
     [SWT]
@@ -733,15 +745,6 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     large amounts of data.
     [All components]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154106">154106</a>)
-</p>
-
-<p><strong>Platform level proxy settings.</strong>
-    There are at least three proxy settings pages in Callisto. We will work with
-    the Eclipse community to make sure that the core capabilities from these
-    pages are made available at the Platform level, as a single settings
-    page that can be consumed by all.
-    [Runtime, Team, Update, UI]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154100">154100</a>)
 </p>
 
 <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
@@ -793,15 +796,17 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
 <h4>Committed Items (Java)</h4>
 <blockquote> 
 
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed, wording has changed)
     <strong>Enhance launching support.</strong>
     We should simplify the launch experience for novice users with single
-    click context sensitive launching, simple launch configurations
-    managed via resource properties, and user configurable toolbar buttons
-    to invoke favorite launch configurations. For advanced users, we should
-    allow plug-ins to contribute additional pages to launch configurations
-    so that plug-in specific information (such as profiling and code
-    coverage settings) can be associated with each configuration.
+    click, context sensitive launching, and with launch configurations
+    managed via resource properties. For advanced scenarios, we should
+    allow plug-ins to contribute additional pages to launch configurations so
+    that plug-in specific information (such as profiling and code coverage settings)
+    can be associated with each configuration. Additionally we should support
+    mixed mode launching, and allow more than one plug-in to contribute launchers
+    for the same configuration type and mode (allowing the user to select a
+    preferred launcher). 
     [Debug]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154107">154107</a>)
 </p>
@@ -823,14 +828,13 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154111">154111</a>)
 </p>
 
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed, wording has changed)
     <strong>Support for Java SE 6 debug features.</strong>
     Implement new Java SE 6 features in the Eclipse Java Debug Interface (JDI)
     client including support for heap walking (retrieve instance counts, all
     intances of specific types, and all references to an object), forcing an
-    early return from a method with a specific return value, breakpoints for
-    monitor acquisition and release, access to the constant pool, and improved
-    class prepare event filtering.
+    early return from a method with a specific return value, and improved class
+    prepare event filtering.
     [JDT Debug]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154115">154115</a>)
 </p>
@@ -1004,6 +1008,16 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154124">154124</a>)
 </p>
 
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new, committed)
+    <strong>UI Forms face-lift</strong>
+    UI Forms will be refreshed visually and functionally. Color management will be
+    revised to increase consistency of color across all the platforms Eclipse runs
+    on. Enhancements will be made to both the header area and field decoration support.
+    Eclipse SDK clients of UI Forms will take advantage of the new capabilities.
+    [UA, PDE]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=175158">175158</a>)
+</p>
+
 </blockquote>
 <h4>Proposed Items (UI Evolution)</h4>
 <blockquote> 
@@ -1166,6 +1180,17 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154134">154134</a>)
 </p>
 
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed, wording has changed)
+    <strong>APIs for custom debugger integration.</strong>
+    Publish public APIs based on the provisional APIs introduced in 3.2 to
+    support custom debugger integration. Features include a debug context
+    service supporting retargettable actions and debug command handlers
+    (for operations such as step and terminate), custom detail panes in the
+    variables view, flexible view wiring and pluggable source lookup. 
+    [Platform Debug]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154135">154135</a>)
+</p>
+
 </blockquote>
 <h4>Proposed Items (API)</h4>
 <blockquote> 
@@ -1183,17 +1208,7 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
 <h4>Defered Items (API)</h4>
 <blockquote> 
 
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> new)
-    <strong>APIs for custom debugger integration.</strong>
-    Publish public APIs based on the provisional APIs introduced in 3.2 to
-    support custom debugger integration. Features include flexible hierarchy
-    in debug views; asynchronous, cancellable interactions when retrieving
-    content and labels; model-driven view updates; a debug context service
-    for retargettable actions, flexible view wiring and pluggable source
-    lookup.
-    [Platform Debug]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154135">154135</a>)
-</p>
+  <p><i>None at this time.</i></p>
   
 </blockquote>
 <p>(End of items for API.)</p>
@@ -1500,12 +1515,6 @@ for the 3.3 release, where the value is one of:</p>
       </td>
     </tr>
     <tr>
-      <td>org.eclipse.jdt.core</td>
-      <td>
-      <div align="center">1.4</div>
-      </td>
-    </tr>
-    <tr>
       <td>org.eclipse.jdt.apt.core</td>
       <td>
       <div align="center">1.5</div>
@@ -1515,6 +1524,18 @@ for the 3.3 release, where the value is one of:</p>
       <td>org.eclipse.jdt.apt.ui</td>
       <td>
       <div align="center">1.5</div>
+      </td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jdt.core</td>
+      <td>
+      <div align="center">1.4</div>
+      </td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jdt.core.manipulation</td>
+      <td>
+      <div align="center">1.4</div>
       </td>
     </tr>
     <tr>
@@ -1544,13 +1565,19 @@ for the 3.3 release, where the value is one of:</p>
     <tr>
       <td>org.eclipse.jdt.junit</td>
       <td>
-      <div align="center">1.4/1.5</div>
+      <div align="center">1.4</div>
       </td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.junit.runtime</td>
       <td>
-      <div align="center">1.4/1.5</div>
+      <div align="center">1.4</div>
+      </td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jdt.junit4.runtime</td>
+      <td>
+      <div align="center">1.5</div>
       </td>
     </tr>
     <tr>
@@ -1568,7 +1595,7 @@ for the 3.3 release, where the value is one of:</p>
     <tr>
       <td>org.eclipse.jdt.ui</td>
       <td>
-      <div align="center">1.4/1.5</div>
+      <div align="center">1.4</div>
       </td>
     </tr>
     <tr>
@@ -1586,13 +1613,13 @@ for the 3.3 release, where the value is one of:</p>
     <tr>
       <td>org.eclipse.ltk.core.refactoring</td>
       <td>
-      <div align="center">1.4/1.5</div>
+      <div align="center">1.4</div>
       </td>
     </tr>
     <tr>
       <td>org.eclipse.ltk.ui.refactoring</td>
       <td>
-      <div align="center">1.4/1.5</div>
+      <div align="center">1.4</div>
       </td>
     </tr>
     <tr>
