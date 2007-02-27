@@ -29,7 +29,7 @@
 
   <tr> 
     <td WIDTH="100%"> 
-    <p>Last revised 12:15 CET February 27, 2007</p>
+    <p>Last revised 12:35 CET February 27, 2007</p>
 
     
       <p>This plan is under continuous refinement. Please send comments about this draft plan to the <a href="mailto:platform-text@eclipse.org">platform-text@eclipse.org</a> developer mailing list.</p>
@@ -121,6 +121,7 @@
 		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <committed>warn if the user types into a derived file (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=148931">bug 148931</a>)</committed></li>
 		<li><img src="../images/ok.gif" border="0" height="10" width="10"> text drag and drop (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=11624">bug 11624</a></li>
 		<li><img src="../images/ok.gif" border="0" height="10" width="10"> show invisible characters (look at the provided patch) [experimental]</li>
+		<li>add ability to join lines</li>
 		<li>Last Edit Position history</li>
 		<li>restore editor selection on restart (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=124615">bug 124615</a>, depends on Platform UI <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=44295">bug 44295</a>).</li>
 	</ul></li>
@@ -147,7 +148,7 @@
 	
 	<li><h4>Miscellaneous</h4>
 	<ul>
-		<li><committed>open up file buffers to URIs</committed></li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <committed>open up file buffers to URIs</committed></li>
 		<li>add support for <code>ISaveableModelSource</code> (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=131068">bug 131068</a>)</li>
 		<li>revisit the text viewer's support for redraw, compound updates, and selection preservation
 		<ul>
@@ -189,8 +190,8 @@
 	
 	<li><h4>Quick views</h4>
 	<ul>
-		<li><committed>allow to open on any Java element from any view (e.g. from the Package Explorer or Outline view)</committed></li>
-		<li><committed>show additional info (e.g. Javadoc)</committed></li>
+		<li><committed>allow to open Quick Hierarchy on any Java element from any view (e.g. from the Package Explorer or Outline view)</committed></li>
+		<li><font class="indexsub" color="#8080ff">[&gt;3.3]</font> <committed>show additional info (e.g. Javadoc)</committed></li>
 		<li>context menu on its items [experimental]</li>
 	</ul></li>
 
@@ -273,40 +274,40 @@
 
 
 <tr>
-    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#595791"><font face="Arial,Helvetica"><font color="#FFFFFF"><a name="Milestone_Planning">Milestone M5 (2007-2-9)</font></font></td>
+    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#595791"><font face="Arial,Helvetica"><font color="#FFFFFF"><a name="Milestone_Planning">Milestone M7 (2007-3-23)</font></font></td>
 </tr>
 
   <tr> 
     <td WIDTH="100%"> 
 	<p>
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Pluggable Hyperlink Detectors</h4>
-	<em>The work for this item might change in case <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=156219">bug 156219</a> will be resolved by Platform UI.</em>
 	<ul>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> allow to contribute (extension-point) and configure hyperlinking (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=88293">bug 88293</a>)</li>
-		<li>(allow to present more than one hyperlink target for a given text range)</li>
+		<li>provide a way to resolve conflicting hyperlink detectors</li>
 	</ul>
 	
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Support For URIs</h4>
 	<ul>
-		<li><font class="indexsub" color="#8080ff">[3.3 M6]</font> <img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> adopt <code>IURIEditorInput and <code>FileStoreEditorInput</code></li>
-		<li><font class="indexsub" color="#8080ff">[&gt;3.3 M6]</font> open up file buffers to URIs</li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> adopt <code>IURIEditorInput</code> and <code>FileStoreEditorInput</code> and get rid of <code>JavaFileEditorInput</code></li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> move the functionality to open an external file down to Platform IDE</li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> open up file buffers to URIs</li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> improve file buffer manager performance</li>
 	</ul>
 	
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Spell Checking in Text Editors</h4>
 	<ul>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> make the JDT spelling engine encoding aware</li>
-		<li><font class="indexsub" color="#8080ff"> [&gt;3.3 M6]</font> provide an easy way to get a dictionary</li>
+		<li>provide an easy way to get a dictionary</li>
+	</ul>
+	
+	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Typing</h4>
+	<ul>
+		<li>add ability to join lines (review and apply contributed patch) (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=41573">bug 41573</a>)</li>
+		<li>add triple-click feature (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=14654">bug 14654</a>)</li>
 	</ul>
 	
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Miscellaneous</h4>
 	<ul>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> 3.2.2 full day test pass (1 day)</li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> finalize all APIs that have been introduced during 3.3</li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> code assist for references that require static imports (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=152123">bug 152123</a>)</li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> fix high-contrast preference page layouting bugs</li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> restore editor selection on restart (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=124615">bug 124615</a>)</li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> only ask to save when last editor for a document gets closed (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=131068">bug 131068</a> and <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=167607">bug 167607</a>)</li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> text drag and drop (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=11624">bug 11624)</a></li>
+		<li><img src="../images/glass.gif" border="0" height="10" width="10"> improve constructor completion (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=6930">bug 6930</a>)</li>
+		<li>push down information presentation (F2) to Platform Text (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=149519">bug 149519</a>)</li>
 		<li>(push down spaces for Tab preference to Platform Text)</li>
 	</ul>
 	
@@ -320,9 +321,7 @@
 	
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Absences</h4>
 	<ul>
-		<li>4 local holidays</li>
-		<li>1 day vacation</li>
-		<li>1 day training</li>
+		<li>5 days vacation</li>
 	</ul>
       
 	<h3>Previous Milestones</h3>
