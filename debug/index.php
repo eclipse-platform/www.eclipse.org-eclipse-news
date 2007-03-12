@@ -73,6 +73,9 @@
 		<div class="homeitem3col">
 			<h3>Up To The Minute</h3>
 			<ul>
+			<li>EclipseCon 2007 went off without a hitch, and the debug team delivered <a href="/eclipse/debug/documents/ec_2007/Debug_Tutorial_2007.pdf">another tutorial</a>. More
+			information can be found on the <a href="/eclipse/debug/documents.php">Documents</a> page along with exercises.
+			</li>
 			<li><a href="/eclipse/debug/fifth_bday.php">Eclipse is five years old!!!</a> The debug team put on a party for the local academic community in Winnipeg MB Canada.
 			<li>Platform Debug overall <a href="/eclipse/debug/platform/dev_plans/r3_3-plan.php">3.3 plan</a></li>
 			<li>JDT Debug overall <a href="/eclipse/debug/jdt/dev_plans/r3_3-plan.php">3.3 plan</a></li>

@@ -33,20 +33,42 @@
 		<div class="homeitem3col">
 			<h3>EclipseCon Presentations</h3>
 			<ul>
-				<li>EclipseCon 2005 - <a target="_blank" href="/eclipse/debug/documents/debugger_eclipsecon_2005.pdf">Debug Platform / Java Debugger 3.1</a></li>
-				<li>EclipseCon 2006 - <a target="_blank" href="/eclipse/debug/documents/debugger_Supporting-a-Community-of-Debuggers.pdf">The Eclipse 3.2 Debug Platform: Supporting a community of debuggers</a></li>
-				<li>EclipseCon 2006 - <a target="_blank" href="/eclipse/debug/documents/debugger_Advanced-Debug-Tutorial.pdf">Integrating Custom Debuggers into the Eclipse Platform</a><br>
+				<li>EclipseCon 2005 <br>
 					<blockquote>
-					<p>The associated exercises are available <a href="/eclipse/debug/documents/EC2006_exercises-advanced-tutorial.php">here</a></p>
-					<p>The source code of the filebrowser exercises are available <a href="/eclipse/debug/documents/debug-tutorial-62.zip">here</a></p>					
-					<p>The source code of the Memory View exercises are available <a href="/eclipse/debug/documents/exercise-source-mem.zip">here</a></p>
-					</blockquote></li>
-				<li>EclipseCon 2006 - <a target="_blank" href="/eclipse/debug/documents/debugger_Basic-Debug-Tutorial.pdf">The Eclipse Debug Framework</a><br>
+						<a target="_blank" href="/eclipse/debug/documents/ec_2005/debugger_eclipsecon_2005.pdf">Debug Platform / Java Debugger 3.1</a>
+					</blockquote>
+				</li>
+				<li>EclipseCon 2006 <br>
+					For EclipseCon 2006 there were three tutorials given, each with a set of exercises, as described below.
 					<blockquote>
-					<p>The associated exercises are available <a href="/eclipse/debug/documents/EC2006_exercises-basic-tutorial.php">here</a></p>
-					<p>The source code of the exercises are available <a href="/eclipse/debug/documents/example.zip">here</a></p>
-					</blockquote></li>
-			</ul>
+						<a target="_blank" href="/eclipse/debug/documents/ec_2006/debugger_Basic-Debug-Tutorial.pdf">The Eclipse Debug Framework</a><br>
+						<blockquote>
+							<p>The basic exercises are available <a href="/eclipse/debug/documents/ec_2006/Exercises-Debugger.zip">here</a></p>
+						</blockquote>
+						<a target="_blank" href="/eclipse/debug/documents/ec_2006/debugger_Supporting-a-Community-of-Debuggers.pdf">The Eclipse 3.2 Debug Platform: Supporting a community of debuggers</a><br>
+						<blockquote>
+							<p>The Memory View exercises are available <a href="/eclipse/debug/documents/ec_2006/Exercises-MemoryView.zip">here</a></p>
+						</blockquote>
+						<a target="_blank" href="/eclipse/debug/documents/ec_2006/debugger_Advanced-Debug-Tutorial.pdf">Integrating Custom Debuggers into the Eclipse Platform</a><br>
+						<blockquote>
+							<p>The Filebrowser exercises are available <a href="/eclipse/debug/documents/ec_2006/Exercises-FileBrowser.zip">here</a></p>
+						</blockquote>
+					</blockquote>
+				</li>
+				<li> EclipseCon 2007 <br>
+					For EclipseCon 2007, there was only one tutorial given, with no execises done in class. But the associated execises
+					are provided below.
+					<blockquote>
+						<a target="_blank" href="/eclipse/debug/documents/ec_2007/Debug_Tutorial_2007.pdf">A Tour of the Eclipse Debug Framework</a><br>
+						<blockquote>
+							<p>The basic exercises are available <a href="/eclipse/debug/documents/ec_2007/Exercise-Debugger.zip">here</a></p>
+							<p>The Filebrowser exercises are available <a href="/eclipse/debug/documents/ec_2007/Exercise-FileBrowser.zip">here</a></p>
+							<p>The Memory View exercises are available <a href="/eclipse/debug/documents/ec_2007/Exercise-MemoryView.zip">here</a></p>
+						</blockquote>
+					</blockquote>
+				
+				</li>
+ 			</ul>
 		</div>
 		<div class="homeitem3col">
 			<h3>Miscellaneous Documents</h3>
