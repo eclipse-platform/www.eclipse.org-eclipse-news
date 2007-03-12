@@ -27,7 +27,7 @@
 		<div class="homeitem3col">
 			<h3>Articles</h3>
 			<ul>
-				
+				<li>Launching has changed, and we have a document describing these changes and the current implementation of <a target="_blank" href="/eclipse/debug/documents/Context-launching.pdf">Context Launching</a></li>
 			</ul>
 		</div>
 		<div class="homeitem3col">
@@ -64,7 +64,6 @@
 							The Memory View exercises are available <a href="/eclipse/debug/documents/ec_2007/Exercise-MemoryView.zip">here</a></p>
 						</blockquote>
 					</blockquote>
-				
 				</li>
  			</ul>
 		</div>
