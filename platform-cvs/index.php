@@ -70,6 +70,7 @@
 			<ul>
 			<li>Any work planned for CVS is 3.3 will appear on the 
 			<a href="http://www.eclipse.org/eclipse/platform-team/team3.3/plan.php">Team 3.3 Development plan</a></li>
+			<li>3.3 <a href="r3.3/test_plan.html">test</a> plan.</li>
 			</ul>
 			</p>
 			<p><img SRC="http://dev.eclipse.org/images/Adarrow.gif" NOSAVE BORDER=0 height=16 width=16>&nbsp;<b>3.2 Development</b>
