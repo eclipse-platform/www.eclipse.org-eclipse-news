@@ -88,12 +88,28 @@
 			    <td><b>Natasha D'Silva</b></td>
 			  </tr>
 			  <tr> 
+			    <td><a href="#Java6">Java 6.0 Features</a></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td> <div align="center"></div></td>
+			  </tr>
+			  <tr> 
 			    <td><a href="#Evaluations">Evaluations</a></td>
 			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
+			  </tr>
+			  <tr> 
+			    <td><a href="#ContextLaunching">Context Launching</a></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Launch">Launch Options</a></td>
@@ -128,7 +144,7 @@
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			  </tr>
 			  <tr> 
-			    <td><a href="#Run">Run to Line</a></td>
+			    <td><a href="#Step">Stepping Tests</a></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td><div align="center"></div></td>
 			    <td> <div align="center"></div></td>
@@ -270,6 +286,35 @@
 		</div>
 		<div class="homeitem3col">
 			<h3>Feature Testing</h3>
+			<a name="Java6"></a>
+			<h4>Java 6.0 Features</h4>
+				<ul>
+					<li> All Instances
+						<ul>
+							<li>Should not be available when not debugging with 1.6 VM</li>
+							<li>Variables view popup</li>
+							<li>Java Outline view popup (type and constructors only)</li>
+							<li>Java editor popup (type name or constructor name selected)</li>
+							<li>Change number of instances to show on Heap walking preference page</li>
+						</ul>
+					</li>
+					<li> All References
+						<ul>
+							<li>Should not be available when not debugging with 1.6 VM</li>
+							<li>Variables view popup</li>
+							<li>In-line as variable in the variables view (change in view preferences and preference page)</li>
+						</ul>
+					</li>
+					<li> Force Early Return
+						<ul>
+							<li>Should not be available when not debugging with 1.6 VM</li>
+							<li>Works as an evaluation (from display and details pane)</li>
+							<li>Run menu and key binding</li>
+							<li>Java editor context menu</li>
+						</ul>
+					</li>
+				</ul>
+				<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Evaluations"></a>
 			<h4>Evaluations</h4>
 				<ul>
@@ -307,6 +352,49 @@
 				    view</li>
 				  <li>In a clean workspace, popups should size reasonable on the first use, after which 
 				    the popup sizes are persisted and reused</li>
+				</ul>
+				<p><a href="#top">Back to top</a><br><hr></p>
+			<a name="ContextLaunching"></a>
+			<h4>Context Launching</h4>
+				<ul>
+					<li> Resource properties page
+						<ul>
+							<li>Available on launchable resources</li>
+							<li>Only show listing of launch configurations that apply to selected resource</li>
+							<li>Create/delete/edit configuration</li>
+							<li>Changes to configurations are cancelable</li>
+						</ul>
+					</li>
+					<li>Launching
+						<ul>
+							<li>Launch button(s) tooltip(s) should track selection changes (update as selections change)</li>
+							<li>Non-launchable resource should prompt to run the parent (if set to do so, toggle pref on Launching preference page)</li>
+							<li>
+								<p>
+									Running and debugging applications has been simplified 
+								    to run or debug the selected file or active editor. Use the &quot;Run/Debug 
+								    &gt; Launching &gt; Launch the selected resource or active editor&quot; 
+								    preference to enable this behavior. When the selected resource (or active 
+								    editor) is not executable, you can opt to launch the associated project 
+								    by selecting &quot;Always launch project if selected resource cannot be 
+								    launched&quot;.
+								</p>
+								<p>
+									Pressing the Run or Debug toolbar button will launch the selected resource 
+									(as will the Run or Debug action in the top level Run menu). When no launch 
+									configuration exists for the selected resource, you will be prompted to 
+									select how to run or debug an application if there is more than one way 
+									to launch the selection. For example, when running a JUnit test you can 
+									launch it as a Java application or JUnit test. This will create a launch 
+									configuration and entry in the launch history for the application.
+								</p>
+								<p>
+									When the same resource is launched again, the most recent configuration 
+									in the launch history associated with that resource is re-launched.
+								</p>
+							</li>
+						</ul>
+					</li>
 				</ul>
 				<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Launch"></a>
@@ -487,8 +575,8 @@
 				  <li>Preference for suspending Thread by default on newly created breakpoints</li>
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
-			<a name="Run"></a>
-			<h4>Run to Line </h4>
+			<a name="Step"></a>
+			<h4>Stepping Tests</h4>
 				<ul>
 				  <li>Run to Line
 				    <ul>
@@ -499,6 +587,21 @@
 				        Run/Debug pref page)</li>
 				    </ul>
 				  </li>
+				  <li> Step Into Selection
+				  	<ul>
+				  		<li>Run menu action and keybinding</li>
+				  		<li>Hyperlink action using Ctrl+Alt+Click</li>
+				  	</ul>
+				  </li>
+				  <li> Step Filters
+				  	<ul>
+				  		<li>Step filters on/off should affect stepping (no stepping within filtered types)</li>
+				  		<li>Toggle step filters action</li>
+				  		<li>Edit step filters via context menu, preference page</li>
+				  		<li>Persistence of step filters, view open/closure, workbench restart</li>
+				  	</ul>
+				  </li>
+				  <li>Drop To Frame</li>
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Logical"></a> 
@@ -531,6 +634,7 @@
 				        A as X&quot; then B will also show as X.</li>
 				    </ul>
 				  </li>
+				  <li>Import/Export logical structures</li>
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Watch"></a>
@@ -631,19 +735,21 @@
 				  <li>Monitor information is shown in the debug view 
 				    <ul>
 				      <li>No information/errors for VMs that do not support monitor information</li>
-				      <li>monitor information appears for suspended threads</li>
-				      <li>monitor information is not displayed for running threads</li>
+				      <li>Monitor information appears for suspended threads</li>
+				      <li>Monitor information is not displayed for running threads</li>
 				      <li>Ensure valid deadlocks are detected 
 				        <ul>
 				          <li>threads are rendered red (preference color), and have deadlock overlay</li>
 				        </ul>
 				      </li>
+				      <li>Locks support resume/terminate</li>
 				    </ul>
 				  </li>
 				  <li>Thread groups
 				    <ul>
 				      <li>Thread groups can be displayed in debug view by turning on the &quot;Show 
 				        Thread Groups&quot; option in the view menu</li>
+				        <li>Thread groups support terminate</li>
 				    </ul>
 				  </li>
 				</ul>
