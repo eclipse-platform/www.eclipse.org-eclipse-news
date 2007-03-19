@@ -303,6 +303,7 @@
 							<li>Should not be available when not debugging with 1.6 VM</li>
 							<li>Variables view popup</li>
 							<li>In-line as variable in the variables view (change in view preferences and preference page)</li>
+							<li>Change number of references to show on Heap walking preference page</li>
 						</ul>
 					</li>
 					<li> Force Early Return
