@@ -42,6 +42,7 @@
 				    <td width="18%"><b>JDK 1.4.2</b></td>
 				    <td width="18%"><b>JDK 1.5</b></td>
 				    <td width="18%"><b>IBM 1.4.2</b></td>
+				    <td width="18%"><b>JDK 1.6</b></td>
 				  </tr>
 				  <tr> 
 				    <td width="18%"><b>Win 2000</b></td>
@@ -56,6 +57,7 @@
 				    <td width="18%">Curtis Windatt</td>
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
+				    <td width="18%">Darin Wright/Curtis Windatt</td>
 				  </tr>
 				  <tr> 
 				    <td width="18%"><b>Linux</b></td>
@@ -63,6 +65,7 @@
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">Michael Rennie</td>
 				    <td width="18%">Samantha Chan/Natasha D'Silva</td>
+				    <td width="18%">Michael Rennie</td>
 				  </tr>
 				  <tr> 
 				    <td width="18%"><b>Mac</b></td>
@@ -169,7 +172,7 @@
 			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
-			    <td><a href="#Context">Context Launching</a></td>
+			    <td><a href="#Context">Context Menu Launching</a></td>
 			    <td><div align="center"></div></td>
 			    <td><div align="center"></div></td>
 			    <td> <div align="center"></div></td>
