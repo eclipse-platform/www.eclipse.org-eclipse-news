@@ -37,42 +37,42 @@
 			  <div align="center">
 				<table width="75%" border="1">
 				  <tr> 
-				    <td width="18%">&nbsp;</td>
-				    <td width="18%"><b>IBM 1.5</b></td>
-				    <td width="18%"><b>JDK 1.4.2</b></td>
-				    <td width="18%"><b>JDK 1.5</b></td>
-				    <td width="18%"><b>IBM 1.4.2</b></td>
-				    <td width="18%"><b>JDK 1.6</b></td>
+				    <td width="15%">&nbsp;</td>
+				    <td width="15%"><b>IBM 1.5</b></td>
+				    <td width="15%"><b>JDK 1.4.2</b></td>
+				    <td width="15%"><b>JDK 1.5</b></td>
+				    <td width="15%"><b>IBM 1.4.2</b></td>
+				    <td width="15%"><b>JDK 1.6</b></td>
 				  </tr>
 				  <tr> 
-				    <td width="18%"><b>Win 2000</b></td>
-				    <td width="18%">&nbsp;</td>
-				    <td width="18%">&nbsp;</td>
-				    <td width="18%">&nbsp;</td>
-				    <td width="18%">&nbsp;</td>
+				    <td width="15%"><b>Win 2000</b></td>
+				    <td width="15%">&nbsp;</td>
+				    <td width="15%">&nbsp;</td>
+				    <td width="15%">&nbsp;</td>
+				    <td width="15%">&nbsp;</td>
 				  </tr>
 				  <tr> 
-				    <td width="18%"><b>Win XP</b></td>
-				    <td width="18%">Darin Wright</td>
-				    <td width="18%">&nbsp;</td>
-				    <td width="18%">&nbsp;</td>
-				    <td width="18%">&nbsp;</td>
-				    <td width="18%">Curtis Windatt</td>
+				    <td width="15%"><b>Win XP</b></td>
+				    <td width="15%">Darin Wright</td>
+				    <td width="15%">&nbsp;</td>
+				    <td width="15%">&nbsp;</td>
+				    <td width="15%">&nbsp;</td>
+				    <td width="15%">Curtis Windatt</td>
 				  </tr>
 				  <tr> 
-				    <td width="18%"><b>Linux</b></td>
-				    <td width="18%">&nbsp;</td>
-				    <td width="18%">&nbsp;</td>
-				    <td width="18%">Samantha Chan</td>
-				    <td width="18%">Natasha D'Silva</td>
-				    <td width="18%">Michael Rennie</td>
+				    <td width="15%"><b>Linux</b></td>
+				    <td width="15%">&nbsp;</td>
+				    <td width="15%">&nbsp;</td>
+				    <td width="15%">Samantha Chan</td>
+				    <td width="15%">Natasha D'Silva</td>
+				    <td width="15%">Michael Rennie</td>
 				  </tr>
 				  <tr> 
-				    <td width="18%"><b>Mac</b></td>
-				    <td width="18%">&nbsp;</td>
-				    <td width="18%">&nbsp;</td>
-				    <td width="18%">Michael Rennie</td>
-				    <td width="18%">&nbsp;</td>
+				    <td width="15%"><b>Mac</b></td>
+				    <td width="15%">&nbsp;</td>
+				    <td width="15%">&nbsp;</td>
+				    <td width="15%">Michael Rennie</td>
+				    <td width="15%">&nbsp;</td>
 				  </tr>
 				</table>
 			</div>
