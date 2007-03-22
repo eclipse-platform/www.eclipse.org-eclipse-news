@@ -50,6 +50,7 @@
 				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
+				    <td width="15%">&nbsp;</td>
 				  </tr>
 				  <tr> 
 				    <td width="15%"><b>Win XP</b></td>
@@ -72,6 +73,7 @@
 				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
 				    <td width="15%">Michael Rennie</td>
+				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
 				  </tr>
 				</table>
