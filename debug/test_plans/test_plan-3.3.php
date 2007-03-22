@@ -54,17 +54,17 @@
 				  <tr> 
 				    <td width="18%"><b>Win XP</b></td>
 				    <td width="18%">Darin Wright</td>
+				    <td width="18%">&nbsp;</td>
+				    <td width="18%">&nbsp;</td>
+				    <td width="18%">&nbsp;</td>
 				    <td width="18%">Curtis Windatt</td>
-				    <td width="18%">&nbsp;</td>
-				    <td width="18%">&nbsp;</td>
-				    <td width="18%">Darin Wright/Curtis Windatt</td>
 				  </tr>
 				  <tr> 
 				    <td width="18%"><b>Linux</b></td>
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
-				    <td width="18%">Michael Rennie</td>
-				    <td width="18%">Samantha Chan/Natasha D'Silva</td>
+				    <td width="18%">Samantha Chan</td>
+				    <td width="18%">Natasha D'Silva</td>
 				    <td width="18%">Michael Rennie</td>
 				  </tr>
 				  <tr> 
@@ -448,7 +448,7 @@
 			<a name="Launch_Modes"></a>
 			<h4>Launch Modes</h4>
 				<ul>
-					<li> For this test, you require the use of the launch modes test plugin available <a href="http://www.eclipse.org/eclipse/debug/misc/launch_option_example.zip" target="_blank">here</a>.</li>
+					<li> For this test, you require the use of the launch modes test plugin available <a href="http://www.eclipse.org/eclipse/debug/misc/launch_mode_example.zip" target="_blank">here</a>.</li>
 					<li> Preferences Dialog
 					<ul>
 						<li>Ensure launch tool preferences page is available, even if there is no conflicting tooling</li>
