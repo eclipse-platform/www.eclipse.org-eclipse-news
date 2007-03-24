@@ -95,8 +95,9 @@
 				corresponding html into the build notes document.<br> 
 				<blockquote>
 					<a href="/eclipse/debug/misc/org.eclipse.debug.util.101.zip">org.eclipse.debug.util plugin</a><br>
-					<a href="/eclipse/debug/misc/utilsrc.zip">here</a>The source code</li>
+					<a href="/eclipse/debug/misc/utilsrc.zip">The source code</a>
 				</blockquote>
+				</li>
 			</ul>
 		</div>
 	</div>
