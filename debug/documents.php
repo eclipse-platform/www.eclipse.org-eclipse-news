@@ -89,10 +89,14 @@
 		<div class="homeitem3col">
 			<h3>Miscellaneous Source Artifacts</h3>
 			<ul>
-				<li>Debug.util is a small helper plugin we use to update our build notes files once we verify bugs. To use it, simply download the plugin
-				<a href="/eclipse/debug/misc/org.eclipse.debug.util.101.zip">here</a> and enabled it in your workspace. Once that is done to actually 'use' it, place the cursor at the position in your
+				<li>Debug.util is a small helper plugin we use to update our build notes files once we verify bugs. To use it, simply download the plugin below
+				and enabled it in your workspace. Once that is done to actually 'use' it, place the cursor at the position in your
 				build notes document and click <b>Run->Verify Bug...</b> and enter the number of the bug you verified. The tool will then insert the 
-				corresponding html into the build notes document.<br> The source for the plugin is located <a href="/eclipse/debug/misc/utilsrc.zip">here</a> for interested parties.</li>
+				corresponding html into the build notes document.<br> 
+				<blockquuote>
+					<a href="/eclipse/debug/misc/org.eclipse.debug.util.101.zip">org.eclipse.debug.util plugin</a><br>
+					<a href="/eclipse/debug/misc/utilsrc.zip">here</a>The source code</li>
+				</blockquotes>
 			</ul>
 		</div>
 	</div>
