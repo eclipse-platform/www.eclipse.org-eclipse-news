@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><title>3.3 Performance Pass</title>
+
+<link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
+	
+	<style>
+		body {  
+			background-image: url('../images/proposal.gif');
+			background-repeat: repeat-y
+		}
+	</style>
+	
+	 <style type="text/css">
+  		committed {
+  			color: blue;
+  			font-style: italic;
+  		}
+	</style></head>
+
+<body><h2>3.3 Performance Pass</h2>
+<p>Last revised 11:12 CET March 28, 2007</p>
+
+<h4>Plan</h4>
+<ol>
+	<li>investigate red performance tests and create bugs with 'performance' keyword where needed</li>
+	<li>prioritize (see blow) bugs that have the <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Eclipse&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=performance&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">performance keyword</a> and look out for other performance related bugs</li>
+	<li>prioritize (see blow) bugs reporting leaks</li>
+	<li>start fixing the bugs according to assigned priority</li>
+</ol>
+
+<h4><a name="priorities"></a>Priorities</h4>
+<h5>P1</h5>
+<ul>
+	<li>performance test degradations</li>
+	<li>bugs that slow down the user in common scenarios, e.g. full build on startup</li> 
+	<li>leaks that happen in common scenarios and grow the memory each time</li>
+</ul>
+
+<h5>P2</h5>
+<ul>
+	<li>performance bugs that obviously slow down the user</li> 
+	<li>all other leaks that grow each time the scenario is repeated</li>
+</ul>
+
+<h5>P3</h5>
+<ul>
+	<li>other performance bugs that should be addressed for 3.3</li>
+	<li>leaks that are not real leaks but holding on to last instance</li>
+</ul>
+
+<h5>P4</h5>
+<ul>
+	<li>not really an issue, e.g. corner cases and nice to have things</li>
+</ul>
+
+</body></html>
