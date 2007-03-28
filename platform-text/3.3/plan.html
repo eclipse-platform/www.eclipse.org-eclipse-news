@@ -29,7 +29,7 @@
 
   <tr> 
     <td WIDTH="100%"> 
-    <p>Last revised 17:52 CET March 22, 2007</p>
+    <p>Last revised 11:12 CET March 28, 2007</p>
 
     
       <p>This plan is under continuous refinement. Please send comments about this draft plan to the <a href="mailto:platform-text@eclipse.org">platform-text@eclipse.org</a> developer mailing list.</p>
@@ -130,7 +130,7 @@
 
 	<li><h4>Navigation</h4>
 	<ul>
-		<li><committed>provide correct 1&frac12 click + drag to select words (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=5138">bug 5138</a> - depends on SWT, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=138579">bug 138579</a>)</committed></li>
+		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <committed>provide correct double-click + drag to select words (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=5138">bug 5138</a> - depends on SWT, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=138579">bug 138579</a>)</committed></li>
 		<li>provide modifier + mouse wheel support, e.g. allow to
 		<ul>
 			<li><img src="../images/ok.gif" border="0" height="10" width="10"> <committed>scroll by page</committed></li>
@@ -276,48 +276,30 @@
 
 
 <tr>
-    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#595791"><font face="Arial,Helvetica"><font color="#FFFFFF"><a name="Milestone_Planning">Milestone M6 (2007-3-23)</font></font></td>
+    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#595791"><font face="Arial,Helvetica"><font color="#FFFFFF"><a name="Milestone_Planning">Milestone M7 (2007-5-4)</font></font></td>
 </tr>
 
   <tr> 
     <td WIDTH="100%"> 
 	<p>
-	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Pluggable Hyperlink Detectors</h4>
+	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Performance</h4>
 	<ul>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> provide a way to resolve conflicting hyperlink detectors</li>
 	</ul>
 	
-	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Support For URIs</h4>
+	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Polish</h4>
 	<ul>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> adopt <code>IURIEditorInput</code> and <code>FileStoreEditorInput</code> and get rid of <code>JavaFileEditorInput</code></li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> move the functionality to open an external file down to Platform IDE</li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> open up file buffers to URIs</li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> improve file buffer manager performance</li>
 	</ul>
 	
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Spell Checking in Text Editors</h4>
 	<ul>
-		<li><font class="indexsub" color="#8080ff">[3.3 M6]</font> <img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> provide an easy way to get a dictionary<br>
+		<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> provide an easy way to get a dictionary<br>
 		&rArr; sent a proposal to legal for clearance
-		</li>
-	</ul>
-	
-	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Typing</h4>
-	<ul>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> add ability to join lines (review and apply contributed patch) (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=41573">bug 41573</a>)</li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> add triple-click feature (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=14654">bug 14654</a>)
-		<br>&rArr; by the end of M6 SWT decided to provide this directly in <code>StyledText</code> during M7 as it would be very hard to implement triple-click + mouse move to select multiple lines on top of it
 		</li>
 	</ul>
 	
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Miscellaneous</h4>
 	<ul>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> <img src="../images/glass.gif" border="0" height="10" width="10"> improve constructor completion (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=6930">bug 6930</a>)
-		&rArr; JDT Core will improve this on their side for M7</li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> push down information presentation (F2) to Platform Text (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=149519">bug 149519</a>)</li>
-		<li><font class="indexsub" color="#8080ff">[&gt; 3.3 M6]</font> allow to open Quick Hierarchy on any Java element from any view (e.g. from the Package Explorer or Outline view)</li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10">  push down spaces for Tabs preference to Platform Text</li>
-		<li><img src="../images/ok.gif" border="0" height="10" width="10"> improve Find/Replace dialog: make it resizable</li>
+		<li>(allow to open Quick Hierarchy on any Java element from any view (e.g. from the Package Explorer or Outline view)</li>
 	</ul>
 	
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Permanent items</h4>
@@ -330,7 +312,9 @@
 	
 	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Absences</h4>
 	<ul>
-		<li>5 days vacation</li>
+		<li>1 day vacation</li>
+		<li>2 &frac12; public holidays</li>
+		<li>1 day company event</li>
 	</ul>
       
 	<h3>Previous Milestones</h3>
