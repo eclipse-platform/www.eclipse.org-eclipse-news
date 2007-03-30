@@ -28,7 +28,7 @@
 	$html = <<<EOHTML
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
-		Here are some Greasemonkey scripts that we find useful.
+		Here are some <a href="http://www.greasespot.net/">Greasemonkey</a> scripts that we find useful.
 		
 		<div class="homeitem3col">
 			<h3>Scripts</h3>
