@@ -72,7 +72,7 @@ basis.
    <div align="center">
       <p>&nbsp;</p>
       <a href="/projects/what-is-incubation.php"><img 
-        align="center" src="http:/www.eclipse.org/images/egg-incubation.png" 
+        align="center" src="/images/egg-incubation.png" 
         border="0" alt="Incubation" /></a>
       <p>&nbsp;</p>
    </div>
