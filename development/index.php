@@ -43,12 +43,6 @@ ob_start();
         Release Engineering Build Schedule</a><br>
         Schedule for Eclipse Platform nightly, integration, and milestone builds. 
       </li>
-      <li><a href="freeze_plan_3_2_2.html"> Eclipse Project 3.2.2 Endgame Plan</a><br>
-    	Information about we plan to wrap up the 3.2.2 (Callisto winter maintenance) release of Eclipse. </li>
-      <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/eclipse-project-home/bugcounts/BugCountOverview.html"> 
-        Eclipse Project Bugs Counts</a><br>
-        Information on outstanding bugs in the Eclipse project main development 
-        stream. </li>
     </ul>
       	</div>
 		<div class="homeitem3col">
@@ -114,6 +108,11 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>Historical information about past releases</h3>
 			<ul>
+	      <li><a href="freeze_plan_3_2_2.html"> Eclipse Project 3.2.2 Endgame Plan</a><br>
+    		Information about we wrapped up the 3.2.2 (Callisto winter maintenance) release of Eclipse. </li>
+	      <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/eclipse-project-home/bugcounts/BugCountOverview.html"> 
+    	    Eclipse Project Bugs Counts</a><br>
+        	Information on outstanding bugs in the Eclipse project main development stream. </li>
 	      	<li><a href="freeze_plan_3.2.html"> Eclipse Project 3.2 Endgame Plan</a><br>
     	    Information about how we wrapped up the 3.2 (Callisto) release of Eclipse. </li>
  	        <li><a href="eclipse_project_plan_3_2.html"> Eclipse Platform Project 3.2 Plan</a><br>
