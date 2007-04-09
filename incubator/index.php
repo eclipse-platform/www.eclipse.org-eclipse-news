@@ -55,11 +55,11 @@ basis.
 	          <td width="82%">Equinox Incubator component</td>
 	        </tr>
 	        <tr> 
-	          <td width="20%" valign="top"><a href="http://www.eclipse.org/eclipse/platform-incubator">Platform</a></td>
+	          <td width="20%" valign="top"><a href="http://www.eclipse.org/platform/incubator">Platform</a></td>
 	          <td width="82%">Platform Incubator component</td>
 	        </tr>
 	        <tr> 
-	          <td width="20%" valign="top"><a href="http://eclipse.org/eclipse/platform-core/">PDE</a></td>
+	          <td width="20%" valign="top"><a href="http://www.eclipse.org/pde/incubator/">PDE</a></td>
 	          <td width="82%">PDE Incubator component</td>
 	        </tr>
 	      </table>

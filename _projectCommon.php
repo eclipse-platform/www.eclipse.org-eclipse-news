@@ -15,6 +15,7 @@
 	$Nav->addCustomNav("Equinox", "http://www.eclipse.org/equinox/", "_self", 1);
 	$Nav->addCustomNav("JDT", "http://www.eclipse.org/jdt/", "_self", 1);
 	$Nav->addCustomNav("PDE", "http://www.eclipse.org/pde/", "_self", 1);
+	$Nav->addCustomNav("Incubator", "http://www.eclipse.org/eclipse/incubator/", "_self", 1);
 	$Nav->addNavSeparator("Development", "http://www.eclipse.org/eclipse/development/", "_self", 1);
 
 ?>
