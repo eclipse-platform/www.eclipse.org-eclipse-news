@@ -20,8 +20,12 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>About the Eclipse Project Incubator</h3>
+			<p>The Eclipse Project Incubator subproject gives the community around the Eclipse Project 
+			a forum and set of resources for innovation and investigation of new and alternative ideas.  The
+			project is essentially an umbrella for the incubation work associated with the main Eclipse sub-projects.
+			</p>
 			<p>
-The Eclipse Project Incubator subproject is broken down into components,
+The Incubator is broken down into components,
 with a component for each of the other Eclipse Project subprojects that 
 are doing incubation work. The mailing lists and newsgroups 
 of the associated Eclipse Project subproject are used for discussion of

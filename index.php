@@ -100,6 +100,12 @@ ob_start();
 				      create extensions on other plug-in extension points, etc. The PDE makes 
 				      integrating plug-ins easy and fun.
 		        </li>
+		        <li> 
+		          <a href="http://eclipse.org/eclipse/incubator" target="_top">Eclipse Project Incubator</a><br>
+				      The Eclipse Project Incubator subproject gives the community around the Eclipse Project 
+			a forum and set of resources for innovation and investigation of new and alternative ideas.  The
+			project is essentially an umbrella for the incubation work associated with the main Eclipse sub-projects.
+		        </li>
 		      </ul>
 		</div>
 	</div>
