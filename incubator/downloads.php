@@ -1,8 +1,8 @@
 <?php  																														require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());    # All on the same line to unclutter the user's desktop'
 	#
 	# Begin: page-specific settings.  Change these. 
-	$pageTitle 		= "Eclipse Project Incubator";
-	$pageKeywords	= "Eclipse, Platform, JDT, PDE, Equinox, Incubator";
+	$pageTitle 		= "Eclipse Project Incubator Downloads";
+	$pageKeywords	= "Eclipse, Platform, JDT, PDE, Equinox, Incubator, download";
 	$pageAuthor		= "Eclipse Project Incubator team";
 	
 	# Add page-specific Nav bars here
@@ -18,41 +18,20 @@ ob_start();
 
 	<div id="midcolumn">
 		<h1><?= $pageTitle ?></h1>
-		<div class="homeitem3col">
-			<h3>About the Eclipse Project Incubator</h3>
-			<p>
-The Eclipse Project Incubator subproject is broken down into components,
-with a component for each of the other Eclipse Project subprojects that 
-are doing incubation work. The mailing lists and newsgroups 
-of the associated Eclipse Project subproject are used for discussion of
-Incubator related issues. Commit rights are managed on a per subproject
-basis. 
+		      <p>
+The downloads for the Eclipse Project Incubator subproject are available via the following
+pages:
 			</p>
 	      <table width="100%" border="0">
 	        <tr> 
-	          <td width="20%" valign="top"><b>Name</b></td>
+	          <td width="20%" valign="top"><b>Page</b></td>
 	          <td width="82%"><b>Description</b></td>
 	        </tr>
 	        <tr>
-	          <td width="20%" valign="top"><a href="http://www.eclipse.org/equinox/incubator/">Equinox</a></td>
-	          <td width="82%">Equinox Incubator component</td>
-	        </tr>
-	        <tr> 
-	          <td width="20%" valign="top"><a href="http://www.eclipse.org/platform/incubator">Platform</a></td>
-	          <td width="82%">Platform Incubator component</td>
-	        </tr>
-	        <tr> 
-	          <td width="20%" valign="top"><a href="http://www.eclipse.org/pde/incubator/">PDE</a></td>
-	          <td width="82%">PDE Incubator component</td>
+	          <td width="20%" valign="top"><a href="http://eclipse.org/equinox/incubator/downloads.php">Equinox</a></td>
+	          <td width="82%">Equinox Incubator downloads</td>
 	        </tr>
 	      </table>
-		</div>
-		<div class="homeitem3col">
-			<h3>Downloads</h3>
-			<p>The downloads for the incubator are associated with the various components 
-			and their workareas.  The <a href="downloads.php">master downloads page</a>
-			 that links to the downloads page for each of the components and thus the downloads for their work areas.
-			 </p>
 		</div>
 	</div>
 
