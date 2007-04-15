@@ -64,11 +64,9 @@ basis.
  <div class="sideitem">
    <h6>Incubation</h6>
    <div align="center">
-      <p>&nbsp;</p>
       <a href="/projects/what-is-incubation.php"><img 
         align="center" src="/images/egg-incubation.png" 
         border="0" alt="Incubation" /></a>
-      <p>&nbsp;</p>
    </div>
  </div>
 </div>
