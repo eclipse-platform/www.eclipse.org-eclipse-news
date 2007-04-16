@@ -31,6 +31,10 @@ pages:
 	          <td width="20%" valign="top"><a href="http://eclipse.org/equinox/incubator/downloads.php">Equinox</a></td>
 	          <td width="82%">Equinox Incubator downloads</td>
 	        </tr>
+	        <tr>
+	          <td width="20%" valign="top"><a href="http://eclipse.org/platform/incubator/downloads.php">Platform</a></td>
+	          <td width="82%">Platform Incubator downloads</td>
+	        </tr>
 	      </table>
 		</div>
 	</div>
