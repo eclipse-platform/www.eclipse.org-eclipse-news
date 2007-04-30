@@ -94,7 +94,7 @@
 			  <tr> 
 			    <td><a href="#Java6">Java 6.0 Features</a></td>
 			    <td> <div align="center"></div></td>
-				<td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+				<td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			  </tr>
@@ -115,7 +115,7 @@
 			  <tr> 
 			    <td><a href="#Launch">Launch Options</a></td>
 			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
+			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 				<td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
