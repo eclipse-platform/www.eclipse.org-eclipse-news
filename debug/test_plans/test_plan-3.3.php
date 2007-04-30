@@ -75,7 +75,6 @@
 				    <td width="15%">Darin Wright</td>
 				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
-				    <td width="15%">&nbsp;</td>
 				  </tr>
 				</table>
 			</div>
