@@ -57,16 +57,16 @@
 				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
+					<td width="15%">Michael Rennie</td>
 				    <td width="15%">&nbsp;</td>
-				    <td width="15%">Michael Rennie</td>
 				  </tr>
 				  <tr> 
 				    <td width="15%"><b>Linux</b></td>
+					<td width="15%">Curtis Windatt</td>
 				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
-				    <td width="15%">Curtis Windatt</td>
 				  </tr>
 				  <tr> 
 				    <td width="15%"><b>Mac</b></td>
