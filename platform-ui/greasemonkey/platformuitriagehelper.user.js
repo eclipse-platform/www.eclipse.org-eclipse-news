@@ -24,7 +24,8 @@ window.addEventListener("load", function() {
     if (els[i].name=="short_desc") short_desc = i;
   }
 //alert("indices: " + component + ", " + assigned_to + ", " + short_desc);
-  if(document.forms[0].elements[assigned_to].value!="Platform-UI-Inbox@eclipse.org")
+  var assigned_to = document.forms[0].elements[assigned_to];
+  if(assigned_to.value != "Platform-UI-Inbox@eclipse.org" && assigned_to.value != "platform-ide-inbox@eclipse.org")
     return;
   document.forms[0].elements[component].addEventListener('change', function(){ var b=document.getElementById('knob-reassign-cmp');b.checked=true;b.scrollIntoView(true); }, false);
   function buttonFor(comp, owner) {
