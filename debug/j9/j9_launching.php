@@ -23,7 +23,8 @@
 	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching, jdt, j9, support";
 	$pageAuthor		= "Debug Team";
 	
-	include("_sideCommon.php");
+	include("../_sideCommon.php");
+	include("../jdt/_pluginCommon.php");
 	
 	$html = <<<EOHTML
 
@@ -55,7 +56,7 @@
 		</div>
 		<div class="homeitem3col">
 			<h3>Downloading a J9 JRE</h3>
-			<p>A J9 JRE for QNX can be downloaded from <a href="http://www.embedded.oti.com/download/technologies/wce_eclipse.phtml">http://www.embedded.oti.com/download/technologies/wce_eclipse.phtml</a>.</p>
+			<p>A J9 JRE for QNX can be downloaded from <a target="_blank" href="http://www.embedded.oti.com/download/technologies/wce_eclipse.phtml">http://www.embedded.oti.com/download/technologies/wce_eclipse.phtml</a>.</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>Setting up a J9 JRE</h3>
