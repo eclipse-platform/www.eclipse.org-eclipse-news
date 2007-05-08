@@ -41,9 +41,9 @@
 		        <li>Dynamic class reloading where supported by Java virtual machine</li>
 	        </ul>
 	        
-      		<p>Using a J9 vritual machine:</p>
+      		<p>Using a J9 virtual machine:</p>
 	        <ul>
-		        <li> <a href="plugins/org.eclipse.jdt.launching.j9/index.html">J9 launching support</a></li>
+		        <li> <a href="../j9/j9_launching.php">J9 launching support</a></li>
 	        </ul>
 		</div>
 		<div class="homeitem3col">
