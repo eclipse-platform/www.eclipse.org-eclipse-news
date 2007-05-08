@@ -27,7 +27,8 @@
 		<div class="homeitem3col">
 			<h3>Articles</h3>
 			<ul>
-				<li>Launching has changed, and we have a document describing these changes and the current implementation of <a target="_blank" href="/eclipse/debug/documents/Context-launching.pdf">Context Launching</a></li>
+				<li>Eclipse Corner article <a target="_blank" href="http://www.eclipse.org/articles/Article-Debugger/how-to.html">How To Write An Eclipse Debugger</a></li>
+				<li>Eclipse Corner article <a target="_blank" href="http://www.eclipse.org/articles/Article-Launch-Framework/launch.html">We Have Lift-off: The Launching Framework in Eclipse </a></li>
 			</ul>
 		</div>
 		<div class="homeitem3col">
@@ -70,6 +71,7 @@
 		<div class="homeitem3col">
 			<h3>Miscellaneous Documents</h3>
 			<ul>
+				<li>Launching has changed, and we have a document describing these changes and the current implementation of <a target="_blank" href="/eclipse/debug/documents/Context-launching.pdf">Context Launching</a></li>
 				<li>For the 3.3M3 release we are working on moving away from strict mode-based launching to an extensible 'options-based' scheme.
 				The following <a href="/eclipse/debug/documents/migration_path.pdf" target="_blank">migration guide</a> describes how you can migrate your launching contributions to use the new scheme.
 				<br><br>
