@@ -71,7 +71,7 @@
 		<div class="homeitem3col">
 			<h3>Miscellaneous Documents</h3>
 			<ul>
-				<li>Launching has changed, and we have a document describing these changes and the current implementation of <a target="_blank" href="/eclipse/debug/documents/Context-launching.pdf">Context Launching</a></li>
+				<li>Launching has changed, and we have a document describing these changes and the current implementation of <a target="_blank" href="/eclipse/debug/documents/launching/context_launching/Context-launching.pdf">Context Launching</a></li>
 				<li>For the 3.3M3 release we are working on moving away from strict mode-based launching to an extensible 'options-based' scheme.
 				The following <a href="/eclipse/debug/documents/migration_path.pdf" target="_blank">migration guide</a> describes how you can migrate your launching contributions to use the new scheme.
 				<br><br>
