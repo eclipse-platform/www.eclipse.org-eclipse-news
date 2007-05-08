@@ -73,6 +73,7 @@
 	</div>
 	<div id="rightcolumn">
 		$commonside
+		$commonplugin
 	</div>
 </div>
 
