@@ -67,7 +67,7 @@
 					<li>Select &quot;<strong>J9 VM</strong>&quot; for JRE type</li>
 					<li>Assign a name to the JRE, and specify the home directory where J9 is installed.</li>
 				</ol>
-				<p><img src="../images/add-vm.PNG"></p>
+				<p><img src="/eclipse/debug/images/add-vm.PNG"></p>
 			</p>
 		</div>
 	</div>
