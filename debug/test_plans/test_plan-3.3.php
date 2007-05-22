@@ -297,7 +297,7 @@
 			<a name="Evaluations"></a>
 			<h4>Evaluations</h4>
 				<ul>
-				  <li>NEW: switch statement</li>
+				  <li>Switch statements should be supported in evaluations</li>
 				  <li>Java 5.0 features 
 				    <ul>
 				      <li>Generic types</li>
@@ -426,18 +426,19 @@
 					<li> For this test, you require the use of the launch modes test plugin available <a href="http://www.eclipse.org/eclipse/debug/misc/launch_mode_example.zip">here</a>.</li>
 					<li> Preferences Dialog
 					<ul>
-						<li>Ensure launch tool preferences page is available, even if there is no conflicting tooling</li>
+						<li>Ensure launch tool preferences page is available, even if there is no conflicting tooling. Page
+						should be disabled with an explanation if no conflicting tooling</li>
 						<li>Ensure page can be searched for with tree viewer searching</li>
 						<li>Ensure there is a help topic for the page</li>
 						<li>With duplicate tooling select a variety of items in both viewers</li>
 						<li>Ensure once an item is selected in the preferred tooling viewer it cannot be unselected (checked)</li>
-						<li>Ensure changing between selected tooling without saving changes should not erase pending saved choices</li>
-						<li>Selecting preferred tooling from a quick launch or the launch configuraiotn dialog should be reflected in the pref page (and changeable)</li>
+						<li>Changing selected tooling without saving changes should not modify saved choices</li>
+						<li>Selecting preferred tooling from a quick launch or the launch configuration dialog should be reflected in the pref page (and changeable)</li>
 					</ul>
 					</li>
 					<li> Launch Configuration Dialog
 					<ul>
-						<li>Ensure incompatible modes are flagged correctly (check the widget in all contributed tabs) with an error message and link</li>
+						<li>Ensure incompatible modes are flagged correctly (check the widget on the Coverage Tab) with an error message and link</li>
 						<li>Link should present complete list of support mode combinations</li>
 						<li>Selection of mode set should update dialog and remove error</li>
 						<li>Duplicate delegates should be flagged correctly with error message and link</li>
