@@ -107,9 +107,9 @@
 			  </tr>
 			  <tr> 
 			    <td><a href="#ContextLaunching">Context Launching</a></td>
-				<td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 				<td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
+				<td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			  </tr>
 			  <tr> 
@@ -177,8 +177,8 @@
 			  </tr>
 			  <tr> 
 			    <td><a href="#Source">Source Lookup</a></td>
-				<td> <div align="center"></div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+				<td> <div align="center"></div></td>
 			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 				<td> <div align="center"></div></td>
 			  </tr>
