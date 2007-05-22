@@ -10,10 +10,10 @@
 
 <h1>The Eclipse Project DRAFT 3.3 Plan</h1>
 
-Last revised 11:00 EST May 22, 2007
+Last revised 16:00 EST Mar 30, 2007
   (<img src="new.gif" alt="(new)" border="0" height="12" width="12">
   marks interesting changes since the previous 
-  <a href="eclipse_project_plan_3_3_20070330.html">draft of March 30, 2007</a>)
+  <a href="eclipse_project_plan_3_3_20070223.html">draft of Feb 23, 2007</a>)
 
 <p><i>&nbsp;&nbsp;&nbsp; Please send comments about this draft plan to the</i>
   <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a>
@@ -187,7 +187,7 @@ platforms (this list is updated over the course of the release cycle):</p>
 </td></tr>
 
 <tr><td>
-<b><img src="new.gif" alt="(new)" border="0" height="12" width="12"> Red Hat Enterprise Linux 5.0, x86-32, GTK</b> running (any of):
+<b>Red Hat Enterprise Linux 4.0 update 2, x86-32, GTK</b> running (any of):
 <ul>
 <li>Sun Java 2 Standard Edition 5.0 Update 11 for Linux x86</li>
 <li>IBM 32-bit SDK for Linux on Intel architecture, Java 2 Technology Edition 5.0, SR4</li>
@@ -492,7 +492,8 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154087">154087</a>) 
 </p>
 
-<p><strong>Help content generated on-the-fly</strong>
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> wording has changed)
+    <strong>Help content generated on-the-fly</strong>
     Currently it is not possible to write all your help content in your own
     format, and have it converted into HTML, TOC, keyword index, and context
     help on-the-fly. For the table of contents you must supply the information
@@ -504,7 +505,8 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=175016">175016</a>) 
 </p>
 
-<p><strong>Improve componentization of user assistance content</strong>
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> wording has changed)
+    <strong>Improve componentization of user assistance content</strong>
     More flexibility for filtering, such as OR and IF/ELSE clauses in filter
     condition, and ability to plug-in any type of filter. Adopt help's extension
     features and content replace for all other forms of user assistance (e.g.
@@ -579,7 +581,8 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154083">154083</a>) 
 </p>
 
-<p><strong>Improved support for provisioning.</strong>
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> deferred)
+   <strong>Improved support for provisioning.</strong>
     Eclipse has advanced quite quickly with new use-cases (RCP, Equinox, 
     server side, etc.) and new technologies (e.g., OSGi and OSGi's MEG) coming
     into the picture.  To date Update Manager has not been enhanced to support
@@ -593,7 +596,8 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154077">154077</a>) 
 </p>
 
-<p><strong>Bundle Management.</strong>
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> deferred)
+   <strong>Bundle Management.</strong>
     Managing even modest systems of bundles can be complex and error prone.  There are 
     several places in PDE where developers need to list or select sets of bundles (e.g.,
     launch configurations, target setup, etc).  In many cases the environment already
@@ -694,7 +698,8 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154104">154104</a>)
 </p>
 
-<p><strong>Performance focus.</strong>
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+   <strong>Performance focus.</strong>
     We must continue to improve overall performance and memory consumption,
     with a particular focus on working with large numbers of plug-ins and 
     large amounts of data.
@@ -728,7 +733,8 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154099">154099</a>)
 </p>
 
-<p><strong>Help keyword index</strong>
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> deferred)
+   <strong>Help keyword index</strong>
     In 3.2, keyword index support was added to the Help system. However, as yet the
     Eclipse SDK does not have keyword index content. This item consists of
     contributing a comprehensive and complete keyword index for Eclipse as
@@ -739,7 +745,8 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=175008">175008</a>) 
 </p>
 
-<p><strong>Ship Finer-grained Components.</strong>
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> deferred)
+    <strong>Ship Finer-grained Components.</strong>
     The Eclipse project produces three major outputs, the Platform, JDT and PDE.
     These are exposed as zips on download sites and features on update sites.
     Those wanting to get just part of one of these components (e.g., Help,
@@ -805,7 +812,8 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154115">154115</a>)
 </p>
 
-<p><strong>Enhance Annotation Processing Tooling.</strong>
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed, wording has changed)
+   <strong>Enhance Annotation Processing Tooling.</strong>
     APT should support the new standard Annotation Processing API (JSR 269)
     introduced in Java SE 6, as opposed to the provisional API from Sun
     introduced in Java SE 5 that is currently implemented. Also, the APT
@@ -821,8 +829,11 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154110">154110</a>)
 </p>
 
-<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
-   <strong>More refactorings.</strong>
+</blockquote>
+<h4>Proposed Items (Java)</h4>
+<blockquote> 
+
+<p><strong>More refactorings.</strong>
     We will finish the 'Fix Deprecation' refactoring that didn't make it
     into 3.2, and add the new refactoring 'Replace Invocation'. More
     refactoring API will be offered in the plug-in org.eclipse.jdt.core.manipulation
@@ -832,17 +843,12 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
 </p>
 
 </blockquote>
-<h4>Proposed Items (Java)</h4>
-<blockquote> 
-
-  <p><i>None at this time.</i></p>
-
-</blockquote>
 
 <h4>Deferred Items (Java)</h4>
 <blockquote> 
 
-<p><strong>Add more class file targets for compiler.</strong>
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> deferred)
+    <strong>Add more class file targets for compiler.</strong>
     The compiler should support more configurable class file targets, including
     CLDC 1.0, CLDC 1.1 and possibly JSR 14 (generics experimentation for 1.4
     VMs). 
@@ -961,7 +967,8 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=175158">175158</a>)
 </p>
 
-<p><strong>JFace Enhancements.</strong>
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed, wording has changed)
+   <strong>JFace Enhancements.</strong>
     Ensure that the reusable components in JFace fully support the SWT
     widget set, such as support for the new custom draw capabilities
     of the Table and Tree widgets. Also, implement some of the components
@@ -971,7 +978,8 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154123">154123</a>)
 </p>
 
-<p><strong>Implement missing text editor productivity features.</strong>
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Implement missing text editor productivity features.</strong>
     We should provide some of the long awaited productivity features that
     the community has voted for. Examples include double-click-drag to
     select multiple words, triple-click, extensible hyperlink support
@@ -979,7 +987,8 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154119">154119</a>)
 </p>
   
-<p><strong>Ubiquitous cheat sheets</strong>
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed, wording has changed)
+   <strong>Ubiquitous cheat sheets</strong>
     Cheat sheets will be commoditized by lowering the price of authoring and
     publishing. We will make it easy to whip up a cheat sheet quickly, hook
     appropriate commands for 'Do it for me' links, exchange cheat sheets as
@@ -999,7 +1008,8 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
 <h4>Deferred Items (UI Evolution)</h4>
 <blockquote> 
 
-<p><strong>Improve multi-instance view management.</strong>
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> deferred)
+    <strong>Improve multi-instance view management.</strong>
     Views such as Search and Synchronize use a drop-down menu to manage 
     multiple pages. Another possibility would be to use multiple view instances. 
     However, the presentation and management of these two approaches are different.
@@ -1012,7 +1022,8 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154121">154121</a>)
 </p>
   
-<p><strong>Help webapp refresh</strong>
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> deferred)
+    <strong>Help webapp refresh</strong>
     The Help web application's appearance does not currently match the workbench
     appearance well. However it is common for users to move back and forth between
     these two windows, resulting in an inconsistent experience for the user.
@@ -1053,16 +1064,19 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154125">154125</a>)
 </p>
   
-<p><strong>Adopt the new UI features.</strong>
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> follow on work in next release)
+   <strong>Adopt the new UI features.</strong>
     We should adopt the following items across the entire SDK UI: the new
     command framework, preference initializers, field assist, SWT column
     sort indicators, working sets, tabbed properties view and the common navigator.
-    <em>(Note: This is an ongoing effort that will continue in the next release of Eclipse.)</em>
+    <em>(<img src="new.gif" alt="(new)" border="0" height="12" width="12">
+    Note: This is an ongoing effort that will continue in the next release of Eclipse.)</em>
     [UI, JDT UI, PDE, Team, Text]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154127">154127</a>)
 </p>
   
-<p><strong>Provide access to more native controls.</strong>
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> wording has changed)
+   <strong>Provide access to more native controls.</strong>
     We should provide access to more of the native controls that are available
     on each platform, such as date and time pickers. 
     In addition, we should enable more features of existing native controls.
@@ -1132,7 +1146,8 @@ VM arguments when launching Eclipse, which will prevent the AWT libraries from u
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154135">154135</a>)
 </p>
 
-<p><strong>Adopt the Eclipse File System.</strong>
+<p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Adopt the Eclipse File System.</strong>
     We should ensure that use of the Eclipse File System is pervasive
     in the platform, and remove any barriers that prevent it from being
     more widely adopted by the community. For example, we should provide
