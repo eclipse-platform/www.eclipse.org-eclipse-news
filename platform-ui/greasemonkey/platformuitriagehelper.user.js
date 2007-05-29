@@ -90,13 +90,14 @@ window.addEventListener("load", function() {
   buttons += buttonFor("Progress","Tod_Creasey@ca.ibm.com");
   buttons += buttonFor("PropertiesDialog","Tod_Creasey@ca.ibm.com");
   buttons += buttonFor("PropertiesView","emoffatt@ca.ibm.com");
+  buttons += buttonFor("QuickAccess","Boris_Bokowski@ca.ibm.com");
   buttons += buttonFor("RCP","Boris_Bokowski@ca.ibm.com");
   buttons += buttonFor("TabbedProperties","anthonyh@ca.ibm.com");
   buttons += buttonFor("Themes","kim_horne@ca.ibm.com");
   buttons += buttonFor("Trim","emoffatt@ca.ibm.com");
   buttons += buttonFor("Undo","susan_franklin@us.ibm.com");
   buttons += buttonFor("ViewMgmt","Boris_Bokowski@ca.ibm.com");
-  buttons += buttonFor("Viewers","boris_bokowski@ca.ibm.com");
+  buttons += buttonFor("Viewers","Boris_Bokowski@ca.ibm.com");
   buttons += buttonFor("Win32","emoffatt@ca.ibm.com");
   buttons += buttonFor("Wizards","Tod_Creasey@ca.ibm.com");
   buttons += buttonFor("Workbench","Tod_Creasey@ca.ibm.com");
