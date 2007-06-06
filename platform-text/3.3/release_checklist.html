@@ -22,7 +22,7 @@
 The official check list can be found <a href="http://wiki.eclipse.org/index.php/3.3_Release_checklist">here</a>.
 </p>
 <ol>
-  <li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> <b>Copyright notices</b>
+  <li><img src="../images/ok.gif" border="0" height="10" width="10"> <b>Copyright notices</b>
     <br>&rArr; A first pass has been done for RC3. <em>Needs another run for RC4</em>
     <ul>
       <li>All source files must have appropriate EPL v1.0 copyright notice</li>
@@ -70,7 +70,7 @@ The official check list can be found <a href="http://wiki.eclipse.org/index.php/
         3.3&quot;</li>
     </ul>
   </li>
-  <li><b>API documentation</b>
+  <li><img src="../images/ok.gif" border="0" height="10" width="10"> <b>API documentation</b>
     <ul>
       <li>Java API must be documented in the appropriate help book
         <ul>
@@ -86,6 +86,15 @@ The official check list can be found <a href="http://wiki.eclipse.org/index.php/
       <li>API elements added in 3.3 must be tagged &quot;@since 3.3&quot;</li>
     </ul>
   </li>
+  
+  <li><img src="../images/ok.gif" border="0" height="10" width="10"> <b>API Compatibility</b>
+    <ul>
+      <li>compare all APIs with the previous release.
+      <br>This can be done manually through CVS or with a tool like [[PDE UI Incubator ApiTools Compare]]
+      </li>
+    </ul>
+  </li>
+  
   <li><img src="../images/ok.gif" border="0" height="10" width="10"> <b>3.3 Plug-in Migration Guide</b>
     <ul>
       <li>Instructions for migrating older plug-ins to 3.3</li>
@@ -103,7 +112,8 @@ The official check list can be found <a href="http://wiki.eclipse.org/index.php/
   
   
   <li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> <b>What's New in 3.3</b>
-  <br>&rArr; Sent Java Editor items to Markus and collected Platform Text items. <em>Need to send them to Platform What's New owner and review both for RC4</em>
+  <br>&rArr; Sent Java Editor items to Markus and added Platform Text items to platform.user.doc.<br>
+   <em>Need to review the JDT what's new for RC4</em>
     <ul>
       <li>Describes the more interesting differences that 3.2 users will see
         when they upgrade to 3.3</li>
