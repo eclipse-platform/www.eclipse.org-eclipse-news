@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description url="http://www.eclipse.org/eclipse/platform-ui/update">
+      Eclipse Platform UI incubator updates.
+   </description>
+   <feature url="features/org.eclipse.ui.tweaklets.workingsets.feature_1.0.0.200706141306.jar" id="org.eclipse.ui.tweaklets.workingsets.feature" version="1.0.0.200706141306">
+      <category name="tweaklets"/>
+   </feature>
+   <category-def name="tweaklets" label="Tweaklets">
+      <description>
+         Various small alterations to the standard workbench look, feel, and behaviour.
+      </description>
+   </category-def>
+</site>
