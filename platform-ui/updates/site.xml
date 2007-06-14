@@ -3,7 +3,10 @@
    <description url="http://www.eclipse.org/eclipse/platform-ui/update">
       Eclipse Platform UI incubator updates.
    </description>
-   <feature url="features/org.eclipse.ui.tweaklets.workingsets.feature_1.0.0.200706141306.jar" id="org.eclipse.ui.tweaklets.workingsets.feature" version="1.0.0.200706141306">
+   <feature url="features/org.eclipse.ui.tweaklets.workingsets.feature_1.0.0.200706141357.jar" id="org.eclipse.ui.tweaklets.workingsets.feature" version="1.0.0.200706141357">
+      <category name="tweaklets"/>
+   </feature>
+   <feature url="features/org.eclipse.ui.tweaklets.autopintabs.feature_0.9.0.200706141357.jar" id="org.eclipse.ui.tweaklets.autopintabs.feature" version="0.9.0.200706141357">
       <category name="tweaklets"/>
    </feature>
    <category-def name="tweaklets" label="Tweaklets">
