@@ -24,7 +24,6 @@
 		<h1>$pageTitle</h1>
 		<h2>Installation</h2>
 		To install incubator updates please go to Help->Software Updates->Find and Install and add the following as an update site location:   <em>http://www.eclipse.org/eclipse/platform-ui/update</em>.  Please note that these will only work with Eclipse 3.3 or greater at this time.
-		<h2>Platform UI</h2>
 		
 	
 	</div>
