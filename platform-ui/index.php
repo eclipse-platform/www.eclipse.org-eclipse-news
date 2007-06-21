@@ -75,45 +75,69 @@
 	  and the <A HREF="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-ui-home/rcp/faq.html">RCP FAQ</A>.
 	  </p>
 
-	  <div class="homeitem3col">
-	  	<h3>Talks</h3><dl>
-			<dt><a href="http://www.desktopcon.org/2005">Desktop Developers'Conference 2005</a></dt>
-			<dd><p>Billy Biggs (SWT) and Douglas Pollock (UI) gave a <a href="talks/desktopDevelopersConference2005.sxi">talk</a> on Eclipse 3.1.  The talk gave a general overview of Eclipse, and then focused in on specific changes and problems with SWT's implementation on GTK+.</p>
-
-			<dt><a href="http://eclipsecon.org/2005">EclipseCon 2005</a></dt>
-			<dd><p>The majority of the Platform UI team attended EclipseCon 2005.  Supplemental materials relating to our talks can be found <a href="eclipsecon/index.html">here</a>.</p></dd>						
-			</dl>
-	  </div>
-	</div>
-	<div id="rightcolumn">
-		<div class="sideitem">
+		<div class="homeitem3col">
 			<h3>What's Happening</h3>
+			<a name="HAPPENING"></a>
 			<ul>
-				<li>R3.2 Development
+				<li>3.3 Development
+					<ul>
+					</ul>
+				</li>
+				<li>3.2 Development
 					<ul>
 					<li>Most active development goes into this stream. </li>
           			<li>The 3.2 next-milestone plan is posted <a href="R3_2/main.html#Milestone_Planning">here</a>.</li>
           			<li>The 3.1 builds are available in the <a href="http://www.eclipse.org/downloads/index.php" target="newdownload&quot;">download</a> area.</li>
-        				</ul>
-        			</li>
-				<li>R3.1 Maintenance</b> <ul><li>Release 3.0 and 3.0.1 maintenance builds are available in the <a href="http://www.eclipse.org/downloads/index.php" target="newdownload&quot;"> download</a> area.</li></ul></li>
-    				<li><p>Get Involved! If you are interested in participating in the development of the UI component, check out the developer's mailing list: <a href="http://dev.eclipse.org/mailman/listinfo/platform-ui-dev">platform-ui-dev@eclipse.org</a>. Chat with people there about your problems and interests, and find out what you can do to help. </p>
-      				<p>In particular, if you have experience in developing user interfaces, are interested in accessibility and usability issues please consider joining the UI team. If you enjoy working with COM to support OLE documents and ActiveX controls we really want to get to know you. </p>
-      				<p>For more detailed information, check out the <a href="dev.html">Development Resources</a>.</p>
-      			</li>
+        			</ul>
+        		</li>
+				<li>3.1 Maintenance</b> 
+					<ul>
+					<li>Release 3.0 and 3.0.1 maintenance builds are available in the <a href="http://www.eclipse.org/downloads/index.php" target="newdownload&quot;"> download</a> area.</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="homeitem3col">
+			<h3>Get Involved</h3>
+			<a name="INVOLVED"></a>
+			<p>
+				If you are interested in participating in the development of the UI component, check out the developer's mailing list: <a href="http://dev.eclipse.org/mailman/listinfo/platform-ui-dev">platform-ui-dev@eclipse.org</a>. 
+				Chat with people there about your problems and interests, and find out what you can do to help.
+      		</p>		
+      		<p>
+      			In particular, if you have experience in developing user interfaces, are interested in accessibility and usability issues please consider joining the UI team. If you enjoy working with COM 
+      			to support OLE documents and ActiveX controls we really want to get to know you. 
+      		</p>
+      		<p>
+      			For more detailed information, check out the <a href="http://dev.eclipse.org/viewcvs/index.cgi/platform-ui-home/dev.html?view=co">Development Resources</a>.</p>
+      		</p>
+		</div>
+		<div class="homeitem3col">
+			<h3>Development Resources</h3>
+			<a name="DEV"></a>
+			<ul>
+				<li>For Platform UI developers, check out the <a href="http://dev.eclipse.org/viewcvs/index.cgi/platform-ui-home/dev.html?view=co">Development Resources</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="rightcolumn">
+		<div class="sideitem">
+			<h6>Quick Links</h6>
+			<ul>
+				<li><a href="#DEV">Development Resources</a></li>
+				<li><a href="#HAPPENING">What's Happening</a></li>
+				<li><a href="#INVOLVED">Get Involved</a></li>
 			</ul>
 		</div>
 		<div class="sideitem">
-			<h6>Development Resources</h6>
+			<h6>Pltform UI Related Links</h6>
 			<ul>
-				<liFor Platform UI developers, check out the <a href="dev.html">Development Resources</a></li>
-				<li>Interested in what the UI team is currently working on, or past proposals, look at the <a href="docs.html">Proposals</a> list.</li>
-				<li><a href="#">If you are contributing to the Platform UI see the <a href="contributing/checklist.html">Contributers Check List</a> we provide to help guide and smooth the process.</li>
+			<li><a href="http://wiki.eclipse.org/Platform_UI">Platform UI Wiki</a></li>
+			<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/platform-ui-home/main.html?view=co">The old Platform UI site</a></li>
 			</ul>
 		</div>
 	</div>
 </div>
-
 
 EOHTML;
 
