@@ -79,22 +79,17 @@
 			<h3>What's Happening</h3>
 			<a name="HAPPENING"></a>
 			<ul>
+				<li>3.4 Development
+					<ul>
+					</ul>
+				</li>
 				<li>3.3 Development
 					<ul>
-					</ul>
-				</li>
-				<li>3.2 Development
-					<ul>
 					<li>Most active development goes into this stream. </li>
-          			<li>The 3.2 next-milestone plan is posted <a href="R3_2/main.html#Milestone_Planning">here</a>.</li>
-          			<li>The 3.1 builds are available in the <a href="http://www.eclipse.org/downloads/index.php" target="newdownload&quot;">download</a> area.</li>
+          			<li>The 3.3 next-milestone plan is posted <a href="http://dev.eclipse.org/viewcvs/index.cgi/platform-ui-home/R3_3/main.html?view=co">here</a>.</li>
+          			<li>The 3.2 builds are available in the <a href="http://www.eclipse.org/downloads/index.php">download</a> area.</li>
         			</ul>
         		</li>
-				<li>3.1 Maintenance</b> 
-					<ul>
-					<li>Release 3.0 and 3.0.1 maintenance builds are available in the <a href="http://www.eclipse.org/downloads/index.php" target="newdownload&quot;"> download</a> area.</li>
-					</ul>
-				</li>
 			</ul>
 		</div>
 		<div class="homeitem3col">
