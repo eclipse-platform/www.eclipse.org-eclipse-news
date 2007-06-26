@@ -31,8 +31,21 @@
 	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching, build, notes";
 	$pageAuthor		= "Debug Team";
 	
-	include("../../_sideCommon.php");
-	include("../_pluginCommon.php");
+	include("../_sideCommon.php");
+	include("_pluginCommon.php");
+	
+	error_reporting(E_ALL);
+			
+	$filename = "http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.debug.core/buildnotes_platform-debug.html";
+	$dataFile = fopen( $filename, "r" ) ;
+    if ( $dataFile )  {
+    	while (!feof($dataFile))   {
+        	$contents .= fgets($dataFile, 4096);
+    	}
+    	fclose($dataFile);
+    } else  {
+    	$contents = <p>A connection to CVS could not be opened for streaming, so you'll have to look the old way by clicking the following link: <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.debug.core/buildnotes_platform-debug.html" target="_blank">here</a></p>
+    }
 	
 	$html = <<<EOHTML
 
@@ -42,32 +55,24 @@
 		<div class="homeitem3col">
 			<a name="uptotheminute"/>
 			<h3>Up to the Minute Build Notes</h3>
-				error_reporting(E_ALL);
-			
-					$filename = "http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.debug.core/buildnotes_platform-debug.html";
-					$dataFile = fopen( $filename, "r" ) ;
-				    if ( $dataFile )  {
-				    	while (!feof($dataFile))   {
-				        	$contents .= fgets($dataFile, 4096);
-				    	}
-				    	fclose($dataFile);
-				    } else  {
-				    	<p>
-				    		A connection to CVS could not be opened for streaming, so you'll have to look the old way by
-				    		clicking the following link: <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.debug.core/buildnotes_platform-debug.html" target="_blank">here</a>;
-				    	</p>
-				    }
+				$contents
 		</div>
 		<div class="homeitem3col">
 			<a name="previous"/>
 			<h3>Build Notes For Previous Releases</h3>
 			<ul>
-				
+				<li><a href="build_notes/build_notes_r2-0.php">2.0 Release</a></li>
+				<li><a href="build_notes/build_notes_r2-1.php">2.1 Release</a></li>
+				<li><a href="build_notes/build_notes_r3-0.php">3.0 Release</a></li>
+				<li><a href="build_notes/build_notes_r3-1.php">3.1 Release</a></li>
+				<li><a href="build_notes/build_notes_r3-2.php">3.2 Release</a></li>
+				<li><a href="build_notes/build_notes_r3-3.php">3.3 Release</a></li>
 			</ul>
 		</div>
 	</div>
 	<div id="rightcolumn">
 		$commonside
+		$commonplugin
 	</div>
 </div>
 

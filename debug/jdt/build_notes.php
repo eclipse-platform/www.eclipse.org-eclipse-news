@@ -23,10 +23,7 @@
 	$pageTitle 		= "JDT Debug Build Notes";
 	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching, build, notes";
 	$pageAuthor		= "Debug Team";
-	
-	include("../_sideCommon.php");
-	include("_pluginCommon.php");
-	
+
 	error_reporting(E_ALL);
 		
 	$filename = "http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.debug.core/buildnotes_platform-debug.html";
@@ -39,6 +36,9 @@
     } else  {
     	$contents = <p>A connection to CVS could not be opened for streaming, so you'll have to look the old way by clicking the following link: <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.jdt.debug/buildnotes_jdt-debug.html" target="_blank">here</a></p>
     }
+	
+	include("../_sideCommon.php");
+	include("_pluginCommon.php");
 	
 	$html = <<<EOHTML
 
