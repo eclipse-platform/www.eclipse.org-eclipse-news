@@ -41,7 +41,9 @@
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
 			<h3>Summary of API Changes</h3>
-			None.
+			<p>
+			None
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>July ??, 2002 - Problem Reports Fixed</h3>
