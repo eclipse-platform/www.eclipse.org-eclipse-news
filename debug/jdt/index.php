@@ -58,6 +58,8 @@
 			of the newest and more interesting additions to the component.</p>
 			<ul>
 			<li>The latest entry of noteworthy interest is <a href="/eclipse/debug/nan/3.3/M7/nan.php">3.3 Milestone 7</a></li>
+			<li>In the 3.3M7 release we have significant changes to launching, logical structures and new export features. 
+				More specific information can be found in the <a href="/eclipse/debug/jdt/build_notes.php">build notes</a>.</li>
 			<li>For a complete listing of new and noteworthy entries check the <a href="/eclipse/debug/nan/new_and_noteworthy.php">New and Noteworthy</a> page.</li>
 			</ul>
 		</div>
