@@ -22,8 +22,8 @@
     <div class="sideitem">
 		<h6>Build Notes</h6>
 		<ul>
-			<li><a href="">Up to The Minute</a></li>
-	        <li><a href="">Previous Releases</a></li>
+			<li><a href="/eclipse/debug/platform/build_notes.php#uptotheminute">Up to The Minute</a></li>
+	        <li><a href="/eclipse/debug/platform/build_notes.php#previous">Previous Releases</a></li>
 		</ul>
 	</div>
 	<div class="sideitem">

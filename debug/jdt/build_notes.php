@@ -40,11 +40,20 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
-		<a name="uptotheminute"/>
+			<a name="uptotheminute"/>
 			<h3>Up to the Minute Build Notes</h3>
-			<ul>
-				<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.jdt.debug.core/buildnotes_jdt-debug.html" target="_blank">build notes</a></li>
-			</ul>
+				error_reporting(E_ALL);
+		
+				$filename = "http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.debug.core/buildnotes_platform-debug.html";
+				$dataFile = fopen( $filename, "r" ) ;
+			    if ( $dataFile )  {
+			    	while (!feof($dataFile))   {
+			        	$contents .= fgets($dataFile, 4096);
+			    	}
+			    	fclose($dataFile);
+			    } else  {
+			    	die(<a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.jdt.debug/buildnotes_jdt-debug.html" target="_blank">build notes</a>) ;
+			    }
 		</div>
 		<div class="homeitem3col">
 			<a name="previous"/>
