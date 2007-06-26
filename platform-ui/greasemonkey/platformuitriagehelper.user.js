@@ -18,16 +18,17 @@ window.addEventListener("load", function() {
   var component;
   var assigned_to;
   var short_desc;
+  var keywords;
   for (var i=0; i<els.length; i++) {
     if (els[i].name=="component") component = i;
+    if (els[i].name=="keywords") keywords = i;
     if (els[i].name=="assigned_to") assigned_to = i;
     if (els[i].name=="short_desc") short_desc = i;
   }
 //alert("indices: " + component + ", " + assigned_to + ", " + short_desc);
-  var assigned_to = document.forms[0].elements[assigned_to];
-  if(assigned_to.value != "Platform-UI-Inbox@eclipse.org" && assigned_to.value != "platform-ide-inbox@eclipse.org")
-    return;
-  document.forms[0].elements[component].addEventListener('change', function(){ var b=document.getElementById('knob-reassign-cmp');b.checked=true;b.scrollIntoView(true); }, false);
+  function rawButton(label, action) {
+    return '<input type="button" value="' + label + '" onClick="' + action + '" />';
+  }
   function buttonFor(comp, owner) {
     var onClick = "var b=document.getElementById('knob-reassign');";
     onClick += "b.checked=true;";
@@ -35,8 +36,46 @@ window.addEventListener("load", function() {
     onClick += "var d = document.forms[0].elements[" + short_desc + "];";
     onClick += "d.value = '["+comp+"] ' + d.value;";
     onClick += "d.scrollIntoView(true);";
-    return '<input type="button" value="' + comp + '" onClick="' + onClick + '" />';
+    return rawButton(comp, onClick);
   }
+  function postTriageButton(label, priority, target, keyword) {
+    var onClick = "var b=document.getElementById('knob-accept');";
+    onClick += "b.checked=true;";
+    onClick += "var c=document.getElementById('target_milestone');";
+    onClick += "c.value='" + target + "';";
+    onClick += "c=document.getElementById('priority');";
+    if (priority!="") {
+      onClick += "c.value='" + priority + "';";
+    }
+    onClick += "var d = document.forms[0].elements[" + keywords + "];";
+    if (keyword!="") {
+      onClick += "if(d.value.indexOf('"+keyword+"')==-1){";
+      onClick += "if(d.value!=''){";
+      onClick += "d.value = d.value + ', ';";
+      onClick += "}";
+      onClick += "d.value = d.value + '"+keyword+"';";
+      onClick += "}";
+    }
+    //onClick += "d.scrollIntoView(true);";
+    onClick += "d.focus();";
+    return rawButton(label, onClick);
+  }
+  var assigned_to = document.forms[0].elements[assigned_to];
+  if(assigned_to.value != "Platform-UI-Inbox@eclipse.org" && assigned_to.value != "platform-ide-inbox@eclipse.org") {
+    var header = document.getElementById('header');
+    var myDiv = document.createElement('div');
+    var buttons = "";
+    buttons += postTriageButton("P5 and forget", "P5", "---", "");
+    buttons += postTriageButton("P5 Helpwanted", "P5", "---", "helpwanted");
+    buttons += postTriageButton("P3 Helpwanted", "P3", "---", "helpwanted");
+    buttons += postTriageButton("3.3.1", "", "3.3.1", "");
+    buttons += postTriageButton("3.4", "", "3.4", "");
+    buttons += postTriageButton("4.0", "", "4.0", "");
+    myDiv.innerHTML = '<div style="position:absolute; left: 150px; top:10px;">' + buttons + '</div>';
+    header.parentNode.insertBefore(myDiv, header);
+    return;
+  }
+  document.forms[0].elements[component].addEventListener('change', function(){ var b=document.getElementById('knob-reassign-cmp');b.checked=true;b.scrollIntoView(true); }, false);
   var header = document.getElementById('header');
   var myDiv = document.createElement('div');
   var buttons = "";
