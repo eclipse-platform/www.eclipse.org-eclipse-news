@@ -40,12 +40,14 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
+		<a name="uptotheminute"/>
 			<h3>Up to the Minute Build Notes</h3>
 			<ul>
 				<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.jdt.debug.core/buildnotes_jdt-debug.html" target="_blank">build notes</a></li>
 			</ul>
 		</div>
 		<div class="homeitem3col">
+			<a name="previous"/>
 			<h3>Build Notes For Previous Releases</h3>
 			<ul>
 				<li><a href="build_notes/build_notes_r2-0.php">2.0 Release</a></li>
