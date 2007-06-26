@@ -57,7 +57,7 @@
 			<p>The JDT debug component is very responsive to new ideas, feature requests and bug reports. The following is a list of some 
 			of the newest and more interesting additions to the component.</p>
 			<ul>
-			<li>The latest entry of noteworthy interest is <a href="/eclipse/debug/nan/3.3/M3/nan.php">3.3 Milestone 3</a></li>
+			<li>The latest entry of noteworthy interest is <a href="/eclipse/debug/nan/3.3/M7/nan.php">3.3 Milestone 7</a></li>
 			<li>For a complete listing of new and noteworthy entries check the <a href="/eclipse/debug/nan/new_and_noteworthy.php">New and Noteworthy</a> page.</li>
 			</ul>
 		</div>
