@@ -34,6 +34,7 @@
 	include("../_sideCommon.php");
 	include("_pluginCommon.php");
 	
+	/*
 	error_reporting(E_ALL);
 			
 	$filename = "http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.debug.core/buildnotes_platform-debug.html";
@@ -46,6 +47,7 @@
     } else  {
     	$contents = <p>A connection to CVS could not be opened for streaming, so you'll have to look the old way by clicking the following link: <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.debug.core/buildnotes_platform-debug.html" target="_blank">here</a></p>
     }
+	*/
 	
 	$html = <<<EOHTML
 
@@ -55,7 +57,7 @@
 		<div class="homeitem3col">
 			<a name="uptotheminute"/>
 			<h3>Up to the Minute Build Notes</h3>
-				$contents
+				<p>A connection to CVS could not be opened for streaming, so you'll have to look the old way by clicking the following link: <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.debug.core/buildnotes_platform-debug.html" target="_blank">here</a></p>
 		</div>
 		<div class="homeitem3col">
 			<a name="previous"/>

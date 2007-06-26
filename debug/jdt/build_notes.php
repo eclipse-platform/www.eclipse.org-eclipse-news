@@ -24,7 +24,8 @@
 	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching, build, notes";
 	$pageAuthor		= "Debug Team";
 
-	#error_reporting(E_ALL);
+	/*
+	error_reporting(E_ALL);
 		
 	$filename = "http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.jdt.debug/buildnotes_jdt-debug.html";
 	$dataFile = fopen( $filename, "r" ) ;
@@ -34,8 +35,9 @@
     	}
     	fclose($dataFile);
     } else  {
-    	$contents = '<p>A connection to CVS could not be opened for streaming, so you'll have to look the old way by clicking the following link: <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.jdt.debug/buildnotes_jdt-debug.html" target="_blank">here</a></p>'
+    	$contents = 
     }
+    */
 	
 	include("../_sideCommon.php");
 	include("_pluginCommon.php");
@@ -48,7 +50,7 @@
 		<div class="homeitem3col">
 			<a name="uptotheminute"/>
 			<h3>Up to the Minute Build Notes</h3>
-				echo $contents
+				<p>A connection to CVS could not be opened for streaming, so you'll have to look the old way by clicking the following link: <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.jdt.debug/buildnotes_jdt-debug.html" target="_blank">here</a></p>
 		</div>
 		<div class="homeitem3col">
 			<a name="previous"/>
