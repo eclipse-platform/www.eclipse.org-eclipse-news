@@ -31,6 +31,7 @@
 				<ul>
 					<li><a href="/eclipse/debug/nan/3.3/M1/nan.php">Milestone 1</a></li>
 					<li><a href="/eclipse/debug/nan/3.3/M3/nan.php">Milestone 3</a></li>
+					<li><a href="/eclipse/debug/nan/3.3/M4/nan.php">Milestone 4</a></li>
 				</ul>
 			</p>
 		</div>

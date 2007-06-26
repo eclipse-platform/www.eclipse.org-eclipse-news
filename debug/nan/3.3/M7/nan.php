@@ -13,13 +13,13 @@
 	# Author: 		Debug Team
 	# Date:			November 10, 2006
 	#
-	# Description: a new and noteworty entry for 3.3M3 debug 
+	# Description: a new and noteworty entry for 3.3M7 debug 
 	#
 	#
 	#****************************************************************************
 	
 	
-	$pageTitle 		= "Debug Project New and Noteworthy for 3.3M3";
+	$pageTitle 		= "Debug Project New and Noteworthy for 3.3M7";
 	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching, new, noteworthy";
 	$pageAuthor		= "Debug Team";
 	
@@ -32,7 +32,9 @@
 		<h1>$pageTitle</h1>
 		<table border="0" width="80%" cellpadding="10" cellspacing="0">
 		  <tr> 
-		    <td colspan="2"> <hr></td>
+		    <td colspan="2"> <hr /> 
+		      <h2>Platform Debug</h2>
+		      <hr /></td>
 		  </tr>
 		  <tr> 
 		    <td width="30%" valign="top" align="left"><b>Mixed mode launch APIs and more</b></td>
