@@ -50,7 +50,9 @@
 		<div class="homeitem3col">
 			<a name="uptotheminute"/>
 			<h3>Up to the Minute Build Notes</h3>
-				<p>A connection to CVS could not be opened for streaming, so you'll have to look the old way by clicking the following link: <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.jdt.debug/buildnotes_jdt-debug.html" target="_blank">here</a></p>
+				<p>A connection to CVS could not be opened for streaming, so you'll have to look 
+				the old way by clicking the following link: <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.jdt.debug/buildnotes_jdt-debug.html" target="_blank">here</a>
+				</p>
 		</div>
 		<div class="homeitem3col">
 			<a name="previous"/>
