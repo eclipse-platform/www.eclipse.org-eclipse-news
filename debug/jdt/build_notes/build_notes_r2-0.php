@@ -45,6 +45,7 @@
 		</div>
 		<div class="homeitem3col">
 			<h3>July ??, 2002 - Problem Reports Fixed</h3>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=21099">21099</a>: HCR failed dialog - default control is wrong<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=18722">18722</a>: Projects re-build when not required<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=18792">18792</a>: Minor: caught/uncaught only enabled for single selection<br>
@@ -54,24 +55,32 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=21305">21305</a>: Debug element rendering can be more rebust<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=21308">21308</a>: Method.isObsolete() broken for method ID 0 on JDK < 1.4<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=20469">20469</a>: Concurrent modification of JDIDebugTarget breakpoint collection<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>June 24, 2002 - Problem Reports Fixed</h3>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=20370">20370</a>: NullPointerException getting thread group name.<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=20789">20789</a>: Method entry breakpoints too slow<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>June 21, 2002 - Problem Reports Fixed</h3>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=20745">20745</a>: Broken extension point links for org.eclipse.debug.ui<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>June 20, 2002 - Problem Reports Fixed</h3>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=18797">18797</a>: Evaluation that hits breakpoint confuses debugging<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=19182">19182</a>: Disconnect debug session crashes WebSphere<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=20604">20604</a>: Thread sometimes not updating when suspended<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>June 19, 2002 - Problem Reports Fixed</h3>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=20304">20304</a>: Eval: NPE when evaluate a snippet in anonymous type declared in an instance creation instruction<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=20468">20468</a>: Installed JRE: Source attachment set to non existing location<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=20049">20049</a>: Typo in method name - updateDefatultJREContainers<br>
@@ -81,27 +90,33 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=20415">20415</a>: NPE adding JRE<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=20436">20436</a>: Performance problem when method entry breakpoint set<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=20449">20449</a>: TVT2: Mnemonic of Use default Java executable doesn't work<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>June 12, 2002 - Problem Reports Fixed</h3>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=19880">19880</a>: Launcher configuration doesn't show up, NullPointerException in getMemento()<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=19610">19610</a>: EventRequestManagerImpl.findRequest doesn't handle VMDeathEvent<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=19740">19740</a>: content assist is now retargetable<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>June 11, 2002 - Problem Reports Fixed</h3>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=19412">19412</a>: more than one JRE on classpath<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=19604">19604</a>: Changing JRE JARs triggers useless build<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=18926">18926</a>: unable to add JDK 1.1.8 to Installed JRE's in Preferences<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=19723">19723</a>: InputStreamReader doesn't user workspace encoding<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=19796">19796</a>: NPE in ConsoleDocumentManager<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=19745">19745</a>: Launch Configuration Bug<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>June 10, 2002 - Problem Reports Fixed</h3>
 			<ul>
 				<li>API change on IVMConnector.<br>See <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=19569">19569</a>: Auxiliary processes started by IVMConnector cannot be registered<br></li>
 			</ul>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=18998">18998</a>: Stack overflow with cyclic projects (might belong to JDT/Core)<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=19314">19314</a>: Edit JRE Container dialog always shows 'Default'<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=18863">18863</a>: Default source lookup computed incorrectly<br>
@@ -116,9 +131,11 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=19554">19554</a>: StepEventImpl.EVENT_KIND is defined as int<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=19705">19705</a>: Manage breakpoint actions enabled for other text editors<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=19373">19373</a>: Changing connection type on JavaConnectTab does not show arg widgets<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>June 7, 2002 - Problem Reports Fixed</h3>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=18100">18100</a>: Internal error in Lauch Configurations dialog<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=18650">18650</a>: Scrapbook doesn't launch<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=18998">18998</a>: Stack overflow with cyclic projects (might belong to JDT/Core)<br>
@@ -145,6 +162,7 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=19329">19329</a>: IVMConnector implementation needs to have access to source p<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=19363">19363</a>: Missing wizard banner on library container<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=19541">19541</a>: Java debug timeout preference not persisted<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>June 1, 2002 - Problem Reports Fixed</h3>
@@ -156,7 +174,7 @@
 					indicate a default bootpath, or an empty array to indicate an empty bootpath.</li>
 				</ul>
 			</li>
-			
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=16909">16909</a>: Project selection for source lookup<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=18448">18448</a>: Default container entry<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=18434">18434</a>: Empty boot path si not the same as default boot path<br>
@@ -170,9 +188,11 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=17616">17616</a>: Source not shown for "thread" while exiting program<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=18512">18512</a>: Snippet evaluation returning wrong result?<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=18231">18231</a>: ArchiveSourceLocation holds onto open jars too long<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>May 31, 2002 - Problem Reports Fixed</h3>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=11947">11947</a>: NPE in JavaUISourceLocator when remote debugging<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=18115">18115</a>: IllegalArgumentException: Duplicate VM: 0<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=17348">17348</a>: Eval : NullPointerException when the source doesn't match the runtime class<br>
@@ -185,9 +205,11 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=18319">18319</a>: Elusive Ellipsis<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=17753">17753</a>: InternalException removing installed breakpoints<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=18329">18329</a>: deadlock launching eclipse in eclipse<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>May 30, 2002, - Problem Reports Fixed</h3>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=17838">17838</a>: Error correction for conditional breakpoint allows enter on empty String<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=17321">17321</a>: Problem in Installed JREs preferences<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=17065">17065</a>: Sharing JRE<br>
@@ -211,6 +233,7 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=16916">16916</a>: Mneumonic collision when attaching source for JRE_LIB<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=16917">16917</a>: Mneumonic collision in Classpath tab, Source tab<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=17386">17386</a>: Open on Type in console improvements<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>May 29, 2002, - Problem Reports Fixed</h3>
@@ -218,6 +241,7 @@
 			<li>The default working directory for Java Applications is now the associated project folder
 			 in the local file system.</li>
 			 </ul>
+			 <p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=17865">17865</a>: Wrong "this" context in evaluation & expression view<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=13349">13349</a>: Add breakpoint action disabled in editor pop-up<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=17377">17377</a>: Add/Remove breakpoint not enabled correctly if selection change from outliner<br>
@@ -237,6 +261,7 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=18040">18040</a>: Index out of bounds creating new remote java launch config<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=16046">16046</a>: Launch configuration dialog doesn't/can't cancel a launch<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=17132">17132</a>: Advanced dialog on class path config tabs should not be a title area dialog<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>May 28, 2002, - Problem Reports Fixed</h3>
@@ -248,6 +273,7 @@
 		</div>
 		<div class="homeitem3col">
 			<h3>May 27, 2002, - Problem Reports Fixed</h3>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=16340">16340</a>: Fix deprecations<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=16351">16351</a>: Inspect and Display incorrectly enabled in the display view<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=16400">16400</a>: Console view doesn't get focus<br>
@@ -258,9 +284,11 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=16834">16834</a>: ObjectCollectedException opening java editor in target workbench<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=16844">16844</a>: Debugger source lookup dialog needs viewer label<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=16848">16848</a>: Object collected exceptions<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>May 21, 2002, - Problem Reports Fixed</h3>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=12740">12740</a>: Wierd behavior when debugging standalone SWT example<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=16037">16037</a>: JavaArgumentsTab layout<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=16328">16328</a>: JRE home directory" field on "Add JRE" dialog is too short<br>
@@ -279,6 +307,7 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=16439">16439</a>: NPE out of ManageMethodBreakpointActionDelegate<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=16417">16417</a>: JavaLaunchActionSet not contributed to all Java perspectives<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=16446">16446</a>: Can't launch programs on Linux with default java executable name<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>May 19, 2002, - Problem Reports Fixed</h3>
@@ -286,6 +315,7 @@
 			<li>The actions used to create and launch a Java application have been moved to their
 			 own action set named "Java Launch". The action set will be visible in new Java or Debug perspectives.</li>
 			</ul>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=14877">14877</a>: NPE on workbench close<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=15881">15881</a>: ClassCastException trying to open launch configuration dialog<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=12966">12966</a>: Remote debugging with Sun J2ME wireless Toolkit fails<br>
@@ -328,6 +358,7 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=16358">16358</a>: Advanced actions creating dialogs on the wrong shell<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=16192">16192</a>: JDT Launch Configurations dialog Arguments tab Apply disabled<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=14082">14082</a>: Launch Configurations -> Environment -> Classpath<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>May 14, 2002, - Problem Reports Fixed</h3>
@@ -339,6 +370,7 @@
 			 <code>IJavaLaunchConfiguration.ATTR_CLASSPATH_PROVIDER</code> and 
 			 <code>IJavaLaunchConfiguration.ATTR_SOURCE_PATH_PROVIDER</code> </li>
 			</ul>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=15522">15522</a>: Rename Debug menu to "Run"<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=15609">15609</a>: Fix deprecated getSourcePosition() call<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=15662">15662</a>: Display of "null" shows nothing<br>
@@ -379,9 +411,11 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=12561">12561</a>: Exceptions in log: AddBreakpointAction#selectionChanged<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=14108">14108</a>: Timing issue with evaluation and thread state<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=15866">15866</a>: NumberFormatException if timeout number set to big<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>May 8, 2002, - Problem Reports Fixed</h3>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=14836">14836</a>: BIDI:Scrapbook editor: bad display of adjacent Hebrew or Arabic syntactic units<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=12823">12823</a>: Hard to find JRE for launching java applications<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=13074">13074</a>: NPE evaluating fully qualified array declaration<br>
@@ -415,6 +449,7 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=15016">15016</a>: Main type search could be primed with current text<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=14753">14753</a>: Reverse order of configuration types in New configuration menu<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=15102">15102</a>: NPE attempting to launch<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>April 30, 2002, - Problem Reports Fixed</h3>
@@ -422,6 +457,7 @@
 			<li>Environment variables have been removed from Java launch configurations. A java program
 			cannot access system environment variables, thus the ability to set them provides little benefit.</li>
 			</ul>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=14410">14410</a>: Java breakpoint properties dialog missing error icon<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=14158">14158</a>: Launcher Configurations modified by UI<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=14324">14324</a>: JDI client does not convert primitive method arguments to the correct type<br>
@@ -454,9 +490,11 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=14958">14958</a>: Internal Error exiting workbench<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=15193">15193</a>: Source resolution for alternate runtime JRE<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=14266">14266</a>: Scoping exception breakpoint table not scrollable<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>April 23, 2002, - Problem Reports Fixed</h3>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8966">8966</a>: Debug Perspective is not automatically select the servlet thread<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=14273">14273</a>: AbstractJavaLaunchConfigurationDelegate has misspelled method<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=14069">14069</a>: Rapid stepping & toString<br>
@@ -486,9 +524,11 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=14107">14107</a>: Second target incorrectly breaks on conditional<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=14025">14025</a>: NPE on evaluation of array.length<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=11934">11934</a>: exception found in the log<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>April 18, 2002, - Problem Reports Fixed</h3>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8362">8362</a>: Usability: Add exception computes hierarchy on each key stroke<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=13792">13792</a>: Performance improvement when changing JRE<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=13720">13720</a>: Breakpoint ruler actions do not work on class files with source<br>
@@ -513,9 +553,11 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=13169">13169</a>: Missing description on Java -> Debug preference pages<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=13883">13883</a>: DebugException found in the log<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=14060">14060</a>: stepping slow - timer takes 99% of CPU<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>April 11, 2002, - Problem Reports Fixed</h3>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=12665">12665</a>: ClassNotLoaded JDI exception during conditional breakpoint<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=13423">13423</a>: HCR failure notifications aren't being sent to the UI<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=13444">13444</a>: Tooltip incorrect for add package import in Java snippet editor<br>
@@ -523,12 +565,14 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=13173">13173</a>: No console output in Java Persp.<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=9861">9861</a>: Double-click does not work for strings in scrapbook page<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=13388">13388</a>: Exception evaluating method with array type parameter<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>April 9, 2002, - Problem Reports Fixed</h3>
 			<ul>
 			<li>Breakpoints can now be configured (enabled, disabled, etc.) from the ruler in java editor</li>
 			</ul>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=12640">12640</a>: Workspace runnable not run correctly<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=12350">12350</a>: Class header javadoc in eval ast classes<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=9290">9290</a>: Feature: dynamic pattern breakpoint<br>
@@ -556,12 +600,14 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=11128">11128</a>: Access to a field in a particular super-type through IJavaObject<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=3578">3587</a>: DCR: Enable/Disable a breakpoint in vertical ruler of Java Editor (1GFQ6DY)<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=10921">10921</a>: Turn on J9 JIT<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>April 2, 2002, - Problem Reports Fixed</h3>
 			<ul>
 			<li>An extension point that represents different kinds of connections to remote VMs. See org.eclipse.jdt.launching\doc\org_eclipse_jdt_launching_vmConnectors.html</li>
 			</ul>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=12389">12389</a>: Error message at double-click on empty console<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=1546">1546</a>: Remote Evaluation (AST evaluation)<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8157">8157</a>: ProjectBuildWatcher is too invasive<br>
@@ -570,19 +616,23 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=12452">12452</a>: NPE evaluating from anonymous innter type referencing enclosing type<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=12433">12433</a>: NPE code assisting with inner type in expressions view<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=9155">9155</a>: Hide Final Fields should be Hide Final Variables<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>March 28, 2002, - Problem Reports Fixed</h3>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=3977">3977</a>: Launching from projects with binary/jars (1GFDBYC)<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=12209">12209</a>: AST Eval engine API not fully implemented<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=12204">12204</a>: Not handling moved JREs properly<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6615">6615</a>: IOException running test suite<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>March 26, 2002, - Problem Reports Fixed</h3>
 			<ul>
 			<li>Scrapbook pages can set imports to provide context for the page</li>
 			</ul>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=1723">1723</a>: No code assist in display view for binaries with source (1GLE0F6)<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6089">6089</a>: display view code assist cotext should be receiving type<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6955">6955</a>: Java launch config should support classpath/bootpath<br>
@@ -608,9 +658,11 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=12211">12211</a>: copyright statements incorrect<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=1633">1633</a>: Scrapbook imports<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=12250">12250</a>: Duplicate launch configs appear in dialog<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>March 18, 2002, - Problem Reports Fixed</h3>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=10130">10130</a>: Launch Configurations "navigation tree" should start expanded<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=9756">9756</a>: Debug/Run history menu items should be disabled if no history yet<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=11297">11297</a>: JavaMethodBreakpoint always stops at entry and exit<br>
@@ -632,6 +684,7 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=10595">10595</a>: Debug into non-JavaBuildPath no longer works<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=11265">11265</a>: Need replacement source locator API<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=9204">9204</a>: NPE in Java Launch Configuration Delegate<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>March 12, 2002, - Problem Reports Fixed</h3>
@@ -641,6 +694,7 @@
 			<li>Launch configurations can be edited by selecting the new "Run/Debug Configurations..."
 			 options from the Run/Debug pulldown menus.</li>
 			 </ul>
+			 <p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=10839">10839</a>: Java launch config: main type checks are too constraining<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=10816">10816</a>: Debugging tries to show itself in resources perspective(?)<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=10484">10484</a>: Index out of bounds in JavaEnvironmentTab<br>
@@ -675,6 +729,7 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=11124">11124</a>: Launch configurations do not hanlde removed JRE<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=10292">10292</a>: Errors terminating debugged process<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=10693">10693</a>: vm crash during debugging<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>March 5, 2002, - Problem Reports Fixed</h3>
@@ -687,6 +742,7 @@
 			be set as the scope for the breakpoint.  The breakpoint is only "hit" if the exception is generated
 			from one of these locations.  Can be set off of the properties dialog for the breakpoint.</li>
 			</ul>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=9171">9171</a>: NPE attempting JDI test TestAll<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=9715">9715</a>: Java Connect tab "browse" button has no ellipsis<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=10672">10672</a>: In DebugUIPlugin method call Launch.getLauncher can return null<br>
@@ -719,9 +775,11 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=10641">10641</a>: NPE verifying name in launch configurations<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=10649">10649</a>: Title comment changes setting working directory<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=1585">1585</a>: Java launcher: Don't prompt for element to launch if there's only one (1GE6S2P)<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>February 28, 2002, - Problem Reports Fixed</h3>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=10218">10218</a>: breakpoint change mechanism<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=1695">1695</a>: DCR: support process/thread specific breakpoints (1GIYJTQ)<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=10009">10009</a>: Creating image descriptor registry on shutdown<br>
@@ -743,6 +801,7 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8096">8096</a>: run java-application always asks for the default launcher<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=1528">1528</a>: snippets: can start SWT program twice (1G47CME)<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=10242">10242</a>: Launch/Debug history contains a number<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>February 26, 2002, - Problem Reports Fixed</h3>
@@ -750,6 +809,7 @@
 			<li>Launch configurations allow execution directory to be specified</li>
 			<li>Launch histories are maintained for both launching styles during the transition.</li>
 			</ul>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=9493">9493</a>: Cannot launch with configuration fully specified<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=9830">9830</a>: Launch config arguments inserted prior to class on command line<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=9475">9475</a>: NPE out of LaunchManagerVisitor creating a launch configuration for callback<br>
@@ -763,9 +823,11 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=1729">1729</a>: HCR with compilation error (1GKF820)<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6916">6916</a>: DCR: allow to set timeout on remote debug connections<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=1735">1735</a>: Need breakpoint actions in editor ruler (1GKPU71)<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>February 14, 2002, - Problem Reports Fixed</h3>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=9668">9668</a>: Method breakpoints enabled for source methods<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=9456">9456</a>: AssertionFailedException attempting to draw overlays for breakpoints<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=9618">9618</a>: Terminated targets not updating<br>
@@ -774,6 +836,7 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=9556">9556</a>: NPE in JavaRuntime.getDefaultVMInstall<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=9591">9591</a>: exception in compiler pref page<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=9737">9737</a>: Invalid thread access initializing JavaPlugin<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>February 12, 2002, - Problem Reports Fixed</h3>
@@ -781,6 +844,7 @@
 			<li>The Java debug options preference page is now presented as part of the Java preferences</li>
 			<li>Basic icons and there support has been removed</li>
 			</ul>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=7964">7964</a>: Move Java debug options to Java preference page section<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=9124">9124</a>: NPE using launch configurations<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8683">8683</a>: NPE after suspending VM attempting to step on system thread<br>
@@ -819,9 +883,11 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=9310">9310</a>: Accellerator Keys not working in Debug Perspective<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8690">8690</a>: Delete key should work in Launch menu<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=9430">9430</a>: Process.getInputStream().ready() never succeeds<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>February 5, 2002, - Problem Reports Fixed</h3>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8666">8666</a>: TimeoutException during terminate<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8616">8616</a>: Feature: Suspend all threads option<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8634">8634</a>: Exception breakpoints not persisted<br>
@@ -859,6 +925,7 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=1539">1539</a>: Internationalization of integers (1G8U8KN)<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8261">8261</a>: Scrapbook dies with JDK1.4<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8728">8728</a>: SDK should only be auto-detected the first time<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>January 29, 2002, - Problem Reports Fixed</h3>
@@ -867,6 +934,7 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=7859">7859</a>: Feature: method exit breakpoints<br></li>
 			<li>A VM can be suspended/resumed.  See <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=7860">7860</a>: Feature: support suspend/resume of VM<br></li>
 			</ul>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8422">8422</a>: Convenience Constructor for JavaSourceLocator<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8086">8086</a>: Debug -> Run results in different bahavior than Ctrl-F11<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=7405">7405</a>: User defined step filters should have validity check<br>
@@ -891,9 +959,11 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8488">8488</a>: Display/Inspect on Debugger gives "ClassNotFoundException"<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8627">8627</a>: method arguments to class in jar<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8654">8654</a>: Debugger won't show source stopped not in debugged project<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>January 24, 2002, - Problem Reports Fixed</h3>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8388">8388</a>: NPE from HCR Manager<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8055">8055</a>: HCR failure: drop fails in following code<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8012">8012</a>: Smart frame dropping is slow, and no busy cursor<br>
@@ -902,12 +972,15 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8404">8404</a>: HCR does not pop frames with non-fully qualified named parameters<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8154">8154</a>: AddExceptionDialog incorrectly reporting exceptions not subclasses of Throwable<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8391">8391</a>: Cannot add exception breakpoint<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>January 23, 2002, - Problem Reports Fixed</h3>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8157">8157</a>: ProjectBuildWatcher is too invasive<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=3847">3847</a>: Runing a program fails with closed project on classpath. (1GEWKFO)<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8086">8086</a>: Debug -> Run results in different behavior than Ctrl-F11<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>January 22, 2002, - Problem Reports Fixed</h3>
@@ -919,6 +992,7 @@
 			<li>HotSwap enhancement - when performing a hot swap, the debugger only pops frames of methods
 			 that have been changed.</li>
 			 </ul> 
+			 <p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=5854">5854</a>: Breakpoint marker deleted without notifying breakpoint object<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6862">6862</a>: Adding watchpoint in outlineview can be incorrect<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=7631">7631</a>: Adding watchpoint from packages view associates with project<br>
@@ -963,9 +1037,11 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=7898">7898</a>: Divide by zero crashed Eclipse<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=7955">7955</a>: Not all entries of a Hashtable are shown in the inspector/debugger<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=7535">7535</a>: IncomptableThreadStateException while stepping<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>January 15, 2002, - Problem Reports Fixed</h3>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6548">6548</a>: Missing mnemonics in Debug preferences<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=7298">7298</a>: Drop to frame is always disabled<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=7228">7228</a>: dialog should have yes/no buttons...<br>
@@ -995,9 +1071,11 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=1620">1620</a>: README: Remote Evaluation (1GEUT42)<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=1679">1679</a>: Breakpoint view should reflect selectd target (1GI94VS)<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=1650">1650</a>: Run/Debug console display confusing (1GFC0TB)<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>January 9, 2002, - Problem Reports Fixed</h3>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=7133">7133</a>: Illegal references to Breakpoints view<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=7203">7203</a>: Display view brought to front when doing Inspect<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=1660">1660</a>: Do not prompt for source when no source attachment<br>
@@ -1017,9 +1095,11 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=1610">1610</a>: Run-time workbench launchers (1GETD51)<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=7291">7291</a>: Inspector does not memorize inspected Objects between two debug sessions<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6851">6851</a>: Debugger: Clicking too quickly on Step tool disables Step tools<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>December 18, 2001, - Problem Reports Fixed</h3>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=1665">1665</a>: Drop to frame hangs if after invoke (1GH3XDA)<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6817">6817</a>: J9 Launching doesn't work<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6759">6759</a>: Turning filters on/off makes Eclipse unresponsive<br>
@@ -1042,7 +1122,7 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=1580">1580</a>: Run in Package dialog should select the current context<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=5387">5387</a>: Can add the same exception breakpoint multiple times<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=7019">7019</a>: Non-public classes appear to confuse debugger source lookup<br>
-			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=7067">7067</a>: native method exception retrieving source name <br><h3>
+			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=7067">7067</a>: native method exception retrieving source name <br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=1566">1566</a>: run action missing from package view and outliner (1GDF2VH)<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=1598">1598</a>: Usability: Must select correct element to launch (1GEMBEL)<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=1634">1634</a>: First launch offers choice of 1 launcher (1GF5XKA)<br>
@@ -1052,9 +1132,11 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6975">6975</a>: Be able to execute methods on any inspected variables<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6952">6952</a>: Smart frame dropping after HCR <br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=7024">7024</a>: Launchers are using JDK 1.3 API<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>December 11, 2001, - Problem Reports Fixed</h3>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6576">6576</a>: Efficiency - use computeStackFrames internally<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6613">6613</a>: Drop frame above native frame does not work on 1.4<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6746">6746</a>: Class cast exception during hotswap<br>
@@ -1066,9 +1148,11 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=1750">1750</a>: IDE almost froze placing a breakpoint while running Eclipse in Eclipse (1GL4FRG)<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6744">6744</a>: IOException/Disconnect while launching<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6112">6112</a>: Run in package ignored<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>December 6, 2001, - Problem Reports Fixed</h3>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=1628">1628</a>: README: packages appear when doing eval (1GEYFPN)<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6389">6389</a>: System threads show suspended at startup <br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=1567">1567</a>: Full build caused hot code replace failure (1GDH1CH)<br>
@@ -1079,6 +1163,7 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6434">6434</a>: Scrapbook does not work with JDK1.4 <br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6530">6530</a>: Rapid successive evaluation causes trouble <br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=5290">5290</a>: Source does not show up on debug<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>December 4, 2001, - Problem Reports Fixed</h3>
@@ -1096,6 +1181,7 @@
 			<li> Stepping performance improvement. By increasing the amount of data cached in
 				our stack frame model, stepping is now dramatically faster in many cases.
 			</ul>
+			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6447">6447</a>: Inner class breakpoints not hit<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6209">6209</a>: Step filtering should be off by default<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=5225">5225</a>: 1.0 -- Casting problem in RunToLineAction class <br>
@@ -1130,9 +1216,11 @@
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6405">6405</a>: Strange suspend on ThreadDeath using SUN JDK 1.3 <br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=1618">1618</a>: README: debug does not see source changes (1GEUN5G) <br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6511">6511</a>: Launch history items are showing <terminated> <br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>November 27, 2001, - Problem Reports Fixed</h3>
+			<p>
 			<A HREF="http://bugs.eclipse.org/bugs/show_bug.cgi?id=1746">1746</A>: Debug target not expanded on hit breakpoint (1GLE3U8)<br>
 			<A HREF="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6192">6192</A>: Missing debug icons<br>
 			<A HREF="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6084">6084</A>: NPE from force loading Java Breakpoints<br>
@@ -1146,6 +1234,7 @@
 			<A HREF="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6161">6161</A>: NoClassDefFoundError running a scrapbook snippet<br>
 			<A HREF="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6256">6256</A>: NPE when selecting process in process view<br>
 			<A HREF="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6023">6023</A>: IOException writing after proxy closed<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>November 20, 2001, - Problem Reports Fixed</h3>
@@ -1154,6 +1243,7 @@
 			<li>New plug-in (org.eclipse.jdt.debug.ui). First cut at "extracting" the Java debug UI from the
 			Java tooling UI.</li>
 			</ul>
+			<p>
 			<A HREF="http://bugs.eclipse.org/bugs/show_bug.cgi?id=5715">5715</A>: Problems using scrapbook<br>
 			<A HREF="http://bugs.eclipse.org/bugs/show_bug.cgi?id=5791">5791</A>: NPE in SocketUtil<br>
 			<A HREF="http://bugs.eclipse.org/bugs/show_bug.cgi?id=5623">5623</A>: JDK 1.4 hot swap<br>
@@ -1177,9 +1267,11 @@
 			<A HREF="http://bugs.eclipse.org/bugs/show_bug.cgi?id=5164">5164</A>: J9: Console Windows popping up<br>
 			<A HREF="http://bugs.eclipse.org/bugs/show_bug.cgi?id=5984">5984</A>: UnsupportedOperationException resuming thread<br>
 			<A HREF="http://bugs.eclipse.org/bugs/show_bug.cgi?id=5928">5928</A>: Debugger fails if Java Build Path contains a phantom resourc<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>November 13, 2001, - Problem Reports Fixed</h3>
+			<p>
 			<A HREF="http://bugs.eclipse.org/bugs/show_bug.cgi?id=5139">5139</A>: Remove SnippetSupportBreakpoint<br>
 			<A HREF="http://bugs.eclipse.org/bugs/show_bug.cgi?id=5816">5816</A>: Resource tree locked error on hot swap<br>
 			<A HREF="http://bugs.eclipse.org/bugs/show_bug.cgi?id=5367">5367</A>: Meaningless brackets presented with primitive display option<br>
@@ -1192,6 +1284,7 @@
 			<A HREF="http://bugs.eclipse.org/bugs/show_bug.cgi?id=5589">5589</A>: InvalidStackFrameException updating variables<br>
 			<A HREF="http://bugs.eclipse.org/bugs/show_bug.cgi?id=5787">5787</A>: launching with j9 fails<br>
 			<A HREF="http://bugs.eclipse.org/bugs/show_bug.cgi?id=5717">5787</A>: Breakpoint not hit in local class<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>November 12, 2001, - Problem Reports Fixed</h3>
@@ -1199,6 +1292,7 @@
 			<li>toString() support for arrays</li>
 			<li>Support for hot swap and drop to frame on 1.4 compliant VMs</li>
 			</ul>
+			<p>
 			<A HREF="http://dev.eclipse.org/bugs/show_bug.cgi?id=5257">5257</A>: Set breakpoint takes very long<br>
 			<A HREF="http://dev.eclipse.org/bugs/show_bug.cgi?id=4926">4926</A>: Exception on doubleclicking breakpoint<br>
 			<A HREF="http://dev.eclipse.org/bugs/show_bug.cgi?id=5627">5627</A>: NPE setting detail pane orientation<br>
@@ -1225,6 +1319,7 @@
 			<A HREF="http://dev.eclipse.org/bugs/show_bug.cgi?id=5590">5590</A>: Step return fails on J9<br>
 			<A HREF="http://dev.eclipse.org/bugs/show_bug.cgi?id=5596">5596</A>: Option to make F10 to save and compile<br>
 			<A HREF="http://dev.eclipse.org/bugs/show_bug.cgi?id=5787">5787</A>: launching with j9 fails<br>
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>November 5, 2001, - Problem Reports Fixed</h3>
@@ -1235,6 +1330,7 @@
 			(but is coming shortly). The vertical/horizontal split is controlled by
 			a 'Debug' preference.</li>
 			</ul>
+			<p>
 			<a href="http://dev.eclipse.org/bugs/show_bug.cgi?id=5115">5115</a>: Workspace
 			source locator fails with mulitple package fragmen
 			<br><a href="http://dev.eclipse.org/bugs/show_bug.cgi?id=5360">5360</a>:
@@ -1259,6 +1355,7 @@
 			Allow detail area to split vertical or horizontal
 			<a href="http://dev.eclipse.org/bugs/show_bug.cgi?id=5437">5437</a>: Variable
 			not showing in Variables view even when assigned a value
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>November 1, 2001, - Problem Reports Fixed</h3>
@@ -1273,7 +1370,8 @@
 			API Change - IVariableModification has two new methods - setValue(IValue),
 			and verifyValue(IValue).</li>
 			</ul>
-			<br><a href="http://dev.eclipse.org/bugs/show_bug.cgi?id=5349">5349</a>:
+			<p>
+			<a href="http://dev.eclipse.org/bugs/show_bug.cgi?id=5349">5349</a>:
 			ClassCastExceptions caused by BreakpointManager
 			<br><a href="http://dev.eclipse.org/bugs/show_bug.cgi?id=5129">5129</a>:
 			Copy is disabled in the console
@@ -1323,6 +1421,7 @@
 			Method entry breakpoints on source methods (1GC2U31)
 			<br><a href="http://dev.eclipse.org/bugs/show_bug.cgi?id=5401">5401</a>:
 			Would like to copy contents of debug console
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>October 21, 2001, - Problem Reports Fixed</h3>
@@ -1336,7 +1435,8 @@
 			break any clients. A "run-to-line" breakpoint is now used in place of a
 			snippet support breakpoint.</li>
 			</ul>
-			<br><a href="http://dev.eclipse.org/bugs/show_bug.cgi?id=3544">3544</a>:
+			<p>
+			<a href="http://dev.eclipse.org/bugs/show_bug.cgi?id=3544">3544</a>:
 			Launch selection dialog has too many entries (1G5XYYS)
 			<br><a href="http://dev.eclipse.org/bugs/show_bug.cgi?id=1759">1759</a>:
 			Widget is disposed error on breakpoint properties (1GLE3NA)
@@ -1366,13 +1466,15 @@
 			not hit
 			<br><a href="http://dev.eclipse.org/bugs/show_bug.cgi?id=5234">5234</a>:
 			Debugger doesn't stop on breakpoint
+			</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>October 18, 2001, - Problem Reports Fixed</h3>
 			<ul>
 				<li>Support for "open on type" from a selection in the console.</li>
 			</ul>
-			<br><a href="http://dev.eclipse.org/bugs/show_bug.cgi?id=3452">3452</a>:
+			<p>
+			<a href="http://dev.eclipse.org/bugs/show_bug.cgi?id=3452">3452</a>:
 			NPE doing Display from Binary (1GLEG5K)
 			<br><a href="http://dev.eclipse.org/bugs/show_bug.cgi?id=1751">1751</a>:
 			Console misses style range for quick output (1GL4R1L)
@@ -1426,12 +1528,7 @@
 			README: breakpoints on method decl cause break on exit (1GE8
 			<br><a href="http://dev.eclipse.org/bugs/show_bug.cgi?id=1573">1573</a>:
 			Presentation should also be content provider (1GDTUJH)
-		</div>
-		<div class="homeitem3col">
-			<h3>July ??, 2002 - Problem Reports Fixed</h3>
-			<ul>
-				
-			</ul>
+			</p>
 		</div>
 	</div>
 	<div id="rightcolumn">
