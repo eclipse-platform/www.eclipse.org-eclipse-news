@@ -1,14 +1,22 @@
 <?php
 
-	# Page updated by Michael Rennie
-	# Date: August 22, 2006
-	# Default page items include the following:
-	#	Home
-	#	Downloads
-	#	What's New
-	#	Get Involved!
-	#	Filing Bugs
-	# set default theme
+	#*****************************************************************************
+	#
+	# Copyright (c) 2007 IBM Corporation and others.
+ 	# All rights reserved. This program and the accompanying materials
+ 	# are made available under the terms of the Eclipse Public License v1.0
+ 	# which accompanies this distribution, and is available at
+ 	# http://www.eclipse.org/legal/epl-v10.html
+ 	# Contributors:
+	#     IBM Corporation - initial implementation
+	#
+	# Author: 		Debug Team
+	# Date:			September 21, 2006
+	#
+	# Description: This is a contributed item that provides a common left-hand-side 
+	# project side bar for links etc.
+	#
+	#****************************************************************************
 	
 	$_theme = "Phoenix";
 	$theme = "Phoenix";

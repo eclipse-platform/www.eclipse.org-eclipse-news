@@ -2,8 +2,15 @@
 
 	#*****************************************************************************
 	#
+	# Copyright (c) 2007 IBM Corporation and others.
+ 	# All rights reserved. This program and the accompanying materials
+ 	# are made available under the terms of the Eclipse Public License v1.0
+ 	# which accompanies this distribution, and is available at
+ 	# http://www.eclipse.org/legal/epl-v10.html
+ 	# Contributors:
+	#     IBM Corporation - initial implementation
 	#
-	# Author: 		Michael Rennie
+	# Author: 		Debug Team
 	# Date:			November 10, 2006
 	#
 	# Description: a new and noteworty entry for 3.2M3 debug 
