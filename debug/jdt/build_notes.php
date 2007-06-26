@@ -24,9 +24,9 @@
 	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching, build, notes";
 	$pageAuthor		= "Debug Team";
 
-	error_reporting(E_ALL);
+	#error_reporting(E_ALL);
 		
-	$filename = "http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.debug.core/buildnotes_platform-debug.html";
+	$filename = "http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.jdt.debug/buildnotes_jdt-debug.html";
 	$dataFile = fopen( $filename, "r" ) ;
     if ( $dataFile )  {
     	while (!feof($dataFile))   {
