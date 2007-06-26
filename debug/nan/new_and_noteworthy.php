@@ -2,8 +2,15 @@
 
 	#*****************************************************************************
 	#
+	# Copyright (c) 2007 IBM Corporation and others.
+ 	# All rights reserved. This program and the accompanying materials
+ 	# are made available under the terms of the Eclipse Public License v1.0
+ 	# which accompanies this distribution, and is available at
+ 	# http://www.eclipse.org/legal/epl-v10.html
+ 	# Contributors:
+	#     IBM Corporation - initial implementation
 	#
-	# Author: 		Michael Rennie
+	# Author: 		Debug Team
 	# Date:			November 10, 2006
 	#
 	# Description: This is a main page listing all of the new and noteworthy entries for the debug project
@@ -32,6 +39,8 @@
 					<li><a href="/eclipse/debug/nan/3.3/M1/nan.php">Milestone 1</a></li>
 					<li><a href="/eclipse/debug/nan/3.3/M3/nan.php">Milestone 3</a></li>
 					<li><a href="/eclipse/debug/nan/3.3/M4/nan.php">Milestone 4</a></li>
+					<li><a href="/eclipse/debug/nan/3.3/M6/nan.php">Milestone 6</a></li>
+					<li><a href="/eclipse/debug/nan/3.3/M7/nan.php">Milestone 7</a></li>
 				</ul>
 			</p>
 		</div>

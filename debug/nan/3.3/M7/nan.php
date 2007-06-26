@@ -32,53 +32,33 @@
 		<h1>$pageTitle</h1>
 		<table border="0" width="80%" cellpadding="10" cellspacing="0">
 		  <tr> 
-		    <td colspan="2"> <hr /> 
-		      <h2>Platform Debug</h2>
-		      <hr /></td>
+		    <td colspan="2"> <hr></td>
 		  </tr>
 		  <tr> 
-		    <td width="30%" valign="top" align="left"><b>Mixed mode launch APIs and more</b></td>
-		    <td width="70%" valign="top"><p>The debug platform's launch API now supports 
-		        mixed mode launching. For example, an ISV could contribute a launcher 
-		        to profile and debug an application at the same time. See enhancements 
-		        to the <code>launchDelegates </code>and <code>launchConfgurationTypes 
-		        </code>extension points.</p>
-		      <p>ISVs can also contribute one or more tabs to existing tab groups in the 
-		        launch dialog to extend existing launch types with new function. For example, 
-		        a profiling tool could provide a tab to configure profile options for 
-		        Java applications. See the new extension point <code>launchConfigurationTabs</code>.</p>
-		      <p>The platform also allows more than one toolset to exist for launching 
-		        the same kind of application. For example, two profilers could exist for 
-		        Java applications and the user would be prompted to choose which profiler 
-		        to use at runtime.</p>
-		      </td>
-		  </tr>
-		  <tr> 
-		    <td colspan="2"> <hr /> </td>
-		  </tr>
-		  <tr> 
-		    <td width="30%" valign="top" align="left"><b>Debug context API</b></td>
-		    <td width="70%" valign="top">The debug platform has new API to access the 
-		      active debug context. A debug context represents the active state of a program 
-		      being debugged and drives the enabled state of debug actions (step, terminate, 
-		      etc.), as well as source lookup, visible variables, and watch expression 
-		      values. A set of classes and interfaces have been added to the new package 
-		      <code>org.eclipse.debug.ui.contexts </code>allowing clients to listen to 
-		      and drive the active debug context.</td>
-		  </tr>
-		  <tr> 
-		    <td colspan="2"> <hr /> </td>
-		  </tr>
-		  <tr> 
-		    <td width="30%" valign="top" align="left"><b>Debug command API</b></td>
-		    <td width="70%" valign="top">Debug commands represent common operations implemented 
-		      by debuggers - for example, step over, suspend, resume, and terminate. The 
-		      debug platform has added API allowing debuggers to provide custom implementations 
-		      of the operations by implementing the debug command interfaces. See the 
-		      new package <code>org.eclipse.debug.ui.commands</code>.</td>
-		  </tr>
-		  <tr> 
-		    <td colspan="2"> <hr /> </td>
+		    <td width="30%" align="left" valign="top"><b>Launch selection vs. launch last</b></td>
+		    <td width="70%" valign="top"><p>Selection based launching introduced in milestone 
+		        6 is now the default setting in milestone 7. Use the &quot;Run/Debug &gt; 
+		        Launching &gt; Launch the selected resource or active editor&quot; preference 
+		        to enable or disabled this feature.</p>
+		      <p>Running and debugging applications has been simplified to run or debug 
+		        the selected file or active editor. When the selected resource (or active 
+		        editor) is not executable, you can opt to launch the associated project 
+		        by selecting &quot;Always launch project if selected resource cannot be 
+		        launched&quot;.</p>
+		      <p><img src="launch-pref.png" alt="Preference for launch selection vs. launch last"/> 
+		      </p>
+		      <p>Pressing the Run or Debug toolbar button will launch the selected resource 
+		        (as will the Run or Debug action in the top level Run menu). When no launch 
+		        configuration exists for a file and there is only one way to launch it, 
+		        the file will simply be launched in the mode you selected. When there 
+		        is more than one way to launch a file you will be prompted to select how 
+		        to run or debug the application. For example, when running a JUnit test 
+		        you can run as a Java application or JUnit test. A a launch configuration 
+		        will be created and an entry will be added to the launch history for the 
+		        application.</p>
+		      <p><img src="select-way.png" alt="Select a way to run the application"/></p>
+		      <p>When the same resource is launched again, the most recent configuration 
+		        in the launch history associated with that resource is re-launched.</p></td>
 		  </tr>
 		</table>
 	</div>
