@@ -48,14 +48,14 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
-			<a name="uptotheminute"/>
+			<a name="uptotheminute"></a>
 			<h3>Up to the Minute Build Notes</h3>
 				<p>A connection to CVS could not be opened for streaming, so you'll have to look 
 				the old way by clicking the following link: <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.jdt.debug/buildnotes_jdt-debug.html" target="_blank">here</a>
 				</p>
 		</div>
 		<div class="homeitem3col">
-			<a name="previous"/>
+			<a name="previous"></a>
 			<h3>Build Notes For Previous Releases</h3>
 			<ul>
 				<li><a href="build_notes/build_notes_r2-0.php">2.0 Release</a></li>
