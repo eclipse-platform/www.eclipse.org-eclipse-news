@@ -31,23 +31,32 @@ window.addEventListener("load", function() {
   }
   function buttonFor(comp, owner) {
     var onClick = "var b=document.getElementById('knob-reassign');";
+    onClick += "if (b!=null) {";
     onClick += "b.checked=true;";
     onClick += "b.nextSibling.nextSibling.nextSibling.value='"+owner+"';";
+    onClick += "}";
     onClick += "var d = document.forms[0].elements[" + short_desc + "];";
+    onClick += "if (d!=null) {";
     onClick += "d.value = '["+comp+"] ' + d.value;";
     onClick += "d.scrollIntoView(true);";
+    onClick += "}";
     return rawButton(comp, onClick);
   }
   function postTriageButton(label, priority, target, keyword) {
     var onClick = "var b=document.getElementById('knob-accept');";
+    onClick += "if (b!=null) {";
     onClick += "b.checked=true;";
+    onClick += "}";
     onClick += "var c=document.getElementById('target_milestone');";
+    onClick += "if (c!=null) {";
     onClick += "c.value='" + target + "';";
     onClick += "c=document.getElementById('priority');";
     if (priority!="") {
       onClick += "c.value='" + priority + "';";
     }
+    onClick += "}";
     onClick += "var d = document.forms[0].elements[" + keywords + "];";
+    onClick += "if (d!=null) {";
     if (keyword!="") {
       onClick += "if(d.value.indexOf('"+keyword+"')==-1){";
       onClick += "if(d.value!=''){";
@@ -58,6 +67,7 @@ window.addEventListener("load", function() {
     }
     //onClick += "d.scrollIntoView(true);";
     onClick += "d.focus();";
+    onClick += "}";
     return rawButton(label, onClick);
   }
   var assigned_to = document.forms[0].elements[assigned_to];
