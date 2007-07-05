@@ -16,10 +16,6 @@
     <td width="28%"><img src="http://dev.eclipse.org/images/Idea.jpg" height=86 width=120></td></tr> 
 </table>
 
-<br>
-<font color="#FF0000" size="5">**Note** We are now in final stages of the 3.3 release. Please refer to the <a href="http://www.eclipse.org/eclipse/platform-releng/3.3-endgame-buildschedule.html">
-3.3 Endgame build schedule.</a></font>
-<br>
 
 
 <font class=indextop> </font><table border=0 cellspacing=5 cellpadding=2 width="100%" > 
@@ -32,7 +28,7 @@ Regularly Scheduled Builds</font></b></td></tr>
 
 N builds replace tags specified in org.eclipse.releng map files with HEAD.<br>
 I builds use tags org.eclipse.releng map files.
-<br>M builds use tags in the R3_2_maintenance
+<br>M builds use tags in the R3_3_maintenance
 branch of org.eclipse.releng. 
 <br>Teams must update map files in time for I and M build start times.<br>
   Performance testing will only occur where indicated.</p>
@@ -65,13 +61,13 @@ branch of org.eclipse.releng.
   </tr>
   <tr>
     <td rowspan="2">Tuesday</td>
-    <td>3.3 N build</td>
+    <td>3.4 N build</td>
     <td>00:10 </td>
     <td>05:10 UTC</td>
     <td>No rebuild.</td>
   </tr>
   <tr>
-    <td>3.3 I build with performance testing against 3.2 performance data..</td>
+    <td>3.4 I build with performance testing against 3.2 performance data..</td>
     <td>08:00 </td>
     <td>13:00 UTC</td>
     <td>Same day rebuild if compile errors, missing plugins, the build is unusable
@@ -83,20 +79,20 @@ branch of org.eclipse.releng.
   </tr>
   <tr>
     <td rowspan="3">Wednesday</td>
-    <td>3.3 N build</td>
+    <td>3.4 N build</td>
     <td>00:10 </td>
     <td>05:10 UTC</td>
     <td>No rebuild.</td>
   </tr>
     <tr>
-    <td>3.2.2 build if map files are updated</td>
+    <td>3.3.1 build if map files are updated</td>
 	    <td>08:00 </td>
     <td>13:00 UTC</td>
     <td>Rebuild until success.</td>
   </tr>
 
   <tr>
-    <td>3.3 I rebuild if requested</td>
+    <td>3.4 I rebuild if requested</td>
 	    <td>12:00 </td>
     <td>17:00 UTC</td>
     <td>Same day rebuild if compile errors, missing plugins, the build is unusable
@@ -109,13 +105,13 @@ branch of org.eclipse.releng.
   </tr>
   <tr>
     <td rowspan="3">Thursday</td>
-    <td>3.3 N build with performance tests</td>
+    <td>3.4 N build with performance tests</td>
     <td>00:10 </td>
     <td>05:10 UTC</td>
     <td>No rebuild.</td>
   </tr>
   <tr>
-    <td>3.3 I rebuild if requested</td>
+    <td>3.4 I rebuild if requested</td>
     <td>08:00</td>
     <td>13:00 UTC</td>
     <td>Rebuild until success</td>
@@ -131,7 +127,7 @@ branch of org.eclipse.releng.
   </tr>
   <tr>
     <td rowspan="2">Friday</td>
-    <td>3.3 N build</td>
+    <td>3.4 N build</td>
     <td>00:10 </td>
     <td>05:10 UTC</td>
     <td>No rebuild.</td>
@@ -149,7 +145,7 @@ branch of org.eclipse.releng.
   </tr>
   <tr>
     <td>Saturday</td>
-    <td>3.3 N build</td>
+    <td>3.4 N build</td>
     <td>00:10 </td>
     <td>05:10 UTC</td>
     <td>No rebuild.</td>
@@ -159,7 +155,7 @@ branch of org.eclipse.releng.
   </tr>
   <tr>
     <td>Sunday</td>
-    <td>3.3 N build</td>
+    <td>3.4 N build</td>
     <td>00:10 </td>
     <td>05:10 UTC</td>
     <td>No rebuild.</td>
@@ -171,33 +167,7 @@ branch of org.eclipse.releng.
 <TR> <TD ALIGN=LEFT VALIGN=TOP COLSPAN="2" BGCOLOR="#0080C0"><B><FONT FACE="Arial,Helvetica" COLOR="#FFFFFF">Additional 
 Upcoming Builds</FONT></B></TD></TR> <TR> <TD HEIGHT="19"></table>
 
-<strong>Friday, Apr 27 - 3.3 M7 warm-up and Test candidate builds</strong><br>
-- 00:10 am, 8am EDT 3.3 M7 Warm-up build toward Test candidate <br>
-<br>
 
-<strong>Monday, Apr 30 - 3.3 M7 warm-up and Test candidate builds</strong><br>
-- 3.3 M7 build toward Test candidate at  00:10 am, 8 am, 1pm, and 6 pm EDT builds if map files are updated <br>
-- 00:10 am EDT Integration builds will be in lieu of the nightly builds on Monday, Tuesday, Wednesday and Thursday<br>
-- goal: a good build for the test pass on Tuesday <br>
-- The last chance to submit to the test candidate will be the Tuesday 00:10am EDT build<br><br>
-
-<strong>Tuesday, May 1 (all day) - Final Test candidate build and 3.3 M7 Test pass </strong><br>
-- 00:10 am EDT build is the final 3.3 M7 test candidate build<br>
-- intensive 1-day test pass on 3.3 M7 candidate <br><br>
-
-<strong>Wednesday, May 2 - Build toward Milestone candidate</strong><br>
-- 3.3 M7 builds toward Milestone candidate with 00:10am, 8 am, 1pm, and 6 pm EDT builds if map files are updated <br><br>
-
-<strong>Thursday, May 3 - Final Build toward Milestone candidate</strong><br>
-- 00:10  am 8:00 am EDT build toward final 3.3 M7 candidate<br>
-- 08:00 am EDT build is the final 3.3 M7 candidate build<br>
-- for a rebuild, only team(s) requesting the rebuild need to recheck and sign off (although they may request other teams to revalidate potentially affected functionality) <br>
-- goal: a milestone candidate for Friday <br><br>
-
-<strong>Friday, May 4</strong><br>
--Final sanity check, all teams sign off, 3.3 M7 is released. <br>
-<br>
-<p></p>
 
 <table border=0 cellspacing=5 cellpadding=2 width="100%" > 
 <tr> <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font face="Arial,Helvetica" color="#FFFFFF">Build Retention 
@@ -209,7 +179,7 @@ Policy</font></b></td></tr> <tr> <td height="19"> <p>In an effort to reduce our 
 <tr> <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font face="Arial,Helvetica" color="#FFFFFF">Build 
 Notes </font></b></td></tr> <tr> <td height="19"> We have decided to make some 
 minor changes in our build story in order to better focus the responsibility for 
-getting good integration builds on the developers: <p>For the 3.3 integration
+getting good integration builds on the developers: <p>For the 3.4 Integration
   
 builds: <br>
  - build time is 8:00 am (Eastern time) on Tuesday mornings. <br> 
@@ -225,7 +195,7 @@ once a good integration build is achieved, it will be marked as such on the webs
 if the build is suitable for the week's testing. If you provide status and then 
 recontribute to a subsequent build, you are required to revalidate the build and 
 provide an updated status.</p>
-<p>For the 3.2.x maintenance builds: <br>
+<p>For the 3.4.x maintenance builds: <br>
    - build 
 time is 8am Wednesday (Eastern time) <br> - because of the nature 
 of the fixes in this stream, these builds should not fail. <br> However, if a 
