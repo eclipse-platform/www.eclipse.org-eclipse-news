@@ -54,24 +54,23 @@
 			
 			<p>The overall themes for this release are detailed below:</p>
 			<ul>
-			  <li><strong>Adopt new menu/commands</strong>: The new menu/commands story has been evolving over the last few releases
+			  <li><strong>Adopt new menu/commands</strong> (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=196349">196349</a>): The new menu/commands story has been evolving over the last few releases
 			  and should be in a state in 3.4 that will allow the Team, Compare and CVS plug-ins to adopt the support.
 			  </li>
-			  <li><strong>Adapt editor functionality to Compare Editor</strong>: We should continue to provide as much editor capabilities
+			  <li><strong>Adapt editor functionality to Compare Editor</strong> (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=169386">169386</a>): We should continue to provide as much editor capabilities
 			  as possible in the compare editor.
 			  </li>
-			  <li><strong>Improve unmatched patch handling</strong>: We would like to provide better visual feedback in the merge viewer when
-			  portions of a patch cannot be matched so that the user understands what to do and has some additional tools to help them find a match\
-			  (see bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=190844">190844</a>).
+			  <li><strong>Improve unmatched patch handling</strong> (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=190844">190844</a>): We would like to provide better visual feedback in the merge viewer when
+			  portions of a patch cannot be matched so that the user understands what to do and has some additional tools to help them find a match.
 			  </li>
-			  <li><strong>Compare with Each Other</strong>: We would like to provide a more Synchronize view like work flow to
+			  <li><strong>Compare with Each Other</strong> (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=193321">193321</a>): We would like to provide a more Synchronize view like work flow to
 			  the Compare with Each Other action.
 			  </li>
 			  <li><strong>Project Configuration</strong>: There are several improvements that can be made around project configuration.
 			  Some examples are:
 			  <ul>
-			  <li>Multi-project sharing</li>
-			  <li>Multi-project configuration on checkout/import (e.g. make non-Eclipse projects Java projects).<li>
+			  <li>Multi-project sharing (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=104203">104203</a>)</li>
+			  <li>Multi-project configuration on checkout/import (e.g. make non-Eclipse projects Java projects). (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=73590">73590</a>)<li>
 			  </ul>
 			  </li>
 			</ul>
