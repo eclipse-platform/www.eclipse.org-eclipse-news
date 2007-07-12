@@ -60,6 +60,10 @@
 			  <li><strong>Adapt editor functionality to Compare Editor</strong>: We should continue to provide as much editor capabilities
 			  as possible in the compare editor.
 			  </li>
+			  <li><strong>Improve unmatched patch handling</strong>: We would like to provide better visual feedback in the merge viewer when
+			  portions of a patch cannot be matched so that the user understands what to do and has some additional tools to help them find a match\
+			  (see bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=190844">190844</a>).
+			  </li>
 			  <li><strong>Compare with Each Other</strong>: We would like to provide a more Synchronize view like work flow to
 			  the Compare with Each Other action.
 			  </li>
