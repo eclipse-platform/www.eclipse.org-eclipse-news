@@ -66,6 +66,10 @@
 			  <li><strong>Compare with Each Other</strong> (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=193321">193321</a>): We would like to provide a more Synchronize view like work flow to
 			  the Compare with Each Other action.
 			  </li>
+			  <li><strong>Address Model-based Synchronize View regressions</strong> (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=172027">172027</a>):
+			  When the model-based Synchronize view was introduced in 3.2, there were several regressions that prevented CVs from removing support
+			  for the old-style Synchronizations. It would be good if these regressions could be addressed.
+			  </li>
 			  <li><strong>Project Configuration</strong>: There are several improvements that can be made around project configuration.
 			  Some examples are:
 			  <ul>
