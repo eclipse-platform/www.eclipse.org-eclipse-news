@@ -52,7 +52,9 @@
 			<a name="Themes"></a>
 			<h3>Overall Team 3.4 Plan</h3>
 			
-			<p>The overall themes for this release are detailed below:</p>
+			<p>The overall themes for this release are detailed below 
+			(Note, at this point, these are just items that we could potentially address.
+			Until we know the overall 3.4 plan, we cannot commit to any particular items):</p>
 			<ul>
 			  <li><strong>Adopt new menu/commands</strong> (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=196349">196349</a>): The new menu/commands story has been evolving over the last few releases
 			  and should be in a state in 3.4 that will allow the Team, Compare and CVS plug-ins to adopt the support.
@@ -95,7 +97,17 @@
 			<a name="m1"></a>
 			
 			<ul>
-			  <li><img src="../images/progress.gif" alt="under development"><strong>Bug fixing</strong>: Target bugs are marked as 3.4 M1.
+			  <li><img src="../images/progress.gif" alt="under development"><strong>Bug fixing for 3.4</strong>: Bugs with target milestone set to 
+			  <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=Compare&component=CVS&component=Team&target_milestone=3.4+M1&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">3.4 M1</a>
+			  (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=Compare&component=CVS&component=Team&target_milestone=3.4+M1&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">Fixed in 3.4 M1</a>).
+			  </li>
+			  <li><img src="../images/progress.gif" alt="under development"><strong>Bug fixing for 3.3.1</strong>: Bugs with target milestone set to 
+			  <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=Compare&component=CVS&component=Team&target_milestone=3.3.1&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">3.3.1</a>.
+			  </li>
+			  <li><img src="../images/progress.gif" alt="under development"><strong>Compare with Each Other</strong>: Start work on moving this to the Synchronize view.
+			      <ul>
+			      <li>Implement a two-way comparison editor for files ((<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=193324">193324</a>))
+			      </ul>
 			  </li>
 			</ul>
 			</div>

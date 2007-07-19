@@ -72,14 +72,18 @@
 		<div class="homeitem3col">
 			<h3>What's Happening</h3>
 			<a name="HAPPENING"></a>
+			<p><img SRC="http://dev.eclipse.org/images/Adarrow.gif" NOSAVE BORDER=0 height=16 width=16>&nbsp;<b>3.4 Development</b>
+			<ul>
+			<li>3.4 <a href="team3.4/plan.php">development</a> plan.</li>
+			</ul>
 			<p><img SRC="http://dev.eclipse.org/images/Adarrow.gif" NOSAVE BORDER=0 height=16 width=16>&nbsp;<b>3.3 Development</b>
 			<ul>
+			<li><b>3.3</b> has been released and is available in the <a href="http://download.eclipse.org/eclipse/downloads">downloads</a> area.</li>
 			<li>3.3 <a href="team3.3/plan.php">development</a> plan.</li>
 			</ul>
 			</p>
 			<p><img SRC="http://dev.eclipse.org/images/Adarrow.gif" NOSAVE BORDER=0 height=16 width=16>&nbsp;<b>3.2 Development</b>
 			<ul>
-			<li><b>3.2 RC7</b> has been released and is available in the <a href="http://download.eclipse.org/eclipse/downloads">downloads</a> area.</li>
 			<li>3.2 <a href="team3.2/plan.php">development</a> plan.</li>
 			<li>3.2 <a href="team3.2/3_2_testing.html">testing</a> plan.</li>
 			<li>3.2 <a href="http://www.eclipse.org/eclipse/development/freeze_plan_3.2.html">endgame plan</a> is available here.</li>
