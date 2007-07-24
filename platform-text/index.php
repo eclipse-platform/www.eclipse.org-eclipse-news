@@ -63,16 +63,16 @@ ob_start();
 		
 		<div class="homeitem3col">
 			<h3>What's Happening?</h3>
-		      <h4> <a NAME="Milestone_Planning"></a>3.3 Development</h4>
+		      <h4> <a NAME="Milestone_Planning"></a>3.4 Development</h4>
 				<p>
 		      <ul>
-		        <li> The 3.3 plan is posted <a href="3.3/plan.php#Overall_Planning">here</a>.</li>
-		        <li> The plan for the next milestone is posted <a href="3.3/plan.php#Milestone_Planning">here</a>.</li>
-		        <li>The original plans for previous milestones can be found <a href="3.3/previous_plans.php#Milestone_Planning">here</a>.</li>
+		        <li> The 3.4 plan is posted <a href="3.4/plan.php#Overall_Planning">here</a>.</li>
+		        <li> The plan for the next milestone is posted <a href="3.4/plan.php#Milestone_Planning">here</a>.</li>
+		        <li>The original plans for previous milestones can be found <a href="3.4/previous_plans.php#Milestone_Planning">here</a>.</li>
 		      </ul></p>
 		      
-		      <h4> <a NAME="Maintenance_Planning"></a>3.2 Maintenance</h4>
-		      <p>Information about 3.2 maintenance releases can be found <a href="http://wiki.eclipse.org/index.php/Callisto_Coordinated_Maintenance">here</a>.</p>
+		      <h4> <a NAME="Maintenance_Planning"></a>3.3 Maintenance</h4>
+		      <p>Information about 3.3 maintenance releases can be found <a href="http://wiki.eclipse.org/index.php/Europa_Coordinated_Maintenance">here</a>.</p>
 
 		      <h4> <a NAME="Releases"></a>Previous Releases</h4>
 		      <p>Information about previous releases can be found <a href="releases.html">here</a>.</p>
