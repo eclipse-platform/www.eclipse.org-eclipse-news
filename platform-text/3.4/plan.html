@@ -1,9 +1,62 @@
 <!doctype html public "-//w3c//dtd html 4.0 transitional//en">
-<html>
+<html XMLNS:Style>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 	<meta name="GENERATOR" content="Mozilla/4.76 [en] (Windows NT 5.0; U) [Netscape]">
-	<title>Combined Platform Text and JDT Text Component 3.4 Plan</title>
+	<title>Platform Text 3.4 Plan</title>
+
+<script type="text/javascript">
+<!--
+function linkifyBugs() {
+	// Replaces plain text 'bug xyz' by a link to Eclipse's bugzilla.
+	traverseLinkifyBugs(document.getElementsByTagName("body")[0]);
+}
+function nextNode(node) {
+	if (node.nextSibling) {
+		return node.nextSibling;
+	} else if (node.parentNode == document.getElementsByTagName("body")[0]) {
+		return null;
+	} else {
+		return nextNode(node.parentNode);
+	}
+}
+function traverseLinkifyBugs(node) {
+	while (node) {
+		if (node.nodeType == 1/*element*/ && node.nodeName == "a") {
+			node= nextNode(node);
+			
+		} else if (node.childNodes != null && node.childNodes.length > 0) {
+			node= node.childNodes[0];
+			
+		} else if (node.nodeType == 3/*text*/) {
+			var txt= node.data;
+			var regex= /([Bb]ug\s*)([0-9]+)/;
+			var res= regex.exec(txt);
+			if (res) {
+				var matchStart= txt.indexOf(res[0]);
+				
+				var beforeNode= document.createTextNode(txt.substring(0, matchStart));
+				node.parentNode.insertBefore(beforeNode, node);
+				
+				var linkNode= document.createElement("a");
+				linkNode.href= "https://bugs.eclipse.org/bugs/show_bug.cgi?id=" + res[2];
+				linkNode.appendChild(document.createTextNode(res[1] + res[2]));
+				node.parentNode.insertBefore(linkNode, node);
+				
+				node.data= txt.substr(matchStart + res[0].length);
+				// continue with current (shortened) node...
+			} else {
+				node= nextNode(node);
+			}
+			
+		} else {
+			node= nextNode(node);
+		}
+	}
+}
+
+//-->
+</script>
 
 	<style>
 		body {  
@@ -13,7 +66,7 @@
 	</style>
 	
 	 <style type="text/css">
-  		committed {
+  		Style\:committed {
   			color: blue;
   			font-style: italic;
   		}
@@ -21,44 +74,155 @@
 	
 </head>
 
-<body text="#000000" bgcolor="#FFFFFF">
+<body text="#000000" bgcolor="#FFFFFF" onload="linkifyBugs()">
 
 <table BORDER=0 CELLSPACING=5 CELLPADDING=2 WIDTH="100%" >
 
   <tr> 
     <td WIDTH="100%"> 
-    <p>Last revised 12:24 CEST July 24, 2007</p>
+    <p>Last revised 15:00 CEST July 25, 2007</p>
 
     
-      <p>This plan is under continuous refinement. Please send comments about this draft plan to the <a href="mailto:platform-text@eclipse.org">platform-text@eclipse.org</a> developer mailing list.</p>
+      <p>This plan is under continuous refinement. Please send comments about this plan to the <a href="mailto:platform-text@eclipse.org">platform-text@eclipse.org</a> developer mailing list.</p>
+      <p><strong>Note:</strong> The JDT Text plan is now hosted on the <a href="http://www.eclipse.org/jdt/ui/r3_4/plan.php">Combined JDT Text and JDT UI Plan</a>.
       <h2><a NAME="Overall_Planning"></a>Overall Goals </h2>
       <p>This section lists the goals for Eclipse 3.4 for the Platform 
-        Text and the JDT Text component as listed on the 
+        Text component as listed on the 
         <a href="http://www.eclipse.org/eclipse/development/eclipse_project_plan_3_4.html">Eclipse Project Draft 3.4 Plan</a>.
         </p>
 
-	TBD
 
+		<p>
+		<strong><a name="1">[1] Performance</strong>.
+		Reduce temporary memory used when typing and investigate faster ways to iterate over annotations. In addition overall performance and memory consumption will be monitored which includes the addition of new performance tests for new features.  
+		</p>
+
+		<p>
+		<strong><a name="2">[2] Reliability</strong>.
+		Provide APIs for clients where needed, make various improvements to printing support, the vertical and overview rulers and fix outstanding issues with regex support.
+		</p>
+		
+		<p>
+		<strong><a name="3">[3] Keep Eclipse vibrant and attractive</strong>.
+		Deliver new productivity features like rich hovers and SWT templates. 
+		</p>
 
 	<h2><a NAME="Work_Items"></a><br>Work Items</h2>
 	<p>
-		This section defines the <committed>committed</committed> and proposed work items for Eclipse 3.4 for
-		the Platform Text and the JDT Text component.
+		This section lists the possible work items for Eclipse 3.4 for the Platform Text component
+		with the [corresponding theme].
+		Some of those items have a <Style:committed>higher priority</Style:committed> than others.
 	</p>
-	TBD
 
-
-	<h3>Platform Text</h3>
 	<ul>
+	  <li><h4><a name="rich hovers"></a>Rich Hovers (experimental) [<a href="#3">3</a>]</h4>
+	    <ul>
+		  <li><Style:committed>links support in hovers so that you can navigate to things from there</Style:committed></li>
+		  <li><Style:committed>investigate better interaction for making hovers sticky (mouse path)</Style:committed>
+		  <br>if the hover is made sticky via mouse then it must disappear automatically if the mouse leaves the hover.
+		  </li>
+		  <li>investigate to use hovers as affordance for context sensitive actions (quick assist/fix, surround with...)</li>
+		  <li>allow seamless transition from hover &gt; sticky hover &gt; Javadoc view</li>
+	    </ul>
+	  </li>
+	
+	  <li><h4>Find/Replace [<a href="#2">2</a>]</h4>
+	    <ul>
+		  <li><Style:committed>find a solution to use line delimiters, tabs, etc. in regex replace (bug 80667)</Style:committed></li>
+		  <li><Style:committed>allow regular expressions to match across lines (bug 44766)</Style:committed></li>
+		  <li><Style:committed>handle dangerous regex replaces more gracefully (e.g. by restarting the line tracker) (bug 130843)</Style:committed></li>
+		  <li>escape regex patterns in selection used as find string (bug 44422)</li>
+		  <li>improve Find/Replace dialog: merge into editor area, ... [GSoC project]</li>
+	    </ul>
+	  </li>
+	
+	  <li><h4><a name="Hyperlinking"></a>Hyperlinking [<a href="#3">3</a>]</h4>
+	    <ul>
+		  <li><Style:committed>allow to present more than one hyperlink target for a given text range</Style:committed></li>
+		  <li>allow hyperlink to show a hover</li>
+	    </ul>
+	  </li>
+	
+	  <li><h4>Ruler improvements [<a href="#2">2</a>]</h4>
+	    <ul>
+	  	  <li>investigate improving the usability of icons in the vertical ruler [experimental]
+	  	  <ul>
+	  	  	<li><Style:committed>fix most common layering problem (breakpoints) by changing their layer</Style:committed></li>
+	  	  	<li><Style:committed>alpha blending so that underlying icons can be seen</Style:committed></li>
+	  	  	<li><Style:committed>down-size images so that we can show 4 instead of one</Style:committed></li>
+	  	  	<li>allow to increase ruler width</li>
+	  	  	<li>allow users to configure the annotation presentation layer for each annotation</li>
+		  	<li>finish/cleanup the roll-over annotation work that was kicked off during 3.0
+	  	  </ul></li>
+	  	  <li><Style:committed>allow to configure annotations directly in the vertical and overview rulers</Style:committed></li>
+	  	  <li><Style:committed>Go to line when clicking in overview ruler (bug 91722)</Style:committed></li>
+	  	  <li>improve overview ruler arming and size of active area</li>
+	    </ul>
+	  </li>
+	
+	  <li><h4>Spell Checking [<a href="#2">2</a>]</h4>
+		<ul>
+		  <li><Style:committed>fix the most severe bugs</Style:committed></li>
+		  <li>allow to spell-check a set of resources (write your own builder?)</li>
+		  <li>push down spelling engine from JDT to Platform</li>
+		</ul>
+	  </li>
+	
+	  <li><h4>Printing [<a href="#2">2</a>]</h4>
+	  	<ul>
+	  		<li><Style:committed>print line numbers (bug 6877)</Style:committed></li>
+	  		<li>turn off line highlighting when printing (bug 14954)</li>
+	  	</ul>
+	  </li>
+
+	  <li><h4>Performance [<a href="#1">1</a>]</h4>
+	  	<ul>
+		  <li><Style:committed>investigate to reduce garbage when typing</Style:committed></li>
+		  <li><Style:committed>provide API to retrieve annotations in a certain range from an annotation model</Style:committed>
+		  	  <br>&rArr; with this, clients no longer need to iterate over all annotations
+		  </li>
+		  <li><Style:committed>allow to flag a document as being delete (no longer used) or even more life-cycle</Style:committed> 
+		      <br>&rArr; allows to improve performance when closing an editor
+		  </li>
+		  <li><Style:committed>revisit the text viewer's support for redraw, compound updates, and selection preservation</Style:committed>
+		    <ul>
+		      <li>check all setRedraw(on/off) users whether they really need that expensive operation (e.g. undo)</li>
+		  	</ul>
+		  </li>
+		  
+		  <li><Style:committed>constantly watch performance test results and act when red</Style:committed></li>
+		  <li><Style:committed>continue to provide new tests</Style:committed></li>
+	  	</ul>
+	  </li>
+	  
+	  <li><h4>Miscellaneous</h4>
+	    <ul>
+		  <li><Style:committed>update web page regarding RCP text editor</Style:committed></li> 
+		  <li>show context when dragging the vertical scroll bar (e.g. method name) [experimental]</li>
+		  <li><Style:committed>quick diff usability improvements in hover (Next/Prev support etc)</Style:committed>
+		  	<br>depends on the <a href="#rich hovers">Rich Hovers</a> item above</li>
+		  <li><Style:committed>change folding paradigm: no longer eat first key stroke [experimental] (bug 67500, bug 66264)</Style:committed></li>
+		  <li>show more context about what's currently being edited (e.g. in a header):
+		  	<ul>
+		  		<li><Style:committed>bread crumb trail bar to show the context of the current selection:</Style:committed>
+		  		<br>
+				the idea is to have a bar inside the editor area at the top that shows me the path
+				to the current selection:
+				project &gt; src folder &gt; package &gt; class &gt; inner class &gt; method</li>
+				<li>each of the segments of the bread crumb trail would be clickable and and 
+				navigate to the corresponding element. A drop down would show all available targets. 'Show in...' could be used for elements
+				that are outside the editor  [experimental]</li>
+			</ul>
+		  </li>
+		  <li>provide LTK layer for text editing support (bug 125825, bug 149817, ...)</li>
+		</ul></li>
+		
+	    <li><h4>General Items [<a href="#2">2</a>]</h4>
+		<ul>
+			<li><Style:committed>3.3.x maintenance work</Style:committed></li>
+			<li>look at bugs with patches and review those</li>
+		</ul></li>
 	</ul>
-	TBD
-
-
-    <h3>JDT Text</h3>
-	<ul>
-	</ul>
-	TBD
-
 
 
 	<h2><br>Cross Team Issues</h2>
@@ -79,13 +243,13 @@
   <tr> 
     <td WIDTH="100%"> 
 
-	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Top items</h4>
+	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> General Items</h4>
 	<ul>
 		<li>3.4 planning</li>
 		<li>3.3.1 bug fixing</li>
 	</ul>
 	
-	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Permanent items</h4>
+	<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Permanent Items</h4>
 	<ul>
 		<li>bugzilla inbox tracking</li>
 		<li>bug fixing</li>
@@ -121,7 +285,6 @@
 <ul>
 <li><a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&product=JDT&product=Platform&component=Text&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=REOPENED&emailassigned_to1=1&emailtype1=substring&email1=inbox&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=400d&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">new bug reports</a></li>
 <li><a href="http://dev.eclipse.org/bugs/buglist.cgi?bug_status=ASSIGNED&email1=platform-text-inbox@eclipse.org&emailtype1=exact&emailassigned_to1=1&email2=&emailtype2=substring&emailreporter2=1&bugidtype=include&bug_id=&changedin=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&product=Platform&component=Text&short_desc=&short_desc_type=allwordssubstr&long_desc=&long_desc_type=allwordssubstr&keywords=&keywords_type=anywords&field0-0-0=noop&type0-0-0=noop&value0-0-0=&namedcmd=All&newqueryname=Text%2BInbox&tofooter=1&order=Reuse%2Bsame%2Bsort%2Bas%2Blast%2Btime">accepted Platform Text bug reports</a></li>
-<li><a href="http://dev.eclipse.org/bugs/buglist.cgi?bug_status=ASSIGNED&email1=jdt-text-inbox@eclipse.org&emailtype1=exact&emailassigned_to1=1&email2=&emailtype2=substring&emailreporter2=1&bugidtype=include&bug_id=&changedin=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&product=JDT&component=Text&short_desc=&short_desc_type=allwordssubstr&long_desc=&long_desc_type=allwordssubstr&keywords=&keywords_type=anywords&field0-0-0=noop&type0-0-0=noop&value0-0-0=&namedcmd=All&newqueryname=Text%2BInbox&tofooter=1&order=Reuse%2Bsame%2Bsort%2Bas%2Blast%2Btime">accepted JDT Text bug reports</a></li>
 <li><a href="https://bugs.eclipse.org/bugs/query.cgi?short_desc_type=allwordssubstr&short_desc=&product=JDT&product=Platform&component=Text&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&namedcmd=Assigned&newqueryname=&field0-0-0=noop&type0-0-0=noop&value0-0-0=">find a bug report</a></li>
 </ul>
 </td>
