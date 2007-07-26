@@ -53,8 +53,15 @@ ob_start();
 			<a name="happening"></a>
 			<h3>What's Happening?</h3>
 			
-			<p>Since 3.2, Platform Search is in maintenace mode.
-			Contact us if you want to help, contributions are highly appreciated!</p>
+			<p>Since 3.2, Platform Search is mostly in maintenance mode. Contact us if you want to help, contributions are highly appreciated!</p>
+			
+		      <h4> <a NAME="Milestone_Planning"></a>3.4 Development</h4>
+				<p>
+		      <ul>
+		        <li> The 3.4 plan is posted <a href="3.4/plan.php#Overall_Planning">here</a>.</li>
+		        <li> The plan for the next milestone is posted <a href="3.4/plan.php#Milestone_Planning">here</a>.</li>
+		      </ul></p>
+			
 		</div>
 		
 		<div class="homeitem3col">
@@ -68,12 +75,9 @@ ob_start();
 			and help us fix bugs.</p>
 			<p>Interesting areas for participation:</p>
 			<ul>
-			<li>Better support the user with regex expressions: Help with examples and previews</li>
-			<li>Split the search plugin to a UI (RCP plugin) and a plugin containing file search</li>		
-			<li>Show line matches</li>
-			<li>Improve the replace UI</li>	
+				<li>Split the search plugin to a UI (RCP plugin) and a plugin containing file search</li>		
 			</ul>
-			<p>More information can be found on the <a href="dev.html">Development Resources</a>.</p>
+			<p>More information can be found on the <a href="dev.php">Development Resources</a>.</p>
 		</div>
 	</div>
 	
