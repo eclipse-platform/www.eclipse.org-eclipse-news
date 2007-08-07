@@ -630,9 +630,12 @@
 				    <ul>
 				      <li>From context menu &quot;Add Watch Expression&quot;</li>
 				      <li>From variables view context menu &quot;Watch&quot;</li>
+				      <li>Dragging variables from variables view to expressions view</li>
+				      <li>Dragging text to expressions view</li>
 				    </ul>
 				  </li>
 				  <li>Persist</li>
+				  <li>Reordering of expressions view by dragging and dropping</li>
 				  <li>Enable/disable</li>
 				  <li>Update while stepping</li>
 				  <li>Update when selecting a different stack frame</li>
