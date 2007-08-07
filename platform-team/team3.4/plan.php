@@ -93,7 +93,7 @@
 			
 			<div class="homeitem3col">
 			
-			<h3>3.4 Development Effort - Milestone 1 (Friday, August ??, 2007) </h3>
+			<h3>3.4 Development Effort - Milestone 1 (Friday, August 10, 2007) </h3>
 			<a name="m1"></a>
 			
 			<ul>
@@ -111,6 +111,26 @@
 			  </li>
 			</ul>
 			</div>
+			
+			<div class="homeitem3col">
+			
+			<h3>3.4 Development Effort - Milestone 2 (Friday, September 21, 2007) </h3>
+			<a name="m2"></a>
+			
+			<div class="homeitem3col">
+			
+			<h3>3.4 Development Effort - Milestone 3 (Friday, November 2, 2007) </h3>
+			<a name="m3"></a>
+			
+			<div class="homeitem3col">
+			
+			<h3>3.4 Development Effort - Milestone 4 (Friday, December 14, 2007) </h3>
+			<a name="m4"></a>
+			
+			<div class="homeitem3col">
+			
+			<h3>3.4 Development Effort - Milestone 5 (Friday, February 8, 2008) </h3>
+			<a name="m5"></a>
 			
 			<div class="homeitem3col">
 			
