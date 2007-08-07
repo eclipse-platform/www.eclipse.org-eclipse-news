@@ -33,6 +33,14 @@
 		<p>The debug component is very responsive to new ideas, feature requests and bug reports. The following is a list of some 
 			of the newest and more interesting additions to the component.</p>
 		<div class="homeitem3col">
+			<h3>New and Noteworthy for 3.4</h3>
+			<p>Listing of new and noteworthy items separated by milestone:
+				<ul>
+					<li><a href="/eclipse/debug/nan/3.4/M1/nan.php">Milestone 1</a></li>
+				</ul>
+			</p>
+		</div>
+		<div class="homeitem3col">
 			<h3>New and Noteworthy for 3.3</h3>
 			<p>Listing of new and noteworthy items separated by milestone:
 				<ul>
