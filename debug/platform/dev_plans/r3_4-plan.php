@@ -13,26 +13,28 @@
 	# Author: 		Debug Team
 	# Date:			August 7, 2007
 	#
-	# Description: This is the 3.3 plan item page for JDT Debug
+	# Description: This is the 3.4 plan item page, describing the items to be addressed in 
+	#			   the 3.4 release of eclipse
+	#
 	#
 	#****************************************************************************
-	
-	$pageTitle 		= "JDT Debug 3.3 Release Plan";
-	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching, release, plan, 3.3";
-	$pageAuthor		= "Debug Team";
+
+	$pageTitle 		= "Platform Debug 3.4 Release Plan";
+	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, release, 3.4, milestone, plan";
+	$pageAuthor		= "Debug Team";	
 	
 	include("../../_sideCommon.php");
 	include("../_pluginCommon.php");
-	
+
 	$html = <<<EOHTML
 
 <div id="maincontent">
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
-			<h3>Overall 3.3 Plan</h3>
+			<h3>Overall 3.4 Plan</h3>
 			
-			<h4>Overall Themes for JDT Debug:</h4>
+			<h4>Overall Themes for Platform Debug:</h4>
 	        
 	        <table>
 				<tr> 
@@ -42,11 +44,12 @@
 		        </tr>
 			</table>
 	        <h4>Planned Items</h4>
-	        <blockquote>	
+	        <blockquote>
+	        	
 			</blockquote>
 			
-			<h4>Deferred Items </h4>
-	      	<blockquote>
+			<h4>Deferred Items (Post 3.4)</h4>
+	      	
 	      	</blockquote>
 		</div>
 	</div>

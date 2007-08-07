@@ -13,12 +13,13 @@
 	# Author: 		Debug Team
 	# Date:			August 7, 2007
 	#
-	# Description: This is the 3.3 plan item page for JDT Debug
+	# Description: This is the 3.4 plan item page for JDT Debug
 	#
 	#****************************************************************************
 	
-	$pageTitle 		= "JDT Debug 3.3 Release Plan";
-	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching, release, plan, 3.3";
+	
+	$pageTitle 		= "JDT Debug 3.4 Release Plan";
+	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching, release, plan, 3.4, JDT";
 	$pageAuthor		= "Debug Team";
 	
 	include("../../_sideCommon.php");
@@ -30,7 +31,7 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
-			<h3>Overall 3.3 Plan</h3>
+			<h3>Overall 3.4 Plan</h3>
 			
 			<h4>Overall Themes for JDT Debug:</h4>
 	        

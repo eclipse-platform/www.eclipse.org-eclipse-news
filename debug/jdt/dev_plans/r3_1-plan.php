@@ -2,18 +2,24 @@
 
 	#*****************************************************************************
 	#
+	# Copyright (c) 2007 IBM Corporation and others.
+ 	# All rights reserved. This program and the accompanying materials
+ 	# are made available under the terms of the Eclipse Public License v1.0
+ 	# which accompanies this distribution, and is available at
+ 	# http://www.eclipse.org/legal/epl-v10.html
+ 	# Contributors:
+	#     IBM Corporation - initial implementation
 	#
-	# Author: 		Michael Rennie
-	# Date:			September 19, 2006
+	# Author: 		Debug Team
+	# Date:			August 7, 2007
 	#
-	# Description: JDT 3.1 release plan
-	#
+	# Description: This is the 3.1 plan item page for JDT Debug
 	#
 	#****************************************************************************
 	
 	
 	$pageTitle 		= "JDT Debug 3.1 Release Plan";
-	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching, release, plan";
+	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching, release, plan, 3.1, JDT";
 	$pageAuthor		= "Debug Team";
 	
 	include("../../_sideCommon.php");
@@ -25,7 +31,7 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
-			<h3>Overall  Plan</h3>
+			<h3>Overall 3.1 Plan</h3>
 			
 			<h4>Overall Themes for JDT Debug:</h4>
 	        	<ul>
