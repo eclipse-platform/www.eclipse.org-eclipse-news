@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Markers Example Plug-in
+Bundle-SymbolicName: org.eclipse.ui.ide.examples.markers
+Bundle-Version: 1.0.0
+Bundle-Vendor: IBM
+Require-Bundle: org.eclipse.ui.ide,
+ org.eclipse.core.resources
