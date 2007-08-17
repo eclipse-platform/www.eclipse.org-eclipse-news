@@ -37,13 +37,10 @@ ob_start();
 			<h3>Releases currently under development</h3>
 			
     <ul>
-      <li><a href="eclipse_project_plan_3_3.html"> Eclipse Platform Project 3.3 
+      <li><a href="eclipse_project_plan_3_3.html"> Eclipse Platform Project 3.4 
         Plan</a><br>
-        This document lays out the feature and API set for the 3.3 release of 
+        This document lays out the feature and API set for the 3.4 release of 
         Eclipse. </li>
-      <li><a href="freeze_plan_3.3.html">Eclipse 3.3 Endgame Plan</a><br>
-        Information about we will wrap up the 3.3 (Europa) release of Eclipse. 
-      </li>
       <li><a href="http://www.eclipse.org/eclipse/platform-releng/buildSchedule.html"> 
         Release Engineering Build Schedule</a><br>
         Schedule for Eclipse Platform nightly, integration, and milestone builds. 
@@ -113,6 +110,12 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>Historical information about past releases</h3>
 			<ul>
+			 <li><a href="eclipse_project_plan_3_3.html"> Eclipse Platform Project 3.3 Plan</a><br>
+ 	       This document lays out the feature and API set for the 3.3 release of 
+    	    Eclipse. </li>
+      		<li><a href="freeze_plan_3.3.html">Eclipse 3.3 Endgame Plan</a><br>
+	        Information about we will wrap up the 3.3 (Europa) release of Eclipse. 
+    	   </li>
 	      <li><a href="freeze_plan_3_2_2.html"> Eclipse Project 3.2.2 Endgame Plan</a><br>
     		Information about we wrapped up the 3.2.2 (Callisto winter maintenance) release of Eclipse. </li>
 	      <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/eclipse-project-home/bugcounts/BugCountOverview.html"> 
