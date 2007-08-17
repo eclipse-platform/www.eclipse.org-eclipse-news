@@ -37,7 +37,7 @@ ob_start();
 			<h3>Releases currently under development</h3>
 			
     <ul>
-      <li><a href="eclipse_project_plan_3_3.html"> Eclipse Platform Project 3.4 
+      <li><a href="eclipse_project_plan_3_4.html"> Eclipse Platform Project 3.4 
         Plan</a><br>
         This document lays out the feature and API set for the 3.4 release of 
         Eclipse. </li>
