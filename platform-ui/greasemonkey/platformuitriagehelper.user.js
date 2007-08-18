@@ -14,7 +14,7 @@
 // Contributors:
 //     IBM Corporation - initial API and implementation
 window.addEventListener("load", function() {
-  var els = document.forms[0].elements;
+  var els = document.forms[1].elements;
   var component;
   var assigned_to;
   var short_desc;
@@ -25,7 +25,7 @@ window.addEventListener("load", function() {
     if (els[i].name=="assigned_to") assigned_to = i;
     if (els[i].name=="short_desc") short_desc = i;
   }
-//alert("indices: " + component + ", " + assigned_to + ", " + short_desc);
+//alert("indices: " + component + ", " + keywords + ", " + assigned_to + ", " + short_desc);
   function rawButton(label, action) {
     return '<input type="button" value="' + label + '" onClick="' + action + '" />';
   }
@@ -35,10 +35,11 @@ window.addEventListener("load", function() {
     onClick += "b.checked=true;";
     onClick += "b.nextSibling.nextSibling.nextSibling.value='"+owner+"';";
     onClick += "}";
-    onClick += "var d = document.forms[0].elements[" + short_desc + "];";
+    onClick += "var d = document.forms[1].elements[" + short_desc + "];";
     onClick += "if (d!=null) {";
     onClick += "d.value = '["+comp+"] ' + d.value;";
     onClick += "d.scrollIntoView(true);";
+    onClick += "d.focus();";
     onClick += "}";
     return rawButton(comp, onClick);
   }
@@ -55,7 +56,7 @@ window.addEventListener("load", function() {
       onClick += "c.value='" + priority + "';";
     }
     onClick += "}";
-    onClick += "var d = document.forms[0].elements[" + keywords + "];";
+    onClick += "var d = document.forms[1].elements[" + keywords + "];";
     onClick += "if (d!=null) {";
     if (keyword!="") {
       onClick += "if(d.value.indexOf('"+keyword+"')==-1){";
@@ -70,7 +71,7 @@ window.addEventListener("load", function() {
     onClick += "}";
     return rawButton(label, onClick);
   }
-  var assigned_to = document.forms[0].elements[assigned_to];
+  var assigned_to = document.forms[1].elements[assigned_to];
   if(assigned_to.value != "Platform-UI-Inbox@eclipse.org" && assigned_to.value != "platform-ide-inbox@eclipse.org") {
     var header = document.getElementById('header');
     var myDiv = document.createElement('div');
@@ -85,7 +86,8 @@ window.addEventListener("load", function() {
     header.parentNode.insertBefore(myDiv, header);
     return;
   }
-  document.forms[0].elements[component].addEventListener('change', function(){ var b=document.getElementById('knob-reassign-cmp');b.checked=true;b.scrollIntoView(true); }, false);
+  document.getElementById('addselfcc').checked = false;
+  document.forms[1].elements[component].addEventListener('change', function(){ var b=document.getElementById('knob-reassign-cmp');b.checked=true;b.scrollIntoView(true); }, false);
   var header = document.getElementById('header');
   var myDiv = document.createElement('div');
   var buttons = "";
