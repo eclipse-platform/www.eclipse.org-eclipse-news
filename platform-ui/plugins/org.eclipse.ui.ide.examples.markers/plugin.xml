@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         id="exampleMarker"
+         name="Markers Example Type"
+         point="org.eclipse.core.resources.markers">
+      <super
+            type="org.eclipse.core.resources.problemmarker">
+      </super>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="org.eclipse.ui.ide.examples.markers.handlers.GenerateMarkersHandler"
+            id="org.eclipse.ui.ide.examples.markers.generateMarkers"
+            name="Generate Example Markers">
+      </command>
+      <command
+            defaultHandler="org.eclipse.ui.ide.examples.markers.handlers.DeleteMarkersHandler"
+            id="org.eclipse.ui.ide.examples.markers.delete"
+            name="Delete Example Markers">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.ide.MarkersView">
+         <command
+               commandId="org.eclipse.ui.ide.examples.markers.generateMarkers"
+               style="push">
+         </command>
+         <command
+               commandId="org.eclipse.ui.ide.examples.markers.delete"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+
+</plugin>
