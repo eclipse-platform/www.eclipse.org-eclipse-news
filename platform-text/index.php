@@ -72,7 +72,7 @@ ob_start();
 		      </ul></p>
 		      
 		      <h4> <a NAME="Maintenance_Planning"></a>3.3 Maintenance</h4>
-		      <p>Information about 3.3 maintenance releases can be found <a href="http://wiki.eclipse.org/index.php/Europa_Coordinated_Maintenance">here</a>.</p>
+		      <p>Information about 3.3 maintenance releases can be found <a href="http://wiki.eclipse.org/Europa_Simultaneous_Release#Coordinated_Maintenance">here</a>.</p>
 
 		      <h4> <a NAME="Releases"></a>Previous Releases</h4>
 		      <p>Information about previous releases can be found <a href="releases.html">here</a>.</p>
