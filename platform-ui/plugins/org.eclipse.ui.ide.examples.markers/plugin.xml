@@ -36,5 +36,41 @@
          </command>
       </menuContribution>
    </extension>
+   <extension
+         point="org.eclipse.ui.ide.markerSupport">
+      <markerContentGenerator
+            defaultMarkerGrouping="org.eclipse.ui.ide.severity"
+            id="org.eclipse.ui.ide.examples.markers.exampleGenerator"
+            name="Example Contents">
+         <markerFieldReference
+               id="org.eclipse.ui.ide.severityAndDescriptionField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="org.eclipse.ui.ide.resourceField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="org.eclipse.ui.ide.locationField"
+               visible="true">
+         </markerFieldReference>
+         <markerTypeReference
+               id="org.eclipse.ui.ide.examples.markers.exampleMarker">
+         </markerTypeReference>
+         <markerFieldReference
+               id="org.eclipse.ui.ide.markerType"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="org.eclipse.ui.ide.examples.markers.sourceID"
+               visible="true">
+         </markerFieldReference>
+      </markerContentGenerator>
+      <markerField
+            class="org.eclipse.ui.ide.examples.markers.markerSupport.SourceIDMarkerField"
+            id="org.eclipse.ui.ide.examples.markers.sourceID"
+            name="Source ID">
+      </markerField>
+   </extension>
 
 </plugin>

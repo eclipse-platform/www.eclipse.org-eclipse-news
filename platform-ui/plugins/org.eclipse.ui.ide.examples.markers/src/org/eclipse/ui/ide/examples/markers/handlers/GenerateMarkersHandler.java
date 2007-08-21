@@ -48,6 +48,7 @@ public class GenerateMarkersHandler extends AbstractHandler implements IHandler 
 
 						attribs.put(IMarker.SEVERITY, new Integer(
 								IMarker.SEVERITY_ERROR));
+						attribs.put(IMarker.SOURCE_ID, "Example source");
 						attribs.put(IMarker.MESSAGE, "Example " + i);
 						attribs.put(IMarker.LOCATION, "Location " + i);
 						attribs.put("testAttribute", String.valueOf(i / 2));
