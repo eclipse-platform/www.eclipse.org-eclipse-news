@@ -65,6 +65,11 @@
                id="org.eclipse.ui.ide.examples.markers.sourceID"
                visible="true">
          </markerFieldReference>
+         <markerFieldFilterGrouping
+               id="org.eclipse.ui.ide.examples.markers.ExampleGroup"
+               name="Examples"
+               scope="ON_ANY">
+         </markerFieldFilterGrouping>
       </markerContentGenerator>
       <markerField
             class="org.eclipse.ui.ide.examples.markers.markerSupport.SourceIDMarkerField"
