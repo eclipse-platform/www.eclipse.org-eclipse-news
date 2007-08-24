@@ -77,5 +77,25 @@
             name="Source ID">
       </markerField>
    </extension>
+   <extension
+         point="org.eclipse.ui.ide.markerHelp">
+      <markerHelp
+            helpContextId="org.eclipse.ui.ide.examples.markers.exampleHelp"
+            markerType="org.eclipse.ui.ide.examples.markers.exampleMarker">
+      </markerHelp>
+   </extension>
+   
+    <extension point="org.eclipse.help.toc">
+       <toc
+             extradir="/html"
+             file="toc.xml"
+             primary="true"/>
+   </extension>
+    <extension
+          point="org.eclipse.help.contexts">
+       <contexts
+             file="contexts_Example.xml">
+       </contexts>
+    </extension>
 
 </plugin>

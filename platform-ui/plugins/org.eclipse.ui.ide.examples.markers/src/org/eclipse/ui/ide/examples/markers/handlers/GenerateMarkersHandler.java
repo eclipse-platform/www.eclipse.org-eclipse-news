@@ -36,7 +36,7 @@ public class GenerateMarkersHandler extends AbstractHandler implements IHandler 
 				try {
 					IWorkspaceRoot root = ResourcesPlugin.getWorkspace()
 							.getRoot();
-					Map attribs = new HashMap();
+					Map<String,Object> attribs = new HashMap<String,Object>();
 					for (int i = 0; i < 1000; i++) {
 
 						if (i / 2 == 0) {
