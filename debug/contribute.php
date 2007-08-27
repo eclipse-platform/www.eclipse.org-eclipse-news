@@ -106,6 +106,12 @@
 		      <p>When you upgrade your Eclipse install, the Debug Platform projects will automatically compile
 		      against the new plugins. To compile against a different set of plug-ins, you can change the location
 		      in the preferences under <b>Window > Preferences > Plug-in Development > Target Platform</b>.
+		      
+		      <p>
+			      An alternate method is to use the <a href="/eclipse/debug/documents/debug.psf">Debug Project Set File</a> and import it once you have created your
+			      CVS connection to dev.eclipse.org. <br> 
+			      More information about project set files can be found on the <a href="http://wiki.eclipse.org/PSF" target="_blank">PSF Wiki Page</a>
+		      </p>
 		</div>
 		<div class="homeitem3col">
 		<a name="required_plugins"></a>

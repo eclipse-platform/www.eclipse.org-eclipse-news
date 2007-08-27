@@ -30,6 +30,7 @@
 			<li><a href="http://wiki.eclipse.org/Debug_FAQ">Debug FAQ</a></li>
 			<li><a href="http://www.facebook.com/group.php?gid=2469776690" target="_blank">Facebook -- Committers Group</a></li>
 			<li><a href="/eclipse/debug/about.php">About this content</a></li>
+			<li><a href="/eclipse/debug/documents/debug.psf">Debug Project Set File</a></li>
 		</ul>
 	</div> 
 EOHTML
