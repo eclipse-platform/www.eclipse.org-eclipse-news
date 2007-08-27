@@ -79,6 +79,7 @@
 		<div class="homeitem3col">
 			<h3>Up To The Minute</h3>
 			<ul>
+			<li>To help new contributors, we have created a <a href="/eclipse/debug/documents/debug.psf" target="_blank">project set file</a> containing all of the projects needed to get started with debug coding.</li>
 			<li>EclipseCon 2007 went off without a hitch, and the debug team delivered <a target="_blank" href="/eclipse/debug/documents/ec_2007/Debug_Tutorial_2007.pdf">another tutorial</a>. More
 			information can be found on the <a href="/eclipse/debug/documents.php">Documents</a> page along with exercises.
 			</li>
