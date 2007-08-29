@@ -1,22 +1,130 @@
 <!doctype html public "-//w3c//dtd html 4.0 transitional//en">
-<html>
+<html XMLNS:Style>
 <head>
-   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-   <meta name="GENERATOR" content="Mozilla/4.76 [en] (Windows NT 5.0; U) [Netscape]">
-   <title>Platform Text Component</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta name="GENERATOR" content="Mozilla/4.76 [en] (Windows NT 5.0; U) [Netscape]">
+	<title>Previous Platform Text Milestone plans</title>
+
+<script type="text/javascript">
+<!--
+function linkifyBugs() {
+	// Replaces plain text 'bug xyz' by a link to Eclipse's bugzilla.
+	traverseLinkifyBugs(document.getElementsByTagName("body")[0]);
+}
+function nextNode(node) {
+	if (node.nextSibling) {
+		return node.nextSibling;
+	} else if (node.parentNode == document.getElementsByTagName("body")[0]) {
+		return null;
+	} else {
+		return nextNode(node.parentNode);
+	}
+}
+function traverseLinkifyBugs(node) {
+	while (node) {
+		if (node.nodeType == 1/*element*/ && node.nodeName == "a") {
+			node= nextNode(node);
+			
+		} else if (node.childNodes != null && node.childNodes.length > 0) {
+			node= node.childNodes[0];
+			
+		} else if (node.nodeType == 3/*text*/) {
+			var txt= node.data;
+			var regex= /([Bb]ug\s*)([0-9]+)/;
+			var res= regex.exec(txt);
+			if (res) {
+				var matchStart= txt.indexOf(res[0]);
+				
+				var beforeNode= document.createTextNode(txt.substring(0, matchStart));
+				node.parentNode.insertBefore(beforeNode, node);
+				
+				var linkNode= document.createElement("a");
+				linkNode.href= "https://bugs.eclipse.org/bugs/show_bug.cgi?id=" + res[2];
+				linkNode.appendChild(document.createTextNode(res[1] + res[2]));
+				node.parentNode.insertBefore(linkNode, node);
+				
+				node.data= txt.substr(matchStart + res[0].length);
+				// continue with current (shortened) node...
+			} else {
+				node= nextNode(node);
+			}
+			
+		} else {
+			node= nextNode(node);
+		}
+	}
+}
+
+//-->
+</script>
+	
 </head>
-<body text="#000000" bgcolor="#FFFFFF">
-&nbsp;
+
+<body text="#000000" bgcolor="#FFFFFF" onload="linkifyBugs()">
 
 <table BORDER=0 CELLSPACING=5 CELLPADDING=2 WIDTH="100%" >
   <tr> 
-    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#595791"><font face="Arial,Helvetica"><font color="#FFFFFF">3.4 
-      Development Effort - Old Milestone Plans</font></font></td>
+    <td WIDTH="100%"> 
+	<p>Last revised 16:37 CEST August 29, 2007</p>
   </tr>
+  
+   <tr> 
+    <td WIDTH="100%"> 
+    <p>The current 3.4 milestone plan can be found <a href="plan.php">here</a>.</p>
+  </tr>
+  
+<tr>
+	<td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#595791"><font face="Arial,Helvetica"><font color="#FFFFFF"><a name="Milestone_Planning">Milestone M1 (2007-8-10)</font></font></td>
+</tr>
 
+ <tr> 
+	<td WIDTH="100%"> 
 
-
-
+		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> General Items [<a href="#2">2</a>]</h4>
+		<ul>
+			<li><img src="../images/ok.gif" nosave="" border="0" height="10" width="10"> 3.4 planning</li>
+			<li><font class="indexsub" color="#8080ff">[3.4 M2]</font> <img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> <Style:committed>3.3.x maintenance work</Style:committed></li>
+		</ul>
+		
+		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Find/Replace [<a href="#2">2</a>]</h4>
+		<ul>
+			<li><img src="../images/ok.gif" border="0" height="10" width="10"> <Style:committed>find a solution to use line delimiters, tabs, etc. in regex replace (bug 80667)</Style:committed></li>
+			<li><img src="../images/ok.gif" border="0" height="10" width="10"> <Style:committed>allow regular expressions to match across lines (bug 44766)</Style:committed></li>
+			<li><font class="indexsub" color="#8080ff">[3.4 M2]</font> <img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> <Style:committed>handle dangerous regex replaces more gracefully (e.g. by restarting the line tracker) (bug 130843)</Style:committed>
+				<ul><li>fix is in but its performance needs to be watched during M2</li></ul> 
+			</li>
+			<li><img src="../images/ok.gif" border="0" height="10" width="10"> escape regex patterns in selection used as find string (bug 44422)</li>
+			<li><font class="indexsub" color="#8080ff">[3.4 M2]</font> <img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> improve Find/Replace dialog: merge into editor area, ... [mentor GSoC project]</li>
+		</ul>
+		
+		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Miscellaneous</h4>
+		<ul>
+			<li><img src="../images/ok.gif" border="0" height="10" width="10"> <Style:committed>update <a href= "http://www.eclipse.org/eclipse/platform-text/development/rcp/examples/index.html">web page</a> regarding RCP text editor</Style:committed></li> 
+		</ul>
+		
+		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Permanent Items</h4>
+		<ul>
+			<li>bugzilla inbox tracking</li>
+			<li>bug fixing</li>
+			<li>watch performance tests</li>
+			<li>increase correctness test coverage</li>
+		</ul>
+		
+		
+		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Absences</h4>
+		<ul>
+			<li>1 day vacation</li>
+			<li>4 days compensation</li>
+			<li>1 public holiday</li>
+		</ul>
+		
+		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Testing</h4>
+	      <ul>
+	        <li><a href="http://www.eclipse.org/jdt/ui/r3_4/testing/M1_Test_Plan.html">test plan</a> for the 3.4 M1 test pass.</li>
+	      </ul>
+		
+	</td>
+</tr>
   
   
 </table>  

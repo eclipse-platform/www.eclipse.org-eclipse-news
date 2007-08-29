@@ -58,12 +58,14 @@ function traverseLinkifyBugs(node) {
 //-->
 </script>
 
+<!--
 	<style>
 		body {  
 			background-image: url('../images/proposal.gif');
 			background-repeat: repeat-y
 		}
 	</style>
+-->
 	
 	 <style type="text/css">
   		Style\:committed {
@@ -80,7 +82,7 @@ function traverseLinkifyBugs(node) {
 
   <tr> 
     <td WIDTH="100%"> 
-    <p>Last revised 10:53 CEST August 23, 2007</p>
+	<p>Last revised 16:37 CEST August 29, 2007</p>
 
     
       <p>This plan is under continuous refinement. Please send comments about this plan to the <a href="mailto:platform-text-dev@eclipse.org">platform-text-dev@eclipse.org</a> developer mailing list.</p>
@@ -117,8 +119,8 @@ function traverseLinkifyBugs(node) {
 	<ul>
 		<li><h4><a name="rich hovers"></a>Rich Hovers (experimental) (bug 200838) [<a href="#3">3</a>]</h4>
 		<ul>
-			<li><Style:committed>links support in hovers so that you can navigate to things from there</Style:committed></li>
-			<li><Style:committed>investigate better interaction for making hovers sticky (mouse path)</Style:committed>
+			<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> <Style:committed>links support in hovers so that you can navigate to things from there</Style:committed></li>
+			<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> <Style:committed>investigate better interaction for making hovers sticky (mouse path)</Style:committed>
 				<br>if the hover is made sticky via mouse then it must disappear automatically if the mouse leaves the hover.</li>
 			<li>investigate to use hovers as affordance for context sensitive actions (quick assist/fix, surround with...)</li>
 			<li>allow seamless transition from hover &gt; sticky hover &gt; Javadoc view</li>
@@ -197,7 +199,7 @@ function traverseLinkifyBugs(node) {
 	  
 		<li><h4>Miscellaneous</h4>
 		<ul>
-			<li><Style:committed>update web page regarding RCP text editor</Style:committed></li> 
+			<li><img src="../images/ok.gif" border="0" height="10" width="10"> <Style:committed>update web page regarding RCP text editor</Style:committed></li> 
 			<li>show context when dragging the vertical scroll bar (e.g. method name) [experimental]</li>
 			<li><Style:committed>quick diff usability improvements in hover (Next/Prev support etc)</Style:committed>
 				<br>depends on the <a href="#rich hovers">Rich Hovers</a> item above</li>
@@ -239,25 +241,46 @@ function traverseLinkifyBugs(node) {
 
 
 <tr>
-	<td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#595791"><font face="Arial,Helvetica"><font color="#FFFFFF"><a name="Milestone_Planning">Milestone M1 (2007-8-??)</font></font></td>
+	<td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#595791"><font face="Arial,Helvetica"><font color="#FFFFFF"><a name="Milestone_Planning">Milestone M2 (2007-9-21)</font></font></td>
 </tr>
 
  <tr> 
-	<td WIDTH="100%"> 
+	<td WIDTH="100%">
+		See also the <a href="http://www.eclipse.org/jdt/ui/r3_4/plan.php#Milestone_Planning">Combined JDT Text and JDT UI 3.4 M2 Plan</a>.</p>
 
 		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> General Items [<a href="#2">2</a>]</h4>
 		<ul>
-			<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> 3.4 planning</li>
 			<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> <Style:committed>3.3.x maintenance work</Style:committed></li>
 		</ul>
 		
 		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Find/Replace [<a href="#2">2</a>]</h4>
 		<ul>
-			<li><img src="../images/ok.gif" border="0" height="10" width="10"> <Style:committed>find a solution to use line delimiters, tabs, etc. in regex replace (bug 80667)</Style:committed></li>
-			<li><img src="../images/ok.gif" border="0" height="10" width="10"> <Style:committed>allow regular expressions to match across lines (bug 44766)</Style:committed></li>
-			<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> <Style:committed>handle dangerous regex replaces more gracefully (e.g. by restarting the line tracker) (bug 130843)</Style:committed></li>
-			<li><img src="../images/ok.gif" border="0" height="10" width="10"> escape regex patterns in selection used as find string (bug 44422)</li>
+			<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> <Style:committed>handle dangerous regex replaces more gracefully (e.g. by restarting the line tracker) (bug 130843)</Style:committed>
+				<ul><li>fix is in but its performance needs to be watched during M2</li></ul> 
+			</li>
 			<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> improve Find/Replace dialog: merge into editor area, ... [mentor GSoC project]</li>
+		</ul>
+		
+		
+		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Rich Hovers (experimental) (bug 200838) [<a href="#3">3</a>]</h4>
+		<ul>
+			<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> <Style:committed>links support in hovers so that you can navigate to things from there</Style:committed></li>
+			<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> <Style:committed>investigate better interaction for making hovers sticky (mouse path)</Style:committed>
+		</ul>
+		</li>
+		
+		
+		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Printing [<a href="#2">2</a>]</h4>
+		<ul>
+			<li><Style:committed>print line numbers (bug 6877)</Style:committed></li>
+			<li>turn off line highlighting when printing (bug 14954)</li>
+		</ul>
+		</li>
+		
+		
+		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Miscellaneous</h4>
+		<ul>
+			<li><img src="../images/ok.gif" border="0" height="10" width="10"> <Style:committed>update <a href= "http://www.eclipse.org/eclipse/platform-text/development/rcp/examples/index.html">web page</a> regarding RCP text editor</Style:committed></li> 
 		</ul>
 		
 		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Permanent Items</h4>
@@ -268,21 +291,15 @@ function traverseLinkifyBugs(node) {
 			<li>increase correctness test coverage</li>
 		</ul>
 		
-		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Miscellaneous</h4>
-		<ul>
-			<li><Style:committed>update web page regarding RCP text editor</Style:committed></li> 
-		</ul>
 		
 		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Absences</h4>
 		<ul>
-			<li>1 day vacation</li>
-			<li>4 days compensation</li>
-			<li>1 public holiday</li>
+			<li>&frac12; day local holiday (Knabenschiessen)</li>
 		</ul>
 		
 		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Testing</h4>
 	      <ul>
-	        <li><a href="http://www.eclipse.org/jdt/ui/r3_4/testing/M1_Test_Plan.html">test plan</a> for the 3.4 M1 test pass.</li>
+	        <li><a href="http://www.eclipse.org/jdt/ui/r3_4/testing/M2_Test_Plan.html">test plan</a> for the 3.4 M2 test pass.</li>
 	      </ul>
 		
 	      
