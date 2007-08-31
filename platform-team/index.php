@@ -119,7 +119,7 @@
 		<div class="sideitem">
 			<h6>Quick Links</h6>
 			<ul>
-				<li><a href="#ABOUT">About Resources</a></li>
+				<li><a href="#ABOUT">About Team</a></li>
 				<li><a href="#DEV">Development Resources</a></li>
 				<li><a href="#HAPPENING">What's Happening</a></li>
 				<li><a href="#INVOLVED">Get Involved</a></li>
