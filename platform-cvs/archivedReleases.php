@@ -27,48 +27,63 @@
 	# End: page-specific settings
 	#
 		
-	# Paste your HTML content between the EOHTML markers!	
-	$html = <<<EOHTML
+	# Paste your HTML content between the markers!	
+	ob_start();
+?>		
 
 	<div id="midcolumn">
-		<h1>$pageTitle</h1>
+		<h1><?= $pageTitle ?></h1>
 		<p>Back to the <a href="index.php">CVS Main Page</a></p>
 		<p>Note: The following links are for old development documents. As such, some of the
 		links contained in the documents might be out of date.</p>
+
 		<div class="homeitem3col">
-		<h3>3.1 Release</h3>
-		<a name="31"></a>
-		<ul>
-		<li><a href="r3.1/plan.html">3.1 development plan</a></li>
-		</ul>
+			<h3>3.2 Release</h3>
+			<a name="32"></a>
+			<ul>
+				<li>3.2 <a href="r3.2/plan.php">development</a> plan.</li>
+				<li>3.2 <a href="r3.2/3_2_testing.html">testing</a> plan.</li>
+				<li>3.2 <a href="http://www.eclipse.org/eclipse/development/freeze_plan_3.2.html">endgame plan</a> is available here.</li>
+			</ul>
 		</div>
+		
 		<div class="homeitem3col">
-		<h3>3.0 Release</h3>
+			<h3>3.1 Release</h3>
+			<a name="31"></a>
+			<ul>
+				<li><a href="r3.1/plan.html">3.1 development plan</a></li>
+			</ul>
+		</div>
+		
+		<div class="homeitem3col">
+			<h3>3.0 Release</h3>
 			<a name="30"></a>
-		<ul>
-		<li><a href="r3.0/milestone-plan.html">3.0 development plan</a></li>
-		<li><a href="r3.0/repoview.html">3.0 repo view planning</a></li>
-		<li><a href="r3.0/password-caching.html">3.0 password management planning</a></li>
-		<li><a href="r3.0/plan-brainstorming.html">3.0 brainstorming</a></li>
-		</ul>
+			<ul>
+				<li><a href="r3.0/milestone-plan.html">3.0 development plan</a></li>
+				<li><a href="r3.0/repoview.html">3.0 repo view planning</a></li>
+				<li><a href="r3.0/password-caching.html">3.0 password management planning</a></li>
+				<li><a href="r3.0/plan-brainstorming.html">3.0 brainstorming</a></li>
+			</ul>
 		</div>
+		
 		<div class="homeitem3col">
-		<h3>2.1 Release</h3>
+			<h3>2.1 Release</h3>
 			<a name="21"></a>
-		<ul>
-		<li><a href="r2.1/plan.html">2.1 development plan</a></li>
-		<li><a href="r2.1/modules.html">2.1 development plan</a></li>
-		<li><a href="r2.1/fix211.html">2.1.1 candidate bugs</a></li>
-		</ul>
+			<ul>
+				<li><a href="r2.1/plan.html">2.1 development plan</a></li>
+				<li><a href="r2.1/modules.html">2.1 development plan</a></li>
+				<li><a href="r2.1/fix211.html">2.1.1 candidate bugs</a></li>
+			</ul>
 		</div>
+		
 		<div class="homeitem3col">
-		<h3>2.0 Release</h3>
+			<h3>2.0 Release</h3>
 			<a name="20"></a>
-		<ul>
-		<li><a href="r2.0/vcm_story2.0/vcm2story.html">2.0 VCM Story</a></li>
-		<li><a href="r2.0/cvs-faq.html">CVS FAQ for 2.0</a></li>
-		<li><a href="r2.0/cvs-features2.0.htm">CVS Features for 2.0</a></li>
-		</ul>
+			<ul>
+				<li><a href="r2.0/vcm_story2.0/vcm2story.html">2.0 VCM Story</a></li>
+				<li><a href="r2.0/cvs-faq.html">CVS FAQ for 2.0</a></li>
+				<li><a href="r2.0/cvs-features2.0.htm">CVS Features for 2.0</a></li>
+			</ul>
 		</div>
 	</div>
 
@@ -77,6 +92,7 @@
 		<div class="sideitem">
 			<h6>Quick Links</h6>
 			<ul>
+				<li><a href="#32">3.2 Release</a></li>
 				<li><a href="#31">3.1 Release</a></li>
 				<li><a href="#30">3.0 Release</a></li>
 				<li><a href="#21">2.1 Release</a></li>
@@ -88,14 +104,15 @@
 	<div id="rightcolumn">
 		<div class="sideitem">
 			<h6>CVS Related Links</h6>
-			<ul><li><a href="http://wiki.eclipse.org/index.php/CVS_FAQ">CVS FAQ Wiki</a></li>
-				<li><a href="http://eclipse.org/eclipse/platform-team/">Team Support</a></li>
+				<li><a href="http://wiki.eclipse.org/Workspace_Team">Workspace Team Page</a></li>
+				<li><a href="http://wiki.eclipse.org/index.php/CVS_FAQ">CVS FAQ</a></li>
 			</ul>
 		</div>
 	</div>
 
-EOHTML;
-
+<?php
+	$html = ob_get_contents();
+	ob_end_clean();
 
 	# Generate the web page
 	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
