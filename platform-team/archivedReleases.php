@@ -25,31 +25,43 @@
 	# $Nav->addCustomNav("Google", "http://www.google.com/", "_blank", 3);
 
 	# End: page-specific settings
-	#
 		
-	# Paste your HTML content between the EOHTML markers!	
-	$html = <<<EOHTML
+	# Paste your HTML content between the markers!	
+	ob_start();
+?>		
 
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<p>Back to the <a href="index.php">Team Page</a></p>
 		<p>Note: The following links are for old development documents. As such, some of the
 		links contained in the documents might be out of date.</p>
+		
 		<div class="homeitem3col">
-		<h3>3.1 Release</h3>
-		<a name="31"></a>
-		<ul>
-		<li><a href="team3.1/plan.html">3.1 development plan</a></li>
-		</ul>
+		<h3>3.2 Release</h3>
+			<a name="32"></a>
+			<ul>
+				<li>3.2 <a href="team3.2/plan.php">development</a> plan.</li>
+				<li>3.2 <a href="team3.2/3_2_testing.html">testing</a> plan.</li>
+				<li>3.2 <a href="http://www.eclipse.org/eclipse/development/freeze_plan_3.2.html">endgame plan</a> is available here.</li>
+			</ul>
 		</div>
+		
 		<div class="homeitem3col">
-		<h3>3.0 Release</h3>
+			<h3>3.1 Release</h3>
+			<a name="31"></a>
+			<ul>
+				<li><a href="team3.1/plan.html">3.1 development plan</a></li>
+			</ul>
+		</div>
+		
+		<div class="homeitem3col">
+			<h3>3.0 Release</h3>
 			<a name="30"></a>
-		<ul>
-		<li><a href="team3.0/milestone-plan.html">3.0 development plan</a></li>
-		<li><a href="team3.0/Team Synchronization.ppt">Team Synchronization slides</a></li>
-		<li><a href="team3.0/Concurrency Experience Report.ppt">Concurrent Experience Report Slides</a></li>
-		</ul>
+				<ul>
+				<li><a href="team3.0/milestone-plan.html">3.0 development plan</a></li>
+				<li><a href="team3.0/Team Synchronization.ppt">Team Synchronization slides</a></li>
+				<li><a href="team3.0/Concurrency Experience Report.ppt">Concurrent Experience Report Slides</a></li>
+			</ul>
 		</div>
 	</div>
 
@@ -58,22 +70,23 @@
 		<div class="sideitem">
 			<h6>Quick Links</h6>
 			<ul>
+				<li><a href="#32">3.2 Release</a></li>
 				<li><a href="#31">3.1 Release</a></li>
 				<li><a href="#30">3.0 Release</a></li>
 			</ul>
 		</div>
-	</div>
-	
-	<div id="rightcolumn">
 		<div class="sideitem">
 			<h6>Team Related Links</h6>
-			<ul><li><a href="http://wiki.eclipse.org/index.php/Team_FAQ">Team FAQ Wiki</a></li>
+			<ul>
+				<li><a href="http://wiki.eclipse.org/Workspace_Team">Workspace Team Page</a></li>
+				<li><a href="http://wiki.eclipse.org/index.php/Team_FAQ">Team FAQ</a></li>
 			</ul>
 		</div>
 	</div>
 
-EOHTML;
-
+<?php
+	$html = ob_get_contents();
+	ob_end_clean();
 
 	# Generate the web page
 	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
