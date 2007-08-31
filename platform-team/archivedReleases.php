@@ -31,7 +31,7 @@
 ?>		
 
 	<div id="midcolumn">
-		<h1>$pageTitle</h1>
+		<h1><?= $pageTitle ?></h1>
 		<p>Back to the <a href="index.php">Team Page</a></p>
 		<p>Note: The following links are for old development documents. As such, some of the
 		links contained in the documents might be out of date.</p>
