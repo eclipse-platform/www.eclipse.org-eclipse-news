@@ -104,6 +104,7 @@
 	<div id="rightcolumn">
 		<div class="sideitem">
 			<h6>CVS Related Links</h6>
+			<ul>
 				<li><a href="http://wiki.eclipse.org/Workspace_Team">Workspace Team Page</a></li>
 				<li><a href="http://wiki.eclipse.org/index.php/CVS_FAQ">CVS FAQ</a></li>
 			</ul>
