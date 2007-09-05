@@ -99,9 +99,6 @@
 				<li><a href="#20">2.0 Release</a></li>
 			</ul>
 		</div>
-	</div>
-	
-	<div id="rightcolumn">
 		<div class="sideitem">
 			<h6>CVS Related Links</h6>
 			<ul>
