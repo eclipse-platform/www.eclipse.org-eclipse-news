@@ -41,6 +41,8 @@ ob_start();
         Plan</a><br>
         This document lays out the feature and API set for the 3.4 release of 
         Eclipse. </li>
+	      <li><a href="freeze_plan_3_3_1.html"> Eclipse Project 3.3.1 Endgame Plan</a><br>
+    		Information about we plan to wrap up the 3.3.1 (Europa fall maintenance) release of Eclipse. </li>
       <li><a href="http://www.eclipse.org/eclipse/platform-releng/buildSchedule.html"> 
         Release Engineering Build Schedule</a><br>
         Schedule for Eclipse Platform nightly, integration, and milestone builds. 
