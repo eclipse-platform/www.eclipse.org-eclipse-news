@@ -77,16 +77,20 @@
              download="http://download.eclipse.org/eclipse/downloads/drops/R-3.2.1-200609210945/index.php"/>
     <release name="3.2.2"
              date="2/2007"
-             status="Completed"/>
+             status="Completed"
+             download="http://download.eclipse.org/eclipse/downloads/drops/R-3.2.2-200702121330/index.php"/>
     <release name="3.3"
              date="6/2007"
-             status="Completed"/>
+             status="Completed"
+             download="http://download.eclipse.org/eclipse/downloads/drops/R-3.3-200706251500/index.php"/>
     <release name="3.3.1"
              date="9/2007"
+             status="Planned"/>
+    <release name="3.3.2"
+             date="2/2008"
              status="Planned"/>
     <release name="3.4"
              date="6/2008"
              status="Planned"/>
-
   </releases>
 </project>
