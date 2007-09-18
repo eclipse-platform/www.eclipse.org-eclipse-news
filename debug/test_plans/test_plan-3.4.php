@@ -77,8 +77,8 @@
 				  <tr> 
 				    <td width="15%"><b>Mac</b></td>
 				    <td width="15%">&nbsp;</td>
-				    <td width="15%">Darin Wright</td>
 				    <td width="15%">&nbsp;</td>
+				    <td width="15%">Darin Wright</td>
 				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
 				  </tr>
