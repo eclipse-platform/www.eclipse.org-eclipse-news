@@ -56,28 +56,28 @@
 				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
-					<td width="15%">Michael Rennie</td>
+					<td width="15%"></td>
 				  </tr>
 				  <tr> 
 				    <td width="15%"><b>Win XP</b></td>
 				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
-					<td width="15%">Samantha Chan</td>
+					<td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
 				  </tr>
 				  <tr> 
 				    <td width="15%"><b>Linux</b></td>
 				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
-				    <td width="15%">Curtis Windatt</td>
 				    <td width="15%">&nbsp;</td>
+				    <td width="15%">Curtis Windatt</td>
 				    <td width="15%">&nbsp;</td>
 				  </tr>
 				  <tr> 
 				    <td width="15%"><b>Mac</b></td>
-				    <td width="15%">Darin Wright</td>
 				    <td width="15%">&nbsp;</td>
+				    <td width="15%">Darin Wright</td>
 				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
@@ -100,43 +100,43 @@
 			  <tr> 
 			    <td><a href="#Java6">Java 6.0 Features</a></td>
 			    <td> <div align="center"></div></td>
-				<td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-				<td> <div align="center"></div></td>
+				<td><div align="center"></div></td>
+				<td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Evaluations">Evaluations</a></td>
-				<td> <div align="center"></div></td>
-			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+				<td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td><div align="center"></div></td>
 			    <td> <div align="center"></div></td>
-			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td><div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#ContextLaunching">Context Launching</a></td>
 				<td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 				<td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td><div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Launch">Launch Options</a></td>
 			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 				<td> <div align="center"></div></td>
 				<td> <div align="center"></div></td>
-				<td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+				<td><div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Launch_Modes">Launch Modes</a></td>
 			    <td><div align="center"></div></td>
-				<td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td><div align="center"></div></td>
+				<td> <div align="center"></div></td>
+			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td><div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Debug">View Management</a></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 				<td><div align="center"></div></td>
-			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td><div align="center"></div></td>
 				<td><div align="center"></div></td>
 			  </tr>
 			  <tr> 
@@ -144,7 +144,7 @@
 			    <td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-				<td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+				<td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Step">Stepping Tests</a></td>
@@ -156,92 +156,92 @@
 			  <tr> 
 			    <td><a href="#Logical">Logical Structures</a></td>
 				<td><div align="center"></div></td>
-			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td><div align="center"></div></td>
-				<td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+				<td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Watch">Watch Items</a></td>
-			    <td><div align="center"></div></td>
+			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
-				<td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+				<td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Context">Context Menu Launching</a></td>
-				<td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+				<td> <div align="center"></div></td>
 			    <td><div align="center"></div></td>
-			    <td><div align="center"></div></td>
+			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Classpaths">Runtime Classpath</a></td>
-			    <td> <div align="center"></div></td>
-				<td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+				<td><div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Source">Source Lookup</a></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td> <div align="center"></div></td>
 				<td> <div align="center"></div></td>
 			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 				<td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Monitors">Monitor Information</a></td>
-			    <td><div align="center"></div></td>
+			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
-				<td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
+				<td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Hot">HCR</a></td>
 			    <td><div align="center"></div></td>
 			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#JREs">Installed JREs</a></td>
-			    <td><div align="center"></div></td>
+			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
-				<td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+				<td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#EEs">Execution Environments</a></td>
 			    <td><div align="center"></div></td>
 			    <td><div align="center"></div></td>
-			    <td> <div align="center"></div></td>
-				<td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+				<td><div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#String">String Variables</a></td>
-			    <td><div align="center"></div></td>
+			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
-				<td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+				<td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Console">Console</a></td>
 				<td> <div align="center"></div></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-				<td> <div align="center"></div></td>
-			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td> <div align="center"></div></td>
+				<td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td><div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Variables">Variables</a></td>
-			    <td><div align="center"></div></td>
+			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
-				<td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+				<td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Refactoring">Refactoring</a></td>
 			    <td><div align="center"></div></td>
-				<td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td> <div align="center"></div></td>
+				<td> <div align="center"></div></td>
+			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
@@ -253,15 +253,15 @@
 			  </tr>
 			  <tr> 
 			    <td><a href="#Remote">Remote Debugging</a></td>
-				<td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+				<td> <div align="center"></div></td>
 			    <td><div align="center"></div></td>
-			    <td> <div align="center"></div></td>
+			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#JSP">JSP Example</a></td>
 			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td><div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
@@ -994,6 +994,13 @@
 				      <li>try different sockets</li>
 				      <li>try connecting to a socket that has no VM</li>
 				      <li>try &quot;localhost&quot; and &quot;127.0.0.1&quot;</li>
+				    </ul>
+				  </li>
+				  <li>have remote VM connect to waiting debug session 
+				    <ul>
+				      <li>try different sockets</li>
+					  <li>try terminating waiting debug process</li>
+					  <li>try stopping waiting job</li>
 				    </ul>
 				  </li>
 				  <li>terminate should only be enabled when the config specifies that terminate 
