@@ -33,7 +33,7 @@
 		<div class="homeitem3col">
 			<h3>Testers</h3>
 			<p>Committers: Darin Wright, Samantha Chan, Michael Rennie, Curtis Windatt</p>
-			<p>Community: Anyone who wants to help</p>
+			<p>Community: Joe Pluta, Anyone who wants to help</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>JRE Grid</h3>
@@ -64,7 +64,7 @@
 				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
 					<td width="15%">&nbsp;</td>
-				    <td width="15%">&nbsp;</td>
+				    <td width="15%">Joe Pluta</td>
 				  </tr>
 				  <tr> 
 				    <td width="15%"><b>Linux</b></td>
