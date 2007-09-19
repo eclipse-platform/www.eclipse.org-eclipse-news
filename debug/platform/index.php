@@ -69,6 +69,7 @@
 		    	<li>Overall <a href="/eclipse/debug/platform/dev_plans/r3_1-plan.php">3.1 plan</a></li>
 				<li>Overall <a href="/eclipse/debug/platform/dev_plans/r3_2-plan.php">3.2 plan</a></li>
 		    	<li>Overall <a href="/eclipse/debug/platform/dev_plans/r3_3-plan.php">3.3 plan</a></li>
+				<li>Overall <a href="/eclipse/debug/platform/dev_plans/r3_4-plan.php">3.4 plan</a></li>
 		    </ul>
 		    <p>For more detailed information, check out the <a href="/eclipse/debug/platform/dev_resources.php">Development Resources</a>.</p>
 		</div>
@@ -86,6 +87,7 @@
 				<li>Test matrix for <a href="/eclipse/debug/test_plans/test_plan-3.1.php">3.1.x</a></li>
 				<li>Test matrix for <a href="/eclipse/debug/test_plans/test_plan-3.2.php">3.2.x</a></li>
 				<li>Test matrix for <a href="/eclipse/debug/test_plans/test_plan-3.3.php">3.3.x</a></li>
+				<li>Test matrix for <a href="/eclipse/debug/test_plans/test_plan-3.4.php">3.4.x</a></li>
 	        </ul>
 		</div>
 		<div class="homeitem3col">

@@ -59,11 +59,14 @@
 			<p>All development on the Debug Platform is done using Eclipse. Code is checked out of
 		      the Eclipse CVS repository, edited using JDT, and then run by launching a second instance of
 		      Eclipse from within Eclipse.</p>
-			  <p> Note that any contributed code must follow the <a href="http://wiki.eclipse.org/index.php/Development_Conventions_and_Guidelines">coding guidelines</a> outlined on dev.eclipse.org</p>
+			  <p> Note that any contributed code must follow the <a href="http://wiki.eclipse.org/index.php/Development_Conventions_and_Guidelines">coding guidelines</a> outlined on dev.eclipse.org. When working on debug code, you should set your compiler compliance level to 1.4 (Java > Compiler Preference Page).</p>
 			<p>Your first step is to download an Eclipse build.  You can download a the Eclipse platform at <a href="http://download.eclipse.org/eclipse/downloads/">here</a>.  New users are best off downloading the latest stream stable build.  Once you have the platform downloaded, setup and launched, you can connect to the CVS repository.</p>
 		</div>
 		<div class="homeitem3col">
 		<h3>Connect to the Eclipse Repository</h3>
+			<p>The easiest way to download the correct projects from CVS is to use our <a href="/eclipse/debug/documents/project_sets/debug.psf">Debug Project Set File</a>.  Download the psf file then in Eclipse go to <b>File > Import</b> and select <b>Team > Team Project Set</b>.  If you have not done so already, you will have to define a repository connection which can be done using the information below.  The project set file will checkout the debug projects from CVS. More information about project set files can be found on the <a href="http://wiki.eclipse.org/PSF" target="_blank">PSF Wiki Page</a>.</p>
+		      </p>
+		
 			<p>Create a CVS Repository Location with the following information:</p>
 			<blockquote>
 			<table width="100%" border="0" summary="CVS location settings">
@@ -103,13 +106,21 @@
 			</blockquote>
 			
 			<p>You can check projects out of the HEAD stream of the newly created repository location by
-		      selecting them, then <b>Right Click > Check Out</b>. Check out the Debug Platform projects:</p>
-		      <blockquote>
-		      org.eclipse.debug.core<br>
-		      org.eclipse.debug.ui
-		      </blockquote>
+		      selecting them, then <b>Right Click > Check Out</b>. Check out the Debug projects:</p>
+			  <ul>
+			  <li>org.eclipse.core.variables</li>
+			  <li>org.eclipse.debug.core</li>
+			  <li>org.eclipse.debug.ui</li>
+			  <li>org.eclipse.jdt.debug</li>
+			  <li>org.eclipse.jdt.debug.tests</li>
+			  <li>org.eclipse.jdt.debug.ui</li>
+			  <li>org.eclipse.jdt.launching</li>
+			  <li>org.eclipse.test.performance</li>
+			  <li>org.eclipse.test.performance.win32</li>
+			  <li>org.eclipse.ui.console</li>
+			  </ul>
       
-		      <p>If you're only editing the Debug Platform projects, your workspace setup is now complete. The Debug Platform
+		      <p>Your workspace setup is now complete. The Debug Platform
 		      projects are set up to compile against your installed Eclipse plug-ins (the plug-ins that are being
 		      used by your currently running instance of Eclipse). This works because the Debug Platform projects
 		      have the "Plug-in Dependencies" library on their Java build path.
@@ -119,9 +130,7 @@
 		      against the new plugins. To compile against a different set of plug-ins, you can change the location
 		      in the preferences under <b>Window > Preferences > Plug-in Development > Target Platform</b>.
 		      
-		      <p>
-			      An alternate method is to use the <a href="/eclipse/debug/documents/debug.psf">Debug Project Set File</a> and import it once you have created your CVS connection to dev.eclipse.org.  More information about project set files can be found on the <a href="http://wiki.eclipse.org/PSF" target="_blank">PSF Wiki Page</a>
-		      </p>
+		      
 		</div>
 		<div class="homeitem3col">
 		<a name="required_plugins"></a>
@@ -204,7 +213,8 @@
 			      <li><b>VERIFIED-FIXED</b> - Bugs are marked as VERIFIED-FIXED once someone verifies the fix 
 			      that was checked into CVS. Bugs are always verified by a Debug committer other than the person who checked in 
 			      the fix. The verifier makes sure that the original problem is fixed and also looks at the code for any
-			      obvious errors. This verification step ensures that all code changes are looked at by at least two pairs of eyes.</li>
+			      obvious errors. This verification step ensures that all code changes are looked at by at least two pairs of eyes.  In addition
+				  the verifier will add an entry in the build notes stating that the bug has been fixed.</li>
 			</ul>
 		</div>
 		<a name="test_pass"></a>
@@ -212,6 +222,7 @@
 			<h3>Test Passes</h3>
 			<p>Before every milestone release the Debug Team does an intense one-day test pass where we test all of the functionality of the debug components.  We try to check everything to make sure 100% of the functionality is available in every major release.  In addition, we try odd use cases and unusual code to ensure our code is as robust as possible.</p>
 			<p>To organize the test pass, we follow a <a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.4.php">test matrix</a>.  The matrix defines who is working on which platform (OS and VM combination) and who is responsible for testing what functionality.  The matrix also contains a basic overview of what must be tested in each section.</p>
+			<p>NOTE: Testing should always be done on your host, so to launch Eclipse with a specific vm, you should launch Eclipse with the following argument: -vm C:\<JVM Location>\java.exe</p>
 			<p>If you would like to help out during a test pass, contact us via our <a href="#mailing_lists">mailing lists</a>.  Before the test pass, let us know what platform you are going to test on and what sections you are planning to test.  If you have any questions about how to test some area, we would be happy to help explain.</p>
 		</div>
 	</div>
