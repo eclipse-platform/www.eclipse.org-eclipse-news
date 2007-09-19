@@ -35,6 +35,8 @@
 			<ul>
 				<li>Eclipse Corner article <a target="_blank" href="http://www.eclipse.org/articles/Article-Debugger/how-to.html">How To Write An Eclipse Debugger</a></li>
 				<li>Eclipse Corner article <a target="_blank" href="http://www.eclipse.org/articles/Article-Launch-Framework/launch.html">We Have Lift-off: The Launching Framework in Eclipse </a></li>
+				<li>Eclipse Corner article <a target="_blank" href="http://www.eclipse.org/articles/article.php?file=Article-MemoryView/index.html">Inside the Memory View: A Guide for Debug Providers</a></li>
+				
 			</ul>
 		</div>
 		<div class="homeitem3col">
