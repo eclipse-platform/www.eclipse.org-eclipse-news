@@ -95,7 +95,7 @@
 				</tr>
 				<tr> 
 					<td width="30%" valign="top">Connection Type:</td>
-					<td width="70%">extssh</td>
+					<td width="70%">pserver</td>
 				</tr>
 				<tr> 
 					<td width="30%" valign="top">Use Default Port:</td>
