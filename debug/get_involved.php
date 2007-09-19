@@ -38,16 +38,15 @@
 			<p>Here are some ways you can contribute:
 			<ol>
 			<li>Participate in <a href="http://wiki.eclipse.org/BugDay">Bug Day</a>.
-			<li>Write code, developing source artifacts and patches for the debug projects.  See <a href="#writing_code">writing code</a>.  Note that any contributed code must follow the <a href="http://wiki.eclipse.org/index.php/Development_Conventions_and_Guidelines">coding guidelines</a> outlined on dev.eclipse.org</li>
+			<li><a href="#writing_code">Write code</a>, developing source artifacts and patches for the debug projects.</li>
 			<li><a href="#filing_bugs">File bug reports</a> in <a href="https://bugs.eclipse.org/bugs/">Bugzilla</a> for defects you find.
 			<li>Participate in a milestone <a href="#test_pass">test pass</a>.
 			<li>Assist in bug triage by checking if reports are duplicates, out of date, missing fields, etc.  Read up on <a href="#filing_bugs">filing bugs</a> and then take a peek at our <a href="https://bugs.eclipse.org/bugs/buglist.cgi?cmdtype=runnamed&namedcmd=Inbox">Inbox</a>.</li>
 			</ol>
 		</div>
 		<a name="mailing_lists"></a>
-		<h2>Mailing Lists</h2>
 		<div class="homeitem3col">
-			<h3>Signing up</h3>
+			<h3>Mailing Lists</h3>
 			<p>There are two developer mailing lists for debug, one for Platform and one for JDT.  Once you have signed up you will have permission to post to the list and let us know who you are and how you want to get involved.</p>
 			<ul>
 			<li>Platform Debug Mailing List: <a href="http://dev.eclipse.org/mailman/listinfo/platform-debug-dev">platform-debug-dev@eclipse.org</a></li>
@@ -55,13 +54,12 @@
 			</ul>		
 		</div>
 		<a name="writing_code"></a>
-		<h2>Writing Code for the Debug Projects</h2>
 		<div class="homeitem3col">
-			<a name="workspace_setup"></a>
-			<h3>Creating a Selfhosting Workspace</h3>
+			<h3>Writing Code for the Debug Components</h3>
 			<p>All development on the Debug Platform is done using Eclipse. Code is checked out of
 		      the Eclipse CVS repository, edited using JDT, and then run by launching a second instance of
 		      Eclipse from within Eclipse.</p>
+			  <p> Note that any contributed code must follow the <a href="http://wiki.eclipse.org/index.php/Development_Conventions_and_Guidelines">coding guidelines</a> outlined on dev.eclipse.org</p>
 			<p>Your first step is to download an Eclipse build.  You can download a the Eclipse platform at <a href="http://download.eclipse.org/eclipse/downloads/">here</a>.  New users are best off downloading the latest stream stable build.  Once you have the platform downloaded, setup and launched, you can connect to the CVS repository.</p>
 		</div>
 		<div class="homeitem3col">
@@ -159,7 +157,6 @@
 				<p>To create a patch, select all of the changed projects in the Package Explorer view.  Right click and go to Team > Synchronize, this should open up the Synchronize View.  In the Synchronize View, make sure there are no conflicting changes and that all of your changes follow the <a href="http://wiki.eclipse.org/index.php/Development_Conventions_and_Guidelines">coding guidelines</a>.  Then select your outgoing changes, right click and go to Create Patch...  In the dialog, select a destination for the patch (it is best to include the bug number in the file name and use the extension .patch), double check all your changes are included, then hit OK.  Attach the created patch to the bug report.</p>
 		</div>
 		<a name="filing_bugs"></a>
-		<h2>Filing Bugs</h2>
 		<div class="homeitem3col">
 			<h3>Creating Bug Reports</h3>
 			<p>
@@ -211,9 +208,8 @@
 			</ul>
 		</div>
 		<a name="test_pass"></a>
-		<h2>Test Passes</h2>
 		<div class="homeitem3col">
-			<h3>Participating in a Test Pass</h3>
+			<h3>Test Passes</h3>
 			<p>Before every milestone release the Debug Team does an intense one-day test pass where we test all of the functionality of the debug components.  We try to check everything to make sure 100% of the functionality is available in every major release.  In addition, we try odd use cases and unusual code to ensure our code is as robust as possible.</p>
 			<p>To organize the test pass, we follow a <a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.4.php">test matrix</a>.  The matrix defines who is working on which platform (OS and VM combination) and who is responsible for testing what functionality.  The matrix also contains a basic overview of what must be tested in each section.</p>
 			<p>If you would like to help out during a test pass, contact us via our <a href="#mailing_lists">mailing lists</a>.  Before the test pass, let us know what platform you are going to test on and what sections you are planning to test.  If you have any questions about how to test some area, we would be happy to help explain.</p>
