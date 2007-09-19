@@ -1,26 +1,7 @@
-<html>
-<head>
-<title>Team/CVS Test Plan</title>
-<style type='text/css'>
-h1 {
-	color: white;
-	background-color: #0080C0;
-	padding-left: 1ex;
-	padding-right: 1ex;
-}
-
-h1 {
-	font-weight: bold;
-	padding-top: 0.5ex;
-	padding-bottom: 0.5ex;
-	margin-top: 0;
-}
-</style>
-</head>
-<body>
+<html><head><title>Team/CVS Test Plan</title><style type='text/css'>h1 {color: white;background-color: #0080C0;padding-left: 1ex;padding-right: 1ex;}h1 {font-weight: bold;padding-top: 0.5ex;padding-bottom: 0.5ex;margin-top: 0;}</style></head><body>
 
 <!-- KEEP START -->
-<h1>Eclipse Team and CVS 3.4 Test Plan</h1>
+<h1>Eclipse Team and CVS 3.3 Test Plan</h1>
 
 <p>This plan contains a detailed listing of the features available
 in the Eclipse CVS plug-in. There are some items that don't have many
@@ -164,297 +145,287 @@ flavors. The current server lineup is:</p>
 <h2>Tests</h2>
 <!-- KEEP END -->
 <ul>
-	<li><a href="#00004.html">Repositories View</a>
-	<ul>
-		<li><a href="#repoview_basics00001.html">Basics</a>
-		<ul>
-		</ul>
-		<li><a href="#00007.html">Check Out - prompts</a>
-		<ul>
-		</ul>
-		<li><a href="#checkoutwizard00001.html">Check Out Wizard</a>
-		<ul>
-		</ul>
-		<li><a href="#datetags_repoview00001.html">Tags</a>
-		<ul>
-		</ul>
-	</ul>
-	<li><a href="#00026.html">Sharing</a>
-	<ul>
-		<li><a href="#sharingbasics00001.html">Basics</a>
-		<ul>
-		</ul>
-		<li><a href="#00027.html">Sharing as a subfolder</a>
-		<ul>
-		</ul>
-		<li><a href="#00028.html">Reconnecting an existing project</a>
-		<ul>
-		</ul>
-		<li><a href="#00050.html">Sharing a new project</a>
-		<ul>
-		</ul>
-		<li><a href="#project_sets00001.html">Project Sets</a>
-		<ul>
-		</ul>
-	</ul>
-	<li><a href="#00044.html">Replacing</a>
-	<ul>
-		<li><a href="#00045.html">With latest</a>
-		<ul>
-		</ul>
-		<li><a href="#00046.html">With another branch of version</a>
-		<ul>
-		</ul>
-		<li><a href="#00047.html">With file revision</a>
-		<ul>
-		</ul>
-		<li><a href="#update_command00001.html">Updating</a>
-		<ul>
-		</ul>
-	</ul>
-	<li><a href="#00008.html">Comparing</a>
-	<ul>
-		<li><a href="#00009.html">Remote resources</a>
-		<ul>
-		</ul>
-		<li><a href="#00039.html">Compare with another branch or
-		version</a>
-		<ul>
-		</ul>
-		<li><a href="#00040.html">Reverting deleted resources</a>
-		<ul>
-		</ul>
-		<li><a href="#00041.html">File Revisions</a>
-		<ul>
-		</ul>
-		<li><a href="#quickdiff00001.html">Quick Diff</a>
-		<ul>
-		</ul>
-		<li><a href="#00051.html">Compare with each other</a>
-		<ul>
-		</ul>
-	</ul>
-	<li><a href="#00010.html">Synchronizing</a>
-	<ul>
-		<li><a href="#00048.html">Performing a Synchronize</a>
-		<ul>
-		</ul>
-		<li><a href="#00011.html">Synchronize View</a>
-		<ul>
-		</ul>
-		<li><a href="#00049.html">Decorations</a>
-		<ul>
-		</ul>
-		<li><a href="#change_sets00001.html">Change Sets</a>
-		<ul>
-		</ul>
-		<li><a href="#sync00001.html">Scenarios</a>
-		<ul>
-		</ul>
-		<li><a href="#syncRestart00001.html">Restart Behavior</a>
-		<ul>
-		</ul>
-	</ul>
-	<li><a href="#commit00001.html">Commit</a>
-	<ul>
-		<li><a href="#commit00002.html">Committing Changes</a>
-		<ul>
-		</ul>
-	</ul>
-	<li><a href="#tags00001.html">Tags</a>
-	<ul>
-		<li><a href="#tags00002.html">Tag Selection in Dialogs</a>
-		<ul>
-		</ul>
-		<li><a href="#tags00003.html">Tag Caching</a>
-		<ul>
-		</ul>
-	</ul>
-	<li><a href="#00012.html">Branch/Merge</a>
-	<ul>
-		<li><a href="#00022.html">Performing a Merge</a>
-		<ul>
-		</ul>
-		<li><a href="#00013.html">Synchronize View</a>
-		<ul>
-		</ul>
-		<li><a href="#branch00001.html">Branching</a>
-		<ul>
-		</ul>
-	</ul>
-	<li><a href="#00029.html">Patching</a>
-	<ul>
-		<li><a href="#00030.html">Importing a zip over a shared
-		project</a>
-		<ul>
-		</ul>
-	</ul>
-	<li><a href="#00014.html">History View</a>
-	<ul>
-		<li><a href="#00018.html">Editor Linking</a>
-		<ul>
-		</ul>
-		<li><a href="#toolbarButtonsUMFile00001.html">Common Toolbar
-		Buttons</a>
-		<ul>
-		</ul>
-		<li><a href="#groupByDateUMFile00001.html">Group Revisions by
-		Date</a>
-		<ul>
-		</ul>
-		<li><a href="#localHistoryUnsharedFiles00001.html">Local
-		History for Unshared Files</a>
-		<ul>
-			<li><a href="#DNDUMFile00001.html">Drag and Drop Unmapped
-			File</a>
-			<ul>
-			</ul>
-			<li><a href="#showHistoryUMFile00001.html">Show History
-			Unmapped File</a>
-			<ul>
-			</ul>
-		</ul>
-		<li><a href="#cvsHistory00001.html">CVS History</a>
-		<ul>
-			<li><a href="#DNDCFile00001.html">Drag and Drop CVS File</a>
-			<ul>
-			</ul>
-			<li><a href="#00024.html">Annotate</a>
-			<ul>
-			</ul>
-			<li><a href="#modeSwitching00001.html">Mode Switching</a>
-			<ul>
-			</ul>
-		</ul>
-		<li><a href="#pinHistoryView00001.html">Pin History View</a>
-		<ul>
-		</ul>
-		<li><a href="#refreshHistory00002.html">Refresh</a>
-		<ul>
-		</ul>
-	</ul>
-	<li><a href="#00020.html">Concurrency</a>
-	<ul>
-		<li><a href="#00021.html">Close and disconnect</a>
-		<ul>
-		</ul>
-	</ul>
-	<li><a href="#00023.html">Restarting Workbench</a>
-	<ul>
-		<li><a href="#00019.html">Crash Recovery</a>
-		<ul>
-		</ul>
-		<li><a href="#00025.html">Synchronize View Settings</a>
-		<ul>
-		</ul>
-	</ul>
-	<li><a href="#00028a.html">SSH2</a>
-	<ul>
-		<li><a href="#00029a.html">Server version compatibiliity</a>
-		<ul>
-		</ul>
-		<li><a href="#00030a.html">Proxies</a>
-		<ul>
-		</ul>
-		<li><a href="#00031.html">Generating keys</a>
-		<ul>
-		</ul>
-		<li><a href="#00032.html">General use</a>
-		<ul>
-		</ul>
-	</ul>
-	<li><a href="#00033.html">Annotate</a>
-	<ul>
-		<li><a href="#00034.html">Show Annotation Action</a>
-		<ul>
-		</ul>
-	</ul>
-	<li><a href="#00035.html">Label Decorations</a>
-	<ul>
-		<li><a href="#00036.html">Enablement at startup</a>
-		<ul>
-		</ul>
-		<li><a href="#00037.html">Customizations</a>
-		<ul>
-		</ul>
-		<li><a href="#00038.html">Decorations in the Synchronize
-		pages</a>
-		<ul>
-		</ul>
-	</ul>
-	<li><a href="#watch_edit00001.html">Watch/Edit</a>
-	<ul>
-		<li><a href="#watch_edit_basic00001.html">Basic scenarios</a>
-		<ul>
-		</ul>
-		<li><a href="#watch_edit_editorsview00001.html">Editors View</a>
-		<ul>
-		</ul>
-	</ul>
-	<li><a href="#perf00001.html">Performance</a>
-	<ul>
-		<li><a href="#perf00002.html">Timings</a>
-		<ul>
-		</ul>
-		<li><a href="#perf00004.html">Resource Data Structures</a>
-		<ul>
-		</ul>
-		<li><a href="#perf00005.html">Looking For Leaks</a>
-		<ul>
-		</ul>
-		<li><a href="#perf00006.html">Team Data Structures</a>
-		<ul>
-		</ul>
-		<li><a href="#perf00007.html">Scalability</a>
-		<ul>
-		</ul>
-	</ul>
-	<li><a href="#failures00001.html">Failure Cases</a>
-	<ul>
-		<li><a href="#connections00001.html">Connections</a>
-		<ul>
-		</ul>
-		<li><a href="#auth_problems00001.html">Authentication
-		Problems</a>
-		<ul>
-		</ul>
-	</ul>
-	<li><a href="#misc00001.html">Misc</a>
-	<ul>
-		<li><a href="#00042.html">CVS Console</a>
-		<ul>
-		</ul>
-		<li><a href="#keys00001.html">Key Bindings</a>
-		<ul>
-		</ul>
-	</ul>
-	<li><a href="#validate_edit00001.html">Validate Edit</a>
-	<ul>
-		<li><a href="#validate_edit_editing_files00001.html">Editing
-		Files</a>
-		<ul>
-		</ul>
-		<li><a href="#validate_edit_refactoring00001.html">Refactoring</a>
-		<ul>
-		</ul>
-	</ul>
-	<li><a href="#logical00001.html">Logical Resource Support</a>
-	<ul>
-		<li><a href="#logical00002.html">Java Packages</a>
-		<ul>
-		</ul>
-		<li><a href="#logical00003.html">Working Sets</a>
-		<ul>
-		</ul>
-	</ul>
+<li><a href="#00004.html">Repositories View</a>
+<ul>
+<li><a href="#repoview_basics00001.html">Basics</a>
+<ul>
 </ul>
-<a name="00004.html" />
+<li><a href="#00007.html">Check Out - prompts</a>
+<ul>
+</ul>
+<li><a href="#checkoutwizard00001.html">Check Out Wizard</a>
+<ul>
+</ul>
+<li><a href="#datetags_repoview00001.html">Tags</a>
+<ul>
+</ul>
+</ul>
+<li><a href="#00026.html">Sharing</a>
+<ul>
+<li><a href="#sharingbasics00001.html">Basics</a>
+<ul>
+</ul>
+<li><a href="#00027.html">Sharing as a subfolder</a>
+<ul>
+</ul>
+<li><a href="#00028.html">Reconnecting an existing project</a>
+<ul>
+</ul>
+<li><a href="#00050.html">Sharing a new project</a>
+<ul>
+</ul>
+<li><a href="#project_sets00001.html">Project Sets</a>
+<ul>
+</ul>
+</ul>
+<li><a href="#00044.html">Replacing</a>
+<ul>
+<li><a href="#00045.html">With latest</a>
+<ul>
+</ul>
+<li><a href="#00046.html">With another branch of version</a>
+<ul>
+</ul>
+<li><a href="#00047.html">With file revision</a>
+<ul>
+</ul>
+<li><a href="#update_command00001.html">Updating</a>
+<ul>
+</ul>
+</ul>
+<li><a href="#00008.html">Comparing</a>
+<ul>
+<li><a href="#00009.html">Remote resources</a>
+<ul>
+</ul>
+<li><a href="#00039.html">Compare with another branch or version</a>
+<ul>
+</ul>
+<li><a href="#00040.html">Reverting deleted resources</a>
+<ul>
+</ul>
+<li><a href="#00041.html">File Revisions</a>
+<ul>
+</ul>
+<li><a href="#quickdiff00001.html">Quick Diff</a>
+<ul>
+</ul>
+<li><a href="#00051.html">Compare with each other</a>
+<ul>
+</ul>
+</ul>
+<li><a href="#00010.html">Synchronizing</a>
+<ul>
+<li><a href="#00048.html">Performing a Synchronize</a>
+<ul>
+</ul>
+<li><a href="#00011.html">Synchronize View</a>
+<ul>
+</ul>
+<li><a href="#00049.html">Decorations</a>
+<ul>
+</ul>
+<li><a href="#change_sets00001.html">Change Sets</a>
+<ul>
+</ul>
+<li><a href="#sync00001.html">Scenarios</a>
+<ul>
+</ul>
+<li><a href="#syncRestart00001.html">Restart Behavior</a>
+<ul>
+</ul>
+</ul>
+<li><a href="#commit00001.html">Commit</a>
+<ul>
+<li><a href="#commit00002.html">Committing Changes</a>
+<ul>
+</ul>
+</ul>
+<li><a href="#tags00001.html">Tags</a>
+<ul>
+<li><a href="#tags00002.html">Tag Selection in Dialogs</a>
+<ul>
+</ul>
+<li><a href="#tags00003.html">Tag Caching</a>
+<ul>
+</ul>
+</ul>
+<li><a href="#00012.html">Branch/Merge</a>
+<ul>
+<li><a href="#00022.html">Performing a Merge</a>
+<ul>
+</ul>
+<li><a href="#00013.html">Synchronize View</a>
+<ul>
+</ul>
+<li><a href="#branch00001.html">Branching</a>
+<ul>
+</ul>
+</ul>
+<li><a href="#00029.html">Patching</a>
+<ul>
+<li><a href="#00030.html">Importing a zip over a shared project</a>
+<ul>
+</ul>
+</ul>
+<li><a href="#00014.html">History View</a>
+<ul>
+<li><a href="#00018.html">Editor Linking</a>
+<ul>
+</ul>
+<li><a href="#toolbarButtonsUMFile00001.html">Common Toolbar Buttons</a>
+<ul>
+</ul>
+<li><a href="#groupByDateUMFile00001.html">Group Revisions by Date</a>
+<ul>
+</ul>
+<li><a href="#localHistoryUnsharedFiles00001.html">Local History for Unshared Files</a>
+<ul>
+<li><a href="#DNDUMFile00001.html">Drag and Drop Unmapped File</a>
+<ul>
+</ul>
+<li><a href="#showHistoryUMFile00001.html">Show History Unmapped File</a>
+<ul>
+</ul>
+</ul>
+<li><a href="#cvsHistory00001.html">CVS History</a>
+<ul>
+<li><a href="#DNDCFile00001.html">Drag and Drop CVS File</a>
+<ul>
+</ul>
+<li><a href="#00024.html">Annotate</a>
+<ul>
+</ul>
+<li><a href="#modeSwitching00001.html">Mode Switching</a>
+<ul>
+</ul>
+</ul>
+<li><a href="#pinHistoryView00001.html">Pin History View</a>
+<ul>
+</ul>
+<li><a href="#refreshHistory00002.html">Refresh</a>
+<ul>
+</ul>
+</ul>
+<li><a href="#00020.html">Concurrency</a>
+<ul>
+<li><a href="#00021.html">Close and disconnect</a>
+<ul>
+</ul>
+</ul>
+<li><a href="#00023.html">Restarting Workbench</a>
+<ul>
+<li><a href="#00019.html">Crash Recovery</a>
+<ul>
+</ul>
+<li><a href="#00025.html">Synchronize View Settings</a>
+<ul>
+</ul>
+</ul>
+<li><a href="#00028a.html">SSH2</a>
+<ul>
+<li><a href="#00029a.html">Server version compatibiliity</a>
+<ul>
+</ul>
+<li><a href="#00030a.html">Proxies</a>
+<ul>
+</ul>
+<li><a href="#00031.html">Generating keys</a>
+<ul>
+</ul>
+<li><a href="#00032.html">General use</a>
+<ul>
+</ul>
+</ul>
+<li><a href="#00033.html">Annotate</a>
+<ul>
+<li><a href="#00034.html">Show Annotation Action</a>
+<ul>
+</ul>
+</ul>
+<li><a href="#00035.html">Label Decorations</a>
+<ul>
+<li><a href="#00036.html">Enablement at startup</a>
+<ul>
+</ul>
+<li><a href="#00037.html">Customizations</a>
+<ul>
+</ul>
+<li><a href="#00038.html">Decorations in the Synchronize pages</a>
+<ul>
+</ul>
+</ul>
+<li><a href="#watch_edit00001.html">Watch/Edit</a>
+<ul>
+<li><a href="#watch_edit_basic00001.html">Basic scenarios</a>
+<ul>
+</ul>
+<li><a href="#watch_edit_editorsview00001.html">Editors View</a>
+<ul>
+</ul>
+</ul>
+<li><a href="#perf00001.html">Performance</a>
+<ul>
+<li><a href="#perf00002.html">Timings</a>
+<ul>
+</ul>
+<li><a href="#perf00004.html">Resource Data Structures</a>
+<ul>
+</ul>
+<li><a href="#perf00005.html">Looking For Leaks</a>
+<ul>
+</ul>
+<li><a href="#perf00006.html">Team Data Structures</a>
+<ul>
+</ul>
+<li><a href="#perf00007.html">Scalability</a>
+<ul>
+</ul>
+</ul>
+<li><a href="#failures00001.html">Failure Cases</a>
+<ul>
+<li><a href="#connections00001.html">Connections</a>
+<ul>
+</ul>
+<li><a href="#auth_problems00001.html">Authentication Problems</a>
+<ul>
+</ul>
+</ul>
+<li><a href="#misc00001.html">Misc</a>
+<ul>
+<li><a href="#00042.html">CVS Console</a>
+<ul>
+</ul>
+<li><a href="#keys00001.html">Key Bindings</a>
+<ul>
+</ul>
+</ul>
+<li><a href="#validate_edit00001.html">Validate Edit</a>
+<ul>
+<li><a href="#validate_edit_editing_files00001.html">Editing Files</a>
+<ul>
+</ul>
+<li><a href="#validate_edit_refactoring00001.html">Refactoring</a>
+<ul>
+</ul>
+</ul>
+<li><a href="#logical00001.html">Logical Resource Support</a>
+<ul>
+<li><a href="#logical00002.html">Java Packages</a>
+<ul>
+</ul>
+<li><a href="#logical00003.html">Working Sets</a>
+<ul>
+</ul>
+</ul>
+</ul>
+<a name="00004.html"/>
 <h1>Repositories View</h1>
-<a name="repoview_basics00001.html" />
+<a name="repoview_basics00001.html"/>
 
 <h2>Basics</h2>
 <p>Since: <br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <h3>Adding and Discarding Locations</h3>
 
@@ -462,7 +433,6 @@ Last Modified: $Date: 2007/09/19 09:51:20 $</p>
 toolbar of the view or via the context menu. Try expanding the location,
 the HEAD, Versions and Branches categories. Also, try the failures cases
 from <a href="connections00001.html">Connections</a>. Things to try:</p>
->
 
 <ul>
 	<li>Create repo locations for different connection types: ext,
@@ -499,11 +469,11 @@ mapped to the location are also changed.
 </ul>
 
 
-<a name="00007.html" />
+<a name="00007.html"/>
 
 <h2>Check Out - prompts</h2>
 <p>Since: 3.0 M5<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <h3>Scenario 1</h3>
 <ol>
@@ -557,11 +527,11 @@ Last Modified: $Date: 2007/09/19 09:51:20 $</p>
 </ol>
 
 
-<a name="checkoutwizard00001.html" />
+<a name="checkoutwizard00001.html"/>
 
 <h2>Checkout Wizard</h2>
 <p>Since: <br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <p>The checkout wizard should be available from the following parts
 of the workbench: import, new project, empty workspace CVS synchronize
@@ -598,11 +568,11 @@ least one of which does not contain a .project file.
 </ol>
 
 
-<a name="datetags_repoview00001.html" />
+<a name="datetags_repoview00001.html"/>
 
 <h2>Tags</h2>
 <p>Since: 3.0<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 <body>
 
 <h3>Refresh Branches and Versions</h3>
@@ -646,13 +616,13 @@ locations:
 </ul>
 
 
-<a name="00026.html" />
+<a name="00026.html"/>
 <h1>Sharing</h1>
-<a name="sharingbasics00001.html" />
+<a name="sharingbasics00001.html"/>
 
 <h2>Basics</h2>
 <p>Since: <br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <p>Single select a project and select share.</p>
 <ul>
@@ -666,11 +636,11 @@ Last Modified: $Date: 2007/09/19 09:51:20 $</p>
 </ul>
 
 
-<a name="00027.html" />
+<a name="00027.html"/>
 
 <h2>Sharing as a subfolder</h2>
 <p>Since: 3.0 M6<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <p>Perform the following steps:</p>
 <ol>
@@ -684,11 +654,11 @@ Last Modified: $Date: 2007/09/19 09:51:20 $</p>
 <p>Ensure that the project was shared properly (i.e. remote folders
 were created).</p>
 
-<a name="00028.html" />
+<a name="00028.html"/>
 
 <h2>Reconnecting an existing project</h2>
 <p>Since: 3.0 M6<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 <p>The following scenario represents how a user would reconnect a
 project that does not contain CVS meta-data to it's remote counterpart.
 It is assumed that the local project was derived from a previous version
@@ -744,11 +714,11 @@ been modified since then.</p>
 </ol>
 
 
-<a name="00050.html" />
+<a name="00050.html"/>
 
 <h2>Sharing a new project</h2>
 <p>Since: 3.0 M8<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <h3>Scenario 1: Existing location using project name</h3>
 
@@ -784,11 +754,11 @@ Last Modified: $Date: 2007/09/19 09:51:20 $</p>
 </ol>
 
 
-<a name="project_sets00001.html" />
+<a name="project_sets00001.html"/>
 
 <h2>Project Sets</h2>
 <p>Since: 2.1 <br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <ul>
 	<li>Create a project set from a workspace with multiple projects
@@ -804,13 +774,13 @@ Last Modified: $Date: 2007/09/19 09:51:20 $</p>
 </ul>
 
 
-<a name="00044.html" />
+<a name="00044.html"/>
 <h1>Replacing</h1>
-<a name="00045.html" />
+<a name="00045.html"/>
 
 <h2>With latest</h2>
 <p>Since: <br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <p>Ensure that the replace operation overwrites any outgoing
 changes. And verify the following:</p>
@@ -820,11 +790,11 @@ changes. And verify the following:</p>
 </ul>
 
 
-<a name="00046.html" />
+<a name="00046.html"/>
 
 <h2>With another branch of version</h2>
 <p>Since: <br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <p>Check the following for all cases of replace:</p>
 <ul>
@@ -837,11 +807,11 @@ Last Modified: $Date: 2007/09/19 09:51:20 $</p>
 <p>Also ensure that the tag filtering in the dialog works properly.</p>
 
 
-<a name="00047.html" />
+<a name="00047.html"/>
 
 <h2>With file revision</h2>
 <p>Since: <br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <ul>
 	<li>If the file isn't managed the action should no appear.</li>
@@ -859,11 +829,11 @@ Last Modified: $Date: 2007/09/19 09:51:20 $</p>
 </ul>
 
 
-<a name="update_command00001.html" />
+<a name="update_command00001.html"/>
 
 <h2>Updating</h2>
 <p>Since: 2.0 <br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <p>You can run an update and open the console to see the files that
 are being updated.</p>
@@ -871,13 +841,13 @@ are being updated.</p>
 keep your outgoing changes and update all other non-changed files.</p>
 
 
-<a name="00008.html" />
+<a name="00008.html"/>
 <h1>Comparing</h1>
-<a name="00009.html" />
+<a name="00009.html"/>
 
 <h2>Remote resources</h2>
 <p>Since: 3.0 M5<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 <h4>Compare With... in Repositories view</h4>
 <p>Perform the following steps:</p>
 <ol>
@@ -910,11 +880,11 @@ version + branch, branch + branch, version + version).</p>
 </ul>
 
 
-<a name="00039.html" />
+<a name="00039.html"/>
 
 <h2>Compare with another branch or version</h2>
 <p>Since: M8<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <p>You should be able to select a project/folder/resource and
 compare against another branch or version. Multi-select should work
@@ -955,17 +925,19 @@ attention should be made to the following cases:</p>
 	<li>Press the cancel button with changes, you should be prompted.</li>
 </ul>
 
-<a name="00040.html" />
+<a name="00040.html"/>
 
 <h2>Reverting deleted resources</h2>
 <p>Since: M8<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 You should be able to restore a deleted revision from the CVS server
-Team>Restore from Repository <a name="00041.html" />
+Team>Restore from Repository
+
+<a name="00041.html"/>
 
 <h2>File Revisions</h2>
 <p>Since: M8<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <h3>Compare the local resource with other revisions</h3>
 <ul>
@@ -983,11 +955,11 @@ Last Modified: $Date: 2007/09/19 09:51:20 $</p>
 </ul>
 
 
-<a name="quickdiff00001.html" />
+<a name="quickdiff00001.html"/>
 
 <h2>Quick Diff</h2>
 <p>Since: <br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <p>Enable CVS quick diff for text and java files via the General >
 Editors > Quick Diff preference. Then try the following scenarios:</p>
@@ -1007,11 +979,11 @@ Editors > Quick Diff preference. Then try the following scenarios:</p>
 </ol>
 
 
-<a name="00051.html" />
+<a name="00051.html"/>
 
 <h2>Compare With Each Other</h2>
 <p>Since: <br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <h3>Compare a resource with other resource</h3>
 <h5>The action</h5>
@@ -1137,13 +1109,13 @@ Last Modified: $Date: 2007/09/19 09:51:20 $</p>
 </ul>
 
 
-<a name="00010.html" />
+<a name="00010.html"/>
 <h1>Synchronizing</h1>
-<a name="00048.html" />
+<a name="00048.html"/>
 
 <h2>Performing a Synchronize</h2>
 <p>Since: 3.0<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <p>Synchronizing means to compare your local workspace contents with
 the contents in another location with the goal that the two locations
@@ -1199,11 +1171,11 @@ synchronize is performed. Maybe we need a different prompt each case.
 One for Team > Sync and another for refresh from the sync view.</p>
 
 
-<a name="00011.html" />
+<a name="00011.html"/>
 
 <h2>Synchronize View</h2>
 <p>Since: 3.0<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <h3>Synchronize View Modes</h3>
 
@@ -1404,11 +1376,11 @@ appropriate and what result to expect.
 </table>
 
 
-<a name="00049.html" />
+<a name="00049.html"/>
 
 <h2>Decorations</h2>
 <p>Since: M8<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 There are many standard decorations in the sync view. Most significant
 are the propagated flags.
@@ -1433,11 +1405,11 @@ in the views decorators. For example, if you branch from the sync view
 the branch name should appear.</p>
 
 
-<a name="change_sets00001.html" />
+<a name="change_sets00001.html"/>
 
 <h2>Change Sets Layout</h2>
 <p>Since: 3.1 M2<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <h3>Change Sets for incoming changes</h3>
 
@@ -1501,11 +1473,11 @@ The following aspects of outgoing change sets should be tested:
 </ol>
 
 
-<a name="sync00001.html" />
+<a name="sync00001.html"/>
 
 <h2>Scenarios</h2>
 <p>Since: <br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <h3>Making Manual Changes</h3>
 
@@ -1549,11 +1521,11 @@ perform a sync. In this case developer 1 should not see the incoming
 change.</p>
 
 
-<a name="syncRestart00001.html" />
+<a name="syncRestart00001.html"/>
 
 <h2>Restart Behavior</h2>
 <p>Since: 3.3<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <h1>Synchronization Restart Behavior</h1>
 
@@ -1571,14 +1543,17 @@ after a restart. To test this, do the following:</p>
 
 You will want to repeat these steps for both operations (Synchronize and
 Populate) and you should also repeat them using the preference page
-available from the view menu in the Synchronize view. <a
-	name="commit00001.html" />
+available from the view menu in the Synchronize view.
+
+
+
+<a name="commit00001.html"/>
 <h1>Commit</h1>
-<a name="commit00002.html" />
+<a name="commit00002.html"/>
 
 <h2>Committing Changes</h2>
 <p>Since: 3.1 M4<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <h3>Committing changes to existing files</h3>
 <ol>
@@ -1627,13 +1602,13 @@ Last Modified: $Date: 2007/09/19 09:51:20 $</p>
 </ol>
 
 
-<a name="tags00001.html" />
+<a name="tags00001.html"/>
 <h1>Tags</h1>
-<a name="tags00002.html" />
+<a name="tags00002.html"/>
 
 <h2>Tag Selection in Dialogs</h2>
 <p>Since: 3.1 M4<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 Tag lists appear in many dialogs:
 
@@ -1661,11 +1636,11 @@ also be present. Refreshing behavior should be as follows:</p>
 </ol>
 
 
-<a name="tags00003.html" />
+<a name="tags00003.html"/>
 
 <h2>Tag Caching</h2>
 <p>Since: 3.1 M4<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 Discovered tags are cached locally to improve performance. Caching is
 done in the following ways:
@@ -1690,13 +1665,13 @@ To test this, you can try one or more of the following:
 </ol>
 
 
-<a name="00012.html" />
+<a name="00012.html"/>
 <h1>Branch/Merge</h1>
-<a name="00022.html" />
+<a name="00022.html"/>
 
 <h2>Performing a Merge</h2>
 <p>Since: 3.1<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <h3>Scenario 1: One Time Merge</h3>
 
@@ -1728,12 +1703,13 @@ Try both the case with a base tag and without it.
 <h3>Removing a Merge</h3>
 
 <p>Delete the merge from the synchronize view using the remove
-toolbar button. The merge subscriber should be removed from the view. <a
-	name="00013.html" />
+toolbar button. The merge subscriber should be removed from the view.
+
+<a name="00013.html"/>
 
 <h2>Synchronize View</h2>
 <p>Since: 3.0 M5<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 <ul>
 	<li>Same scenarios as <a href="00011.html">CVS Synchronize
 	View</a> except you can't commit.</li>
@@ -1741,11 +1717,11 @@ Last Modified: $Date: 2007/09/19 09:51:20 $</p>
 	sets)</li>
 </ul>
 
-<a name="branch00001.html" />
+<a name="branch00001.html"/>
 
 <h2>Branching</h2>
 <p>Since: 3.1 M4<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <ol>
 	<li>Choose Team>Branch from the context menu of the Navigator.
@@ -1768,47 +1744,42 @@ Last Modified: $Date: 2007/09/19 09:51:20 $</p>
 </ul>
 
 
-<a name="00029.html" />
+<a name="00029.html"/>
 <h1>Patching</h1>
-<a name="00030.html" />
+<a name="00030.html"/>
 <h2>Importing a zip over a shared project</h2>
 <p>Since: 3.0 M6<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
-<p>This scenario captures one means of patching. It assumes that a
-zip file contains a previous version of a project that has been modified
-in some way and added to a zip archive (without CVS directories).</p>
+<p>This scenario captures one means of patching. It assumes that a zip file contains 
+a previous version of a project that has been modified in some way and added to
+a zip archive (without CVS directories).</p>
 
 <p>Perform the following steps:</p>
 <ol>
-	<li>Load the project from CVS (using Checkout or some other
-	means).</li>
-	<li>Import the zip over the loaded project.</li>
-	<li>Ensure that the sync states are Outgoing for all resources
-	from the zip file.</li>
-	<li>Ensure that all folders from the zip file (except new ones)
-	are marked as in-sync and all files (except new ones) are outgoing
-	changes.</li>
-	<li>Changing the comparison criteria to compare contents should
-	not contact the server and should leave only the resources that differ
-	in the sync view. Perform a Mark As Merged and a Commit on these
-	resources.</li>
-	<li>Changing the comparison criteria back to revision number will
+  <li>Load the project from CVS (using Checkout or some other means).</li>
+  <li>Import the zip over the loaded project.</li>
+  <li>Ensure that the sync states are Outgoing for all resources from the zip file.</li>
+  <li>Ensure that all folders from the zip file (except new ones)
+  are marked as in-sync and all files (except new ones) are outgoing changes.</li>
+  <li>Changing the comparison criteria to compare contents should not contact the server
+  and should leave only the resources that differ in the sync view. Perform a 
+  Mark As Merged and a Commit on these resources.</li>
+  <li>Changing the comparison criteria back to revision number will
 	reveal all the files whose content did not change, perform a Mark as
 	merged on these resources followed by a Team>Update on the project in
 	the Navigator (Note: This could be handled better).</li>
-	<li>After the update, ensure the project has no out-of-sync
-	resources.</li>
+  <li>After the update, ensure the project has no out-of-sync resources.</li>
 </ol>
 
 
-<a name="00014.html" />
+<a name="00014.html"/>
 <h1>History View</h1>
-<a name="00018.html" />
+<a name="00018.html"/>
 
 <h2>Editor Linking</h2>
 <p>Since: 3.0 M5<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <ol>
 	<li>Open the Resource History view and enable editor linking.</li>
@@ -1824,11 +1795,11 @@ that no revision history is fetched (i.e. no jobs appear in progress
 view).</p>
 
 
-<a name="toolbarButtonsUMFile00001.html" />
+<a name="toolbarButtonsUMFile00001.html"/>
 
 <h2>Common Toolbar Buttons</h2>
 <p>Since: 3.2 RC2 <br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <p><b>Purpose:</b> Test the functionality of the various buttons
 common to both the Local File History page and the CVS History page</p>
@@ -1864,11 +1835,11 @@ following actions.
 </ol>
 
 
-<a name="groupByDateUMFile00001.html" />
+<a name="groupByDateUMFile00001.html"/>
 
 <h2>Group Revisions by Date</h2>
 <p>Since: 3.2 RC2 <br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <p><b>Purpose:</b> Test the group by date mechanism for both local
 history and CVS history.</p>
@@ -1895,13 +1866,13 @@ history and CVS history.</p>
 file and a CVS file.</p>
 
 
-<a name="localHistoryUnsharedFiles00001.html" />
+<a name="localHistoryUnsharedFiles00001.html"/>
 <h1>Local History for Unshared Files</h1>
-<a name="DNDUMFile00001.html" />
+<a name="DNDUMFile00001.html"/>
 
 <h2>Drag and Drop Unmapped File</h2>
 <p>Since: 3.2 RC2 <br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <p><b>Purpose:</b> Test the DND mechanism for unmapped files.</p>
 
@@ -1917,11 +1888,11 @@ Last Modified: $Date: 2007/09/19 09:51:20 $</p>
 the View updates.</p>
 
 
-<a name="showHistoryUMFile00001.html" />
+<a name="showHistoryUMFile00001.html"/>
 
 <h2>Show History Unmapped File</h2>
 <p>Since: 3.2 RC2 <br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <p><b>Purpose:</b> Test the page activation mechanism for unmapped
 files.</p>
@@ -1939,13 +1910,13 @@ is <i>shared with a CVS repository.</i> Repeat the above and make sure
 that the View updates.</p>
 
 
-<a name="cvsHistory00001.html" />
+<a name="cvsHistory00001.html"/>
 <h1>CVS History</h1>
-<a name="DNDCFile00001.html" />
+<a name="DNDCFile00001.html"/>
 
 <h2>Drag and Drop CVS File</h2>
 <p>Since: 3.2 RC2 <br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <p><b>Purpose:</b> Test the DND mechanism for CVS files.</p>
 
@@ -1961,11 +1932,11 @@ Last Modified: $Date: 2007/09/19 09:51:20 $</p>
 that the View updates.</p>
 
 
-<a name="00024.html" />
+<a name="00024.html"/>
 
 <h2>Annotate</h2>
 <p>Since: 3.0 M6<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <h4>Annotate action should be available from</h4>
 <ul>
@@ -2006,11 +1977,11 @@ Last Modified: $Date: 2007/09/19 09:51:20 $</p>
 </ul>
 
 
-<a name="modeSwitching00001.html" />
+<a name="modeSwitching00001.html"/>
 
 <h2>Mode Switching</h2>
 <p>Since: 3.2 RC2 <br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <p><b>Purpose:</b> Test the mode switching for the CVS History Page.</p>
 
@@ -2043,16 +2014,16 @@ Last Modified: $Date: 2007/09/19 09:51:20 $</p>
 </ol>
 
 
-<a name="pinHistoryView00001.html" />
+<a name="pinHistoryView00001.html"/>
 
 <h2>Pin History View</h2>
 <p>Since: 3.2 RC2<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <p><b>Purpose:</b> Test the pinning behavior of the history view.</p>
 
 <h3>Simple Pinning</h3>
-<
+
 <ol>
 	<li>With a file history in the History View, hit the Pin button.</li>
 	<li>DND a file onto the pinned history view.</li>
@@ -2062,12 +2033,11 @@ Last Modified: $Date: 2007/09/19 09:51:20 $</p>
 	too goes to the new unpinned view.</li>
 </ol>
 <p>Repeat the above using both a CVS file and an unmanaged file.</p>
-p>
 
 <h3>More Pinning</h3>
 <p>If a one of the views already contains a file, that file should
 always update the pinned view.</p>
-p>
+
 <ol>
 	<li>With a file history in the History View, hit the Pin button.</li>
 	<li>DND a file onto the pinned history view.</li>
@@ -2078,11 +2048,11 @@ p>
 </ol>
 
 
-<a name="refreshHistory00002.html" />
+<a name="refreshHistory00002.html"/>
 
 <h2>Refresh</h2>
 <p>Since: 3.2 RC2<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <p><b>Purpose:</b> Test the two types of refresh behavior available
 in the history view</p>
@@ -2122,13 +2092,13 @@ as they are updated automatically.</p>
 </ol>
 
 
-<a name="00020.html" />
+<a name="00020.html"/>
 <h1>Concurrency</h1>
-<a name="00021.html" />
+<a name="00021.html"/>
 
 <h2>Close and disconnect</h2>
 <p>Since: 3.0 M5<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <h4>Background refresh and disconnect</h4>
 <ol>
@@ -2178,13 +2148,13 @@ following:</p>
 </ul>
 
 
-<a name="00023.html" />
+<a name="00023.html"/>
 <h1>Restarting Workbench</h1>
-<a name="00019.html" />
+<a name="00019.html"/>
 
 <h2>Crash Recovery</h2>
 <p>Since: 3.0 M5<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <h3>Scenario 1</h3>
 <ol>
@@ -2212,11 +2182,11 @@ Last Modified: $Date: 2007/09/19 09:51:20 $</p>
 </ol>
 
 
-<a name="00025.html" />
+<a name="00025.html"/>
 
 <h2>Synchronize View Settings</h2>
 <p>Since: 3.0 M6<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <h4>Saved between sessions</h4>
 <p>The following GUI preferences in the Synchronize View are
@@ -2231,25 +2201,28 @@ settings are:</p>
 	<li>working set</li>
 </ul>
 
-<a name="00028a.html" />
+<a name="00028a.html"/>
 <h1>SSH2</h1>
-<a name="00029a.html" />
+<a name="00029a.html"/>
 
 <h2>Server version compatibiliity</h2>
 <p>Since: M6<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 This test is to ensure that the ssh2 connection method properly
-delegates to ssh1 when the server only supports ssh1. <a
-	name="00030a.html" />
+delegates to ssh1 when the server only supports ssh1.
+
+<a name="00030a.html"/>
 
 <h2>Proxies</h2>
 <p>Since: <br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
-Using HTTP and SOCKS5 proxies. <a name="00031.html" />
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
+Using HTTP and SOCKS5 proxies.
+
+<a name="00031.html"/>
 
 <h2>Key Generation</h2>
 <p>Since: <br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 You should be able to generate private/public keys in the SSH2
 preference page. Here are some scenarios for testing:
@@ -2261,11 +2234,11 @@ preference page. Here are some scenarios for testing:
 	<li>Generate keys and install using the sftp button.</li>
 </ul>
 
-<a name="00032.html" />
+<a name="00032.html"/>
 
 <h2>General use</h2>
 <p>Since: <br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 This tests the prompting and usage of the SSH2 connection method:
 <ul>
@@ -2277,25 +2250,25 @@ This tests the prompting and usage of the SSH2 connection method:
 	location was not validated do you want to keep it.</li>
 </ul>
 
-<a name="00033.html" />
+<a name="00033.html"/>
 <h1>Annotate</h1>
-<a name="00034.html" />
+<a name="00034.html"/>
 
 <h2>Show Annotation Action</h2>
 <p>Since: 3.0 M3<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 <p>Annotate a non-managed file, binary file, plugin.xml file... Be
 creative.</p>
 <p>Ensure that the annotate view, editor, and history view stay
 synchronized.</p>
 
-<a name="00035.html" />
+<a name="00035.html"/>
 <h1>Label Decorations</h1>
-<a name="00036.html" />
+<a name="00036.html"/>
 
 <h2>Enablement at startup</h2>
 <p>Since: 3.0 M7<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <p>The CVS decorators should not be enabled at start-up. Verify the
 label decorator preference page.</p>
@@ -2309,11 +2282,11 @@ Here are some scenarios for testing:
 	should clear the decorators on the project.</li>
 </ul>
 
-<a name="00037.html" />
+<a name="00037.html"/>
 
 <h2>Customizations</h2>
 <p>Since: 3.1 <br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <p>You can customize the label decorations via the preference page.
 The customizations will take effect when apply is pressed. Resetting the
@@ -2322,11 +2295,11 @@ defaults should work.</p>
 resources states. There should be a link from the CVS label decorations
 preference page to the general colors and fonts preference page.</p>
 
-<a name="00038.html" />
+<a name="00038.html"/>
 
 <h2>Decorations in the Synchronize pages</h2>
 <p>Since: 3.0 M8<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <p>CVS text label decorations should be visible in the CVS
 synchronize participants. We don't bother to show the images because the
@@ -2340,13 +2313,13 @@ view and navigator get updated.</p>
 <p>Ensure that there is no flicker in packages view when CVS
 decorator updated on commit, update.</p>
 
-<a name="watch_edit00001.html" />
+<a name="watch_edit00001.html"/>
 <h1>Watch/Edit</h1>
-<a name="watch_edit_basic00001.html" />
+<a name="watch_edit_basic00001.html"/>
 
 <h2>Basic scenarios</h2>
 <p>Since: <br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <p>To setup, goto the CVS preference page and enable watch edit for
 all projects checked out from CVS. And then set the prompt option to
@@ -2403,20 +2376,20 @@ always prompt.</p>
 </ol>
 
 
-<a name="watch_edit_editorsview00001.html" />
+<a name="watch_edit_editorsview00001.html"/>
 
 <h2>Editors View</h2>
 <p>Since: <br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 <p>Test that you can properly show the editors on a file.</p>
 
-<a name="perf00001.html" />
+<a name="perf00001.html"/>
 <h1>Performance</h1>
-<a name="perf00002.html" />
+<a name="perf00002.html"/>
 
 <h2>Timings</h2>
 <p>Since: 3.0<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 This section contains various timing results and comparisons.
 
@@ -2535,11 +2508,11 @@ incoming changes.
 </ul>
 
 
-<a name="perf00004.html" />
+<a name="perf00004.html"/>
 
 <h2>Resource Data Structures</h2>
 <p>Since: 3.0<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 This section contains results on memory footprint of CVS in the Core
 resource plugin data structures. More specifically, CVS uses the session
@@ -2564,7 +2537,9 @@ obtain the memory footprint, perform the following steps.
 
 The following snapshot of the resource element tree was taken after
 checking out all of the projects (294 as of 2004/05/31) in
-dev.eclipse.org. <pre>
+dev.eclipse.org.
+
+<pre>
 Total resource count: 89,466
 	Team private: 10,186
 	Phantom: 4,055
@@ -2632,11 +2607,11 @@ management.
 </ol>
 
 
-<a name="perf00005.html" />
+<a name="perf00005.html"/>
 
 <h2>Looking For Leaks</h2>
 <p>Since: <br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <h3>Removing synchronize view entries</h3>
 
@@ -2667,11 +2642,14 @@ Last Modified: $Date: 2007/09/19 09:51:20 $</p>
 <h3>Closing the Synchronize view</h3>
 
 Close all instances of the Synchronize view and ensure that no instances
-of ISynchronizeView remain. <a name="perf00006.html" />
+of ISynchronizeView remain.
+
+
+<a name="perf00006.html"/>
 
 <h2>Team Data Structures</h2>
 <p>Since: <br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 The Team component provides several data structures that can be used to
 cache resource synchronization state and resource variants for improved
@@ -2695,11 +2673,11 @@ to query the size of these caches as well.
 </ul>
 
 
-<a name="perf00007.html" />
+<a name="perf00007.html"/>
 
 <h2>Scalability</h2>
 <p>Since: <br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <p>The following scenario can be used to test a large number of
 incoming additions:</p>
@@ -2712,13 +2690,13 @@ incoming additions:</p>
 </ol>
 
 
-<a name="failures00001.html" />
+<a name="failures00001.html"/>
 <h1>Failure Cases</h1>
-<a name="connections00001.html" />
+<a name="connections00001.html"/>
 
 <h2>Connections</h2>
 <p>Since: <br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <p>Test that authentication, connection errors result in appropriate
 error messages and that these don't pollute the log file or console. To
@@ -2745,29 +2723,31 @@ your workspace.</p>
 </ul>
 
 
-<a name="auth_problems00001.html" />
+<a name="auth_problems00001.html"/>
 
 <h2>Authentication Problems</h2>
 <p>Since: <br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <p>Test the error reporting when authentication fails due to either,
 invalid username, password, hostname. This should be tried with each CVS
 connection method: pserver, extssh, ext.</p>
 
 
-<a name="misc00001.html" />
+<a name="misc00001.html"/>
 <h1>Misc</h1>
-<a name="00042.html" />
+<a name="00042.html"/>
 
 <h2>CVS Console</h2>
 <p>Since: <br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 There are a couple of preferences that controls the behavior and
 presentation of the console. To enable this testing, you must first
-enable font and label decorations. This can be done by going to <i>Window/Preferences/Team/CVS/Label
-Decorations</i> and checking off <b>"Enable font and color decorations"</b>
+enable font and label decorations. This can be done by going to
+<i>Window/Preferences/Team/CVS/Label Decorations</i>
+and checking off
+<b>"Enable font and color decorations"</b>
 .
 <p>These are:</p>
 <ul>
@@ -2779,23 +2759,23 @@ Decorations</i> and checking off <b>"Enable font and color decorations"</b>
 </ul>
 
 
-<a name="keys00001.html" />
+<a name="keys00001.html"/>
 
 <h2>Key Bindings</h2>
 <p>Since: 3.1<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <p>Activate the CVS menu and assign keybindings to the various CVS
 commands. Ensure that they work as expected.</p>
 
 
-<a name="validate_edit00001.html" />
+<a name="validate_edit00001.html"/>
 <h1>Validate Edit</h1>
-<a name="validate_edit_editing_files00001.html" />
+<a name="validate_edit_editing_files00001.html"/>
 
 <h2>Editing Files</h2>
 <p>Since: <br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <p>These tests are to sanity check editors behavior relating to
 calling validateEdit. The tests will try to cover all cases where files
@@ -3025,7 +3005,10 @@ Suggestion:
     |     1     |        yes       | Prompt user for reload/no-reload/merge |
     +-----------+------------------+----------------------------------------+
 </pre>
---> <a name="validate_edit_refactoring00001.html" />
+-->
+
+
+<a name="validate_edit_refactoring00001.html"/>
 
 
 <p>These tests are a sanity check that workbench, JDT and other
@@ -3036,7 +3019,8 @@ and should include a UI context which allows prompting.
 <p>The following scenarios are stated in terms of the Navigator view
 and JDT. Other tools should translate them to a set of scenarios that
 make sense for the tool.</p>
-p> <!-- ------------------------------------------------------------------------------ -->
+
+<!-- ------------------------------------------------------------------------------ -->
 
 <h3>S1: Search and Replace</h3>
 <ol>
@@ -3067,29 +3051,30 @@ p> <!-- ------------------------------------------------------------------------
 </ol>
 
 
-<a name="logical00001.html" />
+<a name="logical00001.html"/>
 <h1>Logical Resource Support</h1>
-<a name="logical00002.html" />
+<a name="logical00002.html"/>
 
 <h2>Java Packages</h2>
 <p>Since: 3.1<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <p>Ensure that CVS operations such as Update and Commit are
 performed only on the files in a Java package and not on the subpackages
 when the operations are launched from the Java Packages Explorer.</p>
 
 
-<a name="logical00003.html" />
+<a name="logical00003.html"/>
 
 <h2>Working Sets</h2>
 <p>Since: 3.1<br>
-Last Modified: $Date: 2007/09/19 09:51:20 $</p>
+Last Modified: $Date: 2007/09/19 10:39:31 $</p>
 
 <p>Configure the Java Packages Explorer to show Working Sets.
 Populate the working sets with various combinations of shared and
 unshared projects and ensure that CVS operations can be performed
 directly on the working sets if they contain at least one shared
 project.</p>
-</body>
-</html>
+
+
+</body></html>
