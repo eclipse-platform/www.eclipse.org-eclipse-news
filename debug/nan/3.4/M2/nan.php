@@ -32,10 +32,6 @@
 		<h1>$pageTitle</h1>
 		<table border="0" width="80%" cellpadding="10" cellspacing="0">
 		  <tr> 
-		    <td colspan="2"> <hr /> <h2>Platform</h2>
-		      <hr /></td>
-		  </tr>
-		  <tr> 
 		    <td valign="top" align="left"><a name="Edit Launch History" id="Edit Launch History"></a><b>Remove 
 		      items from launch history</b></td>
 		    <td valign="top"><p>You can now remove items from the launch history menus. 
@@ -59,10 +55,6 @@
 		      context menu in a Java editor, the launch dialog will open to most recently 
 		      executed launch configuration associated with that file. If no launch configuration 
 		      exists, the launch dialog will open to the associated type of launch configuration.</td>
-		  </tr>
-		  <tr> 
-		    <td colspan="2"> <hr /> <h2>JDT</h2>
-		      <hr /></td>
 		  </tr>
 		  <tr> 
 		    <td width="30%" valign="top" align="left"><a name="Socket Listening Connector" id="Socket Listening Connector"></a><b>Wait 
