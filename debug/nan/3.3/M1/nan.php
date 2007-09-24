@@ -47,6 +47,9 @@
 		      <p><img src="all-refs.png"></p></td>
 		  </tr>
 		  <tr> 
+		    <td colspan="2"> <hr></td>
+		  </tr>
+		  <tr> 
 		    <td valign="top" align="left"> <p align="right"><b>No more prompting</b></td>
 		    <td valign="top"> A user preference now controls whether you are prompted 
 		      to confirm the deletion of all breakpoints in the workspace. The new preference 
@@ -55,11 +58,17 @@
 		      <p><img src="breakpoint-prompt.png"></p></td>
 		  </tr>
 		  <tr> 
+		    <td colspan="2"> <hr></td>
+		  </tr>
+		  <tr> 
 		    <td valign="top" align="left"> <p align="right"><b>Auto format stack traces</b></td>
 		    <td valign="top"> <p>Stack traces can be formatted automatically as you paste 
 		        them into the Java stack trace console. An &quot;<strong>Auto Format</strong>&quot; 
 		        toggle is available on the console toolbar.</p>
 		      <p><img src="auto-format.png"></p></td>
+		  </tr>
+		  <tr> 
+		    <td colspan="2"> <hr></td>
 		  </tr>
 		  <tr> 
 		    <td width="30%" valign="top" align="left"> <p align="right"><b>Double-click 

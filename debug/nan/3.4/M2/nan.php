@@ -32,6 +32,9 @@
 		<h1>$pageTitle</h1>
 		<table border="0" width="80%" cellpadding="10" cellspacing="0">
 		  <tr> 
+		    <td colspan="2"> <hr></td>
+		  </tr>
+		  <tr> 
 		    <td valign="top" align="left"><a name="Edit Launch History" id="Edit Launch History"></a><b>Remove 
 		      items from launch history</b></td>
 		    <td valign="top"><p>You can now remove items from the launch history menus. 
