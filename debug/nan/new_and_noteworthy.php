@@ -37,6 +37,7 @@
 			<p>Listing of new and noteworthy items separated by milestone:
 				<ul>
 					<li><a href="/eclipse/debug/nan/3.4/M1/nan.php">Milestone 1</a></li>
+					<li><a href="/eclipse/debug/nan/3.4/M2/nan.php">Milestone 2</a></li>
 				</ul>
 			</p>
 		</div>
