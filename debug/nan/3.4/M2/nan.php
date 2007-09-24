@@ -60,6 +60,9 @@
 		      exists, the launch dialog will open to the associated type of launch configuration.</td>
 		  </tr>
 		  <tr> 
+		    <td colspan="2"> <hr /> </td>
+		  </tr>
+		  <tr> 
 		    <td width="30%" valign="top" align="left"><a name="Socket Listening Connector" id="Socket Listening Connector"></a><b>Wait 
 		      for a remote debug connection</b></td>
 		    <td width="70%" valign="top"><p>A socket listening connector has been added 
