@@ -33,11 +33,13 @@
 		<div class="homeitem3col">
 			<h3>Contributors</h3>
 			<ul>
+			  <li>All of Platform UI+IDE HEAD: <a href="platform-ui-ide-HEAD-pserver.psf">platform-ui-ide-HEAD-pserver.psf</a></li>
 			  <li>data binding HEAD: <a href="databinding-HEAD-pserver.psf">databinding-HEAD-pserver.psf</a></li>
 			  <li>data binding 3.3 maintenance: <a href="databinding-3_3_maintenance-pserver.psf">databinding-3_3_maintenance-pserver.psf</a></li>
 			</ul>
 			<h3>Committers</h3>
 			<ul>
+			  <li>All of Platform UI+IDE HEAD: <a href="platform-ui-ide-HEAD-extssh.psf">platform-ui-ide-HEAD-extssh.psf</a></li>
 			  <li>data binding HEAD: <a href="databinding-HEAD-extssh.psf">databinding-HEAD-extssh.psf</a></li>
 			  <li>data binding 3.3 maintenance: <a href="databinding-3_3_maintenance-extssh.psf">databinding-3_3_maintenance-extssh.psf</a></li>
 			</ul>
