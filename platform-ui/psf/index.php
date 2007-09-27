@@ -28,7 +28,7 @@
 	$html = <<<EOHTML
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
-		You can find team project set files on this page.
+		You can find team project set files on this page. See our <a href="http://wiki.eclipse.org/Platform_UI/How_to_Contribute">How to Contribute</a> wiki page for how to use these project set files.
 		
 		<div class="homeitem3col">
 			<h3>Contributors</h3>
