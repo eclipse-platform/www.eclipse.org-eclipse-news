@@ -70,6 +70,10 @@
                name="Examples"
                scope="ON_ANY">
          </markerFieldFilterGrouping>
+         <markerSupportReference
+               id="org.eclipse.ui.ide.severity"
+               type="markerGrouping">
+         </markerSupportReference>
       </markerContentGenerator>
       <markerField
             class="org.eclipse.ui.ide.examples.markers.markerSupport.SourceIDMarkerField"
