@@ -66,12 +66,15 @@
 			<a name="previous"></a>
 			<h3>Build Notes For Previous Releases</h3>
 			<ul>
-				<li><a href="build_notes/build_notes_proxy.php">2.0 Release</a></li>
-				<li><a href="build_notes/build_notes_proxy.php">2.1 Release</a></li>
-				<li><a href="build_notes/build_notes_proxy.php">3.0 Release</a></li>
-				<li><a href="build_notes/build_notes_proxy.php">3.1 Release</a></li>
-				<li><a href="build_notes/build_notes_proxy.php">3.2 Release</a></li>
-				<li><a href="build_notes/build_notes_proxy.php">3.3 Release</a></li>
+				<li><a href="../../scripts/build_notes_proxy.php">2.0 Release</a></li>
+				<li><a href="../../scripts/build_notes_proxy.php">2.1 Release</a></li>
+				<li><a href="../../scripts/build_notes_proxy.php">3.0 Release</a></li>
+				<li><a href="../../scripts/build_notes_proxy.php">3.1 Release</a></li>
+				<li><a href="../../scripts/build_notes_proxy.php">3.2 Release</a></li>
+				<li><a href="../../scripts/build_notes_proxy.php">3.2.1 Release</a></li>
+				<li><a href="../../scripts/build_notes_proxy.php">3.2.2 Release</a></li>
+				<li><a href="../../scripts/build_notes_proxy.php">3.3 Release</a></li>
+				<li><a href="../../scripts/build_notes_proxy.php">3.3.1 Release</a></li>
 			</ul>
 		</div>
 	</div>
