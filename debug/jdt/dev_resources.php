@@ -43,7 +43,7 @@
 		      </ul>
 		   <h3>Documents</h3> 
 		      <ul>
-		        <li><a href="/eclipse/debug/contribute.php">Contributing to the JDT Debugger</a></li>
+		        <li><a href="/eclipse/debug/get_involved.php">Contributing to the JDT Debugger</a></li>
 		        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.jdt.debug/buildnotes_jdt-debug.html" target="_self">Up-to-the-minute build notes</a></li>
 		      </ul>
 		 <h3>Plugins</h3>

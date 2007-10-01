@@ -37,8 +37,8 @@
     	die( "fopen failed for $filename" ) ;
     }
 	
-	include("../_sideCommon.php");
-	include("_pluginCommon.php");
+	include("../../_sideCommon.php");
+	include("../_pluginCommon.php");
 	
 	$html = <<<EOHTML
 
