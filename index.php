@@ -41,7 +41,7 @@ ob_start();
       	  describes the organization of the project, roles and responsibilities of 
       	  the participants, and top level development process for the project. The 
       	  JDT and PDE are plug-in tools for the Eclipse Platform. Together, these 
-      	  three pieces form the Eclipse SDK <a href="http://www.eclipse.org/downloads/" target="_top">download</a>, 
+      	  three pieces form the Eclipse SDK <a href="http://download.eclipse.org/eclipse/" target="_top">download</a>, 
       	  a complete development environment for Eclipse-based tools, and for developing 
       	  Eclipse itself.
       	 </p>
