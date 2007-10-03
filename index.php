@@ -49,6 +49,9 @@ ob_start();
       	   <li><a href="development/">Eclipse Project Development</a><br>
 				Release plans and other information about the Eclipse Project development process.
       	   </li>
+      	   <li><a href="http://download.eclipse.org/eclipse/">Downloads</a><br>
+				Download the Eclipse SDK, Eclipse RCP, SWT, the Eclipse Java compiler, and many more.
+      	   </li>
       	   <li><a href="../documentation/main.html">Documentation</a><br>
 				Browse the documentation included with Eclipse Project releases.
       	   </li>
@@ -115,6 +118,7 @@ ob_start();
 		<div class="sideitem">
 			<h6>Project Links</h6>
 			<ul>
+				<li><a href="http://download.eclipse.org/eclipse/">Downloads</a></li>
 				<li><a href="http://wiki.eclipse.org/index.php/Eclipse_FAQs">Project FAQ</a></li>
 				<li><a href="presentation/eclipse-slides.html">Slide Presentation</a><br>
 			      A presentation of the technical aspects of the Eclipse Project. (<a href="presentation/eclipse-slides.html" target="_blank">HTML</a>) 
