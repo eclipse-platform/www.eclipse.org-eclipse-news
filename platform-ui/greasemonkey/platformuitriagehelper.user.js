@@ -109,7 +109,7 @@ window.addEventListener("load", function() {
   buttons += buttonFor("DynamicUI","kim_horne@ca.ibm.com");
   buttons += buttonFor("EditorMgmt","Boris_Bokowski@ca.ibm.com");
   buttons += buttonFor("EFS","Tod_Creasey@ca.ibm.com");
-  buttons += buttonFor("ErrorHandling","kim_horne@ca.ibm.com");
+  buttons += buttonFor("ErrorHandling","tod_creasey@ca.ibm.com");
   buttons += buttonFor("Examples","pwebster@ca.ibm.com");
   buttons += buttonFor("FastView","emoffatt@ca.ibm.com");
   buttons += buttonFor("Features","kim_horne@ca.ibm.com");
