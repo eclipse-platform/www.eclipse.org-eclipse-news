@@ -28,16 +28,20 @@
 	$html = <<<EOHTML
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
-		Here are some <a href="http://www.greasespot.net/">Greasemonkey</a> scripts that we find useful.
+		We use the Triage Helper <a href="platformuitriagehelper.user.js">platformuitriagehelper.user.js</a> <a href="http://www.greasespot.net/">Greasemonkey</a> script
+		to automate assignment of component areas and owners.
+		Just click on the script link to load it into your browser. Ensure that Tools->Grease Monkey is enabled in your browser.
 		
 		<div class="homeitem3col">
 			<h3>Scripts</h3>
 			<a name="SCRIPTS"></a>
 			<ul>
-			  <li>Triage helper: <a href="platformuitriagehelper.user.js">platformuitriagehelper.user.js</a></li>
-			  <li>Script for updating the triage helper: <a href="createcomponentareascrip.user.js">createcomponentareascrip.user.js</a></li>
+			  <li></li>
 			</ul>
 		</div>
+		We used to use an admin script <a href="createcomponentareascrip.user.js">createcomponentareascrip.user.js</a>
+		for updating the triage helper but now the <a href="http://dev.eclipse.org/viewcvs/index.cgi/platform-ui-home/componentAreas.html?view=co">component page</a> no longer has the owners and
+		we just update the script manually and avoid inconsistencies.</li>
 	</div>
 
 EOHTML;
