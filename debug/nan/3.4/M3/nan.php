@@ -31,10 +31,8 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 <table border="0" width="80%" cellpadding="10" cellspacing="0">
-  <tr>
-    <td colspan="2"><hr />
-      <h2>Debug</h2>
-      <hr /></td>
+  <tr> 
+    <td colspan="2"> <hr></td>
   </tr>
   <tr>
     <td width="30%" valign="top" align="left"><a name="ImportExportLCs" id="ImportExportLCs"></a><b>Import/export 
