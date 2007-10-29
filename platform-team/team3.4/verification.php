@@ -58,6 +58,15 @@
 			<div class="homeitem3col">
 			<h3>3.4 Verification - Milestone 3</h3>
 			<a name="m3"></a>
+			
+			<ul>
+			  <li>
+			  <a href="https://bugs.eclipse.org/bugs/buglist.cgi?quicksearch=204379%2C205038%2C204873%2C195494%2C203944%2C198378%2C187362%2C48321%2C198571%2C205791%2C205576%2C186984%2C206646%2C199988">Tomek's bugs to verify</a>  
+			  </li>
+			  <li>
+			  <a href="https://bugs.eclipse.org/bugs/buglist.cgi?quicksearch=204282%2C203608%2C175297%2C204358%2C196800%2C199396%2C204380%2C199846%2C203423%2C189025%2C203410%2C203413%2C204141%2C204403+">Szymon's bugs to verify</a>  
+			  </li> 
+			</ul>
 			</div>
 			
 			<div class="homeitem3col">
