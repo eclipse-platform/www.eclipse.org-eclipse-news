@@ -365,6 +365,7 @@ public class StatusHandlingComponent implements TestBedComponent {
 		final Label explanationLabel = new Label(addStatusComposite, SWT.NONE);
 		explanationLabel.setText("Explanation:");
 		explanationField = new Text(addStatusComposite, SWT.BORDER);
+		explanationField.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
 		explanationField
 				.setToolTipText("Put explanation here. Empty means that no explanation available");
 		explanationField.setEnabled(false);
@@ -372,6 +373,7 @@ public class StatusHandlingComponent implements TestBedComponent {
 		final Label actionLabel = new Label(addStatusComposite, SWT.NONE);
 		actionLabel.setText("Action:");
 		actionField = new Text(addStatusComposite, SWT.BORDER);
+		actionField.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
 		actionField
 				.setToolTipText("Put action here. Empty means that no action available");
 		actionField.setEnabled(false);
