@@ -19,7 +19,7 @@
 	#****************************************************************************
 	
 	
-	$pageTitle 		= "Debug Project 3.4 Test Matrix";
+	$pageTitle 		= "Debug Project 3.4M2 Test Matrix";
 	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching, test, testing, matrix, plan, 3.4";
 	$pageAuthor		= "Debug Team";
 	
