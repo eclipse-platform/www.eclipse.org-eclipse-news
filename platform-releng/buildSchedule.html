@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Eclipse Build Schedule</title>
+<title>Eclipse (Platform, JDT, PDE and Equinox) Release Engineering Build Schedule</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
 </head>
@@ -11,18 +11,14 @@
 
 
 <table border=0 cellspacing=5 cellpadding=2 width="100%" > <tr> 
-    <td width="72%" height="90" align=left> <font class=indextop> build schedule</font><br>
-      <font class=indexsub>last updated 14/09/2006 11:00</font></td>
-    <td width="28%"><img src="http://dev.eclipse.org/images/Idea.jpg" height=86 width=120></td></tr> 
+    <tr><td align=left> <h2>Eclipse Release Engineering build schedule</h2><h4>(Platform, JDT, PDE and Equinox)</h4</td> <br></tr>    
+      <font class=indexsub>last updated 19/10/2007 11:00</font></td>
+  
 </table>
 
 
 
-<font class=indextop> </font><table border=0 cellspacing=5 cellpadding=2 width="100%" > 
-<tr> <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font face="Arial,Helvetica" color="#FFFFFF"> 
-Regularly Scheduled Builds</font></b></td></tr> 
 
-<br>
 
 
 <p>  <br>
@@ -37,139 +33,17 @@ branch of org.eclipse.releng.
   Performance testing will only occur where indicated.</p>
 <p>Times are all EDT (GMT -5)</p>
 
-<table width="100%" border="1">
-  <tr>
-    <td width="9%">&nbsp;</td>
-    <td width="34%"><h4>Build</h4></td>
-    <td width="11%"><h4>Date (Local)</h4></td>
-    <td width="12%"><h4>Date (UTC)</h4></td>
-    <td width="34%"><h4>Rebuild Policy</h4></td>
-  </tr>
-  <tr>
-    <td rowspan="2">Monday</td>
-    <td> 3.4 N build<br>
-    </td>
-    <td>00:10 </td>
-    <td>05:10 UTC</td>
-    <td>No rebuild.</td>
-  </tr>
-  <tr>
-    <td>Eclipse 3.2 performance baselines if the previous week was a milestone.</td>
-    <td>12:00 </td>
-    <td>17:00 UTC</td>
-    <td>Rebuild until success</td>
-  </tr>
-  <tr>
-    <td colspan="5">&nbsp;</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Tuesday</td>
-    <td>3.4 N build</td>
-    <td>00:10 </td>
-    <td>05:10 UTC</td>
-    <td>No rebuild.</td>
-  </tr>
-  <tr>
-    <td>3.4 I build with performance testing against 3.3 performance data..</td>
-    <td>08:00 </td>
-    <td>13:00 UTC</td>
-    <td>Same day rebuild if compile errors, missing plugins, the build is unusable
-      or if the drops do not get posted.Otherwise, a rebuild will occur Wednesday
-    8:00 . </td>
-  </tr>
-  <tr>
-    <td colspan="5">&nbsp;</td>
-  </tr>
-  <tr>
-    <td rowspan="3">Wednesday</td>
-    <td>3.4 N build</td>
-    <td>00:10 </td>
-    <td>05:10 UTC</td>
-    <td>No rebuild.</td>
-  </tr>
-    <tr>
-    <td>3.3.2 build if map files are updated</td>
-	    <td>08:00 </td>
-    <td>13:00 UTC</td>
-    <td>Rebuild until success.</td>
-  </tr>
+<iframe src="http://www.google.com/calendar/embed?mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=prfk26fdmpru1mptlb06p0jh4s%40group.calendar.google.com&amp;color=%237A367A" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe>
+<h4>Rebuild Policy</h4>
+<ul>
+<li>Nightly builds - No rebuilds</li>
+<li>Integration builds - Same day rebuild if compile errors, missing plugins, the build is unusable or if the drops do not get posted.Otherwise, a rebuild the next day at 8:00am.</li>
+<li>Maintenance builds - Rebuild until success</li>
+</ul>
 
-  <tr>
-    <td>3.4 I rebuild if requested</td>
-	    <td>12:00 </td>
-    <td>17:00 UTC</td>
-    <td>Same day rebuild if compile errors, missing plugins, the build is unusable
-      or if the drops do not get posted.Otherwise, a rebuild will occur Thursday
-    8:00. </td>
-  </tr>
- 
-  <tr>
-    <td colspan="5">&nbsp;</td>
-  </tr>
-  <tr>
-    <td rowspan="3">Thursday</td>
-    <td>3.4 N build with performance tests</td>
-    <td>00:10 </td>
-    <td>05:10 UTC</td>
-    <td>No rebuild.</td>
-  </tr>
-  <tr>
-    <td>3.4 I rebuild if requested</td>
-    <td>08:00</td>
-    <td>13:00 UTC</td>
-    <td>Rebuild until success</td>
-  </tr>
-  <tr>
-    <td>Performance re-testing on eclipse 3.2. Tests built from perf_32x
-    stream of org.eclipse.releng map files.</td>
-    <td>12:00 </td>
-    <td>17:00 </td>
-    <td>Rebuild until success</td>
-  </tr>
-  <tr>
-    <td colspan="5">&nbsp;</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Friday</td>
-    <td>3.4 N build</td>
-    <td>00:10 </td>
-    <td>05:10 UTC</td>
-    <td>No rebuild.</td>
-  </tr>
-  <tr>
-    <td>Performance re-testing on eclipse 3.3. Tests built from perf_33x
-    stream of org.eclipse.releng map files.</td>
-    <td>12:00 </td>
-    <td>17:00 </td>
-    <td>Rebuild until success</td>
-  </tr>
-  
-  <tr>
-    <td colspan="5">&nbsp;</td>
-  </tr>
-  <tr>
-    <td>Saturday</td>
-    <td>3.4 N build</td>
-    <td>00:10 </td>
-    <td>05:10 UTC</td>
-    <td>No rebuild.</td>
-  </tr>
-  <tr>
-    <td colspan="5">&nbsp;</td>
-  </tr>
-  <tr>
-    <td>Sunday</td>
-    <td>3.4 N build with performance results</td>
-    <td>00:10 </td>
-    <td>05:10 UTC</td>
-    <td>No rebuild.</td>
-  </tr>
-</table>
-<p>&nbsp;</p>
-<tr> 
-<TABLE BORDER=0 CELLSPACING=5 CELLPADDING=2 WIDTH="100%" > 
-<TR> <TD ALIGN=LEFT VALIGN=TOP COLSPAN="2" BGCOLOR="#0080C0"><B><FONT FACE="Arial,Helvetica" COLOR="#FFFFFF">Additional 
-Upcoming Builds</FONT></B></TD></TR> <TR> <TD HEIGHT="19"></table>
+<br><br>
+
+<h4>Additional Upcoming Builds</h4>
 
 <strong>Builds toward Eclipse 3.4 M3 </strong>
 <br>
@@ -216,54 +90,57 @@ affected functionality) <br>
 -3.4 M3 is released.<br> 
 <br>
 <br>
+<br><br>
+<h4>Build Retention Policy</h4>
 
-<table border=0 cellspacing=5 cellpadding=2 width="100%" > 
-<tr> <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font face="Arial,Helvetica" color="#FFFFFF">Build Retention 
-Policy</font></b></td></tr> <tr> <td height="19"> <p>In an effort to reduce our disk utilization on the eclipse.org infrastructure and reduce the amount of data sent to the mirrors, we have adopted the following build retention policy.</p>
+<tr><td height="19"> <p>In an effort to reduce our disk utilization on the eclipse.org infrastructure and reduce the amount of data sent to the mirrors, we have adopted the following build retention policy.</p>
 <li>Release builds are kept indefinitely and moved to the archive.eclipse.org server as appropriate</li>
 <li>Four integration and nightly builds are retained</li><li>Maintenance builds are kept until a release of the maintenance stream is available.</li><li>Stable builds are retained until a release is available.</li></li></table>
 
-<table border=0 cellspacing=5 cellpadding=2 width="100%" > 
-<tr> <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font face="Arial,Helvetica" color="#FFFFFF">Build 
-Notes </font></b></td></tr> <tr> <td height="19"> We have decided to make some 
-minor changes in our build story in order to better focus the responsibility for 
-getting good integration builds on the developers: <p>For the 3.4 Integration
-  
-builds: <br>
- - build time is 8:00 am (Eastern time) on Tuesday mornings. <br> 
-- in the event of an integration build failure due to compile errors, missing 
-plugins or if the drops are not posted,<br>there will be a same day rebuild upon 
-submission of a fix.<br> - Otherwise, there will be a rebuild at noon Wednesday morning
-to accommodate fixes that have a workaround or do not impact the general usability of the build.  <br>-Teams are expected to indicate on the platform-releng-dev mailing list if they intend to contribute to a rebuild. <br> - in the event of a double integration build failure, all other 
-work will stop until <br> guaranteed-to-be-successful build contributions are 
-prepared for a rebuild at 8:00 am Thursday morning. <br> - if the Thursday 8:00 
-am (Eastern time) integration build fails we will rebuild until success<br> - 
-once a good integration build is achieved, it will be marked as such on the website. 
-<br> -the releng team will often request a go/no go status from all teams to determine 
-if the build is suitable for the week's testing. If you provide status and then 
-recontribute to a subsequent build, you are required to revalidate the build and 
-provide an updated status.</p>
-<p>For the 3.3.x maintenance builds: <br>
-   - build 
-time is 8am Wednesday (Eastern time) <br> - because of the nature 
-of the fixes in this stream, these builds should not fail. <br> However, if a 
-rebuild is requested by one of the teams, it will take place as soon <br> as the 
-build contribution is available. <br> - once a good integration build is achieved, 
-it will be marked as such on the website. </p><p>In the above descriptions, a 
-build is considered to be a failure if there are &quot;Red X&quot;s that the developers 
-agree represent valid reasons for them to not begin using the integration build. 
+
+<br><br><br><br>
+
+<h4>Build Notes</h4>
+
+<tr> <td height="19"> 
+
+<strong>For the 3.4 Integration builds: </strong>
+<ul>
+<li>build time is 8:00 am (Eastern time) on Tuesday mornings.</li> 
+<li>In the event of an integration build failure due to compile errors, missing plugins or if the drops are not posted,<br>there will be a same day rebuild upon 
+submission of a fix.</li>
+<li>Otherwise, there will be a rebuild at noon Wednesday morning to accommodate fixes that have a workaround or do not impact the general usability of the build. 
+<li>Teams are expected to indicate on the platform-releng-dev mailing list if they intend to contribute to a rebuild.</li> 
+<li> In the event of a double integration build failure, all other work will stop until guaranteed-to-be-successful build contributions are  prepared for a rebuild at 8:00 am Thursday morning.</li> 
+<li> if the Thursday 8:00 am (Eastern time) integration build fails we will rebuild until success </li>
+<li> once a good integration build is achieved, it will be marked as such on the website.</li> 
+<li> the Releng team will often request a go/no go status from all teams to determine if the build is suitable for the week's testing. If you provide status and then 
+recontribute to a subsequent build, you are required to revalidate the build and provide an updated status.</li>
+</ul>
+
+<br><br>
+
+<strong>For the 3.3.x maintenance builds: </strong>
+<ul>
+<li>Build time is 8am Wednesday (Eastern time)</li> 
+<li>Due to the nature of the fixes in this stream, these builds should not fail. However, if a 
+rebuild is requested by one of the teams, it will take place as soon as the build contribution is available.</li> 
+
+ 
+<p>In the above descriptions, a build is considered to be a failure if there are &quot;Red X&quot;s that the developers 
+agree represent valid reasons for them to not begin using the integration build.  
 An example of a Red X which would *not* require a re-build would be a test which 
 failed because the test was bogus. </p>
+
 <p>IMPORTANT: This strategy _requires_ 
 us to have good build inputs. All teams must use the tools to pre-build and test
    their submissions. In addition, teams should track the nightly builds to detect
-  
 integration problems early on. What we want to achieve is for the Tuesday morning
    3.4 build to typically be successful, with an infrequent requirement for a
   Wednesday 
 noon build. Failing the Wednesday noon rebuild should be treated as a catastrophic
    failure. In other words, more than two or three of these per year is an unacceptable
   
-failure rate. </p></td></tr> </table><p>&nbsp;</p></TABLE>
+failure rate. </p>
 </body>
 </html>
