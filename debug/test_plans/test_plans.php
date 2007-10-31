@@ -43,6 +43,7 @@
 			<ul>
 				<li><a href="/eclipse/debug/test_plans/test_plan-3.4M2.php">3.4M2</a></li>
 				<li><a href="/eclipse/debug/test_plans/test_plan-3.4M3.php">3.4M3</a></li>
+				<li><a href="/eclipse/debug/test_plans/test_plan-3.4M4.php">3.4M4</a></li>
 			</ul>
 		</div>
 		<div class="homeitem3col">

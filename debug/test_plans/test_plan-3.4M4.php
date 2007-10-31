@@ -33,7 +33,7 @@
 		<div class="homeitem3col">
 			<h3>Testers</h3>
 			<p>Committers: Darin Wright, Michael Rennie, Curtis Windatt</p>
-			<p>Community: Anyone who wants to help</p>
+			<p>Community: Joe Pluta, Anyone who wants to help</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>JRE Grid</h3>
@@ -60,11 +60,11 @@
 				  </tr>
 				  <tr> 
 				    <td width="15%"><b>Win XP</b></td>
-				    <td width="15%">Curtis Windatt</td>
+				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
 					<td width="15%">&nbsp;</td>
-				    <td width="15%">&nbsp;</td>
+				    <td width="15%">Joe Pluta</td>
 				  </tr>
 				  <tr> 
 				    <td width="15%"><b>Linux</b></td>
@@ -72,12 +72,12 @@
 				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
-				    <td width="15%">Michael Rennie</td>
+				    <td width="15%">&nbsp;</td>
 				  </tr>
 				  <tr> 
 				    <td width="15%"><b>Mac</b></td>
 				    <td width="15%">&nbsp;</td>
-				    <td width="15%">Darin Wright</td>
+				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
@@ -122,6 +122,12 @@
 			  </tr>
 			  <tr> 
 			    <td><a href="#Launch_Modes">Launch Modes</a></td>
+			    <td><div align="center"></div></td>
+				<td> <div align="center"></div></td>
+			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			  </tr>
+			  <tr> 
+			    <td><a href="#LaunchConfigurations">Launch Configurations</a></td>
 			    <td><div align="center"></div></td>
 				<td> <div align="center"></div></td>
 			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
@@ -387,7 +393,7 @@
 				  <li>Prompt to launch in face of compilation errors 
 				    <ul>
 				      <li>always/prompt</li>
-				      <li>NEW: prompt should tell you which project(s) contain errors</li>
+				      <li>prompt should tell you which project(s) contain errors</li>
 				      <li>irrelevant errors should not cause prompt (i.e. Ant errors should not 
 				        prevent Java launch)</li>
 				    </ul>
@@ -433,6 +439,31 @@
 						<li>Choice of tooling should allow launch to continue and be reflected in the preferences page</li>
 						<li>Canceling either choice from the resolution dialog should cancel the launch as well</li>
 					</ul>
+					</li>
+				</ul>
+			<p><a href="#top">Back to top</a><br><hr></p>
+			<a name="LaunchConfigurations"></a>
+			<h4>Launch Configurations</h4>
+				<ul>
+					<li>Launch History / Favourites (toolbar drop down)</li>
+						<ul>
+							<li>New launched configurations added to top of history</li>
+							<li>Launching from history changes order of history</li>
+							<li>Test the 'organize favorites' dialog</li>
+							<li>Configurations should not be in both history and favorites</li>
+							<li>Ctrl-clicking a configuration should open to launch configuration dialog</li>
+							<li>Ctrl-Shift-clicking a configuration should offer to remove it from the history/favorites</li>
+						</ul>
+					</li>
+					<li>Importing and exporting of launch configurations through File > Import/Export</li>
+					<li>Using java search to find launch configurations that launch a class</li>
+					<li>Launch Configuration Dialog
+						<ul>
+							<li>Creating/Deleting configurations of different types</li>
+							<li>Filtering configurations from tree</li>
+							<li>Test error handling, apply/revert buttons, and launching</li>
+							<li>Check if tabs make configuration dirty even if no changes are made</li>
+						</ul>
 					</li>
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
@@ -649,6 +680,8 @@
 				      <li>a selection in an outline/navigator</li>
 				    </ul>
 				  </li>
+				  <li>Ctrl+click on an item in the menu to create a new launch configuration of that type
+				  and open the launch configuration dialog</li>
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Classpaths"></a>
@@ -860,7 +893,7 @@
 			<a name="Variables"></a>
 			<h4>Variables</h4>
 				<ul>
-				  <li>NEW: &quot;Find Variable&quot; support and key-binding</li>
+				  <li>Find Variable support and key-binding</li>
 				  <li>Changed variables appear red (preference color) when stepping</li>
 				  <li>Variables remain expanded/selected as stepping</li>
 				  <li>When switching between stack frames (without resuming), the variables expanded/selected 
