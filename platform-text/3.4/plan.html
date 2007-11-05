@@ -82,7 +82,7 @@ function traverseLinkifyBugs(node) {
 
   <tr> 
     <td WIDTH="100%"> 
-	<p>Last revised 15:57 CEST November 2, 2007</p>
+	<p>Last revised 17:54 CEST November 5, 2007</p>
 
     
       <p>This plan is under continuous refinement. Please send comments about this plan to the <a href="mailto:platform-text-dev@eclipse.org">platform-text-dev@eclipse.org</a> developer mailing list.</p>
@@ -133,7 +133,7 @@ function traverseLinkifyBugs(node) {
 			<li><img src="../images/ok.gif" border="0" height="10" width="10"> <Style:committed>allow regular expressions to match across lines (bug 44766)</Style:committed></li>
 			<li><img src="../images/ok.gif" border="0" height="10" width="10"> <Style:committed>handle dangerous regex replaces more gracefully (e.g. by restarting the line tracker) (bug 130843)</Style:committed></li>
 			<li><img src="../images/ok.gif" border="0" height="10" width="10"> escape regex patterns in selection used as find string (bug 44422)</li>
-			<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> improve Find/Replace dialog: merge into editor area, ... [mentor GSoC project]</li>
+			<li><font class="indexsub" color="#8080ff">[&gt;3.4 M2 - waiting for contribution]</font> improve Find/Replace dialog: merge into editor area, ... [mentor GSoC project]</li>
 		</ul>
 		</li>
 	
@@ -159,7 +159,7 @@ function traverseLinkifyBugs(node) {
 			<li><Style:committed>allow to configure annotations directly in the vertical and overview rulers</Style:committed></li>
 			<li><Style:committed>Go to line when clicking in overview ruler (bug 91722)</Style:committed></li>
 			<li>improve overview ruler arming and size of active area</li>
-			<li>allow to configure overview ruler colors</li>
+			<li>fix washed out color problem of overview ruler (bug 69053)</li>
 		</ul>
 		</li>
 	
@@ -273,10 +273,49 @@ function traverseLinkifyBugs(node) {
 			</li> 
 		</ul>
 		
+		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Ruler improvements [<a href="#2">2</a>]</h4>
+		<ul>
+			<li><Style:committed>allow to configure annotations directly in the vertical and overview rulers</Style:committed></li>
+			<li><Style:committed>Go to line when clicking in overview ruler (bug 91722)</Style:committed></li>
+			<li>improve overview ruler arming and size of active area</li>
+			<li>fix washed out color problem of overview ruler (bug 69053)</li>
+			<li>investigate improving the usability of icons in the vertical ruler [experimental]
+			<ul>
+				<li><Style:committed>fix most common layering problem (breakpoints) by changing their layer</Style:committed></li>
+				<li><Style:committed>alpha blending so that underlying icons can be seen</Style:committed></li>
+				<li><Style:committed>down-size images so that we can show 4 instead of one</Style:committed></li>
+				<li>allow to increase ruler width</li>
+				<li>allow users to configure the annotation presentation layer for each annotation</li>
+				<li>finish/cleanup the roll-over annotation work that was kicked off during 3.0
+	  	  	</ul>
+	  	  	</li>
+		</ul>
+		</li>
+		
+		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Performance [<a href="#1">1</a>]</h4>
+		<ul>
+			<li><Style:committed>investigate to reduce garbage when typing</Style:committed></li>
+			<li><Style:committed>provide API to retrieve annotations in a certain range from an annotation model</Style:committed>
+				<br>&rArr; with this, clients no longer need to iterate over all annotations
+			</li>
+		</ul>
+		
 		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Miscellaneous</h4>
 		<ul>
 			<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> review and commit new Templates view
-			<br>&rarr; is awaiting legal review</li>
+				<br>&rarr; is awaiting legal review</li>
+			<li>show more context about what's currently being edited (e.g. in a header):
+			<ul>
+				<li><Style:committed>bread crumb trail bar to show the context of the current selection:</Style:committed>
+					<br>
+					the idea is to have a bar inside the editor area at the top that shows me the path
+					to the current selection:
+					project &gt; src folder &gt; package &gt; class &gt; inner class &gt; method</li>
+				<li>each of the segments of the bread crumb trail would be clickable and and 
+					navigate to the corresponding element. A drop down would show all available targets. 'Show in...' could be used for elements
+					that are outside the editor  [experimental]</li>
+			</ul>
+			</li>
 		</ul>
 		
 		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Permanent Items</h4>
