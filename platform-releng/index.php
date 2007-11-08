@@ -27,7 +27,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 
 		<div class="homeitem3col">
-		  <h3>About the Platform Releng</h3>
+		  <h3>About Platform Release Engineering</h3>
 			<p>Platform releng provides release engineering services for the Eclipse Project team (<a href="http://www.eclipse.org/platform=">Platform</a>, 
 			<a href="http://www.eclipse.org/jdt=">JDT</a>,<a href="http://www.eclipse.org/pde=">PDE </a>,<a href="http://www.eclipse.org/equinox=">Equinox</a>).  We maintain 
 			the build scripts that are used to massage the source from the developer to a download at eclipse.org.  We are responsible the following cvs projects
