@@ -410,7 +410,7 @@
 			<a name="Launch_Modes"></a>
 			<h4>Launch Modes</h4>
 				<ul>
-					<li> For this test, you require the use of the launch modes test plugin available <a href="http://www.eclipse.org/eclipse/debug/misc/launch_mode_example.zip">here</a>.</li>
+					<li> For this test, you require the use of the launch modes test plugin available <a href="http://www.eclipse.org/eclipse/debug/misc/plugins/org.eclipse.example.mixedmode_1.2.0.jar">here</a>.</li>
 					<li> Preferences Dialog
 					<ul>
 						<li>Ensure launch tool preferences page is available, even if there is no conflicting tooling. Page
