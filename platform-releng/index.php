@@ -28,8 +28,8 @@ ob_start();
 
 		<div class="homeitem3col">
 		  <h3>About the Platform Releng</h3>
-			<p>Platform releng provides release engineering services for the Eclipse Project team (<a href="http://www.eclipse.org/platform=">Platform"</a>,
-			<a href="http://www.eclipse.org/jdt=">JDT</a><a href="http://www.eclipse.org/pde=">PDE</a><a href="http://www.eclipse.org/equinox=">Equinox</a>).  We maintain 
+			<p>Platform releng provides release engineering services for the Eclipse Project team (<a href="http://www.eclipse.org/platform=">Platform</a>, 
+			<a href="http://www.eclipse.org/jdt=">JDT</a>,<a href="http://www.eclipse.org/pde=">PDE </a>,<a href="http://www.eclipse.org/equinox=">Equinox</a>).  We maintain 
 			the build scripts that are used to massage the source from the developer to a download at eclipse.org.  We are responsible the following cvs projects
 			</p>
 			<ul>
@@ -46,12 +46,12 @@ ob_start();
 	        <a href="http://dev.eclipse.org/mailman/listinfo/platform-releng-dev">platform-releng-dev@eclipse.org</a>. </p>
 			
 			<p>The platform releng FAQ answers what you always wanted to know but were afraid to ask about the build process.
-			<li><a href="http://wiki.eclipse.org/index.php/Platform-releng-faq">Platform Releng FAQ</a></li>
+			<ul><li><a href="http://wiki.eclipse.org/index.php/Platform-releng-faq">Platform Releng FAQ</a></li></ul>
 			</p>
 			
 			<p>
-			And for the answer to the neverending question of when is the next build, please refer to the newly snazzy build schedule, now available in Google calendar form.
-			<li><a href="buildSchedule.html">Build Schedule</a></li>
+			And for the answer to the neverending question of when is the next build, please refer to the build schedule, now available in Google calendar form.
+			<ul><li><a href="buildSchedule.html">Build Schedule</a></li></ul>
 			</p>
 			
 	        <p>There are also a number of bugs with the "helpwanted" tag that indicate where help would be greatly appreciated. We don't have a budget to thank you with expensive gifts, but I've heard that 
