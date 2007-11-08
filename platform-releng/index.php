@@ -29,7 +29,7 @@ ob_start();
 		<div class="homeitem3col">
 		  <h3>About the Platform Releng</h3>
 			<p>Platform releng provides release engineering services for the Eclipse Project team (<a href="http://www.eclipse.org/platform=">Platform"</a>,
-			<a href="http://www.eclipse.org/jdt=">JDT"</a><a href="http://www.eclipse.org/pde=">PDE"</a><a href="http://www.eclipse.org/equinox=">Equinox"</a>).  We maintain 
+			<a href="http://www.eclipse.org/jdt=">JDT</a><a href="http://www.eclipse.org/pde=">PDE</a><a href="http://www.eclipse.org/equinox=">Equinox</a>).  We maintain 
 			the build scripts that are used to massage the source from the developer to a download at eclipse.org.  We are responsible the following cvs projects
 			</p>
 			<ul>
@@ -39,14 +39,25 @@ ob_start();
 				<li><b>org.eclipse.test</b> - Eclipse test framework</li>
 				<li><b>org.eclipse.releng.tests</b> - Test eclipse plugin and features for inclusion of legal files and adherence to versioning guidelines.</li>
 			</ul>			
-	    </div>
+	    </div>		
 		<div class="homeitem3col">
 		  <h3>Get involved!</h3>
 	      <p>If you are interested in seeing what's happening in platform-releng, subscribe to our mailing list:
-	        <a href="http://dev.eclipse.org/mailman/listinfo/platform-releng-dev">platform-releng-dev@eclipse.org</a>. 
-	        There are also a number of bugs with the "helpwanted" tag that indicate where help would be greatly appreciated.</p>
+	        <a href="http://dev.eclipse.org/mailman/listinfo/platform-releng-dev">platform-releng-dev@eclipse.org</a>. </p>
 			
-
+			<p>The platform releng FAQ answers what you always wanted to know but were afraid to ask about the build process.
+			<li><a href="http://wiki.eclipse.org/index.php/Platform-releng-faq">Platform Releng FAQ</a></li>
+			</p>
+			
+			<p>
+			And for the answer to the neverending question of when is the next build, please refer to the newly snazzy build schedule, now available in Google calendar form.
+			<li><a href="buildSchedule.html">Build Schedule</a></li>
+			</p>
+			
+	        <p>There are also a number of bugs with the "helpwanted" tag that indicate where help would be greatly appreciated. We don't have a budget to thank you with expensive gifts, but I've heard that 
+			it's the thought that really counts.  So think about it, and help out with a bug.  You'll feel better, the releng team will smile and the world will be a better place.</p>
+			
+	<ul>
         <li><a href="http://bugs.eclipse.org/bugs/buglist.cgi?bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&priority=P1&email1=&emailtype1=substring&emailassigned_to1=1&email2=&emailtype2=substring&emailreporter2=1&bugidtype=include&bug_id=&changedin=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&product=Platform&version=&component=Releng&short_desc=&short_desc_type=allwordssubstr&long_desc=&long_desc_type=allwordssubstr&keywords=&keywords_type=anywords&field0-0-0=noop&type0-0-0=noop&value0-0-0=&cmdtype=doit&order=Reuse+same+sort+as+last+time" target="_top">Priority 
           1</a></li>
         <li><a href="http://bugs.eclipse.org/bugs/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&email1=&emailtype1=substring&emailassigned_to1=1&email2=&emailtype2=substring&emailreporter2=1&bugidtype=include&bug_id=&changedin=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&product=Platform&component=Releng&short_desc=&short_desc_type=allwordssubstr&long_desc=&long_desc_type=allwordssubstr&keywords=&keywords_type=anywords&field0-0-0=noop&type0-0-0=noop&value0-0-0=&cmdtype=doit&newqueryname=&order=Reuse%2Bsame%2Bsort%2Bas%2Blast%2Btime" target="_top" >New, 
