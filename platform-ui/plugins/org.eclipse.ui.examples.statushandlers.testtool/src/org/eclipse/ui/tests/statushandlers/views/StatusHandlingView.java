@@ -20,6 +20,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
+import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.IStructuredContentProvider;
@@ -52,6 +56,31 @@ import org.eclipse.ui.part.ViewPart;
  * A view dedicated to generating status (error.
  */
 public class StatusHandlingView extends ViewPart {
+
+	/**
+	 * This class is responsible for executing test sequence in the background
+	 * 
+	 * @since 3.4
+	 */
+	private final class TestBedSequenceJob extends Job {
+
+		private TestBedSequenceJob() {
+			super("Test Bed Sequence");
+		}
+
+		protected IStatus run(IProgressMonitor monitor) {
+			monitor.beginTask("Executing Test Bed Sequence", executionList
+					.size());
+			for (int i = 0; i < executionList.size(); i++) {
+				TestBedRunnable runnable = (TestBedRunnable) executionList
+						.get(i);
+				runnable.run();
+				monitor.worked(1);
+			}
+			monitor.done();
+			return Status.OK_STATUS;
+		}
+	}
 
 	/**
 	 * @since 3.3
@@ -201,11 +230,8 @@ public class StatusHandlingView extends ViewPart {
 		executeAll.addSelectionListener(new SelectionAdapter() {
 
 			public void widgetSelected(SelectionEvent e) {
-				for (int i = 0; i < executionList.size(); i++) {
-					TestBedRunnable runnable = (TestBedRunnable) executionList
-							.get(i);
-					runnable.run();
-				}
+				Job job = new TestBedSequenceJob();
+				job.schedule();
 			}
 
 		});
