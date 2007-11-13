@@ -331,21 +331,20 @@ public class JobsAndRunnablesRunnable extends TestBedRunnable {
 		runnable.delayString = memento.getString(DELAY);
 		runnable.quantity = memento.getString(QUANTITY);
 		runnable.rescheduleDelay = memento.getString(RESCHEDULE_DELAY);
-		runnable.progressNoForLock = Boolean.parseBoolean(memento
+		runnable.progressNoForLock = Boolean.getBoolean(memento
 				.getString(PROGRESS_NO_FOR_LOCK));
-		runnable.thread = Boolean.parseBoolean(memento.getString(THREAD));
-		runnable.jobLock = Boolean.parseBoolean(memento.getString(JOBLOCK));
-		runnable.system = Boolean.parseBoolean(memento.getString(SYSTEM));
-		runnable.user = Boolean.parseBoolean(memento.getString(USER));
-		runnable.useGroup = Boolean.parseBoolean(memento.getString(USEGROUP));
-		runnable.reschedule = Boolean.parseBoolean(memento
-				.getString(RESCHEDULE));
-		runnable.returnErrorStatus = Boolean.parseBoolean(memento
+		runnable.thread = Boolean.getBoolean(memento.getString(THREAD));
+		runnable.jobLock = Boolean.getBoolean(memento.getString(JOBLOCK));
+		runnable.system = Boolean.getBoolean(memento.getString(SYSTEM));
+		runnable.user = Boolean.getBoolean(memento.getString(USER));
+		runnable.useGroup = Boolean.getBoolean(memento.getString(USEGROUP));
+		runnable.reschedule = Boolean.getBoolean(memento.getString(RESCHEDULE));
+		runnable.returnErrorStatus = Boolean.getBoolean(memento
 				.getString(ERRORSTATUS));
-		runnable.uiThread = Boolean.parseBoolean(memento.getString(UI_THREAD));
-		runnable.windowRunnable = Boolean.parseBoolean(memento
+		runnable.uiThread = Boolean.getBoolean(memento.getString(UI_THREAD));
+		runnable.windowRunnable = Boolean.getBoolean(memento
 				.getString(WINDOWRUNNABLE));
-		runnable.jobs = Boolean.parseBoolean(memento.getString(JOBS));
+		runnable.jobs = Boolean.getBoolean(memento.getString(JOBS));
 		return runnable;
 	}
 }
