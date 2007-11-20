@@ -9,12 +9,12 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.ui,
  org.eclipse.ui.views,
  org.eclipse.ui.ide
-Bundle-Activator: org.eclipse.ui.tests.statushandlers.TestToolPlugin
-Export-Package: org.eclipse.ui.tests.statushandlers,
- org.eclipse.ui.tests.statushandlers.actions,
- org.eclipse.ui.tests.statushandlers.jobs,
- org.eclipse.ui.tests.statushandlers.views,
- org.eclipse.ui.tests.statushandlers.wizards
+Bundle-Activator: org.eclipse.ui.examples.statushandlers.testtool.TestToolPlugin
+Export-Package: org.eclipse.ui.examples.statushandlers.testtool,
+ org.eclipse.ui.examples.statushandlers.testtool.actions,
+ org.eclipse.ui.examples.statushandlers.testtool.jobs,
+ org.eclipse.ui.examples.statushandlers.testtool.views,
+ org.eclipse.ui.examples.statushandlers.testtool.wizards
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.4,
  CDC-1.0/Foundation-1.0,
