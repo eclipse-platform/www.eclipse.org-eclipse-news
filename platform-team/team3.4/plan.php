@@ -62,8 +62,12 @@
 			  <li><strong>Adapt editor functionality to Compare Editor</strong> (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=169386">169386</a>): We should continue to provide as much editor capabilities
 			  as possible in the compare editor.
 			  </li>
-			  <li><strong>Improve unmatched patch handling</strong> (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=190844">190844</a>): We would like to provide better visual feedback in the merge viewer when
-			  portions of a patch cannot be matched so that the user understands what to do and has some additional tools to help them find a match.
+			  <li><strong>Improve unmatched patch handling</strong>: There are several improvements that can be made around patch handling
+			  <ul>
+			  	<li>Better visual feedback in the merge viewer when portions of a patch cannot be matched 
+			  	 so that the user understands what to do and has some additional tools to help them find a match. (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=190844">190844</a>)</li>
+			  	 <li>Fuzz factor improvements (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=199846">199846</a>)</li>
+			  	</ul>
 			  </li>
 			  <li><strong>Compare with Each Other</strong> (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=193321">193321</a>): We would like to provide a more Synchronize view like work flow to
 			  the Compare with Each Other action.
