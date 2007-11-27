@@ -62,12 +62,13 @@
 			  <li><strong>Adapt editor functionality to Compare Editor</strong> (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=169386">169386</a>): We should continue to provide as much editor capabilities
 			  as possible in the compare editor.
 			  </li>
-			  <li><strong>Improve unmatched patch handling</strong>: There are several improvements that can be made around patch handling
+			  <li><strong>Improve unmatched patch handling</strong>: There are several improvements that can be made around patch handling.
+			  Some examples are:
 			  <ul>
 			  	<li>Better visual feedback in the merge viewer when portions of a patch cannot be matched 
 			  	 so that the user understands what to do and has some additional tools to help them find a match. (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=190844">190844</a>)</li>
 			  	 <li>Fuzz factor improvements (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=199846">199846</a>)</li>
-			  	</ul>
+			  </ul>
 			  </li>
 			  <li><strong>Compare with Each Other</strong> (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=193321">193321</a>): We would like to provide a more Synchronize view like work flow to
 			  the Compare with Each Other action.
@@ -119,16 +120,42 @@
 			<div class="homeitem3col">
 			<h3>3.4 Development Effort - Milestone 2 (Friday, September 21, 2007) </h3>
 			<a name="m2"></a>
+			
+			<ul>
+			  <li><img src="../images/progress.gif" alt="under development"><strong>Bug fixing for 3.4</strong>: Bugs with target milestone set to 
+			  <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=Compare&component=CVS&component=Team&component=Resources&target_milestone=3.4+M2&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">3.4 M2</a>
+			  (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=Compare&component=CVS&component=Team&component=Resources&target_milestone=3.4+M2&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">Fixed in 3.4 M2</a>).
+			  </li>
+			</ul>
 			</div>
 			
 			<div class="homeitem3col">
 			<h3>3.4 Development Effort - Milestone 3 (Friday, November 2, 2007) </h3>
 			<a name="m3"></a>
+			
+			<ul>
+			  <li><img src="../images/progress.gif" alt="under development"><strong>Bug fixing for 3.4</strong>: Bugs with target milestone set to 
+			  <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=Compare&component=CVS&component=Team&component=Resources&target_milestone=3.4+M3&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">3.4 M3</a>
+			  (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=Compare&component=CVS&component=Team&component=Resources&target_milestone=3.4+M3&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">Fixed in 3.4 M3</a>).
+			  </li>
+			  <li><img src="../images/ok.gif" height="10" width="10" alt="finished"><strong>Improve unmatched patch handling</strong>
+			  <ul>
+			  	<li>Fuzz factor improvements (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=199846">199846</a>)</li>
+			  </ul>
+			  </li>
+			</ul>
 			</div>
 			
 			<div class="homeitem3col">
 			<h3>3.4 Development Effort - Milestone 4 (Friday, December 14, 2007) </h3>
 			<a name="m4"></a>
+			
+			<ul>
+			  <li><img src="../images/progress.gif" alt="under development"><strong>Bug fixing for 3.4</strong>: Bugs with target milestone set to 
+			  <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=Compare&component=CVS&component=Team&component=Resources&target_milestone=3.4+M4&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">3.4 M4</a>
+			  (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=Compare&component=CVS&component=Team&component=Resources&target_milestone=3.4+M4&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">Fixed in 3.4 M4</a>).
+			  </li>
+			</ul>
 			</div>
 			
 			<div class="homeitem3col">
