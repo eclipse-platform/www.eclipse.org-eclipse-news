@@ -111,7 +111,7 @@
 			  </li>
 			  <li><img src="../images/progress.gif" alt="under development"> <strong>Compare with Each Other</strong>: Start work on moving this to the Synchronize view.
 			      <ul>
-			      <li>Implement a two-way comparison editor for files ((<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=193324">193324</a>))
+			      <li>Implement a two-way comparison editor for files (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=193324">193324</a>)
 			      </ul>
 			  </li>
 			</ul>
