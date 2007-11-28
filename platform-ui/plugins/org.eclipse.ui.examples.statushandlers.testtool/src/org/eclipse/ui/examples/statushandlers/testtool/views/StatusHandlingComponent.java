@@ -227,7 +227,7 @@ public class StatusHandlingComponent implements TestBedComponent {
 			String message = memento.getString(MESSAGE);
 			int severity = memento.getInteger(SEVERITY).intValue();
 			int hint = memento.getInteger(HINT).intValue();
-			boolean wrapped = Boolean.getBoolean(memento.getString(WRAPPED));
+			boolean wrapped = new Boolean(memento.getString(WRAPPED)).booleanValue();
 			String explanation = memento.getString(EXPLANATION);
 			if (explanation != null && explanation.length() == 0)
 				explanation = null;

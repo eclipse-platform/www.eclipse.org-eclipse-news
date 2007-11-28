@@ -343,20 +343,24 @@ public class JobsAndRunnablesRunnable extends TestBedRunnable {
 		runnable.delayString = memento.getString(DELAY);
 		runnable.quantity = memento.getString(QUANTITY);
 		runnable.rescheduleDelay = memento.getString(RESCHEDULE_DELAY);
-		runnable.progressNoForLock = Boolean.getBoolean(memento
-				.getString(PROGRESS_NO_FOR_LOCK));
-		runnable.thread = Boolean.getBoolean(memento.getString(THREAD));
-		runnable.jobLock = Boolean.getBoolean(memento.getString(JOBLOCK));
-		runnable.system = Boolean.getBoolean(memento.getString(SYSTEM));
-		runnable.user = Boolean.getBoolean(memento.getString(USER));
-		runnable.useGroup = Boolean.getBoolean(memento.getString(USEGROUP));
-		runnable.reschedule = Boolean.getBoolean(memento.getString(RESCHEDULE));
-		runnable.returnErrorStatus = Boolean.getBoolean(memento
-				.getString(ERRORSTATUS));
-		runnable.uiThread = Boolean.getBoolean(memento.getString(UI_THREAD));
-		runnable.windowRunnable = Boolean.getBoolean(memento
-				.getString(WINDOWRUNNABLE));
-		runnable.jobs = Boolean.getBoolean(memento.getString(JOBS));
+		runnable.progressNoForLock = new Boolean(memento
+				.getString(PROGRESS_NO_FOR_LOCK)).booleanValue();
+		runnable.thread = new Boolean(memento.getString(THREAD)).booleanValue();
+		runnable.jobLock = new Boolean(memento.getString(JOBLOCK))
+				.booleanValue();
+		runnable.system = new Boolean(memento.getString(SYSTEM)).booleanValue();
+		runnable.user = new Boolean(memento.getString(USER)).booleanValue();
+		runnable.useGroup = new Boolean(memento.getString(USEGROUP))
+				.booleanValue();
+		runnable.reschedule = new Boolean(memento.getString(RESCHEDULE))
+				.booleanValue();
+		runnable.returnErrorStatus = new Boolean(memento.getString(ERRORSTATUS))
+				.booleanValue();
+		runnable.uiThread = new Boolean(memento.getString(UI_THREAD))
+				.booleanValue();
+		runnable.windowRunnable = new Boolean(memento.getString(WINDOWRUNNABLE))
+				.booleanValue();
+		runnable.jobs = new Boolean(memento.getString(JOBS)).booleanValue();
 		return runnable;
 	}
 }
