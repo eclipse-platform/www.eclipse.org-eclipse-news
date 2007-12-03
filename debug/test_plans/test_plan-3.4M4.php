@@ -64,7 +64,7 @@
 				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
 					<td width="15%">&nbsp;</td>
-				    <td width="15%">Joe Pluta</td>
+				    <td width="15%">&nbsp;</td>
 				  </tr>
 				  <tr> 
 				    <td width="15%"><b>Linux</b></td>
@@ -460,6 +460,7 @@
 					<li>Launch Configuration Dialog
 						<ul>
 							<li>Creating/Deleting configurations of different types</li>
+							<Li>Deleting multiple launch configurations, ensure selection is preserved/updated</li>
 							<li>Filtering configurations from tree</li>
 							<li>Test error handling, apply/revert buttons, and launching</li>
 							<li>Check if tabs make configuration dirty even if no changes are made</li>
