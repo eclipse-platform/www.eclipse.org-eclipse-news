@@ -272,6 +272,13 @@
 			    <td> <div align="center"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
+			  <tr> 
+			    <td><a href="#STRESS">Stress Tests</a></td>
+			    <td><div align="center"></div></td>
+			    <td><div align="center"></div></td>
+			    <td> <div align="center"></div></td>
+			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			  </tr>			  
 			</table>
 			</div>
 		</div>
@@ -1062,7 +1069,50 @@
 				    </ul>
 				  </li>
 				</ul>
-				<p><a href="#top">Back to top</a><br></p>
+				<p><a href="#top">Back to top</a><br><hr></p>
+				<a name="STRESS"></a>
+				<h4>Stress Tests </h4>
+				<ul>
+				  <li>Stepping with many threads, while breakpoints are hit on other threads
+				    <ul>
+				      <li>Expansion and selection are maintained properly in the Debug View</li>
+				      <li>Othter suspended threads should not interfere with the current stepping thread</li>
+				      <li>Selection should remain on the stackframe that is being stepped</li>
+				    </ul>
+				  </li>
+				  <li>Stepping with many variables - Debug a testcase with many variables.  Expand many variables and set selection at the bottom of the Variables View.  Do a few Step Over.
+				  Test with logical structures turned on / off.								 			  		
+				    <ul>
+				      <li>The Variables View should properly maintain expansion and selection </li>
+				      <li>The Variables View should not scroll to the top unexpectedly</li>
+				    </ul>
+				  </li>
+				  <li>Test maintaining variables expansion and selection when switching stackframes.  Debug a testcase with
+				  many variables.  Expand many variables and set selection.  Switch between different stackframes.							 			  	
+				    <ul>
+				      <li>Verify that expansion and selection are maintained properly in the Variables View</li>
+				      <li>The Variables View should not scroll to the top unexpectedly</li>
+				    </ul>
+				  </li>		
+				  <li>Test stepping quickly by holding down the step over key. (F6)	Test with logical structures turned on / off.
+				  Test with thread filters turned on / off.			 			  	
+				    <ul>
+				      <li>Verify that expansion and selection are maintained properly in the Debug View</li>
+				      <li>Verify that expansion and selection are maintained properly in the Variables View</li>
+				      <li>Verify that source lookup is performed properly.</li>
+				      <li>Verify that debug actions are properly enabled/disabled </li>
+				    </ul>
+				  </li>			
+				  <li>Toggle logical structures quickly - Debug a testcase with many variables.  Some of these variables
+				  can be displayed differently when logical structures is turned on.  (e.g. Hashmap)  Expand many of these
+				  variables and then toggle the logical structures action quickly.			  
+				    <ul>
+				      <li>Verify that expansion and selection are maintained properly in the Variables View</li>
+				      <li>Verify that there is no blank lables in the Variables View</li>
+				    </ul>
+				  </li>						  			  		  
+				</ul>
+				<p><a href="#top">Back to top</a><br></p>				
 		</div>
 	</div>
 	<div id="rightcolumn">
