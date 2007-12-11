@@ -72,6 +72,15 @@
 			<div class="homeitem3col">
 			<h3>3.4 Verification - Milestone 4</h3>
 			<a name="m4"></a>
+			
+			<ul>
+			  <li>
+			  <a href="https://bugs.eclipse.org/bugs/buglist.cgi?quicksearch=99059%2C131574%2C201866%2C207003%2C207491%2C207853%2C208869%2C209695%2C209986%2C210533%2C209979%2C211720%2C210783">Tomek's bugs to verify</a>  
+			  </li>
+			  <li>
+			  <a href="https://bugs.eclipse.org/bugs/buglist.cgi?quicksearch=176703%2C178131%2C178135%2C210990%2C44107%2C155704%2C208779%2C208908%2C210121%2C210456%2C211075%2C211695%2C105914%2C207958%2C207971%2C208211%2C208833%2C208892%2C209167%2C209473%2C210770%2C210789%2C211021%2C212026">Szymon's bugs to verify</a>  
+			  </li> 
+			</ul>
 			</div>
 			
 			<div class="homeitem3col">
