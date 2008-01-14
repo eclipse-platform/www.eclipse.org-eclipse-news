@@ -14,7 +14,7 @@
 	
 	#
 	# Begin: page-specific settings.  Change these. 
-	$pageTitle 		= "Eclipse 3.3.2 Endgame plan";
+	$pageTitle 		= "Draft Eclipse 3.3.2 endgame plan";
 	$pageKeywords	= "eclipse, 3.3.2,  milestone, schedule, endgame";
 	$pageAuthor		= "";
 	
@@ -36,17 +36,11 @@ ob_start();
 
 
 <div class="homeitem3col">
-<h3>Eclipse 3.3.2 Endgame Plan</h3>
-
-<table cellspacing="5" cellpadding="2" width="100%" border="0"> <tbody> <tr> <td align="left" width="80%"> 
-<p><font class="indextop">Eclipse Project 3.3.2 draft<br>
-           Endgame Plan</font><br> <font class="indexsub">Updated frequently to reflect current status</font></p></td><td width="20%">
-           </td></tr> 
-</tbody> </table><table cellspacing="5" cellpadding="2" width="100%" border="0"> 
+<table cellspacing="5" cellpadding="2" width="100%" border="0"> 
 <tbody> <tr> <td valign="top" align="left" colspan="2"><b>Status</b></td></tr>
 <tr> <td valign="top" align="right"><img src="images/Adarrow.gif" border="0" width="16" height="16"></td><td> 
 <p><font color="#ff0000"><b>Monday January 10, 2008 16:00 EDT Status:</b></font> 
-          Builds toward Eclipse 3.3.2 occur according to the <a href="http://www.eclipse.org/eclipse/platform-releng/buildSchedule.html">build schedule</a>. 
+          Builds toward Eclipse 3.3.2 occur every Wednesday at 8 am EST. 
       </td></tr> 
 <tr> <td valign="top" align="left" colspan="2"><b>Detailed Timeline</b></td></tr> <tr> <td valign="top" align="left" colspan="2"> 
 <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="center">
@@ -100,20 +94,15 @@ ob_start();
             <TD HEIGHT="18">&nbsp;&nbsp;<B><A HREF="#R3.3.2"><IMG SRC="images/jump_in_black.gif" BORDER="0" HSPACE="3" WIDTH="12" HEIGHT="10"><FONT COLOR="#00aa00">details</FONT></A></B></TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
           </TR>
-        </TABLE>
-        
-        
+        </TABLE>               
         </div>
         
-        <div class="homeitem3col">
-        
-        <h3>Useful Links</h3>
+        <div class="homeitem3col">       
         <p><a href="http://www.eclipse.org/eclipse/platform-releng/buildSchedule.html">Build Schedule</a> - details on build times.</p>
-        
         </div>
         
         <div class="homeitem3col">
-        <b>What is the game plan?</b>
+        <strong>What is the game plan?</strong>
 
 		<p> 
  		The Eclipse 3.3.2 maintenance release endgame involves building 
@@ -130,24 +119,24 @@ ob_start();
         list of bugs fixed in 3.3.2</a>). So we're most interested in identifying 
         regressions where we've changed something that we did not intend to.
         </p> 
-        
-        
+                
         <p>General announcements during the 3.3.2 endgame are posted to the 
         <a href="http://dev.eclipse.org/mailman/listinfo/platform-releng-dev">platform-releng-dev@eclipse.org</a> 
 	    developer mailing list. Anyone participating in the endgame should be subscribed 
 		to this list, and should direct any general questions and comments about the process 
 		there as well.</p>
-	   <A NAME="RC1"></A>RC1<>
+		</div>		
+		
+       <div class="homeitem3col">
+	   <strong><A NAME="RC1"></A>RC1></strong>
 	   <p>
         Release candidate containing fixes for the majority of known outstanding 
         defects that we intend to fix for 3.3.2. At then end of RC1 build, 
         there should not be any open defects tagged 3.3.2. All fixes submitted 
         to 3.3.2 stream builds must have a PMC vote on the bug report.
-        </p>
-        </div>
+        </p>               
         
-        <div class="homeitem3col">
-        <A NAME="TestPassUsingRC1"></A>Test pass using RC1
+        <strong><A NAME="TestPassUsingRC1"></A>Test pass using RC1</strong>
         <p>Concerted 1-day testing effort using RC1 involving entire community 
            including all component teams. Since this is the only test pass 
            scheduled for this maintenance release, the goal is to verify all 
@@ -156,7 +145,7 @@ ob_start();
          <A NAME="RC2"></A>RC2
          <p>Release candidate 2, if required, to fix problems detected during the test pass.</p>
 
-		<A NAME="R3.3.2"></A>Release 3.3.2
+		<strong><A NAME="R3.3.2"></A>Release 3.3.2</strong>
         <p>   Release 3.3.2 should be complete and available for download by 
               the end of February as part of the <a href="http://wiki.eclipse.org/index.php/Europa_Simultaneous_Release#Coordinated_Maintenance">Europa 
               coordinated maintenance release</a> . If product teams intending 
