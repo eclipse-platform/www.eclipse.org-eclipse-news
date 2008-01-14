@@ -39,7 +39,7 @@ ob_start();
 <table cellspacing="5" cellpadding="2" width="100%" border="0"> 
 <tbody> <tr> <td valign="top" align="left" colspan="2"><b>Status</b></td></tr>
 <tr> <td valign="top" align="right"><img src="images/Adarrow.gif" border="0" width="16" height="16"></td><td> 
-<p><font color="#ff0000"><b>Monday January 10, 2008 16:00 EDT Status:</b></font> 
+<p><font color="#ff0000"><b>Monday January 14, 2008 16:00 EDT Status:</b></font> 
           Builds toward Eclipse 3.3.2 occur every Wednesday at 8 am EST. 
       </td></tr> 
 <tr> <td valign="top" align="left" colspan="2"><b>Detailed Timeline</b></td></tr> <tr> <td valign="top" align="left" colspan="2"> 
@@ -51,11 +51,11 @@ ob_start();
           <TR> 
             <TD HEIGHT="18"></TD>
             <TD HEIGHT="18"><IMG SRC="images/tbar_r.gif" WIDTH="24" HEIGHT="18"></TD>
-            <TD HEIGHT="18" ALIGN="right">&nbsp;12</TD>
+            <TD HEIGHT="18" ALIGN="right">&nbsp;16</TD>
             <TD HEIGHT="18" ALIGN="right">&nbsp;Wed 08:00 EDT</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;<B>Release Candidate 1 build</B></TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
-            <TD HEIGHT="18">&nbsp;&nbsp;<B><A HREF="#RC1"><IMG SRC="images/jump_in_black.gif" BORDER="0" HSPACE="3" WIDTH="12" HEIGHT="10"><FONT COLOR="#00aa00">details</FONT></A></B></TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
           </TR>
           <TR> 
@@ -65,11 +65,11 @@ ob_start();
           <TR> 
             <TD HEIGHT="18"></TD>
             <TD HEIGHT="18"><IMG SRC="images/tbar_r.gif" WIDTH="24" HEIGHT="18"></TD>
-            <TD ALIGN="right" HEIGHT="18">15</TD>
-            <TD ALIGN="right" HEIGHT="18"> Mon 08:00 EDT</TD>
+            <TD ALIGN="right" HEIGHT="18">21</TD>
+            <TD ALIGN="right" HEIGHT="18">Mon 08:00 EDT</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;<B>Start 1-day test pass against RC1</B></TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
-            <TD HEIGHT="18">&nbsp;&nbsp;<B><A HREF="#TestPassUsingRC1"><IMG SRC="images/jump_in_black.gif" BORDER="0" HSPACE="3" WIDTH="12" HEIGHT="10"><FONT COLOR="#00aa00">details</FONT></A></B></TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
           </TR>
           <TR> 
@@ -91,19 +91,16 @@ ob_start();
             <TD ALIGN="right" HEIGHT="18"></TD>
             <TD HEIGHT="18">&nbsp;&nbsp;<B>Release 3.3.2 available</B></TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
-            <TD HEIGHT="18">&nbsp;&nbsp;<B><A HREF="#R3.3.2"><IMG SRC="images/jump_in_black.gif" BORDER="0" HSPACE="3" WIDTH="12" HEIGHT="10"><FONT COLOR="#00aa00">details</FONT></A></B></TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
           </TR>
         </TABLE>               
-        </div>
+      
+                
+        <p><a href="http://www.eclipse.org/eclipse/platform-releng/buildSchedule.html">Build Schedule</a> - details on build times.</p>               
         
-        <div class="homeitem3col">       
-        <p><a href="http://www.eclipse.org/eclipse/platform-releng/buildSchedule.html">Build Schedule</a> - details on build times.</p>
-        </div>
-        
-        <div class="homeitem3col">
         <strong>What is the game plan?</strong>
-
+        
 		<p> 
  		The Eclipse 3.3.2 maintenance release endgame involves building 
         a series of release candidates leading to the official 3.3.2 release. 
@@ -124,11 +121,9 @@ ob_start();
         <a href="http://dev.eclipse.org/mailman/listinfo/platform-releng-dev">platform-releng-dev@eclipse.org</a> 
 	    developer mailing list. Anyone participating in the endgame should be subscribed 
 		to this list, and should direct any general questions and comments about the process 
-		there as well.</p>
-		</div>		
-		
-       <div class="homeitem3col">
-	   <strong><A NAME="RC1"></A>RC1></strong>
+		there as well.</p>			
+       
+	   <strong>RC1</strong>
 	   <p>
         Release candidate containing fixes for the majority of known outstanding 
         defects that we intend to fix for 3.3.2. At then end of RC1 build, 
@@ -136,24 +131,28 @@ ob_start();
         to 3.3.2 stream builds must have a PMC vote on the bug report.
         </p>               
         
-        <strong><A NAME="TestPassUsingRC1"></A>Test pass using RC1</strong>
+        <strong>Test pass using RC1</strong>
         <p>Concerted 1-day testing effort using RC1 involving entire community 
            including all component teams. Since this is the only test pass 
            scheduled for this maintenance release, the goal is to verify all 
            the fixes and check for any regressions.
          </p>
-         <A NAME="RC2"></A>RC2
+         
+         <strong>RC2</strong>
          <p>Release candidate 2, if required, to fix problems detected during the test pass.</p>
 
-		<strong><A NAME="R3.3.2"></A>Release 3.3.2</strong>
+		<strong>Release 3.3.2</strong>
         <p>   Release 3.3.2 should be complete and available for download by 
               the end of February as part of the <a href="http://wiki.eclipse.org/index.php/Europa_Simultaneous_Release#Coordinated_Maintenance">Europa 
               coordinated maintenance release</a> . If product teams intending 
               to ship on 3.3.2 uncover further serious defects during the endgame, 
               we may schedule additional release candidate builds to incorporate 
               fixes.
-              </p>
+              </p>             
+              
               </div>
+              
+              
 <?php
 	$html = ob_get_contents();
 	ob_end_clean();
