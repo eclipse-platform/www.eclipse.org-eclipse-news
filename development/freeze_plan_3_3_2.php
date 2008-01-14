@@ -32,13 +32,13 @@ ob_start();
 ?>		
 
 	<div id="midcolumn">
-		<h1><?= $pageTitle ?></h1>
 
 
 <div class="homeitem3col">
+<h3>Eclipse 3.3.2 Draft endgame plan</h3>
 <table cellspacing="5" cellpadding="2" width="100%" border="0"> 
 <tbody> <tr> <td valign="top" align="left" colspan="2"><b>Status</b></td></tr>
-<tr> <td valign="top" align="right"><img src="images/Adarrow.gif" border="0" width="16" height="16"></td><td> 
+<tr> <td valign="top" align="right"></td><td> 
 <p><font color="#ff0000"><b>Monday January 14, 2008 16:00 EDT Status:</b></font> 
           Builds toward Eclipse 3.3.2 occur every Wednesday at 8 am EST. 
       </td></tr> 
@@ -94,12 +94,11 @@ ob_start();
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
           </TR>
-        </TABLE>               
-      
-                
+        </TABLE>            
+                      
         <p><a href="http://www.eclipse.org/eclipse/platform-releng/buildSchedule.html">Build Schedule</a> - details on build times.</p>               
         
-        <strong>What is the game plan?</strong>
+        <strong>What's the game plan?</strong>
         
 		<p> 
  		The Eclipse 3.3.2 maintenance release endgame involves building 
