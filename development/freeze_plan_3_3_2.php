@@ -51,7 +51,7 @@ ob_start();
           <TR> 
             <TD HEIGHT="18"></TD>
             <TD HEIGHT="18"><IMG SRC="images/tbar_r.gif" WIDTH="24" HEIGHT="18"></TD>
-            <TD HEIGHT="18" ALIGN="right">&nbsp;16</TD>
+            <TD HEIGHT="18" ALIGN="right">&nbsp;23</TD>
             <TD HEIGHT="18" ALIGN="right">&nbsp;Wed 08:00 EDT</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;<B>Release Candidate 1 build</B></TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
@@ -65,9 +65,27 @@ ob_start();
           <TR> 
             <TD HEIGHT="18"></TD>
             <TD HEIGHT="18"><IMG SRC="images/tbar_r.gif" WIDTH="24" HEIGHT="18"></TD>
-            <TD ALIGN="right" HEIGHT="18">17</TD>
-            <TD ALIGN="right" HEIGHT="18">Mon 08:00 EDT</TD>
+            <TD ALIGN="right" HEIGHT="18">24</TD>
+            <TD ALIGN="right" HEIGHT="18">Thur 08:00 EDT</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;<B>Start 1-day test pass against RC1</B></TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;</TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;</TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;</TD>
+          </TR>
+          <TR> 
+            <TD HEIGHT="10"></TD>
+            <TD ALIGN="center" HEIGHT="5"><IMG SRC="images/gray.gif" WIDTH="2" HEIGHT="10"></TD>
+          </TR>
+          <TR> 
+            <TD HEIGHT="10"></TD>
+            <TD ALIGN="center" HEIGHT="5"><IMG SRC="images/gray.gif" WIDTH="2" HEIGHT="10"></TD>
+          </TR>
+          <TR> 
+            <TD HEIGHT="18"></TD>
+            <TD HEIGHT="18"><IMG SRC="images/tbar_r.gif" WIDTH="24" HEIGHT="18"></TD>
+            <TD ALIGN="right" HEIGHT="18">30</TD>
+            <TD ALIGN="right" HEIGHT="18">Wed 08:00 EDT</TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;<B>Release Candidate 2 build</B></TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
