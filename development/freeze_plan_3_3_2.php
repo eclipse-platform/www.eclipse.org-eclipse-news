@@ -150,7 +150,7 @@ ob_start();
               </p>             
               
               </div>
-              
+         	</div>
               
 <?php
 	$html = ob_get_contents();
