@@ -5,7 +5,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2006-01-30
+	# Date:			2008-01-15
 	#
 	# Description: Eclipse project development main page
 	#
