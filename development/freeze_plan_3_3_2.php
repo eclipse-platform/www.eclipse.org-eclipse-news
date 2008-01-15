@@ -65,7 +65,7 @@ ob_start();
           <TR> 
             <TD HEIGHT="18"></TD>
             <TD HEIGHT="18"><IMG SRC="images/tbar_r.gif" WIDTH="24" HEIGHT="18"></TD>
-            <TD ALIGN="right" HEIGHT="18">21</TD>
+            <TD ALIGN="right" HEIGHT="18">17</TD>
             <TD ALIGN="right" HEIGHT="18">Mon 08:00 EDT</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;<B>Start 1-day test pass against RC1</B></TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
