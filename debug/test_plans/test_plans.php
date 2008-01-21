@@ -51,6 +51,7 @@
 			<a name="3-3_testing"></a>
 			<ul>
 				<li><a href="/eclipse/debug/test_plans/test_plan-3.3.php">3.3</a></li>
+				<li><a href="/eclipse/debug/test_plans/test_plan-3.3.2.php">3.3.2</a></li>
 			</ul>
 		</div>
 		<div class="homeitem3col">
