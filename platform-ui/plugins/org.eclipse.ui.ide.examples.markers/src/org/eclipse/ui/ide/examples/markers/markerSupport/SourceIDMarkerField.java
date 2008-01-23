@@ -1,9 +1,9 @@
 package org.eclipse.ui.ide.examples.markers.markerSupport;
 
 import org.eclipse.core.resources.IMarker;
-import org.eclipse.ui.internal.provisional.views.markers.api.MarkerField;
-import org.eclipse.ui.internal.provisional.views.markers.api.MarkerItem;
-import org.eclipse.ui.internal.provisional.views.markers.api.MarkerSupportConstants;
+import org.eclipse.ui.views.markers.MarkerField;
+import org.eclipse.ui.views.markers.MarkerItem;
+import org.eclipse.ui.views.markers.MarkerSupportConstants;
 
 public class SourceIDMarkerField extends MarkerField {
 

@@ -89,10 +89,45 @@
                name="Examples"
                scope="ON_ANY">
          </markerFieldFilterGrouping>
-         <markerSupportReference
-               id="org.eclipse.ui.ide.severity"
-               type="markerGrouping">
-         </markerSupportReference>
+         <markerGrouping
+               id="org.eclipse.ui.ide.allMarkers.severity"
+               label="Example Severity">
+            <markerGroupingEntry
+                  id="org.eclipse.ui.ide.allmarkers.errorSeverity"
+                  label="Error Stuff"
+                  priority="30">
+            </markerGroupingEntry>
+            <markerGroupingEntry
+                  id="org.eclipse.ui.ide.allmarkers.warningSeverity"
+                  label="Warning Stuff"
+                  priority="20">
+            </markerGroupingEntry>
+            <markerGroupingEntry
+                  id="org.eclipse.ui.ide.allmarkers.other"
+                  label="Other Stuff"
+                  priority="10">
+            </markerGroupingEntry>
+            <markerAttributeGrouping
+                  attribute="severity"
+                  markerType="org.eclipse.core.resources.marker">
+               <markerAttributeMapping
+                     markerGroupingEntry="org.eclipse.ui.ide.allmarkers.errorSeverity"
+                     value="2">
+               </markerAttributeMapping>
+               <markerAttributeMapping
+                     markerGroupingEntry="org.eclipse.ui.ide.allmarkers.warningSeverity"
+                     value="1">
+               </markerAttributeMapping>
+               <markerAttributeMapping
+                     markerGroupingEntry="org.eclipse.ui.ide.allmarkers.other"
+                     value="0">
+               </markerAttributeMapping>
+               <markerAttributeMapping
+                     markerGroupingEntry="org.eclipse.ui.ide.allmarkers.other"
+                     value="-1">
+               </markerAttributeMapping>
+            </markerAttributeGrouping>
+         </markerGrouping>
       </markerContentGenerator>
       <markerField
             class="org.eclipse.ui.ide.examples.markers.markerSupport.SourceIDMarkerField"
