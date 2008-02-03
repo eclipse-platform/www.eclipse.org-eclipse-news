@@ -10,8 +10,9 @@
 </head>
 <body>
 <h1>The Eclipse Project DRAFT 3.4 Plan</h1>
-Last revised 17:00 ET August 15, 2007 (<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> marks
-interesting changes over previous plans)
+Last revised 17:00 ET Feb 3, 2008 (<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> marks
+interesting changes since the previous 
+  <a href="eclipse_project_plan_3_4_20070815.html">draft of August 15, 2007</a>)
 <p><i>&nbsp;&nbsp;&nbsp; Please send comments about this draft plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
     mailing list.</i> </p>
 <p>This document lays out the feature and API set for the next feature release
@@ -98,9 +99,14 @@ interesting changes over previous plans)
 <ul>
   <li> Friday Aug. 10, 2007 - Milestone 1 (3.4 M1) - stable build</li>
   <li> Friday Sep. 21, 2007 - Milestone 2 (3.4 M2) - stable build</li>
-  <li> Friday Nov. 2, 2007 - Milestone 3 (3.4 M3) - stable build</li>
+  <li> Friday Nov.  2, 2007 - Milestone 3 (3.4 M3) - stable build</li>
   <li> Friday Dec. 14, 2007 - Milestone 4 (3.4 M4) - stable build</li>
-  <li> Friday Feb. 8, 2008 - Milestone 5 (3.4 M5) - stable build</li>
+  <li> Friday Feb.  8, 2008 - Milestone 5 (3.4 M5) - stable build</li>
+  <li> <img src="new.gif" alt="(new)" border="0" height="12" width="12"> 
+       Friday Mar. 28, 2008 - Milestone 6 (3.4 M6) - stable build - API complete - API Freeze</li>
+  <li> <img src="new.gif" alt="(new)" border="0" height="12" width="12">
+       Friday May   2, 2008 - Milestone 7 (3.4 M7) - stable build- feature complete - development 
+    freeze - lock down and testing begins</li>
 </ul>
 <p>Our target is to complete 3.4 in late June 2008. All release deliverables
   will be available for download as soon as the release has been tested and validated
@@ -144,7 +150,7 @@ interesting changes over previous plans)
       <tr>
         <td><b>Microsoft Windows Vista, x86-32, Win32</b> running (any of):
           <ul>
-            <li>Sun Java 2 Standard Edition 5.0 Update 11 for Microsoft Windows</li>
+            <li>Sun Java 2 Standard Edition 5.0 Update 14 for Microsoft Windows</li>
             <li>IBM 32-bit SDK for Windows, Java 2 Technology Edition 5.0, SR5</li>
             <li>BEA JRockit 5.0, for Microsoft Windows</li>
           </ul></td>
@@ -152,10 +158,12 @@ interesting changes over previous plans)
       <tr>
         <td><b>Microsoft Windows XP, x86-32, Win32</b> running (any of):
           <ul>
-            <li>Sun Java 2 Standard Edition 5.0 Update 11 for Microsoft Windows</li>
+            <li><img src="new.gif" alt="(new)" border="0" height="12" width="12" /> 
+                Sun Java 2 Standard Edition 6.0 Update 4 for Microsoft Windows</li>
+            <li>Sun Java 2 Standard Edition 5.0 Update 14 for Microsoft Windows</li>
             <li>IBM 32-bit SDK for Windows, Java 2 Technology Edition 5.0, SR5</li>
             <li>BEA JRockit 5.0, for Microsoft Windows</li>
-            <li>Sun Java 2 Standard Edition 1.4.2_14 for Microsoft Windows</li>
+            <li>Sun Java 2 Standard Edition 1.4.2_16 for Microsoft Windows</li>
             <li>IBM 32-bit SDK for Windows, Java 2 Technology Edition 1.4.2 SR7</li>
             <li>BEA JRockit 1.4.2, for Microsoft Windows</li>
           </ul></td>
@@ -163,11 +171,11 @@ interesting changes over previous plans)
       <tr>
         <td><b>Red Hat Enterprise Linux 5.0, x86-32, GTK</b> running (any of):
           <ul>
-            <li>Sun Java 2 Standard Edition 5.0 Update 11 for Linux x86</li>
+            <li>Sun Java 2 Standard Edition 5.0 Update 14 for Linux x86</li>
             <li>IBM 32-bit SDK for Linux on Intel architecture, Java 2 Technology
               Edition 5.0, SR5</li>
             <li>BEA JRockit 5.0, for Linux x86</li>
-            <li>Sun Java 2 Standard Edition 1.4.2_13 for Linux x86</li>
+            <li>Sun Java 2 Standard Edition 1.4.2_16 for Linux x86</li>
             <li>IBM 32-bit SDK for Linux on Intel architecture, Java 2 Technology
               Edition 1.4.2 SR7</li>
             <li>BEA JRockit 1.4.2, for Linux x86</li>
@@ -177,7 +185,7 @@ interesting changes over previous plans)
         <td><b>SUSE Linux Enterprise Server 10, x86-32, GTK</b> running (any
           of):
           <ul>
-            <li>Sun Java 2 Standard Edition 5.0 Update 11 for Linux x86</li>
+            <li>Sun Java 2 Standard Edition 5.0 Update 14 for Linux x86</li>
             <li>IBM 32-bit SDK for Linux on Intel architecture, Java 2 Technology
               Edition 5.0, SR5</li>
           </ul></td>
@@ -185,13 +193,13 @@ interesting changes over previous plans)
       <tr>
         <td><b>Red Hat Enterprise Linux 4.0 update 2, x86-64, GTK</b> running:
           <ul>
-            <li>Sun Java 2 Standard Edition 5.0 Update 11 for Linux x86_64</li>
+            <li>Sun Java 2 Standard Edition 5.0 Update 14 for Linux x86_64</li>
           </ul></td>
       </tr>
       <tr>
         <td><b>Sun Solaris 10, SPARC, GTK</b> running:
           <ul>
-            <li>Sun Java 2 Standard Edition 5.0 Update 11 for Solaris SPARC</li>
+            <li>Sun Java 2 Standard Edition 5.0 Update 14 for Solaris SPARC</li>
           </ul></td>
       </tr>
       <tr>
@@ -215,10 +223,10 @@ interesting changes over previous plans)
           </ul></td>
       </tr>
       <tr>
-        <td><b>Apple Mac OS X 10.4, Universal, Carbon</b> running:
+        <td><b><img src="new.gif" alt="(new)" border="0" height="12" width="12"> Apple Mac OS X 10.5, Universal, Carbon</b> running:
           <ul>
             <li>Apple Java 2 Platform Standard Edition (J2SE) 5, service release
-              4 for Tiger</li>
+              4</li>
           </ul></td>
       </tr>
     </tbody>
@@ -247,8 +255,7 @@ interesting changes over previous plans)
   user interface elements provided by the Eclipse SDK components, including dialogs
   and error messages, are externalized. The English strings are provided as the
   default resource bundles.</p>
-<p><img src="new.gif" alt="(new)" border="0" height="12" width="12" /> Latin-1
-  and DBCS locales are supported by the Eclipse SDK on all reference platforms;
+<p>Latin-1 and DBCS locales are supported by the Eclipse SDK on all reference platforms;
   BIDI locales are supported by the Eclipse SDK everywhere but on Motif.</p>
 <p>The Eclipse SDK supports GB 18030 (level 1), the Chinese code page standard,
   on Windows XP and 2000, Linux/GTK and the Macintosh.</p>
@@ -338,26 +345,29 @@ interesting changes over previous plans)
   system, window system, Java or other. </p>
 <h4>Committed Items (Platforms)</h4>
 <blockquote>
-  <p><i>None at this time.</i></p>
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Port SWT win32 to 64-bit.</strong> The SWT win32 port should be
+    ported to run on 64-bit editions of Windows using 64-bit JREs. [SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200081">200081</a>)</p>
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Support BIDI on Linux GTK.</strong> In Eclipse 3.3, SWT fully supported
+    BIDI locales on Windows, but only allowed entering and displaying BIDI text
+    on Linux GTK. Add the missing BIDI support for SWT Linux GTK. [SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200083">200083</a>) </p>
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Provide full internationalization on Mac OS X.</strong> In earlier
+    releases of Eclipse, SWT did not address fully support internationalization
+    on Mac OS X. Add the missing DBCS and BIDI support for SWT Mac OS X. [SWT]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200085">200085</a>)</p>
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Implement accessibility for Mac OS X.</strong> In Eclipse 3.3, SWT
+    Mac OS X accessibility was not addressed. Implement the SWT accessibility
+    APIs on Mac OS X. [SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200086">200086</a>)</p>
 </blockquote>
 <h4>Proposed Items (Platforms)</h4>
 <blockquote>
-  <p><strong>Port SWT win32 to 64-bit.</strong> The SWT win32 port should be
-    ported to run on 64-bit editions of Windows using 64-bit JREs. [SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200081">200081</a>)</p>
   <p><strong>Complete SWT WPF port.</strong> An early access version of the SWT
     port for Windows Presentation Framework (WPF) was included with Eclipse 3.3.
     Complete the SWT WPF port: add missing features; improve performance. [SWT]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200082">200082</a>)</p>
-  <p><strong>Support BIDI on Linux GTK.</strong> In Eclipse 3.3, SWT fully supported
-    BIDI locales on Windows, but only allowed entering and displaying BIDI text
-    on Linux GTK. Add the missing BIDI support for SWT Linux GTK. [SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200083">200083</a>) </p>
-  <p><strong>Provide full internationalization on Mac OS X.</strong> In earlier
-    releases of Eclipse, SWT did not address fully support internationalization
-    on Mac OS X. Add the missing DBCS and BIDI support for SWT Mac OS X. [SWT]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200085">200085</a>)</p>
-  <p><strong>Implement accessibility for Mac OS X.</strong> In Eclipse 3.3, SWT
-    Mac OS X accessibility was not addressed. Implement the SWT accessibility
-    APIs on Mac OS X. [SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200086">200086</a>)</p>
   <p><strong>Exploit the capabilities of modern JREs.</strong> Fully support
     and exploit the capabilities of modern JREs. Example work areas would be
     more Java 5 and Java 6 functionality; improved support for <a href="http://harmony.apache.org/" target="_blank">Apache
@@ -377,14 +387,18 @@ interesting changes over previous plans)
   a better experience for users working with many plug-ins and large data sets. </p>
 <h4>Committed Items (Consumability)</h4>
 <blockquote>
-  <p><i>None at this time.</i></p>
-</blockquote>
-<h4>Proposed Items (Consumability)</h4>
-<blockquote>
-  <p><strong>Improve performance of large, Eclipse-based products.</strong> We
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Improve performance of large, Eclipse-based products.</strong> We
     will investigate the scalability of Eclipse in areas, such as startup time
     and memory footprint, with a focus on improving the overall experience when
     working with large, Eclipse-based products. [All] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200102">200102</a>) </p>
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Serviceability.</strong> We will continue the work, begun in R3.3,
+    to make it easier for end users to identify and report runtime problems to
+    the team responsible for the failing component. [Platform UI, Equinox] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200090">200090</a>) </p>
+</blockquote>
+<h4>Proposed Items (Consumability)</h4>
+<blockquote>
   <p><strong>Provide additional product level configurability.</strong> &quot;Layered&quot; products
     (i.e. products that are built by composing other products) need more control
     over the ways that the products they are built from &quot;show through&quot; in
@@ -397,9 +411,6 @@ interesting changes over previous plans)
     Manager. The provisioning platform will allow others to create provisioning
     systems to meet the needs of large and small enterprises and systems. [Equinox]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200089">200089</a>) </p>
-  <p><strong>Serviceability.</strong> We will continue the work, begun in R3.3,
-    to make it easier for end users to identify and report runtime problems to
-    the team responsible for the failing component. [Platform UI, Equinox] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200090">200090</a>) </p>
 </blockquote>
 <h4>Deferred Items (Consumability)</h4>
 <blockquote>
@@ -413,15 +424,20 @@ interesting changes over previous plans)
   effect the stability of the platform. </p>
 <h4>Committed Items (Reliability)</h4>
 <blockquote>
-  <p><i>None at this time.</i></p>
-</blockquote>
-<h4>Proposed Items (Reliability)</h4>
-<blockquote>
-  <p><strong>Provide API for missing/internal features.</strong> We will identify
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Provide API for missing/internal features.</strong> We will identify
     areas where applications built on Eclipse currently must invoke internal
     functionality in order to provide good integration with the SDK. We will
     address these cases by creating proper, API-quality equivalents or otherwise
     removing the dependencies on internals. [All] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200100">200100</a>) </p>
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12"> committed)
+    <strong>Focus on architectural integrity.</strong> We will explicitly focus
+    on identifying and fixing places where significant bugs or incomplete implementations
+    have caused problems for our consumers. The intent is to make a significant
+    investment in fixing these issues. [All] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200099">200099</a>) </p>
+</blockquote>
+<h4>Proposed Items (Reliability)</h4>
+<blockquote>
   <p><strong>API Tooling.</strong> We will improve existing API tools and create
     new ones, so that plug-in developers will be able to easily identify their
     API (and internal) dependencies, the clients of their API, cases where they
@@ -432,10 +448,6 @@ interesting changes over previous plans)
   <p><strong>Provide commonly requested Java security features.</strong> We will
     add support for security facilities such as JAAS, JCA, keystore, credentials,
     and signature validation. [Equinox] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200091">200091</a>) </p>
-  <p><strong>Focus on architectural integrity.</strong> We will explicitly focus
-    on identifying and fixing places where significant bugs or incomplete implementations
-    have caused problems for our consumers. The intent is to make a significant
-    investment in fixing these issues. [All] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200099">200099</a>) </p>
   <p><strong>Invest in PDE Build and Release Engineering.</strong> We will address
     issues related to the reproducibility of our builds, and make it easier for
     others to make use of our build technology. [PDE, Rel. Eng.] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200092">200092</a>) </p>
@@ -498,7 +510,7 @@ interesting changes over previous plans)
 <p>(End of items for The Future.)</p>
 <!-- End of Sections by Work Area -->
 <h2><a name="Appendix1" id="Appendix1">Appendix 1: Execution Environment by Plug-in</a></h2>
-<p>In the table below, the &quot;3.4 EE&quot; (&quot;3.4 Execution Environment&quot;)
+<p>In the table below, the &quot;3.4 minimum execution environment&quot;
   column indicates the minimum Java class library requirements of each plug-in
   for the 3.4 release, where the value is one of:</p>
 <table border="0" width="90%">
