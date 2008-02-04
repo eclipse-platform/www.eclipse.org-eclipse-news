@@ -10,8 +10,9 @@
 </head>
 <body>
 <h1>The Eclipse Project DRAFT 3.4 Plan</h1>
-Last revised 10:00 ET August 16, 2007 (<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> marks
-interesting changes over previous plans)
+Last revised 17:00 ET Feb 4, 2008 (<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> marks
+interesting changes since the previous 
+  <a href="eclipse_project_plan_3_4_20070816.html">draft of August 16, 2007</a>)
 <p><i>&nbsp;&nbsp;&nbsp; Please send comments about this draft plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
     mailing list.</i> </p>
 <p>This document lays out the feature and API set for the next feature release
@@ -98,9 +99,14 @@ interesting changes over previous plans)
 <ul>
   <li> Friday Aug. 10, 2007 - Milestone 1 (3.4 M1) - stable build</li>
   <li> Friday Sep. 21, 2007 - Milestone 2 (3.4 M2) - stable build</li>
-  <li> Friday Nov. 2, 2007 - Milestone 3 (3.4 M3) - stable build</li>
+  <li> Friday Nov.  2, 2007 - Milestone 3 (3.4 M3) - stable build</li>
   <li> Friday Dec. 14, 2007 - Milestone 4 (3.4 M4) - stable build</li>
-  <li> Friday Feb. 8, 2008 - Milestone 5 (3.4 M5) - stable build</li>
+  <li> Friday Feb.  8, 2008 - Milestone 5 (3.4 M5) - stable build</li>
+  <li> <img src="new.gif" alt="(new)" border="0" height="12" width="12" /> 
+       Friday Mar. 28, 2008 - Milestone 6 (3.4 M6) - stable build - API complete - API Freeze</li>
+  <li> <img src="new.gif" alt="(new)" border="0" height="12" width="12" />
+       Friday May   2, 2008 - Milestone 7 (3.4 M7) - stable build- feature complete - development 
+    freeze - lock down and testing begins</li>
 </ul>
 <p>Our target is to complete 3.4 in late June 2008. All release deliverables
   will be available for download as soon as the release has been tested and validated
@@ -115,7 +121,7 @@ interesting changes over previous plans)
   SWT, OSGi and JDT core plug-ins) are targeted to specific classes of operating
   environments, requiring their source code to only reference facilities available
   in particular class libraries (e.g. J2ME Foundation 1.0, J2SE 1.3 and 1.4,
-etc.). </p>
+  etc.). </p>
 <p> In general, the 3.4 release of the Eclipse Project is developed on a mix
   of Java 1.4 and Java5 VMs. As such, the Eclipse Project SDK as a whole is targeted
   at both 1.4 and Java5 VMs, with full functionality available for 1.4 level
@@ -135,15 +141,16 @@ etc.). </p>
   with running Eclipse on a reference platform.</p>
 <p> The Eclipse SDK 3.4 is tested and validated on the following reference platforms
   (this list is updated over the course of the release cycle):</p>
-  <table width="50%" border="1" cellpadding="2" cellspacing="2" summary="Eclipse Reference Platforms">
+<center>
+  <table border="1" cellpadding="2" cellspacing="2" width="80%" summary="Eclipse Reference Platforms">
     <tbody>
-      <tr>
-        <td bgcolor="#CCCCCC"><div align="center"><b>Reference Platforms</b></div></td>
+      <tr align="center">
+        <td><b>Reference Platforms</b></td>
       </tr>
       <tr>
         <td><b>Microsoft Windows Vista, x86-32, Win32</b> running (any of):
           <ul>
-            <li>Sun Java 2 Standard Edition 5.0 Update 11 for Microsoft Windows</li>
+            <li>Sun Java 2 Standard Edition 5.0 Update 14 for Microsoft Windows</li>
             <li>IBM 32-bit SDK for Windows, Java 2 Technology Edition 5.0, SR5</li>
             <li>BEA JRockit 5.0, for Microsoft Windows</li>
           </ul></td>
@@ -151,10 +158,12 @@ etc.). </p>
       <tr>
         <td><b>Microsoft Windows XP, x86-32, Win32</b> running (any of):
           <ul>
-            <li>Sun Java 2 Standard Edition 5.0 Update 11 for Microsoft Windows</li>
+            <li><img src="new.gif" alt="(new)" border="0" height="12" width="12" /> 
+                Sun Java 2 Standard Edition 6.0 Update 4 for Microsoft Windows</li>
+            <li>Sun Java 2 Standard Edition 5.0 Update 14 for Microsoft Windows</li>
             <li>IBM 32-bit SDK for Windows, Java 2 Technology Edition 5.0, SR5</li>
             <li>BEA JRockit 5.0, for Microsoft Windows</li>
-            <li>Sun Java 2 Standard Edition 1.4.2_14 for Microsoft Windows</li>
+            <li>Sun Java 2 Standard Edition 1.4.2_16 for Microsoft Windows</li>
             <li>IBM 32-bit SDK for Windows, Java 2 Technology Edition 1.4.2 SR7</li>
             <li>BEA JRockit 1.4.2, for Microsoft Windows</li>
           </ul></td>
@@ -162,11 +171,11 @@ etc.). </p>
       <tr>
         <td><b>Red Hat Enterprise Linux 5.0, x86-32, GTK</b> running (any of):
           <ul>
-            <li>Sun Java 2 Standard Edition 5.0 Update 11 for Linux x86</li>
+            <li>Sun Java 2 Standard Edition 5.0 Update 14 for Linux x86</li>
             <li>IBM 32-bit SDK for Linux on Intel architecture, Java 2 Technology
               Edition 5.0, SR5</li>
             <li>BEA JRockit 5.0, for Linux x86</li>
-            <li>Sun Java 2 Standard Edition 1.4.2_13 for Linux x86</li>
+            <li>Sun Java 2 Standard Edition 1.4.2_16 for Linux x86</li>
             <li>IBM 32-bit SDK for Linux on Intel architecture, Java 2 Technology
               Edition 1.4.2 SR7</li>
             <li>BEA JRockit 1.4.2, for Linux x86</li>
@@ -176,7 +185,7 @@ etc.). </p>
         <td><b>SUSE Linux Enterprise Server 10, x86-32, GTK</b> running (any
           of):
           <ul>
-            <li>Sun Java 2 Standard Edition 5.0 Update 11 for Linux x86</li>
+            <li>Sun Java 2 Standard Edition 5.0 Update 14 for Linux x86</li>
             <li>IBM 32-bit SDK for Linux on Intel architecture, Java 2 Technology
               Edition 5.0, SR5</li>
           </ul></td>
@@ -184,13 +193,13 @@ etc.). </p>
       <tr>
         <td><b>Red Hat Enterprise Linux 4.0 update 2, x86-64, GTK</b> running:
           <ul>
-            <li>Sun Java 2 Standard Edition 5.0 Update 11 for Linux x86_64</li>
+            <li>Sun Java 2 Standard Edition 5.0 Update 14 for Linux x86_64</li>
           </ul></td>
       </tr>
       <tr>
         <td><b>Sun Solaris 10, SPARC, GTK</b> running:
           <ul>
-            <li>Sun Java 2 Standard Edition 5.0 Update 11 for Solaris SPARC</li>
+            <li>Sun Java 2 Standard Edition 5.0 Update 14 for Solaris SPARC</li>
           </ul></td>
       </tr>
       <tr>
@@ -214,14 +223,15 @@ etc.). </p>
           </ul></td>
       </tr>
       <tr>
-        <td><b>Apple Mac OS X 10.4, Universal, Carbon</b> running:
+        <td><b>Apple Mac OS X <img src="new.gif" alt="(new)" border="0" height="12" width="12" /> 10.5, Universal, Carbon</b> running:
           <ul>
             <li>Apple Java 2 Platform Standard Edition (J2SE) 5, service release
-              4 for Tiger</li>
+              4</li>
           </ul></td>
       </tr>
     </tbody>
-</table>
+  </table>
+</center>
 <p>Because Java 1.4.2 and Java5 based platforms are used for most Eclipse development,
   those platforms are listed here. Although there are teams doing some Java 6
   based development we have not included specific Java6 VMs, since they have
@@ -236,7 +246,7 @@ etc.). </p>
   (GLib, Pango); SWT HTML viewer requires Mozilla 1.4GTK2. For Motif on Linux
   systems: Open Motif 2.1 (included); SWT HTML viewer requires Mozilla 1.4GTK2.</p>
 <p>SWT is also supported on the QNX Neutrino operating system, x86 processor,
-  Photon window system, and <a href="http://wiki.eclipse.org/J9" target="_blank">IBM J9&trade; VM</a>.
+  Photon window system, and <a href="http://wiki.eclipse.org/J9">IBM J9&trade; VM</a>.
   Eclipse 3.4 on Windows or Linux can be used to cross-develop QNX applications.
   (Eclipse 3.4 is unavailable on QNX because there is currently no 1.5 J2SE for
   QNX.)</p>
@@ -245,8 +255,7 @@ etc.). </p>
   user interface elements provided by the Eclipse SDK components, including dialogs
   and error messages, are externalized. The English strings are provided as the
   default resource bundles.</p>
-<p><img src="new.gif" alt="(new)" border="0" height="12" width="12" /> Latin-1
-  and DBCS locales are supported by the Eclipse SDK on all reference platforms;
+<p>Latin-1 and DBCS locales are supported by the Eclipse SDK on all reference platforms;
   BIDI locales are supported by the Eclipse SDK everywhere but on Motif.</p>
 <p>The Eclipse SDK supports GB 18030 (level 1), the Chinese code page standard,
   on Windows XP and 2000, Linux/GTK and the Macintosh.</p>
@@ -336,26 +345,29 @@ etc.). </p>
   system, window system, Java or other. </p>
 <h4>Committed Items (Platforms)</h4>
 <blockquote>
-  <p><i>None at this time.</i></p>
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+    <strong>Port SWT win32 to 64-bit.</strong> The SWT win32 port should be
+    ported to run on 64-bit editions of Windows using 64-bit JREs. [SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200081">200081</a>)</p>
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+    <strong>Support BIDI on Linux GTK.</strong> In Eclipse 3.3, SWT fully supported
+    BIDI locales on Windows, but only allowed entering and displaying BIDI text
+    on Linux GTK. Add the missing BIDI support for SWT Linux GTK. [SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200083">200083</a>) </p>
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+    <strong>Provide full internationalization on Mac OS X.</strong> In earlier
+    releases of Eclipse, SWT did not address fully support internationalization
+    on Mac OS X. Add the missing DBCS and BIDI support for SWT Mac OS X. [SWT]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200085">200085</a>)</p>
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+    <strong>Implement accessibility for Mac OS X.</strong> In Eclipse 3.3, SWT
+    Mac OS X accessibility was not addressed. Implement the SWT accessibility
+    APIs on Mac OS X. [SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200086">200086</a>)</p>
 </blockquote>
 <h4>Proposed Items (Platforms)</h4>
 <blockquote>
-  <p><strong>Port SWT win32 to 64-bit.</strong> The SWT win32 port should be
-    ported to run on 64-bit editions of Windows using 64-bit JREs. [SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200081">200081</a>)</p>
   <p><strong>Complete SWT WPF port.</strong> An early access version of the SWT
     port for Windows Presentation Framework (WPF) was included with Eclipse 3.3.
     Complete the SWT WPF port: add missing features; improve performance. [SWT]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200082">200082</a>)</p>
-  <p><strong>Support BIDI on Linux GTK.</strong> In Eclipse 3.3, SWT fully supported
-    BIDI locales on Windows, but only allowed entering and displaying BIDI text
-    on Linux GTK. Add the missing BIDI support for SWT Linux GTK. [SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200083">200083</a>) </p>
-  <p><strong>Provide full internationalization on Mac OS X.</strong> In earlier
-    releases of Eclipse, SWT did not address fully support internationalization
-    on Mac OS X. Add the missing DBCS and BIDI support for SWT Mac OS X. [SWT]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200085">200085</a>)</p>
-  <p><strong>Implement accessibility for Mac OS X.</strong> In Eclipse 3.3, SWT
-    Mac OS X accessibility was not addressed. Implement the SWT accessibility
-    APIs on Mac OS X. [SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200086">200086</a>)</p>
   <p><strong>Exploit the capabilities of modern JREs.</strong> Fully support
     and exploit the capabilities of modern JREs. Example work areas would be
     more Java 5 and Java 6 functionality; improved support for <a href="http://harmony.apache.org/" target="_blank">Apache
@@ -375,29 +387,30 @@ etc.). </p>
   a better experience for users working with many plug-ins and large data sets. </p>
 <h4>Committed Items (Consumability)</h4>
 <blockquote>
-  <p><i>None at this time.</i></p>
-</blockquote>
-<h4>Proposed Items (Consumability)</h4>
-<blockquote>
-  <p><strong>Improve performance of large, Eclipse-based products.</strong> We
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+    <strong>Improve performance of large, Eclipse-based products.</strong> We
     will investigate the scalability of Eclipse in areas, such as startup time
     and memory footprint, with a focus on improving the overall experience when
     working with large, Eclipse-based products. [All] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200102">200102</a>) </p>
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+    <strong>Serviceability.</strong> We will continue the work, begun in R3.3,
+    to make it easier for end users to identify and report runtime problems to
+    the team responsible for the failing component. [Platform UI, Equinox] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200090">200090</a>) </p>
+</blockquote>
+<h4>Proposed Items (Consumability)</h4>
+<blockquote>
   <p><strong>Provide additional product level configurability.</strong> &quot;Layered&quot; products
     (i.e. products that are built by composing other products) need more control
     over the ways that the products they are built from &quot;show through&quot; in
     the final result. To address this, we will provide additional, product-level
     configurability in the user-interface, as well as increase the flexibility
     of commonly used views, such as the markers view. [Platform UI, Equinox]
-  (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200088">200088</a>) </p>
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200088">200088</a>) </p>
   <p><strong>Provisioning.</strong> We will design and deliver a provisioning
     platform on top of which we will create a replacement for the current Update
     Manager. The provisioning platform will allow others to create provisioning
     systems to meet the needs of large and small enterprises and systems. [Equinox]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200089">200089</a>) </p>
-  <p><strong>Serviceability.</strong> We will continue the work, begun in R3.3,
-    to make it easier for end users to identify and report runtime problems to
-    the team responsible for the failing component. [Platform UI, Equinox] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200090">200090</a>) </p>
 </blockquote>
 <h4>Deferred Items (Consumability)</h4>
 <blockquote>
@@ -411,29 +424,32 @@ etc.). </p>
   effect the stability of the platform. </p>
 <h4>Committed Items (Reliability)</h4>
 <blockquote>
-  <p><i>None at this time.</i></p>
-</blockquote>
-<h4>Proposed Items (Reliability)</h4>
-<blockquote>
-  <p><strong>Provide API for missing/internal features.</strong> We will identify
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+    <strong>Provide API for missing/internal features.</strong> We will identify
     areas where applications built on Eclipse currently must invoke internal
     functionality in order to provide good integration with the SDK. We will
     address these cases by creating proper, API-quality equivalents or otherwise
     removing the dependencies on internals. [All] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200100">200100</a>) </p>
-  <p><strong>API Tooling.</strong> We will improve existing API tools and create
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+    <strong>Focus on architectural integrity.</strong> We will explicitly focus
+    on identifying and fixing places where significant bugs or incomplete implementations
+    have caused problems for our consumers. The intent is to make a significant
+    investment in fixing these issues. [All] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200099">200099</a>) </p>
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+    <strong>API Tooling.</strong> We will improve existing API tools and create
     new ones, so that plug-in developers will be able to easily identify their
     API (and internal) dependencies, the clients of their API, cases where they
     have broken binary compatibility as well as situations where changes to their
     internals will break others. The tooling will also support the management
     and updating of bundle and perhaps package version numbers in accordance
     with the bundle versioning guidelines used by Eclipse. [PDE, JDT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200098">200098</a>) </p>
-  <p><strong>Provide commonly requested Java security features.</strong> We will
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+    <strong>Provide commonly requested Java security features.</strong> We will
     add support for security facilities such as JAAS, JCA, keystore, credentials,
     and signature validation. [Equinox] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200091">200091</a>) </p>
-  <p><strong>Focus on architectural integrity.</strong> We will explicitly focus
-    on identifying and fixing places where significant bugs or incomplete implementations
-    have caused problems for our consumers. The intent is to make a significant
-    investment in fixing these issues. [All] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200099">200099</a>) </p>
+</blockquote>
+<h4>Proposed Items (Reliability)</h4>
+<blockquote>
   <p><strong>Invest in PDE Build and Release Engineering.</strong> We will address
     issues related to the reproducibility of our builds, and make it easier for
     others to make use of our build technology. [PDE, Rel. Eng.] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200092">200092</a>) </p>
@@ -454,11 +470,8 @@ etc.). </p>
   use.</p>
 <h4>Committed Items (The Future)</h4>
 <blockquote>
-  <p><i>None at this time.</i></p>
-</blockquote>
-<h4>Proposed Items (The Future)</h4>
-<blockquote>
-  <p><strong>Create the Eclipse 4.0 plan.</strong> We will identify the goals,
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+    <strong>Create the Eclipse 4.0 plan.</strong> We will identify the goals,
     scope, timeframe and major features of the next major version of the Eclipse
     SDK. To do this, we need to understand exactly how and when a new major release
     of Eclipse can be delivered, including what its relationship will be to the
@@ -466,22 +479,27 @@ etc.). </p>
     future needs of our consumers. And finally, we need to create a coherent
     plan to address these needs, so that we can begin to satisfy them once R3.4
     is released. [All] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200097">200097</a>) </p>
-  <p><strong>OSGi standards participation.</strong> We will invest in the future
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+    <strong>OSGi standards participation.</strong> We will invest in the future
     of OSGi by monitoring and participating in the Enterprise Expert Group work
     (e.g., Provisioning, Launching, Logging (serviceability)) and ongoing framework
     specification work. [Equinox] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200093">200093</a>) </p>
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+    <strong>Investigate new user-interface directions.</strong> User-interface
+    state-of-the-art is constantly evolving and changing as the capabilities
+    of the underlying platforms increase. We will investigate the use of these
+    capabilities within Eclipse. Potential work areas include: skinning, scripting,
+    resolution-independent graphics, better desktop integration, and web-based
+    presentations. [SWT, Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200095">200095</a>) </p>
+</blockquote>
+<h4>Proposed Items (The Future)</h4>
+<blockquote>
   <p><strong>Model the IDE.</strong> The functionality of the Eclipse Workbench
     and IDE have grown significantly since they were created. In some cases,
     older capabilities have been superceded by newer ones or have been proven
     to be unwieldy or otherwise unsatisfying. We will create a new model of the
     underlying structure of the Eclipse UI, to be used as the basis for our future
     work. [Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id= 200094"> 200094</a>) </p>
-  <p><strong>Investigate new user-interface directions.</strong> User-interface
-    state-of-the-art is constantly evolving and changing as the capabilities
-    of the underlying platforms increase. We will investigate the use of these
-    capabilities within Eclipse. Potential work areas include: skinning, scripting,
-    resolution-independent graphics, better desktop integration, and web-based
-    presentations. [SWT, Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200095">200095</a>) </p>
   <p><strong>Investigate the next generation of JDT capabilities.</strong> We
     will continue to invest in our Java development tools, by investigating how
     best to address future hardware, Java language and IDE capabilities. Potential
@@ -496,9 +514,9 @@ etc.). </p>
 <p>(End of items for The Future.)</p>
 <!-- End of Sections by Work Area -->
 <h2><a name="Appendix1" id="Appendix1">Appendix 1: Execution Environment by Plug-in</a></h2>
-<p>In the table below, the column labeled &quot;3.4 EE&quot; (3.4 Execution Environment)
-  indicates the minimum Java class library requirements of each plug-in
-for the 3.4 release, where the value is one of:</p>
+<p>In the table below, the &quot;3.4 minimum execution environment&quot;
+  column indicates the minimum Java class library requirements of each plug-in
+  for the 3.4 release, where the value is one of:</p>
 <table border="0" width="90%">
   <tbody>
     <tr>
@@ -571,9 +589,12 @@ for the 3.4 release, where the value is one of:</p>
 <table border="1">
   <tbody>
     <tr>
-      <td width="290" bgcolor="#CCCCCC"><div align="center" ><b>Plug-in</b></div></td>
-      <td width="60" bgcolor="#CCCCCC"><div align="center">
-          <p align="center"><b>3.4EE</b></p>
+      <td width="290"><strong>Plug-in</strong></td>
+      <td width="60"><div align="center">
+          <p align="center"><b>3.4<br />
+            minimum<br />
+            execution<br />
+            environment </b></p>
         </div></td>
     </tr>
     <tr>
@@ -726,23 +747,23 @@ for the 3.4 release, where the value is one of:</p>
     </tr>
     <tr>
       <td>org.eclipse.help</td>
-      <td><div align="center">F1.0</div></td>
+      <td><div align="center"><img src="new.gif" alt="(new)" border="0" height="12" width="12" /> 1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.help.appserver</td>
-      <td><div align="center">F1.0</div></td>
+      <td><div align="center"><img src="new.gif" alt="(new)" border="0" height="12" width="12" /> 1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.help.base</td>
-      <td><div align="center">F1.0</div></td>
+      <td><div align="center"><img src="new.gif" alt="(new)" border="0" height="12" width="12" /> 1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.help.ui</td>
-      <td><div align="center">F1.0</div></td>
+      <td><div align="center"><img src="new.gif" alt="(new)" border="0" height="12" width="12" /> 1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.help.webapp</td>
-      <td><div align="center">F1.0</div></td>
+      <td><div align="center"><img src="new.gif" alt="(new)" border="0" height="12" width="12" /> 1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt</td>
@@ -974,7 +995,7 @@ for the 3.4 release, where the value is one of:</p>
     </tr>
     <tr>
       <td>org.eclipse.ui.cheatsheets</td>
-      <td><div align="center">F1.0</div></td>
+      <td><div align="center"><img src="new.gif" alt="(new)" border="0" height="12" width="12" /> 1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.console</td>
@@ -990,7 +1011,7 @@ for the 3.4 release, where the value is one of:</p>
     </tr>
     <tr>
       <td>org.eclipse.ui.forms</td>
-      <td><div align="center">F1.0</div></td>
+      <td><div align="center"><img src="new.gif" alt="(new)" border="0" height="12" width="12" /> 1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.ide</td>
@@ -998,7 +1019,11 @@ for the 3.4 release, where the value is one of:</p>
     </tr>
     <tr>
       <td>org.eclipse.ui.intro</td>
-      <td><div align="center">F1.0</div></td>
+      <td><div align="center"><img src="new.gif" alt="(new)" border="0" height="12" width="12" /> 1.4</div></td>
+    </tr>
+    <tr>
+      <td><img src="new.gif" alt="(new)" border="0" height="12" width="12" /> org.eclipse.ui.intro.universal</td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.navigator</td>
