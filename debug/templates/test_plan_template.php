@@ -100,129 +100,129 @@
 			  </tr>
 			  <tr> 
 			    <td><a href="#Evaluations">Evaluations</a></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Launch">Launch Options</a></td>
-			    <td><div align="center"></div></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Debug">View Management</a></td>
-			    <td><div align="center"></div></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Breakpoints">Breakpoints</a></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Run">Run to Line</a></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Logical">Logical Structures</a></td>
-			    <td><div align="center"></div></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Watch">Watch Items</a></td>
-			    <td><div align="center"></div></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Context">Context Launching</a></td>
-			    <td><div align="center"></div></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Classpaths">Runtime Classpath</a></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Source">Source Lookup</a></td>
-			    <td><div align="center"></div></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Monitors">Monitor Information</a></td>
-			    <td><div align="center"></div></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Hot">HCR</a></td>
-			    <td><div align="center"></div></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#JREs">Installed JREs</a></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#EEs">Execution Environments</a></td>
-			    <td><div align="center"></div></td>
-			    <td> <div align="center"></div></td>
-			    <td><div align="center"></div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#String">String Variables</a></td>
-			    <td><div align="center"></div></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Console">Console</a></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Variables">Variables</a></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Refactoring">Refactoring</a></td>
-			    <td><div align="center"></div></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Applets">Applets</a></td>
-			    <td><div align="center"></div></td>
-			    <td><div align="center"></div></td>
-			    <td> <div align="center"></div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Remote">Remote Debugging</a></td>
-			    <td><div align="center"></div></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#JSP">JSP Example</a></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
-			    <td> <div align="center"></div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			</table>
 			</div>
