@@ -1,4 +1,11 @@
-<?php  																														require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());    # All on the same line to unclutter the user's desktop'
+<?php 
+	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	
+	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	
+	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	
+	$App 	= new App();	
+	$Nav	= new Nav();	
+	$Menu 	= new Menu();		
+	include($App->getProjectCommon());    
 
 	#*****************************************************************************
 	#
@@ -19,8 +26,8 @@
 	#****************************************************************************
 	
 	
-	$pageTitle 		= "Debug Project 3.4M4 Test Matrix";
-	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching, test, testing, matrix, plan, 3.4";
+	$pageTitle 		= "Debug Project 3.4M5 Test Matrix";
+	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching, test, testing, matrix, plan, 3.4, M5";
 	$pageAuthor		= "Debug Team";
 	
 	include("../_sideCommon.php");
