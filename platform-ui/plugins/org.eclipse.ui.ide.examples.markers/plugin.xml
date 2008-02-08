@@ -45,13 +45,130 @@
                commandId="org.eclipse.ui.ide.examples.markers.delete"
                style="push">
          </command>
+      </menuContribution>
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.ide.examples.markers.ExampleMarkersView">
+         <menu
+               id="org.eclipse.ui.ide.examples.filtersMenu"
+               label="Show">
+            <dynamic
+                  class="org.eclipse.ui.internal.views.markers.FiltersContribution"
+                  id="org.eclipse.ui.ide.filtersContribution">
+            </dynamic>
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="activePart">
+                  <test
+                        property="org.eclipse.ui.ide.hasFilters">
+                  </test>
+               </with>
+            </visibleWhen>
+         </menu>
+         <menu
+               id="exampleGroupByMenu"
+               label="Group By"
+               mnemonic="G">
+            <dynamic
+                  class="org.eclipse.ui.internal.views.markers.GroupsContribution"
+                  id="org.eclipse.ui.ide.dynamic1">
+            </dynamic>
+         </menu>
+         <menu
+               id="org.eclipse.ui.ide.examples.markerSortMenu"
+               label="Sort By"
+               mnemonic="S">
+            <dynamic
+                  class="org.eclipse.ui.internal.views.markers.SortFieldContribution"
+                  id="org.eclipse.ui.ide.problems.sortEntries">
+            </dynamic>
+         </menu>
          <command
-               commandId="org.eclipse.ui.ide.examples.markers.bad"
+               commandId="org.eclipse.ui.ide.configureFilters"
                style="push">
          </command>
          <command
-               commandId="org.eclipse.ui.ide.examples.markers.bad.delete"
+               commandId="org.eclipse.ui.window.preferences"
+               label="Preferences"
+               mnemonic="P"
                style="push">
+            <parameter
+                  name="preferencePageId"
+                  value="org.eclipse.ui.ide.markers">
+            </parameter>
+         </command>
+      </menuContribution>
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.views.TaskList">
+         <menu
+               id="org.eclipse.ui.ide.tasks.contentsMenu"
+               label="%MarkerContentsMenu.Contents.name">
+            <dynamic
+                  class="org.eclipse.ui.internal.views.markers.ContentsContribution"
+                  id="org.eclipse.ui.ide.contentsContribution">
+            </dynamic>
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="activePart">
+                  <test
+                        property="org.eclipse.ui.ide.multipleContentGenerators">
+                  </test>
+               </with>
+            </visibleWhen>
+         </menu>
+         <menu
+               id="org.eclipse.ui.ide.tasks.filtersMenu"
+               label="%MarkerFiltersMenu.Show">
+            <dynamic
+                  class="org.eclipse.ui.internal.views.markers.FiltersContribution"
+                  id="org.eclipse.ui.ide.filtersContribution">
+            </dynamic>
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="activePart">
+                  <test
+                        property="org.eclipse.ui.ide.hasFilters">
+                  </test>
+               </with>
+            </visibleWhen>
+         </menu>
+         <menu
+               id="tasksGroupByMenu"
+               label="%MarkerGroupMenu.GroupBy">
+            <dynamic
+                  class="org.eclipse.ui.internal.views.markers.GroupsContribution"
+                  id="org.eclipse.ui.ide.dynamic1">
+            </dynamic>
+         </menu>
+         <menu
+               id="org.eclipse.ui.ide.tasks.markerSortMenu"
+               label="%Menu.Sort.label"
+               mnemonic="%Menu.Sort.mnemonic">
+            <dynamic
+                  class="org.eclipse.ui.internal.views.markers.SortFieldContribution"
+                  id="org.eclipse.ui.ide.tasks.sortEntries">
+            </dynamic>
+         </menu>
+         <command
+               commandId="org.eclipse.ui.ide.OpenMarkersView"
+               label="%OpenAnother.Tasks"
+               mnemonic="%OpenAnother.Mnemonic">
+         </command>
+          <command
+               commandId="org.eclipse.ui.ide.configureFilters"
+               style="push">
+         </command>
+         <command
+               commandId="org.eclipse.ui.window.preferences"
+               label="%command.preferences.label"
+               mnemonic="%command.preferences.mnemonic"
+               style="push">
+            <parameter
+                  name="preferencePageId"
+                  value="org.eclipse.ui.ide.markers">
+            </parameter>
          </command>
       </menuContribution>
    </extension>
@@ -162,6 +279,14 @@
        <super
              type="org.eclipse.core.resources.problemmarker">
        </super>
+    </extension>
+    <extension
+          point="org.eclipse.ui.views">
+       <view
+             class="org.eclipse.ui.ide.examples.markers.ExampleMarkersView"
+             id="org.eclipse.ui.ide.examples.markers.ExampleMarkersView"
+             name="Example Markers">
+       </view>
     </extension>
 
 </plugin>
