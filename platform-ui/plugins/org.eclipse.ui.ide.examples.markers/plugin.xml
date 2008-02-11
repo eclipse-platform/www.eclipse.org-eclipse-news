@@ -179,7 +179,7 @@
             id="org.eclipse.ui.ide.examples.markers.exampleGenerator"
             name="Example Contents">
          <markerFieldReference
-               id="org.eclipse.ui.ide.severityAndDescriptionField"
+               id="org.eclipse.ui.ide.examples.markers.ExampleField"
                visible="true">
          </markerFieldReference>
          <markerFieldReference
@@ -251,6 +251,11 @@
             id="org.eclipse.ui.ide.examples.markers.sourceID"
             name="Source ID">
       </markerField>
+      <markerField
+            class="org.eclipse.ui.ide.examples.markers.markerSupport.ExampleMarkerField"
+            id="org.eclipse.ui.ide.examples.markers.ExampleField"
+            name="org.eclipse.ui.ide.examples.markers.markerField1">
+      </markerField>
    </extension>
    <extension
          point="org.eclipse.ui.ide.markerHelp">
@@ -287,6 +292,13 @@
              id="org.eclipse.ui.ide.examples.markers.ExampleMarkersView"
              name="Example Markers">
        </view>
+    </extension>
+    <extension
+          point="org.eclipse.ui.ide.markerResolution">
+       <markerResolutionGenerator
+             class="org.eclipse.ui.ide.examples.markers.markerSupport.ExampleMarkerResolutionGenerator"
+             markerType="org.eclipse.ui.ide.examples.markers.exampleMarker">
+       </markerResolutionGenerator>
     </extension>
 
 </plugin>
