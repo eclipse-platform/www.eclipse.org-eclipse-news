@@ -119,11 +119,11 @@ function traverseLinkifyBugs(node) {
 	<ul>
 		<li><h4><a name="rich hovers"></a>Rich Hovers (experimental) (bug 200838) [<a href="#3">3</a>]</h4>
 		<ul>
-			<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> <Style:committed>links support in hovers so that you can navigate to things from there</Style:committed></li>
-			<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> <Style:committed>investigate better interaction for making hovers sticky (mouse path)</Style:committed>
+			<li><img src="../images/ok.gif" border="0" height="10" width="10"> <Style:committed>links support in hovers so that you can navigate to things from there</Style:committed></li>
+			<li><img src="../images/ok.gif" border="0" height="10" width="10"> <Style:committed>investigate better interaction for making hovers sticky (mouse path)</Style:committed>
 				<br>if the hover is made sticky via mouse then it must disappear automatically if the mouse leaves the hover.</li>
 			<li>investigate to use hovers as affordance for context sensitive actions (quick assist/fix, surround with...)</li>
-			<li>allow seamless transition from hover &gt; sticky hover &gt; Javadoc view</li>
+			<li><img src="../images/ok.gif" border="0" height="10" width="10"> allow seamless transition from hover &gt; sticky hover &gt; Javadoc view</li>
 		</ul>
 		</li>
 	
@@ -139,7 +139,7 @@ function traverseLinkifyBugs(node) {
 	
 		<li><h4><a name="Hyperlinking"></a>Hyperlinking [<a href="#3">3</a>]</h4>
 		<ul>
-			<li><Style:committed>allow to present more than one hyperlink target for a given text range</Style:committed> (bug 215473)</li>
+			<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> <Style:committed>allow to present more than one hyperlink target for a given text range</Style:committed> (bug 215473)</li>
 			<li>allow hyperlink to show a hover</li>
 		</ul>
 		</li>
@@ -187,9 +187,7 @@ function traverseLinkifyBugs(node) {
 			<li><img src="../images/ok.gif" border="0" height="10" width="10"> <Style:committed>provide API to retrieve annotations in a certain range from an annotation model</Style:committed>
 				<br>&rArr; with this, clients no longer need to iterate over all annotations
 			</li>
-			<li><Style:committed>allow to flag a document as being delete (no longer used) or even more life-cycle</Style:committed> 
-				<br>&rArr; allows to improve performance when closing an editor
-			</li>
+			<li><img src="../images/ok.gif" border="0" height="10" width="10"> <Style:committed>mprove performance when closing an editor (don't remove each annotation one by one)</Style:committed> </li>
 			<li><Style:committed>revisit the text viewer's support for redraw, compound updates, and selection preservation</Style:committed>
 			<ul>
 				<li>check all setRedraw(on/off) users whether they really need that expensive operation (e.g. undo)</li>
@@ -209,7 +207,7 @@ function traverseLinkifyBugs(node) {
 			<li><Style:committed>quick diff usability improvements in hover (Next/Prev support etc)</Style:committed>
 				<br>depends on the <a href="#rich hovers">Rich Hovers</a> item above</li>
 			<li><Style:committed>change folding paradigm: no longer eat first key stroke [experimental] (bug 67500, bug 66264)</Style:committed></li>
-			<li>show more context about what's currently being edited (e.g. in a header):
+			<li><img src="../images/ok.gif" border="0" height="10" width="10"> show more context about what's currently being edited (e.g. in a header):
 			<ul>
 				<li><Style:committed>bread crumb trail bar to show the context of the current selection:</Style:committed>
 					<br>
@@ -228,8 +226,8 @@ function traverseLinkifyBugs(node) {
 		
 		<li><h4>General Items [<a href="#2">2</a>]</h4>
 		<ul>
-			<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> <Style:committed>3.3.x maintenance work</Style:committed></li>
-			<li>look at bugs with patches and review those</li>
+			<li><img src="../images/ok.gif" border="0" height="10" width="10"> <Style:committed>3.3.x maintenance work</Style:committed></li>
+			<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> look at bugs with patches and review those</li>
 		</ul>
 		</li>
 	</ul>
@@ -272,13 +270,13 @@ function traverseLinkifyBugs(node) {
 		
 		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Rich Hovers (experimental) (bug 200838) [<a href="#3">3</a>]</h4>
 		<ul>
-			<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> <Style:committed>links support in hovers so that you can navigate to things from there</Style:committed></li>
-			<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> <Style:committed>investigate better interaction for making hovers sticky (mouse path)</Style:committed>
+			<li><img src="../images/ok.gif" border="0" height="10" width="10"> <Style:committed>links support in hovers so that you can navigate to things from there</Style:committed></li>
+			<li><img src="../images/ok.gif" border="0" height="10" width="10"> <Style:committed>investigate better interaction for making hovers sticky (mouse path)</Style:committed>
 		</ul>
 		
 		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Hyperlinking [<a href="#3">3</a>]</h4>
 		<ul>
-			<li><Style:committed>allow to present more than one hyperlink target for a given text range</Style:committed> (bug 215473)</li>
+			<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> <Style:committed>allow to present more than one hyperlink target for a given text range</Style:committed> (bug 215473)</li>
 		</ul>
 		
 		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Ruler improvements [<a href="#2">2</a>]</h4>
@@ -300,7 +298,7 @@ function traverseLinkifyBugs(node) {
 		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Miscellaneous</h4>
 		<ul>
 			<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> review and commit new Templates view (bug 69581)</li>
-			<li><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"> show more context about what's currently being edited (e.g. in a header):
+			<li><img src="../images/ok.gif" border="0" height="10" width="10"> show more context about what's currently being edited (e.g. in a header):
 			<ul>
 				<li><Style:committed>bread crumb trail bar to show the context of the current selection:</Style:committed>
 					<br>
