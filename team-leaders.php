@@ -60,62 +60,47 @@ ob_start();
 			<h3>Project Management Committee Members</h3>
 		      <ul>
 		        <li> 
-		          <b><a name="erich"></a>Erich Gamma, IBM Zurich</b><br>
-      Erich is the original lead of the Eclipse Java development environment.
-      Prior to working on Eclipse he contributed to VA/Micro Edition (part
-      of IBM's Java solution for embedded device programming). Erich is well known for
-      his work on Design Patterns and <a href="http://www.junit.org/" target="_top">JUnit</a>.
-      Erich is a member of the <a href="../tools/index.html" target="_top">Eclipse
-      Tools</a> PMC and the Eclipse Project PMC.
-		        </li>
-		        <li> 
-		          <b><a name="kevin"></a>Kevin Haaland, IBM Ottawa</b><br>
-      Kevin has been a key contributor to the design and implementation of the
-      Platform UI. He was previously component lead for the Platform UI, and
-      has a long history of building user interface technology at OTI. In a past
-      life he was the lead for the SWT team. Kevin also played a key role in
-      the IBM VA/Java project. Kevin is a member of the Eclipse Project PMC
-      and is the overall lead for the Eclipse Project.
-		        </li>
-		        <li> 
-		          <b><a name="jeff"></a>Jeff McAffer, IBM Ottawa</b><br>
-      Jeff leads the Eclipse RCP and Equinox OSGi efforts.  He is one of the
-      architects of the  Eclipse Platform and a co-author of <a href="http://eclipsercp.org">The
-      Eclipse Rich  Client Platform</a>.  He is currently interested in helping
-      realize Eclipse's original  vision as a platform for composing general
-      sets of application function to solve real problems. Previous lives included work 
-      in distributed/parallel OO computing (Server Smalltalk, massively  parallel Smalltalk, etc) 
-      as well as expert systems, meta-level architectures and a PhD at 
-      the University of Tokyo.  Jeff is a member of the Eclipse Project PMC and
-      leads the <a href="http://eclipse.org/equinox">Equinox</a> and
-      <a href="http://eclipse.org/pde">PDE</a> subprojects.
+		          <b><a name="jeff"></a>Jeff McAffer, Code 9</b><br>
+       Jeff McAffer leads the Eclipse Equinox OSGi, RCP and Orbit teams and is the
+       Founder of <a href="http://code9.com">Code 9</a>.
+       He is one of the architects of the Eclipse Platform and a co-author of
+       <a href="http://eclipsercp.org">The Eclipse Rich Client Platform</a> (Addison-Wesley).
+       He is a member of the Eclipse Project PMC, the Tools Project PMC and the 
+       Eclipse Foundation Board of Directors.  Jeff is currently interested all aspects
+       of Eclipse componentry from developing and building bundles to deploying, installing
+       and ultimately running them.  Previous lives include being a Senior Technical Staff
+       Member at IBM and work in distributed/parallel OO computing (Server Smalltalk,
+       massively parallel Smalltalk, etc) as well as expert systems, meta-level architectures
+       and a PhD at the University of Tokyo.
 		        </li>
 		        <li> 
 		          <b><a name="philippe"></a>Philippe Mulet, IBM Saint-Nazaire</b><br>
-      Philippe is the lead for the Eclipse Java Infrastructure. Prior to Eclipse,
+      Philippe is the overall lead for the Eclipse Project. Prior to Eclipse,
       Philippe was responsible for the compiler and codeassist in IBM VA/Java
       and VA/Micro Edition. Philippe is a member of the expert group on compiler
       API (JSR199), representing IBM. His main interests are in compilation,
-      performance, scalability and meta-level architectures. Philippe is a member of the Eclipse
-      Project PMC and leads the <a href="http://eclipse.org/jdt">JDT</a> subproject.
+      performance, scalability and meta-level architectures. Philippe leads the Eclipse
+      Project as well as the <a href="http://eclipse.org/jdt">JDT</a> subproject.
 		        </li>
 		        <li> 
-		          <b><a name="john"></a>John Wiegand, IBM Portland</b><br>
-      John is the principal architect for the platform infrastructure. John played
-      a central role in the development of IBM VA/Java, VA/Micro Edition, and
-      now Eclipse. His interests are in the areas of performance, scalability,
-      compilers, and just about anything that's hard. John is a member of
-      the Eclipse Project PMC.
+		          <b><a name="steve"></a>Steve Northover, IBM Ottawa</b><br>
+      Steve Northover is the father of SWT (the Standard Widget Toolkit). Prior to
+      working on Eclipse, he worked on IBM Smalltalk, VA/Java, VA/Micro Edition.
+      His interests include programming languages, API design, operating systems,
+      user intefaces and code optimization.  Steve is a member of the Eclipse Project
+      PMC and team lead for SWT.
 		        </li>
 		        <li> 
-		          <b><a name="McQ"></a>Mike Wilson, IBM Ottawa</b><br>
-      Mike is a senior architect on the Eclipse platform. He is currently leading
-      the Platform Runtime, Team and UI teams, and previous to that lead the SWT team 
-      (and has co-authored a book on that subject). He was one of the original
-      founding members of OTI. His interests include computer language design
-      and implementation, semantic content publishing, scalability/performance,
+		          <b><a name="McQ"></a>Mike ("McQ") Wilson, IBM Ottawa</b><br>
+      McQ is a senior architect of the Eclipse SDK, a member of the Eclipse
+      Architecture Council and one of the original Eclipse Founders. He is 
+      currently leading the Platform Workspace, UI and UA teams. He was one of 
+      the original  members of OTI. His interests include computer
+      language design and implementation, semantic content publishing, web development,
       and playing the cello. Mike is a member of the Eclipse Project
-      PMC and leads the <a href="http://eclipse.org/platform/">Platform</a> subproject.
+      PMC and leads the <a href="http://eclipse.org/platform/">Platform</a> 
+      and <a href="http://www.eclipse.org/eclipse/incubator/">Eclipse Project Incubator</a>
+	  subprojects.
 		        </li>
 		      </ul>
 		</div>
@@ -131,6 +116,7 @@ ob_start();
 				<li><a href="http://www.eclipse.org/platform/">Platform</a><br> -- <a href="#McQ">Mike Wilson</a></li>
 				<li><a href="http://www.eclipse.org/jdt/" target="_top">JDT</a><br> -- <a href="#philippe">Philippe Mulet</a></li>
 				<li><a href="http://www.eclipse.org/pde/">PDE</a><br> -- <a href="#jeff">Jeff McAffer</a></li>
+				<li><a href="http://www.eclipse.org/eclipse/incubator/">PDE</a><br> -- <a href="#McQ">Mike Wilson</a></li>
       		</ul>				
 		</div>
 	</div>
