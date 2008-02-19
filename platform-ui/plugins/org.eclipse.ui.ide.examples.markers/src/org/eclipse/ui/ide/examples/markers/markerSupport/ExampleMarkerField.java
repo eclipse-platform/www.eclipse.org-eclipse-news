@@ -1,10 +1,11 @@
 package org.eclipse.ui.ide.examples.markers.markerSupport;
 
 import org.eclipse.core.resources.IMarker;
-import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.resource.JFaceResources;
 import org.eclipse.swt.graphics.Image;
+import org.eclipse.swt.widgets.Control;
 import org.eclipse.ui.ide.IDE;
+import org.eclipse.ui.ide.examples.markers.MarkerExampleActivator;
 import org.eclipse.ui.views.markers.MarkerField;
 import org.eclipse.ui.views.markers.MarkerItem;
 import org.eclipse.ui.views.markers.MarkerSupportConstants;
@@ -46,15 +47,23 @@ public class ExampleMarkerField extends MarkerField {
 		return null;
 
 	}
-	
+
 	@Override
 	public String getColumnHeaderText() {
 		return "Alternate Description";
 	}
 	
 	@Override
-	public Image getImage(MarkerItem item) {
-		return JFaceResources.getImage(Dialog.DLG_IMG_MESSAGE_INFO);
+	public int getDefaultColumnWidth(Control control) {
+		return 250;
 	}
 
+	@Override
+	public Image getImage(MarkerItem item) {
+		return JFaceResources.getResources()
+				.createImageWithDefault(
+						MarkerExampleActivator.imageDescriptorFromPlugin(
+								MarkerExampleActivator.PLUGIN_ID,
+								"$nl$/icons/eclipse.png"));
+	}
 }
