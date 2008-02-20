@@ -96,7 +96,7 @@ class ShowViewRunnable extends TestBedRunnable {
 						}
 
 					},
-							"org.eclipseinternal.ui.tests.statushandling.RuntimeExceptionEditor"); //$NON-NLS-1$
+							"org.eclipse.ui.examples.statushandlers.testtool.RuntimeExceptionEditor"); //$NON-NLS-1$
 		} catch (PartInitException e) {
 			// should not be thrown !
 			e.printStackTrace();
@@ -170,7 +170,7 @@ class ShowViewRunnable extends TestBedRunnable {
 						}
 
 					},
-							"org.eclipseinternal.ui.tests.statushandling.PartInitExceptionEditor"); //$NON-NLS-1$
+							"org.eclipse.ui.examples.statushandlers.testtool.PartInitExceptionEditor"); //$NON-NLS-1$
 		} catch (PartInitException e) {
 			// should not be thrown !
 			e.printStackTrace();
