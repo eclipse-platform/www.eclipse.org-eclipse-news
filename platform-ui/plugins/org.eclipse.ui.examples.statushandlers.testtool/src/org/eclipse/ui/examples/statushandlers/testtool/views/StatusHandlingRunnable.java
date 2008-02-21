@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2007 IBM Corporation and others.
+ * Copyright (c) 2007, 2008 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -18,6 +18,7 @@ import java.util.List;
 import org.eclipse.ui.IMemento;
 import org.eclipse.ui.examples.statushandlers.testtool.Messages;
 import org.eclipse.ui.examples.statushandlers.testtool.views.StatusHandlingComponent.DisplayedItem;
+import org.eclipse.ui.statushandlers.IStatusAdapterConstants;
 import org.eclipse.ui.statushandlers.StatusAdapter;
 import org.eclipse.ui.statushandlers.StatusManager;
 import org.eclipse.ui.views.properties.IPropertyDescriptor;
@@ -165,11 +166,11 @@ public class StatusHandlingRunnable extends TestBedRunnable {
 			if (di.isWrapped()) {
 				StatusAdapter adapter = new StatusAdapter(di.getStatus());
 				if (di.getAction() != null) {
-					adapter.setProperty(StatusAdapter.HINT_PROPERTY, di
+					adapter.setProperty(IStatusAdapterConstants.HINT_PROPERTY, di
 							.getAction());
 				}
 				if (di.getExplanation() != null) {
-					adapter.setProperty(StatusAdapter.EXPLANATION_PROPERTY, di
+					adapter.setProperty(IStatusAdapterConstants.EXPLANATION_PROPERTY, di
 							.getExplanation());
 				}
 				StatusManager.getManager().handle(adapter, di.getHint());
