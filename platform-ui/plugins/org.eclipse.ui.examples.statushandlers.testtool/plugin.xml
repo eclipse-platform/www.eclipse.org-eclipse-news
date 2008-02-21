@@ -75,7 +75,7 @@
             name="PartInitExceptionView">
       </view>
       <view
-            category="org.eclipse.ui.tests.statushandling.Status"
+            category="org.eclipse.ui.examples.statushandlers.testtool.Status"
             class="org.eclipse.ui.tests.statushandlers.views.RuntimeExceptionView"
             id="org.eclipseinternal.ui.tests.statushandling.RuntimeExceptionView"
             name="RuntimeExceptionView">
