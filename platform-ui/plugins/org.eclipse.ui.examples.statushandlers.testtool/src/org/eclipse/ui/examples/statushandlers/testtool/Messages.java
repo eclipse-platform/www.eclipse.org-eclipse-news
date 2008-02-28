@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2007 IBM Corporation and others.
+ * Copyright (c) 2007, 2008 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -48,11 +48,12 @@ public class Messages extends NLS {
 	public static String JobAndRunnablesPropertySource_AsJobProperty;
 	public static String JobAndRunnablesPropertySource_LockProperty;
 	public static String JobAndRunnablesPropertySource_PercentProperty;
-	public static String JobAndRunnablesPropertySource_USerJobProperty;
+	public static String JobAndRunnablesPropertySource_UserJobProperty;
 	public static String JobAndRunnablesPropertySource_WrappedProperty;
 	public static String JobAndRunnablesPropertySource_GroupsProperty;
 	public static String JobAndRunnablesPropertySource_ResheduleDelay;
 	public static String JobAndRunnablesPropertySource_ResheduleProperty;
+	public static String JobAndRunnablesPropertySource_DeferredProperty;
 	public static String JobsAndRunnablesComponent_ExceptionThrownAfter;
 	public static String JobsAndRunnablesComponent_ResheduleDelayLabel;
 	public static String JobsAndRunnablesComponent_ResheduleValueTooltip;
@@ -161,6 +162,7 @@ public class Messages extends NLS {
 	public static String SleepingComponent_SleepingFor;
 	public static String OpenWarningDialogAction_OpenWarning;
 	public static String ThrowNullPointerAction_NPEMessage;
+	
 	static {
 		// initialize resource bundle
 		NLS.initializeMessages(BUNDLE_NAME, Messages.class);

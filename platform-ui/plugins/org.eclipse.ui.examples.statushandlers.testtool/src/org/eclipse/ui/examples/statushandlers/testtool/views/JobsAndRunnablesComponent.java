@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2007 IBM Corporation and others.
+ * Copyright (c) 2007, 2008 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -55,6 +55,7 @@ public class JobsAndRunnablesComponent implements TestBedComponent {
 	private Composite uiInterfaceThread;
 	private Composite parameters;
 	private StackLayout stackLayout;
+	private Button deferredStatusField;
 
 	/*
 	 * (non-Javadoc)
@@ -98,7 +99,7 @@ public class JobsAndRunnablesComponent implements TestBedComponent {
 				groupField.getSelection(), rescheduleField.getSelection(),
 				returnErrorStatusField.getSelection(), uiThreadRadio
 						.getSelection(), windowRunnableRadio.getSelection(),
-				jobsRadio.getSelection());
+				jobsRadio.getSelection(), deferredStatusField.getSelection());
 	}
 
 	protected int getDuration(int durationIndex) {
@@ -376,12 +377,15 @@ public class JobsAndRunnablesComponent implements TestBedComponent {
 
 		returnErrorStatusField = new Button(group, SWT.CHECK);
 		returnErrorStatusField
-				.setText("Return an exception wrapped in a error status"); //$NON-NLS-1$
+				.setText("Wrapped"); //$NON-NLS-1$
 		data = new GridData(GridData.FILL_HORIZONTAL);
-		data.horizontalSpan = 2;
 		returnErrorStatusField.setLayoutData(data);
 		returnErrorStatusField
 				.setToolTipText(Messages.JobsAndRunnablesComponent_wrapTooltip);
+		
+		deferredStatusField = new Button(group, SWT.CHECK);
+		deferredStatusField.setText("Deffered"); //$NON-NLS-1$
+		deferredStatusField.setToolTipText("Does not report error immediately"); //$NON-NLS-1$
 		return group;
 	}
 
@@ -440,6 +444,7 @@ public class JobsAndRunnablesComponent implements TestBedComponent {
 		if (jarr.jobs) {
 			stackLayout.topControl = runJobOptions;
 		}
+		deferredStatusField.setSelection(jarr.deferred);
 		parameters.layout();
 		return true;
 	}

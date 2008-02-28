@@ -1,3 +1,13 @@
+/*******************************************************************************
+ * Copyright (c) 2007, 2008 IBM Corporation and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *     IBM Corporation - initial API and implementation
+ ******************************************************************************/
 package org.eclipse.ui.examples.statushandlers.testtool.views;
 
 import java.lang.reflect.InvocationTargetException;
@@ -42,13 +52,15 @@ public class JobsAndRunnablesRunnable extends TestBedRunnable {
 	private static final String EXCEPTION = "exception"; //$NON-NLS-1$
 	private static final String DURATION = "duration"; //$NON-NLS-1$
 	private static final String PERCENT = "percent"; //$NON-NLS-1$
+	private static final String DEFERRED = "deferred"; //$NON-NLS-1$
 
 	int percent, duration, exceptionIndex;
 
 	String delayString, quantity, rescheduleDelay;
 
 	boolean progressNoForLock, thread, jobLock, system, user, useGroup,
-			reschedule, returnErrorStatus, uiThread, windowRunnable, jobs;
+			reschedule, returnErrorStatus, uiThread, windowRunnable, jobs,
+			deferred;
 
 	private JobAndRunnablesPropertySource source;
 
@@ -57,7 +69,7 @@ public class JobsAndRunnablesRunnable extends TestBedRunnable {
 			String rescheduldeDelay, boolean thread, boolean jobLock,
 			boolean system, boolean user, boolean useGroup, boolean reschedule,
 			boolean returnErrorStatus, boolean uiThread,
-			boolean windowRunnable, boolean jobs) {
+			boolean windowRunnable, boolean jobs, boolean deffered) {
 		this.percent = percent;
 		this.duration = duration;
 		this.exceptionIndex = exception;
@@ -75,10 +87,10 @@ public class JobsAndRunnablesRunnable extends TestBedRunnable {
 		this.uiThread = uiThread;
 		this.windowRunnable = windowRunnable;
 		this.jobs = jobs;
+		this.deferred = deffered;
 	}
 
 	JobsAndRunnablesRunnable() {
-
 	}
 
 	public void run() {
@@ -180,11 +192,11 @@ public class JobsAndRunnablesRunnable extends TestBedRunnable {
 				Job result;
 				if (thread)
 					result = new UITestJob(duration, jobLock, throwAfter,
-							throwable, returnErrorStatus);
+							throwable, returnErrorStatus, deferred);
 				else
 					result = new TestJob(duration, jobLock, reschedule,
 							rescheduleWait, throwAfter, throwable,
-							returnErrorStatus);
+							returnErrorStatus, deferred);
 
 				result.setProgressGroup(group, groupIncrement);
 				result.setSystem(system);
@@ -326,6 +338,7 @@ public class JobsAndRunnablesRunnable extends TestBedRunnable {
 		memento.putString(UI_THREAD, "" + uiThread); //$NON-NLS-1$
 		memento.putString(WINDOWRUNNABLE, "" + windowRunnable); //$NON-NLS-1$
 		memento.putString(JOBS, "" + jobs); //$NON-NLS-1$
+		memento.putString(DEFERRED, "" + deferred); //$NON-NLS-1$
 	}
 
 	/**
@@ -361,6 +374,7 @@ public class JobsAndRunnablesRunnable extends TestBedRunnable {
 		runnable.windowRunnable = new Boolean(memento.getString(WINDOWRUNNABLE))
 				.booleanValue();
 		runnable.jobs = new Boolean(memento.getString(JOBS)).booleanValue();
+		runnable.deferred = new Boolean(memento.getString(DEFERRED)).booleanValue();
 		return runnable;
 	}
 }

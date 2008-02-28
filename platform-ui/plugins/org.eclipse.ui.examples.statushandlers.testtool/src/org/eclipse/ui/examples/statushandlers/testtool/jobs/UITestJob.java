@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2006, 2007 IBM Corporation and others.
+ * Copyright (c) 2006, 2008 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -16,6 +16,7 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.MultiStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.ui.examples.statushandlers.testtool.Messages;
+import org.eclipse.ui.progress.IProgressConstants;
 import org.eclipse.ui.progress.UIJob;
 
 /**
@@ -44,16 +45,22 @@ public class UITestJob extends UIJob {
 	 *            exception to be thrown
 	 * @param returnError
 	 *            indicates if the error should be wrapped in the status
+	 * @param deffered
+	 *            indicates if the error should not be shown immediately
 	 */
 	public UITestJob(long duration, boolean lock, long throwAfter,
-			Throwable toBeThrown, boolean returnError) {
+			Throwable toBeThrown, boolean returnError, boolean deffered) {
 		super(Messages.TestJob_TestJob);
 		this.duration = duration;
 
 		this.throwAfter = throwAfter;
 		this.toBeThrown = toBeThrown;
 		this.returnError = returnError;
-
+		if (deffered) {
+			this.setProperty(
+					IProgressConstants.NO_IMMEDIATE_ERROR_PROMPT_PROPERTY,
+					Boolean.TRUE);
+		}
 		if (lock)
 			setRule(ResourcesPlugin.getWorkspace().getRoot());
 	}

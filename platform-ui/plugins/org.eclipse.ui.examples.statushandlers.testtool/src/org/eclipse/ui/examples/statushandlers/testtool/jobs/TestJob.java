@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2006, 2007 IBM Corporation and others.
+ * Copyright (c) 2006, 2008 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -17,6 +17,7 @@ import org.eclipse.core.runtime.MultiStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.ui.examples.statushandlers.testtool.Messages;
+import org.eclipse.ui.progress.IProgressConstants;
 
 /**
  * Base class for a simple test job with configurable parameters.
@@ -61,10 +62,12 @@ public class TestJob extends Job {
 	 *            exception to be thrown
 	 * @param returnError
 	 *            indicates if the error should be wrapped in the status
+	 * @param deferred
+	 *            indicates if the error should not be shown immediately
 	 */
 	public TestJob(long duration, boolean lock, boolean reschedule,
 			long rescheduleWait, long throwAfter, Throwable toBeThrown,
-			boolean returnError) {
+			boolean returnError, boolean deferred) {
 		super(Messages.TestJob_TestJob);
 		this.duration = duration;
 		this.reschedule = reschedule;
@@ -72,7 +75,11 @@ public class TestJob extends Job {
 		this.throwAfter = throwAfter;
 		this.toBeThrown = toBeThrown;
 		this.returnError = returnError;
-
+		if (deferred) {
+			this.setProperty(
+					IProgressConstants.NO_IMMEDIATE_ERROR_PROMPT_PROPERTY,
+					Boolean.TRUE);
+		}
 		if (lock)
 			setRule(ResourcesPlugin.getWorkspace().getRoot());
 	}

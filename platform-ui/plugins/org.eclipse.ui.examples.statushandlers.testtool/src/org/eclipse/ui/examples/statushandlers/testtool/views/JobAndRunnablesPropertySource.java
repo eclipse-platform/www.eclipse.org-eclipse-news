@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2007 IBM Corporation and others.
+ * Copyright (c) 2007, 2008 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -38,6 +38,7 @@ import org.eclipse.ui.views.properties.PropertyDescriptor;
 	private static final String JOBSANDRUNNABLES_EXCEPTION = "jobsandrunnables.exception"; //$NON-NLS-1$
 	private static final String JOBSANDRUNNABLES_PERCENT = "jobsandrunnables.percent"; //$NON-NLS-1$
 	private static final String JOBSANDRUNNABLES_DURATION = "jobsandrunnables.duration"; //$NON-NLS-1$
+	private static final String JOBSANDRUNNABLES_DEFFERED = "jobsandrunnables.deffered"; //$NON-NLS-1$
 
 	private static final PropertyDescriptor[] descriptors = new PropertyDescriptor[] {
 			new PropertyDescriptor(JOBSANDRUNNABLES_DURATION,
@@ -68,13 +69,15 @@ import org.eclipse.ui.views.properties.PropertyDescriptor;
 			new PropertyDescriptor(JOBSANDRUNNABLES_SYSTEMJOB,
 					Messages.JobAndRunnablesPropertySource_SystemJobProperty),
 			new PropertyDescriptor(JOBSANDRUNNABLES_USERJOB,
-					Messages.JobAndRunnablesPropertySource_USerJobProperty),
+					Messages.JobAndRunnablesPropertySource_UserJobProperty),
 			new PropertyDescriptor(JOBSANDRUNNABLES_INGROUP,
 					Messages.JobAndRunnablesPropertySource_GroupsProperty),
 			new PropertyDescriptor(JOBSANDRUNNABLES_RESCHEDULE,
 					Messages.JobAndRunnablesPropertySource_ResheduleProperty),
 			new PropertyDescriptor(JOBSANDRUNNABLES_WRAPPED,
-					Messages.JobAndRunnablesPropertySource_WrappedProperty), };
+					Messages.JobAndRunnablesPropertySource_WrappedProperty),
+			new PropertyDescriptor(JOBSANDRUNNABLES_DEFFERED,
+					Messages.JobAndRunnablesPropertySource_DeferredProperty), };
 
 	private JobsAndRunnablesRunnable runnable;
 
