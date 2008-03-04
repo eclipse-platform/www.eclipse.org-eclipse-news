@@ -34,7 +34,7 @@ public class ExampleMarkerField extends MarkerField {
 
 	private String getFixablePrefix(MarkerItem item) {
 
-		if (!item.isConcrete())
+		if (item.getMarker() == null)
 			return null;
 
 		IMarker marker = item.getMarker();
