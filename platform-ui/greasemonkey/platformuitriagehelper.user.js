@@ -174,7 +174,9 @@ window.addEventListener("load", function() {
 
   }
 
-  document.getElementById('addselfcc').checked = false;
+  var addToCC = document.getElementById('addselfcc');
+  if (addToCC != null) 
+  	addToCC.checked = false;
 
   document.forms[1].elements[component].addEventListener('change', function(){ var b=document.getElementById('knob-reassign-cmp');b.checked=true;b.scrollIntoView(true); }, false);
 
