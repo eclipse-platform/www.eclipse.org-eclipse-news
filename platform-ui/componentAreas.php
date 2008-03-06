@@ -27,9 +27,9 @@ div.owner {
 
 	# End: page-specific settings
 	#
-	
-		$script = <<<EOHTML 
-	
+	 
+
+?>
 <script language="javascript">
 <!--
 function viewBugsWithSummary(desc) {
@@ -99,9 +99,6 @@ function buildTable(loadedJSON){
 //-->
 <!-- 'directories=0,height=480,location=0,resizable=1,scrollbars=1,toolbar=0,width=515' -->
 </script>
-
-EOHTML;
-?>
 
 <div id="maincontent">
 	<div id="midcolumn">
