@@ -30,9 +30,8 @@
 		
 	# Paste your HTML content between the EOHTML markers!	
 #$json = '{"a":1,"b":2,"c":3,"d":4,"e":5}';#var_dump(json_decode($json));#var_dump(json_decode($json, true));
-$jsonExists = function_exists('json_decode');
 ?>
-json_decode exists :  <?= $jsonExists ?>
+json_decode exists :  <?= function_exists('json_decode') ?>
 <?
 	# Generate the web page
 	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, ob_get_clean());
