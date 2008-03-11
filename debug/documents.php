@@ -76,8 +76,8 @@
 				</li>
 				<li> EclipseCon 2008 there were two tutorials, The Basics and Custom Integeration.  The presentation slides and exercises are available below.
 					<blockquote>
-						<a target="_blank" href="/eclipse/debug/documents/ec_2008/Debug_Tutorial_Basic_2008.ppt">Debug Platform: The Basics</a>
-						<a target="_blank" href="/eclipse/debug/documents/ec_2008/Debug_Tutorial_Custom_Integration_2008.ppt">Debug Platform: Custom Integration</a>
+						<a target="_blank" href="/eclipse/debug/documents/ec_2008/Debug_Tutorial_Basic_2008.ppt">Debug Platform: The Basics</a><br>
+						<a target="_blank" href="/eclipse/debug/documents/ec_2008/Debug_Tutorial_Custom_Integration_2008.ppt">Debug Platform: Custom Integration</a><br>
 						<a target="_blank" href="/eclipse/debug/documents/ec_2008/Exercises.zip">Exercises</a>
 					</blockquote>
 				</li>
