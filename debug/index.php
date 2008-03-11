@@ -79,6 +79,9 @@
 		<div class="homeitem3col">
 			<h3>Up To The Minute</h3>
 			<ul>
+			<li>We are presenting two tutorials at EclipseCon 2008.  The presentations are available for both <a target="_blank" href="/eclipse/debug/documents/ec_2008/Debug_Tutorial_Basic_2008.ppt">Debug Platform: The Basics</a> and <a target="_blank" href="/eclipse/debug/documents/ec_2008/Debug_Tutorial_Custom_Integration_2008.ppt">Debug Platform: Custom Integration</a>. More
+			information can be found on the <a href="/eclipse/debug/documents.php">Documents</a> page along with exercises.
+			</li>
 			<li>To help new contributors, we have created a <a href="/eclipse/debug/documents/project_sets/debug.psf" target="_blank">project set file</a> containing all of the projects needed to get started with debug coding.
 			There is also a project set file for <a href="/eclipse/debug/documents/project_sets/debug3.3.1.psf" target="_blank">3.3.1 maintenance</a>.</li>
 			<li>EclipseCon 2007 went off without a hitch, and the debug team delivered <a target="_blank" href="/eclipse/debug/documents/ec_2007/Debug_Tutorial_2007.pdf">another tutorial</a>. More
