@@ -3,7 +3,6 @@ package org.eclipse.ui.ide.examples.markers.markerSupport;
 import org.eclipse.core.resources.IMarker;
 import org.eclipse.ui.views.markers.MarkerField;
 import org.eclipse.ui.views.markers.MarkerItem;
-import org.eclipse.ui.views.markers.MarkerSupportConstants;
 
 public class SourceIDMarkerField extends MarkerField {
 
@@ -17,8 +16,8 @@ public class SourceIDMarkerField extends MarkerField {
 	public String getValue(MarkerItem item) {
 		IMarker marker = item.getMarker();
 		if(marker == null)
-			return MarkerSupportConstants.EMPTY_STRING;
-		return marker.getAttribute(IMarker.SOURCE_ID,  MarkerSupportConstants.EMPTY_STRING);
+			return "";
+		return marker.getAttribute(IMarker.SOURCE_ID,  "");
 	}
 
 }

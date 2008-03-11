@@ -11,7 +11,6 @@ import org.eclipse.ui.ide.IDE;
 import org.eclipse.ui.ide.examples.markers.MarkerExampleActivator;
 import org.eclipse.ui.views.markers.MarkerField;
 import org.eclipse.ui.views.markers.MarkerItem;
-import org.eclipse.ui.views.markers.MarkerSupportConstants;
 
 public class ExampleMarkerField extends MarkerField {
 
@@ -22,8 +21,7 @@ public class ExampleMarkerField extends MarkerField {
 	@Override
 	public String getValue(MarkerItem item) {
 
-		String message = item.getAttributeValue(IMarker.MESSAGE,
-				MarkerSupportConstants.EMPTY_STRING);
+		String message = item.getAttributeValue(IMarker.MESSAGE, "");
 		String prefix = getFixablePrefix(item);
 
 		if (prefix == null)
