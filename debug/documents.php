@@ -78,7 +78,7 @@
 					<blockquote>
 						<a target="_blank" href="/eclipse/debug/documents/ec_2008/Debug_Tutorial_Basic_2008.ppt">Debug Platform: The Basics</a><br>
 						<a target="_blank" href="/eclipse/debug/documents/ec_2008/Debug_Tutorial_Custom_Integration_2008.ppt">Debug Platform: Custom Integration</a><br>
-						<a target="_blank" href="/eclipse/debug/documents/ec_2008/Exercises.zip">Exercises</a>
+						<a target="_blank" href="/eclipse/debug/documents/ec_2008/exercises.zip">Exercises</a>
 					</blockquote>
 				</li>
  			</ul>
