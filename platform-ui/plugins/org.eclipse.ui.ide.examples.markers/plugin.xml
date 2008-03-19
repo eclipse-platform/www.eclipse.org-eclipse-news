@@ -201,11 +201,11 @@
                id="org.eclipse.ui.ide.examples.markers.sourceID"
                visible="true">
          </markerFieldReference>
-         <markerFieldFilterGrouping
+         <markerFieldConfiguration
                id="org.eclipse.ui.ide.examples.markers.ExampleGroup"
                name="Examples"
                scope="ON_ANY">
-         </markerFieldFilterGrouping>
+         </markerFieldConfiguration>
          <markerGrouping
                id="org.eclipse.ui.ide.allMarkers.severity"
                label="Example Severity">
