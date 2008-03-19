@@ -126,7 +126,7 @@ function loadData() {
 	GM_log("Getting data");
 	var rText = "";
 	GM_xmlhttpRequest( {
-		method : "GET", url : "http://pookzilla.net/jason/componentAreas.json", headers : {
+		method : "GET", url : "http://www.eclipse.org/eclipse/platform-ui/componentAreas.json", headers : {
 		"User-Agent" : "Platform UI Triage Helper", "Accept" : "text/plain", }
 	, onreadystatechange : function(details) {
 		if(details.readyState == 4) {

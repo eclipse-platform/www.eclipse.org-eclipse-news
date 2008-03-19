@@ -32,9 +32,7 @@
 		to automate assignment of component areas and owners.
 		Just click on the script link to load it into your browser. Ensure that Tools->Grease Monkey is enabled in your browser.
 		</br>
-		We used to use an admin script <a href="createcomponentareascrip.user.js">createcomponentareascrip.user.js</a>
-		for updating the triage helper but now the <a href="http://dev.eclipse.org/viewcvs/index.cgi/platform-ui-home/componentAreas.html?view=co">component page</a> no longer has the owners and
-		we just update the script manually and avoid inconsistencies.
+		The script is driven by data <a href="http://www.eclipse.org/eclipse/platform-ui/componentAreas.json">located here</a>.  This data also drives our <a href="http://www.eclipse.org/eclipse/platform-ui/componentAreas.php">component area document</a>.  
 	</div>
 
 EOHTML;
