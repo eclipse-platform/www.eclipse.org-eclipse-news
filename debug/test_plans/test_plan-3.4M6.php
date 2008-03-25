@@ -100,7 +100,7 @@
 			  <tr> 
 			    <td><b>Feature</b></td>
 			    <td><b>Samantha Chan</b></td>
-			    <td><strong>Darin Wright</strong></td>
+			    <td><b>Darin Wright</b></td>
 			    <td><b>Michael Rennie</b></td>
 			    <td><b>Curtis Windatt</b></td>
 			  </tr>
@@ -286,8 +286,14 @@
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"></div></td>
 			  </tr>
+			</table>
+			<table width="80%" border="1">
 			  <tr>
 			  	<td><strong>Non-Java Testing</strong></td>
+			    <td><b>Samantha Chan</b></td>
+			    <td><b>Darin Wright</b></td>
+			    <td><b>Michael Rennie</b></td>
+			    <td><b>Curtis Windatt</b></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Memory">Memory View</a></td>
@@ -1144,6 +1150,7 @@
 				  </li>						  			  		  
 				</ul>
 				<p><a href="#top">Back to top</a><br></p>
+			<a name="Non-Java-Testing"></a>
 			<h3>Non-Java Testing</h3>
 				<a name="Memory"></a>
 				<h4>Memory View</h4>
