@@ -283,9 +283,33 @@
 			    <td><a href="#STRESS">Stress Tests</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td> <div align="center"></div></td>
+			  </tr>
+			  <tr>
+			  	<td>Non-Java Testing</td>
+			  </tr>
+			  <tr> 
+			    <td><a href="#Memory">Memory View</a></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			  </tr>			  
+			  </tr>
+			  <tr> 
+			    <td><a href="#Modules">Modules View</a></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			  </tr>
+			  <tr> 
+			    <td><a href="#Registers">Registers View</a></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			  </tr>
 			</table>
 			</div>
 		</div>
@@ -1119,7 +1143,26 @@
 				    </ul>
 				  </li>						  			  		  
 				</ul>
-				<p><a href="#top">Back to top</a><br></p>				
+				<p><a href="#top">Back to top</a><br></p>
+			<h3>Non-Java Testing</h3>
+				<a name="Memory"></a>
+				<h4>Memory View</h4>
+				<ul>
+				  <li>Test the memory view, more details soon.</li>
+				</ul>
+				<p><a href="#top">Back to top</a><br><hr></p>
+				<a name="Modules"></a>
+				<h4>Modules View</h4>
+				<ul>
+				  <li>Test the modules view, more details soon.</li>
+				</ul>
+				<p><a href="#top">Back to top</a><br><hr></p>
+				<a name="Registers"></a>
+				<h4>Registers View</h4>
+				<ul>
+				  <li>Test the registers view, more details soon.</li>
+				</ul>
+				<p><a href="#top">Back to top</a><br><hr></p>				
 		</div>
 	</div>
 	<div id="rightcolumn">
