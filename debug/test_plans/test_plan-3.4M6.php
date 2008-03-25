@@ -40,7 +40,7 @@
 		<div class="homeitem3col">
 			<h3>Testers</h3>
 			<p>Committers: Darin Wright, Michael Rennie, Curtis Windatt, Samantha Chan</p>
-			<p>Community: Anyone who wants to help</p>
+			<p>Community: Pawel Piech, Anyone who wants to help</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>JRE Grid</h3>
@@ -51,11 +51,12 @@
 				<table width="75%" border="1">
 				  <tr> 
 				    <td width="15%">&nbsp;</td>
-				    <td width="15%"><b>IBM 1.5</b></td>
 				    <td width="15%"><b>JDK 1.4.2</b></td>
-				    <td width="15%"><b>JDK 1.5</b></td>
 				    <td width="15%"><b>IBM 1.4.2</b></td>
+				    <td width="15%"><b>JDK 1.5</b></td>
+					<td width="15%"><b>IBM 1.5</b></td>
 				    <td width="15%"><b>JDK 1.6</b></td>
+				    <td width="15%"><b>IBM 1.6</b></td>
 				  </tr>
 				  <tr> 
 				    <td width="15%"><b>Win Vista</b></td>
@@ -64,6 +65,7 @@
 				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
 					<td width="15%">Curtis Windatt</td>
+					<td width="15%">&nbsp;</td>
 				  </tr>
 				  <tr> 
 				    <td width="15%"><b>Win XP</b></td>
@@ -71,15 +73,17 @@
 				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
 					<td width="15%">&nbsp;</td>
-				    <td width="15%">Samantha Chan</td>
+				    <td width="15%">&nbsp;</td>
+					<td width="15%">Samantha Chan</td>
 				  </tr>
 				  <tr> 
 				    <td width="15%"><b>Linux</b></td>
 				    <td width="15%">&nbsp;</td>
-				    <td width="15%">&nbsp;</td>
-				    <td width="15%">&nbsp;</td>
 				    <td width="15%">Darin Wright</td>
 				    <td width="15%">&nbsp;</td>
+				    <td width="15%">&nbsp;</td>
+				    <td width="15%">&nbsp;</td>
+					<td width="15%">&nbsp;</td>
 				  </tr>
 				  <tr> 
 				    <td width="15%"><b>Mac</b></td>
@@ -88,6 +92,7 @@
 				    <td width="15%">Michael Rennie</td>
 				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
+					<td width="15%">&nbsp;</td>
 				  </tr>
 				</table>
 			</div>
@@ -98,7 +103,7 @@
 			<div align="center">
 			<table width="80%" border="1">
 			  <tr> 
-			    <td><b>Feature</b></td>
+			    <td><b>Feature Testing</b></td>
 			    <td><b>Samantha Chan</b></td>
 			    <td><b>Darin Wright</b></td>
 			    <td><b>Michael Rennie</b></td>
@@ -284,17 +289,16 @@
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td> <div align="center"></div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			</table>
-			<br>
 			<table width="80%" border="1">
-			  <tr>
-			  	<td><strong>Non-Java Testing</strong></td>
+			  <tr> 
+			    <td><b>Non-Java Testing</b></td>
 			    <td><b>Samantha Chan</b></td>
-			    <td><b>Darin Wright</b></td>
-			    <td><b>Michael Rennie</b></td>
-			    <td><b>Curtis Windatt</b></td>
+			    <td><b>Pawel Piech</b></td>
+			    <td><b>&nbsp;</b></td>
+			    <td><b>&nbsp;</b></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Memory">Memory View</a></td>
@@ -306,7 +310,7 @@
 			  <tr> 
 			    <td><a href="#Modules">Modules View</a></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
