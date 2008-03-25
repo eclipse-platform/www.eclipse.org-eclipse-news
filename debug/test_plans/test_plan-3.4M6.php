@@ -103,11 +103,11 @@
 			<div align="center">
 			<table width="80%" border="1">
 			  <tr> 
-			    <td><b>Feature Testing</b></td>
-			    <td><b>Samantha Chan</b></td>
-			    <td><b>Darin Wright</b></td>
-			    <td><b>Michael Rennie</b></td>
-			    <td><b>Curtis Windatt</b></td>
+			    <td width="40%"><b>Feature Testing</b></td>
+			    <td width="15%"><b>Samantha Chan</b></td>
+			    <td width="15%"><b>Darin Wright</b></td>
+			    <td width="15%"><b>Michael Rennie</b></td>
+			    <td width="15%"><b>Curtis Windatt</b></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Java6">Java 6.0 Features</a></td>
@@ -289,16 +289,17 @@
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			  </tr>
 			</table>
+			<p></p>
 			<table width="80%" border="1">
 			  <tr> 
-			    <td><b>Non-Java Testing</b></td>
-			    <td><b>Samantha Chan</b></td>
-			    <td><b>Pawel Piech</b></td>
-			    <td><b>&nbsp;</b></td>
-			    <td><b>&nbsp;</b></td>
+			    <td width="40%"><b>Non-Java Testing</b></td>
+			    <td width="15%"><b>Samantha Chan</b></td>
+			    <td width="15%"><b>Pawel Piech</b></td>
+			    <td width="15%"><b>&nbsp;</b></td>
+			    <td width="15%"><b>&nbsp;</b></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Memory">Memory View</a></td>
