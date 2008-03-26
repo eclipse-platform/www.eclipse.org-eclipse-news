@@ -1160,20 +1160,101 @@
 			<h3>Non-Java Testing</h3>
 				<a name="Memory"></a>
 				<h4>Memory View</h4>
+				To test the Memory View, you will need the example.debug.memoryview sample.  You can get the sample from 
+				the "Advanced Tutorial" from EclipseCon 2007.
 				<ul>
-				  <li>Test the memory view, more details soon.</li>
+				  <li>Add memory block
+					  <ul>
+					  	<li> Try adding multiple memory blocks by using a comma delimited list. </li>
+					  	<li> Try adding a memory block with empty expression </li>
+					  </ul>
+				  </li>
+				  <li>Remove memory block
+					  <ul>
+					  	<li>Remove single memory block</li>
+					  	<li>Remove multiple memory blocks </li>
+					  	<li>Remove all</li>
+					  </ul>				  
+				  </li>	  
+				  <li>Add Memory Rendering
+					  <ul>
+					  	<li>Default renderings get added automatically when a memory block is added.</li>
+					  	<li>Add rendering by clicking the "+" button </li>
+					  	<li>Add rendering from the Add Memory Rendering tab</li>
+					  	<li>Add multiple renderings</li>
+					  </ul>				  
+				  </li>	  			
+				  <li>Remove Memory Rendering
+					  <ul>
+					  	<li>Default renderings get added automatically when a memory block is added.</li>
+					  	<li>Add rendering by clicking the "+" button </li>
+					  	<li>Add rendering from the Add Memory Rendering tab</li>
+					  	<li>Add multiple renderings</li>
+					  </ul>				  
+				  </li>	  	  
+				  <li>Renderings
+					  <ul>
+					  	<li>Make sure all the these renderings can be created:  Hex, Signed Integer, Unsigned Integer, ASCII, Hex Integer </li>
+					  	<li>Bring different renderings to the top.  Make sure that the tab label shows the address
+					  	of the memory block when it is brought to the top. </li>
+					  	<li>Content of the renderings get updated after each step.</li>
+					  	<li>Renderings should mark memory that has changed.</li>
+					  	<li>Memory shows up as grey if the rendering does not have cache to compute changes. e.g hidden when the user is stepping</li>
+					  	<li>Scroll to end of buffer and make sure memory is reloaded.  Try with scrollbar and cursor.</li>
+					  	<li>Top index and curor in rendering are maintined after rendering update.</li>
+					  </ul>				  
+				  </li>	  	 		
+				  <li> Synchronization
+				  	<ul>
+				  		<li>Toggle synchronization on and off</li>
+				  		<li>Scroll Bar</li>
+				  		<li>Table Cursor</li>
+				  		<li>Format...</li>
+				  	</ul>				  	
+				  </li>	
+				  <li>Reset to Base Address </li>
+				  <li>Go to Address:  Context Menu and CTRL+G.  Try different modes.</li>
+				  <li>Auto vs Manual Loading
+				  	<ul>
+				  		<li>Try auto loading</li>
+				  		<li>Try manual loading</li>
+				  		<li>Try different buffer sizes</li>
+				  		<li>Try page up and page down actions during manual loading. Try shortcut keys:  CTRL+sHIFT+> and CTRL+SHIFT+< </li>
+				  		<li>Make sure buffer size and loading preferences are preserved after workbench restart.</li>
+				  	</ul>
+				  </li>	  
+				  <li>Try swtiching between memory blocks:  Tree viewer and Switch Memory Monitor action</li>
+				  <li>Memory View Layout
+				  	<ul>
+				  		<li>Show and Hide Memory Monitors Pane</li>
+				  		<li>Show and Hide Renderings Pane</li>
+				  		<li>Try with having multiple memory views/li>
+				  		<li>Preferences are persisted across workbench restart</li>
+				  		<li>Vertical vs Horizontal Orientation</li>
+				  	</ul>
+				  </li>
 				</ul>
 				<p><a href="#top">Back to top</a><br><hr></p>
 				<a name="Modules"></a>
 				<h4>Modules View</h4>
 				<ul>
-				  <li>Test the modules view, more details soon.</li>
+				  <li>Modules View can be populated with flexible hierarchy</li>
+				  <li>Find...</li>
+				  <li>Details pane can be popuated</li>
 				</ul>
 				<p><a href="#top">Back to top</a><br><hr></p>
 				<a name="Registers"></a>
 				<h4>Registers View</h4>
 				<ul>
-				  <li>Test the registers view, more details soon.</li>
+				  <li>The Registers View can be populated with Register Group and Registers</li>
+				  <li>Register values get updated when their values change.</li>
+				  <li>Modify register values</li>
+				  <li>Find a register</li>
+				  <li>Copy registers</li>				  
+				  <li>Turn column on and off</li>
+				  <li>Show and hide columns</li>
+				  <li>Details pane shows details of registers</li>
+				  <li>Top index and expansion of registers are maintained after each step or switching stackframe.</li>
 				</ul>
 				<p><a href="#top">Back to top</a><br><hr></p>				
 		</div>
