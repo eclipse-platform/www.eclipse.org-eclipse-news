@@ -86,8 +86,10 @@
 				<tbody>
 				<tr> 
 					<td width="30%" valign="top">No Picture</td>
-					<td width="70%">Curtis Windatt is an Debug team member with the IBM Rational team. 
-					Before that he was a student at the University of Manitoba.</td>
+					<td width="70%">Curtis Windatt is a Platform/JDT Debug committer working for IBM Rational in
+					Winnipeg, Canada.  In addition to Debug, he is an active contributor to PDE and is involved
+					in the the Equinox p2 (provisioning) project. Before joining IBM he was a student at the 
+					University of Manitoba.</td>
 				</tr>
 				<tr> 
 					<td width="30%" valign="top"><b>Status</b></td>
@@ -116,6 +118,29 @@
 				<tr> 
 					<td width="30%" valign="top"><b>Email</b></td>
 					<td width="70%">chanskw@ca.ibm.com</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="homeitem3col">
+			<h3>Pawel Piech</h3>
+			<table width="100%" border="0" summary="About Pawel Piech">
+				<tbody>
+				<tr> 
+					<td width="30%" valign="top">No Picture</td>
+					<td width="70%">Pawel Piech is a member of the debugger team at Wind River Systems, 
+					project lead for the Device Debugging project and the newest Debug 
+					platform committer.  For the last five years Pawel has been working on 
+					the debugger front end of the Wind River Workbench IDE.  Graduated from 
+					Boston University with BSCE in '97.</td>
+				</tr>
+				<tr> 
+					<td width="30%" valign="top"><b>Status</b></td>
+					<td width="70%">Active</td>
+				</tr>
+				<tr> 
+					<td width="30%" valign="top"><b>Email</b></td>
+					<td width="70%">pawel.piech@windriver.com</td>
 				</tr>
 				</tbody>
 			</table>
