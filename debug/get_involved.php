@@ -64,7 +64,7 @@
 		</div>
 		<div class="homeitem3col">
 		<h3>Connect to the Eclipse Repository</h3>
-			<p>The easiest way to download the correct projects from CVS is to use our <a href="/eclipse/debug/documents/project_sets/debug.psf">Debug Project Set File</a>.  Download the psf file then in Eclipse go to <b>File > Import</b> and select <b>Team > Team Project Set</b>.  If you have not done so already, you will have to define a repository connection which can be done using the information below.  The project set file will checkout the debug projects from CVS. More information about project set files can be found on the <a href="http://wiki.eclipse.org/PSF" target="_blank">PSF Wiki Page</a>.</p>
+			<p>The easiest way to download the correct projects from CVS is to use our <a href="/eclipse/debug/documents/project_sets/psf_files.php">Debug Project Set File</a>.  Download the psf file for non-committers then in Eclipse go to <b>File > Import</b> and select <b>Team > Team Project Set</b>.  If you have not done so already, you will have to define a repository connection which can be done using the information below.  The project set file will checkout the debug projects from CVS. More information about project set files can be found on the <a href="http://wiki.eclipse.org/PSF" target="_blank">PSF Wiki Page</a>.</p>
 		      </p>
 		
 			<p>Create a CVS Repository Location with the following information:</p>
@@ -221,7 +221,7 @@
 		<div class="homeitem3col">
 			<h3>Test Passes</h3>
 			<p>Before every milestone release the Debug Team does an intense one-day test pass where we test all of the functionality of the debug components.  We try to check everything to make sure 100% of the functionality is available in every major release.  In addition, we try odd use cases and unusual code to ensure our code is as robust as possible.</p>
-			<p>To organize the test pass, we follow a <a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.4.php">test matrix</a>.  The matrix defines who is working on which platform (OS and VM combination) and who is responsible for testing what functionality.  The matrix also contains a basic overview of what must be tested in each section.</p>
+			<p>To organize the test pass, we follow a <a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plans.php">test matrix</a>.  The matrix defines who is working on which platform (OS and VM combination) and who is responsible for testing what functionality.  The matrix also contains a basic overview of what must be tested in each section.</p>
 			<p>NOTE: Testing should always be done on your host, so to launch Eclipse with a specific vm, you should launch Eclipse with the following argument: -vm C:\(JVM Location)\java.exe</p>
 			<p>If you would like to help out during a test pass, contact us via our <a href="#mailing_lists">mailing lists</a>.  Before the test pass, let us know what platform you are going to test on and what sections you are planning to test.  If you have any questions about how to test some area, we would be happy to help explain.</p>
 		</div>

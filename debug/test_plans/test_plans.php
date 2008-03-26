@@ -27,7 +27,7 @@
 	
 	
 	$pageTitle 		= "Debug Test Plans";
-	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching, test, testing, plan, plans, 3.4, M3, 3.4M3";
+	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching, test, testing, plan, plans, 3.4, 3.3";
 	$pageAuthor		= "Debug Team";
 	
 	include("../_sideCommon.php");
