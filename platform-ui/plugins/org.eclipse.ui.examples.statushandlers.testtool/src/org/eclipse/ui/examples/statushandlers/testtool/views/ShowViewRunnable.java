@@ -110,7 +110,7 @@ class ShowViewRunnable extends TestBedRunnable {
 					.getActiveWorkbenchWindow()
 					.getActivePage()
 					.showView(
-							"org.eclipseinternal.ui.tests.statushandling.PartInitExceptionView"); //$NON-NLS-1$
+							"org.eclipse.ui.examples.statushandlers.testtool.views.PartInitExceptionView"); //$NON-NLS-1$
 		} catch (PartInitException e) {
 			// should not be thrown !
 			e.printStackTrace();
@@ -124,7 +124,7 @@ class ShowViewRunnable extends TestBedRunnable {
 					.getActiveWorkbenchWindow()
 					.getActivePage()
 					.showView(
-							"org.eclipseinternal.ui.tests.statushandling.RuntimeExceptionView"); //$NON-NLS-1$
+							"org.eclipse.ui.examples.statushandlers.testtool.views.RuntimeExceptionView"); //$NON-NLS-1$
 		} catch (PartInitException e) {
 			// should not be thrown !
 			e.printStackTrace();

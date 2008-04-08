@@ -71,13 +71,13 @@
       <view
             category="org.eclipse.ui.examples.statushandlers.testtool.Status"
             class="org.eclipse.ui.examples.statushandlers.testtool.views.PartInitExceptionView"
-            id="org.eclipse.ui.examples.statushandlers.testtool.PartInitExceptionView"
+            id="org.eclipse.ui.examples.statushandlers.testtool.views.PartInitExceptionView"
             name="PartInitExceptionView">
       </view>
       <view
             category="org.eclipse.ui.examples.statushandlers.testtool.Status"
-            class="org.eclipse.ui.tests.statushandlers.views.RuntimeExceptionView"
-            id="org.eclipseinternal.ui.tests.statushandling.RuntimeExceptionView"
+            class="org.eclipse.ui.examples.statushandlers.testtool.views.RuntimeExceptionView"
+            id="org.eclipse.ui.examples.statushandlers.testtool.views.RuntimeExceptionView"
             name="RuntimeExceptionView">
       </view>
    </extension>
