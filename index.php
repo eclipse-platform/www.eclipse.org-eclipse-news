@@ -50,7 +50,9 @@ ob_start();
 				Release plans and other information about the Eclipse Project development process.
       	   </li>
       	   <li><a href="http://download.eclipse.org/eclipse/">Downloads</a><br>
-				Download the Eclipse SDK, Eclipse RCP, SWT, the Eclipse Java compiler, and many more.
+				Download the Eclipse SDK, Eclipse RCP, SWT, the Eclipse Java compiler, and many more. You
+				can find the current release here.  Or, download the latest stable and integration builds if you want
+				to try out the newest features under development, or get started with contributing to the project.
       	   </li>
       	   <li><a href="../documentation/main.html">Documentation</a><br>
 				Browse the documentation included with Eclipse Project releases.
