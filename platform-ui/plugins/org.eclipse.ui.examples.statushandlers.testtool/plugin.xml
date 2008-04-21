@@ -54,6 +54,13 @@
                label="Open InfoDialog Action"
                menubarPath="SHMenu/sampleGroup">
          </action>
+         <action
+               class="org.eclipse.ui.examples.statushandlers.testtool.actions.EnableSupportAction"
+               id="org.eclipse.ui.examples.statushandlers.testtool.action1"
+               label="Enable Support"
+               menubarPath="SHMenu/sampleGroup"
+               style="toggle">
+         </action>
 		</actionSet>
 	</extension>
 	   <extension
