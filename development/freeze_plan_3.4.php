@@ -57,7 +57,7 @@ ob_start();
 </table>
 <tbody> <tr> <td valign="top" align="left" colspan="2"><b>Status</b></td></tr>
 <tr> <td valign="top" align="right"></td><td> 
-<p><font color="#ff0000"><b>April 23, 2008 - Preparing for 3.4M7.. 
+<p><b>April 23, 2008 - Preparing for 3.4M7.. 
       </td></tr> 
   
 </td>
