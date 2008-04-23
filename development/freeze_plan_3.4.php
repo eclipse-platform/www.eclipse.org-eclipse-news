@@ -43,7 +43,6 @@ ob_start();
 <head>
 <title>Eclipse 3.4 Endgame Plan</title>
 
-<body text="#000000" vlink="#551a8b" alink="#ff0000" link="#0000ee" bgcolor="#ffffff">
 
 <table cellspacing="5" cellpadding="2" width="100%" border="0">
   <tbody>
@@ -52,8 +51,7 @@ ob_start();
         <p><font class="indextop">Eclipse 3.4 <b>Draft</b><br>
         Endgame Plan</font><br>
         <font class="indexsub">Updated frequently to reflect current status</font></p>
-      </td>
-      <td width="20%"><img src="images/howto_banner.jpg" align="center" width="272" height="111"></td>
+      </td> 
     </tr>
   </tbody>
 </table>
@@ -287,7 +285,7 @@ ob_start();
         <tr>
       <td valign="top" align="right"><img src="images/Adarrow.gif" border="0" width="16" height="16"></td>
       <td>
-        <p><a href="http://www.eclipse.org/eclipse/platform-releng/3.4-endgame-buildschedule.html">3.4 Endgame Build
+        <p><a href="http://www.eclipse.org/eclipse/platform-releng/buildSchedule.html ">Build
         Schedule</a> - details on build times.</p>
       </td>
     </tr>   
