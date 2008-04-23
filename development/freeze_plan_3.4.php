@@ -62,7 +62,7 @@ ob_start();
     </tr>
     <tr>
       <td valign="top" align="right"><img src="images/Adarrow.gif" border="0" width="16" height="16"></td>
-      <td> <p><b><font color="#ff0000">June 11, 2007 - Eclipse 3.4 RC4 now available. </font></b></p>
+      <td> <p><b><font color="#ff0000">April 23, 2008 - Preparing for 3.4M7. </font></b></p>
 </td>
     </tr>
     <tr>
