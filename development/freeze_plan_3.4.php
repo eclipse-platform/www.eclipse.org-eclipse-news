@@ -55,19 +55,15 @@ ob_start();
     </tr>
   </tbody>
 </table>
-<table cellspacing="5" cellpadding="2" width="103%" border="0">
-  <tbody>
-    <tr>
-      <td valign="top" align="left" bgcolor="#0080c0" colspan="2"><b><font face="Arial,Helvetica" color="#ffffff">Status</font></b></td>
-    </tr>
-    <tr>
-      <td valign="top" align="right"><img src="images/Adarrow.gif" border="0" width="16" height="16"></td>
-      <td> <p><b><font color="#ff0000">April 23, 2008 - Preparing for 3.4M7. </font></b></p>
+<tbody> <tr> <td valign="top" align="left" colspan="2"><b>Status</b></td></tr>
+<tr> <td valign="top" align="right"></td><td> 
+<p><font color="#ff0000"><b>April 23, 2008 - Preparing for 3.4M7.. 
+      </td></tr> 
+  
 </td>
     </tr>
     <tr>
-      <td valign="top" align="left" bgcolor="#0080c0" colspan="2"><b><font face="Arial,Helvetica" color="#ffffff">Detailed
-        Timeline</font></b></td>
+      <td valign="top" align="left" colspan="2"><b>Detailed Timeline</b></td>
     </tr>
     <tr>
       <td valign="top" align="left" colspan="2">
@@ -83,7 +79,7 @@ ob_start();
             <td align="right" height="18">Mon 8:00 am EDT</td>
             <td height="18">&nbsp;&nbsp;<b>Transition to fix and polish mode</b></td>
             <td height="18">&nbsp;&nbsp;</td>
-            <td height="18">&nbsp;&nbsp;<b><a href="#Transition"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"><font color="#00aa00">details</font></a></b></td>
+            <td height="18">&nbsp;&nbsp;<b><a href="#Transition"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">details</a></b></td>
             <td height="18">&nbsp;&nbsp;</td>
           </tr>         
           <tr>
@@ -93,7 +89,7 @@ ob_start();
             <td align="right" height="18">Thu 00:10 am EDT</td>
             <td height="18">&nbsp;&nbsp;<b>Release Candidate 1 build</b></td>
             <td height="18">&nbsp;&nbsp;</td>
-            <td height="18">&nbsp;&nbsp;<b><a href="#FixPassAfterRC"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"><font color="#00aa00">rules</font></a></b></td>
+            <td height="18">&nbsp;&nbsp;<b><a href="#FixPassAfterRC"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">rules</a></b></td>
             <td height="18">&nbsp;&nbsp;</td>
           </tr>
            <tr>
@@ -107,7 +103,7 @@ ob_start();
             <td align="right" height="18">Mon 8:00 am EDT</td>
             <td height="18">&nbsp;<b>Start 2-day test pass against RC1</b></td>
             <td height="18">&nbsp;&nbsp;</td>
-            <td height="18">&nbsp;&nbsp;<b><a href="#TestPassBeforeRC2"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"><font color="#00aa00">details</font></a></b></td>
+            <td height="18">&nbsp;&nbsp;<b><a href="#TestPassBeforeRC2"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">details</a></b></td>
             <td height="18">&nbsp;&nbsp;</td>
           </tr>           
           <tr>
@@ -117,7 +113,7 @@ ob_start();
             <td align="right" height="18">Wed 8:00 am EDT</td>
             <td height="18">&nbsp;&nbsp;<b>Start fix pass</b></td>
             <td height="18">&nbsp;&nbsp;</td>
-            <td height="18">&nbsp;&nbsp;<b><a href="#FixPassAfterRC2"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"><font color="#00aa00">rules</font></a></b></td>
+            <td height="18">&nbsp;&nbsp;<b><a href="#FixPassAfterRC2"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">rules</a></b></td>
             <td height="18">&nbsp;&nbsp;</td>
           </tr>
           <tr>
@@ -131,7 +127,7 @@ ob_start();
             <td align="right" height="18"> Fri 00:10 am EDT</td>
             <td height="18">&nbsp;&nbsp;<b>Release Candidate 2 build</b></td>
             <td height="18">&nbsp;</td>
-            <td height="18">&nbsp;&nbsp;<b><a href="#RC2"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"><font color="#00aa00">goals</font></a></b></td>
+            <td height="18">&nbsp;&nbsp;<b><a href="#RC2"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">goals</a></b></td>
             <td height="18">&nbsp;&nbsp;</td>
           </tr>
           
@@ -143,7 +139,7 @@ ob_start();
             <td align="right" height="18">Mon 8:00 am EDT</td>
             <td height="18">&nbsp;&nbsp;<b>Start 2-day test pass against RC2</b></td>
             <td height="18">&nbsp;&nbsp;</td>
-            <td height="18">&nbsp;&nbsp;<b><a href="#TestPassUsingRC2"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"><font color="#00aa00">details</font></a></b></td>
+            <td height="18">&nbsp;&nbsp;<b><a href="#TestPassUsingRC2"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">details</a></b></td>
             <td height="18">&nbsp;&nbsp;</td>
           </tr>          
           <tr>
@@ -153,7 +149,7 @@ ob_start();
             <td align="right" height="18">Wed 8:00 am EDT</td>
             <td height="18">&nbsp;&nbsp;<b>Start fix pass</b></td>
             <td height="18">&nbsp;&nbsp;</td>
-            <td height="18">&nbsp;&nbsp;<b><a href="#FixPassAfterRC2"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"><font color="#00aa00">rules</font></a></b></td>
+            <td height="18">&nbsp;&nbsp;<b><a href="#FixPassAfterRC2"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">rules</a></b></td>
             <td height="18">&nbsp;&nbsp;</td>
           </tr>
           <tr>
@@ -163,7 +159,7 @@ ob_start();
             <td align="right" height="18">Fri 00:10 am EDT</td>
             <td height="18">&nbsp;&nbsp;<b>Release Candidate 3 build</b></td>
             <td height="18">&nbsp;&nbsp;</td>
-            <td height="18">&nbsp;&nbsp;<b><a href="#RC3"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"><font color="#00aa00">goals</font></a></b></td>
+            <td height="18">&nbsp;&nbsp;<b><a href="#RC3"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">goals</a></b></td>
             <td height="18">&nbsp;&nbsp;</td>
           </tr>
           <tr>
@@ -181,7 +177,7 @@ ob_start();
             <td align="right" height="18">&nbsp;&nbsp;&nbsp;Mon 8:00 am EDT</td>
             <td height="18">&nbsp;&nbsp;<b>All-day test pass against RC3</b></td>
             <td height="18">&nbsp;</td>
-            <td height="18">&nbsp;&nbsp;<b><a href="#TestPassUsingRC3"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"><font color="#00aa00">details</font></a></b></td>
+            <td height="18">&nbsp;&nbsp;<b><a href="#TestPassUsingRC3"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">details</a></b></td>
             <td height="18">&nbsp;&nbsp;</td>
           </tr>
           <tr>
@@ -191,7 +187,7 @@ ob_start();
             <td align="right" height="18">Tue 8:00 am EDT</td>
             <td height="18">&nbsp;&nbsp;<b>Start fix pass</b></td>
             <td height="18">&nbsp;&nbsp;</td>
-            <td height="18">&nbsp;&nbsp;<b><a href="#FixPassAfterRC3"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"><font color="#00aa00">rules</font></a></b></td>
+            <td height="18">&nbsp;&nbsp;<b><a href="#FixPassAfterRC3"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">rules</a></b></td>
             <td height="18">&nbsp;&nbsp;</td>
           </tr>
           <tr>
@@ -205,7 +201,7 @@ ob_start();
             <td align="right" height="18">Fri 00:10 EDT</td>
             <td height="18">&nbsp;&nbsp;<b>Release Candidate 4 build</b></td>
             <td height="18">&nbsp;</td>
-            <td height="18">&nbsp;&nbsp;<b><a href="#RC4"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"><font color="#00aa00">goals</font></a></b></td>
+            <td height="18">&nbsp;&nbsp;<b><a href="#RC4"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">goals</a></b></td>
             <td height="18">&nbsp;&nbsp;</td>
           </tr>
 		  <tr>
@@ -272,15 +268,15 @@ ob_start();
             <td align="right" height="18"></td>
             <td height="18">&nbsp;&nbsp;<b>Release 3.4 available</b></td>
             <td height="18">&nbsp;&nbsp;</td>
-            <td height="18">&nbsp;&nbsp;<b><a href="#Release3.4"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"><font color="#00aa00">details</font></a></b></td>
+            <td height="18">&nbsp;&nbsp;<b><a href="#Release3.4"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">details</a></b></td>
             <td height="18">&nbsp;&nbsp;</td>
           </tr>
         </table>
       </td>
     </tr>
     <tr>
-      <td valign="top" align="left" bgcolor="#0080c0" colspan="2"><b><font face="Arial,Helvetica" color="#ffffff">Useful
-        Links</font></b></td>
+      <td valign="top" align="left" bgcolor="#0080c0" colspan="2"><b><Useful
+        Links</b></td>
     </tr>
         <tr>
       <td valign="top" align="right"><img src="images/Adarrow.gif" border="0" width="16" height="16"></td>
@@ -322,8 +318,7 @@ ob_start();
       </td>
     </tr>
     <tr>
-      <td valign="top" align="left" bgcolor="#0080c0" colspan="2"><b><font face="Arial,Helvetica" color="#ffffff">What
-        is the game plan?</font></b></td>
+      <td valign="top" align="left" colspan="2"><b>What is the game plan?</b></td>
     </tr>
     <tr>
       <td valign="top" align="right" width="2%"><img src="images/Adarrow.gif" border="0" width="16" height="16"></td>
@@ -447,11 +442,10 @@ ob_start();
 <table cellspacing="5" cellpadding="2" width="100%" border="0">
   <tbody>
     <tr>
-      <td valign="top" align="left" bgcolor="#0080c0" colspan="2"><b><font face="Arial,Helvetica" color="#ffffff">Details</font></b></td>
-    </tr>
+      <td valign="top" align="left" colspan="2"><b>Details</b></td></tr>
     <tr>
-      <td width="20%" valign="top" align="left"><b><font face="Arial,Helvetica"><a name="Transition"></a>Transition 
-        to fix and polish</font></b></td>
+      <td width="20%" valign="top" align="left"><b><a name="Transition"></a>Transition 
+        to fix and polish</b></td>
       <td>
         <table cellspacing="0" cellpadding="5" width="100%" border="1">
           <tr>
@@ -468,7 +462,7 @@ ob_start();
       </td>
     </tr>
     <tr>
-      <td width="20%" valign="top" align="left"><b><font face="Arial,Helvetica" color="#000000"><a name="RC0"></a>RC0/M7</font></b></td>
+      <td width="20%" valign="top" align="left"><b><a name="RC0"></a>RC0/M7</b></td>
       <td>
         <table cellspacing="0" cellpadding="5" width="100%" border="1">
           <tr>
@@ -486,7 +480,7 @@ ob_start();
       </td>
     </tr>
     <tr>
-      <td width="20%" valign="top" align="left"><b><font face="Arial,Helvetica" color="#000000"><a name="RC1"></a>RC1</font></b></td>
+      <td width="20%" valign="top" align="left"><b><a name="RC1"></a>RC1</b></td>
       <td>
         <table cellspacing="0" cellpadding="5" width="100%" border="1">
           <tr>
@@ -507,8 +501,8 @@ ob_start();
       </td>
     </tr>
     <tr>
-      <td width="20%" valign="top" align="left"><b><font face="Arial,Helvetica" color="#000000"><a name="TestPassBeforeRC2"></a>Test
-        pass prior to RC2</font></b></td>
+      <td width="20%" valign="top" align="left"><b><a name="TestPassBeforeRC2"></a>Test
+        pass prior to RC2</b></td>
       <td>
         <table cellspacing="0" cellpadding="5" width="100%" border="1">
           <tr>
@@ -524,7 +518,7 @@ ob_start();
       </td>
     </tr>
     <tr>
-      <td width="20%" valign="top" align="left"><b><font face="Arial,Helvetica" color="#000000"><a name="RC2"></a>RC2</font></b></td>
+      <td width="20%" valign="top" align="left"><b><a name="RC2"></a>RC2</b></td>
       <td>
         <table cellspacing="0" cellpadding="5" width="100%" border="1">
           <tr>
@@ -545,8 +539,7 @@ ob_start();
       </td>
     </tr>
     <tr>
-      <td width="20%" valign="top" align="left"><b><font face="Arial,Helvetica" color="#000000"><a name="TestPassUsingRC2"></a>Test
-        pass using RC2</font></b></td>
+      <td width="20%" valign="top" align="left"><b><a name="TestPassUsingRC2"></a>Test pass using RC2</b></td>
       <td>
         <table cellspacing="0" cellpadding="5" width="100%" border="1">
           <tr>
@@ -561,7 +554,7 @@ ob_start();
       </td>
     </tr>
     <tr>
-      <td width="20%" valign="top" align="left"><b><font face="Arial,Helvetica" color="#000000"><a name="RC3"></a>RC3</font></b></td>
+      <td width="20%" valign="top" align="left"><b><a name="RC3"></a>RC3</b></td>
       <td>
         <table cellspacing="0" cellpadding="5" width="100%" border="1">
           <tr>
@@ -578,8 +571,7 @@ ob_start();
       </td>
     </tr>
     <tr>
-      <td width="20%" valign="top" align="left"><b><font face="Arial,Helvetica" color="#000000"><a name="TestPassUsingRC3"></a>Test
-        pass using RC3</font></b></td>
+      <td width="20%" valign="top" align="left"><b><a name="TestPassUsingRC3"></a>Test pass using RC3</b></td>
       <td>
         <table cellspacing="0" cellpadding="5" width="100%" border="1">
           <tr>
@@ -593,7 +585,7 @@ ob_start();
       </td>
     </tr>
     <tr>
-      <td width="20%" valign="top" align="left"><b><font face="Arial,Helvetica" color="#000000"><a name="RC4"></a>RC4</font></b></td>
+      <td width="20%" valign="top" align="left"><b><a name="RC4"></a>RC4</b></td>
       <td>
         <table cellspacing="0" cellpadding="5" width="100%" border="1">
           <tr>
@@ -609,8 +601,7 @@ ob_start();
     </tr>
 	
     <tr>
-      <td width="20%" valign="top" align="left"><b><font face="Arial,Helvetica" color="#000000"><a name="R3.4"></a>Release
-        3.4</font></b></td>
+      <td width="20%" valign="top" align="left"><a name="R3.4"></a>Release 3.4</b></td>
       <td>
         <table cellspacing="0" cellpadding="5" width="100%" border="1">
           <tr>
@@ -632,8 +623,7 @@ ob_start();
 <table cellspacing="5" cellpadding="2" width="100%" border="0">
   <tbody>
     <tr>
-      <td valign="top" align="left" bgcolor="#0080c0" colspan="2"><b><font face="Arial,Helvetica" color="#ffffff">Fix
-        pass rules of engagement</font></b></td>
+      <td valign="top" align="left" bgcolor="#0080c0" colspan="2"><b>Fix pass rules of engagement</b></td>
     </tr>
     <tr>
       <td width="20%" valign="top" align="left"><b><a name="FixPassAfterRC"></a>May 7-18</b><br>
