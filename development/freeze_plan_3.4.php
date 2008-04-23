@@ -55,13 +55,10 @@ ob_start();
     </tr>
   </tbody>
 </table>
+<table cellspacing="5" cellpadding="2" width="100%" border="0">
 <tbody> <tr> <td valign="top" align="left" colspan="2"><b>Status</b></td></tr>
 <tr> <td valign="top" align="right"></td><td> 
-<p><b>April 23, 2008 - Preparing for 3.4M7.. 
-      </td></tr> 
-  
-</td>
-    </tr>
+<p><b>April 23, 2008 - Preparing for 3.4M7.</td></tr>
     <tr>
       <td valign="top" align="left" colspan="2"><b>Detailed Timeline</b></td>
     </tr>
