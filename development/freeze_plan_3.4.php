@@ -275,7 +275,7 @@ ob_start();
       </td>
     </tr>
     <tr>
-      <td valign="top" align="left" bgcolor="#0080c0" colspan="2"><b><Useful
+      <td valign="top" align="left" colspan="2"><b><Useful
         Links</b></td>
     </tr>
         <tr>
@@ -623,7 +623,7 @@ ob_start();
 <table cellspacing="5" cellpadding="2" width="100%" border="0">
   <tbody>
     <tr>
-      <td valign="top" align="left" bgcolor="#0080c0" colspan="2"><b>Fix pass rules of engagement</b></td>
+      <td valign="top" align="left" colspan="2"><b>Fix pass rules of engagement</b></td>
     </tr>
     <tr>
       <td width="20%" valign="top" align="left"><b><a name="FixPassAfterRC"></a>May 7-18</b><br>
