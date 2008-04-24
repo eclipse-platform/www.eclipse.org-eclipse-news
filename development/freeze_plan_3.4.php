@@ -43,18 +43,6 @@ ob_start();
 <head>
 <title>Eclipse 3.4 Endgame Plan</title>
 
-
-<table cellspacing="5" cellpadding="2" width="100%" border="0">
-  <tbody>
-    <tr>
-      <td align="left" width="80%">
-        <p><font class="indextop">Eclipse 3.4 <b>Draft</b><br>
-        Endgame Plan</font><br>
-        <font class="indexsub">Updated frequently to reflect current status</font></p>
-      </td> 
-    </tr>
-  </tbody>
-</table>
 <table cellspacing="5" cellpadding="2" width="100%" border="0">
 <tbody> <tr> <td valign="top" align="left" colspan="2"><b>Status</b></td></tr>
 <tr> <td valign="top" align="right"></td><td> 
@@ -370,7 +358,7 @@ ob_start();
       <td width="98%"> <p><b><a name="ReleaseCandidate"></a>Release Candidate</b> 
           - Release candidate builds are like milestone builds. The main difference 
           is that release candidate builds are usually immediately followed by 
-          a rigorous test pass, whereas milestone builds. We test each release 
+          a rigorous test pass. We test each release 
           candidate to find serious bugs and to increase our confidence in what 
           we have. We then fix the serious bugs in each release candidate to get 
           the next release candidate, which ought to be even better. Each release 
@@ -402,7 +390,7 @@ ob_start();
         be focused on concurrently preparing candidate fixes for &quot;stop
         ship&quot; bugs or other high priority tasks). Everyone in the Eclipse
         community is encouraged to participate in test passes and report bugs to
-        <a href="http://dev.eclipse.org/bugs/">bugzilla</a>. Ideally, the bug
+        <a href="https://bugs.eclipse.org/bugs/">bugzilla</a>. Ideally, the bug
         report should explicitly call attention to regressions and potential
         &quot;stop ship&quot; problems.</p>
       </td>
@@ -526,10 +514,9 @@ ob_start();
                 <li>Accurate prioritization of all outstanding defects.
                 <li>No outstanding P1 defects.
                 <li>As few P2 defects as possible.</li>
-              </ul>			  
-			  Note that Thursday May 17 is a holiday in Switzerland and France.
+              </ul>  
 			  Monday May 19 is a holiday in Canada. 
-			  Monday May 26 is a holiday in the US and Switzerland.              
+			  Monday May 26 is a holiday in the US.              
               </td>
           </tr>
         </table>
