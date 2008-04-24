@@ -114,7 +114,8 @@ ob_start();
             <td height="18">&nbsp;</td>
             <td height="18">&nbsp;&nbsp;<b><a href="#RC2"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">goals</a></b></td>
             <td height="18">&nbsp;&nbsp;</td>
-          </tr>          
+          </tr>
+          
            <tr>
             <td align="right" height="18"><b>June 2007</b>&nbsp;</td>
             <td height="18"><img src="images/tbar_l.gif" width="24" height="18"></td>
