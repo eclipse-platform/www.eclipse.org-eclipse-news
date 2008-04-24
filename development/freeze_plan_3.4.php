@@ -283,19 +283,7 @@ ob_start();
         <p><a href="http://www.eclipse.org/eclipse/development/eclipse_project_plan_3_4.html">Eclipse
         Project 3.4 Plan</a></p>
       </td>
-    </tr>
-    <tr>
-      <td valign="top" align="right"><img src="images/Adarrow.gif" border="0" width="16" height="16"></td>
-      <td>
-        <p><a href="http://wiki.eclipse.org/index.php/Polish3.4">Eclipse 3.4 Polish Items</a></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" align="right"><img src="images/Adarrow.gif" border="0" width="16" height="16"></td>
-      <td>
-        <p><a href="http://wiki.eclipse.org/index.php/Performance3.4">Eclipse 3.4 Performance Items</a></p>
-      </td>
-    </tr>
+    </tr>   
     <tr>
       <td valign="top" align="right"><img src="images/Adarrow.gif" border="0" width="16" height="16"></td>
       <td>
