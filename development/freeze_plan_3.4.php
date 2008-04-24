@@ -761,9 +761,7 @@ ob_start();
               changes prior to release. Person who reported bug should mark the
               bug as verified once they have retested.</td>
           </tr>
-        </table>
-      </td>
-    </tr>
+        </table>   
     </div>
   </div>
 
