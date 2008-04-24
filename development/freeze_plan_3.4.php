@@ -82,7 +82,7 @@ ob_start();
           <tr>
             <td height="18"></td>
             <td height="18"><img src="images/tbar_r.gif" width="24" height="18"></td>
-            <td align="right" height="18">8</td>
+            <td align="right" height="18">15</td>
             <td align="right" height="18">Thu 00:10 am EDT</td>
             <td height="18">&nbsp;&nbsp;<b>Release Candidate 1 build</b></td>
             <td height="18">&nbsp;&nbsp;</td>
@@ -490,7 +490,7 @@ ob_start();
                 <li>As few P2 defects as possible.</li>
               </ul>
               <p>&nbsp;</p>
-               Note that May 8 is a holiday in France.
+               Note that May 8 is a holiday in France. May 12th is a holiday in Switzerland and possibly France.
                 </td>
           
           </tr>
@@ -528,8 +528,8 @@ ob_start();
                 <li>As few P2 defects as possible.</li>
               </ul>			  
 			  Note that Thursday May 17 is a holiday in Switzerland and France.
-			  Monday May 21 is a holiday in Canada. 
-			  Monday May 28 is a holiday in the US and Switzerland.              
+			  Monday May 19 is a holiday in Canada. 
+			  Monday May 26 is a holiday in the US and Switzerland.              
               </td>
           </tr>
         </table>
@@ -623,7 +623,7 @@ ob_start();
       <td valign="top" align="left" colspan="2"><b>Fix pass rules of engagement</b></td>
     </tr>
     <tr>
-      <td width="20%" valign="top" align="left"><b><a name="FixPassAfterRC"></a>May 7-18</b><br>
+      <td width="20%" valign="top" align="left"><b><a name="FixPassAfterRC"></a>May 5-16</b><br>
         contributions to RC1</td>
       <td>
         <table cellspacing="0" cellpadding="5" width="100%" border="1">
@@ -657,7 +657,7 @@ ob_start();
     </tr>
     <tr>
       <td width="20%" valign="top" align="left"><b><a name="FixPassAfterRC1"></a>May 
-        21-May 25</b><br>
+        19-May 23</b><br>
         contributions to RC2</td>
       <td>
         <table cellspacing="0" cellpadding="5" width="100%" border="1">
@@ -692,7 +692,7 @@ ob_start();
     </tr>
     <tr>
       <td width="20%" valign="top" align="left"><b><a name="FixPassAfterRC2"></a>May 
-        28-June 1</b><br>
+        26-May 30</b><br>
         contributions to RC3</td>
       <td>
         <table cellspacing="0" cellpadding="5" width="100%" border="1">
@@ -728,7 +728,7 @@ ob_start();
     </tr>
     <tr>
       <td width="20%" valign="top" align="left"><b><a name="FixPassAfterRC3"></a>June 
-        4-June 8</b><br>
+        2-June 6</b><br>
         contributions to RC4</td>
       <td>
         <table cellspacing="0" cellpadding="5" width="100%" border="1">
