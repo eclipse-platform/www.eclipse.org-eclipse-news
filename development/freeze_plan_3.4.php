@@ -114,9 +114,11 @@ ob_start();
             <td height="18">&nbsp;</td>
             <td height="18">&nbsp;&nbsp;<b><a href="#RC2"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">goals</a></b></td>
             <td height="18">&nbsp;&nbsp;</td>
-          </tr>
-          
-          
+          </tr>          
+           <tr>
+            <td align="right" height="18"><b>June 2007</b>&nbsp;</td>
+            <td height="18"><img src="images/tbar_l.gif" width="24" height="18"></td>
+          </tr>  
           <tr>
             <td height="18"></td>
             <td height="18"><img src="images/tbar_r.gif" width="24" height="18"></td>
@@ -283,7 +285,8 @@ ob_start();
         <p><a href="http://www.eclipse.org/eclipse/development/eclipse_project_plan_3_4.html">Eclipse
         Project 3.4 Plan</a></p>
       </td>
-    </tr>   
+    </tr>
+   
     <tr>
       <td valign="top" align="right"><img src="images/Adarrow.gif" border="0" width="16" height="16"></td>
       <td>
