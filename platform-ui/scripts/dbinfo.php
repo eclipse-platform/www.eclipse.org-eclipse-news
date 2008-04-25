@@ -1,5 +1,9 @@
 <?php
 require_once "/home/data/httpd/eclipse-php-classes/system/dbconnection_bugs_ro.class.php";
+
+ini_set("display_errors", "true");
+error_reporting (E_ALL);
+
 $dbc 	= new DBConnectionBugs();
 $dbh 	= $dbc->connect();
 $rs = null;
@@ -25,13 +29,13 @@ while ($myrow  = mysql_fetch_assoc($rs)) {
 	if (i++ == 0) {
 		echo "<tr>";
 		foreach($myrow as $key=>$value) {
-			echo "<th>".$key."</th>
+			echo "<th>".$key."</th>";
 		}
 		echo "</tr>";
 	}
 	echo "<tr>";
 	foreach($myrow as $key=>$value) {
-		echo "<td>".$value."</td>
+		echo "<td>".$value."</td>";
 	}
 	echo "</tr>";
 
