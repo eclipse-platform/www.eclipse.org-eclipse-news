@@ -174,10 +174,10 @@ echo "<h2>List bugs with attachments marked as contributed.</h2>";
 echo "<p>Date of Query: " . date(DATE_RFC822) . "</p>";
 
 echo "<h3>Platform: UI</h3>";
-checkProject(1, "UI", $includes);
+checkProject(1, "UI", $includedMilestones);
 
 echo "<h3>JSF</h3>";
-checkProject(1, "IDE", $includes);
+checkProject(1, "IDE", $includedMilestones);
 
 $dbc->disconnect();
 
