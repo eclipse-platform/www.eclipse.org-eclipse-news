@@ -101,9 +101,8 @@ function checkProject($projectNumber, $component, $includes) {
           AND component = $component
           ORDER BY bugs.bug_id";
 
-
-    //echo "sql_info: " . $sql_info . "<br />";
-    //flush();
+    echo "sql_info: " . $sql_info . "<br />";
+    flush();
 
     $rs = mysql_query($sql_info, $dbh);
 
