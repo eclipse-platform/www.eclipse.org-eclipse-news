@@ -2,8 +2,7 @@
 require_once "/home/data/httpd/eclipse-php-classes/system/dbconnection_bugs_ro.class.php";
 
 $committerList = array("Kimberly Horne","Boris Bokowski","Paul Webster","Eric Moffatt","Tod Creasey","Kevin McGuire");
-$includedMilestones = array("3.4", "3.4M1", "3.4M2", "3.4M4", "3.4M5", "3.4M6", "3.4M7", "3.4RC1", "3.4RC2", "3.4RC3", "3.4RC4");
-
+$includedMilestones = array("3.4", "3.4 M1", "3.4 M2", "3.4 M4", "3.4 M5", "3.4 M6", "3.4 M7", "3.4 RC1", "3.4 RC2", "3.4 RC3", "3.4 RC4");
 $debug_count = 0;
 $uniqueNames = array();
 $uniqueCount = array();
@@ -101,8 +100,8 @@ function checkProject($projectNumber, $component, $includes) {
           AND component_id = $component
           ORDER BY bugs.bug_id";
 
-    echo "sql_info: " . $sql_info . "<br />";
-    flush();
+    //echo "sql_info: " . $sql_info . "<br />";
+    //flush();
 
     $rs = mysql_query($sql_info, $dbh);
 
