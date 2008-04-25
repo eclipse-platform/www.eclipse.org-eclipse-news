@@ -1,7 +1,7 @@
 <?php
 require_once "/home/data/httpd/eclipse-php-classes/system/dbconnection_bugs_ro.class.php";
 
-$committerList = array("Szymon Brandys", "Kimberly Horne","Boris Bokowski","Paul Webster","Eric Moffatt","Tod Creasey","Kevin McGuire");
+$committerList = array("Susan F. McCourt", "Szymon Brandys", "Kim Horne","Boris Bokowski","Paul Webster","Eric Moffatt","Tod Creasey","Kevin McGuire");
 $includedMilestones = array("3.4", "3.4 M1", "3.4 M2", "3.4 M4", "3.4 M5", "3.4 M6", "3.4 M7", "3.4 RC1", "3.4 RC2", "3.4 RC3", "3.4 RC4");
 $debug_count = 0;
 $uniqueNames = array();
@@ -112,7 +112,7 @@ function checkProject($projectNumber, $component, $includes) {
     	//echo gettype($committerList) . " " . gettype($includes) . " " . gettype($myrow['attachment_real_name']) . " " . gettype($myrow['bug_target_milestone']);
         if( !in_array($myrow['attachment_real_name'], $committerList ) ) {
             if (in_array($myrow['bug_target_milestone'],$includes)) {
-            	$color = strpos($myrow['bug_keywords'], 'contributed') === false ? "0xFF1010" : "0xFFFFFF";
+            	$color = strpos($myrow['bug_keywords'], 'contributed') === false ? "#FF1010" : "#FFFFFF";
                 echo "<tr bgcolor=\"$color\">";
                 $debug_count++;
                 echo "<td>" . $debug_count . "</td>";
