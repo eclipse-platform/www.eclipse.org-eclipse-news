@@ -71,10 +71,6 @@ function checkProject($projectNumber, $component, $includes) {
     global $uniqueNames;
 
     $buglist = array ();
-    // Product IDs:
-    //   20 Web Tools
-    //   46 Java Server Faces
-    //   47 Dali JPA Tools
 
     $sql_info = "SELECT  bugs.bug_id as bug_id,
 		bugs.bug_status as bug_status,
@@ -178,7 +174,7 @@ echo "<h2>List bugs with attachments from people who are not committers.  The on
 
 echo "<p>Date of Query: " . date(DATE_RFC822) . "</p>";
 
-echo "<h3>Platform: Ant</h3>";
+/*echo "<h3>Platform: Ant</h3>";
 checkProject(1, 16, $includedMilestones);
 
 echo "<h3>Platform: Compare</h3>";
@@ -198,9 +194,6 @@ checkProject(1, 9, $includedMilestones);
 
 echo "<h3>Platform: IDE</h3>";
 checkProject(1, 542, $includedMilestones);
-
-echo "<h3>Platform: UI</h3>";
-checkProject(1, 8, $includedMilestones);
 
 echo "<h3>Platform: Releng</h3>";
 checkProject(1, 4, $includedMilestones);
@@ -225,14 +218,14 @@ checkProject(1, 42, $includedMilestones);
 
 cho "<h3>Platform: UA</h3>";
 checkProject(1, 5, $includedMilestones);
+*/
 
-echo "<h3>Platform: Update</h3>";
+echo "<h3>Platform: UI</h3>";
+checkProject(1, 8, $includedMilestones);
+
+/*echo "<h3>Platform: Update</h3>";
 checkProject(1, 3, $includedMilestones);
-
-
-
-
-
+*/
 
 $dbc->disconnect();
 
