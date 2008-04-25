@@ -4,7 +4,7 @@ $dbc 	= new DBConnectionBugs();
 $dbh 	= $dbc->connect();
 $rs = null;
 
-$sql_info = "SELECT  * FROM bugs WHERE bug_id = 1";
+$sql_info = "SELECT  * FROM components WHERE id = 1";
 
 $rs = mysql_query($sql_info, $dbh);
 
