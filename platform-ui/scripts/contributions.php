@@ -1,7 +1,7 @@
 <?php
 require_once "/home/data/httpd/eclipse-php-classes/system/dbconnection_bugs_ro.class.php";
 
-$committerList = array("Kimberly Horne","Boris Bokowski","Paul Webster","Eric Moffatt","Tod Creasey","Kevin McGuire");
+$committerList = array("Szymon Brandys", "Kimberly Horne","Boris Bokowski","Paul Webster","Eric Moffatt","Tod Creasey","Kevin McGuire");
 $includedMilestones = array("3.4", "3.4 M1", "3.4 M2", "3.4 M4", "3.4 M5", "3.4 M6", "3.4 M7", "3.4 RC1", "3.4 RC2", "3.4 RC3", "3.4 RC4");
 $debug_count = 0;
 $uniqueNames = array();
@@ -93,13 +93,13 @@ function checkProject($projectNumber, $component, $includes) {
           AND attachments.ispatch = 1
           AND attachments.isobsolete = 0
 		  AND char_length(bugs.keywords) > 0
-          AND position('contributed' in bugs.keywords) > 0  
           AND bugs.product_id = $projectNumber
 		  AND attachments.submitter_id = profiles.userid
           AND  attach_data.id = attachments.attach_id 
           AND component_id = $component
           ORDER BY bugs.bug_id";
 
+	// AND position('contributed' in bugs.keywords) > 0
     //echo "sql_info: " . $sql_info . "<br />";
     //flush();
 
@@ -112,7 +112,8 @@ function checkProject($projectNumber, $component, $includes) {
     	//echo gettype($committerList) . " " . gettype($includes) . " " . gettype($myrow['attachment_real_name']) . " " . gettype($myrow['bug_target_milestone']);
         if( !in_array($myrow['attachment_real_name'], $committerList ) ) {
             if (in_array($myrow['bug_target_milestone'],$includes)) {
-                echo "<tr>";
+            	$color = strpos($myrow['bug_keywords'], 'contributed') === false ? "0xFF1010" : "0xFFFFFF";
+                echo "<tr bgcolor=\"$color\">";
                 $debug_count++;
                 echo "<td>" . $debug_count . "</td>";
                 //echo "   ";
