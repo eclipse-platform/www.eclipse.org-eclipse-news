@@ -88,7 +88,7 @@ function checkProject($projectNumber, $component, $includes) {
         profiles.realname as attachment_real_name,
         attach_data.thedata as thedata,
 		bugs.keywords as bug_keywords,
-		bugs.component as component
+		bugs.component_id as component_id
     FROM bugs,attachments,profiles,attach_data
       WHERE attachments.bug_id = bugs.bug_id
           AND attachments.ispatch = 1
