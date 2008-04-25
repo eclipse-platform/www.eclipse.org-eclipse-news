@@ -181,10 +181,10 @@ checkProject(1, 16, $includedMilestones);
 echo "<h3>Platform: Compare</h3>";
 checkProject(1, 18, $includedMilestones);
 
-/*echo "<h3>Platform: Core</h3>";
+echo "<h3>Platform: Core</h3>";
 checkProject(1, 10, $includedMilestones);
 
-echo "<h3>Platform: CVS</h3>";
+/*echo "<h3>Platform: CVS</h3>";
 checkProject(1, 84, $includedMilestones);
 
 echo "<h3>Platform: Debug</h3>";
