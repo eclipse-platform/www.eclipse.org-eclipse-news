@@ -193,10 +193,10 @@ checkProject(1, 20, $includedMilestones);
 echo "<h3>Platform: Doc</h3>";
 checkProject(1, 9, $includedMilestones);
 
-/*echo "<h3>Platform: IDE</h3>";
+echo "<h3>Platform: IDE</h3>";
 checkProject(1, 542, $includedMilestones);
 
-echo "<h3>Platform: Releng</h3>";
+/*echo "<h3>Platform: Releng</h3>";
 checkProject(1, 4, $includedMilestones);
 
 echo "<h3>Platform: Resources</h3>";
