@@ -8,7 +8,7 @@ $dbc 	= new DBConnectionBugs();
 $dbh 	= $dbc->connect();
 $rs = null;
 
-$sql_info = "SELECT  * FROM components WHERE product_id = 1";
+$sql_info = "SELECT  * FROM components WHERE id = 1";
 
 $rs = mysql_query($sql_info, $dbh);
 
@@ -32,15 +32,17 @@ while ($myrow  = mysql_fetch_assoc($rs)) {
 			echo "<th>" . $key . "</th>";
 		}
 		echo "</tr>";
+		flush();
 	}
 	echo "<tr>";
 	foreach($myrow as $key=>$value) {
 		echo "<td>" . $value . "</td>";
 	}
 	echo "</tr>";
-
+	flush();
 }
 echo "</table>";
+flush();
 
 $dbc->disconnect();
 
