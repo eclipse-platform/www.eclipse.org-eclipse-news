@@ -178,7 +178,7 @@ echo "<h3>Platform: UI</h3>";
 checkProject(1, 8, $includedMilestones);
 
 echo "<h3>Platform: IDE</h3>";
-checkProject(1, 49, $includedMilestones);
+checkProject(1, 542, $includedMilestones);
 
 $dbc->disconnect();
 
