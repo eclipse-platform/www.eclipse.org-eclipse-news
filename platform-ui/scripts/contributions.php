@@ -98,11 +98,11 @@ function checkProject($projectNumber, $component, $includes) {
           AND bugs.product_id = $projectNumber
 		  AND attachments.submitter_id = profiles.userid
           AND  attach_data.id = attachments.attach_id 
-          AND component = '$component'
+          AND component = \'$component\'
           ORDER BY bugs.bug_id";
 
-    //echo "sql_info: " . $sql_info . "<br />";
-    //flush();
+    echo "sql_info: " . $sql_info . "<br />";
+    flush();
 
     $rs = mysql_query($sql_info, $dbh);
 
