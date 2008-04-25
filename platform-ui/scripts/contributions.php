@@ -178,11 +178,61 @@ echo "<h2>List bugs with attachments from people who are not committers.  The on
 
 echo "<p>Date of Query: " . date(DATE_RFC822) . "</p>";
 
-echo "<h3>Platform: UI</h3>";
-checkProject(1, 8, $includedMilestones);
+echo "<h3>Platform: Ant</h3>";
+checkProject(1, 16, $includedMilestones);
+
+echo "<h3>Platform: Compare</h3>";
+checkProject(1, 18, $includedMilestones);
+
+echo "<h3>Platform: Core</h3>";
+checkProject(1, 10, $includedMilestones);
+
+echo "<h3>Platform: CVS</h3>";
+checkProject(1, 84, $includedMilestones);
+
+echo "<h3>Platform: Debug</h3>";
+checkProject(1, 20, $includedMilestones);
+
+echo "<h3>Platform: Doc</h3>";
+checkProject(1, 9, $includedMilestones);
 
 echo "<h3>Platform: IDE</h3>";
 checkProject(1, 542, $includedMilestones);
+
+echo "<h3>Platform: UI</h3>";
+checkProject(1, 8, $includedMilestones);
+
+echo "<h3>Platform: Releng</h3>";
+checkProject(1, 4, $includedMilestones);
+
+echo "<h3>Platform: Resources</h3>";
+checkProject(1, 7, $includedMilestones);
+
+echo "<h3>Platform: Runtime</h3>";
+checkProject(1, 120, $includedMilestones);
+
+echo "<h3>Platform: Search</h3>";
+checkProject(1, 19, $includedMilestones);
+
+echo "<h3>Platform: SWT</h3>";
+checkProject(1, 2, $includedMilestones);
+
+echo "<h3>Platform: Team</h3>";
+checkProject(1, 6, $includedMilestones);
+
+echo "<h3>Platform: Text</h3>";
+checkProject(1, 42, $includedMilestones);
+
+cho "<h3>Platform: UA</h3>";
+checkProject(1, 5, $includedMilestones);
+
+echo "<h3>Platform: Update</h3>";
+checkProject(1, 3, $includedMilestones);
+
+
+
+
+
 
 $dbc->disconnect();
 
