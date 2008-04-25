@@ -95,7 +95,7 @@ function checkProject($projectNumber, $component, $includes) {
           AND attachments.isobsolete = 0
 		  AND char_length(bugs.keywords) > 0
           AND bugs.product_id = $projectNumber
-		  AND attachments.submitter_id = profiles.userid
+		  AND attachments.submitter_id = attachmentProfiles.userid
 		  AND bugs.assigned_to = committerProfiles.userid
           AND attach_data.id = attachments.attach_id 
           AND component_id = $component
