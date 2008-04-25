@@ -1,14 +1,10 @@
 <?php
 require_once "/home/data/httpd/eclipse-php-classes/system/dbconnection_bugs_ro.class.php";
-
-ini_set("display_errors", "true");
-error_reporting (E_ALL);
-
 $dbc 	= new DBConnectionBugs();
 $dbh 	= $dbc->connect();
 $rs = null;
 
-$sql_info = "SELECT  * FROM components WHERE id = 1";
+$sql_info = "SELECT  * FROM components WHERE product_id = 1";
 
 $rs = mysql_query($sql_info, $dbh);
 
@@ -23,26 +19,14 @@ $rs = mysql_query($sql_info, $dbh);
 
 //echo "</table>";
 
-echo "<table>";
-$i = 0;
+
 while ($myrow  = mysql_fetch_assoc($rs)) {
-	if (i++ == 0) {
-		echo "<tr>";
-		foreach($myrow as $key=>$value) {
-			echo "<th>" . $key . "</th>";
-		}
-		echo "</tr>";
-		flush();
-	}
-	echo "<tr>";
-	foreach($myrow as $key=>$value) {
-		echo "<td>" . $value . "</td>";
-	}
-	echo "</tr>";
-	flush();
+foreach($myrow as $key=>$value) {
+echo $key . " = " . $value . ", ";
 }
-echo "</table>";
-flush();
+echo "<br/">;
+}
+
 
 $dbc->disconnect();
 
