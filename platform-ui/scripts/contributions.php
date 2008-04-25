@@ -61,7 +61,7 @@ function countAddedLines($myrow) {
     }
     return $result;
 }
-function checkProject($projectNumber, $includes) {
+function checkProject($projectNumber, $component, $includes) {
 
     global $dbc;
     global $dbh;
@@ -97,6 +97,7 @@ function checkProject($projectNumber, $includes) {
           AND bugs.product_id = $projectNumber
 		  AND attachments.submitter_id = profiles.userid
           AND  attach_data.id = attachments.attach_id 
+          AND component = $component
           ORDER BY bugs.bug_id";
 
 
@@ -109,8 +110,9 @@ function checkProject($projectNumber, $includes) {
     echo "<tr><th>Count</th><th>Bug Number</th><th>Target Milestone</th><th>Id</th><th>Name</th><th>Total Lines</th><th>Added Lines</th></tr>";
 
     while( ($debug_count < 1000) && ($myrow  = mysql_fetch_assoc($rs)) ) {
+    	//echo gettype($committerList) . " " . gettype($includes) . " " . gettype($myrow['attachment_real_name']) . " " . gettype($myrow['bug_target_milestone']);
         if( !in_array($myrow['attachment_real_name'], $committerList ) ) {
-            if (in_array($myrow['bug_target_milestone'], $includes)) {
+            if (in_array($myrow['bug_target_milestone'],$includes)) {
                 echo "<tr>";
                 $debug_count++;
                 echo "<td>" . $debug_count . "</td>";
@@ -174,11 +176,6 @@ echo "<h2>List bugs with attachments marked as contributed.</h2>";
 echo "<p>Date of Query: " . date(DATE_RFC822) . "</p>";
 
 echo "<h3>Platform: UI</h3>";
-foreach ($includedMilestones as $milestone) {
-	echo $milestone . " ";
-}
-
-
 checkProject(1, "UI", $includedMilestones);
 
 echo "<h3>JSF</h3>";
