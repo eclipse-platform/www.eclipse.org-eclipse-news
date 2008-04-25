@@ -162,6 +162,7 @@ function checkProject($projectNumber, $component, $includes) {
     if (strlen($cslist) > 0) {
         echo "<p>Tip: You can use this <a href=\"https://bugs.eclipse.org/bugs/buglist.cgi?bug_id=" . $cslist ."\">bugzilla single list</a> for above table to first list all bugs in the table, and then narrow or sort the result how ever you would like.</p>";
     }
+    flush();
 }
 
 
@@ -174,10 +175,10 @@ echo "<h2>List bugs with attachments from people who are not committers.  The on
 
 echo "<p>Date of Query: " . date(DATE_RFC822) . "</p>";
 
-/*echo "<h3>Platform: Ant</h3>";
+echo "<h3>Platform: Ant</h3>";
 checkProject(1, 16, $includedMilestones);
 
-echo "<h3>Platform: Compare</h3>";
+/*echo "<h3>Platform: Compare</h3>";
 checkProject(1, 18, $includedMilestones);
 
 echo "<h3>Platform: Core</h3>";
