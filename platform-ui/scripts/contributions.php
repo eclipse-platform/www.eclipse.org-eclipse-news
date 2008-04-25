@@ -110,7 +110,7 @@ function checkProject($projectNumber, $includes) {
 
     while( ($debug_count < 1000) && ($myrow  = mysql_fetch_assoc($rs)) ) {
         if( !in_array($myrow['attachment_real_name'], $committerList ) ) {
-            if (in_array($myrow['bug_target_milestone'],$includes)) {
+            if (in_array($myrow['bug_target_milestone'], $includes)) {
                 echo "<tr>";
                 $debug_count++;
                 echo "<td>" . $debug_count . "</td>";
@@ -174,6 +174,7 @@ echo "<h2>List bugs with attachments marked as contributed.</h2>";
 echo "<p>Date of Query: " . date(DATE_RFC822) . "</p>";
 
 echo "<h3>Platform: UI</h3>";
+echo $includedMilestones;
 checkProject(1, "UI", $includedMilestones);
 
 echo "<h3>JSF</h3>";
