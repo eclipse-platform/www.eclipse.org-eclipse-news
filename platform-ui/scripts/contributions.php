@@ -1,7 +1,7 @@
 <?php
 require_once "/home/data/httpd/eclipse-php-classes/system/dbconnection_bugs_ro.class.php";
 
-$committerList = array("Susan F. McCourt", "Szymon Brandys", "Kim Horne","Boris Bokowski","Paul Webster","Eric Moffatt","Tod Creasey","Kevin McGuire");
+$committerList = array("Tom Schindl", "Susan F. McCourt", "Szymon Brandys", "Kim Horne","Boris Bokowski","Paul Webster","Eric Moffatt","Tod Creasey","Kevin McGuire");
 $includedMilestones = array("3.4", "3.4 M1", "3.4 M2", "3.4 M4", "3.4 M5", "3.4 M6", "3.4 M7", "3.4 RC1", "3.4 RC2", "3.4 RC3", "3.4 RC4");
 $debug_count = 0;
 $uniqueNames = array();
@@ -83,19 +83,21 @@ function checkProject($projectNumber, $component, $includes) {
 		attachments.filename as filename,
 		attachments.ispatch as ispatch,
         attachments.creation_ts as timestamp,
-		profiles.login_name as attachment_login_name,
-        profiles.realname as attachment_real_name,
+		attachmentProfiles.login_name as attachment_login_name,
+        attachmentProfiles.realname as attachment_real_name,
+        committerProfiles.realname as committer_real_name,
         attach_data.thedata as thedata,
 		bugs.keywords as bug_keywords,
 		bugs.component_id as component_id
-    FROM bugs,attachments,profiles,attach_data
+    FROM bugs,attachments,profiles as attachmentProfiles, profiles as committerProfiles,attach_data
       WHERE attachments.bug_id = bugs.bug_id
           AND attachments.ispatch = 1
           AND attachments.isobsolete = 0
 		  AND char_length(bugs.keywords) > 0
           AND bugs.product_id = $projectNumber
 		  AND attachments.submitter_id = profiles.userid
-          AND  attach_data.id = attachments.attach_id 
+		  AND bugs.assigned_to = committerProfiles.userid
+          AND attach_data.id = attachments.attach_id 
           AND component_id = $component
           ORDER BY bugs.bug_id";
 
@@ -106,13 +108,13 @@ function checkProject($projectNumber, $component, $includes) {
     $rs = mysql_query($sql_info, $dbh);
 
     echo "<table border='1' cellpadding='2' width='80%'>";
-    echo "<tr><th>Count</th><th>Bug Number</th><th>Target Milestone</th><th>Id</th><th>Name</th><th>Total Lines</th><th>Added Lines</th></tr>";
+    echo "<tr><th>Count</th><th>Bug Number</th><th>Target Milestone</th><th>Id</th><th>Name</th><th>Total Lines</th><th>Added Lines</th><th>Committer</th></tr>";
 
     while( ($debug_count < 1000) && ($myrow  = mysql_fetch_assoc($rs)) ) {
     	//echo gettype($committerList) . " " . gettype($includes) . " " . gettype($myrow['attachment_real_name']) . " " . gettype($myrow['bug_target_milestone']);
         if( !in_array($myrow['attachment_real_name'], $committerList ) ) {
             if (in_array($myrow['bug_target_milestone'],$includes)) {
-            	$color = strpos($myrow['bug_keywords'], 'contributed') === false ? "#FF1010" : "#FFFFFF";
+            	$color = strpos($myrow['bug_keywords'], 'contributed') === false ? "#FF8080" : "#FFFFFF";
                 echo "<tr bgcolor=\"$color\">";
                 $debug_count++;
                 echo "<td>" . $debug_count . "</td>";
@@ -148,6 +150,7 @@ function checkProject($projectNumber, $component, $includes) {
                 
                 echo "<td>" . countNewLines($myrow) . "</td>";
                 echo "<td>" . countAddedLines($myrow) . "</td>";
+                echo "<td>" . $myrow['committer_real_name'] . "</td>";
                 echo "</tr>";
             }
         }
@@ -171,7 +174,7 @@ error_reporting (E_ALL);
 
 echo "<h1>IP Bug Query Working Page</h1>";
 
-echo "<h2>List bugs with attachments marked as contributed.</h2>";
+echo "<h2>List bugs with attachments from people who are not committers.  The ones that are marked as contributed are white while those that are not marked as contributed are red.</h2>";
 
 echo "<p>Date of Query: " . date(DATE_RFC822) . "</p>";
 
