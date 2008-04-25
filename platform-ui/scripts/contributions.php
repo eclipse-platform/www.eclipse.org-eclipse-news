@@ -98,11 +98,11 @@ function checkProject($projectNumber, $component, $includes) {
           AND bugs.product_id = $projectNumber
 		  AND attachments.submitter_id = profiles.userid
           AND  attach_data.id = attachments.attach_id 
-          AND component = $component
+          AND component = '$component'
           ORDER BY bugs.bug_id";
 
-    echo "sql_info: " . $sql_info . "<br />";
-    flush();
+    //echo "sql_info: " . $sql_info . "<br />";
+    //flush();
 
     $rs = mysql_query($sql_info, $dbh);
 
@@ -178,7 +178,7 @@ echo "<p>Date of Query: " . date(DATE_RFC822) . "</p>";
 echo "<h3>Platform: UI</h3>";
 checkProject(1, "UI", $includedMilestones);
 
-echo "<h3>JSF</h3>";
+echo "<h3>Platform: IDE</h3>";
 checkProject(1, "IDE", $includedMilestones);
 
 $dbc->disconnect();
