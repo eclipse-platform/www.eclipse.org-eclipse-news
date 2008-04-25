@@ -98,7 +98,7 @@ function checkProject($projectNumber, $component, $includes) {
           AND bugs.product_id = $projectNumber
 		  AND attachments.submitter_id = profiles.userid
           AND  attach_data.id = attachments.attach_id 
-          AND component = \'$component\'
+          AND component_id = $component
           ORDER BY bugs.bug_id";
 
     echo "sql_info: " . $sql_info . "<br />";
@@ -176,10 +176,10 @@ echo "<h2>List bugs with attachments marked as contributed.</h2>";
 echo "<p>Date of Query: " . date(DATE_RFC822) . "</p>";
 
 echo "<h3>Platform: UI</h3>";
-checkProject(1, "UI", $includedMilestones);
+checkProject(1, 8, $includedMilestones);
 
 echo "<h3>Platform: IDE</h3>";
-checkProject(1, "IDE", $includedMilestones);
+checkProject(1, 49, $includedMilestones);
 
 $dbc->disconnect();
 
