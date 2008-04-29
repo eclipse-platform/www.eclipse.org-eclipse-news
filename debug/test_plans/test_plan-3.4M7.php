@@ -101,14 +101,14 @@
 			<a name="top"></a>
 			<h3>Test Grid</h3>
 			<div align="center">
-			<table width="80%" border="1">
+			<table width="90%" border="1">
 			  <tr> 
 			    <td width="40%"><b>Feature Testing</b></td>
-			    <td width="15%"><b>Samantha Chan</b></td>
-			    <td width="15%"><b>Darin Wright</b></td>
-			    <td width="15%"><b>Michael Rennie</b></td>
-			    <td width="15%"><b>Curtis Windatt</b></td>
-			    <td width="15%"><b>Pawel Piech</b></td>
+			    <td width="18%"><b>Samantha Chan</b></td>
+			    <td width="18%"><b>Darin Wright</b></td>
+			    <td width="18%"><b>Michael Rennie</b></td>
+			    <td width="18%"><b>Curtis Windatt</b></td>
+			    <td width="18%"><b>Pawel Piech</b></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Java6">Java 6.0 Features</a></td>
@@ -152,8 +152,8 @@
 			  </tr>
 			  <tr> 
 			    <td><a href="#LaunchConfigurations">Launch Configurations</a></td>
-				 <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center">&nbsp;</div></td>
+			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 				<td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
@@ -186,6 +186,7 @@
 			    <td><a href="#Logical">Logical Structures</a></td>
 				<td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 				<td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
@@ -297,8 +298,8 @@
 			    <td><a href="#Remote">Remote Debugging</a></td>
 				<td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-				<td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
@@ -311,10 +312,10 @@
 			  </tr>
 			  <tr> 
 			    <td><a href="#STRESS">Stress Tests</a></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			  </tr>
 			</table>
