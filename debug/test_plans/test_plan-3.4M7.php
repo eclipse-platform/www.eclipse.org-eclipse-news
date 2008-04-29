@@ -26,7 +26,7 @@
 	#****************************************************************************
 	
 	
-	$pageTitle 		= "Debug Project 3.4M6 Test Matrix";
+	$pageTitle 		= "Debug Project 3.4M7 Test Matrix";
 	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching, test, testing, matrix, plan, 3.4, M7";
 	$pageAuthor		= "Debug Team";
 	
@@ -40,7 +40,7 @@
 		<div class="homeitem3col">
 			<h3>Testers</h3>
 			<p>Committers: Darin Wright, Michael Rennie, Curtis Windatt, Samantha Chan, Pawel Piech</p>
-			<p>Community: Pawel Piech, Anyone who wants to help</p>
+			<p>Community: Anyone who wants to help</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>JRE Grid</h3>
