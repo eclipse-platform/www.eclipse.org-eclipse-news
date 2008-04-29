@@ -50,7 +50,7 @@
 			  <div align="center">
 				<table width="90%" border="1">
 				  <tr> 
-				    <td width="12%">&nbsp;</td>
+				    <td width="11%">&nbsp;</td>
 				    <td width="13%"><b>JDK 1.4.2</b></td>
 				    <td width="13%"><b>IBM 1.4.2</b></td>
 				    <td width="13%"><b>JDK 1.5</b></td>
@@ -59,40 +59,40 @@
 				    <td width="13%"><b>IBM 1.6</b></td>
 				  </tr>
 				  <tr> 
-				    <td"><b>Win Vista</b></td>
-				    <td>&nbsp;</td>
-				    <td>&nbsp;</td>
-				    <td>&nbsp;</td>
-				    <td>&nbsp;</td>
-					<td>Michael Rennie</td>
-					<td>&nbsp;</td>
+				    <td><b>Win Vista</b></td>
+				    <td> <div align="center">&nbsp;</div></td>
+				    <td> <div align="center">&nbsp;</div></td>
+				    <td> <div align="center">&nbsp;</div></td>
+				    <td> <div align="center">&nbsp;</div></td>
+					<td> <div align="center">Michael Rennie</div></td>
+					<td> <div align="center">&nbsp;</div></td>
 				  </tr>
 				  <tr> 
 				    <td><b>Win XP</b></td>
-				    <td>&nbsp;</td>
-				    <td>&nbsp;</td>
-				    <td>Curtis Windatt</td>
-				    <td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>Samantha Chan</td>
+				    <td> <div align="center">&nbsp;</div></td>
+				    <td> <div align="center">&nbsp;</div></td>
+				    <td> <div align="center">Curtis Windatt</div></td>
+				    <td> <div align="center">&nbsp;</div></td>
+					<td> <div align="center">&nbsp;</div></td>
+					<td> <div align="center">Samantha Chan</div></td>
 				  </tr>
 				  <tr> 
 				    <td><b>Linux</b></td>
-				    <td>&nbsp;</td>
-				    <td>&nbsp;</td>
-				    <td>&nbsp;</td>
-				    <td>&nbsp;</td>
-				    <td>&nbsp;</td>
-					<td>Pawel Piech</td>
+				    <td> <div align="center">&nbsp;</div></td>
+				    <td> <div align="center">&nbsp;</div></td>
+				    <td> <div align="center">&nbsp;</div></td>
+				    <td> <div align="center">&nbsp;</div></td>
+					<td> <div align="center">&nbsp;</div></td>
+					<td> <div align="center">Pawel Piech</div></td>
 				  </tr>
 				  <tr> 
 				    <td><b>Mac</b></td>
-				    <td>&nbsp;</td>
-				    <td>Darin Wright</td>
-				    <td>&nbsp;</td>
-				    <td>&nbsp;</td>
-				    <td>&nbsp;</td>
-					<td>&nbsp;</td>
+				    <td> <div align="center">&nbsp;</div></td>
+				    <td> <div align="center">Darin Wright</div></td>
+				    <td> <div align="center">&nbsp;</div></td>
+				    <td> <div align="center">&nbsp;</div></td>
+				    <td> <div align="center">&nbsp;</div></td>
+					<td> <div align="center">&nbsp;</div></td>
 				  </tr>
 				</table>
 			</div>
