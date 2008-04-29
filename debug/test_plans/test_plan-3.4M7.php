@@ -101,9 +101,9 @@
 			<a name="top"></a>
 			<h3>Test Grid</h3>
 			<div align="center">
-			<table width="80%" border="1">
+			<table width="85%" border="1">
 			  <tr> 
-			    <td width="25%" align="center"><b>Feature Testing</b></td>
+			    <td width="30%" align="center"><b>Feature Testing</b></td>
 			    <td width="15%" align="center"><b>Samantha Chan</b></td>
 			    <td width="15%" align="center"><b>Darin Wright</b></td>
 			    <td width="15%" align="center"><b>Michael Rennie</b></td>
