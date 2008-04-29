@@ -100,10 +100,10 @@
 		<div class="homeitem3col">
 			<a name="top"></a>
 			<h3>Test Grid</h3>
-			<div align="center">
+			<div align="left">
 			<table width="90%" border="1">
 			  <tr> 
-			    <td width="40%"><b>Feature Testing</b></td>
+			    <td width="30%"><b>Feature Testing</b></td>
 			    <td width="18%"><b>Samantha Chan</b></td>
 			    <td width="18%"><b>Darin Wright</b></td>
 			    <td width="18%"><b>Michael Rennie</b></td>
