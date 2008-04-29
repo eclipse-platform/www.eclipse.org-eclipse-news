@@ -104,11 +104,11 @@
 			<table width="90%" border="1">
 			  <tr> 
 			    <td width="30%" align="center"><b>Feature Testing</b></td>
-			    <td width="15%" align="center"><b>Samantha Chan</b></td>
-			    <td width="15%" align="center"><b>Darin Wright</b></td>
-			    <td width="15%" align="center"><b>Michael Rennie</b></td>
-			    <td width="15%" align="center"><b>Curtis Windatt</b></td>
-			    <td width="15%" align="center"><b>Pawel Piech</b></td>
+			    <td width="12%" align="center"><b>Samantha Chan</b></td>
+			    <td width="12%" align="center"><b>Darin Wright</b></td>
+			    <td width="12%" align="center"><b>Michael Rennie</b></td>
+			    <td width="12%" align="center"><b>Curtis Windatt</b></td>
+			    <td width="12%" align="center"><b>Pawel Piech</b></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Java6">Java 6.0 Features</a></td>
@@ -325,28 +325,20 @@
 			    <td width="40%"><b>Non-Java Testing</b></td>
 			    <td width="15%"><b>Samantha Chan</b></td>
 			    <td width="15%"><b>Pawel Piech</b></td>
-			    <td width="15%"><b>&nbsp;</b></td>
-			    <td width="15%"><b>&nbsp;</b></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Memory">Memory View</a></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Modules">Modules View</a></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Registers">Registers View</a></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			</table>
