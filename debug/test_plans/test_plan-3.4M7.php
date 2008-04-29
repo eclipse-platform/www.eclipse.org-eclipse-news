@@ -101,7 +101,7 @@
 			<a name="top"></a>
 			<h3>Test Grid</h3>
 			<div align="center">
-			<table width="85%" border="1">
+			<table width="90%" border="1">
 			  <tr> 
 			    <td width="30%" align="center"><b>Feature Testing</b></td>
 			    <td width="15%" align="center"><b>Samantha Chan</b></td>
@@ -320,7 +320,7 @@
 			  </tr>
 			</table>
 			<p></p>
-			<table width="80%" border="1">
+			<table width="90%" border="1">
 			  <tr> 
 			    <td width="40%"><b>Non-Java Testing</b></td>
 			    <td width="15%"><b>Samantha Chan</b></td>
