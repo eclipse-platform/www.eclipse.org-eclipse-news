@@ -776,8 +776,12 @@
 				      <li>a selection in an outline/navigator</li>
 				    </ul>
 				  </li>
-				  <li>Ctrl+click on an item in the menu to create a new launch configuration of that type
-				  and open the launch configuration dialog</li>
+				  <li>Ctrl+click on a launch shortcut (not all shortcuts have support) 
+				  	<ul>
+						<li>Should select the most recently used configuration for the launchable class</li>
+						<li>If no recently used configurations exist, the type should be selected</li>
+				  	</ul>
+				  </li>
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Classpaths"></a>
