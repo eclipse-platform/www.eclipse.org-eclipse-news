@@ -80,10 +80,10 @@
 				    <td><b>Linux</b></td>
 				    <td> <div align="center">&nbsp;</div></td>
 				    <td> <div align="center">&nbsp;</div></td>
+				    <td> <div align="center">Pawel Piech</div></td>
 				    <td> <div align="center">&nbsp;</div></td>
 				    <td> <div align="center">&nbsp;</div></td>
 					<td> <div align="center">&nbsp;</div></td>
-					<td> <div align="center">Pawel Piech</div></td>
 				  </tr>
 				  <tr> 
 				    <td><b>Mac</b></td>
