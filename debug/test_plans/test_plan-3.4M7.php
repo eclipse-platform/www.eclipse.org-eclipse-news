@@ -48,7 +48,7 @@
 			  assigned a JRE and platform to test on. The community can chose any JRE and 
 			  platform. </p>
 			  <div align="center">
-				<table width="75%" border="1">
+				<table width="90%" border="1">
 				  <tr> 
 				    <td width="15%">&nbsp;</td>
 				    <td width="15%"><b>JDK 1.4.2</b></td>
