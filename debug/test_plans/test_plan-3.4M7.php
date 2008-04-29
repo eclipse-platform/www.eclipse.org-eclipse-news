@@ -984,6 +984,12 @@
 				    </ul>
 				  </li>
 				  <li>Link to console preferences from context menu</li>
+				  <li> Next / Previous page switcher
+				  	<ul>
+				  		<li>Create a keybinding for Next / Previous page for the Console view</li>
+				  		<li>Try the new key binding from every kind of console available; should be available for all console kinds</li>
+				  	</ul>
+				  </li>
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Variables"></a>
