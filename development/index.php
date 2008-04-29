@@ -41,8 +41,8 @@ ob_start();
         Plan</a><br>
         This document lays out the feature and API set for the 3.4 release of 
         Eclipse. </li>
-      <li><a href="freeze_plan_3_3_2.php"> Eclipse Project 3.3.2 Endgame Plan</a><br>
-    		Information about we plan to wrap up the 3.3.2 (Europa winter maintenance) release of Eclipse. </li>
+        <li><a href="freeze_plan_3.4.php"> Eclipse Project 3.4 Endgame Plan</a><br>
+    		Information about we plan to wrap up the 3.4 (Ganymede) release of Eclipse. </li>     
       <li><a href="http://www.eclipse.org/eclipse/platform-releng/buildSchedule.html"> 
         Release Engineering Build Schedule</a><br>
         Schedule for Eclipse Platform nightly, integration, and milestone builds. 
@@ -110,8 +110,10 @@ ob_start();
       		</ul>
       	</div>
 		<div class="homeitem3col">
-			<h3>Historical information about past releases</h3>
+			<h3>Historical information about past releases</h3>			
 			<ul>
+			 <li><a href="freeze_plan_3_3_2.php"> Eclipse Project 3.3.2 Endgame Plan</a><br>
+    		Information about we plan to wrap up the 3.3.2 (Europa winter maintenance) release of Eclipse. </li>
 			 <li><a href="eclipse_project_plan_3_3.html"> Eclipse Platform Project 3.3 Plan</a><br>
  	       This document lays out the feature and API set for the 3.3 release of 
     	    Eclipse. </li>
