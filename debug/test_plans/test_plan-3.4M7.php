@@ -71,9 +71,9 @@
 				    <td width="15%"><b>Win XP</b></td>
 				    <td width="15%">&nbsp;</td>
 				    <td width="15%">&nbsp;</td>
+				    <td width="15%">Curtis Windatt</td>
 				    <td width="15%">&nbsp;</td>
 					<td width="15%">&nbsp;</td>
-				    <td width="15%">Curtis Windatt</td>
 					<td width="15%">Samantha Chan</td>
 				  </tr>
 				  <tr> 
