@@ -101,14 +101,14 @@
 			<a name="top"></a>
 			<h3>Test Grid</h3>
 			<div align="left">
-			<table width="90%" border="1">
+			<table width="80%" border="1">
 			  <tr> 
-			    <td width="30%"><b>Feature Testing</b></td>
-			    <td width="18%"><b>Samantha Chan</b></td>
-			    <td width="18%"><b>Darin Wright</b></td>
-			    <td width="18%"><b>Michael Rennie</b></td>
-			    <td width="18%"><b>Curtis Windatt</b></td>
-			    <td width="18%"><b>Pawel Piech</b></td>
+			    <td width="30%" align="center"><b>Feature Testing</b></td>
+			    <td width="15%" align="center"><b>Samantha Chan</b></td>
+			    <td width="15%" align="center"><b>Darin Wright</b></td>
+			    <td width="15%" align="center"><b>Michael Rennie</b></td>
+			    <td width="15%" align="center"><b>Curtis Windatt</b></td>
+			    <td width="15%" align="center"><b>Pawel Piech</b></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Java6">Java 6.0 Features</a></td>
