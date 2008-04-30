@@ -104,14 +104,14 @@
 			</ul>
 		</div>
 		<div class="homeitem3col">
-			<h3>Miscellaneous Source Artifacts</h3>
+			<h3>Debug Utilities</h3>
 			<ul>
 				<li><code>org.eclipse.debug.util</code> is a small helper plugin we use to update our build notes files once we verify bugs. To use it, simply download the plugin below
 				and enabled it in your workspace. Once that is done to actually 'use' it, place the cursor at the position in your
-				build notes document and click <b>Run->Verify Bug...</b> and enter the number of the bug you verified. The tool will then insert the 
+				build notes document and click <b>Run->Verify Bug...</b> (or use the keybinding Ctrl+Alt+V) and enter the number of the bug you verified. The tool will then insert the 
 				corresponding html into the build notes document.<br> 
 				<blockquote>
-					<a href="/eclipse/debug/misc/org.eclipse.debug.util_1.1.0.jar">org.eclipse.debug.util plugin</a> which contains the source as well<br>
+					<a href="/eclipse/debug/update">org.eclipse.debug.util plugin</a> which contains the source as well<br>
 				</blockquote>
 				</li>
 			</ul>
