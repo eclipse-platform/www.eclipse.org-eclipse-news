@@ -61,7 +61,7 @@ ob_start();
             <td height="18"></td>
             <td height="18"><img src="images/tbar_r.gif" width="24" height="18"></td>
             <td align="right" height="18">5</td>
-            <td align="right" height="18">Mon 8:00 am EDT</td>
+            <td align="right" height="18"> Mon 8:00 am EDT</td>
             <td height="18">&nbsp;&nbsp;<b>Transition to fix and polish mode</b></td>
             <td height="18">&nbsp;&nbsp;</td>
             <td height="18">&nbsp;&nbsp;<b><a href="#Transition"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">details</a></b></td>
@@ -70,8 +70,8 @@ ob_start();
           <tr>
             <td height="18"></td>
             <td height="18"><img src="images/tbar_r.gif" width="24" height="18"></td>
-            <td align="right" height="18">14</td>
-            <td align="right" height="18">Wed 20:00 pm EDT</td>
+            <td align="right" height="18">15</td>
+            <td align="right" height="18"> Thu 20:00 pm EDT</td>
             <td height="18">&nbsp;&nbsp;<b>Release Candidate 1 build</b></td>
             <td height="18">&nbsp;&nbsp;</td>
             <td height="18">&nbsp;&nbsp;<b><a href="#FixPassAfterRC"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">rules</a></b></td>
@@ -85,7 +85,7 @@ ob_start();
             <td height="18"></td>
             <td height="18"><img src="images/tbar_r.gif" width="24" height="18"></td>
             <td align="right" height="18">19</td>
-            <td align="right" height="18">Mon 8:00 am EDT</td>
+            <td align="right" height="18"> Mon 8:00 am EDT</td>
             <td height="18">&nbsp;<b>Start 2-day test pass against RC1</b></td>
             <td height="18">&nbsp;&nbsp;</td>
             <td height="18">&nbsp;&nbsp;<b><a href="#TestPassBeforeRC2"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">details</a></b></td>
@@ -95,7 +95,7 @@ ob_start();
             <td height="18"></td>
             <td height="18"><img src="images/tbar_r.gif" width="24" height="18"></td>
             <td align="right" height="18">21</td>
-            <td align="right" height="18">Wed 8:00 am EDT</td>
+            <td align="right" height="18"> Wed 8:00 am EDT</td>
             <td height="18">&nbsp;&nbsp;<b>Start fix pass</b></td>
             <td height="18">&nbsp;&nbsp;</td>
             <td height="18">&nbsp;&nbsp;<b><a href="#FixPassAfterRC2"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">rules</a></b></td>
@@ -108,8 +108,8 @@ ob_start();
           <tr>
             <td height="18"></td>
             <td height="18"><img src="images/tbar_r.gif" width="24" height="18"></td>
-            <td align="right" height="18">21</td>
-            <td align="right" height="18"> Wed 20:00 pm EDT</td>
+            <td align="right" height="18">22</td>
+            <td align="right" height="18"> Thu 20:00 pm EDT</td>
             <td height="18">&nbsp;&nbsp;<b>Release Candidate 2 build</b></td>
             <td height="18">&nbsp;</td>
             <td height="18">&nbsp;&nbsp;<b><a href="#RC2"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">goals</a></b></td>
@@ -147,8 +147,8 @@ ob_start();
           <tr>
             <td height="18"></td>
             <td height="18"><img src="images/tbar_r.gif" width="24" height="18"></td>
-            <td align="right" height="18">28</td>
-            <td align="right" height="18">Wed 20:00 am EDT</td>
+            <td align="right" height="18">29</td>
+            <td align="right" height="18"> Thu 20:00 pm EDT</td>
             <td height="18">&nbsp;&nbsp;<b>Release Candidate 3 build</b></td>
             <td height="18">&nbsp;&nbsp;</td>
             <td height="18">&nbsp;&nbsp;<b><a href="#RC3"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">goals</a></b></td>
@@ -185,8 +185,8 @@ ob_start();
           <tr>
             <td height="18"></td>
             <td height="18"><img src="images/tbar_r.gif" width="24" height="18"></td>
-            <td align="right" height="18">4</td>
-            <td align="right" height="18">Wed 20:00 pm EDT</td>
+            <td align="right" height="18">5</td>
+            <td align="right" height="18"> Thu 20:00 pm EDT</td>
             <td height="18">&nbsp;&nbsp;<b>Release Candidate 4 build</b></td>
             <td height="18">&nbsp;</td>
             <td height="18">&nbsp;&nbsp;<b><a href="#RC4"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">goals</a></b></td>
