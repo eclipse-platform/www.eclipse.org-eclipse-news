@@ -1800,19 +1800,19 @@ IBM Corporation - initial API and implementation
 
       </copyright>
     </unit>
-    <unit id='org.eclipse.ui.tools.feature.feature.group' version='1.0.0.200706261343' singleton='false'>
-      <update id='org.eclipse.ui.tools.feature.feature.group' range='[0.0.0,1.0.0.200706261343)' severity='0'/>
+    <unit id='org.eclipse.ui.tools.feature.feature.group' version='1.0.0.200805131016' singleton='false'>
+      <update id='org.eclipse.ui.tools.feature.feature.group' range='[0.0.0,1.0.0.200805131016)' severity='0'/>
       <properties size='3'>
         <property name='org.eclipse.equinox.p2.name' value='UI Tools Feature (Incubator)'/>
         <property name='org.eclipse.equinox.p2.description' value='Various tools to help develop and debug the workbench.'/>
         <property name='org.eclipse.equinox.p2.type.group' value='true'/>
       </properties>
       <provides size='1'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.tools.feature.feature.group' version='1.0.0.200706261343'/>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.tools.feature.feature.group' version='1.0.0.200805131016'/>
       </provides>
       <requires size='2'>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.tools' range='[1.0.0.200706261343,1.0.0.200706261343]'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.tools.feature.feature.jar' range='[1.0.0.200706261343,1.0.0.200706261343]'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.tools' range='[1.0.0.200706261343,1.0.0.200805131016]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.tools.feature.feature.jar' range='[1.0.0.200805131016,1.0.0.200805131016]'>
           <filter>
             (org.eclipse.update.install.features=true)
           </filter>
