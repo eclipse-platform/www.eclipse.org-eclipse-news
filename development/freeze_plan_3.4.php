@@ -432,6 +432,8 @@ ob_start();
                   bugs for remainder of release cycle.</li>
                 <li>PMC approval is required for feature work including API changes 
                   being done after M5. See the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list.</li>
+                  No changes are to be released without prior approval and associated bug report.
+                  If a change is made to API to make it binary compatible with 3.3, technically this is still an API change, and thus it should be treated in the same way as any other API change requests.                  
               </ul>              
 			  </td>
           </tr>
@@ -620,7 +622,11 @@ ob_start();
           <tr>
             <td width="25%">API change approval:</td>
             <td width="75%">PMC must approve all API changes. No changes are to
-              be released without prior approval and associated bug report.</td>
+              be released without prior approval and associated bug report.  
+              Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
+              If a change is made to API to make it binary compatible with 3.3, technically this is still an API change, 
+              and thus it should be treated in the same way as any other API change requests.
+              </td>
           </tr>
           <tr>
             <td width="25%">Notification requirements:</td>
@@ -655,7 +661,10 @@ ob_start();
           <tr>
             <td width="25%">API change approval:</td>
             <td width="75%">PMC must approve all API changes. No changes are to
-              be released without prior approval and associated bug report.</td>
+              be released without prior approval and associated bug report.  
+              Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
+              If a change is made to API to make it binary compatible with 3.3, technically this is still an API change, 
+              and thus it should be treated in the same way as any other API change requests.</td>
           </tr>
           <tr>
             <td width="25%" height="16">Notification requirements:</td>
@@ -689,7 +698,10 @@ ob_start();
           <tr>
             <td width="25%">API change approval:</td>
             <td width="75%">PMC must approve all API changes. No changes are to
-              be released without prior approval and associated bug report.</td>
+              be released without prior approval and associated bug report.  
+              Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
+              If a change is made to API to make it binary compatible with 3.3, technically this is still an API change, 
+              and thus it should be treated in the same way as any other API change requests.</td>
           </tr>
           <tr>
             <td width="25%">Notification requirements:</td>
