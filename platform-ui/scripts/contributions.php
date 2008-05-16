@@ -90,7 +90,7 @@ function checkProject($projectNumber, $component, $includes) {
 		bugs.component_id as component_id
     FROM bugs,attachments,profiles as attachmentProfiles, profiles as committerProfiles,attach_data
       WHERE attachments.bug_id = bugs.bug_id
-      	  AND bug_resolution = 'FIXED'
+      	  AND bug_resolution = \"FIXED\"
           AND attachments.ispatch = 1
           AND attachments.isobsolete = 0
 		  AND char_length(bugs.keywords) > 0
