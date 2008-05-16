@@ -205,13 +205,13 @@ checkProject(1, 7, $includedMilestones);
 echo "<h3>Platform: Runtime</h3>";
 checkProject(1, 120, $includedMilestones);
 
-/*echo "<h3>Platform: Search</h3>";
+echo "<h3>Platform: Search</h3>";
 checkProject(1, 19, $includedMilestones);
 
 echo "<h3>Platform: SWT</h3>";
 checkProject(1, 2, $includedMilestones);
 
-echo "<h3>Platform: Team</h3>";
+/*echo "<h3>Platform: Team</h3>";
 checkProject(1, 6, $includedMilestones);
 
 echo "<h3>Platform: Text</h3>";
