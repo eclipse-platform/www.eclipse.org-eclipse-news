@@ -1,7 +1,7 @@
 <?php
 require_once "/home/data/httpd/eclipse-php-classes/system/dbconnection_bugs_ro.class.php";
 
-$committerList = array("Tom Schindl", "Susan F. McCourt", "Szymon Brandys", "Kim Horne","Boris Bokowski","Paul Webster","Eric Moffatt","Tod Creasey","Kevin McGuire", "Tomasz Zarna", "Carolyn MacLeod", "Grant Gayed", "Chris Goldthorpe", "Markus Keller", "Daniel Megert", "Martin Aeschlimann", "Benno Baumgartner", "Christopher Daniel");
+$committerList = array("Olivier Thomann", "Darin Wright", "Michael Rennie", "Noam Chitayat", "Chris Aniszczyk", );
 // the following bugs have been examined by hand and found to not be viable contributions
 $exclusions = array();
 $includedMilestones = array("3.4", "3.4 M1", "3.4 M2", "3.4 M4", "3.4 M5", "3.4 M6", "3.4 M7", "3.4 RC1", "3.4 RC2", "3.4 RC3", "3.4 RC4");
@@ -185,7 +185,7 @@ checkProject(2, 883, $includedMilestones);
 echo "<h3>PDE: Build</h3>";
 checkProject(2, 21, $includedMilestones);
 
-echo "<h3>PDE: API Tools</h3>";
+echo "<h3>PDE: Doc</h3>";
 checkProject(2, 23, $includedMilestones);
 
 echo "<h3>PDE: Incubators</h3>";
