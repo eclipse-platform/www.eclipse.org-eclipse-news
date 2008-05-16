@@ -8,16 +8,6 @@ $sql_info = "SELECT  * FROM components WHERE product_id = 1";
 
 $rs = mysql_query($sql_info, $dbh);
 
-//echo "<h1>Products</h1>";
-//echo "<table border='1' cellpadding='2' width='80%'>";
-//echo "<tr><th>ID</th><th>Name</th></tr>";
-
-//while ($myrow  = mysql_fetch_assoc($rs)) {
-//	echo "<tr><td>" . $myrow['id'] . "</td><td>" . $myrow['name'] . "</td></tr>";
-//	
-//}
-
-//echo "</table>";
 
 
 while ($myrow  = mysql_fetch_assoc($rs)) {
@@ -26,6 +16,20 @@ echo $key . " = " . $value . " , ";
 }
 echo "<br />";
 }
+
+$sql_info = "SELECT  * FROM products";
+
+$rs = mysql_query($sql_info, $dbh);
+
+echo "<h1>Products</h1>";
+echo "<table border='1' cellpadding='2' width='80%'>";
+echo "<tr><th>ID</th><th>Name</th></tr>";
+
+while ($myrow  = mysql_fetch_assoc($rs)) {
+	echo "<tr><td>" . $myrow['id'] . "</td><td>" . $myrow['name'] . "</td></tr>";
+	
+}
+echo "</table>";
 
 
 $dbc->disconnect();
