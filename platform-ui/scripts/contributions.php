@@ -205,28 +205,35 @@ checkProject(1, 7, $includedMilestones);
 echo "<h3>Platform: Runtime</h3>";
 checkProject(1, 120, $includedMilestones);
 
+echo "<h3>Platform: Scripting</h3>";
+checkProject(1, 1, $includedMilestones);
+
 echo "<h3>Platform: Search</h3>";
 checkProject(1, 19, $includedMilestones);
 
 echo "<h3>Platform: SWT</h3>";
 checkProject(1, 2, $includedMilestones);
 
-/*echo "<h3>Platform: Team</h3>";
+echo "<h3>Platform: Team</h3>";
 checkProject(1, 6, $includedMilestones);
 
 echo "<h3>Platform: Text</h3>";
 checkProject(1, 42, $includedMilestones);
 
-cho "<h3>Platform: UA</h3>";
-checkProject(1, 5, $includedMilestones);
-*/
-
 echo "<h3>Platform: UI</h3>";
 checkProject(1, 8, $includedMilestones);
 
-/*echo "<h3>Platform: Update</h3>";
+echo "<h3>Platform: Update</h3>";
 checkProject(1, 3, $includedMilestones);
-*/
+
+echo "<h3>Platform: User Assistance</h3>";
+checkProject(1, 5, $includedMilestones);
+
+echo "<h3>Platform: WebDAV</h3>";
+checkProject(1, 17, $includedMilestones);
+
+echo "<h3>Platform: Website</h3>";
+checkProject(1, 358, $includedMilestones);
 
 $dbc->disconnect();
 
