@@ -1,7 +1,9 @@
 <?php
 require_once "/home/data/httpd/eclipse-php-classes/system/dbconnection_bugs_ro.class.php";
 
-$committerList = array("Tom Schindl", "Susan F. McCourt", "Szymon Brandys", "Kim Horne","Boris Bokowski","Paul Webster","Eric Moffatt","Tod Creasey","Kevin McGuire");
+$committerList = array("Tom Schindl", "Susan F. McCourt", "Szymon Brandys", "Kim Horne","Boris Bokowski","Paul Webster","Eric Moffatt","Tod Creasey","Kevin McGuire", "Tomasz Zarna");
+// the following bugs have been examined by hand and found to not be viable contributions
+$exclusions = array();
 $includedMilestones = array("3.4", "3.4 M1", "3.4 M2", "3.4 M4", "3.4 M5", "3.4 M6", "3.4 M7", "3.4 RC1", "3.4 RC2", "3.4 RC3", "3.4 RC4");
 $debug_count = 0;
 $uniqueNames = array();
@@ -67,6 +69,7 @@ function checkProject($projectNumber, $component, $includes) {
     global $rs;
     global $debug_count;
     global $committerList;
+    global $exclusions;
     global $uniqueCount;
     global $uniqueNames;
 
@@ -108,7 +111,7 @@ function checkProject($projectNumber, $component, $includes) {
 
     while( ($debug_count < 1000) && ($myrow  = mysql_fetch_assoc($rs)) ) {
     	//echo gettype($committerList) . " " . gettype($includes) . " " . gettype($myrow['attachment_real_name']) . " " . gettype($myrow['bug_target_milestone']);
-        if( !in_array($myrow['attachment_real_name'], $committerList ) ) {
+        if( !in_array($myrow['attachment_real_name'], $committerList ) && !in_array("$myrow['bug_id'], $exclusions) {
             if (in_array($myrow['bug_target_milestone'],$includes)) {
             	$color = strpos($myrow['bug_keywords'], 'contributed') === false ? (strcmp($myrow['committer_real_name'], $myrow['attachment_real_name']) == 0  ? "#FFFF00": "#FF8080") : "#FFFFFF";
                 echo "<tr bgcolor=\"$color\">";
