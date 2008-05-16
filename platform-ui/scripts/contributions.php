@@ -111,7 +111,7 @@ function checkProject($projectNumber, $component, $includes) {
 
     while( ($debug_count < 1000) && ($myrow  = mysql_fetch_assoc($rs)) ) {
     	//echo gettype($committerList) . " " . gettype($includes) . " " . gettype($myrow['attachment_real_name']) . " " . gettype($myrow['bug_target_milestone']);
-        if( !in_array($myrow['attachment_real_name'], $committerList ) && !in_array("$myrow['bug_id'], $exclusions) {
+        if( !in_array($myrow['attachment_real_name'], $committerList )) {
             if (in_array($myrow['bug_target_milestone'],$includes)) {
             	$color = strpos($myrow['bug_keywords'], 'contributed') === false ? (strcmp($myrow['committer_real_name'], $myrow['attachment_real_name']) == 0  ? "#FFFF00": "#FF8080") : "#FFFFFF";
                 echo "<tr bgcolor=\"$color\">";
