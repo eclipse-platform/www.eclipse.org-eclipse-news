@@ -110,7 +110,7 @@ function checkProject($projectNumber, $component, $includes) {
     	//echo gettype($committerList) . " " . gettype($includes) . " " . gettype($myrow['attachment_real_name']) . " " . gettype($myrow['bug_target_milestone']);
         if( !in_array($myrow['attachment_real_name'], $committerList ) ) {
             if (in_array($myrow['bug_target_milestone'],$includes)) {
-            	$color = strpos($myrow['bug_keywords'], 'contributed') === false ? "#FF8080" : "#FFFFFF";
+            	$color = strpos($myrow['bug_keywords'], 'contributed') === false ? (strcmp($myrow['committer_real_name'], $myrow['attachment_real_name']) == 0  ? "#FFFF00": "#FF8080") : "#FFFFFF";
                 echo "<tr bgcolor=\"$color\">";
                 $debug_count++;
                 echo "<td>" . $debug_count . "</td>";
@@ -171,7 +171,7 @@ error_reporting (E_ALL);
 
 echo "<h1>IP Bug Query Working Page</h1>";
 
-echo "<h2>List bugs with attachments from people who are not committers.  The ones that are marked as contributed are white while those that are not marked as contributed are red.</h2>";
+echo "<h2>List bugs with attachments from people who are not committers.  The ones that are marked as contributed are white while those that are not marked as contributed are red.  Those that are yellow have the same committer as patch contributor.</h2>";
 
 echo "<p>Date of Query: " . date(DATE_RFC822) . "</p>";
 
