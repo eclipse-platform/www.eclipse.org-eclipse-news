@@ -62,6 +62,17 @@ function countAddedLines($myrow) {
     }
     return $result;
 }
+
+function extractContributor($myrow) {
+	$result = $myrow['attachment_real_name'];
+	$status = $myrow['status'];
+	if (strlen($status) != 0) {
+	
+	}
+	return $result;
+}
+
+
 function checkProject($projectNumber, $component, $includes) {
 
     global $dbc;
@@ -79,6 +90,7 @@ function checkProject($projectNumber, $component, $includes) {
 		bugs.bug_status as bug_status,
 		bugs.resolution as bug_resolution,
 		bugs.target_milestone as bug_target_milestone,
+		bugs.status_whiteboard as status,
 		attachments.filename as filename,
 		attachments.ispatch as ispatch,
         attachments.creation_ts as timestamp,
@@ -114,7 +126,8 @@ function checkProject($projectNumber, $component, $includes) {
     	//echo gettype($committerList) . " " . gettype($includes) . " " . gettype($myrow['attachment_real_name']) . " " . gettype($myrow['bug_target_milestone']);
         if( !in_array($myrow['attachment_real_name'], $committerList) && !in_array($myrow['bug_id'], $exclusions)) {
             if (in_array($myrow['bug_target_milestone'],$includes)) {
-            	$color = strpos($myrow['bug_keywords'], 'contributed') === false ? (strcmp($myrow['committer_real_name'], $myrow['attachment_real_name']) == 0  ? "#FFFF00": "#FF8080") : "#FFFFFF";
+            	$contributor =  extractContributor($myrow);
+            	$color = strpos($myrow['bug_keywords'], 'contributed') === false ? (strcmp($myrow['committer_real_name'], $contributor == 0  ? "#FFFF00": "#FF8080") : "#FFFFFF";
                 echo "<tr bgcolor=\"$color\">";
                 $debug_count++;
                 echo "<td>" . $debug_count . "</td>";
@@ -134,7 +147,7 @@ function checkProject($projectNumber, $component, $includes) {
                 //echo ",";
                 echo "<td>" . str_replace("@","{at}", $myrow['attachment_login_name']) . "</td>";
                 //echo "   ";
-                echo "<td>" . $myrow['attachment_real_name'] . "</td>";
+                echo "<td>" . $contributor . "</td>";
 
                
                     // echo "NOT_WTP_COMMITTER";
