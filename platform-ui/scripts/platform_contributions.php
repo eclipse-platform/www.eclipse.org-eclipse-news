@@ -119,10 +119,8 @@ function checkProject($projectNumber, $component, $includes) {
             if (in_array($myrow['bug_target_milestone'],$includes)) {
             	$contributor =  $myrow['attachment_real_name'];
         		$committer = $myrow['committer_real_name'];
-        		//echo "<!--" . $committerOverrides[$myrow['bug_id']] . "-->";
-		        if (array_key_exists($myrow['bug_id'], $committerOverrides)) {
+        		if (array_key_exists($myrow['bug_id'], $committerOverrides)) {
 		        	$committer = $committerOverrides[$myrow['bug_id']];
-		        	echo "<!-- committer" . $committer . "-->";
 		        }
             	$color = in_array($contributor, $committerList) ? "#FFFF00" : (strpos($myrow['bug_keywords'], 'contributed') === false ? "#FF8080" : "#FFFFFF");
             	//$color = strpos($myrow['bug_keywords'], 'contributed') === false ? (strcmp($committer, $contributor) == 0  ? "#FFFF00": "#FF8080") : "#FFFFFF";
