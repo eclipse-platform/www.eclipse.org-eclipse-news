@@ -117,6 +117,7 @@ function checkProject($projectNumber, $component, $includes) {
     while( ($debug_count < 1000) && ($myrow  = mysql_fetch_assoc($rs)) ) {
         $contributor =  $myrow['attachment_real_name'];
         $committer = $myrow['committer_real_name'];
+        echo "<!--" . $committerOverrides[$myrow['bug_id']] . "-->";
         if (in_array($myrow['bug_id'], $committerOverrides)) {
         	$committer = $committerOverrides[$myrow['bug_id']];
         }
