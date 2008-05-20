@@ -119,8 +119,8 @@ function checkProject($projectNumber, $component, $includes) {
             if (in_array($myrow['bug_target_milestone'],$includes)) {
             	$contributor =  $myrow['attachment_real_name'];
         		$committer = $myrow['committer_real_name'];
-        		echo "<!--" . $committerOverrides[$myrow['bug_id']] . "-->";
-		        if (in_array($myrow['bug_id'], $committerOverrides)) {
+        		//echo "<!--" . $committerOverrides[$myrow['bug_id']] . "-->";
+		        if (array_key_exists($myrow['bug_id'], $committerOverrides)) {
 		        	$committer = $committerOverrides[$myrow['bug_id']];
 		        	echo "<!-- committer" . $committer . "-->";
 		        }
