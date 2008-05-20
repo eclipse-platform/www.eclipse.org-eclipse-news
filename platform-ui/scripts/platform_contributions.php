@@ -9,6 +9,7 @@ $includedMilestones = array("3.4", "3.4 M1", "3.4 M2", "3.4 M4", "3.4 M5", "3.4 
 $debug_count = 0;
 $uniqueNames = array();
 $uniqueCount = array();
+$uniqueBugs = array();
 
 $dbc 	= new DBConnectionBugs();
 $dbh 	= $dbc->connect();
@@ -74,6 +75,7 @@ function checkProject($projectNumber, $component, $includes) {
     global $exclusions;
     global $uniqueCount;
     global $uniqueNames;
+    global $uniqueBugs;
     global $committerOverrides;
 
     $buglist = array ();
@@ -103,7 +105,7 @@ function checkProject($projectNumber, $component, $includes) {
 		  AND bugs.assigned_to = committerProfiles.userid
           AND attach_data.id = attachments.attach_id 
           AND component_id = $component
-          ORDER BY bugs.bug_id";
+          ORDER BY bugs.bug_id, attachments.creation_ts DESC";
 
 	// AND position('contributed' in bugs.keywords) > 0
     //echo "sql_info: " . $sql_info . "<br />";
@@ -115,8 +117,9 @@ function checkProject($projectNumber, $component, $includes) {
     echo "<tr><th>Count</th><th>Bug Number</th><th>Target Milestone</th><th>Id</th><th>Name</th><th>Total Lines</th><th>Added Lines</th><th>Committer</th></tr>\n";
 
     while( ($debug_count < 1000) && ($myrow  = mysql_fetch_assoc($rs)) ) {
-        if( !in_array($myrow['attachment_real_name'], $committerList) && !in_array($myrow['bug_id'], $exclusions)) {
+        if( !in_array($myrow['attachment_real_name'], $committerList) && !in_array($myrow['bug_id'], $exclusions) && !in_array($myrow['bug_id'], $uniqueBugs)) {
             if (in_array($myrow['bug_target_milestone'],$includes)) {
+            	array_push($uniqueBugs, $myrow['bug_id']);
             	$contributor =  $myrow['attachment_real_name'];
         		$committer = $myrow['committer_real_name'];
         		if (array_key_exists($myrow['bug_id'], $committerOverrides)) {
