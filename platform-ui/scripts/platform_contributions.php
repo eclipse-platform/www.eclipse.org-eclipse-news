@@ -1,10 +1,10 @@
 <?php
 require_once "/home/data/httpd/eclipse-php-classes/system/dbconnection_bugs_ro.class.php";
 
-$committerList = array("Tom Schindl", "Susan F. McCourt", "Szymon Brandys", "Kim Horne","Boris Bokowski","Paul Webster","Eric Moffatt","Tod Creasey","Kevin McGuire", "Tomasz Zarna", "Carolyn MacLeod", "Grant Gayed", "Chris Goldthorpe", "Markus Keller", "Daniel Megert", "Martin Aeschlimann", "Benno Baumgartner", "Christopher Daniel", "DJ Houghton", "Darin Wright", "Darin Swanson", "Samantha Chan", "Michael Rennie", "Curtis Windatt", "Kim Moir", "John Arthorne", "Oleg Besedin", "Chris Aniszczyk", "Thomas Watson", "Stefan Xenos");
+$committerList = array("Tom Schindl", "Susan F. McCourt", "Szymon Brandys", "Kim Horne","Boris Bokowski","Paul Webster","Eric Moffatt","Tod Creasey","Kevin McGuire", "Tomasz Zarna", "Carolyn MacLeod", "Grant Gayed", "Chris Goldthorpe", "Markus Keller", "Daniel Megert", "Martin Aeschlimann", "Benno Baumgartner", "Christopher Daniel", "DJ Houghton", "Darin Wright", "Darin Swanson", "Samantha Chan", "Michael Rennie", "Curtis Windatt", "Kim Moir", "John Arthorne", "Oleg Besedin", "Chris Aniszczyk", "Thomas Watson", "Stefan Xenos", "Michael Valenta");
 // the following bugs have been examined by hand and found to not be viable contributions
 $exclusions = array("56313", "144260", "149884", "199476", "213623", "223147", "162140", "166482", "221190");
-$committerOverrides = array("87752" => "Tomasz Zarna");
+$committerOverrides = array("87752" => "Tomasz Zarna", "189304" => "Michael Valenta", "190674" => "Michael Valenta", "208022" => "Tomasz Zarna", "205335" => "Darin Wright", "213244" => "Darin Wright", "213609" => "Darin Wright", "213719" => "Darin Wright", "214424" => "Darin Wright", "217369" => "Darin Wright");
 $includedMilestones = array("3.4", "3.4 M1", "3.4 M2", "3.4 M4", "3.4 M5", "3.4 M6", "3.4 M7", "3.4 RC1", "3.4 RC2", "3.4 RC3", "3.4 RC4");
 $debug_count = 0;
 $uniqueNames = array();
