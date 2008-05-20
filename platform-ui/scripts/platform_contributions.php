@@ -63,14 +63,14 @@ function countAddedLines($myrow) {
     return $result;
 }
 
-/*function extractContributor($myrow) {
+function extractContributor($myrow) {
 	$result = $myrow['attachment_real_name'];
-	$status = $myrow['status'];
-	if (strlen($status) != 0) {
+	//$status = $myrow['status'];
+	//if (strlen($status) != 0) {
 	
-	}
+	//}
 	return $result;
-}*/
+}
 
 
 function checkProject($projectNumber, $component, $includes) {
@@ -124,10 +124,10 @@ function checkProject($projectNumber, $component, $includes) {
 
     while( ($debug_count < 1000) && ($myrow  = mysql_fetch_assoc($rs)) ) {
     	//echo gettype($committerList) . " " . gettype($includes) . " " . gettype($myrow['attachment_real_name']) . " " . gettype($myrow['bug_target_milestone']);
-        if( !in_array($myrow['attachment_real_name'], $committerList) && !in_array($myrow['bug_id'], $exclusions)) {
+        if( !in_array($myrow['attachment_real_name'], $committerList) && !in_array($myrow['bug_id'], $exclusions) && strpos($myrow['status'], 'ignore=true') === false) {
             if (in_array($myrow['bug_target_milestone'],$includes)) {
-            	//$contributor =  extractContributor($myrow);
-            	$color = strcmp($myrow['committer_real_name'], $myrow['attachment_real_name']) == 0 ? "#FFFF00" : (strpos($myrow['bug_keywords'], 'contributed') === false ? "#FF8080" : "#FFFFFF");
+            	$contributor =  extractContributor($myrow);
+            	$color = in_array($contributor, $committerList) ? "#FFFF00" : (strpos($myrow['bug_keywords'], 'contributed') === false ? "#FF8080" : "#FFFFFF");
             	//$color = strpos($myrow['bug_keywords'], 'contributed') === false ? (strcmp($myrow['committer_real_name'], $myrow['attachment_real_name']) == 0  ? "#FFFF00": "#FF8080") : "#FFFFFF";
                 echo "<tr bgcolor=\"$color\">";
                 $debug_count++;
@@ -148,7 +148,7 @@ function checkProject($projectNumber, $component, $includes) {
                 //echo ",";
                 echo "<td>" . str_replace("@","{at}", $myrow['attachment_login_name']) . "</td>";
                 //echo "   ";
-                echo "<td>" . $myrow['attachment_real_name'] . "</td>";
+                echo "<td>" . $contributor . "</td>";
 
                
                     // echo "NOT_WTP_COMMITTER";
