@@ -115,16 +115,15 @@ function checkProject($projectNumber, $component, $includes) {
     echo "<tr><th>Count</th><th>Bug Number</th><th>Target Milestone</th><th>Id</th><th>Name</th><th>Total Lines</th><th>Added Lines</th><th>Committer</th></tr>\n";
 
     while( ($debug_count < 1000) && ($myrow  = mysql_fetch_assoc($rs)) ) {
-        $contributor =  $myrow['attachment_real_name'];
-        $committer = $myrow['committer_real_name'];
-        	echo "<!--" . $committerOverrides[$myrow['bug_id']] . "-->";
-        if (in_array($myrow['bug_id'], $committerOverrides)) {
-        	$committer = $committerOverrides[$myrow['bug_id']];
-        }
-        
-        if( !in_array($contributor, $committerList) && !in_array($myrow['bug_id'], $exclusions) && strpos($myrow['status'], 'ignore=true') === false) {
+        if( !in_array($myrow['attachment_real_name'], $committerList) && !in_array($myrow['bug_id'], $exclusions)) {
             if (in_array($myrow['bug_target_milestone'],$includes)) {
-            	
+            	$contributor =  $myrow['attachment_real_name'];
+        		$committer = $myrow['committer_real_name'];
+        		echo "<!--" . $committerOverrides[$myrow['bug_id']] . "-->";
+		        if (in_array($myrow['bug_id'], $committerOverrides)) {
+		        	$committer = $committerOverrides[$myrow['bug_id']];
+		        	echo "<!-- committer" . $committer . "-->";
+		        }
             	$color = in_array($contributor, $committerList) ? "#FFFF00" : (strpos($myrow['bug_keywords'], 'contributed') === false ? "#FF8080" : "#FFFFFF");
             	//$color = strpos($myrow['bug_keywords'], 'contributed') === false ? (strcmp($committer, $contributor) == 0  ? "#FFFF00": "#FF8080") : "#FFFFFF";
                 echo "<tr bgcolor=\"$color\">";
