@@ -63,16 +63,6 @@ function countAddedLines($myrow) {
     return $result;
 }
 
-function extractContributor($myrow) {
-	$result = $myrow['attachment_real_name'];
-	//$status = $myrow['status'];
-	//if (strlen($status) != 0) {
-	
-	//}
-	return $result;
-}
-
-
 function checkProject($projectNumber, $component, $includes) {
 
     global $dbc;
@@ -126,7 +116,7 @@ function checkProject($projectNumber, $component, $includes) {
     	//echo gettype($committerList) . " " . gettype($includes) . " " . gettype($myrow['attachment_real_name']) . " " . gettype($myrow['bug_target_milestone']);
         if( !in_array($myrow['attachment_real_name'], $committerList) && !in_array($myrow['bug_id'], $exclusions) && strpos($myrow['status'], 'ignore=true') === false) {
             if (in_array($myrow['bug_target_milestone'],$includes)) {
-            	$contributor =  extractContributor($myrow);
+            	$contributor =  $myrow['attachment_real_name'];
             	$color = in_array($contributor, $committerList) ? "#FFFF00" : (strpos($myrow['bug_keywords'], 'contributed') === false ? "#FF8080" : "#FFFFFF");
             	//$color = strpos($myrow['bug_keywords'], 'contributed') === false ? (strcmp($myrow['committer_real_name'], $myrow['attachment_real_name']) == 0  ? "#FFFF00": "#FF8080") : "#FFFFFF";
                 echo "<tr bgcolor=\"$color\">";
