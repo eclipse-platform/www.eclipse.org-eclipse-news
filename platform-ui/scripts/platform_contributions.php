@@ -111,8 +111,8 @@ function checkProject($projectNumber, $component, $includes) {
 
     $rs = mysql_query($sql_info, $dbh);
 
-    echo "<table border='1' cellpadding='2' width='80%'>";
-    echo "<tr><th>Count</th><th>Bug Number</th><th>Target Milestone</th><th>Id</th><th>Name</th><th>Total Lines</th><th>Added Lines</th><th>Committer</th></tr>";
+    echo "<table border='1' cellpadding='2' width='80%'>\n";
+    echo "<tr><th>Count</th><th>Bug Number</th><th>Target Milestone</th><th>Id</th><th>Name</th><th>Total Lines</th><th>Added Lines</th><th>Committer</th></tr>\n";
 
     while( ($debug_count < 1000) && ($myrow  = mysql_fetch_assoc($rs)) ) {
         $contributor =  $myrow['attachment_real_name'];
@@ -163,13 +163,13 @@ function checkProject($projectNumber, $component, $includes) {
                 echo "<td>" . countNewLines($myrow) . "</td>";
                 echo "<td>" . countAddedLines($myrow) . "</td>";
                 echo "<td>" . $committer . "</td>";
-                echo "</tr>";
+                echo "</tr>\n";
             }
         }
 
          
     }
-    echo "</table>";
+    echo "</table>\n";
 
     $cslist = "";
     foreach ($buglist as $bug) {
