@@ -127,7 +127,8 @@ function checkProject($projectNumber, $component, $includes) {
         if( !in_array($myrow['attachment_real_name'], $committerList) && !in_array($myrow['bug_id'], $exclusions)) {
             if (in_array($myrow['bug_target_milestone'],$includes)) {
             	$contributor =  extractContributor($myrow);
-            	$color = strpos($myrow['bug_keywords'], 'contributed') === false ? (strcmp($myrow['committer_real_name'], $contributor == 0  ? "#FFFF00": "#FF8080") : "#FFFFFF";
+            	$color = strcmp($myrow['committer_real_name'], $contributor) == 0 ? "#FFFF00" : (strpos($myrow['bug_keywords'], 'contributed') === false ? "#FF8080" : "#FFFFFF");
+            	//$color = strpos($myrow['bug_keywords'], 'contributed') === false ? (strcmp($myrow['committer_real_name'], $contributor) == 0  ? "#FFFF00": "#FF8080") : "#FFFFFF";
                 echo "<tr bgcolor=\"$color\">";
                 $debug_count++;
                 echo "<td>" . $debug_count . "</td>";
