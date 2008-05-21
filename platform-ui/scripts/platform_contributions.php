@@ -125,7 +125,7 @@ function checkProject($projectNumber, $component, $includes) {
         		if (array_key_exists($myrow['bug_id'], $committerOverrides)) {
 		        	$committer = $committerOverrides[$myrow['bug_id']];
 		        }
-            	$color = in_array($contributor, $committerList) ? "#FFFF00" : (strpos($myrow['bug_keywords'], 'contributed') === false ? "#FF8080" : "#FFFFFF");
+            	$color = (strcmp($committer, $contributor) == 0 || in_array($contributor, $committerList)) ? "#FFFF00" : (strpos($myrow['bug_keywords'], 'contributed') === false ? "#FF8080" : "#FFFFFF");
             	//$color = strpos($myrow['bug_keywords'], 'contributed') === false ? (strcmp($committer, $contributor) == 0  ? "#FFFF00": "#FF8080") : "#FFFFFF";
                 echo "<tr bgcolor=\"$color\">";
                 $debug_count++;
