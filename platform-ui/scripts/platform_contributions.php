@@ -1,6 +1,7 @@
 <?php
 require_once "/home/data/httpd/eclipse-php-classes/system/dbconnection_bugs_ro.class.php";
-
+ini_set("display_errors", "true");
+error_reporting (E_ALL);
 $committerList = array("Tom Schindl", "Susan F. McCourt", "Szymon Brandys", "Kim Horne","Boris Bokowski","Paul Webster","Eric Moffatt","Tod Creasey","Kevin McGuire", "Tomasz Zarna", "Carolyn MacLeod", "Grant Gayed", "Chris Goldthorpe", "Markus Keller", "Daniel Megert", "Martin Aeschlimann", "Benno Baumgartner", "Christopher Daniel", "DJ Houghton", "Darin Wright", "Darin Swanson", "Samantha Chan", "Michael Rennie", "Curtis Windatt", "Kim Moir", "John Arthorne", "Oleg Besedin", "Chris Aniszczyk", "Thomas Watson", "Stefan Xenos", "Michael Valenta", "Atsuhiko Yamanaka", "Scott Kovatch");
 // the following bugs have been examined by hand and found to not be viable contributions
 $exclusions = array("208332", "56313", "144260", "149884", "199476", "213623", "223147", "162140", "166482", "221190");
@@ -191,9 +192,6 @@ function checkProject($projectNumber, $component, $includes) {
     flush();
 }
 
-
-ini_set("display_errors", "true");
-error_reporting (E_ALL);
 
 echo "<h1>IP Bug Query Working Page</h1>";
 
