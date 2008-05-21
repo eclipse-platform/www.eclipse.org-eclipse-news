@@ -2,7 +2,7 @@
 
 	#*****************************************************************************
 	#
-	# Copyright (c) 2007 IBM Corporation and others.
+	# Copyright (c) 2007, 2008 IBM Corporation and others.
  	# All rights reserved. This program and the accompanying materials
  	# are made available under the terms of the Eclipse Public License v1.0
  	# which accompanies this distribution, and is available at
@@ -78,15 +78,13 @@
 		<div class="homeitem3col">
 			<h3>Up To The Minute</h3>
 			<ul>
+			<li>Our manual testing programs our now available for <a href="/eclipse/debug/misc/ManualTestingPrograms.zip">download</a>.  Happy testing!
+			<li>The debug utils, which helps in verifying bugs, is now available via update site (with p2 metadata) at <a href="www.eclipse.org/eclipse/debug/updates/">www.eclipse.org/eclipse/debug/updates/</a></li>
 			<li>We are presenting two tutorials at EclipseCon 2008.  The presentations are available for both <a target="_blank" href="/eclipse/debug/documents/ec_2008/Debug_Tutorial_Basic_2008.ppt">Debug Platform: The Basics</a> and <a target="_blank" href="/eclipse/debug/documents/ec_2008/Debug_Tutorial_Custom_Integration_2008.ppt">Debug Platform: Custom Integration</a>. More
 			information can be found on the <a href="/eclipse/debug/documents.php">Documents</a> page along with exercises.
 			</li>
 			<li>To help new contributors, we have created a <a href="/eclipse/debug/documents/project_sets/debug.psf" target="_blank">project set file</a> containing all of the projects needed to get started with debug coding.
 			There is also a project set file for <a href="/eclipse/debug/documents/project_sets/debug3.3.1.psf" target="_blank">3.3.1 maintenance</a>.</li>
-			<li>EclipseCon 2007 went off without a hitch, and the debug team delivered <a target="_blank" href="/eclipse/debug/documents/ec_2007/Debug_Tutorial_2007.pdf">another tutorial</a>. More
-			information can be found on the <a href="/eclipse/debug/documents.php">Documents</a> page along with exercises.
-			</li>
-			<li><a href="/eclipse/debug/fifth_bday.php">Eclipse is five years old!!!</a> The debug team put on a party for the local academic community in Winnipeg MB Canada.
 			<li>Platform Debug overall <a href="/eclipse/debug/platform/dev_plans/r3_4-plan.php">3.4 plan</a></li>
 			<li>JDT Debug overall <a href="/eclipse/debug/jdt/dev_plans/r3_4-plan.php">3.4 plan</a></li>
 			<li>Platform Debug fixes (so far) for <a target="_blank" href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=Debug&target_milestone=3.4&target_milestone=3.4+M1&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Bug+Number&field0-0-0=noop&type0-0-0=noop&value0-0-0=">3.4.x</a></li>

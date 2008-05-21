@@ -9,7 +9,7 @@
 
 	#*****************************************************************************
 	#
-	# Copyright (c) 2007 IBM Corporation and others.
+	# Copyright (c) 2007, 2008 IBM Corporation and others.
  	# All rights reserved. This program and the accompanying materials
  	# are made available under the terms of the Eclipse Public License v1.0
  	# which accompanies this distribution, and is available at
@@ -37,6 +37,7 @@
 <div id="maincontent">
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
+		<p>To assist in testing, you can download our <a href="/eclipse/debug/misc/ManualTestingPrograms.zip">manual testing programs</a> (Last updated 21 May 2008).  The zip file contains an Eclipse project with a variety of simple programs to test different functions of the debug framework.  Simply download the zip file and inside Eclipse, select Import... &gt; Existing projects into workspace and select the archive file.</p>		
 		<div class="homeitem3col">
 			<h3>3.4 Test Plans</h3>
 			<a name="3-4_testing"></a>

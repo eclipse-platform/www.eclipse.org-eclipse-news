@@ -2,7 +2,7 @@
 
 	#*****************************************************************************
 	#
-	# Copyright (c) 2006-2007 IBM Corporation and others.
+	# Copyright (c) 2006-2008 IBM Corporation and others.
  	# All rights reserved. This program and the accompanying materials
  	# are made available under the terms of the Eclipse Public License v1.0
  	# which accompanies this distribution, and is available at
@@ -222,7 +222,7 @@
 			<h3>Test Passes</h3>
 			<p>Before every milestone release the Debug Team does an intense one-day test pass where we test all of the functionality of the debug components.  We try to check everything to make sure 100% of the functionality is available in every major release.  In addition, we try odd use cases and unusual code to ensure our code is as robust as possible.</p>
 			<p>To organize the test pass, we follow a <a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plans.php">test matrix</a>.  The matrix defines who is working on which platform (OS and VM combination) and who is responsible for testing what functionality.  The matrix also contains a basic overview of what must be tested in each section.</p>
-			<p>NOTE: Testing should always be done on your host, so to launch Eclipse with a specific vm, you should launch Eclipse with the following argument: -vm C:\(JVM Location)\java.exe</p>
+			<p>NOTE: Testing should always be done on your host, so to launch Eclipse with a specific vm, you should launch Eclipse with the following argument: -vm C:\(JVM Location)\java.exe  You can also use our example <a href="/eclipse/debug/misc/ManualTestingPrograms.zip">manual testing programs</a>.</p>
 			<p>If you would like to help out during a test pass, contact us via our <a href="#mailing_lists">mailing lists</a>.  Before the test pass, let us know what platform you are going to test on and what sections you are planning to test.  If you have any questions about how to test some area, we would be happy to help explain.</p>
 		</div>
 	</div>
