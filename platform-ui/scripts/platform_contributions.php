@@ -78,6 +78,7 @@ function checkProject($projectNumber, $component, $includes) {
     global $uniqueNames;
     global $uniqueBugs;
     global $committerOverrides;
+    global $contributorOverrides;
 
     $buglist = array ();
 
