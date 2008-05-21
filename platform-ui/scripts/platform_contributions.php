@@ -105,7 +105,7 @@ function checkProject($projectNumber, $component, $includes) {
 		  AND bugs.assigned_to = committerProfiles.userid
           AND attach_data.id = attachments.attach_id 
           AND component_id = $component
-          ORDER BY bugs.bug_id, attachments.creation_ts DESC";
+          ORDER BY bugs.bug_id, attachments.creation_ts";
 
 	// AND position('contributed' in bugs.keywords) > 0
     //echo "sql_info: " . $sql_info . "<br />";
