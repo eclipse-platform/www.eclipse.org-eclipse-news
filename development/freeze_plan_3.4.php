@@ -46,7 +46,7 @@ ob_start();
 <table cellspacing="5" cellpadding="2" width="100%" border="0">
 <tbody> <tr> <td valign="top" align="left" colspan="2"><b>Status</b></td></tr>
 <tr> <td valign="top" align="right"></td><td> 
-<p><b>April 23, 2008 - Preparing for 3.4M7.</td></tr>
+<p><b>May 26-27, 2008 - Two day test pass against RC2</td></tr>
     <tr>
       <td valign="top" align="left" colspan="2"><b>Detailed Timeline</b></td>
     </tr>
@@ -115,11 +115,10 @@ ob_start();
             <td height="18">&nbsp;&nbsp;<b><a href="#RC2"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">goals</a></b></td>
             <td height="18">&nbsp;&nbsp;</td>
           </tr>
-          
-           <tr>
-            <td align="right" height="18"><b>June 2007</b>&nbsp;</td>
-            <td height="18"><img src="images/tbar_l.gif" width="24" height="18"></td>
-          </tr>  
+          <tr>
+            <td height="30"></td>
+            <td align="center" height="30"><img src="images/gray.gif" width="2" height="18"></td>
+          </tr>
           <tr>
             <td height="18"></td>
             <td height="18"><img src="images/tbar_r.gif" width="24" height="18"></td>
@@ -140,10 +139,10 @@ ob_start();
             <td height="18">&nbsp;&nbsp;<b><a href="#FixPassAfterRC2"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">rules</a></b></td>
             <td height="18">&nbsp;&nbsp;</td>
           </tr>
-           <tr>
-            <td align="right" height="18"><b>June 2007</b>&nbsp;</td>
-            <td height="18"><img src="images/tbar_l.gif" width="24" height="18"></td>
-          </tr>  
+          <tr>
+            <td height="30"></td>
+            <td align="center" height="30"><img src="images/gray.gif" width="2" height="18"></td>
+          </tr>
           <tr>
             <td height="18"></td>
             <td height="18"><img src="images/tbar_r.gif" width="24" height="18"></td>
