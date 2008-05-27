@@ -1165,6 +1165,7 @@
 					  <ul>
 					  	<li> Try adding multiple memory blocks by using a comma delimited list. </li>
 					  	<li> Try adding a memory block with empty expression </li>
+					  	<li> Try adding a memory block using the key binding (Ctrl+Alt+M)</li>
 					  </ul>
 				  </li>
 				  <li>Remove memory block
@@ -1177,17 +1178,17 @@
 				  <li>Add Memory Rendering
 					  <ul>
 					  	<li>Default renderings get added automatically when a memory block is added.</li>
-					  	<li>Add rendering by clicking the "+" button </li>
 					  	<li>Add rendering from the Add Memory Rendering tab</li>
+					  	<li>From the context menu</li>
+					  	<li>Using the key binding (Ctrl+N)</li>
 					  	<li>Add multiple renderings</li>
 					  </ul>				  
 				  </li>	  			
 				  <li>Remove Memory Rendering
 					  <ul>
-					  	<li>Default renderings get added automatically when a memory block is added.</li>
-					  	<li>Add rendering by clicking the "+" button </li>
-					  	<li>Add rendering from the Add Memory Rendering tab</li>
-					  	<li>Add multiple renderings</li>
+					  	<li>By closing the tab.</li>
+					  	<li>From the context menu.</li>					  	
+					  	<li>Using the key binding (Ctrl+W)</li>
 					  </ul>				  
 				  </li>	  	  
 				  <li>Renderings
@@ -1195,6 +1196,7 @@
 					  	<li>Make sure all the these renderings can be created:  Hex, Signed Integer, Unsigned Integer, ASCII, Hex Integer </li>
 					  	<li>Bring different renderings to the top.  Make sure that the tab label shows the address
 					  	of the memory block when it is brought to the top. </li>
+					  	<li>Switch between renderings using the key binding (Ctrl+PgUp / Ctrl+PgDn)
 					  	<li>Content of the renderings get updated after each step.</li>
 					  	<li>Renderings should mark memory that has changed.</li>
 					  	<li>Memory shows up as grey if the rendering does not have cache to compute changes. e.g hidden when the user is stepping</li>
