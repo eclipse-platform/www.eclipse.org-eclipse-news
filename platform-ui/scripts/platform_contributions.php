@@ -115,13 +115,11 @@ function checkProject($projectNumber, $component, $includes) {
     $rs = mysql_query($sql_info, $dbh);
 
     echo "<table border='1' cellpadding='2' width='80%'>\n";
-    echo "<tr><th>CVS Directory</th><th>Bug Number</th><th>Target Milestone</th><th>Id</th><th>Name</th><th>Total Lines</th><th>Added Lines</th><th>Committer</th></tr>\n";
+    echo "<tr><th>CVS Directory</th><th>Bug Number</th><th>Name</th><th>Total Lines</th><th>Added Lines</th><th>Committer</th></tr>\n";
 
     while( $myrow  = mysql_fetch_assoc($rs) ) {
         if( !in_array($myrow['attachment_real_name'], $committerList) && !in_array($myrow['bug_id'], $exclusions) && !in_array($myrow['bug_id'], $uniqueBugs)) {
             if (in_array($myrow['bug_target_milestone'],$includes)) {
-                // space for directory
-                echo "<td></td>";
                 
             	array_push($uniqueBugs, $myrow['bug_id']);
             	$contributor =  $myrow['attachment_real_name'];
@@ -131,6 +129,9 @@ function checkProject($projectNumber, $component, $includes) {
             		$contributorEmail = $pair[1];
             		$contributor = $pair[0];
             	}
+            	if ($contributor == null) {
+            		$contributor = $contributorEmail;
+            	}
         		$committer = $myrow['committer_real_name'];
         		if (array_key_exists($myrow['bug_id'], $committerOverrides)) {
 		        	$committer = $committerOverrides[$myrow['bug_id']];
@@ -138,6 +139,9 @@ function checkProject($projectNumber, $component, $includes) {
             	$color = (strcmp($committer, $contributor) == 0 || in_array($contributor, $committerList)) ? "#FFFF00" : (strpos($myrow['bug_keywords'], 'contributed') === false ? "#FF8080" : "#FFFFFF");
             	//$color = strpos($myrow['bug_keywords'], 'contributed') === false ? (strcmp($committer, $contributor) == 0  ? "#FFFF00": "#FF8080") : "#FFFFFF";
                 echo "<tr bgcolor=\"$color\">";
+                
+                // space for directory
+                echo "<td></td>";
                 
                 //echo "   ";
                 echo "<td>" . "<a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=" . $myrow['bug_id'] . "\">" . $myrow['bug_id'] . "</a>" . "</td>";
@@ -147,15 +151,15 @@ function checkProject($projectNumber, $component, $includes) {
                 //echo ",";
                 //echo $myrow['bug_resolution'];
                 //echo ",";
-                echo "<td>" . $myrow['bug_target_milestone'] . "</td>";
+                //echo "<td>" . $myrow['bug_target_milestone'] . "</td>";
                 //echo "   ";
                 //echo $myrow['filename'];
                 //echo ",";
                 //echo $myrow['timestamp'];
                 //echo ",";
-                echo "<td>" . str_replace("@","{at}", $contributorEmail) . "</td>";
+                //echo "<td>" . str_replace("@","{at}", $contributorEmail) . "</td>";
                 //echo "   ";
-                echo "<td>" . $contributor . "</td>";
+                echo "<td>" . str_replace("@","{at}", $contributor) . "</td>";
 
                
                     // echo "NOT_WTP_COMMITTER";
