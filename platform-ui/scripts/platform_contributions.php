@@ -283,7 +283,8 @@ echo "<h2>Third Party Software</h2>";
 
 echo "<table border='1' cellpadding='2' width='80%'>";
 echo "<tr><th>Name</th><th>IPZilla</th><th>Location</th><th>License</th><th>Usage</th></tr>";
-echo "<tr><td>ICU4J 3.8.1</td><td><a href=\"https://dev.eclipse.org/ipzilla/show_bug.cgi?id=1919\">1919</a></td><td>com.ibm.icu_3.8.1.v20080402.jar</td><td>MIT license, X.Net License</td><td>Unicode globalization support library for Java</td></tr>";
+echo "<tr><td>ICU4J 3.8.1</td><td><a href=\"https://dev.eclipse.org/ipzilla/show_bug.cgi?id=1919\">1919</a></td><td>com.ibm.icu_3.8.1.v20080402.jar</td><td>MIT license, X.Net License</td><td>Unicode globalization support library for Java.</td></tr>";
+echo "<tr><td>jsch 1.37</td><td><a href=\"https://dev.eclipse.org/ipzilla/show_bug.cgi?id=2014\">2014</a></td>com.jcraft.jsch_0.1.37.v200803061811.jar</td><td>New BSD license</td><td>Communication library used by ECF.</td>";
 echo "</table>";
 
 
