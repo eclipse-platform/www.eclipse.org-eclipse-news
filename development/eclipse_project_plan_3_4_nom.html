@@ -5,11 +5,11 @@
 <meta http-equiv="Content-Language" content="en-us" />
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <meta name="Author" content="Eclipse Project PMC" />
-<title>The Eclipse Project DRAFT 3.4 Plan</title>
+<title>The Eclipse Project 3.4 Plan (Final)</title>
 <link rel="stylesheet" href="../../default_style.css" type="text/css" />
 </head>
 <body>
-<h1>The Eclipse Project DRAFT 3.4 Plan</h1>
+<h1>The Eclipse Project 3.4 Plan (Final)</h1>
 Last revised 17:00 ET May 14, 2008 (<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> marks
 interesting changes since the previous 
   <a href="eclipse_project_plan_3_4_20080204.html">draft of Feb 4, 2008</a>)
@@ -591,25 +591,31 @@ interesting changes since the previous
   </tbody>
 </table>
 <br />
-<b>Table of minimum execution environments by plug-in.</b> <br />
+<b>Table of minimum execution environments by plug-in.</b> 
+   (<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> multiple additions and updates)<br />
 <br />
+
 <table border="1">
+  <tbody>
   <tbody>
     <tr>
       <td width="290"><strong>Plug-in</strong></td>
-      <td width="60"><div align="center">
-          <p align="center"><b>3.4<br />
-            minimum<br />
-            execution<br />
-            environment </b></p>
-        </div></td>
+      <td width="60"><div align="center"><p align="center"><b>3.4<br>minimum<br>execution<br>environment</b></p></div></td>
     </tr>
     <tr>
-      <td>javax.servlet</td>
+      <td>com.ibm.icu</td>
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
+      <td>com.jcraft.jsch</td>
+      <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
       <td>javax.servlet.jsp</td>
+      <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
+      <td>javax.servlet</td>
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
@@ -629,8 +635,12 @@ interesting changes since the previous
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
+      <td>org.apache.lucene.analysis</td>
+      <td><div align="center">not specified</div></td>
+    </tr>
+    <tr>
       <td>org.apache.lucene</td>
-      <td><div align="center">n/a</div></td>
+      <td><div align="center">not specified</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ant.core</td>
@@ -642,7 +652,7 @@ interesting changes since the previous
     </tr>
     <tr>
       <td>org.eclipse.compare</td>
-      <td><div align="center">n/a</div></td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.boot</td>
@@ -655,6 +665,14 @@ interesting changes since the previous
     <tr>
       <td>org.eclipse.core.contenttype</td>
       <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.core.databinding.beans</td>
+      <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.core.databinding</td>
+      <td><div align="center">F1.1</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.expressions</td>
@@ -674,22 +692,14 @@ interesting changes since the previous
     </tr>
     <tr>
       <td>org.eclipse.core.net</td>
-      <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.core.resources</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.resources.compatibility</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.core.runtime</td>
-      <td><div align="center">F1.0</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.core.runtime.compatibility</td>
+      <td>org.eclipse.core.resources</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -701,8 +711,20 @@ interesting changes since the previous
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
+      <td>org.eclipse.core.runtime.compatibility</td>
+      <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.core.runtime</td>
+      <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
       <td>org.eclipse.core.variables</td>
       <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.cvs</td>
+      <td><div align="center">not specified</div></td>
     </tr>
     <tr>
       <td>org.eclipse.debug.core</td>
@@ -713,19 +735,47 @@ interesting changes since the previous
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.equinox.app</td>
+      <td>org.eclipse.ecf.filetransfer</td>
       <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ecf.identity</td>
+      <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ecf.provider.filetransfer.ssl</td>
+      <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ecf.provider.filetransfer</td>
+      <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ecf.ssl</td>
+      <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ecf</td>
+      <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.equinox.app</td>
+      <td><div align="center">M1.1</div></td>
     </tr>
     <tr>
       <td>org.eclipse.equinox.common</td>
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.equinox.http.jetty</td>
+      <td>org.eclipse.equinox.frameworkadmin.equinox</td>
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.equinox.http.servlet</td>
+      <td>org.eclipse.equinox.frameworkadmin</td>
+      <td><div align="center">F1.1</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.equinox.http.jetty</td>
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
@@ -733,7 +783,7 @@ interesting changes since the previous
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.equinox.jsp.jasper</td>
+      <td>org.eclipse.equinox.http.servlet</td>
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
@@ -741,8 +791,96 @@ interesting changes since the previous
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
+      <td>org.eclipse.equinox.jsp.jasper</td>
+      <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
       <td>org.eclipse.equinox.launcher</td>
       <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.equinox.p2.artifact.repository</td>
+      <td><div align="center">F1.1</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.equinox.p2.console</td>
+      <td><div align="center">F1.1</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.equinox.p2.core</td>
+      <td><div align="center">F1.1</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.equinox.p2.director.app</td>
+      <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.equinox.p2.directorywatcher</td>
+      <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.equinox.p2.director</td>
+      <td><div align="center">F1.1</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.equinox.p2.engine</td>
+      <td><div align="center">F1.1</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.equinox.p2.exemplarysetup</td>
+      <td><div align="center">F1.1</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.equinox.p2.extensionlocation</td>
+      <td><div align="center">F1.1</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.equinox.p2.garbagecollector</td>
+      <td><div align="center">F1.1</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.equinox.p2.jarprocessor</td>
+      <td><div align="center">F1.1</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.equinox.p2.metadata.generator</td>
+      <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.equinox.p2.metadata.repository</td>
+      <td><div align="center">F1.1</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.equinox.p2.metadata</td>
+      <td><div align="center">F1.1</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.equinox.p2.reconciler.dropins</td>
+      <td><div align="center">F1.1</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.equinox.p2.touchpoint.eclipse</td>
+      <td><div align="center">F1.1</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.equinox.p2.touchpoint.natives</td>
+      <td><div align="center">F1.1</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.equinox.p2.ui.sdk</td>
+      <td><div align="center">F1.1</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.equinox.p2.ui</td>
+      <td><div align="center">F1.1</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.equinox.p2.updatechecker</td>
+      <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.equinox.p2.updatesite</td>
+      <td><div align="center">F1.1</div></td>
     </tr>
     <tr>
       <td>org.eclipse.equinox.preferences</td>
@@ -753,12 +891,24 @@ interesting changes since the previous
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.help</td>
-      <td><div align="center"><div align="center"><img src="new.gif" alt="(new)" border="0" height="12" width="12" /> F1.0</div></td>
+      <td>org.eclipse.equinox.security.ui</td>
+      <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.equinox.security</td>
+      <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.equinox.simpleconfigurator.manipulator</td>
+      <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.equinox.simpleconfigurator</td>
+      <td><div align="center">F1.1</div></td>
     </tr>
     <tr>
       <td>org.eclipse.help.appserver</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
       <td>org.eclipse.help.base</td>
@@ -773,12 +923,16 @@ interesting changes since the previous
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.jdt</td>
-      <td><div align="center">1.4</div></td>
+      <td>org.eclipse.help</td>
+      <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.apt.core</td>
       <td><div align="center">1.5</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jdt.apt.pluggable.core</td>
+      <td><div align="center">1.6</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.apt.ui</td>
@@ -793,15 +947,11 @@ interesting changes since the previous
       <td><div align="center">1.6</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.jdt.core</td>
-      <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
       <td>org.eclipse.jdt.core.manipulation</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.jdt.debug</td>
+      <td>org.eclipse.jdt.core</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -809,44 +959,44 @@ interesting changes since the previous
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.jdt.doc.isv</td>
-      <td><div align="center">n/a</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.jdt.doc.user</td>
-      <td><div align="center">n/a</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.jdt.junit</td>
+      <td>org.eclipse.jdt.debug</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.junit.runtime</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.3</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.junit4.runtime</td>
       <td><div align="center">1.5</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.jdt.launching</td>
+      <td>org.eclipse.jdt.junit</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.jdt.source</td>
-      <td><div align="center">n/a</div></td>
+      <td>org.eclipse.jdt.launching</td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.ui</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.jface</td>
+      <td>org.eclipse.jdt</td>
+      <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jface.databinding</td>
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jface.text</td>
       <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jface</td>
+      <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jsch.core</td>
@@ -865,10 +1015,6 @@ interesting changes since the previous
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.osgi (system.bundle)</td>
-      <td><div align="center">M1.0</div></td>
-    </tr>
-    <tr>
       <td>org.eclipse.osgi.services</td>
       <td><div align="center">M1.0</div></td>
     </tr>
@@ -877,7 +1023,15 @@ interesting changes since the previous
       <td><div align="center">M1.0</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.pde</td>
+      <td>org.eclipse.osgi</td>
+      <td><div align="center">M1.1</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.pde.api.tools.ui</td>
+      <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.pde.api.tools</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -889,11 +1043,11 @@ interesting changes since the previous
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.pde.doc.user</td>
-      <td><div align="center">n/a</div></td>
+      <td>org.eclipse.pde.junit.runtime</td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.pde.junit.runtime</td>
+      <td>org.eclipse.pde.p2.ui</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -901,15 +1055,15 @@ interesting changes since the previous
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.pde.source</td>
-      <td><div align="center">n/a</div></td>
+      <td>org.eclipse.pde.ui.templates</td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.pde.ui</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.pde.ui.templates</td>
+      <td>org.eclipse.pde</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -917,36 +1071,12 @@ interesting changes since the previous
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.platform.doc.isv</td>
-      <td><div align="center">n/a</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.platform.doc.user</td>
-      <td><div align="center">n/a</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.platform.source</td>
-      <td><div align="center">n/a</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.platform.source.*</td>
-      <td><div align="center">n/a</div></td>
-    </tr>
-    <tr>
       <td>org.eclipse.rcp</td>
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.rcp.source</td>
-      <td><div align="center">n/a</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.rcp.source.*</td>
-      <td><div align="center">n/a</div></td>
-    </tr>
-    <tr>
       <td>org.eclipse.sdk</td>
-      <td><div align="center">n/a</div></td>
+      <td><div align="center">not specified</div></td>
     </tr>
     <tr>
       <td>org.eclipse.search</td>
@@ -954,11 +1084,7 @@ interesting changes since the previous
     </tr>
     <tr>
       <td>org.eclipse.swt</td>
-      <td bgcolor="#ffffff"><div align="center">M1.0</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.swt.*</td>
-      <td bgcolor="#ffffff"><div align="center">M1.0</div></td>
+      <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
       <td>org.eclipse.team.core</td>
@@ -969,11 +1095,11 @@ interesting changes since the previous
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.team.cvs.ssh</td>
+      <td>org.eclipse.team.cvs.ssh2</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.team.cvs.ssh2</td>
+      <td>org.eclipse.team.cvs.ssh</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -987,14 +1113,6 @@ interesting changes since the previous
     <tr>
       <td>org.eclipse.text</td>
       <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.tomcat</td>
-      <td><div align="center">n/a</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.ui</td>
-      <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.browser</td>
@@ -1021,11 +1139,11 @@ interesting changes since the previous
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.ui.ide</td>
+      <td>org.eclipse.ui.ide.application</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.ui.intro</td>
+      <td>org.eclipse.ui.ide</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -1033,7 +1151,7 @@ interesting changes since the previous
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.ui.navigator</td>
+      <td>org.eclipse.ui.intro</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -1041,12 +1159,24 @@ interesting changes since the previous
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.ui.net</td>
+      <td>org.eclipse.ui.navigator</td>
       <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui.net</td>
+      <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.presentations.r21</td>
       <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui.views.log</td>
+      <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui.views.properties.tabbed</td>
+      <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.views</td>
@@ -1057,10 +1187,6 @@ interesting changes since the previous
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.ui.workbench</td>
-      <td><div align="center">F1.0</div></td>
-    </tr>
-    <tr>
       <td>org.eclipse.ui.workbench.compatibility</td>
       <td><div align="center">1.4</div></td>
     </tr>
@@ -1069,42 +1195,55 @@ interesting changes since the previous
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
+      <td>org.eclipse.ui.workbench</td>
+      <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui</td>
+      <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
       <td>org.eclipse.update.configurator</td>
-      <td bgcolor="#ffffff"><div align="center">F1.0</div></td>
+      <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
       <td>org.eclipse.update.core</td>
-      <td bgcolor="#ffffff"><div align="center">F1.0</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.update.core.linux</td>
-      <td bgcolor="#ffffff"><div align="center">F1.0</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.update.core.win32</td>
-      <td bgcolor="#ffffff"><div align="center">F1.0</div></td>
+      <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
       <td>org.eclipse.update.scheduler</td>
-      <td bgcolor="#ffffff"><div align="center">F1.0</div></td>
+      <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
       <td>org.eclipse.update.ui</td>
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
-      <td>org.junit (old)</td>
-      <td><div align="center">1.4</div></td>
+      <td>org.junit4</td>
+      <td><div align="center">1.5</div></td>
     </tr>
     <tr>
-      <td>org.junit (JUnit4)</td>
-      <td><div align="center">1.5</div></td>
+      <td>org.junit</td>
+      <td><div align="center">1.3</div></td>
     </tr>
     <tr>
       <td>org.mortbay.jetty</td>
       <td><div align="center">F1.0</div></td>
     </tr>
+    <tr>
+      <td>org.objectweb.asm</td>
+      <td><div align="center">1.3</div></td>
+    </tr>
+    <tr>
+      <td>org.sat4j.core</td>
+      <td><div align="center">not specified</div></td>
+    </tr>
+    <tr>
+      <td>org.sat4j.pb</td>
+      <td><div align="center">not specified</div></td>
+    </tr>
   </tbody>
 </table>
+
 </body>
 </html>
