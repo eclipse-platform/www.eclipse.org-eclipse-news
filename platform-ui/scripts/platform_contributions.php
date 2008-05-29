@@ -207,8 +207,8 @@ checkProject(1, 16, $includedMilestones);
 echo "<h3>Platform: Compare</h3>";
 checkProject(1, 18, $includedMilestones);
 
-echo "<h3>Platform: Core</h3>";
-checkProject(1, 10, $includedMilestones);
+//echo "<h3>Platform: Core</h3>";
+//checkProject(1, 10, $includedMilestones);
 
 echo "<h3>Platform: CVS</h3>";
 checkProject(1, 84, $includedMilestones);
@@ -216,8 +216,8 @@ checkProject(1, 84, $includedMilestones);
 echo "<h3>Platform: Debug</h3>";
 checkProject(1, 20, $includedMilestones);
 
-echo "<h3>Platform: Doc</h3>";
-checkProject(1, 9, $includedMilestones);
+//echo "<h3>Platform: Doc</h3>";
+//checkProject(1, 9, $includedMilestones);
 
 echo "<h3>Platform: IDE</h3>";
 checkProject(1, 542, $includedMilestones);
@@ -231,8 +231,8 @@ checkProject(1, 7, $includedMilestones);
 echo "<h3>Platform: Runtime</h3>";
 checkProject(1, 120, $includedMilestones);
 
-echo "<h3>Platform: Scripting</h3>";
-checkProject(1, 1, $includedMilestones);
+//echo "<h3>Platform: Scripting</h3>";
+//checkProject(1, 1, $includedMilestones);
 
 echo "<h3>Platform: Search</h3>";
 checkProject(1, 19, $includedMilestones);
@@ -255,11 +255,11 @@ checkProject(1, 3, $includedMilestones);
 echo "<h3>Platform: User Assistance</h3>";
 checkProject(1, 5, $includedMilestones);
 
-echo "<h3>Platform: WebDAV</h3>";
-checkProject(1, 17, $includedMilestones);
+//echo "<h3>Platform: WebDAV</h3>";
+//checkProject(1, 17, $includedMilestones);
 
-echo "<h3>Platform: Website</h3>";
-checkProject(1, 358, $includedMilestones);
+//echo "<h3>Platform: Website</h3>";
+//checkProject(1, 358, $includedMilestones);
 
 $dbc->disconnect();
 
@@ -267,19 +267,24 @@ $rs 		= null;
 $dbh 		= null;
 $dbc 		= null;
 
-echo "<h2>Summary, by Contributors</h2>";
-echo "<table border='1' cellpadding='2' width='80%'>";
-echo "<tr><th>Id</th><th>Name</th><th>Number of patches</th></tr>";
-array_multisort($uniqueCount, SORT_DESC, SORT_NUMERIC);
-foreach (array_keys($uniqueCount) as $key) {
+//echo "<h2>Summary, by Contributors</h2>";
+//echo "<table border='1' cellpadding='2' width='80%'>";
+//echo "<tr><th>Id</th><th>Name</th><th>Number of patches</th></tr>";
+//array_multisort($uniqueCount, SORT_DESC, SORT_NUMERIC);
+//foreach (array_keys($uniqueCount) as $key) {
      
-    echo "<tr>";
-    echo "<td>" . str_replace("@","{at}", $key) . "</td><td>" . $uniqueNames[$key] . "</td><td>" . $uniqueCount[$key] . "</td>";
-    echo "</tr>";
-}
-echo "</table>";
+//    echo "<tr>";
+//    echo "<td>" . str_replace("@","{at}", $key) . "</td><td>" . $uniqueNames[$key] . "</td><td>" . $uniqueCount[$key] . "</td>";
+//    echo "</tr>";
+//}
+//echo "</table>";
 
+echo "<h2>Third Party Software</h2>";
 
+echo "<table border='1' cellpadding='2' width='80%'>";
+echo "<tr><th>Name</th><th>IPZilla</th><th>Location</th><th>License</th><th>Usage</th></tr>";
+echo "<tr><td>ICU4J 3.8.1</td><td><a href="https://dev.eclipse.org/ipzilla/show_bug.cgi?id=1919">1919</a></td><td>com.ibm.icu_3.8.1.v20080402.jar</td><td>MIT license, X.Net License</td><td>Unicode globalization support library for Java</td></tr>";
+echo "</table>"
 
 
 exit();
