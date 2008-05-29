@@ -4,11 +4,10 @@ ini_set("display_errors", "true");
 error_reporting (E_ALL);
 $committerList = array("Tom Schindl", "Susan F. McCourt", "Szymon Brandys", "Kim Horne","Boris Bokowski","Paul Webster","Eric Moffatt","Tod Creasey","Kevin McGuire", "Tomasz Zarna", "Carolyn MacLeod", "Grant Gayed", "Chris Goldthorpe", "Markus Keller", "Daniel Megert", "Martin Aeschlimann", "Benno Baumgartner", "Christopher Daniel", "DJ Houghton", "Darin Wright", "Darin Swanson", "Samantha Chan", "Michael Rennie", "Curtis Windatt", "Kim Moir", "John Arthorne", "Oleg Besedin", "Chris Aniszczyk", "Thomas Watson", "Stefan Xenos", "Michael Valenta", "Atsuhiko Yamanaka", "Scott Kovatch");
 // the following bugs have been examined by hand and found to not be viable contributions
-$exclusions = array("208332", "56313", "144260", "149884", "199476", "213623", "223147", "162140", "166482", "221190");
+$exclusions = array("232499", "208332", "56313", "144260", "149884", "199476", "213623", "223147", "162140", "166482", "221190");
 $committerOverrides = array("87752" => "Tomasz Zarna", "189304" => "Michael Valenta", "190674" => "Michael Valenta", "208022" => "Tomasz Zarna", "205335" => "Darin Wright", "213244" => "Darin Wright", "213609" => "Darin Wright", "213719" => "Darin Wright", "214424" => "Darin Wright", "217369" => "Darin Wright", "219633" => "Darin Wright", "219643" => "Darin Wright", "223791" => "Curtis Windatt", "186121" => "Michael Valenta", "44107" => "John Arthorne", "155704" => "John Arthorne", "197605" => "DJ Houghton", "205618" => "Oleg Besedin", "72322" => "Martin Aeschlimann", "180921" => "Szymon Brandys", "32166" => "Daniel Megert", "40889" => "Daniel Megert", "184255" => "Daniel Megert", "193728" => "Daniel Megert", "208881" => "Daniel Megert", "201502" => "Kim Horne", "221387" => "Andrew Niefer", "131516" => "Chris Goldthorpe", "191031" => "Chris Goldthorpe", "191045" => "Chris Goldthorpe", "192507" => "Chris Goldthorpe", "156456" => "Chris Goldthorpe", "171276" => "Chris Goldthorpe", "173655" => "Chris Goldthorpe", "178557" => "Dejan Glozic", "189192" => "Chris Goldthorpe", "194490" => "Chris Goldthorpe", "197838" => "Dejan Glozic", "200674" => "Dejan Glozic", "200690" => "Chris Goldthorpe", "205282" => "Chris Goldthorpe", "222635" => "Chris Goldthorpe", "225786" => "Chris Goldthorpe", "226015" => "Chris Goldthorpe", "187796" => "Paul Webster", "217061" => "Daniel Megert", "132499" => "Sonia Dimitrov", "196116" => "Daniel Megert");
-$contributorOverrides = array("184830" => array("Marko Topolnik", "mt4web@gmail.com"), "215297" => array("Will Horn", "will.horn@gmail.com"), "212518" => array("Matt Carter", "matt@baselib.org")); //  
+$contributorOverrides = array("184830" => array("Marko Topolnik", "mt4web@gmail.com"), "215297" => array("Will Horn", "will.horn@gmail.com"), "212518" => array("Matt Carter", "matt@baselib.org")); 
 $includedMilestones = array("3.4", "3.4 M1", "3.4 M2", "3.4 M4", "3.4 M5", "3.4 M6", "3.4 M7", "3.4 RC1", "3.4 RC2", "3.4 RC3", "3.4 RC4");
-$debug_count = 0;
 $uniqueNames = array();
 $uniqueCount = array();
 $uniqueBugs = array();
@@ -72,7 +71,6 @@ function checkProject($projectNumber, $component, $includes) {
     global $dbc;
     global $dbh;
     global $rs;
-    global $debug_count;
     global $committerList;
     global $exclusions;
     global $uniqueCount;
@@ -117,11 +115,14 @@ function checkProject($projectNumber, $component, $includes) {
     $rs = mysql_query($sql_info, $dbh);
 
     echo "<table border='1' cellpadding='2' width='80%'>\n";
-    echo "<tr><th>Count</th><th>Bug Number</th><th>Target Milestone</th><th>Id</th><th>Name</th><th>Total Lines</th><th>Added Lines</th><th>Committer</th></tr>\n";
+    echo "<tr><th>CVS Directory</th><th>Bug Number</th><th>Target Milestone</th><th>Id</th><th>Name</th><th>Total Lines</th><th>Added Lines</th><th>Committer</th></tr>\n";
 
-    while( ($debug_count < 1000) && ($myrow  = mysql_fetch_assoc($rs)) ) {
+    while( $myrow  = mysql_fetch_assoc($rs) ) {
         if( !in_array($myrow['attachment_real_name'], $committerList) && !in_array($myrow['bug_id'], $exclusions) && !in_array($myrow['bug_id'], $uniqueBugs)) {
             if (in_array($myrow['bug_target_milestone'],$includes)) {
+                // space for directory
+                echo "<td></td>";
+                
             	array_push($uniqueBugs, $myrow['bug_id']);
             	$contributor =  $myrow['attachment_real_name'];
             	$contributorEmail =  $myrow['attachment_login_name'];
@@ -137,8 +138,7 @@ function checkProject($projectNumber, $component, $includes) {
             	$color = (strcmp($committer, $contributor) == 0 || in_array($contributor, $committerList)) ? "#FFFF00" : (strpos($myrow['bug_keywords'], 'contributed') === false ? "#FF8080" : "#FFFFFF");
             	//$color = strpos($myrow['bug_keywords'], 'contributed') === false ? (strcmp($committer, $contributor) == 0  ? "#FFFF00": "#FF8080") : "#FFFFFF";
                 echo "<tr bgcolor=\"$color\">";
-                $debug_count++;
-                echo "<td>" . $debug_count . "</td>";
+                
                 //echo "   ";
                 echo "<td>" . "<a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=" . $myrow['bug_id'] . "\">" . $myrow['bug_id'] . "</a>" . "</td>";
                 $buglist[] = $myrow['bug_id'];
@@ -191,11 +191,11 @@ function checkProject($projectNumber, $component, $includes) {
 }
 
 
-echo "<h1>IP Bug Query Working Page</h1>";
-
-echo "<h2>List bugs with attachments from people who are not committers.  The ones that are marked as contributed are white while those that are not marked as contributed are red.  Those that are yellow have the same committer as patch contributor.</h2>";
-
+echo "<h1>Eclipse Platform Project Log</h1>";
 echo "<p>Date of Query: " . date(DATE_RFC822) . "</p>";
+
+echo "<h2>Committers</h2>";
+echo "<h2>Developers</h2>";
 
 echo "<h3>Platform: Ant</h3>";
 checkProject(1, 16, $includedMilestones);
