@@ -115,7 +115,7 @@ function checkProject($projectNumber, $component, $includes) {
     $rs = mysql_query($sql_info, $dbh);
 
     echo "<table border='1' cellpadding='2' width='80%'>\n";
-    echo "<tr><th>CVS Directory</th><th>Bug Number</th><th>Name</th><th>Total Lines</th><th>Added Lines</th><th>Committer</th></tr>\n";
+    echo "<tr><th>CVS Directory</th><th>Bug Number</th><th>Name</th><th>Added Lines</th><th>Committer</th></tr>\n";
 
     while( $myrow  = mysql_fetch_assoc($rs) ) {
         if( !in_array($myrow['attachment_real_name'], $committerList) && !in_array($myrow['bug_id'], $exclusions) && !in_array($myrow['bug_id'], $uniqueBugs)) {
@@ -173,7 +173,7 @@ function checkProject($projectNumber, $component, $includes) {
                         }
                     }
                 
-                echo "<td>" . countNewLines($myrow) . "</td>";
+                //echo "<td>" . countNewLines($myrow) . "</td>";
                 echo "<td>" . countAddedLines($myrow) . "</td>";
                 echo "<td>" . $committer . "</td>";
                 echo "</tr>\n";
@@ -184,13 +184,13 @@ function checkProject($projectNumber, $component, $includes) {
     }
     echo "</table>\n";
 
-    $cslist = "";
-    foreach ($buglist as $bug) {
-        $cslist = $cslist . $bug . ",";
-    }
-    if (strlen($cslist) > 0) {
-        echo "<p>Tip: You can use this <a href=\"https://bugs.eclipse.org/bugs/buglist.cgi?bug_id=" . $cslist ."\">bugzilla single list</a> for above table to first list all bugs in the table, and then narrow or sort the result how ever you would like.</p>";
-    }
+    //$cslist = "";
+    //foreach ($buglist as $bug) {
+    //    $cslist = $cslist . $bug . ",";
+    //}
+    //if (strlen($cslist) > 0) {
+    //    echo "<p>Tip: You can use this <a href=\"https://bugs.eclipse.org/bugs/buglist.cgi?bug_id=" . $cslist ."\">bugzilla single list</a> for above table to first list all bugs in the table, and then narrow or sort the result how ever you would like.</p>";
+    //}
     flush();
 }
 
