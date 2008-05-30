@@ -5,14 +5,14 @@
 <meta http-equiv="Content-Language" content="en-us" />
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <meta name="Author" content="Eclipse Project PMC" />
-<title>The Eclipse Project 3.4 Plan (Final)</title>
+<title>The Eclipse Project DRAFT 3.4 Plan</title>
 <link rel="stylesheet" href="../../default_style.css" type="text/css" />
 </head>
 <body>
-<h1>The Eclipse Project 3.4 Plan (Final)</h1>
-Last revised 15:00 ET May 30, 2008 (<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> marks
+<h1>The Eclipse Project DRAFT 3.4 Plan</h1>
+Last revised 17:00 ET Feb 4, 2008 (<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> marks
 interesting changes since the previous 
-  <a href="eclipse_project_plan_3_4_20080204.html">draft of Feb 4, 2008</a>)
+  <a href="eclipse_project_plan_3_4_20070816.html">draft of August 16, 2007</a>)
 <p><i>&nbsp;&nbsp;&nbsp; Please send comments about this draft plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
     mailing list.</i> </p>
 <p>This document lays out the feature and API set for the next feature release
@@ -102,8 +102,10 @@ interesting changes since the previous
   <li> Friday Nov.  2, 2007 - Milestone 3 (3.4 M3) - stable build</li>
   <li> Friday Dec. 14, 2007 - Milestone 4 (3.4 M4) - stable build</li>
   <li> Friday Feb.  8, 2008 - Milestone 5 (3.4 M5) - stable build</li>
-  <li> Friday Mar. 28, 2008 - Milestone 6 (3.4 M6) - stable build - API complete - API Freeze</li>
-  <li> Friday May   2, 2008 - Milestone 7 (3.4 M7) - stable build- feature complete - development 
+  <li> <img src="new.gif" alt="(new)" border="0" height="12" width="12" /> 
+       Friday Mar. 28, 2008 - Milestone 6 (3.4 M6) - stable build - API complete - API Freeze</li>
+  <li> <img src="new.gif" alt="(new)" border="0" height="12" width="12" />
+       Friday May   2, 2008 - Milestone 7 (3.4 M7) - stable build- feature complete - development 
     freeze - lock down and testing begins</li>
 </ul>
 <p>Our target is to complete 3.4 in late June 2008. All release deliverables
@@ -138,7 +140,6 @@ interesting changes since the previous
   recreated on any reference platform will be given lower priority than problems
   with running Eclipse on a reference platform.</p>
 <p> The Eclipse SDK 3.4 is tested and validated on the following reference platforms
-(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> multiple updates)
   (this list is updated over the course of the release cycle):</p>
 <center>
   <table border="1" cellpadding="2" cellspacing="2" width="80%" summary="Eclipse Reference Platforms">
@@ -150,29 +151,34 @@ interesting changes since the previous
         <td><b>Microsoft Windows Vista, x86-32, Win32</b> running (any of):
           <ul>
             <li>Sun Java 2 Standard Edition 5.0 Update 14 for Microsoft Windows</li>
-            <li>IBM 32-bit SDK for Windows, Java 2 Technology Edition 5.0, SR6b</li>
-            <li>BEA JRockit 27.4.0, for Microsoft Windows</li>
+            <li>IBM 32-bit SDK for Windows, Java 2 Technology Edition 5.0, SR5</li>
+            <li>BEA JRockit 5.0, for Microsoft Windows</li>
           </ul></td>
       </tr>
       <tr>
         <td><b>Microsoft Windows XP, x86-32, Win32</b> running (any of):
           <ul>
-            <li>Sun Java 2 Standard Edition 6.0 Update 4 for Microsoft Windows</li>
+            <li><img src="new.gif" alt="(new)" border="0" height="12" width="12" /> 
+                Sun Java 2 Standard Edition 6.0 Update 4 for Microsoft Windows</li>
             <li>Sun Java 2 Standard Edition 5.0 Update 14 for Microsoft Windows</li>
-            <li>IBM 32-bit SDK for Windows, Java 2 Technology Edition 5.0, SR6b</li>
-            <li>BEA JRockit 27.4.0, for Microsoft Windows</li>
+            <li>IBM 32-bit SDK for Windows, Java 2 Technology Edition 5.0, SR5</li>
+            <li>BEA JRockit 5.0, for Microsoft Windows</li>
             <li>Sun Java 2 Standard Edition 1.4.2_16 for Microsoft Windows</li>
-            <li>IBM 32-bit SDK for Windows, Java 2 Technology Edition 1.4.2 SR10</li>
+            <li>IBM 32-bit SDK for Windows, Java 2 Technology Edition 1.4.2 SR7</li>
+            <li>BEA JRockit 1.4.2, for Microsoft Windows</li>
           </ul></td>
       </tr>
       <tr>
         <td><b>Red Hat Enterprise Linux 5.0, x86-32, GTK</b> running (any of):
           <ul>
             <li>Sun Java 2 Standard Edition 5.0 Update 14 for Linux x86</li>
-            <li>IBM 32-bit SDK for Linux on Intel architecture, Java 2 Technology Edition 5.0, SR6b</li>
-            <li>BEA JRockit 27.4.0, for Linux x86</li>
+            <li>IBM 32-bit SDK for Linux on Intel architecture, Java 2 Technology
+              Edition 5.0, SR5</li>
+            <li>BEA JRockit 5.0, for Linux x86</li>
             <li>Sun Java 2 Standard Edition 1.4.2_16 for Linux x86</li>
-            <li>IBM 32-bit SDK for Linux on Intel architecture, Java 2 Technology Edition 1.4.2 SR10</li>
+            <li>IBM 32-bit SDK for Linux on Intel architecture, Java 2 Technology
+              Edition 1.4.2 SR7</li>
+            <li>BEA JRockit 1.4.2, for Linux x86</li>
           </ul></td>
       </tr>
       <tr>
@@ -180,21 +186,8 @@ interesting changes since the previous
           of):
           <ul>
             <li>Sun Java 2 Standard Edition 5.0 Update 14 for Linux x86</li>
-            <li>IBM 32-bit SDK for Linux on Intel architecture, Java 2 Technology Edition 5.0, SR6b</li>
-          </ul></td>
-      </tr>
-      <tr>
-        <td><b>Microsoft Windows Vista, x86-64, Win32</b> running (any of):
-          <ul>
-            <li>Sun Java 2 Standard Edition 5.0 Update 14 for Microsoft Windows (AMD64/EM64T)</li>
-            <li>IBM 64-bit SDK for Windows, Java 2 Technology Edition 5.0, SR6b</li>
-          </ul></td>
-      </tr>
-      <tr>
-        <td><b>Microsoft Windows XP Professional x64 Edition, x86-64, Win32</b> running (any of):
-          <ul>
-            <li>Sun Java 2 Standard Edition 5.0 Update 14 for Microsoft Windows (AMD64/EM64T)</li>
-            <li>IBM 64-bit SDK for Windows, Java 2 Technology Edition 5.0, SR6b</li>
+            <li>IBM 32-bit SDK for Linux on Intel architecture, Java 2 Technology
+              Edition 5.0, SR5</li>
           </ul></td>
       </tr>
       <tr>
@@ -210,33 +203,30 @@ interesting changes since the previous
           </ul></td>
       </tr>
       <tr>
-        <td><b>HP-UX 11i v2, ia64, Motif 2.1, GTK</b> running:
-          <ul>
-            <li>HP-UX Java 2 Standard Edition 5.0 Update 7 for Itanium</li>
-          </ul></td>
-      </tr>
-      <tr>
         <td><b>IBM AIX 5.3, Power, Motif 2.1</b> running:
           <ul>
-            <li>IBM 32-bit SDK, Java 2 Technology Edition 5.0, SR6b</li>
+            <li>IBM 32-bit SDK, Java 2 Technology Edition 5.0, SR5</li>
           </ul></td>
       </tr>
       <tr>
-        <td><b>Red Hat Enterprise Linux 5.0, Power, GTK</b> running:
+        <td><b>Red Hat Enterprise Linux 4.0 update 2, Power, GTK</b> running:
           <ul>
-            <li>IBM 32-bit SDK for Linux on pSeries architecture, Java 2 Technology Edition 5.0, SR6b</li>
+            <li>IBM 32-bit SDK for Linux on pSeries architecture, Java 2 Technology
+              Edition 1.4.2 service release 7</li>
           </ul></td>
       </tr>
       <tr>
         <td><b>SUSE Linux Enterprise Server 10, Power, GTK</b> running:
           <ul>
-            <li>IBM 32-bit SDK for Linux on pSeries architecture, Java 2 Technology Edition 5.0, SR6b</li>
+            <li>IBM 32-bit SDK for Linux on pSeries architecture, Java 2 Technology
+              Edition 1.4.2 service release 7</li>
           </ul></td>
       </tr>
       <tr>
-        <td><b>Apple Mac OS X 10.5, Universal, Carbon</b> running:
+        <td><b>Apple Mac OS X <img src="new.gif" alt="(new)" border="0" height="12" width="12" /> 10.5, Universal, Carbon</b> running:
           <ul>
-            <li>Apple Java 2 Platform Standard Edition (J2SE) 5, service release 4</li>
+            <li>Apple Java 2 Platform Standard Edition (J2SE) 5, service release
+              4</li>
           </ul></td>
       </tr>
     </tbody>
@@ -355,36 +345,38 @@ interesting changes since the previous
   system, window system, Java or other. </p>
 <h4>Committed Items (Platforms)</h4>
 <blockquote>
-  <p><strong>Port SWT win32 to 64-bit.</strong> The SWT win32 port should be
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+    <strong>Port SWT win32 to 64-bit.</strong> The SWT win32 port should be
     ported to run on 64-bit editions of Windows using 64-bit JREs. [SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200081">200081</a>)</p>
-  <p><strong>Support BIDI on Linux GTK.</strong> In Eclipse 3.3, SWT fully supported
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+    <strong>Support BIDI on Linux GTK.</strong> In Eclipse 3.3, SWT fully supported
     BIDI locales on Windows, but only allowed entering and displaying BIDI text
     on Linux GTK. Add the missing BIDI support for SWT Linux GTK. [SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200083">200083</a>) </p>
-  <p><strong>Provide full internationalization on Mac OS X.</strong> In earlier
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+    <strong>Provide full internationalization on Mac OS X.</strong> In earlier
     releases of Eclipse, SWT did not address fully support internationalization
     on Mac OS X. Add the missing DBCS and BIDI support for SWT Mac OS X. [SWT]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200085">200085</a>)</p>
-  <p><strong>Implement accessibility for Mac OS X.</strong> In Eclipse 3.3, SWT
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+    <strong>Implement accessibility for Mac OS X.</strong> In Eclipse 3.3, SWT
     Mac OS X accessibility was not addressed. Implement the SWT accessibility
     APIs on Mac OS X. [SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200086">200086</a>)</p>
-  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
-    <strong>Exploit the capabilities of modern JREs.</strong> Fully support
+</blockquote>
+<h4>Proposed Items (Platforms)</h4>
+<blockquote>
+  <p><strong>Complete SWT WPF port.</strong> An early access version of the SWT
+    port for Windows Presentation Framework (WPF) was included with Eclipse 3.3.
+    Complete the SWT WPF port: add missing features; improve performance. [SWT]
+    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200082">200082</a>)</p>
+  <p><strong>Exploit the capabilities of modern JREs.</strong> Fully support
     and exploit the capabilities of modern JREs. Example work areas would be
     more Java 5 and Java 6 functionality; improved support for <a href="http://harmony.apache.org/" target="_blank">Apache
     Harmony</a>, <a href="http://wiki.eclipse.org/J9" target="_blank">IBM J9</a>, <a href="http://java.sun.com/products/foundation/" target="_blank">Foundation
     Profile 1.1</a>; Launcher improvements; etc. [JDT Core, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200087">200087</a>)</p>
 </blockquote>
-<h4>Proposed Items (Platforms)</h4>
-<blockquote>
-  <p><i>None at this time.</i></p>
-</blockquote>
 <h4>Deferred Items (Platforms)</h4>
 <blockquote>
-  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> deferred)
-    <strong>Complete SWT WPF port.</strong> An early access version of the SWT
-    port for Windows Presentation Framework (WPF) was included with Eclipse 3.3.
-    Complete the SWT WPF port: add missing features; improve performance. [SWT]
-    (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200082">200082</a>)</p>
+  <p><i>None at this time.</i></p>
 </blockquote>
 <p>(End of items for Platforms.)</p>
 <h3><a name="Consumability" id="Consumability">Consumability</a></h3>
@@ -395,31 +387,30 @@ interesting changes since the previous
   a better experience for users working with many plug-ins and large data sets. </p>
 <h4>Committed Items (Consumability)</h4>
 <blockquote>
-  <p><strong>Improve performance of large, Eclipse-based products.</strong> We
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+    <strong>Improve performance of large, Eclipse-based products.</strong> We
     will investigate the scalability of Eclipse in areas, such as startup time
     and memory footprint, with a focus on improving the overall experience when
     working with large, Eclipse-based products. [All] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200102">200102</a>) </p>
-  <p><strong>Serviceability.</strong> We will continue the work, begun in R3.3,
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+    <strong>Serviceability.</strong> We will continue the work, begun in R3.3,
     to make it easier for end users to identify and report runtime problems to
     the team responsible for the failing component. [Platform UI, Equinox] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200090">200090</a>) </p>
-  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
-    <strong>Provide additional product level configurability.</strong> &quot;Layered&quot; products
+</blockquote>
+<h4>Proposed Items (Consumability)</h4>
+<blockquote>
+  <p><strong>Provide additional product level configurability.</strong> &quot;Layered&quot; products
     (i.e. products that are built by composing other products) need more control
     over the ways that the products they are built from &quot;show through&quot; in
     the final result. To address this, we will provide additional, product-level
     configurability in the user-interface, as well as increase the flexibility
     of commonly used views, such as the markers view. [Platform UI, Equinox]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200088">200088</a>) </p>
-  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
-    <strong>Provisioning.</strong> We will design and deliver a provisioning
+  <p><strong>Provisioning.</strong> We will design and deliver a provisioning
     platform on top of which we will create a replacement for the current Update
     Manager. The provisioning platform will allow others to create provisioning
     systems to meet the needs of large and small enterprises and systems. [Equinox]
     (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200089">200089</a>) </p>
-</blockquote>
-<h4>Proposed Items (Consumability)</h4>
-<blockquote>
-  <p><i>None at this time.</i></p>
 </blockquote>
 <h4>Deferred Items (Consumability)</h4>
 <blockquote>
@@ -433,36 +424,39 @@ interesting changes since the previous
   effect the stability of the platform. </p>
 <h4>Committed Items (Reliability)</h4>
 <blockquote>
-  <p><strong>Provide API for missing/internal features.</strong> We will identify
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+    <strong>Provide API for missing/internal features.</strong> We will identify
     areas where applications built on Eclipse currently must invoke internal
     functionality in order to provide good integration with the SDK. We will
     address these cases by creating proper, API-quality equivalents or otherwise
     removing the dependencies on internals. [All] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200100">200100</a>) </p>
-  <p><strong>Focus on architectural integrity.</strong> We will explicitly focus
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+    <strong>Focus on architectural integrity.</strong> We will explicitly focus
     on identifying and fixing places where significant bugs or incomplete implementations
     have caused problems for our consumers. The intent is to make a significant
     investment in fixing these issues. [All] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200099">200099</a>) </p>
-  <p><strong>API Tooling.</strong> We will improve existing API tools and create
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+    <strong>API Tooling.</strong> We will improve existing API tools and create
     new ones, so that plug-in developers will be able to easily identify their
     API (and internal) dependencies, the clients of their API, cases where they
     have broken binary compatibility as well as situations where changes to their
     internals will break others. The tooling will also support the management
     and updating of bundle and perhaps package version numbers in accordance
     with the bundle versioning guidelines used by Eclipse. [PDE, JDT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200098">200098</a>) </p>
-  <p><strong>Provide commonly requested Java security features.</strong> We will
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+    <strong>Provide commonly requested Java security features.</strong> We will
     add support for security facilities such as JAAS, JCA, keystore, credentials,
     and signature validation. [Equinox] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200091">200091</a>) </p>
 </blockquote>
 <h4>Proposed Items (Reliability)</h4>
 <blockquote>
-  <p><i>None at this time.</i></p>
+  <p><strong>Invest in PDE Build and Release Engineering.</strong> We will address
+    issues related to the reproducibility of our builds, and make it easier for
+    others to make use of our build technology. [PDE, Rel. Eng.] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200092">200092</a>) </p>
 </blockquote>
 <h4>Deferred Items (Reliability)</h4>
 <blockquote>
-  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> deferred)
-    <strong>Invest in PDE Build and Release Engineering.</strong> We will address
-    issues related to the reproducibility of our builds, and make it easier for
-    others to make use of our build technology. [PDE, Rel. Eng.] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200092">200092</a>) </p>
+  <p><i>None at this time.</i></p>
 </blockquote>
 <p>(End of items for Reliability.)</p>
 <h3><a name="TheFuture" id="TheFuture">The Future</a></h3>
@@ -476,7 +470,8 @@ interesting changes since the previous
   use.</p>
 <h4>Committed Items (The Future)</h4>
 <blockquote>
-  <p><strong>Create the Eclipse 4.0 plan.</strong> We will identify the goals,
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+    <strong>Create the Eclipse 4.0 plan.</strong> We will identify the goals,
     scope, timeframe and major features of the next major version of the Eclipse
     SDK. To do this, we need to understand exactly how and when a new major release
     of Eclipse can be delivered, including what its relationship will be to the
@@ -484,39 +479,37 @@ interesting changes since the previous
     future needs of our consumers. And finally, we need to create a coherent
     plan to address these needs, so that we can begin to satisfy them once R3.4
     is released. [All] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200097">200097</a>) </p>
-  <p><strong>OSGi standards participation.</strong> We will invest in the future
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+    <strong>OSGi standards participation.</strong> We will invest in the future
     of OSGi by monitoring and participating in the Enterprise Expert Group work
     (e.g., Provisioning, Launching, Logging (serviceability)) and ongoing framework
     specification work. [Equinox] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200093">200093</a>) </p>
-  <p><strong>Investigate new user-interface directions.</strong> User-interface
+  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+    <strong>Investigate new user-interface directions.</strong> User-interface
     state-of-the-art is constantly evolving and changing as the capabilities
     of the underlying platforms increase. We will investigate the use of these
     capabilities within Eclipse. Potential work areas include: skinning, scripting,
     resolution-independent graphics, better desktop integration, and web-based
     presentations. [SWT, Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200095">200095</a>) </p>
-  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
-    <strong>Investigate the next generation of JDT capabilities.</strong> We
+</blockquote>
+<h4>Proposed Items (The Future)</h4>
+<blockquote>
+  <p><strong>Model the IDE.</strong> The functionality of the Eclipse Workbench
+    and IDE have grown significantly since they were created. In some cases,
+    older capabilities have been superceded by newer ones or have been proven
+    to be unwieldy or otherwise unsatisfying. We will create a new model of the
+    underlying structure of the Eclipse UI, to be used as the basis for our future
+    work. [Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id= 200094"> 200094</a>) </p>
+  <p><strong>Investigate the next generation of JDT capabilities.</strong> We
     will continue to invest in our Java development tools, by investigating how
     best to address future hardware, Java language and IDE capabilities. Potential
     work areas include: better leverage of multi-core CPUs and/or distributed
     environments, better alignment with J2ME and J2EE, and increased granularity
     in Java search. [JDT UI, JDT Core] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200096">200096</a>) </p>
 </blockquote>
-<h4>Proposed Items (The Future)</h4>
-<blockquote>
-  <p><i>None at this time.</i></p>
-</blockquote>
 <h4>Deferred Items (The Future)</h4>
 <blockquote>
-  <p>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> deferred)
-    <strong>Model the IDE.</strong> The functionality of the Eclipse Workbench
-    and IDE have grown significantly since they were created. In some cases,
-    older capabilities have been superceded by newer ones or have been proven
-    to be unwieldy or otherwise unsatisfying. We will create a new model of the
-    underlying structure of the Eclipse UI, to be used as the basis for our future
-    work. (<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> Note: 
-    Significant preliminary work was done; see the bug for more info. 
-    Work will continue as part of "e4".) [Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id= 200094"> 200094</a>) </p>
+  <p><i>None at this time.</i></p>
 </blockquote>
 <p>(End of items for The Future.)</p>
 <!-- End of Sections by Work Area -->
@@ -591,31 +584,25 @@ interesting changes since the previous
   </tbody>
 </table>
 <br />
-<b>Table of minimum execution environments by plug-in.</b> 
-   (<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> multiple updates)<br />
+<b>Table of minimum execution environments by plug-in.</b> <br />
 <br />
-
 <table border="1">
-  <tbody>
   <tbody>
     <tr>
       <td width="290"><strong>Plug-in</strong></td>
-      <td width="60"><div align="center"><p align="center"><b>3.4<br>minimum<br>execution<br>environment</b></p></div></td>
-    </tr>
-    <tr>
-      <td>com.ibm.icu</td>
-      <td><div align="center">F1.0</div></td>
-    </tr>
-    <tr>
-      <td>com.jcraft.jsch</td>
-      <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
-      <td>javax.servlet.jsp</td>
-      <td><div align="center">F1.0</div></td>
+      <td width="60"><div align="center">
+          <p align="center"><b>3.4<br />
+            minimum<br />
+            execution<br />
+            environment </b></p>
+        </div></td>
     </tr>
     <tr>
       <td>javax.servlet</td>
+      <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
+      <td>javax.servlet.jsp</td>
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
@@ -635,12 +622,8 @@ interesting changes since the previous
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
-      <td>org.apache.lucene.analysis</td>
-      <td><div align="center">not specified</div></td>
-    </tr>
-    <tr>
       <td>org.apache.lucene</td>
-      <td><div align="center">not specified</div></td>
+      <td><div align="center">n/a</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ant.core</td>
@@ -652,7 +635,7 @@ interesting changes since the previous
     </tr>
     <tr>
       <td>org.eclipse.compare</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">n/a</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.boot</td>
@@ -665,14 +648,6 @@ interesting changes since the previous
     <tr>
       <td>org.eclipse.core.contenttype</td>
       <td><div align="center">F1.0</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.core.databinding.beans</td>
-      <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.core.databinding</td>
-      <td><div align="center">F1.1</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.expressions</td>
@@ -692,14 +667,22 @@ interesting changes since the previous
     </tr>
     <tr>
       <td>org.eclipse.core.net</td>
-      <td><div align="center">F1.0</div></td>
+      <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.core.resources</td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.resources.compatibility</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.core.resources</td>
+      <td>org.eclipse.core.runtime</td>
+      <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.core.runtime.compatibility</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -711,20 +694,8 @@ interesting changes since the previous
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.core.runtime.compatibility</td>
-      <td><div align="center">F1.0</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.core.runtime</td>
-      <td><div align="center">F1.0</div></td>
-    </tr>
-    <tr>
       <td>org.eclipse.core.variables</td>
       <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.cvs</td>
-      <td><div align="center">not specified</div></td>
     </tr>
     <tr>
       <td>org.eclipse.debug.core</td>
@@ -735,51 +706,15 @@ interesting changes since the previous
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.ecf.filetransfer</td>
-      <td><div align="center">F1.0</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.ecf.identity</td>
-      <td><div align="center">F1.0</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.ecf.provider.filetransfer.ssl</td>
-      <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.ecf.provider.filetransfer</td>
-      <td><div align="center">F1.0</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.ecf.ssl</td>
-      <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.ecf</td>
-      <td><div align="center">F1.0</div></td>
-    </tr>
-    <tr>
       <td>org.eclipse.equinox.app</td>
-      <td><div align="center">M1.1</div></td>
+      <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
       <td>org.eclipse.equinox.common</td>
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.equinox.frameworkadmin.equinox</td>
-      <td><div align="center">F1.0</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.equinox.frameworkadmin</td>
-      <td><div align="center">F1.1</div></td>
-    </tr>
-    <tr>
       <td>org.eclipse.equinox.http.jetty</td>
-      <td><div align="center">F1.0</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.equinox.http.registry</td>
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
@@ -787,7 +722,7 @@ interesting changes since the previous
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.equinox.jsp.jasper.registry</td>
+      <td>org.eclipse.equinox.http.registry</td>
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
@@ -795,92 +730,12 @@ interesting changes since the previous
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
+      <td>org.eclipse.equinox.jsp.jasper.registry</td>
+      <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
       <td>org.eclipse.equinox.launcher</td>
       <td><div align="center">F1.0</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.equinox.p2.artifact.repository</td>
-      <td><div align="center">F1.1</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.equinox.p2.console</td>
-      <td><div align="center">F1.1</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.equinox.p2.core</td>
-      <td><div align="center">F1.1</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.equinox.p2.director.app</td>
-      <td><div align="center">F1.0</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.equinox.p2.directorywatcher</td>
-      <td><div align="center">F1.0</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.equinox.p2.director</td>
-      <td><div align="center">F1.1</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.equinox.p2.engine</td>
-      <td><div align="center">F1.1</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.equinox.p2.exemplarysetup</td>
-      <td><div align="center">F1.1</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.equinox.p2.extensionlocation</td>
-      <td><div align="center">F1.1</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.equinox.p2.garbagecollector</td>
-      <td><div align="center">F1.1</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.equinox.p2.jarprocessor</td>
-      <td><div align="center">F1.1</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.equinox.p2.metadata.generator</td>
-      <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.equinox.p2.metadata.repository</td>
-      <td><div align="center">F1.1</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.equinox.p2.metadata</td>
-      <td><div align="center">F1.1</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.equinox.p2.reconciler.dropins</td>
-      <td><div align="center">F1.1</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.equinox.p2.touchpoint.eclipse</td>
-      <td><div align="center">F1.1</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.equinox.p2.touchpoint.natives</td>
-      <td><div align="center">F1.1</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.equinox.p2.ui.sdk</td>
-      <td><div align="center">F1.1</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.equinox.p2.ui</td>
-      <td><div align="center">F1.1</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.equinox.p2.updatechecker</td>
-      <td><div align="center">F1.0</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.equinox.p2.updatesite</td>
-      <td><div align="center">F1.1</div></td>
     </tr>
     <tr>
       <td>org.eclipse.equinox.preferences</td>
@@ -891,48 +746,32 @@ interesting changes since the previous
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.equinox.security.ui</td>
-      <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.equinox.security</td>
-      <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.equinox.simpleconfigurator.manipulator</td>
-      <td><div align="center">F1.0</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.equinox.simpleconfigurator</td>
-      <td><div align="center">F1.1</div></td>
+      <td>org.eclipse.help</td>
+      <td><div align="center"><img src="new.gif" alt="(new)" border="0" height="12" width="12" /> 1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.help.appserver</td>
-      <td><div align="center">F1.0</div></td>
+      <td><div align="center"><img src="new.gif" alt="(new)" border="0" height="12" width="12" /> 1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.help.base</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center"><img src="new.gif" alt="(new)" border="0" height="12" width="12" /> 1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.help.ui</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center"><img src="new.gif" alt="(new)" border="0" height="12" width="12" /> 1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.help.webapp</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center"><img src="new.gif" alt="(new)" border="0" height="12" width="12" /> 1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.help</td>
-      <td><div align="center">F1.0</div></td>
+      <td>org.eclipse.jdt</td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.apt.core</td>
       <td><div align="center">1.5</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.jdt.apt.pluggable.core</td>
-      <td><div align="center">1.6</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.apt.ui</td>
@@ -947,15 +786,11 @@ interesting changes since the previous
       <td><div align="center">1.6</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.jdt.core.manipulation</td>
-      <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
       <td>org.eclipse.jdt.core</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.jdt.debug.ui</td>
+      <td>org.eclipse.jdt.core.manipulation</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -963,40 +798,48 @@ interesting changes since the previous
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.jdt.junit.runtime</td>
-      <td><div align="center">1.3</div></td>
+      <td>org.eclipse.jdt.debug.ui</td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.jdt.junit4.runtime</td>
-      <td><div align="center">1.5</div></td>
+      <td>org.eclipse.jdt.doc.isv</td>
+      <td><div align="center">n/a</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jdt.doc.user</td>
+      <td><div align="center">n/a</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.junit</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
+      <td>org.eclipse.jdt.junit.runtime</td>
+      <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jdt.junit4.runtime</td>
+      <td><div align="center">1.5</div></td>
+    </tr>
+    <tr>
       <td>org.eclipse.jdt.launching</td>
       <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jdt.source</td>
+      <td><div align="center">n/a</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.ui</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.jdt</td>
-      <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.jface.databinding</td>
+      <td>org.eclipse.jface</td>
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jface.text</td>
       <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.jface</td>
-      <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jsch.core</td>
@@ -1015,6 +858,10 @@ interesting changes since the previous
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
+      <td>org.eclipse.osgi (system.bundle)</td>
+      <td><div align="center">M1.0</div></td>
+    </tr>
+    <tr>
       <td>org.eclipse.osgi.services</td>
       <td><div align="center">M1.0</div></td>
     </tr>
@@ -1023,15 +870,7 @@ interesting changes since the previous
       <td><div align="center">M1.0</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.osgi</td>
-      <td><div align="center">M1.1</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.pde.api.tools.ui</td>
-      <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.pde.api.tools</td>
+      <td>org.eclipse.pde</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -1043,11 +882,11 @@ interesting changes since the previous
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.pde.junit.runtime</td>
-      <td><div align="center">1.4</div></td>
+      <td>org.eclipse.pde.doc.user</td>
+      <td><div align="center">n/a</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.pde.p2.ui</td>
+      <td>org.eclipse.pde.junit.runtime</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -1055,15 +894,15 @@ interesting changes since the previous
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.pde.ui.templates</td>
-      <td><div align="center">1.4</div></td>
+      <td>org.eclipse.pde.source</td>
+      <td><div align="center">n/a</div></td>
     </tr>
     <tr>
       <td>org.eclipse.pde.ui</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.pde</td>
+      <td>org.eclipse.pde.ui.templates</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -1071,12 +910,36 @@ interesting changes since the previous
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
+      <td>org.eclipse.platform.doc.isv</td>
+      <td><div align="center">n/a</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.platform.doc.user</td>
+      <td><div align="center">n/a</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.platform.source</td>
+      <td><div align="center">n/a</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.platform.source.*</td>
+      <td><div align="center">n/a</div></td>
+    </tr>
+    <tr>
       <td>org.eclipse.rcp</td>
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
+      <td>org.eclipse.rcp.source</td>
+      <td><div align="center">n/a</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.rcp.source.*</td>
+      <td><div align="center">n/a</div></td>
+    </tr>
+    <tr>
       <td>org.eclipse.sdk</td>
-      <td><div align="center">not specified</div></td>
+      <td><div align="center">n/a</div></td>
     </tr>
     <tr>
       <td>org.eclipse.search</td>
@@ -1084,7 +947,11 @@ interesting changes since the previous
     </tr>
     <tr>
       <td>org.eclipse.swt</td>
-      <td><div align="center">F1.0</div></td>
+      <td bgcolor="#ffffff"><div align="center">M1.0</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.swt.*</td>
+      <td bgcolor="#ffffff"><div align="center">M1.0</div></td>
     </tr>
     <tr>
       <td>org.eclipse.team.core</td>
@@ -1095,11 +962,11 @@ interesting changes since the previous
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.team.cvs.ssh2</td>
+      <td>org.eclipse.team.cvs.ssh</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.team.cvs.ssh</td>
+      <td>org.eclipse.team.cvs.ssh2</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -1115,12 +982,20 @@ interesting changes since the previous
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
+      <td>org.eclipse.tomcat</td>
+      <td><div align="center">n/a</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui</td>
+      <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
       <td>org.eclipse.ui.browser</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.cheatsheets</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center"><img src="new.gif" alt="(new)" border="0" height="12" width="12" /> 1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.console</td>
@@ -1136,26 +1011,18 @@ interesting changes since the previous
     </tr>
     <tr>
       <td>org.eclipse.ui.forms</td>
-      <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.ui.ide.application</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center"><img src="new.gif" alt="(new)" border="0" height="12" width="12" /> 1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.ide</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.ui.intro.universal</td>
-      <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
       <td>org.eclipse.ui.intro</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center"><img src="new.gif" alt="(new)" border="0" height="12" width="12" /> 1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.ui.navigator.resources</td>
+      <td><img src="new.gif" alt="(new)" border="0" height="12" width="12" /> org.eclipse.ui.intro.universal</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -1163,20 +1030,16 @@ interesting changes since the previous
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
+      <td>org.eclipse.ui.navigator.resources</td>
+      <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
       <td>org.eclipse.ui.net</td>
-      <td><div align="center">F1.0</div></td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.presentations.r21</td>
       <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.ui.views.log</td>
-      <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.ui.views.properties.tabbed</td>
-      <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.views</td>
@@ -1187,6 +1050,10 @@ interesting changes since the previous
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
+      <td>org.eclipse.ui.workbench</td>
+      <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
       <td>org.eclipse.ui.workbench.compatibility</td>
       <td><div align="center">1.4</div></td>
     </tr>
@@ -1195,55 +1062,42 @@ interesting changes since the previous
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.ui.workbench</td>
-      <td><div align="center">F1.0</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.ui</td>
-      <td><div align="center">F1.0</div></td>
-    </tr>
-    <tr>
       <td>org.eclipse.update.configurator</td>
-      <td><div align="center">F1.0</div></td>
+      <td bgcolor="#ffffff"><div align="center">F1.0</div></td>
     </tr>
     <tr>
       <td>org.eclipse.update.core</td>
-      <td><div align="center">F1.0</div></td>
+      <td bgcolor="#ffffff"><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.update.core.linux</td>
+      <td bgcolor="#ffffff"><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.update.core.win32</td>
+      <td bgcolor="#ffffff"><div align="center">F1.0</div></td>
     </tr>
     <tr>
       <td>org.eclipse.update.scheduler</td>
-      <td><div align="center">F1.0</div></td>
+      <td bgcolor="#ffffff"><div align="center">F1.0</div></td>
     </tr>
     <tr>
       <td>org.eclipse.update.ui</td>
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
-      <td>org.junit4</td>
-      <td><div align="center">1.5</div></td>
+      <td>org.junit (old)</td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.junit</td>
-      <td><div align="center">1.3</div></td>
+      <td>org.junit (JUnit4)</td>
+      <td><div align="center">1.5</div></td>
     </tr>
     <tr>
       <td>org.mortbay.jetty</td>
       <td><div align="center">F1.0</div></td>
     </tr>
-    <tr>
-      <td>org.objectweb.asm</td>
-      <td><div align="center">1.3</div></td>
-    </tr>
-    <tr>
-      <td>org.sat4j.core</td>
-      <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
-      <td>org.sat4j.pb</td>
-      <td><div align="center">1.4</div></td>
-    </tr>
   </tbody>
 </table>
-
 </body>
 </html>
