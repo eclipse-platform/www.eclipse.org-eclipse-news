@@ -66,6 +66,12 @@ function countAddedLines($myrow) {
     return $result;
 }
 
+function findPatchProjects($myrow) {
+    
+	preg_match_all( '/\#P ([A-Za-z0-9\.]+)/', $myrow['thedata'], $matches);
+	return $matches[1];
+}
+
 function checkProject($projectNumber, $component, $includes) {
 
     global $dbc;
@@ -140,8 +146,13 @@ function checkProject($projectNumber, $component, $includes) {
             	//$color = strpos($myrow['bug_keywords'], 'contributed') === false ? (strcmp($committer, $contributor) == 0  ? "#FFFF00": "#FF8080") : "#FFFFFF";
                 echo "<tr bgcolor=\"$color\">";
                 
-                // space for directory
-                echo "<td></td>";
+                $projects = findPatchProjects($myrow);
+                echo "<td>";
+                foreach ($projects as $project) {
+                	echo $project;
+                	echo "<br/>";
+                }
+                echo "</td>";
                 
                 //echo "   ";
                 echo "<td>" . "<a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=" . $myrow['bug_id'] . "\">" . $myrow['bug_id'] . "</a>" . "</td>";
@@ -283,10 +294,10 @@ echo "<h2>Third Party Software</h2>";
 
 echo "<table border='1' cellpadding='2' width='80%'>";
 echo "<tr><th>Name</th><th>IPZilla</th><th>Location</th><th>License</th><th>Usage</th></tr>";
+echo "<tr><td>Apache Lucene 1.9.1</td><td><a href=\"https://dev.eclipse.org/ipzilla/show_bug.cgi?id=243\">243</a></td><td>org.apache.lucene_1.9.1.v200803061811.jar<br/>org.apache.lucene.analysis_1.9.1.v200803061811.jar<br/>org.apache.lucene.analysis.source_1.9.1.v200803061811.jar<br/>org.apache.lucene.source_1.9.1.v200803061811.jar<br/></td><td>The Apache Software License Version 2.0</td><td>Used by the help engine.</td></tr>";
+echo "<tr><td>Apache Ant 1.7.0</td><td><a href=\"https://dev.eclipse.org/ipzilla/show_bug.cgi?id=1232\">1232</a></td><td>org.apache.ant_1.7.0.v200803061910</td><td>The Apache Software License Version 2.0</td><td>Ant external tool support</td></tr>";
 echo "<tr><td>ICU4J 3.8.1</td><td><a href=\"https://dev.eclipse.org/ipzilla/show_bug.cgi?id=1919\">1919</a></td><td>com.ibm.icu_3.8.1.v20080402.jar</td><td>MIT license, X.Net License</td><td>Unicode globalization support library for Java.</td></tr>";
 echo "<tr><td>jsch 1.37</td><td><a href=\"https://dev.eclipse.org/ipzilla/show_bug.cgi?id=2014\">2014</a></td><td>com.jcraft.jsch_0.1.37.v200803061811.jar</td><td>New BSD license</td><td>Communication library used by ECF.</td>";
-echo "<tr><td>Apache Ant 1.7.0</td><td><a href=\"https://dev.eclipse.org/ipzilla/show_bug.cgi?id=1232\">1232</a></td><td>org.apache.ant_1.7.0.v200803061910</td><td>The Apache Software License Version 2.0</td><td>Ant external tool support</td></tr>";
-echo "<tr><td>Apache Lucene 1.9.1</td><td><a href=\"https://dev.eclipse.org/ipzilla/show_bug.cgi?id=243\">243</a></td><td>org.apache.lucene_1.9.1.v200803061811.jar<br/>org.apache.lucene.analysis_1.9.1.v200803061811.jar<br/>org.apache.lucene.analysis.source_1.9.1.v200803061811.jar<br/>org.apache.lucene.source_1.9.1.v200803061811.jar<br/></td><td>The Apache Software License Version 2.0</td><td>Used by the help engine.</td></tr>";
 echo "</table>";
 
 
