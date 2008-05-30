@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>$CVSHeader: www/eclipse/platform-ui/scripts/platform_contributions_csv.php,v 1.5 2008/05/30 17:25:16 khorne Exp $</title>
+<title>$CVSHeader: www/eclipse/platform-ui/scripts/platform_contributions_csv.php,v 1.6 2008/05/30 17:27:42 khorne Exp $</title>
 </head>
 <body>
 <?php
@@ -154,7 +154,7 @@ $count = countAddedLines($myrow);
 echo $count < 100 ? "small" :  $count . ",";
 
 echo $committer . ",";
-echo $myrow['description'];
+echo str_replace(",", " ", $myrow['description'];
 echo "\n";
 }
 }
