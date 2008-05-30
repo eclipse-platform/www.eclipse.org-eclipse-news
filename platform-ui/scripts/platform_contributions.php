@@ -69,7 +69,7 @@ function countAddedLines($myrow) {
 
 function findPatchProjects($myrow) {
     
-	preg_match_all( '/RCS file: \/cvsroot\/eclipse\/([A-Za-z0-9\.]+)\/[A-Za-z0-9\/]*/', $myrow['thedata'], $matches);
+	preg_match_all( '/RCS file: \/(?:(?:cvsroot){0,1}(?:home){0,1}){1}\/eclipse\/([A-Za-z0-9\.]+)\/[A-Za-z0-9\/]*/', $myrow['thedata'], $matches);
 	return $matches[1];
 }
 
@@ -219,6 +219,7 @@ function checkProject($projectNumber, $component, $includes) {
 
 
 echo "<h1>Eclipse Platform Project Log</h1>";
+echo "$CVSHeader: www/eclipse/platform-ui/scripts/platform_contributions.php,v 1.64 2008/05/30 13:53:25 khorne Exp $";
 echo "<p>Date of Query: " . date(DATE_RFC822) . "</p>";
 
 echo "<h2>Committers</h2>";
