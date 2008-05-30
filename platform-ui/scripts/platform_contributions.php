@@ -1,11 +1,11 @@
 <html>
-<head><title>$CVSHeader: www/eclipse/platform-ui/scripts/platform_contributions.php,v 1.69 2008/05/30 14:13:42 khorne Exp $</title></head>
+<head><title>$CVSHeader: www/eclipse/platform-ui/scripts/platform_contributions.php,v 1.70 2008/05/30 15:00:04 khorne Exp $</title></head>
 <body>
 <?php
 require_once "/home/data/httpd/eclipse-php-classes/system/dbconnection_bugs_ro.class.php";
 ini_set("display_errors", "true");
 error_reporting (E_ALL);
-$committerList = array("Tom Schindl", "Susan F. McCourt", "Szymon Brandys", "Kim Horne","Boris Bokowski","Paul Webster","Eric Moffatt","Tod Creasey","Kevin McGuire", "Tomasz Zarna", "Carolyn MacLeod", "Grant Gayed", "Chris Goldthorpe", "Markus Keller", "Daniel Megert", "Martin Aeschlimann", "Benno Baumgartner", "Christopher Daniel", "DJ Houghton", "Darin Wright", "Darin Swanson", "Samantha Chan", "Michael Rennie", "Curtis Windatt", "Kim Moir", "John Arthorne", "Oleg Besedin", "Chris Aniszczyk", "Thomas Watson", "Stefan Xenos", "Michael Valenta", "Atsuhiko Yamanaka", "Scott Kovatch");
+$committerList = array("Tom Schindl"=> array ("BestSolution Systemhaus Gmbh", ""), "Susan F. McCourt"=> array ("IBM", ""), "Szymon Brandys"=> array("IBM, ""), "Kim Horne" => array("IBM", "khorne"),"Boris Bokowski"=> array ("IBM", ""),"Paul Webster"=> array ("IBM", ""),"Eric Moffatt"=> array ("IBM", ""),"Tod Creasey"=> array ("IBM", ""),"Kevin McGuire"=> array ("IBM", ""), "Tomasz Zarna"=> array ("IBM", ""), "Carolyn MacLeod"=> array ("IBM", ""), "Grant Gayed"=> array ("IBM", ""), "Chris Goldthorpe"=> array ("IBM", ""), "Markus Keller"=> array ("IBM", ""), "Daniel Megert"=> array ("IBM", ""), "Martin Aeschlimann"=> array ("IBM", ""), "Benno Baumgartner"=> array ("IBM", ""), "Christopher Daniel"=> array ("IBM", ""), "DJ Houghton"=> array ("IBM", ""), "Darin Wright"=> array ("IBM", ""), "Darin Swanson"=> array ("IBM", ""), "Samantha Chan"=> array ("IBM", ""), "Michael Rennie"=> array ("IBM", ""), "Curtis Windatt"=> array ("IBM", ""), "Kim Moir"=> array ("IBM", ""), "John Arthorne"=> array ("IBM", ""), "Oleg Besedin"=> array ("IBM", ""), "Chris Aniszczyk"=> array ("Independent", ""), "Thomas Watson"=> array ("IBM", ""), "Stefan Xenos"=> array ("IBM", ""), "Michael Valenta"=> array ("IBM", ""), "Atsuhiko Yamanaka"=> array ("JCraft", ""), "Scott Kovatch"=> array ("Adobe", ""));
 // the following bugs have been examined by hand and found to not be viable contributions
 $exclusions = array("232499", "208332", "56313", "144260", "149884", "199476", "213623", "223147", "162140", "166482", "221190");
 $committerOverrides = array("87752" => "Tomasz Zarna", "189304" => "Michael Valenta", "190674" => "Michael Valenta", "208022" => "Tomasz Zarna", "205335" => "Darin Wright", "213244" => "Darin Wright", "213609" => "Darin Wright", "213719" => "Darin Wright", "214424" => "Darin Wright", "217369" => "Darin Wright", "219633" => "Darin Wright", "219643" => "Darin Wright", "223791" => "Curtis Windatt", "186121" => "Michael Valenta", "44107" => "John Arthorne", "155704" => "John Arthorne", "197605" => "DJ Houghton", "205618" => "Oleg Besedin", "72322" => "Martin Aeschlimann", "180921" => "Szymon Brandys", "32166" => "Daniel Megert", "40889" => "Daniel Megert", "184255" => "Daniel Megert", "193728" => "Daniel Megert", "208881" => "Daniel Megert", "201502" => "Kim Horne", "221387" => "Andrew Niefer", "131516" => "Chris Goldthorpe", "191031" => "Chris Goldthorpe", "191045" => "Chris Goldthorpe", "192507" => "Chris Goldthorpe", "156456" => "Chris Goldthorpe", "171276" => "Chris Goldthorpe", "173655" => "Chris Goldthorpe", "178557" => "Dejan Glozic", "189192" => "Chris Goldthorpe", "194490" => "Chris Goldthorpe", "197838" => "Dejan Glozic", "200674" => "Dejan Glozic", "200690" => "Chris Goldthorpe", "205282" => "Chris Goldthorpe", "222635" => "Chris Goldthorpe", "225786" => "Chris Goldthorpe", "226015" => "Chris Goldthorpe", "187796" => "Paul Webster", "217061" => "Daniel Megert", "132499" => "Sonia Dimitrov", "196116" => "Daniel Megert");
@@ -129,7 +129,7 @@ function checkProject($projectNumber, $component, $includes) {
     echo "<tr><th>CVS Directory</th><th>Bug Number</th><th>Name</th><th>Added Lines</th><th>Committer</th></tr>\n";
 
     while( $myrow  = mysql_fetch_assoc($rs) ) {
-        if( !in_array($myrow['attachment_real_name'], $committerList) && !in_array($myrow['bug_id'], $exclusions) && !in_array($myrow['bug_id'], $uniqueBugs)) {
+        if( !array_key_exists($myrow['attachment_real_name'], $committerList) && !in_array($myrow['bug_id'], $exclusions) && !in_array($myrow['bug_id'], $uniqueBugs)) {
             if (in_array($myrow['bug_target_milestone'],$includes)) {
                 
             	array_push($uniqueBugs, $myrow['bug_id']);
@@ -147,7 +147,7 @@ function checkProject($projectNumber, $component, $includes) {
         		if (array_key_exists($myrow['bug_id'], $committerOverrides)) {
 		        	$committer = $committerOverrides[$myrow['bug_id']];
 		        }
-            	$color = (strcmp($committer, $contributor) == 0 || in_array($contributor, $committerList)) ? "#FFFF00" : (strpos($myrow['bug_keywords'], 'contributed') === false ? "#FF8080" : "#FFFFFF");
+            	$color = (strcmp($committer, $contributor) == 0 || array_key_exists($contributor, $committerList)) ? "#FFFF00" : (strpos($myrow['bug_keywords'], 'contributed') === false ? "#FF8080" : "#FFFFFF");
             	//$color = strpos($myrow['bug_keywords'], 'contributed') === false ? (strcmp($committer, $contributor) == 0  ? "#FFFF00": "#FF8080") : "#FFFFFF";
                 echo "<tr bgcolor=\"$color\">";
                 
@@ -225,6 +225,19 @@ echo "<h1>Eclipse Platform Project Log</h1>";
 echo "<p>Date of Query: " . date(DATE_RFC822) . "</p>";
 
 echo "<h2>Committers</h2>";
+echo "<table border='1' cellpadding='2' width='80%'>";
+echo "<tr><th>Name</th><th>Unix Name</th><th>Company</th></tr>";
+ksort($committerList);
+foreach ($committerList as $name => $info) {
+	echo "<tr><td>";
+	echo $name;
+	echo "</td><td>";
+	echo $info[1];
+	echo "</td><td>";
+	echo $info[0];
+	echo "</td></tr>";
+}
+
 echo "<h2>Developers</h2>";
 
 echo "<h3>Platform: Ant</h3>";
