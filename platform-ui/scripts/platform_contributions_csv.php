@@ -1,8 +1,6 @@
 <html>
 <head>
-<title>$CVSHeader:
-www/eclipse/platform-ui/scripts/platform_contributions.php,v 1.72
-2008/05/30 15:22:13 khorne Exp $</title>
+<title>$CVSHeader: www/eclipse/platform-ui/scripts/platform_contributions_csv.php,v 1.4 2008/05/30 17:23:27 khorne Exp $</title>
 </head>
 <body>
 <?php
