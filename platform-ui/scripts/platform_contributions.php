@@ -1,5 +1,5 @@
 <html>
-<head><title>$CVSHeader: www/eclipse/platform-ui/scripts/platform_contributions.php,v 1.67 2008/05/30 13:59:58 khorne Exp $</title></head>
+<head><title>$CVSHeader: www/eclipse/platform-ui/scripts/platform_contributions.php,v 1.68 2008/05/30 14:09:48 khorne Exp $</title></head>
 <body>
 <?php
 require_once "/home/data/httpd/eclipse-php-classes/system/dbconnection_bugs_ro.class.php";
@@ -10,7 +10,7 @@ $committerList = array("Tom Schindl", "Susan F. McCourt", "Szymon Brandys", "Kim
 $exclusions = array("232499", "208332", "56313", "144260", "149884", "199476", "213623", "223147", "162140", "166482", "221190");
 $committerOverrides = array("87752" => "Tomasz Zarna", "189304" => "Michael Valenta", "190674" => "Michael Valenta", "208022" => "Tomasz Zarna", "205335" => "Darin Wright", "213244" => "Darin Wright", "213609" => "Darin Wright", "213719" => "Darin Wright", "214424" => "Darin Wright", "217369" => "Darin Wright", "219633" => "Darin Wright", "219643" => "Darin Wright", "223791" => "Curtis Windatt", "186121" => "Michael Valenta", "44107" => "John Arthorne", "155704" => "John Arthorne", "197605" => "DJ Houghton", "205618" => "Oleg Besedin", "72322" => "Martin Aeschlimann", "180921" => "Szymon Brandys", "32166" => "Daniel Megert", "40889" => "Daniel Megert", "184255" => "Daniel Megert", "193728" => "Daniel Megert", "208881" => "Daniel Megert", "201502" => "Kim Horne", "221387" => "Andrew Niefer", "131516" => "Chris Goldthorpe", "191031" => "Chris Goldthorpe", "191045" => "Chris Goldthorpe", "192507" => "Chris Goldthorpe", "156456" => "Chris Goldthorpe", "171276" => "Chris Goldthorpe", "173655" => "Chris Goldthorpe", "178557" => "Dejan Glozic", "189192" => "Chris Goldthorpe", "194490" => "Chris Goldthorpe", "197838" => "Dejan Glozic", "200674" => "Dejan Glozic", "200690" => "Chris Goldthorpe", "205282" => "Chris Goldthorpe", "222635" => "Chris Goldthorpe", "225786" => "Chris Goldthorpe", "226015" => "Chris Goldthorpe", "187796" => "Paul Webster", "217061" => "Daniel Megert", "132499" => "Sonia Dimitrov", "196116" => "Daniel Megert");
 $contributorOverrides = array("184830" => array("Marko Topolnik", "mt4web@gmail.com"), "215297" => array("Will Horn", "will.horn@gmail.com"), "212518" => array("Matt Carter", "matt@baselib.org")); 
-$locationOverrides = array( "47783" => array("org.eclipse.swt"), "49724" => array("org.eclipse.swt"), "202328" => array("org.eclipse.swt"));
+$locationOverrides = array( "47783" => array("org.eclipse.swt"), "49724" => array("org.eclipse.swt"), "202328" => array("org.eclipse.swt"), "217369" => array("org.eclipse.debug.examples.core"), "197977" => array("org.eclipse.team.ui"), "184533" => array("org.eclipse.ui.tests"), "207838" => array("org.eclipse.core.databinding"), "220843" => array("org.eclipse.jface"), "192507" => array("org.eclipse.help"));
 $includedMilestones = array("3.4", "3.4 M1", "3.4 M2", "3.4 M4", "3.4 M5", "3.4 M6", "3.4 M7", "3.4 RC1", "3.4 RC2", "3.4 RC3", "3.4 RC4");
 $uniqueNames = array();
 $uniqueCount = array();
