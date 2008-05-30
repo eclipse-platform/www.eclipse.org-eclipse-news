@@ -1,6 +1,3 @@
-<html>
-<head><title>$CVSHeader: www/eclipse/platform-ui/scripts/platform_contributions.php,v 1.65 2008/05/30 13:57:44 khorne Exp $</title></head>
-<body>
 <?php
 require_once "/home/data/httpd/eclipse-php-classes/system/dbconnection_bugs_ro.class.php";
 ini_set("display_errors", "true");
