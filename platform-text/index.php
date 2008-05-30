@@ -66,7 +66,7 @@ ob_start();
 					    which disables the Browser widget and displays the hovers as simple HTML.
 					    <p>
 					    To install simply <a href="downloads/org.eclipse.ui.editors.bugzilla_1.0.0.200805281136.jar">download</a> 
-					    the plug-in and save it into the <code>&lt;install_dir&gt;/plugins</code> (3.2.x - 3.3.x) or <code>&lt;install_dir&gt;dropins</code> (3.4) subfolder.</p>
+					    the plug-in and save it into the <code>&lt;install_dir&gt;/<b>plugins</b></code> (R3.2.x - R3.3.x) or <code>&lt;install_dir&gt;/<b>dropins</b></code> (R3.4) directory.</p>
 					</li>
 				</ul></p>
 		</div>
