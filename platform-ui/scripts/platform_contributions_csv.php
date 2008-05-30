@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>$CVSHeader: www/eclipse/platform-ui/scripts/platform_contributions_csv.php,v 1.7 2008/05/30 17:28:26 khorne Exp $</title>
+<title>$CVSHeader: www/eclipse/platform-ui/scripts/platform_contributions_csv.php,v 1.8 2008/05/30 17:31:09 khorne Exp $</title>
 </head>
 <body>
 <?php
@@ -151,7 +151,7 @@ echo "https://bugs.eclipse.org/bugs/show_bug.cgi?id=" . $myrow['bug_id'] . ",";
 echo str_replace("@","{at}", $contributor) . ",";
 
 $count = countAddedLines($myrow);
-echo $count < 100 ? "small" :  $count . ",";
+echo ($count < 100 ? "small" :  $count) . ",";
 
 echo $committer . ",";
 echo str_replace(",", " ", $myrow['description']);
