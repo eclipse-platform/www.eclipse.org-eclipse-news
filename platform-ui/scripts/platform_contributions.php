@@ -7,6 +7,7 @@ $committerList = array("Tom Schindl", "Susan F. McCourt", "Szymon Brandys", "Kim
 $exclusions = array("232499", "208332", "56313", "144260", "149884", "199476", "213623", "223147", "162140", "166482", "221190");
 $committerOverrides = array("87752" => "Tomasz Zarna", "189304" => "Michael Valenta", "190674" => "Michael Valenta", "208022" => "Tomasz Zarna", "205335" => "Darin Wright", "213244" => "Darin Wright", "213609" => "Darin Wright", "213719" => "Darin Wright", "214424" => "Darin Wright", "217369" => "Darin Wright", "219633" => "Darin Wright", "219643" => "Darin Wright", "223791" => "Curtis Windatt", "186121" => "Michael Valenta", "44107" => "John Arthorne", "155704" => "John Arthorne", "197605" => "DJ Houghton", "205618" => "Oleg Besedin", "72322" => "Martin Aeschlimann", "180921" => "Szymon Brandys", "32166" => "Daniel Megert", "40889" => "Daniel Megert", "184255" => "Daniel Megert", "193728" => "Daniel Megert", "208881" => "Daniel Megert", "201502" => "Kim Horne", "221387" => "Andrew Niefer", "131516" => "Chris Goldthorpe", "191031" => "Chris Goldthorpe", "191045" => "Chris Goldthorpe", "192507" => "Chris Goldthorpe", "156456" => "Chris Goldthorpe", "171276" => "Chris Goldthorpe", "173655" => "Chris Goldthorpe", "178557" => "Dejan Glozic", "189192" => "Chris Goldthorpe", "194490" => "Chris Goldthorpe", "197838" => "Dejan Glozic", "200674" => "Dejan Glozic", "200690" => "Chris Goldthorpe", "205282" => "Chris Goldthorpe", "222635" => "Chris Goldthorpe", "225786" => "Chris Goldthorpe", "226015" => "Chris Goldthorpe", "187796" => "Paul Webster", "217061" => "Daniel Megert", "132499" => "Sonia Dimitrov", "196116" => "Daniel Megert");
 $contributorOverrides = array("184830" => array("Marko Topolnik", "mt4web@gmail.com"), "215297" => array("Will Horn", "will.horn@gmail.com"), "212518" => array("Matt Carter", "matt@baselib.org")); 
+$locationOverrides = array( "47783" => array("org.eclipse.swt"), "49724" => array("org.eclipse.swt"), "202328" => array("org.eclipse.swt"));
 $includedMilestones = array("3.4", "3.4 M1", "3.4 M2", "3.4 M4", "3.4 M5", "3.4 M6", "3.4 M7", "3.4 RC1", "3.4 RC2", "3.4 RC3", "3.4 RC4");
 $uniqueNames = array();
 $uniqueCount = array();
@@ -68,7 +69,7 @@ function countAddedLines($myrow) {
 
 function findPatchProjects($myrow) {
     
-	preg_match_all( '/\#P ([A-Za-z0-9\.]+)/', $myrow['thedata'], $matches);
+	preg_match_all( '/RCS file: \/cvsroot\/eclipse\/([A-Za-z0-9\.]+)\/[A-Za-z0-9\/]*/', $myrow['thedata'], $matches);
 	return $matches[1];
 }
 
@@ -84,6 +85,7 @@ function checkProject($projectNumber, $component, $includes) {
     global $uniqueBugs;
     global $committerOverrides;
     global $contributorOverrides;
+    global $locationOverrides;
 
     $buglist = array ();
 
@@ -146,11 +148,21 @@ function checkProject($projectNumber, $component, $includes) {
             	//$color = strpos($myrow['bug_keywords'], 'contributed') === false ? (strcmp($committer, $contributor) == 0  ? "#FFFF00": "#FF8080") : "#FFFFFF";
                 echo "<tr bgcolor=\"$color\">";
                 
-                $projects = findPatchProjects($myrow);
+                if (array_key_exists($myrow['bug_id'], $locationOverrides)) {
+                	$allProjects = $locationOverrides[$myrow['bug_id']];
+                }
+                else {
+	                $allProjects = findPatchProjects($myrow);                            
+                }
+                $projects = array();
+                
                 echo "<td>";
-                foreach ($projects as $project) {
-                	echo $project;
-                	echo "<br/>";
+                foreach ($allProjects as $project) {
+                	if (!in_array($project, $projects)) {
+                		array_push($projects, $project);
+          	    	  	echo $project;
+                		echo "<br/>";
+                	}
                 }
                 echo "</td>";
                 
