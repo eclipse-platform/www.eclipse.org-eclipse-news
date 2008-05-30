@@ -1,3 +1,6 @@
+<html>
+<head><title>$CVSHeader: www/eclipse/platform-ui/scripts/platform_contributions.php,v 1.65 2008/05/30 13:57:44 khorne Exp $</title></head>
+<body>
 <?php
 require_once "/home/data/httpd/eclipse-php-classes/system/dbconnection_bugs_ro.class.php";
 ini_set("display_errors", "true");
@@ -69,7 +72,7 @@ function countAddedLines($myrow) {
 
 function findPatchProjects($myrow) {
     
-	preg_match_all( '/RCS file: \/(?:(?:cvsroot){0,1}(?:home){0,1}){1}\/eclipse\/([A-Za-z0-9\.]+)\/[A-Za-z0-9\/]*/', $myrow['thedata'], $matches);
+	preg_match_all( '/RCS file: \/(?:(?:cvsroot){0,1}(?:home){0,1}){1}\/eclipse\/([A-Za-z0-9\-\.]+)\/[A-Za-z0-9\/]*/', $myrow['thedata'], $matches);
 	return $matches[1];
 }
 
@@ -219,7 +222,6 @@ function checkProject($projectNumber, $component, $includes) {
 
 
 echo "<h1>Eclipse Platform Project Log</h1>";
-echo "$CVSHeader: www/eclipse/platform-ui/scripts/platform_contributions.php,v 1.64 2008/05/30 13:53:25 khorne Exp $";
 echo "<p>Date of Query: " . date(DATE_RFC822) . "</p>";
 
 echo "<h2>Committers</h2>";
@@ -312,6 +314,7 @@ echo "<tr><td>Apache Ant 1.7.0</td><td><a href=\"https://dev.eclipse.org/ipzilla
 echo "<tr><td>ICU4J 3.8.1</td><td><a href=\"https://dev.eclipse.org/ipzilla/show_bug.cgi?id=1919\">1919</a></td><td>com.ibm.icu_3.8.1.v20080402.jar</td><td>MIT license, X.Net License</td><td>Unicode globalization support library for Java.</td></tr>";
 echo "<tr><td>jsch 1.37</td><td><a href=\"https://dev.eclipse.org/ipzilla/show_bug.cgi?id=2014\">2014</a></td><td>com.jcraft.jsch_0.1.37.v200803061811.jar</td><td>New BSD license</td><td>Communication library used by ECF.</td>";
 echo "</table>";
+echo "</body></html>"
 
 
 exit();
