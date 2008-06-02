@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>$CVSHeader: www/eclipse/platform-ui/scripts/pde_contributions_csv.php,v 1.14 2008/06/02 19:54:28 khorne Exp $</title>
+<title>$CVSHeader: www/eclipse/platform-ui/scripts/pde_contributions_csv.php,v 1.15 2008/06/02 19:58:25 khorne Exp $</title>
 </head>
 <body>
 <?php
@@ -10,7 +10,7 @@ error_reporting (E_ALL);
 $committerList = array("Paul Webster" => array("IBM", ""), "Andrew Niefer" => array("IBM", ""), "Wassim Melhem" => array("IBM", ""), "Curtis Windatt" => array("IBM", ""), "Olivier Thomann" => array("IBM", ""), "Darin Wright" => array("IBM", ""), "Michael Rennie" => array("IBM", ""), "Brian Bauman"=> array("IBM", ""), "Noam Chitayat"=> array("IBM", ""), "Chris Aniszczyk" => array("IBM", "") );
 // the following bugs have been examined by hand and found to not be viable contributions
 $exclusions = array();
-$committerOverrides = array("170213" => "Wassim Melhem", "170941" => "Brian Bauman", "173447" => "Brian Bauman", "173793" => "Brian Bauman", "229453" => "Nick Boldt", "215760" => "Brian Bauman");
+$committerOverrides = array("170213" => "Wassim Melhem", "170941" => "Brian Bauman", "173447" => "Brian Bauman", "173793" => "Brian Bauman", "229453" => "Nick Boldt", "215760" => "Brian Bauman", "214511" => "Brian Bauman", "214457" => "Brian Bauman");
 $contributorOverrides = array();
 $locationOverrides = array();
 $includedMilestones = array("3.4", "3.4 M1", "3.4 M2", "3.4 M4", "3.4 M5", "3.4 M6", "3.4 M7", "3.4 RC1", "3.4 RC2", "3.4 RC3", "3.4 RC4");
