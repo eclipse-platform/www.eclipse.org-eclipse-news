@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>$CVSHeader: www/eclipse/platform-ui/scripts/pde_contributions_csv.php,v 1.5 2008/06/02 19:16:42 khorne Exp $</title>
+<title>$CVSHeader: www/eclipse/platform-ui/scripts/pde_contributions_csv.php,v 1.6 2008/06/02 19:20:05 darin Exp $</title>
 </head>
 <body>
 <?php
@@ -174,7 +174,7 @@ checkProject("Build", 2, 21, $includedMilestones);
 
 checkProject("Doc", 2, 23, $includedMilestones);
 
-checkProject("Incubators", 2, 602, $includedMilestones);
+//checkProject("Incubators", 2, 602, $includedMilestones);
 
 checkProject("UI", 2, 22, $includedMilestones);
 
