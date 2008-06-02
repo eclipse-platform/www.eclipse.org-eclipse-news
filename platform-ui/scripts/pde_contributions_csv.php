@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>$CVSHeader: www/eclipse/platform-ui/scripts/pde_contributions_csv.php,v 1.22 2008/06/02 20:09:24 darin Exp $</title>
+<title>$CVSHeader: www/eclipse/platform-ui/scripts/pde_contributions_csv.php,v 1.23 2008/06/02 20:10:44 khorne Exp $</title>
 </head>
 <body>
 <?php
@@ -10,7 +10,7 @@ error_reporting (E_ALL);
 $committerList = array("Mike Pawlowski" => array("IBM", ""), "Paul Webster" => array("IBM", ""), "Andrew Niefer" => array("IBM", ""), "Wassim Melhem" => array("IBM", ""), "Curtis Windatt" => array("IBM", ""), "Olivier Thomann" => array("IBM", ""), "Darin Wright" => array("IBM", ""), "Michael Rennie" => array("IBM", ""), "Brian Bauman"=> array("IBM", ""), "Noam Chitayat"=> array("IBM", ""), "Chris Aniszczyk" => array("IBM", "") );
 // the following bugs have been examined by hand and found to not be viable contributions
 $exclusions = array();
-$committerOverrides = array("170213" => "Wassim Melhem", "170941" => "Brian Bauman", "173447" => "Brian Bauman", "173793" => "Brian Bauman", "185502" => "Brian Bauman", "190717" => "Brian Bauman", "191365" => "Brian Bauman", "192232" => "Mike Pawlowski", "192259" => "Mike Pawlowski", "229453" => "Nick Boldt", "215760" => "Brian Bauman", "214511" => "Brian Bauman", "214457" => "Brian Bauman");
+$committerOverrides = array("170213" => "Wassim Melhem", "170941" => "Brian Bauman", "173447" => "Brian Bauman", "173793" => "Brian Bauman", "185502" => "Brian Bauman", "190717" => "Brian Bauman", "191365 => "Brian Bauman", "229453" => "Nick Boldt", "215760" => "Brian Bauman", "214511" => "Brian Bauman", "214457" => "Brian Bauman", "213255" => "Brian Bauman", "212755" => "Brian Bauman", "212745" => "Brian Bauman", "212744" => "Brian Bauman", "211754" => "Brian Bauman", "208967" => "Brian Bauman", "192232" => "Mike Pawlowski", "192232" => "Mike Pawlowski", "192259" => "Mike Pawlowski", "229453" => "Nick Boldt", "215760" => "Brian Bauman", "214511" => "Brian Bauman", "214457" => "Brian Bauman");
 $contributorOverrides = array();
 $locationOverrides = array();
 $includedMilestones = array("3.4", "3.4 M1", "3.4 M2", "3.4 M4", "3.4 M5", "3.4 M6", "3.4 M7", "3.4 RC1", "3.4 RC2", "3.4 RC3", "3.4 RC4");
