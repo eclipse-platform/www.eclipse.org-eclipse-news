@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>$CVSHeader: www/eclipse/platform-ui/scripts/pde_contributions_csv.php,v 1.4 2008/06/02 19:10:53 khorne Exp $</title>
+<title>$CVSHeader: www/eclipse/platform-ui/scripts/pde_contributions_csv.php,v 1.5 2008/06/02 19:16:42 khorne Exp $</title>
 </head>
 <body>
 <?php
@@ -132,16 +132,19 @@ array_push($uniqueBugs, $myrow['bug_id']);
 $contributor =  $myrow['attachment_real_name'];
 $contributorEmail =  $myrow['attachment_login_name'];
 if (array_key_exists($myrow['bug_id'], $contributorOverrides)) {
-$pair = $contributorOverrides[$myrow['bug_id']];
-$contributorEmail = $pair[1];
-$contributor = $pair[0];
+	$pair = $contributorOverrides[$myrow['bug_id']];
+	$contributorEmail = $pair[1];
+	$contributor = $pair[0];
 }
 if ($contributor == null) {
-$contributor = $contributorEmail;
+	$contributor = $contributorEmail;
 }
 $committer = $myrow['committer_real_name'];
 if (array_key_exists($myrow['bug_id'], $committerOverrides)) {
-$committer = $committerOverrides[$myrow['bug_id']];
+	$committer = $committerOverrides[$myrow['bug_id']];
+}
+if (strcmp($committer, $contributor) == 0) {
+	$committer = "Chris Aniszczyk";
 }
 
 
