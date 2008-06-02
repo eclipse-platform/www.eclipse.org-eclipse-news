@@ -1,13 +1,13 @@
 <html>
 <head>
-<title>$CVSHeader: www/eclipse/platform-ui/scripts/pde_contributions_csv.php,v 1.1 2008/06/02 18:10:46 khorne Exp $</title>
+<title>$CVSHeader: www/eclipse/platform-ui/scripts/pde_contributions_csv.php,v 1.2 2008/06/02 18:55:08 darin Exp $</title>
 </head>
 <body>
 <?php
 require_once "/home/data/httpd/eclipse-php-classes/system/dbconnection_bugs_ro.class.php";
 ini_set("display_errors", "true");
 error_reporting (E_ALL);
-$committerList = array("Olivier Thomann" => array("IBM", ""), "Darin Wright" => array("IBM", ""), "Michael Rennie" => array("IBM", ""), "Noam Chitayat"=> array("IBM", ""), "Chris Aniszczyk" => array("IBM", "") );
+$committerList = array("Curtis Windatt" => array("IBM", ""), "Olivier Thomann" => array("IBM", ""), "Darin Wright" => array("IBM", ""), "Michael Rennie" => array("IBM", ""), "Noam Chitayat"=> array("IBM", ""), "Chris Aniszczyk" => array("IBM", "") );
 // the following bugs have been examined by hand and found to not be viable contributions
 $exclusions = array();
 $committerOverrides = array();
