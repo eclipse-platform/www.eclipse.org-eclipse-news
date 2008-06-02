@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>$CVSHeader: www/eclipse/platform-ui/scripts/jdt_contributions_csv.php,v 1.1 2008/06/02 18:14:37 khorne Exp $</title>
+<title>$CVSHeader: www/eclipse/platform-ui/scripts/jdt_contributions_csv.php,v 1.2 2008/06/02 18:29:07 khorne Exp $</title>
 </head>
 <body>
 <?php
@@ -165,15 +165,12 @@ echo "\n";
 flush();
 }
 
-checkProject("API Tools", 2, 883, $includedMilestones);
-
-checkProject("Build", 2, 21, $includedMilestones);
-
-checkProject("Doc", 2, 23, $includedMilestones);
-
-checkProject("Incubators", 2, 602, $includedMilestones);
-
-checkProject("UI", 2, 22, $includedMilestones);
+checkProject("APT", 3, 268, $includedMilestones);
+checkProject("Core", 3, 10, $includedMilestones);
+checkProject("Debug", 3, 11, $includedMilestones);
+checkProject("Doc", 3, 24, $includedMilestones);
+checkProject("Text", 3, 43, $includedMilestones);
+checkProject("UI", 3, 12, $includedMilestones);
 
 $dbc->disconnect();
 
