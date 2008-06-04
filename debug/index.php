@@ -79,7 +79,7 @@
 			<h3>Up To The Minute</h3>
 			<ul>
 			<li>Our manual testing programs our now available for <a href="/eclipse/debug/misc/ManualTestingPrograms.zip">download</a>.  Happy testing!
-			<li>The debug utils, which helps in verifying bugs, is now available via update site (with p2 metadata) at <a href="www.eclipse.org/eclipse/debug/updates/">www.eclipse.org/eclipse/debug/updates/</a></li>
+			<li>The debug utils, which helps in verifying bugs, is now available via update site (with p2 metadata) at <a href="http://www.eclipse.org/eclipse/debug/update/">www.eclipse.org/eclipse/debug/update/</a></li>
 			<li>We are presenting two tutorials at EclipseCon 2008.  The presentations are available for both <a target="_blank" href="/eclipse/debug/documents/ec_2008/Debug_Tutorial_Basic_2008.ppt">Debug Platform: The Basics</a> and <a target="_blank" href="/eclipse/debug/documents/ec_2008/Debug_Tutorial_Custom_Integration_2008.ppt">Debug Platform: Custom Integration</a>. More
 			information can be found on the <a href="/eclipse/debug/documents.php">Documents</a> page along with exercises.
 			</li>
