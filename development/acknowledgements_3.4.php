@@ -43,6 +43,12 @@ ob_start();
 <head>
 <title>Eclipse 3.4 Acknowledgements</title>
 
+<p>
+The Eclipse project (Platform, JDT, PDE, Equinox) development team received a tremendous amount of support from the Eclipse community throughout the 3.4 release cycle. 
+The enormous collective effort of opening bug reports, providing patches, testing, consuming the latest builds and participating in discussions always results in a better 
+release. To everyone that helped a big "Thank you!/Merci!/Danke!".  In particular, the team would like to express its appreciation to the following people.
+</p>
+
   </div>
   </div>
 
