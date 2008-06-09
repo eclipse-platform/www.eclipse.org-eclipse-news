@@ -49,6 +49,62 @@ The enormous collective effort of opening bug reports, providing patches, testin
 release. To everyone that helped a big "Thank you!/Merci!/Danke!".  In particular, the team would like to express its appreciation to the following people.
 </p>
 
+<p>
+Contributors to the Eclipse Platform: Remy Chi Jian Suen, Adam Archer, Francis Upton, Pawel Piech, Matthew Hall,
+Jan-Hendrik Diederich, Sebastian Davids, Brock Janiczak, Krzysztof Michalski, Andrew Overholt, Stefan Liebig,
+Matt McCutchen, Nikolay Botev, Benjamin Muskalla, Jim Perry, Semion Chichelnitsky, Jakub Jurkiewicz, Jason Brennan,
+Matt Carter, Dakshinamurthy Karra, Eric Rizzo, Jacek Pospychala, Micah Hainline, Anton Leherbauer, Oliver Schaefer,
+Benjamin CABE, Sky Yan, Chris Torrence, Janusz Lembicz, Billy Biggs, Mark Melvin, Markus Alexander Kuppe, Ed Merks,
+Robert Taniwa, Stefan Mücke, Stephan Orcaforge, Tonny Madsen, Carsten Pfeiffer, Willian Mitsuda, Cagatay Calli,
+Michael Krauter, David Green, Allan Godding, Martin Oberhuber, Rafael Chaves, Jesper S Møller, Manuel Selva,
+Neil Rickards, Martin Karpisek, Mikhail Khodjaiants, Dan Heidinga, Ted Williams, David Kyle, Isaac Pacht, Leo Dos Santos,
+Bartosz Michalik, Holger Oehm, Luma Maruojie, Tobias Gerdin, Danail Nachev, Markus Schorn, Mark Powell, Ashley Cambrell,
+Aaron Siri, Andrew Ferguson
+</p>
+
+<p>
+The User Assistance team would like to thank Guillermo Hurtado for his
+contribution allowing an infocenter to be built as a war file and also thank
+Guillermo Hurtado and and James Perry for their contribution which allows for
+multiple remote infocenters. We would also like to thank Robert Taniwa, Jacek
+Pospychala, Stefan Xenos, Stefan Mücke, Nick Edgar, Kai Nacke, Kim Sullivan 
+and Chris Torrence for the bug fixes they contributed.</p>
+
+<br>Platform Search wishes to thank
+<p>Juerg Billeter, Ulrich Etter, Roman Fuchs, Markus Schorn and Cagatay Calli</p>
+
+<br>Platform Text & JDT Text likes to thank
+<p>Guy Gurfinkel, Genady Beryozkin, Brock Janiczak, Anton Leherbauer, André
+Søreng, Nathan Beyer, Stephan Wahlbrink, Benjamin Muskalla, Andrew Ferguson,
+Cagatay Calli, Steffen Pingel, Dakshinamurthy Karra, Nikolay Botev and Lina
+Kemmel</p>
+
+<br>JDT UI sends thanks to
+<p>Ferenc Hechler, Benjamin Muskalla, Stephan Herrmann, Eric Rizzo, Brock
+Janiczak, Francis Upton, Rob Fuhrer and Karsten Becker</p>
+
+
+<br>PDE would like to thank:
+
+<p>Adam Archer, Ian Bull, Benjamin Cabe, Patrick Dempsey, Joern Dinkla, Kevin
+Doyle, Gary Duprex, Peter Friese, Brock Janiczak, Les Jones, Jakub Jurkiewicz,
+Bernd Kolb, Blazej Kroll, Eric Li, Fabio Mancinelli, Ed Merks, Bartosz
+Michalik, Danial Nachev, Ketan Padegaonkar, Jacek Pospychala, Michael Rennie,
+Gaetano Santoro, Darin Swanson, Remy Suen</p>
+
+
+<br>The SWT team would like to thank everyone who filed bugs and helped improve the
+toolkit.  Special thanks go to:
+
+<p>Alex Blewitt, Andrew Overholt, Anton Tarasov, Benjamin Pasero, Boris Bokowski,
+Christopher Deckers, Daniel Megert, Eric Rizzo, Eric Scharff, Florian Priester,
+Jeff Wu, Leo dos Santos, Mark Powell, Markus Keller, Martin Aeschlimann,
+Matthew Hatem, McQ, Mik Kersten, Oleg Krasilnikov, Phil Loats, Remy Suen, Scott
+Kovatch, Sky Yan, Tom Schindl</p>
+
+
+
+
   </div>
   </div>
 
