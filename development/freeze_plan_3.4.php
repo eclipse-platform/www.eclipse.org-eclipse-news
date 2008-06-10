@@ -46,7 +46,7 @@ ob_start();
 <table cellspacing="5" cellpadding="2" width="100%" border="0">
 <tbody> <tr> <td valign="top" align="left" colspan="2"><b>Status</b></td></tr>
 <tr> <td valign="top" align="right"></td><td> 
-<p><b>June 6, 2008 - Building RC4</td></tr>
+<p><b>June 10, 2008 - RC4 complete. Possible further builds pending for documentation and stop-ship defects.</td></tr>
     <tr>
       <td valign="top" align="left" colspan="2"><b>Detailed Timeline</b></td>
     </tr>
