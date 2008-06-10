@@ -70,14 +70,15 @@ multiple remote infocenters. We would also like to thank Robert Taniwa, Jacek
 Pospychala, Stefan Xenos, Stefan Mücke, Nick Edgar, Kai Nacke, Kim Sullivan 
 and Chris Torrence for the bug fixes they contributed.</p>
 
+
 <br>Platform Search wishes to thank
 <p>Juerg Billeter, Ulrich Etter, Roman Fuchs, Markus Schorn and Cagatay Calli</p>
-
+ 
 <br>Platform Text & JDT Text likes to thank
-<p>Guy Gurfinkel, Genady Beryozkin, Brock Janiczak, Anton Leherbauer, André
-Søreng, Nathan Beyer, Stephan Wahlbrink, Benjamin Muskalla, Andrew Ferguson,
-Cagatay Calli, Steffen Pingel, Dakshinamurthy Karra, Nikolay Botev and Lina
-Kemmel</p>
+<br>The Text team would like to thank everyone who filed good bug reports and enhancement requests. Special thanks go to:
+ <p>Guy Gurfinkel, Genady Beryozkin, Brock Janiczak, Anton Leherbauer, André
+ Søreng, Nathan Beyer, Stephan Wahlbrink, Benjamin Muskalla, Andrew Ferguson,
+ Cagatay Calli, Steffen Pingel, Dakshinamurthy Karra, Nikolay Botev and Lina Kemmel</p>
 
 <br>JDT UI sends thanks to
 <p>Ferenc Hechler, Benjamin Muskalla, Stephan Herrmann, Eric Rizzo, Brock
