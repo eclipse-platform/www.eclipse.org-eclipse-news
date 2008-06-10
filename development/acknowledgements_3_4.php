@@ -63,6 +63,22 @@ Aaron Siri, Andrew Ferguson
 </p>
 
 <p>
+The Equinox team (framework, bundles, security, p2) would like thank the many
+people who contributed code, testing, and good bug reports in this release. This
+includes code contributions from Alex Blewitt, Andrew Overholt, Benson Wong, 
+Chris Gross, Danail Nachev, Dmitriy Parkhonin, Guenther Koegel, Helmut J. Haigermoser, 
+Holger Voormann, James D. Miles, Jed Anderson, Kelly Campbell , Max Rydahl Andersen, 
+Mike Mansell, Patrick Dempsey, Paul Gardiner, Philippe Ombredanne, Prashant Deva, 
+Rafik Jaouani, Ray Braithwood, Sebastian Davids, Simon Archer, Stefan Xenos, 
+Thomas Hallgren, Timothy Mok, and Timothy Webb.  The p2 component would like to
+give a special thanks to Andrew Overholt and Timothy Webb for their significant contributions
+to all aspects of p2, from design to implementation and testing. The p2 component
+also thanks Daniel Leberre and his SAT4J team for their work on integrating
+the SAT4J solver with p2, and Scott Lewis for his work on integrating ECF transfer
+support into p2.
+</p>
+
+<p>
 The User Assistance team would like to thank Guillermo Hurtado for his
 contribution allowing an infocenter to be built as a war file and also thank
 Guillermo Hurtado and and James Perry for their contribution which allows for
@@ -74,8 +90,7 @@ and Chris Torrence for the bug fixes they contributed.</p>
 <br>Platform Search wishes to thank
 <p>Juerg Billeter, Ulrich Etter, Roman Fuchs, Markus Schorn and Cagatay Calli</p>
  
-<br>Platform Text & JDT Text likes to thank
-<br>The Text team would like to thank everyone who filed good bug reports and enhancement requests. Special thanks go to:
+<br>The Platform and JDT Text team would like to thank everyone who filed good bug reports and enhancement requests. Special thanks go to:
  <p>Guy Gurfinkel, Genady Beryozkin, Brock Janiczak, Anton Leherbauer, André
  Søreng, Nathan Beyer, Stephan Wahlbrink, Benjamin Muskalla, Andrew Ferguson,
  Cagatay Calli, Steffen Pingel, Dakshinamurthy Karra, Nikolay Botev and Lina Kemmel</p>
