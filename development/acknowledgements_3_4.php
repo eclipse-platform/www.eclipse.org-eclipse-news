@@ -73,9 +73,10 @@ Rafik Jaouani, Ray Braithwood, Sebastian Davids, Simon Archer, Stefan Xenos,
 Thomas Hallgren, Timothy Mok, and Timothy Webb.  The p2 component would like to
 give a special thanks to Andrew Overholt and Timothy Webb for their significant contributions
 to all aspects of p2, from design to implementation and testing. The p2 component
-also thanks Daniel Leberre and his SAT4J team for their work on integrating
+also thanks Daniel Leberre and Anne Parrain from the SAT4J team for their work on integrating
 the SAT4J solver with p2, and Scott Lewis for his work on integrating ECF transfer
-support into p2.
+support into p2. Finally we thank our families for putting up with our crazy work hours
+as we pried this truculent, screaming beast of a release out the door.
 </p>
 
 <p>
