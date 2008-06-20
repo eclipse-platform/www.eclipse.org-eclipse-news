@@ -120,7 +120,16 @@ Matthew Hatem, McQ, Mik Kersten, Oleg Krasilnikov, Phil Loats, Remy Suen, Scott
 Kovatch, Sky Yan, Tom Schindl</p>
 
 
+<br>The Releng team would like to thank:
 
+<p>The p2 posse of John Arthorne, DJ Houghton, Andrew Niefer and Pascal Rapicault for assistance
+p2izing the build and improvements to PDE build. Frederic Fusier for his improvements to the performance
+framework.  Olivier Thomann for his numerous patches and assistance implementing API tooling in the 
+build.  Sonia Dimitrov for helpful build suggestions and kite flying expeditions.  Jennifer Charland for 
+her super sysadmin skills in our our build lab.  The Eclipse foundation webmasters 
+for keeping the eclipse.org servers healthy. The releng team would like to also to thank their family and 
+friends for their understanding regarding the long work hours that this released entailed.
+</p>
 
   </div>
   </div>
