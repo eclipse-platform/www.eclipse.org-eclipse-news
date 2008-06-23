@@ -3,14 +3,14 @@
 <repository name='file:/Users/kim/Documents/eclipse/workspaces/3.4-build-workspace/updates/ - artifacts' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1.0.0'>
   <properties size='2'>
     <property name='p2.compressed' value='false'/>
-    <property name='p2.timestamp' value='1213634884791'/>
+    <property name='p2.timestamp' value='1214232161997'/>
   </properties>
   <mappings size='3'>
     <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
     <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
     <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
   </mappings>
-  <artifacts size='20'>
+  <artifacts size='22'>
     <artifact classifier='org.eclipse.update.feature' id='org.eclipse.ui.tweaklets.grabfocus.feature' version='1.0.0.200706261343'>
       <properties size='2'>
         <property name='artifact.size' value='11456'/>
@@ -86,16 +86,16 @@
         <property name='download.size' value='11345'/>
       </properties>
     </artifact>
-    <artifact classifier='osgi.bundle' id='org.eclipse.ui.tweaklets.autopintabs' version='0.9.0.200706261343'>
-      <properties size='2'>
-        <property name='artifact.size' value='5808'/>
-        <property name='download.size' value='5808'/>
-      </properties>
-    </artifact>
     <artifact classifier='org.eclipse.update.feature' id='org.eclipse.ui.tools.feature' version='1.0.0.200805131016'>
       <properties size='2'>
         <property name='artifact.size' value='11334'/>
         <property name='download.size' value='11334'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.tweaklets.autopintabs' version='0.9.0.200706261343'>
+      <properties size='2'>
+        <property name='artifact.size' value='5808'/>
+        <property name='download.size' value='5808'/>
       </properties>
     </artifact>
     <artifact classifier='osgi.bundle' id='org.eclipse.sound.ui' version='1.0.0.200708291240'>
@@ -105,11 +105,24 @@
         <property name='download.contentType' value='application/zip'/>
       </properties>
     </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.tools' version='1.0.0.200806231042'>
+      <properties size='3'>
+        <property name='artifact.size' value='200732'/>
+        <property name='download.size' value='200732'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
     <artifact classifier='osgi.bundle' id='org.eclipse.ui.tweaklets.autopintabs' version='0.9.0.200706261343'>
       <properties size='3'>
         <property name='artifact.size' value='5808'/>
         <property name='download.size' value='5808'/>
         <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.ui.tools.feature' version='1.0.0.200806231042'>
+      <properties size='2'>
+        <property name='artifact.size' value='11335'/>
+        <property name='download.size' value='11335'/>
       </properties>
     </artifact>
     <artifact classifier='osgi.bundle' id='org.eclipse.ui.tools' version='1.0.0.200805131016'>
