@@ -73,7 +73,7 @@ Rafik Jaouani, Ray Braithwood, Sebastian Davids, Simon Archer, Stefan Xenos,
 Thomas Hallgren, Timothy Mok, and Timothy Webb.  The p2 component would like to
 give a special thanks to Andrew Overholt and Timothy Webb for their significant contributions
 to all aspects of p2, from design to implementation and testing. The p2 component
-also thanks Daniel Leberre and Anne Parrain from the SAT4J team for their work on integrating
+also thanks Daniel Le Berre and Anne Parrain from the SAT4J team for their work on integrating
 the SAT4J solver with p2, and Scott Lewis for his work on integrating ECF transfer
 support into p2. Finally we thank our families for putting up with our crazy work hours
 as we pried this truculent, screaming beast of a release out the door.
@@ -128,7 +128,7 @@ framework.  Olivier Thomann for his numerous patches and assistance implementing
 build.  Sonia Dimitrov for helpful build suggestions and kite flying expeditions.  Jennifer Charland for 
 her super sysadmin skills in our our build lab.  The Eclipse foundation webmasters 
 for keeping the eclipse.org servers healthy. The releng team would like to also to thank their family and 
-friends for their understanding regarding the long work hours that this released entailed.
+friends for their understanding regarding the long work hours that this release entailed.
 </p>
 
   </div>
