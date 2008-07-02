@@ -1,0 +1,106 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html XMLNS:Style>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta name="GENERATOR" content="Mozilla/4.76 [en] (Windows NT 5.0; U) [Netscape]">
+	<title>Previous Platform Text Milestone plans</title>
+
+<script type="text/javascript">
+<!--
+function linkifyBugs() {
+	// Replaces plain text 'bug xyz' by a link to Eclipse's bugzilla.
+	traverseLinkifyBugs(document.getElementsByTagName("body")[0]);
+}
+function nextNode(node) {
+	if (node.nextSibling) {
+		return node.nextSibling;
+	} else if (node.parentNode == document.getElementsByTagName("body")[0]) {
+		return null;
+	} else {
+		return nextNode(node.parentNode);
+	}
+}
+function traverseLinkifyBugs(node) {
+	while (node) {
+		if (node.nodeType == 1/*element*/ && node.nodeName == "a") {
+			node= nextNode(node);
+			
+		} else if (node.childNodes != null && node.childNodes.length > 0) {
+			node= node.childNodes[0];
+			
+		} else if (node.nodeType == 3/*text*/) {
+			var txt= node.data;
+			var regex= /([Bb]ug\s*)([0-9]+)/;
+			var res= regex.exec(txt);
+			if (res) {
+				var matchStart= txt.indexOf(res[0]);
+				
+				var beforeNode= document.createTextNode(txt.substring(0, matchStart));
+				node.parentNode.insertBefore(beforeNode, node);
+				
+				var linkNode= document.createElement("a");
+				linkNode.href= "https://bugs.eclipse.org/bugs/show_bug.cgi?id=" + res[2];
+				linkNode.appendChild(document.createTextNode(res[1] + res[2]));
+				node.parentNode.insertBefore(linkNode, node);
+				
+				node.data= txt.substr(matchStart + res[0].length);
+				// continue with current (shortened) node...
+			} else {
+				node= nextNode(node);
+			}
+			
+		} else {
+			node= nextNode(node);
+		}
+	}
+}
+
+//-->
+</script>
+	
+</head>
+
+<body text="#000000" bgcolor="#FFFFFF" onload="linkifyBugs()">
+
+<table BORDER=0 CELLSPACING=5 CELLPADDING=2 WIDTH="100%" >
+  <tr> 
+    <td WIDTH="100%"> 
+	<p>Last revised 12:05 CEST July 2, 2008</p>
+  </tr>
+  
+   <tr> 
+    <td WIDTH="100%"> 
+    <p>The current 3.5 milestone plan can be found <a href="plan.php">here</a>.</p>
+  </tr>
+  
+
+  
+</table>  
+
+<table border="0" cellpadding="2" cellspacing="5" width="100%"><tbody><tr><td colspan="4" align="left" bgcolor="#595791" valign="top" width="100%"><font face="Arial,Helvetica"><font color="#ffffff">Legend
+			</font></font></td>
+		</tr>
+		<tr>
+			<td valign="center"><img src="../images/progress.gif" nosave="" border="0" height="5" width="14" align="middle"></td>
+			<td width="50%">item is under development.</td>
+			<td valign="top"><img src="../images/glass.gif" nosave="" border="0" height="10" width="10"></td>
+			<td width="50%">item is under investigation.</td>
+		</tr>
+		<tr>
+			<td valign="center"><img src="../images/ok.gif" nosave="" border="0" height="10" width="10"></td>
+			<td width="50%">item is finished.</td>
+			<td valign="top">( )</td>
+			<td width="50%">item is time permitted.</td>
+		</tr>
+		<tr>
+			<td valign="center"><font class="indexsub" color="#8080ff">[xyz]</font></td>
+			<td width="50%">item is deferred (&gt;) from xyz or continues in xyz.</td>
+			<td valign="top"><font class="indexsub"><img src="../images/new.gif" border="0"></font></td>
+			<td width="50%">new</td>
+		</tr>
+	</tbody>
+</table>
+
+<br>&nbsp;
+</body>
+</html>
