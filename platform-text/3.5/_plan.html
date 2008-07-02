@@ -1,0 +1,273 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html XMLNS:Style>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta name="GENERATOR" content="Mozilla/4.76 [en] (Windows NT 5.0; U) [Netscape]">
+	<title>Platform Text 3.5 Plan</title>
+
+<script type="text/javascript">
+<!--
+function linkifyBugs() {
+	// Replaces plain text 'bug xyz' by a link to Eclipse's bugzilla.
+	traverseLinkifyBugs(document.getElementsByTagName("body")[0]);
+}
+function nextNode(node) {
+	if (node.nextSibling) {
+		return node.nextSibling;
+	} else if (node.parentNode == document.getElementsByTagName("body")[0]) {
+		return null;
+	} else {
+		return nextNode(node.parentNode);
+	}
+}
+function traverseLinkifyBugs(node) {
+	while (node) {
+		if (node.nodeType == 1/*element*/ && node.nodeName == "a") {
+			node= nextNode(node);
+			
+		} else if (node.childNodes != null && node.childNodes.length > 0) {
+			node= node.childNodes[0];
+			
+		} else if (node.nodeType == 3/*text*/) {
+			var txt= node.data;
+			var regex= /([Bb]ug\s*)([0-9]+)/;
+			var res= regex.exec(txt);
+			if (res) {
+				var matchStart= txt.indexOf(res[0]);
+				
+				var beforeNode= document.createTextNode(txt.substring(0, matchStart));
+				node.parentNode.insertBefore(beforeNode, node);
+				
+				var linkNode= document.createElement("a");
+				linkNode.href= "https://bugs.eclipse.org/bugs/show_bug.cgi?id=" + res[2];
+				linkNode.appendChild(document.createTextNode(res[1] + res[2]));
+				node.parentNode.insertBefore(linkNode, node);
+				
+				node.data= txt.substr(matchStart + res[0].length);
+				// continue with current (shortened) node...
+			} else {
+				node= nextNode(node);
+			}
+			
+		} else {
+			node= nextNode(node);
+		}
+	}
+}
+
+//-->
+</script>
+
+<!--
+	<style>
+		body {  
+			background-image: url('../images/proposal.gif');
+			background-repeat: repeat-y
+		}
+	</style>
+-->
+	
+	 <style type="text/css">
+  		Style\:committed {
+  			color: blue;
+  			font-style: italic;
+  		}
+	</style>	
+	
+</head>
+
+<body text="#000000" bgcolor="#FFFFFF" onload="linkifyBugs()">
+
+<table BORDER=0 CELLSPACING=5 CELLPADDING=2 WIDTH="100%" >
+
+  <tr> 
+    <td WIDTH="100%"> 
+	<p>Last revised 12:40 CEST July 2, 2008</p>
+
+    
+      <p>This plan is under continuous refinement. Please send comments about this plan to the <a href="mailto:platform-text-dev@eclipse.org">platform-text-dev@eclipse.org</a> developer mailing list.</p>
+      <p><strong>Note:</strong> The JDT Text plan is now hosted on the <a href="http://www.eclipse.org/jdt/ui/r3_5/plan.php">Combined JDT Text and JDT UI Plan</a>.</p>
+      <h2><a NAME="Overall_Planning"></a>Overall Goals</h2>
+      <p>This section lists the goals for Eclipse 3.5 for the Platform 
+        Text component as listed on the 
+        <a href="http://www.eclipse.org/eclipse/development/eclipse_project_plan_3_5.html">Eclipse Project 3.5 Draft Plan</a>.
+        </p>
+
+
+		<p>
+		<strong><a name="1"></a>[1] Performance</strong>.
+		Reduce temporary memory used when typing and investigate faster ways to iterate over annotations. In addition overall performance and memory consumption will be monitored which includes the addition of new performance tests for new features.  
+		</p>
+
+		<p>
+		<strong><a name="2"></a>[2] Reliability</strong>.
+		Provide APIs for clients where needed, make various improvements to printing support, the vertical and overview rulers and fix outstanding issues with regex support.
+		</p>
+		
+		<p>
+		<strong><a name="3"></a>[3] Keep Eclipse vibrant and attractive</strong>.
+		Deliver new productivity features like rich hovers and SWT templates. 
+		</p>
+
+	<h2><a NAME="Work_Items"></a><br>Work Items</h2>
+	<p>
+		This section lists the possible work items for Eclipse 3.5 for the Platform Text component
+		with the [corresponding theme].
+		Some of those items have a <Style:committed>higher priority</Style:committed> than others.
+	</p>
+
+	<ul>
+		<li><h4>Find/Replace [<a href="#2">2</a>]</h4>
+		<ul>
+			<li>improve Find/Replace dialog: merge into editor area, ... [from external contributor]</li>
+		</ul>
+		</li>
+	
+		<li><h4><a name="Hyperlinking"></a>Hyperlinking [<a href="#3">3</a>]</h4>
+		<ul>
+			<li>allow hyperlink to show a hover</li>
+		</ul>
+		</li>
+
+		<li><h4>Ruler improvements [<a href="#2">2</a>]</h4>
+		<ul>
+			<li>investigate improving the usability of icons in the vertical ruler [experimental]
+			<ul>
+				<li><Style:committed>fix most common layering problem (breakpoints) by changing their layer</Style:committed></li>
+				<li><Style:committed>alpha blending so that underlying icons can be seen</Style:committed></li>
+				<li><Style:committed>down-size images so that we can show 4 instead of one</Style:committed></li>
+				<li>allow to increase ruler width</li>
+				<li>allow users to configure the annotation presentation layer for each annotation</li>
+				<li>finish/cleanup the roll-over annotation work that was kicked off during 3.0
+	  	  	</ul>
+	  	  	</li>
+			<li>improve overview ruler arming and size of active area</li>
+		</ul>
+		</li>
+	
+		<li><h4>Spell Checking [<a href="#2">2</a>]</h4>
+		<ul>
+			<li>allow to spell-check a set of resources (write your own builder?)</li>
+			<li>push down spelling engine from JDT to Platform</li>
+			<li>investigate and reduce memory consumption</li>
+		</ul>
+		</li>
+	
+		<li><h4>Performance [<a href="#1">1</a>]</h4>
+		<ul>
+			<li><Style:committed>investigate to reduce garbage when typing</Style:committed></li>
+			<li><Style:committed>revisit the text viewer's support for redraw, compound updates, and selection preservation</Style:committed>
+			<ul>
+				<li>check all setRedraw(on/off) users whether they really need that expensive operation (e.g. undo)</li>
+			</ul>
+			</li>
+		  
+			<li><Style:committed>constantly watch performance test results and act when red</Style:committed></li>
+			<li><Style:committed>continue to provide new tests</Style:committed></li>
+		</ul>
+		</li>
+	  
+		<li><h4>Miscellaneous</h4>
+		<ul>
+			<li>show context when dragging the vertical scroll bar (e.g. method name) [experimental]</li>
+			<li><Style:committed>quick diff usability improvements in hover (Next/Prev support etc.)</Style:committed>
+			<li><Style:committed>change folding paradigm: no longer eat first key stroke [experimental] (bug 67500, bug 66264)</Style:committed></li>
+			<li>provide LTK layer for text editing support (bug 125825, bug 149817, ...)</li>
+			<li><Style:committed>make additional info accessible to screen readers (bug 236440)</Style:committed>
+			<br>&rarr; 3.4 already offers a partial solution: the screen reader works if the user gives focus to the additional info, either via mouse or <strong>Tab</strong> key
+			</li>
+		</ul>
+		</li>
+		
+		<li><h4>General Items [<a href="#2">2</a>]</h4>
+		<ul>
+			<li><Style:committed>3.4.x maintenance work</Style:committed></li>
+			<li>look at bugs with patches and review those</li>
+		</ul>
+		</li>
+	</ul>
+
+
+	<h2><br>Cross Team Issues</h2>
+	<p>This section contains cross team issues that have to be clarified. The 
+		concrete outcome affects the plan items listed above.</p>
+	<ul>
+		TBD
+	</ul>
+	</td>
+</tr>
+
+
+
+<tr>
+	<td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#595791"><font face="Arial,Helvetica"><font color="#FFFFFF"><a name="Milestone_Planning">Milestone M1 (2008-??-??)</font></font></td>
+</tr>
+
+ <tr> 
+	<td WIDTH="100%">
+		See also the <a href="http://www.eclipse.org/jdt/ui/r3_5/plan.php#Milestone_Planning">Combined JDT Text and JDT UI 3.5 M1 Plan</a>.</p>
+
+		
+		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Permanent Items</h4>
+		<ul>
+			<li>bugzilla inbox tracking</li>
+			<li>bug fixing</li>
+			<li>watch performance tests</li>
+			<li>increase correctness test coverage</li>
+		</ul>
+		
+		
+		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Testing</h4>
+		<ul>
+			<li><a href="http://www.eclipse.org/jdt/ui/r3_5/testing/M1_Test_Plan.html">test plan</a> for the 3.5 M1 test pass.</li>
+		</ul>
+		
+	      
+		<h3>Previous Milestones</h3>
+		<p>Previous 3.5 milestones can be reviewed <a href="previous_plans.php">here</a>.</p>
+		
+	</td>
+</tr>
+
+
+  <tr> 
+    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#595791"><font face="Arial,Helvetica"><font color="#FFFFFF">Bug Tracking</font></font></td>
+</tr>
+
+<tr>
+<td>
+<ul>
+<li><a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&product=JDT&product=Platform&component=Text&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=REOPENED&emailassigned_to1=1&emailtype1=substring&email1=inbox&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=400d&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">new bug reports</a></li>
+<li><a href="http://dev.eclipse.org/bugs/buglist.cgi?bug_status=ASSIGNED&email1=platform-text-inbox@eclipse.org&emailtype1=exact&emailassigned_to1=1&email2=&emailtype2=substring&emailreporter2=1&bugidtype=include&bug_id=&changedin=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&product=Platform&component=Text&short_desc=&short_desc_type=allwordssubstr&long_desc=&long_desc_type=allwordssubstr&keywords=&keywords_type=anywords&field0-0-0=noop&type0-0-0=noop&value0-0-0=&namedcmd=All&newqueryname=Text%2BInbox&tofooter=1&order=Reuse%2Bsame%2Bsort%2Bas%2Blast%2Btime">accepted Platform Text bug reports</a></li>
+<li><a href="https://bugs.eclipse.org/bugs/query.cgi?short_desc_type=allwordssubstr&short_desc=&product=JDT&product=Platform&component=Text&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&namedcmd=Assigned&newqueryname=&field0-0-0=noop&type0-0-0=noop&value0-0-0=">find a bug report</a></li>
+</ul>
+</td>
+</tr>
+</table>
+<table border="0" cellpadding="2" cellspacing="5" width="100%"><tbody><tr><td colspan="4" align="left" bgcolor="#595791" valign="top" width="100%"><font face="Arial,Helvetica"><font color="#ffffff">Legend
+			</font></font></td>
+		</tr>
+		<tr>
+			<td valign="center"><img src="../images/progress.gif" border="0" height="5" width="14" align="middle"></td>
+			<td width="50%">item is under development.</td>
+			<td valign="top"><img src="../images/glass.gif" border="0" height="10" width="10"></td>
+			<td width="50%">item is under investigation.</td>
+		</tr>
+		<tr>
+			<td valign="center"><img src="../images/ok.gif" border="0" height="10" width="10"></td>
+			<td width="50%">item is finished.</td>
+			<td valign="top">( )</td>
+			<td width="50%">item is time permitted.</td>
+		</tr>
+		<tr>
+			<td valign="center"><font class="indexsub" color="#8080ff">[xyz]</font></td>
+			<td width="50%">item is deferred (&gt;) from xyz or continues in xyz.</td>
+			<td valign="center"><font class="indexsub"><img src="../images/new.gif" border="0"></font></td>
+			<td width="50%">new</td>
+		</tr>
+	</tbody>
+</table>
+
+<br>&nbsp;
+</body>
+</html>
