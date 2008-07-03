@@ -82,7 +82,7 @@ function traverseLinkifyBugs(node) {
 
   <tr> 
     <td WIDTH="100%"> 
-	<p>Last revised 12:45 CEST July 3, 2008</p>
+	<p>Last revised $Date: 2008/07/03 18:56:33 $</p>
 
     
       <p>This plan is under continuous refinement. Please send comments about this plan to the <a href="mailto:platform-text-dev@eclipse.org">platform-text-dev@eclipse.org</a> developer mailing list.</p>
@@ -119,12 +119,17 @@ function traverseLinkifyBugs(node) {
 	<ul>
 		<li><h4>Find/Replace [<a href="#2">2</a>]</h4>
 		<ul>
-			<li>improve Find/Replace dialog: merge into editor area, ... [from external contributor]</li>
+			<li>improve Find/Replace dialog: merge into editor area, ... [from external contributor] (bug 99294)</li>
 		</ul>
 		</li>
 	
-		<li><h4><a name="Hyperlinking"></a>Hyperlinking [<a href="#3">3</a>]</h4>
+		<li><h4><a name="Hovering"></a>Hovering [<a href="#3">3</a>]</h4>
 		<ul>
+			<li class="priority">quick diff usability improvements in hover (Next/Prev support etc.)</li>
+			<li class="priority">check hover and content assist usability in combination with screen readers (bug 236440)
+			<br>&rarr; 3.4 already offers a partial solution: the screen reader works if the user gives focus to the additional info, either via mouse or <strong>Tab</strong> key
+			</li>
+			<li class="priority">[hovering] Add 'Show in Properties File' action to NLS key hover (bug 220002)</li>
 		</ul>
 		</li>
 
@@ -138,7 +143,8 @@ function traverseLinkifyBugs(node) {
 				<li>down-size images so that we can show 4 instead of one</li>
 				<li>allow to increase ruler width</li>
 				<li>allow users to configure the annotation presentation layer for each annotation</li>
-				<li>finish/cleanup the roll-over annotation work that was kicked off during 3.0
+				<li>finish/cleanup the roll-over annotation work that was kicked off during 3.0</li>
+				<li>add support to contribute actions and context menus to ruler columns (needs platform support</li>
 	  	  	</ul>
 	  	  	</li>
 		</ul>
@@ -166,12 +172,15 @@ function traverseLinkifyBugs(node) {
 	  
 		<li><h4>Miscellaneous</h4>
 		<ul>
-			<li class="priority">quick diff usability improvements in hover (Next/Prev support etc.)</li>
 			<li class="priority">change folding paradigm: no longer eat first key stroke [experimental] (bug 67500, bug 66264)</li>
-			<li class="priority">check hover and content assist usability in combination with screen readers (bug 236440)
-			<br>&rarr; 3.4 already offers a partial solution: the screen reader works if the user gives focus to the additional info, either via mouse or <strong>Tab</strong> key
-			</li>
+			<li class="priority">generalize save actions (push down to Platform Text)</li>
+			<li class="priority">API/extension points to contribute new context types to JDT (to allow clients to add
+  		something like SWT templates) (bug 236878)</li>
+			<li>generalize breadcrumb (together with Platform UI)</li>
 			<li>provide LTK layer for text editing support (bug 125825, bug 149817, ...)</li>
+			<li>up/down navigation loses context when reconciler kicks in (bug 79992)</li>
+			<li>Restore editor selection on restart should restore visible view port as well (bug 169838)</li>
+			<li>Problems with undo grouping in linked mode (bug 77575)</li>
 		</ul>
 		</li>
 		
