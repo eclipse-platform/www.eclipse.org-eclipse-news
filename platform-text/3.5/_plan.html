@@ -82,7 +82,7 @@ function traverseLinkifyBugs(node) {
 
   <tr> 
     <td WIDTH="100%"> 
-	<p>Last revised 12:40 CEST July 2, 2008</p>
+	<p>Last revised 12:45 CEST July 3, 2008</p>
 
     
       <p>This plan is under continuous refinement. Please send comments about this plan to the <a href="mailto:platform-text-dev@eclipse.org">platform-text-dev@eclipse.org</a> developer mailing list.</p>
@@ -125,38 +125,35 @@ function traverseLinkifyBugs(node) {
 	
 		<li><h4><a name="Hyperlinking"></a>Hyperlinking [<a href="#3">3</a>]</h4>
 		<ul>
-			<li>allow hyperlink to show a hover</li>
 		</ul>
 		</li>
 
 		<li><h4>Ruler improvements [<a href="#2">2</a>]</h4>
 		<ul>
+			<li>improve overview ruler arming and size of active area</li>
 			<li>investigate improving the usability of icons in the vertical ruler [experimental]
 			<ul>
-				<li><Style:committed>fix most common layering problem (breakpoints) by changing their layer</Style:committed></li>
-				<li><Style:committed>alpha blending so that underlying icons can be seen</Style:committed></li>
-				<li><Style:committed>down-size images so that we can show 4 instead of one</Style:committed></li>
+				<li>fix most common layering problem (breakpoints) by changing their layer</li>
+				<li>alpha blending so that underlying icons can be seen</li>
+				<li>down-size images so that we can show 4 instead of one</li>
 				<li>allow to increase ruler width</li>
 				<li>allow users to configure the annotation presentation layer for each annotation</li>
 				<li>finish/cleanup the roll-over annotation work that was kicked off during 3.0
 	  	  	</ul>
 	  	  	</li>
-			<li>improve overview ruler arming and size of active area</li>
 		</ul>
 		</li>
 	
 		<li><h4>Spell Checking [<a href="#2">2</a>]</h4>
 		<ul>
-			<li>allow to spell-check a set of resources (write your own builder?)</li>
-			<li>push down spelling engine from JDT to Platform</li>
 			<li>investigate and reduce memory consumption</li>
 		</ul>
 		</li>
 	
 		<li><h4>Performance [<a href="#1">1</a>]</h4>
 		<ul>
-			<li><Style:committed>investigate to reduce garbage when typing</Style:committed></li>
-			<li><Style:committed>revisit the text viewer's support for redraw, compound updates, and selection preservation</Style:committed>
+			<li>investigate to reduce garbage when typing</li>
+			<li>revisit the text viewer's support for redraw, compound updates, and selection preservation
 			<ul>
 				<li>check all setRedraw(on/off) users whether they really need that expensive operation (e.g. undo)</li>
 			</ul>
@@ -169,13 +166,12 @@ function traverseLinkifyBugs(node) {
 	  
 		<li><h4>Miscellaneous</h4>
 		<ul>
-			<li>show context when dragging the vertical scroll bar (e.g. method name) [experimental]</li>
 			<li><Style:committed>quick diff usability improvements in hover (Next/Prev support etc.)</Style:committed>
 			<li><Style:committed>change folding paradigm: no longer eat first key stroke [experimental] (bug 67500, bug 66264)</Style:committed></li>
-			<li>provide LTK layer for text editing support (bug 125825, bug 149817, ...)</li>
-			<li><Style:committed>make additional info accessible to screen readers (bug 236440)</Style:committed>
+			<li><Style:committed>check hover and content assist usability in combination with screen readers (bug 236440)</Style:committed>
 			<br>&rarr; 3.4 already offers a partial solution: the screen reader works if the user gives focus to the additional info, either via mouse or <strong>Tab</strong> key
 			</li>
+			<li>provide LTK layer for text editing support (bug 125825, bug 149817, ...)</li>
 		</ul>
 		</li>
 		
