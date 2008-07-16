@@ -82,7 +82,7 @@ function traverseLinkifyBugs(node) {
 
   <tr> 
     <td WIDTH="100%"> 
-	<p>Last revised $Date: 2008/07/03 18:56:33 $</p>
+	<p>Last revised $Date: 2008/07/16 10:45:24 $</p>
 
     
       <p>This plan is under continuous refinement. Please send comments about this plan to the <a href="mailto:platform-text-dev@eclipse.org">platform-text-dev@eclipse.org</a> developer mailing list.</p>
@@ -144,7 +144,7 @@ function traverseLinkifyBugs(node) {
 				<li>allow to increase ruler width</li>
 				<li>allow users to configure the annotation presentation layer for each annotation</li>
 				<li>finish/cleanup the roll-over annotation work that was kicked off during 3.0</li>
-				<li>add support to contribute actions and context menus to ruler columns (needs platform support</li>
+				<li>add support to contribute actions and context menus to ruler columns (depends on Platform UI bug 134526)</li>
 	  	  	</ul>
 	  	  	</li>
 		</ul>
@@ -173,10 +173,9 @@ function traverseLinkifyBugs(node) {
 		<li><h4>Miscellaneous</h4>
 		<ul>
 			<li class="priority">change folding paradigm: no longer eat first key stroke [experimental] (bug 67500, bug 66264)</li>
-			<li class="priority">generalize save actions (push down to Platform Text)</li>
-			<li class="priority">API/extension points to contribute new context types to JDT (to allow clients to add
-  		something like SWT templates) (bug 236878)</li>
-			<li>generalize breadcrumb (together with Platform UI)</li>
+			<li class="priority">generalize save actions (push down from JDT Text)</li>
+			<li class="priority">API/extension points to contribute new context types (to allow clients to add something like SWT templates) (bug 236878)</li>
+			<li>generalize breadcrumb (needs to be discussed with Platform UI whether/how we want to do it)</li>
 			<li>provide LTK layer for text editing support (bug 125825, bug 149817, ...)</li>
 			<li>up/down navigation loses context when reconciler kicks in (bug 79992)</li>
 			<li>Restore editor selection on restart should restore visible view port as well (bug 169838)</li>
@@ -197,7 +196,11 @@ function traverseLinkifyBugs(node) {
 	<p>This section contains cross team issues that have to be clarified. The 
 		concrete outcome affects the plan items listed above.</p>
 	<ul>
-		TBD
+		<li>Platform UI
+			<ul>
+				<li>bug 134526 needs to get fixed in order to add support to contribute actions and context menus to ruler columns</li>
+			</ul>
+		</li>
 	</ul>
 	</td>
 </tr>
