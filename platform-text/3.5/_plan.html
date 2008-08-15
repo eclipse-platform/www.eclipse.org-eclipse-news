@@ -82,7 +82,7 @@ function traverseLinkifyBugs(node) {
 
   <tr> 
     <td WIDTH="100%"> 
-	<p>Last revised $Date: 2008/08/15 08:26:15 $</p>
+	<p>Last revised $Date: 2008/08/15 09:25:07 $</p>
 
     
       <p>This plan is under continuous refinement. Please send comments about this plan to the <a href="mailto:platform-text-dev@eclipse.org">platform-text-dev@eclipse.org</a> developer mailing list.</p>
@@ -123,7 +123,7 @@ function traverseLinkifyBugs(node) {
 		</ul>
 		</li>
 	
-		<li><h4><a name="Hovering"></a>Hovering [<a href="#3">3</a>]</h4>
+		<li><h4><a name="Hovering"></a>Hovering [<a href="#3">3</a>]</h4> <!-- 2w -->
 		<ul>
 			<li class="priority">quick diff usability improvements in hover (Next/Prev support etc.)</li>
 			<li class="priority">improve ruler hover accessibility (bug 78244 and bug 243304)</li>
@@ -170,9 +170,10 @@ function traverseLinkifyBugs(node) {
 	  
 		<li><h4>Miscellaneous</h4>
 		<ul>
-			<li class="priority">change folding paradigm: no longer eat first key stroke [experimental] (bug 67500, bug 66264)</li>
+			<li class="priority">change folding paradigm: no longer eat first key stroke [experimental] (bug 67500, bug 66264)</li> <!-- 2d -->
 			<li class="priority">generalize save actions (push down from JDT Text)</li>
-			<li class="priority">API/extension points to contribute new context types (to allow clients to add something like SWT templates) (bug 236878)</li>
+			<li class="priority">API/extension points to contribute new context types (to allow clients to add something like SWT templates) (bug 236878)</li> <!-- 1d -->
+			<li>provide API for <code>BrowserInformationControl</code> (bug 218482) and <code>HTML2TextReader</code> (bug 241896) <!-- 3d -->
 			<li>generalize breadcrumb (needs to be discussed with Platform UI whether/how we want to do it)</li>
 			<li>provide LTK layer for text editing support (bug 125825, bug 149817, ...)</li>
 			<li>up/down navigation loses context when reconciler kicks in (bug 79992)</li>
@@ -254,6 +255,11 @@ function traverseLinkifyBugs(node) {
 			<li class="priority">improve ruler hover accessibility (bug 78244 and bug 243304)</li>
 		</ul>
 		
+		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Miscellaneous [<a href="#3">3</a>]</h4>
+		<ul>
+			<li class="priority">change folding paradigm: no longer eat first key stroke [experimental] (bug 67500, bug 66264)</li>
+		</ul>
+		
 		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Permanent Items</h4>
 		<ul>
 			<li>bugzilla inbox tracking</li>
@@ -280,8 +286,7 @@ function traverseLinkifyBugs(node) {
 		
 		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> API</h4>
 		<ul>
-			<li class="priority">API/extension points to contribute new context types (to allow clients to add something like SWT templates) (bug 236878)</li>
-			<li>eventually provide API for <code>BrowserInformationControl</code> (bug 218482) and <code>HTML2TextReader</code> (bug 241896) 
+			<li class="priority">API/extension points to contribute new context types (to allow clients to add something like SWT templates) (bug 236878)</li> <!-- 1d --> 
 		</ul>
 		
 		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Permanent Items</h4>
@@ -307,6 +312,11 @@ function traverseLinkifyBugs(node) {
  <tr> 
 	<td WIDTH="100%">
 		See also the <a href="http://www.eclipse.org/jdt/ui/r3_5/plan.php#Milestone_Planning_M4">Combined JDT Text and JDT UI 3.5 M4 Plan</a>.</p>
+
+		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> API</h4>
+		<ul>
+			<li>provide API for <code>BrowserInformationControl</code> (bug 218482) and <code>HTML2TextReader</code> (bug 241896) <!-- 3d -->
+		</ul>
 
 		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Miscellaneous</h4>
 		<ul>
@@ -387,12 +397,12 @@ function traverseLinkifyBugs(node) {
 	<td WIDTH="100%">
 		See also the <a href="http://www.eclipse.org/jdt/ui/r3_5/plan.php#Milestone_Planning_M7">Combined JDT Text and JDT UI 3.5 M7 Plan</a>.</p>
 
-		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Permanent Items</h4>
+		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Performance</h4>
 		See bugs tagged with the <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=Text&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=performance&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">'performance' keyword</a>.
 		<ul>
 		</ul>
 		
-		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Polish Items</h4>
+		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Polish</h4>
 		See bugs tagged with the <a href= "https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=Text&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=polish&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">'polish' keyword</a>.
 		<ul>
 		</ul>
