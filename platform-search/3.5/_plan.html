@@ -60,9 +60,13 @@ function traverseLinkifyBugs(node) {
 
 	
 	 <style type="text/css">
-  		Style\:committed {
+  		.priority {
   			color: blue;
   			font-style: italic;
+  		}
+  		.plan {
+  			background: lightgreen;
+  			visibility: hidden;
   		}
 	</style>	
 	
@@ -74,7 +78,7 @@ function traverseLinkifyBugs(node) {
 
   <tr> 
     <td WIDTH="100%"> 
-    <p>Last revised 12:05 CEST July 2, 2008</p>
+    <p>Last revised $Date$</p>
 
     
       <p>This plan is under continuous refinement. Please send comments about this plan to the <a href="mailto:platform-search-dev@eclipse.org">platform-search-dev@eclipse.org</a> developer mailing list.</p>
@@ -95,16 +99,11 @@ function traverseLinkifyBugs(node) {
 		Allow clients to plug-in their help documentation, replace usage of deprecated APIs and fix critical bugs.
 		</p>
 
-		<p>
-		<strong><a name="3"></a>[3] Keep Eclipse vibrant and attractive</strong>.
-		Allow to see line numbers in matches and use the  Refactoring UI to replace matches. 
-		</p>
-
 	<h2><a NAME="Work_Items"></a><br>Work Items</h2>
 	<p>
 		This section lists the possible work items for Eclipse 3.5 for the Platform Search component
 		with the [corresponding theme].
-		Some of those items have a <Style:committed>higher priority</Style:committed> than others.
+		Some of those items have a <span class="priority">higher priority</span> than others.
 	</p>
 
 	<ul>
@@ -116,13 +115,30 @@ function traverseLinkifyBugs(node) {
 		<li><h4>Adopt New APIs [<a href="#2">2</a>]</h4>
 		<ul>
 		</ul>
+		
+		<li><h4>Miscellaneous</h4>
+		<ul>
+		  <li class="priority">BiDi: fix incorrect search result rendering (bug 222889, depends on SWT bug 229010) <span class="plan">2d</span></li>
+		</ul>
+		</li>
 	
 		<li><h4>General Items [<a href="#2">2</a>]</h4>
 		<ul>
-			<li><Style:committed>3.4.x maintenance work</Style:committed></li>
+			<li class="priority">3.4.x maintenance work</Style:committed> <span class="plan">1d</span></li>
 		</ul>
 		</li>
 	</ul>
+		
+	<h2><br>Cross Team Issues</h2>
+	<p>This section contains cross team issues that have to be clarified. The 
+	concrete outcome affects the plan items listed above.</p>
+	<ul>
+		<li>Equinox
+		<ul>
+			<li>bug 229010 needs to be fixed in order to fix wrong search result rendering for BiDi languages</li>
+		</ul>
+		</li>
+		</li>
   </td>
 </tr>
 
