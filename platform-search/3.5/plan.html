@@ -55,6 +55,23 @@ function traverseLinkifyBugs(node) {
 	}
 }
 
+function showHiddenWork() {
+	// Open this document with an URL ending in ?work, and the "work" class becomes visible. 
+	if (window.location.search) {
+		var spans= document.getElementsByTagName("span")
+		for (var i in spans) {
+			var s= spans[i];
+			if (s.className == "work") {
+				s.style.visibility= "visible";
+				s.insertBefore(document.createTextNode("\u00a0"), s.firstChild);
+				s.insertBefore(document.createTextNode("\u00a0"), s.lastChild.nextSibling);
+			}
+		};
+	}
+}
+
+
+
 //-->
 </script>
 
@@ -64,7 +81,7 @@ function traverseLinkifyBugs(node) {
   			color: blue;
   			font-style: italic;
   		}
-  		.plan {
+  		.work {
   			background: lightgreen;
   			visibility: hidden;
   		}
@@ -72,13 +89,13 @@ function traverseLinkifyBugs(node) {
 	
 </head>
 
-<body text="#000000" bgcolor="#FFFFFF" onload="linkifyBugs()">
+<body text="#000000" bgcolor="#FFFFFF" onload="linkifyBugs();showHiddenWork();">
 
 <table BORDER=0 CELLSPACING=5 CELLPADDING=2 WIDTH="100%" >
 
   <tr> 
     <td WIDTH="100%"> 
-    <p>Last revised $Date$</p>
+    <p>Last revised $Date: 2008/08/16 08:23:51 $</p>
 
     
       <p>This plan is under continuous refinement. Please send comments about this plan to the <a href="mailto:platform-search-dev@eclipse.org">platform-search-dev@eclipse.org</a> developer mailing list.</p>
@@ -118,13 +135,13 @@ function traverseLinkifyBugs(node) {
 		
 		<li><h4>Miscellaneous</h4>
 		<ul>
-		  <li class="priority">BiDi: fix incorrect search result rendering (bug 222889, depends on SWT bug 229010) <span class="plan">2d</span></li>
+		  <li class="priority">BiDi: fix incorrect search result rendering (bug 222889, depends on SWT bug 229010) <span class="work">2d</span></li>
 		</ul>
 		</li>
 	
 		<li><h4>General Items [<a href="#2">2</a>]</h4>
 		<ul>
-			<li class="priority">3.4.x maintenance work</Style:committed> <span class="plan">1d</span></li>
+			<li class="priority">3.4.x maintenance work</Style:committed> <span class="work">1d</span></li>
 		</ul>
 		</li>
 	</ul>
