@@ -57,7 +57,7 @@ function traverseLinkifyBugs(node) {
 
 function showHiddenWork() {
 	// Open this document with an URL ending in ?work, and the "work" class becomes visible. 
-	if (window.location.search) {
+	if (window.location.search == "?work") {
 		var spans= document.getElementsByTagName("span")
 		for (var i in spans) {
 			var s= spans[i];
@@ -101,7 +101,7 @@ function showHiddenWork() {
 
   <tr> 
     <td WIDTH="100%"> 
-	<p>Last revised $Date: 2008/08/15 15:27:23 $</p>
+	<p>Last revised $Date: 2008/08/18 08:43:31 $</p>
 
     
       <p>This plan is under continuous refinement. Please send comments about this plan to the <a href="mailto:platform-text-dev@eclipse.org">platform-text-dev@eclipse.org</a> developer mailing list.</p>
