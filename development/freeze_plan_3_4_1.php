@@ -40,7 +40,7 @@ ob_start();
 <tbody> <tr> <td valign="top" align="left" colspan="2"><b>Status</b></td></tr>
 <tr> <td valign="top" align="right"></td><td> 
 <p><font color="#ff0000"><b>Monday August 25, 2008 16:00 EDT Status:</b></font> 
-          Builds toward Eclipse 3.4.1 occur every Wednesday at 8 am EST. 
+          Teams are working on final bug fixes to contribute to Wednesday's RC1 build. 
       </td></tr> 
 <tr> <td valign="top" align="left" colspan="2"><b>Detailed Timeline</b></td></tr> <tr> <td valign="top" align="left" colspan="2"> 
 <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="center">
@@ -175,12 +175,11 @@ ob_start();
 
 		<strong>Ganymede SR1 Release</strong>
         <p>The Ganymede SR1 release should be complete and available for download by 
-              the end of February as part of the <a href="http://wiki.eclipse.org/Ganymede">Ganymede 
+              the end of September 2008 as part of the <a href="http://wiki.eclipse.org/Ganymede">Ganymede 
               coordinated service release</a> . If product teams intending 
               to ship on Ganymede SR1 uncover further serious defects during the endgame, 
               we may schedule additional release candidate builds to incorporate fixes.
               </p>             
-              
               </div>
          	</div>
               
