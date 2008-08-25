@@ -71,25 +71,17 @@ ob_start();
             <TD HEIGHT="18"><IMG SRC="images/tbar_r.gif" WIDTH="24" HEIGHT="18"></TD>
             <TD ALIGN="right" HEIGHT="18">3</TD>
             <TD ALIGN="right" HEIGHT="18">Wed 08:00 EDT</TD>
-            <TD HEIGHT="18">&nbsp;&nbsp;<B>Start 1-day test pass against RC1</B></TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;<B>Release Candidate 2 build</B></TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
-          </TR>
-          <TR> 
-            <TD HEIGHT="10"></TD>
-            <TD ALIGN="center" HEIGHT="5"><IMG SRC="images/gray.gif" WIDTH="2" HEIGHT="10"></TD>
-          </TR>
-          <TR> 
-            <TD HEIGHT="10"></TD>
-            <TD ALIGN="center" HEIGHT="5"><IMG SRC="images/gray.gif" WIDTH="2" HEIGHT="10"></TD>
           </TR>
           <TR> 
             <TD HEIGHT="18"></TD>
             <TD HEIGHT="18"><IMG SRC="images/tbar_r.gif" WIDTH="24" HEIGHT="18"></TD>
-            <TD ALIGN="right" HEIGHT="18">3</TD>
-            <TD ALIGN="right" HEIGHT="18">Wed 08:00 EDT</TD>
-            <TD HEIGHT="18">&nbsp;&nbsp;<B>Release Candidate 2 build</B></TD>
+            <TD ALIGN="right" HEIGHT="18">4</TD>
+            <TD ALIGN="right" HEIGHT="18">Thu 08:00 EDT</TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;<B>Start 1-day test pass against RC2</B></TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
@@ -107,6 +99,10 @@ ob_start();
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
+          </TR>
+          <TR> 
+            <TD HEIGHT="10"></TD>
+            <TD ALIGN="center" HEIGHT="5"><IMG SRC="images/gray.gif" WIDTH="2" HEIGHT="10"></TD>
           </TR>
           <TR> 
             <TD HEIGHT="18"></TD>
@@ -158,16 +154,24 @@ ob_start();
         there should not be any open defects tagged 3.4.1. All fixes submitted 
         to maintenance stream builds must have a component lead vote on the bug report.
         </p>               
+
+         <strong>RC2</strong>
+         <p>Release candidate containing fixes for all known outstanding defects
+         that we intend to fix for Ganymede SR1. All fixes submitted 
+         to RC2 must have a PMC vote on the bug report. 
+         </p>
         
-        <strong>Test pass using RC1</strong>
+        <strong>Test pass using RC2</strong>
         <p>Concerted 1-day testing effort using RC1 involving entire community 
            including all component teams. Since this is the only test pass 
            scheduled for this maintenance release, the goal is to verify all 
            the fixes and check for any regressions.
          </p>
-         
-         <strong>RC2</strong>
-         <p>Release candidate 2, if required, to fix problems detected during the test pass.</p>
+
+         <strong>RC3</strong>
+         <p>Release candidate 3, if required, to fix problems detected during the test pass.
+         All fixes submitted to RC3 must have a PMC vote on the bug report. 
+         </p>
 
 		<strong>Ganymede SR1 Release</strong>
         <p>The Ganymede SR1 release should be complete and available for download by 
