@@ -1,0 +1,290 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta name="GENERATOR" content="Mozilla/4.76 [en] (Windows NT 5.0; U) [Netscape]">
+	<title>Combined JDT Text and JDT UI Component 3.5 Plan</title>
+
+<script type="text/javascript">
+<!--
+function linkifyBugs() {
+	// Replaces plain text 'bug xyz' by a link to Eclipse's bugzilla.
+	traverseLinkifyBugs(document.getElementsByTagName("body")[0]);
+}
+function nextNode(node) {
+	if (node.nextSibling) {
+		return node.nextSibling;
+	} else if (node.parentNode == document.getElementsByTagName("body")[0]) {
+		return null;
+	} else {
+		return nextNode(node.parentNode);
+	}
+}
+function traverseLinkifyBugs(node) {
+	while (node) {
+		if (node.nodeType == 1/*element*/ && node.nodeName == "a") {
+			node= nextNode(node);
+			
+		} else if (node.childNodes != null && node.childNodes.length > 0) {
+			node= node.childNodes[0];
+			
+		} else if (node.nodeType == 3/*text*/) {
+			var txt= node.data;
+			var regex= /([Bb]ug\s*)([0-9]+)/;
+			var res= regex.exec(txt);
+			if (res) {
+				var matchStart= txt.indexOf(res[0]);
+				
+				var beforeNode= document.createTextNode(txt.substring(0, matchStart));
+				node.parentNode.insertBefore(beforeNode, node);
+				
+				var linkNode= document.createElement("a");
+				linkNode.href= "https://bugs.eclipse.org/bugs/show_bug.cgi?id=" + res[2];
+				linkNode.appendChild(document.createTextNode(res[1] + res[2]));
+				node.parentNode.insertBefore(linkNode, node);
+				
+				node.data= txt.substr(matchStart + res[0].length);
+				// continue with current (shortened) node...
+			} else {
+				node= nextNode(node);
+			}
+			
+		} else {
+			node= nextNode(node);
+		}
+	}
+}
+
+function showHiddenWork() {
+	// Open this document with an URL ending in ?work, and the "work" class becomes visible. 
+	if (window.location.search == "?work") {
+		var spans= document.getElementsByTagName("span")
+		for (var i in spans) {
+			var s= spans[i];
+			if (s.className == "work") {
+				s.style.visibility= "visible";
+				s.insertBefore(document.createTextNode("\u00a0"), s.firstChild);
+				s.insertBefore(document.createTextNode("\u00a0"), s.lastChild.nextSibling);
+			}
+		};
+	}
+}
+
+//-->
+</script>
+
+	
+	 <style type="text/css">
+  		.priority {
+  			color: blue;
+  			font-style: italic;
+  		}
+  		.work {
+  			background: lightgreen;
+			visibility: hidden;
+  		}
+	 </style>	
+	
+</head>
+
+<body text="#000000" bgcolor="#FFFFFF" onLoad="linkifyBugs();showHiddenWork();">
+
+<table BORDER=0 CELLSPACING=5 CELLPADDING=2 WIDTH="100%" >
+
+  <tr> 
+    <td WIDTH="100%"> 
+    <p>Last revised: 2008/08/26</p>
+
+    
+      <p>This plan is under continuous refinement. Please send comments about this plan to the <a href="mailto:platform-debug-dev@eclipse.org">platform-debug-dev@eclipse.org</a> developer mailing list.</p>
+      <h2><a NAME="Overall_Planning"></a>Overall Goals</h2>
+      <p>This section lists the goals for Eclipse 3.5 for the Platform and JDT Debug components as listed on the 
+        <a href="http://www.eclipse.org/eclipse/development/eclipse_project_plan_3_5.html">Eclipse Project 3.5 Draft Plan</a>.      </p>
+
+
+		<p>
+		<strong><a name="1"></a>[1] Performance</strong>.
+		Monitor overall performance and memory consumption. Build new performance tests that simulate important debug features.		</p>
+
+		<p>
+		<strong><a name="2"></a>[2] Reliability</strong>.
+		Provide APIs for clients where needed and fix critical bugs.		</p>
+		
+		<p>
+		<strong><a name="3"></a>[3] Keep Eclipse vibrant and attractive</strong>.
+		Investigate enhancements such as debugging without the debug view and support for multi-context debugging.		</p>
+
+	    <h2><br>
+        Cross Team Issues</h2>
+	<p>This section contains cross team issues that have to be clarified. The 
+	concrete outcome affects the plan items listed below.</p>
+	<ul>
+	  <li>JDT UI
+		<ul>
+			<li>bug 236296 could influence the resolution for our EE-related bugs (bug 176516, bug 176517)</li>
+		</ul>
+		</li>
+	</ul>  </td>
+</tr>
+
+
+<tr>
+    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#595791"><font face="Arial,Helvetica"><font color="#FFFFFF"><a name="Milestone_Planning_M1">Milestone M1 (2008-08-08)</font></font></td>
+</tr>
+
+  <tr> 
+    <td WIDTH="100%"><h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> General Items [<a href="#2">2</a>]</h4>
+		<ul>
+			<li><img src="../../../images/ok.gif" border="0" height="10" width="10"> 3.4.1 maintenance work</li>
+		    <li><img src="../../../images/ok.gif" border="0" height="10" width="10"> Bug fixing </li>
+		</ul>	</td>
+</tr>
+<tr>
+	<td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#595791"><font face="Arial,Helvetica"><font color="#FFFFFF"><a name="Milestone_Planning_M2">Milestone M2 (2008-09-19)</font></font></td>
+</tr>
+
+ <tr> 
+	<td WIDTH="100%"><h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> General Items [<a href="#2">2</a>]</h4>
+		<ul>
+			<li><img src="../../../images/ok.gif" border="0" height="10" width="10"> 3.4.1 maintenance work</li>
+		    <li><img src="../../../images/progress.gif" width="14" height="5"> Bug fixing </li>
+		</ul>
+		
+		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Reliability [<a href="#3">2</a>]</h4>
+		<ul>
+		  <li><img src="../../../images/progress.gif" width="14" height="5"> Create a framework based on the virtual viewer that simulates the common   debugger views and validates debug model's content providers. (Pawel Piech, Wind River) [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=242489">bug 242489</a>] </li>
+	  </ul>
+		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> APIs [<a href="#2">2</a>]</h4>
+		<ul>
+		  <li><img src="../../../images/progress.gif" width="14" height="5"> Make it easier to create different breakpoint types from the same editor. (Pawel Piech, Wind River) [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=212316">bug 212316</a>]</li>
+	      <li>Allow command framework handlers easy access to active debug context. (Pawel Piech, Wind River) [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=229219">bug 229219</a>] </li>
+	  </ul>
+		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Testing</h4>
+		<ul>
+			<li><a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.4RC2.php">test plan</a> for the 3.5 M2 test pass.</li>
+		</ul>	</td>
+</tr>
+<tr>
+	<td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#595791"><font face="Arial,Helvetica"><font color="#FFFFFF"><a name="Milestone_Planning_M3">Milestone M3 (2008-10-31)</font></font></td>
+</tr>
+
+ <tr> 
+	<td WIDTH="100%"><h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top">Usability/Workflow [<a href="#3">3</a>]</h4>
+		<ul>
+			<li>Debugging without the debug view or debug perspective
+			  <ul>
+			    <li>Active debug context switcher
+                  <ul>
+                    <li>Create a lightweight mechanism for switching and reporting the active debug context (Pawel Piech, Wind River). </li>
+                  </ul>
+			    </li>
+	            <li>Debug toolbar
+                  <ul>
+                    <li>Add a top-level toolbar for Debug actions (Pawel Piech, Wind River). </li>
+                  </ul>
+	            </li>
+		      </ul>
+			</li>
+	    </ul>
+		
+		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Platform Enhancements[<a href="#2">2</a>]</h4>
+		<ul>
+		  <li>Make run to line adapter asyncronous   (Pawel Piech, Wind River) [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=213074">bug 213074</a>]</li>
+	      <li><img src="../../../images/progress.gif" width="14" height="5"> Allow breakpoints to specify when they should be overwritten on import (Michael Rennie, IBM) [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=244059">bug 244059</a>]</li>
+	      <li>Support <code>ILaunchConfigurations</code> on External File System (Darin Wright, IBM) [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=236980">bug 236980</a>]</li>
+	  </ul>
+		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> JDT Enhancements[<a href="#2">2</a>]</h4>
+		<ul>
+		  <li><strong>Execution Environments</strong>: Support for custom execution environments. This is a joint effort between OSGi, JDT, and PDE. OSGi needs support for contributing OSGi profile definitions. JDT needs to be able to reference those profiles (connect an .ee file to an OSGi profile), PDE needs to be able to set compiler options based on an OSGi profile, and API tooling needs to be able to understand the profile definitions as well to build a system library component. (Darin Wright, IBM) </li>
+	  </ul>
+		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Testing</h4>
+		<ul>
+			<li><a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.4RC2.php">test plan</a> for the 3.5 M3 test pass.</li>
+		</ul>	</td>
+</tr>
+<tr>
+	<td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#595791"><font face="Arial,Helvetica"><font color="#FFFFFF"><a name="Milestone_Planning_M4">Milestone M4 (2008-12-12)</font></font></td>
+</tr>
+
+ <tr> 
+	<td WIDTH="100%"><h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Reliability [<a href="#3">2</a>]</h4>
+	  <ul>
+	    <li>Rework performance test suite to simulate important use cases (IBM Team) </li>
+      </ul>
+	  <h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top">Usability/Workflow [<a href="#3">3</a>]</h4>
+	  <ul>
+	    <li><strong>Memory View</strong>: streamline memory view workflow &amp; reduce UI clutter (Ted Williams, Wind River) [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=244822">bug 244822</a>]</li>
+        <li>Multi-context Debugging
+          (Pawel Piech, Wind River)
+          <ul>
+            <li><strong>Debug working sets</strong>: Implement a mechanism to let the user group a sub-set of debug contexts, and then use this sub-set to drive content of debugger views. A color, label, and a decorator could be used to identify the working set. </li>
+            <li><strong>Multiple instances of debugger views</strong>: Allow user to create multiple instances of Variables, Registers and other debugger views. To make this feature useful, also allow the user to select the input debug context for the views.</li>
+          </ul>
+        </li>
+      </ul>
+	  <h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Testing</h4>
+	  <ul>
+			<li><a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.4RC2.php">test plan</a> for the 3.5 M4 test pass.</li>
+	  </ul>	</td>
+</tr>
+<tr>
+	<td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#595791"><font face="Arial,Helvetica"><font color="#FFFFFF"><a name="Milestone_Planning_M5">Milestone M5 (2009-01-30) -  Major/Big Features Done</font></font></td>
+</tr>
+
+ <tr> 
+	<td WIDTH="100%"><h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Testing</h4>
+		<ul>
+			<li><a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.4RC2.php">test plan</a> for the 3.5 M5 test pass.</li>
+		</ul>	</td>
+</tr>
+<tr>
+	<td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#595791"><font face="Arial,Helvetica"><font color="#FFFFFF"><a name="Milestone_Planning_M6">Milestone M6 (2009-03-13) - API Freeze</font></font></td>
+</tr>
+
+ <tr> 
+	<td WIDTH="100%"><h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Testing</h4>
+		<ul>
+			<li><a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.4RC2.php">test plan</a> for the 3.5 M6 test pass.</li>
+		</ul>	</td>
+</tr>
+<tr>
+	<td ALIGN=LEFT VALIGN=TOP COLSPAN="2" WIDTH="100%" BGCOLOR="#595791"><font face="Arial,Helvetica"><font color="#FFFFFF"><a name="Milestone_Planning_M7">Milestone M7 (2009-05-01) - Feature Freeze, Focus on Performance and Polish</font></font></td>
+</tr>
+
+ <tr> 
+	<td WIDTH="100%"><h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Performance
+		</h4>
+		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Polish</h4>
+		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Testing</h4>
+		<ul>
+			<li><a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.4RC2.php">test plan</a> for the 3.5 M7 test pass.</li>
+		</ul>	</td>
+</tr>
+</table>
+<table border="0" cellpadding="2" cellspacing="5" width="100%"><tbody><tr><td colspan="4" align="left" bgcolor="#595791" valign="top" width="100%"><font face="Arial,Helvetica"><font color="#ffffff">Legend
+			</font></font></td>
+		</tr>
+		<tr>
+			<td valign="center"><img src="../../../images/progress.gif" border="0" height="5" width="14" align="absmiddle"></td>
+			<td width="50%">item is under development.</td>
+			<td valign="top"><img src="../../../images/glass.gif" border="0" height="10" width="10"></td>
+			<td width="50%">item is under investigation.</td>
+		</tr>
+		<tr>
+			<td valign="center"><img src="../../../images/ok.gif" border="0" height="10" width="10"></td>
+			<td width="50%">item is finished.</td>
+			<td valign="top">( )</td>
+			<td width="50%">item is time permitted.</td>
+		</tr>
+		<tr>
+			<td valign="center"><font class="indexsub" color="#8080ff">[xyz]</font></td>
+			<td width="50%">item is deferred (&gt;) from xyz or continues in xyz.</td>
+			<td valign="center"><font class="indexsub"><img src="../../../images/new.gif" border="0"></font></td>
+			<td width="50%">new</td>
+		</tr>
+	</tbody>
+</table>
+
+<br>&nbsp;
+</body>
+</html>

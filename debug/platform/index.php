@@ -70,6 +70,7 @@
 				<li>Overall <a href="/eclipse/debug/platform/dev_plans/r3_2-plan.php">3.2 plan</a></li>
 		    	<li>Overall <a href="/eclipse/debug/platform/dev_plans/r3_3-plan.php">3.3 plan</a></li>
 				<li>Overall <a href="/eclipse/debug/platform/dev_plans/r3_4-plan.php">3.4 plan</a></li>
+				<li>Overall <a href="/eclipse/debug/platform/dev_plans/r3_5/plan.php">3.5 plan</a></li>
 		    </ul>
 		    <p>For more detailed information, check out the <a href="/eclipse/debug/platform/dev_resources.php">Development Resources</a>.</p>
 		</div>
