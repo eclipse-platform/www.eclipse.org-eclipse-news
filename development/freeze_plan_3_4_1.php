@@ -150,7 +150,7 @@ ob_start();
 	   <strong>RC1</strong>
 	   <p>
         Release candidate containing fixes for the majority of known outstanding 
-        defects that we intend to fix for Ganymede SR1. At then end of RC1 build, 
+        defects that we intend to fix for Ganymede SR1. At the end of RC1 build, 
         there should not be any open defects tagged 3.4.1. All fixes submitted 
         to maintenance stream builds must have a component lead vote on the bug report.
         </p>               
