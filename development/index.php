@@ -35,7 +35,8 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Releases currently under development</h3>
-			
+	        <li><a href="freeze_plan_3_4_1.php"> Eclipse Project Ganymede SR1 Endgame Plan</a><br>
+	    		Information about how we plan to wrap up Ganymede Service Release 1 (version 3.4.1).</li>     
     <ul>
     </ul>
       	</div>

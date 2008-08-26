@@ -39,7 +39,7 @@ ob_start();
 <table cellspacing="5" cellpadding="2" width="100%" border="0"> 
 <tbody> <tr> <td valign="top" align="left" colspan="2"><b>Status</b></td></tr>
 <tr> <td valign="top" align="right"></td><td> 
-<p><font color="#ff0000"><b>Monday August 25, 2008 16:00 EDT Status:</b></font> 
+<p><font color="#ff0000"><b>Tuesday August 25, 2008 14:00 EDT Status:</b></font> 
           Teams are working on final bug fixes to contribute to Wednesday's RC1 build. 
       </td></tr> 
 <tr> <td valign="top" align="left" colspan="2"><b>Detailed Timeline</b></td></tr> <tr> <td valign="top" align="left" colspan="2"> 
