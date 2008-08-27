@@ -1,0 +1,276 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>Eclipse Platform Workspace 3.5 Development Plan</title>
+	
+	<div id="midcolumn">
+		<h1>$pageTitle</h1>
+		<p>Back to the <a href="../index.php">Team Component Page</a></p>
+
+			<table border="0" cellspacing="10" cellpadding="0">
+			  <tbody>
+			    <tr>
+			      <td><img src="../images/progress.gif" alt="under development"> item
+			is under development</td>
+			      <td><img src="../images/ok.gif" height="10" width="10" alt="finished"> item is
+			finished</td>
+			      <td><font class="indexsub" alt="deferred">[&gt;3.5]</font> item is deferred</td>
+			    </tr>
+			  </tbody>
+			</table>
+			
+			<div class="homeitem3col">
+			<h3>Eclipse Project 3.5 Plan items that affect Platform Workspace</h3>
+
+			<ul>
+			    <li>There is no Eclipse 3.5 plan yet but when there is we'll make sure
+			    to update this section.
+			    </li>
+			</ul>
+			
+			</div>
+			
+			The next section contains a description of the particular items we plan to address in 3.5.
+			
+			<div class="homeitem3col">
+			
+			<a name="Themes"></a>
+			<h3>Overall Platform Workspace 3.5 Plan</h3>
+			
+			<p>The overall themes for this release are detailed below 
+			(Note, at this point, these are just items that we could potentially address):</p>
+			
+			<ul>
+			  <li><strong>Adopt new menu/commands</strong> (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=196349">196349</a>): The new menu/commands story has been evolving over the last few releases
+			  and should be in a state in 3.5 that will allow the Team, Compare and CVS plug-ins to adopt the support.
+			  </li>
+			  <li><strong>Improve unmatched patch handling</strong>: There are several improvements that can be made around patch handling.
+			  Some examples are:
+			  	<ul>
+			  		<li>Better visual feedback in the merge viewer when portions of a patch cannot be matched 
+			  	 	so that the user understands what to do and has some additional tools to help them find a match. (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=190844">190844</a>)
+			  	 	</li>
+			  	</ul>
+			  </li>
+			  <li><strong>Compare with Each Other</strong> (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=193321">193321</a>): We would like to provide a more Synchronize view like work flow to
+			  the Compare with Each Other action.
+			  </li>
+			  <li><strong>Address Model-based Synchronize View regressions</strong> (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=172027">172027</a>):
+			  When the model-based Synchronize view was introduced in 3.2, there were several regressions that prevented CVs from removing support
+			  for the old-style Synchronizations. It would be good if these regressions could be addressed.
+			  </li>
+			  <li><strong>Performance</strong>: There are several performance issues we would like to address:
+			     <ul>
+			     	<li>See the list (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=Compare&component=CVS&component=Team&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=performance&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">Query</a>)
+			     	</li>
+			     </ul>
+			  </li>
+			  <li><strong>Builder should be able to specify scheduling rule</strong> (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=198591">198591</a>):
+			  </li>
+			  <li><strong>General proxy settings improvements</strong>: There are several issues we would like to address:
+			     <ul>
+			     	<li>Fix Gnome support for system settings. (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=232495">232495</a>)
+			  	 	</li>
+			  	 	<li>Provide better UI for system settings. (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=228739">228739</a>)
+			  	 	</li>
+			     </ul>
+			  </li>
+			  
+			  <li><strong>History View improvements</strong>:
+			     <ul>
+			     	<li>History sometimes not correctly filled with revision. (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=188278">188278</a>)
+			  	 	</li>
+			  	 	<li>Author not shown in remote compares. (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=80577">80577</a>)
+			  	 	</li>
+			  	 	<li>CVS Resource History doesn't persist UI. (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=50260">50260</a>)
+			  	 	</li>
+			     </ul>
+			  </li>
+			</ul>
+			</div>
+			
+			<div class="homeitem3col">
+			
+			<h3>3.5 Development Effort - Milestone 1 (August 8, 2007) </h3>
+			<a name="m1"></a>
+			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> General Items </h4>
+			<ul>
+				<li class="priority"><img src="../images/progress.gif" border="0" height="10" width="10"> 3.4.1 maintenance work </li>
+				<li class="priority"><img src="../images/progress.gif" border="0" height="10" width="10"> 3.5 planning </li>
+			</ul>
+				
+			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Permanent Items </h4>
+			<ul>
+				<li>inbox tracking</li>
+				<li>bug fixing</li>
+				<!--<li>watch performance tests</li>-->
+				<!--<li>increase correctness test coverage</li>-->
+			</ul>
+		
+			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Testing </h4>
+			<ul>
+				<li><a href="test.html">test plan</a> for the 3.5</li>
+			</ul>
+			</div>
+			
+			
+			
+			
+			
+			<div class="homeitem3col">
+			<h3>3.5 Development Effort - Milestone 2 (September 19, 2007) </h3>
+			<a name="m2"></a>
+			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> General Items </h4>
+			<ul>
+				<li class="priority"><img src="../images/progress.gif" border="0" height="10" width="10"> 3.4.1 maintenance work </li>
+				<li class="priority"><img src="../images/progress.gif" border="0" height="10" width="10"> 3.5 planning </li>
+			</ul>
+			
+			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Permanent Items </h4>
+			<ul>
+				<li>inbox tracking</li>
+				<li>bug fixing</li>
+				<li>watch performance tests</li>
+				<li>increase correctness test coverage</li>
+			</ul>
+		
+			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Testing </h4>
+			<ul>
+				<li><a href="test.html">test plan</a> for the 3.5</li>
+			</ul>
+			</div>
+			
+			
+			
+			
+			
+			<div class="homeitem3col">
+			<h3>3.5 Development Effort - Milestone 3 (October 31, 2007) </h3>
+			<a name="m3"></a>
+			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Permanent Items </h4>
+			<ul>
+				<li>inbox tracking</li>
+				<li>bug fixing</li>
+				<li>watch performance tests</li>
+				<li>increase correctness test coverage</li>
+			</ul>
+		
+			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Testing </h4>
+			<ul>
+				<li><a href="test.html">test plan</a> for the 3.5</li>
+			</ul>
+			</div>
+			
+			
+			
+			
+			
+			<div class="homeitem3col">
+			<h3>3.5 Development Effort - Milestone 4 (December 12, 2007) </h3>
+			<a name="m4"></a>
+			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Permanent Items </h4>
+			<ul>
+				<li>inbox tracking</li>
+				<li>bug fixing</li>
+				<li>watch performance tests</li>
+				<li>increase correctness test coverage</li>
+			</ul>
+		
+			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Testing </h4>
+			<ul>
+				<li><a href="test.html">test plan</a> for the 3.5</li>
+			</ul>
+			</div>
+			
+			
+			
+			
+			
+			<div class="homeitem3col">
+			<h3>3.5 Development Effort - Milestone 5 (January 30, 2008) </h3>
+			<a name="m5"></a>
+			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Permanent Items </h4>
+			<ul>
+				<li>inbox tracking</li>
+				<li>bug fixing</li>
+				<li>watch performance tests</li>
+				<li>increase correctness test coverage</li>
+			</ul>
+		
+			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Testing </h4>
+			<ul>
+				<li><a href="test.html">test plan</a> for the 3.5</li>
+			</ul>
+			</div>
+			
+			
+			
+			
+			<div class="homeitem3col">
+			<h3>3.5 Development Effort - Milestone 6 (March 13, 2008) </h3>
+			<a name="m5"></a>
+			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Permanent Items </h4>
+			<ul>
+				<li>inbox tracking</li>
+				<li>bug fixing</li>
+				<li>watch performance tests</li>
+				<li>increase correctness test coverage</li>
+			</ul>
+		
+			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Testing </h4>
+			<ul>
+				<li><a href="test.html">test plan</a> for the 3.5</li>
+			</ul>
+			</div>
+			
+			
+			
+			
+			<div class="homeitem3col">
+			<h3>3.5 Development Effort - Milestone 7 (May 1, 2008) </h3>
+			<a name="m5"></a>
+			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Permanent Items </h4>
+			<ul>
+				<li>inbox tracking</li>
+				<li>bug fixing</li>
+				<li>watch performance tests</li>
+				<li>increase correctness test coverage</li>
+			</ul>
+		
+			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Testing </h4>
+			<ul>
+				<li><a href="test.html">test plan</a> for the 3.5</li>
+			</ul>
+			</div>
+
+	</div>
+
+	<!-- remove the entire <div> tag to omit the right column!  -->
+	<div id="rightcolumn">
+	<div class="sideitem">
+		<h6>Quick Links</h6>
+		<ul>
+			<li><a href="#Themes">Overall Themes</a></li>
+			<li><a href="#m1">Milestone 1</a></li>
+			<li><a href="#m2">Milestone 2</a></li>
+			<li><a href="#m3">Milestone 3</a></li>
+			<li><a href="#m4">Milestone 4</a></li>
+			<li><a href="#m5">Milestone 5</a></li>
+			<li><a href="#m6">Milestone 6</a></li>
+			<li><a href="#m7">Milestone 7</a></li>
+		</ul>
+	</div>
+	</div>
+	<div id="rightcolumn">
+		<div class="sideitem">
+			<h6>Related Links</h6>
+			<ul>
+				<li><a href="../index.php">Team Component</a></li>
+				<li><a href="../../platform-cvs">CVS Component</a></li>
+			</ul>
+		</div>
+	</div>
+	
+</body>
+</html>
