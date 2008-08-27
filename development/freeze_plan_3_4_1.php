@@ -52,7 +52,7 @@ ob_start();
             <TD HEIGHT="18"></TD>
             <TD HEIGHT="18"><IMG SRC="images/tbar_r.gif" WIDTH="24" HEIGHT="18"></TD>
             <TD HEIGHT="18" ALIGN="right">&nbsp;28</TD>
-            <TD HEIGHT="18">&nbsp;Thu 12:00 EDT</TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;Thu 12:00 EDT</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;<B>Release Candidate 1 build</B></TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
@@ -62,7 +62,7 @@ ob_start();
             <TD HEIGHT="18"></TD>
             <TD HEIGHT="18"><IMG SRC="images/tbar_r.gif" WIDTH="24" HEIGHT="18"></TD>
             <TD ALIGN="right" HEIGHT="18">29</TD>
-            <TD HEIGHT="18">Fri 08:00 EDT</TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;Fri 08:00 EDT</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;<B>Start 1-day test pass against RC1</B></TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
@@ -80,7 +80,7 @@ ob_start();
             <TD HEIGHT="18"></TD>
             <TD HEIGHT="18"><IMG SRC="images/tbar_r.gif" WIDTH="24" HEIGHT="18"></TD>
             <TD ALIGN="right" HEIGHT="18">3</TD>
-            <TD HEIGHT="18">Wed 08:00 EDT</TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;Wed 08:00 EDT</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;<B>Release Candidate 2 build</B></TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
@@ -94,7 +94,7 @@ ob_start();
             <TD HEIGHT="18"></TD>
             <TD HEIGHT="18"><IMG SRC="images/tbar_r.gif" WIDTH="24" HEIGHT="18"></TD>
             <TD ALIGN="right" HEIGHT="18">10</TD>
-            <TD HEIGHT="18">Wed 08:00 EDT</TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;Wed 08:00 EDT</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;<B>Release Candidate 3 build</B></TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
@@ -112,7 +112,7 @@ ob_start();
             <TD HEIGHT="18"></TD>
             <TD ALIGN="center" HEIGHT="18"><IMG SRC="images/gray.gif" WIDTH="2" HEIGHT="18"></TD>
             <TD ALIGN="right" HEIGHT="18">24</TD>
-            <TD HEIGHT="18">Wed 08:00 EDT</TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;Wed 08:00 EDT</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;<B>Release 3.4.1 available</B></TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
