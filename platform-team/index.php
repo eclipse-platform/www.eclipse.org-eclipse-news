@@ -81,6 +81,12 @@
 			<h3>What's Happening</h3>
 			<a name="HAPPENING"></a>
 			
+			<p><img SRC="http://dev.eclipse.org/images/Adarrow.gif" NOSAVE BORDER=0 height=16 width=16>&nbsp;<b>3.5 Development</b>
+			<ul>
+				<li>3.5 <a href="team3.5/plan.php">development</a> plan.</li>
+			</ul>
+			</p>
+			
 			<p><img SRC="http://dev.eclipse.org/images/Adarrow.gif" NOSAVE BORDER=0 height=16 width=16>&nbsp;<b>3.4 Development</b>
 			<ul>
 				<li>3.4 <a href="team3.4/plan.php">development</a> plan.</li>
