@@ -51,8 +51,8 @@ ob_start();
           <TR> 
             <TD HEIGHT="18"></TD>
             <TD HEIGHT="18"><IMG SRC="images/tbar_r.gif" WIDTH="24" HEIGHT="18"></TD>
-            <TD HEIGHT="18" ALIGN="right">&nbsp;28</TD>
-            <TD HEIGHT="18">&nbsp;&nbsp;Thu 12:00 EDT</TD>
+            <TD HEIGHT="18" ALIGN="right">&nbsp;27</TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;Wed 20:00 EDT</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;<B>Release Candidate 1 build</B></TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
@@ -61,8 +61,8 @@ ob_start();
           <TR> 
             <TD HEIGHT="18"></TD>
             <TD HEIGHT="18"><IMG SRC="images/tbar_r.gif" WIDTH="24" HEIGHT="18"></TD>
-            <TD ALIGN="right" HEIGHT="18">29</TD>
-            <TD HEIGHT="18">&nbsp;&nbsp;Fri 08:00 EDT</TD>
+            <TD ALIGN="right" HEIGHT="18">28</TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;Thurs 12:00 EDT</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;<B>Start 1-day test pass against RC1</B></TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
