@@ -168,8 +168,7 @@ ob_start();
 
         <strong>Test pass using RC1</strong>
         <p>Concerted 1-day testing effort using RC1 involving entire community 
-           including all component teams. Since this is the only test pass 
-           scheduled for this maintenance release, the goal is to verify all 
+           including all component teams. The goal is to verify all 
            the fixes and check for any regressions.
          </p>
 
@@ -179,6 +178,12 @@ ob_start();
          to RC2 must have a PMC vote on the bug report. 
          </p>
 
+        <strong>Test pass using RC2</strong>
+        <p>Concerted 1-day testing effort using RC2 involving entire community 
+           including all component teams. The goal is to verify all the fixes , check 
+           for any regressions and sanity check our RC2 candidate.
+         </p>
+         
          <strong>RC3</strong>
          <p>Release candidate 3, if required, to fix problems detected during the test pass.
          All fixes submitted to RC3 must have a PMC vote on the bug report. 
