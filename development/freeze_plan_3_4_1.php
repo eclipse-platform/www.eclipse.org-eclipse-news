@@ -5,7 +5,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2008-08-25
+	# Date:			2008-09-01
 	#
 	# Description: Eclipse project 3.4.1 release freeze plan
 	#
@@ -80,12 +80,23 @@ ob_start();
             <TD HEIGHT="18"></TD>
             <TD HEIGHT="18"><IMG SRC="images/tbar_r.gif" WIDTH="24" HEIGHT="18"></TD>
             <TD ALIGN="right" HEIGHT="18">3</TD>
-            <TD HEIGHT="18">&nbsp;&nbsp;Wed 08:00 EDT</TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;Wed 20:00 EDT</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;<B>Release Candidate 2 build</B></TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
           </TR>
+          <TR> 
+            <TD HEIGHT="18"></TD>
+            <TD HEIGHT="18"><IMG SRC="images/tbar_r.gif" WIDTH="24" HEIGHT="18"></TD>
+            <TD ALIGN="right" HEIGHT="18">4</TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;Thurs 12:00 EDT</TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;<B>Start 1-day test pass against RC2</B></TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;</TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;</TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;</TD>
+          </TR>
+          <TR> 
           <TR> 
             <TD HEIGHT="10"></TD>
             <TD ALIGN="center" HEIGHT="5"><IMG SRC="images/gray.gif" WIDTH="2" HEIGHT="10"></TD>
