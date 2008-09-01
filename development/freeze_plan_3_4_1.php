@@ -176,11 +176,12 @@ ob_start();
          <p>Release candidate containing fixes for all known outstanding defects
          that we intend to fix for Ganymede SR1. All fixes submitted 
          to RC2 must have a PMC vote on the bug report. 
+         Ensure that all feature/plugin versions have been consistently incremented when needed.
          </p>
 
         <strong>Test pass using RC2</strong>
         <p>Concerted 1-day testing effort using RC2 involving entire community 
-           including all component teams. The goal is to verify all the fixes , check 
+           including all component teams. The goal is to verify all the fixes, check 
            for any regressions and sanity check our RC2 candidate.
          </p>
          
