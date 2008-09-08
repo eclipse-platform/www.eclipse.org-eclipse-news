@@ -106,7 +106,7 @@ ob_start();
             <TD HEIGHT="18"><IMG SRC="images/tbar_r.gif" WIDTH="24" HEIGHT="18"></TD>
             <TD ALIGN="right" HEIGHT="18">10</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;Wed 08:00 EDT</TD>
-            <TD HEIGHT="18">&nbsp;&nbsp;<B>Release Candidate 3 build</B></TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;<B>Release Candidate 3 build [if required]</B></TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
@@ -187,8 +187,10 @@ ob_start();
          
          <strong>RC3</strong>
          <p>Release candidate 3, if required, to fix problems detected during the test pass.
+         We expect NO CHANGE at this point. If you find a show stopper, please notify ASAP the PMC (eclipse-pmc@eclipse.org)
          All fixes submitted to RC3 must have a PMC vote on the bug report. 
          </p>
+         <p>No test pass is scheduled unless significant contributions occurred. If so, then thursday would be elected for a one day test pass</p>
 
 		<strong>Ganymede SR1 Release</strong>
         <p>The Ganymede SR1 release should be complete and available for download by 
