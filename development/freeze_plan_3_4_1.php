@@ -187,7 +187,8 @@ ob_start();
          
          <strong>RC3</strong>
          <p>Release candidate 3, if required, to fix problems detected during the test pass.
-         We expect NO CHANGE at this point. If you find a show stopper, please notify ASAP the PMC (eclipse-pmc@eclipse.org)
+         We expect NO CHANGE at this point. If you find a show stopper, please notify ASAP the 
+         <a href="http://dev.eclipse.org/mailman/listinfo/eclipse-pmc">eclipse-pmc@eclipse.org</a> mailing list.
          All fixes submitted to RC3 must have a PMC vote on the bug report. 
          </p>
          <p>No test pass is scheduled unless significant contributions occurred. If so, then thursday would be elected for a one day test pass</p>
