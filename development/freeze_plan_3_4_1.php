@@ -39,8 +39,8 @@ ob_start();
 <table cellspacing="5" cellpadding="2" width="100%" border="0"> 
 <tbody> <tr> <td valign="top" align="left" colspan="2"><b>Status</b></td></tr>
 <tr> <td valign="top" align="right"></td><td> 
-<p><font color="#ff0000"><b>Wednesday September 10, 2008 15:00 EDT Status:</b></font> 
-          We have an RC3 candidate build: M20080910-1030. Teams are doing final testing before declaring as the final 3.4.1 build.
+<p><font color="#ff0000"><b>Monday September 15, 2008 15:00 EDT Status:</b></font> 
+          The 3.4.1 RC3 build has been declared. No further 3.4.1 builds are planned.
       </td></tr> 
 <tr> <td valign="top" align="left" colspan="2"><b>Detailed Timeline</b></td></tr> <tr> <td valign="top" align="left" colspan="2"> 
 <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="center">
