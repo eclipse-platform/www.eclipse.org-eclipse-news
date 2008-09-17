@@ -101,7 +101,7 @@ function showHiddenWork() {
 
   <tr> 
     <td WIDTH="100%"> 
-	<p>Last revised $Date: 2008/09/04 13:44:29 $</p>
+	<p>Last revised $Date: 2008/09/17 11:07:44 $</p>
 
     
       <p>This plan is under continuous refinement. Please send comments about this plan to the <a href="mailto:platform-text-dev@eclipse.org">platform-text-dev@eclipse.org</a> developer mailing list.</p>
@@ -192,12 +192,14 @@ function showHiddenWork() {
 			<li class="priority">change folding paradigm: no longer eat first key stroke [experimental] (bug 67500, bug 66264) <span class="work">2d</span></li>
 			<li class="priority">generalize save actions i.e. push down from JDT Text (bug 195063) <span class="work">1m</span></li>
 			<li class="priority">API/extension points to contribute new context types (to allow clients to add something like SWT templates) (bug 236878) <span class="work">1d</span></li>
+			<li>add column based editing capabilities to textual editors (bug 19771, depends on SWT bug 8521)
 			<li>provide API for <code>BrowserInformationControl</code> (bug 218482) and <code>HTML2TextReader</code> (bug 241896) <span class="work">3d</span>
 			<li>generalize breadcrumb (needs to be discussed with Platform UI whether/how we want to do it)</li>
 			<li>provide LTK layer for text editing support (bug 125825, bug 149817, ...)</li>
 			<li>up/down navigation loses context when reconciler kicks in (bug 79992)</li>
 			<li>Restore editor selection on restart should restore visible view port as well (bug 169838)</li>
 			<li>Problems with undo grouping in linked mode (bug 77575)</li>
+			<li>leverage link support in <code>StyledText</code> (depends on SWT bug 83408)</li>
 		</ul>
 		</li>
 		
@@ -214,6 +216,12 @@ function showHiddenWork() {
 	<p>This section contains cross team issues that have to be clarified. The 
 		concrete outcome affects the plan items listed above.</p>
 	<ul>
+		<li>Platform SWT
+			<ul>
+				<li>bug 8521 needs to get fixed in order to add add column based editing capabilities to textual editors (bug 19771)</li>
+				<li>bug 83408 needs to get fixed in order to leverage link support from <code>StyledText</code></li>
+			</ul>
+		</li>
 		<li>Platform UI
 			<ul>
 				<li>bug 134526 needs to get fixed in order to add support to contribute actions and context menus to ruler columns</li>
@@ -341,6 +349,7 @@ function showHiddenWork() {
 		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Miscellaneous</h4>
 		<ul>
 			<li class="priority">generalize save actions i.e. push down from JDT Text (bug 195063) <span class="work">1m</span></li>
+			<li>add column based editing capabilities to textual editors (bug 19771, depends on SWT bug 8521)
 		</ul>
 		
 		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Permanent Items</h4>
