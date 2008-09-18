@@ -104,7 +104,7 @@ function showHiddenWork() {
 
 		<p>
 		<strong><a name="1"></a>[1] Performance</strong>.
-		Monitor overall performance and memory consumption. Build new performance tests that simulate important debug features.		</p>
+		Monitor overall performance and memory consumption.</p>
 
 		<p>
 		<strong><a name="2"></a>[2] Reliability</strong>.
@@ -119,11 +119,18 @@ function showHiddenWork() {
 	<p>This section contains cross team issues that have to be clarified. The 
 	concrete outcome affects the plan items listed below.</p>
 	<ul>
-	  <li>JDT UI
-		<ul>
-			<li>bug 236296 could influence the resolution for our EE-related bugs (bug 176516, bug 176517)</li>
-		</ul>
-		</li>
+	  <li>JDT/Core buildpath enhancements:
+			  <ul>
+			    <li>chained jars on the buildpath (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=198572">bug 198572</a>)</li>
+			    <li>support '..' in classpath entries (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=57732">bug 57732</a>) </li>
+			    <li>custom compiler settings/classpath per source folder (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=87215">bug 87215</a>, <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=105372">bug 105372</a>, <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=205380">bug 205380</a>, <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=220928">bug 220928</a>)</li>
+			    <li>mark source folders as test only (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=224708">bug 224708</a>)<br>
+		        </li>
+			    <li>		        (investigate) nested jars on the buildpath (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=103136">bug 103136</a>) <br>
+		        </li>
+			    <li>source attachment improvements: multiple root path, multiple source path (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=173641">bug 173641</a>, <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=208171">bug 208171</a>)</li>
+	      </ul>
+	  </li>
 	</ul>  </td>
 </tr>
 
@@ -152,12 +159,12 @@ function showHiddenWork() {
 		
 		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Reliability [<a href="#3">2</a>]</h4>
 		<ul>
-		  <li><img src="../../../images/progress.gif" width="14" height="5"> Create a framework based on the virtual viewer that simulates the common   debugger views and validates debug model's content providers. (Pawel Piech, Wind River) [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=242489">bug 242489</a>] </li>
+		  <li><img src="../../../images/progress.gif" width="14" height="5"> &gt;[M3] Create a framework based on the virtual viewer that simulates the common   debugger views and validates debug model's content providers. (Pawel Piech, Wind River) [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=242489">bug 242489</a>] </li>
 	  </ul>
 		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> APIs [<a href="#2">2</a>]</h4>
 		<ul>
-		  <li><img src="../../../images/progress.gif" width="14" height="5"> Make it easier to create different breakpoint types from the same editor. (Pawel Piech, Wind River) [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=212316">bug 212316</a>]</li>
-	      <li>Allow command framework handlers easy access to active debug context. (Pawel Piech, Wind River) [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=229219">bug 229219</a>] </li>
+		  <li><img src="../../../images/progress.gif" width="14" height="5"> &gt;[M3] Make it easier to create different breakpoint types from the same editor. (Pawel Piech, Wind River) [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=212316">bug 212316</a>]</li>
+	      <li>&gt;[M3] Allow command framework handlers easy access to active debug context. (Pawel Piech, Wind River) [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=229219">bug 229219</a>] </li>
 	  </ul>
 		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Testing</h4>
 		<ul>
@@ -192,14 +199,18 @@ function showHiddenWork() {
 		  <li>Make run to line adapter asyncronous   (Pawel Piech, Wind River) [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=213074">bug 213074</a>]</li>
 	      <li><img src="../../../images/progress.gif" width="14" height="5"> Allow breakpoints to specify when they should be overwritten on import (Michael Rennie, IBM) [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=244059">bug 244059</a>]</li>
 	      <li>Support <code>ILaunchConfigurations</code> on External File System (Darin Wright, IBM) [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=236980">bug 236980</a>]</li>
-	  </ul>
+	      <li><img src="../../../images/progress.gif" width="14" height="5"> &gt; Make it easier to create different breakpoint types from the same editor. (Pawel Piech, Wind River) [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=212316">bug 212316</a>]</li>
+	      <li>&gt; Allow command framework handlers easy access to active debug context. (Pawel Piech, Wind River) [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=229219">bug 229219</a>] </li>
+      </ul>
 		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> JDT Enhancements[<a href="#2">2</a>]</h4>
 		<ul>
 		  <li><strong>Execution Environments</strong>: Support for custom execution environments. This is a joint effort between OSGi, JDT, and PDE. OSGi needs support for contributing OSGi profile definitions. JDT needs to be able to reference those profiles (connect an .ee file to an OSGi profile), PDE needs to be able to set compiler options based on an OSGi profile, and API tooling needs to be able to understand the profile definitions as well to build a system library component. (Darin Wright, IBM) </li>
+	      <li>React to buildpath enhancements in JDT/Core (Darin Wright, IBM) </li>
 	  </ul>
 		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Testing</h4>
 		<ul>
-			<li><a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.4RC2.php">test plan</a> for the 3.5 M3 test pass.</li>
+			<li><img src="../../../images/progress.gif" width="14" height="5"> &gt; Create a framework based on the virtual viewer that simulates the common   debugger views and validates debug model's content providers. (Pawel Piech, Wind River) [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=242489">bug 242489</a>]</li>
+		    <li><a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.4RC2.php">test plan</a> for the 3.5 M3 test pass.</li>
 		</ul>	</td>
 </tr>
 <tr>
@@ -207,11 +218,7 @@ function showHiddenWork() {
 </tr>
 
  <tr> 
-	<td WIDTH="100%"><h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Reliability [<a href="#3">2</a>]</h4>
-	  <ul>
-	    <li>Rework performance test suite to simulate important use cases (IBM Team) </li>
-      </ul>
-	  <h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top">Usability/Workflow [<a href="#3">3</a>]</h4>
+	<td WIDTH="100%"><h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top">Usability/Workflow [<a href="#3">3</a>]</h4>
 	  <ul>
 	    <li><strong>Memory View</strong>: streamline memory view workflow &amp; reduce UI clutter (Ted Williams, Wind River) [<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=244822">bug 244822</a>]</li>
         <li>Multi-context Debugging
@@ -219,6 +226,15 @@ function showHiddenWork() {
           <ul>
             <li><strong>Debug working sets</strong>: Implement a mechanism to let the user group a sub-set of debug contexts, and then use this sub-set to drive content of debugger views. A color, label, and a decorator could be used to identify the working set. </li>
             <li><strong>Multiple instances of debugger views</strong>: Allow user to create multiple instances of Variables, Registers and other debugger views. To make this feature useful, also allow the user to select the input debug context for the views.</li>
+          </ul>
+        </li>
+      </ul>
+	  <h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> JDT Enhancements[<a href="#2">2</a>]</h4>
+	  <ul><li>React to buildpath enhancements in JDT/Core (Darin Wright, IBM)</li>
+        <li>Address Mac OS launching issues:
+          <ul>
+            <li><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=212605">Bug 212605</a> - [launching] Mac OS X launcher should not hide the necessary -XstartOnFirstThread</li>
+            <li><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=156343">Bug 156343</a> - Standard VM not supported on MacOS </li>
           </ul>
         </li>
       </ul>
