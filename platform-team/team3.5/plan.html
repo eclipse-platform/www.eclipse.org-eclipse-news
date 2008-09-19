@@ -13,6 +13,7 @@
 			background-color: #669;
 			color: #fff;
 			font-size: 110%;
+			padding: 3px 4px 3px 4px 
 		}
 		
 		.homeitem3col_custom li {
@@ -39,7 +40,7 @@
 	<div id="midcolumn">
 		<p>Back to the <a href="../index.php">Team Component Page</a></p>
 
-			<table border="0" cellspacing="10" cellpadding="0">
+			<!--<table border="0" cellspacing="10" cellpadding="0">
 			  <tbody>
 			    <tr>
 			      <td><img src="../images/progress.gif" alt="under development"> item
@@ -49,6 +50,27 @@
 			      <td><font class="indexsub" alt="deferred">[&gt;3.5]</font> item is deferred</td>
 			    </tr>
 			  </tbody>
+			</table>-->
+			
+			<table border="0" cellpadding="2" cellspacing="5" width="100%">
+			<tr>
+				<td valign="center"><img src="../images/progress.gif" border="0" height="5" width="14" align="absmiddle"></td>
+				<td width="50%">item is under development.</td>
+				<td valign="top"><img src="../images/glass.gif" border="0" height="10" width="10"></td>
+				<td width="50%">item is under investigation.</td>
+			</tr>
+			<tr>
+				<td valign="center"><img src="../images/ok.gif" border="0" height="10" width="10"></td>
+				<td width="50%">item is finished.</td>
+				<td valign="top">( )</td>
+				<td width="50%">item is time permitted.</td>
+			</tr>
+			<tr>
+				<td valign="center"><font class="indexsub" color="#8080ff">[xyz]</font></td>
+				<td width="50%">item is deferred (&gt;) from xyz or continues in xyz.</td>
+				<td valign="center"><font class="indexsub"><img src="../images/new.gif" border="0"></font></td>
+				<td width="50%">new</td>
+			</tr>
 			</table>
 			
 			<div class="homeitem3col_custom">
@@ -150,14 +172,14 @@
 			<a name="m1"></a>
 			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> General Items </h4>
 			<ul>
-				<li class="priority"><img src="../images/progress.gif" border="0" height="5" width="14" align="absmiddle"> 3.4.1 maintenance work </li>
-				<li class="priority"><img src="../images/progress.gif" border="0" height="5" width="14" align="absmiddle"> 3.5 planning </li>
+				<li class="priority"><img src="../images/progress.gif" border="0" height="5" width="14" align="absmiddle"> <font class="indexsub" color="#8080ff">[3.5 M2]</font> 3.4.1 maintenance work </li>
+				<li class="priority"><img src="../images/progress.gif" border="0" height="5" width="14" align="absmiddle"> <font class="indexsub" color="#8080ff">[3.5 M2]</font> 3.5 planning </li>
 			</ul>
 				
 			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Permanent Items </h4>
 			<ul>
-				<li>inbox tracking</li>
-				<li>bug fixing</li>
+				<li><img src="../images/ok.gif" border="0" height="10" width="10"> inbox tracking</li>
+				<li><img src="../images/ok.gif" border="0" height="10" width="10"> bug fixing</li>
 				<!--<li>watch performance tests</li>-->
 				<!--<li>increase correctness test coverage</li>-->
 			</ul>
@@ -165,6 +187,11 @@
 			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Testing </h4>
 			<ul>
 				<li><a href="test.html">test plan</a> for the 3.5</li>
+			</ul>
+			
+			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Miscellaneous </h4>
+			<ul>
+				<li><a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=Compare&component=CVS&component=Resources&component=Team&target_milestone=3.5+M1&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=VERIFIED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">fixed and verified</a></li>
 			</ul>
 			</div>
 			
@@ -175,23 +202,31 @@
 			<div class="homeitem3col_custom">
 			<h3>3.5 Development Effort - Milestone 2 (September 19, 2007) </h3>
 			<a name="m2"></a>
+			<ul>
+				<li class="priority"><img src="../images/progress.gif" border="0" height="5" width="14" align="absmiddle"> <img src="../images/glass.gif" border="0" height="10" width="10"> Adapt editor functionality to Compare Editor </li>
+				<li class="priority"><img src="../images/progress.gif" border="0" height="5" width="14" align="absmiddle"> <font class="indexsub" color="#8080ff">[3.5 M3]</font> General proxy settings improvements </li>
+			</ul>
 			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> General Items </h4>
 			<ul>
-				<li class="priority"><img src="../images/progress.gif" border="0" height="5" width="14" align="absmiddle"> 3.4.1 maintenance work </li>
-				<li class="priority"><img src="../images/progress.gif" border="0" height="5" width="14" align="absmiddle"> 3.5 planning </li>
+				<li class="priority"><img src="../images/ok.gif" border="0" height="10" width="10"> 3.4.1 maintenance work </li>
+				<li class="priority"><img src="../images/ok.gif" border="0" height="10" width="10"> 3.5 planning </li>
 			</ul>
 			
 			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Permanent Items </h4>
 			<ul>
-				<li>inbox tracking</li>
-				<li>bug fixing</li>
-				<li>watch performance tests</li>
-				<li>increase correctness test coverage</li>
+				<li><img src="../images/ok.gif" border="0" height="10" width="10"> inbox tracking</li>
+				<li><img src="../images/ok.gif" border="0" height="10" width="10"> bug fixing</li>
+				<li><img src="../images/ok.gif" border="0" height="10" width="10"> watch performance tests</li>
+				<li><img src="../images/ok.gif" border="0" height="10" width="10"> increase correctness test coverage</li>
 			</ul>
 		
 			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Testing </h4>
 			<ul>
 				<li><a href="test.html">test plan</a> for the 3.5</li>
+			</ul>
+			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" nosave="" border="0" height="16" width="16" align="top"> Miscellaneous </h4>
+			<ul>
+				<li><a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=Compare&component=CVS&component=Resources&component=Team&target_milestone=3.5+M2&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=VERIFIED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">fixed and verified</a></li>
 			</ul>
 			</div>
 			
@@ -202,6 +237,12 @@
 			<div class="homeitem3col_custom">
 			<h3>3.5 Development Effort - Milestone 3 (October 31, 2007) </h3>
 			<a name="m3"></a>
+			<ul>
+				<li class="priority"><img src="../images/progress.gif" border="0" height="5" width="14" align="absmiddle"> Adapt editor functionality to Compare Editor </li>
+				<li class="priority"><img src="../images/progress.gif" border="0" height="5" width="14" align="absmiddle"> Builder should be able to specify scheduling rule </li>
+				<li class="priority"><img src="../images/progress.gif" border="0" height="5" width="14" align="absmiddle"> General proxy settings improvements </li>
+				<li class="priority"><img src="../images/progress.gif" border="0" height="5" width="14" align="absmiddle"> History View improvements </li>
+			</ul>
 			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Permanent Items </h4>
 			<ul>
 				<li>inbox tracking</li>
@@ -223,6 +264,11 @@
 			<div class="homeitem3col_custom">
 			<h3>3.5 Development Effort - Milestone 4 (December 12, 2007) </h3>
 			<a name="m4"></a>
+			<ul>
+				<li class="priority"><img src="../images/progress.gif" border="0" height="5" width="14" align="absmiddle"> Create compare tool to generate a patch from any comparison </li>
+				<li class="priority"><img src="../images/progress.gif" border="0" height="5" width="14" align="absmiddle"> Adapt editor functionality to Compare Editor </li>
+				<li class="priority"><img src="../images/progress.gif" border="0" height="5" width="14" align="absmiddle"> Compare with Each Other </li>
+			</ul>
 			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Permanent Items </h4>
 			<ul>
 				<li>inbox tracking</li>
@@ -244,6 +290,10 @@
 			<div class="homeitem3col_custom">
 			<h3>3.5 Development Effort - Milestone 5 (January 30, 2008) </h3>
 			<a name="m5"></a>
+			<ul>
+				<li class="priority"><img src="../images/progress.gif" border="0" height="5" width="14" align="absmiddle"> Improve unmatched patch handling </li>
+				<li class="priority"><img src="../images/progress.gif" border="0" height="5" width="14" align="absmiddle"> Address Model-based Synchronize View regressions </li>
+			</ul>
 			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Permanent Items </h4>
 			<ul>
 				<li>inbox tracking</li>
@@ -262,8 +312,8 @@
 			
 			
 			<div class="homeitem3col_custom">
-			<h3>3.5 Development Effort - Milestone 6 (March 13, 2008) </h3>
-			<a name="m5"></a>
+			<h3>3.5 Development Effort - Milestone 6 API Freeze (March 13, 2008)</h3>
+			<a name="m6"></a>
 			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Permanent Items </h4>
 			<ul>
 				<li>inbox tracking</li>
@@ -283,7 +333,17 @@
 			
 			<div class="homeitem3col_custom">
 			<h3>3.5 Development Effort - Milestone 7 (May 1, 2008) </h3>
-			<a name="m5"></a>
+			<a name="m7"></a>
+			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Performance </h4>
+			See bugs tagged with the <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=Compare&component=CVS&component=Resources&component=Team&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=performance&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">'performance'</a> keyword.
+			<ul>
+			</ul>
+			
+			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Polish </h4>
+			See bugs tagged with the <a href= "https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=Compare&component=CVS&component=Resources&component=Team&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=polish&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">'polish'</a>  keyword.
+			<ul>
+			</ul>
+			
 			<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Permanent Items </h4>
 			<ul>
 				<li>inbox tracking</li>
