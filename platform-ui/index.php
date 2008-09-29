@@ -97,6 +97,7 @@
 			<a name="DEV"></a>
 			<ul>
 				<li>For Platform UI developers, check out the <a href="http://dev.eclipse.org/viewcvs/index.cgi/platform-ui-home/dev.html?view=co">Development Resources</a></li>
+				<li><a href="http://www.eclipse.org/eclipse/platform-ui/reports/">Reports</a></li>
 			</ul>
 		</div>
 	</div>
