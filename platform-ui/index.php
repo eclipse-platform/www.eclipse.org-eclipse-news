@@ -79,33 +79,18 @@
 			<h3>What's Happening</h3>
 			<a name="HAPPENING"></a>
 			<ul>
-				<li>3.4 Development
-					<ul>
+				<li>3.5 Development
+					<ul><a href="http://wiki.eclipse.org/Platform_UI/Plan/3.5">Plan for 3.5</a>
 					</ul>
 				</li>
-				<li>3.3 Development
-					<ul>
-					<li>Most active development goes into this stream. </li>
-          			<li>The 3.3 next-milestone plan is posted <a href="http://dev.eclipse.org/viewcvs/index.cgi/platform-ui-home/R3_3/main.html?view=co">here</a>.</li>
-          			<li>The 3.2 builds are available in the <a href="http://www.eclipse.org/downloads/index.php">download</a> area.</li>
-        			</ul>
-        		</li>
 			</ul>
 		</div>
 		<div class="homeitem3col">
 			<h3>Get Involved</h3>
 			<a name="INVOLVED"></a>
 			<p>
-				If you are interested in participating in the development of the UI component, check out the developer's mailing list: <a href="http://dev.eclipse.org/mailman/listinfo/platform-ui-dev">platform-ui-dev@eclipse.org</a>. 
-				Chat with people there about your problems and interests, and find out what you can do to help.
+				If you are interested in participating in the development of the UI component, check out the <a href="http://wiki.eclipse.org/Platform_UI/How_to_Contribute">wiki page on how to contribute</a>
       		</p>		
-      		<p>
-      			In particular, if you have experience in developing user interfaces, are interested in accessibility and usability issues please consider joining the UI team. If you enjoy working with COM 
-      			to support OLE documents and ActiveX controls we really want to get to know you. 
-      		</p>
-      		<p>
-      			For more detailed information, check out the <a href="http://dev.eclipse.org/viewcvs/index.cgi/platform-ui-home/dev.html?view=co">Development Resources</a>.</p>
-      		</p>
 		</div>
 		<div class="homeitem3col">
 			<h3>Development Resources</h3>
