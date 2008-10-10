@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <!--  Use this to test local rendering in firefox -->
-<?xml-stylesheet type="text/xsl" href="project-plan-render.xsl"?> 
+<!-- <?xml-stylesheet type="text/xsl" href="project-plan-render.xsl"?> --> 
 
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
+
 <p:plan
   plan-format="1.0"
   xmlns:p="http://www.eclipse.org/project/plan" xmlns="http://www.w3.org/1999/xhtml"
@@ -14,9 +15,6 @@
 
 <p:introduction>
 <div>
-
-<div style="align:center;"><big><b>WORK IN PROGRESS: Please ignore.</b></big></div>
-<hr/>
 
 <p>
   Last revised 15:00 ET Sept 24, 2008
