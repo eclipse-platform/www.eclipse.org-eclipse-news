@@ -165,6 +165,10 @@ public class StatusHandlingRunnable extends TestBedRunnable {
 			// hints and statuses could be easily modified there
 			if (di.isWrapped()) {
 				StatusAdapter adapter = new StatusAdapter(di.getStatus());
+				if (di.getTitle() != null) {
+					adapter.setProperty(IStatusAdapterConstants.TITLE_PROPERTY,
+							di.getTitle());
+				}
 				if (di.getAction() != null) {
 					adapter.setProperty(IStatusAdapterConstants.HINT_PROPERTY, di
 							.getAction());

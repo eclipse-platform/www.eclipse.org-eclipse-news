@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2007 IBM Corporation and others.
+ * Copyright (c) 2007, 2008 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -35,6 +35,7 @@ import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.IMemento;
 import org.eclipse.ui.examples.statushandlers.testtool.Messages;
 import org.eclipse.ui.examples.statushandlers.testtool.TestToolPlugin;
+import org.eclipse.ui.statushandlers.StatusAdapter;
 import org.eclipse.ui.statushandlers.StatusManager;
 
 /**
@@ -96,16 +97,18 @@ public class StatusHandlingComponent implements TestBedComponent {
 		private static final String SEVERITY = "severity"; //$NON-NLS-1$
 		private static final String SOURCEPLUGIN = "sourceplugin"; //$NON-NLS-1$
 		private static final String MESSAGE = "message"; //$NON-NLS-1$
+		private static final String TITLE = "title"; //$NON-NLS-1$
 		private static final String EXPLANATION = "explanation"; //$NON-NLS-1$
 		private static final String ACTION = "action"; //$NON-NLS-1$
 		private static final String WRAPPED = "wrapped"; //$NON-NLS-1$
 
 		private int hint;
 		private boolean wrapped;
-		private String explanation = null;
-		private String action = null;
+		private String explanation;
+		private String action;
 
 		private IStatus status;
+		private String title;
 
 		/**
 		 * Constructs a new item.
@@ -116,18 +119,21 @@ public class StatusHandlingComponent implements TestBedComponent {
 		 *            a hint to be passed with status
 		 * @param wrapped
 		 *            indicates if should be wrapped in StatusAdapter
+		 * @param title
+		 * 			  a title to be passed in StatusAdapter 
 		 * @param explanation
 		 *            an explanation to be passed in StatusAdapter
 		 * @param action
 		 *            an action to be passed in StatusAdapter
 		 */
-		public DisplayedItem(IStatus status, int hint, boolean wrapped,
+		public DisplayedItem(IStatus status, int hint, boolean wrapped, String title, 
 				String explanation, String action) {
 			if (status == null)
 				throw new IllegalArgumentException();
 			this.status = status;
 			this.hint = hint;
 			this.wrapped = wrapped;
+			this.title = title;
 			this.explanation = explanation;
 			this.action = action;
 		}
@@ -211,6 +217,7 @@ public class StatusHandlingComponent implements TestBedComponent {
 			child.putInteger(HINT, hint);
 			child.putString(MESSAGE, status.getMessage());
 			child.putString(WRAPPED, "" + wrapped); //$NON-NLS-1$
+			child.putString(TITLE, title);
 			child.putString(EXPLANATION, explanation);
 			child.putString(ACTION, action);
 		}
@@ -228,6 +235,9 @@ public class StatusHandlingComponent implements TestBedComponent {
 			int severity = memento.getInteger(SEVERITY).intValue();
 			int hint = memento.getInteger(HINT).intValue();
 			boolean wrapped = new Boolean(memento.getString(WRAPPED)).booleanValue();
+			String title = memento.getString(TITLE);
+			if (title != null && title.length() == 0)
+				title = null;
 			String explanation = memento.getString(EXPLANATION);
 			if (explanation != null && explanation.length() == 0)
 				explanation = null;
@@ -235,7 +245,7 @@ public class StatusHandlingComponent implements TestBedComponent {
 			if (action != null && action.length() == 0)
 				action = null;
 			Status status = new Status(severity, source, message);
-			return new DisplayedItem(status, hint, wrapped, explanation, action);
+			return new DisplayedItem(status, hint, wrapped, title, explanation, action);
 		}
 
 		/**
@@ -294,6 +304,14 @@ public class StatusHandlingComponent implements TestBedComponent {
 		void setWrapped(boolean wrapped) {
 			this.wrapped = wrapped;
 		}
+
+		/**
+		 * Returns the most important message in {@link StatusAdapter}
+		 * @return the Title
+		 */
+		public String getTitle() {
+			return title;
+		}
 	}
 
 	private List[] statusItems = new List[] { Collections
@@ -301,11 +319,13 @@ public class StatusHandlingComponent implements TestBedComponent {
 
 	private TableViewer statusTableViever;
 	private Combo statusSeverityField;
+	private Text statusMessage;
 	private Text statusPluginID;
 	private Button showStatusField;
 	private Button logStatusField;
 	private Button blockStatusField;
 	private Button wrappedStatusField;
+	private Text titleField;
 	private Text explanationField;
 	private Text actionField;
 
@@ -350,6 +370,14 @@ public class StatusHandlingComponent implements TestBedComponent {
 				.add(Messages.StatusHandlingComponent_SeverityCancel);
 		statusSeverityField.add(Messages.StatusHandlingComponent_SeverityError);
 		statusSeverityField.select(4);
+		
+		Label messageLabel = new Label(addStatusComposite, SWT.NONE);
+		messageLabel.setText(Messages.StatusHandlingComponent_MessageLabel);
+		
+		statusMessage = new Text(addStatusComposite, SWT.BORDER);
+		statusMessage.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false));
+		statusMessage.setToolTipText(Messages.StatusHandlingComponent_MessageTooltip);
+		statusMessage.setText(Messages.StatusHandlingComponent_ExemplaryMessage);
 
 		Label labelID = new Label(addStatusComposite, SWT.NONE);
 		labelID.setText(Messages.StatusHandlingComponent_PluginIdLabel);
@@ -388,19 +416,28 @@ public class StatusHandlingComponent implements TestBedComponent {
 		wrappedStatusField
 				.setText(Messages.StatusHandlingComponent_WrappedLabel);
 		wrappedStatusField
-				.setToolTipText("Decides if IStatus should be wrapped in StatusAdapter.\n" //$NON-NLS-1$
-						+ "Enables explanation and action"); //$NON-NLS-1$
+				.setToolTipText(Messages.StatusHandlingComponent_WrappedTooltip);
 		wrappedStatusField.addSelectionListener(new SelectionAdapter() {
 			public void widgetSelected(SelectionEvent e) {
 				if (wrappedStatusField.getSelection()) {
+					titleField.setEnabled(true);
 					explanationField.setEnabled(true);
 					actionField.setEnabled(true);
 				} else {
+					titleField.setEnabled(false);
 					explanationField.setEnabled(false);
 					actionField.setEnabled(false);
 				}
 			}
 		});
+		
+		final Label titleLabel = new Label(addStatusComposite, SWT.NONE);
+		titleLabel.setText(Messages.StatusHandlingComponent_TitleLabel);
+		
+		titleField = new Text(addStatusComposite, SWT.BORDER);
+		titleField.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false));
+		titleField.setToolTipText(Messages.StatusHandlingComponent_TitleTooltip);
+		titleField.setEnabled(false);
 
 		final Label explanationLabel = new Label(addStatusComposite, SWT.NONE);
 		explanationLabel.setText(Messages.StatusHandlingComponent_Explanation);
@@ -425,8 +462,6 @@ public class StatusHandlingComponent implements TestBedComponent {
 		gd.horizontalSpan = 2;
 		addStatus.setLayoutData(gd);
 		addStatus.addSelectionListener(new SelectionAdapter() {
-
-			private int statusNo;
 
 			public void widgetSelected(SelectionEvent e) {
 				boolean log = logStatusField.getSelection();
@@ -464,24 +499,19 @@ public class StatusHandlingComponent implements TestBedComponent {
 				}
 
 				boolean wrapped = wrappedStatusField.getSelection();
+				String title = titleField.getText();
+				if (title != null && title.length() == 0)
+					title = null;
 				String explanation = explanationField.getText();
-
 				if (explanation != null && explanation.length() == 0)
 					explanation = null;
 				String action = actionField.getText();
 				if (action != null && action.length() == 0)
 					action = null;
-				statusNo++;
 
-				statusItems[0]
-						.add(new DisplayedItem(
-								new Status(
-										severity,
-										statusPluginID.getText(),
-										Messages.StatusHandlingComponent_TestStatusMessage
-												+ statusNo
-												+ Messages.StatusHandlingComponent_ExclamantionMark),
-								hint, wrapped, explanation, action));
+				statusItems[0].add(new DisplayedItem(new Status(severity,
+						statusPluginID.getText(), statusMessage.getText()),
+						hint, wrapped, title, explanation, action));
 				statusTableViever.refresh();
 			}
 		});

@@ -26,7 +26,7 @@ public class Messages extends NLS {
 	public static String ShowViewRunnable_ShowView;
 	public static String ShowViewComponent_ThrowingLabel;
 	public static String StatusHandlingComponent_LogStatusLabel;
-	public static String StatusHandlingComponent_ExclamantionMark;
+	public static String StatusHandlingComponent_ExemplaryMessage;
 	public static String StatusHandlingComponent_LogStatusTooltip;
 	public static String StatusHandlingComponent_SeverityCancel;
 	public static String JobsAndRunnablesRunnable_IndexOutOfBoundsMessage;
@@ -107,7 +107,8 @@ public class Messages extends NLS {
 	public static String StatusHandlingComponent_ExplanationTooltip;
 	public static String StatusHandlingView_AddToTheExecutionList;
 	public static String StatusHandlingView_ExecutingTestBedSequence;
-	public static String StatusHandlingComponent_TestStatusMessage;
+	public static String StatusHandlingComponent_TitleLabel;
+	public static String StatusHandlingComponent_TitleTooltip;
 	public static String StatusHandlingComponent_blockTooltip;
 	public static String StatusHandlingComponent_SeverityInfo;
 	public static String StatusHandlingComponent_Severity;
@@ -132,6 +133,8 @@ public class Messages extends NLS {
 	public static String StatusHandlingComponent_HintBlock;
 	public static String StatusHandlingComponent_HintNone;
 	public static String StatusHandlingComponent_HintShow;
+	public static String StatusHandlingComponent_MessageLabel;
+	public static String StatusHandlingComponent_MessageTooltip;
 	public static String StatusHandlingComponent_PluginId;
 	public static String StatusHandlingComponent_PluginIdLabel;
 	public static String StatusHandlingRunnable_Explanation;
@@ -145,6 +148,7 @@ public class Messages extends NLS {
 	public static String StatusHandlingComponent_Unknown;
 	public static String StatusHandlingComponent_Wrapped;
 	public static String StatusHandlingComponent_WrappedLabel;
+	public static String StatusHandlingComponent_WrappedTooltip;
 	public static String TestJob_MultiStatusException;
 	public static String TestJob_ChildStatusMessage;
 	public static String TestJob_MultiStatusMessage;
