@@ -310,6 +310,10 @@
 			    <td><a href="#Registers">Registers View</a></td>
 			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
 			  </tr>
+			  <tr> 
+			    <td><a href="#Breakpoint_Toggle_Types">Breakpoint Toggle Types</a></td>
+			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			  </tr>
 			</table>
 			</div>
 		</div>
@@ -1255,6 +1259,19 @@
 				  <li>Show and hide columns</li>
 				  <li>Details pane shows details of registers</li>
 				  <li>Top index and expansion of registers are maintained after each step or switching stackframe.</li>
+				</ul>
+				<p><a href="#top">Back to top</a><br><hr></p>				
+				<a name="Breakpoint_Toggle_Types"></a>
+				<h4>Breakpoint Toggle Types</h4>
+				<ul>
+				  <li>Use the PDA example debugger to test this feature.  The PDA debugger supports different watchpoint 
+				      types which can be toggled in the editor and the variables view.</li>
+				  <li>Breakpoint toggle actions can have multiple targets (i.e. handlers) registered for them.  If a 
+				      debugger is installed, which registers multiple breakpoint targets, the Breakpoint Types sub-menu 
+				      appears in the Run menu.</li>
+				  <li>Select different breakpoint types.</li>
+				  <li>Toggle breakpoints in different locations (editor and view).</li>
+				  <li>Check that user-selected breakpoint type is persisted.</li>
 				</ul>
 				<p><a href="#top">Back to top</a><br><hr></p>				
 		</div>
