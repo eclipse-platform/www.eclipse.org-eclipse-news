@@ -320,11 +320,11 @@
 				<ul>
 					<li> All Instances
 						<ul>
-							<li>Should not be available when not debugging with 1.6 VM</li>
-							<li>Variables view popup</li>
-							<li>Java Outline view popup (type and constructors only)</li>
-							<li>Java editor popup (type name or constructor name selected)</li>
-							<li>Change number of instances to show on Heap walking preference page</li>
+							<li style="none">Should not be available when not debugging with 1.6 VM</li>
+							<li style="none">Variables view popup</li>
+							<li style="none">Java Outline view popup (type and constructors only)</li>
+							<li style="none">Java editor popup (type name or constructor name selected)</li>
+							<li style="none">Change number of instances to show on Heap walking preference page</li>
 						</ul>
 					</li>
 					<li> All References
