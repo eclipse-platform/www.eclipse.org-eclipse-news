@@ -42,7 +42,7 @@
 			<h3>3.5 Test Plans</h3>
 			<a name="3-5_testing"></a>
 			<ul>
-				<li><a href="/eclipse/debug/test_plans/test_plan-3.5.php">3.4M2</a></li>
+				<li><a href="/eclipse/debug/test_plans/test_plan-3.5.php">3.5</a></li>
 			</ul>
 		</div>
 		<div class="homeitem3col">
