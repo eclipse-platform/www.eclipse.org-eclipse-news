@@ -431,19 +431,19 @@
   continues to be a first-class application delivery and development platform on the
   Mac. <em>(Note that completing this work will require investment from the Equinox
   Project, in addition to the work here.)</em> [SWT, Platform UI]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX">XXXXX</a>)</li>
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252644">252644</a>)</li>
 
 <li><strong>BIDI improvements.</strong>
   We will continue to invest in improving in our BIDI support, to ensure that
   Eclipse is a first-class environment in BIDI locales. This work will include
   both improvemed access to native BIDI support and the better handling of
   dynamic, complex expressions within Eclipse. [SWT, Platform UI]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX">XXXXX</a>)</li>
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252645">252645</a>)</li>
 
 <li><strong>Accessibility standards compliance.</strong>
   We will work with the community to ensure that we have first-class, accessibility
-  support that is complient with important standards. [SWT]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX">XXXXX</a>)</li>
+  support that is compliant with important standards. [SWT]
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252646">252646</a>)</li>
 </ul>
 </p:proposed>
 
@@ -475,7 +475,7 @@
   that the test results are monitored on a daily basis. This will enable us to 
   more accurately and more readily identify any performance issues that might be
   introduced during developement. [Rel. Eng.]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX">XXXXX</a>)</li>
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252649">252649</a>)</li>
 
 <li><strong>Performance focus.</strong> 
   Although performance did not significantly degrade during the 3.4 release cycle,
@@ -483,7 +483,7 @@
   we had hoped for. In 3.5, we will dedicate significant effort to identifying and
   ameliorating performance problems, both in typical Eclipse workflows and in more
   extreme scenarios.
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX">XXXXX</a>)</li>
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252652">252652</a>)</li>
 </ul>
 </p:proposed>
 
@@ -515,7 +515,7 @@
   invoke internal functionality in order to provide good integration with the SDK.
   We will address these cases by creating proper, API-quality equivalents or
   otherwise removing the dependencies on internals. [All]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX">XXXXX</a>) </li>
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252655">252655</a>) </li>
 
 <li><strong>API Tools test suite and infrastructure</strong>
   We will build a comprehensive regression test suite for our API tools, as well
@@ -524,7 +524,7 @@
   a prerequisite bundle that requires a version range adjustment. We will also 
   investigate architectural changes to support binary or source analysis and 
   performance improvements. [PDE]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX">XXXXX</a>) </li>
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252658">252658</a>) </li>
 
 <li><strong>API Tools enhancements</strong>
   We will enhance the capabilities of our API tools. Potential work areas include
@@ -534,7 +534,7 @@
   utilities that can be used to create reports in an automated build or presented 
   as a structural compare in the workbench; and providing tooling for package version
   definition and validation. [PDE]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX">XXXXX</a>) </li>
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252660">252660</a>) </li>
 
 <li><strong>Compare editor improvements.</strong>
   We will address some of the limitations of the current compare editor framework.
@@ -542,13 +542,13 @@
   of differences, better presentation for changes, support for auto-merge, ability
   to hide outgoing annotations, better handling of hunks, and more
   features from standard editors within compare editors.[All]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX">XXXXX</a>) </li>
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252662">252662</a>) </li>
 
 <li><strong>Build process improvements.</strong>
   The Eclipse build process is currently complex and brittle, impacting our
   ability to deliver stable builds on a reliable schedule. We will make
   improvements to the build process to make it more robust and reproducible.[Rel. Eng., PDE]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX">XXXXX</a>) </li>
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252664">252664</a>) </li>
 </ul>
 </p:proposed>
 
@@ -579,13 +579,13 @@
   results based on Criteria, quick search from the navigation tree
   (similar to quick print), better accessibility, and more control over the
   presentation. [UA]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX">XXXXX</a>) </li>
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252661">252661</a>) </li>
 
 <li><strong>Team sharable working sets.</strong>
   The usefulness of working sets is limited by the fact they are not team
   sharable.  We will provide support for sharing working set information
   between team members.[Platform UI]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX">XXXXX</a>) </li>
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252663">252663</a>) </li>
 
 <li><strong>Extensible execution environments.</strong>
   Currently, the set of system library profile definitions supported by Equinox
@@ -594,7 +594,7 @@
   Default compiler options will be associated with each profile for creating new
   Java and Plug-in projects. <em>(Note that completing this work will require
   investment from the Equinox Project, in addition to the work here.)</em> [JDT, PDE]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX">XXXXX</a>) </li>
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252665">252665</a>) </li>
 
 <li><strong>PDE Build and Export enhancements.</strong>
   We will support export and install of workspace bundles into the running host;
@@ -604,11 +604,11 @@
   bundles, incremental building, features with cyclic dependencies, exporting existing
   class files from the workspace, and exporting individual source bundles. We will 
   leverage p2 function for fetch, publish and packaging build phases. [PDE]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX">XXXXX</a>) </li>
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252666">252666</a>) </li>
 
 <li><strong>Declarative Services Tooling.</strong>
   We will provide tooling for authoring service component definitions. [PDE]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX">XXXXX</a>) </li>
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252668">252668</a>) </li>
 
 <li><strong>Debug User Interface Enhancements.</strong>
   Investigate enhancements to streamline workflow and reduce clutter in the memory
@@ -617,7 +617,7 @@
   a top-level toolbar for debug actions (step, etc.). Investigate enhancements for
   multi-context debugging such as creating multiple sets of debug views (variables,
   registers, etc.), each dedicated to a single context. [Debug, UI]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX">XXXXX</a>) </li>
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252669">252669</a>) </li>
 
 <li><strong>PDE Performance and Target Management.</strong>
   Investigate performance improvements in plug-in XML and bundle manifest validation,
@@ -625,7 +625,7 @@
   management and launching by leveraging p2’s provisioning infrastructure. Investigate
   support for multiple target platforms in a workspace, switching between them, and
   sharing target platforms with a team. [PDE]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX">XXXXX</a>) </li>
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252670">252670</a>) </li>
 </ul>
 </p:proposed>
 
@@ -663,12 +663,12 @@
   overly Java-centric and constraining for some use cases. We will 
   generalize the Resource layer (and related areas, such as EFS) to better
   address these uses. [Workspace, Platform UI]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX">XXXXX</a>)</li>
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252647">252647</a>)</li>
 
 <li><strong>Support declarative definition of user-interfaces.</strong> 
   We will work with the community to identify and provide access to a best-of-breed
   declarative mechanism for defining widget-based user-interfaces in Eclipse. [Platform UI, SWT]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX">XXXXX</a>)</li>
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252648">252648</a>)</li>
 
 <li><strong>Model-based workbench.</strong>
   The functionality of the Eclipse Workbench and IDE have grown significantly
@@ -676,13 +676,13 @@
   by newer ones or have been proven to be unwieldy or otherwise unsatisfying.
   We will create a new model of the underlying structure of the Eclipse UI, which
   will make development simpler, but more flexible and dynamic. [Platform UI]
- (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id= 200094"> 200094</a>) </li>
+ (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id= 252650"> 252650</a>) </li>
 
 <li><strong>Skinnable UI</strong>
   We will enable developers to have greater control over the Eclipse UI, 
   making it simple to customize the appearance of Eclipse-based applications
   using industry standard mechanisms such as CSS. [Platform UI, SWT]
- (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id= 200094"> 200094</a>) </li>
+ (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id= 252653"> 252653</a>) </li>
 
 <li><strong>Investigate scripting languages for Eclipse programmability.</strong> 
   We will investigate the use of scripting languages such as JavaScript, Ruby, etc., 
@@ -690,13 +690,13 @@
   model-based workbench, as well as support from the Equinox project, and 
   will potentially impact many other areas, only the initial investigation
   is planned during the R3.5 cycle. [All]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX">XXXXX</a>)</li>
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252654">252654</a>)</li>
 
 <li><strong>Support advanced animation API in SWT.</strong> 
   A prototype API was developed during the R3.3 cycle that was implemented
   on top of several desktop and web UI technologies. This work needs to be
   completed. [SWT]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX">XXXXX</a>)</li>
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252656">252656</a>)</li>
 
 <li><strong>Support running SWT in a browser.</strong> 
   The RAP project has shown that it is possible to achieve good performance
@@ -704,7 +704,7 @@
   have also been made into client-side technologies. Based on these efforts,
   we will provide first-class support for the ability to run SWT applications
   in web browsers. [SWT]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXX">XXXXX</a>)</li>
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252659">252659</a>)</li>
 </ul>
 </p:proposed>
 
