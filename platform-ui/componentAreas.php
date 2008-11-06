@@ -109,7 +109,7 @@ affected area. The current owner of each functional area is indicated in
 parentheses. The queries here may not represent all bugs in a given
 component area if there are any that havn't been properly tagged.
 <p>
-<p>Last updated: March 4, 2008
+<p>Last updated: November 4, 2008
 <p>
 <table id="componentAreas" border="1">
 
