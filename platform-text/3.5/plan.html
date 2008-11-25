@@ -101,7 +101,7 @@ function showHiddenWork() {
 
   <tr> 
     <td WIDTH="100%"> 
-	<p>Last revised $Date: 2008/11/25 08:50:44 $</p>
+	<p>Last revised $Date: 2008/11/25 13:53:17 $</p>
 
     
       <p>This plan is under continuous refinement. Please send comments about this plan to the <a href="mailto:platform-text-dev@eclipse.org">platform-text-dev@eclipse.org</a> developer mailing list.</p>
@@ -153,6 +153,7 @@ function showHiddenWork() {
 		<li><h4>Ruler improvements [<a href="#2">2</a>]</h4>
 		<ul>
 			<li>improve overview ruler arming and size of active area</li>
+			<li><img src="../images/ok.gif" border="0" height="10" width="10"> add support to contribute actions and context menus to ruler columns (depends on Platform UI bug 134526)</li>
 			<li>investigate improving the usability of icons in the vertical ruler [experimental]
 			<ul>
 				<li>fix most common layering problem (breakpoints) by changing their layer</li>
@@ -161,7 +162,6 @@ function showHiddenWork() {
 				<li>allow to increase ruler width</li>
 				<li>allow users to configure the annotation presentation layer for each annotation</li>
 				<li>finish/cleanup the roll-over annotation work that was kicked off during 3.0</li>
-				<li>add support to contribute actions and context menus to ruler columns (depends on Platform UI bug 134526)</li>
 	  	  	</ul>
 	  	  	</li>
 		</ul>
@@ -201,7 +201,7 @@ function showHiddenWork() {
 			<li>up/down navigation loses context when reconciler kicks in (bug 79992)</li>
 			<li>Restore editor selection on restart should restore visible view port as well (bug 169838)</li>
 			<li>Problems with undo grouping in linked mode (bug 77575)</li>
-			<li>leverage link support in <code>StyledText</code> (depends on SWT bug 83408)</li>
+			<li><img src="../images/ok.gif" border="0" height="10" width="10"> leverage link support in <code>StyledText</code> (depends on SWT bug 83408) <span class="work">0.5d</span></li>
 			<li><img src="../images/ok.gif" border="0" height="10" width="10"> simplify the setup of <code>ContentAssistAction</code> (bug 138370) <span class="work">0.5d</span></li>
 		</ul>
 		</li>
@@ -221,8 +221,8 @@ function showHiddenWork() {
 	<ul>
 		<li>Platform SWT
 			<ul>
-				<li>bug 8521 needs to get fixed in order to add add column based editing capabilities to textual editors (bug 19771)</li>
-				<li>bug 83408 needs to get fixed in order to leverage link support from <code>StyledText</code></li>
+				<li><img src="../images/ok.gif" border="0" height="10" width="10"> bug 8521 needs to get fixed in order to add add column based editing capabilities to textual editors (bug 19771)</li>
+				<li><img src="../images/ok.gif" border="0" height="10" width="10"> bug 83408 needs to get fixed in order to leverage link support from <code>StyledText</code></li>
 			</ul>
 		</li>
 		<li>Platform UI
@@ -230,7 +230,7 @@ function showHiddenWork() {
 				<li><img src="../images/ok.gif" border="0" height="10" width="10"> discuss further work regarding breadcrumbs with Platform UI
 					<br>&rarr; discussed with Platform UI: no further work planned before e4
 				</li>
-				<li>bug 134526 needs to get fixed in order to add support to contribute actions and context menus to ruler columns</li>
+				<li><img src="../images/ok.gif" border="0" height="10" width="10"> bug 134526 needs to get fixed in order to add support to contribute actions and context menus to ruler columns</li>
 			</ul>
 		</li>
 	</ul>
@@ -368,12 +368,17 @@ function showHiddenWork() {
 			<li>provide API for <code>BrowserInformationControl</code> (bug 218482) and <code>HTML2TextReader</code> (bug 241896) <span class="work">3d</span>
 			<li class="priority">API/extension points to contribute new context types (to allow clients to add something like SWT templates) (bug 236878) <span class="work">1d</span></li>
 		</ul>
+		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Ruler improvements [<a href="#2">2</a>]</h4>
+		<ul>
+			<li><img src="../images/ok.gif" border="0" height="10" width="10"> add support to contribute actions and context menus to ruler columns (depends on Platform UI bug 134526)</li>
+  	  	</ul>
 
 		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Miscellaneous</h4>
 		<ul>
 			<li class="priority">generalize save actions i.e. push down from JDT Text (bug 195063) <span class="work">1m</span></li>
 			<li class="priority">add column based editing capabilities to textual editors (bug 19771, depends on SWT bug 8521) <span class="work">1w</span></li>
 			<li><img src="../images/ok.gif" border="0" height="10" width="10"> simplify the setup of <code>ContentAssistAction</code> (bug 138370) <span class="work">0.5d</span></li>
+			<li><img src="../images/ok.gif" border="0" height="10" width="10"> leverage link support in <code>StyledText</code> (depends on SWT bug 83408) <span class="work">0.5d</span></li>
 		</ul>
 		
 		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Permanent Items</h4>
