@@ -44,7 +44,7 @@ include($App->getProjectCommon());
 				<p>
 					The Ant component is designed to bring the power of Ant and Eclipse together. 
         			Ant is a Java based build tool. In theory it is kind of like make without 
-        			make's wrinkles. It exists independent of Eclipse as an <a href="http://ant.apache.org/" target="_top">Apache 
+        			make's wrinkles. It exists independent of Eclipse as an <a target="_blank" href="http://ant.apache.org/" target="_top">Apache 
         			open source project</a>. Integrating Ant into Eclipse means:
         		</p>
       			<ul>
@@ -90,6 +90,23 @@ include($App->getProjectCommon());
 				<li>Ant overall <a href="/eclipse/ant/platform/dev_plans/r3_5/plan.php">3.5 plan</a></li>
 				<li><a href="/eclipse/ant/test_plans/test_plans.php#3-5_testing">Ant 3.5 Test Matrix</a></li>
 			</ul>
+		</div>
+		<div class="homeitem3col">
+			<h3>Maintenance Efforts</h3>
+		      <ul>
+		        <li>Fixes released to the <a href="http://bugs.eclipse.org/bugs/buglist.cgi?bug_status=VERIFIED&resolution=FIXED&email1=&emailtype1=substring&emailassigned_to1=1&email2=&emailtype2=substring&emailreporter2=1&bugidtype=include&bug_id=&changedin=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&product=Platform&component=Ant&target_milestone=2.0.1&target_milestone=2.0.2&short_desc=&short_desc_type=allwordssubstr&long_desc=&long_desc_type=allwordssubstr&keywords=&keywords_type=anywords&field0-0-0=noop&type0-0-0=noop&value0-0-0=&cmdtype=doit&namedcmd=2.0.1%2BFixed%27n%2BVerified&newqueryname=&order=Reuse%2Bsame%2Bsort%2Bas%2Blast%2Btime">2.0.x</a> 
+		          branch</li>
+		        <li>Fixes released to the <a href="https://bugs.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=Platform&component=Ant&target_milestone=2.1.1&target_milestone=2.1.2&target_milestone=2.1.3&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=VERIFIED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&namedcmd=2.0.1+Fixed%27n+Verified&newqueryname=&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">2.1.x</a> 
+		          branch</li>
+		        <li>Fixes released to the <a href="https://bugs.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=Platform&component=Ant&target_milestone=3.0.1&target_milestone=3.0.2&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=VERIFIED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&namedcmd=2.0.1+Fixed%27n+Verified&newqueryname=&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">3.0.x</a> 
+		          branch</li>
+		          <li>Fixes released to the <a href="https://bugs.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=Platform&component=Ant&target_milestone=3.1.1&target_milestone=3.1.2&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=VERIFIED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&namedcmd=2.0.1+Fixed%27n+Verified&newqueryname=&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">3.1.x</a> 
+		          branch</li>
+		        <li>Fixes released to the <a href="https://bugs.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=Platform&component=Ant&target_milestone=3.2.1&target_milestone=3.2.2&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=VERIFIED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&namedcmd=2.0.1+Fixed%27n+Verified&newqueryname=&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">3.2.x</a> 
+		          branch</li>
+		           <li>Fixes released to the <a href="https://bugs.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=Platform&component=Ant&target_milestone=3.3.1&target_milestone=3.3.2&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=VERIFIED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&namedcmd=2.0.1+Fixed%27n+Verified&newqueryname=&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">3.3.x</a> 
+		          branch</li>
+		      </ul>
 		</div>
 	</div>
 	<div id="rightcolumn">

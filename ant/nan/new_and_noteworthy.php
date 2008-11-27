@@ -53,6 +53,8 @@ include($App->getProjectCommon());
 			<h3>New and Noteworthy for 3.3</h3>
 			<p>Listing of new and noteworthy items separated by milestone:
 				<ul>
+					<li><a href="/eclipse/ant/nan/3.3/M2/nan.php">Milestone 2</a></li>
+					<li><a href="/eclipse/ant/nan/3.3/M7/nan.php">Milestone 7</a></li>
 				</ul>
 			</p>
 		</div>
@@ -60,20 +62,8 @@ include($App->getProjectCommon());
 			<h3>New and Noteworthy for 3.2</h3>
 			<p>Listing of new and noteworthy items separated by milestone:
 				<ul>
-				</ul>
-			</p>
-		</div>
-		<div class="homeitem3col">
-			<h3>New and Noteworthy for 3.1</h3>
-			<p>Listing of new and noteworthy items separated by milestone:
-				<ul>
-				</ul>
-			</p>
-		</div>
-		<div class="homeitem3col">
-			<h3>New and Noteworthy for 3.0</h3>
-			<p>Listing of new and noteworthy items separated by milestone:
-				<ul>
+					<li><a href="/eclipse/ant/nan/3.2/M5/nan.php">Milestone 5</a></li>
+					<li><a href="/eclipse/ant/nan/3.3/M6/nan.php">Milestone 6</a></li>
 				</ul>
 			</p>
 		</div>

@@ -1,0 +1,356 @@
+<html>
+<head>
+<title>Ant Component</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=left width="72%"> <font class=indextop> Ant R3.0</font> <br>
+      <font class=indexsub> Ant and External Tools</font></td>
+    <td width="28%"><img src="http://dev.eclipse.org/images/Idea.jpg" height=86 width=120></td>
+  </tr>
+</table>
+<table BORDER=0 CELLSPACING=5 CELLPADDING=2 WIDTH="100%" >
+  <tr> 
+    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" BGCOLOR="#0080C0" width="100%"><b><font face="Arial,Helvetica"><font color="#FFFFFF">Overall 
+      3.0 Plan</font></font></b></td>
+  </tr>
+  <tr> 
+    <td WIDTH="100%"> <a name="Overall_Planning"></a> The 3.0 plan below is a 
+      draft - input from the community is <b>very</b> welcome. 
+      <h4>The overall themes for Eclipse Ant are:</h4>
+      <ul>
+        <li>robust and enhance</li>
+        <li>improved user experience</li>
+      </ul>
+      <h4>Top Work Items</h4>
+      <ul>
+        <li>Support for Ant 1.6 features</li>
+        <li>Editor enhancements 
+          <ul>
+            <li>Auto-indent</li>
+            <li>Formatting</li>
+            <li>Templates</li>
+            <li>Dynamic content assist based on Ant version being used</li>
+            <li>Execute targets from the editor outline</li>
+          </ul>
+        </li>
+      </ul>
+      <h4>Planned<b></b> Items</h4>
+      <ul>
+        <li>Ant 
+          <ul>
+            <li>Runtime Options 
+              <ul>
+                <li><img src="../icons/ok.gif" height=10 width=10> support to run Ant builds 
+                  in a separate JVM</li>
+                <li><img src="../icons/ok.gif" height=10 width=10> console support for 
+                  stream coloring and task hyperlinks from separate JVM</li>
+                <li><img src="../icons/progress.gif">support relative URLs for Ant classpath 
+                  entries (allows easier sharing), via launch variables</li>
+                <li><img src="../icons/ok.gif" height=10 width=10>extension point for Ant 
+                  properties</li>
+              </ul>
+            </li>
+            <li>Concurrency 
+              <ul>
+                <li>investigate support for concurrent builds</li>
+              </ul>
+            </li>
+            <li>Pluggable Ant 
+              <ul>
+                <li>enhance support for using an external installation of Ant</li>
+                <li>code assist in context of Ant version being used</li>
+              </ul>
+            </li>
+            <li>Refactoring 
+              <ul>
+                <li>participate in Java refactorings</li>
+                <li>support Ant refactorings such as &quot;rename property&quot; 
+                  in Ant editor</li>
+              </ul>
+            </li>
+            <li>Ant view 
+              <ul>
+                <li><img src="../icons/ok.gif" height=10 width=10>support filters in outline 
+                  (filter nonpublic targets)</li>
+                <li><img src="../icons/ok.gif" height=10 width=10>support sorting in outline</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>Plug-in Separation 
+          <ul>
+            <li><img src="../icons/ok.gif" height=10 width=10> separate Ant UI from External 
+              Tools plug-in</li>
+          </ul>
+        </li>
+        <li>External Tools </li>
+        <ul>
+          <li>External Tool Builders 
+            <ul>
+              <li><img src="../icons/ok.gif" height=10 width=10> allow builders to be triggered 
+                by a resource delta in a specific working set</li>
+            </ul>
+          </li>
+        </ul>
+      </ul>
+  </tr>
+  <tr> 
+    <td ALIGN=CENTER> 
+      <table BORDER=0 CELLSPACING=5 CELLPADDING=0>
+        <tr> 
+          <td> <img SRC="../icons/progress.gif"> item is under development </td>
+          <td> <img SRC="../icons/ok.gif" height=10 width=10> item is finished </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0" width="100%"><b><font face="Arial,Helvetica"><font color="#FFFFFF">3.0 
+      Current Development Effort - Milestone 9 (Friday, May 7th)</font></font></b></td>
+  </tr>
+  <tr> 
+    <td width="100%"> 
+      <p><a name="Milestone_Planning"></a>The goals listed below are only a guide. 
+        The community is also invited to provide input.<a href="http://dev.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=Platform&component=Ant&target_milestone=2.1&target_milestone=2.1+M1&target_milestone=2.1+M2&target_milestone=2.1+M3&target_milestone=2.1+M4&target_milestone=2.1+M5&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&namedcmd=2.0.1+Fixed%27n+Verified&newqueryname=&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0="> 
+        </a></p>
+      <ul>
+        <li><b>Editor enhancements</b></li>
+        <li><b>Import a build file &gt; Java Project</b> 
+          <ul>
+            <li>Importing a build file from the file system (that contains a javac 
+              task) to create a Java project with an equivalent buildpath in the 
+              workspace</li>
+          </ul>
+        </li>
+        <li><b>Bug fixing</b></li>
+      </ul>
+    
+  </tr>
+  <tr> 
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0" width="100%"><b><font face="Arial,Helvetica"><font color="#FFFFFF">History 
+      - Milestone 8 (Friday, March 26th)</font></font></b></td>
+  </tr>
+  <tr> 
+    <td width="100%"> 
+      <p><a name="Milestone_Planning"></a>The goals listed below are only a guide. 
+        The community is also invited to provide input.<a href="http://dev.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=Platform&component=Ant&target_milestone=2.1&target_milestone=2.1+M1&target_milestone=2.1+M2&target_milestone=2.1+M3&target_milestone=2.1+M4&target_milestone=2.1+M5&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&namedcmd=2.0.1+Fixed%27n+Verified&newqueryname=&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0="> 
+        </a></p>
+      <ul>
+        <li><b>Migrate to Ant 1.6.1</b></li>
+        <li><b>Editor enhancements</b></li>
+        <li><b>Import a build file &gt; Java Project</b> 
+          <ul>
+            <li>Importing a build file from the file system (that contains a javac 
+              task) to create a Java project with an equivalent buildpath in the 
+              workspace</li>
+          </ul>
+        </li>
+        <li><b>Bug fixing</b></li>
+      </ul>
+  </tr>
+  <tr> 
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0" width="100%"><b><font face="Arial,Helvetica"><font color="#FFFFFF">History 
+      - Milestone 7 (Friday, February 13th)</font></font></b></td>
+  </tr>
+  <tr> 
+    <td width="100%"> 
+      <ul>
+        <li><b>Support for Ant 1.6 Features </b>[7 days, Darin Swanson]</li>
+        <li><b>Editor Enhancements</b> [10 days, Darin Swanson]</li>
+      </ul>
+  </tr>
+  <tr> 
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0" width="100%"><b><font face="Arial,Helvetica"><font color="#FFFFFF">History 
+      - Milestone 6 (Friday, December 19th)</font></font></b></td>
+  </tr>
+  <tr> 
+    <td width="100%"> 
+      <p>The goals listed below are only a guide. The community is also invited 
+        to provide input.<a href="http://dev.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=Platform&component=Ant&target_milestone=2.1&target_milestone=2.1+M1&target_milestone=2.1+M2&target_milestone=2.1+M3&target_milestone=2.1+M4&target_milestone=2.1+M5&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&namedcmd=2.0.1+Fixed%27n+Verified&newqueryname=&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0="> 
+        </a></p>
+      <ul>
+        <li><b><img src="../icons/progress.gif"> Bug Fixing</b>: Reduce the bug backlog</li>
+        <li><b>Leak Analysis</b>: Look for memory leaks</li>
+      </ul>
+  </tr>
+  <tr> 
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0" width="100%"><b><font face="Arial,Helvetica"><font color="#FFFFFF">History 
+      - Milestone 5 (Friday, November 21st)</font></font></b></td>
+  </tr>
+  <tr> 
+    <td width="100%"> 
+      <p>The goals listed below are only a guide. The community is also invited 
+        to provide input.<a href="http://dev.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=Platform&component=Ant&target_milestone=2.1&target_milestone=2.1+M1&target_milestone=2.1+M2&target_milestone=2.1+M3&target_milestone=2.1+M4&target_milestone=2.1+M5&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&namedcmd=2.0.1+Fixed%27n+Verified&newqueryname=&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0="> 
+        </a></p>
+      <ul>
+        <li><b>Relative classpath URLs</b> [Darin S] 
+          <ul>
+            <li>Support for Ant runtime classpath entires with relative URLs. 
+              This will use the new support for string substitution from <code>org.eclipse.core.variables</code>.</li>
+          </ul>
+        </li>
+        <li><b>Remove dependency on Xerces</b> [Darin S] 
+          <ul>
+            <li><img src="../icons/ok.gif" height=10 width=10> Remove plug-in dependencies 
+              on org.apache.xerces</li>
+          </ul>
+        </li>
+      </ul>
+  </tr>
+  <tr> 
+    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" BGCOLOR="#0080C0" width="100%"><b><font face="Arial,Helvetica"><font color="#FFFFFF">History 
+      - Milestone 4 (Friday, October 10th)</font></font></b></td>
+  </tr>
+  <tr> 
+    <td WIDTH="100%"> 
+      <p>The goals listed below are only a guide. The community is also invited 
+        to provide input.<a href="http://dev.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=Platform&component=Ant&target_milestone=2.1&target_milestone=2.1+M1&target_milestone=2.1+M2&target_milestone=2.1+M3&target_milestone=2.1+M4&target_milestone=2.1+M5&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&namedcmd=2.0.1+Fixed%27n+Verified&newqueryname=&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0="> 
+        </a></p>
+      <ul>
+        <li><b>Relative classpath URLs</b> [Darin S] 
+          <ul>
+            <li><img SRC="../icons/progress.gif">Investigate relative URLs supported in 
+              Ant core <b>Moving to M5 with plans to make use of support in new 
+              plugin &quot;org.eclipse.core.variables&quot;</b></li>
+          </ul>
+        </li>
+        <li><b>Ant View </b>[Jared B] [3 days] 
+          <ul>
+            <li><img src="../icons/ok.gif" height=10 width=10>Support for filtering nonpublic 
+              targets from the outline (<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=39294">bug 
+              39294</a>) </li>
+            <li><img src="../icons/ok.gif" height=10 width=10>Support for sorting targets 
+              in the outline (<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=39295">bug 
+              39295</a>)</li>
+          </ul>
+        </li>
+      </ul>
+  </tr>
+  <tr> 
+    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" BGCOLOR="#0080C0" width="100%"><b><font face="Arial,Helvetica"><font color="#FFFFFF">History 
+      - Milestone 3 (Friday, August 29th)</font></font></b></td>
+  </tr>
+  <tr> 
+    <td WIDTH="100%"> 
+      <p>The goals listed below are only a guide. The community is also invited 
+        to provide input.</p>
+      <ul>
+        <li><b>Separate JVM console support</b> [1 person week] [Darin S] - <b>Completed 
+          in M4, with changes to the debug framework</b> 
+          <ul>
+            <li><img src="../icons/ok.gif" height=10 width=10>When an Ant build is run 
+              in a separate JVM, console task hyperlinks and output coloring are 
+              now presented. This has required changes to the debug infrastructure 
+              that need to be properly established as API</li>
+          </ul>
+          <a href="http://dev.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=Platform&component=Ant&target_milestone=2.1&target_milestone=2.1+M1&target_milestone=2.1+M2&target_milestone=2.1+M3&target_milestone=2.1+M4&target_milestone=2.1+M5&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&namedcmd=2.0.1+Fixed%27n+Verified&newqueryname=&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0="> 
+          </a></li>
+        <li><b>Add Ant UI test suite to build</b> [1 person day] [Darin S] 
+          <ul>
+            <li><img src="../icons/ok.gif" height=10 width=10> We have an Ant UI test suite, 
+              but it is not part of the build process</li>
+          </ul>
+        </li>
+        <li><b>Relative classpath URLs</b> (and more) [1 person week] [Darin S] 
+          - <b>In progress, more work in M4</b> 
+          <ul>
+            <li><img src="../icons/progress.gif">Relative URLs via launch variables in 
+              Ant classpath, tasks, types, property files are supported from Ant 
+              UI. They are still not supported from Ant core</li>
+          </ul>
+        </li>
+        <li><b>Ant Properties</b> [2 person days] [Darin S] 
+          <ul>
+            <li><img src="../icons/ok.gif" height=10 width=10> Extension point for Ant 
+              properties</li>
+          </ul>
+        </li>
+      </ul>
+  </tr>
+  <tr> 
+    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" BGCOLOR="#0080C0" width="100%"><b><font face="Arial,Helvetica"><font color="#FFFFFF">History 
+      - Milestone 2 (Friday, July 18th)</font></font></b></td>
+  </tr>
+  <tr> 
+    <td WIDTH="100%"> 
+      <p>The goals listed below are only a guide. The community is also invited 
+        to provide input.</p>
+      <ul>
+        <li><b>Console support for seperate JVM</b> [1 person week] 
+          <ul>
+            <li><img src="../icons/ok.gif" height=10 width=10>When an Ant build is run 
+              in a seperate JVM, console task hyperlinks and output coloring is 
+              not properly supported. This requires extra communication between 
+              the target VM and the Eclipse SDK.</li>
+          </ul>
+          <a href="http://dev.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=Platform&component=Ant&target_milestone=2.1&target_milestone=2.1+M1&target_milestone=2.1+M2&target_milestone=2.1+M3&target_milestone=2.1+M4&target_milestone=2.1+M5&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&namedcmd=2.0.1+Fixed%27n+Verified&newqueryname=&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0="> 
+          </a></li>
+        <li><b>Add Ant UI test suite to build</b> [1 person day] 
+          <ul>
+            <li><img src="../icons/ok.gif" height=10 width=10>We have an Ant UI test suite, 
+              but it is not part of the build process </li>
+          </ul>
+        </li>
+        <li><b>External Tool Builders Triggering</b> [1 person week] 
+          <ul>
+            <li><img src="../icons/ok.gif" height=10 width=10>Ensure that external tool 
+              builders are invoked when a project is first checked out of a repository 
+              (and not invoked when a workspace is re-started with no build state).</li>
+          </ul>
+        </li>
+      </ul>
+  </tr>
+  <tr> 
+    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" BGCOLOR="#0080C0" width="100%"><b><font face="Arial,Helvetica"><font color="#FFFFFF">History 
+      - Milestone 1</font></font></b></td>
+  </tr>
+  <tr> 
+    <td WIDTH="100%"> 
+      <p>The work items listed below are only a guide. The community is also invited 
+        to provide input.</p>
+      <ul>
+        <li>External Tool Builders <b>[Darin S]</b> 
+          <ul>
+            <li><img src="../icons/ok.gif" height=10 width=10>allow builders to be triggered 
+              by a resource delta in a specific working set</li>
+          </ul>
+          <a href="http://dev.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=Platform&component=Ant&target_milestone=2.1&target_milestone=2.1+M1&target_milestone=2.1+M2&target_milestone=2.1+M3&target_milestone=2.1+M4&target_milestone=2.1+M5&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&namedcmd=2.0.1+Fixed%27n+Verified&newqueryname=&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0="> 
+          </a></li>
+        <li>Seperate JVM <b>[Darin S]</b> 
+          <ul>
+            <li><img src="../icons/ok.gif" height=10 width=10>support to run Ant builds 
+              in a seperate VM</li>
+            <li>allow default VM to be controlled at global level, and overriden 
+              at configuration level</li>
+          </ul>
+        </li>
+        <li>Plug-in Seperation <b>[Darin S]</b> 
+          <ul>
+            <li><img src="../icons/ok.gif" height=10 width=10>seperate Ant UI from External 
+              Tools plug-in</li>
+          </ul>
+        </li>
+      </ul>
+  </tr>
+  <tr> 
+    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" BGCOLOR="#0080C0" width="100%"><b><font face="Arial,Helvetica"><font color="#FFFFFF">Bug 
+      Resolution </font></font></b></td>
+  </tr>
+  <tr> 
+    <td> 
+      <ul>
+        <li><a href="https://bugs.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=Platform&component=Ant&target_milestone=3.0&target_milestone=3.0+M1&target_milestone=3.0+M2&target_milestone=3.0+M3&target_milestone=3.0+M4&target_milestone=3.0+M5&target_milestone=3.0+M6&target_milestone=3.0+M7&target_milestone=3.0+M8&target_milestone=3.0+M9&target_milestone=3.0+RC1&target_milestone=3.0+RC2&target_milestone=3.0+RC3&target_milestone=3.0+RC4&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=VERIFIED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&namedcmd=2.0.1+Fixed%27n+Verified&newqueryname=&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">Fixes 
+          released to 3.0</a></li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<br>
+&nbsp; 
+</body>
+</html>

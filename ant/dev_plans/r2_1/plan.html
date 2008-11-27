@@ -1,0 +1,191 @@
+<html>
+<head>
+<title>Ant Component</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=left width="72%"> <font class=indextop> Ant R2.1</font> <br>
+      <font class=indexsub> Ant and External Tools</font></td>
+    <td width="28%"><img src="http://dev.eclipse.org/images/Idea.jpg" height=86 width=120></td>
+  </tr>
+</table>
+<table BORDER=0 CELLSPACING=5 CELLPADDING=2 WIDTH="100%" >
+  <tr> 
+    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" BGCOLOR="#0080C0" width="100%"><b><font face="Arial,Helvetica"><font color="#FFFFFF">Overall 
+      2.1 Plan</font></font></b></td>
+  </tr>
+  <tr> 
+    <td WIDTH="100%"> <a name="Overall_Planning"></a> The 2.1 plan below is a 
+      proto plan and input from the community is <b>very</b> welcome. 
+      <h4>The overall themes for Eclipse Ant are:</h4>
+      <ul>
+        <li>robust and enhance</li>
+        <li>reduce gestures, improve usability</li>
+        <li>first class Ant integration</li>
+      </ul>
+      <h4>Planned<b></b> Items</h4>
+      <ul>
+        <li>Ant view 
+          <ul>
+            <li><img src="../icons/ok.gif" height=10 width=10> run scripts</li>
+            <li><img src="../icons/ok.gif" height=10 width=10> run targets</li>
+            <li><img src="../icons/ok.gif" height=10 width=10> synchronize with script 
+              under edit</li>
+            <li><img src="../icons/ok.gif" height=10 width=10> enhance target selection 
+              (via &quot;active&quot; targets area)</li>
+            <li><img src="../icons/ok.gif" height=10 width=10> find and add arbitrary scripts 
+              to the view</li>
+          </ul>
+        </li>
+        <li>Ant Editor</li>
+        <ul>
+          <li>Investigate support for an Ant editor</li>
+        </ul>
+        <li>Launch Configurations 
+          <ul>
+            <li><img src="../icons/ok.gif" height=10 width=10> Use launch configurations 
+              to define/run external tools/ant scripts</li>
+            <li><img src="../icons/ok.gif" height=10 width=10> Run tools in non-UI thread 
+              (i.e. non-modal)</li>
+          </ul>
+        </li>
+        <li>Ant Launch Configurations</li>
+        <ul>
+          <li><img src="../icons/ok.gif" height=10 width=10> Support for configuration 
+            specific classpath</li>
+        </ul>
+        <li>Console 
+          <ul>
+            <li><img src="../icons/ok.gif" height=10 width=10> Shared console with debug 
+              platform </li>
+          </ul>
+        </li>
+        <ul>
+          <li><img src="../icons/ok.gif" height=10 width=10> Navigation from error output 
+            to the corresponding source/resource (done for javac, jikes, &amp; 
+            Eclipse Java compiler)</li>
+          <li><img src="../icons/ok.gif" height=10 width=10> Command line style output</li>
+        </ul>
+        <li>Actions 
+          <ul>
+            <li>Supprt &quot;-find&quot; option </li>
+            <li><img src="../icons/ok.gif" height=10 width=10> &quot;Run Ant...&quot; should 
+              open a dialog that only displays a single launch config (instead 
+              of all), allowing the user to edit the config before launching (requires 
+              support from debug platform).</li>
+          </ul>
+        </li>
+        <li>Ant Runtime </li>
+        <ul>
+          <li><img src="../icons/ok.gif" height=10 width=10> Upgrade to Ant 1.5.1 </li>
+          <li><img src="../icons/ok.gif" height=10 width=10> support &quot;-find&quot; 
+            option</li>
+        </ul>
+        <li>External Tool Builders 
+          <ul>
+            <li><img src="../icons/ok.gif" height=10 width=10> New builders will be defined/edited 
+              as launch configurations</li>
+            <li><img src="../icons/ok.gif" height=10 width=10> Migrate existing external 
+              tool builders to launch configurations</li>
+            <li><img src="../icons/ok.gif" height=10 width=10> Support for specifying full 
+              or incremental build</li>
+          </ul>
+        </li>
+      </ul>
+      <p><b>Deferred Items (Post 2.1)</b></p>
+      <ul>
+        <li>Console 
+          <ul>
+            <li>Extension point to register regex for task output. Extension creates 
+              a hyperlink, and error marker.</li>
+          </ul>
+        </li>
+        <li>Ant API 
+          <ul>
+            <li>There will be no public API for Ant or External Tools in 2.1</li>
+          </ul>
+        </li>
+        <li>Enhance Ant Launch Configurations 
+          <ul>
+            <li>Support for running in separate VM</li>
+          </ul>
+        </li>
+      </ul>
+  </tr>
+  <tr> 
+    <td ALIGN=CENTER> 
+      <table BORDER=0 CELLSPACING=5 CELLPADDING=0>
+        <tr> 
+          <td> <img SRC="../icons/progress.gif"> item is under development </td>
+          <td> <img SRC="../icons/ok.gif" height=10 width=10> item is finished </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" BGCOLOR="#0080C0" width="100%"><b><font face="Arial,Helvetica"><font color="#FFFFFF">2.1 
+      Development Effort - Milestone 5 (February 7th, 2003)</font></font></b></td>
+  </tr>
+  <tr> 
+    <td WIDTH="100%"> 
+      <p><a name="Milestone_Planning"></a>The work items listed below are only 
+        a guide. The community is also invited to provide input.</p>
+      <ul>
+        <li><a href="http://dev.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=Platform&component=Ant&target_milestone=2.1&target_milestone=2.1+M1&target_milestone=2.1+M2&target_milestone=2.1+M3&target_milestone=2.1+M4&target_milestone=2.1+M5&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&namedcmd=2.0.1+Fixed%27n+Verified&newqueryname=&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0="> 
+          Bug Fixing</a> - Fixing defects</li>
+        <li>Ant Editor 
+          <ul>
+            <li><img src="../icons/progress.gif"> Create an Ant editor with code assist 
+              (based on Planty contribution)</li>
+          </ul>
+        </li>
+        <li>Actions 
+          <ul>
+            <li><img src="../icons/ok.gif" height=10 width=10> &quot;Run Ant...&quot; should 
+              open a dialog that only displays a single launch config (instead 
+              of all), allowing the user to edit the config before launching (requires 
+              support from debug platform).</li>
+          </ul>
+        </li>
+        <li>Console 
+          <ul>
+            <li><img src="../icons/ok.gif" height=10 width=10> Navigation from &quot;javac&quot; 
+              &amp; &quot;jikes&quot; error output to corresponding resource</li>
+          </ul>
+        </li>
+        <li>Externa Tool Builders 
+          <ul>
+            <li><img src="../icons/ok.gif" height=10 width=10> Support for specifying full 
+              or incremental build</li>
+          </ul>
+        </li>
+        <li>UI Review 
+          <ul>
+            <li><img src="../icons/progress.gif"> Polish &amp; Streamline Ant UI</li>
+          </ul>
+        </li>
+        <h4>&nbsp;</h4>
+      </ul>
+    
+  </tr>
+  <tr> 
+    <td ALIGN=LEFT VALIGN=TOP COLSPAN="2" BGCOLOR="#0080C0" width="100%"><b><font face="Arial,Helvetica"><font color="#FFFFFF">Bug 
+      Resolution </font></font></b></td>
+  </tr>
+  <tr> 
+    <td> 
+      <ul>
+        <li><a href="http://dev.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=Platform&component=Ant&target_milestone=2.1&target_milestone=2.1+M1&target_milestone=2.1+M2&target_milestone=2.1+M3&target_milestone=2.1+M4&target_milestone=2.1+M5&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=VERIFIED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&namedcmd=2.0.1+Fixed%27n+Verified&newqueryname=&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">Fixes 
+          released to 2.1</a></li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<br>
+&nbsp; 
+</body>
+</html>
