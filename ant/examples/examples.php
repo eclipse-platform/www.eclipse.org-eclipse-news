@@ -30,7 +30,7 @@
 	$pageKeywords	= "ant, script, platform, debugging, debugger, breakpoints, launching";
 	$pageAuthor		= "Ant Team";
 	
-	include("_sideCommon.php");
+	include("../_sideCommon.php");
 	
 	$html = <<<EOHTML
 

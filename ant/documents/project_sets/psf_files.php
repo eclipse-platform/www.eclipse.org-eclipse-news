@@ -31,7 +31,7 @@
 	$pageKeywords	= "ant, script, platform, debugging, debugger, psf, project, set, files, working, sets, cvs, pserver, extssh";
 	$pageAuthor		= "Ant Team";
 	
-	include("../_sideCommon.php");
+	include("../../_sideCommon.php");
 	
 	$html = <<<EOHTML
 

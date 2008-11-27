@@ -118,11 +118,11 @@
 				</tbody>
 			</table>
 		</div>
+	</div>
 	<div id="rightcolumn">
 		$commonside
 	</div>
 </div>
-
 
 EOHTML;
 

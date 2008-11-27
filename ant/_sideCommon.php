@@ -26,7 +26,7 @@
 			<li><a href="/eclipse/ant/nan/new_and_noteworthy.php">New and Noteworthy</a></li>
 			<li><a href="/eclipse/ant/test_plans/test_plans.php">Test Plans</a></li>
 			<li><a href="/eclipse/ant/documents/project_sets/psf_files.php">Ant Project Set Files</a></li>
-			<li><a href="/eclipse/ant">Example Ant Scripts</a></li>
+			<li><a href="/eclipse/ant/examples/examples.php">Example Ant Scripts</a></li>
 			<li><a href="/eclipse/ant/who.php">Who We Are</a></li>
 			<li><a href="/eclipse/ant/about.php">About this content</a></li>
 		</ul>
