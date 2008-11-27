@@ -1,4 +1,4 @@
-<?php  
+<?php 
 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	
 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	
 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	
@@ -25,7 +25,6 @@
 	#
 	#****************************************************************************
 	
-	
 	$pageTitle 		= "Platform Ant Project New and Noteworthy for 3.3M7";
 	$pageKeywords	= "ant, script,  platform, debugging, debugger, breakpoints, launching, new, noteworthy";
 	$pageAuthor		= "Ant Team";
@@ -41,16 +40,11 @@
 		<h1>$pageTitle</h1>
 		<table border="0" width="80%" cellpadding="10" cellspacing="0">
 		  <tr> 
-		    <td colspan="2"> <hr /> 
-		      <h2>Ant</h2>
-		      <hr /></td>
+		    <td colspan="2"> <hr> </td>
 		  </tr>
 		  <tr> 
 		    <td width="30%" valign="top" align="left"><b>Ant 1.7.0</b></td>
 		    <td width="70%" valign="top">The <b>org.apache.ant</b> plug-in provided by Eclipse has been upgraded to latest Apache Ant release 1.7.0.
-		  </tr>
-		  <tr> 
-		    <td colspan="2"> <hr /> </td>
 		  </tr>  
 		</table>
 	</div>

@@ -41,17 +41,12 @@
 		<h1>$pageTitle</h1>
 		<table border="0" width="80%" cellpadding="10" cellspacing="0">
 		  <tr> 
-		    <td colspan="2"> <hr /> 
-		      <h2>Ant</h2>
-		      <hr /></td>
+		    <td colspan="2"> <hr> </td>
 		  </tr>
 		  <tr> 
 		    <td width="30%" valign="top" align="left"><b>Ant 1.7.1</b></td>
 		    <td width="70%" valign="top">The <b>org.apache.ant</b> plug-in provided by Eclipse has been upgraded to latest Apache Ant release 1.7.1.
-		  </tr>
-		  <tr> 
-		    <td colspan="2"> <hr /> </td>
-		  </tr>  
+		  </tr> 
 		</table>
 	</div>
 	<div id="rightcolumn">

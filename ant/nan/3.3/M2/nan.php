@@ -41,17 +41,12 @@
 		<h1>$pageTitle</h1>
 		<table border="0" width="80%" cellpadding="10" cellspacing="0">
 		  <tr> 
-		    <td colspan="2"> <hr /> 
-		      <h2>Ant</h2>
-		      <hr /></td>
+		    <td colspan="2"> <hr> </td>
 		  </tr>
 		  <tr> 
 		    <td width="30%" valign="top" align="left"><b>Improved support for the &lt;input&gt; task</b></td>
 		    <td width="70%" valign="top">The valid input arguments (specified via the <code>validargs</code> attribute of the input task) are now presented to the user in a combo for 
 		    easy selection in the default SWT based input handler.
-		  </tr>
-		  <tr> 
-		    <td colspan="2"> <hr /> </td>
 		  </tr>
 		</table>
 	</div>
