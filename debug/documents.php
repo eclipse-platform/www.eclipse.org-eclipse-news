@@ -63,7 +63,7 @@
 						</blockquote>
 					</blockquote>
 				</li>
-				<li> EclipseCon 2007 there was only one tutorial given, with no execises done in class. But the associated execises
+				<li> EclipseCon 2007 there was only one tutorial given, with no exercises done in class. But the associated execises
 					are provided below.
 					<blockquote>
 						<a target="_blank" href="/eclipse/debug/documents/ec_2007/Debug_Tutorial_2007.pdf">A Tour of the Eclipse Debug Framework</a>
@@ -74,7 +74,7 @@
 						</blockquote>
 					</blockquote>
 				</li>
-				<li> EclipseCon 2008 there were two tutorials, The Basics and Custom Integeration.  The presentation slides and exercises are available below.
+				<li> EclipseCon 2008 there were two tutorials, The Basics and Custom Integration.  The presentation slides and exercises are available below.
 					<blockquote>
 						<a target="_blank" href="/eclipse/debug/documents/ec_2008/Debug_Tutorial_Basic_2008.ppt">Debug Platform: The Basics</a><br>
 						<a target="_blank" href="/eclipse/debug/documents/ec_2008/Debug_Tutorial_Custom_Integration_2008.ppt">Debug Platform: Custom Integration</a><br>

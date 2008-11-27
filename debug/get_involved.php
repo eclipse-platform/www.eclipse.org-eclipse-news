@@ -169,7 +169,7 @@
 		<div class="homeitem3col">
 			<h3>Creating Bug Reports</h3>
 			<p>
-			When filing bugs against the Debug Project, we ask that you use your better judgement, and most importantly 
+			When filing bugs against the Debug Project, we ask that you use your better judgment, and most importantly 
 			common sense before filing a bug. Specifically:
 			</p>
 			<ul>
