@@ -47,7 +47,7 @@
 		  </tr>
 		  <tr> 
 		    <td width="30%" valign="top" align="left"><b>Ant 1.7.0</b></td>
-		    <td width="70%" valign="top">The <b>org.apache.ant</b> plug-in provided by Eclipse has been upgraded to lastest Apache Ant release 1.7.0.
+		    <td width="70%" valign="top">The <b>org.apache.ant</b> plug-in provided by Eclipse has been upgraded to latest Apache Ant release 1.7.0.
 		  </tr>
 		  <tr> 
 		    <td colspan="2"> <hr /> </td>

@@ -26,7 +26,7 @@
 	#****************************************************************************
 	
 	
-	$pageTitle 		= "Platform Ant Project New and Noteworthy for 3.3M2";
+	$pageTitle 		= "Platform Ant Project New and Noteworthy for 3.5M1";
 	$pageKeywords	= "ant, script,  platform, debugging, debugger, breakpoints, launching, new, noteworthy";
 	$pageAuthor		= "Ant Team";
 	
@@ -46,13 +46,12 @@
 		      <hr /></td>
 		  </tr>
 		  <tr> 
-		    <td width="30%" valign="top" align="left"><b>Improved support for the &lt;input&gt; task</b></td>
-		    <td width="70%" valign="top">The valid input arguments (specified via the <code>validargs</code> attribute of the input task) are now presented to the user in a combo for 
-		    easy selection in the default SWT based input handler.
+		    <td width="30%" valign="top" align="left"><b>Ant 1.7.1</b></td>
+		    <td width="70%" valign="top">The <b>org.apache.ant</b> plug-in provided by Eclipse has been upgraded to latest Apache Ant release 1.7.1.
 		  </tr>
 		  <tr> 
 		    <td colspan="2"> <hr /> </td>
-		  </tr>
+		  </tr>  
 		</table>
 	</div>
 	<div id="rightcolumn">
