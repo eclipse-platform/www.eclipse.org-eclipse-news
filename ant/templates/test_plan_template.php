@@ -203,6 +203,13 @@
 						  	<li>ensure properties references are correctly highlighted</li>
 						</ul>
 					</li>
+					<li> Content Assist
+						<ul>
+						 	<li>Should respect global preferences for auto-completion, activation, colouring, etc</li>
+						 	<li>Should offer reasonable completions</li>
+						 	<li>Templates should be available and work when applied and run</li>
+						</ul>
+					</li>
 					<li> Performance
 						<ul>
 						  	<li>"Large" taskdefs (ant-contrib) in Ant Editor</li>
@@ -341,6 +348,18 @@
 					<li> In the Ant Editor
 						<ul>
 							<li>Rename in File (Alt-Shift-R) - ensure linked mode is correct and edits are executed correctly</li>
+						</ul>
+					</li>
+					<li> Rename Projects
+						<ul>
+							<li>Build files should be updated</li>
+							<li>Ant launch configurations should be updated</li>
+						</ul>
+					</li>
+					<li> Rename Buildfiles
+						<ul>
+							<li>Build files should be updated</li>
+							<li>Ant launch configurations should be updated</li>
 						</ul>
 					</li>
 				</ul>

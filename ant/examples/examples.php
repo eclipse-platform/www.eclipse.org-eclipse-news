@@ -40,9 +40,9 @@
 		<div class="homeitem3col">
 			<h3>External Tool Builders</h3>
 			<ul>
-				<li>The tool builder used by <a href="/eclipse/ant/examples/tool_builders/buildApiToolsAntSupportJar.xml" target="_blank"><code>org.eclipse.pde.api.tools</code></a> to build the jar of Ant tasks usable
+				<li>The tool builder used by <a href="/eclipse/ant/examples/tool_builders/buildApiToolsAntSupportJar.xml" target="_blank">org.eclipse.pde.api.tools</a> to build the jar of Ant tasks usable
 					in a RelEng build setting</li>
-				<li>The tool builder use by <a href="/eclipse/ant/examples/tool_builders/buildLaunchingSupportJAR.xml" target="_blank"><code>org.eclipse.jdt.launching</code></a> to provide launching support tooling.</li>
+				<li>The tool builder use by <a href="/eclipse/ant/examples/tool_builders/buildLaunchingSupportJAR.xml" target="_blank">org.eclipse.jdt.launching</a> to provide launching support tooling.</li>
 			</ul>
 		</div>
 	</div>
