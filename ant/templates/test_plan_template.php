@@ -18,9 +18,9 @@
 	#     IBM Corporation - initial implementation
 	#
 	# Author: 		Ant Team
-	# Date:			
+	# Date:			November 28, 2008
 	#
-	# Description: 
+	# Description: Template for the test script
 	#
 	#
 	#****************************************************************************
@@ -104,39 +104,32 @@
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#antview">Ant View</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			  </tr>
-			  <tr> 
-			    <td><a href="#antbreakpoints">Ant Breakpoints</a></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
-			    <td><a href="#antdebugging">Ant Debugging</a></td>
+			    <td><a href="#antdebugging">Debugging</a></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
-			    <td><a href="#contentassist">Content Assist</a></td>
+			    <td><a href="#importexport">Import / Export</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			  </tr>
-			  <tr> 
-			    <td><a href="#consoleoutput">Console Output</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
-			    <td><a href="#testsuite">Test Suite</a></td>
+			    <td><a href="#inputhandling">Input Handling</a></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
@@ -146,9 +139,18 @@
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#externaltools">External Tools</a></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			  </tr>
+			  <tr> 
+			    <td><a href="#refactoring">Refactoring</a></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
@@ -158,9 +160,11 @@
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
-			    <td><a href="#refactoring">Refactoring</a></td>
+			    <td><a href="#testsuite">Test Suite</a></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
@@ -191,6 +195,21 @@
 					  	<li>Links presented for all reasonable Ant elements</li>
 						</ul>
 					</li>
+					<li> Mark Occurrences
+						<ul>
+						 	<li>respecting preference and editor toolbar setting to mark occurrences</li>
+						 	<li>sticky occurrences setting</li>
+						  	<li>ensure targets references are correctly highlighted</li>
+						  	<li>ensure properties references are correctly highlighted</li>
+						</ul>
+					</li>
+					<li> Performance
+						<ul>
+						  	<li>"Large" taskdefs (ant-contrib) in Ant Editor</li>
+						  	<li>"Large" imports (need to generate test case) in Ant Editor</li>
+						  	<li>"Large" properties (need to generate test case) in Ant Editor</li>
+						</ul>
+					</li>
 				</ul>
 				<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="antview"></a>
@@ -212,49 +231,139 @@
 					</ul>
 				</li>
 			<p><a href="#top">Back to top</a><br><hr></p>
-			<a name="antbreakpoints"></a>
-			<h4>Ant Breakpoints</h4>
-				<ul>
-				</ul>
-			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="antdebugging"></a>
-			<h4>Ant Debugging</h4>
+			<h4>Debugging</h4>
 				<ul>
+					<li>Buildfiles in the same JRE
+						<ul>
+					   		<li>breakpoints (check target breakpoints as well)</li>
+					      	<li>stepping (step into, step over for constructs like antcall and ant)</li>
+					      	<li>dependency stack</li>
+					      	<li>suspend / resume / terminate</li>
+						  	<li>run to line support</li>
+						  	<li>properties update correctly in the variables view</li>
+					    </ul>
+					</li>
+				  	<li>Buildfiles in a separate JRE
+				    	<ul>
+					      	<li>breakpoints (check target breakpoints as well)</li>
+					      	<li>stepping (step into, step over for constructs like antcall and ant)</li>
+						  	<li>dependency stack</li>
+					      	<li>suspend / resume / terminate</li>
+						  	<li>run to line support</li>
+						  	<li>properties update correctly in the variables view</li>
+					    </ul>
+				  	</li>
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
-			<a name="contentassist"></a>
-			<h4>Content Assist</h4>
+			<a name="importexport"></a>
+			<h4>Import / Export</h4>
 				<ul>
+					<li>Export a Java Project to a buildfile containing a javac task etc.
+				    	<ul>
+				      		<li>error cases</li>
+				      		<li>classpath including plugin dependencies</li>
+				    	</ul>
+				  	</li>
+				  	<li>Import a Java Project from an external buildfile containing a javac task
+					    <ul>
+					    	<li>error cases</li>
+					      	<li>correct links setup for multi-platform</li>
+					      	<li>correct links for various destdir and sourcedir</li>
+						  	<li>correct links for various destdir and sourcedir</li>
+					    </ul>
+					</li>
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
-			<a name="consoleoutput"></a> 
-			<h4>Console Output</h4>
+			<a name="inputhandling"></a> 
+			<h4>Input Handling</h4>
 				<ul>
-				</ul>
-			<p><a href="#top">Back to top</a><br><hr></p>
-			<a name="testsuite"></a>
-			<h4>Test Suite</h4>
-				<ul>
+					<li>Same JRE
+				    	<ul>
+				      		<li>with / without valid args</li>
+				      		<li>cancel</li>
+				      		<li>-noinput</li>
+				    	</ul>
+				  	</li>
+				  	<li>Separate JRE
+				    	<ul>
+				      		<li>with / without valid args</li>
+				      		<li>cancel</li>
+				      		<li>-noinput</li>
+				    	</ul>
+				  	</li>
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="launching"></a>
 			<h4>Launching</h4>
 				<ul>
+					<li>Correct UI representation of objects contributed to build (same/separate JRE) in the preferences and launch configuration tabs
+					    <ul>
+					      	<li>properties</li>
+					      	<li>classpath entries</li>
+					      	<li>tasks</li>
+						  	<li>types</li>
+					    </ul>
+					</li>
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="externaltools"></a>
 			<h4>External Tools</h4>
-				<h5>Tool Builders</h5>
-					<ul>
-					 	<li>migration from 2.0, 3.0 (with and without prompting)</li>
-					  	<li>Java projects and simple projects</li>
-					  	<li>add / remove (ensure cleanup on disk)</li>
-					  	<li>rename on creation and as an edit (ensure cleanup on disk)</li>
-					  	<li>executing an Ant build and program</li>
-					  	<li>same VM / separate VM</li>
-					  	<li>making use of environment variables</li>
-					</ul>
-				</li>
+				<ul>
+					<li> Tool Builders
+						<ul>
+						 	<li>migration from 2.0, 3.0 (with and without prompting)</li>
+						  	<li>Java projects and simple projects</li>
+						  	<li>add / remove (ensure cleanup on disk)</li>
+						  	<li>rename on creation and as an edit (ensure cleanup on disk)</li>
+						  	<li>executing an Ant build and program</li>
+						  	<li>same VM / separate VM</li>
+						  	<li>making use of environment variables</li>
+							<li>Ant builders set to execute different targets for different build kinds (Ant builder target tab)
+							    <ul>
+							      	<li>auto</li>
+							      	<li>manual</li>
+							      	<li>after a clean (full)</li>
+								  	<li>on a clean</li>
+							    </ul>
+							</li>
+							<li>Program builders triggered on clean (Build option tab)</li>
+							<li>Migration of existing builders to new format (3.0.1 builder to 3.1 builder only)</li>
+						</ul>
+					</li>
+				</ul>
+			<p><a href="#top">Back to top</a><br><hr></p>
+			<a name="refactoring"></a>
+			<h4>Refactoring</h4>
+				<ul>
+					<li> In the Ant Editor
+						<ul>
+							<li>Rename in File (Alt-Shift-R) - ensure linked mode is correct and edits are executed correctly</li>
+						</ul>
+					</li>
+				</ul>
+			<p><a href="#top">Back to top</a><br><hr></p>
+			<a name="preferences"></a>
+			<h4>Preferences</h4>
+				<ul>
+					<li>All preference pages must have help topics</li>
+					<li>All preference changes must be cancelable</li>
+					<li>Ensure correct adherance to the user preference settings for:
+	  					<ul>
+	  						<li>Ant runtime settings</li>
+	  						<li>Editor customization</li>
+	  						<li>Ignoring errors / problems</li>
+						</ul>
+					</li>
+				</ul>
+			<p><a href="#top">Back to top</a><br><hr></p>
+			<a name="testsuite"></a>
+			<h4>Test Suite</h4>
+				<p>All tests should run without failure, and should be runnable individually</p>
+				<ul>
+					<li> Launch the Ant core test suite from <code>org.eclipse.ant.tests.core</code></li>
+					<li> Launch the Ant ui test suites from <code>org.eclipse.ant.tests.ui</code></li>
+				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 		</div>
 	</div>
