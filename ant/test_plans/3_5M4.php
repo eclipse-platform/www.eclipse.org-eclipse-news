@@ -20,14 +20,14 @@
 	# Author: 		Ant Team
 	# Date:			November 28, 2008
 	#
-	# Description: Template for the test script
+	# Description: Test plan for the 3.5M4 milestone
 	#
 	#
 	#****************************************************************************
 	
 	
-	$pageTitle 		= "Platform Ant Project Test Matrix";
-	$pageKeywords	= "ant, script, build, xml, platform, debugging, debugger, breakpoints, launching, test, plan, release, testing, tester";
+	$pageTitle 		= "Platform Ant 3.5M4 Test Matrix";
+	$pageKeywords	= "ant, script, platform, debugging, debugger, breakpoints, launching, test, plan, release, testing, tester";
 	$pageAuthor		= "Ant Team";
 	
 	include("../_sideCommon.php");
