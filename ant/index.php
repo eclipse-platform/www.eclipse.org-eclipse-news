@@ -28,7 +28,7 @@ include($App->getProjectCommon());
 	#
 	#****************************************************************************
 	
-	$pageTitle 		= "Eclipse Platform Ant Project";
+	$pageTitle 		= "Platform Ant Project";
 	$pageKeywords	= "ant, script, build, xml, platform, debugging, debugger, breakpoints";
 	$pageAuthor		= "Ant Team";
 	

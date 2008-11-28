@@ -97,6 +97,7 @@
 			    <td><strong>Darin Wright</strong></td>
 			    <td><b>Michael Rennie</b></td>
 			    <td><b>Darin Swanson</b></td>
+			    <td><b>Kevin Barnes</b></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#anteditor">Ant Editor</a></td>
@@ -152,6 +153,18 @@
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
+			  <tr> 
+			    <td><a href="#preferences">Preferences</a></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			  </tr>
+			  <tr> 
+			    <td><a href="#refactoring">Refactoring</a></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			  </tr>
 			</table>
 			</div>
 		</div>
@@ -160,12 +173,44 @@
 			<a name="anteditor"></a>
 			<h4>Ant Editor</h4>
 				<ul>
+					<li> Folding
+						<ul>
+						 	<li>Make use of the editor context ruler menu</li>
+						 	<li>Key binding actions: Expand, Expand All, Collapse, Enable folding</li> 
+						 	<li>Folding is presented for all the partitions in the Ant buildfile. Partion hover is correct.</li>
+						</ul>
+					</li>
+					<li> Navigation
+						<ul>
+					    	<li>properties (from files as well)</li>
+					     	<li>targets</li>
+						    <li>referenced elements</li>
+							<li>macrodefs, taskdefs</li>
+							<li>Enable / disable</li>
+					 	<li>Key Modifier and modifier manipulation (preference page)</li>
+					  	<li>Links presented for all reasonable Ant elements</li>
+						</ul>
+					</li>
 				</ul>
 				<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="antview"></a>
 			<h4>Ant View</h4>
-				<ul>
-				</ul>
+				<li> General
+				    <ul>
+				      <li>Context menu actions</li>
+				      <li>DnD</li>
+				      <li>Add/removal</li>
+				      <li>Search</li>
+					  <li>Running targets (default and otherwise)</li>
+					  <li>Navigation to targets with selection for normal, external entities and imported targets</li>
+				    </ul>
+				</li>
+				<li> Auto Reconcile
+					<ul>
+					 	<li>ensure correct functionality on / off (use the editor toolbar action with the "refresh" icon)</li>
+						<li>reconcile triggered on save</li>
+					</ul>
+				</li>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="antbreakpoints"></a>
 			<h4>Ant Breakpoints</h4>
@@ -199,8 +244,17 @@
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="externaltools"></a>
 			<h4>External Tools</h4>
-				<ul>
-				</ul>
+				<h4> Tool Builders</h4>
+					<ul>
+					 	<li>migration from 2.0, 3.0 (with and without prompting)</li>
+					  	<li>Java projects and simple projects</li>
+					  	<li>add / remove (ensure cleanup on disk)</li>
+					  	<li>rename on creation and as an edit (ensure cleanup on disk)</li>
+					  	<li>executing an Ant build and program</li>
+					  	<li>same VM / separate VM</li>
+					  	<li>making use of environment variables</li>
+					</ul>
+				</li>
 			<p><a href="#top">Back to top</a><br><hr></p>
 	</div>
 	<div id="rightcolumn">

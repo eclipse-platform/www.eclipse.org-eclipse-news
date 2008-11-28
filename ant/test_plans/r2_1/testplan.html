@@ -1,0 +1,203 @@
+<html>
+<head>
+<title>2.1 Ant / External Tools Test Plan</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>2.1 Ant / External Tools Test Plan</h1>
+<p>Testing will cover the functional areas in the following list on these platforms/ Ant versions</p>
+<table width="75%" border="1">
+  <tr>
+    <td>&nbsp;</td>
+    <td>Ant 1.4.1</td>
+    <td>Ant 1.5.1</td>
+    <td>Ant 1.5.2</td>
+  </tr>
+  <tr> 
+    <td>Windows 2000</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td>Windows XP</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td>Mac OSX</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td>Linux</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<p>While testing, ensure that keyboard navigation (is available and) works, in 
+  addition to using the mouse. Ensure that keyboard accelerators are available 
+  for each menu item, and that conflicts are not present. Also try assigning alternate 
+  keybindings to applicable actions. File a bug when something does not work. When a test can be automated and is not part of our test suite, add a JUnit test to the test suite.
+  </p>
+<h2>External Tools</h2>
+<h3>Program Launch Configurations</h3>
+<ul>
+  <li>creation with reasonable defaults</li>
+  <li>workspace and file system locations</li>
+  <li>working directories both within workspace and in the file system</li>
+  <li>arguments with variables and without (testing error reporting during variable expansion)</li>
+  <li>run in background / foreground</li>
+  <li>refresh resources (including / excluding sub-folders) with all of the scope variables:
+  	<ul>
+  		<li>working_set</li>
+  		<li>container</li>
+		<li>project</li>
+		<li>resource</li>
+		<li>workspace</li>
+  	</ul>		
+  </li>
+  <li>shared / local</li>
+  <li>with / without perspective switching</li>
+  <li>in the favorites menu</li>
+  <li>apply and revert buttons enable / disable and work correctly</li>
+</ul>
+<h2>External Tools Builders</h2>
+<ul>
+  <li>migration from 2.0 (with and without prompting)</li>
+  <li>Java projects and simple projects</li>
+  <li>add / remove (ensure cleanup on disk)</li>
+  <li>rename on creation and as an edit (ensure cleanup on disk)</li>
+  <li>executing an Ant build and program</li>
+  <li>creation with reasonable defaults</li>
+  <li>workspace and file system locations</li>
+  <li>working directories both within workspace and in the file system</li>
+  <li>arguments with variables and without (testing error reporting during variable expansion)</li>
+  <li>running in background / foreground</li>
+  <li>toggling capturing Ant build output</li>
+  <li>refreshing resources (including / excluding sub-folders) with all of the scope variables:
+  	<ul>
+  		<li>working_set</li>
+  		<li>container</li>
+		<li>project</li>
+		<li>resource</li>
+		<li>workspace</li>
+  	</ul>		
+   </li>
+   <li>all three build types</li>
+   <li>ensure correct order with multiple builders</li>
+</ul>
+<h2>Ant</h2>
+<h3>Ant Launch Configurations</h3>
+<ul>
+  <li>creation with reasonable defaults</li>
+  <li>workspace and file system locations</li>
+  <li>base directories both within workspace and in the file system</li>
+  <li>arguments with variables and without (testing error reporting during variable expansion)</li>
+  <li>run in background / foreground</li>
+  <li>toggle capture output</li>
+  <li>refresh resources (including / excluding sub-folders) with all of the scope variables:
+  	<ul>
+  		<li>working_set</li>
+  		<li>container</li>
+		<li>project</li>
+		<li>resource</li>
+		<li>workspace</li>
+  	</ul>		
+  </li>
+  <li>vary number of targets selected (none, all)</li>
+  <li>rendering of targets in the targets tab</li>
+  <li>shared / local</li>
+  <li>with / without perspective switching</li>
+  <li>in the favorites menu</li>
+  <li>apply and revert buttons enable / disable and work correctly</li>
+</ul>
+
+<h3>Ant Builds</h3>
+<ul>
+	<li>profile for memory leakage</li>
+	<li>modify classpath globally and on a per configuration basis:
+		<ul>
+			<li>correct handling of error states (missing required JARs)</li>
+			<li>add folders instead of and with JARs</li>
+			<li>order of classpath is honored</li>
+			
+		</ul>
+	</li>
+	<li>with &quot;ANT_HOME&quot; set globally and on a per configuration basis</li>
+	<li>custom tasks
+		<ul>
+			<li>defined in the Ant preferences</li>
+			<li>defined using the extension points</li>
+			<li>defined in the build file</li>
+			<li>added from JARs and folders</li>
+		</ul>
+	</li>
+	<li>custom types
+		<ul>
+			<li>defined in the Ant preferences</li>
+			<li>defined using the extension points</li>
+			<li>defined in the build file</li>
+			<li>added from JARs and folders</li>
+		</ul>
+	</li>
+	<li>properties
+		<ul>
+			<li>defined in the Ant preferences</li>
+			<li>defined in the Ant preferences using property files</li>
+			<li>defined globally and on a per configuration basis with correct precedence</li>
+		</ul>
+	</li>
+	<li>console hyperlinking for tasks and for special tasks like javac (using various compilers: jikes, Sun and JDT)</li>
+	<li>console coloring: error, warning, info, verbose, debug</li>
+	<li>initiatied from &quot;Run Ant...&quot;</li>
+	<li>initiatied from &quot;Run As &gt; Ant Build &quot;</li>
+		<ul>test all for &quot;-find &quot; emulation (names set in Ant preferences)
+			<li>selection set to active editor</li>
+			<li>selection set to outliner</li>
+			<li>selection set to Package Explorer / Navigator</li>
+		</ul>
+	</li>
+	<li>attempt simultaneous background builds</li>
+</ul>	
+<h3>Ant Editor</h3>
+<ul>
+	<li>correct syntax coloring - multi-line, single line</li>
+	<li>modify syntax coloring using the Ant Editor preferences</li>
+	<li>modify the Ant Editor appearance using the Ant Editor preferences</li>
+	<li>modify the Ant Editor annotations using the Ant Editor preferences</li>	
+	<li>ensure that Ant Editor preferences defaults are restored correctly</li>
+	<li>content assist in the various contexts (check descriptions as well)</li>
+</ul>	
+<h3>Ant Editor Outline</h3>
+<ul>
+	<li>valid build files, build files with external entities, and build files with syntax errors</li>
+	<li>correct selection in editor</li>
+	<li>&quotOpen With&quot menu for external entities</li>
+	<li>Icons are correct for contents (in error and non-error states)</li>
+	<li>&quot; Show In...&quot; works as expected</li>
+</ul>	
+<h3>Ant View</h3>
+<ul>
+	<li>toolbar actions enable / disable correct based on selection and contents of view</li>
+	<li>context menu actions enable / disable correct based on selection and contents of view</li>
+	<li>add a single build file</li>
+	<li>add build files using search
+		<ul>
+			<li>build file with errors with the option to add files with error toggled on and off</li>
+			<li>using wildcards</li>
+			<li>using working sets</li>
+		</ul>
+	</li>
+	<li>&quot;Show In...&quot; works as expected</li>
+	<li>icons are correct for contents (in error and non-error states)</li>
+	<li>status line text is correct and helpful for selection</li>
+	<li>remove build file(s)</li>
+	<li>contents are restored correctly after exiting and restarting workspace</li>
+</ul>
+</body>
+</html>
