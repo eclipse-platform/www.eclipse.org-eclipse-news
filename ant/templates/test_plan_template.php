@@ -244,7 +244,7 @@
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="externaltools"></a>
 			<h4>External Tools</h4>
-				<h4> Tool Builders</h4>
+				<h5>Tool Builders</h5>
 					<ul>
 					 	<li>migration from 2.0, 3.0 (with and without prompting)</li>
 					  	<li>Java projects and simple projects</li>
@@ -256,6 +256,7 @@
 					</ul>
 				</li>
 			<p><a href="#top">Back to top</a><br><hr></p>
+		</div>
 	</div>
 	<div id="rightcolumn">
 		$commonside
