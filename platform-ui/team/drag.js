@@ -1,3 +1,13 @@
+/*******************************************************************************
+ * Copyright (c) 2008 IBM Corporation and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *     Boris Bokowski, IBM Corporation - initial API and implementation
+ *******************************************************************************/
 window.onload = function() {documentLoaded=true;init();};
 var zIndex = 10;
 if (navigator.userAgent.indexOf("MSIE") == -1) {

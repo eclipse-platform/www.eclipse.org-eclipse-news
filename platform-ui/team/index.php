@@ -29,9 +29,9 @@
 <script src="drag.js">
 </script>
 <div width="100%" height="600">
-<img class="piece" style="position: absolute; left: 300px; top: 200px;"
+<img class="piece" alt="Kim Horne" style="position: absolute; left: 300px; top: 200px;"
   src="images/kim-head-24-fs8.png" onmouseover="handleMouseOver(this, 'kim');" onmousedown="handleDragStart(event);" /> 
-<img class="piece" style="position: absolute; left: 430px; top: 200px;"
+<img class="piece" alt="Boris Bokowski" style="position: absolute; left: 430px; top: 200px;"
   src="images/boris-head-24-fs8.png" onmouseover="handleMouseOver(this, 'boris');" onmousedown="handleDragStart(event);" /> 
 <img class="piece" style="position: absolute; left: 561px; top: 200px;"
   src="images/nose-fs8.png" onmouseover="handleMouseOver(this, 'nose');" onmousedown="handleDragStart(event);" /> 
