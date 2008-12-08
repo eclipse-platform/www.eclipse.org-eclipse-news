@@ -28,7 +28,7 @@
 	$html = <<<EOHTML
 <script src="drag.js">
 </script>
-<div width="100%" height="100%">
+<div width="100%" height="600">
 <img class="piece" style="position: absolute; left: 300px; top: 200px;"
   src="images/boris-head-24-fs8.png" onmouseover="handleMouseOver(this, 'boris');" onmousedown="handleDragStart(event);" /> 
 <img class="piece" style="position: absolute; left: 431px; top: 200px;"

@@ -135,7 +135,7 @@ function init() {
       piece.style.top =  y + "px"; 
       x += piece.width; 
     } 
-    document.getElementById('loading').style.display='none'; 
+//    document.getElementById('loading').style.display='none'; 
     wiggleAll(); 
   } 
 } 
