@@ -171,7 +171,7 @@ function init() {
 ></script> 
 <div width="100%">
 <img class="piece" style="position: absolute; left: 200px; top: 200px;"
-  src="boris-head-24-fs8.png" onmouseover="handleMouseOver(this, 'boris');" onmousedown="handleDragStart(event);" /> 
+  src="images/boris-head-24-fs8.png" onmouseover="handleMouseOver(this, 'boris');" onmousedown="handleDragStart(event);" /> 
 </div>
 EOHTML;
 
