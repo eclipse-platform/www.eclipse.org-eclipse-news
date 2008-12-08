@@ -36,7 +36,9 @@
 <img class="piece" alt="Boris Bokowski" style="position: absolute; left: 560px; top: 200px;"
   src="images/boris-head-24-fs8.png" onmouseover="handleMouseOver(this, 'Boris Bokowski');" onmousedown="handleDragStart(event);" /> 
 <img class="piece" style="position: absolute; left: 691px; top: 200px;"
-  src="images/nose-fs8.png" onmouseover="handleMouseOver(this, 'nose');" onmousedown="handleDragStart(event);" /> 
+  src="images/nose-small-fs8.png" onmouseover="handleMouseOver(this, 'nose');" onmousedown="handleDragStart(event);" /> 
+<img class="piece" style="position: absolute; left: 718px; top: 200px;"
+  src="images/nose-small-fs8.png" onmouseover="handleMouseOver(this, 'nose');" onmousedown="handleDragStart(event);" /> 
 </div>
 EOHTML;
 
