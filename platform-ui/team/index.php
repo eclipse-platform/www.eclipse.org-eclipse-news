@@ -168,7 +168,7 @@ function init() {
     wiggleAll(); 
   } 
 } 
-></script> 
+</script> 
 <div width="100%">
 <img class="piece" style="position: absolute; left: 200px; top: 200px;"
   src="images/boris-head-24-fs8.png" onmouseover="handleMouseOver(this, 'boris');" onmousedown="handleDragStart(event);" /> 
