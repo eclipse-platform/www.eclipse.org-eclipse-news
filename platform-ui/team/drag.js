@@ -127,8 +127,8 @@ function handleMouseOver(o, s) {
 function init() { 
   if (documentLoaded) { 
     var pieces = getPieces(); 
-    var y = 20; 
-    var x = 30; 
+    var y = 200; 
+    var x = 300; 
     for(i in pieces) { 
       var piece = pieces[i]; 
       piece.style.left = x + "px"; 
