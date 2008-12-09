@@ -29,23 +29,27 @@
 <script src="drag.js">
 </script>
 <div width="100%" height="600">
-<img class="piece" alt="Daniel Megert" style="position: absolute; left: 300px; top: 200px;"
+<img class="piece" alt="Francis Upton" style="position: absolute; left: 170px; top: 200px;"
+  src="images/francis-head-24-fs8.png" onmouseover="handleMouseOver(this, 'Francis Upton');" onmousedown="handleDragStart(event);" /> 
+<img class="piece" alt="Remy Chi Jian Suen" style="position: absolute; left: 300px; top: 200px;"
+  src="images/remy-head-24-fs8.png" onmouseover="handleMouseOver(this, 'Remy Chi Jian Suen');" onmousedown="handleDragStart(event);" /> 
+<img class="piece" alt="Daniel Megert" style="position: absolute; left: 430px; top: 200px;"
   src="images/dani-head-24-fs8.png" onmouseover="handleMouseOver(this, 'Daniel Megert');" onmousedown="handleDragStart(event);" /> 
-<img class="piece" alt="Kevin McGuire" style="position: absolute; left: 430px; top: 200px;"
+<img class="piece" alt="Kevin McGuire" style="position: absolute; left: 560px; top: 200px;"
   src="images/kevin-head-24-fs8.png" onmouseover="handleMouseOver(this, 'Kevin McGuire');" onmousedown="handleDragStart(event);" /> 
-<img class="piece" alt="John Arthorne" style="position: absolute; left: 560px; top: 200px;"
+<img class="piece" alt="John Arthorne" style="position: absolute; left: 690px; top: 200px;"
   src="images/john-head-24-fs8.png" onmouseover="handleMouseOver(this, 'John Arthorne');" onmousedown="handleDragStart(event);" /> 
-<img class="piece" alt="Tom Schindl" style="position: absolute; left: 690px; top: 200px;"
+<img class="piece" alt="Tom Schindl" style="position: absolute; left: 820px; top: 200px;"
   src="images/tom-head-24-fs8.png" onmouseover="handleMouseOver(this, 'Tom Schindl');" onmousedown="handleDragStart(event);" /> 
-<img class="piece" alt="Susan McCourt" style="position: absolute; left: 820px; top: 200px;"
+<img class="piece" alt="Susan McCourt" style="position: absolute; left: 950px; top: 200px;"
   src="images/susan-head-24-fs8.png" onmouseover="handleMouseOver(this, 'Susan McCourt');" onmousedown="handleDragStart(event);" /> 
-<img class="piece" alt="Kim Horne" style="position: absolute; left: 950px; top: 200px;"
+<img class="piece" alt="Kim Horne" style="position: absolute; left: 10800px; top: 200px;"
   src="images/kim-head-24-fs8.png" onmouseover="handleMouseOver(this, 'Kim Horne');" onmousedown="handleDragStart(event);" /> 
-<img class="piece" alt="Boris Bokowski" style="position: absolute; left: 1080px; top: 200px;"
+<img class="piece" alt="Boris Bokowski" style="position: absolute; left: 1410px; top: 200px;"
   src="images/boris-head-24-fs8.png" onmouseover="handleMouseOver(this, 'Boris Bokowski');" onmousedown="handleDragStart(event);" /> 
-<img class="piece" style="position: absolute; left: 1410px; top: 200px;"
+<img class="piece" style="position: absolute; left: 1540px; top: 200px;"
   src="images/nose-small-fs8.png" onmouseover="handleMouseOver(this, 'nose');" onmousedown="handleDragStart(event);" /> 
-<img class="piece" style="position: absolute; left: 1432px; top: 200px;"
+<img class="piece" style="position: absolute; left: 1562px; top: 200px;"
   src="images/nose-small-fs8.png" onmouseover="handleMouseOver(this, 'nose');" onmousedown="handleDragStart(event);" /> 
 </div>
 EOHTML;
