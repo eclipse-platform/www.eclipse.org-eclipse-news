@@ -180,7 +180,7 @@
 					<li> Folding
 						<ul>
 						 	<li>Make use of the editor context ruler menu</li>
-						 	<li>Key binding actions: Expand, Expand All, Collapse, Enable folding</li> 
+						 	<li>Key binding actions: Expand All, Enable folding</li> 
 						 	<li>Folding is presented for all the partitions in the Ant buildfile. Partion hover is correct.</li>
 						</ul>
 					</li>
