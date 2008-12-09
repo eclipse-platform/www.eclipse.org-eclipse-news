@@ -33,7 +33,9 @@
 	}
 
 	# Defined project nav bar links
-	$Nav->addNavSeparator("Project Home", 	"/eclipse/ant/index.php",			"_self", 1);
+	$Nav->addNavSeparator( "Project Name", "/ant" );
+	$Nav->addCustomNav( "About This Project", "/projects/project_summary.php?projectid=platform.ant", "", 1);
+	$Nav->addNavSeparator("Project Home", 	"/eclipse/ant/",			"_self", 1);
 	$Nav->addCustomNav("Examples", 	"/eclipse/ant/examples/examples.php",	"_self", 2);
 
 ?>
