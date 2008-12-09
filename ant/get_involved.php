@@ -58,6 +58,7 @@ include($App->getProjectCommon());
 		<div class="homeitem3col">
 			<h3>Mailing Lists</h3>
 			<ul>
+				<li><a href="http://dev.eclipse.org/mailman/listinfo/platform-ant-dev">platform-ant-dev@eclipse.org</a></li>
 			</ul>		
 		</div>
 		<a name="writing_code"></a>
