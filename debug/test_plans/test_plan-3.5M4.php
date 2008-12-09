@@ -66,7 +66,6 @@
 				    <td> <div align="center">&nbsp;</div></td>
 				    <td> <div align="center">&nbsp;</div></td>
 				    <td> <div align="center">Darin Wright</div></td>
-					<td> <div align="center">&nbsp;</div></td>
 				  </tr>
 				  <tr> 
 				    <td><b>Win XP</b></td>
@@ -87,8 +86,8 @@
 				  </tr>
 				  <tr> 
 				    <td><b>Mac</b></td>
-				    <td> <div align="center">&nbsp;</div></td>
 				    <td> <div align="center">Michael Rennie</div></td>
+				    <td> <div align="center">&nbsp;</div></td>
 				    <td> <div align="center">&nbsp;</div></td>
 				    <td> <div align="center">&nbsp;</div></td>
 				    <td> <div align="center">&nbsp;</div></td>
