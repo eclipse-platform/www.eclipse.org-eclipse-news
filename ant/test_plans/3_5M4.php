@@ -65,7 +65,7 @@
 				  </tr>
 				  <tr> 
 				    <td width="18%"><b>Win XP</b></td>
-				    <td width="18%">&nbsp;</td>
+				    <td width="18%">Darin Swanson</td>
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
@@ -81,7 +81,7 @@
 				    <td width="18%"><b>Mac</b></td>
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
-				    <td width="18%">&nbsp;</td>
+				    <td width="18%">Michael Rennie</td>
 				    <td width="18%">&nbsp;</td>
 				  </tr>
 				</table>
@@ -102,7 +102,7 @@
 			  <tr> 
 			    <td><a href="#anteditor">Ant Editor</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
@@ -110,13 +110,13 @@
 			    <td><a href="#antview">Ant View</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#antdebugging">Debugging</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
@@ -124,13 +124,13 @@
 			    <td><a href="#importexport">Import / Export</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#inputhandling">Input Handling</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
@@ -138,13 +138,13 @@
 			    <td><a href="#launching">Launching</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			   <td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#externaltools">External Tools</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
@@ -152,13 +152,13 @@
 			    <td><a href="#refactoring">Refactoring</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#preferences">Preferences</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
@@ -166,7 +166,7 @@
 			    <td><a href="#testsuite">Test Suite</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			</table>
