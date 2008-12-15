@@ -127,7 +127,7 @@
 			<table width="100%" border="0" summary="About Pawel Piech">
 				<tbody>
 				<tr> 
-					<td width="30%" valign="top">No Picture</td>
+					<td width="30%" valign="top"><img src="images/people/Pawel_Piech.png"/></td>
 					<td width="70%">Pawel Piech is a member of the debugger team at Wind River Systems, 
 					project lead for the Device Debugging project and the newest Debug 
 					platform committer.  For the last five years Pawel has been working on 
