@@ -65,9 +65,9 @@
 				<tbody>
 				<tr> 
 					<td width="30%" valign="top">No Picture</td>
-					<td width="70%">Michael Rennie is an Debug platform committer working with the IBM Rational team. 
-					Before that he was a graduate student at the University of Manitoba, researching SOA and 
-					architecture description languages.</td>
+					<td width="70%">Michael Rennie is a Platform/JDT Debug, PDE, Ant and Doc committer working with the IBM Rational team in
+					Winnipeg, Canada. Before that he was a graduate student at the University of Manitoba, researching SOA and 
+					architecture description languages. Graduated with an MSc. Computer Science in 2004.</td>
 				</tr>
 				<tr> 
 					<td width="30%" valign="top"><b>Status</b></td>
