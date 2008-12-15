@@ -41,7 +41,7 @@
 			<table width="100%" border="0" summary="About Darin Wright">
 				<tbody>
 				<tr> 
-					<td width="30%" valign="top">No Picture</td>
+					<td width="30%" valign="top"><img src="images/people/darinw.png" /></td>
 					<td width="70%">Darin is currently a senior software developer with the IBM Rational Team, 
 					an Eclipse committer, and lead for the Eclipse Debug Platform and Java Debugger. 
 					For the better part of the last ten years, Darin has been working on IDE's such as Eclipse, 
