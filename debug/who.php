@@ -85,11 +85,11 @@
 			<table width="100%" border="0" summary="About Curtis Windatt">
 				<tbody>
 				<tr> 
-					<td width="30%" valign="top">No Picture</td>
+					<td width="30%" valign="top"><img src="images/people/darinw.png" /></td>
 					<td width="70%">Curtis Windatt is a Platform/JDT Debug committer working for IBM Rational in
-					Winnipeg, Canada.  In addition to Debug, he is an active contributor to PDE and is involved
-					in the the Equinox p2 (provisioning) project. Before joining IBM he was a student at the 
-					University of Manitoba.</td>
+					Winnipeg, Canada.  He is also a committer for PDE UI and contributes to other components. 
+					Curtis shares his birthday with Eclipse and prior to joining IBM was a student at the University 
+					of Manitoba.</td>
 				</tr>
 				<tr> 
 					<td width="30%" valign="top"><b>Status</b></td>
