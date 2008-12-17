@@ -35,7 +35,7 @@ ob_start();
 
 
 <div class="homeitem3col">
-<h3>Eclipse Ganymede SR1 draft endgame plan</h3>
+<h3>Eclipse Ganymede SR2 draft endgame plan</h3>
 <table cellspacing="5" cellpadding="2" width="100%" border="0"> 
 <tbody> <tr> <td valign="top" align="left" colspan="2"><b>Status</b></td></tr>
 <tr> <td valign="top" align="right"></td><td> 

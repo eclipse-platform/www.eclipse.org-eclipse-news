@@ -37,6 +37,8 @@ ob_start();
 			<h3>Releases currently under development</h3>
 	      <li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse"> Eclipse Project Galileo Plan</a><br>
 	        This document lays out the feature and API set for the Galileo (3.5) release of the Eclipse Project. </li>
+	        <li><a href="freeze_plan_3_4_2.php"> Eclipse Project Ganymede SR2 Endgame Plan</a><br>
+	    		Information about how we plan to wrap up Ganymede Service Release 2 (version 3.4.2).</li>     
     <ul>
     </ul>
       	</div>
@@ -104,7 +106,7 @@ ob_start();
 			<h3>Historical information about past releases</h3>			
 			<ul>
 	        <li><a href="freeze_plan_3_4_1.php"> Eclipse Project Ganymede SR1 Endgame Plan</a><br>
-	    		Information about how we plan to wrap up Ganymede Service Release 1 (version 3.4.1).</li>     
+	    		Information about how we wrapped up Ganymede Service Release 1 (version 3.4.1).</li>     
 	      <li><a href="eclipse_project_plan_3_4.html"> Eclipse Project 3.4 Plan</a><br>
 	        This document lays out the feature and API set for the 3.4 release of Eclipse Project. </li>
 	        <li><a href="freeze_plan_3.4.php"> Eclipse Project 3.4 Endgame Plan</a><br>
