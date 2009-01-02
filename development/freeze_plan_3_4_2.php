@@ -123,6 +123,10 @@ ob_start();
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
           </TR>
           <TR> 
+            <TD HEIGHT="10"></TD>
+            <TD ALIGN="center" HEIGHT="5"><IMG SRC="images/gray.gif" WIDTH="2" HEIGHT="10"></TD>
+          </TR>
+          <TR> 
             <TD HEIGHT="18"></TD>
             <TD HEIGHT="18"><IMG SRC="images/tbar_r.gif" WIDTH="24" HEIGHT="18"></TD>
             <TD ALIGN="right" HEIGHT="18">9</TD>
