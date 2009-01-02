@@ -53,7 +53,7 @@ ob_start();
             <TD HEIGHT="18"><IMG SRC="images/tbar_r.gif" WIDTH="24" HEIGHT="18"></TD>
             <TD HEIGHT="18" ALIGN="right">&nbsp;21</TD>
             <TD HEIGHT="18" ALIGN="right">&nbsp;Wed 08:00 EDT</TD>
-            <TD HEIGHT="18">&nbsp;&nbsp;<B>Release Candidate 1 build</B></TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;<B>Release Candidate 0 build</B></TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
@@ -67,7 +67,7 @@ ob_start();
             <TD HEIGHT="18"><IMG SRC="images/tbar_r.gif" WIDTH="24" HEIGHT="18"></TD>
             <TD ALIGN="right" HEIGHT="18">22</TD>
             <TD ALIGN="right" HEIGHT="18">Thur 08:00 EDT</TD>
-            <TD HEIGHT="18">&nbsp;&nbsp;<B>Start 1-day test pass against RC1</B></TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;<B>Start 1-day test pass against RC0</B></TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
@@ -85,7 +85,7 @@ ob_start();
             <TD HEIGHT="18"><IMG SRC="images/tbar_r.gif" WIDTH="24" HEIGHT="18"></TD>
             <TD ALIGN="right" HEIGHT="18">28</TD>
             <TD ALIGN="right" HEIGHT="18">Wed 08:00 EDT</TD>
-            <TD HEIGHT="18">&nbsp;&nbsp;<B>Release Candidate 2 build</B></TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;<B>Release Candidate 1 build</B></TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
@@ -104,8 +104,38 @@ ob_start();
           </TR>
           <TR> 
             <TD HEIGHT="18"></TD>
+            <TD HEIGHT="18"><IMG SRC="images/tbar_r.gif" WIDTH="24" HEIGHT="18"></TD>
+            <TD ALIGN="right" HEIGHT="18">2</TD>
+            <TD ALIGN="right" HEIGHT="18">Mon 08:00 EDT</TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;<B>Contribute RC1 build to release train RC1 build</B></TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;</TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;</TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;</TD>
+          </TR>
+          <TR> 
+            <TD HEIGHT="18"></TD>
+            <TD HEIGHT="18"><IMG SRC="images/tbar_r.gif" WIDTH="24" HEIGHT="18"></TD>
+            <TD ALIGN="right" HEIGHT="18">4</TD>
+            <TD ALIGN="right" HEIGHT="18">Wed 08:00 EDT</TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;<B>Release Candidate 2 build</B></TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;</TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;</TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;</TD>
+          </TR>
+          <TR> 
+            <TD HEIGHT="18"></TD>
+            <TD HEIGHT="18"><IMG SRC="images/tbar_r.gif" WIDTH="24" HEIGHT="18"></TD>
+            <TD ALIGN="right" HEIGHT="18">9</TD>
+            <TD ALIGN="right" HEIGHT="18">Mon 08:00 EDT</TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;<B>Contribute RC2 build to release train RC2 build</B></TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;</TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;</TD>
+            <TD HEIGHT="18">&nbsp;&nbsp;</TD>
+          </TR>
+          <TR> 
+            <TD HEIGHT="18"></TD>
             <TD ALIGN="center" HEIGHT="18"><IMG SRC="images/gray.gif" WIDTH="2" HEIGHT="18"></TD>
-            <TD ALIGN="right" HEIGHT="18"></TD>
+            <TD ALIGN="right" HEIGHT="18">25</TD>
             <TD ALIGN="right" HEIGHT="18"></TD>
             <TD HEIGHT="18">&nbsp;&nbsp;<B>Ganymede SR2 release available</B></TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
@@ -121,7 +151,7 @@ ob_start();
 		<p> 
  		The Eclipse Ganymede Service Release 2 ("Ganymede SR2") endgame involves building 
         a series of release candidates leading to the Eclipse project's contribution to the
-        Ganymede SR2 release. The Eclipse project version number for this release is 3.4.2.
+        <a href="http://wiki.eclipse.org/index.php/Ganymede_Simultaneous_Release#Coordinated_Service_Releases">Ganymede SR2</a> release. The Eclipse project version number for this release is 3.4.2.
         By its nature, this maintenance release contains fixes to a small number 
         of serious problems found in the Ganymede SR1 release. We make and verify each 
         fix carefully, so that we do not need to tie up the entire development 
