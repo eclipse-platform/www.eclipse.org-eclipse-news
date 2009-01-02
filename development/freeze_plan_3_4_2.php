@@ -148,7 +148,7 @@ ob_start();
             <TD HEIGHT="18"></TD>
             <TD ALIGN="center" HEIGHT="18"><IMG SRC="images/gray.gif" WIDTH="2" HEIGHT="18"></TD>
             <TD ALIGN="right" HEIGHT="18">25</TD>
-            <TD ALIGN="right" HEIGHT="18"></TD>
+            <TD ALIGN="right" HEIGHT="18">Wed 08:00 EDT</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;<B>Ganymede SR2 release available</B></TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
