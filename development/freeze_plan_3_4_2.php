@@ -39,7 +39,7 @@ ob_start();
 <table cellspacing="5" cellpadding="2" width="100%" border="0"> 
 <tbody> <tr> <td valign="top" align="left" colspan="2"><b>Status</b></td></tr>
 <tr> <td valign="top" align="right"></td><td> 
-<p><font color="#ff0000"><b>Wednesday December 17, 2008 18:00 EDT Status:</b></font> 
+<p><font color="#ff0000"><b>Friday January 2, 2009 11:00 EDT Status:</b></font> 
           Builds toward Eclipse Ganymede SR2 occur every Wednesday at 8 am EST. 
       </td></tr> 
 <tr> <td valign="top" align="left" colspan="2"><b>Detailed Timeline</b></td></tr> <tr> <td valign="top" align="left" colspan="2"> 
@@ -133,6 +133,14 @@ ob_start();
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
           </TR>
           <TR> 
+            <TD HEIGHT="10"></TD>
+            <TD ALIGN="center" HEIGHT="5"><IMG SRC="images/gray.gif" WIDTH="2" HEIGHT="10"></TD>
+          </TR>
+          <TR> 
+            <TD HEIGHT="10"></TD>
+            <TD ALIGN="center" HEIGHT="5"><IMG SRC="images/gray.gif" WIDTH="2" HEIGHT="10"></TD>
+          </TR>
+          <TR> 
             <TD HEIGHT="18"></TD>
             <TD ALIGN="center" HEIGHT="18"><IMG SRC="images/gray.gif" WIDTH="2" HEIGHT="18"></TD>
             <TD ALIGN="right" HEIGHT="18">25</TD>
@@ -171,29 +179,35 @@ ob_start();
 		to this list, and should direct any general questions and comments about the process 
 		there as well.</p>			
        
-	   <strong>RC1</strong>
+	   <strong>RC0</strong>
 	   <p>
         Release candidate containing fixes for the majority of known outstanding 
-        defects that we intend to fix for Ganymede SR2. At then end of RC1 build, 
+        defects that we intend to fix for Ganymede SR2. At then end of RC0 build, 
         there should not be any open defects tagged 3.4.2. All fixes submitted 
         to 3.4.2 stream builds must have a PMC vote on the bug report.
         </p>               
         
-        <strong>Test pass using RC1</strong>
-        <p>Concerted 1-day testing effort using RC1 involving entire community 
+        <strong>Test pass using RC0</strong>
+        <p>Concerted 1-day testing effort using RC0 involving entire community 
            including all component teams. Since this is the only test pass 
            scheduled for this maintenance release, the goal is to verify all 
            the fixes and check for any regressions.
          </p>
          
+         <strong>RC1</strong>
+         <p>Release candidate 1, if required, to fix problems detected during the test pass.
+          All fixes submitted to 3.4.2 stream builds must have a PMC vote on the bug report.</p>
+
          <strong>RC2</strong>
-         <p>Release candidate 2, if required, to fix problems detected during the test pass.</p>
+         <p>Release candidate 2, if required, to fix problems detected during integration
+         with the Ganymede release train.  All fixes submitted to 3.4.2 stream builds must 
+         have a PMC vote on the bug report.</p>
 
 		<strong>Ganymede SR2 Release</strong>
         <p>The Ganymede SR2 release should be complete and available for download by 
               the end of February as part of the <a href="http://wiki.eclipse.org/index.php/Ganymede_Simultaneous_Release#Coordinated_Service_Releases">Ganymede
               coordinated service release</a> . If product teams intending 
-              to ship on Ganymede SR2 uncover further serious defects during the endgame, 
+              to ship on Ganymede SR2 uncover further serious defects during the end-game, 
               we may schedule additional release candidate builds to incorporate fixes.
               </p>             
               </div>
