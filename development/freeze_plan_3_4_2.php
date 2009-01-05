@@ -188,7 +188,7 @@ ob_start();
         Release candidate containing fixes for the majority of known outstanding 
         defects that we intend to fix for Ganymede SR2. At then end of RC0 build, 
         there should not be any open defects tagged 3.4.2. All fixes submitted 
-        to 3.4.2 stream builds must have a PMC vote on the bug report.
+        to 3.4.2 stream builds after December 18, 2008 must have a PMC vote on the bug report.
         </p>               
         
         <strong>Test pass using RC0</strong>
@@ -200,12 +200,12 @@ ob_start();
          
          <strong>RC1</strong>
          <p>Release candidate 1, if required, to fix problems detected during the test pass.
-          All fixes submitted to 3.4.2 stream builds must have a PMC vote on the bug report.</p>
+          All fixes submitted to 3.4.2 stream builds since RC0 must have a PMC vote on the bug report.</p>
 
          <strong>RC2</strong>
          <p>Release candidate 2, if required, to fix problems detected during integration
-         with the Ganymede release train.  All fixes submitted to 3.4.2 stream builds must 
-         have a PMC vote on the bug report.</p>
+         with the Ganymede release train.  All fixes submitted to 3.4.2 stream builds
+         since RC1 must have a PMC vote on the bug report.</p>
 
 		<strong>Ganymede SR2 Release</strong>
         <p>The Ganymede SR2 release should be complete and available for download by 
