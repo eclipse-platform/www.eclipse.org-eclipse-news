@@ -19,10 +19,10 @@ Project Set File Import Instructions:
 
 <psf version="2.0">
 <provider id="org.eclipse.team.cvs.core.cvsnature">
-<project reference="1.0,pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse,org.eclipse.ant.core,org.eclipse.ant.core"/>
-<project reference="1.0,pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse,org.eclipse.ant.tests.core,org.eclipse.ant.tests.core"/>
-<project reference="1.0,pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse,org.eclipse.ant.tests.ui,org.eclipse.ant.tests.ui"/>
-<project reference="1.0,pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse,org.eclipse.ant.ui,org.eclipse.ant.ui"/>
-<project reference="1.0,pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse,org.eclipse.ui.externaltools,org.eclipse.ui.externaltools"/>
+<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse,org.eclipse.ant.core,org.eclipse.ant.core"/>
+<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse,org.eclipse.ant.tests.core,org.eclipse.ant.tests.core"/>
+<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse,org.eclipse.ant.tests.ui,org.eclipse.ant.tests.ui"/>
+<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse,org.eclipse.ant.ui,org.eclipse.ant.ui"/>
+<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse,org.eclipse.ui.externaltools,org.eclipse.ui.externaltools"/>
 </provider>
 </psf>
