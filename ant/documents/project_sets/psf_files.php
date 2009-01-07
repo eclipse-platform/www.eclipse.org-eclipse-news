@@ -39,7 +39,7 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
-			<h3>Debug PSF Files</h3>
+			<h3>Ant PSF Files</h3>
 			<a name="ant_psf"></a>
 			<ul>
 				<li><a href="/eclipse/ant/documents/project_sets/ant-pserver.psf">Current release projects for non-committers (pserver)</a></li>
