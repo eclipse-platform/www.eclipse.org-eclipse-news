@@ -42,12 +42,10 @@
 			<h3>Debug PSF Files</h3>
 			<a name="ant_psf"></a>
 			<ul>
-				<li><a href="/eclipse/ant/documents/project_sets/debug-pserver.psf">Current release projects for non-committers (pserver)</a></li>
+				<li><a href="/eclipse/ant/documents/project_sets/ant-pserver.psf">Current release projects for non-committers (pserver)</a></li>
 				<li><a href="/eclipse/ant/documents/project_sets/ant-extssh.psf">Current release projects for committers (extssh)</a></li>
-				<li><a href="">3.4 maintenance release projects for non-committers (pserver)</a></li>
-				<li><a href="">3.4 maintenance release projects for committers (extssh)</a></li>
-				<li><a href="">3.3 maintenance release projects for non-committers (pserver)</a></li>
-				<li><a href="">3.3 maintenance release projects for committers (extssh)</a></li>
+				<li><a href="/eclipse/ant/documents/project_sets/ant-3_4_1_pserver.psf">3.4 maintenance release projects for non-committers (pserver)</a></li>
+				<li><a href="/eclipse/ant/documents/project_sets/ant-3_4_1_extssh.psf">3.4 maintenance release projects for committers (extssh)</a></li>
 			</ul>
 		</div>
 		<div class="homeitem3col">
