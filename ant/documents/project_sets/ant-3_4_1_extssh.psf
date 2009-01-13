@@ -24,5 +24,7 @@ Project Set File Import Instructions:
 <project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/eclipse,org.eclipse.ant.tests.ui,org.eclipse.ant.tests.ui,R3_4_1"/>
 <project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/eclipse,org.eclipse.ant.ui,org.eclipse.ant.ui,R3_4_1"/>
 <project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/eclipse,org.eclipse.ui.externaltools,org.eclipse.ui.externaltools,R3_4_1"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/eclipse,org.eclipse.test.performance,org.eclipse.test.performance,R3_4_1"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/eclipse,org.eclipse.test.performance.win32,org.eclipse.test.performance.win32,R3_4_1"/>
 </provider>
 </psf>

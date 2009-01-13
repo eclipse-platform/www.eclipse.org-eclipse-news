@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!--
 
 READ ME FIRST
@@ -19,10 +18,12 @@ Project Set File Import Instructions:
 
 <psf version="2.0">
 <provider id="org.eclipse.team.cvs.core.cvsnature">
-<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse,org.eclipse.ant.core,org.eclipse.ant.core,R3_4_1"/>
-<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse,org.eclipse.ant.tests.core,org.eclipse.ant.tests.core,R3_4_1"/>
-<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse,org.eclipse.ant.tests.ui,org.eclipse.ant.tests.ui,R3_4_1"/>
-<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse,org.eclipse.ant.ui,org.eclipse.ant.ui,R3_4_1"/>
-<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse,org.eclipse.ui.externaltools,org.eclipse.ui.externaltools,R3_4_1"/>
+<project reference="1.0,:pserver:dev.eclipse.org:/cvsroot/eclipse,org.eclipse.ant.core,org.eclipse.ant.core,R3_4_1"/>
+<project reference="1.0,:pserver:dev.eclipse.org:/cvsroot/eclipse,org.eclipse.ant.tests.core,org.eclipse.ant.tests.core,R3_4_1"/>
+<project reference="1.0,:pserver:dev.eclipse.org:/cvsroot/eclipse,org.eclipse.ant.tests.ui,org.eclipse.ant.tests.ui,R3_4_1"/>
+<project reference="1.0,:pserver:dev.eclipse.org:/cvsroot/eclipse,org.eclipse.ant.ui,org.eclipse.ant.ui,R3_4_1"/>
+<project reference="1.0,:pserver:dev.eclipse.org:/cvsroot/eclipse,org.eclipse.test.performance,org.eclipse.test.performance,R3_4_1"/>
+<project reference="1.0,:pserver:dev.eclipse.org:/cvsroot/eclipse,org.eclipse.test.performance.win32,org.eclipse.test.performance.win32,R3_4_1"/>
+<project reference="1.0,:pserver:dev.eclipse.org:/cvsroot/eclipse,org.eclipse.ui.externaltools,org.eclipse.ui.externaltools,R3_4_1"/>
 </provider>
 </psf>
