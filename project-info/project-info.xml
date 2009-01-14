@@ -15,6 +15,7 @@
   <ip-log />
   <mailing-lists>
     <list name="eclipse-dev"/>
+    <list name="e4-dev"/>
     <list name="platform-dev"/>
     <list name="platform-ant-dev"/>
     <list name="platform-compare-dev"/>
@@ -47,13 +48,14 @@
   </mailing-lists>
   <newsgroups>
   	<newsgroup name="eclipse.platform"/>
+  	<newsgroup name="eclipse.e4"/>
   	<newsgroup name="eclipse.technology.equinox"/>
   	<newsgroup name="eclipse.tools.jdt"/>
     <newsgroup name="eclipse.platform.rcp"/>
     <newsgroup name="eclipse.platform.swt"/>
   </newsgroups>
   <wiki url="http://wiki.eclipse.org/Eclipse"/>
-  <project-plan url="/eclipse/development/eclipse_project_plan_3_4.html"/>
+  <project-plan url="/projects/project-plan.php?projectid=eclipse"/>
   <releases>
     <release name="3.1"
              date="6/2005"
