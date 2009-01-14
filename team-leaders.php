@@ -65,8 +65,8 @@ ob_start();
        Founder of <a href="http://code9.com">Code 9</a>.
        He is one of the architects of the Eclipse Platform and a co-author of
        <a href="http://eclipsercp.org">The Eclipse Rich Client Platform</a> (Addison-Wesley).
-       He is a member of the Eclipse Project PMC, the Tools Project PMC and the 
-       Eclipse Foundation Board of Directors.  Jeff is currently interested all aspects
+       He is a member of the Eclipse Project PMC, the Tools Project PMC, the RT Project PMC,
+       and the Eclipse Foundation Board of Directors.  Jeff is currently interested all aspects
        of Eclipse componentry from developing and building bundles to deploying, installing
        and ultimately running them.  Previous lives include being a Senior Technical Staff
        Member at IBM and work in distributed/parallel OO computing (Server Smalltalk,
@@ -98,9 +98,22 @@ ob_start();
       the original  members of OTI. His interests include computer
       language design and implementation, semantic content publishing, web development,
       and playing the cello. Mike is a member of the Eclipse Project
-      PMC and leads the <a href="http://eclipse.org/platform/">Platform</a> 
+      PMC and leads the <a href="http://eclipse.org/platform/">Platform</a>,
+      <a href="http://www.eclipse.org/projects/project_summary.php?projectid=eclipse.e4">e4</a>, 
       and <a href="http://www.eclipse.org/eclipse/incubator/">Eclipse Project Incubator</a>
 	  subprojects.
+		        </li>
+		        <li> 
+		          <b><a name="martin"></a>Martin Oberhuber, Wind River</b><br>
+      Martin is on the PMC representing the Community aspect of Eclipse and
+      the e4 project. He is a Platform Core Resources and e4 committer,
+      co-leading the e4 Resources work. Martin also serves on the 
+      <a href="http://wiki.eclipse.org/DSDP/PMC">DSDP PMC</a> and as 
+      <a href="/dsdp/tm/">Target Management</a> Project lead, and revitalized
+      the Eclipse <a href="http://wiki.eclipse.org/Architecture_Council">
+      Architecture Council</a> as its chair. His interests include programming
+      languages, patterns and paradigms, optimizing development processes,
+      skiing, hiking, and playing all sorts of musical instruments.
 		        </li>
 		      </ul>
 		</div>
@@ -112,11 +125,11 @@ ob_start();
 		<div class="sideitem">
 			<h6>Subproject Leads</h6>
 			<ul>
-				<li><a href="http://www.eclipse.org/equinox/" target="_top">Equinox</a><br> -- <a href="#jeff">Jeff McAffer</a></li>
 				<li><a href="http://www.eclipse.org/platform/">Platform</a><br> -- <a href="#McQ">Mike Wilson</a></li>
 				<li><a href="http://www.eclipse.org/jdt/" target="_top">JDT</a><br> -- <a href="#philippe">Philippe Mulet</a></li>
-				<li><a href="http://www.eclipse.org/pde/">PDE</a><br> -- <a href="#jeff">Jeff McAffer</a></li>
-				<li><a href="http://www.eclipse.org/eclipse/incubator/">PDE</a><br> -- <a href="#McQ">Mike Wilson</a></li>
+				<li><a href="http://www.eclipse.org/pde/">PDE</a><br> -- <a href="http://code9.com/team#chris">Chris Aniszczyk</a> and Darin Wright</a></li>
+				<li><a href="http://www.eclipse.org/e4/" target="_top">e4</a><br> -- <a href="#McQ">Mike Wilson</a></li>
+				<li><a href="http://www.eclipse.org/eclipse/incubator/">Eclipse Incubator</a><br> -- <a href="#McQ">Mike Wilson</a></li>
       		</ul>				
 		</div>
 	</div>
