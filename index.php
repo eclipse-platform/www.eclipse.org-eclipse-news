@@ -94,7 +94,7 @@ ob_start();
 				      integrating plug-ins easy and fun.
 		        </li>
 		        <li> 
-		          <a href="http://www.eclipse.org/equinox/" target="_top">e4 - the next generation of the Eclipse platform</a><br>
+		          <a href="http://www.eclipse.org/e4/" target="_top">e4 - the next generation of the Eclipse platform</a><br>
 				      The e4 project is an incubator for developing the next generation
 				      of the Eclipse platform. The mission of the e4 project is to build a next 
 				      generation platform for pervasive, component-based applications and tools.<br>
