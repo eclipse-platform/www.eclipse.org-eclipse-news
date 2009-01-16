@@ -74,18 +74,6 @@ ob_start();
 				      resource management.
 		        </li>
 		        <li> 
-		          <a href="http://www.eclipse.org/equinox/" target="_top">Equinox - an OSGi framework</a><br>
-				      The Equinox project provides the OSGi framework implementation and component 
-				      model on which the Eclipse RCP and IDE platforms run. The project seeks 
-				      to implement the latest OSGi framework specification as well as all optional 
-				      services contained in the OSGi specification. Equinox team members also 
-				      participate actively in the OSGi specification process. In addition to the 
-				      standard services and mechanisms, Equinox includes some basic infrastructure 
-				      such as the notion of plug-in (aka bundle), the Eclipse bootstrap and launching 
-				      code and the Eclipse extension registry. The Equinox OSGi implementation 
-				      is suitable for use in embedded, desktop and server scenarios.<br>
-		        </li>
-		        <li> 
 		          <a href="http://www.eclipse.org/jdt/" target="_top">JDT - Java development tools</a><br>
 				      The JDT provides the tool plug-ins for the platform that implement a Java 
 				      IDE for power-users, that supports the development of any Java application, 
@@ -104,6 +92,12 @@ ob_start();
 				      XML Schema files with the extension point markup so extensions can be validated, 
 				      create extensions on other plug-in extension points, etc. The PDE makes 
 				      integrating plug-ins easy and fun.
+		        </li>
+		        <li> 
+		          <a href="http://www.eclipse.org/equinox/" target="_top">e4 - the next generation of the Eclipse platform</a><br>
+				      The e4 project is an incubator for developing the next generation
+				      of the Eclipse platform. The mission of the e4 project is to build a next 
+				      generation platform for pervasive, component-based applications and tools.<br>
 		        </li>
 		        <li> 
 		          <a href="http://eclipse.org/eclipse/incubator" target="_top">Eclipse Project Incubator</a><br>
