@@ -194,6 +194,7 @@ interesting changes since the previous draft of Oct 10, 2008)
       <tr>
         <td><b>Red Hat Enterprise Linux 5.0, x86-32, GTK</b> running (any of):
           <ul>
+            <li>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> new) Sun Java 2 Standard Edition 6.0 Update 4 for Linux x86</li>
             <li>Sun Java 2 Standard Edition 5.0 Update 14 for Linux x86</li>
             <li>IBM 32-bit SDK for Linux on Intel architecture, Java 2 Technology Edition 5.0, SR6b</li>
             <li>BEA JRockit 27.4.0, for Linux x86</li>
@@ -445,7 +446,6 @@ interesting changes since the previous draft of Oct 10, 2008)
 
 <p:deferred>
 <ul>
-
 <li>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> deferred)
   <strong>BIDI improvements.</strong>
   We will continue to invest in improving in our BIDI support, to ensure that
@@ -453,7 +453,7 @@ interesting changes since the previous draft of Oct 10, 2008)
   both improvemed access to native BIDI support and the better handling of
   dynamic, complex expressions within Eclipse. [SWT, Platform UI]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252645">252645</a>)</li>
-
+</ul>
 </p:deferred>
 
 </p:theme>
@@ -512,7 +512,8 @@ interesting changes since the previous draft of Oct 10, 2008)
 
 <p:committed>
 <ul>
-<li><strong>API Tools test suite and infrastructure</strong>
+<li>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+  <strong>API Tools test suite and infrastructure</strong>
   We will build a comprehensive regression test suite for our API tools, as well
   as a performance test suite, and enhance analysis to avoid false positives, allow
   special privileges between x-friend bundles, and detect when new API is used in
@@ -521,7 +522,8 @@ interesting changes since the previous draft of Oct 10, 2008)
   performance improvements. [PDE]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252658">252658</a>) </li>
 
-<li><strong>Compare editor improvements.</strong>
+<li>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+  <strong>Compare editor improvements.</strong>
   We will address some of the limitations of the current compare editor framework.
   Possible work areas include: pluggable compare viewers/tools, automatic updating
   of differences, better presentation for changes, support for auto-merge, ability
@@ -529,7 +531,8 @@ interesting changes since the previous draft of Oct 10, 2008)
   features from standard editors within compare editors.[All]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252662">252662</a>) </li>
 
-<li><strong>Build process improvements.</strong>
+<li>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+  <strong>Build process improvements.</strong>
   The Eclipse build process is currently complex and brittle, impacting our
   ability to deliver stable builds on a reliable schedule. We will make
   improvements to the build process to make it more robust and reproducible.[Rel. Eng., PDE]
@@ -576,7 +579,8 @@ interesting changes since the previous draft of Oct 10, 2008)
 
 <p:committed>
 <ul>
-<li><strong>User-assistance improvements.</strong>
+<li>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+  <strong>User-assistance improvements.</strong>
   We will provide a number of often asked for improvements to our help support,
   such as filtering of the navigation tree based on Criteria, grouping of search
   results based on Criteria, quick search from the navigation tree
@@ -584,7 +588,8 @@ interesting changes since the previous draft of Oct 10, 2008)
   presentation. [UA]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252661">252661</a>) </li>
 
-<li><strong>Extensible execution environments.</strong>
+<li>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+  <strong>Extensible execution environments.</strong>
   Currently, the set of system library profile definitions supported by Equinox
   is static (for example, J2SE-1.4, J2SE-1.5, etc.). We will respond to new
   support being added by Equinox for an extensible set of system library profiles.
@@ -593,7 +598,8 @@ interesting changes since the previous draft of Oct 10, 2008)
   investment from the Equinox Project, in addition to the work here.)</em> [JDT, PDE]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252665">252665</a>) </li>
 
-<li><strong>PDE Build and Export enhancements.</strong>
+<li>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+  <strong>PDE Build and Export enhancements.</strong>
   We will support export and install of workspace bundles into the running host;
   enhance product definition with start levels and license information and support
   creation from OSGi launch configurations; honor the dropins folder when building
@@ -603,7 +609,8 @@ interesting changes since the previous draft of Oct 10, 2008)
   leverage p2 function for fetch, publish and packaging build phases. [PDE]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252666">252666</a>) </li>
 
-<li><strong>Declarative Services Tooling.</strong>
+<li>(<img src="new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+  <strong>Declarative Services Tooling.</strong>
   We will provide tooling for authoring service component definitions. [PDE]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252668">252668</a>) </li>
 </ul>
