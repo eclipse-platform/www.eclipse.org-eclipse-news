@@ -114,7 +114,7 @@ interesting changes since the previous draft of Oct 10, 2008)
 <p:milestone date="10/31/2008" milestone="M3"><div>3.5M3</div></p:milestone>
 <p:milestone date="12/12/2008" milestone="M4"><div>3.5M4</div></p:milestone>
 <p:milestone date="01/30/2009" milestone="M5"><div>3.5M5</div></p:milestone>
-<p:milestone date="03/12/2009" milestone="M6"><div>3.5M6 (API Freeze)</div></p:milestone>
+<p:milestone date="03/13/2009" milestone="M6"><div>3.5M6 (API Freeze)</div></p:milestone>
 <p:milestone date="05/01/2009" milestone="M7"><div>3.5M7 (Feature Freeze)</div></p:milestone>
 <p:milestone date="05/15/2009" milestone="RC1"><div>3.5RC1</div></p:milestone>
 <p:milestone date="05/29/2009" milestone="RC2"><div>3.5RC2</div></p:milestone>
@@ -437,15 +437,6 @@ interesting changes since the previous draft of Oct 10, 2008)
   We will work with the community to ensure that we have first-class, accessibility
   support that is compliant with important standards. [SWT]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252646">252646</a>)</li>
-</ul>
-</p:committed>
-
-<p:proposed>
-  <p><i>None at this time.</i></p>
-</p:proposed>
-
-<p:deferred>
-<ul>
 <li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> deferred)
   <strong>BIDI improvements.</strong>
   We will continue to invest in improving in our BIDI support, to ensure that
@@ -454,6 +445,14 @@ interesting changes since the previous draft of Oct 10, 2008)
   dynamic, complex expressions within Eclipse. [SWT, Platform UI]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252645">252645</a>)</li>
 </ul>
+</p:committed>
+
+<p:proposed>
+  <p><i>None at this time.</i></p>
+</p:proposed>
+
+<p:deferred>
+  <p><i>None at this time.</i></p>
 </p:deferred>
 
 </p:theme>
