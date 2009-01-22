@@ -48,7 +48,7 @@
 			  assigned a JRE and platform to test on. The community can chose any JRE and 
 			  platform. </p>
 			  <div align="center">
-				<table width="90%" border="1">
+				<table width="100%" border="1">
 				  <tr> 
 				    <td width="11%">&nbsp;</td>
 				    <td width="13%"><b>JDK 1.4.2</b></td>
@@ -101,7 +101,7 @@
 			<a name="top"></a>
 			<h2><b>Test Grid</b></h2>
 			<div align="center">
-			<table width="90%" border="1">
+			<table width="100%" border="1">
 			  <tr> 
 			    <td width="30%" align="center"><b>Feature Testing</b></td>
 			    <td width="12%" align="center"><b>Darin Wright</b></td>
@@ -293,7 +293,7 @@
 			  </tr>
 			</table>
 			<p></p>
-			<table width="90%" border="1">
+			<table width="100%" border="1">
 			  <tr> 
 			    <td width="40%"><b>Non-Java Testing</b></td>
 			    <td width="15%"><b>Pawel Piech</b></td>
@@ -320,166 +320,139 @@
 		<div class="homeitem3col">
 			<h2><b>Feature Testing</b></h2>
 			<a name="Java6"></a>
-			<h4>Java 6.0 Features</h4>
-				<ul>
-					<li> All Instances
-						<ul>
-							<li style="">Should not be available when not debugging with 1.6 VM</li>
-							<li style="">Variables view popup</li>
-							<li style="">Java Outline view popup (type and constructors only)</li>
-							<li style="">Java editor popup (type name or constructor name selected)</li>
-							<li style="">Change number of instances to show on Heap walking preference page</li>
-						</ul>
-					</li>
-					<li> All References
-						<ul>
-							<li>Should not be available when not debugging with 1.6 VM</li>
-							<li>Variables view popup</li>
-							<li>In-line as variable in the variables view (change in view preferences and preference page)</li>
-							<li>Change number of references to show on Heap walking preference page</li>
-						</ul>
-					</li>
-					<li> Force Early Return
-						<ul>
-							<li>Should not be available when not debugging with 1.6 VM</li>
-							<li>Works as an evaluation (from display and details pane)</li>
-							<li>Run menu and key binding</li>
-							<li>Java editor context menu</li>
-						</ul>
-					</li>
-				</ul>
+			<h3>Java 6.0 Features</h3>
+				<h3> All Instances</h3>
+					<ul>
+						<li style="">Should not be available when not debugging with 1.6 VM</li>
+						<li style="">Variables view popup</li>
+						<li style="">Java Outline view popup (type and constructors only)</li>
+						<li style="">Java editor popup (type name or constructor name selected)</li>
+						<li style="">Change number of instances to show on Heap walking preference page</li>
+					</ul>
+				<h3>All References</h3>
+					<ul>
+						<li>Should not be available when not debugging with 1.6 VM</li>
+						<li>Variables view popup</li>
+						<li>In-line as variable in the variables view (change in view preferences and preference page)</li>
+						<li>Change number of references to show on Heap walking preference page</li>
+					</ul>
+				<h3>Force Early Return</h3>
+					<ul>
+						<li>Should not be available when not debugging with 1.6 VM</li>
+						<li>Works as an evaluation (from display and details pane)</li>
+						<li>Run menu and key binding</li>
+						<li>Java editor context menu</li>
+					</ul>
 				<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Evaluations"></a>
-			<h4>Evaluations</h4>
-				<ul>
-				  <li>Switch statements should be supported in evaluations</li>
-				  <li>Java 5.0 features 
+			<h3>Evaluations</h3>
+				<h3>Java 5.0 features</h3> 
 				    <ul>
-				      <li>Generic types</li>
-				      <li>enhanced for loop syntax</li>
-				      <li>varargs</li>
-				      <li>autoboxing</li>
-				      <li>enumerations</li>
+						<li>Generic types</li>
+						<li>enhanced for loop syntax</li>
+						<li>varargs</li>
+						<li>autoboxing</li>
+						<li>enumerations</li>
 				    </ul>
-				  </li>
-				  <li>From various contexts 
+				<h3>From various contexts</h3> 
 				    <ul>
-				      <li>Java Compilation Unit editor</li>
-				      <li>Java Classfile editor</li>
-				      <li>Display view</li>
-				      <li>Details area</li>
-				      <li>Snippet editor</li>
-				      <li>in class files without attached source</li>
-				      <li>for arrays as the receiving 'this' context</li>
+					    <li>Java Compilation Unit editor</li>
+					    <li>Java Classfile editor</li>
+					    <li>Display view</li>
+					    <li>Details area</li>
+					    <li>Snippet editor</li>
+					    <li>in class files without attached source</li>
+					    <li>for arrays as the receiving 'this' context</li>
 				    </ul>
-				  </li>
-				  <li>Use key bindings and context menus</li>
-				  <li>Use code assist (key binding and context menu)</li>
-				  <li>Inspect vs. Display 
+				<h3>Inspect vs. Display</h3> 
 				    <ul>
-				      <li>Note that in the Display view and Snippet editor, &quot;Display&quot; 
-				        prints the result in-line</li>
-				      <li>Everywhere else, popups are used to display/inspect the result</li>
+					    <li>Note that in the Display view and Snippet editor, &quot;Display&quot; prints the result in-line</li>
+					    <li>Everywhere else, popups are used to display/inspect the result</li>
 				    </ul>
-				  </li>
-				  <li>Persisting the result - i.e. move the result to the Display view or Expressions 
-				    view</li>
-				  <li>In a clean workspace, popups should size reasonable on the first use, after which 
-				    the popup sizes are persisted and reused</li>
-				</ul>
+				<h3>General</h3>
+					<ul>
+						<li>Switch statements should be supported in evaluations</li>
+						<li>Use key bindings and context menus</li>
+					  	<li>Use code assist (key binding and context menu)</li>
+						<li>Persisting the result - i.e. move the result to the Display view or Expressions view</li>
+						<li>In a clean workspace, popups should size reasonable on the first use, after which the popup sizes are persisted and reused</li>
+					</ul>
 				<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="ContextLaunching"></a>
-			<h4>Context Launching</h4>
-				<ul>
-					<li> Resource properties page
-						<ul>
-							<li>Available on launchable resources</li>
-							<li>Only show listing of launch configurations that apply to selected resource</li>
-							<li>Create/delete/edit configuration</li>
-							<li>Changes to configurations are cancelable</li>
-						</ul>
-					</li>
-					<li>Launching
-						<ul>
-							<li>Launch button(s) tooltip(s) should track selection changes (update as selections change)</li>
-							<li>Non-launchable resource should prompt to run the parent (if set to do so, toggle pref on Launching preference page)</li>
-							<li>
-								<p>
-									Running and debugging applications has been simplified 
-								    to run or debug the selected file or active editor. Use the &quot;Run/Debug 
-								    &gt; Launching &gt; Launch the selected resource or active editor&quot; 
-								    preference to enable this behavior. When the selected resource (or active 
-								    editor) is not executable, you can opt to launch the associated project 
-								    by selecting &quot;Always launch project if selected resource cannot be 
-								    launched&quot;.
-								</p>
-								<p>
-									Pressing the Run or Debug toolbar button will launch the selected resource 
-									(as will the Run or Debug action in the top level Run menu). When no launch 
-									configuration exists for the selected resource, you will be prompted to 
-									select how to run or debug an application if there is more than one way 
-									to launch the selection. For example, when running a JUnit test you can 
-									launch it as a Java application or JUnit test. This will create a launch 
-									configuration and entry in the launch history for the application.
-								</p>
-								<p>
-									When the same resource is launched again, the most recent configuration 
-									in the launch history associated with that resource is re-launched.
-								</p>
-							</li>
-						</ul>
-					</li>
-				</ul>
+			<h3>Context Launching</h3>
+				<h3> Resource properties page</h3>
+					<ul>
+						<li>Available on launchable resources</li>
+						<li>Only show listing of launch configurations that apply to selected resource</li>
+						<li>Create/delete/edit configuration</li>
+						<li>Changes to configurations are cancelable</li>
+					</ul>
+				<h3>Launching</h3>
+					<ul>
+						<li>Launch button(s) tooltip(s) should track selection changes (update as selections change)</li>
+						<li>Non-launchable resource should prompt to run the parent (if set to do so, toggle pref on Launching preference page)</li>
+						<li>
+							<p>
+								Running and debugging applications has been simplified 
+							    to run or debug the selected file or active editor. Use the &quot;Run/Debug 
+							    &gt; Launching &gt; Launch the selected resource or active editor&quot; 
+							    preference to enable this behavior. When the selected resource (or active 
+							    editor) is not executable, you can opt to launch the associated project 
+							    by selecting &quot;Always launch project if selected resource cannot be 
+							    launched&quot;.
+							</p>
+							<p>
+								Pressing the Run or Debug toolbar button will launch the selected resource 
+								(as will the Run or Debug action in the top level Run menu). When no launch 
+								configuration exists for the selected resource, you will be prompted to 
+								select how to run or debug an application if there is more than one way 
+								to launch the selection. For example, when running a JUnit test you can 
+								launch it as a Java application or JUnit test. This will create a launch 
+								configuration and entry in the launch history for the application.
+							</p>
+							<p>
+								When the same resource is launched again, the most recent configuration 
+								in the launch history associated with that resource is re-launched.
+							</p>
+						</li>
+					</ul>
 				<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Launch"></a>
-			<h4>Launch Options</h4>
-				<ul>
-				  <li>Build before launch 
-				    <ul>
-				      <li> build is scoped to relevant projects</li>
-				      <li>Standard job progress dialog is displayed for the following cases. The 
-				        &quot;Run in Background&quot; button is never present. 
-				        <ul>
-				          <li>Launching in foreground (un-check &quot;Launch in background&quot; 
-				            option on common tab) 
-				            <ul>
-				              <li>Waiting for ongoing build to complete before launching</li>
-				              <li>Building before launching</li>
-				            </ul>
-				          </li>
-				        </ul>
-				      </li>
-				      <li>The progress dialog never appears when launching in the background
-				        <ul>
-				          <li>When waiting for an ongoing build to complete before launching a 
-				            node appears in the debug view in italics showing &quot;waiting for 
-				            build&quot;</li>
-				        </ul>
-				      </li>
-				    </ul>
+			<h3>Launch Options</h3>
+				<h3>Build before launch</h3> 
+					    <ul>
+						    <li> build is scoped to relevant projects</li>
+						    <li>Standard job progress dialog is displayed for the following cases. The &quot;Run in Background&quot; button is never present.</li> 
+					        <li>Launching in foreground (un-check &quot;Launch in background&quot; option on common tab)</li> 
+				            <li>Waiting for ongoing build to complete before launching</li>
+				            <li>Building before launching</li>
+						    <li>The progress dialog never appears when launching in the background
+					        <li>When waiting for an ongoing build to complete before launching a 
+					            node appears in the debug view in italics showing &quot;waiting for 
+					            build&quot;</li>
+					    </ul>
 				  </li>
-				  <li>Prompt to launch in face of compilation errors 
-				    <ul>
-				      <li>always/prompt</li>
-				      <li>prompt should tell you which project(s) contain errors</li>
-				      <li>irrelevant errors should not cause prompt (i.e. Ant errors should not 
-				        prevent Java launch)</li>
-				    </ul>
-				  </li>
-				  <li>Prompt to launch in debug mode when breakpoints present 
-				    <ul>
-				      <li>always/never/prompt</li>
-				    </ul>
-				  </li>
-				  <li>Save dirty editors</li>
-				  <li> Launch in foreground/background (controlled via common tab on launch config)</li>
-				</ul>
+				<h3>Prompt to launch in face of compilation errors</h3> 
+					    <ul>
+						    <li>always/prompt</li>
+						    <li>prompt should tell you which project(s) contain errors</li>
+						    <li>irrelevant errors should not cause prompt (i.e. Ant errors should not 
+						        prevent Java launch)</li>
+					    </ul>
+				<h3>Prompt to launch in debug mode when breakpoints present</h3> 
+					    <ul>
+					    	<li>always/never/prompt</li>
+					    </ul>
+				<h3>General</h3>
+					<ul>
+				  		<li>Save dirty editors</li>
+				  		<li> Launch in foreground/background (controlled via common tab on launch config)</li>
+					</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Launch_Modes"></a>
-			<h4>Launch Modes</h4>
-				<ul>
-					<li> For this test, you require the use of the launch modes test plugin available <a href="http://www.eclipse.org/eclipse/debug/misc/plugins/org.eclipse.example.mixedmode_1.2.0.jar">here</a>.</li>
-					<li> Preferences Dialog
+			<h3>Launch Modes</h3>
+				<p> For this test, you require the use of the launch modes test plugin available <a href="http://www.eclipse.org/eclipse/debug/misc/plugins/org.eclipse.example.mixedmode_1.2.0.jar">here</a>.</p>
+				<h3> Preferences Dialog</h3>
 					<ul>
 						<li>Ensure launch tool preferences page is available, even if there is no conflicting tooling. Page
 						should be disabled with an explanation if no conflicting tooling</li>
@@ -490,8 +463,7 @@
 						<li>Changing selected tooling without saving changes should not modify saved choices</li>
 						<li>Selecting preferred tooling from a quick launch or the launch configuration dialog should be reflected in the pref page (and changeable)</li>
 					</ul>
-					</li>
-					<li> Launch Configuration Dialog
+				<h3> Launch Configuration Dialog</h3>
 					<ul>
 						<li>Ensure incompatible modes are flagged correctly (check the widget on the Coverage Tab) with an error message and link</li>
 						<li>Link should present complete list of support mode combinations</li>
@@ -499,15 +471,13 @@
 						<li>Duplicate delegates should be flagged correctly with error message and link</li>
 						<li>Link should present complete set of contributed launch tooling</li>
 						<li>Selection of tooling should remove error from dialog, and be reflected in the preference page</li>
-					</ul>
-					</li>				
-					<li> Launch History
+					</ul>			
+				<h3> Launch History</h3>
 					<ul>
 						<li>Resolution dialog should be presented if duplicate tooling found and no choice has been made</li>
 						<li>Choice of tooling should allow launch to continue and be reflected in the preferences page</li>
 						<li>Canceling either choice from the resolution dialog should cancel the launch as well</li>
 					</ul>
-					</li>
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="LaunchConfigurations"></a>
