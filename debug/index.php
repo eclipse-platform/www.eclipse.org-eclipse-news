@@ -31,7 +31,7 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
-			<h3>Debug Project Overview</h3>
+			<h2>Debug Project Overview</h2>
 			
 			<p>The Eclipse Debug Project is not a single project unto itself, it is in fact comprised of 
 			two distinct sub-projects: Platform Debug and JDT Debug.</p>
@@ -44,7 +44,7 @@
 		    <p>Both Platform and JDT Debug are built into Eclipse and ship as part of the Eclipse SDK. 
 		</div>
 		<div class="homeitem3col">
-			<h3>Debug Components</h3>
+			<h2>Debug Components</h2>
 			
 			<p>As mentioned the Debug Project is broken down into two smaller sub-projects, each with 
 			its own set of committers, projects goals and plans, bug categories and mailing lists.</p>
@@ -70,13 +70,13 @@
 			</blockquote>
 		</div>
 		<div class="homeitem3col">
-			<h3>New and Noteworthy</h3>
+			<h2>New and Noteworthy</h2>
 			<p>The JDT debug component is very responsive to new ideas, feature requests and bug reports. The following is a list of some 
 			of the newest and more interesting additions to the component.</p>
 			<p>For a complete listing of new and noteworthy entries check the <a href="/eclipse/debug/nan/new_and_noteworthy.php">New and Noteworthy</a> page.</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>Up To The Minute</h3>
+			<h2>Up To The Minute</h2>
 			<ul>
 			<li>Our manual testing programs our now available for <a href="/eclipse/debug/misc/ManualTestingPrograms.zip">download</a>.  Happy testing!
 			<li>The debug utils, which helps in verifying bugs, is now available via update site (with p2 metadata) at <a href="http://www.eclipse.org/eclipse/debug/update/">www.eclipse.org/eclipse/debug/update/</a></li>
