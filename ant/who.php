@@ -37,7 +37,7 @@
 		<p>For more information about committers and a listing of what they can commit to see <a href="http://www.eclipse.org/eclipse/commit.html" target="_blank">this page</a> provided
 		by eclipse.org listing all committers and their respective commit rights.</p>
 		<div class="homeitem3col">
-			<h3>Darin Wright</h3>
+			<h2><b>Darin Wright</b></h2>
 			<table width="100%" border="0" summary="About Darin Wright">
 				<tbody>
 				<tr> 
@@ -60,7 +60,7 @@
 			</table>
 		</div>
 		<div class="homeitem3col">
-			<h3>Michael Rennie</h3>
+			<h2><b>Michael Rennie</b></h2>
 			<table width="100%" border="0" summary="About Michael Rennie">
 				<tbody>
 				<tr> 
@@ -81,7 +81,7 @@
 			</table>
 		</div>
 		<div class="homeitem3col">
-			<h3>Darin Swanson</h3>
+			<h2><b>Darin Swanson</b></h2>
 			<table width="100%" border="0" summary="About Darin Swanson">
 				<tbody>
 				<tr> 
@@ -100,7 +100,7 @@
 			</table>
 		</div>
 		<div class="homeitem3col">
-			<h3>Kevin Barnes</h3>
+			<h2><b>Kevin Barnes</b></h2>
 			<table width="100%" border="0" summary="About Michael Rennie">
 				<tbody>
 				<tr> 

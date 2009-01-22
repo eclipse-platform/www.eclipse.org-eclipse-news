@@ -40,17 +40,17 @@ include($App->getProjectCommon());
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
-			<h3>Articles</h3>
+			<h2><b>Articles</b></h2>
 			<ul>
 			</ul>
 		</div>
 		<div class="homeitem3col">
-			<h3>EclipseCon Presentations</h3>
+			<h2><b>EclipseCon Presentations</b></h2>
 			<ul>
  			</ul>
 		</div>
 		<div class="homeitem3col">
-			<h3>Miscellaneous Documents</h3>
+			<h2><b>Miscellaneous Documents</b></h2>
 			<ul>
 			</ul>
 		</div>

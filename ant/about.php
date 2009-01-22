@@ -38,7 +38,7 @@ include($App->getProjectCommon());
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
-			<h3>License</h3>
+			<h2><b>License</b></h2>
 			<p>The Eclipse Foundation makes available all content in this plug-in (&quot;Content&quot;).  Unless otherwise 
 			indicated below, the Content is provided to you under the terms and conditions of the
 			Eclipse Public License Version 1.0 (&quot;EPL&quot;).  A copy of the EPL is available 

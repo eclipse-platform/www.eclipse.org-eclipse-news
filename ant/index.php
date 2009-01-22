@@ -40,7 +40,7 @@ include($App->getProjectCommon());
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
-			<h3>Ant Project Overview</h3>
+			<h2><b>Ant Project Overview</b></h2>
 				<p>
 					The Ant component is designed to bring the power of Ant and Eclipse together. 
         			Ant is a Java based build tool. In theory it is kind of like make without 
@@ -62,7 +62,7 @@ include($App->getProjectCommon());
         		</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>Ant Plug-ins</h3>
+			<h2><b>Ant Plug-ins</b></h2>
 			<p>
 				The Ant component consists of the following plug-ins:
 			</p>
@@ -75,13 +75,13 @@ include($App->getProjectCommon());
 			</ul>
 		</div>
 		<div class="homeitem3col">
-			<h3>New and Noteworthy</h3>
+			<h2><b>New and Noteworthy</b></h2>
 			<p>
 				For a complete listing of new and noteworthy entries check the 
 				<a href="/eclipse/ant/nan/new_and_noteworthy.php">New and Noteworthy</a> page.</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>Up To The Minute</h3>
+			<h2><b>Up To The Minute</b></h2>
 			<ul>
 				<li>The debug utils, which helps in verifying bugs, is now available via update site (with p2 metadata) at 
 				<a href="http://www.eclipse.org/eclipse/debug/update/">www.eclipse.org/eclipse/debug/update/</a></li>
@@ -92,7 +92,7 @@ include($App->getProjectCommon());
 			</ul>
 		</div>
 		<div class="homeitem3col">
-			<h3>Maintenance Efforts</h3>
+			<h2><b>Maintenance Efforts</b></h2>
 		      <ul>
 		        <li>Fixes released to the <a href="http://bugs.eclipse.org/bugs/buglist.cgi?bug_status=VERIFIED&resolution=FIXED&email1=&emailtype1=substring&emailassigned_to1=1&email2=&emailtype2=substring&emailreporter2=1&bugidtype=include&bug_id=&changedin=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&product=Platform&component=Ant&target_milestone=2.0.1&target_milestone=2.0.2&short_desc=&short_desc_type=allwordssubstr&long_desc=&long_desc_type=allwordssubstr&keywords=&keywords_type=anywords&field0-0-0=noop&type0-0-0=noop&value0-0-0=&cmdtype=doit&namedcmd=2.0.1%2BFixed%27n%2BVerified&newqueryname=&order=Reuse%2Bsame%2Bsort%2Bas%2Blast%2Btime">2.0.x</a> 
 		          branch</li>

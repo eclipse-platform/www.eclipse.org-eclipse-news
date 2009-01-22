@@ -43,7 +43,7 @@ include($App->getProjectCommon());
 		<p>The Ant component is very responsive to new ideas, feature requests and bug reports. The following is a list of some 
 			of the newest and more interesting additions to the component.</p>
 		<div class="homeitem3col">
-			<h3>New and Noteworthy for 3.5</h3>
+			<h2><b>New and Noteworthy for 3.5</b></h2>
 			<p>Listing of new and noteworthy items separated by milestone:
 				<ul>
 					<li><a href="/eclipse/ant/nan/3.5/M1/nan.php">Milestone 1</a></li>
@@ -51,7 +51,7 @@ include($App->getProjectCommon());
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>New and Noteworthy for 3.3</h3>
+			<h2><b>New and Noteworthy for 3.3</b></h2>
 			<p>Listing of new and noteworthy items separated by milestone:
 				<ul>
 					<li><a href="/eclipse/ant/nan/3.3/M2/nan.php">Milestone 2</a></li>
@@ -60,7 +60,7 @@ include($App->getProjectCommon());
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>New and Noteworthy for 3.2</h3>
+			<h2><b>New and Noteworthy for 3.2</b></h2>
 			<p>Listing of new and noteworthy items separated by milestone:
 				<ul>
 					<li><a href="/eclipse/ant/nan/3.2/M5/nan.php">Milestone 5</a></li>

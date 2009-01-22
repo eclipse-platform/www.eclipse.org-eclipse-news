@@ -38,7 +38,7 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
-			<h3>External Tool Builders</h3>
+			<h2><b>External Tool Builders</b></h2>
 			<ul>
 				<li>The tool builder used by <a href="/eclipse/ant/examples/tool_builders/buildApiToolsAntSupportJar.xml" target="_blank">org.eclipse.pde.api.tools</a> to build the jar of Ant tasks usable
 					in a RelEng build setting</li>

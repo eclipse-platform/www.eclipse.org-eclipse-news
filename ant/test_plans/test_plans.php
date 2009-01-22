@@ -38,12 +38,12 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>		
 		<div class="homeitem3col">
-			<h3>3.5 Test Plans</h3>
+			<h2><b>3.5 Test Plans</b></h2>
 			<a name="3-5_testing"></a>
 			<ul>
 				<li><a href="/eclipse/ant/test_plans/3_5M4.php">3.5M4</a></li>
 			</ul>
-			<h3>3.4.x Test Plans</h3>
+			<h2><b>3.4.x Test Plans</b></h2>
 			<a name="3-4x_testing"></a>
 			<ul>
 				<li><a href="/eclipse/ant/test_plans/3_4_2.php">3.4.2</a></li>

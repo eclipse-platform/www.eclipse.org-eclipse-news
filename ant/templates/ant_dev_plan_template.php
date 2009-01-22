@@ -39,7 +39,7 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
-			<h3>Overall  Plan</h3>
+			<h2><b>Overall  Plan</b></h2>
 			
 			<h4>Overall Themes for Platform Ant:</h4>
 	        
@@ -67,7 +67,7 @@
 	      	</blockquote>
 		</div>
 		<div class="homeitem3col">
-		<h3>#.# Development Effort - Milestone # (date)</h3>
+		<h2><b>#.# Development Effort - Milestone # (date)</b></h2>
 			<blockquote>
 				<b>Item Name</b>
 	        		<ul>
@@ -76,7 +76,7 @@
 			</blockquote>
 		</div>
 		<div class="homeitem3col">
-		<h3>Bug Resolution</h3>
+		<h2><b>Bug Resolution</b></h2>
 			<ul>
 				<li>Bug Fixes Released to #.#</li>
 			</ul>
