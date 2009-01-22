@@ -45,7 +45,7 @@
 		by eclipse.org listing all committers and their respective commit rights.</p>
 		<div class="homeitem3col">
 			<h2><b>Darin Wright</b></h2>
-			<table width="100%" border="0" summary="About Darin Wright" cellspacing="2">
+			<table width="100%" border="0" summary="About Darin Wright" cellspacing="20">
 				<tbody>
 				<tr> 
 					<td width="30%" valign="top"><img src="images/people/darinw.png" /></td>
