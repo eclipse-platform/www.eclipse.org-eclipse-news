@@ -1112,37 +1112,41 @@
 					<blockquote><ol>
 					  	<li>Modules View can be populated with flexible hierarchy</li>
 					  	<li>Find...</li>
-					  	<li>details pane can be popuated</li>
+					  	<li>details pane can be populated</li>
 					</ol></blockquote>
 			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="Registers"></a>
 			<h2><b>Registers View</b></h2>
+				<blockquote>
 				<h3>General</h3>
-					<blockquote><ol>
+					<ol>
 					  	<li>the Registers View can be populated with Register Group and Registers</li>
-					  	<li>register values get updated when their values change.</li>
+					  	<li>register values get updated when their values change</li>
 					  	<li>modify register values</li>
 					  	<li>find a register</li>
 					  	<li>copy registers</li>				  
 					  	<li>turn column on and off</li>
 					  	<li>show and hide columns</li>
 					  	<li>details pane shows details of registers</li>
-					  	<li>top index and expansion of registers are maintained after each step or switching stackframe.</li>
-					</ol></blockquote>
+					  	<li>top index and expansion of registers are maintained after each step or switching stack frame</li>
+					</ol>
+				</blockquote>
 			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>			
 			<a name="Breakpoint_Toggle_Types"></a>
 			<h2><b>Breakpoint Toggle Types</b></h2>
+				<blockquote>
 				<h3>General</h3>
-					<blockquote><ol>
+					<ol>
 					  	<li>use the PDA example debugger to test this feature.  The PDA debugger supports different watchpoint 
-					      types which can be toggled in the editor and the variables view.</li>
+					      types which can be toggled in the editor and the variables view</li>
 					  	<li>breakpoint toggle actions can have multiple targets (i.e. handlers) registered for them.  If a 
 					      debugger is installed, which registers multiple breakpoint targets, the Breakpoint Types sub-menu 
-					      appears in the Run menu.</li>
-					  	<li>select different breakpoint types.</li>
-					  	<li>toggle breakpoints in different locations (editor and view).</li>
-					  	<li>check that user-selected breakpoint type is persisted.</li>
-					</ol></blockquote>
+					      appears in the Run menu</li>
+					  	<li>select different breakpoint types</li>
+					  	<li>toggle breakpoints in different locations (editor and view)</li>
+					  	<li>check that user-selected breakpoint type is persisted</li>
+					</ol>
+				</blockquote>
 			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>			
 		</div>
 	</div>
