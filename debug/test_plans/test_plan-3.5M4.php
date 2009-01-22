@@ -814,382 +814,336 @@
 				  	</ul>
 				<h3> Over-riding Access Rules</h3>
 				  	<ul>
-				  		<li> Create a rule that over-rides a system library rule, and ensure it works</li>
+				  		<li>create a rule that over-rides a system library rule, and ensure it works</li>
 				  	</ul>
 			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="String"></a>
 			<h2><b>String Variables </b></h2>
-				<ul>
-				  <li>Use String Variables in launch configs 
-				    <ul>
-				      <li>VM args, program args, main type name</li>
-				    </ul>
-				  </li>
-				  <li>String Variable selection dialog</li>
-				</ul>
+				<h3>General</h3>
+					<ul>
+				  		<li>use String Variables in launch configs</li>
+				      	<li>VM args, program args, main type name</li>
+				  		<li>String Variable selection dialog</li>
+					</ul>
 			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="Console"></a>
 			<h2><b>Console </b></h2>
-				<ul>
-				  <li>Show when output to standard out/err</li>
-				  <li>Console title becomes bold when content changes (but not if on top/auto activated)</li>
-				  <li>Console input - typing, pasting, pasting multiple lines</li>
-				  <li>CTRL-Z/D for EOF when doing console input</li>
-				  <li>Pin a console - pin action is specific to console view. When pinned, console 
-				    should not change in that view</li>
-				  <li>Scroll lock - specific to console view. When locked, the console in that 
-				    view should not scroll</li>
-				  <li>Switching between consoles - use the drop down to toggle between consoles. 
-				    Clicking on the drop-down should toggle between the last two consoles shown</li>
-				  <li>Open new console - CVS and Java Stack Trace Console</li>
-				  <li>Stack trace console 
-				    <ul>
-				      <li>Pasting and navigating stack traces</li>
-				      <li>hyperlinks are colored by hyperlink color preferences</li>
-				      <li>editing stack traces/clearing console</li>
-				      <li>contents are persisted across workbench invocations and close/re-open</li>
-				      <li>formatting</li>
-				    </ul>
-				  </li>
-				  <li>Hyperlinks for stack traces, link to source code</li>
-				  <li>Hyperlinks for exception names allow creation/modification of exception 
-				    breakpoint settings</li>
-				  <li>Use alternate console encoding to display DBCS character set 
-				    <ul>
-				      <li>remember to use &quot;-Dfile.encoding=UTF-8&quot; (or whatever encoding) 
-				        on the VM args</li>
-				    </ul>
-				  </li>
-				  <li>Open more than one console view 
-				    <ul>
-				      <li>pin a view selectively</li>
-				      <li>scroll lock a view selectively</li>
-				      <li>key-bindings work in views - FORMAT in Java stack trace console/CTRL-D/Z 
-				        in process console</li>
-				    </ul>
-				  </li>
-				  <li>Multiplex output via common tab 
-				    <ul>
-				      <li>a file</li>
-				      <li>the console</li>
-				      <li>both</li>
-				      <li>none</li>
-				    </ul>
-				  </li>
-				  <li>Link to console preferences from context menu</li>
-				  <li> Next / Previous page switcher
-				  	<ul>
+				<h3>Options</h3>
+					<ul>
+						<li>Pin a console - pin action is specific to console view. When pinned, console should not change in that view</li>
+				  		<li>Scroll lock - specific to console view. When locked, the console in that view should not scroll</li>
+				  		<li>link to console preferences from context menu</li>
+					</ul>
+				<h3>Switching between consoles</h3>
+					<ul>
+						<li>use the drop down to toggle between consoles.</li> 
+				  		<li>clicking on the drop-down should toggle between the last two consoles shown</li>
+				  		<li>open new console - CVS and Java Stack Trace Console</li>
 				  		<li>Create a keybinding for Next / Previous page for the Console view</li>
 				  		<li>Try the new key binding from every kind of console available; should be available for all console kinds</li>
-				  	</ul>
-				  </li>
-				</ul>
+					</ul>
+				<h3>Stack trace console</h3> 
+				    <ul>
+				      	<li>pasting and navigating stack traces</li>
+				      	<li>hyperlinks are colored by hyperlink color preferences</li>
+				      	<li>editing stack traces/clearing console</li>
+				      	<li>contents are persisted across workbench invocations and close/re-open</li>
+				      	<li>formatting</li>
+				      	<li>hyperlinks for stack traces, link to source code</li>
+				  		<li>hyperlinks for exception names allow creation/modification of exception breakpoint settings</li>
+				    </ul>
+				<h3>Encoding</h3> 
+				    <ul>
+				    	<li>use alternate console encoding to display DBCS character set</li>
+				      	<li>remember to use &quot;-Dfile.encoding=UTF-8&quot; (or whatever encoding) on the VM args</li>
+				    </ul>
+				<h3>Open Multiple Console Views</h3> 
+				    <ul>
+				      	<li>pin a view selectively</li>
+				      	<li>scroll lock a view selectively</li>
+				      	<li>key-bindings work in views - FORMAT in Java stack trace console/CTRL-D/Z in process console</li>
+				    </ul>
+				<h3>Multiplex Output</h3>  
+				    <ul>
+				    	<li>available from the common tab in a supporting launch configuration</li>
+				      	<li>a file</li>
+				      	<li>the console</li>
+				      	<li>both</li>
+				      	<li>none</li>
+				    </ul>
+				<h3>General</h3>
+					<ul>
+						<li>show when output to standard out/err</li>
+						<li>console title becomes bold when content changes (but not if on top/auto activated)</li>
+						<li>console input - typing, pasting, pasting multiple lines</li>
+						<li>CTRL-Z/D for EOF when doing console input</li>
+					</ul>
 			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="Variables"></a>
 			<h2><b>Variables</b></h2>
-				<ul>
-				  <li>Find Variable support and key-binding</li>
-				  <li>Changed variables appear red (preference color) when stepping</li>
-				  <li>Variables remain expanded/selected as stepping</li>
-				  <li>When switching between stack frames (without resuming), the variables expanded/selected 
-				    are maintained (i.e. expand and select for frame 1, then select frame 2 and 
-				    expand/select. when re-selecting frame 1, the original state is restored).</li>
-				  <li>toString() in-line in the tree viewer 
+				<h3>toString()</h3>  
 				    <ul>
-				      <li>for all variables</li>
-				      <li>for variables with detail formatters</li>
-				      <li>only in the details area</li>
+				    	<li>in-line in the tree viewer</li>
+				      	<li>for all variables</li>
+				      	<li>for variables with detail formatters</li>
+				      	<li>only in the details area</li>
 				    </ul>
-				  </li>
-				  <li>Debug hover works for symbols with the same name and different values (inherited 
-				    fields), showing correct value</li>
-				  <li>Changing variable values 
+				<h3>Changing Variable Values</h3> 
 				    <ul>
-				      <li>via &quot;Change Value...&quot; context action 
-				        <ul>
-				          <li>dialogs are different for primitives &amp; objects</li>
-				          <li>evaluations are supported</li>
-				          <li>editing a String value via evaluation and direct editing</li>
-				        </ul>
-				      </li>
-				      <li>via CTRL-S in the details area 
-				        <ul>
-				          <li>evaluations for objects</li>
-				          <li>direct editing for primitives</li>
-				        </ul>
-				      </li>
+				      	<li>via &quot;Change Value...&quot; context action 
+				        <li>dialogs are different for primitives &amp; objects</li>
+				        <li>evaluations are supported</li>
+				        <li>editing a String value via evaluation and direct editing</li>
+				      	<li>via CTRL-S in the details area 
+				        <li>evaluations for objects</li>
+				        <li>direct editing for primitives</li>
 				    </ul>
-				  </li>
-				  <li>Column support 
+				<h3>Column support</h3> 
 				    <ul>
-				      <li>Turn columns off/on</li>
-				      <li>Colum size automatically until user changes them</li>
-				      <li>Sizes are persisted</li>
-				      <li>Select &amp; persist columns to display</li>
-				      <li>background &quot;changed&quot; color highlighting</li>
+				      	<li>turn columns off/on</li>
+				      	<li>colum size automatically until user changes them</li>
+				      	<li>sizes are persisted</li>
+				      	<li>select &amp; persist columns to display</li>
+				      	<li>background &quot;changed&quot; color highlighting</li>
 				    </ul>
-				  </li>
-				</ul>
+				<h3>General</h3>
+					<ul>
+						<li>find Variable support and key-binding</li>
+					 	<li>changed variables appear red (preference color) when stepping</li>
+					 	<li>variables remain expanded/selected as stepping</li>
+					  	<li>when switching between stack frames (without resuming), the variables expanded/selected 
+					    	are maintained (i.e. expand and select for frame 1, then select frame 2 and 
+					    	expand/select. when re-selecting frame 1, the original state is restored).</li>
+					    <li>Debug hover works for symbols with the same name and different values (inherited fields), showing correct value</li>
+					</ul>
 			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="Refactoring"></a>
 			<h2><b>Refactoring</b></h2>
-				<ul>
-				  <li>launch configuration main type is updated after type rename, type move, 
-				    package rename <br>
-				  </li>
-				  <li>launch configuration project is updated after project rename, package move, 
-				    type move <br>
-				  </li>
-				  <li>Java breakpoints are updated after type rename, type move, package rename, 
-				    package move, project rename <br>
-				    <ul>
-				      <li>VM suspend at the new location <br>
-				      </li>
-				      <li>breakpoint attributes are preserved <br>
-				      </li>
-				      <li>label is updated <br>
-				      </li>
-				      <li>marker location is updated (text selected when double-clicking on a 
-				        breakpoint in the breakpoint view)</li>
-				    </ul>
-				  </li>
-				</ul>
+				<h3>Launch Configurations</h3>
+					<ul>
+						<li>launch configuration main type is updated after type rename, type move, package rename</li>
+						<li>launch configuration project is updated after project rename, package move, type move</li>
+					</ul>
+				<h3>Java breakpoints</h3> 
+			    	<ul>
+			    		<li>are updated after type rename, type move, package rename, package move, project rename</li>
+			      		<li>VM suspend at the new location</li>
+			      		<li>breakpoint attributes are preserved</li>
+			      		<li>label is updated</li>
+			      		<li>marker location is updated (text selected when double-clicking on a breakpoint in the breakpoint view)</li>
+			    	</ul>
 			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="Applets"></a>
 			<h2><b>Applets</b></h2>
-				<ul>
-				  <li>Main tab 
+				<h3>Main Tab</h3> 
 				    <ul>
-				      <li>specify a project via typing/browsing <br>
-				      </li>
-				      <li>specify a nonexistent project (should see error if does not exist) <br>
-				      </li>
-				      <li>specify an applet class via typing/searching (no validation is performed 
-				        on type name in the tab - error occurs on launch if an invalid type is 
-				        specified) <br>
-				      </li>
-				      <li>specify a class that is not an applet (no validation is performed - 
-				        error occurs on launch if invalid) <br>
-				      </li>
-				      <li>specify default applet viewer class <br>
-				      </li>
-				      <li>specify an explicit applet viewer class </li>
+				      	<li>specify a project via typing/browsing</li>
+				      	<li>specify a nonexistent project (should see error if does not exist)</li>
+				      	<li>specify an applet class via typing/searching (no validation is performed 
+				       		on type name in the tab - error occurs on launch if an invalid type is 
+				        	specified)</li>
+				      	<li>specify a class that is not an applet (no validation is performed - error occurs on launch if invalid)</li>
+				      	<li>specify default applet viewer class</li>
+				      	<li>specify an explicit applet viewer class </li>
 				    </ul>
-				  </li>
-				  <li>Parameters 
+				<h3>Parameters</h3> 
 				    <ul>
-				      <li>specify various width &amp; height <br>
-				      </li>
-				      <li>specify parameters (available via Applet#getParameter(...)) <br>
-				      </li>
-				      <li>specify applet name - allows Applets to communicate with each other 
-				        via AppletContext#getApplet(...)</li>
+				      	<li>specify various width &amp; height</li>
+				      	<li>specify parameters (available via Applet#getParameter(...))</li>
+				      	<li>specify applet name - allows Applets to communicate with each other via AppletContext#getApplet(...)</li>
 				    </ul>
-				  </li>
-				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="Remote"></a>
 			<h2><b>Remote Debugging</b></h2>
-				<ul>
-				  <li>connect to a remote VM 
+				<h3>Connect To A Remote VM</h3> 
 				    <ul>
-				      <li>try &quot;suspend=y&quot; and &quot;suspend =n&quot; options</li>
-				      <li>try different sockets</li>
-				      <li>try connecting to a socket that has no VM</li>
-				      <li>try &quot;localhost&quot; and &quot;127.0.0.1&quot;</li>
+				      	<li>try &quot;suspend=y&quot; and &quot;suspend =n&quot; options</li>
+				      	<li>try different sockets</li>
+				      	<li>try connecting to a socket that has no VM</li>
+				      	<li>try &quot;localhost&quot; and &quot;127.0.0.1&quot;</li>
 				    </ul>
-				  </li>
-				  <li>have remote VM connect to waiting debug session 
+				<h3>Remote VM Connect To Waiting Debug Session</h3> 
 				    <ul>
-				      <li>try different sockets</li>
-					  <li>try terminating waiting debug process</li>
-					  <li>try stopping waiting job</li>
+				      	<li>try different sockets</li>
+					  	<li>try terminating waiting debug process</li>
+					  	<li>try stopping waiting job</li>
 				    </ul>
-				  </li>
-				  <li>terminate should only be enabled when the config specifies that terminate 
-				    is supported</li>
-				</ul>
-				<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
-				<a name="JSP"></a>
-				<h2><b>JSP Example </b></h2>
-				<ul>
-				  <li>Try JSP debugging example, as documented in the &quot;org.eclipse.jdt.ui.examples.javafamily&quot; 
-				    plug-in ReleaseNotes.html. The instructions are in the section titled &quot;Debugging 
-				    a JSP&quot; 
+				<h3>General</h3>
+					<ul>
+						<li>terminate should only be enabled when the config specifies that terminate is supported</li>
+					</ul>
+			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+			<a name="JSP"></a>
+			<h2><b>JSP Example </b></h2>
+				<p>
+					Try JSP debugging example, as documented in the &quot;org.eclipse.jdt.ui.examples.javafamily&quot; 
+					plug-in ReleaseNotes.html. The instructions are in the section titled &quot;Debugging 
+					a JSP&quot;
+				</p>
+				<h3>Testing</h3>
 				    <ul>
-				      <li>Tomcat launch configuration</li>
-				      <li>Breakpoints in JSP files</li>
-				      <li>Enable/Disable installed JSP breakpoints</li>
-				      <li>Enable/Disable un-installed breakpoints when a target/server is running</li>
-				      <li>Changing the stratum displayed via context menu in debug view</li>
-				      <li>Stepping in a Java file from a JSP file and stepping back (source lookup 
-				        should work)</li>
-				      <li>Evaluation in the context of a JSP file (requires adding jsp-api.jar, 
-				        jasper-runtime.jar and servlet-api.jar from /common/lib to the project's 
-				        build path)</li>
+				      	<li>Tomcat launch configuration</li>
+				      	<li>breakpoints in JSP files</li>
+				      	<li>enable/Disable installed JSP breakpoints</li>
+				      	<li>enable/Disable un-installed breakpoints when a target/server is running</li>
+				      	<li>changing the stratum displayed via context menu in debug view</li>
+				      	<li>stepping in a Java file from a JSP file and stepping back (source lookup 
+				        	should work)</li>
+				      	<li>evaluation in the context of a JSP file (requires adding jsp-api.jar, 
+				        	jasper-runtime.jar and servlet-api.jar from /common/lib to the project's 
+				        	build path)</li>
 				    </ul>
-				  </li>
-				</ul>
-				<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
-				<a name="STRESS"></a>
-				<h2><b>Stress Tests </b></h2>
-				<ul>
-				  <li>Stepping with many threads, while breakpoints are hit on other threads
+			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+			<a name="STRESS"></a>
+			<h2><b>Stress Tests </b></h2>
+				<h3>Stepping With Many Threads</h3>
+					<ul>
+				      	<li>expansion and selection are maintained properly in the Debug View</li>
+				      	<li>othter suspended threads should not interfere with the current stepping thread</li>
+				      	<li>selection should remain on the stackframe that is being stepped</li>
+				    </ul>
+				<h3>Stepping With Many Variables</h3> 
 				    <ul>
-				      <li>Expansion and selection are maintained properly in the Debug View</li>
-				      <li>Othter suspended threads should not interfere with the current stepping thread</li>
-				      <li>Selection should remain on the stackframe that is being stepped</li>
+				    	<li>debug a testcase with many variables.  Expand many variables and set selection at the bottom of the Variables View.  Do a few Step Over.
+				 			 Test with logical structures turned on / off</li>
+				      	<li>the Variables View should properly maintain expansion and selection </li>
+				      	<li>the Variables View should not scroll to the top unexpectedly</li>
 				    </ul>
-				  </li>
-				  <li>Stepping with many variables - Debug a testcase with many variables.  Expand many variables and set selection at the bottom of the Variables View.  Do a few Step Over.
-				  Test with logical structures turned on / off.								 			  		
+				<h3>Maintaining Variable(s) Expansion & Selection</h3>  							 			  	
 				    <ul>
-				      <li>The Variables View should properly maintain expansion and selection </li>
-				      <li>The Variables View should not scroll to the top unexpectedly</li>
-				    </ul>
-				  </li>
-				  <li>Test maintaining variables expansion and selection when switching stackframes.  Debug a testcase with
-				  many variables.  Expand many variables and set selection.  Switch between different stackframes.							 			  	
+				    	<li>debug a testcase with many variables.  Expand many variables and set selection.  Switch between different stackframes.</li>
+				      	<li>verify that expansion and selection are maintained properly in the Variables View</li>
+				      	<li>the Variables View should not scroll to the top unexpectedly</li>
+				    </ul>	
+				<h3>Stepping Quickly</h3>			 			  	
 				    <ul>
-				      <li>Verify that expansion and selection are maintained properly in the Variables View</li>
-				      <li>The Variables View should not scroll to the top unexpectedly</li>
-				    </ul>
-				  </li>		
-				  <li>Test stepping quickly by holding down the step over key. (F6)	Test with logical structures turned on / off.
-				  Test with thread filters turned on / off.			 			  	
+				    	<li>hold down the step over key (F6). Test with logical structures turned on / off. Test with thread filters turned on / off.</li>
+				      	<li>verify that expansion and selection are maintained properly in the Debug View</li>
+				      	<li>verify that expansion and selection are maintained properly in the Variables View</li>
+				      	<li>verify that source lookup is performed properly.</li>
+				      	<li>verify that debug actions are properly enabled/disabled </li>
+				    </ul>		
+				<h3>Toggle Logical Structures Quickly</h3>		  
 				    <ul>
-				      <li>Verify that expansion and selection are maintained properly in the Debug View</li>
-				      <li>Verify that expansion and selection are maintained properly in the Variables View</li>
-				      <li>Verify that source lookup is performed properly.</li>
-				      <li>Verify that debug actions are properly enabled/disabled </li>
+				    	<li>debug a testcase with many variables.  Some of these variables
+				  			can be displayed differently when logical structures is turned on.  (e.g. Hashmap)  Expand many of these
+				  			variables and then toggle the logical structures action quickly.	</li>
+				      	<li>verify that expansion and selection are maintained properly in the Variables View</li>
+				      	<li>verify that there is no blank lables in the Variables View</li>
 				    </ul>
-				  </li>			
-				  <li>Toggle logical structures quickly - Debug a testcase with many variables.  Some of these variables
-				  can be displayed differently when logical structures is turned on.  (e.g. Hashmap)  Expand many of these
-				  variables and then toggle the logical structures action quickly.			  
-				    <ul>
-				      <li>Verify that expansion and selection are maintained properly in the Variables View</li>
-				      <li>Verify that there is no blank lables in the Variables View</li>
-				    </ul>
-				  </li>						  			  		  
-				</ul>
-				<p><a href="#top">Back to top</a><br></p><p>&nbsp;</p>
-			<a name="Non-Java-Testing"></a>
-			<h2><b>Non-Java Testing</b></h2>
-				<a name="Memory"></a>
-				<h2><b>Memory View</b></h2>
-				To test the Memory View, you will need the example.debug.memoryview sample.  You can get the sample from 
-				the "Advanced Tutorial" from EclipseCon 2007.
-				<ul>
-				  <li>Add memory block
-					  <ul>
-					  	<li> Try adding multiple memory blocks by using a comma delimited list. </li>
-					  	<li> Try adding a memory block with empty expression </li>
-					  	<li> Try adding a memory block using the key binding (Ctrl+Alt+M)</li>
-					  </ul>
-				  </li>
-				  <li>Remove memory block
-					  <ul>
-					  	<li>Remove single memory block</li>
-					  	<li>Remove multiple memory blocks </li>
-					  	<li>Remove all</li>
-					  </ul>				  
-				  </li>	  
-				  <li>Add Memory Rendering
-					  <ul>
-					  	<li>Default renderings get added automatically when a memory block is added.</li>
-					  	<li>Add rendering from the Add Memory Rendering tab</li>
-					  	<li>From the context menu</li>
-					  	<li>Using the key binding (Ctrl+N)</li>
-					  	<li>Add multiple renderings</li>
-					  </ul>				  
-				  </li>	  			
-				  <li>Remove Memory Rendering
-					  <ul>
-					  	<li>By closing the tab.</li>
-					  	<li>From the context menu.</li>					  	
-					  	<li>Using the key binding (Ctrl+W)</li>
-					  </ul>				  
-				  </li>	  	  
-				  <li>Renderings
-					  <ul>
-					  	<li>Make sure all the these renderings can be created:  Hex, Signed Integer, Unsigned Integer, ASCII, Hex Integer </li>
-					  	<li>Bring different renderings to the top.  Make sure that the tab label shows the address
-					  	of the memory block when it is brought to the top. </li>
-					  	<li>Switch between renderings using the key binding (Ctrl+PgUp / Ctrl+PgDn)
-					  	<li>Content of the renderings get updated after each step.</li>
-					  	<li>Renderings should mark memory that has changed.</li>
-					  	<li>Memory shows up as grey if the rendering does not have cache to compute changes. e.g hidden when the user is stepping</li>
-					  	<li>Scroll to end of buffer and make sure memory is reloaded.  Try with scrollbar and cursor.</li>
-					  	<li>Top index and curor in rendering are maintined after rendering update.</li>
-					  </ul>				  
-				  </li>	  	 		
-				  <li> Synchronization
+			<p><a href="#top">Back to top</a><br></p><p>&nbsp;</p>
+			<a name="Memory"></a>
+			<h2><b>Memory View</b></h2>
+				<p>
+					To test the Memory View, you will need the example.debug.memoryview sample.  You can get the sample from 
+					the "Advanced Tutorial" from EclipseCon 2007.
+				</p>
+				<h3>Add memory block</h3>
+					<ul>
+						<li>adding multiple memory blocks by using a comma delimited list. </li>
+						<li>adding a memory block with empty expression </li>
+						<li>adding a memory block using the key binding (Ctrl+Alt+M)</li>
+					</ul>
+				<h3>Remove memory block</h3>
+					<ul>
+						<li>remove single memory block</li>
+						<li>remove multiple memory blocks </li>
+						<li>remove all</li>
+					</ul>				  	  
+				<h3>Add Memory Rendering</h3>
+					<ul>
+						<li>default renderings get added automatically when a memory block is added</li>
+					  	<li>add rendering from the Add Memory Rendering tab</li>
+					  	<li>from the context menu</li>
+					  	<li>using the key binding (Ctrl+N)</li>
+					  	<li>add multiple renderings</li>
+					</ul>				  	  			
+				<h3>Remove Memory Rendering</h3>
+					<ul>
+					  	<li>by closing the tab.</li>
+					  	<li>from the context menu.</li>					  	
+					  	<li>using the key binding (Ctrl+W)</li>
+					</ul>				  	  	  
+				<h3>Renderings</h3>
+					<ul>
+					  	<li>make sure all the these renderings can be created:  Hex, Signed Integer, Unsigned Integer, ASCII, Hex Integer</li>
+					  	<li>bring different renderings to the top.  Make sure that the tab label shows the address
+					  		of the memory block when it is brought to the top</li>
+					  	<li>switch between renderings using the key binding (Ctrl+PgUp / Ctrl+PgDn)</li>
+					  	<li>content of the renderings get updated after each step</li>
+					  	<li>renderings should mark memory that has changed</li>
+					  	<li>memory shows up as grey if the rendering does not have cache to compute changes. e.g hidden when the user is stepping</li>
+					  	<li>scroll to end of buffer and make sure memory is reloaded.  Try with scrollbar and cursor</li>
+					  	<li>top index and curor in rendering are maintined after rendering update</li>
+					</ul>				  	 		
+				<h3>Synchronization</h3>
 				  	<ul>
-				  		<li>Toggle synchronization on and off</li>
-				  		<li>Scroll Bar</li>
-				  		<li>Table Cursor</li>
+				  		<li>toggle synchronization on and off</li>
+				  		<li>scroll Bar</li>
+				  		<li>table Cursor</li>
 				  		<li>Format...</li>
-				  	</ul>				  	
-				  </li>	
-				  <li>Reset to Base Address </li>
-				  <li>Go to Address:  Context Menu and CTRL+G.  Try different modes.</li>
-				  <li>Auto vs Manual Loading
-				  	<ul>
-				  		<li>Try auto loading</li>
-				  		<li>Try manual loading</li>
-				  		<li>Try different buffer sizes</li>
-				  		<li>Try page up and page down actions during manual loading. Try shortcut keys:  CTRL+sHIFT+> and CTRL+SHIFT+< </li>
-				  		<li>Make sure buffer size and loading preferences are preserved after workbench restart.</li>
 				  	</ul>
-				  </li>	  
-				  <li>Try swtiching between memory blocks:  Tree viewer and Switch Memory Monitor action</li>
-				  <li>Memory View Layout
+				 <h3>Addresses</h3>
+				 	<ul>
+				 		<li>reset to Base Address </li>
+				  		<li>go to Address:  Context Menu and CTRL+G.  Try different modes.</li>
+				  		<li>try swtiching between memory blocks:  Tree viewer and Switch Memory Monitor action</li>
+				 	</ul>				  	
+				<h3>Auto vs Manual Loading</h3>
 				  	<ul>
-				  		<li>Show and Hide Memory Monitors Pane</li>
-				  		<li>Show and Hide Renderings Pane</li>
-				  		<li>Try with having multiple memory views/li>
-				  		<li>Preferences are persisted across workbench restart</li>
-				  		<li>Vertical vs Horizontal Orientation</li>
+				  		<li>try auto loading</li>
+				  		<li>try manual loading</li>
+				  		<li>try different buffer sizes</li>
+				  		<li>try page up and page down actions during manual loading. Try shortcut keys:  CTRL+sHIFT+&gt; and CTRL+SHIFT+&lt; </li>
+				  		<li>make sure buffer size and loading preferences are preserved after workbench restart</li>
+				  	</ul>  
+				<h3>Memory View Layout</h3>
+				  	<ul>
+				  		<li>show and Hide Memory Monitors Pane</li>
+				  		<li>show and Hide Renderings Pane</li>
+				  		<li>try with having multiple memory views/li>
+				  		<li>preferences are persisted across workbench restart</li>
+				  		<li>vertical vs Horizontal Orientation</li>
 				  	</ul>
-				  </li>
-				</ul>
-				<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
-				<a name="Modules"></a>
-				<h2><b>Modules View</b></h2>
-				<ul>
-				  <li>Modules View can be populated with flexible hierarchy</li>
-				  <li>Find...</li>
-				  <li>Details pane can be popuated</li>
-				</ul>
-				<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
-				<a name="Registers"></a>
-				<h2><b>Registers View</b></h2>
-				<ul>
-				  <li>The Registers View can be populated with Register Group and Registers</li>
-				  <li>Register values get updated when their values change.</li>
-				  <li>Modify register values</li>
-				  <li>Find a register</li>
-				  <li>Copy registers</li>				  
-				  <li>Turn column on and off</li>
-				  <li>Show and hide columns</li>
-				  <li>Details pane shows details of registers</li>
-				  <li>Top index and expansion of registers are maintained after each step or switching stackframe.</li>
-				</ul>
-				<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>			
-				<a name="Breakpoint_Toggle_Types"></a>
-				<h2><b>Breakpoint Toggle Types</b></h2>
-				<ul>
-				  <li>Use the PDA example debugger to test this feature.  The PDA debugger supports different watchpoint 
-				      types which can be toggled in the editor and the variables view.</li>
-				  <li>Breakpoint toggle actions can have multiple targets (i.e. handlers) registered for them.  If a 
-				      debugger is installed, which registers multiple breakpoint targets, the Breakpoint Types sub-menu 
-				      appears in the Run menu.</li>
-				  <li>Select different breakpoint types.</li>
-				  <li>Toggle breakpoints in different locations (editor and view).</li>
-				  <li>Check that user-selected breakpoint type is persisted.</li>
-				</ul>
-				<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>			
+			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+			<a name="Modules"></a>
+			<h2><b>Modules View</b></h2>
+				<h3>General</h3>
+					<ul>
+					  	<li>Modules View can be populated with flexible hierarchy</li>
+					  	<li>Find...</li>
+					  	<li>details pane can be popuated</li>
+					</ul>
+			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+			<a name="Registers"></a>
+			<h2><b>Registers View</b></h2>
+				<h3>General</h3>
+					<ul>
+					  	<li>the Registers View can be populated with Register Group and Registers</li>
+					  	<li>register values get updated when their values change.</li>
+					  	<li>modify register values</li>
+					  	<li>find a register</li>
+					  	<li>copy registers</li>				  
+					  	<li>turn column on and off</li>
+					  	<li>show and hide columns</li>
+					  	<li>details pane shows details of registers</li>
+					  	<li>top index and expansion of registers are maintained after each step or switching stackframe.</li>
+					</ul>
+			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>			
+			<a name="Breakpoint_Toggle_Types"></a>
+			<h2><b>Breakpoint Toggle Types</b></h2>
+				<h3>General</h3>
+					<ul>
+					  	<li>use the PDA example debugger to test this feature.  The PDA debugger supports different watchpoint 
+					      types which can be toggled in the editor and the variables view.</li>
+					  	<li>breakpoint toggle actions can have multiple targets (i.e. handlers) registered for them.  If a 
+					      debugger is installed, which registers multiple breakpoint targets, the Breakpoint Types sub-menu 
+					      appears in the Run menu.</li>
+					  	<li>select different breakpoint types.</li>
+					  	<li>toggle breakpoints in different locations (editor and view).</li>
+					  	<li>check that user-selected breakpoint type is persisted.</li>
+					</ul>
+			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>			
 		</div>
 	</div>
 	<div id="rightcolumn">
