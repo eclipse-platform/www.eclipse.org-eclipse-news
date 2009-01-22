@@ -33,6 +33,7 @@
 	}
 
 	# Defined project nav bar links
+	$Nav->addCustomNav( "About This Project", "/projects/project_summary.php?projectid=platform.ant", "", 1);
 	$Nav->addNavSeparator("Project Home", 	"/eclipse/debug/index.php",			"_self", 1);
 	$Nav->addCustomNav("Platform Debug", 	"/eclipse/debug/platform/index.php",	"_self", 2);
 	$Nav->addCustomNav("JDT Debug", 	"/eclipse/debug/jdt/index.php",	"_self", 2);

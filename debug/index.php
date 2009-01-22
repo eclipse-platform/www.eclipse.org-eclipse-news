@@ -31,7 +31,7 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
-			<h2>Debug Project Overview</h2>
+			<h2><b>Debug Project Overview</b></h2>
 			
 			<p>The Eclipse Debug Project is not a single project unto itself, it is in fact comprised of 
 			two distinct sub-projects: Platform Debug and JDT Debug.</p>
