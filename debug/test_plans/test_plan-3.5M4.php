@@ -319,30 +319,31 @@
 		</div>
 		<div class="homeitem3col">
 			<a name="Java6"></a>
+			<p>&nbsp;</p>
 			<h2><b>Java 6.0 Features</b></h2>
 				<h3> All Instances</h3>
 					<ul>
-						<li style="">Should not be available when not debugging with 1.6 VM</li>
-						<li style="">Variables view popup</li>
-						<li style="">Java Outline view popup (type and constructors only)</li>
-						<li style="">Java editor popup (type name or constructor name selected)</li>
-						<li style="">Change number of instances to show on Heap walking preference page</li>
+						<li>should not be available when not debugging with 1.6 VM</li>
+						<li>Variables view popup</li>
+						<li>Java Outline view popup (type and constructors only)</li>
+						<li>Java editor popup (type name or constructor name selected)</li>
+						<li>change number of instances to show on Heap walking preference page</li>
 					</ul>
 				<h3>All References</h3>
 					<ul>
-						<li>Should not be available when not debugging with 1.6 VM</li>
+						<li>should not be available when not debugging with 1.6 VM</li>
 						<li>Variables view popup</li>
-						<li>In-line as variable in the variables view (change in view preferences and preference page)</li>
-						<li>Change number of references to show on Heap walking preference page</li>
+						<li>in-line as variable in the variables view (change in view preferences and preference page)</li>
+						<li>change number of references to show on Heap walking preference page</li>
 					</ul>
 				<h3>Force Early Return</h3>
 					<ul>
-						<li>Should not be available when not debugging with 1.6 VM</li>
-						<li>Works as an evaluation (from display and details pane)</li>
+						<li>should not be available when not debugging with 1.6 VM</li>
+						<li>works as an evaluation (from display and details pane)</li>
 						<li>Run menu and key binding</li>
 						<li>Java editor context menu</li>
 					</ul>
-				<p><a href="#top">Back to top</a><br><hr></p>
+				<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="Evaluations"></a>
 			<h2><b>Evaluations</b></h2>
 				<h3>Java 5.0 features</h3> 
@@ -357,7 +358,7 @@
 				    <ul>
 					    <li>Java Compilation Unit editor</li>
 					    <li>Java Classfile editor</li>
-					    <li>Display view</li>
+					    <li>Display View</li>
 					    <li>Details area</li>
 					    <li>Snippet editor</li>
 					    <li>in class files without attached source</li>
@@ -365,31 +366,31 @@
 				    </ul>
 				<h3>Inspect vs. Display</h3> 
 				    <ul>
-					    <li>Note that in the Display view and Snippet editor, &quot;Display&quot; prints the result in-line</li>
-					    <li>Everywhere else, popups are used to display/inspect the result</li>
+					    <li>note that in the Display view and Snippet editor, &quot;Display&quot; prints the result in-line</li>
+					    <li>everywhere else, popups are used to display/inspect the result</li>
 				    </ul>
 				<h3>General</h3>
 					<ul>
-						<li>Switch statements should be supported in evaluations</li>
-						<li>Use key bindings and context menus</li>
-					  	<li>Use code assist (key binding and context menu)</li>
-						<li>Persisting the result - i.e. move the result to the Display view or Expressions view</li>
-						<li>In a clean workspace, popups should size reasonable on the first use, after which the popup sizes are persisted and reused</li>
+						<li>switch statements should be supported in evaluations</li>
+						<li>use key bindings and context menus</li>
+					  	<li>use code assist (key binding and context menu)</li>
+						<li>persisting the result - i.e. move the result to the Display view or Expressions view</li>
+						<li>in a clean workspace, popups should size reasonable on the first use, after which the popup sizes are persisted and reused</li>
 					</ul>
-				<p><a href="#top">Back to top</a><br><hr></p>
+				<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="ContextLaunching"></a>
 			<h2><b>Context Launching</b></h2>
 				<h3> Resource properties page</h3>
 					<ul>
-						<li>Available on launchable resources</li>
-						<li>Only show listing of launch configurations that apply to selected resource</li>
-						<li>Create/delete/edit configuration</li>
-						<li>Changes to configurations are cancelable</li>
+						<li>available on launchable resources</li>
+						<li>only show listing of launch configurations that apply to selected resource</li>
+						<li>create/delete/edit configuration</li>
+						<li>changes to configurations are cancelable</li>
 					</ul>
 				<h3>Launching</h3>
 					<ul>
-						<li>Launch button(s) tooltip(s) should track selection changes (update as selections change)</li>
-						<li>Non-launchable resource should prompt to run the parent (if set to do so, toggle pref on Launching preference page)</li>
+						<li>launch button(s) tooltip(s) should track selection changes (update as selections change)</li>
+						<li>non-launchable resource should prompt to run the parent (if set to do so, toggle pref on Launching preference page)</li>
 						<li>
 							<p>
 								Running and debugging applications has been simplified 
@@ -415,462 +416,409 @@
 							</p>
 						</li>
 					</ul>
-				<p><a href="#top">Back to top</a><br><hr></p>
+				<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="Launch"></a>
 			<h2><b>Launch Options</b></h2>
 				<h3>Build before launch</h3> 
-					    <ul>
-						    <li> build is scoped to relevant projects</li>
-						    <li>Standard job progress dialog is displayed for the following cases. The &quot;Run in Background&quot; button is never present.</li> 
-					        <li>Launching in foreground (un-check &quot;Launch in background&quot; option on common tab)</li> 
-				            <li>Waiting for ongoing build to complete before launching</li>
-				            <li>Building before launching</li>
-						    <li>The progress dialog never appears when launching in the background
-					        <li>When waiting for an ongoing build to complete before launching a 
-					            node appears in the debug view in italics showing &quot;waiting for 
-					            build&quot;</li>
-					    </ul>
-				  </li>
+				    <ul>
+					    <li>build is scoped to relevant projects</li>
+					    <li>standard job progress dialog is displayed for the following cases. The &quot;Run in Background&quot; button is never present.</li> 
+				        <li>launching in foreground (un-check &quot;Launch in background&quot; option on common tab)</li> 
+			            <li>waiting for ongoing build to complete before launching</li>
+			            <li>building before launching</li>
+					    <li>the progress dialog never appears when launching in the background
+				        <li>when waiting for an ongoing build to complete before launching a 
+				            node appears in the debug view in italics showing &quot;waiting for 
+				            build&quot;</li>
+				    </ul>
 				<h3>Prompt to launch in face of compilation errors</h3> 
-					    <ul>
-						    <li>always/prompt</li>
-						    <li>prompt should tell you which project(s) contain errors</li>
-						    <li>irrelevant errors should not cause prompt (i.e. Ant errors should not 
-						        prevent Java launch)</li>
-					    </ul>
+				    <ul>
+					    <li>always/prompt</li>
+					    <li>prompt should tell you which project(s) contain errors</li>
+					    <li>irrelevant errors should not cause prompt (i.e. Ant errors should not 
+					        prevent Java launch)</li>
+				    </ul>
 				<h3>Prompt to launch in debug mode when breakpoints present</h3> 
-					    <ul>
-					    	<li>always/never/prompt</li>
-					    </ul>
+				    <ul>
+				    	<li>always/never/prompt</li>
+				    </ul>
 				<h3>General</h3>
 					<ul>
-				  		<li>Save dirty editors</li>
-				  		<li> Launch in foreground/background (controlled via common tab on launch config)</li>
+				  		<li>save dirty editors</li>
+				  		<li>launch in foreground/background (controlled via common tab on launch config)</li>
 					</ul>
-			<p><a href="#top">Back to top</a><br><hr></p>
+			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="Launch_Modes"></a>
 			<h2><b>Launch Modes</b></h2>
 				<p> For this test, you require the use of the launch modes test plugin available <a href="http://www.eclipse.org/eclipse/debug/misc/plugins/org.eclipse.example.mixedmode_1.2.0.jar">here</a>.</p>
 				<h3> Preferences Dialog</h3>
 					<ul>
-						<li>Ensure launch tool preferences page is available, even if there is no conflicting tooling. Page
+						<li>ensure launch tool preferences page is available, even if there is no conflicting tooling. Page
 						should be disabled with an explanation if no conflicting tooling</li>
-						<li>Ensure page can be searched for with tree viewer searching</li>
-						<li>Ensure there is a help topic for the page</li>
-						<li>With duplicate tooling select a variety of items in both viewers</li>
-						<li>Ensure once an item is selected in the preferred tooling viewer it cannot be unselected (checked)</li>
-						<li>Changing selected tooling without saving changes should not modify saved choices</li>
-						<li>Selecting preferred tooling from a quick launch or the launch configuration dialog should be reflected in the pref page (and changeable)</li>
+						<li>ensure page can be searched for with tree viewer searching</li>
+						<li>ensure there is a help topic for the page</li>
+						<li>with duplicate tooling select a variety of items in both viewers</li>
+						<li>ensure once an item is selected in the preferred tooling viewer it cannot be unselected (checked)</li>
+						<li>changing selected tooling without saving changes should not modify saved choices</li>
+						<li>selecting preferred tooling from a quick launch or the launch configuration dialog should be reflected in the pref page (and changeable)</li>
 					</ul>
 				<h3> Launch Configuration Dialog</h3>
 					<ul>
-						<li>Ensure incompatible modes are flagged correctly (check the widget on the Coverage Tab) with an error message and link</li>
-						<li>Link should present complete list of support mode combinations</li>
-						<li>Selection of mode set should update dialog and remove error</li>
-						<li>Duplicate delegates should be flagged correctly with error message and link</li>
-						<li>Link should present complete set of contributed launch tooling</li>
-						<li>Selection of tooling should remove error from dialog, and be reflected in the preference page</li>
+						<li>ensure incompatible modes are flagged correctly (check the widget on the Coverage Tab) with an error message and link</li>
+						<li>link should present complete list of support mode combinations</li>
+						<li>selection of mode set should update dialog and remove error</li>
+						<li>duplicate delegates should be flagged correctly with error message and link</li>
+						<li>link should present complete set of contributed launch tooling</li>
+						<li>selection of tooling should remove error from dialog, and be reflected in the preference page</li>
 					</ul>			
 				<h3> Launch History</h3>
 					<ul>
-						<li>Resolution dialog should be presented if duplicate tooling found and no choice has been made</li>
-						<li>Choice of tooling should allow launch to continue and be reflected in the preferences page</li>
-						<li>Canceling either choice from the resolution dialog should cancel the launch as well</li>
+						<li>resolution dialog should be presented if duplicate tooling found and no choice has been made</li>
+						<li>choice of tooling should allow launch to continue and be reflected in the preferences page</li>
+						<li>canceling either choice from the resolution dialog should cancel the launch as well</li>
 					</ul>
 				</ul>
-			<p><a href="#top">Back to top</a><br><hr></p>
+			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="LaunchConfigurations"></a>
 			<h2><b>Launch Configurations</b></h2>
-				<h3>Launch History / Favourites (toolbar drop down)</h3>
+				<h3>Launch History / Favourites</h3>
 					<ul>
-						<li>New launched configurations added to top of history</li>
-						<li>Launching from history changes order of history</li>
-						<li>Test the 'organize favorites' dialog</li>
-						<li>Configurations should not be in both history and favorites</li>
-						<li>Ctrl-clicking a configuration should open to launch configuration dialog</li>
-						<li>Ctrl-Shift-clicking a configuration should offer to remove it from the history/favorites</li>
+						<li>available in the toolbar drop-down</li>
+						<li>new launched configurations added to top of history</li>
+						<li>launching from history changes order of history</li>
+						<li>test the 'organize favorites' dialog</li>
+						<li>configurations should not be in both history and favorites</li>
+						<li>ctrl-clicking a configuration should open to launch configuration dialog</li>
+						<li>ctrl-Shift-clicking a configuration should offer to remove it from the history/favorites</li>
 					</ul>
 				<h3>Launch Configuration Dialog</h3>
 					<ul>
-						<li>Creating/Deleting configurations of different types</li>
-						<Li>Deleting multiple launch configurations, ensure selection is preserved/updated</li>
-						<li>Filtering configurations from tree</li>
-						<li>Test error handling, apply/revert buttons, and launching</li>
-						<li>Check if tabs make configuration dirty even if no changes are made</li>
+						<li>creating/Deleting configurations of different types</li>
+						<Li>deleting multiple launch configurations, ensure selection is preserved/updated</li>
+						<li>filtering configurations from tree</li>
+						<li>test error handling, apply/revert buttons, and launching</li>
+						<li>check if tabs make configuration dirty even if no changes are made</li>
 					</ul>
 				<h3>General</h3>
 					<ul>
-						<li>Importing and exporting of launch configurations through File > Import/Export</li>
-						<li>Using java search to find launch configurations that launch a class</li>
+						<li>importing and exporting of launch configurations through File > Import/Export</li>
+						<li>using java search to find launch configurations that launch a class</li>
 					</ul>
-			<p><a href="#top">Back to top</a><br><hr></p>
+			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="Debug"></a>
-			<h4>Debug View Management </h4>
-				<ul>
-				  <li>Switch to Debug perspective 
+			<h2><b>Debug View Management </b></h2>
+				<h3>Switch to Debug Perspective</h3> 
 				    <ul>
-				      <li>When launching (always/never/prompt)</li>
-				      <li>When suspending (always/never/prompt)</li>
+				      	<li>when launching (always/never/prompt)</li>
+				      	<li>when suspending (always/never/prompt)</li>
 				    </ul>
-				  </li>
-				  <li>Activate the Debug view when program suspends 
+				<h3>Activate The Debug View When Program Suspends</h3> 
 				    <ul>
-				      <li>Debug action set should also open automatically when a debug view is 
-				        opened</li>
-				      <li>Relevant debug views should automatically open when stack frame is selected 
-				        <ul>
-				          <li>In debug perspective by default</li>
-				          <li>In other perspectives as configured on the &quot;View Management&quot; 
-				            pref page (also available in Debug View drop down menu)</li>
-				          <li>Use PDA debugger to try debugging different languages in same perspective 
-				            (hope to have this available - example from draft debug article)</li>
-				          <li>Automatically opened views should close when debugging ends</li>
-				        </ul>
-				      </li>
+						<li>debug action set should also open automatically when a debug view is 
+						    opened</li>
+						<li>relevant debug views should automatically open when stack frame is selected 
+						<li>in debug perspective by default</li>
+						<li>in other perspectives as configured on the &quot;View Management&quot; 
+						    pref page (also available in Debug View drop down menu)</li>
+						<li>use PDA debugger to try debugging different languages in same perspective 
+						    (hope to have this available - example from draft debug article)</li>
+			          	<li>automatically opened views should close when debugging ends</li>
 				    </ul>
-				  </li>
-				  <li>Activate the workbench when a breakpoint is hit</li>
-				</ul>
-			<p><a href="#top">Back to top</a><br><hr></p>
+				 <h3>General</h3>
+				 	<ul>
+				 		<li>activate the workbench when a breakpoint is hit</li>
+				 	</ul>
+			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="Breakpoints"></a>
-			<h4>Breakpoints</h4>
-				<ul>
-				  <li>Breakpoint groups 
+			<h2><b>Breakpoints</b></h2>
+				<h3>Breakpoint Groups</h3> 
 				    <ul>
-				      <li>show breakpoints, breakpoint types, breakpoint working sets, files, 
-				        projects, resource working sets, advanced</li>
-				      <li>auto-add to default breakpoint working set</li>
-				      <li>drag &amp; drop between breakpoint working sets (move)</li>
-				      <li>copy &amp; paste between breakpoint working sets</li>
-				      <li>stratum breakpoints should group by stratum (eg. JSP breakpoints).</li>
+					    <li>show breakpoints, breakpoint types, breakpoint working sets, files, 
+					        projects, resource working sets, advanced</li>
+					    <li>auto-add to default breakpoint working set</li>
+					    <li>drag &amp; drop between breakpoint working sets (move)</li>
+					    <li>copy &amp; paste between breakpoint working sets</li>
+					    <li>stratum breakpoints should group by stratum (eg. JSP breakpoints).</li>
 				    </ul>
-				  </li>
-				  <li>Creation of different types of breakpoints (line, class load, method, exception, and watchpoint). 
+				<h3>Creation Of Breakpoints</h3> 
 				    <ul>
-				      <li>No breakpoints can be set in interfaces</li>
-				      <li>Breakpoints can be set in external source file (file from OS that does not belong to a project)</li>
-				      <li>Toggle Line breakpoints - double click in ruler, Run menu action (menu 
-				        &amp; keybinding), context menu in outline view</li>
-				      <li>Toggle Method breakpoints - double click in ruler, Run menu action (menu 
-				        &amp; keybinding), context menu in outline view</li>
-				      <li>Class Load Breakpoint - double click in ruler, Run menu action (menu 
-				        &amp; keybinding), context menu in outline view</li>
-				      <li>Toggle Watchpoints - double click in ruler, Run menu action (menu 
-				        &amp; keybinding), context menu in outline view
-				        <ul>
-				        	<li> watchpoint cannot appear on 'final' field</li>
-				        	<li> watchpoint cannot appear on 'static final' field</li>
-				        </ul>
-				        </li>
-				        <li>Exception Breakpoints - Run menu action, hyperlink from stack trace, breakpoints view</li>
-				      </ul>
-				  </li>
-				  <li>Refactorings</li>
-				  <ul>
-				  	<li>breakpoints should be updated if enclosing type is refactored</li>
-				  	<li>method breakpoints should be updated after refactoring method</li>
-				  	<li>line breakpoints should be updated if enclosing method refactored</li>
-				  	<li>watchpoint should be updated if field refactored</li>
-				  </ul>
-				  <li>Skip all breakpoints option (manual use of the toggle) 
-				    <ul>
-				      <li>groups and breakpoints should be rendered with &quot;skip&quot; (crossed 
-				        out) line</li>
+				    	<li>create: line, class load, method, exception, and watchpoint</li>
+					    <li>no breakpoints can be set in interfaces</li>
+					    <li>breakpoints can be set in external source file (file from OS that does not belong to a project)</li>
+					    <li>toggle Line breakpoints - double click in ruler, Run menu action (menu 
+					        &amp; keybinding), context menu in outline view</li>
+					    <li>toggle Method breakpoints - double click in ruler, Run menu action (menu 
+					        &amp; keybinding), context menu in outline view</li>
+					    <li>tlass Load Breakpoint - double click in ruler, Run menu action (menu 
+					        &amp; keybinding), context menu in outline view</li>
+					    <li>toggle Watchpoints - double click in ruler, Run menu action (menu 
+					        &amp; keybinding), context menu in outline view</li>
+					    <li>watchpoint cannot appear on 'final' field</li>
+					    <li>watchpoint cannot appear on 'static final' field</li>
+					    <li>exception Breakpoints - Run menu action, hyperlink from stack trace, breakpoints view</li>
 				    </ul>
-				  </li>
-				  <li>Import/Export 
+				<h3>Refactorings</h3>
+					<ul>
+						<li>breakpoints should be updated if enclosing type is refactored</li>
+						<li>method breakpoints should be updated after refactoring method</li>
+						<li>line breakpoints should be updated if enclosing method refactored</li>
+						<li>watchpoint should be updated if field refactored</li>
+					</ul>
+				<h3>Skip All Breakpoints Option</h3> 
 				    <ul>
-				      <li>export wizard is properly initialized based on breakpoint selection 
-				        in Breakpoints view</li>
-				      <li>wizard settings are persisted for subsequent import/export operations</li>
-				      <li>breakpoint working set information is exported and are re-created on 
-				        import</li>
-				      <li>existing breakpoints are updated with imported information (for example, 
-				        hit count, etc.)</li>
+				    	<li>not all shortcuts have support</li>
+				      	<li>groups and breakpoints should be rendered with &quot;skip&quot; (crossed out) line</li>
+				    </ul>
+				<h3>Import/Export</h3> 
+				    <ul>
+				      	<li>export wizard is properly initialized based on breakpoint selection in Breakpoints view</li>
+				      	<li>wizard settings are persisted for subsequent import/export operations</li>
+				      	<li>breakpoint working set information is exported and are re-created on import</li>
+				      	<li>existing breakpoints are updated with imported information (for example, hit count, etc.)</li>
 				        <li>breakpoint working sets are recreated properly</li>
 				    </ul>
-				  </li>
-				  <li>Option to open inspector on exception when an exception breakpoint is hit 
-				    <ul>
-				      <li>Java &gt; Debug: &quot;open popup when suspended on exception&quot;</li>
-				    </ul>
-				  </li>
-				  <li>Option to delete breakpoints vs. working set when &quot;delete&quot; pressed 
-				    on a working set
-				    <ul>
-				    	<li>choices are persisted</li>
-				    </ul>
-				    </li>
-				  <li>Preference for suspending Thread by default on newly created breakpoints</li>
-				</ul>
-			<p><a href="#top">Back to top</a><br><hr></p>
+				<h3>General</h3>
+					<ul>
+						<li>option to open inspector on exception when an exception breakpoint is hit 
+					  	<li>Java &gt; Debug: &quot;open popup when suspended on exception&quot;</li>
+					  	<li>option to delete breakpoints vs. working set when &quot;delete&quot; pressed on a working set</li>
+					  	<li>breakpoint option choices are properly persisted</li>
+					  	<li>preference for suspending Thread by default on newly created breakpoints</li>
+					</ul>
+			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="Step"></a>
-			<h4>Stepping Tests</h4>
-				<ul>
-				  <li>Run to Line
+			<h2><b>Stepping Tests</b></h2>
+				<h3>Run to Line</h3>
 				    <ul>
-				      <li>Context menu</li>
-				      <li>Run menu action and keybinding</li>
-				      <li>Classfile and Compilation unit editor</li>
-				      <li>Preference to &quot;skip breakpoints during run to line&quot; (on main 
-				        Run/Debug pref page)</li>
+				     	<li>context menu</li>
+				      	<li>run menu action and keybinding</li>
+				      	<li>classfile and Compilation unit editor</li>
+				      	<li>preference to &quot;skip breakpoints during run to line&quot; (on main Run/Debug pref page)</li>
 				    </ul>
-				  </li>
-				  <li> Step Into Selection
+				<h3> Step Into Selection</h3>
 				  	<ul>
-				  		<li>Run menu action and keybinding</li>
-				  		<li>Hyperlink action using Ctrl+Alt+Click</li>
+				  		<li>run menu action and keybinding</li>
+				  		<li>hyperlink action using Ctrl+Alt+Click</li>
 				  	</ul>
-				  </li>
-				  <li> Step Filters
+				<h3>Step Filters</h3>
 				  	<ul>
-				  		<li>Step filters on/off should affect stepping (no stepping within filtered types)</li>
-				  		<li>Toggle step filters action</li>
-				  		<li>Edit step filters via context menu, preference page</li>
-				  		<li>Persistence of step filters, view open/closure, workbench restart</li>
+				  		<li>step filters on/off should affect stepping (no stepping within filtered types)</li>
+				  		<li>toggle step filters action</li>
+				  		<li>edit step filters via context menu, preference page</li>
+				  		<li>persistence of step filters, view open/closure, workbench restart</li>
 				  	</ul>
-				  </li>
-				  <li>Drop To Frame</li>
+				<h3>Drop To Frame</h3>
+					<ul>
+						<li>drops to selected frame</li>
+						<li>cannot drop to frame of a native method</li>
+					</ul>
 				</ul>
-			<p><a href="#top">Back to top</a><br><hr></p>
+			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="Logical"></a> 
-			<h4>Logical Structures </h4>
-				<ul>
-				  <li>View variables with logical structures on/off</li>
-				  <li>Stepping with logical structures on/off</li>
-				  <li>Works for 
+			<h2><b>Logical Structures</b> </h2>
+				<h3>View Options</h3>
+					<ul>
+						<li>view variables with logical structures on/off</li>
+				  		<li>stepping with logical structures on/off</li>
+				  		<li>selectively turn off logical structures via context menu &quot;Show As &gt; ...&quot; </li>
+					</ul>
+				<h3>Compatible Structures</h3> 
 				    <ul>
-				      <li>java.util.Collection (flat list)</li>
-				      <li>java.util.Map (list of map entries)</li>
-				      <li>java.util.Map$Entry (key/value)</li>
+				      	<li>java.util.Collection (flat list)</li>
+				      	<li>java.util.Map (list of map entries)</li>
+				      	<li>java.util.Map$Entry (key/value)</li>
 				    </ul>
-				  </li>
-				  <li>Selectively turn off logical structures via context menu &quot;Show As &gt; 
-				    ...&quot; </li>
-				  <li>User defined logical structures 
+				<h3>User Defined Logical Structures</h3> 
 				    <ul>
-				      <li>more than one structure for a type 
-				        <ul>
-				          <li>all appear in &quot;Show As &gt; ..&quot; menu</li>
-				          <li>can choose between structures properly</li>
-				        </ul>
-				      </li>
-				      <li>structures persist restore properly across workbench invocations</li>
-				      <li>structures with compilation errors</li>
-				      <li>structures with runtime errors</li>
-				      <li>when two different types (A,B) share the same possible logical structures, 
-				        their enabled (selected) structure is shared (i.e. if you select &quot;show 
-				        A as X&quot; then B will also show as X.</li>
+					    <li>more than one structure for a type:	all choices appear in &quot;Show As &gt; ..&quot; menu and the user
+					          	can choose between structures properly</li>
+				      	<li>structures persist restore properly across workbench invocations</li>
+				      	<li>structures with compilation errors</li>
+				      	<li>structures with runtime errors</li>
+				      	<li>when two different types (A,B) share the same possible logical structures, 
+				        	their enabled (selected) structure is shared (i.e. if you select &quot;show 
+				        	A as X&quot; then B will also show as X.</li>
 				    </ul>
-				  </li>
-				  <li>Import/Export logical structures</li>
-				</ul>
-			<p><a href="#top">Back to top</a><br><hr></p>
+				<h3>Import/Export Logical Structures</h3>
+					<ul>
+						<li>Import is available</li>
+						<li>Logical structure import succeeds</li>
+					</ul>
+			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="Watch"></a>
-			<h4>Watch Items</h4>
-				<ul>
-				  <li>Create
+			<h2><b>Watch Items</b></h2>
+				<h3>Creating Watch items</h3>
 				    <ul>
-				      <li>From context menu &quot;Add Watch Expression&quot;</li>
-				      <li>From variables view context menu &quot;Watch&quot;</li>
-				      <li>Dragging variables from variables view to expressions view</li>
-				      <li>Dragging text to expressions view</li>
+				      	<li>from context menu &quot;Add Watch Expression&quot;</li>
+				     	<li>from variables view context menu &quot;Watch&quot;</li>
+				     	<li>dragging variables from variables view to expressions view</li>
+				     	<li>dragging text to expressions view</li>
 				    </ul>
-				  </li>
-				  <li>Persist</li>
-				  <li>Reordering of expressions view by dragging and dropping</li>
-				  <li>Enable/disable</li>
-				  <li>Update while stepping</li>
-				  <li>Update when selecting a different stack frame</li>
-				  <li>Errors appear as children of a watch expression (compilation errors, runtime 
-				    errors) </li>
-				</ul>
-			<p><a href="#top">Back to top</a><br><hr></p>
+				 <h3>General</h3>
+				 	<ul>
+				 		<li>persist</li>
+				  		<li>reordering of expressions view by dragging and dropping</li>
+				  		<li>unable/disable</li>
+				  		<li>update while stepping</li>
+				  		<li>update when selecting a different stack frame</li>
+				  		<li>errors appear as children of a watch expression (compilation errors, runtime errors) </li>
+				 	</ul>
+			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="Context"></a>
-			<h4>Context Menu Launching</h4>
-				<ul>
-				  <li>Run/Debug from the context and top level Run/Debug cascade menus. Note that 
-				    before a shortcut's property tester is loaded, it will appear in the context 
-				    menu by default. For example, the Java application shortcut requires the &quot;hasMain&quot; 
-				    tester from the Java debug plug-in, and thus, until the plug-in is loaded, 
-				    the shortcut will appear on all Java files whether they have a main method 
-				    or not. 
-				    <ul>
-				      <li>Java Applications (with main, without main, compilation unit, type, 
-				        method, classfile, package, project)</li>
-				      <li>Java Applets</li>
-				      <li>JUnit tests</li>
-				      <li>Ant build, Ant build... (build file, targets in outline and Ant view)</li>
+			<h2><b>Context Menu Launching</b></h2>
+				<h3>Run/Debug Menu</h3>
+					<ul>
+						<li>from the context and top level Run/Debug cascade menus. Note that 
+				    		before a shortcut's property tester is loaded, it will appear in the context 
+				    		menu by default. For example, the Java application shortcut requires the &quot;hasMain&quot; 
+				    		tester from the Java debug plug-in, and thus, until the plug-in is loaded, 
+				    		the shortcut will appear on all Java files whether they have a main method 
+				    		or not. 
+				      	<li>Java Applications (with main, without main, compilation unit, type, method, classfile, package, project)</li>
+				      	<li>Java Applets</li>
+				      	<li>JUnit tests</li>
+				      	<li>Ant build, Ant build... (build file, targets in outline and Ant view)</li>
 				    </ul>
-				  </li>
-				  <li>The context menu appears in
+				<h3>Context Menu Availability</h3>
 				    <ul>
-				      <li>Resource navigator</li>
-				      <li>Package explorer</li>
-				      <li>Outline view</li>
-				      <li>Editor</li>
+				      	<li>resource navigator</li>
+				      	<li>package explorer</li>
+				      	<li>outline view</li>
+				      	<li>editor</li>
 				    </ul>
-				  </li>
-				  <li>Use keybindings to launch (ALT-Shift-D/X) 
+				<h3>Use keybindings To Launch (ALT-Shift-D/X)</h3>
 				    <ul>
-				      <li>an active editor</li>
-				      <li>a selection in an outline/navigator</li>
+				      	<li>an active editor</li>
+				      	<li>a selection in an outline/navigator</li>
 				    </ul>
-				  </li>
-				  <li>Ctrl+click on a launch shortcut (not all shortcuts have support) 
+				<H3>Ctrl-Click On A Launch Shortcut</h3> 
 				  	<ul>
-						<li>Should select the most recently used configuration for the launchable class</li>
-						<li>If no recently used configurations exist, the type should be selected</li>
+				  		<li>not all shortcuts have support</li>
+						<li>should select the most recently used configuration for the launchable class</li>
+						<li>if no recently used configurations exist, the type should be selected</li>
 				  	</ul>
-				  </li>
 				</ul>
-			<p><a href="#top">Back to top</a><br><hr></p>
+			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="Classpaths"></a>
-			<h4>Runtime Classpaths</h4>
-				<ul>
-				  <li>The default classpath should track a project's buildpath</li>
-				  <li>Using a non-default bootpath 
+			<h2><b>Runtime Classpaths</b></h2>
+				<h3>Default Classpath</h3>
+					<ul>
+						<li>the default classpath should track a project's buildpath</li>
+						<li>option to only include exported items in runtime classpath (by default, all items are included).</li>	
+					</ul>
+				<h3>Non-Default Bootpath</h3> 
 				    <ul>
-				      <li>Prepending and appending to the default bootpath</li>
-				      <li>Using an explicit bootpath (i.e. without prepend/append)</li>
+				      	<li>prepending and appending to the default bootpath</li>
+				      	<li>using an explicit bootpath (i.e. without prepend/append)</li>
 				    </ul>
-				  </li>
-				  <li>Using a non-default classpath 
+				<h3>Non-Default Classpath</h3> 
 				    <ul>
-				      <li>different types of entries</li>
-				      <li>new entry type - String Variables</li>
+				      	<li>different types of entries</li>
+				      	<li>new entry type - String Variables</li>
 				    </ul>
-				  </li>
-				  <li>Option to only include exported items in runtime classpath (by default, 
-				    all items are included).</li>
-				</ul>
-			<p><a href="#top">Back to top</a><br><hr></p>
+			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="Source"></a>
-			<h4>Source Lookup</h4>
-				<ul>
-				  <li>The default source lookup path should track changes in the default buildpath 
-				    (when using a default runtime classpath). If a non-default runtime classpath 
-				    is used, the default source lookup path should track the runtime classpath.</li>
-				  <li>Searching for duplicate source files</li>
-				  <li>Modifying the source lookup path when a source file cannot be found</li>
-				  <li>Types of entries on the source lookup path 
+			<h2><b>Source Lookup</b></h2>
+				<h3>Default Source Lookup Path</h3>
+					<ul>
+						<li>the default source lookup path should track changes in the default buildpath 
+					    	(when using a default runtime classpath). If a non-default runtime classpath 
+					    	is used, the default source lookup path should track the runtime classpath.</li>
+					  	<li>searching for duplicate source files</li>
+					  	<li>modifying the source lookup path when a source file cannot be found</li>
+					  	<li>multiple source roots in archives</li>
+					</ul>
+				<h3>Entry Types</h3> 
 				    <ul>
-				      <li>Internal archives</li>
-				      <li>External archives</li>
-				      <li>Java projects</li>
-				      <li>Java classpath variables</li>
-				      <li>Directory (external)</li>
-				      <li>Folder (in the workspace)</li>
-				      <li>Java Library (JRE, required plug-ins, etc).</li>
+				      	<li>Internal archives</li>
+				      	<li>External archives</li>
+				      	<li>Java projects</li>
+				      	<li>Java classpath variables</li>
+				      	<li>Directory (external)</li>
+				      	<li>Folder (in the workspace)</li>
+				      	<li>Java Library (JRE, required plug-ins, etc).</li>
 				    </ul>
-				  </li>
-				  <li>Multiple source roots in archives</li>
-				</ul>
-			<p><a href="#top">Back to top</a><br><hr></p>
+			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="Monitors"></a>
-			<h4>Threads &amp; Monitors &amp; Thread Groups </h4>
-				<ul>
-				  <li>Monitor information is shown in the debug view 
+			<h2><b>Threads &amp; Monitors &amp; Thread Groups </b></h2>
+				<h3>Monitor Information In The Debug View</h3> 
 				    <ul>
-				      <li>No information/errors for VMs that do not support monitor information</li>
-				      <li>Monitor information appears for suspended threads</li>
-				      <li>Monitor information is not displayed for running threads</li>
-				      <li>Ensure valid deadlocks are detected 
-				        <ul>
-				          <li>threads are rendered red (preference color), and have deadlock overlay</li>
-				        </ul>
-				      </li>
-				      <li>Locks support resume/terminate</li>
+				      	<li>no information/errors for VMs that do not support monitor information</li>
+				      	<li>monitor information appears for suspended threads</li>
+				      	<li>monitor information is not displayed for running threads</li>
+				      	<li>ensure valid deadlocks are detected 
+				        <li>threads are rendered red (preference color), and have deadlock overlay</li>
+				      	<li>locks support resume/terminate</li>
 				    </ul>
-				  </li>
-				  <li>Thread groups
+				<h3>Thread Groups</h3>
 				    <ul>
-				      <li>Thread groups can be displayed in debug view by turning on the &quot;Show 
-				        Thread Groups&quot; option in the view menu</li>
-				        <li>Thread groups support terminate</li>
+				      	<li>thread groups can be displayed in debug view by turning on the &quot;Show Thread Groups&quot; option in the view menu</li>
+				        <li>thread groups support terminate</li>
 				    </ul>
-				  </li>
-				</ul>
-			<p><a href="#top">Back to top</a><br><hr></p>
+			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="Hot"></a>
-			<h4>Hot Code Replace </h4>
-				<ul>
-				  <li>Valid HCR 
+			<h2><b>Hot Code Replace </b></h2>
+				<h3>Valid HCR</h3> 
 				    <ul>
-				      <li>method changes (existing)</li>
-				      	<ul>
-				      		<li>changes to statements inside method work on SUN and IBM vms</li>
-				      		<li>HCR fails adding/removing/changing signature of method on SUN vm</li>
-				      		<li>HCR allows methods to be added for IBM J9 vm</li>
-				      	</ul>
-				      <li>changes in existing instance variable initializer</li>
-				      <li>affected frames are automatically popped (unless top frame or native 
-				        method on the stack)</li>
-				      <li>change method in declared inner type</li>
-				      <li>change method in anonymous inner type</li>
-				      <li>default and non-default packages</li>
+				      	<li>method changes (existing)</li>
+			      		<li>changes to statements inside method work on SUN and IBM vms</li>
+			      		<li>HCR fails adding/removing/changing signature of method on SUN vm</li>
+			      		<li>HCR allows methods to be added for IBM J9 vm</li>
+				      	<li>changes in existing instance variable initializer</li>
+				      	<li>affected frames are automatically popped (unless top frame or native method on the stack)</li>
+				      	<li>change method in declared inner type</li>
+				      	<li>change method in anonymous inner type</li>
+				      	<li>default and non-default packages</li>
 				    </ul>
-				  </li>
-				  <li>Manually drop to frame
+				<h3>Manually Drop To Frame</h3>
 				    <ul>
-				      <li>works in all methods except last method on stack</li>
-				      <li>a native method cannot be dropped (and thus a method above a native 
-				        cannot be dropped/re-entered)</li>
+				      	<li>works in all methods except last method on stack</li>
+				      	<li>a native method cannot be dropped (and thus a method above a native cannot be dropped/re-entered)</li>
 				    </ul>
-				  </li>
-				</ul>
-			<p><a href="#top">Back to top</a><br><hr></p>
+			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="JREs"></a>
-			<h4>Installed JREs </h4>
-				<ul>
-				  <li>Changing the default JRE triggers a build if the default JRE is referenced 
-				    by a project.</li>
-				  <li>JREs allow a javadoc location to be set per library in the JRE 
-				    <ul>
-				      <li>Changing the javadoc location on a JRE updates the buildpath javadoc 
-				        location</li>
-				      <li>Changing the javadoc location on a buildpath (JRE library) updates the 
-				        JRE</li>
-				    </ul>
-				  </li>
-				  <li>Changing a javadoc location or source attachment does not causes an explicit 
-				    bootpath to be used when launching with that JRE.</li>
-				  <li>Copy a JRE definition</li>
-				  <li>Import/export of JRE preferences</li>
+			<h2><b>Installed JREs </b></h2>
+				<h3>Javadoc Locations</h3>
+					<ul>
+						<li>JREs allow a javadoc location to be set per library in the JRE</li> 
+					    <li>changing the javadoc location on a JRE updates the buildpath javadoc location</li>
+					    <li>changing the javadoc location on a buildpath (JRE library) updates the JRE</li>
+					    <li>changing a javadoc location or source attachment does not causes an explicit bootpath to be used when launching with that JRE.</li>
+				   	</ul>
+				<h3>General</h3>
+					<ul>
+						<li>copy a JRE definition</li>
+				  		<li>import/export of JRE preferences</li>
+						<li>changing the default JRE triggers a build if the default JRE is referenced by a project.</li>
+					</ul>
 				</ul>
-			<p><a href="#top">Back to top</a><br><hr></p>
+			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="EEs" id="EEs"></a>
-			<h4>Execution Environments </h4>
-				<ul>
-				  <li>Specifying a build path via EE 
+			<h2><b>Execution Environments </b></h2>
+				<h3>Specify a Build Path</h3> 
 				    <ul>
-				      <li>Changing the default JRE for an EE updates buildpath</li>
+				      	<li>changing the default JRE for an EE updates buildpath</li>
 				    </ul>
-				  </li>
-				  <li>Specifying a runtime JRE via EE 
+				<h3>Specify a Runtime</h3> 
 				    <ul>
-				      <li>Changing the default JRE for an EE updates the default and/or selected EE runtime JRE</li>
+				      	<li>changing the default JRE for an EE updates the default and/or selected EE runtime JRE</li>
 				    </ul>
-				  </li>
-				  <li> Modifying Access Rules 
+				<h3> Modifying Access Rules</h3> 
 				  	<ul>
-				  		<li>Adding an access rule should cause a rebuild (if auto-build is enabled)</li>
-				  		<li>Ensure that the access rules defined in a system library are not editable/removable</li>
-				  		<li>Add a new forbidden rule, ensure accesses to forbidden types is flagged as an error</li>
-				  		<li>Add a new discouraged rule, ensure access to discouraged types is flagged as a warning</li>
-				  		<li>Ensure access rules can be removed</li>
+				  		<li>adding an access rule should cause a rebuild (if auto-build is enabled)</li>
+				  		<li>ensure that the access rules defined in a system library are not editable/removable</li>
+				  		<li>add a new forbidden rule, ensure accesses to forbidden types is flagged as an error</li>
+				  		<li>add a new discouraged rule, ensure access to discouraged types is flagged as a warning</li>
+				  		<li>ensure access rules can be removed</li>
 				  		<li>
 				  	</ul>
-				  </li>
-				  <li> Over-riding Access Rules
+				<h3> Over-riding Access Rules</h3>
 				  	<ul>
 				  		<li> Create a rule that over-rides a system library rule, and ensure it works</li>
 				  	</ul>
-				  </li>
-				</ul>
-			<p><a href="#top">Back to top</a><br><hr></p>
+			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="String"></a>
-			<h4>String Variables </h4>
+			<h2><b>String Variables </b></h2>
 				<ul>
 				  <li>Use String Variables in launch configs 
 				    <ul>
@@ -879,9 +827,9 @@
 				  </li>
 				  <li>String Variable selection dialog</li>
 				</ul>
-			<p><a href="#top">Back to top</a><br><hr></p>
+			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="Console"></a>
-			<h4>Console </h4>
+			<h2><b>Console </b></h2>
 				<ul>
 				  <li>Show when output to standard out/err</li>
 				  <li>Console title becomes bold when content changes (but not if on top/auto activated)</li>
@@ -936,9 +884,9 @@
 				  	</ul>
 				  </li>
 				</ul>
-			<p><a href="#top">Back to top</a><br><hr></p>
+			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="Variables"></a>
-			<h4>Variables</h4>
+			<h2><b>Variables</b></h2>
 				<ul>
 				  <li>Find Variable support and key-binding</li>
 				  <li>Changed variables appear red (preference color) when stepping</li>
@@ -982,9 +930,9 @@
 				    </ul>
 				  </li>
 				</ul>
-			<p><a href="#top">Back to top</a><br><hr></p>
+			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="Refactoring"></a>
-			<h4>Refactoring</h4>
+			<h2><b>Refactoring</b></h2>
 				<ul>
 				  <li>launch configuration main type is updated after type rename, type move, 
 				    package rename <br>
@@ -1006,9 +954,9 @@
 				    </ul>
 				  </li>
 				</ul>
-			<p><a href="#top">Back to top</a><br><hr></p>
+			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="Applets"></a>
-			<h4>Applets</h4>
+			<h2><b>Applets</b></h2>
 				<ul>
 				  <li>Main tab 
 				    <ul>
@@ -1039,9 +987,9 @@
 				    </ul>
 				  </li>
 				</ul>
-			<p><a href="#top">Back to top</a><br><hr></p>
+			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="Remote"></a>
-			<h4>Remote Debugging</h4>
+			<h2><b>Remote Debugging</b></h2>
 				<ul>
 				  <li>connect to a remote VM 
 				    <ul>
@@ -1061,9 +1009,9 @@
 				  <li>terminate should only be enabled when the config specifies that terminate 
 				    is supported</li>
 				</ul>
-				<p><a href="#top">Back to top</a><br><hr></p>
+				<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 				<a name="JSP"></a>
-				<h4>JSP Example </h4>
+				<h2><b>JSP Example </b></h2>
 				<ul>
 				  <li>Try JSP debugging example, as documented in the &quot;org.eclipse.jdt.ui.examples.javafamily&quot; 
 				    plug-in ReleaseNotes.html. The instructions are in the section titled &quot;Debugging 
@@ -1082,9 +1030,9 @@
 				    </ul>
 				  </li>
 				</ul>
-				<p><a href="#top">Back to top</a><br><hr></p>
+				<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 				<a name="STRESS"></a>
-				<h4>Stress Tests </h4>
+				<h2><b>Stress Tests </b></h2>
 				<ul>
 				  <li>Stepping with many threads, while breakpoints are hit on other threads
 				    <ul>
@@ -1125,11 +1073,11 @@
 				    </ul>
 				  </li>						  			  		  
 				</ul>
-				<p><a href="#top">Back to top</a><br></p>
+				<p><a href="#top">Back to top</a><br></p><p>&nbsp;</p>
 			<a name="Non-Java-Testing"></a>
 			<h2><b>Non-Java Testing</b></h2>
 				<a name="Memory"></a>
-				<h4>Memory View</h4>
+				<h2><b>Memory View</b></h2>
 				To test the Memory View, you will need the example.debug.memoryview sample.  You can get the sample from 
 				the "Advanced Tutorial" from EclipseCon 2007.
 				<ul>
@@ -1206,17 +1154,17 @@
 				  	</ul>
 				  </li>
 				</ul>
-				<p><a href="#top">Back to top</a><br><hr></p>
+				<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 				<a name="Modules"></a>
-				<h4>Modules View</h4>
+				<h2><b>Modules View</b></h2>
 				<ul>
 				  <li>Modules View can be populated with flexible hierarchy</li>
 				  <li>Find...</li>
 				  <li>Details pane can be popuated</li>
 				</ul>
-				<p><a href="#top">Back to top</a><br><hr></p>
+				<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 				<a name="Registers"></a>
-				<h4>Registers View</h4>
+				<h2><b>Registers View</b></h2>
 				<ul>
 				  <li>The Registers View can be populated with Register Group and Registers</li>
 				  <li>Register values get updated when their values change.</li>
@@ -1228,9 +1176,9 @@
 				  <li>Details pane shows details of registers</li>
 				  <li>Top index and expansion of registers are maintained after each step or switching stackframe.</li>
 				</ul>
-				<p><a href="#top">Back to top</a><br><hr></p>				
+				<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>			
 				<a name="Breakpoint_Toggle_Types"></a>
-				<h4>Breakpoint Toggle Types</h4>
+				<h2><b>Breakpoint Toggle Types</b></h2>
 				<ul>
 				  <li>Use the PDA example debugger to test this feature.  The PDA debugger supports different watchpoint 
 				      types which can be toggled in the editor and the variables view.</li>
@@ -1241,7 +1189,7 @@
 				  <li>Toggle breakpoints in different locations (editor and view).</li>
 				  <li>Check that user-selected breakpoint type is persisted.</li>
 				</ul>
-				<p><a href="#top">Back to top</a><br><hr></p>				
+				<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>			
 		</div>
 	</div>
 	<div id="rightcolumn">
