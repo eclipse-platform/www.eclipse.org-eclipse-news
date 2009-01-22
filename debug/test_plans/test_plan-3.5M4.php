@@ -9,7 +9,7 @@
 
 	#*****************************************************************************
 	#
-	# Copyright (c) 2008 IBM Corporation and others.
+	# Copyright (c) 2008, 2009 IBM Corporation and others.
  	# All rights reserved. This program and the accompanying materials
  	# are made available under the terms of the Eclipse Public License v1.0
  	# which accompanies this distribution, and is available at
@@ -318,9 +318,8 @@
 			</div>
 		</div>
 		<div class="homeitem3col">
-			<h2><b>Feature Testing</b></h2>
 			<a name="Java6"></a>
-			<h3>Java 6.0 Features</h3>
+			<h2><b>Java 6.0 Features</b></h2>
 				<h3> All Instances</h3>
 					<ul>
 						<li style="">Should not be available when not debugging with 1.6 VM</li>
@@ -345,7 +344,7 @@
 					</ul>
 				<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Evaluations"></a>
-			<h3>Evaluations</h3>
+			<h2><b>Evaluations</b></h2>
 				<h3>Java 5.0 features</h3> 
 				    <ul>
 						<li>Generic types</li>
@@ -379,7 +378,7 @@
 					</ul>
 				<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="ContextLaunching"></a>
-			<h3>Context Launching</h3>
+			<h2><b>Context Launching</b></h2>
 				<h3> Resource properties page</h3>
 					<ul>
 						<li>Available on launchable resources</li>
@@ -418,7 +417,7 @@
 					</ul>
 				<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Launch"></a>
-			<h3>Launch Options</h3>
+			<h2><b>Launch Options</b></h2>
 				<h3>Build before launch</h3> 
 					    <ul>
 						    <li> build is scoped to relevant projects</li>
@@ -450,7 +449,7 @@
 					</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Launch_Modes"></a>
-			<h3>Launch Modes</h3>
+			<h2><b>Launch Modes</b></h2>
 				<p> For this test, you require the use of the launch modes test plugin available <a href="http://www.eclipse.org/eclipse/debug/misc/plugins/org.eclipse.example.mixedmode_1.2.0.jar">here</a>.</p>
 				<h3> Preferences Dialog</h3>
 					<ul>
@@ -481,30 +480,29 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="LaunchConfigurations"></a>
-			<h4>Launch Configurations</h4>
-				<ul>
-					<li>Launch History / Favourites (toolbar drop down)</li>
-						<ul>
-							<li>New launched configurations added to top of history</li>
-							<li>Launching from history changes order of history</li>
-							<li>Test the 'organize favorites' dialog</li>
-							<li>Configurations should not be in both history and favorites</li>
-							<li>Ctrl-clicking a configuration should open to launch configuration dialog</li>
-							<li>Ctrl-Shift-clicking a configuration should offer to remove it from the history/favorites</li>
-						</ul>
-					</li>
-					<li>Importing and exporting of launch configurations through File > Import/Export</li>
-					<li>Using java search to find launch configurations that launch a class</li>
-					<li>Launch Configuration Dialog
-						<ul>
-							<li>Creating/Deleting configurations of different types</li>
-							<Li>Deleting multiple launch configurations, ensure selection is preserved/updated</li>
-							<li>Filtering configurations from tree</li>
-							<li>Test error handling, apply/revert buttons, and launching</li>
-							<li>Check if tabs make configuration dirty even if no changes are made</li>
-						</ul>
-					</li>
-				</ul>
+			<h2><b>Launch Configurations</b></h2>
+				<h3>Launch History / Favourites (toolbar drop down)</h3>
+					<ul>
+						<li>New launched configurations added to top of history</li>
+						<li>Launching from history changes order of history</li>
+						<li>Test the 'organize favorites' dialog</li>
+						<li>Configurations should not be in both history and favorites</li>
+						<li>Ctrl-clicking a configuration should open to launch configuration dialog</li>
+						<li>Ctrl-Shift-clicking a configuration should offer to remove it from the history/favorites</li>
+					</ul>
+				<h3>Launch Configuration Dialog</h3>
+					<ul>
+						<li>Creating/Deleting configurations of different types</li>
+						<Li>Deleting multiple launch configurations, ensure selection is preserved/updated</li>
+						<li>Filtering configurations from tree</li>
+						<li>Test error handling, apply/revert buttons, and launching</li>
+						<li>Check if tabs make configuration dirty even if no changes are made</li>
+					</ul>
+				<h3>General</h3>
+					<ul>
+						<li>Importing and exporting of launch configurations through File > Import/Export</li>
+						<li>Using java search to find launch configurations that launch a class</li>
+					</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="Debug"></a>
 			<h4>Debug View Management </h4>
