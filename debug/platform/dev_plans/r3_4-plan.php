@@ -32,7 +32,7 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
-			<h3>Overall 3.4 Plan</h3>
+			<h2><b>Overall 3.4 Plan</b></h2>
 			
 			<h4>Overall Themes for Platform Debug:</h4>
 	        

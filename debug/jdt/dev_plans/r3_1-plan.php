@@ -31,7 +31,7 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
-			<h3>Overall 3.1 Plan</h3>
+			<h2><b>Overall 3.1 Plan</b></h2>
 			
 			<h4>Overall Themes for JDT Debug:</h4>
 	        	<ul>
@@ -136,7 +136,7 @@
 			</blockquote>
 		</div>
 		<div class="homeitem3col">
-		<h3>3.1 Development Effort - Milestone 7 (Friday, May 13th)</h3>
+		<h2><b>3.1 Development Effort - Milestone 7 (Friday, May 13th)</b></h2>
 			<blockquote>
     			<b>Built to last</b>
 		          <ul>
@@ -155,7 +155,7 @@
 			</blockquote>
 		</div>
 		<div class="homeitem3col">
-		<h3>3.1 Development Effort - Milestone 6 (Friday, April 1st)</h3>
+		<h2><b>3.1 Development Effort - Milestone 6 (Friday, April 1st)</b></h2>
 			<blockquote>
 				<b>Built to Last</b>
 		          <ul>
@@ -180,7 +180,7 @@
 			</blockquote>
 		</div>
 		<div class="homeitem3col">
-		<h3>3.1 Development Effort - Milestone 5 (Friday, February 18th)</h3>
+		<h2><b>3.1 Development Effort - Milestone 5 (Friday, February 18th)</b></h2>
 			<blockquote>
 				<b>Support for J2SE5 features</b>
 		          <ul>
@@ -200,7 +200,7 @@
 			</blockquote>
 		</div>
 		<div class="homeitem3col">
-		<h3>3.1 Development Effort - Milestone 4 (Friday, December 17th)</h3>
+		<h2><b>3.1 Development Effort - Milestone 4 (Friday, December 17th)</b></h2>
 			<blockquote>
 				<b>Built to last</b>
 		          <ul>
@@ -231,7 +231,7 @@
 			</blockquote>
 		</div>
 		<div class="homeitem3col">
-		<h3>3.1 Development Effort - Milestone 3 (Friday, November 5th)</h3>
+		<h2><b>3.1 Development Effort - Milestone 3 (Friday, November 5th)</b></h2>
 			<blockquote>
 				<b>Ease of use reviews/enhancements</b>
 		          <ul>
@@ -262,7 +262,7 @@
 			</blockquote>
 		</div>
 		<div class="homeitem3col">
-		<h3>3.1 Development Effort - Milestone 2 (Friday, September 24th)</h3>
+		<h2><b>3.1 Development Effort - Milestone 2 (Friday, September 24th)</b></h2>
 			<blockquote>
 				<b>Background communication</b>
 		          <ul>
@@ -293,7 +293,7 @@
 			</blockquote>
 		</div>
 		<div class="homeitem3col">
-		<h3>Bug Resolution</h3>
+		<h2><b>Bug Resolution</b></h2>
 			<ul>
 				<li><a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=JDT&component=Debug&version=3.1&version=3.1.1&version=3.1.2&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Bug+Number&field0-0-0=noop&type0-0-0=noop&value0-0-0=" target="_blank">Bug Fixes Released to 3.1</a></li>
 			</ul>

@@ -56,7 +56,7 @@
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
 			<a name="uptotheminute"></a>
-			<h3>Up to the Minute Build Notes</h3>
+			<h2><b>Up to the Minute Build Notes</b></h2>
 				<p>
 				A connection to CVS could not be opened for streaming, so you'll have to look the old way by 
 				clicking the following link: <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.debug.core/buildnotes_platform-debug.html" target="_blank">here</a>
@@ -64,7 +64,7 @@
 		</div>
 		<div class="homeitem3col">
 			<a name="previous"></a>
-			<h3>Build Notes For Previous Releases</h3>
+			<h2><b>Build Notes For Previous Releases</b></h2>
 			<ul>
 				<li><a href="../../scripts/build_notes_proxy.php">2.0 Release</a></li>
 				<li><a href="../../scripts/build_notes_proxy.php">2.1 Release</a></li>

@@ -31,7 +31,7 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
-			<h3>Overall 3.0 Plan</h3>
+			<h2><b>Overall 3.0 Plan</b></h2>
 			
 			<h4>Overall Themes for JDT Debug:</h4>
 	        	<ul>
@@ -153,7 +153,7 @@
 	      	</blockquote>
 		</div>
 		<div class="homeitem3col">
-		<h3>3.0 Development Effort - Milestone 9 (Friday, May 7th)</h3>
+		<h2><b>3.0 Development Effort - Milestone 9 (Friday, May 7th)</b></h2>
 			<blockquote>
 				<b>Source Lookup</b> 
 		          <ul>
@@ -181,7 +181,7 @@
 			</blockquote>
 		</div>
 		<div class="homeitem3col">
-		<h3>3.0 Development Effort - Milestone 8 (Friday, March 26th)</h3>
+		<h2><b>3.0 Development Effort - Milestone 8 (Friday, March 26th)</b></h2>
 			<blockquote>
 				<b>Scalability Issues</b> 
 		          <ul>
@@ -225,7 +225,7 @@
 			</blockquote>
 		</div>
 		<div class="homeitem3col">
-		<h3>3.0 Development Effort - Milestone 7 (Friday, February 13th)</h3>
+		<h2><b>3.0 Development Effort - Milestone 7 (Friday, February 13th)</b></h2>
 			<blockquote>
 				<b>Scalability Issues</b> [1 day, Jared Burns] 
 		          <ul>
@@ -253,7 +253,7 @@
 			</blockquote>
 		</div>
 		<div class="homeitem3col">
-		<h3>3.0 Development Effort - Milestone 6 (Friday, December 19th)</h3>
+		<h2><b>3.0 Development Effort - Milestone 6 (Friday, December 19th)</b></h2>
 			<blockquote>
 				<img src="/eclipse/debug/images/ok.gif" width="10" height="10"> <b>Migrate to Equinox (OSGi) 
 		          Runtime </b><br><br>
@@ -268,7 +268,7 @@
 			</blockquote>
 		</div>
 		<div class="homeitem3col">
-		<h3>3.0 Development Effort - Milestone 5 (Friday, November 21st)</h3>
+		<h2><b>3.0 Development Effort - Milestone 5 (Friday, November 21st)</b></h2>
 			<blockquote>
 				<b><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> Remove Dependency on Xerces 
 		          plug-in</b>
@@ -281,7 +281,7 @@
 			</blockquote>
 		</div>
 		<div class="homeitem3col">
-		<h3>3.0 Development Effort - Milestone 4 (Friday, October 10th)</h3>
+		<h2><b>3.0 Development Effort - Milestone 4 (Friday, October 10th)</b></h2>
 			<blockquote>
 				<b>Classpath</b> [Darin S] [5 days] 
 		          <ul>
@@ -312,7 +312,7 @@
 			</blockquote>
 		</div>
 		<div class="homeitem3col">
-		<h3>3.0 Development Effort - Milestone 3 (Friday, August 29th)</h3>
+		<h2><b>3.0 Development Effort - Milestone 3 (Friday, August 29th)</b></h2>
 			<blockquote>
 				<b>Re-work Breakpoint Properties dialog</b> [1 person week] [Jared B] 
 		          <ul>
@@ -351,7 +351,7 @@
 			</blockquote>
 		</div>
 		<div class="homeitem3col">
-		<h3>3.0 Development Effort - Milestone 2 (Friday, July 18th)</h3>
+		<h2><b>3.0 Development Effort - Milestone 2 (Friday, July 18th)</b></h2>
 			<blockquote>
 				<b>Re-work Breakpoint Properties dialog</b> [1 person week] 
 		          <ul>
@@ -370,7 +370,7 @@
 			</blockquote>
 		</div>
 		<div class="homeitem3col">
-		<h3>3.0 Development Effort - Milestone 1</h3>
+		<h2><b>3.0 Development Effort - Milestone 1</b></h2>
 			<blockquote>
 				<b>JSR045</b> [Luc B] 
 		          <ul>
@@ -384,7 +384,7 @@
 			</blockquote>
 		</div>
 		<div class="homeitem3col">
-		<h3>Bug Resolution</h3>
+		<h2><b>Bug Resolution</b></h2>
 			<ul>
 				<li><a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=JDT&component=Debug&version=3.0&version=3.0.1&version=3.0.2&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Bug+Number&field0-0-0=noop&type0-0-0=noop&value0-0-0=" target="_blank">Bug Fixes Released to 3.0</a></li>
 			</ul>

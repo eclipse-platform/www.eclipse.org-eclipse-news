@@ -32,7 +32,7 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
-			<h3>Overall 3.0 Plan</h3>
+			<h2><b>Overall 3.0 Plan</b></h2>
 			
 			<h4>Overall Themes for Platform Debug:</h4>
 	      	<ul>
@@ -237,7 +237,7 @@
       		</blockquote>
 		</div>
 		<div class="homeitem3col">
-			<h3>3.0 Development Effort - Milestone 9 (Friday, May 7th)</h3>
+			<h2><b>3.0 Development Effort - Milestone 9 (Friday, May 7th)</b></h2>
 			<blockquote>
 			<b> Scalability Issues</b>
   				<ul>
@@ -276,7 +276,7 @@
    			</blockquote>
 		</div>
 		<div class="homeitem3col">
-			<h3>History - Milestone 8 (Friday, March 26th)</h3>
+			<h2><b>History - Milestone 8 (Friday, March 26th)</b></h2>
 			<blockquote>
 			<b> Scalability Issues </b>
 		          <ul>
@@ -325,7 +325,7 @@
 	        </blockquote>
 		</div>
 		<div class="homeitem3col">
-			<h3>History - Milestone 7 (Friday, February 13th)</h3>
+			<h2><b>History - Milestone 7 (Friday, February 13th)</b></h2>
 			<blockquote>
 			<b> Scalability Issues</b>
 	          <ul>
@@ -358,7 +358,7 @@
 	        </blockquote>
 		</div>
 		<div class="homeitem3col">
-			<h3>History - Milestone 6 (Friday, December 19)</h3>
+			<h2><b>History - Milestone 6 (Friday, December 19)</b></h2>
 			<blockquote>
 			<b> Equniox (OSGi) Runtime</b>
 				<ul>
@@ -392,7 +392,7 @@
 			</blockquote>
 		</div>
 		<div class="homeitem3col">
-			<h3>History - Milestone 5 (Friday, November 21st)</h3>
+			<h2><b>History - Milestone 5 (Friday, November 21st)</b></h2>
 			<blockquote>
 			<b> Xerces plug-in</b>
 				<ul>
@@ -454,7 +454,7 @@
 	        </blockquote>
 		</div>
 		<div class="homeitem3col">
-			<h3>History - Milestone 4 (Friday, October 10th)</h3>
+			<h2><b>History - Milestone 4 (Friday, October 10th)</b></h2>
 			<blockquote>
 			<b> Generic Console </b>[Darin S] [10 days] [<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=37263">bug 
 		          37263</a>]
@@ -527,7 +527,7 @@
 	          </blockquote>
 		</div>
 		<div class="homeitem3col">
-			<h3>History - Milestone 3 (Friday, August 29th)</h3>
+			<h2><b>History - Milestone 3 (Friday, August 29th)</b></h2>
 			<blockquote>
 			<b> Generic Console</b> [2 person weeks] [Darin W]
 		          <ul>
@@ -573,7 +573,7 @@
 	       </blockquote>
 		</div>
 		<div class="homeitem3col">
-			<h3>History - Milestone 2 (Friday, July 18th)</h3>
+			<h2><b>History - Milestone 2 (Friday, July 18th)</b></h2>
 			<blockquote>
 			<b> Generic Console</b> [4 person weeks] 
 	          <ul>
@@ -591,7 +591,7 @@
 	       </blockquote>
 		</div>
 		<div class="homeitem3col">
-			<h3>History - Milestone 1</h3>
+			<h2><b>History - Milestone 1</b></h2>
 			<blockquote>
 			<b> Extensible Launch Modes</b> [Darin W]  
 	          <ul>
@@ -630,7 +630,7 @@
 	       </blockquote>
 		</div>
 		<div class="homeitem3col">
-			<h3>Bug Resolution</h3>
+			<h2><b>Bug Resolution</b></h2>
 			<blockquote>
 				<a href="https://bugs.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=Platform&component=Debug&target_milestone=2.1.1&target_milestone=3.0&target_milestone=3.0+M1&target_milestone=3.0+M2&target_milestone=3.0+M3&target_milestone=3.0+M4&target_milestone=3.0+M5&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=VERIFIED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&namedcmd=2.0.1+Fixed%27n+Verified&newqueryname=&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0="> Fixes 
 		          released in 3.0</a></li>

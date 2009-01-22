@@ -39,7 +39,7 @@
 		<h1>$pageTitle</h1>
 		<p>To assist in testing, you can download our <a href="/eclipse/debug/misc/ManualTestingPrograms.zip">manual testing programs</a> (Last updated 21 May 2008).  The zip file contains an Eclipse project with a variety of simple programs to test different functions of the debug framework.  Simply download the zip file and inside Eclipse, select Import... &gt; Existing projects into workspace and select the archive file.</p>		
 		<div class="homeitem3col">
-			<h3>3.5 Test Plans</h3>
+			<h2><b>3.5 Test Plans</b></h2>
 			<a name="3-5_testing"></a>
 			<ul>
 				<li><a href="/eclipse/debug/test_plans/test_plan-3.5.php">3.5</a></li>
@@ -47,7 +47,7 @@
 			</ul>
 		</div>
 		<div class="homeitem3col">
-			<h3>3.4 Test Plans</h3>
+			<h2><b>3.4 Test Plans</b></h2>
 			<a name="3-4_testing"></a>
 			<ul>
 				<li><a href="/eclipse/debug/test_plans/test_plan-3.4M2.php">3.4M2</a></li>
@@ -62,7 +62,7 @@
 			</ul>
 		</div>
 		<div class="homeitem3col">
-			<h3>3.3 Test Plans</h3>
+			<h2><b>3.3 Test Plans</b></h2>
 			<a name="3-3_testing"></a>
 			<ul>
 				<li><a href="/eclipse/debug/test_plans/test_plan-3.3.php">3.3</a></li>
@@ -70,28 +70,28 @@
 			</ul>
 		</div>
 		<div class="homeitem3col">
-			<h3>3.2 Test Plans</h3>
+			<h2><b>3.2 Test Plans</b></h2>
 			<a name="3-2_testing"></a>
 			<ul>
 				<li><a href="/eclipse/debug/test_plans/test_plan-3.2.php">3.2</a></li>
 			</ul>
 		</div>
 		<div class="homeitem3col">
-			<h3>3.1 Test Plans</h3>
+			<h2><b>3.1 Test Plans</b></h2>
 			<a name="3-1_testing"></a>
 			<ul>
 				<li><a href="/eclipse/debug/test_plans/test_plan-3.1.php">3.1</a></li>
 			</ul>
 		</div>
 		<div class="homeitem3col">
-			<h3>3.0 Test Plans</h3>
+			<h2><b>3.0 Test Plans</b></h2>
 			<a name="3-0_testing"></a>
 			<ul>
 				<li><a href="/eclipse/debug/test_plans/test_plan-3.0.php">3.0</a></li>
 			</ul>
 		</div>
 		<div class="homeitem3col">
-			<h3>2.1 Test Plans</h3>
+			<h2><b>2.1 Test Plans</b></h2>
 			<a name="2-1_testing"></a>
 			<ul>
 				<li><a href="/eclipse/debug/test_plans/test_plan-2.1.php">2.1</a></li>

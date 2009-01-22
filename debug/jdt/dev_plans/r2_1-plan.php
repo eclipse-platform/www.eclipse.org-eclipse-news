@@ -31,7 +31,7 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
-			<h3>Overall 2.1 Plan</h3>
+			<h2><b>Overall 2.1 Plan</b></h2>
 			
 			<h4>Overall Themes for JDT Debug:</h4>
 	        <ul>
@@ -229,7 +229,7 @@
 	      	</blockquote>
 		</div>
 		<div class="homeitem3col">
-		<h3>2.1 Development Effort - Milestone 5 (February 7th, 2003)</h3>
+		<h2><b>2.1 Development Effort - Milestone 5 (February 7th, 2003)</b></h2>
 			<blockquote>
 		        <b>Architecture</b>
 		          <ul>
@@ -295,7 +295,7 @@
 			</blockquote>
 		</div>
 		<div class="homeitem3col">
-		<h3>Bug Resolution</h3>
+		<h2><b>Bug Resolution</b></h2>
 		<ul>
 			<li><a href="http://dev.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=JDT&component=Debug&target_milestone=2.1&target_milestone=2.1+M1&target_milestone=2.1+M2&target_milestone=2.1+M3&target_milestone=2.1+M4&target_milestone=2.1+M5&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=VERIFIED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&namedcmd=2.0.1+Fixed%27n+Verified&newqueryname=&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">Fixes 
           released to 2.1</a></li>

@@ -31,7 +31,7 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
-			<h3>Overall 3.2 Plan</h3>
+			<h2><b>Overall 3.2 Plan</b></h2>
 			
 			<h4>Overall Themes for JDT Debug:</h4>
 	        <ul>
@@ -98,7 +98,7 @@
 			</blockquote>
 		</div>
 		<div class="homeitem3col">
-		<h3>3.2 Development Effort - Milestone 6 (Friday, March 31th)</h3>
+		<h2><b>3.2 Development Effort - Milestone 6 (Friday, March 31th)</b></h2>
 			<blockquote>
 	        		<ul>
 	        			<li>Support classpath variables for native library locations (bug 125082)</li>
@@ -107,7 +107,7 @@
 			</blockquote>
 		</div>
 		<div class="homeitem3col">
-		<h3>3.2 Development Effort - Milestone 5 (Friday, February 17th)</h3>
+		<h2><b>3.2 Development Effort - Milestone 5 (Friday, February 17th)</b></h2>
 			<blockquote>
         		<ul>
         			<li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> API to query a VM install's system 
@@ -129,7 +129,7 @@
 			</blockquote>
 		</div>
 		<div class="homeitem3col">
-		<h3>3.2 Development Effort - Milestone 4 (Friday, December 16th)</h3>
+		<h2><b>3.2 Development Effort - Milestone 4 (Friday, December 16th)</b></h2>
 			<blockquote>
 	        		<ul>
 	        			<li><img SRC="progress.gif"> Enhance the Java class path tab to simplify 
@@ -152,7 +152,7 @@
 			</blockquote>
 		</div>
 		<div class="homeitem3col">
-		<h3>3.2 Development Effort - Milestone 3 (Friday, November 4th)</h3>
+		<h2><b>3.2 Development Effort - Milestone 3 (Friday, November 4th)</b></h2>
 			<blockquote>
 	        		<ul>
 	        			<li><img src="/eclipse/debug/images/ok.gif" width="10" height="10"> Java breakpoint refactoring 
@@ -165,7 +165,7 @@
 			</blockquote>
 		</div>
 		<div class="homeitem3col">
-		<h3>3.2 Development Effort - Milestone 2 (Friday, September 23rd)</h3>
+		<h2><b>3.2 Development Effort - Milestone 2 (Friday, September 23rd)</b></h2>
 			<blockquote>
 	        		<ul>
 	        			<li><img src="/eclipse/debug/images/defer.gif"> Support to create Java 
@@ -178,7 +178,7 @@
 			</blockquote>
 		</div>
 		<div class="homeitem3col">
-		<h3>Bug Resolution</h3>
+		<h2><b>Bug Resolution</b></h2>
 			<ul>
 				<li><a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=JDT&component=Debug&version=3.2&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Bug+Number&field0-0-0=noop&type0-0-0=noop&value0-0-0=" target="_blank">Bug Fixes Released to 3.2</a></li>
 			</ul>

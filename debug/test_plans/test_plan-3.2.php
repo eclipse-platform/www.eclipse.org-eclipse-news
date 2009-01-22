@@ -31,12 +31,12 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
-			<h3>Testers</h3>
+			<h2><b>Testers</b></h2>
 			<p>Committers: Kevin Barnes, Darin Wright, Samantha Chan, Michael Rennie</p>
 			<p>Community: Anyone who wants to help</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>JRE Grid</h3>
+			<h2><b>JRE Grid</b></h2>
 			<p>The following JREs should be considered when testing. Committers have been 
 			  assigned a JRE and platform to test on. The community can chose any JRE and 
 			  platform. </p>
@@ -82,7 +82,7 @@
 		</div>
 		<div class="homeitem3col">
 			<a name="top"></a>
-			<h3>Test Grid</h3>
+			<h2><b>Test Grid</b></h2>
 			<div align="center">
 			<table width="80%" border="1">
 			  <tr> 
@@ -221,7 +221,7 @@
 			</div>
 		</div>
 		<div class="homeitem3col">
-			<h3>Feature Testing</h3>
+			<h2><b>Feature Testing</b></h2>
 			<a name="Evaluations"></a>
 			<h4>Evaluations </h4>
 				<ul>
@@ -792,7 +792,7 @@
 				</ul>
 				<p><a href="#top">Back to top</a><br><hr></p>
 				<a name="JSP"></a>
-				<h3>JSP Example </h3>
+				<h2><b>JSP Example </b></h2>
 				<ul>
 				  <li>Try JSP debugging example, as documented in the &quot;org.eclipse.jdt.ui.examples.javafamily&quot; 
 				    plug-in ReleaseNotes.html. The instructions are in the section titled &quot;Debugging 

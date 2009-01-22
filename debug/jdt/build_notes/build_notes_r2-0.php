@@ -33,13 +33,13 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
-			<h3>Summary of API Changes</h3>
+			<h2><b>Summary of API Changes</b></h2>
 			<p>
 			None
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>July ??, 2002 - Problem Reports Fixed</h3>
+			<h2><b>July ??, 2002 - Problem Reports Fixed</b></h2>
 			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=21099">21099</a>: HCR failed dialog - default control is wrong<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=18722">18722</a>: Projects re-build when not required<br>
@@ -53,20 +53,20 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>June 24, 2002 - Problem Reports Fixed</h3>
+			<h2><b>June 24, 2002 - Problem Reports Fixed</b></h2>
 			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=20370">20370</a>: NullPointerException getting thread group name.<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=20789">20789</a>: Method entry breakpoints too slow<br>
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>June 21, 2002 - Problem Reports Fixed</h3>
+			<h2><b>June 21, 2002 - Problem Reports Fixed</b></h2>
 			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=20745">20745</a>: Broken extension point links for org.eclipse.debug.ui<br>
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>June 20, 2002 - Problem Reports Fixed</h3>
+			<h2><b>June 20, 2002 - Problem Reports Fixed</b></h2>
 			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=18797">18797</a>: Evaluation that hits breakpoint confuses debugging<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=19182">19182</a>: Disconnect debug session crashes WebSphere<br>
@@ -74,7 +74,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>June 19, 2002 - Problem Reports Fixed</h3>
+			<h2><b>June 19, 2002 - Problem Reports Fixed</b></h2>
 			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=20304">20304</a>: Eval: NPE when evaluate a snippet in anonymous type declared in an instance creation instruction<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=20468">20468</a>: Installed JRE: Source attachment set to non existing location<br>
@@ -88,7 +88,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>June 12, 2002 - Problem Reports Fixed</h3>
+			<h2><b>June 12, 2002 - Problem Reports Fixed</b></h2>
 			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=19880">19880</a>: Launcher configuration doesn't show up, NullPointerException in getMemento()<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=19610">19610</a>: EventRequestManagerImpl.findRequest doesn't handle VMDeathEvent<br>
@@ -96,7 +96,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>June 11, 2002 - Problem Reports Fixed</h3>
+			<h2><b>June 11, 2002 - Problem Reports Fixed</b></h2>
 			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=19412">19412</a>: more than one JRE on classpath<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=19604">19604</a>: Changing JRE JARs triggers useless build<br>
@@ -107,7 +107,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>June 10, 2002 - Problem Reports Fixed</h3>
+			<h2><b>June 10, 2002 - Problem Reports Fixed</b></h2>
 			<ul>
 				<li>API change on IVMConnector.<br>See <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=19569">19569</a>: Auxiliary processes started by IVMConnector cannot be registered<br></li>
 			</ul>
@@ -129,7 +129,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>June 7, 2002 - Problem Reports Fixed</h3>
+			<h2><b>June 7, 2002 - Problem Reports Fixed</b></h2>
 			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=18100">18100</a>: Internal error in Lauch Configurations dialog<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=18650">18650</a>: Scrapbook doesn't launch<br>
@@ -160,7 +160,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>June 1, 2002 - Problem Reports Fixed</h3>
+			<h2><b>June 1, 2002 - Problem Reports Fixed</b></h2>
 			<li>API Change - return values can now be null for the following:
 				<ul>
 				<li>AbstractJavaLaunchConfigurationDelegate#getBootpath(..) - can now return null to 
@@ -186,7 +186,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>May 31, 2002 - Problem Reports Fixed</h3>
+			<h2><b>May 31, 2002 - Problem Reports Fixed</b></h2>
 			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=11947">11947</a>: NPE in JavaUISourceLocator when remote debugging<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=18115">18115</a>: IllegalArgumentException: Duplicate VM: 0<br>
@@ -203,7 +203,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>May 30, 2002, - Problem Reports Fixed</h3>
+			<h2><b>May 30, 2002, - Problem Reports Fixed</b></h2>
 			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=17838">17838</a>: Error correction for conditional breakpoint allows enter on empty String<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=17321">17321</a>: Problem in Installed JREs preferences<br>
@@ -231,7 +231,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>May 29, 2002, - Problem Reports Fixed</h3>
+			<h2><b>May 29, 2002, - Problem Reports Fixed</b></h2>
 			<ul>
 			<li>The default working directory for Java Applications is now the associated project folder
 			 in the local file system.</li>
@@ -259,7 +259,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>May 28, 2002, - Problem Reports Fixed</h3>
+			<h2><b>May 28, 2002, - Problem Reports Fixed</b></h2>
 			<ul>
 			<li>The "Java Launch" action set has been removed and integrated into the debug platform's
 			new extension point - "org.eclipse.debug.ui.launchShortcuts". The actions are now available
@@ -267,7 +267,7 @@
 			</ul>
 		</div>
 		<div class="homeitem3col">
-			<h3>May 27, 2002, - Problem Reports Fixed</h3>
+			<h2><b>May 27, 2002, - Problem Reports Fixed</b></h2>
 			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=16340">16340</a>: Fix deprecations<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=16351">16351</a>: Inspect and Display incorrectly enabled in the display view<br>
@@ -282,7 +282,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>May 21, 2002, - Problem Reports Fixed</h3>
+			<h2><b>May 21, 2002, - Problem Reports Fixed</b></h2>
 			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=12740">12740</a>: Wierd behavior when debugging standalone SWT example<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=16037">16037</a>: JavaArgumentsTab layout<br>
@@ -305,7 +305,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>May 19, 2002, - Problem Reports Fixed</h3>
+			<h2><b>May 19, 2002, - Problem Reports Fixed</b></h2>
 			<ul>
 			<li>The actions used to create and launch a Java application have been moved to their
 			 own action set named "Java Launch". The action set will be visible in new Java or Debug perspectives.</li>
@@ -356,7 +356,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>May 14, 2002, - Problem Reports Fixed</h3>
+			<h2><b>May 14, 2002, - Problem Reports Fixed</b></h2>
 			<ul>
 			<li>API for IVMConnector has changed. A vm connector now accepts a map of arguments from which to
 			establish a remote connection to a VM.</li>
@@ -409,7 +409,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>May 8, 2002, - Problem Reports Fixed</h3>
+			<h2><b>May 8, 2002, - Problem Reports Fixed</b></h2>
 			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=14836">14836</a>: BIDI:Scrapbook editor: bad display of adjacent Hebrew or Arabic syntactic units<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=12823">12823</a>: Hard to find JRE for launching java applications<br>
@@ -447,7 +447,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>April 30, 2002, - Problem Reports Fixed</h3>
+			<h2><b>April 30, 2002, - Problem Reports Fixed</b></h2>
 			<ul>
 			<li>Environment variables have been removed from Java launch configurations. A java program
 			cannot access system environment variables, thus the ability to set them provides little benefit.</li>
@@ -488,7 +488,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>April 23, 2002, - Problem Reports Fixed</h3>
+			<h2><b>April 23, 2002, - Problem Reports Fixed</b></h2>
 			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8966">8966</a>: Debug Perspective is not automatically select the servlet thread<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=14273">14273</a>: AbstractJavaLaunchConfigurationDelegate has misspelled method<br>
@@ -522,7 +522,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>April 18, 2002, - Problem Reports Fixed</h3>
+			<h2><b>April 18, 2002, - Problem Reports Fixed</b></h2>
 			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8362">8362</a>: Usability: Add exception computes hierarchy on each key stroke<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=13792">13792</a>: Performance improvement when changing JRE<br>
@@ -551,7 +551,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>April 11, 2002, - Problem Reports Fixed</h3>
+			<h2><b>April 11, 2002, - Problem Reports Fixed</b></h2>
 			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=12665">12665</a>: ClassNotLoaded JDI exception during conditional breakpoint<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=13423">13423</a>: HCR failure notifications aren't being sent to the UI<br>
@@ -563,7 +563,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>April 9, 2002, - Problem Reports Fixed</h3>
+			<h2><b>April 9, 2002, - Problem Reports Fixed</b></h2>
 			<ul>
 			<li>Breakpoints can now be configured (enabled, disabled, etc.) from the ruler in java editor</li>
 			</ul>
@@ -598,7 +598,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>April 2, 2002, - Problem Reports Fixed</h3>
+			<h2><b>April 2, 2002, - Problem Reports Fixed</b></h2>
 			<ul>
 			<li>An extension point that represents different kinds of connections to remote VMs. See org.eclipse.jdt.launching\doc\org_eclipse_jdt_launching_vmConnectors.html</li>
 			</ul>
@@ -614,7 +614,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>March 28, 2002, - Problem Reports Fixed</h3>
+			<h2><b>March 28, 2002, - Problem Reports Fixed</b></h2>
 			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=3977">3977</a>: Launching from projects with binary/jars (1GFDBYC)<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=12209">12209</a>: AST Eval engine API not fully implemented<br>
@@ -623,7 +623,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>March 26, 2002, - Problem Reports Fixed</h3>
+			<h2><b>March 26, 2002, - Problem Reports Fixed</b></h2>
 			<ul>
 			<li>Scrapbook pages can set imports to provide context for the page</li>
 			</ul>
@@ -656,7 +656,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>March 18, 2002, - Problem Reports Fixed</h3>
+			<h2><b>March 18, 2002, - Problem Reports Fixed</b></h2>
 			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=10130">10130</a>: Launch Configurations "navigation tree" should start expanded<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=9756">9756</a>: Debug/Run history menu items should be disabled if no history yet<br>
@@ -682,7 +682,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>March 12, 2002, - Problem Reports Fixed</h3>
+			<h2><b>March 12, 2002, - Problem Reports Fixed</b></h2>
 			<ul>
 			<li>Java Watchpoints can be added from the variables view or the expression view.
 			 This feature was previously only available from the outliner</li>
@@ -727,7 +727,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>March 5, 2002, - Problem Reports Fixed</h3>
+			<h2><b>March 5, 2002, - Problem Reports Fixed</b></h2>
 			<ul>
 			<li>Java launch configurations have been moved from the UI plug-in (org.eclipse.jdt.debug.ui)
 			 to the "headless" launching plug-in (org.eclipse.jdt.launching). This facilitates headless,
@@ -773,7 +773,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>February 28, 2002, - Problem Reports Fixed</h3>
+			<h2><b>February 28, 2002, - Problem Reports Fixed</b></h2>
 			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=10218">10218</a>: breakpoint change mechanism<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=1695">1695</a>: DCR: support process/thread specific breakpoints (1GIYJTQ)<br>
@@ -799,7 +799,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>February 26, 2002, - Problem Reports Fixed</h3>
+			<h2><b>February 26, 2002, - Problem Reports Fixed</b></h2>
 			<ul>
 			<li>Launch configurations allow execution directory to be specified</li>
 			<li>Launch histories are maintained for both launching styles during the transition.</li>
@@ -821,7 +821,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>February 14, 2002, - Problem Reports Fixed</h3>
+			<h2><b>February 14, 2002, - Problem Reports Fixed</b></h2>
 			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=9668">9668</a>: Method breakpoints enabled for source methods<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=9456">9456</a>: AssertionFailedException attempting to draw overlays for breakpoints<br>
@@ -834,7 +834,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>February 12, 2002, - Problem Reports Fixed</h3>
+			<h2><b>February 12, 2002, - Problem Reports Fixed</b></h2>
 			<ul>
 			<li>The Java debug options preference page is now presented as part of the Java preferences</li>
 			<li>Basic icons and there support has been removed</li>
@@ -881,7 +881,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>February 5, 2002, - Problem Reports Fixed</h3>
+			<h2><b>February 5, 2002, - Problem Reports Fixed</b></h2>
 			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8666">8666</a>: TimeoutException during terminate<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8616">8616</a>: Feature: Suspend all threads option<br>
@@ -923,7 +923,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>January 29, 2002, - Problem Reports Fixed</h3>
+			<h2><b>January 29, 2002, - Problem Reports Fixed</b></h2>
 			<ul>
 			<li>Method entry and exit breakpoints can be set on binary methods. See 
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=7859">7859</a>: Feature: method exit breakpoints<br></li>
@@ -957,7 +957,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>January 24, 2002, - Problem Reports Fixed</h3>
+			<h2><b>January 24, 2002, - Problem Reports Fixed</b></h2>
 			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8388">8388</a>: NPE from HCR Manager<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8055">8055</a>: HCR failure: drop fails in following code<br>
@@ -970,7 +970,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>January 23, 2002, - Problem Reports Fixed</h3>
+			<h2><b>January 23, 2002, - Problem Reports Fixed</b></h2>
 			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=8157">8157</a>: ProjectBuildWatcher is too invasive<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=3847">3847</a>: Runing a program fails with closed project on classpath. (1GEWKFO)<br>
@@ -978,7 +978,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>January 22, 2002, - Problem Reports Fixed</h3>
+			<h2><b>January 22, 2002, - Problem Reports Fixed</b></h2>
 			<ul>
 			<li>Java breakpoint creation has changed to not require the use of Java elements.
 			Unfortunately, the resulting changes invalidates breakpoints created previous to this build.
@@ -1035,7 +1035,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>January 15, 2002, - Problem Reports Fixed</h3>
+			<h2><b>January 15, 2002, - Problem Reports Fixed</b></h2>
 			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6548">6548</a>: Missing mnemonics in Debug preferences<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=7298">7298</a>: Drop to frame is always disabled<br>
@@ -1069,7 +1069,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>January 9, 2002, - Problem Reports Fixed</h3>
+			<h2><b>January 9, 2002, - Problem Reports Fixed</b></h2>
 			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=7133">7133</a>: Illegal references to Breakpoints view<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=7203">7203</a>: Display view brought to front when doing Inspect<br>
@@ -1093,7 +1093,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>December 18, 2001, - Problem Reports Fixed</h3>
+			<h2><b>December 18, 2001, - Problem Reports Fixed</b></h2>
 			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=1665">1665</a>: Drop to frame hangs if after invoke (1GH3XDA)<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6817">6817</a>: J9 Launching doesn't work<br>
@@ -1130,7 +1130,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>December 11, 2001, - Problem Reports Fixed</h3>
+			<h2><b>December 11, 2001, - Problem Reports Fixed</b></h2>
 			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6576">6576</a>: Efficiency - use computeStackFrames internally<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6613">6613</a>: Drop frame above native frame does not work on 1.4<br>
@@ -1146,7 +1146,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>December 6, 2001, - Problem Reports Fixed</h3>
+			<h2><b>December 6, 2001, - Problem Reports Fixed</b></h2>
 			<p>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=1628">1628</a>: README: packages appear when doing eval (1GEYFPN)<br>
 			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6389">6389</a>: System threads show suspended at startup <br>
@@ -1161,7 +1161,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>December 4, 2001, - Problem Reports Fixed</h3>
+			<h2><b>December 4, 2001, - Problem Reports Fixed</b></h2>
 			<ul>
 			<li> The debugger suspends execution when an uncaught exception is thrown.
 				Can be configured using the Java Debug Options preference page.
@@ -1214,7 +1214,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>November 27, 2001, - Problem Reports Fixed</h3>
+			<h2><b>November 27, 2001, - Problem Reports Fixed</b></h2>
 			<p>
 			<A HREF="http://bugs.eclipse.org/bugs/show_bug.cgi?id=1746">1746</A>: Debug target not expanded on hit breakpoint (1GLE3U8)<br>
 			<A HREF="http://bugs.eclipse.org/bugs/show_bug.cgi?id=6192">6192</A>: Missing debug icons<br>
@@ -1232,7 +1232,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>November 20, 2001, - Problem Reports Fixed</h3>
+			<h2><b>November 20, 2001, - Problem Reports Fixed</b></h2>
 			<ul>
 			<li>Hot Swap support for 1.4 compliant VM's</li>
 			<li>New plug-in (org.eclipse.jdt.debug.ui). First cut at "extracting" the Java debug UI from the
@@ -1265,7 +1265,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>November 13, 2001, - Problem Reports Fixed</h3>
+			<h2><b>November 13, 2001, - Problem Reports Fixed</b></h2>
 			<p>
 			<A HREF="http://bugs.eclipse.org/bugs/show_bug.cgi?id=5139">5139</A>: Remove SnippetSupportBreakpoint<br>
 			<A HREF="http://bugs.eclipse.org/bugs/show_bug.cgi?id=5816">5816</A>: Resource tree locked error on hot swap<br>
@@ -1282,7 +1282,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>November 12, 2001, - Problem Reports Fixed</h3>
+			<h2><b>November 12, 2001, - Problem Reports Fixed</b></h2>
 			<ul>
 			<li>toString() support for arrays</li>
 			<li>Support for hot swap and drop to frame on 1.4 compliant VMs</li>
@@ -1317,7 +1317,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>November 5, 2001, - Problem Reports Fixed</h3>
+			<h2><b>November 5, 2001, - Problem Reports Fixed</b></h2>
 			<ul>
 			<li>
 			Support for 'toString()' in variables view. Depress the "Show Detail" button
@@ -1353,7 +1353,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>November 1, 2001, - Problem Reports Fixed</h3>
+			<h2><b>November 1, 2001, - Problem Reports Fixed</b></h2>
 			<ul>
 			<li>
 			API Change - IDebugConstants have been migrated to DebugPlugin and IBreakpoint.</li>
@@ -1419,7 +1419,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>October 21, 2001, - Problem Reports Fixed</h3>
+			<h2><b>October 21, 2001, - Problem Reports Fixed</b></h2>
 			<ul>
 			<li>
 			API Change (method addition). IDebugModelPresentation now supports value
@@ -1464,7 +1464,7 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>October 18, 2001, - Problem Reports Fixed</h3>
+			<h2><b>October 18, 2001, - Problem Reports Fixed</b></h2>
 			<ul>
 				<li>Support for "open on type" from a selection in the console.</li>
 			</ul>

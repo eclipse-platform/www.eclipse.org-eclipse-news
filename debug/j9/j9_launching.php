@@ -39,13 +39,13 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
-			<h3>Purpose</h3>
+			<h2><b>Purpose</b></h2>
 			<p>
 				Install this plugin when you want to configure a J9 JRE for building, running, and/or debugging a Java project. 
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>Install</h3>
+			<h2><b>Install</b></h2>
 			<ol>
 				<li>Download the plugin version that is compatible with the build you are working on: 
 		          	<ul>
@@ -62,11 +62,11 @@
 			</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>Downloading a J9 JRE</h3>
+			<h2><b>Downloading a J9 JRE</b></h2>
 			<p>A J9 JRE for QNX can be downloaded from <a target="_blank" href="http://www.embedded.oti.com/download/technologies/wce_eclipse.phtml">http://www.embedded.oti.com/download/technologies/wce_eclipse.phtml</a>.</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>Setting up a J9 JRE</h3>
+			<h2><b>Setting up a J9 JRE</b></h2>
 			<p>A J9 JRE can be defined via the Installed JREs preference page.
 				<ol>
 					<li>Open Installed JRE preferences via &quot;<strong>Window</strong> > <strong> Preferences</strong> > <strong>Java</strong> > <strong>Installed JREs</strong>&quot;</li>

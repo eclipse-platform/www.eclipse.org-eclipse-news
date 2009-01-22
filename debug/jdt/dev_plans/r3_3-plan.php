@@ -30,7 +30,7 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
-			<h3>Overall 3.3 Plan</h3>
+			<h2><b>Overall 3.3 Plan</b></h2>
 			
 			<h4>Overall Themes for JDT Debug:</h4>
 	        

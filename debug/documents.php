@@ -31,7 +31,7 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
-			<h3>Articles</h3>
+			<h2><b>Articles</b></h2>
 			<ul>
 				<li>Eclipse Corner article <a target="_blank" href="http://www.eclipse.org/articles/Article-Debugger/how-to.html">How To Write An Eclipse Debugger</a></li>
 				<li>Eclipse Corner article <a target="_blank" href="http://www.eclipse.org/articles/Article-Launch-Framework/launch.html">We Have Lift-off: The Launching Framework in Eclipse </a></li>
@@ -40,7 +40,7 @@
 			</ul>
 		</div>
 		<div class="homeitem3col">
-			<h3>EclipseCon Presentations</h3>
+			<h2><b>EclipseCon Presentations</b></h2>
 			<ul>
 				<li>EclipseCon 2005
 					<blockquote>
@@ -84,7 +84,7 @@
  			</ul>
 		</div>
 		<div class="homeitem3col">
-			<h3>Miscellaneous Documents</h3>
+			<h2><b>Miscellaneous Documents</b></h2>
 			<ul>
 				<li>Launching has changed, and we have a document describing these changes and the current implementation of <a target="_blank" href="/eclipse/debug/documents/launching/context_launching/Context-launching.pdf">Context Launching</a></li>
 				<li>For the 3.3M3 release we are working on moving away from strict mode-based launching to an extensible 'options-based' scheme.
@@ -104,7 +104,7 @@
 			</ul>
 		</div>
 		<div class="homeitem3col">
-			<h3>Debug Utilities</h3>
+			<h2><b>Debug Utilities</b></h2>
 			<ul>
 				<li><code>org.eclipse.debug.util</code> is a small helper plugin we use to update our build notes files once we verify bugs. To use it, simply download the plugin below
 				and enabled it in your workspace. Once that is done to actually 'use' it, place the cursor at the position in your

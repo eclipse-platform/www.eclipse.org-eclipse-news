@@ -32,7 +32,7 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
-			<h3>Overview</h3>
+			<h2><b>Overview</b></h2>
 			<p>There are many ways that you as a member of the community can get involved and contribute to the Debug Project (either Platform or JDT Debug).</p>
 			<p>The first step is to let us know you are out there.  Sign up for our <a href="#mailing_lists">mailing lists</a> and chat with us about your problems and interests.  You should also sign up for a <a href="https://bugs.eclipse.org/bugs/">Bugzilla</a> account and add jdt-debug-index@eclipse.org and platform-debug-inbox@eclipse.org to your watch list.</p>
 			<p>Here are some ways you can contribute:
@@ -46,7 +46,7 @@
 		</div>
 		<a name="mailing_lists"></a>
 		<div class="homeitem3col">
-			<h3>Mailing Lists</h3>
+			<h2><b>Mailing Lists</b></h2>
 			<p>There are two developer mailing lists for debug, one for Platform and one for JDT.  Once you have signed up you will have permission to post to the list and let us know who you are and how you want to get involved.</p>
 			<ul>
 			<li>Platform Debug Mailing List: <a href="http://dev.eclipse.org/mailman/listinfo/platform-debug-dev">platform-debug-dev@eclipse.org</a></li>
@@ -55,7 +55,7 @@
 		</div>
 		<a name="writing_code"></a>
 		<div class="homeitem3col">
-			<h3>Writing Code for the Debug Components</h3>
+			<h2><b>Writing Code for the Debug Components</b></h2>
 			<p>All development on the Debug Platform is done using Eclipse. Code is checked out of
 		      the Eclipse CVS repository, edited using JDT, and then run by launching a second instance of
 		      Eclipse from within Eclipse.</p>
@@ -63,7 +63,7 @@
 			<p>Your first step is to download an Eclipse build.  You can download a the Eclipse platform at <a href="http://download.eclipse.org/eclipse/downloads/">here</a>.  New users are best off downloading the latest stream stable build.  Once you have the platform downloaded, setup and launched, you can connect to the CVS repository.</p>
 		</div>
 		<div class="homeitem3col">
-		<h3>Connect to the Eclipse Repository</h3>
+		<h2><b>Connect to the Eclipse Repository</b></h2>
 			<p>The easiest way to download the correct projects from CVS is to use our <a href="/eclipse/debug/documents/project_sets/psf_files.php">Debug Project Set File</a>.  Download the psf file for non-committers then in Eclipse go to <b>File > Import</b> and select <b>Team > Team Project Set</b>.  If you have not done so already, you will have to define a repository connection which can be done using the information below.  The project set file will checkout the debug projects from CVS. More information about project set files can be found on the <a href="http://wiki.eclipse.org/PSF" target="_blank">PSF Wiki Page</a>.</p>
 		      </p>
 		
@@ -134,7 +134,7 @@
 		</div>
 		<div class="homeitem3col">
 		<a name="required_plugins"></a>
-		<h3>Import Required Plug-ins</h3>
+		<h2><b>Import Required Plug-ins</b></h2>
 			<p><font color="#ff0000"><b>NOTE</b>: You can probably skip this section. If you are compiling other projects that don't use the "Plug-in Dependencies" 		      library, you may need to import required plug-ins manually, as explained here. Otherwise, this step is not necessary.</font>
 		      </p>
 		    
@@ -149,7 +149,7 @@
 		      </p>
 		</div>
 		<div class="homeitem3col">
-		<h3>Launching the Run-time Workbench</h3>
+		<h2><b>Launching the Run-time Workbench</b></h2>
 				<p>Once your workspace is set up, it's time to launch Eclipse from within Eclipse. To do this,
 		      select <b>Debug As</b> (or Run As) <b>&gt; Run-time Workbench</b> from the Debug (or Run) menu.
 		      This will launch a second instance of Eclipse (which we refer to as the "target") running the code in your
@@ -161,13 +161,13 @@
 		      </p>
 		</div>
 		<div class="homeitem3col">
-		<h3>Creating Patches</h3>
+		<h2><b>Creating Patches</b></h2>
 				<p>So now you have the code to fix a bug in your host workspace and have tested it in your target.  The next step is to get that code committed to CVS.  However, only committers have the permission to do that.  Instead, contributors are expected to create a patch file containing their changes and post it to the bug report they are working on.  The patch will be reviewed by one or more committers.  Once the patch is accepted, a committer will apply it to CVS and resolve the bug as fixed.</p>
 				<p>To create a patch, select all of the changed projects in the Package Explorer view.  Right click and go to Team > Synchronize, this should open up the Synchronize View.  In the Synchronize View, make sure there are no conflicting changes and that all of your changes follow the <a href="http://wiki.eclipse.org/index.php/Development_Conventions_and_Guidelines">coding guidelines</a>.  Then select your outgoing changes, right click and go to Create Patch...  In the dialog, select a destination for the patch (it is best to include the bug number in the file name and use the extension .patch), double check all your changes are included, then hit OK.  Attach the created patch to the bug report.</p>
 		</div>
 		<a name="filing_bugs"></a>
 		<div class="homeitem3col">
-			<h3>Creating Bug Reports</h3>
+			<h2><b>Creating Bug Reports</b></h2>
 			<p>
 			When filing bugs against the Debug Project, we ask that you use your better judgment, and most importantly 
 			common sense before filing a bug. Specifically:
@@ -189,7 +189,7 @@
 		      </p>
 		</div>
 		<div class="homeitem3col">
-		<h3>Bug Lifecycle</h3>
+		<h2><b>Bug Lifecycle</b></h2>
 			<p>All bugs for either the JDT or Platform Debug component follow the same lifecycle. All committers and contributors must adhere to this lifecycle
 			to ensure all defects are tracked and handled accordingly.</p>
 			<ul>
@@ -219,7 +219,7 @@
 		</div>
 		<a name="test_pass"></a>
 		<div class="homeitem3col">
-			<h3>Test Passes</h3>
+			<h2><b>Test Passes</b></h2>
 			<p>Before every milestone release the Debug Team does an intense one-day test pass where we test all of the functionality of the debug components.  We try to check everything to make sure 100% of the functionality is available in every major release.  In addition, we try odd use cases and unusual code to ensure our code is as robust as possible.</p>
 			<p>To organize the test pass, we follow a <a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plans.php">test matrix</a>.  The matrix defines who is working on which platform (OS and VM combination) and who is responsible for testing what functionality.  The matrix also contains a basic overview of what must be tested in each section.</p>
 			<p>NOTE: Testing should always be done on your host, so to launch Eclipse with a specific vm, you should launch Eclipse with the following argument: -vm C:\(JVM Location)\java.exe  You can also use our example <a href="/eclipse/debug/misc/ManualTestingPrograms.zip">manual testing programs</a>.</p>

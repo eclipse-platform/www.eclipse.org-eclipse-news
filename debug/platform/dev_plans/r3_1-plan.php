@@ -32,7 +32,7 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
-			<h3>Overall 3.1 Plan</h3>
+			<h2><b>Overall 3.1 Plan</b></h2>
 			
 			<h4>Overall Themes for Platform Debug:</h4>
 	        <ul>
@@ -165,7 +165,7 @@
 		</div>
 		
 		<div class="homeitem3col">
-			<h3>3.1 Current Development Effort - Milestone 7 (Friday, May 13th)</h3>
+			<h2><b>3.1 Current Development Effort - Milestone 7 (Friday, May 13th)</b></h2>
 			<blockquote>
 		        <b>Built to last</b>
 		          <ul>
@@ -187,7 +187,7 @@
 		 	</blockquote>
 		 </div>
 		 <div class="homeitem3col">
-			<h3>3.1 Milestone 6 (Friday, April 1st)</h3>
+			<h2><b>3.1 Milestone 6 (Friday, April 1st)</b></h2>
 			<blockquote>
 		        <b>Built to last</b>
 		          <ul>
@@ -224,7 +224,7 @@
 		 	</blockquote>
 		 </div>
 		 <div class="homeitem3col">
-			<h3>3.1 Milestone 5 (Friday, February 18th)</h3>
+			<h2><b>3.1 Milestone 5 (Friday, February 18th)</b></h2>
 			<blockquote>
 		        <b>Built to last</b>
 		          <ul>
@@ -249,7 +249,7 @@
 		 	</blockquote>
 		 </div>
 		 <div class="homeitem3col">
-			<h3>3.1 Milestone 4 (Friday, December 17th)</h3>
+			<h2><b>3.1 Milestone 4 (Friday, December 17th)</b></h2>
 			<blockquote>
 		        <b>Built to last</b>
 		          <ul>
@@ -289,7 +289,7 @@
 		 	</blockquote>
 		 </div>
 		 <div class="homeitem3col">
-			<h3>3.1 Milestone 3 (Friday, November 5th)</h3>
+			<h2><b>3.1 Milestone 3 (Friday, November 5th)</b></h2>
 			<blockquote>
 		        <b>Console enhancements</b> (org.eclipse.ui.console) - push support down into the generic console 
 		          <ul>
@@ -328,7 +328,7 @@
 		 	</blockquote>
 		 </div>
 		 <div class="homeitem3col">
-			<h3>3.1 Milestone 2 Plan (Friday, September 24th)</h3>
+			<h2><b>3.1 Milestone 2 Plan (Friday, September 24th)</b></h2>
 			<blockquote>
 		        <b>Console enhancements</b> (org.eclipse.ui.console) - push support down into the generic console [Kevin Barnes] 
 		          <ul>

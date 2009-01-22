@@ -32,7 +32,7 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
-			<h3>Overall 3.2 Plan</h3>
+			<h2><b>Overall 3.2 Plan</b></h2>
 			<h4>Overall Themes for Platform Debug:</h4>
 				<ul>
 			        <li>Scaling Up</li>
@@ -134,7 +134,7 @@
 			</blockquote>
 		</div>
 		<div class="homeitem3col">
-			<h3>3.2 Current Development Effort - Milestone 6 (Friday, March 31th)</h3>
+			<h2><b>3.2 Current Development Effort - Milestone 6 (Friday, March 31th)</b></h2>
 			<blockquote>
 				<b>Flexible debug platform</b>
 		          <ul>
@@ -156,7 +156,7 @@
 			</blockquote>
 		</div>
 		<div class="homeitem3col">
-			<h3>3.2 Milestone 5 (Friday, February 17th)</h3>
+			<h2><b>3.2 Milestone 5 (Friday, February 17th)</b></h2>
 			<blockquote>
 				<b>Flexible debug platform</b>
 		          <ul>
@@ -187,7 +187,7 @@
         	</blockquote>
 		</div>
 		<div class="homeitem3col">
-			<h3>3.2 Milestone 4 (Friday, December 16th)</h3>
+			<h2><b>3.2 Milestone 4 (Friday, December 16th)</b></h2>
 			<blockquote>
 				<b>Release new internal API's</b> 
 		          The new API's will be internal for 3.2 to allow time for review and 
@@ -219,7 +219,7 @@
 			</blockquote>
 		</div>
 		<div class="homeitem3col">
-			<h3>3.2 Milestone 3 (Friday, November 4th)</h3>
+			<h2><b>3.2 Milestone 3 (Friday, November 4th)</b></h2>
 			<blockquote>
 				<b>Release new API's for review and feedback</b> The new API's will not be committed until M4: 
 			          <ul>
@@ -244,7 +244,7 @@
 			</blockquote>
 		</div>
 		<div class="homeitem3col">
-			<h3>3.2 Milestone 2 (Friday, September 23rd)</h3>
+			<h2><b>3.2 Milestone 2 (Friday, September 23rd)</b></h2>
 			<blockquote>
 				<b>Prototype asynchronous tree viewer</b>
 		          <ul>
