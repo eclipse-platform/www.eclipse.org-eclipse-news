@@ -422,7 +422,7 @@
 				<h3>Build before launch</h3> 
 				    <blockquote><ol>
 					    <li>build is scoped to relevant projects</li>
-					    <li>standard job progress dialog is displayed for the following cases. The &quot;Run in Background&quot; button is never present.</li> 
+					    <li>standard job progress dialog is displayed for the following cases. The &quot;Run in Background&quot; button is never present</li> 
 				        <li>launching in foreground (un-check &quot;Launch in background&quot; option on common tab)</li> 
 			            <li>waiting for ongoing build to complete before launching</li>
 			            <li>building before launching</li>
@@ -435,8 +435,7 @@
 				    <blockquote><ol>
 					    <li>always/prompt</li>
 					    <li>prompt should tell you which project(s) contain errors</li>
-					    <li>irrelevant errors should not cause prompt (i.e. Ant errors should not 
-					        prevent Java launch)</li>
+					    <li>irrelevant errors should not cause prompt (i.e. Ant errors should not prevent Java launch)</li>
 				    </ol></blockquote>
 				<h3>Prompt to launch in debug mode when breakpoints present</h3> 
 				    <blockquote><ol>
@@ -481,7 +480,7 @@
 			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
 			<a name="LaunchConfigurations"></a>
 			<h2><b>Launch Configurations</b></h2>
-				<h3>Launch History / Favourites</h3>
+				<h3>Launch History / Favorites</h3>
 					<blockquote><ol>
 						<li>available in the toolbar drop-down</li>
 						<li>new launched configurations added to top of history</li>
@@ -514,14 +513,11 @@
 				    </ol></blockquote>
 				<h3>Activate The Debug View When Program Suspends</h3> 
 				    <blockquote><ol>
-						<li>debug action set should also open automatically when a debug view is 
-						    opened</li>
-						<li>relevant debug views should automatically open when stack frame is selected 
+						<li>debug action set should also open automatically when a debug view is opened</li>
+						<li>relevant debug views should automatically open when stack frame is selected</li>
 						<li>in debug perspective by default</li>
-						<li>in other perspectives as configured on the &quot;View Management&quot; 
-						    pref page (also available in Debug View drop down menu)</li>
-						<li>use PDA debugger to try debugging different languages in same perspective 
-						    (hope to have this available - example from draft debug article)</li>
+						<li>in other perspectives as configured on the &quot;View Management&quot; pref page (also available in Debug View drop down menu)</li>
+						<li>use PDA debugger to try debugging different languages in same perspective (hope to have this available - example from draft debug article)</li>
 			          	<li>automatically opened views should close when debugging ends</li>
 				    </ol></blockquote>
 				 <h3>General</h3>
@@ -533,31 +529,26 @@
 			<h2><b>Breakpoints</b></h2>
 				<h3>Breakpoint Groups</h3> 
 				    <blockquote><ol>
-					    <li>show breakpoints, breakpoint types, breakpoint working sets, files, 
-					        projects, resource working sets, advanced</li>
+					    <li>show breakpoints, breakpoint types, breakpoint working sets, files, projects, resource working sets, advanced</li>
 					    <li>auto-add to default breakpoint working set</li>
 					    <li>drag &amp; drop between breakpoint working sets (move)</li>
 					    <li>copy &amp; paste between breakpoint working sets</li>
-					    <li>stratum breakpoints should group by stratum (eg. JSP breakpoints).</li>
+					    <li>stratum breakpoints should group by stratum (e.g. JSP breakpoints)</li>
 				    </ol></blockquote>
 				<h3>Creation Of Breakpoints</h3> 
 				    <blockquote><ol>
 				    	<li>create: line, class load, method, exception, and watchpoint</li>
 					    <li>no breakpoints can be set in interfaces</li>
 					    <li>breakpoints can be set in external source file (file from OS that does not belong to a project)</li>
-					    <li>toggle Line breakpoints - double click in ruler, Run menu action (menu 
-					        &amp; keybinding), context menu in outline view</li>
-					    <li>toggle Method breakpoints - double click in ruler, Run menu action (menu 
-					        &amp; keybinding), context menu in outline view</li>
-					    <li>tlass Load Breakpoint - double click in ruler, Run menu action (menu 
-					        &amp; keybinding), context menu in outline view</li>
-					    <li>toggle Watchpoints - double click in ruler, Run menu action (menu 
-					        &amp; keybinding), context menu in outline view</li>
+					    <li>toggle Line breakpoints - double click in ruler, Run menu action (menu &amp; keybinding), context menu in outline view</li>
+					    <li>toggle Method breakpoints - double click in ruler, Run menu action (menu &amp; keybinding), context menu in outline view</li>
+					    <li>class Load Breakpoint - double click in ruler, Run menu action (menu &amp; keybinding), context menu in outline view</li>
+					    <li>toggle Watchpoints - double click in ruler, Run menu action (menu &amp; keybinding), context menu in outline view</li>
 					    <li>watchpoint cannot appear on 'final' field</li>
 					    <li>watchpoint cannot appear on 'static final' field</li>
 					    <li>exception Breakpoints - Run menu action, hyperlink from stack trace, breakpoints view</li>
 				    </ol></blockquote>
-				<h3>Refactorings</h3>
+				<h3>Refactoring</h3>
 					<blockquote><ol>
 						<li>breakpoints should be updated if enclosing type is refactored</li>
 						<li>method breakpoints should be updated after refactoring method</li>
@@ -579,7 +570,7 @@
 				    </ol></blockquote>
 				<h3>General</h3>
 					<blockquote><ol>
-						<li>option to open inspector on exception when an exception breakpoint is hit 
+						<li>option to open inspector on exception when an exception breakpoint is hit </li>
 					  	<li>Java &gt; Debug: &quot;open popup when suspended on exception&quot;</li>
 					  	<li>option to delete breakpoints vs. working set when &quot;delete&quot; pressed on a working set</li>
 					  	<li>breakpoint option choices are properly persisted</li>
@@ -673,7 +664,7 @@
 				    		menu by default. For example, the Java application shortcut requires the &quot;hasMain&quot; 
 				    		tester from the Java debug plug-in, and thus, until the plug-in is loaded, 
 				    		the shortcut will appear on all Java files whether they have a main method 
-				    		or not. 
+				    		or not</li>
 				      	<li>Java Applications (with main, without main, compilation unit, type, method, classfile, package, project)</li>
 				      	<li>Java Applets</li>
 				      	<li>JUnit tests</li>
@@ -703,8 +694,8 @@
 			<h2><b>Runtime Classpaths</b></h2>
 				<h3>Default Classpath</h3>
 					<blockquote><ol>
-						<li>the default classpath should track a project's buildpath</li>
-						<li>option to only include exported items in runtime classpath (by default, all items are included).</li>	
+						<li>the default classpath should track a project's build path</li>
+						<li>option to only include exported items in runtime classpath (by default, all items are included)</li>	
 					</ol></blockquote>
 				<h3>Non-Default Bootpath</h3> 
 				    <blockquote><ol>
@@ -721,9 +712,9 @@
 			<h2><b>Source Lookup</b></h2>
 				<h3>Default Source Lookup Path</h3>
 					<blockquote><ol>
-						<li>the default source lookup path should track changes in the default buildpath 
+						<li>the default source lookup path should track changes in the default build path 
 					    	(when using a default runtime classpath). If a non-default runtime classpath 
-					    	is used, the default source lookup path should track the runtime classpath.</li>
+					    	is used, the default source lookup path should track the runtime classpath</li>
 					  	<li>searching for duplicate source files</li>
 					  	<li>modifying the source lookup path when a source file cannot be found</li>
 					  	<li>multiple source roots in archives</li>
@@ -746,7 +737,7 @@
 				      	<li>no information/errors for VMs that do not support monitor information</li>
 				      	<li>monitor information appears for suspended threads</li>
 				      	<li>monitor information is not displayed for running threads</li>
-				      	<li>ensure valid deadlocks are detected 
+				      	<li>ensure valid deadlocks are detected </li>
 				        <li>threads are rendered red (preference color), and have deadlock overlay</li>
 				      	<li>locks support resume/terminate</li>
 				    </ol></blockquote>
@@ -781,15 +772,15 @@
 				<h3>Javadoc Locations</h3>
 					<blockquote><ol>
 						<li>JREs allow a javadoc location to be set per library in the JRE</li> 
-					    <li>changing the javadoc location on a JRE updates the buildpath javadoc location</li>
-					    <li>changing the javadoc location on a buildpath (JRE library) updates the JRE</li>
-					    <li>changing a javadoc location or source attachment does not causes an explicit bootpath to be used when launching with that JRE.</li>
+					    <li>changing the javadoc location on a JRE updates the build path javadoc location</li>
+					    <li>changing the javadoc location on a build path (JRE library) updates the JRE</li>
+					    <li>changing a javadoc location or source attachment does not causes an explicit bootpath to be used when launching with that JRE</li>
 				   	</ol></blockquote>
 				<h3>General</h3>
 					<blockquote><ol>
 						<li>copy a JRE definition</li>
 				  		<li>import/export of JRE preferences</li>
-						<li>changing the default JRE triggers a build if the default JRE is referenced by a project.</li>
+						<li>changing the default JRE triggers a build if the default JRE is referenced by a project</li>
 					</ol></blockquote>
 				</ol></blockquote>
 			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
@@ -797,7 +788,7 @@
 			<h2><b>Execution Environments </b></h2>
 				<h3>Specify a Build Path</h3> 
 				    <blockquote><ol>
-				      	<li>changing the default JRE for an EE updates buildpath</li>
+				      	<li>changing the default JRE for an EE updates build path</li>
 				    </ol></blockquote>
 				<h3>Specify a Runtime</h3> 
 				    <blockquote><ol>
@@ -836,7 +827,7 @@
 					</ol></blockquote>
 				<h3>Switching between consoles</h3>
 					<blockquote><ol>
-						<li>use the drop down to toggle between consoles.</li> 
+						<li>use the drop down to toggle between consoles</li> 
 				  		<li>clicking on the drop-down should toggle between the last two consoles shown</li>
 				  		<li>open new console - CVS and Java Stack Trace Console</li>
 				  		<li>Create a keybinding for Next / Previous page for the Console view</li>
@@ -901,7 +892,7 @@
 				<h3>Column support</h3> 
 				    <blockquote><ol>
 				      	<li>turn columns off/on</li>
-				      	<li>colum size automatically until user changes them</li>
+				      	<li>column size automatically until user changes them</li>
 				      	<li>sizes are persisted</li>
 				      	<li>select &amp; persist columns to display</li>
 				      	<li>background &quot;changed&quot; color highlighting</li>
@@ -913,7 +904,7 @@
 					 	<li>variables remain expanded/selected as stepping</li>
 					  	<li>when switching between stack frames (without resuming), the variables expanded/selected 
 					    	are maintained (i.e. expand and select for frame 1, then select frame 2 and 
-					    	expand/select. when re-selecting frame 1, the original state is restored).</li>
+					    	expand/select. when re-selecting frame 1, the original state is restored)</li>
 					    <li>Debug hover works for symbols with the same name and different values (inherited fields), showing correct value</li>
 					</ol></blockquote>
 			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
@@ -978,7 +969,7 @@
 				<p>
 					Try JSP debugging example, as documented in the &quot;org.eclipse.jdt.ui.examples.javafamily&quot; 
 					plug-in ReleaseNotes.html. The instructions are in the section titled &quot;Debugging 
-					a JSP&quot;
+					a JSP&quot;.
 				</p>
 				<h3>Testing</h3>
 				    <blockquote><ol>
@@ -999,37 +990,37 @@
 				<h3>Stepping With Many Threads</h3>
 					<blockquote><ol>
 				      	<li>expansion and selection are maintained properly in the Debug View</li>
-				      	<li>othter suspended threads should not interfere with the current stepping thread</li>
-				      	<li>selection should remain on the stackframe that is being stepped</li>
+				      	<li>other suspended threads should not interfere with the current stepping thread</li>
+				      	<li>selection should remain on the stack frame that is being stepped</li>
 				    </ol></blockquote>
 				<h3>Stepping With Many Variables</h3> 
 				    <blockquote><ol>
-				    	<li>debug a testcase with many variables.  Expand many variables and set selection at the bottom of the Variables View.  Do a few Step Over.
+				    	<li>debug a test case with many variables.  Expand many variables and set selection at the bottom of the Variables View.  Do a few Step Over.
 				 			 Test with logical structures turned on / off</li>
 				      	<li>the Variables View should properly maintain expansion and selection </li>
 				      	<li>the Variables View should not scroll to the top unexpectedly</li>
 				    </ol></blockquote>
-				<h3>Maintaining Variable(s) Expansion & Selection</h3>  							 			  	
+				<h3>Maintaining Variable(s) Expansion &amp; Selection</h3>  							 			  	
 				    <blockquote><ol>
-				    	<li>debug a testcase with many variables.  Expand many variables and set selection.  Switch between different stackframes.</li>
+				    	<li>debug a test case with many variables.  Expand many variables and set selection.  Switch between different stack frames</li>
 				      	<li>verify that expansion and selection are maintained properly in the Variables View</li>
 				      	<li>the Variables View should not scroll to the top unexpectedly</li>
 				    </ol></blockquote>	
 				<h3>Stepping Quickly</h3>			 			  	
 				    <blockquote><ol>
-				    	<li>hold down the step over key (F6). Test with logical structures turned on / off. Test with thread filters turned on / off.</li>
+				    	<li>hold down the step over key (F6). Test with logical structures turned on / off. Test with thread filters turned on / off</li>
 				      	<li>verify that expansion and selection are maintained properly in the Debug View</li>
 				      	<li>verify that expansion and selection are maintained properly in the Variables View</li>
-				      	<li>verify that source lookup is performed properly.</li>
+				      	<li>verify that source lookup is performed properly</li>
 				      	<li>verify that debug actions are properly enabled/disabled </li>
 				    </ol></blockquote>		
 				<h3>Toggle Logical Structures Quickly</h3>		  
 				    <blockquote><ol>
-				    	<li>debug a testcase with many variables.  Some of these variables
-				  			can be displayed differently when logical structures is turned on.  (e.g. Hashmap)  Expand many of these
-				  			variables and then toggle the logical structures action quickly.	</li>
+				    	<li>debug a test case with many variables.  Some of these variables
+				  			can be displayed differently when logical structures is turned on.  (e.g. Hash map)  Expand many of these
+				  			variables and then toggle the logical structures action quickly</li>
 				      	<li>verify that expansion and selection are maintained properly in the Variables View</li>
-				      	<li>verify that there is no blank lables in the Variables View</li>
+				      	<li>verify that there is no blank labels in the Variables View</li>
 				    </ol></blockquote>
 			<p><a href="#top">Back to top</a><br></p><p>&nbsp;</p>
 			<a name="Memory"></a>
@@ -1040,8 +1031,8 @@
 				</p>
 				<h3>Add memory block</h3>
 					<blockquote><ol>
-						<li>adding multiple memory blocks by using a comma delimited list. </li>
-						<li>adding a memory block with empty expression </li>
+						<li>adding multiple memory blocks by using a comma delimited list</li>
+						<li>adding a memory block with empty expression</li>
 						<li>adding a memory block using the key binding (Ctrl+Alt+M)</li>
 					</ol></blockquote>
 				<h3>Remove memory block</h3>
@@ -1074,7 +1065,7 @@
 					  	<li>renderings should mark memory that has changed</li>
 					  	<li>memory shows up as grey if the rendering does not have cache to compute changes. e.g hidden when the user is stepping</li>
 					  	<li>scroll to end of buffer and make sure memory is reloaded.  Try with scrollbar and cursor</li>
-					  	<li>top index and curor in rendering are maintined after rendering update</li>
+					  	<li>top index and cursor in rendering are maintained after rendering update</li>
 					</ol></blockquote>				  	 		
 				<h3>Synchronization</h3>
 				  	<blockquote><ol>
@@ -1087,7 +1078,7 @@
 				 	<blockquote><ol>
 				 		<li>reset to Base Address </li>
 				  		<li>go to Address:  Context Menu and CTRL+G.  Try different modes.</li>
-				  		<li>try swtiching between memory blocks:  Tree viewer and Switch Memory Monitor action</li>
+				  		<li>try switching between memory blocks:  Tree viewer and Switch Memory Monitor action</li>
 				 	</ol></blockquote>				  	
 				<h3>Auto vs Manual Loading</h3>
 				  	<blockquote><ol>
@@ -1101,7 +1092,7 @@
 				  	<blockquote><ol>
 				  		<li>show and Hide Memory Monitors Pane</li>
 				  		<li>show and Hide Renderings Pane</li>
-				  		<li>try with having multiple memory views/li>
+				  		<li>try with having multiple memory views</li>
 				  		<li>preferences are persisted across workbench restart</li>
 				  		<li>vertical vs Horizontal Orientation</li>
 				  	</ol></blockquote>
