@@ -43,6 +43,11 @@
 			<ul>
 				<li><a href="/eclipse/ant/test_plans/3_5M4.php">3.5M4</a></li>
 			</ul>
+			<h3>3.4.x Test Plans</h3>
+			<a name="3-4x_testing"></a>
+			<ul>
+				<li><a href="/eclipse/ant/test_plans/3_4_2.php">3.4.2</a></li>
+			</ul>
 		</div>
 	</div>
 	<div id="rightcolumn">
