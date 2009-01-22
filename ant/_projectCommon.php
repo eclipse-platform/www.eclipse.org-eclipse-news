@@ -18,8 +18,8 @@
 	#
 	#****************************************************************************
 	
-	$_theme = "Phoenix";
-	$theme = "Phoenix";
+	$_theme = "Nova";
+	$theme = "Nova";
 	if(isset($_POST['theme'])) {
 		$_theme = $_POST['theme'];
 	}
@@ -33,7 +33,7 @@
 	}
 
 	# Defined project nav bar links
-	$Nav->addCustomNav( "About This Project", "/projects/project_summary.php?projectid=platform.ant", "", 1);
+	$Nav->addCustomNav( "About Platform Ant", "/projects/project_summary.php?projectid=platform.ant", "", 1);
 	$Nav->addNavSeparator( "Platform Ant", "/eclipse/ant" );
 	$Nav->addCustomNav("Examples", 	"/eclipse/ant/examples/examples.php",	"_self", 2);
 
