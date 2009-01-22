@@ -31,13 +31,13 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<p>Over the years there have been a few committers come and go, this page has the most recent list of committers, 
-		active and otherwise. Their respective status is displyed with their
+		active and otherwise. Their respective status is displayed with their
 		information. It should be noted that those with an inactive status might not reply to questions about the project.</p>
 		
 		<p>For more information about committers and a listing of what they can commit to see <a href="http://www.eclipse.org/eclipse/commit.html" target="_blank">this page</a> provided
 		by eclipse.org listing all committers and their respective commit rights.</p>
 		<div class="homeitem3col">
-			<h3>Darin Wright</h3>
+			<h2><b>Darin Wright</b></h2>
 			<table width="100%" border="0" summary="About Darin Wright">
 				<tbody>
 				<tr> 
@@ -60,7 +60,7 @@
 			</table>
 		</div>
 		<div class="homeitem3col">
-			<h3>Michael Rennie</h3>
+			<h2><b>Michael Rennie</b></h2>
 			<table width="100%" border="0" summary="About Michael Rennie">
 				<tbody>
 				<tr> 
@@ -81,7 +81,7 @@
 			</table>
 		</div>
 		<div class="homeitem3col">
-			<h3>Curtis Windatt</h3>
+			<h2><b>Curtis Windatt</b></h2>
 			<table width="100%" border="0" summary="About Curtis Windatt">
 				<tbody>
 				<tr> 
@@ -103,7 +103,7 @@
 			</table>
 		</div>
 		<div class="homeitem3col">
-			<h3>Samantha Chan</h3>
+			<h2><b>Samantha Chan</b></h2>
 			<table width="100%" border="0" summary="About Samantha">
 				<tbody>
 				<tr> 
@@ -123,7 +123,7 @@
 			</table>
 		</div>
 		<div class="homeitem3col">
-			<h3>Pawel Piech</h3>
+			<h2><b>Pawel Piech</b></h2>
 			<table width="100%" border="0" summary="About Pawel Piech">
 				<tbody>
 				<tr> 
