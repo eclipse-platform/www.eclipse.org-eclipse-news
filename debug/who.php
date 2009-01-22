@@ -1,4 +1,11 @@
-<?php  																														require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());    # All on the same line to unclutter the user's desktop'
+<?php 
+	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	
+	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	
+	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	
+	$App 	= new App();	
+	$Nav	= new Nav();	
+	$Menu 	= new Menu();		
+	include($App->getProjectCommon());    
 
 	#*****************************************************************************
 	#
@@ -38,7 +45,7 @@
 		by eclipse.org listing all committers and their respective commit rights.</p>
 		<div class="homeitem3col">
 			<h2><b>Darin Wright</b></h2>
-			<table width="100%" border="0" summary="About Darin Wright">
+			<table width="100%" border="0" summary="About Darin Wright" cellspacing="2">
 				<tbody>
 				<tr> 
 					<td width="30%" valign="top"><img src="images/people/darinw.png" /></td>
@@ -61,7 +68,7 @@
 		</div>
 		<div class="homeitem3col">
 			<h2><b>Michael Rennie</b></h2>
-			<table width="100%" border="0" summary="About Michael Rennie">
+			<table width="100%" border="0" summary="About Michael Rennie" cellspacing="2">
 				<tbody>
 				<tr> 
 					<td width="30%" valign="top">No Picture</td>
@@ -82,7 +89,7 @@
 		</div>
 		<div class="homeitem3col">
 			<h2><b>Curtis Windatt</b></h2>
-			<table width="100%" border="0" summary="About Curtis Windatt">
+			<table width="100%" border="0" summary="About Curtis Windatt" cellspacing="2">
 				<tbody>
 				<tr> 
 					<td width="30%" valign="top"><img src="images/people/curtis_windatt.png" /></td>
@@ -104,7 +111,7 @@
 		</div>
 		<div class="homeitem3col">
 			<h2><b>Samantha Chan</b></h2>
-			<table width="100%" border="0" summary="About Samantha">
+			<table width="100%" border="0" summary="About Samantha" cellspacing="2">
 				<tbody>
 				<tr> 
 					<td width="30%" valign="top">No Picture</td>
@@ -124,7 +131,7 @@
 		</div>
 		<div class="homeitem3col">
 			<h2><b>Pawel Piech</b></h2>
-			<table width="100%" border="0" summary="About Pawel Piech">
+			<table width="100%" border="0" summary="About Pawel Piech" cellspacing="2">
 				<tbody>
 				<tr> 
 					<td width="30%" valign="top"><img src="images/people/Pawel_Piech.jpg"/></td>
