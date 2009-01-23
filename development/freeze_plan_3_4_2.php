@@ -39,8 +39,8 @@ ob_start();
 <table cellspacing="5" cellpadding="2" width="100%" border="0"> 
 <tbody> <tr> <td valign="top" align="left" colspan="2"><b>Status</b></td></tr>
 <tr> <td valign="top" align="right"></td><td> 
-<p><font color="#ff0000"><b>Thursday January 22, 2009 09:30 EDT Status:</b></font> 
-		  Today is a testing day on the RC0 candidate build (M20090121-1700).
+<p><font color="#ff0000"><b>Friday January 23, 2009 14:30 EDT Status:</b></font> 
+		  The RC0 test pass is over. The RC1 build is scheduled for Tuesday January 27.
       </td></tr> 
 <tr> <td valign="top" align="left" colspan="2"><b>Detailed Timeline</b></td></tr> <tr> <td valign="top" align="left" colspan="2"> 
 <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="center">
@@ -83,8 +83,8 @@ ob_start();
           <TR> 
             <TD HEIGHT="18"></TD>
             <TD HEIGHT="18"><IMG SRC="images/tbar_r.gif" WIDTH="24" HEIGHT="18"></TD>
-            <TD ALIGN="right" HEIGHT="18">28</TD>
-            <TD ALIGN="right" HEIGHT="18">Wed 08:00 EDT</TD>
+            <TD ALIGN="right" HEIGHT="18">27</TD>
+            <TD ALIGN="right" HEIGHT="18">Tue 17:00 EDT</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;<B>Release Candidate 1 build</B></TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
             <TD HEIGHT="18">&nbsp;&nbsp;</TD>
