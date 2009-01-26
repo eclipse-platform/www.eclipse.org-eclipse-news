@@ -17,7 +17,8 @@
 <div>
 
 <p>
-  Last revised 14:30 ET Oct 10, 2008
+Last revised 17:00 ET Jan 21, 2009 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> marks
+interesting changes since the previous draft of Oct 10, 2008)
 </p>
 <p><i>Please send comments about this draft plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
   mailing list.</i>
@@ -113,7 +114,7 @@
 <p:milestone date="10/31/2008" milestone="M3"><div>3.5M3</div></p:milestone>
 <p:milestone date="12/12/2008" milestone="M4"><div>3.5M4</div></p:milestone>
 <p:milestone date="01/30/2009" milestone="M5"><div>3.5M5</div></p:milestone>
-<p:milestone date="03/12/2009" milestone="M6"><div>3.5M6 (API Freeze)</div></p:milestone>
+<p:milestone date="03/13/2009" milestone="M6"><div>3.5M6 (API Freeze)</div></p:milestone>
 <p:milestone date="05/01/2009" milestone="M7"><div>3.5M7 (Feature Freeze)</div></p:milestone>
 <p:milestone date="05/15/2009" milestone="RC1"><div>3.5RC1</div></p:milestone>
 <p:milestone date="05/29/2009" milestone="RC2"><div>3.5RC2</div></p:milestone>
@@ -193,6 +194,7 @@
       <tr>
         <td><b>Red Hat Enterprise Linux 5.0, x86-32, GTK</b> running (any of):
           <ul>
+            <li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> new) Sun Java 2 Standard Edition 6.0 Update 4 for Linux x86</li>
             <li>Sun Java 2 Standard Edition 5.0 Update 14 for Linux x86</li>
             <li>IBM 32-bit SDK for Linux on Intel architecture, Java 2 Technology Edition 5.0, SR6b</li>
             <li>BEA JRockit 27.4.0, for Linux x86</li>
@@ -420,12 +422,9 @@
 </p:description>
 
 <p:committed>
-  <p><i>None at this time.</i></p>
-</p:committed>
-
-<p:proposed>
 <ul>
-<li><strong>Support Cocoa on Mac OS X.</strong>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+  <strong>Support Cocoa on Mac OS X.</strong>
   Apple GUI development is moving from Carbon to Cocoa. We will support the Eclipse
   SDK running on Mac OS Cocoa (including 64-bit Java6), to ensure that Eclipse
   continues to be a first-class application delivery and development platform on the
@@ -433,18 +432,23 @@
   Project, in addition to the work here.)</em> [SWT, Platform UI]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252644">252644</a>)</li>
 
-<li><strong>BIDI improvements.</strong>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+  <strong>Accessibility standards compliance.</strong>
+  We will work with the community to ensure that we have first-class, accessibility
+  support that is compliant with important standards. [SWT]
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252646">252646</a>)</li>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> deferred)
+  <strong>BIDI improvements.</strong>
   We will continue to invest in improving in our BIDI support, to ensure that
   Eclipse is a first-class environment in BIDI locales. This work will include
   both improvemed access to native BIDI support and the better handling of
   dynamic, complex expressions within Eclipse. [SWT, Platform UI]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252645">252645</a>)</li>
-
-<li><strong>Accessibility standards compliance.</strong>
-  We will work with the community to ensure that we have first-class, accessibility
-  support that is compliant with important standards. [SWT]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252646">252646</a>)</li>
 </ul>
+</p:committed>
+
+<p:proposed>
+  <p><i>None at this time.</i></p>
 </p:proposed>
 
 <p:deferred>
@@ -465,18 +469,19 @@
 </p:description>
 
 <p:committed>
-  <p><i>None at this time.</i></p>
-</p:committed>
-
-<p:proposed>
 <ul>
-<li><strong>Performance testing infrastructure improvements.</strong>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+  <strong>Performance testing infrastructure improvements.</strong>
   We will improve our performance test infrastructure and result pages and ensure
   that the test results are monitored on a daily basis. This will enable us to 
   more accurately and more readily identify any performance issues that might be
   introduced during developement. [Rel. Eng.]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252649">252649</a>)</li>
+</ul>
+</p:committed>
 
+<p:proposed>
+<ul>
 <li><strong>Performance focus.</strong> 
   Although performance did not significantly degrade during the 3.4 release cycle,
   we were unable to make the level of investment in performance improvements that
@@ -505,7 +510,33 @@
 </p:description>
 
 <p:committed>
-  <p><i>None at this time.</i></p>
+<ul>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+  <strong>API Tools test suite and infrastructure</strong>
+  We will build a comprehensive regression test suite for our API tools, as well
+  as a performance test suite, and enhance analysis to avoid false positives, allow
+  special privileges between x-friend bundles, and detect when new API is used in
+  a prerequisite bundle that requires a version range adjustment. We will also 
+  investigate architectural changes to support binary or source analysis and 
+  performance improvements. [PDE]
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252658">252658</a>) </li>
+
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+  <strong>Compare editor improvements.</strong>
+  We will address some of the limitations of the current compare editor framework.
+  Possible work areas include: pluggable compare viewers/tools, automatic updating
+  of differences, better presentation for changes, support for auto-merge, ability
+  to hide outgoing annotations, better handling of hunks, and more
+  features from standard editors within compare editors.[All]
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252662">252662</a>) </li>
+
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+  <strong>Build process improvements.</strong>
+  The Eclipse build process is currently complex and brittle, impacting our
+  ability to deliver stable builds on a reliable schedule. We will make
+  improvements to the build process to make it more robust and reproducible.[Rel. Eng., PDE]
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252664">252664</a>) </li>
+</ul>
 </p:committed>
 
 <p:proposed>
@@ -517,15 +548,6 @@
   otherwise removing the dependencies on internals. [All]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252655">252655</a>) </li>
 
-<li><strong>API Tools test suite and infrastructure</strong>
-  We will build a comprehensive regression test suite for our API tools, as well
-  as a performance test suite, and enhance analysis to avoid false positives, allow
-  special privileges between x-friend bundles, and detect when new API is used in
-  a prerequisite bundle that requires a version range adjustment. We will also 
-  investigate architectural changes to support binary or source analysis and 
-  performance improvements. [PDE]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252658">252658</a>) </li>
-
 <li><strong>API Tools enhancements</strong>
   We will enhance the capabilities of our API tools. Potential work areas include
   validating system library references based on a bundle’s required execution
@@ -536,19 +558,6 @@
   definition and validation. [PDE]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252660">252660</a>) </li>
 
-<li><strong>Compare editor improvements.</strong>
-  We will address some of the limitations of the current compare editor framework.
-  Possible work areas include: pluggable compare viewers/tools, automatic updating
-  of differences, better presentation for changes, support for auto-merge, ability
-  to hide outgoing annotations, better handling of hunks, and more
-  features from standard editors within compare editors.[All]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252662">252662</a>) </li>
-
-<li><strong>Build process improvements.</strong>
-  The Eclipse build process is currently complex and brittle, impacting our
-  ability to deliver stable builds on a reliable schedule. We will make
-  improvements to the build process to make it more robust and reproducible.[Rel. Eng., PDE]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252664">252664</a>) </li>
 </ul>
 </p:proposed>
 
@@ -568,12 +577,9 @@
 </p:description>
 
 <p:committed>
-  <p><i>None at this time.</i></p>
-</p:committed>
-
-<p:proposed>
 <ul>
-<li><strong>User-assistance improvements.</strong>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+  <strong>User-assistance improvements.</strong>
   We will provide a number of often asked for improvements to our help support,
   such as filtering of the navigation tree based on Criteria, grouping of search
   results based on Criteria, quick search from the navigation tree
@@ -581,13 +587,8 @@
   presentation. [UA]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252661">252661</a>) </li>
 
-<li><strong>Team sharable working sets.</strong>
-  The usefulness of working sets is limited by the fact they are not team
-  sharable.  We will provide support for sharing working set information
-  between team members.[Platform UI]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252663">252663</a>) </li>
-
-<li><strong>Extensible execution environments.</strong>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+  <strong>Extensible execution environments.</strong>
   Currently, the set of system library profile definitions supported by Equinox
   is static (for example, J2SE-1.4, J2SE-1.5, etc.). We will respond to new
   support being added by Equinox for an extensible set of system library profiles.
@@ -596,7 +597,8 @@
   investment from the Equinox Project, in addition to the work here.)</em> [JDT, PDE]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252665">252665</a>) </li>
 
-<li><strong>PDE Build and Export enhancements.</strong>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+  <strong>PDE Build and Export enhancements.</strong>
   We will support export and install of workspace bundles into the running host;
   enhance product definition with start levels and license information and support
   creation from OSGi launch configurations; honor the dropins folder when building
@@ -606,9 +608,20 @@
   leverage p2 function for fetch, publish and packaging build phases. [PDE]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252666">252666</a>) </li>
 
-<li><strong>Declarative Services Tooling.</strong>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+  <strong>Declarative Services Tooling.</strong>
   We will provide tooling for authoring service component definitions. [PDE]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252668">252668</a>) </li>
+</ul>
+</p:committed>
+
+<p:proposed>
+<ul>
+<li><strong>Team sharable working sets.</strong>
+  The usefulness of working sets is limited by the fact they are not team
+  sharable.  We will provide support for sharing working set information
+  between team members.[Platform UI]
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252663">252663</a>) </li>
 
 <li><strong>Debug User Interface Enhancements.</strong>
   Investigate enhancements to streamline workflow and reduce clutter in the memory
@@ -731,24 +744,10 @@
       <td align="left"><b>Meaning</b></td>
     </tr>
     <tr>
-      <td><div align="center"><strong>M1.0</strong></div></td>
-      <td>OSGi Minimum Execution Environment 1.0 - This is a subset of the J2ME
-        Foundation class libraries defined by OSGi to be the base for framework
-        implementations. See the OSGi specification for more details.</td>
-    </tr>
-
-    <tr>
-      <td width="9%"><div align="center"><strong>M1.1</strong></div></td>
-      <td width="91%">OSGi Minimum Execution Environment 1.1 - This is a subset
-        of the J2ME Foundation class libraries defined by OSGi to be the base
-        for framework implementations. See the OSGi specification for more details.</td>
-    </tr>
-    <tr>
       <td><div align="center"><strong>F1.0</strong></div></td>
       <td>J2ME Foundation 1.0 - indicates that the bundle can only be run on
         Foundation 1.0 or greater. Note that with the exception of some MicroEdition
         IO classes, Foundation 1.0 is a subset of J2SE 1.3.</td>
-
     </tr>
     <tr>
       <td><div align="center"><strong>F1.1</strong></div></td>
@@ -757,28 +756,15 @@
         IO classes, Foundation 1.1 is a subset of J2SE 1.4.</td>
     </tr>
     <tr>
-      <td><div align="center"><strong>1.2</strong></div></td>
-
-      <td>J2SE 1.2 - indicates that the bundle can only be run on JSE 1.2 or
-        greater.</td>
-    </tr>
-    <tr>
       <td><div align="center"><strong>1.3</strong></div></td>
       <td>J2SE 1.3 - indicates that the bundle can only be run on JSE 1.3 or
         greater.</td>
     </tr>
     <tr>
-
       <td><div align="center"><strong>1.4</strong></div></td>
       <td>J2SE 1.4 - indicates that the bundle can only be run on JSE 1.4 or
         greater.</td>
     </tr>
-    <tr>
-      <td><div align="center"><strong>1.4/1.5</strong></div></td>
-      <td>Indicates that the bundle can run on JSE 1.4 or greater, but provides
-        enhanced functionality when run on J2SE 5.0.</td>
-    </tr>
-
     <tr>
       <td><div align="center"><strong>1.5</strong></div></td>
       <td>J2SE 5.0 - indicates that the bundle can only be run on JSE 5.0 or
@@ -788,7 +774,6 @@
       <td><div align="center"><strong>1.6</strong></div></td>
       <td>J2SE 6.0 - indicates that the bundle can only be run on JSE 6.0 or
         greater.</td>
-
     </tr>
     <tr>
       <td align="center"><b>n/a</b></td>
@@ -816,11 +801,15 @@
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.apache.lucene.analysis</td>
-      <td><div align="center">not specified</div></td>
+      <td>org.apache.ant</td>
+      <td><div align="center">J2SE-1.2</div></td>
     </tr>
     <tr>
       <td>org.apache.lucene</td>
+      <td><div align="center">not specified</div></td>
+    </tr>
+    <tr>
+      <td>org.apache.lucene.analysis</td>
       <td><div align="center">not specified</div></td>
     </tr>
     <tr>
@@ -836,6 +825,14 @@
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
+      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />org.eclipse.compare.core</td>
+      <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
+      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />org.eclipse.compare.win32</td>
+      <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
       <td>org.eclipse.core.boot</td>
       <td><div align="center">F1.0</div></td>
     </tr>
@@ -848,12 +845,12 @@
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.core.databinding.beans</td>
-      <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
       <td>org.eclipse.core.databinding</td>
       <td><div align="center">F1.1</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.core.databinding.beans</td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.expressions</td>
@@ -873,22 +870,18 @@
     </tr>
     <tr>
       <td>org.eclipse.core.net</td>
-      <td><div align="center">F1.0</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.core.resources.compatibility</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />F1.1</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.resources</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.core.runtime.compatibility.auth</td>
-      <td><div align="center">F1.0</div></td>
+      <td>org.eclipse.core.resources.compatibility</td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.core.runtime.compatibility.registry</td>
+      <td>org.eclipse.core.runtime</td>
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
@@ -896,7 +889,11 @@
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.core.runtime</td>
+      <td>org.eclipse.core.runtime.compatibility.auth</td>
+      <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.core.runtime.compatibility.registry</td>
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
@@ -916,6 +913,10 @@
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
+      <td>org.eclipse.help</td>
+      <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
       <td>org.eclipse.help.appserver</td>
       <td><div align="center">F1.0</div></td>
     </tr>
@@ -932,8 +933,8 @@
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.help</td>
-      <td><div align="center">F1.0</div></td>
+      <td>org.eclipse.jdt</td>
+      <td><div align="center">not specified</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.apt.core</td>
@@ -956,11 +957,15 @@
       <td><div align="center">1.6</div></td>
     </tr>
     <tr>
+      <td>org.eclipse.jdt.core</td>
+      <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
       <td>org.eclipse.jdt.core.manipulation</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.jdt.core</td>
+      <td>org.eclipse.jdt.debug</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -968,7 +973,15 @@
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.jdt.debug</td>
+      <td>org.eclipse.jdt.doc.isv</td>
+      <td><div align="center">not specified</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jdt.doc.user</td>
+      <td><div align="center">not specified</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jdt.junit</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -980,10 +993,6 @@
       <td><div align="center">1.5</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.jdt.junit</td>
-      <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
       <td>org.eclipse.jdt.launching</td>
       <td><div align="center">1.4</div></td>
     </tr>
@@ -992,8 +1001,8 @@
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.jdt</td>
-      <td><div align="center">1.4</div></td>
+      <td>org.eclipse.jface</td>
+      <td><div align="center"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />F1.1</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jface.databinding</td>
@@ -1002,10 +1011,6 @@
     <tr>
       <td>org.eclipse.jface.text</td>
       <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.jface</td>
-      <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jsch.core</td>
@@ -1024,11 +1029,15 @@
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.pde.api.tools.ui</td>
+      <td>org.eclipse.pde</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.pde.api.tools</td>
+      <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.pde.api.tools.ui</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -1040,11 +1049,19 @@
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.pde.junit.runtime</td>
+      <td>org.eclipse.pde.doc.user</td>
+      <td><div align="center">not specified</div></td>
+    </tr>
+    <tr>
+      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />org.eclipse.pde.ds.core</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.pde.p2.ui</td>
+      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />org.eclipse.pde.ds.ui</td>
+      <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.pde.junit.runtime</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -1052,7 +1069,11 @@
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.pde.ui.templates</td>
+      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />org.eclipse.pde.ua.core</td>
+      <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
+      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />org.eclipse.pde.ua.ui</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -1060,7 +1081,7 @@
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.pde</td>
+      <td>org.eclipse.pde.ui.templates</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -1068,8 +1089,16 @@
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
+      <td>org.eclipse.platform.doc.isv</td>
+      <td><div align="center">not specified</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.platform.doc.user</td>
+      <td><div align="center">not specified</div></td>
+    </tr>
+    <tr>
       <td>org.eclipse.rcp</td>
-      <td><div align="center">F1.0</div></td>
+      <td><div align="center">not specified</div></td>
     </tr>
     <tr>
       <td>org.eclipse.sdk</td>
@@ -1092,11 +1121,11 @@
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.team.cvs.ssh2</td>
+      <td>org.eclipse.team.cvs.ssh</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.team.cvs.ssh</td>
+      <td>org.eclipse.team.cvs.ssh2</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -1110,6 +1139,10 @@
     <tr>
       <td>org.eclipse.text</td>
       <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui</td>
+      <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.browser</td>
@@ -1136,15 +1169,11 @@
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.ui.ide.application</td>
-      <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
       <td>org.eclipse.ui.ide</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.ui.intro.universal</td>
+      <td>org.eclipse.ui.ide.application</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -1152,7 +1181,7 @@
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.ui.navigator.resources</td>
+      <td>org.eclipse.ui.intro.universal</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -1160,11 +1189,19 @@
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
+      <td>org.eclipse.ui.navigator.resources</td>
+      <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
       <td>org.eclipse.ui.net</td>
-      <td><div align="center">F1.0</div></td>
+      <td><div align="center"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />F1.1</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.presentations.r21</td>
+      <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui.views</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -1176,12 +1213,12 @@
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.ui.views</td>
+      <td>org.eclipse.ui.win32</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.ui.win32</td>
-      <td><div align="center">1.4</div></td>
+      <td>org.eclipse.ui.workbench</td>
+      <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.workbench.compatibility</td>
@@ -1192,20 +1229,16 @@
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.ui.workbench</td>
-      <td><div align="center">F1.0</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.ui</td>
-      <td><div align="center">F1.0</div></td>
-    </tr>
-    <tr>
       <td>org.eclipse.update.configurator</td>
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
       <td>org.eclipse.update.core</td>
       <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.update.core.win32</td>
+      <td><div align="center">not specified</div></td>
     </tr>
     <tr>
       <td>org.eclipse.update.scheduler</td>
@@ -1216,12 +1249,12 @@
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
-      <td>org.junit4</td>
-      <td><div align="center">1.5</div></td>
-    </tr>
-    <tr>
       <td>org.junit</td>
       <td><div align="center">1.3</div></td>
+    </tr>
+    <tr>
+      <td>org.junit4</td>
+      <td><div align="center">1.5</div></td>
     </tr>
     <tr>
       <td>org.objectweb.asm</td>
