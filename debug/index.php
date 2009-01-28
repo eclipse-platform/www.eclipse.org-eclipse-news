@@ -31,7 +31,7 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<div class="homeitem">
-			<h3><b>Debug Project Overview</b></h3>
+			<h3>Debug Project Overview</h3>
 			
 			<p>The Eclipse Debug Project is not a single project unto itself, it is in fact comprised of 
 			two distinct sub-projects: Platform Debug and JDT Debug.</p>
@@ -78,15 +78,15 @@
 		<div class="homeitem">
 			<h3>Up To The Minute</h3>
 			<ul>
-			<li>Our manual testing programs our now available for <a href="/eclipse/debug/misc/ManualTestingPrograms.zip">download</a>.  Happy testing!
-			<li>The debug utils, which helps in verifying bugs, is now available via update site (with p2 metadata) at <a href="http://www.eclipse.org/eclipse/debug/update/">www.eclipse.org/eclipse/debug/update/</a></li>
-			<li>We are presenting two tutorials at EclipseCon 2008.  The presentations are available for both <a target="_blank" href="/eclipse/debug/documents/ec_2008/Debug_Tutorial_Basic_2008.ppt">Debug Platform: The Basics</a> and <a target="_blank" href="/eclipse/debug/documents/ec_2008/Debug_Tutorial_Custom_Integration_2008.ppt">Debug Platform: Custom Integration</a>. More
+			<li style="border:0;padding:1px;list-style:none;">Our manual testing programs our now available for <a href="/eclipse/debug/misc/ManualTestingPrograms.zip">download</a>.  Happy testing!
+			<li style="border:0;padding:1px;list-style:none;">The debug utils, which helps in verifying bugs, is now available via update site (with p2 metadata) at <a href="http://www.eclipse.org/eclipse/debug/update/">www.eclipse.org/eclipse/debug/update/</a></li>
+			<li style="border:0;padding:1px;list-style:none;">We are presenting two tutorials at EclipseCon 2008.  The presentations are available for both <a target="_blank" href="/eclipse/debug/documents/ec_2008/Debug_Tutorial_Basic_2008.ppt">Debug Platform: The Basics</a> and <a target="_blank" href="/eclipse/debug/documents/ec_2008/Debug_Tutorial_Custom_Integration_2008.ppt">Debug Platform: Custom Integration</a>. More
 			information can be found on the <a href="/eclipse/debug/documents.php">Documents</a> page along with exercises.
 			</li>
-			<li>To help new contributors, we have created a <a href="/eclipse/debug/documents/project_sets/debug.psf" target="_blank">project set file</a> containing all of the projects needed to get started with debug coding.
+			<li style="border:0;padding:1px;list-style:none;">To help new contributors, we have created a <a href="/eclipse/debug/documents/project_sets/debug.psf" target="_blank">project set file</a> containing all of the projects needed to get started with debug coding.
 			There is also a project set file for <a href="/eclipse/debug/documents/project_sets/debug3.3.1.psf" target="_blank">3.3.1 maintenance</a>.</li>
-			<li>Debug overall <a href="/eclipse/debug/platform/dev_plans/r3_5/plan.php">3.5 plan</a></li>
-			<li><a href="/eclipse/debug/test_plans/test_plans.php#3-5_testing">Debug 3.5 Test Matrix</a></li>
+			<li style="border:0;padding:1px;list-style:none;">Debug overall <a href="/eclipse/debug/platform/dev_plans/r3_5/plan.php">3.5 plan</a></li>
+			<li style="border:0;padding:1px;list-style:none;"><a href="/eclipse/debug/test_plans/test_plans.php#3-5_testing">Debug 3.5 Test Matrix</a></li>
 			</ul>
 		</div>
 	</div>
