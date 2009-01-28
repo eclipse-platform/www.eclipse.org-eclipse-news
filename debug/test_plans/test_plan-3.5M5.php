@@ -64,8 +64,8 @@
 				    <td> <div align="center">&nbsp;</div></td>
 				    <td> <div align="center">&nbsp;</div></td>
 				    <td> <div align="center">&nbsp;</div></td>
-				    <td> <div align="center">Darin Wright</div></td>
 				    <td> <div align="center">&nbsp;</div></td>
+				    <td> <div align="center">Darin Wright</div></td>
 				  </tr>
 				  <tr> 
 				    <td><b>Win XP</b></td>
