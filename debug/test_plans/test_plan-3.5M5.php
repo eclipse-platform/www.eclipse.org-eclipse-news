@@ -1053,7 +1053,7 @@
 				      	<li>verify that expansion and selection are maintained properly in the Variables View</li>
 				      	<li>verify that there is no blank labels in the Variables View</li>
 				    </ul>
-			<p><a href="#top">Back to top</a><br></p><p>&nbsp;</p>
+			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>	
 			<a name="Breadcrumb"></a>
 			<h2><b>Breadcrumb</b></h2>
 	 			<h3>Activation</h3>
@@ -1092,7 +1092,7 @@
 				      <li>Menu actions should reflect the selected item.  E.g. copy stack trace for a thread should copy the trace of the whole thread</li>
 				      <li>Find action should activate the selected item in Debug view</li>
 				    </ul>
-			<p><a href="#top">Back to top</a><br></p><p>&nbsp;</p>
+			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>	
 			<a name="Memory"></a>
 			<h2><b>Memory View</b></h2>
 				<p>
