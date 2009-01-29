@@ -100,7 +100,6 @@
 		<div class="homeitem3col">
 			<a name="top"></a>
 			<h2><b>Test Grid</b></h2>
-			<div align="center">
 			<table width="100%" border="1">
 			  <tr> 
 			    <td width="30%" align="center"><b>Feature Testing</b></td>
@@ -322,7 +321,6 @@
 			    <td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
 			  </tr>
 			</table>
-			</div>
 		</div>
 		<div class="homeitem3col">
 			<a name="Java6"></a>
