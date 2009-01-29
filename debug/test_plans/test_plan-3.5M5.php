@@ -37,12 +37,12 @@
 <div id="maincontent">
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
-		<div class="homeitem3col">
+		<div class="homeitem">
 			<h2><b>Testers</b></h2>
 			<p>Committers: Darin Wright, Michael Rennie, Curtis Windatt, Pawel Piech, Samantha Chan</p>
 			<p>Community:Anyone who wants to help</p>
 		</div>
-		<div class="homeitem3col">
+		<div class="homeitem">
 			<h2><b>JRE Grid</b></h2>
 			<p>The following JREs should be considered when testing. Committers have been 
 			  assigned a JRE and platform to test on. The community can chose any JRE and 
@@ -60,44 +60,44 @@
 				  </tr>
 				  <tr> 
 				    <td><b>Win Vista</b></td>
-				    <td> <div align="center">&nbsp;</div></td>
-				    <td> <div align="center">&nbsp;</div></td>
-				    <td> <div align="center">&nbsp;</div></td>
-				    <td> <div align="center">&nbsp;</div></td>
-				    <td> <div align="center">&nbsp;</div></td>
-				    <td> <div align="center">Darin Wright</div></td>
+				    <td align="center">&nbsp;</td>
+				    <td align="center">&nbsp;</td>
+				    <td align="center">&nbsp;</td>
+				    <td align="center">&nbsp;</td>
+				    <td align="center">&nbsp;</td>
+				    <td align="center">Darin Wright</td>
 				  </tr>
 				  <tr> 
 				    <td><b>Win XP</b></td>
-				    <td> <div align="center">&nbsp;</div></td>
-				    <td> <div align="center">&nbsp;</div></td>
-				    <td> <div align="center">&nbsp;</div></td>
-				    <td> <div align="center">&nbsp;</div></td>
-				    <td> <div align="center">&nbsp;</div></td>
-					<td> <div align="center">Samantha Chan</div></td>
+				    <td align="center">&nbsp;</td>
+				    <td align="center">&nbsp;</td>
+				    <td align="center">&nbsp;</td>
+				    <td align="center">&nbsp;</td>
+				    <td align="center">&nbsp;</td>
+					<td align="center">Samantha Chan</td>
 				  </tr>
 				  <tr> 
 				    <td><b>Linux</b></td>
-				    <td> <div align="center">&nbsp;</div></td>
-				    <td> <div align="center">&nbsp;</div></td>
-				    <td> <div align="center">Pawel Piech</div></td>
-					<td> <div align="center">&nbsp;</div></td>
-					<td> <div align="center">&nbsp;</div></td>
-					<td> <div align="center">Curtis Windatt</div></td>
+				    <td align="center">&nbsp;</td>
+				    <td align="center">&nbsp;</td>
+				    <td align="center">Pawel Piech</td>
+					<td align="center">&nbsp;</td>
+					<td align="center">&nbsp;</td>
+					<td align="center">Curtis Windatt</td>
 				  </tr>
 				  <tr> 
 				    <td><b>Mac</b></td>
-				    <td> <div align="center">&nbsp;</div></td>
-				    <td> <div align="center">&nbsp;</div></td>
-				    <td> <div align="center">Michael Rennie</div></td>
-				    <td> <div align="center">&nbsp;</div></td>
-				    <td> <div align="center">&nbsp;</div></td>
-					<td> <div align="center">&nbsp;</div></td>
+				    <td align="center">&nbsp;</td>
+				    <td align="center">&nbsp;</td>
+				    <td align="center">Michael Rennie</td>
+				    <td align="center">&nbsp;</td>
+				    <td align="center">&nbsp;</td>
+					<td align="center">&nbsp;</td>
 				  </tr>
 				</table>
 			</div>
 		</div>
-		<div class="homeitem3col">
+		<div class="homeitem">
 			<a name="top"></a>
 			<h2><b>Test Grid</b></h2>
 			<div align="center">
@@ -112,214 +112,221 @@
 			  </tr>
 			  <tr> 
 			    <td><a href="#Java6">Java 6.0 Features</a></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-				<td> <div align="center">&nbsp;</div></td>
-				<td> <div align="center">&nbsp;</div></td>
-				<td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+				<td align="center">&nbsp;</td>
+				<td align="center">&nbsp;</td>
+				<td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Evaluations">Evaluations</a></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10">;</div></td>
-				<td> <div align="center">&nbsp;</div></td>
-				<td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10">;</div></td>
+				<td align="center">&nbsp;</td>
+				<td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#ContextLaunching">Context Launching</a></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Launch">Launch Options</a></td>
-			     <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			     <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Launch_Modes">Launch Modes</a></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-				<td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>	
-			    <td> <div align="center">&nbsp;</div></td>			
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+				<td align="center">&nbsp;</td>
+			    <td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>	
+			    <td align="center">&nbsp;</td>			
 			  </tr>
 			  <tr> 
 			    <td><a href="#LaunchConfigurations">Launch Configurations</a></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Debug">View Management</a></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-				<td> <div align="center">&nbsp;</div></td>
-				<td> <div align="center">&nbsp;</div></td>
-				<td> <div align="center">&nbsp;</div></td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
+				<td align="center">&nbsp;</td>
+				<td align="center">&nbsp;</td>
+				<td align="center">&nbsp;</td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Breakpoints">Breakpoints</a></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Step">Stepping Tests</a></td>
-				<td> <div align="center">&nbsp;</div></td>
-				<td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+				<td align="center">&nbsp;</td>
+				<td align="center">&nbsp;</td>
+			    <td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Logical">Logical Structures</a></td>
-				<td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10">;</div></td>
+				<td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10">;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Watch">Watch Items</a></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-				<td> <div align="center">&nbsp;</div></td>
-				<td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-				<td> <div align="center">&nbsp;</div></td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+				<td align="center">&nbsp;</td>
+				<td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
+				<td align="center">&nbsp;</td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Context">Context Menu Launching</a></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-				<td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			   	<td> <div align="center">&nbsp;</div></td>
-			   	<td> <div align="center">&nbsp;</div></td>
+			    <td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
+				<td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			   	<td align="center">&nbsp;</td>
+			   	<td align="center">&nbsp;</td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Classpaths">Runtime Classpath</a></td>
-				<td> <div align="center">&nbsp;</div></td>
-				<td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+				<td align="center">&nbsp;</td>
+				<td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Source">Source Lookup</a></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-				<td> <div align="center">&nbsp;</div></td>
-				<td> <div align="center">&nbsp;</div></td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
+				<td align="center">&nbsp;</td>
+				<td align="center">&nbsp;</td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Monitors">Monitor Information</a></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Hot">HCR</a></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
+			    <td align="center">&nbsp;</td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#JREs">Installed JREs</a></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#EEs">Execution Environments</a></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#String">String Variables</a></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-				<td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-				<td> <div align="center">&nbsp;</div></td>
-				<td> <div align="center">&nbsp;</div></td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+				<td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
+				<td align="center">&nbsp;</td>
+				<td align="center">&nbsp;</td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Console">Console</a></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-				<td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+				<td align="center">&nbsp;</td>
+			    <td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
+			    <td align="center">&nbsp;</td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Variables">Variables</a></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			  </tr>
+			  <tr> 
+			    <td><a href="#Breadcrumb">Breadcrumb</a></td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Refactoring">Refactoring</a></td>
-			    <td> <div align="center">&nbsp;</div></td>
-				<td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-				<td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td align="center">&nbsp;</td>
+				<td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
+				<td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Applets">Applets</a></td>
-				<td> <div align="center">&nbsp;</div></td>
-				<td> <div align="center">&nbsp;</div></td>
-				<td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-				<td> <div align="center">&nbsp;</div></td>
-				<td> <div align="center">&nbsp;</div></td>
+				<td align="center">&nbsp;</td>
+				<td align="center">&nbsp;</td>
+				<td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
+				<td align="center">&nbsp;</td>
+				<td align="center">&nbsp;</td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Remote">Remote Debugging</a></td>
-			    <td> <div align="center">&nbsp;</div></td>
-				<td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td align="center">&nbsp;</td>
+				<td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
+			    <td align="center">&nbsp;</td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#JSP">JSP Example</a></td>
-			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td><div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
+			    <td align="center">&nbsp;</td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#STRESS">Stress Tests</a></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
+			    <td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
+			    <td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
+			    <td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
+			    <td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
 			  </tr>
 			</table>
-			<p></p>
+			<p>&nbsp;</p>
 			<table width="100%" border="1">
 			  <tr> 
 			    <td width="40%"><b>Non-Java Testing</b></td>
@@ -327,24 +334,24 @@
 			  </tr>
 			  <tr> 
 			    <td><a href="#Memory">Memory View</a></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Modules">Modules View</a></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Registers">Registers View</a></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#Breakpoint_Toggle_Types">Breakpoint Toggle Types</a></td>
-			    <td> <div align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></div></td>
+			    <td align="center"><img src="/eclipse/debug/images/ok.gif" width="10" height="10"></td>
 			  </tr>
 			</table>
 			</div>
 		</div>
-		<div class="homeitem3col">
+		<div class="homeitem">
 			<a name="Java6"></a>
 			<p>&nbsp;</p>
 			<h2><b>Java 6.0 Features</b></h2>
