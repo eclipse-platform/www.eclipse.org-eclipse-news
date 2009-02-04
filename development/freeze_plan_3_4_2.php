@@ -39,8 +39,8 @@ ob_start();
 <table cellspacing="5" cellpadding="2" width="100%" border="0"> 
 <tbody> <tr> <td valign="top" align="left" colspan="2"><b>Status</b></td></tr>
 <tr> <td valign="top" align="right"></td><td> 
-<p><font color="#ff0000"><b>Friday January 23, 2009 14:30 EDT Status:</b></font> 
-		  The RC0 test pass is over. The RC1 build is scheduled for Tuesday January 27.
+<p><font color="#ff0000"><b>Wednesday February 4, 2009 10:30 EDT Status:</b></font> 
+		  The RC2 build is running today. Further builds will occur only if requested.
       </td></tr> 
 <tr> <td valign="top" align="left" colspan="2"><b>Detailed Timeline</b></td></tr> <tr> <td valign="top" align="left" colspan="2"> 
 <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="center">
