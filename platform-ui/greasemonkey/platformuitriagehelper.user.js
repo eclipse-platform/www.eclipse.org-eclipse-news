@@ -73,10 +73,10 @@ window.addEventListener("load", function() {
 , false);
 
 
-function rawButton(label, action) {
-	return '<input type="button" value="' + label + '" onClick="' + action + '" />';
+function rawButton(label, action, description) {
+	return '<input type="button" value="' + label + '" onClick="' + action + '" title="' + description + '" />';
 }
-function buttonFor(comp, owner) {
+function buttonFor(comp, owner, description) {
 	var onClick = "var b=document.getElementById('knob-reassign');";
 	onClick += "var s = document.getElementById('short_desc').value;";
 	onClick += "if (b!=null) {";
@@ -91,7 +91,7 @@ function buttonFor(comp, owner) {
 	onClick += "d.focus();";
 	onClick += "}";
 	onClick += "}";
-	return rawButton(comp, onClick);
+	return rawButton(comp, onClick, description);
 }
 function postTriageButton(label, priority, target, keyword) {
 	var onClick = "var b=document.getElementById('knob-accept');";
@@ -160,7 +160,7 @@ function buildButtons(loadedJSON) {
 				ownerEmail = users[j].email;
 			}
 		}
-		buttons += buttonFor(assignments[i].component, ownerEmail);
+		buttons += buttonFor(assignments[i].component, ownerEmail, assignments[i].description);
 	}
 	
 	var refresh = '<input type="button" value="Refresh" id="refresher" />';
