@@ -39,6 +39,8 @@ ob_start();
 	        This document lays out the feature and API set for the Galileo (3.5) release of the Eclipse Project. </li>
 	        <li><a href="freeze_plan_3_4_2.php"> Eclipse Project Ganymede SR2 Endgame Plan</a><br>
 	    		Information about how we plan to wrap up Ganymede Service Release 2 (version 3.4.2).</li>     
+	      <li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=e4"> e4 Project 0.9 Release Plan</a><br>
+	        This document lays out the feature and API set for the 0.9 release of the e4 Project. </li>
     <ul>
     </ul>
       	</div>
