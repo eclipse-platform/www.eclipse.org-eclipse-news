@@ -172,10 +172,10 @@
 			</table>
 			</div>
 		</div>
-		<div class="homeitem3col">
+		<div class="homeitem">
 			<h2><b>Feature Testing</b></h2>
 			<a name="anteditor"></a>
-			<h2>Ant Editor</h2>
+			<h3>Ant Editor</h3>
 				<ul>
 					<li> Folding
 						<ul>
@@ -220,7 +220,7 @@
 				</ul>
 				<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="antview"></a>
-			<h2>Ant View</h2>
+			<h3>Ant View</h3>
 				<ul>
 					<li> General
 					    <ul>
@@ -241,7 +241,7 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="antdebugging"></a>
-			<h2>Debugging</h2>
+			<h3>Debugging</h3>
 				<ul>
 					<li>Buildfiles in the same JRE
 						<ul>
@@ -266,7 +266,7 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="importexport"></a>
-			<h2>Import / Export</h2>
+			<h3>Import / Export</h3>
 				<ul>
 					<li>Export a Java Project to a buildfile containing a javac task etc.
 				    	<ul>
@@ -285,7 +285,7 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="inputhandling"></a> 
-			<h2>Input Handling</h2>
+			<h3>Input Handling</h3>
 				<ul>
 					<li>Same JRE
 				    	<ul>
@@ -317,7 +317,7 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="externaltools"></a>
-			<h2>External Tools</h2>
+			<h3>External Tools</h3>
 				<ul>
 					<li> Tool Builders
 						<ul>
@@ -343,7 +343,7 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="refactoring"></a>
-			<h2>Refactoring</h2>
+			<h3>Refactoring</h3>
 				<ul>
 					<li> In the Ant Editor
 						<ul>
@@ -365,7 +365,7 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="preferences"></a>
-			<h2>Preferences</h2>
+			<h3>Preferences</h3>
 				<ul>
 					<li>All preference pages must have help topics</li>
 					<li>All preference changes must be cancelable</li>
@@ -379,7 +379,7 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="testsuite"></a>
-			<h2>Test Suite</h2>
+			<h3>Test Suite</h3>
 				<p>All tests should run without failure, and should be runnable individually</p>
 				<ul>
 					<li> Launch the Ant core test suite from org.eclipse.ant.tests.core</li>
