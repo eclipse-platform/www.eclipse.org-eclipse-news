@@ -51,13 +51,17 @@
 				<table width="75%" border="1">
 				  <tr> 
 				    <td width="18%">&nbsp;</td>
+				    <td width="18%"><b>IBM 1.4.2</b></td>
 				    <td width="18%"><b>IBM 1.5</b></td>
+				    <td width="18%"><b>IBM 1.6</b></td>
 				    <td width="18%"><b>JDK 1.4.2</b></td>
 				    <td width="18%"><b>JDK 1.5</b></td>
-				    <td width="18%"><b>IBM 1.4.2</b></td>
+				    <td width="18%"><b>JDK 1.6</b></td>
 				  </tr>
 				  <tr> 
-				    <td width="18%"><b>Win 2000</b></td>
+				    <td width="18%"><b>Win Vista</b></td>
+				    <td width="18%">&nbsp;</td>
+				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
@@ -69,6 +73,8 @@
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
+				    <td width="18%">&nbsp;</td>
+				    <td width="18%">&nbsp;</td>
 				  </tr>
 				  <tr> 
 				    <td width="18%"><b>Linux</b></td>
@@ -76,9 +82,13 @@
 				    <td width="18%">&nbsp;</td>
 				  	<td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
+				    <td width="18%">&nbsp;</td>
+				    <td width="18%">&nbsp;</td>
 				  </tr>
 				  <tr> 
 				    <td width="18%"><b>Mac</b></td>
+				    <td width="18%">&nbsp;</td>
+				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
@@ -105,9 +115,13 @@
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#antview">Ant View</a></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
@@ -119,9 +133,13 @@
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#importexport">Import / Export</a></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
@@ -133,9 +151,13 @@
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#launching">Launching</a></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
@@ -147,9 +169,13 @@
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#refactoring">Refactoring</a></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
@@ -161,9 +187,13 @@
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#testsuite">Test Suite</a></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
@@ -172,10 +202,10 @@
 			</table>
 			</div>
 		</div>
-		<div class="homeitem3col">
+		<div class="homeitem">
 			<h2><b>Feature Testing</b></h2>
 			<a name="anteditor"></a>
-			<h4>Ant Editor</h4>
+			<h3>Ant Editor</h3>
 				<ul>
 					<li> Folding
 						<ul>
@@ -220,7 +250,7 @@
 				</ul>
 				<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="antview"></a>
-			<h4>Ant View</h4>
+			<h3>Ant View</h3>
 				<ul>
 					<li> General
 					    <ul>
@@ -241,7 +271,7 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="antdebugging"></a>
-			<h4>Debugging</h4>
+			<h3>Debugging</h3>
 				<ul>
 					<li>Buildfiles in the same JRE
 						<ul>
@@ -266,7 +296,7 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="importexport"></a>
-			<h4>Import / Export</h4>
+			<h3>Import / Export</h3>
 				<ul>
 					<li>Export a Java Project to a buildfile containing a javac task etc.
 				    	<ul>
@@ -285,7 +315,7 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="inputhandling"></a> 
-			<h4>Input Handling</h4>
+			<h3>Input Handling</h3>
 				<ul>
 					<li>Same JRE
 				    	<ul>
@@ -304,7 +334,7 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="launching"></a>
-			<h4>Launching</h4>
+			<h3>Launching</h3>
 				<ul>
 					<li>Correct UI representation of objects contributed to build (same/separate JRE) in the preferences and launch configuration tabs
 					    <ul>
@@ -317,7 +347,7 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="externaltools"></a>
-			<h4>External Tools</h4>
+			<h3>External Tools</h3>
 				<ul>
 					<li> Tool Builders
 						<ul>
@@ -343,7 +373,7 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="refactoring"></a>
-			<h4>Refactoring</h4>
+			<h3>Refactoring</h3>
 				<ul>
 					<li> In the Ant Editor
 						<ul>
@@ -365,7 +395,7 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="preferences"></a>
-			<h4>Preferences</h4>
+			<h3>Preferences</h3>
 				<ul>
 					<li>All preference pages must have help topics</li>
 					<li>All preference changes must be cancelable</li>
@@ -379,7 +409,7 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="testsuite"></a>
-			<h4>Test Suite</h4>
+			<h3>Test Suite</h3>
 				<p>All tests should run without failure, and should be runnable individually</p>
 				<ul>
 					<li> Launch the Ant core test suite from org.eclipse.ant.tests.core</li>
