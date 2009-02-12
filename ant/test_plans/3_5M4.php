@@ -57,7 +57,7 @@
 				    <td width="18%"><b>IBM 1.4.2</b></td>
 				  </tr>
 				  <tr> 
-				    <td width="18%"><b>Win 2000</b></td>
+				    <td width="18%"><b>Win Vista</b></td>
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
@@ -175,7 +175,7 @@
 		<div class="homeitem3col">
 			<h2><b>Feature Testing</b></h2>
 			<a name="anteditor"></a>
-			<h4>Ant Editor</h4>
+			<h2>Ant Editor</h2>
 				<ul>
 					<li> Folding
 						<ul>
@@ -220,7 +220,7 @@
 				</ul>
 				<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="antview"></a>
-			<h4>Ant View</h4>
+			<h2>Ant View</h2>
 				<ul>
 					<li> General
 					    <ul>
@@ -241,7 +241,7 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="antdebugging"></a>
-			<h4>Debugging</h4>
+			<h2>Debugging</h2>
 				<ul>
 					<li>Buildfiles in the same JRE
 						<ul>
@@ -266,7 +266,7 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="importexport"></a>
-			<h4>Import / Export</h4>
+			<h2>Import / Export</h2>
 				<ul>
 					<li>Export a Java Project to a buildfile containing a javac task etc.
 				    	<ul>
@@ -285,7 +285,7 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="inputhandling"></a> 
-			<h4>Input Handling</h4>
+			<h2>Input Handling</h2>
 				<ul>
 					<li>Same JRE
 				    	<ul>
@@ -304,7 +304,7 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="launching"></a>
-			<h4>Launching</h4>
+			<h2>Launching</h2>
 				<ul>
 					<li>Correct UI representation of objects contributed to build (same/separate JRE) in the preferences and launch configuration tabs
 					    <ul>
@@ -317,7 +317,7 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="externaltools"></a>
-			<h4>External Tools</h4>
+			<h2>External Tools</h2>
 				<ul>
 					<li> Tool Builders
 						<ul>
@@ -343,7 +343,7 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="refactoring"></a>
-			<h4>Refactoring</h4>
+			<h2>Refactoring</h2>
 				<ul>
 					<li> In the Ant Editor
 						<ul>
@@ -365,7 +365,7 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="preferences"></a>
-			<h4>Preferences</h4>
+			<h2>Preferences</h2>
 				<ul>
 					<li>All preference pages must have help topics</li>
 					<li>All preference changes must be cancelable</li>
@@ -379,7 +379,7 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="testsuite"></a>
-			<h4>Test Suite</h4>
+			<h2>Test Suite</h2>
 				<p>All tests should run without failure, and should be runnable individually</p>
 				<ul>
 					<li> Launch the Ant core test suite from org.eclipse.ant.tests.core</li>
