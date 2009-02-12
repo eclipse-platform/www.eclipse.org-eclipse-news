@@ -304,7 +304,7 @@
 				</ul>
 			<p><a href="#top">Back to top</a><br><hr></p>
 			<a name="launching"></a>
-			<h2>Launching</h2>
+			<h3>Launching</h3>
 				<ul>
 					<li>Correct UI representation of objects contributed to build (same/separate JRE) in the preferences and launch configuration tabs
 					    <ul>
