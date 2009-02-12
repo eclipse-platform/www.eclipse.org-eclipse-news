@@ -2,7 +2,7 @@
 
 	#*****************************************************************************
 	#
-	# Copyright (c) 2008 IBM Corporation and others.
+	# Copyright (c) 2008, 2009 IBM Corporation and others.
  	# All rights reserved. This program and the accompanying materials
  	# are made available under the terms of the Eclipse Public License v1.0
  	# which accompanies this distribution, and is available at
@@ -40,7 +40,9 @@
 	$Nav->addCustomNav("PDE", "http://www.eclipse.org/pde/", "_self", 1);
 	$Nav->addCustomNav("e4", "http://www.eclipse.org/e4/", "_self", 1);
 	$Nav->addCustomNav("Incubator", "http://www.eclipse.org/eclipse/incubator/", "_self", 1);
-	$Nav->addNavSeparator( "Platform Ant", "/eclipse/ant" );
+	$Nav->addNavSeparator("Development", "http://www.eclipse.org/eclipse/development/", "_self", 1);
 	$Nav->addCustomNav("Examples", 	"/eclipse/ant/examples/examples.php",	"_self", 2);
+	$Nav->addNavSeparator("Project Home", 	"/eclipse/debug/index.php",			"_self", 1);
+	$Nav->addCustomNav("Platform Ant", 	"/eclipse/ant/index.php",	"_self", 2);
 
 ?>
