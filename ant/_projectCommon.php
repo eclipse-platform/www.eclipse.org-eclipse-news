@@ -41,6 +41,7 @@
 	$Nav->addCustomNav("e4", "http://www.eclipse.org/e4/", "_self", 1);
 	$Nav->addCustomNav("Incubator", "http://www.eclipse.org/eclipse/incubator/", "_self", 1);
 	$Nav->addNavSeparator("Development", "http://www.eclipse.org/eclipse/development/", "_self", 1);
+	$Nav->addCustomNav("Mailing Lists", 	"http://www.eclipse.org/mail/", "_self", 1);
 	$Nav->addCustomNav("Examples", 	"/eclipse/ant/examples/examples.php",	"_self", 2);
 	$Nav->addNavSeparator("Project Home", 	"/eclipse/debug/index.php",			"_self", 1);
 	$Nav->addCustomNav("Platform Ant", 	"/eclipse/ant/index.php",	"_self", 2);
