@@ -17,6 +17,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.MultiStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.jface.viewers.IStructuredContentProvider;
 import org.eclipse.jface.viewers.StructuredSelection;
@@ -101,6 +102,7 @@ public class StatusHandlingComponent implements TestBedComponent {
 		private static final String EXPLANATION = "explanation"; //$NON-NLS-1$
 		private static final String ACTION = "action"; //$NON-NLS-1$
 		private static final String WRAPPED = "wrapped"; //$NON-NLS-1$
+		private static final String MULTI = "multi"; //$NON-NLS-1$
 
 		private int hint;
 		private boolean wrapped;
@@ -109,6 +111,7 @@ public class StatusHandlingComponent implements TestBedComponent {
 
 		private IStatus status;
 		private String title;
+		private boolean multi;
 
 		/**
 		 * Constructs a new item.
@@ -119,15 +122,17 @@ public class StatusHandlingComponent implements TestBedComponent {
 		 *            a hint to be passed with status
 		 * @param wrapped
 		 *            indicates if should be wrapped in StatusAdapter
+		 * @param multi
+		 *            indicates if should be {@link MultiStatus}
 		 * @param title
-		 * 			  a title to be passed in StatusAdapter 
+		 *            a title to be passed in StatusAdapter
 		 * @param explanation
 		 *            an explanation to be passed in StatusAdapter
 		 * @param action
 		 *            an action to be passed in StatusAdapter
 		 */
-		public DisplayedItem(IStatus status, int hint, boolean wrapped, String title, 
-				String explanation, String action) {
+		public DisplayedItem(IStatus status, int hint, boolean wrapped,
+				boolean multi, String title, String explanation, String action) {
 			if (status == null)
 				throw new IllegalArgumentException();
 			this.status = status;
@@ -136,6 +141,7 @@ public class StatusHandlingComponent implements TestBedComponent {
 			this.title = title;
 			this.explanation = explanation;
 			this.action = action;
+			this.multi = multi;
 		}
 
 		public String toString() {
@@ -180,6 +186,7 @@ public class StatusHandlingComponent implements TestBedComponent {
 					+ Messages.StatusHandlingComponent_PluginId
 					+ status.getPlugin()
 					+ Messages.StatusHandlingComponent_Hint + stringHint
+					+ Messages.StatusHandlingComponent_MultiStatus + multi
 					+ Messages.StatusHandlingComponent_Wrapped + wrapped
 					+ Messages.StatusHandlingComponent_Explanation
 					+ explanation + Messages.StatusHandlingComponent_Action
@@ -217,6 +224,7 @@ public class StatusHandlingComponent implements TestBedComponent {
 			child.putInteger(HINT, hint);
 			child.putString(MESSAGE, status.getMessage());
 			child.putString(WRAPPED, "" + wrapped); //$NON-NLS-1$
+			child.putString(MULTI, "" + status.isMultiStatus()); //$NON-NLS-1$
 			child.putString(TITLE, title);
 			child.putString(EXPLANATION, explanation);
 			child.putString(ACTION, action);
@@ -244,8 +252,15 @@ public class StatusHandlingComponent implements TestBedComponent {
 			String action = memento.getString(ACTION);
 			if (action != null && action.length() == 0)
 				action = null;
-			Status status = new Status(severity, source, message);
-			return new DisplayedItem(status, hint, wrapped, title, explanation, action);
+			boolean multi = new Boolean(memento.getString(MULTI)).booleanValue();
+			IStatus status = new Status(severity, source, message);
+			if(multi){
+				MultiStatus mStatus = new MultiStatus(source, severity, message, new NullPointerException());
+				mStatus.add(status);
+				mStatus.add(Status.OK_STATUS);
+				status = mStatus;
+			}
+			return new DisplayedItem(status, hint, wrapped, multi, title, explanation, action);
 		}
 
 		/**
@@ -329,6 +344,8 @@ public class StatusHandlingComponent implements TestBedComponent {
 	private Text explanationField;
 	private Text actionField;
 
+	private Button multiStatusField;
+
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -411,6 +428,10 @@ public class StatusHandlingComponent implements TestBedComponent {
 				}
 			}
 		});
+		
+		multiStatusField = new Button(addStatusComposite, SWT.CHECK);
+		multiStatusField.setText(Messages.StatusHandlingComponent_MultiStatus);
+		multiStatusField.setToolTipText(Messages.StatusHandlingComponent_MultiStatusTooltip);
 
 		wrappedStatusField = new Button(addStatusComposite, SWT.CHECK);
 		wrappedStatusField
@@ -430,6 +451,8 @@ public class StatusHandlingComponent implements TestBedComponent {
 				}
 			}
 		});
+		
+		new Label(addStatusComposite, SWT.NONE);
 		
 		final Label titleLabel = new Label(addStatusComposite, SWT.NONE);
 		titleLabel.setText(Messages.StatusHandlingComponent_TitleLabel);
@@ -508,10 +531,22 @@ public class StatusHandlingComponent implements TestBedComponent {
 				String action = actionField.getText();
 				if (action != null && action.length() == 0)
 					action = null;
+				
+				boolean multi = multiStatusField.getSelection();
+				IStatus status = new Status(severity, statusPluginID.getText(), statusMessage.getText());
+				if (multi) {
+					MultiStatus mStatus = new MultiStatus(statusPluginID
+							.getText(), severity, statusMessage.getText(),
+							new NullPointerException());
+					mStatus.add(status);
+					mStatus.add(status);
+					mStatus.add(status);
+					mStatus.add(Status.OK_STATUS);
+					status = mStatus;
+				}
 
-				statusItems[0].add(new DisplayedItem(new Status(severity,
-						statusPluginID.getText(), statusMessage.getText()),
-						hint, wrapped, title, explanation, action));
+				statusItems[0].add(new DisplayedItem(status,
+						hint, wrapped, multi, title, explanation, action));
 				statusTableViever.refresh();
 			}
 		});

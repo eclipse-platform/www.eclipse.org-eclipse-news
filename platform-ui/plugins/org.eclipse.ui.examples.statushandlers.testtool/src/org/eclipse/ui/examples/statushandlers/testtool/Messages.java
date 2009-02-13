@@ -135,6 +135,8 @@ public class Messages extends NLS {
 	public static String StatusHandlingComponent_HintShow;
 	public static String StatusHandlingComponent_MessageLabel;
 	public static String StatusHandlingComponent_MessageTooltip;
+	public static String StatusHandlingComponent_MultiStatus;
+	public static String StatusHandlingComponent_MultiStatusTooltip;
 	public static String StatusHandlingComponent_PluginId;
 	public static String StatusHandlingComponent_PluginIdLabel;
 	public static String StatusHandlingRunnable_Explanation;
