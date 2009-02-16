@@ -16,10 +16,10 @@
 ob_start();
 ?>
 		
-	<div id="midcolumn">
-		<h1><?= $pageTitle ?></h1>
+	#<div id="midcolumn">
+	#	<h1><?= $pageTitle ?></h1>
 		<?php include("plan.html"); ?>
-	</div>
+	#</div>
 
 <?php
 	$html = ob_get_contents();
