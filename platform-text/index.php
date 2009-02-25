@@ -61,7 +61,8 @@ ob_start();
 				<ul>
 					<li><b>Secure Hovers (simple HTML)</b>
 						<p>
-						<strong>Note:</strong> <em>As of 3.5 this is no longer needed because JavaScript is disabled when showing HTML in hovers or in the Javadoc view.</em>
+						<br>
+						<strong>Note:</strong> <i>As of 3.5 this is no longer needed because JavaScript is disabled when showing HTML in hovers or in the Javadoc view.</i>
 						</p>
 						<p>
 					    Since 3.2 Eclipse uses the SWT Browser widget to display HTML information in hovers. On some platforms
