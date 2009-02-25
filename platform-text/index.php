@@ -59,7 +59,11 @@ ob_start();
 				<p>
 				Those optional plug-ins are not part of the Eclipse SDK download:</p>
 				<ul>
-					<li><b>Secure Hovers (simple HTML)</b><p>
+					<li><b>Secure Hovers (simple HTML)</b>
+						<p>
+						<strong>Note:</strong> <em>As of 3.5 this is no longer needed because JavaScript is disabled when showing HTML in hovers or in the Javadoc view.</em>
+						</p>
+						<p>
 					    Since 3.2 Eclipse uses the SWT Browser widget to display HTML information in hovers. On some platforms
 					    (e.g. Windows) this widget has all browser features enabled, e.g. it might execute scripts that are inside the HTML content
 					    (see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=228608">bug 228608</a> for details). Those who want to avoid this potential (but minimal) risk can download and install this optional plug-in
