@@ -65,9 +65,13 @@ window.addEventListener("load", function() {
 		if (assigned_to.value != "platform-ui-triaged@eclipse.org") {
 			buttons += buttonForMoveToTriaged(assigned_to.value);
 		} else {
-			buttons += postTriageButton("P5", "P5", "---", "", "platform-ui-triaged@eclipse.org");
-			buttons += postTriageButton("P3", "P3", "---", "", "platform-ui-triaged@eclipse.org");
-			buttons += postTriageButton("3.5", "", "3.5", "", qacontact);
+			buttons += postTriageButton("P5 triaged", "P5", "---", "", "platform-ui-triaged@eclipse.org");
+			buttons += postTriageButton("P3 triaged", "P3", "---", "", "platform-ui-triaged@eclipse.org");
+			buttons += postTriageButton("3.5 P3", "P3", "3.5", "", qacontact);
+			buttons += postTriageButton("M6 P2", "P2", "3.5 M6", "", qacontact);
+			buttons += postTriageButton("M7 P2", "P2", "3.5 M7", "", qacontact);
+			buttons += postTriageButton("RC1 P2", "P2", "3.5 RC1", "", qacontact);
+			buttons += postTriageButton("RC2 P2", "P2", "3.5 RC2", "", qacontact);
 			buttons += postTriageButton("3.6", "", "3.6", "", qacontact);
 			buttons += postTriageButton("4.0", "", "4.0", "", qacontact);
 		}
@@ -138,16 +142,6 @@ function buttonForMoveToTriaged(owner) {
 }
 function postTriageButton(label, priority, target, keyword, assignee) {
 	var onClick = "";
-	if (assignee != null && assignee != "") {
-		onClick += "var b=document.getElementById('knob-reassign');";
-		onClick += "if (b!=null) {";
-		onClick += "b.checked=true;";
-		onClick += "b.nextSibling.nextSibling.nextSibling.value='"+assignee+"';";
-		onClick += "var c=document.getElementById('target_milestone');";
-		onClick += "if (c!=null) {";
-		onClick += "c.value='" + target + "';";
-		onClick += "}";
-	}
 	if (priority != "") {
 		onClick += "var p=document.getElementById('priority');";
 		onClick += "p.value='" + priority + "';";
@@ -162,9 +156,20 @@ function postTriageButton(label, priority, target, keyword, assignee) {
 		onClick += "d.value = d.value + '" + keyword + "';";
 		onClick += "}";
 	}
-	//onClick += "d.scrollIntoView(true);";
+	onClick += "d.scrollIntoView(true);";
 	onClick += "d.focus();";
 	onClick += "}";
+	if (assignee != null && assignee != "") {
+		onClick += "var b=document.getElementById('knob-reassign');";
+		onClick += "if (b!=null) {";
+		onClick += "b.checked=true;";
+		onClick += "b.nextSibling.nextSibling.nextSibling.value='"+assignee+"';";
+		onClick += "}";
+		onClick += "var c=document.getElementById('target_milestone');";
+		onClick += "if (c!=null) {";
+		onClick += "c.value='" + target + "';";
+		onClick += "}";
+	}
 	return rawButton(label, onClick, "");
 }
 
