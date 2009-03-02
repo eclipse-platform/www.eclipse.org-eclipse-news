@@ -15,6 +15,9 @@
 var refreshInterval = 1000*60*60*24;
 var els = document.forms[1].elements;
 var component;
+var product;
+var qa_contact;
+var comment;
 var assigned_to;
 var short_desc;
 var keywords;
@@ -24,7 +27,10 @@ var header = document.getElementById('header');
 window.addEventListener("load", function() {
 	for (var i = 0; i < els.length; i++) {
 		if (els[i].name == "component") component = i;
+		if (els[i].name == "product") product = i;
+		if (els[i].name == "qa_contact") qa_contact = i;
 		if (els[i].name == "keywords") keywords = i;
+		if (els[i].name == "comment") comment = i;
 		if (els[i].name == "assigned_to") assigned_to = i;
 		if (els[i].name == "short_desc") short_desc = i;
 	}
@@ -38,18 +44,33 @@ window.addEventListener("load", function() {
 		b.scrollIntoView(true);
 	}
 	, false);
+	document.forms[1].elements[product].addEventListener('change', function() {
+		var b = document.getElementById('knob-reassign-cmp');
+		b.checked = true;
+		b.scrollIntoView(true);
+	}
+	, false);
 
 	var assigned_to = document.forms[1].elements[assigned_to];
-	if(assigned_to != null && assigned_to.value != "Platform-UI-Inbox@eclipse.org" && assigned_to.value != "platform-ide-inbox@eclipse.org") {
+	var qacontact = document.forms[1].elements[qa_contact].value;
+	if(assigned_to != null 
+			&& assigned_to.value != "Platform-UI-Inbox@eclipse.org" 
+			&& assigned_to.value != "platform-ide-inbox@eclipse.org" 
+			&& assigned_to.value != "Karice_McIntyre@ca.ibm.com" 
+			&& assigned_to.value != "Tod_Creasey@ca.ibm.com" 
+			&& assigned_to.value != "eclipse@pookzilla.net") {
 		var header = document.getElementById('header');
 		var myDiv = document.createElement('div');
 		var buttons = "";
-		buttons += postTriageButton("P5 and forget", "P5", "---", "");
-		buttons += postTriageButton("P5 Helpwanted", "P5", "---", "helpwanted");
-		buttons += postTriageButton("P3 Helpwanted", "P3", "---", "helpwanted");
-		buttons += postTriageButton("3.3.1", "", "3.3.1", "");
-		buttons += postTriageButton("3.4", "", "3.4", "");
-		buttons += postTriageButton("4.0", "", "4.0", "");
+		if (assigned_to.value != "platform-ui-triaged@eclipse.org") {
+			buttons += buttonForMoveToTriaged(assigned_to.value);
+		} else {
+			buttons += postTriageButton("P5", "P5", "---", "", "platform-ui-triaged@eclipse.org");
+			buttons += postTriageButton("P3", "P3", "---", "", "platform-ui-triaged@eclipse.org");
+			buttons += postTriageButton("3.5", "", "3.5", "", qacontact);
+			buttons += postTriageButton("3.6", "", "3.6", "", qacontact);
+			buttons += postTriageButton("4.0", "", "4.0", "", qacontact);
+		}
 		myDiv.innerHTML = '<div style="position:absolute; left: 150px; top:10px;">' + buttons + '</div>';
 		header.parentNode.insertBefore(myDiv, header);
 		return;
@@ -81,31 +102,56 @@ function buttonFor(comp, owner, description) {
 	onClick += "var s = document.getElementById('short_desc').value;";
 	onClick += "if (b!=null) {";
 	onClick += "b.checked=true;";
-	onClick += "b.nextSibling.nextSibling.nextSibling.value='" + owner + "';";
+	onClick += "b.nextSibling.nextSibling.nextSibling.value='platform-ui-triaged@eclipse.org';";
+	onClick += "var q = document.forms[1].elements[" + qa_contact + "];";
+	onClick += "q.value='" + owner + "';";
 	onClick += "}";
-	onClick += "if (s.indexOf('[" + comp + "]') == -1 ){";
 	onClick += "var d = document.forms[1].elements[" + short_desc + "];";
 	onClick += "if (d!=null) {";
+	onClick += "if (s.indexOf('[" + comp + "]') == -1 ){";
 	onClick += "d.value = '[" + comp + "] ' + d.value;";
+	onClick += "}";
 	onClick += "d.scrollIntoView(true);";
 	onClick += "d.focus();";
 	onClick += "}";
-	onClick += "}";
-	return rawButton(comp, onClick, description);
+	return rawButton(comp, onClick, owner + ": " + description);
 }
-function postTriageButton(label, priority, target, keyword) {
-	var onClick = "var b=document.getElementById('knob-accept');";
+function buttonForMoveToTriaged(owner) {
+	var onClick = "var b=document.getElementById('knob-reassign');";
+	onClick += "var s = document.getElementById('short_desc').value;";
 	onClick += "if (b!=null) {";
 	onClick += "b.checked=true;";
+	onClick += "b.nextSibling.nextSibling.nextSibling.value='platform-ui-triaged@eclipse.org';";
+	onClick += "var q = document.forms[1].elements[" + qa_contact + "];";
+	onClick += "q.value='" + owner + "';";
 	onClick += "}";
-	onClick += "var c=document.getElementById('target_milestone');";
-	onClick += "if (c!=null) {";
-	onClick += "c.value='" + target + "';";
-	onClick += "c=document.getElementById('priority');";
-	if (priority != "") {
-		onClick += "c.value='" + priority + "';";
+	onClick += "var co = document.forms[1].elements[" + comment + "];";
+	onClick += "if (co!=null) {";
+	onClick += "co.value = 'As per http://wiki.eclipse.org/Platform_UI/Bug_Triage_Change_2009' + co.value;";
+	onClick += "}";
+	onClick += "var d = document.forms[1].elements[" + short_desc + "];";
+	onClick += "if (d!=null) {";
+	onClick += "d.scrollIntoView(true);";
+	onClick += "d.focus();";
+	onClick += "}";
+	return rawButton("Move to Triaged", onClick, owner);
+}
+function postTriageButton(label, priority, target, keyword, assignee) {
+	var onClick = "";
+	if (assignee != null && assignee != "") {
+		onClick += "var b=document.getElementById('knob-reassign');";
+		onClick += "if (b!=null) {";
+		onClick += "b.checked=true;";
+		onClick += "b.nextSibling.nextSibling.nextSibling.value='"+assignee+"';";
+		onClick += "var c=document.getElementById('target_milestone');";
+		onClick += "if (c!=null) {";
+		onClick += "c.value='" + target + "';";
+		onClick += "}";
 	}
-	onClick += "}";
+	if (priority != "") {
+		onClick += "var p=document.getElementById('priority');";
+		onClick += "p.value='" + priority + "';";
+	}
 	onClick += "var d = document.forms[1].elements[" + keywords + "];";
 	onClick += "if (d!=null) {";
 	if (keyword != "") {
@@ -119,7 +165,7 @@ function postTriageButton(label, priority, target, keyword) {
 	//onClick += "d.scrollIntoView(true);";
 	onClick += "d.focus();";
 	onClick += "}";
-	return rawButton(label, onClick);
+	return rawButton(label, onClick, "");
 }
 
 function loadData() {
