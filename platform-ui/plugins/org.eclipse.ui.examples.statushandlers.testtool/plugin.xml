@@ -105,4 +105,11 @@
             name="PartInitExceptionEditor">
       </editor>
    </extension>
+      <extension
+            point="org.eclipse.ui.statusHandlers">
+         <statusHandler
+               class="org.eclipse.ui.examples.statushandlers.testtool.handlers.CompatibilityModeHandler"
+               id="org.eclipse.ui.examples.statushandlers.testtool.compatibilityModeHandler">
+         </statusHandler>
+      </extension>
 </plugin>
