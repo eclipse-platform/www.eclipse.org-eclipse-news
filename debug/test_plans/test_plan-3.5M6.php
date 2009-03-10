@@ -64,6 +64,7 @@
 			    <td align="center">&nbsp;</td>
 			    <td align="center">&nbsp;</td>
 			    <td align="center">&nbsp;</td>
+			    <td align="center">Samantha Chan</td>
 			    <td align="center">&nbsp;</td>
 			    <td align="center">&nbsp;</td>
 			  </tr>
