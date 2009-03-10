@@ -165,10 +165,10 @@
 			  </tr>
 			  <tr> 
 			    <td><a href="#testsuite">Test Suite</a></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
+			    <td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
+			    <td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
 			  </tr>
 			</table>
 			</div>
