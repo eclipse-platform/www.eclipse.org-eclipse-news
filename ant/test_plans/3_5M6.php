@@ -95,8 +95,8 @@
 			<table width="80%" border="1">
 			  <tr> 
 			    <td><b>Feature</b></td>
-			    <td><strong>Darin Wright</strong></td>
 			    <td><b>Michael Rennie</b></td>
+			    <td><strong>Darin Wright</strong></td>
 			    <td><b>Darin Swanson</b></td>
 			    <td><b>Kevin Barnes</b></td>
 			  </tr>
