@@ -27,7 +27,7 @@
 	
 	
 	$pageTitle 		= "Debug Test Plans";
-	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching, test, testing, plan, plans, 3.4, 3.3";
+	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching, test, testing, plan, plans, 3.4, 3.3, 3.5";
 	$pageAuthor		= "Debug Team";
 	
 	include("../_sideCommon.php");
@@ -45,6 +45,7 @@
 				<li><a href="/eclipse/debug/test_plans/test_plan-3.5.php">3.5</a></li>
 				<li><a href="/eclipse/debug/test_plans/test_plan-3.5M4.php">3.5M4</a></li>
 				<li><a href="/eclipse/debug/test_plans/test_plan-3.5M5.php">3.5M5</a></li>
+				<li><a href="/eclipse/debug/test_plans/test_plan-3.5M5.php">3.5M6</a></li>
 			</ul>
 		</div>
 		<div class="homeitem3col">
