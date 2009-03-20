@@ -59,6 +59,12 @@
 	          	(<a href="mailto:platform-debug-dev@eclipse.org">post</a>, <a href="http://dev.eclipse.org/mhonarc/lists/platform-debug-dev/maillist.html">archives</a>)</li>
       		</ul>
 		</div>
+		<div class="homeitem3col">
+			<h2><b>Update Site</b></h2>
+			<ul>
+	        	<li><a href="http://www.eclipse.org/eclipse/debug/update/">http://www.eclipse.org/eclipse/debug/update/</a> 
+      		</ul>
+		</div>
 	</div>
 	<div id="rightcolumn">
 		$commonside
