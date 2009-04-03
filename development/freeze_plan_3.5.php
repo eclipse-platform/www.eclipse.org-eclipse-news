@@ -74,6 +74,12 @@ ob_start();
           </tr>
            <tr>
             <td height="30"></td>
+            <td height="30"></td>
+            <td height="30"></td>
+            <td height="30"></td>
+            <td height="30"></td>
+            <td height="30"></td>
+            <td height="30"></td>
           </tr>
           <tr>
             <td height="20"></td>
