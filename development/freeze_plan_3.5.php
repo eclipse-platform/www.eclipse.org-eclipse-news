@@ -310,7 +310,7 @@ ob_start();
       	</div>
 		<div class="homeitem3col">
 			<h3>Details</h3>
-			<p><b><a name="Transition"></a>Transition to fix and polish</b></p>
+			<h4><a name="Transition"></a>Transition to fix and polish</h4>
       		<ul>
                 <li>All components transition on April 4 to polishing and fixing 
                   bugs for remainder of release cycle.</li>
@@ -321,7 +321,7 @@ ob_start();
                   still an API change, and thus it should be treated in the same way as any other API change requests.
                  </li>
       		</ul>              
-      		<p><b><a name="RC0"></a>RC0/M7</b></p>
+      		<h4><a name="RC0"></a>RC0/M7</h4>
       		<ul>
                 <li>RC0 and milestone M7 are one and the same 
                 <li>All components feature complete. 
@@ -329,8 +329,7 @@ ob_start();
                 <li>String externalization complete (including mnemonics).
                 <li>3.5 test plans posted.</li>
       		</ul>
-      		<p><b><a name="RC1"></a>RC1</b></p>
-             <p>Goals:</p>
+      		<h4><a name="RC1"></a>RC1</h4>
       		<ul>
                 <li>Accurate prioritization of all outstanding defects.</li>
                 <li>All work on polish items complete.</li>
@@ -340,52 +339,47 @@ ob_start();
       		</ul>
             <p>&nbsp;</p>
             <p>Note that May 8 is a holiday in France. May 12th is a holiday in Switzerland and possibly France.</p>
-			<p><a name="TestPassBeforeRC2"></a>Test pass prior to RC2</b></p>
-			<p>Notes: Full day test pass involving entire community, using 
+			<p><a name="TestPassBeforeRC2"></a>Test pass prior to RC2</h4>
+			<p>Full day test pass involving entire community, using 
             the most recent nightly build to help stabilize HEAD for the upcoming RC2 build.
             Committers with high priority fixes to make for RC2 can opt out of testing
             to focus on getting in fixes.  However, all committers should be working
             with the test candidate build.
-      		<p><b><a name="RC2"></a>RC2</b></p>
-             <p>Goals:</p>
+      		<h4><a name="RC2"></a>RC2</h4>
       		<ul>
                 <li>Final artwork in place.
                 <li>Accurate prioritization of all outstanding defects.
                 <li>No outstanding P1 defects.
                 <li>As few P2 defects as possible.</li>
       		</ul>
-			  Monday May 18 is a holiday in Canada. 
+      		<p>	
+			  Monday May 18 is a holiday in Canada.<br>
 			  Monday May 25 is a holiday in the US.
-      		<p><b><a name="TestPassUsingRC2"></a>Test pass using RC2</b></p>
-            <p>Notes:</p>
+			  </p>
+      		<h4><a name="TestPassUsingRC2"></a>Test pass using RC2</h4>
             <p>Concerted 2-day testing effort on RC2 involving
               entire community including all component teams. In an effort to
               mix things up and hold off the onset of &quot;tester
               fatigue&quot;, each component team will be designating one team
               member that will be assigned to test some other component.</p>
-             <p><a name="RC3"></a>RC3</b></p>
-             <p>Goals:</p>
+             <p><a name="RC3"></a>RC3</h4>
               <ul>
                 <li>Accurate prioritization of all outstanding defects.
                 <li>No outstanding P1 defects.
                 <li>As few P2 defects as possible.</li>
               </ul>
-             <p><b><a name="TestPassUsingRC3"></a>Test pass using RC3</b></p>
-            <p>Notes:</p>
+             <h4><a name="TestPassUsingRC3"></a>Test pass using RC3</h4>
             <p>Concerted 1-day testing effort on RC3 involving
               entire community including all component teams, searching for
               regressions and on the lookout for undiscovered &quot;stop
               ship&quot; defects.</p>
-             <p><b><a name="RC4"></a>RC4</b></p>
-             <p>Goals:</p>
+             <h4><a name="RC4"></a>RC4</h4>
               <ul>
                 <li>Accurate prioritization of all outstanding defects.
                 <li>Stable code base; no outstanding P1 defects.</li>
                </ul>
-              <p><a name="R3.5"></a>Release 3.5</b></p>
-              <p>Goal:</p>
+              <h4><a name="R3.5"></a>Release 3.5</h4>
               <p>Ship Eclipse 3.5 during the last week of June.</p>
-              <p>Notes:</p>
               <p>There is no formal test pass for RC4 and beyond other 
               than to check for last minute regressions. We will perform sanity 
               checking focused on documentation. Release 3.5 should be complete 
