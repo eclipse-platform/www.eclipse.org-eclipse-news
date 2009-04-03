@@ -36,13 +36,14 @@ ob_start();
 	<div id="midcolumn">
 
 
-<div class="homeitem3col">
-<h3>Eclipse 3.5 Draft endgame plan</h3>
 
 
 <head>
 <title>Eclipse 3.5 Endgame Plan</title>
-
+</head>
+<body>
+<div class="homeitem3col">
+<h3>Eclipse 3.5 Draft endgame plan</h3>
 <table cellspacing="5" cellpadding="2" width="100%" border="0">
 <tbody> <tr> <td valign="top" align="left" colspan="2"><b>Status</b></td></tr>
 <tr> <td valign="top" align="right"></td><td> 
