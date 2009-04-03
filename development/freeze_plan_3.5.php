@@ -356,10 +356,7 @@ ob_start();
                 <li>No outstanding P1 defects.
                 <li>As few P2 defects as possible.</li>
       		</ul>
-      		<p>	
-			  Monday May 18 is a holiday in Canada.<br>
-			  Monday May 25 is a holiday in the US.
-			  </p>
+      		<p>Monday May 18 is a holiday in Canada.  Monday May 25 is a holiday in the US.</p>
       		<h4><a name="TestPassUsingRC2"></a>Test pass using RC2</h4>
             <p>Concerted 2-day testing effort on RC2 involving
               entire community including all component teams. In an effort to
