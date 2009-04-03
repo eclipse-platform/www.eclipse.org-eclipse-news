@@ -33,7 +33,7 @@
 ob_start();
 ?>		
 	<div id="midcolumn">
-		<h1><?= $pageTitle ?></h1>
+		<h3><?= $pageTitle ?></h3>
 		<div class="homeitem3col">
 
 <table cellspacing="5" cellpadding="2" width="100%" border="0">
