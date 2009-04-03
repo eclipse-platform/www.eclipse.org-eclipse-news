@@ -414,12 +414,12 @@ ob_start();
               If a change is made to API to make it binary compatible with 3.4, technically this is still an API change, 
               and thus it should be treated in the same way as any other API change requests.</p>
              <p><b>Notification requirements:</b> None.</p>
-             <p><b>Extra checking requirements:</b>Two additional committers must check all code changes 
+             <p><b>Extra checking requirements:</b> Two additional committers must check all code changes 
               prior to release.</p>
 
 			<a name="FixPassAfterRC2"></a><h4>May 25-28 - contributions to RC3</h4>
-			<p><b>Focus:</b>Serious defects only; documentation.</p>
-            <p><b>Fix approval:</b>Two committers and a component lead must +1 your bug report. All changes 
+			<p><b>Focus:</b> Serious defects only; documentation.</p>
+            <p><b>Fix approval:</b> Two committers and a component lead must +1 your bug report. All changes 
               must have their associated bug reports tagged 3.5RC3. (Ongoing changes 
               to component documentation do not require special approval.)</p>
              <p><b>API change approval:</b> PMC must approve all API changes. No changes are to
@@ -435,7 +435,7 @@ ob_start();
 
 			<a name="FixPassAfterRC3"></a><h4>June 1-4 - contributions to RC4</h4>
 			<p><b>Focus:</b>Serious defects only; documentation.</p>
-            <p><b>Fix approval:</b>Component lead plus one other component lead must 
+            <p><b>Fix approval:</b> Component lead plus one other component lead must 
               approve all work on a component. In addition, any component lead 
               can veto a change with cause. No changes are to be released without 
               associated bug report tagged 3.5RC4 including risk assessment and 
