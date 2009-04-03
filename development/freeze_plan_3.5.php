@@ -49,14 +49,12 @@ ob_start();
     </tr>
     <tr>
       <td valign="top" align="left" colspan="2">
-        <table border="0" cellspacing="0" cellpadding="0" align="center">
+        <table border="1" cellspacing="0" cellpadding="0" align="center">
           <tr>
             <td align="right" height="20"><b>May 2009</b>&nbsp;</td>
-            <td height="20" bgcolor="#cccccc"><img src="images/tbar_l.gif" width="24" height="18"></td>
           </tr>
           <tr>
             <td height="20"></td>
-            <td height="20"><img src="images/tbar_r.gif" width="24" height="18"></td>
             <td align="right" height="20">4</td>
             <td align="right" height="20"> Mon 8:00 am EDT</td>
             <td height="20">&nbsp;&nbsp;<b>Transition to fix and polish mode</b></td>
@@ -66,7 +64,6 @@ ob_start();
           </tr>         
           <tr>
             <td height="20"></td>
-            <td height="20"><img src="images/tbar_r.gif" width="24" height="18"></td>
             <td align="right" height="20">14</td>
             <td align="right" height="20"> Thu 20:00 pm EDT</td>
             <td height="20">&nbsp;&nbsp;<b>Release Candidate 1 build</b></td>
@@ -76,11 +73,9 @@ ob_start();
           </tr>
            <tr>
             <td height="30"></td>
-            <td align="center" height="30"><img src="images/gray.gif" width="2" height="30"></td>
           </tr>
           <tr>
             <td height="20"></td>
-            <td height="20"><img src="images/tbar_r.gif" width="24" height="18"></td>
             <td align="right" height="20">18</td>
             <td align="right" height="20"> Mon 8:00 am EDT</td>
             <td height="20">&nbsp;<b>Start 2-day test pass against RC1</b></td>
@@ -90,7 +85,6 @@ ob_start();
           </tr>           
           <tr>
             <td height="20"></td>
-            <td height="20"><img src="images/tbar_r.gif" width="24" height="18"></td>
             <td align="right" height="20">20</td>
             <td align="right" height="20"> Wed 8:00 am EDT</td>
             <td height="20">&nbsp;&nbsp;<b>Start fix pass</b></td>
@@ -100,11 +94,9 @@ ob_start();
           </tr>
           <tr>
             <td height="30"></td>
-            <td align="center" height="30"><img src="images/gray.gif" width="2" height="30"></td>
           </tr>
           <tr>
             <td height="20"></td>
-            <td height="20"><img src="images/tbar_r.gif" width="24" height="18"></td>
             <td align="right" height="20">21</td>
             <td align="right" height="20"> Thu 20:00 pm EDT</td>
             <td height="20">&nbsp;&nbsp;<b>Release Candidate 2 build</b></td>
@@ -118,7 +110,6 @@ ob_start();
           </tr>
           <tr>
             <td height="20"></td>
-            <td height="20"><img src="images/tbar_r.gif" width="24" height="18"></td>
             <td align="right" height="20">25</td>
             <td align="right" height="20">Mon 8:00 am EDT</td>
             <td height="20">&nbsp;&nbsp;<b>Start 2-day test pass against RC2</b></td>
@@ -128,7 +119,6 @@ ob_start();
           </tr>          
           <tr>
             <td height="20"></td>
-            <td height="20"><img src="images/tbar_r.gif" width="24" height="18"></td>
             <td align="right" height="20">27</td>
             <td align="right" height="20">Wed 8:00 am EDT</td>
             <td height="20">&nbsp;&nbsp;<b>Start fix pass</b></td>
@@ -138,11 +128,9 @@ ob_start();
           </tr>
           <tr>
             <td height="30"></td>
-            <td align="center" height="30"><img src="images/gray.gif" width="2" height="20"></td>
           </tr>
           <tr>
             <td height="20"></td>
-            <td height="20"><img src="images/tbar_r.gif" width="24" height="18"></td>
             <td align="right" height="20">28</td>
             <td align="right" height="20"> Thu 20:00 pm EDT</td>
             <td height="20">&nbsp;&nbsp;<b>Release Candidate 3 build</b></td>
@@ -152,11 +140,9 @@ ob_start();
           </tr>
           <tr>
             <td align="right" height="20"><b>June 2009</b>&nbsp;</td>
-            <td height="20"><img src="images/tbar_l.gif" width="24" height="18"></td>
           </tr>                 
           <tr>
             <td height="20"></td>
-            <td height="20"><img src="images/tbar_r.gif" width="24" height="18"></td>
             <td align="right" height="20">1</td>
             <td align="right" height="20">&nbsp;&nbsp;&nbsp;Mon 8:00 am EDT</td>
             <td height="20">&nbsp;&nbsp;<b>All-day test pass against RC3</b></td>
@@ -166,7 +152,6 @@ ob_start();
           </tr>
           <tr>
             <td height="20"></td>
-            <td height="20"><img src="images/tbar_r.gif" width="24" height="18"></td>
             <td align="right" height="20">2</td>
             <td align="right" height="20">Tue 8:00 am EDT</td>
             <td height="20">&nbsp;&nbsp;<b>Start fix pass</b></td>
@@ -176,11 +161,9 @@ ob_start();
           </tr>
           <tr>
             <td height="20"></td>
-            <td align="center" height="20"><img src="images/gray.gif" width="2" height="20"></td>
           </tr>
           <tr>
             <td height="20"></td>
-            <td height="20"><img src="images/tbar_r.gif" width="24" height="18"></td>
             <td align="right" height="20">4</td>
             <td align="right" height="20"> Thu 20:00 pm EDT</td>
             <td height="20">&nbsp;&nbsp;<b>Release Candidate 4 build</b></td>
@@ -190,15 +173,12 @@ ob_start();
           </tr>
 		  <tr>
            <td height="20"></td>
-            <td align="center" height="20"><img src="images/gray.gif" width="2" height="20"></td>
           </tr>
 		   <tr>
             <td height="20"></td>
-            <td align="center" height="20"><img src="images/gray.gif" width="2" height="20"></td>
           </tr>
 		   <tr>
             <td height="20"></td>
-            <td align="center" height="20"><img src="images/gray.gif" width="2" height="20"></td>
 			<td align="right" height="20"></td>
             <td align="right" height="20"></td>
             <td height="20">&nbsp;&nbsp;<b>Post RC4 builds will be run to meet translation,</b></td>
@@ -207,7 +187,6 @@ ob_start();
           </tr>
 		  		   <tr>
             <td height="20"></td>
-            <td align="center" height="20"><img src="images/gray.gif" width="2" height="20"></td>
 			<td align="right" height="20"></td>
             <td align="right" height="20"></td>
             <td height="20">&nbsp;&nbsp;<b>documentation and Galileo goals.</b></td>
@@ -216,38 +195,28 @@ ob_start();
           </tr>
 		   <tr>
             <td height="20"></td>
-            <td align="center" height="20"><img src="images/gray.gif" width="2" height="20"></td>
           </tr>
 		  
           <tr>
             <td height="20"></td>
-            <td align="center" height="20"><img src="images/gray.gif" width="2" height="20"></td>
           </tr>
 		   <tr>
             <td align="right" height="20"><b>June 2007</b>&nbsp;</td>
-            <td height="20"><img src="images/tbar_l.gif" width="24" height="18"></td>
           </tr>
   		  <tr>
             <td height="20"></td>
-            <td align="center" height="20"><img src="images/gray.gif" width="2" height="20"></td>
           </tr>
 		  <tr>
             <td height="20"></td>
-            <td align="center" height="20"><img src="images/gray.gif" width="2" height="20"></td>
-          </tr>
-
-		  <tr>
-            <td height="20"></td>
-            <td align="center" height="20"><img src="images/gray.gif" width="2" height="20"></td>
           </tr>
 		  <tr>
             <td height="20"></td>
-            <td align="center" height="20"><img src="images/gray.gif" width="2" height="20"></td>
           </tr>
-
+		  <tr>
+            <td height="20"></td>
+          </tr>
           <tr>
             <td height="20"></td>            
-    	    <td height="20"><img src="images/tbar_r.gif" width="24" height="18"></td>
             <td align="right" height="20">24</td>
             <td align="right" height="20"></td>
             <td height="20">&nbsp;&nbsp;<b>Release 3.5 available</b></td>
@@ -259,8 +228,7 @@ ob_start();
       </td>
     </tr>
     <tr>
-      <td valign="top" align="left" colspan="2"><b><Useful
-        Links</b></td>
+      <td valign="top" align="left" colspan="2"><b><Useful Links</b></td>
     </tr>
         <tr>
       <td valign="top" align="right"><img src="images/Adarrow.gif" border="0" width="16" height="16"></td>
