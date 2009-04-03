@@ -33,11 +33,6 @@
 ob_start();
 ?>		
 
-	<div id="midcolumn">
-
-
-
-
 <head>
 <title>Eclipse 3.5 Endgame Plan</title>
 </head>
