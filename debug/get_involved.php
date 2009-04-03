@@ -205,16 +205,18 @@
 			       if a change needs to be reviewed in the future.</p>
 			      <p>Bugzilla is picky about the state changes it allows, so we follow these steps to maximize efficiency:
 			      <ul>
-			        <li>Reassign the bug to the Debug committer who will be asked to verify the bug.
-			        <li>Copy the list of changed files from the Synchronize view and paste them into the comment section of the bug report. For each file, provide a brief description of why the file was changed.
-			        <li>Commit the code changes to CVS.
-			        <li>Mark the bug RESOLVED-FIXED with a request to verify.
+			        <li>Reassign the bug to the Debug committer who will fix the bug.</li>
+			        <li>Create a patch of the proposed fixes for the bug.</li>
+			        <li>Commit the code changes to CVS.</li>
+			        <li>Using the REVIEW flags add the other committer(s) who are to verify the bug (with the '?' flag).</li>
+			        <li>Add the committer(s) involved in the review to the CC list - to ensure they are notified of a review request.</li>
+			        <li>Mark the bug RESOLVED-FIXED with a request to verify.</li>
+			        <li>Add an entry to the build notes stating the bug has been fixed.</li>
 			      </ul></li>
 			      <li><b>VERIFIED-FIXED</b> - Bugs are marked as VERIFIED-FIXED once someone verifies the fix 
 			      that was checked into CVS. Bugs are always verified by a Debug committer other than the person who checked in 
 			      the fix. The verifier makes sure that the original problem is fixed and also looks at the code for any
-			      obvious errors. This verification step ensures that all code changes are looked at by at least two pairs of eyes.  In addition
-				  the verifier will add an entry in the build notes stating that the bug has been fixed.</li>
+			      obvious errors. This verification step ensures that all code changes are looked at by at least two pairs of eyes.</li>
 			</ul>
 		</div>
 		<a name="test_pass"></a>
