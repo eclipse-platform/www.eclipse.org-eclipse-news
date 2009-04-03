@@ -390,7 +390,7 @@ ob_start();
               and available for download as soon as we are satisfied with it.</p>
       	</div>
 		<div class="homeitem3col">
-			<a name="Transition"><h3>Fix pass rules of engagement</h3>
+			<a name="Transition"><h3>Fix pass rules of engagement</h3></a>
 			<h4>May 4-14 - contributions to RC1</h4>
 			<p><b>Focus:</b>(1) P1 defects, (2) performance defects, (3) special 
               &quot;polish&quot; items. Fixing other defects has lower priority.</p>
