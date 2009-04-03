@@ -50,7 +50,7 @@ ob_start();
     </tr>
     <tr>
       <td valign="top" align="left" colspan="2">
-        <table border="1" cellspacing="0" cellpadding="0" align="center">
+        <table border="0" cellspacing="0" cellpadding="0" align="center">
           <tr>
             <td align="right" height="20"><b>May 2009</b>&nbsp;</td>
           </tr>
@@ -73,12 +73,6 @@ ob_start();
             <td height="20">&nbsp;&nbsp;</td>
           </tr>
            <tr>
-            <td height="30"></td>
-            <td height="30"></td>
-            <td height="30"></td>
-            <td height="30"></td>
-            <td height="30"></td>
-            <td height="30"></td>
             <td height="30"></td>
           </tr>
           <tr>
