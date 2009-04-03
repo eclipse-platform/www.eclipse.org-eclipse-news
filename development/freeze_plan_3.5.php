@@ -107,7 +107,6 @@ ob_start();
           </tr>
           <tr>
             <td height="30"></td>
-            <td align="center" height="30"><img src="images/gray.gif" width="2" height="20"></td>
           </tr>
           <tr>
             <td height="20"></td>
@@ -182,22 +181,16 @@ ob_start();
             <td height="20"></td>
 			<td align="right" height="20"></td>
             <td align="right" height="20"></td>
-            <td height="20">&nbsp;&nbsp;<b>Post RC4 builds will be run to meet translation,</b></td>
+            <td height="20">&nbsp;&nbsp;<b>Post RC4 builds will be run to meet translation, documentation and Galileo goals.</b></td>
             <td height="20">&nbsp;</td>
-            <td height="20">&nbsp;&nbsp;</td>
-          </tr>
-		  		   <tr>
-            <td height="20"></td>
-			<td align="right" height="20"></td>
-            <td align="right" height="20"></td>
-            <td height="20">&nbsp;&nbsp;<b>documentation and Galileo goals.</b></td>
-            <td height="20">&nbsp;</td>          
             <td height="20">&nbsp;&nbsp;</td>
           </tr>
 		   <tr>
             <td height="20"></td>
           </tr>
-		  
+		   <tr>
+            <td height="20"></td>
+          </tr>
           <tr>
             <td height="20"></td>
           </tr>
