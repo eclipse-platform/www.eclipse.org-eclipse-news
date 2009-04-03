@@ -403,7 +403,7 @@ ob_start();
              <p><b>Extra checking requirements:</b> One additional committer must check all code changes 
               prior to release.</p>
 
-			<a name="FixPassAfterRC1"/><h4>May 18-21 - contributions to RC2</h4>
+			<a name="FixPassAfterRC1"></a><h4>May 18-21 - contributions to RC2</h4>
 			<p><b>Focus:</b>(1) P1 defects, (2) performance defects, (3) special 
               &quot;polish&quot; items. Fixing other defects has lower priority.</p>
             <p><b>Fix approval:</b> Two committers must +1 your bug report. All changes 
@@ -418,7 +418,7 @@ ob_start();
              <p><b>Extra checking requirements:</b>Two additional committers must check all code changes 
               prior to release.</p>
 
-			<a name="FixPassAfterRC2"/><h4>May 25-28 - contributions to RC3</h4>
+			<a name="FixPassAfterRC2"></a><h4>May 25-28 - contributions to RC3</h4>
 			<p><b>Focus:</b>Serious defects only; documentation.</p>
             <p><b>Fix approval:</b>Two committers and a component lead must +1 your bug report. All changes 
               must have their associated bug reports tagged 3.5RC3. (Ongoing changes 
@@ -434,7 +434,7 @@ ob_start();
               prior to release. Person who reported bug should mark the bug as 
               verified once they have retested.</p>
 
-			<a name="FixPassAfterRC3"/><h4>June 1-4 - contributions to RC4</h4>
+			<a name="FixPassAfterRC3"></a><h4>June 1-4 - contributions to RC4</h4>
 			<p><b>Focus:</b>Serious defects only; documentation.</p>
             <p><b>Fix approval:</b>Component lead plus one other component lead must 
               approve all work on a component. In addition, any component lead 
