@@ -392,12 +392,12 @@ ob_start();
           <tr>
             <td width="25%">Notes:</td>
             <td width="75%"> <ul>
-                <li>All components transition on April 3 to polishing and fixing 
+                <li>All components transition on April 4 to polishing and fixing 
                   bugs for remainder of release cycle.</li>
                 <li>PMC approval is required for feature work including API changes 
-                  being done after M5. See the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list.</li>
+                  being done after M7. See the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list.</li>
                   No changes are to be released without prior approval and associated bug report.
-                  If a change is made to API to make it binary compatible with 3.3, technically this is still an API change, and thus it should be treated in the same way as any other API change requests.                  
+                  If a change is made to API to make it binary compatible with 3.4, technically this is still an API change, and thus it should be treated in the same way as any other API change requests.
               </ul>              
 			  </td>
           </tr>
@@ -438,7 +438,6 @@ ob_start();
               <p>&nbsp;</p>
                Note that May 8 is a holiday in France. May 12th is a holiday in Switzerland and possibly France.
                 </td>
-          
           </tr>
         </table>
       </td>
@@ -473,8 +472,8 @@ ob_start();
                 <li>No outstanding P1 defects.
                 <li>As few P2 defects as possible.</li>
               </ul>  
-			  Monday May 19 is a holiday in Canada. 
-			  Monday May 26 is a holiday in the US.              
+			  Monday May 18 is a holiday in Canada. 
+			  Monday May 25 is a holiday in the US.              
               </td>
           </tr>
         </table>
@@ -588,7 +587,7 @@ ob_start();
             <td width="75%">PMC must approve all API changes. No changes are to
               be released without prior approval and associated bug report.  
               Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
-              If a change is made to API to make it binary compatible with 3.3, technically this is still an API change, 
+              If a change is made to API to make it binary compatible with 3.4, technically this is still an API change, 
               and thus it should be treated in the same way as any other API change requests.
               </td>
           </tr>
@@ -627,7 +626,7 @@ ob_start();
             <td width="75%">PMC must approve all API changes. No changes are to
               be released without prior approval and associated bug report.  
               Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
-              If a change is made to API to make it binary compatible with 3.3, technically this is still an API change, 
+              If a change is made to API to make it binary compatible with 3.4, technically this is still an API change, 
               and thus it should be treated in the same way as any other API change requests.</td>
           </tr>
           <tr>
@@ -664,7 +663,7 @@ ob_start();
             <td width="75%">PMC must approve all API changes. No changes are to
               be released without prior approval and associated bug report.  
               Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
-              If a change is made to API to make it binary compatible with 3.3, technically this is still an API change, 
+              If a change is made to API to make it binary compatible with 3.4, technically this is still an API change, 
               and thus it should be treated in the same way as any other API change requests.</td>
           </tr>
           <tr>
@@ -705,7 +704,7 @@ ob_start();
             <td width="75%">PMC must approve all API changes. No changes are to
               be released without prior approval and associated bug report.  
               Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
-              If a change is made to API to make it binary compatible with 3.3, technically this is still an API change, 
+              If a change is made to API to make it binary compatible with 3.4, technically this is still an API change, 
               and thus it should be treated in the same way as any other API change requests.</td>
           </tr>
           <tr>
