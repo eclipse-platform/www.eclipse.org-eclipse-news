@@ -195,7 +195,7 @@ ob_start();
             <td height="20"></td>
           </tr>
 		   <tr>
-            <td align="right" height="20"><b>June 2007</b>&nbsp;</td>
+            <td align="right" height="20"><b>June 2009</b>&nbsp;</td>
           </tr>
   		  <tr>
             <td height="20"></td>
