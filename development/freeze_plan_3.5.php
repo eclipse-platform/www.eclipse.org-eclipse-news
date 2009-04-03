@@ -55,7 +55,7 @@ ob_start();
         <table border="0" cellspacing="0" cellpadding="0" align="center">
           <tr>
             <td align="right" height="20"><b>May 2009</b>&nbsp;</td>
-            <td height="20"><img src="images/tbar_l.gif" width="24" height="20"></td>
+            <td height="20" bgcolor="#cccccc"><img src="images/tbar_l.gif" width="24" height="20"></td>
           </tr>
           <tr>
             <td height="20"></td>
