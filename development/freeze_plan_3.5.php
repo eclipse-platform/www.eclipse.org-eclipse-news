@@ -36,7 +36,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>April 2, 2009 - M7 development underway.</b></p>
+			<p><b>April 3, 2009 - M7 development underway.</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -341,7 +341,6 @@ ob_start();
                 <li>No outstanding P1 defects. </li>
                 <li>As few P2 defects as possible.</li>
       		</ul>
-            <p>&nbsp;</p>
             <p>Note that May 8 is a holiday in France. May 12th is a holiday in Switzerland and possibly France.</p>
 			<h4><a name="TestPassBeforeRC2"></a>Test pass prior to RC2</h4>
 			<p>Full day test pass involving entire community, using 
