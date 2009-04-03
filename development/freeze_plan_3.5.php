@@ -343,7 +343,7 @@ ob_start();
       		</ul>
             <p>&nbsp;</p>
             <p>Note that May 8 is a holiday in France. May 12th is a holiday in Switzerland and possibly France.</p>
-			<p><a name="TestPassBeforeRC2"></a>Test pass prior to RC2</h4>
+			<h4><a name="TestPassBeforeRC2"></a>Test pass prior to RC2</h4>
 			<p>Full day test pass involving entire community, using 
             the most recent nightly build to help stabilize HEAD for the upcoming RC2 build.
             Committers with high priority fixes to make for RC2 can opt out of testing
@@ -363,7 +363,7 @@ ob_start();
               mix things up and hold off the onset of &quot;tester
               fatigue&quot;, each component team will be designating one team
               member that will be assigned to test some other component.</p>
-             <p><a name="RC3"></a>RC3</h4>
+             <h4><a name="RC3"></a>RC3</h4>
               <ul>
                 <li>Accurate prioritization of all outstanding defects.
                 <li>No outstanding P1 defects.
