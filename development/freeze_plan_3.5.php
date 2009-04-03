@@ -225,7 +225,10 @@ ob_start();
 	        This is why it is so important to ferret out &quot;stop ship&quot; bugs
 	        as early as possible, while there is still time left in the schedule to
 	        address them. Most of the bugs that will be uncovered will be less
-	        serious. During the fix passes, we prioritize the less serious bugs and
+	        serious. 
+	        </p>
+	        <p>
+	        During the fix passes, we prioritize the less serious bugs and
 	        try to fix as many of the important ones as possible without
 	        jeopardizing the schedule or the overall stability of the release. We're
 	        always on the look out for &quot;regression&quot; type bugs where we
@@ -240,8 +243,9 @@ ob_start();
 	        be reconsidered for the next release.) Because of this progressive
 	        tightening, the windows of opportunity for fixing problems within the
 	        schedule are relatively narrow. Things works best if everyone pushes in
-	        the right direction on the right things at the right times. As it is
-	        virtually impossible to work out all the details in advance, we will be
+	        the right direction on the right things at the right times.
+	        </p>
+	        <p>As it is virtually impossible to work out all the details in advance, we will be
 	        updating this page regularly to reflect current status and current
 	        testing emphasis. If you are participating we suggest you bookmark this
 	        page in your browser and check back frequently for updates. General
