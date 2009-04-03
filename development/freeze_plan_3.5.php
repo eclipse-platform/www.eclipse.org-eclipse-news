@@ -421,7 +421,7 @@ ob_start();
 
 			<a name="FixPassAfterRC2"></a><h4>May 25-28 - contributions to RC3</h4>
 			<p><b>Focus:</b> Serious defects only; documentation.</p>
-            <p><b>Fix approval:</b> Two other committers and a component lead must +1 your bug report. All changes 
+            <p><b>Fix approval:</b> Two other committers and a component lead must +1 your bug report (3 people who are not the one making the change). All changes 
               must have their associated bug reports tagged 3.5RC3. (Ongoing changes 
               to component documentation do not require special approval.)</p>
              <p><b>API change approval:</b> PMC must approve all API changes. No changes are to
