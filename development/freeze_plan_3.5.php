@@ -179,19 +179,7 @@ ob_start();
 	            <td height="20"></td>
 	          </tr>
 			   <tr>
-	            <td height="20"></td>
-	          </tr>
-	          <tr>
-	            <td height="20"></td>
-	          </tr>
-			   <tr>
 	            <td align="right" height="20"><b>June 2009</b>&nbsp;</td>
-	          </tr>
-	  		  <tr>
-	            <td height="20"></td>
-	          </tr>
-			  <tr>
-	            <td height="20"></td>
 	          </tr>
 			  <tr>
 	            <td height="20"></td>
@@ -218,6 +206,7 @@ ob_start();
 				 lists various things that need to be checked before each release.</li>
 			<li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse">Eclipse Project Galileo Plan</a></li>
 			<li><a href="http://wiki.eclipse.org/index.php/Galileo">Galileo Simultaneous Release</a></li>
+			</ul>
       	</div>
 		<div class="homeitem3col">
 			<h3>What is the game plan?</h3>
@@ -321,187 +310,86 @@ ob_start();
       	</div>
 		<div class="homeitem3col">
 			<h3>Details</h3>
-<table cellspacing="5" cellpadding="2" width="100%" border="0">
-  <tbody>
-    <tr>
-      <td valign="top" align="left" colspan="2"><b>Details</b></td></tr>
-    <tr>
-      <td width="20%" valign="top" align="left"><b><a name="Transition"></a>Transition 
-        to fix and polish</b></td>
-      <td>
-        <table cellspacing="0" cellpadding="5" width="100%" border="1">
-          <tr>
-            <td width="25%">Notes:</td>
-            <td width="75%"> <ul>
+			<p><b><a name="Transition"></a>Transition to fix and polish</b></p>
+      		<ul>
                 <li>All components transition on April 4 to polishing and fixing 
                   bugs for remainder of release cycle.</li>
                 <li>PMC approval is required for feature work including API changes 
                   being done after M7. See the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list.</li>
-                  No changes are to be released without prior approval and associated bug report.
-                  If a change is made to API to make it binary compatible with 3.4, technically this is still an API change, and thus it should be treated in the same way as any other API change requests.
-              </ul>              
-			  </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <td width="20%" valign="top" align="left"><b><a name="RC0"></a>RC0/M7</b></td>
-      <td>
-        <table cellspacing="0" cellpadding="5" width="100%" border="1">
-          <tr>
-            <td width="25%">Goals:</td>
-            <td width="75%"> <ul>
+                 <li>No changes are to be released without prior approval and associated bug report.
+                  If a change is made to API to make it binary compatible with 3.4, technically this is 
+                  still an API change, and thus it should be treated in the same way as any other API change requests.
+                 </li>
+      		</ul>              
+      		<p><b><a name="RC0"></a>RC0/M7</b></p>
+      		<ul>
                 <li>RC0 and milestone M7 are one and the same 
                 <li>All components feature complete. 
                 <li>Accurate prioritization of all outstanding defects.</li>
                 <li>String externalization complete (including mnemonics).
                 <li>3.5 test plans posted.</li>
-              </ul>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <td width="20%" valign="top" align="left"><b><a name="RC1"></a>RC1</b></td>
-      <td>
-        <table cellspacing="0" cellpadding="5" width="100%" border="1">
-          <tr>
-            <td width="25%">Goals:</td>
-            <td width="75%"> <ul>
+      		</ul>
+      		<p><b><a name="RC1"></a>RC1</b></p>
+             <p>Goals:</p>
+      		<ul>
                 <li>Accurate prioritization of all outstanding defects.</li>
                 <li>All work on polish items complete.</li>
                 <li>Final API.</li>
                 <li>No outstanding P1 defects. </li>
                 <li>As few P2 defects as possible.</li>
-              </ul>
-              <p>&nbsp;</p>
-               Note that May 8 is a holiday in France. May 12th is a holiday in Switzerland and possibly France.
-                </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <td width="20%" valign="top" align="left"><b><a name="TestPassBeforeRC2"></a>Test
-        pass prior to RC2</b></td>
-      <td>
-        <table cellspacing="0" cellpadding="5" width="100%" border="1">
-          <tr>
-            <td width="25%">Notes:</td>
-            <td width="75%">Full day test pass involving entire community, using 
+      		</ul>
+            <p>&nbsp;</p>
+            <p>Note that May 8 is a holiday in France. May 12th is a holiday in Switzerland and possibly France.</p>
+			<p><a name="TestPassBeforeRC2"></a>Test pass prior to RC2</b></p>
+			<p>Notes: Full day test pass involving entire community, using 
             the most recent nightly build to help stabilize HEAD for the upcoming RC2 build.
             Committers with high priority fixes to make for RC2 can opt out of testing
             to focus on getting in fixes.  However, all committers should be working
             with the test candidate build.
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <td width="20%" valign="top" align="left"><b><a name="RC2"></a>RC2</b></td>
-      <td>
-        <table cellspacing="0" cellpadding="5" width="100%" border="1">
-          <tr>
-            <td width="25%">Goals:</td>
-            <td width="75%">
-              <ul>
+      		<p><b><a name="RC2"></a>RC2</b></p>
+             <p>Goals:</p>
+      		<ul>
                 <li>Final artwork in place.
                 <li>Accurate prioritization of all outstanding defects.
                 <li>No outstanding P1 defects.
                 <li>As few P2 defects as possible.</li>
-              </ul>  
+      		</ul>
 			  Monday May 18 is a holiday in Canada. 
-			  Monday May 25 is a holiday in the US.              
-              </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <td width="20%" valign="top" align="left"><b><a name="TestPassUsingRC2"></a>Test pass using RC2</b></td>
-      <td>
-        <table cellspacing="0" cellpadding="5" width="100%" border="1">
-          <tr>
-            <td width="25%">Notes:</td>
-            <td width="75%">Concerted 2-day testing effort on RC2 involving
+			  Monday May 25 is a holiday in the US.
+      		<p><b><a name="TestPassUsingRC2"></a>Test pass using RC2</b></p>
+            <p>Notes:</p>
+            <p>Concerted 2-day testing effort on RC2 involving
               entire community including all component teams. In an effort to
               mix things up and hold off the onset of &quot;tester
               fatigue&quot;, each component team will be designating one team
-              member that will be assigned to test some other component.</td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <td width="20%" valign="top" align="left"><b><a name="RC3"></a>RC3</b></td>
-      <td>
-        <table cellspacing="0" cellpadding="5" width="100%" border="1">
-          <tr>
-            <td width="25%">Goals:</td>
-            <td width="75%">
+              member that will be assigned to test some other component.</p>
+             <p><a name="RC3"></a>RC3</b></p>
+             <p>Goals:</p>
               <ul>
                 <li>Accurate prioritization of all outstanding defects.
                 <li>No outstanding P1 defects.
                 <li>As few P2 defects as possible.</li>
               </ul>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <td width="20%" valign="top" align="left"><b><a name="TestPassUsingRC3"></a>Test pass using RC3</b></td>
-      <td>
-        <table cellspacing="0" cellpadding="5" width="100%" border="1">
-          <tr>
-            <td width="25%">Notes:</td>
-            <td width="75%">Concerted 1-day testing effort on RC3 involving
+             <p><b><a name="TestPassUsingRC3"></a>Test pass using RC3</b></p>
+            <p>Notes:</p>
+            <p>Concerted 1-day testing effort on RC3 involving
               entire community including all component teams, searching for
               regressions and on the lookout for undiscovered &quot;stop
-              ship&quot; defects.</td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <td width="20%" valign="top" align="left"><b><a name="RC4"></a>RC4</b></td>
-      <td>
-        <table cellspacing="0" cellpadding="5" width="100%" border="1">
-          <tr>
-            <td width="25%">Goals:</td>
-            <td width="75%">
+              ship&quot; defects.</p>
+             <p><b><a name="RC4"></a>RC4</b></p>
+             <p>Goals:</p>
               <ul>
                 <li>Accurate prioritization of all outstanding defects.
-                <li>Stable code base; no outstanding P1 defects. </ul>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-	
-    <tr>
-      <td width="20%" valign="top" align="left"><a name="R3.5"></a>Release 3.5</b></td>
-      <td>
-        <table cellspacing="0" cellpadding="5" width="100%" border="1">
-          <tr>
-            <td width="25%">Goal:</td>
-            <td width="75%">Ship Eclipse 3.5 during the last week of June.</td>
-          </tr>
-          <tr>
-            <td width="25%">Notes:</td>
-            <td width="75%">There is no formal test pass for RC4 and beyond other 
+                <li>Stable code base; no outstanding P1 defects.</li>
+               </ul>
+              <p><a name="R3.5"></a>Release 3.5</b></p>
+              <p>Goal:</p>
+              <p>Ship Eclipse 3.5 during the last week of June.</p>
+              <p>Notes:</p>
+              <p>There is no formal test pass for RC4 and beyond other 
               than to check for last minute regressions. We will perform sanity 
               checking focused on documentation. Release 3.5 should be complete 
-              and available for download as soon as we are satisfied with it.</td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </tbody>
-</table>
+              and available for download as soon as we are satisfied with it.</p>
 <table cellspacing="5" cellpadding="2" width="100%" border="0">
   <tbody>
     <tr>
