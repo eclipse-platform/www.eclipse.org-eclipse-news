@@ -341,7 +341,7 @@ ob_start();
                 <li>No outstanding P1 defects. </li>
                 <li>As few P2 defects as possible.</li>
       		</ul>
-            <p>Note that May 8 is a holiday in France. May 12th is a holiday in Switzerland and possibly France.</p>
+      		<p>Monday May 8 is a holiday in France.</p>
 			<h4><a name="TestPassBeforeRC2"></a>Test pass prior to RC2</h4>
 			<p>Full day test pass involving entire community, using 
             the most recent nightly build to help stabilize HEAD for the upcoming RC2 build.
@@ -355,7 +355,8 @@ ob_start();
                 <li>No outstanding P1 defects.
                 <li>As few P2 defects as possible.</li>
       		</ul>
-      		<p>Monday May 18 is a holiday in Canada.  Monday May 25 is a holiday in the US.</p>
+      		<p>Monday May 18 is a holiday in Canada.  Monday May 25 is a holiday in the US.
+      		Thursday May 21 is a holiday in Switzerland and France.</p>
       		<h4><a name="TestPassUsingRC2"></a>Test pass using RC2</h4>
             <p>Concerted 2-day testing effort on RC2 involving
               entire community including all component teams. In an effort to
@@ -378,6 +379,7 @@ ob_start();
                 <li>Accurate prioritization of all outstanding defects.
                 <li>Stable code base; no outstanding P1 defects.</li>
                </ul>
+            <p>Note that June 1 is a holiday in Switzerland and France.</p>
               <h4><a name="R3.5"></a>Release 3.5</h4>
               <p>Ship Eclipse 3.5 during the last week of June.</p>
               <p>There is no formal test pass for RC4 and beyond other 
