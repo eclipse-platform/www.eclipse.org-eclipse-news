@@ -390,164 +390,74 @@ ob_start();
               than to check for last minute regressions. We will perform sanity 
               checking focused on documentation. Release 3.5 should be complete 
               and available for download as soon as we are satisfied with it.</p>
-<table cellspacing="5" cellpadding="2" width="100%" border="0">
-  <tbody>
-    <tr>
-      <td valign="top" align="left" colspan="2"><b>Fix pass rules of engagement</b></td>
-    </tr>
-    <tr>
-      <td width="20%" valign="top" align="left"><b><a name="FixPassAfterRC"></a>May 5-16</b><br>
-        contributions to RC1</td>
-      <td>
-        <table cellspacing="0" cellpadding="5" width="100%" border="1">
-          <tr>
-            <td width="25%">Focus:</td>
-            <td width="75%">(1) P1 defects, (2) performance defects, (3) special 
-              &quot;polish&quot; items. Fixing other defects has lower priority.</td>
-          </tr>
-          <tr>
-            <td width="25%">Fix approval:</td>
-            <td width="75%">Another committer must +1 your bug report. All changes 
+      	</div>
+		<div class="homeitem3col">
+			<a name="Transition"><h3>Fix pass rules of engagement</h3>
+			<h4>May 4-14 - contributions to RC1</h4>
+			<p><b>Focus:</b>(1) P1 defects, (2) performance defects, (3) special 
+              &quot;polish&quot; items. Fixing other defects has lower priority.</p>
+            <p><b>Fix approval:</b> Another committer must +1 your bug report. All changes 
               must have their associated bug reports tagged 3.5RC1. (Ongoing changes 
-              to component documentation do not require special approval.)</td>
-          </tr>
-          <tr>
-            <td width="25%">API change approval:</td>
-            <td width="75%">PMC must approve all API changes. No changes are to
+              to component documentation do not require special approval.)</p>
+             <p><b>API change approval:</b> PMC must approve all API changes. No changes are to
               be released without prior approval and associated bug report.  
               Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
               If a change is made to API to make it binary compatible with 3.4, technically this is still an API change, 
-              and thus it should be treated in the same way as any other API change requests.
-              </td>
-          </tr>
-          <tr>
-            <td width="25%">Notification requirements:</td>
-            <td width="75%">None.</td>
-          </tr>
-          <tr>
-            <td width="25%">Extra checking requirements:</td>
-            <td width="75%">One additional committer must check all code changes 
-              prior to release. </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <td width="20%" valign="top" align="left"><b><a name="FixPassAfterRC1"></a>May 
-        19-May 23</b><br>
-        contributions to RC2</td>
-      <td>
-        <table cellspacing="0" cellpadding="5" width="100%" border="1">
-          <tr>
-            <td width="25%">Focus:</td>
-            <td width="75%">(1) P1 defects, (2) performance defects, (3) special 
-              &quot;polish&quot; items. Fixing other defects has lower priority.</td>
-          </tr>
-          <tr>
-            <td width="25%" height="48">Fix approval:</td>
-            <td width="75%" height="48">Two committers must +1 your bug report. 
-              All changes must have their associated bug reports tagged 3.5RC2. 
-              (Ongoing changes to component documentation do not require special 
-              approval.)</td>
-          </tr>
-          <tr>
-            <td width="25%">API change approval:</td>
-            <td width="75%">PMC must approve all API changes. No changes are to
+              and thus it should be treated in the same way as any other API change requests.</p>
+             <p><b>Notification requirements:</b> None.</p>
+             <p><b>Extra checking requirements:</b> One additional committer must check all code changes 
+              prior to release.</p>
+
+			<h4>May 18-21 - contributions to RC2</h4>
+			<p><b>Focus:</b>(1) P1 defects, (2) performance defects, (3) special 
+              &quot;polish&quot; items. Fixing other defects has lower priority.</p>
+            <p><b>Fix approval:</b> Two committers must +1 your bug report. All changes 
+              must have their associated bug reports tagged 3.5RC2. (Ongoing changes 
+              to component documentation do not require special approval.)</p>
+             <p><b>API change approval:</b> PMC must approve all API changes. No changes are to
               be released without prior approval and associated bug report.  
               Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
               If a change is made to API to make it binary compatible with 3.4, technically this is still an API change, 
-              and thus it should be treated in the same way as any other API change requests.</td>
-          </tr>
-          <tr>
-            <td width="25%" height="16">Notification requirements:</td>
-            <td width="75%" height="16">None.</td>
-          </tr>
-          <tr>
-            <td width="25%" height="16">Extra checking requirements:</td>
-            <td width="75%" height="16">Two additional committers must check all 
-              code changes prior to release. </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <td width="20%" valign="top" align="left"><b><a name="FixPassAfterRC2"></a>May 
-        26-May 30</b><br>
-        contributions to RC3</td>
-      <td>
-        <table cellspacing="0" cellpadding="5" width="100%" border="1">
-          <tr>
-            <td width="25%">Focus:</td>
-            <td width="75%">Serious defects only; documentation.</td>
-          </tr>
-          <tr>
-            <td width="25%">Fix approval:</td>
-            <td width="75%"> Two committers and a component lead must +1 your 
-              bug report. All changes must have their associated bug reports tagged 
-              3.5RC3. (Ongoing changes to component documentation do not require 
-              special approval.)</td>
-          </tr>
-          <tr>
-            <td width="25%">API change approval:</td>
-            <td width="75%">PMC must approve all API changes. No changes are to
+              and thus it should be treated in the same way as any other API change requests.</p>
+             <p><b>Notification requirements:</b> None.</p>
+             <p><b>Extra checking requirements:</b>Two additional committers must check all code changes 
+              prior to release.</p>
+
+			<h4>May 25-28 - contributions to RC3</h4>
+			<p><b>Focus:</b>Serious defects only; documentation.</p>
+            <p><b>Fix approval:</b>Two committers and a component lead must +1 your bug report. All changes 
+              must have their associated bug reports tagged 3.5RC3. (Ongoing changes 
+              to component documentation do not require special approval.)</p>
+             <p><b>API change approval:</b> PMC must approve all API changes. No changes are to
               be released without prior approval and associated bug report.  
               Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
               If a change is made to API to make it binary compatible with 3.4, technically this is still an API change, 
-              and thus it should be treated in the same way as any other API change requests.</td>
-          </tr>
-          <tr>
-            <td width="25%">Notification requirements:</td>
-            <td width="75%">Announce bug numbers of intended non-doc changes to <a href="mailto:platform-releng-dev@eclipse.org">platform-releng-dev@eclipse.org</a>
-              mailing list.</td>
-          </tr>
-          <tr>
-            <td width="25%">Extra checking requirements:</td>
-            <td width="75%">Two additional committers must check all code changes 
+              and thus it should be treated in the same way as any other API change requests.</p>
+             <p><b>Notification requirements:</b> Announce bug numbers of intended non-doc changes to <a href="mailto:platform-releng-dev@eclipse.org">platform-releng-dev@eclipse.org</a>
+              mailing list.</p>
+             <p><b>Extra checking requirements:</b>Two additional committers must check all code changes 
               prior to release. Person who reported bug should mark the bug as 
-              verified once they have retested.</td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <td width="20%" valign="top" align="left"><b><a name="FixPassAfterRC3"></a>June 
-        2-June 6</b><br>
-        contributions to RC4</td>
-      <td>
-        <table cellspacing="0" cellpadding="5" width="100%" border="1">
-          <tr>
-            <td width="25%">Focus:</td>
-            <td width="75%">Serious defects only; documentation.</td>
-          </tr>
-          <tr>
-            <td width="25%">Fix approval:</td>
-            <td width="75%">Component lead plus one other component lead must 
+              verified once they have retested.</p>
+
+			<h4>June 1-4 - contributions to RC4</h4>
+			<p><b>Focus:</b>Serious defects only; documentation.</p>
+            <p><b>Fix approval:</b>Component lead plus one other component lead must 
               approve all work on a component. In addition, any component lead 
               can veto a change with cause. No changes are to be released without 
               associated bug report tagged 3.5RC4 including risk assessment and 
               prior approvals. (Ongoing changes to component documentation do 
-              not require special approval.)</td>
-          </tr>
-          <tr>
-            <td width="25%">API change approval:</td>
-            <td width="75%">PMC must approve all API changes. No changes are to
+              not require special approval.)</p>
+             <p><b>API change approval:</b> PMC must approve all API changes. No changes are to
               be released without prior approval and associated bug report.  
               Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
               If a change is made to API to make it binary compatible with 3.4, technically this is still an API change, 
-              and thus it should be treated in the same way as any other API change requests.</td>
-          </tr>
-          <tr>
-            <td width="25%">Notification requirements:</td>
-            <td width="75%">Announce bug numbers of intended non-doc changes to <a href="mailto:platform-releng-dev@eclipse.org">platform-releng-dev@eclipse.org</a>
-              mailing list.</td>
-          </tr>
-          <tr>
-            <td width="25%">Extra checking requirements:</td>
-            <td width="75%">Two additional committers must check all code
+              and thus it should be treated in the same way as any other API change requests.</p>
+             <p><b>Notification requirements:</b>Announce bug numbers of intended non-doc changes to <a href="mailto:platform-releng-dev@eclipse.org">platform-releng-dev@eclipse.org</a>
+              mailing list.</p>
+             <p><b>Extra checking requirements:</b>Two additional committers must check all code
               changes prior to release. Person who reported bug should mark the
-              bug as verified once they have retested.</td>
-          </tr>
-        </table>   
+              bug as verified once they have retested.</p>
+        
     </div>
   </div>
 
