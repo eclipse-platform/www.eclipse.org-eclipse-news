@@ -37,6 +37,7 @@ ob_start();
 <title>Eclipse 3.5 Endgame Plan</title>
 </head>
 <body>
+<div id="midcolumn">
 <div class="homeitem3col">
 <h3>Eclipse 3.5 Draft endgame plan</h3>
 <table cellspacing="5" cellpadding="2" width="100%" border="0">
