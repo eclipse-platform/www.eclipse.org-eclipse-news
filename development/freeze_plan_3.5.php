@@ -325,7 +325,7 @@ ob_start();
                   still an API change, and thus it should be treated in the same way as any other API change requests.
                  </li>
       		</ul>              
-      		<h4><a name="RC0"></a>RC0/M7</h4>
+      		<h4><a name="RC0"></a>RC0/M7 Goals</h4>
       		<ul>
                 <li>RC0 and milestone M7 are one and the same 
                 <li>All components feature complete. 
@@ -333,7 +333,7 @@ ob_start();
                 <li>String externalization complete (including mnemonics).
                 <li>3.5 test plans posted.</li>
       		</ul>
-      		<h4><a name="RC1"></a>RC1</h4>
+      		<h4><a name="RC1"></a>RC1 Goals</h4>
       		<ul>
                 <li>Accurate prioritization of all outstanding defects.</li>
                 <li>All work on polish items complete.</li>
@@ -348,7 +348,7 @@ ob_start();
             Committers with high priority fixes to make for RC2 can opt out of testing
             to focus on getting in fixes.  However, all committers should be working
             with the test candidate build.
-      		<h4><a name="RC2"></a>RC2</h4>
+      		<h4><a name="RC2"></a>RC2 Goals</h4>
       		<ul>
                 <li>Final artwork in place.
                 <li>Accurate prioritization of all outstanding defects.
@@ -374,7 +374,7 @@ ob_start();
               entire community including all component teams, searching for
               regressions and on the lookout for undiscovered &quot;stop
               ship&quot; defects.</p>
-             <h4><a name="RC4"></a>RC4</h4>
+             <h4><a name="RC4"></a>RC4 Goals</h4>
               <ul>
                 <li>Accurate prioritization of all outstanding defects.
                 <li>Stable code base; no outstanding P1 defects.</li>
