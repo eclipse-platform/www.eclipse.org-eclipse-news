@@ -363,7 +363,7 @@ ob_start();
               mix things up and hold off the onset of &quot;tester
               fatigue&quot;, each component team will be designating one team
               member that will be assigned to test some other component.</p>
-             <h4><a name="RC3"></a>RC3</h4>
+             <h4><a name="RC3"></a>RC3 Goals</h4>
               <ul>
                 <li>Accurate prioritization of all outstanding defects.
                 <li>No outstanding P1 defects.
