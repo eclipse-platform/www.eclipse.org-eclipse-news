@@ -17,8 +17,8 @@
 <div>
 
 <p>
-Last revised 17:00 ET Jan 21, 2009 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> marks
-interesting changes since the previous draft of Oct 10, 2008)
+Last revised 17:00 ET April 3, 2009 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> marks
+interesting changes since the previous draft of Jan 21, 2009)
 </p>
 <p><i>Please send comments about this draft plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
   mailing list.</i>
@@ -116,10 +116,6 @@ interesting changes since the previous draft of Oct 10, 2008)
 <p:milestone date="01/30/2009" milestone="M5"><div>3.5M5</div></p:milestone>
 <p:milestone date="03/13/2009" milestone="M6"><div>3.5M6 (API Freeze)</div></p:milestone>
 <p:milestone date="05/01/2009" milestone="M7"><div>3.5M7 (Feature Freeze)</div></p:milestone>
-<p:milestone date="05/15/2009" milestone="RC1"><div>3.5RC1</div></p:milestone>
-<p:milestone date="05/29/2009" milestone="RC2"><div>3.5RC2</div></p:milestone>
-<p:milestone date="06/05/2009" milestone="RC3"><div>3.5RC3</div></p:milestone>
-<p:milestone date="06/12/2009" milestone="RC4"><div>3.5RC4</div></p:milestone>
 
 <p:postamble>
 <div>
@@ -129,6 +125,9 @@ interesting changes since the previous draft of Oct 10, 2008)
 <p>Our target is to complete 3.5 in late June 2009, in alignment with Galileo.
   All release deliverables will be available for download as soon as the release has been
   tested and validated in the target operating configurations listed below.</p>
+<p> (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />new) 
+	Dates for builds after M7 can be found in the 
+	<a href="http://www.eclipse.org/eclipse/development/freeze_plan_3.5.php">Eclipse Galileo end-game plan</a></p>
 </div>
 </p:postamble>
 
@@ -194,7 +193,7 @@ interesting changes since the previous draft of Oct 10, 2008)
       <tr>
         <td><b>Red Hat Enterprise Linux 5.0, x86-32, GTK</b> running (any of):
           <ul>
-            <li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> new) Sun Java 2 Standard Edition 6.0 Update 4 for Linux x86</li>
+            <li> Sun Java 2 Standard Edition 6.0 Update 4 for Linux x86</li>
             <li>Sun Java 2 Standard Edition 5.0 Update 14 for Linux x86</li>
             <li>IBM 32-bit SDK for Linux on Intel architecture, Java 2 Technology Edition 5.0, SR6b</li>
             <li>BEA JRockit 27.4.0, for Linux x86</li>
@@ -423,7 +422,7 @@ interesting changes since the previous draft of Oct 10, 2008)
 
 <p:committed>
 <ul>
-<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+<li>
   <strong>Support Cocoa on Mac OS X.</strong>
   Apple GUI development is moving from Carbon to Cocoa. We will support the Eclipse
   SDK running on Mac OS Cocoa (including 64-bit Java6), to ensure that Eclipse
@@ -432,12 +431,12 @@ interesting changes since the previous draft of Oct 10, 2008)
   Project, in addition to the work here.)</em> [SWT, Platform UI]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252644">252644</a>)</li>
 
-<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+<li>
   <strong>Accessibility standards compliance.</strong>
   We will work with the community to ensure that we have first-class, accessibility
   support that is compliant with important standards. [SWT]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252646">252646</a>)</li>
-<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+<li>
   <strong>BIDI improvements.</strong>
   We will continue to invest in improving in our BIDI support, to ensure that
   Eclipse is a first-class environment in BIDI locales. This work will include
@@ -470,7 +469,7 @@ interesting changes since the previous draft of Oct 10, 2008)
 
 <p:committed>
 <ul>
-<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+<li>
   <strong>Performance testing infrastructure improvements.</strong>
   We will improve our performance test infrastructure and result pages and ensure
   that the test results are monitored on a daily basis. This will enable us to 
@@ -511,7 +510,7 @@ interesting changes since the previous draft of Oct 10, 2008)
 
 <p:committed>
 <ul>
-<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+<li>
   <strong>API Tools test suite and infrastructure</strong>
   We will build a comprehensive regression test suite for our API tools, as well
   as a performance test suite, and enhance analysis to avoid false positives, allow
@@ -521,7 +520,7 @@ interesting changes since the previous draft of Oct 10, 2008)
   performance improvements. [PDE]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252658">252658</a>) </li>
 
-<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+<li>
   <strong>Compare editor improvements.</strong>
   We will address some of the limitations of the current compare editor framework.
   Possible work areas include: pluggable compare viewers/tools, automatic updating
@@ -530,7 +529,7 @@ interesting changes since the previous draft of Oct 10, 2008)
   features from standard editors within compare editors.[All]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252662">252662</a>) </li>
 
-<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+<li>
   <strong>Build process improvements.</strong>
   The Eclipse build process is currently complex and brittle, impacting our
   ability to deliver stable builds on a reliable schedule. We will make
@@ -578,7 +577,7 @@ interesting changes since the previous draft of Oct 10, 2008)
 
 <p:committed>
 <ul>
-<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+<li>
   <strong>User-assistance improvements.</strong>
   We will provide a number of often asked for improvements to our help support,
   such as filtering of the navigation tree based on Criteria, grouping of search
@@ -587,7 +586,7 @@ interesting changes since the previous draft of Oct 10, 2008)
   presentation. [UA]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252661">252661</a>) </li>
 
-<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+<li>
   <strong>Extensible execution environments.</strong>
   Currently, the set of system library profile definitions supported by Equinox
   is static (for example, J2SE-1.4, J2SE-1.5, etc.). We will respond to new
@@ -597,7 +596,7 @@ interesting changes since the previous draft of Oct 10, 2008)
   investment from the Equinox Project, in addition to the work here.)</em> [JDT, PDE]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252665">252665</a>) </li>
 
-<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+<li>
   <strong>PDE Build and Export enhancements.</strong>
   We will support export and install of workspace bundles into the running host;
   enhance product definition with start levels and license information and support
@@ -608,7 +607,7 @@ interesting changes since the previous draft of Oct 10, 2008)
   leverage p2 function for fetch, publish and packaging build phases. [PDE]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252666">252666</a>) </li>
 
-<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+<li>
   <strong>Declarative Services Tooling.</strong>
   We will provide tooling for authoring service component definitions. [PDE]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252668">252668</a>) </li>
@@ -663,67 +662,10 @@ interesting changes since the previous draft of Oct 10, 2008)
   Eclipse SDK R3.5, many represent ongoing work in the Eclipse 4.0 ("e4")
   incubator, which is implementing the next major version of the Eclipse SDK. 
   See the <a href="http://wiki.eclipse.org/E4">e4 wiki</a> for more info.</p>
+  <p>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> new)
+  Plan items from the future theme have been moved to the 
+  <a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse.e4">e4 project 0.9 release plan</a>.</p>
 </p:description>
-
-<p:committed>
-  <p><i>None at this time.</i></p>
-</p:committed>
-
-<p:proposed>
-<ul>
-<li><strong>Flexible resources</strong> 
-  The Resource architecture that Eclipse uses has been criticized for being
-  overly Java-centric and constraining for some use cases. We will 
-  generalize the Resource layer (and related areas, such as EFS) to better
-  address these uses. [Workspace, Platform UI]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252647">252647</a>)</li>
-
-<li><strong>Support declarative definition of user-interfaces.</strong> 
-  We will work with the community to identify and provide access to a best-of-breed
-  declarative mechanism for defining widget-based user-interfaces in Eclipse. [Platform UI, SWT]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252648">252648</a>)</li>
-
-<li><strong>Model-based workbench.</strong>
-  The functionality of the Eclipse Workbench and IDE have grown significantly
-  since they were created. In some cases, older capabilities have been superceded
-  by newer ones or have been proven to be unwieldy or otherwise unsatisfying.
-  We will create a new model of the underlying structure of the Eclipse UI, which
-  will make development simpler, but more flexible and dynamic. [Platform UI]
- (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id= 252650"> 252650</a>) </li>
-
-<li><strong>Skinnable UI</strong>
-  We will enable developers to have greater control over the Eclipse UI, 
-  making it simple to customize the appearance of Eclipse-based applications
-  using industry standard mechanisms such as CSS. [Platform UI, SWT]
- (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id= 252653"> 252653</a>) </li>
-
-<li><strong>Investigate scripting languages for Eclipse programmability.</strong> 
-  We will investigate the use of scripting languages such as JavaScript, Ruby, etc., 
-  in Eclipse development. Since this capability will require function from the
-  model-based workbench, as well as support from the Equinox project, and 
-  will potentially impact many other areas, only the initial investigation
-  is planned during the R3.5 cycle. [All]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252654">252654</a>)</li>
-
-<li><strong>Support advanced animation API in SWT.</strong> 
-  A prototype API was developed during the R3.3 cycle that was implemented
-  on top of several desktop and web UI technologies. This work needs to be
-  completed. [SWT]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252656">252656</a>)</li>
-
-<li><strong>Support running SWT in a browser.</strong> 
-  The RAP project has shown that it is possible to achieve good performance
-  and function for server-side, widget-based web applications. Investigations
-  have also been made into client-side technologies. Based on these efforts,
-  we will provide first-class support for the ability to run SWT applications
-  in web browsers. [SWT]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252659">252659</a>)</li>
-</ul>
-</p:proposed>
-
-<p:deferred>
-  <p><i>None at this time.</i></p>
-</p:deferred>
 
 </p:theme>
     
@@ -825,11 +767,11 @@ interesting changes since the previous draft of Oct 10, 2008)
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />org.eclipse.compare.core</td>
+      <td>org.eclipse.compare.core</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />org.eclipse.compare.win32</td>
+      <td>org.eclipse.compare.win32</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -870,7 +812,7 @@ interesting changes since the previous draft of Oct 10, 2008)
     </tr>
     <tr>
       <td>org.eclipse.core.net</td>
-      <td><div align="center"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />F1.1</div></td>
+      <td><div align="center">F1.1</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.resources</td>
@@ -1002,7 +944,7 @@ interesting changes since the previous draft of Oct 10, 2008)
     </tr>
     <tr>
       <td>org.eclipse.jface</td>
-      <td><div align="center"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />F1.1</div></td>
+      <td><div align="center">F1.1</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jface.databinding</td>
@@ -1053,11 +995,11 @@ interesting changes since the previous draft of Oct 10, 2008)
       <td><div align="center">not specified</div></td>
     </tr>
     <tr>
-      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />org.eclipse.pde.ds.core</td>
+      <td>org.eclipse.pde.ds.core</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />org.eclipse.pde.ds.ui</td>
+      <td>org.eclipse.pde.ds.ui</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -1069,11 +1011,11 @@ interesting changes since the previous draft of Oct 10, 2008)
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />org.eclipse.pde.ua.core</td>
+      <td>org.eclipse.pde.ua.core</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />org.eclipse.pde.ua.ui</td>
+      <td>org.eclipse.pde.ua.ui</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -1194,7 +1136,7 @@ interesting changes since the previous draft of Oct 10, 2008)
     </tr>
     <tr>
       <td>org.eclipse.ui.net</td>
-      <td><div align="center"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />F1.1</div></td>
+      <td><div align="center">F1.1</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.presentations.r21</td>

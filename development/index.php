@@ -38,6 +38,8 @@ ob_start();
 			<ul>
 	      <li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse"> Eclipse Project Galileo Plan</a><br>
 	        This document lays out the feature and API set for the Galileo (3.5) release of the Eclipse Project. </li>
+	        <li><a href="freeze_plan_3.5.php"> Eclipse Project Galileo Endgame Plan</a><br>
+	    		Information about how we plan to wrap up the Galileo release (version 3.5).</li>     
 	      <li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse.e4"> e4 Project 0.9 Release Plan</a><br>
 	        This document lays out the feature and API set for the 0.9 release of the e4 Project. </li>
 	    </ul>
