@@ -16,7 +16,7 @@
 	
 	#
 	# Begin: page-specific settings.  Change these. 
-	$pageTitle 		= "Draft Eclipse 3.4 endgame plan";
+	$pageTitle 		= "Eclipse 3.4 endgame plan";
 	$pageKeywords	= "eclipse, 3.4,  milestone, schedule, endgame";
 	$pageAuthor		= "";
 	
@@ -37,7 +37,7 @@ ob_start();
 
 
 <div class="homeitem3col">
-<h3>Eclipse 3.4 Draft endgame plan</h3>
+<h3>Eclipse 3.4 endgame plan</h3>
 
 
 <head>
@@ -46,7 +46,7 @@ ob_start();
 <table cellspacing="5" cellpadding="2" width="100%" border="0">
 <tbody> <tr> <td valign="top" align="left" colspan="2"><b>Status</b></td></tr>
 <tr> <td valign="top" align="right"></td><td> 
-<p><b>June 10, 2008 - RC4 complete. Possible further builds pending for documentation and stop-ship defects.</td></tr>
+<p><b>June 10, 2008 - work on the 3.4 release is completed.</td></tr>
     <tr>
       <td valign="top" align="left" colspan="2"><b>Detailed Timeline</b></td>
     </tr>
