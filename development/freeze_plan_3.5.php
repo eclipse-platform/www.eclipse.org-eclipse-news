@@ -319,10 +319,12 @@ ob_start();
                 <li>All components transition on April 4 to polishing and fixing 
                   bugs for remainder of release cycle.</li>
                 <li>PMC approval is required for feature work including API changes 
-                  being done after M7. See the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list.</li>
-                 <li>No API changes are to be released without prior approval and associated bug report.
-                  If a change is made to API to make it binary compatible with 3.4, technically this is 
-                  still an API change, and thus it should be treated in the same way as any other API change requests.
+                  being done after M7. See the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list.
+				  If a change is made to API to make it binary compatible with 3.4, technically this is 
+				  still an API change, and thus it should be treated in the same way as any other API change requests.                  
+                  </li>
+                 <li>No changes are to be released without appropriate approval and associated bug report (see fix pass 
+                 <a href="#Transition">rules of engagement</a> for specific approval requirements for each release candidate).
                  </li>
       		</ul>              
       		<h4><a name="RC0"></a>RC0/M7 Goals</h4>
