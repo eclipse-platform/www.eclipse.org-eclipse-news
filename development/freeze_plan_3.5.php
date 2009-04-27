@@ -319,12 +319,13 @@ ob_start();
                 <li>All components transition on April 4 to polishing and fixing 
                   bugs for remainder of release cycle.</li>
                 <li>PMC approval is required for feature work including API changes 
-                  being done after M7. See the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list.
+                  being done after M7. Use the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list
+                  to request API and feature work approval.
 				  If a change is made to API to make it binary compatible with 3.4, technically this is 
 				  still an API change, and thus it should be treated in the same way as any other API change requests.                  
                   </li>
-                 <li>No changes are to be released without appropriate approval and associated bug report (see fix pass 
-                 <a href="#Transition">rules of engagement</a> for specific approval requirements for each release candidate).
+                 <li>No changes are to be released without appropriate approval and associated bug report. See the fix pass 
+                 <a href="#FixPass">rules of engagement</a> for specific approval requirements for each release candidate.
                  </li>
       		</ul>              
       		<h4><a name="RC0"></a>RC0/M7 Goals</h4>
@@ -390,7 +391,7 @@ ob_start();
               and available for download as soon as we are satisfied with it.</p>
       	</div>
 		<div class="homeitem3col">
-			<a name="Transition"><h3>Fix pass rules of engagement</h3></a>
+			<a name="FixPass"><h3>Fix pass rules of engagement</h3></a>
 			<h4>May 4-14 - contributions to RC1</h4>
 			<p><b>Focus:</b>(1) P1 defects, (2) performance defects, (3) special 
               &quot;polish&quot; items. Fixing other defects has lower priority.</p>
