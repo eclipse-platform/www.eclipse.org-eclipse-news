@@ -325,7 +325,7 @@ ob_start();
 				  still an API change, and thus it should be treated in the same way as any other API change requests.                  
                   </li>
                  <li>No changes are to be released without appropriate approval and associated bug report. See the fix pass 
-                 <a href="#FixPass">rules of engagement</a> for specific approval requirements for each release candidate.
+                 <a href="#FixPassRules">rules of engagement</a> for specific approval requirements for each release candidate.
                  </li>
       		</ul>              
       		<h4><a name="RC0"></a>RC0/M7 Goals</h4>
@@ -391,7 +391,7 @@ ob_start();
               and available for download as soon as we are satisfied with it.</p>
       	</div>
 		<div class="homeitem3col">
-			<a name="FixPass"><h3>Fix pass rules of engagement</h3></a>
+			<a name="FixPassRules"><h3>Fix pass rules of engagement</h3></a>
 			<h4>May 4-14 - contributions to RC1</h4>
 			<p><b>Focus:</b>(1) P1 defects, (2) performance defects, (3) special 
               &quot;polish&quot; items. Fixing other defects has lower priority.</p>
