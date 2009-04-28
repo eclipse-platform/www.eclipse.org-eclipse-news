@@ -72,7 +72,7 @@
 			    <td><b>Win XP</b></td>
 			    <td align="center">&nbsp;</td>
 			    <td align="center">&nbsp;</td>
-			    <td align="center">&nbsp;</td>
+			    <td align="center">Darin Wright</td>
 			    <td align="center">&nbsp;</td>
 			    <td align="center">&nbsp;</td>
 				<td align="center">Michael Rennie</td>
@@ -90,7 +90,7 @@
 			    <td><b>Mac</b></td>
 			    <td align="center">&nbsp;</td>
 			    <td align="center">&nbsp;</td>
-			    <td align="center">Darin Wright</td>
+			    <td align="center">&nbsp;</td>
 			    <td align="center">&nbsp;</td>
 			    <td align="center">&nbsp;</td>
 				<td align="center">&nbsp;</td>
