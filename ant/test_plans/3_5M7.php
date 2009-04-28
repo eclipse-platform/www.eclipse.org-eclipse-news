@@ -37,7 +37,7 @@
 <div id="maincontent">
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
-		<div class="homeitem3col">
+		<div class="homeitem">
 			<h2><b>Testers</b></h2>
 			<p>Committers: Darin Wright, Michael Rennie, Kevin Barnes, Darin Swanson</p>
 			<p>Community: Curtis Windatt, anyone who wants to help</p>
