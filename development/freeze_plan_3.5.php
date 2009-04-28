@@ -59,7 +59,7 @@ ob_start();
 	            <td align="right" height="20"> Thu 20:00 pm EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 1 build</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
-	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC1"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">rules</a></b></td>
+	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC0"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">rules</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
 	           <tr>
@@ -80,7 +80,7 @@ ob_start();
 	            <td align="right" height="20"> Wed 8:00 am EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Start fix pass</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
-	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC2"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">rules</a></b></td>
+	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC1"><img src="images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">rules</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
 	          <tr>
@@ -392,7 +392,7 @@ ob_start();
       	</div>
 		<div class="homeitem3col">
 			<a name="FixPassRules"><h3>Fix pass rules of engagement</h3></a>
-			<h4>May 4-14 - contributions to RC1</h4>
+			<a name="FixPassAfterRC0"></a><h4>May 4-14 - contributions to RC1</h4>
 			<p><b>Focus:</b>(1) P1 defects, (2) performance defects, (3) special 
               &quot;polish&quot; items. Fixing other defects has lower priority.</p>
             <p><b>Fix approval:</b> Another committer must +1 your bug report. All changes 
