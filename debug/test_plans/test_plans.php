@@ -9,7 +9,7 @@
 
 	#*****************************************************************************
 	#
-	# Copyright (c) 2007, 2008 IBM Corporation and others.
+	# Copyright (c) 2007, 2009 IBM Corporation and others.
  	# All rights reserved. This program and the accompanying materials
  	# are made available under the terms of the Eclipse Public License v1.0
  	# which accompanies this distribution, and is available at
@@ -46,6 +46,7 @@
 				<li><a href="/eclipse/debug/test_plans/test_plan-3.5M4.php">3.5M4</a></li>
 				<li><a href="/eclipse/debug/test_plans/test_plan-3.5M5.php">3.5M5</a></li>
 				<li><a href="/eclipse/debug/test_plans/test_plan-3.5M6.php">3.5M6</a></li>
+				<li><a href="/eclipse/debug/test_plans/test_plan-3.5M7.php">3.5M7</a></li>
 			</ul>
 		</div>
 		<div class="homeitem3col">
