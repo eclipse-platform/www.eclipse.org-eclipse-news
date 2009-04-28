@@ -42,7 +42,7 @@
 			<p>Committers: Darin Wright, Michael Rennie, Kevin Barnes, Darin Swanson</p>
 			<p>Community: Curtis Windatt, anyone who wants to help</p>
 		</div>
-		<div class="homeitem3col">
+		<div class="homeitem">
 			<h2><b>JRE Grid</b></h2>
 			<p>The following JREs should be considered when testing. Committers have been 
 			  assigned a JRE and platform to test on. The community can chose any JRE and 
@@ -88,7 +88,7 @@
 				</table>
 			</div>
 		</div>
-		<div class="homeitem3col">
+		<div class="homeitem">
 			<a name="top"></a>
 			<h2><b>Test Grid</b></h2>
 			<div align="center">
