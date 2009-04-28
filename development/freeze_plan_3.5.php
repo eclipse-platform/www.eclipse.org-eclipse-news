@@ -316,7 +316,7 @@ ob_start();
 			<h3>Details</h3>
 			<h4><a name="Transition"></a>Transition to fix and polish</h4>
       		<ul>
-                <li>All components transition on April 4 to polishing and fixing 
+                <li>All components transition on May 4 to polishing and fixing 
                   bugs for remainder of release cycle.</li>
                 <li>PMC approval is required for feature work including API changes 
                   being done after M7. Use the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list
