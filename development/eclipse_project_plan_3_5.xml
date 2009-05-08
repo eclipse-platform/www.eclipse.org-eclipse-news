@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <!--  Use this to test local rendering in firefox -->
-<!-- <?xml-stylesheet type="text/xsl" href="project-plan-render.xsl"?> --> 
+<!-- <?xml-stylesheet type="text/xsl" href="project-plan-render.xsl"?> -->
 
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
 
@@ -17,10 +17,10 @@
 <div>
 
 <p>
-Last revised 17:00 ET April 3, 2009 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> marks
-interesting changes since the previous draft of Jan 21, 2009)
+Last revised 17:00 ET May 8, 2009 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> marks
+interesting changes since the previous draft of April 3, 2009)
 </p>
-<p><i>Please send comments about this draft plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
+<p><i>Please send comments about this plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
   mailing list.</i>
 </p>
 <p>This document lays out the feature and API set for the next feature release
@@ -125,8 +125,7 @@ interesting changes since the previous draft of Jan 21, 2009)
 <p>Our target is to complete 3.5 in late June 2009, in alignment with Galileo.
   All release deliverables will be available for download as soon as the release has been
   tested and validated in the target operating configurations listed below.</p>
-<p> (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />new) 
-	Dates for builds after M7 can be found in the 
+<p>Dates for builds after M7 can be found in the 
 	<a href="http://www.eclipse.org/eclipse/development/freeze_plan_3.5.php">Eclipse Galileo end-game plan</a></p>
 </div>
 </p:postamble>
@@ -147,7 +146,7 @@ interesting changes since the previous draft of Jan 21, 2009)
   in particular class libraries (e.g. J2ME Foundation 1.0, J2SE 1.3 and 1.4,
   etc.).</p>
 <p>In general, the 3.5 release of the Eclipse Project is developed on a mix
-  of Java 1.4, Java5 and Java6 VMs. As such, the Eclipse SDK as a whole
+  of Java 1.4, Java 5 and Java 6 VMs. As such, the Eclipse SDK as a whole
   is targeted at all modern, desktop Java VMs. Full functionality is available for
   1.4 level development everywhere, and extended development capabilities are made
   available on the VMs that support them.</p>
@@ -169,7 +168,6 @@ interesting changes since the previous draft of Jan 21, 2009)
     <tbody>
       <tr align="center">
         <td><b>Reference Platforms</b></td>
-
       </tr>
       <tr>
         <td><b>Microsoft Windows Vista, x86-32, Win32</b> running (any of):
@@ -209,6 +207,13 @@ interesting changes since the previous draft of Jan 21, 2009)
           </ul></td>
       </tr>
       <tr>
+        <td><b><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> SUSE Linux Enterprise Server 10, x86-64, GTK</b> running (any of):
+          <ul>
+            <li>Sun Java 2 Standard Edition 5.0 Update 14 for Linux x86-64</li>
+            <li>IBM 64-bit SDK for Linux on Intel architecture, Java 2 Technology Edition 5.0, SR6b</li>
+          </ul></td>
+      </tr>
+      <tr>
         <td><b>Microsoft Windows Vista, x86-64, Win32</b> running (any of):
           <ul>
             <li>Sun Java 2 Standard Edition 5.0 Update 14 for Microsoft Windows (AMD64/EM64T)</li>
@@ -225,13 +230,20 @@ interesting changes since the previous draft of Jan 21, 2009)
       <tr>
         <td><b>Red Hat Enterprise Linux 4.0 update 2, x86-64, GTK</b> running:
           <ul>
-            <li>Sun Java 2 Standard Edition 5.0 Update 14 for Linux x86_64</li>
+            <li>Sun Java 2 Standard Edition 5.0 Update 14 for Linux x86-64</li>
+            <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> IBM 64-bit SDK for Linux on Intel architecture, Java 2 Technology Edition 5.0, SR6b</li>
           </ul></td>
       </tr>
       <tr>
         <td><b>Sun Solaris 10, SPARC, GTK</b> running:
           <ul>
             <li>Sun Java 2 Standard Edition 5.0 Update 14 for Solaris SPARC</li>
+          </ul></td>
+      </tr>
+      <tr>
+        <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> <b>Sun Solaris 10, x86, GTK</b> running:
+          <ul>
+            <li>Sun Java 2 Standard Edition 5.0 Update 14 for Solaris</li>
           </ul></td>
       </tr>
       <tr>
@@ -265,7 +277,13 @@ interesting changes since the previous draft of Jan 21, 2009)
           </ul></td>
       </tr>
       <tr>
-        <td><b>Apple Mac OS X 10.5, Universal, Cocoa</b> running:
+        <td><b>Apple Mac OS X 10.5, Universal 32-bit, Cocoa</b> running:
+          <ul>
+            <li>Apple Java for Mac OS X 10.5, Update 1</li>
+          </ul></td>
+      </tr>
+      <tr>
+        <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> <b>Apple Mac OS X 10.5, Universal 64-bit, Cocoa</b> running:
           <ul>
             <li>Apple Java for Mac OS X 10.5, Update 1</li>
           </ul></td>
@@ -425,7 +443,7 @@ interesting changes since the previous draft of Jan 21, 2009)
 <li>
   <strong>Support Cocoa on Mac OS X.</strong>
   Apple GUI development is moving from Carbon to Cocoa. We will support the Eclipse
-  SDK running on Mac OS Cocoa (including 64-bit Java6), to ensure that Eclipse
+  SDK running on Mac OS Cocoa (including 64-bit Java 6), to ensure that Eclipse
   continues to be a first-class application delivery and development platform on the
   Mac. <em>(Note that completing this work will require investment from the Equinox
   Project, in addition to the work here.)</em> [SWT, Platform UI]
@@ -476,12 +494,8 @@ interesting changes since the previous draft of Jan 21, 2009)
   more accurately and more readily identify any performance issues that might be
   introduced during developement. [Rel. Eng.]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252649">252649</a>)</li>
-</ul>
-</p:committed>
-
-<p:proposed>
-<ul>
-<li><strong>Performance focus.</strong> 
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+  <strong>Performance focus.</strong> 
   Although performance did not significantly degrade during the 3.4 release cycle,
   we were unable to make the level of investment in performance improvements that
   we had hoped for. In 3.5, we will dedicate significant effort to identifying and
@@ -489,6 +503,10 @@ interesting changes since the previous draft of Jan 21, 2009)
   extreme scenarios.
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252652">252652</a>)</li>
 </ul>
+</p:committed>
+
+<p:proposed>
+  <p><i>None at this time.</i></p>
 </p:proposed>
 
 <p:deferred>
@@ -535,19 +553,9 @@ interesting changes since the previous draft of Jan 21, 2009)
   ability to deliver stable builds on a reliable schedule. We will make
   improvements to the build process to make it more robust and reproducible.[Rel. Eng., PDE]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252664">252664</a>) </li>
-</ul>
-</p:committed>
 
-<p:proposed>
-<ul>
-<li><strong>Provide API for missing/internal features.</strong>
-  We will identify areas where applications built on Eclipse currently must
-  invoke internal functionality in order to provide good integration with the SDK.
-  We will address these cases by creating proper, API-quality equivalents or
-  otherwise removing the dependencies on internals. [All]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252655">252655</a>) </li>
-
-<li><strong>API Tools enhancements</strong>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+  <strong>API Tools enhancements</strong>
   We will enhance the capabilities of our API tools. Potential work areas include
   validating system library references based on a bundle’s required execution
   environment; analyzing extension points for compatibility and considering extension 
@@ -556,12 +564,23 @@ interesting changes since the previous draft of Jan 21, 2009)
   as a structural compare in the workbench; and providing tooling for package version
   definition and validation. [PDE]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252660">252660</a>) </li>
-
 </ul>
+</p:committed>
+
+<p:proposed>
+  <p><i>None at this time.</i></p>
 </p:proposed>
 
 <p:deferred>
-  <p><i>None at this time.</i></p>
+<ul>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> deferred)
+  <strong>Provide API for missing/internal features.</strong>
+  We will identify areas where applications built on Eclipse currently must
+  invoke internal functionality in order to provide good integration with the SDK.
+  We will address these cases by creating proper, API-quality equivalents or
+  otherwise removing the dependencies on internals. [All]
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252655">252655</a>) </li>
+</ul>
 </p:deferred>
 
 </p:theme>
@@ -611,18 +630,9 @@ interesting changes since the previous draft of Jan 21, 2009)
   <strong>Declarative Services Tooling.</strong>
   We will provide tooling for authoring service component definitions. [PDE]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252668">252668</a>) </li>
-</ul>
-</p:committed>
 
-<p:proposed>
-<ul>
-<li><strong>Team sharable working sets.</strong>
-  The usefulness of working sets is limited by the fact they are not team
-  sharable.  We will provide support for sharing working set information
-  between team members.[Platform UI]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252663">252663</a>) </li>
-
-<li><strong>Debug User Interface Enhancements.</strong>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+  <strong>Debug User Interface Enhancements.</strong>
   Investigate enhancements to streamline workflow and reduce clutter in the memory
   view. Experiment with support for debugging without the debug view such as a 
   lightweight mechanism for switching and displaying the active debug context and
@@ -631,18 +641,31 @@ interesting changes since the previous draft of Jan 21, 2009)
   registers, etc.), each dedicated to a single context. [Debug, UI]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252669">252669</a>) </li>
 
-<li><strong>PDE Performance and Target Management.</strong>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+  <strong>PDE Performance and Target Management.</strong>
   Investigate performance improvements in plug-in XML and bundle manifest validation,
   state maintenance, and plug-in launch configuration tabs. Enhance target platform
   management and launching by leveraging p2’s provisioning infrastructure. Investigate
   support for multiple target platforms in a workspace, switching between them, and
   sharing target platforms with a team. [PDE]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252670">252670</a>) </li>
+
 </ul>
+</p:committed>
+
+<p:proposed>
+  <p><i>None at this time.</i></p>
 </p:proposed>
 
 <p:deferred>
-  <p><i>None at this time.</i></p>
+<ul>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> deferred)
+  <strong>Team sharable working sets.</strong>
+  The usefulness of working sets is limited by the fact they are not team
+  sharable.  We will provide support for sharing working set information
+  between team members.[Platform UI]
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252663">252663</a>) </li>
+</ul>
 </p:deferred>
 
 </p:theme>
@@ -662,8 +685,7 @@ interesting changes since the previous draft of Jan 21, 2009)
   Eclipse SDK R3.5, many represent ongoing work in the Eclipse 4.0 ("e4")
   incubator, which is implementing the next major version of the Eclipse SDK. 
   See the <a href="http://wiki.eclipse.org/E4">e4 wiki</a> for more info.</p>
-  <p>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> new)
-  Plan items from the future theme have been moved to the 
+  <p>Plan items from the future theme have been moved to the 
   <a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse.e4">e4 project 0.9 release plan</a>.</p>
 </p:description>
 
@@ -793,6 +815,14 @@ interesting changes since the previous draft of Jan 21, 2009)
     <tr>
       <td>org.eclipse.core.databinding.beans</td>
       <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
+      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />org.eclipse.core.databinding.observable</td>
+      <td><div align="center">F1.1</div></td>
+    </tr>
+    <tr>
+      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />org.eclipse.core.databinding.property</td>
+      <td><div align="center">F1.1</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.expressions</td>
@@ -1160,7 +1190,7 @@ interesting changes since the previous draft of Jan 21, 2009)
     </tr>
     <tr>
       <td>org.eclipse.ui.workbench</td>
-      <td><div align="center">F1.0</div></td>
+      <td><div align="center"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> F1.1</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.workbench.compatibility</td>
@@ -1189,6 +1219,10 @@ interesting changes since the previous draft of Jan 21, 2009)
     <tr>
       <td>org.eclipse.update.ui</td>
       <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
+      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />org.hamcrest.core</td>
+      <td><div align="center">1.5</div></td>
     </tr>
     <tr>
       <td>org.junit</td>
