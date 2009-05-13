@@ -17,7 +17,7 @@
 <div>
 
 <p>
-Last revised 17:00 ET May 8, 2009 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> marks
+Last revised 13:00 ET May 13, 2009 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> marks
 interesting changes since the previous draft of April 3, 2009)
 </p>
 <p><i>Please send comments about this plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
@@ -172,7 +172,7 @@ interesting changes since the previous draft of April 3, 2009)
       <tr>
         <td><b>Microsoft Windows Vista, x86-32, Win32</b> running (any of):
           <ul>
-            <li>Sun Java 2 Standard Edition 5.0 Update 14 for Microsoft Windows</li>
+            <li>Sun Java Standard Edition 5 Update 14 for Microsoft Windows</li>
             <li>IBM 32-bit SDK for Windows, Java 2 Technology Edition 5.0, SR6b</li>
             <li>BEA JRockit 27.4.0, for Microsoft Windows</li>
           </ul></td>
@@ -180,76 +180,76 @@ interesting changes since the previous draft of April 3, 2009)
       <tr>
         <td><b>Microsoft Windows XP, x86-32, Win32</b> running (any of):
           <ul>
-            <li>Sun Java 2 Standard Edition 6.0 Update 4 for Microsoft Windows</li>
-            <li>Sun Java 2 Standard Edition 5.0 Update 14 for Microsoft Windows</li>
+            <li>Sun Java Standard Edition 6 Update 3 for Microsoft Windows</li>
+            <li>Sun Java Standard Edition 5 Update 14 for Microsoft Windows</li>
             <li>IBM 32-bit SDK for Windows, Java 2 Technology Edition 5.0, SR6b</li>
             <li>BEA JRockit 27.4.0, for Microsoft Windows</li>
-            <li>Sun Java 2 Standard Edition 1.4.2_16 for Microsoft Windows</li>
+            <li>Sun Java Standard Edition 1.4.2_16 for Microsoft Windows</li>
             <li>IBM 32-bit SDK for Windows, Java 2 Technology Edition 1.4.2 SR10</li>
           </ul></td>
       </tr>
       <tr>
         <td><b>Red Hat Enterprise Linux 5.0, x86-32, GTK</b> running (any of):
           <ul>
-            <li> Sun Java 2 Standard Edition 6.0 Update 4 for Linux x86</li>
-            <li>Sun Java 2 Standard Edition 5.0 Update 14 for Linux x86</li>
+            <li> Sun Java Standard Edition 6 Update 3 for Linux x86</li>
+            <li>Sun Java Standard Edition 5 Update 14 for Linux x86</li>
             <li>IBM 32-bit SDK for Linux on Intel architecture, Java 2 Technology Edition 5.0, SR6b</li>
             <li>BEA JRockit 27.4.0, for Linux x86</li>
-            <li>Sun Java 2 Standard Edition 1.4.2_16 for Linux x86</li>
+            <li>Sun Java Standard Edition 1.4.2_16 for Linux x86</li>
             <li>IBM 32-bit SDK for Linux on Intel architecture, Java 2 Technology Edition 1.4.2 SR10</li>
           </ul></td>
       </tr>
       <tr>
         <td><b>SUSE Linux Enterprise Server 10, x86-32, GTK</b> running (any of):
           <ul>
-            <li>Sun Java 2 Standard Edition 5.0 Update 14 for Linux x86</li>
+            <li>Sun Java Standard Edition 5 Update 14 for Linux x86</li>
             <li>IBM 32-bit SDK for Linux on Intel architecture, Java 2 Technology Edition 5.0, SR6b</li>
           </ul></td>
       </tr>
       <tr>
         <td><b><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> SUSE Linux Enterprise Server 10, x86-64, GTK</b> running (any of):
           <ul>
-            <li>Sun Java 2 Standard Edition 5.0 Update 14 for Linux x86-64</li>
+            <li>Sun Java Standard Edition 5 Update 14 for Linux x86-64</li>
             <li>IBM 64-bit SDK for Linux on Intel architecture, Java 2 Technology Edition 5.0, SR6b</li>
           </ul></td>
       </tr>
       <tr>
         <td><b>Microsoft Windows Vista, x86-64, Win32</b> running (any of):
           <ul>
-            <li>Sun Java 2 Standard Edition 5.0 Update 14 for Microsoft Windows (AMD64/EM64T)</li>
+            <li>Sun Java Standard Edition 5 Update 14 for Microsoft Windows (AMD64/EM64T)</li>
             <li>IBM 64-bit SDK for Windows, Java 2 Technology Edition 5.0, SR6b</li>
           </ul></td>
       </tr>
       <tr>
         <td><b>Microsoft Windows XP Professional x64 Edition, x86-64, Win32</b> running (any of):
           <ul>
-            <li>Sun Java 2 Standard Edition 5.0 Update 14 for Microsoft Windows (AMD64/EM64T)</li>
+            <li>Sun Java Standard Edition 5 Update 14 for Microsoft Windows (AMD64/EM64T)</li>
             <li>IBM 64-bit SDK for Windows, Java 2 Technology Edition 5.0, SR6b</li>
           </ul></td>
       </tr>
       <tr>
         <td><b>Red Hat Enterprise Linux 4.0 update 2, x86-64, GTK</b> running:
           <ul>
-            <li>Sun Java 2 Standard Edition 5.0 Update 14 for Linux x86-64</li>
+            <li>Sun Java Standard Edition 5 Update 14 for Linux x86-64</li>
             <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> IBM 64-bit SDK for Linux on Intel architecture, Java 2 Technology Edition 5.0, SR6b</li>
           </ul></td>
       </tr>
       <tr>
         <td><b>Sun Solaris 10, SPARC, GTK</b> running:
           <ul>
-            <li>Sun Java 2 Standard Edition 5.0 Update 14 for Solaris SPARC</li>
+            <li>Sun Java Standard Edition 5 Update 14 for Solaris SPARC</li>
           </ul></td>
       </tr>
       <tr>
         <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> <b>Sun Solaris 10, x86, GTK</b> running:
           <ul>
-            <li>Sun Java 2 Standard Edition 5.0 Update 14 for Solaris</li>
+            <li>Sun Java Standard Edition 5 Update 14 for Solaris</li>
           </ul></td>
       </tr>
       <tr>
         <td><b>HP-UX 11i v2, ia64, Motif 2.1, GTK</b> running:
           <ul>
-            <li>HP-UX Java 2 Standard Edition 5.0 Update 7 for Itanium</li>
+            <li>HP-UX Java Standard Edition 5 Update 7 for Itanium</li>
           </ul></td>
       </tr>
       <tr>
@@ -352,7 +352,7 @@ interesting changes since the previous draft of April 3, 2009)
   usable with an earlier version of the Eclipse SDK. </p>
   
 <p><strong>Workspace Compatibility:</strong> Eclipse SDK 3.5 will be upwards
-  workspace-compatible with ealier 3.x versions of the Eclipse SDK unless noted.
+  workspace-compatible with earlier 3.x versions of the Eclipse SDK unless noted.
   This means that workspaces and projects created with Eclipse SDK 3.4 .. 3.0 can be successfully
   opened by Eclipse SDK 3.5 and upgraded to a 3.5 workspace. This includes both
   hidden metadata, which is localized to a particular workspace, as well as metadata
@@ -364,7 +364,7 @@ interesting changes since the previous draft of April 3, 2009)
   metadata from earlier versions and process it appropriately. User
   interface session state may be discarded when a workspace is upgraded. Downward
   workspace compatibility is not supported. A workspace created (or opened) by
-  a product based on Eclipse 3.5 will be unusable with a product based an earlier
+  a product based on Eclipse 3.5 will be unusable with a product based on an earlier
   version of Eclipse. Visible metadata files created (or overwritten) by Eclipse
   3.5 will generally be unusable with earlier versions of Eclipse. </p>
   
@@ -448,12 +448,6 @@ interesting changes since the previous draft of April 3, 2009)
   Mac. <em>(Note that completing this work will require investment from the Equinox
   Project, in addition to the work here.)</em> [SWT, Platform UI]
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252644">252644</a>)</li>
-
-<li>
-  <strong>Accessibility standards compliance.</strong>
-  We will work with the community to ensure that we have first-class, accessibility
-  support that is compliant with important standards. [SWT]
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252646">252646</a>)</li>
 <li>
   <strong>BIDI improvements.</strong>
   We will continue to invest in improving in our BIDI support, to ensure that
@@ -469,7 +463,15 @@ interesting changes since the previous draft of April 3, 2009)
 </p:proposed>
 
 <p:deferred>
-  <p><i>None at this time.</i></p>
+<ul>
+<li>
+  (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> deferred)
+  <strong>Accessibility standards compliance.</strong>
+  We will work with the community to ensure that we have first-class, accessibility
+  support that is compliant with important standards. [SWT]
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252646">252646</a>)
+</li>
+</ul>
 </p:deferred>
 
 </p:theme>
@@ -731,12 +733,13 @@ interesting changes since the previous draft of April 3, 2009)
     </tr>
     <tr>
       <td><div align="center"><strong>1.5</strong></div></td>
-      <td>J2SE 5.0 - indicates that the bundle can only be run on JSE 5.0 or
+      <td>Java SE 5 - indicates that the bundle can only be run on Java SE 5 or
         greater.</td>
+
     </tr>
     <tr>
       <td><div align="center"><strong>1.6</strong></div></td>
-      <td>J2SE 6.0 - indicates that the bundle can only be run on JSE 6.0 or
+      <td>Java SE 6 - indicates that the bundle can only be run on Jave SE 6 or
         greater.</td>
     </tr>
     <tr>
