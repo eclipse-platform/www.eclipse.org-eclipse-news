@@ -47,6 +47,7 @@
 				<li><a href="/eclipse/debug/test_plans/test_plan-3.5M5.php">3.5M5</a></li>
 				<li><a href="/eclipse/debug/test_plans/test_plan-3.5M6.php">3.5M6</a></li>
 				<li><a href="/eclipse/debug/test_plans/test_plan-3.5M7.php">3.5M7</a></li>
+				<li><a href="/eclipse/debug/test_plans/test_plan-3.5RC1.php">3.5RC1</a></li>
 			</ul>
 		</div>
 		<div class="homeitem3col">
