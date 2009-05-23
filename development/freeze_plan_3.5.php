@@ -36,7 +36,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>May 22, 2009 - RC2 to be declared later today.</b></p>
+			<p><b>May 25-26, 2009 - two day test pass against RC2.</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
