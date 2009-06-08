@@ -36,7 +36,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>June 3, 2009 - final scheduled build tomorrow 8pm EST (RC4). Further builds on PMC request only.</b></p>
+			<p><b>June 8, 2009 - RC4 available. Further builds on PMC request only.</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
