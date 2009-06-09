@@ -36,12 +36,12 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>Current IP Log</h3>
 			<p>To see a draft IP log for the Eclipse project release currently under development,
-			view the <a href="">auto-generated IP log</a>.
+			view the <a href="http://www.eclipse.org/projects/ip_log.php?projectid=eclipse.platform,eclipse.jdt,eclipse.pde">auto-generated IP log</a>.
 		</div>
 		<div class="homeitem3col">
 			<h3>IP Logs For Past Releases</h3>
 			<p>The following are approved IP logs for past Eclipse project releases.</p>
-			<table>
+			<table cellpadding=5 cellspacing=5 border=1>
 				<tr>
 					<th>Release</th>
 					<th>Platform</th>
