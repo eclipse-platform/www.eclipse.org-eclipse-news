@@ -41,7 +41,7 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>IP Logs For Past Releases</h3>
 			<p>The following are approved IP logs for past Eclipse project releases.</p>
-			<table cellpadding=5 cellspacing=5 border=1>
+			<table cellpadding=5 cellspacing=5 border=1 align=justify>
 				<tr>
 					<th>Release</th>
 					<th>Platform</th>
