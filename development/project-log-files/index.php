@@ -37,24 +37,14 @@ ob_start();
 			<h3>Current IP Log</h3>
 			<p>To see a draft IP log for the Eclipse project release currently under development,
 			view the <a href="http://www.eclipse.org/projects/ip_log.php?projectid=eclipse.platform,eclipse.jdt,eclipse.pde">auto-generated IP log</a>.
+			Note the auto-generated log has not been reviewed for accuracy or approved by the Eclipse Foundation legal team.
 		</div>
 		<div class="homeitem3col">
 			<h3>IP Logs For Past Releases</h3>
 			<p>The following are approved IP logs for past Eclipse project releases.</p>
 			<ul>
-				<li><a href="eclipse_project_3_5_iplog.html">Galileo (3.5)</a></li>
-			</ul>
-		</div>
-		<div class="homeitem3col">
-			<h3>Historical Information</h3>
-			Prior to the introduction of the automatic IP log tool, the Eclipse project maintained
-			a single log that captured IP data for all releases in one place. This log was divided
-			into three documents. The information in these logs captures IP data for Eclipse
-			project releases 1.0 to 3.4.
-			<ul>
-				<li><a href="Committers.txt">Committers</a></li>
-				<li><a href="Contributors.csv">Contributors</a></li>
-				<li><a href="3p.csv">Third party libraries</a></li>
+				<li><a href="eclipse_project_3_5_log.html">Galileo (3.5)</a></li>
+				<li><a href="eclipse_project_3_4_log.html">1.0 to 3.4</a></li>
 			</ul>
 		</div>
 	</div>
