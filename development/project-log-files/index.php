@@ -41,20 +41,9 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>IP Logs For Past Releases</h3>
 			<p>The following are approved IP logs for past Eclipse project releases.</p>
-			<table cellpadding=5 cellspacing=5 border=1 align=justify>
-				<tr>
-					<th>Release</th>
-					<th>Platform</th>
-					<th>JDT</th>
-					<th>PDE</th>
-				</tr>
-				<tr>
-					<td>Galileo (3.5)</td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-			</table>
+			<ul>
+				<li><a href="eclipse_project_3_5_iplog.html">Galileo (3.5)</a></li>
+			</ul>
 		</div>
 		<div class="homeitem3col">
 			<h3>Historical Information</h3>
