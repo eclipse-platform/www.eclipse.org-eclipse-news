@@ -72,8 +72,7 @@ ob_start();
 		        Eclipse uses mailing lists for development coordination, design discussions, 
 		        voting, announcements etc.
 			</li>
-			<li><a href="http://www.eclipse.org/projects/ip_log.php?projectid=eclipse">
-			Eclipse IP Log</a><br>
+			<li><a href="project-log-files/">Eclipse IP Log</a><br>
       			Intellectual property log, including list of committers, contributors, and
       			third party code dependencies.
       		</li>
