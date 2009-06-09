@@ -33,6 +33,10 @@ ob_start();
 
 	<div id="midcolumn">
 		<h1><?= $pageTitle ?></h1>
+		<p>Eclipse projects are required to maintain intellectual property (IP) logs for each release. This page
+		contains all such logs for the <a href="http://eclipse.org/eclipse">Eclipse</a> top-level project. For
+		more details on IP logs, see the <a href="http://www.eclipse.org/projects/dev_process/project-log.php">
+		Eclipse Development Process</a> documentation.</p>
 		<div class="homeitem3col">
 			<h3>Current IP Log</h3>
 			<p>To see a draft IP log for the Eclipse project release currently under development,
