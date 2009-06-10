@@ -59,7 +59,7 @@ Benjamin Muskalla, Brock Janiczak, Ferenc Hechler, Francis Upton IV, and Mateusz
 
 <p>
 PDE would like to thank everyone that sent in patches! Special thanks to:<br>
-Simon Archer, Benjamin Cabe, Jakub Jurkiewicz, Philipp Kursawe, Jeff McAffer, Ketan Padegaonkar, Jacek Pospychala, Ankur Sharma, Remy Suen, Rafael Oliveira N—brega, Bartosz Michalik and Thomas Watson.
+Simon Archer, Benjamin Cabe, Jakub Jurkiewicz, Philipp Kursawe, Jeff McAffer, Ketan Padegaonkar, Jacek Pospychala, Ankur Sharma, Remy Suen, Rafael Oliveira N&oacute;brega, Bartosz Michalik and Thomas Watson.
 </p>
 
 <p>
@@ -70,7 +70,7 @@ Thanks to John Arthorne from the rest of the team for constant help with the res
 <p>Platform releng would like to thank Andrew Niefer for help transitioning the build to use the p2 publisher and product builds, 
  John Arthorne and DJ Houghton who assisted with composite repos and Pascal Rapicault for the p2's slicer task 
 and other implementation details. I'd also like to extend a special thanks to Jenn Charland our super sysadmin who keeps our build lab in good shape.
-A sincere merci to Frédéric Fusier for his work improving the performance framework and verifying the performance results.   
+A sincere merci to Fr&eacute;d&eacute;ric Fusier for his work improving the performance framework and verifying the performance results.   
 </p> 
 
 
