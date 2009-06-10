@@ -21,7 +21,7 @@
     exclude-result-prefixes="html plan rdf bz nc" >
     <xsl:output method="xml" indent="yes" encoding="UTF-8" omit-xml-declaration="yes" />
     <xsl:param name="projectName"> 
-        <xsl:text>Project Name Here</xsl:text>
+        <xsl:text>Eclipse Project</xsl:text>
     </xsl:param>
     <xsl:param name="projectId" select="/plan:plan/plan:release/@projectid"/>
     
