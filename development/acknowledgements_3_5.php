@@ -57,6 +57,11 @@ JDT UI sends thanks to:<br>
 Benjamin Muskalla, Brock Janiczak, Ferenc Hechler, Francis Upton IV, and Mateusz Matela.
 </p>
 
+<p>
+Platform Workspace sends thanks to Dani Megert who significantly helped with the compare framework.
+Thanks to John Arthorne from the rest of the team for constant help with the resources related issues.
+</p>
+
   </div>
   </div>
 
