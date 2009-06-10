@@ -67,6 +67,14 @@ Platform Workspace sends thanks to Dani Megert who significantly helped with the
 Thanks to John Arthorne from the rest of the team for constant help with the resources related issues.
 </p>
 
+<p>
+The User Assistance team would like to thank everyone who filed bug reports, 
+sent in patches or participated in the eclipse.platform.ua newsgroup. 
+Special thanks go to Guillermo Hurtado for contributing the custom TOC icon feature, 
+Chris Austin for contributing the checkbox to always open intro on startup and John Chen, 
+Sheila Xu and Mei Yang for contributing the quick search feature.
+</p>
+
 <p>Platform releng would like to thank Andrew Niefer for help transitioning the build to use the p2 publisher and product builds, 
  John Arthorne and DJ Houghton who assisted with composite repos and Pascal Rapicault for the p2's slicer task 
 and other implementation details. I'd also like to extend a special thanks to Jenn Charland our super sysadmin who keeps our build lab in good shape.
