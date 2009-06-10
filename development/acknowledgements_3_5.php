@@ -16,7 +16,7 @@
 	
 	#
 	# Begin: page-specific settings.  Change these. 
-	$pageTitle 		= "Eclipse 3.5Acknowledgements";
+	$pageTitle 		= "Eclipse 3.5 Acknowledgements";
 	$pageKeywords	= "eclipse, 3.5 acknowledgements, thanks";
 	$pageAuthor		= "";
 	
@@ -37,11 +37,8 @@ ob_start();
 
 
 <div class="homeitem3col">
-<h3>Eclipse 3.4 Acknowledgements</h3>
+<h3>Eclipse 3.5 Acknowledgements</h3>
 
-
-<head>
-<title>Eclipse 3.5 Acknowledgements</title>
 
 <p>
 The Eclipse and RT projects (Platform, JDT, PDE, Equinox) development team received a tremendous amount of support from the Eclipse community throughout the 3.4 release cycle. 
@@ -49,7 +46,15 @@ The enormous collective effort of opening bug reports, providing patches, testin
 release. To everyone that helped a big "Thank you!/Merci!/Danke!".  In particular, the team would like to express its appreciation to the following people.
 </p>
 
+
 <p>
+The Platform and JDT Text team would like to thank everyone who filed good bug reports and enhancement requests. Special thanks go to:<br>
+Tom Hofmann, Tomasz Zarna, Benjamin Muskalla, Anton Leherbauer, Eric Rizzo, and Florian Albrecht.
+</p>
+
+<p>
+JDT UI sends thanks to:<br>
+Benjamin Muskalla, Brock Janiczak, Ferenc Hechler, Francis Upton IV, and Mateusz Matela.
 </p>
 
   </div>
