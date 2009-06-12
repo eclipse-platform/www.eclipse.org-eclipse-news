@@ -48,12 +48,12 @@ ob_start();
         the best way to get involved.</p>
       <p>The Eclipse Project is managed by a small group known as the Eclipse 
         Project Management Committee (<a href="eclipse-charter.php#PMC">PMC</a>). 
-        The work of the Project is organized into subprojects. Each subproject 
+        The work of the project is organized into subprojects. Each subproject 
         has a leader who has overall responsibility for its success. Large subprojects 
         are further divided into component teams, each of who has a leader that 
         is responsible for its overall success. We have listed just the PMC and 
         subproject leaders here but you will encounter many dedicated Eclipse 
-        project committers and developers in the <a href="../newsgroups/index.html" target="_top">newsgroup</a> 
+        Project committers and developers in the <a href="../newsgroups/index.html" target="_top">newsgroup</a> 
         and <a href="../mail/index.html" target="_top">mailing lists</a>.</p>
 
 		<div class="homeitem3col">
@@ -75,30 +75,27 @@ ob_start();
 		        </li>
 		        <li> 
 		          <b><a name="philippe"></a>Philippe Mulet, IBM Saint-Nazaire</b><br>
-      Philippe is the overall lead for the Eclipse Project. Prior to Eclipse,
+      Philippe co-leads the <a href="http://eclipse.org/jdt">JDT</a> subproject.
+      Prior to Eclipse,
       Philippe was responsible for the compiler and codeassist in IBM VA/Java
       and VA/Micro Edition. Philippe is a member of the expert group on compiler
       API (JSR199), representing IBM. His main interests are in compilation,
-      performance, scalability and meta-level architectures. Philippe leads the Eclipse
-      Project as well as the <a href="http://eclipse.org/jdt">JDT</a> subproject.
+      performance, scalability and meta-level architectures.
 		        </li>
 		        <li> 
 		          <b><a name="steve"></a>Steve Northover, IBM Ottawa</b><br>
       Steve Northover is the father of SWT (the Standard Widget Toolkit). Prior to
       working on Eclipse, he worked on IBM Smalltalk, VA/Java, VA/Micro Edition.
       His interests include programming languages, API design, operating systems,
-      user intefaces and code optimization.  Steve is a member of the Eclipse Project
-      PMC and team lead for SWT.
+      user intefaces and code optimization.
 		        </li>
 		        <li> 
 		          <b><a name="McQ"></a>Mike ("McQ") Wilson, IBM Ottawa</b><br>
-      McQ is a senior architect of the Eclipse SDK, a member of the Eclipse
-      Architecture Council and one of the original Eclipse Founders. He is 
-      currently leading the Platform Workspace, UI and UA teams. He was one of 
-      the original  members of OTI. His interests include computer
+      McQ is the overall lead for the Eclipse Project aka PMC Lead.
+      He is a senior architect of the Eclipse SDK, a member of the Eclipse
+      Architecture Council and one of the original Eclipse Founders. His interests include computer
       language design and implementation, semantic content publishing, web development,
-      and playing the cello. Mike is a member of the Eclipse Project
-      PMC and leads the <a href="http://eclipse.org/platform/">Platform</a>,
+      and playing the cello. Mike leads the <a href="http://eclipse.org/platform/">Platform</a>,
       <a href="http://www.eclipse.org/projects/project_summary.php?projectid=eclipse.e4">e4</a>, 
       and <a href="http://www.eclipse.org/eclipse/incubator/">Eclipse Project Incubator</a>
 	  subprojects.
@@ -115,6 +112,14 @@ ob_start();
       languages, patterns and paradigms, optimizing development processes,
       skiing, hiking, and playing all sorts of musical instruments.
 		        </li>
+		        <li> 
+		          <b><a name="dani"></a>Dani Megert, IBM Zurich</b><br>
+      Dani co-leads the <a href="http://eclipse.org/jdt">JDT</a> subproject and
+      leads the Platform Search, Platform Text and JDT Text components and co-leads
+      the JDT UI component. Dani worked at OTI and is one of the initial Eclipse Project committers.
+      His interests include user interface and API design, editors, performance and DJing.
+		        </li>
+
 		      </ul>
 		</div>
 		
@@ -126,7 +131,7 @@ ob_start();
 			<h6>Subproject Leads</h6>
 			<ul>
 				<li><a href="http://www.eclipse.org/platform/">Platform</a><br> -- <a href="#McQ">Mike Wilson</a></li>
-				<li><a href="http://www.eclipse.org/jdt/" target="_top">JDT</a><br> -- <a href="#philippe">Philippe Mulet</a></li>
+				<li><a href="http://www.eclipse.org/jdt/" target="_top">JDT</a><br> -- <a href="#dani">Dani Megert</a> and <a href="#philippe">Philippe Mulet</a></li>
 				<li><a href="http://www.eclipse.org/pde/">PDE</a><br> -- <a href="http://code9.com/team#chris">Chris Aniszczyk</a> and Darin Wright</a></li>
 				<li><a href="http://www.eclipse.org/e4/" target="_top">e4</a><br> -- <a href="#McQ">Mike Wilson</a></li>
 				<li><a href="http://www.eclipse.org/eclipse/incubator/">Eclipse Incubator</a><br> -- <a href="#McQ">Mike Wilson</a></li>
