@@ -81,6 +81,13 @@ and other implementation details. I'd also like to extend a special thanks to Je
 A sincere merci to Fr&eacute;d&eacute;ric Fusier for his work improving the performance framework and verifying the performance results.   
 </p> 
 
+<p>Platform UI (Common Navigator) thanks Anton Leherbauer for a number of patches and much guidance, 
+Dani Megert for working diligently on issues
+related to Java and beyond (and keeping my honest), Simon Zambrovski for documentation help, and Rob Stryker for patches.  
+Also thanks to the rest of the Platform UI and JDT UI teams for all of their help and support.  Finally thanks to everyone who 
+submitted bug/enhancement reports.
+</p>
+
 
   </div>
   </div>
