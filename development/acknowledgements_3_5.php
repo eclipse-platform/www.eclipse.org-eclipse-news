@@ -81,9 +81,22 @@ and other implementation details. I'd also like to extend a special thanks to Je
 A sincere merci to Fr&eacute;d&eacute;ric Fusier for his work improving the performance framework and verifying the performance results.   
 </p> 
 
-<p>Platform UI (Common Navigator) thanks Anton Leherbauer for a number of patches and much guidance, 
-Dani Megert for working diligently on issues
-related to Java and beyond (and keeping my honest), Simon Zambrovski for documentation help, and Rob Stryker for patches.  
+<p>The Platform UI team would like to thank everyone who filed bugs, asked and answered newsgroup questions,
+and contributed patches. For 3.5, we have included contributions from an unprecedented number of people:
+Heiko Ahlig, Chris Audley, Chris Austin, Matthew Bisson, David Black, Nikolay Botev, Chuck Bridgham,
+Alban Browaeys, Benjamin Cab&eacute;, Keith W. Campbell, Matt Carter, Peter Centgraf, Mariot Chauvin,
+Sebastian Davids, Carlos Devoto, Murat Eken, Martin Frey, Peter Friese, Sebastian Fuchs, Lidija Grahek,
+Micah Hainline, Dan Heidinga, Gordon Hirsch, Marc R. Hoffmann, Konstantin Komissarchik, Blazej Kroll,
+Markus Alexander Kuppe, Alena Laskavaia, Anton Leherbauer, Jamie Liu, Andrei Loskutov, Ovidio Mallo,
+Lubomir Marinov, Chris McGee, Lars Millberg, Peter Nehrer, Hiroyuki Okamoto, Andrew Overholt,
+Carsten Pfeiffer, Ian Phillips, Eric Rizzo, Stefan R&ouml;ck, Michael Scharf, Kai Schlamp, Rob Stryker,
+Andi Thomas, Antoine Toulm&eacute;, Ben Vitale, Elias Volanakis, Wayne Diu, Ryan Wilhm, Mario Winterer,
+Fabio Zadrozny, and Simon Zambrovski. Thank you!
+</p>
+
+<p>For the Common Navigator component of Platform UI, Francis thanks Anton Leherbauer for a number of patches
+and much guidance, Dani Megert for working diligently on issues
+related to Java and beyond (and keeping me honest), Simon Zambrovski for documentation help, and Rob Stryker for patches.  
 Also thanks to the rest of the Platform UI and JDT UI teams for all of their help and support.  Finally thanks to everyone who 
 submitted bug/enhancement reports.
 </p>
