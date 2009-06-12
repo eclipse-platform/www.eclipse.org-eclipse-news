@@ -88,6 +88,9 @@ Also thanks to the rest of the Platform UI and JDT UI teams for all of their hel
 submitted bug/enhancement reports.
 </p>
 
+<p>JDT/Core would like to thank everyone who submitted bug reports, sent in patches or participated in the eclipse.tools.jdt newsgroup.
+A special thanks to Irwin Boutboul and Stephan Herrmann.
+</p>
 
   </div>
   </div>
