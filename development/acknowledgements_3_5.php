@@ -105,6 +105,13 @@ submitted bug/enhancement reports.
 A special thanks to Irwin Boutboul and Stephan Herrmann.
 </p>
 
+<p>The SWT team would like to thank everyone who filed bugs and helped improve the
+toolkit.  Special thanks go to:<br>
+Bryan Hunt, David Green, Andrew Overholt, Boris Bokowski, Christopher Deckers, 
+Daniel Megert, Eric Rizzo, Markus Keller, McQ, Mik Kersten, Remy Suen, Scott Kovatch,
+Tom Schindl, Pascal Rapicault, and Chris Aniszczyk.
+</p>
+
   </div>
   </div>
 
