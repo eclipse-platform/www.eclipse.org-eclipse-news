@@ -112,6 +112,25 @@ Daniel Megert, Eric Rizzo, Markus Keller, McQ, Mik Kersten, Remy Suen, Scott Kov
 Tom Schindl, Pascal Rapicault, and Chris Aniszczyk.
 </p>
 
+<p>
+The Equinox team (framework, p2, compendium, components, server side) would like to thank (in no particular order):
+<ul>
+<li>Troy Bishop for his contribution to improving and enhancing Equinox trace APIs</li>
+<li>Rob Harrop for his contribution to fixing some very difficult threading issues in the Framework</li>
+<li>Tomer Mahlin for his contribution to supporting unicode locale extensions</li>
+<li>Ikuo Yamasaki for his contribution to implementing OSGi RFC 131 in the Framework</li>
+<li>Thomas Hallgren for p2 omni-version support, transport layer code, and various bug fixes</li>
+<li>Mark Melvin, Miles Parker, James Miles, Dennis O'Flynn, and countless others who rode the bleeding edge
+of new p2 developments and provided valuable feedback</li>
+<li>Gunnar Wagenknecht for his contributions to server-side Equinox</li>
+<li>Our co-op students Matthew "Coding Machine" Piggott and Andrew "Guitar Hero" Cattle for their avalanche of code contributions</li>
+<li>Paul Webster the Eclipse newsgroup ninja for jumping in and answering questions on the Equinox newsgroup</li>
+<li>Kim Moir the build wizard for integrating and testing countless build changes in support of p2 and PDE build</li>
+<li>A special thanks to our new committers Daniel Le Berre, Henrik Lindberg, and Ian Bull 
+for their countless hours of work to help make this release such a success.
+</ul>
+</p>
+
   </div>
   </div>
 
