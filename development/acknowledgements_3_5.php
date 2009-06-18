@@ -120,8 +120,10 @@ The Equinox team (framework, p2, compendium, components, server side) would like
 <li>Tomer Mahlin for his contribution to supporting unicode locale extensions</li>
 <li>Ikuo Yamasaki for his contribution to implementing OSGi RFC 131 in the Framework</li>
 <li>Thomas Hallgren for p2 omni-version support, transport layer code, and various bug fixes</li>
-<li>Mark Melvin, Miles Parker, James Miles, Dennis O'Flynn, and countless others who rode the bleeding edge
+<li>Mark Melvin, Miles Parker, James Miles, Dennis O'Flynn, Zviki Cohen, Andrew Overholt, and countless others who rode the bleeding edge
 of new p2 developments and provided valuable feedback</li>
+<li>Kevin McGuire the Eclipse SDK usability architect for always being available to look at UI issues big and small, and providing feedback and advice.</li>
+<li>The Eclipse UI Working Group (UIWG) for providing valuable feedback during p2 UI walkthroughs</li>
 <li>Gunnar Wagenknecht for his contributions to server-side Equinox</li>
 <li>Our co-op students Matthew "Coding Machine" Piggott and Andrew "Guitar Hero" Cattle for their avalanche of code contributions</li>
 <li>Paul Webster the Eclipse newsgroup ninja for jumping in and answering questions on the Equinox newsgroup</li>
