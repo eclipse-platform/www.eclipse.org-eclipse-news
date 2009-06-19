@@ -78,7 +78,9 @@ Sheila Xu and Mei Yang for contributing the quick search feature.
 <p>Platform releng would like to thank Andrew Niefer for help transitioning the build to use the p2 publisher and product builds, 
  John Arthorne and DJ Houghton who assisted with composite repos and Pascal Rapicault for the p2's slicer task 
 and other implementation details. I'd also like to extend a special thanks to Jenn Charland our super sysadmin who keeps our build lab in good shape.
-A sincere merci to Fr&eacute;d&eacute;ric Fusier for his work improving the performance framework and verifying the performance results.   
+A sincere merci to Fr&eacute;d&eacute;ric Fusier for his work improving the performance framework and verifying the performance results.Thanks to Olivier
+Thomann for the pde api tools ant tasks we use in the build.   
+</p>    
 </p> 
 
 <p>The Platform UI team would like to thank everyone who filed bugs, asked and answered newsgroup questions,
