@@ -36,10 +36,8 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>Releases currently under development</h3>
 			<ul>
-	      <li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse"> Eclipse Project Galileo Plan</a><br>
-	        This document lays out the feature and API set for the Galileo (3.5) release of the Eclipse Project. </li>
-	        <li><a href="freeze_plan_3.5.php"> Eclipse Project Galileo Endgame Plan</a><br>
-	    		Information about how we plan to wrap up the Galileo release (version 3.5).</li>     
+	      <li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse"> Eclipse Project Helios Plan</a><br>
+	        This document lays out the feature and API set for the Helios (3.6) release of the Eclipse Project. </li>
 	      <li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse.e4"> e4 Project 0.9 Release Plan</a><br>
 	        This document lays out the feature and API set for the 0.9 release of the e4 Project. </li>
 	    </ul>
@@ -108,6 +106,10 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>Historical information about past releases</h3>			
 			<ul>
+	      <li><a href="http://eclipse.org/eclipse/development/eclipse_project_plan_3_5.xml"> Eclipse Project Galileo Plan</a><br>
+	        This document lays out the feature and API set for the Galileo (3.5) release of the Eclipse Project. </li>
+	        <li><a href="freeze_plan_3.5.php"> Eclipse Project Galileo Endgame Plan</a><br>
+	    		Information about how we wrapped up the Galileo release (version 3.5).</li>     
 	        <li><a href="freeze_plan_3_4_2.php"> Eclipse Project Ganymede SR2 Endgame Plan</a><br>
 	    		Information about how we wrapped up Ganymede Service Release 2 (version 3.4.2).</li>     
 	        <li><a href="freeze_plan_3_4_1.php"> Eclipse Project Ganymede SR1 Endgame Plan</a><br>
