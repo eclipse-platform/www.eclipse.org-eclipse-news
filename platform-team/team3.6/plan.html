@@ -34,14 +34,12 @@
 		
 		table.table
 		{
-			background-color:#F7F9F7;
 			width: 750px;
 			border: #000000 0px solid;
 		}
 		
 		tr.header
 		{
-			background-color:#CCCCFF;	
 			width:100%;
 			border: #000000 0px solid;
 			text-align:center;
@@ -49,7 +47,6 @@
 
 		tr.row
 		{
-			background-color:#CCCCFF;
 			width:100%;
 			border: #000000 1px solid;
 			text-align:center;
@@ -57,14 +54,55 @@
 		
 		td.cell_desc
 		{
+			background-color:#CCCCFF;
 			height: 10px;
 			text-align: center;
 			border: #ffffff 5px solid;
 			padding: 4px 4px 4px 4px 
 		}
-
+		
 		td.cell_milestone
 		{
+			height: 10px;
+			width: 10px;
+			text-align: center;
+			border: #ffffff 5px solid;
+			padding: 4px 4px 4px 4px 
+		}
+
+		td.cell_milestone_planned
+		{
+			background-color:#BBBBFF;
+			height: 10px;
+			width: 10px;
+			text-align: center;
+			border: #ffffff 5px solid;
+			padding: 4px 4px 4px 4px 
+		}
+		
+		td.cell_milestone_extended
+		{
+			background-color:#FFBBBB;
+			height: 10px;
+			width: 10px;
+			text-align: center;
+			border: #ffffff 5px solid;
+			padding: 4px 4px 4px 4px 
+		}
+		
+		td.cell_milestone_shortened
+		{
+			background-color:#BBFFBB;
+			height: 10px;
+			width: 10px;
+			text-align: center;
+			border: #ffffff 5px solid;
+			padding: 4px 4px 4px 4px 
+		}
+		
+		td.cell_milestone_moved
+		{
+			background-color:#EEEEFF;
 			height: 10px;
 			width: 10px;
 			text-align: center;
@@ -118,24 +156,36 @@
 		<div class="homeitem3col_custom">
 			<h3>3.6 Development Effort</h3>
 			
-			<table border="0" cellpadding="2" cellspacing="5" width="100%">
+			<table border="0" cellpadding="2" cellspacing="5" width="50%">
 			<tr>
-				<td valign="center"><img src="../images/progress.gif" border="0" height="5" width="14" align="absmiddle"></td>
-				<td width="50%">item is under development.</td>
-				<td valign="top"><img src="../images/glass.gif" border="0" height="10" width="10"></td>
-				<td width="50%">item is under investigation.</td>
+				<td><img src="../images/glass.gif" border="0" height="10" width="10"></td>
+				<td>item is under investigation</td>
+				<td class="cell_milestone_planned"></td>
+				<td>planned</td>
 			</tr>
 			<tr>
-				<td valign="center"><img src="../images/ok.gif" border="0" height="10" width="10"></td>
-				<td width="50%">item is finished.</td>
-				<td valign="top">( )</td>
-				<td width="50%">item is time permitted.</td>
+				<td><img src="../images/progress.gif" border="0" height="5" width="14" align="absmiddle"></td>
+				<td>item is under development</td>
+				<td class="cell_milestone_extended"></td>
+				<td>extended</td>
 			</tr>
 			<tr>
-				<td valign="center"><font class="indexsub" color="#8080ff">[xyz]</font></td>
-				<td width="50%">item is deferred (&gt;) from xyz or continues in xyz.</td>
-				<td valign="center"><font class="indexsub"><img src="../images/new.gif" border="0"></font></td>
-				<td width="50%">new</td>
+				<td><img src="../images/ok.gif" border="0" height="10" width="10"></td>
+				<td>item is finished</td>
+				<td class="cell_milestone_shortened"></td>
+				<td>shortened</td>
+			</tr>
+			<tr>
+				<td><font class="indexsub"><img src="../images/new.gif" border="0"></font></td>
+				<td>new</td>
+				<td class="cell_milestone_moved"></td>
+				<td>deffered or moved</td>
+			</tr>
+			<tr>
+				<td>&lt; or &gt;</td>
+				<td>moved or deferred</td>
+				<td></td>
+				<td></td>
 			</tr>
 			</table>
 	
@@ -152,10 +202,50 @@
 				</tr>
 				<tr class="row">
 					<td class="cell_desc">Sample task</td>
-					<td class="cell_milestone"><img src="../images/glass.gif" border="0" height="10" width="10"></td>
-					<td class="cell_milestone"><img src="../images/progress.gif" alt="under development"></td>
-					<td class="cell_milestone"><img src="../images/progress.gif" alt="under development"></td>
-					<td class="cell_milestone"><img src="../images/ok.gif" border="0" height="10" width="10"></td>
+					<td class="cell_milestone_planned"><img src="../images/glass.gif" border="0" height="10" width="10"></td>
+					<td class="cell_milestone_planned"><img src="../images/progress.gif" alt="under development"></td>
+					<td class="cell_milestone_planned"><img src="../images/progress.gif" alt="under development"></td>
+					<td class="cell_milestone_extended"><img src="../images/ok.gif" border="0" height="10" width="10"></td>
+					<td class="cell_milestone"> </td>
+					<td class="cell_milestone"> </td>
+					<td class="cell_milestone"> </td>
+				</tr>
+				<tr class="row">
+					<td class="cell_desc">Sample task 2</td>
+					<td class="cell_milestone"></td>
+					<td class="cell_milestone"></td>
+					<td class="cell_milestone_planned"></td>
+					<td class="cell_milestone_planned"></td>
+					<td class="cell_milestone"> </td>
+					<td class="cell_milestone"> </td>
+					<td class="cell_milestone"> </td>
+				</tr>
+				<tr class="row">
+					<td class="cell_desc">Sample task 2 - started a milestone earlier</td>
+					<td class="cell_milestone"></td>
+					<td class="cell_milestone_planned"></td>
+					<td class="cell_milestone_planned"></td>
+					<td class="cell_milestone_moved">&lt;</td>
+					<td class="cell_milestone"> </td>
+					<td class="cell_milestone"> </td>
+					<td class="cell_milestone"> </td>
+				</tr>
+				<tr class="row">
+					<td class="cell_desc">Sample task 2 - postponed to M6 and M7</td>
+					<td class="cell_milestone"></td>
+					<td class="cell_milestone"></td>
+					<td class="cell_milestone_moved">&gt;</td>
+					<td class="cell_milestone_moved">&gt;</td>
+					<td class="cell_milestone"> </td>
+					<td class="cell_milestone_planned"> </td>
+					<td class="cell_milestone_planned"> </td>
+				</tr>
+				<tr class="row">
+					<td class="cell_desc">Sample task 2 - finish earlier than planned</td>
+					<td class="cell_milestone"></td>
+					<td class="cell_milestone"></td>
+					<td class="cell_milestone_planned"><img src="../images/ok.gif" border="0" height="10" width="10"></td>
+					<td class="cell_milestone_shortened"> </td>
 					<td class="cell_milestone"> </td>
 					<td class="cell_milestone"> </td>
 					<td class="cell_milestone"> </td>
