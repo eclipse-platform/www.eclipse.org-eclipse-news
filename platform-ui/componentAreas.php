@@ -103,13 +103,13 @@ function buildTable(loadedJSON){
 <div id="maincontent">
 	<div id="midcolumn">
 		<h1><?= $pageTitle ?></h1>
-		Platform UI is divided into the following functional areas. The tags in
+		Platform UI (and Platform IDE) are divided into the following functional areas. The tags in
 square brackets are used in bug report subject headings to indicate the
 affected area. The current owner of each functional area is indicated in
 parentheses. The queries here may not represent all bugs in a given
 component area if there are any that havn't been properly tagged.
 <p>
-<p>Last updated: November 4, 2008
+<p>Last updated: July 14, 2009
 <p>
 <table id="componentAreas" border="1">
 
