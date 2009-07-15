@@ -1,16 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?artifactRepository version='1.1.0'?>
-<repository name='file:/Users/kim/Documents/eclipse/workspaces/3.4-build-workspace/updates/ - artifacts' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1.0.0'>
+<repository name='${p2.artifact.repo.name}' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1.0.0'>
   <properties size='2'>
     <property name='p2.compressed' value='false'/>
-    <property name='p2.timestamp' value='1238538187671'/>
+    <property name='p2.timestamp' value='1247687561703'/>
   </properties>
   <mappings size='3'>
     <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
     <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
     <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
   </mappings>
-  <artifacts size='26'>
+  <artifacts size='28'>
     <artifact classifier='org.eclipse.update.feature' id='org.eclipse.ui.tools.feature' version='1.0.0.200806161247'>
       <properties size='2'>
         <property name='artifact.size' value='11335'/>
@@ -41,6 +41,12 @@
         <property name='download.size' value='11347'/>
       </properties>
     </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.ui.tools.feature' version='1.0.1.200907151552'>
+      <properties size='2'>
+        <property name='download.contentType' value='application/zip'/>
+        <property name='download.size' value='11219'/>
+      </properties>
+    </artifact>
     <artifact classifier='org.eclipse.update.feature' id='org.eclipse.ui.tweaklets.grabfocus.feature' version='1.0.0.200706261343'>
       <properties size='2'>
         <property name='artifact.size' value='11456'/>
@@ -68,12 +74,6 @@
         <property name='download.md5' value='c178881030bb8ef9924d3aa4bf526dc0'/>
       </properties>
     </artifact>
-    <artifact classifier='osgi.bundle' id='org.eclipse.ui.tools' version='1.0.0.200805131016'>
-      <properties size='2'>
-        <property name='artifact.size' value='46424'/>
-        <property name='download.size' value='46424'/>
-      </properties>
-    </artifact>
     <artifact classifier='osgi.bundle' id='org.eclipse.sound' version='1.0.0.200708291240'>
       <properties size='3'>
         <property name='artifact.size' value='13996'/>
@@ -81,11 +81,10 @@
         <property name='download.contentType' value='application/zip'/>
       </properties>
     </artifact>
-    <artifact classifier='osgi.bundle' id='org.eclipse.ui.tools' version='1.0.0.200806231042'>
-      <properties size='3'>
-        <property name='artifact.size' value='200732'/>
-        <property name='download.size' value='200732'/>
-        <property name='download.contentType' value='application/zip'/>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.tools' version='1.0.0.200805131016'>
+      <properties size='2'>
+        <property name='artifact.size' value='46424'/>
+        <property name='download.size' value='46424'/>
       </properties>
     </artifact>
     <artifact classifier='org.eclipse.update.feature' id='org.eclipse.ui.tweaklets.nomrutabs.feature' version='0.9.0.200903311744'>
@@ -93,6 +92,13 @@
         <property name='artifact.size' value='11573'/>
         <property name='download.size' value='11573'/>
         <property name='download.md5' value='491c823db1d92b24d6e19bb133c6b394'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.tools' version='1.0.0.200806231042'>
+      <properties size='3'>
+        <property name='artifact.size' value='200732'/>
+        <property name='download.size' value='200732'/>
+        <property name='download.contentType' value='application/zip'/>
       </properties>
     </artifact>
     <artifact classifier='org.eclipse.update.feature' id='org.eclipse.sound.feature' version='1.0.0.200708291240'>
@@ -160,6 +166,12 @@
         <property name='download.contentType' value='application/zip'/>
       </properties>
     </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.tools' version='1.0.0.200907151552'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='202424'/>
+      </properties>
+    </artifact>
     <artifact classifier='org.eclipse.update.feature' id='org.eclipse.ui.tweaklets.nomrutabs.feature' version='0.9.0.200903311551'>
       <properties size='3'>
         <property name='artifact.size' value='11573'/>
@@ -173,16 +185,16 @@
         <property name='download.size' value='11360'/>
       </properties>
     </artifact>
-    <artifact classifier='osgi.bundle' id='org.eclipse.sound.ui' version='1.0.0.200708291240'>
-      <properties size='2'>
-        <property name='artifact.size' value='1381061'/>
-        <property name='download.size' value='1381061'/>
-      </properties>
-    </artifact>
     <artifact classifier='org.eclipse.update.feature' id='org.eclipse.ui.tools.feature' version='1.0.0.200806231042'>
       <properties size='2'>
         <property name='artifact.size' value='11335'/>
         <property name='download.size' value='11335'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.sound.ui' version='1.0.0.200708291240'>
+      <properties size='2'>
+        <property name='artifact.size' value='1381061'/>
+        <property name='download.size' value='1381061'/>
       </properties>
     </artifact>
   </artifacts>
