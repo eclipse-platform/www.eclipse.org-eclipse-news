@@ -44,6 +44,10 @@ ob_start();
 			Note the auto-generated log has not been reviewed for accuracy or approved by the Eclipse Foundation legal team.
 		</div>
 		<div class="homeitem3col">
+			<h3>e4 IP Logs</h3>
+			<p>IP log files for the e4 sub-project are found <a href="http://eclipse.org/e4/development/ip-logs/">here</a>.</p>
+		</div>
+		<div class="homeitem3col">
 			<h3>IP Logs For Past Releases</h3>
 			<p>The following are approved IP logs for past Eclipse project releases.</p>
 			<ul>
