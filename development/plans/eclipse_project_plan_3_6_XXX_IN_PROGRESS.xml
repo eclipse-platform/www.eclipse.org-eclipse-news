@@ -446,8 +446,7 @@ interesting changes since the previous draft)
 <p:proposed>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>Support the win32 version of Eclipse on Windows 7</strong>
-	Fully support the win32 version of SWT and the Eclipse SDK on Windows 7.  This
-	includes both 32 bit and 64 bit editions of Windows 7. Ensure that 
+	Fully support the 32-bit and 64-bit win32 version of SWT and the Eclipse SDK on Windows 7. We will ensure that 
 	applications built on the win32 version of SWT work as well as any other win32 API 
 	based application on Windows 7. This will increase our testing and support effort and 
 	potentially require new development to work around platform specific differences. 
@@ -456,7 +455,7 @@ interesting changes since the previous draft)
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>Support Ubuntu</strong>
 	Ubuntu LTS is an increasingly popular choice as an enterprise Linux distribution. 
-	Ensure that all Eclipse project Linux x86 builds run well on Ubuntu. This will increase 
+	We will ensure that all Eclipse project Linux x86 builds run well on Ubuntu. This will increase 
 	our testing and support effort and potentially require new development to work around 
 	platform specific differences. 
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
