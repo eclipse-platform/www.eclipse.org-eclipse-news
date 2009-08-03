@@ -103,7 +103,7 @@ ob_start();
 		      
 		      <h4> <a NAME="Maintenance_Planning"></a>3.5 Maintenance</h4>
 		      <p>Information about 3.5 maintenance releases can be found <a href="http://wiki.eclipse.org/Galileo_Simultaneous_Release#Coordinated_Service_Releases">here</a> and
-		      builds can be </p>
+		      builds can be downloaded from from the <a href="http://download.eclipse.org/eclipse/downloads/">eclipse project download</a> area.</p>
 
 		      <h4> <a NAME="Releases"></a>Previous Releases</h4>
 		      <p>Information about previous releases can be found <a href="releases.html">here</a>.</p>
