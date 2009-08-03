@@ -58,7 +58,7 @@ ob_start();
 		      <h4> <a NAME="Milestone_Planning"></a>3.6 Development</h4>
 				<p>
 		      <ul>
-		        <li> The 3.6 plan is posted <a href="3.6/plan.php#Overall_Planning">here</a>.</li>
+		        <li> The 3.6 plan is posted <a href="3.6/plan.php">here</a>.</li>
 		        <li> The plan for the next milestone is posted <a href="3.6/plan.php#Milestone_Planning">here</a>.</li>
 		      </ul></p>
 			
