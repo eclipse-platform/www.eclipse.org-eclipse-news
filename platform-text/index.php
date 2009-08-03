@@ -88,13 +88,22 @@ ob_start();
 		      <h4> <a NAME="Milestone_Planning"></a>3.6 Development</h4>
 				<p>
 		      <ul>
-		        <li> The 3.5 plan is posted <a href="3.6/plan.php#Overall_Planning">here</a>.</li>
+				<li>Most active development goes into this stream which can be downloaded from the <a href="http://download.eclipse.org/eclipse/downloads/">eclipse project download</a> area.</li>
+		        <li> The 3.6 plan is posted <a href="3.6/plan.php">here</a>.</li>
 		        <li> The plan for the next milestone is posted <a href="3.6/plan.php#Milestone_Planning_M1">here</a>.</li>
 		        <li>The original plans for previous milestones can be found <a href="3.6/plan.php#Milestone_Planning_M1">here</a>.</li>
 		      </ul></p>
 		      
+		     <h4>R3.5</h4>
+			<ul>
+				<li>The current release is R3.5 which is available on the <a
+					href="http://www.eclipse.org/downloads/index.php"
+					target="newdownload&quot;">download</a> area.</li>
+			</ul>
+		      
 		      <h4> <a NAME="Maintenance_Planning"></a>3.5 Maintenance</h4>
-		      <p>Information about 3.5 maintenance releases can be found <a href="http://wiki.eclipse.org/Galileo_Simultaneous_Release#Coordinated_Service_Releases">here</a>.</p>
+		      <p>Information about 3.5 maintenance releases can be found <a href="http://wiki.eclipse.org/Galileo_Simultaneous_Release#Coordinated_Service_Releases">here</a> and
+		      builds can be </p>
 
 		      <h4> <a NAME="Releases"></a>Previous Releases</h4>
 		      <p>Information about previous releases can be found <a href="releases.html">here</a>.</p>
