@@ -55,11 +55,11 @@ ob_start();
 			
 			<p>Since 3.2, Platform Search is mostly in maintenance mode. Contact us if you want to help, contributions are highly appreciated!</p>
 			
-		      <h4> <a NAME="Milestone_Planning"></a>3.5 Development</h4>
+		      <h4> <a NAME="Milestone_Planning"></a>3.6 Development</h4>
 				<p>
 		      <ul>
-		        <li> The 3.5 plan is posted <a href="3.5/plan.php#Overall_Planning">here</a>.</li>
-		        <li> The plan for the next milestone is posted <a href="3.5/plan.php#Milestone_Planning">here</a>.</li>
+		        <li> The 3.6 plan is posted <a href="3.6/plan.php#Overall_Planning">here</a>.</li>
+		        <li> The plan for the next milestone is posted <a href="3.6/plan.php#Milestone_Planning">here</a>.</li>
 		      </ul></p>
 			
 		</div>
