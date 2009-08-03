@@ -85,16 +85,16 @@ ob_start();
 		
 		<div class="homeitem3col">
 			<h3>What's Happening?</h3>
-		      <h4> <a NAME="Milestone_Planning"></a>3.5 Development</h4>
+		      <h4> <a NAME="Milestone_Planning"></a>3.6 Development</h4>
 				<p>
 		      <ul>
-		        <li> The 3.5 plan is posted <a href="3.5/plan.php#Overall_Planning">here</a>.</li>
-		        <li> The plan for the next milestone is posted <a href="3.5/plan.php#Milestone_Planning_M4">here</a>.</li>
-		        <li>The original plans for previous milestones can be found <a href="3.5/plan.php#Milestone_Planning_M1">here</a>.</li>
+		        <li> The 3.5 plan is posted <a href="3.6/plan.php#Overall_Planning">here</a>.</li>
+		        <li> The plan for the next milestone is posted <a href="3.6/plan.php#Milestone_Planning_M1">here</a>.</li>
+		        <li>The original plans for previous milestones can be found <a href="3.6/plan.php#Milestone_Planning_M1">here</a>.</li>
 		      </ul></p>
 		      
-		      <h4> <a NAME="Maintenance_Planning"></a>3.4 Maintenance</h4>
-		      <p>Information about 3.4 maintenance releases can be found <a href="http://wiki.eclipse.org/Ganymede_Simultaneous_Release#Coordinated_Service_Releases_.28Proposed.29">here</a>.</p>
+		      <h4> <a NAME="Maintenance_Planning"></a>3.5 Maintenance</h4>
+		      <p>Information about 3.5 maintenance releases can be found <a href="http://wiki.eclipse.org/Galileo_Simultaneous_Release#Coordinated_Service_Releases">here</a>.</p>
 
 		      <h4> <a NAME="Releases"></a>Previous Releases</h4>
 		      <p>Information about previous releases can be found <a href="releases.html">here</a>.</p>
