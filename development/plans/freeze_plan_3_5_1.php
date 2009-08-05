@@ -106,6 +106,9 @@ ob_start();
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>         
 	        </table>
+	        <p>
+	        Note that September 7th is a holiday in Canada and the United States.
+	        </p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Useful Links</h3>
