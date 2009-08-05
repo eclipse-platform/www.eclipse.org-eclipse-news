@@ -122,16 +122,16 @@ ob_start();
 			<p> 
 	 		The Eclipse Galileo Service Release 1 ("Galileo SR1") endgame involves building 
 	        a series of release candidates leading to the Eclipse project's contribution to the
-	        Galileo SR1 release. The Eclipse project version number for this release is 3.4.1.
+	        Galileo SR1 release. The Eclipse project version number for this release is 3.5.1.
 	        By its nature, this maintenance release contains fixes to a small number 
-	        of serious problems found in the June 2008 Galileo release. We make and verify each 
+	        of serious problems found in the June 2009 Galileo release. We make and verify each 
 	        fix carefully, so that we do not need to tie up the entire development 
 	        team in time-consuming test passes. As always, we welcome help from the 
 	        community with testing the release candidates. By default,&nbsp; Galileo SR1
 	        is supposed to work exactly like the initial Galileo release except for the problems we intended 
 	        to fix. All problems fixed in Galileo SR1 are in the Eclipse bugzilla database 
-	        and flagged with Target Milestone &quot;3.4.1&quot; (query bugzilla for 
-	        the <a href="http://bugs.eclipse.org/bugs/buglist.cgi?product=JDT&amp;product=PDE&amp;product=Platform&amp;product=Equinox&amp;target_milestone=3.4.1&amp;resolution=FIXED&amp;order=bugs.bug_id">complete 
+	        and flagged with Target Milestone &quot;3.5.1&quot; (query bugzilla for 
+	        the <a href="http://bugs.eclipse.org/bugs/buglist.cgi?product=JDT&amp;product=PDE&amp;product=Platform&amp;product=Equinox&amp;target_milestone=3.5.1&amp;resolution=FIXED&amp;order=bugs.bug_id">complete 
 	        list of bugs fixed in Galileo SR1</a>). So we're most interested in identifying 
 	        regressions where we've changed something that we did not intend to.
 	        </p> 
@@ -144,42 +144,49 @@ ob_start();
 	       
 		   <strong>RC1</strong>
 		   <p>
+		   Release candidate 1 is a warm-up build to ensure the release train build
+		   process is in place and all projects are making contributions. All fixes submitted 
+	       to maintenance stream builds must have a component lead vote on the bug report.
+	       </p>
+
+		   <strong>RC2</strong>
+		   <p>
 	        Release candidate containing fixes for the majority of known outstanding 
-	        defects that we intend to fix for Galileo SR1. At the end of RC1 build, 
-	        there should not be any open defects tagged 3.4.1. All fixes submitted 
+	        defects that we intend to fix for Galileo SR1. At the end of RC2 build, 
+	        there should not be any open defects tagged 3.5.1. All fixes submitted 
 	        to maintenance stream builds must have a component lead vote on the bug report.
 	        </p>               
 	
-	        <strong>Test pass using RC1</strong>
-	        <p>Concerted 1-day testing effort using RC1 involving entire community 
-	           including all component teams. The goal is to verify all 
-	           the fixes and check for any regressions.
-	         </p>
-	
-	         <strong>RC2</strong>
-	         <p>Release candidate containing fixes for all known outstanding defects
-	         that we intend to fix for Galileo SR1. All fixes submitted 
-	         to RC2 must have a PMC vote on the bug report. 
-	         Ensure that all feature/plugin versions have been consistently incremented when needed.
-	         </p>
-	
 	        <strong>Test pass using RC2</strong>
-	        <p>Concerted 1-day testing effort using RC2 involving entire community 
+	        <p>Concerted 1-day testing effort using RC2 involving entire community including 
+	        all component teams. The goal is to verify all the fixes and check for any regressions.
+			</p>
+	
+	        <strong>RC3</strong>
+	        <p>Release candidate containing fixes for all known outstanding defects
+	        that we intend to fix for Galileo SR1. All fixes submitted 
+	        to RC3 must have a PMC vote on the bug report. 
+	        Ensure that all feature/plugin versions have been consistently incremented when needed.
+	        </p>
+	
+	        <strong>Test pass using RC3</strong>
+	        <p>Concerted 1-day testing effort using RC3 involving entire community 
 	           including all component teams. The goal is to verify all the fixes, check 
-	           for any regressions and sanity check our RC2 candidate.
+	           for any regressions and sanity check our RC3 candidate.
 	         </p>
 	         
-	         <strong>RC3</strong>
-	         <p>Release candidate 3, if required, to fix problems detected during the test pass.
+	         <strong>RC4</strong>
+	         <p>Release candidate 4, if required, to fix problems detected during the test pass.
 	         We expect NO CHANGE at this point. If you find a show stopper, please notify ASAP the 
 	         <a href="http://dev.eclipse.org/mailman/listinfo/eclipse-pmc">eclipse-pmc@eclipse.org</a> mailing list.
-	         All fixes submitted to RC3 must have a PMC vote on the bug report. 
+	         All fixes submitted to RC4 must have a PMC vote on the bug report. 
 	         </p>
-	         <p>No test pass is scheduled unless significant contributions occurred. If so, then thursday would be elected for a one day test pass</p>
+	         <p>No test pass is scheduled unless significant contributions occurred. If so, 
+	         then Thursday would be elected for a one day test pass</p>
 	
 			<strong>Galileo SR1 Release</strong>
 			<p>The Galileo SR1 release should be complete and available for download by 
-	              the end of September 2008 as part of the <a href="http://wiki.eclipse.org/Galileo">Galileo 
+	              the end of September 2009 as part of the <a href="http://wiki.eclipse.org/Galileo">Galileo 
 	              coordinated service release</a> . If product teams intending 
 	              to ship on Galileo SR1 uncover further serious defects during the endgame, 
 	              we may schedule additional release candidate builds to incorporate fixes.
