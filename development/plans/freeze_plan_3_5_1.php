@@ -16,7 +16,7 @@
 	
 	#
 	# Begin: page-specific settings.  Change these. 
-	$pageTitle 		= "Galileo SR1 endgame plan";
+	$pageTitle 		= "Galileo SR1 Endgame Plan";
 	$pageKeywords	= "eclipse, 3.5.1,  milestone, schedule, endgame";
 	$pageAuthor		= "";
 	
@@ -102,7 +102,7 @@ ob_start();
 	            <td align="right" height="20">9</td>
 	            <td align="right" height="20">Wed 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;</td>
-	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 3 build [if required]</b></td>
+	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 4 build [if required]</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>         
 	        </table>
