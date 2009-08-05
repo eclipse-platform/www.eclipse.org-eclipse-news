@@ -16,7 +16,7 @@
 	
 	#
 	# Begin: page-specific settings.  Change these. 
-	$pageTitle 		= "Draft Eclipse 3.5 endgame plan";
+	$pageTitle 		= "Eclipse 3.5 endgame plan";
 	$pageKeywords	= "eclipse, 3.5, milestone, schedule, endgame, galileo";
 	$pageAuthor		= "";
 	
