@@ -16,7 +16,7 @@
 	
 	#
 	# Begin: page-specific settings.  Change these. 
-	$pageTitle 		= "Galileo SR1 Endgame Plan";
+	$pageTitle 		= "Draft Galileo SR1 Endgame Plan";
 	$pageKeywords	= "eclipse, 3.5.1,  milestone, schedule, endgame";
 	$pageAuthor		= "";
 	
