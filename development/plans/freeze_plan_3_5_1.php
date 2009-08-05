@@ -107,7 +107,7 @@ ob_start();
 	          </tr>         
 	        </table>
 	        <p>
-	        Note that September 7th is a holiday in Canada and the United States.
+	        Note that September 7th is a holiday in Canada (Labour Day) and the United States (Labor Day).
 	        </p>
       	</div>
 		<div class="homeitem3col">
