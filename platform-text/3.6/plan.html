@@ -101,7 +101,7 @@ function showHiddenWork() {
 
   <tr> 
     <td WIDTH="100%"> 
-	<p>Last revised $Date: 2009/08/03 15:07:14 $</p>
+	<p>Last revised $Date: 2009/08/07 10:38:43 $</p>
 
     
       <p>This plan is under continuous refinement. Please send comments about this plan to the <a href="mailto:platform-text-dev@eclipse.org">platform-text-dev@eclipse.org</a> developer mailing list.</p>
@@ -154,25 +154,21 @@ function showHiddenWork() {
 		
 		<li><h4>API [<a href="#2">2</a>]</h4>
 		<ul>
-			<li>provide API for <code>BrowserInformationControl</code> (bug 218482) and <code>HTML2TextReader</code> (bug 241896) <span class="work">3d</span>
-			<li>generalize save actions i.e. push down from JDT Text (bug 195063) <span class="work">1m</span></li>
-			<li>provide LTK layer for text editing support (bug 125825, bug 149817, ...)</li>
+			<li>provide API for <code>BrowserInformationControl</code> (bug 218482) and <code>HTML2TextReader</code> (bug 241896) <span class="work">6w</span>
+				<br>&rarr; might be done if we push the whole hover support down to JFace</li>
+			<li>provide LTK layer for text editing support (bug 125825, bug 149817, ...) <span class="work">1w</span>
+				<br>&rarr; not full blown but start step by step, especially with the command definitions<li>
+			</li>
 		</ul></li>
 			
-		<li><h4>Find/Replace [<a href="#3">3</a>]</h4>
-		<ul>
-			<li>improve Find/Replace dialog: merge into editor area, ... [from external contributor] (bug 99294)</li>
-		</ul>
-		</li>
-	
 		<li><h4><a name="Hovering"></a>Hovering [<a href="#3">3</a>]</h4>
 		<ul>
-			<li class="priority"><img src="../images/ok.gif" border="0" height="10" width="10"> allow to resize hovers on Linux by providing a workaround for bug 23980 (bug 62652) <span class="work">Markus: 3d</span></li>
-			<li class="priority">quick diff usability improvements in hover (Next/Prev support etc.) <span class="work">7d</span></li>
+			<li class="priority"><img src="../images/ok.gif" border="0" height="10" width="10"> allow to resize hovers on Linux by providing a workaround for bug 23980 (bug 62652) <span class="work">Markus: 5d</span></li>
+			<li class="priority">quick diff usability improvements in hover (Next/Prev support etc.) <span class="work">1w</span></li>
 		</ul>
 		</li>
 
-		<li><h4>Ruler improvements [<a href="#3">3</a>]</h4>
+		<li><h4>Ruler improvements [<a href="#3">3</a>] <span class="work">2w</span></li></h4>
 		<ul>
 			<li>improve overview ruler arming and size of active area</li>
 			<li>investigate improving the usability of icons in the vertical ruler [experimental]
@@ -190,19 +186,12 @@ function showHiddenWork() {
 	
 		<li><h4>Spell Checking [<a href="#3">3</a>]</h4>
 		<ul>
-			<li>investigate and reduce memory consumption</li>
+			<li>investigate and reduce memory consumption <span class="work">1w</span></li>
 		</ul>
 		</li>
 	
 		<li><h4>Performance [<a href="#1">1</a>]</h4>
 		<ul>
-			<li>investigate to reduce garbage when typing</li>
-			<li>revisit the text viewer's support for redraw, compound updates, and selection preservation
-			<ul>
-				<li>check all setRedraw(on/off) users whether they really need that expensive operation (e.g. undo)</li>
-			</ul>
-			</li>
-		  
 			<li class="priority"> constantly watch performance test results and act when red</li>
 			<li class="priority"> continue to provide new tests</li>
 		</ul>
@@ -210,7 +199,8 @@ function showHiddenWork() {
 	  
 		<li><h4>Miscellaneous</h4>
 		<ul>
-			<li>problems with undo grouping in linked mode (bug 77575)</li>
+			<li>problems with undo grouping in linked mode (bug 77575) <span class="work">2d</span></li>
+			<li>improve failing save when encoding can't handle a character (bug 144422) <span class="work">3d</span></li>
 		</ul>
 		</li>
 		
