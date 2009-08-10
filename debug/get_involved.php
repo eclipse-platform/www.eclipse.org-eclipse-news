@@ -144,7 +144,7 @@
 		     prompted to overwrite the plug-ins that are checked out of CVS.
 		      </p>
 		      
-		      <p>If you import binary plug-ins this way, you'll need to reimport them manually every time you
+		      <p>If you import binary plug-ins this way, you'll need to re-import them manually every time you
 		      want to compile against a new version of Eclipse (as when a new Integration build occurs).
 		      </p>
 		</div>
