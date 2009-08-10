@@ -83,12 +83,10 @@ include($App->getProjectCommon());
 		<div class="homeitem3col">
 			<h2><b>Up To The Minute</b></h2>
 			<ul>
-				<li>The debug utils, which helps in verifying bugs, is now available via update site (with p2 metadata) at 
-				<a href="http://www.eclipse.org/eclipse/debug/update/">www.eclipse.org/eclipse/debug/update/</a></li>
 				<li>To help new contributors, we have created a 
 				<a href="/eclipse/ant/documents/project_sets/ant-pserver.psf" target="_blank">project set file</a> containing all of the projects needed to get started with Ant coding.</li>
-				<li>Ant overall <a href="/eclipse/ant/platform/dev_plans/r3_5/plan.php">3.5 plan</a></li>
-				<li><a href="/eclipse/ant/test_plans/test_plans.php#3-5_testing">Ant 3.5 Test Matrix</a></li>
+				<li>Ant overall <a href="/eclipse/ant/dev_plans/r3_6/plan.php">3.6 plan</a></li>
+				<li><a href="/eclipse/ant/test_plans/test_plans.php#3-6_testing">Ant 3.6 Test Matrix</a></li>
 			</ul>
 		</div>
 		<div class="homeitem3col">
