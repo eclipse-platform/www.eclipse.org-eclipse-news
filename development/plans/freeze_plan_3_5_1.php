@@ -157,7 +157,9 @@ ob_start();
 	        Release candidate containing fixes for the majority of known outstanding 
 	        defects that we intend to fix for Galileo SR1. At the end of RC2 build, 
 	        there should not be any open defects tagged 3.5.1. All fixes submitted 
-	        to maintenance stream builds must have a component lead vote on the bug report.
+	        to maintenance stream builds must have a component lead vote on the bug report,
+	        and the fix must be reviewed by an additional committer (the reviewer can be
+	        the component lead if they didn't make the fix).
 	        </p>               
 	
 	        <strong>Test pass using RC2</strong>
@@ -167,8 +169,9 @@ ob_start();
 	
 	        <strong>RC3</strong>
 	        <p>Release candidate containing fixes for all known outstanding defects
-	        that we intend to fix for Galileo SR1. All fixes submitted 
-	        to RC3 must have a PMC vote on the bug report. 
+	        that we intend to fix for Galileo SR1. All fixes submitted to RC3 must have a PMC vote on the bug report,
+	        and the fix must be reviewed by an additional committer (any committer other than
+	        the one who made the fix).
 	        Ensure that all feature/plugin versions have been consistently incremented when needed.
 	        </p>
 	
@@ -182,11 +185,22 @@ ob_start();
 	         <p>Release candidate 4, if required, to fix problems detected during the test pass.
 	         We expect NO CHANGE at this point. If you find a show stopper, please notify ASAP the 
 	         <a href="http://dev.eclipse.org/mailman/listinfo/eclipse-pmc">eclipse-pmc@eclipse.org</a> mailing list.
-	         All fixes submitted to RC4 must have a PMC vote on the bug report. 
+	         All fixes submitted to RC4 must have a PMC vote on the bug report and be reviewed
+	         by an additional committer (any committer other than the one who made the fix).
 	         </p>
 	         <p>No test pass is scheduled unless significant contributions occurred. If so, 
 	         then Thursday would be elected for a one day test pass</p>
-	
+	         
+			<strong>API change approval</strong>
+	        <p>
+			No API changes are expected during a maintenance release. Any exception must be
+			approved by the PMC. No changes are to be released without prior approval
+			and associated bug report. Send the request for approval to the eclipse-pmc
+			mailing list. If a change is made to API to make it binary compatible with
+			a previous release, technically this is still an API change, and thus it should be treated
+			in the same way as any other API change requests.	
+			</p>
+			
 			<strong>Galileo SR1 Release</strong>
 			<p>The Galileo SR1 release should be complete and available for download by 
 	              the end of September 2009 as part of the <a href="http://wiki.eclipse.org/Galileo">Galileo 
