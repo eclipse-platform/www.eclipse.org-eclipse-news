@@ -165,8 +165,8 @@ interesting changes since the previous draft)
   (this list is updated over the course of the release cycle):</p>
   
 <center>
-<script language="javascript" type="text/javascript">
 <![CDATA[
+<script language="javascript" type="text/javascript">
 	function showPlatformTable(platforms) {
 		// This lets us change the display order of the columns without having to change the array data.
 		var colOrder = new Array(0,1,2,4,3);
@@ -247,10 +247,10 @@ interesting changes since the previous draft)
 		new Array()
 	);
 	showPlatformTable(primaryPlatforms);
-	]]>
 </script>
-
+]]>
 </center>
+
 <p>As stated above, <i>we expect that Eclipse works fine on other current
   Java VM and OS versions but we cannot flag these as reference platforms without
   significant community support for testing them.</i></p>
