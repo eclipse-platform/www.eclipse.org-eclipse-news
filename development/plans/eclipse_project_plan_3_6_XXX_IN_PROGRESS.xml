@@ -13,71 +13,6 @@
 
 <!-- ============================================== -->
 
-<script type="text/javascript">
-function showPlatformTable(platforms) {
-	// This lets us change the display order of the columns without having to change the array data.
-	var colOrder = new Array(0,1,2,4,3);
-	document.write("<table border=1>");
-	document.write("<tr bgcolor='#d0f0b0'><th>Operating System</th><th>Version</th><th>Hardware</th>");
-	document.write("<th>JRE</th><th>Windowing System</th>");
-	// leave off the "reviewed column now that they are reviewed.
-	// document.write("<th>Reviewed?</th>");
-	document.write("</tr>");
-	prevone = null;
-	spans = 0;
-	applyrowclass = false;
-	for (i=0; i< platforms.length; ++i) if (platforms[i].length > 0) {
-		next = -1;
-		nextone= null;
-		if (i+1 < platforms.length) {
-			next = i+1;
-			nextone = platforms[next];
-		}
-		thisone = platforms[i];
-		
-		if (spans == 0) applyrowclass = !applyrowclass;
-		document.write("<tr"+(applyrowclass?" class='gray'":"")+">");
-		thisspans = (spans > 0 ? spans - 1 : 0);
-
-		for (j=0; j<colOrder.length; ++j) {
-			if (spans == 0 || (prevone != null && prevone[colOrder[j]] != thisone[colOrder[j]])) {
-				document.write("<td");
-				rowstospan = 0;
-				if (next > 0) {
-					n = next;
-					while (n < platforms.length) {
-						n_one = platforms[n];
-						if ((thisone[0] == n_one[0]) && (thisone[colOrder[j]] == n_one[colOrder[j]])) {
-							rowstospan += 1;
-						}
-						else {
-							break;
-						}
-						n += 1;
-					}
-					
-				}
-				if (rowstospan > 0) {
-					if (rowstospan>0) document.write(" rowspan="+(rowstospan+1));
-					if (j==0) thisspans = rowstospan;
-				}
-				document.write(">");
-				document.write(thisone[colOrder[j]]);
-				document.write("</td>");
-			}
-		
-		}
-		
-		document.write("</tr>");
-		prevone = thisone;
-		spans = thisspans;
-	}
-	
-	document.write("</table>");
-}
-</script>
-
-
 <p:introduction>
 <div>
 <p>
@@ -231,6 +166,65 @@ interesting changes since the previous draft)
   
 <center>
 <script type="text/javascript">
+	function showPlatformTable(platforms) {
+		// This lets us change the display order of the columns without having to change the array data.
+		var colOrder = new Array(0,1,2,4,3);
+		document.write("<table border=1>");
+		document.write("<tr bgcolor='#d0f0b0'><th>Operating System</th><th>Version</th><th>Hardware</th>");
+		document.write("<th>JRE</th><th>Windowing System</th>");
+		// leave off the "reviewed column now that they are reviewed.
+		// document.write("<th>Reviewed?</th>");
+		document.write("</tr>");
+		prevone = null;
+		spans = 0;
+		applyrowclass = false;
+		for (i=0; i< platforms.length; ++i) if (platforms[i].length > 0) {
+			next = -1;
+			nextone= null;
+			if (i+1 < platforms.length) {
+				next = i+1;
+				nextone = platforms[next];
+			}
+			thisone = platforms[i];
+			
+			if (spans == 0) applyrowclass = !applyrowclass;
+			document.write("<tr"+(applyrowclass?" class='gray'":"")+">");
+			thisspans = (spans > 0 ? spans - 1 : 0);
+	
+			for (j=0; j<colOrder.length; ++j) {
+				if (spans == 0 || (prevone != null && prevone[colOrder[j]] != thisone[colOrder[j]])) {
+					document.write("<td");
+					rowstospan = 0;
+					if (next > 0) {
+						n = next;
+						while (n < platforms.length) {
+							n_one = platforms[n];
+							if ((thisone[0] == n_one[0]) && (thisone[colOrder[j]] == n_one[colOrder[j]])) {
+								rowstospan += 1;
+							}
+							else {
+								break;
+							}
+							n += 1;
+						}
+					}
+					if (rowstospan > 0) {
+						if (rowstospan>0) document.write(" rowspan="+(rowstospan+1));
+						if (j==0) thisspans = rowstospan;
+					}
+					document.write(">");
+					document.write(thisone[colOrder[j]]);
+					document.write("</td>");
+				}
+			}
+			
+			document.write("</tr>");
+			prevone = thisone;
+			spans = thisspans;
+		}
+		
+		document.write("</table>");
+	}
 	var notrev = "<font color=red><b>not reviewed</b></font>";
 	var rev = "yes";
 	var primaryPlatforms= new Array(
