@@ -165,6 +165,7 @@ interesting changes since the previous draft)
   (this list is updated over the course of the release cycle):</p>
   
 <center>
+<!--
 <script type="text/javascript">
 	function showPlatformTable(platforms) {
 		// This lets us change the display order of the columns without having to change the array data.
@@ -246,6 +247,7 @@ interesting changes since the previous draft)
 		new Array()
 	);
 	showPlatformTable(primaryPlatforms);
+	//-->
 </script>
 
 </center>
