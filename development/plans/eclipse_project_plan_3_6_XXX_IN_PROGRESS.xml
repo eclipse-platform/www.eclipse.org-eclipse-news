@@ -472,6 +472,16 @@ interesting changes since the previous draft)
 
 <p:proposed>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>Add support for Java SE 7 features</strong>
+	The next feature release of Java SE is version 7, targeted to ship in the first half of 2010. 
+	While the contents of this release are still under discussion, this release is expected to contain 
+	extensions to the Java language, including annotations on types (JSR-308), modularity
+	support (JSR-294), and other minor language changes (Coin project). Eclipse Java
+	tooling should include initial support for compiling, editing, and launching applications
+	for Java 7.
+	[JDT Core, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+</li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>Support the win32 version of Eclipse on Windows 7</strong>
 	Fully support the 32-bit and 64-bit win32 version of SWT and the Eclipse SDK on Windows 7. We will ensure that 
 	applications built on the win32 version of SWT work as well as any other win32 API 
@@ -487,6 +497,19 @@ interesting changes since the previous draft)
 	platform specific differences. 
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
 </li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>Focus on accessibility</strong>
+  We will work with the community to ensure that we have first-class, accessibility
+  support that is compliant with important standards. 
+  [SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252646">252646</a>)
+</li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>BIDI improvements</strong>
+	We will work on improving support for bidirectional text (BIDI). Work in this area may include
+	support for setting text direction on Mac Cocoa, BIDI support in complex expressions, 
+	and leveraging SWT BIDI support throughout the user interface. 
+	[SWT, Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+</li>	
 </p:proposed>
 
 <p:deferred>
@@ -567,6 +590,15 @@ interesting changes since the previous draft)
 	be initiated by more people. 
 	[Rel. Eng., PDE] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
 </li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>API tools usage scan improvements</strong>
+	Eclipse SDK 3.5 included Ant-based support for generating usage scans that indicated what API
+	and internals consumers were using. In this release we will add support to generate
+	these scans from the UI, and provide tools for working with the scan data, such as comparison
+	of scans, and flagging of changes that will break consumers who provided the scan data.
+	[PDE] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+</li>
+
 </p:proposed>
 
 <p:deferred>
