@@ -598,6 +598,13 @@ interesting changes since the previous draft)
 	of scans, and flagging of changes that will break consumers who provided the scan data.
 	[PDE] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
 </li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>Help system customization</strong>
+	The current Eclipse Help web application provides limited support for customization by clients.  
+	Additional extensibility should be provided to enable insertion of custom content, 
+	customizing the tool bar, and changing the look and feel (colors, fonts, etc).
+	[User Assistance] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+</li>
 
 </p:proposed>
 
