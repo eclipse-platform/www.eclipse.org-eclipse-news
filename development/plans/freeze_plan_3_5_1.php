@@ -37,7 +37,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>August 5, 2009 - The first release candidate is scheduled for this Friday August 7th.</b></p>
+			<p><b>August 20, 2009 - Working towards RC2 build on August 26th.</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
