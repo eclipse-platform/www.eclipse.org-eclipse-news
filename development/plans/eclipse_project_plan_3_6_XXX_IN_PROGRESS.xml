@@ -520,12 +520,12 @@ interesting changes since the previous draft)
     
 <!-- ============================================== -->
 
-<p:theme name="Scalability and Performance">
+<p:theme name="Robustness">
 <p:description>
-<p>Eclipse is being used consumed in an ever wider range of products, applications,
-  and development scenarios. We will identify and address performance and scalability
-  issues to provide a better experience both for users working in these areas in
-  particular, and for Eclipse users in general.
+<p>As the basis for the entire Eclipse eco-system, the Eclipse SDK must be robust,
+  flexible and secure. This work will address those issues by providing API for
+  missing or currently internal functionality, and focusing on the issues that
+  affect the stability of the platform.
 </p>
 </p:description>
 
@@ -543,32 +543,6 @@ interesting changes since the previous draft)
 	review and polish those changes and back-port them to Helios stream where appropriate.
 	[Workspace, Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
 </li>
-</ul>
-</p:proposed>
-
-<p:deferred>
-  <p><i>None at this time.</i></p>
-</p:deferred>
-
-</p:theme>
-    
-<!-- ============================================== -->
-
-<p:theme name="Robustness">
-<p:description>
-<p>As the basis for the entire Eclipse eco-system, the Eclipse SDK must be robust,
-  flexible and secure. This work will address those issues by providing API for
-  missing or currently internal functionality, and focusing on the issues that
-  affect the stability of the platform.
-</p>
-</p:description>
-
-<p:committed>
-  <p><i>None at this time.</i></p>
-</p:committed>
-
-<p:proposed>
-<ul>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>API tools usage scan improvements</strong>
 	Eclipse SDK 3.5 included Ant-based support for generating usage scans that indicated what API
