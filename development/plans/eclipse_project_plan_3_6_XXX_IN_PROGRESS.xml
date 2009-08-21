@@ -201,14 +201,24 @@ interesting changes since the previous draft)
 		</tr>
 		<!-- ************ WINDOWS ************** -->
 		<tr class="c0">
-			<td rowspan="4">Windows</td>
+			<td rowspan="6">Windows</td>
+			<td rowspan="2"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 7</td>
+			<td rowspan="1">x86 32-bit</td>
+			<td rowspan="2">Sun Java 5 Update 14<br/>
+				IBM Java 5 SR6b
+			</td>
+			<td rowspan="6">Win32</td>
+		</tr>
+		<tr>
+			<td rowspan="1">x86 64-bit</td>
+		</tr>
+		<tr>
 			<td rowspan="2">Vista</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td>Sun Java 5 Update 14<br/>
 				IBM Java 5 SR6b<br/>
 				BEA JRockit 27.4.0
 			</td>
-			<td rowspan="4">Win32</td>
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">x86 64-bit</td>
@@ -248,7 +258,7 @@ interesting changes since the previous draft)
 			<td rowspan="3">GTK</td>
 		</tr>
 		<tr class="c1">
-			<td rowspan="1">Power</td>
+			<td rowspan="1"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> Power 64-bit</td>
 			<td>IBM Java 5 SR6b</td>
 		</tr>
 		<tr class="c1">
@@ -261,7 +271,7 @@ interesting changes since the previous draft)
 		<!-- ************ SLES ************** -->
 		<tr class="c0">
 			<td rowspan="3">SUSE Linux Enterprise Server</td>
-			<td rowspan="3">10</td>
+			<td rowspan="3"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 11</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">Sun Java 5 Update 14<br/>
 				IBM Java 5 SR6b
@@ -272,30 +282,43 @@ interesting changes since the previous draft)
 			<td rowspan="1">x86 64-bit</td>
 		</tr>
 		<tr class="c0">
-			<td rowspan="1">Power</td>
+			<td rowspan="1"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> Power 64-bit</td>
 			<td>IBM Java 5 SR6b</td>
 		</tr>
-		<!-- ************ Solaris ************** -->
+		<!-- ************ Ubuntu ************** -->
 		<tr class="c1">
+			<td rowspan="2"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> Ubuntu Long Term Support</td>
+			<td rowspan="2">9.04</td>
+			<td rowspan="1">x86 32-bit</td>
+			<td rowspan="2">Sun Java 5 Update 14<br/>
+				IBM Java 5 SR6b
+			</td>
+			<td rowspan="2">GTK</td>
+		</tr>
+		<tr class="c1">
+			<td rowspan="1">x86 64-bit</td>
+		</tr>
+		<!-- ************ Solaris ************** -->
+		<tr class="c0">
 			<td rowspan="2">Sun Solaris</td>
 			<td rowspan="2">10</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">Sun Java 5 Update 14</td>
 			<td rowspan="2">GTK</td>
 		</tr>
-		<tr class="c1">
+		<tr class="c0">
 			<td rowspan="1">SPARC</td>
 		</tr>
 		<!-- ************ HPUX ************** -->
-		<tr class="c0">
+		<tr class="c1">
 			<td rowspan="1">HP-UX</td>
 			<td rowspan="1">11i v2</td>
 			<td rowspan="1">ia64</td>
 			<td rowspan="1">HP-UX Java 5 Update 7</td>
 			<td rowspan="1">Motif 2.1</td>
 		</tr>
-		<!-- ************ HPUX ************** -->
-		<tr class="c1">
+		<!-- ************ AIX ************** -->
+		<tr class="c0">
 			<td rowspan="1">IBM AIX</td>
 			<td rowspan="1">5.3</td>
 			<td rowspan="1">Power</td>
@@ -303,18 +326,18 @@ interesting changes since the previous draft)
 			<td rowspan="1">Motif 2.1</td>
 		</tr>
 		<!-- ************ Mac ************** -->
-		<tr class="c0">
+		<tr class="c1">
 			<td rowspan="3">Apple Mac OS X</td>
 			<td rowspan="3">10.5</td>
 			<td rowspan="1">Universal</td>
 			<td rowspan="3">Apple Java 10.5 Update 1</td>
 			<td rowspan="1">Carbon</td>
 		</tr>
-		<tr class="c0">
+		<tr class="c1">
 			<td rowspan="1">Universal 32-bit</td>
 			<td rowspan="2">Cocoa</td>
 		</tr>
-		<tr class="c0">
+		<tr class="c1">
 			<td rowspan="1">Universal 64-bit</td>
 		</tr>
 	</table>
