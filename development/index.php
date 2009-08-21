@@ -38,8 +38,8 @@ ob_start();
 			<ul>
 	      <li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse"> Eclipse Project Helios Plan</a><br>
 	        This document lays out the feature and API set for the Helios (3.6) release of the Eclipse Project. </li>
-	      <li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse.e4"> e4 Project 0.9 Release Plan</a><br>
-	        This document lays out the feature and API set for the 0.9 release of the e4 Project. </li>
+	        <li><a href="plans/freeze_plan_3_5_1.php"> Eclipse Project Galileo SR1 Endgame Plan</a><br>
+	    		Information about how we plan to wrap up Galileo Service Release 1 (version 3.5.1).</li>     
 	    </ul>
       	</div>
 		<div class="homeitem3col">
@@ -106,6 +106,8 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>Historical information about past releases</h3>			
 			<ul>
+	      <li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse.e4"> e4 Project 0.9 Release Plan</a><br>
+	        This document lays out the feature and API set for the 0.9 release of the e4 Project. </li>
 	      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/eclipse_project_plan_3_5.xml"> Eclipse Project Galileo Plan</a><br>
 	        This document lays out the feature and API set for the Galileo (3.5) release of the Eclipse Project. </li>
 	        <li><a href="freeze_plan_3.5.php"> Eclipse Project Galileo Endgame Plan</a><br>
@@ -178,14 +180,6 @@ ob_start();
       			Eclipse 3.0 Maintenance Release Schedule</a><br>
       			Timeline for 3.0.x maintenance stream (nothing further planned).
       		</li>
-			<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/eclipse-project-home/plans/3_0/freeze_plan_3_0_2.html">
-				Eclipse Project 3.0.2 Endgame Plan</a><br>
-				Information about how we wrapped up the 3.0.2 maintenance release of Eclipse.
-			</li>
-			<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/eclipse-project-home/plans/3_0/freeze_plan_3_0_1.html">
-				Eclipse Project 3.0.1 Endgame Plan</a><br>
-				Information about how we wrapped up the 3.0.1 maintenance release of Eclipse.
-			</li>
 			<li><a href="eclipse_project_plan_3_0.html">
 				Eclipse Project 3.0 Plan (Final)</a><br>
 				This document lays out the feature and API set for the 3.0 release of Eclipse.
@@ -197,19 +191,8 @@ ob_start();
 				Eclipse 3.0 Endgame Plan</a><br>
 				Information about how we wrapped up the 3.0 release of Eclipse.
 			</li>
-			<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.platform.doc.isv/porting/eclipse_3_0_porting_guide.html">
-				Eclipse 3.0 Porting Guide</a><br>
-      			Up-to-the-moment advise for porting existing plug-ins to Eclipse 3.0.
-			</li>
 			<li><a href="eclipse_proposals_3_0.html">Eclipse 3.0 Proposals</a><br>
       			Links to proposals and working documents for various 3.0 plan items.
-			</li>
-			<li><a href="eclipse_component_plans_3_0.html">
-				Eclipse 3.0 Component Milestone Plans</a><br>
-				Details about what each of the component teams is working on for the upcoming milestone.
-			</li>
-			<li><a href="apis/api-status-3_0.html">Eclipse 3.0 API Status</a><br>
-      			Status of Eclipse API packages and extension points in 3.0 development stream.
 			</li>
 			<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/eclipse-project-home/plans/eclipse_after_2_1.html">
 				The Next Eclipse</a><br>
@@ -218,35 +201,6 @@ ob_start();
 			<li><a href="eclipse_project_plan_2_1.html">
 				Eclipse Project 2.1 Plan (Final)</a><br>
 				This document lays out the feature and API set for the 2.1 release of Eclipse.
-			</li>
-			<li><a href="eclipse_maintenance_schedule_2_1_x.html">
-				Eclipse 2.1 Maintenance Release Schedule</a><br>
-      			Timeline for 2.1.x maintenance stream (nothing further planned).
-			</li>
-			<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/eclipse-project-home/plans/freeze_plan_2_1.html">
-				Eclipse 2.1 Endgame Plan</a><br>
-      			Information about how we wrapped up the 2.1 release of Eclipse.
-			</li>
-			<li><a href="eclipse_milestones_2_1.html">
-				Eclipse 2.1 Milestone Plans </a><br>
-				Links to the 2.1 milestone plans for each Eclipse team (subproject).
-			</li>
-			<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/eclipse-project-home/plans/freeze_plan_2_1_1.html">
-				Eclipse 2.1.1 Endgame Plan</a><br>
-				Information about how we wrapped up the 2.1.1 maintenance release of Eclipse.
-			</li>
-			<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/eclipse-project-home/plans/freeze_plan_2_1_2.html">
-				Eclipse 2.1.2 Endgame Plan</a><br>
-				Information about how we wrapped up the 2.1.2 maintenance release of Eclipse.
-			</li>
-			<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/eclipse-project-home/plans/freeze_plan_2_1_3.html">
-				Eclipse 2.1.3 Endgame Plan</a><br>
-				Information about how we wrapped up the 2.1.3 maintenance release of Eclipse.
-			</li>
-			<li><a href="challenges_2_1.html">
-				Top &quot;Ten&quot; Issues List</a><br>
-      			This document describes the key issues that we are working on for 2.1 and 
-      			additional issues we will likely be working on soon.
 			</li>
 			<li><a href="2_0_retrospective_actions.html">
 				Eclipse 2.0 Retrospective Actions<br></a>
