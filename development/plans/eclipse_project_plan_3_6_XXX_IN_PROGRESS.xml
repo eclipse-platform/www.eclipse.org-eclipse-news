@@ -534,7 +534,16 @@ interesting changes since the previous draft)
 </p:committed>
 
 <p:proposed>
-  <p><i>None at this time.</i></p>
+<ul>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>Flexible resources</strong>
+	The Resource architecture that Eclipse uses has been criticized for being overly Java-centric 
+	and constraining for some use cases. The e4 incubator explored this problem and developed
+	some concrete improvements to the resource model to address these problems. We will
+	review and polish those changes and back-port them to Helios stream where appropriate.
+	[Workspace, Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+</li>
+</ul>
 </p:proposed>
 
 <p:deferred>
@@ -550,7 +559,7 @@ interesting changes since the previous draft)
 <p>As the basis for the entire Eclipse eco-system, the Eclipse SDK must be robust,
   flexible and secure. This work will address those issues by providing API for
   missing or currently internal functionality, and focusing on the issues that
-  effect the stability of the platform.
+  affect the stability of the platform.
 </p>
 </p:description>
 
@@ -559,7 +568,36 @@ interesting changes since the previous draft)
 </p:committed>
 
 <p:proposed>
-  <p><i>None at this time.</i></p>
+<ul>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>API tools usage scan improvements</strong>
+	Eclipse SDK 3.5 included Ant-based support for generating usage scans that indicated what API
+	and internals consumers were using. In this release we will add support to generate
+	these scans from the UI, and provide tools for working with the scan data, such as comparison
+	of scans, and flagging of changes that will break consumers who provided the scan data.
+	[PDE] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+</li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>Help system customization</strong>
+	The current Eclipse Help web application provides limited support for customization by clients.  
+	Additional extensibility should be provided to enable insertion of custom content, 
+	customizing the tool bar, and changing the look and feel (colors, fonts, etc).
+	[User Assistance] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+</li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>Focus on compatibility</strong>
+	Migrating across major platform releases is costly for consumers due to the 
+	magnitude of API and behavioral changes between releases. 
+	We will focus on reducing the migration cost by careful analysis of changes for their 
+	impact on compatibility, avoiding breaking behavior changes, use of API tooling to identify
+	and correct breakages early, and better documentation of changes that impact
+	compatibility.
+	[All Components] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+</li>
+<li>
+
+</li>
+</ul>
 </p:proposed>
 
 <p:deferred>
@@ -582,6 +620,7 @@ interesting changes since the previous draft)
 </p:committed>
 
 <p:proposed>
+<ul>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>Build anywhere.</strong>
 	The current Eclipse project build and test infrastructure is highly customized and
@@ -591,21 +630,20 @@ interesting changes since the previous draft)
 	[Rel. Eng., PDE] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
 </li>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
-	<strong>API tools usage scan improvements</strong>
-	Eclipse SDK 3.5 included Ant-based support for generating usage scans that indicated what API
-	and internals consumers were using. In this release we will add support to generate
-	these scans from the UI, and provide tools for working with the scan data, such as comparison
-	of scans, and flagging of changes that will break consumers who provided the scan data.
-	[PDE] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+	<strong>Patch enhancements.</strong>
+	We will improve the tools for viewing and applying patches. This includes work
+	such as applying patches using the synchronize view, improved browsing of hunks,
+	and applying patches from a URL.
+	[Workspace] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
 </li>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
-	<strong>Help system customization</strong>
-	The current Eclipse Help web application provides limited support for customization by clients.  
-	Additional extensibility should be provided to enable insertion of custom content, 
-	customizing the tool bar, and changing the look and feel (colors, fonts, etc).
-	[User Assistance] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+	<strong>Debug and launch enhancements.</strong>
+	We will invest in improving the platform debug infrastructure, including enhancing
+	the breakpoints view, improving the Debug breadcrumb view, and support for
+	launch configuration templates.
+	[Platform Debug, JDT Debug] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
 </li>
-
+</ul>
 </p:proposed>
 
 <p:deferred>
