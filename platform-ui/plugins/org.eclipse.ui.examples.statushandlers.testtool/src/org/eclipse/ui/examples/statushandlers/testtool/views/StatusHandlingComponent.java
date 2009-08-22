@@ -36,6 +36,7 @@ import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.IMemento;
 import org.eclipse.ui.examples.statushandlers.testtool.Messages;
 import org.eclipse.ui.examples.statushandlers.testtool.TestToolPlugin;
+import org.eclipse.ui.statushandlers.IStatusAdapterConstants;
 import org.eclipse.ui.statushandlers.StatusAdapter;
 import org.eclipse.ui.statushandlers.StatusManager;
 
@@ -327,6 +328,34 @@ public class StatusHandlingComponent implements TestBedComponent {
 		public String getTitle() {
 			return title;
 		}
+
+		/**
+		 * 
+		 */
+		public void execute() {
+			// see SampleStatusHandler
+			// hints and statuses could be easily modified there
+			if (isWrapped()) {
+				StatusAdapter adapter = new StatusAdapter(getStatus());
+				if (getTitle() != null) {
+					adapter.setProperty(IStatusAdapterConstants.TITLE_PROPERTY,
+							getTitle());
+				}
+				if (getAction() != null) {
+					adapter.setProperty(IStatusAdapterConstants.HINT_PROPERTY,
+							getAction());
+				}
+				if (getExplanation() != null) {
+					adapter.setProperty(
+							IStatusAdapterConstants.EXPLANATION_PROPERTY,
+							getExplanation());
+				}
+				StatusManager.getManager().handle(adapter, getHint());
+			} else {
+				StatusManager.getManager().handle(getStatus(), getHint());
+			}
+
+		}
 	}
 
 	private List[] statusItems = new List[] { Collections
@@ -481,77 +510,89 @@ public class StatusHandlingComponent implements TestBedComponent {
 		Button addStatus = new Button(addStatusComposite, SWT.PUSH);
 
 		addStatus.setText(Messages.StatusHandlingComponent_AddStatusLabel);
-		gd = new GridData(GridData.FILL_HORIZONTAL);
-		gd.horizontalSpan = 2;
-		addStatus.setLayoutData(gd);
+		addStatus.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
 		addStatus.addSelectionListener(new SelectionAdapter() {
 
 			public void widgetSelected(SelectionEvent e) {
-				boolean log = logStatusField.getSelection();
-				boolean show = showStatusField.getSelection();
-				boolean block = blockStatusField.getSelection();
-
-				int hint = StatusManager.NONE;
-				if (log) {
-					hint = hint | StatusManager.LOG;
-				}
-				if (show) {
-					hint = hint | StatusManager.SHOW;
-				}
-				if (block) {
-					hint = hint | StatusManager.BLOCK;
-				}
-
-				int severity = IStatus.OK;
-				switch (statusSeverityField.getSelectionIndex()) {
-				case 0:
-					severity = IStatus.OK;
-					break;
-				case 1:
-					severity = IStatus.INFO;
-					break;
-				case 2:
-					severity = IStatus.WARNING;
-					break;
-				case 3:
-					severity = IStatus.CANCEL;
-					break;
-				case 4:
-					severity = IStatus.ERROR;
-					break;
-				}
-
-				boolean wrapped = wrappedStatusField.getSelection();
-				String title = titleField.getText();
-				if (title != null && title.length() == 0)
-					title = null;
-				String explanation = explanationField.getText();
-				if (explanation != null && explanation.length() == 0)
-					explanation = null;
-				String action = actionField.getText();
-				if (action != null && action.length() == 0)
-					action = null;
-				
-				boolean multi = multiStatusField.getSelection();
-				IStatus status = new Status(severity, statusPluginID.getText(), statusMessage.getText());
-				if (multi) {
-					MultiStatus mStatus = new MultiStatus(statusPluginID
-							.getText(), severity, statusMessage.getText(),
-							new NullPointerException());
-					mStatus.add(status);
-					mStatus.add(status);
-					mStatus.add(status);
-					mStatus.add(Status.OK_STATUS);
-					status = mStatus;
-				}
-
-				statusItems[0].add(new DisplayedItem(status,
-						hint, wrapped, multi, title, explanation, action));
+				statusItems[0].add(createDisplayedItem());
 				statusTableViever.refresh();
 			}
 		});
 
+		Button fastExecute = new Button(addStatusComposite, SWT.PUSH);
+		fastExecute.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
+		fastExecute.setText(Messages.StatusHandlingComponent_FastExecute);
+		fastExecute.addSelectionListener(new SelectionAdapter() {
+
+			public void widgetSelected(SelectionEvent e) {
+				DisplayedItem di = createDisplayedItem();
+				di.execute();
+			}
+		});
 		return composite;
+	}
+	
+	private DisplayedItem createDisplayedItem(){
+		boolean log = logStatusField.getSelection();
+		boolean show = showStatusField.getSelection();
+		boolean block = blockStatusField.getSelection();
+
+		int hint = StatusManager.NONE;
+		if (log) {
+			hint = hint | StatusManager.LOG;
+		}
+		if (show) {
+			hint = hint | StatusManager.SHOW;
+		}
+		if (block) {
+			hint = hint | StatusManager.BLOCK;
+		}
+
+		int severity = IStatus.OK;
+		switch (statusSeverityField.getSelectionIndex()) {
+		case 0:
+			severity = IStatus.OK;
+			break;
+		case 1:
+			severity = IStatus.INFO;
+			break;
+		case 2:
+			severity = IStatus.WARNING;
+			break;
+		case 3:
+			severity = IStatus.CANCEL;
+			break;
+		case 4:
+			severity = IStatus.ERROR;
+			break;
+		}
+
+		boolean wrapped = wrappedStatusField.getSelection();
+		String title = titleField.getText();
+		if (title != null && title.length() == 0)
+			title = null;
+		String explanation = explanationField.getText();
+		if (explanation != null && explanation.length() == 0)
+			explanation = null;
+		String action = actionField.getText();
+		if (action != null && action.length() == 0)
+			action = null;
+		
+		boolean multi = multiStatusField.getSelection();
+		IStatus status = new Status(severity, statusPluginID.getText(), statusMessage.getText());
+		if (multi) {
+			MultiStatus mStatus = new MultiStatus(statusPluginID
+					.getText(), severity, statusMessage.getText(),
+					new NullPointerException());
+			mStatus.add(status);
+			mStatus.add(status);
+			mStatus.add(status);
+			mStatus.add(Status.OK_STATUS);
+			status = mStatus;
+		}
+		
+		return new DisplayedItem(status, hint, wrapped, multi, title,
+				explanation, action);
 	}
 
 	/*

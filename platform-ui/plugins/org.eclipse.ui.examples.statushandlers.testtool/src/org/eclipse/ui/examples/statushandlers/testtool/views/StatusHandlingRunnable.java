@@ -18,9 +18,6 @@ import java.util.List;
 import org.eclipse.ui.IMemento;
 import org.eclipse.ui.examples.statushandlers.testtool.Messages;
 import org.eclipse.ui.examples.statushandlers.testtool.views.StatusHandlingComponent.DisplayedItem;
-import org.eclipse.ui.statushandlers.IStatusAdapterConstants;
-import org.eclipse.ui.statushandlers.StatusAdapter;
-import org.eclipse.ui.statushandlers.StatusManager;
 import org.eclipse.ui.views.properties.IPropertyDescriptor;
 import org.eclipse.ui.views.properties.IPropertySource;
 import org.eclipse.ui.views.properties.PropertyDescriptor;
@@ -161,26 +158,7 @@ public class StatusHandlingRunnable extends TestBedRunnable {
 	public void run() {
 		for (Iterator it = items.iterator(); it.hasNext();) {
 			DisplayedItem di = (DisplayedItem) it.next();
-			// see SampleStatusHandler
-			// hints and statuses could be easily modified there
-			if (di.isWrapped()) {
-				StatusAdapter adapter = new StatusAdapter(di.getStatus());
-				if (di.getTitle() != null) {
-					adapter.setProperty(IStatusAdapterConstants.TITLE_PROPERTY,
-							di.getTitle());
-				}
-				if (di.getAction() != null) {
-					adapter.setProperty(IStatusAdapterConstants.HINT_PROPERTY, di
-							.getAction());
-				}
-				if (di.getExplanation() != null) {
-					adapter.setProperty(IStatusAdapterConstants.EXPLANATION_PROPERTY, di
-							.getExplanation());
-				}
-				StatusManager.getManager().handle(adapter, di.getHint());
-			} else {
-				StatusManager.getManager().handle(di.getStatus(), di.getHint());
-			}
+			di.execute();
 		}
 	}
 

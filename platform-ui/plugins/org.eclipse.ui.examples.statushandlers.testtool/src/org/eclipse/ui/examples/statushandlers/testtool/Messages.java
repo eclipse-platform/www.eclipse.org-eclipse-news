@@ -129,6 +129,7 @@ public class Messages extends NLS {
 	public static String StatusHandlingView_Up;
 	public static String StatusHandlingRunnable_Wrapped;
 	public static String StatusHandlingComponent_Action;
+	public static String StatusHandlingComponent_FastExecute;
 	public static String StatusHandlingComponent_HintLog;
 	public static String StatusHandlingComponent_HintBlock;
 	public static String StatusHandlingComponent_HintNone;
