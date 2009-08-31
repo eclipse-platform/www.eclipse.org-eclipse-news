@@ -494,6 +494,7 @@ interesting changes since the previous draft)
 </p:committed>
 
 <p:proposed>
+<ul>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>Add support for Java SE 7 features</strong>
 	The next feature release of Java SE is version 7, targeted to ship in the first half of 2010. 
@@ -533,6 +534,7 @@ interesting changes since the previous draft)
 	and leveraging SWT BIDI support throughout the user interface. 
 	[SWT, Platform UI, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
 </li>	
+</ul>
 </p:proposed>
 
 <p:deferred>
@@ -590,9 +592,6 @@ interesting changes since the previous draft)
 	and correct breakages early, and better documentation of changes that impact
 	compatibility.
 	[All Components] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
-</li>
-<li>
-
 </li>
 </ul>
 </p:proposed>
