@@ -123,7 +123,7 @@ interesting changes since the previous draft)
 <p>Individual, milestone level plans for the components that make up the Eclipse Project can be found 
   on the <a href="http://wiki.eclipse.org/Eclipse/Helios_Plan">Eclipse Project Helios Plan page</a>
   on the Eclipse wiki.</p>
-<p>Our target is to complete 3.6 in late June 2009, in alignment with Helios.
+<p>Our target is to complete 3.6 in late June 2010, in alignment with Helios.
   All release deliverables will be available for download as soon as the release has been
   tested and validated in the target operating configurations listed below.</p>
 <p>Dates for builds after M7 will be found in the Eclipse Helios end-game plan, available near 3.6 M7.</p>
@@ -510,7 +510,7 @@ interesting changes since the previous draft)
 	applications built on the win32 version of SWT work as well as any other win32 API 
 	based application on Windows 7. This will increase our testing and support effort and 
 	potentially require new development to work around platform specific differences. 
-	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+	[SWT, Platform UI, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
 </li>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>Support Ubuntu</strong>
@@ -531,7 +531,7 @@ interesting changes since the previous draft)
 	We will work on improving support for bidirectional text (BIDI). Work in this area may include
 	support for setting text direction on Mac Cocoa, BIDI support in complex expressions, 
 	and leveraging SWT BIDI support throughout the user interface. 
-	[SWT, Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+	[SWT, Platform UI, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
 </li>	
 </p:proposed>
 
