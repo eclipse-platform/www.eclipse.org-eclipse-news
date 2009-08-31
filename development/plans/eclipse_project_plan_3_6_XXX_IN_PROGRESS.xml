@@ -575,9 +575,9 @@ interesting changes since the previous draft)
 	[PDE] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
 </li>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
-	<strong>Help system customization</strong>
+	<strong>Help system extensibility</strong>
 	The current Eclipse Help web application provides limited support for customization by clients.  
-	Additional extensibility should be provided to enable insertion of custom content, 
+	Additional extensibility should be provided such as supporting insertion of custom views and frames, 
 	customizing the tool bar, and changing the look and feel (colors, fonts, etc).
 	[User Assistance] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
 </li>
