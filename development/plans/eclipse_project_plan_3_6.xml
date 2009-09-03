@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <!--  Use this to test local rendering in firefox. Comment out this line once this plan is linked to portal data. -->
-<!-- <?xml-stylesheet type="text/xsl" href="project-plan-render.xsl"?> -->
+<?xml-stylesheet type="text/xsl" href="project-plan-render.xsl"?>
 
-<?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
+<!-- <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?> -->
 
 <p:plan
   plan-format="1.0"
@@ -15,10 +15,9 @@
 
 <p:introduction>
 <div>
-
 <p>
-Last revised 17:00 ET June 9, 2009 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> marks
-interesting changes since the previous draft)
+Last revised 17:00 ET September 3, 2009 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> marks
+interesting changes since the previous draft of <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_3_6_20090609.xml">June 9, 2009</a>.)
 </p>
 <p><i>Please send comments about this plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
   mailing list.</i>
@@ -121,7 +120,7 @@ interesting changes since the previous draft)
 <p>Individual, milestone level plans for the components that make up the Eclipse Project can be found 
   on the <a href="http://wiki.eclipse.org/Eclipse/Helios_Plan">Eclipse Project Helios Plan page</a>
   on the Eclipse wiki.</p>
-<p>Our target is to complete 3.6 in late June 2009, in alignment with Helios.
+<p>Our target is to complete 3.6 in late June 2010, in alignment with Helios.
   All release deliverables will be available for download as soon as the release has been
   tested and validated in the target operating configurations listed below.</p>
 <p>Dates for builds after M7 will be found in the Eclipse Helios end-game plan, available near 3.6 M7.</p>
@@ -161,136 +160,186 @@ interesting changes since the previous draft)
   be given lower priority than problems with running Eclipse on a reference platform.</p>
 <p>Eclipse 3.6 is tested and validated on the following reference platforms
   (this list is updated over the course of the release cycle):</p>
-  
+<style type="text/css">
+	table.platforms {
+		border-width: 1px;
+		border-spacing: 0px;
+		border-style: solid;
+		border-collapse: separate;
+	}
+	table.platforms th {
+		border-width: 1px;
+		padding: 3px;
+		border-style: inset;
+		border-color: black;
+		background-color: #B9A9FF;
+	}
+	table.platforms td {
+		border-width: 1px 1px 1px 1px;
+		padding: 3px 3px 3px 3px;
+		border-style: inset inset inset inset;
+		border-color: gray gray gray gray;
+	}
+	table.platforms tr.c0 td {
+		background-color: #FDFDFD;
+	}
+	table.platforms tr.c1 td {
+		background-color: #F4EEFF;
+	}
+</style>
 <center>
-  <table border="1" cellpadding="2" cellspacing="2" width="80%" summary="Reference Platforms">
-    <tbody>
-      <tr align="center">
-        <td><b>Reference Platforms</b></td>
-      </tr>
-      <tr>
-        <td><b>Microsoft Windows Vista, x86-32, Win32</b> running (any of):
-          <ul>
-            <li>Sun Java Standard Edition 5 Update 14 for Microsoft Windows</li>
-            <li>IBM 32-bit SDK for Windows, Java 2 Technology Edition 5.0, SR6b</li>
-            <li>BEA JRockit 27.4.0, for Microsoft Windows</li>
-          </ul></td>
-      </tr>
-      <tr>
-        <td><b>Microsoft Windows XP, x86-32, Win32</b> running (any of):
-          <ul>
-            <li>Sun Java Standard Edition 6 Update 3 for Microsoft Windows</li>
-            <li>Sun Java Standard Edition 5 Update 14 for Microsoft Windows</li>
-            <li>IBM 32-bit SDK for Windows, Java 2 Technology Edition 5.0, SR6b</li>
-            <li>BEA JRockit 27.4.0, for Microsoft Windows</li>
-            <li>Sun Java Standard Edition 1.4.2_16 for Microsoft Windows</li>
-            <li>IBM 32-bit SDK for Windows, Java 2 Technology Edition 1.4.2 SR10</li>
-          </ul></td>
-      </tr>
-      <tr>
-        <td><b>Red Hat Enterprise Linux 5.0, x86-32, GTK</b> running (any of):
-          <ul>
-            <li> Sun Java Standard Edition 6 Update 3 for Linux x86</li>
-            <li>Sun Java Standard Edition 5 Update 14 for Linux x86</li>
-            <li>IBM 32-bit SDK for Linux on Intel architecture, Java 2 Technology Edition 5.0, SR6b</li>
-            <li>BEA JRockit 27.4.0, for Linux x86</li>
-            <li>Sun Java Standard Edition 1.4.2_16 for Linux x86</li>
-            <li>IBM 32-bit SDK for Linux on Intel architecture, Java 2 Technology Edition 1.4.2 SR10</li>
-          </ul></td>
-      </tr>
-      <tr>
-        <td><b>SUSE Linux Enterprise Server 10, x86-32, GTK</b> running (any of):
-          <ul>
-            <li>Sun Java Standard Edition 5 Update 14 for Linux x86</li>
-            <li>IBM 32-bit SDK for Linux on Intel architecture, Java 2 Technology Edition 5.0, SR6b</li>
-          </ul></td>
-      </tr>
-      <tr>
-        <td><b>SUSE Linux Enterprise Server 10, x86-64, GTK</b> running (any of):
-          <ul>
-            <li>Sun Java Standard Edition 5 Update 14 for Linux x86-64</li>
-            <li>IBM 64-bit SDK for Linux on Intel architecture, Java 2 Technology Edition 5.0, SR6b</li>
-          </ul></td>
-      </tr>
-      <tr>
-        <td><b>Microsoft Windows Vista, x86-64, Win32</b> running (any of):
-          <ul>
-            <li>Sun Java Standard Edition 5 Update 14 for Microsoft Windows (AMD64/EM64T)</li>
-            <li>IBM 64-bit SDK for Windows, Java 2 Technology Edition 5.0, SR6b</li>
-          </ul></td>
-      </tr>
-      <tr>
-        <td><b>Microsoft Windows XP Professional x64 Edition, x86-64, Win32</b> running (any of):
-          <ul>
-            <li>Sun Java Standard Edition 5 Update 14 for Microsoft Windows (AMD64/EM64T)</li>
-            <li>IBM 64-bit SDK for Windows, Java 2 Technology Edition 5.0, SR6b</li>
-          </ul></td>
-      </tr>
-      <tr>
-        <td><b>Red Hat Enterprise Linux 4.0 update 2, x86-64, GTK</b> running:
-          <ul>
-            <li>Sun Java Standard Edition 5 Update 14 for Linux x86-64</li>
-            <li>IBM 64-bit SDK for Linux on Intel architecture, Java 2 Technology Edition 5.0, SR6b</li>
-          </ul></td>
-      </tr>
-      <tr>
-        <td><b>Sun Solaris 10, SPARC, GTK</b> running:
-          <ul>
-            <li>Sun Java Standard Edition 5 Update 14 for Solaris SPARC</li>
-          </ul></td>
-      </tr>
-      <tr>
-        <td><b>Sun Solaris 10, x86, GTK</b> running:
-          <ul>
-            <li>Sun Java Standard Edition 5 Update 14 for Solaris</li>
-          </ul></td>
-      </tr>
-      <tr>
-        <td><b>HP-UX 11i v2, ia64, Motif 2.1, GTK</b> running:
-          <ul>
-            <li>HP-UX Java Standard Edition 5 Update 7 for Itanium</li>
-          </ul></td>
-      </tr>
-      <tr>
-        <td><b>IBM AIX 5.3, Power, Motif 2.1</b> running:
-          <ul>
-            <li>IBM 32-bit SDK, Java 2 Technology Edition 5.0, SR6b</li>
-          </ul></td>
-      </tr>
-      <tr>
-        <td><b>Red Hat Enterprise Linux 5.0, Power, GTK</b> running:
-          <ul>
-            <li>IBM 32-bit SDK for Linux on pSeries architecture, Java 2 Technology Edition 5.0, SR6b</li>
-          </ul></td>
-      </tr>
-      <tr>
-        <td><b>SUSE Linux Enterprise Server 10, Power, GTK</b> running:
-          <ul>
-            <li>IBM 32-bit SDK for Linux on pSeries architecture, Java 2 Technology Edition 5.0, SR6b</li>
-          </ul></td>
-      </tr>
-      <tr>
-        <td><b>Apple Mac OS X 10.5, Universal, Carbon</b> running:
-          <ul>
-            <li>Apple Java for Mac OS X 10.5, Update 1</li>
-          </ul></td>
-      </tr>
-      <tr>
-        <td><b>Apple Mac OS X 10.5, Universal 32-bit, Cocoa</b> running:
-          <ul>
-            <li>Apple Java for Mac OS X 10.5, Update 1</li>
-          </ul></td>
-      </tr>
-      <tr>
-        <td><b>Apple Mac OS X 10.5, Universal 64-bit, Cocoa</b> running:
-          <ul>
-            <li>Apple Java for Mac OS X 10.5, Update 1</li>
-          </ul></td>
-      </tr>
-    </tbody>
-  </table>
-
+	<table class="platforms">
+		<tr>
+			<th>Operating System</th>
+			<th>Version</th>
+			<th>Hardware</th>
+			<th>JRE</th>
+			<th>Windowing System</th>
+		</tr>
+		<!-- ************ WINDOWS ************** -->
+		<tr class="c0">
+			<td rowspan="6">Windows</td>
+			<td rowspan="2"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 7</td>
+			<td rowspan="1">x86 32-bit</td>
+			<td rowspan="2">Sun Java 5 Update 14<br/>
+				IBM Java 5 SR6b
+			</td>
+			<td rowspan="6">Win32</td>
+		</tr>
+		<tr>
+			<td rowspan="1">x86 64-bit</td>
+		</tr>
+		<tr>
+			<td rowspan="2">Vista</td>
+			<td rowspan="1">x86 32-bit</td>
+			<td>Sun Java 5 Update 14<br/>
+				IBM Java 5 SR6b<br/>
+				BEA JRockit 27.4.0
+			</td>
+		</tr>
+		<tr class="c0">
+			<td rowspan="1">x86 64-bit</td>
+			<td>Sun Java 5 Update 14<br/>
+				IBM Java 5 SR6b
+			</td>
+		</tr>
+		<tr class="c0">
+			<td rowspan="2">XP</td>
+			<td rowspan="1">x86 32-bit</td>
+			<td>Sun Java 6 Update 3<br/>
+				Sun Java 5 Update 14<br/>
+				Sun Java 1.4.2 Update 16<br/>
+				IBM Java 5 SR6b<br/>
+				IBM Java 1.4.2 SR10<br/>
+				BEA JRockit 27.4.0
+			</td>
+		</tr>
+		<tr class="c0">
+			<td rowspan="1">x86 64-bit</td>
+			<td>Sun Java 5 Update 14<br/>
+				IBM Java 5 SR6b
+			</td>
+		</tr>
+		<!-- ************ RHEL ************** -->
+		<tr class="c1">
+			<td rowspan="3">Red Hat Enterprise Linux</td>
+			<td rowspan="2">5.0</td>
+			<td rowspan="1">x86 32-bit</td>
+			<td>Sun Java 6 Update 3<br/>
+				Sun Java 5 Update 14<br/>
+				Sun Java 1.4.2 Update 16<br/>
+				IBM Java 5 SR6b<br/>
+				IBM Java 1.4.2 SR10<br/>
+				BEA JRockit 27.4.0
+			</td>
+			<td rowspan="3">GTK</td>
+		</tr>
+		<tr class="c1">
+			<td rowspan="1"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> Power 64-bit</td>
+			<td>IBM Java 5 SR6b</td>
+		</tr>
+		<tr class="c1">
+			<td rowspan="1">4.0</td>
+			<td rowspan="1">x86 64-bit</td>
+			<td>Sun Java 5 Update 14<br/>
+				IBM Java 5 SR6b
+			</td>
+		</tr>
+		<!-- ************ SLES ************** -->
+		<tr class="c0">
+			<td rowspan="3">SUSE Linux Enterprise Server</td>
+			<td rowspan="3"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 11</td>
+			<td rowspan="1">x86 32-bit</td>
+			<td rowspan="2">Sun Java 5 Update 14<br/>
+				IBM Java 5 SR6b
+			</td>
+			<td rowspan="3">GTK</td>
+		</tr>
+		<tr class="c0">
+			<td rowspan="1">x86 64-bit</td>
+		</tr>
+		<tr class="c0">
+			<td rowspan="1"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> Power 64-bit</td>
+			<td>IBM Java 5 SR6b</td>
+		</tr>
+		<!-- ************ Ubuntu ************** -->
+		<tr class="c1">
+			<td rowspan="2"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> Ubuntu Long Term Support</td>
+			<td rowspan="2">9.04</td>
+			<td rowspan="1">x86 32-bit</td>
+			<td rowspan="2">Sun Java 5 Update 14<br/>
+				IBM Java 5 SR6b
+			</td>
+			<td rowspan="2">GTK</td>
+		</tr>
+		<tr class="c1">
+			<td rowspan="1">x86 64-bit</td>
+		</tr>
+		<!-- ************ Solaris ************** -->
+		<tr class="c0">
+			<td rowspan="2">Sun Solaris</td>
+			<td rowspan="2">10</td>
+			<td rowspan="1">x86 32-bit</td>
+			<td rowspan="2">Sun Java 5 Update 14</td>
+			<td rowspan="2">GTK</td>
+		</tr>
+		<tr class="c0">
+			<td rowspan="1">SPARC</td>
+		</tr>
+		<!-- ************ HPUX ************** -->
+		<tr class="c1">
+			<td rowspan="1">HP-UX</td>
+			<td rowspan="1">11i v2</td>
+			<td rowspan="1">ia64</td>
+			<td rowspan="1">HP-UX Java 5 Update 7</td>
+			<td rowspan="1">Motif 2.1</td>
+		</tr>
+		<!-- ************ AIX ************** -->
+		<tr class="c0">
+			<td rowspan="1">IBM AIX</td>
+			<td rowspan="1">5.3</td>
+			<td rowspan="1">Power</td>
+			<td rowspan="1">IBM Java 5 SR6b</td>
+			<td rowspan="1">Motif 2.1</td>
+		</tr>
+		<!-- ************ Mac ************** -->
+		<tr class="c1">
+			<td rowspan="3">Apple Mac OS X</td>
+			<td rowspan="3">10.5</td>
+			<td rowspan="1">Universal</td>
+			<td rowspan="3">Apple Java 10.5 Update 1</td>
+			<td rowspan="1">Carbon</td>
+		</tr>
+		<tr class="c1">
+			<td rowspan="1">Universal 32-bit</td>
+			<td rowspan="2">Cocoa</td>
+		</tr>
+		<tr class="c1">
+			<td rowspan="1">Universal 64-bit</td>
+		</tr>
+	</table>
 </center>
+
 <p>As stated above, <i>we expect that Eclipse works fine on other current
   Java VM and OS versions but we cannot flag these as reference platforms without
   significant community support for testing them.</i></p>
@@ -442,32 +491,47 @@ interesting changes since the previous draft)
 </p:committed>
 
 <p:proposed>
-  <p><i>None at this time.</i></p>
-</p:proposed>
-
-<p:deferred>
-  <p><i>None at this time.</i></p>
-</p:deferred>
-
-</p:theme>
-    
-<!-- ============================================== -->
-
-<p:theme name="Scalability and Performance">
-<p:description>
-<p>Eclipse is being used consumed in an ever wider range of products, applications,
-  and development scenarios. We will identify and address performance and scalability
-  issues to provide a better experience both for users working in these areas in
-  particular, and for Eclipse users in general.
-</p>
-</p:description>
-
-<p:committed>
-  <p><i>None at this time.</i></p>
-</p:committed>
-
-<p:proposed>
-  <p><i>None at this time.</i></p>
+<ul>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>Add support for Java SE 7 features.</strong>
+	The next feature release of Java SE is version 7, targeted to ship in the first half of 2010. 
+	While the contents of this release are still under discussion, this release is expected to contain 
+	extensions to the Java language, including annotations on types (JSR-308), modularity
+	support (JSR-294), and other minor language changes (Coin project). Eclipse Java
+	tooling should include initial support for compiling, editing, and launching applications
+	for Java 7.
+	[JDT Core, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288548">288548</a>)
+</li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>Support the win32 version of Eclipse on Windows 7.</strong>
+	Fully support the 32-bit and 64-bit win32 version of SWT and the Eclipse SDK on Windows 7. We will ensure that 
+	applications built on the win32 version of SWT work as well as any other win32 API 
+	based application on Windows 7. This will increase our testing and support effort and 
+	potentially require new development to work around platform specific differences. 
+	[SWT, Platform UI, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288550">288550</a>)
+</li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>Support Ubuntu</strong>
+	Ubuntu LTS is an increasingly popular choice as an enterprise Linux distribution. 
+	We will ensure that all Eclipse project Linux x86 builds run well on Ubuntu. This will increase 
+	our testing and support effort and potentially require new development to work around 
+	platform specific differences. 
+	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288552">288552</a>)
+</li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>Focus on accessibility.</strong>
+  We will work with the community to ensure that we have first-class, accessibility
+  support that is compliant with important standards. 
+  [SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252646">252646</a>)
+</li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>BIDI improvements.</strong>
+	We will work on improving support for bidirectional text (BIDI). Work in this area may include
+	support for setting text direction on Mac Cocoa, BIDI support in complex expressions, 
+	and leveraging SWT BIDI support throughout the user interface. 
+	[SWT, Platform UI, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288554 ">288554 </a>)
+</li>	
+</ul>
 </p:proposed>
 
 <p:deferred>
@@ -483,7 +547,7 @@ interesting changes since the previous draft)
 <p>As the basis for the entire Eclipse eco-system, the Eclipse SDK must be robust,
   flexible and secure. This work will address those issues by providing API for
   missing or currently internal functionality, and focusing on the issues that
-  effect the stability of the platform.
+  affect the stability of the platform.
 </p>
 </p:description>
 
@@ -492,7 +556,49 @@ interesting changes since the previous draft)
 </p:committed>
 
 <p:proposed>
-  <p><i>None at this time.</i></p>
+<ul>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>Flexible resources.</strong>
+	The Resource architecture that Eclipse uses has been criticized for being overly Java-centric 
+	and constraining for some use cases. The e4 incubator explored this problem and developed
+	some concrete improvements to the resource model to address these problems. We will
+	review and polish those changes and back-port them to Helios stream where appropriate.
+	[Workspace, Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288556">288556</a>)
+</li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>API tools usage scan improvements.</strong>
+	Eclipse SDK 3.5 included Ant-based support for generating usage scans that indicated what API
+	and internals consumers were using. In this release we will add support to generate
+	these scans from the UI, and provide tools for working with the scan data, such as comparison
+	of scans, and flagging of changes that will break consumers who provided the scan data.
+	[PDE] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288557">288557</a>)
+</li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>Help system extensibility.</strong>
+	The current Eclipse Help web application provides limited support for customization by clients.  
+	Additional extensibility should be provided such as supporting insertion of custom views and frames, 
+	customizing the tool bar, and changing the look and feel (colors, fonts, etc).
+	[User Assistance] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288558">288558</a>)
+</li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>Focus on compatibility.</strong>
+	Migrating across major platform releases is costly for consumers due to the 
+	magnitude of API and behavioral changes between releases. 
+	We will focus on reducing the migration cost by careful analysis of changes for their 
+	impact on compatibility, avoiding breaking behavior changes, use of API tooling to identify
+	and correct breakages early, and better documentation of changes that impact
+	compatibility.
+	[All Components] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288559">288559</a>)
+</li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>Asynchronous debug commands.</strong>
+	Currently, the debug platform exposes interfaces for common commands but all 
+	implementation of the commands as well as scheduling operations are internal. 
+	We will provide an API and abstract implementation classes for creating asynchronous 
+	debug commands/actions. 
+	[Platform Debug] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=284363">284363</a>)
+</li>
+</ul>
 </p:proposed>
 
 <p:deferred>
@@ -515,7 +621,30 @@ interesting changes since the previous draft)
 </p:committed>
 
 <p:proposed>
-  <p><i>None at this time.</i></p>
+<ul>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>Build anywhere.</strong>
+	The current Eclipse project build and test infrastructure is highly customized and
+	tailored to a particular build environment. We will invest in simplifying and streamlining
+	our build and test infrastructure to allow it to run in other hardware environments and
+	be initiated by more people. 
+	[Rel. Eng., PDE] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288560">288560</a>)
+</li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>Patch enhancements.</strong>
+	We will improve the tools for viewing and applying patches. This includes work
+	such as applying patches using the synchronize view, improved browsing of hunks,
+	and applying patches from a URL.
+	[Workspace] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288561">288561</a>)
+</li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>Debug and launch enhancements.</strong>
+	We will invest in improving the platform debug infrastructure, including enhancing
+	the breakpoints view, improving the Debug breadcrumb view, and support for
+	launch configuration templates.
+	[Platform Debug, JDT Debug] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288562">288562</a>)
+</li>
+</ul>
 </p:proposed>
 
 <p:deferred>
