@@ -496,22 +496,22 @@ interesting changes since the previous draft)
 <p:proposed>
 <ul>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
-	<strong>Add support for Java SE 7 features</strong>
+	<strong>Add support for Java SE 7 features.</strong>
 	The next feature release of Java SE is version 7, targeted to ship in the first half of 2010. 
 	While the contents of this release are still under discussion, this release is expected to contain 
 	extensions to the Java language, including annotations on types (JSR-308), modularity
 	support (JSR-294), and other minor language changes (Coin project). Eclipse Java
 	tooling should include initial support for compiling, editing, and launching applications
 	for Java 7.
-	[JDT Core, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+	[JDT Core, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288548">288548</a>)
 </li>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
-	<strong>Support the win32 version of Eclipse on Windows 7</strong>
+	<strong>Support the win32 version of Eclipse on Windows 7.</strong>
 	Fully support the 32-bit and 64-bit win32 version of SWT and the Eclipse SDK on Windows 7. We will ensure that 
 	applications built on the win32 version of SWT work as well as any other win32 API 
 	based application on Windows 7. This will increase our testing and support effort and 
 	potentially require new development to work around platform specific differences. 
-	[SWT, Platform UI, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+	[SWT, Platform UI, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288550">288550</a>)
 </li>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>Support Ubuntu</strong>
@@ -519,20 +519,20 @@ interesting changes since the previous draft)
 	We will ensure that all Eclipse project Linux x86 builds run well on Ubuntu. This will increase 
 	our testing and support effort and potentially require new development to work around 
 	platform specific differences. 
-	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288552">288552</a>)
 </li>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
-	<strong>Focus on accessibility</strong>
+	<strong>Focus on accessibility.</strong>
   We will work with the community to ensure that we have first-class, accessibility
   support that is compliant with important standards. 
   [SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252646">252646</a>)
 </li>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
-	<strong>BIDI improvements</strong>
+	<strong>BIDI improvements.</strong>
 	We will work on improving support for bidirectional text (BIDI). Work in this area may include
 	support for setting text direction on Mac Cocoa, BIDI support in complex expressions, 
 	and leveraging SWT BIDI support throughout the user interface. 
-	[SWT, Platform UI, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+	[SWT, Platform UI, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288554 ">288554 </a>)
 </li>	
 </ul>
 </p:proposed>
@@ -561,37 +561,45 @@ interesting changes since the previous draft)
 <p:proposed>
 <ul>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
-	<strong>Flexible resources</strong>
+	<strong>Flexible resources.</strong>
 	The Resource architecture that Eclipse uses has been criticized for being overly Java-centric 
 	and constraining for some use cases. The e4 incubator explored this problem and developed
 	some concrete improvements to the resource model to address these problems. We will
 	review and polish those changes and back-port them to Helios stream where appropriate.
-	[Workspace, Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+	[Workspace, Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288556">288556</a>)
 </li>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
-	<strong>API tools usage scan improvements</strong>
+	<strong>API tools usage scan improvements.</strong>
 	Eclipse SDK 3.5 included Ant-based support for generating usage scans that indicated what API
 	and internals consumers were using. In this release we will add support to generate
 	these scans from the UI, and provide tools for working with the scan data, such as comparison
 	of scans, and flagging of changes that will break consumers who provided the scan data.
-	[PDE] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+	[PDE] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288557">288557</a>)
 </li>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
-	<strong>Help system extensibility</strong>
+	<strong>Help system extensibility.</strong>
 	The current Eclipse Help web application provides limited support for customization by clients.  
 	Additional extensibility should be provided such as supporting insertion of custom views and frames, 
 	customizing the tool bar, and changing the look and feel (colors, fonts, etc).
-	[User Assistance] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+	[User Assistance] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288558">288558</a>)
 </li>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
-	<strong>Focus on compatibility</strong>
+	<strong>Focus on compatibility.</strong>
 	Migrating across major platform releases is costly for consumers due to the 
 	magnitude of API and behavioral changes between releases. 
 	We will focus on reducing the migration cost by careful analysis of changes for their 
 	impact on compatibility, avoiding breaking behavior changes, use of API tooling to identify
 	and correct breakages early, and better documentation of changes that impact
 	compatibility.
-	[All Components] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+	[All Components] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288559">288559</a>)
+</li>
+<li>
+	<strong>Asynchronous debug commands.</strong>
+	Currently, the debug platform exposes interfaces for common commands but all 
+	implementation of the commands as well as scheduling operations are internal. 
+	We will provide an API and abstract implementation classes for creating asynchronous 
+	debug commands/actions. 
+	[Platform Debug] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=284363">284363</a>)
 </li>
 </ul>
 </p:proposed>
@@ -623,21 +631,21 @@ interesting changes since the previous draft)
 	tailored to a particular build environment. We will invest in simplifying and streamlining
 	our build and test infrastructure to allow it to run in other hardware environments and
 	be initiated by more people. 
-	[Rel. Eng., PDE] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+	[Rel. Eng., PDE] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288560">288560</a>)
 </li>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>Patch enhancements.</strong>
 	We will improve the tools for viewing and applying patches. This includes work
 	such as applying patches using the synchronize view, improved browsing of hunks,
 	and applying patches from a URL.
-	[Workspace] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+	[Workspace] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288561">288561</a>)
 </li>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>Debug and launch enhancements.</strong>
 	We will invest in improving the platform debug infrastructure, including enhancing
 	the breakpoints view, improving the Debug breadcrumb view, and support for
 	launch configuration templates.
-	[Platform Debug, JDT Debug] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+	[Platform Debug, JDT Debug] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288562">288562</a>)
 </li>
 </ul>
 </p:proposed>
