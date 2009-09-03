@@ -19,8 +19,8 @@
 <b><font size="+10">This is a draft work in progress. Believe nothing you see here!</font></b>
 </p>
 <p>
-Last revised 17:00 ET June 9, 2009 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> marks
-interesting changes since the previous draft)
+Last revised 17:00 ET September 3, 2009 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> marks
+interesting changes since the previous draft of <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_3_6_20090609.xml">June 9, 2009</a>.)
 </p>
 <p><i>Please send comments about this plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
   mailing list.</i>
@@ -593,7 +593,7 @@ interesting changes since the previous draft)
 	compatibility.
 	[All Components] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288559">288559</a>)
 </li>
-<li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>Asynchronous debug commands.</strong>
 	Currently, the debug platform exposes interfaces for common commands but all 
 	implementation of the commands as well as scheduling operations are internal. 
