@@ -37,7 +37,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>August 27, 2009 - Full day test pass against RC2 build</b></p>
+			<p><b>September 8, 2009 - Final 3.5.1 build scheduled for September 9, 2009</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
