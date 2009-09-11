@@ -11,9 +11,9 @@
 </table>
 
 <br>
-Bug reports and feature requests which do not provide enough information to be tackled are either resolved to <b>INVALID</b> or <b>WORKSFORME</b> if we think it's not a bug.
-It is the reporters task to first fill in all needed information which
-is necessary and then reopen the report. Missing important information includes:<br>
+Bug reports and feature requests which do not provide enough information to be tackled are either resolved as <b>INVALID</b> or <b>WORKSFORME</b> if we think it's not a bug.
+It is the reporter's task to first fill in all necessary information
+and then reopen the report. Missing important information includes:<br>
 <ul>
   <li>build id - the Build id can be found in the About dialog (<code>Help &gt; About Eclipse Platform</code>)</li>
   <li>try to provide steps to reproduce the problem and attach test resources (if possible)</li>
@@ -21,19 +21,19 @@ is necessary and then reopen the report. Missing important information includes:
   <li>VM information - if not sure start eclipse using <code>-vmargs -showversion</code></li>
   <li>are there related entries in the .log file? - the log file is <code><span style="font-style: italic;">&lt;workspace location&gt;</span>/.metadata/.log</code><br>
   </li>
-  <ul>
+  <li><ul>
     <li>if no, write it in the bug report<br>
     </li>
     <li>if yes, attach all related entries (it's better to attach the whole .log than miss related entries)</li>
-  </ul>
+  </ul></li>
   <li>attach VM dump in case of VM crashes - normally the dumps can be found in the Eclipse install location</li>
   <li>attach stack dumps in case of deadlocks (<a href="http://wiki.eclipse.org/index.php/How_to_report_a_deadlock">how to report a deadlock</a>)</li>
-  <li>attach stack dumps in case things that take (too) long - (<a href="http://wiki.eclipse.org/index.php/How_to_report_a_deadlock#Getting_a_stack_trace_on_Windows">how to get a stack trace</a>)</li></li>
+  <li>attach stack dumps in case things that take (too) long - (<a href="http://wiki.eclipse.org/index.php/How_to_report_a_deadlock#Getting_a_stack_trace_on_Windows">how to get a stack trace</a>)</li>
   <li>attach preferences - if you think it depends on some preferences (e.g. worked before)</li>
   <li>attach formatter profile - if the report is about badly formatted code</li>
-  <li>specify the concrete editor for editor bugs, e.g. "copy broken in Text editor" instead of "copy does not work in editor"</li>
+  <li>specify the concrete editor for editor bugs, e.g. "copy broken in Text editor" instead of "copy does not work in editor" (open context menu in Project Explorer and see the bullet in the "Open With" submenu)</li>
   <li>provide the keyboard layout and Locale if the bug is about key bindings not working or weird characters appearing on typing
-  <li>tell us if you write code against J2SE 5.0 i.e. compiler compliance level set to 1.5?</li>
+  <li>tell us if you write code against J2SE 5.0 i.e. compiler compliance level set to 1.5 or later</li>
 </ul>
 See also: <br>
 <table border="0" cellpadding="2" cellspacing="5" width="100%">
