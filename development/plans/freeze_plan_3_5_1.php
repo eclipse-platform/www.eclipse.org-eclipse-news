@@ -37,7 +37,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>September 8, 2009 - Final 3.5.1 build scheduled for September 9, 2009</b></p>
+			<p><b>September 11, 2009 - 	M20090909-2133 is the final planned 3.5.1 build scheduled.</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
