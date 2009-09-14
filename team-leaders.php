@@ -60,7 +60,7 @@ ob_start();
 			<h3>Project Management Committee Members</h3>
 		      <ul>
 		        <li> 
-		          <b><a name="jeff"></a>Jeff McAffer, Code 9</b><br>
+		          <b><a name="jeff"></a>Jeff McAffer, EclipseSource</b><br>
        Jeff McAffer leads the Eclipse Equinox OSGi, RCP and Orbit teams and is the
        Founder of <a href="http://code9.com">Code 9</a>.
        He is one of the architects of the Eclipse Platform and a co-author of
@@ -83,7 +83,7 @@ ob_start();
       performance, scalability and meta-level architectures.
 		        </li>
 		        <li> 
-		          <b><a name="steve"></a>Steve Northover, IBM Ottawa</b><br>
+		          <b><a name="steve"></a>Steve Northover, Bedarra Research Labs</b><br>
       Steve Northover is the father of SWT (the Standard Widget Toolkit). Prior to
       working on Eclipse, he worked on IBM Smalltalk, VA/Java, VA/Micro Edition.
       His interests include programming languages, API design, operating systems,
@@ -119,7 +119,16 @@ ob_start();
       the JDT UI component. Dani worked at OTI and is one of the initial Eclipse Project committers.
       His interests include user interface and API design, editors, performance and DJing.
 		        </li>
-
+		        <li> 
+		          <b><a name="john"></a>John Arthorne, IBM Ottawa</b><br>
+      John has worked on the Eclipse project for the past decade in many different areas, and 
+      more recently on the <a href="http://eclipse.org/equinox">Equinox</a> project. In recent years he has focused on the 
+      workspace model, concurrency infrastructure, provisioning (<a href="http://wiki.eclipse.org/p2">p2</a>), <a href="http://wiki.eclipse.org/e4">e4</a>, and 
+      overall platform API quality. John is a member of the Eclipse <a href="http://wiki.eclipse.org/Architecture_Council">
+      Architecture</a> and <a href="http://wiki.eclipse.org/Planning_Council">Planning</a> Councils, and has authored numerous <a href="http://www.eclipse.org/articles/">articles</a> 
+      and a <a href="http://www.amazon.com/Official-Eclipse-3-0-FAQs/dp/0321268385/ref=sr_1_1?ie=UTF8&s=books&qid=1221163807&sr=8-1">
+      book</a> on Eclipse.
+		        </li>
 		      </ul>
 		</div>
 		
