@@ -27,8 +27,9 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 
 		<div class="homeitem3col">
-		<h3>Articles</h3>
+		<h3>Articles and Presentations</h3>
 			<ul>
+				<li>March 2009 - <a href="documents/presentations/resources-deep-dive.pdf">EclipseCon 2009 Tutorial: A deep dive into the platform resource model</a> by John Arthorne</li>
 				<li>September 2004 -  <a href="http://www.eclipse.org/articles/Article-Branding/branding-your-application.html"/> Branding your application</a> by Andrew Eidsness and Pascal Rapicault</li>
 				<li>January 2003 - <a href="http://www.eclipse.org/articles/Article-Builders/builders.html">Builders and Natures</a> by John Arthorne</li>
 				<li>August 2002 - <a href="http://www.eclipse.org/articles/Article-Resource-deltas/resource-deltas.html">Responding 
@@ -50,13 +51,6 @@ ob_start();
 				<li><a href="documents/update.html">Eclipse Update Site</a></li>
 				<li><a href="http://wiki.eclipse.org/index.php/Session_Tests">Session Test Framework</a></li>
 			</ul>
-		</div>
-
-		<div class="homeitem3col">
-		<h3>Active work</h3>
-			<p>We are just finishing up the Eclipse 3.2 (Callisto) release, and are
-			starting to formulate plans for the 3.3 (Europa) release. Stay tuned for
-			details...</p>
 		</div>
 
 		<div class="homeitem3col">
