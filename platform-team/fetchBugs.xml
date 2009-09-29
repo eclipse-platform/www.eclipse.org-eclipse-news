@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-  <ModulePrefs title="fetchBugs" height="50" width="500"/>
+  <ModulePrefs title="fetchBugs" height="50" width="580"/>
   <UserPref name="urlTitle" display_name="Query title" default_value="NEW bugs in Compare, Team and CVS in-boxes"/>
   <UserPref name="url" display_name="Query URL" default_value="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Eclipse&amp;product=Platform&amp;component=Compare&amp;component=CVS&amp;component=Team&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=NEW&amp;emailassigned_to1=1&amp;emailtype1=substring&amp;email1=inbox&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="/>
   <Content type="html">
@@ -26,7 +26,7 @@
 		} else {
 			pattern = /Zarro Boogs found/;
 			if (txt.search(pattern) != -1) {
-				html += "Zarro";
+				html += "0";
 			} else {
 				html += "Too long!";
 			}
