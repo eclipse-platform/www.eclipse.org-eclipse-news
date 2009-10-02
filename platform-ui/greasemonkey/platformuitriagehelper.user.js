@@ -23,6 +23,7 @@ var short_desc;
 var keywords;
 var myDiv = document.createElement('div');
 var header = document.getElementById('header');
+var triagedOwner = "platform-ui-triaged@eclipse.org";
 
 window.addEventListener("load", function() {
 	for (var i = 0; i < els.length; i++) {
@@ -36,6 +37,7 @@ window.addEventListener("load", function() {
 	}
 	
 	//alert("indices: " + component + ", " + keywords + ", " + assigned_to + ", " + short_desc);
+	//alert("assigned to: " + els[assigned_to].value + "qa_contact: " + els[qa_contact].value);
 	var addToCC = document.getElementById('addselfcc');
 	if (addToCC != null) addToCC.checked = false;
 	document.forms[1].elements[component].addEventListener('change', function() {
@@ -55,18 +57,17 @@ window.addEventListener("load", function() {
 	var qacontact = document.forms[1].elements[qa_contact].value;
 	if(assigned_to != null 
 			&& assigned_to.value != "Platform-UI-Inbox@eclipse.org" 
-			&& assigned_to.value != "platform-ide-inbox@eclipse.org" 
 			&& assigned_to.value != "Karice_McIntyre@ca.ibm.com" 
 			&& assigned_to.value != "Tod_Creasey@ca.ibm.com" 
 			&& assigned_to.value != "eclipse@pookzilla.net") {
 		var header = document.getElementById('header');
 		var myDiv = document.createElement('div');
 		var buttons = "";
-		if (assigned_to.value != "platform-ui-triaged@eclipse.org") {
+		if (assigned_to.value != triagedOwner) {
 			buttons += buttonForMoveToTriaged(assigned_to.value);
 		} else {
-			buttons += postTriageButton("P5 triaged", "P5", "---", "", "platform-ui-triaged@eclipse.org");
-			buttons += postTriageButton("P3 triaged", "P3", "---", "", "platform-ui-triaged@eclipse.org");
+			buttons += postTriageButton("P5 triaged", "P5", "---", "", triagedOwner);
+			buttons += postTriageButton("P3 triaged", "P3", "---", "", triagedOwner);
 			buttons += postTriageButton("3.5 P3", "P3", "3.5", "", qacontact);
 			buttons += postTriageButton("M6 P2", "P2", "3.5 M6", "", qacontact);
 			buttons += postTriageButton("M7 P2", "P2", "3.5 M7", "", qacontact);
@@ -98,15 +99,20 @@ window.addEventListener("load", function() {
 , false);
 
 
+function reassignText(newOwner) {
+	var onClick = "var b=document.getElementById('assigned_to');";
+	onClick += "if (b!=null) {";
+	onClick += "b.value='" + newOwner + "';";
+	return onClick;
+}
+
+
 function rawButton(label, action, description) {
 	return '<input type="button" value="' + label + '" onClick="' + action + '" title="' + description + '" />';
 }
 function buttonFor(comp, owner, description) {
-	var onClick = "var b=document.getElementById('knob-reassign');";
-	onClick += "var s = document.getElementById('short_desc').value;";
-	onClick += "if (b!=null) {";
-	onClick += "b.checked=true;";
-	onClick += "b.nextSibling.nextSibling.nextSibling.value='platform-ui-triaged@eclipse.org';";
+	var onClick = "var s = document.getElementById('short_desc').value;";
+	onClick += reassignText(triagedOwner);
 	onClick += "var q = document.forms[1].elements[" + qa_contact + "];";
 	onClick += "q.value='" + owner + "';";
 	onClick += "}";
@@ -121,11 +127,8 @@ function buttonFor(comp, owner, description) {
 	return rawButton(comp, onClick, owner + ": " + description);
 }
 function buttonForMoveToTriaged(owner) {
-	var onClick = "var b=document.getElementById('knob-reassign');";
-	onClick += "var s = document.getElementById('short_desc').value;";
-	onClick += "if (b!=null) {";
-	onClick += "b.checked=true;";
-	onClick += "b.nextSibling.nextSibling.nextSibling.value='platform-ui-triaged@eclipse.org';";
+	var onClick = "var s = document.getElementById('short_desc').value;";
+	onClick += reassignText(triagedOwner);
 	onClick += "var q = document.forms[1].elements[" + qa_contact + "];";
 	onClick += "q.value='" + owner + "';";
 	onClick += "}";
@@ -160,11 +163,7 @@ function postTriageButton(label, priority, target, keyword, assignee) {
 	onClick += "d.focus();";
 	onClick += "}";
 	if (assignee != null && assignee != "") {
-		onClick += "var b=document.getElementById('knob-reassign');";
-		onClick += "if (b!=null) {";
-		onClick += "b.checked=true;";
-		onClick += "b.nextSibling.nextSibling.nextSibling.value='"+assignee+"';";
-		onClick += "}";
+	        onClick += reassignText(assignee);
 		onClick += "var c=document.getElementById('target_milestone');";
 		onClick += "if (c!=null) {";
 		onClick += "c.value='" + target + "';";
