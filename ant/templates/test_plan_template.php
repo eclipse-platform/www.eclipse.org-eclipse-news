@@ -377,7 +377,7 @@
 					    <ul>
 					      	<li>no UI is started</li>
 					      	<li>no exceptions occur without a UI</li>
-					      	<li>the build does not fail (unexpectently)</li>
+					      	<li>the build does not fail (unexpectedly)</li>
 					    </ul>
 					</li>
 				</ul>
@@ -389,7 +389,7 @@
 					    <ul>
 					      	<li>no UI (from Eclipse) is started</li>
 					      	<li>no exceptions occur without a UI</li>
-					      	<li>the tool does not fail (unexpectently)</li>
+					      	<li>the tool does not fail (unexpectedly)</li>
 					    </ul>
 					</li>
 				</ul>
