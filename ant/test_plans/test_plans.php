@@ -41,6 +41,7 @@
 			<a name="3-6_testing"></a>
 			<h2><b>3.6 Test Plans</b></h2>
 			<ul>
+				<li><a href="/eclipse/ant/test_plans/3_6M3.php">3.6M3</a></li>
 				<li><a href="/eclipse/ant/test_plans/3_6.php">3.6</a></li>
 			</ul>
 			<a name="3-5_testing"></a>

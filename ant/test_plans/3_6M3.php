@@ -9,7 +9,7 @@
 
 	#*****************************************************************************
 	#
-	# Copyright (c) 2008 IBM Corporation and others.
+	# Copyright (c) 2009 IBM Corporation and others.
  	# All rights reserved. This program and the accompanying materials
  	# are made available under the terms of the Eclipse Public License v1.0
  	# which accompanies this distribution, and is available at
@@ -18,16 +18,16 @@
 	#     IBM Corporation - initial implementation
 	#
 	# Author: 		Ant Team
-	# Date:			November 28, 2008
+	# Date:			October 27, 2009
 	#
-	# Description: Template for the test script
+	# Description: Test plan for 3.6M3
 	#
 	#
 	#****************************************************************************
 	
 	
-	$pageTitle 		= "Platform Ant Project Test Matrix";
-	$pageKeywords	= "ant, script, build, xml, platform, debugging, debugger, breakpoints, launching, test, plan, release, testing, tester";
+	$pageTitle 		= "Platform Ant 3.6M3 Test Matrix";
+	$pageKeywords	= "ant, script, platform, debugging, debugger, breakpoints, launching, test, plan, release, testing, tester, 3.6M3";
 	$pageAuthor		= "Ant Team";
 	
 	include("../_sideCommon.php");
@@ -51,12 +51,10 @@
 				<table width="75%" border="1">
 				  <tr> 
 				    <td width="18%">&nbsp;</td>
-				    <td width="18%"><b>IBM 1.4.2</b></td>
 				    <td width="18%"><b>IBM 1.5</b></td>
-				    <td width="18%"><b>IBM 1.6</b></td>
 				    <td width="18%"><b>JDK 1.4.2</b></td>
 				    <td width="18%"><b>JDK 1.5</b></td>
-				    <td width="18%"><b>JDK 1.6</b></td>
+				    <td width="18%"><b>IBM 1.4.2</b></td>
 				  </tr>
 				  <tr> 
 				    <td width="18%"><b>Win Vista</b></td>
@@ -64,14 +62,10 @@
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
-				    <td width="18%">&nbsp;</td>
-				    <td width="18%">&nbsp;</td>
 				  </tr>
 				  <tr> 
 				    <td width="18%"><b>Win XP</b></td>
-				    <td width="18%">&nbsp;</td>
-				    <td width="18%">&nbsp;</td>
-				    <td width="18%">&nbsp;</td>
+				    <td width="18%">Darin Swanson</td>
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
@@ -80,18 +74,14 @@
 				    <td width="18%"><b>Linux</b></td>
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
-				  	<td width="18%">&nbsp;</td>
-				    <td width="18%">&nbsp;</td>
-				    <td width="18%">&nbsp;</td>
+				  	<td width="18%">Michael Rennie</td>
 				    <td width="18%">&nbsp;</td>
 				  </tr>
 				  <tr> 
 				    <td width="18%"><b>Mac</b></td>
 				    <td width="18%">&nbsp;</td>
 				    <td width="18%">&nbsp;</td>
-				    <td width="18%">&nbsp;</td>
-				    <td width="18%">&nbsp;</td>
-				    <td width="18%">&nbsp;</td>
+				    <td width="18%">Darin Wright</td>
 				    <td width="18%">&nbsp;</td>
 				  </tr>
 				</table>
@@ -104,7 +94,7 @@
 			<table width="80%" border="1">
 			  <tr> 
 			    <td><b>Feature</b></td>
-			    <td><strong>Darin Wright</strong></td>
+			    <td><b>Darin Wright</b></td>
 			    <td><b>Michael Rennie</b></td>
 			    <td><b>Darin Swanson</b></td>
 			    <td><b>Kevin Barnes</b></td>
@@ -112,66 +102,62 @@
 			  <tr> 
 			    <td><a href="#anteditor">Ant Editor</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#antview">Ant View</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#antdebugging">Debugging</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#importexport">Import / Export</a></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#inputhandling">Input Handling</a></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#launching">Launching</a></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#externaltools">External Tools</a></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#headless_builds">Headless Builds</a></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#headless_ext_tools">Headless External Tools</a></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
@@ -179,23 +165,23 @@
 			  <tr> 
 			    <td><a href="#refactoring">Refactoring</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#preferences">Preferences</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="#testsuite">Test Suite</a></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
+				<td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
+				<td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
+			    <td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
+			    <td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
 			  </tr>
 			</table>
 			</div>
