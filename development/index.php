@@ -38,8 +38,6 @@ ob_start();
 			<ul>
 	      <li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse"> Eclipse Project Helios Plan</a><br>
 	        This document lays out the feature and API set for the Helios (3.6) release of the Eclipse Project. </li>
-	        <li><a href="plans/freeze_plan_3_5_1.php"> Eclipse Project Galileo SR1 Endgame Plan</a><br>
-	    		Information about how we plan to wrap up Galileo Service Release 1 (version 3.5.1).</li>     
 	    </ul>
       	</div>
 		<div class="homeitem3col">
@@ -106,6 +104,8 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>Historical information about past releases</h3>			
 			<ul>
+	        <li><a href="plans/freeze_plan_3_5_1.php"> Eclipse Project Galileo SR1 Endgame Plan</a><br>
+	    		Information about how we wrapped up Galileo Service Release 1 (version 3.5.1).</li>     
 	      <li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse.e4"> e4 Project 0.9 Release Plan</a><br>
 	        This document lays out the feature and API set for the 0.9 release of the e4 Project. </li>
 	      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/eclipse_project_plan_3_5.xml"> Eclipse Project Galileo Plan</a><br>
