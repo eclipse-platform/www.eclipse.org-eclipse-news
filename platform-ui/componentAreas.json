@@ -30,12 +30,12 @@
 	</ul>"},
 			{"component": "Coolbar", 		"assignee": "emoffatt", "description": "Coolbar support (including layout within coolbar)"},
 			{"component": "DataBinding", 	"assignee": "mhall","description": "JFace Data Binding" },
-			{"component": "Decorators", 	"assignee": "kmcguire", "description": "Decorators mechanism and Label Decorations preference page"},
+			{"component": "Decorators", 	"assignee": "obesedin", "description": "Decorators mechanism and Label Decorations preference page"},
 			{"component": "DetachedView", 	"assignee": "emoffatt", "description": "Views and editors in separate windows"},
 			{"component": "Dialogs", 		"assignee": "sfranklin","description": "JFace and UI dialogs other than IDE, Filtered Items/Open Resource"},
 			{"component": "DND", 			"assignee": "emoffatt", "description": "Drag and Drop. Does not include dragging views and editors."},
 			{"component": "DynamicGUI", 	"assignee": "emoffatt", 	"description": "The ability to add/remove plug-ins from a running Eclipse"},
-			{"component": "EditorMgmt", 	"assignee": "bbokowski","description": "General editor management, not text editor specific\
+			{"component": "EditorMgmt", 	"assignee": "rcjsuen","description": "General editor management, not text editor specific\
 	<ul>\
 		<li><em>associations</em>.  The file associations mechanism: behaviour, preferences and functionality.</li>\
 		<li><em>drop-down</em>.  The editor drop-down: look, feel, bugs, etc.</li>\
@@ -43,13 +43,13 @@
 		<li><em>tabs</em>.  The tabbed editor user experience, and bugs related to editor tabs.</li>\
 	</ul>"},
 			{"component": "EFS", 			"assignee": "dmegert", "description": "Extended File System Support"},
-			{"component": "ErrorHandling", 	"assignee": "kmcguire", "description": "OutOfMemory, NPE etc. Exceptions that are not exepected but need to be handled to make it robust. Also includes issues related to Status Handling support introduced in 3.3"},
+			{"component": "ErrorHandling", 	"assignee": "sfranklin", "description": "OutOfMemory, NPE etc. Exceptions that are not exepected but need to be handled to make it robust. Also includes issues related to Status Handling support introduced in 3.3"},
 			{"component": "Examples", 		"assignee": "pwebster", "description": "The 3 workbench examples (multipageeditor, propertysheet, readmetool) but not javaeditor (owned by platform-text component)"},
 			{"component": "FastView", 		"assignee": "emoffatt", "description": "Issues related to fast views"},
 			{"component": "Features",		"assignee": "sfranklin", 	"description": "UI related to features, other than [About], e.g. product branding, default perspective, etc."},
 			{"component": "FieldAssist", 	"assignee": "sfranklin","description": "Defects concerning ControlDecoration, Required Fields, Content Proposal, Decorated Fields or Field Assistance"},
 			{"component": "GlobalActions", 	"assignee": "pwebster", "description": "actions created in workbench action builder that are not directly related to other components"},
-			{"component": "Graphics", 		"assignee": "kmcguire", "description": "Any graphics that UI has control over."},
+			{"component": "Graphics", 		"assignee": "sfranklin", "description": "Any graphics that UI has control over."},
 			{"component": "GTK/Linux", 		"assignee": "pwebster", "description": "GTK/Linux specific issues."},
 			{"component": "Help", 			"assignee": "emoffatt", "description": "F1 help; missing or problems with content"},
 			{"component": "IDE", 			"assignee": "pwebster", "description": "Issues related to the IDE as an app (as opposed to RCP)"},
@@ -69,15 +69,15 @@
 		<li><em>registry</em>.  The registry, its syntax, and backward compatibility.</li>\
 		<li><em>request</em>.  A request for a new command or a new key binding (or both).</li>\
 	</ul>"},
-			{"component": "LinkedResources","assignee": "bbokowski","description": "Handling of linked resources in Navigator and New File/Folder wizards"},
-			{"component": "Mac", 			"assignee": "bbokowski", 	"description": "Mac specific issues"},
+			{"component": "LinkedResources","assignee": "obesedin","description": "Handling of linked resources in Navigator and New File/Folder wizards"},
+			{"component": "Mac", 			"assignee": "prakash", 	"description": "Mac specific issues"},
 			{"component": "Markers", 		"assignee": "hitesh", "description": "Issues related to markers, including tasks, problems, bookmarks, etc. e.g. bugs related to MarkerImageProvider, MarkerHelp, MarkerResolutions"},
-			{"component": "Metadata", 		"assignee": "bbokowski", "description": "Anything related to the metadata associated with plug-ins (e.g., MANIFEST.MF, build.properties, .classpath, version numbers, compiler settings, formatter settings, etc.)"},
+			{"component": "Metadata", 		"assignee": "pwebster", "description": "Anything related to the metadata associated with plug-ins (e.g., MANIFEST.MF, build.properties, .classpath, version numbers, compiler settings, formatter settings, etc.)"},
 			{"component": "Model", 			"assignee": "emoffatt", "description": "Anything related to org.eclipse.ui.model classes IWorkbenchAdapter, WorkbenchLabelProvider, WorkbenchContentProvider"},
 			{"component": "MPE", 			"assignee": "pwebster", "description": "Bugs related to Multipage editor that are not [Editor Mgmt] and not editor specific"},
 			{"component": "Navigator", 		"assignee": "fupton", 	"description": "Resource Navigator view"},
 			{"component": "OLE", 			"assignee": "emoffatt", "description": "OLE support on Windows"},
-			{"component": "OpenModes", 		"assignee": "bbokowski","description": "Single click, double click support"},
+			{"component": "OpenModes", 		"assignee": "hitesh","description": "Single click, double click support"},
 			{"component": "Outline", 		"assignee": "mcq", 	"description": "Open Resource and FilteredItemsSelection dialogs"},
 			{"component": "PerspectiveBar", "assignee": "emoffatt", "description": "The bar used to indicate which perspectives are currently open and allow easy switching between them."},
 			{"component": "Perspectives", 	"assignee": "pwebster", "description": "Perspective management"},
@@ -87,19 +87,19 @@
 			{"component": "Progress", 		"assignee": "prakash", "description": "Responsive UI work relating to Progress View and Progress dialogs"},
 			{"component": "PropertiesDialog","assignee": "obesedin","description": "Properties dialog"},
 			{"component": "PropertiesView", "assignee": "emoffatt", "description": "Properties view"},
-			{"component": "QuickAccess", 	"assignee": "bbokowski","description": "Ctrl-3 quick access dialog issues"},
-			{"component": "RCP", 			"assignee": "bbokowski","description": "Rich Client Platform issues"},
+			{"component": "QuickAccess", 	"assignee": "rcjsuen","description": "Ctrl-3 quick access dialog issues"},
+			{"component": "RCP", 			"assignee": "prakash","description": "Rich Client Platform issues"},
 			{"component": "TabbedProperties","assignee": "anthonyh","description": "Tabbed Properties issues (plugin org.eclipse.ui.views.properties.tabbed)"},
-			{"component": "Themes", 		"assignee": "kmcguire", 	"description": "Dealing with dialog/window fonts/colours and the theme API"},
+			{"component": "Themes", 		"assignee": "sfranklin", 	"description": "Dealing with dialog/window fonts/colours and the theme API"},
 			{"component": "Trim", 			"assignee": "emoffatt", "description": "Defects in Trim contributions or trim management (DnD, persistance, layout...)"},
 			{"component": "Undo", 			"assignee": "sfranklin","description": "Dealing with the new undo/redo support introduced in Eclipse 3.1"},
-			{"component": "ViewMgmt", 		"assignee": "bbokowski","description": "View management"},
-			{"component": "Viewers", 		"assignee": "bbokowski","description": "JFace viewers"},
+			{"component": "ViewMgmt", 		"assignee": "rcjsuen","description": "View management"},
+			{"component": "Viewers", 		"assignee": "hitesh","description": "JFace viewers"},
 			{"component": "Win32", 			"assignee": "emoffatt", "description": "Win32 specific issues"},
-			{"component": "Wizards", 		"assignee": "bbokowski", "description": "JFace wizards and workbench new item wizards (excluding import/export)"},
+			{"component": "Wizards", 		"assignee": "prakash", "description": "JFace wizards and workbench new item wizards (excluding import/export)"},
 			{"component": "Workbench", 		"assignee": "pwebster", "description": "ui.plugin, Workbench, WorkbenchWindow"},
 			{"component": "WorkbenchParts", "assignee": "pwebster", "description": "Bugs pertaining to part lifecycle."},
-			{"component": "WorkbenchLauncher", "assignee": "bbokowski","description": "Primarily, that portion of startup where the UI team decides where the workspace will be."},
+			{"component": "WorkbenchLauncher", "assignee": "prakash","description": "Primarily, that portion of startup where the UI team decides where the workspace will be."},
 			{"component": "WorkingSets", 	"assignee": "hitesh", 	"description": "Working sets"}
 ],"users": [
 			{"user": "anthonyh" ,	"name": "Anthony", 	"email": "anthonyh@ca.ibm.com"},
@@ -113,6 +113,7 @@
 			{"user": "mhall", 		"name": "Matthew",	"email": "matthall@woodcraftmill.com"},
 			{"user": "obesedin", 	"name": "Oleg", 	"email": "obesedin@ca.ibm.com"},
 			{"user": "pwebster", 	"name": "Paul", 	"email": "pwebster@ca.ibm.com"},
+			{"user": "rcjsuen", 	"name": "Remy", 	"email": "remysuen@ca.ibm.com"},
 			{"user": "sfranklin", 	"name": "Susan",	"email": "susan_franklin@us.ibm.com"},
 			{"user": "fupton", 		"name": "Francis",  "email": "francisu@ieee.org"}   
 ]}
