@@ -98,7 +98,7 @@ function buildTable(loadedJSON){
 			}
 		}
 	}
-	document.getElementById("lastmodified-span").innerText = lastModified;
+	document.getElementById("lastmodified-span").innerHTML = lastModified;
 }
 //-->
 <!-- 'directories=0,height=480,location=0,resizable=1,scrollbars=1,toolbar=0,width=515' -->
