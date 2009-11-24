@@ -40,6 +40,8 @@ function viewBugsByUser(email) {
 	window.location = "https://bugs.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=Platform&component=UI&component=IDE&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailassigned_to1=1&emailtype1=substring&email1=" + email + "&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&newqueryname=&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=";
 }
 
+var lastModified = "unknown";
+
 window.onload = function() {
 
 	 var xmlHttp=null;
@@ -56,7 +58,9 @@ window.onload = function() {
 	 }
 	 xmlHttp.onreadystatechange = function() {
 	    if (xmlHttp.readyState == 4){
-	       
+	          if (xmlHttp.getResponseHeader) {
+	            lastModified = xmlHttp.getResponseHeader("Last-Modified");
+	          }
 	          if (xmlHttp.status == 200) {
 	             buildTable(xmlHttp.responseText);
 	        	  //document.getElementById("ajax_output").innerHTML = xmlHttp.responseText;
@@ -94,7 +98,7 @@ function buildTable(loadedJSON){
 			}
 		}
 	}
-	
+	document.getElementById("lastmodified-span").innerText = lastModified;
 }
 //-->
 <!-- 'directories=0,height=480,location=0,resizable=1,scrollbars=1,toolbar=0,width=515' -->
@@ -109,7 +113,7 @@ affected area. The current owner of each functional area is indicated in
 parentheses. The queries here may not represent all bugs in a given
 component area if there are any that havn't been properly tagged.
 <p>
-<p>Last updated: July 14, 2009
+<p>Last updated: <span id="lastmodified-span">waiting for server response...</span>
 <p>
 <table id="componentAreas" border="1">
 
