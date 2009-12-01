@@ -37,28 +37,26 @@ include($App->getProjectCommon());
 
 <div id="maincontent">
 	<div id="midcolumn">
-		<h1>$pageTitle</h1>
 		<div class="homeitem3col">
-			<h2><b>Ant Project Overview</b></h2>
-				<p>
-					The Ant component is designed to bring the power of Ant and Eclipse together. 
-        			Ant is a Java based build tool. In theory it is kind of like make without 
-        			make's wrinkles. It exists independent of Eclipse as an <a target="_blank" href="http://ant.apache.org/" target="_top">Apache 
-        			open source project</a>. Integrating Ant into Eclipse means:
-        		</p>
-      			<ul>
-        			<li>Executing Ant buildfiles from Eclipse</li>
-        			<li>Enabling access to Eclipse resources/function from Ant buildfiles (i.e., 
-          				providing Ant tasks for Eclipse)</li>
-        			<li>Providing UI support for running Ant buildfiles and managing their output</li>
-        			<li>Providing Ant buildfile development facilities (e.g., buildfile editors, 
-          				debuggers, ...)</li>
-      			</ul>
-      			<p>
-      				The goal of this component is to make Eclipse's Ant tooling the environment 
-        			of choice for Ant users and support Eclipse-based developers in their 
-        			product build requirements.
-        		</p>
+			<p>
+				The Ant component is designed to bring the power of Ant and Eclipse together. 
+    			Ant is a Java based build tool. In theory it is kind of like make without 
+    			make's wrinkles. It exists independent of Eclipse as an <a target="_blank" href="http://ant.apache.org/" target="_top">Apache 
+    			open source project</a>. Integrating Ant into Eclipse means:
+    		</p>
+  			<ul>
+    			<li>Executing Ant buildfiles from Eclipse</li>
+    			<li>Enabling access to Eclipse resources/function from Ant buildfiles (i.e., 
+      				providing Ant tasks for Eclipse)</li>
+    			<li>Providing UI support for running Ant buildfiles and managing their output</li>
+    			<li>Providing Ant buildfile development facilities (e.g., buildfile editors, 
+      				debuggers, ...)</li>
+  			</ul>
+  			<p>
+  				The goal of this component is to make Eclipse's Ant tooling the environment 
+    			of choice for Ant users and support Eclipse-based developers in their 
+    			product build requirements.
+    		</p>
 		</div>
 	</div>
 </div>
