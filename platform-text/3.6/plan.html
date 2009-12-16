@@ -11,26 +11,27 @@ function linkifyBugs() {
 	// Replaces plain text 'bug xyz' by a link to Eclipse's bugzilla.
 	traverseLinkifyBugs(document.getElementsByTagName("body")[0]);
 }
-function nextNode(node) {
+function nextNode(node, stopNode) {
 	if (node.nextSibling) {
 		return node.nextSibling;
-	} else if (node.parentNode == document.getElementsByTagName("body")[0]) {
+	} else if (node.parentNode == stopNode) {
 		return null;
 	} else {
 		return nextNode(node.parentNode);
 	}
 }
 function traverseLinkifyBugs(node) {
+    var stopNode= node.parentNode; 
+	var regex= /(Bug\s*)(\d+)/i;
 	while (node) {
 		if (node.nodeType == 1/*element*/ && node.nodeName == "a") {
-			node= nextNode(node);
+			node= nextNode(node, stopNode);
 			
 		} else if (node.childNodes != null && node.childNodes.length > 0) {
 			node= node.childNodes[0];
 			
 		} else if (node.nodeType == 3/*text*/) {
 			var txt= node.data;
-			var regex= /([Bb]ug\s*)([0-9]+)/;
 			var res= regex.exec(txt);
 			if (res) {
 				var matchStart= txt.indexOf(res[0]);
@@ -46,11 +47,11 @@ function traverseLinkifyBugs(node) {
 				node.data= txt.substr(matchStart + res[0].length);
 				// continue with current (shortened) node...
 			} else {
-				node= nextNode(node);
+				node= nextNode(node, stopNode);
 			}
 			
 		} else {
-			node= nextNode(node);
+			node= nextNode(node, stopNode);
 		}
 	}
 }
@@ -101,7 +102,7 @@ function showHiddenWork() {
 
   <tr> 
     <td WIDTH="100%"> 
-	<p>Last revised $Date: 2009/11/03 14:13:07 $</p>
+	<p>Last revised $Date: 2009/12/16 13:33:00 $</p>
 
     
       <p>This plan is under continuous refinement. Please send comments about this plan to the <a href="mailto:platform-text-dev@eclipse.org">platform-text-dev@eclipse.org</a> developer mailing list.</p>
@@ -187,7 +188,7 @@ function showHiddenWork() {
 	
 		<li><h4>Spell Checking [<a href="#3">3</a>]</h4>
 		<ul>
-			<li>investigate and reduce memory consumption <span class="work">Deepak: 1w</span></li>
+			<li><img src="../images/progress.gif" border="0" height="5" width="14" align="absmiddle"> investigate and reduce memory consumption <span class="work">Deepak: 1w</span></li>
 		</ul>
 		</li>
 	
@@ -365,23 +366,17 @@ function showHiddenWork() {
 
 		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Ruler improvements [<a href="#3">3</a>] <span class="work">2w</span></li></h4>
 		<ul>
-			<li class="priority"><img src="../images/progress.gif" border="0" height="5" width="14" align="absmiddle"> improve overview ruler arming and size of active area  (bug 163769) <span class="work">Prakash: 1d</span></li></h4>
+			<li class="priority"><img src="../images/progress.gif" border="0" height="5" width="14" align="absmiddle"> <font class="indexsub" color="#8080ff">[3.6 M5]</font> improve overview ruler arming and size of active area  (bug 163769) <span class="work">Prakash: 1d</span></li></h4>
 		</ul>
 
 		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Spell Checking [<a href="#3">3</a>]</h4>
 		<ul>
-			<li>investigate and reduce memory consumption <span class="work">Deepak: 1w</span></li>
+			<li><img src="../images/progress.gif" border="0" height="5" width="14" align="absmiddle"> <font class="indexsub" color="#8080ff">[3.6 M5]</font> investigate and reduce memory consumption <span class="work">Deepak: 1w</span></li>
 		</ul>
 		
 		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> <a name="Hovering"></a>Hovering [<a href="#3">3</a>]</h4>
 		<ul>
-			<li class="priority">quick diff usability improvements in hover (Next/Prev support etc.) <span class="work">Markus: 1w</span></li>
-		</ul>
-		
-		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Adopt New Platform Features [<a href="#3">3</a>]</h4>
-		<ul>
-			<li class="priority">make sure that we run on the e4 compatibility layer <span class="work">4w</span></li>
-			<li>(adjust code so that we run on e4) <span class="work">6w</span></li>
+			<li class="priority"><font class="indexsub" color="#8080ff">[3.6 M5]</font> quick diff usability improvements in hover (Next/Prev support etc.) <span class="work">Markus: 1w</span></li>
 		</ul>
 		
 		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Permanent Items</h4>
@@ -412,6 +407,27 @@ function showHiddenWork() {
 		<ul>
 			<li class="priority">3.5.2 maintenance work <span class="work">1w</span></li>
 			<li class="priority">3.5.2 one day test pass (<a href="http://www.eclipse.org/jdt/ui/r3_6/testing/3.5.2_Test_Plan.html">test plan</a>)</li>
+		</ul>
+		
+		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Ruler improvements [<a href="#3">3</a>] <span class="work">2w</span></li></h4>
+		<ul>
+			<li class="priority"><img src="../images/progress.gif" border="0" height="5" width="14" align="absmiddle"> improve overview ruler arming and size of active area  (bug 163769) <span class="work">Prakash: 1d</span></li></h4>
+		</ul>
+
+		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Spell Checking [<a href="#3">3</a>]</h4>
+		<ul>
+			<li><img src="../images/progress.gif" border="0" height="5" width="14" align="absmiddle"> investigate and reduce memory consumption <span class="work">Deepak: 1w</span></li>
+		</ul>
+		
+		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> <a name="Hovering"></a>Hovering [<a href="#3">3</a>]</h4>
+		<ul>
+			<li class="priority"> quick diff usability improvements in hover (Next/Prev support etc.) <span class="work">Markus: 1w</span></li>
+		</ul>
+		
+		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Adopt New Platform Features [<a href="#3">3</a>]</h4>
+		<ul>
+			<li class="priority">make sure that we run on the e4 compatibility layer <span class="work">4w</span></li>
+			<li>(adjust code so that we run on e4) <span class="work">6w</span></li>
 		</ul>
 		
 		<h4><img src="http://www.eclipse.org/images/Adarrow.gif" border="0" height="16" width="16" align="top"> Permanent Items</h4>
