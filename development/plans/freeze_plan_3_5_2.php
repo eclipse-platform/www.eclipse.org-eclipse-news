@@ -129,7 +129,7 @@ ob_start();
 	            <td align="right" height="20">8</td>
 	            <td align="right" height="20">Mon 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;</td>
-	            <td height="20">&nbsp;&nbsp;<b>Contribute RC2 build to Galileo SR2 train</b></td>
+	            <td height="20">&nbsp;&nbsp;<b>Contribute RC3 build to Galileo SR2 train</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>         
 	          <tr>
@@ -140,9 +140,20 @@ ob_start();
 	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 4 build [if required]</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>         
+			  <tr>
+	            <td height="30"></td>
+	          </tr>
+	          <tr>
+	            <td height="20"></td>
+	            <td align="right" height="20">15</td>
+	            <td align="right" height="20">Mon 08:00 EDT</td>
+	            <td height="20">&nbsp;&nbsp;</td>
+	            <td height="20">&nbsp;&nbsp;<b>Contribute RC4 build to Galileo SR2 train</b></td>
+	            <td height="20">&nbsp;&nbsp;</td>
+	          </tr>         
 	        </table>
 	        <p>
-	        Note that September 7th is a holiday in Canada (Labour Day) and the United States (Labor Day).
+	        Note that February 15th is a holiday in Canada.
 	        </p>
       	</div>
 		<div class="homeitem3col">
