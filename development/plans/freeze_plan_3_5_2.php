@@ -43,12 +43,12 @@ ob_start();
 			<h3>Detailed Timeline</h3>
 	        <table border="0" cellspacing="0" cellpadding="0" align="center">
 	          <tr>
-	            <td align="right" height="20"><b>August 2009</b>&nbsp;</td>
+	            <td align="right" height="20"><b>January 2010</b>&nbsp;</td>
 	          </tr>
 	          <tr>
 	            <td height="20"></td>
-	            <td align="right" height="20">7</td>
-	            <td align="right" height="20">Fri 08:00 EDT</td>
+	            <td align="right" height="20">13</td>
+	            <td align="right" height="20">Wed 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 1 build</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
@@ -58,7 +58,15 @@ ob_start();
 	          </tr>
 	          <tr>
 	            <td height="20"></td>
-	            <td align="right" height="20">26</td>
+	            <td align="right" height="20">18</td>
+	            <td align="right" height="20">Mon 08:00 EDT</td>
+	            <td height="20">&nbsp;&nbsp;</td>
+	            <td height="20">&nbsp;&nbsp;<b>Contribute RC1 build to Galileo SR2 train</b></td>
+	            <td height="20">&nbsp;&nbsp;</td>
+	          </tr>         
+	          <tr>
+	            <td height="20"></td>
+	            <td align="right" height="20">20</td>
 	            <td align="right" height="20">Wed 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 2 build</b></td>
@@ -66,7 +74,7 @@ ob_start();
 	          </tr>         
 	          <tr>
 	            <td height="20"></td>
-	            <td align="right" height="20">27</td>
+	            <td align="right" height="20">21</td>
 	            <td align="right" height="20">Thu 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b>Start 1-day test pass against RC2</b></td>
@@ -76,11 +84,30 @@ ob_start();
 	            <td height="30"></td>
 	          </tr>
 	          <tr>
-	            <td align="right" height="20"><b>September 2009</b>&nbsp;</td>
+	            <td height="20"></td>
+	            <td align="right" height="20">25-29</td>
+	            <td align="right" height="20"></td>
+	            <td height="20">&nbsp;&nbsp;</td>
+	            <td height="20">&nbsp;&nbsp;<b>Milestone week for Helios M5</b></td>
+	            <td height="20">&nbsp;&nbsp;</td>
+	          </tr>         
+			  <tr>
+	            <td height="30"></td>
+	          </tr>
+	          <tr>
+	            <td align="right" height="20"><b>February 2010</b>&nbsp;</td>
 	          </tr>
 	          <tr>
 	            <td height="20"></td>
-	            <td align="right" height="20">2</td>
+	            <td align="right" height="20">1</td>
+	            <td align="right" height="20">Mon 08:00 EDT</td>
+	            <td height="20">&nbsp;&nbsp;</td>
+	            <td height="20">&nbsp;&nbsp;<b>Contribute RC2 build to Galileo SR2 train</b></td>
+	            <td height="20">&nbsp;&nbsp;</td>
+	          </tr>         
+	          <tr>
+	            <td height="20"></td>
+	            <td align="right" height="20">3</td>
 	            <td align="right" height="20">Wed 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 3 build</b></td>
@@ -88,7 +115,7 @@ ob_start();
 	          </tr>         
 	          <tr>
 	            <td height="20"></td>
-	            <td align="right" height="20">3</td>
+	            <td align="right" height="20">4</td>
 	            <td align="right" height="20">Thu 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b>Start 1-day test pass against RC3</b></td>
@@ -99,7 +126,15 @@ ob_start();
 	          </tr>
 	          <tr>
 	            <td height="20"></td>
-	            <td align="right" height="20">9</td>
+	            <td align="right" height="20">8</td>
+	            <td align="right" height="20">Mon 08:00 EDT</td>
+	            <td height="20">&nbsp;&nbsp;</td>
+	            <td height="20">&nbsp;&nbsp;<b>Contribute RC2 build to Galileo SR2 train</b></td>
+	            <td height="20">&nbsp;&nbsp;</td>
+	          </tr>         
+	          <tr>
+	            <td height="20"></td>
+	            <td align="right" height="20">10</td>
 	            <td align="right" height="20">Wed 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 4 build [if required]</b></td>
