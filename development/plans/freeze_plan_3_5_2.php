@@ -169,11 +169,11 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>What is the game plan?</h3>
 			<p> 
-	 		The Eclipse Galileo Service Release 1 ("Galileo SR2") endgame involves building 
+	 		The Eclipse Galileo Service Release 2 ("Galileo SR2") endgame involves building 
 	        a series of release candidates leading to the Eclipse project's contribution to the
 	        Galileo SR2 release. The Eclipse project version number for this release is 3.5.2.
 	        By its nature, this maintenance release contains fixes to a small number 
-	        of serious problems found in the June 2009 Galileo release. We make and verify each 
+	        of serious problems found in the September 2009 Galileo SR1 release. We make and verify each 
 	        fix carefully, so that we do not need to tie up the entire development 
 	        team in time-consuming test passes. As always, we welcome help from the 
 	        community with testing the release candidates. By default,&nbsp; Galileo SR2
@@ -181,8 +181,8 @@ ob_start();
 	        to fix. All problems fixed in Galileo SR2 are in the Eclipse bugzilla database 
 	        and flagged with Target Milestone &quot;3.5.2&quot; (query bugzilla for 
 	        the <a href="http://bugs.eclipse.org/bugs/buglist.cgi?product=JDT&amp;product=PDE&amp;product=Platform&amp;product=Equinox&amp;target_milestone=3.5.2&amp;resolution=FIXED&amp;order=bugs.bug_id">complete 
-	        list of bugs fixed in Galileo SR2</a>). So we're most interested in identifying 
-	        regressions where we've changed something that we did not intend to.
+	        list of bugs fixed in Galileo SR2</a>). We are most interested in identifying 
+	        regressions where we have changed something that we did not intend to.
 	        </p> 
 	                
 	        <p>General announcements during the Galileo SR2 endgame are posted to the 
@@ -249,7 +249,7 @@ ob_start();
 			
 			<strong>Galileo SR2 Release</strong>
 			<p>The Galileo SR2 release should be complete and available for download by 
-	              the end of September 2009 as part of the <a href="http://wiki.eclipse.org/Galileo">Galileo 
+	              the end of February 2010 as part of the <a href="http://wiki.eclipse.org/Galileo">Galileo 
 	              coordinated service release</a> . If product teams intending 
 	              to ship on Galileo SR2 uncover further serious defects during the endgame, 
 	              we may schedule additional release candidate builds to incorporate fixes.
