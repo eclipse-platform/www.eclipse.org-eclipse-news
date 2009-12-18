@@ -755,7 +755,7 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />org.eclipse.ant.launching</td>
+      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> org.eclipse.ant.launching</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -807,7 +807,7 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
-      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />org.eclipse.core.externaltools</td>
+      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> org.eclipse.core.externaltools</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -935,7 +935,7 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />org.eclipse.jdt.junit.core</td>
+      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> org.eclipse.jdt.junit.core</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -1019,7 +1019,7 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />org.eclipse.pde.launching</td>
+      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> org.eclipse.pde.launching</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -1207,8 +1207,12 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
       <td><div align="center">1.5</div></td>
     </tr>
     <tr>
-      <td>org.junit</td>
+      <td>org.junit 3.8.2</td>
       <td><div align="center">1.3</div></td>
+    </tr>
+    <tr>
+      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> org.junit 4.7.0</td>
+      <td><div align="center">1.5</div></td>
     </tr>
     <tr>
       <td>org.junit4</td>
