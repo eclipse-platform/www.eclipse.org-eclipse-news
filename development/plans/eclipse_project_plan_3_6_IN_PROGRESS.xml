@@ -201,8 +201,8 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 			<td rowspan="6">Windows</td>
 			<td rowspan="2">7</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Sun Java 5 Update 14<br/>
-				IBM Java 5 SR6b
+			<td rowspan="2">Sun Java 5 Update 22<br/>
+				IBM Java 5 SR11
 			</td>
 			<td rowspan="6">Win32</td>
 		</tr>
@@ -212,32 +212,30 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 		<tr>
 			<td rowspan="2">Vista</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td>Sun Java 5 Update 14<br/>
-				IBM Java 5 SR6b<br/>
-				BEA JRockit 27.4.0
+			<td>Sun Java 5 Update 22<br/>
+				IBM Java 5 SR11<br/>
+				Oracle JRockit 27.6.5
 			</td>
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">x86 64-bit</td>
-			<td>Sun Java 5 Update 14<br/>
-				IBM Java 5 SR6b
+			<td>Sun Java 5 Update 22<br/>
+				IBM Java 5 SR11
 			</td>
 		</tr>
 		<tr class="c0">
 			<td rowspan="2">XP</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td>Sun Java 6 Update 3<br/>
-				Sun Java 5 Update 14<br/>
-				Sun Java 1.4.2 Update 16<br/>
-				IBM Java 5 SR6b<br/>
-				IBM Java 1.4.2 SR10<br/>
-				BEA JRockit 27.4.0
+			<td>Sun Java 6 Update 6<br/>
+				Sun Java 5 Update 22<br/>
+				IBM Java 5 SR11<br/>
+				Oracle JRockit 27.6.5
 			</td>
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">x86 64-bit</td>
-			<td>Sun Java 5 Update 14<br/>
-				IBM Java 5 SR6b
+			<td>Sun Java 5 Update 22<br/>
+				IBM Java 5 SR11
 			</td>
 		</tr>
 		<!-- ************ RHEL ************** -->
@@ -245,24 +243,22 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 			<td rowspan="3">Red Hat Enterprise Linux</td>
 			<td rowspan="2">5.0</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td>Sun Java 6 Update 3<br/>
-				Sun Java 5 Update 14<br/>
-				Sun Java 1.4.2 Update 16<br/>
-				IBM Java 5 SR6b<br/>
-				IBM Java 1.4.2 SR10<br/>
-				BEA JRockit 27.4.0
+			<td>Sun Java 6 Update 6<br/>
+				Sun Java 5 Update 22<br/>
+				IBM Java 5 SR11<br/>
+				Oracle JRockit 27.6.5
 			</td>
 			<td rowspan="3">GTK</td>
 		</tr>
 		<tr class="c1">
 			<td rowspan="1">Power 64-bit</td>
-			<td>IBM Java 5 SR6b</td>
+			<td>IBM Java 5 SR11</td>
 		</tr>
 		<tr class="c1">
 			<td rowspan="1">4.0</td>
 			<td rowspan="1">x86 64-bit</td>
-			<td>Sun Java 5 Update 14<br/>
-				IBM Java 5 SR6b
+			<td>Sun Java 5 Update 22<br/>
+				IBM Java 5 SR11
 			</td>
 		</tr>
 		<!-- ************ SLES ************** -->
@@ -270,8 +266,8 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 			<td rowspan="3">SUSE Linux Enterprise Server</td>
 			<td rowspan="3">11</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Sun Java 5 Update 14<br/>
-				IBM Java 5 SR6b
+			<td rowspan="2">Sun Java 5 Update 22<br/>
+				IBM Java 5 SR11
 			</td>
 			<td rowspan="3">GTK</td>
 		</tr>
@@ -280,15 +276,15 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">Power 64-bit</td>
-			<td>IBM Java 5 SR6b</td>
+			<td>IBM Java 5 SR11</td>
 		</tr>
 		<!-- ************ Ubuntu ************** -->
 		<tr class="c1">
 			<td rowspan="2">Ubuntu Long Term Support</td>
 			<td rowspan="2">9.04</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Sun Java 5 Update 14<br/>
-				IBM Java 5 SR6b
+			<td rowspan="2">Sun Java 5 Update 22<br/>
+				IBM Java 5 SR11
 			</td>
 			<td rowspan="2">GTK</td>
 		</tr>
@@ -300,7 +296,7 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 			<td rowspan="2">Sun Solaris</td>
 			<td rowspan="2">10</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Sun Java 5 Update 14</td>
+			<td rowspan="2">Sun Java 5 Update 22</td>
 			<td rowspan="2">GTK</td>
 		</tr>
 		<tr class="c0">
@@ -311,7 +307,7 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 			<td rowspan="1">HP-UX</td>
 			<td rowspan="1">11i v2</td>
 			<td rowspan="1">ia64 32-bit</td>
-			<td rowspan="1">HP-UX Java 5 Update 7</td>
+			<td rowspan="1">HP-UX Java 5 Update 18</td>
 			<td rowspan="1">Motif 2.1</td>
 		</tr>
 		<!-- ************ AIX ************** -->
@@ -319,7 +315,7 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 			<td rowspan="1">IBM AIX</td>
 			<td rowspan="1">5.3</td>
 			<td rowspan="1">Power 32-bit</td>
-			<td rowspan="1">IBM Java 5 SR6b</td>
+			<td rowspan="1">IBM Java 5 SR11</td>
 			<td rowspan="1">Motif 2.1</td>
 		</tr>
 		<!-- ************ Mac ************** -->
@@ -327,7 +323,7 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 			<td rowspan="3">Apple Mac OS X</td>
 			<td rowspan="3">10.5</td>
 			<td rowspan="1">Universal</td>
-			<td rowspan="3">Apple Java 10.5 Update 1</td>
+			<td rowspan="3">Apple Java 10.5 Update 2</td>
 			<td rowspan="1">Carbon</td>
 		</tr>
 		<tr class="c1">
@@ -338,7 +334,10 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 			<td rowspan="1">Universal 64-bit</td>
 		</tr>
 	</table>
-</center>
+	<p>
+   <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> The service release or update level of all JRE's have been updated in this plan revision.
+   </p>
+ </center>
 
 <p>As stated above, <i>we expect that Eclipse works fine on other current
   Java VM and OS versions but we cannot flag these as reference platforms without
@@ -487,7 +486,16 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 </p:description>
 
 <p:committed>
-  <p><i>None at this time.</i></p>
+<ul>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+	<strong>Support the win32 version of Eclipse on Windows 7.</strong>
+	Fully support the 32-bit and 64-bit win32 version of SWT and the Eclipse SDK on Windows 7. We will ensure that 
+	applications built on the win32 version of SWT work as well as any other win32 API 
+	based application on Windows 7. This will increase our testing and support effort and 
+	potentially require new development to work around platform specific differences. 
+	[SWT, Platform UI, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288550">288550</a>)
+</li>
+</ul>
 </p:committed>
 
 <p:proposed>
@@ -501,14 +509,6 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 	tooling should include initial support for compiling, editing, and launching applications
 	for Java 7.
 	[JDT Core, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288548">288548</a>)
-</li>
-<li>
-	<strong>Support the win32 version of Eclipse on Windows 7.</strong>
-	Fully support the 32-bit and 64-bit win32 version of SWT and the Eclipse SDK on Windows 7. We will ensure that 
-	applications built on the win32 version of SWT work as well as any other win32 API 
-	based application on Windows 7. This will increase our testing and support effort and 
-	potentially require new development to work around platform specific differences. 
-	[SWT, Platform UI, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288550">288550</a>)
 </li>
 <li>
 	<strong>Support Ubuntu</strong>
@@ -552,7 +552,23 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 </p:description>
 
 <p:committed>
-  <p><i>None at this time.</i></p>
+<ul>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+	<strong>Help system extensibility.</strong>
+	The current Eclipse Help web application provides limited support for customization by clients.  
+	Additional extensibility should be provided such as supporting insertion of custom views and frames, 
+	customizing the tool bar, and changing the look and feel (colors, fonts, etc).
+	[User Assistance] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288558">288558</a>)
+</li>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+	<strong>Asynchronous debug commands.</strong>
+	Currently, the debug platform exposes interfaces for common commands but all 
+	implementation of the commands as well as scheduling operations are internal. 
+	We will provide an API and abstract implementation classes for creating asynchronous 
+	debug commands/actions. 
+	[Platform Debug] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=284363">284363</a>)
+</li>
+</ul>
 </p:committed>
 
 <p:proposed>
@@ -574,13 +590,6 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 	[PDE] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288557">288557</a>)
 </li>
 <li>
-	<strong>Help system extensibility.</strong>
-	The current Eclipse Help web application provides limited support for customization by clients.  
-	Additional extensibility should be provided such as supporting insertion of custom views and frames, 
-	customizing the tool bar, and changing the look and feel (colors, fonts, etc).
-	[User Assistance] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288558">288558</a>)
-</li>
-<li>
 	<strong>Focus on compatibility.</strong>
 	Migrating across major platform releases is costly for consumers due to the 
 	magnitude of API and behavioral changes between releases. 
@@ -589,14 +598,6 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 	and correct breakages early, and better documentation of changes that impact
 	compatibility.
 	[All Components] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288559">288559</a>)
-</li>
-<li>
-	<strong>Asynchronous debug commands.</strong>
-	Currently, the debug platform exposes interfaces for common commands but all 
-	implementation of the commands as well as scheduling operations are internal. 
-	We will provide an API and abstract implementation classes for creating asynchronous 
-	debug commands/actions. 
-	[Platform Debug] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=284363">284363</a>)
 </li>
 </ul>
 </p:proposed>
@@ -617,12 +618,8 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 </p:description>
 
 <p:committed>
-  <p><i>None at this time.</i></p>
-</p:committed>
-
-<p:proposed>
 <ul>
-<li>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
 	<strong>Build anywhere.</strong>
 	The current Eclipse project build and test infrastructure is highly customized and
 	tailored to a particular build environment. We will invest in simplifying and streamlining
@@ -630,6 +627,20 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 	be initiated by more people. 
 	[Rel. Eng., PDE] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288560">288560</a>)
 </li>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> new)
+	<strong>Test framework support for JUnit 4.</strong>
+	The Eclipse project automated test framework only supports running tests against Junit version 3.
+	JUnit 3 was replaced several years ago by JUnit 4, so we will work to ensure JUnit 4
+	can be used to run automated JUnit tests. Although this isn't a completely compatible
+	change we will work to find a solution that minimizes impact for clients of the test
+	framework, and supports existing use cases such as testing with older platforms such as JDK 1.4.
+	[Rel. Eng., JDT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=153429">153429</a>)
+</li>
+</ul>
+</p:committed>
+
+<p:proposed>
+<ul>
 <li>
 	<strong>Patch enhancements.</strong>
 	We will improve the tools for viewing and applying patches. This includes work
@@ -744,6 +755,10 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
+      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />org.eclipse.ant.launching</td>
+      <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
       <td>org.eclipse.ant.ui</td>
       <td><div align="center">1.4</div></td>
     </tr>
@@ -792,6 +807,10 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
+      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />org.eclipse.core.externaltools</td>
+      <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
       <td>org.eclipse.core.filebuffers</td>
       <td><div align="center">1.4</div></td>
     </tr>
@@ -809,10 +828,6 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
     </tr>
     <tr>
       <td>org.eclipse.core.resources</td>
-      <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.core.resources.compatibility</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -920,6 +935,10 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
+      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />org.eclipse.jdt.junit.core</td>
+      <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
       <td>org.eclipse.jdt.junit.runtime</td>
       <td><div align="center">1.3</div></td>
     </tr>
@@ -1000,6 +1019,10 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
+      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />org.eclipse.pde.launching</td>
+      <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
       <td>org.eclipse.pde.runtime</td>
       <td><div align="center">1.4</div></td>
     </tr>
@@ -1053,10 +1076,6 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
     </tr>
     <tr>
       <td>org.eclipse.team.cvs.core</td>
-      <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.team.cvs.ssh</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
