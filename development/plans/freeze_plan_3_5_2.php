@@ -37,7 +37,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>December 17, 2009 - builds are progressing in the 3.5.2 development stream</b></p>
+			<p><b>January 4, 2009 - builds are progressing in the 3.5.2 development stream</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
