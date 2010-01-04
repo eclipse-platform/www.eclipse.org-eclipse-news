@@ -38,6 +38,8 @@ ob_start();
 			<ul>
 	      <li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse"> Eclipse Project Helios Plan</a><br>
 	        This document lays out the feature and API set for the Helios (3.6) release of the Eclipse Project. </li>
+          <li><a href="plans/freeze_plan_3_5_2.php"> Eclipse Project Galileo SR2 Endgame Plan</a><br>
+    		Information about how we plan to wrap up Galileo Service Release 2 (version 3.5.2).</li>     
 	    </ul>
       	</div>
 		<div class="homeitem3col">
