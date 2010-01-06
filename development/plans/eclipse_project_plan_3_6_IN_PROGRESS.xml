@@ -185,7 +185,6 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 	table.platforms tr.c1 td {
 		background-color: #F4EEFF;
 	}
-	.strike {text-decoration: line-through;}
 </style>
 <center>
 	<table class="platforms">
@@ -228,9 +227,9 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 			<td rowspan="1">x86 32-bit</td>
 			<td>Sun Java 6 Update 6<br/>
 				Sun Java 5 Update 22<br/>
-				(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> removed) <div class="strike">Sun Java 1.4.2 Update 16</div><br/>
+				(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> removed) <s>Sun Java 1.4.2 Update 16</s><br/>
 				IBM Java 5 SR11<br/>
-				(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> removed) <del>IBM Java 1.4.2 SR10</del><br/>
+				(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> removed) <s>IBM Java 1.4.2 SR10</s><br/>
 				Oracle JRockit 27.6.5
 			</td>
 		</tr>
@@ -247,7 +246,7 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 			<td rowspan="1">x86 32-bit</td>
 			<td>Sun Java 6 Update 6<br/>
 				Sun Java 5 Update 22<br/>
-				(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> removed) <strike>Sun Java 1.4.2 Update 16</strike><br/>
+				(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> removed) <s>Sun Java 1.4.2 Update 16</s><br/>
 				IBM Java 5 SR11<br/>
 				(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> removed) <s>IBM Java 1.4.2 SR10</s><br/>
 				Oracle JRockit 27.6.5
