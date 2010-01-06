@@ -38,6 +38,10 @@ ob_start();
 			<ul>
 	      <li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse"> Eclipse Project Helios Plan</a><br>
 	        This document lays out the feature and API set for the Helios (3.6) release of the Eclipse Project. </li>
+	      <li><a href="http://wiki.eclipse.org/Eclipse/Helios_Plan">Component Milestone Plans</a><br>
+	        This document lists the milestone plans for each Eclipse Project component. Milestone
+	        plans are updated regularly throughout the release cycle to reflect what each component
+	        team has completed and what they are currently working on.</li>
           <li><a href="plans/freeze_plan_3_5_2.php"> Eclipse Project Galileo SR2 Endgame Plan</a><br>
     		Information about how we plan to wrap up Galileo Service Release 2 (version 3.5.2).</li>     
 	    </ul>
@@ -101,6 +105,10 @@ ob_start();
 				the same way. The Eclipse Performance page is a collection of resources 
 				and information aimed at helping plug-in developers do just that.
 			</li>
+	        <li><a href="http://www.eclipse.org/eclipse/platform-releng/buildSchedule.html"> 
+	          Release Engineering Build Schedule</a><br>
+	          Schedule for Eclipse Platform nightly, integration, and milestone builds. 
+	        </li>
       		</ul>
       	</div>
 		<div class="homeitem3col">
@@ -122,10 +130,6 @@ ob_start();
 	        This document lays out the feature and API set for the 3.4 release of Eclipse Project. </li>
 	        <li><a href="freeze_plan_3.4.php"> Eclipse Project 3.4 Endgame Plan</a><br>
 	    		Information about we wrapped up the 3.4 (Ganymede) release of Eclipse. </li>     
-	      <li><a href="http://www.eclipse.org/eclipse/platform-releng/buildSchedule.html"> 
-	        Release Engineering Build Schedule</a><br>
-	        Schedule for Eclipse Platform nightly, integration, and milestone builds. 
-	      </li>
 			 <li><a href="freeze_plan_3_3_2.php"> Eclipse Project 3.3.2 Endgame Plan</a><br>
     		Information about we wrapped up the 3.3.2 (Europa winter maintenance) release of Eclipse. </li>
 			 <li><a href="eclipse_project_plan_3_3.html"> Eclipse Platform Project 3.3 Plan</a><br>
