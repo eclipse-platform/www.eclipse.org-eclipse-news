@@ -500,15 +500,17 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 
 <p:proposed>
 <ul>
-<li>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> revised)
 	<strong>Add support for Java SE 7 features.</strong>
-	The next feature release of Java SE is version 7, targeted to ship in the first half of 2010. 
-	While the contents of this release are still under discussion, this release is expected to contain 
-	extensions to the Java language, including annotations on types (JSR-308), modularity
-	support (JSR-294), and other minor language changes (Coin project). Eclipse Java
-	tooling should include initial support for compiling, editing, and launching applications
-	for Java 7.
-	[JDT Core, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288548">288548</a>)
+	The next feature release of Java SE is
+	version 7, which will probably be available in the second half of 2010. While
+	the contents of this release are still under discussion, that release is
+	expected to contain extensions to the Java language, including annotations on
+	types (JSR-308), modularity support (JSR-294), and other minor language changes
+	(Coin project). Eclipse Java tooling will include initial support for
+	compiling, editing, and launching applications for Java 7 for those parts which
+	have publicly available specifications (only JSR-308 at this point). [JDT Core,
+	JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288548">288548</a>)
 </li>
 <li>
 	<strong>Support Ubuntu</strong>
