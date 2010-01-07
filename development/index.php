@@ -38,8 +38,8 @@ ob_start();
 			<ul>
 	      <li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse"> Eclipse Project Helios Plan</a><br>
 	        This document lays out the feature and API set for the Helios (3.6) release of the Eclipse Project. </li>
-	      <li><a href="http://wiki.eclipse.org/Eclipse/Helios_Plan">Component Milestone Plans</a><br>
-	        This document lists the milestone plans for each Eclipse Project component. Milestone
+	      <li><a href="http://wiki.eclipse.org/Eclipse/Helios_Plan">Helios Component Milestone Plans</a><br>
+	        This document lists the milestone plans for each Eclipse Project component for the Helios release. Milestone
 	        plans are updated regularly throughout the release cycle to reflect what each component
 	        team has completed and what they are currently working on.</li>
           <li><a href="plans/freeze_plan_3_5_2.php"> Eclipse Project Galileo SR2 Endgame Plan</a><br>
