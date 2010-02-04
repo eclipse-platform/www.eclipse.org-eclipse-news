@@ -106,11 +106,21 @@ function reassignText(newOwner) {
 	return onClick;
 }
 
+function addCCText(ccEmail) {
+    if (!ccEmail) {
+      return "";
+    }
+    var result = "var ccInput=document.getElementById('newcc');";
+    result += "if (ccInput!=null) {";
+    result += "ccInput.value='" + ccEmail + "';";
+    result += "}";
+    return result;
+}
 
 function rawButton(label, action, description) {
 	return '<input type="button" value="' + label + '" onClick="' + action + '" title="' + description + '" />';
 }
-function buttonFor(comp, owner, description) {
+function buttonFor(comp, owner, description, ccEmail) {
 	var onClick = "var s = document.getElementById('short_desc').value;";
 	onClick += reassignText(triagedOwner);
 	onClick += "var q = document.forms[1].elements[" + qa_contact + "];";
@@ -121,6 +131,7 @@ function buttonFor(comp, owner, description) {
 	onClick += "if (s.indexOf('[" + comp + "]') == -1 ){";
 	onClick += "d.value = '[" + comp + "] ' + d.value;";
 	onClick += "}";
+	onClick += addCCText(ccEmail);
 	onClick += "d.scrollIntoView(true);";
 	onClick += "d.focus();";
 	onClick += "}";
@@ -205,12 +216,17 @@ function buildButtons(loadedJSON) {
 	var buttons = "";
 	for (i = 0; i < assignments.length; i++) {
 		var ownerEmail;
+		var cc = assignments[i]["cc"];
+		var ccEmail;
 		for (j = 0; j < users.length; j++) {
 			if (users[j].user == assignments[i].assignee) {
 				ownerEmail = users[j].email;
 			}
+			if (users[j].user === cc) {
+			    ccEmail = users[j].email;
+			}
 		}
-		buttons += buttonFor(assignments[i].component, ownerEmail, assignments[i].description);
+		buttons += buttonFor(assignments[i].component, ownerEmail, assignments[i].description, ccEmail);
 	}
 	
 	var refresh = '<input type="button" value="Refresh" id="refresher" />';
