@@ -69,7 +69,7 @@
 		<li><em>registry</em>.  The registry, its syntax, and backward compatibility.</li>\
 		<li><em>request</em>.  A request for a new command or a new key binding (or both).</li>\
 	</ul>"},
-			{"component": "LinkedResources","assignee": "obesedin","description": "Handling of linked resources in Navigator and New File/Folder wizards"},
+			{"component": "LinkedResources","assignee": "sbeauchamp","description": "Handling of linked resources in Navigator and New File/Folder wizards", "cc": "sbrandys"},
 			{"component": "Mac", 			"assignee": "prakash", 	"description": "Mac specific issues"},
 			{"component": "Markers", 		"assignee": "hitesh", "description": "Issues related to markers, including tasks, problems, bookmarks, etc. e.g. bugs related to MarkerImageProvider, MarkerHelp, MarkerResolutions"},
 			{"component": "Metadata", 		"assignee": "pwebster", "description": "Anything related to the metadata associated with plug-ins (e.g., MANIFEST.MF, build.properties, .classpath, version numbers, compiler settings, formatter settings, etc.)"},
@@ -115,6 +115,8 @@
 			{"user": "obesedin", 	"name": "Oleg", 	"email": "obesedin@ca.ibm.com"},
 			{"user": "pwebster", 	"name": "Paul", 	"email": "pwebster@ca.ibm.com"},
 			{"user": "rcjsuen", 	"name": "Remy", 	"email": "remysuen@ca.ibm.com"},
+			{"user": "sbeauchamp", 	"name": "Serge",	"email": "serge@freescale.com"},
+			{"user": "sbrandys", 	"name": "Szymon",	"email": "Szymon.Brandys@pl.ibm.com"},
 			{"user": "sfranklin", 	"name": "Susan",	"email": "susan_franklin@us.ibm.com"},
 			{"user": "fupton", 		"name": "Francis",  "email": "francisu@ieee.org"}   
 ]}
