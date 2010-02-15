@@ -115,8 +115,7 @@ ob_start();
 		        <li> 
 		          <b><a name="dani"></a>Dani Megert, IBM Zurich</b><br>
       Dani co-leads the <a href="http://eclipse.org/jdt">JDT</a> subproject and
-      leads the Platform Search, Platform Text and JDT Text components and co-leads
-      the JDT UI component. Dani worked at OTI and is one of the initial Eclipse Project committers.
+      leads the Platform Search, Platform Text and JDT Text components. Dani worked at OTI and is one of the initial Eclipse Project committers.
       His interests include user interface and API design, editors, performance and DJing.
 		        </li>
 		        <li> 
