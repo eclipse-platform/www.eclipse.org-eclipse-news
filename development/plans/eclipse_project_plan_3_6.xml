@@ -538,13 +538,12 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 	compiling, editing, and launching applications for Java 7 for those parts which
 	have publicly available specifications (only JSR-308 at this point). [JDT Core,
 	JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288548">288548</a>)
-	<p>
+	<br/><br/>
 	<strong>NOTE:</strong> In order to align our schedule with the delayed official Java 7 appearance 
 	and due to lack of publicly available specifications (including lack of a Java 7 JSR), we have
 	decided to move the development work to a separate branch and decouple it from the 3.6 release. 
 	In that branch we will continue to develop the Java 7 features as they become publicly accessible. 
 	We will deliver separate updates for the official builds in order to provide early access to Java 7 features.
-	</p>
 </li>
 </ul>
 </p:deferred>
