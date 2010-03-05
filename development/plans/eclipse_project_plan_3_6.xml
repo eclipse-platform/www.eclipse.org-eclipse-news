@@ -231,9 +231,7 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 			<td rowspan="1">x86 32-bit</td>
 			<td>Sun Java 6 Update 17<br/>
 				Sun Java 5 Update 22<br/>
-				<s>Sun Java 1.4.2 Update 16</s><br/>
 				IBM Java 5 SR11<br/>
-				<s>IBM Java 1.4.2 SR10</s><br/>
 				Oracle JRockit 27.6.5
 			</td>
 		</tr>
@@ -250,9 +248,7 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 			<td rowspan="1">x86 32-bit</td>
 			<td>Sun Java 6 Update 17<br/>
 				Sun Java 5 Update 22<br/>
-				<s>Sun Java 1.4.2 Update 16</s><br/>
 				IBM Java 5 SR11<br/>
-				<s>IBM Java 1.4.2 SR10</s><br/>
 				Oracle JRockit 27.6.5
 			</td>
 			<td rowspan="3">GTK</td>
@@ -543,7 +539,7 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 	have publicly available specifications (only JSR-308 at this point). [JDT Core,
 	JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288548">288548</a>)
 	<p>
-	<s>NOTE:</s> In order to align our schedule with the delayed official Java 7 appearance 
+	<strong>NOTE:</strong> In order to align our schedule with the delayed official Java 7 appearance 
 	and due to lack of publicly available specifications (including lack of a Java 7 JSR), we have
 	decided to move the development work to a separate branch and decouple it from the 3.6 release. 
 	In that branch we will continue to develop the Java 7 features as they become publicly accessible. 
