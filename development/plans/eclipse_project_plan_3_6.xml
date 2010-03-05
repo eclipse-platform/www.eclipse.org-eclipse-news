@@ -16,8 +16,8 @@
 <p:introduction>
 <div>
 <p>
-Last revised 14:00 ET February 3, 2010 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> marks
-interesting changes since the previous draft of <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_3_6_20090903.xml">September 3, 2009</a>.)
+Last revised 10:00 ET March 5, 2010 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> marks
+interesting changes since the previous draft of <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_3_6_20100203.xml">February 3, 2009</a>.)
 </p>
 <p><i>Please send comments about this plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
   mailing list.</i>
@@ -114,10 +114,10 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 <p:milestone date="01/29/2010" milestone="M5"><div>3.6M5</div></p:milestone>
 <p:milestone date="03/12/2010" milestone="M6"><div>3.6M6 (API Freeze)</div></p:milestone>
 <p:milestone date="04/30/2010" milestone="M7"><div>3.6M7 (Feature Freeze)</div></p:milestone>
-<p:milestone date="05/14/2010" milestone="RC1"><div><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 3.6RC1</div></p:milestone>
-<p:milestone date="05/21/2010" milestone="RC2"><div><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 3.6RC2</div></p:milestone>
-<p:milestone date="05/28/2010" milestone="RC3"><div><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 3.6RC3</div></p:milestone>
-<p:milestone date="06/04/2010" milestone="RC4"><div><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 3.6RC4</div></p:milestone>
+<p:milestone date="05/14/2010" milestone="RC1"><div>3.6RC1</div></p:milestone>
+<p:milestone date="05/21/2010" milestone="RC2"><div>3.6RC2</div></p:milestone>
+<p:milestone date="05/28/2010" milestone="RC3"><div>3.6RC3</div></p:milestone>
+<p:milestone date="06/04/2010" milestone="RC4"><div>3.6RC4</div></p:milestone>
 
 <p:postamble>
 <div>
@@ -231,9 +231,9 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 			<td rowspan="1">x86 32-bit</td>
 			<td>Sun Java 6 Update 17<br/>
 				Sun Java 5 Update 22<br/>
-				<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> <s>Sun Java 1.4.2 Update 16</s><br/>
+				<s>Sun Java 1.4.2 Update 16</s><br/>
 				IBM Java 5 SR11<br/>
-				<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> <s>IBM Java 1.4.2 SR10</s><br/>
+				<s>IBM Java 1.4.2 SR10</s><br/>
 				Oracle JRockit 27.6.5
 			</td>
 		</tr>
@@ -250,9 +250,9 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 			<td rowspan="1">x86 32-bit</td>
 			<td>Sun Java 6 Update 17<br/>
 				Sun Java 5 Update 22<br/>
-				<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> <s>Sun Java 1.4.2 Update 16</s><br/>
+				<s>Sun Java 1.4.2 Update 16</s><br/>
 				IBM Java 5 SR11<br/>
-				<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> <s>IBM Java 1.4.2 SR10</s><br/>
+				<s>IBM Java 1.4.2 SR10</s><br/>
 				Oracle JRockit 27.6.5
 			</td>
 			<td rowspan="3">GTK</td>
@@ -342,9 +342,6 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 			<td rowspan="1">Universal 64-bit</td>
 		</tr>
 	</table>
-	<p>
-   <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> The service release or update level of all JRE's have been updated in this plan revision.
-   </p>
  </center>
 
 <p>As stated above, <i>we expect that Eclipse works fine on other current
@@ -495,7 +492,7 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 
 <p:committed>
 <ul>
-<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+<li>
 	<strong>Support the win32 version of Eclipse on Windows 7.</strong>
 	Fully support the 32-bit and 64-bit win32 version of SWT and the Eclipse SDK on Windows 7. We will ensure that 
 	applications built on the win32 version of SWT work as well as any other win32 API 
@@ -508,18 +505,6 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 
 <p:proposed>
 <ul>
-<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> revised)
-	<strong>Add support for Java SE 7 features.</strong>
-	The next feature release of Java SE is
-	version 7, which will probably be available in the second half of 2010. While
-	the contents of this release are still under discussion, that release is
-	expected to contain extensions to the Java language, including annotations on
-	types (JSR-308), modularity support (JSR-294), and other minor language changes
-	(Coin project). Eclipse Java tooling will include initial support for
-	compiling, editing, and launching applications for Java 7 for those parts which
-	have publicly available specifications (only JSR-308 at this point). [JDT Core,
-	JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288548">288548</a>)
-</li>
 <li>
 	<strong>Support Ubuntu</strong>
 	Ubuntu LTS is an increasingly popular choice as an enterprise Linux distribution. 
@@ -545,7 +530,27 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 </p:proposed>
 
 <p:deferred>
-  <p><i>None at this time.</i></p>
+<ul>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> deferred)
+	<strong>Add support for Java SE 7 features.</strong>
+	The next feature release of Java SE is
+	version 7, which will probably be available in the second half of 2010. While
+	the contents of this release are still under discussion, that release is
+	expected to contain extensions to the Java language, including annotations on
+	types (JSR-308), modularity support (JSR-294), and other minor language changes
+	(Coin project). Eclipse Java tooling will include initial support for
+	compiling, editing, and launching applications for Java 7 for those parts which
+	have publicly available specifications (only JSR-308 at this point). [JDT Core,
+	JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288548">288548</a>)
+	<p>
+	<s>NOTE:</s> In order to align our schedule with the delayed official Java 7 appearance 
+	and due to lack of publicly available specifications (including lack of a Java 7 JSR), we have
+	decided to move the development work to a separate branch and decouple it from the 3.6 release. 
+	In that branch we will continue to develop the Java 7 features as they become publicly accessible. 
+	We will deliver separate updates for the official builds in order to provide early access to Java 7 features.
+	</p>
+</li>
+</ul>
 </p:deferred>
 
 </p:theme>
@@ -563,14 +568,14 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 
 <p:committed>
 <ul>
-<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+<li>
 	<strong>Help system extensibility.</strong>
 	The current Eclipse Help web application provides limited support for customization by clients.  
 	Additional extensibility should be provided such as supporting insertion of custom views and frames, 
 	customizing the tool bar, and changing the look and feel (colors, fonts, etc).
 	[User Assistance] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288558">288558</a>)
 </li>
-<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+<li>
 	<strong>Asynchronous debug commands.</strong>
 	Currently, the debug platform exposes interfaces for common commands but all 
 	implementation of the commands as well as scheduling operations are internal. 
@@ -629,7 +634,7 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 
 <p:committed>
 <ul>
-<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+<li>
 	<strong>Build anywhere.</strong>
 	The current Eclipse project build and test infrastructure is highly customized and
 	tailored to a particular build environment. We will invest in simplifying and streamlining
@@ -637,7 +642,7 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 	be initiated by more people. 
 	[Rel. Eng., PDE] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288560">288560</a>)
 </li>
-<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> new)
+<li>
 	<strong>Test framework support for JUnit 4.</strong>
 	The Eclipse project automated test framework only supports running tests against Junit version 3.
 	JUnit 3 was replaced several years ago by JUnit 4, so we will work to ensure JUnit 4
@@ -765,7 +770,7 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> org.eclipse.ant.launching</td>
+      <td>org.eclipse.ant.launching</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -817,7 +822,7 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
       <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
-      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> org.eclipse.core.externaltools</td>
+      <td>org.eclipse.core.externaltools</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -945,7 +950,7 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> org.eclipse.jdt.junit.core</td>
+      <td>org.eclipse.jdt.junit.core</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -1029,7 +1034,7 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> org.eclipse.pde.launching</td>
+      <td>org.eclipse.pde.launching</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
@@ -1221,7 +1226,7 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
       <td><div align="center">1.3</div></td>
     </tr>
     <tr>
-      <td><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> org.junit 4.7.0</td>
+      <td>org.junit 4.7.0</td>
       <td><div align="center">1.5</div></td>
     </tr>
     <tr>

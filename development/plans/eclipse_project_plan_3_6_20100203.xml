@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 17:00 ET January 6, 2010 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> marks
+Last revised 14:00 ET February 3, 2010 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> marks
 interesting changes since the previous draft of <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_3_6_20090903.xml">September 3, 2009</a>.)
 </p>
 <p><i>Please send comments about this plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
@@ -114,6 +114,10 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 <p:milestone date="01/29/2010" milestone="M5"><div>3.6M5</div></p:milestone>
 <p:milestone date="03/12/2010" milestone="M6"><div>3.6M6 (API Freeze)</div></p:milestone>
 <p:milestone date="04/30/2010" milestone="M7"><div>3.6M7 (Feature Freeze)</div></p:milestone>
+<p:milestone date="05/14/2010" milestone="RC1"><div><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 3.6RC1</div></p:milestone>
+<p:milestone date="05/21/2010" milestone="RC2"><div><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 3.6RC2</div></p:milestone>
+<p:milestone date="05/28/2010" milestone="RC3"><div><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 3.6RC3</div></p:milestone>
+<p:milestone date="06/04/2010" milestone="RC4"><div><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 3.6RC4</div></p:milestone>
 
 <p:postamble>
 <div>
@@ -225,7 +229,7 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 		<tr class="c0">
 			<td rowspan="2">XP</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td>Sun Java 6 Update 6<br/>
+			<td>Sun Java 6 Update 17<br/>
 				Sun Java 5 Update 22<br/>
 				<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> <s>Sun Java 1.4.2 Update 16</s><br/>
 				IBM Java 5 SR11<br/>
@@ -244,7 +248,7 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 			<td rowspan="3">Red Hat Enterprise Linux</td>
 			<td rowspan="2">5.0</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td>Sun Java 6 Update 6<br/>
+			<td>Sun Java 6 Update 17<br/>
 				Sun Java 5 Update 22<br/>
 				<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> <s>Sun Java 1.4.2 Update 16</s><br/>
 				IBM Java 5 SR11<br/>
@@ -283,7 +287,8 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 		</tr>
 		<!-- ************ Ubuntu ************** -->
 		<tr class="c1">
-			<td rowspan="2">Ubuntu Long Term Support</td>
+<!--			<td rowspan="2">Ubuntu Long Term Support</td> -->
+			<td rowspan="2">Ubuntu</td>
 			<td rowspan="2">9.04</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">Sun Java 5 Update 22<br/>
@@ -444,7 +449,7 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
   to be added to the Eclipse Project deliverables, or some aspect of the Eclipse Project that is
   to be improved. Each plan item has its own entry in the Eclipse bugzilla database, with a title
   and a concise summary (usually a single paragraph) that explains the work item at a suitably
-  high enough level so that everyone can readily understand what the work item.</p>
+  high enough level so that everyone can readily understand what the work item entails.</p>
 <p> Although there are four projects under the top-level Eclipse Project, there
   is a significant amount of commonality and shared effort between them. In general,
   many plan items involve coordinated changes to multiple components, and thus
