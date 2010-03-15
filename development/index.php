@@ -44,8 +44,6 @@ ob_start();
 	        team has completed and what they are currently working on.</li>
 	      <li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse.e4"> e4 Project 1.0 Release Plan</a><br>
 	        This document lays out the feature and API set for the 1.0 release of the e4 Project. </li>
-          <li><a href="plans/freeze_plan_3_5_2.php"> Eclipse Project Galileo SR2 Endgame Plan</a><br>
-    		Information about how we plan to wrap up Galileo Service Release 2 (version 3.5.2).</li>     
 	    </ul>
       	</div>
 		<div class="homeitem3col">
@@ -116,12 +114,14 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>Historical information about past releases</h3>			
 			<ul>
+            <li><a href="plans/freeze_plan_3_5_2.php"> Eclipse Project Galileo SR2 Endgame Plan</a><br>
+      			Information about how we wrapped up Galileo Service Release 2 (version 3.5.2).</li>     
 	        <li><a href="plans/freeze_plan_3_5_1.php"> Eclipse Project Galileo SR1 Endgame Plan</a><br>
-	    		Information about how we wrapped up Galileo Service Release 1 (version 3.5.1).</li>     
-	      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/e4/development/plan/e4_plan_0_9.xml"> e4 Project 0.9 Release Plan</a><br>
-	        This document lays out the feature and API set for the 0.9 release of the e4 Project. </li>
-	      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/eclipse_project_plan_3_5.xml"> Eclipse Project Galileo Plan</a><br>
-	        This document lays out the feature and API set for the Galileo (3.5) release of the Eclipse Project. </li>
+	    	 	Information about how we wrapped up Galileo Service Release 1 (version 3.5.1).</li>     
+	      	<li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/e4/development/plan/e4_plan_0_9.xml"> e4 Project 0.9 Release Plan</a><br>
+	        	This document lays out the feature and API set for the 0.9 release of the e4 Project. </li>
+	      	<li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/eclipse_project_plan_3_5.xml"> Eclipse Project Galileo Plan</a><br>
+	        	This document lays out the feature and API set for the Galileo (3.5) release of the Eclipse Project. </li>
 	        <li><a href="freeze_plan_3.5.php"> Eclipse Project Galileo Endgame Plan</a><br>
 	    		Information about how we wrapped up the Galileo release (version 3.5).</li>     
 	        <li><a href="freeze_plan_3_4_2.php"> Eclipse Project Ganymede SR2 Endgame Plan</a><br>
