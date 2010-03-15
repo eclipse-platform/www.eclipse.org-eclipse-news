@@ -189,7 +189,7 @@ ob_start();
 	          </tr>
 	          <tr>
 	            <td height="20"></td>            
-	            <td align="right" height="20">24</td>
+	            <td align="right" height="20">23</td>
 	            <td align="right" height="20"></td>
 	            <td height="20">&nbsp;&nbsp;<b>Release 3.6 available</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
