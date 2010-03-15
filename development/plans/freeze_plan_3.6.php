@@ -88,7 +88,7 @@ ob_start();
 	          </tr>
 	          <tr>
 	            <td height="20"></td>
-	            <td align="right" height="20">21</td>
+	            <td align="right" height="20">20</td>
 	            <td align="right" height="20"> Thu 8:00 am EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 2 build</b></td>
 	            <td height="20">&nbsp;</td>
@@ -100,8 +100,8 @@ ob_start();
 	          </tr>
 	          <tr>
 	            <td height="20"></td>
-	            <td align="right" height="20">24</td>
-	            <td align="right" height="20">Mon 8:00 am EDT</td>
+	            <td align="right" height="20">25</td>
+	            <td align="right" height="20">Tue 8:00 am EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Start 1-day test pass against RC2</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#TestPassUsingRC2"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">details</a></b></td>
@@ -109,8 +109,8 @@ ob_start();
 	          </tr>          
 	          <tr>
 	            <td height="20"></td>
-	            <td align="right" height="20">25</td>
-	            <td align="right" height="20">Tue 8:00 am EDT</td>
+	            <td align="right" height="20">26</td>
+	            <td align="right" height="20">Wed 8:00 am EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Start fix pass</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC2"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">rules</a></b></td>
@@ -358,7 +358,8 @@ ob_start();
                 <li>No outstanding P1 defects.
                 <li>As few P2 defects as possible.</li>
       		</ul>
-      		<p>Monday May 24 is a holiday in Canada.  Monday May 31 is a holiday in the US.</p>
+      		<p>Monday May 24 is a holiday in Canada, Switzerland, and France. <br/>
+      		Monday May 31 is a holiday in the US.</p>
       		<h4><a name="TestPassUsingRC2"></a>Test pass using RC2</h4>
             <p>Concerted 2-day testing effort on RC2 involving
               entire community including all component teams. In an effort to
