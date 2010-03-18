@@ -344,8 +344,8 @@ ob_start();
                 <li>No outstanding P1 defects. </li>
                 <li>As few P2 defects as possible.</li>
       		</ul>
-      		<p>Monday May 3 is a holiday in Poland.</p>
-      		<p>Thursday May 13 is a holiday in Switzerland, France, and Poland.</p>
+      		<p>Monday May 3 is a holiday in Poland.<br/>
+      		Thursday May 13 is a holiday in Switzerland, France, and Poland.</p>
 			<h4><a name="TestPassBeforeRC2"></a>Test pass prior to RC2</h4>
 			<p>Full day test pass involving entire community, using 
             the most recent nightly build to help stabilize HEAD for the upcoming RC2 build.
