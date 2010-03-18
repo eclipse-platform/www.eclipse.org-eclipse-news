@@ -22,7 +22,15 @@ Last revised 10:00 ET March 18, 2010.
   mailing list.</i>
 </p>
 <p>This document lays out the feature and API set for the next feature release
-  of the Eclipse SDK after 3.6, designated release 4.0 and code-named e4.
+  of the Eclipse SDK after 3.6, designated release 4.0. This is a special release of the
+  Eclipse project, whose only goal is to adopt technology from the e4 incubator
+  while maintaining full API compatibility with previous releases. There are very few new features
+  for end users in this release, and no changes at all in the JDT and PDE sub-projects.
+  The end result will be a release with a similar feature set to the Eclipse project
+  3.6 (Helios) release, but with a brand new implementation of the platform user interface
+  under the covers. Since this is effectively a 1.0 release of this new implementation,
+  we expect it to be a bit rough around the edges, with slightly less polish than
+  earlier releases built on the old workbench technology.
 </p>
 <p>Plans do not materialize out of nowhere, nor are they entirely static. To
   ensure the planning process is transparent and open to the entire Eclipse community,
