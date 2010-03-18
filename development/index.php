@@ -44,6 +44,8 @@ ob_start();
 	        team has completed and what they are currently working on.</li>
 	      <li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse.e4"> e4 Project 1.0 Release Plan</a><br>
 	        This document lays out the feature and API set for the 1.0 release of the e4 Project. </li>
+	        <li><a href="plans/freeze_plan_3.6.php"> Eclipse Project Helios Endgame Plan</a><br>
+	    		Information about how we plan to wrap up the Helios release (version 3.6).</li>     
 	    </ul>
       	</div>
 		<div class="homeitem3col">
