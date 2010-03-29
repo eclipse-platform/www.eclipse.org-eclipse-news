@@ -217,7 +217,7 @@ function buildButtons(loadedJSON) {
 	for (i = 0; i < assignments.length; i++) {
 		var ownerEmail;
 		var cc = assignments[i]["cc"];
-		var ccEmail;
+		var ccEmail = null;
 		for (j = 0; j < users.length; j++) {
 			if (users[j].user == assignments[i].assignee) {
 				ownerEmail = users[j].email;
