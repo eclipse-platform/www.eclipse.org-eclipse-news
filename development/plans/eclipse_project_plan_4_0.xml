@@ -128,8 +128,8 @@ Last revised 10:00 ET March 18, 2010.
 <p>Our target is to complete 4.0 in late July 2010, after the Helios simultaneous release.
   All release deliverables will be available for download as soon as the release has been
   tested and validated in the target operating configurations listed below.</p>
-<p>Dates for builds and test passes after M7 are available in the 
-<a href="http://www.eclipse.org/eclipse/development/plans/freeze_plan_4.0.php">Eclipse Helios end-game plan</a>.</p>
+<p>Dates for builds and test passes after M7 will be available in the 
+Eclipse SDK 4.0 end-game plan.</p>
 </div>
 </p:postamble>
 
@@ -150,7 +150,7 @@ Last revised 10:00 ET March 18, 2010.
 <p>In general, the 4.0 release of the Eclipse Project is developed on a mix
   of Java 1.4, Java 5 and Java 6 VMs. As such, the Eclipse SDK as a whole
   is targeted at all modern, desktop Java VMs. Most functionality is available for
-  1.4 level development everywhere, and extended development capabilities are made
+  use on Java 5 everywhere, and extended development capabilities are made
   available on the VMs that support them.</p>
 <p><a href="#Appendix1">Appendix 1</a> contains a table that indicates the class
   library level required for each bundle.</p>
@@ -370,7 +370,7 @@ Last revised 10:00 ET March 18, 2010.
 
 <p><strong>API Contract Compatibility:</strong> Eclipse SDK 4.0 will be upwards
   contract-compatible with Eclipse SDK 3.6 except in those areas noted in the
-  <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.platform.doc.isv/porting/eclipse_3_6_porting_guide.html" target="_top">
+  <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.platform.doc.isv/porting/eclipse_4_0_porting_guide.html" target="_top">
     <em>Eclipse 4.0 Plug-in Migration Guide</em>
   </a>. Programs that use affected APIs and extension points will need to be ported
   to Eclipse SDK 4.0 APIs. Downward contract compatibility
@@ -382,7 +382,7 @@ Last revised 10:00 ET March 18, 2010.
   
 <p><strong>Binary (plug-in) Compatibility:</strong> Eclipse SDK 4.0 will be upwards
   binary-compatible with Eclipse SDK 3.6 except in those areas noted in the
-  <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.platform.doc.isv/porting/eclipse_3_6_porting_guide.html" target="_top">
+  <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.platform.doc.isv/porting/eclipse_4_0_porting_guide.html" target="_top">
     <em>Eclipse 4.0 Plug-in Migration Guide</em>
   </a>. Downward plug-in compatibility is not supported. Plug-ins for Eclipse SDK
   4.0 will not be usable in Eclipse SDK 3.6. Refer to
@@ -392,7 +392,7 @@ Last revised 10:00 ET March 18, 2010.
   
 <p><strong>Source Compatibility:</strong> Eclipse SDK 4.0 will be upwards source-compatible
   with Eclipse SDK 3.6 except in the areas noted in the
-  <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.platform.doc.isv/porting/eclipse_3_6_porting_guide.html" target="_top">
+  <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.platform.doc.isv/porting/eclipse_4_0_porting_guide.html" target="_top">
     <em>Eclipse 4.0 Plug-in Migration Guide</em>
   </a>. This means that source files written
   to use Eclipse SDK 3.6 APIs might successfully compile and run against Eclipse
@@ -618,7 +618,7 @@ into very different kinds of applications.
     </tr>
     <tr>
       <td><div align="center"><strong>1.4</strong></div></td>
-      <td>J2SE 1.4 - indicates that the bundle can only be run on JSE 1.4 or
+      <td>J2SE 1.4 - indicates that the bundle can only be run on J2SE 1.4 or
         greater.</td>
     </tr>
     <tr>
