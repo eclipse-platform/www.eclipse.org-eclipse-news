@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 10:00 ET March 18, 2010.
+Last revised 10:00 ET April 12, 2010.
 </p>
 <p><i>Please send comments about this plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
   mailing list.</i>
@@ -90,11 +90,10 @@ Last revised 10:00 ET March 18, 2010.
     repository</a>.</li>
   <li>A p2 repository of binary release deliverables, maintained in a public, stable location
   on the <a href="http://eclipse.org">http://eclipse.org</a> Web site.</li>
+  <li>A p2 repository of incubating components from the e4 sub-project,
+  maintained in a public, stable location on the <a href="http://eclipse.org">http://eclipse.org</a> Web site.</li>
   <li>Eclipse SDK (runtime binary and SDK for Equinox[*], Platform, JDT, and PDE) (downloadable).</li>
   <li>Eclipse Platform (runtime binary and SDK for the Equinox[*] and Platform only) (downloadable).</li>
-  <li>Eclipse RCP (runtime binary and SDK for the Rich Client Platform) (downloadable).</li>
-  <li>Eclipse JDT (runtime binary and SDK for the Java Development Tools) (downloadable).</li>
-  <li>Eclipse PDE (runtime binary and SDK for the Plug-in Development Environment) (downloadable).</li>
   <li>Eclipse SDK Examples (downloadable).</li>
   <li>SWT distribution (downloadable).</li>
 </ul>
@@ -111,24 +110,24 @@ Last revised 10:00 ET March 18, 2010.
 <p:release_milestones>
 
 <p:preamble><p>      
-  Release milestones will be occurring at roughly 6 week intervals, and will be aligned with the
-  <a href="http://wiki.eclipse.org/Helios_Simultaneous_Release">
+  Release milestones will be occurring at roughly 6 week intervals, and will be 
+  four weeks behind the <a href="http://wiki.eclipse.org/Helios_Simultaneous_Release">
   Helios Simultaneous Release</a> train.</p>
 </p:preamble>
 
-<p:milestone date="10/09/2009" milestone="M1"><div>1.0M1</div></p:milestone>
-<p:milestone date="11/20/2009" milestone="M2"><div>1.0M2</div></p:milestone>
-<p:milestone date="01/15/2010" milestone="M3"><div>1.0M3</div></p:milestone>
-<p:milestone date="02/26/2010" milestone="M4"><div>1.0M4</div></p:milestone>
-<p:milestone date="04/09/2010" milestone="M5"><div>1.0M5</div></p:milestone>
-<p:milestone date="05/21/2010" milestone="M6"><div>1.0M6 (Feature and API Freeze)</div></p:milestone>
+<p:milestone date="10/09/2009" milestone="M1"><div>4.0M1</div></p:milestone>
+<p:milestone date="11/20/2009" milestone="M2"><div>4.0M2</div></p:milestone>
+<p:milestone date="01/15/2010" milestone="M3"><div>4.0M3</div></p:milestone>
+<p:milestone date="02/26/2010" milestone="M4"><div>4.0M4</div></p:milestone>
+<p:milestone date="04/09/2010" milestone="M5"><div>4.0M5</div></p:milestone>
+<p:milestone date="05/21/2010" milestone="M6"><div>4.0M6 (Feature and API Freeze)</div></p:milestone>
 
 <p:postamble>
 <div>
 <p>Our target is to complete 4.0 in late July 2010, after the Helios simultaneous release.
   All release deliverables will be available for download as soon as the release has been
   tested and validated in the target operating configurations listed below.</p>
-<p>Dates for builds and test passes after M7 will be available in the 
+<p>Dates for builds and test passes after M6 will be available in the 
 Eclipse SDK 4.0 end-game plan.</p>
 </div>
 </p:postamble>
