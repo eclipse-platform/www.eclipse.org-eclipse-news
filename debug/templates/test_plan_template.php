@@ -9,7 +9,7 @@
 
 	#*****************************************************************************
 	#
-	# Copyright (c) 2008, 2009 IBM Corporation and others.
+	# Copyright (c) 2008, 2010 IBM Corporation and others.
  	# All rights reserved. This program and the accompanying materials
  	# are made available under the terms of the Eclipse Public License v1.0
  	# which accompanies this distribution, and is available at
@@ -553,6 +553,13 @@
 					    <li>watchpoint cannot appear on 'static final' field</li>
 					    <li>exception Breakpoints - Run menu action, hyperlink from stack trace, breakpoints view</li>
 				    </ol>
+			    <h3>Creation Of Breakpoints on Member Types</h3>
+					<ol>
+						<li>all breakpoint types should be created on inner &amp; outer &amp; local classes </li>
+					  	<li>all breakpoint types should be created on initializers for inner &amp; outer &amp; local types</li>
+					  	<li>no duplicate breakpoints should occur</li>
+					  	<li>all breakpoint types should be created on member types of an Annotation </li>
+					</ol>
 				<h3>Refactoring</h3>
 					<ol>
 						<li>breakpoints should be updated if enclosing type is refactored</li>
