@@ -9,7 +9,7 @@
 
 	#*****************************************************************************
 	#
-	# Copyright (c) 2007, 2009 IBM Corporation and others.
+	# Copyright (c) 2007, 2010 IBM Corporation and others.
  	# All rights reserved. This program and the accompanying materials
  	# are made available under the terms of the Eclipse Public License v1.0
  	# which accompanies this distribution, and is available at
@@ -18,7 +18,7 @@
 	#     IBM Corporation - initial implementation
 	#
 	# Author: 		Debug Team
-	# Date:			October 29, 2007
+	# Date:			April 26, 2010
 	#
 	# Description: This page presents all test plans used and the milestones they were used for
 	#
@@ -42,6 +42,7 @@
 			<h2><b>3.6 Test Plans</b></h2>
 			<a name="3-6_testing"></a>
 			<ul>
+				<li><a href="/eclipse/debug/test_plans/test_plan-3.6M7.php">3.6M7</a></li>
 				<li><a href="/eclipse/debug/test_plans/test_plan-3.6M3.php">3.6M3</a></li>
 				<li><a href="/eclipse/debug/test_plans/test_plan-3.6.php">3.6</a></li>
 			</ul>
