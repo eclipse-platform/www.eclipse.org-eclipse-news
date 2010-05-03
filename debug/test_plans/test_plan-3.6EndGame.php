@@ -56,14 +56,14 @@
 			  </tr>
 			  <tr> 
 			    <td><a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.6M7.php#Java6">Java 6.0 Features</a></td>
-			    <td> <div align="center">Tues, May 4</div></td>
+			    <td> <div align="center">May 4</div></td>
 				<td> <div align="center">&nbsp;</div></td>
 				<td><div align="center">&nbsp;</div></td>
 				<td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.6M7.php#Evaluations">Evaluations</a></td>
-			    <td> <div align="center">Tues, May 4</div></td>
+			    <td> <div align="center">May 4</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 				<td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
@@ -72,7 +72,7 @@
 			    <td><a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.6M7.php#ContextLaunching">Context Launching</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Tues, May 4</div></td>
+			    <td> <div align="center">May 4</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
@@ -80,12 +80,12 @@
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Tues, May 4</div></td>
+			    <td> <div align="center">May 4</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.6M7.php#Launch_Modes">Launch Modes</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td><div align="center">Tues, May 4</div></td>
+			    <td><div align="center">May 4</div></td>
 				<td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>				
 			  </tr>
@@ -93,13 +93,13 @@
 			    <td><a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.6M7.php#LaunchConfigurations">Launch Configurations</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td><div align="center">Tues, May 4</div></td>
+			    <td><div align="center">May 4</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.6M7.php#Debug">View Management</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Tues, May 4</div></td>
+			    <td> <div align="center">May 4</div></td>
 				<td> <div align="center">&nbsp;</div></td>
 				<td> <div align="center">&nbsp;</div></td>
 			  </tr>
@@ -108,39 +108,39 @@
 			    <td><div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Tues, May 4</div></td>
+			    <td> <div align="center">May 4</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.6M7.php#Step">Stepping Tests</a></td>
 				<td> <div align="center">&nbsp;</div></td>
 				<td><div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Wed, May 5</div></td>
+			    <td> <div align="center">May 5</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.6M7.php#Logical">Logical Structures</a></td>
 				<td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Wed, May 5</div></td>
+			    <td> <div align="center">May 5</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.6M7.php#Watch">Watch Items</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Wed, May 5</div></td>
+			    <td> <div align="center">May 5</div></td>
 				<td> <div align="center">&nbsp;</div></td>
 				<td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.6M7.php#Context">Context Menu Launching</a></td>
-			    <td><div align="center">Wed, May 5</div></td>
+			    <td><div align="center">May 5</div></td>
 				<td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			   	<td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.6M7.php#Classpaths">Runtime Classpath</a></td>
-				<td> <div align="center">Wed, May 5</div></td>
+				<td> <div align="center">May 5</div></td>
 				<td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
@@ -148,7 +148,7 @@
 			  <tr> 
 			    <td><a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.6M7.php#Source">Source Lookup</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Wed, May 5</div></td>
+			    <td> <div align="center">May 5</div></td>
 			    <td><div align="center">&nbsp;</div></td>
 				<td> <div align="center">&nbsp;</div></td>
 			  </tr>
@@ -156,7 +156,7 @@
 			    <td><a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.6M7.php#Monitors">Monitor Information</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Wed, May 5</div></td>
+			    <td> <div align="center">May 5</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
@@ -164,25 +164,25 @@
 			    <td><div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Wed, May 5</div></td>
+			    <td> <div align="center">May 5</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.6M7.php#JREs">Installed JREs</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Thur, May 6</div></td>
+			    <td> <div align="center">May 6</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.6M7.php#EEs">Execution Environments</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Thur, May 6</div></td>
+			    <td> <div align="center">May 6</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.6M7.php#String">String Variables</a></td>
-			    <td> <div align="center">Thur, May 6</div></td>
+			    <td> <div align="center">May 6</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 				<td> <div align="center">&nbsp;</div></td>
 				<td> <div align="center">&nbsp;</div></td>
@@ -192,25 +192,25 @@
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 				<td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Thur, May 6</div></td>
+			    <td> <div align="center">May 6</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.6M7.php#Variables">Variables</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Thur, May 6</div></td>
+			    <td> <div align="center">May 6</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.6M7.php#Refactoring">Refactoring</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
-				<td> <div align="center">Thur, May 6</div></td>
+				<td> <div align="center">May 6</div></td>
 				<td><div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.6M7.php#Applets">Applets</a></td>
-				<td> <div align="center">Thur, May 6</div></td>
+				<td> <div align="center">May 6</div></td>
 				<td> <div align="center">&nbsp;</div></td>
 				<td> <div align="center">&nbsp;</div></td>
 				<td><div align="center">&nbsp;</div></td>
@@ -220,11 +220,11 @@
 			    <td> <div align="center">&nbsp;</div></td>
 				<td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Thur, May 6</div></td>
+			    <td> <div align="center">May 6</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.6M7.php#JSP">JSP Example</a></td>
-			    <td> <div align="center">Fri, May 7</div></td>
+			    <td> <div align="center">May 7</div></td>
 			    <td><div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
@@ -232,7 +232,7 @@
 			  <tr> 
 			    <td><a href="http://www.eclipse.org/eclipse/debug/test_plans/test_plan-3.6M7.php#STRESS">Stress Tests</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Fri, May 7</div></td>
+			    <td> <div align="center">May 7</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
@@ -240,7 +240,7 @@
 			    <td><a href="http://wiki.eclipse.org/PDE/Testing/Scenarios#End-to-End_Scenarios">End-to-End Scenarios</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Fri, May 7</div></td>
+			    <td> <div align="center">May 7</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
@@ -248,11 +248,11 @@
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Fri, May 7</div></td>
+			    <td> <div align="center">May 7</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="http://wiki.eclipse.org/PDE/Testing/Scenarios#Export">Export</a></td>
-			    <td> <div align="center">Fri, May 7</div></td>
+			    <td> <div align="center">May 7</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
@@ -260,7 +260,7 @@
 			  <tr> 
 			    <td><a href="http://wiki.eclipse.org/PDE/Testing/Scenarios#Launching">Launching</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Fri, May 7</div></td>
+			    <td> <div align="center">May 7</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
@@ -268,7 +268,7 @@
 			    <td><a href="http://wiki.eclipse.org/PDE/Testing/Scenarios#Target_Management">Target Management</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Fri, May 7</div></td>
+			    <td> <div align="center">May 7</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
@@ -276,11 +276,11 @@
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Fri, May 7</div></td>
+			    <td> <div align="center">May 7</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="http://wiki.eclipse.org/PDE/Testing/Scenarios#Refactoring">Refactoring</a></td>
-			    <td> <div align="center">Mon, May 10</div></td>
+			    <td> <div align="center">May 10</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
@@ -288,7 +288,7 @@
 			  <tr> 
 			    <td><a href="http://wiki.eclipse.org/PDE/Testing/Scenarios#Cool_Wizards">Cool Wizards</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Mon, May 10</div></td>
+			    <td> <div align="center">May 10</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
@@ -296,7 +296,7 @@
 			    <td><a href="http://wiki.eclipse.org/PDE/Testing/Scenarios#OSGi_Applications">OSGi Applications</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Mon, May 10</div></td>
+			    <td> <div align="center">May 10</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
@@ -304,11 +304,11 @@
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Mon, May 10</div></td>
+			    <td> <div align="center">May 10</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="http://wiki.eclipse.org/PDE/Testing/Scenarios#Project_Creation">Project Creation</a></td>
-			    <td> <div align="center">Mon, May 10</div></td>
+			    <td> <div align="center">May 10</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
@@ -316,7 +316,7 @@
 			  <tr> 
 			    <td><a href="http://wiki.eclipse.org/PDE/Testing/Scenarios#Editors">Editors</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Mon, May 10</div></td>
+			    <td> <div align="center">May 10</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
@@ -324,7 +324,7 @@
 			    <td><a href="http://wiki.eclipse.org/PDE/Testing/Scenarios#Log_View">Log View</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Mon, May 10</div></td>
+			    <td> <div align="center">May 10</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
@@ -332,11 +332,11 @@
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Mon, May 10</div></td>
+			    <td> <div align="center">May 10</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="http://wiki.eclipse.org/PDE/Testing/Scenarios#P2_Integration">P2 Integration</a></td>
-			    <td> <div align="center">Tues, May 11</div></td>
+			    <td> <div align="center">May 11</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
@@ -344,7 +344,7 @@
 			  <tr> 
 			    <td><a href="http://www.eclipse.org/pde/pde-api-tools/test_plans/test_plan-3.6M5.php#APISETUP">API Setup</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Tues, May 11</div></td>
+			    <td> <div align="center">May 11</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
@@ -352,7 +352,7 @@
 			    <td><a href="http://www.eclipse.org/pde/pde-api-tools/test_plans/test_plan-3.6M5.php#APIBASELINES">API Baselines</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Tues, May 11</div></td>
+			    <td> <div align="center">May 11</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
@@ -360,11 +360,11 @@
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Tues, May 11</div></td>
+			    <td> <div align="center">May 11</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="http://www.eclipse.org/pde/pde-api-tools/test_plans/test_plan-3.6M5.php#TAGSCANNING">Unsupported Javadoc Tags</a></td>
-			    <td> <div align="center">Tues, May 11</div></td>
+			    <td> <div align="center">May 11</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
@@ -372,7 +372,7 @@
 			  <tr> 
 			    <td><a href="http://www.eclipse.org/pde/pde-api-tools/test_plans/test_plan-3.6M5.php#QUICKFIXES">Quick Fixes</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Tues, May 11</div></td>
+			    <td> <div align="center">May 11</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
@@ -380,7 +380,7 @@
 			    <td><a href="http://www.eclipse.org/pde/pde-api-tools/test_plans/test_plan-3.6M5.php#FILTERS">Filters</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Tues, May 11</div></td>
+			    <td> <div align="center">May 11</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
@@ -388,11 +388,11 @@
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Tues, May 11</div></td>
+			    <td> <div align="center">May 11</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="http://www.eclipse.org/pde/pde-api-tools/test_plans/test_plan-3.6M5.php#SYSTEMLIBRARY">Invalid System Library References</a></td>
-			    <td> <div align="center">Tues, May 11</div></td>
+			    <td> <div align="center">May 11</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
@@ -400,7 +400,7 @@
 			  <tr> 
 			    <td><a href="http://www.eclipse.org/pde/pde-api-tools/test_plans/test_plan-3.6M5.php#WORKSPACE">Target Platform Stability</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">Tues, May 11</div></td>
+			    <td> <div align="center">May 11</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>

@@ -42,7 +42,7 @@
 			<h2><b>3.6 Test Plans</b></h2>
 			<a name="3-6_testing"></a>
 			<ul>
-				<li><a href="/eclipse/debug/test_plans/test_plan-3.6M7EndGame.php">3.6 End Game</a></li>
+				<li><a href="/eclipse/debug/test_plans/test_plan-3.6EndGame.php">3.6 End Game</a></li>
 				<li><a href="/eclipse/debug/test_plans/test_plan-3.6M7.php">3.6M7</a></li>
 				<li><a href="/eclipse/debug/test_plans/test_plan-3.6M3.php">3.6M3</a></li>
 				<li><a href="/eclipse/debug/test_plans/test_plan-3.6.php">3.6</a></li>
