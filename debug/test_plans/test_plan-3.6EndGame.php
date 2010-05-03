@@ -26,7 +26,7 @@
 	#****************************************************************************
 	
 	
-	$pageTitle 		= "Debug Project 3.6M7 Test Matrix";
+	$pageTitle 		= "Debug & PDE 3.6 End Game Test Matrix";
 	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching, test, testing, matrix, plan, 3.6M7";
 	$pageAuthor		= "Debug Team";
 	
