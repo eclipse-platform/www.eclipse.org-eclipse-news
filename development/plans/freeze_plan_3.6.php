@@ -36,13 +36,13 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>May 3, 2010 - RC1 fix pass</b></p>
+			<p><b>May 5, 2010 - RC1 fix pass</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
 	        <table border="0" cellspacing="0" cellpadding="0" align="center">
 	          <tr>
-	            <td align="right" height="20"><b>May 2009</b>&nbsp;</td>
+	            <td align="right" height="20"><b>May 2010</b>&nbsp;</td>
 	          </tr>
 	          <tr>
 	            <td height="20"></td>
@@ -138,7 +138,7 @@ ob_start();
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
 	          <tr>
-	            <td align="right" height="20"><b>June 2009</b>&nbsp;</td>
+	            <td align="right" height="20"><b>June 2010</b>&nbsp;</td>
 	          </tr>                 
 	          <tr>
 	            <td height="20"></td>
@@ -179,7 +179,7 @@ ob_start();
 	            <td height="20"></td>
 	          </tr>
 			   <tr>
-	            <td align="right" height="20"><b>June 2009</b>&nbsp;</td>
+	            <td align="right" height="20"><b>June 2010</b>&nbsp;</td>
 	          </tr>
 			  <tr>
 	            <td height="20"></td>
