@@ -513,6 +513,10 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 </p:committed>
 
 <p:proposed>
+  <p><i>None at this time.</i></p>
+</p:proposed>
+
+<p:deferred>
 <ul>
 <li>
 	<strong>BIDI improvements.</strong>
@@ -521,11 +525,6 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 	and leveraging SWT BIDI support throughout the user interface. 
 	[SWT, Platform UI, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288554 ">288554 </a>)
 </li>	
-</ul>
-</p:proposed>
-
-<p:deferred>
-<ul>
 <li>
 	<strong>Add support for Java SE 7 features.</strong>
 	The next feature release of Java SE is
