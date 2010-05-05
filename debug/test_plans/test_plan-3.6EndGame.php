@@ -422,14 +422,14 @@
 			    <td><a href="http://www.eclipse.org/eclipse/ant/test_plans/3_6M3.php#antdebugging">Ant Debugging</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">May 11</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">May 11</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="http://www.eclipse.org/eclipse/ant/test_plans/3_6M3.php#importexport">Ant Import / Export</a></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">May 11</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
@@ -442,8 +442,8 @@
 			  <tr> 
 			    <td><a href="http://www.eclipse.org/eclipse/ant/test_plans/3_6M3.php#launching">Ant Launching</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">May 11</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
@@ -457,21 +457,21 @@
 			    <td><a href="http://www.eclipse.org/eclipse/ant/test_plans/3_6M3.php#headless_builds">Ant Headless Builds</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">May 11</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">May 11</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="http://www.eclipse.org/eclipse/ant/test_plans/3_6M3.php#headless_ext_tools">Headless External Tools</a></td>
-			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">May 11</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
 			    <td><a href="http://www.eclipse.org/eclipse/ant/test_plans/3_6M3.php#refactoring">Ant Refactoring</a></td>
 			    <td> <div align="center">&nbsp;</div></td>
-			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">May 11</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
