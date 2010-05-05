@@ -441,9 +441,9 @@
 			  </tr>
 			  <tr> 
 			    <td><a href="http://www.eclipse.org/eclipse/ant/test_plans/3_6M3.php#launching">Ant Launching</a></td>
-			    <td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">May 11</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
 			  <tr> 
