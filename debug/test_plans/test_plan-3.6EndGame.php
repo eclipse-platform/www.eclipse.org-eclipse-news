@@ -404,6 +404,83 @@
 			    <td> <div align="center">&nbsp;</div></td>
 			    <td> <div align="center">&nbsp;</div></td>
 			  </tr>
+			  <tr> 
+			    <td><a href="http://www.eclipse.org/eclipse/ant/test_plans/3_6M3.php#anteditor">Ant Editor</a></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">May 11</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			  </tr>
+			  <tr> 
+			    <td><a href="http://www.eclipse.org/eclipse/ant/test_plans/3_6M3.php#antview">Ant View</a></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">May 11</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			  </tr>
+			  <tr> 
+			    <td><a href="http://www.eclipse.org/eclipse/ant/test_plans/3_6M3.php#antdebugging">Ant Debugging</a></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">May 11</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			  </tr>
+			  <tr> 
+			    <td><a href="http://www.eclipse.org/eclipse/ant/test_plans/3_6M3.php#importexport">Ant Import / Export</a></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">May 11</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			  </tr>
+			  <tr> 
+			    <td><a href="http://www.eclipse.org/eclipse/ant/test_plans/3_6M3.php#inputhandling">Ant Input Handling</a></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">May 11</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			  </tr>
+			  <tr> 
+			    <td><a href="http://www.eclipse.org/eclipse/ant/test_plans/3_6M3.php#launching">Ant Launching</a></td>
+			    <td> <div align="center"><img src="/eclipse/ant/images/ok.gif" width="10" height="10"></div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			  </tr>
+			  <tr> 
+			    <td><a href="http://www.eclipse.org/eclipse/ant/test_plans/3_6M3.php#externaltools">External Tools</a></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">May 11</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			  </tr>
+			  <tr> 
+			    <td><a href="http://www.eclipse.org/eclipse/ant/test_plans/3_6M3.php#headless_builds">Ant Headless Builds</a></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">May 11</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			  </tr>
+			  <tr> 
+			    <td><a href="http://www.eclipse.org/eclipse/ant/test_plans/3_6M3.php#headless_ext_tools">Headless External Tools</a></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">May 11</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			  </tr>
+			  <tr> 
+			    <td><a href="http://www.eclipse.org/eclipse/ant/test_plans/3_6M3.php#refactoring">Ant Refactoring</a></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">May 11</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			  </tr>
+			  <tr> 
+			    <td><a href="http://www.eclipse.org/eclipse/ant/test_plans/3_6M3.php#preferences">Ant Preferences</a></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			    <td> <div align="center">May 11</div></td>
+			    <td> <div align="center">&nbsp;</div></td>
+			  </tr>
 			</table>
 			</div>
 		</div>
