@@ -395,9 +395,11 @@ ob_start();
 			<a name="FixPassAfterRC0"></a><h4>May 3-13 - contributions to RC1</h4>
 			<p><b>Focus:</b>(1) P1 defects, (2) performance defects, (3) special 
               &quot;polish&quot; items. Fixing other defects has lower priority.</p>
-            <p><b>Fix approval:</b> Another committer must +1 your bug report. All changes 
-              must have their associated bug reports tagged 3.6RC1. (Ongoing changes 
-              to component documentation do not require special approval.)</p>
+             <p><b>Fix approval:</b> Another committer must +1 your bug report. All changes 
+              must have their associated bug reports tagged 3.6RC1. Ongoing changes 
+              to component documentation do not require special approval.</p>
+              <p>No bugs must appear in this query. If your bug appears in <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&classification=RT&target_milestone=3.6+RC1&longdesc_type=allwordssubstr&longdesc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=flagtypes.name&type0-0-0=notsubstring&value0-0-0=review%2B&field0-1-0=keywords&type0-1-0=notsubstring&value0-1-0=documentation&field0-2-0=keywords&type0-2-0=notsubstring&value0-2-0=test&field0-3-0=keywords&type0-3-0=notsubstring&value0-3-0=example">this query</a>
+              , make sure that it gets a review+ or add the 'Documentation', 'example' or 'test' keyword if appropriate.</p>
              <p><b>API change approval:</b> PMC must approve all API changes. No changes are to
               be released without prior approval and associated bug report.  
               Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
