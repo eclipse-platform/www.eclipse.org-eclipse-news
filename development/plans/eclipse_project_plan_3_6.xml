@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <!--  Use this to test local rendering in firefox. Comment out this line once this plan is linked to portal data. -->
-<?xml-stylesheet type="text/xsl" href="project-plan-render.xsl"?>
+<!-- <?xml-stylesheet type="text/xsl" href="project-plan-render.xsl"?> -->
 
-<!-- <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?> -->
+<?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
 
 <p:plan
   plan-format="1.0"
@@ -16,8 +16,8 @@
 <p:introduction>
 <div>
 <p>
-Last revised 10:00 ET March 5, 2010 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> marks
-interesting changes since the previous draft of <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_3_6_20100203.xml">February 3, 2009</a>.)
+Last revised 10:00 ET May 7, 2010 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> marks
+interesting changes since the previous draft of <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_3_6_20100305.xml">March 5, 2010</a>.)
 </p>
 <p><i>Please send comments about this plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
   mailing list.</i>
@@ -283,9 +283,8 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 		</tr>
 		<!-- ************ Ubuntu ************** -->
 		<tr class="c1">
-<!--			<td rowspan="2">Ubuntu Long Term Support</td> -->
-			<td rowspan="2">Ubuntu</td>
-			<td rowspan="2">9.04</td>
+			<td rowspan="2">Ubuntu Long Term Support</td>
+			<td rowspan="2"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />10.04</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">Sun Java 5 Update 22<br/>
 				IBM Java 5 SR11
@@ -496,12 +495,7 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 	potentially require new development to work around platform specific differences. 
 	[SWT, Platform UI, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288550">288550</a>)
 </li>
-</ul>
-</p:committed>
-
-<p:proposed>
-<ul>
-<li>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
 	<strong>Support Ubuntu</strong>
 	Ubuntu LTS is an increasingly popular choice as an enterprise Linux distribution. 
 	We will ensure that all Eclipse project Linux x86 builds run well on Ubuntu. This will increase 
@@ -509,12 +503,21 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 	platform specific differences. 
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288552">288552</a>)
 </li>
-<li>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
 	<strong>Focus on accessibility.</strong>
   We will work with the community to ensure that we have first-class, accessibility
   support that is compliant with important standards. 
   [SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252646">252646</a>)
 </li>
+</ul>
+</p:committed>
+
+<p:proposed>
+  <p><i>None at this time.</i></p>
+</p:proposed>
+
+<p:deferred>
+<ul>
 <li>
 	<strong>BIDI improvements.</strong>
 	We will work on improving support for bidirectional text (BIDI). Work in this area may include
@@ -522,12 +525,7 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 	and leveraging SWT BIDI support throughout the user interface. 
 	[SWT, Platform UI, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288554 ">288554 </a>)
 </li>	
-</ul>
-</p:proposed>
-
-<p:deferred>
-<ul>
-<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> deferred)
+<li>
 	<strong>Add support for Java SE 7 features.</strong>
 	The next feature release of Java SE is
 	version 7, which will probably be available in the second half of 2010. While
@@ -578,12 +576,7 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 	debug commands/actions. 
 	[Platform Debug] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=284363">284363</a>)
 </li>
-</ul>
-</p:committed>
-
-<p:proposed>
-<ul>
-<li>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
 	<strong>Flexible resources.</strong>
 	The Resource architecture that Eclipse uses has been criticized for being overly Java-centric 
 	and constraining for some use cases. The e4 incubator explored this problem and developed
@@ -591,7 +584,7 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 	review and polish those changes and back-port them to Helios stream where appropriate.
 	[Workspace, Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288556">288556</a>)
 </li>
-<li>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
 	<strong>API tools usage scan improvements.</strong>
 	Eclipse SDK 3.5 included Ant-based support for generating usage scans that indicated what API
 	and internals consumers were using. In this release we will add support to generate
@@ -599,7 +592,7 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 	of scans, and flagging of changes that will break consumers who provided the scan data.
 	[PDE] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288557">288557</a>)
 </li>
-<li>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
 	<strong>Focus on compatibility.</strong>
 	Migrating across major platform releases is costly for consumers due to the 
 	magnitude of API and behavioral changes between releases. 
@@ -610,6 +603,10 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 	[All Components] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288559">288559</a>)
 </li>
 </ul>
+</p:committed>
+
+<p:proposed>
+  <p><i>None at this time.</i></p>
 </p:proposed>
 
 <p:deferred>
@@ -646,19 +643,14 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 	framework, and supports existing use cases such as testing with older platforms such as JDK 1.4.
 	[Rel. Eng., JDT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=153429">153429</a>)
 </li>
-</ul>
-</p:committed>
-
-<p:proposed>
-<ul>
-<li>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
 	<strong>Patch enhancements.</strong>
 	We will improve the tools for viewing and applying patches. This includes work
 	such as applying patches using the synchronize view, improved browsing of hunks,
 	and applying patches from a URL.
 	[Workspace] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288561">288561</a>)
 </li>
-<li>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
 	<strong>Debug and launch enhancements.</strong>
 	We will invest in improving the platform debug infrastructure, including enhancing
 	the breakpoints view, improving the Debug breadcrumb view, and support for
@@ -666,6 +658,9 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
 	[Platform Debug, JDT Debug] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288562">288562</a>)
 </li>
 </ul>
+</p:committed>
+<p:proposed>
+  <p><i>None at this time.</i></p>
 </p:proposed>
 
 <p:deferred>
@@ -1221,7 +1216,7 @@ interesting changes since the previous draft of <a href="http://www.eclipse.org/
       <td><div align="center">1.3</div></td>
     </tr>
     <tr>
-      <td>org.junit 4.7.0</td>
+      <td>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> updated) org.junit 4.8.1</td>
       <td><div align="center">1.5</div></td>
     </tr>
     <tr>
