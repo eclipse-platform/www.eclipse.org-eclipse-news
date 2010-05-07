@@ -44,7 +44,7 @@ ob_start();
 	        team has completed and what they are currently working on.</li>
 	      <li><a href="plans/freeze_plan_3.6.php"> Eclipse Project Helios Endgame Plan</a><br>
     		Information about how we plan to wrap up the Helios release (version 3.6).</li>     
-	      <li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse"> Eclipse Project 4.0 Plan</a><br>
+	      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_0.xml"> Eclipse Project 4.0 Plan</a><br>
 	        This document lays out the feature and API set for the 4.0 early adopter release of the Eclipse Project. </li>
 	      <li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse.e4"> e4 Project July 2010 Release Plan</a><br>
 	        This document lays out the feature and API set for the July 2010 release of the e4 Project. </li>
