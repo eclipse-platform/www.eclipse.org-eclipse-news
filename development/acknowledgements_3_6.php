@@ -16,8 +16,8 @@
 	
 	#
 	# Begin: page-specific settings.  Change these. 
-	$pageTitle 		= "Eclipse 3.5 Acknowledgements";
-	$pageKeywords	= "eclipse, 3.5 acknowledgements, thanks";
+	$pageTitle 		= "Eclipse 3.6 Acknowledgements";
+	$pageKeywords	= "eclipse, 3.6 acknowledgements, thanks";
 	$pageAuthor		= "";
 	
 	# Add page-specific Nav bars here
