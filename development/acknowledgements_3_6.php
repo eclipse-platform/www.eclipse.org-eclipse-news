@@ -41,9 +41,10 @@ ob_start();
 
 
 <p>
-The Eclipse and RT projects (Platform, JDT, PDE, Equinox) development team received a tremendous amount of support from the Eclipse community throughout the 3.6 release cycle. 
-The enormous collective effort of opening bug reports, providing patches, testing, consuming the latest builds and participating in discussions always results in a better 
-release. To everyone that helped a big "Thank you!/Merci!/Danke!".  In particular, the team would like to express its appreciation to the following people.
+The Eclipse and RT Equinox project committers always receive a tremendous amount of support from the community during every
+release.  The 3.6 release cycle is no exception.  We would like to thank the following people for their efforts opening bug reports, 
+providing patches, testing, consuming the latest builds and participating in discussions that resulted in a better Helios release.
+
 </p>
 
 
