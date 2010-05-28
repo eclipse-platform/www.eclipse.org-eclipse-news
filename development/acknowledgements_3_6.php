@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2009-06-09
+	# Date:			2010-05-28
 	#
 	# Description: Eclipse project development main page
 	#
@@ -37,16 +37,24 @@ ob_start();
 
 
 <div class="homeitem3col">
-<h3>Eclipse 3.5 Acknowledgements</h3>
+<h3>Eclipse 3.6 Acknowledgements</h3>
 
 
 <p>
 The Eclipse and RT Equinox project committers always receive a tremendous amount of support from the community during every
 release.  The 3.6 release cycle is no exception.  We would like to thank the following people for their efforts opening bug reports, 
 providing patches, testing, consuming the latest builds and participating in discussions that resulted in a better Helios release.
-
 </p>
 
+<p>
+The Platform and JDT Text team would like to thank everyone who filed good bug reports and enhancement requests. Special thanks go to:<br>
+Tom Hofmann, Stephan Wahlbrink, Anton Leherbauer, Fabio Zadrozny, Doug Satchwell and Kim Moir for all her releng work.
+</p>
+
+<p>
+JDT UI sends thanks to:<br>
+Benjamin Muskalla, Chris West (Faux), Robert Konigsberg, Carsten Pfeiffer and Kim Moir for the poems she sends along with the milestones.
+</p>
 
 
   </div>
