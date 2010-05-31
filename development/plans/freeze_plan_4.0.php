@@ -378,7 +378,7 @@ ob_start();
 			<a name="FixPassRules"><h3>Fix pass rules of engagement</h3></a>
 			<a name="FixPassAfterM6"></a><h4>May 24 June 18 - contributions to RC0</h4>
 			<p><b>Focus:</b>(1) P1 defects, (2) performance defects, (3) special 
-              &quot;polish&quot; items. Fixing other defects has lower priority.</p>
+              &quot;polish&quot; items, (4) provisional API cleanup. Fixing other defects has lower priority.</p>
              <p><b>Fix approval:</b> None.</p>
              <p><b>API change approval:</b> None.</p>
              <p><b>Notification requirements:</b> None.</p>
