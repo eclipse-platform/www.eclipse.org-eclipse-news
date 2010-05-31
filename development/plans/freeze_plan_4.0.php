@@ -400,7 +400,8 @@ ob_start();
               prior to release.</p>
 
 			<a name="FixPassAfterRC1"></a><h4>July 6-16 - contributions to RC2</h4>
-			<p><b>Focus:</b> Serious defects only; documentation.</p>
+			<p><b>Focus:</b>(1) P1 defects, (2) performance defects, (3) special 
+              &quot;polish&quot; items. Fixing other defects has lower priority.</p>
             <p><b>Fix approval:</b> Another committer must +1 your bug report. All changes 
               must have their associated bug reports tagged 4.0RC2. (Ongoing changes 
               to component documentation do not require special approval.)</p>
