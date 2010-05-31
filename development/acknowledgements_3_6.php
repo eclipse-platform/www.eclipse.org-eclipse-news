@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2010-05-28
+	# Date:			2010-05-31
 	#
 	# Description: Eclipse project development main page
 	#
@@ -53,7 +53,7 @@ Tom Hofmann, Stephan Wahlbrink, Anton Leherbauer, Fabio Zadrozny, Doug Satchwell
 
 <p>
 JDT UI sends thanks to:<br>
-Benjamin Muskalla, Chris West (Faux), Robert Konigsberg, Carsten Pfeiffer and Kim Moir for the poems she sends along with the milestones.
+Benjamin Muskalla, Chris West (Faux), Robert Konigsberg, Carsten Pfeiffer, Achim Demelt and Kim Moir for the poems she sends along with the milestones.
 </p>
 
 
