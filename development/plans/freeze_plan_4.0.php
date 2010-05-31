@@ -341,8 +341,8 @@ ob_start();
                 <li>As few P2 defects as possible.</li>
       		</ul>
 			<h4><a name="TestPassBeforeRC1"></a>Test pass prior to RC1</h4>
-			<p>Full day test pass involving entire community, using 
-            the most recent nightly build to help stabilize HEAD for the upcoming RC1 build.
+			<p>Two day test pass involving entire community, using 
+            the most recent integration build to help stabilize HEAD for the upcoming RC1 build.
             Committers with high priority fixes to make for RC1 can opt out of testing
             to focus on getting in fixes.  However, all committers should be working
             with the test candidate build.
@@ -354,11 +354,8 @@ ob_start();
                 <li>As few P2 defects as possible.</li>
       		</ul>
       		<h4><a name="TestPassUsingRC1"></a>Test pass using RC1</h4>
-            <p>Concerted 2-day testing effort on RC1 involving
-              entire community including all component teams. In an effort to
-              mix things up and hold off the onset of &quot;tester
-              fatigue&quot;, each component team will be designating one team
-              member that will be assigned to test some other component.</p>
+            <p>Concerted full day testing effort on RC1 involving
+              entire community including all component teams.</p>
              <h4><a name="RC3"></a>RC3 Goals</h4>
               <ul>
                 <li>Accurate prioritization of all outstanding defects.
@@ -382,34 +379,21 @@ ob_start();
 			<a name="FixPassAfterM6"></a><h4>May 24 June 18 - contributions to RC0</h4>
 			<p><b>Focus:</b>(1) P1 defects, (2) performance defects, (3) special 
               &quot;polish&quot; items. Fixing other defects has lower priority.</p>
-             <p><b>Fix approval:</b> Another committer must +1 your bug report. All changes 
-              must have their associated bug reports tagged 4.0RC1. Ongoing changes 
-              to component documentation do not require special approval.
-              <br>
-              No bugs must appear in <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&classification=RT&target_milestone=4.0+RC1&longdesc_type=allwordssubstr&longdesc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=flagtypes.name&type0-0-0=notsubstring&value0-0-0=review%2B&field0-1-0=keywords&type0-1-0=notsubstring&value0-1-0=documentation&field0-2-0=keywords&type0-2-0=notsubstring&value0-2-0=test&field0-3-0=keywords&type0-3-0=notsubstring&value0-3-0=example">this query</a>.
-              When your bug appears there, make sure that it gets a review+ or add the 'Documentation', 'example' or 'test' keyword if appropriate.</p>
-             <p><b>API change approval:</b> PMC must approve all API changes. No changes are to
-              be released without prior approval and associated bug report.  
-              Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
-              If a change is made to API to make it binary compatible with 3.5, technically this is still an API change, 
-              and thus it should be treated in the same way as any other API change requests.</p>
+             <p><b>Fix approval:</b> None.</p>
+             <p><b>API change approval:</b> None.</p>
              <p><b>Notification requirements:</b> None.</p>
-             <p><b>Extra checking requirements:</b> One additional committer must check all code changes 
-              prior to release.</p>
+             <p><b>Extra checking requirements:</b> None.</p>
 
 			<a name="FixPassAfterRC0"></a><h4>June 23 - July 2 - contributions to RC1</h4>
 			<p><b>Focus:</b>(1) P1 defects, (2) performance defects, (3) special 
               &quot;polish&quot; items. Fixing other defects has lower priority.</p>
              <p><b>Fix approval:</b> Another committer must +1 your bug report. All changes 
               must have their associated bug reports tagged 4.0RC1. Ongoing changes 
-              to component documentation do not require special approval.
-              <br>
-              No bugs must appear in <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&classification=RT&target_milestone=4.0+RC1&longdesc_type=allwordssubstr&longdesc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=flagtypes.name&type0-0-0=notsubstring&value0-0-0=review%2B&field0-1-0=keywords&type0-1-0=notsubstring&value0-1-0=documentation&field0-2-0=keywords&type0-2-0=notsubstring&value0-2-0=test&field0-3-0=keywords&type0-3-0=notsubstring&value0-3-0=example">this query</a>.
-              When your bug appears there, make sure that it gets a review+ or add the 'Documentation', 'example' or 'test' keyword if appropriate.</p>
+              to component documentation do not require special approval.</p>
              <p><b>API change approval:</b> PMC must approve all API changes. No changes are to
               be released without prior approval and associated bug report.  
               Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
-              If a change is made to API to make it binary compatible with 3.5, technically this is still an API change, 
+              If a change is made to API to make it binary compatible with 3.6, technically this is still an API change, 
               and thus it should be treated in the same way as any other API change requests.</p>
              <p><b>Notification requirements:</b> None.</p>
              <p><b>Extra checking requirements:</b> One additional committer must check all code changes 
@@ -417,7 +401,7 @@ ob_start();
 
 			<a name="FixPassAfterRC1"></a><h4>July 6-16 - contributions to RC2</h4>
 			<p><b>Focus:</b> Serious defects only; documentation.</p>
-            <p><b>Fix approval:</b> Two additional committers and a component lead must +1 your bug report (3 people who are not the one making the change). All changes 
+            <p><b>Fix approval:</b> Another committer must +1 your bug report. All changes 
               must have their associated bug reports tagged 4.0RC2. (Ongoing changes 
               to component documentation do not require special approval.)</p>
              <p><b>API change approval:</b> PMC must approve all API changes. No changes are to
@@ -425,24 +409,21 @@ ob_start();
               Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
               If a change is made to API to make it binary compatible with 3.5, technically this is still an API change, 
               and thus it should be treated in the same way as any other API change requests.</p>
-             <p><b>Notification requirements:</b> Announce bug numbers of intended non-doc changes to <a href="mailto:platform-releng-dev@eclipse.org">platform-releng-dev@eclipse.org</a>
-              mailing list.</p>
-             <p><b>Extra checking requirements:</b>Two additional committers must check all code changes 
+             <p><b>Notification requirements:</b> None.</p>
+             <p><b>Extra checking requirements:</b>An additional committer must check all code changes 
               prior to release. Person who reported bug should mark the bug as 
               verified once they have retested.</p>
 
 			<a name="FixPassAfterRC2"></a><h4>July 20-23 - contributions to RC3</h4>
 			<p><b>Focus:</b>Serious defects only; documentation.</p>
-            <p><b>Fix approval:</b> Component lead plus one other component lead must 
-              approve all work on a component. In addition, any component lead 
-              can veto a change with cause. No changes are to be released without 
-              associated bug report tagged 4.0RC3 including risk assessment and 
-              prior approvals. (Ongoing changes to component documentation do 
-              not require special approval.)</p>
+            <p><b>Fix approval:</b> Two additional committers must +1 your bug report.
+              In addition, any active committer can veto a change with cause. No changes are to be released without 
+              associated bug report tagged 4.0RC3 including risk assessment and prior approvals. 
+              (Ongoing changes to component documentation do not require special approval.)</p>
              <p><b>API change approval:</b> PMC must approve all API changes. No changes are to
               be released without prior approval and associated bug report.  
               Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
-              If a change is made to API to make it binary compatible with 3.5, technically this is still an API change, 
+              If a change is made to API to make it binary compatible with 3.6, technically this is still an API change, 
               and thus it should be treated in the same way as any other API change requests.</p>
              <p><b>Notification requirements:</b>Announce bug numbers of intended non-doc changes to <a href="mailto:platform-releng-dev@eclipse.org">platform-releng-dev@eclipse.org</a>
               mailing list.</p>
