@@ -62,7 +62,7 @@ ob_start();
 	            <td align="right" height="20"> Fri 8:00 am EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 0 build</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
-	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC0"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">rules</a></b></td>
+	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterM6"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">rules</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
 	           <tr>
@@ -74,16 +74,16 @@ ob_start();
 	            <td align="right" height="20"> Mon 8:00 am EDT</td>
 	            <td height="20">&nbsp;<b>Start 2-day test pass against RC0</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
-	            <td height="20">&nbsp;&nbsp;<b><a href="#TestPassBeforeRC2"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">details</a></b></td>
+	            <td height="20">&nbsp;&nbsp;<b><a href="#TestPassBeforeRC1"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">details</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>           
 	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">23</td>
-	            <td align="right" height="20"> Tue 8:00 am EDT</td>
+	            <td align="right" height="20"> Wed 8:00 am EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Start fix pass</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
-	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC1"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">rules</a></b></td>
+	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC0"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">rules</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
 	          <tr>
@@ -379,6 +379,24 @@ ob_start();
       	</div>
 		<div class="homeitem3col">
 			<a name="FixPassRules"><h3>Fix pass rules of engagement</h3></a>
+			<a name="FixPassAfterM6"></a><h4>May 24 June 18 - contributions to RC0</h4>
+			<p><b>Focus:</b>(1) P1 defects, (2) performance defects, (3) special 
+              &quot;polish&quot; items. Fixing other defects has lower priority.</p>
+             <p><b>Fix approval:</b> Another committer must +1 your bug report. All changes 
+              must have their associated bug reports tagged 4.0RC1. Ongoing changes 
+              to component documentation do not require special approval.
+              <br>
+              No bugs must appear in <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&classification=RT&target_milestone=4.0+RC1&longdesc_type=allwordssubstr&longdesc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=flagtypes.name&type0-0-0=notsubstring&value0-0-0=review%2B&field0-1-0=keywords&type0-1-0=notsubstring&value0-1-0=documentation&field0-2-0=keywords&type0-2-0=notsubstring&value0-2-0=test&field0-3-0=keywords&type0-3-0=notsubstring&value0-3-0=example">this query</a>.
+              When your bug appears there, make sure that it gets a review+ or add the 'Documentation', 'example' or 'test' keyword if appropriate.</p>
+             <p><b>API change approval:</b> PMC must approve all API changes. No changes are to
+              be released without prior approval and associated bug report.  
+              Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
+              If a change is made to API to make it binary compatible with 3.5, technically this is still an API change, 
+              and thus it should be treated in the same way as any other API change requests.</p>
+             <p><b>Notification requirements:</b> None.</p>
+             <p><b>Extra checking requirements:</b> One additional committer must check all code changes 
+              prior to release.</p>
+
 			<a name="FixPassAfterRC0"></a><h4>June 23 - July 2 - contributions to RC1</h4>
 			<p><b>Focus:</b>(1) P1 defects, (2) performance defects, (3) special 
               &quot;polish&quot; items. Fixing other defects has lower priority.</p>
