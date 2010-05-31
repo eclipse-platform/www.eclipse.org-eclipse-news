@@ -83,7 +83,7 @@ ob_start();
 	            <td align="right" height="20"> Tue 8:00 am EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Start fix pass</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
-	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC0"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">rules</a></b></td>
+	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC1"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">rules</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
 	          <tr>
@@ -340,8 +340,6 @@ ob_start();
                 <li>No outstanding P1 defects. </li>
                 <li>As few P2 defects as possible.</li>
       		</ul>
-      		<p>Monday May 3 is a holiday in Poland.<br/>
-      		Thursday May 13 is a holiday in Switzerland, France, and Poland.</p>
 			<h4><a name="TestPassBeforeRC1"></a>Test pass prior to RC1</h4>
 			<p>Full day test pass involving entire community, using 
             the most recent nightly build to help stabilize HEAD for the upcoming RC1 build.
@@ -355,8 +353,6 @@ ob_start();
                 <li>No outstanding P1 defects.
                 <li>As few P2 defects as possible.</li>
       		</ul>
-      		<p>Monday May 24 is a holiday in Canada, Switzerland, and France. <br/>
-      		Monday May 31 is a holiday in the US.</p>
       		<h4><a name="TestPassUsingRC1"></a>Test pass using RC1</h4>
             <p>Concerted 2-day testing effort on RC1 involving
               entire community including all component teams. In an effort to
@@ -369,21 +365,21 @@ ob_start();
                 <li>No outstanding P1 defects.
                 <li>As few P2 defects as possible.</li>
               </ul>
-             <h4><a name="TestPassUsingRC3"></a>Test pass using RC3</h4>
+             <h4><a name="TestPassUsingRC2"></a>Test pass using RC2</h4>
             <p>Concerted 1-day testing effort on RC3 involving
               entire community including all component teams, searching for
               regressions and on the lookout for undiscovered &quot;stop
               ship&quot; defects.</p>
               <h4><a name="R4.0"></a>Release 4.0</h4>
-              <p>Ship Eclipse 4.0 during the last week of June.</p>
-              <p>There is no formal test pass for RC4 and beyond other 
+              <p>Ship Eclipse SDK 4.0 during the last week of July.</p>
+              <p>There is no formal test pass after RC3 and beyond other 
               than to check for last minute regressions. We will perform sanity 
               checking focused on documentation. Release 4.0 should be complete 
               and available for download as soon as we are satisfied with it.</p>
       	</div>
 		<div class="homeitem3col">
 			<a name="FixPassRules"><h3>Fix pass rules of engagement</h3></a>
-			<a name="FixPassAfterRC0"></a><h4>May 3-13 - contributions to RC1</h4>
+			<a name="FixPassAfterRC0"></a><h4>June 23 - July 2 - contributions to RC1</h4>
 			<p><b>Focus:</b>(1) P1 defects, (2) performance defects, (3) special 
               &quot;polish&quot; items. Fixing other defects has lower priority.</p>
              <p><b>Fix approval:</b> Another committer must +1 your bug report. All changes 
@@ -401,22 +397,7 @@ ob_start();
              <p><b>Extra checking requirements:</b> One additional committer must check all code changes 
               prior to release.</p>
 
-			<a name="FixPassAfterRC0"></a><h4>May 17-20 - contributions to RC1</h4>
-			<p><b>Focus:</b>(1) P1 defects, (2) performance defects, (3) special 
-              &quot;polish&quot; items. Fixing other defects has lower priority.</p>
-            <p><b>Fix approval:</b> Two additional committers must +1 your bug report. All changes 
-              must have their associated bug reports tagged 4.0RC1. (Ongoing changes 
-              to component documentation do not require special approval.)</p>
-             <p><b>API change approval:</b> PMC must approve all API changes. No changes are to
-              be released without prior approval and associated bug report.  
-              Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
-              If a change is made to API to make it binary compatible with 3.5, technically this is still an API change, 
-              and thus it should be treated in the same way as any other API change requests.</p>
-             <p><b>Notification requirements:</b> None.</p>
-             <p><b>Extra checking requirements:</b> Two additional committers must check all code changes 
-              prior to release.</p>
-
-			<a name="FixPassAfterRC1"></a><h4>May 24-27 - contributions to RC2</h4>
+			<a name="FixPassAfterRC1"></a><h4>July 6-16 - contributions to RC2</h4>
 			<p><b>Focus:</b> Serious defects only; documentation.</p>
             <p><b>Fix approval:</b> Two additional committers and a component lead must +1 your bug report (3 people who are not the one making the change). All changes 
               must have their associated bug reports tagged 4.0RC2. (Ongoing changes 
@@ -432,7 +413,7 @@ ob_start();
               prior to release. Person who reported bug should mark the bug as 
               verified once they have retested.</p>
 
-			<a name="FixPassAfterRC2"></a><h4>May 31 - June 3 - contributions to RC3</h4>
+			<a name="FixPassAfterRC2"></a><h4>July 20-23 - contributions to RC3</h4>
 			<p><b>Focus:</b>Serious defects only; documentation.</p>
             <p><b>Fix approval:</b> Component lead plus one other component lead must 
               approve all work on a component. In addition, any component lead 
