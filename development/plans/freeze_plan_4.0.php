@@ -47,7 +47,7 @@ ob_start();
 	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">24</td>
-	            <td align="right" height="20"> Mon 8:00 am EDT</td>
+	            <td align="right" height="20"> Mon 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Transition to fix and polish mode</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#Transition"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">details</a></b></td>
@@ -71,16 +71,16 @@ ob_start();
 	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">21</td>
-	            <td align="right" height="20"> Mon 8:00 am EDT</td>
-	            <td height="20">&nbsp;<b>Start 2-day test pass against RC0</b></td>
+	            <td align="right" height="20"> Mon 08:00 EDT</td>
+	            <td height="20">&nbsp;<b>Start 1-day test pass against RC0</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#TestPassBeforeRC1"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">details</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>           
 	          <tr>
 	            <td height="20"></td>
-	            <td align="right" height="20">23</td>
-	            <td align="right" height="20"> Wed 8:00 am EDT</td>
+	            <td align="right" height="20">22</td>
+	            <td align="right" height="20"> Tue 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Start fix pass</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC0"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">rules</a></b></td>
@@ -90,12 +90,9 @@ ob_start();
 	            <td height="30"></td>
 	          </tr>
 	          <tr>
-	            <td align="right" height="20"><b>July 2010</b>&nbsp;</td>
-	          </tr>                 
-	          <tr>
 	            <td height="20"></td>
-	            <td align="right" height="20">1</td>
-	            <td align="right" height="20"> Thu 19:00 EDT</td>
+	            <td align="right" height="20">30</td>
+	            <td align="right" height="20"> Wed 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 1 build</b></td>
 	            <td height="20">&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#RC1"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">goals</a></b></td>
@@ -105,9 +102,15 @@ ob_start();
 	            <td height="30"></td>
 	          </tr>
 	          <tr>
+	            <td align="right" height="20"><b>July 2010</b>&nbsp;</td>
+	          </tr>                 
+	          <tr>
+	            <td height="30"></td>
+	          </tr>
+	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">5</td>
-	            <td align="right" height="20">Mon 8:00 am EDT</td>
+	            <td align="right" height="20">Mon 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Start 1-day test pass against RC1</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#TestPassUsingRC1"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">details</a></b></td>
@@ -116,7 +119,7 @@ ob_start();
 	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">6</td>
-	            <td align="right" height="20">Tue 8:00 am EDT</td>
+	            <td align="right" height="20">Tue 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Start fix pass</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC1"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">rules</a></b></td>
@@ -137,7 +140,7 @@ ob_start();
 	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">19</td>
-	            <td align="right" height="20">&nbsp;&nbsp;&nbsp;Mon 8:00 am EDT</td>
+	            <td align="right" height="20">&nbsp;&nbsp;&nbsp;Mon 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>All-day test pass against RC2</b></td>
 	            <td height="20">&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#TestPassUsingRC2"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">details</a></b></td>
@@ -146,7 +149,7 @@ ob_start();
 	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">20</td>
-	            <td align="right" height="20">Tue 8:00 am EDT</td>
+	            <td align="right" height="20">Tue 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Start fix pass</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC2"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">rules</a></b></td>
@@ -376,7 +379,7 @@ ob_start();
       	</div>
 		<div class="homeitem3col">
 			<a name="FixPassRules"><h3>Fix pass rules of engagement</h3></a>
-			<a name="FixPassAfterM6"></a><h4>May 24 June 18 - contributions to RC0</h4>
+			<a name="FixPassAfterM6"></a><h4>May 24 - June 18 - contributions to RC0</h4>
 			<p><b>Focus:</b>(1) P1 defects, (2) performance defects, (3) special 
               &quot;polish&quot; items, (4) provisional API cleanup. Fixing other defects has lower priority.</p>
              <p><b>Fix approval:</b> None.</p>
@@ -384,7 +387,7 @@ ob_start();
              <p><b>Notification requirements:</b> None.</p>
              <p><b>Extra checking requirements:</b> None.</p>
 
-			<a name="FixPassAfterRC0"></a><h4>June 23 - July 2 - contributions to RC1</h4>
+			<a name="FixPassAfterRC0"></a><h4>June 22 - 30 - contributions to RC1</h4>
 			<p><b>Focus:</b>(1) P1 defects, (2) performance defects, (3) special 
               &quot;polish&quot; items. Fixing other defects has lower priority.</p>
              <p><b>Fix approval:</b> Another committer must +1 your bug report. All changes 
