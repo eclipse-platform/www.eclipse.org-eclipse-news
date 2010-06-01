@@ -109,9 +109,18 @@ ob_start();
 	          </tr>
 	          <tr>
 	            <td height="20"></td>
+	            <td align="right" height="20">1</td>
+	            <td align="right" height="20">Thu 08:00 EDT</td>
+	            <td height="20">&nbsp;&nbsp;<b>Start 1-day test pass against RC1 (U.S)</b></td>
+	            <td height="20">&nbsp;&nbsp;</td>
+	            <td height="20">&nbsp;&nbsp;<b><a href="#TestPassUsingRC1"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">details</a></b></td>
+	            <td height="20">&nbsp;&nbsp;</td>
+	          </tr>          
+	          <tr>
+	            <td height="20"></td>
 	            <td align="right" height="20">5</td>
 	            <td align="right" height="20">Mon 08:00 EDT</td>
-	            <td height="20">&nbsp;&nbsp;<b>Start 1-day test pass against RC1</b></td>
+	            <td height="20">&nbsp;&nbsp;<b>Start 1-day test pass against RC1 (Canada/Europe)</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#TestPassUsingRC1"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">details</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
@@ -320,10 +329,8 @@ ob_start();
       		<ul>
                 <li>All components transition on May 24 to polishing and fixing 
                   bugs for remainder of release cycle.</li>
-                <li>PMC approval is required for major feature work 
-                  being done after M6. Use the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list
-                  to request API and feature work approval.
-                  </li>
+                <li>Ensure there is broad awareness for any major feature work still going on. 
+                Please bring it up during an e4 bi-weekly call.</li>
                  <li>No changes are to be released without appropriate approval and associated bug report. See the fix pass 
                  <a href="#FixPassRules">rules of engagement</a> for specific approval requirements for each release candidate.
                  </li>
