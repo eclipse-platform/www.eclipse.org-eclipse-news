@@ -56,6 +56,11 @@ JDT UI sends thanks to:<br>
 Benjamin Muskalla, Chris West (Faux), Robert Konigsberg, Carsten Pfeiffer, Achim Demelt and Kim Moir for the poems she sends along with the milestones.
 </p>
 
+<p>
+The User Assistance team would like to thank everyone who made contributions or filed bug
+reports, and in particular Hao Zhang for the contribution of the criteria feature,
+and Chris Austin and Jim Perry for their enhancements to remote help. </p>
+
 
   </div>
   </div>
