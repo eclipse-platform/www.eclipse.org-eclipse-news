@@ -32,6 +32,12 @@
 	# Paste your HTML content between the markers!	
 ob_start();
 ?>		
+<style type="text/css">
+	table.schedule tr.current td {
+		background-color: #F4EEFF;
+	}
+</style>
+
 	<div id="midcolumn">
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
@@ -40,11 +46,11 @@ ob_start();
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
-	        <table border="0" cellspacing="0" cellpadding="0" align="center">
+	        <table class="schedule" border="0" cellspacing="0" cellpadding="0" align="center">
 	          <tr>
 	            <td align="right" height="20"><b>May 2010</b>&nbsp;</td>
 	          </tr>
-	          <tr>
+	          <tr class="current">
 	            <td height="20"></td>
 	            <td align="right" height="20">24</td>
 	            <td align="right" height="20"> Mon 08:00 EDT</td>
