@@ -59,8 +59,30 @@ Benjamin Muskalla, Chris West (Faux), Robert Konigsberg, Carsten Pfeiffer, Achim
 <p>
 The User Assistance team would like to thank everyone who made contributions or filed bug
 reports, and in particular Hao Zhang for the contribution of the criteria feature,
-and Chris Austin and Jim Perry for their enhancements to remote help. </p>
+and Chris Austin and Jim Perry for their enhancements to remote help.
+</p>
 
+<p>
+The Platform UI team would like to thank everyone who filed bugs, asked and answered newsgroup questions,
+and contributed patches. For 3.6, we have included contributions from:
+Andreas Bjoru, Anton Leherbauer, Baltasar Belyavsky, Chris Horneck, David Green, Dina Sayed,
+Eugene Ostroukhov, Francis Lynch, Franck Mangin, Hannes Erven, Helena Halperin, James Blackburn,
+John Cortell, Marc R. Hoffmann, Markus Schorn, Mayank Kumar, Mickael Istria, Min Idzelis,
+Mohamed Tarief, Paul Adams, Pawel Pogorzelski, Ralf Ebert, Semion Chichelnitsky, Shawn Minto,
+Simon Chemouil, Simon Muschel, Stephan Herrmann, and Wojciech Galanciak. Thank you!
+</p>
+
+<p>
+The Plug-in Development Environment team would like to thank everyone who has helped to improve our user's experience.  We appreciate 
+the good bugs and patches from the community and a special thanks goes out to Lars Vogel, Ekkehard Gentz, Ralf Ebert and everyone else who has 
+posted tutorials, blogs, faqs and more.
+</p>
+
+<p>
+The Platform and JDT Debug team would like to thank everyone who filed bugs, asked and answered newsgroup questions,
+and contributed patches. Special thanks goes to Patrick Chuong, Daniel Friederich, Marc Khouzam, David Green,
+John Cortell, and Ralf Ebert.
+</p>
 
   </div>
   </div>
