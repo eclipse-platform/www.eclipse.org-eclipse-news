@@ -84,6 +84,12 @@ and contributed patches. Special thanks goes to Patrick Chuong, Daniel Friederic
 John Cortell, and Ralf Ebert.
 </p>
 
+<p>
+The Platform Runtime/Workspace team would like to thank the following for their
+code contributions to this release:
+Anton Leherbauer, Francis Lynch, James Blackburn, Mario Winterer, Markus Schorn, and Min Idzelis.
+</p>
+
   </div>
   </div>
 
