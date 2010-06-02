@@ -211,7 +211,7 @@ ob_start();
 	            <td align="right" height="20"></td>
 	            <td height="20">&nbsp;&nbsp;<b>Eclipse SDK 4.0 and e4 July 2010 available</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
-	            <td height="20">&nbsp;&nbsp;<b><a href="#Release4.0"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">details</a></b></td>
+	            <td height="20">&nbsp;&nbsp;<b><a href="#R4.0"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">details</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
 	        </table>
