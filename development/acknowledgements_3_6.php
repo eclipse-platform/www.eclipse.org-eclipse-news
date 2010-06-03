@@ -90,7 +90,15 @@ code contributions to this release:
 Anton Leherbauer, Francis Lynch, James Blackburn, Mario Winterer, Markus Schorn, and Min Idzelis.
 </p>
 
-  </div>
+<p>
+The SWT team would like to thank everyone who filed bugs and helped improve the toolkit. Special thanks go to:
+Andrew Overholt, Christopher Deckers, Dani Megert, David Green, Markus Keller, Martin Oberhuber, McQ, Mike Schrag,
+Pei Na, Remy Suen, Shawn Minto, and Steffen Pingel.  Also, special thanks to those whose assistance and
+feedback made SWT's accessibility enhancements possible: Glen Gordon, James Teh, Joanmarie Diggs,
+Jose Vilmar Estacio de Souza, Larry Weiss, Pete Brunet, and Richard Schwerdtfeger.
+</p>
+
+</div>
   </div>
 
 <?php
