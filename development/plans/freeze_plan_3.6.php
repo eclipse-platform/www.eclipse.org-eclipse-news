@@ -145,7 +145,7 @@ ob_start();
 	          <tr>
 	            <td align="right" height="20"><b>June 2010</b>&nbsp;</td>
 	          </tr>                 
-	          <tr class="current">
+	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">1</td>
 	            <td align="right" height="20">Tue 8:00 am EDT</td>
@@ -157,7 +157,7 @@ ob_start();
 	          <tr>
 	            <td height="20"></td>
 	          </tr>
-	          <tr>
+	          <tr class="current">
 	            <td height="20"></td>
 	            <td align="right" height="20">3</td>
 	            <td align="right" height="20"> Thu 8:00 am EDT</td>
