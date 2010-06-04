@@ -41,7 +41,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>June 1, 2010 - contributions towards RC4</b></p>
+			<p><b>June 4, 2010 - post RC4 builds will only occur if required</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -157,7 +157,7 @@ ob_start();
 	          <tr>
 	            <td height="20"></td>
 	          </tr>
-	          <tr class="current">
+	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">3</td>
 	            <td align="right" height="20"> Thu 8:00 am EDT</td>
@@ -172,7 +172,7 @@ ob_start();
 			   <tr>
 	            <td height="20"></td>
 	          </tr>
-			   <tr>
+			   <tr class="current">
 	            <td height="20"></td>
 				<td align="right" height="20"></td>
 	            <td align="right" height="20"></td>
