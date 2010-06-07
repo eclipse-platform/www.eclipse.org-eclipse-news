@@ -98,6 +98,15 @@ feedback made SWT's accessibility enhancements possible: Glen Gordon, James Teh,
 Jose Vilmar Estacio de Souza, Larry Weiss, Pete Brunet, and Richard Schwerdtfeger.
 </p>
 
+<p>
+The platform releng team (Kim) would like to thank Andrew Niefer, DJ Houghton, John Arthorne and Pascal Rapicault for their
+advice on build and p2 issues. I'd also like to thank Frédéric Fusier improving the performance framework and verifying 
+the performance results. We'd also like to thank the companies that donated new hardware to the Eclipse foundation 
+(IBM, Intel, Google) which significantly sped up our build process.  Keep those hardware donations coming! I'd also like to 
+thank Denis Roy and Matt Ward for their superb work keeping the eclipse.org infrastructure up and running, and integrating
+new services and hardware. 
+</p>
+
 </div>
   </div>
 
