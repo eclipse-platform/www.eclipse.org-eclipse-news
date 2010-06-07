@@ -41,7 +41,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>June 4, 2010 - post RC4 builds will only occur if required</b></p>
+			<p><b>June 7, 2010 - post RC4 builds will only occur if required</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -176,7 +176,8 @@ ob_start();
 	            <td height="20"></td>
 				<td align="right" height="20"></td>
 	            <td align="right" height="20"></td>
-	            <td height="20">&nbsp;&nbsp;<b>Post RC4 builds will be run to meet translation, documentation and Helios goals.</b></td>
+	            <td height="20">&nbsp;&nbsp;<b>Post RC4 builds will only occur if required to meet translation, documentation and Helios goals.
+	            <br>PMC approval is required for any changes except documentation.</b></td>
 	            <td height="20">&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
