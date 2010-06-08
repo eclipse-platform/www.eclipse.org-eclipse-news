@@ -52,8 +52,8 @@ ob_start();
 			<p>The following are approved IP logs for past Eclipse project releases.</p>
 			<ul>
 				<li>Helios (3.6): 
-					<a href="eclipse_platform_3_6_log.pdf">Platform</a>
-<!--					<a href="eclipse_jdt_3_6_log.pdf">JDT,</a> -->
+					<a href="eclipse_platform_3_6_log.pdf">Platform</a>,
+					<a href="eclipse_jdt_3_6_log.pdf">JDT</a>
 <!--					<a href="eclipse_pde_3_6_log.pdf">PDE</a> -->
 				</li>
 				<li><a href="eclipse_project_3_5_log.html">Galileo (3.5)</a></li>
