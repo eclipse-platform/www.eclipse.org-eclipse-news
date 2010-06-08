@@ -177,7 +177,7 @@ ob_start();
 				<td align="right" height="20"></td>
 	            <td align="right" height="20"></td>
 	            <td height="20"><b>Post RC4 builds will only occur if required to meet translation, documentation and Helios goals.
-	            <br>PMC approval is required for any changes except documentation.</b></td>
+	            <br>PMC approval is required for any changes including documentation.</b></td>
 	            <td height="20">&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
