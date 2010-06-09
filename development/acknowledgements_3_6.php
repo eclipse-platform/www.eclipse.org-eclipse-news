@@ -99,12 +99,13 @@ Jose Vilmar Estacio de Souza, Larry Weiss, Pete Brunet, and Richard Schwerdtfege
 </p>
 
 <p>
-The platform releng team (Kim) would like to thank Andrew Niefer, DJ Houghton, John Arthorne and Pascal Rapicault for their
+The platform releng team (Kim Moir) would like to thank Andrew Niefer, DJ Houghton, John Arthorne and Pascal Rapicault for their
 advice on build and p2 issues. I'd also like to thank Frédéric Fusier improving the performance framework and verifying 
 the performance results. We'd also like to thank the companies that donated new hardware to the Eclipse foundation 
 (IBM, Intel, Google) which significantly sped up our build process.  Keep those hardware donations coming! I'd also like to 
 thank Denis Roy and Matt Ward for their superb work keeping the eclipse.org infrastructure up and running, and integrating
-new services and hardware. 
+new services and hardware.  I'd also like to thank David Williams for all his time keeping the Helios train on track in the face
+of frequent derailments and bumps in the road.
 </p>
 
 <p>
