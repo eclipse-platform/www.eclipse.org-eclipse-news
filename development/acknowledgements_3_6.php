@@ -107,6 +107,13 @@ thank Denis Roy and Matt Ward for their superb work keeping the eclipse.org infr
 new services and hardware. 
 </p>
 
+<p>
+The JDT/Core team would like to thank everyone who filed bugs, asked and answered newsgroup questions,
+and contributed patches. Special thanks to Stephan Herrmann for continuous feedbacks, high-quality bug reports and excellent patches,
+to Karen Moore for taking the time to provide a reproducable test case for a nasty bug, to Kent Johnson who left the team after so many
+years of excellent work and to Ayushman Jain and Satyam Kandula who contributed a lot before they got their commit rights.
+</p>
+
 </div>
   </div>
 
