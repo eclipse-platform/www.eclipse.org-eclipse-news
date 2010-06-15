@@ -88,6 +88,8 @@ John Cortell, and Ralf Ebert.
 The Platform Runtime/Workspace team would like to thank the following for their
 code contributions to this release:
 Anton Leherbauer, Francis Lynch, James Blackburn, Mario Winterer, Markus Schorn, and Min Idzelis.
+Credit also goes to Serge Beauchamp for the work he contributed in the area of Flexible Resources before he got his commit rights
+and to Dani Megert who has been helping to improve Workspace components.
 </p>
 
 <p>
