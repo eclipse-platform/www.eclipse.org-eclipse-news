@@ -5,7 +5,7 @@
 	# team-leaders.php
 	#
 	# Author: 		
-	# Date:			2006-01-25
+	# Date:			2010-06-16
 	#
 	# Description: Details about the Eclipse Project PMC
 	#
@@ -61,72 +61,63 @@ ob_start();
 		      <ul>
 		        <li> 
 		          <b><a name="jeff"></a>Jeff McAffer, EclipseSource</b><br>
-       Jeff McAffer leads the Eclipse Equinox OSGi, RCP and Orbit teams and is the
-       Founder of <a href="http://code9.com">Code 9</a>.
-       He is one of the architects of the Eclipse Platform and a co-author of
-       <a href="http://eclipsercp.org">The Eclipse Rich Client Platform</a> (Addison-Wesley).
-       He is a member of the Eclipse Project PMC, the Tools Project PMC, the RT Project PMC,
-       and the Eclipse Foundation Board of Directors.  Jeff is currently interested all aspects
-       of Eclipse componentry from developing and building bundles to deploying, installing
-       and ultimately running them.  Previous lives include being a Senior Technical Staff
-       Member at IBM and work in distributed/parallel OO computing (Server Smalltalk,
-       massively parallel Smalltalk, etc) as well as expert systems, meta-level architectures
-       and a PhD at the University of Tokyo.
+			       Jeff McAffer leads the Eclipse Equinox OSGi, RCP and Orbit teams and is the
+			       Founder of <a href="http://code9.com">Code 9</a>.
+			       He is one of the architects of the Eclipse Platform and a co-author of
+			       <a href="http://eclipsercp.org">The Eclipse Rich Client Platform</a> (Addison-Wesley).
+			       He is a member of the Eclipse Project PMC, the Tools Project PMC, the RT Project PMC,
+			       and the Eclipse Foundation Board of Directors.  Jeff is currently interested all aspects
+			       of Eclipse componentry from developing and building bundles to deploying, installing
+			       and ultimately running them.  Previous lives include being a Senior Technical Staff
+			       Member at IBM and work in distributed/parallel OO computing (Server Smalltalk,
+			       massively parallel Smalltalk, etc) as well as expert systems, meta-level architectures
+			       and a PhD at the University of Tokyo.
 		        </li>
-		        <li> 
-		          <b><a name="philippe"></a>Philippe Mulet, IBM Saint-Nazaire</b><br>
-      Philippe co-leads the <a href="http://eclipse.org/jdt">JDT</a> subproject.
-      Prior to Eclipse,
-      Philippe was responsible for the compiler and codeassist in IBM VA/Java
-      and VA/Micro Edition. Philippe is a member of the expert group on compiler
-      API (JSR199), representing IBM. His main interests are in compilation,
-      performance, scalability and meta-level architectures.
-		        </li>
-		        <li> 
+		        <li>
 		          <b><a name="steve"></a>Steve Northover, Bedarra Research Labs</b><br>
-      Steve Northover is the father of SWT (the Standard Widget Toolkit). Prior to
-      working on Eclipse, he worked on IBM Smalltalk, VA/Java, VA/Micro Edition.
-      His interests include programming languages, API design, operating systems,
-      user intefaces and code optimization.
+			      Steve Northover is the father of SWT (the Standard Widget Toolkit). Prior to
+			      working on Eclipse, he worked on IBM Smalltalk, VA/Java, VA/Micro Edition.
+			      His interests include programming languages, API design, operating systems,
+			      user intefaces and code optimization.
 		        </li>
 		        <li> 
 		          <b><a name="McQ"></a>Mike ("McQ") Wilson, IBM Ottawa</b><br>
-      McQ is the overall lead for the Eclipse Project aka PMC Lead.
-      He is a senior architect of the Eclipse SDK, a member of the Eclipse
-      Architecture Council and one of the original Eclipse Founders. His interests include computer
-      language design and implementation, semantic content publishing, web development,
-      and playing the cello. Mike leads the <a href="http://eclipse.org/platform/">Platform</a>,
-      <a href="http://www.eclipse.org/projects/project_summary.php?projectid=eclipse.e4">e4</a>, 
-      and <a href="http://www.eclipse.org/eclipse/incubator/">Eclipse Project Incubator</a>
-	  subprojects.
+			      McQ is the overall lead for the Eclipse Project aka PMC Lead.
+			      He is a senior architect of the Eclipse SDK, a member of the Eclipse
+			      Architecture Council and one of the original Eclipse Founders. His interests include computer
+			      language design and implementation, semantic content publishing, web development,
+			      and playing the cello. Mike leads the <a href="http://eclipse.org/platform/">Platform</a>,
+			      <a href="http://www.eclipse.org/projects/project_summary.php?projectid=eclipse.e4">e4</a>, 
+			      and <a href="http://www.eclipse.org/eclipse/incubator/">Eclipse Project Incubator</a>
+				  subprojects.
 		        </li>
 		        <li> 
 		          <b><a name="martin"></a>Martin Oberhuber, Wind River</b><br>
-      Martin is on the PMC representing the Community aspect of Eclipse and
-      the e4 project. He is a Platform Core Resources and e4 committer,
-      co-leading the e4 Resources work. Martin also serves on the 
-      <a href="http://wiki.eclipse.org/DSDP/PMC">DSDP PMC</a> and as 
-      <a href="/dsdp/tm/">Target Management</a> Project lead, and revitalized
-      the Eclipse <a href="http://wiki.eclipse.org/Architecture_Council">
-      Architecture Council</a> as its chair. His interests include programming
-      languages, patterns and paradigms, optimizing development processes,
-      skiing, hiking, and playing all sorts of musical instruments.
+			      Martin is on the PMC representing the Community aspect of Eclipse and
+			      the e4 project. He is a Platform Core Resources and e4 committer,
+			      co-leading the e4 Resources work. Martin also serves on the 
+			      <a href="http://wiki.eclipse.org/DSDP/PMC">DSDP PMC</a> and as 
+			      <a href="/dsdp/tm/">Target Management</a> Project lead, and revitalized
+			      the Eclipse <a href="http://wiki.eclipse.org/Architecture_Council">
+			      Architecture Council</a> as its chair. His interests include programming
+			      languages, patterns and paradigms, optimizing development processes,
+			      skiing, hiking, and playing all sorts of musical instruments.
 		        </li>
 		        <li> 
 		          <b><a name="dani"></a>Dani Megert, IBM Zurich</b><br>
-      Dani co-leads the <a href="http://eclipse.org/jdt">JDT</a> subproject and
-      leads the Platform Search, Platform Text and JDT Text components. Dani worked at OTI and is one of the initial Eclipse Project committers.
-      His interests include user interface and API design, editors, performance and DJing.
+			      Dani leads the <a href="http://eclipse.org/jdt">JDT</a> subproject and
+			      leads the Platform Search, Platform Text and JDT Text components. Dani worked at OTI and is one of the initial Eclipse Project committers.
+			      His interests include user interface and API design, editors, performance and DJing.
 		        </li>
 		        <li> 
 		          <b><a name="john"></a>John Arthorne, IBM Ottawa</b><br>
-      John has worked on the Eclipse project for the past decade in many different areas, and 
-      more recently on the <a href="http://eclipse.org/equinox">Equinox</a> project. In recent years he has focused on the 
-      workspace model, concurrency infrastructure, provisioning (<a href="http://wiki.eclipse.org/p2">p2</a>), <a href="http://wiki.eclipse.org/e4">e4</a>, and 
-      overall platform API quality. John is a member of the Eclipse <a href="http://wiki.eclipse.org/Architecture_Council">
-      Architecture</a> and <a href="http://wiki.eclipse.org/Planning_Council">Planning</a> Councils, and has authored numerous <a href="http://www.eclipse.org/articles/">articles</a> 
-      and a <a href="http://www.amazon.com/Official-Eclipse-3-0-FAQs/dp/0321268385/ref=sr_1_1?ie=UTF8&s=books&qid=1221163807&sr=8-1">
-      book</a> on Eclipse.
+			      John has worked on the Eclipse project for the past decade in many different areas, and 
+			      more recently on the <a href="http://eclipse.org/equinox">Equinox</a> project. In recent years he has focused on the 
+			      workspace model, concurrency infrastructure, provisioning (<a href="http://wiki.eclipse.org/p2">p2</a>), <a href="http://wiki.eclipse.org/e4">e4</a>, and 
+			      overall platform API quality. John is a member of the Eclipse <a href="http://wiki.eclipse.org/Architecture_Council">
+			      Architecture</a> and <a href="http://wiki.eclipse.org/Planning_Council">Planning</a> Councils, and has authored numerous <a href="http://www.eclipse.org/articles/">articles</a> 
+			      and a <a href="http://www.amazon.com/Official-Eclipse-3-0-FAQs/dp/0321268385/ref=sr_1_1?ie=UTF8&s=books&qid=1221163807&sr=8-1">
+			      book</a> on Eclipse.
 		        </li>
 		      </ul>
 		</div>
@@ -139,7 +130,7 @@ ob_start();
 			<h6>Subproject Leads</h6>
 			<ul>
 				<li><a href="http://www.eclipse.org/platform/">Platform</a><br> -- <a href="#McQ">Mike Wilson</a></li>
-				<li><a href="http://www.eclipse.org/jdt/" target="_top">JDT</a><br> -- <a href="#dani">Dani Megert</a> and <a href="#philippe">Philippe Mulet</a></li>
+				<li><a href="http://www.eclipse.org/jdt/" target="_top">JDT</a><br> -- <a href="#dani">Dani Megert</a></li>
 				<li><a href="http://www.eclipse.org/pde/">PDE</a><br> -- <a href="http://code9.com/team#chris">Chris Aniszczyk</a> and Darin Wright</a></li>
 				<li><a href="http://www.eclipse.org/e4/" target="_top">e4</a><br> -- <a href="#McQ">Mike Wilson</a></li>
 				<li><a href="http://www.eclipse.org/eclipse/incubator/">Eclipse Incubator</a><br> -- <a href="#McQ">Mike Wilson</a></li>
