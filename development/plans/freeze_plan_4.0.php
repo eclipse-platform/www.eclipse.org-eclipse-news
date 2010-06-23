@@ -403,17 +403,14 @@ ob_start();
 			<a name="FixPassAfterRC0"></a><h4>June 22 - 30 - contributions to RC1</h4>
 			<p><b>Focus:</b>(1) P1 defects, (2) performance defects, (3) special 
               &quot;polish&quot; items. Fixing other defects has lower priority.</p>
-             <p><b>Fix approval:</b> Another committer must +1 your bug report. All changes 
-              must have their associated bug reports tagged 4.0RC1. Ongoing changes 
-              to component documentation do not require special approval.</p>
+             <p><b>Fix approval:</b> None.</p>
              <p><b>API change approval:</b> PMC must approve all API changes. No changes are to
               be released without prior approval and associated bug report.  
               Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
               If a change is made to API to make it binary compatible with 3.6, technically this is still an API change, 
               and thus it should be treated in the same way as any other API change requests.</p>
              <p><b>Notification requirements:</b> None.</p>
-             <p><b>Extra checking requirements:</b> One additional committer must check all code changes 
-              prior to release.</p>
+             <p><b>Extra checking requirements:</b> None.</p>
 
 			<a name="FixPassAfterRC1"></a><h4>July 6-16 - contributions to RC2</h4>
 			<p><b>Focus:</b>(1) P1 defects, (2) performance defects, (3) special 
