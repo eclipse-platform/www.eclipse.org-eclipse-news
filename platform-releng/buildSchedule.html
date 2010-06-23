@@ -1,3 +1,4 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
 <title>Eclipse (Platform, JDT, PDE and Equinox) Release Engineering Build Schedule</title>
@@ -10,13 +11,9 @@
 
 
 
-<table border=0 cellspacing=5 cellpadding=2 width="100%" > <tr> 
-    <tr><td align=left> <h2>Eclipse Release Engineering build schedule</h2><h4>(Platform, JDT, PDE and Equinox)</h4></td> <br></tr>    
-      <font class=indexsub>last updated 11/12/2007 15:17</font></td>
-  
-</table>
-
-
+<h2>Eclipse Release Engineering build schedule</h2>
+<h4>(Platform, JDT, PDE and Equinox)</h4>
+<font class=indexsub>static content last updated 2010-06-23</font>
 
 
 
@@ -26,9 +23,11 @@
 
 
 N builds replace tags specified in org.eclipse.releng map files with HEAD.<br>
-I builds use tags org.eclipse.releng map files.
-<br>M builds use tags in the R3_3_maintenance
+I builds use tags in the org.eclipse.releng map files.
+<br>M builds use tags in the R3_<i>&lt;n-1&gt;</i>_maintenance (e.g. R3_6_maintenance)
 branch of org.eclipse.releng. 
+<br>Performance baseline builds use tags in the perf_3<i>&lt;n-1&gt;</i>x (e.g. perf_36x)
+branch of org.eclipse.releng.
 <br>Teams must update map files in time for I and M build start times.<br>
   Performance testing will only occur where indicated.</p>
 
@@ -50,21 +49,25 @@ branch of org.eclipse.releng.
 <li>Maintenance builds - Rebuild until success</li>
 </ul>
 
-<br><br>
+<br>
 
 <h4>Build Retention Policy</h4>
 
-<tr><td height="19"> <p>In an effort to reduce our disk utilization on the eclipse.org infrastructure and reduce the amount of data sent to the mirrors, we have adopted the following build retention policy.</p>
+<p>In an effort to reduce our disk utilization on the eclipse.org infrastructure and reduce the amount of data sent to the mirrors, we have adopted the following build retention policy.</p>
+<ul>
 <li>Release builds are kept indefinitely and moved to the archive.eclipse.org server as appropriate</li>
-<li>Four integration and nightly builds are retained</li><li>Maintenance builds are kept until a release of the maintenance stream is available.</li><li>Stable builds are retained until a release is available.</li></li></table>
+<li>Four integration and nightly builds are retained</li>
+<li>Maintenance builds are kept until a release of the maintenance stream is available.</li>
+<li>Stable builds are retained until a release is available.</li>
+</ul>
 
-<br><br>
+
+<br>
 
 <h4>Build Notes</h4>
+ 
 
-<tr> <td height="19"> 
-
-<strong>For the 3.5 Integration builds: </strong>
+<strong>For the 3.<i>&lt;n&gt;</i> Integration builds: </strong>
 <ul>
 <li>build time is 8:00 am (Eastern time) on Tuesday mornings.</li> 
 <li>In the event of an integration build failure due to compile errors, missing plugins or if the drops are not posted,<br>there will be a same day rebuild upon 
@@ -80,23 +83,26 @@ recontribute to a subsequent build, you are required to revalidate the build and
 
 <br>
 
-<strong>For the 3.4.x maintenance builds: </strong>
+<strong>For the 3.<i>&lt;n-1&gt;</i>.x maintenance builds: </strong>
 <ul>
 <li>Build time is 8am Wednesday (Eastern time)</li> 
 <li>Due to the nature of the fixes in this stream, these builds should not fail. However, if a 
 rebuild is requested by one of the teams, it will take place as soon as the build contribution is available.</li> 
+</ul>
 
- 
+
+<br>
+
 <p>In the above descriptions, a build is considered to be a failure if there are &quot;Red X&quot;s that the developers 
 agree represent valid reasons for them to not begin using the integration build.  
 An example of a Red X which would *not* require a re-build would be a test which 
 failed because the test was bogus. </p>
 
-<p>IMPORTANT: This strategy _requires_ 
+<p><strong>IMPORTANT</strong>: This strategy <strong>requires</strong> 
 us to have good build inputs. All teams must use the tools to pre-build and test
    their submissions. In addition, teams should track the nightly builds to detect
 integration problems early on. What we want to achieve is for the Tuesday morning
-   3.5 build to typically be successful, with an infrequent requirement for a
+   3.<i>&lt;n&gt;</i> build to typically be successful, with an infrequent requirement for a
   Wednesday 
 noon build. Failing the Wednesday noon rebuild should be treated as a catastrophic
    failure. In other words, more than two or three of these per year is an unacceptable
