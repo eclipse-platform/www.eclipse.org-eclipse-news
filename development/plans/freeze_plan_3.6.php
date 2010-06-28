@@ -41,7 +41,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>June 7, 2010 - post RC4 builds will only occur if required</b></p>
+			<p><b>June 7, 2010 - 3.6 development is complete</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
