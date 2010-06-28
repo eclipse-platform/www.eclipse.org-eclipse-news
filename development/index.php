@@ -36,14 +36,6 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>Releases currently under development</h3>
 			<ul>
-	      <li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse"> Eclipse Project Helios Plan</a><br>
-	        This document lays out the feature and API set for the Helios (3.6) release of the Eclipse Project. </li>
-	      <li><a href="http://wiki.eclipse.org/Eclipse/Helios_Plan">Helios Component Milestone Plans</a><br>
-	        This document lists the milestone plans for each Eclipse Project component for the Helios release. Milestone
-	        plans are updated regularly throughout the release cycle to reflect what each component
-	        team has completed and what they are currently working on.</li>
-	      <li><a href="plans/freeze_plan_3.6.php"> Eclipse Project Helios Endgame Plan</a><br>
-    		Information about how we plan to wrap up the Helios release (version 3.6).</li>     
 	      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_0.xml"> Eclipse Project 4.0 Plan</a><br>
 	        This document lays out the feature and API set for the 4.0 early adopter release of the Eclipse Project. </li>
 	      <li><a href="plans/freeze_plan_4.0.php"> Eclipse SDK 4.0 Endgame Plan</a><br>
@@ -120,6 +112,10 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>Historical information about past releases</h3>			
 			<ul>
+		      <li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse"> Eclipse Project Helios Plan</a><br>
+		        This document lays out the feature and API set for the Helios (3.6) release of the Eclipse Project. </li>
+		      <li><a href="plans/freeze_plan_3.6.php"> Eclipse Project Helios Endgame Plan</a><br>
+	    		Information about how we wrapped up the Helios release (version 3.6).</li>     
             <li><a href="plans/freeze_plan_3_5_2.php"> Eclipse Project Galileo SR2 Endgame Plan</a><br>
       			Information about how we wrapped up Galileo Service Release 2 (version 3.5.2).</li>     
 	        <li><a href="plans/freeze_plan_3_5_1.php"> Eclipse Project Galileo SR1 Endgame Plan</a><br>
