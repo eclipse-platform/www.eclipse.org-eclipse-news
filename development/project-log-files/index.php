@@ -51,6 +51,7 @@ ob_start();
 			<h3>IP Logs For Past Releases</h3>
 			<p>The following are approved IP logs for past Eclipse project releases.</p>
 			<ul>
+				<li><a href="eclipse_e4_move_review_20100630.pdf">e4 to Platform move review, June 2010</a></li>
 				<li>Helios (3.6): 
 					<a href="eclipse_platform_3_6_log.pdf">Platform</a>,
 					<a href="eclipse_jdt_3_6_log.pdf">JDT</a>,
