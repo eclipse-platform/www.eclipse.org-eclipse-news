@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <!--  Use this to test local rendering in firefox. Comment out this line once this plan is linked to portal data. -->
-<!-- <?xml-stylesheet type="text/xsl" href="project-plan-render.xsl"?> -->
+<?xml-stylesheet type="text/xsl" href="project-plan-render.xsl"?>
 
-<?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
+<!-- <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?> -->
 
 <p:plan
   plan-format="1.0"
@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 10:00 ET June 28, 2010 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> marks
+Last revised 16:00 ET June 30, 2010 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> marks
 interesting changes since the previous draft of <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_3_6_20100305.xml">March 5, 2010</a>.)
 </p>
 <p><i>Please send comments about this plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
@@ -202,8 +202,8 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 			<td rowspan="6">Windows</td>
 			<td rowspan="2">7</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Sun Java 5 Update 22<br/>
-				IBM Java 5 SR11
+			<td rowspan="6">Sun Java 6 Update 17<br/>
+				IBM Java 6 SR8
 			</td>
 			<td rowspan="6">Win32</td>
 		</tr>
@@ -213,31 +213,16 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 		<tr>
 			<td rowspan="2">Vista</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td>Sun Java 5 Update 22<br/>
-				IBM Java 5 SR11<br/>
-				Oracle JRockit 27.6.5
-			</td>
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">x86 64-bit</td>
-			<td>Sun Java 5 Update 22<br/>
-				IBM Java 5 SR11
-			</td>
 		</tr>
 		<tr class="c0">
 			<td rowspan="2">XP</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td>Sun Java 6 Update 17<br/>
-				Sun Java 5 Update 22<br/>
-				IBM Java 5 SR11<br/>
-				Oracle JRockit 27.6.5
-			</td>
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">x86 64-bit</td>
-			<td>Sun Java 5 Update 22<br/>
-				IBM Java 5 SR11
-			</td>
 		</tr>
 		<!-- ************ RHEL ************** -->
 		<tr class="c1">
@@ -245,21 +230,19 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 			<td rowspan="2">5.0</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td>Sun Java 6 Update 17<br/>
-				Sun Java 5 Update 22<br/>
-				IBM Java 5 SR11<br/>
-				Oracle JRockit 27.6.5
+				IBM Java 6 SR8
 			</td>
 			<td rowspan="3">GTK</td>
 		</tr>
 		<tr class="c1">
 			<td rowspan="1">Power 64-bit</td>
-			<td>IBM Java 5 SR11</td>
+			<td>IBM Java 6 SR8</td>
 		</tr>
 		<tr class="c1">
 			<td rowspan="1">4.0</td>
 			<td rowspan="1">x86 64-bit</td>
-			<td>Sun Java 5 Update 22<br/>
-				IBM Java 5 SR11
+			<td>Sun Java 6 Update 17<br/>
+				IBM Java 6 SR8
 			</td>
 		</tr>
 		<!-- ************ SLES ************** -->
@@ -267,8 +250,8 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 			<td rowspan="3">SUSE Linux Enterprise Server</td>
 			<td rowspan="3">11</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Sun Java 5 Update 22<br/>
-				IBM Java 5 SR11
+			<td rowspan="2">Sun Java 6 Update 17<br/>
+				IBM Java 6 SR8
 			</td>
 			<td rowspan="3">GTK</td>
 		</tr>
@@ -277,15 +260,15 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">Power 64-bit</td>
-			<td>IBM Java 5 SR11</td>
+			<td>IBM Java 6 SR8</td>
 		</tr>
 		<!-- ************ Ubuntu ************** -->
 		<tr class="c1">
 			<td rowspan="2">Ubuntu Long Term Support</td>
 			<td rowspan="2">10.04</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Sun Java 5 Update 22<br/>
-				IBM Java 5 SR11
+			<td rowspan="2">Sun Java 6 Update 17<br/>
+				IBM Java 6 SR8
 			</td>
 			<td rowspan="2">GTK</td>
 		</tr>
@@ -297,7 +280,7 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 			<td rowspan="2">Sun Solaris</td>
 			<td rowspan="2">10</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Sun Java 5 Update 22</td>
+			<td rowspan="2">Sun Java 6 Update 17</td>
 			<td rowspan="2">GTK</td>
 		</tr>
 		<tr class="c0">
@@ -316,7 +299,7 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 			<td rowspan="1">IBM AIX</td>
 			<td rowspan="1">5.3</td>
 			<td rowspan="1">Power 32-bit</td>
-			<td rowspan="1">IBM Java 5 SR11</td>
+			<td rowspan="1">IBM Java 6 SR8</td>
 			<td rowspan="1">Motif 2.1</td>
 		</tr>
 		<!-- ************ Mac ************** -->
