@@ -172,7 +172,7 @@ ob_start();
 			   <tr>
 	            <td height="20"></td>
 	          </tr>
-			   <tr class="current">
+			   <tr>
 	            <td height="20"></td>
 				<td align="right" height="20"></td>
 	            <td align="right" height="20"></td>
@@ -193,7 +193,7 @@ ob_start();
 			  <tr>
 	            <td height="20"></td>
 	          </tr>
-	          <tr>
+	          <tr class="current">
 	            <td height="20"></td>            
 	            <td align="right" height="20">23</td>
 	            <td align="right" height="20"></td>
