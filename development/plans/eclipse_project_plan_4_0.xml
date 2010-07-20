@@ -9,14 +9,14 @@
   xmlns:p="http://www.eclipse.org/project/plan" xmlns="http://www.w3.org/1999/xhtml"
   name="Eclipse Project">
 
-<p:release projectid="eclipse" version="DRAFT 4.0"/>
+<p:release projectid="eclipse" version="4.0"/>
 
 <!-- ============================================== -->
 
 <p:introduction>
 <div>
 <p>
-Last revised 10:00 ET April 12, 2010.
+Last revised 10:00 ET July 20, 2010.
 </p>
 <p><i>Please send comments about this plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
   mailing list.</i>
@@ -120,7 +120,7 @@ Last revised 10:00 ET April 12, 2010.
 <p:milestone date="01/15/2010" milestone="M3"><div>4.0M3</div></p:milestone>
 <p:milestone date="02/26/2010" milestone="M4"><div>4.0M4</div></p:milestone>
 <p:milestone date="04/09/2010" milestone="M5"><div>4.0M5</div></p:milestone>
-<p:milestone date="05/21/2010" milestone="M6"><div>4.0M6 (Feature and API Freeze)</div></p:milestone>
+<p:milestone date="05/21/2010" milestone="M6"><div>4.0M6</div></p:milestone>
 
 <p:postamble>
 <div>
@@ -285,7 +285,7 @@ Eclipse SDK 4.0 end-game plan.</p>
 		<tr class="c1">
 <!--			<td rowspan="2">Ubuntu Long Term Support</td> -->
 			<td rowspan="2">Ubuntu</td>
-			<td rowspan="2">9.04</td>
+			<td rowspan="2">10.04</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">Sun Java 5 Update 22<br/>
 				IBM Java 5 SR11
@@ -487,10 +487,22 @@ software components for the Eclipse platform.
 </p:description>
 
 <p:committed>
-  <p><i>None at this time.</i></p>
+<ul>
+<li>
+<strong>Compatibility</strong>
+  To support the model-based workbench and skinning support, a substantial portion
+  of the existing platform user interface was rewritten from scratch. This plan item
+  encompasses the work to make this new implementation fully API compatible
+  with previous releases of the Eclipse platform.
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=302752">302752</a>)</li>
+</ul>
 </p:committed>
 
 <p:proposed>
+  <p><i>None at this time.</i></p>
+</p:proposed>
+
+<p:deferred>
 <ul>
 <li>
 <strong>Support for web UI components in the Eclipse platform</strong>
@@ -500,26 +512,13 @@ software components for the Eclipse platform.
   in the Eclipse platform. In particular, we will support embedding of user interface components 
   written in JavaScript into the platform user interface, and provide access to e4 API for JavaScript components.
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=302749">302749</a>)</li>
-
 <li>
 <strong>Eclipse application services.</strong>
   We will provide a new, simplified API for accessing basic Eclipse platform services.
   This will allow developers to create components for Eclipse by learning and using
   a much smaller set of API.
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=302751">302751</a>)</li>
-
-<li>
-<strong>Compatibility</strong>
-  To support the model-based workbench and skinning support, a substantial portion
-  of the existing platform user interface was rewritten from scratch. This plan item
-  encompasses the work to make this new implementation fully API compatible
-  with previous releases of the Eclipse platform.
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=302752">302752</a>)</li>
 </ul>
-</p:proposed>
-
-<p:deferred>
-  <p><i>None at this time.</i></p>
 </p:deferred>
 
 </p:theme>
@@ -538,10 +537,6 @@ into very different kinds of applications.
 </p:description>
 
 <p:committed>
-  <p><i>None at this time.</i></p>
-</p:committed>
-
-<p:proposed>
 <ul>
 <li>
 <strong>Model-based workbench.</strong>
@@ -561,23 +556,28 @@ into very different kinds of applications.
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=302755">302755</a>)</li>
 
 <li>
-<strong>OpenSocial Gadget container for Eclipse.</strong>
-  We will provide a container for integrating OpenSocial gadgets into the Eclipse
-  platform. This will allow rapid assembly and customization of applications by drawing
-  from the large library of available OpenSocial gadgets.
-(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=302756">302756</a>)</li>
-
-<li>
 <strong>Service-oriented programming model.</strong>
   We will adopt and use the service-oriented programming model defined by e4.
   This will avoid use of singleton APIs and allow a greater variety of Eclipse platform capabilities to be
   interchanged, customized, reimplemented, or reused in other environments.
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=302757">302757</a>)</li>
 </ul>
+</p:committed>
+
+<p:proposed>
+  <p><i>None at this time.</i></p>
 </p:proposed>
 
 <p:deferred>
-  <p><i>None at this time.</i></p>
+<ul>
+<li>
+<strong>OpenSocial Gadget container for Eclipse.</strong>
+  We will provide a container for integrating OpenSocial gadgets into the Eclipse
+  platform. This will allow rapid assembly and customization of applications by drawing
+  from the large library of available OpenSocial gadgets.
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=302756">302756</a>)</li>
+
+</ul>
 </p:deferred>
 
 </p:theme>
