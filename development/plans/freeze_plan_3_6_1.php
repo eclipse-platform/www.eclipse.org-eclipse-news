@@ -32,12 +32,17 @@
 	# Paste your HTML content between the markers!	
 ob_start();
 ?>		
+	<style type="text/css">
+		table.schedule tr.current td {
+			background-color: #F4EEFF;
+		}
+	</style>
 
 	<div id="midcolumn">
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>August 5, 2010 - Working towards RC2 build on August 25th.</b></p>
+			<p><b>August 6, 2010 - Working towards RC2 build on August 25th.</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -45,7 +50,7 @@ ob_start();
 	          <tr>
 	            <td align="right" height="20"><b>August 2010</b>&nbsp;</td>
 	          </tr>
-	          <tr>
+	          <tr class="current">
 	            <td height="20"></td>
 	            <td align="right" height="20">6</td>
 	            <td align="right" height="20">Fri 08:00 EDT</td>
@@ -134,7 +139,7 @@ ob_start();
 	        is supposed to work exactly like the initial Helios release except for the problems we intended 
 	        to fix. All problems fixed in Helios SR1 are in the Eclipse bugzilla database 
 	        and flagged with Target Milestone &quot;3.6.1&quot; (query bugzilla for 
-	        the <a href="http://bugs.eclipse.org/bugs/buglist.cgi?product=JDT&amp;product=PDE&amp;product=Platform&amp;product=Equinox&amp;target_milestone=3.6.1&amp;resolution=FIXED&amp;order=bugs.bug_id">complete 
+	        the <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;resolution=FIXED;target_milestone=3.6.1;product=Equinox;product=JDT;product=PDE;product=Platform;classification=Eclipse;classification=RT">complete 
 	        list of bugs fixed in Helios SR1</a>). So we're most interested in identifying 
 	        regressions where we've changed something that we did not intend to.
 	        </p> 
