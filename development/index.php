@@ -38,6 +38,8 @@ ob_start();
 			<ul>
 	      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_3_7.xml"> Eclipse Project Indigo Plan</a><br>
 	        This document lays out the feature and API set for the Indigo (3.7) release of the Eclipse Project. </li>
+	      <li><a href="plans/freeze_plan_3_6_1.php"> Eclipse Project Helios SR1 Endgame Plan</a><br>
+			Information about how we plan to wrap up Helios Service Release 1 (version 3.6.1).</li>
 	      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_0.xml"> Eclipse Project 4.0 Plan</a><br>
 	        This document lays out the feature and API set for the 4.0 early adopter release of the Eclipse Project. </li>
 	      <li><a href="plans/freeze_plan_4.0.php"> Eclipse SDK 4.0 Endgame Plan</a><br>
