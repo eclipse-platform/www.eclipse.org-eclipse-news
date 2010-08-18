@@ -46,7 +46,7 @@ ob_start();
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
-	        <table border="0" cellspacing="0" cellpadding="0" align="center">
+	        <table class="schedule" border="0" cellspacing="0" cellpadding="0" align="center">
 	          <tr>
 	            <td align="right" height="20"><b>August 2010</b>&nbsp;</td>
 	          </tr>
