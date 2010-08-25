@@ -201,6 +201,9 @@
 			</div>
 		</div>
 		<div class="homeitem">
+			<h2><b>Testing Notes</b></h2>
+			<p>All tests should be done with resource names of varying length, specifically resource names of length one must be tested
+			(the cause of https://bugs.eclipse.org/bugs/show_bug.cgi?id=323588).</p>
 			<h2><b>Feature Testing</b></h2>
 			<a name="anteditor"></a>
 			<h3>Ant Editor</h3>
