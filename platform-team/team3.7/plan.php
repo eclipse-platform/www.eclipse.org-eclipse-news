@@ -2,8 +2,8 @@
 
 	#
 	# Begin: page-specific settings.  Change these. 
-	$pageTitle 		= "Eclipse Platform Workspace 3.6 Development Plan";
-	$pageKeywords	= "Eclipse, Platform Workspace, 3.6, development plan";
+	$pageTitle 		= "Eclipse Platform Workspace 3.7 Development Plan";
+	$pageKeywords	= "Eclipse, Platform Workspace, 3.7, development plan";
 	$pageAuthor		= "Platform Workspace team";
 	
 	# Add page-specific Nav bars here
