@@ -16,7 +16,9 @@
 <p:introduction>
 <div>
 <p>
-Last revised 16:00 ET September 7, 2010.
+Last revised 16:00 ET September 16, 2010.  (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
+marks interesting changes since the previous draft of 
+<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_3_7_20100630.xml">June 30, 2010</a>.)
 </p>
 <p><i>Please send comments about this plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
   mailing list.</i>
@@ -422,12 +424,12 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
   to be improved. Each plan item has its own entry in the Eclipse bugzilla database, with a title
   and a concise summary (usually a single paragraph) that explains the work item at a suitably
   high enough level so that everyone can readily understand what the work item entails.</p>
-<p> Although there are four projects under the top-level Eclipse Project, there
+<p> Although there are three mature projects under the top-level Eclipse Project, there
   is a significant amount of commonality and shared effort between them. In general,
   many plan items involve coordinated changes to multiple components, and thus
   attempting to separate the items into sections based on sub-project leads to
   artificial distinctions between them (e.g., Platform Text vs. JDT Text, Platform
-  Debug vs. JDT Debug, etc.). As such, this plan covers the work of all projects
+  Debug vs. JDT Debug, etc.). As such, this plan covers the work of all mature projects
   under the top level Eclipse Project.</p>
 <p>Not all plan items represent the same amount of work; some may be quite
   large, others, quite small. Although some plan items are for work that is 
@@ -471,7 +473,7 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 
 <p:proposed>
 <ul>
-<li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>Add support for Java SE 7 features.</strong>
 	The next feature release of Java SE is
 	version 7, which will probably be available in 2011. While
@@ -483,21 +485,28 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 	have publicly available specifications (only JSR-308 at this point). [JDT Core,
 	JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288548">288548</a>)
 </li>
-<li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>Adopt new accessibility API</strong>
 	In the 3.6 release, SWT provided new API to support the IAccessible2 standard. This
 	API should be adopted throughout the Eclipse platform user interface to ensure the platform
-	is fully accessible to all users. In addition, SWT's new accessibility API should
-	be extended to support IAccessibleEditableText.
+	is fully accessible to all users. In addition, SWT will extend its accessibility support
+	to include IAccessibleEditableText, and expand its accessibility testing efforts.
 	[SWT, Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
 </li>
-<li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>BIDI enhancements</strong>
 	We will invest in ensuring the Eclipse platform remains a first class basis for	products 
 	supporting bidirectional text. Areas of investigation include: support for controlling text 
 	direction independently from widget orientation, text orientation support in the Text
 	widget, ability to change text orientation at runtime, and stronger support for
 	bidirectional calendars.
+	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+</li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>Support for Webkit on Windows</strong>
+	We will provide support for using Webkit as the embedded browser in Eclipse when
+	running on Windows.	Note that the Eclipse platform will not distribute Webkit, but 
+	will provide bindings so that it can be used within Eclipse and SWT when available.
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
 </li>
 </ul>
@@ -526,7 +535,7 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 
 <p:proposed>
 <ul>
-<li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>Build at eclipse.org.</strong>
 	The current Eclipse project build and test infrastructure runs on proprietary hardware
 	accessible only to certain committers. We will work to migrate the Eclipse project
@@ -536,12 +545,21 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 	and managing builds.
 	[Rel. Eng., PDE] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
 </li>
-<li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>Help servlet API</strong>
 	To allow customized Help front ends, the Eclipse Help System will introduce a set
 	of servlets which publicly expose API for all of the back end functionality.  This
 	will include capabilities such as filtering, searching, indexing, navigation, and runtime content.
 	[User Assistance] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=319907">319907</a>)
+</li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>Resource filter improvements</strong>
+	In the previous release, the concept of resource filters was introduced. We will
+	make improvements to the implementation of filters, including optimizing
+	the storage representation of filters, and providing extensible UI components
+	for working with filters. We will also investigate using resource filters to flatten
+	a hierarchy of resources into a single directory.
+	[Workspace, Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
 </li>
 </ul>
 </p:proposed>
@@ -568,13 +586,13 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 
 <p:proposed>
 <ul>
-<li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>Multi-touch support</strong>
 	We will add API in SWT for multi-touch events. These events will allow Eclipse applications
 	to react to native multi-touch events on operating system where such events are supported
 	(currently Windows 7 and Mac OS X 10.6).
 </li>
-<li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>Problems view enhancements.</strong>
 	The <b>Problems</b> view supports invoking Quick Fix to automatically resolve
 	problems, but this capability is difficult to discover and use. We will make this
@@ -582,7 +600,7 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 	at once from the problems view.
 	[Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
 </li>
-<li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>Help enhancements</strong>
 	We will make a number of enhancements to improve the usability and extensibility
 	of the Eclipse help system. Specific areas of work include improved usability of help search scopes,
@@ -866,7 +884,7 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
     </tr>
     <tr>
       <td>org.eclipse.jdt.junit</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.5</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.junit.core</td>
