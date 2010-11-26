@@ -5,7 +5,7 @@
 	# team-leaders.php
 	#
 	# Author: 		
-	# Date:			2010-06-16
+	# Date:			2010-11-26
 	#
 	# Description: Details about the Eclipse Project PMC
 	#
@@ -131,7 +131,7 @@ ob_start();
 			<ul>
 				<li><a href="http://www.eclipse.org/platform/">Platform</a><br> -- <a href="#McQ">Mike Wilson</a></li>
 				<li><a href="http://www.eclipse.org/jdt/" target="_top">JDT</a><br> -- <a href="#dani">Dani Megert</a></li>
-				<li><a href="http://www.eclipse.org/pde/">PDE</a><br> -- <a href="http://code9.com/team#chris">Chris Aniszczyk</a> and Darin Wright</a></li>
+				<li><a href="http://www.eclipse.org/pde/">PDE</a><br> -- Ankur Sharma and Curtis Windatt</a></li>
 				<li><a href="http://www.eclipse.org/e4/" target="_top">e4</a><br> -- <a href="#McQ">Mike Wilson</a></li>
 				<li><a href="http://www.eclipse.org/eclipse/incubator/">Eclipse Incubator</a><br> -- <a href="#McQ">Mike Wilson</a></li>
       		</ul>				
