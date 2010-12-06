@@ -338,7 +338,7 @@
 						<li>Run menu and key binding</li>
 						<li>Java editor context menu</li>
 					</ol>
-				<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+				<p><a href="#top">Back to top</a><hr></p>
 			<a name="Evaluations"></a>
 			<h2><b>Evaluations</b></h2>
 				<h3>Java 5.0 features</h3> 
