@@ -314,7 +314,6 @@
 		</div>
 		<div class="homeitem3col">
 			<a name="Java6"></a>
-			<p>&nbsp;</p>
 			<h2><b>Java 6.0 Features</b></h2>
 				<h3> All Instances</h3>
 					<ol>
@@ -372,7 +371,7 @@
 						<li>persisting the result - i.e. move the result to the Display view or Expressions view</li>
 						<li>in a clean workspace, popups should size reasonable on the first use, after which the popup sizes are persisted and reused</li>
 					</ol>
-				<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+				<p><a href="#top">Back to top</a><hr></p>
 			<a name="ContextLaunching"></a>
 			<h2><b>Context Launching</b></h2>
 				<h3> Resource properties page</h3>
@@ -411,7 +410,7 @@
 							</p>
 						</li>
 					</ol>
-				<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+				<p><a href="#top">Back to top</a><hr></p>
 			<a name="Launch"></a>
 			<h2><b>Launch Options</b></h2>
 				<h3>Build before launch</h3> 
@@ -441,7 +440,7 @@
 				  		<li>save dirty editors</li>
 				  		<li>launch in foreground/background (controlled via common tab on launch config)</li>
 					</ol>
-			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+			<p><a href="#top">Back to top</a><hr></p>
 			<a name="Launch_Modes"></a>
 			<h2><b>Launch Modes</b></h2>
 				<p> For this test, you require the use of the launch modes test plugin available <a href="http://www.eclipse.org/eclipse/debug/misc/plugins/org.eclipse.example.mixedmode_1.2.0.jar">here</a>.</p>
@@ -472,7 +471,7 @@
 						<li>canceling either choice from the resolution dialog should cancel the launch as well</li>
 					</ol>
 				</ol>
-			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+			<p><a href="#top">Back to top</a><hr></p>
 			<a name="LaunchConfigurations"></a>
 			<h2><b>Launch Configurations</b></h2>
 				<h3>Launch History / Favorites</h3>
@@ -498,7 +497,7 @@
 						<li>importing and exporting of launch configurations through File > Import/Export</li>
 						<li>using java search to find launch configurations that launch a class</li>
 					</ol>
-			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+			<p><a href="#top">Back to top</a><hr></p>
 			<a name="Debug"></a>
 			<h2><b>Debug View Management </b></h2>
 				<h3>Switch to Debug Perspective</h3> 
@@ -519,7 +518,7 @@
 				 	<ol>
 				 		<li>activate the workbench when a breakpoint is hit</li>
 				 	</ol>
-			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+			<p><a href="#top">Back to top</a><hr></p>
 			<a name="Breakpoints"></a>
 			<h2><b>Breakpoints</b></h2>
 				<h3>Breakpoint Groups</h3> 
@@ -578,7 +577,7 @@
 					  	<li>breakpoint option choices are properly persisted</li>
 					  	<li>preference for suspending Thread by default on newly created breakpoints</li>
 					</ol>
-			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+			<p><a href="#top">Back to top</a><hr></p>
 			<a name="Step"></a>
 			<h2><b>Stepping Tests</b></h2>
 				<h3>Run to Line</h3>
@@ -606,7 +605,7 @@
 						<li>cannot drop to frame of a native method</li>
 					</ol>
 				</ol>
-			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+			<p><a href="#top">Back to top</a><hr></p>
 			<a name="Logical"></a> 
 			<h2><b>Logical Structures</b> </h2>
 				<h3>View Options</h3>
@@ -637,7 +636,7 @@
 						<li>Import is available</li>
 						<li>Logical structure import succeeds</li>
 					</ol>
-			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+			<p><a href="#top">Back to top</a><hr></p>
 			<a name="Watch"></a>
 			<h2><b>Watch Items</b></h2>
 				<h3>Creating Watch items</h3>
@@ -656,7 +655,7 @@
 				  		<li>update when selecting a different stack frame</li>
 				  		<li>errors appear as children of a watch expression (compilation errors, runtime errors) </li>
 				 	</ol>
-			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+			<p><a href="#top">Back to top</a><hr></p>
 			<a name="Context"></a>
 			<h2><b>Context Menu Launching</b></h2>
 				<h3>Run/Debug Menu</h3>
@@ -691,7 +690,7 @@
 						<li>if no recently used configurations exist, the type should be selected</li>
 				  	</ol>
 				</ol>
-			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+			<p><a href="#top">Back to top</a><hr></p>
 			<a name="Classpaths"></a>
 			<h2><b>Runtime Classpaths</b></h2>
 				<h3>Default Classpath</h3>
@@ -709,7 +708,7 @@
 				      	<li>different types of entries</li>
 				      	<li>new entry type - String Variables</li>
 				    </ol>
-			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+			<p><a href="#top">Back to top</a><hr></p>
 			<a name="Source"></a>
 			<h2><b>Source Lookup</b></h2>
 				<h3>Default Source Lookup Path</h3>
@@ -731,7 +730,7 @@
 				      	<li>Folder (in the workspace)</li>
 				      	<li>Java Library (JRE, required plug-ins, etc).</li>
 				    </ol>
-			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+			<p><a href="#top">Back to top</a><hr></p>
 			<a name="Monitors"></a>
 			<h2><b>Threads &amp; Monitors &amp; Thread Groups </b></h2>
 				<h3>Monitor Information In The Debug View</h3> 
@@ -748,7 +747,7 @@
 				      	<li>thread groups can be displayed in debug view by turning on the &quot;Show Thread Groups&quot; option in the view menu</li>
 				        <li>thread groups support terminate</li>
 				    </ol>
-			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+			<p><a href="#top">Back to top</a><hr></p>
 			<a name="Hot"></a>
 			<h2><b>Hot Code Replace </b></h2>
 				<h3>Valid HCR</h3> 
@@ -768,7 +767,7 @@
 				      	<li>works in all methods except last method on stack</li>
 				      	<li>a native method cannot be dropped (and thus a method above a native cannot be dropped/re-entered)</li>
 				    </ol>
-			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+			<p><a href="#top">Back to top</a><hr></p>
 			<a name="JREs"></a>
 			<h2><b>Installed JREs </b></h2>
 				<h3>Javadoc Locations</h3>
@@ -785,7 +784,7 @@
 						<li>changing the default JRE triggers a build if the default JRE is referenced by a project</li>
 					</ol>
 				</ol>
-			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+			<p><a href="#top">Back to top</a><hr></p>
 			<a name="EEs" id="EEs"></a>
 			<h2><b>Execution Environments </b></h2>
 				<h3>Specify a Build Path</h3> 
@@ -809,7 +808,7 @@
 				  	<ol>
 				  		<li>create a rule that over-rides a system library rule, and ensure it works</li>
 				  	</ol>
-			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+			<p><a href="#top">Back to top</a><hr></p>
 			<a name="String"></a>
 			<h2><b>String Variables </b></h2>
 				<h3>General</h3>
@@ -818,7 +817,7 @@
 				      	<li>VM args, program args, main type name</li>
 				  		<li>String Variable selection dialog</li>
 					</ol>
-			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+			<p><a href="#top">Back to top</a><hr></p>
 			<a name="Console"></a>
 			<h2><b>Console </b></h2>
 				<h3>Options</h3>
@@ -871,7 +870,7 @@
 						<li>console input - typing, pasting, pasting multiple lines</li>
 						<li>CTRL-Z/D for EOF when doing console input</li>
 					</ol>
-			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+			<p><a href="#top">Back to top</a><hr></p>
 			<a name="Variables"></a>
 			<h2><b>Variables</b></h2>
 				<h3>toString()</h3>  
@@ -909,7 +908,7 @@
 					    	expand/select. when re-selecting frame 1, the original state is restored)</li>
 					    <li>Debug hover works for symbols with the same name and different values (inherited fields), showing correct value</li>
 					</ol>
-			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+			<p><a href="#top">Back to top</a><hr></p>
 			<a name="Refactoring"></a>
 			<h2><b>Refactoring</b></h2>
 				<h3>Launch Configurations</h3>
@@ -925,7 +924,7 @@
 			      		<li>label is updated</li>
 			      		<li>marker location is updated (text selected when double-clicking on a breakpoint in the breakpoint view)</li>
 			    	</ol>
-			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+			<p><a href="#top">Back to top</a><hr></p>
 			<a name="Applets"></a>
 			<h2><b>Applets</b></h2>
 				<h3>Main Tab</h3> 
@@ -945,7 +944,7 @@
 				      	<li>specify parameters (available via Applet#getParameter(...))</li>
 				      	<li>specify applet name - allows Applets to communicate with each other via AppletContext#getApplet(...)</li>
 				    </ol>
-			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+			<p><a href="#top">Back to top</a><hr></p>
 			<a name="Remote"></a>
 			<h2><b>Remote Debugging</b></h2>
 				<h3>Connect To A Remote VM</h3> 
@@ -965,7 +964,7 @@
 					<ol>
 						<li>terminate should only be enabled when the config specifies that terminate is supported</li>
 					</ol>
-			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+			<p><a href="#top">Back to top</a><hr></p>
 			<a name="JSP"></a>
 			<h2><b>JSP Example </b></h2>
 				<p>
@@ -986,7 +985,7 @@
 				        	jasper-runtime.jar and servlet-api.jar from /common/lib to the project's 
 				        	build path)</li>
 				    </ol>
-			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+			<p><a href="#top">Back to top</a><hr></p>
 			<a name="STRESS"></a>
 			<h2><b>Stress Tests </b></h2>
 				<h3>Stepping With Many Threads</h3>
@@ -1024,7 +1023,7 @@
 				      	<li>verify that expansion and selection are maintained properly in the Variables View</li>
 				      	<li>verify that there is no blank labels in the Variables View</li>
 				    </ol>
-			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>	
+			<p><a href="#top">Back to top</a><hr></p>	
 			<a name="Breadcrumb"></a>
 			<h2><b>Breadcrumb</b></h2>
 	 			<h3>Activation</h3>
@@ -1063,7 +1062,7 @@
 				      <li>Menu actions should reflect the selected item.  E.g. copy stack trace for a thread should copy the trace of the whole thread</li>
 				      <li>Find action should activate the selected item in Debug view</li>
 				    </ol>
-			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>	
+			<p><a href="#top">Back to top</a><hr></p>	
 			<a name="Memory"></a>
 			<h2><b>Memory View</b></h2>
 				<p>
@@ -1137,7 +1136,7 @@
 				  		<li>preferences are persisted across workbench restart</li>
 				  		<li>vertical vs Horizontal Orientation</li>
 				  	</ol>
-			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+			<p><a href="#top">Back to top</a><hr></p>
 			<a name="Modules"></a>
 			<h2><b>Modules View</b></h2>
 				<h3>General</h3>
@@ -1146,7 +1145,7 @@
 					  	<li>Find...</li>
 					  	<li>details pane can be populated</li>
 					</ol>
-			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>
+			<p><a href="#top">Back to top</a><hr></p>
 			<a name="Registers"></a>
 			<h2><b>Registers View</b></h2>
 				<h3>General</h3>
@@ -1161,7 +1160,7 @@
 					  	<li>details pane shows details of registers</li>
 					  	<li>top index and expansion of registers are maintained after each step or switching stack frame</li>
 					</ol>
-			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>			
+			<p><a href="#top">Back to top</a><hr></p>			
 			<a name="Breakpoint_Toggle_Types"></a>
 			<h2><b>Breakpoint Toggle Types</b></h2>
 				<h3>General</h3>
@@ -1175,7 +1174,7 @@
 					  	<li>toggle breakpoints in different locations (editor and view)</li>
 					  	<li>check that user-selected breakpoint type is persisted</li>
 					</ol>
-			<p><a href="#top">Back to top</a><br><hr></p><p>&nbsp;</p>			
+			<p><a href="#top">Back to top</a><hr></p>			
 		</div>
 	</div>
 	<div id="rightcolumn">
