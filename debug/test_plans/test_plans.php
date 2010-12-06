@@ -39,6 +39,13 @@
 		<h1>$pageTitle</h1>
 		<p>To assist in testing, you can download our <a href="/eclipse/debug/misc/ManualTestingPrograms.zip">manual testing programs</a> (Last updated 21 May 2008).  The zip file contains an Eclipse project with a variety of simple programs to test different functions of the debug framework.  Simply download the zip file and inside Eclipse, select Import... &gt; Existing projects into workspace and select the archive file.</p>
 		<div class="homeitem3col">
+			<h2><b>3.7 Test Plans</b></h2>
+			<a name="3-7_testing"></a>
+			<ul>
+				<li><a href="/eclipse/debug/test_plans/test_plan-3.7M4.php">3.7M4</a></li>
+			</ul>
+		</div>	
+		<div class="homeitem3col">
 			<h2><b>3.6 Test Plans</b></h2>
 			<a name="3-6_testing"></a>
 			<ul>

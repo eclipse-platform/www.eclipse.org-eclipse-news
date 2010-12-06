@@ -49,11 +49,10 @@
 				<tbody>
 				<tr> 
 					<td width="30%" valign="top"><img src="images/people/darinw.png" /></td>
-					<td width="70%">Darin is currently a senior software developer with the IBM Rational Team, 
-					an Eclipse committer, and lead for the Eclipse Debug Platform and Java Debugger. 
+					<td width="70%">Darin is currently the CTO of Codenza and an Eclipse committer. 
 					For the better part of the last ten years, Darin has been working on IDE's such as Eclipse, 
-					VA/Micro Edition, and ENVY/Smalltalk. In a previous software development life, Darin was an 
-					audio software developer supporting virtual reality productions at the Banff Centre for the arts.</td>
+					VA/Micro Edition, and ENVY/Smalltalk. In a previous software development life, Darin was a project / team lead at IBM Canada 
+					and an audio software developer supporting virtual reality productions at the Banff Centre for the arts.</td>
 				</tr>
 				<tr> 
 					<td width="30%" valign="top"><b>Status</b></td>
@@ -61,7 +60,7 @@
 				</tr>
 				<tr> 
 					<td width="30%" valign="top"><b>Email</b></td>
-					<td width="70%">Darin_Wright@ca.ibm.com</td>
+					<td width="70%">darin.eclipse@gmail.com</td>
 				</tr>
 				</tbody>
 			</table>

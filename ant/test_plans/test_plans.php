@@ -38,6 +38,11 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>	
 		<div class="homeitem3col">
+			<a name="3-7_testing"></a>
+			<h2><b>3.7 Test Plans</b></h2>
+			<ul>
+				<li><a href="/eclipse/ant/test_plans/3_7M4.php">3.7M4</a></li>
+			</ul>
 			<a name="3-6_testing"></a>
 			<h2><b>3.6 Test Plans</b></h2>
 			<ul>
