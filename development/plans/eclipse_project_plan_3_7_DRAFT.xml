@@ -298,7 +298,7 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 			<td rowspan="1">11i v2</td>
 			<td rowspan="1">ia64 32-bit</td>
 			<td rowspan="1">HP-UX Java 5 Update 18</td>
-			<td rowspan="1">Motif 2.1</td>
+			<td rowspan="1"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> GTK</td>
 		</tr>
 		<!-- ************ AIX ************** -->
 		<tr class="c0">
@@ -470,7 +470,34 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 </p:description>
 
 <p:committed>
-  <p><i>None at this time.</i></p>
+<ul>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+	<strong>BIDI enhancements.</strong>
+	We will invest in ensuring the Eclipse platform remains a first class basis for	products 
+	supporting bidirectional text. Areas of investigation include: support for controlling text 
+	direction independently from widget orientation, text orientation support in the Text
+	widget, ability to change text orientation at runtime, and stronger support for
+	bidirectional calendars.
+	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=325994">325994</a>)
+</li>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+	<strong>Support for Webkit on Windows.</strong>
+	We will provide support for using Webkit as the embedded browser in Eclipse when
+	running on Windows.	Note that the Eclipse platform will not distribute Webkit, but 
+	will provide bindings so that it can be used within Eclipse and SWT when available.
+	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=325995">325995</a>)
+</li>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> new)
+	<strong>Complete transition from Motif to GTK.</strong>
+	It has become increasingly difficult to add modern new features to 
+	the Motif port given that Motif itself has no active development. Support for accessibility, 
+	advanced graphics, and transparent shells is unavailable or limited. In addition, there is
+	no available Motif on 64-bit platforms, which has become standard on server class machines.
+	For these reasons we will completely drop support for Motif platforms, and replace them
+	with 64-bit GTK versions. This includes new ports of the platform on AIX and HP-UX.
+	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=333115">333115</a>)
+</li>
+</ul>
 </p:committed>
 
 <p:proposed>
@@ -478,7 +505,7 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 <li>
 	<strong>Add support for Java SE 7 features.</strong>
 	The next feature release of Java SE is
-	version 7, which will probably be available in 2011. This release is
+	version 7, which is currently scheduled for July 28, 2011. This release is
 	expected to contain extensions to the Java language, including support for
 	dynamically-typed languages, and other minor language changes
 	(Coin project). Eclipse Java tooling will include initial support for
@@ -493,22 +520,6 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 	is fully accessible to all users. In addition, SWT will extend its accessibility support
 	to include IAccessibleEditableText, and expand its accessibility testing efforts.
 	[SWT, Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=325993">325993</a>)
-</li>
-<li>
-	<strong>BIDI enhancements.</strong>
-	We will invest in ensuring the Eclipse platform remains a first class basis for	products 
-	supporting bidirectional text. Areas of investigation include: support for controlling text 
-	direction independently from widget orientation, text orientation support in the Text
-	widget, ability to change text orientation at runtime, and stronger support for
-	bidirectional calendars.
-	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=325994">325994</a>)
-</li>
-<li>
-	<strong>Support for Webkit on Windows.</strong>
-	We will provide support for using Webkit as the embedded browser in Eclipse when
-	running on Windows.	Note that the Eclipse platform will not distribute Webkit, but 
-	will provide bindings so that it can be used within Eclipse and SWT when available.
-	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=325995">325995</a>)
 </li>
 </ul>
 </p:proposed>
@@ -582,18 +593,14 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 </p:description>
 
 <p:committed>
-  <p><i>None at this time.</i></p>
-</p:committed>
-
-<p:proposed>
 <ul>
-<li>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
 	<strong>Multi-touch support.</strong>
 	We will add API in SWT for multi-touch events. These events will allow Eclipse applications
 	to react to native multi-touch events on operating system where such events are supported
 	(currently Windows 7 and Mac OS X 10.6). [SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=279884">279884</a>)
 </li>
-<li>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
 	<strong>Problems view enhancements.</strong>
 	The <b>Problems</b> view supports invoking Quick Fix to automatically resolve
 	problems, but this capability is difficult to discover and use. We will make this
@@ -601,6 +608,11 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 	at once from the problems view.
 	[Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=326000">326000</a>)
 </li>
+</ul>
+</p:committed>
+
+<p:proposed>
+<ul>
 <li>
 	<strong>Help enhancements.</strong>
 	We will make a number of enhancements to improve the usability and extensibility
