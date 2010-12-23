@@ -36,8 +36,12 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>Releases currently under development</h3>
 			<ul>
-	      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_3_7.xml"> Eclipse Project Indigo Plan</a><br>
+	      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_3_7.xml"> Eclipse Project Indigo 3.7 Plan</a><br>
 	        This document lays out the feature and API set for the Indigo 3.7 release of the Eclipse Project.</li>
+	      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_1.xml"> Eclipse Project Indigo 4.1 Plan</a><br>
+	        This document lays out the feature and API set for the Indigo 4.1 release of the Eclipse Project.</li>
+	      <li><a href="plans/freeze_plan_3_6_2.php"> Eclipse Project Helios SR2 Endgame Plan</a><br>
+			Information about how we plan to wrap up Helios Service Release 2 (version 3.6.2).</li>
 	    </ul>
       	</div>
 		<div class="homeitem3col">
