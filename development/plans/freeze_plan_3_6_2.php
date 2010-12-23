@@ -36,6 +36,7 @@ ob_start();
 	table.schedule tr.current td {
 		background-color: #F4EEFF;
 	}
+</style>
 	<div id="midcolumn">
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
