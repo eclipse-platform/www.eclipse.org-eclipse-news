@@ -2,7 +2,7 @@
 
 	#*****************************************************************************
 	#
-	# Copyright (c) 2007 IBM Corporation and others.
+	# Copyright (c) 2007, 2011 IBM Corporation and others.
  	# All rights reserved. This program and the accompanying materials
  	# are made available under the terms of the Eclipse Public License v1.0
  	# which accompanies this distribution, and is available at
@@ -25,7 +25,7 @@
 			<li><a href="/eclipse/debug/get_involved.php">Get Involved!</a></li>
 			<li><a href="/eclipse/debug/documents.php">Articles & Documents</a></li>
 			<li><a href="/eclipse/debug/nan/new_and_noteworthy.php">New and Noteworthy</a></li>
-			<li><a href="/eclipse/debug/test_plans/test_plans.php">Test Plans</a></li>
+			<li><a href="http://wiki.eclipse.org/Debug/Test_Script">Test Script</a></li>
 			<li><a href="/eclipse/debug/documents/project_sets/psf_files.php">Debug Project Set Files</a></li>
 			<li><a href="/eclipse/debug/who.php">Who We Are</a></li>
 			<li><a href="http://eclipse-debug.blogspot.com/" target="_blank">Debug Team Blog</a></li>

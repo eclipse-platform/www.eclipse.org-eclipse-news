@@ -2,7 +2,7 @@
 
 	#*****************************************************************************
 	#
-	# Copyright (c) 2007, 2008 IBM Corporation and others.
+	# Copyright (c) 2007, 2011 IBM Corporation and others.
  	# All rights reserved. This program and the accompanying materials
  	# are made available under the terms of the Eclipse Public License v1.0
  	# which accompanies this distribution, and is available at
@@ -84,8 +84,6 @@
 				</li>
 				<li>To help new contributors, we have created a <a href="/eclipse/debug/documents/project_sets/debug.psf" target="_blank">project set file</a> containing all of the projects needed to get started with debug coding.
 				There is also a project set file for <a href="/eclipse/debug/documents/project_sets/debug3.3.1.psf" target="_blank">3.3.1 maintenance</a>.</li>
-				<li>Debug overall <a href="/eclipse/debug/platform/dev_plans/r3_6/plan.php">3.6 plan</a></li>
-				<li><a href="/eclipse/debug/test_plans/test_plans.php#3-6_testing">Debug 3.6 Test Matrix</a></li>
 			</ul>
 		</div>
 	</div>
