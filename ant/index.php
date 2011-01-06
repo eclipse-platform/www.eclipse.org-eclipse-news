@@ -11,7 +11,7 @@ include($App->getProjectCommon());
 
 	#*****************************************************************************
 	#
-	# Copyright (c) 2008 IBM Corporation and others.
+	# Copyright (c) 2008, 2011 IBM Corporation and others.
  	# All rights reserved. This program and the accompanying materials
  	# are made available under the terms of the Eclipse Public License v1.0
  	# which accompanies this distribution, and is available at
@@ -62,19 +62,6 @@ include($App->getProjectCommon());
         		</p>
 		</div>
 		<div class="homeitem3col">
-			<h2><b>Ant Plug-ins</b></h2>
-			<p>
-				The Ant component consists of the following plug-ins:
-			</p>
-			<ul>
-				<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.ant.core" target="_top">org.eclipse.ant.core</a></li>
-				<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.ant.ui" target="_top">org.eclipse.ant.ui</a></li>
-				<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.ui.externaltools" target="_top">org.eclipse.ui.externaltools</a></li>
-				<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.ant.tests.core" target="_top">org.eclipse.ant.tests.core</a></li>
-				<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.ant.tests.ui" target="_top">org.eclipse.ant.tests.ui</a></li>
-			</ul>
-		</div>
-		<div class="homeitem3col">
 			<h2><b>New and Noteworthy</b></h2>
 			<p>
 				For a complete listing of new and noteworthy entries check the 
@@ -84,23 +71,8 @@ include($App->getProjectCommon());
 			<h2><b>Up To The Minute</b></h2>
 			<ul>
 				<li>To help new contributors, we have created a 
-				<a href="/eclipse/ant/documents/project_sets/ant-pserver.psf" target="_blank">project set file</a> containing all of the projects needed to get started with Ant coding.</li>
-				<li>Ant overall <a href="/eclipse/ant/dev_plans/r3_6/plan.php">3.6 plan</a></li>
-				<li><a href="/eclipse/ant/test_plans/test_plans.php#3-6_testing">Ant 3.6 Test Matrix</a></li>
+				<a href="http://wiki.eclipse.org/images/7/79/Ant.psf" target="_blank">project set file</a> containing all of the projects needed to get started with Ant coding.</li>
 			</ul>
-		</div>
-		<div class="homeitem3col">
-			<h2><b>Maintenance Efforts</b></h2>
-		      <ul>
-		        <li>Fixes released to the <a target="_blank" href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=Ant&target_milestone=2.0+M1&target_milestone=2.0+M2&target_milestone=2.0+M3&target_milestone=2.0+M4&target_milestone=2.0+M5&target_milestone=2.0+M6&target_milestone=2.0+F1&target_milestone=2.0+F2&target_milestone=2.0+F3&target_milestone=2.0+F4&target_milestone=2.0.1&target_milestone=2.0.2&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">2.0.x</a> branch</li>
-		        <li>Fixes released to the <a target="_blank" href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=Ant&target_milestone=2.1&target_milestone=2.1+M1&target_milestone=2.1+M2&target_milestone=2.1+M3&target_milestone=2.1+M4&target_milestone=2.1+M5&target_milestone=2.1+RC1&target_milestone=2.1+RC2&target_milestone=2.1+RC3&target_milestone=2.1+RC4&target_milestone=2.1.1&target_milestone=2.1.2&target_milestone=2.1.3&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">2.1.x</a> branch</li>
-		        <li>Fixes released to the <a target="_blank" href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=Ant&target_milestone=3.0&target_milestone=3.0+M1&target_milestone=3.0+M2&target_milestone=3.0+M3&target_milestone=3.0+M4&target_milestone=3.0+M5&target_milestone=3.0+M6&target_milestone=3.0+M7&target_milestone=3.0+M8&target_milestone=3.0+M9&target_milestone=3.0+RC1&target_milestone=3.0+RC2&target_milestone=3.0+RC3&target_milestone=3.0+RC4&target_milestone=3.0.1&target_milestone=3.0.2&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">3.0.x</a> branch</li>
-		        <li>Fixes released to the <a target="_blank" href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=Ant&target_milestone=3.1&target_milestone=3.1+M1&target_milestone=3.1+M2&target_milestone=3.1+M3&target_milestone=3.1+M4&target_milestone=3.1+M5&target_milestone=3.1+M6&target_milestone=3.1+M7&target_milestone=3.1+RC1&target_milestone=3.1+RC2&target_milestone=3.1+RC3&target_milestone=3.1+RC4&target_milestone=3.1.1&target_milestone=3.1.2&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">3.1.x</a> branch</li>
-		        <li>Fixes released to the <a target="_blank" href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=Ant&target_milestone=3.2&target_milestone=3.2+M1&target_milestone=3.2+M2&target_milestone=3.2+M3&target_milestone=3.2+M4&target_milestone=3.2+M5&target_milestone=3.2+M6&target_milestone=3.2+RC1&target_milestone=3.2+RC2&target_milestone=3.2+RC3&target_milestone=3.2+RC4&target_milestone=3.2+RC5&target_milestone=3.2+RC6&target_milestone=3.2+RC7&target_milestone=3.2.1&target_milestone=3.2.2&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">3.2.x</a> branch</li>
-		        <li>Fixes released to the <a target="_blank" href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=Ant&target_milestone=3.3&target_milestone=3.3+M1&target_milestone=3.3+M2&target_milestone=3.3+M3&target_milestone=3.3+M4&target_milestone=3.3+M5&target_milestone=3.3+M6&target_milestone=3.3+M7&target_milestone=3.3+RC1&target_milestone=3.3+RC2&target_milestone=3.3+RC3&target_milestone=3.3+RC4&target_milestone=3.3.1&target_milestone=3.3.2&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">3.3.x</a> branch</li>
-		      	<li>Fixes released to the <a target="_blank" href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=Ant&target_milestone=3.4&target_milestone=3.4+M1&target_milestone=3.4+M2&target_milestone=3.4+M3&target_milestone=3.4+M4&target_milestone=3.4+M5&target_milestone=3.4+M6&target_milestone=3.4+M7&target_milestone=3.4+RC1&target_milestone=3.4+RC2&target_milestone=3.4+RC3&target_milestone=3.4+RC4&target_milestone=3.4.1&target_milestone=3.4.2&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">3.4.x</a> branch</li>
-		      	<li>Fixes released to the <a target="_blank" href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=Ant&target_milestone=3.5&target_milestone=3.5+M1&target_milestone=3.5+M2&target_milestone=3.5+M3&target_milestone=3.5+M4&target_milestone=3.5+M5&target_milestone=3.5+M6&target_milestone=3.5+M7&target_milestone=3.5+RC1&target_milestone=3.5+RC2&target_milestone=3.5+RC3&target_milestone=3.5+RC4&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">3.5.x</a> branch</li>
-		      </ul>
 		</div>
 	</div>
 	<div id="rightcolumn">
