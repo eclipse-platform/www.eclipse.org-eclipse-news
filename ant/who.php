@@ -2,7 +2,7 @@
 
 	#*****************************************************************************
 	#
-	# Copyright (c) 2008 IBM Corporation and others.
+	# Copyright (c) 2008, 2011 IBM Corporation and others.
  	# All rights reserved. This program and the accompanying materials
  	# are made available under the terms of the Eclipse Public License v1.0
  	# which accompanies this distribution, and is available at
@@ -42,7 +42,6 @@
 				<tbody>
 				<tr> 
 					<td width="30%" valign="top">No Picture</td>
-					<td width="70%"><td width="30%" valign="top"><img src="images/people/darinw.png" /></td>
 					<td width="70%">Darin is currently the CTO of Codenza and an Eclipse committer. 
 					For the better part of the last ten years, Darin has been working on IDE's such as Eclipse, 
 					VA/Micro Edition, and ENVY/Smalltalk. In a previous software development life, Darin was a project / team lead at IBM Canada 
