@@ -21,17 +21,16 @@
 	<div class="sideitem">
 		<h6>Quick Links</h6>
 		<ul>
-			<li><a href="http://wiki.eclipse.org/Debug/FAQ">Frequently Asked Questions</a></li>
+			<li><a href="wiki.eclipse.org/Debug/FAQ">Frequently Asked Questions</a></li>
 			<li><a href="http://http://wiki.eclipse.org/Debug/Developers">Developers</a></li>
 			<li><a href="/eclipse/debug/documents.php">Articles & Documents</a></li>
 			<li><a href="/eclipse/debug/nan/new_and_noteworthy.php">New and Noteworthy</a></li>
-			<li><a href="http://wiki.eclipse.org/Debug/Test_Script">Test Script</a></li>
-			<li><a href="http://wiki.eclipse.org/images/c/c4/Debug.psf">Debug Project Set File</a></li>
+			<li><a href="wiki.eclipse.org/Debug/Test_Script">Test Script</a></li>
+			<li><a href="wiki.eclipse.org/images/c/c4/Debug.psf">Debug Project Set File</a></li>
 			<li><a href="/eclipse/debug/who.php">Who We Are</a></li>
 			<li><a href="http://eclipse-debug.blogspot.com/" target="_blank">Debug Team Blog</a></li>
 			<li><a href="http://www.facebook.com/group.php?gid=2469776690" target="_blank">Facebook -- Committers Group</a></li>
 			<li><a href="/eclipse/debug/about.php">About this content</a></li>
-			
 		</ul>
 	</div> 
 	<div class="sideitem">
