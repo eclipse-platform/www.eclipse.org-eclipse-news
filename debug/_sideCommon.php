@@ -26,7 +26,7 @@
 			<li><a href="/eclipse/debug/documents.php">Articles & Documents</a></li>
 			<li><a href="/eclipse/debug/nan/new_and_noteworthy.php">New and Noteworthy</a></li>
 			<li><a href="http://wiki.eclipse.org/Debug/Test_Script">Test Script</a></li>
-			<li><a href="/eclipse/debug/documents/project_sets/psf_files.php">Debug Project Set Files</a></li>
+			<li><a href="http://wiki.eclipse.org/images/c/c4/Debug.psf">Debug Project Set File</a></li>
 			<li><a href="/eclipse/debug/who.php">Who We Are</a></li>
 			<li><a href="http://eclipse-debug.blogspot.com/" target="_blank">Debug Team Blog</a></li>
 			<li><a href="http://www.facebook.com/group.php?gid=2469776690" target="_blank">Facebook -- Committers Group</a></li>

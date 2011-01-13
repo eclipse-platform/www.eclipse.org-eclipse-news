@@ -2,7 +2,7 @@
 
 	#*****************************************************************************
 	#
-	# Copyright (c) 2007 IBM Corporation and others.
+	# Copyright (c) 2007, 2011 IBM Corporation and others.
  	# All rights reserved. This program and the accompanying materials
  	# are made available under the terms of the Eclipse Public License v1.0
  	# which accompanies this distribution, and is available at
@@ -19,13 +19,6 @@
 	#****************************************************************************
     
     $commonplugin = <<<EOHTML
-    <div class="sideitem">
-		<h6>Build Notes</h6>
-		<ul>
-			<li><a href="/eclipse/debug/jdt/build_notes.php#uptotheminute">Up to The Minute</a></li>
-	        <li><a href="/eclipse/debug/jdt/build_notes.php#previous">Previous Releases</a></li>
-		</ul>
-	</div>
 	<div class="sideitem">
 		<h6>Plugins</h6>
 		<ul>

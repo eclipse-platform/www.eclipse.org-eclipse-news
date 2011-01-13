@@ -9,7 +9,7 @@
 
 	#*****************************************************************************
 	#
-	# Copyright (c) 2007 IBM Corporation and others.
+	# Copyright (c) 2007, 2011 IBM Corporation and others.
  	# All rights reserved. This program and the accompanying materials
  	# are made available under the terms of the Eclipse Public License v1.0
  	# which accompanies this distribution, and is available at
@@ -41,8 +41,6 @@
 		active and otherwise. Their respective status is displayed with their
 		information. It should be noted that those with an inactive status might not reply to questions about the project.</p>
 		
-		<p>For more information about committers and a listing of what they can commit to see <a href="http://www.eclipse.org/eclipse/commit.html" target="_blank">this page</a> provided
-		by eclipse.org listing all committers and their respective commit rights.</p>
 		<div class="homeitem3col">
 			<h2><b>Darin Wright</b></h2>
 			<table width="100%" border="0" summary="About Darin Wright">
