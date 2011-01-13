@@ -2,7 +2,7 @@
 
 	#*****************************************************************************
 	#
-	# Copyright (c) 2007 IBM Corporation and others.
+	# Copyright (c) 2007, 2011 IBM Corporation and others.
  	# All rights reserved. This program and the accompanying materials
  	# are made available under the terms of the Eclipse Public License v1.0
  	# which accompanies this distribution, and is available at
@@ -51,15 +51,15 @@
 					<blockquote>
 						<a target="_blank" href="/eclipse/debug/documents/ec_2006/debugger_Basic-Debug-Tutorial.pdf">The Eclipse Debug Framework</a>
 						<blockquote>
-							<p>The basic exercises are available <a href="/eclipse/debug/documents/ec_2006/Exercises-Debugger.zip">here</a></p>
+							<p>The basic exercises are available <a href="/eclipse/debug/documents/ec_2006/Exercise-Debugger.zip">here</a></p>
 						</blockquote>
 						<a target="_blank" href="/eclipse/debug/documents/ec_2006/debugger_Supporting-a-Community-of-Debuggers.pdf">The Eclipse 3.2 Debug Platform: Supporting a community of debuggers</a>
 						<blockquote>
-							<p>The Memory View exercises are available <a href="/eclipse/debug/documents/ec_2006/Exercises-MemoryView.zip">here</a></p>
+							<p>The Memory View exercises are available <a href="/eclipse/debug/documents/ec_2006/Exercise-MemoryView.zip">here</a></p>
 						</blockquote>
 						<a target="_blank" href="/eclipse/debug/documents/ec_2006/debugger_Advanced-Debug-Tutorial.pdf">Integrating Custom Debuggers into the Eclipse Platform</a>
 						<blockquote>
-							<p>The Filebrowser exercises are available <a href="/eclipse/debug/documents/ec_2006/Exercises-FileBrowser.zip">here</a></p>
+							<p>The Filebrowser exercises are available <a href="/eclipse/debug/documents/ec_2006/Exercise-FileBrowser.zip">here</a></p>
 						</blockquote>
 					</blockquote>
 				</li>
@@ -100,19 +100,6 @@
 				
 				<li> Also in 3.3M3, the Step commands have been updated to better reflect the usage of asynchronous adapters and virtual tree viewer implementations. More specific information about these
 					changes can be found in the <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.debug.core/buildnotes_platform-debug.html" target ="_blank">platform debug build notes</a>.
-				</li>
-			</ul>
-		</div>
-		<div class="homeitem3col">
-			<h2><b>Debug Utilities</b></h2>
-			<ul>
-				<li><code>org.eclipse.debug.util</code> is a small helper plugin we use to update our build notes files once we verify bugs. To use it, simply download the plugin below
-				and enabled it in your workspace. Once that is done to actually 'use' it, place the cursor at the position in your
-				build notes document and click <b>Run->Verify Bug...</b> (or use the keybinding Ctrl+Alt+V) and enter the number of the bug you verified. The tool will then insert the 
-				corresponding html into the build notes document.<br> 
-				<blockquote>
-					<a href="/eclipse/debug/update">org.eclipse.debug.util plugin</a> which contains the source as well<br>
-				</blockquote>
 				</li>
 			</ul>
 		</div>
