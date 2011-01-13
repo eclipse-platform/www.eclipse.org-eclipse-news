@@ -21,8 +21,8 @@
 	<div class="sideitem">
 		<h6>Quick Links</h6>
 		<ul>
-			<li><a href="http://wiki.eclipse.org/Debug_FAQ">Debug FAQ</a></li>
-			<li><a href="/eclipse/debug/get_involved.php">Get Involved!</a></li>
+			<li><a href="http://wiki.eclipse.org/Debug/FAQ">Frequently Asked Questions</a></li>
+			<li><a href="http://http://wiki.eclipse.org/Debug/Developers">Developers</a></li>
 			<li><a href="/eclipse/debug/documents.php">Articles & Documents</a></li>
 			<li><a href="/eclipse/debug/nan/new_and_noteworthy.php">New and Noteworthy</a></li>
 			<li><a href="http://wiki.eclipse.org/Debug/Test_Script">Test Script</a></li>
