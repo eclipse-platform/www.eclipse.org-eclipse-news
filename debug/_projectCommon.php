@@ -2,7 +2,7 @@
 
 	#*****************************************************************************
 	#
-	# Copyright (c) 2007, 2009 IBM Corporation and others.
+	# Copyright (c) 2007, 2011 IBM Corporation and others.
  	# All rights reserved. This program and the accompanying materials
  	# are made available under the terms of the Eclipse Public License v1.0
  	# which accompanies this distribution, and is available at
@@ -44,7 +44,5 @@
 	$Nav->addNavSeparator("Development", "http://www.eclipse.org/eclipse/development/", "_self", 1);
 	$Nav->addCustomNav("Mailing Lists", 	"http://www.eclipse.org/mail/", "_self", 1);
 	$Nav->addNavSeparator("Project Home", 	"/eclipse/debug/index.php",			"_self", 1);
-	$Nav->addCustomNav("Platform Debug", 	"/eclipse/debug/platform/index.php",	"_self", 2);
-	$Nav->addCustomNav("JDT Debug", 	"/eclipse/debug/jdt/index.php",	"_self", 2);
 
 ?>

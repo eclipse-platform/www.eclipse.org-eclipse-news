@@ -36,38 +36,38 @@
 			<p>The Eclipse Debug Project is not a single project unto itself, it is in fact comprised of 
 			two distinct sub-projects: Platform Debug and JDT Debug.</p>
 			
-			<p><em>Platform Debug</em> defines interfaces for a language
-		    independent debug model which abstract common debugging features of many
-		    languages, whereas, <em>JDT Debug</em> provides an implementation of platform 
-		    debug providing Java debugging support and works with any JDPA-compliant target Java VM.</p>
+			<h4>Platform Debug</h4>
+			<p>The Debug component of the platform defines language independent
+			    facilities and mechanisms for:</p>
+		    <ul>
+			    <li>Launching programs</li>
+			    <li>Source lookup</li>
+			    <li>Defining and registering breakpoints</li>
+			    <li>Event notification from programs being debugged</li>
+			    <li>A language independent debug model</li>
+			    <li>A language independent debug UI</li>
+		    </ul>
+		    <p>The Debug component of the platform defines interfaces for a language
+		    independent debug model, which abstract common debugging features of many
+		    languages. The Debug component of the platform does not provide an
+		    implementation of a debugger, it is the duty of other plug-ins to
+		    provide language specific implementations of debuggers.</p>
 		    
+		    <h4>JDT Debug</h4>
+			<p> JDT Debug implements Java debugging support and works with any JDPA-compliant target 
+	      		Java VM. It is implemented on top of the language independent &quot;debug 
+	      		model&quot; provided by the platform debugger.</p>
+	      		
+      		<p>JDT debug provides the following debugging functionality:</font></p>
+	        <ul>
+		        <li>Launching of a Java VM in either run or debug mode</li> 
+		        <li>Attaching to a running Java VM</li>
+		        <li>Expression evaluation in the context of a stack frame</li> 
+		        <li>Scrapbook pages for interactive Java code snippet evaluation</li> 
+		        <li>Dynamic class reloading where supported by Java virtual machine</li>
+	        </ul>
+	        
 		    <p>Both Platform and JDT Debug are built into Eclipse and ship as part of the Eclipse SDK. 
-		</div>
-		<div class="homeitem">
-			<h2><b>Debug Components</b></h2>
-			
-			<p>As mentioned the Debug Project is broken down into two smaller sub-projects, each with 
-			its own set of committers, projects goals and plans, bug categories and mailing lists.</p>
-			<blockquote>
-				<table width="100%" border="0" summary="The list of sub-projects for the Debug Project">
-					<thead>
-						<tr>
-						<th width="30%" colspan="1" rowspan="1" align="left">Name</th>
-						<th width="70%" colspan="1" rowspan="1" align="left">Description</th>
-						</tr>
-					</thead>
-					<tbody>
-					<tr> 
-						<td width="30%" valign="top"><a href="http://www.eclipse.org/eclipse/debug/platform/">Platform Debug</a></td>
-						<td width="70%">The language independent debug model</td>
-					</tr>
-					<tr> 
-						<td width="30%" valign="top"><a href="http://www.eclipse.org/eclipse/debug/jdt/">JDT Debug</a></td>
-						<td width="70%">The Java implementation of the platform debug component</td>
-					</tr>
-					</tbody>
-				</table>
-			</blockquote>
 		</div>
 		<div class="homeitem">
 			<h2><b>New and Noteworthy</b></h2>

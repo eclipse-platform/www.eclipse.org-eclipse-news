@@ -34,5 +34,24 @@
 			
 		</ul>
 	</div> 
+	<div class="sideitem">
+		<h6>Plugins</h6>
+		<ul>
+			<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.core.variables" target="_blank">core.variables</a></li>
+			<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.debug.core" target="_blank">debug.core</a></li>
+			<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.debug.examples.core" target="_blank">debug.core</a></li>
+			<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.debug.examples.ui" target="_blank">debug.core</a></li>
+			<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.debug.tests" target="_blank">debug.tests</a></li>
+    		<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.debug.ui" target="_blank">debug.ui</a></li>
+    		<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.debug" target="_blank">jdt.debug</a></li>
+	        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.debug.ui" target="_blank">jdt.debug.ui</a></li>
+	        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.launching" target="_blank">jdt.launching</a></li>
+	        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.launching.macosx" target="_blank">jdt.launching.macosx</a></li>
+	        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.launching.macosx.ui" target="_blank">jdt.launching.macosx.ui</a></li>
+	        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.debug.tests." target="_blank">jdt.debug.tests</a></li>
+	        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.debug.jdi.tests" target="_blank">jdt.debug.jdi.tests</a></li>
+    		<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.ui.console" target="_blank">ui.console</a></li>
+		</ul>
+	</div>
 EOHTML
 ?>
