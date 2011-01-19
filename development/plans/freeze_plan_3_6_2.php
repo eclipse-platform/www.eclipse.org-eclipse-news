@@ -111,7 +111,7 @@ ob_start();
 	          </tr>
 	          <tr>
 	            <td height="20"></td>
-	            <td align="right" height="20">3</td>
+	            <td align="right" height="20">2</td>
 	            <td align="right" height="20">Wed 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 3 build</b></td>
