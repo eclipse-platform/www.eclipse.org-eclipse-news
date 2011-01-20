@@ -33,8 +33,8 @@
 	}
 
 	# Defined project nav bar links
-	$Nav->addCustomNav( "About Platform Debug", "/projects/project_summary.php?projectid=platform.debug", "", 1);
-	$Nav->addCustomNav( "About JDT Debug", "/projects/project_summary.php?projectid=jdt.debug", "", 1);
+	$Nav->addCustomNav( "About Platform Debug", "/projects/project_summary.php?projectid=eclipse.platform.debug", "", 1);
+	$Nav->addCustomNav( "About JDT Debug", "/projects/project_summary.php?projectid=eclipse.jdt.debug", "", 1);
 	$Nav->addNavSeparator("Projects", 	"index.php");
 	$Nav->addCustomNav("Platform", "http://www.eclipse.org/platform/", "_self", 1);
 	$Nav->addCustomNav("JDT", "http://www.eclipse.org/jdt/", "_self", 1);
