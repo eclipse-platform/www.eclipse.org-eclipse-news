@@ -41,7 +41,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>January 17, 2010 - RC2 build and test pass this week.</b></p>
+			<p><b>January 24, 2010 - working towards RC3.</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -68,7 +68,7 @@ ob_start();
 	            <td height="20">&nbsp;&nbsp;<b>Contribute RC1 build to Helios SR2 train</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>         
-	          <tr class="current">
+	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">19</td>
 	            <td align="right" height="20">Wed 08:00 EDT</td>
@@ -87,7 +87,7 @@ ob_start();
 			  <tr>
 	            <td height="30"></td>
 	          </tr>
-	          <tr>
+	          <tr class="current">
 	            <td height="20"></td>
 	            <td align="right" height="20">24-28</td>
 	            <td align="right" height="20"></td>
