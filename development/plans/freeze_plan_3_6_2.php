@@ -92,7 +92,7 @@ ob_start();
 	            <td align="right" height="20">24-28</td>
 	            <td align="right" height="20"></td>
 	            <td height="20">&nbsp;&nbsp;</td>
-	            <td height="20">&nbsp;&nbsp;<b>Milestone week for Helios M5</b></td>
+	            <td height="20">&nbsp;&nbsp;<b>Milestone week for Indigo M5</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>         
 			  <tr>
