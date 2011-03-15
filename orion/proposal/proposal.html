@@ -110,11 +110,35 @@ community. Please send all feedback to the
  <li>A navigator to browse, search, copy, move, delete, and bookmark files</li>
  <li>A page for launching and managing sites used to test a web application developed with Orion</li>
  <li>A page for launching JavaScript unit tests, and for viewing the test results.</li>
- <li>A page for viewing and editing the user's 
- There is a way to navigate files 
- and folders, search, run tests, launch sites for testing applications
-  and to search, and work has begun to integrate with Git. For the debugger part, 
- the plan is to integrate well with Firebug and/or WebKit inspector. 
+ <li>A page for viewing and editing the user's profile (changing name, password, etc).</li>
+ <li>A JavaScript plugin and service registry for installing client-side extensions from different web sites.</li>
+ <li>Initial support for git: viewing git status, staging/unstaging changes, and performing commits.</li>
+ <li>A compare editor for viewing differences between individual files.</li>
+ </ul>
+ The contribution also includes an Orion server, providing the following functionality:
+ <ul>
+ <li>A service for creating and managing user workspaces.</li>
+ <li>Services for creating, editing, importing, and exporting files in user workspaces.</li>
+ <li>Full text indexing and search using Apache Solr/Lucene.</li>
+ <li>Services for Git operations using JGit.</li>
+ <li>Authentication and authorization infrastructure, including OpenID login and simple form login support.</li>
+</ul>
+</p>
+<p>
+All code in the initial contribution is authored by IBM employees and the copyright is held by IBM.
+The initial contribution has the following third party dependencies. Unless otherwise noted,
+third party dependencies are licensed under the Apache Software License 2.0.
+<ul>
+ <li>Apache Solr 1.4, Lucene 2.9, and their prerequisite Apache components.</li>
+ <li>Dojo 1.5 (BSD License)</li>
+ <li>NekoHTML 0.9.5</li>
+ <li>openid4java 0.9.5</li>
+ <li>Open AJAX 2.0.3</li>
+ <li>org.json 1.0 (JSON Java API License)</li>
+ <li>SLF4J 1.6 (MIT license)</li>
+</ul>
+
+</p>
  
 <h2>Legal Issues</h2>
 
@@ -125,6 +149,17 @@ community. Please send all feedback to the
 	code available under some other license? Are there any LGPL/GPL bits that you
 	absolutely require?
  -->
+
+<p>
+The OpenID4Java library has not yet been approved for use in Eclipse projects. This
+library is awaiting further provenance information before it is approved. This library
+and associated support for OpenID login can be easily separated from Orion if this
+library is not approved.
+</p>
+<p>
+Orion uses a subset of Dojo 1.5 that has been approved for use in Eclipse projects. The
+full Dojo library has not been approved for use in Eclipse.
+</p>
  
 <h2>Committers</h2>
 
@@ -137,13 +172,36 @@ community. Please send all feedback to the
 <p>The following individuals are proposed as initial committers to the project:</p>
 
 <dl>
-	<dt>Committer 1, Affiliation</dt>
-	<dd>Committer 1 is a committer on the *** project where he has made significant contributions over
-	many years. S/he will be contribute to the *** functionality in this new project.</dd>
-	<dt>Committer 2, Affiliation</dt>
-	<dd>Committer 2 has provided significant contributions to the existing code base. S/he will contribute
-	to the *** functionality in this new project.
-	</dd>
+	<dt>Andrew Niefer, IBM</dt>
+	<dd>Bio</dd>
+	<dt>Boris Bokowski, IBM</dt>
+	<dd>Bio</dd>
+	<dt>Felipe Heidrich, IBM</dt>
+	<dd>Bio</dd>
+	<dt>John Arthorne, IBM</dt>
+	<dd>Bio</dd>
+	<dt>Libing Wang, IBM</dt>
+	<dd>Bio</dd>
+	<dt>Malgorzata Janczarska, IBM</dt>
+	<dd>Bio</dd>
+	<dt>Mark Macdonald, IBM</dt>
+	<dd>Bio</dd>
+	<dt>Mike Wilson, IBM</dt>
+	<dd>Bio</dd>
+	<dt>Nayna Jain, IBM</dt>
+	<dd>Bio</dd>
+	<dt>Silenio Quarti, IBM</dt>
+	<dd>Bio</dd>
+	<dt>Simon Kaegi, IBM</dt>
+	<dd>Bio</dd>
+	<dt>Susan McCourt, IBM</dt>
+	<dd>Bio</dd>
+	<dt>Szymon Brandys, IBM</dt>
+	<dd>Bio</dd>
+	<dt>Tomasz Zarna, IBM</dt>
+	<dd>Bio</dd>
+	<dt>Committer</dt>
+	<dd>Bio</dd>
 </dl>
 
 <p>We welcome additional committers and contributions.</p>
