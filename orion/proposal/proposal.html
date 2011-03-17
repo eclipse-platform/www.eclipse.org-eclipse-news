@@ -64,7 +64,29 @@ community. Please send all feedback to the
 <!-- 
 	Optionally provide the background that has led you to creating this project.
  -->
-
+ <p>
+ At EclipseCon 2008 three years ago, the Eclipse project team demonstrated 
+ a prototype of a web-based Eclipse. We decided back then that we were too early 
+ and did not continue working on the prototype. The browser technology we have
+ today was not yet available, and there was little community interest in working on
+ browser based tools at that time. Since then, there has been an explosion of interest
+ in browser-based tools, with efforts both within and outside of the Eclipse community.
+ </p>
+ <p>
+ Many of these tools efforts aim to bring the desktop IDE experience directly into
+ the browser, in some cases even using cross-compilation to bring tools written in
+ Java directly to the web. In the Eclipse project we also put significant resources into
+ exploring this approach, with the SWT Browser Edition work in the e4 incubator.
+ </p>
+ <p>
+ We have come to the conclusion that these efforts are not the right direction for
+ browser-based tools. The performance and UI design characteristics of desktop 
+ applications do not translate well to the browser. We chosen instead to pursue 
+ a quite different direction. The Orion code base is a completely new implementation, 
+ focused on web technologies and principles. The idea is to make the web itself the 
+ development environment, instead of trying to bring existing desktop IDE concepts to 
+ the browser.
+ </p>
 <h2>Scope</h2>
 
 <!-- 
@@ -72,6 +94,44 @@ community. Please send all feedback to the
 	is in-scope and (optionally) what is out-of-scope. An Eclipse project
 	cannot have an open-ended scope.
  -->
+<p>
+The Orion project's focus is creating components, services, and libraries for building browser-based
+development tools. This includes browser client infrastructure built using widely adopted web
+technologies such as HTML, JavaScript, and CSS. Also included is server-side infrastructure
+needed by such development tools. Roughly speaking, the kind of infrastructure provided
+by the existing Platform project, but in web form, is in scope for Orion. This includes
+infrastructure supporting file management, search, user management, preferences,
+generic source control, compare, file history, editors, and user interface widgets and controls
+required to build development tools.
+</p>
+<p>
+Also of importance are the necessary tools to be able to self-host, i.e. to develop Orion
+using Orion itself. We believe this feedback loop of being our own customer is critical
+to us producing stable, high quality, and truly useful development tools. As such, tools
+for specific web technologies used by Orion will be in scope for this project. This includes
+development tools for programming JavaScript, HTML5, CSS, and related technologies.
+Orion will also produce source control integration tools as required for our development
+purposes. Producing these exemplary tools will allow us to continuously evaluate the
+quality and value of our framework components and libraries.
+</p>
+
+<p>
+Something about mobile (tools for mobile, and mobile tools)?
+</p>
+
+<h3>Out of Scope</h3>
+<p>It is not our intention to duplicate efforts underway in other Eclipse projects. 
+However, given the broad scope, there is potential overlap with other Eclipse community projects. 
+Where possible and practical, we will seek reuse and collaboration. In particular, standalone
+desktop tooling written in Java, as provided by projects such as Web Tools, is out of
+scope for Orion. We may write tools in Java for Orion's server component, but will seek
+collaboration where possible to avoid duplication with efforts in other Eclipse projects.
+</p>
+<p>
+Defining and publishing official standards will be out of scope for the Orion project. We
+will instead adopt existing standards where appropriate. We will collaborate with standards bodies such
+as IETF, OSLC, OpenSocial, and OAuth, as necessary to achieve our development tool goals.
+</p>
 
 <h2>Description</h2>
 
@@ -80,6 +140,14 @@ community. Please send all feedback to the
 	somebody who doesn't already know very much about your project idea or domain
 	has at least a fighting chance of understanding its purpose.
  -->
+<p>
+Orion's goal is to become an open tool integration platform for web-based software development. 
+The project's vision is to move software development to the web as a web experience, as opposed 
+to just cloning the desktop IDE experience in a browser. The project will produce
+framework components and libraries for building browser-based software development 
+tools of all kinds. We will define JavaScript APIs for tool integration in the browser, and 
+HTTP-based APIs for integration of server-based tools.
+</p>
  
 <h2>Why Eclipse?</h2> 
 
@@ -90,7 +158,23 @@ community. Please send all feedback to the
 	What value do you get by having your project at Eclipse over and above the value
 	of hosting at Eclipse Labs?
  -->
+<p>
+Orion will make Eclipse a player in the rapidly growing domain of web-based
+software development. Eclipse is renowned as a world leader in producing open
+source software development tools, but is currently focused primarily on desktop
+tools written in Java. This project will open Eclipse to a new community of software
+developers, toolsmiths, and companies in the domain of browser-based application
+development.
+</p>
+<p>
+Orion will benefit from developing at Eclipse over alternatives such as Eclipse Labs.
+In particular, Eclipse's high standard of IP control and strong governance will ensure 
+Orion can be deployed widely in commercial applications. We will also benefit from 
+using the Eclipse Foundation's hardware infrastructure for hosting not only our source 
+control, but also our live Orion development servers.
+</p>
 
+</p>
 <h2>Initial Contribution</h2>
 
 <!-- 
@@ -115,7 +199,7 @@ community. Please send all feedback to the
  <li>Initial support for git: viewing git status, staging/unstaging changes, and performing commits.</li>
  <li>A compare editor for viewing differences between individual files.</li>
  </ul>
- The contribution also includes an Orion server, providing the following functionality:
+ The contribution also includes a simple Orion server, providing the following functionality:
  <ul>
  <li>A service for creating and managing user workspaces.</li>
  <li>Services for creating, editing, importing, and exporting files in user workspaces.</li>
@@ -253,6 +337,9 @@ expressed interest in this project:</p>
 	should be expected, when your first build will be ready, etc. Exact
 	dates are not required.
  -->
+ <p>
+ We are aiming to produce an initial incubating release to coincide with the June 2011
+ Indigo release train. 
 
 <h2>Changes to this Document</h2>
 
@@ -268,7 +355,7 @@ expressed interest in this project:</p>
 		<th>Change</th>
 	</tr>
 	<tr>
-		<td>DD-Month-YYYY</td>
+		<td>18-March-2011</td>
 		<td>Document created</td>
 	</tr>
 </table>
