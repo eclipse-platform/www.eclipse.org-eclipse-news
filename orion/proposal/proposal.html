@@ -1,37 +1,7 @@
-<!-- 
-	This document is provided as a template along with some guidance for creating
-	your project proposal. This is just a template. Feel free to change it as
-	you see fit (add sections, remove section). We feel, however, that the
-	suggestions represented in this document represent the reasonable minimum
-	amount of information to move forward.
-	
-	Please keep the formatting in this document simple. Please do not edit 
-	this document in Microsoft Word as it adds huge piles of markup that make
-	it difficult to restyle.
-	
-	More information is available here:
-	
-	http://wiki.eclipse.org/Development_Resources/HOWTO/Pre-Proposal_Phase
-	
-	Direct any questions about this template to emo@eclipse.org
- -->
-
 <html>
 <head>
-
-<!-- 
-	Include the title here. We will parse it out of here and include it on the
-	rendered webpage. Do not duplicate the title within the text of your page.
- -->
-
 <title>Orion</title>
 </head>
-
-<!-- 
-	We make use of the 'classic' HTML Definition List (dl) tag to specify
-	committers. I know... you haven't seen this tag in a long while...
- -->
- 
 <style>
 dt {
 display: list-item;
@@ -49,10 +19,6 @@ margin-bottom:5px;
 <p>The Orion project is a proposed open source project under the <a
 	href="http://www.eclipse.org/projects/project_summary.php?projectid=eclipse">Eclipse Project</a>.</p>
 
-<!-- 
-	The communication channel must be specified. Typically, this is the
-	"Proposals" forum. In general, you don't need to change this.
- -->
 <p>This proposal is in the Project Proposal Phase (as defined in the
 Eclipse Development Process) and is written to declare its intent and
 scope. We solicit additional participation and input from the Eclipse
@@ -61,9 +27,6 @@ community. Please send all feedback to the
 
 <h2 id="background">Background</h2>
 
-<!-- 
-	Optionally provide the background that has led you to creating this project.
- -->
  <p>
  At EclipseCon 2008, the Eclipse project team demonstrated 
  a prototype of a web-based Eclipse. We decided back then that we were too early 
@@ -116,7 +79,7 @@ quality and value of our framework components and libraries.
 <h3 id="out-of-scope">Out of Scope</h3>
 <p>It is not our intention to duplicate efforts underway in other Eclipse projects. 
 However, given the broad scope, there is potential overlap with other Eclipse community projects. 
-Where possible and practical, we will seek reuse and collaboration. In particular, standalone
+Where possible and practical, we will seek reuse and collaboration. In particular, stand-alone
 desktop tooling written in Java, as provided by projects such as Web Tools, is out of
 scope for Orion. We may write tools in Java for Orion's server component, but will seek
 collaboration where possible to avoid duplication with efforts in other Eclipse projects.
@@ -126,32 +89,22 @@ Defining and publishing official standards will be out of scope for the Orion pr
 will instead adopt existing standards where appropriate. We will collaborate with standards bodies such
 as IETF, W3C, OSLC, OpenSocial, and OAuth, as necessary to achieve our development tool goals.
 </p>
-
+<p>
+Specific web-based development tools, other than those required to build Orion itself, are out of scope.
+</p>
 <h2 id="description">Description</h2>
-
-<!-- 
-	Describe the project here. Be concise, but provide enough information that
-	somebody who doesn't already know very much about your project idea or domain
-	has at least a fighting chance of understanding its purpose.
- -->
 <p>
 Orion's goal is to become an open tool integration platform for web-based software development. 
 The project's vision is to move software development to the web as a web experience, as opposed 
 to just cloning the desktop IDE experience in a browser. The project will produce
 framework components and libraries for building browser-based software development 
-tools of all kinds. We will define JavaScript APIs for tool integration in the browser, and 
-HTTP-based APIs for integration of server-based tools.
+tools of all kinds. The project will define mechanisms and infrastructure supporting
+integration of tools within a browser-based client. The project will provide client-side
+APIs for accessing Orion components and services in the browser, and HTTP-based APIs for 
+integration of server-based tools.
 </p>
  
 <h2 id="why-eclipse">Why Eclipse?</h2> 
-
-<!-- 
-	Answer these two questions:	What value does this project bring to the Eclipse
-	community? What value do you expect to obtain from hosting your project at Eclipse?
-	
-	What value do you get by having your project at Eclipse over and above the value
-	of hosting at Eclipse Labs?
- -->
 <p>
 Orion will make Eclipse a player in the rapidly growing domain of web-based
 software development. Eclipse is renowned as a world leader in producing open
@@ -171,15 +124,6 @@ control, but also our live Orion development servers.
 </p>
 <h2 id="initial-contribution">Initial Contribution</h2>
 
-<!-- 
-	Projects are expected to arrive at Eclipse with existing code.
-	
-	Describe the existing code that will be contributed to the project. Please provide
-	a couple of paragraphs describing the code with modest detail, including important
-	information like code ownership (who holds the copyright?), and some consideration
-	of community that exists around the code. Include a listing of third-party libraries 
-	and associated licenses.
- -->
  <p>The initial contribution has been donated by IBM. The current code base has been 
  developed by a handful of developers over a few months. Orion has a fast and scalable 
  code editor that runs on all major desktop browsers. There is a client UI written
@@ -219,15 +163,12 @@ third party dependencies are licensed under the Apache Software License 2.0.
 </p>
  
 <h2 id="legal-issues">Legal Issues</h2>
-
-<!-- 
-	Please describe any potential legal issues in this section. Does somebody else
-	own the trademark to the project name? Is there some issue that prevents you
-	from licensing the project under the Eclipse Public License? Are parts of the 
-	code available under some other license? Are there any LGPL/GPL bits that you
-	absolutely require?
- -->
-
+<p>
+The client portion of Orion will be distributed under the Eclipse Distribution License.
+We believe a BSD-style license is required for broad adoption of Orion technology
+in the web community. The server portion of Orion will be distributed under the
+Eclipse Public License.
+</p>
 <p>
 The OpenID4Java library has not yet been approved for use in Eclipse projects. This
 library is awaiting further provenance information before it is approved. This library
@@ -241,62 +182,50 @@ full Dojo library has not been approved for use in Eclipse.
  
 <h2 id="committers">Committers</h2>
 
-<!-- 
-	List any initial committers that should be provisioned along with the
-	new project. Include affiliation, but do not include email addresses at
-	this point.
- -->
-
 <p>The following individuals are proposed as initial committers to the project:</p>
 
 <dl>
 	<dt>Andrew Niefer, IBM</dt>
-	<dd>Bio</dd>
+	<dd>Andrew is contributing to Orion in the area of build support, JavaScript testing
+	infrastructure, and compression/optimization work to improve Orion performance.
+	</dd>
 	<dt>Boris Bokowski, IBM</dt>
-	<dd>Bio</dd>
+	<dd>Boris is co-leading the Orion effort at IBM, with focus on the vision, the overall architecture 
+	and the client-side experience.</dd>
 	<dt>Felipe Heidrich, IBM</dt>
-	<dd>Bio</dd>
+	<dd>Felipe is contributing to the Orion editor.</dd>
 	<dt>John Arthorne, IBM</dt>
-	<dd>Bio</dd>
+	<dd>John is contributing to the Orion server with focus on the file
+	and workspace infrastructure, as well as overall Orion API and documentation.</dd>
 	<dt>Libing Wang, IBM</dt>
-	<dd>Bio</dd>
+	<dd>Libing is contributing to the Orion client, with focus on tooling infrastructure.</dd>
 	<dt>Malgorzata Janczarska, IBM</dt>
-	<dd>Bio</dd>
+	<dd>Malgorzata (Gosia) is contributing to the Orion client and server, with focus
+	on authentication, user management, and source control integration.</dd>
 	<dt>Mark Macdonald, IBM</dt>
-	<dd>Bio</dd>
+	<dd>Mark is contributing to the Orion client, with focus on tooling infrastructure.</dd>
 	<dt>Mike Wilson, IBM</dt>
-	<dd>Bio</dd>
+	<dd>Mike (McQ) is the Eclipse Project PMC lead, and is contributing to Orion
+	with focus on the project vision and overall architectural direction.</dd>
 	<dt>Nayna Jain, IBM</dt>
-	<dd>Bio</dd>
+	<dd>Nayna is contributing in the area of security and authentication infrastructure.</dd>
 	<dt>Silenio Quarti, IBM</dt>
-	<dd>Bio</dd>
+	<dd>Silenio is contributing to the orion editor.</dd>
 	<dt>Simon Kaegi, IBM</dt>
-	<dd>Bio</dd>
+	<dd>Simon is co-leading the Orion effort at IBM, with focus on project planning and component architecture details. </dd>
 	<dt>Susan McCourt, IBM</dt>
-	<dd>Bio</dd>
+	<dd>Susan is focusing on client-side development and user experience.</dd>
 	<dt>Szymon Brandys, IBM</dt>
-	<dd>Bio</dd>
+	<dd>Szymon is contributing to the Orion client and server, with focus
+	on authorization and source control integration.</dd>
 	<dt>Tomasz Zarna, IBM</dt>
-	<dd>Bio</dd>
-	<dt>Committer</dt>
-	<dd>Bio</dd>
+	<dd>Tomasz is contributing to the Orion client and server, with focus
+	on source control integration.</dd>
 </dl>
 
 <p>We welcome additional committers and contributions.</p>
 
-<!-- 
-	Describe any initial contributions of code that will be brought to the 
-	project. If there is no existing code, just remove this section.
- -->
-
 <h2 id="mentors">Mentors</h2>
-
-<!-- 
-	New Eclipse projects require a minimum of two mentors from the Architecture
-	Council. You need to identify two mentors before the project is created. The
-	proposal can be posted before this section is filled in (it's a little easier
-	to find a mentor when the proposal itself is public).
- -->
 
 <p>The following Architecture Council members will mentor this
 project:</p>
@@ -307,13 +236,6 @@ project:</p>
 </ul>
 
 <h2 id="interested-parties">Interested Parties</h2>
-
-<!-- 
-	Provide a list of individuals, organisations, companies, and other Eclipse
-	projects that are interested in this project. This list will provide some
-	insight into who your project's community will ultimately include. Where
-	possible, include affiliations. Do not include email addresses.
- -->
 
 <p>The following individuals, organisations, companies and projects have 
 expressed interest in this project:</p>
@@ -332,12 +254,6 @@ expressed interest in this project:</p>
 
 <h2 id="project-scheduling">Project Scheduling</h2>
 
-<!-- 
-	Describe, in rough terms, what the basic scheduling of the project will
-	be. You might, for example, include an indication of when an initial contribution
-	should be expected, when your first build will be ready, etc. Exact
-	dates are not required.
- -->
  <p>
  We are aiming to produce an initial incubating release to coincide with the June 2011
  Indigo release train. 
