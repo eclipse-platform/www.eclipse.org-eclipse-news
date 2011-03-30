@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2011-03-15
+	# Date:			2011-03-30
 	#
 	# Description: Eclipse project Indigo release freeze plan
 	#
@@ -51,13 +51,25 @@ ob_start();
 	          </tr>
 	          <tr>
 	            <td height="20"></td>
-	            <td align="right" height="20">2</td>
-	            <td align="right" height="20"> Mon 8:00 am EDT</td>
+	            <td align="right" height="20"></td>
+	            <td align="right" height="20"></td>
 	            <td height="20">&nbsp;&nbsp;<b>Transition to fix and polish mode</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#Transition"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">details</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>         
+	          <tr>
+	            <td height="20"></td>
+	            <td align="right" height="20">2</td>
+	            <td align="right" height="20"> Mon 8:00 am EDT</td>
+	            <td height="20">&nbsp;&nbsp;<b>Start 2-day test pass against M7/RC0</b></td>
+	            <td height="20">&nbsp;&nbsp;</td>
+	            <td height="20">&nbsp;&nbsp;<b><a href="#TestPassBeforeRC1"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">details</a></b></td>
+	            <td height="20">&nbsp;&nbsp;</td>
+	          </tr>         
+	           <tr>
+	            <td height="30"></td>
+	          </tr>
 	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">12</td>
@@ -89,9 +101,6 @@ ob_start();
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
 	          <tr>
-	            <td height="30"></td>
-	          </tr>
-	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">19</td>
 	            <td align="right" height="20"> Thu 8:00 am EDT</td>
@@ -107,22 +116,19 @@ ob_start();
 	            <td height="20"></td>
 	            <td align="right" height="20">23</td>
 	            <td align="right" height="20">Mon 8:00 am EDT</td>
-	            <td height="20">&nbsp;&nbsp;<b>Start 2-day test pass against RC2</b></td>
+	            <td height="20">&nbsp;&nbsp;<b>Start 1-day test pass against RC2</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#TestPassUsingRC2"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">details</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>          
 	          <tr>
 	            <td height="20"></td>
-	            <td align="right" height="20">25</td>
-	            <td align="right" height="20">Wed 8:00 am EDT</td>
+	            <td align="right" height="20">24</td>
+	            <td align="right" height="20">Tue 8:00 am EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Start fix pass</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC2"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">rules</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
-	          </tr>
-	          <tr>
-	            <td height="30"></td>
 	          </tr>
 	          <tr>
 	            <td height="20"></td>
@@ -132,6 +138,9 @@ ob_start();
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#RC3"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">goals</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
+	          </tr>
+	          <tr>
+	            <td height="30"></td>
 	          </tr>
 	          <tr>
 	            <td height="20"></td>
@@ -192,7 +201,7 @@ ob_start();
 	          </tr>
 	          <tr>
 	            <td height="20"></td>            
-	            <td align="right" height="20">23</td>
+	            <td align="right" height="20">22</td>
 	            <td align="right" height="20"></td>
 	            <td height="20">&nbsp;&nbsp;<b>Release 3.7 available</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
@@ -319,12 +328,12 @@ ob_start();
 			<h3>Details</h3>
 			<h4><a name="Transition"></a>Transition to fix and polish</h4>
       		<ul>
-                <li>All components transition on May 3 to polishing and fixing 
+                <li>All components transition on May 2 to polishing and fixing 
                   bugs for remainder of release cycle.</li>
                 <li>PMC approval is required for feature work including API changes 
                   being done after M7. Use the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list
                   to request API and feature work approval.
-				  If a change is made to API to make it binary compatible with 3.5, technically this is 
+				  If a change is made to API to make it binary compatible with 3.6, technically this is 
 				  still an API change, and thus it should be treated in the same way as any other API change requests.                  
                   </li>
                  <li>No changes are to be released without appropriate approval and associated bug report. See the fix pass 
@@ -349,6 +358,14 @@ ob_start();
       		</ul>
       		<p>Monday May 3 is a holiday in Poland.<br/>
       		Thursday May 13 is a holiday in Switzerland, France, and Poland.</p>
+			<h4><a name="TestPassBeforeRC1"></a>Test pass prior to RC1</h4>
+			<p>Two day test pass involving entire community, using the M7 build (also called RC0).
+			The goal of this test pass is to get broad testing coverage of the workflows,
+			features, and platforms that aren't regularly tested during our day to day development.
+			Committers should take the opportunity to browse through New & Noteworthy
+			documents from past milestones and give all the new features for the release
+			a good workout.
+			</p>
 			<h4><a name="TestPassBeforeRC2"></a>Test pass prior to RC2</h4>
 			<p>Full day test pass involving entire community, using 
             the most recent nightly build to help stabilize HEAD for the upcoming RC2 build.
@@ -362,10 +379,10 @@ ob_start();
                 <li>No outstanding P1 defects.
                 <li>As few P2 defects as possible.</li>
       		</ul>
-      		<p>Monday May 24 is a holiday in Canada, Switzerland, and France. <br/>
+      		<p>Monday May 23 is a holiday in Canada and Switzerland. <br/>
       		Monday May 31 is a holiday in the US.</p>
       		<h4><a name="TestPassUsingRC2"></a>Test pass using RC2</h4>
-            <p>Concerted 2-day testing effort on RC2 involving
+            <p>Concerted 1-day testing effort on RC2 involving
               entire community including all component teams. In an effort to
               mix things up and hold off the onset of &quot;tester
               fatigue&quot;, each component team will be designating one team
@@ -407,7 +424,7 @@ ob_start();
              <p><b>API change approval:</b> PMC must approve all API changes. No changes are to
               be released without prior approval and associated bug report.  
               Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
-              If a change is made to API to make it binary compatible with 3.5, technically this is still an API change, 
+              If a change is made to API to make it binary compatible with 3.6, technically this is still an API change, 
               and thus it should be treated in the same way as any other API change requests.</p>
              <p><b>Notification requirements:</b> None.</p>
              <p><b>Extra checking requirements:</b> One additional committer must check all code changes 
@@ -422,7 +439,7 @@ ob_start();
              <p><b>API change approval:</b> PMC must approve all API changes. No changes are to
               be released without prior approval and associated bug report.  
               Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
-              If a change is made to API to make it binary compatible with 3.5, technically this is still an API change, 
+              If a change is made to API to make it binary compatible with 3.6, technically this is still an API change, 
               and thus it should be treated in the same way as any other API change requests.</p>
              <p><b>Notification requirements:</b> None.</p>
              <p><b>Extra checking requirements:</b> Two additional committers must check all code changes 
@@ -436,7 +453,7 @@ ob_start();
              <p><b>API change approval:</b> PMC must approve all API changes. No changes are to
               be released without prior approval and associated bug report.  
               Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
-              If a change is made to API to make it binary compatible with 3.5, technically this is still an API change, 
+              If a change is made to API to make it binary compatible with 3.6, technically this is still an API change, 
               and thus it should be treated in the same way as any other API change requests.</p>
              <p><b>Notification requirements:</b> Announce bug numbers of intended non-doc changes to <a href="mailto:platform-releng-dev@eclipse.org">platform-releng-dev@eclipse.org</a>
               mailing list.</p>
@@ -455,7 +472,7 @@ ob_start();
              <p><b>API change approval:</b> PMC must approve all API changes. No changes are to
               be released without prior approval and associated bug report.  
               Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
-              If a change is made to API to make it binary compatible with 3.5, technically this is still an API change, 
+              If a change is made to API to make it binary compatible with 3.6, technically this is still an API change, 
               and thus it should be treated in the same way as any other API change requests.</p>
              <p><b>Notification requirements:</b>Announce bug numbers of intended non-doc changes to <a href="mailto:platform-releng-dev@eclipse.org">platform-releng-dev@eclipse.org</a>
               mailing list.</p>
