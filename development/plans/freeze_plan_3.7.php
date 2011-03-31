@@ -457,7 +457,7 @@ ob_start();
               and thus it should be treated in the same way as any other API change requests.</p>
              <p><b>Notification requirements:</b> Announce bug numbers of intended non-doc changes to <a href="mailto:platform-releng-dev@eclipse.org">platform-releng-dev@eclipse.org</a>
               mailing list.</p>
-             <p><b>Extra checking requirements:</b>Two additional committers must check all code changes 
+             <p><b>Extra checking requirements:</b> Two additional committers must check all code changes 
               prior to release. Person who reported bug should mark the bug as 
               verified once they have retested.</p>
 
@@ -474,9 +474,9 @@ ob_start();
               Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
               If a change is made to API to make it binary compatible with 3.6, technically this is still an API change, 
               and thus it should be treated in the same way as any other API change requests.</p>
-             <p><b>Notification requirements:</b>Announce bug numbers of intended non-doc changes to <a href="mailto:platform-releng-dev@eclipse.org">platform-releng-dev@eclipse.org</a>
+             <p><b>Notification requirements:</b> Announce bug numbers of intended non-doc changes to <a href="mailto:platform-releng-dev@eclipse.org">platform-releng-dev@eclipse.org</a>
               mailing list.</p>
-             <p><b>Extra checking requirements:</b>Two additional committers must check all code
+             <p><b>Extra checking requirements:</b> Two additional committers must check all code
               changes prior to release. Person who reported bug should mark the
               bug as verified once they have retested.</p>
         
