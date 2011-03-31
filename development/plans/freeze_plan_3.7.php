@@ -325,6 +325,16 @@ ob_start();
 	          made in fix passes.</p>
       	</div>
 		<div class="homeitem3col">
+			<h3 id="holidays">Holidays</h3>
+				<p>
+				Here are some holidays during the freeze period to keep in mind:
+				<ul>
+					<li>May 2 - Poland</li>
+					<li>May 23 - Canada</li>
+					<li>June 2 - Switzerland</li>
+					<li>June 13 - Switzerland</li>
+				</ul>
+				</p>
 			<h3>Details</h3>
 			<h4><a name="Transition"></a>Transition to fix and polish</h4>
       		<ul>
@@ -356,8 +366,6 @@ ob_start();
                 <li>No outstanding P1 defects. </li>
                 <li>As few P2 defects as possible.</li>
       		</ul>
-      		<p>Monday May 3 is a holiday in Poland.<br/>
-      		Thursday May 13 is a holiday in Switzerland, France, and Poland.</p>
 			<h4><a name="TestPassBeforeRC1"></a>Test pass prior to RC1</h4>
 			<p>Two day test pass involving entire community, using the M7 build (also called RC0).
 			The goal of this test pass is to get broad testing coverage of the workflows,
@@ -379,8 +387,6 @@ ob_start();
                 <li>No outstanding P1 defects.
                 <li>As few P2 defects as possible.</li>
       		</ul>
-      		<p>Monday May 23 is a holiday in Canada and Switzerland. <br/>
-      		Monday May 31 is a holiday in the US.</p>
       		<h4><a name="TestPassUsingRC2"></a>Test pass using RC2</h4>
             <p>Concerted 1-day testing effort on RC2 involving
               entire community including all component teams. In an effort to
@@ -412,7 +418,7 @@ ob_start();
       	</div>
 		<div class="homeitem3col">
 			<a name="FixPassRules"><h3>Fix pass rules of engagement</h3></a>
-			<a name="FixPassAfterRC0"></a><h4>May 3-13 - contributions to RC1</h4>
+			<a name="FixPassAfterRC0"></a><h4>May 2-12 - contributions to RC1</h4>
 			<p><b>Focus:</b>(1) P1 defects, (2) performance defects, (3) special 
               &quot;polish&quot; items. Fixing other defects has lower priority.</p>
              <p><b>Fix approval:</b> Another committer must +1 your bug report. All changes 
@@ -430,7 +436,7 @@ ob_start();
              <p><b>Extra checking requirements:</b> One additional committer must check all code changes 
               prior to release.</p>
 
-			<a name="FixPassAfterRC1"></a><h4>May 17-20 - contributions to RC2</h4>
+			<a name="FixPassAfterRC1"></a><h4>May 16-19 - contributions to RC2</h4>
 			<p><b>Focus:</b>(1) P1 defects, (2) performance defects, (3) special 
               &quot;polish&quot; items. Fixing other defects has lower priority.</p>
             <p><b>Fix approval:</b> Two additional committers must +1 your bug report. All changes 
@@ -445,7 +451,7 @@ ob_start();
              <p><b>Extra checking requirements:</b> Two additional committers must check all code changes 
               prior to release.</p>
 
-			<a name="FixPassAfterRC2"></a><h4>May 24-27 - contributions to RC3</h4>
+			<a name="FixPassAfterRC2"></a><h4>May 23-26 - contributions to RC3</h4>
 			<p><b>Focus:</b> Serious defects only; documentation.</p>
             <p><b>Fix approval:</b> Two additional committers and a component lead must +1 your bug report (3 people who are not the one making the change). All changes 
               must have their associated bug reports tagged 3.7RC3. (Ongoing changes 
@@ -457,11 +463,11 @@ ob_start();
               and thus it should be treated in the same way as any other API change requests.</p>
              <p><b>Notification requirements:</b> Announce bug numbers of intended non-doc changes to <a href="mailto:platform-releng-dev@eclipse.org">platform-releng-dev@eclipse.org</a>
               mailing list.</p>
-             <p><b>Extra checking requirements:</b> Two additional committers must check all code changes 
+             <p><b>Extra checking requirements:</b>Two additional committers must check all code changes 
               prior to release. Person who reported bug should mark the bug as 
               verified once they have retested.</p>
 
-			<a name="FixPassAfterRC3"></a><h4>May 31 - June 3 - contributions to RC4</h4>
+			<a name="FixPassAfterRC3"></a><h4>May 30 - June 2 - contributions to RC4</h4>
 			<p><b>Focus:</b>Serious defects only; documentation.</p>
             <p><b>Fix approval:</b> Component lead plus one other component lead must 
               approve all work on a component. In addition, any component lead 
@@ -474,9 +480,9 @@ ob_start();
               Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
               If a change is made to API to make it binary compatible with 3.6, technically this is still an API change, 
               and thus it should be treated in the same way as any other API change requests.</p>
-             <p><b>Notification requirements:</b> Announce bug numbers of intended non-doc changes to <a href="mailto:platform-releng-dev@eclipse.org">platform-releng-dev@eclipse.org</a>
+             <p><b>Notification requirements:</b>Announce bug numbers of intended non-doc changes to <a href="mailto:platform-releng-dev@eclipse.org">platform-releng-dev@eclipse.org</a>
               mailing list.</p>
-             <p><b>Extra checking requirements:</b> Two additional committers must check all code
+             <p><b>Extra checking requirements:</b>Two additional committers must check all code
               changes prior to release. Person who reported bug should mark the
               bug as verified once they have retested.</p>
         
