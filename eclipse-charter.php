@@ -18,7 +18,7 @@ ob_start();
 
 	<div id="midcolumn">
 		<h1><?= $pageTitle ?></h1>
-		<h3>Overview</h3>
+		<h2>Overview</h2>
   The Eclipse Top Level Project (the &quot;Eclipse Project&quot;) is an open source
   software development project dedicated to providing a robust, full-featured, commercial-quality,
   and freely available industry platform for the development of highly
@@ -26,7 +26,7 @@ ob_start();
   organization of this Top Level Project and its constituent Projects, and
   roles and responsibilities of the participants.
   </p>
-  <h3>Mission</h3>
+  <h2>Mission</h2>
   Eclipse is a kind of universal tool platform - an open extensible IDE for
   anything and yet nothing in particular. The real value comes from tool
   plug-ins that &quot;teach&quot; Eclipse how to work with things - java files,
