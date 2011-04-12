@@ -19,7 +19,7 @@ ob_start();
 	<div id="midcolumn">
 		<h1><?= $pageTitle ?></h1>
 		<h3>Overview</h3>
-  The Eclipse Top Level Project (the &#8220;Eclipse Project&#8221;) is an open source
+  The Eclipse Top Level Project (the &quot;Eclipse Project&quot;) is an open source
   software development project dedicated to providing a robust, full-featured, commercial-quality,
   and freely available industry platform for the development of highly
   integrated tools. This document describes the mission, scope, and
@@ -42,8 +42,8 @@ ob_start();
   <p>The mission of the Eclipse Project is to adapt and evolve the Eclipse
   technology to meet the needs of the Eclipse tool building community and its
   users, so that the vision of Eclipse as an industry platform is realized.</p>
-  <p><b>Scope</b><br>
-  The Eclipse Project encompasses both the Eclipse platform technology itself,
+  <h2>Scope</h2>
+  <p>The Eclipse Project encompasses both the Eclipse platform technology itself,
   and a set of tools that together form the software development kit (SDK) for
   building Eclipse-based tools. The Eclipse Project will be structured into the
   following Projects which comprise the Eclipse Project, and are overseen by
@@ -260,12 +260,12 @@ ob_start();
     </td>
    </tr>
   </table>
-  <p><b>Project Management Committee</b><a name=PMC></a><br>
-  The Projects under this Charter are managed by a group known as the Project
-  Management Committee (the &#8220;PMC&#8221;).</p>
+  <h2>Project Management Committee</h2><a name=PMC></a>
+  <p>The Projects under this Charter are managed by a group known as the Project
+  Management Committee (the &quot;PMC&quot;).</p>
   <p>PMCs are expected to ensure that:</p>
   <p>All Projects operate effectively by providing
-  leadership to guide the Project&#8217;s overall direction and by removing
+  leadership to guide the Project's overall direction and by removing
   obstacles, solving problems, and resolving conflicts.</p>
   <p>All Project plans, technical documents and reports are publicly available</p>
   <p>All Projects operate using open source rules of
@@ -285,7 +285,7 @@ ob_start();
    <li>Ensuring that Project plans
        are produced.</li>
    <li>Working with the Eclipse
-       Management Organization (the &#8220;EMO&#8221;) to establish the development
+       Management Organization (the &quot;EMO&quot;) to establish the development
        processes and infrastructure needed for the development team to be
        effective.</li>
    <li>Recommending new Projects to the EMO.</li>
@@ -296,8 +296,8 @@ ob_start();
    <li>Helping to ensure that the
        Projects overseen by the PMC have enough contributors, and working to
        fill vacancies in roles.</li>
-   <li>Producing &#8220;how to get
-       involved&#8221; guidelines to help new potential contributors get started.</li>
+   <li>Producing &quot;how to get
+       involved&quot; guidelines to help new potential contributors get started.</li>
    <li>Coordinating relationships
        with other Eclipse Foundation Projects.</li>
    <li>Facilitating code or other
@@ -334,19 +334,19 @@ ob_start();
   success of the Project. PMC members are required to monitor the main Project
   mailing list, and the developer mailing lists for all Projects and components
   they are overseeing.</p>
-  <p><b>Roles</b><br>
-  The Projects under this Charter are operated as meritocracies -- the more you
+  <h2>Roles</h2>
+  <p>The Projects under this Charter are operated as meritocracies -- the more you
   contribute, and the higher the quality of your contribution, the more you are
   allowed to do. However with this comes increased responsibility.</p>
-  <p><b>Users</b><br>
-  Users are the people who use the products that the Project produces. People
+  <h2>Users</h2>
+  <p>Users are the people who use the products that the Project produces. People
   in this role aren't contributing code, but they are using the products,
   reporting bugs, and making feature requests and suggestions. Users are
   encouraged to participate through the user newsgroup(s), asking questions,
   providing suggestions, and helping other users. Users are also encouraged to
   report problem reports using the bug tracking system. </p>
-  <p><b>Developers</b><br>
-  Users who contribute code or documentation become developers. Developers are
+  <h2>Developers</h2>
+  <p>Users who contribute code or documentation become developers. Developers are
   the people who contribute code, fixes, documentation, or other work that goes
   into the product. Developers are also encouraged to participate in the user
   newsgroup(s), and should monitor the developer mailing list associated with
@@ -354,8 +354,8 @@ ob_start();
   to development design discussions related to their area of contribution.
   Developers are expected to be proactive in reporting problems in the bug tracking
   system.</p>
-  <p><b>Committers</b><br>
-  Developers who give frequent and valuable contributions to a Project, or
+  <h2>Committers</h2>
+  <p>Developers who give frequent and valuable contributions to a Project, or
   component of a Project (in the case of large Projects), can have their status
   promoted to that of a &quot;Committer&quot; for that Project or component
   respectively. A Committer has write access to the source code repository for
@@ -400,8 +400,8 @@ ob_start();
   explanations, clarifications, or requests for more information from the
   submitter. Committers are responsible for updating problem reports when they
   have done work related to the problem.</p>
-  <p><b>Projects</b><br>
-  The work under this Top Level Project is further organized into Projects. New
+  <h2>Projects</h2>
+  <p>The work under this Top Level Project is further organized into Projects. New
   Projects must be significant works consistent with the mission of the Top
   Level Project, be recommended by the PMC, and confirmed by the EMO. Projects
   can be discontinued by decision of the Board.</p>
@@ -409,8 +409,8 @@ ob_start();
   the technical leader and nominates the initial set of Committers for the
   Project, and these nominations are approved by the EMO. Project leads are accountable to the
   PMC for the success of their Project.</p>
-  <p><b>Project Components</b><br>
-  The PMC may decide to divide a Project further into components. If a Project
+  <h2>Project Components</h2>
+  <p>The PMC may decide to divide a Project further into components. If a Project
   is divided into components, commit privileges are normally granted at the
   component level, and the committers for a given component vote on issues
   specific to that component. Components are established and discontinued by
@@ -420,8 +420,8 @@ ob_start();
   and represents the component in discussions and votes pertaining to the
   Project as a whole. Component Committers do not participate in votes at the
   level of the Project as a whole, unless they are also the component lead.</p>
-  <p><b>Ports</b><br>
-  For components that contain platform-specific code (such as SWT), it may be
+  <h2>Ports</h2>
+  <p>For components that contain platform-specific code (such as SWT), it may be
   advantageous to allow developers to work on a port of the component to a new
   platform without requiring that they already be committers for the component.
   In this case the main code base is known as the component &quot;core&quot;,
@@ -432,8 +432,8 @@ ob_start();
   done under the auspices of the core component, and all committers for the
   core component automatically also have commit and voting privileges on the
   port. Normally the Component Lead will also be the Port Lead.</p>
-  <p><b>Infrastructure</b><br>
-  The PMC works with the EMO to ensure the required infrastructure for the
+  <h2>Infrastructure</h2>
+  <p>The PMC works with the EMO to ensure the required infrastructure for the
   Project. The Project
   infrastructure will include, at minimum:</p>
   <ul>
@@ -455,8 +455,8 @@ ob_start();
        Development mailing list for technical discussions related to the
        component. This mailing list is open to the public.</li>
   </ul>
-  <p><b>The Development Process</b><br>
-  Each Project lead must produce a development plan for the release cycle, and
+  <h2>The Development Process</h2>
+  <p>Each Project lead must produce a development plan for the release cycle, and
   the development plan must be approved by the PMC and by a majority of
   Committers of the Project.</p>
   <p>Each Project must identify, and make available on its web site, the
@@ -493,8 +493,8 @@ ob_start();
   <p>All development technical discussions are conducted using the development
   mailing lists. If discussions are held offline, then a summary must be posted
   to the mailing list to keep the other committers informed.</p>
-  <p><b>Licensing</b><br>
-  All contributions to Projects under this Charter must adhere to the Eclipse
+  <h2>Licensing</h2>
+  <p>All contributions to Projects under this Charter must adhere to the Eclipse
   Foundation Intellectual Property Policy.</p>
   </td>
  </tr>
