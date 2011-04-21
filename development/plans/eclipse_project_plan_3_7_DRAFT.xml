@@ -129,9 +129,8 @@ marks interesting changes since the previous draft of
 <p>Our target is to complete 3.7 in late June 2011, in alignment with Indigo.
   All release deliverables will be available for download as soon as the release has been
   tested and validated in the target operating configurations listed below.</p>
-<p>Dates for builds and test passes after M7 will be available in the 
-<!-- <a href="http://www.eclipse.org/eclipse/development/plans/freeze_plan_3.7.php">Eclipse Indigo end-game plan</a>. -->
-Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
+<p>Dates for builds and test passes after M7 are available in the 
+<a href="http://www.eclipse.org/eclipse/development/plans/freeze_plan_3_7.php">Eclipse Indigo end-game plan</a>.
 </p>
 </div>
 </p:postamble>
@@ -233,23 +232,19 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 		<!-- ************ RHEL ************** -->
 		<tr class="c1">
 			<td rowspan="3">Red Hat Enterprise Linux</td>
-			<td rowspan="2">5.0</td>
+			<td rowspan="3"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 6</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td>Oracle Java 6 Update 17<br/>
+			<td rowspan="2">Oracle Java 6 Update 17<br/>
 				IBM Java 6 SR8
 			</td>
 			<td rowspan="3">GTK</td>
 		</tr>
 		<tr class="c1">
-			<td rowspan="1">Power 64-bit</td>
-			<td>IBM Java 6 SR8</td>
+			<td rowspan="1">x86 64-bit</td>
 		</tr>
 		<tr class="c1">
-			<td rowspan="1">4.0</td>
-			<td rowspan="1">x86 64-bit</td>
-			<td>Oracle Java 6 Update 17<br/>
-				IBM Java 6 SR8
-			</td>
+			<td rowspan="1">Power 64-bit</td>
+			<td>IBM Java 6 SR8</td>
 		</tr>
 		<!-- ************ SLES ************** -->
 		<tr class="c0">
@@ -297,7 +292,7 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 			<td rowspan="1">HP-UX</td>
 			<td rowspan="1">11i v2</td>
 			<td rowspan="1">ia64 32-bit</td>
-			<td rowspan="1">HP-UX Java 5 Update 18</td>
+			<td rowspan="1"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> HP-UX Java 6 Update 10</td>
 			<td rowspan="1">GTK</td>
 		</tr>
 		<!-- ************ AIX ************** -->
@@ -496,23 +491,7 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 	with 64-bit GTK versions. This includes new ports of the platform on AIX and HP-UX.
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=333115">333115</a>)
 </li>
-</ul>
-</p:committed>
-
-<p:proposed>
-<ul>
-<li>
-	<strong>Add support for Java SE 7 features.</strong>
-	The next feature release of Java SE is
-	version 7, which is currently scheduled for July 28, 2011. This release is
-	expected to contain extensions to the Java language, including support for
-	dynamically-typed languages, and other minor language changes
-	(Coin project). Eclipse Java tooling will include initial support for
-	compiling, editing, and launching applications for Java 7 for those parts which
-	have publicly available specifications. [JDT Core,
-	JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288548">288548</a>)
-</li>
-<li>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
 	<strong>Adopt new accessibility API.</strong>
 	In the 3.6 release, SWT provided new API to support the IAccessible2 standard. This
 	API should be adopted throughout the Eclipse platform user interface to ensure the platform
@@ -521,10 +500,33 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 	[SWT, Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=325993">325993</a>)
 </li>
 </ul>
+</p:committed>
+
+<p:proposed>
+  <p><i>None at this time.</i></p>
 </p:proposed>
 
 <p:deferred>
-  <p><i>None at this time.</i></p>
+<ul>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> deferred)
+	<strong>Add support for Java SE 7 features.</strong>
+	The next feature release of Java SE is
+	version 7, which is currently scheduled for July 28, 2011. This release is
+	expected to contain extensions to the Java language, including support for
+	dynamically-typed languages, and other minor language changes
+	(Coin project). Eclipse Java tooling will include initial support for
+	compiling, editing, and launching applications for Java 7 for those parts which
+	have publicly available specifications. 
+	<br/><br/><b>Note:</b>
+	<i>Due to late availability of JSR-292 (Invoke Dynamic) and JSR-334 (Project
+	Coin) and due to the official release date (July 28, 2011) of Java 7 being
+	after 3.7 ships we have deferred Java 7 support to Indigo SR1 (September 2011). 
+	The work for the Java 7 features is currently in progress in the 'BETA_JAVA7'
+	branch and we will deliver separate updates for the stable builds in order to
+	provide early access to the Java 7 features for interested parties. </i>
+	[JDT Core, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288548">288548</a>)
+</li>
+</ul>
 </p:deferred>
 
 </p:theme>
@@ -541,12 +543,8 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 </p:description>
 
 <p:committed>
-  <p><i>None at this time.</i></p>
-</p:committed>
-
-<p:proposed>
 <ul>
-<li>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
 	<strong>Build at eclipse.org.</strong>
 	The current Eclipse project build and test infrastructure runs on proprietary hardware
 	accessible only to certain committers. We will work to migrate the Eclipse project
@@ -556,7 +554,7 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 	and managing builds.
 	[Rel. Eng., PDE] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=325997">325997</a>)
 </li>
-<li>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
 	<strong>Help servlet API.</strong>
 	To allow customized Help front ends, the Eclipse Help System will introduce a set
 	of servlets which publicly expose API for all of the back end functionality.  This
@@ -564,6 +562,10 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 	[User Assistance] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=319907">319907</a>)
 </li>
 </ul>
+</p:committed>
+
+<p:proposed>
+  <p><i>None at this time.</i></p>
 </p:proposed>
 
 <p:deferred>
@@ -581,7 +583,6 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 </p:deferred>
 
 </p:theme>
-    
 <!-- ============================================== -->
 
 <p:theme name="Ease of Use">
@@ -608,12 +609,7 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 	at once from the problems view.
 	[Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=326000">326000</a>)
 </li>
-</ul>
-</p:committed>
-
-<p:proposed>
-<ul>
-<li>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
 	<strong>Help enhancements.</strong>
 	We will make a number of enhancements to improve the usability and extensibility
 	of the Eclipse help system. Specific areas of work include improved usability of help search scopes,
@@ -621,6 +617,10 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 	content filtering. [Platform UA] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=326001">326001</a>)
 </li>
 </ul>
+</p:committed>
+
+<p:proposed>
+  <p><i>None at this time.</i></p>
 </p:proposed>
 
 <p:deferred>
@@ -697,7 +697,7 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
     </tr>
     <tr>
       <td>com.ibm.icu</td>
-      <td><div align="center">F1.0</div></td>
+      <td><div align="center"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 1.5</div></td>
     </tr>
     <tr>
       <td>com.jcraft.jsch</td>
@@ -789,7 +789,7 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
     </tr>
     <tr>
       <td>org.eclipse.core.jobs</td>
-      <td><div align="center">F1.0</div></td>
+      <td><div align="center"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> F1.1</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.net</td>
@@ -921,7 +921,7 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
     </tr>
     <tr>
       <td>org.eclipse.jdt.ui</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 1.5</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jface</td>
@@ -1157,7 +1157,7 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
     </tr>
     <tr>
       <td>org.eclipse.update.core</td>
-      <td><div align="center">F1.0</div></td>
+      <td><div align="center"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> F1.1</div></td>
     </tr>
     <tr>
       <td>org.eclipse.update.core.win32</td>
