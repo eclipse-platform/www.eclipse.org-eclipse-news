@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <!--  Use this to test local rendering in firefox. Comment out this line once this plan is linked to portal data. -->
-<!-- <?xml-stylesheet type="text/xsl" href="project-plan-render.xsl"?> -->
+<?xml-stylesheet type="text/xsl" href="project-plan-render.xsl"?>
 
-<?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
+<!-- <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?> -->
 
 <p:plan
   plan-format="1.0"
@@ -16,9 +16,9 @@
 <p:introduction>
 <div>
 <p>
-Last revised 16:00 ET December 23, 2010.  (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
+Last revised 16:00 ET May 2, 2011.  (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
 marks interesting changes since the previous draft of 
-<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_3_7_20100922.xml">September 22, 2010</a>.)
+<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_3_7_20101223.xml">December 23, 2010</a>.)
 </p>
 <p><i>Please send comments about this plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
   mailing list.</i>
@@ -298,7 +298,7 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 			<td rowspan="1">11i v2</td>
 			<td rowspan="1">ia64 32-bit</td>
 			<td rowspan="1">HP-UX Java 5 Update 18</td>
-			<td rowspan="1"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> GTK</td>
+			<td rowspan="1">GTK</td>
 		</tr>
 		<!-- ************ AIX ************** -->
 		<tr class="c0">
@@ -470,7 +470,7 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 
 <p:committed>
 <ul>
-<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+<li>
 	<strong>BIDI enhancements.</strong>
 	We will invest in ensuring the Eclipse platform remains a first class basis for	products 
 	supporting bidirectional text. Areas of investigation include: support for controlling text 
@@ -479,14 +479,14 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 	bidirectional calendars.
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=325994">325994</a>)
 </li>
-<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+<li>
 	<strong>Support for Webkit on Windows.</strong>
 	We will provide support for using Webkit as the embedded browser in Eclipse when
 	running on Windows.	Note that the Eclipse platform will not distribute Webkit, but 
 	will provide bindings so that it can be used within Eclipse and SWT when available.
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=325995">325995</a>)
 </li>
-<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> new)
+<li>
 	<strong>Complete transition from Motif to GTK.</strong>
 	It has become increasingly difficult to add modern new features to 
 	the Motif port given that Motif itself has no active development. Support for accessibility, 
@@ -563,7 +563,12 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 	will include capabilities such as filtering, searching, indexing, navigation, and runtime content.
 	[User Assistance] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=319907">319907</a>)
 </li>
-<li>
+</ul>
+</p:proposed>
+
+<p:deferred>
+<ul>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> deferred)
 	<strong>Resource filter improvements.</strong>
 	In the previous release, the concept of resource filters was introduced. We will
 	make improvements to the implementation of filters, including optimizing
@@ -573,10 +578,6 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 	[Workspace, Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=325998">325998</a>)
 </li>
 </ul>
-</p:proposed>
-
-<p:deferred>
-  <p><i>None at this time.</i></p>
 </p:deferred>
 
 </p:theme>
@@ -593,13 +594,13 @@ Eclipse Indigo end-game plan, available shortly before M7 in April 2011.
 
 <p:committed>
 <ul>
-<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+<li>
 	<strong>Multi-touch support.</strong>
 	We will add API in SWT for multi-touch events. These events will allow Eclipse applications
 	to react to native multi-touch events on operating system where such events are supported
 	(currently Windows 7 and Mac OS X 10.6). [SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=279884">279884</a>)
 </li>
-<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
+<li>
 	<strong>Problems view enhancements.</strong>
 	The <b>Problems</b> view supports invoking Quick Fix to automatically resolve
 	problems, but this capability is difficult to discover and use. We will make this
