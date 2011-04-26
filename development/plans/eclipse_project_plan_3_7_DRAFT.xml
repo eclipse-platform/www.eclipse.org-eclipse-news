@@ -516,7 +516,7 @@ marks interesting changes since the previous draft of
 	dynamically-typed languages, and other minor language changes
 	(Coin project). Eclipse Java tooling will include initial support for
 	compiling, editing, and launching applications for Java 7 for those parts which
-	have publicly available specifications. 
+	have publicly available specifications. [JDT Core, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288548">288548</a>)
 	<br/><br/><b>Note:</b>
 	<i>Due to late availability of JSR-292 (Invoke Dynamic) and JSR-334 (Project
 	Coin) and due to the official release date (July 28, 2011) of Java 7 being
@@ -524,7 +524,6 @@ marks interesting changes since the previous draft of
 	The work for the Java 7 features is currently in progress in the 'BETA_JAVA7'
 	branch and we will deliver separate updates for the stable builds in order to
 	provide early access to the Java 7 features for interested parties. </i>
-	[JDT Core, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288548">288548</a>)
 </li>
 </ul>
 </p:deferred>
