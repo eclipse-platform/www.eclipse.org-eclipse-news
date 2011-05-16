@@ -41,7 +41,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>May 6 2011 - fix pass towards RC1</b></p>
+			<p><b>May 16 2011 - working towards RC2</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -70,7 +70,7 @@ ob_start();
 	           <tr>
 	            <td height="30"></td>
 	          </tr>
-	          <tr class="current">
+	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">12</td>
 	            <td align="right" height="20"> Thu 8:00 am EDT</td>
@@ -91,7 +91,7 @@ ob_start();
 	            <td height="20">&nbsp;&nbsp;<b><a href="#TestPassBeforeRC2"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">details</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>           
-	          <tr>
+	          <tr class="current">
 	            <td height="20"></td>
 	            <td align="right" height="20">17</td>
 	            <td align="right" height="20"> Tue 8:00 am EDT</td>
