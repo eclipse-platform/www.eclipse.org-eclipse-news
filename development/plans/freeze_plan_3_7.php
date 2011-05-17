@@ -437,11 +437,14 @@ ob_start();
               prior to release.</p>
 
 			<a name="FixPassAfterRC1"></a><h4>May 16-19 - contributions to RC2</h4>
-			<p><b>Focus:</b>(1) P1 defects, (2) performance defects, (3) special 
+			<p><b>Focus:</b> (1) P1 defects, (2) performance defects, (3) special 
               &quot;polish&quot; items. Fixing other defects has lower priority.</p>
             <p><b>Fix approval:</b> Two additional committers must +1 your bug report. All changes 
               must have their associated bug reports tagged 3.7RC2. (Ongoing changes 
-              to component documentation do not require special approval.)</p>
+              to component documentation do not require special approval.)
+              <br>
+              No bugs must appear in <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&classification=RT&target_milestone=3.7+RC2&longdesc_type=allwordssubstr&longdesc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=flagtypes.name&type0-0-0=notsubstring&value0-0-0=review%2B&field0-1-0=keywords&type0-1-0=notsubstring&value0-1-0=documentation&field0-2-0=keywords&type0-2-0=notsubstring&value0-2-0=test&field0-3-0=keywords&type0-3-0=notsubstring&value0-3-0=example">this query</a>.
+              When your bug appears there, make sure that it gets a review+ or add the 'Documentation', 'example' or 'test' keyword if appropriate.</p>
              <p><b>API change approval:</b> PMC must approve all API changes. No changes are to
               be released without prior approval and associated bug report.  
               Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
@@ -455,7 +458,10 @@ ob_start();
 			<p><b>Focus:</b> Serious defects only; documentation.</p>
             <p><b>Fix approval:</b> Two additional committers and a component lead must +1 your bug report (3 people who are not the one making the change). All changes 
               must have their associated bug reports tagged 3.7RC3. (Ongoing changes 
-              to component documentation do not require special approval.)</p>
+              to component documentation do not require special approval.)
+              <br>
+              No bugs must appear in <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&classification=RT&target_milestone=3.7+RC3&longdesc_type=allwordssubstr&longdesc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=flagtypes.name&type0-0-0=notsubstring&value0-0-0=review%2B&field0-1-0=keywords&type0-1-0=notsubstring&value0-1-0=documentation&field0-2-0=keywords&type0-2-0=notsubstring&value0-2-0=test&field0-3-0=keywords&type0-3-0=notsubstring&value0-3-0=example">this query</a>.
+              When your bug appears there, make sure that it gets a review+ or add the 'Documentation', 'example' or 'test' keyword if appropriate.</p>
              <p><b>API change approval:</b> PMC must approve all API changes. No changes are to
               be released without prior approval and associated bug report.  
               Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
@@ -468,13 +474,16 @@ ob_start();
               verified once they have retested.</p>
 
 			<a name="FixPassAfterRC3"></a><h4>May 30 - June 2 - contributions to RC4</h4>
-			<p><b>Focus:</b>Serious defects only; documentation.</p>
+			<p><b>Focus:</b> Serious defects only; documentation.</p>
             <p><b>Fix approval:</b> Component lead plus one other component lead must 
               approve all work on a component. In addition, any component lead 
               can veto a change with cause. No changes are to be released without 
               associated bug report tagged 3.7RC4 including risk assessment and 
               prior approvals. (Ongoing changes to component documentation do 
-              not require special approval.)</p>
+              not require special approval.)
+              <br>
+              No bugs must appear in <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&classification=RT&target_milestone=3.7+RC4&longdesc_type=allwordssubstr&longdesc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&resolution=FIXED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=flagtypes.name&type0-0-0=notsubstring&value0-0-0=review%2B&field0-1-0=keywords&type0-1-0=notsubstring&value0-1-0=documentation&field0-2-0=keywords&type0-2-0=notsubstring&value0-2-0=test&field0-3-0=keywords&type0-3-0=notsubstring&value0-3-0=example">this query</a>.
+              When your bug appears there, make sure that it gets a review+ or add the 'Documentation', 'example' or 'test' keyword if appropriate.</p>
              <p><b>API change approval:</b> PMC must approve all API changes. No changes are to
               be released without prior approval and associated bug report.  
               Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
