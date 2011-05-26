@@ -41,8 +41,14 @@ ob_start();
 
 
 <p>
+The Platform Ant team would like to thank everyone who filed bugs and all those involved in testing the update to Ant version 1.8.2. 
+Special thanks go to Jeff McAffer for contributing a patch and Antoine Levy Lambert for extra testing during the Ant 1.8.2 update.
 </p>
 
+<p>
+The Platform and JDT Debug team would like to thank everyone who filed bugs and asked or answered newsgroup questions. 
+Special thanks go to Patrick Chuong, Jesper S Møller, Eike Stepper and Winnie Lai for taking the time to contribute patches.
+</p>
 
 </div>
   </div>
