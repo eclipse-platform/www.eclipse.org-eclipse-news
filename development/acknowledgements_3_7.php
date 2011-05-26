@@ -50,6 +50,12 @@ The Platform and JDT Debug team would like to thank everyone who filed bugs and 
 Special thanks go to Patrick Chuong, Jesper S Møller, Eike Stepper and Winnie Lai for taking the time to contribute patches.
 </p>
 
+<p>
+The Plug-in Development Environment team would like to thank everyone who has contributed patches and helped to improve our user 
+experience. Special thanks goes out to Jeff McAffer for the target platform work, Tomasz Zarna for Team API support, 
+Markus Keller for improving workbench launching and Gunnar Wagenknecht for fixing JUnit plug-in test launching.
+</p>
+
 </div>
   </div>
 
