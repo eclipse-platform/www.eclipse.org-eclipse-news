@@ -56,6 +56,12 @@ experience. Special thanks goes out to Jeff McAffer for the target platform work
 Markus Keller for improving workbench launching and Gunnar Wagenknecht for fixing JUnit plug-in test launching.
 </p>
 
+<p>The SWT team would like to thank everyone who filed bugs and helped improve the
+toolkit. Special thanks go to: Andrew Overholt, Christopher Deckers, Chris
+Russo, Dani Megert, Markus Keller, McQ, Paul Webster, Remy Suen, and Simon
+Pope.  Thanks also to Brett Lewis, Brian Cragun, and Richard Schwerdtfeger for
+their assistance in the area of accessibility.</p>
+
 </div>
   </div>
 
