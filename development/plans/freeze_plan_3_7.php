@@ -115,7 +115,7 @@ ob_start();
 	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">23</td>
-	            <td align="right" height="20">Mon 8:00 am EDT</td>
+	            <td align="right" height="20"> Mon 8:00 am EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Start 1-day test pass against RC2</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#TestPassUsingRC2"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">details</a></b></td>
@@ -124,7 +124,7 @@ ob_start();
 	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">24</td>
-	            <td align="right" height="20">Tue 8:00 am EDT</td>
+	            <td align="right" height="20"> Tue 8:00 am EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Start fix pass</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC2"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">rules</a></b></td>
@@ -145,15 +145,16 @@ ob_start();
 	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">30</td>
-	            <td align="right" height="20">&nbsp;&nbsp;&nbsp;Mon 8:00 am EDT</td>
+	            <td align="right" height="20"> Mon 8:00 am EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>All-day test pass against RC3</b></td>
 	            <td height="20">&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#TestPassUsingRC3"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">details</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
 	          <tr class="current">
+	            <td height="20"></td>
 	            <td align="right" height="20">31</td>
-	            <td align="right" height="20">Tue 8:00 am EDT</td>
+	            <td align="right" height="20"> Tue 8:00 am EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Start fix pass</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC3"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">rules</a></b></td>
