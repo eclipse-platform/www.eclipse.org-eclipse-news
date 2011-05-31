@@ -62,6 +62,16 @@ Russo, Dani Megert, Markus Keller, McQ, Paul Webster, Remy Suen, and Simon
 Pope.  Thanks also to Brett Lewis, Brian Cragun, and Richard Schwerdtfeger for
 their assistance in the area of accessibility.</p>
 
+<p>
+The Platform and JDT Text team would like to thank everyone who filed good bug reports and enhancement requests. Special thanks go to:<br>
+Markus Schorn, James Blackburn, Nick Sandonato and Kim Moir for all her releng work.
+</p>
+
+<p>
+JDT UI sends thanks to:<br>
+Kris De Volder, Mirko Raner, Johannes Utzig, Niels Thykier, Konstantin Komissarchik, Björn Michael and Kim Moir for her help with our performance test issues.
+</p>
+
 </div>
   </div>
 
