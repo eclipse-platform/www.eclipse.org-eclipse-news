@@ -41,7 +41,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>June 1 2011 - Start RC4 fix pass</b></p>
+			<p><b>May 31 2011 - Start RC4 fix pass</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
