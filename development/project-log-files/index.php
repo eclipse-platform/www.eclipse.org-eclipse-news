@@ -51,6 +51,7 @@ ob_start();
 			<h3>IP Logs For Past Releases</h3>
 			<p>The following are approved IP logs for past Eclipse project releases.</p>
 			<ul>
+				<li><a href="eclipse_project_3_7_log.pdf">Eclipse project Indigo release (3.7 and 4.1)</a></li>
 				<li><a href="eclipse_4_0_log.pdf">Eclipse platform 4.0 release</a></li>
 				<li><a href="eclipse_e4_move_review_20100630.pdf">e4 to Platform move review, June 2010</a></li>
 				<li>Helios (3.6): 
