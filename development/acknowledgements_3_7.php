@@ -68,6 +68,16 @@ Markus Schorn, James Blackburn, Nick Sandonato and Kim Moir for all her releng w
 </p>
 
 <p>
+The JDT/Core team would like to thank everyone who helped to make JDT/Core
+better through bug reports, patches, comments in the forum,...
+A special thanks for Frédéric Fusier who moved to a new project and was a key
+contribution in many areas of the bundle. Also we would like to thank Stephan
+Herrmann who is working on JDT/Core during his spare time. He made numerous key
+contributions, participated in discussion, provided patches and many other
+things. He was granted commit rights during the 3.7 cycle.
+</p>
+
+<p>
 JDT UI sends thanks to:<br>
 Kris De Volder, Mirko Raner, Johannes Utzig, Niels Thykier, Konstantin Komissarchik, Björn Michael and Kim Moir for her help with our performance test issues.
 </p>
