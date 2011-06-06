@@ -82,6 +82,13 @@ JDT UI sends thanks to:<br>
 Kris De Volder, Mirko Raner, Johannes Utzig, Niels Thykier, Konstantin Komissarchik, Björn Michael and Kim Moir for her help with our performance test issues.
 </p>
 
+<p>The Platform Workspace team would like to thank the following for their code
+contributions to this release: Malgorzata Janczarska, Szymon Ptaszkiewicz,
+Krzysztof Kazmierczyk, Olexiy Buyansky, Wojciech Galanciak, Eduard Bartsch and
+Thirumala Reddy Mutchukota. Credit also goes to Dani Megert who has been
+helping to improve Workspace components.</p>
+
+
 </div>
   </div>
 
