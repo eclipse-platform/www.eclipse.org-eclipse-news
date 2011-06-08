@@ -30,7 +30,7 @@ of text editing, an optional RCP Text component is provided.
     <td WIDTH="98%"><b>Optional Text Editing Components</b>
 <p>
 Applications that want to offer text editing capabilities may include the following eclipse plug-ins which are
-an optional part of RCP i.e. they are not included in the <em>RCP Runtime Binary</em> available from the <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.3-200706251500/index.php">Eclipse Project download page</a>
+an optional part of RCP i.e. they are not included in the <em>RCP Runtime Binary</em> available from the <a href="http://download.eclipse.org/eclipse/downloads/">Eclipse Project download page</a>
 but they can be extracted from the <em>Platform Runtime Binary</em> download):
 </p>
 <ul>
@@ -55,31 +55,20 @@ but they can be extracted from the <em>Platform Runtime Binary</em> download):
   The RCP Text Editor Example is a simple RCP application that creates own text editors using the text editing infrastructure (an optional RCP component) and offers text editing capabilities such as shifting, moving and deleting lines, find/replace, auto-completion and basic syntax highlighting for markup languages. See also the <a href="texteditor/rcp_texteditor_ex.html">documentation and implementation notes</a>.
 </p>
   <p>
-  To run the example in binary form:
-  <ol>
-    <li>Download the <em>RCP Runtime Binary</em> from the <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.3-200706251500/index.php">Eclipse Project downloads page</a> and extract it to a folder such as <code>c:\texteditor-example</code>. The <code>eclipse</code> subfolder of this location will be referenced as <em>&lt;install_dir&gt;</em> below.
-    <li>Download the <a href="../rcp_platform_text_3.3.0.zip">Platform Text Binary</a> and extract it into <code><em>&lt;install_dir&gt;</em>/plugins</code> subfolder.
-    <li>Download the <a href="texteditor/org.eclipse.ui.examples.rcp.texteditor_3.1.0.jar">RCP Text editor example plug-in</a> and save it into the <code><em>&lt;install_dir&gt;</em>/plugins</code> subfolder.
-    <li>Replace the <code><em>&lt;install_dir&gt;</em>/configuration/config.ini</code> file with <a href="texteditor/config.ini">this one</a>.
-    <li>Run the eclipse executable: For example, on Windows, run <code><em>&lt;install_dir&gt;</em>/eclipse.exe</code>.
-  </ol>
-  </p>
-  <p>
   To load the RCP text editor example source into your workspace:
   <ol>
-	  <li>Download the <a href="texteditor/org.eclipse.ui.examples.rcp.texteditor_3.3.0.src.zip">texteditor source plug-in</a> and save it on your harddisk.</li>
+	  <li>Download the <a href="texteditor/org.eclipse.ui.examples.rcp.texteditor_3.7.0.src.zip">texteditor source plug-in</a> and save it on your harddisk.</li>
 	  <li>Choose File > Import... > Existing Project into Workspace.
 	  <li>Click the Browse... button to select the zip file you downloaded in step 1.
 	  <li>Press Finish.
   </ol>
   To run the example from your workspace:
   <ol>
-	  <li>Choose Run > Open Run Dialog...
-	  <li>Under Run-time Workbench, there should be a new launch configuration: RCP Text Editor.
-	  <li>Click Run.
+	  <li>Choose Run > Run Configurations...
+	  <li>Under 'Eclipse Application', there should be a new launch configuration: 'RCP Text Editor'.
+	  <li>Click 'Run'.
 	  <li>When the RCP Text Editor Example window opens, use File > Open to open a plain text, .xml, or .html file.
   </ol>
-  <p>
   </p>
   </td>
   </tr>
@@ -91,51 +80,23 @@ but they can be extracted from the <em>Platform Runtime Binary</em> download):
     This example shows how to use the Eclipse Text editor in your RCP application. As mentioned above this
     requires to add several additional plug-ins and hence increases the size of the resulting RCP application.
     </p>
-  To run the example in binary form:
+  <p> To load the default Text editor example source into your workspace:
   <ol>
-    <li>Download the <em>RCP Runtime Binary</em> from the <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.3-200706251500/index.php">Eclipse Project downloads page</a> and extract it to a folder such as <code>c:\texteditor-example</code>. The <code>eclipse</code> subfolder of this location will be referenced as <em>&lt;install_dir&gt;</em> below.
-    <li>Download the <em>Platform Runtime Binary</em> from the <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.3-200706251500/index.php">Eclipse Project downloads page</a>
-    	and extract the following plug-ins into <code>&lt;install_dir&gt;/plugins</code>:
-    	<ul>
-    		<li><code>org.eclipse.core.filebuffers</code></li>
-    		<li><code>org.eclipse.core.filesystem</code> + corresponding fragment</li>
-    		<li><code>* org.eclipse.core.net</code></li>
-    		<li><code>org.eclipse.core.resources</code> + corresponding fragment</li>
-    		<li><code>org.eclipse.jface.text</code></li>
-    		<li><code>org.eclipse.text</code></li>
-    		<li><code>org.eclipse.ui.editors</code></li>
-    		<li><code>* org.eclipse.ui.forms</code></li>
-    		<li><code>org.eclipse.ui.ide</code></li>
-    		<li><code>* org.eclipse.ui.views</code></li>
-    		<li><code>org.eclipse.ui.workbench.texteditor</code></li>
-    		<li><code>* org.eclipse.update.core + corresponding fragment</li>
-    		<li><code>* org.eclipse.update.ui</code></li>
-    	</ul>
-    	*) these plug-ins are not really needed but as they are not marked <em>optional</em> in the manifest of
-    	<code>org.eclipse.ui.ide</code> and therefore we have to add them as well (see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=198821">bug 198821</a> for details).
-    </li>
-    <li>Download the <a href="texteditor/org.eclipse.ui.examples.texteditor_3.3.0.jar">Text editor example plug-in</a> and save it into the <code><em>&lt;install_dir&gt;</em>/plugins</code> subfolder.
-    <li>Replace the <code><em>&lt;install_dir&gt;</em>/configuration/config.ini</code> file with <a href="texteditor/config.ini">this one</a>.
-    <li>Run the eclipse executable: For example, on Windows, run <code><em>&lt;install_dir&gt;</em>/eclipse.exe</code>.
-  </ol>
-  </p>
-  <p>
-  To load the default Text editor example source into your workspace:
-  <ol>
-	  <li>Download the <a href="texteditor/org.eclipse.ui.examples.texteditor_3.3.0.src.zip">texteditor source plug-in</a> and save it on your harddisk.</li>
+	  <li>Download the <a href="texteditor/org.eclipse.ui.examples.texteditor_3.7.0.src.zip">texteditor source plug-in</a> and save it on your harddisk.</li>
 	  <li>Choose File > Import... > Existing Project into Workspace.
 	  <li>Click the Browse... button to select the zip file you downloaded in step 1.
 	  <li>Press Finish.
   </ol>
+  </p>
+  <p>
   To run the example from your workspace:
   <ol>
-	  <li>Choose Run > Open Run Dialog...
-	  <li>Under Run-time Workbench, there should be a new launch configuration: RCP Text Editor.
-	  <li>Click Run.
-	  <li>When the RCP Text Editor Example window opens, use File > Open to open a plain text, .xml, or .html file.
+	  <li>Choose Run > Run Configurations...</li>
+	  <li>Under 'Eclipse Application', there should be a new launch configuration: 'RCP Text Editor'.</li>
+	  <li>Click Run.</li>
+	  <li>When the RCP Text Editor Example window opens, use File > Open to open a plain text, .xml, or .html file.</li>
   </ol>
-  
-    
+  </p>
 </tr>
   
   
