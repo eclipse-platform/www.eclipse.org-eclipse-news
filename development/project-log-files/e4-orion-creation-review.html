@@ -9,7 +9,7 @@
 <script type="text/javascript" src="/eclipse.org-common/themes/Phoenix/styleswitcher.js"></script>
 </head>
 <body>
-<h1>Tentative IP Log for eclipse.e4</h1>
+<h1>Tentative IP Log for restructuring of e4 to orion</h1>
 <div style="color: gray">
 This tentative IP Log is generated dynamically from automatically collected project information.
 This information has not been vetted for accuracy by the Eclipse Foundation and may not represent
@@ -33,8 +33,7 @@ the official release(s) of this project(s) for more information.
 
 	Corrections to the third-party code tables are made by adding or removing keywords
 	to the CQs themselves. See <a href="http://wiki.eclipse.org/Development_Resources/Automatic_IP_Log#Third-Party_Code">the 
-	how to instructions</a> for more information
-	about which keywords correspond to which tables. Send email to 
+	how to instructions</a> for more information about which keywords correspond to which tables. Send email to 
 	<a href="mailto:emo-ip-team@eclipse.org">the Eclipse Legal team</a> to request changes
 	to the keywords.
 	</div>
@@ -53,12 +52,6 @@ the official release(s) of this project(s) for more information.
 	<td>unmodified source&nbsp;&amp;&nbsp;binary</td>
 	</tr>
 
-	<tr>
-	<td><a href="https://dev.eclipse.org/ipzilla/show_bug.cgi?id=4437">4437</a></td>
-	<td>jQuery Version: 1.4.1 (Includes Sizzle Component)  (PB CQ3723)</td>
-	<td>MIT license</td>
-	<td>unmodified source&nbsp;&amp;&nbsp;binary</td>
-	</tr>
 
 	<tr>
 	<td><a href="https://dev.eclipse.org/ipzilla/show_bug.cgi?id=4745">4745</a></td>
@@ -75,25 +68,12 @@ the official release(s) of this project(s) for more information.
 	</tr>
 
 	<tr>
-	<td><a href="https://dev.eclipse.org/ipzilla/show_bug.cgi?id=4747">4747</a></td>
-	<td>JsTestDriver Subset  (JS client only) Version: 1.2.2</td>
-	<td>Apache License, 2.0</td>
-	<td>unmodified source&nbsp;&amp;&nbsp;binary</td>
-	</tr>
-
-	<tr>
 	<td><a href="https://dev.eclipse.org/ipzilla/show_bug.cgi?id=4749">4749</a></td>
 	<td>Neko HTML Version: 1.9.14</td>
 	<td>Apache License, 2.0</td>
 	<td>unmodified binary </td>
 	</tr>
 
-	<tr>
-	<td><a href="https://dev.eclipse.org/ipzilla/show_bug.cgi?id=4750">4750</a></td>
-	<td>OpenAjaxHub Version: 2.0.3</td>
-	<td>Apache License, 2.0</td>
-	<td>unmodified source&nbsp;&amp;&nbsp;binary</td>
-	</tr>
 
 	<tr>
 	<td><a href="https://dev.eclipse.org/ipzilla/show_bug.cgi?id=4763">4763</a></td>
@@ -147,12 +127,34 @@ None.
 <h2>Unused Approved Contributions</h2>
 <table border="1" cellpadding="3" cellspacing="0">
 
-<tr>
-<th bordercolor="#7A79A7" bgcolor="#7A79A7">CQ</th>
-<th bordercolor="#7A79A7" bgcolor="#7A79A7">Third-Party Code</th>
-<th bordercolor="#7A79A7" bgcolor="#7A79A7">License</th>
-<th bordercolor="#7A79A7" bgcolor="#7A79A7">Status</th>
-</tr>
+	<tr>
+	<th bordercolor="#7A79A7" bgcolor="#7A79A7">CQ</th>
+	<th bordercolor="#7A79A7" bgcolor="#7A79A7">Third-Party Code</th>
+	<th bordercolor="#7A79A7" bgcolor="#7A79A7">License</th>
+	<th bordercolor="#7A79A7" bgcolor="#7A79A7">Status</th>
+	</tr>
+
+	<tr>
+	<td><a href="https://dev.eclipse.org/ipzilla/show_bug.cgi?id=4437">4437</a></td>
+	<td>jQuery Version: 1.4.1 (Includes Sizzle Component)  (PB CQ3723)</td>
+	<td>MIT license</td>
+	<td>unmodified source&nbsp;&amp;&nbsp;binary</td>
+	</tr>
+
+	<tr>
+	<td><a href="https://dev.eclipse.org/ipzilla/show_bug.cgi?id=4747">4747</a></td>
+	<td>JsTestDriver Subset  (JS client only) Version: 1.2.2</td>
+	<td>Apache License, 2.0</td>
+	<td>unmodified source&nbsp;&amp;&nbsp;binary</td>
+	</tr>
+
+	<tr>
+	<td><a href="https://dev.eclipse.org/ipzilla/show_bug.cgi?id=4750">4750</a></td>
+	<td>OpenAjaxHub Version: 2.0.3</td>
+	<td>Apache License, 2.0</td>
+	<td>unmodified source&nbsp;&amp;&nbsp;binary</td>
+	</tr>
+
 </table>
 <p>
 <h2>Pending Contribution Questionnaires</h2>
@@ -364,16 +366,70 @@ None.
 		<td>Show Time instead of Date for recently changed files</td>
 	</tr>
 
+	<tr><td colspan="3" style="background-color: #DDDDDD">Piotr Janik</td>
+	</tr>
+	<tr>
+		<td><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=340789">340789</a></td>
+		<td>22</td>
+		<td>Use StatusCommand from JGit porcelain API for /git/status</td>
+	</tr>
+	<tr>
+		<td><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=339109">339109</a></td>
+		<td>13</td>
+		<td>Provide REST API for git remote</td>
+	</tr>
+	<tr>
+		<td><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=345269">345269</a></td>
+		<td>220</td>
+		<td>Provide REST API for git init</td>
+	</tr>
+	<tr>
+		<td><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=339190">339190</a></td>
+		<td>40</td>
+		<td>Allow to commit a single file</td>
+	</tr>
+	<tr>
+		<td><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=344683">344683</a></td>
+		<td>30</td>
+		<td>Use LogCommand to get commits list</td>
+	</tr>
+	<tr>
+		<td><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=348748">348748</a></td>
+		<td>150</td>
+		<td>GET on git config returns 500 when repository is in subfolder</td>
+	</tr>
+	<tr>
+		<td><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=343247">343247</a></td>
+		<td>20</td>
+		<td>Git Commit operation returns empty response</td>
+	</tr>
+
+	<tr><td colspan="3" style="background-color: #DDDDDD">Mihai Sucan (Mozilla)</td>
+	</tr>
+	<tr>
+		<td><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=334583">334583</a></td>
+		<td>25</td>
+		<td>API: provide support for custom context menu</td>
+	</tr>
+	<tr>
+		<td><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=348471">348471</a></td>
+		<td>5</td>
+		<td>CSS syntax error caused by the use of XMLHttpRequest</td>
+	</tr>
+
+	<tr><td colspan="3" style="background-color: #DDDDDD">Ian Skerrett (Eclipse Foundation)</td>
+	</tr>
+	<tr>
+		<td><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=337613">337613</a></td>
+		<td>Icon</td>
+		<td>Orion Logo</td>
+	</tr>
+
+
 	</table>
 
 	<h2>Repositories</h2>
 <p>The information contained in this log was generated by using commit information from the following repositories:</p>
-<div style='padding-left: 2em'>/cvsroot/eclipse/e4</div>
-<div style='padding-left: 2em'>/gitroot/e4/org.eclipse.e4.deeplink.git</div>
-<div style='padding-left: 2em'>/gitroot/e4/org.eclipse.e4.installer.git</div>
-<div style='padding-left: 2em'>/gitroot/e4/org.eclipse.e4.search.git</div>
-
-<div style='padding-left: 2em'>/gitroot/e4/org.eclipse.e4.utils.git</div>
 <div style='padding-left: 2em'>/gitroot/e4/org.eclipse.orion.client.git</div>
 <div style='padding-left: 2em'>/gitroot/e4/org.eclipse.orion.server.git</div>
 <p>Any corrections to the repository locations can be made by a project committer by managing the 
