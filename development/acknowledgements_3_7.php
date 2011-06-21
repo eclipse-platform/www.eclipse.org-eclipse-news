@@ -88,6 +88,11 @@ Krzysztof Kazmierczyk, Olexiy Buyansky, Wojciech Galanciak, Eduard Bartsch and
 Thirumala Reddy Mutchukota. Credit also goes to Dani Megert who has been
 helping to improve Workspace components.</p>
 
+<p>The release engineering team would like to thank: David Williams for his long hours, endless patience, and helpful advice in managing the coordinated Indigo release; Olivier
+Thomann for his assistance in implementing code coverage in the build; Paul Webster, Andrew Niefer and John Arthorne for their always sage advice with respect to build issues; DJ Houghton, 
+Pascal Rapicault, and Ian Bull for their p2 advice; a huge thanks to the Eclipse webmasters Denis Roy and Matt Ward for their outstanding work keeping the eclipse.org infrastructure working 
+despite our efforts to bring it to its knees; and finally the Eclipse community in general for spreading the open source love. </p>
+
 
 </div>
   </div>
