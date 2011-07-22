@@ -5,7 +5,7 @@
 	# team-leaders.php
 	#
 	# Author: 		
-	# Date:			2010-11-26
+	# Date:			2011-7-22
 	#
 	# Description: Details about the Eclipse Project PMC
 	#
@@ -72,13 +72,6 @@ ob_start();
 			       Member at IBM and work in distributed/parallel OO computing (Server Smalltalk,
 			       massively parallel Smalltalk, etc) as well as expert systems, meta-level architectures
 			       and a PhD at the University of Tokyo.
-		        </li>
-		        <li>
-		          <b><a name="steve"></a>Steve Northover, Bedarra Research Labs</b><br>
-			      Steve Northover is the father of SWT (the Standard Widget Toolkit). Prior to
-			      working on Eclipse, he worked on IBM Smalltalk, VA/Java, VA/Micro Edition.
-			      His interests include programming languages, API design, operating systems,
-			      user intefaces and code optimization.
 		        </li>
 		        <li> 
 		          <b><a name="McQ"></a>Mike ("McQ") Wilson, IBM Ottawa</b><br>
