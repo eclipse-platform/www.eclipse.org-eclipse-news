@@ -190,8 +190,8 @@ Last revised 16:00 ET July 25, 2011.
 		</tr>
 		<!-- ************ RHEL ************** -->
 		<tr class="c1">
-			<td rowspan="3">Red Hat Enterprise Linux</td>
-			<td rowspan="3">6</td>
+			<td rowspan="2">Red Hat Enterprise Linux</td>
+			<td rowspan="2">6</td>
 			<td rowspan="1">Chromium 12</td>
 		</tr>
 		<tr class = "c1">
@@ -245,13 +245,13 @@ Last revised 16:00 ET July 25, 2011.
 			<td rowspan="1">x86 64-bit</td>
 		</tr>
 		<!-- ************ Mac ************** -->
-		<tr class="c1">
+		<tr class="c0">
 			<td rowspan="2">Apple Mac OS X</td>
 			<td rowspan="2">10.6</td>
 			<td rowspan="1">Universal 32-bit</td>
 			<td rowspan="2">Apple Java 10.6 Update 2</td>
 		</tr>
-		<tr class="c1">
+		<tr class="c0">
 			<td rowspan="1">Universal 64-bit</td>
 		</tr>
 	</table>
