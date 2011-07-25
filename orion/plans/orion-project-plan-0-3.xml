@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <!--  Use this to test local rendering in firefox. Comment out this line once this plan is linked to portal data. -->
-<?xml-stylesheet type="text/xsl" href="project-plan-render.xsl"?>
-
-<!-- <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?> -->
+<!-- <?xml-stylesheet type="text/xsl" href="project-plan-render.xsl"?> -->
+<?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
 
 <p:plan
   plan-format="1.0"
   xmlns:p="http://www.eclipse.org/project/plan" xmlns="http://www.w3.org/1999/xhtml"
   name="Orion Project">
 
-<p:release projectid="orion" version="0.3"/>
+<p:release projectid="eclipse.orion" version="0.3"/>
 
 <!-- ============================================== -->
 
