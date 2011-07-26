@@ -26,15 +26,15 @@ Last revised 16:00 ET July 25, 2011.
 
 <p>Plans do not materialize out of nowhere, nor are they entirely static. To
   ensure the planning process is transparent and open to the entire Eclipse community,
-  we (the Orion Project leadership) post plans in an embryonic form and revise them
+  we (the Orion project leadership) post plans in an embryonic form and revise them
   throughout the release cycle. </p>
 <p>The first part of the plan deals with the important matters of release deliverables,
   release milestones, target operating environments, and release-to-release compatibility.
   These are all things that need to be clear for any release, even if no features
   were to change. </p>
 <p>The remainder of the plan consists of plan items for components of the Orion project.
-  Each plan item covers a feature or API that is to be added to the Orion Project deliverables, 
-  or some aspect of the Orion Project that is to be improved. Each plan item has its own entry
+  Each plan item covers a feature or API that is to be added to the Orion project deliverables, 
+  or some aspect of the Orion project that is to be improved. Each plan item has its own entry
   in the Eclipse bugzilla database, with a title and a concise summary (usually
   a single paragraph) that explains the work item at a suitably high enough level
   so that everyone can readily understand what the work item is without having
@@ -76,8 +76,8 @@ Last revised 16:00 ET July 25, 2011.
 
 <p>The release deliverables have the same form as previous releases, namely: </p>
 <ul>
-  <li>Source code release for all Orion Project deliverables, available as
-    versions tagged &quot;R3_7&quot; in the Orion project <a href="http://wiki.eclipse.org/Orion/Getting_the_source">Git
+  <li>Source code release for all Orion project deliverables, available as
+    versions tagged &quot;R0_3&quot; in the Orion project <a href="http://wiki.eclipse.org/Orion/Getting_the_source">Git
     repositories</a>.</li>
   <li>Packaged Orion server download for Windows, Mac, and Linux</li>
   <li>Hosted Orion beta server on http://orionhub.org</li>
@@ -141,7 +141,7 @@ Last revised 16:00 ET July 25, 2011.
  major browsers it supports. Due to the fast pace of development in the browser world,
  supporting older browser versions is not a priority for Orion at this early stage of its development.
 </p>
-<p>Orion 0.3 is tested and validated on the following reference <b>client target environments</b>:</p>
+<p>Orion 0.3 is tested and validated on the following reference <i>client target environments</i>:</p>
 <style type="text/css">
 	table.platforms {
 		border-width: 1px;
@@ -211,7 +211,7 @@ Last revised 16:00 ET July 25, 2011.
   environments, requiring their source code to only reference facilities available
   in particular class libraries (e.g. Java SE 5, Java SE 6, etc). In general, the 0.
   3 release of the Orion server is developed and tested on Java SE 6.</p>
-<p>The Orion 0.3 server is tested and validated on the following reference <b>server target environments</b>:</p>
+<p>The Orion 0.3 server is tested and validated on the following reference <i>server target environments</i>:</p>
 <center>
 	<table class="platforms">
 		<tr>
@@ -225,8 +225,8 @@ Last revised 16:00 ET July 25, 2011.
 			<td rowspan="2">Windows</td>
 			<td rowspan="2">7</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 6 Update 17<br/>
-				IBM Java 6 SR8
+			<td rowspan="2">Oracle Java 6 Update 26<br/>
+				IBM Java 6 SR9
 			</td>
 		</tr>
 		<tr class="c0">
@@ -237,8 +237,8 @@ Last revised 16:00 ET July 25, 2011.
 			<td rowspan="2">Red Hat Enterprise Linux</td>
 			<td rowspan="2">6</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 6 Update 17<br/>
-				IBM Java 6 SR8
+			<td rowspan="2">Oracle Java 6 Update 26<br/>
+				IBM Java 6 SR9
 			</td>
 		</tr>
 		<tr class="c1">
@@ -249,7 +249,7 @@ Last revised 16:00 ET July 25, 2011.
 			<td rowspan="2">Apple Mac OS X</td>
 			<td rowspan="2">10.6</td>
 			<td rowspan="1">Universal 32-bit</td>
-			<td rowspan="2">Apple Java 10.6 Update 2</td>
+			<td rowspan="2">Apple Java 10.6 Update 5</td>
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">Universal 64-bit</td>
@@ -275,7 +275,7 @@ Last revised 16:00 ET July 25, 2011.
 <p:compatibility_with_previous_releases>
 <div>
 
-<h3>Compatibility of Release 4.2 with 3.7</h3>
+<h3>Compatibility of Release 0.3 with 0.2</h3>
 <p>Orion 0.3 offers no formal compatibility with Orion 0.2. While some plugins
 designed for Orion 0.2 may continue to function when installed in Orion 0.3, there may
 be changes to APIs and library functions used by the plugin that have changed in compatible
