@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 16:00 ET June 27, 2011.
+Last revised 14:00 ET July 26, 2011.
 </p>
 <p><i>Please send comments about this plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
   mailing list.</i>
@@ -203,8 +203,8 @@ Last revised 16:00 ET June 27, 2011.
 			<td rowspan="6">Windows</td>
 			<td rowspan="2">7</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="6">Oracle Java 6 Update 17<br/>
-				IBM Java 6 SR8
+			<td rowspan="6">Oracle Java 6 Update 26<br/>
+				IBM Java 6 SR9
 			</td>
 			<td rowspan="6">Win32</td>
 		</tr>
@@ -230,8 +230,8 @@ Last revised 16:00 ET June 27, 2011.
 			<td rowspan="3">Red Hat Enterprise Linux</td>
 			<td rowspan="3">6</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 6 Update 17<br/>
-				IBM Java 6 SR8
+			<td rowspan="2">Oracle Java 6 Update 26<br/>
+				IBM Java 6 SR9
 			</td>
 			<td rowspan="3">GTK</td>
 		</tr>
@@ -240,15 +240,15 @@ Last revised 16:00 ET June 27, 2011.
 		</tr>
 		<tr class="c1">
 			<td rowspan="1">Power 64-bit</td>
-			<td>IBM Java 6 SR8</td>
+			<td>IBM Java 6 SR9</td>
 		</tr>
 		<!-- ************ SLES ************** -->
 		<tr class="c0">
 			<td rowspan="3">SUSE Linux Enterprise Server</td>
 			<td rowspan="3">11</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 6 Update 17<br/>
-				IBM Java 6 SR8
+			<td rowspan="2">Oracle Java 6 Update 26<br/>
+				IBM Java 6 SR9
 			</td>
 			<td rowspan="3">GTK</td>
 		</tr>
@@ -257,15 +257,15 @@ Last revised 16:00 ET June 27, 2011.
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">Power 64-bit</td>
-			<td>IBM Java 6 SR8</td>
+			<td>IBM Java 6 SR9</td>
 		</tr>
 		<!-- ************ Ubuntu ************** -->
 		<tr class="c1">
 			<td rowspan="2">Ubuntu Long Term Support</td>
 			<td rowspan="2">10.04</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 6 Update 17<br/>
-				IBM Java 6 SR8
+			<td rowspan="2">Oracle Java 6 Update 26<br/>
+				IBM Java 6 SR9
 			</td>
 			<td rowspan="2">GTK</td>
 		</tr>
@@ -277,7 +277,7 @@ Last revised 16:00 ET June 27, 2011.
 			<td rowspan="2">Oracle Solaris</td>
 			<td rowspan="2">10</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 6 Update 17</td>
+			<td rowspan="2">Oracle Java 6 Update 26</td>
 			<td rowspan="2">GTK</td>
 		</tr>
 		<tr class="c0">
@@ -296,7 +296,7 @@ Last revised 16:00 ET June 27, 2011.
 			<td rowspan="1">IBM AIX</td>
 			<td rowspan="1">5.3</td>
 			<td rowspan="1">Power 64-bit</td>
-			<td rowspan="1">IBM Java 6 SR8</td>
+			<td rowspan="1">IBM Java 6 SR9</td>
 			<td rowspan="1">GTK</td>
 		</tr>
 		<!-- ************ Mac ************** -->
@@ -304,7 +304,7 @@ Last revised 16:00 ET June 27, 2011.
 			<td rowspan="2">Apple Mac OS X</td>
 			<td rowspan="2">10.6</td>
 			<td rowspan="1">Universal 32-bit</td>
-			<td rowspan="2">Apple Java 10.6 Update 2</td>
+			<td rowspan="2">Apple Java 10.6 Update 5</td>
 			<td rowspan="2">Cocoa</td>
 		</tr>
 		<tr class="c1">
