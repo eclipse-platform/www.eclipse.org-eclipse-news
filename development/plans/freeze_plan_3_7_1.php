@@ -42,7 +42,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>September 7, 2011 - Further Indigo SR1 builds will only occur if required.</b></p>
+			<p><b>August 4, 2011 - working towards release candiate 1.</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -50,7 +50,7 @@ ob_start();
 	          <tr>
 	            <td align="right" height="20"><b>August 2011</b>&nbsp;</td>
 	          </tr>
-	          <tr>
+	          <tr class="current">
 	            <td height="20"></td>
 	            <td align="right" height="20">10</td>
 	            <td align="right" height="20">Wed 08:00 EDT</td>
@@ -102,7 +102,7 @@ ob_start();
 			  <tr>
 	            <td height="30"></td>
 	          </tr>
-	          <tr class="current">
+	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">8</td>
 	            <td align="right" height="20">Wed 08:00 EDT</td>
