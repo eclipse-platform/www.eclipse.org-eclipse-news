@@ -16,7 +16,7 @@
 	
 	#
 	# Begin: page-specific settings.  Change these. 
-	$pageTitle 		= "Indigo SR1 Endgame Plan";
+	$pageTitle 		= "Indigo 3.7 SR1 Endgame Plan";
 	$pageKeywords	= "eclipse, 3.7.1,  milestone, schedule, endgame";
 	$pageAuthor		= "";
 	
@@ -104,7 +104,7 @@ ob_start();
 	          </tr>
 	          <tr>
 	            <td height="20"></td>
-	            <td align="right" height="20">8</td>
+	            <td align="right" height="20">7</td>
 	            <td align="right" height="20">Wed 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 4 build [if required]</b></td>
@@ -118,9 +118,8 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>Useful Links</h3>
 			<ul>
-			<li><a href="http://www.eclipse.org/eclipse/platform-releng/buildSchedule.html ">Build Schedule</a> - details on build times.</li>
-			<li><a href="http://wiki.eclipse.org/Eclipse/Release_checklist">Eclipse Release Checklist</a> -
-				 lists various things that need to be checked before each release.</li>
+			<li><a href="http://www.eclipse.org/eclipse/platform-releng/buildSchedule.html">Build Schedule</a> - details on build times.</li>
+			<li><a href="http://wiki.eclipse.org/Eclipse/Release_checklist">Eclipse Release Checklist</a> - lists various things that need to be checked before each release.</li>
 			<li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse">Eclipse Project Indigo Plan</a></li>
 			<li><a href="http://wiki.eclipse.org/index.php/Indigo">Indigo Simultaneous Release</a></li>
 			</ul>
@@ -128,23 +127,23 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>What is the game plan?</h3>
 			<p> 
-	 		The Eclipse Indigo Service Release 1 ("Indigo SR1") endgame involves building 
+	 		The Eclipse Indigo 3.7 Service Release 1 ("Indigo 3.7 SR1") endgame involves building 
 	        a series of release candidates leading to the Eclipse project's contribution to the
-	        Indigo SR1 release. The Eclipse project version number for this release is 3.7.1.
+	        Indigo 3.7 SR1 release. The Eclipse project version number for this release is 3.7.1.
 	        By its nature, this maintenance release contains fixes to a small number 
-	        of serious problems found in the June 2011 Indigo release. We make and verify each 
+	        of serious problems found in the June 2011 Indigo 3.7 release. We make and verify each 
 	        fix carefully, so that we do not need to tie up the entire development 
 	        team in time-consuming test passes. As always, we welcome help from the 
-	        community with testing the release candidates. By default,&nbsp; Indigo SR1
-	        is supposed to work exactly like the initial Indigo release except for the problems we intended 
-	        to fix. All problems fixed in Indigo SR1 are in the Eclipse bugzilla database 
+	        community with testing the release candidates. By default,&nbsp; Indigo 3.7 SR1
+	        is supposed to work exactly like the initial Indigo 3.7 release except for the problems we intended 
+	        to fix. All problems fixed in Indigo 3.7 SR1 are in the Eclipse bugzilla database 
 	        and flagged with Target Milestone &quot;3.7.1&quot; (query bugzilla for 
 	        the <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;resolution=FIXED;target_milestone=3.7.1;product=Equinox;product=JDT;product=PDE;product=Platform;classification=Eclipse;classification=RT">complete 
-	        list of bugs fixed in Indigo SR1</a>). So we're most interested in identifying 
+	        list of bugs fixed in Indigo 3.7 SR1</a>). So we're most interested in identifying 
 	        regressions where we've changed something that we did not intend to.
 	        </p> 
 	                
-	        <p>General announcements during the Indigo SR1 endgame are posted to the 
+	        <p>General announcements during the Indigo 3.7 SR1 endgame are posted to the 
 	        <a href="http://dev.eclipse.org/mailman/listinfo/platform-releng-dev">platform-releng-dev@eclipse.org</a> 
 		    developer mailing list. Anyone participating in the endgame should be subscribed 
 			to this list, and should direct any general questions and comments about the process 
@@ -160,7 +159,7 @@ ob_start();
 		   <strong>RC2</strong>
 		   <p>
 	        Release candidate containing fixes for the majority of known outstanding 
-	        defects that we intend to fix for Indigo SR1. At the end of RC2 build, 
+	        defects that we intend to fix for Indigo 3.7 SR1. At the end of RC2 build, 
 	        there should not be any open defects tagged 3.7.1. All fixes submitted 
 	        to maintenance stream builds must have a component lead vote on the bug report,
 	        and the fix must be reviewed by an additional committer (the reviewer can be
@@ -174,7 +173,7 @@ ob_start();
 	
 	        <strong>RC3</strong>
 	        <p>Release candidate containing fixes for all known outstanding defects
-	        that we intend to fix for Indigo SR1. All fixes submitted to RC3 must have a PMC vote on the bug report,
+	        that we intend to fix for Indigo 3.7 SR1. All fixes submitted to RC3 must have a PMC vote on the bug report,
 	        and the fix must be reviewed by an additional committer (any committer other than
 	        the one who made the fix).
 	        Ensure that all feature/plugin versions have been consistently incremented when needed.
@@ -206,11 +205,11 @@ ob_start();
 			in the same way as any other API change requests.	
 			</p>
 			
-			<strong>Indigo SR1 Release</strong>
-			<p>The Indigo SR1 release should be complete and available for download by 
+			<strong>Indigo 3.7 SR1 Release</strong>
+			<p>The Indigo 3.7 SR1 release should be complete and available for download by 
 	              the end of September 2011 as part of the <a href="http://wiki.eclipse.org/Indigo">Indigo 
 	              coordinated service release</a> . If product teams intending 
-	              to ship on Indigo SR1 uncover further serious defects during the endgame, 
+	              to ship on Indigo 3.7 SR1 uncover further serious defects during the endgame, 
 	              we may schedule additional release candidate builds to incorporate fixes.
 			</p>             
 		</div>
