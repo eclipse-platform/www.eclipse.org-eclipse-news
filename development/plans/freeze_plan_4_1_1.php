@@ -162,8 +162,8 @@ ob_start();
 	        defects that we intend to fix for Indigo 4.1 SR1. At the end of RC2 build, 
 	        there should not be any open defects tagged 4.1.1. All fixes submitted 
 	        to maintenance stream builds must have a component lead vote on the bug report,
-	        and the fix must be reviewed by an additional committer (the reviewer can be
-	        the component lead if they didn't make the fix).
+	        and the fix must be reviewed by an additional committer (any committer other than
+	        the one who made the fix).
 	        </p>               
 	
 	        <strong>Test pass using RC2</strong>
