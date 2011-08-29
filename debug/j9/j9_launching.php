@@ -9,7 +9,7 @@
 
 	#*****************************************************************************
 	#
-	# Copyright (c) 2007 IBM Corporation and others.
+	# Copyright (c) 2011 IBM Corporation and others.
  	# All rights reserved. This program and the accompanying materials
  	# are made available under the terms of the Eclipse Public License v1.0
  	# which accompanies this distribution, and is available at
@@ -18,7 +18,7 @@
 	#     IBM Corporation - initial implementation
 	#
 	# Author: 		Debug Team
-	# Date:			May 8, 2007
+	# Date:			August 29, 2011
 	#
 	# Description: 
 	#
@@ -26,7 +26,7 @@
 	#****************************************************************************
 	
 	
-	$pageTitle 		= "Eclipse J9 JRE Support";
+	$pageTitle 		= "J9 JRE Support";
 	$pageKeywords	= "debug, platform, debugging, debugger, breakpoints, launching, jdt, j9, support";
 	$pageAuthor		= "Debug Team";
 	
@@ -41,20 +41,26 @@
 		<div class="homeitem3col">
 			<h2><b>Purpose</b></h2>
 			<p>
-				Install this plugin when you want to configure a J9 JRE for building, running, and/or debugging a Java project. 
+				Install this plug-in when you want to configure a J9 JRE for building, running, and/or debugging a Java project. 
+			</p>
+			<p>
+			    It should be noted that this plug-in is no longer actively developed or maintained in any way. The use of the plug-in
+			    is provided as-is with no warranty expressed or implied.
 			</p>
 		</div>
 		<div class="homeitem3col">
 			<h2><b>Install</b></h2>
 			<ol>
-				<li>Download the plugin version that is compatible with the build you are working on: 
-		          	<ul>
-						<li><a target="_blank" href="../misc/plugins/org.eclipse.jdt.launching.j9_6.1.0.200704121156.jar">Eclipse SDK 3.3</a></li>
-					</ul>
+				<li>Download the plug-in <a target="_blank" href="../misc/plugins/org.eclipse.jdt.launching.j9_6.1.0.200704121156.jar">here</a></li>
+				<li>Install the plug-in
+				    <ul>
+				        <li>For older versions of Eclipse (3.3, etc), copy the plug-in to the <em>plugins</em> directory of your Eclipse install</li>
+				        <li>For newer versions of Eclipse (3.4+), copy the plug-in to the <em>dropins</em> directory of your Eclipse install</li>
+				    </ul>
 				</li>
-				<li> Copy the plugin to the plugins directory of your Eclipse install</li>
 			</ol>
-			<p><b>Plugin Contributions</b>
+			<h3><b>Plug-in Contributions</b></h3>
+			 <p>
 				<ul>
 					<li><b>VM Install</b> - defines the directory structure of a J9 JRE</li>
 					<li><b>VM Runner</b> - support for launching a J9 JRE</li>

@@ -29,27 +29,15 @@
 			<li><a href="http://wiki.eclipse.org/images/c/c4/Debug.psf">Debug Project Set File</a></li>
 			<li><a href="/eclipse/debug/who.php">Who We Are</a></li>
 			<li><a href="http://eclipse-debug.blogspot.com/" target="_blank">Debug Team Blog</a></li>
-			<li><a href="http://www.facebook.com/group.php?gid=2469776690" target="_blank">Facebook -- Committers Group</a></li>
+			<li><a href="/eclipse/debug/j9/j9_launching.php">J9 Launching Support</a></li>
 			<li><a href="/eclipse/debug/about.php">About this content</a></li>
 		</ul>
 	</div> 
 	<div class="sideitem">
-		<h6>Plugins</h6>
+		<h6>Bundles</h6>
 		<ul>
-			<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.core.variables" target="_blank">core.variables</a></li>
-			<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.debug.core" target="_blank">debug.core</a></li>
-			<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.debug.examples.core" target="_blank">debug.core</a></li>
-			<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.debug.examples.ui" target="_blank">debug.core</a></li>
-			<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.debug.tests" target="_blank">debug.tests</a></li>
-    		<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.debug.ui" target="_blank">debug.ui</a></li>
-    		<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.debug" target="_blank">jdt.debug</a></li>
-	        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.debug.ui" target="_blank">jdt.debug.ui</a></li>
-	        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.launching" target="_blank">jdt.launching</a></li>
-	        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.launching.macosx" target="_blank">jdt.launching.macosx</a></li>
-	        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.launching.ui.macosx" target="_blank">jdt.launching.ui.macosx</a></li>
-	        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.debug.tests" target="_blank">jdt.debug.tests</a></li>
-	        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.debug.jdi.tests" target="_blank">jdt.debug.jdi.tests</a></li>
-    		<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.ui.console" target="_blank">ui.console</a></li>
+			<li><a href="http://git.eclipse.org/c/platform/eclipse.platform.debug.git/">Platform Debug GIT repo</a></li>
+    		<li><a href="http://git.eclipse.org/c/jdt/eclipse.jdt.debug.git/">JDT Debug GIT repo</a></li>
 		</ul>
 	</div>
 EOHTML
