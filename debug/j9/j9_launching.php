@@ -51,7 +51,7 @@
 		<div class="homeitem3col">
 			<h2><b>Install</b></h2>
 			<ol>
-				<li>Download the plug-in <a target="_blank" href="../misc/plugins/org.eclipse.jdt.launching.j9_6.1.0.200704121156.jar">here</a></li>
+				<li>Download the plug-in <a target="_blank" href="../misc/plugins/org.eclipse.jdt.launching.j9_6.1.0.201108291108.jar">here</a></li>
 				<li>Install the plug-in
 				    <ul>
 				        <li>For older versions of Eclipse (3.3, etc), copy the plug-in to the <em>plugins</em> directory of your Eclipse install</li>
@@ -65,6 +65,7 @@
 					<li><b>VM Install</b> - defines the directory structure of a J9 JRE</li>
 					<li><b>VM Runner</b> - support for launching a J9 JRE</li>
 				</ul>
+				The pre-built <em>jar</em> file also has the source bundle included within it.
 			</p>
 		</div>
 		<div class="homeitem3col">
