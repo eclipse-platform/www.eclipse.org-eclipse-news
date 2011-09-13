@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 14:00 ET August 26, 2011.   (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
+Last revised 16:00 ET September 12, 2011.   (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
 marks interesting changes since the previous draft of 
 <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_2_20110726.xml">July 26, 2011</a>.)
 </p>
@@ -469,13 +469,43 @@ marks interesting changes since the previous draft of
 <ul>
 <li>
 	<strong>Add support for Java SE 7 features.</strong>
-	The next feature release of Java SE is
-	version 7, which is currently scheduled for July 28, 2011. This release is
-	expected to contain extensions to the Java language, including support for
+	The most recent feature release of Java SE is version 7, which was released on July 28, 2011. 
+	This release contains extensions to the Java language, including support for
 	dynamically-typed languages, and other minor language changes
 	(Coin project). Eclipse Java tooling will include support for
 	compiling, editing, and launching applications for Java 7. [JDT Core, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288548">288548</a>)
+	<br>
+	<b>Note:</b> because of the high importance of Java 7 tools to the Eclipse community,
+	we are delivering complete basic Java 7 functionality in Indigo SR1 (September 2011).
+	Further enhancements to Java 7 development tools will continue in the Juno release.
+	the
 </li>
+<li>
+	<strong>Add support for Java SE 8 features.</strong>
+	The next feature release of Java SE is
+	version 8, which is currently expected for October 2012. This release is
+	expected to contain extensions to the Java language, including support for lambda
+	expressions, default methods, annotations on types, a modularity system, and other 
+	minor language changes. Eclipse Java tooling will make progress towards 
+	compiling, editing, and launching applications for Java 8 for those parts which
+	have publicly available specifications. Due to the Java 8 release date coming after the
+	Juno release, this initial support will likely be in the form of a separate patch or
+	download for early adopters.
+	 [JDT Core, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+</li>
+<li>
+	<strong>Migrate SWT graphics operations to Cairo.</strong>
+	GTK+ is transitioning away from X Window System in favor of Cairo for drawing
+	operations. The GTK+ port of SWT will migrate drawing operations to Cairo in
+	preparation for a future port of SWT to GTK+ 3.
+	 [SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=354978">354978</a>)
+</li>
+<li>
+	<strong>Adopt new Windows 7 APIs</strong>
+	There are a number of Windows 7 APIs that are needed to implement 
+	current/modern looking user interfaces. These include: aero glass shell, Direct2D 
+	graphics and stylized menus. SWT will add support to take advantage of these APIs.
+	 [SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
 </ul>
 </p:proposed>
 
@@ -487,9 +517,12 @@ marks interesting changes since the previous draft of
     
 <!-- ============================================== -->
 
-<p:theme name="Theme TBD">
+<p:theme name="Robustness">
 <p:description>
-<p>
+<p>As the basis for the entire Eclipse eco-system, the Eclipse SDK must be robust,
+  flexible and secure. This work will address those issues by providing API for
+  missing or currently internal functionality, and focusing on the issues that
+  affect the stability of the platform.
 </p>
 </p:description>
 
@@ -504,6 +537,20 @@ marks interesting changes since the previous draft of
 	The Eclipse project will transition its source control system from CVS to Git during
 	this release. This should have little or no effect on end user functionality, but requires
 	changes to the project build infrastructure, tools, and development practices.
+	[All Components]
+</li>
+</ul>
+</p:proposed>
+
+<p:proposed>
+<ul>
+<li>
+	<strong>Build system consolidation.</strong>
+	The 3.x and 4.x platform builds currently use different build systems and run on
+	different build hardware. We will consolidate these systems to run all builds
+	on eclipse.org build infrastructure. As part of this process the 4.x build will transition
+	to being the primary Eclipse project build system, with 3.x stream builds performed
+	on a reduced schedule for ongoing maintenance work.
 	[Releng]
 </li>
 </ul>
