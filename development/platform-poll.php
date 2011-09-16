@@ -60,8 +60,9 @@ ob_start();
 <div id="maincontent" style="width: 90%; padding: 5%;">
 
               <h1><?= $pageTitle ?></h1>
-                     <h2>Please let us know what your primary platform is</h2>
-                     <p>The Eclipse platform uses a set of <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_2.xml#target_environments">
+                     <h2>Please let us know your primary platform for Eclipse development</h2>
+                     <p>The Eclipse platform team uses a set of 
+                     <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_2.xml#target_environments">
                      Reference platforms</a> to focus our development and testing efforts.
                      We typically list only the most recent release of each operating system,
                      with the exception of Windows where we regularly develop and test against multiple versions.</p>
