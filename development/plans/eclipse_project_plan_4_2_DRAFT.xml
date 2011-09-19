@@ -467,7 +467,7 @@ marks interesting changes since the previous draft of
 
 <p:proposed>
 <ul>
-<li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>Add support for Java SE 7 features.</strong>
 	The most recent feature release of Java SE is version 7, which was released on July 28, 2011. 
 	This release contains extensions to the Java language, including support for
@@ -479,7 +479,7 @@ marks interesting changes since the previous draft of
 	we are delivering complete basic Java 7 functionality in Indigo SR1 (September 2011).
 	Further enhancements to Java 7 development tools will continue in the Juno release.
 </li>
-<li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>Add support for Java SE 8 features.</strong>
 	The next feature release of Java SE is
 	version 8, which is currently expected for October 2012. This release is
@@ -492,21 +492,21 @@ marks interesting changes since the previous draft of
 	download for early adopters.
 	 [JDT Core, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
 </li>
-<li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>Migrate SWT graphics operations to Cairo.</strong>
 	GTK+ is transitioning away from X Window System in favor of Cairo for drawing
 	operations. The GTK+ port of SWT will migrate drawing operations to Cairo in
 	preparation for a future port of SWT to GTK+ 3.
 	 [SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=354978">354978</a>)
 </li>
-<li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>Adopt new Windows 7 APIs</strong>
 	There are a number of Windows 7 APIs that are needed to implement 
 	current/modern looking user interfaces. These include: aero glass shell, Direct2D 
 	graphics and stylized menus. SWT will add support to take advantage of these APIs.
 	 [SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
 </li>
-<li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>BiDi enhancements.</strong>
 	We will invest in ensuring the Eclipse platform remains a first class basis for	products 
 	supporting bidirectional text (BiDi). Areas of investigation include:  support for text with internal 
@@ -541,7 +541,7 @@ marks interesting changes since the previous draft of
 
 <p:proposed>
 <ul>
-<li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>Make Eclipse Platform 4 enterprise ready.</strong>
 	Version 4 of the Eclipse Platform has had two releases since graduating
 	from the e4 incubator, but was still treated as secondary to the 3.x platform generation.
@@ -559,7 +559,7 @@ marks interesting changes since the previous draft of
 	changes to the project build infrastructure, tools, and development practices.
 	[All Components] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
 </li>
-<li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>Build system consolidation.</strong>
 	The 3.x and 4.x platform builds currently use different build systems and run on
 	different build hardware. We will consolidate these systems to run all builds
@@ -591,7 +591,7 @@ marks interesting changes since the previous draft of
 </p:committed>
 
 <p:proposed>
-<li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>Support different target platforms per project.</strong>
 	The PDE target platform mechanism has seen dramatic improvements with
 	support for provisioning target platforms from remote repositories, local software
