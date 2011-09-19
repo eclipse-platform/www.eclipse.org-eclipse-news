@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 16:00 ET September 12, 2011.   (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
+Last revised 16:00 ET September 19, 2011.   (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
 marks interesting changes since the previous draft of 
 <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_2_20110726.xml">July 26, 2011</a>.)
 </p>
@@ -325,7 +325,7 @@ marks interesting changes since the previous draft of
   user interface elements provided by the Eclipse SDK components, including dialogs
   and error messages, are externalized. The English strings are provided as the
   default resource bundles.</p>
-<p>Latin-1, DBCS, and BIDI locales are supported by the Eclipse SDK on all reference platforms.</p>
+<p>Latin-1, DBCS, and BiDi locales are supported by the Eclipse SDK on all reference platforms.</p>
 <p>The Eclipse SDK supports GB 18030 (level 1), the Chinese code page standard,
   on Windows, Linux and the Macintosh.</p>
 <p>German and Japanese locales are tested.</p>
@@ -506,6 +506,16 @@ marks interesting changes since the previous draft of
 	current/modern looking user interfaces. These include: aero glass shell, Direct2D 
 	graphics and stylized menus. SWT will add support to take advantage of these APIs.
 	 [SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+</li>
+<li>
+	<strong>BiDi enhancements.</strong>
+	We will invest in ensuring the Eclipse platform remains a first class basis for	products 
+	supporting bidirectional text (BiDi). Areas of investigation include:  support for text with internal 
+	structure or syntax including BiDi data, support for text input widgets, and comprehensive
+	support for static complex expressions.
+	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=325994">325994</a>)
+</li>
+
 </ul>
 </p:proposed>
 
@@ -533,17 +543,23 @@ marks interesting changes since the previous draft of
 <p:proposed>
 <ul>
 <li>
+	<strong>Make Eclipse Platform 4 enterprise ready.</strong>
+	Version 4 of the Eclipse Platform has had two releases since graduating
+	from the e4 incubator, but was still treated as secondary to the 3.x platform generation.
+	In this release we will take the final steps to make version 4.2 the primary platform
+	for enterprise level adoption. This work includes refactoring and cleanup of the workbench
+	compatibility code, implementing Intro support, improving performance, addressing
+	globalization and accessibility bugs, and regularly running the full suite of Eclipse SDK
+	regresion tests against Platform version 4.
+	[Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+</li>
+<li>
 	<strong>Transition to Git.</strong>
 	The Eclipse project will transition its source control system from CVS to Git during
 	this release. This should have little or no effect on end user functionality, but requires
 	changes to the project build infrastructure, tools, and development practices.
-	[All Components]
+	[All Components] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
 </li>
-</ul>
-</p:proposed>
-
-<p:proposed>
-<ul>
 <li>
 	<strong>Build system consolidation.</strong>
 	The 3.x and 4.x platform builds currently use different build systems and run on
@@ -551,7 +567,7 @@ marks interesting changes since the previous draft of
 	on eclipse.org build infrastructure. As part of this process the 4.x build will transition
 	to being the primary Eclipse project build system, with 3.x stream builds performed
 	on a reduced schedule for ongoing maintenance work.
-	[Releng]
+	[Releng] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
 </li>
 </ul>
 </p:proposed>
@@ -576,7 +592,14 @@ marks interesting changes since the previous draft of
 </p:committed>
 
 <p:proposed>
-  <p><i>None at this time.</i></p>
+<li>
+	<strong>Support different target platforms per project.</strong>
+	The PDE target platform mechanism has seen dramatic improvements with
+	support for provisioning target platforms from remote repositories, local software
+	installs, and feature lists. We will further enhance this system by supporting
+	a different target platform for each project in the workspace.
+	[PDE UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159072">159072</a>)
+</li>
 </p:proposed>
 
 <p:deferred>
