@@ -214,11 +214,11 @@ marks interesting changes since the previous draft of
 			<td rowspan="1">x86 64-bit</td>
 		</tr>
 		<tr>
-			<td rowspan="2">Vista</td>
-			<td rowspan="1">x86 32-bit</td>
+			<td rowspan="2"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> <s>Vista</s></td>
+			<td rowspan="1"><s>x86 32-bit</s></td>
 		</tr>
 		<tr class="c0">
-			<td rowspan="1">x86 64-bit</td>
+			<td rowspan="1"><s>x86 64-bit</s></td>
 		</tr>
 		<tr class="c0">
 			<td rowspan="2">XP</td>
@@ -277,7 +277,7 @@ marks interesting changes since the previous draft of
 		<!-- ************ Solaris ************** -->
 		<tr class="c0">
 			<td rowspan="2">Oracle Solaris</td>
-			<td rowspan="2">10</td>
+			<td rowspan="2"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 11</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">Oracle Java 6 Update 26</td>
 			<td rowspan="2">GTK</td>
@@ -288,7 +288,7 @@ marks interesting changes since the previous draft of
 		<!-- ************ HPUX ************** -->
 		<tr class="c1">
 			<td rowspan="1">HP-UX</td>
-			<td rowspan="1">11i v2</td>
+			<td rowspan="1"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 11i v3</td>
 			<td rowspan="1">ia64 32-bit</td>
 			<td rowspan="1">HP-UX Java 6 Update 10</td>
 			<td rowspan="1">GTK</td>
@@ -296,7 +296,7 @@ marks interesting changes since the previous draft of
 		<!-- ************ AIX ************** -->
 		<tr class="c0">
 			<td rowspan="1">IBM AIX</td>
-			<td rowspan="1">5.3</td>
+			<td rowspan="1"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 7.1</td>
 			<td rowspan="1">Power 64-bit</td>
 			<td rowspan="1">IBM Java 6 SR9</td>
 			<td rowspan="1">GTK</td>
