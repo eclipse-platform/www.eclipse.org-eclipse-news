@@ -50,7 +50,8 @@ ob_start();
 			<h3>Plug-ins</h3>
 			<p>The Search component consists of the following plug-in:</p>
 			<ul>
-				<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.search" target="_top">org.eclipse.search</a></li>
+				<li><a href="http://git.eclipse.org/c/platform/eclipse.platform.text.git/tree/org.eclipse.search" target="_top">org.eclipse.search</a></li>
+				<li><a href="http://git.eclipse.org/c/platform/eclipse.platform.text.git/tree/org.eclipse.search.tests" target="_top">org.eclipse.search.tests</a></li>
 			</ul>
 		</div>
 		
