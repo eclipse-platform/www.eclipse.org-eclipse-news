@@ -205,7 +205,7 @@ marks interesting changes since the previous draft of
 			<td rowspan="6">Windows</td>
 			<td rowspan="2">7</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="6">Oracle Java 6 Update 26<br/>
+			<td rowspan="6"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> Oracle Java 6 Update 27<br/>
 				IBM Java 6 SR9
 			</td>
 			<td rowspan="6">Win32</td>
@@ -232,7 +232,7 @@ marks interesting changes since the previous draft of
 			<td rowspan="3">Red Hat Enterprise Linux</td>
 			<td rowspan="3">6</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 6 Update 26<br/>
+			<td rowspan="2"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> Oracle Java 6 Update 27<br/>
 				IBM Java 6 SR9
 			</td>
 			<td rowspan="3">GTK</td>
@@ -249,7 +249,7 @@ marks interesting changes since the previous draft of
 			<td rowspan="3">SUSE Linux Enterprise Server</td>
 			<td rowspan="3">11</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 6 Update 26<br/>
+			<td rowspan="2"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> Oracle Java 6 Update 27<br/>
 				IBM Java 6 SR9
 			</td>
 			<td rowspan="3">GTK</td>
@@ -266,7 +266,7 @@ marks interesting changes since the previous draft of
 			<td rowspan="2">Ubuntu Long Term Support</td>
 			<td rowspan="2">10.04</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 6 Update 26<br/>
+			<td rowspan="2"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> Oracle Java 6 Update 27<br/>
 				IBM Java 6 SR9
 			</td>
 			<td rowspan="2">GTK</td>
@@ -279,7 +279,7 @@ marks interesting changes since the previous draft of
 			<td rowspan="2">Oracle Solaris</td>
 			<td rowspan="2"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 11</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 6 Update 26</td>
+			<td rowspan="2"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> Oracle Java 6 Update 27</td>
 			<td rowspan="2">GTK</td>
 		</tr>
 		<tr class="c0">
@@ -472,25 +472,26 @@ marks interesting changes since the previous draft of
 	The most recent feature release of Java SE is version 7, which was released on July 28, 2011. 
 	This release contains extensions to the Java language, including support for
 	dynamically-typed languages, and other minor language changes
-	(Coin project). Eclipse Java tooling will include support for
+	(Coin project). Eclipse Java development tooling will include support for
 	compiling, editing, and launching applications for Java 7. [JDT Core, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288548">288548</a>)
+	<br/>
 	<br/>
 	<b>Note:</b> because of the high importance of Java 7 tools to the Eclipse community,
 	we are delivering complete basic Java 7 functionality in Indigo SR1 (September 2011).
 	Further enhancements to Java 7 development tools will continue in the Juno release.
 </li>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
-	<strong>Add support for Java SE 8 features.</strong>
-	The next feature release of Java SE is
-	version 8, which is currently expected for October 2012. This release is
-	expected to contain extensions to the Java language, including support for lambda
-	expressions, default methods, annotations on types, a modularity system, and other 
-	minor language changes. Eclipse Java tooling will make progress towards 
-	compiling, editing, and launching applications for Java 8 for those parts which
-	have publicly available specifications. Due to the Java 8 release date coming after the
-	Juno release, this initial support will likely be in the form of a separate patch or
-	download for early adopters.
-	 [JDT Core, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+	<strong>Start work on Java SE 8 features.</strong>
+	The next Java SE release is version 8, which is currently scheduled for October
+	2012. This release is expected to contain extensions to the Java language,
+	including support for lambda expressions, default methods, annotations on
+	types, a modularity system and minor language changes. 
+	Eclipse Java development tooling will make progress towards compiling, editing
+	and launching applications for Java 8 for those parts which have publicly
+	available specifications. Work in progress will be made available as feature
+	patches for early adopters while we work towards the official Java SE 8
+	release.
+	 [JDT Core, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=358387">358387</a>)
 </li>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>Migrate SWT graphics operations to Cairo.</strong>
@@ -591,6 +592,7 @@ marks interesting changes since the previous draft of
 </p:committed>
 
 <p:proposed>
+<ul>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>Support different target platforms per project.</strong>
 	The PDE target platform mechanism has seen dramatic improvements with
@@ -599,6 +601,15 @@ marks interesting changes since the previous draft of
 	a different target platform for each project in the workspace.
 	[PDE UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159072">159072</a>)
 </li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>Use annotations for null checking.</strong>
+	Null reference analysis in Eclipse Java development tools is currently limited
+	to analysis within the scope of individual methods. We will explore widening this analysis
+	by using annotations to indicate whether particular parameters, return types, and fields 
+	are designed to allow null values.
+	[JDT Core, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=186342">186342</a>)
+</li>
+</ul>
 </p:proposed>
 
 <p:deferred>
