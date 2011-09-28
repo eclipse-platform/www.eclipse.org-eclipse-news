@@ -89,7 +89,7 @@ marks interesting changes since the previous draft of
   <li>Eclipse SDK (runtime binary and SDK for Equinox[*], Platform, JDT, and PDE) (downloadable).</li>
   <li>Eclipse Platform (runtime binary and SDK for the Equinox[*] and Platform only) (downloadable).</li>
   <li>Eclipse RCP (runtime and source repositories for the Rich Client Platform) (downloadable).</li>
-  <li>Eclipse JDT (runtime and source repositories for the Java Development Tools) (downloadable).</li>
+  <li>Eclipse JDT (runtime and source repositories for the Java Development Tooling) (downloadable).</li>
   <li>Eclipse PDE (runtime and source repositories for the Plug-in Development Environment) (downloadable).</li>
   <li>Eclipse SDK Examples (downloadable).</li>
   <li>SWT distribution (downloadable).</li>
@@ -603,7 +603,7 @@ marks interesting changes since the previous draft of
 </li>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>Use annotations for null checking.</strong>
-	Null reference analysis in Eclipse Java development tools is currently limited
+	Null reference analysis in Eclipse Java development tooling is currently limited
 	to analysis within the scope of individual methods. We will explore widening this analysis
 	by using annotations to indicate whether particular parameters, return types, and fields 
 	are designed to allow null values.
