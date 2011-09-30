@@ -16,7 +16,9 @@
 <p:introduction>
 <div>
 <p>
-Last revised 14:00 ET July 26, 2011.
+Last revised 18:00 ET September 30, 2011.   (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
+marks interesting changes since the previous draft of 
+<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_2_20110726.xml">July 26, 2011</a>.)
 </p>
 <p><i>Please send comments about this plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
   mailing list.</i>
@@ -87,7 +89,7 @@ Last revised 14:00 ET July 26, 2011.
   <li>Eclipse SDK (runtime binary and SDK for Equinox[*], Platform, JDT, and PDE) (downloadable).</li>
   <li>Eclipse Platform (runtime binary and SDK for the Equinox[*] and Platform only) (downloadable).</li>
   <li>Eclipse RCP (runtime and source repositories for the Rich Client Platform) (downloadable).</li>
-  <li>Eclipse JDT (runtime and source repositories for the Java Development Tools) (downloadable).</li>
+  <li>Eclipse JDT (runtime and source repositories for the Java Development Tooling) (downloadable).</li>
   <li>Eclipse PDE (runtime and source repositories for the Plug-in Development Environment) (downloadable).</li>
   <li>Eclipse SDK Examples (downloadable).</li>
   <li>SWT distribution (downloadable).</li>
@@ -112,8 +114,8 @@ Last revised 14:00 ET July 26, 2011.
 <p:milestone date="08/05/2011" milestone="M1"><div>4.2M1</div></p:milestone>
 <p:milestone date="09/16/2011" milestone="M2"><div>4.2M2</div></p:milestone>
 <p:milestone date="10/28/2011" milestone="M3"><div>4.2M3</div></p:milestone>
-<p:milestone date="12/09/2011" milestone="M4"><div>4.2M4</div></p:milestone>
-<p:milestone date="01/27/2012" milestone="M5"><div>4.2M5</div></p:milestone>
+<p:milestone date="12/09/2011" milestone="M4"><div><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 4.2M4</div></p:milestone>
+<p:milestone date="01/27/2012" milestone="M5"><div><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 4.2M5</div></p:milestone>
 <p:milestone date="03/16/2012" milestone="M6"><div>4.2M6 (API Freeze)</div></p:milestone>
 <p:milestone date="05/04/2012" milestone="M7"><div>4.2M7 (Feature Freeze)</div></p:milestone>
 
@@ -203,7 +205,7 @@ Last revised 14:00 ET July 26, 2011.
 			<td rowspan="6">Windows</td>
 			<td rowspan="2">7</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="6">Oracle Java 6 Update 26<br/>
+			<td rowspan="6"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> Oracle Java 6 Update 27<br/>
 				IBM Java 6 SR9
 			</td>
 			<td rowspan="6">Win32</td>
@@ -212,11 +214,11 @@ Last revised 14:00 ET July 26, 2011.
 			<td rowspan="1">x86 64-bit</td>
 		</tr>
 		<tr>
-			<td rowspan="2">Vista</td>
-			<td rowspan="1">x86 32-bit</td>
+			<td rowspan="2"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> <s>Vista</s></td>
+			<td rowspan="1"><s>x86 32-bit</s></td>
 		</tr>
 		<tr class="c0">
-			<td rowspan="1">x86 64-bit</td>
+			<td rowspan="1"><s>x86 64-bit</s></td>
 		</tr>
 		<tr class="c0">
 			<td rowspan="2">XP</td>
@@ -230,7 +232,7 @@ Last revised 14:00 ET July 26, 2011.
 			<td rowspan="3">Red Hat Enterprise Linux</td>
 			<td rowspan="3">6</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 6 Update 26<br/>
+			<td rowspan="2"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> Oracle Java 6 Update 27<br/>
 				IBM Java 6 SR9
 			</td>
 			<td rowspan="3">GTK</td>
@@ -247,7 +249,7 @@ Last revised 14:00 ET July 26, 2011.
 			<td rowspan="3">SUSE Linux Enterprise Server</td>
 			<td rowspan="3">11</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 6 Update 26<br/>
+			<td rowspan="2"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> Oracle Java 6 Update 27<br/>
 				IBM Java 6 SR9
 			</td>
 			<td rowspan="3">GTK</td>
@@ -264,7 +266,7 @@ Last revised 14:00 ET July 26, 2011.
 			<td rowspan="2">Ubuntu Long Term Support</td>
 			<td rowspan="2">10.04</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 6 Update 26<br/>
+			<td rowspan="2"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> Oracle Java 6 Update 27<br/>
 				IBM Java 6 SR9
 			</td>
 			<td rowspan="2">GTK</td>
@@ -275,9 +277,9 @@ Last revised 14:00 ET July 26, 2011.
 		<!-- ************ Solaris ************** -->
 		<tr class="c0">
 			<td rowspan="2">Oracle Solaris</td>
-			<td rowspan="2">10</td>
+			<td rowspan="2"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 11</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 6 Update 26</td>
+			<td rowspan="2"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> Oracle Java 6 Update 27</td>
 			<td rowspan="2">GTK</td>
 		</tr>
 		<tr class="c0">
@@ -286,7 +288,7 @@ Last revised 14:00 ET July 26, 2011.
 		<!-- ************ HPUX ************** -->
 		<tr class="c1">
 			<td rowspan="1">HP-UX</td>
-			<td rowspan="1">11i v2</td>
+			<td rowspan="1"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 11i v3</td>
 			<td rowspan="1">ia64 32-bit</td>
 			<td rowspan="1">HP-UX Java 6 Update 10</td>
 			<td rowspan="1">GTK</td>
@@ -294,7 +296,7 @@ Last revised 14:00 ET July 26, 2011.
 		<!-- ************ AIX ************** -->
 		<tr class="c0">
 			<td rowspan="1">IBM AIX</td>
-			<td rowspan="1">5.3</td>
+			<td rowspan="1"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 7.1</td>
 			<td rowspan="1">Power 64-bit</td>
 			<td rowspan="1">IBM Java 6 SR9</td>
 			<td rowspan="1">GTK</td>
@@ -323,7 +325,7 @@ Last revised 14:00 ET July 26, 2011.
   user interface elements provided by the Eclipse SDK components, including dialogs
   and error messages, are externalized. The English strings are provided as the
   default resource bundles.</p>
-<p>Latin-1, DBCS, and BIDI locales are supported by the Eclipse SDK on all reference platforms.</p>
+<p>Latin-1, DBCS, and BiDi locales are supported by the Eclipse SDK on all reference platforms.</p>
 <p>The Eclipse SDK supports GB 18030 (level 1), the Chinese code page standard,
   on Windows, Linux and the Macintosh.</p>
 <p>German and Japanese locales are tested.</p>
@@ -460,20 +462,61 @@ Last revised 14:00 ET July 26, 2011.
 </p:description>
 
 <p:committed>
-  <p><i>None at this time.</i></p>
+<ul>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>Add support for Java SE 7 features.</strong>
+	The most recent feature release of Java SE is version 7, which was released on July 28, 2011. 
+	This release contains extensions to the Java language, including support for
+	dynamically-typed languages, and other minor language changes
+	(Coin project). Eclipse Java development tooling will include support for
+	compiling, editing, and launching applications for Java 7. [JDT Core, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288548">288548</a>)
+	<br/>
+	<br/>
+	<b>Note:</b> because of the high importance of Java 7 tools to the Eclipse community,
+	we are delivering complete basic Java 7 functionality in Indigo SR1 (September 2011).
+	Further enhancements to Java 7 development tools will continue in the Juno release.
+</li>
+</ul>
 </p:committed>
 
 <p:proposed>
 <ul>
-<li>
-	<strong>Add support for Java SE 7 features.</strong>
-	The next feature release of Java SE is
-	version 7, which is currently scheduled for July 28, 2011. This release is
-	expected to contain extensions to the Java language, including support for
-	dynamically-typed languages, and other minor language changes
-	(Coin project). Eclipse Java tooling will include support for
-	compiling, editing, and launching applications for Java 7. [JDT Core, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288548">288548</a>)
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>Start work on Java SE 8 features.</strong>
+	The next Java SE release is version 8, which is currently scheduled for October
+	2012. This release is expected to contain extensions to the Java language,
+	including support for lambda expressions, default methods, annotations on
+	types, a modularity system and minor language changes. 
+	Eclipse Java development tooling will make progress towards compiling, editing
+	and launching applications for Java 8 for those parts which have publicly
+	available specifications. Work in progress will be made available as feature
+	patches for early adopters while we work towards the official Java SE 8
+	release.
+	 [JDT Core, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=358387">358387</a>)
 </li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>Migrate SWT graphics operations to Cairo.</strong>
+	GTK+ is transitioning away from X Window System in favor of Cairo for drawing
+	operations. The GTK+ port of SWT will migrate drawing operations to Cairo in
+	preparation for a future port of SWT to GTK+ 3.
+	 [SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=354978">354978</a>)
+</li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>Adopt new Windows 7 APIs</strong>
+	There are a number of Windows 7 APIs that are needed to implement 
+	current/modern looking user interfaces. These include: aero glass shell, Direct2D 
+	graphics and stylized menus. SWT will add support to take advantage of these APIs.
+	 [SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+</li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>BiDi enhancements.</strong>
+	We will invest in ensuring the Eclipse platform remains a first class basis for	products 
+	supporting bidirectional text (BiDi). Areas of investigation include:  support for text with internal 
+	structure or syntax including BiDi data, support for text input widgets, and comprehensive
+	support for static complex expressions.
+	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=325994">325994</a>)
+</li>
+
 </ul>
 </p:proposed>
 
@@ -485,24 +528,48 @@ Last revised 14:00 ET July 26, 2011.
     
 <!-- ============================================== -->
 
-<p:theme name="Theme TBD">
+<p:theme name="Robustness">
 <p:description>
-<p>
+<p>As the basis for the entire Eclipse eco-system, the Eclipse SDK must be robust,
+  flexible and secure. This work will address those issues by providing API for
+  missing or currently internal functionality, and focusing on the issues that
+  affect the stability of the platform.
 </p>
 </p:description>
 
 <p:committed>
-  <p><i>None at this time.</i></p>
-</p:committed>
-
-<p:proposed>
 <ul>
 <li>
 	<strong>Transition to Git.</strong>
 	The Eclipse project will transition its source control system from CVS to Git during
 	this release. This should have little or no effect on end user functionality, but requires
 	changes to the project build infrastructure, tools, and development practices.
-	[Releng]
+	[All Components] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+</li>
+</ul>
+</p:committed>
+
+<p:proposed>
+<ul>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>Make Eclipse Platform 4 enterprise ready.</strong>
+	Version 4 of the Eclipse Platform has had two releases since graduating
+	from the e4 incubator, but was still treated as secondary to the 3.x platform generation.
+	In this release we will take the final steps to make version 4.2 the primary platform
+	for enterprise level adoption. This work includes refactoring and cleanup of the workbench
+	compatibility code, implementing Intro support, improving performance, addressing
+	globalization and accessibility bugs, and regularly running the full suite of Eclipse SDK
+	regresion tests against Platform version 4.
+	[Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+</li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>Build system consolidation.</strong>
+	The 3.x and 4.x platform builds currently use different build systems and run on
+	different build hardware. We will consolidate these systems to run all builds
+	on eclipse.org build infrastructure. As part of this process the 4.x build will transition
+	to being the primary Eclipse project build system, with 3.x stream builds performed
+	on a reduced schedule for ongoing maintenance work.
+	[Releng] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
 </li>
 </ul>
 </p:proposed>
@@ -527,7 +594,24 @@ Last revised 14:00 ET July 26, 2011.
 </p:committed>
 
 <p:proposed>
-  <p><i>None at this time.</i></p>
+<ul>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>Support different target platforms per project.</strong>
+	The PDE target platform mechanism has seen dramatic improvements with
+	support for provisioning target platforms from remote repositories, local software
+	installs, and feature lists. We will further enhance this system by supporting
+	a different target platform for each project in the workspace.
+	[PDE UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=159072">159072</a>)
+</li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	<strong>Use annotations for null checking.</strong>
+	Null reference analysis in Eclipse Java development tooling is currently limited
+	to analysis within the scope of individual methods. We will explore widening this analysis
+	by using annotations to indicate whether particular parameters, return types, and fields 
+	are designed to allow null values.
+	[JDT Core, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=186342">186342</a>)
+</li>
+</ul>
 </p:proposed>
 
 <p:deferred>
