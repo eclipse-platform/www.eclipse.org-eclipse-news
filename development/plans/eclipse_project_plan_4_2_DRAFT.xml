@@ -462,10 +462,6 @@ marks interesting changes since the previous draft of
 </p:description>
 
 <p:committed>
-  <p><i>None at this time.</i></p>
-</p:committed>
-
-<p:proposed>
 <ul>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>Add support for Java SE 7 features.</strong>
@@ -480,6 +476,11 @@ marks interesting changes since the previous draft of
 	we are delivering complete basic Java 7 functionality in Indigo SR1 (September 2011).
 	Further enhancements to Java 7 development tools will continue in the Juno release.
 </li>
+</ul>
+</p:committed>
+
+<p:proposed>
+<ul>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>Start work on Java SE 8 features.</strong>
 	The next Java SE release is version 8, which is currently scheduled for October
@@ -537,7 +538,15 @@ marks interesting changes since the previous draft of
 </p:description>
 
 <p:committed>
-  <p><i>None at this time.</i></p>
+<ul>
+<li>
+	<strong>Transition to Git.</strong>
+	The Eclipse project will transition its source control system from CVS to Git during
+	this release. This should have little or no effect on end user functionality, but requires
+	changes to the project build infrastructure, tools, and development practices.
+	[All Components] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+</li>
+</ul>
 </p:committed>
 
 <p:proposed>
@@ -552,13 +561,6 @@ marks interesting changes since the previous draft of
 	globalization and accessibility bugs, and regularly running the full suite of Eclipse SDK
 	regresion tests against Platform version 4.
 	[Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
-</li>
-<li>
-	<strong>Transition to Git.</strong>
-	The Eclipse project will transition its source control system from CVS to Git during
-	this release. This should have little or no effect on end user functionality, but requires
-	changes to the project build infrastructure, tools, and development practices.
-	[All Components] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
 </li>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 	<strong>Build system consolidation.</strong>
