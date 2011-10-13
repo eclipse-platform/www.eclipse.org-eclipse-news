@@ -51,6 +51,7 @@ ob_start();
 			<h3>IP Logs For Past Releases</h3>
 			<p>The following are approved IP logs for past Eclipse project releases.</p>
 			<ul>
+				<li><a href="eclipse-orion-0-3-log.pdf">Orion 0.3 release</a></li>
 				<li><a href="eclipse-orion-creation-release-0-2-log.pdf">Orion creation and 0.2 release</a></li>
 				<li><a href="eclipse_project_3_7_log.pdf">Eclipse project Indigo release (3.7 and 4.1)</a></li>
 				<li><a href="eclipse_4_0_log.pdf">Eclipse platform 4.0 release</a></li>
