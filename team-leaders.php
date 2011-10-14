@@ -60,20 +60,6 @@ ob_start();
 			<h3>Project Management Committee Members</h3>
 		      <ul>
 		        <li> 
-		          <b><a name="jeff"></a>Jeff McAffer, EclipseSource</b><br>
-			       Jeff McAffer leads the Eclipse Equinox OSGi, RCP and Orbit teams and is the
-			       Founder of <a href="http://code9.com">Code 9</a>.
-			       He is one of the architects of the Eclipse Platform and a co-author of
-			       <a href="http://eclipsercp.org">The Eclipse Rich Client Platform</a> (Addison-Wesley).
-			       He is a member of the Eclipse Project PMC, the Tools Project PMC, the RT Project PMC,
-			       and the Eclipse Foundation Board of Directors.  Jeff is currently interested all aspects
-			       of Eclipse componentry from developing and building bundles to deploying, installing
-			       and ultimately running them.  Previous lives include being a Senior Technical Staff
-			       Member at IBM and work in distributed/parallel OO computing (Server Smalltalk,
-			       massively parallel Smalltalk, etc) as well as expert systems, meta-level architectures
-			       and a PhD at the University of Tokyo.
-		        </li>
-		        <li> 
 		          <b><a name="McQ"></a>Mike ("McQ") Wilson, IBM Ottawa</b><br>
 			      McQ is the overall lead for the Eclipse Project aka PMC Lead.
 			      He is a senior architect of the Eclipse SDK, a member of the Eclipse
