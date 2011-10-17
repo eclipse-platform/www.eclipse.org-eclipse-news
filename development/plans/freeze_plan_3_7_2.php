@@ -239,7 +239,7 @@ ob_start();
 			
 			<strong>Indigo 3.7 SR2 Release</strong>
 			<p>The Indigo 3.7 SR2 release should be complete and available for download by 
-	              the end of February 2012 as part of the <a href="http://wiki.eclipse.org/Indigo 3.7">Indigo 3.7 
+	              the end of February 2012 as part of the <a href="http://wiki.eclipse.org/Indigo/Simultaneous_Release_Plan#SR2">Indigo 3.7 
 	              coordinated service release</a> . If product teams intending 
 	              to ship on Indigo 3.7 SR2 uncover further serious defects during the endgame, 
 	              we may schedule additional release candidate builds to incorporate fixes.
