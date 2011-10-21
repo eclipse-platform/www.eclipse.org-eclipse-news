@@ -143,7 +143,8 @@ ob_start();
 	          </tr>         
 	        </table>
 	        <p>
-	        Note that Friday January 27 is Juno M5.
+   	        Note that Friday January 27 is Juno M5.<br>
+	        Note that Monday February 22 is a holiday in Canada.
 	        </p>
       	</div>
 		<div class="homeitem3col">
