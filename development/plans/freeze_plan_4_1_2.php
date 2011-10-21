@@ -121,8 +121,6 @@ ob_start();
 			<li><a href="http://www.eclipse.org/eclipse/platform-releng/buildSchedule.html ">Build Schedule</a> - details on build times.</li>
 			<li><a href="http://wiki.eclipse.org/Eclipse/Release_checklist">Eclipse Release Checklist</a> -
 				 lists various things that need to be checked before each release.</li>
-			<li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse">Eclipse Project 4.1 Plan</a></li>
-			<li><a href="http://wiki.eclipse.org/index.php/Indigo">Simultaneous Release</a></li>
 			</ul>
       	</div>
 		<div class="homeitem3col">
