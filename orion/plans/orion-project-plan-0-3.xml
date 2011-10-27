@@ -15,7 +15,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 16:00 ET July 25, 2011.
+Last revised 16:00 ET October 27, 2011.
 </p>
 <p><i>Please send comments about this plan to the</i> <a href="mailto:orion-dev@eclipse.org">orion-dev@eclipse.org</a> <i>developer
   mailing list.</i>
@@ -334,10 +334,6 @@ community feedback. Each plan item covers a feature or API that is
 </p:description>
 
 <p:committed>
-  <p><i>None at this time.</i></p>
-</p:committed>
-
-<p:proposed>
 <ul>
 <li>
 	<strong>Plugin authentication and authorization.</strong>
@@ -345,28 +341,33 @@ community feedback. Each plan item covers a feature or API that is
 	for local plugins running on the same host as Orion itself. We will introduce
 	an improved authentication story for plugins to enable proper third party
 	plugin authentication.
-	[Client] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
-</li>
-<li>
-	<strong>Improved client file API.</strong>
-	The current Orion client file API has several non-core functions such as support
-	for import/export, and a concept of workspaces. A more stream-lined core file
-	API will be introduced that is easier to implement on third party services such
-	as WebDAV servers and file services such as S3 and DropBox.
-	[Client] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+	[Client]
 </li>
 <li>
 	<strong>Language tooling integration.</strong>
 	We will support community efforts at Orion language tooling by adding missing
 	extensions and services to the Orion framework and editor. Specific enhancements
 	include improved content assist infrastructure, and more complex syntax highlighting rules.
-	[Client] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+	[Client]
 </li>
 </ul>
+</p:committed>
+
+<p:proposed>
+  <p><i>None at this time.</i></p>
 </p:proposed>
 
 <p:deferred>
-  <p><i>None at this time.</i></p>
+<ul>
+<li>
+	<strong>Improved client file API.</strong>
+	The current Orion client file API has several non-core functions such as support
+	for import/export, and a concept of workspaces. A more stream-lined core file
+	API will be introduced that is easier to implement on third party services such
+	as WebDAV servers and file services such as S3 and DropBox.
+	[Client]
+</li>
+</ul>
 </p:deferred>
 
 </p:theme>
@@ -386,17 +387,13 @@ that hinder the team's ability to self-host with Orion.
 </p:description>
 
 <p:committed>
-  <p><i>None at this time.</i></p>
-</p:committed>
-
-<p:proposed>
 <ul>
 <li>
 	<strong>Search enhancements.</strong>
 	We will introduce support for search and replace within a single file, and make improvements
 	to the search results page. Search result enhancements include the ability to view
 	multiple pages of search results, and to display multiple search results per file.
-	[Client] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+	[Client]
 </li>
 <li>
 	<strong>Added Git functionality.</strong>
@@ -405,9 +402,13 @@ that hinder the team's ability to self-host with Orion.
 	our development. Specific enhancements include support for git cherry-pick, rebase,
 	merge squash, and adding synchronization to ensure writes don't overwrite changes
 	made by others since the last read.
-	[Git, Client, Server] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+	[Git, Client, Server]
 </li>
 </ul>
+</p:committed>
+
+<p:proposed>
+  <p><i>None at this time.</i></p>
 </p:proposed>
 
 <p:deferred>
