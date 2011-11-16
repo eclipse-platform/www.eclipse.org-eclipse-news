@@ -5,7 +5,7 @@
 	# team-leaders.php
 	#
 	# Author: 		
-	# Date:			2011-7-22
+	# Date:			2011-11-16
 	#
 	# Description: Details about the Eclipse Project PMC
 	#
@@ -97,6 +97,14 @@ ob_start();
 			      Architecture</a> and <a href="http://wiki.eclipse.org/Planning_Council">Planning</a> Councils, and has authored numerous <a href="http://www.eclipse.org/articles/">articles</a> 
 			      and a <a href="http://www.amazon.com/Official-Eclipse-3-0-FAQs/dp/0321268385/ref=sr_1_1?ie=UTF8&s=books&qid=1221163807&sr=8-1">
 			      book</a> on Eclipse.
+		        </li>
+		        <li> 
+		          <b><a name="andrew"></a>Andrew Overholt, Red Hat Toronto</b><br>
+					Andrew works on Eclipse and related technologies at Red Hat's Toronto
+					office.  He has been involved with the Eclipse community since 2005
+					and is a member of the Eclipse <a href="http://wiki.eclipse.org/Architecture_Council">Architecture</a>.
+					Andrew also leads the <a href="http://www.eclipse.org/linuxtools/">Linux Tools project</a>. He is very interested in continuing to grow the
+					Eclipse community and to improve native platform integration.
 		        </li>
 		      </ul>
 		</div>
