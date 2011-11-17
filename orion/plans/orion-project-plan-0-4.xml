@@ -15,7 +15,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 10:00 ET November 08, 2011.
+Last revised 14:00 ET November 17, 2011.
 </p>
 <p><i>Please send comments about this plan to the</i> <a href="mailto:orion-dev@eclipse.org">orion-dev@eclipse.org</a> <i>developer
   mailing list.</i>
@@ -341,6 +341,10 @@ community feedback. Each plan item covers a feature or API that is
 </p:description>
 
 <p:committed>
+  <p><i>None at this time.</i></p>
+</p:committed>
+
+<p:proposed>
 <ul>
 <li>
 	<strong>Need a parser that can handle errors.</strong>
@@ -364,11 +368,6 @@ community feedback. Each plan item covers a feature or API that is
 	experience within the Orion client.
 	[Client]
 </li>
-</ul>
-</p:committed>
-
-<p:proposed>
-<ul>
 <li>
 	<strong>Investigate CodeMirror modes support for language highlighting within the editor.</strong>
 	The CodeMirror modes has the potential to provide much of the language support in the editor that
@@ -394,6 +393,10 @@ community feedback. Each plan item covers a feature or API that is
 </p:description>
 
 <p:committed>
+  <p><i>None at this time.</i></p>
+</p:committed>
+
+<p:proposed>
 <ul>
 <li>
 	<strong>Update our 3rd party libraries including DoJo, RequireJS JSDoc</strong>
@@ -434,17 +437,11 @@ community feedback. Each plan item covers a feature or API that is
 	Many improvements including performance, events, asynchronous initialization, platform integration.
 	[Client Editor]
 </li>
-</ul>
-</p:committed>
-
-<p:proposed>
-<ul>
 <li>
 	<strong>Localization support</strong>
 	Investigate the current approaches to Localization in JavaScript and adopt within the Orion framework.
 	[Client]
 </li>
-
 </ul>
 </p:proposed>
 
@@ -465,6 +462,9 @@ community feedback. Each plan item covers a feature or API that is
 </p:description>
 
 <p:committed>
+  <p><i>None at this time.</i></p>
+</p:committed>
+<p:proposed>
 <ul>
 <li>
 	<strong>Improve Mobile UI experience.</strong> Continue to push the consumability of Orion on mobile devices.
@@ -479,13 +479,9 @@ community feedback. Each plan item covers a feature or API that is
 	[Client]
 </li>
 <li>
-	<strong>Semantic URLs with relavant contexual information for the task.</strong>
+	<strong>Semantic URLs with relevant contexual information for the task.</strong>
 	[Client]
 </li>
-</ul>
-</p:committed>
-<p:proposed>
-<ul>
 <li>
 	<strong>Investigate approaches for deeper cross-site integration (delegated UI / bookmarklets).</strong>
 	[Client]
@@ -507,6 +503,9 @@ community feedback. Each plan item covers a feature or API that is
 </p:description>
 
 <p:committed>
+  <p><i>None at this time.</i></p>
+</p:committed>
+<p:proposed>
 <ul>
 <li>
 	<strong>Improve build capabilities to remove reliance on shell access.</strong> Current builds are relient on shell access
@@ -519,9 +518,6 @@ community feedback. Each plan item covers a feature or API that is
 	[Releng]
 </li>
 </ul>
-</p:committed>
-<p:proposed>
-  <p><i>None at this time.</i></p>
 </p:proposed>
 
 <p:deferred>
