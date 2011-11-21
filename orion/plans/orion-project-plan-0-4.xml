@@ -15,7 +15,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 14:00 ET November 17, 2011.
+Last revised 11:00 ET November 21, 2011.
 </p>
 <p><i>Please send comments about this plan to the</i> <a href="mailto:orion-dev@eclipse.org">orion-dev@eclipse.org</a> <i>developer
   mailing list.</i>
@@ -226,9 +226,7 @@ Last revised 14:00 ET November 17, 2011.
 			<td rowspan="2">7</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">Oracle Java 6 Update 29<br/>
-				Oracle Java 7 Update 1<br/>
-				IBM Java 6 SR9 FP2<br/>
-				IBM Java 7 GA
+				IBM Java 6 SR9 FP2
 			</td>
 		</tr>
 		<tr class="c0">
@@ -240,9 +238,7 @@ Last revised 14:00 ET November 17, 2011.
 			<td rowspan="2">6</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">Oracle Java 6 Update 29<br/>
-				Oracle Java 7 Update 1<br/>
-				IBM Java 6 SR9 FP2<br/>
-				IBM Java 7 GA
+				IBM Java 6 SR9 FP2
 			</td>
 		</tr>
 		<tr class="c1">
@@ -250,14 +246,11 @@ Last revised 14:00 ET November 17, 2011.
 		</tr>
 		<!-- ************ Mac ************** -->
 		<tr class="c0">
-			<td rowspan="2">Apple Mac OS X</td>
-			<td rowspan="2">10.6</td>
-			<td rowspan="1">Universal 32-bit</td>
-			<td rowspan="2">Apple Java 10.6 Update 5<br/>
-			Apple Java for Lion 1.6.0_26</td>
-		</tr>
-		<tr class="c0">
+			<td rowspan="1">Apple Mac OS X</td>
+			<td rowspan="1">10.6</td>
 			<td rowspan="1">Universal 64-bit</td>
+			<td rowspan="1">Apple Java 10.6 Update 5<br/>
+			Apple Java for Lion 1.6.0_26</td>
 		</tr>
 	</table>
  </center>
