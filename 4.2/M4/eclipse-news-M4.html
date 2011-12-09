@@ -179,8 +179,48 @@ class MyClass {
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+
+  <tr id="jetty">
+    <td class="title">Update to Jetty 8 and Servlet 3.0</td>
+
+    <td class="content">
+      The equinox http service implementation is now using Jetty 8.1 as the
+      web container to support Servlet 3.0 and JSP 2.2.  The equinox http
+      service is required to host the eclipse user assistence web content
+      for serving up help content.
+      <p>
+      For the Juno release equinox will no longer support the use of older
+      Jetty implementations and we are no longer shipping Jetty 6.  The
+      Equinox http service implementation no longer will work with the
+      Servlet 2.5 and JSP 2.1 APIs.  We should also note that the 
+      jasper and expresson language implementation bundles
+      have changed in order to support the Servlet 3.0 and JSP 2.2 
+      specifications.  The following bundles have been removed:
+      <ul>
+        <li>org.apache.jasper</li>
+        <li>org.apache.commons.el</li>
+        <li>org.mortbay.jetty.server</li>
+
+        <li>org.mortbay.jetty.util</li>
+      </ul>
+      These have been replaced with the following to support Servlet 3.0
+      and JSP 2.2:
+      <ul>
+        <li>org.eclipse.jetty.continuation</li>
+        <li>org.eclipse.jetty.http</li>
+        <li>org.eclipse.jetty.io</li>
+
+        <li>org.eclipse.jetty.security</li>
+        <li>org.eclipse.jetty.server</li>
+        <li>org.eclipse.jetty.servlet</li>
+        <li>org.eclipse.jetty.util</li>
+        <li>javax.el</li>
+        <li>org.apache.jasper.glassfish</li>
+
+        <li>com.sun.el</li>
+      </ul>
+      </p>
+    </td>
   </tr>
 
   <tr> 
