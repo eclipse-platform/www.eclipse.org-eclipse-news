@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <style type="text/css">
+p, table, td, th {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt}
+pre {  font-family: "Courier New", Courier, mono; font-size: 10pt}
+h2 { font-family: verdana, arial, helvetica, geneva; font-size: 18pt; font-weight: bold ; line-height: 14px}
+code {  font-family: "Courier New", Courier, mono; font-size: 10pt}
+sup {  font-family: verdana, arial, helvetica, geneva; font-size: 10px}
+h3 {  font-family: verdana, arial, helvetica, geneva; font-size: 14pt; font-weight: bold}
+li {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt}
+h1 {  font-family: verdana, arial, helvetica, geneva; font-size: 24pt; font-weight: bold}
+body {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt; margin-top: 5mm; margin-left: 3mm}
+.indextop { font-size: x-large; font-family: verdana, arial, helvetica, sans-serif; font-weight: bold}
+.indexsub { font-size: xx-small; font-family: verdana, arial, helvetica, sans-serif; color: #8080FF}
+a.bar:link {  text-decoration: none; color: #FFFFFF}
+a.bar:visited {  color: #FFFFFF; text-decoration: none}
+a.bar:hover {  color: #FFFFFF; text-decoration: underline}
+a.bar {  color: #FFFFFF}
+
+.section {font-size: 20px; font-weight: bold;}
+table.news td {border-top: solid thin black;}
+table.news tr {vertical-align: top;}
+table.news tr td.title {vertical-align: top; width: 30%; font-weight: bold;}
+table.news tr td.content {vertical-align: top; width: 70%;}
+  </style>
+<title>Eclipse &quot;New and Noteworthy&quot; Template</title>
+</head>
+
+<body>
+<h1>Eclipse &quot;New and Noteworthy&quot; Template</h1>
+<p>Last revised 2010-11-30.</p>
+<p>This is the template for the &quot;New and Noteworthy&quot; document that
+  accompanies each Eclipse project milestone build.</p>
+<p>Note: This template document is XHTML 1.0 Transitional. Please use the W3C <a href="http://validator.w3.org/#validate_by_input">XHTML
+    Markup Validation Service</a> to check your document's markup before submitting.
+    This will detect screwed up HTML tags, images without an &quot;alt&quot;
+    attribute, and other tedious little details.</p>
+
+<ul>
+  <li><a href="#Instructions">Instructions</a></li>
+  <li><a href="#Platform41">Platform 4.1</a></li>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#JDT">JDT</a></li>
+  <li><a href="#PDE">PDE</a></li>
+  <li><a href="#Equinox">Equinox</a></li>
+</ul>
+
+<table class="news" border="0" cellpadding="10" cellspacing="0" width="80%" summary="news entries">
+
+  <tr>
+    <td id="Instructions" class="section" colspan="2">
+      <h2>Instructions</h2>
+    </td>
+  </tr>
+  
+  <tr id="item-name">
+    <td class="title">Item title, in sentence style, no trailing
+        punctuation, with unique id attribute on &lt;tr&gt;</td>
+    <td class="content">
+        A blurb pitched to the Eclipse community
+        (not just to members of the Eclipse Platform development team). Tell
+        end users about changes they'll see in the UI. Tell component writers
+        about changes they'll see at the client- and server-side APIs. Try to
+        generate some excitement; save the boring details for the manual. The
+        description should be complete sentences, with trailing punctuation.
+      <p>Use active voice (say "you", not "the user"), and follow other advice in the
+        <a href="http://wiki.eclipse.org/Eclipse_Doc_Style_Guide#topic-content">Topic&nbsp;Content</a>
+        section of the Eclipse Doc Style Guidelines.
+      </p>
+      <p>Stick to the default font and size. Make command names (<b>Quick Fix</b>),
+        keyboard shortcuts (<b>Ctrl+1</b>), and preference page paths
+        (<b>Preferences &gt; General &gt; Keys</b>) bold.
+      </p>
+      <p>Do <em>not</em> enclose the first paragraph of an item in <code>&lt;p&gt;&lt;/p&gt;</code> tags.
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="screenshots">
+    <td class="title">Screenshots</td>
+    <td class="content">
+        If a small image sheds light, place it below the description, in a separate
+        paragraph. Regular screen snapshots should be done on Windows XP. Crop
+        out any extraneous stuff to focus the reader's attention on your new
+        feature. <span style="background-color: #FFFF00">The image should be
+        no more than 519 pixels wide and in PNG format</span> (as opposed
+        to GIF, TIF, BMP, or JPG). Use PNG-8 if your image doesn't have a lot of color,
+        or PNG-24 if the screen shot uses enough color to warrant additional color depth.
+        See also the 
+        <a href="http://wiki.eclipse.org/Eclipse_Doc_Style_Guide#graphics">Graphics</a>
+        section of the Eclipse Doc Style Guidelines.
+      <p>Microsoft Paint actually saves to PNG on Windows XP and can easily be
+        used to crop and save screenshots:</p>
+      <ul>
+        <li>Arrange the windows for the shot</li>
+        <li>Use the Print Screen key (or <b>Alt+Print Screen</b>) to capture the screen</li>
+        <li>Open Paint (under <b>All Programs &gt; Accessories</b>)</li>
+        <li><b>Ctrl+V</b> to paste</li>
+        <li>Select the area you want to keep</li>
+        <li><b>Ctrl+C</b> to copy it</li>
+        <li><b>Ctrl+N</b> to create a new canvas (ok to discard old one)</li>
+        <li><b>Ctrl+V</b> to paste selected portion</li>
+        <li><b>Save As &gt; PNG</b></li>
+      </ul>
+      <p>Name the file is a way that is appropriate and specific to the item
+        (e.g., key-bindings.png, rather than something generic like image.png).
+        Use all <b>lowercase</b> letters in the image file name, including the &quot;.png&quot; 
+        file extension. As a separator, use hyphen &quot;-&quot; rather than
+        underscore 
+        &quot;_&quot;. </p>
+      <p>Put all the images in a sibling directory named &quot;images&quot;.
+        This gives HTML like &lt;img src=&quot;images/foo.png&quot; alt=&quot;The
+        Foo View&quot; /&gt;. Include a suitable alt property (which is mandatory
+        in XHTML 1.0). Do not embed the width and height of the image.</p>
+      <p>The images should be left justified (as opposed to centered). </p>
+      <p>Use the W3C <a href="http://validator.w3.org/#validate_by_input">XHTML
+          Markup Validation Service</a> to check your document's markup before
+          submitting.</p></td>
+  </tr>
+  
+  <tr>
+    <td id="Platform41" class="section" colspan="2">
+      <h2>Platform 4.1</h2>
+    </td>
+  </tr>
+  
+  <tr>
+    <td id="Platform" class="section" colspan="2">
+      <h2>Platform</h2>
+    </td>
+  </tr>
+  
+  <tr id="first-item">
+    <td class="title">First item</td>
+    <td class="content">
+      Item blurb.
+    </td>
+  </tr>
+  
+  <!-- NOTE: extra spacing rows between entries are no longer needed! -->
+
+  <tr id="second-item">
+    <td class="title">Second item</td>
+    <td class="content">
+      Item blurb.
+    </td>
+  </tr>
+  
+  <tr>
+    <td id="JDT" class="section" colspan="2">
+      <h2>JDT</h2>
+    </td>
+  </tr>
+  
+  
+  <tr>
+    <td id="PDE" class="section" colspan="2">
+      <h2>PDE</h2>
+    </td>
+  </tr>
+
+  <tr>
+    <td id="Equinox" class="section" colspan="2">
+      <h2>Equinox</h2>
+    </td>
+  </tr>
+  
+  <tr>
+    <td colspan="2"/>
+  </tr>
+  
+</table>
+</body>
+</html>

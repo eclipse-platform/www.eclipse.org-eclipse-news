@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="default_style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse 3.8 and 4.2 M3 News</title>
+</head>
+<body>
+<h1>Eclipse 3.8 and 4.2 M3 - New and Noteworthy</h1>
+<p><a href="http://en.wikipedia.org/wiki/File:Denarius-Julia_Soaemias-RIC_0237.jpg">Queen Juno</a>
+was a patron goddess of ancient Rome, and now assumes a tutelar role for the Eclipse Foundation's next
+<a href="http://wiki.eclipse.org/Simultaneous_Release">simultaneous release</a>. Here are some of 
+the more noteworthy things available in milestone build M3 
+  (October 28, 2011) which is now available for <a href="http://download.eclipse.org/eclipse/downloads/" target="_top">download</a>.
+Unless otherwise indicated, all entries listed here are available in both the 3.8 and 4.2 development streams.
+See the <a href="buildNotes.php">build notes</a> for details about bugs fixed and other changes.</p>
+<ul>
+  <li><a href="#Equinox">Equinox</a></li>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#JDT">JDT</a></li>
+  <li><a href="#PDE">PDE</a></li>
+</ul>
+
+<table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
+  <tr>
+    <td colspan="2" class="section" id="Equinox">Equinox</td>
+  </tr>
+  <tr id="Equinox-console">
+    <td class="title">New OSGi console</td>
+    <td class="content">
+      This milestone includes a brand new OSGi console based on the Apache Felix Gogo project.
+	  In previous releases the Equinox framework contained a built-in OSGi console. 
+	  This console allows you to interact with the OSGi framework and execute commands 
+	  on the running instance of the framework. For example, it can be used to install bundles 
+	  or to get a list of currently installed bundles. The built-in console is convenient because 
+	  it is always available without needing to install extra bundles, but it is also limited
+	  because the framework itself must contain all the functionality of the built-in console. 
+	  <p>
+      The Apache Felix Gogo project has developed an advanced shell for interacting with OSGi frameworks. 
+      Instead of continually enhancing the built-in Equinox Framework console, a new external Equinox 
+      Console bundle has been created that uses the Apache Felix Gogo bundles. The new Equinox Console 
+      bundle continues to provide support for the Equinox Console APIs (package 
+      <tt>org.eclipse.osgi.framework.console</tt>). It also adds many new enhancements which are 
+      possible through the use of the Gogo shell. This includes features such as tab completion, 
+      command history, piping, grep, telnet and ssh connections, and more. Type <i>help</i> on the console 
+      to see a list of available commands, or <i>help &lt;command-name&gt;</i> for information on 
+      how to use each command.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td id="Platform" class="section" colspan="2">
+      <h2>Platform</h2>
+    </td>
+  </tr>
+
+  <tr id="Platform-debug-toolbar">
+    <td class="title">Global debug toolbar</td>
+    <td class="content">To improve the presentation of the debug perspective, you can now move the 
+    toolbar out of the <b>Debug</b> view and into the global toolbar - or use it in the view and in the toolbar.
+	<p><img src="images/debug_toolbar-1.png" alt="Global debug toolbar"/></p>
+    <p>
+	The global toolbar contains the same commands as the view toolbar, but can be customized with  
+	<b>Window &gt; Customize Perspective...</b> to add or remove debugging commands, or the entire 
+	debug toolbar. The visibility of the debug toolbar can be changed using 
+	<b>Show Debug Toolbar</b> in the <b>Debug</b> view's menu.</p>
+	<p><img src="images/debug_toolbar-2.png" alt="Debug view toolbar action" /></p>
+    </td>
+  </tr>
+
+  <tr id="Platform-use-saturated-colors">
+    <td class="title">Use saturated colors in overview ruler</td>
+    <td class="content">
+      The new <b>Use saturated colors in overview ruler</b> preference allows to show the annotations in the Overview ruler using saturated colors:
+      <p>
+          <img src="images/use-saturated-colors-on.png" alt="Screenshot with saturated colors" title="saturated colors"/>
+          &nbsp;
+          <img src="images/use-saturated-colors-off.png" alt="Screenshot without saturated colors" title="lighter colors"/>
+          &nbsp;
+          <img src="images/use-saturated-colors.png" alt="Screenshot of the 'Accessibility' preference page"/>
+      </p>
+      <p>
+        This option is turned off by default and can be enabled on the <b>General &gt; Editors &gt; Text Editors &gt; Accessibility</b>
+        page.
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="Platform-delete-project">
+    <td class="title">Delete project dialog shows project location</td>
+    <td class="content">
+      The Delete Resources dialog now shows the location of deleted projects on the file system:
+      <p>
+          <img src="images/delete-project.png" alt="Screenshot"/>
+      </p>
+    </td>
+  </tr>
+
+	<tr id="SWT-cocoa-highlight">
+   	    <td class="title">Highlight TrayItem Image</td>
+   	    <td class="content">You can now provide a custom image for use as the hightlight image for 
+    	    a tray item on Cocoa. The highlight image is shown when the tray item is activated. 
+    	    The default tray item image will be restored when the tray item is deactivated.
+		   <p><i>Default Tray Item</i><br/><img src="images/nohighlight.png" alt="Default Tray Item"/></p>
+		   <p><i>Highlighted Tray Item</i><br/><img src="images/highlight.png" alt="Highlighted Tray Item"/></p>
+  	    </td>
+  	</tr>
+	<tr id="SWT-styledtext-scrollbars">
+   	    <td class="title">Added support in StyledText to show the scrollbars only when needed</td>
+   	    <td class="content">In the past, when a StyledText was created with scrollbars it would show 
+   	    them all the time, even when the client area was big enough to show the entire content.
+		By using <code>setAlwaysShowScrollBars()</code> this behaviour can now be configured so that 
+		instead of showing a disabled scrollbar, the StyledText will only display the scrollbar when needed.
+   	     </td>
+  	</tr>
+	<tr id="SWT-styledtext-events">
+   	    <td class="title">Event type constants in StyledText are now public</td>
+   	    <td class="content">
+   		 The following event type constants in <tt>StyledText</tt> have been made public:
+		<ul>
+		<li>ExtendedModify</li>
+		<li>LineGetBackground</li>
+		<li>LineGetStyle</li>
+		<li>TextChanging</li> 
+		<li>TextSet</li>
+		<li>VerifyKey</li>
+		<li>TextChanged</li>
+		<li>LineGetSegments</li>
+		<li>PaintObject</li>
+		<li>WordNext</li>
+		<li>WordPrevious</li>
+		<li>CaretMoved </li>
+		</ul>
+		This allows these constants to be used with <tt>Widget#isListening()</tt> to verify if a 
+		listener handler was added for any event type in <tt>StyledText</tt>.
+   	     </td>
+  	</tr>
+	<tr id="SWT-default-browser">
+   	    <td class="title">Default Browser renderer is now configurable</td>
+   	    <td class="content">
+   		 The native renderer that is used for <code>SWT.NONE</code>-style browsers can now be 
+   		 configured by setting a Java property. This is particularly important for applications 
+   		 that create browsers with a specific native renderer style (eg.- <code>SWT.MOZILLA</code>), 
+   		 in order to avoid conflicts that can occur when multiple native renderers are loaded in 
+   		 the same process.
+		<p>For more information on using this new property see 
+		<a href="http://www.eclipse.org/swt/faq.php#browserspecifydefault">How do I specify the 
+		default type of native renderer that is used by the Browser?</a> .</p>
+   	     </td>
+  	</tr>
+	<tr id="SWT-fontdialog">
+   	    <td class="title">FontDialog Effects</td>
+   	    <td class="content">
+   		 New API has been added to <tt>FontDialog</tt> to prevent the user from selecting font effects,
+   		 such as color, underline, strikethrough and shadow.
+		 <p><img src="images/font-dialog-effects.png" alt="FontDialog on Windows without the Effects grouping"/></p>
+   	     </td>
+  	</tr>
+	<tr id="SWT-combo-api">
+   	    <td class="title">New Combo API</td>
+   	    <td class="content">
+		Two new APIs have been added to <tt>Combo</tt> that allow users to get the caret information 
+		in a combo box. <code>Combo.getCaretLocation</code> returns the pixel coordinates of the 
+		caret. <code>Combo.getCaretPosition</code> returns the character position of the caret.
+ 		<p>
+		For an example of how to use this API see 
+		<a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet359.java">Snippet 359</a>.
+		</p>
+   	    </td>
+  	</tr>
+  
+  <tr>
+    <td id="JDT" class="section" colspan="2">
+      <h2>JDT</h2>
+    </td>
+  </tr>
+
+  <tr id="JDT-editor-for-class-without-source">
+    <td class="title">'*.class without source' file type</td>
+    <td class="content">
+      The new <b>*.class without source</b> file type allows to associate an internal or external editor
+      to class files that have no source attached. This e.g. allows to open the class file in a decompiler:
+      <p>
+          <img src="images/file-associations-page.png" alt="Screenshot of the 'File Associations' preference page"/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="JDT-property-key-quick-assists">
+    <td class="title">Quick assists to reorganize property keys</td>
+    <td class="content">
+      If you use Eclipse-style externalized strings, the following new quick assists make it easier to
+      reorganize keys inside the <b>Properties File Editor</b>:
+      <ul>
+          <li><b>Rename in workspace</b> - renames the key in the properties file and updates all references</li>
+          <li><b>Create field in '...'</b> - creates the corresponding field in the resource bundle accessor class</li>
+          <li><b>Remove property</b> - deletes the property from the properties file and the field from the resource bundle accessor class</li>
+          <li><b>Remove properties</b> - deletes the selected properties from the properties file and the fields from the resource bundle accessor class</li>
+      </ul>
+    </td>
+  </tr>
+
+  <tr id="JDT-resource-leaks">
+    <td class="title">New options to detect resource leaks</td>
+    <td class="content">The compiler can now detect leakage of resources i.e. local variables of type
+      <code>java.lang.AutoCloseable</code> (compliance &gt;= 1.7) and <code>java.io.Closeable</code> (compliance &lt;= 1.6).
+      <p>
+       <img src="images/resource-leak-warnings.png"
+          alt="Configurable options on compiler errors/warnings preference page"
+          title="Configurable options on compiler errors/warnings preference page"/>
+      </p>
+      <p> When the <b>Resource leak</b> option on the <b>Java &gt; Compiler &gt; Errors/Warnings</b> preference page is enabled,
+      the compiler will issue an error or a warning if the <code>close()</code> method is not invoked locally on a resource.</p>
+      <p>
+       <img src="images/resource-leak-example.png"
+          alt="Resource leak example"
+          title="Compiler warning on an unclosed resource"/>
+      </p>
+
+      <p> When you enable the <b>Potential resource leak</b> option on the <b>Java &gt; Compiler &gt; Errors/Warnings</b> preference page,
+      the compiler will issue an error or a warning if the <code>close()</code> method is not invoked locally on a resource
+      on all the execution paths.</p>
+      <p>
+       <img src="images/pot-resource-leak-example.png"
+          alt="Potential resource leak example"
+          title="Compiler warning on a resource not closed on all execution paths"/>
+      </p>
+      </td>
+    </tr>
+
+    <tr id="JDT-try-with-resource">
+    <td class="title">New options to suggest use of <code>try</code>-with-resources statement</td>
+    <td class="content">The compiler can now suggest using try with resources statement
+      for resources of type <code>java.lang.AutoCloseable</code> when
+      such resources have been explicitly closed but not declared in <code>try</code>-with-resources statements.
+      This only works in compliance 1.7 or above.
+       <p>
+       <img src="images/twr-example.png"
+          alt="Compiler warning for a resource that should be managed with try-with-resource"
+          title="Compiler warning for a resource that should be managed with try-with-resource"/></p>
+      </td></tr>
+
+      <tr id="JDT-batch-compiler">
+    <td class="title">New Batch compiler warning options</td>
+
+    <td class="content">Two new batch compiler options are now available to configure the
+      compile time warnings:
+      <ul>
+      	<li><b>-warn:all</b> can be used to enable all compiler warnings</li>
+      	<li><b>-warn:resource</b> can be used to enable resource leak warnings</li>
+      </ul>
+      </td></tr>
+      <tr id="JDT-build-path">
+    <td class="title">New build path option to warn when a source folder's output location overlaps another source folder</td>
+
+    <td class="content">JDT now shows a build path error when a source folder's output location overlaps another source folder.
+       This error can be configured on the <b>Java &gt; Compiler &gt; Building &gt; Output location overlaps source location</b> preference page.
+       <p>
+       <img src="images/buildpath-error.png"
+          alt="Build path error when source folder's output location overlaps another source folder"
+          title="Build path error because src2's output location is src"/></p>
+    </td>
+  </tr>
+      
+  <tr> 
+    <td colspan="2">  </td>
+  </tr>
+</table>
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Juno milestone builds:</p>
+<ul>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.2M2-201109161615/eclipse-news-M2.html">New for Eclipse Juno milestone build M2 (September 16, 2010)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.8M1-201108031800/eclipse-news-M1.html">New for Eclipse Juno milestone build M1 (August 5, 2011)</a></li>
+</ul>
+</body>
+</html>

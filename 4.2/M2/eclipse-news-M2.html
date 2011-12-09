@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="default_style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse Juno M2 News</title>
+</head>
+<body>
+<h1>Eclipse Juno M2 - New and Noteworthy</h1>
+<p>As the <a href="http://www.nasa.gov/mission_pages/juno/overview/index.html">Juno spacecraft</a>
+rockets towards Jupiter, the <a href="http://wiki.eclipse.org/Juno">Juno train</a> is also making
+good progress. Here are some of the more noteworthy things available in milestone build M2 
+ (September 16, 2011) which is now available for <a href="http://download.eclipse.org/eclipse/downloads/" target="_top">download</a>.
+Unless otherwise indicated, all entries listed here are available in both the 3.8 and 4.2 development streams.
+See the <a href="buildNotes.php">build notes</a> for details about bugs fixed and other changes.</p>
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#JDT">JDT</a></li>
+  <li><a href="#PDE">PDE</a></li>
+</ul>
+
+<table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+  
+  <tr id="platform-fade-effects">
+    <td width="30%" valign="top" align="left"><b>Fade Transition on Maximize (4.2 only)</b></td>
+    <td width="70%" valign="top">
+	It's fall and the weather is getting cool...so we should too. For the first step we've 
+	added a 'fade' effect to the maximize / restore operation. Let us know what you think by leaving your comments
+	in <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=357939">bug 357939</a>. If it's 
+	popular we can add similar effects to other transitions in the user interface such as perspective switching.
+	<p>
+	Note that this is an early implementation, and there are known issues with the implementation on various 
+	platforms that we're working on fixing. You can turn the fade 
+	effect off using the animations preference (found under <b>Window &gt; Preferences &gt; General &gt; Appearance</b>) 
+	should you prefer to return to the old effect.
+	</p>
+	<iframe width="420" height="315" src="http://www.youtube.com/embed/07kESXY5m2Q" frameborder="0" allowfullscreen></iframe>    
+	</td>
+  </tr>
+
+  <tr id="ant-editor-extension-point">
+    <td class="title">Enhanced Editor Support for Ant 1.8.2</td>
+    <td class="content">
+      The Ant editor has been enhanced with support for the new <a href="http://ant.apache.org/manual/targets.html#extension-points">extension-point</a> 
+      features in Ant 1.8.2.
+      <p><img src="images/ant-extension-assist.png" alt="Ant extension point editor content assist"/></p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+  <tr id="jdt-convert-enhanced-for-loop">
+    <td class="title">Quick Assist to convert enhanced <code>for</code> loop</td>
+    <td class="content">
+      Ever encountered an enhanced <code>for</code> loop and needed access to the <code>Iterator</code> or to the loop index?
+      Now, you can just use a Quick Assist (<b>Ctrl+1</b>) to convert the loop:
+      <p>
+          <img src="images/convert-to-for-loop.png" alt="Screenshot of Quick Assist on the 'for' keyword of an enhanced 'for' loop"/>
+      </p>
+      
+      <ul>
+        <li><b>Convert to indexed 'for' loop</b> is available for expressions of array- and <code>List</code>-based types.</li>
+        <li><b>Convert to Iterator-based 'for' loop</b> is available for expressions of type <code>Iterable</code>.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
+
+  <tr id="pde-git-migration">
+    <td class="title">PDE migrated to Git repository</td>
+    <td class="content">
+	All PDE code has been migrated from CVS to a Git repository.
+
+	<p>PDE UI and API Tools code can be accessed at <a href="http://git.eclipse.org/c/pde/eclipse.pde.ui.git/">git://git.eclipse.org/gitroot/pde/eclipse.pde.ui.git</a></p>
+
+	<p>PDE Build code can be accessed at <a href="http://git.eclipse.org/c/pde/eclipse.pde.build.git/">git://git.eclipse.org/gitroot/pde/eclipse.pde.build.git</a></p>
+
+	<p>PDE Incubator code can be accessed at <a href="http://git.eclipse.org/c/pde/eclipse.pde.incubator.git/">git://git.eclipse.org/gitroot/pde/eclipse.pde.incubator.git</a></p>
+	</td>
+  </tr>
+
+
+  <tr id="pde-classpath-api">
+    <td class="title">Bundle classpath resolution API</td>
+    <td class="content">
+	The <b>org.eclipse.pde.core.bundleClasspathResolvers</b> extension point allows 
+	you to dynamically add additional content to the runtime classpath and source 
+	lookup path of workspace plug-ins at launch time.
+	</td>
+  </tr>
+  
+
+  <tr id="pde-import-package-explorer">
+    <td class="title">Import from repository in the Package Explorer view</td>
+    <td class="content">
+		 By using <b>File &gt; Import... &gt; Import Plug-ins and Fragments</b> you can import the source
+		 code for a plug-in from your installation if the plug-in has the necessary manifest header.
+		 Now you can access this functionality directly from the Package Explorer and Project Explorer
+		 views.  Right click on a plug-in in your project's <b>Plug-in Dependencies</b> classpath container
+		 and select <b>Import from Repository...</b>.
+
+		 <p><img src="images/import-repo-pkg.png" alt="Import from repository in package explorer view"/></p>
+
+		 <p>Importing from a repository is also available in the Target Platform State, Plug-in Dependencies and Plug-ins 
+		 views.  If the selected item can be imported, there will be an <b>Import As</b> menu visible when right clicking in
+		 the view.</p>
+
+		 <p><img src="images/import-repo-tps.png" alt="Import from repository in target platform state view"/></p>
+	</td>
+  </tr>
+  
+  <tr> 
+    <td colspan="2">  </td>
+  </tr>
+</table>
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Juno milestone builds:</p>
+<ul>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.8M1-201108031800/eclipse-news-M1.html">New for Eclipse Juno milestone build M1 (August 5, 2011)</a></li>
+</ul>
+</body>
+</html>

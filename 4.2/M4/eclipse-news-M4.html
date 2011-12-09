@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="default_style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse 3.8 and 4.2 M4 News</title>
+</head>
+<body>
+<h1>Eclipse 3.8 and 4.2 M4 - New and Noteworthy</h1>
+<p>Here are some of the more noteworthy things available in milestone build M4 
+  (December 9, 2011) which is now available for <a href="http://download.eclipse.org/eclipse/downloads/" target="_top">download</a>.
+Unless otherwise indicated, all entries listed here are available in both the 3.8 and 4.2 development streams.
+See the <a href="buildNotes.php">build notes</a> for details about bugs fixed and other changes.</p>
+<nav id="header-links">
+<ul>
+  <li><a href="#JDT">JDT</a></li>
+  <li><a href="#PDE">PDE</a></li>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#Equinox">Equinox</a></li>
+</ul>
+</nav>
+
+<section id="news-content">
+<table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
+  <tr>
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+  <tr id="javadoc-hover-parameter-annotations">
+    <td class="title">Javadoc hover shows parameter annotations</td>
+    <td class="content">
+        Javadoc hovers now render the annotations on method parameters:
+        <p><img src="images/javadoc-hover-parameter-annotations.png" alt="org.eclipse.User.User(@NonNull String name, int uid, @Nullable String email)"/></p>
+    </td>
+  </tr>
+
+  <tr id="annotation-null-analysis">
+    <td class="title">Annotation-based null analysis</td>
+    <td class="content">
+        JDT can now be configured to use annotations designated as null annotations to 
+		perform enhanced inter-procedural null analysis. This feature can be enabled in
+		
+		<b>Preferences &gt; Java &gt; Compiler &gt; Errors/Warnings &gt; Null analysis</b>:
+		<p><img src="images/null-prefs.png" alt="Errors/Warnings preference page with 'Enable annotation-based null analysis' highlighted"/></p>
+		
+		<p> You can use either the default annotations bundled with JDT or use your own annotations
+		as null annotations. In addition to enabling the null analysis, the annotations need to be on the 
+		Java build path of your project. The default annotations can be found in the <b>org.eclipse.jdt.annotation</b> JAR
+		in the <code>plugins</code> directory, which can be consumed as an OSGi bundle or plain JAR.</p>
+		<p>When annotation-based null analysis is enabled, JDT issues new diagnostics based on the nullness
+			of a variable or a method return type as specified by a null annotation.</p>
+		
+		<p><img src="images/null-annotation-problems1.png" alt="	public void foo(@NonNull Object o1) {
+		System.out.println(o1.toString()); // OK: o1 cannot be null
+	}
+	
+	@NonNull Object bar(@Nullable String s1) {
+		foo(null); // cannot pass null argument
+		@NonNull String s= null; // cannot assign null value 
+		@NonNull String t= s1; // cannot assign potentially null value 
+		return null; // cannot return null value
+	}"/></p>
+		<p> Similar diagnostics are also elicited when the value assigned/returned may potentially be null or has unknown nullness.</p>
+		
+		<p> Overriding methods are also checked for correctness:</p>
+		<p><img src="images/null-annotation-problems2.png" alt="class Base {
+	@NonNull Object method(@Nullable Object o) {
+		return new Object();
+	}
+}
+
+class Sub extends Base {
+	@Override            // method parameter must allow null
+	@Nullable Object method(@NonNull Object o) {
+		return new Object();
+	}
+}"/></p>
+
+		<p> You can also use the <code>@NonNullByDefault</code> annotation to set a global default on an element (package, type, method) for all enclosed elements.</p>
+		<p><img src="images/null-annotation-problems-redundant1.png" alt="@NonNullByDefault
+class MyClass {
+	// redundant @NonNull annotations:
+	public @NonNull Object foo(@NonNull Object o) {
+		return o;
+	}
+	
+	@NonNullByDefault(false) // cancels the default
+	Object bar(@NonNull Object o) {
+		return o;
+	}
+}"/></p>
+
+		<p> As a result of annotating method signatures, the existing intra-procedural null analysis has even more information
+		because of user-specified annotations and thus provides better results. In the example below, the compiler would not have
+		been able to evaluate the null status of parameter 'obj' without the null annotation.</p>
+		<p><img src="images/null-annotation-problems-redundant2.png" alt="public void foo(@NonNull Object obj) {
+		if (obj == null) { }
+	}"/></p>
+		
+		<p><b>Note:</b> This is the first version of this feature. We are working on making this
+		easier to consume in Java project setups, and we will also add quick fixes.
+		The implemented features are complete and tested, but e.g. support for annotating fields or
+		APIs from third-party libraries is currently missing.
+		</p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
+
+  <tr id="custom-target-locations">
+    <td class="title">Custom target locations</td>
+    <td class="content">
+	You can now provide custom locations for target definitions.  They appear in both the target 
+	definition editor and wizard along with the platform provided target locations: directory, installation, 
+	feature and software site.
+	<p>To provide a custom location, you must implement <tt>ITargetLocation</tt> and extend the extension point 
+	<tt>org.eclipse.pde.core.targetLocations</tt>.  To provide labels, wizards and other user interface elements, 
+	you must extend an additional extension point <tt>org.eclipse.pde.ui.targetLocationProvisioners</tt> and have 
+	your <tt>ITargetLocation</tt> implementation adapt to several types.  For additional details, view the Javadoc on 
+	<tt>ITargetLocation</tt>.</p>
+	</td>
+  </tr>
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+
+  <tr id="context-menu-shortcut">
+    <td class="title">Shortcut for context menu on the Mac</td>
+    <td class="content">
+      <b>Shift+F10</b> now also opens the context menu on the Mac, like it already works on most other platforms.
+      The key binding of the new <b>Show Context Menu</b> command can be configured on the <b>General &gt; Keys</b> preference page.
+      <p><img src="images/context-menu.png" alt="Screenshot of a context menu in the Synchronize view"/></p>
+    </td>
+  </tr>
+
+  <tr id="cvs-sync-filters">
+    <td class="title">Filters in CVS Synchronize view</td>
+    <td class="content">
+      You can now use regular expressions to filter out changes in the CVS <b>Synchronize</b> view. 
+      A file will be hidden if the given pattern matches either left or right side of all its changes.
+      To enable filters go to <b>Preferences > General > Team > CVS > Synchronize/Compare</b>,
+      uncheck <b>Only look at timestamps to detect changes</b> and enter your pattern in
+      <b>Regular expression to ignore changes in synchronizations</b>.
+      <p>
+        <img src="images/filters-in-cvs-syncview.png" alt="Preferences for filters in CVS Sync View ">
+      </p>
+    </td>
+  </tr>
+
+  <tr id="flexible-viewer-refactor">
+    <td class="title">Flexible viewer refactored</td>
+    <td class="content">
+      The code driving the debug views (Debug, Variables and Breakpoints) has been substantially refactored to improve its overall quality, stability and
+      performance. 
+      <br><br>
+      Some of the more notable changes include:
+      <ul>
+        <li>There is a 30% improvement in the overall performance of the views</li>
+        <li>Two new interfaces have been added to the provisional API: <code>IModelProxyFactory2</code> and <code>ITreeModelViewer</code></li>
+        <li>The <b>Copy</b> and <b>Find</b> actions have been re-written to work better with the virtual views</li>
+        <li>A new viewer filter extension has been added to <code>TreeModelViewerFilter</code>, mitigating scrollbar presentation issues</li>
+      </ul> 
+      The complete list of changes can be found <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=161435#c47">here</a>.
+    </td>
+  </tr>
+
+  <tr id="workbench-events-refactoring">
+    <td class="title">Refactored Eclipse 4 Event API (4.2 only)</td>
+    <td class="content">
+      Workbench UI events have been refactored to make them easier to understand and use.  
+      For a detailed write up on the Eclipse 4 event model and the changes in this release 
+      please take a look at <a href="http://wiki.eclipse.org/Eclipse4/RCP/Event_Model">http://wiki.eclipse.org/Eclipse4/RCP/Event_Model</a> and 
+      <a href="http://wiki.eclipse.org/Eclipse4/UI/Event/Migration">http://wiki.eclipse.org/Eclipse4/UI/Event/Migration</a>.
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="Equinox">Equinox</td>
+  </tr>
+  <tr> 
+    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+  </tr>
+
+  <tr> 
+    <td colspan="2">  <div class="title">Template</div>
+      </td>
+  </tr>
+  <tr id="first-item">
+    <td class="title">First item</td>
+    <td class="content">
+      Item blurb.
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2">  </td>
+  </tr>
+</table>
+</section>
+<aside>
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Juno milestone builds:</p>
+<ul>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.2M3-201110281100/eclipse-news-M3.html">New for Eclipse Juno milestone build M3 (October 28, 2010)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.2M2-201109161615/eclipse-news-M2.html">New for Eclipse Juno milestone build M2 (September 16, 2010)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.8M1-201108031800/eclipse-news-M1.html">New for Eclipse Juno milestone build M1 (August 5, 2011)</a></li>
+</ul>
+</aside>
+</body>
+</html>
