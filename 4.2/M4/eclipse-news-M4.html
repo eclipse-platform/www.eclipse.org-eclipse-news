@@ -223,23 +223,22 @@ class MyClass {
     <td class="title">Update to Jetty 8 and Servlet 3.0</td>
 
     <td class="content">
-      The equinox http service implementation is now using Jetty 8.1 as the
-      web container to support Servlet 3.0 and JSP 2.2.  The equinox http
-      service is required to host the eclipse user assistence web content
+      The Equinox HTTP service implementation is now using Jetty 8.1 as the
+      web container to support Servlet 3.0 and JSP 2.2.  The Equinox HTTP
+      service is required to host the Eclipse user assistence web context
       for serving up help content.
       <p>
-      For the Juno release equinox will no longer support the use of older
+      For the Juno release, Equinox will no longer support the use of older
       Jetty implementations and we are no longer shipping Jetty 6.  The
-      Equinox http service implementation no longer will work with the
-      Servlet 2.5 and JSP 2.1 APIs.  We should also note that the 
-      jasper and expresson language implementation bundles
+      Equinox HTTP service implementation will no longer work with the
+      Servlet 2.5 and JSP 2.1 APIs.  Also note that the 
+      Jasper and expresson language implementation bundles
       have changed in order to support the Servlet 3.0 and JSP 2.2 
       specifications.  The following bundles have been removed:
       <ul>
         <li>org.apache.jasper</li>
         <li>org.apache.commons.el</li>
         <li>org.mortbay.jetty.server</li>
-
         <li>org.mortbay.jetty.util</li>
       </ul>
       These have been replaced with the following to support Servlet 3.0
@@ -248,30 +247,18 @@ class MyClass {
         <li>org.eclipse.jetty.continuation</li>
         <li>org.eclipse.jetty.http</li>
         <li>org.eclipse.jetty.io</li>
-
         <li>org.eclipse.jetty.security</li>
         <li>org.eclipse.jetty.server</li>
         <li>org.eclipse.jetty.servlet</li>
         <li>org.eclipse.jetty.util</li>
         <li>javax.el</li>
         <li>org.apache.jasper.glassfish</li>
-
         <li>com.sun.el</li>
       </ul>
       </p>
     </td>
   </tr>
 
-  <tr> 
-    <td colspan="2">  <div class="title">Template</div>
-      </td>
-  </tr>
-  <tr id="first-item">
-    <td class="title">First item</td>
-    <td class="content">
-      Item blurb.
-    </td>
-  </tr>
   <tr> 
     <td colspan="2">  </td>
   </tr>
