@@ -126,6 +126,23 @@ class MyClass {
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
 
+	<tr id="swt-tree-cursor">
+      <td class="title">Tree Cursor</td>
+      <td class="content">
+      The new <tt>TreeCursor</tt> class can be used to enable users to navigate a <tt>Tree</tt> control's individual 
+      cells, similar to what <tt>TableCursor</tt> makes possible for <tt>Table</tt> controls.  For an example of 
+      using <tt>TreeCursor</tt> see <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/plain/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet360.java">Snippet360</a>.
+      <p><img src="images/treecursor.png" alt="Tree Cursor"></p>
+      </td>
+  </tr>
+  <tr id="swt-vo-context-menu">
+      <td class="title">VoiceOver context menu</td>
+      <td class="content">
+      On Mac, you can now use the keyboard to open a context menu when VoiceOver is running,
+      using the standard VoiceOver key sequence Control+Option+Shift+M.
+      </td>
+    </tr>
+
   <tr id="context-menu-shortcut">
     <td class="title">Shortcut for context menu on the Mac</td>
     <td class="content">
@@ -136,13 +153,14 @@ class MyClass {
   </tr>
 
   <tr id="cvs-sync-filters">
-    <td class="title">Filters in CVS Synchronize view</td>
+    <td class="title">Filters in CVS Sync View</td>
     <td class="content">
       You can now use regular expressions to filter out changes in the CVS <b>Synchronize</b> view. 
-      A file will be hidden if the given pattern matches either left or right side of all its changes.
-      To enable filters go to <b>Preferences > General > Team > CVS > Synchronize/Compare</b>,
-      uncheck <b>Only look at timestamps to detect changes</b> and enter your pattern in
-      <b>Regular expression to ignore changes in synchronizations</b>.
+      To enable filters go to <b>Preferences > General > Team > CVS > Synchronize/Compare</b>, 
+      uncheck <b>Only look at timestamps to detect changes</b> and enter your regex pattern 
+      in the <b>Regular expression to ignore changes in synchronizations</b> field. Each difference 
+      in a change is checked against the pattern and is considered as matched, if either left or right side 
+      of the difference matches. If all diffs in a file match, the file is excluded from the view.
       <p>
         <img src="images/filters-in-cvs-syncview.png" alt="Preferences for filters in CVS Sync View ">
       </p>
@@ -163,6 +181,27 @@ class MyClass {
         <li>A new viewer filter extension has been added to <code>TreeModelViewerFilter</code>, mitigating scrollbar presentation issues</li>
       </ul> 
       The complete list of changes can be found <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=161435#c47">here</a>.
+    </td>
+  </tr>
+  <tr id="first-item">
+    <td class="title">Welcome is back (4.2 only)</td>
+    <td class="content">
+      As we progress towards release, the number of missing bits of Eclipse functionality in Eclipse 4.x continue 
+      to shrink. For this milestone we've done the preliminary work on both the Capabilities / Activities implementation
+      as well as re-enabling the <b>Welcome</b> (aka "Intro") screen.
+      <p>
+      This is a <i>major</i> milestone for 4.2 since these were the last two major functional areas which were missing 
+      compared to the 3.x stream. With three remaining milestones to fix and polish it looks like we're in good shape for Juno.
+      </p>
+      <p>
+      <strong>NOTE:</strong> The first time you start up M4 (even on an existing workspace) you will see the Welcome 
+      screen. This is not a defect; it's just the first time that the 'Intro' code has been run on that workspace. 
+      If you have more than one perspective open, you'll also notice there is a layout problem that will be
+      addressed in the next milestone. In either case you can just close or un-maximize the Welcome view to get back to normal.
+      </p>
+      <p>
+        <img src="images/intro.png" alt="Welcome perspective in Eclipse 4.2">
+      </p>
     </td>
   </tr>
 
