@@ -38,7 +38,7 @@ ob_start();
 			<ul>
 		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_2.xml"> Eclipse Project Juno 4.2 Plan</a><br>
 		        This document lays out the feature and API set for the Juno 4.2 release of the Eclipse Project.</li>
-		      <li><a href="plans/freeze_plan_3_7_1.php"> Eclipse Project Indigo 3.7 SR2 Endgame Plan</a><br>
+		      <li><a href="plans/freeze_plan_3_7_2.php"> Eclipse Project Indigo 3.7 SR2 Endgame Plan</a><br>
 				Information about how we plan to wrap up Indigo 3.7 Service Release 2 (version 3.7.2).</li>
 		    </ul>
       	</div>
