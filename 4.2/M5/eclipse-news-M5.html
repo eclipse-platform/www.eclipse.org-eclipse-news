@@ -9,100 +9,104 @@
 <body>
 <h1>Eclipse 3.8 and 4.2 M5 - New and Noteworthy</h1>
 <p>Here are some of the more noteworthy things available in milestone build M5 
-  (Month dd, yyyy) which is now available for <a href="http://download.eclipse.org/eclipse/downloads/" target="_top">download</a>.
+  (January 27, 2012) which is now available for <a href="http://download.eclipse.org/eclipse/downloads/" target="_top">download</a>.
 Unless otherwise indicated, all entries listed here are available in both the 3.8 and 4.2 development streams.
 See the <a href="buildNotes.php">build notes</a> for details about bugs fixed and other changes.</p>
 <ul>
-  <li><a href="#Equinox">Equinox</a></li>
-  <li><a href="#Platform">Platform</a></li>
   <li><a href="#JDT">JDT</a></li>
+  <li><a href="#Platform">Platform</a></li>
   <li><a href="#PDE">PDE</a></li>
+  <li><a href="#Equinox">Equinox</a></li>
 </ul>
 
 <table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
   <tr>
-    <td colspan="2" class="section" id="Equinox">Equinox</td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr>
-    <td colspan="2" class="section" id="Platform">Platform</td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Resources</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">SWT</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Platform UI</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">User Assistance</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Platform Text</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Team/CVS</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Compare</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Ant</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Debug</div>
-      </td>
-  </tr>
-  <tr id="edit-multi-line-vars">
-    <td class="title">Improved editing of environment variables</td>
-    <td class="content">
-        In 3.8M5, editing multi-line environment variables became much simpler with a new UI that presents the variables in a scrolling text widget.
-        The new UI can be found in the edit dialog for a multi-line environment variable on the Environment tab of a supporting launch configuration.
-        <p><img src="images/multi-env-var.png" alt="New edit dialog for multi-line environment variables"/></p>
-    </td>
-  </tr>
-  <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
+  <tr id="null-anaylsis-fields">
+    <td class="title">Null analysis for fields</td>
+    <td class="content">
+        JDT can now raise null related errors/warnings for fields. You can configure null analysis for 
+		fields in 
+		<b>Preferences &gt; Java &gt; Compiler &gt; Errors/Warnings &gt; Null analysis</b>.
+		<p><img src="images/null-analysis-prefs.png" alt="Errors/Warnings preference page with 'Include fields in null analysis' highlighted"/></p>
+        
+		With this option enabled, you will be able to see null related errors/warnings on fields, 
+		configured using the options <b>Null Pointer access</b>, 
+		<b>Potential null pointer access</b> and <b>Redundant null check</b>. Some examples are given below
+		<ul>
+		<li><b>Null pointer access warning</b>
+		<p><img src="images/npe-constant-field.png" alt="null pointer access warning on dereferencing a constant field with a null value"/></p>
+		</li>
+		<li><b>Potential null pointer access warnings</b>
+		<p><img src="images/pot-npe-field.png" alt="potential null pointer access warning on a field that may be null"/></p>
+		<p>Note that in the above case, the field <code>field1</code> is considered only potentially null because it may be modified in other threads</p>
+		<p><img src="images/pot-npe-constant-field.png" alt="potential null pointer access warning on a constant field that may be null"/></p>
+		</li>
+		<li><b>Redundant null check warnings</b>
+		<p><img src="images/redundant-null-constant-field.png" alt="redundant null check warning on comparing a constant field with a null value against null"/></p>
+		<p><img src="images/redundant-null-constant-field2.png" alt="redundant null check warning on comparing a constant field with a non-null value against non-null"/></p>
+		<p><img src="images/always-false-null-comparison.png" alt="always false null comparison warning on comparing a constant field with a null value against non-null"/></p>
+		<p><img src="images/redundant-field-instanceof.png" alt="redundant instanceof warning on a constant field with a null value"/></p>
+		</li>
+		</ul>
+		<p>This option can be enabled for the command line batch compiler using the <code>-warn:<b>+nullFields</b></code> option.</p>
+    </td>
+  </tr>
+  
+  <tr id="batch-compiler-null-annotations">
+    <td class="title">Batch compiler options for using null annotations</td>
+    <td class="content">
+        You can now configure the batch compiler to use annotations for null analysis by passing the token <b>nullAnnot(nullable|nonnull|nonnullbydefault)</b> to the <code>-warn</code> option, 
+		where nullable, nonnull and nonnullbydefault are the fully qualified names of the annotation types to be used for null analysis. You can use <b>nullAnnot</b> alone
+		to use JDT's default annotations.
+		<p>In addition, you can use the <b>-nonNullByDefault</b> token to globally use nonnull as the default when
+		annotation-based null analysis is enabled. This implies that all types in method signatures without a null annotation are considered as specified non-null.</p>
+	</td>
+  </tr>
+  
+  <tr id="resource-leak-warnings-changes">
+    <td class="title">Smarter resource leak detection</td>
+    <td class="content">
+        JDT now performs smarter analysis so that resource leak related errors/warnings 
+		(configured by the options <b>Resource leak</b> and <b>Potential resource leak</b>
+		in <b>Preferences &gt; Java &gt; Compiler &gt; Errors/Warnings &gt; Potential programming problems</b>) are no longer 
+		reported on practically unimportant cases. Some examples where the absence of a close() call does not
+		trigger any error/warning are given below:
+		<ul>
+		<li> Resource-less implementors of Closeable, such as StringReader.
+		<p><img src="images/os-less-unclosed-resource.png" alt="no resource leak reported if resource-less implentor of Closeable is not closed"/></p>
+		</li>
+		<li> Wrapping implementors of Closeable, such as BufferedReader, that simply wrap a resource-less Closeable, directly or indirectly.
+		<p><img src="images/wrapped-os-less-unclosed-resource.png" alt="no resource leak reported when a resource which wraps a resource-less implentor of Closeable is not closed"/></p>
+		</li>
+		<li> Wrapped resources where any resource in the chain is (potentially) closed.
+		<p><img src="images/wrapped-resource.png" alt="potential resource leak reported when any resource in the chain of wrapper resources is closed along some execution path."/></p>
+		</li>
+		</ul>
+	</td>
+  </tr>
+  
+  <tr id="encoding-for-source-attachments">
+    <td class="title">Encoding for source attachments</td>
+    <td class="content">
+        You can now specify the encoding for source attachments for libraries e.g.
+		in <b>Build Path &gt; Libraries &gt;</b> expand the library <b>&gt; Source attachment &gt; Edit...</b>
+		<p><img src="images/source-attachment-encoding.png" alt="Dialog to specify encoding for source attachments."/></p>
+	</td>
+  </tr>
+  
+  <tr id="pre-built-index-support">
+    <td class="title">Faster search with pre-built indexes</td>
+    <td class="content">
+        <i>Note: This feature is mainly intended for plug-ins that implement their own classpath container, not for the end user.</i>
+        <p>You can now tell JDT search to use pre-built indexes instead of having the compiler generate the indexes the first time a JAR is added to the classpath. 
+		This prevents indexing from occurring on the user's machine and lets the user obtain first search results faster.</p>
+		<p>You can specify the index file as a classpath attribute <code>IClasspathAttribute.INDEX_LOCATION_ATTRIBUTE_NAME</code> of the library.</p>
+		<p>See <b>Help &gt; JDT Plug-in Developer Guide &gt; Programmer's Guide &gt; JDT Core &gt; Indexes for the Java search</b> for more details.</p>
+	</td>
+  </tr>
+
   <tr id="export-detail-formatters">
     <td class="title">Export detail formatters</td>
     <td class="content">
@@ -119,11 +123,46 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
     </td>
   </tr>
   <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+  <tr id="edit-multi-line-vars">
+    <td class="title">Improved editing of environment variables</td>
+    <td class="content">
+        In 3.8M5, editing multi-line environment variables became much simpler with a new UI that presents the variables in a scrolling text widget.
+        The new UI can be found in the edit dialog for a multi-line environment variable on the <b>Environment</b> tab of a supporting launch configuration.
+        <p><img src="images/multi-env-var.png" alt="New edit dialog for multi-line environment variables"/></p>
+    </td>
+  </tr>
+  <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
+  <tr id="TracingPage">
+      <td class="title">Tracing Preference Page</td>
+      <td class="content">
+        A new preference page is available to dynamically set the debug tracing options for Eclipse.  You can turn on individual tracing options and the changes will take effect immediately.  There is no need to restart Eclipse.
+
+	<p><img src="images/tracing.png" alt="Tracing preference page"/></p>
+
+	<p>To add a plug-in's tracing options to the page, you must provide an <code>org.eclipse.ui.trace.traceComponents</code> extension. Your bundle must also register an <code>org.eclipse.osgi.service.debug.DebugOptionsListener</code> to be notified when tracing options are changed.</p>
+
+	<p>The preference page can be included in other products.  It is contained in the <code>org.eclipse.ui.trace</code> plug-in and has no dependencies on PDE.</p>
+
+      </td>
+  </tr>
+
+  <tr id="NonJarTargetPlugins">
+      <td class="title">Non *.jar Plug-ins in Target Platform</td>
+      <td class="content">
+	The target platform will now recognize archive files with any file extension as long as they contain a manifest with the necessary OSGi headers. Previously, PDE only supported directory plug-ins and jarred (*.jar) plug-ins.
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="section" id="Equinox">Equinox</td>
   </tr>
   <tr> 
     <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
   </tr>
+
   <tr> 
     <td colspan="2">  <div class="title">Template</div>
       </td>
