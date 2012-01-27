@@ -125,6 +125,22 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
   <tr>
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
+  <tr id="screenshots">
+    <td class="title">Shared area tab navigation</td>
+    <td class="content">
+        Navigation arrows have been introduced to the sides of the shared area to allow
+        you to click and view the tabs that are to the left and right of the currently
+        selected tab. This is the default setting on new installations. Switching to the
+        Classic theme from the preferences (<b>Preferences &gt; General &gt; Appearance</b>)
+        will allow you to bring back the MRU behaviour from 3.x. The MRU behaviour can
+        also be toggled on and off via CSS by setting the <code>mru-visible</code> attribute
+        of an <code>MPartStack</code> to <code>true</code> or <code>false</code>.
+
+      <p>This is a preliminary form of the feature and your feedback would be most appreciated.</p>
+
+      <p><img src="images/tab-navigation.png" alt="The shared area with left and right navigation
+        arrows on its sides."/></p></td>
+  </tr>
   <tr id="edit-multi-line-vars">
     <td class="title">Improved editing of environment variables</td>
     <td class="content">
@@ -137,7 +153,7 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
   <tr id="TracingPage">
-      <td class="title">Tracing Preference Page</td>
+      <td class="title">Tracing preference page</td>
       <td class="content">
         A new preference page is available to dynamically set the debug tracing options for Eclipse.  You can turn on individual tracing options and the changes will take effect immediately.  There is no need to restart Eclipse.
 
@@ -151,7 +167,7 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
   </tr>
 
   <tr id="NonJarTargetPlugins">
-      <td class="title">Non *.jar Plug-ins in Target Platform</td>
+      <td class="title">Non *.jar plug-ins in target platform</td>
       <td class="content">
 	The target platform will now recognize archive files with any file extension as long as they contain a manifest with the necessary OSGi headers. Previously, PDE only supported directory plug-ins and jarred (*.jar) plug-ins.
       </td>
@@ -159,8 +175,16 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+  <tr id="pref-storage">
+    <td class="title">Customize storage for preference scopes</td>
+    <td class="content">
+      When defining your own preference scope, you can now extend a simple storage
+      customization class rather than implementing all the preference logic yourself. In this class you
+      simply define the code to read and write a preference node to whatever backing store you want to use.
+      This makes it very easy to define a custom preference scope with alternate storage
+      requirements. For more details see the documentation for the <tt>org.eclipse.equinox.preferences.preferences</tt>
+      extension point, or the new API class <tt>org.eclipse.core.runtime.preferences.AbstractPreferenceStorage</tt>.
+    </td>
   </tr>
 
   <tr> 
