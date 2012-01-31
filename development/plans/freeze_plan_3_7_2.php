@@ -41,7 +41,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>January 11, 2012 - working towards release candidate 2.</b></p>
+			<p><b>January 31, 2012 - full-time test pass against release candidate 3.</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -57,7 +57,7 @@ ob_start();
 	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 1 build</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>         
-	          <tr class="current">
+	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">13</td>
 	            <td align="right" height="20">Fri 08:00 EDT</td>
@@ -97,13 +97,13 @@ ob_start();
 	          </tr>
 	          <tr>
 	            <td height="20"></td>
-	            <td align="right" height="20">30</td>
-	            <td align="right" height="20">Mon 08:00 EDT</td>
+	            <td align="right" height="20">27</td>
+	            <td align="right" height="20">Fri 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 3 build</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>         
-	          <tr>
+	          <tr class="current">
 	            <td height="20"></td>
 	            <td align="right" height="20">31</td>
 	            <td align="right" height="20">Tue 08:00 EDT</td>
