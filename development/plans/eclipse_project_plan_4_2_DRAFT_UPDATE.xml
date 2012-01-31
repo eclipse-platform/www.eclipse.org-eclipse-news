@@ -334,44 +334,44 @@ marks interesting changes since the previous draft of
 <p:compatibility_with_previous_releases>
 <div>
 
-<h3>Compatibility of Release 4.2 with 3.7</h3>
-<p>Eclipse 4.2 will be compatible with Eclipse 3.7 (and all earlier 3.x versions).</p>
+<h3>Compatibility of Release 4.2 with 3.8</h3>
+<p>Eclipse 4.2 will be compatible with Eclipse 3.8 (and all earlier 3.x versions).</p>
 
 <p><strong>API Contract Compatibility:</strong> Eclipse SDK 4.2 will be upwards
-  contract-compatible with Eclipse SDK 3.7 except in those areas noted in the
+  contract-compatible with Eclipse SDK 3.8 except in those areas noted in the
   <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.platform.doc.isv/porting/eclipse_3_6_porting_guide.html" target="_top">
     <em>Eclipse 4.2 Plug-in Migration Guide</em>
   </a>. Programs that use affected APIs and extension points will need to be ported
   to Eclipse SDK 4.2 APIs. Downward contract compatibility
   is not supported. There is no guarantee that compliance with Eclipse SDK 4.2
-  APIs would ensure compliance with Eclipse SDK 3.7 APIs. Refer to
+  APIs would ensure compliance with Eclipse SDK 3.8 APIs. Refer to
   <a href="http://wiki.eclipse.org/index.php/Evolving_Java-based_APIs">
     <em>Evolving Java-based APIs</em>
   </a> for a discussion of the kinds of API changes that maintain contract compatibility.</p>
   
 <p><strong>Binary (plug-in) Compatibility:</strong> Eclipse SDK 4.2 will be upwards
-  binary-compatible with Eclipse SDK 3.7 except in those areas noted in the
+  binary-compatible with Eclipse SDK 3.8 except in those areas noted in the
   <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.platform.doc.isv/porting/eclipse_3_6_porting_guide.html" target="_top">
     <em>Eclipse 4.2 Plug-in Migration Guide</em>
   </a>. Downward plug-in compatibility is not supported. Plug-ins for Eclipse SDK
-  4.2 will not be usable in Eclipse SDK 3.7. Refer to
+  4.2 will not be usable in Eclipse SDK 3.8. Refer to
   <a href="http://wiki.eclipse.org/index.php/Evolving_Java-based_APIs">
     <em>Evolving Java-based APIs</em>
   </a> for a discussion of the kinds of API changes that maintain binary compatibility.</p>
   
 <p><strong>Source Compatibility:</strong> Eclipse SDK 4.2 will be upwards source-compatible
-  with Eclipse SDK 3.7 except in the areas noted in the
+  with Eclipse SDK 3.8 except in the areas noted in the
   <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.platform.doc.isv/porting/eclipse_3_6_porting_guide.html" target="_top">
     <em>Eclipse 4.2 Plug-in Migration Guide</em>
   </a>. This means that source files written
-  to use Eclipse SDK 3.7 APIs might successfully compile and run against Eclipse
+  to use Eclipse SDK 3.8 APIs might successfully compile and run against Eclipse
   SDK 4.2 APIs, although this is not guaranteed. Downward source compatibility
   is not supported. If source files use new Eclipse SDK APIs, they will not be
   usable with an earlier version of the Eclipse SDK. </p>
   
 <p><strong>Workspace Compatibility:</strong> Eclipse SDK 4.2 will be upwards
   workspace-compatible with earlier 3.x versions of the Eclipse SDK unless noted.
-  This means that workspaces and projects created with Eclipse SDK 3.7 .. 3.0 can be successfully
+  This means that workspaces and projects created with Eclipse SDK 3.8 .. 3.0 can be successfully
   opened by Eclipse SDK 4.2 and upgraded to a 4.2 workspace. This includes both
   hidden metadata, which is localized to a particular workspace, as well as metadata
   files found within a workspace project (e.g., the .project file), which may
