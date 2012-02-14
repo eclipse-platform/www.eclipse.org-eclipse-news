@@ -51,8 +51,6 @@ ob_start();
 			<h3>IP Logs For Past Releases</h3>
 			<p>The following are approved IP logs for past Eclipse project releases.</p>
 			<ul>
-				<li><a href="eclipse-orion-0-3-log.pdf">Orion 0.3 release</a></li>
-				<li><a href="eclipse-orion-creation-release-0-2-log.pdf">Orion creation and 0.2 release</a></li>
 				<li><a href="eclipse_project_3_7_log.pdf">Eclipse project Indigo release (3.7 and 4.1)</a></li>
 				<li><a href="eclipse_4_0_log.pdf">Eclipse platform 4.0 release</a></li>
 				<li><a href="eclipse_e4_move_review_20100630.pdf">e4 to Platform move review, June 2010</a></li>
@@ -63,6 +61,21 @@ ob_start();
 				</li>
 				<li><a href="eclipse_project_3_5_log.html">Galileo (3.5)</a></li>
 				<li><a href="eclipse_project_3_4_log.html">1.0 to 3.4</a></li>
+			</ul>
+		</div>
+		<div class="homeitem3col">
+			<h2>Orion project logs</h2>
+			<p>The Orion project conducts releases independently from the rest of the Eclipse top-level projects.
+			IP logs for the Orion project are found below.</p>
+			<h3>Current IP Log</h3>
+			<p>To see a draft IP log for the Eclipse project release currently under development,
+			view the <a href="http://www.eclipse.org/projects/ip_log.php?projectid=eclipse.orion">auto-generated IP log</a>.
+			Note the auto-generated log has not been reviewed for accuracy or approved by the Eclipse Foundation legal team.
+			<h3>IP Logs For Past Releases</h3>
+			<ul>
+				<li><a href="eclipse-orion-0-4-log.html">Orion 0.4 release</a></li>
+				<li><a href="eclipse-orion-0-3-log.pdf">Orion 0.3 release</a></li>
+				<li><a href="eclipse-orion-creation-release-0-2-log.pdf">Orion creation and 0.2 release</a></li>
 			</ul>
 		</div>
 	</div>
