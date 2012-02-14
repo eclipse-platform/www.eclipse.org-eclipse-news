@@ -48,9 +48,10 @@ ob_start();
 			<p>IP log files for the e4 sub-project are found <a href="http://eclipse.org/e4/development/ip-logs/">here</a>.</p>
 		</div>
 		<div class="homeitem3col">
-			<h3>IP Logs For Past Releases</h3>
-			<p>The following are approved IP logs for past Eclipse project releases.</p>
+			<h3>IP Logs For Past Reviews</h3>
+			<p>The following are approved IP logs for past Eclipse project reviews.</p>
 			<ul>
+				<li><a href="eclipse-platform-ua-restructuring-log.pdf">Eclipse Platform User Assistance restructuring review (Feb 2012)</a></li>
 				<li><a href="eclipse_project_3_7_log.pdf">Eclipse project Indigo release (3.7 and 4.1)</a></li>
 				<li><a href="eclipse_4_0_log.pdf">Eclipse platform 4.0 release</a></li>
 				<li><a href="eclipse_e4_move_review_20100630.pdf">e4 to Platform move review, June 2010</a></li>
