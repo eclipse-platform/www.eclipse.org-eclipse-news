@@ -15,7 +15,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 11:00 ET November 21, 2011.
+Last revised 15:00 ET February 14, 2012.
 </p>
 <p><i>Please send comments about this plan to the</i> <a href="mailto:orion-dev@eclipse.org">orion-dev@eclipse.org</a> <i>developer
   mailing list.</i>
@@ -333,17 +333,7 @@ community feedback. Each plan item covers a feature or API that is
 </p:description>
 
 <p:committed>
-  <p><i>None at this time.</i></p>
-</p:committed>
-
-<p:proposed>
 <ul>
-<li>
-	<strong>Need a parser that can handle errors.</strong>
-	The current parser cannot continue after encountering errors. This limits the flexibility on
-	what can be done in the editor while the user is continually editing code.
-	[Client]
-</li>
 <li>
 	<strong>CSSLint a regular part of Orion.</strong>
 	This is awaiting the results of an Eclipse Foundation CQ.
@@ -367,10 +357,21 @@ community feedback. Each plan item covers a feature or API that is
 	[Client]
 </li>
 </ul>
+</p:committed>
+
+<p:proposed>
+  <p><i>None at this time.</i></p>dsfdsf
 </p:proposed>
 
 <p:deferred>
-  <p><i>None at this time.</i></p>
+<ul>
+<li>
+	<strong>Need a parser that can handle errors.</strong>
+	The current parser cannot continue after encountering errors. This limits the flexibility on
+	what can be done in the editor while the user is continually editing code.
+	[Client]
+</li>
+</ul>
 </p:deferred>
 
 </p:theme>
@@ -385,21 +386,9 @@ community feedback. Each plan item covers a feature or API that is
 </p:description>
 
 <p:committed>
-  <p><i>None at this time.</i></p>
-</p:committed>
-
-<p:proposed>
 <ul>
 <li>
-	<strong>Update our 3rd party libraries including DoJo, RequireJS JSDoc</strong>
-	[Client]
-</li>
-<li>
-	<strong>Closer alignment with OSGi services</strong>
-	[Client]
-</li>
-<li>
-	<strong>Authentication integration with service registry</strong>
+	<strong>Update our 3rd party libraries including RequireJS and Jetty</strong>
 	[Client]
 </li>
 <li>
@@ -435,9 +424,28 @@ community feedback. Each plan item covers a feature or API that is
 	[Client]
 </li>
 </ul>
+
+</p:committed>
+
+<p:proposed>
+  <p><i>None at this time.</i></p>
 </p:proposed>
 
 <p:deferred>
+<ul>
+<li>
+	<strong>Update our 3rd party libraries including DoJo and JSDoc</strong>
+	[Client]
+</li>
+<li>
+	<strong>Closer alignment with OSGi services</strong>
+	[Client]
+</li>
+<li>
+	<strong>Authentication integration with service registry</strong>
+	[Client]
+</li>
+</ul>
   <p><i>None at this time.</i></p>
 </p:deferred>
 
@@ -454,9 +462,6 @@ community feedback. Each plan item covers a feature or API that is
 </p:description>
 
 <p:committed>
-  <p><i>None at this time.</i></p>
-</p:committed>
-<p:proposed>
 <ul>
 <li>
 	<strong>Improve Mobile UI experience.</strong> Continue to push the consumability of Orion on mobile devices.
@@ -479,6 +484,9 @@ community feedback. Each plan item covers a feature or API that is
 	[Client]
 </li>
 </ul>
+</p:committed>
+<p:proposed>
+  <p><i>None at this time.</i></p>
 </p:proposed>
 
 <p:deferred>
@@ -498,6 +506,10 @@ community feedback. Each plan item covers a feature or API that is
   <p><i>None at this time.</i></p>
 </p:committed>
 <p:proposed>
+  <p><i>None at this time.</i></p>
+</p:proposed>
+
+<p:deferred>
 <ul>
 <li>
 	<strong>Improve build capabilities to remove reliance on shell access.</strong> Current builds are relient on shell access
@@ -510,10 +522,6 @@ community feedback. Each plan item covers a feature or API that is
 	[Releng]
 </li>
 </ul>
-</p:proposed>
-
-<p:deferred>
-  <p><i>None at this time.</i></p>
 </p:deferred>
 
 </p:theme>
