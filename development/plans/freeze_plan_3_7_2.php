@@ -41,7 +41,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>January 31, 2012 - full-time test pass against release candidate 3.</b></p>
+			<p><b>February 15, 2012 - contributed RC4 build to Indigo 3.7 SR2 train - no further work planned.</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -103,7 +103,7 @@ ob_start();
 	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 3 build</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>         
-	          <tr class="current">
+	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">31</td>
 	            <td align="right" height="20">Tue 08:00 EDT</td>
