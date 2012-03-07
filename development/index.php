@@ -58,13 +58,19 @@ ob_start();
 		        development (e.g., email notification). You can sign up for your own Eclipse 
 		        bugzilla ID and start contributing bug reports.
 			</li>
-			<li><a href="http://dev.eclipse.org/viewcvs/">CVS Repository</a><br>
-		        We use the Concurrent Versioning System (<a href="http://www.cvshome.org">CVS</a>) 
-		        to support concurrent distributed development, and we use Eclipse as our 
-		        CVS client because it supports CVS directly.. All Eclipse development 
-		        is carried out in this repository. The server supports both &quot;extssh&quot; 
-		        and &quot;pserver&quot; type CVS connections - &quot;pserver&quot; only 
-		        works for anonymous access.
+			<li><a href="http://git.eclipse.org">Git Repositories</a><br>
+		        We use the <a href="http://git-scm.com/">Git</a>) version control system
+		        to support concurrent distributed development. All Eclipse development 
+		        is carried out in these repositories:
+		        <ul>
+		        <li><a href="git.eclipse.org/c/platform">Platform Git Repositories</a></li>
+		        <li><a href="git.eclipse.org/c/jdt">JDT Git Repositories</a></li>
+		        <li><a href="git.eclipse.org/c/pde">PDE Git Repositories</a></li>
+		        <li><a href="git.eclipse.org/c/orion">Orion Git Repositories</a></li>
+		        <li><a href="git.eclipse.org/c/e4">e4 Git Repositories</a></li>
+		        </ul>
+		        The repositories support &quot;ssh&quot;, &quot;git&quot;, and &quot;http&quot;
+		        connection methods.
 			</li>
 			<li><a href="http://www.eclipse.org/mail/">Mailing Lists</a><br>
 		        Eclipse uses mailing lists for development coordination, design discussions, 
@@ -164,9 +170,6 @@ ob_start();
     	   </li>
 	      <li><a href="freeze_plan_3_2_2.html"> Eclipse Project 3.2.2 Endgame Plan</a><br>
     		Information about we wrapped up the 3.2.2 (Callisto winter maintenance) release of Eclipse. </li>
-	      <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/eclipse-project-home/bugcounts/BugCountOverview.html"> 
-    	    Eclipse Project Bugs Counts</a><br>
-        	Information on outstanding bugs in the Eclipse project main development stream. </li>
 	      	<li><a href="freeze_plan_3.2.html"> Eclipse Project 3.2 Endgame Plan</a><br>
     	    Information about how we wrapped up the 3.2 (Callisto) release of Eclipse. </li>
  	        <li><a href="eclipse_project_plan_3_2.html"> Eclipse Platform Project 3.2 Plan</a><br>
@@ -175,22 +178,10 @@ ob_start();
 				Eclipse 3.1 Maintenance Release Schedule</a><br>
       			Timeline for 3.1.x maintenance stream.
       		</li>
-      		<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/eclipse-project-home/bugcounts/3_1/BugCountOverview.html">
-      			Eclipse Project Bugs Counts</a><br>
-      			Information on outstanding bugs in the Eclipse project main development stream.
-      		</li>
       		<li><a href="eclipse_3_1_stats.html">
       			Eclipse 3.1 by the numbers</a><br>
       			Some light-hearted statistics for the 3.1 release cycle.
 			</li>
-			<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/eclipse-project-home/plans/3_1/freeze_plan_3_1_2.html">
-				Eclipse Project 3.1.2 Endgame Plan</a><br>
-				Information about how we wrapped up the 3.1.2 maintenance release of Eclipse.
-			</li>
-			<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/eclipse-project-home/plans/3_1/freeze_plan_3_1_1.html">
-				Eclipse Project 3.1.1 Endgame Plan</a><br>
-      			Information about how we wrapped up the 3.1.1 maintenance release of Eclipse.
-      		</li>
       		<li><a href="eclipse_project_plan_3_1.html">Eclipse Project 3.1 Plan (Final)</a><br>
       			This document lays out the feature and API set for the 3.1 release of Eclipse.
       		</li>
@@ -199,10 +190,6 @@ ob_start();
       		</li>
       		<li><a href="eclipse_proposals_3_1.html">Eclipse 3.1 Proposals</a><br>
       			Links to proposals and working documents for various 3.1 plan items.
-			</li>
-			<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/eclipse-project-home/plans/3_1/freeze_plan.html">
-				Eclipse Project 3.1 Endgame Plan</a><br>
-				Information about how we wrapped up the 3.1 release of Eclipse.
 			</li>
       		<li><a href="eclipse_maintenance_schedule_3_0_x.html">
       			Eclipse 3.0 Maintenance Release Schedule</a><br>
@@ -215,16 +202,8 @@ ob_start();
 			<li><a href="eclipse_3_0_stats.html">Eclipse 3.0 by the numbers</a><br>
 				Some light-hearted statistics for the 3.0 release cycle, compiled by John Arthorne.
 			</li>
-			<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/eclipse-project-home/plans/3_0/freeze_plan.html">
-				Eclipse 3.0 Endgame Plan</a><br>
-				Information about how we wrapped up the 3.0 release of Eclipse.
-			</li>
 			<li><a href="eclipse_proposals_3_0.html">Eclipse 3.0 Proposals</a><br>
       			Links to proposals and working documents for various 3.0 plan items.
-			</li>
-			<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/eclipse-project-home/plans/eclipse_after_2_1.html">
-				The Next Eclipse</a><br>
-      			Early discussion about what the 3.0 release of Eclipse should be.
 			</li>
 			<li><a href="eclipse_project_plan_2_1.html">
 				Eclipse Project 2.1 Plan (Final)</a><br>
