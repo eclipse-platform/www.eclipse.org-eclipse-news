@@ -57,18 +57,19 @@ ob_start();
 		        bugzilla ID and start contributing bug reports.
 			</li>
 			<li><a href="http://git.eclipse.org">Git Repositories</a><br>
-		        We use the <a href="http://git-scm.com/">Git</a>) version control system
-		        to support concurrent distributed development. All Eclipse development 
+		        We use the <a href="http://git-scm.com/">Git</a> version control system
+		        to support concurrent distributed development. All Eclipse project development 
 		        is carried out in these repositories:
 		        <ul>
-		        <li><a href="git.eclipse.org/c/platform">Platform Git Repositories</a></li>
-		        <li><a href="git.eclipse.org/c/jdt">JDT Git Repositories</a></li>
-		        <li><a href="git.eclipse.org/c/pde">PDE Git Repositories</a></li>
-		        <li><a href="git.eclipse.org/c/orion">Orion Git Repositories</a></li>
-		        <li><a href="git.eclipse.org/c/e4">e4 Git Repositories</a></li>
+		        <li><a href="http://git.eclipse.org/c/platform">Platform Git Repositories</a></li>
+		        <li><a href="http://git.eclipse.org/c/jdt">JDT Git Repositories</a></li>
+		        <li><a href="http://git.eclipse.org/c/pde">PDE Git Repositories</a></li>
+		        <li><a href="http://git.eclipse.org/c/orion">Orion Git Repositories</a></li>
+		        <li><a href="http://git.eclipse.org/c/e4">e4 Git Repositories</a></li>
 		        </ul>
 		        The repositories support &quot;ssh&quot;, &quot;git&quot;, and &quot;http&quot;
-		        connection methods.
+		        connection methods. For more information on usage of Git at eclipse.org,
+		        see the <a href="http://wiki.eclipse.org/Git">Eclipsepedia Git page</a>.
 			</li>
 			<li><a href="http://www.eclipse.org/mail/">Mailing Lists</a><br>
 		        Eclipse uses mailing lists for development coordination, design discussions, 
