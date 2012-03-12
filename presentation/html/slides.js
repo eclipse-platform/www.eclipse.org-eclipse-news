@@ -1,7 +1,7 @@
 /*
   Google HTML5 slides template
 
-  Authors: Luke Mahe (code)
+  Authors: Luke Mahé (code)
            Marcin Wichary (code and design)
 
            Dominic Mazzoni (browser compatibility)
@@ -11,7 +11,7 @@
   URL: http://code.google.com/p/html5slides/
 */
 
-var PERMANENT_URL_PREFIX = 'http://eclipse.org/eclipse/presentation/template/';
+var PERMANENT_URL_PREFIX = 'http://eclipse.org/eclipse/presentation/html/';
 
 var SLIDE_CLASSES = ['far-past', 'past', 'current', 'next', 'far-next'];
 
