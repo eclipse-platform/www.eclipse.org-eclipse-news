@@ -151,7 +151,7 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
-    <tr id="ignore-warnings-source-folders">
+  <tr id="ignore-warnings-source-folders">
     <td class="title">Selectively ignore errors/warnings from source folders</td>
     <td class="content">
         You can now configure JDT to ignore optional errors/warnings from certain source folders. 
@@ -163,6 +163,39 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
 		when you have auto generated classes in some source folder and do not want to see optional errors/warnings in it.
       </p>
     </td>
+  </tr>
+  
+  <tr id="improved-null-analysis-problems">
+    <td class="title">Improved messages for null analysis problems</td>
+    <td class="content">
+        You will now notice a slightly changed wording for several error messages relating to annotation-based null analysis
+		for better understanding of differences between the cause of each problem. The first thing you will notice is the
+		slightly re-worded options in the <b> Preferences > Java > Compiler > Errors/warnings > Null analysis</b> page.
+		<p><img src="images/new-null-analysis-options.png" alt="Warning on switch over enum with missing default case"/></p>
+		<p> While the cases in which one can expect an error/warning from each of these options remain the same as
+		 described when this feature was released, following are the re-worded messages you get with them:</p>
+		<ul>
+		<li><b>Violation of null specification</b>
+		<p><img src="images/new-null-analysis-message1.png" alt="This option produces the
+		'Null type mismatch: required '@NonNull String' but the provided value is specified as @Nullable' warning"/></p>
+		Here, "in" is not a legal return value because of the @Nullable annotation in its <b>declaration.</b>.
+		</li>
+		<li><b>Conflict between null annotations and null inference</b>
+		<p><img src="images/new-null-analysis-message2.png" alt="This option produces the
+		'Null type mismatch: required @NonNull String but the provided value is inferred as @Nullable' warning"/></p>
+		Here, "local" is not a legal return value, because flow analysis for the un-annotated local variable <b>infers</b> that 
+		it can be null on some path.
+		</li>
+		<li><b>Unchecked conversion from non-annotated type to @NonNull type</b>
+		<p><img src="images/new-null-analysis-message3.png" alt="This option produces the
+		'Null type safety: The expression of type String needs unchecked conversion to conform to @NonNull String' warning"/></p>
+		Here, the return value from "getLegacyValue()" may or may not be compatible to '@NonNull String'. 
+		Similar to converting a legacy raw type to a generic type, also here essential type information is missing 
+		since "getLegacyValue()" has no @NonNull or @Nullable annotation.
+		</li>
+		</ul>
+		<p>Similar improvements have been applied to messages relating to redundant null checks.</p>
+	</td>
   </tr>
   
   <tr id="missing-non-null-by-default-annotation">
@@ -185,7 +218,7 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
 	</td>
   </tr>
   
-    <tr id="Assert-like-java-assert-null-analysis">
+    <tr id="missing-non-null-by-default-annotation">
     <td class="title">Null analysis treats org.eclipse.core.runtime.Assert like java assert</td>
     <td class="content">
         Since <b>org.eclipse.core.runtime.Assert</b> is often used just like the java <b>assert</b> keyword, JDT's null analysis considers
@@ -198,7 +231,7 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
   <tr id="resource-leak-default-warning">
     <td class="title">Resource leak detection improved and enabled by default</td>
     <td class="content">
-        Resource leak detection as introduced in JDT 3.8 M3 is now less aggressive if a resource
+        Resource leak detection as introduced in JDT Juno M3 is now less aggressive if a resource
 		is shared between methods, possible via a field, where any party accessing the resource
 		could possibly issue the desired call to close(). This along with some fine tuning of the
 		analysis results in a greatly reduced number of false positives. Thus, the detection of a
@@ -211,16 +244,25 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
   <tr id="incomplete-switch-over-enum">
     <td class="title">Incomplete switch over enum</td>
     <td class="content">
-        The JDT compiler raises a new warning whenever a switch over an enum value lacks a default case, and the option 
+        JDT now raises a new warning whenever a switch over an enum value lacks a default case, and the option 
 		<b> Preferences > Java > Compiler > Errors/warnings > Incomplete 'switch' cases over enum</b> is enabled.
 		<p><img src="images/switch-case-enum.png" alt="Warning on switch over enum with missing default case"/></p>
-		<p>This warning is recommended by the JLS, even if all enum constants are handled
-		by individual case statements in order to improve binary compatibility.
-		Note, that in cases like the above the warning also helps to understand another
-		error reported against the last statement:
-		"The local variable printString may not have been initialized",
-		which is reported because clients could possibly call the method print with a 
-		enum value that has not been known at the time of compiling this method.</p>
+		<p> Note that in cases like the above, the warning also helps to understand another
+		error against the last statement:<br>
+		"The local variable printString may not have been initialized",<br>
+		which is reported because clients could possibly call the method print with an 
+		enum value that is not known at the time of compiling this method.</p>
+	</td>
+  </tr>
+  
+  <tr id="null-analysis-fields-withdrawn">
+    <td class="title">Null analysis for fields withdrawn</td>
+    <td class="content">
+		"No man loves the bearer of bad tidings", said Sophocles.
+       While we're proud to announce all the recent enhancements in JDT's null analysis, we have decided to withdraw the support added 
+	   for null analysis of fields in Juno M5 so that a more general and configurable solution could be considered in future without 
+	   being constrained by the present implementation.
+	   Stay tuned!
 	</td>
   </tr>
   <tr id="show-monitors-default">
