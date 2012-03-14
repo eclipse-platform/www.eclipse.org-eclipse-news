@@ -89,8 +89,61 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
     <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
   </tr>
   <tr> 
-    <td colspan="2">  <div class="title">Debug</div>
-      </td>
+    <td colspan="2"><div align="left">Debug</div></td>
+  </tr>
+  <tr id="relaunchlast-api">
+  	<td class="title">RelaunchLastAction has been made API</td>
+  	<td class="content">
+  		The internal class <code>RelaunchLastAction</code> has been promoted to API and can be found in the 
+  		<code>org.eclipse.debug.ui.actions</code> package.
+  	</td>
+  </tr>
+  <tr id="expression-view-constant-api">
+  	<td class="title">Add new expression image constant has been made API</td>
+  	<td class="content">
+  		The constant <code>IDebugUIConstants.IMG_OBJ_ADD_NEW_EXPRESSION</code> has been added to API to allow consumers who 
+  		extend / use the Expressions view look-and-feel to use the <b>Add New Expression</b> icon 
+  		(<img src="images/monitorexpression_tsk.gif" alt="The add new expression icon"/>).
+  	</td>
+  </tr>
+  <tr id="toggle-bp-target-mgr-api">
+  	<td class="title">Toggle breakpoints target manager has been made API</td>
+  	<td class="content">
+  		The interface <code>org.eclipse.debug.ui.actions.IToggleBreakpointsTargetManager</code> has been made API to allow clients
+  		access to known <code>IToggleBreakpointTarget</code>s. The new API can be accessed via 
+  		<code>org.eclipse.debug.ui.DebugUITools#getToggleBreakpointsTargetManager()</code>
+  	</td>
+  </tr>
+  <tr id="bp-types-contribution-api">
+  	<td class="title">BreakpointTypesContribution has been made API</td>
+  	<td class="content">
+  		The class <code>org.eclipse.debug.ui.actions.BreakpointTypesContribution</code> has been added to API. This class 
+  		can be reused by clients to add a breakpoint type action in the editor gutter context menu to match the action(s) that appear in the 
+  		<b>Run &gt; Breakpoint Types</b> menu. 
+  	</td>
+  </tr>
+  <tr id="var-view-find-override">
+  	<td class="title">Find action can be customised in Variables View specialisations</td>
+  	<td class="content">
+  		Consumer now have the ability to completely override the behaviour of the <b>Find...</b> action in the <b>Variables View</b> and any of
+  		its sub-classes, e.g. <b>Expressions View</b>, <b>Modules View</b>, etc.
+  		<p>
+  			To replace the default <b>Find...</b> actions clients must provide an adapter for the 
+  			interface <code>org.eclipse.debug.internal.ui.viewers.model.provisional.IViewActionProvider</code>.
+  		</p>
+  		<p>
+  			For more information see the Javadoc for <code>org.eclipse.debug.internal.ui.viewers.model.provisional.IViewActionProvider</code>
+  			with an example available in the <code>org.eclipse.debug.examples.ui</code> bundle found in the Platform Debug Git repo.
+  		</p>
+  	</td>
+  </tr>
+  <tr id="launch-config-name-validation">
+  	<td class="title">Improved launch configuration name validation</td>
+  	<td class="content">
+  		Now if you create a launch configuration with the name of an existing configuration, the type of the conflicting configuration
+  		is noted in the error message.
+  		<p><img src="images/lcd-name-error.png" alt="Launch configuration dialog showing name conflict error"/></p>
+  	</td>
   </tr>
   <tr> 
     <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
@@ -169,6 +222,30 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
 		which is reported because clients could possibly call the method print with a 
 		enum value that has not been known at the time of compiling this method.</p>
 	</td>
+  </tr>
+  <tr id="show-monitors-default">
+  	<td class="title">Show Monitors on by default</td>
+  	<td class="content">
+  		The default setting for displaying monitor information in the <b>Debug View</b> is now set to <em>on</em>.
+  		This change only affects new workspaces and does not change existing settings.
+  		<p>
+  			Showing monitor information can be turned on or off using the <b>Java &gt; Show Monitors</b> view action
+  			within the <b>Debug View</b>.
+  		</p>
+  	</td>
+  </tr>
+  <tr id="toggle-bp-mod-keys">
+  	<td class="title">Toggle breakpoint modifier keys</td>
+  	<td class="content">
+  		There is now support for modifier keys while toggling breakpoints in the Java editor. Currently the <code>Ctrl</code>
+  		and <code>Alt</code> keys are supported which do the following:
+  		<ul>
+	  		<li>Holding the <code>Ctrl</code> key while double-clicking (toggling) a breakpoint will cause the properties 
+	  		dialog for that breakpoint to be displayed</li>
+	  		<li>Holding the <code>Alt</code> key while double-clicking (toggling) a breakpoint will enable / disable that breakpoint</li>
+  		</ul>
+  		If there is no breakpoint while holding a modifier key a normal breakpoint toggle takes place.
+  	</td>
   </tr>
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
