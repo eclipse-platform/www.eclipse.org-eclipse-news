@@ -177,25 +177,28 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
     <td class="title">Target definition configure phase</td>
     <td class="content">
      When working with a target definition containing a software site location (such as a p2 repository) it is now possible to change whether the p2 configuration phase should be run when resolving the target.  By default the configuration phase is not included.  Changing the setting will change all locations in the target definition.
+     <p><img src="images/configurephase.png" alt="Configure phase option"/></p>
     </td>
   </tr>
   <tr id="product-add-required">
     <td class="title">Add required in feature based product</td>
     <td class="content">
      The product editor now has an <b>Add Required</b> button when editing a feature based product.  Pressing the button will add all the features that are required by the features already in the product configuration.
+     <p><img src="images/addrequired.png" alt="Add required button"/></p>
     </td>
   </tr>
   <tr id="extensions-editor-enhancements">
     <td class="title">Extension editor enhancements</td>
     <td class="content">
-     Several improvements have been made to the extensions tab of the <b>Plug-in Editor</b>.  
+     Several improvements have been made to the extensions tab of the <b>Plug-in Editor</b>.
+     <p><img src="images/extensions2.png" alt="Extensions editor enhancements"/></p>  
     <ul>
       <li><b>Filter related:</b> Available by right clicking and pressing <b>Filter Related</b>, only extensions that are related (same id, label, class, etc) will be displayed in the tree</li>
       <li><b>Filter enhancements:</b> The standard filter textbox now supports multiple filters separated by "/", matches are bolded, and the filter applies to extension attributes</li>
       <li><b>Label improvements:</b> More items will display icons and labels, class names are displayed without package name</li>
       <li><b>Accelerated scrolling:</b> Pressing <em>Ctrl</em> while scrolling does fast scrolling</li>
       <li><b>Better expansion:</b> The expand state of selected items can be toggled with a new action</li>
-      <li><b>Search workspace:</b> Search the workspace for extensions related to the current filtered items in the editor</li>
+      <li><b>Search workspace:</b> Search the workspace for extensions related to items in the editor</li>
     </ul>
     </td>
   </tr>
@@ -205,22 +208,25 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
      Eclipse and OSGi launch configurations have the option to delete the workspace and configuration folders before launching.  This can be a long running operation with large workspaces.  The operation is now cancelable which will stop the launch.
     </td>
   </tr>
+  <tr id="api-prefs-visibility">
+    <td class="title">Highlighting on API Tools preferences</td>
+    <td class="content">
+     The PDE and API Tools preference pages for changing errors and warnings now highlight the setting your mouse pointer hovers over.
+     <p><img src="images/highlight.png" alt="Highlighting in preference pages"/></p>
+    </td>
+  </tr>
   <tr id="api-tracing">
     <td class="title">API Tools tracing</td>
     <td class="content">
      API Tools has added all debug tracing settings to the <b>Tracing</b> preference page where they can be enabled and disabled as needed without restarting.
+     <p><img src="images/tracing.png" alt="API Tools tracing"/></p>
     </td>
   </tr>
   <tr id="ee-cleanup">
     <td class="title">EE descriptions updated</td>
     <td class="content">
      The API Tools execution environment descriptions, used to warn about invalid references to an execution environment, have been updated with more accurate package information and have been renamed for easier installation.  To turn on EE reference checking, use the <b>API Errors/Warnings</b> preference page.  The execution environment descriptions can be installed from the eclipse update site (<a url="http://download.eclipse.org/eclipse/updates/3.8-I-builds">http://download.eclipse.org/eclipse/updates/3.8-I-builds</a>) under the <em>API Tools Execution Environment Descriptions</em> category.
-    </td>
-  </tr>
-  <tr id="api-prefs-visibility">
-    <td class="title">Highlighting on API Tools preferences</td>
-    <td class="content">
-     The API Tools <b>API Errors/Warnings</b> preference page now highlights whatever setting your mouse pointer hovers over.
+     <p><img src="images/eedesc.png" alt="Updated EE descriptions"/></p>
     </td>
   </tr>
   <tr> 
