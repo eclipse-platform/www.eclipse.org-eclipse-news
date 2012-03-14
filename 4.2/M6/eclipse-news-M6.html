@@ -116,7 +116,7 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
     <td class="title">Detection of missing default nullness annotation</td>
     <td class="content">
         You can now configure JDT to detect missing default nullness annotation when using the annotation-based null analysis. This can be configures
-		using <b>Preferences > Java > Compiler > Errors/warnings > Missing '@NonNullByDefault' annotation on package<b>.
+		using <b>Preferences > Java > Compiler > Errors/warnings > Missing '@NonNullByDefault' annotation on package</b>.
 		<p><img src="images/missing-nonnullbydefault-option.png" alt="Errors/warnings page with 'Missing @NonNullByDefault annotation on package' highlighted"/></p>
 		When this option is enabled, JDT will issue an error/warning in the following cases:
 		<ul>
@@ -126,16 +126,16 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
 		<li> When a type inside a default package does not contain a default nullness annotation. </li>
 		<p><img src="images/missing-nonnullbydefault-type.png" alt="Missing @NonNullByDefault annotation on type warning"/></p>
 		</ul>
-		<p> Note that the option <b>Use non-null as workspace wide (or project-wide) default<b> has been withdrawn. 
-		Instead, you can enable the <b>Missing '@NonNullByDefault' annotation on package<b> option and make sure you specify the default nullness 
+		<p> Note that the option <b>Use non-null as workspace wide (or project-wide) default</b> has been withdrawn. 
+		Instead, you can enable the <b>Missing '@NonNullByDefault' annotation on package</b> option and make sure you specify the default nullness 
 		annotation on all types/packages.</p>
 	</td>
   </tr>
   
-    <tr id="missing-non-null-by-default-annotation">
+    <tr id="Assert-like-java-assert-null-analysis">
     <td class="title">Null analysis treats org.eclipse.core.runtime.Assert like java assert</td>
     <td class="content">
-        Since <b>org.eclipse.core.runtime.Assert<b> is often used just like the java <b>assert<b> keyword, JDT's null analysis considers
+        Since <b>org.eclipse.core.runtime.Assert</b> is often used just like the java <b>assert</b> keyword, JDT's null analysis considers
 		the boolean expression passed into the former as always true after the Assert reference, since if the condition did turn out to be false,
 		the control flow will never go further than the org.eclipse.core.runtime.Assert reference.
 		<p><img src="images/assert-warnings.png" alt="Code snippet showing the boolean expression passed into org.eclipse.core.runtime.Assert.isLegal(..) is considered true after the call"/></p>
