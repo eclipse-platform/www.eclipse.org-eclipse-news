@@ -27,241 +27,42 @@ ob_start();
   roles and responsibilities of the participants.
   </p>
   <h2>Mission</h2>
-  Eclipse is a kind of universal tool platform - an open extensible IDE for
+  <p>
+  The Eclipse Project provides a kind of universal tool platform - an open extensible IDE for
   anything and yet nothing in particular. The real value comes from tool
-  plug-ins that &quot;teach&quot; Eclipse how to work with things - java files,
+  plug-ins that &quot;teach&quot; the platform how to work with things - java files,
   web content, graphics, video - almost anything one can imagine. Eclipse
   allows tool builders to independently develop tools that integrate with other
   people's tools so seamlessly you can't tell where one tool ends and another
   starts.</p>
-  <p>The success of Eclipse depends on how well it enables a wide range of tool
+  <p>The success of the platform depends on how well it enables a wide range of tool
   builders to build best of breed integrated tools. But the real vision of
-  Eclipse as an industry platform is only realized if these tools from
+  an industry platform is only realized if these tools from
   different tool builders can be combined together by users to suit their unique
   requirements, in ways that the tool builders never even imagined. </p>
   <p>The mission of the Eclipse Project is to adapt and evolve the Eclipse
   technology to meet the needs of the Eclipse tool building community and its
-  users, so that the vision of Eclipse as an industry platform is realized.</p>
+  users, so that the vision of an industry tooling platform is realized.</p>
   <h2>Scope</h2>
-  <p>The Eclipse Project encompasses both the Eclipse platform technology itself,
-  and a set of tools that together form the software development kit (SDK) for
-  building Eclipse-based tools. The Eclipse Project will be structured into the
-  following Projects which comprise the Eclipse Project, and are overseen by
-  the Eclipse PMC:</p>
-  <ul>
-   <li>Platform - the platform upon which all other Eclipse based tools are built.</li>
-   <li>JDT - The Java development tooling, or Java IDE.</li>
-   <li>PDE - Plug-in development environment.</li>
-  </ul>
-  <p>The Platform Project is further subdivided into the following components:</p>
-  <table border=0 cellspacing=3 cellpadding=0 width="75%">
-   <tr>
-    <td width="24%">
-    Ant
-    </td>
-    <td width="74%">
-    Ant
-    Java based build tool
-    </td>
-   </tr>
-   <tr>
-    <td width="24%">
-    Compare
-    </td>
-    <td width="74%">
-    Universal
-    Compare Facility
-    </td>
-   </tr>
-   <tr>
-    <td width="24%">
-    Core
-    </td>
-    <td width="74%">
-    Core
-    libraries
-    </td>
-   </tr>
-   <tr>
-    <td width="24%">
-    Debug
-    </td>
-    <td width="74%">
-    Universal
-    Debugger
-    </td>
-   </tr>
-   <tr>
-    <td width="24%">
-    Doc
-    </td>
-    <td width="74%">
-    Documentation
-    </td>
-   </tr>
-   <tr>
-    <td width="24%">
-    Help
-    </td>
-    <td width="74%">
-    Help
-    system
-    </td>
-   </tr>
-   <tr>
-    <td width="24%">
-    Releng
-    </td>
-    <td width="74%">
-    Release
-    Engineering
-    </td>
-   </tr>
-   <tr>
-    <td width="24%">
-    Scripting
-    </td>
-    <td width="74%">
-    Scripting
-    support
-    </td>
-   </tr>
-   <tr>
-    <td width="24%">
-    Search
-    </td>
-    <td width="74%">
-    Integrated
-    Search Facility
-    </td>
-   </tr>
-   <tr>
-    <td width="24%">
-    SWT
-    </td>
-    <td width="74%">
-    Standard
-    Widget Toolkit
-    </td>
-   </tr>
-   <tr>
-    <td width="24%">
-    Text
-    </td>
-    <td width="74%">
-    Text
-    Editor Framework
-    </td>
-   </tr>
-   <tr>
-    <td width="24%">
-    UI
-    </td>
-    <td width="74%">
-    User
-    Interface libraries
-    </td>
-   </tr>
-   <tr>
-    <td width="24%">
-    Update
-    </td>
-    <td width="74%">
-    Dynamic
-    Update/Install/Field Service
-    </td>
-   </tr>
-   <tr>
-    <td width="24%">
-    VCM
-    </td>
-    <td width="74%">
-    Versioning
-    and Configuration Management
-    </td>
-   </tr>
-   <tr>
-    <td width="24%">
-    WebDAV
-    </td>
-    <td width="74%">
-    WebDAV
-    integration
-    </td>
-   </tr>
-  </table>
-  <p>The JDT Project is further subdivided into the following components:
-  <table border=0 cellspacing=3 cellpadding=0 width="75%">
-   <tr>
-    <td width="25%">
-    JDT
-    Core
-    </td>
-    <td width="75%">
-    Compiler
-    and Builder
-    </td>
-   </tr>
-   <tr>
-    <td width="25%">
-    JDT Doc
-    </td>
-    <td width="75%">
-    Documentation
-    </td>
-   </tr>
-   <tr>
-    <td width="25%">
-    JDT UI
-    </td>
-    <td width="75%">
-    Java
-    IDE User Interface
-    </td>
-   </tr>
-   <tr>
-    <td width="25%">
-    JDT
-    Debug
-    </td>
-    <td width="75%">
-    Debug
-    support for Java
-    </td>
-   </tr>
-  </table>
-  <p>The PDE Project is further subdivided into the following components:
-  <table border=0 cellspacing=3 cellpadding=0 width="75%">
-   <tr>
-    <td width="25%">
-    PDE
-    Build
-    </td>
-    <td width="75%">
-    PDE
-    Build
-    </td>
-   </tr>
-   <tr>
-    <td width="25%">
-    PDE Doc
-    </td>
-    <td width="75%">
-    Documentation
-    </td>
-   </tr>
-   <tr>
-    <td width="25%">
-    PDE UI
-    </td>
-    <td width="75%">
-    PDE
-    User Interface
-    </td>
-   </tr>
-  </table>
-  <h2>Project Management Committee</h2><a name=PMC></a>
-  <p>The Projects under this Charter are managed by a group known as the Project
+  The Eclipse Project encompasses two principle areas of work:
+  <ol>
+  	<li><b>Tool integration platforms.</b> Developing the core frameworks
+  	and technologies upon which others can build software development tools of all kinds.</li>
+  	<li><b>The tools required to build and extend these platforms.</b> Creating
+  	the tools that the Eclipse project committers need in order to build the tool integration
+  	platforms, and the tools the community needs to extend and adopt the platforms.</li>
+  </ol>
+  This secondary tool creation goal has a number of important objectives. First, it provides
+  an initial &quot;customer&quot; for the platform, to ensure the requirements of real
+  development tools are met by the platform. Second, it encourages community adoption
+  of the platform. The easier it is for the community to adopt and extend the platform,
+  the more successful the project will be. Finally, it allows the project contributors
+  to continuously &quot;self host&quot; on the tool platform as it is being built. This
+  creates a tight feedback loop that ensure the platform is robust, and meets the
+  needs of real tool users.
+  </p>
+  <h2>Project Management Committee</h2><a name=PMC>
+  The Projects under this Charter are managed by a group known as the Project
   Management Committee (the &quot;PMC&quot;).</p>
   <p>PMCs are expected to ensure that:</p>
   <p>All Projects operate effectively by providing
@@ -276,9 +77,8 @@ ob_start();
   creating designs, enables everyone to recognize and utilize the contributions.</p>
   <p>The PMC has the following responsibilities:</p>
   <ul>
-   <li>Providing the leadership and
-       vision to guide the Project's overall direction in a manner consistent
-       with the Eclipse Foundation Architectural Roadmap.</li>
+   <li>Providing the leadership and vision to guide the Project's overall direction 
+		and architecture.</li>
    <li>Providing assistance and
        support to the developers and researchers working on the Project by
        removing obstacles, solving problems, and resolving conflicts.</li>
@@ -329,7 +129,7 @@ ob_start();
   expected to contribute actively. In particular, PMC members are expected to
   take responsibility for overseeing certain areas of work in the Project, and
   reporting to the PMC on these areas.</p>
-  <p>Active participation in the user newsgroups and the appropriate developer
+  <p>Active participation in the user forums and the appropriate developer
   mailing lists is a responsibility of all PMC members, and is critical to the
   success of the Project. PMC members are required to monitor the main Project
   mailing list, and the developer mailing lists for all Projects and components
@@ -342,14 +142,14 @@ ob_start();
   <p>Users are the people who use the products that the Project produces. People
   in this role aren't contributing code, but they are using the products,
   reporting bugs, and making feature requests and suggestions. Users are
-  encouraged to participate through the user newsgroup(s), asking questions,
+  encouraged to participate through the user forum(s), asking questions,
   providing suggestions, and helping other users. Users are also encouraged to
   report problem reports using the bug tracking system. </p>
   <h2>Developers</h2>
   <p>Users who contribute code or documentation become developers. Developers are
   the people who contribute code, fixes, documentation, or other work that goes
   into the product. Developers are also encouraged to participate in the user
-  newsgroup(s), and should monitor the developer mailing list associated with
+  forum(s), and should monitor the developer mailing list associated with
   their area of contribution. When appropriate, developers may also contribute
   to development design discussions related to their area of contribution.
   Developers are expected to be proactive in reporting problems in the bug tracking
@@ -378,10 +178,10 @@ ob_start();
   is responsible for ensuring the smooth operation of the Project. A Committer
   that is disruptive, does not participate actively, or has been inactive for
   an extended period may have his or her commit status removed by the PMC.</p>
-  <p>Active participation in the user newsgroup and the appropriate developer
+  <p>Active participation in the user forums and the appropriate developer
   mailing lists is a responsibility of all Committers, and is critical to the
   success of the Project. Committers are required to monitor and contribute to
-  the user newsgroup.</p>
+  the user forums.</p>
   <p>Committers are required to monitor the developer mailing list associated
   with all Projects and components for which they have commit privileges. This
   is a condition of being granted commit rights to the Project or component. It
@@ -420,18 +220,6 @@ ob_start();
   and represents the component in discussions and votes pertaining to the
   Project as a whole. Component Committers do not participate in votes at the
   level of the Project as a whole, unless they are also the component lead.</p>
-  <h2>Ports</h2>
-  <p>For components that contain platform-specific code (such as SWT), it may be
-  advantageous to allow developers to work on a port of the component to a new
-  platform without requiring that they already be committers for the component.
-  In this case the main code base is known as the component &quot;core&quot;,
-  and the port code base is known as a component &quot;port&quot;. The decision
-  to set up a port is made by the PMC. When a new port of a component is
-  created, the PMC appoints a Port Lead, and an initial set of committers who
-  will have commit and voting privileges specifically for the port. The port is
-  done under the auspices of the core component, and all committers for the
-  core component automatically also have commit and voting privileges on the
-  port. Normally the Component Lead will also be the Port Lead.</p>
   <h2>Infrastructure</h2>
   <p>The PMC works with the EMO to ensure the required infrastructure for the
   Project. The Project
@@ -440,7 +228,7 @@ ob_start();
    <li>Bug Database - Bugzilla
        database for tracking bugs and feature requests.</li>
    <li>Source Repository -- One or
-       more CVS repositories containing both the master source code and
+       more source code repositories containing both the master source code and
        documentation for the Projects.</li>
    <li>Website - A website will
        contain information about the Project, including documentation,
