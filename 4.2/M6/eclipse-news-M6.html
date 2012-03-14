@@ -89,7 +89,7 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
     <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
   </tr>
   <tr> 
-    <td colspan="2" class="section" id="Debug">Debug</td>
+    <td colspan="2"><div align="left">Debug</div></td>
   </tr>
   <tr id="relaunchlast-api">
   	<td class="title">RelaunchLastAction has been made API</td>
@@ -145,31 +145,6 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
   		<p><img src="images/lcd-name-error.png" alt="Launch configuration dialog showing name conflict error"/></p>
   	</td>
   </tr>
-  <tr id="show-monitors-default">
-  	<td class="title">Show Monitors on by default</td>
-  	<td class="content">
-  		The default setting for displaying monitor information in the <b>Debug View</b> is now set to <em>on</em>.
-  		This change only affects new workspaces and does not change existing settings.
-  		<p>
-  			Showing monitor information can be turned on or off using the <b>Java &gt; Show Monitors</b> view action
-  			within the <b>Debug View</b>.
-  		</p>
-  	</td>
-  </tr>
-  <tr id="toggle-bp-mod-keys">
-  	<td class="title">Toggle breakpoint modifier keys</td>
-  	<td class="content">
-  		There is now support for modifier keys while toggling breakpoints in the Java editor. Currently the <code>Ctrl</code>
-  		and <code>Alt</code> keys are supported which do the following:
-  		<ul>
-	  		<li>Holding the <code>Ctrl</code> key while double-clicking (toggling) a breakpoint will cause the properties 
-	  		dialog for that breakpoint to be displayed</li>
-	  		<li>Holding the <code>Alt</code> key while double-clicking (toggling) a breakpoint will enable / disable that breakpoint</li>
-  		</ul>
-  		If there is no breakpoint while holding a modifier key a normal breakpoint toggle takes place.
-  	</td>
-  </tr>
-  
   <tr> 
     <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
   </tr>
@@ -247,6 +222,30 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
 		which is reported because clients could possibly call the method print with a 
 		enum value that has not been known at the time of compiling this method.</p>
 	</td>
+  </tr>
+  <tr id="show-monitors-default">
+  	<td class="title">Show Monitors on by default</td>
+  	<td class="content">
+  		The default setting for displaying monitor information in the <b>Debug View</b> is now set to <em>on</em>.
+  		This change only affects new workspaces and does not change existing settings.
+  		<p>
+  			Showing monitor information can be turned on or off using the <b>Java &gt; Show Monitors</b> view action
+  			within the <b>Debug View</b>.
+  		</p>
+  	</td>
+  </tr>
+  <tr id="toggle-bp-mod-keys">
+  	<td class="title">Toggle breakpoint modifier keys</td>
+  	<td class="content">
+  		There is now support for modifier keys while toggling breakpoints in the Java editor. Currently the <code>Ctrl</code>
+  		and <code>Alt</code> keys are supported which do the following:
+  		<ul>
+	  		<li>Holding the <code>Ctrl</code> key while double-clicking (toggling) a breakpoint will cause the properties 
+	  		dialog for that breakpoint to be displayed</li>
+	  		<li>Holding the <code>Alt</code> key while double-clicking (toggling) a breakpoint will enable / disable that breakpoint</li>
+  		</ul>
+  		If there is no breakpoint while holding a modifier key a normal breakpoint toggle takes place.
+  	</td>
   </tr>
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
