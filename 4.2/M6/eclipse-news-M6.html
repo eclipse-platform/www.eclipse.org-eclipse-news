@@ -318,6 +318,34 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
   		If there is no breakpoint while holding a modifier key a normal breakpoint toggle takes place.
   	</td>
   </tr>
+  <tr id="bracket-matching">
+	<td class="title">Improved bracket matching support in Java editor</td>
+	<td class="content">
+		The Java editor now supports highlighting of enclosing brackets.
+		<p><img src="images/enclosing-brackets.png" alt="Enclosing brackets"/></p>
+		
+		This can be configured on <b>Java &gt; Editor</b> preference page.
+		<p><img src="images/bracket-highlighting-preferences.png" alt="Preferences for bracket highlighting"/></p>
+		
+		<p>Also, <b>Go To &gt; Matching Bracket </b> action <b>(Ctrl+Shift+P)</b> now works everywhere in a file. If a bracket is not selected 
+		before invoking the action, the action navigates to the nearest enclosing end bracket. On invoking the action the second time, the action
+		navigates to corresponding start bracket. On the third invocation, the original selection is restored.</p>		
+	</td>
+  </tr>
+  <tr>
+  <tr id="default-implementations-for-correction-proposals">
+	<td class="title">Default implementations for correction proposals</td>
+	<td class="content">
+		JDT now provides the following default implementations for correction proposals that can be used to contribute quick fixes and quick assists.
+		<ul>
+			<li><code>org.eclipse.jdt.ui.text.java.correction.ChangeCorrectionProposal</code></li>
+			<li><code>org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal</code></li>
+			<li><code>org.eclipse.jdt.ui.text.java.correction.ASTRewriteCorrectionProposal</code></li>
+		</ul>
+		This will ease the pain of supplying a correct <code>org.eclipse.jdt.ui.text.java.IJavaCompletionProposal</code> while 
+		contributing a quick fix/assist.
+	</td>
+  </tr>
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
