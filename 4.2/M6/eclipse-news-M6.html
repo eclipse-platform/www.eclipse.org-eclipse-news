@@ -177,9 +177,12 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
   <tr> 
     <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
   </tr>
+  
+  
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
+  
   <tr id="ignore-warnings-source-folders">
     <td class="title">Selectively ignore errors/warnings from source folders</td>
     <td class="content">
@@ -191,6 +194,16 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
 		<b>Preferences &gt; Java &gt; Compiler &gt; Errors/Warnings</b> page. This can be desirable
 		for source folders that contain auto-generated classes or tests.
       </p>
+    </td>
+  </tr>
+  
+  <tr id="quick-outline-camel-case">
+    <td class="title">CamelCase in Quick Outline</td>
+    <td class="content">
+        The <b>Quick Outline (Ctrl+O)</b> and <b>Quick Hierarchy (Ctrl+T)</b> in the Java Editor now also
+        support camelCase matching on the element name, quite similar to the Open Type dialog and Content Assist.
+		<p><img src="images/quick-outline-camel-case.png" alt="Quick Outline of StyledText with pattern 'gCa'"/></p>
+		The * and ? wildcards still work, of course.
     </td>
   </tr>
   
@@ -321,12 +334,15 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
 		The Java editor now supports highlighting of enclosing brackets.
 		<p><img src="images/enclosing-brackets.png" alt="Enclosing brackets"/></p>
 		
-		This can be configured on <b>Java &gt; Editor</b> preference page.
+		This can be configured on the <b>Java &gt; Editor</b> preference page.
 		<p><img src="images/bracket-highlighting-preferences.png" alt="Preferences for bracket highlighting"/></p>
 		
-		<p>Also the <b>Navigate &gt; Go To &gt; Matching Bracket</b> action <b>(Ctrl+Shift+P)</b> now works everywhere in a file. If a bracket is not selected 
-		before invoking the action, the action navigates to the nearest enclosing end bracket. On invoking the action the second time, the action
-		navigates to corresponding start bracket. On the third invocation, the original selection is restored.</p>		
+		<p>Also, the <b>Navigate &gt; Go To &gt; Matching Bracket</b> action <b>(Ctrl+Shift+P)</b> now works everywhere in a file. If a bracket is not selected 
+		before invoking the action, the action navigates to the nearest enclosing end bracket. On invoking the action a second time, it
+		navigates to the corresponding start bracket. On the third invocation, the original selection is restored.</p>
+		
+		<p>Furthermore, the start bracket is now highlighted when the caret is before (not after) the end bracket.</p>  
+		<p><img src="images/matching-bracket.png" alt="Matching bracket example"/></p>
 	</td>
   </tr>
   <tr id="default-implementations-for-correction-proposals">
@@ -341,6 +357,20 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
 		This makes it easier to implement quick fixes/assists that operate on .java files and use an ASTRewrite.
 	</td>
   </tr>
+  
+  <tr id="errors-warnings-highlight">
+    <td class="title">Highlighting on Errors/Warnings preference pages</td>
+    <td class="content">
+        On Errors/Warnings preference pages, it is sometimes hard to see which item is selected, especially
+        when you opened the dialog via the "Configure Problem Severity" button.
+        <p><img src="images/configure-problem-severity.png" alt="Configure Problem Severity button in Java Editor problem hover"/></p>
+        Now, an arrow highlights the selected item, and another arrow highlights the item under the mouse.
+        <p><img src="images/errors-warnings-highlight.png" alt="Highlighting in preference pages"/></p>
+        The highlighting also works on the PDE and API Tools preference pages.
+    </td>
+  </tr>
+  
+  
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
@@ -367,7 +397,7 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
       <li><b>Filter related:</b> Available by right clicking and pressing <b>Filter Related</b>, only extensions that are related (same id, label, class, etc) will be displayed in the tree</li>
       <li><b>Filter enhancements:</b> The standard filter textbox now supports multiple filters separated by "/", matches are bolded, and the filter applies to extension attributes</li>
       <li><b>Label improvements:</b> More items will display icons and labels, class names are displayed without package name</li>
-      <li><b>Accelerated scrolling:</b> Pressing <em>Ctrl</em> while scrolling does fast scrolling</li>
+      <li><b>Accelerated scrolling:</b> Pressing <b>Ctrl</b> while scrolling does fast scrolling</li>
       <li><b>Better expansion:</b> The expand state of selected items can be toggled with a new action</li>
       <li><b>Search workspace:</b> Search the workspace for extensions related to items in the editor</li>
     </ul>
@@ -377,13 +407,6 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
     <td class="title">Workspace deletion is cancelable</td>
     <td class="content">
      Eclipse and OSGi launch configurations have the option to delete the workspace and configuration folders before launching.  This can be a long running operation with large workspaces.  The operation is now cancelable which will stop the launch.
-    </td>
-  </tr>
-  <tr id="api-prefs-visibility">
-    <td class="title">Highlighting on API Tools preferences</td>
-    <td class="content">
-     The PDE and API Tools preference pages for changing errors and warnings now highlight the setting your mouse pointer hovers over.
-     <p><img src="images/highlight.png" alt="Highlighting in preference pages"/></p>
     </td>
   </tr>
   <tr id="api-tracing">
