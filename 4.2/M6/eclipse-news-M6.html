@@ -23,7 +23,7 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
   </tr>
-  <tr id="pref-storage">
+  <tr id="osgi-core-5">
     <td class="title">OSGi Core Release 5</td>
     <td class="content">
       With this milestone the Equinox OSGi Framework implements the 
@@ -39,14 +39,14 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
       shortly after that.
     </td>
   </tr>
-  <tr id="pref-storage">
-    <td class="title">Publisher Support for <br> Negation Requirements</td>
+  <tr id="publisher-negation-requirements">
+    <td class="title">Publisher Support for Negation Requirements</td>
     <td class="content">
       The p2/publisher can now publish <b>negation</b> requirements.
       A negation requirement is a requirement that <b>must not</b>
       be present.  For example, RAP (The Rich Ajax Platform) can 
       declare a negation requirement on the Eclipse Platform, meaning
-      that RAP won't be installable into your IDE.<br>
+      that RAP won't be installable into your IDE.<br/>
       Negation requirements are specified using the p2.inf file.  
       Details are available on the <a href="http://wiki.eclipse.org/Equinox/p2/Customizing_Metadata#Capability_Advice:">Wiki</a>
     </td>
@@ -184,9 +184,9 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
     <td class="title">Selectively ignore errors/warnings from source folders</td>
     <td class="content">
         You can now configure JDT to ignore optional errors/warnings from certain source folders. 
-		<b>Project properties > Java Build Path > Compiler > Source</b>.
+		<b>Project properties &gt; Java Build Path &gt; Compiler &gt; Source</b>.
 		<p><img src="images/ignore-warnings-source-folders.png" alt="Java Build path page with 'Ignore optional compile problems' highlighted"/></p>
-        
+        <p>
 		With this option set to <b>Yes</b>, JDT will suppress errors/warnings configured in the 
 		<b>Preferences &gt; Java &gt; Compiler &gt; Errors/Warnings</b> page. This can come in handy in situations such as those
 		when you have auto generated classes in some source folder and do not want to see optional errors/warnings in it.
@@ -236,10 +236,12 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
 		When this option is enabled, JDT will issue an error/warning in the following cases:
 		<ul>
 		<li> When a package does not contain a default nullness annotation, as a result of missing package-info.java 
-		or missing default nullness annotation in package-info.java.</li>
+		or missing default nullness annotation in package-info.java.
 		<p><img src="images/missing-nonnullbydefault-package.png" alt="Missing @NonNullByDefault annotation on package warning"/></p>
-		<li> When a type inside a default package does not contain a default nullness annotation. </li>
+		</li>
+		<li> When a type inside a default package does not contain a default nullness annotation.
 		<p><img src="images/missing-nonnullbydefault-type.png" alt="Missing @NonNullByDefault annotation on type warning"/></p>
+		</li>
 		</ul>
 		<p> Note that the option <b>Use non-null as workspace wide (or project-wide) default</b> has been withdrawn. 
 		Instead, you can enable the <b>Missing '@NonNullByDefault' annotation on package</b> option and make sure you specify the default nullness 
@@ -277,8 +279,8 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
 		<b> Preferences > Java > Compiler > Errors/warnings > Incomplete 'switch' cases over enum</b> is enabled.
 		<p><img src="images/switch-case-enum.png" alt="Warning on switch over enum with missing default case"/></p>
 		<p> Note that in cases like the above, the warning also helps to understand another
-		error against the last statement:<br>
-		"The local variable printString may not have been initialized",<br>
+		error against the last statement:<br/>
+		"The local variable printString may not have been initialized",<br/>
 		which is reported because clients could possibly call the method print with an 
 		enum value that is not known at the time of compiling this method.</p>
 	</td>
@@ -332,7 +334,6 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
 		navigates to corresponding start bracket. On the third invocation, the original selection is restored.</p>		
 	</td>
   </tr>
-  <tr>
   <tr id="default-implementations-for-correction-proposals">
 	<td class="title">Default implementations for correction proposals</td>
 	<td class="content">
@@ -401,7 +402,11 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
   <tr id="ee-cleanup">
     <td class="title">EE descriptions updated</td>
     <td class="content">
-     The API Tools execution environment descriptions, used to warn about invalid references to an execution environment, have been updated with more accurate package information and have been renamed for easier installation.  To turn on EE reference checking, use the <b>API Errors/Warnings</b> preference page.  The execution environment descriptions can be installed from the eclipse update site (<a url="http://download.eclipse.org/eclipse/updates/3.8-I-builds">http://download.eclipse.org/eclipse/updates/3.8-I-builds</a>) under the <em>API Tools Execution Environment Descriptions</em> category.
+     The API Tools execution environment descriptions, used to warn about invalid references to an execution environment, have been
+     updated with more accurate package information and have been renamed for easier installation.  To turn on EE reference checking, use the
+     <b>API Errors/Warnings</b> preference page.  The execution environment descriptions can be installed from the eclipse update site
+     (<a href="http://download.eclipse.org/eclipse/updates/3.8-I-builds">http://download.eclipse.org/eclipse/updates/3.8-I-builds</a>)
+     under the <em>API Tools Execution Environment Descriptions</em> category.
      <p><img src="images/eedesc.png" alt="Updated EE descriptions"/></p>
     </td>
   </tr>
