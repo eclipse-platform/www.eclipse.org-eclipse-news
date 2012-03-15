@@ -188,8 +188,8 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
 		<p><img src="images/ignore-warnings-source-folders.png" alt="Java Build path page with 'Ignore optional compile problems' highlighted"/></p>
         <p>
 		With this option set to <b>Yes</b>, JDT will suppress errors/warnings configured in the 
-		<b>Preferences &gt; Java &gt; Compiler &gt; Errors/Warnings</b> page. This can come in handy in situations such as those
-		when you have auto generated classes in some source folder and do not want to see optional errors/warnings in it.
+		<b>Preferences &gt; Java &gt; Compiler &gt; Errors/Warnings</b> page. This can be desirable
+		for source folders that contain auto-generated classes or tests.
       </p>
     </td>
   </tr>
@@ -197,46 +197,39 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
   <tr id="improved-null-analysis-problems">
     <td class="title">Improved messages for null analysis problems</td>
     <td class="content">
-        You will now notice a slightly changed wording for several error messages relating to annotation-based null analysis
-		for better understanding of differences between the cause of each problem. The first thing you will notice is the
-		slightly re-worded options in the <b> Preferences > Java > Compiler > Errors/warnings > Null analysis</b> page.
-		<p><img src="images/new-null-analysis-options.png" alt="Warning on switch over enum with missing default case"/></p>
-		<p> While the cases in which one can expect an error/warning from each of these options remain the same as
-		 described when this feature was released, following are the re-worded messages you get with them:</p>
+        The wording of several error messages and compiler options in
+        <b>Preferences &gt; Java &gt; Compiler &gt; Errors/Warnings &gt; Null analysis</b> has been improved:
 		<ul>
-		<li><b>Violation of null specification</b>
-		<p><img src="images/new-null-analysis-message1.png" alt="This option produces the
-		'Null type mismatch: required '@NonNull String' but the provided value is specified as @Nullable' warning"/></p>
-		Here, "in" is not a legal return value because of the @Nullable annotation in its <b>declaration.</b>.
+		<li><b>Violation of null specification</b><br/>
+			<img src="images/new-null-analysis-message1.png" alt="This option produces the
+			'Null type mismatch: required '@NonNull String' but the provided value is specified as @Nullable' warning"/>
+			<p>Here, 'in' is not a legal return value because of the @Nullable annotation in its <b>declaration</b>.</p>
 		</li>
-		<li><b>Conflict between null annotations and null inference</b>
-		<p><img src="images/new-null-analysis-message2.png" alt="This option produces the
-		'Null type mismatch: required @NonNull String but the provided value is inferred as @Nullable' warning"/></p>
-		Here, "local" is not a legal return value, because flow analysis for the un-annotated local variable <b>infers</b> that 
-		it can be null on some path.
+		<li><b>Conflict between null annotations and null inference</b><br/>
+			<img src="images/new-null-analysis-message2.png" alt="This option produces the
+			'Null type mismatch: required @NonNull String but the provided value is inferred as @Nullable' warning"/>
+			<p>Here, 'local' is not a legal return value, because flow analysis for the un-annotated variable 'local' <b>infers</b> that 
+			it can be null on some path.</p>
 		</li>
-		<li><b>Unchecked conversion from non-annotated type to @NonNull type</b>
-		<p><img src="images/new-null-analysis-message3.png" alt="This option produces the
-		'Null type safety: The expression of type String needs unchecked conversion to conform to @NonNull String' warning"/></p>
-		Here, the return value from "getLegacyValue()" may or may not be compatible to '@NonNull String'. 
-		Similar to converting a legacy raw type to a generic type, also here essential type information is missing 
-		since "getLegacyValue()" has no @NonNull or @Nullable annotation.
+		<li><b>Unchecked conversion from non-annotated type to @NonNull type</b><br/>
+			<img src="images/new-null-analysis-message3.png" alt="This option produces the
+			'Null type safety: The expression of type String needs unchecked conversion to conform to @NonNull String' warning"/>
+			<p>Here, the return value from 'getLegacyValue()' may or may not be compatible to '@NonNull String'. 
+			Similar to converting a legacy raw type to a generic type, also here essential type information is missing 
+			since 'getLegacyValue()' has no @NonNull or @Nullable annotation.</p>
 		</li>
 		</ul>
-		<p>Similar improvements have been applied to messages relating to redundant null checks.</p>
 	</td>
   </tr>
   
   <tr id="missing-non-null-by-default-annotation">
     <td class="title">Detection of missing default nullness annotation</td>
     <td class="content">
-        You can now configure JDT to detect missing default nullness annotation when using the annotation-based null analysis. This can be configures
-		using <b>Preferences > Java > Compiler > Errors/warnings > Missing '@NonNullByDefault' annotation on package</b>.
-		<p><img src="images/missing-nonnullbydefault-option.png" alt="Errors/warnings page with 'Missing @NonNullByDefault annotation on package' highlighted"/></p>
-		When this option is enabled, JDT will issue an error/warning in the following cases:
+        You can now configure JDT to detect a missing default nullness annotation when using the annotation-based null analysis.
+        When <b>Preferences &gt; Java &gt; Compiler &gt; Errors/Warnings &gt; Null analysis &gt; Missing '@NonNullByDefault' annotation on package</b>
+        is enabled, JDT will issue an error/warning in the following cases:
 		<ul>
-		<li> When a package does not contain a default nullness annotation, as a result of missing package-info.java 
-		or missing default nullness annotation in package-info.java.
+		<li> When a package does not contain an '@NonNullByDefault' annotation in the package-info.java:
 		<p><img src="images/missing-nonnullbydefault-package.png" alt="Missing @NonNullByDefault annotation on package warning"/></p>
 		</li>
 		<li> When a type inside a default package does not contain a default nullness annotation.
@@ -250,39 +243,12 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
   </tr>
   
     <tr id="Assert-like-java-assert-null-analysis">
-    <td class="title">Null analysis treats org.eclipse.core.runtime.Assert like java assert</td>
+    <td class="title">Null analysis treats org.eclipse.core.runtime.Assert like Java assert</td>
     <td class="content">
-        Since <b>org.eclipse.core.runtime.Assert</b> is often used just like the java <b>assert</b> keyword, JDT's null analysis considers
+        Since <b>org.eclipse.core.runtime.Assert</b> is often used just like the Java <b>assert</b> keyword, JDT's null analysis considers
 		the boolean expression passed into the former as always true after the Assert reference, since if the condition did turn out to be false,
 		the control flow will never go further than the org.eclipse.core.runtime.Assert reference.
 		<p><img src="images/assert-warnings.png" alt="Code snippet showing the boolean expression passed into org.eclipse.core.runtime.Assert.isLegal(..) is considered true after the call"/></p>
-	</td>
-  </tr>
-  
-  <tr id="resource-leak-default-warning">
-    <td class="title">Resource leak detection improved and enabled by default</td>
-    <td class="content">
-        Resource leak detection as introduced in JDT Juno M3 is now less aggressive if a resource
-		is shared between methods, possible via a field, where any party accessing the resource
-		could possibly issue the desired call to close(). This along with some fine tuning of the
-		analysis results in a greatly reduced number of false positives. Thus, the detection of a
-		definite resource leak is now much more reliable and reporting is set to warning by default.
-		
-		<p><img src="images/resource-leak-default-warning.png" alt="Errors/warnings page with 'Resource leaks' highlighted"/></p>
-	</td>
-  </tr>
-  
-  <tr id="incomplete-switch-over-enum">
-    <td class="title">Incomplete switch over enum</td>
-    <td class="content">
-        JDT now raises a new warning whenever a switch over an enum value lacks a default case, and the option 
-		<b> Preferences > Java > Compiler > Errors/warnings > Incomplete 'switch' cases over enum</b> is enabled.
-		<p><img src="images/switch-case-enum.png" alt="Warning on switch over enum with missing default case"/></p>
-		<p> Note that in cases like the above, the warning also helps to understand another
-		error against the last statement:<br/>
-		"The local variable printString may not have been initialized",<br/>
-		which is reported because clients could possibly call the method print with an 
-		enum value that is not known at the time of compiling this method.</p>
 	</td>
   </tr>
   
@@ -296,6 +262,35 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
 	   Stay tuned!
 	</td>
   </tr>
+  
+  <tr id="resource-leak-default-warning">
+    <td class="title">Resource leak detection improved and enabled by default</td>
+    <td class="content">
+        Resource leak detection as introduced in JDT Juno M3 is now less aggressive if a resource
+		is shared between methods, possibly via a field, where any party accessing the resource
+		could possibly issue the desired call to close(). This, along with some fine tuning of the
+		analysis, results in a greatly reduced number of false positives. Thus, the detection of a
+		definite resource leak is now much more reliable and reporting is set to <b>warning</b> by default.
+		This can be configured in the <b>Java &gt; Compiler &gt; Errors/Warnings</b> preference page.
+		
+		<p><img src="images/resource-leak-default-warning.png" alt="Errors/Warnings page with 'Resource leaks' highlighted"/></p>
+	</td>
+  </tr>
+  
+  <tr id="incomplete-switch-over-enum">
+    <td class="title">Incomplete switch over enum</td>
+    <td class="content">
+        JDT now raises a new warning whenever a switch on an enum value lacks a default case, and the option 
+		<b>Preferences &gt; Java &gt; Compiler &gt; Errors/Warnings &gt; Incomplete 'switch' cases over enum</b> is enabled.
+		<p><img src="images/switch-case-enum.png" alt="Warning on switch over enum with missing default case"/></p>
+		<p> Note that in cases like the above, the warning also helps to understand another
+		error against the last statement:<br/>
+		"The local variable printString may not have been initialized"
+		is reported because clients could possibly call the method <code>print(Color)</code> with an 
+		enum value that is not known at the time of compiling this method.</p>
+	</td>
+  </tr>
+  
   <tr id="show-monitors-default">
   	<td class="title">Show Monitors on by default</td>
   	<td class="content">
@@ -310,14 +305,14 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
   <tr id="toggle-bp-mod-keys">
   	<td class="title">Toggle breakpoint modifier keys</td>
   	<td class="content">
-  		There is now support for modifier keys while toggling breakpoints in the Java editor. Currently the <code>Ctrl</code>
-  		and <code>Alt</code> keys are supported which do the following:
+  		There is now support for modifier keys while toggling breakpoints in the Java editor:
   		<ul>
-	  		<li>Holding the <code>Ctrl</code> key while double-clicking (toggling) a breakpoint will cause the properties 
-	  		dialog for that breakpoint to be displayed</li>
-	  		<li>Holding the <code>Alt</code> key while double-clicking (toggling) a breakpoint will enable / disable that breakpoint</li>
+	  		<li><p>Holding the <b>Ctrl</b> key while double-clicking (toggling) a breakpoint will cause the <b>Properties 
+	  		dialog</b> for that breakpoint to be displayed (on the Mac, use <b>Command</b>)</p>
+	  		</li>
+	  		<li>Holding the <b>Alt</b> key while double-clicking (toggling) a breakpoint will <b>enable / disable</b> that breakpoint</li>
   		</ul>
-  		If there is no breakpoint while holding a modifier key a normal breakpoint toggle takes place.
+  		If there is no existing breakpoint, a normal breakpoint toggle takes place even if a modifier key is held down.
   	</td>
   </tr>
   <tr id="bracket-matching">
@@ -329,7 +324,7 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
 		This can be configured on <b>Java &gt; Editor</b> preference page.
 		<p><img src="images/bracket-highlighting-preferences.png" alt="Preferences for bracket highlighting"/></p>
 		
-		<p>Also, <b>Go To &gt; Matching Bracket </b> action <b>(Ctrl+Shift+P)</b> now works everywhere in a file. If a bracket is not selected 
+		<p>Also the <b>Navigate &gt; Go To &gt; Matching Bracket</b> action <b>(Ctrl+Shift+P)</b> now works everywhere in a file. If a bracket is not selected 
 		before invoking the action, the action navigates to the nearest enclosing end bracket. On invoking the action the second time, the action
 		navigates to corresponding start bracket. On the third invocation, the original selection is restored.</p>		
 	</td>
@@ -343,8 +338,7 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
 			<li><code>org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal</code></li>
 			<li><code>org.eclipse.jdt.ui.text.java.correction.ASTRewriteCorrectionProposal</code></li>
 		</ul>
-		This will ease the pain of supplying a correct <code>org.eclipse.jdt.ui.text.java.IJavaCompletionProposal</code> while 
-		contributing a quick fix/assist.
+		This makes it easier to implement quick fixes/assists that operate on .java files and use an ASTRewrite.
 	</td>
   </tr>
   <tr>
@@ -402,11 +396,13 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
   <tr id="ee-cleanup">
     <td class="title">EE descriptions updated</td>
     <td class="content">
-     The API Tools execution environment descriptions, used to warn about invalid references to an execution environment, have been
-     updated with more accurate package information and have been renamed for easier installation.  To turn on EE reference checking, use the
-     <b>API Errors/Warnings</b> preference page.  The execution environment descriptions can be installed from the eclipse update site
+     The API Tools execution environment descriptions have been
+     updated with more accurate package information and have been renamed for easier installation.
+     To turn on warnings for invalid references to classes or methods that are not available in the configured execution environment, use the
+     <b>Plug-in Development &gt; API Errors/Warnings</b> preference page.
+     <p>The execution environment descriptions can be installed from the Eclipse update site
      (<a href="http://download.eclipse.org/eclipse/updates/3.8-I-builds">http://download.eclipse.org/eclipse/updates/3.8-I-builds</a>)
-     under the <em>API Tools Execution Environment Descriptions</em> category.
+     under the <b>API Tools Execution Environment Descriptions</b> category.</p>
      <p><img src="images/eedesc.png" alt="Updated EE descriptions"/></p>
     </td>
   </tr>
@@ -427,10 +423,10 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
 <p>The above features are just the ones that are new since the previous milestone
 build. Summaries for earlier Juno milestone builds:</p>
 <ul>
-  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.2M5-201201271145/eclipse-news-M5.html">New for Eclipse Juno milestone build M5 (January 27, 2011)</a></li>
-  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.2M4-201112092100/eclipse-news-M4.html">New for Eclipse Juno milestone build M4 (December 9, 2010)</a></li>
-  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.2M3-201110281100/eclipse-news-M3.html">New for Eclipse Juno milestone build M3 (October 28, 2010)</a></li>
-  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.2M2-201109161615/eclipse-news-M2.html">New for Eclipse Juno milestone build M2 (September 16, 2010)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.2M5-201201271145/eclipse-news-M5.html">New for Eclipse Juno milestone build M5 (January 27, 2012)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.2M4-201112092100/eclipse-news-M4.html">New for Eclipse Juno milestone build M4 (December 9, 2011)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.2M3-201110281100/eclipse-news-M3.html">New for Eclipse Juno milestone build M3 (October 28, 2011)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.2M2-201109161615/eclipse-news-M2.html">New for Eclipse Juno milestone build M2 (September 16, 2011)</a></li>
   <li><a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.8M1-201108031800/eclipse-news-M1.html">New for Eclipse Juno milestone build M1 (August 5, 2011)</a></li>
 </ul>
 </body>
