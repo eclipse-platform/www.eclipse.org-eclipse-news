@@ -72,9 +72,57 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
     <td colspan="2">  <div class="title">SWT</div>
       </td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+	<tr id="XULRunner">
+      <td class="title"> XULRunner 10</td>
+      <td class="content">
+        The Browser now supports embedding XULRunner 10.0.x (note that XULRunner versions 4.x - 9.x are not supported).  Apps wishing to use this must ship a XULRunner 10 runtime and explicitly point at it as described in <a href="http://www.eclipse.org/swt/faq.php#specifyxulrunner">the FAQ</a> .
+      </td>
   </tr>
+ 
+  <tr id="ContextMenuTrigger">
+    <td class="title">Provide context menu trigger</td>
+    <td class="content">
+      <tt>MenuDetectEvent</tt> now fills in the event <tt>detail</tt> field to indicate
+      whether the context menu is being triggered by the <tt>SWT.MENU_MOUSE</tt> or <tt>SWT.MENU_KEYBOARD</tt>.
+      If the <tt>event.detail</tt> is <tt>SWT.MENU_KEYBOARD</tt>, custom controls can appropriately position
+      the context menu based on current focus or selection.
+    </td>
+  </tr>
+  <tr id="CustomColors">
+    <td class="title">Set/get custom colors in ColorDialog</td>
+    <td class="content">
+      <tt>ColorDialog</tt> now supports <tt>getRGBs()</tt> and <tt>setRGBs(RGB [])</tt> to allow applications
+      to retrieve, save, and restore any custom colors that the user selected in the dialog.
+      <p><img src="images/custom-colors.png" alt="Custom Colors section of a win32 ColorDialog"></p>
+    </td>
+  </tr>
+
+  <tr id="BIDI">
+    <td class="title">BIDI segments on text widget</td>
+    <td class="content">
+      The <tt>Text</tt> widget now supports adding <tt>SegmentListener</tt> for BIDI support. This allows BIDI ordering to be applied to segments of the text instead of the entire text.
+    </td>
+  </tr>
+  <tr id="Browser">
+    <td class="title">Browser Function Access</td>
+    <td class="content">
+      <tt>BrowserFunction</tt> can now be installed into specific frames.
+    </td>
+  </tr>
+  <tr id="JarLoading">
+    <td class="title">SWT Runtime introspection</td>
+    <td class="content">
+      <tt>SWT.isLoadable()</tt> can be used to determine whether the SWT implementation can be loaded in the current running environment.
+    </td>
+  </tr>
+
+  <tr id="Overlay">
+    <td class="title">Overlay scrollbars</td>
+    <td class="content">
+      <tt>Scrollable.getScrollbarsMode()</tt> can be used to determine whether the platform shows overlay scrollbars.
+    </td>
+ </tr>
+
   <tr> 
     <td colspan="2">  <div class="title">Platform UI</div>
       </td>
