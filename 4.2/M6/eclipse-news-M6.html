@@ -42,41 +42,27 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
   <tr id="publisher-negation-requirements">
     <td class="title">Publisher Support for Negation Requirements</td>
     <td class="content">
-      The p2/publisher can now publish <b>negation</b> requirements.
+      The p2 publisher can now publish <b>negation</b> requirements.
       A negation requirement is a requirement that <b>must not</b>
-      be present.  For example, RAP (The Rich Ajax Platform) can 
+      be present.  For example, the Rich Ajax Platform (RAP) can 
       declare a negation requirement on the Eclipse Platform, meaning
       that RAP won't be installable into your IDE.<br/>
       Negation requirements are specified using the p2.inf file.  
       Details are available on the <a href="http://wiki.eclipse.org/Equinox/p2/Customizing_Metadata#Capability_Advice:">Wiki</a>
     </td>
   </tr>
-  <tr> 
-    <td colspan="2">  </td>
-  </tr>
 
   <tr>
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Resources</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">SWT</div>
-      </td>
-  </tr>
-	<tr id="XULRunner">
-      <td class="title"> XULRunner 10</td>
-      <td class="content">
-        The Browser now supports embedding XULRunner 10.0.x (note that XULRunner versions 4.x - 9.x are not supported).  Apps wishing to use this must ship a XULRunner 10 runtime and explicitly point at it as described in <a href="http://www.eclipse.org/swt/faq.php#specifyxulrunner">the FAQ</a> .
-      </td>
+
+  <tr id="XULRunner">
+    <td class="title"> XULRunner 10</td>
+    <td class="content">
+      The SWT browser now supports embedding XULRunner 10.0.x (note that XULRunner versions 4.x - 9.x are not supported).  
+      Apps wishing to use this must ship a XULRunner 10 runtime and explicitly point at it as described in 
+      <a href="http://www.eclipse.org/swt/faq.php#specifyxulrunner">the FAQ</a> .
+    </td>
   </tr>
  
   <tr id="ContextMenuTrigger">
@@ -103,12 +89,14 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
       The <tt>Text</tt> widget now supports adding <tt>SegmentListener</tt> for BIDI support. This allows BIDI ordering to be applied to segments of the text instead of the entire text.
     </td>
   </tr>
+  
   <tr id="Browser">
     <td class="title">Browser Function Access</td>
     <td class="content">
       <tt>BrowserFunction</tt> can now be installed into specific frames.
     </td>
   </tr>
+  
   <tr id="JarLoading">
     <td class="title">SWT Runtime introspection</td>
     <td class="content">
@@ -121,76 +109,34 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
     <td class="content">
       <tt>Scrollable.getScrollbarsMode()</tt> can be used to determine whether the platform shows overlay scrollbars.
     </td>
- </tr>
+  </tr>
 
-  <tr> 
-    <td colspan="2">  <div class="title">Platform UI</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">User Assistance</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Platform Text</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Team/CVS</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Compare</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Ant</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">Debug</div></td>
-  </tr>
   <tr id="relaunchlast-api">
-  	<td class="title">RelaunchLastAction has been made API</td>
-  	<td class="content">
-  		The internal class <code>RelaunchLastAction</code> has been promoted to API and can be found in the 
-  		<code>org.eclipse.debug.ui.actions</code> package.
-  	</td>
+    <td class="title">RelaunchLastAction has been made API</td>
+    <td class="content">
+      The internal class <code>RelaunchLastAction</code> has been promoted to API and can be found in the 
+      <code>org.eclipse.debug.ui.actions</code> package.
+    </td>
   </tr>
+
   <tr id="expression-view-constant-api">
-  	<td class="title">Add new expression image constant has been made API</td>
-  	<td class="content">
-  		The constant <code>IDebugUIConstants.IMG_OBJ_ADD_NEW_EXPRESSION</code> has been added to API to allow consumers who 
-  		extend / use the Expressions view look-and-feel to use the <b>Add New Expression</b> icon 
-  		(<img src="images/monitorexpression_tsk.gif" alt="The add new expression icon"/>).
-  	</td>
+    <td class="title">Add new expression image constant has been made API</td>
+    <td class="content">
+      The constant <code>IDebugUIConstants.IMG_OBJ_ADD_NEW_EXPRESSION</code> has been added to API to allow consumers who 
+      extend or use the <b>Expressions</b> view look-and-feel to use the <b>Add New Expression</b> icon 
+      (<img src="images/monitorexpression_tsk.gif" alt="The add new expression icon"/>).
+    </td>
   </tr>
+
   <tr id="toggle-bp-target-mgr-api">
-  	<td class="title">Toggle breakpoints target manager has been made API</td>
-  	<td class="content">
-  		The interface <code>org.eclipse.debug.ui.actions.IToggleBreakpointsTargetManager</code> has been made API to allow clients
-  		access to known <code>IToggleBreakpointTarget</code>s. The new API can be accessed via 
-  		<code>org.eclipse.debug.ui.DebugUITools#getToggleBreakpointsTargetManager()</code>
-  	</td>
+    <td class="title">Toggle breakpoints target manager has been made API</td>
+    <td class="content">
+      The interface <code>org.eclipse.debug.ui.actions.IToggleBreakpointsTargetManager</code> has been made API to allow clients
+      access to known <code>IToggleBreakpointTarget</code>s. The new API can be accessed via 
+      <code>org.eclipse.debug.ui.DebugUITools#getToggleBreakpointsTargetManager()</code>
+    </td>
   </tr>
+  
   <tr id="bp-types-contribution-api">
   	<td class="title">BreakpointTypesContribution has been made API</td>
   	<td class="content">
@@ -199,6 +145,7 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
   		<b>Run &gt; Breakpoint Types</b> menu. 
   	</td>
   </tr>
+
   <tr id="var-view-find-override">
   	<td class="title">Find action can be customised in Variables View specialisations</td>
   	<td class="content">
@@ -222,10 +169,6 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
   		<p><img src="images/lcd-name-error.png" alt="Launch configuration dialog showing name conflict error"/></p>
   	</td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  
   
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
@@ -353,29 +296,30 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
   </tr>
   
   <tr id="show-monitors-default">
-  	<td class="title">Show Monitors on by default</td>
-  	<td class="content">
-  		The default setting for displaying monitor information in the <b>Debug View</b> is now set to <em>on</em>.
-  		This change only affects new workspaces and does not change existing settings.
-  		<p>
-  			Showing monitor information can be turned on or off using the <b>Java &gt; Show Monitors</b> view action
-  			within the <b>Debug View</b>.
-  		</p>
-  	</td>
+    <td class="title">Show Monitors on by default</td>
+    <td class="content">
+      The default setting for displaying monitor information in the <b>Debug</b> view is now set to <em>on</em>.
+      This change only affects new workspaces and does not change existing settings.
+      <p>
+      Showing monitor information can be turned on or off using the <b>Java &gt; Show Monitors</b> view action
+      within the <b>Debug</b> view.
+      </p>
+    </td>
   </tr>
   <tr id="toggle-bp-mod-keys">
-  	<td class="title">Toggle breakpoint modifier keys</td>
-  	<td class="content">
-  		There is now support for modifier keys while toggling breakpoints in the Java editor:
-  		<ul>
-	  		<li><p>Holding the <b>Ctrl</b> key while double-clicking (toggling) a breakpoint will cause the <b>Properties 
-	  		dialog</b> for that breakpoint to be displayed (on the Mac, use <b>Command</b>)</p>
-	  		</li>
-	  		<li>Holding the <b>Alt</b> key while double-clicking (toggling) a breakpoint will <b>enable / disable</b> that breakpoint</li>
-  		</ul>
-  		If there is no existing breakpoint, a normal breakpoint toggle takes place even if a modifier key is held down.
-  	</td>
+    <td class="title">Toggle breakpoint modifier keys</td>
+    <td class="content">
+      There is now support for modifier keys while toggling breakpoints in the Java editor:
+      <ul>
+        <li><p>Holding the <b>Ctrl</b> key while double-clicking (toggling) a breakpoint will cause the <b>Properties 
+        dialog</b> for that breakpoint to be displayed (on the Mac, use <b>Command</b>)</p>
+        </li>
+        <li>Holding the <b>Alt</b> key while double-clicking (toggling) a breakpoint will <b>enable / disable</b> that breakpoint</li>
+      </ul>
+      If there is no existing breakpoint, a normal breakpoint toggle takes place even if a modifier key is held down.
+    </td>
   </tr>
+
   <tr id="bracket-matching">
 	<td class="title">Improved bracket matching support in Java editor</td>
 	<td class="content">
@@ -393,6 +337,7 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
 		<p><img src="images/matching-bracket.png" alt="Matching bracket example"/></p>
 	</td>
   </tr>
+
   <tr id="default-implementations-for-correction-proposals">
 	<td class="title">Default implementations for correction proposals</td>
 	<td class="content">
@@ -429,6 +374,7 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
      <p><img src="images/configurephase.png" alt="Configure phase option"/></p>
     </td>
   </tr>
+
   <tr id="product-add-required">
     <td class="title">Add required in feature based product</td>
     <td class="content">
@@ -436,6 +382,7 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
      <p><img src="images/addrequired.png" alt="Add required button"/></p>
     </td>
   </tr>
+
   <tr id="extensions-editor-enhancements">
     <td class="title">Extension editor enhancements</td>
     <td class="content">
@@ -451,12 +398,14 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
     </ul>
     </td>
   </tr>
+
   <tr id="workspace-deletion-cancel">
     <td class="title">Workspace deletion is cancelable</td>
     <td class="content">
      Eclipse and OSGi launch configurations have the option to delete the workspace and configuration folders before launching.  This can be a long running operation with large workspaces.  The operation is now cancelable which will stop the launch.
     </td>
   </tr>
+
   <tr id="api-tracing">
     <td class="title">API Tools tracing</td>
     <td class="content">
@@ -464,6 +413,7 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
      <p><img src="images/tracing.png" alt="API Tools tracing"/></p>
     </td>
   </tr>
+
   <tr id="ee-cleanup">
     <td class="title">EE descriptions updated</td>
     <td class="content">
@@ -475,16 +425,6 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
      (<a href="http://download.eclipse.org/eclipse/updates/3.8-I-builds">http://download.eclipse.org/eclipse/updates/3.8-I-builds</a>)
      under the <b>API Tools Execution Environment Descriptions</b> category.</p>
      <p><img src="images/eedesc.png" alt="Updated EE descriptions"/></p>
-    </td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Template</div>
-      </td>
-  </tr>
-  <tr id="first-item">
-    <td class="title">First item</td>
-    <td class="content">
-      Item blurb.
     </td>
   </tr>
   <tr> 
