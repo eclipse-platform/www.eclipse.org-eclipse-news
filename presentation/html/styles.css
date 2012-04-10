@@ -392,6 +392,10 @@ li::before {
   position: absolute;
 }
 
+dt {
+  font-weight: bold;
+}
+
 pre {
   font-family: 'Droid Sans Mono', 'Courier New', monospace;
 
