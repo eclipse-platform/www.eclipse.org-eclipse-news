@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 16:00 ET March 14, 2012.   (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
+Last revised 16:00 ET April 16, 2012.   (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
 marks interesting changes since the previous draft of 
 <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_2_20110930.xml">September 30, 2011</a>.)
 </p>
@@ -84,8 +84,8 @@ marks interesting changes since the previous draft of
 <p>The release deliverables have the same form as previous releases, namely: </p>
 <ul>
   <li>Source code release for all Eclipse Project deliverables, available as
-    versions tagged &quot;R3_7&quot; in the Eclipse Project <a href="http://dev.eclipse.org/viewcvs/">CVS
-    repository</a>.</li>
+    versions tagged &quot;R4_2&quot; in the Eclipse Project <a href="http://git.eclipse.org">Git
+    repositories</a>.</li>
   <li>Eclipse SDK (runtime binary and SDK for Equinox[*], Platform, JDT, and PDE) (downloadable).</li>
   <li>Eclipse Platform (runtime binary and SDK for the Equinox[*] and Platform only) (downloadable).</li>
   <li>Eclipse RCP (runtime and source repositories for the Rich Client Platform) (downloadable).</li>
@@ -339,7 +339,7 @@ marks interesting changes since the previous draft of
 
 <p><strong>API Contract Compatibility:</strong> Eclipse SDK 4.2 will be upwards
   contract-compatible with Eclipse SDK 3.8 except in those areas noted in the
-  <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.platform.doc.isv/porting/eclipse_3_6_porting_guide.html" target="_top">
+  <a href="http://git.eclipse.org/c/platform/eclipse.platform.common.git/plain/bundles/org.eclipse.platform.doc.isv/porting/eclipse_4_2_porting_guide.html?h=R4_HEAD" target="_top">
     <em>Eclipse 4.2 Plug-in Migration Guide</em>
   </a>. Programs that use affected APIs and extension points will need to be ported
   to Eclipse SDK 4.2 APIs. Downward contract compatibility
@@ -351,7 +351,7 @@ marks interesting changes since the previous draft of
   
 <p><strong>Binary (plug-in) Compatibility:</strong> Eclipse SDK 4.2 will be upwards
   binary-compatible with Eclipse SDK 3.8 except in those areas noted in the
-  <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.platform.doc.isv/porting/eclipse_3_6_porting_guide.html" target="_top">
+  <a href="http://git.eclipse.org/c/platform/eclipse.platform.common.git/plain/bundles/org.eclipse.platform.doc.isv/porting/eclipse_4_2_porting_guide.html?h=R4_HEAD" target="_top">
     <em>Eclipse 4.2 Plug-in Migration Guide</em>
   </a>. Downward plug-in compatibility is not supported. Plug-ins for Eclipse SDK
   4.2 will not be usable in Eclipse SDK 3.8. Refer to
@@ -361,7 +361,7 @@ marks interesting changes since the previous draft of
   
 <p><strong>Source Compatibility:</strong> Eclipse SDK 4.2 will be upwards source-compatible
   with Eclipse SDK 3.8 except in the areas noted in the
-  <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.platform.doc.isv/porting/eclipse_3_6_porting_guide.html" target="_top">
+  <a href="http://git.eclipse.org/c/platform/eclipse.platform.common.git/plain/bundles/org.eclipse.platform.doc.isv/porting/eclipse_4_2_porting_guide.html?h=R4_HEAD" target="_top">
     <em>Eclipse 4.2 Plug-in Migration Guide</em>
   </a>. This means that source files written
   to use Eclipse SDK 3.8 APIs might successfully compile and run against Eclipse
