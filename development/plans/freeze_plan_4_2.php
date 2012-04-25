@@ -47,10 +47,10 @@ ob_start();
 			<h3>Detailed Timeline</h3>
 	        <table class="schedule" border="0" cellspacing="0" cellpadding="0" align="center">
 	          <colgroup>
-				<col width="8%">
-				<col width="3%">
-				<col width="19%*">
-				<col width="57%">
+				<col width="7%">
+				<col width="2%">
+				<col width="21%*">
+				<col width="56%">
 				<col width="0%*">
 				<col width="14%">
 				<col width="0%">
