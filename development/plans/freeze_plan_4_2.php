@@ -50,9 +50,9 @@ ob_start();
 				<col width="7%">
 				<col width="2%">
 				<col width="21%*">
-				<col width="56%">
+				<col width="55%">
 				<col width="0%*">
-				<col width="14%">
+				<col width="15%">
 				<col width="0%">
   			</colgroup>
 	          <tr>
@@ -115,7 +115,7 @@ ob_start();
 	            <td align="right" height="20">Thu 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 2 build</b></td>
 	            <td height="20">&nbsp;</td>
-	            <td height="20">&nbsp;&nbsp;<b><a href="#RC2"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">goals</a></b></td>
+	            <td height="20">&nbsp;&nbsp;<b><a href="#RC2"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> goals</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
 	          <tr>
@@ -145,7 +145,7 @@ ob_start();
 	            <td align="right" height="20">Thu 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 3 build</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
-	            <td height="20">&nbsp;&nbsp;<b><a href="#RC3"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">goals</a></b></td>
+	            <td height="20">&nbsp;&nbsp;<b><a href="#RC3"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> goals</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
 	          <tr>
@@ -181,7 +181,7 @@ ob_start();
 	            <td align="right" height="20">Thu 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 4 build</b></td>
 	            <td height="20">&nbsp;</td>
-	            <td height="20">&nbsp;&nbsp;<b><a href="#RC4"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">goals</a></b></td>
+	            <td height="20">&nbsp;&nbsp;<b><a href="#RC4"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> goals</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
 			  <tr>
