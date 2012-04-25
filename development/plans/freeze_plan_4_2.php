@@ -337,8 +337,8 @@ ob_start();
 				<p>
 				Here are some holidays during the freeze period to keep in mind:
 				<ul>
-					<li>May 21 - Canada</li>
 					<li>May 17 - Switzerland</li>
+					<li>May 21 - Canada</li>
 					<li>May 28 - Switzerland</li>
 					<li>June 7 - Poland</li>
 				</ul>
