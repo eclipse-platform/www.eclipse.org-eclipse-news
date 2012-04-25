@@ -49,10 +49,10 @@ ob_start();
 	          <colgroup>
 				<col width="8%">
 				<col width="3%">
-				<col width="20%*">
+				<col width="19%*">
 				<col width="57%">
 				<col width="0%*">
-				<col width="13%">
+				<col width="14%">
 				<col width="0%">
   			</colgroup>
 	          <tr>
