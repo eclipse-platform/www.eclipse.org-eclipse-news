@@ -49,10 +49,10 @@ ob_start();
 	          <colgroup>
 				<col width="8%">
 				<col width="3%">
-				<col width="18%*">
+				<col width="20%*">
 				<col width="57%">
 				<col width="0%*">
-				<col width="15%">
+				<col width="13%">
 				<col width="0%">
   			</colgroup>
 	          <tr>
@@ -85,7 +85,7 @@ ob_start();
 	            <td align="right" height="20">Thu 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 1 build</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
-	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC0"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">rules</a></b></td>
+	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC0"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> rules</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
 	           <tr>
@@ -97,7 +97,7 @@ ob_start();
 	            <td align="right" height="20">Mon 08:00 EDT</td>
 	            <td height="20">&nbsp;<b>Start 1-day test pass against RC1</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
-	            <td height="20">&nbsp;&nbsp;<b><a href="#TestPassBeforeRC2"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">details</a></b></td>
+	            <td height="20">&nbsp;&nbsp;<b><a href="#TestPassBeforeRC2"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> details</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
 	          <tr>
@@ -106,7 +106,7 @@ ob_start();
 	            <td align="right" height="20">Tue 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Start fix pass</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
-	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC1"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">rules</a></b></td>
+	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC1"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> rules</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
 	          <tr>
@@ -127,7 +127,7 @@ ob_start();
 	            <td align="right" height="20">Mon 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Start 1-day test pass against RC2</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
-	            <td height="20">&nbsp;&nbsp;<b><a href="#TestPassUsingRC2"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">details</a></b></td>
+	            <td height="20">&nbsp;&nbsp;<b><a href="#TestPassUsingRC2"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> details</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
 	          <tr>
@@ -136,7 +136,7 @@ ob_start();
 	            <td align="right" height="20">Tue 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Start fix pass</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
-	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC2"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">rules</a></b></td>
+	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC2"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> rules</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
 	          <tr>
@@ -163,7 +163,7 @@ ob_start();
 	            <td align="right" height="20">Mon 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>All-day test pass against RC3</b></td>
 	            <td height="20">&nbsp;</td>
-	            <td height="20">&nbsp;&nbsp;<b><a href="#TestPassUsingRC3"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">details</a></b></td>
+	            <td height="20">&nbsp;&nbsp;<b><a href="#TestPassUsingRC3"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> details</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
 	          <tr>
@@ -172,7 +172,7 @@ ob_start();
 	            <td align="right" height="20">Tue 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Start fix pass</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
-	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC3"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">rules</a></b></td>
+	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC3"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> rules</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
 	          <tr>
@@ -209,12 +209,12 @@ ob_start();
 	            <td height="20"></td>
 	          </tr>
 	          <tr>
-	            <td height="20"></td>
+	            <td height="27"></td>
 	            <td align="right" height="20">22</td>
 	            <td align="right" height="20"></td>
 	            <td height="20">&nbsp;&nbsp;<b>Release 4.2 available</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
-	            <td height="20">&nbsp;&nbsp;<b><a href="#Release4.2"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">details</a></b></td>
+	            <td height="20">&nbsp;&nbsp;<b><a href="#Release4.2"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> details</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
 	        </table>
@@ -222,9 +222,8 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>Useful Links</h3>
 			<ul>
-			<li><a href="http://www.eclipse.org/eclipse/platform-releng/buildSchedule.html ">Build Schedule</a> - details on build times.</li>
-			<li><a href="http://wiki.eclipse.org/index.php/Eclipse/Release_checklist">Eclipse Release Checklist</a> -
-				 lists various things that need to be checked before each release.</li>
+			<li><a href="http://www.eclipse.org/eclipse/platform-releng/buildSchedule.html">Build Schedule</a></li>
+			<li><a href="http://wiki.eclipse.org/index.php/Eclipse/Release_checklist">Eclipse Release Checklist</a></li>
 			<li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse">Eclipse Project Juno Plan</a></li>
 			<li><a href="http://wiki.eclipse.org/Juno/Simultaneous_Release_Plan">Juno Simultaneous Release</a></li>
 			</ul>
