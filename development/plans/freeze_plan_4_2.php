@@ -47,13 +47,13 @@ ob_start();
 			<h3>Detailed Timeline</h3>
 	        <table class="schedule" border="0" cellspacing="0" cellpadding="0" align="center">
 	          <colgroup>
-				<col width="9%">
-				<col width="4%">
-				<col width="20%*">
-				<col width="50%">
-				<col width="1%*">
+				<col width="8%">
+				<col width="3%">
+				<col width="18%*">
+				<col width="57%">
+				<col width="0%*">
 				<col width="15%">
-				<col width="1%">
+				<col width="0%">
   			</colgroup>
 	          <tr>
 	            <td align="right" height="20"><b>May 2012</b>&nbsp;</td>
@@ -64,7 +64,7 @@ ob_start();
 	            <td align="right" height="20"></td>
 	            <td height="20">&nbsp;&nbsp;<b>Transition to fix and polish mode</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
-	            <td height="20">&nbsp;&nbsp;<b><a href="#Transition"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">details</a></b></td>
+	            <td height="20">&nbsp;&nbsp;<b><a href="#Transition"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> details</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
 	          <tr>
@@ -73,7 +73,7 @@ ob_start();
 	            <td align="right" height="20">Mon 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Start 2-day test pass against M7/RC0</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
-	            <td height="20">&nbsp;&nbsp;<b><a href="#TestPassBeforeRC1"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10">details</a></b></td>
+	            <td height="20">&nbsp;&nbsp;<b><a href="#TestPassBeforeRC1"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> details</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
 	           <tr>
