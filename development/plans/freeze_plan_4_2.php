@@ -50,9 +50,9 @@ ob_start();
 				<col width="7%">
 				<col width="2%">
 				<col width="21%*">
-				<col width="55%">
+				<col width="53%">
 				<col width="0%*">
-				<col width="15%">
+				<col width="17%">
 				<col width="0%">
   			</colgroup>
 	          <tr>
@@ -209,8 +209,8 @@ ob_start();
 	            <td height="20"></td>
 	          </tr>
 	          <tr>
-	            <td height="27"></td>
-	            <td align="right" height="20">22</td>
+	            <td height="20"></td>
+	            <td align="right" height="20">27</td>
 	            <td align="right" height="20"></td>
 	            <td height="20">&nbsp;&nbsp;<b>Release 4.2 available</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
