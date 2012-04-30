@@ -50,7 +50,7 @@ ob_start();
 				<p>
 				Editors built with this toolkit are for example the JDT Editor or the CDT
 				Editor. Take a look at the <a href="http://www.eclipse.org/jdt/ui/screenCasts/index.php">JDT screen casts</a> to see some
-				features like the new J2SE 5.0 editor support in action.</p>
+				features like the J2SE 5.0 editor support in action.</p>
 		</div>
 		
 		<div class="homeitem3col">
