@@ -124,8 +124,26 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+  <tr id="content-assist-package-info">
+    <td class="title">Content assist in package-info.java</td>
+    <td class="content">
+      Content assist is now available inside package-info.java, which is used to declare package level annotations.
+      <p><img src = "images/content-assist-pkg-info.png" alt = "Content assist popup to add package-level annotations on package declaration"/></p>
+    </td>
+  </tr>
+  <tr id="enhanced-switch-diagnostics">
+    <td class="title">Enhanced diagnostics for detection of incomplete switch statements</td>
+    <td class="content">
+      JDT now provides additional configurable diagnostics to flag an incomplete switch statement.
+      <p><img src = "images/switch-new-warnings.png" alt = "Compiler Errors/warnings preference page with new switch diagnostic options highlighted"/></p>
+	  <p> When you enable the option <b>Preferences>Java>Compiler>Errors/warnings>"switch is missing default case"</b>, JDT will flag switch statements with a missing default
+	      case, because such a switch statement can result in variables left uninitialized.<p>
+	  <p><img src="images/switch-missing-default.png" alt="Warning on switch with missing default case"/></p>
+	  <p> When you enable the sub-option <b>Preferences>Java>Compiler>Errors/warnings>"signal even if default case exists"</b> for the <b>incomplete switch cases on enum</b> option, 
+	  JDT will flag switch statements over enum which may have an enum value covered only through a default statement, but not directly through a case
+	  statement. When new enum constants are added, this option will help in detecting the switch statements that do not cover the new value.</p>
+	  <p><img src="images/switch-missing-case-enum.png" alt="Warning on switch with missing case statement for enum value even though default is present"/></p>
+    </td>
   </tr>
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
