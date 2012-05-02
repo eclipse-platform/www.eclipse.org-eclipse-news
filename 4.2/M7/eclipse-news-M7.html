@@ -127,7 +127,7 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
   <tr id="content-assist-package-info">
     <td class="title">Content assist in package-info.java</td>
     <td class="content">
-      Content assist is now available inside package-info.java, which is used to declare package level annotations.
+      Content assist (<b>Ctrl+Space</b>) is now available inside package-info.java, which is used to declare package-level annotations and Javadocs.
       <p><img src = "images/content-assist-pkg-info.png" alt = "Content assist popup to add package-level annotations on package declaration"/></p>
     </td>
   </tr>
@@ -136,11 +136,11 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
     <td class="content">
       JDT now provides additional configurable diagnostics to flag an incomplete switch statement.
       <p><img src = "images/switch-new-warnings.png" alt = "Compiler Errors/warnings preference page with new switch diagnostic options highlighted"/></p>
-	  <p> When you enable the option <b>Preferences &gt; Java &gt; Compiler &gt; Errors/warnings &gt; Switch is missing default case</b>, JDT will flag switch statements with a missing default
-	      case, because such a switch statement can result in variables left uninitialized.<p>
+	  <p> When you enable the option <b>Preferences &gt; Java &gt; Compiler &gt; Errors/Warnings &gt; Switch is missing default case</b>, JDT will flag switch statements with a missing default
+	      case, because such a switch statement can e.g. result in variables left uninitialized.</p>
 	  <p><img src="images/switch-missing-default.png" alt="Warning on switch with missing default case"/></p>
-	  <p> When you enable the sub-option <b>Preferences &gt; Java &gt; Compiler &gt; Errors/warnings &gt; Signal even if default case exists</b> for the <b>Incomplete switch cases on enum</b> option, 
-	  JDT will flag switch statements over enum which may have an enum value covered only through a default statement, but not directly through a case
+	  <p> When you enable the sub-option <b>Preferences &gt; Java &gt; Compiler &gt; Errors/Warnings &gt; Signal even if default case exists</b> for the <b>Incomplete switch cases on enum</b> option, 
+	  JDT will flag switch statements over an enum type which may have an enum value covered only through a default statement, but not directly through a case
 	  statement. When new enum constants are added, this option will help in detecting the switch statements that do not cover the new value.</p>
 	  <p><img src="images/switch-missing-case-enum.png" alt="Warning on switch with missing case statement for enum value even though default is present"/></p>
     </td>
@@ -148,12 +148,12 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
   <tr id="bracket-matching">
 	<td class="title">Improved bracket matching support in Java editor</td>
 	<td class="content">
-		So far a matching bracket was found when the caret was placed immediately after a bracket. This has been improved and now
+		So far, a matching bracket was found when the caret was placed immediately after a bracket. This has been improved and now
 		a matching bracket is found both when the caret is placed either immediately before or immediately after a bracket.
 		<p><img src="images/matching-bracket.png" alt="Matching bracket examples"/></p>
 		
 		<p>You can hover over a closing curly brace and see the source near the matching opening brace in a hover. 
-		This is helpful when you want to see the code near the start of a long code block, the hover also tells the number of lines in the code block</p> 
+		This is helpful when you want to see the code near the start of a long code block. The hover also tells the number of lines in the code block.</p> 
 		<p><img src="images/bracket-hover-1.png" alt="Bracket hover example 1"/></p>
 		<p>The hover is also useful to temporarily 'highlight' a code block.</p>
 		<p><img src="images/bracket-hover-2.png" alt="Bracket hover example 2"/></p>
@@ -163,8 +163,8 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
   <tr id="show-tooltip-description">
 	<td class="title">Improved Show Tooltip Description (F2) action</td>
 	<td class="content">
-		So far <b>Show Tooltip Description (F2)</b> action showed only the Problem hover and the Javadoc hover. 
-		Now the action tries all the hovers in the sequence listed on <b>Preferences &gt; Java &gt; Editor &gt; Hovers</b>, 
+		So far, the <b>Show Tooltip Description (F2)</b> action showed only the Problem hover and the Javadoc hover. 
+		Now, the action tries all the hovers in the sequence listed on <b>Preferences &gt; Java &gt; Editor &gt; Hovers</b>, 
 		and uses the one which fits best for the selected element and the current context.
 	</td>
   </tr>
@@ -189,6 +189,8 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
     <td class="title">First item</td>
     <td class="content">
       Item blurb.
+      <p>Please use the W3C <a href="http://validator.w3.org/#validate_by_input">XHTMLMarkup Validation Service</a>
+      to check your document's markup before submitting.</p>
     </td>
   </tr>
   <tr> 
