@@ -145,6 +145,30 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
 	  <p><img src="images/switch-missing-case-enum.png" alt="Warning on switch with missing case statement for enum value even though default is present"/></p>
     </td>
   </tr>
+  <tr id="bracket-matching">
+	<td class="title">Improved bracket matching support in Java editor</td>
+	<td class="content">
+		So far a matching bracket was found when the caret was placed immediately after a bracket. This has been improved and now
+		a matching bracket is found both when the caret is placed either immediately before or immediately after a bracket.
+		<p><img src="images/matching-bracket.png" alt="Matching bracket examples"/></p>
+		
+		<p>You can hover over a closing curly brace and see the source near the matching opening brace in a hover. 
+		This is helpful when you want to see the code near the start of a long code block, the hover also tells the number of lines in the code block</p> 
+		<p><img src="images/bracket-hover-1.png" alt="Bracket hover example 1"/></p>
+		<p>The hover is also useful to temporarily 'highlight' a code block.</p>
+		<p><img src="images/bracket-hover-2.png" alt="Bracket hover example 2"/></p>
+	</td>
+  </tr>
+  
+  <tr id="show-tooltip-description">
+	<td class="title">Improved Show Tooltip Description (F2) action</td>
+	<td class="content">
+		So far <b>Show Tooltip Description (F2)</b> action showed only the Problem hover and the Javadoc hover. 
+		Now the action tries all the hovers in the sequence listed on <b>Preferences &gt; Java &gt; Editor &gt; Hovers</b>, 
+		and uses the one which fits best for the selected element and the current context.
+	</td>
+  </tr>
+    
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
