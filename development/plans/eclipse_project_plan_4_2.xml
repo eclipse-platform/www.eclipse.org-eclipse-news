@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 16:00 ET April 16, 2012.   (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
+Last revised 8:30 EDT May 3, 2012.   (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
 marks interesting changes since the previous draft of 
 <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_2_20110930.xml">September 30, 2011</a>.)
 </p>
@@ -370,8 +370,8 @@ are available in the <a href="http://www.eclipse.org/eclipse/development/plans/f
   usable with an earlier version of the Eclipse SDK. </p>
   
 <p><strong>Workspace Compatibility:</strong> Eclipse SDK 4.2 will be upwards
-  workspace-compatible with earlier 3.x versions of the Eclipse SDK unless noted.
-  This means that workspaces and projects created with Eclipse SDK 3.8 .. 3.0 can be successfully
+  workspace-compatible with earlier 3.x and 4.x versions of the Eclipse SDK unless noted.
+  This means that workspaces and projects created with Eclipse SDK 4.1, 4.0, 3.8 .. 3.0 can be successfully
   opened by Eclipse SDK 4.2 and upgraded to a 4.2 workspace. This includes both
   hidden metadata, which is localized to a particular workspace, as well as metadata
   files found within a workspace project (e.g., the .project file), which may
