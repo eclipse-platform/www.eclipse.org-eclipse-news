@@ -8,102 +8,113 @@
 </head>
 <body>
 <h1>Eclipse 3.8 and 4.2 M7 - New and Noteworthy</h1>
-<p>Here are some of the more noteworthy things available in milestone build M7 
+<p>The <a href="http://wiki.eclipse.org/Juno">Juno</a> annual release is almost upon us! Here are some of the 
+  more noteworthy things available in milestone build M7 
   (May 4, 2012) which is now available for <a href="http://download.eclipse.org/eclipse/downloads/" target="_top">download</a>.
-Unless otherwise indicated, all entries listed here are available in both the 3.8 and 4.2 development streams.
-See the <a href="buildNotes.php">build notes</a> for details about bugs fixed and other changes.</p>
+Unless otherwise indicated, all entries listed here are available in both the 3.8 and 4.2 development streams.</p>
 <ul>
-  <li><a href="#Equinox">Equinox</a></li>
   <li><a href="#Platform">Platform</a></li>
   <li><a href="#JDT">JDT</a></li>
-  <li><a href="#PDE">PDE</a></li>
 </ul>
 
 <table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
-  <tr>
-    <td colspan="2" class="section" id="Equinox">Equinox</td>
+
+  <tr id="new-icon">
+    <td class="title">New high resolution icon</td>
+    <td class="content">
+      The Eclipse SDK now has a shiny new icon. The icon is now in high resolution, making
+      for a much more polished appearance on modern operating systems.
+      <p><img src="images/icon.png" alt="New Eclipse icon"/></p>
+    </td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+
+  <tr id="lightweight-refresh">
+    <td class="title">Lightweight refresh enabled by default (4.2 only)</td>
+    <td class="content">
+      In Eclipse 3.7 a new lightweight refresh mechanism was introduced. Files discovered to be out-of-sync 
+      by the workspace, for example while accessing the file content by an editor, 
+      are automatically asynchronously refreshed. In Eclipse 3.7 and 3.8 you have to enable this yourself
+      via <b>Preferences > General > Workspace</b> and select <b>Refresh on access</b>.
+      In Eclipse SDK 4.2 the mechanism is enabled by default.
+      <p><img src="images/lightweight_refresh_by_default.png" alt="Lightweight refresh enabled by default"></p>
+    </td>
   </tr>
-  <tr>
-    <td colspan="2" class="section" id="Platform">Platform</td>
+
+  <tr id="fullscreen">
+    <td class="title">Support for MacOS X Full Screen (4.2 only)</td>
+    <td class="content">
+      A new <b>Window &gt; Toggle Full Screen</b> command is now supported on MacOS X Lion.
+    </td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+
+  <tr id="trim-dragging">
+    <td class="title">Trim dragging (4.2 only)</td>
+    <td class="content">
+	  We have finally re-introduced the ability to drag some of the window trim elements around. 
+	  For example, you can drag minimized stacks to different edges of the main window.
+      <p><img src="images/trim-dragging.png" alt="Trim dragging"/></p>
+    </td>
   </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Resources</div>
-      </td>
+
+  <tr id="trim-styling">
+    <td class="title">Trim styling (4.2 only)</td>
+    <td class="content">
+      In the new window trim implementation, the drag handle and the frame surrounding the trim are 
+      defined through CSS. Here's an example of what this looks like:
+<pre>
+.MToolControl.TrimStack {
+	frame-image:  url(./winXPTSFrame.PNG);
+	handle-image:  url(./winXPHandle.PNG);
+	frame-cuts: 5px 1px 5px 16px;
+}
+</pre>
+	  <p><tt>frame-image</tt> and <tt>handle-image</tt> define the images to be used to draw the frame. 
+	  The <tt>frame-cuts</tt> attribute is a set of 4 integer values that are used to divide the <tt>frame-image</tt>
+	  into specific areas by defining two widths and two heights (the third is just the image size minus the 
+	  sum of the other two. This allows us to determine what part of the image to use for the top/right corner.</p>
+	  <p>Here is a more interesting example that illustrates the power this gives to applications to customize their appearance:</p>
+      <p><img src="images/trim-styling.png" alt="Trim styling"/></p> 
+    </td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+
+  <tr id="css-theme-event">
+    <td class="title">CSS-based Theme changed event (4.2 only)</td>
+    <td class="content">
+      An OSGi EventAdmin-based event is now raised on theme-change
+      (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=369443">bug
+      369443</a>).
+    </td>
   </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">SWT</div>
-      </td>
+
+  <tr id="css-extension-points">
+    <td class="title">Changes to CSS Extension Points (4.2 only)</td>
+    <td class="content">
+      For those providing extensions for the new CSS support,
+      the extension points for providing property handlers and
+      element providers have been renamed to
+      <tt>org.eclipse.e4.ui.css.core.propertyHandler</tt> and
+      <tt>org.eclipse.e4.ui.css.core.elementProvider</tt>
+      (respectively).
+    </td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Platform UI</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">User Assistance</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Platform Text</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Team/CVS</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Compare</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Ant</div>
-      </td>
-  </tr>
-  <tr id="ant-1.8.3">
+
+  <tr id="ant-1-8-3">
     <td class="title">Ant updated to 1.8.3</td>
     <td class="content">
       The bundled version of Apache Ant in the platform has been updated to version 1.8.3.
       <p>For more information on what is new in Ant 1.8.3 please see the Apache Ant <a href="http://apache.claz.org//ant/README.html">release notes</a>.</p>
     </td>
   </tr>
+
   <tr id="add-buildfiles-dialog">
     <td class="title">Add all known buildfile types to Ant view</td>
     <td class="content">
-      The <b>Buildfile Selection</b> dialog for the <b>Ant View</b> has been updated to allow filtering for all known kinds of build files rather than just 
-      <em>*.xml</em> and <em>build.xml</em>.
+      The <b>Buildfile Selection</b> dialog for the <b>Ant</b> view has been updated to allow filtering 
+      for all known kinds of build files rather than just <em>*.xml</em> and <em>build.xml</em>.
       <p><img src="images/add-buildfiles.png" alt="The Add Buildfiles dialog"/></p> 
     </td>
   </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Debug</div>
-      </td>
-  </tr>
+
   <tr id="debug-tracing">
     <td class="title">Debug tracing</td>
     <td class="content">
@@ -111,19 +122,20 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
       <p><img src="images/debug-trace.png" alt="Debug tracing options"/></p>
     </td>
   </tr>
+
   <tr id="bp-view-sorting">
     <td class="title">Breakpoint view sorting</td>
     <td class="content">
-      The <b>Breakpoints View</b> now has improved sorting that will take into account any line numbers that appear in the label and sort accordingly.
+      The <b>Breakpoints</b> view now has improved sorting that will take into account any line 
+      numbers that appear in the label and sort accordingly.
       <p><img src="images/bp-sorting.png" alt="Breakpoint view sorting"/></p>
     </td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
+
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
+
   <tr id="content-assist-package-info">
     <td class="title">Content assist in package-info.java</td>
     <td class="content">
@@ -160,28 +172,10 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
 	</td>
   </tr>
   
-  <tr id="junit-4.10">
+  <tr id="junit-4-10">
     <td class="title">JUnit 4.10</td>
     <td class="content">
       The JUnit 4 version shipped with Eclipse has been updated to <a href="https://github.com/KentBeck/junit/blob/r4.10/doc/ReleaseNotes4.10.txt">4.10</a>.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" class="section" id="PDE">PDE</td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Template</div>
-      </td>
-  </tr>
-  <tr id="first-item">
-    <td class="title">First item</td>
-    <td class="content">
-      Item blurb.
-      <p>Please use the W3C <a href="http://validator.w3.org/#validate_by_input">XHTMLMarkup Validation Service</a>
-      to check your document's markup before submitting.</p>
     </td>
   </tr>
   <tr> 
@@ -191,8 +185,7 @@ See the <a href="buildNotes.php">build notes</a> for details about bugs fixed an
 <p>The above features are just the ones that are new since the previous milestone
 build. Summaries for earlier Juno milestone builds:</p>
 <ul>
-  <li>New for Eclipse Juno milestone build M7 (April 27, 2011)</li>
-  <li>New for Eclipse Juno milestone build M6 (March 16, 2011)</li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.2M6-201203151300/eclipse-news-M6.html">New for Eclipse Juno milestone build M6 (March 16, 2011)</a></li>
   <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.2M5-201201271145/eclipse-news-M5.html">New for Eclipse Juno milestone build M5 (January 27, 2012)</a></li>
   <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.2M4-201112092100/eclipse-news-M4.html">New for Eclipse Juno milestone build M4 (December 9, 2011)</a></li>
   <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.2M3-201110281100/eclipse-news-M3.html">New for Eclipse Juno milestone build M3 (October 28, 2011)</a></li>
