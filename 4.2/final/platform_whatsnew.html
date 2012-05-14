@@ -38,43 +38,239 @@ document in the plug-in developer's guide.
 <table class="news" border="0" cellpadding="10" cellspacing="0" width="600">
   <tbody>
 
-    <!-- ******************** Platform ********************** -->
-	<tr>
-    <td id="Platform" class="section" colspan="2">
-      <h2>Platform Changes</h2>
+  <!-- ******************** Platform ********************** -->
+  <tr>
+    <td id="Platform" class="section" colspan="2"><h2>Platform Changes</h2></td>
+  </tr>
+
+  <tr id="platform-fade-effects">
+    <td width="30%" valign="top" align="left"><b>Fade transition on maximize (4.2 only)</b></td>
+    <td width="70%" valign="top">
+	It's fall and the weather is getting cool...so we should too. For the first step we've 
+	added a 'fade' effect to the maximize / restore operation. Let us know what you think by leaving your comments
+	in <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=357939">bug 357939</a>. If it's 
+	popular we can add similar effects to other transitions in the user interface such as perspective switching.
+	<p>
+	Note that this is an early implementation, and there are known issues with the implementation on various 
+	platforms that we're working on fixing. You can turn the fade 
+	effect off using the animations preference (found under <b>Window &gt; Preferences &gt; General &gt; Appearance</b>) 
+	should you prefer to return to the old effect.
+	</p>
+	<iframe width="420" height="315" src="http://www.youtube.com/embed/07kESXY5m2Q" frameborder="0" allowfullscreen></iframe>    
+	</td>
+  </tr>
+
+  <tr id="Platform-delete-project">
+    <td class="title">Delete project dialog shows project location</td>
+    <td class="content">
+      The Delete Resources dialog now shows the location of deleted projects on the file system:
+      <p>
+          <img src="images/delete-project.png" alt="Screenshot"/>
+      </p>
     </td>
-  	</tr>
+  </tr>
 
-      <!-- ******************** Install/Update ********************** -->
+  <tr id="swt-vo-context-menu">
+      <td class="title">VoiceOver context menu</td>
+      <td class="content">
+      On Mac, you can now use the keyboard to open a context menu when VoiceOver is running,
+      using the standard VoiceOver key sequence Control+Option+Shift+M.
+      </td>
+    </tr>
 
-	<tr>
-    <td id="Install" class="section" colspan="2">
-      <h2>Install/Update Changes</h2>
+  <tr id="context-menu-shortcut">
+    <td class="title">Shortcut for context menu on the Mac</td>
+    <td class="content">
+      <b>Shift+F10</b> now also opens the context menu on the Mac, like it already works on most other platforms.
+      The key binding of the new <b>Show Context Menu</b> command can be configured on the <b>General &gt; Keys</b> preference page.
+      <p><img src="images/context-menu.png" alt="Screenshot of a context menu in the Synchronize view"/></p>
     </td>
-  	</tr>
+  </tr>
 
-    <!-- ******************** Text ********************** -->
-	<tr>
-    <td id="Text" class="section" colspan="2">
-      <h2>Editor Changes</h2>
+  <tr id="screenshots">
+    <td class="title">Shared area tab navigation</td>
+    <td class="content">
+        Navigation arrows have been introduced to the sides of the shared area to allow
+        you to click and view the tabs that are to the left and right of the currently
+        selected tab. This is the default setting on new installations. Switching to the
+        Classic theme from the preferences (<b>Preferences &gt; General &gt; Appearance</b>)
+        will allow you to bring back the MRU behaviour from 3.x. The MRU behaviour can
+        also be toggled on and off via CSS by setting the <code>mru-visible</code> attribute
+        of an <code>MPartStack</code> to <code>true</code> or <code>false</code>.
+
+      <p>This is a preliminary form of the feature and your feedback would be most appreciated.</p>
+
+      <p><img src="images/tab-navigation.png" alt="The shared area with left and right navigation
+        arrows on its sides."/></p></td>
+  </tr>
+
+  <tr id="new-icon">
+    <td class="title">New high resolution icon</td>
+    <td class="content">
+      The Eclipse SDK now has a shiny new icon. The icon is now in high resolution, making
+      for a much more polished appearance on modern operating systems.
+      <p><img src="images/icon.png" alt="New Eclipse icon"/></p>
     </td>
-  	</tr>
+  </tr>
 
-    <!-- ******************* Team/CVS ******************** -->
-	<tr>
-    <td id="TeamCVS" class="section" colspan="2">
-      <h2>Team/CVS Changes</h2>
+  <tr id="lightweight-refresh">
+    <td class="title">Lightweight refresh enabled by default (4.2 only)</td>
+    <td class="content">
+      In Eclipse 3.7 a new lightweight refresh mechanism was introduced. Files discovered to be out-of-sync 
+      by the workspace, for example while accessing the file content by an editor, 
+      are automatically asynchronously refreshed. In Eclipse 3.7 and 3.8 you have to enable this yourself
+      via <b>Preferences > General > Workspace</b> and select <b>Refresh on access</b>.
+      In Eclipse SDK 4.2 the mechanism is enabled by default.
+      <p><img src="images/lightweight_refresh_by_default.png" alt="Lightweight refresh enabled by default"></p>
     </td>
-  	</tr>
+  </tr>
 
-    <!-- ******************** Debug ********************* -->
-	<tr>
-    <td id="Debug" class="section" colspan="2">
-      <h2>Debug Changes</h2>
+  <tr id="fullscreen">
+    <td class="title">Support for MacOS X Full Screen</td>
+    <td class="content">
+      A new <b>Window &gt; Toggle Full Screen</b> command is now supported on MacOS X Lion.
     </td>
-  	</tr>
+  </tr>
 
-    <!-- ****************** END OF N&N TABLE ****************** -->
+  <tr id="trim-dragging">
+    <td class="title">Trim dragging (4.2 only)</td>
+    <td class="content">
+	  We have finally re-introduced the ability to drag some of the window trim elements around. 
+	  For example, you can drag minimized stacks to different edges of the main window.
+      <p><img src="images/trim-dragging.png" alt="Trim dragging"/></p>
+    </td>
+  </tr>
+
+  <tr id="ant-1-8-3">
+    <td class="title">Ant updated to 1.8.3</td>
+    <td class="content">
+      The bundled version of Apache Ant in the platform has been updated to version 1.8.3.
+      <p>For more information on what is new in Ant 1.8.3 please see the Apache Ant <a href="http://apache.claz.org//ant/README.html">release notes</a>.</p>
+    </td>
+  </tr>
+
+  <!-- ******************** Install/Update ********************** -->
+
+  <tr>
+    <td id="Install" class="section" colspan="2"><h2>Install/Update Changes</h2></td>
+  </tr>
+
+  <!-- ******************** Text ********************** -->
+  <tr>
+    <td id="Text" class="section" colspan="2"><h2>Editor Changes</h2></td>
+  </tr>
+
+  <tr id="Platform-use-saturated-colors">
+    <td class="title">Use saturated colors in overview ruler</td>
+    <td class="content">
+      The new <b>Use saturated colors in overview ruler</b> preference allows to show the annotations in the Overview ruler using saturated colors:
+      <p>
+          <img src="images/use-saturated-colors-on.png" alt="Screenshot with saturated colors" title="saturated colors"/>
+          &nbsp;
+          <img src="images/use-saturated-colors-off.png" alt="Screenshot without saturated colors" title="lighter colors"/>
+          &nbsp;
+          <img src="images/use-saturated-colors.png" alt="Screenshot of the 'Accessibility' preference page"/>
+      </p>
+      <p>
+        This option is turned off by default and can be enabled on the <b>General &gt; Editors &gt; Text Editors &gt; Accessibility</b>
+        page.
+      </p>
+    </td>
+  </tr>
+
+  <!-- ******************* Team/CVS ******************** -->
+  <tr>
+    <td id="TeamCVS" class="section" colspan="2"><h2>Team/CVS Changes</h2></td>
+  </tr>
+
+  <tr id="cvs-sync-filters">
+    <td class="title">Filters in CVS Sync View</td>
+    <td class="content">
+      You can now use regular expressions to filter out changes in the CVS <b>Synchronize</b> view. 
+      To enable filters go to <b>Preferences > General > Team > CVS > Synchronize/Compare</b>, 
+      uncheck <b>Only look at timestamps to detect changes</b> and enter your regex pattern 
+      in the <b>Regular expression to ignore changes in synchronizations</b> field. Each difference 
+      in a change is checked against the pattern and is considered as matched, if either left or right side 
+      of the difference matches. If all diffs in a file match, the file is excluded from the view.
+      <p>
+        <img src="images/filters-in-cvs-syncview.png" alt="Preferences for filters in CVS Sync View ">
+      </p>
+    </td>
+  </tr>
+
+  <!-- ******************** Debug ********************* -->
+  <tr>
+    <td id="Debug" class="section" colspan="2"><h2>Debug Changes</h2></td>
+  </tr>
+
+  <tr id="Platform-debug-toolbar">
+    <td class="title">Global debug toolbar</td>
+    <td class="content">To improve the presentation of the debug perspective, you can now move the 
+    toolbar out of the <b>Debug</b> view and into the global toolbar - or use it in the view and in the toolbar.
+	<p><img src="images/debug_toolbar-1.png" alt="Global debug toolbar"/></p>
+    <p>
+	The global toolbar contains the same commands as the view toolbar, but can be customized with  
+	<b>Window &gt; Customize Perspective...</b> to add or remove debugging commands, or the entire 
+	debug toolbar. The visibility of the debug toolbar can be changed using 
+	<b>Show Debug Toolbar</b> in the <b>Debug</b> view's menu.</p>
+	<p><img src="images/debug_toolbar-2.png" alt="Debug view toolbar action" /></p>
+    </td>
+  </tr>
+
+  <tr id="edit-multi-line-vars">
+    <td class="title">Improved editing of environment variables</td>
+    <td class="content">
+        In 3.8M5, editing multi-line environment variables became much simpler with a new UI that presents the variables in a scrolling text widget.
+        The new UI can be found in the edit dialog for a multi-line environment variable on the <b>Environment</b> tab of a supporting launch configuration.
+        <p><img src="images/multi-env-var.png" alt="New edit dialog for multi-line environment variables"/></p>
+    </td>
+  </tr>
+
+  <tr id="launch-config-name-validation">
+    <td class="title">Improved launch configuration name validation</td>
+    <td class="content">
+    Now if you create a launch configuration with the name of an existing configuration, the type of the conflicting configuration
+    is noted in the error message.
+    <p><img src="images/lcd-name-error.png" alt="Launch configuration dialog showing name conflict error"/></p>
+    </td>
+  </tr>
+
+  <tr id="add-buildfiles-dialog">
+    <td class="title">Add all known buildfile types to Ant view</td>
+    <td class="content">
+      The <b>Buildfile Selection</b> dialog for the <b>Ant</b> view has been updated to allow filtering 
+      for all known kinds of build files rather than just <em>*.xml</em> and <em>build.xml</em>.
+      <p><img src="images/add-buildfiles.png" alt="The Add Buildfiles dialog"/></p> 
+    </td>
+  </tr>
+
+  <tr id="debug-tracing">
+    <td class="title">Debug tracing</td>
+    <td class="content">
+      JDT and Platform Debug have added all debug tracing settings to the <b>Tracing</b> preference page where they can be enabled and disabled as needed without restarting.
+      <p><img src="images/debug-trace.png" alt="Debug tracing options"/></p>
+    </td>
+  </tr>
+
+  <tr id="bp-view-sorting">
+    <td class="title">Breakpoint view sorting</td>
+    <td class="content">
+      The <b>Breakpoints</b> view now has improved sorting that will take into account any line 
+      numbers that appear in the label and sort accordingly.
+      <p><img src="images/bp-sorting.png" alt="Breakpoint view sorting"/></p>
+    </td>
+  </tr>
+
+  <tr id="ant-editor-extension-point">
+    <td class="title">Enhanced Editor Support for Ant 1.8.2</td>
+    <td class="content">
+      The Ant editor has been enhanced with support for the new <a href="http://ant.apache.org/manual/targets.html#extension-points">extension-point</a> 
+      features in Ant 1.8.2.
+      <p><img src="images/ant-extension-assist.png" alt="Ant extension point editor content assist"/></p>
+    </td>
+  </tr>
+
+  <!-- ****************** END OF N&N TABLE ****************** -->
 </tbody>
 </table>
 </body>
