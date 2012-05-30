@@ -126,7 +126,7 @@ ob_start();
 	          <tr>
 	            <td height="30"></td>
 	          </tr>
-	          <tr class="current">
+	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">28</td>
 	            <td align="right" height="20">Mon 08:00 EDT</td>
@@ -135,7 +135,7 @@ ob_start();
 	            <td height="20">&nbsp;&nbsp;<b><a href="#TestPassUsingRC2"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> details</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
-	          <tr>
+	          <tr class="current">
 	            <td height="20"></td>
 	            <td align="right" height="20">29</td>
 	            <td align="right" height="20">Tue 08:00 EDT</td>
