@@ -87,7 +87,7 @@ ob_start();
 	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">17</td>
-	            <td align="right" height="20">Wed 19:00/21:00 EDT</td>
+	            <td align="right" height="20">Wed 19:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 1 build</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#RC0"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> goals</a></b></td>
@@ -117,7 +117,7 @@ ob_start();
 	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">24</td>
-	            <td align="right" height="20">Wed 19:00/21:00 EDT</td>
+	            <td align="right" height="20">Wed 19:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 2 build</b></td>
 	            <td height="20">&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#RC2"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> goals</a></b></td>
@@ -147,7 +147,7 @@ ob_start();
 	          <tr class="current">
 	            <td height="20"></td>
 	            <td align="right" height="20">31</td>
-	            <td align="right" height="20">Wed 19:00/21:00 EDT</td>
+	            <td align="right" height="20">Wed 19:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 3 build</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#RC3"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> goals</a></b></td>
@@ -183,7 +183,7 @@ ob_start();
 	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">7</td>
-	            <td align="right" height="20">Wed 19:00/21:00 EDT</td>
+	            <td align="right" height="20">Wed 19:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 4 build</b></td>
 	            <td height="20">&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#RC4"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> goals</a></b></td>
