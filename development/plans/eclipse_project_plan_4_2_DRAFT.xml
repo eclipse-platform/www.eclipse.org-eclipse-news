@@ -472,14 +472,14 @@ are available in the <a href="http://www.eclipse.org/eclipse/development/plans/f
 	we are delivering complete basic Java 7 functionality in Indigo SR1 (September 2011).
 	Further enhancements to Java 7 development tools will continue in the Juno release.
 </li>
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
 	<strong>Migrate SWT graphics operations to Cairo.</strong>
 	GTK+ is transitioning away from X Window System in favor of Cairo for drawing
 	operations. The GTK+ port of SWT will migrate drawing operations to Cairo in
 	preparation for a future port of SWT to GTK+ 3.
 	 [SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=354978">354978</a>)
 </li>
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
 	<strong>BiDi enhancements.</strong>
 	We will invest in ensuring the Eclipse platform remains a first class basis for	products 
 	supporting bidirectional text (BiDi). Areas of investigation include:  support for text with internal 
@@ -543,7 +543,7 @@ are available in the <a href="http://www.eclipse.org/eclipse/development/plans/f
 	changes to the project build infrastructure, tools, and development practices.
 	[All Components] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=345479">345479</a>)
 </li>
-<li>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
 	<strong>Make Eclipse Platform 4 enterprise ready.</strong>
 	Version 4 of the Eclipse Platform has had two releases since graduating
 	from the e4 incubator, but was still treated as secondary to the 3.x platform generation.
@@ -554,7 +554,7 @@ are available in the <a href="http://www.eclipse.org/eclipse/development/plans/f
 	regression tests against Platform version 4.
 	[Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=359626">359626</a>)
 </li>
-<li>
+<li>(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> committed)
 	<strong>Build system consolidation.</strong>
 	The 3.x and 4.x platform builds currently use different build systems and run on
 	different build hardware. We will consolidate these systems to run all builds
