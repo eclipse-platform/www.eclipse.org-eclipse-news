@@ -41,7 +41,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>May 31, 2012 - RC3 sign-off</b></p>
+			<p><b>June 4, 2012 - All-day test pass against RC3</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -144,7 +144,7 @@ ob_start();
 	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC2"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> rules</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
-	          <tr class="current">
+	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">31</td>
 	            <td align="right" height="20">Wed 19:00 EDT</td>
@@ -163,7 +163,7 @@ ob_start();
 	            <td height="20"></td>
 	          </tr>
 	          <tr>
-	            <td height="20"></td>
+	            <tr class="current">
 	            <td align="right" height="20">4</td>
 	            <td align="right" height="20">Mon 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>All-day test pass against RC3</b></td>
@@ -182,7 +182,7 @@ ob_start();
 	          </tr>
 	          <tr>
 	            <td height="20"></td>
-	            <td align="right" height="20">7</td>
+	            <td align="right" height="20">6</td>
 	            <td align="right" height="20">Wed 19:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 4 build</b></td>
 	            <td height="20">&nbsp;</td>
