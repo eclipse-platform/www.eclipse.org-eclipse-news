@@ -81,7 +81,7 @@ ob_start();
       			Intellectual property logs, including list of committers, contributors, and
       			third party code dependencies.
       		</li>
-			<li>Porting Guides<br>
+			<li><b>Porting Guides</b><br>
 			    Eclipse project porting guides detail incompatible API changes,
 			    and recommended client changes in each release. For each change
 			    there is a summary of what clients are affected, and steps for clients
