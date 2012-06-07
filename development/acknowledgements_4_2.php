@@ -99,8 +99,11 @@ appreciated.
             
 
 <h3>Active Committers</h3>
+<p>
 This Eclipse Project release was brought to you by the following committers. These committers
 were active at the time of the release (one or more commits in the past nine months):
+</p>
+<p>
 <table width=100%>
 <tr>
 <td>Andrew Niefer</td>
@@ -175,6 +178,7 @@ were active at the time of the release (one or more commits in the past nine mon
 <td>Tomasz Zarna</td>
 </tr>
 </table>
+</p>
 </div>
 
 <?php
