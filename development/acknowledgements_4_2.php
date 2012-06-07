@@ -100,7 +100,7 @@ appreciated.
 
 <h3>Active Committers</h3>
 <p>
-This Eclipse Project release was brought to you by the following committers. These committers
+This Eclipse and Equinox release was brought to you by the following committers. These committers
 were active at the time of the release (one or more commits in the past nine months):
 </p>
 <p>
@@ -110,11 +110,13 @@ were active at the time of the release (one or more commits in the past nine mon
 <td>Ankur Sharma</td>
 <td>Ayushman Jain</td>
 <td>Bienjamin Cabe</td>
+<td>BJ Hargrave</td>
 </tr>
 <tr>
 <td>Bogdan Gheorghe</td>
 <td>Boris Bokowski</td>
-<td>Brian De</td>
+<td>Borislav Kapukaranov</td>
+<td>Brian de Alwis</td>
 <td>Carolyn MacLeod</td>
 </tr>
 <tr>
@@ -122,34 +124,40 @@ were active at the time of the release (one or more commits in the past nine mon
 <td>Chris Austin</td>
 <td>Curtis Windatt</td>
 <td>Danail Branekov</td>
+<td>Daniel Leberre</td>
 </tr>
 <tr>
 <td>Dani Megert</td>
 <td>David Williams</td>
 <td>Dean Roberts</td>
 <td>Deepak Azad</td>
+<td>DJ Houghton</td>
 </tr>
 <tr>
-<td>DJ Houghton</td>
 <td>Eric Moffatt</td>
 <td>Felipe Heidrich</td>
+<td>Glynn Normington</td>
 <td>Grant Gayed</td>
+<td>Ian Bull</td>
 </tr>
 <tr>
-<td>Ian Bull</td>
 <td>James Blackburn</td>
 <td>Jay Arthanareeswaran</td>
 <td>John Arthorne</td>
+<td>John Ross</td>
+<td>Lazar Kirchev</td>
 </tr>
 <tr>
 <td>Kim Moir</td>
 <td>Krzysztof Daniel</td>
 <td>Lakshmi Shanmugam</td>
 <td>Lars Vogel</td>
+<td>Markus Keller</td>
 </tr>
 <tr>
-<td>Markus Keller</td>
+<td>Martin Lippert</td>
 <td>Mat Hall</td>
+<td>Mengxin Zhu</td>
 <td>Michael Rennie</td>
 <td>Oleg Besedin</td>
 </tr>
@@ -158,21 +166,24 @@ were active at the time of the release (one or more commits in the past nine mon
 <td>Pascal Rapicault</td>
 <td>Paul Webster</td>
 <td>Pawel Piech</td>
+<td>Raksha Vasisht</td>
 </tr>
 <tr>
-<td>Raksha Vasisht</td>
 <td>Satyam Kandula</td>
 <td>Serge Beauchamp</td>
 <td>Silenio Quarti</td>
-</tr>
-<tr>
 <td>Srikanth Adayapalam</td>
 <td>Stephan Herrmann</td>
-<td>Susan McCourt</td>
-<td>Szymon Brandys</td>
 </tr>
 <tr>
+<td>Stoyan Boshev</td>
+<td>Susan McCourt</td>
+<td>Szymon Brandys</td>
 <td>Szymon Ptaszkiewicz</td>
+<td>Thomas Hallgren</td>
+</tr>
+<tr>
+<td>Tobias Oberlies</td>
 <td>Tom Schindl</td>
 <td>Tom Watson</td>
 <td>Tomasz Zarna</td>
