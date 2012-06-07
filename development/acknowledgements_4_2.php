@@ -110,24 +110,26 @@ were active at the time of the release (one or more commits in the past nine mon
 <td>Ankur Sharma</td>
 <td>Ayushman Jain</td>
 <td>Bienjamin Cabe</td>
-<td>BJ Hargrave</td>
 </tr>
 <tr>
+<td>BJ Hargrave</td>
 <td>Bogdan Gheorghe</td>
 <td>Boris Bokowski</td>
 <td>Borislav Kapukaranov</td>
-<td>Brian de Alwis</td>
-<td>Carolyn MacLeod</td>
 </tr>
 <tr>
+<td>Brian de Alwis</td>
+<td>Carolyn MacLeod</td>
 <td>Chris Goldthorpe</td>
 <td>Chris Austin</td>
+</tr>
+<tr>
 <td>Curtis Windatt</td>
 <td>Danail Branekov</td>
 <td>Daniel Leberre</td>
+<td>Dani Megert</td>
 </tr>
 <tr>
-<td>Dani Megert</td>
 <td>David Williams</td>
 <td>Dean Roberts</td>
 <td>Deepak Azad</td>
@@ -138,24 +140,26 @@ were active at the time of the release (one or more commits in the past nine mon
 <td>Felipe Heidrich</td>
 <td>Glynn Normington</td>
 <td>Grant Gayed</td>
-<td>Ian Bull</td>
 </tr>
 <tr>
+<td>Ian Bull</td>
 <td>James Blackburn</td>
 <td>Jay Arthanareeswaran</td>
 <td>John Arthorne</td>
-<td>John Ross</td>
-<td>Lazar Kirchev</td>
 </tr>
 <tr>
+<td>John Ross</td>
+<td>Lazar Kirchev</td>
 <td>Kim Moir</td>
 <td>Krzysztof Daniel</td>
+</tr>
+<tr>
 <td>Lakshmi Shanmugam</td>
 <td>Lars Vogel</td>
 <td>Markus Keller</td>
+<td>Martin Lippert</td>
 </tr>
 <tr>
-<td>Martin Lippert</td>
 <td>Mat Hall</td>
 <td>Mengxin Zhu</td>
 <td>Michael Rennie</td>
@@ -166,24 +170,26 @@ were active at the time of the release (one or more commits in the past nine mon
 <td>Pascal Rapicault</td>
 <td>Paul Webster</td>
 <td>Pawel Piech</td>
-<td>Raksha Vasisht</td>
 </tr>
 <tr>
+<td>Raksha Vasisht</td>
 <td>Satyam Kandula</td>
 <td>Serge Beauchamp</td>
 <td>Silenio Quarti</td>
-<td>Srikanth Adayapalam</td>
-<td>Stephan Herrmann</td>
 </tr>
 <tr>
+<td>Srikanth Adayapalam</td>
+<td>Stephan Herrmann</td>
 <td>Stoyan Boshev</td>
 <td>Susan McCourt</td>
+</tr>
+<tr>
 <td>Szymon Brandys</td>
 <td>Szymon Ptaszkiewicz</td>
 <td>Thomas Hallgren</td>
+<td>Tobias Oberlies</td>
 </tr>
 <tr>
-<td>Tobias Oberlies</td>
 <td>Tom Schindl</td>
 <td>Tom Watson</td>
 <td>Tomasz Zarna</td>
