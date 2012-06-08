@@ -100,10 +100,13 @@ ob_start();
 				      generation platform for pervasive, component-based applications and tools.<br>
 		        </li>
 		        <li> 
-		          <a href="http://eclipse.org/eclipse/incubator" target="_top">Eclipse Project Incubator</a><br>
-				      The Eclipse Project Incubator subproject gives the community around the Eclipse Project 
-			a forum and set of resources for innovation and investigation of new and alternative ideas.  The
-			project is essentially an umbrella for the incubation work associated with the main Eclipse sub-projects.
+		          <a href="http://eclipse.org/orion" target="_top">Orion</a><br>
+				  Orion's objective is to create a browser-based open tool integration platform 
+				  which is entirely focused on developing for the web, in the web. Tools are written 
+				  in JavaScript and run in the browser. Unlike other attempts at creating browser-based 
+				  development tools, this is not an IDE running in a single tab. Links work and can 
+				  be shared. You can open a file in a new tab. Great care has been taken to provide 
+				  a web experience for development. 
 		        </li>
 		      </ul>
 		</div>
