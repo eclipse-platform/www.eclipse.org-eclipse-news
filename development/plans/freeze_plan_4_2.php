@@ -41,7 +41,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>June 8, 2012 - sign-off for RC4</b></p>
+			<p><b>June 11, 2012 - any changes need PMC approval</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -180,7 +180,7 @@ ob_start();
 	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC3"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> rules</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
-	          <tr class="current">
+	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">6</td>
 	            <td align="right" height="20">Wed 19:00 EDT</td>
@@ -195,7 +195,7 @@ ob_start();
 			   <tr>
 	            <td height="20"></td>
 	          </tr>
-			  <tr>
+			  <tr class="current">
 	            <td height="20"></td>
 				<td align="right" height="20"></td>
 	            <td align="right" height="20"></td>
