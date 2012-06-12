@@ -59,7 +59,7 @@ Special thanks go to Anton Leherbauer, Danail Nachev, and Marcel Bruch for patch
 
 <p>
 JDT UI sends thanks to code contributors Sergey Prigogin, Paul Fullbright, Thomas Reinhardt, 
-B&ouml;jrn Michael, Philippe Marschall, Michael Pellaton, and Stephan Herrmann. Thanks also to
+Bj&ouml;rn Michael, Philippe Marschall, Michael Pellaton, and Stephan Herrmann. Thanks also to
 David Wegener for his answers on the forums/newsgroups.
 </p>
 <p>
@@ -109,7 +109,7 @@ were active at the time of the release (one or more commits in the past nine mon
 <td>Andrew Niefer</td>
 <td>Ankur Sharma</td>
 <td>Ayushman Jain</td>
-<td>Bienjamin Cabe</td>
+<td>Benjamin Cabe</td>
 </tr>
 <tr>
 <td>BJ Hargrave</td>
@@ -178,7 +178,7 @@ were active at the time of the release (one or more commits in the past nine mon
 <td>Silenio Quarti</td>
 </tr>
 <tr>
-<td>Srikanth Adayapalam</td>
+<td>Srikanth Sankaran</td>
 <td>Stephan Herrmann</td>
 <td>Stoyan Boshev</td>
 <td>Susan McCourt</td>
