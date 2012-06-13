@@ -144,7 +144,7 @@ table.news tr td.content {vertical-align: top; width: 70%;}
   <tr id="enhanced-switch-diagnostics">
     <td class="title">Enhanced diagnostics for detection of incomplete switch statements</td>
     <td class="content">
-      	The JDT's analysis regarding incomplete switch statements is now stronger and can be configured more in detail. See <a href="../tasks/task-ensuring_switch_completeness.htm">here</a> for background. 
+      	The JDT's analysis regarding incomplete switch statements is now stronger and can be configured more in detail.
 	  	<p>The compiler now separately checks two criteria for a switch statement to be complete:</p>
 	  	<ul>
 	  	<li>A switch statement on an enum should define one case statement for each of the enum's constants</li>
@@ -173,7 +173,6 @@ table.news tr td.content {vertical-align: top; width: 70%;}
     <td class="title">New options to detect resource leaks</td>
     <td class="content">The compiler can now detect leakage of resources i.e. local variables of type
       <code>java.lang.AutoCloseable</code> (compliance &gt;= 1.7) and <code>java.io.Closeable</code> (compliance &lt;= 1.6).
-      See <a href="../tasks/task-avoiding_resource_leaks.htm">here</a> for background information.
 	  <p><img src="images/resource-leak-default-warning.png" alt="Errors/Warnings page with 'Resource leaks' highlighted"/></p>
       <p> When the <b>Resource leak</b> option on the <b>Java &gt; Compiler &gt; Errors/Warnings</b> preference page is enabled,
       the compiler will issue an error or a warning if the <code>close()</code> method is not invoked locally on a resource.</p>
@@ -291,7 +290,6 @@ table.news tr td.content {vertical-align: top; width: 70%;}
 		APIs from third-party libraries is currently missing.
 		An initial set of quick fixes is included which will be further improved in the future.
 		</p>
-		<p>Also see <a href="../tasks/task-using_null_annotations.htm">here</a> for background information.</p>
     </td>
   </tr>
 
