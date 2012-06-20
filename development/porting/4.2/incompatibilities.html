@@ -33,7 +33,7 @@
 <!-- ############################################## -->
 <h2>1. <a name="runtime-auth">Platform keyring implementation removed</a></h2>
 <p><strong>What is affected:</strong> Clients that call the following methods for
-storing and retrieving passwords in the platform keyring file:
+storing and retrieving passwords in the platform keyring file:</p>
 <ul>
 <li>Platform#addAuthorizationInfo</li>
 <li>Platform#getAuthorizationInfo</li>
@@ -41,7 +41,7 @@ storing and retrieving passwords in the platform keyring file:
 <li>Platform#addProtectionSpace</li>
 <li>Platform#getProtectionSpace</li>
 </ul>
-</p>
+
 <p><strong>Description:</strong> These APIs were deprecated and superseded by new
 API in the <tt>org.eclipse.equinox.security.storage</tt> package in Eclipse 3.4.
 These APIs made use of a custom encryption algorithm that caused problems
@@ -62,13 +62,13 @@ or includes a removed bundle.</p>
 <p><strong>Description:</strong> The following bundles provided implementation
 of compatibility mechanisms to support bundles compiled against Eclipse prior to version 3.0.
 These bundles have not contained any API since the 3.0 release, and no API is
-changed or removed as a consequence of these bundles being removed.
+changed or removed as a consequence of these bundles being removed.</p>
 <ul>
 <li>org.eclipse.core.boot</li>
 <li>org.eclipse.ui.presentations.r21</li>
 <li>org.eclipse.ui.workbench.compatibility</li>
 </ul>
-</p>
+
 <p><strong>Action required:</strong> Clients with a bundle or feature including
 or requiring any of these bundles should remove the requirement.
 </p>
@@ -88,14 +88,14 @@ or requiring the bundle <tt>org.eclipse.help.appserver</tt> should remove the re
 <!-- ############################################## -->
 <h2>4. <a name="update-manager">Update Manager bundles removed</a></h2>
 <p><strong>What is affected:</strong> Clients that rely on the provisional API
-or implementation found in the following bundles:
+or implementation found in the following bundles:</p>
 <ul>
 <li>org.eclipse.update.core</li>
 <li>org.eclipse.update.core.win32</li>
 <li>org.eclipse.update.scheduler</li>
 <li>org.eclipse.update.ui</li>
 </ul>
-</p>
+
 <p><strong>Description:</strong> These provisional APIs were deprecated and 
 superseded by new API provided by Equinox p2 in Eclipse 3.4. These bundles have
 been removed from the Eclipse SDK in 4.2, but remain available and fully compatible
@@ -161,14 +161,14 @@ Equinox HTTP service implementation will no longer work with the
 Servlet 2.5 and JSP 2.1 APIs.  Also note that the 
 Jasper and expresson language implementation bundles
 have changed in order to support the Servlet 3.0 and JSP 2.2 
-specifications.  The following bundles have been removed:
+specifications.  The following bundles have been removed:</p>
 <ul>
   <li>org.apache.jasper</li>
   <li>org.apache.commons.el</li>
   <li>org.mortbay.jetty.server</li>
   <li>org.mortbay.jetty.util</li>
 </ul>
-These have been replaced with the following to support Servlet 3.0 and JSP 2.2:
+<p>These have been replaced with the following to support Servlet 3.0 and JSP 2.2:</p>
 <ul>
   <li>org.eclipse.jetty.continuation</li>
   <li>org.eclipse.jetty.http</li>
@@ -181,7 +181,7 @@ These have been replaced with the following to support Servlet 3.0 and JSP 2.2:
   <li>org.apache.jasper.glassfish</li>
   <li>com.sun.el</li>
 </ul>
-</p>
+
 <p><strong>Action required:</strong> Clients relying on old Servlet and JSP specifications,
 or directly requiring old Jetty 6 packages and bundles, must migrate to the new Servlet 3.0 specification,
 and Jetty 8.

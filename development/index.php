@@ -87,7 +87,7 @@ ob_start();
 			    there is a summary of what clients are affected, and steps for clients
 			    to migrate.
 		        <ul>
-		        <li><a href="porting/eclipse_4_2_porting_guide.html">Eclipse Platform 4.2 Porting Guide</a></li>
+		        <li><a href="porting/eclipse_4_2_porting_guide.php">Eclipse Platform 4.2 Porting Guide</a></li>
 		        </ul>
       		</li>
       		</ul>
