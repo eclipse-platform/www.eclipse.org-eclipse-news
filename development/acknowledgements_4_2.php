@@ -96,7 +96,18 @@ nuances of Linux file system permissions (e.g. bug 378708) and very low level th
 internal resolver to lesson network failures during builds (bug 381132). Their help and attention to detail is much
 appreciated. 
 </p>
-            
+<p>
+The Platform UI team would first like to thank the whole Juno release train community
+for their efforts to make Juno on 4.2 happen. Without their active
+participation this would never have been possible. 
+</p><p>
+Over the course of the last few years many folks have worked on the new
+Platform UI code and we thank them all but would like to extend special thanks
+to the following people who have made (and continue to make) significant
+contributions to the Eclipse 4 efforts: Lars Vogel, Sopot Cela, Dimitar Iordanov,  Alex Ruiz, Patrick Tasse, Victor V
+Rubezhny, Sascha Becher, Hendrik Eeckhaut, Stephan Wahlbrink, Martin Kirst,
+Shahin Kahriz, Paul Fullbright, Florina Craciunescu, Mohamed Tarief
+</p>            
 
 <h3>Active Committers</h3>
 <p>
