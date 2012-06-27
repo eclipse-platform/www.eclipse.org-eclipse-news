@@ -33,7 +33,7 @@ table.news tr td.content {vertical-align: top; width: 70%;}
 
 <body>
 <h1>Eclipse &quot;New and Noteworthy&quot; Template</h1>
-<p>Last revised 2010-11-30.</p>
+<p>Last revised 2012-06-27.</p>
 <p>This is the template for the &quot;New and Noteworthy&quot; document that
   accompanies each Eclipse project milestone build.</p>
 <p>Note: This template document is XHTML 1.0 Transitional. Please use the W3C <a href="http://validator.w3.org/#validate_by_input">XHTML
@@ -42,8 +42,6 @@ table.news tr td.content {vertical-align: top; width: 70%;}
     attribute, and other tedious little details.</p>
 
 <ul>
-  <li><a href="#Instructions">Instructions</a></li>
-  <li><a href="#Platform41">Platform 4.1</a></li>
   <li><a href="#Platform">Platform</a></li>
   <li><a href="#JDT">JDT</a></li>
   <li><a href="#PDE">PDE</a></li>
@@ -66,7 +64,7 @@ table.news tr td.content {vertical-align: top; width: 70%;}
         (not just to members of the Eclipse Platform development team). Tell
         end users about changes they'll see in the UI. Tell component writers
         about changes they'll see at the client- and server-side APIs. Try to
-        generate some excitement; save the boring details for the manual. The
+        generate some excitement; save the boring details for the manual; be short and don't repeat yourself. The
         description should be complete sentences, with trailing punctuation.
       <p>Use active voice (say "you", not "the user"), and follow other advice in the
         <a href="http://wiki.eclipse.org/Eclipse_Doc_Style_Guide#topic-content">Topic&nbsp;Content</a>
@@ -114,19 +112,18 @@ table.news tr td.content {vertical-align: top; width: 70%;}
         underscore 
         &quot;_&quot;. </p>
       <p>Put all the images in a sibling directory named &quot;images&quot;.
-        This gives HTML like &lt;img src=&quot;images/foo.png&quot; alt=&quot;The
-        Foo View&quot; /&gt;. Include a suitable alt property (which is mandatory
-        in XHTML 1.0). Do not embed the width and height of the image.</p>
-      <p>The images should be left justified (as opposed to centered). </p>
+        This gives XHTML like:<br/>
+        <code>&lt;img src=&quot;images/foo-view.png&quot; alt=&quot;The Foo View&quot;/&gt;</code><br/>
+        Include a suitable <a href="http://www.w3.org/TR/html4/struct/objects.html#h-13.8"><code>alt</code></a> attribute
+        (which is mandatory in XHTML 1.0). Do not embed the width and height of the image.</p>
+      <p>If the <code>alt</code> attribute text cannot sufficiently replace the image contents
+        (e.g. for a screenshot that shows source code), then enclose the img element in a link
+        to a plain &quot;.txt&quot; file with the same name as the image:<br/>
+        <code>&lt;a href=&quot;images/foo-view.txt&quot;&gt;&lt;img ...</code></p>
+      <p>The images should be left-justified (as opposed to centered). </p>
       <p>Use the W3C <a href="http://validator.w3.org/#validate_by_input">XHTML
           Markup Validation Service</a> to check your document's markup before
           submitting.</p></td>
-  </tr>
-  
-  <tr>
-    <td id="Platform41" class="section" colspan="2">
-      <h2>Platform 4.1</h2>
-    </td>
   </tr>
   
   <tr>
@@ -142,27 +139,41 @@ table.news tr td.content {vertical-align: top; width: 70%;}
     </td>
   </tr>
   
-  <!-- NOTE: extra spacing rows between entries are no longer needed! -->
-
   <tr id="second-item">
     <td class="title">Second item</td>
     <td class="content">
       Item blurb.
     </td>
   </tr>
-  
+
+
   <tr>
     <td id="JDT" class="section" colspan="2">
       <h2>JDT</h2>
     </td>
   </tr>
   
-  
+  <tr id="first-jdt-item">
+    <td class="title">First item</td>
+    <td class="content">
+      Item blurb.
+    </td>
+  </tr>
+
+
   <tr>
     <td id="PDE" class="section" colspan="2">
       <h2>PDE</h2>
     </td>
   </tr>
+  
+  <tr id="first-pde-item">
+    <td class="title">First item</td>
+    <td class="content">
+      Item blurb.
+    </td>
+  </tr>
+
 
   <tr>
     <td id="Equinox" class="section" colspan="2">
@@ -170,6 +181,14 @@ table.news tr td.content {vertical-align: top; width: 70%;}
     </td>
   </tr>
   
+  <tr id="first-equinox-item">
+    <td class="title">First item</td>
+    <td class="content">
+      Item blurb.
+    </td>
+  </tr>
+
+
   <tr>
     <td colspan="2"/>
   </tr>
