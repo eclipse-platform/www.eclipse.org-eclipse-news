@@ -33,7 +33,8 @@
 ob_start();
 ?>		
 	<style type="text/css">
-		table.schedule td {height: 20px;}
+		table.schedule td {height: 20px; padding-left:10px; font-weight:bold;}
+		table.schedule td.date {font-weight:normal; float:right;}
 		table.schedule tr.current td {
 			background-color: #F4EEFF;
 		}
@@ -49,67 +50,67 @@ ob_start();
 			<h3>Detailed Timeline</h3>
 	        <table class="schedule" border="0" cellspacing="0" cellpadding="0" align="center">
 	          <tr>
-	            <td align="right"><b>August 2012</b>&nbsp;</td>
+	            <td class="date"><b>August 2012</b></td>
 	          </tr>
 	          <tr class="current">
 	            <td></td>
-	            <td align="right">15</td>
-	            <td align="right">Wed 08:00 EDT</td>
-	            <td>&nbsp;&nbsp;</td>
-	            <td>&nbsp;&nbsp;<b>Release Candidate 1 build</b></td>
-	            <td>&nbsp;&nbsp;</td>
+	            <td class="date">15</td>
+	            <td class="date">Wed 08:00 EDT</td>
+	            <td></td>
+	            <td><b>Release Candidate 1 build</b></td>
+	            <td></td>
 	          </tr>         
 			  <tr>
 	            <td height="30"></td>
 	          </tr>
 	          <tr>
 	            <td></td>
-	            <td align="right">29</td>
-	            <td align="right">Wed 08:00 EDT</td>
-	            <td>&nbsp;&nbsp;</td>
-	            <td>&nbsp;&nbsp;<b>Release Candidate 2 build</b></td>
-	            <td>&nbsp;&nbsp;</td>
+	            <td class="date">29</td>
+	            <td class="date">Wed 08:00 EDT</td>
+	            <td></td>
+	            <td><b>Release Candidate 2 build</b></td>
+	            <td></td>
 	          </tr>         
 	          <tr>
 	            <td></td>
-	            <td align="right">30</td>
-	            <td align="right">Thu 08:00 EDT</td>
-	            <td>&nbsp;&nbsp;</td>
-	            <td>&nbsp;&nbsp;<b>Start 1-day test pass against RC2</b></td>
-	            <td>&nbsp;&nbsp;</td>
+	            <td class="date">30</td>
+	            <td class="date">Thu 08:00 EDT</td>
+	            <td></td>
+	            <td><b>Start 1-day test pass against RC2</b></td>
+	            <td></td>
 	          </tr>         
 	          <tr>
-	            <td align="right"><b>September 2012</b>&nbsp;</td>
+	            <td class="date"><b>September 2012</b></td>
 	          </tr>
 	          <tr>
 	            <td></td>
-	            <td align="right">5</td>
-	            <td align="right">Wed 08:00 EDT</td>
-	            <td>&nbsp;&nbsp;</td>
-	            <td>&nbsp;&nbsp;<b>Release Candidate 3 build</b></td>
-	            <td>&nbsp;&nbsp;</td>
+	            <td class="date">5</td>
+	            <td class="date">Wed 08:00 EDT</td>
+	            <td></td>
+	            <td><b>Release Candidate 3 build</b></td>
+	            <td></td>
 	          </tr>         
 			  <tr>
 	            <td height="30"></td>
 	          </tr>
 	          <tr>
 	            <td></td>
-	            <td align="right">6</td>
-	            <td align="right">Thu 08:00 EDT</td>
-	            <td>&nbsp;&nbsp;</td>
-	            <td>&nbsp;&nbsp;<b>Start 1-day test pass against RC3</b></td>
-	            <td>&nbsp;&nbsp;</td>
+	            <td class="date">6</td>
+	            <td class="date">Thu 08:00 EDT</td>
+	            <td></td>
+	            <td><b>Start 1-day test pass against RC3</b></td>
+	            <td></td>
 	          </tr>         
 			  <tr>
 	            <td height="30"></td>
 	          </tr>
 	          <tr>
 	            <td></td>
-	            <td align="right">12</td>
-	            <td align="right">Wed 08:00 EDT</td>
-	            <td>&nbsp;&nbsp;</td>
-	            <td>&nbsp;&nbsp;<b>Release Candidate 4 build [if required]</b></td>
-	            <td>&nbsp;&nbsp;</td>
+	            <td class="date">12</td>
+	            <td class="date">Wed 08:00 EDT</td>
+	            <td></td>
+	            <td><b>Release Candidate 4 build [if required]</b></td>
+	            <td></td>
 	          </tr>         
 	        </table>
 	        <p>
@@ -135,7 +136,7 @@ ob_start();
 	        of serious problems found in the June 2012 Juno 4.2 release. We make and verify each 
 	        fix carefully, so that we do not need to tie up the entire development 
 	        team in time-consuming test passes. As always, we welcome help from the 
-	        community with testing the release candidates. By default,&nbsp; Juno 4.2 SR1
+	        community with testing the release candidates. By default, Juno 4.2 SR1
 	        is supposed to work exactly like the initial Juno 4.2 release except for the problems we intended 
 	        to fix. All problems fixed in Juno 4.2 SR1 are in the Eclipse bugzilla database 
 	        and flagged with Target Milestone &quot;4.2.1&quot; (query bugzilla for 
