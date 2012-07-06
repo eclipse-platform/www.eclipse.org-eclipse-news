@@ -36,10 +36,10 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>Releases currently under development</h3>
 			<ul>
-		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_2.xml"> Eclipse Project Juno 4.2 Plan</a><br>
-		        This document lays out the feature and API set for the Juno 4.2 release of the Eclipse Project.</li>
-		      <li><a href="plans/freeze_plan_4_2.php"> Eclipse Project Juno 4.2 Endgame Plan</a><br>
-				Information about how we plan to wrap up the Juno release (versions 3.8 and 4.2).</li>
+		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_3.xml"> Eclipse Project Kepler 4.3 Plan</a><br>
+		        This document lays out the feature and API set for the Kepler 4.3 release of the Eclipse Project.</li>
+		      <li><a href="plans/freeze_plan_4_2_1.php">Eclipse Project Juno SR1 Endgame Plan</a><br>
+				Information about how we plan to wrap up the Juno SR1 release (versions 3.8.1 and 4.2.1).</li>
 		    </ul>
       	</div>
 		<div class="homeitem3col">
@@ -126,6 +126,10 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>Historical information about past releases</h3>			
 			<ul>
+		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_2.xml"> Eclipse Project Juno 4.2 Plan</a><br>
+		        This document lays out the feature and API set for the Juno 4.2 release of the Eclipse Project.</li>
+		      <li><a href="plans/freeze_plan_4_2.php"> Eclipse Project Juno 4.2 Endgame Plan</a><br>
+				Information about how we wrapped up the Juno release (versions 3.8 and 4.2).</li>
 		      <li><a href="plans/freeze_plan_3_7_2.php"> Eclipse Project Indigo 3.7 SR2 Endgame Plan</a><br>
 				Information about how we wrapped up Indigo 3.7 Service Release 2 (version 3.7.2).</li>
 		      <li><a href="plans/freeze_plan_4_1_1.php"> Eclipse Project Indigo 4.1 SR1 Endgame Plan</a><br>
@@ -152,44 +156,16 @@ ob_start();
 		        This document lays out the feature and API set for the Helios (3.6) release of the Eclipse Project. </li>
 		      <li><a href="plans/freeze_plan_3.6.php"> Eclipse Project Helios Endgame Plan</a><br>
 	    		Information about how we wrapped up the Helios release (version 3.6).</li>     
-            <li><a href="plans/freeze_plan_3_5_2.php"> Eclipse Project Galileo SR2 Endgame Plan</a><br>
-      			Information about how we wrapped up Galileo Service Release 2 (version 3.5.2).</li>     
-	        <li><a href="plans/freeze_plan_3_5_1.php"> Eclipse Project Galileo SR1 Endgame Plan</a><br>
-	    	 	Information about how we wrapped up Galileo Service Release 1 (version 3.5.1).</li>     
 	      	<li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/e4/development/plan/e4_plan_0_9.xml"> e4 Project 0.9 Release Plan</a><br>
 	        	This document lays out the feature and API set for the 0.9 release of the e4 Project. </li>
 	      	<li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/eclipse_project_plan_3_5.xml"> Eclipse Project Galileo Plan</a><br>
 	        	This document lays out the feature and API set for the Galileo (3.5) release of the Eclipse Project. </li>
-	        <li><a href="freeze_plan_3.5.php"> Eclipse Project Galileo Endgame Plan</a><br>
-	    		Information about how we wrapped up the Galileo release (version 3.5).</li>     
-	        <li><a href="freeze_plan_3_4_2.php"> Eclipse Project Ganymede SR2 Endgame Plan</a><br>
-	    		Information about how we wrapped up Ganymede Service Release 2 (version 3.4.2).</li>     
-	        <li><a href="freeze_plan_3_4_1.php"> Eclipse Project Ganymede SR1 Endgame Plan</a><br>
-	    		Information about how we wrapped up Ganymede Service Release 1 (version 3.4.1).</li>     
 	      <li><a href="eclipse_project_plan_3_4.html"> Eclipse Project 3.4 Plan</a><br>
 	        This document lays out the feature and API set for the 3.4 release of Eclipse Project. </li>
-	        <li><a href="freeze_plan_3.4.php"> Eclipse Project 3.4 Endgame Plan</a><br>
-	    		Information about we wrapped up the 3.4 (Ganymede) release of Eclipse. </li>     
-			 <li><a href="freeze_plan_3_3_2.php"> Eclipse Project 3.3.2 Endgame Plan</a><br>
-    		Information about we wrapped up the 3.3.2 (Europa winter maintenance) release of Eclipse. </li>
 			 <li><a href="eclipse_project_plan_3_3.html"> Eclipse Platform Project 3.3 Plan</a><br>
- 	       This document lays out the feature and API set for the 3.3 release of 
-    	    Eclipse. </li>
-	      <li><a href="freeze_plan_3_3_1.html"> Eclipse Project 3.3.1 Endgame Plan</a><br>
-    		Information about we wrapped up the 3.3.1 (Europa fall maintenance) release of Eclipse. </li>
-      		<li><a href="freeze_plan_3.3.html">Eclipse 3.3 Endgame Plan</a><br>
-	        Information about we wrapped up the 3.3 (Europa) release of Eclipse. 
-    	   </li>
-	      <li><a href="freeze_plan_3_2_2.html"> Eclipse Project 3.2.2 Endgame Plan</a><br>
-    		Information about we wrapped up the 3.2.2 (Callisto winter maintenance) release of Eclipse. </li>
-	      	<li><a href="freeze_plan_3.2.html"> Eclipse Project 3.2 Endgame Plan</a><br>
-    	    Information about how we wrapped up the 3.2 (Callisto) release of Eclipse. </li>
+ 	       This document lays out the feature and API set for the 3.3 release of Eclipse. </li>
  	        <li><a href="eclipse_project_plan_3_2.html"> Eclipse Platform Project 3.2 Plan</a><br>
         	This document lays out the feature and API set for the 3.2 release of Eclipse. </li>
-			<li><a href="eclipse_maintenance_schedule_3_1_x.html" >
-				Eclipse 3.1 Maintenance Release Schedule</a><br>
-      			Timeline for 3.1.x maintenance stream.
-      		</li>
       		<li><a href="eclipse_3_1_stats.html">
       			Eclipse 3.1 by the numbers</a><br>
       			Some light-hearted statistics for the 3.1 release cycle.
@@ -203,10 +179,6 @@ ob_start();
       		<li><a href="eclipse_proposals_3_1.html">Eclipse 3.1 Proposals</a><br>
       			Links to proposals and working documents for various 3.1 plan items.
 			</li>
-      		<li><a href="eclipse_maintenance_schedule_3_0_x.html">
-      			Eclipse 3.0 Maintenance Release Schedule</a><br>
-      			Timeline for 3.0.x maintenance stream (nothing further planned).
-      		</li>
 			<li><a href="eclipse_project_plan_3_0.html">
 				Eclipse Project 3.0 Plan (Final)</a><br>
 				This document lays out the feature and API set for the 3.0 release of Eclipse.
