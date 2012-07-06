@@ -33,8 +33,9 @@
 ob_start();
 ?>		
 	<style type="text/css">
-		table.schedule td {height: 20px; padding-left:10px; font-weight:bold;}
-		table.schedule td.date {font-weight:normal; float:right;}
+		table.schedule td {height: 20px; font-weight:bold; padding-left:20px;}
+		table.schedule td.date {font-weight:normal; }
+		table.schedule td.spacer {padding-top:10px; padding-bottom:10px; }
 		table.schedule tr.current td {
 			background-color: #F4EEFF;
 		}
@@ -48,27 +49,41 @@ ob_start();
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
-	        <table class="schedule" border="0" cellspacing="0" cellpadding="0" align="center">
+	        <table class="schedule" border="0" cellspacing="0" align="center">
 	          <tr>
-	            <td class="date"><b>August 2012</b></td>
+	            <td>July 1 - Aug 14</td>
 	          </tr>
 	          <tr class="current">
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td>Weekly maintenance builds</td>
+	            <td></td>
+	          </tr>
+			  <tr>
+	            <td class="spacer">&nbsp;</td>
+	          </tr>
+	          <tr>
+	            <td>August 2012</td>
+	          </tr>
+	          <tr>
 	            <td></td>
 	            <td class="date">15</td>
 	            <td class="date">Wed 08:00 EDT</td>
 	            <td></td>
-	            <td><b>Release Candidate 1 build</b></td>
+	            <td>Release Candidate 1 build</td>
 	            <td></td>
 	          </tr>         
 			  <tr>
-	            <td height="30"></td>
+	            <td class="spacer">&nbsp;</td>
 	          </tr>
 	          <tr>
 	            <td></td>
 	            <td class="date">29</td>
 	            <td class="date">Wed 08:00 EDT</td>
 	            <td></td>
-	            <td><b>Release Candidate 2 build</b></td>
+	            <td>Release Candidate 2 build</td>
 	            <td></td>
 	          </tr>         
 	          <tr>
@@ -76,40 +91,37 @@ ob_start();
 	            <td class="date">30</td>
 	            <td class="date">Thu 08:00 EDT</td>
 	            <td></td>
-	            <td><b>Start 1-day test pass against RC2</b></td>
+	            <td>Start 1-day test pass against RC2</td>
 	            <td></td>
 	          </tr>         
 	          <tr>
-	            <td class="date"><b>September 2012</b></td>
+	            <td>September 2012</td>
 	          </tr>
 	          <tr>
 	            <td></td>
 	            <td class="date">5</td>
 	            <td class="date">Wed 08:00 EDT</td>
 	            <td></td>
-	            <td><b>Release Candidate 3 build</b></td>
+	            <td>Release Candidate 3 build</td>
 	            <td></td>
 	          </tr>         
-			  <tr>
-	            <td height="30"></td>
-	          </tr>
 	          <tr>
 	            <td></td>
 	            <td class="date">6</td>
 	            <td class="date">Thu 08:00 EDT</td>
 	            <td></td>
-	            <td><b>Start 1-day test pass against RC3</b></td>
+	            <td>Start 1-day test pass against RC3</td>
 	            <td></td>
 	          </tr>         
 			  <tr>
-	            <td height="30"></td>
+	            <td class="spacer">&nbsp;</td>
 	          </tr>
 	          <tr>
 	            <td></td>
 	            <td class="date">12</td>
 	            <td class="date">Wed 08:00 EDT</td>
 	            <td></td>
-	            <td><b>Release Candidate 4 build [if required]</b></td>
+	            <td>Release Candidate 4 build [if required]</td>
 	            <td></td>
 	          </tr>         
 	        </table>
