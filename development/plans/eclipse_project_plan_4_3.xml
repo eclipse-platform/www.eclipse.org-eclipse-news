@@ -142,7 +142,7 @@ Last revised 16:00 ET July 6, 2012.
   Java Platform itself. Portions are targeted to specific classes of operating
   environments, requiring their source code to only reference facilities available
   in particular class libraries (e.g. J2ME Foundation 1.1, J2SE 1.4, Java 5, etc).</p>
-<p><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
+<p>
   In general, the 4.3 release of the Eclipse Project is developed on a mix
   of Java SE 6 and Java SE 7 VMs. As such, the Eclipse SDK as a whole
   is targeted at all modern, desktop Java VMs. Most functionality is available for
