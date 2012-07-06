@@ -49,7 +49,7 @@ ob_start();
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
-	        <table class="schedule" border="0" cellspacing="0" align="center">
+	        <table class="schedule" border="0" cellspacing="0" align="center" width=100%>
 	          <tr>
 	            <td>July 1 - Aug 14</td>
 	          </tr>
