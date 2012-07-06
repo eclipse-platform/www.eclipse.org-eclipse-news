@@ -33,7 +33,7 @@
 ob_start();
 ?>		
 	<style type="text/css">
-		table.schedule td {height: 20px; font-weight:bold; padding-left:10px;}
+		table.schedule td {font-weight:bold; padding-left:10px;}
 		table.schedule td.date {font-weight:normal; }
 		table.schedule td.spacer {padding-top:10px; padding-bottom:10px; }
 		table.schedule tr.current td {
