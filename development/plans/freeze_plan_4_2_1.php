@@ -125,9 +125,16 @@ ob_start();
 	            <td></td>
 	          </tr>         
 	        </table>
-	        <p>
-	        Note that September 3rd is a holiday in Canada (Labour Day) and the United States (Labor Day).
-	        </p>
+			<p>
+			Here are some holidays during the freeze period to keep in mind:
+			<ul>
+				<li>August 15 - Bangalore, India</li>
+				<li>August 20 - Bangalore, India</li>
+				<li>September 3 - Canada and United States</li>
+				<li>Afternoon of September 10 - Zurich, Switzerland</li>
+				<li>September 19 - Bangalore, India</li>
+			</ul>
+			</p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Useful Links</h3>
