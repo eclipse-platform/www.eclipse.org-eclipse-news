@@ -107,6 +107,84 @@
       This quick assist is the reverse of existing <b>Convert 'switch' to 'if-else'</b> quick assist.
     </td>
   </tr>
+  <tr id="new-sytem-property-tolerateIllegalAmbiguousVarargsInvocation">
+    <td class="title">new system property 'tolerateIllegalAmbiguousVarargsInvocation' to force Eclipse to compile (illegal) ambiguous varargs code</td>
+    <td class="content"> JDK 6 and below had a bug because of which the code shown in the snippet below was considered legal.
+	However, this bug was fixed in JDK 7 and the above code now reports an ambiguous invocation error at the call site for test(..). This was 
+	thereby fixed for Eclipse Juno across all 
+	compliance levels. This is why the code shown below will no longer compile with Juno and above.
+	<p><img src="images/illegal-ambiguous-varargs-error-Juno.png" alt="Ambiguous varargs methods flagged as illegal in Juno"/></p>
+	<p>If you still want the above code to compile in compliance &lt; 1.7, to mimic JDK 6 or below, you can use the
+	system property <b>tolerateIllegalAmbiguousVarargsInvocation</b> to force Eclipse to tolerate the ambiguous varargs cases
+	such as above. This property can be set in the eclipse.ini file after the -vmargs setting as shown below:</p>
+	<pre><code>
+	...
+	-vmargs
+	-DtolerateIllegalAmbiguousVarargsInvocation=true
+	...
+	</pre></code>
+	<p><i>Note</i>: With this setting, Eclipse Juno does not only mimic JDK 6 and below in letting the above code compile, but also
+	mimics JDK 6 and below in raising an error in cases such as the one shown below, even though they're legal in both JDK 7 and in Eclipse Juno when
+	the tolerateIllegalAmbiguousVarargsInvocation property is disabled:</p>
+	<p><img src="images/side-effects-of-enabling-property.png" alt="Side effect of turning the property on: Method foo is flagged ambiguous in compliance below 1.7 even though its legal"/></p>
+	
+	</td>
+  </tr>
+  <tr id="new-batch-compiler-options">
+    <td class="title">new batch compiler options added</td>
+    <td class="content"> If you use the ECJ batch compiler using command line or ant tasks, you can now configure the following options which until now could only be set through
+	the <b>Preferences>Java>Compiler>Errors/Warnings</b> page:
+	<ul>
+      <li>invalidJavadoc : set all warnings for malformed javadoc tags</li>
+      <li>invalidJavadocTag : validate javadoc tag arguments</li>
+      <li>invalidJavadocTagDep : validate deprecated references in javadoc tag args</li>
+      <li>invalidJavadocTagNotVisible : validate non-visible references in javadoc tag args</li>
+      <li>invalidJavadocVisibility(<visibility>) : specify visibility modifier for malformed javadoc tag warnings</li>
+      <li>missingJavadocTags : enable detection of missing Javadoc tags</li>
+      <li>missingJavadocTagsOverriding : detect missing Javadoc tags in overriding methods</li>
+      <li>missingJavadocTagsMethod : detect missing Javadoc tags for method type parameter</li>
+      <li>missingJavadocTagsVisibility(<visibility>) : specify visibility modifier for missing javadoc tags warnings</li>
+      <li>missingJavadocComments : detect missing Javadoc comments</li>
+      <li>missingJavadocCommentsOverriding : detect missing Javadoc tags in overriding methods</li>
+      <li>missingJavadocCommentsVisibility(<visibility>) : specify visibility modifier for missing javadoc comments warnings</li>
+      <li>nullAnnotConflict : detect conflict between null annotation specified and nullness inferred. Is effective only with nullAnnot option enabled</li>
+      <li>nullAnnotRedundant : detect redundant specification of null annotation. Is effective only with nullAnnot option enabled</li>
+      <li>nullUncheckedConversion : detect unchecked conversion from non-annotated type to @NonNull type. Is effective only with nullAnnot option enabled</li>
+      <li>unusedParam : detect unused parameter</li>
+      <li>unusedParamOverriding : detect unused parameter for overriding method</li>
+      <li>unusedParamImplementing : detect unused parameter for implementing method</li>
+      <li>unusedParamIncludeDoc : detect unused parameter documented in comment tag</li>
+      <li>unusedThrownWhenOverriding : detect unused declared thrown exception in overriding method</li>
+      <li>unusedThrownIncludeDocComment : detect unused declared thrown exception, documented in a comment tag</li>
+      <li>unusedThrownExemptExceptionThrowable : detect unused declared thrown exception, exempt Exception and Throwable</li>
+	</ul>
+	<p> For more information on using batch compiler options, please refer to <b>Help > Java Development User Guide > Tasks> Compiling Java Code>Using the batch compiler.</p>
+    </td>
+  </tr>
+  <tr id="new-content-assist-api">
+    <td class="title">new API <code>org.eclipse.jdt.core.CompletionContext.TL_CONSTRUCTOR_START</code> to indicate content assist requested on the start of a constructor</td>
+    <td class="content">
+      <pre>
+	  /**
+	   * The completed token is the first token of a constructor
+	   * invocation expression.
+	   * e.g.
+	   * 
+	   * public class X {
+	   *   public void bar() {
+	   *     new Foo| // completion occurs at |
+	   *   }
+	   * }
+	   * 
+	   *
+	   * @see #getTokenLocation()
+	   *
+	   * @since 3.9
+	   */
+	  public static final int TL_CONSTRUCTOR_START = 4;
+	</pre>
+    </td>
+  </tr>
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
