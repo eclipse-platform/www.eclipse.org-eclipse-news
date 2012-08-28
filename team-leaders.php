@@ -90,11 +90,12 @@ ob_start();
 		        </li>
 		        <li> 
 		          <b><a name="john"></a>John Arthorne, IBM Ottawa</b><br>
-			      John has worked on the Eclipse project for the past decade in many different areas, and 
-			      more recently on the <a href="http://eclipse.org/equinox">Equinox</a> project. In recent years he has focused on the 
-			      workspace model, concurrency infrastructure, provisioning (<a href="http://wiki.eclipse.org/p2">p2</a>), <a href="http://wiki.eclipse.org/e4">e4</a>, and 
-			      overall platform API quality. John is a member of the Eclipse <a href="http://wiki.eclipse.org/Architecture_Council">
-			      Architecture</a> and <a href="http://wiki.eclipse.org/Planning_Council">Planning</a> Councils, and has authored numerous <a href="http://www.eclipse.org/articles/">articles</a> 
+			      John has worked on the <a href="http://eclipse.org/eclipse">Eclipse</a> and <a href="http://eclipse.org/equinox">Equinox</a> 
+			      projects for the past decade in many different areas. He was the main developer on the resource model for many years, 
+			      and designed the platform's concurrency infrastructure. In recent years he has focused on the Orion project, provisioning (p2), 
+			      e4, and overall platform API quality. John is a member of the Eclipse <a href="http://wiki.eclipse.org/Architecture_Council">
+			      Architecture</a> and <a href="http://wiki.eclipse.org/Planning_Council">Planning</a> Councils, and the Eclipse <a href="http://www.eclipse.org/org/foundation/directors.php">Board of Directors</a>.
+			      John has authored numerous <a href="http://www.eclipse.org/articles/">articles</a> 
 			      and a <a href="http://www.amazon.com/Official-Eclipse-3-0-FAQs/dp/0321268385/ref=sr_1_1?ie=UTF8&s=books&qid=1221163807&sr=8-1">
 			      book</a> on Eclipse.
 		        </li>
