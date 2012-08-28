@@ -100,9 +100,9 @@ ob_start();
 			      book</a> on Eclipse.
 		        </li>
 		        <li> 
-		          <b><a name="andrew"></a>Andrew Overholt, Red Hat Toronto</b><br>
-					Andrew works on Eclipse and related technologies at Red Hat's Toronto
-					office.  He has been involved with the Eclipse community since 2005
+		          <b><a name="andrew"></a>Andrew Overholt, Mozilla</b><br>
+					Andrew works on open source technologies at Mozilla in Toronto.
+					He has been involved with the Eclipse community since 2005
 					and is a member of the Eclipse <a href="http://wiki.eclipse.org/Architecture_Council">Architecture Council</a>.
 					Andrew also leads the <a href="http://www.eclipse.org/linuxtools/">Linux Tools</a> project. He is very interested in continuing to grow the
 					Eclipse community and to improve native platform integration.
