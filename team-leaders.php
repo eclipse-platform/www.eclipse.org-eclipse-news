@@ -121,6 +121,59 @@ ob_start();
 		        </li>
 		      </ul>
 		</div>
+		<div class="homeitem3col">
+			<h3>Past PMC members</h3>
+			The following are Eclipse Project PMC Emeriti:
+		      <ul>
+		        <li> 
+		          <b><a name="erich"></a>Erich Gamma</b><br>
+					Erich is the original lead of the Eclipse Java development environment.
+					Prior to working on Eclipse he contributed to VA/Micro Edition (part
+					of IBM's Java solution for embedded device programming). Erich is well known for
+					his work on Design Patterns and <a href="http://www.junit.org/" target="_top">JUnit</a>.
+		        </li>
+		        <li> 
+		          <b><a name="kevin"></a>Kevin Haaland</b><br>
+					Kevin was a key contributor to the design and implementation of the
+					Platform UI. He was previously component lead for the Platform UI, and
+					has a long history of building user interface technology at OTI. In a past
+					life he was the lead for the SWT team. Kevin also played a key role in
+					the IBM VA/Java project.
+		        </li>
+		        <li> 
+		          <b><a name="jeff"></a>Jeff McAffer</b><br>
+		           Jeff McAffer co-led the RT Equinox project and is the Founder of <a href="http://code9.com">Code 9</a>.
+			       He is one of the architects of the Eclipse Platform and a co-author of
+			       <a href="http://eclipsercp.org">The Eclipse Rich Client Platform</a> (Addison-Wesley).
+			       Previous lives include being a Senior Technical Staff
+			       Member at IBM and work in distributed/parallel OO computing (Server Smalltalk,
+			       massively parallel Smalltalk, etc) as well as expert systems, meta-level architectures
+			       and a PhD at the University of Tokyo.
+		        </li>
+		        <li> 
+		          <b><a name="philippe"></a>Philippe Mulet</b><br>
+					Philippe is a former PMC and JDT project lead. Prior to Eclipse,
+					Philippe was responsible for the compiler and codeassist in IBM VA/Java
+					and VA/Micro Edition. Philippe was a member of the expert group on compiler
+					API (JSR199), representing IBM. His main interests are in compilation,
+					performance, scalability and meta-level architectures.
+		        </li>
+		        <li>
+		          <b><a name="steve"></a>Steve Northover</b><br>
+			      Steve Northover is the father of SWT (the Standard Widget Toolkit). Prior to
+			      working on Eclipse, he worked on IBM Smalltalk, VA/Java, VA/Micro Edition.
+			      His interests include programming languages, API design, operating systems,
+			      user intefaces and code optimization.
+		        </li>
+		        <li> 
+		          <b><a name="johnw"></a>John Wiegand</b><br>
+					John was a principal architect for the platform infrastructure. John played
+					a central role in the development of IBM VA/Java, VA/Micro Edition, and
+					Eclipse. His interests are in the areas of performance, scalability,
+					compilers, and just about anything that's hard.
+		        </li>
+		      </ul>
+		</div>
 		
 	</div>
 
@@ -133,6 +186,7 @@ ob_start();
 				<li><a href="http://www.eclipse.org/jdt/" target="_top">JDT</a><br> -- <a href="#dani">Dani Megert</a></li>
 				<li><a href="http://www.eclipse.org/pde/">PDE</a><br> -- Curtis Windatt</a></li>
 				<li><a href="http://www.eclipse.org/e4/" target="_top">e4</a><br> -- <a href="#McQ">Mike Wilson</a></li>
+				<li><a href="http://www.eclipse.org/orion/">Orion</a><br> -- Simon Kaegi and Ken Walker</li>
 				<li><a href="http://www.eclipse.org/eclipse/incubator/">Eclipse Incubator</a><br> -- <a href="#McQ">Mike Wilson</a></li>
       		</ul>				
 		</div>
