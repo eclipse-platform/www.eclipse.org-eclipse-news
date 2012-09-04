@@ -78,7 +78,7 @@ ob_start();
 			  <tr>
 	            <td class="spacer">&nbsp;</td>
 	          </tr>
-	          <tr class="current">
+	          <tr>
 	            <td></td>
 	            <td class="date">29</td>
 	            <td class="date">Wed 08:00 EDT</td>
@@ -97,7 +97,7 @@ ob_start();
 	          <tr>
 	            <td>September 2012</td>
 	          </tr>
-	          <tr>
+	          <tr class="current">
 	            <td></td>
 	            <td class="date">5</td>
 	            <td class="date">Wed 08:00 EDT</td>
