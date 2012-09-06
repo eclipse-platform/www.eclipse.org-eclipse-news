@@ -97,7 +97,7 @@ ob_start();
 	          <tr>
 	            <td>September 2012</td>
 	          </tr>
-	          <tr class="current">
+	          <tr>
 	            <td></td>
 	            <td class="date">5</td>
 	            <td class="date">Wed 08:00 EDT</td>
@@ -105,7 +105,7 @@ ob_start();
 	            <td>Release Candidate 3 build</td>
 	            <td></td>
 	          </tr>         
-	          <tr>
+	          <tr class="current">
 	            <td></td>
 	            <td class="date">6</td>
 	            <td class="date">Thu 08:00 EDT</td>
