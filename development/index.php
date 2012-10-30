@@ -38,8 +38,6 @@ ob_start();
 			<ul>
 		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_3.xml"> Eclipse Project Kepler 4.3 Plan</a><br>
 		        This document lays out the feature and API set for the Kepler 4.3 release of the Eclipse Project.</li>
-		      <li><a href="plans/freeze_plan_4_2_1.php">Eclipse Project Juno SR1 Endgame Plan</a><br>
-				Information about how we plan to wrap up the Juno SR1 release (versions 3.8.1 and 4.2.1).</li>
 		    </ul>
       	</div>
 		<div class="homeitem3col">
@@ -126,6 +124,8 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>Historical information about past releases</h3>			
 			<ul>
+		      <li><a href="plans/freeze_plan_4_2_1.php">Eclipse Project Juno SR1 Endgame Plan</a><br>
+				Information about how we wrapped up the Juno SR1 release (versions 3.8.1 and 4.2.1).</li>
 		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_2.xml"> Eclipse Project Juno 4.2 Plan</a><br>
 		        This document lays out the feature and API set for the Juno 4.2 release of the Eclipse Project.</li>
 		      <li><a href="plans/freeze_plan_4_2.php"> Eclipse Project Juno 4.2 Endgame Plan</a><br>
