@@ -203,9 +203,9 @@ marks interesting changes since the previous draft of
 			<td rowspan="4">Windows</td>
 			<td rowspan="2">7</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="4">Oracle Java 7 Update 5<br/>
-				Oracle Java 6 Update 33<br/>
-				IBM Java 6 SR9
+			<td rowspan="4">Oracle Java 7 Update 9<br/>
+				Oracle Java 6 Update 37<br/>
+				IBM Java 6 SR11
 			</td>
 			<td rowspan="4">Win32</td>
 		</tr>
@@ -213,11 +213,11 @@ marks interesting changes since the previous draft of
 			<td rowspan="1">x86 64-bit</td>
 		</tr>
 		<tr class="c0">
-			<td rowspan="2">XP</td>
-			<td rowspan="1">x86 32-bit</td>
+			<td rowspan="2"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />  <s>XP</s></td>
+			<td rowspan="1"><s>x86 32-bit</s></td>
 		</tr>
 		<tr class="c0">
-			<td rowspan="1">x86 64-bit</td>
+			<td rowspan="1"><s>x86 64-bit</s></td>
 		</tr>
 		<!-- ************ RHEL ************** -->
 		<tr class="c1">
@@ -225,9 +225,9 @@ marks interesting changes since the previous draft of
 			<td rowspan="3">6</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
-			    Oracle Java 7 Update 5<br/>
-			    Oracle Java 6 Update 33<br/>
-				IBM Java 6 SR9
+			    Oracle Java 7 Update 9<br/>
+			    Oracle Java 6 Update 37<br/>
+				IBM Java 6 SR11
 			</td>
 			<td rowspan="3">GTK</td>
 		</tr>
@@ -236,15 +236,15 @@ marks interesting changes since the previous draft of
 		</tr>
 		<tr class="c1">
 			<td rowspan="1">Power 64-bit</td>
-			<td>IBM Java 6 SR9</td>
+			<td>IBM Java 6 SR11</td>
 		</tr>
 		<!-- ************ SLES ************** -->
 		<tr class="c0">
 			<td rowspan="3">SUSE Linux Enterprise Server</td>
 			<td rowspan="3">11</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 6 Update 33<br/>
-				IBM Java 6 SR9
+			<td rowspan="2">Oracle Java 6 Update 37<br/>
+				IBM Java 6 SR11
 			</td>
 			<td rowspan="3">GTK</td>
 		</tr>
@@ -253,15 +253,15 @@ marks interesting changes since the previous draft of
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">Power 64-bit</td>
-			<td>IBM Java 6 SR9</td>
+			<td>IBM Java 6 SR11</td>
 		</tr>
 		<!-- ************ Ubuntu ************** -->
 		<tr class="c1">
 			<td rowspan="2">Ubuntu Long Term Support</td>
 			<td rowspan="2">12.04</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 6 Update 33<br/>
-				IBM Java 6 SR9
+			<td rowspan="2">Oracle Java 6 Update 37<br/>
+				IBM Java 6 SR11
 			</td>
 			<td rowspan="2">GTK</td>
 		</tr>
@@ -273,7 +273,7 @@ marks interesting changes since the previous draft of
 			<td rowspan="2">Oracle Solaris</td>
 			<td rowspan="2">11</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 6 Update 33</td>
+			<td rowspan="2">Oracle Java 6 Update 37</td>
 			<td rowspan="2">GTK</td>
 		</tr>
 		<tr class="c0">
@@ -292,13 +292,13 @@ marks interesting changes since the previous draft of
 			<td rowspan="1">IBM AIX</td>
 			<td rowspan="1">7.1</td>
 			<td rowspan="1">Power 64-bit</td>
-			<td rowspan="1">IBM Java 6 SR9</td>
+			<td rowspan="1">IBM Java 6 SR11</td>
 			<td rowspan="1">GTK</td>
 		</tr>
 		<!-- ************ Mac ************** -->
 		<tr class="c1">
 			<td rowspan="2">Apple Mac OS X</td>
-			<td rowspan="2">10.6</td>
+			<td rowspan="2"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />  10.8</td>
 			<td rowspan="1">Universal 32-bit</td>
 			<td rowspan="2">Apple Java 10.6 Update 5</td>
 			<td rowspan="2">Cocoa</td>
@@ -466,13 +466,29 @@ marks interesting changes since the previous draft of
 	The next Java SE release is version 8, which is currently scheduled for the summer
 	of 2013. This release is expected to contain extensions to the Java language,
 	including support for lambda expressions, default methods, annotations on
-	types, a modularity system and minor language changes. 
+	types, and minor language changes. 
 	Eclipse Java development tooling will make progress towards compiling, editing
 	and launching applications for Java 8 for those parts which have publicly
 	available specifications. Work in progress will be made available as feature
 	patches for early adopters while we work towards the official Java SE 8
 	release.
 	 [JDT Core, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=380190">380190</a>)
+</li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
+	<strong>Support the win32 version of Eclipse on Windows 8.</strong>
+	Fully support the 32-bit and 64-bit win32 version of SWT and the Eclipse SDK on Windows 8. We will ensure that 
+	applications built on the win32 version of SWT work as well as any other win32 API 
+	based application on Windows 8. This will increase our testing and support effort and 
+	potentially require new development to work around platform specific differences. 
+	[SWT, Platform UI, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+</li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
+	<strong>Migrate to GTK+ 3.</strong>
+	We will undertake porting SWT and the Eclipse SDK to run on GTK+ version 3.
+	Support for GTK+ 3 will be built into our current GTK+ packages, rather than
+	introducing a separate port. We expect this effort to reach &quot;early access&quot;
+	quality in the Kepler release, and GTK+ 2 will still be recommended for most users.
+	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
 </li>
 </ul>
 </p:proposed>
@@ -495,11 +511,39 @@ marks interesting changes since the previous draft of
 </p:description>
 
 <p:committed>
-  <p><i>None at this time.</i></p>
+<ul>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
+	<strong>Performance and stability of Platform user interface.</strong>
+	Version 4.2 of the Eclipse Platform still has some performance and
+	functional shortcomings compared to the old 3.x generation of the platform.
+	We will work to root out and eliminate these remaining bugs to increase
+	the overall quality and performance of the 4.x generation platform.
+</li>
+</ul>
 </p:committed>
 
 <p:proposed>
-  <p><i>None at this time.</i></p>
+<ul>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
+	<strong>Recruit and train new contributors.</strong>
+	While adoption and use of the Eclipse Platform increases every year,
+	there has been a steadily declining rate of contribution back to the
+	platform's development. We will work to reduce any real or perceived barriers 
+	to contribution, and increase efforts on reviewing patches and onboarding 
+	new contributors.
+</li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
+	<strong>Common build infrastructure.</strong>
+	The Eclipse Foundation has established a common build infrastructure to
+	be used by Eclipse projects. The aim is to simply the build process, and establish
+	a common set of build technology and hardware across Eclipse projects. We will 
+	transition the Eclipse Platform build and automated tests to operate on this
+	common infrastructure. This will make it easier for anyone to fetch and build 
+	the Eclipse Platform on any machine, and lower the long term maintenance
+	cost of building older versions of Eclipse projects.
+	 [Releng] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+</li>
+</ul>
 </p:proposed>
 
 <p:deferred>
@@ -507,30 +551,7 @@ marks interesting changes since the previous draft of
 </p:deferred>
 
 </p:theme>
-<!-- ============================================== -->
 
-<p:theme name="Ease of Use">
-<p:description>
-<p>The Eclipse platform is not lacking in functionality, but sometimes fails to present 
-	that functionality to end users in a way that is easy to discover and use. This theme
-	encompasses work to simplify and improve the end user experience, and to keep
-	up with modern user interface input forms such as multi-touch gestures.</p>
-</p:description>
-
-<p:committed>
-  <p><i>None at this time.</i></p>
-</p:committed>
-
-<p:proposed>
-  <p><i>None at this time.</i></p>
-</p:proposed>
-
-<p:deferred>
-  <p><i>None at this time.</i></p>
-</p:deferred>
-
-</p:theme>
-    
 </p:themes_and_priorities>
 
 <!-- ============================================== -->
