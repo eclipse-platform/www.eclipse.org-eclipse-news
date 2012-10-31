@@ -88,12 +88,58 @@
   <tr> 
     <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
   </tr>
+
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+  <tr id="javadoc-view-target">
+    <td class="title">Javadoc view resolves enclosing method call and keeps last target</td>
+    <td class="content">
+      The <b>Javadoc</b> and <b>Declaration</b> views now try to find the enclosing method call
+      if the selection or caret position doesn't resolve to a valid Java element.
+      <p>
+        <img src="images/javadoc-view-target.png" alt="'String.copyValueOf(data, offset, count)', with 'data' selected."/>
+      </p>
+      Furthermore, they keep the last resolved target element even if no new target can be resolved.
+    </td>
   </tr>
+  
+  <tr id="unused-type-parameter">
+    <td class="title">Detection of unused type parameters</td>
+    <td class="content">
+      The compiler can now detect unused type parameters:
+      <p>
+        <img src="images/unused-type-parameter.png" alt=""/>
+      </p>
+      <p>
+        The <b>Unused type parameter</b> diagnostic is set to Ignore by default and can be enabled on the 
+		<b>Java &gt; Compiler &gt; Errors/Warnings</b>
+		preference page.
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="unused-type-parameter">
+    <td class="title">Option to omit @Override for interface methods</td>
+    <td class="content">
+      Eclipse can add <code>@Override</code> annotations for overriding methods:
+      <p>
+        <img src="images/override-annotation-code-style.png" alt="Code Style preference page"/>
+      </p>
+      <p>
+        If your code uses Java 1.6 or higher, the <code>@Override</code> annotation is also added to
+        methods that override an interface method. If you don't want to use <code>@Override</code>
+        in this case, then follow the link and disable the corresponding compiler option:
+      </p>
+      <p>
+        <img src="images/override-annotation-compiler.png" alt="Errors/Warnings preference page, checkbox 'Include implementations of interface methods (1.6 or higher)'"/>
+      </p>
+      <p>
+        You may also want to enable the diagnostic for Missing '@Override' annotation.   
+      </p>
+    </td>
+  </tr>
+
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
