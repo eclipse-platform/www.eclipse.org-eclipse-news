@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 16:00 ET Oct 30, 2012.   (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
+Last revised 16:00 ET Oct 31, 2012.   (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
 marks interesting changes since the previous draft of 
 <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_3_20120605.xml">June 5, 2012</a>.)
 </p>
@@ -283,7 +283,7 @@ marks interesting changes since the previous draft of
 		<tr class="c1">
 			<td rowspan="1">HP-UX</td>
 			<td rowspan="1">11i v3</td>
-			<td rowspan="1">ia64 32-bit</td>
+			<td rowspan="1"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> ia64 64-bit</td>
 			<td rowspan="1">HP-UX Java 6 Update 10</td>
 			<td rowspan="1">GTK</td>
 		</tr>
@@ -304,7 +304,7 @@ marks interesting changes since the previous draft of
 			<td rowspan="2">Cocoa</td>
 		</tr>
 		<tr class="c1">
-			<td rowspan="1">Universal 64-bit</td>
+			<td rowspan="1">x86 64-bit</td>
 		</tr>
 	</table>
  </center>
@@ -479,7 +479,8 @@ marks interesting changes since the previous draft of
 	Fully support the 32-bit and 64-bit win32 version of SWT and the Eclipse SDK on Windows 8. We will ensure that 
 	applications built on the win32 version of SWT work as well as any other win32 API 
 	based application on Windows 8. This will increase our testing and support effort and 
-	potentially require new development to work around platform specific differences. 
+	potentially require new development to work around platform specific differences.
+	Note that Windows RT on ARM processors will <b>not</b> be supported.
 	[SWT, Platform UI, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
 </li>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
@@ -488,6 +489,14 @@ marks interesting changes since the previous draft of
 	Support for GTK+ 3 will be built into our current GTK+ packages, rather than
 	introducing a separate port. We expect this effort to reach &quot;early access&quot;
 	quality in the Kepler release, and GTK+ 2 will still be recommended for most users.
+	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+</li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
+	<strong>Add support for Microsoft UI automation.</strong>
+	Windows Vista and above support a new accessibility API called UI Automation (UIA).
+	We will add support for UIA in the SWT accessibility API. This will enable SWT
+	to support screen readers that use either UIA, or the cross-platform IAccessible2
+	API.
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
 </li>
 </ul>
