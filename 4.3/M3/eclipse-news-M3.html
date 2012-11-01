@@ -174,9 +174,66 @@
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+  
+  <tr id="additional-type-info">
+    <td class="title">Javadoc hover available in plug-in manifest editor</td>
+    <td class="content">
+      When editing the plugin.xml or manifest.mf files using the <b>Plug-in Manifest Editor</b>, 
+      opening content assist for type proposals will now display additional javadoc information.
+      <p>
+        <img src="images/additional-type-info.png" alt="Additional info javadoc hover for type proposals"/>
+      </p>
+    </td>
   </tr>
+  
+    <tr id="plugin-image-view">
+    <td class="title">Plug-in image browser view</td>
+    <td class="content">
+      A new view has been added to PDE.  The <b>Plug-in Image Browser</b> view displays icons and other
+      images from your target platform, running application or current workspace. 
+      <p>
+      	When an image is selected, additional information is displayed at the bottom of the view.  The
+        reference text can be used in plug-in extensions to refer to images in other bundles.
+      </p>
+      <p>
+        <img src="images/plugin-image-view.png" alt="The plug-in image browser view"/>
+      </p>
+    </td>
+  </tr>
+  
+    <tr id="default-launch-ee">
+    <td class="title">Launch configurations choose default execution environment</td>
+    <td class="content">
+      New PDE launch configurations (Eclipse Application, JUnit Plug-in Test, OSGi Framework) will
+      use a default execution environment to determine which Java runtime environment to launch with.
+      The launch configuration can be changed to use a different execution environment or a specific
+      JRE on the <b>Main</b> tab.
+      <p>
+        To find a valid execution environment, all known environments are checked against each bundle 
+        or plug-in that will be launched. Only an execution environment that is valid for all
+        plug-ins and bundles will be selected.  If no valid environment is found, a default JRE
+        will be chosen as before.
+      </p>
+      <p>
+        <img src="images/default-launch-ee.png" alt="Java runtime settings on the Main tab of PDE launch configurations"/>
+      </p>
+      <p>
+      	The JRE associated with the selected execution environment will be used to launch. To change 
+      	which JRE is associated with an execution environment, use the <b>Preferences > Java > Installed JREs > 
+      	Execution Environments</b> preference page.
+      </p>
+      
+    </td>
+  </tr>
+  
+    <tr id="pde-5-bree">
+    <td class="title">PDE UI requires a 1.5 EE</td>
+    <td class="content">
+      The bundle required execution environment for the PDE UI bundles org.eclipse.pde.core and
+      org.eclipse.pde.ui is now J2SE-1.5.
+    </td>
+  </tr>
+  
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
   </tr>
