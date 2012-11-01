@@ -203,7 +203,7 @@ marks interesting changes since the previous draft of
 			<td rowspan="4">Windows</td>
 			<td rowspan="2">7</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="4">Oracle Java 7 Update 9<br/>
+			<td rowspan="4">Oracle Java 7u9<br/>
 				Oracle Java 6 Update 37<br/>
 				IBM Java 6 SR11
 			</td>
@@ -225,7 +225,7 @@ marks interesting changes since the previous draft of
 			<td rowspan="3">6</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
-			    Oracle Java 7 Update 9<br/>
+			    Oracle Java 7u9<br/>
 			    Oracle Java 6 Update 37<br/>
 				IBM Java 6 SR11
 			</td>
@@ -300,7 +300,7 @@ marks interesting changes since the previous draft of
 			<td rowspan="2">Apple Mac OS X</td>
 			<td rowspan="2"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />  10.8</td>
 			<td rowspan="1">Universal 32-bit</td>
-			<td rowspan="2"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />  Oracle Java 7 Update 9</td>
+			<td rowspan="2"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />  Oracle Java 7u9</td>
 			<td rowspan="2">Cocoa</td>
 		</tr>
 		<tr class="c1">
@@ -495,8 +495,7 @@ marks interesting changes since the previous draft of
 	<strong>Add support for Microsoft UI automation.</strong>
 	Windows Vista and above support a new accessibility API called UI Automation (UIA).
 	We will add support for UIA in the SWT accessibility API. This will enable SWT
-	to support screen readers that use either UIA, or the cross-platform IAccessible2
-	API.
+	to support screen readers that use either UIA, or the existing IAccessible2 API.
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
 </li>
 </ul>
