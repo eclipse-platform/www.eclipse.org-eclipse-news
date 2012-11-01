@@ -85,36 +85,35 @@
     <td colspan="2">  <div class="title">Debug</div>
       </td>
   </tr>
-  <tr id="x_start_on_first_thread">
+  <tr id="x-start-on-first-thread">
     <td class="title">Option to omit -XStartOnFirstThread</td>
     <td class="content">
-      If you are launching an SWT program on Mac OS you can now selectively add / remove the <code>-XStartOnFirstThread</code> VM argument
-      in the event your VM does not support it. This option can be configured per-launch configuration and is available on the standard Arguments
+      If you are launching an SWT program on Mac OS X, you can now selectively add / remove the <code>-XStartOnFirstThread</code> VM argument
+      in the event your VM does not support it. This option can be configured per launch configuration and is available on the standard Arguments
       tab for Java configurations (Java Application, Eclipse, etc.).
+      <p><img src="images/x-start-on-first-thread.png" alt=""/></p>
     </td>
   </tr>
-  <tr id="only_include_exported_entries">
+  <tr id="only-include-exported-entries">
     <td class="title">Global preference to include exported entries during launching</td>
     <td class="content">
-      <p>A new global preference has been added so you can only allow exported classpath entries to be used during launching. Previously this 
+      A new global preference has been added so you can only allow exported classpath entries to be used during launching. Previously, this 
       was only customizable per launch configuration on the default classpath entry on the Java Classpath tab. The new preference does not affect 
       launch configuration data, so no migration is needed.
-      </p>
+      
       <p>
-      The new preference can be found on the <em>Java &gt; Debug</em> preference page.
-      <p><img src="images/only_include_exported.png" alt="New global preference to only include exported classpath entries"/></p>
+      The new preference can be found on the <b>Java &gt; Debug</b> preference page.
+      <p><img src="images/only-include-exported.png" alt="New global preference to only include exported classpath entries"/></p>
       </p>
     </td>
   </tr>
-  <tr id="launch_dialog_warnings">
+  <tr id="launch-dialog-warnings">
     <td class="title">Launch configuration dialog can show warnings</td>
     <td class="content">
-    <p>
-      Previously, contributors could only set an 'ok' or an 'error' state in their launch configuration tags / groups. Now in M3 
-      contributors can set a warning state (message) for their tabs / groups - possibly warning users about set options
+      Previously, contributors could only set an 'ok' or an 'error' state in their launch configuration tags / groups. Now,
+      contributors can set a warning state with a message for their tabs / groups - possibly warning users about set options
       that might be problematic, but do not necessarily need to prevent launching.
-      </p>
-      <p><img src="images/lcd_warnings.png" alt="Launch configuration dialog showing warning message / state"/></p>
+      <p><img src="images/lcd-warnings.png" alt="Launch configuration dialog showing warning message / state"/></p>
     </td>
   </tr>
   <tr> 
