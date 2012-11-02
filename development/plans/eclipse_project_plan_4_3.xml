@@ -16,7 +16,9 @@
 <p:introduction>
 <div>
 <p>
-Last revised 16:00 ET July 6, 2012.
+Last revised 13:00 ET Nov 2, 2012.   (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
+marks interesting changes since the previous draft of 
+<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_3_20120706.xml">July 6, 2012</a>.)
 </p>
 <p><i>Please send comments about this plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
   mailing list.</i>
@@ -106,20 +108,20 @@ Last revised 16:00 ET July 6, 2012.
   <a href="http://wiki.eclipse.org/Kepler/Simultaneous_Release_Plan">
   Kepler Simultaneous Release</a> train.</p>
 </p:preamble>
-<p:milestone date="08/10/2012" milestone="M1"><div>4.3M1</div></p:milestone>
-<p:milestone date="09/21/2012" milestone="M2"><div>4.3M2</div></p:milestone>
-<p:milestone date="11/02/2012" milestone="M3"><div>4.3M3</div></p:milestone>
-<p:milestone date="12/14/2012" milestone="M4"><div>4.3M4</div></p:milestone>
-<p:milestone date="02/01/2013" milestone="M5"><div>4.3M5</div></p:milestone>
-<p:milestone date="03/15/2013" milestone="M6"><div>4.3M6 (API Freeze)</div></p:milestone>
-<p:milestone date="05/03/2013" milestone="M7"><div>4.3M7 (Feature Freeze)</div></p:milestone>
+<p:milestone date="2012-08-10" milestone="M1"><div>4.3M1</div></p:milestone>
+<p:milestone date="2012-09-21" milestone="M2"><div>4.3M2</div></p:milestone>
+<p:milestone date="2012-11-02" milestone="M3"><div>4.3M3</div></p:milestone>
+<p:milestone date="2012-12-14" milestone="M4"><div>4.3M4</div></p:milestone>
+<p:milestone date="2013-02-01" milestone="M5"><div>4.3M5</div></p:milestone>
+<p:milestone date="2013-03-15" milestone="M6"><div>4.3M6 (API Freeze)</div></p:milestone>
+<p:milestone date="2013-05-03" milestone="M7"><div>4.3M7 (Feature Freeze)</div></p:milestone>
 
 <p:postamble>
 <div>
 <p>Individual, milestone level plans for the components that make up the Eclipse Project can be found 
   on the <a href="http://wiki.eclipse.org/Eclipse/Kepler_Plan">Eclipse Project Kepler Plan page</a>
   on the Eclipse wiki.</p>
-<p>Our target is to complete 4.3 in late June 2012, in alignment with Kepler.
+<p>Our target is to complete 4.3 in late June 2013, in alignment with Kepler.
   All release deliverables will be available for download as soon as the release has been
   tested and validated in the target operating configurations listed below.</p>
 <p>Dates for builds and test passes after M7 will be made available in the Kepler end-game plan in April 2013.
@@ -201,9 +203,9 @@ Last revised 16:00 ET July 6, 2012.
 			<td rowspan="4">Windows</td>
 			<td rowspan="2">7</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="4">Oracle Java 7 Update 5<br/>
-				Oracle Java 6 Update 33<br/>
-				IBM Java 6 SR9
+			<td rowspan="4">Oracle Java 7u9<br/>
+				Oracle Java 6 Update 37<br/>
+				IBM Java 6 SR11
 			</td>
 			<td rowspan="4">Win32</td>
 		</tr>
@@ -211,11 +213,11 @@ Last revised 16:00 ET July 6, 2012.
 			<td rowspan="1">x86 64-bit</td>
 		</tr>
 		<tr class="c0">
-			<td rowspan="2">XP</td>
-			<td rowspan="1">x86 32-bit</td>
+			<td rowspan="2"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />  <s>XP</s></td>
+			<td rowspan="1"><s>x86 32-bit</s></td>
 		</tr>
 		<tr class="c0">
-			<td rowspan="1">x86 64-bit</td>
+			<td rowspan="1"><s>x86 64-bit</s></td>
 		</tr>
 		<!-- ************ RHEL ************** -->
 		<tr class="c1">
@@ -223,9 +225,10 @@ Last revised 16:00 ET July 6, 2012.
 			<td rowspan="3">6</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
-			    Oracle Java 7 Update 5<br/>
-			    Oracle Java 6 Update 33<br/>
-				IBM Java 6 SR9
+			    Oracle Java 7u9<br/>
+			    Oracle Java 6 Update 37<br/>
+				IBM Java 6 SR11<br/>
+				Open JDK 7u9
 			</td>
 			<td rowspan="3">GTK</td>
 		</tr>
@@ -234,15 +237,15 @@ Last revised 16:00 ET July 6, 2012.
 		</tr>
 		<tr class="c1">
 			<td rowspan="1">Power 64-bit</td>
-			<td>IBM Java 6 SR9</td>
+			<td>IBM Java 6 SR11</td>
 		</tr>
 		<!-- ************ SLES ************** -->
 		<tr class="c0">
 			<td rowspan="3">SUSE Linux Enterprise Server</td>
 			<td rowspan="3">11</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 6 Update 33<br/>
-				IBM Java 6 SR9
+			<td rowspan="2">Oracle Java 6 Update 37<br/>
+				IBM Java 6 SR11
 			</td>
 			<td rowspan="3">GTK</td>
 		</tr>
@@ -251,15 +254,15 @@ Last revised 16:00 ET July 6, 2012.
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">Power 64-bit</td>
-			<td>IBM Java 6 SR9</td>
+			<td>IBM Java 6 SR11</td>
 		</tr>
 		<!-- ************ Ubuntu ************** -->
 		<tr class="c1">
 			<td rowspan="2">Ubuntu Long Term Support</td>
 			<td rowspan="2">12.04</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 6 Update 33<br/>
-				IBM Java 6 SR9
+			<td rowspan="2">Oracle Java 6 Update 37<br/>
+				IBM Java 6 SR11
 			</td>
 			<td rowspan="2">GTK</td>
 		</tr>
@@ -271,7 +274,7 @@ Last revised 16:00 ET July 6, 2012.
 			<td rowspan="2">Oracle Solaris</td>
 			<td rowspan="2">11</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 6 Update 33</td>
+			<td rowspan="2">Oracle Java 6 Update 37</td>
 			<td rowspan="2">GTK</td>
 		</tr>
 		<tr class="c0">
@@ -281,7 +284,7 @@ Last revised 16:00 ET July 6, 2012.
 		<tr class="c1">
 			<td rowspan="1">HP-UX</td>
 			<td rowspan="1">11i v3</td>
-			<td rowspan="1">ia64 32-bit</td>
+			<td rowspan="1"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> ia64 64-bit</td>
 			<td rowspan="1">HP-UX Java 6 Update 10</td>
 			<td rowspan="1">GTK</td>
 		</tr>
@@ -290,19 +293,19 @@ Last revised 16:00 ET July 6, 2012.
 			<td rowspan="1">IBM AIX</td>
 			<td rowspan="1">7.1</td>
 			<td rowspan="1">Power 64-bit</td>
-			<td rowspan="1">IBM Java 6 SR9</td>
+			<td rowspan="1">IBM Java 6 SR11</td>
 			<td rowspan="1">GTK</td>
 		</tr>
 		<!-- ************ Mac ************** -->
 		<tr class="c1">
 			<td rowspan="2">Apple Mac OS X</td>
-			<td rowspan="2">10.6</td>
+			<td rowspan="2"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />  10.8</td>
 			<td rowspan="1">Universal 32-bit</td>
-			<td rowspan="2">Apple Java 10.6 Update 5</td>
+			<td rowspan="2"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />  Oracle Java 7u9</td>
 			<td rowspan="2">Cocoa</td>
 		</tr>
 		<tr class="c1">
-			<td rowspan="1">Universal 64-bit</td>
+			<td rowspan="1">x86 64-bit</td>
 		</tr>
 	</table>
  </center>
@@ -464,13 +467,37 @@ Last revised 16:00 ET July 6, 2012.
 	The next Java SE release is version 8, which is currently scheduled for the summer
 	of 2013. This release is expected to contain extensions to the Java language,
 	including support for lambda expressions, default methods, annotations on
-	types, a modularity system and minor language changes. 
+	types, and minor language changes. 
 	Eclipse Java development tooling will make progress towards compiling, editing
 	and launching applications for Java 8 for those parts which have publicly
 	available specifications. Work in progress will be made available as feature
 	patches for early adopters while we work towards the official Java SE 8
 	release.
 	 [JDT Core, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=380190">380190</a>)
+</li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
+	<strong>Support the win32 version of Eclipse on Windows 8.</strong>
+	Fully support the 32-bit and 64-bit win32 version of SWT and the Eclipse SDK on Windows 8. We will ensure that 
+	applications built on the win32 version of SWT work as well as any other win32 API 
+	based application on Windows 8. This will increase our testing and support effort and 
+	potentially require new development to work around platform specific differences.
+	Note that Windows RT on ARM processors will <b>not</b> be supported.
+	[SWT, Platform UI, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=393426">393426</a>)
+</li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
+	<strong>Migrate to GTK+ 3.</strong>
+	We will undertake porting SWT and the Eclipse SDK to run on GTK+ version 3.
+	Support for GTK+ 3 will be built into our current GTK+ packages, rather than
+	introducing a separate port. We expect this effort to reach &quot;early access&quot;
+	quality in the Kepler release, and GTK+ 2 will still be recommended for most users.
+	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=340067">340067</a>)
+</li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
+	<strong>Add support for Microsoft UI automation.</strong>
+	Windows Vista and above support a new accessibility API called UI Automation (UIA).
+	We will add support for UIA in the SWT accessibility API. This will enable SWT
+	to support screen readers that use either UIA, or the existing IAccessible2 API.
+	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=393428">393428</a>)
 </li>
 </ul>
 </p:proposed>
@@ -493,11 +520,41 @@ Last revised 16:00 ET July 6, 2012.
 </p:description>
 
 <p:committed>
-  <p><i>None at this time.</i></p>
+<ul>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
+	<strong>Performance and stability of Platform user interface.</strong>
+	Version 4.2 of the Eclipse Platform still has some performance and
+	functional shortcomings compared to the old 3.x generation of the platform.
+	We will work to root out and eliminate these remaining bugs to increase
+	the overall quality and performance of the 4.x generation platform.
+	[Platform UI, SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=393429">393429</a>)
+</li>
+</ul>
 </p:committed>
 
 <p:proposed>
-  <p><i>None at this time.</i></p>
+<ul>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
+	<strong>Recruit and train new contributors.</strong>
+	While adoption and use of the Eclipse Platform increases every year,
+	there has been a steadily declining rate of contribution back to the
+	platform's development. We will work to reduce any real or perceived barriers 
+	to contribution, and increase efforts on reviewing patches and onboarding 
+	new contributors.
+	[All components] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=393430">393430</a>)
+</li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
+	<strong>Common build infrastructure.</strong>
+	The Eclipse Foundation has established a common build infrastructure to
+	be used by Eclipse projects. The aim is to simply the build process, and establish
+	a common set of build technology and hardware across Eclipse projects. We will 
+	transition the Eclipse Platform build and automated tests to operate on this
+	common infrastructure. This will make it easier for anyone to fetch and build 
+	the Eclipse Platform on any machine, and lower the long term maintenance
+	cost of building older versions of Eclipse projects.
+	 [Releng] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=372792">372792</a>)
+</li>
+</ul>
 </p:proposed>
 
 <p:deferred>
@@ -505,30 +562,7 @@ Last revised 16:00 ET July 6, 2012.
 </p:deferred>
 
 </p:theme>
-<!-- ============================================== -->
 
-<p:theme name="Ease of Use">
-<p:description>
-<p>The Eclipse platform is not lacking in functionality, but sometimes fails to present 
-	that functionality to end users in a way that is easy to discover and use. This theme
-	encompasses work to simplify and improve the end user experience, and to keep
-	up with modern user interface input forms such as multi-touch gestures.</p>
-</p:description>
-
-<p:committed>
-  <p><i>None at this time.</i></p>
-</p:committed>
-
-<p:proposed>
-  <p><i>None at this time.</i></p>
-</p:proposed>
-
-<p:deferred>
-  <p><i>None at this time.</i></p>
-</p:deferred>
-
-</p:theme>
-    
 </p:themes_and_priorities>
 
 <!-- ============================================== -->
