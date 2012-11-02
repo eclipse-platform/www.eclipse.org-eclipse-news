@@ -84,8 +84,8 @@ table.news tr td.content {vertical-align: top; width: 70%;}
         If a small image sheds light, place it below the description, in a separate
         paragraph. Regular screen snapshots should be done on Windows XP. Crop
         out any extraneous stuff to focus the reader's attention on your new
-        feature. <span style="background-color: #FFFF00;">The image should be
-        no more than 519 pixels wide and in PNG format</span> (as opposed
+        feature. The image should be
+        <b>no more than 519 pixels wide</b> and in <b>PNG</b> format (as opposed
         to GIF, TIF, BMP, or JPG). Use PNG-8 if your image doesn't have a lot of color,
         or PNG-24 if the screen shot uses enough color to warrant additional color depth.
         See also the 
@@ -106,20 +106,22 @@ table.news tr td.content {vertical-align: top; width: 70%;}
       </ul>
       <p>Name the file is a way that is appropriate and specific to the item
         (e.g., key-bindings.png, rather than something generic like image.png).
-        Use all <b>lowercase</b> letters in the image file name, including the &quot;.png&quot; 
-        file extension. As a separator, use hyphen &quot;-&quot; rather than
+        Use all <b>lowercase</b> letters in the image file name, including the &quot;<b>.png</b>&quot; 
+        file extension. As a separator, use <b>hyphen</b> &quot;-&quot; rather than
         underscore 
         &quot;_&quot;. </p>
       <p>Put all the images in a sibling directory named &quot;images&quot;.
         This gives XHTML like:<br/>
-        <code>&lt;img src=&quot;images/foo-view.png&quot; alt=&quot;The Foo View&quot;/&gt;</code><br/>
-        Include a suitable <a href="http://www.w3.org/TR/html4/struct/objects.html#h-13.8"><code>alt</code></a> attribute
-        (which is mandatory in XHTML 1.0). Do not embed the width and height of the image.</p>
+        <code>&lt;img src=&quot;images/foo-view.png&quot; alt=&quot;&quot;/&gt;</code><br/>
+        Include a suitable <a href="http://www.w3.org/TR/html4/struct/objects.html#h-13.8"><code>alt</code></a> attribute.
+        The alt text should be empty ("") if the image just illustrates the text.
+        Only use the alt text to add information that is not accessible if the page is rendered without images.
+        Don't write <code>alt="Screenshot of <i>the XY dialog</i>"</code>. Blind users shouldn't have to skip useless repetitions.</p>
       <p>If the <code>alt</code> attribute text cannot sufficiently replace the image contents
         (e.g. for a screenshot that shows source code), then enclose the img element in a link
         to a plain &quot;.txt&quot; file with the same name as the image:<br/>
         <code>&lt;a href=&quot;images/foo-view.txt&quot;&gt;&lt;img ...</code></p>
-      <p>The images should be left-justified (as opposed to centered). </p>
+      <p>The images should be left-justified (as opposed to centered). Do not embed the width and height of the image.</p>
       <p>Use the W3C <a href="http://validator.w3.org/#validate_by_input">XHTML
           Markup Validation Service</a> to check your document's markup before
           submitting.</p></td>
