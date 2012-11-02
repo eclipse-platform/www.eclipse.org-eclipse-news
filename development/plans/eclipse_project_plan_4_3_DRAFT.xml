@@ -228,7 +228,7 @@ marks interesting changes since the previous draft of
 			    Oracle Java 7u9<br/>
 			    Oracle Java 6 Update 37<br/>
 				IBM Java 6 SR11<br/>
-				Open JDK 7u6
+				Open JDK 7u9
 			</td>
 			<td rowspan="3">GTK</td>
 		</tr>
@@ -482,7 +482,7 @@ marks interesting changes since the previous draft of
 	based application on Windows 8. This will increase our testing and support effort and 
 	potentially require new development to work around platform specific differences.
 	Note that Windows RT on ARM processors will <b>not</b> be supported.
-	[SWT, Platform UI, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+	[SWT, Platform UI, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=393426">393426</a>)
 </li>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
 	<strong>Migrate to GTK+ 3.</strong>
@@ -490,14 +490,14 @@ marks interesting changes since the previous draft of
 	Support for GTK+ 3 will be built into our current GTK+ packages, rather than
 	introducing a separate port. We expect this effort to reach &quot;early access&quot;
 	quality in the Kepler release, and GTK+ 2 will still be recommended for most users.
-	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=340067">340067</a>)
 </li>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
 	<strong>Add support for Microsoft UI automation.</strong>
 	Windows Vista and above support a new accessibility API called UI Automation (UIA).
 	We will add support for UIA in the SWT accessibility API. This will enable SWT
 	to support screen readers that use either UIA, or the existing IAccessible2 API.
-	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=393428">393428</a>)
 </li>
 </ul>
 </p:proposed>
@@ -527,6 +527,7 @@ marks interesting changes since the previous draft of
 	functional shortcomings compared to the old 3.x generation of the platform.
 	We will work to root out and eliminate these remaining bugs to increase
 	the overall quality and performance of the 4.x generation platform.
+	[Platform UI, SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=393429">393429</a>)
 </li>
 </ul>
 </p:committed>
@@ -540,6 +541,7 @@ marks interesting changes since the previous draft of
 	platform's development. We will work to reduce any real or perceived barriers 
 	to contribution, and increase efforts on reviewing patches and onboarding 
 	new contributors.
+	[All components] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=393430">393430</a>)
 </li>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
 	<strong>Common build infrastructure.</strong>
@@ -550,7 +552,7 @@ marks interesting changes since the previous draft of
 	common infrastructure. This will make it easier for anyone to fetch and build 
 	the Eclipse Platform on any machine, and lower the long term maintenance
 	cost of building older versions of Eclipse projects.
-	 [Releng] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXXXX">XXXXXX</a>)
+	 [Releng] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=372792">372792</a>)
 </li>
 </ul>
 </p:proposed>
