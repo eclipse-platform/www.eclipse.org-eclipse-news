@@ -90,7 +90,7 @@ ob_start();
 		      <ul>
 				<li>Most active development goes into this stream which can be downloaded from the <a href="http://download.eclipse.org/eclipse/downloads/">eclipse project download</a> area.</li>
 		        <li>The 4.3 plan is posted <a href="4.3/plan.php">here</a>.</li>
-		        <li>The plan for the current M1 milestone is posted <a href="4.3/plan.php#Milestone_Planning_M4">here</a>.</li>
+		        <li>The plan for the current M4 milestone is posted <a href="4.3/plan.php#Milestone_Planning_M4">here</a>.</li>
 		        <li>The plans for the previous milestones can be found <a href="4.3/plan.php#Milestone_Planning_M1">here</a>.</li>
 		      </ul></p>
 		      
