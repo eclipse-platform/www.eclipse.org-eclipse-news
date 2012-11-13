@@ -62,10 +62,10 @@ ob_start();
 			<h3>Subprojects</h3>
 		      <ul>
 		        <li> 
-		          <a href="http://www.eclipse.org/platform/" target="_top">Platform</a><br/>
+		          <a href="http://wiki.eclipse.org/Platform" target="_top">Platform</a><br/>
 				      The Platform defines the set of frameworks and common services that collectively 
 				      make up &quot;integration-ware&quot; required to support the use of Eclipse 
-				      as a component model, as a rich client platform (<a href="http://eclipse.org/rcp/" target="_top">RCP</a>) 
+				      as a component model, as a rich client platform (<a href="http://wiki.eclipse.org/Rich_Client_Platform" target="_top">RCP</a>) 
 				      and as a comprehensive tool integration platform. These services and frameworks 
 				      include a standard workbench user interface model and portable native widget 
 				      toolkit, a project model for managing resources, automatic resource delta 
