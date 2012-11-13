@@ -169,7 +169,7 @@ ob_start();
 		<div class="sideitem">
 			<h6>Subproject Leads</h6>
 			<ul>
-				<li><a href="http://www.eclipse.org/platform/">Platform</a><br> -- <a href="#McQ">Mike Wilson</a></li>
+				<li><a href="http://wiki.eclipse.org/Platform">Platform</a><br> -- <a href="#McQ">Mike Wilson</a></li>
 				<li><a href="http://www.eclipse.org/jdt/" target="_top">JDT</a><br> -- <a href="#dani">Dani Megert</a></li>
 				<li><a href="http://www.eclipse.org/pde/">PDE</a><br> -- Curtis Windatt</a></li>
 				<li><a href="http://www.eclipse.org/e4/" target="_top">e4</a><br> -- <a href="#McQ">Mike Wilson</a></li>
