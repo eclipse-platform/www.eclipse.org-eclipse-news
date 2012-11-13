@@ -12,7 +12,7 @@
 	$Nav->addCustomNav( "About This Project", "/projects/project_summary.php?projectid=eclipse", "_self", 1  );
 	$Nav->addCustomNav("Mailing Lists", 	"http://www.eclipse.org/mail/", "_self", 1);
 	$Nav->addNavSeparator("Projects", 	"index.php");
-	$Nav->addCustomNav("Platform", "http://www.eclipse.org/platform/", "_self", 1);
+	$Nav->addCustomNav("Platform", "http://wiki.eclipse.org/Platform", "_self", 1);
 	$Nav->addCustomNav("JDT", "http://www.eclipse.org/jdt/", "_self", 1);
 	$Nav->addCustomNav("PDE", "http://www.eclipse.org/pde/", "_self", 1);
 	$Nav->addCustomNav("e4", "http://www.eclipse.org/e4/", "_self", 1);

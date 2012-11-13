@@ -65,9 +65,8 @@ ob_start();
 			      He is a senior architect of the Eclipse SDK, a member of the Eclipse
 			      Architecture Council and one of the original Eclipse Founders. His interests include computer
 			      language design and implementation, semantic content publishing, web development,
-			      and playing the cello. Mike leads the <a href="http://eclipse.org/platform/">Platform</a>,
-			      <a href="http://www.eclipse.org/projects/project_summary.php?projectid=eclipse.e4">e4</a>, 
-			      and <a href="http://www.eclipse.org/eclipse/incubator/">Eclipse Project Incubator</a>
+			      and playing the cello. Mike leads the <a href="http://wiki.eclipse.org/Platform">Platform</a> and
+			      <a href="http://www.eclipse.org/projects/project_summary.php?projectid=eclipse.e4">e4</a>
 				  subprojects.
 		        </li>
 		        <li> 
