@@ -119,10 +119,9 @@ ob_start();
 			<ul>
 				<li><a href="http://download.eclipse.org/eclipse/">Downloads</a></li>
 				<li><a href="http://wiki.eclipse.org/index.php/Eclipse_FAQs">Project FAQ</a></li>
-				<li><a href="presentation/eclipse-slides.html">Slide Presentation</a><br>
-			      A presentation of the technical aspects of the Eclipse Project. (<a href="presentation/eclipse-slides.html" target="_blank">HTML</a>) 
+				<li><a href="presentation/eclipse-slides.pdf">Slide Presentation (PDF)</a><br>
+			      A presentation of the technical aspects of the Eclipse Project.
 			      (<a href="presentation/eclipse-slides.ppt" target="_blank">Powerpoint</a>) 
-			      (<a href="presentation/eclipse-slides.pdf" target="_blank">pdf</a>)</td>
 			    </li>
 			    <li><a href="http://wiki.eclipse.org/index.php/Eclipse_Project">Project Wiki</a></li>
       		</ul>				
