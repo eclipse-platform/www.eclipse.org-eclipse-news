@@ -2,7 +2,7 @@
 
 	#*****************************************************************************
 	#
-	# Copyright (c) 2008, 2011 IBM Corporation and others.
+	# Copyright (c) 2008, 2012 IBM Corporation and others.
  	# All rights reserved. This program and the accompanying materials
  	# are made available under the terms of the Eclipse Public License v1.0
  	# which accompanies this distribution, and is available at
@@ -23,13 +23,17 @@
 		<ul>
 			<li><a href="http://wiki.eclipse.org/Ant/Developers">Get Involved!</a></li>
 			<li><a href="/eclipse/ant/documents.php">Articles & Documents</a></li>
-			<li><a href="/eclipse/ant/nan/new_and_noteworthy.php">New and Noteworthy</a></li>
 			<li><a href="http://wiki.eclipse.org/Ant/Test_Script">Test Script</a></li>
-			<li><a href="http://wiki.eclipse.org/images/7/79/Ant.psf">Ant Project Set File</a></li>
 			<li><a href="/eclipse/ant/examples/examples.php">Example Ant Scripts</a></li>
 			<li><a href="/eclipse/ant/who.php">Who We Are</a></li>
 			<li><a href="/eclipse/ant/about.php">About this content</a></li>
 		</ul>
 	</div> 
+	<div class="sideitem">
+        <h6>Git Repos</h6>
+        <ul>
+            <li><a href="http://git.eclipse.org/c/platform/eclipse.platform.git/">Platform Ant GIT repo</a></li>
+        </ul>
+    </div>
 EOHTML
 ?>

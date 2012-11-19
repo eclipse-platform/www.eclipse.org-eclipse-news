@@ -63,15 +63,17 @@ include($App->getProjectCommon());
 		</div>
 		<div class="homeitem3col">
 			<h2><b>New and Noteworthy</b></h2>
-			<p>
-				For a complete listing of new and noteworthy entries check the 
-				<a href="/eclipse/ant/nan/new_and_noteworthy.php">New and Noteworthy</a> page.</p>
+		    <p>The following is a list of some of the newest and more interesting additions to the component.</p>
+			<ul>
+                <li>Bugs fixed so far in: <a href="https://bugs.eclipse.org/bugs/buglist.cgi?list_id=3164739&resolution=FIXED&classification=Eclipse&query_format=advanced&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&component=Ant&product=Platform&target_milestone=4.2.1&target_milestone=4.2.2&target_milestone=4.3&target_milestone=4.3%20M1&target_milestone=4.3%20M2&target_milestone=4.3%20M3&target_milestone=4.3%20M4&target_milestone=4.3%20M5&target_milestone=4.3%20M6&target_milestone=4.3%20M7&target_milestone=4.3">4.3 / 4.2.x</a></li>
+                <li>Latest <a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.3M2-201209201300/news/">New and Noteworthy</a> for Eclipse 4.3M2</li>
+            </ul>
 		</div>
 		<div class="homeitem3col">
 			<h2><b>Up To The Minute</b></h2>
 			<ul>
-				<li>To help new contributors, we have created a 
-				<a href="http://wiki.eclipse.org/images/7/79/Ant.psf" target="_blank">project set file</a> containing all of the projects needed to get started with Ant coding.</li>
+			     <li>Platform Ant has been migrated to Git, the new repository can be found <a href="http://git.eclipse.org/c/platform/eclipse.platform.git/">here</a> 
+			     with all of the ant-specific projects in the <em>ant</em> sub-folder within the repo.</li>
 			</ul>
 		</div>
 	</div>

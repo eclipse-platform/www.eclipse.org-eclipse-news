@@ -9,7 +9,7 @@
 
 	#*****************************************************************************
 	#
-	# Copyright (c) 2008 IBM Corporation and others.
+	# Copyright (c) 2008, 2012 IBM Corporation and others.
  	# All rights reserved. This program and the accompanying materials
  	# are made available under the terms of the Eclipse Public License v1.0
  	# which accompanies this distribution, and is available at
@@ -40,16 +40,16 @@
 		<div class="homeitem3col">
 			<h2><b>External Tool Builders</b></h2>
 			<ul>
-				<li>The tool builder used by <a href="http://dev.eclipse.org/viewcvs/index.cgi/pde/apitools/org.eclipse.pde.api.tools/scripts/buildApiToolsAntSupportJar.xml?view=log" target="_blank">org.eclipse.pde.api.tools</a> to build the jar of Ant tasks usable
+				<li>The tool builder used by <a href="http://git.eclipse.org/c/pde/eclipse.pde.ui.git/tree/apitools/org.eclipse.pde.api.tools/scripts/buildApiToolsAntSupportJar.xml?view=log" target="_blank">org.eclipse.pde.api.tools</a> to build the jar of Ant tasks usable
 					in a RelEng build setting</li>
-				<li>The tool builder use by <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.jdt.launching/scripts/buildLaunchingSupportJAR.xml?view=log" target="_blank">org.eclipse.jdt.launching</a> to provide launching support tooling.</li>
+				<li>The tool builder use by <a href="http://git.eclipse.org/c/jdt/eclipse.jdt.debug.git/tree/org.eclipse.jdt.launching/scripts/buildLaunchingSupportJAR.xml?view=log" target="_blank">org.eclipse.jdt.launching</a> to provide launching support tooling.</li>
 			</ul>
 		</div>
 		<div class="homeitem3col">
 			<h2><b>Commandline Scripts</b></h2>
 			<ul>
-				<li>The task available <a href="http://dev.eclipse.org/viewcvs/index.cgi/pde/apitools/org.eclipse.pde.api.tools/scripts/api-tasks.xml?view=log" target="_blank">here</a> is used to run the API tools Ant tasks from the command line, along with its required
-				.properties file available <a href="http://dev.eclipse.org/viewcvs/index.cgi/pde/apitools/org.eclipse.pde.api.tools/scripts/api-tasks.properties?view=log" target="_blank">here</a>.</li>
+				<li>The task available <a href="http://git.eclipse.org/c/pde/eclipse.pde.ui.git/tree/apitools/org.eclipse.pde.api.tools/scripts/api-tasks.xml?view=log" target="_blank">here</a> is used to run the API tools Ant tasks from the command line, along with its required
+				.properties file available <a href="http://git.eclipse.org/c/pde/eclipse.pde.ui.git/tree/apitools/org.eclipse.pde.api.tools/scripts/api-tasks.properties?view=log" target="_blank">here</a>.</li>
 			</ul>
 		</div>
 	</div>
