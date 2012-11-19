@@ -2,7 +2,7 @@
 
 	#*****************************************************************************
 	#
-	# Copyright (c) 2007, 2011 IBM Corporation and others.
+	# Copyright (c) 2007, 2012 IBM Corporation and others.
  	# All rights reserved. This program and the accompanying materials
  	# are made available under the terms of the Eclipse Public License v1.0
  	# which accompanies this distribution, and is available at
@@ -24,17 +24,14 @@
 			<li><a href="http://wiki.eclipse.org/Debug/FAQ">Frequently Asked Questions</a></li>
 			<li><a href="http://wiki.eclipse.org/Debug/Developers">Developers</a></li>
 			<li><a href="/eclipse/debug/documents.php">Articles & Documents</a></li>
-			<li><a href="/eclipse/debug/nan/new_and_noteworthy.php">New and Noteworthy</a></li>
 			<li><a href="http://wiki.eclipse.org/Debug/Test_Script">Test Script</a></li>
-			<li><a href="http://wiki.eclipse.org/images/c/c4/Debug.psf">Debug Project Set File</a></li>
 			<li><a href="/eclipse/debug/who.php">Who We Are</a></li>
 			<li><a href="http://eclipse-debug.blogspot.com/" target="_blank">Debug Team Blog</a></li>
-			<li><a href="/eclipse/debug/j9/j9_launching.php">J9 Launching Support</a></li>
 			<li><a href="/eclipse/debug/about.php">About this content</a></li>
 		</ul>
 	</div> 
 	<div class="sideitem">
-		<h6>Bundles</h6>
+		<h6>Git Repos</h6>
 		<ul>
 			<li><a href="http://git.eclipse.org/c/platform/eclipse.platform.debug.git/">Platform Debug GIT repo</a></li>
     		<li><a href="http://git.eclipse.org/c/jdt/eclipse.jdt.debug.git/">JDT Debug GIT repo</a></li>
