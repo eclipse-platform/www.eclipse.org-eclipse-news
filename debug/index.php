@@ -82,9 +82,6 @@
 			<h2><b>Up To The Minute</b></h2>
 			<ul>
 				<li>Our manual testing programs our now available for <a href="/eclipse/debug/misc/ManualTestingPrograms.zip">download</a>.  Happy testing!
-				<li>We last presented the debug tutorials at EclipseCon 2009. The presentations are available as an archive of tutorials <a target="_blank" href="/eclipse/debug/archived/eclipse_con_2009.zip">here</a>.
-				All presentations / tutorials from years previous to 2009 can be found <a target="_blank" href="/eclipse/debug/archived/eclipse_con_old.zip">here</a>
-				</li>
 				<li>Platform debug has been migrated to Git, the new repository can be found <a href="http://git.eclipse.org/c/platform/eclipse.platform.debug.git/">here</a></li>
 				<li>JDT debug has been migrated to Git, the new repository can be found <a href="http://git.eclipse.org/c/jdt/eclipse.jdt.debug.git/">here</a></li>
 			</ul>

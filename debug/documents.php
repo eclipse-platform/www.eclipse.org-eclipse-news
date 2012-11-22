@@ -42,11 +42,7 @@
 		<div class="homeitem3col">
 			<h2><b>EclipseCon Presentations</b></h2>
 			<p>
-			     All EclipseCon presentations up to 2008 have been archived <a target="_blank" href="/eclipse/debug/archived/eclipsecon-old.zip">here</a>. 
-			     <br>
-			</p>
-			<p>
-			     The last time we gave the Debug tutorial in 2009 has been archived <a target="_blank" href="/eclipse/debug/archived/eclipsecon-2009.zip">here</a>.
+			     The last time we gave the Debug tutorial in 2009 has been archived <a target="_blank" href="/eclipse/debug/documents/eclipsecon-2009.zip">here</a>.
 			</p>
 		</div>
 		<div class="homeitem3col">
