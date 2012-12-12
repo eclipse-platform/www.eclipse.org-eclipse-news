@@ -110,6 +110,55 @@
       </p>
     </td>
   </tr>
+    <tr id="inherit-null-annotations">
+    <td class="title">Option to inherit null annotations</td>
+    <td class="content">
+        JDT has a new option how to interpret null annotations in the presence of inheritance.
+        This should facilitate the migration towards null annotations in projects with
+        mixed code ownership.
+      <p>For the sake of code readability, JDT expects null annotations of an overridden
+        method to be repeated in overriding methods. In the following example the analysis
+        normally complains that <code>arg</code> is not annotated in <code>ClientClass</code>,
+        which means, this class doesn't formally conform to the contract of its super-interface.
+      </p>
+      <p><img title="Example for inheritance of null annotations" src="images/inherit-null-annotations-example.png"/></p>
+      <p>Starting with 4.3M4 this behavior can be changed by selecting the option
+        <strong>Inherit null annotations</strong>.
+      </p>
+      <p><img title="Option for inheritance of null annotations" src="images/inherit-null-annotations-option.png"/></p>
+      <p>In this new mode the analysis implicitly fills in all missing annotations
+        in overriding methods and uses the annotations from the overridden method.
+        In the above example the error will go away, and analysis concludes that the
+        code is actually safe, which is likely when the contract had already been
+        defined in the javadoc comment and the implementor actually obliges to that
+        contract. If, on the other hand, the implementation does not comply with the
+        inherited specification, new errors will be reported as shown below.
+      </p>
+      <p><img title="Negative example for inheritance of null annotations" src="images/inherit-null-annotations-example2.png"/></p>
+      <p>If inheritance of null annotations encounters any ambiguity or conflict
+        the analysis falls back to requiring explicit annotations.
+      </p>
+    </td>
+  </tr>
+  <tr id="close-quietly">
+    <td class="title">Leak analysis respects well-known utilities</td>
+    <td class="content">
+        JDT's analysis for resource leaks has been made aware of well known utilities
+        from google and apache libraries.
+      <p>Generally, this analysis looks for <code>close()</code> method calls
+        directly on a resource (any value of type <code>Closeable</code>).
+        However, in order to reduce boilerplate exception handling, several libraries
+        are providing methods like <code>closeQuietly(Closeable)</code>.
+        Previously, the analysis would complain about the missing call to <code>close()</code>
+        as shown below:
+      </p>
+      <p><img title="Example for close quietly" src="images/close-quietly-example.png"/></p>
+      <p>This warning is not relevant and will no longer be reported.
+        To achieve this, JDT now hardcodes a (short) white list of functions that
+        are known to safely close a given resource.
+      </p>
+    </td>
+  </tr>
   </tr>
   <tr> 
     <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
