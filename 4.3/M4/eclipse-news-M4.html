@@ -15,74 +15,34 @@
   <li><a href="#Platform">Platform</a></li>
   <li><a href="#JDT">JDT</a></li>
   <li><a href="#PDE">PDE</a></li>
-  <li><a href="#Equinox">Equinox</a></li>
 </ul>
 
 <table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
   <tr>
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+  
+  <tr id="performance">
+    <td class="title">Performance enhancements</td>
+    <td class="content">
+      Significant performance enhancements have been made in the Platform user interface in this milestone. In particular, some applications
+      that were experiencing slow editor opening, closing, and switching are now much faster. Editor selection changes and the <b>Open Resource</b>
+      dialog have also been made faster. A number of leaks have been addressed to avoid long-running applications don't run out of memory.
+      <p><img src="images/speed.jpg" alt="Speedometer"><br>
+	  <small>Photographer: YtseJam Photography / Creative Commons Attribution 2.0</small>
+	  </p>
+	</td>
   </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Resources</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">SWT</div>
-      </td>
-  </tr>
+
   <tr id="gtk3">
     <td class="title">SWT for GTK3</td>
     <td class="content">
       32-bit and 64-bit GTK3 have joined the lineup of supported configurations for which SWT and Eclipse are routinely built. This implementation is currently early access. Everyone is encouraged to download and test these new builds, and to log bugs in <a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Platform">bugzilla</a>.
       <p>Note to load the SWT GTK3 libraries, you must set an environment variable SWT_GTK3 prior to starting Eclipse. (ex. export SWT_GTK3=1)</p>
       <p><img src="images/gtk3.png" alt="GTK3 Control Example"></p>  
-  </td>
+	</td>
   </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Platform UI</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">User Assistance</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Platform Text</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Team/CVS</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Compare</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Ant</div>
-      </td>
-  </tr>
+
   <tr id="ant-augment">
     <td class="title">Support for the Ant augment task</td>
     <td class="content">
@@ -90,23 +50,20 @@
       <a href="http://ant.apache.org/manual/Tasks/augment.html">here</a>. 
     </td>
   </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Debug</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
+
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
+  
   <tr id="stacktrace-paste">
     <td class="title">Paste direct to a new stacktrace console</td>
     <td class="content">
       Previously, when creating a new Java stacktrace console, you would have to select and delete the default text prompting you to paste
       a stacktrace. In 4.3M4 you can simply paste the stacktrace in and the default text will be auto-deleted for you.
     </td>
-    <tr id="xml-dom-structure">
+  </tr>
+
+  <tr id="xml-dom-structure">
     <td class="title">XML DOM logical structures</td>
     <td class="content">
       JDT now provides a default logical structure for XML DOMs, which can be used during debugging to view the children and attributes of a node as simple arrays.
@@ -130,7 +87,7 @@
     <tr id="inherit-null-annotations">
     <td class="title">Option to inherit null annotations</td>
     <td class="content">
-        JDT has a new option how to interpret null annotations in the presence of inheritance.
+        JDT has a new option controlling how to interpret null annotations in the presence of inheritance.
         This should facilitate the migration towards null annotations in projects with
         mixed code ownership.
       <p>For the sake of code readability, JDT expects null annotations of an overridden
@@ -147,7 +104,7 @@
         in overriding methods and uses the annotations from the overridden method.
         In the above example the error will go away, and analysis concludes that the
         code is actually safe, which is likely when the contract had already been
-        defined in the javadoc comment and the implementor actually obliges to that
+        defined in the javadoc comment and the implementor actually adheres to that
         contract. If, on the other hand, the implementation does not comply with the
         inherited specification, new errors will be reported as shown below.
       </p>
@@ -157,6 +114,7 @@
       </p>
     </td>
   </tr>
+
   <tr id="close-quietly">
     <td class="title">Leak analysis respects well-known utilities</td>
     <td class="content">
@@ -176,13 +134,10 @@
       </p>
     </td>
   </tr>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
+
   <tr id="import-package">
     <td class="title">New import package quick fixes</td>
     <td class="content">
@@ -203,23 +158,7 @@
       </p>
     </td>
   </tr>
-  <tr>
-    <td colspan="2" class="section" id="Equinox">Equinox</td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
 
-  <tr> 
-    <td colspan="2">  <div class="title">Template</div>
-      </td>
-  </tr>
-  <tr id="first-item">
-    <td class="title">First item</td>
-    <td class="content">
-      Item blurb.
-    </td>
-  </tr>
   <tr> 
     <td colspan="2">  </td>
   </tr>
