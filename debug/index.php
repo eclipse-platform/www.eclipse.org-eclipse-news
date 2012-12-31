@@ -2,7 +2,7 @@
 
 	#*****************************************************************************
 	#
-	# Copyright (c) 2007, 2011 IBM Corporation and others.
+	# Copyright (c) 2007, 2012 IBM Corporation and others.
  	# All rights reserved. This program and the accompanying materials
  	# are made available under the terms of the Eclipse Public License v1.0
  	# which accompanies this distribution, and is available at
@@ -73,16 +73,17 @@
 			<h2><b>New and Noteworthy</b></h2>
 			<p>The JDT debug component is very responsive to new ideas, feature requests and bug reports. The following is a list of some 
 			of the newest and more interesting additions to the component.</p>
-			<p>For a complete listing of new and noteworthy entries check the <a href="/eclipse/debug/nan/new_and_noteworthy.php">New and Noteworthy</a> page.</p>
+			<ul>
+			 <li>Bugs fixed so far in: <a href="https://bugs.eclipse.org/bugs/buglist.cgi?list_id=3164739&resolution=FIXED&classification=Eclipse&query_format=advanced&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&component=Debug&product=JDT&product=Platform&target_milestone=4.2.1&target_milestone=4.2.2&target_milestone=4.3&target_milestone=4.3%20M1&target_milestone=4.3%20M2&target_milestone=4.3%20M3&target_milestone=4.3%20M4&target_milestone=4.3%20M5&target_milestone=4.3%20M6&target_milestone=4.3%20M7&target_milestone=4.3">4.3 / 4.2.x</a></li>
+			 <li>Latest <a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.3M2-201209201300/news/">New and Noteworthy</a> for Eclipse 4.3M2</li>
+			</ul>
 		</div>
 		<div class="homeitem">
 			<h2><b>Up To The Minute</b></h2>
 			<ul>
 				<li>Our manual testing programs our now available for <a href="/eclipse/debug/misc/ManualTestingPrograms.zip">download</a>.  Happy testing!
-				<li>We are presenting two tutorials at EclipseCon 2008.  The presentations are available for both <a target="_blank" href="/eclipse/debug/documents/ec_2008/Debug_Tutorial_Basic_2008.ppt">Debug Platform: The Basics</a> and <a target="_blank" href="/eclipse/debug/documents/ec_2008/Debug_Tutorial_Custom_Integration_2008.ppt">Debug Platform: Custom Integration</a>. More
-				information can be found on the <a href="/eclipse/debug/documents.php">Documents</a> page along with exercises.
-				</li>
-				<li>To help new contributors, we have created a <a href="http://wiki.eclipse.org/images/c/c4/Debug.psf" target="_blank">project set file</a> containing all of the projects needed to get started with debug coding.</li>
+				<li>Platform debug has been migrated to Git, the new repository can be found <a href="http://git.eclipse.org/c/platform/eclipse.platform.debug.git/">here</a></li>
+				<li>JDT debug has been migrated to Git, the new repository can be found <a href="http://git.eclipse.org/c/jdt/eclipse.jdt.debug.git/">here</a></li>
 			</ul>
 		</div>
 	</div>

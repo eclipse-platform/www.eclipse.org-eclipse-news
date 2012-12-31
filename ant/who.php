@@ -2,7 +2,7 @@
 
 	#*****************************************************************************
 	#
-	# Copyright (c) 2008, 2011 IBM Corporation and others.
+	# Copyright (c) 2008, 2012 IBM Corporation and others.
  	# All rights reserved. This program and the accompanying materials
  	# are made available under the terms of the Eclipse Public License v1.0
  	# which accompanies this distribution, and is available at
@@ -49,7 +49,7 @@
 				</tr>
 				<tr> 
 					<td width="30%" valign="top"><b>Status</b></td>
-					<td width="70%">Active</td>
+					<td width="70%">Inactive</td>
 				</tr>
 				<tr> 
 					<td width="30%" valign="top"><b>Email</b></td>
@@ -89,7 +89,7 @@
 				</tr>
 				<tr> 
 					<td width="30%" valign="top"><b>Status</b></td>
-					<td width="70%">Active</td>
+					<td width="70%">Inactive</td>
 				</tr>
 				<tr> 
 					<td width="30%" valign="top"><b>Email</b></td>
