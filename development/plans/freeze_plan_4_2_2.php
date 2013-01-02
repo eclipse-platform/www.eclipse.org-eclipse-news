@@ -164,7 +164,7 @@ ob_start();
 	        a series of release candidates leading to the Eclipse project's contribution to the
 	        Juno 4.2 SR2 release. The Eclipse project version number for this release is 4.2.2.
 	        By its nature, this maintenance release contains fixes to a small number 
-	        of serious problems found in the September 2011 Juno 4.2 SR1 release. We make and verify each 
+	        of serious problems found in the September 2012 Juno 4.2 SR1 release. We make and verify each 
 	        fix carefully, so that we do not need to tie up the entire development 
 	        team in time-consuming test passes. As always, we welcome help from the 
 	        community with testing the release candidates. By default,&nbsp; Juno 4.2 SR2
