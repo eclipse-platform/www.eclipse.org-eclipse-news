@@ -171,7 +171,7 @@ ob_start();
 	        is supposed to work exactly like the initial Juno 4.2 release except for the problems we intended 
 	        to fix. All problems fixed in Juno 4.2 SR2 are in the Eclipse bugzilla database 
 	        and flagged with Target Milestone &quot;4.2.2&quot; (query bugzilla for 
-	        the <a href="http://bugs.eclipse.org/bugs/buglist.cgi?product=JDT&amp;product=PDE&amp;product=Platform&amp;product=Equinox&amp;target_milestone=4.2.2&amp;resolution=FIXED&amp;order=bugs.bug_id">complete 
+	        the <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&product=Equinox&product=JDT&product=PDE&product=Platform&target_milestone=4.2.2&target_milestone=Juno%20SR2">complete 
 	        list of bugs fixed in Juno 4.2 SR2</a>). We are most interested in identifying 
 	        regressions where we have changed something that we did not intend to.
 	        </p> 
