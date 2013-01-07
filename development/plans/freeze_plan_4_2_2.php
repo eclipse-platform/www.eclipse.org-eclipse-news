@@ -105,8 +105,8 @@ ob_start();
 	          </tr>         
 	          <tr>
 	            <td height="20"></td>
-	            <td align="right" height="20">29</td>
-	            <td align="right" height="20">Tue 08:00 EDT</td>
+	            <td align="right" height="20">28</td>
+	            <td align="right" height="20">Mon 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b>Start 1-day test pass against RC3</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
