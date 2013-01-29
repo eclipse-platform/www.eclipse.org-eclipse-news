@@ -123,9 +123,81 @@
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+  
+  <tr id="bundles-in-category-editor">
+    <td class="title">Bundles in the category editor</td>
+    <td class="content">
+      The category editor now supports putting individual bundles into categories.
+      <p>      
+      The category editor creates a category.xml that can define categories that the contents of
+      a p2 repository should be organized into.  Previously only features could be specified as belonging
+      to a category and be visible to users.  Now individual bundles can be added to the category.xml.
+      </p>
+      <p>
+      <img src="images/category-editor.png" alt="Category editor can include individual bundles"/>
+      </p>
+    </td>
   </tr>
+  
+  <tr id="plugin-classpath-contributors">
+    <td class="title">New API to contribute to the classpath of plug-in projects</td>
+    <td class="content">
+      New API in PDE allows you to add additional classpath entries to a plug-in project.  Contribute a 
+      <em>Plug-in Classpath Contributor</em> via the <em>org.eclipse.pde.core.pluginClasspathContributors</em>
+      extension point.  Whenever the PDE classpath is computed or a new plug-in dependency is added your classpath
+      contributor will be queried for additional entries.
+      <p>
+      If you are using Equinox Adapter hooks to load additional libraries at runtime you can use this API to add 
+      the correct libraries to the classpath at build time.
+      </p>
+      <p>
+      <img src="images/classpath-contributor.png" alt="An example classpath contributor extension"/>
+      </p>
+      </td>
+  </tr>
+  
+  <tr id="update-classpath-workspace">
+    <td class="title">Updating the classpath requires a workspace lock</td>
+    <td class="content">
+      When a change is made to a plug-in that forces a classpath update, an update job is created that
+      modifies the Plug-in Dependencies classpath container in the background. This job now acquires a workspace lock
+      to prevent other operations such as builders from running on a stale classpath.
+      <p>
+      This behaviour can be enabled in 4.2.2 by setting the system property <em>pde.lockWorkspaceForClasspath</em> to 
+      true.
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="api-use-filters">
+    <td class="title">Problem filters apply to API Tools use scans</td>
+    <td class="content">
+      Problem filter files (.api_filter) can be used to filter problems reported by the API Tools analysis
+      task and the workspace analysis builder.  These filter files can now be applied to API Tools use scans.
+      Reference problems that are filtered out of the analysis results can be also filtered from the results
+      of use scans.
+      <p>
+      Filters are specified in the task using the same property as the analysis task.  Set the <em>filters</em>
+      attribute on the <em>apitooling.apiuse</em> task, specifying the root directory of API filter files.  Each
+      filter file must be in a folder with a filename matching the component name the filter file applies to.
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="missing-filters-on-tasks">
+    <td class="title">API Tools tasks warn about missing include or exclude files</td>
+    <td class="content">
+      Many of the API Tools tasks, including Analysis, API Use, and API Freeze, provide <em>includelist</em> and
+      <em>excludelist</em> attributes which can be used to limit the reported problems. Previously,
+      if you set an include or exclude list, but the file wasn't found, the task would continue without warning
+      about the incorrect filtering.  Now a missing include or exclude list will result in the task failing with
+      an explanation.
+      <p>
+      <img src="images/missing-include.png" alt="Example console output for missing include"/>
+      </p>
+    </td>
+  </tr>
+  
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
   </tr>
