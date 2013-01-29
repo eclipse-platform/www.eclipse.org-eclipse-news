@@ -91,8 +91,34 @@
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+  <tr id="null-annotations-for-fields">
+    <td class="title">Null annotations for fields</td>
+    <td class="content">
+      The annotation based null analysis - first released with Eclipse Indigo - has been extended
+      to apply also to fields. If enabled, this analysis will now detect the following problems
+      concerning any field annotated with <code>@NonNull</code>:
+      <ul>
+      <li>If the field is not properly initialized to a non-null value.</li>
+      <li>If a value is assigned to the field that is not known to be non-null.</li>
+      </ul>
+      <p>In return to these obligations dereferencing a <code>@NonNull</code> field is regarded as always safe.
+      </p>
+      <p>If a field is marked as <code>@Nullable</code> generally every direct dereference
+      	of the field is flagged as a potential null pointer access. Even a null check for such a field is not
+      	a perfect protection due to dangers of side effects, effects via aliased references and concurrency.</p>
+      <p>As a compromise between safety and convenience the compiler can be configured to apply
+      	<strong>"syntactic null analysis for fields"</strong>.
+      	With this option enabled the compiler syntactically recognizes
+      	a narrow range of code patterns where a null-check of a field is <em>directly</em> followed by
+      	a dereference or an assignment to a <code>@NonNull</code> variable. For these particular situations
+      	no problem will be reported.</p>
+      <p>In the following example the check in line 12 properly protects the access in line 13, whereas
+      	the knowledge that field <code>nullable</code> holds a non-null value (in line 15) is spoiled by
+      	the intermediate statement in line 16.</p>
+	  <p><img src="images/null-annotations-for-fields-examples.png" alt=""/></p>
+      <p>This is the option that enables the syntactic analysis (under the heading <strong>Java Compiler &gt; Errors/Warnings</strong>):</p>
+	  <p><img src="images/option-syntactic-null-analysis-for-fields.png" alt=""/></p>
+	</td>
   </tr>
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
