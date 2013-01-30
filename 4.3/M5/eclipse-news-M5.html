@@ -119,7 +119,36 @@
       <p>This is the option that enables the syntactic analysis (under the heading <strong>Java Compiler &gt; Errors/Warnings</strong>):</p>
 	  <p><img src="images/option-syntactic-null-analysis-for-fields.png" alt=""/></p>
 	</td>
+  </tr>   
+  <tr id="Quick-Assist-for-unused-type-parameters">
+    <td class="title">Quick Assist for unused type parameters</td>
+    <td class="content">
+      The Java editor now provides a Quick Assist (<b>Ctrl+1</b>) to remove or document the unused type parameters.
+      <p><img src="images/quickassist-for-unused-type-parameter-example.png" alt=""/></p>
+    </td>
   </tr>
+  <tr id="Support-for-package-Javadoc-in-Javadoc-hover-and-view">
+    <td class="title">Support for package Javadoc in Javadoc hover and view</td>
+    <td class="content">
+      The Javadoc hover and view can now display the contents 
+      of package Javadoc present in either the package-info.java or in the package.html file.
+      <p><img src="images/package-javadoc-hover-examples.png" alt=""/></p>
+    </td>
+  </tr>
+<tr id="pre-fill-package-name">
+	<td class="title">Pre-filling package name in creation wizards</td>
+	<td class="content">
+      All the type (Class, Interface, Enum, Annotation) and package creation wizards now pre-fill the package name
+      if a suitable package name can be suggested for the selected project or source folder.
+      <p><img src="images/pre-fill-package-name.png" alt=""/></p>
+      <p>The suggested package name is the name of the project if the source folder does not contain any package
+      and if the project name is a valid package name.
+      In case of type creation wizards, if the source folder contains exactly one package then the name of that package
+      is used as the suggested package name.</p>
+  </td>
+</tr>
+  
+  
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
