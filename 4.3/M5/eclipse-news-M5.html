@@ -94,25 +94,25 @@
   <tr id="null-annotations-for-fields">
     <td class="title">Null annotations for fields</td>
     <td class="content">
-      The annotation based null analysis - first released with Eclipse Indigo - has been extended
+      The annotation-based null analysis &mdash; first released with Eclipse Indigo &mdash; has been extended
       to apply also to fields. If enabled, this analysis will now detect the following problems
       concerning any field annotated with <code>@NonNull</code>:
       <ul>
       <li>If the field is not properly initialized to a non-null value.</li>
       <li>If a value is assigned to the field that is not known to be non-null.</li>
       </ul>
-      <p>In return to these obligations dereferencing a <code>@NonNull</code> field is regarded as always safe.
+      <p>In return to these obligations, dereferencing a <code>@NonNull</code> field is regarded as always safe.
       </p>
-      <p>If a field is marked as <code>@Nullable</code> generally every direct dereference
+      <p>If a field is marked as <code>@Nullable</code>, generally every direct dereference
       	of the field is flagged as a potential null pointer access. Even a null check for such a field is not
-      	a perfect protection due to dangers of side effects, effects via aliased references and concurrency.</p>
-      <p>As a compromise between safety and convenience the compiler can be configured to apply
+      	a perfect protection due to dangers of side effects, effects via aliased references, and concurrency.</p>
+      <p>As a compromise between safety and convenience, the compiler can be configured to apply
       	<strong>"syntactic null analysis for fields"</strong>.
-      	With this option enabled the compiler syntactically recognizes
+      	With this option enabled, the compiler syntactically recognizes
       	a narrow range of code patterns where a null-check of a field is <em>directly</em> followed by
-      	a dereference or an assignment to a <code>@NonNull</code> variable. For these particular situations
+      	a dereference or an assignment to a <code>@NonNull</code> variable. For these particular situations,
       	no problem will be reported.</p>
-      <p>In the following example the check in line 12 properly protects the access in line 13, whereas
+      <p>In the following example, the check in line 12 properly protects the access in line 13, whereas
       	the knowledge that field <code>nullable</code> holds a non-null value (in line 15) is spoiled by
       	the intermediate statement in line 16.</p>
 	  <p><img src="images/null-annotations-for-fields-examples.png" alt=""/></p>
@@ -120,25 +120,24 @@
 	  <p><img src="images/option-syntactic-null-analysis-for-fields.png" alt=""/></p>
 	</td>
   </tr>   
-  <tr id="Quick-Assist-for-unused-type-parameters">
-    <td class="title">Quick Assist for unused type parameters</td>
-    <td class="content">
-      The Java editor now provides a Quick Assist (<b>Ctrl+1</b>) to remove or document the unused type parameters.
-      <p><img src="images/quickassist-for-unused-type-parameter-example.png" alt=""/></p>
-    </td>
-  </tr>
   <tr id="Support-for-package-Javadoc-in-Javadoc-hover-and-view">
     <td class="title">Support for package Javadoc in Javadoc hover and view</td>
     <td class="content">
-      The Javadoc hover and view can now display the contents 
-      of package Javadoc present in either the package-info.java or in the package.html file.
+      The Javadoc hover and view now display package Javadoc from either the package-info.java or the package.html file.
       <p><img src="images/package-javadoc-hover-examples.png" alt=""/></p>
     </td>
   </tr>
-<tr id="pre-fill-package-name">
+  <tr id="Quick-Assist-for-unused-type-parameters">
+    <td class="title">Quick Assist for unused type parameters</td>
+    <td class="content">
+      The Java editor now provides a Quick Assist (<b>Ctrl+1</b>) to remove or document unused type parameters.
+      <p><img src="images/quickassist-for-unused-type-parameter-example.png" alt=""/></p>
+    </td>
+  </tr>
+  <tr id="pre-fill-package-name">
 	<td class="title">Pre-filling package name in creation wizards</td>
 	<td class="content">
-      All the type (Class, Interface, Enum, Annotation) and package creation wizards now pre-fill the package name
+      All the type and package creation wizards now pre-fill the package name
       if a suitable package name can be suggested for the selected project or source folder.
       <p><img src="images/pre-fill-package-name.png" alt=""/></p>
       <p>The suggested package name is the name of the project if the source folder does not contain any package
@@ -146,7 +145,7 @@
       In case of type creation wizards, if the source folder contains exactly one package then the name of that package
       is used as the suggested package name.</p>
   </td>
-</tr>
+  </tr>
   
   
   <tr>
@@ -173,7 +172,7 @@
     <td class="content">
       New API in PDE allows you to add additional classpath entries to a plug-in project.  Contribute a 
       <em>Plug-in Classpath Contributor</em> via the <em>org.eclipse.pde.core.pluginClasspathContributors</em>
-      extension point.  Whenever the PDE classpath is computed or a new plug-in dependency is added your classpath
+      extension point.  Whenever the PDE classpath is computed or a new plug-in dependency is added, your classpath
       contributor will be queried for additional entries.
       <p>
       If you are using Equinox Adapter hooks to load additional libraries at runtime you can use this API to add 
