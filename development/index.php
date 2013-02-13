@@ -38,7 +38,7 @@ ob_start();
 			<ul>
 		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_3.xml"> Eclipse Project Kepler 4.3 Plan</a><br>
 		        This document lays out the feature and API set for the Kepler 4.3 release of the Eclipse Project.</li>
-		      <li><a href="plans/freeze_plan_4_2_1.php">Eclipse Project Juno SR2 Endgame Plan</a><br>
+		      <li><a href="plans/freeze_plan_4_2_2.php">Eclipse Project Juno SR2 Endgame Plan</a><br>
 				Information about how we plan to wrap up the Juno SR2 release (versions 3.8.2 and 4.2.2).</li>
 		    </ul>
       	</div>

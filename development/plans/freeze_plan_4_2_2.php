@@ -41,7 +41,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>Juno SR2 release candidate 3 build on Friday January 25</b></p>
+			<p><b>Juno SR4 build complete. No further builds planned.</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -84,7 +84,7 @@ ob_start();
 	            <td height="20">&nbsp;&nbsp;<b>Start 1-day test pass against RC2</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>         
-	          <tr class="current">
+	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">25</td>
 	            <td align="right" height="20">Fri 08:00 EDT</td>
@@ -133,7 +133,7 @@ ob_start();
 	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 4 build [if required]</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>         
-	          <tr>
+	          <tr class="current">
 	            <td height="20"></td>
 	            <td align="right" height="20">8</td>
 	            <td align="right" height="20">Fri 08:00 EDT</td>
