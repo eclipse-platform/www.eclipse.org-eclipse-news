@@ -83,21 +83,7 @@
   <tr> 
     <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
   </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Ant</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Debug</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  
+ 
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
@@ -139,6 +125,31 @@
       </p>
     </td>
   </tr>
+  
+  <tr id="debug-improved-generics-eval">
+   <td class="title">Improved evaluation of generics while debugging</td>
+   <td class="content">
+     Significant improvements have been made in the debug evaluation engine to support the use of
+     generics. This impacts the use of conditional breakpoints, the display view, the expressions view,
+     and the inspect/display/execute actions. Previously, evaluations acting on classes with generics
+     would sometimes encounter compilation errors.
+   </td>
+  </tr>
+  
+  <tr id="debug-ext-source-api">
+   <td class="title">API to contribute location information for non-standard JRE / JDK libraries</td>
+   <td class="content">
+     JDT Debug now provides an extension point <code>org.eclipse.jdt.launching.libraryLocatonResolvers</code>
+     that you can use to contribute location information for non-standard JRE / JDK libraries.  For example,
+     this extension point could be used to provide Javadoc and source locatons for jars in the ext location
+     of a JRE.
+     <p>  
+     Extenders must provide an implementation of <code>org.eclipse.jdt.launching.ILibraryLocatonResolver</code>
+     which can provide package roots, source paths, Javadoc locations and index locations for a library.
+     </p> 
+   </td>
+  </tr>
+  
 
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
