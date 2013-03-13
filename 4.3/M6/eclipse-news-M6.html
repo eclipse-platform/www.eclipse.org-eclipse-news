@@ -128,9 +128,28 @@
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+  <tr id="api-unresolved-bundles">
+   <td class="title">API Tools Analysis and Freeze tasks can run with unresolved bundles</td>
+   <td class="content">
+	 The API Tools <em>Analysis</em> and <em>API Freeze</em> ant tasks will now process bundles
+	 with resolver errors such as missing dependencies.  This means you can now get analysis results
+	 for an incomplete product.
+	 <p>
+     The ant tasks produce reports based on a reference baseline and a profile.  Previously both 
+     the baseline and the profile had to describe complete products.  Any bundle that had resolver 
+     errors due to missing dependencies would be skipped.  Now these bundles will be processed.
+     </p>
+     <p>
+     Resolver errors can affect the results so a list of resolver errors is included in the xml output
+     and warnings are added the html during report conversion.  To return to the old behaviour of skipping
+     unresolved bundles, you can set <code>processunresolvedbundles="false"</code> on your ant task.
+     </p>
+     <p>
+     <img src="images/unresolved-analysis.png" alt="Unresolved bundle in the analysis task"/>
+     </p>
+   </td>
   </tr>
+
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
   </tr>
