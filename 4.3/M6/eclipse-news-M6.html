@@ -104,7 +104,7 @@
   <tr id="convert-to-if-return">
     <td class="title">'Convert to if-!-return' Quick Assist</td>
     <td class="content">
-     Ever encountered a long <code>if</code> statement that can be safely inverted to return, so that you can ignore the code that follows, and make it easier to understand? 
+     Ever encountered a long <code>if</code> statement that can be safely inverted to an early return, so that you can ignore the code that follows, and make it easier to understand? 
      Now, you can just use a Quick Assist <b>(Ctrl+1)</b> on the <code>if</code> statement to do this refactoring:
      <p><img src="images/convert-to-if-!-return.png" alt=""/></p>
     </td>
@@ -113,7 +113,7 @@
   <tr id="linked-Javadoc-package-names">
    <td class="title">Package names are linked in Javadoc hover and view</td>
    <td class="content">
-     You can now click individual package names displayed in the header of the Javadoc hover or the Javadoc view to see its Javadoc:
+     You can now click individual package names displayed in the header of the Javadoc hover or the Javadoc view to see the package Javadoc:
      <p><img src="images/javadoc-package-names-linked.png" alt=""/></p>
    </td>
   </tr>
@@ -125,6 +125,21 @@
    </td>
   </tr>
   
+  <tr id="junit-4.11">
+    <td class="title">Only one JUnit 4.11</td>
+    <td class="content">
+        The org.junit bundle has been updated to 4.11.
+      <p>
+        At the same time, our good old friend org.junit_3.8.2 has been retired, and the org.junit4 compatibility bundle
+        has also been removed. Your <code>Require-Bundle:</code> entries should just point to
+        <code>org.junit;bundle-version="4.11.0"</code> (or an earlier version, if you like).
+      </p>
+      <p>Note that JUnit 4 still contains the JUnit 3 APIs. If you need org.junit_3.8.2 back for
+        whatever reason, you can still get it from <a href="http://download.eclipse.org/tools/orbit/downloads/">Orbit</a>.
+      </p>
+    </td>
+  </tr>
+
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
