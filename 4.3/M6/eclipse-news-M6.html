@@ -139,12 +139,12 @@
   <tr id="debug-ext-source-api">
    <td class="title">API to contribute location information for non-standard JRE / JDK libraries</td>
    <td class="content">
-     JDT Debug now provides an extension point <code>org.eclipse.jdt.launching.libraryLocatonResolvers</code>
+     JDT Debug now provides an extension point <code>org.eclipse.jdt.launching.libraryLocationResolvers</code>
      that you can use to contribute location information for non-standard JRE / JDK libraries.  For example,
      this extension point can be used to provide Javadoc and source locations for JARs in the ext location
      of a JRE.
      <p>
-     Extenders must provide an implementation of <code>org.eclipse.jdt.launching.ILibraryLocatonResolver</code>
+     Extenders must provide an implementation of <code>org.eclipse.jdt.launching.ILibraryLocationResolver</code>
      which can provide package roots, source paths, Javadoc locations and index locations for a library.
      </p> 
    </td>
