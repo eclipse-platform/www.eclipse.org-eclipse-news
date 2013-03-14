@@ -112,7 +112,7 @@
   </tr>
   
   <tr id="junit-4.11">
-    <td class="title">Only one JUnit 4.11</td>
+    <td class="title">Only one JUnit (4.11)</td>
     <td class="content">
         The org.junit bundle has been updated to 4.11.
       <p>
@@ -141,9 +141,9 @@
    <td class="content">
      JDT Debug now provides an extension point <code>org.eclipse.jdt.launching.libraryLocatonResolvers</code>
      that you can use to contribute location information for non-standard JRE / JDK libraries.  For example,
-     this extension point could be used to provide Javadoc and source locatons for jars in the ext location
+     this extension point can be used to provide Javadoc and source locations for JARs in the ext location
      of a JRE.
-     <p>  
+     <p>
      Extenders must provide an implementation of <code>org.eclipse.jdt.launching.ILibraryLocatonResolver</code>
      which can provide package roots, source paths, Javadoc locations and index locations for a library.
      </p> 
@@ -157,18 +157,18 @@
   <tr id="api-unresolved-bundles">
    <td class="title">API Tools Analysis and Freeze tasks can run with unresolved bundles</td>
    <td class="content">
-	 The API Tools <em>Analysis</em> and <em>API Freeze</em> ant tasks will now process bundles
+	 The API Tools <b>Analysis</b> and <b>API Freeze</b> Ant tasks will now process bundles
 	 with resolver errors such as missing dependencies.  This means you can now get analysis results
 	 for an incomplete product.
 	 <p>
-     The ant tasks produce reports based on a reference baseline and a profile.  Previously both 
+     The Ant tasks produce reports based on a reference baseline and a profile.  Previously both 
      the baseline and the profile had to describe complete products.  Any bundle that had resolver 
      errors due to missing dependencies would be skipped.  Now these bundles will be processed.
      </p>
      <p>
-     Resolver errors can affect the results so a list of resolver errors is included in the xml output
-     and warnings are added the html during report conversion.  To return to the old behaviour of skipping
-     unresolved bundles, you can set <code>processunresolvedbundles="false"</code> on your ant task.
+     Resolver errors can affect the results, therefore a list of resolver errors is included in the XML output
+     and warnings are added to the HTML report. To return to the old behavior of skipping
+     unresolved bundles, you can set <code>processunresolvedbundles="false"</code> on your Ant task.
      </p>
      <p>
      <img src="images/unresolved-analysis.png" alt="Unresolved bundle in the analysis task"/>
