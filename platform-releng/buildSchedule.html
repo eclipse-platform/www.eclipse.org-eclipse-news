@@ -13,34 +13,34 @@
 
 <h2>Eclipse Release Engineering build schedule</h2>
 <h4>(Platform, JDT, PDE and Equinox)</h4>
-<font class=indexsub>static content last updated 2010-06-23</font>
+<font class=indexsub>static content last updated 2013-03-19</font>
 
 
 
 
-<p>  <br>
-
-
-
-N builds replace tags specified in org.eclipse.releng map files with HEAD.<br>
-I builds use tags in the org.eclipse.releng map files.
-<br>M builds use tags in the R3_<i>&lt;n-1&gt;</i>_maintenance (e.g. R3_6_maintenance)
-branch of org.eclipse.releng. 
-<br>Performance baseline builds use tags in the perf_3<i>&lt;n-1&gt;</i>x (e.g. perf_36x)
-branch of org.eclipse.releng.
-<br>Teams must update map files in time for I and M build start times.<br>
-  Performance testing will only occur where indicated.</p>
-
-
+<p>  
+I-builds use branches specified in <a href="http://git.eclipse.org/c/platform/eclipse.platform.releng.aggregator.git/tree/streams/repositories.txt">repositories.txt</a> file, from 
+master branch of aggregator (eclipse.platform.releng.aggregator). The project's built are submodules of aggregator so normally 
+there is one line in repositories.txt file for each submodule of aggregator. 
+</p>
+<p>
+N-builds use always use 'master' branch of repositories built.
+</p>
+<p>
+M-builds use a branch of the aggregator (and therefore a branch of repositories.txt file)
+and, like I-builds, pull whatever branch is specified in the repositories.txt file. 
+</p>
+<p>
 <ul>
 <li><a href="http://www.google.com/calendar/feeds/prfk26fdmpru1mptlb06p0jh4s%40group.calendar.google.com/public/basic">XML</a></li>
 <li><a href="http://www.google.com/calendar/ical/prfk26fdmpru1mptlb06p0jh4s%40group.calendar.google.com/public/basic.ics">ICAL</a></li>
 </ul>
+</p>
 
 <p>
 <iframe src="http://www.google.com/calendar/embed?mode=AGENDA&height=600&wkst=1&bgcolor=%23FFFFFF&src=prfk26fdmpru1mptlb06p0jh4s%40group.calendar.google.com&color=%237A367A" style="border-width:0" scrolling="auto" width="800" height="600" frameborder="0"></iframe>
+</p>
 
-<br><br>
 
 <h4>Rebuild Policy</h4>
 <ul>
