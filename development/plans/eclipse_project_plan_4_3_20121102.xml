@@ -16,9 +16,9 @@
 <p:introduction>
 <div>
 <p>
-Last revised 13:00 ET April 2, 2013.   (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
+Last revised 13:00 ET Nov 2, 2012.   (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
 marks interesting changes since the previous draft of 
-<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_3_20121102.xml">November 2, 2012</a>.)
+<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_3_20120706.xml">July 6, 2012</a>.)
 </p>
 <p><i>Please send comments about this plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
   mailing list.</i>
@@ -200,17 +200,24 @@ marks interesting changes since the previous draft of
 		</tr>
 		<!-- ************ WINDOWS ************** -->
 		<tr class="c0">
-			<td rowspan="2">Windows</td>
+			<td rowspan="4">Windows</td>
 			<td rowspan="2">7</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 7u9<br/>
+			<td rowspan="4">Oracle Java 7u9<br/>
 				Oracle Java 6 Update 37<br/>
 				IBM Java 6 SR11
 			</td>
-			<td rowspan="2">Win32</td>
+			<td rowspan="4">Win32</td>
 		</tr>
 		<tr>
 			<td rowspan="1">x86 64-bit</td>
+		</tr>
+		<tr class="c0">
+			<td rowspan="2"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />  <s>XP</s></td>
+			<td rowspan="1"><s>x86 32-bit</s></td>
+		</tr>
+		<tr class="c0">
+			<td rowspan="1"><s>x86 64-bit</s></td>
 		</tr>
 		<!-- ************ RHEL ************** -->
 		<tr class="c1">
@@ -221,7 +228,7 @@ marks interesting changes since the previous draft of
 			    Oracle Java 7u9<br/>
 			    Oracle Java 6 Update 37<br/>
 				IBM Java 6 SR11<br/>
-				Open JDK 7u9
+				<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> Open JDK 7u9
 			</td>
 			<td rowspan="3">GTK</td>
 		</tr>
@@ -277,7 +284,7 @@ marks interesting changes since the previous draft of
 		<tr class="c1">
 			<td rowspan="1">HP-UX</td>
 			<td rowspan="1">11i v3</td>
-			<td rowspan="1">ia64 64-bit</td>
+			<td rowspan="1"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> ia64 64-bit</td>
 			<td rowspan="1">HP-UX Java 6 Update 10</td>
 			<td rowspan="1">GTK</td>
 		</tr>
@@ -292,9 +299,9 @@ marks interesting changes since the previous draft of
 		<!-- ************ Mac ************** -->
 		<tr class="c1">
 			<td rowspan="2">Apple Mac OS X</td>
-			<td rowspan="2">10.8</td>
+			<td rowspan="2"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />  10.8</td>
 			<td rowspan="1">Universal 32-bit</td>
-			<td rowspan="2">Oracle Java 7u9</td>
+			<td rowspan="2"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />  Oracle Java 7u9</td>
 			<td rowspan="2">Cocoa</td>
 		</tr>
 		<tr class="c1">
@@ -450,8 +457,12 @@ marks interesting changes since the previous draft of
 </p:description>
 
 <p:committed>
+  <p><i>None at this time.</i></p>
+</p:committed>
+
+<p:proposed>
 <ul>
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed)
+<li>
 	<strong>Start work on Java SE 8 features.</strong>
 	The next Java SE release is version 8, which is currently scheduled for the summer
 	of 2013. This release is expected to contain extensions to the Java language,
@@ -464,7 +475,7 @@ marks interesting changes since the previous draft of
 	release.
 	 [JDT Core, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=380190">380190</a>)
 </li>
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed)
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
 	<strong>Support the win32 version of Eclipse on Windows 8.</strong>
 	Fully support the 32-bit and 64-bit win32 version of SWT and the Eclipse SDK on Windows 8. We will ensure that 
 	applications built on the win32 version of SWT work as well as any other win32 API 
@@ -473,7 +484,7 @@ marks interesting changes since the previous draft of
 	Note that Windows RT on ARM processors will <b>not</b> be supported.
 	[SWT, Platform UI, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=393426">393426</a>)
 </li>
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed)
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
 	<strong>Migrate to GTK+ 3.</strong>
 	We will undertake porting SWT and the Eclipse SDK to run on GTK+ version 3.
 	Support for GTK+ 3 will be built into our current GTK+ packages, rather than
@@ -481,24 +492,7 @@ marks interesting changes since the previous draft of
 	quality in the Kepler release, and GTK+ 2 will still be recommended for most users.
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=340067">340067</a>)
 </li>
-</ul>
-</p:committed>
-
-<p:proposed>
-<ul>
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (new)
-	<strong>SWT browser currency.</strong>
-	Significant work is required in the SWT browser widget to support the latest
-	browser runtimes. As part of this effort we will add browser support for XULRunner 17.
-	We will also investigate supporting WebKit on Windows based on the Chromium CEF3 project.
-	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=340067">340067</a>)
-</li>
-</ul>
-</p:proposed>
-
-<p:deferred>
-<ul>
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (deferred)
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
 	<strong>Add support for Microsoft UI automation.</strong>
 	Windows Vista and above support a new accessibility API called UI Automation (UIA).
 	We will add support for UIA in the SWT accessibility API. This will enable SWT
@@ -506,6 +500,10 @@ marks interesting changes since the previous draft of
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=393428">393428</a>)
 </li>
 </ul>
+</p:proposed>
+
+<p:deferred>
+  <p><i>None at this time.</i></p>
 </p:deferred>
 
 </p:theme>
@@ -523,33 +521,13 @@ marks interesting changes since the previous draft of
 
 <p:committed>
 <ul>
-<li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
 	<strong>Performance and stability of Platform user interface.</strong>
 	Version 4.2 of the Eclipse Platform still has some performance and
 	functional shortcomings compared to the old 3.x generation of the platform.
 	We will work to root out and eliminate these remaining bugs to increase
 	the overall quality and performance of the 4.x generation platform.
 	[Platform UI, SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=393429">393429</a>)
-</li>
-<li>
-	<strong>Finalize initial Eclipse Platform 4 APIs.</strong>
-	We will formalise an initial set of API for the new Eclipse Platform 4
-	architecture. Some more advanced aspects of Eclipse Platform 4
-	will still be provisional, but a useable subset of API will be finalized
-	to enable adopters to move forward with adopting new Eclipse 4 platform
-	with confidence that compatibility will be retained.
-	[Platform UI, Platform Runtime] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=403190">403190</a>)
-</li>
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed)
-	<strong>Common build infrastructure.</strong>
-	The Eclipse Foundation has established a common build infrastructure to
-	be used by Eclipse projects. The aim is to simply the build process, and establish
-	a common set of build technology and hardware across Eclipse projects. We will 
-	transition the Eclipse Platform build and automated tests to operate on this
-	common infrastructure. This will make it easier for anyone to fetch and build 
-	the Eclipse Platform on any machine, and lower the long term maintenance
-	cost of building older versions of Eclipse projects.
-	 [Releng] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=372792">372792</a>)
 </li>
 </ul>
 </p:committed>
@@ -564,6 +542,17 @@ marks interesting changes since the previous draft of
 	to contribution, and increase efforts on reviewing patches and onboarding 
 	new contributors.
 	[All components] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=393430">393430</a>)
+</li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
+	<strong>Common build infrastructure.</strong>
+	The Eclipse Foundation has established a common build infrastructure to
+	be used by Eclipse projects. The aim is to simply the build process, and establish
+	a common set of build technology and hardware across Eclipse projects. We will 
+	transition the Eclipse Platform build and automated tests to operate on this
+	common infrastructure. This will make it easier for anyone to fetch and build 
+	the Eclipse Platform on any machine, and lower the long term maintenance
+	cost of building older versions of Eclipse projects.
+	 [Releng] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=372792">372792</a>)
 </li>
 </ul>
 </p:proposed>
@@ -677,7 +666,7 @@ marks interesting changes since the previous draft of
     </tr>
     <tr>
       <td>org.apache.ant</td>
-      <td><div align="center"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 1.4</div></td>
+      <td><div align="center">J2SE-1.2</div></td>
     </tr>
     <tr>
       <td>org.apache.batik.css</td>
@@ -693,7 +682,11 @@ marks interesting changes since the previous draft of
     </tr>
     <tr>
       <td>org.apache.commons.codec</td>
-      <td><div align="center"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 1.4</div></td>
+      <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
+      <td>org.apache.commons.httpclient</td>
+      <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
       <td>org.apache.commons.logging</td>
@@ -712,24 +705,20 @@ marks interesting changes since the previous draft of
       <td><div align="center">not specified</div></td>
     </tr>
     <tr>
-      <td>org.apache.httpcomponents.httpclient <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /></td>
-      <td><div align="center">1.5</div></td>
-    </tr>
-    <tr>
-      <td>org.apache.httpcomponents.httpcore <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /></td>
-      <td><div align="center">1.3</div></td>
-    </tr>
-    <tr>
       <td>org.apache.jasper.glassfish</td>
       <td><div align="center">1.6</div></td>
     </tr>
     <tr>
+      <td>org.apache.lucene</td>
+      <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
       <td>org.apache.lucene.analysis</td>
-      <td><div align="center"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 1.5</div></td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.apache.lucene.core</td>
-      <td><div align="center"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 1.5</div></td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ant.core</td>
@@ -809,7 +798,7 @@ marks interesting changes since the previous draft of
     </tr>
     <tr>
       <td>org.eclipse.core.runtime</td>
-      <td><div align="center"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 1.5</div></td>
+      <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.runtime.compatibility</td>
@@ -1001,7 +990,7 @@ marks interesting changes since the previous draft of
     </tr>
     <tr>
       <td>org.eclipse.jdt.junit.runtime</td>
-      <td><div align="center"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 1.4</div></td>
+      <td><div align="center">1.3</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.junit4.runtime</td>
@@ -1061,7 +1050,7 @@ marks interesting changes since the previous draft of
     </tr>
     <tr>
       <td>org.eclipse.pde.core</td>
-      <td><div align="center"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 1.5</div></td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.pde.doc.user</td>
@@ -1097,7 +1086,7 @@ marks interesting changes since the previous draft of
     </tr>
     <tr>
       <td>org.eclipse.pde.ui</td>
-      <td><div align="center"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 1.5</div></td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.pde.ui.templates</td>
@@ -1249,11 +1238,15 @@ marks interesting changes since the previous draft of
     </tr>
     <tr>
       <td>org.junit</td>
-      <td><div align="center"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 1.5</div></td>
+      <td><div align="center">1.5</div></td>
     </tr>
     <tr>
       <td>org.objectweb.asm</td>
       <td><div align="center">1.3</div></td>
+    </tr>
+    <tr>
+      <td>org.slf4j.api</td>
+      <td><div align="center">F1.1</div></td>
     </tr>
     <tr>
       <td>org.w3c.css.sac</td>
@@ -1267,7 +1260,7 @@ marks interesting changes since the previous draft of
       <td>org.w3c.dom.svg</td>
       <td><div align="center">F1.0</div></td>
     </tr>
-  </tbody>
+    </tbody>
 </table>
   </p:appendix>  
 </p:plan>
