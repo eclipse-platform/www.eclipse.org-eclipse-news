@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 13:00 ET April 2, 2013.   (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
+Last revised 16:00 ET April 9, 2013.   (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
 marks interesting changes since the previous draft of 
 <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_3_20121102.xml">November 2, 2012</a>.)
 </p>
@@ -491,7 +491,8 @@ marks interesting changes since the previous draft of
 	Significant work is required in the SWT browser widget to support the latest
 	browser runtimes. As part of this effort we will add browser support for XULRunner 17.
 	We will also investigate supporting WebKit on Windows based on the Chromium CEF3 project.
-	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=340067">340067</a>)
+	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=405029">405029</a>,
+	<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=405031">405031</a>)
 </li>
 </ul>
 </p:proposed>
@@ -531,7 +532,7 @@ marks interesting changes since the previous draft of
 	the overall quality and performance of the 4.x generation platform.
 	[Platform UI, SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=393429">393429</a>)
 </li>
-<li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (new)
 	<strong>Finalize initial Eclipse Platform 4 APIs.</strong>
 	We will formalise an initial set of API for the new Eclipse Platform 4
 	architecture. Some more advanced aspects of Eclipse Platform 4
@@ -543,7 +544,7 @@ marks interesting changes since the previous draft of
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed)
 	<strong>Common build infrastructure.</strong>
 	The Eclipse Foundation has established a common build infrastructure to
-	be used by Eclipse projects. The aim is to simply the build process, and establish
+	be used by Eclipse projects. The aim is to simplify the build process, and establish
 	a common set of build technology and hardware across Eclipse projects. We will 
 	transition the Eclipse Platform build and automated tests to operate on this
 	common infrastructure. This will make it easier for anyone to fetch and build 
