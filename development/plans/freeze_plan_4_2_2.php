@@ -41,13 +41,13 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>Weekly maintenance builds towards Juno SR2.</b></p>
+			<p><b>Juno SR4 build complete. No further builds planned.</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
 	        <table class="schedule" border="0" cellspacing="0" cellpadding="0" align="center">
 	          <tr>
-	            <td align="right" height="20"><b>January 2012</b>&nbsp;</td>
+	            <td align="right" height="20"><b>January 2013</b>&nbsp;</td>
 	          </tr>
 	          <tr>
 	            <td height="20"></td>
@@ -105,14 +105,14 @@ ob_start();
 	          </tr>         
 	          <tr>
 	            <td height="20"></td>
-	            <td align="right" height="20">29</td>
-	            <td align="right" height="20">Tue 08:00 EDT</td>
+	            <td align="right" height="20">28</td>
+	            <td align="right" height="20">Mon 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b>Start 1-day test pass against RC3</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
 	          <tr>
-	            <td align="right" height="20"><b>February 2012</b>&nbsp;</td>
+	            <td align="right" height="20"><b>February 2013</b>&nbsp;</td>
 	          </tr>
 	          <tr>
 	            <td height="20"></td>
@@ -133,7 +133,7 @@ ob_start();
 	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 4 build [if required]</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>         
-	          <tr>
+	          <tr class="current">
 	            <td height="20"></td>
 	            <td align="right" height="20">8</td>
 	            <td align="right" height="20">Fri 08:00 EDT</td>
@@ -153,7 +153,7 @@ ob_start();
 			<li><a href="http://www.eclipse.org/eclipse/platform-releng/buildSchedule.html ">Build Schedule</a> - details on build times.</li>
 			<li><a href="http://wiki.eclipse.org/Eclipse/Release_checklist">Eclipse Release Checklist</a> -
 				 lists various things that need to be checked before each release.</li>
-			<li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse">Eclipse Project Juno 4.2 Plan</a></li>
+			<li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_2.xml">Eclipse Project Juno 4.2 Plan</a></li>
 			<li><a href="http://wiki.eclipse.org/index.php/Juno">Juno Simultaneous Release</a></li>
 			</ul>
       	</div>
@@ -240,7 +240,7 @@ ob_start();
 			
 			<strong>Juno 4.2 SR2 Release</strong>
 			<p>The Juno 4.2 SR2 release should be complete and available for download by 
-	              the end of February 2012 as part of the <a href="http://wiki.eclipse.org/Juno/Simultaneous_Release_Plan#SR2">Juno 4.2 
+	              the end of February 2013 as part of the <a href="http://wiki.eclipse.org/Juno/Simultaneous_Release_Plan#SR2">Juno 4.2 
 	              coordinated service release</a> . If product teams intending 
 	              to ship on Juno 4.2 SR2 uncover further serious defects during the endgame, 
 	              we may schedule additional release candidate builds to incorporate fixes.
