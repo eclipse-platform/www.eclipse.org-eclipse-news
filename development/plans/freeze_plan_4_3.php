@@ -78,8 +78,8 @@ ob_start();
 	          </tr>
 	          <tr>
 	            <td height="20"></td>
-	            <td align="right" height="20">7</td>
-	            <td align="right" height="20">Tue 08:00 EDT</td>
+	            <td align="right" height="20">8</td>
+	            <td align="right" height="20">Wed 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Start fix pass</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC0"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> rules</a></b></td>
@@ -87,7 +87,7 @@ ob_start();
 	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">15</td>
-	            <td align="right" height="20">Wed 19:00 EDT</td>
+	            <td align="right" height="20">Wed 20:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 1 build</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#RC0"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> goals</a></b></td>
@@ -98,8 +98,8 @@ ob_start();
 	          </tr>
 	          <tr>
 	            <td height="20"></td>
-	            <td align="right" height="20">20</td>
-	            <td align="right" height="20">Mon 08:00 EDT</td>
+	            <td align="right" height="20">17</td>
+	            <td align="right" height="20">Fri 08:00 EDT</td>
 	            <td height="20">&nbsp;<b>Start 1-day test pass against RC1</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#TestPassBeforeRC2"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> details</a></b></td>
@@ -107,7 +107,7 @@ ob_start();
 	          </tr>
 	          <tr>
 	            <td height="20"></td>
-	            <td align="right" height="20">21</td>
+	            <td align="right" height="20">20</td>
 	            <td align="right" height="20">Tue 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Start fix pass</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
@@ -117,7 +117,7 @@ ob_start();
 	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">22</td>
-	            <td align="right" height="20">Wed 19:00 EDT</td>
+	            <td align="right" height="20">Wed 20:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 2 build</b></td>
 	            <td height="20">&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#RC2"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> goals</a></b></td>
@@ -147,7 +147,7 @@ ob_start();
 	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">29</td>
-	            <td align="right" height="20">Wed 19:00 EDT</td>
+	            <td align="right" height="20">Wed 20:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 3 build</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#RC3"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> goals</a></b></td>
@@ -163,7 +163,7 @@ ob_start();
 	            <td height="20"></td>
 	          </tr>
 	          <tr>
-	            <tr>
+	            <td height="20"></td>
 	            <td align="right" height="20">3</td>
 	            <td align="right" height="20">Mon 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>All-day test pass against RC3</b></td>
@@ -183,7 +183,7 @@ ob_start();
 	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">5</td>
-	            <td align="right" height="20">Wed 19:00 EDT</td>
+	            <td align="right" height="20">Wed 20:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Release Candidate 4 build</b></td>
 	            <td height="20">&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#RC4"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> goals</a></b></td>
