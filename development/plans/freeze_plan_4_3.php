@@ -421,7 +421,7 @@ ob_start();
                 <li>Accurate prioritization of all outstanding defects.
                 <li>Stable code base; no outstanding P1 defects.</li>
                </ul>
-              <h4><a name="R4.3"></a>Release 4.3</h4>
+              <h4><a name="Release4.3"></a>Release 4.3</h4>
               <p>Ship Eclipse 4.3 during the last week of June.</p>
               <p>There is no formal test pass for RC4 and beyond other 
               than to check for last minute regressions. We will perform sanity 
