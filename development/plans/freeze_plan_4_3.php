@@ -16,7 +16,7 @@
 	
 	#
 	# Begin: page-specific settings.  Change these. 
-	$pageTitle 		= "Eclipse Kepler 4.3 endgame plan";
+	$pageTitle 		= "Eclipse Kepler 4.3 Endgame Plan";
 	$pageKeywords	= "eclipse, 4.3, milestone, schedule, endgame, Kepler";
 	$pageAuthor		= "";
 	
@@ -41,7 +41,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>April 25, 2013 - working towards M7/RC0</b></p>
+			<p><b>April 26, 2013 - working towards M7/RC0</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
