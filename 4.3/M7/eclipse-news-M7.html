@@ -159,8 +159,76 @@
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+  <tr id="auto-start-all-plugins">
+    <td class="title">Default start level settings apply to all plug-ins</td>
+    <td class="content">
+      When editing the <b>Plug-ins</b> tab of a <b>Eclipse Application</b> launch configuration the default
+      start level and default auto start settings chosen at the top of the tab will be used when launching with
+      "All workspace and enabled target plug-ins".  Previously this setting would only be used when launching a
+      specific list of plug-ins.
+      <p><img src="images/autostart-all-plugins.png" alt="All plug-ins selected on the tab"/></p>
+      <p><img src="images/autostart-levels.png" alt="Different default start level settings"/></p>
+    </td>
+  </tr>
+  <tr id="pde-run-remembers-selection">
+    <td class="title">Running from PDE editors remembers previous selection</td>
+    <td class="content">
+      The PDE editors allow applications to be launched from the top toolbar of the <b>Manifest</b>, <b>Plug-in</b>
+      and <b>Product</b> editors.  By default PDE only provides one type of launch.  If you have additional tooling
+      installed such as RAP Tools, all possible launches will be available in a drop down menu.
+      <p><img src="images/launch-order.png" alt="Ordering of launches in editor"/></p>
+      <p>
+      This menu now remembers which launch was used most recently and puts it at the top of the list.  The launch
+      chosen when the button is pressed will be the most recent launch.  The order is saved between workbench
+      restarts.
+      </p>
+    </td>
+  </tr>
+  <tr id="pde-junit-e4">
+    <td class="title">JUnit Plug-in tests can run on e4 workbench</td>
+    <td class="content">
+      Applications that use the e4 workbench API such as e4 RCP applications can now
+      use JUnit Plug-in Test launch configurations to test their plug-ins. Previously 
+      the tests would require the 3.x workbench API from the org.eclipse.ui bundle to 
+      hook into the workbench lifecycle.
+    </td>
+  </tr>
+  <tr id="support-pre-osgi-bundles">
+    <td class="title">API Tools has limited support for pre-OSGi Eclipse plug-ins</td>
+    <td class="content">
+      Eclipse plug-ins created before 3.1 did not contain an OSGi bundle manifest.  API Tools
+      now can convert the pre-OSGi plug-ins to valid components in a API baseline.  This allows
+      analysis, use and freeze scans to process plug-ins that depend on pre-OSGi plug-ins instead
+      of failing to resolve.
+      <p>
+      However, an OSGi runtime is required to do the conversion.  Tasks run using EclipseAntRunner
+      or the API Use Report external tools launch configuration can convert the plug-ins.  Tasks
+      run from the command line ant runner will skip pre-OSGi plug-ins.
+      </p>
+    </td>
+  </tr>
+    <tr id="noreference-types">
+    <td class="title">API Tools allows @noreference javadoc tag on types</td>
+    <td class="content">
+      API Tools now allows the use of the <code>@noreference</code> javadoc tag on types (classes, interfaces,
+      annotations and enums).  Placing this tag restricts the API so that any reference to that type or its members
+      will be flagged as invalid API use.
+      <p>
+      To mark a type that is in an API package as not being public API it should be tagged as <code>@noreference</code>,
+      <code>@noextend</code> and <code>@noinstantiate</code> (or <code>@noimplement</code>).  This ensures that
+      no client can access it via valid API and the type could later be removed.
+      </p>
+    </td>
+  </tr>
+    <tr id="api-tags-check-visibility">
+    <td class="title">API Tools javadoc tags check parent visibility</td>
+    <td class="content">
+      If a member is not publicly visible (ex: a private method) it is not part of the 
+      API and any API Tools javadoc tags on it are invalid.  If a member is not 
+      visible because a parent type is not visible the javadoc tags will now be marked
+      as invalid.
+      <p><img src="images/.png" alt="Javadoc tags flagged as invalid because member is not visible"/></p>
+    </td>
   </tr>
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
