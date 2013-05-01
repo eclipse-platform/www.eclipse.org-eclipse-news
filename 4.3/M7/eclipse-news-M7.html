@@ -22,8 +22,64 @@
   <tr>
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+  <tr id="open-resource-buttons">
+    <td class="title">Formal e4-based API Released</td>
+    <td class="content">
+    <p>
+      As was announced at EclipseCon this year the Platform UI team has provided the
+      first set of official API based on the new e4 architecture. This is the first
+      step in allowing developers to use the new (simpler) mechanisms to implement
+      contributions to the Eclipse IDE.
+    </p><p>
+      This API is comprised of two basic concepts:
+    </p><p>
+      <b>The UI Model</b>: The content of this model describes the current UI Presentation.
+      The IDE reacts to changes in this model by updating the presentation and the complete
+      model is available through use of the new API.
+    </p><p>
+      Note that the model represents everything on the screen and these elements can be modified
+      by your code (see the example below).
+    </p><p>
+      <b>IEclipseContext / Dependency Injection (DI)</b>: Contexts are containers of UI runtime state
+      including all the available services etc. The usual e4 pattern would be that the implementation
+      class for a contribution will be created using DI when the corresponding model element gets rendered
+      into the presentation.
+    </p><p>
+      Here are a few links to more information about the UI Model, the services and DI (the javadoc and supporting
+      Eclipse documentation will be available before Kepler is released):
+      <ul>
+      <li><a href="http://www.eclipsecon.org/2013/sites/eclipsecon.org.2013/files/FormalAPI.pdf">EclipseCon 2013 API Slides</a></li>
+      <li><a href="http://www.vogella.com/articles/EclipseRCP/article.html">Lars' RCP Tutorial</a></li>
+      <li><a href="http://www.vogella.com/articles/Eclipse4Services/article.html">Lars' Services Tutorial</a></li>
+      <li><a href="http://eclipsesource.com/blogs/2013/04/18/eclipse-4-e4-tutorial-behavior-annotations/">Jonas Helming's DI Tutorials</a></li>
+      </ul>
+      There is quite a bit of information available for e4 (the new API is just those bits of the e4 API
+      that we feel are stable enough to graduate into formal API). Lars Vogel and Jonas Helming have a
+      lot of information useful to those that want to get started...
+    </p><p>
+      Just to give a taste of what working in a modeled UI is all about here's a code snippet showing
+      how to get a 'standard' Comamand handler to toggle the visibility of the 'Quick Access' text field
+      that appears in the top trim. First we gain access to the model by getting the MApplication as a
+      'service'. Form there we can access the EModelService and use it to find the model element
+      representing the search in the UI. Then it's just a simple matter of toggling the element's
+      'toBeRendered' flag to get it to (dis)appear.
+    </p>
+    <pre>
+public Object execute(ExecutionEvent event) throws ExecutionException {
+  IWorkbenchWindow window = HandlerUtil.getActiveWorkbenchWindowChecked(event);		
+  MApplication theApp = (MApplication) window.getService(MApplication.class);
+  MWindow activeWin = theApp.getSelectedElement();
+  EModelService ms = activeWin.getContext().get(EModelService.class);
+  EPartService ps = activeWin.getContext().get(EPartService.class);
+  MToolControl search = (MToolControl) ms.find("SearchField", activeWin);
+  if (search != null) {
+    search.setToBeRendered(!search.isToBeRendered());
+    window.getShell().layout(true, true);
+  }
+  return null;
+}
+      </pre>
+    </td>
   </tr>
   <tr> 
     <td colspan="2">  <div class="title">Resources</div>
