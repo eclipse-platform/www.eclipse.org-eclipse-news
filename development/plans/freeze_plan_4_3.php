@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2013-05-01
+	# Date:			2013-05-02
 	#
 	# Description: Eclipse project Kepler release freeze plan
 	#
@@ -41,7 +41,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>May 1, 2013 - working towards M7/RC0</b></p>
+			<p><b>May 2, 2013 - working towards M7/RC0</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -439,7 +439,7 @@ ob_start();
               <br>
               No bugs must appear in <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;classification=Eclipse;classification=RT;resolution=FIXED;target_milestone=4.3%20RC1;target_milestone=Kepler%20RC1;field0-0-0=flagtypes.name;type0-0-0=notsubstring;value0-0-0=review%2B;field0-1-0=keywords;type0-1-0=notsubstring;value0-1-0=documentation;field0-2-0=keywords;type0-2-0=notsubstring;value0-2-0=test;field0-3-0=keywords;type0-3-0=notsubstring;value0-3-0=example;list_id=1368548">this query</a>.
               When your bug appears there, make sure that it gets a review+ or add the 'Documentation', 'example' or 'test' keyword if appropriate.</p>
-             <p><b>API change approval:</b> PMC must approve all API changes. No changes are to
+             <p><b>Feature work and API change approval:</b> PMC must approve all feature work and API changes. No changes are to
               be released without prior approval and associated bug report.  
               Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
               If a change is made to API to make it binary compatible with a previous release, technically this is still an API change, and thus it must be treated
@@ -457,7 +457,7 @@ ob_start();
               <br>
               No bugs must appear in <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;classification=Eclipse;classification=RT;resolution=FIXED;target_milestone=4.3%20RC2;target_milestone=Kepler%20RC2;field0-0-0=flagtypes.name;type0-0-0=notsubstring;value0-0-0=review%2B;field0-1-0=keywords;type0-1-0=notsubstring;value0-1-0=documentation;field0-2-0=keywords;type0-2-0=notsubstring;value0-2-0=test;field0-3-0=keywords;type0-3-0=notsubstring;value0-3-0=example;list_id=1368548">this query</a>.
               When your bug appears there, make sure that it gets a review+ or add the 'Documentation', 'example' or 'test' keyword if appropriate.</p>
-             <p><b>API change approval:</b> PMC must approve all API changes. No changes are to
+             <p><b>Feature work and API change approval:</b> PMC must approve all feature work and API changes. No changes are to
               be released without prior approval and associated bug report.  
               Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
               If a change is made to API to make it binary compatible with a previous release, technically this is still an API change, and thus it must be treated
@@ -474,14 +474,14 @@ ob_start();
               <br>
               No bugs must appear in <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;classification=Eclipse;classification=RT;resolution=FIXED;target_milestone=4.3%20RC3;target_milestone=Kepler%20RC3;field0-0-0=flagtypes.name;type0-0-0=notsubstring;value0-0-0=review%2B;field0-1-0=keywords;type0-1-0=notsubstring;value0-1-0=documentation;field0-2-0=keywords;type0-2-0=notsubstring;value0-2-0=test;field0-3-0=keywords;type0-3-0=notsubstring;value0-3-0=example;list_id=1368548">this query</a>.
               When your bug appears there, make sure that it gets a review+ or add the 'Documentation', 'example' or 'test' keyword if appropriate.</p>
-             <p><b>API change approval:</b> PMC must approve all API changes. No changes are to
+             <p><b>Feature work and API change approval:</b> PMC must approve all feature work and API changes. No changes are to
               be released without prior approval and associated bug report.  
               Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
               If a change is made to API to make it binary compatible with a previous release, technically this is still an API change, and thus it must be treated
               in the same way as any other API change requests.</p>
              <p><b>Notification requirements:</b> Announce bug numbers of intended non-doc changes to <a href="mailto:platform-releng-dev@eclipse.org">platform-releng-dev@eclipse.org</a>
               mailing list.</p>
-             <p><b>Extra checking requirements:</b>Two additional committers must check all code changes 
+             <p><b>Extra checking requirements:</b> Two additional committers must check all code changes 
               prior to release. Person who reported bug should mark the bug as 
               verified once they have retested.</p>
 
@@ -496,14 +496,14 @@ ob_start();
               <br>
               No bugs must appear in <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;classification=Eclipse;classification=RT;resolution=FIXED;target_milestone=4.3%20RC4;target_milestone=Kepler%20RC4;field0-0-0=flagtypes.name;type0-0-0=notsubstring;value0-0-0=review%2B;field0-1-0=keywords;type0-1-0=notsubstring;value0-1-0=documentation;field0-2-0=keywords;type0-2-0=notsubstring;value0-2-0=test;field0-3-0=keywords;type0-3-0=notsubstring;value0-3-0=example;list_id=1368548">this query</a>.
               When your bug appears there, make sure that it gets a review+ or add the 'Documentation', 'example' or 'test' keyword if appropriate.</p>
-             <p><b>API change approval:</b> PMC must approve all API changes. No changes are to
+             <p><b>Feature work and API change approval:</b> PMC must approve all feature work and API changes. No changes are to
               be released without prior approval and associated bug report.  
               Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
               If a change is made to API to make it binary compatible with a previous release, technically this is still an API change, and thus it must be treated
               in the same way as any other API change requests.</p>
-             <p><b>Notification requirements:</b>Announce bug numbers of intended non-doc changes to <a href="mailto:platform-releng-dev@eclipse.org">platform-releng-dev@eclipse.org</a>
+             <p><b>Notification requirements:</b> Announce bug numbers of intended non-doc changes to <a href="mailto:platform-releng-dev@eclipse.org">platform-releng-dev@eclipse.org</a>
               mailing list.</p>
-             <p><b>Extra checking requirements:</b>Two additional committers must check all code
+             <p><b>Extra checking requirements:</b> Two additional committers must check all code
               changes prior to release. Person who reported bug should mark the
               bug as verified once they have retested.</p>
         
