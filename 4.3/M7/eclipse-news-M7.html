@@ -260,14 +260,14 @@ public Object execute(ExecutionEvent event) throws ExecutionException {
     <td class="title">API Tools has limited support for pre-OSGi Eclipse plug-ins</td>
     <td class="content">
       Eclipse plug-ins created before 3.1 did not contain an OSGi bundle manifest.  API Tools
-      now can convert the pre-OSGi plug-ins to valid components in a API baseline.  This allows
+      can now convert the pre-OSGi plug-ins to valid components in a API baseline.  This allows
       analysis, use and freeze scans to process plug-ins that depend on pre-OSGi plug-ins instead
       of failing to resolve.
       <p><img src="images/use-scan.png" alt="Use scan launch configuration with pre-OSGi plug-ins"/></p>
       <p>
       An OSGi runtime is required to do the conversion.  Tasks run using Eclipse AntRunner
       or the API Use Report external tools launch configuration can convert the plug-ins.  Tasks
-      run from the command line ant runner will skip pre-OSGi plug-ins.
+      run from the command line Ant runner will skip pre-OSGi plug-ins.
       </p>
     </td>
   </tr>
