@@ -22,26 +22,25 @@
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
   <tr id="e4-api">
-    <td class="title">Formal e4-based API released</td>
+    <td class="title">Initial Eclipse 4 API released</td>
     <td class="content">
-      As was announced at EclipseCon this year, the Platform UI team has provided the
-      first set of official API based on the new e4 architecture. This is the first
-      step in allowing developers to use the new (simpler) mechanisms to implement
-      contributions to the Eclipse IDE.
+      As was announced at EclipseCon this year, the first set of official API based on the new Eclipse 
+      Platform 4 architecture is now available. This is the first step in allowing developers to use the 
+      new simpler and more powerful mechanisms to build Eclipse plug-ins and applications.
     <p>
       This API is comprised of two basic concepts:
     </p><p>
-      <b>The UI Model</b>: The content of this model describes the current UI Presentation.
-      The IDE reacts to changes in this model by updating the presentation, and the complete
-      model is available through use of the new API.
+      <b>The user interface model</b>: The content of this model describes the structure of the user interface.
+      The Eclipse Platform reacts to changes in this model by updating the presentation, and the complete
+      model is now available through the new API.
     </p><p>
       Note that the model represents everything on the screen and these elements can be modified
       by your code (see the example below).
     </p><p>
       <b>IEclipseContext / Dependency Injection (DI)</b>: Contexts are containers of UI runtime state
-      including all the available services etc. The usual e4 pattern would be that the implementation
-      class for a contribution will be created using DI when the corresponding model element gets rendered
-      into the presentation.
+      including all the available services. The typical Eclipse Platform 4 pattern is that contributions
+      are created and configured through dependency injection based on state and services found in the local
+      context for that model element.
     </p><p>
       Here are a few links to more information about the UI Model, the services and DI (the Javadoc and supporting
       Eclipse documentation will be available before Kepler is released):
@@ -53,9 +52,8 @@
       <li><a href="http://eclipsesource.com/blogs/2013/04/18/eclipse-4-e4-tutorial-behavior-annotations/">Jonas Helming's DI Tutorials</a></li>
     </ul>
     <p>
-      There is quite a bit of information available for e4 (the new API is just those bits of the e4 API
-      that we feel are stable enough to graduate into formal API). Lars Vogel and Jonas Helming have a
-      lot of information useful to those that want to get started...
+      There is quite a lot of information already available for Eclipse Platform 4. While parts of the API are just being
+      formalized now, most of the concepts and API existed in provisional form in previous Eclipse 4 releases.
     </p><p>
       Just to give a taste of what working in a modeled UI is all about, here's a code snippet showing
       how to get a 'standard' Command handler to toggle the visibility of the 'Quick Access' text field
@@ -100,11 +98,13 @@ public Object execute(ExecutionEvent event) throws ExecutionException {
   <tr id="remediation"> 
     <td class="title">Installation Remediation</td>
     <td class="content">
-	 In order to help users deal with dependency resolution errors, the various p2 wizards now contain a new wizard page. 
-	 This page, called <b>remediation</b>, proposes various solutions in order to help the user proceed with the installation.
+	 In order to help you deal with dependency errors while installing software, the various installation wizards now contain 
+	 a new wizard page. This page, called <b>remediation</b>, proposes various solutions in order to help you proceed 
+	 with the installation, even when the exact change you requested is not possible.
 	 <p>
 	 The picture below shows a screenshot of this page in action. In this particular case the user is trying to install something
-	 that is conflicting with what is installed, and the user is given the possibility to update what is installed.
+	 that is conflicting with what is installed, and the wizard gives the option to update what is installed so that the installation
+	 can proceed.
 	 </p>
      <p><img src="images/remediation.png" alt=""/></p>
     </td>
@@ -198,9 +198,9 @@ public Object execute(ExecutionEvent event) throws ExecutionException {
     </td>
   </tr>
   <tr id="pde-junit-e4">
-    <td class="title">JUnit plug-in tests can run on e4 workbench</td>
+    <td class="title">JUnit plug-in tests can run on Eclipse platform 4 workbench</td>
     <td class="content">
-      Applications that use the e4 workbench API such as e4 RCP applications can now
+      Applications that use the Eclipse Platform 4 workbench API can now
       use <b>JUnit Plug-in Test</b> launch configurations to test their plug-ins. Previously 
       the tests would require the 3.x workbench API from the <code>org.eclipse.ui</code> bundle to 
       hook into the workbench lifecycle.
