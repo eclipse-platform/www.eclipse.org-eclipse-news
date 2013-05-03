@@ -33,7 +33,7 @@
       This API is comprised of two basic concepts:
     </p><p>
       <b>The UI Model</b>: The content of this model describes the current UI Presentation.
-      The IDE reacts to changes in this model by updating the presentation and the complete
+      The IDE reacts to changes in this model by updating the presentation, and the complete
       model is available through use of the new API.
     </p><p>
       Note that the model represents everything on the screen and these elements can be modified
@@ -44,7 +44,7 @@
       class for a contribution will be created using DI when the corresponding model element gets rendered
       into the presentation.
     </p><p>
-      Here are a few links to more information about the UI Model, the services and DI (the javadoc and supporting
+      Here are a few links to more information about the UI Model, the services and DI (the Javadoc and supporting
       Eclipse documentation will be available before Kepler is released):
     </p>
     <ul>
@@ -166,21 +166,36 @@ public Object execute(ExecutionEvent event) throws ExecutionException {
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
   
-  <tr id="remove-type-parameters">
-    <td class="title">Remove type parameters</td>
+  <tr id="remove-type-arguments">
+    <td class="title">Remove type arguments after content assist</td>
     <td class="content">
-     Ever encountered a case where content assist adds type parameters for a generic type, but you do not want them 
-     (example: while invoking a static method)? Now, rather than deleting them individually, 
+     Ever encountered a case where content assist added type arguments for a generic type, but you do not want them
+     because you need the <code>.class</code> literal or you want to invoke a static method?
+     Now, rather than deleting the argument list manually, 
      you can just delete the '&lt;' and that will remove the entire text up to '&gt;'.
     </td>
   </tr>
   <tr id="proposals-without-prefix">
-    <td class="title">Propose templates and keywords without prefix</td>
+    <td class="title">Template and keyword proposals without prefix</td>
     <td class="content">
-      Content assist now proposes templates and keywords without having a prefix first:
+      Content assist now proposes templates and keywords without needing a prefix first:
       <p><img src="images/content-assist.png" alt=""/></p>
     </td>
-  </tr> 
+  </tr>
+   <tr id="semicolon-appended-for-void-methods">
+    <td class="title">Content assist appends ';' to void methods</td>
+    <td class="content">
+    If a void method is selected during content assist, then a semicolon is now automatically
+    appended at the end of the method invocation.
+    </td>
+  </tr>
+  <tr id="semicolon-as-trigger-to-select-method">
+    <td class="title">Use semicolon to insert method invocation</td>
+    <td class="content">
+    Irrespective of the return type of a method, you can now use the <b>;</b> key to select any method invocation proposal
+    from the content assist popup. The '<code>;</code>' will be appended at the end of the method invocation.
+    </td>
+  </tr>   
   <tr id="test-templates">
     <td class="title">JUnit test templates</td>
     <td class="content">
@@ -192,7 +207,7 @@ public Object execute(ExecutionEvent event) throws ExecutionException {
     <td class="title">JUnit view shows assumption failures</td>
     <td class="content">
       The JUnit view now counts <code>@Ignore</code>d tests and tests that didn't meet
-      an assumption as 'skipped tests'. The skipped tests also got new icons, and
+      an assumption as "skipped' tests. The skipped tests also got new icons, and
       tests with an assumption failure no longer get the 'passed' checkmark.
       <p><img src="images/junit-view-assumptions.png" alt="Test cases using @Ignore and Assume.assumeFalse(true)"/></p>
     </td>
@@ -203,20 +218,6 @@ public Object execute(ExecutionEvent event) throws ExecutionException {
       The new <b>Create loop variable</b> quick fix corrects an incomplete 'for' loop
       by adding the type of the loop variable.
       <p><img src="images/create-loop-variable.png" alt="Corrects 'for (e: elements) {}' to 'for (ElementType e: elements) {}'"/></p>
-    </td>
-  </tr>
-     <tr id="semicolon-as-trigger-to-select-method">
-    <td class="title">Semicolon can be used as a trigger to select any method</td>
-    <td class="content">
-    Irrespective of the type of method, you can now use ';' as a trigger to select any method during content assist.
-    The ';' will be appended at the end of the selected method.
-    </td>
-  </tr>   
-   <tr id="semicolon-appended-for-void-methods">
-    <td class="title">Appends ';' to void methods during code completion</td>
-    <td class="content">
-    If a void method is selected during content assist, then the Java editor code completion will now 
-    automatically append a semicolon at the end of the selected method.
     </td>
   </tr>
   <tr>
