@@ -41,8 +41,8 @@ ob_start();
 
 <p>
 The entire Eclipse and Equinox team would like to thank our amazing release
-engineer David Williams. Than and . David not only kept our builds going every day,
-but managed the largest ever transition in our build system from PDE Build to CBI (Tycho).
+engineer David Williams. David not only kept our builds going every day,
+but together with Thanh Ha and Paul Webster, managed the largest ever transition in our build system from PDE Build to CBI (Tycho).
 The team would also like to thank the Eclipse Foundation staff for their tireless
 efforts, including: Matt Ward and Denis Roy for keeping all that infrastructure going, 
 Janet Campbell and Sharon Corbett for guiding us through the Eclipse legal
