@@ -203,9 +203,9 @@ are available in the <a href="http://www.eclipse.org/eclipse/development/plans/f
 			<td rowspan="2">Windows</td>
 			<td rowspan="2">7</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 7u9<br/>
-				Oracle Java 6 Update 37<br/>
-				IBM Java 6 SR11
+			<td rowspan="2">Oracle Java 7u21<br/>
+				Oracle Java 6 Update 43<br/>
+				IBM Java 6 SR13
 			</td>
 			<td rowspan="2">Win32</td>
 		</tr>
@@ -218,9 +218,9 @@ are available in the <a href="http://www.eclipse.org/eclipse/development/plans/f
 			<td rowspan="3">6</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
-			    Oracle Java 7u9<br/>
-			    Oracle Java 6 Update 37<br/>
-				IBM Java 6 SR11<br/>
+			    Oracle Java 7u21<br/>
+			    Oracle Java 6 Update 43<br/>
+				IBM Java 6 SR13<br/>
 				Open JDK 7u9
 			</td>
 			<td rowspan="3">GTK</td>
@@ -230,15 +230,15 @@ are available in the <a href="http://www.eclipse.org/eclipse/development/plans/f
 		</tr>
 		<tr class="c1">
 			<td rowspan="1">Power 64-bit</td>
-			<td>IBM Java 6 SR11</td>
+			<td>IBM Java 6 SR13</td>
 		</tr>
 		<!-- ************ SLES ************** -->
 		<tr class="c0">
 			<td rowspan="3">SUSE Linux Enterprise Server</td>
 			<td rowspan="3">11</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 6 Update 37<br/>
-				IBM Java 6 SR11
+			<td rowspan="2">Oracle Java 6 Update 43<br/>
+				IBM Java 6 SR13
 			</td>
 			<td rowspan="3">GTK</td>
 		</tr>
@@ -247,15 +247,15 @@ are available in the <a href="http://www.eclipse.org/eclipse/development/plans/f
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">Power 64-bit</td>
-			<td>IBM Java 6 SR11</td>
+			<td>IBM Java 6 SR13</td>
 		</tr>
 		<!-- ************ Ubuntu ************** -->
 		<tr class="c1">
 			<td rowspan="2">Ubuntu Long Term Support</td>
 			<td rowspan="2">12.04</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 6 Update 37<br/>
-				IBM Java 6 SR11
+			<td rowspan="2">Oracle Java 6 Update 43<br/>
+				IBM Java 6 SR13
 			</td>
 			<td rowspan="2">GTK</td>
 		</tr>
@@ -267,7 +267,7 @@ are available in the <a href="http://www.eclipse.org/eclipse/development/plans/f
 			<td rowspan="2">Oracle Solaris</td>
 			<td rowspan="2">11</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 6 Update 37</td>
+			<td rowspan="2">Oracle Java 6 Update 43</td>
 			<td rowspan="2">GTK</td>
 		</tr>
 		<tr class="c0">
@@ -286,7 +286,7 @@ are available in the <a href="http://www.eclipse.org/eclipse/development/plans/f
 			<td rowspan="1">IBM AIX</td>
 			<td rowspan="1">7.1</td>
 			<td rowspan="1">Power 64-bit</td>
-			<td rowspan="1">IBM Java 6 SR11</td>
+			<td rowspan="1">IBM Java 6 SR13</td>
 			<td rowspan="1">GTK</td>
 		</tr>
 		<!-- ************ Mac ************** -->
@@ -294,7 +294,7 @@ are available in the <a href="http://www.eclipse.org/eclipse/development/plans/f
 			<td rowspan="2">Apple Mac OS X</td>
 			<td rowspan="2">10.8</td>
 			<td rowspan="1">Universal 32-bit</td>
-			<td rowspan="2">Oracle Java 7u9</td>
+			<td rowspan="2">Oracle Java 7u21</td>
 			<td rowspan="2">Cocoa</td>
 		</tr>
 		<tr class="c1">
@@ -331,7 +331,7 @@ are available in the <a href="http://www.eclipse.org/eclipse/development/plans/f
 
 <p><strong>API Contract Compatibility:</strong> Eclipse SDK 4.3 will be upwards
   contract-compatible with Eclipse SDK 4.2 except in those areas noted in the
-  <a href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_2_porting_guide.html" target="_top">
+  <a href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_3_porting_guide.html" target="_top">
     <em>Eclipse 4.3 Plug-in Migration Guide</em>
   </a>. Programs that use affected APIs and extension points will need to be ported
   to Eclipse SDK 4.3 APIs. Downward contract compatibility
@@ -343,7 +343,7 @@ are available in the <a href="http://www.eclipse.org/eclipse/development/plans/f
   
 <p><strong>Binary (plug-in) Compatibility:</strong> Eclipse SDK 4.3 will be upwards
   binary-compatible with Eclipse SDK 4.2 except in those areas noted in the
-  <a href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_2_porting_guide.html" target="_top">
+  <a href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_3_porting_guide.html" target="_top">
     <em>Eclipse 4.3 Plug-in Migration Guide</em>
   </a>. Downward plug-in compatibility is not supported. Plug-ins for Eclipse SDK
   4.3 will not be usable in Eclipse SDK 4.2. Refer to
@@ -353,7 +353,7 @@ are available in the <a href="http://www.eclipse.org/eclipse/development/plans/f
   
 <p><strong>Source Compatibility:</strong> Eclipse SDK 4.3 will be upwards source-compatible
   with Eclipse SDK 4.2 except in the areas noted in the
-  <a href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_2_porting_guide.html" target="_top">
+  <a href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_3_porting_guide.html" target="_top">
     <em>Eclipse 4.3 Plug-in Migration Guide</em>
   </a>. This means that source files written
   to use Eclipse SDK 4.2 APIs might successfully compile and run against Eclipse
@@ -485,8 +485,12 @@ are available in the <a href="http://www.eclipse.org/eclipse/development/plans/f
 </p:committed>
 
 <p:proposed>
+  <p><i>None at this time.</i></p>
+</p:proposed>
+
+<p:deferred>
 <ul>
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (new)
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (deferred)
 	<strong>SWT browser currency.</strong>
 	Significant work is required in the SWT browser widget to support the latest
 	browser runtimes. As part of this effort we will add browser support for XULRunner 17.
@@ -494,11 +498,6 @@ are available in the <a href="http://www.eclipse.org/eclipse/development/plans/f
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=405029">405029</a>,
 	<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=405031">405031</a>)
 </li>
-</ul>
-</p:proposed>
-
-<p:deferred>
-<ul>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (deferred)
 	<strong>Add support for Microsoft UI automation.</strong>
 	Windows Vista and above support a new accessibility API called UI Automation (UIA).
@@ -552,12 +551,7 @@ are available in the <a href="http://www.eclipse.org/eclipse/development/plans/f
 	cost of building older versions of Eclipse projects.
 	 [Releng] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=372792">372792</a>)
 </li>
-</ul>
-</p:committed>
-
-<p:proposed>
-<ul>
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed)
 	<strong>Recruit and train new contributors.</strong>
 	While adoption and use of the Eclipse Platform increases every year,
 	there has been a steadily declining rate of contribution back to the
@@ -567,6 +561,10 @@ are available in the <a href="http://www.eclipse.org/eclipse/development/plans/f
 	[All components] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=393430">393430</a>)
 </li>
 </ul>
+</p:committed>
+
+<p:proposed>
+  <p><i>None at this time.</i></p>
 </p:proposed>
 
 <p:deferred>
