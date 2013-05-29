@@ -51,6 +51,7 @@ ob_start();
 			<h3>IP Logs For Past Reviews</h3>
 			<p>The following are approved IP logs for past Eclipse project reviews.</p>
 			<ul>
+				<li><a href="eclipse-project-4.3-log.html">Eclipse project Kepler release (4.3)</a></li>
 				<li><a href="eclipse-project-4.2-log.html">Eclipse project Juno release (3.8 and 4.2)</a></li>
 				<li><a href="eclipse-platform-ua-restructuring-log.pdf">Eclipse Platform User Assistance restructuring review (Feb 2012)</a></li>
 				<li><a href="eclipse_project_3_7_log.pdf">Eclipse project Indigo release (3.7 and 4.1)</a></li>
