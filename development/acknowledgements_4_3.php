@@ -63,7 +63,15 @@ Billy Huang, Kelly Campbell, Martin Hare Robertson, Snjezana Peco and Stephan He
 The JDT/Core team ...
 </p>
 <p>
-The Plug-in Development Environment team ...
+The Plug-in Development Environment team would like to thank everyone who has
+helped improve our user experience by providing great bug reports and excellent
+patches. Special thanks to Carsten Pfeiffer for improving our quickfix support,
+Christian Pontesegger for creating the image browser view, Maarten Meijer for
+updating the builder template, Thomas Schindl for adding the classpath resolver
+API and Thanh Ha for the endless CBI support. We appreciate all of the help we
+received from other Eclipse developers and members of the community including:
+Troy Bishop, Mickael Istria, Tomasz Zarna, Brian de Alwis, Lars Vogel, Chris
+Dail, and Christian Georgi.
 </p>
 <p>
 The SWT team...
