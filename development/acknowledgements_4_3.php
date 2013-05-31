@@ -75,12 +75,12 @@ The Platform UI team would like to extend special thanks to the following people
 who have made (and continue to make) significant contributions to Eclipse 4 and
 the Workbench: Alexander Kurtakov, Amit Joglekar, Arnaud Brunet, Brian Vosburgh, 
 Christian Georgi, Christian Janz, Christian Pontesegger, Christian Walther, Fredrik Attebrant, 
-Jens Kübler, Joachim Mairboeck, John Cortell, Joseph Carroll, Josh Davis, Karen Butzke, 
+Jens K&uumlbler, Joachim Mairboeck, John Cortell, Joseph Carroll, Josh Davis, Karen Butzke, 
 Kevin Sawicki, Kirill Zotkin, Lars Vogel, Lorenzo Bettini, Marco Descher, Markus Alexander Kuppe, 
 Matt Hurne, Meng Xin Zhu, Michael Seele, Michael Wohlfart, Mikael Barbero, Noopur Gupta, 
-Oliver Schaefer, Patrick Chuong, Piotr Aniola, Robin Rosenberg, Robin Stocker, Rüdiger Herrmann, 
+Oliver Schaefer, Patrick Chuong, Piotr Aniola, Robin Rosenberg, Robin Stocker, R&uumldiger Herrmann, 
 Sarah Brake, Sebastian Bauer, Snjezana Peco, Sopot Cela, Stephan Wahlbrink, Szymon Ptaszkiewicz, 
-Thomas Beyer, Tristan Hume, Troy Bishop, Vincent Lorenzo, Wim Jongman, Zhongwei Zhao
+Thomas Beyer, Tristan Hume, Troy Bishop, Vincent Lorenzo, Wim Jongman and Zhongwei Zhao.
 </p>
 
 
