@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2013-05-27
+	# Date:			2013-06-03
 	#
 	# Description: Eclipse project Kepler release acknowledgements page
 	#
@@ -74,7 +74,12 @@ Troy Bishop, Mickael Istria, Tomasz Zarna, Brian de Alwis, Lars Vogel, Chris
 Dail, and Christian Georgi.
 </p>
 <p>
-The SWT team...
+The SWT team would like to thank everyone who filed bugs and helped to improve the
+toolkit. Special thanks go to: Alexander Kurtakov and Anatoly Spektor (GTK+ 3 work),
+Christof Engel and Martin Kolb (fix for COM/Browser leak), Alex Lu/Boris Dachevski/
+Viktor Malytskyy/Alex Pogrebtsov and Carsten Pfeiffer (XULRunner Windows x86_64 help),
+and Makoto Kato (providing a source of XULRunner Windows x86_64 downloads). Additional
+thanks to Chun Yan Zhang, Dani Megert, Lina Kemmel, Markus Keller, McQ, and Paul Webster.
 </p>
 <p>The release engineering team ... 
 </p>
