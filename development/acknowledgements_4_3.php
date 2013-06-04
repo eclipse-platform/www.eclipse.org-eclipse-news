@@ -64,10 +64,6 @@ The JDT Core team would like to thank everyone who contributed to the Kepler rel
 form of bug reports and patches. We would specially like to thank Stephan Hermann for continuing
 to be a significant contributor, Olivier Thomann for helping by means of bug fixes and valuable
 suggestions and Jesper M&oslash;ller and Troy Bishop for providing significant patches.
-<br>
-Special thanks go to David Williams for the several test runs, trouble-shooting and fixes
-to the custom bundle scripts and Thanh Ha, Paul Webster and others for chipping in with the CBI
-related issues.
 </p>
 <p>
 The Plug-in Development Environment team would like to thank everyone who has
@@ -75,7 +71,7 @@ helped improve our user experience by providing great bug reports and excellent
 patches. Special thanks to Carsten Pfeiffer for improving our quickfix support,
 Christian Pontesegger for creating the image browser view, Maarten Meijer for
 updating the builder template, Thomas Schindl for adding the classpath resolver
-API and Thanh Ha for the endless CBI support. We appreciate all of the help we
+API. We appreciate all of the help we
 received from other Eclipse developers and members of the community including:
 Troy Bishop, Mickael Istria, Tomasz Zarna, Brian de Alwis, Lars Vogel, Chris
 Dail, and Christian Georgi.
