@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2013-06-03
+	# Date:			2013-06-04
 	#
 	# Description: Eclipse project Kepler release acknowledgements page
 	#
@@ -60,7 +60,14 @@ JDT UI sends thanks to code contributors Oliver Masutti, Lars Vogel, Christian G
 Billy Huang, Kelly Campbell, Martin Hare Robertson, Snjezana Peco and Stephan Herrmann.
 </p>
 <p>
-The JDT/Core team ...
+The JDT Core team would like to thank everyone who contributed to the Kepler release in the
+form of bug reports and patches. We would specially like to thank Stephan Hermann for continuing
+to be a significant contributor, Olivier Thomann for helping by means of bug fixes and valuable
+suggestions and Jesper M&oslash;ller and Troy Bishop for providing significant patches.
+
+A special thanks go to David Williams for the several test runs, trouble-shooting and fixes
+to the custom bundle scripts and Thanh Ha, Paul Webster and others for chipping in with the CBI
+related issues.
 </p>
 <p>
 The Plug-in Development Environment team would like to thank everyone who has
