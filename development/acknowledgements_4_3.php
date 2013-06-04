@@ -64,8 +64,8 @@ The JDT Core team would like to thank everyone who contributed to the Kepler rel
 form of bug reports and patches. We would specially like to thank Stephan Hermann for continuing
 to be a significant contributor, Olivier Thomann for helping by means of bug fixes and valuable
 suggestions and Jesper M&oslash;ller and Troy Bishop for providing significant patches.
-
-A special thanks go to David Williams for the several test runs, trouble-shooting and fixes
+<br>
+Special thanks go to David Williams for the several test runs, trouble-shooting and fixes
 to the custom bundle scripts and Thanh Ha, Paul Webster and others for chipping in with the CBI
 related issues.
 </p>
