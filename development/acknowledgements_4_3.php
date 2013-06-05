@@ -66,6 +66,18 @@ to be a significant contributor, Olivier Thomann for helping by means of bug fix
 suggestions and Jesper M&oslash;ller and Troy Bishop for providing significant patches.
 </p>
 <p>
+The JDT Debug team would like to thank everyone who helped improve the Java debugger by filing bugs,
+testing and providing patches. Specifically we would like to thank Brock Janiczak for the new XML node
+logical structure support, Thomas Schindl for the Javadoc support for ext libraries, Pascal Gruen,
+Jesper M&oslash;ller, Yevgen Kogan and Samrat Dhillon for bug fixes.
+</p>
+<p>
+The Platform Debug team would like to thank everyone who helped improve the debugger framework
+by filing bugs, testing and providing patches. Specifically we would like to thank Mohamed Hussein
+for bug fixes and the warning support in the launch dialog, Mikhail Khodjaiants, Christian Georgi,
+Valentin Ciocoi, Robin Stocker and Krzysztof Daniel for bug fixes.
+</p>
+<p>
 The Plug-in Development Environment team would like to thank everyone who has
 helped improve our user experience by providing great bug reports and excellent
 patches. Special thanks to Carsten Pfeiffer for improving our quickfix support,
