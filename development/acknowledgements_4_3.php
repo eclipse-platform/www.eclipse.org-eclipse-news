@@ -96,7 +96,16 @@ Viktor Malytskyy/Alex Pogrebtsov and Carsten Pfeiffer (XULRunner Windows x86_64 
 and Makoto Kato (providing a source of XULRunner Windows x86_64 downloads). Additional
 thanks to Chun Yan Zhang, Dani Megert, Lina Kemmel, Markus Keller, McQ, and Paul Webster.
 </p>
-<p>The release engineering team ... 
+<p>The release engineering team would like to thank all the other Eclipse committers and many contributors who 
+helped improve the releng process and deliverables. Its hard to single out individuals, in such 
+a large team effort, as moving to Tycho and CBI Tools, but special thanks go to Andrew Ross and 
+Igor Fedorenko who provided the initial prototype of the CBI build (with Paul Webster's invaluable help).
+In particular they provided CBI specific tools for signing jars and a versioning tool that 
+was required for our Platform builds. Other required tools came from  Krzysztof Daniel 
+for a CBI version of computing API Tooling data files (and many other contributions). Would also
+like to give a special thanks to Jan Sievers who not only gave much Maven and Tycho advice, but 
+also made critical improvement to Tycho (for version 0.18.0) that were essential for us producing our final 
+production builds, such as improvements to producing source bundles, source features, and much, much more. 
 </p>
 <p>
 The Platform UI team would like to extend special thanks to the following people 
