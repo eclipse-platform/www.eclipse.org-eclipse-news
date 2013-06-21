@@ -54,7 +54,6 @@ Mike Milinkovich for running the whole show.
 The Platform Text team would like to thank everyone who filed good bug reports and enhancement requests.
 Special thanks go to Christian Walther and Marco Descher for patches they submitted.
 </p>
-
 <p>
 JDT UI sends thanks to code contributors Oliver Masutti, Lars Vogel, Christian Georgi, Philippe Marschall, Tristan Hume,
 Billy Huang, Kelly Campbell, Martin Hare Robertson, Snjezana Peco and Stephan Herrmann.
@@ -109,7 +108,7 @@ production builds, such as improvements to producing source bundles, source feat
 </p>
 <p>
 The Platform UI team would like to extend special thanks to the following people 
-who have made (and continue to make) significant contributions to Eclipse 4 and
+who have made (and continue to make) significant contributions to Eclipse Platform 4 and
 the Workbench: Alexander Kurtakov, Amit Joglekar, Arnaud Brunet, Brian Vosburgh, 
 Christian Georgi, Christian Janz, Christian Pontesegger, Christian Walther, Fredrik Attebrant, 
 Jens K&uumlbler, Joachim Mairboeck, John Cortell, Joseph Carroll, Josh Davis, Karen Butzke, 
@@ -129,90 +128,73 @@ were active at the time of the release (one or more commits in the past nine mon
 <p>
 <table width=100%>
 <tr>
-<td>Andrew Niefer</td>
-<td>Ankur Sharma</td>
-<td>Ayushman Jain</td>
-<td>Benjamin Cabe</td>
-</tr>
-<tr>
+<td>Alexander Kurtakov</td>
+<td>Arun Thondapu</td>
 <td>BJ Hargrave</td>
 <td>Bogdan Gheorghe</td>
-<td>Boris Bokowski</td>
-<td>Borislav Kapukaranov</td>
 </tr>
 <tr>
 <td>Brian de Alwis</td>
 <td>Carolyn MacLeod</td>
-<td>Chris Goldthorpe</td>
 <td>Chris Austin</td>
-</tr>
-<tr>
 <td>Curtis Windatt</td>
-<td>Danail Branekov</td>
-<td>Daniel Leberre</td>
-<td>Dani Megert</td>
 </tr>
 <tr>
+<td>Daniel Rolka</td>
+<td>Dani Megert</td>
 <td>David Williams</td>
-<td>Dean Roberts</td>
 <td>Deepak Azad</td>
-<td>DJ Houghton</td>
 </tr>
 <tr>
 <td>Eric Moffatt</td>
-<td>Felipe Heidrich</td>
-<td>Glynn Normington</td>
 <td>Grant Gayed</td>
-</tr>
-<tr>
 <td>Ian Bull</td>
-<td>James Blackburn</td>
 <td>Jay Arthanareeswaran</td>
-<td>John Arthorne</td>
 </tr>
 <tr>
+<td>Jesper Moller</td>
+<td>John Arthorne</td>
 <td>John Ross</td>
-<td>Lazar Kirchev</td>
-<td>Kim Moir</td>
-<td>Krzysztof Daniel</td>
+<td>Kai Toedter</td>
 </tr>
 <tr>
 <td>Lakshmi Shanmugam</td>
-<td>Lars Vogel</td>
+<td>Lazar Kirchev</td>
+<td>Malgorzata Janczarska
+<td>Manju Mathew</td>
+</tr>
+<tr>
 <td>Markus Keller</td>
 <td>Martin Lippert</td>
-</tr>
-<tr>
-<td>Mat Hall</td>
 <td>Mengxin Zhu</td>
 <td>Michael Rennie</td>
-<td>Oleg Besedin</td>
 </tr>
 <tr>
+<td>Noopur Gupta</td>
+<td>Oleg Besedin</td>
 <td>Olivier Thomann</td>
 <td>Pascal Rapicault</td>
+</tr>
+<tr>
+<td>Paul Elder</td>
 <td>Paul Webster</td>
 <td>Pawel Piech</td>
+<td>Remy Suen</td>
 </tr>
 <tr>
-<td>Raksha Vasisht</td>
-<td>Satyam Kandula</td>
-<td>Serge Beauchamp</td>
 <td>Silenio Quarti</td>
-</tr>
-<tr>
+<td>Simon Kaegi</td>
 <td>Srikanth Sankaran</td>
 <td>Stephan Herrmann</td>
-<td>Stoyan Boshev</td>
-<td>Susan McCourt</td>
 </tr>
 <tr>
+<td>Stoyan Boshev</td>
 <td>Szymon Brandys</td>
 <td>Szymon Ptaszkiewicz</td>
-<td>Thomas Hallgren</td>
-<td>Tobias Oberlies</td>
+<td>Thanh Ha</td>
 </tr>
 <tr>
+<td>Tobias Oberlies</td>
 <td>Tom Schindl</td>
 <td>Tom Watson</td>
 <td>Tomasz Zarna</td>
