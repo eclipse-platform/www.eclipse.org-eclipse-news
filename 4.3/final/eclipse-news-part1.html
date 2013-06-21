@@ -12,7 +12,7 @@ table.news tr td.section {font-size: 20px; font-weight: bold;}
 table.news tr td.title {vertical-align: top; width: 30%; font-weight: bold;}
 table.news tr td.content {vertical-align: top; width: 70%;}
 </style>
-<title>Eclipse Kepler - New and Noteworthy</title>
+<title>Eclipse Project Kepler - New and Noteworthy</title>
 </head>
 <body>
 <h2>Platform and Equinox</h2>
@@ -20,9 +20,173 @@ table.news tr td.content {vertical-align: top; width: 70%;}
 <!-- ****************** START OF N&N TABLE ****************** -->
 <table class="news" cellpadding="10" cellspacing="0">
 
-  <!-- ******************** Platform ********************** -->
-  <tr>
-    <td id="Platform" class="section" colspan="2"><h2>Platform Changes</h2></td>
+  <tr id="detached-sash">
+    <td class="title">Detached windows with sash</td>
+    <td class="content">
+      When you detach a view or editor into its own separate window, it now
+      has all the capabilities of a normal workbench window. They now support multiple stacks of
+      views separated by sashes with arbitrary layouts. The detached parts will remain synchronized
+      with the master window that they were detached from. This is especially handy for people developing
+      with two or more monitors, so they can spread views across several monitors and keep them synchronized.
+		<p><img src="images/detached-sash.png" alt="Detached window with multiple views separated by sash."/></p>
+    </td>
+  </tr>
+
+   <tr id="detect-shared-install-change">
+    <td class="title">Detection of shared install changes</td>
+    <td class="content">
+	  When running in a read-only folder (also known as shared install) and the read-only
+	  installation has changed (e.g. new plugins installed, new version of Eclipse installed), Eclipse 
+	  will now detect this change and warn that your personal additional plugins have been uninstalled.
+	  A migration wizard will then guide you through the steps to re-install your plug-ins, if they are
+	  still compatible with your other installed software.
+	 <p>This wizard is presented in two situations. First, when a read-only installation is being 
+	 changed (i.e. your application is being updated or plugins are added or removed), second when a new read-only 
+	 installation is run for the first time.</p>
+     <p><img src="images/migration-wizard.png" alt=""/></p>
+    </td>
+  </tr>
+  
+  <tr id="remediation"> 
+    <td class="title">Installation Remediation</td>
+    <td class="content">
+	 In order to help you deal with dependency errors while installing software, the various installation wizards now contain 
+	 a new wizard page. This page, called <b>remediation</b>, proposes various solutions in order to help you proceed 
+	 with the installation, even when the exact change you requested is not possible.
+	 <p>
+	 The picture below shows a screenshot of this page in action. In this particular case the user is trying to install something
+	 that is conflicting with what is installed, and the wizard gives the option to update what is installed so that the installation
+	 can proceed.
+	 </p>
+     <p><img src="images/remediation.png" alt=""/></p>
+    </td>
+  </tr>
+
+  <tr id="gtk3">
+    <td class="title">SWT for GTK3</td>
+    <td class="content">
+      32-bit and 64-bit GTK3 have joined the lineup of supported configurations for which SWT and Eclipse are routinely built. This implementation is currently early access. Everyone is encouraged to download and test these new builds, and to log bugs in <a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Platform">bugzilla</a>.
+      <p>Note to load the SWT GTK3 libraries, you must set an environment variable SWT_GTK3 prior to starting Eclipse. (ex. export SWT_GTK3=1)</p>
+      <p><img src="images/gtk3.png" alt="GTK3 Control Example"/></p>  
+	</td>
+  </tr>
+
+   <tr id="performance">
+    <td class="title">Performance enhancements</td>
+    <td class="content">
+      Significant performance enhancements have been made in the Platform user interface in this release. In particular, some applications
+      that were experiencing slow editor opening, closing, and switching are now much faster. Editor selection changes and the <b>Open Resource</b>
+      dialog have also been made faster. A number of leaks have been addressed to ensure
+      long-running applications don't run out of memory.
+      <p><img src="images/speed.jpg" alt="Speedometer"/><br/>
+	  <small>Photographer: YtseJam Photography / Creative Commons Attribution 2.0</small>
+	  </p>
+	</td>
+  </tr>
+
+  <tr id="trim-drag">
+    <td class="title">Trim dragging</td>
+    <td class="content">
+      You can now drag toolbars to reposition them. 
+      <p><img src="images/trim-drag.png" alt="Dragging a toolbar."/></p>
+      <p>The perspective switcher can also be dragged to the left or right of the window and it will switch to a 
+        vertical orientation.</p>
+	  <p><img src="images/vertical-switcher.png" alt="Dragging perspective switcher to vertical orientation."/></p>
+    </td>
+  </tr>
+
+  <tr id="import-nested">
+    <td class="title">Import nested projects</td>
+    <td class="content">
+      The <b>Import Projects</b> wizard now has an option to continue searching for projects to import
+      recursively within any project it finds. This allows you to import physically nested projects
+      at the same time.
+      <p><img src="images/import-nested.png" alt="Import nested projects."/></p>
+    </td>
+  </tr>
+
+  <tr id="open-resource-buttons">
+    <td class="title">Open Resource dialog enhancements</td>
+    <td class="content">
+      The <b>Open Resource</b> (<b>Ctrl+Shift+R</b>) dialog now offers direct access to the
+      <b>Show In</b> and <b>Open With</b> menus via drop-down buttons. On platforms that
+      support mnemonics, the buttons are also accessible via <b>Alt+W</b> and <b>Alt+H</b>.
+      <p><img src="images/open-resource-buttons.png" alt=""/></p>
+    </td>
+  </tr>
+  
+  <tr id="whole-word-option">
+    <td class="title">Whole word option on File Search page</td>
+    <td class="content">
+     The <b>File Search</b> page now allows to search for words via a new option:
+     <p><img src="images/whole-word-option.png" alt=""/></p>
+    </td>
+  </tr>
+  
+  <tr id="use-last-page-option">
+    <td class="title">Open Search dialog on last used page</td>
+    <td class="content">
+     The Search dialog can now be configured to open on the last used page, instead of 
+     computing the best matching page based on the current selection:
+     <p><img src="images/use-last-page-option.png" alt=""/></p>
+    </td>
+  </tr>
+
+  <tr id="only-include-exported-entries">
+    <td class="title">Global preference to include exported entries during launching</td>
+    <td class="content">
+      A new global preference has been added so you can only allow exported classpath entries to be used during launching. Previously, this 
+      was only customizable per launch configuration on the default classpath entry on the Java Classpath tab. The new preference does not affect 
+      launch configuration data, so no migration is needed.
+      
+      <p>
+      The new preference can be found on the <b>Java &gt; Debug</b> preference page.</p>
+      <p><img src="images/only-include-exported.png" alt="New global preference to only include exported classpath entries"/></p>
+      
+    </td>
+  </tr>
+  
+  <tr id="launch-dialog-warnings">
+    <td class="title">Launch configuration dialog can show warnings</td>
+    <td class="content">
+      Previously, contributors could only set an 'ok' or an 'error' state in their launch configuration tags / groups. Now,
+      contributors can set a warning state with a message for their tabs / groups - possibly warning users about set options
+      that might be problematic, but do not necessarily need to prevent launching.
+      <p><img src="images/lcd-warnings.png" alt="Launch configuration dialog showing warning message / state"/></p>
+    </td>
+  </tr>
+  
+  <tr id="x-start-on-first-thread">
+    <td class="title">Option to omit <span style="letter-spacing:-0.05em;">-XstartOnFirstThread</span></td>
+    <td class="content">
+      If you are launching an SWT program on Mac OS X, you can now selectively add / remove the <code>-XstartOnFirstThread</code> VM argument
+      in the event your VM does not support it. This option can be configured per launch configuration and is available on the standard Arguments
+      tab for Java configurations (Java Application, Eclipse, etc.).
+      <p><img src="images/x-start-on-first-thread.png" alt="New VM preference allowing users to selectively add the -XstartOnFirstThread argument per-configuration"/></p>
+    </td>
+  </tr>
+
+  <tr id="ant-augment">
+    <td class="title">Support for the Ant augment task</td>
+    <td class="content">
+      The Ant editor now has support for the Ant
+      <a href="http://ant.apache.org/manual/Tasks/augment.html">
+      <code>augment</code></a> task.  
+    </td>
+  </tr>
+  
+  <tr id="stop-thread">
+    <td class="title">Stop thread from OSGi console</td>
+    <td class="content">
+      If a bad plug-in runs into an endless loop, then you usually had to kill the whole Eclipse process.
+      Now, you can launch Eclipse with <code>-console [[host:]port]</code> to get a safety ring.
+      If you're then stuck in an endless loop and Eclipse doesn't respond any more, you can just execute
+      <pre>osgi&gt; threads stop main</pre>
+      at the OSGi prompt. This will send an IllegalStateException to the "main" thread.
+      This is usually enough to stop the endless loop, but keep the Eclipse workbench running.
+      <p>If you don't want to keep a console window around, you can pass a port number (e.g. 12345) after
+      the <code>-console</code> command line argument and later use <code>telnet localhost:12345</code> to connect.</p>
+    </td>
   </tr>
 
   <!-- ****************** END OF N&N TABLE ****************** -->
