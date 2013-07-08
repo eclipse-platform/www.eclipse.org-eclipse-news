@@ -5,7 +5,7 @@
 	# team-leaders.php
 	#
 	# Author: 		
-	# Date:			2012-04-03
+	# Date:			2013-07-08
 	#
 	# Description: Details about the Eclipse Project PMC
 	#
@@ -62,8 +62,8 @@ ob_start();
 		        <li> 
 		          <b><a name="McQ"></a>Mike ("McQ") Wilson, IBM Ottawa</b><br>
 			      McQ is the overall lead for the Eclipse Project aka PMC Lead.
-			      He is a senior architect of the Eclipse SDK, a member of the Eclipse
-			      Architecture Council and one of the original Eclipse Founders. His interests include computer
+			      He is a senior architect of the Eclipse SDK, a member of the Eclipse <a href="http://wiki.eclipse.org/Architecture_Council">
+			      Architecture Council</a> and one of the original Eclipse Founders. His interests include computer
 			      language design and implementation, semantic content publishing, web development,
 			      and playing the cello. Mike leads the <a href="http://wiki.eclipse.org/Platform">Platform</a> and
 			      <a href="http://www.eclipse.org/projects/project_summary.php?projectid=eclipse.e4">e4</a>
@@ -84,7 +84,7 @@ ob_start();
 		        <li> 
 		          <b><a name="dani"></a>Dani Megert, IBM Zurich</b><br>
 			      Dani leads the <a href="http://eclipse.org/jdt">JDT</a> subproject and
-			      leads the Platform Search, Platform Text and JDT Text components. Dani worked at OTI and is one of the initial Eclipse Project committers.
+			      represents the project in the Eclipse <a href="http://wiki.eclipse.org/Planning_Council">Planning Council</a>. Dani worked at OTI and is one of the initial Eclipse Project committers.
 			      His interests include user interface and API design, editors, performance and DJing.
 		        </li>
 		        <li> 
@@ -93,7 +93,7 @@ ob_start();
 			      projects for the past decade in many different areas. He was the main developer on the resource model for many years, 
 			      and designed the platform's concurrency infrastructure. In recent years he has focused on the Orion project, provisioning (p2), 
 			      e4, and overall platform API quality. John is a member of the Eclipse <a href="http://wiki.eclipse.org/Architecture_Council">
-			      Architecture</a> and <a href="http://wiki.eclipse.org/Planning_Council">Planning</a> Councils, and the Eclipse <a href="http://www.eclipse.org/org/foundation/directors.php">Board of Directors</a>.
+			      Architecture Council</a> and the Eclipse <a href="http://www.eclipse.org/org/foundation/directors.php">Board of Directors</a>.
 			      John has authored numerous <a href="http://www.eclipse.org/articles/">articles</a> 
 			      and a <a href="http://www.amazon.com/Official-Eclipse-3-0-FAQs/dp/0321268385/ref=sr_1_1?ie=UTF8&s=books&qid=1221163807&sr=8-1">
 			      book</a> on Eclipse.
