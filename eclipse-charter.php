@@ -61,7 +61,7 @@ ob_start();
   creates a tight feedback loop that ensure the platform is robust, and meets the
   needs of real tool users.
   </p>
-  <h2>Project Management Committee</h2><a name=PMC>
+  <h2>Project Management Committee</h2><a name="PMC"></a>
   The Projects under this Charter are managed by a group known as the Project
   Management Committee (the &quot;PMC&quot;).</p>
   <p>PMCs are expected to ensure that:</p>
