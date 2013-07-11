@@ -388,7 +388,7 @@ Eclipse 4.4 Endgame Plan.
   on anything other than what is specified in the Eclipse SDK API are inherently
   unsupportable and receive no guarantees about compatibility within a single
   release much less with earlier releases. Refer to
-  <a href="http://www.eclipse.org/articles/Article-API%20use/eclipse-api-usage-rules.html">
+  <a href="http://www.eclipse.org/articles/Article-API-Use/index.html">
     <em>How to Use the Eclipse API</em>
   </a> for information about how to write compliant plug-ins. </p>
 
@@ -457,7 +457,7 @@ Eclipse 4.4 Endgame Plan.
 
 <p:proposed>
 <ul>
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed)
+<li>
 	<strong>Continue work on Java SE 8 features.</strong>
 	The next Java SE release is version 8, which is currently scheduled for the spring
 	of 2014. This release is expected to contain extensions to the Java language,
@@ -607,7 +607,7 @@ Eclipse 4.4 Endgame Plan.
     </tr>
     <tr>
       <td>org.apache.ant</td>
-      <td><div align="center"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 1.4</div></td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.apache.batik.css</td>
@@ -623,7 +623,7 @@ Eclipse 4.4 Endgame Plan.
     </tr>
     <tr>
       <td>org.apache.commons.codec</td>
-      <td><div align="center"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 1.4</div></td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.apache.commons.logging</td>
@@ -642,11 +642,11 @@ Eclipse 4.4 Endgame Plan.
       <td><div align="center">not specified</div></td>
     </tr>
     <tr>
-      <td>org.apache.httpcomponents.httpclient <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /></td>
+      <td>org.apache.httpcomponents.httpclient </td>
       <td><div align="center">1.5</div></td>
     </tr>
     <tr>
-      <td>org.apache.httpcomponents.httpcore <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /></td>
+      <td>org.apache.httpcomponents.httpcore </td>
       <td><div align="center">1.3</div></td>
     </tr>
     <tr>
@@ -655,11 +655,11 @@ Eclipse 4.4 Endgame Plan.
     </tr>
     <tr>
       <td>org.apache.lucene.analysis</td>
-      <td><div align="center"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 1.5</div></td>
+      <td><div align="center">1.5</div></td>
     </tr>
     <tr>
       <td>org.apache.lucene.core</td>
-      <td><div align="center"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 1.5</div></td>
+      <td><div align="center">1.5</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ant.core</td>
@@ -739,7 +739,7 @@ Eclipse 4.4 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.core.runtime</td>
-      <td><div align="center"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 1.5</div></td>
+      <td><div align="center">1.5</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.runtime.compatibility</td>
@@ -931,7 +931,7 @@ Eclipse 4.4 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.jdt.junit.runtime</td>
-      <td><div align="center"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 1.4</div></td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.junit4.runtime</td>
@@ -991,7 +991,7 @@ Eclipse 4.4 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.pde.core</td>
-      <td><div align="center"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 1.5</div></td>
+      <td><div align="center">1.5</div></td>
     </tr>
     <tr>
       <td>org.eclipse.pde.doc.user</td>
@@ -1027,7 +1027,7 @@ Eclipse 4.4 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.pde.ui</td>
-      <td><div align="center"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 1.5</div></td>
+      <td><div align="center">1.5</div></td>
     </tr>
     <tr>
       <td>org.eclipse.pde.ui.templates</td>
@@ -1179,7 +1179,7 @@ Eclipse 4.4 Endgame Plan.
     </tr>
     <tr>
       <td>org.junit</td>
-      <td><div align="center"><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 1.5</div></td>
+      <td><div align="center">1.5</div></td>
     </tr>
     <tr>
       <td>org.objectweb.asm</td>
