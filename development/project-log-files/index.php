@@ -77,6 +77,8 @@ ob_start();
 			<h4>IP Logs For Past Releases</h4>
 			<ul>
 				<li><a href="/orion/reviews/eclipse-orion-3-0-log.html">Orion 3.0 release</a></li>
+				<li><a href="/orion/reviews/eclipse-orion-2-0-log.html">Orion 2.0 release</a></li>
+				<li><a href="/orion/reviews/eclipse-orion-1-0-log.html">Orion 1.0 release</a></li>
 				<li><a href="eclipse-orion-0-4-log.html">Orion 0.4 release</a></li>
 				<li><a href="eclipse-orion-0-3-log.pdf">Orion 0.3 release</a></li>
 				<li><a href="eclipse-orion-creation-release-0-2-log.pdf">Orion creation and 0.2 release</a></li>
