@@ -103,8 +103,54 @@
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+  <tr id="framework-update">
+    <td class="title">Equinox OSGi Framework Update</td>
+
+    <td class="content">
+      The Equinox Framework implementation has been updated to implement the latest
+      API available for the upcoming OSGi R6 Framework specification.  The OSGi
+      R6 Core Framework specification (finalized in March 2014) will contain
+      enhancements in the following areas
+      <ul>
+         <li> Introduction of Service Scopes to the OSGi Service Registry
+             (<a href="http://www.osgi.org/Specifications/Drafts">RFC 195</a>)
+         </li>
+         <li> Improvements of Weaving Hooks 
+             (<a href="http://www.osgi.org/Specifications/Drafts">RFC 191</a>)
+         </li>
+         <li> Clarification of hooks on the system bundle 
+             (<a href="http://www.osgi.org/Specifications/Drafts">RFC 198</a>)
+         </li>
+         <li> Native environment namespace 
+             (<a href="http://www.osgi.org/Specifications/Drafts">RFC 188</a>)
+         </li>
+         <li> Data Transfer Objects
+             (<a href="http://www.osgi.org/Specifications/Drafts">RFC 185</a>)
+         </li>
+         <li> Addition of FrameworkWiring.findProviders
+         </li>
+      </ul>
+      From an Equinox perspective these are considered incremental enhancements.  
+      The enhancements mentioned above are implemented in M1.  A majority of the 
+      development effort during this release cycle is focused on refactoring and in 
+      many cases rewriting the core Equinox Framework implementation to be based on 
+      the OSGi generic dependency model.
+      <p>
+      For most consumers and developers this change should not be noticed.  But, as 
+      documented in the <a href="http://wiki.eclipse.org/Equinox/Luna_Framework">wiki</a>, 
+      there are 4 main areas of concern that the community should be aware of:
+      </p>
+      <ul>
+         <li>The Framework no longer uses the old Equinox resolver API 
+             org.eclipse.osgi.service.resolver internally to resolve bundles.</li>
+         <li>All Equinox Framework specific hook implementations are broken and will 
+             need to migrate.</li>
+         <li>Removal of Old Style Plugin Support.  Compatibility fragment available to 
+             add support back.</li>
+         <li>Removal of PlatformAdmin Service Implementation.  Compatibility fragment 
+             available to add support back.</li>
+      </ul>      
+    </td>
   </tr>
 
   <tr> 
