@@ -413,7 +413,21 @@ table.news tr td.content {vertical-align: top; width: 70%;}
       </p>
     </td>
   </tr>
- 
+
+   <tr id="only-include-exported-entries">
+    <td class="title">Global preference to include exported entries during launching</td>
+    <td class="content">
+      A new global preference has been added so you can only allow exported classpath entries to be used during launching. Previously, this 
+      was only customizable per launch configuration on the default classpath entry on the Java Classpath tab. The new preference does not affect 
+      launch configuration data, so no migration is needed.
+      
+      <p>
+      The new preference can be found on the <b>Java &gt; Debug</b> preference page.</p>
+      <p><img src="images/only-include-exported.png" alt="New global preference to only include exported classpath entries"/></p>
+      
+    </td>
+  </tr>
+
   <!-- ******************* JUnit ************************************* -->
   <tr>
     <td id="JUnit" class="section" colspan="2">

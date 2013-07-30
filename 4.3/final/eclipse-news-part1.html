@@ -132,20 +132,6 @@ table.news tr td.content {vertical-align: top; width: 70%;}
     </td>
   </tr>
 
-  <tr id="only-include-exported-entries">
-    <td class="title">Global preference to include exported entries during launching</td>
-    <td class="content">
-      A new global preference has been added so you can only allow exported classpath entries to be used during launching. Previously, this 
-      was only customizable per launch configuration on the default classpath entry on the Java Classpath tab. The new preference does not affect 
-      launch configuration data, so no migration is needed.
-      
-      <p>
-      The new preference can be found on the <b>Java &gt; Debug</b> preference page.</p>
-      <p><img src="images/only-include-exported.png" alt="New global preference to only include exported classpath entries"/></p>
-      
-    </td>
-  </tr>
-  
   <tr id="launch-dialog-warnings">
     <td class="title">Launch configuration dialog can show warnings</td>
     <td class="content">
@@ -178,7 +164,7 @@ table.news tr td.content {vertical-align: top; width: 70%;}
   <tr id="stop-thread">
     <td class="title">Stop thread from OSGi console</td>
     <td class="content">
-      If a bad plug-in runs into an endless loop, then you usually had to kill the whole Eclipse process.
+      If a bad plug-in runs into an endless loop, then you previously had to kill the whole Eclipse process.
       Now, you can launch Eclipse with <code>-console [[host:]port]</code> to get a safety ring.
       If you're then stuck in an endless loop and Eclipse doesn't respond any more, you can just execute
       <pre>osgi&gt; threads stop main</pre>
