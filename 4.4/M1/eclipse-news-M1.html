@@ -22,6 +22,71 @@
   <tr>
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
+  <tr id="e4-views">
+    <td class="title">Contribute E4 Views into the IDE</td>
+    <td class="content">
+      As part of our goal to remove some of the barriers between e4-based code and the IDE
+      we've just added a new entry 'e4view' into the <code>org.eclipse.ui.views</code>
+      extension point. This allows you to declare a new view for the IDE whose implementation
+      is done in the e4 style (i.e. an annotated POJO).
+      <p>
+        <img src="images/new-e4view-extension.png" alt="new extension"/>
+      </p><p>
+        The new type of extension is identical to the original 'views' except for relaxing the
+        requirement that the 'class' implement IViewPart.
+      </p><p>
+        This is the first trial run for this type of extension. Once we are sure we have the pattern
+        correct we'll make similar changes to other extension points such as <code>org.eclipse.ui.menus</code>.
+      </p><p>
+        For those that as as yet unaware of the e4 way of coding, here's what the implementation of an e4 view
+        looks like:
+      </p><p>
+      <pre>
+ import javax.annotation.PostConstruct;
+
+import org.eclipse.e4.ui.di.Focus;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Label;
+
+public class RealE4View {
+	Label label;
+	
+	@PostConstruct
+	void createView(Composite parent) {
+		label = new Label(parent, SWT.BORDER);	
+		label.setText("Testing");
+	}
+	
+	@Focus
+	void setFocus() {
+		label.setFocus();
+	}
+}
+      </pre>
+      </p><p>
+        Note how it's a simple POJO and how few dependencies it has; this has already proven itself as
+        a far more convenient way to write the code and has great advantages in testing (because of its
+        few dependencies).
+      </p>
+    </td>
+  </tr>
+  <tr id="e4-views">
+    <td class="title">Tweaking the UX</td>
+    <td class="content">
+      We've finally gotten to the point where we can return and address some of the current pain
+      points you all see when using Eclipse 4. This will be part of our focus for each milestone
+      in Luna...while not necessarily 'New' these changes *are* 'Noteworthy'...;-).
+      <p>
+        First up is fixing how we handle minimized views that are brought up by the framework
+        being hard to dismiss. The most common (and justifiably complained about) use case for
+        this is having the Debug view overlay the editor when it hits a breakpoint. This has
+        been refactored to match the 3.x behavior more closely and should now work as expected.
+      </p><p>
+        Next up will be re-enabling the ability to reorder the perspectives on the perspective bar.
+      </p>
+    </td>
+  </tr>
     <tr>
       <td colspan="2"><div align="left">
           <tr id="signed executables">
