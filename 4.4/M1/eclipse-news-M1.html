@@ -222,8 +222,36 @@ public class RealE4View {
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+  <tr id="target-statusbar">
+    <td class="title">Display target platform in the status bar</td>
+    <td class="content">
+     You can now have target platform information displayed in the workbench status bar.  Currently it displays the active target
+     name and double clicking on it will open the target platform preference page. This feature can be enabled on the 
+     <b>General &gt; Plug-in Development</b> preference page.
+     <p><img src="images/target-statusbar.png" alt="Target platform in the status bar"/></p>
+    </td>
+  </tr>
+    <tr id="pde-tracing">
+    <td class="title">PDE UI tracing options available</td>
+    <td class="content">
+     The tracing options provided by PDE UI can now be enabled from the <b>General &gt; Tracing</b> preference page.
+     <p><img src="images/pde-tracing.png" alt="PDE tracing options"/></p>
+    </td>
+  </tr>
+    <tr id="warn-platformadmin-unavailable">
+    <td class="title">Warning if PlatformAdmin is unavailable</td>
+    <td class="content">
+     PDE requires the PlatformAdmin service to function. Equinox Framework has moved this service to the org.eclipse.osgi.compatibility.state 
+     compatibility fragment.  If the fragment is not installed, PDE will write an error to the log and will not function correctly. The fragment
+     is included in the Eclipse SDK so most users will be unaffected.
+     <p><img src="images/platformadmin-message.png" alt="Error message for PlatformAdmin unavailable"/></p>
+    </td>
+  </tr>
+    <tr id="pde-build-6">
+    <td class="title">PDE Build moved to JavaSE-1.6</td>
+    <td class="content">
+     The org.eclipse.pde.build bundle now has a bundle required execution environment (BREE) of JavaSE-1.6, matching the Platform Ant bundles.
+    </td>
   </tr>
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
