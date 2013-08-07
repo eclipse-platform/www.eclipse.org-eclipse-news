@@ -154,18 +154,37 @@ public class RealE4View {
     <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
   </tr>
   <tr> 
-    <td colspan="2">  <div class="title">Ant</div>
-      </td>
+  <tr id="ant-1.9.2-update">
+    <td class="title">Ant 1.9.2</td>
+
+    <td class="content">
+    	The platform has been updated to use the latest version of Apache Ant - version 1.9.2. For 
+    more information on what is new in Ant 1.9.2, see the official <a href="http://mirror.olnevhost.net/pub/apache//ant/README.html" alt="Apache Ant what's new page">what's new</a>.
+    </td>
+  </tr>
+  <tr id="ant-bree-update">
+    <td class="title">Platform Ant BREE update</td>
+
+    <td class="content">
+    	Platform Ant has had a BREE update to require a Java 1.6 compatible execution environment (or newer).
+    </td>
+  </tr>
+  <tr id="ant-view-collapse-all">
+    <td class="title">Collapse All in Ant View</td>
+
+    <td class="content">
+    	The Ant view now supports the collapse all action.
+    	<p>
+    	<img src="images/ant-view.png" alt="The Ant view showing the collapse all action"/>
+    	</p>
+    </td>
   </tr>
   <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Debug</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+    <td class="title">Platform Debug BREE update</td>
+
+    <td class="content">
+    	Platform Debug has had a BREE update to require a Java 1.6 compatible execution environment (or newer).
+    </td>
   </tr>
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
@@ -177,6 +196,28 @@ public class RealE4View {
      The <b>JUnit test results font</b> is used by the JUnit view to display the stack trace and message of a failed test run:
      <p><img src="images/configurable-junit-view-font.png" alt=""/></p>
     </td>
+  </tr>
+  <tr id="contrib-jres">
+    <td class="title">Contributed VMs Are More Recognizable</td>
+
+    <td class="content">
+    	When a third party contributes a VM to Eclipse (via the org.eclipse.jdt.launching.vmInstalls extension point), these VMs are not removable and have been made
+    	more recognizable to the end user. 
+    	<p>
+    	<img src="images/contrib-vm.png" alt="The Installed JREs preference page showing a contributed VM install"/>
+    	</p>
+    </td>
+  </tr>
+  <tr id="improved-hcr">
+  	<td class="title">Improved HCR for Member Types</td>
+  	
+  	<td class="content">
+  		Hot Code Replace (HCR) has been improved in the Java debugger to ensure the correct method is dropped to 
+  		in member types (inner / anonymous / local classes).
+  		<p>
+  		For more information see the <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=409023" alt="Bugzilla bug number 409023">bugzilla entry</a>.
+  		</p>
+  	</td>
   </tr>
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
