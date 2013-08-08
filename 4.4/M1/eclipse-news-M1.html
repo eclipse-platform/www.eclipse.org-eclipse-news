@@ -26,24 +26,23 @@
     <td class="title">Contribute E4 Views into the IDE</td>
     <td class="content">
       As part of our goal to remove some of the barriers between e4-based code and the IDE
-      we've just added a new entry 'e4view' into the <code>org.eclipse.ui.views</code>
+      we've just added a new element 'e4view' into the <code>org.eclipse.ui.views</code>
       extension point. This allows you to declare a new view for the IDE whose implementation
       is done in the e4 style (i.e. an annotated POJO).
       <p>
         <img src="images/new-e4view-extension.png" alt="new extension"/>
       </p><p>
-        The new type of extension is identical to the original 'views' except for relaxing the
+        The new type of extension is identical to the original 'view' except for relaxing the
         requirement that the 'class' implement IViewPart.
       </p><p>
         This is the first trial run for this type of extension. Once we are sure we have the pattern
-        correct we'll make similar changes to other extension points such as <code>org.eclipse.ui.menus</code>.
+        correct, we'll make similar changes to other extension points such as <code>org.eclipse.ui.menus</code>.
       </p><p>
         For those that are unaware of the e4 way of coding, here's what the implementation of an e4 view
         looks like:
       </p>
       <pre>
- import javax.annotation.PostConstruct;
-
+import javax.annotation.PostConstruct;
 import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
@@ -180,14 +179,14 @@ public class RealE4View {
     <td class="title">Failure trace font for the JUnit view</td>
     <td class="content">
      The font for the failure trace in the JUnit view is now configurable on the <b>General &gt; Appearance &gt; Colors and Fonts</b> preference page.
-     <p><img src="images/configurable-junit-view-font.png" alt=""/></p>
+     <p><img src="images/junit-failure-trace-font.png" alt=""/></p>
     </td>
   </tr>
   <tr id="contrib-jres">
     <td class="title">Contributed VMs are more recognizable</td>
 
     <td class="content">
-    	VMs contributed to Eclipse via the <code>org.eclipse.jdt.launching.vmInstalls</code> extension point, are not removable by you. This
+    	You can't remove VMs that have been contributed to Eclipse via the <code>org.eclipse.jdt.launching.vmInstalls</code> extension point.This
     	fact is now more recognizable: 
     	<p>
     	<img src="images/contrib-vm.png" alt="The Installed JREs preference page showing a contributed VM install"/>
@@ -217,14 +216,14 @@ public class RealE4View {
      <p><img src="images/target-statusbar.png" alt="Target platform in the status bar"/></p>
     </td>
   </tr>
-    <tr id="pde-tracing">
+  <tr id="pde-tracing">
     <td class="title">PDE UI tracing options available</td>
     <td class="content">
      The tracing options provided by PDE UI can now be enabled from the <b>General &gt; Tracing</b> preference page:
      <p><img src="images/pde-tracing.png" alt="PDE tracing options"/></p>
     </td>
   </tr>
-    <tr id="warn-platformadmin-unavailable">
+  <tr id="warn-platformadmin-unavailable">
     <td class="title">Warning if PlatformAdmin is unavailable</td>
     <td class="content">
      PDE requires the PlatformAdmin service to function. The Equinox Framework has moved this service to the <b>org.eclipse.osgi.compatibility.state</b> 
@@ -285,7 +284,7 @@ public class RealE4View {
          <li>All Equinox Framework specific hook implementations are broken and will 
              need to migrate.</li>
          <li>Removal of old style plug-in support. A compatibility fragment is available to add the support back.</li>
-         <li>Removal of PlatformAdmin Service Implementation. A compatibility fragment available to add support back.</li>
+         <li>Removal of PlatformAdmin Service Implementation. A compatibility fragment is available to add support back.</li>
       </ul>      
     </td>
   </tr>
