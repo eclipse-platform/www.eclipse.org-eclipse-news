@@ -92,11 +92,10 @@ ob_start();
 		        <li>The 4.4 plan is posted <a href="4.4/plan.php">here</a>.</li>
 		      </ul></p>
 		      
-		    <h4>R3.8 / 4.2</h4>
+		    <h4>R4.3</h4>
 			<ul>
-				<li>The current release is R4.3 which is available on the <a
-					href="http://www.eclipse.org/downloads/index.php"
-					target="newdownload&quot;">download</a> area.</li>
+				<li>The current release is R4.3 which is available on the <a href="http://download.eclipse.org/eclipse/downloads/">eclipse project download</a> area
+				or bundled in diferent packages available on the  <a href="http://www.eclipse.org/downloads/index.php" target="newdownload&quot;">download</a> area.</li>
 			</ul>
 		      
 		      <h4> <a NAME="Maintenance_Planning"></a>R4.3 Maintenance</h4>
