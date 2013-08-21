@@ -38,6 +38,8 @@ ob_start();
 			<ul>
 		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_4.xml"> Eclipse Project Luna 4.4 Plan</a><br>
 		        This document lays out the feature and API set for the Luna 4.4 release of the Eclipse Project.</li>
+		      <li><a href="plans/freeze_plan_4_3_1.php">Eclipse Project Kepler SR1 Endgame Plan</a><br>
+				Information about how we plan to wrap up the Kepler SR1 release (version 4.3.1).</li>
 		    </ul>
       	</div>
 		<div class="homeitem3col">
