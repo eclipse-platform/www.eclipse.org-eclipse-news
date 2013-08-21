@@ -95,11 +95,11 @@ ob_start();
 		    <h4>R4.3</h4>
 			<ul>
 				<li>The current release is R4.3 which is available on the <a href="http://download.eclipse.org/eclipse/downloads/">eclipse project download</a> area
-				or bundled in diferent packages available on the  <a href="http://www.eclipse.org/downloads/index.php" target="newdownload&quot;">download</a> area.</li>
+				or bundled in different packages on the <a href="http://www.eclipse.org/downloads/index.php" target="newdownload&quot;">download</a> area.</li>
 			</ul>
 		      
 		      <h4> <a NAME="Maintenance_Planning"></a>R4.3 Maintenance</h4>
-		      <p>Information about R4.3 maintenance releases can be found <a href="http://wiki.eclipse.org/Kepler/Simultaneous_Release_Plan#Service_Releases">here</a> and
+		      <p>Information about the R4.3 maintenance release can be found <a href="http://wiki.eclipse.org/Kepler/Simultaneous_Release_Plan#Service_Releases">here</a> and
 		      builds can be downloaded from from the <a href="http://download.eclipse.org/eclipse/downloads/">eclipse project download</a> area.</p>
 
 		      <h4> <a NAME="Releases"></a>Previous Releases</h4>
