@@ -55,7 +55,7 @@ ob_start();
 			
 			<p>Since 3.2, Platform Search is mostly in maintenance mode. Contact us if you want to help, contributions are highly appreciated!</p>
 			
-		      <h4> <a NAME="Milestone_Planning"></a>4.3 Development</h4>
+		      <h4> <a NAME="Milestone_Planning"></a>4.4 Development</h4>
 				<p>
 		      <ul>
 		        <li>currently no work planned</li>
