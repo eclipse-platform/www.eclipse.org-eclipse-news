@@ -14,6 +14,7 @@
 	</ul></p>" },
 			{"component": "CommonNavigator","assignee": "fupton", 	"description": "The generic navigator API (org.eclipse.ui.navigator)."},
 			{"component": "Contexts", 		"assignee": "pelder", "description": "Support for context grouping of functionality"},
+			{"component": "Runtime Contexts", 		"assignee": "pelder", "description": "Eclipse4 IEclipseContext support, the OSGI context, and IContextFunctions"},
 			{"component": "Contributions", 	"assignee": "drolka", "description": "ContributionManager, ContributionItem hierarchy, org.eclipse.jface.action, action contributions from plugin.xml\
 	<ul>\
 		<li><em>adapters</em>.  Anything to do with the adapter mechanism and its friends.</li>\
@@ -31,6 +32,7 @@
 			{"component": "Coolbar", 		"assignee": "emoffatt", "description": "Coolbar support (including layout within coolbar)"},
 			{"component": "DataBinding", 	"assignee": "wsudol","description": "JFace Data Binding" },
 			{"component": "Decorators", 	"assignee": "pwebster", "description": "Decorators mechanism and Label Decorations preference page"},
+			{"component": "Dependency Injection", 	"assignee": "pelder", "description": "The DI and invocation mechanisms for Eclipse4"},
 			{"component": "DetachedView", 	"assignee": "emoffatt", "description": "Views and editors in separate windows"},
 			{"component": "Dialogs", 		"assignee": "wsudol","description": "JFace and UI dialogs other than IDE, Filtered Items/Open Resource"},
 			{"component": "DND", 			"assignee": "emoffatt", "description": "Drag and Drop. Does not include dragging views and editors."},
@@ -73,7 +75,7 @@
 			{"component": "Mac", 			"assignee": "pwebster", 	"description": "Mac specific issues"},
 			{"component": "Markers", 		"assignee": "drolka", "description": "Issues related to markers, including tasks, problems, bookmarks, etc. e.g. bugs related to MarkerImageProvider, MarkerHelp, MarkerResolutions"},
 			{"component": "Metadata", 		"assignee": "pwebster", "description": "Anything related to the metadata associated with plug-ins (e.g., MANIFEST.MF, build.properties, .classpath, version numbers, compiler settings, formatter settings, etc.)"},
-			{"component": "Model", 			"assignee": "emoffatt", "description": "Anything related to org.eclipse.ui.model classes IWorkbenchAdapter, WorkbenchLabelProvider, WorkbenchContentProvider"},
+			{"component": "Model", 			"assignee": "pwebster", "description": "Anything related to the Eclipse4 model in general and fragment processing.  Also org.eclipse.ui.model classes IWorkbenchAdapter, WorkbenchLabelProvider, WorkbenchContentProvider"},
 			{"component": "MPE", 			"assignee": "emoffatt", "description": "Bugs related to Multipage editor that are not [Editor Mgmt] and not editor specific"},
 			{"component": "Navigator", 		"assignee": "fupton", 	"description": "Resource Navigator view"},
 			{"component": "OLE", 			"assignee": "emoffatt", "description": "OLE support on Windows"},
@@ -89,6 +91,7 @@
 			{"component": "PropertiesView", "assignee": "wsudol", "description": "Properties view"},
 			{"component": "QuickAccess", 	"assignee": "drolka","description": "Ctrl-3 quick access dialog issues"},
 			{"component": "RCP", 			"assignee": "pwebster","description": "Rich Client Platform issues"},
+			{"component": "RenderingEngine",	"assignee": "emoffatt","description": "PartRenderingEngine and its interaction with the renderers."},
 			{"component": "TabbedProperties","assignee": "drolka","description": "Tabbed Properties issues (plugin org.eclipse.ui.views.properties.tabbed)"},
 			{"component": "Themes", 		"assignee": "drolka", 	"description": "Dealing with dialog/window fonts/colours and the theme API"},
 			{"component": "Trim", 			"assignee": "emoffatt", "description": "Defects in Trim contributions or trim management (DnD, persistance, layout...)"},
@@ -99,7 +102,7 @@
 			{"component": "Win32", 			"assignee": "emoffatt", "description": "Win32 specific issues"},
 			{"component": "Wizards", 		"assignee": "drolka", "description": "JFace wizards and workbench new item wizards (excluding import/export)"},
 			{"component": "Workbench", 		"assignee": "pwebster", "description": "ui.plugin, Workbench, WorkbenchWindow"},
-			{"component": "WorkbenchParts", "assignee": "emoffatt", "description": "Bugs pertaining to part lifecycle."},
+			{"component": "WorkbenchParts", "assignee": "emoffatt", "description": "Bugs pertaining to part lifecycle, activation, bringToTop, etc"},
 			{"component": "WorkbenchLauncher", "assignee": "pwebster","description": "Primarily, that portion of startup where the UI team decides where the workspace will be."},
 			{"component": "WorkingSets", 	"assignee": "drolka", 	"description": "Working sets"}
 ],"users": [
@@ -113,7 +116,7 @@
 			{"user": "mcq", 		"name": "McQ", 		"email": "Mike_Wilson@ca.ibm.com"},
 			{"user": "mhall", 		"name": "Matthew",	"email": "matthall@woodcraftmill.com"},
 			{"user": "obesedin", 	"name": "Oleg", 	"email": "obesedin@ca.ibm.com"},
-			{"user": "pwebster", 	"name": "Paul", 	"email": "pwebster@ca.ibm.com"},
+			{"user": "pwebster", 	"name": "Paul W", 	"email": "pwebster@ca.ibm.com"},
 			{"user": "drolka", 	"name": "Daniel", 	"email": "daniel.rolka@pl.ibm.com"},
 			{"user": "wsudol", 	"name": "Wojtek", 	"email": "wojciech.sudol@pl.ibm.com"},
 			{"user": "pelder", 	"name": "Paul E", 	"email": "pelder@ca.ibm.com"},
