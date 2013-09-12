@@ -30,6 +30,7 @@
 		<li><em>widgets</em>.  Controlling the type of widget used to display a contribution.  This only includes controlling widget behaviour and state (other than visible and enabled).</li>\
 	</ul>"},
 			{"component": "Coolbar", 		"assignee": "emoffatt", "description": "Coolbar support (including layout within coolbar)"},
+			{"component": "CSS", 		"assignee": "drolka", "description": "CSS support in eclipse, including the CSS engine"},
 			{"component": "DataBinding", 	"assignee": "wsudol","description": "JFace Data Binding" },
 			{"component": "Decorators", 	"assignee": "pwebster", "description": "Decorators mechanism and Label Decorations preference page"},
 			{"component": "DI", 	"assignee": "pelder", "description": "The Dependency Injection and invocation mechanisms for Eclipse4"},
