@@ -76,7 +76,7 @@
 			{"component": "Mac", 			"assignee": "pwebster", 	"description": "Mac specific issues"},
 			{"component": "Markers", 		"assignee": "drolka", "description": "Issues related to markers, including tasks, problems, bookmarks, etc. e.g. bugs related to MarkerImageProvider, MarkerHelp, MarkerResolutions"},
 			{"component": "Metadata", 		"assignee": "pwebster", "description": "Anything related to the metadata associated with plug-ins (e.g., MANIFEST.MF, build.properties, .classpath, version numbers, compiler settings, formatter settings, etc.)"},
-			{"component": "Model", 			"assignee": "pwebster", "description": "Anything related to the Eclipse4 model in general and fragment processing.  Also org.eclipse.ui.model classes IWorkbenchAdapter, WorkbenchLabelProvider, WorkbenchContentProvider"},
+			{"component": "Model", 			"assignee": "emoffatt", "description": "Anything related to the Eclipse4 model in general and fragment processing.  Also org.eclipse.ui.model classes IWorkbenchAdapter, WorkbenchLabelProvider, WorkbenchContentProvider"},
 			{"component": "MPE", 			"assignee": "emoffatt", "description": "Bugs related to Multipage editor that are not [Editor Mgmt] and not editor specific"},
 			{"component": "Navigator", 		"assignee": "fupton", 	"description": "Resource Navigator view"},
 			{"component": "OLE", 			"assignee": "emoffatt", "description": "OLE support on Windows"},
