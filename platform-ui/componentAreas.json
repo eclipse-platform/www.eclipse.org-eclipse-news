@@ -3,7 +3,7 @@
 			{"component": "ActionSets", 	"assignee": "drolka", "description": "Action sets"},
 			{"component": "ActivityMgmt", 	"assignee": "wsudol", 	"description":  "Support for activity grouping of functionality (AKA: Capabilities)"},
 			{"component": "BiDi", 			"assignee": "pwebster", "description": "Bidirectional support. Triage '-dir rtl' defects to the appropriate component area first (i.e. if it's a Drag 'n Drop issue that only shows up in 'rtl' mode then triage to [DnD]...)"},
-			{"component": "CellEditors", 	"assignee": "emoffatt", "description": "Cell editors in Tasks view, Properties view or other views"},
+			{"component": "CellEditors", 	"assignee": "wsudol", "description": "Cell editors in Tasks view, Properties view or other views"},
 			{"component": "Commands", 		"assignee": "pelder", "description": "Command support (added in 3.0)<p><ul>\
 		<li><em>handlers</em>.  Anything dealing with handlers and handler submissions.</li>\
 		<li><em>instrumentation</em>.  Instrumenting the command architecture for gathering user information.</li>\
@@ -54,7 +54,7 @@
 			{"component": "GlobalActions", 	"assignee": "drolka", "description": "actions created in workbench action builder that are not directly related to other components"},
 			{"component": "Graphics", 		"assignee": "pwebster", "description": "Any graphics that UI has control over."},
 			{"component": "GTK/Linux", 		"assignee": "pwebster", "description": "GTK/Linux specific issues."},
-			{"component": "Help", 			"assignee": "emoffatt", "description": "F1 help; missing or problems with content"},
+			{"component": "Help", 			"assignee": "wsudol", "description": "F1 help; missing or problems with content"},
 			{"component": "IDE", 			"assignee": "pwebster", "description": "Issues related to the IDE as an app (as opposed to RCP)"},
 			{"component": "Intro", 			"assignee": "emoffatt", "description": "Intro part management and legacy welcome page support"},
 			{"component": "Import/Export", 	"assignee": "drolka", "description": "Import/Export wizards"},
@@ -81,7 +81,7 @@
 			{"component": "Navigator", 		"assignee": "fupton", 	"description": "Resource Navigator view"},
 			{"component": "OLE", 			"assignee": "emoffatt", "description": "OLE support on Windows"},
 			{"component": "OpenModes", 		"assignee": "drolka","description": "Single click, double click support"},
-			{"component": "Outline", 		"assignee": "emoffatt", 	"description": "Open Resource and FilteredItemsSelection dialogs"},
+			{"component": "Outline", 		"assignee": "wsudol", 	"description": "Open Resource and FilteredItemsSelection dialogs"},
 			{"component": "PerspectiveBar", "assignee": "emoffatt", "description": "The bar used to indicate which perspectives are currently open and allow easy switching between them."},
 			{"component": "Perspectives", 	"assignee": "emoffatt", "description": "Perspective management"},
 			{"component": "Preferences", 	"assignee": "pwebster", "description": "Preferences dialog, field editors and workbench preference pages"},
@@ -93,7 +93,7 @@
 			{"component": "QuickAccess", 	"assignee": "drolka","description": "Ctrl-3 quick access dialog issues"},
 			{"component": "RCP", 			"assignee": "pwebster","description": "Rich Client Platform issues"},
 			{"component": "RenderingEngine",	"assignee": "emoffatt","description": "PartRenderingEngine and its interaction with the renderers."},
-			{"component": "TabbedProperties","assignee": "drolka","description": "Tabbed Properties issues (plugin org.eclipse.ui.views.properties.tabbed)"},
+			{"component": "TabbedProperties","assignee": "wsudol","description": "Tabbed Properties issues (plugin org.eclipse.ui.views.properties.tabbed)"},
 			{"component": "Themes", 		"assignee": "drolka", 	"description": "Dealing with dialog/window fonts/colours and the theme API"},
 			{"component": "Trim", 			"assignee": "emoffatt", "description": "Defects in Trim contributions or trim management (DnD, persistance, layout...)"},
 			{"component": "Undo", 			"assignee": "pelder","description": "Dealing with the new undo/redo support introduced in Eclipse 3.1"},
