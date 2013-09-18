@@ -110,10 +110,71 @@
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
+  <tr id="framework-update">
+    <td class="title">Equinox OSGi framework update</td>
 
+    <td class="content">
+      The Equinox Framework implementation has been updated to implement the latest
+      API available for the upcoming OSGi R6 Framework specification.  The OSGi
+      R6 Core Framework specification (finalized in March 2014).  Most of these
+      were implemented as part of M1 also.  They are mentioned here again because
+      OSGi has made the RFCs publicly available in a git repository as they are
+      being written.  See the links below for the latest RFC documents:
+      <ul>
+         <li> Introduction of Service Scopes to the OSGi Service Registry
+             (<a href="https://github.com/osgi/design/tree/master/rfcs/rfc0195">RFC 195</a>)
+         </li>
+         <li> Improvements of Weaving Hooks
+             (<a href="https://github.com/osgi/design/tree/master/rfcs/rfc0191">RFC 191</a>)
+         </li>
+         <li> Clarification of hooks on the system bundle
+             (<a href="https://github.com/osgi/design/tree/master/rfcs/rfc0198">RFC 198</a>)
+         </li>
+         <li> Native environment namespace
+             (<a href="https://github.com/osgi/design/tree/master/rfcs/rfc0188">RFC 188</a>)
+         </li>
+         <li> Data Transfer Objects
+             (<a href="https://github.com/osgi/design/tree/master/rfcs/rfc0185">RFC 185</a>)
+         </li>
+         <li> Extension Bundle Activators - new to M2
+             (<a href="https://github.com/osgi/design/tree/master/rfcs/rfc0204">RFC 204</a>)
+         </li>
+         <li> Addition of FrameworkWiring.findProviders - no RFC
+         </li>
+      </ul>
+    </td>
+  </tr>
+  <tr id="cm-update">
+    <td class="title">Equinox Configuration Admin update</td>
+
+    <td class="content">
+      The Equinox Configuration Admin implementation has been updated to implement
+      the OSGi Configuration Admin Service Specification version 1.5.  The previous
+      release of Equinox Configuration Admin implemented version 1.3.
+    </td>
+  </tr>
+  <tr id="region-update">
+    <td class="title">Equinox Regions update</td>
+
+    <td class="content">
+      The Equinox Regions implementation has been updated to take advantage
+      of Extension Bundle Activators
+      (<a href="https://github.com/osgi/design/tree/master/rfcs/rfc0204">RFC 204</a>)
+       coming in the OSGi R6 specification.
+      This allows Equinox Regions to insert its isolation model before
+      the framework is launched so that proper region behavior can be
+      established before any bundles are loaded in the framework.
+    </td>
+  </tr>
+  <tr id="metatype-update">
+    <td class="title">Equinox Metatype update</td>
+
+    <td class="content">
+      The Equinox Metatype API has been updated to add the methods to
+      get the minimum and maximum values of an attribute definition.
+      (see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=416640">bug 416640</a>)
+    </td>
+  </tr>
   <tr> 
     <td colspan="2">  <div class="title">Template</div>
       </td>
