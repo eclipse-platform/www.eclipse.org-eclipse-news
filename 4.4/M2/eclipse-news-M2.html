@@ -36,8 +36,16 @@
     <td colspan="2">  <div class="title">SWT</div>
       </td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+  <tr id="timing-api"> 
+    <td class="title">Added UI Timing API</td>
+    <td class="content"> 
+      Added 2 new events: SWT.PreEvent and SWT.PostEvent which are sent before and after 
+      all events and async runnables. It is possible to use these two events to measure 
+      the time spent on processing any events. This can be useful for detecting slow 
+      event listeners. For an example of how this can be used, take a look at the 
+      <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.examples.watchdog">
+      Watchdog</a> plugin in SWT examples.
+    </td>
   </tr>
   <tr> 
     <td colspan="2">  <div class="title">Platform UI</div>
