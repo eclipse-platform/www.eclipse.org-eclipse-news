@@ -93,8 +93,13 @@
     <td colspan="2">  <div class="title">Debug</div>
       </td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+  <tr id="debug-examples"> 
+    <td class="title">New Platform Debug examples</td>
+    <td class="content"> 
+      New examples have been added to the Platform Debug git repository. The <code>org.eclipse.debug.examples.mixedmode</code> project demonstrates
+      how to use Debug's mixed-mode launching support. The <code>org.eclipse.debug.examples.memory</code> project provides sample content to display
+      in the <b>Memory</b> and <b>Registers</b> views.
+    </td>
   </tr>
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
@@ -112,8 +117,51 @@
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+  <tr id="api-tag-visibility">
+    <td class="title">API Tools javadoc tag visibility matches Java Language Specification</td>
+    <td class="content">
+     API Tools supports API restrictions using <a href="http://wiki.eclipse.org/PDE/API_Tools/Javadoc_Tags">javadoc tags</a> such as 
+     @noextend and @noreference. The API Tools builder has an option to add problem markers for invalid use of the tags. The
+     logic to check whether a tag is valid has been upgraded and now follows the visibility rules in the 
+     <a href="http://docs.oracle.com/javase/specs/">Java Language Specification (JLS)</a>.
+     <p><img src="images/tag-visibility.png" alt="Example tag visibility problem"/></p>
+    </td>
+  </tr>
+  <tr id="api-tools-bree">
+    <td class="title">API Tools moved to JavaSE-1.6</td>
+    <td class="content">
+     All API Tools plug-ins now have a bundle required execution environment (BREE) of JavaSE-1.6.
+    </td>
+  </tr>
+  <tr id="target-no-preferences">
+    <td class="title">Target platform content is no longer stored in preferences</td>
+    <td class="content">
+     The target platform specified on the <b>Target Platform</b> preference page uses flexible target definitions, stored in .target files,
+     to specify the set of plug-ins PDE should build against and use to launch applications. However, the content of the target platform 
+     was previously stored in preferences. This could lead to inconsistencies between what you expect to exist in the target platform and 
+     what is actually available. This problem was more noticeable when using a complex target definition containing feature or software 
+     site locations.
+     
+     <p>In Luna, the target platform information is always created from the target definition chosen on the preference
+     page. In addition to reducing inconsistencies in the target, there are performance improvements when interacting with the 
+     target.</p>
+    </td>
+  </tr>
+  <tr id="feature-dialog-contains-plugins">
+    <td class="title">Feature selection dialog filters by plug-ins</td>
+    <td class="content">
+     When entering text into the filter field of the feature selection dialog, features that contain a plug-in matching
+     the filter will be returned. This provides a quick way to add the correct feature to include in a product.
+     <p><img src="images/feature-selection.png" alt="The feature selection dialog"/></p>
+    </td>
+  </tr>
+  <tr id="bundle-exceptions-in-editor">
+    <td class="title">OSGi bundle exceptions are displayed in the manifest editor</td>
+    <td class="content">
+     Certain syntax errors, such as missing a comma between entries in the <code>Require-Bundle</code> header, cause bundle exceptions
+     when PDE tries to add the bundle to an OSGi State. The exceptions are now logged and displayed in the manifest editor.   
+     <p><img src="images/bundle-exception.png" alt="Bundle exception displayed in the manifest editor"/></p>
+    </td>
   </tr>
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
