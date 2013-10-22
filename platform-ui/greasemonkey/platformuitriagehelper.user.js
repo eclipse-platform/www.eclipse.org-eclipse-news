@@ -3,8 +3,10 @@
 // @namespace      http://www.eclipse.org/eclipse/platform-ui/greasemonkey
 // @description    Helps triaging bugs for Platform/UI
 // @include        https://bugs.eclipse.org/bugs/show_bug.cgi?id=*
+// @grant       GM_getValue
+// @grant       GM_setValue
 // ==/UserScript==
-// Copyright (c) 2000, 2008 IBM Corporation and others.
+// Copyright (c) 2000, 2013 IBM Corporation and others.
 // All rights reserved. This program and the accompanying materials
 // are made available under the terms of the Eclipse Public License v1.0
 // which accompanies this distribution, and is available at
@@ -24,6 +26,7 @@ var keywords;
 var myDiv = document.createElement('div');
 var header = document.getElementById('header');
 var triagedOwner = "platform-ui-triaged@eclipse.org";
+var container;
 
 window.addEventListener("load", function() {
 	for (var i = 0; i < els.length; i++) {
@@ -55,31 +58,6 @@ window.addEventListener("load", function() {
 
 	var assigned_to = document.forms[1].elements[assigned_to];
 	var qacontact = document.forms[1].elements[qa_contact].value;
-	if(assigned_to != null 
-			&& assigned_to.value != "Platform-UI-Inbox@eclipse.org" 
-			&& assigned_to.value != "Karice_McIntyre@ca.ibm.com" 
-			&& assigned_to.value != "Tod_Creasey@ca.ibm.com" 
-			&& assigned_to.value != "eclipse@pookzilla.net") {
-		var header = document.getElementById('header');
-		var myDiv = document.createElement('div');
-		var buttons = "";
-		if (assigned_to.value != triagedOwner) {
-			buttons += buttonForMoveToTriaged(assigned_to.value);
-		} else {
-			buttons += postTriageButton("P5 triaged", "P5", "---", "", triagedOwner);
-			buttons += postTriageButton("P3 triaged", "P3", "---", "", triagedOwner);
-			buttons += postTriageButton("3.5 P3", "P3", "3.5", "", qacontact);
-			buttons += postTriageButton("M6 P2", "P2", "3.5 M6", "", qacontact);
-			buttons += postTriageButton("M7 P2", "P2", "3.5 M7", "", qacontact);
-			buttons += postTriageButton("RC1 P2", "P2", "3.5 RC1", "", qacontact);
-			buttons += postTriageButton("RC2 P2", "P2", "3.5 RC2", "", qacontact);
-			buttons += postTriageButton("3.6", "", "3.6", "", qacontact);
-			buttons += postTriageButton("4.0", "", "4.0", "", qacontact);
-		}
-		myDiv.innerHTML = '<div style="position:absolute; left: 150px; top:10px;">' + buttons + '</div>';
-		header.parentNode.insertBefore(myDiv, header);
-		return;
-	}
 
 	var timecomp = new Date();
 	var newTime = timecomp.getTime() + '';
@@ -99,89 +77,6 @@ window.addEventListener("load", function() {
 , false);
 
 
-function reassignText(newOwner) {
-	var onClick = "var b=document.getElementById('assigned_to');";
-	onClick += "if (b!=null) {";
-	onClick += "b.value='" + newOwner + "';";
-	return onClick;
-}
-
-function addCCText(ccEmail) {
-    if (!ccEmail) {
-      return "";
-    }
-    var result = "var ccInput=document.getElementById('newcc');";
-    result += "if (ccInput!=null) {";
-    result += "ccInput.value='" + ccEmail + "';";
-    result += "}";
-    return result;
-}
-
-function rawButton(label, action, description) {
-	return '<input type="button" value="' + label + '" onClick="' + action + '" title="' + description + '" />';
-}
-function buttonFor(comp, owner, description, ccEmail) {
-	var onClick = "var s = document.getElementById('short_desc').value;";
-	onClick += reassignText(triagedOwner);
-	onClick += "var q = document.forms[1].elements[" + qa_contact + "];";
-	onClick += "q.value='" + owner + "';";
-	onClick += "}";
-	onClick += "var d = document.forms[1].elements[" + short_desc + "];";
-	onClick += "if (d!=null) {";
-	onClick += "if (s.indexOf('[" + comp + "]') == -1 ){";
-	onClick += "d.value = '[" + comp + "] ' + d.value;";
-	onClick += "}";
-	onClick += addCCText(ccEmail);
-	onClick += "d.scrollIntoView(true);";
-	onClick += "d.focus();";
-	onClick += "}";
-	return rawButton(comp, onClick, owner + ": " + description);
-}
-function buttonForMoveToTriaged(owner) {
-	var onClick = "var s = document.getElementById('short_desc').value;";
-	onClick += reassignText(triagedOwner);
-	onClick += "var q = document.forms[1].elements[" + qa_contact + "];";
-	onClick += "q.value='" + owner + "';";
-	onClick += "}";
-	onClick += "var co = document.forms[1].elements[" + comment + "];";
-	onClick += "if (co!=null) {";
-	onClick += "co.value = 'As per http://wiki.eclipse.org/Platform_UI/Bug_Triage_Change_2009' + co.value;";
-	onClick += "}";
-	onClick += "var d = document.forms[1].elements[" + short_desc + "];";
-	onClick += "if (d!=null) {";
-	onClick += "d.scrollIntoView(true);";
-	onClick += "d.focus();";
-	onClick += "}";
-	return rawButton("Move to Triaged", onClick, owner);
-}
-function postTriageButton(label, priority, target, keyword, assignee) {
-	var onClick = "";
-	if (priority != "") {
-		onClick += "var p=document.getElementById('priority');";
-		onClick += "p.value='" + priority + "';";
-	}
-	onClick += "var d = document.forms[1].elements[" + keywords + "];";
-	onClick += "if (d!=null) {";
-	if (keyword != "") {
-		onClick += "if(d.value.indexOf('" + keyword + "')==-1){";
-		onClick += "if(d.value!=''){";
-		onClick += "d.value = d.value + ', ';";
-		onClick += "}";
-		onClick += "d.value = d.value + '" + keyword + "';";
-		onClick += "}";
-	}
-	onClick += "d.scrollIntoView(true);";
-	onClick += "d.focus();";
-	onClick += "}";
-	if (assignee != null && assignee != "") {
-	        onClick += reassignText(assignee);
-		onClick += "var c=document.getElementById('target_milestone');";
-		onClick += "if (c!=null) {";
-		onClick += "c.value='" + target + "';";
-		onClick += "}";
-	}
-	return rawButton(label, onClick, "");
-}
 
 function loadData() {
 	GM_log("Getting data");
@@ -189,7 +84,7 @@ function loadData() {
 	GM_xmlhttpRequest( {
 		method : "GET", url : "http://www.eclipse.org/eclipse/platform-ui/componentAreas.json", headers : {
 		"User-Agent" : "Platform UI Triage Helper", "Accept" : "text/plain", }
-	, onreadystatechange : function(details) {
+	, onreadystatechange : function(details) { 
 		if(details.readyState == 4) {
 			if (details.status == 200) {
 				buildButtons(details.responseText);
@@ -202,6 +97,81 @@ function loadData() {
 		}
 	});
 }
+
+function updateInfo(comp, owner, description, ccEmail) {
+var b=document.getElementById('assigned_to');
+if (b!=null) {
+	b.value=triagedOwner;
+	var q = document.forms[1].elements[qa_contact];
+	q.value=owner;
+}
+
+var s = document.getElementById('short_desc').value;
+var d = document.forms[1].elements[short_desc];
+if (d!=null) {
+	if (s.indexOf('[' + comp + ']') == -1 ){
+		d.value = '[' + comp + '] ' + d.value;
+	}
+	d.scrollIntoView(true);
+	d.focus();
+}
+}
+
+function comboClick() {
+var triage = document.getElementById('triage_select'); 
+var selection = triage.options[triage.selectedIndex].value; 
+var assignments = container.assignments;
+var users = container.users;
+
+for (i=0; i<assignments.length; i++) {
+	if (selection == assignments[i].component) {
+		var ownerEmail;
+		var cc = assignments[i]["cc"];
+		var ccEmail = null;
+		for (j = 0; j < users.length; j++) {
+			if (users[j].user == assignments[i].assignee) {
+				ownerEmail = users[j].email;
+			}
+			if (users[j].user === cc) {
+			    ccEmail = users[j].email;
+			}
+		}
+		updateInfo(assignments[i].component, ownerEmail, assignments[i].description, ccEmail);
+	}
+}
+
+}
+
+
+function comboChange() {
+var triage = document.getElementById('triage_select');
+var selection = triage.options[triage.selectedIndex].value;
+var assignments = container.assignments;
+var users = container.users;
+var found = false;
+var desc = document.getElementById('triage_desc');
+for (i=0; i<assignments.length; i++) {
+	if (selection == assignments[i].component) {
+		var ownerEmail;
+		var cc = assignments[i]["cc"];
+		var ccEmail = null;
+		for (j = 0; j < users.length; j++) {
+			if (users[j].user == assignments[i].assignee) {
+				ownerEmail = users[j].email;
+			}
+			if (users[j].user === cc) {
+			    ccEmail = users[j].email;
+			}
+		}
+		desc.innerHTML = ownerEmail + ":" + assignments[i].description;
+		found = true;
+	}
+}
+if (!found) {
+	desc.innerHTML = "";
+}
+}
+
 function buildButtons(loadedJSON) {
 	var cacheDate = new Date();
 	var mil = cacheDate.getTime();
@@ -209,11 +179,12 @@ function buildButtons(loadedJSON) {
 	GM_setValue('JSONDate', mil);
 
 	GM_setValue('JSONCache', loadedJSON);
-	var container = eval('(' + loadedJSON + ')');
+	container = eval('(' + loadedJSON + ')');
 	var assignments = container.assignments;
 	var users = container.users;
 	
-	var buttons = "";
+	var combo = "<a href='http://www.eclipse.org/eclipse/platform-ui/componentAreas.php'>Triage</a>: <select id=\"triage_select\">"
+	+"<option value=\"donothing\">Do Nothing</option>";
 	for (i = 0; i < assignments.length; i++) {
 		var ownerEmail;
 		var cc = assignments[i]["cc"];
@@ -226,13 +197,25 @@ function buildButtons(loadedJSON) {
 			    ccEmail = users[j].email;
 			}
 		}
-		buttons += buttonFor(assignments[i].component, ownerEmail, assignments[i].description, ccEmail);
+		combo += "<option value=\"" + assignments[i].component + "\">" + assignments[i].component + "</option>";
+		//buttons += buttonFor(assignments[i].component, ownerEmail, assignments[i].description, ccEmail);
 	}
-	
-	var refresh = '<input type="button" value="Refresh" id="refresher" />';
-	myDiv.innerHTML = '<div style="border: solid black 2px">' + buttons + refresh + '</div>';
+	combo += '</select>';
+	var extras =  '<input id="myUpdate" type="button" value="Apply" />';
+
+
+	var refresh = '<input type="button" value="RefreshJSON" id="refresher" /><div id="triage_desc"></div>';
+	myDiv.innerHTML = '<div style="border: solid black 2px">' + combo + extras + refresh 
+	+ '</div>';
 	header.parentNode.insertBefore(myDiv, header);
 	
 	var refreshButton = document.getElementById('refresher');
 	refreshButton.addEventListener("click", loadData, false);
+	
+	var triage = document.getElementById('triage_select');
+	triage.addEventListener('change', comboChange, true);
+	var update = document.getElementById('myUpdate');
+	update.addEventListener('click', comboClick, true);
 }
+
+
