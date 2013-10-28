@@ -5,6 +5,7 @@
 // @include        https://bugs.eclipse.org/bugs/show_bug.cgi?id=*
 // @grant       GM_getValue
 // @grant       GM_setValue
+// @grant       GM_xmlhttpRequest
 // ==/UserScript==
 // Copyright (c) 2000, 2013 IBM Corporation and others.
 // All rights reserved. This program and the accompanying materials
