@@ -36,8 +36,22 @@
     <td colspan="2">  <div class="title">SWT</div>
       </td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+  <tr id="gtk3-as-default"> 
+    <td class="title">GTK+ 3 used by default instead of GTK+ 2</td>
+    <td class="content">
+      SWT and Eclipse will use the GTK+ 3 libraries by default on all Linux/Unix platforms,
+      whenever GTK+ 3 is installed and available. 
+      <p>The GTK+ 3 port of SWT is still early access and you can force Eclipse to use the 
+      more stable GTK+2 port by setting the environment variable SWT_GTK3 to 0, if needed.
+      (For example: export SWT_GTK3=0) </p>
+    </td>
+  </tr>
+  <tr id="styled-text-api"> 
+    <td class="title">Added new API in StyledText to get text selection state</td>
+    <td class="content">
+      <code>StyledText.isTextSelected()</code> can be used to quickly determine whether any text
+      in the widget is selected or not.
+    </td>
   </tr>
   <tr> 
     <td colspan="2">  <div class="title">Platform UI</div>
