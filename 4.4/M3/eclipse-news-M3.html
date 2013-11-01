@@ -13,7 +13,6 @@
 </p>
 <ul>
   <li><a href="#Platform">Platform</a></li>
-  <li><a href="#JDT">JDT</a></li>
   <li><a href="#PDE">PDE</a></li>
   <li><a href="#Equinox">Equinox</a></li>
 </ul>
@@ -22,30 +21,18 @@
   <tr>
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Resources</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">SWT</div>
-      </td>
-  </tr>
+
   <tr id="gtk3-as-default"> 
-    <td class="title">GTK+ 3 used by default instead of GTK+ 2</td>
+    <td class="title">GTK+ 3 used by default</td>
     <td class="content">
-      SWT and Eclipse will use the GTK+ 3 libraries by default on all Linux/Unix platforms,
-      whenever GTK+ 3 is installed and available. 
+      SWT and Eclipse will now use the GTK+ 3 libraries by default on all Linux/Unix platforms,
+      whenever GTK+ 3 is installed and available. Previously SWT defaulted to using GTK+ 2.
       <p>The GTK+ 3 port of SWT is still early access and you can force Eclipse to use the 
       more stable GTK+2 port by setting the environment variable SWT_GTK3 to 0, if needed.
       (For example: export SWT_GTK3=0) </p>
     </td>
   </tr>
+
   <tr id="styled-text-api"> 
     <td class="title">Added new API in StyledText to get text selection state</td>
     <td class="content">
@@ -53,10 +40,7 @@
       in the widget is selected or not.
     </td>
   </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Platform UI</div>
-      </td>
-  </tr>
+
   <tr id="import-filter-conflicts"> 
     <td class="title">Filter conflicting projects during import</td>
     <td class="content">
@@ -66,65 +50,24 @@
     </td>
   </tr>
 
-  <tr> 
-    <td colspan="2">  <div class="title">User Assistance</div>
-      </td>
+  <tr id="batik-1-7">
+    <td class="title">Updated to Batik 1.7</td>
+    <td class="content">The Platform now includes a newer version of Apache Batik, version 1.7.0. 
+    This new version is being used for CSS parsing in the declarative styling engine, and is 
+    notably faster than the previous version.
+    </td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Platform Text</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Team/CVS</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Compare</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Ant</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Debug</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr>
-    <td colspan="2" class="section" id="JDT">JDT</td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
+
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
+
   <tr id="api-tools-annotations">
     <td class="title">Annotation support in API Tools</td>
     <td class="content">
-        <p>
           API Tools now provides support for using annotations to describe your API usage. Prior to the new annotation support you would have, for example,
           used the <code>&#64;noreference</code> Javadoc tag to indicate noone should use the tagged type / member. Now you can add the <code>&#64;NoReference</code>
           annotation (in Java 1.5+ source) to the member directly without the need for Javadoc.
-      </p>
       <img src="images/annotation-example.png" alt="The &#64;NoExtend annotation being used on a class"/>
       <p>
         To make the transition from Javadoc tags to the new annotation support, API Tools provides a conversion wizard that is found 
@@ -134,20 +77,21 @@
       <img src="images/javadoc-conversion.png" alt="The Javadoc conversion wizard"/>
     </td>
   </tr>
+
   <tr id="target-status">
     <td class="title">Updated target platform state in the status bar</td>
     <td class="content">
-        <p>
           In 4.4 M2 you could add the target platform indicator to the status bar allowing easy access to the preferences to customize it. Now this 
           indicator has been updated to show problems with the target platform (if any). The state of the target platform is immediately apparent based on its 
           icon / decoration and any problems are added to the tooltip.
-      </p>
       <img src="images/target-status.png" alt="The target platform state in the status bar showing an error"/>
     </td>
   </tr>
+
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
   </tr>
+
   <tr id="framework-update">
     <td class="title">Equinox OSGi framework update</td>
 
@@ -185,16 +129,7 @@
       (see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=418224">bug 418224</a>)
     </td>
   </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Template</div>
-      </td>
-  </tr>
-  <tr id="first-item">
-    <td class="title">First item</td>
-    <td class="content">
-      Item blurb.
-    </td>
-  </tr>
+
   <tr> 
     <td colspan="2">  </td>
   </tr>
@@ -202,13 +137,8 @@
 <p>The above features are just the ones that are new since the previous milestone
 build. Summaries for earlier Luna milestone builds:</p>
 <ul>
-  <li>New for Eclipse Luna milestone build M7 (May 2, 2014)</li>
-  <li>New for Eclipse Luna milestone build M6 (March 14, 2014)</li>
-  <li>New for Eclipse Luna milestone build M5 (January 31, 2014)</li>
-  <li>New for Eclipse Luna milestone build M4 (December 13, 2013)</li>
-  <li>New for Eclipse Luna milestone build M3 (November 1, 2013)</a></li>
-  <li>New for Eclipse Luna milestone build M2 (September 20, 2013)</a></li>
-  <li>New for Eclipse Luna milestone build M1 (August 9, 2013)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M2-201309182000/news/">New for Eclipse Luna milestone build M2 (September 20, 2013)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M1-201308072000/news/">New for Eclipse Luna milestone build M1 (August 9, 2013)</a></li>
 </ul>
 </body>
 </html>
