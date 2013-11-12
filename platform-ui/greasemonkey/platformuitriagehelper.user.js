@@ -5,7 +5,7 @@
 // @include        https://bugs.eclipse.org/bugs/show_bug.cgi?id=*
 // @grant       GM_getValue
 // @grant       GM_setValue
-// @grant       GM_xmlhttpRequest
+// @grant	GM_xmlhttpRequest
 // ==/UserScript==
 // Copyright (c) 2000, 2013 IBM Corporation and others.
 // All rights reserved. This program and the accompanying materials
@@ -15,7 +15,8 @@
 //
 // Contributors:
 //     IBM Corporation - initial API and implementation
-var refreshInterval = 1000*60*60*24;
+//var refreshInterval = 1000*60*60*24;
+var refreshInterval = 1000*60*60;
 var els = document.forms[1].elements;
 var component;
 var product;
@@ -65,13 +66,12 @@ window.addEventListener("load", function() {
 	var oldTime = GM_getValue('JSONDate');
 	var diff = (+newTime) - (+oldTime);
 	
-	
 	if (!GM_getValue('JSONCache') || (diff > refreshInterval)){
-		GM_log("loading data into cache");
+		console.log("loading data into cache");
 		loadData();
 	}else{
 		buildButtons(GM_getValue('JSONCache'));
-		GM_log("Data cache is being used");
+		console.log("Data cache is being used");
 		//setTimeout(function() {loadData(); }, refreshInterval);
 		}
 }
@@ -80,12 +80,13 @@ window.addEventListener("load", function() {
 
 
 function loadData() {
-	GM_log("Getting data");
+	console.log("Getting data");
 	var rText = "";
 	GM_xmlhttpRequest( {
 		method : "GET", url : "http://www.eclipse.org/eclipse/platform-ui/componentAreas.json", headers : {
 		"User-Agent" : "Platform UI Triage Helper", "Accept" : "text/plain", }
 	, onreadystatechange : function(details) { 
+		console.log(details.readyState);
 		if(details.readyState == 4) {
 			if (details.status == 200) {
 				buildButtons(details.responseText);
