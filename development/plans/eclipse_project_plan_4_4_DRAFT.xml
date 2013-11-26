@@ -483,14 +483,14 @@ Eclipse 4.4 Endgame Plan.
 <p:proposed>
 <ul>
 
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" (new)/>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (new)
 	<strong>SWT browser currency.</strong>
 	Significant work is required in the SWT browser widget to support the latest
 	browser runtimes. As part of this effort we will add browser support for XULRunner 24.
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">TBD</a>)
 </li>
 
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" (new)/>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (new)
 	<strong>Introduce Java annotations to express API rules.</strong>
 	Currently, PDE API Tools API rules are defined in Javadoc using pre-defined Javadoc tag. These days,
 	such additional information is expressed using Java annotations. With Luna we plan to define
@@ -524,7 +524,7 @@ Eclipse 4.4 Endgame Plan.
 <p:proposed>
 <ul>
 
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" (new)/>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (new)
 	<strong>Performance and stability of Platform user interface.</strong>
 	Version 4.3 of the Eclipse Platform still has some performance and
 	functional shortcomings compared to the old 3.x generation of the platform.
@@ -533,7 +533,7 @@ Eclipse 4.4 Endgame Plan.
 	[Platform Releng, Platform UI, SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=422467">422467</a>)
 </li>
 
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" (new)/>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (new)
 	<strong>Revive performance tests.</strong>
 	After the migration to CBI and build.eclipse.org, our performance tests stopped being executed. With
 	this release we want to create a stable performance test infrastructure and bring back to live at least the
