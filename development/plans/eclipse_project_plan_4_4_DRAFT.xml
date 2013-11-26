@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 06:53 EDT November 26, 2013.
+Last revised 07:00 EDT November 26, 2013.
 
 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
 marks interesting changes since the previous draft of 
@@ -487,7 +487,7 @@ Eclipse 4.4 Endgame Plan.
 	<strong>SWT browser currency.</strong>
 	Significant work is required in the SWT browser widget to support the latest
 	browser runtimes. As part of this effort we will add browser support for XULRunner 24.
-	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">TBD</a>)
+	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=422561">422561</a>)
 </li>
 
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (new)
@@ -518,7 +518,7 @@ Eclipse 4.4 Endgame Plan.
 </p:description>
 
 <p:committed>
-  <i>None at this time.</i>
+  <p><i>None at this time.</i></p>
 </p:committed>
 
 <p:proposed>
