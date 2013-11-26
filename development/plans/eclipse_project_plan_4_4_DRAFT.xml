@@ -16,13 +16,11 @@
 <p:introduction>
 <div>
 <p>
-Last revised 06:30 EDT November 26, 2013.
+Last revised 06:53 EDT November 26, 2013.
 
-<!--
 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
 marks interesting changes since the previous draft of 
-<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4.4.20130820.xml">August 20, 2013</a>.)
--->
+<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_4_20130820.xml">August 20, 2013</a>.)
 
 </p>
 <p><i>Please send comments about this plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
@@ -457,6 +455,7 @@ Eclipse 4.4 Endgame Plan.
 </p:description>
 
 <p:committed>
+<ul>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed)
 	<strong>Continue work on Java SE 8 features.</strong>
 	The next Java SE release is version 8, which is currently scheduled for the spring
@@ -478,6 +477,7 @@ Eclipse 4.4 Endgame Plan.
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=340067">340067</a>)
 </li>
 
+</ul>
 </p:committed>
 
 <p:proposed>
@@ -492,9 +492,9 @@ Eclipse 4.4 Endgame Plan.
 
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (new)
 	<strong>Introduce Java annotations to express API rules.</strong>
-	Currently, PDE API Tools API rules are defined in Javadoc using pre-defined Javadoc tag. These days,
-	such additional information is expressed using Java annotations. With Luna we plan to define
-	a set of annotations to express our API rules and adjust PDE API Tools to recognized those annotations.
+	Currently, PDE API Tools API rules are defined in Javadoc using pre-defined Javadoc tags. These days,
+	such additional information is usually expressed using Java annotations. With Luna we plan to define
+	a set of annotations to express API rules and adjust PDE API Tools to recognized those annotations.
 	 [PDE API Tools] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=415607 ">415607</a>)
 </li>
 </ul>
@@ -518,7 +518,7 @@ Eclipse 4.4 Endgame Plan.
 </p:description>
 
 <p:committed>
-  <p><i>None at this time.</i></p>
+  <i>None at this time.</i>
 </p:committed>
 
 <p:proposed>
@@ -530,15 +530,15 @@ Eclipse 4.4 Endgame Plan.
 	functional shortcomings compared to the old 3.x generation of the platform.
 	We will work to root out and eliminate these remaining bugs to increase
 	the overall quality and performance of the 4.x generation platform.
-	[Platform Releng, Platform UI, SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=422467">422467</a>)
+	[Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=422467">422467</a>)
 </li>
 
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (new)
 	<strong>Revive performance tests.</strong>
-	After the migration to CBI and build.eclipse.org, our performance tests stopped being executed. With
+	After the migration to CBI and build.eclipse.org, our performance tests stopped working. With
 	this release we want to create a stable performance test infrastructure and bring back to live at least the
 	most relevant performance tests.
-	[Platform Releng] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=422467">422467</a>)
+	[Platform Releng] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=374441">374441</a>)
 </li>
 
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (new)
