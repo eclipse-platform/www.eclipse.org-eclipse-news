@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 07:00 EDT November 26, 2013.
+Last revised 08:52 EDT November 28, 2013.
 
 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
 marks interesting changes since the previous draft of 
@@ -208,9 +208,9 @@ Eclipse 4.4 Endgame Plan.
 			<td rowspan="2">Windows</td>
 			<td rowspan="2">7</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 7u21<br/>
-				Oracle Java 6 Update 43<br/>
-				IBM Java 6 SR13
+			<td rowspan="2">Oracle Java 7u45<br/>
+				Oracle Java 6u45<br/>
+				IBM Java 6 SR15
 			</td>
 			<td rowspan="2">Win32</td>
 		</tr>
@@ -223,10 +223,10 @@ Eclipse 4.4 Endgame Plan.
 			<td rowspan="3">6</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
-			    Oracle Java 7u21<br/>
-			    Oracle Java 6 Update 43<br/>
-				IBM Java 6 SR13<br/>
-				Open JDK 7u9
+			    Oracle Java 7u45<br/>
+			    Oracle Java 6u45<br/>
+				IBM Java 6 SR15<br/>
+				Open JDK 7u40
 			</td>
 			<td rowspan="3">GTK</td>
 		</tr>
@@ -235,15 +235,15 @@ Eclipse 4.4 Endgame Plan.
 		</tr>
 		<tr class="c1">
 			<td rowspan="1">Power 64-bit</td>
-			<td>IBM Java 6 SR13</td>
+			<td>IBM Java 6 SR15</td>
 		</tr>
 		<!-- ************ SLES ************** -->
 		<tr class="c0">
 			<td rowspan="3">SUSE Linux Enterprise Server</td>
 			<td rowspan="3">11</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 6 Update 43<br/>
-				IBM Java 6 SR13
+			<td rowspan="2">Oracle Java 6u45<br/>
+				IBM Java 6 SR15
 			</td>
 			<td rowspan="3">GTK</td>
 		</tr>
@@ -252,15 +252,15 @@ Eclipse 4.4 Endgame Plan.
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">Power 64-bit</td>
-			<td>IBM Java 6 SR13</td>
+			<td>IBM Java 6 SR15</td>
 		</tr>
 		<!-- ************ Ubuntu ************** -->
 		<tr class="c1">
 			<td rowspan="2">Ubuntu Long Term Support</td>
 			<td rowspan="2">12.04</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 6 Update 43<br/>
-				IBM Java 6 SR13
+			<td rowspan="2">Oracle Java 6u45<br/>
+				IBM Java 6 SR15
 			</td>
 			<td rowspan="2">GTK</td>
 		</tr>
@@ -272,7 +272,7 @@ Eclipse 4.4 Endgame Plan.
 			<td rowspan="2">Oracle Solaris</td>
 			<td rowspan="2">11</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 6 Update 43</td>
+			<td rowspan="2">Oracle Java 6u45</td>
 			<td rowspan="2">GTK</td>
 		</tr>
 		<tr class="c0">
@@ -283,7 +283,7 @@ Eclipse 4.4 Endgame Plan.
 			<td rowspan="1">HP-UX</td>
 			<td rowspan="1">11i v3</td>
 			<td rowspan="1">ia64 64-bit</td>
-			<td rowspan="1">HP-UX Java 6 Update 10</td>
+			<td rowspan="1">HP-UX Java 6u20</td>
 			<td rowspan="1">GTK</td>
 		</tr>
 		<!-- ************ AIX ************** -->
@@ -291,7 +291,7 @@ Eclipse 4.4 Endgame Plan.
 			<td rowspan="1">IBM AIX</td>
 			<td rowspan="1">7.1</td>
 			<td rowspan="1">Power 64-bit</td>
-			<td rowspan="1">IBM Java 6 SR13</td>
+			<td rowspan="1">IBM Java 6 SR15</td>
 			<td rowspan="1">GTK</td>
 		</tr>
 		<!-- ************ Mac ************** -->
@@ -299,7 +299,7 @@ Eclipse 4.4 Endgame Plan.
 			<td rowspan="2">Apple Mac OS X</td>
 			<td rowspan="2">10.8</td>
 			<td rowspan="1">Universal 32-bit</td>
-			<td rowspan="2">Oracle Java 7u21</td>
+			<td rowspan="2">Oracle Java 7u45</td>
 			<td rowspan="2">Cocoa</td>
 		</tr>
 		<tr class="c1">
@@ -458,16 +458,15 @@ Eclipse 4.4 Endgame Plan.
 <ul>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed)
 	<strong>Continue work on Java SE 8 features.</strong>
-	The next Java SE release is version 8, which is currently scheduled for the spring
-	of 2014. This release is expected to contain extensions to the Java language,
+	The next Java SE release is version 8, which is currently scheduled for March 18, 2014.
+	This release will contain extensions to the Java language,
 	including support for lambda expressions, default methods, annotations on
-	types, and minor language changes. 
-	Eclipse Java development tooling will make progress towards compiling, editing
-	and launching applications for Java 8 for those parts which have publicly
-	available specifications. Work in progress will be made available as feature
-	patches for early adopters while we work towards the official Java SE 8
-	release.
-	 [JDT Core, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=380190">380190</a>)
+	types and minor language changes. 
+	Eclipse Java development tooling will provide complete support for compiling, editing
+	and launching applications for Java 8.
+	Work in progress will be made available as feature patches for early adopters while we
+	work towards the official Java SE 8 release.
+	[JDT Core, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=380190">380190</a>)
 </li>
 
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (new)
@@ -550,6 +549,16 @@ Eclipse 4.4 Endgame Plan.
 	build and test the Eclipse Platform on any machine, and lower the long term maintenance
 	cost of building older versions of Eclipse projects.
 	[Platform Releng] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=372792">372792</a>)
+</li>
+
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (new)
+	<strong>Recruit and train new contributors.</strong>
+	While adoption and use of the Eclipse Platform increases every year,
+	there has been a steadily declining rate of contribution back to the
+	platform's development. We will work to reduce any real or perceived barriers
+	to contribution, and increase efforts on reviewing patches and mentoring 
+	new contributors, with the goal that they become active committers.
+	[All components] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=422762">422762</a>)
 </li>
 
 </ul>
@@ -664,7 +673,7 @@ Eclipse 4.4 Endgame Plan.
     </tr>
     <tr>
       <td>org.apache.ant</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.5</div></td>
     </tr>
     <tr>
       <td>org.apache.batik.css</td>
@@ -680,7 +689,7 @@ Eclipse 4.4 Endgame Plan.
     </tr>
     <tr>
       <td>org.apache.commons.codec</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.5</div></td>
     </tr>
     <tr>
       <td>org.apache.commons.logging</td>
@@ -699,12 +708,12 @@ Eclipse 4.4 Endgame Plan.
       <td><div align="center">not specified</div></td>
     </tr>
     <tr>
-      <td>org.apache.httpcomponents.httpclient </td>
+      <td>org.apache.httpcomponents.httpclient</td>
       <td><div align="center">1.5</div></td>
     </tr>
     <tr>
-      <td>org.apache.httpcomponents.httpcore </td>
-      <td><div align="center">1.3</div></td>
+      <td>org.apache.httpcomponents.httpcore</td>
+      <td><div align="center">1.5</div></td>
     </tr>
     <tr>
       <td>org.apache.jasper.glassfish</td>
@@ -720,15 +729,15 @@ Eclipse 4.4 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.ant.core</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.6</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ant.launching</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.6</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ant.ui</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.6</div></td>
     </tr>
     <tr>
       <td>org.eclipse.compare</td>
@@ -772,7 +781,7 @@ Eclipse 4.4 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.core.externaltools</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.6</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.filebuffers</td>
@@ -808,7 +817,7 @@ Eclipse 4.4 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.core.variables</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.6</div></td>
     </tr>
     <tr>
       <td>org.eclipse.cvs</td>
@@ -816,11 +825,11 @@ Eclipse 4.4 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.debug.core</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.6</div></td>
     </tr>
     <tr>
       <td>org.eclipse.debug.ui</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.6</div></td>
     </tr>
     <tr>
       <td>org.eclipse.e4.core.commands</td>
@@ -840,7 +849,7 @@ Eclipse 4.4 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.e4.core.services</td>
-      <td><div align="center">1.5</div></td>
+      <td><div align="center">1.6</div></td>
     </tr>
     <tr>
       <td>org.eclipse.e4.ui.bindings</td>
@@ -1004,7 +1013,7 @@ Eclipse 4.4 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.jface</td>
-      <td><div align="center">F1.1</div></td>
+      <td><div align="center">1.5</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jface.databinding</td>
@@ -1036,15 +1045,19 @@ Eclipse 4.4 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.pde.api.tools</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.6</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.pde.api.tools.annotations</td>
+      <td><div align="center">1.5</div></td>
     </tr>
     <tr>
       <td>org.eclipse.pde.api.tools.ui</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.6</div></td>
     </tr>
     <tr>
       <td>org.eclipse.pde.build</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.6</div></td>
     </tr>
     <tr>
       <td>org.eclipse.pde.core</td>
@@ -1068,7 +1081,7 @@ Eclipse 4.4 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.pde.launching</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.5</div></td>
     </tr>
     <tr>
       <td>org.eclipse.pde.runtime</td>
@@ -1156,7 +1169,7 @@ Eclipse 4.4 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.ui.console</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.6</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.editors</td>
@@ -1164,7 +1177,7 @@ Eclipse 4.4 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.ui.externaltools</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.6</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.forms</td>
@@ -1243,8 +1256,20 @@ Eclipse 4.4 Endgame Plan.
       <td><div align="center">1.3</div></td>
     </tr>
     <tr>
+      <td>org.sat4j.core</td>
+      <td><div align="center">1.5</div></td>
+    </tr>
+    <tr>
+      <td>org.sat4j.pb</td>
+      <td><div align="center">1.5</div></td>
+    </tr>
+    <tr>
       <td>org.w3c.css.sac</td>
       <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
+      <td>org.w3c.dom.events</td>
+      <td><div align="center">1.3</div></td>
     </tr>
     <tr>
       <td>org.w3c.dom.smil</td>
