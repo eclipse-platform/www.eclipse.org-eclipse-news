@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 08:52 EDT November 28, 2013.
+Last revised 5:40 EST December 4, 2013.
 
 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
 marks interesting changes since the previous draft of 
@@ -462,7 +462,7 @@ Eclipse 4.4 Endgame Plan.
 	This release will contain extensions to the Java language,
 	including support for lambda expressions, default methods, annotations on
 	types and minor language changes. 
-	Eclipse Java development tooling will provide complete support for compiling, editing
+	In the Luna release we will provide complete support for compiling, editing
 	and launching applications for Java 8.
 	Work in progress will be made available as feature patches for early adopters while we
 	work towards the official Java SE 8 release.
@@ -965,7 +965,7 @@ Eclipse 4.4 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.jdt.core</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.6</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.core.manipulation</td>
@@ -1129,7 +1129,7 @@ Eclipse 4.4 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.swt</td>
-      <td><div align="center">F1.0</div></td>
+      <td><div align="center">1.5</div></td>
     </tr>
     <tr>
       <td>org.eclipse.team.core</td>
