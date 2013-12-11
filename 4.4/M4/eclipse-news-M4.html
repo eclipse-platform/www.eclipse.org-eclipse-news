@@ -118,7 +118,37 @@
     <td colspan="2" class="section" id="Equinox">Equinox</td>
   </tr>
   <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+    <td class="title">Framework Trace Options</td>
+    <td class="content">
+      The new OSGi framework implementation now supports many of the 
+      previously supported trace options and adds a few more trace options
+      to help debug issues with the framework.  The following trace options 
+      are now implemented:
+      <dl>
+         <dt>debug/bundleTime</dt>
+           <dd>Prints out timing information for bundle activation</dd>
+         <dt>debug/cachedmanifest</dt>
+           <dd>Debug the caching of bundle headers</dd>
+         <dt>debug/location</dt>
+           <dd>Prints out location service debug information</dd>
+         <dt>debug/startlevel</dt>
+           <dd>Prints out start level service debug information</dd>
+         <dt>monitor/activation</dt>
+           <dd>Monitor persistent bundle activation</dd>
+         <dt>resolver/providers</dt>
+           <dd>Prints out information about matching capabilities returned to the resolver and why any were filtered out</dd>
+         <dt>resolver/hooks</dt>
+           <dd>Prints out information about capabilities or resources that were filtered by resolver hooks</dd>
+         <dt>resolver/uses</dt>
+           <dd>Prints out information about uses constraint violations</dd>
+         <dt>resolver/wiring</dt>
+           <dd>Prints out wiring information after the resolve process completes</dd>
+         <dt>resolver/report</dt>
+           <dd>Prints out the resolution report information</dd>
+         <dt>resolver</dt>
+           <dd>enables all resolver trace options</dd>
+      </dl>
+    </td>
   </tr>
 
   <tr> 
