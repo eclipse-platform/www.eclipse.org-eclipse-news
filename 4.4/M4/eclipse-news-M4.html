@@ -30,16 +30,16 @@
    <tr id="split-editors"> 
     <td class="title">Split Editors</td>
     <td class="content">
-     Finally, <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=8009">Bug 8009</a> has been addressed ! You can now split / unsplit
+     Finally, <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=8009">Bug 8009</a> has been addressed! You can now split / unsplit
      the currently active editor. Just use one of the new key bindings
      supplied in Luna M4:
      <ul>
-     <li> Ctrl + '_' splits the editor one above the other</li>
-     <li> Ctrl + '{' splits the editor side by side</li>
-     <li> Re-applying the binding to an already split editor reverts it to only have one pane.
+     <li><b>Ctrl+_</b> splits the editor one above the other</li>
+     <li><b>Ctrl+{</b> splits the editor side by side</li>
+     <li>Re-applying the command to an already split editor reverts it to only have one pane.</li>
      </ul>
-    <p><img src="images/split_editors.png" alt="moveitems"/></p>
-    <p>Try it out on <i>your</i> favorite editor !</p>
+    <p><img src="images/split_editors.png" alt=""/></p>
+    <p>Try it out on <i>your</i> favorite editor!</p>
     </td>
   </tr>
  <tr> 
@@ -130,14 +130,25 @@
   <tr id="quickfix-create-for-loop">
     <td class="title">Quick Fixes to create 'for' loops</td>
     <td class="content">
-      A set of new quick fixes now help you create <code>for</code> loops that iterate over a given expression.
+      A set of new quick fixes can create <code>for</code> loops that iterate over a given expression.
       <p>
-      For <code>Collection</code>s, you can create an enhanced <code>for</code> loop or a <code>for</code> loop using an <code>Iterator</code>.<br/>
-      For <code>List</code>s, you can also create a <code>for</code> loop using an index and <code>get(i)</code>.
+      For arrays:
       </p>
-      <p><a href="images/quickfix-create-for-loop-1.txt"><img src="images/quickfix-create-for-loop-1.png" alt=""/></a></p>
-      For arrays, you can create an enhanced <code>for</code> loop or a <code>for</code> loop using an index.
-      <p><a href="images/quickfix-create-for-loop-2.txt"><img src="images/quickfix-create-for-loop-2.png" alt=""/></a></p>
+      <ul>
+      <li>Create an enhanced <code>for</code> loop</li>
+      <li>Create a <code>for</code> loop using an index</li>
+      </ul>
+      <p><a href="images/quickfix-create-for-loop-array.txt"><img src="images/quickfix-create-for-loop-array.png" alt=""/></a></p>
+      For <code>Collection</code>s:
+      <ul>
+      <li>Create an enhanced <code>for</code> loop</li>
+      <li>Create a <code>for</code> loop using an <code>Iterator</code></li>
+      </ul>
+      For <code>List</code>s:
+      <ul>
+      <li>Create a <code>for</code> loop using an index and <code>get(i)</code></li>
+      </ul>
+      <p><a href="images/quickfix-create-for-loop-collection.txt"><img src="images/quickfix-create-for-loop-collection.png" alt=""/></a></p>
     </td>
   </tr>
   <tr>
