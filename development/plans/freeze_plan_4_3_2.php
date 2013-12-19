@@ -155,7 +155,7 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>What is the game plan?</h3>
 			<p> 
-	 		The Eclipse Kepler 4.3 Service Release 1 ("Kepler 4.3 SR2") endgame involves building 
+	 		The Eclipse Kepler 4.3 Service Release 2 ("Kepler 4.3 SR2") endgame involves building 
 	        a series of release candidates leading to the Eclipse project's contribution to the
 	        Kepler 4.3 SR2 release. The Eclipse project version number for this release is 4.3.2.
 	        By its nature, this maintenance release contains fixes to a small number 
