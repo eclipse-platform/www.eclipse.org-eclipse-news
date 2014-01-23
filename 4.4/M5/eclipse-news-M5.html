@@ -41,8 +41,14 @@
     <td colspan="2">  <div class="title">SWT</div>
       </td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+  <tr id="swt-gtk-problem"> 
+    <td class="title">SWT does not work on Linux with GTK+ 3 version &gt; 3.8.x</td>
+    <td class="content">
+        The Linux GTK+ 3 port of SWT is broken for GTK+ versions above 3.8.x.
+        This primarily affects users running Fedora 20, Ubuntu 14.04 (Alpha builds), openSUSE 13.1 and any other Linux distributions that bundle GTK+ 3.10.x.
+        As a workaround, users are advised to switch back to GTK+ 2 by setting the environment variable <code>SWT_GTK3</code> to <code>0</code>.
+        For more details see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=421127">bug 421127</a>.
+    </td>
   </tr>
   <tr> 
     <td colspan="2">  <div class="title">Platform UI</div>
