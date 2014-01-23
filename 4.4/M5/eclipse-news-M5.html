@@ -38,6 +38,38 @@
   <tr>
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
+     <tr id="minimized-stack-option"> 
+    <td class="title">New Option for Minimized Stacks</td>
+    <td class="content">
+    We've extended the MinMaxAddon to have two different display modes:
+    <ul>
+    <li>Use Overlays: This is the current mode where showing a view in a
+    minimized stack opens it in a 'fly out', overlaying part of the
+    presentation.</li>
+    <li>Temporary Restore: This is a new mode that will temporarily put the
+    stack back into the presentation while one of its views is active. This
+    has the advantage that the minimized view won't overlay anything in the
+    current presentation (like your editor...).</li>
+    </ul>
+    <p>
+    In order to access the new mode right-click on the 'Restore' button
+    of a minimized stack and toggle the 'Use Overlays' menu item (see image
+    below). Note that this change is global so once it's set all minimized
+    stacks will use the selected mode.
+    <p><img src="images/restore-btn.png" alt=""/></p>
+    </p>
+    <p>Here's what the current mode looks like:</p>
+    <p><img src="images/use-overlays.png" alt=""/></p>
+    <p>Here's what the new mode looks like. Note how the editor
+    has been pushed to the right rather than being obscured:</p>
+    <p><img src="images/no-overlays.png" alt=""/></p>
+    <p>
+    We're really interested in your feedback on this ! The initial response
+    has been positive enough that we're considering making the non-overlay
+    mode the default; what you you think ? (Post your comments on bug 424489).
+    </p>
+    </td>
+  </tr>
   <tr> 
     <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
   </tr>
