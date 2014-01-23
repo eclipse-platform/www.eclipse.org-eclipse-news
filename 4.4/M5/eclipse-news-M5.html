@@ -61,6 +61,21 @@
         For more details see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=421127">bug 421127</a>.
     </td>
   </tr>
+  <tr id="swt-xulrunner24"> 
+    <td class="title">SWT Browser now supports XULRunner 24.x</td>
+    <td class="content">
+        SWT Browser created with style <code>SWT.MOZILLA</code> can now be used with XULRunner 24.x runtime.
+    </td>
+  </tr>
+    <tr id="sleep-monitor-api"> 
+    <td class="title">Added API for sleep monitoring</td>
+    <td class="content">
+        SWT has added two new events, <code>SWT.Sleep</code> and <code>SWT.Wakeup</code>,
+        which are sent before the <code>Display</code> event loop goes into sleep and after
+        it wakes up from sleep respectively. These events can be used to monitor the duration
+        of sleep time in SWT applications.
+    </td>
+  </tr>
   <tr> 
     <td colspan="2">  <div class="title">Platform UI</div>
       </td>
@@ -136,7 +151,7 @@
 <p>The above features are just the ones that are new since the previous milestone
 build. Summaries for earlier Luna milestone builds:</p>
 <ul>
-  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M4-201312121600/news/">New for Eclipse Luna milestone build M4 (December 13, 2013)</li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M4-201312121600/news/">New for Eclipse Luna milestone build M4 (December 13, 2013)</a></li>
   <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M3-201310302000/news/">New for Eclipse Luna milestone build M3 (November 1, 2013)</a></li>
   <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M2-201309182000/news/">New for Eclipse Luna milestone build M2 (September 20, 2013)</a></li>
   <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M1-201308072000/news/">New for Eclipse Luna milestone build M1 (August 9, 2013)</a></li>
