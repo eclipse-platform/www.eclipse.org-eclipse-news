@@ -45,8 +45,37 @@
     <td colspan="2">  <div class="title">Resources</div>
       </td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+  <tr id="workspaceLock">
+    <td class="title">Removed WorkspaceLock API</td>
+    <td class="content">
+      The <code>WorkspaceLock</code> API allowed a special client (usually platform UI) to
+      hook into the locking protocols used by the workspace implementation. This hook
+      was used to mitigate deadlocks due to interaction with synchronous SWT events,
+      and was never intended to be used by other clients. In the 3.0 release this API
+      was deprecated in favor of a more general API provided by the <code>org.eclipse.core.jobs</code>
+      bundle. Invoking this API has had no effect since the 3.0 release. The specific API
+      being removed includes:
+      <ul>
+        <li>The <code>org.eclipse.core.resources.WorkspaceLock</code> class.</li>
+        <li>The method <code>org.eclipse.core.resources.IWorkspace#setWorkspaceLock</code></li>
+      </ul>
+      Clients that directly use API listed above should remove any references to it.
+    </td>
+  </tr>
+  <tr id="incrementalProjectBuilder_getRule">
+    <td class="title">Removed IncrementalProjectBuilder#getRule() API</td>
+    <td class="content">
+      The <code>IncrementalProjectBuilder#getRule()</code> method returned a scheduling rule 
+      that was required for building the project by the builder. This method was intended to be used by the builder framework only.
+      In the 3.6 release this method was deprecated in favor of a more general method <code>IncrementalProjectBuilder#getRule(int, Map)</code>. 
+      The specific API being removed includes:
+      <ul>
+        <li>The method <code>org.eclipse.core.resources.IncrementalProjectBuilder#getRule()</code></li>
+      </ul>
+      Clients that directly call API listed above should remove any references to it
+      or replace with calls to <code>IncrementalProjectBuilder#getRule(int, Map)</code>. Clients that implement API listed
+      above should implement <code>IncrementalProjectBuilder#getRule(int, Map)</code> instead.
+    </td>
   </tr>
   <tr> 
     <td colspan="2">  <div class="title">SWT</div>
