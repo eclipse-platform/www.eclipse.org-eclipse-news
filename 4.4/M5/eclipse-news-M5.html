@@ -27,7 +27,7 @@
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
      <tr id="minimized-stack-option"> 
-    <td class="title">New Option for Minimized Stacks</td>
+    <td class="title">New option for minimized stacks</td>
     <td class="content">
     We've extended the MinMaxAddon to have two different display modes:
     <ul>
@@ -35,14 +35,14 @@
     minimized stack opens it in a 'fly out', overlaying part of the
     presentation.</li>
     <li>Temporary Restore: This is a new mode that will temporarily put the
-    stack back into the presentation while one of its views is active. This
+    stack back into the perspective layout while one of its views is active. This
     has the advantage that the minimized view won't overlay anything in the
-    current presentation (like your editor...).</li>
+    current presentation (e.g. your editor...).</li>
     </ul>
     <p>
-    In order to access the new mode right-click on the 'Restore' button
-    of a minimized stack and toggle the 'Use Overlays' menu item (see image
-    below). Note that this change is global so once it's set, all minimized
+    In order to access the new mode, right-click on the <b>Restore</b> button
+    of a minimized stack and clear the <b>Use Overlays</b> menu item (see image
+    below). Note that this change is global, so once it's set, all minimized
     stacks will use the selected mode.</p>
     <p><img src="images/restore-btn.png" alt=""/></p>
 
@@ -52,9 +52,9 @@
     has been pushed to the right rather than being obscured:</p>
     <p><img src="images/no-overlays.png" alt=""/></p>
     <p>
-    We're really interested in your feedback on this ! The initial response
+    We're really interested in your feedback on this! The initial response
     has been positive enough that we're considering making the non-overlay
-    mode the default. What you you think ? (Post your comments on <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=426556">bug 426556</a>.
+    mode the default. What do you think? (Post your comments on <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=426556">bug 426556</a>).
     </p>
     </td>
   </tr>
@@ -62,7 +62,7 @@
   <tr id="workspaceLock">
     <td class="title">Removed WorkspaceLock API</td>
     <td class="content">
-      The <code>WorkspaceLock</code> API allowed a special client (usually platform UI) to
+      The <code>WorkspaceLock</code> API allowed a special client (usually Platform UI) to
       hook into the locking protocols used by the workspace implementation. This hook
       was used to mitigate deadlocks due to interaction with synchronous SWT events,
       and was never intended to be used by other clients. In the 3.0 release this API
@@ -73,10 +73,10 @@
         <li>The <code>org.eclipse.core.resources.WorkspaceLock</code> class.</li>
         <li>The method <code>org.eclipse.core.resources.IWorkspace#setWorkspaceLock</code></li>
       </ul>
-      Clients that directly use API listed above should remove any references to it.
+      Clients that directly use an API listed above should remove any references to it.
     </td>
   </tr>
-  <tr id="incrementalProjectBuilder_getRule">
+  <tr id="incrementalProjectBuilder-getRule">
     <td class="title">Removed IncrementalProjectBuilder#getRule() API</td>
     <td class="content">
       The <code>IncrementalProjectBuilder#getRule()</code> method returned a scheduling rule 
@@ -86,15 +86,15 @@
       <ul>
         <li>The method <code>org.eclipse.core.resources.IncrementalProjectBuilder#getRule()</code></li>
       </ul>
-      Clients that directly call API listed above should remove any references to it
-      or replace with calls to <code>IncrementalProjectBuilder#getRule(int, Map)</code>. Clients that implement API listed
+      Clients that directly call the API listed above should remove any references to it
+      or replace them with calls to <code>IncrementalProjectBuilder#getRule(int, Map)</code>. Clients that implement the API listed
       above should implement <code>IncrementalProjectBuilder#getRule(int, Map)</code> instead.
     </td>
   </tr>
   <tr id="swt-gtk-problem"> 
     <td class="title">SWT does not work on Linux with GTK+ 3 version &gt; 3.8.x</td>
     <td class="content">
-        The Linux GTK+ 3 port of SWT is broken for GTK+ versions above 3.8.x.
+        The Linux GTK+ 3 port of SWT is currently broken for GTK+ versions above 3.8.x.
         This primarily affects users running Fedora 20, Ubuntu 14.04 (Alpha builds), openSUSE 13.1 and any other Linux distributions that bundle GTK+ 3.10.x.
         As a workaround, users are advised to switch back to GTK+ 2 by setting the environment variable <code>SWT_GTK3</code> to <code>0</code>.
         For more details see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=421127">bug 421127</a>.
@@ -103,7 +103,7 @@
   <tr id="swt-xulrunner24"> 
     <td class="title">SWT Browser now supports XULRunner 24.x</td>
     <td class="content">
-        SWT Browser created with style <code>SWT.MOZILLA</code> can now be used with XULRunner 24.x runtime.
+        An SWT Browser created with style <code>SWT.MOZILLA</code> can now be used with the XULRunner 24.x runtime.
     </td>
   </tr>
   <tr id="sleep-monitor-api"> 
