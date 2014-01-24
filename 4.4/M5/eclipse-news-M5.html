@@ -54,10 +54,10 @@
     <p>
     In order to access the new mode right-click on the 'Restore' button
     of a minimized stack and toggle the 'Use Overlays' menu item (see image
-    below). Note that this change is global so once it's set all minimized
-    stacks will use the selected mode.
+    below). Note that this change is global so once it's set, all minimized
+    stacks will use the selected mode.</p>
     <p><img src="images/restore-btn.png" alt=""/></p>
-    </p>
+
     <p>Here's what the current mode looks like:</p>
     <p><img src="images/use-overlays.png" alt=""/></p>
     <p>Here's what the new mode looks like. Note how the editor
@@ -66,7 +66,7 @@
     <p>
     We're really interested in your feedback on this ! The initial response
     has been positive enough that we're considering making the non-overlay
-    mode the default; what you you think ? (Post your comments on bug 424489).
+    mode the default. What you you think ? (Post your comments on <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=426556">bug 426556</a>.
     </p>
     </td>
   </tr>
@@ -133,7 +133,7 @@
     <td class="content">
         SWT has added two new events, <code>SWT.Sleep</code> and <code>SWT.Wakeup</code>,
         which are sent before the <code>Display</code> event loop goes into sleep and after
-        it wakes up from sleep respectively. These events can be used to monitor the duration
+        it wakes up from sleep respectively. These events can e.g. be used to monitor the duration
         of sleep time in SWT applications.
     </td>
   </tr>
@@ -189,8 +189,13 @@
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+  <tr id="syntax-color">
+    <td class="title">Enabled coloring of variables</td>
+    <td class="content">
+     Parameter variables and local variables are now colored by default:
+     <p><img src="images/variable-coloring.png" alt=""/></p>
+     This can be disabled or configured with different colors and styles on the <b>Java &gt; Editor &gt; Syntax Coloring</b> preference page.
+    </td>
   </tr>
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
