@@ -100,7 +100,7 @@ ob_start();
 		        </li>
 		        <li> 
 		          <b><a name="aleksandar"></a>Aleksandar Kurtakov, Red Hat Inc.</b><br>
-					Aleksandar is part of Red Hat's Eclipse team. He is Platform SWT committer, Tools PMC member and Linux Tools lead.
+					Aleksandar is part of Red Hat's Eclipse team. He is Platform SWT committer, Tools PMC member and leads the <a href="http://www.eclipse.org/linuxtools/">Linux Tools</a> project.
 					He is very interested in deeper native platform integration both as runtime experience and as distribution channel.
 					He is also interested in growing the contributors and better alligning with modern systems.
 		        </li>
@@ -140,7 +140,7 @@ ob_start();
 					Andrew works on open source technologies at Mozilla in Toronto.
 					He has been involved with the Eclipse community since 2005
 					and is a member of the Eclipse <a href="http://wiki.eclipse.org/Architecture_Council">Architecture Council</a>.
-					Andrew also leads the <a href="http://www.eclipse.org/linuxtools/">Linux Tools</a> project. He is very interested in continuing to grow the
+					For some time Andrew also led the <a href="http://www.eclipse.org/linuxtools/">Linux Tools</a> project. He is very interested in continuing to grow the
 					Eclipse community and to improve native platform integration.
 		        </li>
 		        <li> 
