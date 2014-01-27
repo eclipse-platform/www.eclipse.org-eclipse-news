@@ -5,7 +5,7 @@
 	# team-leaders.php
 	#
 	# Author: 		
-	# Date:			2013-07-08
+	# Date:			2014-01-27
 	#
 	# Description: Details about the Eclipse Project PMC
 	#
@@ -99,12 +99,10 @@ ob_start();
 			      book</a> on Eclipse.
 		        </li>
 		        <li> 
-		          <b><a name="andrew"></a>Andrew Overholt, Mozilla</b><br>
-					Andrew works on open source technologies at Mozilla in Toronto.
-					He has been involved with the Eclipse community since 2005
-					and is a member of the Eclipse <a href="http://wiki.eclipse.org/Architecture_Council">Architecture Council</a>.
-					Andrew also leads the <a href="http://www.eclipse.org/linuxtools/">Linux Tools</a> project. He is very interested in continuing to grow the
-					Eclipse community and to improve native platform integration.
+		          <b><a name="aleksandar"></a>Aleksandar Kurtakov, Red Hat Inc.</b><br>
+					Aleksandar is part of Red Hat's Eclipse team. He is Platform SWT committer, Tools PMC member and Linux Tools lead.
+					He is very interested in deeper native platform integration both as runtime experience and as distribution channel.
+					He is also interested in growing the contributors and better alligning with modern systems.
 		        </li>
 		      </ul>
 		</div>
@@ -136,6 +134,14 @@ ob_start();
 			       Member at IBM and work in distributed/parallel OO computing (Server Smalltalk,
 			       massively parallel Smalltalk, etc) as well as expert systems, meta-level architectures
 			       and a PhD at the University of Tokyo.
+		        </li>
+		        <li> 
+		          <b><a name="andrew"></a>Andrew Overholt, Mozilla</b><br>
+					Andrew works on open source technologies at Mozilla in Toronto.
+					He has been involved with the Eclipse community since 2005
+					and is a member of the Eclipse <a href="http://wiki.eclipse.org/Architecture_Council">Architecture Council</a>.
+					Andrew also leads the <a href="http://www.eclipse.org/linuxtools/">Linux Tools</a> project. He is very interested in continuing to grow the
+					Eclipse community and to improve native platform integration.
 		        </li>
 		        <li> 
 		          <b><a name="philippe"></a>Philippe Mulet</b><br>
