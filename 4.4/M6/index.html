@@ -69,8 +69,65 @@
     <td colspan="2">  <div class="title">Platform UI</div>
       </td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+  <tr id="MLocalizable">
+    <td class="title">MLocalizable mixin interface</td>
+    <td class="content">
+      Changed the way in which localization is done in the application model. While before EOperations (methods) where used to get
+	  a localized value, now volatile, transient, derived, unchangeable EStructuralFeatures are used. Doing this enables to send 
+	  notifications if a localizable value has changed. To mark EClasses who hold localizable informations and to inform them
+	  externally about a changed Locale, the <code>MLocalizable</code> mixin interface is introduced, which contains the single method 
+	  <code>updateLocalization()</code>. This enables to generically search the model for model elements effected by a Locale change and 
+	  force them sending out updates.
+    </td>
+  </tr>
+  <tr id="Locale_Change_Propagation">
+    <td class="title">Locale Change Propagation</td>
+    <td class="content">
+      Introduced the <code>ILocaleChangeService</code> which need to be used to change a Locale at runtime. Using this service will:
+	  <ol>
+	    <li>Update the Locale in the application context.</li>
+	    <li>Inform all model elements of an application that implement <code>MLocalization</code> about the change.</li>
+	    <li>Post an event via event broker.</li>
+	  </ol>
+    </td>
+  </tr>
+  <tr id="Locale_Change_Consumption">
+    <td class="title">Locale Change Consumption</td>
+    <td class="content">
+      There are now three ways to get informed about a Locale change:
+	  <ol>
+	    <li>Via event broker by listening to the topic <i>org/eclipse/e4/core/NLS/LOCALE_CHANGE</i></li>
+	    <li>Via dependency injection by getting the value for <code>TranslationService.LOCALE</code> injected (e.g. via method injection)</li>
+	    <li>Via attaching to the model events listening to the newly introduced LOCALIZED-Features</li>
+	  </ol>
+	  <b>Note:</b> The renderers need to be modified to listen to the LOCALIZED-Features, otherwise the Locale change at runtime isn't supported!
+    </td>
+  </tr>
+  <tr id="ResourceBundleProvider">
+    <td class="title">ResourceBundleProvider</td>
+    <td class="content">
+      Introduced the <code>ResourceBundleProvider</code> service to abstract out the reference to <code>BundleLocalization</code> OSGi service.
+	  This way users are able to change how ResourceBundles should be looked up within their Eclipse application, e.g. using class-based 
+	  ResourceBundles, loading translations out of a database, loading ResourceBundles from a server by using a different ResourceBundle.Control.
+	  The default implementation <code>DefaultResourceBundleProvider</code> is internally using <code>BundleLocalization</code> to keep the
+	  known default behaviour.
+    </td>
+  </tr>
+  <tr id="TranslationService">
+    <td class="title">TranslationService update</td>
+    <td class="content">
+      The <code>TranslationService</code>, that is used to localize the application model, had several downsides regarding extensibility.
+	  A lot of code needed to be copied in order to create a custom <code>TranslationService</code> that retrieves translations from a different location 
+	  than the OSGi-ResourceBundle. To make it easier for users to implement a custom <code>TranslationService</code>, the API was modified. The method 
+	  <code>getResourceString(String, ResourceBundle)</code> is moved from <code>BundleTranslationProvider</code> to <code>TranslationService</code> with 
+	  protected visibility, as it contains the logic to retrieve and transform the translation key that is set in the application model. The default
+	  implementation <code>BundleTranslationProvider</code> is now using the <code>ResourceBundleHelper</code> in combination with the 
+	  <code>ResourceBundleProvider</code>. This way the localization of the application model and the localization via new message extension are using 
+	  the same mechanisms. As a small enhancement, this also enables the usage of dot separated keys for translating the application model.
+	  <p>
+	  Also with M6 the package <code>org.eclipse.e4.core.services.translation</code> will be released as API.
+	  </p>
+    </td>
   </tr>
   <tr> 
     <td colspan="2">  <div class="title">User Assistance</div>
