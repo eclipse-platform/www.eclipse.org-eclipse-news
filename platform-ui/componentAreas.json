@@ -4,7 +4,7 @@
 			{"component": "ActivityMgmt", 	"assignee": "wsudol", 	"description":  "Support for activity grouping of functionality (AKA: Capabilities)"},
 			{"component": "BiDi", 			"assignee": "pwebster", "description": "Bidirectional support. Triage '-dir rtl' defects to the appropriate component area first (i.e. if it's a Drag 'n Drop issue that only shows up in 'rtl' mode then triage to [DnD]...)"},
 			{"component": "CellEditors", 	"assignee": "wsudol", "description": "Cell editors in Tasks view, Properties view or other views"},
-			{"component": "Commands", 		"assignee": "pelder", "description": "Command support (added in 3.0)<p><ul>\
+			{"component": "Commands", 		"assignee": "drolka", "description": "Command support (added in 3.0)<p><ul>\
 		<li><em>handlers</em>.  Anything dealing with handlers and handler submissions.</li>\
 		<li><em>instrumentation</em>.  Instrumenting the command architecture for gathering user information.</li>\
 		<li><em>macros</em>.  Sequential list of commands.  Grouping commands.</li>\
@@ -13,8 +13,8 @@
 		<li><em>request</em>.  A request for a new command or a new key binding (or both).</li>\
 	</ul></p>" },
 			{"component": "CommonNavigator","assignee": "fupton", 	"description": "The generic navigator API (org.eclipse.ui.navigator)."},
-			{"component": "Contexts", 		"assignee": "pelder", "description": "Support for context grouping of functionality"},
-			{"component": "EclipseContexts", 		"assignee": "pelder", "description": "Eclipse4 IEclipseContext support, the OSGI context, and IContextFunctions"},
+			{"component": "Contexts", 		"assignee": "drolka", "description": "Support for context grouping of functionality"},
+			{"component": "EclipseContexts", 		"assignee": "wsudol", "description": "Eclipse4 IEclipseContext support, the OSGI context, and IContextFunctions"},
 			{"component": "Contributions", 	"assignee": "drolka", "description": "ContributionManager, ContributionItem hierarchy, org.eclipse.jface.action, action contributions from plugin.xml\
 	<ul>\
 		<li><em>adapters</em>.  Anything to do with the adapter mechanism and its friends.</li>\
@@ -33,7 +33,7 @@
 			{"component": "CSS", 		"assignee": "drolka", "description": "CSS support in eclipse, including the CSS engine"},
 			{"component": "DataBinding", 	"assignee": "wsudol","description": "JFace Data Binding" },
 			{"component": "Decorators", 	"assignee": "pwebster", "description": "Decorators mechanism and Label Decorations preference page"},
-			{"component": "DI", 	"assignee": "pelder", "description": "The Dependency Injection and invocation mechanisms for Eclipse4"},
+			{"component": "DI", 	"assignee": "wsudol", "description": "The Dependency Injection and invocation mechanisms for Eclipse4"},
 			{"component": "DetachedView", 	"assignee": "emoffatt", "description": "Views and editors in separate windows"},
 			{"component": "Dialogs", 		"assignee": "wsudol","description": "JFace and UI dialogs other than IDE, Filtered Items/Open Resource"},
 			{"component": "DND", 			"assignee": "emoffatt", "description": "Drag and Drop. Does not include dragging views and editors."},
@@ -59,7 +59,7 @@
 			{"component": "Intro", 			"assignee": "emoffatt", "description": "Intro part management and legacy welcome page support"},
 			{"component": "Import/Export", 	"assignee": "drolka", "description": "Import/Export wizards"},
 			{"component": "JFace", 			"assignee": "wsudol","description": "parts of JFace not covered by [Dialogs], [Preferences], [Viewers] and [Wizards]"},
-			{"component": "KeyBindings", 	"assignee": "pelder", "description": "Key bindings engine and preferences; requests to change key bindings, or keys not working \
+			{"component": "KeyBindings", 	"assignee": "drolka", "description": "Key bindings engine and preferences; requests to change key bindings, or keys not working \
 	<ul>\
 		<li><em>assist</em>.  The key binding assist dialog.</li>\
 		<li><em>doc</em>.  Documentation, articles or notes about best practices.  Also, changing code to conform to best practices.</li>\
@@ -96,7 +96,7 @@
 			{"component": "TabbedProperties","assignee": "wsudol","description": "Tabbed Properties issues (plugin org.eclipse.ui.views.properties.tabbed)"},
 			{"component": "Themes", 		"assignee": "drolka", 	"description": "Dealing with dialog/window fonts/colours and the theme API"},
 			{"component": "Trim", 			"assignee": "emoffatt", "description": "Defects in Trim contributions or trim management (DnD, persistance, layout...)"},
-			{"component": "Undo", 			"assignee": "pelder","description": "Dealing with the new undo/redo support introduced in Eclipse 3.1"},
+			{"component": "Undo", 			"assignee": "wsudol","description": "Dealing with the new undo/redo support introduced in Eclipse 3.1"},
 			{"component": "UX", 			"assignee": "emoffatt","description": "User experience, usability, UI consistency"},
 			{"component": "ViewMgmt", 		"assignee": "emoffatt","description": "View management"},
 			{"component": "Viewers", 		"assignee": "wsudol","description": "JFace viewers"},
