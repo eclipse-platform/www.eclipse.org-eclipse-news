@@ -80,6 +80,23 @@
     <td colspan="2">  <div class="title">Platform UI</div>
       </td>
   </tr>
+  <tr id="darktheme">
+    <td class="title">Dark Theme</td>
+    <td class="content">
+      Introduce a new experimental CSS theme based on a community contribution. This popular community 
+      theme demonstrates the capabilities of the current CSS styling and will help the platform team to continue 
+      to improve these capabilities. 
+     
+      <p>
+          CSS theming in Eclipse 4 does currently not allow to configure the syntax highlighting in the text editors, e.g., 
+          the in Java editor, so it is recommended to use the dark theme together with additional settings as for 
+          example provided by the <a href="http://eclipsecolorthemes.org/">Eclipse color theme project </a>
+       </p>
+       <p>
+      <img src="images/darktheme.png" alt="Eclipse IDE using the Dark theme"/>
+      </p>
+    </td>
+  </tr>
   <tr id="MLocalizable">
     <td class="title">MLocalizable mixin interface</td>
     <td class="content">
@@ -149,6 +166,15 @@
       <p><img src="images/OpenAsProject.png" alt="Open folder as project from the context menu."/></p>
     </td>
   </tr>
+  <tr id="CSSIncludes">
+    <td class="title">CSS includes </td>
+    <td class="content">
+      CSS files for Eclipse can now include other CSS files via the 
+      <code>@import url("platform:/plugin/Bundle-Symbolic-Name/path/file.extension");</code> statement. This allows easy reuse of 
+      existing stylesheets.
+    </td>
+  </tr>
+  
   <tr> 
     <td colspan="2">  <div class="title">User Assistance</div>
       </td>
