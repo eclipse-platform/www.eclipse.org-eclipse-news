@@ -18,43 +18,16 @@
 </p>
 <ul>
   <li><a href="#Platform">Platform</a></li>
-  <li><a href="#JDT">JDT</a></li>
   <li><a href="#PDE">PDE</a></li>
   <li><a href="#Equinox">Equinox</a></li>
 </ul>
 
 <table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
-  <tr> 
-    <td colspan="2">  <div class="title">Template</div>
-      </td>
-  </tr>
-  <tr id="first-item">
-    <td class="title">First item</td>
-    <td class="content">
-      Item blurb. See <a href="../whats-new-template/eclipse-whats-new-template.html"><font size="20" color="red">instructions</font></a>.
-    </td>
-  </tr>
-
-
   <tr>
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Resources</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">SWT</div>
-      </td>
-  </tr>
   <tr id="swt-webkit">
-    <td class="title">Experimental Support for WebKit2 added to the SWT Browser</td>
+    <td class="title">Experimental support for WebKit2 added to the SWT Browser</td>
     <td class="content">
       The SWT Browser now has preliminary support for WebKit2. To try it out, create a browser
       widget with style <code>SWT.WEBKIT</code>, and set the environment variable SWT_WEBKIT2
@@ -62,39 +35,50 @@
       fallback to WebKit1.
     </td>
   </tr>
+  <tr id="swt-gtk-problem"> 
+    <td class="title">SWT does not work on Linux with GTK+ 3 version &gt; 3.8.x</td>
+    <td class="content">
+        The Linux GTK+ 3 port of SWT is currently broken for GTK+ versions above 3.8.x.
+        This primarily affects users running Fedora 20, Ubuntu 14.04 (Alpha builds), openSUSE 13.1 and any other Linux distributions that bundle GTK+ 3.10.x.
+        In those setups, the launcher will automatically switch back to GTK+ 2.
+        For more details see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=421127">bug 421127</a>.
+    </td>
+  </tr>
   <tr id="bidi-segments">
-    <td class="title">BIDI Segments Support for Combo on Win32</td>
+    <td class="title">BIDI segments support for Combo on Windows</td>
     <td class="content">
       The bidi segments support introduced to Combo will allow an application to specify
       segment boundaries and Unicode Control Characters to use in the segment boundaries.
       <br/>
       See <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet332.java"> 
-      Snippet332</a> showing how to accomplish RTL override in a Combo.
+      Snippet332</a> is showing how to accomplish RTL override in a Combo.
       <p><img src="images/combo-bidi-segments.png" alt="RTL override in Combo implemented through bidi segments."/></p>
     </td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Platform UI</div>
-      </td>
-  </tr>
   <tr id="darktheme">
-    <td class="title">Dark Theme</td>
+    <td class="title">Dark theme</td>
     <td class="content">
-      Introduce a new experimental CSS theme based on a community contribution. This popular community 
-      theme demonstrates the capabilities of the current CSS styling and will help the platform team to continue 
-      to improve these capabilities. 
+      A new experimental CSS theme based on a community contribution has been added. This popular community
+      theme demonstrates the capabilities of the current CSS styling. This new theme helps the Platform team
+      to continue to improve these capabilities.
      
       <p>
-          CSS theming in Eclipse 4 does currently not allow to configure the syntax highlighting in the text editors, e.g., 
+          CSS theming in Eclipse 4 does currently not allow to configure the syntax highlighting in text editors, e.g., 
           the in Java editor, so it is recommended to use the dark theme together with additional settings as for 
-          example provided by the <a href="http://eclipsecolorthemes.org/">Eclipse color theme project </a>
+          example provided by the <a href="http://eclipsecolorthemes.org/">Eclipse color theme project</a>.
        </p>
        <p>
       <img src="images/darktheme.png" alt="Eclipse IDE using the Dark theme"/>
       </p>
+    </td>
+  </tr>
+  <tr id="OpenAsProject">
+    <td class="title">Open as project</td>
+    <td class="content">
+      In the <b>Project Explorer</b>, a folder that contains a <code>.project</code> file and whose related project
+      isn't already in the workspace now shows an <b>Open As Project</b> context menu entry that imports the folder
+      as existing project into the workspace.
+      <p><img src="images/OpenAsProject.png" alt=""/></p>
     </td>
   </tr>
   <tr id="MLocalizable">
@@ -104,12 +88,12 @@
 	  a localized value, now volatile, transient, derived, unchangeable EStructuralFeatures are used. Doing this enables to send 
 	  notifications if a localizable value has changed. To mark EClasses who hold localizable informations and to inform them
 	  externally about a changed Locale, the <code>MLocalizable</code> mixin interface is introduced, which contains the single method 
-	  <code>updateLocalization()</code>. This enables to generically search the model for model elements effected by a Locale change and 
+	  <code>updateLocalization()</code>. This enables to generically search the model for model elements affected by a Locale change and 
 	  force them sending out updates.
     </td>
   </tr>
   <tr id="Locale_Change_Propagation">
-    <td class="title">Locale Change Propagation</td>
+    <td class="title">Locale change propagation</td>
     <td class="content">
       Introduced the <code>ILocaleChangeService</code> which need to be used to change a Locale at runtime. Using this service will:
 	  <ol>
@@ -120,7 +104,7 @@
     </td>
   </tr>
   <tr id="Locale_Change_Consumption">
-    <td class="title">Locale Change Consumption</td>
+    <td class="title">Locale change consumption</td>
     <td class="content">
       There are now three ways to get informed about a Locale change:
 	  <ol>
@@ -153,17 +137,8 @@
 	  <code>ResourceBundleProvider</code>. This way the localization of the application model and the localization via new message extension are using 
 	  the same mechanisms. As a small enhancement, this also enables the usage of dot separated keys for translating the application model.
 	  <p>
-	  Also with M6 the package <code>org.eclipse.e4.core.services.translation</code> will be released as API.
+	  Also with M6 the package <code>org.eclipse.e4.core.services.translation</code> is released as API.
 	  </p>
-    </td>
-  </tr>
-  <tr id="OpenAsProject">
-    <td class="title">Open as project</td>
-    <td class="content">
-      In the Project Explorer, folders that contains a <code>.project</code> file and whose related project
-      isn't already in workspace now show an "Open As Project" context menu entry that can import the folder
-      as existing project into the workspace.
-      <p><img src="images/OpenAsProject.png" alt="Open folder as project from the context menu."/></p>
     </td>
   </tr>
   <tr id="CSSIncludes">
@@ -171,48 +146,8 @@
     <td class="content">
       CSS files for Eclipse can now include other CSS files via the 
       <code>@import url("platform:/plugin/Bundle-Symbolic-Name/path/file.extension");</code> statement. This allows easy reuse of 
-      existing stylesheets.
+      existing style sheets.
     </td>
-  </tr>
-  
-  <tr> 
-    <td colspan="2">  <div class="title">User Assistance</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Platform Text</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Team/CVS</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Compare</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Ant</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Debug</div>
-      </td>
   </tr>
   <tr id="launch-options">
     <td class="title">Updated launch options</td>
@@ -227,19 +162,13 @@
     </td>
   </tr>
   <tr>
-    <td colspan="2" class="section" id="JDT">JDT</td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
   <tr id="trace-std-out">
     <td class="title">Print debug trace to the standard output stream</td>
     <td class="content">
-      On the <b>Preferences > General > Tracing</b> preference page you can now choose to have the output of debug trace statements
-      sent to the standard output stream.
+      On the <b>General &gt; Tracing</b> preference page you can now choose to have the output of debug trace statements
+      being sent to the standard output stream.
       <p>
       <img src="images/trace-output.png" alt="The tracing preference page with output to standard output stream option"/>
       </p>
@@ -259,18 +188,12 @@
     <td class="title">Products can specify OS/arch launch arguments</td>
     <td class="content">
       In the <b>Product Editor</b> you can now add program and VM arguments to all platforms, a specific operating system or
-      a specific archicture/OS combination. A preview area shows the complete list of arguments that will apply to the selected
+      a specific architecture/OS combination. A preview area shows the complete list of arguments that will apply to the selected
       OS and architecture.
       <p>
       <img src="images/osarch-args.png" alt="The product editor showing os/arch vm arguments"/>
       </p>
     </td>
-  </tr>
-  <tr>
-    <td colspan="2" class="section" id="Equinox">Equinox</td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
   </tr>
 
   <tr> 
