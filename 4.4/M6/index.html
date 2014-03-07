@@ -164,48 +164,6 @@
       existing style sheets.
     </td>
   </tr>
-  <tr id="css-bridge"> 
-    <td class="title">CSS&nbsp;bridge</td>
-    <td class="content">
-     The CSS support for the 3.x theme element definitions is now available (the CSS bridge), bugs:
-	 <ul>
-	  <li><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=419016" target="_blank">Bug 419016</a></li>
-	  <li><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=419018" target="_blank">Bug 419018</a></li>
-	  <li><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=429338" target="_blank">Bug 429338</a></li>
-     </ul>
-	 The use cases for the bridge:
-	 <ul>
-		<li>
-			Using the Color and FontDefinitions in the CSS stylesheet:
-			<p><img src="images/css_bridge/using_definitions.png" alt=""></p>
-		</li>
-		<li>
-			Overriding of the definitions in the CSS stylesheet			
-			<p><img src="images/css_bridge/overriding_definitions.png" alt=""></p>
-		</li>
-		<li>
-			Adding the new definitions with the CSS stylesheet			
-			<p><img src="images/css_bridge/new_definitions.png" alt=""></p>
-		</li>
-	 </ul>
-	 The 3.x theme definitions overridden or added in the CSS stylesheet are merged with the current 3.x theme.<br>
-	 After switching the 3.x theme they are re-merged with the new theme.<br><br>
-	 The new definitions added with the CSS file (the last use case) are available in the CSS theme that provides it.<br>
-	 After switching the CSS theme the definitions can be unavailable in the theme registries when the new theme doesn't re-define it.
-	 So using such definitions out of the CSS files, we have to be prepared for such situation and use proper default values in the case when some definitions are missing.
-    </td>
-  </tr>
-  <tr id="theme-association"> 
-    <td class="title">New&nbsp;&quot;themeAssociation&quot;&nbsp;element of&nbsp;the&nbsp;&quot;org.eclipse.e4.ui.css.swt.theme&quot;&nbsp;extension&nbsp;point</td>
-    <td class="content">
-     Currently the user is able to connect the CSS theme with proper 3.x theme. After defining the proper association between themes, 
-	 when user changes the CSS theme with the combo in the preference dialog, the proper 3.x theme will be set.
-	 <ul>
-	  <li><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=355946" target="_blank">Bug 355946</a></li>
-	 </ul> 
-	 <p><img src="images/theme-association.png" alt=""></p>
-	</td>
-  </tr>
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
