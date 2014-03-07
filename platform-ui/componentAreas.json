@@ -51,6 +51,7 @@
 			{"component": "FastView", 		"assignee": "emoffatt", "description": "Issues related to fast views"},
 			{"component": "Features",		"assignee": "pwebster", 	"description": "UI related to features, other than [About], e.g. product branding, default perspective, etc."},
 			{"component": "FieldAssist", 	"assignee": "wsudol","description": "Defects concerning ControlDecoration, Required Fields, Content Proposal, Decorated Fields or Field Assistance"},
+			{"component": "Forms", 		"assignee": "wsudol", "description": "UI Forms related problems"},
 			{"component": "GlobalActions", 	"assignee": "drolka", "description": "actions created in workbench action builder that are not directly related to other components"},
 			{"component": "Graphics", 		"assignee": "pwebster", "description": "Any graphics that UI has control over."},
 			{"component": "GTK/Linux", 		"assignee": "pwebster", "description": "GTK/Linux specific issues."},
