@@ -47,12 +47,15 @@
   <tr id="bidi-segments">
     <td class="title">BIDI segments support for Combo on Windows</td>
     <td class="content">
-      The bidi segments support introduced to Combo will allow an application to specify
+      The <code>Combo</code> widget now supports the same <code>SegmentListener</code> API as <code>Text</code>.
+      This allows an application to specify
       segment boundaries and Unicode Control Characters to use in the segment boundaries.
-      <br/>
-      See <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet332.java"> 
-      Snippet332</a> is showing how to accomplish RTL override in a Combo.
-      <p><img src="images/combo-bidi-segments.png" alt="RTL override in Combo implemented through bidi segments."/></p>
+      <p>
+      <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet332.java"> 
+      Snippet332</a> shows how to accomplish RTL override in a Combo.
+      </p>
+      <p><img src="images/combo-bidi-segments.png" alt=""/></p>
+      <p>JFace clients can use <code>BidiUtils#applyBidiProcessing(...)</code> to set pre-defined text types.</p>
     </td>
   </tr>
   <tr id="darktheme">
@@ -63,12 +66,12 @@
       to continue to improve these capabilities.
      
       <p>
-          CSS theming in Eclipse 4 does currently not allow to configure the syntax highlighting in text editors, e.g., 
-          the in Java editor, so it is recommended to use the dark theme together with additional settings as for 
+          CSS theming in Eclipse 4 does currently not allow to configure the syntax highlighting in text editors (e.g. 
+          the Java editor), so it is recommended to use the dark theme together with additional settings as for 
           example provided by the <a href="http://eclipsecolorthemes.org/">Eclipse color theme project</a>.
        </p>
        <p>
-      <img src="images/darktheme.png" alt="Eclipse IDE using the Dark theme"/>
+      <img src="images/darktheme.png" alt=""/>
       </p>
     </td>
   </tr>
@@ -79,6 +82,18 @@
       isn't already in the workspace now shows an <b>Open As Project</b> context menu entry that imports the folder
       as existing project into the workspace.
       <p><img src="images/OpenAsProject.png" alt=""/></p>
+    </td>
+  </tr>
+  <tr id="launch-options">
+    <td class="title">Updated launch options</td>
+    <td class="content">
+      The default preference for the fall-back behavior of context-sensitive launching has been changed to launch the previous application.
+      <p>
+      <img src="images/launch-options.png" alt=""/>
+      </p>
+      <p>
+      Existing workspaces that use the "Always launch the previously launched application" option are not affected by this change.
+      </p>
     </td>
   </tr>
   <tr id="MLocalizable">
@@ -147,18 +162,6 @@
       CSS files for Eclipse can now include other CSS files via the 
       <code>@import url("platform:/plugin/Bundle-Symbolic-Name/path/file.extension");</code> statement. This allows easy reuse of 
       existing style sheets.
-    </td>
-  </tr>
-  <tr id="launch-options">
-    <td class="title">Updated launch options</td>
-    <td class="content">
-      The default preference for the fall-back behavior of context-sensitive launching has been changed to launch the previous application. 
-      <br/>
-      Existing preferences are not affected by this 
-      update, only new workspaces or using the <b>Restore Defaults</b> button on the <b>Run/Debug &gt; Launching</b> preference page are affected.
-      <p>
-      <img src="images/launch-options.png" alt="The new default launch options"/>
-      </p>
     </td>
   </tr>
   <tr>
