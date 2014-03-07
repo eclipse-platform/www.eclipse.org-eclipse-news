@@ -11,7 +11,7 @@
   URL: http://code.google.com/p/html5slides/
 */
 
-var PERMANENT_URL_PREFIX = 'http://eclipse.org/eclipse/presentation/html/';
+var PERMANENT_URL_PREFIX = 'https://eclipse.org/eclipse/presentation/html/';
 
 var SLIDE_CLASSES = ['far-past', 'past', 'current', 'next', 'far-next'];
 
