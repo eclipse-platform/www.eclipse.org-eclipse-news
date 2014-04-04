@@ -5,7 +5,7 @@
 	# team-leaders.php
 	#
 	# Author: 		
-	# Date:			2014-01-27
+	# Date:			2014-04-04
 	#
 	# Description: Details about the Eclipse Project PMC
 	#
@@ -65,9 +65,8 @@ ob_start();
 			      He is a senior architect of the Eclipse SDK, a member of the Eclipse <a href="http://wiki.eclipse.org/Architecture_Council">
 			      Architecture Council</a> and one of the original Eclipse Founders. His interests include computer
 			      language design and implementation, semantic content publishing, web development,
-			      and playing the cello. Mike leads the <a href="http://wiki.eclipse.org/Platform">Platform</a> and
-			      <a href="http://www.eclipse.org/projects/project_summary.php?projectid=eclipse.e4">e4</a>
-				  subprojects.
+			      and playing the cello. Mike leads the <a href="http://www.eclipse.org/projects/project_summary.php?projectid=eclipse.e4">e4</a>
+				  subproject.
 		        </li>
 		        <li> 
 		          <b><a name="martin"></a>Martin Oberhuber, Wind River</b><br>
@@ -83,9 +82,9 @@ ob_start();
 		        </li>
 		        <li> 
 		          <b><a name="dani"></a>Dani Megert, IBM Zurich</b><br>
-			      Dani leads the <a href="http://eclipse.org/jdt">JDT</a> subproject and
-			      represents the project in the Eclipse <a href="http://wiki.eclipse.org/Planning_Council">Planning Council</a>. Dani worked at OTI and is one of the initial Eclipse Project committers.
-			      His interests include user interface and API design, editors, performance and DJing.
+			      Dani leads the <a href="https://wiki.eclipse.org/Platform">Platform</a> and the <a href="http://eclipse.org/jdt">JDT</a> subprojects and
+			      represents the project in the Eclipse <a href="http://wiki.eclipse.org/Planning_Council">Planning Council</a>. Dani worked at OTI and now works at IBM Research GmbH. He is one of the initial Eclipse Project committers.
+			      His interests include user interface and API design, editors, software quality and performance.
 		        </li>
 		        <li> 
 		          <b><a name="john"></a>John Arthorne, IBM Ottawa</b><br>
