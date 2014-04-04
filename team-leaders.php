@@ -81,7 +81,7 @@ ob_start();
 			      skiing, hiking, and playing all sorts of musical instruments.
 		        </li>
 		        <li> 
-		          <b><a name="dani"></a>Dani Megert, IBM Zurich</b><br>
+		          <b><a name="dani"></a>Dani Megert, IBM Research - Zurich</b><br>
 			      Dani leads the <a href="https://wiki.eclipse.org/Platform">Platform</a> and the <a href="http://eclipse.org/jdt">JDT</a> subprojects and
 			      represents the project in the Eclipse <a href="http://wiki.eclipse.org/Planning_Council">Planning Council</a>. Dani worked at OTI and now works at IBM Research GmbH. He is one of the initial Eclipse Project committers.
 			      His interests include user interface and API design, editors, software quality and performance.
