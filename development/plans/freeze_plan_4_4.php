@@ -98,8 +98,8 @@ ob_start();
 	          </tr>
 	          <tr>
 	            <td height="20"></td>
-	            <td align="right" height="20">16</td>
-	            <td align="right" height="20">Fri 08:00 EDT</td>
+	            <td align="right" height="20">19</td>
+	            <td align="right" height="20">Mon 08:00 EDT</td>
 	            <td height="20">&nbsp;<b>Start 1-day test pass against RC1</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#TestPassBeforeRC2"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> details</a></b></td>
@@ -107,8 +107,8 @@ ob_start();
 	          </tr>
 	          <tr>
 	            <td height="20"></td>
-	            <td align="right" height="20">19</td>
-	            <td align="right" height="20">Mon 08:00 EDT</td>
+	            <td align="right" height="20">20</td>
+	            <td align="right" height="20">Tue 08:00 EDT</td>
 	            <td height="20">&nbsp;&nbsp;<b>Start fix pass</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC1"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> rules</a></b></td>
@@ -166,7 +166,7 @@ ob_start();
 	            <td height="20"></td>
 	            <td align="right" height="20">2</td>
 	            <td align="right" height="20">Mon 08:00 EDT</td>
-	            <td height="20">&nbsp;&nbsp;<b>All-day test pass against RC3</b></td>
+	            <td height="20">&nbsp;&nbsp;<b>Start 1-day test pass against RC3</b></td>
 	            <td height="20">&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;<b><a href="#TestPassUsingRC3"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> details</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
@@ -432,7 +432,7 @@ ob_start();
       	</div>
 		<div class="homeitem3col">
 			<a name="FixPassRules"><h3>Fix pass rules of engagement</h3></a>
-			<a name="FixPassAfterRC0"></a><h4>May 8-17 - contributions to RC1</h4>
+			<a name="FixPassAfterRC0"></a><h4>May 7-16 - contributions to RC1</h4>
 			<p><b>Focus:</b>(1) P1 defects, (2) performance defects, (3) special 
               &quot;polish&quot; items. Fixing other defects has lower priority.</p>
              <p><b>Fix approval:</b> Another committer must +1 your bug report. All changes 
@@ -450,7 +450,7 @@ ob_start();
              <p><b>Extra checking requirements:</b> One additional committer must check all code changes 
               prior to release.</p>
 
-			<a name="FixPassAfterRC1"></a><h4>May 20-24 - contributions to RC2</h4>
+			<a name="FixPassAfterRC1"></a><h4>May 20-23 - contributions to RC2</h4>
 			<p><b>Focus:</b> (1) P1 defects, (2) performance defects, (3) special 
               &quot;polish&quot; items. Fixing other defects has lower priority.</p>
             <p><b>Fix approval:</b> Two additional committers must +1 your bug report. All changes 
@@ -468,7 +468,7 @@ ob_start();
              <p><b>Extra checking requirements:</b> Two additional committers must check all code changes 
               prior to release.</p>
 
-			<a name="FixPassAfterRC2"></a><h4>May 28-31 - contributions to RC3</h4>
+			<a name="FixPassAfterRC2"></a><h4>May 27-30 - contributions to RC3</h4>
 			<p><b>Focus:</b> Serious defects only; documentation.</p>
             <p><b>Fix approval:</b> Two additional committers and a component lead must +1 your bug report (3 people who are not the one making the change). All changes 
               must have their associated bug reports tagged 4.4 RC3. Ongoing changes 
@@ -487,7 +487,7 @@ ob_start();
               prior to release. Person who reported bug should mark the bug as 
               verified once they have retested.</p>
 
-			<a name="FixPassAfterRC3"></a><h4>June 4-7 - contributions to RC4</h4>
+			<a name="FixPassAfterRC3"></a><h4>June 3-6 - contributions to RC4</h4>
 			<p><b>Focus:</b> Serious defects only; documentation.</p>
             <p><b>Fix approval:</b> Component lead plus one other component lead must 
               approve all work on a component. In addition, any component lead 
