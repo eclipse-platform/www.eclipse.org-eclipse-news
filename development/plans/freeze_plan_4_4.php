@@ -215,7 +215,7 @@ ob_start();
 	          </tr>
 	          <tr>
 	            <td height="20"></td>
-	            <td align="right" height="20">26</td>
+	            <td align="right" height="20">25</td>
 	            <td align="right" height="20"></td>
 	            <td height="20">&nbsp;&nbsp;<b>Release 4.4 available</b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
@@ -342,15 +342,17 @@ ob_start();
 				<p>
 				Here are some holidays during the freeze period to keep in mind:
 				<ul>
-					<li>May  9 - Switzerland</li>
-					<li>May 20 - Canada, Switzerland</li>
-					<li>May 30 - Poland</li>
+					<li>May  19 - Canada</li>
+					<li>May  26 - United States</li>
+					<li>May  29 - Switzerland</li>
+					<li>June  9 - Switzerland</li>
+					<li>June 19 - Poland</li>
 				</ul>
 				</p>
 			<h3>Details</h3>
 			<h4><a name="Transition"></a>Transition to fix and polish</h4>
       		<ul>
-                <li>All components transition on May 8 to polishing and fixing 
+                <li>All components transition on May 7 to polishing and fixing 
                   bugs for remainder of release cycle.</li>
                 <li>PMC approval is required for feature work including API changes 
                   being done after M7. Use the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list
