@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2014-04-23
+	# Date:			2014-04-25
 	#
 	# Description: Eclipse project Luna release freeze plan
 	#
@@ -289,7 +289,7 @@ ob_start();
 	          candidate build is kicked off at the indicated time, with the goal being 
 	          to have a release candidate available within 24 hours. As the build 
 	          is ready, all of the teams validate it and declare it either &quot;go&quot; 
-	          of &quot;no go&quot; for testing. Getting a build that is testable may 
+	          or &quot;no go&quot; for testing. Getting a build that is testable may 
 	          require a few attempts. These happen in rapid succession, and we continue 
 	          rebuilding and revalidating until we have our next release candidate. 
 	          It is critical that we have enough time to do test passes. We will slide 
@@ -433,14 +433,14 @@ ob_start();
 		<div class="homeitem3col">
 			<a name="FixPassRules"><h3>Fix pass rules of engagement</h3></a>
 			<a name="FixPassAfterRC0"></a><h4>May 7-16 - contributions to RC1</h4>
-			<p><b>Focus:</b>(1) P1 defects, (2) performance defects, (3) special 
+			<p><b>Focus:</b> (1) P1 defects, (2) performance defects, (3) special 
               &quot;polish&quot; items. Fixing other defects has lower priority.</p>
              <p><b>Fix approval:</b> Another committer must +1 your bug report. All changes 
               must have their associated bug reports tagged 4.4 RC1. Ongoing changes 
               to component documentation do not require special approval.
               <br>
               No bugs must appear in <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;classification=Eclipse;classification=RT;resolution=FIXED;target_milestone=4.4%20RC1;target_milestone=Luna%20RC1;field0-0-0=flagtypes.name;type0-0-0=notsubstring;value0-0-0=review%2B;field0-1-0=keywords;type0-1-0=notsubstring;value0-1-0=documentation;field0-2-0=keywords;type0-2-0=notsubstring;value0-2-0=test;field0-3-0=keywords;type0-3-0=notsubstring;value0-3-0=example;list_id=1368548">this query</a>.
-              When your bug appears there, make sure that it gets a review+ or add the 'Documentation', 'example' or 'test' keyword if appropriate.</p>
+              When your bug appears there, make sure that it gets the review+ flag or add the 'Documentation', 'example' or 'test' keyword if appropriate.</p>
              <p><b>Feature work and API change approval:</b> PMC must approve all feature work and API changes. No changes are to
               be released without prior approval and associated bug report.  
               Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
@@ -458,7 +458,7 @@ ob_start();
               to component documentation do not require special approval.
               <br>
               No bugs must appear in <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;classification=Eclipse;classification=RT;resolution=FIXED;target_milestone=4.4%20RC2;target_milestone=Luna%20RC2;field0-0-0=flagtypes.name;type0-0-0=notsubstring;value0-0-0=review%2B;field0-1-0=keywords;type0-1-0=notsubstring;value0-1-0=documentation;field0-2-0=keywords;type0-2-0=notsubstring;value0-2-0=test;field0-3-0=keywords;type0-3-0=notsubstring;value0-3-0=example;list_id=1368548">this query</a>.
-              When your bug appears there, make sure that it gets a review+ or add the 'Documentation', 'example' or 'test' keyword if appropriate.</p>
+              When your bug appears there, make sure that it gets the review+ flags or add the 'Documentation', 'example' or 'test' keyword if appropriate.</p>
              <p><b>Feature work and API change approval:</b> PMC must approve all feature work and API changes. No changes are to
               be released without prior approval and associated bug report.  
               Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
@@ -475,7 +475,7 @@ ob_start();
               to component documentation do not require special approval.
               <br>
               No bugs must appear in <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;classification=Eclipse;classification=RT;resolution=FIXED;target_milestone=4.4%20RC3;target_milestone=Luna%20RC3;field0-0-0=flagtypes.name;type0-0-0=notsubstring;value0-0-0=review%2B;field0-1-0=keywords;type0-1-0=notsubstring;value0-1-0=documentation;field0-2-0=keywords;type0-2-0=notsubstring;value0-2-0=test;field0-3-0=keywords;type0-3-0=notsubstring;value0-3-0=example;list_id=1368548">this query</a>.
-              When your bug appears there, make sure that it gets a review+ or add the 'Documentation', 'example' or 'test' keyword if appropriate.</p>
+              When your bug appears there, make sure that it gets the review+ flags or add the 'Documentation', 'example' or 'test' keyword if appropriate.</p>
              <p><b>Feature work and API change approval:</b> PMC must approve all feature work and API changes. No changes are to
               be released without prior approval and associated bug report.  
               Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
@@ -497,7 +497,7 @@ ob_start();
               not require special approval.
               <br>
               No bugs must appear in <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;classification=Eclipse;classification=RT;resolution=FIXED;target_milestone=4.4%20RC4;target_milestone=Luna%20RC4;field0-0-0=flagtypes.name;type0-0-0=notsubstring;value0-0-0=review%2B;field0-1-0=keywords;type0-1-0=notsubstring;value0-1-0=documentation;field0-2-0=keywords;type0-2-0=notsubstring;value0-2-0=test;field0-3-0=keywords;type0-3-0=notsubstring;value0-3-0=example;list_id=1368548">this query</a>.
-              When your bug appears there, make sure that it gets a review+ or add the 'Documentation', 'example' or 'test' keyword if appropriate.</p>
+              When your bug appears there, make sure that it gets the review+ flags or add the 'Documentation', 'example' or 'test' keyword if appropriate.</p>
              <p><b>Feature work and API change approval:</b> PMC must approve all feature work and API changes. No changes are to
               be released without prior approval and associated bug report.  
               Send the request for approval to the <a href="http://dev.eclipse.org/mhonarc/lists/eclipse-pmc/maillist.html">eclipse pmc</a> mailing list. 
