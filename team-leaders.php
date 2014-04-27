@@ -36,11 +36,7 @@ ob_start();
 		<h2>Who's running this project?</h2>
       <p>This page lists the people that are currently playing the PMC and subproject 
         leadership roles described in the <a href="eclipse-charter.php">project 
-        charter</a>. You will notice that there are many IBM people listed... 
-        it's not because we want to do all the work (believe us!) - its just because 
-        we built the first release of Eclipse before it became an open source 
-        project, and others haven't had enough time yet to get involved in key 
-        roles. We welcome new people who want to get involved and can make a contribution. 
+        charter</a>. We welcome new people who want to get involved and can make a contribution. 
         The Eclipse Project is a meritocracy. The more you contribute the more 
         responsibility you will earn. </p>
       <p>We ask that you do not email us directly. Instead - use the <a href="../mail/index.html" target="_top">mailing 
@@ -174,12 +170,11 @@ ob_start();
 		<div class="sideitem">
 			<h6>Subproject Leads</h6>
 			<ul>
-				<li><a href="http://wiki.eclipse.org/Platform">Platform</a><br> -- <a href="#McQ">Mike Wilson</a></li>
+				<li><a href="http://wiki.eclipse.org/Platform">Platform</a><br> -- <a href="#dani">Dani Megert</a></li>
 				<li><a href="http://www.eclipse.org/jdt/" target="_top">JDT</a><br> -- <a href="#dani">Dani Megert</a></li>
 				<li><a href="http://www.eclipse.org/pde/">PDE</a><br> -- Curtis Windatt</a></li>
 				<li><a href="http://www.eclipse.org/e4/" target="_top">e4</a><br> -- <a href="#McQ">Mike Wilson</a></li>
 				<li><a href="http://www.eclipse.org/orion/">Orion</a><br> -- Simon Kaegi and Ken Walker</li>
-				<li><a href="http://www.eclipse.org/eclipse/incubator/">Eclipse Incubator</a><br> -- <a href="#McQ">Mike Wilson</a></li>
       		</ul>				
 		</div>
 	</div>
