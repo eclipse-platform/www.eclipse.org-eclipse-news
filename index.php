@@ -36,7 +36,7 @@ ob_start();
 		<h2>About the Eclipse Project</h2>
     	<p>The Eclipse Project is an open source project of eclipse.org, overseen 
 	      by a <a href="team-leaders.php">Project Management Committee</a> (PMC) 
-      	  and project leaders. The work is done in subprojects working against a <a http://projects.eclipse.org/projects/eclipse.platform/developer">Git 
+      	  and project leaders. The work is done in subprojects working against <a href="http://projects.eclipse.org/projects/eclipse.platform/developer">Git 
 	      repositories</a>. The <a href="eclipse-charter.php">Eclipse Project Charter</a> 
       	  describes the organization of the project, roles and responsibilities of 
       	  the participants, and top level development process for the project. The 
