@@ -121,8 +121,24 @@
     <td colspan="2">  <div class="title">Resources</div>
       </td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+  <tr id="java7-filesystem-fragment">
+    <td class="title">New filesystem fragment for Java 7 API</td>
+    <td class="content">
+      A new filesystem fragment supporting Java 7 file API has been added. The
+      new fragment named <code>org.eclipse.core.filesystem.java7</code> allows
+      to retrieve information about files like attributes, file length,
+      permissions, etc. on operating systems that already have JRE supporting
+      Java 7 API but don't have any native filesystem fragment. There are three
+      different types of filesystems supported:
+      <ul>
+        <li>DOS/Windows filesystems,</li>
+        <li>POSIX compliant filesystems, and</li>
+        <li>filesystems that are neither DOS/Windows nor POSIX compliant.</li>
+      </ul>
+      The new fragment will be loaded and used automatically when you run
+      Eclipse with JRE 7 and no native filesystem fragment applicable for your
+      operating system can be found.
+    </td>
   </tr>
   <tr> 
     <td colspan="2">  <div class="title">SWT</div>
@@ -147,20 +163,6 @@
   </tr>
   <tr> 
     <td colspan="2">  <div class="title">Platform Text</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Team/CVS</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Compare</div>
       </td>
   </tr>
   <tr> 
