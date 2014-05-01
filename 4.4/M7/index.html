@@ -45,7 +45,7 @@
       <p>
       The dark theme has been customized to work better on Window, Linux and Mac. 
       </p>
-      <img src="images/darklinux.png" alt=""/>
+      <img src="images/darklinux.png" alt="Dark theme improvements"/>
       <p>
       The platform also supports that projects can extend existing themes like the dark theme with settings for fitting 
       syntax coloring. See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=433475">bug 433475</a> for details.
@@ -60,7 +60,7 @@
       Based on a community contribution lots of of the existing gif icons in the Eclipse platform have been replaced by png files. This makes Eclipse icons look better on a dark background, as
       for example the toolbar on Mac OS or on a dark theme.
       </p>
-      <img src="images/iconupdate.png" alt=""/>
+      <img src="images/iconupdate.png" alt="New platform icons"/>
     </td>
   </tr>
   <tr id="appmodel-perspective"> 
@@ -105,8 +105,8 @@
        It is possible to hide individual toolbars entries via a context menu. You can restore hidden toolbar entries via the context menu or via the Reset Perspective command. The following screenshots
        demonstrates how to hide the "Run" toolbar.
         <p>
-         <img src="images/hidetoolbar10.png" alt=""/>
-         <img src="images/hidetoolbar20.png" alt=""/>
+         <img src="images/hidetoolbar10.png" alt="Menu to hide toolbar entries"/>
+         <img src="images/hidetoolbar20.png" alt="Toolbar with hidden entries"/>
         </p>
         <p>
 	     This includes Quick Access box or the Perspective Switcher can also be hidden by the user. If the Quick Access box is hidden, the Ctrl+3 shortcut displays a dialog to
@@ -191,9 +191,122 @@
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+  <tr id="ApiToolsJava8"> 
+    <td class="title">Java 8 support for API Tools complete</td>
+    <td class="content">
+       API Tools now has full support for Java 8.  This includes illegal use, binary comparisons, restriction validation (for both
+       javadoc tags and annotations), and completion proposals.  Support has been added for the following code structures:
+       <ul>
+       <li>Default Methods</li>
+       <li>Type Annotations</li>
+       <li>Lambda Expressions</li>
+       <li>Method References</li>
+       </ul>
+       <p>There is also a new JavaSE-1.8 execution environment fragment available by updating the <b>API Tools Execution 
+       Environment Descriptions</b> feature.  API tools now uses the 5.0.1 release of ASM to read JLS8 class files.</p>
+    </td>       
   </tr>
+    <tr id=""> 
+    <td class="title"></td>
+    <td class="content">
+      A new page has been added to the <b>Product Editor</b> where you can add p2 repository update sites.  When your product
+      is exported, the list of update sites will be added to the repository list that p2 uses to check for updates.  You can
+      set a site as disabled to have it visible on the <b>Install/Update > Available Software Sites</b> preference page, but it
+      will not be used during install/update operations unless the user enables it first.
+      <p>
+      <img src="images/updatePage.png" alt="Update page in the product editor"/>
+      </p>
+    </td>
+  </tr>
+  <tr id=""> 
+    <td class="title"></td>
+    <td class="content">
+      On the <b>Configuration</b> page of the <b>Product Editor</b>, there is a new button: <b>Add Recommended...</b>.  When pressed,
+      a dialog will open offering to add a list of recommended custom start levels to your product definition. This is helpful
+      for new product developers as they may not be aware that some plug-ins require custom start levels to function correctly. The 
+      operation will not overwrite any existing custom start levels you have set previously. 
+      <p
+      <img src="images/startLevels.png" alt="Product editor start levels with add recommended button"/>
+      </p>
+      <p>
+      This is the list of recommended start levels currently provided:
+      </p>
+      <p>
+      	<code>org.eclipse.core.runtime@start</code><br>
+		<code>org.eclipse.equinox.common@2:start</code><br>
+		<code>org.eclipse.equinox.ds@2:start</code><br>
+		<code>org.eclipse.equinox.event@2:start</code><br>
+		<code>org.eclipse.equinox.simpleconfigurator@1:start</code><br>
+		<code>org.eclipse.equinox.p2.reconciler.dropins@start</code><br>
+      </p>
+    </td>
+  </tr>
+  <tr id="pdeNoUnboundEE"> 
+    <td class="title">Launch configurations don't select unbound execution environment</td>
+    <td class="content">
+       When creating a new launch configuration, PDE examines the list of plug-ins to be launched and selects the lowest
+       execution environment (EE) that supports each plug-in's required EE.  However, this could lead to selecting an EE
+       that no installed JRE matches.  With no bound JRE, launching with that execution environment would always fail. 
+       Now, when choosing an execution environment, any plug-in that requires an unbound EE will be ignored.
+    </td>
+  </tr>
+  <tr id="pdeDeprecatedExtensions"> 
+    <td class="title">Plug-in editor indicates deprecated extension elements</td>
+    <td class="content">
+       When editing the extensions of a plug-in, you will now have a visual indication that an extension element or attribute
+       has been deprecated.
+       <ul>
+       <li>Icons in the tree are marked with a warning decoration:
+       <p><img src="images/deprecatedExtension1.png" alt="Deprecated extension in tree"/></p>
+       </li>
+       <li>Menu items are marked with <i>(deprecated)</i>:
+       <p><img src="images/deprecatedExtension2.png" alt="Deprecated extension in menu"/></p>
+       </li>
+       <li>Details of elements include deprecation information and deprecated attributes are marked with <i>(!)</i>:
+       <p><img src="images/deprecatedExtension3.png" alt="Deprecated extension in details"/></p>
+       </li>
+    </td>
+  </tr>
+  <tr id="pdeNewIcons"> 
+    <td class="title">New eclipse launcher icons</td>
+    <td class="content">
+       PDE has a new set of icons used in preference pages, launch configurations and editors.  These new icons match the new platform icons.
+       <p><img src="images/pdeIcons.png" alt="New PDE launcher icons"/></p>
+    </td>
+  </tr>
+  <tr id="pdeBuildConfigurator"> 
+    <td class="title">PDE Build depends on org.eclipse.update.configurator</td>
+    <td class="content">
+       PDE Build now has a non-optional dependency on <code>org.eclipse.update.configurator [3.1.0,4.0.0)</code>.  Functionality
+       from that bundle is required by PDE Build and previously was added via an optional dependency on <code>org.eclipse.core.runtime.compatibility</code>.
+       If this optional dependency was missing, PDE Build or PDE UI operations could fail with cryptic errors.
+    </td>
+  </tr>
+  
+  
+  [1.8] Adopt Java 8 in API Tools 
+
+The PDE annotations ( and the corresponding javadoc tags) for restrictions on usage are now supported on the new Java 8 features.
+The API Errors/Warnings is reported when any of the restriction rules is violated.
+
+Launch configurations can default to an unbound execution environment 
+
+The eclipse launch configuration now has an execution environment that is both bound to a JRE and valid for the minimum 
+BREE supplied by every bundle that will be launched in the given launch configuration. Previously, the launch configuration
+could have launched eclipse with unbound execution environment.
+
+Bug 390930 - [1.8] Update to ASM 5.x 
+
+Now ASM 5.0.1 is adopted in API tools. This was required to support some of the Java 8 features and also
+to keep PDE updated with the latest ASM changes.
+
+Bug 429420 - Manifest Extensions editor should indicate deprecated extension elements (edit) 
+
+Manifest Extensions editor now indicates deprecated extension elements in the extension tab. Deprecated fields are denoted by "(!)".
+  
+  
+  
+  
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
   </tr>
