@@ -20,7 +20,7 @@
   <li><a href="#Platform">Platform</a></li>
   <li><a href="#JDT">JDT</a></li>
   <li><a href="#PDE">PDE</a></li>
-  <li><a href="#Equinox">Eq uinox</a></li>
+  <li><a href="#Equinox">Equinox</a></li>
 </ul>
 
 <table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
@@ -282,31 +282,6 @@
        If this optional dependency was missing, PDE Build or PDE UI operations could fail with cryptic errors.
     </td>
   </tr>
-  
-  
-  [1.8] Adopt Java 8 in API Tools 
-
-The PDE annotations ( and the corresponding javadoc tags) for restrictions on usage are now supported on the new Java 8 features.
-The API Errors/Warnings is reported when any of the restriction rules is violated.
-
-Launch configurations can default to an unbound execution environment 
-
-The eclipse launch configuration now has an execution environment that is both bound to a JRE and valid for the minimum 
-BREE supplied by every bundle that will be launched in the given launch configuration. Previously, the launch configuration
-could have launched eclipse with unbound execution environment.
-
-Bug 390930 - [1.8] Update to ASM 5.x 
-
-Now ASM 5.0.1 is adopted in API tools. This was required to support some of the Java 8 features and also
-to keep PDE updated with the latest ASM changes.
-
-Bug 429420 - Manifest Extensions editor should indicate deprecated extension elements (edit) 
-
-Manifest Extensions editor now indicates deprecated extension elements in the extension tab. Deprecated fields are denoted by "(!)".
-  
-  
-  
-  
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
   </tr>
