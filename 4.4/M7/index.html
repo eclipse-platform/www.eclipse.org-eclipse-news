@@ -206,8 +206,8 @@
        Environment Descriptions</b> feature.  API tools now uses the 5.0.1 release of ASM to read JLS8 class files.</p>
     </td>       
   </tr>
-    <tr id=""> 
-    <td class="title"></td>
+  <tr id="product-add-update-sites"> 
+    <td class="title">Product can add p2 update sites</td>
     <td class="content">
       A new page has been added to the <b>Product Editor</b> where you can add p2 repository update sites.  When your product
       is exported, the list of update sites will be added to the repository list that p2 uses to check for updates.  You can
@@ -218,27 +218,25 @@
       </p>
     </td>
   </tr>
-  <tr id=""> 
-    <td class="title"></td>
+  <tr id="product-custom-start-levels"> 
+    <td class="title">Product can define custom default start levels</td>
     <td class="content">
       On the <b>Configuration</b> page of the <b>Product Editor</b>, there is a new button: <b>Add Recommended...</b>.  When pressed,
       a dialog will open offering to add a list of recommended custom start levels to your product definition. This is helpful
       for new product developers as they may not be aware that some plug-ins require custom start levels to function correctly. The 
       operation will not overwrite any existing custom start levels you have set previously. 
-      <p
+      <p>
       <img src="images/startLevels.png" alt="Product editor start levels with add recommended button"/>
       </p>
       <p>
       This is the list of recommended start levels currently provided:
       </p>
-      <p>
-      	<code>org.eclipse.core.runtime@start</code><br>
-		<code>org.eclipse.equinox.common@2:start</code><br>
-		<code>org.eclipse.equinox.ds@2:start</code><br>
-		<code>org.eclipse.equinox.event@2:start</code><br>
-		<code>org.eclipse.equinox.simpleconfigurator@1:start</code><br>
-		<code>org.eclipse.equinox.p2.reconciler.dropins@start</code><br>
-      </p>
+<pre>org.eclipse.core.runtime@start
+org.eclipse.equinox.common@2:start
+org.eclipse.equinox.ds@2:start
+org.eclipse.equinox.event@2:start
+org.eclipse.equinox.simpleconfigurator@1:start
+org.eclipse.equinox.p2.reconciler.dropins@start</pre>
     </td>
   </tr>
   <tr id="pdeNoUnboundEE"> 
@@ -256,15 +254,16 @@
        When editing the extensions of a plug-in, you will now have a visual indication that an extension element or attribute
        has been deprecated.
        <ul>
-       <li>Icons in the tree are marked with a warning decoration:
-       <p><img src="images/deprecatedExtension1.png" alt="Deprecated extension in tree"/></p>
-       </li>
-       <li>Menu items are marked with <i>(deprecated)</i>:
-       <p><img src="images/deprecatedExtension2.png" alt="Deprecated extension in menu"/></p>
-       </li>
-       <li>Details of elements include deprecation information and deprecated attributes are marked with <i>(!)</i>:
-       <p><img src="images/deprecatedExtension3.png" alt="Deprecated extension in details"/></p>
-       </li>
+         <li>Icons in the tree are marked with a warning decoration:
+         <p><img src="images/deprecatedExtension1.png" alt="Deprecated extension in tree"/></p>
+         </li>
+         <li>Menu items are marked with <i>(deprecated)</i>:
+         <p><img src="images/deprecatedExtension2.png" alt="Deprecated extension in menu"/></p>
+         </li>
+         <li>Details of elements include deprecation information and deprecated attributes are marked with <i>(!)</i>:
+         <p><img src="images/deprecatedExtension3.png" alt="Deprecated extension in details"/></p>
+         </li>
+       </ul>
     </td>
   </tr>
   <tr id="pdeNewIcons"> 
@@ -298,7 +297,7 @@ build. Summaries for earlier Luna milestone builds:</p>
 <ul>
   <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M6-201403061200/news/">New for Eclipse Luna milestone build M6 (March 14, 2014)</a></li>
   <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M5-201401231600/news/">New for Eclipse Luna milestone build M5 (January 24, 2014)</a></li>
-  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M4-201312121600/news/">New for Eclipse Luna milestone build M4 (December 13, 2013)</li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M4-201312121600/news/">New for Eclipse Luna milestone build M4 (December 13, 2013)</a></li>
   <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M3-201310302000/news/">New for Eclipse Luna milestone build M3 (November 1, 2013)</a></li>
   <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M2-201309182000/news/">New for Eclipse Luna milestone build M2 (September 20, 2013)</a></li>
   <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M1-201308072000/news/">New for Eclipse Luna milestone build M1 (August 9, 2013)</a></li>
