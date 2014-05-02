@@ -20,20 +20,9 @@
   <li><a href="#Platform">Platform</a></li>
   <li><a href="#JDT">JDT</a></li>
   <li><a href="#PDE">PDE</a></li>
-  <li><a href="#Equinox">Equinox</a></li>
 </ul>
 
 <table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
-  <tr> 
-    <td colspan="2">  <div class="title">Template</div>
-      </td>
-  </tr>
-  <tr id="first-item">
-    <td class="title">First item</td>
-    <td class="content">
-      Item blurb. See <a href="../whats-new-template/eclipse-whats-new-template.html"><font size="20" color="red">instructions</font></a>.
-    </td>
-  </tr>
 
   <tr>
     <td colspan="2" class="section" id="Platform">Platform</td>
@@ -56,11 +45,16 @@
   <tr id="ide-icons">
     <td class="title">Platform icons converted to png files</td>
     <td class="content">
-      <p>
-      Based on a community contribution lots of of the existing gif icons in the Eclipse platform have been replaced by png files. This makes Eclipse icons look better on a dark background, as
-      for example the toolbar on Mac OS or on a dark theme.
-      </p>
-      <img src="images/iconupdate.png" alt="New platform icons"/>
+      Based on a community contribution, lots of of the existing GIF icons in the Eclipse platform have been replaced by PNG files. This makes Eclipse icons look better on a dark background, as
+      for example the toolbar on Mac OS X or on a dark theme.
+      <p><img src="images/iconupdate.png" alt="New platform icons"/></p>
+    </td>
+  </tr>
+  <tr id="os-ubuntu"> 
+    <td class="title">Ubuntu menu integration </td>
+    <td class="content">
+       In cooperation with Canonical, the Platform team worked on the support of Eclipse in Ubuntu 14.04. Ubuntu 14.04 supports the Eclipse 4 menu implementation, which had issues
+       in Ubuntu 13.04 and 13.10. For more details, see bugs <a href="https://bugs.launchpad.net/appmenu-gtk/+bug/613119">Eclipse menu does not render correctly in unity bar</a> and <a href="https://bugs.launchpad.net/ubuntu/+source/unity-gtk-module/+bug/1208019">Eclipse menus doesn't show up in Saucy</a>.
     </td>
   </tr>
   <tr id="appmodel-perspective"> 
@@ -72,55 +66,24 @@
   <tr id="eclipse-api"> 
     <td class="title">EMenuService released as API</td>
     <td class="content">
-        The EMenuService service has been released as API. RCP clients must adjust their package imports to org.eclipse.e4.ui.services.  
+        The <code>EMenuService</code> service has been released as API. RCP clients must adjust their package imports to <code>org.eclipse.e4.ui.services</code>.  
     </td>
   </tr>
   <tr id="osgi-integration"> 
     <td class="title">Improved OSGi integration</td>
     <td class="content">
-        Eclipse implementations can retrieve the OSGI BundleContext via an extended object supplier and the @Inject @OSGiBundle annotation. 
+        Eclipse implementations can retrieve the OSGI <code>BundleContext</code> via an extended object supplier and the <code>@Inject @OSGiBundle</code> annotations. 
     </td>
   </tr>
-    <tr id="code-cleanup"> 
+  <tr id="code-cleanup"> 
     <td class="title">Platform code improvements</td>
     <td class="content">
-       During the last milestones the platform team has invested in cleanup up the existing codes basis to simplify contributions by new and existing contributors. 
-       For more details see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=420779">bug 420779</a>. During this update several plug-ins have been upgraded to require Java 1.6 instead of Java 1.4 or Java 1.5 to allow 
-       that contributions can rework the code base more easily.
+       During the last milestones, the platform team has invested in cleaning up the existing codes basis to simplify contributions by new and existing contributors. 
+       For more details, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=420779">bug 420779</a>.
+       During this update, several plug-ins have been upgraded to require Java 1.6 instead of Java 1.4 or Java 1.5.
     </td>
-   </tr>
-   <tr id="os-ubuntu"> 
-    <td class="title">Ubuntu menu integration </td>
-    <td class="content">
-    	<p>
-       In cooperation with Canonical the platform team worked on the support of Eclipse into Ubuntu 14.04. Ubuntu 14.04 supports the Eclipse 4 menu implementation which had issues
-       in Ubuntu 13.04 and 13.10. For more details see <a href="https://bugs.launchpad.net/appmenu-gtk/+bug/613119">Eclipse menu does not render correctly in unity bar bug report</a> and <a href="https://bugs.launchpad.net/ubuntu/+source/unity-gtk-module/+bug/1208019">Eclipse menus doesn't show up in Saucy</a>.
-    	</p>
-    	
-    </td>
-  </tr>
-    <tr id="closetoolbars"> 
-    <td class="title">Ability to close toolbars entries via the context menu </td>
-    <td class="content">
-       It is possible to hide individual toolbars entries via a context menu. You can restore hidden toolbar entries via the context menu or via the Reset Perspective command. The following screenshots
-       demonstrates how to hide the "Run" toolbar.
-        <p>
-         <img src="images/hidetoolbar10.png" alt="Menu to hide toolbar entries"/>
-         <img src="images/hidetoolbar20.png" alt="Toolbar with hidden entries"/>
-        </p>
-        <p>
-	     This includes Quick Access box or the Perspective Switcher can also be hidden by the user. If the Quick Access box is hidden, the Ctrl+3 shortcut displays a dialog to
-	     select the command to execute.
-	    </p>
-	 
-    </td>
-    
   </tr>
 
-  <tr> 
-    <td colspan="2">  <div class="title">Resources</div>
-      </td>
-  </tr>
   <tr id="java7-filesystem-fragment">
     <td class="title">New filesystem fragment for Java 7 API</td>
     <td class="content">
@@ -128,7 +91,7 @@
       new fragment named <code>org.eclipse.core.filesystem.java7</code> allows
       to retrieve information about files like attributes, file length,
       permissions, etc. on operating systems that already have JRE supporting
-      Java 7 API but don't have any native filesystem fragment. There are three
+      Java 7 API but don't have any native Eclipe filesystem fragment. There are three
       different types of filesystems supported:
       <ul>
         <li>DOS/Windows filesystems,</li>
@@ -140,57 +103,22 @@
       for your operating system can be found.
     </td>
   </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">SWT</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Platform UI</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">User Assistance</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Platform Text</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Ant</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  <tr> 
-    <td colspan="2">  <div class="title">Debug</div>
-      </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
+
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
+
+  <tr id="java-8">
+    <td class="title">Java 8</td>
+    <td class="content">
+      TODO.
+    </td>
   </tr>
+
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
+
   <tr id="ApiToolsJava8"> 
     <td class="title">Java 8 support for API Tools complete</td>
     <td class="content">
@@ -202,8 +130,8 @@
        <li>Lambda Expressions</li>
        <li>Method References</li>
        </ul>
-       <p>There is also a new JavaSE-1.8 execution environment fragment available by updating the <b>API Tools Execution 
-       Environment Descriptions</b> feature.  API tools now uses the 5.0.1 release of ASM to read JLS8 class files.</p>
+       <p>There is also a new <b>JavaSE-1.8</b> execution environment fragment available. Update the <b>API Tools Execution 
+       Environment Descriptions</b> feature.  API tools now uses the 5.0.1 release of ASM to read Java 8 class files.</p>
     </td>       
   </tr>
   <tr id="product-add-update-sites"> 
@@ -251,7 +179,7 @@ org.eclipse.equinox.p2.reconciler.dropins@start</pre>
   <tr id="pdeDeprecatedExtensions"> 
     <td class="title">Plug-in editor indicates deprecated extension elements</td>
     <td class="content">
-       When editing the extensions of a plug-in, you will now have a visual indication that an extension element or attribute
+       When editing the extensions of a plug-in, you now have a visual indication that an extension element or attribute
        has been deprecated.
        <ul>
          <li>Icons in the tree are marked with a warning decoration:
@@ -280,12 +208,6 @@ org.eclipse.equinox.p2.reconciler.dropins@start</pre>
        from that bundle is required by PDE Build and previously was added via an optional dependency on <code>org.eclipse.core.runtime.compatibility</code>.
        If this optional dependency was missing, PDE Build or PDE UI operations could fail with cryptic errors.
     </td>
-  </tr>
-  <tr>
-    <td colspan="2" class="section" id="Equinox">Equinox</td>
-  </tr>
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
   </tr>
 
   <tr> 
