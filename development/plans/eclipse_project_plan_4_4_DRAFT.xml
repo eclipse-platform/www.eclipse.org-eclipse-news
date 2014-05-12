@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 10:15 EST May 9, 2014.
+Last revised 12:00 EST May 12, 2014.
 
 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
 marks interesting changes since the previous draft of 
@@ -206,11 +206,15 @@ Eclipse 4.4 Endgame Plan.
 		<!-- ************ WINDOWS ************** -->
 		<tr class="c0">
 			<td rowspan="2">Windows</td>
-			<td rowspan="2">7</td>
+			<td rowspan="2">7<br/>
+			8<br/>
+			8.1
+			</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 7u45<br/>
-				Oracle Java 6u45<br/>
-				IBM Java 6 SR15
+			<td rowspan="2">Oracle Java 7u55<br/>
+				Oracle Java 6u75<br/>
+				IBM Java 7 SR 7<br/>
+				IBM Java 6 SR16
 			</td>
 			<td rowspan="2">Win32</td>
 		</tr>
@@ -219,48 +223,61 @@ Eclipse 4.4 Endgame Plan.
 		</tr>
 		<!-- ************ RHEL ************** -->
 		<tr class="c1">
-			<td rowspan="3">Red Hat Enterprise Linux</td>
-			<td rowspan="3">6</td>
+			<td rowspan="4">Red Hat Enterprise Linux</td>
+			<td rowspan="4">6</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
-			    Oracle Java 7u45<br/>
-			    Oracle Java 6u45<br/>
-				IBM Java 6 SR15<br/>
+			    Oracle Java 7u55<br/>
+			    Oracle Java 6u75<br/>
+				IBM Java 7 SR 7<br/>
+				IBM Java 6 SR16<br/>
 				Open JDK 7u40
 			</td>
-			<td rowspan="3">GTK</td>
+			<td rowspan="4">GTK</td>
 		</tr>
 		<tr class="c1">
 			<td rowspan="1">x86 64-bit</td>
 		</tr>
 		<tr class="c1">
+			<td rowspan="1">Power 32-bit</td>
+			<td rowspan="2">IBM Java 7 SR7<br/>
+			IBM Java 6 SR16</td>
+		</tr>
+		<tr class="c1">
 			<td rowspan="1">Power 64-bit</td>
-			<td>IBM Java 6 SR15</td>
 		</tr>
 		<!-- ************ SLES ************** -->
-		<tr class="c0">
-			<td rowspan="3">SUSE Linux Enterprise Server</td>
-			<td rowspan="3">11</td>
+		<tr class="c1">
+			<td rowspan="4">SUSE Linux Enterprise Server</td>
+			<td rowspan="4">11</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 6u45<br/>
-				IBM Java 6 SR15
+			<td rowspan="2">Oracle Java 7u55<br/>
+				Oracle Java 6u75<br/>
+				IBM Java 7 SR7</br>
+				IBM Java 6 SR16
 			</td>
-			<td rowspan="3">GTK</td>
+			<td rowspan="4">GTK</td>
 		</tr>
-		<tr class="c0">
+		<tr class="c1">
 			<td rowspan="1">x86 64-bit</td>
 		</tr>
-		<tr class="c0">
+		<tr class="c1">
+			<td rowspan="1">Power 32-bit</td>
+			<td rowspan="2">IBM Java 7 SR7<br/>
+			IBM Java 6 SR16</td>
+		</tr>
+		<tr class="c1">
 			<td rowspan="1">Power 64-bit</td>
-			<td>IBM Java 6 SR15</td>
 		</tr>
 		<!-- ************ Ubuntu ************** -->
 		<tr class="c1">
 			<td rowspan="2">Ubuntu Long Term Support</td>
 			<td rowspan="2">12.04</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 6u45<br/>
-				IBM Java 6 SR15
+			<td rowspan="2">Oracle Java 7u55<br/>
+				Oracle Java 6u75<br/>
+				IBM Java 7 SR7<br/>
+				IBM Java 6 SR16
 			</td>
 			<td rowspan="2">GTK</td>
 		</tr>
@@ -272,8 +289,9 @@ Eclipse 4.4 Endgame Plan.
 			<td rowspan="2">Oracle Solaris</td>
 			<td rowspan="2">11</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 6u45</td>
-			<td rowspan="2">GTK</td>
+			<td rowspan="2">Oracle Java 7u55<br/>
+			Oracle Java 6u75</td>
+			<td rowspan="2">GTK+ 2</td>
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">SPARC 32-bit</td>
@@ -284,22 +302,27 @@ Eclipse 4.4 Endgame Plan.
 			<td rowspan="1">11i v3</td>
 			<td rowspan="1">ia64 64-bit</td>
 			<td rowspan="1">HP-UX Java 6u20</td>
-			<td rowspan="1">GTK</td>
+			<td rowspan="1">GTK+ 2</td>
 		</tr>
 		<!-- ************ AIX ************** -->
-		<tr class="c0">
-			<td rowspan="1">IBM AIX</td>
-			<td rowspan="1">7.1</td>
-			<td rowspan="1">Power 64-bit</td>
-			<td rowspan="1">IBM Java 6 SR15</td>
-			<td rowspan="1">GTK</td>
+		<tr class="c1">
+			<td rowspan="2">IBM AIX</td>
+			<td rowspan="2">7.1</td>
+			<td rowspan="1">Power 32-bit</td>
+			<td rowspan="2">IBM Java 7 SR7<br/>
+			IBM Java 6 SR16</td>
+			<td rowspan="2">GTK+ 2</td>
 		</tr>
+		<tr class="c1">
+			<td rowspan="1">Power 64-bit</td>
+		</tr>
+		
 		<!-- ************ Mac ************** -->
 		<tr class="c1">
 			<td rowspan="2">Apple Mac OS X</td>
-			<td rowspan="2">10.8</td>
+			<td rowspan="2">10.9</td>
 			<td rowspan="1">Universal 32-bit</td>
-			<td rowspan="2">Oracle Java 7u45</td>
+			<td rowspan="2">Oracle Java 7u55</td>
 			<td rowspan="2">Cocoa</td>
 		</tr>
 		<tr class="c1">
