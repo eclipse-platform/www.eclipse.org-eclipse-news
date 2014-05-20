@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 12:00 EST May 12, 2014.
+Last revised 12:00 EST May 20, 2014.
 
 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
 marks interesting changes since the previous draft of 
@@ -207,12 +207,12 @@ Eclipse 4.4 Endgame Plan.
 		<tr class="c0">
 			<td rowspan="2">Windows</td>
 			<td rowspan="2">7<br/>
-			8<br/>
-			8.1
+			8
 			</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 7u55<br/>
-				Oracle Java 6u75<br/>
+			<td rowspan="2">
+				Oracle Java 8u5<br/>
+				Oracle Java 7u55<br/>
 				IBM Java 7 SR 7<br/>
 				IBM Java 6 SR16
 			</td>
@@ -227,8 +227,8 @@ Eclipse 4.4 Endgame Plan.
 			<td rowspan="4">6</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
+				Oracle Java 8u5<br/>
 			    Oracle Java 7u55<br/>
-			    Oracle Java 6u75<br/>
 				IBM Java 7 SR 7<br/>
 				IBM Java 6 SR16<br/>
 				Open JDK 7u40
@@ -251,8 +251,9 @@ Eclipse 4.4 Endgame Plan.
 			<td rowspan="4">SUSE Linux Enterprise Server</td>
 			<td rowspan="4">11</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 7u55<br/>
-				Oracle Java 6u75<br/>
+			<td rowspan="2">
+				Oracle Java 8u5<br/>
+				Oracle Java 7u55<br/>
 				IBM Java 7 SR7<br/>
 				IBM Java 6 SR16
 			</td>
@@ -271,11 +272,26 @@ Eclipse 4.4 Endgame Plan.
 		</tr>
 		<!-- ************ Ubuntu ************** -->
 		<tr class="c1">
-			<td rowspan="2">Ubuntu Long Term Support</td>
+			<td rowspan="4">Ubuntu Long Term Support</td>
 			<td rowspan="2">12.04</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 7u55<br/>
-				Oracle Java 6u75<br/>
+			<td rowspan="2">
+				Oracle Java 8u5<br/>
+				Oracle Java 7u55<br/>
+				IBM Java 7 SR7<br/>
+				IBM Java 6 SR16
+			</td>
+			<td rowspan="2">GTK</td>
+		</tr>
+		<tr class="c1">
+			<td rowspan="1">x86 64-bit</td>
+		</tr>
+		<tr class="c1">
+			<td rowspan="2">14.04</td>
+			<td rowspan="1">x86 32-bit</td>
+			<td rowspan="2">
+				Oracle Java 8u5<br/>
+				Oracle Java 7u55<br/>
 				IBM Java 7 SR7<br/>
 				IBM Java 6 SR16
 			</td>
@@ -289,8 +305,9 @@ Eclipse 4.4 Endgame Plan.
 			<td rowspan="2">Oracle Solaris</td>
 			<td rowspan="2">11</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">Oracle Java 7u55<br/>
-			Oracle Java 6u75</td>
+			<td rowspan="2">
+			Oracle Java 8u5<br/>
+			Oracle Java 7u55</td>
 			<td rowspan="2">GTK+ 2</td>
 		</tr>
 		<tr class="c0">
@@ -322,7 +339,9 @@ Eclipse 4.4 Endgame Plan.
 			<td rowspan="2">Apple Mac OS X</td>
 			<td rowspan="2">10.9</td>
 			<td rowspan="1">Universal 32-bit</td>
-			<td rowspan="2">Oracle Java 7u55</td>
+			<td rowspan="2">
+				Oracle Java 8u5<br/>
+				Oracle Java 7u55</td>
 			<td rowspan="2">Cocoa</td>
 		</tr>
 		<tr class="c1">
