@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 12:00 EST May 20, 2014.
+Last revised 8:00 EDT May 20, 2014.
 
 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
 marks interesting changes since the previous draft of 
@@ -233,7 +233,7 @@ Eclipse 4.4 Endgame Plan.
 				IBM Java 6 SR16<br/>
 				Open JDK 7u40
 			</td>
-			<td rowspan="4">GTK</td>
+			<td rowspan="4">GTK+ 2</td>
 		</tr>
 		<tr class="c1">
 			<td rowspan="1">x86 64-bit</td>
@@ -257,7 +257,7 @@ Eclipse 4.4 Endgame Plan.
 				IBM Java 7 SR7<br/>
 				IBM Java 6 SR16
 			</td>
-			<td rowspan="4">GTK</td>
+			<td rowspan="4">GTK+ 2</td>
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">x86 64-bit</td>
@@ -281,7 +281,7 @@ Eclipse 4.4 Endgame Plan.
 				IBM Java 7 SR7<br/>
 				IBM Java 6 SR16
 			</td>
-			<td rowspan="2">GTK</td>
+			<td rowspan="2">GTK+ 3</td>
 		</tr>
 		<tr class="c1">
 			<td rowspan="1">x86 64-bit</td>
@@ -295,7 +295,7 @@ Eclipse 4.4 Endgame Plan.
 				IBM Java 7 SR7<br/>
 				IBM Java 6 SR16
 			</td>
-			<td rowspan="2">GTK</td>
+			<td rowspan="2">GTK+ 2</td>
 		</tr>
 		<tr class="c1">
 			<td rowspan="1">x86 64-bit</td>
@@ -510,9 +510,10 @@ Eclipse 4.4 Endgame Plan.
 	[JDT Core, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=380190">380190</a>)
 </li>
 
-<li><strong>Full support for GTK+ 3.</strong>
+<li><strong>Full support for GTK+ 3 where supported and successfully tested.</strong>
 	Kepler provided early access for GTK+ 3 with GTK+ 2 being the recommended version. With this
-	release we will provide full support for GTK+ 3 and ship that as our default version.
+	release we will provide full support for GTK+ 3 and ship that as our default version on those
+	platforms where it is supported and successfully tested.
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=340067">340067</a>)
 </li>
 
