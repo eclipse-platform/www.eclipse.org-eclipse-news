@@ -694,23 +694,11 @@ Eclipse 4.4 Endgame Plan.
       <td><div align="center">1.5</div></td>
     </tr>
     <tr>
-      <td>com.ibm.zrh.eclipse.nls</td>
-      <td><div align="center">not specified</div></td>
-    </tr>
-    <tr>
       <td>com.jcraft.jsch</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>com.oti.zrh.eclipse.tools</td>
-      <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
       <td>com.sun.el</td>
-      <td><div align="center">1.5</div></td>
-    </tr>
-    <tr>
-      <td>javaewah</td>
       <td><div align="center">1.5</div></td>
     </tr>
     <tr>
@@ -755,10 +743,6 @@ Eclipse 4.4 Endgame Plan.
     </tr>
     <tr>
       <td>org.apache.commons.codec</td>
-      <td><div align="center">1.5</div></td>
-    </tr>
-    <tr>
-      <td>org.apache.commons.compress</td>
       <td><div align="center">1.5</div></td>
     </tr>
     <tr>
@@ -808,14 +792,6 @@ Eclipse 4.4 Endgame Plan.
     <tr>
       <td>org.eclipse.ant.ui</td>
       <td><div align="center">1.6</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.astsearch.core</td>
-      <td><div align="center">1.5</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.astsearch.ui</td>
-      <td><div align="center">1.5</div></td>
     </tr>
     <tr>
       <td>org.eclipse.compare</td>
@@ -986,22 +962,6 @@ Eclipse 4.4 Endgame Plan.
       <td><div align="center">1.6</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.egit</td>
-      <td><div align="center">not specified</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.egit.core</td>
-      <td><div align="center">1.5</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.egit.doc</td>
-      <td><div align="center">not specified</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.egit.ui</td>
-      <td><div align="center">1.5</div></td>
-    </tr>
-    <tr>
       <td>org.eclipse.emf.common</td>
       <td><div align="center">1.5</div></td>
     </tr>
@@ -1015,18 +975,6 @@ Eclipse 4.4 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.emf.ecore.xmi</td>
-      <td><div align="center">1.5</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.eql.core</td>
-      <td><div align="center">1.5</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.eql.resources</td>
-      <td><div align="center">1.5</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.eql.ui</td>
       <td><div align="center">1.5</div></td>
     </tr>
     <tr>
@@ -1066,20 +1014,12 @@ Eclipse 4.4 Endgame Plan.
       <td><div align="center">1.5</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.jdt.astview</td>
-      <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
       <td>org.eclipse.jdt.compiler.apt</td>
       <td><div align="center">1.6</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.compiler.tool</td>
       <td><div align="center">1.6</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.jdt.copyrightsaveaction</td>
-      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.core</td>
@@ -1104,10 +1044,6 @@ Eclipse 4.4 Endgame Plan.
     <tr>
       <td>org.eclipse.jdt.doc.user</td>
       <td><div align="center">not specified</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.jdt.jeview</td>
-      <td><div align="center">1.5</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.junit</td>
@@ -1144,14 +1080,6 @@ Eclipse 4.4 Endgame Plan.
     <tr>
       <td>org.eclipse.jface.text</td>
       <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.jgit</td>
-      <td><div align="center">1.5</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.jgit.archive</td>
-      <td><div align="center">1.5</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jsch.core</td>
@@ -1250,14 +1178,6 @@ Eclipse 4.4 Endgame Plan.
       <td><div align="center">not specified</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.reftracker</td>
-      <td><div align="center">not specified</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.releng.tools</td>
-      <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
       <td>org.eclipse.sdk</td>
       <td><div align="center">not specified</div></td>
     </tr>
@@ -1268,14 +1188,6 @@ Eclipse 4.4 Endgame Plan.
     <tr>
       <td>org.eclipse.swt</td>
       <td><div align="center">1.5</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.swt.sleak</td>
-      <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.swt.spy</td>
-      <td><div align="center">not specified</div></td>
     </tr>
     <tr>
       <td>org.eclipse.team.core</td>
@@ -1319,10 +1231,6 @@ Eclipse 4.4 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.ui.editors</td>
-      <td><div align="center">1.4</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.ui.editors.bugzilla</td>
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
