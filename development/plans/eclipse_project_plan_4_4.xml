@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 08:40 EDT May 20, 2014.
+Last revised 04:45 EDT May 21, 2014.
 
 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
 marks interesting changes since the previous draft of 
@@ -129,7 +129,7 @@ marks interesting changes since the previous draft of
   tested and validated in the target operating configurations listed below.</p>
 <p>Dates for builds and test passes after M7 will be available in the 
 Eclipse 4.4 Endgame Plan.
-<!-- <a href="http://www.eclipse.org/eclipse/development/plans/freeze_plan_4.4.php">Eclipse 4.4 Endgame Plan</a>. -->
+<a href="http://www.eclipse.org/eclipse/development/plans/freeze_plan_4_4.php">Eclipse 4.4 Endgame Plan</a>.
 
 </p>
 </div>
@@ -378,7 +378,7 @@ Eclipse 4.4 Endgame Plan.
 
 <p><strong>API Contract Compatibility:</strong> Eclipse SDK 4.4 will be upwards
   contract-compatible with Eclipse SDK 4.3 except in those areas noted in the
-  <a href="http://www.eclipse.org/eclipse/development/porting/eclipse_4.4_porting_guide.html" target="_top">
+  <a href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_4_porting_guide.html" target="_top">
     <em>Eclipse 4.4 Plug-in Migration Guide</em>
   </a>. Programs that use affected APIs and extension points will need to be ported
   to Eclipse SDK 4.4 APIs. Downward contract compatibility
@@ -390,7 +390,7 @@ Eclipse 4.4 Endgame Plan.
   
 <p><strong>Binary (plug-in) Compatibility:</strong> Eclipse SDK 4.4 will be upwards
   binary-compatible with Eclipse SDK 4.3 except in those areas noted in the
-  <a href="http://www.eclipse.org/eclipse/development/porting/eclipse_4.4_porting_guide.html" target="_top">
+  <a href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_4_porting_guide.html" target="_top">
     <em>Eclipse 4.4 Plug-in Migration Guide</em>
   </a>. Downward plug-in compatibility is not supported. Plug-ins for Eclipse SDK
   4.4 will not be usable in Eclipse SDK 4.3. Refer to
@@ -400,7 +400,7 @@ Eclipse 4.4 Endgame Plan.
   
 <p><strong>Source Compatibility:</strong> Eclipse SDK 4.4 will be upwards source-compatible
   with Eclipse SDK 4.3 except in the areas noted in the
-  <a href="http://www.eclipse.org/eclipse/development/porting/eclipse_4.4_porting_guide.html" target="_top">
+  <a href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_4_porting_guide.html" target="_top">
     <em>Eclipse 4.4 Plug-in Migration Guide</em>
   </a>. This means that source files written
   to use Eclipse SDK 4.3 APIs might successfully compile and run against Eclipse
