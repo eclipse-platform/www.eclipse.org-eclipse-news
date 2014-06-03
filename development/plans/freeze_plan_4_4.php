@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2014-06-02
+	# Date:			2014-06-03
 	#
 	# Description: Eclipse project Luna release freeze plan
 	#
@@ -41,7 +41,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>June 2 - 1-day test pass against RC3</b></p>
+			<p><b>June 3 - Start RC4 fix pass</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -163,7 +163,7 @@ ob_start();
 	          <tr>
 	            <td height="20"></td>
 	          </tr>
-	          <tr class="current">
+	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">2</td>
 	            <td align="right" height="20">Mon 08:00 EDT</td>
@@ -172,7 +172,7 @@ ob_start();
 	            <td height="20">&nbsp;&nbsp;<b><a href="#TestPassUsingRC3"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> details</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
-	          <tr>
+	          <tr class="current">
 	            <td height="20"></td>
 	            <td align="right" height="20">3</td>
 	            <td align="right" height="20">Tue 08:00 EDT</td>
