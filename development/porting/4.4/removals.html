@@ -40,9 +40,22 @@ API removals after June 2014:
  <li><a href="#auth">Platform authorization API</a></li>
  <li><a href="#compositeBundles">Composite Bundles</a></li>
  <li><a href="#batchBundleEvent">Batch Bundle Event</a></li>
+ <li><a href="#cssextensions">Remove deprecated CSS extension points</a></li>
+</ol>
+
+<p>
+API removals after June 2015:
+</p>
+<ol>
+ <li><a href="#listenerlist">org.eclipse.jface.util.ListenerList</a></li>
+ <li><a href="#tabletreeviewer">TableTreeViewer</a></li>
+  <li><a href="#tasklist">org.eclipse.ui.views.tasklist.TaskList</a></li>
 </ol>
 
 <hr>
+
+
+
 
 <!-- ############################################## -->
 
@@ -194,6 +207,48 @@ API difficult to use.  For these and other reasons the API package
 </p>
 <p>
 For further details or to provide feedback on this change, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=407302">bug 407302</a>.
+</p>
+
+<h3>6. <a name="cssextensions">Remove deprecated CSS extension points</a></h3>
+<p>
+Since Eclipse 4.0, the Eclipse platform allows styling based on external CSS files.  During the implementation two experimental
+extension points have been created which have been replaced in the meantime.
+
+For this reason the extension points
+<tt>org.eclipse.e4.u.css.core.elementProvider</tt> and <tt>org.eclipse.e4.ui.css.swt.property.handler </tt> will be removed.
+</p>
+<p>
+For further details or to provide feedback on this change, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=430638">bug 430638</a>.
+</p>
+
+<!-- ############################################## -->
+
+<h2>API removals after June 2015</h2>
+<h3>1. <a name="listenerlist">org.eclipse.jface.util.ListenerList</a></h3>
+<p>
+The <code>org.eclipse.jface.util.ListenerList</code> class is deprecated since 2005 and has been replaced by <code>org.eclipse.core.runtime.ListenerList with org.eclipse.core.runtime.ListenerList.IDENTITY</code> as argument.
+The <code>org.eclipse.jface.util.ListenerList</code> class is planned to get deleted.
+</p>
+<p>
+For further details or to provide feedback on this change, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=431981">bug 431981</a>.
+</p>
+
+<h3>2. <a name="tabletreeviewer">TableTreeViewer</a></h3>
+<p>
+The <code>org.eclipse.jface.viewers.TableTreeViewer</code> class is deprecated since Eclipse 3.1 and has been replaced by <code>TreeViewer</code>.
+The <code>org.eclipse.jface.viewers.TableTreeViewer</code>, <code>org.eclipse.swt.custom.TableTree</code> and <code>org.eclipse.swt.custome.TableTreeItem</code> classes are planned to get deleted as well as methods using these types.
+</p>
+<p>
+For further details or to provide feedback on this change, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=434575">bug 434575</a>.
+</p>
+
+<h3>3. <a name="tasklist">org.eclipse.ui.views.tasklist.TaskList</a></h3>
+<p>
+The <code>org.eclipse.ui.views.tasklist.TaskList</code> class is deprecated since Eclipse 3.4 and has been replaced by <code>MarkerSupportView</code>.
+The <code>org.eclipse.ui.views.tasklist.TaskList</code> class and related classes only used by this class are planned to get deleted.
+</p>
+<p>
+For further details or to provide feedback on this change, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=434615">bug 434615</a>.
 </p>
 
 <!-- ############################################## -->
