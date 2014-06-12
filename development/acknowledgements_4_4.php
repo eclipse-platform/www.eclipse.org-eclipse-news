@@ -7,7 +7,7 @@
   # index.php
   #
   # Author:    David Williams and others on Eclipse Project 
-  # Date:      2014-06-02
+  # Date:      2014-06-16
   #
   # Description: Eclipse project Luna release acknowledgments page
   #
@@ -43,10 +43,13 @@ ob_start();
 The entire Eclipse and Equinox team would like to thank ...
 </p>
 <p>
-The Platform Text team ...
+The Platform Text team would like to thank everyone who filed good bug reports and enhancement requests.
+Special thanks go to Terry Parker, Thanh Ha, darren ha, Szymon Ptaszkiewicz, and Mickael Istria for patches they submitted.
 </p>
 <p>
-JDT UI sends thanks to code contributors ...
+JDT UI sends thanks to code contributors
+Nikolay Metchev, Samrat Dhillon, Lukas Hanke, Mickael Istria, Stephan Herrmann, Lars Vogel, Thanh Ha,
+Xavier Coulon, Andrew Eisenberg, Ievgen Lukash, Marcel Bruch, Matthias Mailänder, Thirumala Reddy Mutchukota, Thomas Schindl, Andreas Schmid.
 </p>
 <p>
 The JDT Core team would like to thank ...
@@ -78,76 +81,10 @@ were active at the time of the release (one or more commits in the past nine mon
 <p>
 <table width=100%>
 <tr>
-<td>Alexander Kurtakov</td>
-<td>Arun Thondapu</td>
-<td>BJ Hargrave</td>
-<td>Bogdan Gheorghe</td>
-</tr>
-<tr>
-<td>Brian de Alwis</td>
-<td>Carolyn MacLeod</td>
-<td>Chris Austin</td>
-<td>Curtis Windatt</td>
-</tr>
-<tr>
-<td>Daniel Rolka</td>
-<td>Dani Megert</td>
-<td>David Williams</td>
-<td>Deepak Azad</td>
-</tr>
-<tr>
-<td>Eric Moffatt</td>
-<td>Grant Gayed</td>
-<td>Ian Bull</td>
-<td>Jay Arthanareeswaran</td>
-</tr>
-<tr>
-<td>Jesper Moller</td>
-<td>John Arthorne</td>
-<td>John Ross</td>
-<td>Kai Toedter</td>
-</tr>
-<tr>
-<td>Lakshmi Shanmugam</td>
-<td>Lazar Kirchev</td>
-<td>Malgorzata Janczarska
-<td>Manju Mathew</td>
-</tr>
-<tr>
-<td>Markus Keller</td>
-<td>Martin Lippert</td>
-<td>Mengxin Zhu</td>
-<td>Michael Rennie</td>
-</tr>
-<tr>
-<td>Noopur Gupta</td>
-<td>Oleg Besedin</td>
-<td>Olivier Thomann</td>
-<td>Pascal Rapicault</td>
-</tr>
-<tr>
-<td>Paul Elder</td>
-<td>Paul Webster</td>
-<td>Pawel Piech</td>
-<td>Remy Suen</td>
-</tr>
-<tr>
-<td>Silenio Quarti</td>
-<td>Simon Kaegi</td>
-<td>Srikanth Sankaran</td>
-<td>Stephan Herrmann</td>
-</tr>
-<tr>
-<td>Stoyan Boshev</td>
-<td>Szymon Brandys</td>
-<td>Szymon Ptaszkiewicz</td>
-<td>Thanh Ha</td>
-</tr>
-<tr>
-<td>Tobias Oberlies</td>
-<td>Tom Schindl</td>
-<td>Tom Watson</td>
-<td>Tomasz Zarna</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
 </tr>
 </table>
 </p>
