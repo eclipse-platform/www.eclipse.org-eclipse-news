@@ -23,7 +23,7 @@ $App   = new App();  $Nav   = new Nav();  $Menu  = new Menu();
 	   $pageTitle 		= "Primary Development Platform Poll";
        $pageKeywords = "Eclipse reference platform";
        $pageAuthor          = "John Arthorne";
-       $theme = "Nova";
+       $theme = "solstice";
 
 
    # Enable polls on this page

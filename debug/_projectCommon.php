@@ -19,7 +19,7 @@
 	#****************************************************************************
 	
 	$_theme = "Nova";
-	$theme = "Nova";
+	$theme = "solstice";
 	if(isset($_POST['theme'])) {
 		$_theme = $_POST['theme'];
 	}
