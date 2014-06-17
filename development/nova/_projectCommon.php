@@ -59,6 +59,10 @@ $html .='</div></div>';
 $html = mb_convert_encoding($html, "HTML-ENTITIES", "auto");
 $App->Promotion = TRUE;	
 
+// if theme is not provided by caller, we specify "current one", explicitly hard-coded
+if (! isset($theme)) {
+  $theme = "solstice";
+}
 
 $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/eclipse/development/nova/styles.css"/>');
-$App->generatePage('Nova', $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
+$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
