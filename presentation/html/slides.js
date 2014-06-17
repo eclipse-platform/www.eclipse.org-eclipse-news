@@ -1,7 +1,7 @@
 /*
   Google HTML5 slides template
 
-  Authors: Luke Mahé (code)
+  Authors: Luke Mahï¿½ (code)
            Marcin Wichary (code and design)
 
            Dominic Mazzoni (browser compatibility)
