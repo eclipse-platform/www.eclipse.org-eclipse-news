@@ -18,19 +18,7 @@
 	#
 	#****************************************************************************
 	
-	$_theme = "Nova";
 	$theme = "solstice";
-	if(isset($_POST['theme'])) {
-		$_theme = $_POST['theme'];
-	}
-	if($_theme != "" && $App->isValidTheme($_theme)) {
-		setcookie("theme", $_theme);
-		$theme = $_theme;
-	}
-	else {
-		# Get theme from browser, or none default
-		$theme = $App->getUserPreferedTheme();
-	}
 
 	# Defined project nav bar links
 	$Nav->addCustomNav( "About Platform Ant", "/projects/project_summary.php?projectid=eclipse.platform.ant", "", 1);
