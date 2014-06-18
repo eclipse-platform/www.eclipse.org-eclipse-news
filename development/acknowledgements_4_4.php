@@ -63,7 +63,10 @@ ob_start();
         Tim McCraery for the new icons, Andrea Guarinoni for CSS Dark theme bug fix, Victor Rubezhny, Paul Webster, Sarika Sinha and Andrew Ferrazzutti for bug fixes.</p>
       <p>The Platform Ant team would like to thank everyone who helped improve the ant framework by filing bugs, testing and providing patches. Specifically we would like to thank Lars and Tim
         McCraery for the new icons and Thomas Watson for Removing uses of Equinox PlatformAdmin and Sarika Sinha for testing and working on Apache Ant updates.</p>
-      <p>The SWT team would like to thank ...</p>
+      <p>The Platform SWT team would like to thank everyone who filed great bug reports and helped to improve the toolkit. Special thanks go to : Alexander Kurtakov, Anatoly Spektor, Marc-Andre
+        Laperle and Snjezana Peco for significant contributions towards improving the stability of the GTK+ 3 port, and Sami Wagiaalla for contributing a preliminary implementation of the Browser's
+        Webkit2 port. Additional thanks to Steve Northover, Steve Foreman, Roland Oldenburg, Timo Kinnunen, Nicholas Rahn, Lars Vogel, Stephan Herrmann, Mickael Istria, Peter Severin, Dani Megert,
+        Markus Keller, Lina Kemmel and David Williams.</p>
       <p>The release engineering team would like to thank all the committers on Eclipse and Equinox for their timely responses to releng issues and processes. But, in addtion, thanks to those to
         those that have helped improve our build, either directly, or by improvements in infrastrucure or tools we use for our builds, such as Thanh Ha, Igor Fedorenko, and Jan Sievers invaluable
         advice. In addition, we'd like to thank those that provide our "pre-reqs", Scott Lewis and the ECF Team, and Ed Merks, Dennis Huebner, and the EMF team. Their willingness to provide stable
