@@ -90,21 +90,115 @@ ob_start();
         <p>The Equinox team would like to thank ...</p>
         <p>The p2 team would like to thank ... <p>
 
-      <h3>Active Committers [TODO: update from IPLogs/Release Review Materials]</h3>
-      <p>This Eclipse and Equinox release was brought to you by the following committers. These committers were active at the time of the release (one or more commits in the past nine months):</p>
+      <h3>Active Committers</h3>
+      <p>This Eclipse and Equinox release was brought to you by the following committers. These committers were active at the time of the release (one or more commits since previous release::</p>
       <p>
       <table width=100%>
         <tr>
-          <td>...</td>
-          <td>...</td>
-          <td>...</td>
-          <td>...</td>
+          <td>Alexander Kurtakov</td>
+          <td>Alex Blewitt</td>
+          <td>Allon Mureinik</td>
+          <td>Andrea Guarinoni</td>
+          <td>Andrew Ferrazzutti</td>
+          <td>Andrew Niefer</td>
+          <td>Anirban Chakraborty</td>
+          <td>Anton Leherbauer</td>
+          <td>Arun Thondapu</td>
+          <td>Ben Cox</td>
+          <td>BJ Hargrave</td>
+          <td>Bogdan Gheorghe</td>
+          <td>Brian de Alwis</td>
+          <td>Chris Austin</td>
+          <td>Christian Georgi</td>
+          <td>Christoph Keimel</td>
+          <td>Cornel Izbasa</td>
+          <td>Curtis Windatt</td>
+          <td>Daniel Rolka</td>
+          <td>Dani Megert</td>
+          <td>David Williams</td>
+          <td>Denis Roy</td>
+          <td>Dirk Fauth</td>
+          <td>Eric Moffatt</td>
+          <td>Fred Bricon</td>
+          <td>Gorkem Ercan</td>
+          <td>Grant Gayed</td>
+          <td>Gunnar Wagenknecht</td>
+          <td>Hamdan Msheik</td>
+          <td>Hendrik Still</td>
+          <td>Holger Voormann</td>
+          <td>Ian Bull</td>
+          <td>Jayaprakash Arthanareeswaran</td>
+          <td>Jeanderson Candido</td>
+          <td>Jesper Steen Møller</td>
+          <td>John Arthorne</td>
+          <td>John Ross</td>
+          <td>Kai Tödter</td>
+          <td>kdaniel</td>
+          <td>Ken Lee</td>
+          <td>Krzysztof Daniel</td>
+          <td>Lakshmi Shanmugam</td>
+          <td>Lars Vogel</td>
+          <td>Lazar Kirchev</td>
+          <td>Lina Kemmel</td>
+          <td>Malgorzata Janczarska</td>
+          <td>Manju Mathew</td>
+          <td>Manoj Palat</td>
+          <td>Marc-Andre Laperle</td>
+          <td>Markus Duft</td>
+          <td>Markus Keller</td>
+          <td>Martin Lippert</td>
+          <td>Matthias Villiger</td>
+          <td>Michael Rennie</td>
+          <td>Mickael Istria</td>
+          <td>Mikaël Barbero</td>
+          <td>Mike Rennie</td>
+          <td>Mikhail Kalkov</td>
+          <td>MKeck</td>
+          <td>M N Palat</td>
+          <td>Nicholas Rahn</td>
+          <td>Niraj Modi</td>
+          <td>Noopur Gupta</td>
+          <td>Oliver Puetter</td>
+          <td>pablocabrera85</td>
+          <td>Pascal Rapicault</td>
+          <td>Paul Elder</td>
+          <td>Paul Webster</td>
+          <td>René Brandstetter</td>
+          <td>Robin Stocker</td>
+          <td>Roland Oldenburg</td>
+          <td>Sami Wagiaalla</td>
+          <td>Sarika Sinha</td>
+          <td>Satyam Kandula</td>
+          <td>Sergey Prigogin</td>
+          <td>Silenio Quarti</td>
+          <td>Sopot Cela</td>
+          <td>Sravan Kumar Lakkimsetti</td>
+          <td>Srikanth Sankaran</td>
+          <td>Stefan Winkler</td>
+          <td>Stephan Herrmann</td>
+          <td>Steve Foreman</td>
+          <td>Stoyan Boshev</td>
+          <td>Susan McCourt</td>
+          <td>Szymon Brandys</td>
+          <td>Szymon Ptaszkiewicz</td>
+          <td>Thanh Ha</td>
+          <td>Thomas Schindl</td>
+          <td>Thomas Watson</td>
+          <td>Timo Kinnunen</td>
+          <td>Tobias Oberlies</td>
+          <td>Tom Schindl</td>
+          <td>Tony McCrary</td>
+          <td>Vikas Chandra</td>
+          <td>Victor V Rubezhny</td>
+          <td>Wojciech Sudol</td>
         </tr>
       </table>
       </p>
     </div>
 
   </div>
+</body>
+</html>
 
 <?php
   $html = ob_get_contents();
