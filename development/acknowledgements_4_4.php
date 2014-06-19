@@ -143,31 +143,25 @@ ob_start();
       <table width="100%">
         <tr>
           <td width="25%">Anirban Chakraborty</td>
-          <td width="25%">Andrew Clement</td>
-          <td width="25%">Ayushman Jain</td>
-          <td width="25%">Benno Baumgartner</td>
-        </tr>
-        <tr>
           <td width="25%">Curtis Windatt</td>
           <td width="25%">Dani Megert</td>
           <td width="25%">Deepak Azad</td>
-          <td width="25%">Jayaprakash Arthanareeswaran</td>
         </tr>
         <tr>
+          <td width="25%">Jayaprakash Arthanareeswaran</td>
           <td width="25%">Jesper Moller</td>
           <td width="25%">Manju Mathew</td>
           <td width="25%">Manoj Palat</td>
-          <td width="25%">Markus Keller</td>
         </tr>
         <tr>
+          <td width="25%">Markus Keller</td>
           <td width="25%">Michael Rennie</td>
           <td width="25%">Noopur Gupta</td>
-          <td width="25%">Olivier Thomann</td>
-          <td width="25%">Srikanth Sankaran</td>
+          <td width="25%">Sarika Sinha</td>
         </tr>
         <tr>
+          <td width="25%">Srikanth Sankaran</td>
           <td width="25%">Stephan Herrmann</td>
-          <td width="25%">&nbsp;</td>
           <td width="25%">&nbsp;</td>
           <td width="25%">&nbsp;</td>
         </tr>
