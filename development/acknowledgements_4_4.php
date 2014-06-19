@@ -90,7 +90,127 @@ ob_start();
         <p>The Equinox team would like to thank ...</p>
         <p>The p2 team would like to thank ... <p>
 
-
+      <h3>Active Committers</h3>
+      <p>This Eclipse and Equinox release was brought to you by the following committers. These committers were active at the time of the release (that is, one or more commits since previous
+        release.)</p>
+      <p>
+      <h4>Eclipse Platform</h4>
+      <table width="100%">
+        <tr>
+          <td width="25%">Alexander Kurtakov</td>
+          <td width="25%">Arun Thondapu</td>
+          <td width="25%">Bogdan Gheorghe</td>
+          <td width="25%">Brian de Alwis</td>
+        </tr>
+        <tr>
+          <td width="25%">Chris Austin</td>
+          <td width="25%">Curtis Windatt</td>
+          <td width="25%">Dani Megert</td>
+          <td width="25%">Daniel Rolka</td>
+        </tr>
+        <tr>
+          <td width="25%">David Williams</td>
+          <td width="25%">Eric Moffatt</td>
+          <td width="25%">Grant Gayed</td>
+          <td width="25%">John Arthorne</td>
+        </tr>
+        <tr>
+          <td width="25%">Lakshmi Priya Shanmugam</td>
+          <td width="25%">Lars Vogel</td>
+          <td width="25%">Lina Kemmel</td>
+          <td width="25%">Malgorzata Janczarska</td>
+        </tr>
+        <tr>
+          <td width="25%">Markus Keller</td>
+          <td width="25%">Michael Rennie</td>
+          <td width="25%">Niraj Modi</td>
+          <td width="25%">Paul Elder</td>
+        </tr>
+        <tr>
+          <td width="25%">Paul Webster</td>
+          <td width="25%">Silenio Quarti</td>
+          <td width="25%">Szymon Ptaszkiewicz</td>
+          <td width="25%">Thanh Ha</td>
+        </tr>
+        <tr>
+          <td width="25%">Thomas Watson</td>
+          <td width="25%">Wojciech Sudol</td>
+          <td width="25%">&nbsp;</td>
+          <td width="25%">&nbsp;</td>
+        </tr>
+      </table>
+      <h4>Eclipse JDT</h4>
+      <table width="100%">
+        <tr>
+          <td width="25%">Anirban Chakraborty</td>
+          <td width="25%">Andrew Clement</td>
+          <td width="25%">Ayushman Jain</td>
+          <td width="25%">Benno Baumgartner</td>
+        </tr>
+        <tr>
+          <td width="25%">Curtis Windatt</td>
+          <td width="25%">Dani Megert</td>
+          <td width="25%">Deepak Azad</td>
+          <td width="25%">Jayaprakash Arthanareeswaran</td>
+        </tr>
+        <tr>
+          <td width="25%">Jesper Moller</td>
+          <td width="25%">Manju Mathew</td>
+          <td width="25%">Manoj Palat</td>
+          <td width="25%">Markus Keller</td>
+        </tr>
+        <tr>
+          <td width="25%">Michael Rennie</td>
+          <td width="25%">Noopur Gupta</td>
+          <td width="25%">Olivier Thomann</td>
+          <td width="25%">Srikanth Sankaran</td>
+        </tr>
+        <tr>
+          <td width="25%">Stephan Herrmann</td>
+          <td width="25%">&nbsp;</td>
+          <td width="25%">&nbsp;</td>
+          <td width="25%">&nbsp;</td>
+        </tr>
+      </table>
+      <h4>Eclipse PDE</h4>
+      <table width="100%">
+        <tr>
+          <td width="25%">Andrew Niefer</td>
+          <td width="25%">Curtis Windatt</td>
+          <td width="25%">Dani Megert</td>
+          <td width="25%">Michael Rennie</td>
+        </tr>
+      </table>
+      <h4>Equinox</h4>
+      <table width="100%">
+        <tr>
+          <td width="25%">Arun Thondapu</td>
+          <td width="25%">BJ Hargrave</td>
+          <td width="25%">John Arthorne</td>
+          <td width="25%">John Ross</td>
+        </tr>
+        <tr>
+          <td width="25%">Lazar Kirchev</td>
+          <td width="25%">Martin Lippert</td>
+          <td width="25%">Silenio Quarti</td>
+          <td width="25%">Thomas Watson</td>
+        </tr>
+      </table>
+      <h4>Equinox - p2</h4>
+      <table width="100%">
+        <tr>
+          <td width="25%">Ian Bull</td>
+          <td width="25%">John Arthorne</td>
+          <td width="25%">Krzysztof Daniel</td>
+          <td width="25%">Pascal Rapicault</td>
+        </tr>
+        <tr>
+          <td width="25%">Susan McCourt</td>
+          <td width="25%">Thomas Watson</td>
+          <td width="25%">&nbsp;</td>
+          <td width="25%">&nbsp;</td>
+        </tr>
+      </table>
     </div>
 
   </div>
