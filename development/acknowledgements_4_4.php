@@ -133,9 +133,9 @@ ob_start();
           <td width="25%">Thanh Ha</td>
         </tr>
         <tr>
+          <td width="25%">Thomas Schindl</td>
           <td width="25%">Thomas Watson</td>
           <td width="25%">Wojciech Sudol</td>
-          <td width="25%">&nbsp;</td>
           <td width="25%">&nbsp;</td>
         </tr>
       </table>
