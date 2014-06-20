@@ -103,113 +103,113 @@ ob_start();
         release.)</p>
       <p>
       <h4>Eclipse Platform</h4>
-      <table width="100%">
+      <table width="92%" align="center">
         <tr>
-          <td width="25%">Alexander Kurtakov</td>
-          <td width="25%">Arun Thondapu</td>
-          <td width="25%">Atsuhiko Yamanaka</td>
-          <td width="25%">Bogdan Gheorghe</td>
+          <td width="23%">Alexander Kurtakov</td>
+          <td width="23%">Arun Thondapu</td>
+          <td width="23%">Atsuhiko Yamanaka</td>
+          <td width="23%">Bogdan Gheorghe</td>
         </tr>
         <tr>
-          <td width="25%">Brian de Alwis</td>
-          <td width="25%">Chris Austin</td>
-          <td width="25%">Curtis Windatt</td>
-          <td width="25%">Dani Megert</td>
+          <td width="23%">Brian de Alwis</td>
+          <td width="23%">Chris Austin</td>
+          <td width="23%">Curtis Windatt</td>
+          <td width="23%">Dani Megert</td>
         </tr>
         <tr>
-          <td width="25%">Daniel Rolka</td>
-          <td width="25%">David Williams</td>
-          <td width="25%">Eric Moffatt</td>
-          <td width="25%">Grant Gayed</td>
+          <td width="23%">Daniel Rolka</td>
+          <td width="23%">David Williams</td>
+          <td width="23%">Eric Moffatt</td>
+          <td width="23%">Grant Gayed</td>
         </tr>
         <tr>
-          <td width="25%">John Arthorne</td>
-          <td width="25%">Lakshmi Priya Shanmugam</td>
-          <td width="25%">Lars Vogel</td>
-          <td width="25%">Lina Kemmel</td>
+          <td width="23%">John Arthorne</td>
+          <td width="23%">Lakshmi Priya Shanmugam</td>
+          <td width="23%">Lars Vogel</td>
+          <td width="23%">Lina Kemmel</td>
         </tr>
         <tr>
-          <td width="25%">Malgorzata Janczarska</td>
-          <td width="25%">Markus Keller</td>
-          <td width="25%">Michael Rennie</td>
-          <td width="25%">Niraj Modi</td>
+          <td width="23%">Malgorzata Janczarska</td>
+          <td width="23%">Markus Keller</td>
+          <td width="23%">Michael Rennie</td>
+          <td width="23%">Niraj Modi</td>
         </tr>
         <tr>
-          <td width="25%">Paul Elder</td>
-          <td width="25%">Paul Webster</td>
-          <td width="25%">Silenio Quarti</td>
-          <td width="25%">Szymon Brandys</td>
+          <td width="23%">Paul Elder</td>
+          <td width="23%">Paul Webster</td>
+          <td width="23%">Silenio Quarti</td>
+          <td width="23%">Szymon Brandys</td>
         </tr>
         <tr>
-          <td width="25%">Szymon Ptaszkiewicz</td>
-          <td width="25%">Thanh Ha</td>
-          <td width="25%">Thomas Schindl</td>
-          <td width="25%">Thomas Watson</td>
+          <td width="23%">Szymon Ptaszkiewicz</td>
+          <td width="23%">Thanh Ha</td>
+          <td width="23%">Thomas Schindl</td>
+          <td width="23%">Thomas Watson</td>
         </tr>
         <tr>
-          <td width="25%">Wojciech Sudol</td>
+          <td width="23%">Wojciech Sudol</td>
         </tr>
       </table>
       <h4>Eclipse JDT</h4>
-      <table width="100%">
+      <table width="92%" align="center">
         <tr>
-          <td width="25%">Anirban Chakraborty</td>
-          <td width="25%">Curtis Windatt</td>
-          <td width="25%">Dani Megert</td>
-          <td width="25%">Deepak Azad</td>
+          <td width="23%">Anirban Chakraborty</td>
+          <td width="23%">Curtis Windatt</td>
+          <td width="23%">Dani Megert</td>
+          <td width="23%">Deepak Azad</td>
         </tr>
         <tr>
-          <td width="25%">Jayaprakash Arthanareeswaran</td>
-          <td width="25%">Jesper Moller</td>
-          <td width="25%">Manju Mathew</td>
-          <td width="25%">Manoj Palat</td>
+          <td width="23%">Jayaprakash Arthanareeswaran</td>
+          <td width="23%">Jesper Moller</td>
+          <td width="23%">Manju Mathew</td>
+          <td width="23%">Manoj Palat</td>
         </tr>
         <tr>
-          <td width="25%">Markus Keller</td>
-          <td width="25%">Michael Rennie</td>
-          <td width="25%">Noopur Gupta</td>
-          <td width="25%">Sarika Sinha</td>
+          <td width="23%">Markus Keller</td>
+          <td width="23%">Michael Rennie</td>
+          <td width="23%">Noopur Gupta</td>
+          <td width="23%">Sarika Sinha</td>
         </tr>
         <tr>
-          <td width="25%">Srikanth Sankaran</td>
-          <td width="25%">Stephan Herrmann</td>
+          <td width="23%">Srikanth Sankaran</td>
+          <td width="23%">Stephan Herrmann</td>
         </tr>
       </table>
       <h4>Eclipse PDE</h4>
-      <table width="100%">
+      <table width="92%" align="center">
         <tr>
-          <td width="25%">Andrew Niefer</td>
-          <td width="25%">Curtis Windatt</td>
-          <td width="25%">Dani Megert</td>
-          <td width="25%">Michael Rennie</td>
+          <td width="23%">Andrew Niefer</td>
+          <td width="23%">Curtis Windatt</td>
+          <td width="23%">Dani Megert</td>
+          <td width="23%">Michael Rennie</td>
         </tr>
       </table>
       <h4>Equinox</h4>
-      <table width="100%">
+      <table width="92%" align="center">
         <tr>
-          <td width="25%">Arun Thondapu</td>
-          <td width="25%">BJ Hargrave</td>
-          <td width="25%">John Arthorne</td>
-          <td width="25%">John Ross</td>
+          <td width="23%">Arun Thondapu</td>
+          <td width="23%">BJ Hargrave</td>
+          <td width="23%">John Arthorne</td>
+          <td width="23%">John Ross</td>
         </tr>
         <tr>
-          <td width="25%">Lazar Kirchev</td>
-          <td width="25%">Martin Lippert</td>
-          <td width="25%">Silenio Quarti</td>
-          <td width="25%">Thomas Watson</td>
+          <td width="23%">Lazar Kirchev</td>
+          <td width="23%">Martin Lippert</td>
+          <td width="23%">Silenio Quarti</td>
+          <td width="23%">Thomas Watson</td>
         </tr>
       </table>
       <h4>Equinox - p2</h4>
-      <table width="100%">
+      <table width="92%" align="center">
         <tr>
-          <td width="25%">Ian Bull</td>
-          <td width="25%">John Arthorne</td>
-          <td width="25%">Krzysztof Daniel</td>
-          <td width="25%">Pascal Rapicault</td>
+          <td width="23%">Ian Bull</td>
+          <td width="23%">John Arthorne</td>
+          <td width="23%">Krzysztof Daniel</td>
+          <td width="23%">Pascal Rapicault</td>
         </tr>
         <tr>
-          <td width="25%">Susan McCourt</td>
-          <td width="25%">Thomas Watson</td>
+          <td width="23%">Susan McCourt</td>
+          <td width="23%">Thomas Watson</td>
         </tr>
       </table>
     </div>
@@ -217,6 +217,7 @@ ob_start();
   </div>
 </body>
 </html>
+
 
 <?php
   $html = ob_get_contents();
