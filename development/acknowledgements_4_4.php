@@ -107,44 +107,47 @@ ob_start();
         <tr>
           <td width="25%">Alexander Kurtakov</td>
           <td width="25%">Arun Thondapu</td>
+          <td width="25%">Atsuhiko Yamanaka</td>
           <td width="25%">Bogdan Gheorghe</td>
-          <td width="25%">Brian de Alwis</td>
         </tr>
         <tr>
+          <td width="25%">Brian de Alwis</td>
           <td width="25%">Chris Austin</td>
           <td width="25%">Curtis Windatt</td>
           <td width="25%">Dani Megert</td>
-          <td width="25%">Daniel Rolka</td>
         </tr>
         <tr>
+          <td width="25%">Daniel Rolka</td>
           <td width="25%">David Williams</td>
           <td width="25%">Eric Moffatt</td>
           <td width="25%">Grant Gayed</td>
-          <td width="25%">John Arthorne</td>
         </tr>
         <tr>
+          <td width="25%">John Arthorne</td>
           <td width="25%">Lakshmi Priya Shanmugam</td>
           <td width="25%">Lars Vogel</td>
           <td width="25%">Lina Kemmel</td>
-          <td width="25%">Malgorzata Janczarska</td>
         </tr>
         <tr>
+          <td width="25%">Malgorzata Janczarska</td>
           <td width="25%">Markus Keller</td>
           <td width="25%">Michael Rennie</td>
           <td width="25%">Niraj Modi</td>
-          <td width="25%">Paul Elder</td>
         </tr>
         <tr>
+          <td width="25%">Paul Elder</td>
           <td width="25%">Paul Webster</td>
           <td width="25%">Silenio Quarti</td>
-          <td width="25%">Szymon Ptaszkiewicz</td>
-          <td width="25%">Thanh Ha</td>
+          <td width="25%">Szymon Brandys</td>
         </tr>
         <tr>
+          <td width="25%">Szymon Ptaszkiewicz</td>
+          <td width="25%">Thanh Ha</td>
           <td width="25%">Thomas Schindl</td>
           <td width="25%">Thomas Watson</td>
+        </tr>
+        <tr>
           <td width="25%">Wojciech Sudol</td>
-          <td width="25%">&nbsp;</td>
         </tr>
       </table>
       <h4>Eclipse JDT</h4>
@@ -170,8 +173,6 @@ ob_start();
         <tr>
           <td width="25%">Srikanth Sankaran</td>
           <td width="25%">Stephan Herrmann</td>
-          <td width="25%">&nbsp;</td>
-          <td width="25%">&nbsp;</td>
         </tr>
       </table>
       <h4>Eclipse PDE</h4>
@@ -209,8 +210,6 @@ ob_start();
         <tr>
           <td width="25%">Susan McCourt</td>
           <td width="25%">Thomas Watson</td>
-          <td width="25%">&nbsp;</td>
-          <td width="25%">&nbsp;</td>
         </tr>
       </table>
     </div>
