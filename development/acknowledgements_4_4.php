@@ -87,7 +87,15 @@ ob_start();
         Eclipse developers and members of the community including: Ben Cox, Andrea Guarinoni, Mickael Istria, Alexander Kurtakov, Marc-Andre Laperle, Eike Stepper, Anton Tanasenko, Matthias Villiger,
         Lars Vogel, and Jesse Weinstein.</p>
 
-        <p>The Equinox team would like to thank ...</p>
+      <p>The Equinox team would like to thank the entire Eclipse team and community for supporting us while we
+        did significant refactoring of the core Equinox OSGi framework implementation.  Such a massive change
+        would not have been successful without the necessary support and testing to get the new implementation in 
+        milestone 1.  A special thanks to David Williams for his countless hours keeping the releng machine
+        moving.  This release also included an implementation of the new R6 OSGi Core Framework
+        specification.  Thanks to the OSGi Alliance for continued improvements to the OSGi specification and 
+        working with us to help identify specification bugs while implementing the framework reference 
+        implementation.  Finally, thanks to everyone who provided bug reports and contributed fixes.
+        </p>
         <p>The p2 team would like to thank ... <p>
 
       <h3>Active Committers</h3>
