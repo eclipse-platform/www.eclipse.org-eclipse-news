@@ -96,7 +96,6 @@ ob_start();
         working with us to help identify specification bugs while implementing the framework reference 
         implementation.  Finally, thanks to everyone who provided bug reports and contributed fixes.
         </p>
-        <p>The p2 team would like to thank ... <p>
 
       <h3>Active Committers</h3>
       <p>This Eclipse and Equinox release was brought to you by the following committers. These committers were active at the time of the release (that is, one or more commits since previous
