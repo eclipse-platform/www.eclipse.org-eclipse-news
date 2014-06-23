@@ -10,7 +10,7 @@ function innerHTML($el) {
 }
 
 if(!isset($keyword) OR $keyword == ""){
-	$keyword = "eclipse 4.2, eclipse";
+	$keyword = "eclipse 4.4, eclipse";
 }
 
 $file = basename($App->getScriptName(), ".php").'.html';
