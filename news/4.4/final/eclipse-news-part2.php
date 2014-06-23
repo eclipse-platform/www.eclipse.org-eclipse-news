@@ -7,4 +7,4 @@ $Nav	= new Nav();
 $Menu 	= new Menu();
 $right_nav = FALSE;	
 $keyword = 'news, new and noteworthy, eclipse';
-require_once($_SERVER['DOCUMENT_ROOT'] ."/eclipse/development/nova/_projectCommon.php");
+require_once($_SERVER['DOCUMENT_ROOT'] ."/eclipse/development/nova/_projectCommonWithHead.php");
