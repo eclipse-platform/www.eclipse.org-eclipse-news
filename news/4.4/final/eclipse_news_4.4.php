@@ -1,4 +1,5 @@
 <?php  																														
+$SERVER_NAME="localhost";
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 
@@ -7,4 +8,4 @@ $Nav	= new Nav();
 $Menu 	= new Menu();
 $right_nav = FALSE;	
 $keyword = 'news, new and noteworthy, eclipse';
-require_once($_SERVER['DOCUMENT_ROOT'] ."/eclipse/development/nova/_projectCommon.php");
+require("newsCommon.php");
