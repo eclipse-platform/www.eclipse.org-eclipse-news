@@ -16,7 +16,7 @@ if(!isset($keyword) OR $keyword == ""){
 }
 
 $file = basename($App->getScriptName(), ".php").'.html';
-echo "file: $file";
+
 $doc = new DOMDocument;
 $doc->loadhtmlfile($file);
 
