@@ -14,7 +14,7 @@
 	</ul></p>" },
 			{"component": "CommonNavigator","assignee": "drolka", 	"description": "The generic navigator API (org.eclipse.ui.navigator)."},
 			{"component": "Contexts", 		"assignee": "drolka", "description": "Support for context grouping of functionality"},
-			{"component": "EclipseContexts", 		"assignee": "wsudol", "description": "Eclipse4 IEclipseContext support, the OSGI context, and IContextFunctions"},
+			{"component": "EclipseContexts", 		"assignee": "drolka", "description": "Eclipse4 IEclipseContext support, the OSGI context, and IContextFunctions"},
 			{"component": "Contributions", 	"assignee": "drolka", "description": "ContributionManager, ContributionItem hierarchy, org.eclipse.jface.action, action contributions from plugin.xml\
 	<ul>\
 		<li><em>adapters</em>.  Anything to do with the adapter mechanism and its friends.</li>\
@@ -33,7 +33,7 @@
 			{"component": "CSS", 		"assignee": "drolka", "description": "CSS support in eclipse, including the CSS engine"},
 			{"component": "DataBinding", 	"assignee": "wsudol","description": "JFace Data Binding" },
 			{"component": "Decorators", 	"assignee": "drolka", "description": "Decorators mechanism and Label Decorations preference page"},
-			{"component": "DI", 	"assignee": "wsudol", "description": "The Dependency Injection and invocation mechanisms for Eclipse4"},
+			{"component": "DI", 	"assignee": "drolka", "description": "The Dependency Injection and invocation mechanisms for Eclipse4"},
 			{"component": "DetachedView", 	"assignee": "wsudol", "description": "Views and editors in separate windows"},
 			{"component": "Dialogs", 		"assignee": "wsudol","description": "JFace and UI dialogs other than IDE, Filtered Items/Open Resource"},
 			{"component": "DND", 			"assignee": "wsudol", "description": "Drag and Drop. Does not include dragging views and editors."},
