@@ -31,6 +31,7 @@ var PlatformTriageHelper = {
 	Page: {
 		component: {},
 		product: {},
+		qa_contact: {},
 		keywords: {},
 		comment: {},
 		assigned_to: {},
@@ -47,6 +48,9 @@ var PlatformTriageHelper = {
 				}
 				if (PlatformTriageHelper.Page.els[i].name == "product") {
 					PlatformTriageHelper.Page.product = PlatformTriageHelper.Page.els[i];
+				}
+				if (PlatformTriageHelper.Page.els[i].name == "qa_contact") {
+					PlatformTriageHelper.Page.qa_contact = PlatformTriageHelper.Page.els[i];
 				}
 				if (PlatformTriageHelper.Page.els[i].name == "keywords") {
 					PlatformTriageHelper.Page.keywords = PlatformTriageHelper.Page.els[i];
@@ -103,6 +107,7 @@ var PlatformTriageHelper = {
 			var b=document.getElementById('assigned_to');
 			if (b!=null) {
 				b.value = PlatformTriageHelper.Constants.triagedOwner;
+				PlatformTriageHelper.Page.qa_contact.value='';				
 			}
 
 			var s = document.getElementById('short_desc').value;
