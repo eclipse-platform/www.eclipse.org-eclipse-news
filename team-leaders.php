@@ -97,7 +97,7 @@ ob_start();
 		          <b><a name="aleksandar"></a>Aleksandar Kurtakov, Red Hat Inc.</b><br>
 					Aleksandar is part of Red Hat's Eclipse team. He is Platform SWT committer, Tools PMC member and leads the <a href="http://www.eclipse.org/linuxtools/">Linux Tools</a> project.
 					He is very interested in deeper native platform integration both as runtime experience and as distribution channel.
-					He is also interested in growing the contributors and better alligning with modern systems.
+					He is also interested in growing the contributors and better aligning with modern systems.
 		        </li>
 		      </ul>
 		</div>
@@ -107,7 +107,7 @@ ob_start();
 		      <ul>
 		        <li> 
 		          <b><a name="erich"></a>Erich Gamma</b><br>
-					Erich is the original lead of the Eclipse Java development environment.
+					Erich was the original lead of the Eclipse Java development environment.
 					Prior to working on Eclipse he contributed to VA/Micro Edition (part
 					of IBM's Java solution for embedded device programming). Erich is well known for
 					his work on Design Patterns and <a href="http://www.junit.org/" target="_top">JUnit</a>.
@@ -151,7 +151,7 @@ ob_start();
 			      Steve Northover is the father of SWT (the Standard Widget Toolkit). Prior to
 			      working on Eclipse, he worked on IBM Smalltalk, VA/Java, VA/Micro Edition.
 			      His interests include programming languages, API design, operating systems,
-			      user intefaces and code optimization.
+			      user interfaces and code optimization.
 		        </li>
 		        <li> 
 		          <b><a name="johnw"></a>John Wiegand</b><br>
