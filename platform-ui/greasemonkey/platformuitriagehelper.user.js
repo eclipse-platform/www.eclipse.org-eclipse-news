@@ -37,11 +37,13 @@ var PlatformTriageHelper = {
 		assigned_to: {},
 		short_desc: {},
 		els: null,
-		myDiv: document.createElement('div'),
-		header: document.getElementById('header'),
-		
+		myDiv: null,
+		header: null,
+
 		init: function() {
 			PlatformTriageHelper.Page.els = document.forms[1].elements;
+			PlatformTriageHelper.Page.myDiv = document.createElement('div');
+			PlatformTriageHelper.Page.header = document.getElementById('header');
 			for (var i = 0; i < PlatformTriageHelper.Page.els.length; i++) {
 				if (PlatformTriageHelper.Page.els[i].name == "component") {
 					PlatformTriageHelper.Page.component = PlatformTriageHelper.Page.els[i];
