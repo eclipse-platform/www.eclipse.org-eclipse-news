@@ -195,7 +195,7 @@ ob_start();
 		   <p>
 		   Release candidate 1 is a warm-up build to ensure the release train build
 		   process is in place and all projects are making contributions. All fixes submitted 
-		   to maintenance stream builds must have a component lead vote on the bug report,
+		   to maintenance stream builds must have a component lead or PMC vote on the bug report,
 		   and the fix must be reviewed by an additional committer (any committer other than
 		   the one who made the fix).
 		   </p>
@@ -205,7 +205,7 @@ ob_start();
 	        Release candidate containing fixes for the majority of known outstanding 
 	        defects that we intend to fix for Luna 4.4 SR1. At the end of RC2 build, 
 	        there should not be any open defects tagged 4.4.1. All fixes submitted 
-	        to maintenance stream builds must have a component lead vote on the bug report,
+	        to maintenance stream builds must have a component lead or PMC vote on the bug report,
 	        and the fix must be reviewed by an additional committer (any committer other than
 	        the one who made the fix).
 	        </p>               
