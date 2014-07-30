@@ -183,7 +183,8 @@ ob_start();
 			Here are some holidays during the freeze period to keep in mind:
 			<ul>
 				<li>August 1 - Switzerland</li>
-				<li>August 15 - Poland</li>
+				<li>August 15 - Poland and Bangalore, India</li>
+				<li>August 29 - Bangalore, India</li>
 				<li>September 1 - Canada and United States</li>
 				<li>Afternoon of September 15 - Zurich, Switzerland</li>
 			</ul>
