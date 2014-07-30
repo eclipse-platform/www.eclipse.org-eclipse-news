@@ -91,7 +91,7 @@ ob_start();
 	            <td class="date">14</td>
 	            <td class="date">Thu 08:00 EDT</td>
 	            <td></td>
-	            <td>sign-off</td>
+	            <td>Sign-off</td>
 	            <td></td>
 	          </tr>
 	          <tr>
@@ -99,7 +99,7 @@ ob_start();
 	            <td class="date">15</td>
 	            <td class="date">Fri</td>
 	            <td></td>
-	            <td>Submit to release train/td>
+	            <td>Submit to release train</td>
 	            <td></td>
 	          </tr>
 			  <tr>
@@ -123,10 +123,10 @@ ob_start();
 	          </tr>
 	          <tr>
 	            <td></td>
-	            <td class="date">28</td>
+	            <td class="date">29</td>
 	            <td class="date">Fri</td>
 	            <td></td>
-	            <td>Submit to release train/td>
+	            <td>Submit to release train</td>
 	            <td></td>
 	          </tr>
 	          <tr>
@@ -164,7 +164,7 @@ ob_start();
 	            <td class="date">5</td>
 	            <td class="date">Fri</td>
 	            <td></td>
-	            <td>Submit to release train/td>
+	            <td>Submit to release train</td>
 	            <td></td>
 	          </tr>
 			  <tr>
