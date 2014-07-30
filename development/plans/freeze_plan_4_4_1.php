@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2014-07-29
+	# Date:			2014-07-30
 	#
 	# Description: Eclipse project 4.4.1 release freeze plan
 	#
@@ -45,7 +45,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>July 29, 2014 - working towards Luna SR1 RC1.</b></p>
+			<p><b>July 30, 2014 - working towards Luna SR1 RC1.</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -85,7 +85,23 @@ ob_start();
 	            <td></td>
 	            <td>Release Candidate 1 build</td>
 	            <td></td>
-	          </tr>         
+	          </tr>
+	          <tr>
+	            <td></td>
+	            <td class="date">14</td>
+	            <td class="date">Thu 08:00 EDT</td>
+	            <td></td>
+	            <td>sign-off</td>
+	            <td></td>
+	          </tr>
+	          <tr>
+	            <td></td>
+	            <td class="date">15</td>
+	            <td class="date">Fri</td>
+	            <td></td>
+	            <td>Submit to release train/td>
+	            <td></td>
+	          </tr>
 			  <tr>
 	            <td class="spacer">&nbsp;</td>
 	          </tr>
@@ -96,15 +112,23 @@ ob_start();
 	            <td></td>
 	            <td>Release Candidate 2 build</td>
 	            <td></td>
-	          </tr>         
+	          </tr>
 	          <tr>
 	            <td></td>
 	            <td class="date">28</td>
 	            <td class="date">Thu 08:00 EDT</td>
 	            <td></td>
-	            <td>Start 1-day test pass against RC2</td>
+	            <td>1-day test pass against RC2 and sign-off</td>
 	            <td></td>
-	          </tr>         
+	          </tr>
+	          <tr>
+	            <td></td>
+	            <td class="date">28</td>
+	            <td class="date">Fri</td>
+	            <td></td>
+	            <td>Submit to release train/td>
+	            <td></td>
+	          </tr>
 	          <tr>
 	            <td>September 2014</td>
 	          </tr>
@@ -126,15 +150,23 @@ ob_start();
 	            <td></td>
 	            <td>Release Candidate 3 build</td>
 	            <td></td>
-	          </tr>         
+	          </tr>
 	          <tr>
 	            <td></td>
 	            <td class="date">4</td>
 	            <td class="date">Thu 08:00 EDT</td>
 	            <td></td>
-	            <td>Start 1-day test pass against RC3</td>
+	            <td>1-day test pass against RC3 and sign-off</td>
 	            <td></td>
-	          </tr>         
+	          </tr>
+	          <tr>
+	            <td></td>
+	            <td class="date">5</td>
+	            <td class="date">Fri</td>
+	            <td></td>
+	            <td>Submit to release train/td>
+	            <td></td>
+	          </tr>
 			  <tr>
 	            <td class="spacer">&nbsp;</td>
 	          </tr>
@@ -145,7 +177,7 @@ ob_start();
 	            <td></td>
 	            <td>Release Candidate 4 build [if required]</td>
 	            <td></td>
-	          </tr>         
+	          </tr>
 	        </table>
 			<p>
 			Here are some holidays during the freeze period to keep in mind:
@@ -208,7 +240,7 @@ ob_start();
 	        to maintenance stream builds must have a component lead or PMC vote on the bug report,
 	        and the fix must be reviewed by an additional committer (any committer other than
 	        the one who made the fix).
-	        </p>               
+	        </p>      
 	
 	        <strong>Test pass using RC2</strong>
 	        <p>Concerted 1-day testing effort using RC2 involving entire community including 
@@ -228,7 +260,7 @@ ob_start();
 	           including all component teams. The goal is to verify all the fixes, check 
 	           for any regressions and sanity check our RC3 candidate.
 	         </p>
-	         
+	
 	         <strong>RC4</strong>
 	         <p>Release candidate 4, if required, to fix problems detected during the test pass.
 	         We expect NO CHANGE at this point. If you find a show stopper, please notify ASAP the 
@@ -238,7 +270,7 @@ ob_start();
 	         </p>
 	         <p>No test pass is scheduled unless significant contributions occurred. If so, 
 	         then Thursday would be elected for a one day test pass</p>
-	         
+	
 			<strong>API change approval</strong>
 	        <p>
 			No API changes are expected during a maintenance release. Any exception must be
@@ -255,10 +287,10 @@ ob_start();
 	              coordinated service release</a> . If product teams intending 
 	              to ship on Luna 4.4 SR1 uncover further serious defects during the endgame, 
 	              we may schedule additional release candidate builds to incorporate fixes.
-			</p>             
+			</p>    
 		</div>
 	</div>
-              
+
 <?php
 	$html = ob_get_contents();
 	ob_end_clean();
