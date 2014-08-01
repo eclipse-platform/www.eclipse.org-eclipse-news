@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2014-07-30
+	# Date:			2014-08-01
 	#
 	# Description: Eclipse project 4.4.1 release freeze plan
 	#
@@ -16,7 +16,7 @@
 	
 	#
 	# Begin: page-specific settings.  Change these. 
-	$pageTitle 		= "Eclipse Luna (4.4) SR1 Endgame Plan";
+	$pageTitle 		= "Eclipse Luna SR1 (4.4.1) Endgame Plan";
 	$pageKeywords	= "eclipse, 4.4.1, SR1, milestone, schedule, endgame";
 	$pageAuthor		= "";
 	
@@ -202,23 +202,23 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>What is the game plan?</h3>
 			<p> 
-	 		The Eclipse Luna (4.4) Service Release 1 ("Luna (4.4) SR1") endgame involves building 
+	 		The Eclipse Luna Service Release 1 ("Luna SR1 (4.4.1)") endgame involves building 
 	        a series of release candidates leading to the Eclipse project's contribution to the
-	        Luna (4.4) SR1 release. The Eclipse project version number for this release is 4.4.1.
+	        Luna SR1 (4.4.1) release. The Eclipse project version number for this release is 4.4.1.
 	        By its nature, this maintenance release contains fixes to a small number 
 	        of serious problems found in the June 2014 Luna (4.4) release. We make and verify each 
 	        fix carefully, so that we do not need to tie up the entire development 
 	        team in time-consuming test passes. As always, we welcome help from the 
-	        community with testing the release candidates. By default, Luna (4.4) SR1
+	        community with testing the release candidates. By default, Luna SR1 (4.4.1)
 	        is supposed to work exactly like the initial Luna (4.4) release except for the problems we intended 
-	        to fix. All problems fixed in Luna (4.4) SR1 are in the Eclipse bugzilla database 
+	        to fix. All problems fixed in Luna SR1 (4.4.1) are in the Eclipse bugzilla database 
 	        and flagged with Target Milestone &quot;4.4.1&quot; (query bugzilla for 
 	        the <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;resolution=FIXED;target_milestone=4.4.1;product=Equinox;product=JDT;product=PDE;product=Platform;classification=Eclipse;classification=RT">complete 
-	        list of bugs fixed in Luna (4.4) SR1</a>). So we're most interested in identifying 
+	        list of bugs fixed in Luna SR1 (4.4.1)</a>). So we're most interested in identifying 
 	        regressions where we've changed something that we did not intend to.
 	        </p> 
 
-	        <p>General announcements during the Luna (4.4) SR1 endgame are posted to the 
+	        <p>General announcements during the Luna SR1 (4.4.1) endgame are posted to the 
 	        <a href="http://dev.eclipse.org/mailman/listinfo/platform-releng-dev">platform-releng-dev@eclipse.org</a> 
 		    developer mailing list. Anyone participating in the endgame should be subscribed 
 			to this list, and should direct any general questions and comments about the process 
@@ -236,7 +236,7 @@ ob_start();
 		   <strong>RC2</strong>
 		   <p>
 	        Release candidate containing fixes for the majority of known outstanding 
-	        defects that we intend to fix for Luna (4.4) SR1. At the end of RC2 build, 
+	        defects that we intend to fix for Luna SR1 (4.4.1). At the end of RC2 build, 
 	        there should not be any open defects tagged 4.4.1. All fixes submitted 
 	        to maintenance stream builds must have a component lead or PMC vote on the bug report,
 	        and the fix must be reviewed by an additional committer (any committer other than
@@ -250,7 +250,7 @@ ob_start();
 	
 	        <strong>RC3</strong>
 	        <p>Release candidate containing fixes for all known outstanding defects
-	        that we intend to fix for Luna (4.4) SR1. All fixes submitted to RC3 must have a PMC vote on the bug report,
+	        that we intend to fix for Luna SR1 (4.4.1). All fixes submitted to RC3 must have a PMC vote on the bug report,
 	        and the fix must be reviewed by an additional committer (any committer other than
 	        the one who made the fix).
 	        Ensure that all feature/plugin versions have been consistently incremented when needed.
@@ -282,11 +282,11 @@ ob_start();
 			in the same way as any other API change requests.	
 			</p>
 			
-			<strong>Luna (4.4) SR1 Release</strong>
-			<p>The Luna (4.4) SR1 release should be complete and available for download by 
+			<strong>Luna SR1 (4.4.1) Release</strong>
+			<p>The Luna SR1 (4.4.1) release should be complete and available for download by 
 	              the end of September 2014 as part of the <a href="http://wiki.eclipse.org/Luna">Luna 
 	              coordinated service release</a> . If product teams intending 
-	              to ship on Luna (4.4) SR1 uncover further serious defects during the endgame, 
+	              to ship on Luna SR1 (4.4.1) uncover further serious defects during the endgame, 
 	              we may schedule additional release candidate builds to incorporate fixes.
 			</p>    
 		</div>
