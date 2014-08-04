@@ -75,7 +75,7 @@
 	</ul>"},
 			{"component": "LinkedResources","assignee": "sbeauchamp","expert": "", "description": "Handling of linked resources in Navigator and New File/Folder wizards", "cc": "sbrandys"},
 			{"component": "Mac", 			"assignee": "wsudol", 	"expert": "", "description": "Mac specific issues"},
-			{"component": "Markers", 		"assignee": "drolka", "expert": "", "description": "Issues related to markers, including tasks, problems, bookmarks, etc. e.g. bugs related to MarkerImageProvider, MarkerHelp, MarkerResolutions"},
+			{"component": "Markers", 		"assignee": "drolka", "expert": "dmegert", "description": "Issues related to markers, including tasks, problems, bookmarks, etc. e.g. bugs related to MarkerImageProvider, MarkerHelp, MarkerResolutions"},
 			{"component": "Metadata", 		"assignee": "drolka", "expert": "", "description": "Anything related to the metadata associated with plug-ins (e.g., MANIFEST.MF, build.properties, .classpath, version numbers, compiler settings, formatter settings, etc.)"},
 			{"component": "Model", 			"assignee": "wsudol", "expert": "emoffatt", "description": "Anything related to the Eclipse4 model in general and fragment processing.  Also org.eclipse.ui.model classes IWorkbenchAdapter, WorkbenchLabelProvider, WorkbenchContentProvider"},
 			{"component": "MPE", 			"assignee": "wsudol", "expert": "", "description": "Bugs related to Multipage editor that are not [Editor Mgmt] and not editor specific"},
