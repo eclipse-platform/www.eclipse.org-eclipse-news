@@ -7,8 +7,15 @@ div.component{
 a.bugs {
 	style="font-size: smaller";
 }
-div.owner {
+div.owner, div.expert {
 	text-indent: 30px;
+}
+table#componentAreas td {
+	padding-right: 20px;
+}
+table#componentAreas h3 {
+		text-align: center;
+		padding-left: 15px;
 }
 -->
 </style>
@@ -82,23 +89,51 @@ function buildTable(loadedJSON){
 	var row = table.insertRow(0);
 	var component = row.insertCell(0);
 	var description = row.insertCell(1);
+	var owner = row.insertCell(2);
+	var expert = row.insertCell(3);
 	component.innerHTML = '<h3>Component</h3>';
 	description.innerHTML = "<h3>Description</h3>";
+	owner.innerHTML = '<h3>Owner</h3>';
+	expert.innerHTML = '<h3>Expert</h3>';
 	
 	for (i = 0; i < assignments.length; i++){
 		row = table.insertRow(i+1);
 		component = row.insertCell(0);
 		description = row.insertCell(1);
+		owner = row.insertCell(2);
+		expert = row.insertCell(3);
 		component.innerHTML = '<div id="component">[<a href="javascript:viewBugsWithSummary(\'[' + assignments[i].component + ']\')">' + assignments[i].component + '</a>]</div>';
 		description.innerHTML = assignments[i].description;
+		owner.innerHTML = '';
+		expert.innerHTML = '';
 			
-		for (j = 0; j < users.length; j++){
-			if (users[j].user == assignments[i].assignee){
-				description.innerHTML += '<div class="owner">' + users[j].name + ' <a class="bugs"  href="javascript:viewBugsByUser(\''+users[j].email+'\')">[bugs]</a></div>';
-			}
-		}
+		createOwners(users, assignments, owner);
+		createExperts(users, assignments, expert);
 	}
 	document.getElementById("lastmodified-span").innerHTML = lastModified;
+}
+function replaceWithNbsps(text) {
+	return text.replace(' ', '&nbsp;');
+}
+function createOwners(users, assignments, ownerPlaceholder) {
+	for (j = 0; j < users.length; j++){
+			if (users[j].user == assignments[i].assignee){
+				ownerPlaceholder.innerHTML += '<div class="owner">' + replaceWithNbsps(users[j].name) + '&nbsp;<a class="bugs"  href="javascript:viewBugsByUser(\''+users[j].email+'\')">[bugs]</a></div>';
+			}
+		}
+		if (ownerPlaceholder.innerHTML.length == 0) {
+			ownerPlaceholder.innerHTML = '&nbsp;';
+		}
+}
+function createExperts(users, assignments, expertPlaceholder) {
+	for (j = 0; j < users.length; j++){
+			if (users[j].user == assignments[i].expert){
+				expertPlaceholder.innerHTML += '<div class="expert">' + replaceWithNbsps(users[j].name) + '</div>';
+			}
+		}
+		if (expertPlaceholder.innerHTML.length == 0) {
+			expertPlaceholder.innerHTML = '&nbsp;';
+		}
 }
 //-->
 <!-- 'directories=0,height=480,location=0,resizable=1,scrollbars=1,toolbar=0,width=515' -->

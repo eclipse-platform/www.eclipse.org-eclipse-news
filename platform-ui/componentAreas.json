@@ -1,10 +1,10 @@
 { "assignments": [
-			{"component": "About", 			"assignee": "drolka", 	"description": "About dialog and System Summary Editor"},
-			{"component": "ActionSets", 	"assignee": "drolka", "description": "Action sets"},
-			{"component": "ActivityMgmt", 	"assignee": "wsudol", 	"description":  "Support for activity grouping of functionality (AKA: Capabilities)"},
-			{"component": "BiDi", 			"assignee": "drolka", "description": "Bidirectional support. Triage '-dir rtl' defects to the appropriate component area first (i.e. if it's a Drag 'n Drop issue that only shows up in 'rtl' mode then triage to [DnD]...)"},
-			{"component": "CellEditors", 	"assignee": "wsudol", "description": "Cell editors in Tasks view, Properties view or other views"},
-			{"component": "Commands", 		"assignee": "drolka", "description": "Command support (added in 3.0)<p><ul>\
+			{"component": "About", 			"assignee": "drolka", 	"expert": "", "description": "About dialog and System Summary Editor"},
+			{"component": "ActionSets", 	"assignee": "drolka", "expert": "pwebster", "description": "Action sets"},
+			{"component": "ActivityMgmt", 	"assignee": "wsudol", 	"expert": "", "description":  "Support for activity grouping of functionality (AKA: Capabilities)"},
+			{"component": "BiDi", 			"assignee": "drolka", "expert": "", "description": "Bidirectional support. Triage '-dir rtl' defects to the appropriate component area first (i.e. if it's a Drag 'n Drop issue that only shows up in 'rtl' mode then triage to [DnD]...)"},
+			{"component": "CellEditors", 	"assignee": "wsudol", "expert": "", "description": "Cell editors in Tasks view, Properties view or other views"},
+			{"component": "Commands", 		"assignee": "drolka", "expert": "pwebster", "description": "Command support (added in 3.0)<p><ul>\
 		<li><em>handlers</em>.  Anything dealing with handlers and handler submissions.</li>\
 		<li><em>instrumentation</em>.  Instrumenting the command architecture for gathering user information.</li>\
 		<li><em>macros</em>.  Sequential list of commands.  Grouping commands.</li>\
@@ -12,10 +12,10 @@
 		<li><em>performance</em>.  The performance of the key binding architecture, or its registry.</li>\
 		<li><em>request</em>.  A request for a new command or a new key binding (or both).</li>\
 	</ul></p>" },
-			{"component": "CommonNavigator","assignee": "drolka", 	"description": "The generic navigator API (org.eclipse.ui.navigator)."},
-			{"component": "Contexts", 		"assignee": "drolka", "description": "Support for context grouping of functionality"},
-			{"component": "EclipseContexts", 		"assignee": "drolka", "description": "Eclipse4 IEclipseContext support, the OSGI context, and IContextFunctions"},
-			{"component": "Contributions", 	"assignee": "drolka", "description": "ContributionManager, ContributionItem hierarchy, org.eclipse.jface.action, action contributions from plugin.xml\
+			{"component": "CommonNavigator","assignee": "drolka", 	"expert": "", "description": "The generic navigator API (org.eclipse.ui.navigator)."},
+			{"component": "Contexts", 		"assignee": "drolka", "expert": "pwebster", "description": "Support for context grouping of functionality"},
+			{"component": "EclipseContexts", 		"assignee": "drolka", "expert": "pwebster", "description": "Eclipse4 IEclipseContext support, the OSGI context, and IContextFunctions"},
+			{"component": "Contributions", 	"assignee": "drolka", "expert": "pwebster", "description": "ContributionManager, ContributionItem hierarchy, org.eclipse.jface.action, action contributions from plugin.xml\
 	<ul>\
 		<li><em>adapters</em>.  Anything to do with the adapter mechanism and its friends.</li>\
 		<li><em>configurability</em>.  The end user's ability to manipulate contributions.</li>\
@@ -29,38 +29,38 @@
 		<li><em>visible/enabled</em>.  The control of visibility and the enabled state through XML.</li>\
 		<li><em>widgets</em>.  Controlling the type of widget used to display a contribution.  This only includes controlling widget behaviour and state (other than visible and enabled).</li>\
 	</ul>"},
-			{"component": "Coolbar", 		"assignee": "wsudol", "description": "Coolbar support (including layout within coolbar)"},
-			{"component": "CSS", 		"assignee": "drolka", "description": "CSS support in eclipse, including the CSS engine"},
-			{"component": "DataBinding", 	"assignee": "wsudol","description": "JFace Data Binding" },
-			{"component": "Decorators", 	"assignee": "drolka", "description": "Decorators mechanism and Label Decorations preference page"},
-			{"component": "DI", 	"assignee": "drolka", "description": "The Dependency Injection and invocation mechanisms for Eclipse4"},
-			{"component": "DetachedView", 	"assignee": "wsudol", "description": "Views and editors in separate windows"},
-			{"component": "Dialogs", 		"assignee": "wsudol","description": "JFace and UI dialogs other than IDE, Filtered Items/Open Resource"},
-			{"component": "DND", 			"assignee": "wsudol", "description": "Drag and Drop. Does not include dragging views and editors."},
-			{"component": "DynamicGUI", 	"assignee": "wsudol", 	"description": "The ability to add/remove plug-ins from a running Eclipse"},
-			{"component": "EditorMgmt", 	"assignee": "drolka","description": "General editor management, not text editor specific\
+			{"component": "Coolbar", 		"assignee": "wsudol", "expert": "", "description": "Coolbar support (including layout within coolbar)"},
+			{"component": "CSS", 		"assignee": "drolka", "expert": "", "description": "CSS support in eclipse, including the CSS engine"},
+			{"component": "DataBinding", 	"assignee": "wsudol","expert": "", "description": "JFace Data Binding" },
+			{"component": "Decorators", 	"assignee": "drolka", "expert": "", "description": "Decorators mechanism and Label Decorations preference page"},
+			{"component": "DI", 	"assignee": "drolka", "expert": "pwebster", "description": "The Dependency Injection and invocation mechanisms for Eclipse4"},
+			{"component": "DetachedView", 	"assignee": "wsudol", "expert": "emoffatt", "description": "Views and editors in separate windows"},
+			{"component": "Dialogs", 		"assignee": "wsudol","expert": "", "description": "JFace and UI dialogs other than IDE, Filtered Items/Open Resource"},
+			{"component": "DND", 			"assignee": "wsudol", "expert": "emoffatt", "description": "Drag and Drop. Does not include dragging views and editors."},
+			{"component": "DynamicGUI", 	"assignee": "wsudol", 	"expert": "", "description": "The ability to add/remove plug-ins from a running Eclipse"},
+			{"component": "EditorMgmt", 	"assignee": "drolka","expert": "emoffatt", "description": "General editor management, not text editor specific\
 	<ul>\
 		<li><em>associations</em>.  The file associations mechanism: behaviour, preferences and functionality.</li>\
 		<li><em>drop-down</em>.  The editor drop-down: look, feel, bugs, etc.</li>\
 		<li><em>history</em>.  The navigation history mechanism.</li>\
 		<li><em>tabs</em>.  The tabbed editor user experience, and bugs related to editor tabs.</li>\
 	</ul>"},
-			{"component": "EFS", 			"assignee": "dmegert", "description": "Extended File System Support"},
-			{"component": "ErrorHandling", 	"assignee": "drolka", "description": "OutOfMemory, NPE etc. Exceptions that are not exepected but need to be handled to make it robust. Also includes issues related to Status Handling support introduced in 3.3"},
-			{"component": "Examples", 		"assignee": "drolka", "description": "The 3 workbench examples (multipageeditor, propertysheet, readmetool) but not javaeditor (owned by platform-text component)"},
-			{"component": "FastView", 		"assignee": "drolka", "description": "Issues related to fast views"},
-			{"component": "Features",		"assignee": "drolka", 	"description": "UI related to features, other than [About], e.g. product branding, default perspective, etc."},
-			{"component": "FieldAssist", 	"assignee": "wsudol","description": "Defects concerning ControlDecoration, Required Fields, Content Proposal, Decorated Fields or Field Assistance"},
-			{"component": "Forms", 		"assignee": "wsudol", "description": "UI Forms related problems"},
-			{"component": "GlobalActions", 	"assignee": "drolka", "description": "actions created in workbench action builder that are not directly related to other components"},
-			{"component": "Graphics", 		"assignee": "drolka", "description": "Any graphics that UI has control over."},
-			{"component": "GTK/Linux", 		"assignee": "drolka", "description": "GTK/Linux specific issues."},
-			{"component": "Help", 			"assignee": "wsudol", "description": "F1 help; missing or problems with content"},
-			{"component": "IDE", 			"assignee": "drolka", "description": "Issues related to the IDE as an app (as opposed to RCP)"},
-			{"component": "Intro", 			"assignee": "wsudol", "description": "Intro part management and legacy welcome page support"},
-			{"component": "Import/Export", 	"assignee": "drolka", "description": "Import/Export wizards"},
-			{"component": "JFace", 			"assignee": "wsudol","description": "parts of JFace not covered by [Dialogs], [Preferences], [Viewers] and [Wizards]"},
-			{"component": "KeyBindings", 	"assignee": "drolka", "description": "Key bindings engine and preferences; requests to change key bindings, or keys not working \
+			{"component": "EFS", 			"assignee": "dmegert", "expert": "", "description": "Extended File System Support"},
+			{"component": "ErrorHandling", 	"assignee": "drolka", "expert": "", "description": "OutOfMemory, NPE etc. Exceptions that are not exepected but need to be handled to make it robust. Also includes issues related to Status Handling support introduced in 3.3"},
+			{"component": "Examples", 		"assignee": "drolka", "expert": "", "description": "The 3 workbench examples (multipageeditor, propertysheet, readmetool) but not javaeditor (owned by platform-text component)"},
+			{"component": "FastView", 		"assignee": "drolka", "expert": "", "description": "Issues related to fast views"},
+			{"component": "Features",		"assignee": "drolka", 	"expert": "", "description": "UI related to features, other than [About], e.g. product branding, default perspective, etc."},
+			{"component": "FieldAssist", 	"assignee": "wsudol","expert": "", "description": "Defects concerning ControlDecoration, Required Fields, Content Proposal, Decorated Fields or Field Assistance"},
+			{"component": "Forms", 		"assignee": "wsudol", "expert": "", "description": "UI Forms related problems"},
+			{"component": "GlobalActions", 	"assignee": "drolka", "expert": "", "description": "actions created in workbench action builder that are not directly related to other components"},
+			{"component": "Graphics", 		"assignee": "drolka", "expert": "", "description": "Any graphics that UI has control over."},
+			{"component": "GTK/Linux", 		"assignee": "drolka", "expert": "", "description": "GTK/Linux specific issues."},
+			{"component": "Help", 			"assignee": "wsudol", "expert": "", "description": "F1 help; missing or problems with content"},
+			{"component": "IDE", 			"assignee": "drolka", "expert": "", "description": "Issues related to the IDE as an app (as opposed to RCP)"},
+			{"component": "Intro", 			"assignee": "wsudol", "expert": "", "description": "Intro part management and legacy welcome page support"},
+			{"component": "Import/Export", 	"assignee": "drolka", "expert": "", "description": "Import/Export wizards"},
+			{"component": "JFace", 			"assignee": "wsudol","expert": "", "description": "parts of JFace not covered by [Dialogs], [Preferences], [Viewers] and [Wizards]"},
+			{"component": "KeyBindings", 	"assignee": "drolka", "expert": "pwebster", "description": "Key bindings engine and preferences; requests to change key bindings, or keys not working \
 	<ul>\
 		<li><em>assist</em>.  The key binding assist dialog.</li>\
 		<li><em>doc</em>.  Documentation, articles or notes about best practices.  Also, changing code to conform to best practices.</li>\
@@ -73,40 +73,40 @@
 		<li><em>registry</em>.  The registry, its syntax, and backward compatibility.</li>\
 		<li><em>request</em>.  A request for a new command or a new key binding (or both).</li>\
 	</ul>"},
-			{"component": "LinkedResources","assignee": "sbeauchamp","description": "Handling of linked resources in Navigator and New File/Folder wizards", "cc": "sbrandys"},
-			{"component": "Mac", 			"assignee": "wsudol", 	"description": "Mac specific issues"},
-			{"component": "Markers", 		"assignee": "drolka", "description": "Issues related to markers, including tasks, problems, bookmarks, etc. e.g. bugs related to MarkerImageProvider, MarkerHelp, MarkerResolutions"},
-			{"component": "Metadata", 		"assignee": "drolka", "description": "Anything related to the metadata associated with plug-ins (e.g., MANIFEST.MF, build.properties, .classpath, version numbers, compiler settings, formatter settings, etc.)"},
-			{"component": "Model", 			"assignee": "wsudol", "description": "Anything related to the Eclipse4 model in general and fragment processing.  Also org.eclipse.ui.model classes IWorkbenchAdapter, WorkbenchLabelProvider, WorkbenchContentProvider"},
-			{"component": "MPE", 			"assignee": "wsudol", "description": "Bugs related to Multipage editor that are not [Editor Mgmt] and not editor specific"},
-			{"component": "Navigator", 		"assignee": "drolka", 	"description": "Resource Navigator view"},
-			{"component": "OLE", 			"assignee": "wsudol", "description": "OLE support on Windows"},
-			{"component": "OpenModes", 		"assignee": "drolka","description": "Single click, double click support"},
-			{"component": "Outline", 		"assignee": "wsudol", 	"description": "Open Resource and FilteredItemsSelection dialogs"},
-			{"component": "PerspectiveBar", "assignee": "wsudol", "description": "The bar used to indicate which perspectives are currently open and allow easy switching between them."},
-			{"component": "Perspectives", 	"assignee": "drolka", "description": "Perspective management"},
-			{"component": "Preferences", 	"assignee": "drolka", "description": "Preferences dialog, field editors and workbench preference pages"},
-			{"component": "PresentationAPI","assignee": "wsudol", "description": "Bugs pertaining to the presentation API."},
-			{"component": "Presentations", 	"assignee": "wsudol", "description": "Code related to maintaining the Eclipse 2.1 and 3.0 look and feel."},
-			{"component": "Progress", 		"assignee": "wsudol", "description": "Responsive UI work relating to Progress View and Progress dialogs"},
-			{"component": "PropertiesDialog","assignee": "wsudol","description": "Properties dialog"},
-			{"component": "PropertiesView", "assignee": "wsudol", "description": "Properties view"},
-			{"component": "QuickAccess", 	"assignee": "drolka","description": "Ctrl-3 quick access dialog issues"},
-			{"component": "RCP", 			"assignee": "drolka","description": "Rich Client Platform issues"},
-			{"component": "RenderingEngine",	"assignee": "wsudol","description": "PartRenderingEngine and its interaction with the renderers."},
-			{"component": "TabbedProperties","assignee": "wsudol","description": "Tabbed Properties issues (plugin org.eclipse.ui.views.properties.tabbed)"},
-			{"component": "Themes", 		"assignee": "drolka", 	"description": "Dealing with dialog/window fonts/colours and the theme API"},
-			{"component": "Trim", 			"assignee": "drolka", "description": "Defects in Trim contributions or trim management (DnD, persistance, layout...)"},
-			{"component": "Undo", 			"assignee": "wsudol","description": "Dealing with the new undo/redo support introduced in Eclipse 3.1"},
-			{"component": "UX", 			"assignee": "drolka","description": "User experience, usability, UI consistency"},
-			{"component": "ViewMgmt", 		"assignee": "drolka","description": "View management"},
-			{"component": "Viewers", 		"assignee": "wsudol","description": "JFace viewers"},
-			{"component": "Win32", 			"assignee": "wsudol", "description": "Win32 specific issues"},
-			{"component": "Wizards", 		"assignee": "drolka", "description": "JFace wizards and workbench new item wizards (excluding import/export)"},
-			{"component": "Workbench", 		"assignee": "drolka", "description": "ui.plugin, Workbench, WorkbenchWindow"},
-			{"component": "WorkbenchParts", "assignee": "drolka", "description": "Bugs pertaining to part lifecycle, activation, bringToTop, etc"},
-			{"component": "WorkbenchLauncher", "assignee": "drolka","description": "Primarily, that portion of startup where the UI team decides where the workspace will be."},
-			{"component": "WorkingSets", 	"assignee": "drolka", 	"description": "Working sets"}
+			{"component": "LinkedResources","assignee": "sbeauchamp","expert": "", "description": "Handling of linked resources in Navigator and New File/Folder wizards", "cc": "sbrandys"},
+			{"component": "Mac", 			"assignee": "wsudol", 	"expert": "", "description": "Mac specific issues"},
+			{"component": "Markers", 		"assignee": "drolka", "expert": "", "description": "Issues related to markers, including tasks, problems, bookmarks, etc. e.g. bugs related to MarkerImageProvider, MarkerHelp, MarkerResolutions"},
+			{"component": "Metadata", 		"assignee": "drolka", "expert": "", "description": "Anything related to the metadata associated with plug-ins (e.g., MANIFEST.MF, build.properties, .classpath, version numbers, compiler settings, formatter settings, etc.)"},
+			{"component": "Model", 			"assignee": "wsudol", "expert": "emoffatt", "description": "Anything related to the Eclipse4 model in general and fragment processing.  Also org.eclipse.ui.model classes IWorkbenchAdapter, WorkbenchLabelProvider, WorkbenchContentProvider"},
+			{"component": "MPE", 			"assignee": "wsudol", "expert": "", "description": "Bugs related to Multipage editor that are not [Editor Mgmt] and not editor specific"},
+			{"component": "Navigator", 		"assignee": "drolka", 	"expert": "", "description": "Resource Navigator view"},
+			{"component": "OLE", 			"assignee": "wsudol", "expert": "", "description": "OLE support on Windows"},
+			{"component": "OpenModes", 		"assignee": "drolka","expert": "", "description": "Single click, double click support"},
+			{"component": "Outline", 		"assignee": "wsudol", 	"expert": "", "description": "Open Resource and FilteredItemsSelection dialogs"},
+			{"component": "PerspectiveBar", "assignee": "wsudol", "expert": "", "description": "The bar used to indicate which perspectives are currently open and allow easy switching between them."},
+			{"component": "Perspectives", 	"assignee": "drolka", "expert": "emoffatt", "description": "Perspective management"},
+			{"component": "Preferences", 	"assignee": "drolka", "expert": "", "description": "Preferences dialog, field editors and workbench preference pages"},
+			{"component": "PresentationAPI","assignee": "wsudol", "expert": "", "description": "Bugs pertaining to the presentation API."},
+			{"component": "Presentations", 	"assignee": "wsudol", "expert": "", "description": "Code related to maintaining the Eclipse 2.1 and 3.0 look and feel."},
+			{"component": "Progress", 		"assignee": "wsudol", "expert": "", "description": "Responsive UI work relating to Progress View and Progress dialogs"},
+			{"component": "PropertiesDialog","assignee": "wsudol","expert": "", "description": "Properties dialog"},
+			{"component": "PropertiesView", "assignee": "wsudol", "expert": "", "description": "Properties view"},
+			{"component": "QuickAccess", 	"assignee": "drolka","expert": "", "description": "Ctrl-3 quick access dialog issues"},
+			{"component": "RCP", 			"assignee": "drolka","expert": "", "description": "Rich Client Platform issues"},
+			{"component": "RenderingEngine",	"assignee": "wsudol","expert": "emoffatt", "description": "PartRenderingEngine and its interaction with the renderers."},
+			{"component": "TabbedProperties","assignee": "wsudol","expert": "", "description": "Tabbed Properties issues (plugin org.eclipse.ui.views.properties.tabbed)"},
+			{"component": "Themes", 		"assignee": "drolka", 	"expert": "", "description": "Dealing with dialog/window fonts/colours and the theme API"},
+			{"component": "Trim", 			"assignee": "drolka", "expert": "emoffatt", "description": "Defects in Trim contributions or trim management (DnD, persistance, layout...)"},
+			{"component": "Undo", 			"assignee": "wsudol","expert": "", "description": "Dealing with the new undo/redo support introduced in Eclipse 3.1"},
+			{"component": "UX", 			"assignee": "drolka","expert": "", "description": "User experience, usability, UI consistency"},
+			{"component": "ViewMgmt", 		"assignee": "drolka","expert": "emoffatt", "description": "View management"},
+			{"component": "Viewers", 		"assignee": "wsudol","expert": "", "description": "JFace viewers"},
+			{"component": "Win32", 			"assignee": "wsudol", "expert": "", "description": "Win32 specific issues"},
+			{"component": "Wizards", 		"assignee": "drolka", "expert": "", "description": "JFace wizards and workbench new item wizards (excluding import/export)"},
+			{"component": "Workbench", 		"assignee": "drolka", "expert": "", "description": "ui.plugin, Workbench, WorkbenchWindow"},
+			{"component": "WorkbenchParts", "assignee": "drolka", "expert": "emoffatt", "description": "Bugs pertaining to part lifecycle, activation, bringToTop, etc"},
+			{"component": "WorkbenchLauncher", "assignee": "drolka","expert": "", "description": "Primarily, that portion of startup where the UI team decides where the workspace will be."},
+			{"component": "WorkingSets", 	"assignee": "drolka", 	"expert": "", "description": "Working sets"}
 ],"users": [
 			{"user": "anthonyh" ,	"name": "Anthony", 	"email": "anthonyh@ca.ibm.com"},
 			{"user": "bbokowski", 	"name": "Boris", 	"email": "Boris_Bokowski@ca.ibm.com"},
