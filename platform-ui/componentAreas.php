@@ -76,7 +76,9 @@ window.onload = function() {
 	          }
 	       } 
 	 }
-	 xmlHttp.open("get","componentAreas.json");
+	 xmlHttp.open("get","componentAreas.json?random" + Math.random()));
+	 xmlHttp.setRequestHeader("Cache-Control","public, no-cache");
+	 xmlHttp.setRequestHeader("pragma","no-cache");	 
 	 xmlHttp.send(null); 
 
 }
