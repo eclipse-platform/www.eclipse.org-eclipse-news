@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="default_style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse Project 4.5 M1 News</title>
+</head>
+<body>
+<h1>Eclipse Project 4.5 M1 - New and Noteworthy</h1>
+<p>Here are some of the more noteworthy things available in milestone build M1 
+  (August 8, 2014) which is now available for <a href="http://download.eclipse.org/eclipse/downloads/" target="_top">download</a>.
+  <br/>
+  We also recommend to read the Tips and Tricks, either via <b>Help &gt; Tips and Tricks...</b> or online for
+  <a href="http://help.eclipse.org/topic/org.eclipse.platform.doc.user/tips/platform_tips.html">Platform</a>,
+  <a href="http://help.eclipse.org/topic/org.eclipse.jdt.doc.user/tips/jdt_tips.html">JDT</a>, and
+  <a href="http://help.eclipse.org/topic/org.eclipse.pde.doc.user/tips/pde_tips.htm">PDE</a>.
+</p>
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#PDE">PDE</a></li>
+  <li><a href="#Equinox">Equinox</a></li>
+</ul>
+
+<table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
+  <tr id="product-default-preferences">
+    <td class="title">Products can set default preference values</td>
+    <td class="content">
+      In the <b>Product Editor</b> you can now use an Eclipse Preferences File ("*.epf") to
+      generate the default preference settings in the product's customization file. 
+      <p>
+      <img src="images/product_preferences.png" alt="The product editor showing preference file and wizard link"/>
+      </p>
+      A wizard allows you to
+      control which files to use for generating the preference defaults.
+      <p>
+      <img src="images/product_convert_preferences.png" alt="The Convert Preferences wizard"/>
+      </p>
+    </td>
+  </tr>
+  <tr id="category-repository-references">
+    <td class="title">Category editor can specify additional update repositories</td>
+    <td class="content">
+      In the <b>Category Manifest Editor</b> you can now specify additional update repositories that should be
+      referenced by the generated update repository. These additional repositories will be searched for
+      content whenever the generated repository receives a request for content.
+      <p>
+      <img src="images/category_repositories.png" alt="The product editor showing os/arch vm arguments"/>
+      </p>
+    </td>
+  </tr>
+  <tr id="category-download-statistics">
+    <td class="title">Category editor can define download statistics</td>
+    <td class="content">
+      In the <b>Category Manifest Editor</b> you can now specify a download statistics server that should
+      be used to collect download statistics about your product. You can also specify which features and/or
+      bundles should be used to collect download information. 
+      <p>
+      <img src="images/category_download_statistics.png" alt="The product editor showing os/arch vm arguments"/>
+      </p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2">  </td>
+  </tr>
+</table>
+
+</body>
+</html>
