@@ -92,7 +92,7 @@
 			{"component": "PropertiesDialog","assignee": "wsudol","expert": "", "description": "Properties dialog"},
 			{"component": "PropertiesView", "assignee": "wsudol", "expert": "", "description": "Properties view"},
 			{"component": "QuickAccess", 	"assignee": "drolka","expert": "", "description": "Ctrl-3 quick access dialog issues"},
-			{"component": "RCP", 			"assignee": "drolka","expert": "", "description": "Rich Client Platform issues"},
+			{"component": "RCP", 			"assignee": "drolka","expert": "lvogel", "description": "Rich Client Platform issues"},
 			{"component": "RenderingEngine",	"assignee": "wsudol","expert": "emoffatt", "description": "PartRenderingEngine and its interaction with the renderers."},
 			{"component": "TabbedProperties","assignee": "wsudol","expert": "", "description": "Tabbed Properties issues (plugin org.eclipse.ui.views.properties.tabbed)"},
 			{"component": "Themes", 		"assignee": "drolka", 	"expert": "", "description": "Dealing with dialog/window fonts/colours and the theme API"},
@@ -100,7 +100,7 @@
 			{"component": "Undo", 			"assignee": "wsudol","expert": "", "description": "Dealing with the new undo/redo support introduced in Eclipse 3.1"},
 			{"component": "UX", 			"assignee": "drolka","expert": "", "description": "User experience, usability, UI consistency"},
 			{"component": "ViewMgmt", 		"assignee": "drolka","expert": "emoffatt", "description": "View management"},
-			{"component": "Viewers", 		"assignee": "wsudol","expert": "", "description": "JFace viewers"},
+			{"component": "Viewers", 		"assignee": "wsudol","expert": "lvogel", "description": "JFace viewers"},
 			{"component": "Win32", 			"assignee": "wsudol", "expert": "", "description": "Win32 specific issues"},
 			{"component": "Wizards", 		"assignee": "drolka", "expert": "", "description": "JFace wizards and workbench new item wizards (excluding import/export)"},
 			{"component": "Workbench", 		"assignee": "drolka", "expert": "", "description": "ui.plugin, Workbench, WorkbenchWindow"},
@@ -126,5 +126,6 @@
 			{"user": "sbeauchamp", 	"name": "Serge Beauchamp",	"email": "serge@freescale.com"},
 			{"user": "sbrandys", 	"name": "Szymon Brandys",	"email": "Szymon.Brandys@pl.ibm.com"},
 			{"user": "sfranklin", 	"name": "Susan Franklin",	"email": "susan_franklin@us.ibm.com"},
-			{"user": "fupton", 		"name": "Francis Upton IV",  "email": "francisu@ieee.org"}   
+			{"user": "fupton", 		"name": "Francis Upton IV",  "email": "francisu@ieee.org"},
+			{"user": "lvogel", 		"name": "Lars Vogel",  "email": "lars.vogel@gmail.com"}   
 ]} 
