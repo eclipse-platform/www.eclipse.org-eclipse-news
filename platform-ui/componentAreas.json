@@ -94,7 +94,7 @@
 			{"component": "QuickAccess", 	"assignee": "drolka","expert": "", "description": "Ctrl-3 quick access dialog issues"},
 			{"component": "RCP", 			"assignee": "drolka","expert": "lvogel", "description": "Rich Client Platform issues"},
 			{"component": "RenderingEngine",	"assignee": "wsudol","expert": "emoffatt", "description": "PartRenderingEngine and its interaction with the renderers."},
-			{"component": "TabbedProperties","assignee": "wsudol","expert": "", "description": "Tabbed Properties issues (plugin org.eclipse.ui.views.properties.tabbed)"},
+			{"component": "TabbedProperties","assignee": "wsudol","expert": "anthonyh", "description": "Tabbed Properties issues (plugin org.eclipse.ui.views.properties.tabbed)"},
 			{"component": "Themes", 		"assignee": "drolka", 	"expert": "", "description": "Dealing with dialog/window fonts/colours and the theme API"},
 			{"component": "Trim", 			"assignee": "drolka", "expert": "emoffatt", "description": "Defects in Trim contributions or trim management (DnD, persistance, layout...)"},
 			{"component": "Undo", 			"assignee": "wsudol","expert": "", "description": "Dealing with the new undo/redo support introduced in Eclipse 3.1"},
