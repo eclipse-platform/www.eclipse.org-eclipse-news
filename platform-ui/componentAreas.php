@@ -129,7 +129,7 @@ function createOwners(users, assignments, ownerPlaceholder) {
 }
 function createExperts(users, assignments, expertPlaceholder) {
 	for (j = 0; j < users.length; j++){
-			if (users[j].user == assignments[i].expert){
+			if (assignments[i].expert.indexOf(users[j].user) != -1) {
 				expertPlaceholder.innerHTML += '<div class="expert">' + replaceWithNbsps(users[j].name) + '</div>';
 			}
 		}
