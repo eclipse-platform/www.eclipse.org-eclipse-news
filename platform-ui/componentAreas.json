@@ -38,7 +38,7 @@
 			{"component": "Dialogs", 		"assignee": "wsudol","expert": "", "description": "JFace and UI dialogs other than IDE, Filtered Items/Open Resource"},
 			{"component": "DND", 			"assignee": "wsudol", "expert": "emoffatt", "description": "Drag and Drop. Does not include dragging views and editors."},
 			{"component": "DynamicGUI", 	"assignee": "wsudol", 	"expert": "", "description": "The ability to add/remove plug-ins from a running Eclipse"},
-			{"component": "EditorMgmt", 	"assignee": "drolka","expert": "emoffatt", "description": "General editor management, not text editor specific\
+			{"component": "EditorMgmt", 	"assignee": "wsudol","expert": "emoffatt", "description": "General editor management, not text editor specific\
 	<ul>\
 		<li><em>associations</em>.  The file associations mechanism: behaviour, preferences and functionality.</li>\
 		<li><em>drop-down</em>.  The editor drop-down: look, feel, bugs, etc.</li>\
@@ -80,7 +80,7 @@
 			{"component": "Model", 			"assignee": "wsudol", "expert": "emoffatt", "description": "Anything related to the Eclipse4 model in general and fragment processing.  Also org.eclipse.ui.model classes IWorkbenchAdapter, WorkbenchLabelProvider, WorkbenchContentProvider"},
 			{"component": "MPE", 			"assignee": "wsudol", "expert": "", "description": "Bugs related to Multipage editor that are not [Editor Mgmt] and not editor specific"},
 			{"component": "Navigator", 		"assignee": "drolka", 	"expert": "", "description": "Resource Navigator view"},
-			{"component": "OLE", 			"assignee": "wsudol", "expert": "", "description": "OLE support on Windows"},
+			{"component": "OLE", 			"assignee": "drolka", "expert": "", "description": "OLE support on Windows"},
 			{"component": "OpenModes", 		"assignee": "drolka","expert": "", "description": "Single click, double click support"},
 			{"component": "Outline", 		"assignee": "wsudol", 	"expert": "", "description": "Open Resource and FilteredItemsSelection dialogs"},
 			{"component": "PerspectiveBar", "assignee": "wsudol", "expert": "", "description": "The bar used to indicate which perspectives are currently open and allow easy switching between them."},
@@ -101,7 +101,7 @@
 			{"component": "UX", 			"assignee": "drolka","expert": "", "description": "User experience, usability, UI consistency"},
 			{"component": "ViewMgmt", 		"assignee": "drolka","expert": "emoffatt", "description": "View management"},
 			{"component": "Viewers", 		"assignee": "wsudol","expert": "lvogel", "description": "JFace viewers"},
-			{"component": "Win32", 			"assignee": "wsudol", "expert": "", "description": "Win32 specific issues"},
+			{"component": "Win32", 			"assignee": "drolka", "expert": "", "description": "Win32 specific issues"},
 			{"component": "Wizards", 		"assignee": "drolka", "expert": "", "description": "JFace wizards and workbench new item wizards (excluding import/export)"},
 			{"component": "Workbench", 		"assignee": "drolka", "expert": "", "description": "ui.plugin, Workbench, WorkbenchWindow"},
 			{"component": "WorkbenchParts", "assignee": "drolka", "expert": "emoffatt", "description": "Bugs pertaining to part lifecycle, activation, bringToTop, etc"},
