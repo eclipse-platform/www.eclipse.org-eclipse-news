@@ -83,6 +83,54 @@
       </p>
     </td>
   </tr>
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+    
+    <tr id="new-ant-pngs">
+        <td class="title">New Ant icons</td>
+        <td class="content">
+            <p>
+                The icons in platform Ant have been updated with some very nice new <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=426306">PNG versions</a>. 
+            </p>
+            <img src="images/ant-icons.png" alt="Some of the new Ant images"/>
+        </td>
+    </tr>
+    
+    <tr id="step-filter-ext-point">
+        <td class="title">New stepFilters extension point</td>
+        <td class="content">
+          The new <b>stepFilters</b> extension point allows clients to provide new step filters for existing debug models without having to extend those models. 
+          <p>
+          To use the new extension point, clients will require a dependency on <code>org.eclipse.debug.core</code>. Clients can then access any contributed step filters 
+          using the new API: <code>org.eclipse.debug.core.DebugPlugin.getStepFilters(String)</code>.
+          </p>
+          <p>
+          An example of the new extension point:
+<pre>
+&lt;extension point=&quot;org.eclipse.debug.core.stepFilters&quot;&gt;
+  &lt;stepFilter
+   class=&quot;com.example.ExampleStepFilter&quot;
+   modelIdentifier=&quot;com.example.debug.model&quot;&gt;
+  &lt;/stepFilter&gt;
+&lt;/extension&gt;
+</pre>
+          </p>
+        </td>
+      </tr>
+      
+      <tr id="console-word-wrap">
+        <td class="title">Word wrap in the Console</td>
+        <td class="content">
+            <p>
+                A new formatting option has been contributed to the Console view for all I/O consoles: <b>Word Wrap</b>.
+            </p>
+            <p>
+                The new option is available on the console view toolbar and in the content popup menu within the console view.
+            </p>
+            <img src="images/word-wrap.png" alt="The new word wrap toolbar and popup menu command"/>
+        </td>
+      </tr>
+  </tr>
   <tr> 
     <td colspan="2">  </td>
   </tr>
