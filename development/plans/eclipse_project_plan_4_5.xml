@@ -337,16 +337,13 @@ Eclipse 4.5 Endgame Plan.
 		
 		<!-- ************ Mac ************** -->
 		<tr class="c1">
-			<td rowspan="2">Apple Mac OS X</td>
-			<td rowspan="2">10.9</td>
-			<td rowspan="1">Universal 32-bit</td>
-			<td rowspan="2">
+			<td rowspan="1">Apple Mac OS X</td>
+			<td rowspan="1">10.9</td>
+			<td rowspan="1">x86 64-bit</td>
+			<td rowspan="1">
 				Oracle Java 8u5<br/>
 				Oracle Java 7u55</td>
-			<td rowspan="2">Cocoa</td>
-		</tr>
-		<tr class="c1">
-			<td rowspan="1">x86 64-bit</td>
+			<td rowspan="1">Cocoa</td>
 		</tr>
 	</table>
  </center>
