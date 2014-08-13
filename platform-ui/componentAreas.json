@@ -30,7 +30,7 @@
 		<li><em>widgets</em>.  Controlling the type of widget used to display a contribution.  This only includes controlling widget behaviour and state (other than visible and enabled).</li>\
 	</ul>"},
 			{"component": "Coolbar", 		"assignee": "wsudol", "expert": "", "description": "Coolbar support (including layout within coolbar)"},
-			{"component": "CSS", 		"assignee": "drolka", "expert": "", "description": "CSS support in eclipse, including the CSS engine"},
+			{"component": "CSS", 		"assignee": "drolka", "expert": "bsd", "description": "CSS support in eclipse, including the CSS engine"},
 			{"component": "DataBinding", 	"assignee": "wsudol","expert": "", "description": "JFace Data Binding" },
 			{"component": "Decorators", 	"assignee": "drolka", "expert": "", "description": "Decorators mechanism and Label Decorations preference page"},
 			{"component": "DI", 	"assignee": "drolka", "expert": "pwebster,tschindl", "description": "The Dependency Injection and invocation mechanisms for Eclipse4"},
@@ -128,5 +128,6 @@
 			{"user": "sfranklin", 	"name": "Susan Franklin",	"email": "susan_franklin@us.ibm.com"},
 			{"user": "fupton", 		"name": "Francis Upton IV",  "email": "francisu@ieee.org"},
 			{"user": "lvogel", 		"name": "Lars Vogel",  "email": "lars.vogel@gmail.com"},
-			{"user": "tschindl", 	"name": "Tom Schindl",  "email": "tom.schindl@bestsolution.at"}   
+			{"user": "tschindl", 	"name": "Tom Schindl",  "email": "tom.schindl@bestsolution.at"},
+			{"user": "bsd",			"name": "Brian de Alwis",  "email": "bsd@mt.ca"}   
 ]} 
