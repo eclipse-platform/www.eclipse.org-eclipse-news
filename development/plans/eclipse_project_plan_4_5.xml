@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 10:30 EDT August 13, 2014.
+Last revised 6:00 EDT August 14, 2014.
 
 <!--
 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
@@ -506,7 +506,7 @@ Eclipse 4.5 Endgame Plan.
 
 <li><strong>Provide good support for Mac Retina displays.</strong>
 	The current support for Mac Retina displays has various rendering issues.
-	With Mars we want to provided good support for Mac Retina displays.
+	With Mars we want to provide good support for Mac Retina displays.
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=382972">382972</a>)
 </li>
 
@@ -527,15 +527,6 @@ Eclipse 4.5 Endgame Plan.
 	This Java release will add modularization to the Java language, also known under the code name Jigsaw.
 	The Mars release itself will not provide any support for Java 9.
 	[JDT and PDE] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">TBD</a>)
-</li>
-
-<li><strong>Surface more options on the Tracing preference page.</strong>
-	We have been observing a number of bugs reported regarding intermittent behavior of low level parts
-	of Eclipse Platform like builders, resource listeners, jobs, etc. Usually those problems are hard to
-	reproduce and there are no steps to trigger it. Therefore, we want to make more options available
-	on the 'Tracing' preference page, so that they can be enabled by the user in the currently running workspace
-	where the problem surfaces.
-	[Platform Resources, Platform Runtime, Platform Team and Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441575">441575</a>)
 </li>
 
 </ul>
@@ -595,6 +586,16 @@ Eclipse 4.5 Endgame Plan.
 	This was already a 4.4 plan item but it got deferred.
 	[Platform Releng] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=374441">374441</a>)
 </li>
+
+<li><strong>Surface more options on the Tracing preference page.</strong>
+	We have been observing a number of bugs reported regarding intermittent behavior of low level parts
+	of Eclipse Platform like builders, resource listeners, jobs, etc. Usually those problems are hard to
+	reproduce and there are no steps to trigger it. Therefore, we want to make more options available
+	on the 'Tracing' preference page, so that they can be enabled by the user in the currently running workspace
+	where the problem surfaces.
+	[Platform Resources, Platform Runtime, Platform Team and Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441575">441575</a>)
+</li>
+
 </ul>
 </p:proposed>
 
