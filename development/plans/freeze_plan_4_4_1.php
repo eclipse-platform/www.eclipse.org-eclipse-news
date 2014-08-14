@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2014-08-01
+	# Date:			2014-08-14
 	#
 	# Description: Eclipse project 4.4.1 release freeze plan
 	#
@@ -84,14 +84,6 @@ ob_start();
 	            <td class="date">Wed 08:00 EDT</td>
 	            <td></td>
 	            <td>Release Candidate 1 build</td>
-	            <td></td>
-	          </tr>
-	          <tr>
-	            <td></td>
-	            <td class="date">14</td>
-	            <td class="date">Thu 08:00 EDT</td>
-	            <td></td>
-	            <td>Sign-off</td>
 	            <td></td>
 	          </tr>
 	          <tr>
