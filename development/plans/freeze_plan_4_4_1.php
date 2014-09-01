@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2014-08-14
+	# Date:			2014-09-01
 	#
 	# Description: Eclipse project 4.4.1 release freeze plan
 	#
@@ -45,12 +45,12 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>July 30, 2014 - working towards Luna SR1 RC1.</b></p>
+			<p><b>September 1, 2014 - working towards Luna SR1 RC3.</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
 	        <table class="schedule" border="0" cellspacing="0" align="center" width=100%>
-	          <tr class="current">
+	          <tr>
 	            <td>July 2014</td>
 	          </tr>
 	          <tr>
@@ -124,18 +124,10 @@ ob_start();
 	          <tr>
 	            <td>September 2014</td>
 	          </tr>
-	          <tr>
-	            <td></td>
-	            <td></td>
-	            <td></td>
-	            <td></td>
-	            <td>Weekly maintenance builds</td>
-	            <td></td>
-	          </tr>
 			  <tr>
 	            <td class="spacer">&nbsp;</td>
 	          </tr>
-	          <tr>
+	          <tr class="current">
 	            <td></td>
 	            <td class="date">3</td>
 	            <td class="date">Wed 08:00 EDT</td>
