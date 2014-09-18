@@ -72,6 +72,18 @@
     </td>
   </tr>
 
+  <tr id="jface-structuredselection">
+    <td class="title">Direct access to the structured selection of a JFace Viewer</td>
+    <td class="content">
+      	The JFace viewer API allows to access the IStructuredSelection directly for the relevant viewers. Use for example the following method call to access the
+	IStructuredSelection from a viewer:
+
+	<pre>IStructuredSelection sel = viewer.getStructuredSelection()</pre> 
+
+	More information can be found in the <b><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=402439">Bug 402439</a></b>
+    </td>
+  </tr>
+
   <tr><td colspan="2"><div class="title">Platform Text:</div></td></tr>
 
   <tr><td colspan="2"><div class="title">Debug:</div></td></tr>
