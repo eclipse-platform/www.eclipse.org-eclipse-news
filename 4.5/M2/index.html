@@ -9,88 +9,65 @@
 <body>
 <h1>Eclipse Project 4.5 M2 - New and Noteworthy</h1>
 <p>Here are some of the more noteworthy things available in the Mars milestone build M2 (2014-09-19)
-  which is now available for <a href="http://download.eclipse.org/eclipse/downloads/" target="_top">download</a>.
+  which is now available for <a href="http://download.eclipse.org/eclipse/downloads/#4.5_Stable_Build" target="_top">download</a>.
 </p>
 <ul>
   <li><a href="#Platform">Platform</a></li>
   <li><a href="#JDT">JDT</a></li>
   <li><a href="#PDE">PDE</a></li>
-  <li><a href="#Equinox">Equinox</a></li>
 </ul>
 
 <table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
-
-<!-- Item template -->
-  <tr id="item-id">
-    <td class="title">Item title</td>
-    <td class="content">
-      Item blurb. See <a href="../../instructions.html">instructions</a>.
-      <p>
-        Use the <a href="http://validator.w3.org/#validate_by_input">XHTML Markup Validation Service</a>.
-      </p>
-    </td>
-  </tr>
-<!-- End -->
 
   <tr>
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
 
-  <tr><td colspan="2"><div class="title">Workspace:</div></td></tr>
-
-  <tr id="debug-notifications">
+  <tr id="resource-notifications">
     <td class="title">New debug option for resource change notifications</td>
     <td class="content">
-      In order to help troubleshooting problems with resource change listeners
-      a new debug option was added to print information what event triggers what
-      listener. This option gives better picture of the flow of all workspace
-      changes and how other plugins react to those changes. To enable the new
-      option add
-      <p><code>
-      org.eclipse.core.resources/debug=true<br>
-      org.eclipse.core.resources/notifications=true<br>
-      </code></p>
-      in your .options file or use the General > Tracing preference page to
+      In order to help troubleshooting problems with resource change listeners,
+      a new debug option was added to print information about which event triggers which
+      listener. This option gives a better picture of the flow of all workspace
+      change events and how other plugins react to those changes. To enable the new
+      option, add
+      <pre>
+      org.eclipse.core.resources/debug=true
+      org.eclipse.core.resources/notifications=true</pre>
+      in your <a href="http://help.eclipse.org/luna/topic/org.eclipse.pde.doc.user/guide/tools/launchers/tracing.htm">.options file</a>
+      or use the <b>General &gt; Tracing</b> preference page to
       enable it.
     </td>
   </tr>
 
-  <tr><td colspan="2"><div class="title">Platform UI</div></td></tr>
-  
   <tr id="i18n-for-cssbridge">
     <td class="title">I18n support for CSS bridge</td>
     <td class="content">
-      The internationalization and localization support for CSS bridge has been added. More information can be found in the <b><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=437902">Bug 437902</a></b>
+      Internationalization and localization support for the CSS bridge has been added. More information can be found in <b><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=437902">bug 437902</a></b>
       <p>
-      	Modified files needed for enabling the i18n support in the CSS bridge for polish locale 
+      Example:
+      </p>
+      <p>
+      	1. Modified files needed to enable the i18n support in the CSS bridge for the Polish locale:
       </p>
       <img src="images/i18n_for_cssbridge-required_mod_files.png" alt="Modified files for the i18n support"/>
       <p>
-      	Running CSS bridge with polish locale. The Eclipse instance gets launched with '-nl pl' option
+      	2. Launch the Eclipse instance with the '-nl pl' command line arguments. Running CSS bridge with Polish locale:
       </p>
       <img src="images/i18n_for_cssbridge-colorAndFontDialog.png" alt="CSS bridge with polish locale"/>      
     </td>
   </tr>
 
   <tr id="jface-structuredselection">
-    <td class="title">Direct access to the structured selection of a JFace Viewer</td>
+    <td class="title">Direct access to structured selection of a JFace Viewer</td>
     <td class="content">
-      	The JFace viewer API allows to access the IStructuredSelection directly for the relevant viewers. Use for example the following method call to access the
-	IStructuredSelection from a viewer:
-
-	<pre>IStructuredSelection sel = viewer.getStructuredSelection()</pre> 
-
-	More information can be found in the <b><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=402439">Bug 402439</a></b>
+      The JFace <code>StructuredViewer</code> class now has an API to access the <code>IStructuredSelection</code> directly.
+      Examples:
+<pre>	IStructuredSelection sel = viewer.getStructuredSelection();
+	ITreeSelection treeSel = treeViewer.getStructuredSelection();</pre>
+      Bye bye <code>(IStructuredSelection) viewer.getSelection()</code>, we won't miss you!
     </td>
   </tr>
-
-  <tr><td colspan="2"><div class="title">Platform Text:</div></td></tr>
-
-  <tr><td colspan="2"><div class="title">Debug:</div></td></tr>
-
-  <tr><td colspan="2"><div class="title">Ant:</div></td></tr>
-
-  <tr><td colspan="2"><div class="title">SWT:</div></td></tr>
 
 
   <tr>
@@ -100,8 +77,8 @@
   <tr id="jdt-performance">
     <td class="title">Improved compiler performance</td>
     <td class="content">
-      Significant performance improvement has been made to the compiler on generics-heavy code.
-      Details on affected scenarios, fix and performance results can be found on <b><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=434326">Bug 434326</a></b>
+      Significant performance improvements have been made to the Java compiler on generics-heavy code.
+      Details on affected scenarios, fix and performance results can be found on <b><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=434326">bug 434326</a></b>
     </td>
   </tr>
 
@@ -112,19 +89,13 @@
   <tr id="pde-css-product-editor">
     <td class="title">Products can specify CSS file</td>
     <td class="content">
-      In the <b> Product Editor</b>, on the <i>Customization</i> tab, you can now 
+      In the <b>Product Editor</b>, on the <b>Customization</b> tab, you can now
       specify the name of a CSS file to be used to style the product. 
-      Your product must have the Eclipse 4 CSS support installed and you must synchronize
-      the product with its defining plug-in to keep the extension point up to date. 
+       
       <p>
-        <img src="images/product-css-location.png" alt="Product css"/>
+        <img src="images/product-css-location.png" alt="Your product must have the Eclipse 4 CSS support installed and you must synchronize the product with its defining plug-in to keep the extension point up to date."/>
       </p>
     </td>
-  </tr>
-
-
-  <tr>
-    <td colspan="2" class="section" id="Equinox">Equinox</td>
   </tr>
 
   <tr>
