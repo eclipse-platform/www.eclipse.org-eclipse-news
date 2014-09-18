@@ -38,6 +38,23 @@
 
   <tr><td colspan="2"><div class="title">Workspace:</div></td></tr>
 
+  <tr id="debug-notifications">
+    <td class="title">New debug option for resource change notifications</td>
+    <td class="content">
+      In order to help troubleshooting problems with resource change listeners
+      a new debug option was added to print information what event triggers what
+      listener. This option gives better picture of the flow of all workspace
+      changes and how other plugins react to those changes. To enable the new
+      option add
+      <p><code>
+      org.eclipse.core.resources/debug=true<br>
+      org.eclipse.core.resources/notifications=true<br>
+      </code></p>
+      in your .options file or use the General > Tracing preference page to
+      enable it.
+    </td>
+  </tr>
+
   <tr><td colspan="2"><div class="title">Platform UI</div></td></tr>
   
   <tr id="i18n-for-cssbridge">
