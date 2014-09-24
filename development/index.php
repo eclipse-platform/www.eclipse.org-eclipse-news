@@ -41,6 +41,7 @@ ob_start();
 		      <li><a href="plans/freeze_plan_4_4_1.php">Eclipse Project Luna SR1 Endgame Plan</a><br>
 				Information about how we plan to wrap up the Luna SR1 release (version 4.4.1).</li>
 		    </ul>
+		    See also the <a href="https://projects.eclipse.org/projects/eclipse/governance">Eclipse Project on projects.eclipse.org</a>.
       	</div>
 		<div class="homeitem3col">
 			<h3>Development Process</h3>
@@ -87,6 +88,7 @@ ob_start();
 			    there is a summary of what clients are affected, and steps for clients
 			    to migrate.
 		        <ul>
+		        <li><a href="porting/eclipse_4_4_porting_guide.php">Eclipse Platform 4.4 Porting Guide</a></li>
 		        <li><a href="porting/eclipse_4_3_porting_guide.php">Eclipse Platform 4.3 Porting Guide</a></li>
 		        <li><a href="porting/eclipse_4_2_porting_guide.php">Eclipse Platform 4.2 Porting Guide</a></li>
 		        </ul>
