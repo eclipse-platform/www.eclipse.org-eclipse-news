@@ -36,10 +36,10 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>Releases currently under development</h3>
 			<ul>
-		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_4.xml"> Eclipse Project Luna 4.4 Plan</a><br>
-		        This document lays out the feature and API set for the Luna 4.4 release of the Eclipse Project.</li>
-		      <li><a href="plans/freeze_plan_4_3_1.php">Eclipse Project Kepler SR1 Endgame Plan</a><br>
-				Information about how we plan to wrap up the Kepler SR1 release (version 4.3.1).</li>
+		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_5.xml"> Eclipse Project Mars 4.5 Plan</a><br>
+		        This document lays out the feature and API set for the Mars 4.5 release of the Eclipse Project.</li>
+		      <li><a href="plans/freeze_plan_4_4_1.php">Eclipse Project Luna SR1 Endgame Plan</a><br>
+				Information about how we plan to wrap up the Luna SR1 release (version 4.4.1).</li>
 		    </ul>
       	</div>
 		<div class="homeitem3col">
@@ -127,6 +127,10 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>Historical information about past releases</h3>			
 			<ul>
+		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_4.xml"> Eclipse Project Luna 4.4 Plan</a><br>
+		        This document lays out the feature and API set for the Luna 4.4 release of the Eclipse Project.</li>
+		      <li><a href="plans/freeze_plan_4_3_1.php">Eclipse Project Kepler SR1 Endgame Plan</a><br>
+				Information about how we wrapped up the Kepler SR1 release (version 4.3.1).</li>
 		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_3.xml"> Eclipse Project Kepler 4.3 Plan</a><br>
 		        This document lays out the feature and API set for the Kepler 4.3 release of the Eclipse Project.</li>
 		      <li><a href="plans/freeze_plan_4_3.php">Eclipse Project Kepler 4.3 Endgame Plan</a><br>
