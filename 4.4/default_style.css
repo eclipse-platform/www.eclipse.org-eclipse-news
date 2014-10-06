@@ -81,7 +81,12 @@ a.bar {
   color: #FFFFFF
 }
 
+p {
+  margin: 1em 0; /* undo styles.min.css */
+}
+
 table.news td {
+  padding: 10px; /* undo styles.min.css */
   border-top: solid thin black;
 }
 
