@@ -51,7 +51,7 @@ ob_start();
 			<h3>Detailed Timeline</h3>
 	        <table class="schedule" border="0" cellspacing="0" align="center" width=100%>
 	          <tr class="current">
-	            <td>September to December 2014</td>
+	            <td>October to December 2014</td>
 	          </tr>
 	          <tr>
 	            <td></td>
