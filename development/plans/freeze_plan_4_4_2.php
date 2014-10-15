@@ -45,13 +45,13 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>October 13, 2014 - weekly maintenance builds.</b></p>
+			<p><b>October 15, 2014 - weekly maintenance builds.</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
 	        <table class="schedule" border="0" cellspacing="0" align="center" width=100%>
 	          <tr class="current">
-	            <td>October to December 2014</td>
+	            <td>October 15 to December 31, 2014</td>
 	          </tr>
 	          <tr>
 	            <td></td>
