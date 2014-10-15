@@ -196,8 +196,9 @@ ob_start();
 	          </tr>
 	        </table>
 			<p>
-			Here are some holidays during the freeze period to keep in mind:
+			Here are some holidays and other dates during the freeze period to keep in mind:
 			<ul>
+				<li>January 30 - Mars M5</li>
 				<li>February 16 - Canada</li>
 			</ul>
 			</p>
