@@ -18,11 +18,9 @@
 <p>
 Last revised 10:20 EDT October 15, 2014.
 
-<!--
 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
 marks interesting changes since the previous draft of 
-<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_5_20140811.xml">August 11, 2014</a>.)
--->
+<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_5_20141015.xml">October 15, 2014</a>.)
 
 </p>
 <p><i>Please send comments about this plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
@@ -504,7 +502,7 @@ Eclipse 4.5 Endgame Plan.
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441566">441566</a>)
 </li>
 
-<li><strong>Drop support for GTK+ 2 versions older than 2.18.</strong>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /><strong>Drop support for GTK+ 2 versions older than 2.18.</strong>
 	The GTK port has grown a too big range of supported GTK versions. Reducing them will allow streamlining our code base, 
 	making it easier to fix things and to attract new contributors. Support for versions older than 2.18 will be dropped.
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=446454">446454</a>)
