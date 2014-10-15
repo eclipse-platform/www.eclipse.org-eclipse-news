@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2014-10-13
+	# Date:			2014-10-15
 	#
 	# Description: Eclipse project 4.4.2 release freeze plan
 	#
@@ -170,6 +170,30 @@ ob_start();
 	            <td>Submit to release train [if required]</td>
 	            <td></td>
 	          </tr>
+	          <tr>
+	            <td></td>
+	            <td class="date">20</td>
+	            <td class="date">Fri</td>
+	            <td></td>
+	            <td>Simultaneous release train complete with RC4</td>
+	            <td></td>
+	          </tr>
+	          <tr>
+	            <td></td>
+	            <td class="date">21 to 26</td>
+	            <td class="date"></td>
+	            <td></td>
+	            <td>Quiet week/buffer</td>
+	            <td></td>
+	          </tr>
+	          <tr>
+	            <td></td>
+	            <td class="date">27</td>
+	            <td class="date">Fri</td>
+	            <td></td>
+	            <td>Simultaneous release train GA Luna SR2</td>
+	            <td></td>
+	          </tr>
 	        </table>
 			<p>
 			Here are some holidays during the freeze period to keep in mind:
@@ -201,7 +225,7 @@ ob_start();
 	        is supposed to work exactly like the initial Luna (4.4) release except for the problems we intended 
 	        to fix. All problems fixed in Luna SR2 (4.4.2) are in the Eclipse bugzilla database 
 	        and flagged with Target Milestone &quot;4.4.2&quot; (query bugzilla for 
-	        the <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;resolution=FIXED;target_milestone=4.4.2;product=Equinox;product=JDT;product=PDE;product=Platform;classification=Eclipse;classification=RT">complete 
+	        the <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;resolution=FIXED;target_milestone=4.4.2&target_milestone=Luna%20SR2;product=Equinox;product=JDT;product=PDE;product=Platform;classification=Eclipse;classification=RT">complete 
 	        list of bugs fixed in Luna SR2 (4.4.2)</a>). So we're most interested in identifying 
 	        regressions where we've changed something that we did not intend to.
 	        </p> 
