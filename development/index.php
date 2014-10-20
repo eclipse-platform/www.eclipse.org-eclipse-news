@@ -38,8 +38,8 @@ ob_start();
 			<ul>
 		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_5.xml"> Eclipse Project Mars 4.5 Plan</a><br>
 		        This document lays out the feature and API set for the Mars 4.5 release of the Eclipse Project.</li>
-		      <li><a href="plans/freeze_plan_4_4_1.php">Eclipse Project Luna SR1 Endgame Plan</a><br>
-				Information about how we plan to wrap up the Luna SR1 release (version 4.4.1).</li>
+		      <li><a href="plans/freeze_plan_4_4_2.php">Eclipse Project Luna SR2 Endgame Plan</a><br>
+				Information about how we plan to wrap up the Luna SR2 release (version 4.4.2).</li>
 		    </ul>
 		    See also the <a href="https://projects.eclipse.org/projects/eclipse/governance">Eclipse Project on projects.eclipse.org</a>.
       	</div>
@@ -129,14 +129,20 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>Historical information about past releases</h3>			
 			<ul>
+		      <li><a href="plans/freeze_plan_4_4_1.php">Eclipse Project Luna SR1 Endgame Plan</a><br>
+				Information about how we wrapped up the Luna SR1 release (version 4.4.1).</li>
 		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_4.xml"> Eclipse Project Luna 4.4 Plan</a><br>
 		        This document lays out the feature and API set for the Luna 4.4 release of the Eclipse Project.</li>
+		      <li><a href="plans/freeze_plan_4_3_2.php">Eclipse Project Kepler SR2 Endgame Plan</a><br>
+				Information about how we wrapped up the Kepler SR2 release (version 4.3.2).</li>
 		      <li><a href="plans/freeze_plan_4_3_1.php">Eclipse Project Kepler SR1 Endgame Plan</a><br>
 				Information about how we wrapped up the Kepler SR1 release (version 4.3.1).</li>
 		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_3.xml"> Eclipse Project Kepler 4.3 Plan</a><br>
 		        This document lays out the feature and API set for the Kepler 4.3 release of the Eclipse Project.</li>
 		      <li><a href="plans/freeze_plan_4_3.php">Eclipse Project Kepler 4.3 Endgame Plan</a><br>
 				Information about how we wrapped up the Kepler 4.3 release.</li>
+		      <li><a href="plans/freeze_plan_4_2_2.php">Eclipse Project Juno SR2 Endgame Plan</a><br>
+				Information about how we wrapped up the Juno SR2 release (versions 3.8.2 and 4.2.2).</li>
 		      <li><a href="plans/freeze_plan_4_2_1.php">Eclipse Project Juno SR1 Endgame Plan</a><br>
 				Information about how we wrapped up the Juno SR1 release (versions 3.8.1 and 4.2.1).</li>
 		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_2.xml"> Eclipse Project Juno 4.2 Plan</a><br>
