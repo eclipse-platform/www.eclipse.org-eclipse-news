@@ -39,6 +39,25 @@
   <tr><td colspan="2"><div class="title">Workspace:</div></td></tr>
 
   <tr><td colspan="2"><div class="title">Platform UI:</div></td></tr>
+  <tr id="ui responsiveness monitoring">
+    <td class="title">UI responsiveness monitoring</td>
+    <td class="content">
+      You can enable automatic detection of periods when Eclipse UI is unresponsive:
+          <p>
+            <img src="images/ui-responsiveness-monitoring.png" alt="" />
+          </p>
+      <p>UI freezes longer than the warning threshold are logged to the Eclipse error log
+      as warnings. The logged messages include one or more stack traces of the display
+      thread. Longer UI freezes are logged as errors and include stack traces of all threads.
+      Please keep in mind that capturing stack traces of all threads involves extra
+      overhead, so setting the error threshold below 1 second is not recommended.</p>
+      <p>A UI freeze is logged at the end of the freeze or after the deadlock threshold has
+      expired, whichever comes first. The latter condition facilitates logging of indefinite
+      UI freezes caused by deadlocks.</p>
+      <p>Please file bugs for the UI freezes you encounter, describe what you were doing
+      at the time and include the messages from the error log related to the freeze.</p> 
+    </td>
+  </tr>
 
   <tr><td colspan="2"><div class="title">Platform Text:</div></td></tr>
 
