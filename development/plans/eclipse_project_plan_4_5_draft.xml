@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 05:55 EDT October 24, 2014.
+Last revised 06:00 EDT October 24, 2014.
 
 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
 marks interesting changes since the previous draft of 
@@ -502,7 +502,7 @@ Eclipse 4.5 Endgame Plan.
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441566">441566</a>)
 </li>
 
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (new)
 	<strong>Drop support for GTK+ 2 versions older than 2.18.</strong>
 	The GTK port has grown a too big range of supported GTK versions. Reducing them will allow streamlining our code base, 
 	making it easier to fix things and to attract new contributors. Support for versions older than 2.18 will be dropped.
