@@ -16,11 +16,13 @@
 <p:introduction>
 <div>
 <p>
-Last revised 06:00 EDT October 24, 2014.
+Last revised 04:10 EDT August 19, 2014.
 
+<!--
 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
 marks interesting changes since the previous draft of 
-<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_5_20140819.xml">August 19, 2014</a>.)
+<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_5_20140811.xml">August 11, 2014</a>.)
+-->
 
 </p>
 <p><i>Please send comments about this plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
@@ -153,7 +155,7 @@ Eclipse 4.5 Endgame Plan.
   In general, the 4.5 release of the Eclipse Project is developed on a mix
   of Java SE 7 and Java SE 8 VMs. As such, the Eclipse SDK as a whole
   is targeted at all modern, desktop Java VMs. Most functionality is available for
-  Java SE 7 level development everywhere, and extended development capabilities are made
+  Java SE 6 level development everywhere, and extended development capabilities are made
   available on the VMs that support them.</p>
 <p><a href="#appendix">Appendix 1</a> contains a table that indicates the class
   library level required for each bundle.</p>
@@ -213,7 +215,8 @@ Eclipse 4.5 Endgame Plan.
 			<td rowspan="2">
 				Oracle Java 8u5<br/>
 				Oracle Java 7u55<br/>
-				IBM Java 7 SR 7
+				IBM Java 7 SR 7<br/>
+				IBM Java 6 SR16
 			</td>
 			<td rowspan="2">Win32</td>
 		</tr>
@@ -222,13 +225,14 @@ Eclipse 4.5 Endgame Plan.
 		</tr>
 		<!-- ************ RHEL ************** -->
 		<tr class="c1">
-			<td rowspan="5">Red Hat Enterprise Linux</td>
+			<td rowspan="4">Red Hat Enterprise Linux</td>
 			<td rowspan="4">6</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
 				Oracle Java 8u5<br/>
 			    Oracle Java 7u55<br/>
 				IBM Java 7 SR 7<br/>
+				IBM Java 6 SR16<br/>
 				Open JDK 7u40
 			</td>
 			<td rowspan="4">GTK+ 2</td>
@@ -238,26 +242,22 @@ Eclipse 4.5 Endgame Plan.
 		</tr>
 		<tr class="c1">
 			<td rowspan="1">Power 32-bit</td>
-			<td rowspan="2">IBM Java 7 SR7</td>
+			<td rowspan="2">IBM Java 7 SR7<br/>
+			IBM Java 6 SR16</td>
 		</tr>
 		<tr class="c1">
 			<td rowspan="1">Power 64-bit</td>
 		</tr>
-		<tr class="c1">
-			<td rowspan="1">7</td>
-			<td rowspan="1">x86 64-bit</td>
-			<td rowspan="1">Open JDK 7u40</td>
-			<td rowspan="1">GTK+ 3</td>
-		</tr>
 		<!-- ************ SLES ************** -->
 		<tr class="c0">
 			<td rowspan="4">SUSE Linux Enterprise Server</td>
-			<td rowspan="4">11 SP2</td>
+			<td rowspan="4">11</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
 				Oracle Java 8u5<br/>
 				Oracle Java 7u55<br/>
-				IBM Java 7 SR7
+				IBM Java 7 SR7<br/>
+				IBM Java 6 SR16
 			</td>
 			<td rowspan="4">GTK+ 2</td>
 		</tr>
@@ -266,7 +266,8 @@ Eclipse 4.5 Endgame Plan.
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">Power 32-bit</td>
-			<td rowspan="2">IBM Java 7 SR7</td>
+			<td rowspan="2">IBM Java 7 SR7<br/>
+			IBM Java 6 SR16</td>
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">Power 64-bit</td>
@@ -279,7 +280,8 @@ Eclipse 4.5 Endgame Plan.
 			<td rowspan="2">
 				Oracle Java 8u5<br/>
 				Oracle Java 7u55<br/>
-				IBM Java 7 SR7
+				IBM Java 7 SR7<br/>
+				IBM Java 6 SR16
 			</td>
 			<td rowspan="2">GTK+ 3</td>
 		</tr>
@@ -292,7 +294,8 @@ Eclipse 4.5 Endgame Plan.
 			<td rowspan="2">
 				Oracle Java 8u5<br/>
 				Oracle Java 7u55<br/>
-				IBM Java 7 SR7
+				IBM Java 7 SR7<br/>
+				IBM Java 6 SR16
 			</td>
 			<td rowspan="2">GTK+ 2</td>
 		</tr>
@@ -317,7 +320,7 @@ Eclipse 4.5 Endgame Plan.
 			<td rowspan="1">HP-UX</td>
 			<td rowspan="1">11i v3</td>
 			<td rowspan="1">ia64 64-bit</td>
-			<td rowspan="1">HP-UX Java 7u65</td>
+			<td rowspan="1">HP-UX Java 6u20</td>
 			<td rowspan="1">GTK+ 2</td>
 		</tr>
 		<!-- ************ AIX ************** -->
@@ -325,8 +328,8 @@ Eclipse 4.5 Endgame Plan.
 			<td rowspan="2">IBM AIX</td>
 			<td rowspan="2">7.1</td>
 			<td rowspan="1">Power 32-bit</td>
-			<td rowspan="2">IBM Java 7 SR7
-			</td>
+			<td rowspan="2">IBM Java 7 SR7<br/>
+			IBM Java 6 SR16</td>
 			<td rowspan="2">GTK+ 2</td>
 		</tr>
 		<tr class="c0">
@@ -501,13 +504,6 @@ Eclipse 4.5 Endgame Plan.
 	release we will improve the support for GTK+ 3 and enable it on even more platforms, especially for GTK+ versions >= 3.10.x.
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441566">441566</a>)
 </li>
-
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (new)
-	<strong>Drop support for GTK+ 2 versions older than 2.18.</strong>
-	The GTK port has grown a too big range of supported GTK versions. Reducing them will allow streamlining our code base, 
-	making it easier to fix things and to attract new contributors. Support for versions older than 2.18 will be dropped.
-	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=446454">446454</a>)
- </li>
 
 <li><strong>Provide good support for Mac Retina displays.</strong>
 	The current support for Mac Retina displays has various rendering issues.
@@ -816,19 +812,19 @@ Eclipse 4.5 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.core.databinding</td>
-      <td><div align="center">1.6</div></td>
+      <td><div align="center">F1.1</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.databinding.beans</td>
-      <td><div align="center">1.6</div></td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.databinding.observable</td>
-      <td><div align="center">1.6</div></td>
+      <td><div align="center">F1.1</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.databinding.property</td>
-      <td><div align="center">1.6</div></td>
+      <td><div align="center">F1.1</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.expressions</td>
@@ -1076,7 +1072,7 @@ Eclipse 4.5 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.jface.databinding</td>
-      <td><div align="center">1.6</div></td>
+      <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jface.text</td>
@@ -1216,7 +1212,7 @@ Eclipse 4.5 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.ui</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.browser</td>
@@ -1248,7 +1244,7 @@ Eclipse 4.5 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.ui.ide.application</td>
-      <td><div align="center">1.6</div></td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.intro</td>
@@ -1259,12 +1255,8 @@ Eclipse 4.5 Endgame Plan.
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.ui.monitoring</td>
-      <td><div align="center">1.6</div></td>
-    </tr>
-    <tr>
       <td>org.eclipse.ui.navigator</td>
-      <td><div align="center">1.6</div></td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.navigator.resources</td>
@@ -1284,7 +1276,7 @@ Eclipse 4.5 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.ui.views</td>
-      <td><div align="center">1.6</div></td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.views.log</td>
@@ -1292,7 +1284,7 @@ Eclipse 4.5 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.ui.views.properties.tabbed</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.win32</td>
