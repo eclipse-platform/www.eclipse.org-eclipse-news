@@ -16,11 +16,11 @@
 <p:introduction>
 <div>
 <p>
-Last revised 10:20 EDT October 15, 2014.
+Last revised 05:55 EDT October 24, 2014.
 
 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> 
 marks interesting changes since the previous draft of 
-<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_5_20141015.xml">October 15, 2014</a>.)
+<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_5_20140819.xml">August 19, 2014</a>.)
 
 </p>
 <p><i>Please send comments about this plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
@@ -317,7 +317,7 @@ Eclipse 4.5 Endgame Plan.
 			<td rowspan="1">HP-UX</td>
 			<td rowspan="1">11i v3</td>
 			<td rowspan="1">ia64 64-bit</td>
-			<td rowspan="1">HP-UX Java 6u20</td>
+			<td rowspan="1">HP-UX Java 7u65</td>
 			<td rowspan="1">GTK+ 2</td>
 		</tr>
 		<!-- ************ AIX ************** -->
@@ -816,19 +816,19 @@ Eclipse 4.5 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.core.databinding</td>
-      <td><div align="center">F1.1</div></td>
+      <td><div align="center">1.6</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.databinding.beans</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.6</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.databinding.observable</td>
-      <td><div align="center">F1.1</div></td>
+      <td><div align="center">1.6</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.databinding.property</td>
-      <td><div align="center">F1.1</div></td>
+      <td><div align="center">1.6</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.expressions</td>
@@ -1076,7 +1076,7 @@ Eclipse 4.5 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.jface.databinding</td>
-      <td><div align="center">F1.0</div></td>
+      <td><div align="center">1.6</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jface.text</td>
@@ -1216,7 +1216,7 @@ Eclipse 4.5 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.ui</td>
-      <td><div align="center">F1.0</div></td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.browser</td>
@@ -1248,7 +1248,7 @@ Eclipse 4.5 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.ui.ide.application</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.6</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.intro</td>
@@ -1259,8 +1259,12 @@ Eclipse 4.5 Endgame Plan.
       <td><div align="center">1.4</div></td>
     </tr>
     <tr>
+      <td>org.eclipse.ui.monitoring</td>
+      <td><div align="center">1.6</div></td>
+    </tr>
+    <tr>
       <td>org.eclipse.ui.navigator</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.6</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.navigator.resources</td>
@@ -1280,7 +1284,7 @@ Eclipse 4.5 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.ui.views</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.6</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.views.log</td>
@@ -1288,7 +1292,7 @@ Eclipse 4.5 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.ui.views.properties.tabbed</td>
-      <td><div align="center">F1.0</div></td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.win32</td>
