@@ -96,16 +96,34 @@
 	<td class="title">The DateTime widget now uses GtkSpinButton on UNIX/Linux platforms</td>
     <td class="content">
       The DateTime widget has been re-implemented to use the GtkSpinButton widget for <code>SWT.DATE</code> and <code>SWT.TIME</code> styles. The new look and feel is as illustrated below:
-      <p><b>GTK 2:</b></p>
+      <p><b>GTK+ 2:</b></p>
           <p>
             <img src="images/gtk2-date-time.png" alt="" />
           </p>
-      <p><b>GTK 3:</b></p>
+      <p><b>GTK+ 3:</b></p>
           <p>
             <img src="images/gtk3-date-time.png" alt="" />
           </p>
     </td>    
   </tr>
+  <tr id="sleep-wakeup-deprecated-replaced">
+  <td class="title">Deprecated SWT.Sleep and SWT.Wakeup events</td>
+  <td class="content">
+        The <code>SWT.Sleep</code> and <code>SWT.Wakeup</code> events have been deprecated
+        in favor of the more generic events <code>SWT.PreExternalEventDispatch</code> and 
+        <code>SWT.PostExternalEventDispatch</code> respectively. Clients that were written
+        using the old events should be updated to refer to the new events.
+    </td>
+  </tr>
+  <tr id="gtk-supported-versions-update">
+  <td class="title">Dropped support for GTK+ 2 versions older than 2.18</td>
+  <td class="content">
+  		GTK+ 2.18.0 or later (and its dependencies) will be the pre-requisites necessary to 
+  		run Eclipse successfully on all Linux/UNIX platforms as opposed to GTK+ 2.10.0 earlier.
+  		Support for all versions older than 2.18 has been dropped effective Mars M3 milestone release.
+  	</td>
+  </tr>
+  
 
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
