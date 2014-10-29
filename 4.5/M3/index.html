@@ -125,6 +125,16 @@
   	</td>
   </tr>
   
+  <tr><td colspan="2"><div class="title">Platform Runtime:</div></td></tr>
+  <tr id="runtime_locale_type_change">
+    <td class="title">Changed type of TranslationService.Locale</td>
+    <td class="content">
+      The type of the <code>Locale</code> value in the application context was changed from
+      <code>String</code> to <code>Locale</code> (for performance reasons).
+      <p>If you are injecting <code>org.eclipse.e4.core.services.translation.TranslationService.LOCALE</code> in your code, you
+      need to change the type from <code>String</code> to <code>Locale</code>.</p> 
+    </td>
+  </tr>
 
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
