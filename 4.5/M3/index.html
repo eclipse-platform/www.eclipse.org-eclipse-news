@@ -88,7 +88,7 @@
   </tr>
 
   <tr id="sleep-wakeup-deprecated-replaced">
-    <td class="title">Deprecated SWT.Sleep and SWT.Wakeup events</td>
+    <td class="title">New monitoring events added in place of SWT.Sleep and SWT.Wakeup</td>
     <td class="content">
         The <code>SWT.Sleep</code> and <code>SWT.Wakeup</code> events have been deprecated
         in favor of the more generic events <code>SWT.PreExternalEventDispatch</code> and 
@@ -103,6 +103,10 @@
   		GTK+ 2.18.0 or later (and its dependencies) will be the pre-requisites necessary to 
   		run Eclipse successfully on all Linux/UNIX platforms as opposed to GTK+ 2.10.0 earlier.
   		Support for all versions older than 2.18 has been dropped effective Mars M3 milestone release.
+  		<p>
+  		Note: As of now, Eclipse logs a warning and continues to run when a GTK+ version older than 2.18.0
+  		is detected, but that behavior will soon be changed to not run Eclipse with unsupported versions.
+  		</p>
   	</td>
   </tr>
   
