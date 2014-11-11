@@ -3,39 +3,40 @@
 <head>
 <title>Eclipse (Platform, JDT, PDE and Equinox) Release Engineering Build Schedule</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
+<link rel="stylesheet" href="https://www.eclipse.org/default_style.css" type="text/css">
 </head>
 
 <body bgcolor="#FFFFFF" text="#000000">
 
 
 <h2>Eclipse Release Engineering build schedule</h2>
-<h4>(Platform, JDT, PDE and Equinox)</h4>
-<font class=indexsub>static content last updated 2013-05-17</font>
+<h4>(<a href="http://download.eclipse.org/eclipse/downloads/">Platform, JDT, PDE</a> and <a href="http://download.eclipse.org/equinox/">Equinox</a>)</h4>
+<font class="indexsub">Last change of static content: 2014-11-11.</font>
 
 
 <p>  
 I-builds use branches specified in <a href="http://git.eclipse.org/c/platform/eclipse.platform.releng.aggregator.git/tree/streams/repositories.txt">repositories.txt</a> file, from 
 master branch of aggregator (eclipse.platform.releng.aggregator). The projects built are submodules of aggregator so normally 
 there is one line in repositories.txt file for each submodule of the aggregator. 
+<br>&nbsp;&nbsp;&nbsp;(usually Tuesdays, 08:00 <a href="https://en.wikipedia.org/wiki/Eastern_Time_Zone">Eastern Time</a>, EST/EDT, -0400/-0500)
 </p>
 <p>
 N-builds always use 'master' branch of the repositories built.
+<br>&nbsp;&nbsp;&nbsp;(daily 20:00, Eastern Time (except Saturday: 15:00))
 </p>
 <p>
 M-builds use a branch of the aggregator (and therefore a branch of the repositories.txt file)
 and, like I-builds, pull whatever branch is specified in the repositories.txt file. 
-</p>
-<p>
-<ul>
-<li><a href="http://www.google.com/calendar/feeds/prfk26fdmpru1mptlb06p0jh4s%40group.calendar.google.com/public/basic">XML</a></li>
-<li><a href="http://www.google.com/calendar/ical/prfk26fdmpru1mptlb06p0jh4s%40group.calendar.google.com/public/basic.ics">ICAL</a></li>
-</ul>
+<br>&nbsp;&nbsp;&nbsp;(usually Wednesdays, 08:00, Eastern Time)
 </p>
 
 <p>
-<iframe src="http://www.google.com/calendar/embed?mode=AGENDA&height=600&wkst=1&bgcolor=%23FFFFFF&src=prfk26fdmpru1mptlb06p0jh4s%40group.calendar.google.com&color=%237A367A" style="border-width:0" scrolling="auto" width="800" height="600" frameborder="0"></iframe>
+Calendar URLs:
+<a href="http://www.google.com/calendar/feeds/prfk26fdmpru1mptlb06p0jh4s%40group.calendar.google.com/public/basic">XML</a>,
+<a href="http://www.google.com/calendar/ical/prfk26fdmpru1mptlb06p0jh4s%40group.calendar.google.com/public/basic.ics">ICAL</a>
 </p>
+
+<iframe src="http://www.google.com/calendar/embed?mode=AGENDA&height=600&wkst=1&bgcolor=%23FFFFFF&src=prfk26fdmpru1mptlb06p0jh4s%40group.calendar.google.com&color=%237A367A" style="border-width:0" scrolling="auto" width="800" height="600" frameborder="0"></iframe>
 
 
 <h4>Rebuild Policy</h4>
@@ -81,7 +82,7 @@ recontribute to a subsequent build, you are required to revalidate the build and
 
 <strong>For the 4.<i>&lt;n-1&gt;</i>.x maintenance builds: </strong>
 <ul>
-<li>Build time is 8am Wednesday (Eastern time)</li> 
+<li>Build time is 8:00 am Wednesday (Eastern time)</li> 
 <li>Due to the nature of the fixes in this stream, these builds should not fail. However, if a 
 rebuild is requested by one of the teams, it will take place as soon as the build contribution is available.</li> 
 </ul>
