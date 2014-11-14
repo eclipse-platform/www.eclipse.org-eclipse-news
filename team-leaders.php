@@ -5,7 +5,7 @@
 	# team-leaders.php
 	#
 	# Author: 		
-	# Date:			2014-04-04
+	# Date:			2014-11-14
 	#
 	# Description: Details about the Eclipse Project PMC
 	#
@@ -39,7 +39,7 @@ ob_start();
         charter</a>. We welcome new people who want to get involved and can make a contribution. 
         The Eclipse Project is a meritocracy. The more you contribute the more 
         responsibility you will earn. </p>
-      <p>We ask that you do not email us directly. Instead - use the <a href="../mail/index.html" target="_top">mailing 
+      <p>We ask that you do not e-mail us directly. Instead - use the <a href="http://www.eclipse.org/mail/index_all.php" target="_top">mailing 
         lists</a>. Mailing lists have been set up for each area of work, and are 
         the best way to get involved.</p>
       <p>The Eclipse Project is managed by a small group known as the Eclipse 
@@ -50,7 +50,7 @@ ob_start();
         is responsible for its overall success. We have listed just the PMC and 
         subproject leaders here but you will encounter many dedicated Eclipse 
         Project committers and developers in the <a href="../newsgroups/index.html" target="_top">newsgroup</a> 
-        and <a href="../mail/index.html" target="_top">mailing lists</a>.</p>
+        and <a href="http://www.eclipse.org/mail/index_all.php" target="_top">mailing lists</a>.</p>
 
 		<div class="homeitem3col">
 			<h3>Project Management Committee Members</h3>
