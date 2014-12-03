@@ -43,6 +43,18 @@
 
   <tr><td colspan="2"><div class="title">Workspace:</div></td></tr>
 
+  <tr id="apply-git-patch">
+    <td class="title">Apply Patch... wizard more resilient</td>
+    <td class="content">
+      Patches that have been created via "<code>git format-patch</code>" sometimes couldn't be
+      applied successfully using Eclipse's <b>Team &gt; Apply Patch...</b> wizard.
+      <p>
+      Now, the wizard properly skips lines that are not part of an actual file diff section
+      (e.g. the <code>--&crarr;2.1.1</code> that Git appends).
+      </p>
+    </td>
+  </tr>
+
   <tr><td colspan="2"><div class="title">Platform UI:</div></td></tr>
 
   <tr id="Sorting-workingsets-in-project-explorer">
