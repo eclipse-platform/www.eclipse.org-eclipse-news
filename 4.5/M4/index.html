@@ -78,9 +78,37 @@
   <tr><td colspan="2"><div class="title">SWT:</div></td></tr>
 
   <tr>
-    <td colspan="2" class="section" id="JDT">JDT</td>
+    <td colspan="2" class="section" id="JDT">JDT</td></tr>
+    
+  <tr id="loop-flows">
+    <td class="title">Improved flow analysis for loops</td>
+    <td class="content">
+		Flow analysis has been improved to more precisely capture the flow of null values in loops.
+		This mainly achieves a reduction of false positive reports from null analysis.
+        <p>
+          <a href="images/loop-flows.txt"><img src="images/loop-flows.png" alt="" /></a>
+        </p>
+		<p>
+		Previously, example method "test1" would raise a potential null pointer warning at point (3).
+		To correct this issue the merging of information leading towards point (3) has been 
+		improved to correctly see that the null value from point (1) can never reach point (3).
+		</p><p>
+		In example method "test2" JDT previously reported a redundant null check at (3),
+		because analysis didn't see that the assignment directly above could indeed assign a non-null value.
+		</p><p>
+		In example method "test3" it was reported that "o can only be null" at (3), 
+		because the information from the two null-assignments wrongly overruled the one assignment from non-null.
+		With improved analysis this is now softened to saying "o may be null".
+		</p><p>
+		The graph on the right hand side illustrates the new composition of flow information:
+		for each relevant point (3) inside a loop, the analysis first merges the flows that lead into (1).
+		This result is concatenated with the partial flow (b.c), which leads from the loop start to point (3).
+		Improved precision has thus been achieved within the design limits of a single AST traversal 
+		in order to minimize impact on compiler performance.
+		</p>
+    </td>
   </tr>
-
+  
   <!--tr id="feature-id">
     <td class="title">Feature Title</td>
     <td class="content">
