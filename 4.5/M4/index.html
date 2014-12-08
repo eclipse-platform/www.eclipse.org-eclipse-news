@@ -54,20 +54,22 @@
       </p>
     </td>
   </tr>
-
-  <tr><td colspan="2"><div class="title">Platform UI:</div></td></tr>
-
-  <tr id="Sorting-workingsets-in-project-explorer">
-    <td class="title">Sorting working sets in Project Explorer</td>
+  
+  <tr id="Job-groups-api">
+    <td class="title">Job Groups API</td>
     <td class="content">
-	You can now manually set the order in which one the working sets are shown
-	in the Project Explorer.
-	<p>From the Project Explorer, go to the View Menu, and click on "Select Working Sets..."
-	entry. The Working Set dialog now shows some "Up" and "Down" button that allows to
-	sort working sets. When clicking OK, the order of Working Sets will be used by the Project Explorer.</p>
-	<p>The default order of Working Sets is now based by order of creation.</p>
+	JobGroup API (<code>org.eclipse.core.runtime.jobs.JobGroup</code>) is added to make it
+	easier to implement parallel algorithms in Eclipse.
+	<p>Job groups provide a simple way to manage a set of Eclipse Jobs that are responsible
+	for pieces of the same large task. The API supports throttling, joining, cancellation,
+	combined progress and error reporting for all of the jobs in the group. The job grouping
+	functionality can be used to implement performance critical algorithms using cooperating
+	jobs. More information can be found in
+	<b><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=432049">bug 432049</a></b>.</p>
     </td>
   </tr>
+
+  <tr><td colspan="2"><div class="title">Platform UI:</div></td></tr>
 
   <tr><td colspan="2"><div class="title">Platform Text:</div></td></tr>
 
