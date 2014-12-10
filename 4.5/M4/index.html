@@ -126,7 +126,7 @@
 		SWT now supports setting tooltip on menu items via <code>MenuItem.setToolTipText()</code>. 
 		The getter <code>MenuItem.getToolTipText()</code> is added to retrieve the menu item's tooltip.
 		<p>
-		For example, see the MenuTab of <a href="https://www.eclipse.org/swt/examples.php">ControlExample</a>.
+		For example, see the MenuTab of <a href="https://www.eclipse.org/swt/examples.php">ControlExample</a>.</p>
 		<p>
           <img src="images/tooltip.png" alt="" />
         </p>
@@ -210,6 +210,35 @@
     <td colspan="2" class="section" id="Equinox">Equinox</td>
   </tr>
 
+  <tr id="default-gtk3">
+    <td class="title">GTK+ 3 used by default on Linux distributions (when installed and available)</td>
+    <td class="content">
+      SWT and Eclipse will use the GTK+ 3 libraries by default on all Linux platforms,
+      whenever GTK+ 3 is installed and available (including GTK+ 3.10 and above). 
+      <p>You can force Eclipse to use GTK+ 2 port by setting the environment 
+      variable <code>SWT_GTK3</code> to 0 or using the launcher parameter <code>--launcher.GTK_version</code> flag in .ini file, if needed.
+      (For example: export SWT_GTK3=0) </p> 
+    </td>
+  </tr>
+    
+  <tr id="gtk-supported-versions-update">
+  	<td class="title">Dropped support for GTK+ 2 versions older than 2.18 in Eclipse launcher</td>
+  	<td class="content">
+  		GTK+ 2.18.0 or later (and its dependencies) will be the pre-requisites necessary to 
+  		run Eclipse successfully on all Linux/UNIX platforms as opposed to GTK+ 2.10.0 earlier.
+  		Support for all versions older than 2.18 has been dropped effective Mars M3 milestone release.
+  		<p>
+  		Note: As of now, Eclipse throws the following error dialog which allows eclipse to run even when
+  		a GTK+ version older than 2.18.0 is detected, but that behavior will soon be changed to not run 
+  		Eclipse with unsupported versions.
+  		</p>
+  		<p>
+          <img src="images/gtk-version-warning.png" alt="" />
+        </p>
+  		
+  	</td>
+  </tr>
+  
   <!--tr id="feature-id">
     <td class="title">Feature Title</td>
     <td class="content">
