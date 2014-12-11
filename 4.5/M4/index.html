@@ -25,21 +25,11 @@
 
 <table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
 
-<!-- Item template -->
-  <tr id="item-id">
-    <td class="title">Item title</td>
-    <td class="content">
-      Item blurb. See <a href="../../instructions.html">instructions</a>.
-      <p>
-        Use the <a href="http://validator.w3.org/#validate_by_input">XHTML Markup Validation Service</a>.
-      </p>
-    </td>
-  </tr>
-<!-- End -->
-
   <tr>
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
+
+
   <tr id="css-inherit-prop">
     <td class="title">New 'inherit' value for CSS properties</td>
     <td class="content">
@@ -49,8 +39,6 @@
         </p>
     </td>
   </tr>
-
-  <tr><td colspan="2"><div class="title">Workspace:</div></td></tr>
 
   <tr id="apply-git-patch">
     <td class="title">Apply Patch... wizard more resilient</td>
@@ -65,9 +53,9 @@
   </tr>
   
   <tr id="Job-groups-api">
-    <td class="title">Job Groups API</td>
+    <td class="title">Job groups API</td>
     <td class="content">
-	JobGroup API (<code>org.eclipse.core.runtime.jobs.JobGroup</code>) is added to make it
+	A JobGroup API (<code>org.eclipse.core.runtime.jobs.JobGroup</code>) has been added that makes it
 	easier to implement parallel algorithms in Eclipse.
 	<p>Job groups provide a simple way to manage a set of Eclipse Jobs that are responsible
 	for pieces of the same large task. The API supports throttling, joining, cancellation,
@@ -78,49 +66,43 @@
     </td>
   </tr>
 
-  <tr><td colspan="2"><div class="title">Platform UI:</div></td></tr>
-
-  <tr><td colspan="2"><div class="title">Platform Text:</div></td></tr>
-
-  <tr><td colspan="2"><div class="title">Debug:</div></td></tr>
   <tr id="stdin-file">
     <td class="title">Assigning stdin to a file</td>
     <td class="content">
-		Stdin can be assigned to a file in Common tab of Configurations.
+        Stdin can now be assigned to a file in the "Common" tab of launch configuration dialogs.
         <p>
           <img src="images/stdin-file.png" alt="" />
         </p>
     </td>
   </tr>
+
   <tr id="scroll-lock">
-    <td class="title">Auto scroll lock in console</td>
+    <td class="title">Automatic scroll lock in Console view</td>
     <td class="content">
-		Scrolling up in console using keys, mouse wheel or scroll bar will auto lock the console.
-		<p> Scrolling up will lock the scroll bar automatically and the Scroll Lock icon will depict the auto scroll lock state.
-		Moving the keys, mouse wheel or scroll bar down to the end of the document will unlock the scroll bar automatically.
+		Scrolling up in the <b>Console</b> view using keys, mouse wheel, or scroll bar now automatically enables the <b>Scroll Lock</b> mode.
+		<p>
+		When you scroll down to the end of the console, the scroll lock is automatically released again.
 		</p>
     </td>
   </tr>
+
   <tr id="console-output-limit">
     <td class="title">Console output limit</td>
     <td class="content">
-		Limit of 1 million characters for console output has been removed.
-		<p> Console output character limit has been increased to Integer.MAX_VALUE - 100000.
+		<b>Preferences &gt; Run/Debug &gt; Console &gt; Console buffer size (characters)</b>
+		is now only limited by the amount of characters the Console view can render.
+		<p>
+		The arbitrary limit of 1 million characters has been removed.
 		</p>
     </td>
   </tr>
 
-  <tr><td colspan="2"><div class="title">Ant:</div></td></tr>
-
-  <tr><td colspan="2"><div class="title">SWT:</div></td></tr>
-  
   <tr id="menuitem-tooltip">
     <td class="title">Added API to set tooltip for MenuItem</td>
     <td class="content">
-		SWT now supports setting tooltip on menu items via <code>MenuItem.setToolTipText()</code>. 
-		The getter <code>MenuItem.getToolTipText()</code> is added to retrieve the menu item's tooltip.
+		SWT now supports setting a tooltip on menu items via <code>MenuItem.setToolTipText()</code>. 
 		<p>
-		For example, see the MenuTab of <a href="https://www.eclipse.org/swt/examples.php">ControlExample</a>.</p>
+		For an example, see the <b>Menu</b> tab in the <a href="https://www.eclipse.org/swt/examples.php">ControlExample</a>.</p>
 		<p>
           <img src="images/tooltip.png" alt="" />
         </p>
@@ -128,8 +110,9 @@
   </tr>
 
   <tr>
-    <td colspan="2" class="section" id="JDT">JDT</td></tr>
-    
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+
   <tr id="loop-flows">
     <td class="title">Improved flow analysis for loops</td>
     <td class="content">
@@ -197,35 +180,24 @@
 		<p>
 			<img src="images/java-formatter.png" alt="" />
 		</p>
-		The default code formatter is used if no third party formatter is provided.
+		The default code formatter is used if no third-party formatter is provided.
 	</td>
   </tr>
   
-  <!--tr id="feature-id">
-    <td class="title">Feature Title</td>
-    <td class="content">
-	You can now do some very cool things thanks to this new feature!
-          <p>
-            <img src="images/feature-screenshot.png" alt="" />
-          </p>
-    </td>
-  </tr-->
-
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
 
-
-	<tr id="pde-target-editor-retains-selection">
+  <tr id="pde-target-editor-retains-selection">
     <td class="title">Target editor retains selection </td>
     <td class="content">
       In the <b> Target Editor</b>, while editing an existing software site location, 
       the <b>  Edit Software Site </b>  dialog now opens with the appropriate selection.
         
     </td>
-  	</tr>
+  </tr>
   		
-  	<tr id="pde-api-use-scan">
+  <tr id="pde-api-use-scan">
     <td class="title">API use scan report specifies additional filters used </td>
     <td class="content">
       <b> API use scan report</b>  specifies the location of additional filters (.api_filter files)
@@ -235,29 +207,19 @@
         <img src="images/pde-additional-filter-information.png" alt="Additional Filter Information"/>
       </p>
     </td>
-  	</tr>
+  </tr>
  
-    <tr id="pde-error-log-size">
+  <tr id="pde-error-log-size">
     <td class="title">Option to set maximum log size</td>
     <td class="content">
-      In the <b> Error Log View</b>, on the log filters dialog, there is an option to set
-      the maximum log size that can be read by error log. If the size of error log exceeds
+      In the <b>Error Log</b> view, on the <b>view menu &gt; Filters...</b> dialog, there now is an option to set
+      the maximum log size that can be read by the Error Log view. If the size of the error log exceeds
       this limit, a warning is logged.
       <p>
         <img src="images/pde-logsize-filter-dialog.png" alt="Maximum log size in filter log dialog"/>
       </p>
     </td>
   </tr>
-  
-  <!--tr id="feature-id">
-    <td class="title">Feature Title</td>
-    <td class="content">
-	You can now do some very cool things thanks to this new feature!
-          <p>
-            <img src="images/feature-screenshot.png" alt="" />
-          </p>
-    </td>
-  </tr-->
 
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
@@ -281,9 +243,9 @@
   		run Eclipse successfully on all Linux/UNIX platforms as opposed to GTK+ 2.10.0 earlier.
   		Support for all versions older than 2.18 has been dropped effective Mars M3 milestone release.
   		<p>
-  		Note: As of now, Eclipse throws the following error dialog which allows eclipse to run even when
-  		a GTK+ version older than 2.18.0 is detected, but that behavior will soon be changed to not run 
-  		Eclipse with unsupported versions.
+  		Note: As of now, Eclipse shows the following error dialog, which allows you to run even when
+  		a GTK+ version older than 2.18.0 is detected. But that behavior will soon be changed to not run 
+  		Eclipse with unsupported GTK+ versions.
   		</p>
   		<p>
           <img src="images/gtk-version-warning.png" alt="" />
@@ -291,16 +253,6 @@
   		
   	</td>
   </tr>
-  
-  <!--tr id="feature-id">
-    <td class="title">Feature Title</td>
-    <td class="content">
-	You can now do some very cool things thanks to this new feature!
-          <p>
-            <img src="images/feature-screenshot.png" alt="" />
-          </p>
-    </td>
-  </tr-->
 
   <tr>
     <td colspan="2"/>
