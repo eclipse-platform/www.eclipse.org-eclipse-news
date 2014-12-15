@@ -258,10 +258,11 @@
     <td class="title">Prompt for native dependencies</td>
     <td class="content">
       It is now possible with p2 to express dependencies on OS packages and prompt the user to install those when they are not installed.
-	<img src="images/os-prompt.png" alt="" />
-	<p>This functionality can be enabled by the new touchpoint instruction called <code>org.eclipse.equinox.p2.touchpoint.natives.checkAndPromptNativePackage<code> (for example <code>org.eclipse.equinox.p2.touchpoint.natives.checkAndPromptNativePackage(distro:debian,package:handbrake,comparator:ge,version:0.9);</code>
-	</p> 
-	<p>At this point the support is limited to Ubuntu. <a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Equinox">Contributions</a> to add this support for other OS are welcomed.</p>
+	<p><img src="images/os-prompt.png" alt="" /></p>
+	<p>This functionality can be enabled by a new touchpoint instruction. For example:</p> 
+	<pre>org.eclipse.equinox.p2.touchpoint.natives.checkAndPromptNativePackage(distro:debian,package:handbrake,comparator:ge,version:0.9);</pre>
+	<p>At this point, the support is limited to Ubuntu.
+	<a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Equinox&amp;component=p2">Contributions</a> to add this support for other OS are welcomed.</p>
 	<p>Integration with Tycho is available from 0.23.0-SNAPSHOT and above.</p>
     </td>
   </tr>
