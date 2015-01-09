@@ -19,7 +19,3 @@ table.news tr {vertical-align: top;}
 table.news tr td.section {font-size: 20px; font-weight: bold;}
 table.news tr td.title {vertical-align: top; width: 30%; font-weight: bold;}
 table.news tr td.content {vertical-align: top; width: 70%;}
-
-div.images {width: 100%;}
-div.images img {float:left;margin: 5px;}
-div.images .clear {clear:both;}
