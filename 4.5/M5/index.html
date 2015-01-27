@@ -138,8 +138,8 @@
     <tr id="uimonitoring_deadlock">
     <td class="title">Improved reporting of UI freezes and potential deadlocks</td>
     <td class="content">
-      The interactive UI monitoring reporting has been improved to provide better error messages in case of 
-      potential deadlocks. 
+      The interactive UI monitoring reporting has been improved to provide better error messages in case of
+      potential deadlocks.
       <p>For more information see: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=458311">Bug 458311</a></p>
      </td>
    </tr>
@@ -161,7 +161,55 @@
       <p>This implementation relies on the Common Navigator Framework.</p>
     </td>
   </tr>
+  
 
+  <tr><td colspan="2"><div class="title">Platform runtime:</div></td></tr>
+   <tr id="message_registry">
+    <td class="title">Message registry</td>
+    <td class="content">
+    	Added support for binding control attributes for localization to a value of a messages class.
+    	By using such a binding, the dynamic update of widgets due to locale changes at runtime  (<i>Eclipse Translation Pattern</i>)
+    	gets easier to implement, since the localized widgets (e.g. <code>Labels</code>, <code>Buttons</code>, etc.)
+		are managed by the message registry.
+    	<p>
+    	To use the message binding for a messages class named <code>MyMessages</code>, you need to create a specialized 
+    	<code>BaseMessageRegistry</code> class like shown below:
+    	</p>
+    	<pre>@Creatable
+public class MyMessageRegistry extends BaseMessageRegistry&lt;MyMessages&gt; {
+
+	@Override
+	@Inject
+	public void updateMessages(@Translation MyMessages messages) {
+		super.updateMessages(messages);
+	}
+}</pre>
+    	<p>
+    	It can then be used like this:
+    	</p>
+    	<pre>@Inject
+MyMessageRegistry registry;
+
+@PostConstruct
+public void init(Composite parent) {
+	Label myFirstLabel = new Label(parent, SWT.WRAP);
+	Label mySecondLabel = new Label(parent, SWT.NONE);
+	Label myThirdLabel = new Label(parent, SWT.NONE);
+	
+	// bind myFirstLabel via method reference
+	registry.register(myFirstLabel::setText, (m) -> m.firstLabelMessage);
+	// bind mySecondLabel via method name
+	registry.register(mySecondLabel, "setText", "secondLabelMe
+	ssage");
+	// bind myThirdLabel via property name
+	registry.registerProperty(myThirdLabel, "text", "thirdLabelMessage");
+}</pre>
+    	<p>
+    	The <code>BaseMessageRegistry</code> supports bindings for Java version before Java 8.
+    	</p>
+    </td>
+  </tr>
+  
   <tr><td colspan="2"><div class="title">Platform Text:</div></td></tr>
   <tr><td class="title">Text search speedup</td>
     <td class="content">
