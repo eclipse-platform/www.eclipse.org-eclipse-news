@@ -224,32 +224,33 @@ public void init(Composite parent) {
   <tr><td colspan="2"><div class="title">Ant:</div></td></tr>
 
   <tr><td colspan="2"><div class="title">SWT:</div></td></tr>
-  <tr><td class="title">Transparent Background for Control <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=435384">Bug 435384</a></td>
+  <tr id="transparent-bg">
+  <td class="title">Transparent background for Control</td>
     <td class="content">
-    	<p>SWT now supports alpha 'int'(0 to 255) field in the Color class. Color with alpha '0' will lead to transparent color &
-    	can be passed to Control#setBackground(Color color) to set the background transparent.</p>
-    	<p><b>Note:-</b></p>
-    	<ul>
-    		<li>In current support, SWT only honors extreme values for alpha ie. '0'(transparent) or '255'(opaque)</li>
-    		<li>Transparent color cannot be set of some control and they would just have default background e.g. Text, Combo</li>
-    		<li>Where as Table/Tree on GTK3 can have transparent background, but not on other platforms.</li>
-    	</ul>
-		<p><b>New Class/APIs:</b></p>
+    	<p>SWT has added support to set a <code>Control</code>'s background as transparent. The <code>Color</code> class now supports specifying a alpha value (integer: 0 to 255) for transparency.
+    	Calling <code>Control#setBackground(Color color)</code> with a transparent color (color with alpha value '0'), sets the control's background as transparent.</p>
+		<p><b>List of New Classes and APIs:</b></p>
 		<ul>
-			<li>New Class: org.eclipse.swt.graphics.RGBA.java</li>
-			<li>New Constant: SWT.COLOR_TRANSPARENT - This is a default transparent color</li>
-			<li>New methods in org.eclipse.swt.graphics.Color</li>
+			<li>Class: <code>org.eclipse.swt.graphics.RGBA</code></li>
+			<li>Constant: <code>SWT.COLOR_TRANSPARENT</code> - This is a default transparent color</li>
+			<li>Methods added in <code>org.eclipse.swt.graphics.Color</code></li>
 			<ul>
-				<li>public Color (Device device, int red, int green, int blue, int alpha)</li>
-				<li>public Color (Device device, RGB rgb, int alpha)</li>
-				<li>public Color (Device device, RGBA rgba)</li>
-				<li>public RGBA getRGBA ()</li>
-				<li>public int getAlpha ()</li>
+				<li><code>public Color (Device device, int red, int green, int blue, int alpha)</code></li>
+				<li><code>public Color (Device device, RGB rgb, int alpha)</code></li>
+				<li><code>public Color (Device device, RGBA rgba)</code></li>
+				<li><code>public RGBA getRGBA </code>()</li>
+				<li><code>public int getAlpha ()</code></li>
 			</ul>
-			<li>New org.eclipse.swt.snippets.Snippet365.java</li>
 		</ul>
+		<p><b>Note:</b></p>
+    	<ul>
+    		<li>Currently, SWT honors only extreme values for alpha i.e, '0'(transparent) or '255'(opaque).</li>
+    		<li>Setting transparent background color fails for some controls on all platforms, they show the default background color instead. For e.g. Text, Combo.</li>
+    		<li>Setting transparent background color for some controls works on GTK3 only, it fails on other platforms. For e.g. Table, Tree.</li>
+    	</ul>
+		For an example on using the new APIs, see <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet365.java">Snippet365</a>.
 		<p>
-			<b>Controls(Containers & Widgets) with COLOR_TRANSPARENT background.[ Shell has gradient background image]</b>
+			<b>Snippet365 in action</b> (Controls with <code>SWT.COLOR_TRANSPARENT</code> background and Shell with gradient background image)
 		</p>
 		<p>
         	<img src="images/transparent_control_background.png" alt="Transparent Background on Control widgets" />
