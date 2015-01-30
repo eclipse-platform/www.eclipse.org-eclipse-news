@@ -27,6 +27,55 @@
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
 
+  <tr id="perspective_customization">
+    <td class="title">Perspective Customization</td>
+    <td class="content">
+      After 3 years of absence the <b>Customize Perspective Dialog</b> and <b>Reset Perspective</b> are back to Eclipse.
+      The dialog which allows to configure the visible menu, toolbar, action sets
+      and shortcuts was broken starting with Eclipse 4.2, together with the the ability to reset the perspective.
+      <p>
+        <img src="images/cpd_toolbar_compare_M4_M5.png" alt="Configuring toolbars" />
+      </p>
+      <p>
+        <img src="images/cpd_menubar_compare_M4_M5.png" alt="Configuring menus" />
+      </p>
+      <p>
+        <img src="images/cpd_actionsets_compare_M4_M5.png" alt="Configuring action sets" />
+      </p>
+      <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=420956">bug 420956</a>.</p>
+     </td>
+   </tr>
+
+  <tr id="nested-projects">
+    <td class="title">Nested/Hierarchical view of projects</td>
+    <td class="content">
+      The <b>Project Explorer</b> now provides the ability to view the projects in a hierarchical (a.k.a. nested) form. For modular
+      projects, this allows to have your Project Explorer mapping more closely the organization of your modules as they are on the
+      file system. This hierarchical view of projects often makes easier to navigate modular projects.
+      <p>Hierarchical view of projects can be triggered from the <b>Project Explorer</b> view menu, under the <b>Projects Presentation</b> item.</p>
+      <p>
+      <img align="middle" src="images/nested-projects-menu.png" alt="Hierarchical view of projects can be triggered from the Project Explorer view menu, under the Projects Presentation item"/>
+      </p>
+      <p>
+        Then it makes the folders that are at the same location as a project replaced by the project, and the projects that are nested under
+        other projects will not be shown as root elements.</p>
+      <p><img align="middle" src="images/nested-projects.png" alt=""/></p>
+      <p>This implementation relies on the Common Navigator Framework.</p>
+    </td>
+  </tr>
+
+  <tr id="workspace-location-in-prefs">
+    <td class="title">Workspace location in preferences</td>
+    <td class="content">
+      The <b>Workspace</b> preference page now shows the current workspace path.  In addition the path can be configured to appear in the
+      window title, a feature that previously was only available through the <code>-showLocation</code> command line argument.
+      This argument is still in effect and overrides the preference.
+      <p>
+        <img src="images/workspace-in-prefs.png" alt="Show the workspace in preferences and in window title" />
+      </p>
+    </td>
+  </tr>
+
   <tr id="css-section-prop">
     <td class="title">New CSS properties for the Section title bar</td>
     <td class="content">
@@ -39,17 +88,17 @@
     		background-color-gradient-titlebar CSS property,
     		like in the sample above, you get a solid background color.
     	</p>
-        <p>For more information see: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=431635">Bug 431635</a></p>
+        <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=431635">bug 431635</a>.</p>
     </td>
   </tr>
    <tr id="css-section-multiple">
-    <td class="title">Support for multiple style sheets rules for the same selector</td>
+    <td class="title">Support for multiple style sheet rules for the same selector</td>
     <td class="content">
-		The CSS engines scans now all style sheets and combines all matching rules into a common style. This allows plug-ins override previously defined styles:
+		The CSS engines now scans all style sheets and combines all matching rules into a common style. This allows plug-ins to override previously defined styles:
 		<p>
         	<img src="images/css_override.png"  alt="CSS override"/>
     	</p>
-        <p>For more information see: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=458342">Bug 458342</a></p>
+        <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=458342">bug 458342</a>.</p>
     </td>
   </tr>
   
@@ -72,80 +121,28 @@
     	<p>
         	<img src="images/dark_theme_new_pde.png"  alt="Section in the dark theme with M5"/>
     	</p>
-        <p>For more information see: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=430205">Bug 430205</a></p>
+        <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=430205">bug 430205</a>.</p>
     </td>
   </tr>
   
    <tr id="help-service">
     <td class="title">Provisional EHelpService service</td>
     <td class="content">
-		M5 provides the provisional help service EHelpService in the IEclipseContext. 
-		EHelpService is a thin wrapper to the WorkbenchHelpSystem in the Eclipse IDE and allows customers to
-		provide their customer implementation in Eclipse RCP applications.
+		M5 provides the provisional help service <code>EHelpService</code> in the <code>IEclipseContext</code>. 
+		<code>EHelpService</code> is a thin wrapper to the <code>WorkbenchHelpSystem</code> in the Eclipse IDE and allows customers to
+		provide their custom implementation in Eclipse RCP applications.
     </td>
   </tr>
   
-  <tr id="workspace-location-in-prefs">
-    <td class="title">Workspace location in preferences</td>
-    <td class="content">
-      The Workspace preference page now shows the current workspace path.  In addition the path can be configured to appear in the
-      window title, a feature that previously was only available through the <code>-showLocation</code> command line argument.
-      This argument is still in effect and overrides the preference.
-      <p>
-        <img src="images/workspace-in-prefs.png" alt="Show the workspace in preferences and in window title" />
-      </p>
-    </td>
-  </tr>
-  
-  <tr id="perspective_customization">
-    <td class="title">Perspective Customization</td>
-    <td class="content">
-      After 3 years of absence "Customize Perspective Dialog" is back to Eclipse.
-      The dialog which allows to configure the visible menu, toolbar, action sets
-      and shortcuts was broken starting with Eclipse 4.2, together with the "Reset Perspective" action and 
-      has been fixed for Eclipse 4.5.
-      <p>
-        <img src="images/cpd_toolbar_compare_M4_M5.png" alt="Configuring toolbars" />
-      </p>
-      <p>
-        <img src="images/cpd_menubar_compare_M4_M5.png" alt="Configuring menus" />
-      </p>
-      <p>
-        <img src="images/cpd_actionsets_compare_M4_M5.png" alt="Configuring action sets" />
-      </p>
-      <p>For more information see: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=420956">Bug 420956</a></p>
-     </td>
-   </tr>
-   
     <tr id="uimonitoring_deadlock">
     <td class="title">Improved reporting of UI freezes and potential deadlocks</td>
     <td class="content">
       The interactive UI monitoring reporting has been improved to provide better error messages in case of
       potential deadlocks.
-      <p>For more information see: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=458311">Bug 458311</a></p>
+      <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=458311">bug 458311</a>.</p>
      </td>
    </tr>
 
-  <tr id="nested-projects">
-    <td class="title">Nested/Hierarchical view of projects</td>
-    <td class="content">
-      The <em>Project Explorer</em> now provides the ability to view the projects in a hierarchical (a.k.a. nested) form. For modular
-      projects, this allows to have your Project Explorer mapping more closely the organization of your modules as they are on the
-      file system. This hierarchical view of projects often makes easier to navigate modular projects.
-      <p>Hierarchical view of projects can be triggered from the <em>Project Explorer</em> view menu, under the <em>Projects Presentation</em> item.<br/>
-      <img align="middle" src="images/nested-projects-menu.png" alt="Hierarchical view of projects can be triggered from the Project Explorer view menu, under the Projects Presentation item"/>
-      </p>
-      <p>
-        Then it makes that folders that are at the same location as a project will be replaced by the project, and that projects that are nested under
-        other projects will not be shown as root elements.<br/>
-        <img align="middle" src="images/nested-projects.png" alt=""/>
-      </p>
-      <p>This implementation relies on the Common Navigator Framework.</p>
-    </td>
-  </tr>
-  
-
-  <tr><td colspan="2"><div class="title">Platform runtime:</div></td></tr>
    <tr id="message_registry">
     <td class="title">Message registry</td>
     <td class="content">
@@ -191,27 +188,21 @@ public void init(Composite parent) {
     	</p>
     </td>
   </tr>
-  
-  <tr><td colspan="2"><div class="title">Platform Text:</div></td></tr>
+
   <tr><td class="title">Text search speedup</td>
     <td class="content">
-        Text search (<em>Search &gt; File...</em>) has been sped up by a factor 3x-4x for full workspace searches on multi-core machines.
-        <p>Text search now uses the JobGroup API added with Eclipse 4.5 (<code>org.eclipse.core.runtime.jobs.JobGroup</code>) to parallelize its processing.</p>
-    	<p>For more information see: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441016">Bug 441016</a></p>
+        Text search has been sped up by a factor 3x-4x for full workspace searches on multi-core machines.
+        <p>Text search now uses the <code>JobGroup</code> API added with Eclipse 4.5 (<code>org.eclipse.core.runtime.jobs.JobGroup</code>) to parallelize its processing.</p>
+    	<p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441016">bug 441016</a>.</p>
     </td>
   </tr>
 
-  <tr><td colspan="2"><div class="title">Debug:</div></td></tr>
-
-  <tr><td colspan="2"><div class="title">Ant:</div></td></tr>
-
-  <tr><td colspan="2"><div class="title">SWT:</div></td></tr>
   <tr id="transparent-bg">
   <td class="title">Transparent background for Control</td>
     <td class="content">
-    	SWT has added support to set a <code>Control</code>'s background as transparent. The <code>Color</code> class now supports specifying a alpha value (integer: 0 to 255) for transparency.
+    	SWT has added support to set a <code>Control</code>'s background as transparent. The <code>Color</code> class now supports specifying an alpha value (integer: 0 to 255) for transparency.
     	Calling <code>Control#setBackground(Color color)</code> with a transparent color (color with alpha value '0'), sets the control's background as transparent.
-		<p><b>List of New Classes and APIs:</b></p>
+		<p><b>List of new classes and APIs:</b></p>
 		<ul>
 			<li>Class: <code>org.eclipse.swt.graphics.RGBA</code></li>
 			<li>Constant: <code>SWT.COLOR_TRANSPARENT</code> - This is a default transparent color</li>
@@ -243,9 +234,9 @@ public void init(Composite parent) {
   <tr id="swt-tools">
     <td class="title">SWT Tools</td>
     <td class="content">
-		<a href="https://www.eclipse.org/swt/tools.php">SWT Tools</a> are now available in the Eclipse Platform P2 repository.
-		SWT Tools provides tools for developing SWT itself (JNIGen) but also general purpose tools Sleak 
-		(monitors the creation and disposal of SWT graphics resources) and SWT Spy (prints out information like style, layout and parent 
+		<a href="https://www.eclipse.org/swt/tools.php">SWT Tools</a> are now available in the Eclipse Platform p2 repository.
+		SWT Tools provides tools for developing SWT itself (JNIGen) but also general purpose tools like  <b>Sleak</b> 
+		(monitors the creation and disposal of SWT graphics resources) and <b>SWT Spy</b> (prints out information like style, layout and parent 
 		about the widget under the cursor).
     </td>
   </tr>
@@ -258,7 +249,7 @@ public void init(Composite parent) {
     <td class="title">Reload button added in target editor </td>
     <td class="content">
        In the <b>Target Editor</b>, on the <b>Locations</b> section, there is a reload button that clears the cached 
-       p2 profile and then resolves the target. This button is helpful in scenarios where target editor is left in inconsistent
+       p2 profile and then resolves the target. This button is helpful in scenarios where the target editor is left in inconsistent
        state due to issues like unstable network connection.
       <p>
         <img src="images/pde-target-editor-reload-button.png" alt="Target Editor Reload Button"/>
