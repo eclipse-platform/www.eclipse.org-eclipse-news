@@ -59,8 +59,8 @@
   <tr id="perspective_trim_menu">
     <td class="title">Customize... menu entry is back in the perspective trim menu</td>
     <td class="content">
-      <p>Perspective trim menu (right click on the current perspective button) has now <i>Customize...</i> menu entry as shortcut
-      for <i>Window -&gt; Perspective -&gt; Customize Perspective</i> menu.
+      <p>The context menu of the current perspective (right click on the current perspective button) has now a <i>Customize...</i> menu entry as a shortcut
+      for the <i>Window -&gt; Perspective -&gt; Customize Perspective</i> menu.
       </p>
       <p>
         <img src="images/perspective_trim_menu.png" alt="" />
@@ -72,13 +72,13 @@
   <tr id="print_button">
     <td class="title">Print button hidden by default</td>
     <td class="content">
-      <p>Print button on the main toolbar is hidden by default.</p>
+      <p>The print button on the main toolbar is now hidden by default. </p>
       <p>The button can be added back to the toolbar with <i>Customize Perspective</i> dialog.
       To open this dialog right click on the current perspective button and select <i>Customize...</i> menu.
       </p>
       <p>
-      In the <i>Customize Perspective</i> dialog, in the first <i>Tool Bar Visibility</i> tab, expand "File",
-      check "Print" entry and hit "OK" button.
+      In the <i>Customize Perspective</i> dialog, in the first <i>Tool Bar Visibility</i> tab, expand the "File" entry,
+      check "Print" entry and select the "OK" button.
       </p>
       <p>
         <img src="images/add_print_button_back.png" alt="" />
@@ -139,15 +139,15 @@
   <tr id="editors_error_on_deleted_resources">
     <td class="title">Affected editors are closed if project is closed or deleted</td>
     <td class="content">
-      <p>Eclipse now automatically closes all affected editors if their project is closed or deleted, independently
-      if editors were opened in the current or in the past Eclipse session.
-      </p>
       <p>
       Previously, if editors were opened in the past Eclipse session, and their project was closed or deleted,
-      an error part was shown if user was trying to switch to such an editor. This should not happen anymore:
+      an error part was shown if user was trying to switch to such an editor. 
       </p>
       <p>
         <img src="images/error_editor_part_on_missing_resource.png" alt="Error editor part on missing project" />
+      </p>
+      <p>With this change the Eclipse IDE now automatically closes all affected editors if their project is closed or deleted, independently
+      if editors were opened in the current or in the past Eclipse session.
       </p>
       <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=41431">bug 41431</a>.</p>
      </td>
