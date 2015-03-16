@@ -152,6 +152,25 @@
       <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=41431">bug 41431</a>.</p>
      </td>
   </tr>
+  
+   <tr id="abstractselectiondialog_with_generics">
+    <td class="title">The AbstractSelectionDialog as generalization of the SelectionDialog</td>
+    <td class="content">
+      <p>
+	The AbstractSelectionDialog is an enhanced version of the existing SelectionDialog and is now located in the org.eclipse.jface plug-in instead of the eclipse.ui plug-in, 
+	which is not available for Eclipse 4 RCP applications.
+      </p>
+      <p>
+	It now supports generics and uses lists instead of plain arrays. You may set the selection via Varargs or a Collection.
+      </p>
+      <p>
+        The GenericSelectionDialog is a sample implementation of the AbstractSelectionDialog, which can be seen by running the Snippet070GenericSelectionDialog sample.
+      </p>
+      <p>
+        <img src="images/GenericSelectionDialog.png" alt="Snippet070GenericSelectionDialog with GenericSelectionDialog" />
+      </p>
+     </td>
+  </tr>
 
   <tr><td colspan="2"><div class="title">Platform Text:</div></td></tr>
 
