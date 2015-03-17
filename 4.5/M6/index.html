@@ -70,7 +70,7 @@
   </tr>
 
   <tr id="print_button">
-    <td class="title">Prin t button hidden by default</td>
+    <td class="title">Print button hidden by default</td>
     <td class="content">
       <p>The print button on the main toolbar is now hidden by default. </p>
       <p>The button can be added back to the toolbar with <i>Customize Perspective</i> dialog.
@@ -227,7 +227,7 @@
     <td class="content">
   		<b>Ctrl+Alt+B</b> has been added as the shortcut for <b> Skip All Breakpoints</b>.
   		<p>
-        <img src="images/skip_all_breakpoints.png" alt=""/><br>
+        <img src="images/skip_all_breakpoints.png" alt=""/>
         </p>
         <p>
          Tool tip shows the shortcut information.
@@ -296,15 +296,12 @@
    <tr id="iadaptable">
     <td class="title">Generified version of IAdaptable</td>
     <td class="content">
-      <p> The IAdaptable interface has been changed to return the requested type from its getAdapter(Class<T> adapter) method. 	
-      <pre>public &ltT&gt T getAdapter(Class &ltT&gt adapter);</pre>
-      </p>
+      <p> The IAdaptable interface has been changed to return the requested type from its getAdapter(Class&lt;T&gt; adapter) method.</p>
+      <pre>public &lt;T&gt; T getAdapter(Class &lt;T&gt; adapter);</pre>
       <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=442021">bug 442021</a>.</p>
      </td>
   </tr>
   
-  </tr>
-
 </table>
 
 <p>The above features are just the ones that are new since the previous milestone
