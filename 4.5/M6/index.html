@@ -70,7 +70,7 @@
   </tr>
 
   <tr id="print_button">
-    <td class="title">Print button hidden by default</td>
+    <td class="title">Prin t button hidden by default</td>
     <td class="content">
       <p>The print button on the main toolbar is now hidden by default. </p>
       <p>The button can be added back to the toolbar with <i>Customize Perspective</i> dialog.
@@ -181,6 +181,7 @@
     <p>
     	For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=459961">bug 459961</a> and <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=431845">bug 431845</a>.
     </p>
+    </td>
   </tr>
 
    <tr id="css_theme_presentationmode">
@@ -206,9 +207,8 @@
       <p>
 	     The current default heap max (512MB) was increased to 1024MB.
      </p>
-      <p>
-      <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=457489">bug 457489</a> .</p>
-	</p>
+     <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=457489">bug 457489</a> .</p>
+	</td>
   </tr>
 
   <tr><td colspan="2"><div class="title">Platform Text:</div></td></tr>
@@ -238,14 +238,14 @@
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
 
-  <tr>
-    <td colspan="2" class="section" id="Equinox">Equinox</td>
+  <tr><td colspan="2" class="section" id="Equinox">Equinox</td></tr>
+  <tr><td colspan="2"><div class="title">API:</div></td></tr>
     
-      <tr id="iadaptable">
+   <tr id="iadaptable">
     <td class="title">Generified version of IAdaptable</td>
     <td class="content">
       <p> The IAdaptable interface has been changed to return the requested type from its getAdapter(Class<T> adapter) method. 	
-      <pre>public <T> T getAdapter(Class<T> adapter);</pre>
+      <pre>public &ltT&gt T getAdapter(Class &ltT&gt adapter);</pre>
       </p>
       <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=442021">bug 442021</a>.</p>
      </td>
@@ -253,10 +253,8 @@
   
   </tr>
 
-  <tr>
-    <td colspan="2"/>
-  </tr>
 </table>
+
 <p>The above features are just the ones that are new since the previous milestone
 build. Summaries for earlier Mars milestone builds:</p>
 <ul>
