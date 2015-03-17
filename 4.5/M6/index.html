@@ -234,6 +234,58 @@
         </p>
     </td>
    </tr>
+  <tr id="external-annotations">
+    <td class="title">External Annotations</td>
+    <td class="content">
+      Annotation-based null analysis can now leverage externally defined annotations that are attached to a library.
+      <p>
+      	Previously, annotation-based null analysis was significantly limited by the fact 
+      	that many 3<sup>rd</sup> party libraries have no null annotations in their API.
+      	This implied that any errors caused at this interface could not be detected by the analysis,
+      	and even worse, implementors of library-defined interfaces could not use any intended contracts,
+      	because any null annotations in overriding methods were flagged as incompatible with the super version.      	
+      </p>
+      <p>
+      	JDT now supports the concept of "external annotations".
+      	A user can specify null annotations in separate files and attach these to a given library.
+      	The compiler will take external null annotations into consideration for its null analysis.
+      </p>
+      <p><strong>Configuration:</strong></p>
+      <p><img src="images/external-annotation-configuration.png" title="Preferences &gt; Java &gt; Installed JREs &gt; Edit" alt="Preferences &gt; Java &gt; Installed JREs &gt; Edit"/></p>
+      <p>External annotations can be provided as a directory tree of individual text files or as a zip file.
+      	External annotations can be attached to a JRE (per workspace) and to arbitrary libraries (per project).
+      </p>
+      <ul>
+      <li>See below for creating external annotations using a new command "Annotate"</li>
+      <li>See <a href="https://wiki.eclipse.org/JDT_Core/Null_Analysis/External_Annotations">the wiki</a> for the full story.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr id="annotate-command">
+    <td class="title">Annotate command</td>
+    <td class="content">
+      A new command "Annotate" is provided when browsing attached source code of a library using the class file editor.
+      <p>
+      	Two pre-requisites must be met for using this command:
+      </p>
+      <ul>
+     	<li>The project is configured to use annotation-based null analysis.</li>
+     	<li>An existing workspace folder has been specified as the external annotation location for a given library.</li>
+      </ul>
+      <p>
+      	Users may select any type in the signature of a library method or field, and invoke "Annotate" -
+      	either using the context menu, or by pressing <code>Ctrl-1</code>.
+      	Proposals will be offered for marking the selected type as <code>@NonNull</code> or <code>@Nullable</code>.
+      	All method parameters, return types and field types can be annotated.
+      	Additionally when Java 8 is used, details like type arguments and type bounds etc. can be annotated.
+      </p>
+      <p><img src="images/annotate-map-return.png" alt=""/></p>
+      <p>After selecting a proposal, the compiler will immediately leverage the new annotation for its null analysis.
+      </p>
+      <p><img src="images/map-get-error.png" alt=""/></p>
+    </td>
+  </tr>
+
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
