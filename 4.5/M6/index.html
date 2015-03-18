@@ -231,6 +231,43 @@
   <tr><td colspan="2"><div class="title">Ant:</div></td></tr>
 
   <tr><td colspan="2"><div class="title">SWT:</div></td></tr>
+  <tr id="hi-DPI-monitor-support">
+  	<td class="title">Added High DPI monitor support</td>
+  	<td class="content">
+	  	Added support for High DPI(Dots Per Inch) monitors
+	  	<p>
+		  	Added two new interfaces with new API to enable this feature.
+		  	The interfaces are
+		</p>
+		<p>&nbsp;&nbsp;<code>ImageDataProvider</code> with method</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>ImageData getImageData(int zoom)</code></p>
+		<p>&nbsp;&nbsp;<code>ImageFileNameProvider</code> with method</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>String getImagePath(int zoom)</code></p>
+
+	  	<p>
+		  	Two new constructors are also provided in the <code>Image</code> class for making use 
+		  	of this feature
+		</p>
+	  	<p>&nbsp;&nbsp;<code>Image(Device, ImageDataProvider)</code> and</p>
+		<p>&nbsp;&nbsp;<code>Image(Device, ImageFileNameProvider)</code></p>
+	  	<p>
+		  	To enable the rendering of differently sized images which are selected based on DPI on a high DPI 
+		  	monitor, the client code needs to implement either one of the above mentioned interfaces along 
+		  	with the corresponding methods and construct the <code>Image</code> object using the corresponding 
+		  	constructor.
+	  	</p>
+	  	<b>Criteria for interface selection</b>
+	  	<p>
+			<code>ImageFileNameProvider</code> needs to be implemented when the images are available as files. 
+			If the image file is part of a jar, the client code needs to extract the image file on to the file 
+			system and return its path when the <code>getImagePath</code> method is called.
+		</p>
+	  	<p>
+	  		For other cases like when the image is created using an input stream or from an existing image,
+	  		use the <code>ImageDataProvider</code> interface.
+	  	</p>
+  	</td>
+  </tr>
 
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
