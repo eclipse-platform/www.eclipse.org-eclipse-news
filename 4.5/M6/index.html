@@ -63,7 +63,7 @@
       for the <i>Window -&gt; Perspective -&gt; Customize Perspective</i> menu.
       </p>
       <p>
-        <img src="images/perspective_trim_menu.png" alt="" />
+        <img src="images/perspective_trim_menu.png" alt="Customize... menu entry is back in the perspective trim menu" />
       </p>
       <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=380233">bug 380233</a>.</p>
      </td>
@@ -81,9 +81,28 @@
       check "Print" entry and select the "OK" button.
       </p>
       <p>
-        <img src="images/add_print_button_back.png" alt="" />
+        <img src="images/add_print_button_back.png" alt="Print button hidden by default" />
       </p>
       <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=180308">bug 180308</a>.</p>
+     </td>
+  </tr>
+
+  <tr id="pin_button">
+    <td class="title">Pin Editor button is back</td>
+    <td class="content">
+      <p>The Pin Editor button on the main toolbar is now shown if the option <i>"General -&gt; Editors -&gt;
+      Close editors automatically"</i> is selected in preferences. </p>
+      <p>Once enabled, the button can be now also hidden via <i>Customize Perspective</i> dialog.
+      To open this dialog right click on the current perspective button and select <i>Customize...</i> menu.
+      </p>
+      <p>
+      In the <i>Customize Perspective</i> dialog, in the first <i>Tool Bar Visibility</i> tab, expand the "Navigate" entry,
+      uncheck "Pin Editor" entry.
+      </p>
+      <p>
+        <img src="images/pin_editor_button_is_back.png" alt="Pin Editor button is back" />
+      </p>
+      <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=445538">bug 445538</a>.</p>
      </td>
   </tr>
 
@@ -152,12 +171,12 @@
       <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=41431">bug 41431</a>.</p>
      </td>
   </tr>
-  
+
    <tr id="abstractselectiondialog_with_generics">
     <td class="title">The AbstractSelectionDialog as generalization of the SelectionDialog</td>
     <td class="content">
       <p>
-	The AbstractSelectionDialog is an enhanced version of the existing SelectionDialog and is now located in the org.eclipse.jface plug-in instead of the eclipse.ui plug-in, 
+	The AbstractSelectionDialog is an enhanced version of the existing SelectionDialog and is now located in the org.eclipse.jface plug-in instead of the eclipse.ui plug-in,
 	which is not available for Eclipse 4 RCP applications.
       </p>
       <p>
@@ -171,12 +190,12 @@
       </p>
      </td>
   </tr>
-  
+
   <tr id="css_support_for_transparency">
     <td class="title">CSS support for the COLOR-TRANSPARENT constant</td>
     <td class="content">
       <p>
-		The CSS engine supports the usage of the COLOR-TRANSPARENT property which was introduced in Eclipse 4.5 M5 via the SWT.COLOR-TRANSPARENT property. This allowed to simplify the dark theme significantly. 
+		The CSS engine supports the usage of the COLOR-TRANSPARENT property which was introduced in Eclipse 4.5 M5 via the SWT.COLOR-TRANSPARENT property. This allowed to simplify the dark theme significantly.
     </p>
     <p>
     	For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=459961">bug 459961</a> and <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=431845">bug 431845</a>.
@@ -188,9 +207,9 @@
     <td class="title">New Presentationmode CSS theme</td>
     <td class="content">
       <p>
-	   A new "Presentation" theme is available in the preferences under General -> Appearance. 
+	   A new "Presentation" theme is available in the preferences under General -> Appearance.
 	   The presentation mode increases the font size of text editors to 16px, so that code or other contents is better readable during presentations. Presenters using
-	   Eclipse for demos or during conference sessions do not have to search in the Colors and Font setting for the correct font to set. 
+	   Eclipse for demos or during conference sessions do not have to search in the Colors and Font setting for the correct font to set.
       </p>
       <p>
         <img src="images/presentationmode.png" alt="Presentationmode as theme in the preferences" />
@@ -200,7 +219,7 @@
       </p>
      </td>
   </tr>
-  
+
    <tr id="default_heap_size">
     <td class="title">Default heap max increased to 1024 MB</td>
     <td class="content">
@@ -210,7 +229,7 @@
      <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=457489">bug 457489</a> .</p>
 	</td>
   </tr>
-  
+
    <tr id="default_darkthemecss">
     <td class="title">Dark theme uses new SWT API to style the button background</td>
     <td class="content">
@@ -248,8 +267,8 @@
 		<p>&nbsp;&nbsp;<code>ImageFileNameProvider</code> with method</p>
 		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>String getImagePath(int zoom)</code></p>
 	  	<p>
-		  	To enable the rendering of differently sized images which are selected based on DPI on a high DPI 
-		  	monitor, the client code needs to implement one of the above interfaces and construct the <code>Image</code> 
+		  	To enable the rendering of differently sized images which are selected based on DPI on a high DPI
+		  	monitor, the client code needs to implement one of the above interfaces and construct the <code>Image</code>
 		  	object using the corresponding constructor.
 	  	</p>
   	</td>
@@ -282,7 +301,7 @@
   <tr id="hotkey-skip-all-breakpoints">
     <td class="title">ECJ requires 1.7 Java Runtime</td>
     <td class="content">
-  		JDT Core projects are now compiled at 1.7 compliance level. As a result, a Java Runtime of 
+  		JDT Core projects are now compiled at 1.7 compliance level. As a result, a Java Runtime of
   		1.7 or above is required to run the eclipse compiler.
     </td>
    </tr>
@@ -291,11 +310,11 @@
     <td class="content">
       Annotation-based null analysis can now leverage externally defined annotations that are attached to a library.
       <p>
-      	Previously, annotation-based null analysis was significantly limited by the fact 
+      	Previously, annotation-based null analysis was significantly limited by the fact
       	that many 3<sup>rd</sup> party libraries have no null annotations in their API.
       	This implied that any errors caused at this interface could not be detected by the analysis,
       	and even worse, implementors of library-defined interfaces could not use any intended contracts,
-      	because any null annotations in overriding methods were flagged as incompatible with the super version.      	
+      	because any null annotations in overriding methods were flagged as incompatible with the super version.
       </p>
       <p>
       	JDT now supports the concept of "external annotations".
@@ -344,7 +363,7 @@
 
   <tr><td colspan="2" class="section" id="Equinox">Equinox</td></tr>
   <tr><td colspan="2"><div class="title">API:</div></td></tr>
-    
+
    <tr id="iadaptable">
     <td class="title">Generified version of IAdaptable</td>
     <td class="content">
@@ -353,7 +372,7 @@
       <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=442021">bug 442021</a>.</p>
      </td>
   </tr>
-  
+
 </table>
 
 <p>The above features are just the ones that are new since the previous milestone
