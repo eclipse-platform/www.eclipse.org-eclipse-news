@@ -19,23 +19,10 @@
 <ul>
   <li><a href="#Platform">Platform</a></li>
   <li><a href="#JDT">JDT</a></li>
-  <li><a href="#PDE">PDE</a></li>
   <li><a href="#Equinox">Equinox</a></li>
 </ul>
 
 <table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
-
-<!-- Item template 
-  <tr id="item-id">
-    <td class="title">Item title</td>
-    <td class="content">
-      Item blurb. See <a href="../../instructions.html">instructions</a>.
-      <p>
-        Use the <a href="http://validator.w3.org/#validate_by_input">XHTML Markup Validation Service</a>.
-      </p>
-    </td>
-  </tr>
- End -->
 
   <tr>
     <td colspan="2" class="section" id="Platform">Platform</td>
@@ -44,100 +31,85 @@
   <tr id="macapp">
     <td class="title">Mac OS X distribution now an Application Bundle</td>
     <td class="content">
-      For Mars M6, The Eclipse SDK for Mac OSX is now distributed in a more standard "Mac App" format, 
+      For Mars M6, the Eclipse SDK for OS X is now distributed in a more standard "Mac App" format, 
       instead of the "directory format" we have used in the past. See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=431116">bug 431116</a> 
-      for current status, and pointers to remaining work planned.
-      <p id="updatecaution"><em>CAUTION: </em> Current Mac users can not use "update" to Mars M6. In fact, 
-      for M6, <em>doing so will break your installation</em>. You need to start with a fresh download. In the event that 
-      you updated before reading this, and have ended up with a broken installation, see <a href="https://wiki.eclipse.org/Platform-releng/Issues_related_to_Mac_App_installations">Issues related to  
-      Mac App installations</a> for the steps to recover your installation, after getting a fresh download.</p>
+      for background, current status, and pointers to remaining work planned.
+      <p id="updatecaution"><strong>CAUTION:</strong> Current Mac users can <strong>not use "update"</strong> to Mars M6. In fact, 
+      for M6, <strong>doing so will break your installation!</strong> You need to start with a fresh download.
+      </p>
+      <p>In the event that 
+      you updated before reading this, and have ended up with a broken installation, see
+      <a href="https://wiki.eclipse.org/Platform-releng/Issues_related_to_Mac_App_installations">Issues related to Mac App installations</a>
+      for the steps to recover your installation, after getting a fresh download.</p>
+    </td>
+  </tr>
+  
+  <tr id="default_heap_size">
+    <td class="title">Default max heap size increased to 1024 MB</td>
+    <td class="content">
+       To improve the "out of the box" user experience on today's modern hardware,
+       the default maximum heap size (-Xmx VM argument) has been increased from 512M to 1024M.
+       And the initial heap size (-Xms) has been increased from 40M to 256M.
     </td>
   </tr>
 
-  <tr><td colspan="2"><div class="title">Workspace:</div></td></tr>
-
-  <tr><td colspan="2"><div class="title">Platform UI:</div></td></tr>
-
-  <tr id="tab_menus">
-    <td class="title">Part tab menu enhanced</td>
+  <tr id="close-tabs-menus">
+    <td class="title">Close Tabs to the Left/Right</td>
     <td class="content">
-      <p>Part tabs have now browser-like "Close Tabs to the Left" and "Close Tabs to the Right" menu.</p>
+      The context menu of editor and view tabs now offer <b>Close Tabs to the Left</b> and <b>Close Tabs to the Right</b> menu.
       <p>
-        <img src="images/tabs_menu_enhanced.png" alt="Tabs menu enhanced" />
+        <img src="images/close-tabs-menus.png" alt="" />
       </p>
-      <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=337588">bug 337588</a>.</p>
      </td>
   </tr>
 
-  <tr id="perspective_trim_menu">
-    <td class="title">Customize... menu entry is back in the perspective trim menu</td>
-    <td class="content">
-      <p>The context menu of the current perspective (right click on the current perspective button) has now a <i>Customize...</i> menu entry as a shortcut
-      for the <i>Window -&gt; Perspective -&gt; Customize Perspective</i> menu.
-      </p>
-      <p>
-        <img src="images/perspective_trim_menu.png" alt="Customize... menu entry is back in the perspective trim menu" />
-      </p>
-      <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=380233">bug 380233</a>.</p>
-     </td>
-  </tr>
-
-  <tr id="print_button">
+  <tr id="print-button-hidden">
     <td class="title">Print button hidden by default</td>
     <td class="content">
-      <p>The print button on the main toolbar is now hidden by default. </p>
-      <p>The button can be added back to the toolbar with <i>Customize Perspective</i> dialog.
-      To open this dialog right click on the current perspective button and select <i>Customize...</i> menu.
+      The <b>Print</b> button on the main toolbar is now hidden by default.
+      <p>The button can be added back to the toolbar via the <b>Customize Perspective</b> dialog.
+      To open this dialog, right-click on the current perspective button and select the <b>Customize...</b> menu item.
       </p>
       <p>
-      In the <i>Customize Perspective</i> dialog, in the first <i>Tool Bar Visibility</i> tab, expand the "File" entry,
-      check "Print" entry and select the "OK" button.
+      In the <b>Tool Bar Visibility</b> tab, expand <b>File</b>, select <b>Print</b>, and click <b>OK</b>.
       </p>
       <p>
-        <img src="images/add_print_button_back.png" alt="Print button hidden by default" />
+        <img src="images/show-print-button.png" alt="" />
       </p>
-      <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=180308">bug 180308</a>.</p>
      </td>
   </tr>
 
-  <tr id="pin_button">
-    <td class="title">Pin Editor button is back</td>
+  <tr id="mru-tabs">
+    <td class="title">"Visible tabs shown on overflow" behavior decoupled from appearance theme</td>
     <td class="content">
-      <p>The Pin Editor button on the main toolbar is now shown if the option <i>"General -&gt; Editors -&gt;
-      Close editors automatically"</i> is selected in preferences. </p>
-      <p>Once enabled, the button can be now also hidden via <i>Customize Perspective</i> dialog.
-      To open this dialog right click on the current perspective button and select <i>Customize...</i> menu.
+      In Eclipse 4.2, the non-"Classic" themes introduced a new strategy to select the editor tabs shown
+      when there's not enough screen space to show all tabs. The new strategy shows a sliding
+      window of tabs in their original opening sequence, cutting off tabs at the beginning and/or end of
+      the full sequence.
+      
+      <p>In classic versions of Eclipse (before 4.2, and later with a "Classic" theme), the strategy
+      was to show the most recently used tabs (MRU), i.e. the "working set" of tabs you're currently using.
       </p>
+      
+      <p>The coupling of behavior with styling (themes) was found to be problematic, and the
+      tab visibility has has been turned into a separate preference. See
+      <b>Preferences &gt; General &gt; Appearance &gt; Show most recently used tabs</b>.
+      </p>
+      
       <p>
-      In the <i>Customize Perspective</i> dialog, in the first <i>Tool Bar Visibility</i> tab, expand the "Navigate" entry,
-      uncheck "Pin Editor" entry.
+        <img src="images/mru-preference.png" alt="" />
       </p>
+      
       <p>
-        <img src="images/pin_editor_button_is_back.png" alt="Pin Editor button is back" />
+      By default, the option is <b>disabled</b>. Users of a "Classic" theme need to enable it manually
+      to keep the behavior they're used to.
       </p>
-      <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=445538">bug 445538</a>.</p>
-     </td>
-  </tr>
-
-  <tr id="mru_editors_order">
-    <td class="title">"Most recently used (MRU) order for tab placement" behavior decoupled from CSS theme per default</td>
-    <td class="content">
-      <p>"Most recently used order for tab placement" (MRU) behavior is now decoupled from selected CSS theme by default.</p>
-      <p>Since Eclipse 4.2 the editors tab placement order was controlled by the selected CSS theme only, and there was no
-      possibility to change this (except by 3rd party tooling). Now users and Eclipse product owners can define whether
-      the CSS themes or user preferences are controlling the MRU behavior.
-      </p>
+      
       <p>
-      By default, the MRU tab placement behavior is now controlled by users, is disabled by default and can be switched on under
-      Window -&gt; Preferences -&gt; General -&gt; Appearance.
-      </p>
-      <p>
-        <img src="images/mru_preference.png" alt="Appearance Preferences with MRU behavior" />
-      </p>
-      <p>
-      Plugin developers and Eclipse product owners can change now via preferences whether CSS theme or user preferences, and
-      which default value MRU behavior should have. The preferences are for "org.eclipse.e4.ui.workbench.renderers.swt" plug-in
-      and the keys are:
+      Plugin developers and Eclipse product owners can change via preferences whether
+      the CSS theme or a user preference should control this option, and
+      whether MRU should be enabled by default. The preferences are for the
+      "org.eclipse.e4.ui.workbench.renderers.swt" plug-in, and the keys are:
       </p>
       <ul>
       <li>
@@ -149,163 +121,71 @@
       <li>"enableMRU" (default is "false").
       </li>
       </ul>
-
-      <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=388476#c120">bug 388476 comment 120</a>.</p>
-     </td>
-  </tr>
-
-  <tr id="appearance_preferences">
-    <td class="title">Appearance preferences are accessible independently on CSS theming</td>
-    <td class="content">
-      <p>
-      In case CSS theming is switched off by using "-cssTheme none" command line argument, the
-      "Window -&gt; Preferences -&gt; General -&gt; Appearance" preference page still allows to change CSS independent preferences.
-      </p>
-      <p>
-        <img src="images/mru_preference_css_disabled.png" alt="Appearance Preferences with CSS disabled" />
-      </p>
-      <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=388476#c127">bug 388476 comment 127</a>.</p>
-     </td>
-  </tr>
-
-  <tr id="editors_error_on_deleted_resources">
-    <td class="title">Affected editors are closed if project is closed or deleted</td>
-    <td class="content">
-      <p>
-      Previously, if editors were opened in the past Eclipse session, and their project was closed or deleted,
-      an error part was shown if user was trying to switch to such an editor.
-      </p>
-      <p>
-        <img src="images/error_editor_part_on_missing_resource.png" alt="Error editor part on missing project" />
-      </p>
-      <p>With this change the Eclipse IDE now automatically closes all affected editors if their project is closed or deleted, independently
-      if editors were opened in the current or in the past Eclipse session.
-      </p>
-      <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=41431">bug 41431</a>.</p>
-     </td>
-  </tr>
-
-   <tr id="abstractselectiondialog_with_generics">
-    <td class="title">The AbstractSelectionDialog as generalization of the SelectionDialog</td>
-    <td class="content">
-      <p>
-	The AbstractSelectionDialog is an enhanced version of the existing SelectionDialog and is now located in the org.eclipse.jface plug-in instead of the eclipse.ui plug-in,
-	which is not available for Eclipse 4 RCP applications.
-      </p>
-      <p>
-	It now supports generics and uses lists instead of plain arrays. You may set the selection via Varargs or a Collection.
-      </p>
-      <p>
-        The GenericSelectionDialog is a sample implementation of the AbstractSelectionDialog, which can be seen by running the Snippet070GenericSelectionDialog sample.
-      </p>
-      <p>
-        <img src="images/GenericSelectionDialog.png" alt="Snippet070GenericSelectionDialog with GenericSelectionDialog" />
-      </p>
-     </td>
-  </tr>
-
-  <tr id="css_support_for_transparency">
-    <td class="title">CSS support for the COLOR-TRANSPARENT constant</td>
-    <td class="content">
-      <p>
-		The CSS engine supports the usage of the COLOR-TRANSPARENT property which was introduced in Eclipse 4.5 M5 via the SWT.COLOR-TRANSPARENT property. This allowed to simplify the dark theme significantly.
-    </p>
-    <p>
-    	For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=459961">bug 459961</a> and <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=431845">bug 431845</a>.
-    </p>
     </td>
   </tr>
 
-   <tr id="css_theme_presentationmode">
-    <td class="title">New Presentationmode CSS theme</td>
+  <tr id="AbstractSelectionDialog">
+    <td class="title">New API: AbstractSelectionDialog</td>
     <td class="content">
-      <p>
-	   A new "Presentation" theme is available in the preferences under General -> Appearance.
-	   The presentation mode increases the font size of text editors to 16px, so that code or other contents is better readable during presentations. Presenters using
-	   Eclipse for demos or during conference sessions do not have to search in the Colors and Font setting for the correct font to set.
-      </p>
-      <p>
-        <img src="images/presentationmode.png" alt="Presentationmode as theme in the preferences" />
-      </p>
-      <p>
-    	For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=459961">bug 459961</a> and <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=459578">bug 459578</a>.
+      <code>org.eclipse.jface.dialogs.AbstractSelectionDialog</code> is an enhanced version of the existing
+      <code>org.eclipse.ui.dialogs.SelectionDialog</code>.
+      It has been added to the org.eclipse.jface bundle, where it is also available for Eclipse 4 RCP applications.
+      
+      <p>The AbstractSelectionDialog API supports generics and varargs.
       </p>
      </td>
   </tr>
 
-   <tr id="default_heap_size">
-    <td class="title">Default heap max increased to 1024 MB</td>
+  <tr id="css-transparency">
+    <td class="title">CSS support for new COLOR-TRANSPARENT constant</td>
     <td class="content">
-      <p>
-	     The current default heap max (-Xmx512M) was increased to 1024M. And, the 
-       current initial heap size (-Xms40M) was increased to 256M, to improve 
-       "out of the box" user experience on today's modern hardware. 
-     </p>
-     <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=457489">bug 457489</a> .</p>
-	</td>
+      The CSS engine now supports the COLOR-TRANSPARENT property. The implementation uses SWT's new SWT#COLOR_TRANSPARENT pseudo-color.
+      COLOR-TRANSPARENT allowed to simplify the dark theme significantly.
+      <!-- TODO: Could add a link to an API description, but not to a bug. -->
+    </td>
   </tr>
 
-   <tr id="default_darkthemecss">
-    <td class="title">Dark theme uses new SWT API to style the button background</td>
+  <tr id="high-dpi">
+    <td class="title">APIs for high-DPI monitor support</td>
     <td class="content">
+      New APIs have been added to provide support for rendering high-resolution images on high-DPI monitors.
       <p>
-		The dark theme in Eclipse uses the new SWT API to set the background of a button under Linux.
-     </p>
-      <p>
-        <img src="images/buttonstyled.png" alt="Styled buttons in the dark theme" />
+      Two constructors have been added to the <code>Image</code> class. They accept
+      image-provider callbacks that allow clients to supply resolution-dependent versions
+      of images:
       </p>
-     <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=462009">bug 462009</a>.</p>
-	</td>
-  </tr>
-
-  <tr id="WorkbenchPart_getAdapter">
-    <td class="title">Generified version of WorkbenchPart.getAdapter()</td>
-    <td class="content">
-      <p> The WorkbenchPart class has been changed to return the requested type from its getAdapter(Class&lt;T&gt; adapter) method.</p>
-      <pre>public &lt;T&gt; T getAdapter(Class &lt;T&gt; adapter);</pre>
-      <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=461766">bug 461766</a>.</p>
-     </td>
-  </tr>
-
-  <tr><td colspan="2"><div class="title">Platform Text:</div></td></tr>
-
-  <tr><td colspan="2"><div class="title">Debug:</div></td></tr>
-
-  <tr><td colspan="2"><div class="title">Ant:</div></td></tr>
-
-  <tr><td colspan="2"><div class="title">SWT:</div></td></tr>
-  <tr id="high_dpi">
-  	<td class="title">Added API for High DPI monitor support for Images</td>
-  	<td class="content">
-	  	Added new APIs to provide support for rendering high resolution images on high DPI(Dots Per Inch) monitors
-	  	<p>
-		  	Added two new constructors in the <code>Image</code> class.
-		</p>
-	  	<p>&nbsp;&nbsp;<code>Image(Device, ImageDataProvider)</code> and</p>
-		<p>&nbsp;&nbsp;<code>Image(Device, ImageFileNameProvider)</code></p>
-	  	<p>
-		  	Added two new interfaces to be used in the constructors.
-		</p>
-		<p>&nbsp;&nbsp;<code>ImageDataProvider</code> with method</p>
-		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>ImageData getImageData(int zoom)</code></p>
-		<p>&nbsp;&nbsp;<code>ImageFileNameProvider</code> with method</p>
-		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>String getImagePath(int zoom)</code></p>
-	  	<p>
-		  	To enable the rendering of differently sized images which are selected based on DPI on a high DPI
-		  	monitor, the client code needs to implement one of the above interfaces and construct the <code>Image</code>
-		  	object using the corresponding constructor.
-	  	</p>
+      <pre>public interface ImageDataProvider {
+	public ImageData getImageData (int zoom);
+}
+public interface ImageFileNameProvider {
+	public String getImagePath (int zoom);
+}</pre>
+      
+      <p>
+      Depending on the user's monitor configuration, SWT will request images with the
+      corresponding zoom level. Here's an example that displays 3 original images,
+      followed by variants whose resolution changes depending your monitor's resolution:
+      <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/plain/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet367.java">Snippet367.java</a>.
+      </p>
+      
+      <p>
+      Note that this is just the first step to support high-resolution images in
+      SWT and Eclipse-based applications. Work is underway to adopt the new APIs in
+      the platform. Futhermore, more work in SWT is required to properly
+      support drawing into high-resolution images via <code>GC</code>.
+      </p>
   	</td>
   </tr>
+  
   <tr id="evaluate">
-    <td class="title">Added new API for Browser evaluate</td>
+    <td class="title">API to choose security context in Browser#evaluate()</td>
     <td class="content">
-      <p>
-		Added a new API <code>Browser.evaluate(String script, boolean trusted)</code> which allows the client to run the Javascript code in Chrome security context or normal security context for <code>SWT.MOZILLA</code>
+		A new API <code>Browser#evaluate(String script, boolean trusted)</code> has been added that allows the client to run
+		Javascript code in the Chrome security context or in the normal security context for <code>SWT.MOZILLA</code>
 		style browsers.
-     </p>
 	</td>
   </tr>
+
 
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
@@ -313,24 +193,23 @@
   <tr id="hotkey-skip-all-breakpoints">
     <td class="title">Shortcut for Skip All Breakpoints</td>
     <td class="content">
-  		<b>Ctrl+Alt+B</b> has been added as the shortcut for <b> Skip All Breakpoints</b>.
+  		<b>Ctrl+Alt+B</b> has been added as the shortcut for <b>Skip All Breakpoints</b>.
   		<p>
-        <img src="images/skip_all_breakpoints.png" alt=""/>
-        </p>
-        <p>
-         Tool tip shows the shortcut information.
+        <img src="images/skip-all-breakpoints.png" alt=""/>
         </p>
     </td>
    </tr>
+   
   <tr id="ecj-requries-17">
-    <td class="title">ECJ requires 1.7 Java Runtime</td>
+    <td class="title">ECJ requires 1.7 Java runtime</td>
     <td class="content">
   		JDT Core projects are now compiled at 1.7 compliance level. As a result, a Java Runtime of
-  		1.7 or above is required to run the eclipse compiler.
+  		1.7 or above is required to run the Eclipse compiler.
     </td>
-   </tr>
+  </tr>
+  
   <tr id="external-annotations">
-    <td class="title">External Annotations</td>
+    <td class="title">External annotations</td>
     <td class="content">
       Annotation-based null analysis can now leverage externally defined annotations that are attached to a library.
       <p>
@@ -351,15 +230,16 @@
       	External annotations can be attached to a JRE (per workspace) and to arbitrary libraries (per project).
       </p>
       <ul>
-      <li>See below for creating external annotations using a new command "Annotate"</li>
+      <li>See below for creating external annotations using the new command <b>Annotate</b></li>
       <li>See <a href="https://wiki.eclipse.org/JDT_Core/Null_Analysis/External_Annotations">the wiki</a> for the full story.</li>
       </ul>
     </td>
   </tr>
+  
   <tr id="annotate-command">
     <td class="title">Annotate command</td>
     <td class="content">
-      A new command "Annotate" is provided when browsing attached source code of a library using the class file editor.
+      A new command <b>Annotate</b> is provided when browsing attached source code of a library using the class file editor.
       <p>
       	Two pre-requisites must be met for using this command:
       </p>
@@ -368,8 +248,8 @@
      	<li>An existing workspace folder has been specified as the external annotation location for a given library.</li>
       </ul>
       <p>
-      	Users may select any type in the signature of a library method or field, and invoke "Annotate" -
-      	either using the context menu, or by pressing <code>Ctrl-1</code>.
+      	Users may select any type in the signature of a library method or field, and invoke <b>Annotate</b> -
+      	either using the context menu, or by pressing <b>Ctrl+1</b>.
       	Proposals will be offered for marking the selected type as <code>@NonNull</code> or <code>@Nullable</code>.
       	All method parameters, return types and field types can be annotated.
       	Additionally when Java 8 is used, details like type arguments and type bounds etc. can be annotated.
@@ -381,19 +261,21 @@
     </td>
   </tr>
 
-  <tr>
-    <td colspan="2" class="section" id="PDE">PDE</td>
-  </tr>
-
   <tr><td colspan="2" class="section" id="Equinox">Equinox</td></tr>
-  <tr><td colspan="2"><div class="title">API:</div></td></tr>
 
-   <tr id="iadaptable">
-    <td class="title">Generified version of IAdaptable</td>
+   <tr id="getAdapter">
+    <td class="title">IAdaptable#getAdapter(Class) generified</td>
     <td class="content">
-      <p> The IAdaptable interface has been changed to return the requested type from its getAdapter(Class&lt;T&gt; adapter) method.</p>
+      The <code>org.eclipse.core.runtime.IAdaptable</code> interface has been enhanced to return the requested type from
+      its <code>getAdapter</code> method:
+      
       <pre>public &lt;T&gt; T getAdapter(Class &lt;T&gt; adapter);</pre>
-      <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=442021">bug 442021</a>.</p>
+      
+      <p>Implementations of this method should also be updated. This has already been done
+      for some platform APIs like <code>org.eclipse.ui.part.WorkbenchPart</code>. Callers and implementers
+      of these APIs can see compile errors or warnings due to this binary-compatible change.</p>
+      
+      <p>For more information, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=442021#c25">bug 442021</a>.</p>
      </td>
   </tr>
 
