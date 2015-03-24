@@ -303,7 +303,7 @@ Eclipse 4.5 Endgame Plan.
 		<!-- ************ Solaris ************** -->
 		<tr class="c0">
 			<td rowspan="2">Oracle Solaris</td>
-			<td rowspan="2">10</td>
+			<td rowspan="2">10 <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /></td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
 			Oracle Java 7u55</td>
@@ -491,30 +491,30 @@ Eclipse 4.5 Endgame Plan.
 
 <p:committed>
 <ul>
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /><strong>Improve support for GTK+ 3.</strong>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed) <strong>Improve support for GTK+ 3.</strong>
 	Luna provided GTK+ 3 support for an initial set of platforms. With this
 	release we will improve the support for GTK+ 3 and enable it on even more platforms, especially for GTK+ versions >= 3.10.x.
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441566">441566</a>)
 </li>
 
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /><strong>Drop support for GTK+ 2 versions older than 2.18.</strong>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed) <strong>Drop support for GTK+ 2 versions older than 2.18.</strong>
 	The GTK port has grown a too big range of supported GTK versions. Reducing them will allow streamlining our code base, 
 	making it easier to fix things and to attract new contributors. Support for versions older than 2.18 will be dropped.
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=446454">446454</a>)
 </li>
  
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /><strong>SWT browser currency.</strong>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed) <strong>SWT browser currency.</strong>
 	Significant work is required in the SWT browser widget to support the latest
 	browser runtimes. As part of this effort we will add browser support for XULRunner 31 on all platforms.
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=437700">437700</a>)
 </li>
 
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /><strong>Add support for Power 8 Linux LE platform.</strong>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed) <strong>Add support for Power 8 Linux LE platform.</strong>
 	We want to add support for the Power 8 Linux LE platform. This requires changes in SWT and the launcher.
 	[Equinox, SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=431230">431230</a>, <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=431232">431232</a>)
 </li>
 
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /><strong>Work on Eclipse support for Java 9.</strong>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed) <strong>Work on Eclipse support for Java 9.</strong>
 	The next Java SE release is version 9, which is currently scheduled for early 2016.
 	This Java release will add modularization to the Java language, also known under the code name Jigsaw.
 	The Mars release itself will not provide any support for Java 9.
@@ -537,7 +537,7 @@ Eclipse 4.5 Endgame Plan.
 
 <p:deferred>
 <ul>
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /><strong>SWT Webkit2 port for Browser widget on GTK+.</strong>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (deferred) <strong>SWT Webkit2 port for Browser widget on GTK+.</strong>
 	We will complete the implementation of the Webkit2 port for Browser widget on GTK+.
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441568">441568</a>)
 </li>
@@ -559,7 +559,7 @@ Eclipse 4.5 Endgame Plan.
 
 <p:committed>
 <ul>
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /><strong>Continuous improvement of build, and build process.</strong>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed) <strong>Continuous improvement of build, and build process.</strong>
 	We will continue to improve our build, and our build process. This is
 	to some extent a continuation of the CBI related work from last release
 	(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=372792">372792</a>) but
@@ -567,14 +567,14 @@ Eclipse 4.5 Endgame Plan.
 	[Platform Releng] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=434596">434596</a>)
 </li>
 
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /><strong>Recruit and train new contributors.</strong>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed) <strong>Recruit and train new contributors.</strong>
 	We will continue the work we started in Luna (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=422762">422762</a>) to reduce any real or perceived barriers
 	to contribution, and increase efforts on reviewing patches and mentoring
 	new contributors, with the goal that they become active committers.
 	[All components] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441565">441565</a>)
 </li>
 
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /><strong>Performance and stability of Platform user interface.</strong>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed) <strong>Performance and stability of Platform user interface.</strong>
 	Version 4.4 of the Eclipse Platform still has some performance and
 	functional shortcomings compared to the old 3.x generation of the platform.
 	We will work to root out and eliminate these remaining bugs to increase
@@ -583,7 +583,7 @@ Eclipse 4.5 Endgame Plan.
 	[Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441512">441512</a>)
 </li>
 
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /><strong>Revive performance tests.</strong>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed) <strong>Revive performance tests.</strong>
 	After the migration to CBI and build.eclipse.org, our performance tests stopped working. With
 	this release we want to create a stable performance test infrastructure and bring back to live at least the
 	most relevant performance tests.
