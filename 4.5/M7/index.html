@@ -61,7 +61,27 @@
      <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=372517">bug 372517</a>.</p>
 	</td>
   </tr>
-  
+  <tr id="xpath">
+    <td class="title">XPath expressions for parent element ID in Model Fragments</td>
+    <td class="content">
+		When specifying the target for a fragment contribution, you can now use an
+		XPath expression or a comma separated list of element IDs instead of a single
+		element ID.
+		<p>The XPath expression uses JXPath internally, so it should reference attributes of the model object,
+		not the XML file.</p>
+		<p>These 2 samples are equivalent:</p>
+		<code>parentElementId="MyMenu1, MyMenu2"</code>
+		<br />
+		<code>parentElementId="xpath://*[@elementId='MyMenu1' or @elementId='MyMenu2']"</code>
+		<p>This feature opens up the possibility to:</p>
+		<ol>
+		<li>Add a fragment to multiple places in a model</li>
+		<li>Target a fragment to multiple application models</li>
+		<li>Specify attributes (such as tags) as the target</li>
+		</ol>
+	</td>
+  </tr>
+
   <tr id="css-section-prop">
     <td class="title">Placeholder</td>
     <td class="content">
