@@ -130,7 +130,7 @@ ob_start();
 			<h3>Historical information about past releases</h3>			
 			<ul>
 		      <li><a href="plans/freeze_plan_4_4_2.php">Eclipse Project Luna SR2 Endgame Plan</a><br>
-				Information about how we wrapped up up the Luna SR2 release (version 4.4.2).</li>
+				Information about how we wrapped up the Luna SR2 release (version 4.4.2).</li>
 		      <li><a href="plans/freeze_plan_4_4_1.php">Eclipse Project Luna SR1 Endgame Plan</a><br>
 				Information about how we wrapped up the Luna SR1 release (version 4.4.1).</li>
 		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_4.xml"> Eclipse Project Luna 4.4 Plan</a><br>
