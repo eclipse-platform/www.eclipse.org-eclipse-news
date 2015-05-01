@@ -21,42 +21,23 @@
   <li><a href="#Platform">Platform</a></li>
   <li><a href="#JDT">JDT</a></li>
   <li><a href="#PDE">PDE</a></li>
-  <li><a href="#Equinox">Equinox</a></li>
 </ul>
 
 <table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
-
-<!-- Item template -->
-  <tr id="item-id">
-    <td class="title">Item title</td>
-    <td class="content">
-      Item blurb. See <a href="../../instructions.html">instructions</a>.
-      <p>
-        Use the <a href="http://validator.w3.org/#validate_by_input">XHTML Markup Validation Service</a>.
-      </p>
-    </td>
-  </tr>
-<!-- End -->
 
   <tr>
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
 
-  <tr><td colspan="2"><div class="title">Workspace:</div></td></tr>
-
-  <tr><td colspan="2"><div class="title">Platform UI:</div></td></tr>
-    <tr id="e4tools_integration">
+  <tr id="e4tools-integration">
     <td class="title">e4 tools integrated into Eclipse platform</td>
     <td class="content">
-      <p>
         Parts of the e4 tools have been integrated into the Eclipse platform project. Mainly the Eclipse 4 application
         model editor and related wizards are now directly available via the Eclipse update site. The e4 project wizard has been
         integrated into PDE, see the PDE section for more informations.
-       </p>
-       <p>
-        <img src="images/updatesitee4tools.png" alt="e4 tools update site" />
+      <p>
+        <img src="images/updatesitee4tools.png" alt=""/>
       </p>
-     <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=372517">bug 459799</a> and related bugs.</p>
 	</td>
   </tr>
   <tr id="xpath">
@@ -80,79 +61,58 @@
 	</td>
   </tr>
 
-  <tr id="css_theme_presentationmode">
+  <tr id="css-theme-presentationmode">
     <td class="title">New Presentation theme available</td>
     <td class="content">
-      <p>
-        A new "Presentation" theme is available in the preferences under General -> Appearance.
+        A new "Presentation" theme is available in the preferences under <b>General &gt; Appearance</b>.
         The presentation theme increases the font size of text editors to 16px, so that code or other contents is better readable during presentations.
         If the Eclipse IDE is used during presentations or software conferences, the colors and font settings does not have to be looked up, but can be activated easily.
-      </p>
       <p>
-        <img src="images/presentationmode.png" alt="Presentationmode as theme in the preferences" />
-      </p>
-      <p>
-        For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=459961">bug 459961</a> and <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=459578">bug 459578</a>.
+        <img src="images/presentationmode.png" alt=""/>
       </p>
     </td>
   </tr>
 
-   <tr id="e4model_icons_displayed">
+  <tr id="e4model-icons-displayed">
     <td class="title">Icons are displayed in model editor and model spy</td>
     <td class="content">
-      <p>
         If an Icon URI is defined, it is now displayed in the model editor and in model spy:
-      </p>
       <p>
-        <img src="images/modelEditor_icons.png" alt="Icons displayed in model editor or spy" />
-      </p>
-      <p>
-        For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=403583">bug 403583</a>.
+        <img src="images/model-editor-icons.png" alt=""/>
       </p>
     </td>
   </tr>
 
-  <tr id="default_darkthemecss_forms">
+  <tr id="default-darkthemecss-forms">
     <td class="title">Better CSS support for Forms based editors</td>
     <td class="content">
-      <p>
 		CSS support for Form based editors has been improved. The dark theme included in the Eclipse SDK
 		take advantages of that as depicted in the following screenshot.
-     </p>
        <p>
-        <img src="images/formheader.png" alt="Forms header styling in the dark theme" />
+        <img src="images/formheader.png" alt=""/>
       </p>
-     <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=465148">bug 465148</a>.</p>
 	</td>
   </tr>
   
-  <tr id="default_darkthemecss_heapmonitor">
+  <tr id="default-darkthemecss-heapmonitor">
     <td class="title">Heap Monitor can be styled, dark theme uses that</td>
     <td class="content">
-      <p>
 		The heap monitor has been extended to allow to set its background color and the dark theme uses that. The following
 		screenshot show the heap monitor after the change.
-     </p>
-       <p>
-        <img src="images/heap_after.png" alt="Heap after the change" />
+      <p>
+        <img src="images/heap-after.png" alt=""/>
       </p>
-     <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=372517">bug 372517</a>.</p>
 	</td>
   </tr>
 
-  <tr id="open_with_dialog">
+  <tr id="open-with-dialog">
     <td class="title">Improved 'Open With...' dialog</td>
     <td class="content">
+      The 'Open With...' dialog has been improved: it has now search filter and allows to
+      remember selected editor as default for the file name or type. The following screenshot shows the new dialog.
       <p>
-		The 'Open With...' dialog has been improved: it has now search filter and allows to
-          remember selected editor as default for the file name or type. The following screenshot shows the new dialog.
-     </p>
-       <p>
-        <img src="images/open_with_dialog_improved.png" alt="'Open With...' dialog" />
+        <img src="images/open-with-dialog-improved.png" alt=""/>
       </p>
-     <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=378485">bug 378485</a>,
-     <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=460555">bug 460555</a> and
-     <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=463262">bug 463262</a>.</p>
 	</td>
   </tr>
 
@@ -164,33 +124,25 @@
     	The <b>Open Resource</b> dialog has been enriched with a new option to allow hiding entries that
     	reference the same underlying resource and show only the most relevant.</p>
     	<p>
-        	<img src="images/openresource_before_filter.png" alt="Enabling the filter" />
+        	<img src="images/openresource-before-filter.png" alt=""/>
       	</p>
        	<p>
-        	<img src="images/openresource_after_filter.png" alt="Resources filtered!" />
+        	<img src="images/openresource-after-filter.png" alt=""/>
       	</p>
     </td>
   </tr>  
-
-  <tr><td colspan="2"><div class="title">Platform Text:</div></td></tr>
-
-  <tr><td colspan="2"><div class="title">Debug:</div></td></tr>
-
-  <tr><td colspan="2"><div class="title">Ant:</div></td></tr>
-
-  <tr><td colspan="2"><div class="title">SWT:</div></td></tr>
 
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
   
-   <tr id="new-jdticons">
+  <tr id="new-jdticons">
     <td class="title">New icon set in JDT</td>
     <td class="content">
       The JDT project uses now png icons to render better with a dark theme. The following screenshot shows a few
       example icons, on the left side is the old gif icon, on the right side the new png icon.
       <p>
-      <img src="images/jdt_iconsexample.png" alt="JDT icon comparison"/>
+      <img src="images/jdt-iconsexample.png" alt=""/>
       </p>
     </td>
   </tr>
@@ -202,7 +154,7 @@
     <td class="content">
       The JUnit view now has a filter to show only the skipped (ignored or assumption failed) tests:
           <p>
-            <img src="images/junit-view-filter-to-show-skipped-tests-only.png" alt="" />
+            <img src="images/junit-view-filter-to-show-skipped-tests-only.png" alt=""/>
           </p>
     </td>
   </tr>
@@ -212,7 +164,7 @@
     <td class="content">
       New <b>Quick Assists (Ctrl+1)</b> have been added to add and remove the parentheses around lambda parameter:
           <p>
-            <img src="images/add-remove-parentheses-around-lambda-parameter.png" alt="" />
+            <img src="images/add-remove-parentheses-around-lambda-parameter.png" alt=""/>
           </p>
     </td>
   </tr>
@@ -221,7 +173,6 @@
     <td class="title">New Java editor templates</td>
     <td class="content">
       New templates (try_finally, finally, lock) have been added to insert commonly occurring patters in concurrent programming:
-      
           <p>
             <img src="images/new-java-editor-templates.png" alt="" />
           </p>
@@ -254,7 +205,7 @@
       	Javadoc hover after having applied the <a href="https://www.eclipse.org/eclipse/news/4.5/M6/#annotate-command">Annotate</a> command for the return type of <code>Map.get()</code>:
    	  </p>
    	  <p>
-      	<img src="images/annotations-in-hover.png" alt="" />
+      	<img src="images/annotations-in-hover.png" alt=""/>
       </p>
       <p>
       	As of Eclipse 4.5, this feature is only enabled in projects that are configured for annotation-based null analysis.
@@ -266,50 +217,41 @@
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
 
-   <tr id="e4Template">
-    <td class="title">Can create an E4 project from new plugin wizard</td>
+  <tr id="e4Template">
+    <td class="title">Create an E4 project from new plugin wizard</td>
     <td class="content">
-      <p>
 		It is now possible to create an E4 project using the plugin wizard.
 		Select 'This plugin makes contribution to UI' and 'create a rich client application':
-     </p>
       <p>
-        <img src="images/e4Template_Step1.png" alt="Create a UI plugin application" />
+        <img src="images/e4-template-step-1.png" alt="" />
       </p>
       <p>
         You will get a template to create an E4 project:
       </p>
        <p>
-        <img src="images/e4Template_Step2.png" alt="Select the E4 template" />
+        <img src="images/e4-template-step-2.png" alt="" />
       </p>
       <p>
         Then you can select to generate some content inside:
       </p>
         <p>
-        <img src="images/e4Template_Step3.png" alt="Select the content to generate" />
+        <img src="images/e4-template-step-3.png" alt="" />
       </p>
        <p>
         And you get your E4 project in your workspace:
       </p>
         <p>
-        <img src="images/e4Template_Result.png" alt="E4 template result" />
+        <img src="images/e4-template-result.png" alt="" />
       </p>
-     <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441331">bug 441331</a>.</p>
 	</td>
   </tr>
 
-   <tr id="apibaselinefromtarget">
+  <tr id="apibaselinefromtarget">
     <td class="title">Create an API Baseline from a Target Definition</td>
     <td class="content">
-     <p>
-	API Baselines can now be created from a target definition in the
-	<b>Plug-in Development &gt; API Baselines</b> preference page.
-     </p>
+		API Baselines can now be created from a target definition in the
+		<b>Plug-in Development &gt; API Baselines</b> preference page.
     </td>
-  </tr>
-
-  <tr>
-    <td colspan="2" class="section" id="Equinox">Equinox</td>
   </tr>
 
   <tr>
