@@ -29,12 +29,55 @@
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
 
+  <tr id="open-with-dialog">
+    <td class="title">Improved "Open With..." dialog</td>
+    <td class="content">
+      The <b>Open With &gt; Other...</b> dialog now has
+      <ul>
+        <li>a filter field</li>
+        <li>options to remember the selected editor as default for the selected file name or type</li>
+      </ul>
+      <p>
+        <img src="images/open-with-dialog-improved.png" alt=""/>
+      </p>
+	</td>
+  </tr>
+
+  <tr id="open-resource-duplicates">
+    <td class="title">"Open Resource" dialog can now filter duplicate resources.</td>
+    <td class="content">
+    	With the new <a href="../M5/index.html#nested-projects">Hierarchical view in the Project Explorer</a>, it has
+    	become more frequent to have multiple workspace projects with overlapping resource trees. 
+    	The <b>Open Resource</b> dialog has been enriched with a new option to allow hiding entries that
+    	reference the same underlying resource, and to show only the most relevant.
+    	<p>
+        	<img src="images/openresource-before-filter.png" alt=""/>
+      	</p>
+       	<p>
+        	<img src="images/openresource-after-filter.png" alt=""/>
+      	</p>
+    </td>
+  </tr>
+
+  <tr id="css-theme-presentationmode">
+    <td class="title">New Presentation theme available</td>
+    <td class="content">
+        A new "Presentation" theme is available in the preferences under <b>General &gt; Appearance</b>.
+        The presentation theme increases the font size of text editors to 16px, so that code or other contents is better readable during presentations.
+      <p>
+        <img src="images/presentationmode.png" alt=""/>
+      </p>
+        This is an alternative to manually changing the <b>Text Font</b> size on the <b>Colors and Fonts</b> preference page.
+        Note that the "Presentation" theme may overwrite more settings than just the font face and size.
+    </td>
+  </tr>
+
   <tr id="e4tools-integration">
     <td class="title">e4 tools integrated into Eclipse platform</td>
     <td class="content">
         Parts of the e4 tools have been integrated into the Eclipse platform project. Mainly the Eclipse 4 application
         model editor and related wizards are now directly available via the Eclipse update site. The e4 project wizard has been
-        integrated into PDE, see the PDE section for more informations.
+        integrated into PDE, see the PDE section for more information.
       <p>
         <img src="images/updatesitee4tools.png" alt=""/>
       </p>
@@ -44,7 +87,7 @@
     <td class="title">XPath expressions for parent element ID in Model Fragments</td>
     <td class="content">
 		When specifying the target for a fragment contribution, you can now use an
-		XPath expression or a comma separated list of element IDs instead of a single
+		XPath expression or a comma-separated list of element IDs instead of a single
 		element ID.
 		<p>The XPath expression uses JXPath internally, so it should reference attributes of the model object,
 		not the XML file.</p>
@@ -61,22 +104,10 @@
 	</td>
   </tr>
 
-  <tr id="css-theme-presentationmode">
-    <td class="title">New Presentation theme available</td>
-    <td class="content">
-        A new "Presentation" theme is available in the preferences under <b>General &gt; Appearance</b>.
-        The presentation theme increases the font size of text editors to 16px, so that code or other contents is better readable during presentations.
-        If the Eclipse IDE is used during presentations or software conferences, the colors and font settings does not have to be looked up, but can be activated easily.
-      <p>
-        <img src="images/presentationmode.png" alt=""/>
-      </p>
-    </td>
-  </tr>
-
   <tr id="e4model-icons-displayed">
     <td class="title">Icons are displayed in model editor and model spy</td>
     <td class="content">
-        If an Icon URI is defined, it is now displayed in the model editor and in model spy:
+        If an Icon URI is defined, it is now displayed in the model editor and in the model spy:
       <p>
         <img src="images/model-editor-icons.png" alt=""/>
       </p>
@@ -84,10 +115,10 @@
   </tr>
 
   <tr id="default-darkthemecss-forms">
-    <td class="title">Better CSS support for Forms based editors</td>
+    <td class="title">Better CSS support for Forms-based editors</td>
     <td class="content">
-		CSS support for Form based editors has been improved. The dark theme included in the Eclipse SDK
-		take advantages of that as depicted in the following screenshot.
+		CSS support for Forms-based editors has been improved. The dark theme included in the Eclipse SDK
+		takes advantages of that, as depicted in the following screenshot:
        <p>
         <img src="images/formheader.png" alt=""/>
       </p>
@@ -97,40 +128,13 @@
   <tr id="default-darkthemecss-heapmonitor">
     <td class="title">Heap Monitor can be styled, dark theme uses that</td>
     <td class="content">
-		The heap monitor has been extended to allow to set its background color and the dark theme uses that. The following
+		The heap monitor has been extended to allow to set its background color, and the dark theme uses that. The following
 		screenshot show the heap monitor after the change.
       <p>
         <img src="images/heap-after.png" alt=""/>
       </p>
 	</td>
   </tr>
-
-  <tr id="open-with-dialog">
-    <td class="title">Improved 'Open With...' dialog</td>
-    <td class="content">
-      The 'Open With...' dialog has been improved: it has now search filter and allows to
-      remember selected editor as default for the file name or type. The following screenshot shows the new dialog.
-      <p>
-        <img src="images/open-with-dialog-improved.png" alt=""/>
-      </p>
-	</td>
-  </tr>
-
-  <tr id="css-section-prop">
-    <td class="title">"Open Resource" dialog can now filter duplicate resources.</td>
-    <td class="content">
-    	<p>With the new Hierarchical view in the Project Explorer (see <a href="../M5/index.html">M5 news</a>), it has
-    	become more frequent to have different workspace projects with overlapping resource trees. 
-    	The <b>Open Resource</b> dialog has been enriched with a new option to allow hiding entries that
-    	reference the same underlying resource and show only the most relevant.</p>
-    	<p>
-        	<img src="images/openresource-before-filter.png" alt=""/>
-      	</p>
-       	<p>
-        	<img src="images/openresource-after-filter.png" alt=""/>
-      	</p>
-    </td>
-  </tr>  
 
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
@@ -139,7 +143,7 @@
   <tr id="new-jdticons">
     <td class="title">New icon set in JDT</td>
     <td class="content">
-      The JDT project uses now png icons to render better with a dark theme. The following screenshot shows a few
+      The JDT project now uses png icons to render better with a dark theme. The following screenshot shows a few
       example icons, on the left side is the old gif icon, on the right side the new png icon.
       <p>
       <img src="images/jdt-iconsexample.png" alt=""/>
@@ -197,12 +201,12 @@
     <td class="content">
       Javadoc hovers can now render all annotations, including type annotations (having a <code>TYPE_USE</code> target).
       <p>
-	    In particular, working with <a href="https://www.eclipse.org/eclipse/news/4.5/M6/#external-annotations">external annotations</a>
+	    In particular, working with <a href="../M6/index.html#external-annotations">external annotations</a>
 	    benefits from this feature, as the Javadoc hover now shows these external annotations as well, thus providing the
 	    attached information right where it is needed. Also the Javadoc view is able to show the same information.
       </p>
       <p>
-      	Javadoc hover after having applied the <a href="https://www.eclipse.org/eclipse/news/4.5/M6/#annotate-command">Annotate</a> command for the return type of <code>Map.get()</code>:
+      	Javadoc hover after having applied the <a href="../M6/index.html#annotate-command">Annotate</a> command for the return type of <code>Map.get()</code>:
    	  </p>
    	  <p>
       	<img src="images/annotations-in-hover.png" alt=""/>
@@ -218,21 +222,21 @@
   </tr>
 
   <tr id="e4Template">
-    <td class="title">Create an E4 project from new plugin wizard</td>
+    <td class="title">Create an E4 project from "New Plug-in" wizard</td>
     <td class="content">
-		It is now possible to create an E4 project using the plugin wizard.
-		Select 'This plugin makes contribution to UI' and 'create a rich client application':
+		It is now possible to create an E4 project using the <b>New Plug-in Project</b> wizard.
+		Select <b>This plug-ins will make contributions to the UI</b> and <b>create a rich client application</b>:
       <p>
         <img src="images/e4-template-step-1.png" alt="" />
       </p>
       <p>
-        You will get a template to create an E4 project:
+        On the next page will get a template to create an E4 project:
       </p>
        <p>
         <img src="images/e4-template-step-2.png" alt="" />
       </p>
       <p>
-        Then you can select to generate some content inside:
+        Then you can select to generate some sample content:
       </p>
         <p>
         <img src="images/e4-template-step-3.png" alt="" />
