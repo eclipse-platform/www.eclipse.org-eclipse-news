@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 04:15 EDT May 15, 2015.
+Last revised 04:20 EDT May 15, 2015.
 
 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 marks interesting changes since the previous draft of 
@@ -552,7 +552,7 @@ Eclipse 4.5 Endgame Plan.
 	We will complete the implementation of the Webkit2 port for Browser widget on GTK+.
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441568">441568</a>)
 </li>
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (partially committed) <strong>Provide good support for Mac Retina displays.</strong>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (partially deferred) <strong>Provide good support for Mac Retina displays.</strong>
 	The current support for Mac Retina displays has various rendering issues.
 	With Mars we want to provide good support for Mac Retina displays.
 	[Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=382972">382972</a>) <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
