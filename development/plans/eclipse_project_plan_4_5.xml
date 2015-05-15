@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 03:50 EDT May 15, 2015.
+Last revised 04:00 EDT May 15, 2015.
 
 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 marks interesting changes since the previous draft of 
@@ -212,9 +212,10 @@ Eclipse 4.5 Endgame Plan.
 			</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
-				Oracle Java 8u5<br/>
-				Oracle Java 7u55<br/>
-				IBM Java 7 SR 7
+				Oracle Java 8u45<br/>
+				Oracle Java 7u80<br/>
+				IBM Java 7 SR9<br/>
+				IBM Java 8 SR1 <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 			</td>
 			<td rowspan="2">Win32</td>
 		</tr>
@@ -227,9 +228,10 @@ Eclipse 4.5 Endgame Plan.
 			<td rowspan="4">6</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
-				Oracle Java 8u5<br/>
-			    Oracle Java 7u55<br/>
-				IBM Java 7 SR 7<br/>
+				Oracle Java 8u45<br/>
+			    Oracle Java 7u80<br/>
+				IBM Java 7 SR9<br/>
+				IBM Java 8 SR1 <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 				Open JDK 7u40
 			</td>
 			<td rowspan="4">GTK+ 2</td>
@@ -239,7 +241,10 @@ Eclipse 4.5 Endgame Plan.
 		</tr>
 		<tr class="c1">
 			<td rowspan="1">Power 32-bit</td>
-			<td rowspan="2">IBM Java 7 SR7</td>
+			<td rowspan="2">
+				IBM Java 7 SR9<br/>
+				IBM Java 8 SR1 <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+			</td>
 		</tr>
 		<tr class="c1">
 			<td rowspan="1">Power 64-bit</td>
@@ -256,10 +261,10 @@ Eclipse 4.5 Endgame Plan.
 			<td rowspan="4">11 SP2</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
-				Oracle Java 8u5<br/>
-				Oracle Java 7u55<br/>
+				Oracle Java 8u45<br/>
+				Oracle Java 7u80<br/>
 				IBM Java 7 SR9<br/>
-				IBM Java 8 SR1
+				IBM Java 8 SR1 <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 			</td>
 			<td rowspan="4">GTK+ 2</td>
 		</tr>
@@ -270,7 +275,7 @@ Eclipse 4.5 Endgame Plan.
 			<td rowspan="1">Power 32-bit</td>
 			<td rowspan="2">
 				IBM Java 7 SR9<br/>
-				IBM Java 8 SR1
+				IBM Java 8 SR1 <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 			</td>
 		</tr>
 		<tr class="c0">
@@ -282,8 +287,8 @@ Eclipse 4.5 Endgame Plan.
 			<td rowspan="2">12.04</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
-				Oracle Java 8u5<br/>
-				Oracle Java 7u55<br/>
+				Oracle Java 8u45<br/>
+				Oracle Java 7u80<br/>
 				IBM Java 7 SR9<br/>
 				IBM Java 8 SR1 <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 
@@ -297,9 +302,9 @@ Eclipse 4.5 Endgame Plan.
 			<td rowspan="2">14.04</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
-				Oracle Java 8u5<br/>
-				Oracle Java 7u55<br/>
-				IBM Java 7 SR9 <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /><br/>
+				Oracle Java 8u45<br/>
+				Oracle Java 7u80<br/>
+				IBM Java 7 SR9<br/>
 				IBM Java 8 SR1 <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 			</td>
 			<td rowspan="2">GTK+ 3</td>
@@ -313,7 +318,7 @@ Eclipse 4.5 Endgame Plan.
 			<td rowspan="2">10</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
-			Oracle Java 7u55</td>
+			Oracle Java 7u80</td>
 			<td rowspan="2">GTK+ 2</td>
 		</tr>
 		<tr class="c0">
@@ -348,8 +353,8 @@ Eclipse 4.5 Endgame Plan.
 			<td rowspan="1">10.10</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-				Oracle Java 8u5<br/>
-				Oracle Java 7u55</td>
+				Oracle Java 8u45<br/>
+				Oracle Java 7u80</td>
 			<td rowspan="1">Cocoa</td>
 		</tr>
 	</table>
@@ -617,6 +622,7 @@ Eclipse 4.5 Endgame Plan.
 </p:proposed>
 
 <p:deferred>
+<ul>
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (deferred) <strong>Surface more Platform options on the Tracing preference page.</strong>
 	We have been observing a number of bugs reported regarding intermittent behavior of low level parts
 	of Eclipse Platform like builders, resource listeners, jobs, etc. Usually those problems are hard to
@@ -625,6 +631,7 @@ Eclipse 4.5 Endgame Plan.
 	where the problem surfaces.
 	[Platform Resources, Platform Runtime, Platform Team and Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441575">441575</a>)
 </li>
+</ul>
 </p:deferred>
 
 </p:theme>
