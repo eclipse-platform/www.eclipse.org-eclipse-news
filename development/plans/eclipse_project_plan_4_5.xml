@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 04:00 EDT May 15, 2015.
+Last revised 04:08 EDT May 15, 2015.
 
 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 marks interesting changes since the previous draft of 
@@ -231,7 +231,7 @@ Eclipse 4.5 Endgame Plan.
 				Oracle Java 8u45<br/>
 			    Oracle Java 7u80<br/>
 				IBM Java 7 SR9<br/>
-				IBM Java 8 SR1 <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+				IBM Java 8 SR1 <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /><br/>
 				Open JDK 7u40
 			</td>
 			<td rowspan="4">GTK+ 2</td>
@@ -605,13 +605,13 @@ Eclipse 4.5 Endgame Plan.
 	[Platform Releng] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=374441">374441</a>)
 </li>
 
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed) <strong>Surface more JDT options on the Tracing preference page.</strong>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (partially committed) <strong>Surface more options on the Tracing preference page.</strong>
 	We have been observing a number of bugs reported regarding intermittent behavior of low level parts
 	of Eclipse Platform like builders, resource listeners, jobs, etc. Usually those problems are hard to
 	reproduce and there are no steps to trigger it. Therefore, we want to make more options available
 	on the 'Tracing' preference page, so that they can be enabled by the user in the currently running workspace
 	where the problem surfaces.
-	[JDT Core and JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441575">441575</a>)
+	[Platform Resources, Platform Team, JDT Core and JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441575">441575</a>)
 </li>
 
 </ul>
@@ -623,13 +623,13 @@ Eclipse 4.5 Endgame Plan.
 
 <p:deferred>
 <ul>
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (deferred) <strong>Surface more Platform options on the Tracing preference page.</strong>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (partially deferred) <strong>Surface more options on the Tracing preference page.</strong>
 	We have been observing a number of bugs reported regarding intermittent behavior of low level parts
 	of Eclipse Platform like builders, resource listeners, jobs, etc. Usually those problems are hard to
 	reproduce and there are no steps to trigger it. Therefore, we want to make more options available
 	on the 'Tracing' preference page, so that they can be enabled by the user in the currently running workspace
 	where the problem surfaces.
-	[Platform Resources, Platform Runtime, Platform Team and Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441575">441575</a>)
+	[Platform Runtime and Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441575">441575</a>)
 </li>
 </ul>
 </p:deferred>
