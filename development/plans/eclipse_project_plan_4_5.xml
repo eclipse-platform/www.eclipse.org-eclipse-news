@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 04:08 EDT May 15, 2015.
+Last revised 04:15 EDT May 15, 2015.
 
 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 marks interesting changes since the previous draft of 
@@ -534,19 +534,16 @@ Eclipse 4.5 Endgame Plan.
 	The Mars release itself will not provide any support for Java 9.
 	[JDT and PDE] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=456778">456778</a>)
 </li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (partially committed) <strong>Provide good support for Mac Retina displays.</strong>
+	The current support for Mac Retina displays has various rendering issues.
+	With Mars we want to provide good support for Mac Retina displays.
+	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=382972">382972</a>) <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+</li>
 </ul>
 </p:committed>
 
 <p:proposed>
-<ul>
-
-<li><strong>Provide good support for Mac Retina displays.</strong>
-	The current support for Mac Retina displays has various rendering issues.
-	With Mars we want to provide good support for Mac Retina displays.
-	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=382972">382972</a>)
-</li>
-
-</ul>
+  <p><i>None at this time.</i></p>
 </p:proposed>
 
 <p:deferred>
@@ -554,6 +551,11 @@ Eclipse 4.5 Endgame Plan.
 <li><strong>SWT Webkit2 port for Browser widget on GTK+.</strong>
 	We will complete the implementation of the Webkit2 port for Browser widget on GTK+.
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441568">441568</a>)
+</li>
+<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (partially committed) <strong>Provide good support for Mac Retina displays.</strong>
+	The current support for Mac Retina displays has various rendering issues.
+	With Mars we want to provide good support for Mac Retina displays.
+	[Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=382972">382972</a>) <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 </li>
 </ul>
 </p:deferred>
@@ -611,7 +613,7 @@ Eclipse 4.5 Endgame Plan.
 	reproduce and there are no steps to trigger it. Therefore, we want to make more options available
 	on the 'Tracing' preference page, so that they can be enabled by the user in the currently running workspace
 	where the problem surfaces.
-	[Platform Resources, Platform Team, JDT Core and JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441575">441575</a>)
+	[Platform Resources, Platform Team, JDT Core and JDT UI <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441575">441575</a>)
 </li>
 
 </ul>
@@ -629,7 +631,7 @@ Eclipse 4.5 Endgame Plan.
 	reproduce and there are no steps to trigger it. Therefore, we want to make more options available
 	on the 'Tracing' preference page, so that they can be enabled by the user in the currently running workspace
 	where the problem surfaces.
-	[Platform Runtime and Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441575">441575</a>)
+	[Platform Runtime and Platform UI <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441575">441575</a>)
 </li>
 </ul>
 </p:deferred>
