@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2015-05-15
+	# Date:			2015-05-19
 	#
 	# Description: Eclipse project Mars release freeze plan
 	#
@@ -41,7 +41,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>May 15 - Submit to release train</b></p>
+			<p><b>May 19 - Start RC2 fix pass</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -94,7 +94,7 @@ ob_start();
 	            <td height="20">&nbsp;&nbsp;<b><a href="#RC0"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> goals</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
-	          <tr class="current">
+	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">15</td>
 	            <td align="right" height="20">Fri</td>
@@ -115,7 +115,7 @@ ob_start();
 	            <td height="20">&nbsp;&nbsp;<b><a href="#TestPassBeforeRC2"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> details</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
-	          <tr>
+	          <tr class="current">
 	            <td height="20"></td>
 	            <td align="right" height="20">19</td>
 	            <td align="right" height="20">Tue 08:00 EDT</td>
