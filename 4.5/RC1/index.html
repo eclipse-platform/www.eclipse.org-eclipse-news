@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="default_style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse Project 4.5 RC1 News</title>
+</head>
+<body>
+<h1>Eclipse Project 4.5 RC1 - New and Noteworthy</h1>
+<p>Here are some of the more noteworthy things available in the Mars milestone build RC1 (2015-05-14)
+  which is now available for <a href="http://download.eclipse.org/eclipse/downloads/#4.5_Stable_Build" target="_top">download</a>.
+  <br/>
+  We also recommend to read the Tips and Tricks, either via <b>Help &gt; Tips and Tricks...</b> or online for
+  <a href="http://help.eclipse.org/topic/org.eclipse.platform.doc.user/tips/platform_tips.html">Platform</a>,
+  <a href="http://help.eclipse.org/topic/org.eclipse.jdt.doc.user/tips/jdt_tips.html">JDT</a>, and
+  <a href="http://help.eclipse.org/topic/org.eclipse.pde.doc.user/tips/pde_tips.htm">PDE</a>.
+</p>
+
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+</ul>
+
+<table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
+
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+
+  <tr id="auto-text-direction">
+    <td class="title">BIDI: SWT Controls now support AUTO text direction</td>
+    <td class="content">
+      The auto (a.k.a. "contextual") text direction implies that the base text direction is derived from the direction
+      of the first strong (either LTR or RTL) bidi character. Auto text direction is the most appropriate choice when
+      the text content is not known in advance and, hence, it is not yet possible to decide which base direction value,
+      LTR or RTL, would be most suitable at run time.
+      <br />
+      Support for auto text direction has been introduced at the SWT Control level. Auto text direction can be applied
+      through the existing <code>Control#setTextDirection</code> API. The new value for auto direction is expressed as
+      the bitwise disjunction of (<code>SWT#LEFT_TO_RIGHT</code> | <code>SWT#RIGHT_TO_LEFT</code>) bit fields. When 
+      applied onto a Composite control, the auto base direction (similarly to LTR and RTL ones) is inherited by the
+      child components.
+      <br />
+      For example:
+      <ul>
+        <li><code>org.eclipse.swt.widgets.Table.setTextDirection(SWT.LEFT_TO_RIGHT | SWT.RIGHT_TO_LEFT);</code></li>
+	  </ul>
+      Result:
+      <p>
+        <img src="images/auto-text-direction.png" alt=""/>
+      </p>
+      <b>Note:</b> Auto text direction is not yet supported:
+      <ul>
+         <li>in StyledText</li>
+         <li>upon Control creation (but only through <code>Control#setTextDirection</code> call once the Control has been created)</li>      
+      </ul>
+	</td>
+  </tr>
+
+</table>
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Mars milestone builds:</p>
+<ul>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.5/M7/">News for Eclipse Mars milestone build M7</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.5/M6/">News for Eclipse Mars milestone build M6</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.5/M5/">News for Eclipse Mars milestone build M5</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.5/M4/">News for Eclipse Mars milestone build M4</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.5/M3/">News for Eclipse Mars milestone build M3</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.5/M2/">News for Eclipse Mars milestone build M2</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.5/M1/">News for Eclipse Mars milestone build M1</a></li>
+</ul>
+</body>
+</html>
