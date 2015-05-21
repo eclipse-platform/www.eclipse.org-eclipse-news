@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 06:01 EDT May 21, 2015.
+Last revised 06:09 EDT May 21, 2015.
 
 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 marks interesting changes since the previous draft of 
@@ -550,7 +550,7 @@ Eclipse 4.5 Endgame Plan.
 <li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> <strong>Provide good support for Mac Retina displays.</strong>
 	The current support for Mac Retina displays has various rendering issues.
 	With Mars we want to provide good support for Mac Retina displays.
-	[SWT, Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=382972">382972</a>) <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+	[SWT, Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=382972">382972</a>)
 </li>
 </ul>
 </p:deferred>
@@ -608,7 +608,7 @@ Eclipse 4.5 Endgame Plan.
 	reproduce and there are no steps to trigger it. Therefore, we want to make more options available
 	on the 'Tracing' preference page, so that they can be enabled by the user in the currently running workspace
 	where the problem surfaces.
-	[Platform Resources, Platform Team, JDT Core and JDT UI <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441575">441575</a>)
+	[Platform Resources, Platform Team, JDT Core and JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441575">441575</a>)
 </li>
 
 </ul>
