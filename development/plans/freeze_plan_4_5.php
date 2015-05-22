@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2015-05-20
+	# Date:			2015-05-22
 	#
 	# Description: Eclipse project Mars release freeze plan
 	#
@@ -41,7 +41,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>May 20 - Release Candidate 2 build</b></p>
+			<p><b>May 22 - Submit RC2 to release train</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -124,7 +124,7 @@ ob_start();
 	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC1"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> rules</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
-	          <tr class="current">
+	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">20</td>
 	            <td align="right" height="20">Wed 20:00 EDT</td>
@@ -133,7 +133,7 @@ ob_start();
 	            <td height="20">&nbsp;&nbsp;<b><a href="#RC2"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> goals</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
-	          <tr>
+	          <tr class="current">
 	            <td height="20"></td>
 	            <td align="right" height="20">22</td>
 	            <td align="right" height="20">Fri</td>
@@ -556,4 +556,3 @@ ob_start();
 	# Generate the web page
 	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
-
