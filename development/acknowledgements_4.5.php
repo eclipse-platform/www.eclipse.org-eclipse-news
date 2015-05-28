@@ -43,7 +43,18 @@ ob_start();
         The entire Eclipse and Equinox team would like to thank ...
       </p>
       <p>The Platform Workspace team would like to thank ...</p>
-      <p>The Platform UI team would like to extend special thanks to the following people who have made (and continue to make) ... </p>
+      <p>The Platform UI team would like to thank everyone who has helped us to improve quality by testing and reporting bugs and enhancement requests.  
+	Special thanks to the following list of people, in alphabetic order, whow contributed code to the project: Alain Le Guennec, Alena Laskavaia, Alexander Baranov, 
+	Alexander Kurtakov, Alia Naguib, Andrey Loskutov, Anton Leherbauer, Aurelien Pupier, Bob Meincke, Boris Bokowski, Brian de Alwis, Bruce Skingle, Christian Georgi, 
+	Christoph Keimel, Cornel Izbasa, C. Sean Young, Daniel Rolka, David Williams, Denis Zygann, Dirk Fauth, Edwin Bruckner,
+	Eugen Neufeld, Fabian Miehe, Fabio Zadrozny, Gary Roussak, Holger Voormann, Jeanderson Candido, Joachim Rainer, Jonas Helmig, 
+	Louis-Michel Mathurin, Marc-Andre Laperle, Marco Descher, Mariam El-Tantawi, Markus Alexander Kuppe, Markus Keller, Markus Schorn, Mat Booth, 
+	Michael Keppler, Michael Rennie, Mickael Istria, Moshe WAJNBERG, Noopur Gupta, Olivier Prouvost, Patrick Naish, Patrik Suzzi, Peter Palaga, 
+	Philip Wenig, Prakash Rangaraj, Ragnar Nevries, Ray Braithwood, Robert Roth, Sarika Sinha, Sebastian Herrmann, Sergey Prigogin, 
+	Shane Mills, Simon Scholz, Snjezana Peco, Sopot Cela, Stefan Weiser, Stefan Winkler, Stefan Xenos, Steffen Pingel, Stephan Hackstedt, 
+	Stephan Herrmann, Steve Francisco, Steven Spungin, Szymon Ptaszkiewicz, 
+	Terry Parker, Thibault Le Ouay, Thomas Watson, Timo Kinnunen, Tobias Baumann, Tomasz Zarna, Tom Schindl, 
+	Tony McCrary, Veselin Markov, Waqas Ilyas, Wim Jongman and Yaroslav Nikolaiko.</p>
       <p>The Platform Text team would like to thank everyone who filed good bug reports and enhancement requests. Special thanks ...</p>
       <p>The Platform Debug team would like to thank ...</p>
       <p>The Platform SWT team would like to thank ...</p>
@@ -81,7 +92,7 @@ ob_start();
           <td width="23%">David Williams</td>
           <td width="23%">Eric Moffatt</td>
           <td width="23%">Grant Gayed</td>
-        </tr>
+        </tr>Dani 
         <tr>
           <td width="23%">John Arthorne</td>
           <td width="23%">Lakshmi Priya Shanmugam</td>
