@@ -57,7 +57,10 @@ ob_start();
 	Stephan Herrmann, Steve Francisco, Steven Spungin, Szymon Ptaszkiewicz, 
 	Terry Parker, Thibault Le Ouay, Thomas Watson, Timo Kinnunen, Tobias Baumann, Tomasz Zarna, Tom Schindl, 
 	Tony McCrary, Veselin Markov, Waqas Ilyas, Wim Jongman and Yaroslav Nikolaiko.</p>
-      <p>The Platform Text team would like to thank everyone who filed good bug reports and enhancement requests. Special thanks ...</p>
+      <p>
+      The Platform Text team would like to thank everyone who filed good bug reports and enhancement requests. Special thanks go to Sergey Prigogin, Terry Parker, 
+      John Glassmyer, Jonah Graham, Nicolaj Hoess and Pawel Pogorzelski for prividing patches.
+      </p>
       <p>The Platform Debug team would like to thank ...</p>
       <p>The Platform SWT team would like to thank ...</p>
       <p>The release engineering team would like to thank ...</p>
