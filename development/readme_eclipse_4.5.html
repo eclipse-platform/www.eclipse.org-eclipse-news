@@ -668,11 +668,6 @@ or <code>antTypes</code> extension point (and not declared as a library in the
 plug-in's manifest). This ensures that the Ant tasks and types are loaded by the
 special Ant class loader and not by a plug-in classloader. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=34466">34466</a>).</p>
 
-<h4> Concurrent Ant builds not supported</h4>
-<p>Eclipse can run Ant in the same JVM as the rest of Eclipse. Several aspects
-of Ant and its use of global Java resources (such as System.out and System.err),
-make it unsafe to run more than one Ant build concurrently in the same JVM. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=24129">24129</a>).</p>
-
 <h4>XDoclet support from within Eclipse</h4>
 <p>Since there are differences when running Ant from the commandline and within Eclipse, some extra steps may be needed to have XDoclet support function correctly within Eclipse. Problems may occur creating XDoclet subtasks. The workarounds and full discussion can be found in bug report. (bug
 <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=37070">37070</a>)</p>
