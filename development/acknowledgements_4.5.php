@@ -64,7 +64,13 @@ ob_start();
 
       <p>The JDT Core team would like to thank everyone ...</p>
       <p>The JDT Debug team would like to thank ...</p>
-      <p>JDT UI sends thanks to code contributors ...</p>
+      <p>
+      JDT UI sends thanks to everyone who filed good enhancement requests and helped to improve quality by testing and filing good bug reports. 
+      Special thanks to those who contributed code: Andrej Zachar, Christian Georgi, Dirk Olmes, Ferenc Hechler, Frits Jalvingh, Harry Terkelsen, 
+      Jeremie Bresson, Jerome Cambon, Moritz Eysholdt, Nicolaj Hoess, Nikolay Metchev, Robert Roth, Sandra Lions, Stephan Herrmann (now, a committer), 
+      Szymon Ptaszkiewicz, Terry Parker and Yves Joan. Thanks to Lars Vogel and Tony McCrary for the new icons. Also, thanks to Stephan Herrmann and 
+      others for their answers on forums/newsgroups.
+      </p>
 
       <p>The Plug-in Development Environment team would like to thank ....</p>
 
