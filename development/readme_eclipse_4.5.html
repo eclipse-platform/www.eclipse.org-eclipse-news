@@ -777,7 +777,7 @@ toolbars, nor will those platforms respect the size returned by the control's <c
 encounter this issue there is currently no truly viable workaround.
 (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=183003">183003</a>)
 </p>
-
+Allocating enough memory and solving OutOfMemoryError
 <h4>Launching an inner eclipse can lead to PermGen errors</h4>
 <p>
 On some Oracle JVMs, launching an inner eclipse during plug-in development can lead to PermGen errors
@@ -1228,18 +1228,20 @@ installed at <code>c:\eclipse-SDK-4.5-win32</code>, the executable is <code>c:\e
 instructions for Mac OS X are listed <a href="#macosx">below</a>.</p>
 
 <h3>Allocating enough memory and solving OutOfMemoryErrors</h3>
-<p>By default, Eclipse will allocate up to 512 megabytes of Java heap memory. This should
+<p>By default, Eclipse will allocate up to 1024 megabytes of Java heap memory. This should
 be ample for all typical development tasks. However, depending on the JRE
 that you are running, the number of additional plug-ins you are using, and
-the number of files you will be working with, you could conceivably have to increase this amount. 
+the number of files you will be working with, you could conceivably have to increase 
+this amount. 
 Eclipse allows you to pass arguments directly to the Java VM using the
-<code>-vmargs</code> command line argument, which must follow all other Eclipse specific arguments.
+<code>-vmargs</code> command line argument, which must follow all other Eclipse 
+specific arguments.
 Thus, to increase the available heap memory, you would typically use:</p>
 <blockquote>
   <p><code>eclipse -vmargs -Xmx&lt;memory size&gt;</code></p>
 </blockquote>
 <p>with the <code>&lt;memory size&gt;</code> value set to greater than
-&quot;512M&quot; (512 megabytes -- the default). 
+&quot;1024M&quot; (1024 megabytes -- the default). 
 </p>
 <p>
 When using an Oracle VM below 1.8, you may also need to increase the size of the permanent
