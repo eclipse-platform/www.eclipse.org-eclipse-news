@@ -762,21 +762,6 @@ help system you will get a message indicating that the web page you requested is
 not available offline or a blank page will display. Click <b>Connect</b> or
 deselect &quot;Work Offline&quot; in the Internet Explorer &quot;File&quot; menu
 to return the system behavior to normal.
-<h4>Help topics not highlighted in High Contrast mode (Windows only)</h4>
-<p>Windows High Contrast settings are not consistently picked up by Internet
-Explorer when they are set from the Accessibility Options utility as opposed to
-when they are set using the predefined schemes. On Windows XP, it is recommended
-to set High Contrast as follows: Right click the desktop, chose properties,
-select Windows Classic style from the Windows and buttons drop down on the
-Appearance tab, and choose your scheme (for example High Contrast Black) from
-Color Scheme drop down. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=28609">28609</a>)</p>
-
-<h3>3.2.4 <a name="I-Platform-UI">Platform - UI</a></h3>
-<h4>High contrast settings</h4>
-<p>Eclipse was tested for High Contrast using 1152 x 864 resolution in Windows
-XP High Contrast mode. You can select this mode by selecting Accessibility
-Options &gt; Display &gt; Use High Contrast from the Windows XP Control Panel
-menu.</p>
 
 <h4> Dirty state not tracked properly for OLE documents (Windows only)</h4>
 <p>The dirty state for an OLE document is not updated properly. This causes
@@ -845,13 +830,6 @@ Supported platforms and prerequisites are listed on the SWT FAQ item <a href="ht
 <p>On Vista, launching eclipse using <code>-vmargs -Xmx[any size]</code> can crash eclipse when the FileDialog is opened.
 The workaround is to use the default heap size, i.e. do not use the <code>-Xmx</code> VM args.
 (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=188317">188317</a>)</p>
-
-<h4>Crash while editing text (Windows XP with SP2 only)</h4>
-<p>Some users who have installed Service Pack 2 on Windows XP have experienced
-crashes while using editors in Eclipse.  The workaround is to place a working version 
-of Windows\System32\USP10.DLL in the Eclipse startup directory or uninstall
-Service Pack 2.
-(bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=56390">56390</a>)</p>
 
 <h4>Eclipse hangs when pasting from an unresponsive application (GTK only)</h4>
 <p>If the application that is supplying the clipboard material is unresponsive,
