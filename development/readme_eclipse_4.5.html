@@ -361,17 +361,17 @@ OSI Certified is a certification mark of the Open Source Initiative.&nbsp;</stro
 <ul>
   <li>As shown <a href="#TargetOperatingEnvironments">above</a>, Eclipse 4.5 requires 
     at least a Java SE 7. Perhaps an older version of the VM is being found in 
-    your path. To explicitly specify which VM to run with, use the Eclipse <tt>-vm</tt> 
+    your path. To explicitly specify which VM to run with, use the Eclipse <code>-vm</code> 
     command-line argument. (See also the <a href="#RunningEclipse">Running Eclipse</a> 
     section below.)</li>
   <li>
     Running Eclipse on Gentoo Linux may result in the following error message:
     <div style="margin-left: 40px;">
-<tt>* run-java-tool is not available for sun-jdk-1.6 on i686<br/>* IMPORTANT: some Java tools are not available on some VMs on some architectures</tt>
+<code>* run-java-tool is not available for sun-jdk-1.6 on i686<br/>* IMPORTANT: some Java tools are not available on some VMs on some architectures</code>
     </div>
 
 If this occurs, start Eclipse by specifying a -vm argument, either
-specify the path to a java vm or use: <tt>eclipse -vm `java-config</tt>
+specify the path to a java vm or use: <code>eclipse -vm `java-config</code>
 --java` (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=176021">176021</a>)</li>
 <li>Eclipse must be installed to a clean directory and not installed over top of
 a previous installation. If you have done this then please re-install to a new
@@ -387,7 +387,7 @@ configuration area and as a result of this problem, may erroneously detect the
 current configuration location as writable. The net result is that Eclipse will
 fail to start and depending on the circumstances, may fail to write a log file
 with any details. To work around this, we suggest users experiencing this
-problem set their configuration area explicitly using the <tt>-configuration</tt> command
+problem set their configuration area explicitly using the <code>-configuration</code> command
 line argument. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=67719">67719</a>)</li>
 </ul>
 
@@ -585,7 +585,7 @@ code. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=5875">5875</a>
 <p>If your plug-in ships with a plug-in manifest and not an OSGi bundle manifest,
 is shipped as a JAR file, and contains a nested JAR file then there may be
 problems in the automatic generation of the bundle manifest file. The packages
-defined in the nested JAR may not be exported correctly in the <tt>Export-packages</tt>
+defined in the nested JAR may not be exported correctly in the <code>Export-packages</code>
 
 bundle manifest header. To work around this you should ship your plug-in with a
 bundle manifest. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=97689">97689</a>)</p>
@@ -1379,13 +1379,13 @@ list on start-up, or</li>
 </ul>
 
 <h3>Dropped in bundles may not resolve after upgrade</h3>
-<p>If you have installed bundles by dropping them into the <tt>plugins</tt>
-or <tt>dropins</tt> directory, they might no longer resolve when you upgrade
+<p>If you have installed bundles by dropping them into the <code>plugins</code>
+or <code>dropins</code> directory, they might no longer resolve when you upgrade
 to a new Eclipse Platform version. In each new version of the Eclipse Platform,
 there are new versions of bundles included in the platform, and often a small 
 number of removed bundles. This may cause your previously dropped in bundles
 to no longer resolve and run. It is always recommended that you install software
-via the <tt>Help &gt; Install New Software</tt> mechanism so you are made
+via the <code>Help &gt; Install New Software</code> mechanism so you are made
 aware of any install-time failure to resolve dependencies.
 </p>
 
