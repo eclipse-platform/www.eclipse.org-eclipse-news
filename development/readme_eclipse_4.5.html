@@ -56,6 +56,12 @@ OSI Certified is a certification mark of the Open Source Initiative.&nbsp;</stro
   (this list is updated over the course of the release cycle):</p>
 
 <div>
+<!-- NOTE: we intentionally do not want <style> in <head> because then if we 
+     wrap this HTML with a Solstice PHP theme, Solstice will ignore (or, replace) 
+     any <style> that is in <head>. Thus, this allows us to use our own style for 
+     table, with both plain HTML5 and Solstice wrapped PHP/HTML5. The 'scoped' attribute 
+     means to apply this style only to things 'in' the container parent (the <div>) 
+     and not whole document, and it is required for any <style> element not in <head>. -->
 <style type="text/css" scoped>
   table.platforms {
     margin: 0 auto;
