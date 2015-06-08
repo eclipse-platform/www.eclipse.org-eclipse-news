@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) IBM Corporation and others 2015. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" charset="UTF-8" type="text/css"/>
+<style type="text/css">
+table.news td {border-top: solid thin black;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; width: 30%; font-weight: bold;}
+table.news tr td.content {vertical-align: top; width: 70%;}
+ul {padding-left: 13px;}
+</style>
+<title>Eclipse Project Mars - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Java development tools</h2>
+<ul>
+	<li><a href="#JavaEditor">Java Editor</a></li>
+	<li><a href="#JavaViewsAndToolbars">Java Views and Toolbars</a></li>
+	<li><a href="#JavaFormatter">Java Formatter</a></li>
+	<li><a href="#JavaCompiler">Java Compiler</a></li>
+	<li><a href="#Annotations">Working with Annotations</a></li>
+	<li><a href="#Debug">Debug</a></li>
+	<li><a href="#JUnit">JUnit</a></li>
+</ul>
+
+<table class="news" cellpadding="10" cellspacing="0">
+<tbody>
+
+  <!-- ******************* Java Editor ************************************* -->
+  <tr>
+    <td id="JavaEditor" class="section" colspan="2">
+    <h2>Java Editor </h2>
+    </td>
+  </tr>
+
+  <tr id="convert-method-reference-to-lambda">
+    <td class="title">Convert method reference to lambda and back</td>
+    <td class="content">
+      New <b>Quick Assists (Ctrl+1)</b> have been added to convert...
+      <ul>
+        <li>from method reference to lambda expression:
+	      <p>
+	        <img src="images/convert-to-lambda.png" alt="Integer::toHexString" />
+	      </p>
+	    </li>
+        <li>from lambda expression to method reference:
+	      <p>
+	        <img src="images/convert-to-method-reference.png" alt="t -> Integer.toHexString(t)" />
+	      </p>
+	    </li>
+	  </ul>
+    </td>
+  </tr>
+
+  <tr id="infer-lambda-parameter-types">
+    <td class="title">Add inferred lambda parameter types</td>
+    <td class="content">
+      You can explicitly add the inferred types of the parameters in a lambda expression by invoking the <b>Quick Assist (Ctrl+1) - Add inferred lambda parameter types</b>:
+          <p>
+            <img src="images/infer-lambda-parameter-types.png" alt="" />
+          </p>
+    </td>
+  </tr>
+
+  <tr id="add-remove-parentheses-around-lambda-parameter">
+    <td class="title">Add and remove parentheses around lambda parameter</td>
+    <td class="content">
+      New <b>Quick Assists (Ctrl+1)</b> have been added to add and remove the parentheses around lambda parameter:
+          <p>
+            <img src="images/add-remove-parentheses-around-lambda-parameter.png" alt=""/>
+          </p>
+    </td>
+  </tr>
+
+  <tr id="new-java-editor-templates">
+    <td class="title">New Java editor templates</td>
+    <td class="content">
+      New templates (try_finally, finally, lock) have been added to insert commonly occurring patters in concurrent programming:
+          <p>
+            <img src="images/new-java-editor-templates.png" alt="" />
+          </p>
+    </td>
+  </tr>
+
+  <!-- ******************* Java Views and Toolbars ************************************* -->
+  <tr>
+    <td id="JavaViewsAndToolbars" class="section" colspan="2">
+    <h2>Java Views and Toolbars</h2>
+    </td>
+  </tr>
+
+  <tr id="new-jdticons">
+    <td class="title">New icon set in JDT</td>
+    <td class="content">
+      The JDT project now uses png icons to render better with a dark theme. The following screenshot shows a few
+      example icons, on the left side is the old gif icon, on the right side the new png icon.
+      <p>
+      <img src="images/jdt-iconsexample.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <!-- ******************* Java Formatter ************************************* -->
+  <tr>
+    <td id="JavaFormatter" class="section" colspan="2">
+    <h2>Java Formatter </h2>
+    </td>
+  </tr>
+  
+  <tr id="formatter-extension">
+	<td class="title">Extension point for third-party formatters</td>
+	<td class="content">
+		JDT now provides an extension point (<code>org.eclipse.jdt.core.javaFormatter</code>) to allow third-party source code formatters as extensions.
+		<p>
+			<img src="images/java-formatter.png" alt="" />
+		</p>
+		The default code formatter is used if no third-party formatter is provided.
+	</td>
+  </tr>
+
+  <!-- ******************* Java Compiler ************************************* -->
+  <tr>
+    <td id="JavaCompiler" class="section" colspan="2">
+    <h2>Java Compiler</h2>
+    </td>
+  </tr>
+
+  <tr id="ecj-requries-17">
+    <td class="title">ECJ requires 1.7 Java runtime</td>
+    <td class="content">
+  		JDT Core projects are now compiled at 1.7 compliance level. As a result, a Java Runtime of
+  		1.7 or above is required to run the Eclipse compiler.
+    </td>
+  </tr>
+
+  <tr id="jdt-performance">
+    <td class="title">Improved compiler performance</td>
+    <td class="content">
+      Significant performance improvements have been made to the Java compiler on generics-heavy code.
+      Details on affected scenarios, fix and performance results can be found on <b><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=434326">bug 434326</a></b>
+    </td>
+  </tr>
+
+  <tr id="unused-exception-parameters">
+    <td class="title">Unused exception parameters</td>
+    <td class="content">
+		A new compiler option to report unused exception parameters in try-catch statements has been added. The option
+		is set to <code>Ignore</code> by default.
+        <p>
+          <img src="images/unused-exception.png" alt="" />
+        </p>
+    </td>
+  </tr>
+
+  <tr id="loop-flows">
+    <td class="title">Improved flow analysis for loops</td>
+    <td class="content">
+		Flow analysis has been improved to more precisely capture the flow of null values in loops.
+		This mainly achieves a reduction of false positive reports from null analysis.
+        <p>
+          <a href="images/loop-flows.txt"><img src="images/loop-flows.png" alt="" /></a>
+        </p>
+		<p>
+		Previously, example method "test1" would raise a potential null pointer warning at point (3).
+		To correct this issue the merging of information leading towards point (3) has been 
+		improved to correctly see that the null value from point (1) can never reach point (3).
+		</p><p>
+		In example method "test2" JDT previously reported a redundant null check at (3),
+		because analysis didn't see that the assignment directly above could indeed assign a non-null value.
+		</p><p>
+		In example method "test3" it was reported that "o can only be null" at (3), 
+		because the information from the two null-assignments wrongly overruled the one assignment from non-null.
+		With improved analysis this is now softened to saying "o may be null".
+		</p><p>
+		The graph on the right hand side illustrates the new composition of flow information:
+		for each relevant point (3) inside a loop, the analysis first merges the flows that lead into (1).
+		This result is concatenated with the partial flow (b.c), which leads from the loop start to point (3).
+		Improved precision has thus been achieved within the design limits of a single AST traversal 
+		in order to minimize impact on compiler performance.
+		</p>
+    </td>
+  </tr>
+
+  <tr id="more-precise-flow-analysis">
+    <td class="title">More precise flow analysis</td>
+    <td class="content">
+      Flow analysis, as performed by the compiler to warn the user about potential programming problems,
+      has been made smarter. Some examples are:
+      <ul>
+      <li>Leverage knowledge that auto-boxing always produces a non-null value.</li>
+      <li>Leverage knowledge that certain compiler-generated methods - like <code>valueOf()</code> and <code>values()</code> on enum types - provide non-null values.</li>
+      <li>Various improvements in resource leak analysis.</li>
+      </ul>
+    </td>
+  </tr>
+
+  <!-- ******************* Working with Annotations ************************************* -->
+  <tr>
+    <td id="Annotations" class="section" colspan="2">
+    <h2>Working with Annotations</h2>
+    </td>
+  </tr>
+
+  <tr id="external-annotations">
+    <td class="title">External annotations</td>
+    <td class="content">
+      Annotation-based null analysis can now leverage externally defined annotations that are attached to a library.
+      <p>
+      	Previously, annotation-based null analysis was significantly limited by the fact
+      	that many 3<sup>rd</sup> party libraries have no null annotations in their API.
+      	This implied that any errors caused at this interface could not be detected by the analysis,
+      	and even worse, implementors of library-defined interfaces could not use any intended contracts,
+      	because any null annotations in overriding methods were flagged as incompatible with the super version.
+      </p>
+      <p>
+      	JDT now supports the concept of "external annotations".
+      	A user can specify null annotations in separate files and attach these to a given library.
+      	The compiler will take external null annotations into consideration for its null analysis.
+      </p>
+      <p><strong>Configuration:</strong></p>
+      <p><img src="images/external-annotation-configuration.png" title="Preferences &gt; Java &gt; Installed JREs &gt; Edit" alt="Preferences &gt; Java &gt; Installed JREs &gt; Edit"/></p>
+      <p>External annotations can be provided as a directory tree of individual text files or as a zip file.
+      	External annotations can be attached to a JRE (per workspace) and to arbitrary libraries (per project).
+      </p>
+      <ul>
+      <li>See below for creating external annotations using the new command <b>Annotate</b></li>
+      <li>See <a href="https://wiki.eclipse.org/JDT_Core/Null_Analysis/External_Annotations">the wiki</a> for the full story.</li>
+      </ul>
+    </td>
+  </tr>
+  
+  <tr id="annotate-command">
+    <td class="title">Annotate command</td>
+    <td class="content">
+      A new command <b>Annotate</b> is provided when browsing attached source code of a library using the class file editor.
+      <p>
+      	Two pre-requisites must be met for using this command:
+      </p>
+      <ul>
+     	<li>The project is configured to use annotation-based null analysis.</li>
+     	<li>An existing workspace folder has been specified as the external annotation location for a given library.</li>
+      </ul>
+      <p>
+      	Users may select any type in the signature of a library method or field, and invoke <b>Annotate</b> -
+      	either using the context menu, or by pressing <b>Ctrl+1</b>.
+      	Proposals will be offered for marking the selected type as <code>@NonNull</code> or <code>@Nullable</code>.
+      	All method parameters, return types and field types can be annotated.
+      	Additionally when Java 8 is used, details like type arguments and type bounds etc. can be annotated.
+      </p>
+      <p><img src="images/annotate-map-return.png" alt=""/></p>
+      <p>After selecting a proposal, the compiler will immediately leverage the new annotation for its null analysis.
+      </p>
+      <p><img src="images/map-get-error.png" alt=""/></p>
+    </td>
+  </tr>
+
+  <tr id="annotations-in-hover">
+    <td class="title">Render all annotations in Javadoc hovers</td>
+    <td class="content">
+      Javadoc hovers can now render all annotations, including type annotations (having a <code>TYPE_USE</code> target).
+      <p>
+	    In particular, working with <a href="#external-annotations">external annotations</a>
+	    benefits from this feature, as the Javadoc hover now shows these external annotations as well, thus providing the
+	    attached information right where it is needed. Also the Javadoc view is able to show the same information.
+      </p>
+      <p>
+      	Javadoc hover after having applied the <a href="#annotate-command">Annotate</a> command for the return type of <code>Map.get()</code>:
+   	  </p>
+   	  <p>
+      	<img src="images/annotations-in-hover.png" alt=""/>
+      </p>
+      <p>
+      	As of Eclipse 4.5, this feature is only enabled in projects that are configured for annotation-based null analysis.
+      </p>
+    </td>
+  </tr>
+
+  <!-- *********************** Debug ******************************** -->
+  <tr>
+    <td id="Debug" class="section" colspan="2">
+    <h2>Debug</h2>
+    </td>
+  </tr>
+
+  <tr id="hotkey-skip-all-breakpoints">
+    <td class="title">Shortcut for Skip All Breakpoints</td>
+    <td class="content">
+  		<b>Ctrl+Alt+B</b> has been added as the shortcut for <b>Skip All Breakpoints</b>.
+  		<p>
+        <img src="images/skip-all-breakpoints.png" alt=""/>
+        </p>
+    </td>
+   </tr>
+
+  <tr id="final-watchpoint">
+    <td class="title">Add Watchpoint for final variables</td>
+    <td class="content">
+      You can now add a Watchpoint for non-constant final variables:
+          <p>
+            <img src="images/final-watchpoint.png" alt="" />
+          </p>
+      This cannot be implemented for final variables with compile-time constant values
+      because Java compiles the constant value into class files and leaves no
+      trace of a field access at points where the final field is read.
+    </td>
+   </tr>
+
+  <!-- ******************* JUnit ************************************* -->
+  <tr>
+    <td id="JUnit" class="section" colspan="2">
+    <h2>JUnit</h2>
+    </td>
+  </tr>
+
+  <tr id="junit-4-12">
+    <td class="title">JUnit 4.12</td>
+    <td class="content">
+        The org.junit bundle has been updated to
+        <a href="https://github.com/junit-team/junit/blob/master/doc/ReleaseNotes4.12.md">JUnit 4.12</a>.
+    </td>
+  </tr>
+
+  <tr id="junit-view-filter-to-show-skipped-tests-only">
+    <td class="title">Show skipped tests only in JUnit view</td>
+    <td class="content">
+      The JUnit view now has a filter to show only the skipped (ignored or assumption failed) tests:
+          <p>
+            <img src="images/junit-view-filter-to-show-skipped-tests-only.png" alt=""/>
+          </p>
+    </td>
+  </tr>
+
+  <tr id="junit-rerun">
+	<td class="title">Re-run parameterized JUnit tests</td>
+	<td class="content">
+		The JUnit view now allows you to re-run groups of parameterized tests, or actually any
+		kind of tests that are run by a specialized runner and add another level of grouping
+		in the JUnit view.
+		<p>
+			<img src="images/junit-rerun-parameterized.png" alt="'Rerun' in context menu of the parameter of a" />
+		</p>
+		<p>
+			See the full story in
+			<a href="http://blog.moritz.eysholdt.de/2014/11/new-eclipse-junit-feature-run-subtrees.html">Moritz' Blog</a>.
+		</p>
+	</td>
+  </tr>
+
+
+</tbody>
+</table>
+
+  <p align="center">
+    <a href="platform.php">Previous</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="platform_isv.php">Next</a>
+  </p>
+
+</body>
+</html>

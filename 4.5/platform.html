@@ -1,0 +1,383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2015. This page is made available under license. For full details, see the LEGAL section in the documentation that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" charset="UTF-8" type="text/css"/>
+<style type="text/css">
+table.news td {border-top: solid thin black;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; width: 30%; font-weight: bold;}
+table.news tr td.content {vertical-align: top; width: 70%;}
+</style>
+<title>Eclipse Project Mars - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Platform and Equinox</h2>
+
+<table class="news" cellpadding="10" cellspacing="0">
+<tbody>
+
+  <tr><td class="title">Text search speedup</td>
+    <td class="content">
+        Text search has been sped up by a factor 3x-4x for full workspace searches on multi-core machines.
+        <p>Text search now uses the <code>JobGroup</code> API added with Eclipse 4.5 (<code>org.eclipse.core.runtime.jobs.JobGroup</code>) to parallelize its processing.</p>
+    </td>
+  </tr>
+
+  <tr id="macapp">
+    <td class="title">Mac OS X distribution now an Application Bundle</td>
+    <td class="content">
+      For Mars (4.5), the Eclipse SDK for OS X is now distributed in a more standard "Mac App" format, 
+      instead of the "directory format" we have used in the past.
+      <p id="updatecaution"><strong>CAUTION:</strong> Current Mac users can <strong>not use "update"</strong> to Mars. In fact, 
+      <strong>doing so will break your installation!</strong> You need to start with a fresh download.
+      </p>
+      <p>In the event that 
+      you updated before reading this, and have ended up with a broken installation, see
+      <a href="https://wiki.eclipse.org/Platform-releng/Issues_related_to_Mac_App_installations">Issues related to Mac App installations</a>
+      for the steps to recover your installation, after getting a fresh download.</p>
+    </td>
+  </tr>
+  
+  <tr id="default_heap_size">
+    <td class="title">Default max heap size increased to 1024 MB</td>
+    <td class="content">
+       To improve the "out of the box" user experience on today's modern hardware,
+       the default maximum heap size (-Xmx VM argument) has been increased from 512M to 1024M.
+       And the initial heap size (-Xms) has been increased from 40M to 256M.
+    </td>
+  </tr>
+
+  <tr id="open-with-dialog">
+    <td class="title">Improved "Open With..." dialog</td>
+    <td class="content">
+      The <b>Open With &gt; Other...</b> dialog now has
+      <ul>
+        <li>a filter field</li>
+        <li>options to remember the selected editor as default for the selected file name or type</li>
+      </ul>
+      <p>
+        <img src="images/open-with-dialog-improved.png" alt=""/>
+      </p>
+	</td>
+  </tr>
+
+  <tr id="png-icons">
+    <td class="title">New icons</td>
+    <td class="content">
+        Many icons have been updated to PNG format, which provides better alpha blending and
+        a much nicer appearance especially on darker backgrounds.
+        <p>
+            <img src="images/ant-icons.png" alt="Some of the new Ant images"/>
+        </p>
+    </td>
+  </tr>
+
+  <tr id="close-tabs-menus">
+    <td class="title">Close Tabs to the Left/Right</td>
+    <td class="content">
+      The context menu of editor and view tabs now offer <b>Close Tabs to the Left</b> and <b>Close Tabs to the Right</b> menu.
+      <p>
+        <img src="images/close-tabs-menus.png" alt="" />
+      </p>
+     </td>
+  </tr>
+
+  <tr id="mru-tabs">
+    <td class="title">"Visible tabs shown on overflow" behavior decoupled from appearance theme</td>
+    <td class="content">
+      In Eclipse 4.2, the non-"Classic" themes introduced a new strategy to select the editor tabs shown
+      when there's not enough screen space to show all tabs. The new strategy shows a sliding
+      window of tabs in their original opening sequence, cutting off tabs at the beginning and/or end of
+      the full sequence.
+      
+      <p>In classic versions of Eclipse (before 4.2, and later with a "Classic" theme), the strategy
+      was to show the most recently used tabs (MRU), i.e. the "working set" of tabs you're currently using.
+      </p>
+      
+      <p>The coupling of behavior with styling (themes) was found to be problematic, and the
+      tab visibility has has been turned into a separate preference. See
+      <b>Preferences &gt; General &gt; Appearance &gt; Show most recently used tabs</b>.
+      </p>
+      
+      <p>
+        <img src="images/mru-preference.png" alt="" />
+      </p>
+      
+      <p>
+      By default, the option is <b>disabled</b>. Users of a "Classic" theme need to enable it manually
+      to keep the behavior they're used to.
+      </p>
+      
+      <p>
+      Plugin developers and Eclipse product owners can change via preferences whether
+      the CSS theme or a user preference should control this option, and
+      whether MRU should be enabled by default. The preferences are for the
+      "org.eclipse.e4.ui.workbench.renderers.swt" plug-in, and the keys are:
+      </p>
+      <ul>
+      <li>
+      "MRUControlledByCSS" (default is "false"),
+      </li>
+      <li>
+      "enableMRUDefault" (default is "false"),
+      </li>
+      <li>"enableMRU" (default is "false").
+      </li>
+      </ul>
+    </td>
+  </tr>
+
+  <tr id="perspective_customization">
+    <td class="title">Perspective Customization</td>
+    <td class="content">
+      After 3 years of absence, the <b>Customize Perspective Dialog</b> and <b>Reset Perspective</b> are back to Eclipse.
+      The dialog which allows to configure the visible menu, toolbar, action sets
+      and shortcuts was broken starting with Eclipse 4.2, together with the the ability to reset the perspective.
+      <p>
+        <img src="images/cpd_toolbar_compare_M4_M5.png" alt="Configuring toolbars" />
+      </p>
+      <p>
+        <img src="images/cpd_menubar_compare_M4_M5.png" alt="Configuring menus" />
+      </p>
+      <p>
+        <img src="images/cpd_actionsets_compare_M4_M5.png" alt="Configuring action sets" />
+      </p>
+     </td>
+  </tr>
+
+  <tr id="print-button-hidden">
+    <td class="title">Print button hidden by default</td>
+    <td class="content">
+      The <b>Print</b> button on the main toolbar is now hidden by default.
+      <p>The button can be added back to the toolbar via the <b>Customize Perspective</b> dialog.
+      To open this dialog, right-click on the current perspective button and select the <b>Customize...</b> menu item.
+      </p>
+      <p>
+      In the <b>Tool Bar Visibility</b> tab, expand <b>File</b>, select <b>Print</b>, and click <b>OK</b>.
+      </p>
+      <p>
+        <img src="images/show-print-button.png" alt="" />
+      </p>
+     </td>
+  </tr>
+
+  <tr id="perspectivemenu">
+    <td class="title">Perspective menu entries grouped</td>
+    <td class="content">
+      The entries related to perspectives have been grouped into one menu entry to simplify the Window menu.
+          <p>
+            <img src="images/perspectivemenu.png" alt="" />
+          </p>
+    </td>
+  </tr>
+
+  <tr id="ui-responsiveness-monitoring">
+    <td class="title">UI responsiveness monitoring</td>
+    <td class="content">
+      You can enable automatic detection of periods when the Eclipse user interface is unresponsive:
+          <p>
+            <img src="images/ui-responsiveness-monitoring.png" alt="" />
+          </p>
+      <p>UI freezes longer than the warning threshold are logged to the Eclipse error log
+      as warnings. The logged messages include one or more stack traces of the display
+      thread. Longer UI freezes are logged as errors and include stack traces of all threads.
+      Please keep in mind that capturing stack traces of all threads involves extra
+      overhead, so setting the error threshold below 1 second is not recommended.</p>
+      <p>A UI freeze is logged at the end of the freeze or after the deadlock threshold has
+      expired, whichever comes first. The latter condition facilitates logging of indefinite
+      UI freezes caused by deadlocks.</p>
+      <p>Please file bugs for the UI freezes you encounter, describe what you were doing
+      at the time, and include the messages from the error log related to the freeze.</p> 
+    </td>
+  </tr>
+
+  <tr id="apply-git-patch">
+    <td class="title">Apply Patch... wizard more resilient</td>
+    <td class="content">
+      Patches that have been created via "<code>git format-patch</code>" sometimes couldn't be
+      applied successfully using Eclipse's <b>Team &gt; Apply Patch...</b> wizard.
+      <p>
+      Now, the wizard properly skips lines that are not part of an actual file diff section
+      (e.g. the <code>--&crarr;2.1.1</code> that Git appends).
+      </p>
+    </td>
+  </tr>
+
+  <tr id="nested-projects">
+    <td class="title">Nested/Hierarchical view of projects</td>
+    <td class="content">
+      The <b>Project Explorer</b> now provides the ability to view the projects in a hierarchical (a.k.a. nested) form. For modular
+      projects, this allows to have your Project Explorer mapping more closely the organization of your modules as they are on the
+      file system. This hierarchical view of projects often makes easier to navigate modular projects.
+      <p>Hierarchical view of projects can be triggered from the <b>Project Explorer</b> view menu, under the <b>Projects Presentation</b> item.</p>
+      <p>
+      <img align="middle" src="images/nested-projects-menu.png" alt="Hierarchical view of projects can be triggered from the Project Explorer view menu, under the Projects Presentation item"/>
+      </p>
+      <p>
+        Then it makes the folders that are at the same location as a project replaced by the project, and the projects that are nested under
+        other projects will not be shown as root elements.</p>
+      <p><img align="middle" src="images/nested-projects.png" alt=""/></p>
+      <p>This implementation relies on the Common Navigator Framework.</p>
+    </td>
+  </tr>
+
+  <tr id="open-resource-duplicates">
+    <td class="title">"Open Resource" dialog can now filter duplicate resources.</td>
+    <td class="content">
+    	With the new <a href="#nested-projects">Hierarchical view in the Project Explorer</a>, it has
+    	become more frequent to have multiple workspace projects with overlapping resource trees. 
+    	The <b>Open Resource</b> dialog has been enriched with a new option to allow hiding entries that
+    	reference the same underlying resource, and to show only the most relevant.
+    	<p>
+        	<img src="images/openresource-before-filter.png" alt=""/>
+      	</p>
+       	<p>
+        	<img src="images/openresource-after-filter.png" alt=""/>
+      	</p>
+    </td>
+  </tr>
+
+  <tr id="rename-copy-resource-dialog">
+    <td class="title">Improved rename &amp; copy resource dialogs</td>
+    <td class="content">
+      The <b>Rename Resource</b> dialog on resource files now pre-selects the file name without the extension.
+      <p>
+      <img src="images/rename-resource.png" alt=""/>
+      </p>
+      When you copy/paste (<b>Ctrl+C</b> / <b>Ctrl+V</b>) a file onto itself to create a duplicate,
+      the proposed new name is now just the old name followed by the digit 2 (or 3, etc., if that name is already taken).
+      <p>
+      <img src="images/resource-paste-conflict.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="workspace-location-in-prefs">
+    <td class="title">Workspace location in preferences</td>
+    <td class="content">
+      The <b>Workspace</b> preference page now shows the current workspace path.  In addition the path can be configured to appear in the
+      window title, a feature that previously was only available through the <code>-showLocation</code> command line argument.
+      This argument is still in effect and overrides the preference.
+      <p>
+        <img src="images/workspace-in-prefs.png" alt="Show the workspace in preferences and in window title" />
+      </p>
+    </td>
+  </tr>
+
+  <tr id="darktheme-section-titlebar">
+    <td class="title">Improved look for Forms based editors in the dark theme</td>
+    <td class="content">
+		Using the new CSS capabilities in to style the Section, the dark theme has been improved.
+		
+		<p>
+		The following image demonstrates the old look of the Section title bar,
+		where the title bar had a hard coded white gradient.
+	
+        </p>
+       <p>
+        	<img src="images/dark_theme_old_pde.png"  alt="Section in the dark theme before M5"/>
+    	</p>
+    	<p>
+		The following image demonstrates the new default look in the platform dark theme.
+    	</p>
+    	<p>
+        	<img src="images/dark_theme_new_pde.png"  alt="Section in the dark theme with M5"/>
+    	</p>
+    </td>
+  </tr>
+
+  <tr id="default-gtk3">
+    <td class="title">GTK+ 3 used by default on Linux distributions (when installed and available)</td>
+    <td class="content">
+      SWT and Eclipse will use the GTK+ 3 libraries by default on all Linux platforms,
+      whenever GTK+ 3 is installed and available (including GTK+ 3.10 and above). 
+      <p>You can force Eclipse to use GTK+ 2 port by setting the environment 
+      variable <code>SWT_GTK3</code> to 0 or using the launcher parameter <code>--launcher.GTK_version</code> flag in .ini file, if needed.
+      (For example: export SWT_GTK3=0) </p> 
+    </td>
+  </tr>
+    
+  <tr id="gtk-supported-versions-update">
+  	<td class="title">Dropped support for GTK+ 2 versions older than 2.18 in Eclipse launcher</td>
+  	<td class="content">
+  		GTK+ 2.18.0 or later (and its dependencies) will be the pre-requisites necessary to 
+  		run Eclipse successfully on all Linux/UNIX platforms as opposed to GTK+ 2.10.0 earlier.
+  		Support for all versions older than 2.18 has been dropped effective Mars M3 milestone release.
+  		<p>
+  		Note: As of now, Eclipse shows the following error dialog, which allows you to run even when
+  		a GTK+ version older than 2.18.0 is detected. But that behavior will soon be changed to not run 
+  		Eclipse with unsupported GTK+ versions.
+  		</p>
+  		<p>
+          <img src="images/gtk-version-warning.png" alt="" />
+        </p>
+  		
+  	</td>
+  </tr>
+
+  <tr id="terminate-all-action">
+    <td class="title">'Terminate/Disconnect All' in Console view</td>
+    <td class="content">
+      You can invoke the <b>Terminate/Disconnect All</b> action from the Console view's context menu:
+          <p>
+            <img src="images/console-terminate-disconnect-all.png" alt="" />
+          </p>
+    </td>
+  </tr>
+
+  <tr id="console-word-wrap">
+    <td class="title">Word wrap in the Console</td>
+    <td class="content">
+        A new formatting option has been contributed to the <b>Console</b> view for all I/O consoles: <b>Word Wrap</b>.
+        <p>
+            The new option is available on the Console view toolbar and in the content popup menu within the Console view.
+        </p>
+        <img src="images/word-wrap.png" alt="The new word wrap toolbar and popup menu command"/>
+    </td>
+  </tr>
+
+  <tr id="scroll-lock">
+    <td class="title">Automatic scroll lock in Console view</td>
+    <td class="content">
+		Scrolling up in the <b>Console</b> view using keys, mouse wheel, or scroll bar now automatically enables the <b>Scroll Lock</b> mode.
+		<p>
+		When you scroll down to the end of the console, the scroll lock is automatically released again.
+		</p>
+    </td>
+  </tr>
+
+  <tr id="console-output-limit">
+    <td class="title">Console output limit</td>
+    <td class="content">
+		<b>Preferences &gt; Run/Debug &gt; Console &gt; Console buffer size (characters)</b>
+		is now only limited by the amount of characters the Console view can render.
+		<p>
+		The arbitrary limit of 1 million characters has been removed.
+		</p>
+    </td>
+  </tr>
+
+  <tr id="stdin-file">
+    <td class="title">Assigning stdin to a file</td>
+    <td class="content">
+        Stdin can now be assigned to a file in the "Common" tab of launch configuration dialogs.
+        <p>
+          <img src="images/stdin-file.png" alt="" />
+        </p>
+    </td>
+  </tr>
+
+</tbody>
+</table>
+
+  <p align="center">
+    <font color="#808080">Previous</font>&nbsp;&nbsp;&nbsp;&nbsp; <a href="jdt.php">Next</a>
+  </p>
+
+</body>
+</html>
