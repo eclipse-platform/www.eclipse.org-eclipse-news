@@ -40,5 +40,5 @@ if (! isset($theme)) {
   $theme = "solstice";
 }
 
-$App->AddExtraHtmlHeader('<link rel="stylesheet" href="news.css" charset="UTF-8" type="text/css">');
+$App->AddExtraHtmlHeader('<link rel="stylesheet" href="news.css" type="text/css">');
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
