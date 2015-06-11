@@ -5,7 +5,7 @@
 	# team-leaders.php
 	#
 	# Author: 		
-	# Date:			2014-11-14
+	# Date:			2015-06-11
 	#
 	# Description: Details about the Eclipse Project PMC
 	#
@@ -78,8 +78,10 @@ ob_start();
 		        </li>
 		        <li> 
 		          <b><a name="dani"></a>Dani Megert, IBM Research - Zurich</b><br>
-			      Dani leads the <a href="https://wiki.eclipse.org/Platform">Platform</a> and the <a href="http://eclipse.org/jdt">JDT</a> subprojects and
-			      represents the project in the Eclipse <a href="http://wiki.eclipse.org/Planning_Council">Planning Council</a>. Dani worked at OTI and now works at IBM Research GmbH. He is one of the initial Eclipse Project committers.
+			      Dani leads the <a href="https://wiki.eclipse.org/Platform">Platform</a> and the <a href="http://eclipse.org/jdt">JDT</a> subprojects,
+			      represents the project in the Eclipse <a href="http://wiki.eclipse.org/Planning_Council">Planning Council</a>, and is also a
+			      a member of the Eclipse <a href="http://wiki.eclipse.org/Architecture_Council">
+			      Architecture Council</a>. Dani worked at OTI and now works at IBM Research GmbH. He is one of the initial Eclipse Project committers.
 			      His interests include user interface and API design, editors, software quality and performance.
 		        </li>
 		        <li> 
