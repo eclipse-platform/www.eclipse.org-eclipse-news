@@ -62,7 +62,14 @@ ob_start();
       John Glassmyer, Jonah Graham, Nicolaj Hoess and Pawel Pogorzelski for providing patches.
       </p>
       <p>The Platform Debug team would like to thank ...</p>
-      <p>The Platform SWT team would like to thank ...</p>
+      <p>The Platform SWT team would like to thank everyone who helped to improve the toolkit by filing bug reports and enhancement requests, 
+      as well as the early adopters who contributed towards improving quality by testing. Special thanks go to : Alexander Kurtakov (reviewed and contributed several patches for GTK3), 
+      Leo Ufimtsev (DND and other fixes for GTK3), Snjezana Peco (fixed drawing issues related to GTK+ 3.10 and above including one 'greatfix' contribution), Marc-Andre Laperle 
+      (fixed unresponsive keyboard shortcuts in GTK3), Joshua Barkovic (contributed initial implementation for Wayland backend), Matthew Painter & Neil Rashbrook (helped in improving 
+      support for newer versions of XULRunner), Nicolaj Hoess & Marco Descher (added tooltip support for menu items). We would also like to thank Abhishek Kishore, Alexandra Buzila, 
+      Andrey Loskutov, Anton Leherbauer, Dani Megert, David Williams, Ian Bull, Jacek Sieka, James Watkins-Harvey, Jonny Lamb, Lars Vogel, Lina Kemmel, Markus Keller, Mat Booth, 
+      Matthias Mailänder, Mickael Istria, Mikael Barbero, Pascal Rapicault, Paul Webster, Peter White, Sami Wagiaalla, Sergey Prigogin, Sopot Cela, Stefan Xenos, Stephan Herrmann, 
+      Steve Francisco,  Sudol Wojciech and Tobias Oberlies. We would like to appreciate Silenio Quarti, Bogdan Gheorghe and Grant Gayed for always supporting the team.</p>
       <p>The release engineering team would like to thank ...</p>
 
       <p>The JDT Core team would like to thank everyone ...</p>
