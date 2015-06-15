@@ -1,7 +1,16 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");  require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");   require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php");   $App   = new App();  $Nav  = new Nav();  $Menu   = new Menu();    include($App->getProjectCommon());    # All on the same line to unclutter the user's desktop'
+require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	
+require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	
+require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 
+$App 	= new App();	
+$Nav	= new Nav();	
+$Menu 	= new Menu();
+$right_nav = FALSE;	
+$keyword = 'eclipse, 4.5, Mars, acknowledgements, acknowledgments, thanks';
+require_once($_SERVER['DOCUMENT_ROOT'] ."/eclipse/development/nova/_projectCommon.php");
 
-echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">';
+
+#echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">';
 
 
 #*****************************************************************************
@@ -20,7 +29,7 @@ echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">';
 # Begin: page-specific settings.  Change these.
 $pageTitle     = "Eclipse Mars Acknowledgements";
 $pageKeywords  = "eclipse, 4.5, Mars, acknowledgements, acknowledgments, thanks";
-$pageAuthor    = "";
+$pageAuthor    = "David Williams and the Eclipse Project Team";
 
 # Add page-specific Nav bars here
 # Format is Link text, link URL (can be http://www.someothersite.com/), target (_self, _blank), level (1, 2 or 3)
