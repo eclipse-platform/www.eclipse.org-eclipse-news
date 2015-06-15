@@ -9,7 +9,7 @@ $Nav  = new Nav();
 $Menu   = new Menu();
 $right_nav = FALSE;
 $keyword = 'eclipse, 4.5, Mars, acknowledgements, acknowledgments, thanks';
-require_once($_SERVER['DOCUMENT_ROOT'] ."/eclipse/development/nova/_projectCommon.php");
+include($App->getProjectCommon());
 
 
 #echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">';
