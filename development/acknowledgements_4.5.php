@@ -119,7 +119,7 @@ ob_start();
       adds to PDE and would specifically like to thank Brian de Alwis (Specify API baselines via target0, Peter Schulz (Edit software dialog in targets), Tony McCrary (replacing the entire icon set),
       Olivier Provoust (e4 integration into wizards), Simon Scholz (wildcard support in dialogs) and Pragya Gaur (huge number of polish fixes).</p>
 
-    <p>The Equinox team would like to thank the entire Eclipse team and community for ...</p>
+    <p>The p2 team would like to thank the entire Eclipse team and community for supporting us while some major changes went in p2 to put in place the native layout for Mac. A special thanks to David Williams for all his assistance and patience and on getting the build going. Finally, thanks to everyone who provided bug reports and contributed fixes. </p>
 
     <h3>Active Committers [TODO: same list as last year, so far, will update later, based on Git records.]</h3>
     <p>This Eclipse and Equinox release was brought to you by the following committers. These committers were active at the time of the release (that is, one or more commits since previous
@@ -236,14 +236,10 @@ ob_start();
       width="92%"
       align="center">
       <tr>
-        <td width="23%">Ian Bull</td>
-        <td width="23%">John Arthorne</td>
-        <td width="23%">Krzysztof Daniel</td>
         <td width="23%">Pascal Rapicault</td>
-      </tr>
-      <tr>
-        <td width="23%">Susan McCourt</td>
+        <td width="23%">Tobias Oberlies</td>
         <td width="23%">Thomas Watson</td>
+	<td width="23%">Susan McCourt</td>
       </tr>
     </table>
   </div>
