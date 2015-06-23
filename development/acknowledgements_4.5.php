@@ -300,7 +300,7 @@ ob_start();
       <tr>
         <td width="23%">Martin&nbsp;Lippert</td>
         <td width="23%">Silenio&nbsp;Quarti</td>
-        <td width="23%">&nbsp;</td>
+        <td width="23%">Raymond&nbsp;Auge</td>
         <td width="23%">&nbsp;</td>
       </tr>
     </table>
