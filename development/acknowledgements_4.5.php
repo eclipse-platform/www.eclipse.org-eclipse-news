@@ -121,7 +121,7 @@ ob_start();
 
     <p>The p2 team would like to thank the entire Eclipse team and community for supporting us while some major changes went in p2 to put in place the native layout for Mac. A special thanks to David Williams for all his assistance and patience and on getting the build going. Finally, thanks to everyone who provided bug reports and contributed fixes. </p>
 
-    <h3>Active Committers [TODO: same list as last year, so far, will update later, based on Git records.]</h3>
+    <h3>Active Committers</h3>
     <p>This Eclipse and Equinox release was brought to you by the following committers. These committers were active at the time of the release (that is, one or more commits since previous
       release.)</p>
     <p>
@@ -245,58 +245,7 @@ ob_start();
         <td width="23%">Michael&nbsp;Rennie</td>
       </tr>
       </table> 
-    <!--
-    <table
-      width="92%"
-      align="center">
-      <tr>
-        <td width="23%">Alexander Kurtakov</td>
-        <td width="23%">Arun Thondapu</td>
-        <td width="23%">Atsuhiko Yamanaka</td>
-        <td width="23%">Bogdan Gheorghe</td>
-      </tr>
-      <tr>
-        <td width="23%">Brian de Alwis</td>
-        <td width="23%">Chris Austin</td>
-        <td width="23%">Curtis Windatt</td>
-        <td width="23%">Dani Megert</td>
-      </tr>
-      <tr>
-        <td width="23%">Daniel Rolka</td>
-        <td width="23%">David Williams</td>
-        <td width="23%">Eric Moffatt</td>
-        <td width="23%">Grant Gayed</td>
-      </tr>
 
-      <tr>
-        <td width="23%">John Arthorne</td>
-        <td width="23%">Lakshmi Priya Shanmugam</td>
-        <td width="23%">Lars Vogel</td>
-        <td width="23%">Lina Kemmel</td>
-      </tr>
-      <tr>
-        <td width="23%">Malgorzata Janczarska</td>
-        <td width="23%">Markus Keller</td>
-        <td width="23%">Michael Rennie</td>
-        <td width="23%">Niraj Modi</td>
-      </tr>
-      <tr>
-        <td width="23%">Paul Elder</td>
-        <td width="23%">Paul Webster</td>
-        <td width="23%">Silenio Quarti</td>
-        <td width="23%">Szymon Brandys</td>
-      </tr>
-      <tr>
-        <td width="23%">Szymon Ptaszkiewicz</td>
-        <td width="23%">Thanh Ha</td>
-        <td width="23%">Thomas Schindl</td>
-        <td width="23%">Thomas Watson</td>
-      </tr>
-      <tr>
-        <td width="23%">Wojciech Sudol</td>
-      </tr>
-    </table>
-    -->
     <h4>Eclipse JDT</h4>
     <table
       width="92%"
@@ -331,10 +280,10 @@ ob_start();
       width="92%"
       align="center">
       <tr>
-        <td width="23%">Andrew Niefer</td>
-        <td width="23%">Curtis Windatt</td>
-        <td width="23%">Dani Megert</td>
-        <td width="23%">Michael Rennie</td>
+        <td width="23%">Vikas&nbsp;Chandra</td>
+        <td width="23%">Pascal&nbsp;Rapicault</td>
+        <td width="23%">Dani&nbsp;Megert</td>
+        <td width="23%">Lars&nbsp;Vogel</td>
       </tr>
     </table>
     <h4>Equinox</h4>
@@ -342,16 +291,16 @@ ob_start();
       width="92%"
       align="center">
       <tr>
+        <td width="23%">Thomas Watson</td>
         <td width="23%">Arun Thondapu</td>
         <td width="23%">BJ Hargrave</td>
-        <td width="23%">John Arthorne</td>
-        <td width="23%">John Ross</td>
+        <td width="23%">Pascal Rapicault</td>
       </tr>
       <tr>
-        <td width="23%">Lazar Kirchev</td>
         <td width="23%">Martin Lippert</td>
         <td width="23%">Silenio Quarti</td>
-        <td width="23%">Thomas Watson</td>
+        <td width="23%">&nbsp;</td>
+        <td width="23%">&nbsp;</td>
       </tr>
     </table>
     <h4>Equinox - p2</h4>
@@ -362,7 +311,7 @@ ob_start();
         <td width="23%">Pascal Rapicault</td>
         <td width="23%">Tobias Oberlies</td>
         <td width="23%">Thomas Watson</td>
-	<td width="23%">Susan McCourt</td>
+	      <td width="23%">Susan McCourt</td>
       </tr>
     </table>
   </div>
