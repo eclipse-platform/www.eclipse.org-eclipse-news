@@ -126,6 +126,70 @@ ob_start();
       release.)</p>
     <p>
     <h4>Eclipse Platform</h4>
+    <h5>Platform SWT</h5>
+    <table
+      width="92%"
+      align="center">
+      <tr>
+        <td width="23%">Arun&nbsp;Thondapu</td>
+        <td width="23%">Alexander&nbsp;Kurtakov</td>
+        <td width="23%">Lakshmi&nbsp;Shanmugam</td>
+        <td width="23%">Leo&nbsp;Ufimtsev</td>
+      </tr>
+      <tr>
+        <td width="23%">Lina&nbsp;Kemmel</td>
+        <td width="23%">Markus&nbsp;Keller</td>
+        <td width="23%">Niraj&nbsp;Modi</td>
+        <td width="23%">Sravan&nbsp;Kumar&nbsp;Lakkimsetti</td>
+       </tr>
+    </table>
+    <h5>Platform UI</h5>
+    <table
+      width="92%"
+      align="center">
+      <tr>
+        <td width="23%">Steve&nbsp;Francisco</td>
+        <td width="23%">Sopot&nbsp;Cela</td>
+        <td width="23%">Brian&nbsp;de&nbsp;Alwis</td>
+        <td width="23%">Paul&nbsp;Elder</td>
+      </tr>
+      <tr>
+        <td width="23%">Dirk&nbsp;Fauth</td>
+        <td width="23%">Markus&nbsp;Keller</td>
+        <td width="23%">Andrey&nbsp;Loskutov</td>
+        <td width="23%">Dani&nbsp;Megert</td>
+      </tr>
+      <tr>
+        <td width="23%">Eric&nbsp;Moffatt</td>
+        <td width="23%">Sergey&nbsp;Prigogin</td>
+        <td width="23%">Olivier&nbsp;Prouvost</td>
+        <td width="23%">Szymon&nbsp;Ptaszkiewicz</td>
+      </tr>
+      <tr>
+        <td width="23%">Thomas&nbsp;Schindl</td>
+        <td width="23%">Wojciech&nbsp;Sudol</td>
+        <td width="23%">Paul&nbsp;Webster</td>
+        <td width="23%">Lars&nbsp;Vogel</td>
+      </tr>
+    </table>
+    <h5>Platform Workspace</h5>
+    <table
+      width="92%"
+      align="center">
+      <tr>    
+        <td width="23%">John&nbsp;Arthorne</td>
+        <td width="23%">Dani&nbsp;Megert</td>
+        <td width="23%">Sergey&nbsp;Prigogin</td>
+        <td width="23%">Szymon&nbsp;Ptaszkiewicz</td>
+      </tr>
+      <tr>
+        <td width="23%">Atsuhiko&nbsp;Yamanaka</td>
+        <td width="23%">&nbsp;</td>
+        <td width="23%">&nbsp;</td>
+        <td width="23%">&nbsp;</td>
+      </tr>
+      </table>
+    <!--
     <table
       width="92%"
       align="center">
@@ -176,6 +240,7 @@ ob_start();
         <td width="23%">Wojciech Sudol</td>
       </tr>
     </table>
+    -->
     <h4>Eclipse JDT</h4>
     <table
       width="92%"
@@ -183,7 +248,7 @@ ob_start();
       <tr>
         <td width="23%">Andrew Clement</td>
         <td width="23%">Dani Megert</td>
-        <td width="23%">Jayaprakash Arthanareeswaran</td>
+        <td width="23%">Jayaprakash&nbsp;Arthanareeswaran</td>
         <td width="23%">Manju Mathew</td>
       </tr>
       <tr>
