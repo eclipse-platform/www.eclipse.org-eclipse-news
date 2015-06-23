@@ -189,6 +189,41 @@ ob_start();
         <td width="23%">&nbsp;</td>
       </tr>
       </table>
+    <h5>Platform Releng</h5>
+    <table
+      width="92%"
+      align="center">
+      <tr>    
+        <td width="23%">David&nbsp;Williams</td>
+        <td width="23%">Dani&nbsp;Megert</td>
+        <td width="23%">Markus&nbsp;Keller</td>
+        <td width="23%">&nbsp;</td>
+      </tr>
+      </table> 
+    <h5>Platform Documentation</h5>
+    <table
+      width="92%"
+      align="center">
+      <tr>    
+        <td width="23%">Dani&nbsp;Megert</td>
+        <td width="23%">David&nbsp;Williams</td>
+        <td width="23%">Jay&nbsp;Arthanareeswaran</td>
+        <td width="23%">Lars&nbsp;Vogel</td>
+      </tr>
+      <tr>
+        <td width="23%">Markus&nbsp;Keller</td>
+        <td width="23%">Noopur&nbsp;Gupta</td>
+        <td width="23%">Sarika&nbsp;Sinha</td>
+        <td width="23%">Stephan&nbsp;Herrmann</td>
+      </tr>
+      <tr>
+        <td width="23%">Szymon Ptaszkiewicz</td>
+        <td width="23%">&nbsp;</td>
+        <td width="23%">&nbsp;</td>
+        <td width="23%">&nbsp;</td>
+      </tr>
+      </table>        
+
     <!--
     <table
       width="92%"
