@@ -181,26 +181,28 @@ ob_start();
       width="92%"
       align="center">
       <tr>
-        <td width="23%">Anirban Chakraborty</td>
-        <td width="23%">Curtis Windatt</td>
+        <td width="23%">Andrew Clement</td>
         <td width="23%">Dani Megert</td>
-        <td width="23%">Deepak Azad</td>
-      </tr>
-      <tr>
         <td width="23%">Jayaprakash Arthanareeswaran</td>
-        <td width="23%">Jesper Moller</td>
         <td width="23%">Manju Mathew</td>
-        <td width="23%">Manoj Palat</td>
       </tr>
       <tr>
+        <td width="23%">Manoj Palat</td>
         <td width="23%">Markus Keller</td>
         <td width="23%">Michael Rennie</td>
         <td width="23%">Noopur Gupta</td>
+      </tr>
+      <tr>
+        <td width="23%">Olivier Thomann</td>
         <td width="23%">Sarika Sinha</td>
+        <td width="23%">Sasikanth Bharadwaj</td>
+        <td width="23%">Shankha Banerjee</td>
       </tr>
       <tr>
         <td width="23%">Srikanth Sankaran</td>
         <td width="23%">Stephan Herrmann</td>
+        <td width="23%">&nbsp;</td>
+        <td width="23%">&nbsp;</td>
       </tr>
     </table>
     <h4>Eclipse PDE</h4>
