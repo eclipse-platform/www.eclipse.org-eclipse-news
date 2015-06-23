@@ -57,8 +57,10 @@ ob_start();
       simplify and manage our development process; Ian Skerrett for his help with marketing the Eclipse release; and Mike Milinkovich for running the whole show. In particular, we appreciate the
       Eclipse Foundation providing resources to allow the building and signing of "Mac Apps" as true applications for MacosX, all propertly signed with the new requirements from Apple.</p>
 
-    <p>We would also like to thank the users and adopters who support our efforts, through a range of activities, including early testing, being a <a href="https://eclipse.org/donate/">Friend of
-        Eclipse</a>, contracting special work, or outright employment.</p>
+    <p>
+      We would also like to thank the users and adopters who support our efforts, through a range of activities, including early testing, being a <a href="https://eclipse.org/donate/">Friend of
+        Eclipse</a>, contracting special work, or outright employment.
+    </p>
 
     <p>A special mention should be made to thank to Luis Bernardo and the Apache Batik team who provided service versions on some very old versions of the 'org.apache.batik.dom' bundle, for the
       Mars release train. This was to fix a security issue discovered late in the cycle, and prevented everyone on the release train being required to move up to the latest version at the last minute.
@@ -83,16 +85,14 @@ ob_start();
     <p>The Platform SWT team would like to thank everyone who helped to improve the toolkit by filing bug reports and enhancement requests, as well as the early adopters who contributed towards
       improving quality by testing. Special thanks go to : Alexander Kurtakov (reviewed and contributed several patches for GTK3), Leo Ufimtsev (DND and other fixes for GTK3), Snjezana Peco (fixed
       drawing issues related to GTK+ 3.10 and above including one 'greatfix' contribution), Marc-Andre Laperle (fixed unresponsive keyboard shortcuts in GTK3), Joshua Barkovic (contributed initial
-      implementation for Wayland backend), Matthew Painter &amp; Neil Rashbrook (helped in improving support for newer versions of XULRunner), Nicolaj Hoess &amp; Marco Descher (added tooltip support for menu
-      items). We would also like to thank Abhishek Kishore, Alexandra Buzila, Andrey Loskutov, Anton Leherbauer, Dani Megert, David Williams, Ian Bull, Jacek Sieka, James Watkins-Harvey, Jonny Lamb,
-      Lars Vogel, Lina Kemmel, Markus Keller, Mat Booth, Matthias Mailänder, Mickael Istria, Mikael Barbero, Pascal Rapicault, Paul Webster, Peter White, Sami Wagiaalla, Sergey Prigogin, Sopot Cela,
-      Stefan Xenos, Stephan Herrmann, Steve Francisco, Sudol Wojciech and Tobias Oberlies. We would like to appreciate Silenio Quarti, Bogdan Gheorghe and Grant Gayed for always supporting the team.</p>
-   
-    <p>The release engineering team would like to thank the many people who helped to improve 
-    our build. Also, the webmasters at the Eclipse Foundation for their constant help and education;
-    in particular Mikael Barbero who fixed several show-stopping issues in CBI. 
-    I'd also like to thank the Tycho Team for providing fixes and timely updates to 
-    Tycho -- two releases during Mars!</p>
+      implementation for Wayland backend), Matthew Painter &amp; Neil Rashbrook (helped in improving support for newer versions of XULRunner), Nicolaj Hoess &amp; Marco Descher (added tooltip support
+      for menu items). We would also like to thank Abhishek Kishore, Alexandra Buzila, Andrey Loskutov, Anton Leherbauer, Dani Megert, David Williams, Ian Bull, Jacek Sieka, James Watkins-Harvey,
+      Jonny Lamb, Lars Vogel, Lina Kemmel, Markus Keller, Mat Booth, Matthias Mailänder, Mickael Istria, Mikael Barbero, Pascal Rapicault, Paul Webster, Peter White, Sami Wagiaalla, Sergey Prigogin,
+      Sopot Cela, Stefan Xenos, Stephan Herrmann, Steve Francisco, Sudol Wojciech and Tobias Oberlies. We would like to appreciate Silenio Quarti, Bogdan Gheorghe and Grant Gayed for always supporting
+      the team.</p>
+
+    <p>The release engineering team would like to thank the many people who helped to improve our build. Also, the webmasters at the Eclipse Foundation for their constant help and education; in
+      particular Mikael Barbero who fixed several show-stopping issues in CBI. I'd also like to thank the Tycho Team for providing fixes and timely updates to Tycho -- two releases during Mars!</p>
 
     <p>The JDT Core team would like to thank everyone who has helped us to improve quality by testing and filing good bug reports. We would like to thank Stephan Hermann for his continued support
       with the huge number of fixes committed. We had two major contributions for Mars which resulted in the "greatfix" tag - Thanks to a)John Glassmyer for the set of bugs related to import rewrite
@@ -119,7 +119,8 @@ ob_start();
       adds to PDE and would specifically like to thank Brian de Alwis (Specify API baselines via target0, Peter Schulz (Edit software dialog in targets), Tony McCrary (replacing the entire icon set),
       Olivier Provoust (e4 integration into wizards), Simon Scholz (wildcard support in dialogs) and Pragya Gaur (huge number of polish fixes).</p>
 
-    <p>The p2 team would like to thank the entire Eclipse team and community for supporting us while some major changes went in p2 to put in place the native layout for Mac. A special thanks to David Williams for all his assistance and patience and on getting the build going. Finally, thanks to everyone who provided bug reports and contributed fixes. </p>
+    <p>The p2 team would like to thank the entire Eclipse team and community for supporting us while some major changes went in p2 to put in place the native layout for Mac. A special thanks to
+      David Williams for all his assistance and patience and on getting the build going. Finally, thanks to everyone who provided bug reports and contributed fixes.</p>
 
     <h3>Active Committers</h3>
     <p>This Eclipse and Equinox release was brought to you by the following committers. These committers were active at the time of the release (that is, one or more commits since previous
@@ -141,7 +142,7 @@ ob_start();
         <td width="23%">Markus&nbsp;Keller</td>
         <td width="23%">Niraj&nbsp;Modi</td>
         <td width="23%">Sravan&nbsp;Kumar&nbsp;Lakkimsetti</td>
-       </tr>
+      </tr>
     </table>
     <h5>Platform UI</h5>
     <table
@@ -176,7 +177,7 @@ ob_start();
     <table
       width="92%"
       align="center">
-      <tr>    
+      <tr>
         <td width="23%">John&nbsp;Arthorne</td>
         <td width="23%">Dani&nbsp;Megert</td>
         <td width="23%">Sergey&nbsp;Prigogin</td>
@@ -188,23 +189,23 @@ ob_start();
         <td width="23%">&nbsp;</td>
         <td width="23%">&nbsp;</td>
       </tr>
-      </table>
+    </table>
     <h5>Platform Releng</h5>
     <table
       width="92%"
       align="center">
-      <tr>    
+      <tr>
         <td width="23%">David&nbsp;Williams</td>
         <td width="23%">Dani&nbsp;Megert</td>
         <td width="23%">Markus&nbsp;Keller</td>
         <td width="23%">&nbsp;</td>
       </tr>
-      </table> 
+    </table>
     <h5>Platform Documentation</h5>
     <table
       width="92%"
       align="center">
-      <tr>    
+      <tr>
         <td width="23%">Dani&nbsp;Megert</td>
         <td width="23%">David&nbsp;Williams</td>
         <td width="23%">Jay&nbsp;Arthanareeswaran</td>
@@ -217,60 +218,60 @@ ob_start();
         <td width="23%">Stephan&nbsp;Herrmann</td>
       </tr>
       <tr>
-        <td width="23%">Szymon Ptaszkiewicz</td>
+        <td width="23%">Szymon&nbsp;Ptaszkiewicz</td>
         <td width="23%">&nbsp;</td>
         <td width="23%">&nbsp;</td>
         <td width="23%">&nbsp;</td>
       </tr>
-      </table>        
+    </table>
     <h5>Platform Text</h5>
     <table
       width="92%"
       align="center">
-      <tr>    
+      <tr>
         <td width="23%">Dani&nbsp;Megert</td>
         <td width="23%">Markus&nbsp;Keller</td>
         <td width="23%">&nbsp;</td>
         <td width="23%">&nbsp;</td>
       </tr>
-      </table> 
+    </table>
     <h5>Platform Debug</h5>
     <table
       width="92%"
       align="center">
-      <tr>    
+      <tr>
         <td width="23%">Sarika&nbsp;Sinha</td>
         <td width="23%">Dani&nbsp;Megert</td>
         <td width="23%">Markus&nbsp;Keller</td>
         <td width="23%">Michael&nbsp;Rennie</td>
       </tr>
-      </table> 
+    </table>
 
     <h4>Eclipse JDT</h4>
     <table
       width="92%"
       align="center">
       <tr>
-        <td width="23%">Andrew Clement</td>
-        <td width="23%">Dani Megert</td>
+        <td width="23%">Andrew&nbsp;Clement</td>
+        <td width="23%">Dani&nbsp;Megert</td>
         <td width="23%">Jayaprakash&nbsp;Arthanareeswaran</td>
-        <td width="23%">Manju Mathew</td>
+        <td width="23%">Manju&nbsp;Mathew</td>
       </tr>
       <tr>
-        <td width="23%">Manoj Palat</td>
-        <td width="23%">Markus Keller</td>
-        <td width="23%">Michael Rennie</td>
-        <td width="23%">Noopur Gupta</td>
+        <td width="23%">Manoj&nbsp;Palat</td>
+        <td width="23%">Markus&nbsp;Keller</td>
+        <td width="23%">Michael&nbsp;Rennie</td>
+        <td width="23%">Noopur&nbsp;Gupta</td>
       </tr>
       <tr>
-        <td width="23%">Olivier Thomann</td>
-        <td width="23%">Sarika Sinha</td>
-        <td width="23%">Sasikanth Bharadwaj</td>
-        <td width="23%">Shankha Banerjee</td>
+        <td width="23%">Olivier&nbsp;Thomann</td>
+        <td width="23%">Sarika&nbsp;Sinha</td>
+        <td width="23%">Sasikanth&nbsp;Bharadwaj</td>
+        <td width="23%">Shankha&nbsp;Banerjee</td>
       </tr>
       <tr>
-        <td width="23%">Srikanth Sankaran</td>
-        <td width="23%">Stephan Herrmann</td>
+        <td width="23%">Srikanth&nbsp;Sankaran</td>
+        <td width="23%">Stephan&nbsp;Herrmann</td>
         <td width="23%">&nbsp;</td>
         <td width="23%">&nbsp;</td>
       </tr>
@@ -291,14 +292,14 @@ ob_start();
       width="92%"
       align="center">
       <tr>
-        <td width="23%">Thomas Watson</td>
-        <td width="23%">Arun Thondapu</td>
-        <td width="23%">BJ Hargrave</td>
-        <td width="23%">Pascal Rapicault</td>
+        <td width="23%">Thomas&nbsp;Watson</td>
+        <td width="23%">Arun&nbsp;Thondapu</td>
+        <td width="23%">BJ&nbsp;Hargrave</td>
+        <td width="23%">Pascal&nbsp;Rapicault</td>
       </tr>
       <tr>
-        <td width="23%">Martin Lippert</td>
-        <td width="23%">Silenio Quarti</td>
+        <td width="23%">Martin&nbsp;Lippert</td>
+        <td width="23%">Silenio&nbsp;Quarti</td>
         <td width="23%">&nbsp;</td>
         <td width="23%">&nbsp;</td>
       </tr>
@@ -308,10 +309,10 @@ ob_start();
       width="92%"
       align="center">
       <tr>
-        <td width="23%">Pascal Rapicault</td>
-        <td width="23%">Tobias Oberlies</td>
-        <td width="23%">Thomas Watson</td>
-	      <td width="23%">Susan McCourt</td>
+        <td width="23%">Pascal&nbsp;Rapicault</td>
+        <td width="23%">Tobias&nbsp;Oberlies</td>
+        <td width="23%">Thomas&nbsp;Watson</td>
+        <td width="23%">Susan&nbsp;McCourt</td>
       </tr>
     </table>
   </div>
