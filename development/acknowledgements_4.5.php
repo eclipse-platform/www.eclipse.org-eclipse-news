@@ -223,7 +223,28 @@ ob_start();
         <td width="23%">&nbsp;</td>
       </tr>
       </table>        
-
+    <h5>Platform Text</h5>
+    <table
+      width="92%"
+      align="center">
+      <tr>    
+        <td width="23%">Dani&nbsp;Megert</td>
+        <td width="23%">Markus&nbsp;Keller</td>
+        <td width="23%">&nbsp;</td>
+        <td width="23%">&nbsp;</td>
+      </tr>
+      </table> 
+    <h5>Platform Debug</h5>
+    <table
+      width="92%"
+      align="center">
+      <tr>    
+        <td width="23%">Sarika&nbsp;Sinha</td>
+        <td width="23%">Dani&nbsp;Megert</td>
+        <td width="23%">Markus&nbsp;Keller</td>
+        <td width="23%">Michael&nbsp;Rennie</td>
+      </tr>
+      </table> 
     <!--
     <table
       width="92%"
