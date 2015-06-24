@@ -286,6 +286,12 @@ ob_start();
         <td width="23%">Dani&nbsp;Megert</td>
         <td width="23%">Lars&nbsp;Vogel</td>
       </tr>
+      <tr>
+        <td width="23%">Curtis&nbsp;Windatt</td>
+        <td width="23%">&nbsp;</td>
+        <td width="23%">&nbsp;</td>
+        <td width="23%">&nbsp;</td>
+      </tr>
     </table>
     <h4>Equinox</h4>
     <table
