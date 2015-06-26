@@ -7,13 +7,14 @@
 <link rel="STYLESHEET" href="news.css" type="text/css"/>
 <style type="text/css">
 body {max-width: 900px;}
+table.news col.title {width: 30%;}
 /*img {max-width: 520px;}*/
 table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
 table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
 table.news tr {vertical-align: top;}
 table.news tr td.section {font-size: 20px; font-weight: bold;}
-table.news tr td.title {vertical-align: top; width: 20%; font-weight: bold;}
-table.news tr td.content {vertical-align: top; width: 80%;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
 </style>
 <title>Eclipse Project Mars - New and Noteworthy</title>
 </head>
@@ -22,6 +23,10 @@ table.news tr td.content {vertical-align: top; width: 80%;}
 <h2>Platform and Equinox</h2>
 
 <table class="news">
+<colgroup>
+  <col class="title" />
+  <col />
+</colgroup>
 <tbody>
 
   <tr><td class="title">Text search speedup</td>
@@ -376,7 +381,7 @@ table.news tr td.content {vertical-align: top; width: 80%;}
 </tbody>
 </table>
 
-  <p align="center">
+  <p style="text-align:center">
     <span style="color:#808080">Previous</span>&nbsp;&nbsp;&nbsp;&nbsp; <a href="jdt.php">Next</a>
   </p>
 
