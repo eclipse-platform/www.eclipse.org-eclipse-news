@@ -6,11 +6,11 @@ function innerHTML($el) {
 	$tag = $el->nodeName;
 	$html =  preg_replace('@^<' . $tag . '[^>]*>|</' . $tag . '>$@', '', $html);
 	//update relative links
-	return preg_replace('~href="4.2/([^"]+).html"~', 'href="4.2/$1.php"', $html);
+	return preg_replace('~href="4\.(\d+)/([^"]+)\.html"~', 'href="4.\$1/$2.php"', $html);
 }
 
 if(!isset($keyword) OR $keyword == ""){
-	$keyword = "eclipse 4.4, eclipse";
+	$keyword = "eclipse 4.5, eclipse";
 }
 
 $file = basename($App->getScriptName(), ".php").'.html';
@@ -43,10 +43,7 @@ if(isset($right_nav) && $right_nav == FALSE){
 	$class = 'fullpage';
 }else{
 	//porting guide
-	$Nav->addNavSeparator("Eclipse 4.2 Plug-in Migration Guide", 	"/eclipse/development/porting/eclipse_4_2_porting_guide.php");
-	$Nav->addCustomNav("FAQ", "/eclipse/development/porting/4.2/faq.php", "_self", 1);
-	$Nav->addCustomNav("Incompatibilities between Eclipse 3.7 and 4.2", "/eclipse/development/porting/4.2/incompatibilities.php", "_self", 1);
-	$Nav->addCustomNav("Adopting 4.2 mechanisms and APIs", "/eclipse/development/porting/4.2/recommended.php", "_self", 1);
+	$Nav = NULL;
 	$class = 'twocolums';
 }
 
