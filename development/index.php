@@ -33,17 +33,17 @@ ob_start();
 
 	<div id="midcolumn">
 		<h1><?= $pageTitle ?></h1>
-		<div class="homeitem3col">
+		<div id="current" class="homeitem3col">
 			<h3>Releases currently under development</h3>
 			<ul>
-		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_5.xml"> Eclipse Project Mars 4.5 Plan</a><br>
-		        This document lays out the feature and API set for the Mars 4.5 release of the Eclipse Project.</li>
-		      <li><a href="plans/freeze_plan_4_5.php">Eclipse Project Mars 4.5 Endgame Plan</a><br>
-				Information about how we plan to wrap up the Mars release (version 4.5).</li>
+		      <li><!--<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_6.xml">-->(not yet available) <a>Eclipse Project Neon 4.6 Plan</a><br>
+		        This document lays out the feature and API set for the Neon 4.6 release of the Eclipse Project.</li>
+		      <li><!--<a href="plans/freeze_plan_4_5_1.php">-->(not yet available) <a>Eclipse Project Mars SR1 Endgame Plan</a><br>
+				Information about how we plan to wrap up the Mars SR1 release (version 4.5.1).</li>
 		    </ul>
 		    See also the <a href="https://projects.eclipse.org/projects/eclipse/governance">Eclipse Project on projects.eclipse.org</a>.
       	</div>
-		<div class="homeitem3col">
+		<div id="development" class="homeitem3col">
 			<h3>Development Process</h3>
 			<ul>
 			<li><a href="http://wiki.eclipse.org/index.php/Development_Conventions_and_Guidelines">
@@ -88,6 +88,7 @@ ob_start();
 			    there is a summary of what clients are affected, and steps for clients
 			    to migrate.
 		        <ul>
+		        <li><a href="porting/eclipse_4_5_porting_guide.php">Eclipse Platform 4.5 Porting Guide</a></li>
 		        <li><a href="porting/eclipse_4_4_porting_guide.php">Eclipse Platform 4.4 Porting Guide</a></li>
 		        <li><a href="porting/eclipse_4_3_porting_guide.php">Eclipse Platform 4.3 Porting Guide</a></li>
 		        <li><a href="porting/eclipse_4_2_porting_guide.php">Eclipse Platform 4.2 Porting Guide</a></li>
@@ -95,7 +96,7 @@ ob_start();
       		</li>
       		</ul>
       	</div>
-		<div class="homeitem3col">
+		<div id="api" class="homeitem3col">
 			<h3>API Resources</h3>
 			<ul>
 			<li><a href="http://www.eclipse.org/articles/Article-API%20use/eclipse-api-usage-rules.html">
@@ -126,15 +127,23 @@ ob_start();
 	        </li>
       		</ul>
       	</div>
-		<div class="homeitem3col">
-			<h3>Historical information about past releases</h3>			
+		<div id="past" class="homeitem3col">
+			<h3>Historical information about past releases</h3>
 			<ul>
+		      <li><a href="plans/freeze_plan_4_5.php">Eclipse Project Mars 4.5 Endgame Plan</a><br>
+				Information about how we wrapped up the Mars release (version 4.5).</li>
+		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_5.xml">Eclipse Project Mars 4.5 Plan</a><br>
+		        This document lays out the feature and API set for the Mars 4.5 release of the Eclipse Project.</li>
+
 		      <li><a href="plans/freeze_plan_4_4_2.php">Eclipse Project Luna SR2 Endgame Plan</a><br>
 				Information about how we wrapped up the Luna SR2 release (version 4.4.2).</li>
 		      <li><a href="plans/freeze_plan_4_4_1.php">Eclipse Project Luna SR1 Endgame Plan</a><br>
 				Information about how we wrapped up the Luna SR1 release (version 4.4.1).</li>
+		      <li><a href="plans/freeze_plan_4_4.php">Eclipse Project Luna 4.4 Endgame Plan</a><br>
+				Information about how we wrapped up the Luna 4.4 release.</li>
 		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_4.xml"> Eclipse Project Luna 4.4 Plan</a><br>
 		        This document lays out the feature and API set for the Luna 4.4 release of the Eclipse Project.</li>
+
 		      <li><a href="plans/freeze_plan_4_3_2.php">Eclipse Project Kepler SR2 Endgame Plan</a><br>
 				Information about how we wrapped up the Kepler SR2 release (version 4.3.2).</li>
 		      <li><a href="plans/freeze_plan_4_3_1.php">Eclipse Project Kepler SR1 Endgame Plan</a><br>
@@ -143,6 +152,7 @@ ob_start();
 		        This document lays out the feature and API set for the Kepler 4.3 release of the Eclipse Project.</li>
 		      <li><a href="plans/freeze_plan_4_3.php">Eclipse Project Kepler 4.3 Endgame Plan</a><br>
 				Information about how we wrapped up the Kepler 4.3 release.</li>
+
 		      <li><a href="plans/freeze_plan_4_2_2.php">Eclipse Project Juno SR2 Endgame Plan</a><br>
 				Information about how we wrapped up the Juno SR2 release (versions 3.8.2 and 4.2.2).</li>
 		      <li><a href="plans/freeze_plan_4_2_1.php">Eclipse Project Juno SR1 Endgame Plan</a><br>
@@ -151,6 +161,7 @@ ob_start();
 		        This document lays out the feature and API set for the Juno 4.2 release of the Eclipse Project.</li>
 		      <li><a href="plans/freeze_plan_4_2.php"> Eclipse Project Juno 4.2 Endgame Plan</a><br>
 				Information about how we wrapped up the Juno release (versions 3.8 and 4.2).</li>
+
 		      <li><a href="plans/freeze_plan_3_7_2.php"> Eclipse Project Indigo 3.7 SR2 Endgame Plan</a><br>
 				Information about how we wrapped up Indigo 3.7 Service Release 2 (version 3.7.2).</li>
 		      <li><a href="plans/freeze_plan_4_1_1.php"> Eclipse Project Indigo 4.1 SR1 Endgame Plan</a><br>
