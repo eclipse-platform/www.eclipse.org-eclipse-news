@@ -29,6 +29,13 @@
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
 
+   <tr id="workbenchlogger_debug">
+    <td class="title">Workbench logger supports debug level</td>
+    <td class="content">
+    	Previously, the workbench logger wrote a trace when calling logger#debug, even if the application was not started in debug mode. Now, log entries on the debug level are ignored, if the application is not started with the debug flag (-debug). See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=469737">BR 469737</a>.
+	</td>
+  </tr>
+
   <tr id="no_theme_DnD">
     <td class="title">Toolbar drag and drop when no theme engine present</td>
     <td class="content">
