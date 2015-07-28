@@ -41,7 +41,8 @@ ob_start();
 		      <li><!--<a href="plans/freeze_plan_4_5_1.php">-->(not yet available) <a>Eclipse Project Mars SR1 Endgame Plan</a><br>
 				Information about how we plan to wrap up the Mars SR1 release (version 4.5.1).</li>
 		    </ul>
-		    See also the <a href="https://projects.eclipse.org/projects/eclipse/governance">Eclipse Project on projects.eclipse.org</a>.
+		    See also the <a href="https://projects.eclipse.org/projects/eclipse/governance">Eclipse Project on projects.eclipse.org</a>
+		    and the <strong>preliminary</strong> <a href="https://wiki.eclipse.org/Neon/Simultaneous_Release_Plan">Simultaneous Release plan</a>.
       	</div>
 		<div id="development" class="homeitem3col">
 			<h3>Development Process</h3>
