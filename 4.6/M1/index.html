@@ -30,10 +30,11 @@
   </tr>
 
   <tr id="theming_enable_disable">
-    <td class="title">You can now disable the CSS engine (theming)</td>
+    <td class="title">Preference setting to disable the Eclipse styling (CSS based theming)</td>
     <td class="content">
-    	Now you can completely disable the CSS engine through a check box in the Appearance preferences. 
-    	This would cause Eclipse to be rendered without any CSS support and delegate everything to the OS in terms of theme colors, shapes etc.
+    	You can disable the CSS based styling of the Eclipse IDE through a check box in the Appearance preferences. 
+    	This would cause Eclipse to be rendered without any CSS support and delegate everything to the OS in terms of theme colors, shapes etc. Turing the CSS engine of 
+    	results in faster interactive performance of the Eclipse IDE. More information can be found in <b><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=472707">bug 472707</a>.
     	<p>
       		<img src="images/enable-disable-theming.png" alt="Use this check-box in the preferences"/>
       	</p>
@@ -43,21 +44,16 @@
   <tr id="workbenchlogger_debug">
     <td class="title">Workbench logger supports debug level</td>
     <td class="content">
-    	Previously, the workbench logger wrote a trace when calling logger#debug, even if the application was not started in debug mode. Now, log entries on the debug level are ignored, if the application is not started with the debug flag (-debug). See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=469737">BR 469737</a>.
+    	Previously, the workbench logger wrote a trace when calling logger#debug, even if the application was not started in debug mode. Now, log entries on the debug level are ignored, if the application is not started with the debug flag (-debug). More information can be found in <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=469737">bug 469737</a>.
 	</td>
   </tr>
 
   <tr id="no_theme_DnD">
-    <td class="title">Toolbar drag and drop when no theme engine present</td>
+    <td class="title">Drag and drop for toolbars in Eclipse applications without CSS styling</td>
     <td class="content">
-    	Now you can drag and drop toolbars while having '-cssTheme none'. Previously you were not able to do so because of a minor bug.
-	</td>
-  </tr>
-  
-  <tr id="use_a_good_id2">
-    <td class="title">Blabblabla" dialog</td>
-    <td class="content">
-    	blabla
+        The Eclipse styling engine allows to configure drag images via CSS. In previous releases applications without this setting would not support drag and drop of toolbars.
+    	Eclipse RCP applications without the related CSS styling support now drag and drop of toolbars out of the box. This applies also for applications which disable the CSS based styling.  
+ 	    More information can be found in <b><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=472761">bug 472761</a>.
 	</td>
   </tr>
 
