@@ -29,7 +29,18 @@
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
 
-   <tr id="workbenchlogger_debug">
+  <tr id="theming_enable_disable">
+    <td class="title">You can now disable the CSS engine (theming)</td>
+    <td class="content">
+    	Now you can completely disable the CSS engine through a check box in the Appearance preferences. 
+    	This would cause Eclipse to be rendered without any CSS support and delegate everything to the OS in terms of theme colors, shapes etc.
+    	<p>
+      		<img src="images/enable-disable-theming.png" alt="Use this check-box in the preferences"/>
+      	</p>
+	</td>
+  </tr>
+
+  <tr id="workbenchlogger_debug">
     <td class="title">Workbench logger supports debug level</td>
     <td class="content">
     	Previously, the workbench logger wrote a trace when calling logger#debug, even if the application was not started in debug mode. Now, log entries on the debug level are ignored, if the application is not started with the debug flag (-debug). See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=469737">BR 469737</a>.
