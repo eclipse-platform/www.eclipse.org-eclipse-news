@@ -48,6 +48,16 @@
 	</td>
   </tr>
 
+  <tr id="directmenuitem_canexecute">
+    <td class="title">Corrected behaviour for @CanExecute of MDirectMenuItem and MDirectToolItem</td>
+    <td class="content">
+    	Previously, methods annotated with @CanExecute were only evaluated on execution for MDirectMenuItems and MDirectToolItems, not on rendering.
+		So if the method annotated with @CanExecute returned false, the rendering was not updated to show the menu/tool item disabled.
+		Now, the rendering is corrected to also evaluate @CanExecute to show the enabled state according to the method result. 
+		More information can be found in <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=465893">Bug 465893</a>.
+	</td>
+  </tr>
+
   <tr id="no_theme_DnD">
     <td class="title">Drag and drop for toolbars in Eclipse applications without CSS styling</td>
     <td class="content">
