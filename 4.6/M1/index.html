@@ -34,17 +34,37 @@
     <td class="content">
     	You can disable the CSS based styling of the Eclipse IDE through a check box in the Appearance preferences. 
     	This would cause Eclipse to be rendered without any CSS support and delegate everything to the OS in terms of theme colors, shapes etc. Turing the CSS engine of 
-    	results in faster interactive performance of the Eclipse IDE. More information can be found in <b><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=472707">bug 472707</a>.
+    	results in faster interactive performance of the Eclipse IDE. More information can be found in <b><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=472707">Bug 472707</a>.
     	<p>
       		<img src="images/enable-disable-theming.png" alt="Use this check-box in the preferences"/>
       	</p>
 	</td>
   </tr>
+  
+  <tr id="messagedialog_varargs">
+    <td class="title">Additional varargs constructor for MessageDialog</td>
+    <td class="content">
+    	The MessageDialog class has now an additional vararg constructor which simplifies the creation of a dialog. 
+    	
+    	
+    	Previously, you would construct the MesssageDialog for example with the following construct.
+    	
+    	<pre>
+new MessageDialog(shell, "MessageDialog", null, "DialogMessage", MessageDialog.NONE, new String[]{ "Button1", "Button2"}, 0);
+</pre>
+    	now you can simply write 
+<pre>new MessageDialog(shell, "MessageDialog", null, "DialogMessage", MessageDialog.NONE, 0, "Button1", "Button2");
+</pre>    	
+    
+    	More information can be found in <b><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=472690">Bug 472690</a>.
+	</td>
 
   <tr id="workbenchlogger_debug">
     <td class="title">Workbench logger supports debug level</td>
     <td class="content">
-    	Previously, the workbench logger wrote a trace when calling logger#debug, even if the application was not started in debug mode. Now, log entries on the debug level are ignored, if the application is not started with the debug flag (-debug). More information can be found in <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=469737">bug 469737</a>.
+    	Previously, the workbench logger wrote a trace when calling logger#debug, even if the application was not started in debug mode. 
+    	Now, log entries on the debug level are ignored, if the application is not started with the debug flag (-debug). 
+    	More information can be found in <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=469737">Bug 469737</a>.
 	</td>
   </tr>
 
@@ -63,7 +83,7 @@
     <td class="content">
         The Eclipse styling engine allows to configure drag images via CSS. In previous releases applications without this setting would not support drag and drop of toolbars.
     	Eclipse RCP applications without the related CSS styling support now drag and drop of toolbars out of the box. This applies also for applications which disable the CSS based styling.  
- 	    More information can be found in <b><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=472761">bug 472761</a>.
+ 	    More information can be found in <b><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=472761">Bug 472761</a>.
 	</td>
   </tr>
 
@@ -79,6 +99,17 @@
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
+  
+    <tr id="producteditor">
+    <td class="title">Product editor "Dependencies" tab renamed to "Content"</td>
+    <td class="content">
+        To avoid confusing for new users with the  "Dependencies" tab in the MANIFEST.MF editor, the "Dependencies"
+        tab in the product editor was renamed to a more descriptive term "Content".
+ 	    More information can be found in <b><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=473877">Bug 473877</a>.
+	</td>
+  </tr>
+  
+  
   <tr> 
     <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
   </tr>
