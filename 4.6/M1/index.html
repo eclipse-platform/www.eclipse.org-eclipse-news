@@ -32,9 +32,9 @@
   <tr id="theming-enablement">
     <td class="title">Preference setting to disable the Eclipse styling (CSS based theming)</td>
     <td class="content">
-    	You can disable the CSS based styling of the Eclipse IDE through a check box in the Appearance preferences. 
-    	This would cause Eclipse to be rendered without any CSS support and delegate everything to the OS in terms of theme colors, shapes etc. Turing the CSS engine of 
-    	results in faster interactive performance of the Eclipse IDE. More information can be found in <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=472707">Bug 472707</a>.
+    	You can disable the CSS-based styling of the Eclipse IDE via
+    	<b>Preferences &gt; General &gt; Appearance &gt; Enable theming</b>.
+    	This will prevent Eclipse from rendering custom colors, shades, and borders, and may result in better performance.
     	<p>
       		<img src="images/enable-disable-theming.png" alt=""/>
       	</p>
@@ -46,31 +46,37 @@
     <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
   </tr>
 
+  <tr id="no-theme-dnd">
+    <td class="title">Drag and drop for toolbars in Eclipse applications without CSS styling</td>
+    <td class="content">
+        The Eclipse styling engine allows to configure drag images via CSS. In previous releases, applications without this setting would not support drag and drop of toolbars.
+    	Eclipse RCP applications without the related CSS styling now support drag and drop of toolbars out of the box. This applies also for applications which disable the CSS-based styling.
+	</td>
+  </tr>
+
   <tr id="messagedialog-varargs">
     <td class="title">Additional varargs constructor for MessageDialog</td>
     <td class="content">
-    	The MessageDialog class has now an additional vararg constructor which simplifies the creation of a dialog. 
-    	
-    	
-    	Previously, you would construct the MesssageDialog for example with the following construct.
-    	
-    	<pre>
-new MessageDialog(shell, "MessageDialog", null, "DialogMessage", MessageDialog.NONE, new String[]{ "Button1", "Button2"}, 0);
+    	The <code>org.eclipse.jface.dialogs.MessageDialog</code> class has now an additional vararg constructor that simplifies passing button labels.
+    	<p>
+    	Old:
+    	</p>
+<pre>new MessageDialog(shell, "MessageDialog", null, "DialogMessage",
+		MessageDialog.NONE, new String[] { "Button1", "Button2" }, 0);
 </pre>
-    	now you can simply write 
-<pre>new MessageDialog(shell, "MessageDialog", null, "DialogMessage", MessageDialog.NONE, 0, "Button1", "Button2");
-</pre>    	
-    
-    	More information can be found in <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=472690">Bug 472690</a>.
+    	New:
+<pre>new MessageDialog(shell, "MessageDialog", null, "DialogMessage",
+		MessageDialog.NONE, 0, "Button1", "Button2");
+</pre>
 	</td>
   </tr>
 
   <tr id="workbenchlogger-debug">
     <td class="title">Workbench logger supports debug level</td>
     <td class="content">
-    	Previously, the workbench logger wrote a trace when calling logger#debug, even if the application was not started in debug mode. 
-    	Now, log entries on the debug level are ignored, if the application is not started with the debug flag (-debug). 
-    	More information can be found in <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=469737">Bug 469737</a>.
+    	Previously, the workbench logger wrote a trace when <code>Logger#debug(Throwable)</code> was called,
+    	even if the application was not started in debug mode.
+    	Now, log entries on the debug level are ignored, unless the application is started with the debug flag (-debug).
 	</td>
   </tr>
 
@@ -79,17 +85,7 @@ new MessageDialog(shell, "MessageDialog", null, "DialogMessage", MessageDialog.N
     <td class="content">
     	Previously, methods annotated with @CanExecute were only evaluated on execution for MDirectMenuItems and MDirectToolItems, not on rendering.
 		So if the method annotated with @CanExecute returned false, the rendering was not updated to show the menu/tool item disabled.
-		Now @CanExecute method is also evaluated during rendering, to show the enabled state according to the method result. 
-		More information can be found in <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=465893">Bug 465893</a>.
-	</td>
-  </tr>
-
-  <tr id="no-theme-dnd">
-    <td class="title">Drag and drop for toolbars in Eclipse applications without CSS styling</td>
-    <td class="content">
-        The Eclipse styling engine allows to configure drag images via CSS. In previous releases applications without this setting would not support drag and drop of toolbars.
-    	Eclipse RCP applications without the related CSS styling support now drag and drop of toolbars out of the box. This applies also for applications which disable the CSS based styling.  
- 	    More information can be found in <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=472761">Bug 472761</a>.
+		Now @CanExecute method is also evaluated during rendering, to show the enabled state according to the method result.
 	</td>
   </tr>
 
@@ -101,10 +97,8 @@ new MessageDialog(shell, "MessageDialog", null, "DialogMessage", MessageDialog.N
    <tr id="product-editor">
     <td class="title">Product editor "Dependencies" tab renamed to "Content"</td>
     <td class="content">
-        To avoid confusing for new users with the  "Dependencies" tab in the MANIFEST.MF editor, the "Dependencies"
-        tab in the product editor was renamed to a more descriptive term "Content".
- 	    More information can be found in <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=473877">Bug 473877</a>.
- 	    
+        The "Dependencies" tab in the product editor was renamed to the more descriptive term "Content".
+        This avoids confusion with the "Dependencies" tab in the MANIFEST.MF editor.
  	   <p>
       		<img src="images/producteditor.png" alt="New label for content in the product"/>
        </p>
@@ -114,8 +108,7 @@ new MessageDialog(shell, "MessageDialog", null, "DialogMessage", MessageDialog.N
   <tr id="e4wizard">
     <td class="title">Retirement of the Eclipse 4 project wizard</td>
     <td class="content">
-        As PDE offers now Eclipse 4 RCP templates, the separate Eclipse 4 project generation wizard has been retired. 
- 	    More information can be found in <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=473575">Bug 473575</a>.
+        As PDE offers now Eclipse 4 RCP templates, the separate Eclipse 4 project generation wizard has been retired.
 	</td>
   </tr>
   
