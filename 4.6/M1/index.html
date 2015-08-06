@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Language" content="en-us" />
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="default_style.css" type="text/css" title="main" media="screen" />
-<title>Eclipse Project 4.6 M1 News</title>
+<title>Eclipse Project Neon (4.6) M1 News</title>
 </head>
 <body>
-<h1>Eclipse Project 4.6 M1 - New and Noteworthy</h1>
-<p>Here are some of the more noteworthy things available in the Neon milestone build M1
+<h1>Eclipse Project Neon (4.6) M1 - New and Noteworthy</h1>
+<p>Here are some of the more noteworthy things available in the Neon milestone build M1 (2015-08-07)
   which is now available for <a href="http://download.eclipse.org/eclipse/downloads/#4.6_Stable_Build" target="_top">download</a>.
   <br/>
   We also recommend to read the Tips and Tricks, either via <b>Help &gt; Tips and Tricks...</b> or online for
@@ -19,7 +19,7 @@
 
 <ul>
   <li><a href="#Platform">Platform</a></li>
-  <li><a href="#JDT">JDT</a></li>
+  <li><a href="#Platform-Dev">Platform Developers</a></li>
   <li><a href="#PDE">PDE</a></li>
 </ul>
 
@@ -29,19 +29,24 @@
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
 
-  <tr id="theming_enable_disable">
+  <tr id="theming-enablement">
     <td class="title">Preference setting to disable the Eclipse styling (CSS based theming)</td>
     <td class="content">
     	You can disable the CSS based styling of the Eclipse IDE through a check box in the Appearance preferences. 
     	This would cause Eclipse to be rendered without any CSS support and delegate everything to the OS in terms of theme colors, shapes etc. Turing the CSS engine of 
-    	results in faster interactive performance of the Eclipse IDE. More information can be found in <b><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=472707">Bug 472707</a>.
+    	results in faster interactive performance of the Eclipse IDE. More information can be found in <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=472707">Bug 472707</a>.
     	<p>
-      		<img src="images/enable-disable-theming.png" alt="Use this check-box in the preferences"/>
+      		<img src="images/enable-disable-theming.png" alt=""/>
       	</p>
 	</td>
   </tr>
-  
-  <tr id="messagedialog_varargs">
+
+
+  <tr>
+    <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
+  </tr>
+
+  <tr id="messagedialog-varargs">
     <td class="title">Additional varargs constructor for MessageDialog</td>
     <td class="content">
     	The MessageDialog class has now an additional vararg constructor which simplifies the creation of a dialog. 
@@ -56,10 +61,11 @@ new MessageDialog(shell, "MessageDialog", null, "DialogMessage", MessageDialog.N
 <pre>new MessageDialog(shell, "MessageDialog", null, "DialogMessage", MessageDialog.NONE, 0, "Button1", "Button2");
 </pre>    	
     
-    	More information can be found in <b><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=472690">Bug 472690</a>.
+    	More information can be found in <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=472690">Bug 472690</a>.
 	</td>
+  </tr>
 
-  <tr id="workbenchlogger_debug">
+  <tr id="workbenchlogger-debug">
     <td class="title">Workbench logger supports debug level</td>
     <td class="content">
     	Previously, the workbench logger wrote a trace when calling logger#debug, even if the application was not started in debug mode. 
@@ -68,7 +74,7 @@ new MessageDialog(shell, "MessageDialog", null, "DialogMessage", MessageDialog.N
 	</td>
   </tr>
 
-  <tr id="directmenuitem_canexecute">
+  <tr id="directmenuitem-canexecute">
     <td class="title">Support for @CanExecute of MDirectMenuItem and MDirectToolItem</td>
     <td class="content">
     	Previously, methods annotated with @CanExecute were only evaluated on execution for MDirectMenuItems and MDirectToolItems, not on rendering.
@@ -78,34 +84,26 @@ new MessageDialog(shell, "MessageDialog", null, "DialogMessage", MessageDialog.N
 	</td>
   </tr>
 
-  <tr id="no_theme_DnD">
+  <tr id="no-theme-dnd">
     <td class="title">Drag and drop for toolbars in Eclipse applications without CSS styling</td>
     <td class="content">
         The Eclipse styling engine allows to configure drag images via CSS. In previous releases applications without this setting would not support drag and drop of toolbars.
     	Eclipse RCP applications without the related CSS styling support now drag and drop of toolbars out of the box. This applies also for applications which disable the CSS based styling.  
- 	    More information can be found in <b><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=472761">Bug 472761</a>.
+ 	    More information can be found in <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=472761">Bug 472761</a>.
 	</td>
   </tr>
 
-  <tr>
-    <td colspan="2" class="section" id="JDT">JDT</td>
-  </tr>
-  
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-  
-  
+
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
   
-   <tr id="producteditor">
+   <tr id="product-editor">
     <td class="title">Product editor "Dependencies" tab renamed to "Content"</td>
     <td class="content">
         To avoid confusing for new users with the  "Dependencies" tab in the MANIFEST.MF editor, the "Dependencies"
         tab in the product editor was renamed to a more descriptive term "Content".
- 	    More information can be found in <b><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=473877">Bug 473877</a>.
+ 	    More information can be found in <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=473877">Bug 473877</a>.
  	    
  	   <p>
       		<img src="images/producteditor.png" alt="New label for content in the product"/>
@@ -117,15 +115,10 @@ new MessageDialog(shell, "MessageDialog", null, "DialogMessage", MessageDialog.N
     <td class="title">Retirement of the Eclipse 4 project wizard</td>
     <td class="content">
         As PDE offers now Eclipse 4 RCP templates, the separate Eclipse 4 project generation wizard has been retired. 
- 	    More information can be found in <b><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=473575">Bug 473575</a>.
+ 	    More information can be found in <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=473575">Bug 473575</a>.
 	</td>
   </tr>
   
-  
-  <tr> 
-    <td colspan="2"><div align="left">[ <em>Not available yet</em> ]</div></td>
-  </tr>
-
   <tr>
     <td colspan="2"/>
   </tr>
