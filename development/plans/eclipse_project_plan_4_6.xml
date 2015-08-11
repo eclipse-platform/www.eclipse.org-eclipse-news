@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 09:35 EDT August 11, 2015.
+Last revised 11:54 EDT August 11, 2015.
 <!--
 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 marks interesting changes since the previous draft of 
@@ -514,9 +514,9 @@ Eclipse 4.6 Endgame Plan.
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441568">441568</a>)
 </li>
 
-<li><strong>Provide good support for Mac Retina displays.</strong>
-	The current support for Mac Retina displays has various rendering issues.
-	With Neon we want to provide good support for Mac Retina displays.
+<li><strong>Provide good support for High-DPI displays.</strong>
+	The current support for High-DPI displays has various rendering issues.
+	With Neon we want to provide good support for High-DPI displays.
 	[SWT, Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=382972">382972</a>)
 </li>
 
@@ -536,7 +536,7 @@ Eclipse 4.6 Endgame Plan.
 </li>
 
 <li><strong>Work on Eclipse support for Java 9.</strong>
-	The next Java SE release is version 9, which is currently scheduled for autumn 2016.
+	The next Java SE release is version 9, which is currently scheduled for Q3 2016.
 	This Java release will add modularization to the Java language, also known under the code name Jigsaw.
 	The Neon release itself will not provide any support for Java 9, but we will provide features patches whenever major
 	new functionality is available.
