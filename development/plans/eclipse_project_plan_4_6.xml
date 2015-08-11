@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 08:57 EDT August 7, 2015.
+Last revised 09:35 EDT August 11, 2015.
 <!--
 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 marks interesting changes since the previous draft of 
@@ -500,13 +500,13 @@ Eclipse 4.6 Endgame Plan.
 <ul>
 <li><strong>Improve support for GTK+ 3.</strong>
 	With this release we will continue to improve the support for GTK+ 3 and enable it on even more platforms. We will also fix problems with newer versions like 3.14 and 3.16.
-	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">TBD</a>)
+	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=474628">474628</a>)
 </li>
 
 <li><strong>SWT browser currency.</strong>
 	Significant work is required in the SWT browser widget to support the latest
 	browser runtimes. As part of this effort we will add browser support for XULRunner 38 on all platforms.
-	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">TBD</a>)
+	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=474625">474625</a>)
 </li>
 
 <li><strong>SWT Webkit2 port for Browser widget on GTK+.</strong>
@@ -520,13 +520,23 @@ Eclipse 4.6 Endgame Plan.
 	[SWT, Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=382972">382972</a>)
 </li>
 
-<li><strong>Add support for Solaris x86 and SPARC 64-bit platform.</strong>
-	We want to add support for the Solaris x86 and SPARC 64-bit platform. This requires changes in SWT and the launcher.
+<li><strong>Add support for Solaris x86 and SPARC 64-bit platforms.</strong>
+	We want to add support for the Solaris x86 and SPARC 64-bit platforms. This requires changes in SWT and the launcher.
 	[Equinox, SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=429332">429332</a>, <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=429343">429343</a>, <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=294718">294718</a>)
 </li>
 
+<li><strong>Support Windows 10.</strong>
+	We will test against Windows 10 and fix any bugs that prevent Eclipse from running fine on Windows 10. We will also backport the relevant fixes to the service releases.
+	[Equinox, SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">TBD</a>)
+</li>
+
+<li><strong>Mac OS X 10.11.</strong>
+	We will test against Mac OS X 10.11 and fix any bugs that prevent Eclipse from running fine on Mac OS X 10.11. We will also backport the relevant fixes to the service releases.
+	[Equinox, SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">TBD</a>)
+</li>
+
 <li><strong>Work on Eclipse support for Java 9.</strong>
-	The next Java SE release is version 9, which is currently scheduled for early 2016.
+	The next Java SE release is version 9, which is currently scheduled for autumn 2016.
 	This Java release will add modularization to the Java language, also known under the code name Jigsaw.
 	The Neon release itself will not provide any support for Java 9, but we will provide features patches whenever major
 	new functionality is available.
@@ -567,6 +577,15 @@ Eclipse 4.6 Endgame Plan.
 	[All components] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=474498">474498</a>)
 </li>
 
+<li><strong>User interface enhancements.</strong>
+	We want to improve the user experience for importing projects by providing a new smart import wizard,
+	which is currently in the e4 incubator. We also plans to work on a full screen mode.
+	JDT will make it easier to navigate through code by adding an 'Open Members' feature.
+	In addition, JDT will work to further improve content assist in the Java editor. We also
+	plan to introduce an Info severity for optional compiler problems.
+	[Platform UI, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">TBD</a>)
+</li>
+
 <li><strong>Performance and stability of Platform user interface.</strong>
 	Version 4.5 of the Eclipse Platform still has some performance and
 	functional shortcomings compared to the old 3.x generation of the platform.
@@ -578,7 +597,12 @@ Eclipse 4.6 Endgame Plan.
 <li><strong>Reliable performance tests.</strong>
 	With Mars we brought the performance test infrastructure back to live on eclipse.org hardware (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=374441">374441</a>).
 	We now have to make use of that and make sure that we get the important performance tests reliably running.
-	[Platform Releng] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">TBD</a>)
+	[All components] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">TBD</a>)
+</li>
+
+<li><strong>Improve PDE editors.</strong>
+	PDE wants to further improve its Target editor and enhance the performance in all PDE editors.
+	[PDE] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">TBD</a>)
 </li>
 
 </ul>
