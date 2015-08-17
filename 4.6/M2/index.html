@@ -37,7 +37,10 @@
   <tr id="perspective-handlercontainer">
     <td class="title">Perspective becomes a handler container</td>
     <td class="content">
-    	In addition to windows and parts, perspectives can contain handlers, now. Those handlers will get active, if the containing perspective is active. Handlers of more deeply nested containers override less deeply nested ones, e.g., a handler in a perspective is preferred over a handler in a window. For more information, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=468773">bug 468773</a>.
+    	In addition to windows and parts, perspectives can now also define handlers. Those handlers will get active, 
+    	if the containing perspective is active. As before handlers of more deeply nested containers override less deeply nested ones, i.e., 
+    	handlers defined for parts override handlers for perspectives, while the 
+    	handlers for a perspective override the ones defined for the window.
 	</td>
   </tr>
 
