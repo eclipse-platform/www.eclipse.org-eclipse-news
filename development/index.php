@@ -36,9 +36,9 @@ ob_start();
 		<div id="current" class="homeitem3col">
 			<h3>Releases currently under development</h3>
 			<ul>
-		      <li><!--<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_6.xml">-->(not yet available) <a>Eclipse Project Neon 4.6 Plan</a><br>
+		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_6.xml">Eclipse Project Neon 4.6 Plan</a><br>
 		        This document lays out the feature and API set for the Neon 4.6 release of the Eclipse Project.</li>
-		      <li><!--<a href="plans/freeze_plan_4_5_1.php">-->(not yet available) <a>Eclipse Project Mars SR1 Endgame Plan</a><br>
+		      <li><a href="plans/freeze_plan_4_5_1.php">Eclipse Project Mars SR1 Endgame Plan</a><br>
 				Information about how we plan to wrap up the Mars SR1 release (version 4.5.1).</li>
 		    </ul>
 		    See also the <a href="https://projects.eclipse.org/projects/eclipse/governance">Eclipse Project on projects.eclipse.org</a>
