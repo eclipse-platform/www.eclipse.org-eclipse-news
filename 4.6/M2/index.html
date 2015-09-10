@@ -44,6 +44,38 @@
 	</td>
   </tr>
 
+  <tr id="job-create">
+    <td class="title">New Job creation methods</td>
+    <td class="content">
+    	Three new static methods for creating jobs have been added to
+    	the <code>org.eclipse.core.runtime.jobs.Job</code> class. These methods are particularly
+    	convenient with lambdas. For example, to do an asynchronous resource refresh, you can write: 
+<pre>
+IResource resource = ...;
+Job.create("Refreshing files",
+    (IProgressMonitor monitor) -> resource.refreshLocal(IResource.DEPTH_INFINITE, monitor)
+).schedule();
+</pre>
+If you want the job to be hidden from the user, you can write: 
+<pre>
+IResource resource = ...;
+Job.createSystem(
+    (IProgressMonitor monitor) -> resource.refreshLocal(IResource.DEPTH_INFINITE, monitor)
+).schedule();
+</pre>
+	</td>
+  </tr>
+
+  <tr id="icorerunnable">
+    <td class="title">ICoreRunnable interface</td>
+    <td class="content">
+        The job creation methods described above use the new
+        <code>org.eclipse.core.runtime.ICoreRunnable</code> functional interface. This interface is
+        functionally equivalent and is intended as a replacement for
+        <code>org.eclipse.core.resources.IWorkspaceRunnable</code>. All new code should use
+        <code>ICoreRunnable</code> instead of <code>IWorkspaceRunnable</code>.
+	</td>
+  </tr>
 
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
