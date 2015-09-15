@@ -79,9 +79,9 @@
 			<h3>What's Happening</h3>
 			<a name="HAPPENING"></a>
 			<ul>
-				<li>3.5 Development
-					<ul><a href="http://wiki.eclipse.org/Platform_UI/Plan/3.5">Plan for 3.5</a>
-					</ul>
+				<li><a href="https://wiki.eclipse.org/Platform_UI/Plan/4.6/">4.6 Development plan</a>
+				</li>
+				<li><a href="https://wiki.eclipse.org/Platform_UI/Plan/4.6/Milestones">Bugs targeting Eclipse 4.6 </a>
 				</li>
 			</ul>
 		</div>
