@@ -118,7 +118,7 @@
 			</ul>
 		</div>
 
-		<div class="thanksyourkit">
+		<div class="sideitem">
 			<h6>Thanks to Yourkit</h6>
 			YourKit supports open source projects with its full-featured Java Profiler.
 YourKit, LLC is the creator of <a href="https://www.yourkit.com/java/profiler/index.jsp">YourKit Java Profiler</a>
