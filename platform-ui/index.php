@@ -111,12 +111,22 @@
 			</ul>
 		</div>
 		<div class="sideitem">
-			<h6>Pltform UI Related Links</h6>
+			<h6>Platform UI Related Links</h6>
 			<ul>
 			<li><a href="http://wiki.eclipse.org/Platform_UI">Platform UI Wiki</a></li>
-			<li><a href="http://dev.eclipse.org/viewcvs/index.cgi/platform-ui-home/main.html?view=co">The old Platform UI site</a></li>
+			<li><a href="https://wiki.eclipse.org/Platform_UI/How_to_Contribute">How to contribute to Platform UI</a></li>
 			</ul>
 		</div>
+
+		<div class="thanksyourkit">
+			<h6>Thanks to Yourkit</h6>
+			YourKit supports open source projects with its full-featured Java Profiler.
+YourKit, LLC is the creator of <a href="https://www.yourkit.com/java/profiler/index.jsp">YourKit Java Profiler</a>
+and <a href="https://www.yourkit.com/.net/profiler/index.jsp">YourKit .NET Profiler</a>,
+innovative and intelligent tools for profiling Java and .NET applications.
+		</div>
+
+
 	</div>
 </div>
 
