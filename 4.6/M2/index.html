@@ -64,14 +64,14 @@
 <pre>
 IResource resource = ...;
 Job.create("Refreshing files",
-    (IProgressMonitor monitor) -> resource.refreshLocal(IResource.DEPTH_INFINITE, monitor)
+    monitor -> resource.refreshLocal(IResource.DEPTH_INFINITE, monitor)
 ).schedule();
 </pre>
 If you want the job to be hidden from the user, you can write: 
 <pre>
 IResource resource = ...;
 Job.createSystem(
-    (IProgressMonitor monitor) -> resource.refreshLocal(IResource.DEPTH_INFINITE, monitor)
+    monitor -> resource.refreshLocal(IResource.DEPTH_INFINITE, monitor)
 ).schedule();
 </pre>
 	</td>
