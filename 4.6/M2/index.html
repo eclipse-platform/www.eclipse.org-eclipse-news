@@ -29,27 +29,39 @@
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
 
-  <tr id="menuitem-tooltips">
-    <td class="title">Tooltips on menu items for Eclipse 4 applications</td>
+  <tr id="search-binary-files">
+    <td class="title">Search in binary files</td>
     <td class="content">
-    	SWT introduced tooltips for menu items in the Eclipse Mars release. The default SWT renderers have been extended to support these tooltips on menu items, i.e., if
-    	you enter them in your application model, there are displayed.  
-    	<p>
-      		<img src="images/menuitem_tooltips.png" alt="Menu tooltips in Eclipse 4 RCP"/>
-      	</p>
+      The <b>Search &gt; File...</b> dialog has a new option to search in binary files as well.
+      <p>
+        <img src="images/search-binary-files.png" alt=""/>
+      </p>
+      By default, the option is disabled, and matches are only reported in files that have the <i>Text</i>
+      content type, or in files that have no content type and don't contain the null character (\u0000).
 	</td>
   </tr>
-
 
   <tr>
     <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
   </tr>
   
+  <tr id="menuitem-tooltips">
+    <td class="title">Tooltips on menu items for Eclipse 4 applications</td>
+    <td class="content">
+    	SWT introduced tooltips for menu items in the Eclipse Mars release. The default SWT renderers have been extended to support these tooltips on menu items, i.e., if
+    	you enter them in your application model, they will be displayed.  
+    	<p>
+      		<img src="images/menuitem-tooltips.png" alt="Menu tooltips in Eclipse 4 RCP"/>
+      	</p>
+	</td>
+  </tr>
+
+
   <tr id="perspective-handlercontainer">
     <td class="title">Perspective becomes a handler container</td>
     <td class="content">
-    	In addition to windows and parts, perspectives can now also define handlers. Those handlers will get active, 
-    	if the containing perspective is active. As before handlers of more deeply nested containers override less deeply nested ones, i.e., 
+    	In addition to windows and parts, perspectives can now also define handlers. Those handlers will get active
+    	when the containing perspective is active. As before, handlers of more deeply nested containers override less deeply nested ones, i.e., 
     	handlers defined for parts override handlers for perspectives, while the 
     	handlers for a perspective override the ones defined for the window.
 	</td>
@@ -87,13 +99,15 @@ Job.createSystem(
         <code>ICoreRunnable</code> instead of <code>IWorkspaceRunnable</code>.
 	</td>
   </tr>
-  <tr id="databinding_generics">
+
+  <tr id="databinding-generics">
     <td class="title">Adding generics to Eclipse data binding</td>
     <td class="content">
-        The org.eclipse.core.databinding.property  and the org.eclipse.core.databinding.observable  plug-in have been generified. Further generics work
+        The org.eclipse.core.databinding.property and org.eclipse.core.databinding.observable plug-ins have been generified. Further generics work
         is planned for later milestones.
 	</td>
   </tr>
+
    <tr id="e4template">
     <td class="title">New e4 template for CanExecute</td>
     <td class="content">
@@ -123,6 +137,12 @@ Job.createSystem(
     <td colspan="2"/>
   </tr>
 </table>
+
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Neon milestone builds:</p>
+<ul>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.6/M1/">News for Eclipse Neon milestone build M1</a></li>
+</ul>
 
 </body>
 </html>
