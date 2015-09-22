@@ -117,6 +117,15 @@
 			<li><a href="https://wiki.eclipse.org/Platform_UI/How_to_Contribute">How to contribute to Platform UI</a></li>
 			</ul>
 		</div>
+
+		<div class="sideitem">
+			<h6>Thanks to Yourkit</h6>
+			YourKit is kindly supporting open source projects with its full-featured
+			<a href="http://www.yourkit.com/java/profiler/index.jsp">YourKit Java Profiler</a>. 
+			<a href="http://www.yourkit.com">YourKit, LLC</a> is the creator of innovative and intelligent tools for profiling Java and .NET applications.
+		</div>
+
+
 	</div>
 </div>
 
