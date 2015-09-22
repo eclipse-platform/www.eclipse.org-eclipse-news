@@ -36,19 +36,22 @@
 		<h2>Platform UI</h2>
 		
 		<p>Platform UI consists of several components, which provide the basic building blocks for user
-      interfaces built with Eclipse.  Some of these can be reused in arbitrary applications, while others are specific to the Eclipse IDE.</p>
+		interfaces built with Eclipse.  Some of these can be reused in arbitrary applications, while others are specific to the Eclipse IDE.</p>
 
-	  <p>Two of the Platform UI components form the <strong>Rich Client Platform UI</strong>.  These are <strong>JFace</strong> and the <strong>Workbench</strong>.  JFace and the Workbench can be used to build arbitrary applications, not just the Eclipse IDE.  The Eclipse IDE is just one instance of an RCP application, but it demonstrates the power and extensibility achievable by RCP applications.</p>
+		<p>The Platform UI project is responsible for the runtime, user interface and help components of Eclipse.
+		It provides the base components for the <strong>Rich Client Platform</strong>,
+		e.g.,  the Eclipse services, the dependency injection framework, the CSS engine, <strong>JFace</strong> and much more.
+		These components can be used to build arbitrary applications, not just the Eclipse IDE.
+		The Eclipse IDE is just one instance of an RCP application, but it demonstrates the power and extensibility achievable by RCP applications.</p>
 
       <p>JFace is a UI toolkit with classes for handling many common UI
       programming tasks. JFace is window-system-independent in both its API and
       implementation, and is designed to work with SWT without hiding it. JFace
       includes the usual UI toolkit components of image and font registries,
       text, dialog, preference and wizard frameworks, and progress reporting for
-      long running operations. Two of its more interesting features are actions and 
-	  viewers. The action mechanism allows user commands to be defined
-      independently from their exact whereabouts in the UI. Viewers are model
-      based adapters for certain SWT widgets, simplifying the presentation of 
+      long running operations. Two of its more interesting features are databinding and
+	  viewers. Databinding allows to synchronize arbitrary properties of objects. Viewers are model
+      based adapters for certain SWT widgets, simplifying the presentation of
 	  application data structured as lists, tables or trees.</p>
 
       <p>The Workbench provides the user interface structure for Eclipse. The
@@ -121,7 +124,7 @@
 		<div class="sideitem">
 			<h6>Thanks to Yourkit</h6>
 			YourKit is kindly supporting open source projects with its full-featured
-			<a href="http://www.yourkit.com/java/profiler/index.jsp">YourKit Java Profiler</a>. 
+			<a href="http://www.yourkit.com/java/profiler/index.jsp">YourKit Java Profiler</a>.
 			<a href="http://www.yourkit.com">YourKit, LLC</a> is the creator of innovative and intelligent tools for profiling Java and .NET applications.
 		</div>
 
