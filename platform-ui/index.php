@@ -65,8 +65,7 @@
 	  <p>Platform UI also provides the IDE application plug-in, which instantiates and configures the Generic Workbench to form the IDE Workbench, on top of which lies the rest of the Eclipse IDE Platform and the Eclipse SDK (including the Java Development Tools and Plug-in Development Environment).  Unlike the Generic Workbench, the IDE application plug-in is intended only for use in the IDE Platform, and is not designed as a reusable component for use in other RCP applications.</p>
 
       <p>For more details on the Rich Client Platform and other components available for use in RCP applications, see the 
-	  <A HREF="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-ui-home/rcp/index.html">RCP Home Page</A> 
-	  and the <A HREF="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-ui-home/rcp/faq.html">RCP FAQ</A>.
+	  <A HREF="https://wiki.eclipse.org/Rich_Client_Platform">RCP wik page</A>.
 	  </p>
 
 		<div class="homeitem3col">
