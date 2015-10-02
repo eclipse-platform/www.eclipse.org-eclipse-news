@@ -135,6 +135,22 @@
     </td>
   </tr>
 
+  <tr id="gtk3-menus">
+    <td class="title">Improved menu support on GTK3</td>
+    <td class="content">
+      The SWT GTK3 port has received an update to its menus as part of the push to update SWT
+      to GTK3. Here are some of the notable changes.
+      <p>Padding: by default, SWT menus now look similar to those in OSX: text is not strictly aligned.
+         This is due to a new way in which menus are constructed in GTK3 (see <a href=https://wiki.gnome.org/HowDoI/GMenu#Icons>
+	 https://wiki.gnome.org/HowDoI/GMenu#Icons</a> for more details). In order to align all text entries in a menu, simply launch
+         the SWT application with the environment variable <b>SWT_PADDED_MENU_ITEMS=1</b>.</p>
+         <p>Checkboxes and images: on GTK2.x, a menu entry was limited to either a checkbox <i>or</i> an image. With this change,
+	 GTK3 SWT now supports menu entries that contain both an image and a checkbox.</p>
+      <p>The image below shows a screenshot of the default GTK3 menu on the left,
+         compared to an aligned GTK3 menu on the right.</p>
+          <img src="images/junit_view_comparison.png" alt=""/>
+    </td>
+  </tr>
 
   <tr>
     <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
