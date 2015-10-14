@@ -35,14 +35,14 @@
 		<h1>$pageTitle</h1>
 		<h2>Platform UI</h2>
 		
-		<p>Platform UI consists of several components, which provide the basic building blocks for user
-		interfaces built with Eclipse.  Some of these can be reused in arbitrary applications, while others are specific to the Eclipse IDE.</p>
-
-		<p>The Platform UI project is responsible for the runtime, user interface and help components of Eclipse.
-		It provides the base components for the <strong>Rich Client Platform</strong>,
-		e.g.,  the Eclipse services, the dependency injection framework, the CSS engine, <strong>JFace</strong> and much more.
-		These components can be used to build arbitrary applications, not just the Eclipse IDE.
+		<p>The Platform UI project is responsible for the runtime, user interface and help components of Eclipse. Platform UI provides 
+		the basic building blocks to create the Eclipse IDE and other Eclipse based applications called <strong>Rich Client Platform</strong> (RCP). 
 		The Eclipse IDE is just one instance of an RCP application, but it demonstrates the power and extensibility achievable by RCP applications.</p>
+
+		Some of the components provides by Platform UI can be reused in arbitrary applications, while others are specific to the Eclipse IDE. 
+		Examples these components are the Eclipse services, the dependency injection framework, the CSS engine, <strong>JFace</strong> and much more.</p>
+		
+		</p>
 
       <p>JFace is a UI toolkit with classes for handling many common UI
       programming tasks. JFace is window-system-independent in both its API and
