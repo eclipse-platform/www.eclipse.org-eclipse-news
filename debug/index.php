@@ -2,7 +2,7 @@
 
 	#*****************************************************************************
 	#
-	# Copyright (c) 2007, 2012 IBM Corporation and others.
+	# Copyright (c) 2007, 2015 IBM Corporation and others.
  	# All rights reserved. This program and the accompanying materials
  	# are made available under the terms of the Eclipse Public License v1.0
  	# which accompanies this distribution, and is available at
@@ -74,8 +74,8 @@
 			<p>The JDT debug component is very responsive to new ideas, feature requests and bug reports. The following is a list of some 
 			of the newest and more interesting additions to the component.</p>
 			<ul>
-			 <li>Bugs fixed so far in: <a href="https://bugs.eclipse.org/bugs/buglist.cgi?list_id=3164739&resolution=FIXED&classification=Eclipse&query_format=advanced&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&component=Debug&product=JDT&product=Platform&target_milestone=4.2.1&target_milestone=4.2.2&target_milestone=4.3&target_milestone=4.3%20M1&target_milestone=4.3%20M2&target_milestone=4.3%20M3&target_milestone=4.3%20M4&target_milestone=4.3%20M5&target_milestone=4.3%20M6&target_milestone=4.3%20M7&target_milestone=4.3">4.3 / 4.2.x</a></li>
-			 <li>Latest <a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.3M2-201209201300/news/">New and Noteworthy</a> for Eclipse 4.3M2</li>
+			 <li>Bugs fixed so far in: <a href="https://bugs.eclipse.org/bugs/buglist.cgi?bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&classification=Eclipse&component=Debug&list_id=12884870&product=JDT&product=Platform&query_format=advanced&resolution=FIXED&target_milestone=4.5.1&target_milestone=4.5.2&target_milestone=4.6%20M1&target_milestone=4.6%20M2&target_milestone=4.6%20M3&target_milestone=4.6%20M4&target_milestone=4.6%20M5&target_milestone=4.6%20M6&target_milestone=4.6%20M7&target_milestone=BETA%20J9">4.6 / 4.5.x / Beta Java9</a></li>
+			 <li>Latest <a href="https://www.eclipse.org/eclipse/news/4.5/">New and Noteworthy</a> for Eclipse 4.5</li>
 			</ul>
 		</div>
 		<div class="homeitem">
