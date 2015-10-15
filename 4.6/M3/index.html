@@ -212,10 +212,14 @@
     <td colspan="2" class="section" id="Equinox">Equinox</td>
   </tr>
 
-  <tr id="first-item-equinox">
-    <td class="title">First item</td>
+  
+    <tr id="adapters">
+    <td class="title">Adapters.adapt API available</td>
     <td class="content">
-      Item blurb.
+      Equinox provides the Adapters.adapt(Object sourceObject, Class<T> adapter, boolean allowActivation) and 
+      Adapters.adapt(Object sourceObject, Class<T> adapter) API for accessing an adapters for a certain object. This
+      should reduce the need for customer adapter implementations. adapt performs also a null check 
+      which can be removed from the calling code.
     </td>
   </tr>
 
