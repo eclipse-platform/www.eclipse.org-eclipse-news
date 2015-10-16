@@ -216,14 +216,74 @@
     <tr id="adapters">
     <td class="title">Adapters.adapt API available</td>
     <td class="content">
-      Equinox provides the Adapters.adapt(Object sourceObject, Class<T> adapter, boolean allowActivation) and 
-      Adapters.adapt(Object sourceObject, Class<T> adapter) API for accessing an adapters for a certain object. This
-      should reduce the need for customer adapter implementations. adapt performs also a null check 
-      which can be removed from the calling code.
+      Adapters.adapt provides a new unified way to access every kind of adapter. It checks for
+      implemented interfaces, IAdaptable, and adapters registered with the adapter manager. It
+      also performs a null check which can be removed from calling code. 
+<pre><code>// Old way
+IResource selectedResource;
+if (selection instanceof IAdaptable) {
+  selectedResource = ((IAdaptable)selection).getAdapter(IResource.class);
+}
+
+// New way
+IResource selectedResource = Adapters.adapt(selection, IResource.class);
+</code></pre>
     </td>
-  </tr>
+    </tr>
+    <tr id="submonitor.split">
+    <td class="title">SubMonitor.split</td>
+    <td class="content">
+      SubMonitor.split is an easy, efficient way to check for Job cancellation without any
+      boilerplate. It creates a new child progress monitor, checks for cancellation, and 
+      throws OperationCanceledException if necessary. Using this instead of SubMonitor.newChild
+      or SubProgressMonitor will guarantee that your Jobs respond to cancellation quickly.
 
+<pre><code>
+// Old way
+void myMethod(IProgressMonitor monitor) {
+  SubMonitor subMonitor = SubMonitor.convert(monitor, 2);
+  if (subMonitor.isCanceled()) {
+    throw new OperationCanceledException();
+  }
+  childMethod1(subMonitor.newChild(1));
+  if (subMonitor.isCanceled()) {
+    throw new OperationCanceledException();
+  }
+  childMethod2(subMonitor.newChild(1));
+}
 
+// New way
+void myMethod(IProgressMonitor monitor) {
+  SubMonitor subMonitor = SubMonitor.convert(monitor, 2);
+  childMethod1(subMonitor.split(1));
+  childMethod2(subMonitor.split(1));
+}
+</code></pre>
+    </td>
+    </tr>
+    <tr id="suppress_iscanceled">
+    <td class="title">SUPPRESS_ISCANCELED</td>
+    <td class="content">
+      SubMonitor.SUPPRESS_ISCANCELED allows you to suppress cancellation checks without
+      also suppressing progress reporting. This should be used in place of a null progress
+      monitor when running a critical section that shouldn't be cancelled.
+<pre><code>
+// Old way
+void myMethod(IProgressMonitor monitor) {
+  SubMonitor subMonitor = SubMonitor.convert(monitor, 2);
+  uncancellableMethod(null);
+  subMonitor.worked(1)
+  cancellableMethod(subMonitor.newChild(1));
+}
+
+// New way
+void myMethod(IProgressMonitor monitor) {
+  SubMonitor subMonitor = SubMonitor.convert(monitor, 2);
+  uncancellableMethod(subMonitor.newChild(1, SubMonitor.SUPPRESS_ISCANCELED | SubMonitor.SUPPRESS_BEGINTASK);
+  cancellableMethod(subMonitor.newChild(1));
+}</code></pre>
+    </td>
+    </tr>
   <tr>
     <td colspan="2"/>
   </tr>
