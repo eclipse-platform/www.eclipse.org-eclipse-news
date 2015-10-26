@@ -133,12 +133,16 @@
      	available for editors and views. If you minimize a stack after you selected this command, 
      	the minimized stack will be visible, until you trigger the command to hide the toolbars again. This allows
      	the developer to decide which minimized stacks are useful for him.
-     	<p>The following is a screenshot of the IDE with a maximized Java editor and several toolbars visible. 
+     	<p>
+     		The following is a screenshot of the IDE with a maximized Java editor and several toolbars visible. 
+     	</p>
       	<p>
       		<img src="images/eclipseidewithtoolbars.png" alt="Eclipse with toolbars"/>
       	</p>
-      	<p>The next screenshot shows the same maximized editor but with hidden toolbar.
-      	 <p>
+      	<p>
+      		The next screenshot shows the same maximized editor but with hidden toolbar.
+      	</p>
+      	<p>
       		<img src="images/eclipseideinnewfullscreenshot.png" alt="Eclipse without toolbars"/>
       	</p>
     </td>
@@ -150,13 +154,16 @@
       The Eclipse workspace selection dialog wording was adjusted, as new Eclipse users reported that 
       usage of the term workspace was not well explained. The old text also implied that projects 
       need to be stored in the workspace, which is wrong. 
-      </p>
-      The recent directory list was also increased to 10. It used to be 5, users can still adjust this value
-      via the preferences. 
-      </p> The reworked dialog looks like the following screenshot.
       <p>
-      		<img src="images/newlauncher.png" alt="Workspace selection"/>
-      	</p>
+        The recent directory list was also increased to 10. It used to be 5, users can still adjust this value
+        via the preferences. 
+      </p>
+      <p>
+        The reworked dialog looks like this:
+      </p>
+      <p>
+        <img src="images/newlauncher.png" alt=""/>
+      </p>
     </td>
   </tr>
 
@@ -166,7 +173,7 @@
       The SWT GTK3 port has received an update to its menus as part of the push to update SWT
       to GTK3. Here are some of the notable changes.
       <p>Padding: by default, SWT menus now look similar to those in OSX: text is not strictly aligned.
-         This is due to a new way in which menus are constructed in GTK3 (see <a href=https://wiki.gnome.org/HowDoI/GMenu#Icons>
+         This is due to a new way in which menus are constructed in GTK3 (see <a href="https://wiki.gnome.org/HowDoI/GMenu#Icons">
 	 https://wiki.gnome.org/HowDoI/GMenu#Icons</a> for more details). In order to align all text entries in a menu, simply launch
          the SWT application with the environment variable <b>SWT_PADDED_MENU_ITEMS=1</b>.</p>
          <p>Checkboxes and images: on GTK2.x, a menu entry was limited to either a checkbox <i>or</i> an image. With this change,
