@@ -107,6 +107,8 @@
 			<ul>
 			<li><a href="http://wiki.eclipse.org/Platform_UI">Platform UI Wiki</a></li>
 			<li><a href="https://wiki.eclipse.org/Platform_UI/How_to_Contribute">How to contribute to Platform UI</a></li>
+			<li><a href="https://dev.eclipse.org/mailman/listinfo/platform-ui-dev">Mailing List</a></li>
+
 			</ul>
 		</div>
 
