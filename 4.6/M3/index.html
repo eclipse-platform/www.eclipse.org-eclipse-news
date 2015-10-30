@@ -19,9 +19,7 @@
 
 <ul>
   <li><a href="#Platform">Platform</a></li>
-  <li><a href="#Platform-Dev">Platform Developers</a></li>
   <li><a href="#JDT">JDT</a></li>
-  <li><a href="#PDE">PDE</a></li>
   <li><a href="#Equinox">Equinox</a></li>
 </ul>
 
@@ -30,95 +28,6 @@
     <col class="title" />
     <col />
   </colgroup>
-
-  <tr>
-    <td id="Instructions" class="section" colspan="2">
-      <h2>Instructions</h2>
-    </td>
-  </tr>
-  
-  <tr id="item-name">
-    <td class="title">Item title, in sentence style, no trailing
-        punctuation, with unique id attribute on &lt;tr&gt;</td>
-    <td class="content">
-        A blurb pitched to the Eclipse community
-        (not just to members of the Eclipse Platform development team). Tell
-        end users about changes they'll see in the UI. Tell component writers
-        about changes they'll see at the client- and server-side APIs. Try to
-        generate some excitement; save the boring details for the manual; be short and don't repeat yourself. The
-        description should be complete sentences, with trailing punctuation.
-      <p>Make the entry self-contained and mention API classes.
-        Do <em>not</em> link to bugs and don't promote individuals or third-party products.
-      </p>
-      <p>Use active voice (say "you", not "the user"), and follow other advice in the
-        <a href="http://wiki.eclipse.org/Eclipse_Doc_Style_Guide#topic-content">Topic&nbsp;Content</a>
-        section of the Eclipse Doc Style Guidelines.
-      </p>
-      <p>Stick to the default font and size. Make command names (<b>Quick Fix</b>),
-        keyboard shortcuts (<b>Ctrl+1</b>), and preference page paths
-        (<b>Preferences &gt; General &gt; Keys</b>) bold. 
-      </p>
-      <p>Do <em>not</em> enclose the first paragraph of an item in <code>&lt;p&gt;&lt;/p&gt;</code> tags.
-      </p>
-    </td>
-  </tr>
-  
-  <tr id="screenshots">
-    <td class="title">Screenshots</td>
-    <td class="content">
-        If a small image sheds light, place it below the description, in a separate
-        paragraph. As the majority of the Eclipse users uses Windows 7, regular screen snapshots 
-        should be done on Windows 7 if possible, but screenshots from 
-        other operating system are also acceptable. Crop
-        out any extraneous stuff to focus the reader's attention on your new
-        feature. The image should be
-        <b>no more than 520 pixels wide</b> and in <b>PNG</b> format (as opposed
-        to GIF, TIF, BMP, or JPG). Use PNG-8 if your image doesn't have a lot of color,
-        or PNG-24 if the screen shot uses enough color to warrant additional color depth.
-        See also the 
-        <a href="http://wiki.eclipse.org/Eclipse_Doc_Style_Guide#graphics">Graphics</a>
-        section of the Eclipse Doc Style Guidelines.
-      <p>The Windows <b>Snipping Tool</b> actually saves to PNG on Windows 7 and can easily be
-        used to crop and save screenshots:</p>
-      <ul>
-        <li>Arrange the windows for the shot</li>
-        <li>Use the Windows <b>Snipping Tool</b> to capture part of the screen</li>
-        <li>Use <b>File &gt; Save As</b> to save the screenshot as a PNG</li>
-        <li>Overlays such as red circles or boxes to call out details can be done using Microsoft Paint</li>
-      </ul>
-      <p>Name the file is a way that is appropriate and specific to the item
-        (e.g., key-bindings.png, rather than something generic like image.png).
-        Use all <b>lowercase</b> letters in the image file name, including the &quot;<b>.png</b>&quot; 
-        file extension. As a separator, use <b>hyphen</b> &quot;-&quot; rather than
-        underscore 
-        &quot;_&quot;. </p>
-      <p>Put all the images in a sibling directory named &quot;images&quot;.
-        This gives XHTML like:<br/>
-        <code>&lt;img src=&quot;images/foo-view.png&quot; alt=&quot;&quot;/&gt;</code><br/>
-        Include a suitable <a href="http://www.w3.org/TR/html4/struct/objects.html#h-13.8"><code>alt</code></a> attribute.
-        The alt text should be empty ("") if the image just illustrates the text.
-        Only use the alt text to add information that is not accessible if the page is rendered without images.
-        Don't write <code>alt="Screenshot of <i>the XY dialog</i>"</code>. Blind users shouldn't have to skip useless repetitions.</p>
-      <p>If the <code>alt</code> attribute text cannot sufficiently replace the image contents
-        (e.g. for a screenshot that shows source code), then enclose the img element in a link
-        to a plain &quot;.txt&quot; file with the same name as the image:<br/>
-        <code>&lt;a href=&quot;images/foo-view.txt&quot;&gt;&lt;img ...</code></p>
-      <p>The images should be left-justified (as opposed to centered). Do not embed the width and height of the image.</p>
-      <p>Example: (scaled -- it's too big!)</p>
-      <p>
-        <img src="https://www.eclipse.org/artwork/images/v2/logo-800x188.png" alt="" />
-      </p>
-    </td>
-  </tr>
-  <tr id="validation">
-    <td class="title">Validation</td>
-    <td class="content">
-        Use the W3C <a href="http://validator.w3.org/#validate_by_input">XHTML
-        Markup Validation Service</a> to check your document's markup before
-        submitting.
-    </td>
-  </tr>
-
 
   <tr>
     <td colspan="2" class="section" id="Platform">Platform</td>
@@ -131,19 +40,19 @@
      	all currently visible toolbars of the currently window. Selecting the command again, reveals these toolbars again. 
      	This allows the developer to maximize the space 
      	available for editors and views. If you minimize a stack after you selected this command, 
-     	the minimized stack will be visible, until you trigger the command to hide the toolbars again. This allows
-     	the developer to decide which minimized stacks are useful for him.
+     	the minimized stack will be visible until you trigger the command to hide the toolbars again. This allows
+     	you to decide which minimized stacks are currently useful for you.
      	<p>
      		The following is a screenshot of the IDE with a maximized Java editor and several toolbars visible. 
      	</p>
       	<p>
-      		<img src="images/eclipseidewithtoolbars.png" alt="Eclipse with toolbars"/>
+      		<img src="images/ide-with-toolbars.png" alt=""/>
       	</p>
       	<p>
-      		The next screenshot shows the same maximized editor but with hidden toolbar.
+      		The next screenshot shows the same maximized editor but with hidden toolbars.
       	</p>
       	<p>
-      		<img src="images/eclipseideinnewfullscreenshot.png" alt="Eclipse without toolbars"/>
+      		<img src="images/ide-full-screen.png" alt=""/>
       	</p>
     </td>
   </tr>
@@ -153,10 +62,10 @@
     <td class="content">
       The Eclipse workspace selection dialog wording was adjusted, as new Eclipse users reported that 
       usage of the term workspace was not well explained. The old text also implied that projects 
-      need to be stored in the workspace, which is wrong. 
+      need to be stored in the workspace, but that's not necessary. 
       <p>
-        The recent directory list was also increased to 10. It used to be 5, users can still adjust this value
-        via the preferences. 
+        The recent directory list was also increased to 10. It used to be 5. You can still adjust this value on
+        <b>Preferences &gt; General &gt; Startup and Shutdown &gt; Workspaces</b>.
       </p>
       <p>
         The reworked dialog looks like this:
@@ -172,15 +81,15 @@
     <td class="content">
       The SWT GTK3 port has received an update to its menus as part of the push to update SWT
       to GTK3. Here are some of the notable changes.
-      <p>Padding: by default, SWT menus now look similar to those in OSX: text is not strictly aligned.
+      <p>Padding: By default, SWT menus now look similar to those in OS X: Text is not strictly aligned.
          This is due to a new way in which menus are constructed in GTK3 (see <a href="https://wiki.gnome.org/HowDoI/GMenu#Icons">
-	 https://wiki.gnome.org/HowDoI/GMenu#Icons</a> for more details). In order to align all text entries in a menu, simply launch
+         https://wiki.gnome.org/HowDoI/GMenu#Icons</a> for more details). In order to align all text entries in a menu, simply launch
          the SWT application with the environment variable <b>SWT_PADDED_MENU_ITEMS=1</b>.</p>
-         <p>Checkboxes and images: on GTK2.x, a menu entry was limited to either a checkbox <i>or</i> an image. With this change,
-	 GTK3 SWT now supports menu entries that contain both an image and a checkbox.</p>
+      <p>Checkboxes and images: On GTK2.x, a menu entry was limited to either a checkbox <i>or</i> an image.
+         On GTK3, SWT now supports menu entries that contain both an image and a checkbox.</p>
       <p>The image below shows a screenshot of the default GTK3 menu on the left,
          compared to an aligned GTK3 menu on the right.</p>
-          <img src="images/junit_view_comparison.png" alt=""/>
+          <img src="images/gtk3-menu-comparison.png" alt=""/>
     </td>
   </tr>
   
@@ -191,7 +100,7 @@
       title trim even if no other trim style is specified. The title trim will not be created when <code>SWT.NO_TRIM</code> is specified.
       Note that this style bit is a hint.
       <p>
-      	<img src="images/nomove_shell.png" alt=""/>
+      	<img src="images/nomove-shell.png" alt=""/>
       </p>
     </td>
   </tr>
@@ -202,39 +111,25 @@
     </td>
   </tr>
 
-  <tr>
-    <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
-  </tr>
-
-  <tr id="first-item-platform-dev">
-    <td class="title">First item</td>
-    <td class="content">
-      Item blurb.
-    </td>
-  </tr>
-
 
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
 
-  <tr id="ifnulltemplates">
-    <td class="title">JDT offers new null templates</td>
+  <tr id="if-null-templates">
+    <td class="title">ifNotNull/ifNull templates</td>
     <td class="content">
-      JDT offers new templates for creating null and is not null checks.
-       <p>
-      		<img src="images/nulltemplate10.png" alt="Template selection"/>
-      	</p>
-      	 <p>
-      		<img src="images/nulltemplate20.png" alt="Template selection result"/>
-      	</p>
+      The Java editor now offers default templates for creating "== null" and "!= null" checks.
+      <p>
+        <img src="images/if-null-template.png" alt=""/>
+      </p>
     </td>
   </tr>
 
   <tr id="info-severity">
     <td class="title">New problem severity level to indicate information</td>
     <td class="content">
-      You can now specify <b>Info</b> as a severity level for the problems detected by Eclipse Java compiler.
+      You can now specify <b>Info</b> as a severity level for the problems detected by the Eclipse Java compiler.
         <p>
           <img src="images/info-severity.png" alt=""/>
         </p>      
@@ -245,29 +140,18 @@
     </td>
   </tr>
 
-  <tr>
-    <td colspan="2" class="section" id="PDE">PDE</td>
-  </tr>
-
-  <tr id="first-item-pde">
-    <td class="title">First item</td>
-    <td class="content">
-      Item blurb.
-    </td>
-  </tr>
-
 
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
   </tr>
 
-  
-    <tr id="adapters">
-    <td class="title">Adapters.adapt API available</td>
+  <tr id="adapters">
+    <td class="title">Adapters.adapt(...) API</td>
     <td class="content">
-      Adapters.adapt provides a new unified way to access every kind of adapter. It checks for
-      implemented interfaces, IAdaptable, and adapters registered with the adapter manager. It
-      also performs a null check which can be removed from calling code. 
+      <code>org.eclipse.core.runtime.Adapters.adapt(...)</code> provides a new unified way to access every kind of adapter. It checks for
+      implemented interfaces, IAdaptable, and adapters registered with the adapter manager.
+      It may also activate plug-ins if necessary to provide the requested adapter.
+      And it also performs a null check on the source object, so calling code doesn't have to do that. 
 <pre><code>// Old way
 IResource selectedResource;
 if (selection instanceof IAdaptable) {
@@ -278,11 +162,12 @@ if (selection instanceof IAdaptable) {
 IResource selectedResource = Adapters.adapt(selection, IResource.class);
 </code></pre>
     </td>
-    </tr>
-    <tr id="submonitor.split">
+  </tr>
+
+  <tr id="submonitor.split">
     <td class="title">SubMonitor.split</td>
     <td class="content">
-      SubMonitor.split is an easy, efficient way to check for Job cancellation without any
+      <code>org.eclipse.core.runtime.SubMonitor.split(...)</code> is an easy, efficient way to check for Job cancellation without any
       boilerplate. It creates a new child progress monitor, checks for cancellation, and 
       throws OperationCanceledException if necessary. Using this instead of SubMonitor.newChild
       or SubProgressMonitor will guarantee that your Jobs respond to cancellation quickly.
@@ -309,8 +194,9 @@ void myMethod(IProgressMonitor monitor) {
 }
 </code></pre>
     </td>
-    </tr>
-    <tr id="suppress_iscanceled">
+  </tr>
+
+  <tr id="suppress_iscanceled">
     <td class="title">SUPPRESS_ISCANCELED</td>
     <td class="content">
       SubMonitor.SUPPRESS_ISCANCELED allows you to suppress cancellation checks without
@@ -328,7 +214,8 @@ void myMethod(IProgressMonitor monitor) {
 // New way
 void myMethod(IProgressMonitor monitor) {
   SubMonitor subMonitor = SubMonitor.convert(monitor, 2);
-  uncancellableMethod(subMonitor.newChild(1, SubMonitor.SUPPRESS_ISCANCELED | SubMonitor.SUPPRESS_BEGINTASK);
+  uncancellableMethod(subMonitor.newChild(1,
+      SubMonitor.SUPPRESS_ISCANCELED | SubMonitor.SUPPRESS_BEGINTASK);
   cancellableMethod(subMonitor.newChild(1));
 }</code></pre>
     </td>
