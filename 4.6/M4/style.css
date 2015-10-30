@@ -16,8 +16,6 @@ a.bar {  color: #FFFFFF}
 
 body {max-width: 900px;}
 table.news col.title {width: 30%;}
-img {max-width: 520px;}
-img:active {max-width: none;}
 table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
 table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
 table.news tr {vertical-align: top;}
