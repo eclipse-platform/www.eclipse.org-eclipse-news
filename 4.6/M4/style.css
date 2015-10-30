@@ -14,8 +14,13 @@ a.bar:visited {  color: #FFFFFF; text-decoration: none}
 a.bar:hover {  color: #FFFFFF; text-decoration: underline}
 a.bar {  color: #FFFFFF}
 
-table.news td {border-top: solid thin black;}
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+img {max-width: 520px;}
+img:active {max-width: none;}
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
 table.news tr {vertical-align: top;}
 table.news tr td.section {font-size: 20px; font-weight: bold;}
-table.news tr td.title {vertical-align: top; width: 30%; font-weight: bold;}
-table.news tr td.content {vertical-align: top; width: 70%;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
