@@ -147,19 +147,19 @@
   <tr id="first-item-platform">
     <td class="title">ISideEffect databinding API</td>
     <td class="content">
-      ISideEffect allows you to react to changes in observables without 
-      attaching listeners. For example, the following code will bind
-      the text "Your username is: xxxx" to a label and will update the label
-      whenever the username changes.
+      org.eclipse.core.databinding.observable.ISideEffect allows you to react 
+      to changes in observables without attaching listeners. For example, the
+      following code will bind the text "Your username is: xxxx" to a label and
+      will update the label whenever the username changes.
 
-      <code><pre>
-        IObservableValue<String> username = ...
+      <pre>
+        IObservableValue&lt;String&gt; username = ...
         Label yourUsername = ...
 
         ISideEffect sideEffect = ISideEffect.create(
-        	() -> {return "Your username is: " + username.getValue();},
+        	() -&gt; {return "Your username is: " + username.getValue();},
           	yourUsername::setText);
-      </pre></code>
+      </pre>
 
       ISideEffects will automatically determine which observables to
       listen to, can react to changes in multiple observables,
