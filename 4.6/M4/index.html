@@ -104,7 +104,6 @@
         to a plain &quot;.txt&quot; file with the same name as the image:<br/>
         <code>&lt;a href=&quot;images/foo-view.txt&quot;&gt;&lt;img ...</code></p>
       <p>The images should be left-justified (as opposed to centered). Do not embed the width and height of the image.</p>
-      <p>Image too big:</p>
       <p>
         <img src="https://www.eclipse.org/artwork/images/v2/logo-800x188.png" alt="" />
       </p>
@@ -119,7 +118,8 @@
             img.style.width = "300px";
             img.style.filter = "sepia(0.5) blur(2px)";
             var msg = document.createElement("div");
-            msg.textContent = img.getAttribute("src") + ": width=" + w;
+            msg.innerHTML = "Image too big. See Instructions &gt; <a href='#screenshots'>Screenshots</a>.<br>"
+                + img.getAttribute("src") + ": width=" + w;
             msg.style.color = "red";
             msg.style.fontWeight = "bold";
             img.parentElement.insertBefore(msg, img);
