@@ -116,7 +116,9 @@
           var w = window.getComputedStyle(img, null).getPropertyValue("width");
           if (parseInt(w, 10) > 520) {
             img.style.width = "300px";
-            img.style.filter = "sepia(0.5) blur(2px)";
+            var filter = "sepia(0.5) blur(2px)";
+            img.style.filter = filter;
+            img.style.webkitFilter = filter;
             var msg = document.createElement("div");
             msg.innerHTML = "Image too big. See Instructions &gt; <a href='#screenshots'>Screenshots</a>.<br>"
                 + img.getAttribute("src") + ": width=" + w;
