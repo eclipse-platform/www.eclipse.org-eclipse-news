@@ -238,6 +238,17 @@
      added which allows to open a perspective by id.
   </tr>
   
+  <tr id="access-application-context">
+    <td class="title">New API for accessing the application context</td>
+    <td class="content">
+      The <code>IEclipseContext</code> of the <code>MApplication</code> object can now be directly accessed via a child context, via the <code>IWorkbench.APPLICATION_CONTEXT_KEY</code> key.
+      <pre>
+      // this is child context
+      IEclipseContext ctx =...;
+      // get the application context
+      IEclipseContext applicationContext = ctx.get(IWorkbench.APPLICATION_CONTEXT_KEY);
+      </pre>
+  </tr>
   
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
