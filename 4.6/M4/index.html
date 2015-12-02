@@ -221,14 +221,16 @@
   <tr id="viewerfilters">
     <td class="title">Viewer.setFilters API changed to varargs</td>
     <td class="content">
-      The Viewer.setFilters method signature has been changed to varargs to simplify its usage.    </td>
+      The Viewer.setFilters method signature has been changed to varargs to simplify its usage.
+    </td>
   </tr>
   
    <tr id="applicationmodel">
     <td class="title">New API in working with the Eclipse application model</td>
     <td class="content">
       The <code>MApplication</code> class has a new method to access a command directly via id. This new API is used by the Eclipse IDE
-      to speedup its start process.</td>    
+      to speedup its start process.
+     </td>    
   </tr>
   
   <tr id="epartservice-switchperspective">
@@ -236,6 +238,7 @@
     <td class="content">
      The <code>EPartService.switchPerspective()</code> has been released as API and an overloaded convenient method has been
      added which allows to open a perspective by id.
+    </td> 
   </tr>
   
   <tr id="access-application-context">
@@ -248,15 +251,17 @@
       // get the application context
       IEclipseContext applicationContext = ctx.get(IWorkbench.APPLICATION_CONTEXT_KEY);
       </pre>
+     </td>
   </tr>
   
    <tr id="databindingapi">
     <td class="title">JFace Databinding enhancements</td>
     <td class="content">
-	<code>IConvertor</code> provides a new static method <code>create</code> to create a converter. On a similar note <code>UpdateValueStrategy</code> provides a new static method to create an <code>UpdateValueStrategy</code> with an converter.
-	<p>
-	In addition <code>ViewerSupport.bind</code> has been changed to use varargs.
-	</p> 
+	 <code>IConvertor</code> provides a new static method <code>create</code> to create a converter. On a similar note <code>UpdateValueStrategy</code> provides a new static method to create an <code>UpdateValueStrategy</code> with an converter.
+	 <p>
+	 In addition <code>ViewerSupport.bind</code> has been changed to use varargs.
+	 </p> 
+	</td>
   </tr>
   
   <tr>
