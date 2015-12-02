@@ -155,6 +155,18 @@
       </p>
     </td>
   </tr>
+  
+  <tr id="text-zoom-commands">
+  	<td class="title">Commands and shortcuts to zoom on text editors</td>
+  	<td class="content">
+    On Text Editors, you can now use commands (available via quick-access) and shortcuts (<em>Ctrl+</em> and <em>Ctrl-</em>) to zoom in/out
+    text. Concretely, zooming in would increase font size and zooming out would decrease it.
+    <p>
+      The behavior is equivalent to using the <em>Colors and Fonts</em> preference page. That means that the change are persisted as preferences, can affect
+      other editors currently opened or that will be open later, and respect the font inheritance.
+    </p>
+    </td>
+  </tr>
 
   <tr id="pinch-to-zoom">
     <td class="title">Pinch to zoom in text editors</td>
@@ -163,6 +175,9 @@
       Put two fingers on the touchpad and move them apart or together.
       <p>
         To reset the original font size, rotate two fingers by at least 45°, or close and reopen the editor (<b>Navigate &gt; Back</b>).
+      </p>
+      <p>
+        Those gestures only affect the current editor. Changes are not propagated to other editors nor persisted.
       </p>
       <p>
         Note: SWT currently only supports these gestures on OS X and on Windows systems that use the native
