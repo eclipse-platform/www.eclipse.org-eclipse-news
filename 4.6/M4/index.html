@@ -272,7 +272,7 @@
    <tr id="databindingapi">
     <td class="title">JFace Databinding enhancements</td>
     <td class="content">
-      <code>IConvertor</code> provides a new static factory method to create a converter
+      <code>IConverter</code> provides a new static factory method to create a converter
 	  using a lamda expression. On a similar note <code>UpdateValueStrategy</code> provides
       a new static factory method to create an <code>UpdateValueStrategy</code> with a converter.
 	 <p>
@@ -280,7 +280,35 @@
 	 </p> 
 	</td>
   </tr>
-  
+
+   <tr id="new_button_workingset">
+    <td class="title">"New..." button for creating Workingsets</td>
+    <td class="content">
+	<p>
+		A "New..." button has been added to the WorkingSetConfigurationBlock so that creating a new WorkingSet is more straight forward.
+	</p>
+	<p>
+		Behavior before: <br/><br/>
+
+			1) Click on the "Add project to working sets" check box<br/>
+			2) Click on the "Select..." button<br/>
+			3) Click on the "New..." button in the "Select Working Sets" dialog<br/>
+			4) Choose a workingset type and type the name of the new workingset and click on finish<br/>
+			5) Back in the "Select Working Sets" dialog the new workingset has to be checked and die dialog need to be finished as well<br/>
+<br/>
+		Behavior now:<br/><br/>
+
+			1) Click on the "New..." button<br/>
+			4) Choose a workingset type and type the name of the new workingset and click on finish<br/>
+<br/>
+		Enjoy the time you saved when creating new WorkingSets!
+	</p>
+      <p>
+        <img src="./images/new-button-workingsetconfigurationblock.png" alt="" />
+      </p>
+    </td>
+  </tr>
+
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
@@ -288,7 +316,7 @@
   <tr id="substringcompletion-jdt">
     <td class="title">Substring code completion</td>
     <td class="content">
-      JDT supports substring code completion. 
+      JDT supports substring code completion.
        <p>
         TODO: JDT team to rework this
       </p>
