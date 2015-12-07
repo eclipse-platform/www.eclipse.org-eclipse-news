@@ -237,6 +237,20 @@
       many change events in a short period of time.
     </td>
   </tr>
+  <tr id="swt-requestlayout">
+    <td class="title">New requestLayout method for the SWT Control</td>
+    <td class="content">
+     SWT adds a new <code>requestLayout()</code> method to the  <code>Control</code> and  <code>Composite</code> classes. 
+     This method  does 
+     essentially the same thing as <code>control.getShell().layout(new Control[] {widget}, SWT.DEFER);</code>
+     <p>
+     Justification: The snippet, above, is currently the most efficient and 
+     reliable method of triggering layouts in SWT, but most developers are unaware of this. 
+     	Most Eclipse developers invoke 
+     	<code>Composite.layout()</code>, which is worse in the sense of performance.
+     </p>
+    </td>
+  </tr>
   <tr id="viewerfilters">
     <td class="title">Viewer.setFilters API changed to varargs</td>
     <td class="content">
