@@ -406,17 +406,17 @@
   </tr>
 
   <tr id="pde-project-explorer">
-    <td class="title">PDE perspective switches to project explorer</td>
+    <td class="title">PDE perspective uses project explorer</td>
     <td class="content">
-      The PDE perspectives uses the Project Explorer in its default configuration instead of the Package Explorer.
+      The PDE perspectives now uses <b>Project Explorer</b> instead of <b>Package Explorer</b> by default.
     </td>
   </tr>
 
   <tr id="pde-importpackages">
-    <td class="title">Import packages in MANIFEST.MF supports prefix wildcard matching by default</td>
+    <td class="title">Import and export packages in Plug-in Manifest editor supports prefix wildcard matching by default</td>
     <td class="content">
-	The import package dialog for the MANIFEST.MF editor uses wildcards by default. To add for example
-	<code>org.eclipse.e4.core.services</code> as package dependency
+	The import and export package dialog in the <b> Plug-in Manifest editor </b> uses wildcards by default. For example, to add
+	<code>org.eclipse.e4.core.services</code> as package dependency,
 	you can type in <code>services</code> instead of <code>*services</code>.
     </td>
   </tr>
@@ -426,11 +426,11 @@
     <td class="content">
 
      In <b>Plug-in Image Browser</b> view, it is now possible to filter icons by
-     their file path and plugin name.
+     their full path or name.
 
      <p>
-     Simply type the text in the new <b>Image Filter</b> field using * and ? wildcards
-     and only icons which full path match this string will be shown.
+     Use the new ImageFilter field to provide the search criteria (? = any character, * = any string) 
+     to find the icons with matching path or name. 
      </p>
 
      <p>
