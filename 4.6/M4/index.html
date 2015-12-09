@@ -236,8 +236,31 @@
       </p>
     </td>
   </tr>
-
-
+ 
+  <tr id="auto_text_direction">
+    <td class="title">A new bit masks to indicate Bidi "auto" text direction.</td>
+    <td class="content">
+	<p>
+		A new bit masks <code>SWT.AUTO_TEXT_DIRECTION</code> is introduced to indicate Bidi "auto" text direction. Now also supports StyledText control.
+	</p>
+	<p>
+		Auto text direction was introduced to the 4.5 release as a bitwise OR of SW.LEFT_TO_RIGHT | SWT.RIGHT_TO_LEFT
+		and it was already implemented to all controls (through this bitwise disjunction) </br>
+		Now we have a dedicated SWT constant for this <code>SWT.AUTO_TEXT_DIRECTION</code>
+		Support for this new bit field is extended to StyledText as well. <br/><br/>
+		Behavior: <br/>
+		When this bit is set, text direction is derived from the direction of the first strong Bidi character.
+		<br/>
+		Note: This is a HINT and it works on Windows only.
+		<br/><br/>
+		Usage: <br/>
+		<code>Control#setTextDirection (SWT.AUTO_TEXT_DIRECTION);</code>
+	</p>
+      <p>
+        <img src="./images/AUTO_TEXT_DIRECTION.png" alt="" />
+      </p>
+    </td>
+  </tr>
   <tr>
     <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
   </tr>
