@@ -288,20 +288,35 @@
       many change events in a short period of time.
     </td>
   </tr>
+  
   <tr id="swt-requestlayout">
-    <td class="title">New requestLayout method for the SWT Control</td>
+    <td class="title">New API added to Control for more efficient processing of layout requests</td>
     <td class="content">
-     SWT adds a new <code>requestLayout()</code> method to the  <code>Control</code> and  <code>Composite</code> classes. 
-     This method  does 
-     essentially the same thing as <code>control.getShell().layout(new Control[] {widget}, SWT.DEFER);</code>
+     SWT has added a new <code>requestLayout()</code> method to the <code>Control</code> and <code>Composite</code> classes. 
+     This method does essentially the same thing as <pre> <code>widget.getShell().layout(new Control[] {widget}, SWT.DEFER);</code> </pre>
      <p>
-     Justification: The snippet, above, is currently the most efficient and 
-     reliable method of triggering layouts in SWT, but most developers are unaware of this. 
-     	Most Eclipse developers invoke 
-     	<code>Composite.layout()</code>, which is worse in the sense of performance.
+     The snippet, above, is currently the most efficient and reliable method of triggering layouts in SWT, 
+     but most developers are unaware of this. Most Eclipse developers invoke <code>Composite.layout()</code>, 
+     which is worse in the sense of performance. This new API is intended to make it easier for developers 
+     to adopt the more efficient mechanism as opposed to using <code>Composite.layout()</code>.
      </p>
     </td>
   </tr>
+  
+  <tr id="palettedata">
+    <td class="title">PaletteData's constructor changed to use varargs</td>
+    <td class="content">
+      The constructor of <code>PaletteData</code> which accepts an array of RGB values has been changed to use varargs for its argument list.
+    </td>
+  </tr>
+
+  <tr id="combo-setitems">
+    <td class="title">Combo#setItems API changed to use varargs</td>
+    <td class="content">
+      The <code>Combo#setItems</code> method which accepts an array of String items has been changed to use varargs for its argument list.
+    </td>
+  </tr>
+  
   <tr id="viewerfilters">
     <td class="title">Viewer.setFilters API changed to varargs</td>
     <td class="content">
