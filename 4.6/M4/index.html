@@ -32,117 +32,6 @@
   </colgroup>
 
   <tr>
-    <td id="Instructions" class="section" colspan="2">
-      <h2>Instructions</h2>
-    </td>
-  </tr>
-
-  <tr id="item-name">
-    <td class="title">Item title, in sentence style, no trailing
-        punctuation, with unique id attribute on &lt;tr&gt;</td>
-    <td class="content">
-        A blurb pitched to the Eclipse community
-        (not just to members of the Eclipse Platform development team). Tell
-        end users about changes they'll see in the UI. Tell component writers
-        about changes they'll see at the client- and server-side APIs. Try to
-        generate some excitement; save the boring details for the manual; be short and don't repeat yourself. The
-        description should be complete sentences, with trailing punctuation.
-      <p>Make the entry self-contained and mention API classes.
-        Do <em>not</em> link to bugs and don't promote individuals or third-party products.
-      </p>
-      <p>Use active voice (say "you", not "the user"), and follow other advice in the
-        <a href="http://wiki.eclipse.org/Eclipse_Doc_Style_Guide#topic-content">Topic&nbsp;Content</a>
-        section of the Eclipse Doc Style Guidelines.
-      </p>
-      <p>Stick to the default font and size. Make command names (<b>Quick Fix</b>),
-        keyboard shortcuts (<b>Ctrl+1</b>), and preference page paths
-        (<b>Preferences &gt; General &gt; Keys</b>) bold.
-      </p>
-      <p>Do <em>not</em> enclose the first paragraph of an item in <code>&lt;p&gt;&lt;/p&gt;</code> tags.
-      </p>
-    </td>
-  </tr>
-
-  <tr id="screenshots">
-    <td class="title">Screenshots</td>
-    <td class="content">
-        If a small image sheds light, place it below the description, in a separate
-        paragraph. As the majority of the Eclipse users uses Windows 7, regular screen snapshots
-        should be done on Windows 7 if possible, but screenshots from
-        other operating system are also acceptable. Crop
-        out any extraneous stuff to focus the reader's attention on your new
-        feature. The image should be
-        <b>no more than 520 pixels wide</b> and in <b>PNG</b> format (as opposed
-        to GIF, TIF, BMP, or JPG). Use PNG-8 if your image doesn't have a lot of color,
-        or PNG-24 if the screen shot uses enough color to warrant additional color depth.
-        See also the
-        <a href="http://wiki.eclipse.org/Eclipse_Doc_Style_Guide#graphics">Graphics</a>
-        section of the Eclipse Doc Style Guidelines.
-      <p>The Windows <b>Snipping Tool</b> actually saves to PNG on Windows 7 and can easily be
-        used to crop and save screenshots:</p>
-      <ul>
-        <li>Arrange the windows for the shot</li>
-        <li>Use the Windows <b>Snipping Tool</b> to capture part of the screen</li>
-        <li>Use <b>File &gt; Save As</b> to save the screenshot as a PNG</li>
-        <li>Overlays such as red circles or boxes to call out details can be done using Microsoft Paint</li>
-      </ul>
-      <p>Name the file is a way that is appropriate and specific to the item
-        (e.g., key-bindings.png, rather than something generic like image.png).
-        Use all <b>lowercase</b> letters in the image file name, including the &quot;<b>.png</b>&quot;
-        file extension. As a separator, use <b>hyphen</b> &quot;-&quot; rather than
-        underscore
-        &quot;_&quot;. </p>
-      <p>Put all the images in a sibling directory named &quot;images&quot;.
-        This gives XHTML like:<br/>
-        <code>&lt;img src=&quot;images/foo-view.png&quot; alt=&quot;&quot;/&gt;</code><br/>
-        Include a suitable <a href="http://www.w3.org/TR/html4/struct/objects.html#h-13.8"><code>alt</code></a> attribute.
-        The alt text should be empty ("") if the image just illustrates the text.
-        Only use the alt text to add information that is not accessible if the page is rendered without images.
-        Don't write <code>alt="Screenshot of <i>the XY dialog</i>"</code>. Blind users shouldn't have to skip useless repetitions.</p>
-      <p>If the <code>alt</code> attribute text cannot sufficiently replace the image contents
-        (e.g. for a screenshot that shows source code), then enclose the img element in a link
-        to a plain &quot;.txt&quot; file with the same name as the image:<br/>
-        <code>&lt;a href=&quot;images/foo-view.txt&quot;&gt;&lt;img ...</code></p>
-      <p>The images should be left-justified (as opposed to centered). Do not embed the width and height of the image.</p>
-      <p>
-        <img src="https://www.eclipse.org/artwork/images/v2/logo-800x188.png" alt="" />
-      </p>
-      <script type="text/javascript">
-      //<![CDATA[
-      document.addEventListener('load', function markOversizedImages() {
-        var imgs = document.getElementsByTagName("img");
-        for (var i = 0; i < imgs.length; i++) {
-          var img = imgs[i];
-          var w = window.getComputedStyle(img, null).getPropertyValue("width");
-          if (parseInt(w, 10) > 520) {
-            img.style.width = "300px";
-            var filter = "sepia(0.5) blur(2px)";
-            img.style.filter = filter;
-            img.style.webkitFilter = filter;
-            var msg = document.createElement("div");
-            msg.innerHTML = "Image too big. See Instructions &gt; <a href='#screenshots'>Screenshots</a>.<br>"
-                + img.getAttribute("src") + ": width=" + w;
-            msg.style.color = "red";
-            msg.style.fontWeight = "bold";
-            img.parentElement.insertBefore(msg, img);
-          }
-        }
-      }, true);
-      //]]>
-      </script>
-    </td>
-  </tr>
-  <tr id="validation">
-    <td class="title">Validation</td>
-    <td class="content">
-        Use the W3C <a href="http://validator.w3.org/#validate_by_input">XHTML
-        Markup Validation Service</a> to check your document's markup before
-        submitting.
-    </td>
-  </tr>
-
-
-  <tr>
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
 
@@ -151,23 +40,25 @@
     <td class="content">
       A <b>Toggle Word Wrap</b> button has been added to the workbench toolbar. Shortcut: <b>Alt+Shift+Y</b>.
       <p>
-      <img src="images/word_wrap.png" alt="" />
+      <img src="images/word-wrap.png" alt="" />
       </p>
       <p>
-        A new "Enable word wrap when opening an editor" preference option is added to the "Text Editors" preferences page,
-        disabled by default. If this option is enabled, all text editors are opened with enabled word wrap.
+        By default, text editors are opened with word wrap disabled. This can be changed with the
+        <b>Enable word wrap when opening an editor</b> option on the
+        <b>General &gt; Editors &gt; Text&nbsp;Editors</b> preference page.
       </p>
     </td>
   </tr>
 
   <tr id="text-zoom-commands">
-  	<td class="title">Commands and shortcuts to zoom on text editors</td>
+  	<td class="title">Commands and shortcuts to zoom in text editors</td>
   	<td class="content">
-    On Text Editors, you can now use commands (available via quick-access) and shortcuts (<em>Ctrl+</em> and <em>Ctrl-</em>) to zoom in/out
-    text. Concretely, zooming in would increase font size and zooming out would decrease it.
+    In text editors, you can now use <b>Zoom In</b> (<b>Ctrl++</b> or <b>Ctrl+=</b>) and <b>Zoom Out</b> (<b>Ctrl+-</b>) commands
+    to increase and decrease the font size.
     <p>
-      The behavior is equivalent to using the <em>Colors and Fonts</em> preference page. That means that the change are persisted as preferences, can affect
-      other editors currently opened or that will be open later, and respect the font inheritance.
+      Like a change in the <b>General &gt; Appearance &gt; Colors and Fonts</b> preference page, the commands persistently
+      change the font size in all editors of the same type. If the editor type's font is configured to use a default font,
+      then that default font will be zoomed.
     </p>
     </td>
   </tr>
@@ -181,7 +72,7 @@
         To reset the original font size, rotate two fingers by at least 45°, or close and reopen the editor (<b>Navigate &gt; Back</b>).
       </p>
       <p>
-        Those gestures only affect the current editor. Changes are not propagated to other editors nor persisted.
+        Those gestures only affect the current editor. Changes are neither propagated to other editors nor persisted.
       </p>
       <p>
         Note: SWT currently only supports these gestures on OS X and on Windows systems that use the native
@@ -189,14 +80,6 @@
         Gesture support on GTK is not implemented yet.
       </p>
     </td>
-  </tr>
-
-  <tr id="darktheme-statusdialog">
-    <td class="title">Dark theme styling for StatusDialog</td>
-    <td class="content">
-     The StatusDialog dialog and its subclasses are now styled in the dark theme.
-     Before this change the message area was hard-coded to white.
-     </td>
   </tr>
 
   <tr id="wayland-launching">
@@ -209,58 +92,19 @@
     </td>
   </tr>
   
-  <tr id="new_button_workingset">
-    <td class="title">"New..." button for creating Workingsets</td>
+  <tr id="new-button-workingset">
+    <td class="title">"New..." button for creating Working Sets</td>
     <td class="content">
-	<p>
-		A "New..." button has been added to the WorkingSetConfigurationBlock so that creating a new WorkingSet is more straight forward.
-	</p>
-	<p>
-		Behavior before: <br/><br/>
-
-			1) Click on the "Add project to working sets" check box<br/>
-			2) Click on the "Select..." button<br/>
-			3) Click on the "New..." button in the "Select Working Sets" dialog<br/>
-			4) Choose a workingset type and type the name of the new workingset and click on finish<br/>
-			5) Back in the "Select Working Sets" dialog the new workingset has to be checked and die dialog need to be finished as well<br/>
-<br/>
-		Behavior now:<br/><br/>
-
-			1) Click on the "New..." button<br/>
-			4) Choose a workingset type and type the name of the new workingset and click on finish<br/>
-<br/>
-		Enjoy the time you saved when creating new WorkingSets!
-	</p>
+        A <b>New...</b> button has been added to the <code>WorkingSetConfigurationBlock</code>:
       <p>
-        <img src="./images/new-button-workingsetconfigurationblock.png" alt="" />
+        <img src="images/new-button-workingsetconfigurationblock.png" alt="" />
+      </p>
+      <p>
+        This saves quite a few clicks when creating new Working Sets.
       </p>
     </td>
   </tr>
  
-  <tr id="auto_text_direction">
-    <td class="title">A new style constant to indicate Bidi "auto" text direction.</td>
-    <td class="content">
-	<p>
-		A new style constant <code>SWT.AUTO_TEXT_DIRECTION</code> is introduced to indicate Bidi "auto" text direction. Now also supports StyledText control.
-	</p>
-	<p>
-		Auto text direction was introduced to the 4.5 release as a bitwise OR of SW.LEFT_TO_RIGHT | SWT.RIGHT_TO_LEFT
-		and it was already implemented to all controls (through this bitwise disjunction) <br/>
-		Now we have a dedicated SWT constant for this <code>SWT.AUTO_TEXT_DIRECTION</code>,
-		support for this new style constant is extended to StyledText as well. <br/><br/>
-		Behavior: <br/>
-		When this style is set, text direction is derived from the direction of the first strong Bidi character.
-		<br/>
-		Note: This is a HINT and it works on Windows only.
-		<br/><br/>
-		Usage: <br/>
-		<code>Control#setTextDirection (SWT.AUTO_TEXT_DIRECTION);</code>
-	</p>
-      <p>
-        <img src="./images/AUTO_TEXT_DIRECTION.png" alt="" />
-      </p>
-    </td>
-  </tr>
   <tr>
     <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
   </tr>
@@ -303,6 +147,14 @@
     </td>
   </tr>
   
+  <tr id="darktheme-statusdialog">
+    <td class="title">Dark theme styling for StatusDialog</td>
+    <td class="content">
+     The <code>org.eclipse.jface.dialogs.StatusDialog</code> and its subclasses are now styled in the dark theme.
+     Before this change, the message area was hard-coded to white.
+     </td>
+  </tr>
+
   <tr id="palettedata">
     <td class="title">PaletteData's constructor changed to use varargs</td>
     <td class="content">
@@ -365,6 +217,29 @@
 	</td>
   </tr>
 
+  <tr id="auto-text-direction">
+    <td class="title">A new style constant to indicate Bidi "auto" text direction.</td>
+    <td class="content">
+		A new style constant <code>SWT.AUTO_TEXT_DIRECTION</code> is introduced to indicate Bidi "auto" text direction. Now also supports StyledText control.
+	<p>
+		Auto text direction was introduced to the 4.5 release as a bitwise OR of SW.LEFT_TO_RIGHT | SWT.RIGHT_TO_LEFT
+		and it was already implemented to all controls (through this bitwise disjunction) <br/>
+		Now we have a dedicated SWT constant for this <code>SWT.AUTO_TEXT_DIRECTION</code>,
+		support for this new style constant is extended to StyledText as well. <br/><br/>
+		Behavior: <br/>
+		When this style is set, text direction is derived from the direction of the first strong Bidi character.
+		<br/>
+		Note: This is a HINT and it works on Windows only.
+		<br/><br/>
+		Usage: <br/>
+		<code>Control#setTextDirection (SWT.AUTO_TEXT_DIRECTION);</code>
+	</p>
+      <p>
+        <img src="images/auto-text-direction.png" alt="" />
+      </p>
+    </td>
+  </tr>
+
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
@@ -372,11 +247,14 @@
   <tr id="rename-options">
     <td class="title">Rename options</td>
     <td class="content">
-      While renaming an element in editor without dialog, the popup now shows an <b>Options...</b> link which opens 
-      the <b>Rename dialog</b> to provide more options like renaming the field's getter and setter methods.
+      The <b>Refactor &gt; Rename</b> popup now shows an <b>Options...</b> link which opens 
+      the full <b>Rename dialog</b> that provides more options like renaming a field's getter and setter methods.
        <p>
         <img src="images/rename-options.png" alt=""/>
       </p>
+      The dialog can still be opened via the menu button in the popup or by pressing <b>Alt+Shift+R</b> again.
+      The in-place mode can be disabled entirely via
+      <b>Preferences &gt; Java &gt; Rename in editor without dialog</b>.
     </td>
   </tr>
 
@@ -445,9 +323,9 @@
   </tr>
 
   <tr id="pde-project-explorer">
-    <td class="title">PDE perspective uses project explorer</td>
+    <td class="title">PDE perspective uses Project Explorer</td>
     <td class="content">
-      The PDE perspectives now uses <b>Project Explorer</b> instead of <b>Package Explorer</b> by default.
+      The PDE perspective now uses the <b>Project Explorer</b> instead of the <b>Package Explorer</b> view by default.
     </td>
   </tr>
 
@@ -483,25 +361,24 @@
   </tr>
 
   <tr id="startup-performance-equinox">
-    <td class="title">Startup time improvements </td>
+    <td class="title">Startup time improvements</td>
     <td class="content">
-      Equinox applied various improvements which improves the startup time for the Eclipse IDE and other OSGi based applications.
+      Equinox applied various improvements that reduce the startup time for the Eclipse IDE and other OSGi-based applications.
     </td>
   </tr>
 
-   <tr id="exportpreferences-equinox">
-    <td class="title">Exporting the preferences in alphanumeric order</td>
+   <tr id="export-preferences-equinox">
+    <td class="title">Export Preferences uses alphabetic order</td>
     <td class="content">
-      If you export your preference settings via the File -> Export menu, these preferences are not sorted alphanumeric to simplify processing
-      of the exported file by tools and users.
+      When you export your preference settings via <b>File &gt; Export... &gt; Preferences</b>, the preferences are now sorted alphabetically in the resulting file.
     </td>
   </tr>
   
-   <tr id="declarativeservice-equinox">
-    <td class="title">Equinox defines declarative service via Require-Capability</td>
+   <tr id="declarative-services-equinox">
+    <td class="title">Equinox defines Declaratives Services via Require-Capability</td>
     <td class="content">
-      Following the OSGi specification, the Equinox declarative service implementation defines its capacities via Require-Capability. This
-      will allow the Eclipse IDE to change its dependencies and make the declarative service implementation exchangeable.
+      Following the OSGi specification, the Equinox Declarative Services implementation defines its capabilities via Require-Capability. This
+      will allow the Eclipse IDE to change its dependencies and make the Declarative Services implementation exchangeable.
     </td>
   </tr>
 
