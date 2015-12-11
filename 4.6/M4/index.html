@@ -112,7 +112,7 @@
   <tr id="i-side-effect">
     <td class="title">ISideEffect databinding API</td>
     <td class="content">
-      org.eclipse.core.databinding.observable.ISideEffect allows you to react
+      <code>org.eclipse.core.databinding.observable.ISideEffect</code> allows you to react
       to changes in observables without attaching listeners. For example, the
       following code will bind the text "Your username is: xxxx" to a label and
       will update the label whenever the username changes.
@@ -139,10 +139,14 @@
      SWT has added a new <code>requestLayout()</code> method to the <code>Control</code> and <code>Composite</code> classes. 
      This method does essentially the same thing as <pre> <code>widget.getShell().layout(new Control[] {widget}, SWT.DEFER);</code> </pre>
      <p>
-     The snippet, above, is currently the most efficient and reliable method of triggering layouts in SWT, 
+     The snippet, above, is currently the most efficient method of triggering layouts in SWT, 
      but most developers are unaware of this. Most Eclipse developers invoke <code>Composite.layout()</code>, 
      which is worse in the sense of performance. This new API is intended to make it easier for developers 
-     to adopt the more efficient mechanism as opposed to using <code>Composite.layout()</code>.
+     to adopt the more efficient mechanism as opposed to using <code>Composite#layout()</code>.
+     </p>
+     <p>
+     However, be aware that changing existing invocations of <code>layout()</code> to <code>requestLayout()</code>
+     may break code that assumes that controls are completely sized and positioned at a certain point in time.
      </p>
     </td>
   </tr>
@@ -155,40 +159,33 @@
      </td>
   </tr>
 
-  <tr id="palettedata">
-    <td class="title">PaletteData's constructor changed to use varargs</td>
+  <tr id="varargs">
+    <td class="title">APIs changed to varags</td>
     <td class="content">
-      The constructor of <code>PaletteData</code> which accepts an array of RGB values has been changed to use varargs for its argument list.
-    </td>
-  </tr>
-
-  <tr id="combo-setitems">
-    <td class="title">Combo#setItems API changed to use varargs</td>
-    <td class="content">
-      The <code>Combo#setItems</code> method which accepts an array of String items has been changed to use varargs for its argument list.
+      A few platform APIs have been changed to allow varargs invocation:
+      <ul>
+        <li><code>org.eclipse.jface.viewers.StructuredViewer#setFilters(ViewerFilter...)</code></li>
+        <li><code>org.eclipse.jface.databinding.viewers.ViewerSupport#bind(*, IValueProperty...)</code></li>
+        <li><code>org.eclipse.swt.graphics.PaletteData#PaletteData(RGB...)</code></li>
+        <li><code>org.eclipse.swt.widgets.Combo#setItems(String...)</code></li>
+      </ul>
     </td>
   </tr>
   
-  <tr id="viewerfilters">
-    <td class="title">Viewer.setFilters API changed to varargs</td>
+  <tr id="applicationmodel">
+    <td class="title">New API: MApplication#getCommand(String)</td>
     <td class="content">
-      The Viewer.setFilters method signature has been changed to varargs to simplify its usage.
-    </td>
-  </tr>
-
-   <tr id="applicationmodel">
-    <td class="title">New API in working with the Eclipse application model</td>
-    <td class="content">
-      The <code>MApplication</code> class has a new method to access a command directly via id. This new API is used by the Eclipse IDE
-      to speedup its start process.
+      <code>MApplication#getCommand(String)</code> 
+      is a faster way to access a command directly via id. This new API is used by the Eclipse IDE
+      to speed up its application launching.
      </td>
   </tr>
 
   <tr id="epartservice-switchperspective">
-    <td class="title">API for switching perspectives released</td>
+    <td class="title">API for switching perspectives</td>
     <td class="content">
-     The <code>EPartService.switchPerspective()</code> has been released as API and an overloaded convenient method has been
-     added which allows to open a perspective by id.
+     The <code>EPartService#switchPerspective(String/MPerspective)</code>
+     API has been added.
     </td>
   </tr>
 
@@ -197,7 +194,7 @@
     <td class="content">
       The <code>IEclipseContext</code> of the <code>MApplication</code> object can now be directly accessed via a child context, via the <code>IWorkbench.APPLICATION_CONTEXT_KEY</code> key.
       <pre>
-      // this is child context
+      // this is a child context
       IEclipseContext ctx =...;
       // get the application context
       IEclipseContext applicationContext = ctx.get(IWorkbench.APPLICATION_CONTEXT_KEY);
@@ -206,33 +203,32 @@
   </tr>
 
    <tr id="databindingapi">
-    <td class="title">JFace Databinding enhancements</td>
+    <td class="title">JFace databinding enhancements</td>
     <td class="content">
-      <code>IConverter</code> provides a new static factory method to create a converter
-	  using a lamda expression. On a similar note <code>UpdateValueStrategy</code> provides
-      a new static factory method to create an <code>UpdateValueStrategy</code> with a converter.
-	 <p>
-	 In addition <code>ViewerSupport.bind</code> has been changed to use varargs.
-	 </p>
+      The new static <code>IConverter.create(Object, Object, Function)</code> allows to create a converter
+	  using a lambda expression. On a similar note, the static <code>UpdateValueStrategy.create(IConverter)</code>has been added.
 	</td>
   </tr>
 
   <tr id="auto-text-direction">
-    <td class="title">A new style constant to indicate Bidi "auto" text direction.</td>
+    <td class="title">A new style constant to indicate Bidi "auto" text direction</td>
     <td class="content">
-		A new style constant <code>SWT.AUTO_TEXT_DIRECTION</code> is introduced to indicate Bidi "auto" text direction. Now also supports StyledText control.
+		A new text direction constant <code>SWT.AUTO_TEXT_DIRECTION</code> has been introduced to indicate
+		Bidi "auto" text direction. This is now also supported by the StyledText control.
 	<p>
-		Auto text direction was introduced to the 4.5 release as a bitwise OR of SW.LEFT_TO_RIGHT | SWT.RIGHT_TO_LEFT
-		and it was already implemented to all controls (through this bitwise disjunction) <br/>
-		Now we have a dedicated SWT constant for this <code>SWT.AUTO_TEXT_DIRECTION</code>,
-		support for this new style constant is extended to StyledText as well. <br/><br/>
-		Behavior: <br/>
-		When this style is set, text direction is derived from the direction of the first strong Bidi character.
-		<br/>
+		Auto text direction was introduced in the Mars (4.5) release as a bitwise OR of
+		<code>SWT.LEFT_TO_RIGHT | SWT.RIGHT_TO_LEFT</code>
+		and it was already implemented in all native controls.
+		Now, <code>SWT.AUTO_TEXT_DIRECTION</code> is a dedicated SWT constant for this.
+	</p>
+	<p>
+		Behavior: When <code>SWT.AUTO_TEXT_DIRECTION</code> is set, the text direction is derived from the direction of the first strong Bidi character.
+	</p>
+	<p>
 		Note: This is a HINT and it works on Windows only.
-		<br/><br/>
-		Usage: <br/>
-		<code>Control#setTextDirection (SWT.AUTO_TEXT_DIRECTION);</code>
+	</p>
+	<p>
+		Usage: <code>control.setTextDirection(SWT.AUTO_TEXT_DIRECTION);</code>
 	</p>
       <p>
         <img src="images/auto-text-direction.png" alt="" />
