@@ -16,12 +16,12 @@
 <p:introduction>
 <div>
 <p>
-Last revised 8:36 EST December 14, 2015.
-
+Last revised 8:57 EDT August 17, 2015.
+<!--
 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 marks interesting changes since the previous draft of 
-<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_6_20150817.xml">August 17, 2015</a>.)
-
+<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_6_20150324.xml">March 24, 2015</a>.)
+-->
 </p>
 <p><i>Please send comments about this plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
   mailing list.</i>
@@ -116,7 +116,7 @@ marks interesting changes since the previous draft of
 <p:milestone date="2015-10-30" milestone="M3"><div>4.6M3</div></p:milestone>
 <p:milestone date="2015-12-11" milestone="M4"><div>4.6M4</div></p:milestone>
 <p:milestone date="2016-01-29" milestone="M5"><div>4.6M5</div></p:milestone>
-<p:milestone date="2016-02-12" milestone=""><div>CQ Submission Deadline</div></p:milestone>
+<p:milestone date="2016-??-??" milestone=""><div>CQ Submission Deadline</div></p:milestone>
 <p:milestone date="2016-03-18" milestone="M6"><div>4.6M6 (API Freeze)</div></p:milestone>
 <p:milestone date="2016-04-29" milestone="M7"><div>4.6M7 (Feature Freeze)</div></p:milestone>
 
@@ -503,6 +503,17 @@ Eclipse 4.6 Endgame Plan.
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=474628">474628</a>)
 </li>
 
+<li><strong>SWT browser currency.</strong>
+	Significant work is required in the SWT browser widget to support the latest
+	browser runtimes. As part of this effort we will add browser support for XULRunner 38 on all platforms.
+	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=474625">474625</a>)
+</li>
+
+<li><strong>SWT Webkit2 port for Browser widget on GTK+.</strong>
+	We will complete the implementation of the Webkit2 port for Browser widget on GTK+.
+	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441568">441568</a>)
+</li>
+
 <li><strong>Provide good support for high-DPI displays.</strong>
 	The current support for high-DPI displays has various rendering issues.
 	With Neon we want to provide good support for high-DPI displays.
@@ -525,7 +536,7 @@ Eclipse 4.6 Endgame Plan.
 </li>
 
 <li><strong>Work on Eclipse support for Java 9.</strong>
-	The next Java SE release is version 9, which is currently scheduled for Q1 2017.
+	The next Java SE release is version 9, which is currently scheduled for Q3 2016.
 	This Java release will add modularization to the Java language, also known under the code name Jigsaw.
 	The Neon release itself will not provide any support for Java 9, but we will provide features patches whenever major
 	new functionality is available.
@@ -536,18 +547,7 @@ Eclipse 4.6 Endgame Plan.
 </p:proposed>
 
 <p:deferred>
-<ul>
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (deferred) <strong>SWT browser currency.</strong> 
-	Significant work is required in the SWT browser widget to support the latest
-	browser runtimes. As part of this effort we will add browser support for XULRunner 38 on all platforms.
-	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=474625">474625</a>)
-</li>
-
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (deferred) <strong>SWT Webkit2 port for Browser widget on GTK+.</strong>
-	We will complete the implementation of the Webkit2 port for Browser widget on GTK+.
-	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441568">441568</a>)
-</li>
-</ul>
+  <p><i>None at this time.</i></p>
 </p:deferred>
 
 </p:theme>
@@ -602,7 +602,7 @@ Eclipse 4.6 Endgame Plan.
 
 <li><strong>Improve PDE editors.</strong>
 	PDE wants to further improve its Target editor and enhance the performance in all PDE editors.
-	[PDE] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">482576</a> and <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">482640</a>)
+	[PDE] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">TBD</a>)
 </li>
 
 </ul>
@@ -824,7 +824,7 @@ Eclipse 4.6 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.core.databinding</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.databinding.beans</td>
@@ -832,11 +832,11 @@ Eclipse 4.6 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.core.databinding.observable</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.databinding.property</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.expressions</td>
@@ -848,7 +848,7 @@ Eclipse 4.6 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.core.filebuffers</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.filesystem</td>
@@ -860,7 +860,7 @@ Eclipse 4.6 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.core.jobs</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.net</td>
@@ -873,6 +873,14 @@ Eclipse 4.6 Endgame Plan.
     <tr>
       <td>org.eclipse.core.runtime</td>
       <td><div align="center">1.7</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.core.runtime.compatibility</td>
+      <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.core.runtime.compatibility.registry</td>
+      <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.variables</td>
@@ -896,19 +904,19 @@ Eclipse 4.6 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.e4.core.contexts</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.e4.core.di</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.e4.core.di.annotations</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.e4.core.di.extensions</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.e4.core.services</td>
@@ -940,7 +948,7 @@ Eclipse 4.6 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.e4.ui.dialogs</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.e4.ui.model.workbench</td>
@@ -964,11 +972,11 @@ Eclipse 4.6 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.e4.ui.workbench.renderers.swt</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.e4.ui.workbench.swt</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.e4.ui.workbench3</td>
@@ -992,11 +1000,11 @@ Eclipse 4.6 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.help</td>
-      <td><div align="center">1.7</div></td>
+      <td><div align="center">F1.0</div></td>
     </tr>
     <tr>
       <td>org.eclipse.help.base</td>
-      <td><div align="center">1.7</div></td>
+      <td><div align="center">1.5</div></td>
     </tr>
     <tr>
       <td>org.eclipse.help.ui</td>
@@ -1084,15 +1092,15 @@ Eclipse 4.6 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.jface</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jface.databinding</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jface.text</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jsch.core</td>
@@ -1116,7 +1124,7 @@ Eclipse 4.6 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.pde.api.tools</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.6</div></td>
     </tr>
     <tr>
       <td>org.eclipse.pde.api.tools.annotations</td>
@@ -1132,7 +1140,7 @@ Eclipse 4.6 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.pde.core</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.6</div></td>
     </tr>
     <tr>
       <td>org.eclipse.pde.doc.user</td>
@@ -1140,15 +1148,15 @@ Eclipse 4.6 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.pde.ds.core</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.pde.ds.ui</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.pde.junit.runtime</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.pde.launching</td>
@@ -1156,7 +1164,7 @@ Eclipse 4.6 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.pde.runtime</td>
-      <td><div align="center">1.6</div></td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.pde.ua.core</td>
@@ -1172,7 +1180,7 @@ Eclipse 4.6 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.pde.ui.templates</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.platform</td>
@@ -1196,7 +1204,7 @@ Eclipse 4.6 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.search</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.swt</td>
@@ -1224,7 +1232,7 @@ Eclipse 4.6 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.text</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui</td>
@@ -1236,7 +1244,7 @@ Eclipse 4.6 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.ui.cheatsheets</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.console</td>
@@ -1244,7 +1252,7 @@ Eclipse 4.6 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.ui.editors</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.externaltools</td>
@@ -1252,11 +1260,11 @@ Eclipse 4.6 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.ui.forms</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.ide</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.ide.application</td>
@@ -1272,7 +1280,7 @@ Eclipse 4.6 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.ui.monitoring</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.navigator</td>
@@ -1300,23 +1308,23 @@ Eclipse 4.6 Endgame Plan.
     </tr>
     <tr>
       <td>org.eclipse.ui.views.log</td>
-      <td><div align="center">1.6</div></td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.views.properties.tabbed</td>
-      <td><div align="center">1.6</div></td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.win32</td>
-      <td><div align="center">1.7</div></td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.workbench</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.workbench.texteditor</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.update.configurator</td>
