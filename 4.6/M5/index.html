@@ -181,6 +181,31 @@
     </td>
   </tr>
   
+  <tr id="unknown-file-type-strategy">
+    <td class="title">Different strategies to handle unknown file types</td>
+    <td class="content">
+      From the <em>Preferences > General > Editors > File Association</em> page, you can now select how to handle unknown
+      file types in the workbench. Three strategies are proposed out-of-the-box:
+      <ul>
+        <li><em>System Editor</em> (Default) will open the System Editor associated with the file, if available. If no system editor
+          is associated with the given file, it will fail back to Eclipse's Text Editor</li>
+        <li><em>Text Editor</em> will always open Eclipse's Text Editor on unknown file types.</li>
+        <li><em>Ask via pop-up</em> will open the same dialog as using <em>Open With</em> on a file and let user choose which
+          editor to use (inside or outside the IDE)</li> 
+      </ul>
+     <p>
+      Keep in mind that in any case, it's possible to assign an editor for an unknown file-type either via this same preference page,
+      or with the <em>Open With...</em> context-menu on the file.
+     </p>
+     <p>
+      The implementation comes with a new extension-point to allow contribution of additional strategies. The extension-point id is
+      <em>org.eclipse.ui.ide.unknownEditorStrategy</em>. User's choice is stored as a Preference whose value is the id of the selected
+      strategy as defined in the contributing extension. So it's possible for extenders to tweak this value in their packages via
+      <em>plugin_customization.ini</em> or other standard mechanisms to modify preferences.
+      </p>
+    </td>
+  </tr>
+
   <tr id="first-item-platform">
     <td class="title">First item</td>
     <td class="content">
