@@ -84,30 +84,6 @@ ob_start();
 		
 		
 		<div class="homeitem3col">
-			<h3>What's Happening?</h3>
-		      <h4> <a NAME="Milestone_Planning"></a>4.4 Development</h4>
-				<p>
-		      <ul>
-				<li>Most active development goes into this stream which can be downloaded from the <a href="http://download.eclipse.org/eclipse/downloads/">eclipse project download</a> area.</li>
-		        <li>The 4.4 plan is posted <a href="4.4/plan.php">here</a>.</li>
-		      </ul></p>
-		      
-		    <h4>R4.3</h4>
-			<ul>
-				<li>The current release is R4.3 which is available on the <a href="http://download.eclipse.org/eclipse/downloads/">eclipse project download</a> area
-				or bundled in different packages on the <a href="http://www.eclipse.org/downloads/index.php" target="newdownload&quot;">download</a> area.</li>
-			</ul>
-		      
-		      <h4> <a NAME="Maintenance_Planning"></a>R4.3 Maintenance</h4>
-		      <p>Information about the R4.3 maintenance release can be found <a href="http://wiki.eclipse.org/Kepler/Simultaneous_Release_Plan#Service_Releases">here</a> and
-		      builds can be downloaded from from the <a href="http://download.eclipse.org/eclipse/downloads/">eclipse project download</a> area.</p>
-
-		      <h4> <a NAME="Releases"></a>Previous Releases</h4>
-		      <p>Information about previous releases can be found <a href="releases.html">here</a>.</p>
-		</div>
-		
-		
-		<div class="homeitem3col">
 			<h3>Get Involved!</h3>
 			<p>
 				If you are interested in participating in the development of the Platform
