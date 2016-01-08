@@ -68,7 +68,6 @@ ob_start();
 		        <li><a href="http://git.eclipse.org/c/platform">Platform Git Repositories</a></li>
 		        <li><a href="http://git.eclipse.org/c/jdt">JDT Git Repositories</a></li>
 		        <li><a href="http://git.eclipse.org/c/pde">PDE Git Repositories</a></li>
-		        <li><a href="http://git.eclipse.org/c/orion">Orion Git Repositories</a></li>
 		        <li><a href="http://git.eclipse.org/c/e4">e4 Git Repositories</a></li>
 		        </ul>
 		        The repositories support &quot;ssh&quot;, &quot;git&quot;, and &quot;http&quot;
