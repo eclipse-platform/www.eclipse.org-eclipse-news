@@ -28,7 +28,7 @@ ob_start();
 
 		<div class="homeitem3col">
 		  <h3>About the core component</h3>
-			<p>The core components are part of the <a href="https://www.eclipse.org/eclipse/platform-ui/">Platform UI project</a> and provide basic platform infrastructure that
+			<p>The core component provides basic platform infrastructure that
 			does not involve any UI.  It is currently comprised of the following principal plug-ins:
 			</p>
 			<ul>
