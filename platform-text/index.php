@@ -23,7 +23,7 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>About Platform Text</h3>
 				<p>
-				Platform Text provides the basic building blocks for text
+				Platform Text is part of the <a href="https://www.eclipse.org/eclipse/platform-ui/">Platform UI project</a> and provides the basic building blocks for text
 				and text editors within Eclipse and contributes the Eclipse default text
 				editor. It consists of five parts:
 				<ul>
