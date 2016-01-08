@@ -152,7 +152,7 @@ ob_start();
 					compilers, and just about anything that's hard.
 		        </li>
 		        <li> 
-		          <b><a name="john"></a>John Arthorne, IBM Ottawa</b><br>
+		          <b><a name="john"></a>John Arthorne</b><br>
 			      John has worked on the <a href="http://eclipse.org/eclipse">Eclipse</a> and <a href="http://eclipse.org/equinox">Equinox</a> 
 			      projects for the past decade in many different areas. He was the main developer on the resource model for many years, 
 			      and designed the platform's concurrency infrastructure. In recent years he has focused on the Orion project, provisioning (p2), 
