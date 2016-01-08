@@ -5,7 +5,7 @@
 	# team-leaders.php
 	#
 	# Author: 		
-	# Date:			2015-06-11
+	# Date:			2016-01-08
 	#
 	# Description: Details about the Eclipse Project PMC
 	#
@@ -85,17 +85,6 @@ ob_start();
 			      His interests include user interface and API design, editors, software quality and performance.
 		        </li>
 		        <li> 
-		          <b><a name="john"></a>John Arthorne, IBM Ottawa</b><br>
-			      John has worked on the <a href="http://eclipse.org/eclipse">Eclipse</a> and <a href="http://eclipse.org/equinox">Equinox</a> 
-			      projects for the past decade in many different areas. He was the main developer on the resource model for many years, 
-			      and designed the platform's concurrency infrastructure. In recent years he has focused on the Orion project, provisioning (p2), 
-			      e4, and overall platform API quality. John is a member of the Eclipse <a href="http://wiki.eclipse.org/Architecture_Council">
-			      Architecture Council</a> and the Eclipse <a href="http://www.eclipse.org/org/foundation/directors.php">Board of Directors</a>.
-			      John has authored numerous <a href="http://www.eclipse.org/articles/">articles</a> 
-			      and a <a href="http://www.amazon.com/Official-Eclipse-3-0-FAQs/dp/0321268385/ref=sr_1_1?ie=UTF8&s=books&qid=1221163807&sr=8-1">
-			      book</a> on Eclipse.
-		        </li>
-		        <li> 
 		          <b><a name="aleksandar"></a>Aleksandar Kurtakov, Red Hat Inc.</b><br>
 					Aleksandar is part of Red Hat's Eclipse team. He is Platform SWT committer, Tools PMC member and leads the <a href="http://www.eclipse.org/linuxtools/">Linux Tools</a> project.
 					He is very interested in deeper native platform integration both as runtime experience and as distribution channel.
@@ -162,6 +151,15 @@ ob_start();
 					Eclipse. His interests are in the areas of performance, scalability,
 					compilers, and just about anything that's hard.
 		        </li>
+		        <li> 
+		          <b><a name="john"></a>John Arthorne, IBM Ottawa</b><br>
+			      John has worked on the <a href="http://eclipse.org/eclipse">Eclipse</a> and <a href="http://eclipse.org/equinox">Equinox</a> 
+			      projects for the past decade in many different areas. He was the main developer on the resource model for many years, 
+			      and designed the platform's concurrency infrastructure. In recent years he has focused on the Orion project, provisioning (p2), 
+			      e4, and overall platform API quality. John has authored numerous <a href="http://www.eclipse.org/articles/">articles</a> 
+			      and a <a href="http://www.amazon.com/Official-Eclipse-3-0-FAQs/dp/0321268385/ref=sr_1_1?ie=UTF8&s=books&qid=1221163807&sr=8-1">
+			      book</a> on Eclipse.
+		        </li>
 		      </ul>
 		</div>
 		
@@ -174,9 +172,8 @@ ob_start();
 			<ul>
 				<li><a href="http://wiki.eclipse.org/Platform">Platform</a><br> -- <a href="#dani">Dani Megert</a></li>
 				<li><a href="http://www.eclipse.org/jdt/" target="_top">JDT</a><br> -- <a href="#dani">Dani Megert</a></li>
-				<li><a href="http://www.eclipse.org/pde/">PDE</a><br> -- Curtis Windatt</a></li>
-				<li><a href="http://www.eclipse.org/e4/" target="_top">e4</a><br> -- <a href="#McQ">Mike Wilson</a></li>
-				<li><a href="http://www.eclipse.org/orion/">Orion</a><br> -- Simon Kaegi and Ken Walker</li>
+				<li><a href="http://www.eclipse.org/pde/">PDE</a><br> -- Vikas Chandra and Curtis Windatt</a></li>
+				<li><a href="http://www.eclipse.org/e4/" target="_top">e4</a><br> -- <a href="#dani">Dani Megert</a> and Lars Vogel</li>
       		</ul>				
 		</div>
 	</div>
