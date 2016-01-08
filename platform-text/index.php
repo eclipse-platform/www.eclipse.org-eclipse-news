@@ -54,29 +54,6 @@ ob_start();
 		</div>
 		
 		<div class="homeitem3col">
-		<a name="optional"></a>
-			<h3>Optional Plug-ins</h3>
-				<p>
-				Those optional plug-ins are not part of the Eclipse SDK download:</p>
-				<ul>
-					<li><b>Secure Hovers (simple HTML)</b>
-						<p>
-						<br>
-						<strong>Note:</strong> <i>As of 3.5 this is no longer needed because JavaScript is disabled when showing HTML in hovers or in the Javadoc view.</i>
-						</p>
-						<p>
-					    Since 3.2 Eclipse uses the SWT Browser widget to display HTML information in hovers. On some platforms
-					    (e.g. Windows) this widget has all browser features enabled, e.g. it might execute scripts that are inside the HTML content
-					    (see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=228608">bug 228608</a> for details). Those who want to avoid this potential (but minimal) risk can download and install this optional plug-in
-					    which disables the Browser widget and displays the hovers as simple HTML.
-					    <p>
-					    To install simply <a href="downloads/org.eclipse.ui.editors.bugzilla_1.0.0.200805281136.jar">download</a> 
-					    the plug-in and save it into the <code>&lt;install_dir&gt;/<b>plugins</b></code> (R3.2.x - R3.3.x) or <code>&lt;install_dir&gt;/<b>dropins</b></code> (R3.4) directory.</p>
-					</li>
-				</ul></p>
-		</div>
-		
-		<div class="homeitem3col">
 			<h3>Development Resources</h3>
 			<p>
 			The <a href="development/dev.php">Development Resources</a> show how to use Platform Text components.
