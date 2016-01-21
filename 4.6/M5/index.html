@@ -299,13 +299,15 @@
     <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
   </tr>
 
-  <tr id="first-item-platform-dev">
-    <td class="title">First item</td>
+  <tr id="handlerutil-structured-selection">
+    <td class="title">API for getting the structured selection from HandlerUtil</td>
     <td class="content">
-      Item blurb.
+     The <code>HandlerUtil#getCurrentStructuredSelection(event)</code>
+     API has been added to access a structured selection from a handler. Compared to 
+     <code>HandlerUtil#getCurrentSelection(event)</code> this removes the need to cast and check for 
+     null.
     </td>
   </tr>
-
 
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
