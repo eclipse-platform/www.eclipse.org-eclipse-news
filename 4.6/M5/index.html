@@ -254,28 +254,50 @@
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
 
-  <tr id="code-completion-highlighting-jdt">
-    <td class="title">Code completion highlights the matching characters</td>
+  <tr id="code-completion-highlighting">
+    <td class="title">Content assist highlights the matching pattern</td>
     <td class="content">
-      If you trigger code completion in the Java editor, the resulting popup highlights the matching characters.
+      Content assist popup now highlights the matching pattern in proposals.
       <p>
         <img src="images/code-completion-highlighting.png" alt=""/>
       </p>
     </td>
   </tr>
-  
+
   <tr id="substring-code-completion">
-    <td class="title">Substring code completion supported</td>
+    <td class="title">Substring code completion</td>
     <td class="content">
-      If you trigger code completion, you can use a substring and do not have to use the correct prefix.
-      This is currently supported for methods and constructors. The following screenshot demonstrates
-      how to see all methods containing the string "selection". 
+      Code completion now supports substring patterns. It allows you to enter any part of the desired proposal's text while invoking the content assist.
+      For example, completing on <code>selection</code> proposes all results containing <code>selection</code> as a substring.
       <p>
         <img src="images/substring-code-completion.png" alt=""/>
+      </p>      
+      <p>
+        This support can be disabled using the <b>Show substring matches</b> preference on the <b>Java &gt; Editor &gt; Content Assist</b> preference page.
       </p>
     </td>
   </tr>
 
+  <tr id="info-problem-decorator">
+    <td class="title">Problem decorator for Info severity</td>
+    <td class="content">
+      A new decorator (<img src="images/info_co.png"  alt=""/>) has been added to indicate information severity problems detected by the Eclipse Java Compiler.
+      <p>
+        <img src="images/info-problem-decorator.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="configure-problem-severity">
+    <td class="title">Quick fix to configure problem severity</td>
+    <td class="content">
+     You can now configure the severity of a compiler problem by invoking the new <b>Quick Fix (Ctrl+1)</b> which opens the <b>Java &gt; Compiler &gt; Errors/Warnings</b>
+     preference page and highlights the configurable problem.
+      <p>
+        <img src="images/configure-problem-severity.png" alt=""/>
+      </p>
+    </td>
+  </tr>
 
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
