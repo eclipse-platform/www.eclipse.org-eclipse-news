@@ -298,6 +298,36 @@
     </td>
   </tr>
 
+  <tr id="configure-null-annotations">
+    <td class="title">Support for multiple sets of null annotations</td>
+    <td class="content">
+     You can now configure annotation-based null analysis to use multiple sets of annotation types.
+     This is relevant if your project uses 3rd party libraries that already use null annotations in their API,
+     where the annotations used in a library may be different from those used in the current project.
+     <p>
+	     Please open the dialog for configuring null annotation types from the project properties
+		 at <b>Java Compiler &gt; Errors/Warnings &gt; Null analysis</b>:
+     </p>
+      <p>
+        <img src="images/prefs-errors-warnings.png" alt=""/>
+      </p>
+      <p>In the dialog that opens, only one <em>primary</em> set of annotations is supported &mdash;
+        these are the annotations which JDT actively uses in quick fixes, error messages etc.
+        These annotations must be present on the project's build path.
+      </p>
+      <p>	
+      	You can now add an arbitrary number of <em>secondary</em> null annotation types,
+      	to be evaluated when reading class files external to the project.
+      	Within the configuration dialog, content assist is offered based on accessible annotation types,
+      	but for secondary annotation types unresolved names will be tolerated.
+      	This avoids the need to bloat the build path with transitive compile-time depedencies.
+      	</p> 
+      <p>
+        <img src="images/annotation-selection.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
