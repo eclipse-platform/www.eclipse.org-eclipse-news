@@ -199,20 +199,19 @@
   </tr>
   
   <tr id="text-editor-selection-strategy">
-    <td class="title">Selecting the text editor for unknown file types</td>
+    <td class="title">Selecting the text editor for unassociated file types</td>
     <td class="content">
-      From the <em>Preferences > General > Editors > File Association</em> page, you can now define a editor selection
-      strategy for unknown
-      file types. Three strategies are proposed out-of-the-box:
+      From the <em>Preferences > General > Editors > File Association</em> page, you can now define an editor selection
+      strategy for unassociated file types. Three strategies are proposed out-of-the-box:
       <ul>
-        <li><em>System Editor</em> (Default) will open the System Editor associated with the file, if available. If no system editor
-          is associated with the given file, it will fail back to the default text editor</li>
-        <li><em>Text Editor</em> will always open Eclipse's default text editor on unknown file types.</li>
+        <li><em>System Editor; if none: Text Editor</em> (Default) will open the System Editor associated with the file, if available. If no system editor
+          is associated with the given file, it will fail back to the Text Editor</li>
+        <li><em>Text Editor</em> will always open Eclipse's Text Editor on unassociated file types.</li>
         <li><em>Ask via pop-up</em> will open the same dialog as using <em>Open With</em> on a file and let user choose which
           editor to use (inside or outside the IDE)</li> 
       </ul>
      <p>
-      Keep in mind that in any case, it's possible to assign an editor for an unknown file-type either via this same preference page,
+      Keep in mind that in any case, it's possible to assign an editor for an unassociated  file type either via this same preference page,
       or with the <em>Open With...</em> context-menu on the file.
      </p>
      <p>
