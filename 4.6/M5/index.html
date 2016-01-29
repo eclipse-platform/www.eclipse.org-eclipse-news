@@ -22,7 +22,6 @@
   <li><a href="#JDT">JDT</a></li>
   <li><a href="#PDE">PDE</a></li>
   <li><a href="#Platform-Dev">Platform Developers</a></li>
-  <li><a href="#Equinox">Equinox</a></li>
 </ul>
 
 <table class="news">
@@ -32,145 +31,17 @@
   </colgroup>
 
   <tr>
-    <td id="Instructions" class="section" colspan="2">
-      <h2>Instructions</h2>
-    </td>
-  </tr>
-
-  <tr id="item-name">
-    <td class="title">News item title and description</td>
-    <td class="content">
-        The whole entry should be a blurb pitched to the Eclipse end user community
-        (not just to members of the Eclipse Platform development team).
-      <p>
-        The title should be written in <a href="https://en.wikipedia.org/wiki/Letter_case#Case_styles">sentence style</a>.
-        The title should <em>not</em> use trailing
-        punctuation and a unique id attribute on the &lt;tr&gt; HTML element.
-      </p>
-      <p>
-        In the news description tell
-        users about changes they'll see in the UI. Tell component writers
-        about changes they'll see at the client- and server-side APIs. Try to
-        generate some excitement; save the boring details for the manual; be short and don't repeat yourself. The
-        description should be complete sentences, with trailing punctuation.
-      </p>
-      <p>Make the entry self-contained and mention API classes.
-        Do <em>not</em> link to bugs and don't promote individuals or third-party products.
-      </p>
-      <p>Use active voice (say "you", not "the user"), and follow other advice in the
-        <a href="http://wiki.eclipse.org/Eclipse_Doc_Style_Guide#topic-content">Topic&nbsp;Content</a>
-        section of the Eclipse Doc Style Guidelines.
-      </p>
-      <p>Stick to the default font and size. Make command names (<b>Quick Fix</b>),
-        keyboard shortcuts (<b>Ctrl+1</b>), and preference page paths
-        (<b>Preferences &gt; General &gt; Keys</b>) bold.
-      </p>
-      <p>Do <em>not</em> enclose the first paragraph of an item in <code>&lt;p&gt;&lt;/p&gt;</code> tags.
-      </p>
-      <p>See entries in published news documents for correct examples. These published news entries have been already reviewed, while
-         entries in the evolving document may still contain errors.
-      </p>
-    </td>
-  </tr>
-
-  <tr id="screenshots">
-    <td class="title">Screenshots</td>
-    <td class="content">
-        If a small image sheds light, place it below the description, in a separate
-        paragraph. As the majority of the Eclipse users uses Windows 7, regular screen snapshots
-        should be done on Windows 7 if possible, but screenshots from
-        other operating system are also acceptable. Crop
-        out any extraneous stuff to focus the reader's attention on your new
-        feature. The image should be
-        <b>no more than 520 pixels wide</b> and in <b>PNG</b> format (as opposed
-        to GIF, TIF, BMP, or JPG). Use PNG-8 if your image doesn't have a lot of color,
-        or PNG-24 if the screen shot uses enough color to warrant additional color depth.
-        See also the
-        <a href="http://wiki.eclipse.org/Eclipse_Doc_Style_Guide#graphics">Graphics</a>
-        section of the Eclipse Doc Style Guidelines.
-      <p>The Windows <b>Snipping Tool</b> actually saves to PNG on Windows 7 and can easily be
-        used to crop and save screenshots:</p>
-      <ul>
-        <li>Arrange the windows for the shot</li>
-        <li>Use the Windows <b>Snipping Tool</b> to capture part of the screen</li>
-        <li>Use <b>File &gt; Save As</b> to save the screenshot as a PNG</li>
-        <li>Overlays such as red circles or boxes to call out details can be done using Microsoft Paint</li>
-      </ul>
-      <p>Name the file in a way that is appropriate and specific to the item
-        (e.g., key-bindings.png, rather than something generic like image.png).
-        Use all <b>lowercase</b> letters in the image file name, including the &quot;<b>.png</b>&quot;
-        file extension. As a separator, use <b>hyphen</b> &quot;-&quot; rather than
-        underscore
-        &quot;_&quot;. </p>
-      <p>Put all the images in a sibling directory named &quot;images&quot;.
-        This gives XHTML like:<br/>
-        <code>&lt;img src=&quot;images/foo-view.png&quot; alt=&quot;&quot;/&gt;</code><br/>
-        Include a suitable <a href="http://www.w3.org/TR/html4/struct/objects.html#h-13.8"><code>alt</code></a> attribute.
-        The alt text should be empty ("") if the image just illustrates the text.
-        Only use the alt text to add information that is not accessible if the page is rendered without images.
-        Don't write <code>alt="Screenshot of <i>the XY dialog</i>"</code>. Blind users shouldn't have to skip useless repetitions.</p>
-      <p>If the <code>alt</code> attribute text cannot sufficiently replace the image contents
-        (e.g. for a screenshot that shows source code), then enclose the img element in a link
-        to a plain &quot;.txt&quot; file with the same name as the image:<br/>
-        <code>&lt;a href=&quot;images/foo-view.txt&quot;&gt;&lt;img ...</code></p>
-      <p>The images should be left-justified (as opposed to centered). Do not embed the width and height of the image.</p>
-      <p>
-        <img src="https://www.eclipse.org/artwork/images/v2/logo-800x188.png" alt="" />
-      </p>
-      <script type="text/javascript">
-      //<![CDATA[
-      document.addEventListener('load', function markOversizedImages() {
-        var imgs = document.getElementsByTagName("img");
-        for (var i = 0; i < imgs.length; i++) {
-          var img = imgs[i];
-          var w = window.getComputedStyle(img, null).getPropertyValue("width");
-          if (parseInt(w, 10) > 520) {
-            img.style.width = "300px";
-            var filter = "sepia(0.5) blur(2px)";
-            img.style.filter = filter;
-            img.style.webkitFilter = filter;
-            var msg = document.createElement("div");
-            msg.innerHTML = "Image too big. See Instructions &gt; <a href='#screenshots'>Screenshots</a>.<br>"
-                + img.getAttribute("src") + ": width=" + w;
-            msg.style.color = "red";
-            msg.style.fontWeight = "bold";
-            img.parentElement.insertBefore(msg, img);
-          }
-        }
-      }, true);
-      //]]>
-      </script>
-    </td>
-  </tr>
-  <tr id="validation">
-    <td class="title">Validation</td>
-    <td class="content">
-        Use the W3C <a href="http://validator.w3.org/#validate_by_input">XHTML
-        Markup Validation Service</a> to check your document's markup before
-        submitting.
-    </td>
-  </tr>
-   <tr id="css">
-    <td class="title">CSS styling</td>
-    <td class="content">
-        Do <em>not</em> change the style.css file without consulting with the Eclipse Platform project lead. The news entries are
-        aggregated at the end of the development cycle and the CSS files need to be aligned.
-    </td>
-  </tr>
-
-
-  <tr>
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
 
   <tr id="workspace-launcher-platform">
-    <td class="title">Ability to directly start previous selected workspaces in the launcher</td>
+    <td class="title">Directly start previously selected workspaces in the launcher</td>
     <td class="content">
-      The workspace selection dialog allows to start a previous selected 
+      The workspace selection dialog now allows you to start a previously selected 
       workspace directly via a link. The path to 
-      the workspace is shorted. The full path is available, if you hover over the link.
+      the workspace is shortened. The full path is available if you hover over the link.
       <p>
-      You can also remove  existing entries via a context menu.
+      You can remove existing entries via the context menu.
      </p>
      <p>
       <img src="images/recent-workspace-launcher.png" alt="" />
@@ -178,19 +49,44 @@
     </td>
   </tr>
   
+  <tr id="text-editor-selection-strategy">
+    <td class="title">Selecting the text editor for unassociated file types</td>
+    <td class="content">
+      On the <b>Preferences &gt; General &gt; Editors &gt; File Association</b> page, you can now define an editor selection
+      strategy for unassociated file types. Three strategies are proposed out-of-the-box:
+      <ul>
+        <li><b>System Editor; if none: Text Editor</b> (default) will open the system editor associated with the file, if available. If no system editor
+          is associated with the given file, fall back to the Eclipse Text Editor</li>
+        <li><b>Text Editor</b> will always open Eclipse's Text Editor on unassociated file types</li>
+        <li><b>Ask via pop-up</b> will open the same dialog as using <b>Open With &gt; Other...</b> on a file and let you choose which
+          editor to use (inside or outside the IDE)</li> 
+      </ul>
+     <p>
+      Keep in mind that in any case, it's possible to assign an editor for an unassociated file type either via this same preference page,
+      or via the <b>Open With &gt; Other...</b> context-menu on the file.
+     </p>
+     <p>
+      The implementation comes with a new extension-point <code>org.eclipse.ui.ide.unknownEditorStrategy</code>
+      that allows external contributions of additional strategies.
+     </p>
+     <p>
+       <b>Note:</b> Problems were found with the <b>Ask via pop-up</b> strategy. We'll fix them in M6.
+     </p>
+    </td>
+  </tr>
+  
   <tr id="mac-default-theme-enhancement">
     <td class="title">Improvements in the Mac default theme</td>
     <td class="content">
-      The background color of the toolbar and the resize icon of 
-      the Quick Access box in the Mac default theme was adjusted to align with other Mac applications. 
+      The look of the toolbar in the Mac default theme was adjusted to align with other Mac applications.
      <p>
-      The styling before this change is depicted in the following screenshot.
+      Old styling:
      </p> 
      <p>
       <img src="images/mac-theme-old-toolbar.png" alt="" />
     </p>
      <p>
-      The new toolbar styling is demonstrated in the next screenshot.
+      New toolbar styling:
      </p> 
       <p>
       <img src="images/mac-theme-new-toolbar.png" alt="" />
@@ -198,43 +94,17 @@
     </td>
   </tr>
   
-  <tr id="text-editor-selection-strategy">
-    <td class="title">Selecting the text editor for unassociated file types</td>
-    <td class="content">
-      From the <em>Preferences > General > Editors > File Association</em> page, you can now define an editor selection
-      strategy for unassociated file types. Three strategies are proposed out-of-the-box:
-      <ul>
-        <li><em>System Editor; if none: Text Editor</em> (Default) will open the System Editor associated with the file, if available. If no system editor
-          is associated with the given file, it will fail back to the Text Editor</li>
-        <li><em>Text Editor</em> will always open Eclipse's Text Editor on unassociated file types.</li>
-        <li><em>Ask via pop-up</em> will open the same dialog as using <em>Open With</em> on a file and let user choose which
-          editor to use (inside or outside the IDE)</li> 
-      </ul>
-     <p>
-      Keep in mind that in any case, it's possible to assign an editor for an unassociated  file type either via this same preference page,
-      or with the <em>Open With...</em> context-menu on the file.
-     </p>
-     <p>
-      The implementation comes with a new extension-point to allow contribution of additional strategies. The extension-point id is
-      <em>org.eclipse.ui.ide.unknownEditorStrategy</em>. User's choice is stored as a Preference whose value is the id of the selected
-      strategy as defined in the contributing extension. So it's possible for extenders to tweak this value in their packages via
-      <em>plugin_customization.ini</em> or other standard mechanisms to modify preferences.
-      </p>
-    </td>
-  </tr>
-  
   <tr id="perspective-switcher-default-display">
-    <td class="title">Perspective names are hidden by default in the perspective switcher</td>
+    <td class="title">Perspective names hidden by default</td>
     <td class="content">
-		To save space in the toolbar, the perspective switcher default has been changed to show only the icons of the perspective. 
-		You can activate the text again via the content menu.
-	   <p>The new default is shown in the first screenshot, the second screenshot shows the perspective switcher with activated text.
-       </p>
-	  
-	  <p>
+      To save space in the toolbar, the perspective switcher has been changed to show only the icons of perspectives by default.
+      You can show the text again via the context menu.
+      <p>New default:</p>
+      <p>
         <img src="images/perspective-switcher-notext.png" alt=""/>
-      </p>	  
-       <p>
+      </p>
+      <p>Old default:</p>
+      <p>
         <img src="images/perspective-switcher-withtext.png" alt=""/>
       </p>
       
@@ -242,9 +112,12 @@
   </tr>
 
   <tr id="date-variable-format">
-    <td class="title">The 'date' template variable allows to specify the format</td>
+    <td class="title">'date' template variable with custom format</td>
     <td class="content">
-     The 'date' variable, used in editor templates, now allows to specify which format is used when inserting the current date.
+     The 'date' variable, supported in editor and code templates, now allows you to specify which format to use when inserting the current date (or time).
+     <p>
+       <img src="images/date-variable-format.png" alt="Example: ${d:date('EEEE dd MM yyyy HH:mm:ss', 'fr_CH')}"/>
+     </p>
     </td>
   </tr>
 
@@ -254,9 +127,9 @@
   </tr>
 
   <tr id="code-completion-highlighting">
-    <td class="title">Content assist highlights the matching pattern</td>
+    <td class="title">Content Assist highlights matched characters</td>
     <td class="content">
-      Content assist popup now highlights the matching pattern in proposals.
+      The Content Assist popup now highlights the matched characters in proposals.
       <p>
         <img src="images/code-completion-highlighting.png" alt=""/>
       </p>
@@ -266,13 +139,14 @@
   <tr id="substring-code-completion">
     <td class="title">Substring code completion</td>
     <td class="content">
-      Code completion now supports substring patterns. It allows you to enter any part of the desired proposal's text while invoking the content assist.
+      Content Assist now supports substring patterns. Enter any part of the desired proposal's text, and Content Assist will find it!
       For example, completing on <code>selection</code> proposes all results containing <code>selection</code> as a substring.
       <p>
-        <img src="images/substring-code-completion.png" alt=""/>
+        <img src="images/substring-code-completion.png" alt="Popup with proposals like addSelectionListener(..), getSelection(), etc."/>
       </p>      
       <p>
-        This support can be disabled using the <b>Show substring matches</b> preference on the <b>Java &gt; Editor &gt; Content Assist</b> preference page.
+        This feature can be disabled using the <b>Show substring matches</b> option on the
+        <b>Java &gt; Editor &gt; Content Assist</b> preference page.
       </p>
     </td>
   </tr>
@@ -288,18 +162,20 @@
   </tr>
 
   <tr id="configure-problem-severity">
-    <td class="title">Quick fix to configure problem severity</td>
+    <td class="title">Quick Fix to configure problem severity</td>
     <td class="content">
      You can now configure the severity of a compiler problem by invoking the new <b>Quick Fix (Ctrl+1)</b> which opens the <b>Java &gt; Compiler &gt; Errors/Warnings</b>
      preference page and highlights the configurable problem.
       <p>
         <img src="images/configure-problem-severity.png" alt=""/>
       </p>
+     The Quick Fix icon may look familiar to you. In older Eclipse versions, this was a toolbar button in enriched hovers
+     (i.e., you had to press F2 or move the mouse into the hover to see it). 
     </td>
   </tr>
 
   <tr id="configure-null-annotations">
-    <td class="title">Support for multiple sets of null annotations</td>
+    <td class="title">Multiple sets of null annotations</td>
     <td class="content">
      You can now configure annotation-based null analysis to use multiple sets of annotation types.
      This is relevant if your project uses 3rd party libraries that already use null annotations in their API,
@@ -312,15 +188,15 @@
         <img src="images/prefs-errors-warnings.png" alt=""/>
       </p>
       <p>In the dialog that opens, only one <em>primary</em> set of annotations is supported &mdash;
-        these are the annotations which JDT actively uses in quick fixes, error messages etc.
+        these are the annotations which JDT actively uses in Quick Fixes, error messages etc.
         These annotations must be present on the project's build path.
       </p>
       <p>	
       	You can now add an arbitrary number of <em>secondary</em> null annotation types,
       	to be evaluated when reading class files external to the project.
-      	Within the configuration dialog, content assist is offered based on accessible annotation types,
+      	Within the configuration dialog, Content Assist is offered based on accessible annotation types,
       	but for secondary annotation types unresolved names will be tolerated.
-      	This avoids the need to bloat the build path with transitive compile-time depedencies.
+      	This avoids the need to bloat the build path with transitive compile-time dependencies.
       	</p> 
       <p>
         <img src="images/annotation-selection.png" alt=""/>
@@ -351,38 +227,49 @@
   </tr>
 
   <tr id="handlerutil-structured-selection">
-    <td class="title">API for getting the structured selection from HandlerUtil</td>
+    <td class="title">API to get the structured selection</td>
     <td class="content">
-     The <code>HandlerUtil#getCurrentStructuredSelection(event)</code>
-     API has been added to access a structured selection from a handler. Compared to 
+     The <code>org.eclipse.ui.handlers.HandlerUtil#getCurrentStructuredSelection(event)</code>
+     API has been added to allow easy access to an <code>IStructuredSelection</code> from a handler. Compared to 
      <code>HandlerUtil#getCurrentSelection(event)</code> this removes the need to cast and check for 
      null.
+    </td>
+  </tr>
+
+  <tr id="listenerlist">
+    <td class="title">ListenerList generified</td>
+    <td class="content">
+      <code>org.eclipse.core.runtime.ListenerList</code> has been generified and now implements <code>Iterable&lt;E&gt;</code>.
+      <p>Due to Java type system constraints, <code>ListenerList#getListeners()</code> still returns <code>Object[]</code>.
+      Clients should not only add type arguments to the ListenerList, but also convert usages of <code>#getListeners()</code>
+      to an enhanced <code>for</code> loop, thereby taking advantage of the type-safe <code>#iterator()</code>.</p>
+      <p>Old:</p>
+      <pre>ListenerList fInputChangeListeners = new ListenerList();
+...
+Object[] listeners= fInputChangeListeners.getListeners();
+for (int i= 0; i &lt; listeners.length; i++) {
+	((IInputChangedListener) listeners[i]).inputChanged(fInput);
+}</pre>
+      <p>New:</p>
+      <pre>ListenerList&lt;IInputChangedListener&gt; fInputChangeListeners = new ListenerList&lt;&gt;();
+...
+for (IInputChangedListener listener : fInputChangeListeners) {
+	listener.inputChanged(fInput);
+}</pre>
     </td>
   </tr>
 
   <tr id="text-direction-setting">
     <td class="title">SWT Control and Custom Control Examples support setting the text direction</td>
     <td class="content">
-     Now there is support for specifying text direction in SWT Control and Custom Control Examples.
-      <a href="https://www.eclipse.org/eclipse/news/4.6/M4/#auto-text-direction">Support for AUTO text direction</a>
-      for SWT widgets was introduced in Eclipse 4.6 M4 milestone.
+      Options to specify the text direction were added to the SWT Control and Custom Control Examples.
+      Support for the <a href="https://www.eclipse.org/eclipse/news/4.6/M4/#auto-text-direction">AUTO text direction</a>
+      for SWT widgets was introduced in the Eclipse 4.6 M4 milestone.
       <p>
         <img src="images/text-direction.png" alt=""/>
       </p>
     </td>
   </tr>
-
-  <tr>
-    <td colspan="2" class="section" id="Equinox">Equinox</td>
-  </tr>
-
-  <tr id="first-item-equinox">
-    <td class="title">First item</td>
-    <td class="content">
-      Item blurb.
-    </td>
-  </tr>
-
 
   <tr>
     <td colspan="2"/>
