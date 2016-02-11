@@ -164,8 +164,20 @@
   <tr>
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
-
-	<tr id="word-selection-default-value">
+  
+  <tr id="javax-annotation-package-dependency">
+    <td class="title">Imports of the javax.annotation package no longer require a minimum version</td>
+    <td class="content">
+    	Plug-ins no longer require specifying a minimum package version when importing the <code>javax.annotation</code> package. 
+    	The Eclipse runtime will resolve all components to the same version (JVM or provided by the Eclipse platform). 
+    	<p>
+    	This avoids a common error in Eclipse RCP implementations in which <code>@PostConstruct</code> 
+    	was resolved to different classes in the bundle classpath.
+    	This change is backwards compatible, i.e., a dependency with a minimum version still works correctly.
+    	</p>
+    </td>
+  </tr>
+  <tr id="word-selection-default-value">
     <td class="title">'word_selection' template variable with default values</td>
     <td class="content">
      The 'word_selection' variable, supported in editor and code templates, now allows you to specify a default value to use if the current text selection is empty.
