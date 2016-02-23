@@ -183,6 +183,22 @@
      The 'word_selection' variable, supported in editor and code templates, now allows you to specify a default value to use if the current text selection is empty.
     </td>
   </tr>
+  <tr id="create-method-computed-value">
+    <td class="title">The creation of a ComputedValue is easier now</td>
+    <td class="content">
+	<p>The ComputedValue now provides a <code>create</code> method, which expects a <code>Supplier&lt;T&gt;</code>. So a lambda expression can be used to easily create a ComputedValue.</p> <p>E.g, 
+	<pre><code>IObservableValue&lt;Integer&gt; listSizeObservable =
+ 	ComputedValue.create(() -> observableList.size());</code></pre>
+	 or <pre><code>IObservableValue&lt;String&gt; fullNameObservable =
+ 	ComputedValue.create(() -> personFirstNameObservable.getValue() + " "
+		 + personLastNameObservable.getValue());</code></pre>
+	</p>
+	<p>
+	Please remember that the Supplier's get method must be a TrackedGetter. See ObservableTracker's <code>getterCalled(IObservable)</code> method for details.
+	</p>
+
+    </td>
+  </tr>
 
 
   <tr>
