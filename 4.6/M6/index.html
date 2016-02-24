@@ -186,18 +186,20 @@
   <tr id="create-method-computed-value">
     <td class="title">New factory method for the creation of a ComputedValue</td>
     <td class="content">
-	<p>A <code>ComputedValue</code> is able to compute custom values from other tracked getter inside its abstract <code>calculate</code> method.</p> 
-	<p>Before this patch it was necessary to derive from ComputedValue, but the new <code>create</code> method, which expects a <code>Supplier&lt;T&gt;</code>, makes it possible to create an instance by using a lambda expression.</p> <p>E.g, 
-	<pre><code>IObservableValue&lt;Integer&gt; listSizeObservable =
- 	ComputedValue.create(() -> observableList.size());</code></pre>
-	 or <pre><code>IObservableValue&lt;String&gt; fullNameObservable =
- 	ComputedValue.create(() -> personFirstNameObservable.getValue() + " "
-		 + personLastNameObservable.getValue());</code></pre>
-	</p>
-	<p>
-	More details about tracked getter can be found in the ObservableTracker's <code>getterCalled(IObservable)</code> method. Almost every IObervable's get methods are tracked getter. 
-	</p>
-
+		A <code>ComputedValue</code> is able to compute custom values from other tracked getters inside its <code>calculate</code> method.
+	 	<p>Before this change you had to derive from <code>ComputedValue</code>, but the new <code>create</code> method, which expects a <code>Supplier&lt;T&gt;</code>
+		allows you to create an instance of it by using a lambda expression.</p> <p>E.g, 
+		</p>
+		<pre>IObservableValue&lt;Integer&gt; listSizeObservable =
+ 		ComputedValue.create(() -> observableList.size());</pre>
+	 	or 
+	 	<pre>IObservableValue&lt;String&gt; fullNameObservable =
+ 		ComputedValue.create(() -> personFirstNameObservable.getValue() + " "
+		 + personLastNameObservable.getValue());</pre>
+	
+		<p>
+		More details about tracked getter can be found in the ObservableTracker's <code>getterCalled(IObservable)</code> method. Almost every IObervable's get methods are tracked getter. 
+		</p>
     </td>
   </tr>
 
