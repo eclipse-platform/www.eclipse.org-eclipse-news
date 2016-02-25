@@ -223,10 +223,43 @@
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
 
-  <tr id="first-item-pde">
-    <td class="title">First item</td>
+  <tr id="ds-annotations">
+    <td class="title">Support for OSGi Declarative Services Annotations</td>
     <td class="content">
-      Item blurb.
+    	When enabled, PDE automatically generates and updates Declarative Services component 
+    	descriptor files from appropriately annotated Java source. This is done without requiring 
+    	any additional builder to be configured in your project.
+    	<p>
+    	OSGi Declarative Services provide a powerful mechanism for developing complex, service-oriented
+    	applications. With proper tooling, annotations, which were added to Declarative Services
+    	in version 1.2, make it easy to generate and maintain the required component descriptor files.
+    	</p>
+    	<p>
+    	When you annotate your component implementation classes with <code>@Component</code>, and any
+    	reference bind methods with <code>@Reference</code>, PDE will validate your annotations
+    	and generate the corresponding component descriptor files. Any errors discovered during validation
+    	are highlighted and reported.
+    	</p>
+    	<p>
+			<img src="images/ds-annotations.png" alt="" />
+    	</p>
+    	<p>
+    	In addition, PDE will also maintain the project's MANIFEST.MF and build.properties file
+    	-- generated component descriptor files are automatically added to the manifest
+    	and included in the build.
+		</p>
+    </td>
+  </tr>
+  <tr id="ds-annotations-template">
+    <td class="title">Updated OSGi Declarative Services Example</td>
+    <td class="content">
+    	The OSGi Declarative Services Example now uses annotations.
+    	<p>
+    	Instead of creating a Component Definition file for each component class and adding it
+    	to the manifest and build.properties, the wizard creates component classes annotated with
+    	the appropriate DS annotations, which are then used by PDE to automatically generate
+    	the corresponding component descriptor files.  
+		</p>
     </td>
   </tr>
 
