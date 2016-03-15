@@ -218,6 +218,69 @@
     </td>
   </tr>
 
+  <tr id="null-analysis-generics">
+    <td class="title">Improved null analysis with generics</td>
+    <td class="content">
+      The interplay of null annotations and generics has been improved in several regards.
+      <p>
+      The basic concepts had already been documented in the 
+      <a href="http://help.eclipse.org/topic/org.eclipse.jdt.doc.user/tasks/task-using_null_type_annotations.htm%3Fcp=1_3_9_1_0%23generics">online help</a>,
+      but not all that was documented was actually checked by JDT's null analysis. With the changes outlined below,
+      null analysis based on type annotations is even more capable than previous versions.
+      </p>
+      <p><b>(1)</b> The <b>first batch of contributed improvements</b> implements what we call "pessimistic analysis for free type variables",
+      	which affects <em>implementors</em> of generic types.
+      </p>
+      <p><a href="images/MyGenericImpl.java.txt"><img src="images/pessimistic-analysis.png" alt=""/></a></p>
+      <p>In order to allow clients to instantiate such a generic class with either a <code>@NonNull</code> or a <code>@Nullable</code> type
+      as substitution for the "free type variable" <code>&lt;T></code>, the implementation of that class must account for the worst in both directions:
+      </p>
+      <ul>
+      <li>To anticipate a <code>@NonNull</code> type, each field typed to a free type variable must be initialized with a non-null value, and
+      	passing <code>null</code> where <code>T</code> is expected is illegal</li>
+      <li>To anticipate a <code>@Nullable</code> type, each dereference must be preceded by a null check.</li>
+      </ul>
+      <p>
+      At the bottom of each problem hover you will find a link to the corresponding configuration option,
+      should you like to change the severity of this diagnostic. Note that configurability is mainly
+      given for smooth migration from previous JDT version; conceptually, problems detected by pessimistic
+      analysis should be treated as errors, because they invalidate the null-guarantees given by a generic type.
+      </p>
+      <img src="images/configure-pessimistic-analysis.png" alt="configuration options for new diagnostics"/>
+      <p><b>(2)</b> The <b>second improvement</b> concerns <em>consumption</em> of generic types from a library, more specifically:
+      	invocations of library method whose return type is given by a free type variable.<br/>
+      	If the library type is instantiated with a <code>@NonNull</code> type as the type argument,
+      	we generally want to interpret the mentioned return type as non-null, too.
+      	This is problematic only for some "legacy" methods, which may return <code>null</code> without declaring so.
+      	The most prominent example is <code>java.util.Map.get(K)</code> (see also the news entry on
+      	<a href="https://www.eclipse.org/eclipse/news/4.5/jdt.php#external-annotations">external annotations</a>,
+      	which also demonstrates the clean solution to this issue).
+      </p>
+      <p>The analysis cannot see whether absence of a null annotation for such a return type is intentional
+      (in the above sense of "free type variables"), or an omission that should be fixed.
+      For that reason a new warning has been implemented to alert about this situation.
+      </p>
+      <a href="images/Client.java.txt"><img src="images/unsafe-nonnull-interpretation.png" alt=""/></a>
+      <p>In the above example, both fields <code>list</code> and <code>map</code> provide <code>@NonNull String</code> as a
+      type argument, hence the return types of both <code>get</code> methods are interpreted as non-null.
+      For <code>List</code> this is desired, for <code>Map</code> it is a bug.
+      </p>
+      <p>The dilemma can be resolved by adding a (possibly empty) external annotation file (<code>.eea</code>)
+      to each affected library class. By using an empty annotation file, the user signals that all types
+      in this class should be interpreted verbatim (like in the <code>List</code> case - use with care).
+      In the other case the missing <code>@Nullable</code> annotation should be added as an external annotation
+      (like in the <code>Map</code> case).
+      </p>
+      <p>In a project that is not yet configured to use external annotations for the library in question,
+      the warning is demoted to level "information". Generally, the severity of this problem is configured
+      using the option right below the one mentioned above, titled <b>Unsafe '@NonNull' interpretation
+      of free type variable from library</b>.</p>
+      <p><b>(3)</b> <b>Finally</b>, a small utility class, <code>org.eclipse.jdt.annotation.Checks</code>, 
+      has been included in the bundle <code>org.eclipse.jdt.annotation_2.1.0</code>
+      containing helper methods for typical idioms for improving and documenting null safety.</p>
+    </td>
+  </tr>
+
 
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
