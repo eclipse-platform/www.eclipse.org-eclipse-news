@@ -411,6 +411,7 @@
       Item blurb.
     </td>
   </tr>
+  
   <tr id="swt-high-dpi-api">
     <td class="title">New SWT APIs for high-DPI purpose.</td>
     <td class="content">
@@ -428,6 +429,29 @@
       <li><code>Image#getImageData()</code> - Returns <code>ImageData</code> at 100% OS zoom</li>
       <li><code>Image#getBounds()</code> - Returns image bounds at 100% OS zoom</li>
      </ul>
+    </td>
+  </tr>
+  
+  <tr id="swt-requires-java7">
+   <td class="title">SWT requires 1.7 Java runtime</td>
+    <td class="content">
+  		SWT projects are now compiled at 1.7 compliance level. As a result, a Java Runtime of
+  		1.7 or above is required to run the SWT applications.
+    </td>
+  </tr>
+  
+  <tr id="link-api">
+    <td class="title">API added to set the Link color</td>
+    <td class="content">
+    	A new API <code>Link#setLinkForeground(Color)</code> has been added in SWT to set the 
+    	foreground color of the hyperlink text in a Link widget.
+    	<p>
+    	The corresponding getter <code>Link#getLinkForeground()</code> has been added which returns 
+    	the foreground color of the hyperlink text in the Link widget.
+    	</p>
+    	<p>
+    	For an example, see <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet182.java">Snippet182</a>.
+    	</p>
     </td>
   </tr>
 
