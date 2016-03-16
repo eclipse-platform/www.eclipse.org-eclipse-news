@@ -203,14 +203,21 @@
     </td>
   </tr>
   <tr id="swt-high-dpi">
-    <td class="title">SWT high-DPI monitor support</td>
+    <td class="title">SWT 'autoScale' feature for high-dpi purpose</td>
     <td class="content">
     <p>
-    In continuation to the high-dpi enhancements done in last release <a href="https://www.eclipse.org/eclipse/news/4.5/M6/#high-dpi">4.5 M6</a>...
+    In continuation to the high-dpi enhancements done in last release <a href="https://www.eclipse.org/eclipse/news/4.5/M6/#high-dpi">4.5 M6</a>...<br/>
     SWT toolkit now inherently supports high-dpi monitors on Windows and Linux, 
     in a way much similar to what is currently supported on MAC OS, for more details refer bugzilla enhancement request <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=479614">bug 479614</a>
     </p><p>
     In absence of high-dpi images, now SWT autoScales the images, layouts and other widget dimensions to make sure Eclipse/SWT based applications look in proportion to the screen size.
+    </p>
+    <p>
+    <b>Note:</b> By default, 'autoScale' feature is enabled on Windows and GTK platform.<br/>
+    This feature can be disable by setting below VM argument to 'false' in eclipse.ini or Run-configuration as below:<br/>
+    </p>
+    <p>
+    -Dswt.enable.autoScale=false
     </p>
     </td>
   </tr>
