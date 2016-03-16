@@ -202,7 +202,18 @@
 		</p>
     </td>
   </tr>
-
+  <tr id="swt-high-dpi">
+    <td class="title">SWT high-DPI monitor support</td>
+    <td class="content">
+    <p>
+    In continuation to the high-dpi enhancements done in last release <a href="https://www.eclipse.org/eclipse/news/4.5/M6/#high-dpi">4.5 M6</a>...
+    SWT toolkit now inherently supports high-dpi monitors on Windows and Linux, 
+    in a way much similar to what is currently supported on MAC OS, for more details refer bugzilla enhancement request <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=479614">bug 479614</a>
+    </p><p>
+    In absence of high-dpi images, now SWT autoScales the images, layouts and other widget dimensions to make sure Eclipse/SWT based applications look in proportion to the screen size.
+    </p>
+    </td>
+  </tr>
 
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
@@ -378,7 +389,25 @@
       Item blurb.
     </td>
   </tr>
-
+  <tr id="swt-high-dpi-api">
+    <td class="title">New SWT APIs for high-DPI purpose.</td>
+    <td class="content">
+    <p>
+    Below is the list of new SWT APIs add for high-dpi purpose:
+    </p>
+     <ul>
+      <li><code>Image#getImageDataAtCurrentZoom()</code> - Returns <code>ImageData</code> at current OS zoom</li>
+      <li><code>Image#getBoundsInPixels()</code> - Returns image bounds in pixels</li>
+     </ul>
+     <p>
+     Note using below list of existing APIs is not recommended for use at high-dpi purpose.
+     </p>
+     <ul>
+      <li><code>Image#getImageData()</code> - Returns <code>ImageData</code> at 100% OS zoom</li>
+      <li><code>Image#getBounds()</code> - Returns image bounds at 100% OS zoom</li>
+     </ul>
+    </td>
+  </tr>
 
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
