@@ -202,22 +202,26 @@
 		</p>
     </td>
   </tr>
-  <tr id="swt-high-dpi">
-    <td class="title">SWT 'autoScale' feature for high-dpi purpose</td>
+  <tr id="swt-autoscale">
+    <td class="title">SWT provides resolution based autoScaling support</td>
     <td class="content">
     <p>
-    In continuation to the high-dpi enhancements done in last release <a href="https://www.eclipse.org/eclipse/news/4.5/M6/#high-dpi">4.5 M6</a>...<br/>
-    SWT toolkit now inherently supports high-dpi monitors on Windows and Linux, 
-    in a way much similar to what is currently supported on MAC OS, for more details refer bugzilla enhancement request <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=479614">bug 479614</a>
+    This feature is a continuation of the High-DPI enhancements that were delivered in Mars release <a href="https://www.eclipse.org/eclipse/news/4.5/M6/#high-dpi">4.5</a>.</br>
+    SWT toolkit now inherently supports autoscaling of images on High-DPI monitors on Windows and Linux, similar to the OS support provided on Mac OSX. 
+    In the absence of high resolution images, SWT will auto-scale the images, layouts and widgets to ensure that Eclipse/SWT based applications are scaled proportionately to the DPI of the monitor.</br>
+    For details see: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=479614">bug 479614</a>
     </p><p>
-    In absence of high-dpi images, now SWT autoScales the images, layouts and other widget dimensions to make sure Eclipse/SWT based applications look in proportion to the screen size.
+    
     </p>
     <p>
-    <b>Note:</b> By default, 'autoScale' feature is enabled on Windows and GTK platform.<br/>
-    This feature can be disable by setting below VM argument to 'false' in eclipse.ini or Run-configuration as below:<br/>
+    <b>Note:</b> By default, autoScaling is enabled on Windows, GTK and Mac Cocoa.<br/>
+    This feature can be disabled on Windows & GTK by setting this VM argument to 'false' in eclipse.ini or Run-configuration:
     </p>
     <p>
-    -Dswt.enable.autoScale=false
+    <b>-Dswt.enable.autoScale=false</b>
+    </p>
+    <p>
+    Autoscaling cannot be disabled on Mac as it is provided by the OS.
     </p>
     </td>
   </tr>
@@ -412,23 +416,27 @@
     </td>
   </tr>
   
-  <tr id="swt-high-dpi-api">
-    <td class="title">New SWT APIs for high-DPI purpose.</td>
+  <tr id="high-dpi-api">
+    <td class="title">APIs added for High-DPI monitor support</td>
     <td class="content">
-    <p>
-    Below is the list of new SWT APIs add for high-dpi purpose:
-    </p>
-     <ul>
-      <li><code>Image#getImageDataAtCurrentZoom()</code> - Returns <code>ImageData</code> at current OS zoom</li>
-      <li><code>Image#getBoundsInPixels()</code> - Returns image bounds in pixels</li>
-     </ul>
-     <p>
-     Note using below list of existing APIs is not recommended for use at high-dpi purpose.
-     </p>
-     <ul>
-      <li><code>Image#getImageData()</code> - Returns <code>ImageData</code> at 100% OS zoom</li>
-      <li><code>Image#getBounds()</code> - Returns image bounds at 100% OS zoom</li>
-     </ul>
+    	<p>
+    	Two new APIs have added in SWT Image class to enable clients to improve their support for High-DPI monitors.
+    	</p>
+    	<ul>
+    	<li><code>Image#getImageDataAtCurrentZoom()</code>: Returns <code>ImageData</code> at current OS zoom</li>
+    	<li><code>Image#getBoundsInPixels()</code>: Returns image bounds in pixels</li>
+    	</ul>
+    	<p>
+    	The javadoc of the below Image APIs have been updated in the context of High-DPI support:
+    	</p>
+    	<ul>
+    	<li><code>Image#getImageData()</code> - Returns <code>ImageData</code> at 100% OS zoom</li>
+    	<li><code>Image#getBounds()</code> - Returns image bounds at 100% OS zoom</li>
+    	</ul>
+    	<p>
+    	Note: Clients should use <code>getImageDataAtCurrentZoom()</code> instead of <code>getImageData()</code> 
+    	to enable their applications to render correctly and efficiently on High-DPI monitors.
+    	</p>
     </td>
   </tr>
   
