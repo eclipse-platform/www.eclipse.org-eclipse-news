@@ -34,43 +34,13 @@
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
   
-  <tr id="javax-annotation-package-dependency">
-    <td class="title">Imports of the javax.annotation package no longer require a minimum version</td>
-    <td class="content">
-    	Plug-ins no longer require specifying a minimum package version when importing the <code>javax.annotation</code> package. 
-    	The Eclipse runtime will resolve all components to the same version (JVM or provided by the Eclipse platform). 
-    	<p>
-    	This avoids a common error in Eclipse RCP implementations in which <code>@PostConstruct</code> 
-    	was resolved to different classes in the bundle classpath.
-    	This change is backwards compatible, i.e., a dependency with a minimum version still works correctly.
-    	</p>
-    </td>
-  </tr>
   <tr id="word-selection-default-value">
     <td class="title">'word_selection' and 'line_selection' template variable with default values</td>
     <td class="content">
      The 'word_selection' and 'line_selection' variables, supported in editor and code templates, now allow you to specify a default value to use if the current text selection is empty.
     </td>
   </tr>
-  <tr id="create-method-computed-value">
-    <td class="title">New factory method for the creation of a ComputedValue</td>
-    <td class="content">
-		A <code>ComputedValue</code> is able to compute custom values from other tracked getters inside its <code>calculate</code> method.
-	 	<p>Before this change you had to derive from <code>ComputedValue</code>, but the new <code>create</code> method, which expects a <code>Supplier&lt;T&gt;</code>
-		allows you to create an instance of it by using a lambda expression.</p> <p>E.g, 
-		</p>
-		<pre>IObservableValue&lt;Integer&gt; listSizeObservable =
- 	ComputedValue.create(() -> observableList.size());</pre>
-	 	or 
-	 	<pre>IObservableValue&lt;String&gt; fullNameObservable =
- 	ComputedValue.create(() -> personFirstNameObservable.getValue() + " "
-	+ personLastNameObservable.getValue());</pre>
-	
-		<p>
-		More details about tracked getter can be found in the ObservableTracker's <code>getterCalled(IObservable)</code> method. Almost every IObervable's get methods are tracked getter. 
-		</p>
-    </td>
-  </tr>
+
   <tr id="swt-autoscale">
     <td class="title">SWT provides resolution based autoScaling support</td>
     <td class="content">
@@ -79,7 +49,7 @@
     In the absence of high resolution images, SWT will auto-scale the images, layouts and widgets to ensure that Eclipse/SWT based applications are scaled proportionately to the DPI of the monitor.
     <p>
     Refer, below screen-shot showing Eclipse icons 'Before' and 'After' SWT autoScale feature:
-    <img src="images/SWT-HighDPI-Support.png" alt="SWT-AutoScale-Feature" />
+    <img src="images/swt-high-dpi.png" alt="SWT-AutoScale-Feature" />
     </p><br/>
     <p>
     <b>Note:</b> By default, autoScaling is enabled on Windows, GTK and Mac Cocoa.<br/>
@@ -91,23 +61,6 @@
     <p>
     Autoscaling cannot be disabled on Mac as it is provided by the OS.
     </p>
-    </td>
-  </tr>
-  <tr id="mpart-runtime-closable-change">
-    <td class="title">Change closable attribute of a MPart at runtime</td>
-    <td class="content">
-		Calling the <code>setCloseable</code> method on a <code>MPart</code> instance will
-		now change the visibility of the close button for the corresponding part.
- 	<p>
-        <img src="images/closableStateCTabItem.png" alt="" />
-    </p>
-    </td>
-  </tr>
-  <tr id="e4-app-shutdown-started">
-    <td class="title">Shutdown started event is now fired for Eclipse 4 RCP applications</td>
-    <td class="content">
-		When Eclipse 4 RCP applications are about to shut down, the <code>UIEvents.UILifeCycle.APP_SHUTDOWN_STARTED</code> event will be fired now.
-		Previously, this only worked for Eclipse RCP applications running in the compatibility mode and mixed mode applications, which use both Eclipse 3 and 4 API.
     </td>
   </tr>
 
@@ -130,10 +83,9 @@
   <tr id="welcome-launchbar">
     <td class="title">Welcome Launchbar restored</td>
     <td class="content">
-        In Eclipse Platform 3.x, the <em>Go to Workbench</em> button
-        on the Welcome would minimize the Welcome to the window
-        status bar.  This behaviour has been restored in Eclipse
-        Platform 4.x.
+        In Eclipse 3.x, the <b>Go to Workbench</b> button
+        on the Welcome page would minimize the Welcome page to the window
+        status bar.  This behavior has been restored for Eclipse 4.6.
       <p>
         <img src="images/eclipse-welcome-launchbar.png" alt="" />
       </p>
@@ -148,10 +100,21 @@
   <tr id="open-from-clipboard-shortcut">
     <td class="title">Ctrl+Shift+V invokes Open from Clipboard</td>
     <td class="content">
-      <b>Ctrl+Shift+V</b> has been assigned to invoke <b>Open from Clipboard</b>.
+      <b>Ctrl+Shift+V</b> has been assigned to invoke
+      <b><a href="http://archive.eclipse.org/eclipse/downloads/drops/R-3.7-201106131736/eclipse-news-part2.html#JavaEditor">Open from Clipboard</a></b>.
       <p>
       On GTK+ this key binding was previously assigned to the <b>Display</b> command as a workaround for <b>Ctrl+Shift+D</b> not working.
       </p>
+    </td>
+  </tr>
+
+  <tr id="remove-redundant-type-arguments">
+    <td class="title">Clean Up to remove redundant type arguments</td>
+    <td class="content">
+      A new option to remove redundant type arguments has been added under the "Unnecessary Code" group of the Clean Up profile.
+	 	<p>
+          <img src="images/remove-redundant-type-arguments.png" alt="" />
+        </p>
     </td>
   </tr>
 
@@ -165,7 +128,7 @@
       but not all that was documented was actually checked by JDT's null analysis. With the changes outlined below,
       null analysis based on type annotations is even more capable than previous versions.
       </p>
-      <p><b>(1)</b> The <b>first batch of contributed improvements</b> implements what we call "pessimistic analysis for free type variables",
+      <p id="null-analysis-generics-1"><b>(1)</b> The <b>first batch of contributed improvements</b> implements what we call "pessimistic analysis for free type variables",
       	which affects <em>implementors</em> of generic types.
       </p>
       <p><a href="images/MyGenericImpl.java.txt"><img src="images/pessimistic-analysis.png" alt=""/></a></p>
@@ -178,14 +141,14 @@
       <li>To anticipate a <code>@Nullable</code> type, each dereference must be preceded by a null check.</li>
       </ul>
       <p>
-      At the bottom of each problem hover you will find a link to the corresponding configuration option,
+      At the bottom of each problem hover, you will find a link to the corresponding configuration option,
       should you like to change the severity of this diagnostic. Note that configurability is mainly
       given for smooth migration from previous JDT version; conceptually, problems detected by pessimistic
       analysis should be treated as errors, because they invalidate the null-guarantees given by a generic type.
       </p>
       <img src="images/configure-pessimistic-analysis.png" alt="configuration options for new diagnostics"/>
-      <p><b>(2)</b> The <b>second improvement</b> concerns <em>consumption</em> of generic types from a library, more specifically:
-      	invocations of library method whose return type is given by a free type variable.<br/>
+      <p id="null-analysis-generics-2"><b>(2)</b> The <b>second improvement</b> concerns <em>consumption</em> of generic types from a library, more specifically:
+      	invocations of library methods whose return type is given by a free type variable.<br/>
       	If the library type is instantiated with a <code>@NonNull</code> type as the type argument,
       	we generally want to interpret the mentioned return type as non-null, too.
       	This is problematic only for some "legacy" methods, which may return <code>null</code> without declaring so.
@@ -205,14 +168,14 @@
       <p>The dilemma can be resolved by adding a (possibly empty) external annotation file (<code>.eea</code>)
       to each affected library class. By using an empty annotation file, the user signals that all types
       in this class should be interpreted verbatim (like in the <code>List</code> case - use with care).
-      In the other case the missing <code>@Nullable</code> annotation should be added as an external annotation
+      In the other case, the missing <code>@Nullable</code> annotation should be added as an external annotation
       (like in the <code>Map</code> case).
       </p>
       <p>In a project that is not yet configured to use external annotations for the library in question,
       the warning is demoted to level "information". Generally, the severity of this problem is configured
       using the option right below the one mentioned above, titled <b>Unsafe '@NonNull' interpretation
       of free type variable from library</b>.</p>
-      <p><b>(3)</b> <b>Finally</b>, a small utility class, <code>org.eclipse.jdt.annotation.Checks</code>, 
+      <p id="null-analysis-generics-3"><b>(3)</b> <b>Finally</b>, a small utility class, <code>org.eclipse.jdt.annotation.Checks</code>, 
       has been included in the bundle <code>org.eclipse.jdt.annotation_2.1.0</code>
       containing helper methods for typical idioms for improving and documenting null safety.</p>
     </td>
@@ -222,24 +185,14 @@
     <td class="title">New options in code formatter</td>
     <td class="content">
       A few new options have been added in the formatter profile editor.
-      <p><b>(1)</b> In the <b>Line Wrapping</b> section you can control wrapping policy of <b>'for' loop headers</b>.</p>
+      <p><b>(1)</b> In the <b>Line Wrapping</b> section, you can control the wrapping policy of <b>'for' loop headers</b>.</p>
       <p><img src="images/formatter-wrap-for.png" alt="" /></p>
       <p><b>(2)</b> The <b>Align fields in columns</b> feature in the <b>Indentation</b> section can now be configured to
         <b>recognize groups separated by empty lines</b> and align them independently.</p>
       <p><img src="images/formatter-align-groups.png" alt="" /></p>
-      <p><b>(3)</b> In the <b>New lines</b> section you can control if new lines should be
+      <p><b>(3)</b> In the <b>New lines</b> section, you can control if new lines should be
         added <b>after annotations on enum constants</b>.</p>
       <p><img src="images/formatter-enum-constants.png" alt="" /></p>
-    </td>
-  </tr>
-
-  <tr id="remove-redundant-type-arguments">
-    <td class="title">Clean Up to remove redundant type arguments</td>
-    <td class="content">
-      A new option to remove redundant type arguments has been added under the "Unnecessary Code" group of the Clean Up profile.
-	 	<p>
-          <img src="images/remove-redundant-type-arguments.png" alt="" />
-        </p>
     </td>
   </tr>
 
@@ -273,8 +226,8 @@
     	and included in the build.
 		</p>
 		<p>
-		To enable this feature in your workspace, go to <b>Preferences &gt; Plug-in Development &gt; DS Annotations</b>
-		and check <b>Generate descriptors from annotated sources</b>.
+		To enable this feature, go to <b>Preferences</b> or <b>Project Properties &gt; Plug-in Development &gt; DS Annotations</b>
+		and check <b>Generate descriptors from annotated sources</b>. 
 		</p>
     </td>
   </tr>
@@ -311,6 +264,7 @@
 		<p>
 			<img src="images/pde-tracing-options-help.png" alt="" />
     	</p>
+    	The information gets extracted from comments in the declaring bundle's .options file.
     </td>
   </tr>
 
@@ -320,39 +274,46 @@
   </tr>
 
   <tr id="high-dpi-api">
-    <td class="title">APIs added for High-DPI monitor support</td>
+    <td class="title">APIs for high-DPI monitor support</td>
     <td class="content">
-    	Two new APIs have added in SWT Image class to enable clients to improve their support for High-DPI monitors.
-    	<ul>
-    	<li><code>Image#getImageDataAtCurrentZoom()</code>: Returns <code>ImageData</code> at current OS zoom</li>
-    	<li><code>Image#getBoundsInPixels()</code>: Returns image bounds in pixels</li>
-    	</ul>
-    	<p>
-    	The javadoc of the below Image APIs have been updated in the context of High-DPI support:
-    	</p>
-    	<ul>
-    	<li><code>Image#getImageData()</code> - Returns <code>ImageData</code> at 100% OS zoom</li>
-    	<li><code>Image#getBounds()</code> - Returns image bounds at 100% OS zoom</li>
-    	</ul>
-    	<p>
-    	Note: Clients should use <code>getImageDataAtCurrentZoom()</code> instead of <code>getImageData()</code> 
-    	to enable their applications to render correctly and efficiently on High-DPI monitors.
-    	</p>
+		Platform-independent high-DPI support has been added to the Win32 and GTK ports.
+		In the past, only the font size was adjusted on those two platforms, which lead to an inconsistent
+		appearance of SWT applications across different platforms.
+		<p>
+		To shield existing clients from resolution differences, SWT now uses the Cocoa model on all three platforms.
+		Existing SWT APIs keep using the well-known coordinate system in SWT points. In high-DPI environments,
+		these SWT points are transparently scaled to native pixels.
+		</p><p>
+		To create DPI-aware <code>org.eclipse.swt.graphics.Image</code>s, use these constructors:
+		</p>
+		<ul>
+		<li><code>Image(Device, ImageFileNameProvider)</code></li>
+		<li><code>Image(Device, ImageDataProvider)</code></li>
+		</ul>
+		
+		Two new APIs have been added in <code>Image</code> to give you direct access to the pixel data on high-DPI monitors.
+		<ul>
+		<li><code>Image#getImageDataAtCurrentZoom()</code>:
+			Returns an <code>ImageData</code> that contains the full-resolution pixel data at the current OS zoom level</li>
+		<li><code>Image#getBoundsInPixels()</code>:
+			Returns the image dimensions in pixels at the current OS zoom level</li>
+		</ul>
     </td>
   </tr>
   
   <tr id="swt-requires-java7">
    <td class="title">SWT requires 1.7 Java runtime</td>
     <td class="content">
-  		SWT projects are now compiled at 1.7 compliance level. As a result, a Java Runtime of
-  		1.7 or above is required to run the SWT applications.
+  		The SWT projects are now compiled at 1.7 compliance level. As a result, a Java runtime of
+  		1.7 or above is required to run SWT applications.
     </td>
   </tr>
   
   <tr id="link-api">
-    <td class="title">API added to set the Link color</td>
+    <td class="title">API to set Link color</td>
     <td class="content">
-    	A new API <code>Link#setLinkForeground(Color)</code> has been added in SWT to set the 
+    	A new API <code>org.eclipse.swt.widgets.Link#setLinkForeground(Color)</code> has been added
+    	that allows you to set the 
     	foreground color of the hyperlink text in a Link widget.
     	<p>
     	The corresponding getter <code>Link#getLinkForeground()</code> has been added which returns 
@@ -361,6 +322,62 @@
     	<p>
     	For an example, see <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet182.java">Snippet182</a>.
     	</p>
+    </td>
+  </tr>
+
+  <tr id="javax-annotation-package-dependency">
+    <td class="title">Imports of the <code>javax.annotation</code> package no longer require a minimum version</td>
+    <td class="content">
+    	Plug-ins are no longer required to specify a minimum package version when importing the <code>javax.annotation</code> package. 
+    	The Eclipse runtime will resolve all components to the same version (JVM or provided by the Eclipse Platform). 
+    	<p>
+    	This avoids a common error in Eclipse RCP implementations in which <code>@PostConstruct</code> 
+    	was resolved to different classes in the bundle classpath.
+    	This change is backwards compatible, i.e., a dependency with a minimum version still works correctly.
+    	</p>
+    </td>
+  </tr>
+
+  <tr id="create-method-computed-value">
+    <td class="title">New factory method for data binding's ComputedValue</td>
+    <td class="content">
+		An <code>org.eclipse.core.databinding.observable.value.ComputedValue</code> can compute custom values from other tracked getters inside its <code>calculate</code> method.
+		<p>Before this change, you had to create a subclass of <code>ComputedValue</code>, but the new <code>create</code> method, which expects a <code>Supplier&lt;T&gt;</code>
+		allows you to create an instance of <code>ComputedValue</code> by using a lambda expression.</p>
+		<p>Examples:
+		</p>
+		<pre>IObservableValue&lt;Integer&gt; listSizeObservable =
+	ComputedValue.create(() -> observableList.size());</pre>
+		or
+		<pre>IObservableValue&lt;String&gt; fullNameObservable =
+	ComputedValue.create(() -> personFirstNameObservable.getValue() + " "
+		+ personLastNameObservable.getValue());</pre>
+	
+		<p>
+		More details about tracked getters can be found in the <code>org.eclipse.core.databinding.observable.ObservableTracker</code>'s
+		<code>getterCalled(IObservable)</code> method. Almost every <code>IObservable</code>'s get methods are tracked getters. 
+		</p>
+    </td>
+  </tr>
+
+  <tr id="mpart-runtime-closeable-change">
+    <td class="title">Change closeable attribute of MPart at runtime</td>
+    <td class="content">
+		Calling the <code>setCloseable</code> method on an <code>org.eclipse.e4.ui.model.application.ui.basic.MPart</code> instance will
+		now change the visibility of the close button for the corresponding part.
+ 	<p>
+        <img src="images/mpart-closeable.png" alt="" />
+    </p>
+    </td>
+  </tr>
+
+  <tr id="e4-app-shutdown-started">
+    <td class="title">Shutdown started event for Eclipse 4 RCP applications</td>
+    <td class="content">
+		When Eclipse 4 RCP applications are about to shut down, the
+		<code>org.eclipse.e4.ui.workbench.UIEvents.UILifeCycle.APP_SHUTDOWN_STARTED</code> event will be fired now.
+		Previously, this only worked for Eclipse RCP applications running in the compatibility mode,
+		and in mixed mode applications which use both Eclipse 3 and 4 APIs.
     </td>
   </tr>
 
