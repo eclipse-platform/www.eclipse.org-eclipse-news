@@ -34,38 +34,35 @@
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
   
-  <tr id="word-selection-default-value">
-    <td class="title">'word_selection' and 'line_selection' template variable with default values</td>
-    <td class="content">
-     The 'word_selection' and 'line_selection' variables, supported in editor and code templates, now allow you to specify a default value to use if the current text selection is empty.
-    </td>
-  </tr>
-
   <tr id="swt-autoscale">
-    <td class="title">SWT provides resolution based autoScaling support</td>
+    <td class="title">SWT provides resolution-based auto-scaling</td>
     <td class="content">
-    This feature is a continuation of the High-DPI enhancements that were delivered in Mars release <a href="https://www.eclipse.org/eclipse/news/4.5/M6/#high-dpi">4.5</a>.
-    SWT toolkit now inherently supports autoscaling of images on High-DPI monitors on Windows and Linux, similar to the OS support provided on Mac OSX. 
-    In the absence of high resolution images, SWT will auto-scale the images, layouts and widgets to ensure that Eclipse/SWT based applications are scaled proportionately to the DPI of the monitor.
+    SWT now automatically scales images on high-DPI monitors on Windows and Linux, similar to the Mac's Retina support on OS X. 
+    In the absence of high-resolution images, SWT will auto-scale the available images to ensure that SWT-based applications like Eclipse
+    are scaled proportionately to the resolution of the monitor.
     <p>
-    Refer, below screen-shot showing Eclipse icons 'Before' and 'After' SWT autoScale feature:
-    <img src="images/swt-high-dpi.png" alt="SWT-AutoScale-Feature" />
-    </p><br/>
+    <img src="images/swt-high-dpi.png" alt="Screenshot with tiny icons 'Before' and a normal appearance 'After'" />
+    </p>
     <p>
-    <b>Note:</b> By default, autoScaling is enabled on Windows, GTK and Mac Cocoa.<br/>
-    This feature can be disabled on Windows &amp; GTK by setting this VM argument to 'false' in eclipse.ini or Run-configuration:
+    This feature can be disabled on Windows and GTK by setting this VM argument to <code>false</code>
+    in eclipse.ini or on the command line after <code>-vmargs</code>:
     </p>
     <p>
     <b>-Dswt.enable.autoScale=false</b>
     </p>
     <p>
-    Autoscaling cannot be disabled on Mac as it is provided by the OS.
+    Auto-scaling cannot be disabled on the Mac as it is provided by the OS.
+    </p>
+    <p>
+    Caveats: We're aware that some scaled images look bad at scale factors less than 200%. This will be improved in M7.
+    Furthermore, we're working on support for high-DPI images in Platform UI, so that plug-in providers
+    can add high-DPI icons without doing any code changes.
     </p>
     </td>
   </tr>
 
   <tr id="solstice-welcome-theme">
-    <td class="title">New Welcome Solstice theme</td>
+    <td class="title">New Welcome theme 'Solstice'</td>
     <td class="content">
         The Welcome/Intro introduces a new <em>Solstice</em> theme
         providing a new modern appearance.  The Welcome also
@@ -92,6 +89,12 @@
     </td>
   </tr>
 
+  <tr id="word-selection-default-value">
+    <td class="title">'word_selection' and 'line_selection' template variable with default values</td>
+    <td class="content">
+     The 'word_selection' and 'line_selection' variables, supported in editor and code templates, now allow you to specify a default value to use if the current text selection is empty.
+    </td>
+  </tr>
 
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
@@ -284,7 +287,8 @@
 		Existing SWT APIs keep using the well-known coordinate system in SWT points. In high-DPI environments,
 		these SWT points are transparently scaled to native pixels.
 		</p><p>
-		To create DPI-aware <code>org.eclipse.swt.graphics.Image</code>s, use these constructors:
+		To create DPI-aware <code>org.eclipse.swt.graphics.Image</code>s, use these constructors
+		that have already been provided in the <a href="https://www.eclipse.org/eclipse/news/4.5/M6/#high-dpi">Mars release</a>:
 		</p>
 		<ul>
 		<li><code>Image(Device, ImageFileNameProvider)</code></li>
