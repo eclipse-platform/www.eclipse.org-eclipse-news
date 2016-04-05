@@ -175,6 +175,37 @@
   </tr>
 
 
+  <tr id="dark-theme-styled-text-scrollbar">
+    <td class="title">Themed scroll bar enabled for editors in dark theme</td>
+    <td class="content">
+    It's now possible to style the scroll bar of a StyledText. This is enabled
+    by default on the dark theme when on Windows.
+    <p>
+    <img src="images/themed-scroll-bar.png" alt="Screenshot with a themed scroll bar on Windows." />
+    </p>
+    <p>
+    This feature can be disabled in the Windows dark theme by setting the <code>swt.enable.themedScrollBar</code> 
+    VM argument to <code>false</code> (or enabled on the dark theme for other platforms by setting it to true)
+    in eclipse.ini or on the command line after <code>-vmargs</code>:
+    </p>
+    <p>
+    <b>-Dswt.enable.themedScrollBar=false</b>
+    </p>
+    <p>
+    Note that it may be added through css to any theme (see 
+    <a href="http://git.eclipse.org/c/platform/eclipse.platform.ui.git/diff/bundles/org.eclipse.e4.ui.css.swt/plugin.xml?id=742d2e990765d5bbf9be61ff3f047105f8102bd3">
+    properties available for customization</a> and a <a href="http://git.eclipse.org/c/platform/eclipse.platform.ui.git/diff/bundles/org.eclipse.ui.themes/css/e4-dark_win.css?id=742d2e990765d5bbf9be61ff3f047105f8102bd3">css example</a>) 
+    -- the user may always override the theme setting by using the <code>swt.enable.themedScrollBar</code> VM argument.
+    </p>
+    <p>
+    <b>Caveats</b>: We're aware that the themed scroll bar is not currently available for all
+    elements (such as trees and tables) and some places where the scroll bar was
+    invisible (such as the compare view) may now show a scroll bar (these will only
+    be fixed for Eclipse 4.7).
+    </p>
+    </td>
+  </tr>
+
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
