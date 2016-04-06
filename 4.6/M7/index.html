@@ -177,7 +177,7 @@
   <tr id="SmartImport">
     <td class="title">Smart Import wizard</td>
     <td class="content">
-    A new import wizard (that is directly accessible via <em>File > Open Projects...</em> menu as well as from the usual <em>Import...</em> menu)
+    A new import wizard (that is directly accessible via the <em>File > Open Projects...</em> menu as well as from the usual <em>Import...</em> menu)
     is available to you. Compared to other import wizards, this one aims at being a universal wizard that, from a source directory or archive, can detect
     and configure various kind of projects.
     <p>
@@ -185,12 +185,12 @@
     </p>
     <p>
       It relies on a set of strategies (contributed via regular extension mechanism) that look at the content of the import source
-      to detect file types, project layout patterns, or even look into some files... in order to deduce which folders should be
-      turned into projects and how those should be configured. Configuration usually involves setting project natures and
+      to detect file types, project layout patterns, or even look into some files in order to deduct which folders should be
+      turned into projects and how those should be configured. Configuration usually involves setting up project natures and
       preferences.
     </p>
     <p>
-      This comes with a new extension point <code>org.eclipse.ui.ide.projectConfigurator</code> and API so that other IDE components
+      This wizard comes with a new extension point <code>org.eclipse.ui.ide.projectConfigurator</code> and API so that other IDE components
       can contribute detection and configuration specific to the technology they're supporting.
     </p>
     </td>
