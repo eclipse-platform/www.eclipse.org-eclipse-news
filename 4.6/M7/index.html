@@ -202,7 +202,7 @@
     It's now possible to style the scroll bar of a StyledText. This is enabled
     by default on the dark theme when on Windows.
     <p>
-    <img src="images/themed-scroll-bar.png" alt="Screenshot with a themed scroll bar on Windows." />
+    <img src="images/themed-scroll-bar.png" alt="" />
     </p>
     <p>
     This feature can be disabled in the Windows dark theme by setting the <code>swt.enable.themedScrollBar</code> 
@@ -235,7 +235,7 @@
     With M7 you can directly enable or disable the capacities from the preference page, as depicted in the following screenshot.
     </p>
     <p>
-    <img src="images/simplified-capabilities-page.png" alt="Screenshot of the new capabilities page" />
+    <img src="images/simplified-capabilities-page.png" alt="" />
     </p>
     <p>
     Since this dialog has API to prevent advanced editing, if the property ALLOW_ADVANCED is set to false, the original list
@@ -279,11 +279,20 @@
     <td class="content">
 		You can disable drag and drop of toolbars and tool components by tagging the corresponding model element with the <code>'NoMove'</code> tag.
 		<p>
-			<img src="images/toolbar-disable-drag-and-drop-with-NoMove-tag.png" alt="Disable Toolbar drag and drop by adding NoMove tag"/>
+			<img src="images/toolbar-disable-drag-and-drop-with-NoMove-tag.png" alt=""/>
 		</p>
 	</td>
   </tr>
-
+  
+  <tr id="e4-help-support">
+    <td class="title">Support for setting the help ID in Eclipse 4 application</td>
+    <td class="content">
+		To enable help entries for menus you can define a ID for the help system for your <code>MCommand</code>, your <code>MHandledMenuItem</code> or your <code>MDirectMenuItem</code> model elements by adding an entry to the <code>Persisted State</code> Map with the key <code>'HelpContextId'</code> and your help context id as the value.
+		<p>
+			<img src="images/e4-help-support.png" alt=""/>
+		</p>
+	</td>
+  </tr>
 
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
