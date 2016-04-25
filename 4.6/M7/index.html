@@ -268,6 +268,8 @@
       <p>A minor but useful feature has also been added: if you click in the Quick Access with the mouse,
       it opens up the search-box, which displays the list of last selections, and encourages you to type to search.
       </p>
+    </td>
+  </tr>
   <tr id="workspace-name-in-window-title">
     <td class="title">The name of the workspace directory is displayed by default in the window title</td>
     <td class="content">
@@ -331,6 +333,40 @@
 		<p>
 			<img src="images/e4-help-support.png" alt=""/>
 		</p>
+	</td>
+  </tr>
+
+  <tr id="sideeffect-package">
+    <td class="title">Different package for ISideEffect</td>
+    <td class="content">
+		The <code>ISideEffect</code> class and its <code>SideEffect</code> implementation has been moved to a sideeffect package.
+		<p>The <code>ISideEffect</code> class is now located in the <code>org.eclipse.core.databinding.observable.sideeffect</code> package and the <code>SideEffect</code> class is now located in the <code>org.eclipse.core.internal.databinding.observable.sideeffect</code> package.</p>
+	</td>
+  </tr>
+
+  <tr id="sideeffect-factory">
+    <td class="title">ISideEffectFactory for composite ISideEffects</td>
+    <td class="content">
+    	To omit the boilerplate code for managing the lifecycle of a larger amount of <code>ISideEffect</code> instances, e.g., for binding a form in a view, an <code>ISideEffectFactory</code> can be used to create several <code>ISideEffect</code> instances, which share the same lifecycle.
+    	<p>
+    		For example all <code>ISideEffect</code> instances, which are created by the <code>ISideEffectFactory</code> obtained from the <code>WidgetSideEffects.createFactory(Widget disposableWidget)</code> method are automatically disposed once the passed in disposableWidget is disposed.
+    	</p>
+    	<p>An Example would be:</p>
+		<pre>
+    		<code>
+				ISWTObservableValue personFirstNameTextObservable = WidgetProperties.text(SWT.Modify)
+					.observe(personFirstNameText);
+				ISWTObservableValue personLastNameTextObservable = WidgetProperties.text(SWT.Modify)
+					.observe(personLastNameText);
+		
+				ISideEffectFactory sideEffectFactory = WidgetSideEffects.createFactory(personFirstNameText);
+
+				sideEffectFactory.create(person::getFirstName, personFirstNameText::setText);
+				sideEffectFactory.create(personFirstNameTextObservable::getValue, person::setFirstName);
+				sideEffectFactory.create(person::getLastName, personLastNameText::setText);
+				sideEffectFactory.create(personLastNameTextObservable::getValue, person::setLastName);
+			</code>
+		</pre>
 	</td>
   </tr>
 
