@@ -415,26 +415,24 @@
   <tr id="sideeffect-factory">
     <td class="title">ISideEffectFactory for composite ISideEffects</td>
     <td class="content">
-    	To omit the boilerplate code for managing the lifecycle of a larger amount of <code>ISideEffect</code> instances, e.g., for binding a form in a view, an <code>ISideEffectFactory</code> can be used to create several <code>ISideEffect</code> instances, which share the same lifecycle.
+    	You can use the <code>ISideEffectFactory</code> class to create several <code>ISideEffect</code> instances, which share the same life cycle.
     	<p>
-    		For example all <code>ISideEffect</code> instances, which are created by the <code>ISideEffectFactory</code> obtained from the <code>WidgetSideEffects.createFactory(Widget disposableWidget)</code> method are automatically disposed once the passed in disposableWidget is disposed.
+    	For example, all <code>ISideEffect</code> instances, which are created by the <code>ISideEffectFactory</code> obtained from the <code>WidgetSideEffects.createFactory(Widget disposableWidget)</code> method are automatically disposed once the corresponding widget is disposed.
     	</p>
-    	<p>An Example would be:</p>
-		<pre>
-    		<code>
-				ISWTObservableValue personFirstNameTextObservable = WidgetProperties.text(SWT.Modify)
-					.observe(personFirstNameText);
-				ISWTObservableValue personLastNameTextObservable = WidgetProperties.text(SWT.Modify)
-					.observe(personLastNameText);
-		
-				ISideEffectFactory sideEffectFactory = WidgetSideEffects.createFactory(personFirstNameText);
+    	<p>An example would be:</p>
+<pre>
+ISWTObservableValue personFirstNameTextObservable = WidgetProperties.text(SWT.Modify)
+	.observe(personFirstNameText);
+ISWTObservableValue personLastNameTextObservable = WidgetProperties.text(SWT.Modify)
+	.observe(personLastNameText);
 
-				sideEffectFactory.create(person::getFirstName, personFirstNameText::setText);
-				sideEffectFactory.create(personFirstNameTextObservable::getValue, person::setFirstName);
-				sideEffectFactory.create(person::getLastName, personLastNameText::setText);
-				sideEffectFactory.create(personLastNameTextObservable::getValue, person::setLastName);
-			</code>
-		</pre>
+ISideEffectFactory sideEffectFactory = WidgetSideEffects.createFactory(personFirstNameText);
+
+sideEffectFactory.create(person::getFirstName, personFirstNameText::setText);
+sideEffectFactory.create(personFirstNameTextObservable::getValue, person::setFirstName);
+sideEffectFactory.create(person::getLastName, personLastNameText::setText);
+sideEffectFactory.create(personLastNameTextObservable::getValue, person::setLastName);
+</pre>
 	</td>
   </tr>
 
