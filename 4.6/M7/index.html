@@ -366,6 +366,30 @@
     </td>
   </tr>
 
+   <tr id="add-nonnull">
+    <td class="title">Quick Fix to add @NonNull to local variable</td>
+    <td class="content">
+    	When a "potential null pointer access" problem is raised against a local variable,
+    	the reason is not always obvious.
+		Perhaps null is assigned somewhere deep inside a complex control flow.
+		If annotation-based null analysis is enabled, a new <b>Quick Fix</b> is offered (<b>Ctrl+1</b>),
+		that adds a <code>@NonNull</code> annotation to the local variable.
+        <p>
+          <img src="images/add_nonnull1.png" alt="" />
+        </p>
+        <p>
+			While this may not produce correct code, it tells the compiler your intention to not
+			allow <code>null</code> in this variable, and subsequently the compiler will answer
+			with more helpful warnings or errors pointing to the root problem.
+			In the given example it will alert you of subtleties about using unconstrained
+			type variables (see also <a href="https://www.eclipse.org/eclipse/news/4.6/M6/#null-analysis-generics">Improved null analysis with generics (M6)</a>):
+        </p>
+        <p>
+          <img src="images/add_nonnull2.png" alt="" />
+        </p>
+    </td>
+  </tr>
+
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
