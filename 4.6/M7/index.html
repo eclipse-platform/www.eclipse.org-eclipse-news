@@ -9,7 +9,7 @@
 <body>
 <h1>Eclipse Project Neon (4.6) M7 - New and Noteworthy</h1>
 <p>Here are some of the more noteworthy things available in the Neon milestone build M7
-  which is now available for <a href="http://download.eclipse.org/eclipse/downloads/#4.6_Stable_Build" target="_top">download</a>.
+  which is now available for <a href="http://download.eclipse.org/eclipse/downloads/#4.6_Stable_Builds" target="_top">download</a>.
   <br/>
   We also recommend to read the Tips and Tricks, either via <b>Help &gt; Tips and Tricks...</b> or online for
   <a href="http://help.eclipse.org/topic/org.eclipse.platform.doc.user/tips/platform_tips.html">Platform</a>,
@@ -22,7 +22,6 @@
   <li><a href="#JDT">JDT</a></li>
   <li><a href="#PDE">PDE</a></li>
   <li><a href="#Platform-Dev">Platform Developers</a></li>
-  <li><a href="#Equinox">Equinox</a></li>
 </ul>
 
 <table class="news">
@@ -32,156 +31,25 @@
   </colgroup>
 
   <tr>
-    <td id="Instructions" class="section" colspan="2">
-      <h2>Instructions</h2>
-    </td>
-  </tr>
-
-  <tr id="item-name">
-    <td class="title">News item title and description</td>
-    <td class="content">
-        The whole entry should be a blurb pitched to the Eclipse end user community
-        (not just to members of the Eclipse Platform development team).
-      <p>
-        The title should be short and snappy, written in
-        <a href="https://en.wikipedia.org/wiki/Letter_case#Case_styles">sentence case</a>, and using
-        "<a href="https://en.wikipedia.org/wiki/Headlinese#Syntax">headlinese</a>" (compressed style).
-        The title should <em>not</em> use trailing
-        punctuation and a unique id attribute on the &lt;tr&gt; HTML element.
-      </p>
-      <p>
-        In the news description, tell
-        users about changes they'll see in the UI. Tell component writers
-        about changes they'll see at the client- and server-side APIs. Try to
-        generate some excitement; save the boring details for the manual; be short and don't repeat yourself. The
-        description should be complete sentences, with trailing punctuation.
-      </p>
-      <p>Make the entry self-contained and mention API classes.
-        Do <em>not</em> link to bugs and don't promote individuals or third-party products.
-      </p>
-      <p>Use active voice (say "you", not "the user"), and follow other advice in the
-        <a href="http://wiki.eclipse.org/Eclipse_Doc_Style_Guide#topic-content">Topic&nbsp;Content</a>
-        section of the Eclipse Doc Style Guidelines.
-      </p>
-      <p>Stick to the default font and size. Make command names (<b>Quick Fix</b>),
-        keyboard shortcuts (<b>Ctrl+1</b>), and preference page paths
-        (<b>Preferences &gt; General &gt; Keys</b>) bold.
-      </p>
-      <p>Do <em>not</em> enclose the first paragraph of an item in <code>&lt;p&gt;&lt;/p&gt;</code> tags.
-      </p>
-      <p>See entries in <a href="../index.html">published</a> news documents for correct examples. These published news entries have been already reviewed, while
-         entries in the evolving document may still contain errors.
-      </p>
-    </td>
-  </tr>
-
-  <tr id="screenshots">
-    <td class="title">Screenshots</td>
-    <td class="content">
-        If a small image sheds light, place it below the description, in a separate
-        paragraph. As the majority of the Eclipse users uses Windows 7, regular screen snapshots
-        should be done on Windows 7 if possible, but screenshots from
-        other operating system are also acceptable. Crop
-        out any extraneous stuff to focus the reader's attention on your new
-        feature. The image should be
-        <b>no more than 520 pixels wide</b> and in <b>PNG</b> format (as opposed
-        to GIF, TIF, BMP, or JPG). Use PNG-8 if your image doesn't have a lot of color,
-        or PNG-24 if the screen shot uses enough color to warrant additional color depth.
-        See also the
-        <a href="http://wiki.eclipse.org/Eclipse_Doc_Style_Guide#graphics">Graphics</a>
-        section of the Eclipse Doc Style Guidelines.
-      <p>The Windows <b>Snipping Tool</b> actually saves to PNG on Windows 7 and can easily be
-        used to crop and save screenshots:</p>
-      <ul>
-        <li>Arrange the windows for the shot</li>
-        <li>Use the Windows <b>Snipping Tool</b> to capture part of the screen</li>
-        <li>Use <b>File &gt; Save As</b> to save the screenshot as a PNG</li>
-        <li>Overlays such as red circles or boxes to call out details can be done using Microsoft Paint</li>
-      </ul>
-      <p>Name the file in a way that is appropriate and specific to the item
-        (e.g., key-bindings.png, rather than something generic like image.png).
-        Use all <b>lowercase</b> letters in the image file name, including the &quot;<b>.png</b>&quot;
-        file extension. As a separator, use <b>hyphen</b> &quot;-&quot; rather than
-        underscore
-        &quot;_&quot;. </p>
-      <p>Put all the images in a sibling directory named &quot;images&quot;.
-        This gives XHTML like:<br/>
-        <code>&lt;img src=&quot;images/foo-view.png&quot; alt=&quot;&quot;/&gt;</code><br/>
-        Include a suitable <a href="http://www.w3.org/TR/html4/struct/objects.html#h-13.8"><code>alt</code></a> attribute.
-        The alt text should be empty ("") if the image just illustrates the text.
-        Only use the alt text to add information that is not accessible if the page is rendered without images.
-        Don't write <code>alt="Screenshot of <i>the XY dialog</i>"</code>. Blind users shouldn't have to skip useless repetitions.</p>
-      <p>If the <code>alt</code> attribute text cannot sufficiently replace the image contents
-        (e.g. for a screenshot that shows source code), then enclose the img element in a link
-        to a plain &quot;.txt&quot; file with the same name as the image:<br/>
-        <code>&lt;a href=&quot;images/foo-view.txt&quot;&gt;&lt;img ...</code></p>
-      <p>The images should be left-justified (as opposed to centered). Do not embed the width and height of the image.</p>
-      <p>
-        <img src="https://www.eclipse.org/artwork/images/v2/logo-800x188.png" alt="" />
-      </p>
-      <script type="text/javascript">
-      //<![CDATA[
-      document.addEventListener('load', function markOversizedImages() {
-        var imgs = document.getElementsByTagName("img");
-        for (var i = 0; i < imgs.length; i++) {
-          var img = imgs[i];
-          var w = window.getComputedStyle(img, null).getPropertyValue("width");
-          if (parseInt(w, 10) > 520) {
-            img.style.width = "300px";
-            var filter = "sepia(0.5) blur(2px)";
-            img.style.filter = filter;
-            img.style.webkitFilter = filter;
-            var msg = document.createElement("div");
-            msg.innerHTML = "Image too big. See Instructions &gt; <a href='#screenshots'>Screenshots</a>.<br>"
-                + img.getAttribute("src") + ": width=" + w;
-            msg.style.color = "red";
-            msg.style.fontWeight = "bold";
-            img.parentElement.insertBefore(msg, img);
-          }
-        }
-      }, true);
-      //]]>
-      </script>
-    </td>
-  </tr>
-  <tr id="validation">
-    <td class="title">Validation</td>
-    <td class="content">
-        Use the W3C <a href="http://validator.w3.org/#validate_by_input">XHTML
-        Markup Validation Service</a> to check your document's markup before
-        submitting.
-    </td>
-  </tr>
-   <tr id="css">
-    <td class="title">CSS styling</td>
-    <td class="content">
-        Do <em>not</em> change the style.css file without consulting with the Eclipse Platform project lead. The news entries are
-        aggregated at the end of the development cycle and the CSS files need to be aligned.
-    </td>
-  </tr>
-
-
-
-  <tr>
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
 
   <tr id="improved-performance-reduced-memory">
     <td class="title">Improved interactive performance and reduced memory consumption</td>
     <td class="content">
-      This and other milestones contain a multitude of fixes to enhance interactive and startup performance of the Eclipse IDE and
+      This and earlier milestones contain a multitude of fixes to enhance interactive and startup performance of the Eclipse IDE, and
       to reduce overall memory consumption.
     </td>
   </tr>
 
-  <tr id="SmartImport">
-    <td class="title">Smart Import wizard</td>
+  <tr id="import-projects">
+    <td class="title">Import projects</td>
     <td class="content">
-    A new import wizard (that is directly accessible via the <em>File > Open Projects...</em> menu as well as from the usual <em>Import...</em> menu)
+    A new import wizard (that is directly accessible via the <b>File &gt; Open Projects...</b> menu as well as from the usual <b>File &gt; Import...</b> menu)
     is available to you. Compared to other import wizards, this one aims at being a universal wizard that, from a source directory or archive, can detect
     and configure various kind of projects.
     <p>
-       <img src="images/smartimport.png" alt="Smart Import wizard" />
+       <img src="images/import-projects.png" alt="" />
     </p>
     <p>
       It relies on a set of strategies (contributed via regular extension mechanism) that look at the content of the import source
@@ -241,17 +109,15 @@
   <tr id="simplified-capabilities-preference-page">
     <td class="title">Advanced capabilities preferences are now displayed in place (no extra dialog) </td>
     <td class="content">
-    <p>
-    Previously the entries in the 'Capabilities' preference page were displayed in a list. If you wanted to edit them, you had to open an extra dialog.
-    With M7 you can directly enable or disable the capacities from the preference page, as depicted in the following screenshot.
-    </p>
-    <p>
-    <img src="images/simplified-capabilities-page.png" alt="" />
-    </p>
-    <p>
-    Since this dialog has API to prevent advanced editing, if the property ALLOW_ADVANCED is set to false, the original list
-    is maintained and will be shown, which allows you to enable/disable only the main categories (not individual capabilities).
-    </p>
+        Previously the entries in the 'Capabilities' preference page were displayed in a list. If you wanted to edit them, you had to open an extra dialog.
+        With M7 you can directly enable or disable the capacities from the preference page, as depicted in the following screenshot.
+      <p>
+        <img src="images/simplified-capabilities-page.png" alt="" />
+      </p>
+      <p>
+        Since this dialog has API to prevent advanced editing, if the property ALLOW_ADVANCED is set to false, the original list
+        is maintained and will be shown, which allows you to enable/disable only the main categories (not individual capabilities).
+      </p>
     </td>
   </tr>
 
@@ -281,7 +147,7 @@
   <tr id="full-screen-feature">
     <td class="title">Full Screen feature</td>
     <td class="content">
-      The <em>full-screen</em> feature is now available also for Windows and Linux. You can toggle the mode via shortcut (<b>ALT+F11</b> by default) or menu (<b>Window > Appearance > Toggle Full Screen</b>).
+      The <em>full-screen</em> feature is now available also for Windows and Linux. You can toggle the mode via shortcut (<b>ALT+F11</b> by default) or menu (<b>Window &gt; Appearance &gt; Toggle Full Screen</b>).
 	  <p>When fullscreen is activated, you'll see a dialog which tells how to toggle it using the active shortcut, and with a <em>"don't show this again" checkbox</em>.</p>
     </td>
   </tr>
@@ -290,7 +156,7 @@
     <td class="title">Automatic save of dirty editors</td>
     <td class="content">
       The autosave of dirty editors is now available in Eclipse. The autosave is <b>disabled by default</b>.
-      A new autosave preference page (<b>Preferences > General > Editors > Autosave</b>) is available  and allows to enable/disable the autosave and change the interval of autosave.
+      A new autosave preference page (<b>Preferences &gt; General &gt; Editors &gt; Autosave</b>) is available  and allows to enable/disable the autosave and change the interval of autosave.
       The countdown is reset on keyboard activity, mouse click, or when a popup is displayed (e.g. content assist, preference page, ...).
       <p><img src="images/autosave-preference-page.png" alt="" /></p>
     </td>
@@ -384,7 +250,7 @@
 		If annotation-based null analysis is enabled, a new <b>Quick Fix</b> is offered (<b>Ctrl+1</b>),
 		that adds a <code>@NonNull</code> annotation to the local variable.
         <p>
-          <img src="images/add_nonnull1.png" alt="" />
+          <img src="images/add-nonnull1.png" alt="" />
         </p>
         <p>
 			While this may not produce correct code, it tells the compiler your intention to not
@@ -394,7 +260,7 @@
 			type variables (see also <a href="https://www.eclipse.org/eclipse/news/4.6/M6/#null-analysis-generics">Improved null analysis with generics (M6)</a>):
         </p>
         <p>
-          <img src="images/add_nonnull2.png" alt="" />
+          <img src="images/add-nonnull2.png" alt="" />
         </p>
     </td>
   </tr>
@@ -431,7 +297,7 @@
 		In a plain OSGi environment this header is not necessary and might not have any effect. Therefore it can be configured via preferences 
 		whether the header should be generated or not.
         <p>
-          <img src="images/ds_annotations.png" alt="" />
+          <img src="images/ds-annotations.png" alt="" />
         </p>
     </td>
   </tr>
@@ -499,17 +365,6 @@ sideEffectFactory.create(personLastNameTextObservable::getValue, person::setLast
     	SWT exposes the device zoom level at which it is operating via below system property:
     	<p><b>"org.eclipse.swt.internal.deviceZoom"</b></p>
     	<p><b>Note:</b> This value is not honored by SWT when user disables the HighDPI feature using <b>"-Dswt.enable.autoScale=false"</b> option.</p>
-    </td>
-  </tr>
-
-  <tr>
-    <td colspan="2" class="section" id="Equinox">Equinox</td>
-  </tr>
-
-  <tr id="first-item-equinox">
-    <td class="title">First item</td>
-    <td class="content">
-      Item blurb.
     </td>
   </tr>
 
