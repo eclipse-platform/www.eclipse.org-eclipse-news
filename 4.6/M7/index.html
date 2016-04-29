@@ -45,20 +45,23 @@
   <tr id="import-projects">
     <td class="title">Import projects</td>
     <td class="content">
-    A new import wizard (that is directly accessible via the <b>File &gt; Open Projects...</b> menu as well as from the usual <b>File &gt; Import...</b> menu)
-    is available to you. Compared to other import wizards, this one aims at being a universal wizard that, from a source directory or archive, can detect
-    and configure various kind of projects.
+    A new <b>Import Projects</b> wizard is available via the <b>File &gt; Open Projects...</b> menu and via the general
+    <b>Import...</b> command under <b>General &gt; Projects from Folder or Archive</b>.
+    <p>
+      Compared to other ways to import or create projects, this wizard aims at being a universal wizard that,
+      from a source directory or archive, can detect and configure various kinds of projects.
+    </p>
     <p>
        <img src="images/import-projects.png" alt="" />
     </p>
     <p>
-      It relies on a set of strategies (contributed via regular extension mechanism) that look at the content of the import source
+      This wizard relies on an extensible set of strategies that look at the content of the import source
       to detect file types, project layout patterns, or even look into some files in order to deduct which folders should be
       turned into projects and how those should be configured. Configuration usually involves setting up project natures and
       preferences.
     </p>
     <p>
-      This wizard comes with a new extension point <code>org.eclipse.ui.ide.projectConfigurator</code> and API so that other IDE components
+      The import strategies are contributed via the new extension point <code>org.eclipse.ui.ide.projectConfigurator</code>, so that other IDE components
       can contribute detection and configuration specific to the technology they're supporting.
     </p>
     </td>
