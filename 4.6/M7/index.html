@@ -84,8 +84,8 @@
   <tr id="dark-theme-styled-text-scrollbar">
     <td class="title">Themed scroll bar enabled for editors in dark theme</td>
     <td class="content">
-    It's now possible to style the scroll bar of a StyledText. This is enabled
-    by default on the dark theme when on Windows.
+    It's now possible to replace the native scroll bar of a StyledText by a styled overlay. This is enabled
+    by default in the dark theme on Windows.
     <p>
     <img src="images/themed-scroll-bar.png" alt="" />
     </p>
@@ -105,9 +105,9 @@
     </p>
     <p>
     <b>Caveats</b>: We're aware that the themed scroll bar is not currently available for all
-    elements (such as trees and tables) and some places where the scroll bar was
-    invisible (such as the compare view) may now show a scroll bar (these will only
-    be fixed for Eclipse 4.7).
+    elements (such as trees and tables), and some places where the scroll bar was
+    invisible (such as compare editors) may now show a scroll bar. These will only
+    be fixed for Eclipse 4.7.
     </p>
     </td>
   </tr>
@@ -115,8 +115,8 @@
   <tr id="simplified-capabilities-preference-page">
     <td class="title">Advanced capabilities preferences are now displayed in place (no extra dialog) </td>
     <td class="content">
-        Previously the entries in the 'Capabilities' preference page were displayed in a list. If you wanted to edit them, you had to open an extra dialog.
-        With M7 you can directly enable or disable the capacities from the preference page, as depicted in the following screenshot.
+        Previously, the entries in the <b>Capabilities</b> preference page were displayed in a list. If you wanted to edit them, you had to open an extra dialog.
+        Now you can directly enable or disable the capabilities from the preference page, as depicted in the following screenshot.
       <p>
         <img src="images/simplified-capabilities-page.png" alt="" />
       </p>
@@ -130,38 +130,40 @@
   <tr id="quick-access-improvements">
     <td class="title">Quick Access improvements</td>
     <td class="content">
-      Quick Access is a small text toolbar you can use to trigger any command in the Eclipse IDE.
-      After this rework, the search is now more intuitive.
-      Now the box displays a message in the text area and also shows the Key shortcut to trigger the search dialog.
-      The number of search results per category is independent of the size of the search window.
+      <b>Quick Access</b> (<b>Ctrl+3</b>) is a small text field in the toolbar. You can use it to trigger any command in the Eclipse IDE.
       <p><img src="images/eclipse-quick-access-improved-search.png" alt="" /></p>
-      <p>You can now restrict the search to Views, Commands or other by typing the category name followed by a colon. 
+      <p>You can now restrict the search to Views, Commands, etc. by typing the category name followed by a colon. 
       For example, to filter the list of all the views, start typing <code>"Views: "</code> in the search-box.</p>
-      <p>A minor but useful feature has also been added: if you click in the Quick Access with the mouse,
-      it opens up the search-box, which displays the list of last selections, and encourages you to type to search.
+      <p>
+      A few usability bugs have been fixed: The tooltip shows the keyboard shortcut,
+      the number of search results per category is independent of the size of the proposals window,
+      and the list with previous choices already opens when you click the field with the mouse.
       </p>
     </td>
   </tr>
   <tr id="workspace-name-in-window-title">
-    <td class="title">The name of the workspace directory is displayed by default in the window title</td>
+    <td class="title">Workspace name shown in window title by default</td>
     <td class="content">
-    The workspace name shown in the window title is by default set to the name of the workspace directory.
-    This preference can be changed in the <b>Preferences &gt; Workspace</b> preference page.
+    The workspace name is now shown at the beginning of the window title by default.
+    The initial name is the name of the workspace directory.
+    <p>
+    This the name can be changed or cleared in <b>Preferences &gt; General &gt; Workspace</b>.
+    </p>
     </td>
   </tr>
   
   <tr id="full-screen-feature">
-    <td class="title">Full Screen feature</td>
+    <td class="title">Full Screen</td>
     <td class="content">
-      The <em>full-screen</em> feature is now available also for Windows and Linux. You can toggle the mode via shortcut (<b>ALT+F11</b> by default) or menu (<b>Window &gt; Appearance &gt; Toggle Full Screen</b>).
-	  <p>When fullscreen is activated, you'll see a dialog which tells how to toggle it using the active shortcut, and with a <em>"don't show this again" checkbox</em>.</p>
+      The <b>Full Screen</b> feature is now also available on Windows and Linux. You can toggle the mode via shortcut (<b>Alt+F11</b>) or menu (<b>Window &gt; Appearance &gt; Toggle Full Screen</b>).
+	  <p>When Full Screen is activated, you'll see a dialog which tells you how to turn it off again.</p>
     </td>
   </tr>
   
   <tr id="autosave-dirty-editors">
-    <td class="title">Automatic save of dirty editors</td>
+    <td class="title">Automatic Save of dirty editors</td>
     <td class="content">
-      The autosave of dirty editors is now available in Eclipse. The autosave is <b>disabled by default</b>.
+      Auto-save of dirty editors is now available in Eclipse. The autosave option is <b>disabled by default</b>.
       A new autosave preference page (<b>Preferences &gt; General &gt; Editors &gt; Autosave</b>) is available  and allows to enable/disable the autosave and change the interval of autosave.
       The countdown is reset on keyboard activity, mouse click, or when a popup is displayed (e.g. content assist, preference page, ...).
       <p><img src="images/autosave-preference-page.png" alt="" /></p>
@@ -171,9 +173,20 @@
   <tr id="terminate-relaunch-history">
     <td class="title">Terminate and Relaunch from history</td>
     <td class="content">
-      The Terminate and Relaunch option while launching from history is now available. The default preference is to Relaunch without terminating. It can be used by changing the default preference via
-    	<b>Preferences &gt; Run/Debug &gt; Launching</b>. The behavior not selected on preference page can also be achieved by pressing <b>Shift</b> while launching the configuration from history.
+      A <b>Terminate and Relaunch</b> option is now available while launching from history.
+      The default setting is to launch without terminating previous launches. To enable automatic termination,
+      select the option "Terminate and Relaunch while launching from history" on
+      <b>Preferences &gt; Run/Debug &gt; Launching</b>.
+      
+      <p>
+        The behavior not selected on the preference page can also be activated on-demand by holding
+        the <b>Shift</b> key while launching the configuration from history.
+      </p>
 	  <p><img src="images/launch-preference-history-relaunch.png" alt="" /></p>
+      <p>
+        Hint: You can still open the dialog to <b>edit a launch configuration</b> by holding
+        the <b>Ctrl</b> key while selecting the configuration from history.
+      </p>
     </td>
   </tr>
   
@@ -194,7 +207,7 @@
     <td class="content">
       The Project Explorer view now groups referenced libraries in a new container node.
         <p>
-          <img src="images/show-referenced-libraries-node-project-explorer.png" alt="" />
+          <img src="images/show-referenced-libraries-node-project-explorer.png" alt="View menu > Show 'Referenced Libraries' node" />
         </p>
     </td>
   </tr>
@@ -202,7 +215,7 @@
   <tr id="hide-empty-library-containers-project-explorer">
     <td class="title">Hiding empty library containers in Project Explorer</td>
     <td class="content">
-      You can now hide empty library containers in Project Explorer view by selecting the new filter in its <b>Customize View...</b> dialog.  
+      You can now hide empty library containers in the Project Explorer view by selecting the new filter in its <b>Customize View...</b> dialog.
         <p>
           <img src="images/hide-empty-library-containers-project-explorer.png" alt="" />
         </p>
@@ -222,9 +235,9 @@
   <tr id="assign-all-params-to-new-fields">
     <td class="title">Create new fields from method parameters</td>
     <td class="content">
-      You can now assign all parameters of a method/constructor to new fields at once using the new <b>Quick Assist (Ctrl+1)</b>:
+      You can now assign all parameters of a method or constructor to new fields at once using the new <b>Quick Assist</b> (<b>Ctrl+1</b>):
         <p>
-          <img src="images/assign-all-params-to-new-fields.png" alt="" />
+          <img src="images/assign-all-params-to-new-fields.png" alt="Assign all parameters to new fields" />
         </p>
     </td>
   </tr>
@@ -232,8 +245,10 @@
   <tr id="search-on-multi-selections">
     <td class="title">Search on multi-selections</td>
     <td class="content">
-      You can now select multiple elements in views like Package Explorer and Outline view to search for References, Declarations, Implementors and Read/Write Access (where applicable):
+      You can now select multiple elements in views like Package Explorer and Outline and then search for References, Declarations, Implementors, and Read/Write Access (where applicable):
 	  <p><img src="images/search-on-multi-selections.png" alt="" /></p>
+	  You can even select results in the Search view and start a new search for those elements.
+	  To follow method call chains, you'd probably use <b>Open Call Hierarchy</b>, though.
     </td>
   </tr>
 
@@ -262,7 +277,7 @@
 			While this may not produce correct code, it tells the compiler your intention to not
 			allow <code>null</code> in this variable, and subsequently the compiler will answer
 			with more helpful warnings or errors pointing to the root problem.
-			In the given example it will alert you of subtleties about using unconstrained
+			In the given example, it will alert you of subtleties about using unconstrained
 			type variables (see also <a href="https://www.eclipse.org/eclipse/news/4.6/M6/#null-analysis-generics">Improved null analysis with generics (M6)</a>):
         </p>
         <p>
@@ -278,8 +293,8 @@
    <tr id="plugin-wizard-activator-creation">
     <td class="title">New Plug-in wizard does not create activator by default</td>
     <td class="content">
-	   By default, the new plug-in wizard does not suggest the creation of an activator anymore. 
-	   Functionality in activators can in most cases be replaced with other means, e.g., OSGi declarative services and
+	   By default, the new plug-in wizard does not suggest the creation of an activator class anymore. 
+	   Functionality in activators can in most cases be replaced with other means (e.g. OSGi declarative services), and activators
 	   can slow down the startup of an application.
     </td>
   </tr>
@@ -287,10 +302,10 @@
   <tr id="multi-version-baseline-support">
     <td class="title">Multi-version support for API analysis builder</td>
     <td class="content">
-	API Analysis Builder is now supported for API baselines with multi-version bundles.
-	While doing API analysis for a bundle which has multi-version bundles in baselines, 
-	the comparisons are performed with that bundle in the baselines which best matches 
-	the development bundle.
+	The API Analysis Builder now supports API baselines with multi-version bundles.
+	While doing API analysis for a bundle for which multiple versions exist in the baseline, 
+	the comparisons are performed with the bundle in the baseline which best matches
+	the development bundle that is being built.
     </td>
   </tr>
 
@@ -299,8 +314,8 @@
     <td class="content">
 		The Declarative Service Annotations support added with M6 can now be configured to generate the bundle header for lazy activation.
 		The <code>Bundle-ActivationPolicy: lazy</code> header is necessary when starting an Eclipse application that uses the Equinox launcher.
-		Otherwise the bundle that provides the declarative service will not be started automatically and therefore the service won't be available.
-		In a plain OSGi environment this header is not necessary and might not have any effect. Therefore it can be configured via preferences 
+		Otherwise, the bundle that provides the declarative service will not be started automatically and therefore the service won't be available.
+		In a plain OSGi environment, this header is not necessary and might not have any effect. Therefore, it can be configured via preferences 
 		whether the header should be generated or not.
         <p>
           <img src="images/ds-annotations.png" alt="" />
@@ -326,7 +341,7 @@
   <tr id="e4-help-support">
     <td class="title">Support for setting the help ID in Eclipse 4 application</td>
     <td class="content">
-		To enable help entries for menus you can define a ID for the help system for your <code>MCommand</code>, your <code>MHandledMenuItem</code> or your <code>MDirectMenuItem</code> model elements by adding an entry to the <code>Persisted State</code> Map with the key <code>'HelpContextId'</code> and your help context id as the value.
+		To enable help entries for menus, you can define an ID for the help system for your <code>MCommand</code>, your <code>MHandledMenuItem</code> or your <code>MDirectMenuItem</code> model elements by adding an entry to the <code>Persisted State</code> Map with the key <code>'HelpContextId'</code> and your help context id as the value.
 		<p>
 			<img src="images/e4-help-support.png" alt=""/>
 		</p>
@@ -336,19 +351,19 @@
   <tr id="sideeffect-package">
     <td class="title">Different package for ISideEffect</td>
     <td class="content">
-		The <code>ISideEffect</code> class and its <code>SideEffect</code> implementation has been moved to a sideeffect package.
-		<p>The <code>ISideEffect</code> class is now located in the <code>org.eclipse.core.databinding.observable.sideeffect</code> package and the <code>SideEffect</code> class is now located in the <code>org.eclipse.core.internal.databinding.observable.sideeffect</code> package.</p>
+		The <code>ISideEffect</code> and <code>ISideEffectFactory</code> interfaces and the <code>CompositeSideEffect</code> class
+		have been moved to a new package <code>org.eclipse.core.databinding.observable.sideeffect</code>.
 	</td>
   </tr>
 
   <tr id="sideeffect-factory">
     <td class="title">ISideEffectFactory for composite ISideEffects</td>
     <td class="content">
-    	You can use the <code>ISideEffectFactory</code> class to create several <code>ISideEffect</code> instances, which share the same life cycle.
+    	You can use the <code>ISideEffectFactory</code> to create several <code>ISideEffect</code> instances that share the same life cycle.
     	<p>
-    	For example, all <code>ISideEffect</code> instances, which are created by the <code>ISideEffectFactory</code> obtained from the <code>WidgetSideEffects.createFactory(Widget disposableWidget)</code> method are automatically disposed once the corresponding widget is disposed.
+    	For example, all <code>ISideEffect</code> instances that are created by the <code>ISideEffectFactory</code> obtained from the <code>WidgetSideEffects#createFactory(Widget disposableWidget)</code> method are automatically disposed once the corresponding widget is disposed.
     	</p>
-    	<p>An example would be:</p>
+    	<p>Example:</p>
 <pre>
 ISWTObservableValue personFirstNameTextObservable = WidgetProperties.text(SWT.Modify)
 	.observe(personFirstNameText);
@@ -368,9 +383,10 @@ sideEffectFactory.create(personLastNameTextObservable::getValue, person::setLast
   <tr id="swt-device-zoom">
     <td class="title">SWT device zoom</td>
     <td class="content">
-    	SWT exposes the device zoom level at which it is operating via below system property:
-    	<p><b>"org.eclipse.swt.internal.deviceZoom"</b></p>
-    	<p><b>Note:</b> This value is not honored by SWT when user disables the HighDPI feature using <b>"-Dswt.enable.autoScale=false"</b> option.</p>
+    	SWT exposes the device zoom level at which it is currently operating via the system property
+    	<p><code>"org.eclipse.swt.internal.deviceZoom"</code></p>
+    	<p>Note: This is a read-only value, so setting it on the command line doesn't make sense.
+    	Furthermore, SWT doesn't use the deviceZoom when HighDPI support is disabled via <code>-Dswt.enable.autoScale=false</code></p>
     </td>
   </tr>
 
