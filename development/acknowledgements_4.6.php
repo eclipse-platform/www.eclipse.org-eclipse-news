@@ -50,6 +50,8 @@ ob_start();
 
 
   <div class="homeitem3col">
+    <p class="bg-warning">NOTE: This page is under development. It is "primed" with content from last year.</p>
+  
     <h3>Eclipse Neon Acknowledgements</h3>
 
     <p>The entire Eclipse and Equinox team would like to thank the Eclipse Foundation staff for their tireless efforts, including: Denis Roy, Matt Ward, and Mikael Barbero for not only keeping all
