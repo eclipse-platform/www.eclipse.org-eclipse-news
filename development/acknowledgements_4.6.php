@@ -50,10 +50,10 @@ ob_start();
 
 
   <div class="homeitem3col">
-  
+
     <h3>Eclipse Neon Acknowledgements</h3>
 <p class="bg-danger">NOTE: This page is under development.</p>
-    <p>The entire Eclipse and Equinox team would like to thank 
+    <p>The entire Eclipse and Equinox team would like to thank
     <!-- the Eclipse Foundation staff for their tireless efforts, including: Denis Roy, Matt Ward, and Mikael Barbero for not only keeping all
       that infrastructure going, but also constantly improving it; Janet Campbell and Sharon Corbett for guiding us through the Eclipse legal process; Wayne Beaton for giving us improved tools to
       simplify and manage our development process; Ian Skerrett for his help with marketing the Eclipse release; and Mike Milinkovich for running the whole show. In particular, we appreciate the
@@ -72,14 +72,14 @@ ob_start();
       release engineering. Overall, an excellent example of cooperation and collaboration with other Open Source projects, even outside of Eclipse.
     -->
     </p>
-    
-     
-    <p>The Platform Resource (Workspace) team would like to thank 
+
+
+    <p>The Platform Resource (Workspace) team would like to thank
       <!-- everyone who has helped by filing bugs, testing and providing patches. Specifically we would like to thank the following people who have
       helped improve the Workspace components by their code contributions to this release: Mat Booth, Steve Francisco, Markus Keller, Alexander Kurtakov, Robin Stocker, Lars Vogel and Paul Webster.
       -->
      </p>
-    <p>The Platform UI (and Text) team would like to thank 
+    <p>The Platform UI (and Text) team would like to thank
     <!-- everyone who has helped us to improve quality by testing and reporting bugs and enhancement requests. Special thanks to the following list of
       people, in alphabetic order, whow contributed code to the project: Alain Le Guennec, Alena Laskavaia, Alexander Baranov, Alexander Kurtakov, Alia Naguib, Andrey Loskutov, Anton Leherbauer,
       Aurelien Pupier, Bob Meincke, Boris Bokowski, Brian de Alwis, Bruce Skingle, Christian Georgi, Christoph Keimel, Cornel Izbasa, C. Sean Young, Daniel Rolka, David Williams, Denis Zygann, Dirk
@@ -92,8 +92,8 @@ ob_start();
     <p>The Platform Text team would like to thank everyone who filed good bug reports and enhancement requests. Special thanks go to Sergey Prigogin, Terry Parker, John Glassmyer, Jonah Graham,
       Nicolaj Hoess and Pawel Pogorzelski for providing patches.</p>
     -->
-    <p>The Platform SWT team would like to thank 
-    
+    <p>The Platform SWT team would like to thank
+
     <!-- everyone who helped to improve the toolkit by filing bug reports and enhancement requests, as well as the early adopters who contributed towards
       improving quality by testing. Special thanks go to : Alexander Kurtakov (reviewed and contributed several patches for GTK3), Leo Ufimtsev (DND and other fixes for GTK3), Snjezana Peco (fixed
       drawing issues related to GTK+ 3.10 and above including one 'greatfix' contribution), Marc-Andre Laperle (fixed unresponsive keyboard shortcuts in GTK3), Joshua Barkovic (contributed initial
@@ -104,37 +104,37 @@ ob_start();
       the team.
     -->
     </p>
-    <p>The release engineering team would like to thank 
+    <p>The release engineering team would like to thank
     <!-- the many people who helped to improve our build. Also, the webmasters at the Eclipse Foundation for their constant help and education; in
-      particular Mikael Barbero who fixed several show-stopping issues in CBI. I'd also like to thank the Tycho Team for providing fixes and timely updates to Tycho -- two releases during Neon!
+      particular Mikael Barbero who fixed several show-stopping issues in CBI. I'd also like to thank the Tycho Team for providing fixes and timely updates to Tycho &dash; two releases during Neon!
     -->
     </p>
-    <p>The JDT Core team would like to thank 
+    <p>The JDT Core team would like to thank
     <!-- everyone who has helped us to improve quality by testing and filing good bug reports. We would like to thank Stephan Hermann for his continued support
       with the huge number of fixes committed. We had two major contributions for Neon which resulted in the "greatfix" tag - Thanks to a)John Glassmyer for the set of bugs related to import rewrite
       consistency and cleanup and b) Mateusz Matula for formatter redesign. We would also like to thank Alexander Kurtakov, Ed Merks, Harry Terkelsen,Kenneth Olson, Szymon Ptaszkiewicz, Terry Parker,
       Ulrich Grave and Vladimir Piskarev. A special appreciation goes to Olivier Thomann for continuing to support the team.
     -->
     </p>
-    <p>The JDT Debug team would like to thank 
+    <p>The JDT Debug team would like to thank
     <!-- everyone who helped improve the Java debugger by filing bugs, testing and providing patches. Specifically we would like to thank Aditya Aswani, Frits
       Jalvingh, Holger Schill and Max L. for bug fixes and Stephan Herrmann for work related to supporting external annotation to a JRE container.
     -->
       </p>
 
-    <p>The Platform Debug team would like to thank 
+    <p>The Platform Debug team would like to thank
     <!-- everyone who helped improve the debugger framework by filing bugs, testing and providing patches. Specifically we would like to thank Lars and
       Tony McCrary for the new icons, Robert Roth for the "greatfix" contribution, Andrey Loskutov, Anton Leherbauer, Philippe Marschall and Richard Birenheide for bug fixes.
       -->
       </p>
 
-    <p>The Platform Ant team would like to thank 
+    <p>The Platform Ant team would like to thank
     <!-- everyone who helped improve the ant framework by filing bugs, testing and providing patches. Specifically we would like to thank Rob Stryker and
       Julian Enoch for bug fixes.
-      --> 
+      -->
       </p>
 
-    <p>JDT UI sends thanks to everyone 
+    <p>JDT UI sends thanks to everyone
     <!-- who filed good enhancement requests and helped to improve quality by testing and filing good bug reports. Special thanks to those who contributed code:
       Andrej Zachar, Christian Georgi, Dirk Olmes, Ferenc Hechler, Frits Jalvingh, Harry Terkelsen, Jeremie Bresson, Jerome Cambon, Moritz Eysholdt, Nicolaj Hoess, Nikolay Metchev, Robert Roth, Sandra
       Lions, Stephan Herrmann (now, a committer), Szymon Ptaszkiewicz, Terry Parker and Yves Joan. Thanks to Lars Vogel and Tony McCrary for the new icons. Also, thanks to Stephan Herrmann and others
@@ -142,7 +142,7 @@ ob_start();
       -->
       </p>
 
-    <p>The Plug-in Development Environment team would like to thank 
+    <p>The Plug-in Development Environment team would like to thank
     <!-- the numerous contributors who continue to improve the component every release. We received many well written bug reports and the
       community was quick to verify our fixes. Special thanks to Lars Vogel who contributed in several areas of PDE, reviewed contributions of others and was voted in as a committer during the
       release. We thank Markus Keller for demonstrating high quality bug reporting and answering our many expert level questions about JDT and Platform. We appreciate all of the value our community
@@ -151,7 +151,7 @@ ob_start();
       -->
       </p>
 
-    <p>The p2 team would like to thank 
+    <p>The p2 team would like to thank
     <!-- the entire Eclipse team and community for supporting us while some major changes went in p2 to put in place the native layout for Mac. A special thanks to
       David Williams for all his assistance and patience and on getting the build going. Finally, thanks to everyone who provided bug reports and contributed fixes.
       -->
