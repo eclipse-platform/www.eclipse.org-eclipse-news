@@ -52,14 +52,14 @@ ob_start();
   <div class="homeitem3col">
   
     <h3>Eclipse Neon Acknowledgements</h3>
-<p class="bg-warning">NOTE: This page is under development.</p>
+<p class="bg-danger">NOTE: This page is under development.</p>
     <p>The entire Eclipse and Equinox team would like to thank 
     <!-- the Eclipse Foundation staff for their tireless efforts, including: Denis Roy, Matt Ward, and Mikael Barbero for not only keeping all
       that infrastructure going, but also constantly improving it; Janet Campbell and Sharon Corbett for guiding us through the Eclipse legal process; Wayne Beaton for giving us improved tools to
       simplify and manage our development process; Ian Skerrett for his help with marketing the Eclipse release; and Mike Milinkovich for running the whole show. In particular, we appreciate the
-      Eclipse Foundation providing resources to allow the building and signing of "Mac Apps" as true applications for MacosX, all propertly signed with the new requirements from Apple.</p>
+      Eclipse Foundation providing resources to allow the building and signing of "Mac Apps" as true applications for MacosX, all propertly signed with the new requirements from Apple.
     -->
-     
+     </p>
     <p>
       We would also like to thank the users and adopters who support our efforts, through a range of activities, including early testing, being a <a href="https://eclipse.org/donate/">Friend of
         Eclipse</a>, contracting special work, or outright employment.
@@ -69,15 +69,16 @@ ob_start();
     <p>A special mention should be made to thank to Luis Bernardo and the Apache Batik team who provided service versions on some very old versions of the 'org.apache.batik.dom' bundle, for the
       Neon release train. This was to fix a security issue discovered late in the cycle, and prevented everyone on the release train being required to move up to the latest version at the last minute.
       One of bundles, the oldest version, was even re-compiled with Java 1.2 libraries, as it was originally, which not only shows the age of the bundle, but shows that team's skill and care at
-      release engineering. Overall, an excellent example of cooperation and collaboration with other Open Source projects, even outside of Eclipse.</p>
+      release engineering. Overall, an excellent example of cooperation and collaboration with other Open Source projects, even outside of Eclipse.
     -->
+    </p>
     
      
     <p>The Platform Resource (Workspace) team would like to thank 
       <!-- everyone who has helped by filing bugs, testing and providing patches. Specifically we would like to thank the following people who have
-      helped improve the Workspace components by their code contributions to this release: Mat Booth, Steve Francisco, Markus Keller, Alexander Kurtakov, Robin Stocker, Lars Vogel and Paul Webster.</p>
+      helped improve the Workspace components by their code contributions to this release: Mat Booth, Steve Francisco, Markus Keller, Alexander Kurtakov, Robin Stocker, Lars Vogel and Paul Webster.
       -->
-
+     </p>
     <p>The Platform UI (and Text) team would like to thank 
     <!-- everyone who has helped us to improve quality by testing and reporting bugs and enhancement requests. Special thanks to the following list of
       people, in alphabetic order, whow contributed code to the project: Alain Le Guennec, Alena Laskavaia, Alexander Baranov, Alexander Kurtakov, Alia Naguib, Andrey Loskutov, Anton Leherbauer,
@@ -100,26 +101,32 @@ ob_start();
       for menu items). We would also like to thank Abhishek Kishore, Alexandra Buzila, Andrey Loskutov, Anton Leherbauer, Dani Megert, David Williams, Ian Bull, Jacek Sieka, James Watkins-Harvey,
       Jonny Lamb, Lars Vogel, Lina Kemmel, Markus Keller, Mat Booth, Matthias Mailänder, Mickael Istria, Mikael Barbero, Pascal Rapicault, Paul Webster, Peter White, Sami Wagiaalla, Sergey Prigogin,
       Sopot Cela, Stefan Xenos, Stephan Herrmann, Steve Francisco, Sudol Wojciech and Tobias Oberlies. We would like to appreciate Silenio Quarti, Bogdan Gheorghe and Grant Gayed for always supporting
-      the team.</p>
+      the team.
     -->
+    </p>
     <p>The release engineering team would like to thank 
     <!-- the many people who helped to improve our build. Also, the webmasters at the Eclipse Foundation for their constant help and education; in
-      particular Mikael Barbero who fixed several show-stopping issues in CBI. I'd also like to thank the Tycho Team for providing fixes and timely updates to Tycho -- two releases during Neon!</p>
+      particular Mikael Barbero who fixed several show-stopping issues in CBI. I'd also like to thank the Tycho Team for providing fixes and timely updates to Tycho -- two releases during Neon!
     -->
+    </p>
     <p>The JDT Core team would like to thank 
     <!-- everyone who has helped us to improve quality by testing and filing good bug reports. We would like to thank Stephan Hermann for his continued support
       with the huge number of fixes committed. We had two major contributions for Neon which resulted in the "greatfix" tag - Thanks to a)John Glassmyer for the set of bugs related to import rewrite
       consistency and cleanup and b) Mateusz Matula for formatter redesign. We would also like to thank Alexander Kurtakov, Ed Merks, Harry Terkelsen,Kenneth Olson, Szymon Ptaszkiewicz, Terry Parker,
-      Ulrich Grave and Vladimir Piskarev. A special appreciation goes to Olivier Thomann for continuing to support the team.</p>
+      Ulrich Grave and Vladimir Piskarev. A special appreciation goes to Olivier Thomann for continuing to support the team.
     -->
+    </p>
     <p>The JDT Debug team would like to thank 
     <!-- everyone who helped improve the Java debugger by filing bugs, testing and providing patches. Specifically we would like to thank Aditya Aswani, Frits
       Jalvingh, Holger Schill and Max L. for bug fixes and Stephan Herrmann for work related to supporting external annotation to a JRE container.
     -->
       </p>
 
-    <p>The Platform Debug team would like to thank everyone who helped improve the debugger framework by filing bugs, testing and providing patches. Specifically we would like to thank Lars and
-      Tony McCrary for the new icons, Robert Roth for the "greatfix" contribution, Andrey Loskutov, Anton Leherbauer, Philippe Marschall and Richard Birenheide for bug fixes.</p>
+    <p>The Platform Debug team would like to thank 
+    <!-- everyone who helped improve the debugger framework by filing bugs, testing and providing patches. Specifically we would like to thank Lars and
+      Tony McCrary for the new icons, Robert Roth for the "greatfix" contribution, Andrey Loskutov, Anton Leherbauer, Philippe Marschall and Richard Birenheide for bug fixes.
+      -->
+      </p>
 
     <p>The Platform Ant team would like to thank 
     <!-- everyone who helped improve the ant framework by filing bugs, testing and providing patches. Specifically we would like to thank Rob Stryker and
@@ -151,7 +158,7 @@ ob_start();
       </p>
 
     <h3>Active Committers</h3>
-      <p class="bg-warning">NOTE: This section is left as a place holder.</p>
+      <p class="bg-danger">NOTE: This section is left as a place holder and will be updated later.</p>
     <p>This Eclipse and Equinox release was brought to you by the following committers. These committers were active at the time of the release (that is, one or more commits since previous
       release.)</p>
     <p>
