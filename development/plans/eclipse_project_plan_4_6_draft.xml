@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 12:40 EDT May 16, 2015.
+Last revised 05:12 EDT May 17, 2016.
 
 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 marks interesting changes since the previous draft of 
@@ -576,7 +576,7 @@ Eclipse 4.6 Endgame Plan.
 <li><strong><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed) User interface enhancements.</strong>
 	We want to improve the user experience for importing projects by providing a new smart import wizard,
 	which is currently in the e4 incubator. We also plans to work on a full screen mode.
-	n addition, JDT will work to further improve content assist in the Java editor. We also
+	In addition, JDT will work to further improve content assist in the Java editor. We also
 	plan to introduce an Info severity for optional compiler problems.
 	[Platform UI, JDT UI]
 </li>
@@ -589,7 +589,7 @@ Eclipse 4.6 Endgame Plan.
 </li>
 <li><strong><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed) Improve PDE editors.</strong>
 	PDE wants to further improve its Target editor and enhance the performance in all PDE editors.
-	[PDE] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">482576</a> and <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">482640</a>)
+	[PDE] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=482576">482576</a> and <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=482640">482640</a>)
 </li>
 
 
