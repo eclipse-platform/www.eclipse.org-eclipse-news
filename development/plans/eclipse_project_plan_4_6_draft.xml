@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 05:12 EDT May 17, 2016.
+Last revised 11:42 EDT May 17, 2016.
 
 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 marks interesting changes since the previous draft of 
@@ -208,12 +208,12 @@ Eclipse 4.6 Endgame Plan.
 		<tr class="c0">
 			<td rowspan="2">Windows</td>
 			<td rowspan="2">7<br/>
-			8
+			10
 			</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
-				Oracle Java 8u51<br/>
-				IBM Java 8 8.0.1.10
+				Oracle Java 8u91<br/>
+				IBM Java 8 8.0.3
 			</td>
 			<td rowspan="2">Win32</td>
 		</tr>
@@ -222,13 +222,13 @@ Eclipse 4.6 Endgame Plan.
 		</tr>
 		<!-- ************ RHEL ************** -->
 		<tr class="c1">
-			<td rowspan="5">Red Hat Enterprise Linux</td>
+			<td rowspan="6">Red Hat Enterprise Linux</td>
 			<td rowspan="4">6</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
-				Oracle Java 8u51<br/>
-				IBM Java 8 8.0.1.10<br/>
-				Open JDK 8u60
+				Oracle Java 8u91<br/>
+				IBM Java 8 8.0.3<br/>
+				Open JDK 8u65
 			</td>
 			<td rowspan="4">GTK+ 2</td>
 		</tr>
@@ -238,49 +238,55 @@ Eclipse 4.6 Endgame Plan.
 		<tr class="c1">
 			<td rowspan="1">Power 32-bit</td>
 			<td rowspan="2">
-				IBM Java 8 8.0.1.10
+				IBM Java 8 8.0.3
 			</td>
 		</tr>
 		<tr class="c1">
 			<td rowspan="1">Power 64-bit</td>
 		</tr>
 		<tr class="c1">
-			<td rowspan="1">7</td>
+			<td rowspan="2">7</td>
 			<td rowspan="1">x86 64-bit</td>
-			<td rowspan="1">Open JDK 8u60</td>
-			<td rowspan="1">GTK+ 3</td>
+			<td rowspan="2">Open JDK 8u65</td>
+			<td rowspan="2">GTK+ 3</td>
+		</tr>
+		<tr class="c1">
+			<td rowspan="1">Power 64-bit LE</td>
 		</tr>
 		<!-- ************ SLES ************** -->
 		<tr class="c0">
-			<td rowspan="4">SUSE Linux Enterprise Server</td>
-			<td rowspan="4">11 SP2</td>
+			<td rowspan="5">SUSE Linux Enterprise Server</td>
+			<td rowspan="5">12 SP1</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
-				Oracle Java 8u51<br/>
-				IBM Java 8 8.0.1.10
+				Oracle Java 8u91<br/>
+				IBM Java 8 8.0.3
 			</td>
-			<td rowspan="4">GTK+ 2</td>
+			<td rowspan="5">GTK+ 3</td>
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">x86 64-bit</td>
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">Power 32-bit</td>
-			<td rowspan="2">
-				IBM Java 8 8.0.1.10
+			<td rowspan="3">
+				IBM Java 8 8.0.3
 			</td>
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">Power 64-bit</td>
+		</tr>
+		<tr class="c0">
+			<td rowspan="1">Power 64-bit LE</td>
 		</tr>
 		<!-- ************ Ubuntu ************** -->
 		<tr class="c1">
 			<td rowspan="4">Ubuntu Long Term Support</td>
-			<td rowspan="2">12.04</td>
+			<td rowspan="2">14.04</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
-				Oracle Java 8u51<br/>
-				IBM Java 8 8.0.1.10
+				Oracle Java 8u91<br/>
+				IBM Java 8 8.0.3
 
 			</td>
 			<td rowspan="2">GTK+ 3</td>
@@ -289,11 +295,11 @@ Eclipse 4.6 Endgame Plan.
 			<td rowspan="1">x86 64-bit</td>
 		</tr>
 		<tr class="c1">
-			<td rowspan="2">14.04</td>
+			<td rowspan="2">16.04</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
-				Oracle Java 8u51<br/>
-				IBM Java 8 8.0.1.10
+				Oracle Java 8u91<br/>
+				IBM Java 8 8.0.3
 			</td>
 			<td rowspan="2">GTK+ 3</td>
 		</tr>
@@ -303,10 +309,12 @@ Eclipse 4.6 Endgame Plan.
 		<!-- ************ Solaris ************** -->
 		<tr class="c0">
 			<td rowspan="2">Oracle Solaris</td>
-			<td rowspan="2">10</td>
+			<td rowspan="2">10<br/>11</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="2">
-			TBD</td>
+				Oracle Java 8u91<br/>
+				IBM Java 8 8.0.3
+			</td>
 			<td rowspan="2">GTK+ 2</td>
 		</tr>
 		<tr class="c0">
@@ -326,7 +334,7 @@ Eclipse 4.6 Endgame Plan.
 			<td rowspan="2">7.1</td>
 			<td rowspan="1">Power 32-bit</td>
 			<td rowspan="2">
-				IBM Java 8 8.0.1.10
+				IBM Java 8 8.0.3
 			</td>
 			<td rowspan="2">GTK+ 2</td>
 		</tr>
@@ -337,10 +345,10 @@ Eclipse 4.6 Endgame Plan.
 		<!-- ************ Mac ************** -->
 		<tr class="c1">
 			<td rowspan="1">Apple Mac OS X</td>
-			<td rowspan="1">10.10</td>
+			<td rowspan="1">10.11</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-				Oracle Java 8u51<br/>
+				Oracle Java 8u91<br/>
 			</td>
 			<td rowspan="1">Cocoa</td>
 		</tr>
@@ -511,12 +519,12 @@ Eclipse 4.6 Endgame Plan.
 
 <li><strong><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed) Support Windows 10.</strong>
 	We will test against Windows 10 and fix any bugs that prevent Eclipse from running fine on Windows 10. We will also backport the relevant fixes to the service releases.
-	[Equinox, SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">TBD</a>)
+	[Equinox, SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=493795">493795</a>)
 </li>
 
 <li><strong><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed) Mac OS X 10.11.</strong>
 	We will test against Mac OS X 10.11 and fix any bugs that prevent Eclipse from running fine on Mac OS X 10.11. We will also backport the relevant fixes to the service releases.
-	[Equinox, SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">TBD</a>)
+	[Equinox, SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=482454">482454</a>)
 </li>
 
 <li><strong><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed) Work on Eclipse support for Java 9.</strong>
