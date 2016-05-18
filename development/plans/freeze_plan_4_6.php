@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2016-04-24
+	# Date:			2016-05-18
 	#
 	# Description: Eclipse project Neon release freeze plan
 	#
@@ -41,7 +41,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>Early May - Transition to fix and polish mode</b></p>
+			<p><b>May 18 - Fix pass and release candidate 2 build</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -55,7 +55,7 @@ ob_start();
 				<col width="17%">
 				<col width="0%">
   			</colgroup>
-	          <tr class="current">
+	          <tr>
 	            <td align="right" height="20"><b>May 2016</b>&nbsp;</td>
 	          </tr>
 	          <tr>
@@ -124,7 +124,7 @@ ob_start();
 	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC1"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> rules</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
-	          <tr>
+	          <tr class="current">
 	            <td height="20"></td>
 	            <td align="right" height="20">18</td>
 	            <td align="right" height="20">Wed 20:00 EDT</td>
@@ -475,7 +475,7 @@ ob_start();
               must have their associated bug reports tagged 4.6 RC1. Ongoing changes 
               to component documentation do not require special approval.
               <br>
-              No bugs must appear in <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;classification=Eclipse;classification=RT;resolution=FIXED;target_milestone=4.6%20RC1;target_milestone=Neon%20RC1;field0-0-0=flagtypes.name;type0-0-0=notsubstring;value0-0-0=review%2B;field0-1-0=keywords;type0-1-0=notsubstring;value0-1-0=documentation;field0-2-0=keywords;type0-2-0=notsubstring;value0-2-0=test;field0-3-0=keywords;type0-3-0=notsubstring;value0-3-0=example;field0-4-0=status_whiteboard;type0-4-0=notsubstring;value0-4-0=routine%20releng;list_id=1368548">this query</a>.
+              No bugs must appear in <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;classification=Eclipse;classification=RT;resolution=FIXED;target_milestone=4.6%20RC1;target_milestone=Neon%20RC1;field0-0-0=flagtypes.name;type0-0-0=notsubstring;value0-0-0=review%2B;field0-1-0=keywords;type0-1-0=notsubstring;value0-1-0=documentation;field0-2-0=keywords;type0-2-0=notsubstring;value0-2-0=test;field0-3-0=keywords;type0-3-0=notsubstring;value0-3-0=example;field0-4-0=status_whiteboard;type0-4-0=notsubstring;value0-4-0=routine%20releng;field0-5-0=keywords;type0-5-0=notsubstring;value0-5-0=plan;list_id=1368548">this query</a>.
               When your bug appears there, make sure that it gets the review+ flag or add the 'Documentation', 'example' or 'test' keyword if appropriate.</p>
              <p><b>Feature work and API change approval:</b> PMC must approve all feature work and API changes. No changes are to
               be released without prior approval and associated bug report.  
@@ -493,7 +493,7 @@ ob_start();
               must have their associated bug reports tagged 4.6 RC2. Ongoing changes 
               to component documentation do not require special approval.
               <br>
-              No bugs must appear in <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;classification=Eclipse;classification=RT;resolution=FIXED;target_milestone=4.6%20RC2;target_milestone=Neon%20RC2;field0-0-0=flagtypes.name;type0-0-0=notsubstring;value0-0-0=review%2B;field0-1-0=keywords;type0-1-0=notsubstring;value0-1-0=documentation;field0-2-0=keywords;type0-2-0=notsubstring;value0-2-0=test;field0-3-0=keywords;type0-3-0=notsubstring;value0-3-0=example;field0-4-0=status_whiteboard;type0-4-0=notsubstring;value0-4-0=routine%20releng;list_id=1368548">this query</a>.
+              No bugs must appear in <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;classification=Eclipse;classification=RT;resolution=FIXED;target_milestone=4.6%20RC2;target_milestone=Neon%20RC2;field0-0-0=flagtypes.name;type0-0-0=notsubstring;value0-0-0=review%2B;field0-1-0=keywords;type0-1-0=notsubstring;value0-1-0=documentation;field0-2-0=keywords;type0-2-0=notsubstring;value0-2-0=test;field0-3-0=keywords;type0-3-0=notsubstring;value0-3-0=example;field0-4-0=status_whiteboard;type0-4-0=notsubstring;value0-4-0=routine%20releng;field0-5-0=keywords;type0-5-0=notsubstring;value0-5-0=plan;list_id=1368548">this query</a>.
               When your bug appears there, make sure that it gets the review+ flags or add the 'Documentation', 'example' or 'test' keyword if appropriate.</p>
              <p><b>Feature work and API change approval:</b> PMC must approve all feature work and API changes. No changes are to
               be released without prior approval and associated bug report.  
@@ -510,7 +510,7 @@ ob_start();
               must have their associated bug reports tagged 4.6 RC3. Ongoing changes 
               to component documentation do not require special approval.
               <br>
-              No bugs must appear in <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;classification=Eclipse;classification=RT;resolution=FIXED;target_milestone=4.6%20RC3;target_milestone=Neon%20RC3;field0-0-0=flagtypes.name;type0-0-0=notsubstring;value0-0-0=review%2B;field0-1-0=keywords;type0-1-0=notsubstring;value0-1-0=documentation;field0-2-0=keywords;type0-2-0=notsubstring;value0-2-0=test;field0-3-0=keywords;type0-3-0=notsubstring;value0-3-0=example;field0-4-0=status_whiteboard;type0-4-0=notsubstring;value0-4-0=routine%20releng;list_id=1368548">this query</a>.
+              No bugs must appear in <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;classification=Eclipse;classification=RT;resolution=FIXED;target_milestone=4.6%20RC3;target_milestone=Neon%20RC3;field0-0-0=flagtypes.name;type0-0-0=notsubstring;value0-0-0=review%2B;field0-1-0=keywords;type0-1-0=notsubstring;value0-1-0=documentation;field0-2-0=keywords;type0-2-0=notsubstring;value0-2-0=test;field0-3-0=keywords;type0-3-0=notsubstring;value0-3-0=example;field0-4-0=status_whiteboard;type0-4-0=notsubstring;value0-4-0=routine%20releng;field0-5-0=keywords;type0-5-0=notsubstring;value0-5-0=plan;list_id=1368548">this query</a>.
               When your bug appears there, make sure that it gets the review+ flags or add the 'Documentation', 'example' or 'test' keyword if appropriate.</p>
              <p><b>Feature work and API change approval:</b> PMC must approve all feature work and API changes. No changes are to
               be released without prior approval and associated bug report.  
@@ -532,7 +532,7 @@ ob_start();
               prior approvals. Ongoing changes to component documentation do 
               not require special approval.
               <br>
-              No bugs must appear in <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;classification=Eclipse;classification=RT;resolution=FIXED;target_milestone=4.6%20RC4;target_milestone=Neon%20RC4;field0-0-0=flagtypes.name;type0-0-0=notsubstring;value0-0-0=review%2B;field0-1-0=keywords;type0-1-0=notsubstring;value0-1-0=documentation;field0-2-0=keywords;type0-2-0=notsubstring;value0-2-0=test;field0-3-0=keywords;type0-3-0=notsubstring;value0-3-0=example;field0-4-0=status_whiteboard;type0-4-0=notsubstring;value0-4-0=routine%20releng;list_id=1368548">this query</a>.
+              No bugs must appear in <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;classification=Eclipse;classification=RT;resolution=FIXED;target_milestone=4.6%20RC4;target_milestone=Neon%20RC4;field0-0-0=flagtypes.name;type0-0-0=notsubstring;value0-0-0=review%2B;field0-1-0=keywords;type0-1-0=notsubstring;value0-1-0=documentation;field0-2-0=keywords;type0-2-0=notsubstring;value0-2-0=test;field0-3-0=keywords;type0-3-0=notsubstring;value0-3-0=example;field0-4-0=status_whiteboard;type0-4-0=notsubstring;value0-4-0=routine%20releng;field0-5-0=keywords;type0-5-0=notsubstring;value0-5-0=plan;list_id=1368548">this query</a>.
               When your bug appears there, make sure that it gets the review+ flags or add the 'Documentation', 'example' or 'test' keyword if appropriate.</p>
              <p><b>Feature work and API change approval:</b> PMC must approve all feature work and API changes. No changes are to
               be released without prior approval and associated bug report.  
