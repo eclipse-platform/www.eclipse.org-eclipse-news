@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2016-05-18
+	# Date:			2016-05-19
 	#
 	# Description: Eclipse project Neon release freeze plan
 	#
@@ -473,7 +473,7 @@ ob_start();
               &quot;polish&quot; items. Fixing other defects has lower priority.</p>
              <p><b>Fix approval:</b> Another committer must +1 your bug report. All changes 
               must have their associated bug reports tagged 4.6 RC1. Ongoing changes 
-              to component documentation do not require special approval.
+              to component documentation, tests or examples do not require special approval.
               <br>
               No bugs must appear in <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;classification=Eclipse;classification=RT;resolution=FIXED;target_milestone=4.6%20RC1;target_milestone=Neon%20RC1;field0-0-0=flagtypes.name;type0-0-0=notsubstring;value0-0-0=review%2B;field0-1-0=keywords;type0-1-0=notsubstring;value0-1-0=documentation;field0-2-0=keywords;type0-2-0=notsubstring;value0-2-0=test;field0-3-0=keywords;type0-3-0=notsubstring;value0-3-0=example;field0-4-0=status_whiteboard;type0-4-0=notsubstring;value0-4-0=routine%20releng;field0-5-0=keywords;type0-5-0=notsubstring;value0-5-0=plan;list_id=1368548">this query</a>.
               When your bug appears there, make sure that it gets the review+ flag or add the 'Documentation', 'example' or 'test' keyword if appropriate.</p>
@@ -491,7 +491,7 @@ ob_start();
               &quot;polish&quot; items. Fixing other defects has lower priority.</p>
             <p><b>Fix approval:</b> Two additional committers must +1 your bug report. All changes 
               must have their associated bug reports tagged 4.6 RC2. Ongoing changes 
-              to component documentation do not require special approval.
+              to component documentation, tests or examples do not require special approval.
               <br>
               No bugs must appear in <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;classification=Eclipse;classification=RT;resolution=FIXED;target_milestone=4.6%20RC2;target_milestone=Neon%20RC2;field0-0-0=flagtypes.name;type0-0-0=notsubstring;value0-0-0=review%2B;field0-1-0=keywords;type0-1-0=notsubstring;value0-1-0=documentation;field0-2-0=keywords;type0-2-0=notsubstring;value0-2-0=test;field0-3-0=keywords;type0-3-0=notsubstring;value0-3-0=example;field0-4-0=status_whiteboard;type0-4-0=notsubstring;value0-4-0=routine%20releng;field0-5-0=keywords;type0-5-0=notsubstring;value0-5-0=plan;list_id=1368548">this query</a>.
               When your bug appears there, make sure that it gets the review+ flags or add the 'Documentation', 'example' or 'test' keyword if appropriate.</p>
@@ -508,7 +508,7 @@ ob_start();
 			<p><b>Focus:</b> Serious defects only; documentation.</p>
             <p><b>Fix approval:</b> Two additional committers and a component lead must +1 your bug report (3 people who are not the one making the change). All changes 
               must have their associated bug reports tagged 4.6 RC3. Ongoing changes 
-              to component documentation do not require special approval.
+              to component documentation, tests or examples do not require special approval.
               <br>
               No bugs must appear in <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;classification=Eclipse;classification=RT;resolution=FIXED;target_milestone=4.6%20RC3;target_milestone=Neon%20RC3;field0-0-0=flagtypes.name;type0-0-0=notsubstring;value0-0-0=review%2B;field0-1-0=keywords;type0-1-0=notsubstring;value0-1-0=documentation;field0-2-0=keywords;type0-2-0=notsubstring;value0-2-0=test;field0-3-0=keywords;type0-3-0=notsubstring;value0-3-0=example;field0-4-0=status_whiteboard;type0-4-0=notsubstring;value0-4-0=routine%20releng;field0-5-0=keywords;type0-5-0=notsubstring;value0-5-0=plan;list_id=1368548">this query</a>.
               When your bug appears there, make sure that it gets the review+ flags or add the 'Documentation', 'example' or 'test' keyword if appropriate.</p>
@@ -529,7 +529,7 @@ ob_start();
               approve all work on a component. In addition, any component lead 
               can veto a change with cause. No changes are to be released without 
               associated bug report tagged 4.6 RC4 including risk assessment and 
-              prior approvals. Ongoing changes to component documentation do 
+              prior approvals. Ongoing changes to component documentation, tests or examples do 
               not require special approval.
               <br>
               No bugs must appear in <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;classification=Eclipse;classification=RT;resolution=FIXED;target_milestone=4.6%20RC4;target_milestone=Neon%20RC4;field0-0-0=flagtypes.name;type0-0-0=notsubstring;value0-0-0=review%2B;field0-1-0=keywords;type0-1-0=notsubstring;value0-1-0=documentation;field0-2-0=keywords;type0-2-0=notsubstring;value0-2-0=test;field0-3-0=keywords;type0-3-0=notsubstring;value0-3-0=example;field0-4-0=status_whiteboard;type0-4-0=notsubstring;value0-4-0=routine%20releng;field0-5-0=keywords;type0-5-0=notsubstring;value0-5-0=plan;list_id=1368548">this query</a>.
