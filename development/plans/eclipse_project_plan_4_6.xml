@@ -16,11 +16,11 @@
 <p:introduction>
 <div>
 <p>
-Last revised 8:51 EST December 14, 2015.
+Last revised 11:42 EDT May 17, 2016.
 
 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 marks interesting changes since the previous draft of 
-<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_6_20150817.xml">August 17, 2015</a>.)
+<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_6_20151214.xml">December 14, 2015</a>.)
 
 </p>
 <p><i>Please send comments about this plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
@@ -208,12 +208,12 @@ Eclipse 4.6 Endgame Plan.
 		<tr class="c0">
 			<td rowspan="2">Windows</td>
 			<td rowspan="2">7<br/>
-			8
+			10
 			</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
-				Oracle Java 8u51<br/>
-				IBM Java 8 8.0.1.10
+				Oracle Java 8u91<br/>
+				IBM Java 8 8.0.3
 			</td>
 			<td rowspan="2">Win32</td>
 		</tr>
@@ -222,13 +222,13 @@ Eclipse 4.6 Endgame Plan.
 		</tr>
 		<!-- ************ RHEL ************** -->
 		<tr class="c1">
-			<td rowspan="5">Red Hat Enterprise Linux</td>
+			<td rowspan="6">Red Hat Enterprise Linux</td>
 			<td rowspan="4">6</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
-				Oracle Java 8u51<br/>
-				IBM Java 8 8.0.1.10<br/>
-				Open JDK 8u60
+				Oracle Java 8u91<br/>
+				IBM Java 8 8.0.3<br/>
+				Open JDK 8u65
 			</td>
 			<td rowspan="4">GTK+ 2</td>
 		</tr>
@@ -238,49 +238,55 @@ Eclipse 4.6 Endgame Plan.
 		<tr class="c1">
 			<td rowspan="1">Power 32-bit</td>
 			<td rowspan="2">
-				IBM Java 8 8.0.1.10
+				IBM Java 8 8.0.3
 			</td>
 		</tr>
 		<tr class="c1">
 			<td rowspan="1">Power 64-bit</td>
 		</tr>
 		<tr class="c1">
-			<td rowspan="1">7</td>
+			<td rowspan="2">7</td>
 			<td rowspan="1">x86 64-bit</td>
-			<td rowspan="1">Open JDK 8u60</td>
-			<td rowspan="1">GTK+ 3</td>
+			<td rowspan="2">Open JDK 8u65</td>
+			<td rowspan="2">GTK+ 3</td>
+		</tr>
+		<tr class="c1">
+			<td rowspan="1">Power 64-bit LE</td>
 		</tr>
 		<!-- ************ SLES ************** -->
 		<tr class="c0">
-			<td rowspan="4">SUSE Linux Enterprise Server</td>
-			<td rowspan="4">11 SP2</td>
+			<td rowspan="5">SUSE Linux Enterprise Server</td>
+			<td rowspan="5">12 SP1</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
-				Oracle Java 8u51<br/>
-				IBM Java 8 8.0.1.10
+				Oracle Java 8u91<br/>
+				IBM Java 8 8.0.3
 			</td>
-			<td rowspan="4">GTK+ 2</td>
+			<td rowspan="5">GTK+ 3</td>
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">x86 64-bit</td>
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">Power 32-bit</td>
-			<td rowspan="2">
-				IBM Java 8 8.0.1.10
+			<td rowspan="3">
+				IBM Java 8 8.0.3
 			</td>
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">Power 64-bit</td>
+		</tr>
+		<tr class="c0">
+			<td rowspan="1">Power 64-bit LE</td>
 		</tr>
 		<!-- ************ Ubuntu ************** -->
 		<tr class="c1">
 			<td rowspan="4">Ubuntu Long Term Support</td>
-			<td rowspan="2">12.04</td>
+			<td rowspan="2">14.04</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
-				Oracle Java 8u51<br/>
-				IBM Java 8 8.0.1.10
+				Oracle Java 8u91<br/>
+				IBM Java 8 8.0.3
 
 			</td>
 			<td rowspan="2">GTK+ 3</td>
@@ -289,11 +295,11 @@ Eclipse 4.6 Endgame Plan.
 			<td rowspan="1">x86 64-bit</td>
 		</tr>
 		<tr class="c1">
-			<td rowspan="2">14.04</td>
+			<td rowspan="2">16.04</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
-				Oracle Java 8u51<br/>
-				IBM Java 8 8.0.1.10
+				Oracle Java 8u91<br/>
+				IBM Java 8 8.0.3
 			</td>
 			<td rowspan="2">GTK+ 3</td>
 		</tr>
@@ -303,10 +309,12 @@ Eclipse 4.6 Endgame Plan.
 		<!-- ************ Solaris ************** -->
 		<tr class="c0">
 			<td rowspan="2">Oracle Solaris</td>
-			<td rowspan="2">10</td>
+			<td rowspan="2">10<br/>11</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="2">
-			TBD</td>
+				Oracle Java 8u91<br/>
+				IBM Java 8 8.0.3
+			</td>
 			<td rowspan="2">GTK+ 2</td>
 		</tr>
 		<tr class="c0">
@@ -326,7 +334,7 @@ Eclipse 4.6 Endgame Plan.
 			<td rowspan="2">7.1</td>
 			<td rowspan="1">Power 32-bit</td>
 			<td rowspan="2">
-				IBM Java 8 8.0.1.10
+				IBM Java 8 8.0.3
 			</td>
 			<td rowspan="2">GTK+ 2</td>
 		</tr>
@@ -337,10 +345,10 @@ Eclipse 4.6 Endgame Plan.
 		<!-- ************ Mac ************** -->
 		<tr class="c1">
 			<td rowspan="1">Apple Mac OS X</td>
-			<td rowspan="1">10.10</td>
+			<td rowspan="1">10.11</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-				Oracle Java 8u51<br/>
+				Oracle Java 8u91<br/>
 			</td>
 			<td rowspan="1">Cocoa</td>
 		</tr>
@@ -491,40 +499,35 @@ Eclipse 4.6 Endgame Plan.
 </p:description>
 
 <p:committed>
-<p><i>None at this time.</i></p>
-<ul>
-</ul>
-</p:committed>
 
-<p:proposed>
 <ul>
-<li><strong>Improve support for GTK+ 3.</strong>
+<li><strong><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed) Improve support for GTK+ 3.</strong>
 	With this release we will continue to improve the support for GTK+ 3 and enable it on even more platforms. We will also fix problems with newer versions like 3.14 and 3.16.
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=474628">474628</a>)
 </li>
 
-<li><strong>Provide good support for high-DPI displays.</strong>
+<li><strong><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed) Provide good support for high-DPI displays.</strong>
 	The current support for high-DPI displays has various rendering issues.
 	With Neon we want to provide good support for high-DPI displays.
 	[SWT, Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=382972">382972</a>)
 </li>
 
-<li><strong>Add support for Solaris x86 and SPARC 64-bit platforms.</strong>
+<li><strong><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed) Add support for Solaris x86 and SPARC 64-bit platforms.</strong>
 	We want to add support for the Solaris x86 and SPARC 64-bit platforms. This requires changes in SWT and the launcher.
 	[Equinox, SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=429332">429332</a>, <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=429343">429343</a>, <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=294718">294718</a>)
 </li>
 
-<li><strong>Support Windows 10.</strong>
+<li><strong><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed) Support Windows 10.</strong>
 	We will test against Windows 10 and fix any bugs that prevent Eclipse from running fine on Windows 10. We will also backport the relevant fixes to the service releases.
-	[Equinox, SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">TBD</a>)
+	[Equinox, SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=493795">493795</a>)
 </li>
 
-<li><strong>Mac OS X 10.11.</strong>
+<li><strong><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed) Mac OS X 10.11.</strong>
 	We will test against Mac OS X 10.11 and fix any bugs that prevent Eclipse from running fine on Mac OS X 10.11. We will also backport the relevant fixes to the service releases.
-	[Equinox, SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">TBD</a>)
+	[Equinox, SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=482454">482454</a>)
 </li>
 
-<li><strong>Work on Eclipse support for Java 9.</strong>
+<li><strong><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed) Work on Eclipse support for Java 9.</strong>
 	The next Java SE release is version 9, which is currently scheduled for Q1 2017.
 	This Java release will add modularization to the Java language, also known under the code name Jigsaw.
 	The Neon release itself will not provide any support for Java 9, but we will provide features patches whenever major
@@ -533,17 +536,23 @@ Eclipse 4.6 Endgame Plan.
 </li>
 
 </ul>
+</p:committed>
+
+<p:proposed>
+<ul>
+
+</ul>
 </p:proposed>
 
 <p:deferred>
 <ul>
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (deferred) <strong>SWT browser currency.</strong> 
+<li><strong>SWT browser currency.</strong> 
 	Significant work is required in the SWT browser widget to support the latest
 	browser runtimes. As part of this effort we will add browser support for XULRunner 38 on all platforms.
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=474625">474625</a>)
 </li>
 
-<li><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (deferred) <strong>SWT Webkit2 port for Browser widget on GTK+.</strong>
+<li><strong>SWT Webkit2 port for Browser widget on GTK+.</strong>
 	We will complete the implementation of the Webkit2 port for Browser widget on GTK+.
 	[SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441568">441568</a>)
 </li>
@@ -564,52 +573,50 @@ Eclipse 4.6 Endgame Plan.
 </p:description>
 
 <p:committed>
-  <p><i>None at this time.</i></p>
-</p:committed>
-
-<p:proposed>
 <ul>
-
-<li><strong>Recruit and train new contributors.</strong>
+<li><strong><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed) Recruit and train new contributors.</strong>
 	We will continue the work we started in Mars (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441565">441565</a>) to reduce any real or perceived barriers
 	to contribution, and increase efforts on reviewing patches and mentoring
 	new contributors, with the goal that they become active committers.
 	[All components] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=474498">474498</a>)
 </li>
 
-<li><strong>User interface enhancements.</strong>
+<li><strong><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed) User interface enhancements.</strong>
 	We want to improve the user experience for importing projects by providing a new smart import wizard,
 	which is currently in the e4 incubator. We also plans to work on a full screen mode.
-	JDT will make it easier to navigate through code by adding an 'Open Members' feature.
 	In addition, JDT will work to further improve content assist in the Java editor. We also
 	plan to introduce an Info severity for optional compiler problems.
-	[Platform UI, JDT UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">TBD</a>)
+	[Platform UI, JDT UI]
 </li>
-
-<li><strong>Performance and stability of Platform user interface.</strong>
+<li><strong><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed) Performance and stability of Platform user interface.</strong>
 	Version 4.5 of the Eclipse Platform still has some performance and
 	functional shortcomings compared to the old 3.x generation of the platform.
 	We will work to root out and eliminate these remaining bugs to increase
 	the overall quality and performance of the 4.x generation platform.
-	[Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">TBD</a>)
+	[Platform UI]
 </li>
-
-<li><strong>Reliable performance tests.</strong>
-	With Mars we brought the performance test infrastructure back to live on eclipse.org hardware (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=374441">374441</a>).
-	We now have to make use of that and make sure that we get the important performance tests reliably running.
-	[All components] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">TBD</a>)
-</li>
-
-<li><strong>Improve PDE editors.</strong>
+<li><strong><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed) Improve PDE editors.</strong>
 	PDE wants to further improve its Target editor and enhance the performance in all PDE editors.
-	[PDE] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">482576</a> and <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">482640</a>)
+	[PDE] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=482576">482576</a> and <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=482640">482640</a>)
 </li>
 
+
+</ul>
+</p:committed>
+
+<p:proposed>
+<ul>
 </ul>
 </p:proposed>
 
 <p:deferred>
-  <p><i>None at this time.</i></p>
+<ul>
+<li><strong><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (deferred) Reliable performance tests.</strong>
+	With Mars we brought the performance test infrastructure back to live on eclipse.org hardware (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=374441">374441</a>).
+	We now have to make use of that and make sure that we get the important performance tests reliably running.
+	[All components] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">TBD</a>)
+</li>
+</ul>
 </p:deferred>
 
 </p:theme>
@@ -621,8 +628,6 @@ Eclipse 4.6 Endgame Plan.
 <p:appendix name="Execution Environment by Bundle">
   
 <p>
-<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (many bundles increased their BREE since the last update)
-<br/>
 In the table below, the &quot;4.6 minimum execution environment&quot;
   column indicates the minimum Java class library requirements of each bundle
   for the 4.6 release, where the value is one of:</p>
@@ -807,15 +812,15 @@ In the table below, the &quot;4.6 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.compare</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.8</div></td>
     </tr>
     <tr>
       <td>org.eclipse.compare.core</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.8</div></td>
     </tr>
     <tr>
       <td>org.eclipse.compare.win32</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.8</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.commands</td>
@@ -858,16 +863,12 @@ In the table below, the &quot;4.6 minimum execution environment&quot;
       <td><div align="center">1.7</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.core.filesystem.java7</td>
+      <td>org.eclipse.core.jobs</td>
       <td><div align="center">1.7</div></td>
     </tr>
     <tr>
-      <td>org.eclipse.core.jobs</td>
-      <td><div align="center">1.8</div></td>
-    </tr>
-    <tr>
       <td>org.eclipse.core.net</td>
-      <td><div align="center">F1.1</div></td>
+      <td><div align="center">1.8</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.resources</td>
@@ -879,7 +880,7 @@ In the table below, the &quot;4.6 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.core.variables</td>
-      <td><div align="center">1.6</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.cvs</td>
@@ -927,7 +928,7 @@ In the table below, the &quot;4.6 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.e4.ui.css.core</td>
-      <td><div align="center">1.7</div></td>
+      <td><div align="center">1.8</div></td>
     </tr>
     <tr>
       <td>org.eclipse.e4.ui.css.swt</td>
@@ -959,7 +960,7 @@ In the table below, the &quot;4.6 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.e4.ui.workbench</td>
-      <td><div align="center">1.7</div></td>
+      <td><div align="center">1.8</div></td>
     </tr>
     <tr>
       <td>org.eclipse.e4.ui.workbench.addons.swt</td>
@@ -1007,7 +1008,7 @@ In the table below, the &quot;4.6 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.help.webapp</td>
-      <td><div align="center">1.6</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt</td>
@@ -1099,11 +1100,11 @@ In the table below, the &quot;4.6 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.jsch.core</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.8</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jsch.ui</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.8</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ltk.core.refactoring</td>
@@ -1127,7 +1128,7 @@ In the table below, the &quot;4.6 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.pde.api.tools.ui</td>
-      <td><div align="center">1.6</div></td>
+      <td><div align="center">1.8</div></td>
     </tr>
     <tr>
       <td>org.eclipse.pde.build</td>
@@ -1140,6 +1141,10 @@ In the table below, the &quot;4.6 minimum execution environment&quot;
     <tr>
       <td>org.eclipse.pde.doc.user</td>
       <td><div align="center">not specified</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.pde.ds.annotations</td>
+      <td><div align="center">1.8</div></td>
     </tr>
     <tr>
       <td>org.eclipse.pde.ds.core</td>
@@ -1167,7 +1172,7 @@ In the table below, the &quot;4.6 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.pde.ua.ui</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.8</div></td>
     </tr>
     <tr>
       <td>org.eclipse.pde.ui</td>
@@ -1203,27 +1208,27 @@ In the table below, the &quot;4.6 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.swt</td>
-      <td><div align="center">1.5</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.team.core</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.8</div></td>
     </tr>
     <tr>
       <td>org.eclipse.team.cvs.core</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.8</div></td>
     </tr>
     <tr>
       <td>org.eclipse.team.cvs.ssh2</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.8</div></td>
     </tr>
     <tr>
       <td>org.eclipse.team.cvs.ui</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.8</div></td>
     </tr>
     <tr>
       <td>org.eclipse.team.ui</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.8</div></td>
     </tr>
     <tr>
       <td>org.eclipse.text</td>
@@ -1267,11 +1272,15 @@ In the table below, the &quot;4.6 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.ui.intro</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui.intro.quicklinks</td>
+      <td><div align="center">1.8</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.intro.universal</td>
-      <td><div align="center">1.4</div></td>
+      <td><div align="center">1.8</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.monitoring</td>
@@ -1287,7 +1296,7 @@ In the table below, the &quot;4.6 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.ui.net</td>
-      <td><div align="center">F1.1</div></td>
+      <td><div align="center">1.8</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.themes</td>
@@ -1303,7 +1312,7 @@ In the table below, the &quot;4.6 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.ui.views.log</td>
-      <td><div align="center">1.6</div></td>
+      <td><div align="center">1.8</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.views.properties.tabbed</td>
