@@ -1293,6 +1293,40 @@ install area. To achieve this, after unzipping Eclipse distribution, run Eclipse
 option from an account that has a write access to the install directory.
 See <a href=" http://help.eclipse.org/luna/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Freference%2Fmisc%2Fmulti_user_installs.html">shared installs</a> in Eclipse
 Help for more information.</p>
+<h3 id="SpecialOSRequirements">Special Operating System Requirements</h3>
+<h4 id="SpecialOSRequirementsAIX">AIX</h4>
+<p>In order for this version of Eclipse to run, GTK2 libraries and their dependencies
+must be installed and available on the library path (i.e. LIBPATH).  These libraries
+are available from http://www-03.ibm.com/systems/power/software/aix/linux/toolbox/alpha.html .
+To determine the full set of libraries required for installation, download and install the
+"gtk2" rpm, at which time any missing dependencies will be listed.  These dependencies should
+be available for download from the same site.
+</p?
+<p>You can run Eclipse using the VM from IBM Developer Kit for AIX versions
+5 and 6.  The IBM Developer Kit for AIX can be downloaded from:
+https://www.ibm.com/developerworks/java/jdk/aix/service.html
+</p>
+<h4 id="SpecialOSRequirementsHPUX">HPUX</h4>
+<p>In order for this version of Eclipse to run, GTK2 libraries must be installed
+and available on the library path (i.e. LD_LIBRARY_PATH).</p>
+
+<p>For example, export LD_LIBRARY_PATH=/opt/gtk_64bit/lib/hpux64/</p>
+
+<p>To prevent errors with workspace locking, the following command line should be
+used to launch Eclipse:</p?
+
+<p>"eclipse -vmargs -Dosgi.locking=none"</p>
+
+<p>Otherwise, eclipse may fail to create a lock file with reason: "Workspace in use or cannot be created, choose a different one."</p>
+
+<p>Note you might also need to add the -d64 option to the vmargs when using an Oracle JRE. (-vmargs -d64)</p>
+<h4 id="SpecialOSRequirementsSolaris">Solaris</h4>
+<p>This version of Eclipse works best with the latest version of GTK+ 2, but the earliest
+version supported is GTK+ 2.10.</p>
+
+<p>The GTK libraries must be available on the library path (i.e. LD_LIBRARY_PATH).</p>
+
+
 <h2 id="Upgrading">5. Upgrading Workspace from a Previous Release</h2>
 
 <h3>Users who don't use &quot;-data&quot;</h3>
