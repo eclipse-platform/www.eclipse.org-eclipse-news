@@ -485,8 +485,6 @@ content is presented below:</p>
 
 <code>-showsplash<br/>
 org.eclipse.platform<br/>
---launcher.XXMaxPermSize<br/>
-256m<br/>
 -vm<br/>
 /opt/sun-jdk-1.6.0.02/bin/java<br/>
 -vmargs<br/>
@@ -532,8 +530,6 @@ plugins/org.eclipse.equinox.launcher.win32.win32.x86_1.0.200.v20090306-1900<br/>
 plugins/org.eclipse.equinox.launcher_1.0.200.v20090429-1630.jar<br/>
 -showsplash<br/>
 org.eclipse.platform<br/>
---launcher.XXMaxPermSize<br/>
-256m<br/>
 -vmargs<br/>
 -XX:CompileCommand=exclude,org/eclipse/core/internal/dtree/DataTreeNode,forwardDeltaWith<br/>
 -Xms40m<br/>
@@ -785,10 +781,8 @@ encounter this issue there is currently no truly viable workaround.
 (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=183003">183003</a>)
 </p>
 Allocating enough memory and solving OutOfMemoryError
-<h4>Launching an inner eclipse can lead to PermGen errors</h4>
 <p>
-On some Oracle JVMs, launching an inner eclipse during plug-in development can lead to PermGen errors
-for the inner eclipse.  The native launcher checks the JVM  and can add <i>-XX:MaxPermSize=256m</i>,
+The native launcher checks the JVM
 but PDE launches simply use java and don't go through the native launchers.  The workaround is to add
 the appropriate JVM arg to your launch config or to the <i>Preferences &gt; Java &gt; Installed JREs</i>.
 (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=339763">339763</a>)
