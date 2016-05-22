@@ -1251,21 +1251,9 @@ Thus, to increase the available heap memory, you would typically use:</p>
 <p>with the <code>&lt;memory size&gt;</code> value set to greater than
 &quot;1024M&quot; (1024 megabytes -- the default).
 </p>
+
 <p>
-When using an Oracle VM below 1.8, you may also need to increase the size of the permanent
-generation memory.  The default maximum is 64 megabytes, but more may
-be needed depending on your plug-in configuration and use.  When the VM runs
-out of permanent generation memory, it may crash or hang during class loading.
-This failure is less common when using Oracle JRE version 1.5.0_07 or greater.
-The maximum permanent generation size is increased using the -XX:MaxPermSize=&lt;memory size&gt; argument:</p>
-<blockquote>
-  <p><code>eclipse -vmargs -XX:MaxPermSize=&lt;memory size&gt;</code></p>
-</blockquote>
-<p>This argument may not be available for all VM versions and platforms; consult your VM documentation
-for more details.
-</p>
-<p>
-Note that setting memory sizes to be larger than the amount of available physical
+Note that setting memory sizes to be near or larger than the amount of available physical
 memory on your machine will cause Java to &quot;thrash&quot; as it copies objects
 back and forth to virtual memory, which will severely degrade your performance.
 </p>
