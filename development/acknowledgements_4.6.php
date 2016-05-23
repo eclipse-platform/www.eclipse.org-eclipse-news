@@ -116,23 +116,20 @@ ob_start();
       Ulrich Grave and Vladimir Piskarev. A special appreciation goes to Olivier Thomann for continuing to support the team.
     -->
     </p>
-    <p>The JDT Debug team would like to thank
-    <!-- everyone who helped improve the Java debugger by filing bugs, testing and providing patches. Specifically we would like to thank Aditya Aswani, Frits
-      Jalvingh, Holger Schill and Max L. for bug fixes and Stephan Herrmann for work related to supporting external annotation to a JRE container.
-    -->
-      </p>
+    
+    <p>The JDT Debug team would like to thank everyone who helped improve the Java debugger by filing bugs, testing and providing patches. Specifically we would like to thank Andrey Loskutov (for 
+    contributing to Timeout and Breakpoint related old bugs), Alexander Kurtakov, Jens Schiebel, Jesper Steen Moller (for contributing to Java 8 related bugs), Mat Booth, Matej Spiller Muys (for 
+    working on old performance bug), Noopur Gupta and Stefan Xenos for bug fixes.
+    </p>
 
-    <p>The Platform Debug team would like to thank
-    <!-- everyone who helped improve the debugger framework by filing bugs, testing and providing patches. Specifically we would like to thank Lars and
-      Tony McCrary for the new icons, Robert Roth for the "greatfix" contribution, Andrey Loskutov, Anton Leherbauer, Philippe Marschall and Richard Birenheide for bug fixes.
-      -->
-      </p>
+    <p>The Platform Debug team would like to thank everyone who helped improve the debugger framework by filing bugs, testing and providing patches. Specifically we would like to thank Alex Blewitt,
+     Anton Leherbauer, Ghaith Hachem, Jonah Graham, Lars Vogel, Norman Yee, Ricardo Bochnia, Stefan Xenos and Stephan Wahlbrink for bug fixes, Matthias Becker and Tony McCrary for icons.
+    </p>
 
-    <p>The Platform Ant team would like to thank
-    <!-- everyone who helped improve the ant framework by filing bugs, testing and providing patches. Specifically we would like to thank Rob Stryker and
-      Julian Enoch for bug fixes.
-      -->
-      </p>
+    <p>The Platform Ant team would like to thank everyone who helped improve the ant framework by filing bugs, testing and providing patches. Specifically we would like to thank Alexander Kurtakov,
+      David North, Julian Enoch, Kaloyan Raev, Robert Roth and Stefan Xenos for bug fixes.
+    </p>
+
 
     <p>JDT UI sends thanks to everyone
       who filed good enhancement requests, helped to improve the quality by testing and filing good bug reports, and provided answers on JDT forums/newsgroups.
