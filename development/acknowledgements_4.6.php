@@ -135,12 +135,11 @@ ob_start();
       </p>
 
     <p>JDT UI sends thanks to everyone
-    <!-- who filed good enhancement requests and helped to improve quality by testing and filing good bug reports. Special thanks to those who contributed code:
-      Andrej Zachar, Christian Georgi, Dirk Olmes, Ferenc Hechler, Frits Jalvingh, Harry Terkelsen, Jeremie Bresson, Jerome Cambon, Moritz Eysholdt, Nicolaj Hoess, Nikolay Metchev, Robert Roth, Sandra
-      Lions, Stephan Herrmann (now, a committer), Szymon Ptaszkiewicz, Terry Parker and Yves Joan. Thanks to Lars Vogel and Tony McCrary for the new icons. Also, thanks to Stephan Herrmann and others
-      for their answers on forums/newsgroups.
-      -->
-      </p>
+      who filed good enhancement requests, helped to improve the quality by testing and filing good bug reports, and provided answers on JDT forums/newsgroups.
+      Special thanks to those who contributed code:
+      Alex Blewitt, Alexander Kurtakov, Gabor Kovesdan, Harald Albers, Jan Rosczak, John Glassmyer, Kalyan Prasad, Lars Vogel, Manju Mathew, Mateusz Matela, Matthias Becker,
+      Sandra Lions, Sarika Sinha, Stefan Xenos, Szymon Ptaszkiewicz and Till Brychcy.
+    </p>
 
     <p>The Plug-in Development Environment team would like to thank
     <!-- the numerous contributors who continue to improve the component every release. We received many well written bug reports and the
