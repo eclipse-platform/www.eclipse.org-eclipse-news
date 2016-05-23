@@ -108,12 +108,10 @@ ob_start();
       particular Mikael Barbero who fixed several show-stopping issues in CBI. I'd also like to thank the Tycho Team for providing fixes and timely updates to Tycho &dash; two releases during Neon!
     -->
     </p>
-    <p>The JDT Core team would like to thank
-    <!-- everyone who has helped us to improve quality by testing and filing good bug reports. We would like to thank Stephan Hermann for his continued support
-      with the huge number of fixes committed. We had two major contributions for Neon which resulted in the "greatfix" tag - Thanks to a)John Glassmyer for the set of bugs related to import rewrite
-      consistency and cleanup and b) Mateusz Matula for formatter redesign. We would also like to thank Alexander Kurtakov, Ed Merks, Harry Terkelsen,Kenneth Olson, Szymon Ptaszkiewicz, Terry Parker,
-      Ulrich Grave and Vladimir Piskarev. A special appreciation goes to Olivier Thomann for continuing to support the team.
-    -->
+    <p>The JDT Core team would like to thank everyone who has helped us improve quality by testing and filing good bug reports. 
+		Thanks to Mateusz Matula for continuing to be part of the team and for improving the redesigned Java Formatter. 
+		The huge contribution made by Stefan Xenos and Till Brychy in the areas of redesign of Java Indexer and Null Analysis respectively is appreciated by the team.
+		Finally, a special appreciation goes to Olivier Thomann for continuing to support the team.
     </p>
     
     <p>The JDT Debug team would like to thank everyone who helped improve the Java debugger by filing bugs, testing and providing patches. Specifically we would like to thank Andrey Loskutov (for 
