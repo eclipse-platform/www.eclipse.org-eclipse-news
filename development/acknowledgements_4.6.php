@@ -74,11 +74,10 @@ ob_start();
     </p>
 
 
-    <p>The Platform Resource (Workspace) team would like to thank
-      <!-- everyone who has helped by filing bugs, testing and providing patches. Specifically we would like to thank the following people who have
-      helped improve the Workspace components by their code contributions to this release: Mat Booth, Steve Francisco, Markus Keller, Alexander Kurtakov, Robin Stocker, Lars Vogel and Paul Webster.
-      -->
-     </p>
+    <p>The Platform Resources team would like to thank everyone who has helped by filing bugs, testing and providing patches. Specifically we would like to thank the following people who have
+      helped improve the Resources components by their code contributions to this release: Alex Blewitt, Richard Gobeli, Mickael Istria, Markus Keller, Tobias Melcher, Ed Merks, Pascal Rapicault,
+      Lars Vogel, Thomas Wolf, Stefan Xenos.</p>
+
     <p>The Platform UI (and Text) team would like to thank
     <!-- everyone who has helped us to improve quality by testing and reporting bugs and enhancement requests. Special thanks to the following list of
       people, in alphabetic order, whow contributed code to the project: Alain Le Guennec, Alena Laskavaia, Alexander Baranov, Alexander Kurtakov, Alia Naguib, Andrey Loskutov, Anton Leherbauer,
