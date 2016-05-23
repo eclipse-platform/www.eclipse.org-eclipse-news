@@ -8,7 +8,7 @@
 
 <h1>Eclipse Project Release Notes</h1>
 <p>Release 4.6.0 (Neon)<br/>
-Last revised May 22, 2016</p>
+Last revised May 23, 2016</p>
 
 <p style="text-align:left;"><strong>This software is OSI Certified Open Source Software.<br/>
 OSI Certified is a certification mark of the Open Source Initiative.&nbsp;</strong></p>
@@ -495,11 +495,6 @@ The workaround is to first disable the builder for auto-builds and then rename t
 <h4>Slow typing/saving of the Ant editor with imports that define numerous macrodefs</h4>
 <p>The Ant editor is slow on saving with buildfiles that have &lt;import&gt; declarations of buildfiles that have numerous &lt;macrodef&gt;s.
 See bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=125117">125117</a> for a possible workaround</p>
-
-<h4>Failure to run Ant builds on non-Windows platforms if Eclipse installed in location with spaces in the path</h4>
-<p>Due to a bug in Ant 1.7.0, Ant builds will fail with an IllegalArgumentException if the Eclipse installation is in a location with spaces in the path.
-Embedded usage of Ant builds, such as plug-in export will also fail.
-See bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=187993">187993</a> for possible workarounds</p>
 
 <h4>Ant 1.8.x reports missing libraries as build failures</h4>
 <p>
