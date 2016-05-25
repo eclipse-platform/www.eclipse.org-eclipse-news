@@ -201,20 +201,14 @@ ob_start();
         <td width="23%">Lars&nbsp;Vogel</td>
       </tr>
     </table>
-    <h5>Platform Workspace</h5>
+    <h5>Platform Resources</h5>
     <table
       width="92%"
       align="center">
       <tr>
-        <td width="23%">John&nbsp;Arthorne</td>
         <td width="23%">Dani&nbsp;Megert</td>
         <td width="23%">Sergey&nbsp;Prigogin</td>
         <td width="23%">Szymon&nbsp;Ptaszkiewicz</td>
-      </tr>
-      <tr>
-        <td width="23%">Atsuhiko&nbsp;Yamanaka</td>
-        <td width="23%">&nbsp;</td>
-        <td width="23%">&nbsp;</td>
         <td width="23%">&nbsp;</td>
       </tr>
     </table>
