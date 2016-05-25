@@ -108,10 +108,9 @@ ob_start();
       particular Mikael Barbero who fixed several show-stopping issues in CBI. I'd also like to thank the Tycho Team for providing fixes and timely updates to Tycho &dash; two releases during Neon!
     -->
     </p>
-    <p>The JDT Core team would like to thank everyone who has helped us improve quality by testing and filing good bug reports. We would like to acknowledge the contributions by Stefan Xenos in core
-    and Till Brychy in null analysis which have earned them commit rights of JDT. We would also like to acknowledge David Williams for all the build and releng support. We would like to thank 
-    Alex Blewitt, Alex Panchenko, Alexander Kurtakov, Andreas Sewe, Andrey Loskutov, Carmi Grushko, Dusi Sarath Chandra, Gabor Kovesdan, Harry Terkelsen, Igor Fedorenko, John Glassmyer, 
-    Lars Vogel, Mat Booth, Robert Roth and Sven Strohschein for their contributions to JDT. 
+    <p>The JDT Core team would like to thank everyone who has helped us improve quality by testing and filing good bug reports.We would also like to acknowledge David Williams for all
+     the build and releng support. We would like to thank Alex Blewitt, Alex Panchenko, Alexander Kurtakov, Andreas Sewe, Andrey Loskutov, Carmi Grushko, Dusi Sarath Chandra, 
+     Gabor Kovesdan, Harry Terkelsen, Igor Fedorenko, John Glassmyer, Lars Vogel, Mat Booth, Robert Roth and Sven Strohschein for their contributions to JDT. 
     </p>
     
     <p>The JDT Debug team would like to thank everyone who helped improve the Java debugger by filing bugs, testing and providing patches. Specifically we would like to thank Andrey Loskutov (for 
@@ -284,23 +283,29 @@ ob_start();
         <td width="23%">Andrew&nbsp;Clement</td>
         <td width="23%">Dani&nbsp;Megert</td>
         <td width="23%">Jayaprakash&nbsp;Arthanareeswaran</td>
-        <td width="23%">Manju&nbsp;Mathew</td>
+        <td width="23%">Jesper&nbsp;Moller</td>
       </tr>
       <tr>
         <td width="23%">Manoj&nbsp;Palat</td>
+        <td width="23%">Manju&nbsp;Mathew</td>
         <td width="23%">Markus&nbsp;Keller</td>
+        <td width="23%">Mateusz&nbsp;Matela</td>
+      </tr>
+      <tr>
         <td width="23%">Michael&nbsp;Rennie</td>
         <td width="23%">Noopur&nbsp;Gupta</td>
-      </tr>
-      <tr>
         <td width="23%">Olivier&nbsp;Thomann</td>
         <td width="23%">Sarika&nbsp;Sinha</td>
-        <td width="23%">Sasikanth&nbsp;Bharadwaj</td>
-        <td width="23%">Shankha&nbsp;Banerjee</td>
       </tr>
       <tr>
-        <td width="23%">Srikanth&nbsp;Sankaran</td>
+        <td width="23%">Sasikanth&nbsp;Bharadwaj</td>
+        <td width="23%">Stefan&nbsp;Xenos</td>
         <td width="23%">Stephan&nbsp;Herrmann</td>
+        <td width="23%">Till&nbsp;Brychcy</td>
+      </tr>
+      <tr>
+        <td width="23%">Walter&nbsp;Harley</td>
+        <td width="23%">&nbsp;</td>
         <td width="23%">&nbsp;</td>
         <td width="23%">&nbsp;</td>
       </tr>
