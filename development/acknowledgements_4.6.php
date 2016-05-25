@@ -134,13 +134,11 @@ ob_start();
       Sandra Lions, Sarika Sinha, Stefan Xenos, Szymon Ptaszkiewicz and Till Brychcy.
     </p>
 
-    <p>The Plug-in Development Environment team would like to thank
-    <!-- the numerous contributors who continue to improve the component every release. We received many well written bug reports and the
-      community was quick to verify our fixes. Special thanks to Lars Vogel who contributed in several areas of PDE, reviewed contributions of others and was voted in as a committer during the
-      release. We thank Markus Keller for demonstrating high quality bug reporting and answering our many expert level questions about JDT and Platform. We appreciate all of the value our community
-      adds to PDE and would specifically like to thank Brian de Alwis (Specify API baselines via target0, Peter Schulz (Edit software dialog in targets), Tony McCrary (replacing the entire icon set),
-      Olivier Provoust (e4 integration into wizards), Simon Scholz (wildcard support in dialogs) and Pragya Gaur (huge number of polish fixes).
-      -->
+    <p>The Plug-in Development Environment team would like to thank the numerous contributors who continue to improve the component every release. 
+        Special thanks to Peter Nehrer for contributing DS Annotations Support to PDE and as a result, he was voted in as a committer. We thank
+        Markus Keller for demonstrating high quality bug reporting and providing quality fixes. He was also voted in as a committer at the end of 
+        the release. We appreciate all the contributions from the community and would specifically like to thank Elena Laskavaia, Brian de Alwis, Lars Vogel,
+        Stefan Xenos, Simon Scholz and Alex Blewitt. 
       </p>
 
     <p>The p2 team would like to thank
