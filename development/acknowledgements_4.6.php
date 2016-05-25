@@ -108,12 +108,10 @@ ob_start();
       particular Mikael Barbero who fixed several show-stopping issues in CBI. I'd also like to thank the Tycho Team for providing fixes and timely updates to Tycho &dash; two releases during Neon!
     -->
     </p>
-    <p>The JDT Core team would like to thank everyone who has helped us improve quality by testing and filing good bug reports. We would like to acknowledge Stephan Herrmann 
-    for being the largest contributor to JDT. Thanks to Mateusz Matela for continuing to be part of the team  and for improving the redesigned Java Formatter. 
-    We would like to acknowledge the contributions by Stefan Xenos in core and Till Brychy in null analysis which have earned them commit rights of JDT. We would also like to acknowledge 
-    David Williams for all the build and releng support. We would like to thank Alex Blewitt, Alex Panchenko, Alexander Kurtakov, Andreas Sewe, Andrey Loskutov, Carmi Grushko, Dusi Sarath Chandra,
-    Gabor Kovesdan, Harry Terkelsen, Igor Fedorenko, John Glassmyer, Lars Vogel, Mat Booth, Robert Roth and Sven Strohschein  for their contributions to JDT. Finally, a special appreciation 
-    goes to Olivier Thomann for continuing to support the team.
+    <p>The JDT Core team would like to thank everyone who has helped us improve quality by testing and filing good bug reports. We would like to acknowledge the contributions by Stefan Xenos in core
+    and Till Brychy in null analysis which have earned them commit rights of JDT. We would also like to acknowledge David Williams for all the build and releng support. We would like to thank 
+    Alex Blewitt, Alex Panchenko, Alexander Kurtakov, Andreas Sewe, Andrey Loskutov, Carmi Grushko, Dusi Sarath Chandra, Gabor Kovesdan, Harry Terkelsen, Igor Fedorenko, John Glassmyer, 
+    Lars Vogel, Mat Booth, Robert Roth and Sven Strohschein for their contributions to JDT. 
     </p>
     
     <p>The JDT Debug team would like to thank everyone who helped improve the Java debugger by filing bugs, testing and providing patches. Specifically we would like to thank Andrey Loskutov (for 
