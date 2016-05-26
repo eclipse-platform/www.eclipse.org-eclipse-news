@@ -82,7 +82,7 @@ ob_start();
       everyone who has helped us to improve the quality by testing and reporting bugs and enhancement requests. Special thanks to the following list of
       people, in alphabetical order, who contributed code to the project:
       Adam Briska, Alain Bernard, Alena Laskavaia, Alex Blewitt, Alexandra Buzila, Ali Akar, Andreas Mayer, Andreas Sewe, Axel Richard, Bartosz Popiela, Ben Cox, C. Sean Young, Christian Georgi,
-      Christian Pontesegger, Christian Radspieler, Christoph Daniel Schulze, Conrad Groth, Conrad Groth, Daniel Haftstein, Daniel Jaeger, Daniel Kruegler (drgler), Dariusz Stefanowicz, Denis Zygann,
+      Christian Pontesegger, Christian Radspieler, Christoph Daniel Schulze, Conrad Groth, Conrad Groth, Daniel Haftstein, Daniel Jaeger, Daniel Kruegler, Dariusz Stefanowicz, Denis Zygann,
       Dominic Scharfe, Ed Merks, Elisabeth Bohlig, Eric Williams, Eugen Neufeld, Fabio Zadrozny, Jan-Ove Weichel, Jaxsun McCarthy Huggan, Jens Kubler, Jeremie Bresson, Joel Drigo, Kaloyan Raev,
       Lars Sadau, Leung Wang Hei, Lothar L., Manuel Steurer, Marc-Andre Laperle, Martin Keller, Mat Booth, Matt Biggs, Matthias Becker, Matthias P. Nowak, Mikael Barbero, Noopur Gupta, Philipp Bumann,
       Phillip Webb, Rainer Pfannkuch, Rene Brandstetter, Robert Roth, Rudiger Herrmann, Sebastian Zarnekow, Sergey Grant, Snjezana Peco, Sravan Kumar Lakkimsetti, Stefan Winkler, Thorsten Hake,
