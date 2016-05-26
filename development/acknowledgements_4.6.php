@@ -79,18 +79,16 @@ ob_start();
       Lars Vogel, Thomas Wolf, Stefan Xenos.</p>
 
     <p>The Platform UI (and Text) team would like to thank
-    <!-- everyone who has helped us to improve quality by testing and reporting bugs and enhancement requests. Special thanks to the following list of
-      people, in alphabetic order, whow contributed code to the project: Alain Le Guennec, Alena Laskavaia, Alexander Baranov, Alexander Kurtakov, Alia Naguib, Andrey Loskutov, Anton Leherbauer,
-      Aurelien Pupier, Bob Meincke, Boris Bokowski, Brian de Alwis, Bruce Skingle, Christian Georgi, Christoph Keimel, Cornel Izbasa, C. Sean Young, Daniel Rolka, David Williams, Denis Zygann, Dirk
-      Fauth, Edwin Bruckner, Eugen Neufeld, Fabian Miehe, Fabio Zadrozny, Gary Roussak, Holger Voormann, Jeanderson Candido, Joachim Rainer, Jonas Helmig, Louis-Michel Mathurin, Marc-Andre Laperle,
-      Marco Descher, Mariam El-Tantawi, Markus Alexander Kuppe, Markus Keller, Markus Schorn, Mat Booth, Michael Keppler, Michael Rennie, Mickael Istria, Moshe WAJNBERG, Noopur Gupta, Olivier
-      Prouvost, Patrick Naish, Patrik Suzzi, Peter Palaga, Philip Wenig, Prakash Rangaraj, Ragnar Nevries, Ray Braithwood, Robert Roth, Sarika Sinha, Sebastian Herrmann, Sergey Prigogin, Shane Mills,
-      Simon Scholz, Snjezana Peco, Sopot Cela, Stefan Weiser, Stefan Winkler, Stefan Xenos, Steffen Pingel, Stephan Hackstedt, Stephan Herrmann, Steve Francisco, Steven Spungin, Szymon Ptaszkiewicz,
-      Terry Parker, Thibault Le Ouay, Thomas Watson, Timo Kinnunen, Tobias Baumann, Tomasz Zarna, Tom Schindl, Tony McCrary, Veselin Markov, Waqas Ilyas, Wim Jongman and Yaroslav Nikolaiko.</p>
+      everyone who has helped us to improve the quality by testing and reporting bugs and enhancement requests. Special thanks to the following list of
+      people, in alphabetical order, who contributed code to the project:
+      Adam Briska, Alain Bernard, Alena Laskavaia, Alex Blewitt, Alexandra Buzila, Ali Akar, Andreas Mayer, Andreas Sewe, Axel Richard, Bartosz Popiela, Ben Cox, C. Sean Young, Christian Georgi,
+      Christian Pontesegger, Christian Radspieler, Christoph Daniel Schulze, Conrad Groth, Conrad Groth, Daniel Haftstein, Daniel Jaeger, Daniel Kruegler (drgler), Dariusz Stefanowicz, Denis Zygann,
+      Dominic Scharfe, Ed Merks, Elisabeth Bohlig, Eric Williams, Eugen Neufeld, Fabio Zadrozny, Jan-Ove Weichel, Jaxsun McCarthy Huggan, Jens Kubler, Jeremie Bresson, Joel Drigo, Kaloyan Raev,
+      Lars Sadau, Leung Wang Hei, Lothar L., Manuel Steurer, Marc-Andre Laperle, Martin Keller, Mat Booth, Matt Biggs, Matthias Becker, Matthias P. Nowak, Mikael Barbero, Noopur Gupta, Philipp Bumann,
+      Phillip Webb, Rainer Pfannkuch, Rene Brandstetter, Robert Roth, Rudiger Herrmann, Sebastian Zarnekow, Sergey Grant, Snjezana Peco, Sravan Kumar Lakkimsetti, Stefan Winkler, Thorsten Hake,
+      Thorsten Maack, Tobias Melcher, Victor Rubezhny, Wainer dos Santos Moschetta and Wayne Beaton.
+    </p>
 
-    <p>The Platform Text team would like to thank everyone who filed good bug reports and enhancement requests. Special thanks go to Sergey Prigogin, Terry Parker, John Glassmyer, Jonah Graham,
-      Nicolaj Hoess and Pawel Pogorzelski for providing patches.</p>
-    -->
     <p>The Platform SWT team would like to thank
 
     <!-- everyone who helped to improve the toolkit by filing bug reports and enhancement requests, as well as the early adopters who contributed towards
