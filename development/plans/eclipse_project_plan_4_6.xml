@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 11:42 EDT May 17, 2016.
+Last revised 06:21 EDT May 26, 2016.
 
 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 marks interesting changes since the previous draft of 
@@ -514,7 +514,7 @@ Eclipse 4.6 Endgame Plan.
 
 <li><strong><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed) Add support for Solaris x86 and SPARC 64-bit platforms.</strong>
 	We want to add support for the Solaris x86 and SPARC 64-bit platforms. This requires changes in SWT and the launcher.
-	[Equinox, SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=429332">429332</a>, <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=429343">429343</a>, <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=294718">294718</a>)
+	[Equinox, SWT] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=429332">429332</a>, <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=429343">429343</a>, <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=491517">491517</a>)
 </li>
 
 <li><strong><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed) Support Windows 10.</strong>
