@@ -277,27 +277,21 @@ ob_start();
       </tr>
       <tr>
         <td width="23%">Manoj&nbsp;Palat</td>
-        <td width="23%">Manju&nbsp;Mathew</td>
         <td width="23%">Markus&nbsp;Keller</td>
         <td width="23%">Mateusz&nbsp;Matela</td>
+        <td width="23%">Michael&nbsp;Rennie</td>
       </tr>
       <tr>
-        <td width="23%">Michael&nbsp;Rennie</td>
         <td width="23%">Noopur&nbsp;Gupta</td>
         <td width="23%">Olivier&nbsp;Thomann</td>
         <td width="23%">Sarika&nbsp;Sinha</td>
+        <td width="23%">Sasikanth&nbsp;Bharadwaj</td>
       </tr>
       <tr>
-        <td width="23%">Sasikanth&nbsp;Bharadwaj</td>
         <td width="23%">Stefan&nbsp;Xenos</td>
         <td width="23%">Stephan&nbsp;Herrmann</td>
         <td width="23%">Till&nbsp;Brychcy</td>
-      </tr>
-      <tr>
         <td width="23%">Walter&nbsp;Harley</td>
-        <td width="23%">&nbsp;</td>
-        <td width="23%">&nbsp;</td>
-        <td width="23%">&nbsp;</td>
       </tr>
     </table>
     <h4>Eclipse PDE</h4>
