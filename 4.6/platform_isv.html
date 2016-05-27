@@ -1,0 +1,626 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2016. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" type="text/css"/>
+<style type="text/css">
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+/*img {max-width: 520px;}*/
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+ul {padding-left: 13px;}
+</style>
+<title>Eclipse Project Neon - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Platform and Equinox API</h2>
+  <ul>
+    <li><a href="#Platform">Platform Changes</a></li>
+    <li><a href="#Equinox">Equinox Changes</a></li>
+    <li><a href="#SWT">SWT Changes</a></li>
+  </ul>
+
+<table class="news">
+<colgroup>
+  <col class="title" />
+  <col />
+</colgroup>
+<tbody>
+
+  <!-- ******************** Platform ********************** -->
+  <tr>
+    <td id="Platform" class="section" colspan="2"><h2>Platform Changes</h2></td>
+  </tr>
+
+  <tr id="no-theme-dnd">
+    <td class="title">Drag and drop for toolbars in Eclipse applications without CSS styling</td>
+    <td class="content">
+        The Eclipse styling engine allows to configure drag images via CSS. In previous releases, applications without this setting would not support drag and drop of toolbars.
+    	Eclipse RCP applications without the related CSS styling now support drag and drop of toolbars out of the box. This applies also for applications which disable the CSS-based styling.
+	</td>
+  </tr>
+
+  <tr id="messagedialog-varargs">
+    <td class="title">Additional varargs constructor for MessageDialog</td>
+    <td class="content">
+    	The <code>org.eclipse.jface.dialogs.MessageDialog</code> class has now an additional vararg constructor that simplifies passing button labels.
+    	<p>
+    	Old:
+    	</p>
+<pre>new MessageDialog(shell, "MessageDialog", null, "DialogMessage",
+		MessageDialog.NONE, new String[] { "Button1", "Button2" }, 0);
+</pre>
+    	New:
+<pre>new MessageDialog(shell, "MessageDialog", null, "DialogMessage",
+		MessageDialog.NONE, 0, "Button1", "Button2");
+</pre>
+	</td>
+  </tr>
+
+  <tr id="workbenchlogger-debug">
+    <td class="title">Workbench logger supports debug level</td>
+    <td class="content">
+    	Previously, the workbench logger wrote a trace when <code>Logger#debug(Throwable)</code> was called,
+    	even if the application was not started in debug mode.
+    	Now, log entries on the debug level are ignored, unless the application is started with the debug flag (-debug).
+	</td>
+  </tr>
+
+  <tr id="directmenuitem-canexecute">
+    <td class="title">Support for @CanExecute of MDirectMenuItem and MDirectToolItem</td>
+    <td class="content">
+    	Previously, methods annotated with @CanExecute were only evaluated on execution for MDirectMenuItems and MDirectToolItems, not on rendering.
+		So if the method annotated with @CanExecute returned false, the rendering was not updated to show the menu/tool item disabled.
+		Now @CanExecute method is also evaluated during rendering, to show the enabled state according to the method result.
+	</td>
+  </tr>
+
+  <tr id="menuitem-tooltips">
+    <td class="title">Tooltips on menu items for Eclipse 4 applications</td>
+    <td class="content">
+    	SWT introduced tooltips for menu items in the Eclipse Mars release. The default SWT renderers have been extended to support these tooltips on menu items, i.e., if
+    	you enter them in your application model, they will be displayed.  
+    	<p>
+      		<img src="images/menuitem-tooltips.png" alt="Menu tooltips in Eclipse 4 RCP"/>
+      	</p>
+	</td>
+  </tr>
+
+
+  <tr id="perspective-handlercontainer">
+    <td class="title">Perspective becomes a handler container</td>
+    <td class="content">
+    	In addition to windows and parts, perspectives can now also define handlers. Those handlers will get active
+    	when the containing perspective is active. As before, handlers of more deeply nested containers override less deeply nested ones, i.e., 
+    	handlers defined for parts override handlers for perspectives, while the 
+    	handlers for a perspective override the ones defined for the window.
+	</td>
+  </tr>
+
+  <tr id="job-create">
+    <td class="title">New Job creation methods</td>
+    <td class="content">
+    	Three new static methods for creating jobs have been added to
+    	the <code>org.eclipse.core.runtime.jobs.Job</code> class. These methods are particularly
+    	convenient with lambdas. For example, to do an asynchronous resource refresh, you can write: 
+<pre>
+IResource resource = ...;
+Job.create("Refreshing files",
+    monitor -> resource.refreshLocal(IResource.DEPTH_INFINITE, monitor)
+).schedule();
+</pre>
+If you want the job to be hidden from the user, you can write: 
+<pre>
+IResource resource = ...;
+Job.createSystem(
+    monitor -> resource.refreshLocal(IResource.DEPTH_INFINITE, monitor)
+).schedule();
+</pre>
+	</td>
+  </tr>
+
+  <tr id="icorerunnable">
+    <td class="title">ICoreRunnable interface</td>
+    <td class="content">
+        The job creation methods described above use the new
+        <code>org.eclipse.core.runtime.ICoreRunnable</code> functional interface. This interface is
+        functionally equivalent and is intended as a replacement for
+        <code>org.eclipse.core.resources.IWorkspaceRunnable</code>. All new code should use
+        <code>ICoreRunnable</code> instead of <code>IWorkspaceRunnable</code>.
+	</td>
+  </tr>
+
+  <tr id="databinding-generics">
+    <td class="title">Adding generics to Eclipse data binding</td>
+    <td class="content">
+        The org.eclipse.core.databinding.property and org.eclipse.core.databinding.observable plug-ins have been generified. Further generics work
+        is planned for later milestones.
+	</td>
+  </tr>
+
+  <tr id="i-side-effect">
+    <td class="title">ISideEffect databinding API</td>
+    <td class="content">
+      <code>org.eclipse.core.databinding.observable.ISideEffect</code> allows you to react
+      to changes in observables without attaching listeners. For example, the
+      following code will bind the text "Your username is: xxxx" to a label and
+      will update the label whenever the username changes.
+
+      <pre>
+        IObservableValue&lt;String&gt; username = ...
+        Label yourUsername = ...
+
+        ISideEffect sideEffect = ISideEffect.create(
+        	() -&gt; {return "Your username is: " + username.getValue();},
+          	yourUsername::setText);
+      </pre>
+
+      ISideEffects will automatically determine which observables to
+      listen to, can react to changes in multiple observables,
+      and will avoid performing excessive updates if the observables fire
+      many change events in a short period of time.
+    </td>
+  </tr>
+
+  <tr id="darktheme-statusdialog">
+    <td class="title">Dark theme styling for StatusDialog</td>
+    <td class="content">
+     The <code>org.eclipse.jface.dialogs.StatusDialog</code> and its subclasses are now styled in the dark theme.
+     Before this change, the message area was hard-coded to white.
+     </td>
+  </tr>
+
+  <tr id="varargs">
+    <td class="title">APIs changed to varags</td>
+    <td class="content">
+      A few platform APIs have been changed to allow varargs invocation:
+      <ul>
+        <li><code>org.eclipse.jface.viewers.StructuredViewer#setFilters(ViewerFilter...)</code></li>
+        <li><code>org.eclipse.jface.databinding.viewers.ViewerSupport#bind(*, IValueProperty...)</code></li>
+        <li><code>org.eclipse.swt.graphics.PaletteData#PaletteData(RGB...)</code></li>
+        <li><code>org.eclipse.swt.widgets.Combo#setItems(String...)</code></li>
+      </ul>
+    </td>
+  </tr>
+  
+  <tr id="applicationmodel">
+    <td class="title">New API: MApplication#getCommand(String)</td>
+    <td class="content">
+      <code>MApplication#getCommand(String)</code> 
+      is a faster way to access a command directly via id. This new API is used by the Eclipse IDE
+      to speed up its application launching.
+     </td>
+  </tr>
+
+  <tr id="epartservice-switchperspective">
+    <td class="title">API for switching perspectives</td>
+    <td class="content">
+     The <code>EPartService#switchPerspective(String/MPerspective)</code>
+     API has been added.
+    </td>
+  </tr>
+
+  <tr id="access-application-context">
+    <td class="title">New API for accessing the application context</td>
+    <td class="content">
+      The <code>IEclipseContext</code> of the <code>MApplication</code> object can now be directly accessed via a child context, via the <code>IWorkbench.APPLICATION_CONTEXT_KEY</code> key.
+      <pre>
+      // this is a child context
+      IEclipseContext ctx =...;
+      // get the application context
+      IEclipseContext applicationContext = ctx.get(IWorkbench.APPLICATION_CONTEXT_KEY);
+      </pre>
+     </td>
+  </tr>
+
+   <tr id="databindingapi">
+    <td class="title">JFace databinding enhancements</td>
+    <td class="content">
+      The new static <code>IConverter.create(Object, Object, Function)</code> allows to create a converter
+	  using a lambda expression. On a similar note, the static <code>UpdateValueStrategy.create(IConverter)</code>has been added.
+	</td>
+  </tr>
+
+  <tr id="handlerutil-structured-selection">
+    <td class="title">API to get the structured selection</td>
+    <td class="content">
+     The <code>org.eclipse.ui.handlers.HandlerUtil#getCurrentStructuredSelection(event)</code>
+     API has been added to allow easy access to an <code>IStructuredSelection</code> from a handler. Compared to 
+     <code>HandlerUtil#getCurrentSelection(event)</code> this removes the need to cast and check for 
+     null.
+    </td>
+  </tr>
+
+  <tr id="listenerlist">
+    <td class="title">ListenerList generified</td>
+    <td class="content">
+      <code>org.eclipse.core.runtime.ListenerList</code> has been generified and now implements <code>Iterable&lt;E&gt;</code>.
+      <p>Due to Java type system constraints, <code>ListenerList#getListeners()</code> still returns <code>Object[]</code>.
+      Clients should not only add type arguments to the ListenerList, but also convert usages of <code>#getListeners()</code>
+      to an enhanced <code>for</code> loop, thereby taking advantage of the type-safe <code>#iterator()</code>.</p>
+      <p>Old:</p>
+      <pre>ListenerList fInputChangeListeners = new ListenerList();
+...
+Object[] listeners= fInputChangeListeners.getListeners();
+for (int i= 0; i &lt; listeners.length; i++) {
+	((IInputChangedListener) listeners[i]).inputChanged(fInput);
+}</pre>
+      <p>New:</p>
+      <pre>ListenerList&lt;IInputChangedListener&gt; fInputChangeListeners = new ListenerList&lt;&gt;();
+...
+for (IInputChangedListener listener : fInputChangeListeners) {
+	listener.inputChanged(fInput);
+}</pre>
+    </td>
+  </tr>
+
+  <tr id="javax-annotation-package-dependency">
+    <td class="title">Imports of the <code>javax.annotation</code> package no longer require a minimum version</td>
+    <td class="content">
+    	Plug-ins are no longer required to specify a minimum package version when importing the <code>javax.annotation</code> package. 
+    	The Eclipse runtime will resolve all components to the same version (JVM or provided by the Eclipse Platform). 
+    	<p>
+    	This avoids a common error in Eclipse RCP implementations in which <code>@PostConstruct</code> 
+    	was resolved to different classes in the bundle classpath.
+    	This change is backwards compatible, i.e., a dependency with a minimum version still works correctly.
+    	</p>
+    </td>
+  </tr>
+
+  <tr id="create-method-computed-value">
+    <td class="title">New factory method for data binding's ComputedValue</td>
+    <td class="content">
+		An <code>org.eclipse.core.databinding.observable.value.ComputedValue</code> can compute custom values from other tracked getters inside its <code>calculate</code> method.
+		<p>Before this change, you had to create a subclass of <code>ComputedValue</code>, but the new <code>create</code> method, which expects a <code>Supplier&lt;T&gt;</code>
+		allows you to create an instance of <code>ComputedValue</code> by using a lambda expression.</p>
+		<p>Examples:
+		</p>
+		<pre>IObservableValue&lt;Integer&gt; listSizeObservable =
+	ComputedValue.create(() -> observableList.size());</pre>
+		or
+		<pre>IObservableValue&lt;String&gt; fullNameObservable =
+	ComputedValue.create(() -> personFirstNameObservable.getValue() + " "
+		+ personLastNameObservable.getValue());</pre>
+	
+		<p>
+		More details about tracked getters can be found in the <code>org.eclipse.core.databinding.observable.ObservableTracker</code>'s
+		<code>getterCalled(IObservable)</code> method. Almost every <code>IObservable</code>'s get methods are tracked getters. 
+		</p>
+    </td>
+  </tr>
+
+  <tr id="mpart-runtime-closeable-change">
+    <td class="title">Change closeable attribute of MPart at runtime</td>
+    <td class="content">
+		Calling the <code>setCloseable</code> method on an <code>org.eclipse.e4.ui.model.application.ui.basic.MPart</code> instance will
+		now change the visibility of the close button for the corresponding part.
+ 	<p>
+        <img src="images/mpart-closeable.png" alt="" />
+    </p>
+    </td>
+  </tr>
+
+  <tr id="e4-app-shutdown-started">
+    <td class="title">Shutdown started event for Eclipse 4 RCP applications</td>
+    <td class="content">
+		When Eclipse 4 RCP applications are about to shut down, the
+		<code>org.eclipse.e4.ui.workbench.UIEvents.UILifeCycle.APP_SHUTDOWN_STARTED</code> event will be fired now.
+		Previously, this only worked for Eclipse RCP applications running in the compatibility mode,
+		and in mixed mode applications which use both Eclipse 3 and 4 APIs.
+    </td>
+  </tr>
+
+
+  <tr id="disable-toolbar-dnd">
+    <td class="title">Disable drag and drop for toolbars</td>
+    <td class="content">
+		You can disable drag and drop of toolbars and tool components by tagging the corresponding model element with the <code>'NoMove'</code> tag.
+		<p>
+			<img src="images/toolbar-disable-drag-and-drop-with-NoMove-tag.png" alt=""/>
+		</p>
+	</td>
+  </tr>
+  
+  <tr id="e4-help-support">
+    <td class="title">Support for setting the help ID in Eclipse 4 application</td>
+    <td class="content">
+		To enable help entries for menus, you can define an ID for the help system for your <code>MCommand</code>, your <code>MHandledMenuItem</code> or your <code>MDirectMenuItem</code> model elements by adding an entry to the <code>Persisted State</code> Map with the key <code>'HelpContextId'</code> and your help context id as the value.
+		<p>
+			<img src="images/e4-help-support.png" alt=""/>
+		</p>
+	</td>
+  </tr>
+
+  <tr id="sideeffect-package">
+    <td class="title">Different package for ISideEffect</td>
+    <td class="content">
+		The <code>ISideEffect</code> and <code>ISideEffectFactory</code> interfaces and the <code>CompositeSideEffect</code> class
+		have been moved to a new package <code>org.eclipse.core.databinding.observable.sideeffect</code>.
+	</td>
+  </tr>
+
+  <tr id="sideeffect-factory">
+    <td class="title">ISideEffectFactory for composite ISideEffects</td>
+    <td class="content">
+    	You can use the <code>ISideEffectFactory</code> to create several <code>ISideEffect</code> instances that share the same life cycle.
+    	<p>
+    	For example, all <code>ISideEffect</code> instances that are created by the <code>ISideEffectFactory</code> obtained from the <code>WidgetSideEffects#createFactory(Widget disposableWidget)</code> method are automatically disposed once the corresponding widget is disposed.
+    	</p>
+    	<p>Example:</p>
+<pre>
+ISWTObservableValue personFirstNameTextObservable = WidgetProperties.text(SWT.Modify)
+	.observe(personFirstNameText);
+ISWTObservableValue personLastNameTextObservable = WidgetProperties.text(SWT.Modify)
+	.observe(personLastNameText);
+
+ISideEffectFactory sideEffectFactory = WidgetSideEffects.createFactory(personFirstNameText);
+
+sideEffectFactory.create(person::getFirstName, personFirstNameText::setText);
+sideEffectFactory.create(personFirstNameTextObservable::getValue, person::setFirstName);
+sideEffectFactory.create(person::getLastName, personLastNameText::setText);
+sideEffectFactory.create(personLastNameTextObservable::getValue, person::setLastName);
+</pre>
+	</td>
+  </tr>
+
+
+
+
+  <!-- ******************** Equinox ********************** -->
+  <tr>
+    <td id="Equinox" class="section" colspan="2"><h2>Equinox Changes</h2></td>
+  </tr>
+
+  <tr id="adapters">
+    <td class="title">Adapters.adapt(...) API</td>
+    <td class="content">
+      <code>org.eclipse.core.runtime.Adapters.adapt(...)</code> provides a new unified way to access every kind of adapter. It checks for
+      implemented interfaces, IAdaptable, and adapters registered with the adapter manager.
+      It may also activate plug-ins if necessary to provide the requested adapter.
+      And it also performs a null check on the source object, so calling code doesn't have to do that. 
+<pre><code>// Old way
+IResource selectedResource;
+if (selection instanceof IAdaptable) {
+  selectedResource = ((IAdaptable)selection).getAdapter(IResource.class);
+}
+
+// New way
+IResource selectedResource = Adapters.adapt(selection, IResource.class);
+</code></pre>
+    </td>
+  </tr>
+
+  <tr id="submonitor.split">
+    <td class="title">SubMonitor.split</td>
+    <td class="content">
+      <code>org.eclipse.core.runtime.SubMonitor.split(...)</code> is an easy, efficient way to check for Job cancellation without any
+      boilerplate. It creates a new child progress monitor, checks for cancellation, and 
+      throws OperationCanceledException if necessary. Using this instead of SubMonitor.newChild
+      or SubProgressMonitor will guarantee that your Jobs respond to cancellation quickly.
+
+<pre><code>
+// Old way
+void myMethod(IProgressMonitor monitor) {
+  SubMonitor subMonitor = SubMonitor.convert(monitor, 2);
+  if (subMonitor.isCanceled()) {
+    throw new OperationCanceledException();
+  }
+  childMethod1(subMonitor.newChild(1));
+  if (subMonitor.isCanceled()) {
+    throw new OperationCanceledException();
+  }
+  childMethod2(subMonitor.newChild(1));
+}
+
+// New way
+void myMethod(IProgressMonitor monitor) {
+  SubMonitor subMonitor = SubMonitor.convert(monitor, 2);
+  childMethod1(subMonitor.split(1));
+  childMethod2(subMonitor.split(1));
+}
+</code></pre>
+    </td>
+  </tr>
+
+  <tr id="suppress_iscanceled">
+    <td class="title">SUPPRESS_ISCANCELED</td>
+    <td class="content">
+      SubMonitor.SUPPRESS_ISCANCELED allows you to suppress cancellation checks without
+      also suppressing progress reporting. This should be used in place of a null progress
+      monitor when running a critical section that shouldn't be cancelled.
+<pre><code>
+// Old way
+void myMethod(IProgressMonitor monitor) {
+  SubMonitor subMonitor = SubMonitor.convert(monitor, 2);
+  uncancellableMethod(null);
+  subMonitor.worked(1)
+  cancellableMethod(subMonitor.newChild(1));
+}
+
+// New way
+void myMethod(IProgressMonitor monitor) {
+  SubMonitor subMonitor = SubMonitor.convert(monitor, 2);
+  uncancellableMethod(subMonitor.newChild(1,
+      SubMonitor.SUPPRESS_ISCANCELED | SubMonitor.SUPPRESS_BEGINTASK);
+  cancellableMethod(subMonitor.newChild(1));
+}</code></pre>
+    </td>
+  </tr>
+
+  <tr id="startup-performance-equinox">
+    <td class="title">Startup time improvements</td>
+    <td class="content">
+      Equinox applied various improvements that reduce the startup time for the Eclipse IDE and other OSGi-based applications.
+    </td>
+  </tr>
+
+   <tr id="export-preferences-equinox">
+    <td class="title">Export Preferences uses alphabetic order</td>
+    <td class="content">
+      When you export your preference settings via <b>File &gt; Export... &gt; Preferences</b>, the preferences are now sorted alphabetically in the resulting file.
+    </td>
+  </tr>
+  
+   <tr id="declarative-services-equinox">
+    <td class="title">Equinox defines Declaratives Services via Require-Capability</td>
+    <td class="content">
+      Following the OSGi specification, the Equinox Declarative Services implementation defines its capabilities via Require-Capability. This
+      will allow the Eclipse IDE to change its dependencies and make the Declarative Services implementation exchangeable.
+    </td>
+  </tr>
+
+
+  <!-- *********************** SWT *********************** -->
+  <tr>
+    <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
+  </tr>
+
+  <tr id="nomove">
+    <td class="title">Support to create immovable Shells</td>
+    <td class="content">
+      SWT has added a new style constant <code>SWT.NO_MOVE</code> to create a Shell with no move behavior. Using this style will create the
+      title trim even if no other trim style is specified. The title trim will not be created when <code>SWT.NO_TRIM</code> is specified.
+      Note that this style bit is a hint.
+      <p>
+      	<img src="images/nomove-shell.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="swt-requestlayout">
+    <td class="title">New API added to Control for more efficient processing of layout requests</td>
+    <td class="content">
+     SWT has added a new <code>requestLayout()</code> method to the <code>Control</code> and <code>Composite</code> classes. 
+     This method does essentially the same thing as <pre> <code>widget.getShell().layout(new Control[] {widget}, SWT.DEFER);</code> </pre>
+     <p>
+     The snippet, above, is currently the most efficient method of triggering layouts in SWT, 
+     but most developers are unaware of this. Most Eclipse developers invoke <code>Composite.layout()</code>, 
+     which is worse in the sense of performance. This new API is intended to make it easier for developers 
+     to adopt the more efficient mechanism as opposed to using <code>Composite#layout()</code>.
+     </p>
+     <p>
+     However, be aware that changing existing invocations of <code>layout()</code> to <code>requestLayout()</code>
+     may break code that assumes that controls are completely sized and positioned at a certain point in time.
+     </p>
+    </td>
+  </tr>
+
+  <tr id="auto-text-direction">
+    <td class="title">A new style constant to indicate Bidi "auto" text direction</td>
+    <td class="content">
+		A new text direction constant <code>SWT.AUTO_TEXT_DIRECTION</code> has been introduced to indicate
+		Bidi "auto" text direction. This is now also supported by the StyledText control.
+	<p>
+		Auto text direction was introduced in the Mars (4.5) release as a bitwise OR of
+		<code>SWT.LEFT_TO_RIGHT | SWT.RIGHT_TO_LEFT</code>
+		and it was already implemented in all native controls.
+		Now, <code>SWT.AUTO_TEXT_DIRECTION</code> is a dedicated SWT constant for this.
+	</p>
+	<p>
+		Behavior: When <code>SWT.AUTO_TEXT_DIRECTION</code> is set, the text direction is derived from the direction of the first strong Bidi character.
+	</p>
+	<p>
+		Note: This is a HINT and it works on Windows only.
+	</p>
+	<p>
+		Usage: <code>control.setTextDirection(SWT.AUTO_TEXT_DIRECTION);</code>
+	</p>
+      <p>
+        <img src="images/auto-text-direction.png" alt="" />
+      </p>
+    </td>
+  </tr>
+
+  <tr id="text-direction-setting">
+    <td class="title">SWT Control and Custom Control Examples support setting the text direction</td>
+    <td class="content">
+      Options to specify the text direction were added to the SWT Control and Custom Control Examples.
+      Support for the <a href="https://www.eclipse.org/eclipse/news/4.6/M4/#auto-text-direction">AUTO text direction</a>
+      for SWT widgets was introduced in the Eclipse 4.6 M4 milestone.
+      <p>
+        <img src="images/text-direction.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+
+  <tr id="high-dpi-api">
+    <td class="title">APIs for high-DPI monitor support</td>
+    <td class="content">
+		Platform-independent high-DPI support has been added to the Win32 and GTK ports.
+		In the past, only the font size was adjusted on those two platforms, which lead to an inconsistent
+		appearance of SWT applications across different platforms.
+		<p>
+		To shield existing clients from resolution differences, SWT now uses the Cocoa model on all three platforms.
+		Existing SWT APIs keep using the well-known coordinate system in SWT points. In high-DPI environments,
+		these SWT points are transparently scaled to native pixels.
+		</p><p>
+		To create DPI-aware <code>org.eclipse.swt.graphics.Image</code>s, use these constructors
+		that have already been provided in the <a href="https://www.eclipse.org/eclipse/news/4.5/M6/#high-dpi">Mars release</a>:
+		</p>
+		<ul>
+		<li><code>Image(Device, ImageFileNameProvider)</code></li>
+		<li><code>Image(Device, ImageDataProvider)</code></li>
+		</ul>
+		
+		Two new APIs have been added in <code>Image</code> to give you direct access to the pixel data on high-DPI monitors.
+		<ul>
+		<li><code>Image#getImageDataAtCurrentZoom()</code>:
+			Returns an <code>ImageData</code> that contains the full-resolution pixel data at the current OS zoom level</li>
+		<li><code>Image#getBoundsInPixels()</code>:
+			Returns the image dimensions in pixels at the current OS zoom level</li>
+		</ul>
+    </td>
+  </tr>
+
+  <tr id="swt-requires-java7">
+   <td class="title">SWT requires 1.7 Java runtime</td>
+    <td class="content">
+  		The SWT projects are now compiled at 1.7 compliance level. As a result, a Java runtime of
+  		1.7 or above is required to run SWT applications.
+    </td>
+  </tr>
+
+  <tr id="link-api">
+    <td class="title">API to set Link color</td>
+    <td class="content">
+    	A new API <code>org.eclipse.swt.widgets.Link#setLinkForeground(Color)</code> has been added
+    	that allows you to set the 
+    	foreground color of the hyperlink text in a Link widget.
+    	<p>
+    	The corresponding getter <code>Link#getLinkForeground()</code> has been added which returns 
+    	the foreground color of the hyperlink text in the Link widget.
+    	</p>
+    	<p>
+    	For an example, see <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet182.java">Snippet182</a>.
+    	</p>
+    </td>
+  </tr>
+
+  <tr id="swt-device-zoom">
+    <td class="title">SWT device zoom</td>
+    <td class="content">
+    	SWT exposes the device zoom level at which it is currently operating via the system property
+    	<p><code>"org.eclipse.swt.internal.deviceZoom"</code></p>
+    	<p>Note: This is a read-only value, so setting it on the command line doesn't make sense.
+    	Furthermore, SWT doesn't use the deviceZoom when HighDPI support is disabled via <code>-Dswt.enable.autoScale=false</code></p>
+    </td>
+  </tr>
+
+  </tbody>
+</table>
+
+  <p style="text-align:center">
+    <a href="jdt.php">Previous</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="pde.php">Next</a>
+  </p>
+
+</body>
+</html>
