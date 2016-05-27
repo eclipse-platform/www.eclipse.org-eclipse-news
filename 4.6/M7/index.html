@@ -306,11 +306,21 @@
  <tr id="breakpoint-unrelated-project">
     <td class="title">Installing breakpoints from unrelated projects</td>
     <td class="content">
-    	The option to allow or restrict the installation of breakpoints from unrelated projects is now available. The default setting is to not install the
-    	breakpoints from unrelated projects. To enable installation, select the option "Do not install breakpoints from unrelated projects" on 
-    	<b>Preferences &gt; Java &gt; Debug</b>.
+        Multiple versions of the same Java type can be available in a workspace, and each version can
+        have breakpoints configured at different source locations. When debugging, JDT tries to
+        determine the "right" set of breakpoints to install in the target VM. This analysis
+        now uses Java project dependencies by default.
+        <p>
+        To always install all enabled breakpoints, you can disable the new option
+        <b>Preferences &gt; Java &gt; Debug &gt; Do not install breakpoints from unrelated projects</b>
+        </p>
         <p>
           <img src="images/breakpoint-unrelated-project.png" alt="" />
+        </p>
+        <p>
+        Note that not all projects use explicit Java project dependencies. E.g. OSGi bundles
+        typically use a dynamically computed classpath where project dependencies are computed
+        by PDE.
         </p>
     </td>
   </tr>
