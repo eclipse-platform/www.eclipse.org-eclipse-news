@@ -166,9 +166,11 @@ after the release.
   </ul>
   <p>
     It is imperative that 64-bit builds are downloaded and used if a 64-bit Java runtime environment has been installed. Below are two sample tarball names of version 4.6 of the Eclipse SDK packaged
-    for 32-bit and 64-bit processors.<br />
-  <pre>eclipse-SDK-4.6-linux-gtk.tar.gz (32-bit)<br />eclipse-SDK-4.6-linux-gtk-x86_64.tar.gz (64-bit)</pre>
+    for 32-bit and 64-bit processors.<br/>
+  <code>eclipse-SDK-4.6-linux-gtk.tar.gz (32-bit)</code><br />
+  <code></code>eclipse-SDK-4.6-linux-gtk-x86_64.tar.gz (64-bit)</code>
   </p>
+
   <p>
     To run Eclipse with an alternate Java runtime environment, the path to the Java virtual machine's binary must be identified. With an Eclipse installation from the distribution, altering the $PATH
     variable to include the path to the alternate Java runtime environment is often not enough as the Eclipse that Linux distributions package often performs a scan internally to pick up GCJ by itself
@@ -330,9 +332,9 @@ after the release.
       href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=831">831</a>)
   </p>
   <h4>Using Internet Explorer in offline mode (Windows only)</h4>
-  If you have been using Internet Explorer in Offline mode, when you access the help system you will get a message indicating that the web page you requested is not available offline or a blank page
+  <p>If you have been using Internet Explorer in Offline mode, when you access the help system you will get a message indicating that the web page you requested is not available offline or a blank page
   will display. Click
-  <b>Connect</b> or deselect "Work Offline" in the Internet Explorer "File" menu to return the system behavior to normal.
+  <b>Connect</b> or deselect "Work Offline" in the Internet Explorer "File" menu to return the system behavior to normal.</p>
   <h3 id="I-Platform-UI">Platform - UI</h3>
   <h4>Dirty state not tracked properly for OLE documents (Windows only)</h4>
   <p>
@@ -347,7 +349,7 @@ after the release.
     <code>computeSize</code>
     method. If you encounter this issue there is currently no truly viable workaround. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=183003">183003</a>)
   </p>
-  Allocating enough memory and solving OutOfMemoryError
+  <h4>Allocating enough memory and solving OutOfMemoryError</h4>
   <p>
     The native launcher checks the JVM but PDE launches simply use java and don't go through the native launchers. The workaround is to add the appropriate JVM arg to your launch config or to the <i>Preferences
       &gt; Java &gt; Installed JREs</i>. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=339763">339763</a>)
@@ -457,13 +459,13 @@ after the release.
   <p>In version 3.4, the API method
   <code>org.eclipse.jdt.core.formatter.CodeFormatter.format(int, String, IRegion[], int, String)</code>
   was added to allow the formatting of several regions in a source snippet with a single pass.
-  <br /> Even if specified, this method does not currently accept comments of the following kinds:
+  <br /> Even if specified, this method does not currently accept comments of the following kinds:</p>
   <ul>
     <li><code>org.eclipse.jdt.core.formatter.CodeFormatter#K_SINGLE_LINE_COMMENT</code></li>
     <li><code>org.eclipse.jdt.core.formatter.CodeFormatter#K_MULTI_LINE_COMMENT</code></li>
     <li><code>org.eclipse.jdt.core.formatter.CodeFormatter#K_JAVA_DOC</code></li>
   </ul>
-  This will be fixed in a future release (bug
+  <p>This will be fixed in a future release (bug
   <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=233967">233967</a>).</p>
   <h4>Searching for constant field references</h4>
   <p>
@@ -554,27 +556,26 @@ after the release.
     being displayed in the scrapbook editor.
   </p>
   <h4>Debugging over slow connections</h4>
-  A global Java debug preference specifies the debugger timeout, which is the maximum amount of time the debugger waits for a response from the target VM after making a request of that VM. Slow
+  <p>A global Java debug preference specifies the debugger timeout, which is the maximum amount of time the debugger waits for a response from the target VM after making a request of that VM. Slow
   connections may require that this value be increased. The timeout value can be edited from the
-  <b>Java &gt; Debug </b>preference page. Changing the timeout value only affects subsequently launched VM, not VMs that are already running.
+  <b>Java &gt; Debug </b>preference page. Changing the timeout value only affects subsequently launched VM, not VMs that are already running.</p>
   <h4>Updating of inspected values</h4>
-  When inspecting the result of an evaluated expression in the debugger, it is important to note that the result displayed is the result of that expression at the time it was evaluated. For example,
+  <p>When inspecting the result of an evaluated expression in the debugger, it is important to note that the result displayed is the result of that expression at the time it was evaluated. For example,
   when inspecting a simple integer counter (primitive data type), the value displayed in the Expressions view is the value when the expression was evaluated. As the counter is changed in the running
   program, the inspected result will not change (since the view is not displaying the value bound to a variable - it is displaying the value of an expression, and the value of a primitive data type
   cannot change). However, if an expression results in an object, fields of that object will be updated in the inspector as they change in the running program (since the value bound to fields in an
-  object can change).
+  object can change).</p>
   <h4>Stepping over native methods that perform I/O</h4>
-  When the debugger steps over native methods that perform I/O to
+  <p>When the debugger steps over native methods that perform I/O to
   <code>System.out</code>
   or
-  <code>System.err</code>
-  , the output may not appear immediately unless the native performs a flush on the output buffer.
+  <code>System.err</code>, the output may not appear immediately unless the native performs a flush on the output buffer.</p>
   <h4>VM and process termination running on IBM 1.3 JVM on Linux (Linux only)</h4>
-  Terminating a launch, debug target, or system process associated with a debug target running on the IBM 1.3 JVM on the Linux platform does not work when the associated debug target has a suspended
+  <p>Terminating a launch, debug target, or system process associated with a debug target running on the IBM 1.3 JVM on the Linux platform does not work when the associated debug target has a suspended
   thread. To remove such debug targets from the debug UI, select
   <b>Terminate and Remove</b> from the debug view's pop-up menu (or use the shortcut "delete" key). Associated system processes in the OS may not be properly cleaned up. If a debug target has no
   suspended threads, termination works properly. (bug
-  <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=1631">1631</a>)
+  <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=1631">1631</a>)</p>
   <h4>Java Annotation Processing</h4>
   <p>
     Some methods in the processing API are unimplemented when compiling within the IDE, and will throw
