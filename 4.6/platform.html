@@ -30,6 +30,24 @@ ul {padding-left: 13px;}
 </colgroup>
 <tbody>
 
+  <tr id="swt-autoscale">
+    <td class="title">SWT provides resolution-based auto-scaling</td>
+    <td class="content">
+      SWT now automatically scales images on high-DPI monitors on Windows and Linux, similar to the Mac's Retina support on OS X. 
+      In the absence of high-resolution images, SWT will auto-scale the available images to ensure that SWT-based applications like Eclipse
+      are scaled proportionately to the resolution of the monitor.
+      <p>
+      <img src="images/swt-high-dpi.png" alt="Screenshot with tiny icons 'Before' and a normal appearance 'After'" />
+      </p>
+      <p>
+      The default settings should look good on Windows and Linux/GTK.<br/>
+      To tweak the settings, see <a href="#swt-autoscale-tweaks">Tweaking SWT's auto-scaling</a>.<br/>
+      SWT programmers, see <a href="platform_isv.html#high-dpi-api">APIs for high-DPI monitor support</a>.<br/>
+      Icon designers, see <a href="platform_isv.html#high-dpi-icons">High-DPI icons using "@2x" convention</a>.
+      </p>
+    </td>
+  </tr>
+
   <tr id="theming-enablement">
     <td class="title">Preference setting to disable the Eclipse styling (CSS based theming)</td>
     <td class="content">
@@ -276,34 +294,6 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
-  
-  <tr id="swt-autoscale">
-    <td class="title">SWT provides resolution-based auto-scaling</td>
-    <td class="content">
-    SWT now automatically scales images on high-DPI monitors on Windows and Linux, similar to the Mac's Retina support on OS X. 
-    In the absence of high-resolution images, SWT will auto-scale the available images to ensure that SWT-based applications like Eclipse
-    are scaled proportionately to the resolution of the monitor.
-    <p>
-    <img src="images/swt-high-dpi.png" alt="Screenshot with tiny icons 'Before' and a normal appearance 'After'" />
-    </p>
-    <p>
-    This feature can be disabled on Windows and GTK by setting this VM argument to <code>false</code>
-    in eclipse.ini or on the command line after <code>-vmargs</code>:
-    </p>
-    <p>
-    <b>-Dswt.enable.autoScale=false</b>
-    </p>
-    <p>
-    Auto-scaling cannot be disabled on the Mac as it is provided by the OS.
-    </p>
-    <p>
-    Caveats: We're aware that some scaled images look bad at scale factors less than 200%. This will be improved in M7.
-    Furthermore, we're working on support for high-DPI images in Platform UI, so that plug-in providers
-    can add high-DPI icons without doing any code changes.
-    </p>
-    </td>
-  </tr>
-
   <tr id="solstice-welcome-theme">
     <td class="title">New Welcome theme 'Solstice'</td>
     <td class="content">
@@ -500,7 +490,64 @@ ul {padding-left: 13px;}
         <p> These builds are instead being replaced by the corresponding 64-bit builds. The 64-bit build for Solaris x86 is already available in M7 and the 64-bit SPARC build will be available soon. </p>
     </td>
   </tr>
-  
+
+  <tr id="swt-autoscale-tweaks">
+    <td class="title">Tweaking SWT's auto-scaling</td>
+    <td class="content">
+        If you don't like SWT's default appearance on HiDPI monitors, here are a few hints to
+        tweak the scaling:
+        <p>
+        On <b>GTK</b>, the standard way to configure scaling for a single application is to set the
+        <code>GDK_DPI_SCALE</code> environment variable before launching an application.
+        E.g. to set the scale factor to 150% on the command line when launching Eclipse:
+        </p>
+        <pre><b>$ GDK_DPI_SCALE=1.5 ./eclipse</b></pre>
+        <p>
+        On <b>Windows</b> and <b>GTK</b>, SWT's auto-scaling can be configured using the <code>swt.autoScale</code>
+        Java property. E.g. to disable auto-scaling and make the application behave like on Mars (4.5),
+        add this VM argument in eclipse.ini or on the command line after <code>-vmargs</code>:
+        </p>
+        <pre><b>-Dswt.autoScale=false</b></pre>
+        <p>
+        And here are all the <code>swt.autoScale</code> arguments that are currently implemented:
+        </p>
+        <ul>
+        <li><code>false</code>: scale factor is set to 100% (no scaling)</li>
+        <li><code>integer</code>: scale factor depends on the current display resolution,
+            but only uses integer multiples of 100%. The detected native zoom is
+            generally rounded down (e.g. at 150%, will use 100%), unless close to
+            the next integer multiple (currently at 175%, will use 200%).</li>
+        <li><code>quarter</code>: scale factor depends on the current display resolution,
+            but only uses integer multiples of 25%. The detected native zoom is
+            rounded to the closest permissible value. (This used to be the default in
+            the last two pre-release milestones.)</li>
+        <li><code>exact</code>: scale factor is set to the native zoom (with 1% as minimal
+            step).</li>
+        <li><i>&lt;value&gt;</i>: scale factor uses the given integer value in
+            percent as zoom level.</li>
+        </ul>
+        <p>
+        The current default is "integer". Note that non-integer scale factors
+        exhibit various problems like jagged borders or even completely missing images.
+        </p>
+        <p>
+        The scaling method can be configured by setting the <code>swt.autoScale.method</code> system property to:
+        </p>
+        <ul>
+        <li><code>nearest</code>: nearest-neighbor interpolation, may look jagged</li>
+        <li><code>smooth</code>: smooth edges, may look blurry</li>
+        </ul>
+        <p>
+        The current default is to use "nearest", except on
+        GTK when the deviceZoom is not an integer multiple of 100%.
+        The smooth strategy currently doesn't work on Win32 and Cocoa, see
+        <a href="https://bugs.eclipse.org/493455">bug 493455</a>.
+        </p>
+        <p>
+        Auto-scaling cannot be disabled on the Mac as it is provided by the OS.
+        </p>
+    </td>
+  </tr>
 
 
 
