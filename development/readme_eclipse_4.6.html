@@ -61,22 +61,22 @@ after the release.
   <p>Eclipse 4.6 is compatible with Eclipse 4.5 (and all earlier 3.x versions).</p>
   <p>
     <strong>API Contract Compatibility:</strong> Eclipse SDK 4.6 is upwards contract-compatible with Eclipse SDK 4.5 except in those areas noted in the <a
-      href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_6_porting_guide.html"><em>Eclipse 4.6 Plug-in Migration Guide</em>. Programs that use affected APIs and extension points will need to be ported to Eclipse SDK 4.6 APIs. Downward contract compatibility is not supported. There is no guarantee that compliance with
-    Eclipse SDK 4.6 APIs would ensure compliance with Eclipse SDK 4.5 APIs. Refer to <a href="https://wiki.eclipse.org/Evolving_Java-based_APIs"> <em>Evolving Java-based APIs</em>
-    </a> for a discussion of the kinds of API changes that maintain contract compatibility.
+      href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_6_porting_guide.html"><em>Eclipse 4.6 Plug-in Migration Guide</em></a>. Programs that use affected APIs and extension points
+    will need to be ported to Eclipse SDK 4.6 APIs. Downward contract compatibility is not supported. There is no guarantee that compliance with Eclipse SDK 4.6 APIs would ensure compliance with
+    Eclipse SDK 4.5 APIs. Refer to <a href="https://wiki.eclipse.org/Evolving_Java-based_APIs"><em>Evolving Java-based APIs</em></a> for a discussion of the kinds of API changes that maintain contract
+    compatibility.
   </p>
   <p>
     <strong>Binary (plug-in) Compatibility:</strong> Eclipse SDK 4.6 is upwards binary-compatible with Eclipse SDK 4.5 except in those areas noted in the <a
-      href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_6_porting_guide.html"><em>Eclipse 4.6 Plug-in Migration Guide</em>
-    </a>. Downward plug-in compatibility is not supported. Plug-ins for Eclipse SDK 4.6 will not be usable in Eclipse SDK 4.5. Refer to <a href="https://wiki.eclipse.org/Evolving_Java-based_APIs"> <em>Evolving
-        Java-based APIs</em>
-    </a> for a discussion of the kinds of API changes that maintain binary compatibility.
+      href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_6_porting_guide.html"><em>Eclipse 4.6 Plug-in Migration Guide</em> </a>. Downward plug-in compatibility is not supported.
+    Plug-ins for Eclipse SDK 4.6 will not be usable in Eclipse SDK 4.5. Refer to <a href="https://wiki.eclipse.org/Evolving_Java-based_APIs"> <em>Evolving Java-based APIs</em> for a discussion of
+      the kinds of API changes that maintain binary compatibility. 
   </p>
   <p>
     <strong>Source Compatibility:</strong> Eclipse SDK 4.6 is upwards source-compatible with Eclipse SDK 4.5 except in the areas noted in the <a
-      href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_6_porting_guide.html"><em>Eclipse 4.6 Plug-in Migration Guide</em>
-    </a>. This means that source files written to use Eclipse SDK 4.5 APIs might successfully compile and run against Eclipse SDK 4.6 APIs, although this is not guaranteed. Downward source compatibility
-    is not supported. If source files use new Eclipse SDK APIs, they will not be usable with an earlier version of the Eclipse SDK.
+      href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_6_porting_guide.html"><em>Eclipse 4.6 Plug-in Migration Guide</em> </a>. This means that source files written to use Eclipse
+    SDK 4.5 APIs might successfully compile and run against Eclipse SDK 4.6 APIs, although this is not guaranteed. Downward source compatibility is not supported. If source files use new Eclipse SDK
+    APIs, they will not be usable with an earlier version of the Eclipse SDK.
   </p>
   <p>
     <strong>Workspace Compatibility:</strong> Eclipse SDK 4.6 is upwards workspace-compatible with earlier 3.x and 4.x versions of the Eclipse SDK unless noted. This means that workspaces and projects
@@ -91,22 +91,15 @@ after the release.
     <strong>Non-compliant usage of API's</strong>: All non-API methods and classes, and certainly everything in a package with "internal" in its name or x-internal in the bundle manifest entry, are
     considered implementation details which may vary between operating environment and are subject to change without notice. Client plug-ins that directly depend on anything other than what is
     specified in the Eclipse SDK API are inherently unsupportable and receive no guarantees about compatibility within a single release much less with earlier releases. Refer to <a
-      href="https://www.eclipse.org/articles/Article-API-Use/index.html"> <em>How to Use the Eclipse API</em>
-    </a> for information about how to write compliant plug-ins.
+      href="https://www.eclipse.org/articles/Article-API-Use/index.html"> <em>How to Use the Eclipse API</em> for information about how to write compliant plug-ins. 
   </p>
   <h2 id="KnownIssues">Known Issues</h2>
   <p>
     Note: Bug numbers refer to the Eclipse project bug database at <a href="http://dev.eclipse.org/bugs/">http://bugs.eclipse.org/bugs/</a>
   </p>
-  <h3 id="I-General">
-    </a>General problems
-  </h3>
-  <h3 id="I-General-Startup">
-    </a>General - Startup
-  </h3>
-  <h4>
-    </a>Installation/Configuration issues that can cause Eclipse to fail start
-  </h4>
+  <h3 id="I-General">General problems</h3>
+  <h3 id="I-General-Startup">General - Startup</h3>
+  <h4>Installation/Configuration issues that can cause Eclipse to fail start</h4>
   <p>Here are some common problems that can cause Eclipse not to start:</p>
   <ul>
     <li>As shown <a href="#TargetOperatingEnvironments">above</a>, Eclipse 4.6 requires at least a Java SE 8. Perhaps an older version of the VM is being found in your path. To explicitly specify
@@ -131,22 +124,18 @@ after the release.
     </li>
   </ul>
   <h4>
-    </a> <b>Invalid characters in install directory prevents Eclipse from starting</b>
+    <b>Invalid characters in install directory prevents Eclipse from starting</b>
   </h4>
   <p>
     Eclipse will fail to launch if installed in a directory whose path contains certain invalid characters, including :%#&lt;&gt;"!. The workaround is to install Eclipse in a directory whose path does
     not contain invalid characters. (bugs <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=3109">3109</a> and <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=17281">17281</a>)
   </p>
-  <h4>
-    </a>Hanging during class loading when out of permanent generation memory
-  </h4>
+  <h4>Hanging during class loading when out of permanent generation memory</h4>
   <p>
     The Oracle JVM may hang indefinitely during class loading if it runs out of permanent generation memory. This will cause CPU usage to stay at 100% until the process is ended. See the section <a
       href="#RunningEclipse">Running Eclipse</a> for details on addressing this VM problem.
   </p>
-  <h3 id="I-General-GCJ">
-    </a>General - GCJ
-  </h3>
+  <h3 id="I-General-GCJ">General - GCJ</h3>
   <p>GCJ is an effort by the GCC team to provide an open source Java compiler and runtime environment to interpret Java bytecode. Unfortunately, the GCJ runtime environment is not an environment
     that is often tested on by Eclipse developers.</p>
   <p>The most common problems surrounding GCJ are:</p>
@@ -202,9 +191,7 @@ after the release.
       href="#TargetOperatingEnvironments">above</a>), you can seek further assistance through the <a href="https://www.eclipse.org/forums/">forums</a>, the IRC <a
       href="irc://irc.freenode.net/#eclipse">channel</a>, and/or <a href="https://bugs.eclipse.org/bugs/">bugzilla</a>.
   </p>
-  <h4>
-    </a>Problems with classloaders in created threads
-  </h4>
+  <h4>Problems with classloaders in created threads</h4>
   <p>
     There is a known issue with trying to load classes from a newly-created thread using a class loader different from the plug-in class loader. The result will be a
     <code>ClassNotFoundException</code>
@@ -220,9 +207,7 @@ after the release.
     problem in practice provided you reset the context class loader back to its original value when your use in the current thread is complete. (bug <a
       href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=8907">8907</a>)
   </p>
-  <h4>
-    </a>Deadlock creating executable extension in Plugin.startup
-  </h4>
+  <h4>Deadlock creating executable extension in Plugin.startup</h4>
   <p>
     If
     <code>Plugin.startup</code>
@@ -230,25 +215,19 @@ after the release.
     <code>Plugin.startup</code>
     code. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=5875">5875</a>)
   </p>
-  <h4>
-    </a>Potential Problems Converting Plug-in Manifests
-  </h4>
+  <h4>Potential Problems Converting Plug-in Manifests</h4>
   <p>
     If your plug-in ships with a plug-in manifest and not an OSGi bundle manifest, is shipped as a JAR file, and contains a nested JAR file then there may be problems in the automatic generation of
     the bundle manifest file. The packages defined in the nested JAR may not be exported correctly in the
     <code>Export-packages</code>
     bundle manifest header. To work around this you should ship your plug-in with a bundle manifest. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=97689">97689</a>)
   </p>
-  <h4>
-    </a>Location for Debug Options File on Mac OS
-  </h4>
+  <h4>Location for Debug Options File on Mac OS</h4>
   <p>
     If you are running in debug mode on Mac OS, the default location for the .options file is inside the application bundle in the Eclipse.app/Contents/MacOS directory (like the eclipse.ini). (bug <a
       href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=88782">88782</a>)
   </p>
-  <h4>
-    </a>Issues with JNI that use FindClass
-  </h4>
+  <h4>Issues with JNI that use FindClass</h4>
   <p>
     There may be issues when using a JNI implementation that uses FindClass in a function where the JNIEnv pointer is not available, such as in a C callback (bug <a
       href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=125250">125250</a>). The reason is that FindClass, in this case, uses the application class loader to find the class. If the desired class is
@@ -261,12 +240,8 @@ after the release.
   <pre>static JavaVM* jvm;  // Global variable<br /><br />void myCallback(void) {<br />    JNIEnv* env;<br />    jvm-&gt;AttachCurrentThread((void**)&amp;env, NULL);<br />    // Fails if some/class is not in the application classloader:<br />    jclass cls = env-&gt;FindClass("some/class");<br />    jmethodID methodID = env-&gt;GetMethodID(cls, "methodName",<br />      "(Ljava/lang/String;)V or whatever signature");<br />    env-&gt;CallVoidMethod(callback, methodID, ...);<br />    jvm-&gt;DetachCurrentThread();<br />  }<br />}</pre>
   <p>A solution is to cache the method ID, for example:</p>
   <pre>static jmethodID mid;  // Global variable<br /><br />JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM *vm, void *reserved) {<br />...<br />  // Store the JavaVM pointer<br />    jvm = vm;<br /><br />  // Find the class and store the method ID<br />  // Will use the class loader that loaded the JNI library<br />    jclass cls = env-&gt;FindClass(className"some/class");<br />    if(!cls) goto ERR;<br /><br />    mid = env-&gt;GetMethodID(cls, "methodName",<br />      "(Ljava/lang/String;)V or whatever signature");<br />    if(!mid) goto ERR;<br />...<br />}<br /><br />void myCallback(void) {<br />    JNIEnv* env;<br />    jvm-&gt;AttachCurrentThread((void**)&amp;env, NULL);<br />    env-&gt;CallVoidMethod(callback, mid, ...);<br />     // Handle error ...<br />    jvm-&gt;DetachCurrentThread();<br />  }<br />}</pre>
-  <h3 id="I-Platform-Ant">
-    </a>Platform - Ant
-  </h3>
-  <h4>
-    </a>Custom Ant tasks and Ant types must be separate from plug-in library JARs
-  </h4>
+  <h3 id="I-Platform-Ant">Platform - Ant</h3>
+  <h4>Custom Ant tasks and Ant types must be separate from plug-in library JARs</h4>
   <p>
     Including the class files for custom Ant tasks or Ant types in the regular code JAR for your plug-in causes problems. These class files must be provided in a separate JAR that is contributed to
     the
@@ -276,46 +251,34 @@ after the release.
     extension point (and not declared as a library in the plug-in's manifest). This ensures that the Ant tasks and types are loaded by the special Ant class loader and not by a plug-in classloader.
     (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=34466">34466</a>).
   </p>
-  <h4>
-    </a>XDoclet support from within Eclipse
-  </h4>
+  <h4>XDoclet support from within Eclipse</h4>
   <p>
     Since there are differences when running Ant from the commandline and within Eclipse, some extra steps may be needed to have XDoclet support function correctly within Eclipse. Problems may occur
     creating XDoclet subtasks. The workarounds and full discussion can be found in bug report. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=37070">37070</a>)
   </p>
-  <h4>
-    </a>Ant Editor code completion based on Ant 1.6.x
-  </h4>
+  <h4>Ant Editor code completion based on Ant 1.6.x</h4>
   <p>
     Code completion provided by the Ant editor does not respect the user-specified version of org.eclipse.ant.core plug-in or ANT_HOME. Code completion proposals are mostly based on Ant 1.6.x with
     some updates to Ant 1.8.3 (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=193046">bug 193046</a>)
   </p>
-  <h4>
-    </a>Setting build loggers not supported when debugging Ant builds
-  </h4>
+  <h4>Setting build loggers not supported when debugging Ant builds</h4>
   <p>
     When debugging Ant builds within Eclipse, setting
     <code>-logger</code>
     as a program argument will be ignored.
   </p>
-  <h4>
-    </a>Renaming an External Tool builder set to run during auto-build will cause errors
-  </h4>
+  <h4>Renaming an External Tool builder set to run during auto-build will cause errors</h4>
   <p>
     If you rename an existing external tool builder that is configured to run during auto-builds, you will get the following error: Errors during build. Errors running builder "Integrated External
     Tool Builder" on project &lt;PROJECT_NAME&gt;. The builder launch configuration could not be found. The workaround is to first disable the builder for auto-builds and then rename the builder. (bug
     <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=118294">118294</a>)
   </p>
-  <h4>
-    </a>Slow typing/saving of the Ant editor with imports that define numerous macrodefs
-  </h4>
+  <h4>Slow typing/saving of the Ant editor with imports that define numerous macrodefs</h4>
   <p>
     The Ant editor is slow on saving with buildfiles that have &lt;import&gt; declarations of buildfiles that have numerous &lt;macrodef&gt;s. See bug <a
       href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=125117">125117</a> for a possible workaround
   </p>
-  <h4>
-    </a>Ant 1.8.x reports missing libraries as build failures
-  </h4>
+  <h4>Ant 1.8.x reports missing libraries as build failures</h4>
   <p>
     In Ant 1.8.x, if you try to use a task that requires additional libraries and you do not have the libraries on the Ant classpath, the build will now properly report as failed. In previous versions
     of Ant, the build would still report that it had succeeded even though it actually failed to run any of the tasks from additional bundles. See <a
@@ -326,24 +289,18 @@ after the release.
     the <a href="http://ant.apache.org/manual/install.html#optionalTasks">Optional Tasks</a> section in the Ant manual.
   </p>
   <h3 id="I-Platform-User-Assistance">Platform - User Assistance</h3>
-  <h4>
-    </a>Welcome page not displayed properly (Linux/Unix)
-  </h4>
+  <h4>Welcome page not displayed properly (Linux/Unix)</h4>
   <p>
     The default Welcome implementation is HTML-based and requires a supported browser in order to work. If no supported browser can be found, Welcome falls back to its Forms-based implementation,
     which has a different (simpler) appearance. Consult the <a href="http://www.eclipse.org/swt/faq.php#browserplatforms">SWT FAQ</a> for supported browsers and setting up your browser to work with
     eclipse.
   </p>
-  <h4>
-    </a>Help browser tool bar buttons do not work for some documents
-  </h4>
+  <h4>Help browser tool bar buttons do not work for some documents</h4>
   <p>
     The Help browser's Print, Synchronize, and Bookmark buttons do not work for pages that are not actually installed with the product. However, you can always use the print command in the browser's
     context menu to print the page you're reading. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=44216">44216</a>)
   </p>
-  <h4>
-    </a>Help documents not displayed in a browser or very slow document loading (Windows only)
-  </h4>
+  <h4>Help documents not displayed in a browser or very slow document loading (Windows only)</h4>
   If your LAN settings are not properly configured for local host access, your Help browser might open to a blank page or display an HTTP error instead of a help page, or you may experience long
   delays when loading help documents. Your system administrator can configure your LAN settings so that help documents can be accessed from the local help server.
   <blockquote>
@@ -356,34 +313,22 @@ after the release.
       <li>If you are using an automatic configuration script for proxy settings, and are not sure that the script is correct, clear the "Use automatic configuration script" check box.</li>
     </ol>
   </blockquote>
-  <h4>
-    </a>Working disconnected from the network (Windows only)
-  </h4>
+  <h4>Working disconnected from the network (Windows only)</h4>
   If you are experiencing problems when not connected to the network, you must install the loopback adapter from the Windows installation CD. (bug
   <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=831">831</a>)
-  <h4>
-    </a>Using Internet Explorer in offline mode (Windows only)
-  </h4>
+  <h4>Using Internet Explorer in offline mode (Windows only)</h4>
   If you have been using Internet Explorer in Offline mode, when you access the help system you will get a message indicating that the web page you requested is not available offline or a blank page
   will display. Click
   <b>Connect</b> or deselect "Work Offline" in the Internet Explorer "File" menu to return the system behavior to normal.
-  <h3 id="I-Platform-UI">
-    </a>Platform - UI
-  </h3>
-  <h4>
-    </a>Dirty state not tracked properly for OLE documents (Windows only)
-  </h4>
+  <h3 id="I-Platform-UI">Platform - UI</h3>
+  <h4>Dirty state not tracked properly for OLE documents (Windows only)</h4>
   <p>
     The dirty state for an OLE document is not updated properly. This causes Eclipse to prompt to save the contents of the editor when the document is closed, even if the contents have already been
     saved. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=2564">2564</a>)
   </p>
-  <h4>
-    </a>OLE document crashes can cause Eclipse to also crash (Windows only)
-  </h4>
+  <h4>OLE document crashes can cause Eclipse to also crash (Windows only)</h4>
   <p>If an OLE document crashes, Eclipse can crash, or the workbench menus can become inconsistent.</p>
-  <h4>
-    </a>Toolbars only containing contributed controls exhibit display errors on Mac/Linux
-  </h4>
+  <h4>Toolbars only containing contributed controls exhibit display errors on Mac/Linux</h4>
   <p>
     Currently there is no way on the Max or Linux platforms to define the <b>height</b> for controls contributed to toolbars, nor will those platforms respect the size returned by the control's
     <code>computeSize</code>
@@ -394,81 +339,57 @@ after the release.
     The native launcher checks the JVM but PDE launches simply use java and don't go through the native launchers. The workaround is to add the appropriate JVM arg to your launch config or to the <i>Preferences
       &gt; Java &gt; Installed JREs</i>. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=339763">339763</a>)
   </p>
-  <h4>
-    </a>Capabilities and Activities don't affect the menus and toolbars
-  </h4>
+  <h4>Capabilities and Activities don't affect the menus and toolbars</h4>
   <p>
     Capabilities used to hide GUI elements like menu entries work for commands and individual actionSet entries, but Capabilities have not been fully implemented. (bug <a
       href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=359778">359778</a>)
   </p>
-  <h3 id="I-Platform-SWT">
-    </a>Platform - SWT
-  </h3>
-  <h4>
-    </a>Eclipse plug-in based on the SWT Browser throws exception
-  </h4>
+  <h3 id="I-Platform-SWT">Platform - SWT</h3>
+  <h4>Eclipse plug-in based on the SWT Browser throws exception</h4>
   <p>
     The SWT Browser widget uses a platform-specific web browser to render HTML. The org.eclipse.swt.SWTError exception ("No more handles") is thrown on platforms that don't meet the requirements for
     running the Browser widget. Supported platforms and prerequisites are listed on the SWT FAQ item <a href="http://www.eclipse.org/swt/faq.php#browserplatforms"> "Which platforms support the SWT
       Browser?"</a>.
   </p>
-  <h4>
-    </a>SWT Browser widget crashes when run with XULRunner 31 run-time (Linux only)
-  </h4>
+  <h4>SWT Browser widget crashes when run with XULRunner 31 run-time (Linux only)</h4>
   <p>
     Creation of an SWT Mozilla style Browser with XULRunner 31 run-time crashes on Linux. The workaround is to use other supported XULRunner run-times or webkit which is the default on Linux. (bug <a
       href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=467646">467646</a>)
   </p>
-  <h4>
-    </a>IME conversion problem (Solaris GTK only)
-  </h4>
+  <h4>IME conversion problem (Solaris GTK only)</h4>
   <p>
     When typing Japanese text, the conversion to Kanji must be done one ideogram at a time. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=226636">226636</a>)
   </p>
-  <h4>
-    </a>Eclipse won't start (Linux GTK PPC only)
-  </h4>
+  <h4>Eclipse won't start (Linux GTK PPC only)</h4>
   <p>
     Eclipse fails to create a lock file with reason "No locks available". To launch eclipse you must disable file locking using the osgi.locking property. For example, you could launch eclipse as
     follows: <br />
     <code>eclipse -vmargs -Dosgi.locking=none</code>
   </p>
-  <h4>
-    </a>Eclipse icon is duplicated in task-bar on Windows
-  </h4>
+  <h4>Eclipse icon is duplicated in task-bar on Windows</h4>
   <p>
     Workaround is to pin the launched eclipse application and not the launcher, for more details, refer bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=314805">314805</a>
   </p>
-  <h4>
-    </a>BIDI Segments in Text controls
-  </h4>
+  <h4>BIDI Segments in Text controls</h4>
   <p>
     BIDI Segments in Text controls only work on Windows and GTK. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=388578">388578</a>)
   </p>
-  <h4>
-    </a>Block Selection functionality provided by StyledText is not BIDI aware
-  </h4>
+  <h4>Block Selection functionality provided by StyledText is not BIDI aware</h4>
   <p>
     When the orientation of characters under the left and right edges of the block selection rectangle are not the same, the actual selection ranges (in memory) differ from the visual representation
     of the selection. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=277929">277929</a>)
   </p>
-  <h3 id="I-Platform-Team-CVS">
-    </a>Platform - Team - CVS
-  </h3>
+  <h3 id="I-Platform-Team-CVS">Platform - Team - CVS</h3>
   <p>
     The following are known problems with the CVS repository provider only, and do not apply to other repository providers. Additional information on how to use CVS from Eclipse can be found in the <a
       href="https://wiki.eclipse.org/CVS_FAQ">Eclipse CVS FAQ</a>.
   </p>
-  <h4>
-    </a>CVS server compatibility
-  </h4>
+  <h4>CVS server compatibility</h4>
   <p>The CVS plug-in parses messages returned from the CVS server. If the format of these messages is not as expected, some of the plug-in's functionality may be missing. The CVS plug-in is
     compatible with all stable 1.11.X builds of the CVS server, and should be compatible with future releases in that stream unless text message formats change (the last tested server was 1.11.22). As
     for the 1.12.X feature releases of CVS, the Eclipse CVS client has been tested with builds up to 1.12.13. However, future releases could easily break the Eclipse CVS client. Basic functionality,
     such as Checkout, Commit, and Update, should always work, but there may be problems with more advanced commands such as Synchronizing and Browsing the repository.</p>
-  <h4>
-    </a>Connection cannot be found after initially missing
-  </h4>
+  <h4>Connection cannot be found after initially missing</h4>
   <p>
     If a connection initially fails due to a network problem, the connection may continue to fail even when the network problem is fixed. In order to establish the connection you must exit and restart
     Eclipse. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=9295">9295</a>)
@@ -489,20 +410,14 @@ after the release.
     ssh) that adds CRs to the communications channel (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=21180">21180</a>). Another involves Eclipse not properly reading the stderr output of
     the external communications tool. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=11633">11633</a>)
   </p>
-  <h4>
-    </a>A disabled CVS capability may not be auto-enabled in existing workspaces
-  </h4>
+  <h4>A disabled CVS capability may not be auto-enabled in existing workspaces</h4>
   <p>
     New in 3.0 is the ability to disable capabilities and the CVS support in Eclipse can be disabled. However, for backwards compatibility the CVS capability is auto-enabled in existing workspaces
     that already contain CVS projects. The auto-enabling function may not run if the team support plugin is not loaded at startup. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=66977">66977</a>)
   </p>
-  <h4>
-    </a>Builder output files may appear as changed
-  </h4>
+  <h4>Builder output files may appear as changed</h4>
   <p>When folders containing build output are shared they may get improperly marked as dirty when build output is generated.</p>
-  <h4>
-    </a>Enabling GNOME proxy support
-  </h4>
+  <h4>Enabling GNOME proxy support</h4>
   <p>
     GNOME applications can make use of proxy settings defined in this environment. If set, Eclipse will use it prior to proxy settings declared using env variables. This feature is disabled by
     default, to enable it launch Eclipse with
@@ -511,31 +426,21 @@ after the release.
   </p>
   <pre>eclipse -Dorg.eclipse.core.net.enableGnome</pre>
   <h3 id="I-Platform-Install-Update">Platform - Install/Update</h3>
-  <h4>
-    </a>Manually installing features and plug-ins on a FAT file system (Windows only)
-  </h4>
+  <h4>Manually installing features and plug-ins on a FAT file system (Windows only)</h4>
   <p>When features and plug-ins are manually installed on top of an Eclipse-based product install located on a FAT file system that has already been run at least once, the product must be
     explicitly restarted with -clean. That is,</p>
   <pre>eclipse.exe -clean</pre>
-  <h4>
-    </a>Connecting to untrusted sites using https
-  </h4>
+  <h4>Connecting to untrusted sites using https</h4>
   <p>You cannot install or update software from a site using https whose certificate is not chained to a trusted root certificate in your local certificate store. This typically means the server
     is using a self-signed certificate, or a certificate authenticated by an unknown third party.</p>
-  <h4>
-    </a>Extension location is lost if the install path changes
-  </h4>
+  <h4>Extension location is lost if the install path changes</h4>
   <p>
     A previously configured extension location may be temporarily removed if the install is moved or mounted under a different path. This only happens when the link file that configures the extension
     location uses a relative path that points to a directory under the Eclipse install. On a second startup using the same install path, the extension location is added again (bug <a
       href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=95403">95403</a>).
   </p>
-  <h3 id="I-JDT">
-    </a>Java development tools (JDT)
-  </h3>
-  <h4>
-    </a>Multiple regions formatting in a given source snippet
-  </h4>
+  <h3 id="I-JDT">Java development tools (JDT)</h3>
+  <h4>Multiple regions formatting in a given source snippet</h4>
   In version 3.4, the API method
   <code>org.eclipse.jdt.core.formatter.CodeFormatter.format(int, String, IRegion[], int, String)</code>
   was added to allow the formatting of several regions in a source snippet with a single pass.
@@ -547,86 +452,64 @@ after the release.
   </ul>
   This will be fixed in a future release (bug
   <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=233967">233967</a>).
-  <h4>
-    </a>Searching for constant field references
-  </h4>
+  <h4>Searching for constant field references</h4>
   <p>
     Search does not find references to constant fields inside binaries because the Java Language Specification mandates that constant field values be inlined in the class file's byte codes, leaving no
     trace of a field reference. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=12044">12044</a>)
   </p>
-  <h4>
-    </a>Cut, copy, paste not working for linked resources in views showing Java elements
-  </h4>
+  <h4>Cut, copy, paste not working for linked resources in views showing Java elements</h4>
   <p>
     The cut, copy, and paste actions do not work for linked files and folders appearing in views that show Java elements, including the Package Explorer. The workaround is to use these actions from
     the Navigator view instead. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=34568">34568</a>)
   </p>
-  <h4>
-    </a>Java working sets not working correctly for elements from JRE system library container
-  </h4>
+  <h4>Java working sets not working correctly for elements from JRE system library container</h4>
   <p>
     Applying a working set consisting entirely of elements from the JRE System library container as a filter to the packages view might result in an empty Package Explorer. (bug <a
       href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=30442">30442</a>)
   </p>
-  <h4>
-    </a>Breakpoints unreliable running Sun 1.6.0_14
-  </h4>
+  <h4>Breakpoints unreliable running Sun 1.6.0_14</h4>
   Developers debugging applications on Sun's 1.6.0_14 virtual machine should be aware that breakpoints are unreliable (i.e. do not always suspend execution). The problem occurs on Windows and Linux
   platforms. This is an issue with the VM and not with Eclipse. The workaround is to use the
   <code>-XX:+UseParallelGC</code>
   VM option. (bug
   <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=279137">279137</a>).
-  <h4>
-    </a>Suspend on uncaught exception overrides exception breakpoint location filters
-  </h4>
+  <h4>Suspend on uncaught exception overrides exception breakpoint location filters</h4>
   <p>
     Exception breakpoints can be configured with location filters (inclusive and exclusive). When an unchecked exception is configured to <b>not</b> suspend execution in a specific class, execution
     will still suspend when the user preference to suspend on uncaught exceptions is on. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=66770">66770</a>)
   </p>
-  <h4>
-    </a>Running Java programs with non-Latin-1 characters in package or class names
-  </h4>
+  <h4>Running Java programs with non-Latin-1 characters in package or class names</h4>
   You get a
   <code>java.lang.NoClassDefFoundError</code>
   when running Java programs with non-Latin characters in the package or class names. The workaround is to package the class files as a JAR file and run the program out of the JAR and not from the
   file system directly. (bug
   <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=4181">4181</a>)
-  <h4>
-    </a>Cannot run or debug class in a project with GB18030 characters in project name
-  </h4>
+  <h4>Cannot run or debug class in a project with GB18030 characters in project name</h4>
   <p>
     Most class libraries do not properly support the creation of a system process (via
     <code>java.lang.Runtime.exec(...)</code>
     ) when the specified command line contains GB18030 characters. This limitation means the debugger cannot launch applications when the command line it generates contains GB18030 characters. (bug <a
       href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=32206">32206</a>)
   </p>
-  <h4>
-    </a>Cannot detect installed JRE with GB18030 characters in path name
-  </h4>
+  <h4>Cannot detect installed JRE with GB18030 characters in path name</h4>
   <p>
     Automatic JRE detection fails when the JRE is stored in a directory containing GB18030 characters in its name. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=33844">33844</a>)
   </p>
-  <h4>
-    </a>Cannot generate Javadoc for packages with GB18030 characters in the name
-  </h4>
+  <h4>Cannot generate Javadoc for packages with GB18030 characters in the name</h4>
   <p>
     Most class libraries do not properly support the creation of a system process (via
     <code>java.lang.Runtime.exec(...)</code>
     ) when the specified command line contains GB18030 characters. Since Javadoc is created using the Javadoc executable provided with the JDK, generating Javadoc fails if the package or class name
     contains GB18030 characters. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=32215">32215</a>)
   </p>
-  <h4>
-    </a>Unable to debug stack overflows
-  </h4>
+  <h4>Unable to debug stack overflows</h4>
   <p>
     If a debug session suspends on a
     <code>java.lang.StackOverflowError</code>
     exception (due to an exception breakpoint), the debugger may not be able to retrieve any debug information from the target JVM. As well, the debugger may not be able to reliably interact with the
     target JVM past this point. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=19217">19217</a>)
   </p>
-  <h4>
-    </a>Evaluation limitation
-  </h4>
+  <h4>Evaluation limitation</h4>
   <p>
     The debugger uses threads in the target JVM to perform evaluations (both explicit evaluations that the user requests, and implicit evaluations such as
     <code>toString()</code>
@@ -635,21 +518,15 @@ after the release.
     threads which did not encounter the breakpoint are not in a valid state to perform an evaluation. When an evaluation is attempted in a thread that is not in a valid state to perform an evaluation,
     an error message will appear to the effect of "Thread must be suspended by step or breakpoint to perform method invocation". (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=34440">34440</a>)
   </p>
-  <h4>
-    </a>Missing debug attributes
-  </h4>
+  <h4>Missing debug attributes</h4>
   The debugger requires that class files be compiled with debug attributes if it is to be able to display line numbers and local variables. Quite often, class libraries (for example, "
   <code>rt.jar</code>
   ") are compiled without complete debug attributes, and thus local variables and method arguments for those classes are not visible in the debugger.
-  <h4>
-    </a>Using Hot Code Replace
-  </h4>
+  <h4>Using Hot Code Replace</h4>
   <p>Hot code replace is supported on JDK 1.4.x VMs, and IBM J9 VMs. The debugger will attempt to replace all class files that change in the workspace as the user edits and builds source code.
     However, hot code replace is limited to changes that a particular virtual machine implementation supports. For example, changes within existing methods may be supported, but the addition or
     removal of members may not be.</p>
-  <h4>
-    </a>Scrapbook
-  </h4>
+  <h4>Scrapbook</h4>
   Setting a breakpoint inside a scrapbook page is not supported.
   <p>
     When a snippet is run in the scrapbook which directly or indirectly calls
@@ -663,39 +540,29 @@ after the release.
     <code>com.sun.jdi.VMDisconnectedException</code>
     being displayed in the scrapbook editor.
   </p>
-  <h4>
-    </a>Debugging over slow connections
-  </h4>
+  <h4>Debugging over slow connections</h4>
   A global Java debug preference specifies the debugger timeout, which is the maximum amount of time the debugger waits for a response from the target VM after making a request of that VM. Slow
   connections may require that this value be increased. The timeout value can be edited from the
   <b>Java &gt; Debug </b>preference page. Changing the timeout value only affects subsequently launched VM, not VMs that are already running.
-  <h4>
-    </a>Updating of inspected values
-  </h4>
+  <h4>Updating of inspected values</h4>
   When inspecting the result of an evaluated expression in the debugger, it is important to note that the result displayed is the result of that expression at the time it was evaluated. For example,
   when inspecting a simple integer counter (primitive data type), the value displayed in the Expressions view is the value when the expression was evaluated. As the counter is changed in the running
   program, the inspected result will not change (since the view is not displaying the value bound to a variable - it is displaying the value of an expression, and the value of a primitive data type
   cannot change). However, if an expression results in an object, fields of that object will be updated in the inspector as they change in the running program (since the value bound to fields in an
   object can change).
-  <h4>
-    </a>Stepping over native methods that perform I/O
-  </h4>
+  <h4>Stepping over native methods that perform I/O</h4>
   When the debugger steps over native methods that perform I/O to
   <code>System.out</code>
   or
   <code>System.err</code>
   , the output may not appear immediately unless the native performs a flush on the output buffer.
-  <h4>
-    </a>VM and process termination running on IBM 1.3 JVM on Linux (Linux only)
-  </h4>
+  <h4>VM and process termination running on IBM 1.3 JVM on Linux (Linux only)</h4>
   Terminating a launch, debug target, or system process associated with a debug target running on the IBM 1.3 JVM on the Linux platform does not work when the associated debug target has a suspended
   thread. To remove such debug targets from the debug UI, select
   <b>Terminate and Remove</b> from the debug view's pop-up menu (or use the shortcut "delete" key). Associated system processes in the OS may not be properly cleaned up. If a debug target has no
   suspended threads, termination works properly. (bug
   <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=1631">1631</a>)
-  <h4>
-    </a>Java Annotation Processing
-  </h4>
+  <h4>Java Annotation Processing</h4>
   <p>
     Some methods in the processing API are unimplemented when compiling within the IDE, and will throw
     <code>UnsupportedOperationException</code>
@@ -709,27 +576,19 @@ after the release.
     Java 5 annotation processors are supported in the IDE only. Java 5 processors can be executed while editing, as well as during a build. Slow annotation processors can cause a slowdown of the
     editing experience. If this occurs, you may wish to turn off <b>Enable processing in editor</b> on the <b>Java Compiler &gt; Annotation Processing</b> properties page of your Java project.
   </p>
-  <h4>
-    </a>Java indexing encounters problems when a folder is used both as a source and a class folder
-  </h4>
+  <h4>Java indexing encounters problems when a folder is used both as a source and a class folder</h4>
   <p>
     Java indexing encounters problems when a folder is used both as a source folder in a project and as a class folder in another project. Hence, when this peculiar setup is used, the Java Search
     might miss matches located in such a folder. To avoid this kind of problem, it is strongly advised to use different folders for sources and binary classes. (bug <a
       href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=309903">309903</a>)
   </p>
-  <h3 id="I-PDE">
-    </a>Plug-in Development Environment (PDE)
-  </h3>
-  <h4>
-    </a>Feature manifest editor does not preserve all comments
-  </h4>
+  <h3 id="I-PDE">Plug-in Development Environment (PDE)</h3>
+  <h4>Feature manifest editor does not preserve all comments</h4>
   <p>
     When a non-source page of the feature manifest editor is used, PDE will convert changes back into XML by regenerating the file. Although the overall content and most of the comments are preserved,
     some comments may be lost. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=59502">59502</a>)
   </p>
-  <h4>
-    </a>PDE will not unzip source zips of some plug-ins
-  </h4>
+  <h4>PDE will not unzip source zips of some plug-ins</h4>
   <p>
     In the plug-in import wizard, when you choose to import plug-ins as "projects with source folders", PDE will not unzip the source for the org.apache.ant. This is because the source ZIPs contains
     code that will not compile when unzipped as it requires additional JARs that are not part of the SDK. To avoid the creation of plug-in projects that won't compile, PDE will import these plug-ins
@@ -738,29 +597,21 @@ after the release.
     circular dependencies are at minimum marked as warnings by the JDT compiler and may result in unpredictable build behavior. Therefore, PDE always imports org.eclipse.swt as binary with source
     attached. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=66314">66314</a>)
   </p>
-  <h4>
-    </a>Emacs key bindings do not work in manifest editor fields
-  </h4>
+  <h4>Emacs key bindings do not work in manifest editor fields</h4>
   <p>
     Non-default key bindings currently do not work in fields on non-source pages of the PDE manifest editors. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=19482">19482</a>)
   </p>
-  <h4>
-    </a>Export of plug-in may silently drop classes
-  </h4>
+  <h4>Export of plug-in may silently drop classes</h4>
   <p>
     When exporting a plug-in using the plug-in, feature or product wizards, some classes might be dropped from the resulting archive if their fully qualified name is too long. This typical path
     limitation can be worked around by creating the jar of the problematic plug-in by using the Jar export wizard. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=97150">97150</a>)
   </p>
-  <h4>
-    </a>Compilation errors when exporting projects not stored outside of the workspace
-  </h4>
+  <h4>Compilation errors when exporting projects not stored outside of the workspace</h4>
   <p>
     When exporting multiple plug-ins and one is stored outside of the workspace, compile errors occurs on export. To work around the problem, you can either export the plug-ins one by one, or change
     their location. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=98579">98579</a>)
   </p>
-  <h4>
-    </a>Headless build needs to be run from a fully qualified path
-  </h4>
+  <h4>Headless build needs to be run from a fully qualified path</h4>
   <p>
     When running a headless build using the scripts provided by pde build, the properties
     <code>builder</code>
@@ -768,24 +619,18 @@ after the release.
     <code>buildDirectory</code>
     must refer to a fully qualified path. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=139554">139554</a>)
   </p>
-  <h4>
-    </a>Importing in Eclipse application fails if plug-in exists in host workspace
-  </h4>
+  <h4>Importing in Eclipse application fails if plug-in exists in host workspace</h4>
   <p>
     When running an Eclipse application (self-hosting) importing plug-ins will not work correctly if the plug-in being imported exists in the host Eclipse's workspace. This is because PDE modifies the
     target platform of the application to point at the running plug-ins from the host (target weaving). This also affects the PDE test suite. (bug <a
       href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=294005">294005</a>)
   </p>
-  <h4>
-    </a>Reusing a workspace after changing architectures silently breaks PDE models
-  </h4>
+  <h4>Reusing a workspace after changing architectures silently breaks PDE models</h4>
   <p>
     If a workspace is reused on a machine with a different architecture, the PDE models used to build plug-ins may silently fail. To work around this problem, delete the metadata in
     &lt;workspace&gt;/.metadata/.plugins/org.eclipse.pde.core. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=350172">350172</a>)
   </p>
-  <h4>
-    </a>Missing @since tag API Tools problems on interface fields containing @noreference tag
-  </h4>
+  <h4>Missing @since tag API Tools problems on interface fields containing @noreference tag</h4>
   <p>
     The Eclipse platform 4.6 release will not allow the API Tools @noreference tag on interface fields. This was changed because all interface fields are constant fields that cannot support the
     @noreference restriction. The tag was allowed in previous releases and this usage will now be considered an API change requiring a @since tag. It is recommended that you create an API Tools filter
@@ -804,9 +649,7 @@ after the release.
     <code>c:\eclipse-SDK-4.6-win32\eclipse\eclipse.exe</code>
     . <b>Note:</b> Set-up on most other operating environments is analogous. Special instructions for Mac OS X are listed <a href="#macosx">below</a>.
   </p>
-  <h3>
-    </a>Allocating enough memory and solving OutOfMemoryErrors
-  </h3>
+  <h3>Allocating enough memory and solving OutOfMemoryErrors</h3>
   <p>
     By default, Eclipse will allocate up to 1024 megabytes of Java heap memory. This should be ample for all typical development tasks. However, depending on the JRE that you are running, the number
     of additional plug-ins you are using, and the number of files you will be working with, you could conceivably have to increase this amount. Eclipse allows you to pass arguments directly to the
@@ -826,9 +669,7 @@ after the release.
   </p>
   <p>Note that setting memory sizes to be near or larger than the amount of available physical memory on your machine will cause Java to "thrash" as it copies objects back and forth to virtual
     memory, which will severely degrade your performance.</p>
-  <h3>
-    </a>Selecting a workspace
-  </h3>
+  <h3>Selecting a workspace</h3>
   <p>
     When the Workbench is launched, the first thing you see is a dialog that allows you to select where the workspace will be located. The workspace is the directory where your work will be stored. If
     you do not specify otherwise, Eclipse creates the workspace in your user directory. This workspace directory is used as the default content area for your projects as well as for holding any
@@ -836,9 +677,7 @@ after the release.
     <code>-data</code>
     " command line argument).
   </p>
-  <h3>
-    </a>Specifying the Java virtual machine
-  </h3>
+  <h3>Specifying the Java virtual machine</h3>
   <p>Here is a typical Eclipse command line:</p>
   <blockquote>
     <p>
@@ -859,9 +698,7 @@ after the release.
     <li>Select the shortcut and edit its Properties. In the Target: field append the command line arguments.</li>
   </ol>
   <p>Opening this shortcut launches Eclipse. (You can drag the shortcut to the Windows Desktop if you want to keep it in easy reach.)</p>
-  <h3 id="macosx">
-    </a>Mac OS X
-  </h3>
+  <h3 id="macosx">Mac OS X</h3>
   <p>
     On Mac OS X, you start Eclipse by double clicking the Eclipse application. If you need to pass arguments to Eclipse, you'll have to edit the
     <code>eclipse.ini</code>
@@ -881,17 +718,13 @@ after the release.
     same arguments as "eclipse.exe" on other platforms.</p>
   <p>On Mac OS X 10.4 and later, you may notice a slow down when working with significant numbers of resources if you allow Spotlight to index your workspace. To prevent this, start System
     Preferences, select the Spotlight icon, then the Privacy tab, then click the Add button ("+") and find your workspace directory in the dialog that appears.</p>
-  <h3 id="SharedInstall">
-    </a>Shared Install
-  </h3>
+  <h3 id="SharedInstall">Shared Install</h3>
   <p>
     The startup speed of a shared install can be improved if proper cache information is stored in the shared install area. To achieve this, after unzipping Eclipse distribution, run Eclipse once with
     the "-initialize" option from an account that has a write access to the install directory. See <a
       href="%20http://help.eclipse.org/luna/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Freference%2Fmisc%2Fmulti_user_installs.html">shared installs</a> in Eclipse Help for more information.
   </p>
-  <h3 id="SpecialOSRequirements">
-    </a>Special Operating System Requirements
-  </h3>
+  <h3 id="SpecialOSRequirements">Special Operating System Requirements</h3>
   <h4 id="SpecialOSRequirementsAIX">AIX</h4>
   <p>In order for this version of Eclipse to run, GTK2 libraries and their dependencies must be installed and available on the library path (i.e. LIBPATH). These libraries are available from
     http://www-03.ibm.com/systems/power/software/aix/linux/toolbox/alpha.html . To determine the full set of libraries required for installation, download and install the "gtk2" rpm, at which time any
@@ -909,9 +742,7 @@ after the release.
   <p>This version of Eclipse works best with the latest version of GTK+ 2, but the earliest version supported is GTK+ 2.10.</p>
   <p>The GTK libraries must be available on the library path (i.e. LD_LIBRARY_PATH).</p>
   <h2 id="Upgrading">Upgrading Workspace from a Previous Release</h2>
-  <h3>
-    </a>Users who don't use "-data"
-  </h3>
+  <h3>Users who don't use "-data"</h3>
   <p>If you weren't previously using "-data" to specify your workspace, follow these steps to upgrade:</p>
   <ol>
     <li>Find the workspace directory used by your old version of Eclipse. Typically this is located inside the directory in which Eclipse was installed in a sub-directory called "<code>workspace</code>".
@@ -925,9 +756,7 @@ after the release.
       location).
     </li>
   </ol>
-  <h3>
-    </a>Users who do use "-data"
-  </h3>
+  <h3>Users who do use "-data"</h3>
   <p>
     If you were previously using the "
     <code>-data</code>
@@ -945,18 +774,14 @@ after the release.
     <i>Note:</i> Copying your workspace is recommended because, after you've upgraded your workspace, you won't be able to use it again with an older version of Eclipse. If you ever want to go "back
     in time" to an earlier release, you will need that backup.
   </p>
-  <h3>
-    </a>Users who use User Libraries or classpath containers that contain JARs referencing other libraries via Class-Path in the MANIFEST.MF
-  </h3>
+  <h3>Users who use User Libraries or classpath containers that contain JARs referencing other libraries via Class-Path in the MANIFEST.MF</h3>
   <p>If you want the referenced JAR files to be included in the classpath, you can do one of the following:</p>
   <ul>
     <li>Add the system property (<code>-DresolveReferencedLibrariesForContainers=true</code>) to the <code>-vmargs</code> list on start-up, or
     </li>
     <li>Manually add the referenced JARs to the User Library or to the project.</li>
   </ul>
-  <h3>
-    </a>Dropped in bundles may not resolve after upgrade
-  </h3>
+  <h3>Dropped in bundles may not resolve after upgrade</h3>
   <p>
     If you have installed bundles by dropping them into the
     <code>plugins</code>
@@ -968,12 +793,8 @@ after the release.
     mechanism so you are made aware of any install-time failure to resolve dependencies.
   </p>
   <h2 id="InteroperabilityWithPreviousReleases">Interoperability with Previous Releases</h2>
-  <h3>
-    </a>Interoperability of Release 4.6 with previous releases
-  </h3>
-  <h4>
-    </a>Sharing projects between heterogeneous Eclipse 4.6 and 4.5
-  </h4>
+  <h3>Interoperability of Release 4.6 with previous releases</h3>
+  <h4>Sharing projects between heterogeneous Eclipse 4.6 and 4.5</h4>
   <p>Special care is required when a project in a team repository is being loaded and operated on by developers using Eclipse-based products based on different feature or plug-in versions. The
     general problem is that the existence, contents, and interpretation of metadata files in the workspaces may be specific to a particular feature or plug-in version, and differ between versions. The
     workspace compatibility guarantees only cover cases where all developers upgrade their Eclipse workspaces in lock step. In those cases there should be no problem with shared metadata. However,
@@ -1008,21 +829,22 @@ after the release.
     locate non-workspace plug-ins in an Eclipse 4.5 install. This ensures that the code for your plug-in is being compiled and tested against Eclipse 4.5 APIs, extension points, and plug-ins. (The
     above list of concerns do not apply since they affect the layout and interpretation of files in the plug-in <i>project</i> but none affect the actual deployed form of the plug-in.)
   </p>
-  <hr/>
-    <p>Sun, Solaris, Java and all Java-based trademarks are trademarks of Oracle Corporation. in the United States, other countries, or both.</p>
-    <p>IBM is a trademark of International Business Machines Corporation in the United States, other countries, or both.</p>
-    <p>Microsoft, Windows, Windows NT, Vista, and the Windows logo are trademarks of Microsoft Corporation in the United States, other countries, or both.</p>
-    <p>Apple and Mac OS are trademarks of Apple Computer, Inc., registered in the U.S. and other countries.</p>
-    <p>Other company, product, and service names may be trademarks or service marks of others.</p>
-    <p>(c) Copyright Eclipse Contributors 2009, 2015</p>
-    <h2 id="appendix">Appendix: Execution Environment by Bundle</h2>
-<!--
+  <h2 id="appendix">Appendix: Execution Environment by Bundle</h2>
+  <!--
      Remember, the URL to appendix link must be full URL, since some may be
      viewing this file, from a "file://" URL
 -->
-    <p>
-      See the table in the <a href="https://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_6.xml#appendix">Eclipse 4.6
-        Project Plan Appendix</a> for the list of the minimum execution environment (Java class library) requirements of each bundle.
-    </p>
+  <p>
+    See the table in the <a href="https://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_6.xml#appendix">Eclipse 4.6
+      Project Plan Appendix</a> for the list of the minimum execution environment (Java class library) requirements of each bundle.
+  </p>
+  <hr />
+  <p>Sun, Solaris, Java and all Java-based trademarks are trademarks of Oracle Corporation. in the United States, other countries, or both.</p>
+  <p>IBM is a trademark of International Business Machines Corporation in the United States, other countries, or both.</p>
+  <p>Microsoft, Windows, Windows NT, Vista, and the Windows logo are trademarks of Microsoft Corporation in the United States, other countries, or both.</p>
+  <p>Apple and Mac OS are trademarks of Apple Computer, Inc., registered in the U.S. and other countries.</p>
+  <p>Other company, product, and service names may be trademarks or service marks of others.</p>
+  <p>(c) Copyright Eclipse Contributors 2009, 2015</p>
+
 </body>
 </html>
