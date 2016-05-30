@@ -89,18 +89,12 @@ ob_start();
       Thorsten Maack, Tobias Melcher, Victor Rubezhny, Wainer dos Santos Moschetta and Wayne Beaton.
     </p>
 
-    <p>The Platform SWT team would like to thank
-
-    <!-- everyone who helped to improve the toolkit by filing bug reports and enhancement requests, as well as the early adopters who contributed towards
-      improving quality by testing. Special thanks go to : Alexander Kurtakov (reviewed and contributed several patches for GTK3), Leo Ufimtsev (DND and other fixes for GTK3), Snjezana Peco (fixed
-      drawing issues related to GTK+ 3.10 and above including one 'greatfix' contribution), Marc-Andre Laperle (fixed unresponsive keyboard shortcuts in GTK3), Joshua Barkovic (contributed initial
-      implementation for Wayland backend), Matthew Painter &amp; Neil Rashbrook (helped in improving support for newer versions of XULRunner), Nicolaj Hoess &amp; Marco Descher (added tooltip support
-      for menu items). We would also like to thank Abhishek Kishore, Alexandra Buzila, Andrey Loskutov, Anton Leherbauer, Dani Megert, David Williams, Ian Bull, Jacek Sieka, James Watkins-Harvey,
-      Jonny Lamb, Lars Vogel, Lina Kemmel, Markus Keller, Mat Booth, Matthias Mailänder, Mickael Istria, Mikael Barbero, Pascal Rapicault, Paul Webster, Peter White, Sami Wagiaalla, Sergey Prigogin,
-      Sopot Cela, Stefan Xenos, Stephan Herrmann, Steve Francisco, Sudol Wojciech and Tobias Oberlies. We would like to appreciate Silenio Quarti, Bogdan Gheorghe and Grant Gayed for always supporting
-      the team.
-    -->
+    <p>The Platform SWT team would like to thank everyone who helped to improve the toolkit by filing bug reports and enhancement requests, as well as the early adopters who contributed towards
+      improving quality by testing. Special thanks to David Williams for all the releng suppport. We would also like to thank Alexandra Buzila, Alex Blewitt, Andrey Loskutov, Brian de Alwis,
+      Conrad Groth, Eugen Neufeld, Jacek Sieka, Lars Vogel, Marc-Andre Laperle, Marco Hunsicker, Sebastian Ratz, Snjezana Peco, Sopot Cela, Stefan Xenos, Szymon Ptaszkiewicz, Thorsten Hake and Tom Gurney
+      for their code contributions. We would like to appreciate Silenio Quarti, Bogdan Gheorghe and Grant Gayed for always supporting the team.
     </p>
+    
     <p>The release engineering team would like to thank
     <!-- the many people who helped to improve our build. Also, the webmasters at the Eclipse Foundation for their constant help and education; in
       particular Mikael Barbero who fixed several show-stopping issues in CBI. I'd also like to thank the Tycho Team for providing fixes and timely updates to Tycho &dash; two releases during Neon!
@@ -166,6 +160,12 @@ ob_start();
         <td width="23%">Markus&nbsp;Keller</td>
         <td width="23%">Niraj&nbsp;Modi</td>
         <td width="23%">Sravan&nbsp;Kumar&nbsp;Lakkimsetti</td>
+      </tr>
+      <tr>
+        <td width="23%">Eric&nbsp;Williams</td>
+        <td width="23%">&nbsp;</td>
+        <td width="23%">&nbsp;</td>
+        <td width="23%">&nbsp;</td>
       </tr>
     </table>
     <h5>Platform UI</h5>
