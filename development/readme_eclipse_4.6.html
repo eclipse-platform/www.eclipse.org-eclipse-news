@@ -70,7 +70,7 @@ after the release.
     <strong>Binary (plug-in) Compatibility:</strong> Eclipse SDK 4.6 is upwards binary-compatible with Eclipse SDK 4.5 except in those areas noted in the <a
       href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_6_porting_guide.html"><em>Eclipse 4.6 Plug-in Migration Guide</em> </a>. Downward plug-in compatibility is not supported.
     Plug-ins for Eclipse SDK 4.6 will not be usable in Eclipse SDK 4.5. Refer to <a href="https://wiki.eclipse.org/Evolving_Java-based_APIs"> <em>Evolving Java-based APIs</em></a> for a discussion of
-      the kinds of API changes that maintain binary compatibility. 
+    the kinds of API changes that maintain binary compatibility.
   </p>
   <p>
     <strong>Source Compatibility:</strong> Eclipse SDK 4.6 is upwards source-compatible with Eclipse SDK 4.5 except in the areas noted in the <a
@@ -91,7 +91,7 @@ after the release.
     <strong>Non-compliant usage of API's</strong>: All non-API methods and classes, and certainly everything in a package with "internal" in its name or x-internal in the bundle manifest entry, are
     considered implementation details which may vary between operating environment and are subject to change without notice. Client plug-ins that directly depend on anything other than what is
     specified in the Eclipse SDK API are inherently unsupportable and receive no guarantees about compatibility within a single release much less with earlier releases. Refer to <a
-      href="https://www.eclipse.org/articles/Article-API-Use/index.html"> <em>How to Use the Eclipse API</em></a> for information about how to write compliant plug-ins. 
+      href="https://www.eclipse.org/articles/Article-API-Use/index.html"> <em>How to Use the Eclipse API</em></a> for information about how to write compliant plug-ins.
   </p>
   <h2 id="KnownIssues">Known Issues</h2>
   <p>
@@ -143,16 +143,17 @@ after the release.
     <li>Eclipse does not start at all</li>
     <li>Eclipse throws a 'java.lang.ClassNotFoundException: org.eclipse.core.runtime.Plugin' that can be found in the logs (located in workspace/.metadata/.log)</li>
   </ul>
-  <p>The workspace's log file is a good place to check to identify whether GCJ is being used or not. Every Eclipse log session is prepended with information about the runtime environment that was
-    used to run Eclipse. The log may include something like the following:
-  <code>java.fullversion=GNU libgcj 4.2.1 (Debian 4.2.1-5)</code></p>
+  <p>
+    The workspace's log file is a good place to check to identify whether GCJ is being used or not. Every Eclipse log session is prepended with information about the runtime environment that was used
+    to run Eclipse. The log may include something like the following:
+    <code>java.fullversion=GNU libgcj 4.2.1 (Debian 4.2.1-5)</code>
+  </p>
   <p>
     If Eclipse does start, one can check which runtime environment is being used to run Eclipse by going to <b>Help &gt; About Eclipse SDK &gt; Installation Details &gt; Configuration</b>. The <b>About</b>
     dialog itself can also provide other information, the build identifier can be of particular interest as it is tagged by some distributions. This allows the user to identify whether Eclipse was
-    downloaded through the distribution's package management system or directly from the eclipse.org web site.
-  <br/>
-  Such as:<br/>
-  <code>Build id: M20070212-1330 (Ubuntu version: 3.2.2-0ubuntu3)</code></p>
+    downloaded through the distribution's package management system or directly from the eclipse.org web site. <br /> Such as:<br />
+    <code>Build id: M20070212-1330 (Ubuntu version: 3.2.2-0ubuntu3)</code>
+  </p>
   <p>The two most common workarounds are:</p>
   <ul>
     <li>download the Eclipse binary from eclipse.org directly</li>
@@ -163,26 +164,36 @@ after the release.
     <li><a href="http://www.eclipse.org/downloads/">http://www.eclipse.org/downloads/</a></li>
     <li><a href="http://download.eclipse.org/eclipse/downloads/">http://download.eclipse.org/eclipse/downloads/</a></li>
   </ul>
-  <p>It is imperative that 64-bit builds are downloaded and used if a 64-bit Java runtime environment has been installed. Below are two sample tarball names of version 4.6 of the Eclipse SDK packaged for
-  32-bit and 64-bit processors.<br/>
-  <pre>eclipse-SDK-4.6-linux-gtk.tar.gz (32-bit)<br />eclipse-SDK-4.6-linux-gtk-x86_64.tar.gz (64-bit)</pre></p>
-  <p>To run Eclipse with an alternate Java runtime environment, the path to the Java virtual machine's binary must be identified. With an Eclipse installation from the distribution, altering the
-    $PATH variable to include the path to the alternate Java runtime environment is often not enough as the Eclipse that Linux distributions package often performs a scan internally to pick up GCJ by
-    itself whilst ignoring what's on the $PATH. An example of the terminal's output is shown below:<br/>
-  <code>
-    searching for compatible vm...<br /> testing /usr/lib/jvm/java-gcj...found
-  </code></p>
-  <p>Once the path to the virtual machine's binary has been identified, try running Eclipse with the following command:<br/>
-  <code>./eclipse -vm /path/to/jre/bin/java</code></p>
-  <p>For an actual example, it might look something like the following:<br/>
-  <code>
-    ./eclipse -vm /usr/lib/jvm/sun-java-6/bin/java<br /> ./eclipse -vm /opt/sun-jdk-1.6.0.02/bin/java
-  </code></p>
-  <p>If this seems to solve the problem, it is likely that the problem really was related to the use of GCJ as the Java runtime for running Eclipse. The eclipse.ini file located within Eclipse's
-    folder can be altered to automatically pass this argument to Eclipse at startup. An example of its content is presented below:<br/>
-  <code>
-    -showsplash<br /> org.eclipse.platform<br /> -vm<br /> /opt/sun-jdk-1.6.0.02/bin/java<br /> -vmargs<br /> -Xms40m<br /> -Xmx512m
-  </code></p>
+  <p>
+    It is imperative that 64-bit builds are downloaded and used if a 64-bit Java runtime environment has been installed. Below are two sample tarball names of version 4.6 of the Eclipse SDK packaged
+    for 32-bit and 64-bit processors.<br />
+  <pre>eclipse-SDK-4.6-linux-gtk.tar.gz (32-bit)<br />eclipse-SDK-4.6-linux-gtk-x86_64.tar.gz (64-bit)</pre>
+  </p>
+  <p>
+    To run Eclipse with an alternate Java runtime environment, the path to the Java virtual machine's binary must be identified. With an Eclipse installation from the distribution, altering the $PATH
+    variable to include the path to the alternate Java runtime environment is often not enough as the Eclipse that Linux distributions package often performs a scan internally to pick up GCJ by itself
+    whilst ignoring what's on the $PATH. An example of the terminal's output is shown below:<br />
+    <code>
+      searching for compatible vm...<br /> testing /usr/lib/jvm/java-gcj...found
+    </code>
+  </p>
+  <p>
+    Once the path to the virtual machine's binary has been identified, try running Eclipse with the following command:<br />
+    <code>./eclipse -vm /path/to/jre/bin/java</code>
+  </p>
+  <p>
+    For an actual example, it might look something like the following:<br />
+    <code>
+      ./eclipse -vm /usr/lib/jvm/sun-java-6/bin/java<br /> ./eclipse -vm /opt/sun-jdk-1.6.0.02/bin/java
+    </code>
+  </p>
+  <p>
+    If this seems to solve the problem, it is likely that the problem really was related to the use of GCJ as the Java runtime for running Eclipse. The eclipse.ini file located within Eclipse's folder
+    can be altered to automatically pass this argument to Eclipse at startup. An example of its content is presented below:<br />
+    <code>
+      -showsplash<br /> org.eclipse.platform<br /> -vm<br /> /opt/sun-jdk-1.6.0.02/bin/java<br /> -vmargs<br /> -Xms40m<br /> -Xmx512m
+    </code>
+  </p>
   <p>
     Note that every argument must be on its own line. More information about the eclipse.ini file can be found at <a href="http://wiki.eclipse.org/Eclipse.ini">http://wiki.eclipse.org/Eclipse.ini</a>.
   </p>
@@ -301,8 +312,8 @@ after the release.
     context menu to print the page you're reading. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=44216">44216</a>)
   </p>
   <h4>Help documents not displayed in a browser or very slow document loading (Windows only)</h4>
-  If your LAN settings are not properly configured for local host access, your Help browser might open to a blank page or display an HTTP error instead of a help page, or you may experience long
-  delays when loading help documents. Your system administrator can configure your LAN settings so that help documents can be accessed from the local help server.
+  <p>If your LAN settings are not properly configured for local host access, your Help browser might open to a blank page or display an HTTP error instead of a help page, or you may experience
+    long delays when loading help documents. Your system administrator can configure your LAN settings so that help documents can be accessed from the local help server.</p>
   <blockquote>
     <ol>
       <li>In the Control Panel, open <b>Internet Options</b>, select the <b>Connections</b> tab and choose <b>LAN Settings</b>.
@@ -314,8 +325,10 @@ after the release.
     </ol>
   </blockquote>
   <h4>Working disconnected from the network (Windows only)</h4>
-  If you are experiencing problems when not connected to the network, you must install the loopback adapter from the Windows installation CD. (bug
-  <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=831">831</a>)
+  <p>
+    If you are experiencing problems when not connected to the network, you must install the loopback adapter from the Windows installation CD. (bug <a
+      href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=831">831</a>)
+  </p>
   <h4>Using Internet Explorer in offline mode (Windows only)</h4>
   If you have been using Internet Explorer in Offline mode, when you access the help system you will get a message indicating that the web page you requested is not available offline or a blank page
   will display. Click
@@ -441,7 +454,7 @@ after the release.
   </p>
   <h3 id="I-JDT">Java development tools (JDT)</h3>
   <h4>Multiple regions formatting in a given source snippet</h4>
-  In version 3.4, the API method
+  <p>In version 3.4, the API method
   <code>org.eclipse.jdt.core.formatter.CodeFormatter.format(int, String, IRegion[], int, String)</code>
   was added to allow the formatting of several regions in a source snippet with a single pass.
   <br /> Even if specified, this method does not currently accept comments of the following kinds:
@@ -451,7 +464,7 @@ after the release.
     <li><code>org.eclipse.jdt.core.formatter.CodeFormatter#K_JAVA_DOC</code></li>
   </ul>
   This will be fixed in a future release (bug
-  <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=233967">233967</a>).
+  <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=233967">233967</a>).</p>
   <h4>Searching for constant field references</h4>
   <p>
     Search does not find references to constant fields inside binaries because the Java Language Specification mandates that constant field values be inlined in the class file's byte codes, leaving no
@@ -468,22 +481,22 @@ after the release.
       href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=30442">30442</a>)
   </p>
   <h4>Breakpoints unreliable running Sun 1.6.0_14</h4>
-  Developers debugging applications on Sun's 1.6.0_14 virtual machine should be aware that breakpoints are unreliable (i.e. do not always suspend execution). The problem occurs on Windows and Linux
+  <p>Developers debugging applications on Sun's 1.6.0_14 virtual machine should be aware that breakpoints are unreliable (i.e. do not always suspend execution). The problem occurs on Windows and Linux
   platforms. This is an issue with the VM and not with Eclipse. The workaround is to use the
   <code>-XX:+UseParallelGC</code>
   VM option. (bug
-  <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=279137">279137</a>).
+  <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=279137">279137</a>).</p>
   <h4>Suspend on uncaught exception overrides exception breakpoint location filters</h4>
   <p>
     Exception breakpoints can be configured with location filters (inclusive and exclusive). When an unchecked exception is configured to <b>not</b> suspend execution in a specific class, execution
     will still suspend when the user preference to suspend on uncaught exceptions is on. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=66770">66770</a>)
   </p>
   <h4>Running Java programs with non-Latin-1 characters in package or class names</h4>
-  You get a
+  <p>You get a
   <code>java.lang.NoClassDefFoundError</code>
   when running Java programs with non-Latin characters in the package or class names. The workaround is to package the class files as a JAR file and run the program out of the JAR and not from the
   file system directly. (bug
-  <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=4181">4181</a>)
+  <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=4181">4181</a>)</p>
   <h4>Cannot run or debug class in a project with GB18030 characters in project name</h4>
   <p>
     Most class libraries do not properly support the creation of a system process (via
@@ -519,15 +532,15 @@ after the release.
     an error message will appear to the effect of "Thread must be suspended by step or breakpoint to perform method invocation". (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=34440">34440</a>)
   </p>
   <h4>Missing debug attributes</h4>
-  The debugger requires that class files be compiled with debug attributes if it is to be able to display line numbers and local variables. Quite often, class libraries (for example, "
+  <p>The debugger requires that class files be compiled with debug attributes if it is to be able to display line numbers and local variables. Quite often, class libraries (for example, "
   <code>rt.jar</code>
-  ") are compiled without complete debug attributes, and thus local variables and method arguments for those classes are not visible in the debugger.
+  ") are compiled without complete debug attributes, and thus local variables and method arguments for those classes are not visible in the debugger.</p>
   <h4>Using Hot Code Replace</h4>
   <p>Hot code replace is supported on JDK 1.4.x VMs, and IBM J9 VMs. The debugger will attempt to replace all class files that change in the workspace as the user edits and builds source code.
     However, hot code replace is limited to changes that a particular virtual machine implementation supports. For example, changes within existing methods may be supported, but the addition or
     removal of members may not be.</p>
   <h4>Scrapbook</h4>
-  Setting a breakpoint inside a scrapbook page is not supported.
+  <p>Setting a breakpoint inside a scrapbook page is not supported.</p>
   <p>
     When a snippet is run in the scrapbook which directly or indirectly calls
     <code>System.exit(int)</code>
