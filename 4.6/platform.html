@@ -37,105 +37,19 @@ ul {padding-left: 13px;}
       In the absence of high-resolution images, SWT will auto-scale the available images to ensure that SWT-based applications like Eclipse
       are scaled proportionately to the resolution of the monitor.
       <p>
-      <img src="images/swt-high-dpi.png" alt="Screenshot with tiny icons 'Before' and a normal appearance 'After'" />
+      <img width="520" src="images/hidpi-neon.png" alt="Screenshot of Neon at 200%" />
       </p>
       <p>
-      The default settings should look good on Windows and Linux/GTK.<br/>
-      To tweak the settings, see <a href="#swt-autoscale-tweaks">Tweaking SWT's auto-scaling</a>.<br/>
+      For comparison, here's how it looked in Mars without high-DPI support:
+      </p>
+      <p>
+      <img width="520" src="images/hidpi-mars.png" alt="Screenshot of Mars at 200%" />
+      </p>
+      <p>
+      To tweak the default settings, see <a href="#swt-autoscale-tweaks">Tweaking SWT's auto-scaling</a>.<br/>
       SWT programmers, see <a href="platform_isv.html#high-dpi-api">APIs for high-DPI monitor support</a>.<br/>
-      Icon designers, see <a href="platform_isv.html#high-dpi-icons">High-DPI icons using "@2x" convention</a>.
+      Icon designers and product owners, see <a href="platform_isv.html#high-dpi-icons">High-DPI icons using "@2x" convention</a>.
       </p>
-    </td>
-  </tr>
-
-  <tr id="theming-enablement">
-    <td class="title">Preference setting to disable the Eclipse styling (CSS based theming)</td>
-    <td class="content">
-    	You can disable the CSS-based styling of the Eclipse IDE via
-    	<b>Preferences &gt; General &gt; Appearance &gt; Enable theming</b>.
-    	This will prevent Eclipse from rendering custom colors, shades, and borders, and may result in better performance.
-    	<p>
-      		<img src="images/enable-disable-theming.png" alt=""/>
-      	</p>
-	</td>
-  </tr>
-
-  <tr id="search-binary-files">
-    <td class="title">Search in binary files</td>
-    <td class="content">
-      The <b>Search &gt; File...</b> dialog has a new option to search in binary files as well.
-      <p>
-        <img src="images/search-binary-files.png" alt=""/>
-      </p>
-      By default, the option is disabled, and matches are only reported in files that have the <i>Text</i>
-      content type, or in files that have no content type and don't contain the null character (\u0000).
-	</td>
-  </tr>
-
-  <tr id="hidetoolbars">
-    <td class="title">Hide the window toolbars</td>
-    <td class="content">
-     	You can use the <b>Toggle Visibility of all Toolbars</b> command (via Quick Access: <b>Ctrl+3</b> or <b>Command+3</b>) to hide
-     	all currently visible toolbars of the currently window. Selecting the command again, reveals these toolbars again. 
-     	This allows the developer to maximize the space 
-     	available for editors and views. If you minimize a stack after you selected this command, 
-     	the minimized stack will be visible until you trigger the command to hide the toolbars again. This allows
-     	you to decide which minimized stacks are currently useful for you.
-     	<p>
-     		The following is a screenshot of the IDE with a maximized Java editor and several toolbars visible. 
-     	</p>
-      	<p>
-      		<img src="images/ide-with-toolbars.png" alt=""/>
-      	</p>
-      	<p>
-      		The next screenshot shows the same maximized editor but with hidden toolbars.
-      	</p>
-      	<p>
-      		<img src="images/ide-full-screen.png" alt=""/>
-      	</p>
-    </td>
-  </tr>
-
-  <tr id="workspaceselection">
-    <td class="title">Changes to the Eclipse workspace launcher</td>
-    <td class="content">
-      The Eclipse workspace selection dialog wording was adjusted, as new Eclipse users reported that 
-      usage of the term workspace was not well explained. The old text also implied that projects 
-      need to be stored in the workspace, but that's not necessary. 
-      <p>
-        The recent directory list was also increased to 10. It used to be 5. You can still adjust this value on
-        <b>Preferences &gt; General &gt; Startup and Shutdown &gt; Workspaces</b>.
-      </p>
-      <p>
-        The reworked dialog looks like this:
-      </p>
-      <p>
-        <img src="images/newlauncher.png" alt=""/>
-      </p>
-    </td>
-  </tr>
-
-  <tr id="gtk3-menus">
-    <td class="title">Improved menu support on GTK3</td>
-    <td class="content">
-      The SWT GTK3 port has received an update to its menus as part of the push to update SWT
-      to GTK3. Here are some of the notable changes.
-      <p>Padding: By default, SWT menus now look similar to those in OS X: Text is not strictly aligned.
-         This is due to a new way in which menus are constructed in GTK3 (see <a href="https://wiki.gnome.org/HowDoI/GMenu#Icons">
-         https://wiki.gnome.org/HowDoI/GMenu#Icons</a> for more details). In order to align all text entries in a menu, simply launch
-         the SWT application with the environment variable <b>SWT_PADDED_MENU_ITEMS=1</b>.</p>
-      <p>Checkboxes and images: On GTK2.x, a menu entry was limited to either a checkbox <i>or</i> an image.
-         On GTK3, SWT now supports menu entries that contain both an image and a checkbox.</p>
-      <p>The image below shows a screenshot of the default GTK3 menu on the left,
-         compared to an aligned GTK3 menu on the right.</p>
-          <img src="images/gtk3-menu-comparison.png" alt=""/>
-    </td>
-  </tr>
-
-  <tr id="ant-version-upgrade">
-    <td class="title">Ant 1.9.6</td>
-    <td class="content">
-      Eclipse has adopted Ant version 1.9.6.
     </td>
   </tr>
 
@@ -184,25 +98,44 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
-  <tr id="wayland-launching">
-    <td class="title">Eclipse workspace launcher now fully functional on Wayland</td>
+  <tr id="autosave-dirty-editors">
+    <td class="title">Automatic Save of dirty editors</td>
     <td class="content">
-      Eclipse has been updated to include improved support for the Wayland display manager.
-      <p>Previously, launching Eclipse on Wayland was possible only if not using the native launcher due to a bug that would
-         cause the workspace launcher to hang and eventually crash. This has now been fixed, allowing
-         Eclipse to launch on Wayland just as it would on X11.</p>
+      Auto-save of dirty editors is now available in Eclipse. The autosave option is <b>disabled by default</b>.
+      A new autosave preference page (<b>Preferences &gt; General &gt; Editors &gt; Autosave</b>) is available  and allows to enable/disable the autosave and change the interval of autosave.
+      The countdown is reset on keyboard activity, mouse click, or when a popup is displayed (e.g. content assist, preference page, ...).
+      <p><img src="images/autosave-preference-page.png" alt="" /></p>
     </td>
   </tr>
-  
-  <tr id="new-button-workingset">
-    <td class="title">"New..." button for creating Working Sets</td>
+
+  <tr id="search-binary-files">
+    <td class="title">Search in binary files</td>
     <td class="content">
-        A <b>New...</b> button has been added to the <code>WorkingSetConfigurationBlock</code>:
+      The <b>Search &gt; File...</b> dialog has a new option to search in binary files as well.
       <p>
-        <img src="images/new-button-workingsetconfigurationblock.png" alt="" />
+        <img src="images/search-binary-files.png" alt=""/>
       </p>
+      By default, the option is disabled, and matches are only reported in files that have the <i>Text</i>
+      content type, or in files that have no content type and don't contain the null character (\u0000).
+	</td>
+  </tr>
+
+  <tr id="terminate-relaunch-history">
+    <td class="title">Terminate and Relaunch from history</td>
+    <td class="content">
+      A <b>Terminate and Relaunch</b> option is now available while launching from history.
+      The default setting is to launch without terminating previous launches. To enable automatic termination,
+      select the option "Terminate and Relaunch while launching from history" on
+      <b>Preferences &gt; Run/Debug &gt; Launching</b>.
+      
       <p>
-        This saves quite a few clicks when creating new Working Sets.
+        The behavior not selected on the preference page can also be activated on-demand by holding
+        the <b>Shift</b> key while launching the configuration from history.
+      </p>
+	  <p><img src="images/launch-preference-history-relaunch.png" alt="" /></p>
+      <p>
+        Hint: You can still open the dialog to <b>edit a launch configuration</b> by holding
+        the <b>Ctrl</b> key while selecting the configuration from history.
       </p>
     </td>
   </tr>
@@ -221,7 +154,87 @@ ul {padding-left: 13px;}
     </p>
     </td>
   </tr>
-  
+
+  <tr id="workspace-name-in-window-title">
+    <td class="title">Workspace name shown in window title by default</td>
+    <td class="content">
+    The workspace name is now shown at the beginning of the window title by default.
+    The initial name is the name of the workspace directory.
+    <p>
+    The name can be changed or cleared in <b>Preferences &gt; General &gt; Workspace</b>.
+    </p>
+    </td>
+  </tr>
+
+  <tr id="quick-access-improvements">
+    <td class="title">Quick Access improvements</td>
+    <td class="content">
+      <b>Quick Access</b> (<b>Ctrl+3</b>) is a small text field in the toolbar. You can use it to trigger any command in the Eclipse IDE.
+      <p><img src="images/eclipse-quick-access-improved-search.png" alt="" /></p>
+      <p>You can now restrict the search to Views, Commands, etc. by typing the category name followed by a colon. 
+      For example, to filter the list of all the views, start typing <code>"Views: "</code> in the search-box.</p>
+      <p>
+      A few usability bugs have been fixed: The tooltip shows the keyboard shortcut,
+      the number of search results per category is independent of the size of the proposals window,
+      and the list with previous choices already opens when you click the field with the mouse.
+      </p>
+    </td>
+  </tr>
+
+  <tr id="hide-toolbars">
+    <td class="title">Hide the window toolbars</td>
+    <td class="content">
+     	You can use the <b>Toggle visibility the window toolbars</b> command (via Quick Access: <b>Ctrl+3</b>) to hide
+     	all currently visible toolbars of the currently window. Executing the command again reveals these toolbars again. 
+     	This allows you to maximize the space 
+     	available for editors and views. If you minimize a stack after you selected this command, 
+     	the minimized stack will be visible until you trigger the command to hide the toolbars again. This allows
+     	you to decide which minimized stacks are currently useful for you.
+    </td>
+  </tr>
+
+  <tr id="perspective-switcher-default-display">
+    <td class="title">Perspective names hidden by default</td>
+    <td class="content">
+      To save space in the toolbar, the perspective switcher has been changed to show only the icons of perspectives by default.
+      You can show the text again via the context menu.
+      <p>New default:</p>
+      <p>
+        <img src="images/perspective-switcher-notext.png" alt=""/>
+      </p>
+      <p>Old default:</p>
+      <p>
+        <img src="images/perspective-switcher-withtext.png" alt=""/>
+      </p>
+      
+    </td>
+  </tr>
+
+  <tr id="full-screen">
+    <td class="title">Full Screen</td>
+    <td class="content">
+      The <b>Full Screen</b> feature is now also available on Windows and Linux. You can toggle the mode via shortcut (<b>Alt+F11</b>) or menu (<b>Window &gt; Appearance &gt; Toggle Full Screen</b>).
+      <p>
+      When Full Screen is activated, you'll see a dialog which tells you how to turn it off again.
+      </p>
+      <p>
+      On the Mac, <b>Window &gt; Toggle Full Screen</b> (<b>Control+Command+F</b>) still works as before.
+      </p>
+    </td>
+  </tr>
+
+  <tr id="theming-enablement">
+    <td class="title">Preference setting to disable the Eclipse styling (CSS based theming)</td>
+    <td class="content">
+    	You can disable the CSS-based styling of the Eclipse IDE via
+    	<b>Preferences &gt; General &gt; Appearance &gt; Enable theming</b>.
+    	This will prevent Eclipse from rendering custom colors, shades, and borders, and may result in better performance.
+    	<p>
+      		<img src="images/enable-disable-theming.png" alt=""/>
+      	</p>
+	</td>
+  </tr>
+
   <tr id="text-editor-selection-strategy">
     <td class="title">Selecting the text editor for unassociated file types</td>
     <td class="content">
@@ -242,48 +255,9 @@ ul {padding-left: 13px;}
       The implementation comes with a new extension-point <code>org.eclipse.ui.ide.unknownEditorStrategy</code>
       that allows external contributions of additional strategies.
      </p>
-     <p>
-       <b>Note:</b> Problems were found with the <b>Ask via pop-up</b> strategy. We'll fix them in M6.
-     </p>
     </td>
   </tr>
   
-  <tr id="mac-default-theme-enhancement">
-    <td class="title">Improvements in the Mac default theme</td>
-    <td class="content">
-      The look of the toolbar in the Mac default theme was adjusted to align with other Mac applications.
-     <p>
-      Old styling:
-     </p> 
-     <p>
-      <img src="images/mac-theme-old-toolbar.png" alt="" />
-    </p>
-     <p>
-      New toolbar styling:
-     </p> 
-      <p>
-      <img src="images/mac-theme-new-toolbar.png" alt="" />
-    </p>
-    </td>
-  </tr>
-  
-  <tr id="perspective-switcher-default-display">
-    <td class="title">Perspective names hidden by default</td>
-    <td class="content">
-      To save space in the toolbar, the perspective switcher has been changed to show only the icons of perspectives by default.
-      You can show the text again via the context menu.
-      <p>New default:</p>
-      <p>
-        <img src="images/perspective-switcher-notext.png" alt=""/>
-      </p>
-      <p>Old default:</p>
-      <p>
-        <img src="images/perspective-switcher-withtext.png" alt=""/>
-      </p>
-      
-    </td>
-  </tr>
-
   <tr id="date-variable-format">
     <td class="title">'date' template variable with custom format</td>
     <td class="content">
@@ -291,6 +265,51 @@ ul {padding-left: 13px;}
      <p>
        <img src="images/date-variable-format.png" alt="Example: ${d:date('EEEE dd MM yyyy HH:mm:ss', 'fr_CH')}"/>
      </p>
+    </td>
+  </tr>
+
+  <tr id="word-selection-default-value">
+    <td class="title">'word_selection' and 'line_selection' template variable with default values</td>
+    <td class="content">
+     The 'word_selection' and 'line_selection' variables, supported in editor and code templates, now allow you to specify a default value to use if the current text selection is empty.
+    </td>
+  </tr>
+
+  <tr id="import-projects">
+    <td class="title">Import projects</td>
+    <td class="content">
+    A new <b>Import Projects</b> wizard is available via the <b>File &gt; Open Projects...</b> menu and via the general
+    <b>Import...</b> command under <b>General &gt; Projects from Folder or Archive</b>.
+    <p>
+      Compared to other ways to import or create projects, this wizard aims at being a universal wizard that,
+      from a source directory or archive, can detect and configure various kinds of projects.
+    </p>
+    <p>
+       <img src="images/import-projects.png" alt="" />
+    </p>
+    <p>
+      This wizard relies on an extensible set of strategies that look at the content of the import source
+      to detect file types, project layout patterns, or even look into some files in order to deduct which folders should be
+      turned into projects and how those should be configured. Configuration usually involves setting up project natures and
+      preferences.
+    </p>
+    <p>
+      The import strategies are contributed via the new extension point <code>org.eclipse.ui.ide.projectConfigurator</code>, so that other IDE components
+      can contribute detection and configuration specific to the technology they're supporting.
+    </p>
+    </td>
+  </tr>
+
+  <tr id="new-button-workingset">
+    <td class="title">"New..." button for creating Working Sets</td>
+    <td class="content">
+        A <b>New...</b> button has been added to the <code>WorkingSetConfigurationBlock</code>:
+      <p>
+        <img src="images/new-button-workingsetconfigurationblock.png" alt="" />
+      </p>
+      <p>
+        This saves quite a few clicks when creating new Working Sets.
+      </p>
     </td>
   </tr>
 
@@ -322,43 +341,21 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
-  <tr id="word-selection-default-value">
-    <td class="title">'word_selection' and 'line_selection' template variable with default values</td>
+  <tr id="mac-default-theme-enhancement">
+    <td class="title">Improvements in the Mac default theme</td>
     <td class="content">
-     The 'word_selection' and 'line_selection' variables, supported in editor and code templates, now allow you to specify a default value to use if the current text selection is empty.
-    </td>
-  </tr>
-
-
-  <tr id="improved-performance-reduced-memory">
-    <td class="title">Improved interactive performance and reduced memory consumption</td>
-    <td class="content">
-      This and earlier milestones contain a multitude of fixes to enhance interactive and startup performance of the Eclipse IDE, and
-      to reduce overall memory consumption.
-    </td>
-  </tr>
-
-  <tr id="import-projects">
-    <td class="title">Import projects</td>
-    <td class="content">
-    A new <b>Import Projects</b> wizard is available via the <b>File &gt; Open Projects...</b> menu and via the general
-    <b>Import...</b> command under <b>General &gt; Projects from Folder or Archive</b>.
-    <p>
-      Compared to other ways to import or create projects, this wizard aims at being a universal wizard that,
-      from a source directory or archive, can detect and configure various kinds of projects.
+      The look of the toolbar in the Mac default theme was adjusted to align with other Mac applications.
+     <p>
+      Old styling:
+     </p> 
+     <p>
+      <img src="images/mac-theme-old-toolbar.png" alt="" />
     </p>
-    <p>
-       <img src="images/import-projects.png" alt="" />
-    </p>
-    <p>
-      This wizard relies on an extensible set of strategies that look at the content of the import source
-      to detect file types, project layout patterns, or even look into some files in order to deduct which folders should be
-      turned into projects and how those should be configured. Configuration usually involves setting up project natures and
-      preferences.
-    </p>
-    <p>
-      The import strategies are contributed via the new extension point <code>org.eclipse.ui.ide.projectConfigurator</code>, so that other IDE components
-      can contribute detection and configuration specific to the technology they're supporting.
+     <p>
+      New toolbar styling:
+     </p> 
+      <p>
+      <img src="images/mac-theme-new-toolbar.png" alt="" />
     </p>
     </td>
   </tr>
@@ -405,89 +402,20 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
-  <tr id="simplified-capabilities-preference-page">
-    <td class="title">Advanced capabilities preferences are now displayed in place (no extra dialog) </td>
+  <tr id="gtk3-menus">
+    <td class="title">Improved menu support on GTK3</td>
     <td class="content">
-        Previously, the entries in the <b>Capabilities</b> preference page were displayed in a list. If you wanted to edit them, you had to open an extra dialog.
-        Now you can directly enable or disable the capabilities from the preference page, as depicted in the following screenshot.
-      <p>
-        <img src="images/simplified-capabilities-page.png" alt="" />
-      </p>
-      <p>
-        Since this dialog has API to prevent advanced editing, if the property ALLOW_ADVANCED is set to false, the original list
-        is maintained and will be shown, which allows you to enable/disable only the main categories (not individual capabilities).
-      </p>
-    </td>
-  </tr>
-
-  <tr id="quick-access-improvements">
-    <td class="title">Quick Access improvements</td>
-    <td class="content">
-      <b>Quick Access</b> (<b>Ctrl+3</b>) is a small text field in the toolbar. You can use it to trigger any command in the Eclipse IDE.
-      <p><img src="images/eclipse-quick-access-improved-search.png" alt="" /></p>
-      <p>You can now restrict the search to Views, Commands, etc. by typing the category name followed by a colon. 
-      For example, to filter the list of all the views, start typing <code>"Views: "</code> in the search-box.</p>
-      <p>
-      A few usability bugs have been fixed: The tooltip shows the keyboard shortcut,
-      the number of search results per category is independent of the size of the proposals window,
-      and the list with previous choices already opens when you click the field with the mouse.
-      </p>
-    </td>
-  </tr>
-  <tr id="workspace-name-in-window-title">
-    <td class="title">Workspace name shown in window title by default</td>
-    <td class="content">
-    The workspace name is now shown at the beginning of the window title by default.
-    The initial name is the name of the workspace directory.
-    <p>
-    This the name can be changed or cleared in <b>Preferences &gt; General &gt; Workspace</b>.
-    </p>
-    </td>
-  </tr>
-  
-  <tr id="full-screen-feature">
-    <td class="title">Full Screen</td>
-    <td class="content">
-      The <b>Full Screen</b> feature is now also available on Windows and Linux. You can toggle the mode via shortcut (<b>Alt+F11</b>) or menu (<b>Window &gt; Appearance &gt; Toggle Full Screen</b>).
-	  <p>When Full Screen is activated, you'll see a dialog which tells you how to turn it off again.</p>
-    </td>
-  </tr>
-  
-  <tr id="autosave-dirty-editors">
-    <td class="title">Automatic Save of dirty editors</td>
-    <td class="content">
-      Auto-save of dirty editors is now available in Eclipse. The autosave option is <b>disabled by default</b>.
-      A new autosave preference page (<b>Preferences &gt; General &gt; Editors &gt; Autosave</b>) is available  and allows to enable/disable the autosave and change the interval of autosave.
-      The countdown is reset on keyboard activity, mouse click, or when a popup is displayed (e.g. content assist, preference page, ...).
-      <p><img src="images/autosave-preference-page.png" alt="" /></p>
-    </td>
-  </tr>
-
-  <tr id="terminate-relaunch-history">
-    <td class="title">Terminate and Relaunch from history</td>
-    <td class="content">
-      A <b>Terminate and Relaunch</b> option is now available while launching from history.
-      The default setting is to launch without terminating previous launches. To enable automatic termination,
-      select the option "Terminate and Relaunch while launching from history" on
-      <b>Preferences &gt; Run/Debug &gt; Launching</b>.
-      
-      <p>
-        The behavior not selected on the preference page can also be activated on-demand by holding
-        the <b>Shift</b> key while launching the configuration from history.
-      </p>
-	  <p><img src="images/launch-preference-history-relaunch.png" alt="" /></p>
-      <p>
-        Hint: You can still open the dialog to <b>edit a launch configuration</b> by holding
-        the <b>Ctrl</b> key while selecting the configuration from history.
-      </p>
-    </td>
-  </tr>
-  
-  <tr id="solaris-64-bit-builds">
-    <td class="title">Solaris builds are now 64-bit only</td>
-    <td class="content">
-        The 32-bit builds of Solaris (both x86 and SPARC) have been discontinued as there is no 32-bit Java 8 JRE available on Solaris.
-        <p> These builds are instead being replaced by the corresponding 64-bit builds. The 64-bit build for Solaris x86 is already available in M7 and the 64-bit SPARC build will be available soon. </p>
+      The SWT GTK3 port has received an update to its menus as part of the push to update SWT
+      to GTK3. Here are some of the notable changes.
+      <p>Padding: By default, SWT menus now look similar to those in OS X: Text is not strictly aligned.
+         This is due to a new way in which menus are constructed in GTK3 (see <a href="https://wiki.gnome.org/HowDoI/GMenu#Icons">
+         https://wiki.gnome.org/HowDoI/GMenu#Icons</a> for more details). In order to align all text entries in a menu, simply launch
+         the SWT application with the environment variable <b>SWT_PADDED_MENU_ITEMS=1</b>.</p>
+      <p>Checkboxes and images: On GTK2.x, a menu entry was limited to either a checkbox <i>or</i> an image.
+         On GTK3, SWT now supports menu entries that contain both an image and a checkbox.</p>
+      <p>The image below shows a screenshot of the default GTK3 menu on the left,
+         compared to an aligned GTK3 menu on the right.</p>
+          <img src="images/gtk3-menu-comparison.png" alt=""/>
     </td>
   </tr>
 
@@ -505,7 +433,7 @@ ul {padding-left: 13px;}
         <p>
         On <b>Windows</b> and <b>GTK</b>, SWT's auto-scaling can be configured using the <code>swt.autoScale</code>
         Java property. E.g. to disable auto-scaling and make the application behave like on Mars (4.5),
-        add this VM argument in eclipse.ini or on the command line after <code>-vmargs</code>:
+        add this VM argument in eclipse.ini or on the command line after <b><code>-vmargs</code></b>:
         </p>
         <pre><b>-Dswt.autoScale=false</b></pre>
         <p>
@@ -531,7 +459,7 @@ ul {padding-left: 13px;}
         exhibit various problems like jagged borders or even completely missing images.
         </p>
         <p>
-        The scaling method can be configured by setting the <code>swt.autoScale.method</code> system property to:
+        The scaling method can be configured by setting the <b><code>swt.autoScale.method</code></b> system property to:
         </p>
         <ul>
         <li><code>nearest</code>: nearest-neighbor interpolation, may look jagged</li>
@@ -540,8 +468,7 @@ ul {padding-left: 13px;}
         <p>
         The current default is to use "nearest", except on
         GTK when the deviceZoom is not an integer multiple of 100%.
-        The smooth strategy currently doesn't work on Win32 and Cocoa, see
-        <a href="https://bugs.eclipse.org/493455">bug 493455</a>.
+        The smooth strategy currently doesn't work on Windows and Mac OS X.
         </p>
         <p>
         Auto-scaling cannot be disabled on the Mac as it is provided by the OS.
@@ -549,6 +476,45 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="simplified-capabilities-preference-page">
+    <td class="title">Advanced capabilities preferences are now displayed in place (no extra dialog) </td>
+    <td class="content">
+        Previously, the entries in the <b>Capabilities</b> preference page were displayed in a list. If you wanted to edit them, you had to open an extra dialog.
+        Now you can directly enable or disable the capabilities from the preference page, as depicted in the following screenshot.
+      <p>
+        <img src="images/simplified-capabilities-page.png" alt="" />
+      </p>
+      <p>
+        Since this dialog has API to prevent advanced editing, if the property ALLOW_ADVANCED is set to false, the original list
+        is maintained and will be shown, which allows you to enable/disable only the main categories (not individual capabilities).
+      </p>
+    </td>
+  </tr>
+
+  <tr id="wayland-launching">
+    <td class="title">Eclipse workspace launcher now fully functional on Wayland</td>
+    <td class="content">
+      Eclipse has been updated to include improved support for the Wayland display manager.
+      <p>Previously, launching Eclipse on Wayland was possible only if not using the native launcher due to a bug that would
+         cause the workspace launcher to hang and eventually crash. This has now been fixed, allowing
+         Eclipse to launch on Wayland just as it would on X11.</p>
+    </td>
+  </tr>
+
+  <tr id="solaris-64-bit-builds">
+    <td class="title">Solaris builds are now 64-bit only</td>
+    <td class="content">
+        The 32-bit builds of Solaris (both x86 and SPARC) have been discontinued as there is no 32-bit Java 8 JRE available on Solaris.
+        <p> These builds are instead being replaced by the corresponding 64-bit builds. The 64-bit build for Solaris x86 is already available in M7 and the 64-bit SPARC build will be available soon. </p>
+    </td>
+  </tr>
+
+  <tr id="ant-version-upgrade">
+    <td class="title">Ant 1.9.6</td>
+    <td class="content">
+      Eclipse has adopted Ant version 1.9.6.
+    </td>
+  </tr>
 
 
 </tbody>

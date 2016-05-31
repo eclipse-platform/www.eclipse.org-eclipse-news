@@ -46,80 +46,17 @@ ul {padding-left: 13px;}
       JFace-based applications that use the standard<br/>
       <code>org.eclipse.jface.resource.ImageDescriptor#createFromURL(URL)</code><br/>
       API to create icon images already support high-DPI icons out of the box:
-      Just append "@2x" to the file name and place the high-DPI icons either
-      into the same folder as the original icon, or put them into a fragment
+      <p>
+      Just append "@2x" to the file name and place the high-DPI icons
+      into the same folder as the original icon. If you use OSGi bundles, you can also put the icons into a fragment
       that contains the same folder structure.
+      </p>
       <p>
       Example:<br/>
       100%: newclass_wiz.png<br/>
       200%: newclass_wiz@2x.png
       </p>
     </td>
-  </tr>
-
-  <tr id="no-theme-dnd">
-    <td class="title">Drag and drop for toolbars in Eclipse applications without CSS styling</td>
-    <td class="content">
-        The Eclipse styling engine allows to configure drag images via CSS. In previous releases, applications without this setting would not support drag and drop of toolbars.
-    	Eclipse RCP applications without the related CSS styling now support drag and drop of toolbars out of the box. This applies also for applications which disable the CSS-based styling.
-	</td>
-  </tr>
-
-  <tr id="messagedialog-varargs">
-    <td class="title">Additional varargs constructor for MessageDialog</td>
-    <td class="content">
-    	The <code>org.eclipse.jface.dialogs.MessageDialog</code> class has now an additional vararg constructor that simplifies passing button labels.
-    	<p>
-    	Old:
-    	</p>
-<pre>new MessageDialog(shell, "MessageDialog", null, "DialogMessage",
-		MessageDialog.NONE, new String[] { "Button1", "Button2" }, 0);
-</pre>
-    	New:
-<pre>new MessageDialog(shell, "MessageDialog", null, "DialogMessage",
-		MessageDialog.NONE, 0, "Button1", "Button2");
-</pre>
-	</td>
-  </tr>
-
-  <tr id="workbenchlogger-debug">
-    <td class="title">Workbench logger supports debug level</td>
-    <td class="content">
-    	Previously, the workbench logger wrote a trace when <code>Logger#debug(Throwable)</code> was called,
-    	even if the application was not started in debug mode.
-    	Now, log entries on the debug level are ignored, unless the application is started with the debug flag (-debug).
-	</td>
-  </tr>
-
-  <tr id="directmenuitem-canexecute">
-    <td class="title">Support for @CanExecute of MDirectMenuItem and MDirectToolItem</td>
-    <td class="content">
-    	Previously, methods annotated with @CanExecute were only evaluated on execution for MDirectMenuItems and MDirectToolItems, not on rendering.
-		So if the method annotated with @CanExecute returned false, the rendering was not updated to show the menu/tool item disabled.
-		Now @CanExecute method is also evaluated during rendering, to show the enabled state according to the method result.
-	</td>
-  </tr>
-
-  <tr id="menuitem-tooltips">
-    <td class="title">Tooltips on menu items for Eclipse 4 applications</td>
-    <td class="content">
-    	SWT introduced tooltips for menu items in the Eclipse Mars release. The default SWT renderers have been extended to support these tooltips on menu items, i.e., if
-    	you enter them in your application model, they will be displayed.  
-    	<p>
-      		<img src="images/menuitem-tooltips.png" alt="Menu tooltips in Eclipse 4 RCP"/>
-      	</p>
-	</td>
-  </tr>
-
-
-  <tr id="perspective-handlercontainer">
-    <td class="title">Perspective becomes a handler container</td>
-    <td class="content">
-    	In addition to windows and parts, perspectives can now also define handlers. Those handlers will get active
-    	when the containing perspective is active. As before, handlers of more deeply nested containers override less deeply nested ones, i.e., 
-    	handlers defined for parts override handlers for perspectives, while the 
-    	handlers for a perspective override the ones defined for the window.
-	</td>
   </tr>
 
   <tr id="job-create">
@@ -155,6 +92,48 @@ Job.createSystem(
 	</td>
   </tr>
 
+  <tr id="listenerlist">
+    <td class="title">ListenerList generified</td>
+    <td class="content">
+      <code>org.eclipse.core.runtime.ListenerList</code> has been generified and now implements <code>Iterable&lt;E&gt;</code>.
+      <p>Due to Java type system constraints, <code>ListenerList#getListeners()</code> still returns <code>Object[]</code>.
+      Clients should not only add type arguments to the ListenerList, but also convert usages of <code>#getListeners()</code>
+      to an enhanced <code>for</code> loop, thereby taking advantage of the type-safe <code>#iterator()</code>.</p>
+      <p>Old:</p>
+      <pre>ListenerList fInputChangeListeners = new ListenerList();
+...
+Object[] listeners= fInputChangeListeners.getListeners();
+for (int i= 0; i &lt; listeners.length; i++) {
+	((IInputChangedListener) listeners[i]).inputChanged(fInput);
+}</pre>
+      <p>New:</p>
+      <pre>ListenerList&lt;IInputChangedListener&gt; fInputChangeListeners = new ListenerList&lt;&gt;();
+...
+for (IInputChangedListener listener : fInputChangeListeners) {
+	listener.inputChanged(fInput);
+}</pre>
+    </td>
+  </tr>
+
+  <tr id="handlerutil-structured-selection">
+    <td class="title">API to get the structured selection</td>
+    <td class="content">
+     The <code>org.eclipse.ui.handlers.HandlerUtil#getCurrentStructuredSelection(event)</code>
+     API has been added to allow easy access to an <code>IStructuredSelection</code> from a handler. Compared to 
+     <code>HandlerUtil#getCurrentSelection(event)</code> this removes the need to cast and check for 
+     null.
+    </td>
+  </tr>
+
+  <tr id="workbenchlogger-debug">
+    <td class="title">Workbench logger supports debug level</td>
+    <td class="content">
+    	Previously, the workbench logger wrote a trace when <code>Logger#debug(Throwable)</code> was called,
+    	even if the application was not started in debug mode.
+    	Now, log entries on the debug level are ignored, unless the application is started with the debug flag (-debug).
+	</td>
+  </tr>
+
   <tr id="databinding-generics">
     <td class="title">Adding generics to Eclipse data binding</td>
     <td class="content">
@@ -163,10 +142,40 @@ Job.createSystem(
 	</td>
   </tr>
 
+   <tr id="databindingapi">
+    <td class="title">JFace databinding enhancements</td>
+    <td class="content">
+      The new static <code>IConverter.create(Object, Object, Function)</code> allows to create a converter
+	  using a lambda expression. On a similar note, the static <code>UpdateValueStrategy.create(IConverter)</code>has been added.
+	</td>
+  </tr>
+
+  <tr id="create-method-computed-value">
+    <td class="title">New factory method for data binding's ComputedValue</td>
+    <td class="content">
+		An <code>org.eclipse.core.databinding.observable.value.ComputedValue</code> can compute custom values from other tracked getters inside its <code>calculate</code> method.
+		<p>Before this change, you had to create a subclass of <code>ComputedValue</code>, but the new <code>create</code> method, which expects a <code>Supplier&lt;T&gt;</code>
+		allows you to create an instance of <code>ComputedValue</code> by using a lambda expression.</p>
+		<p>Examples:
+		</p>
+		<pre>IObservableValue&lt;Integer&gt; listSizeObservable =
+	ComputedValue.create(() -> observableList.size());</pre>
+		or
+		<pre>IObservableValue&lt;String&gt; fullNameObservable =
+	ComputedValue.create(() -> personFirstNameObservable.getValue() + " "
+		+ personLastNameObservable.getValue());</pre>
+	
+		<p>
+		More details about tracked getters can be found in the <code>org.eclipse.core.databinding.observable.ObservableTracker</code>'s
+		<code>getterCalled(IObservable)</code> method. Almost every <code>IObservable</code>'s get methods are tracked getters. 
+		</p>
+    </td>
+  </tr>
+
   <tr id="i-side-effect">
     <td class="title">ISideEffect databinding API</td>
     <td class="content">
-      <code>org.eclipse.core.databinding.observable.ISideEffect</code> allows you to react
+      <code>org.eclipse.core.databinding.observable.sideeffect.ISideEffect</code> allows you to react
       to changes in observables without attaching listeners. For example, the
       following code will bind the text "Your username is: xxxx" to a label and
       will update the label whenever the username changes.
@@ -187,12 +196,28 @@ Job.createSystem(
     </td>
   </tr>
 
-  <tr id="darktheme-statusdialog">
-    <td class="title">Dark theme styling for StatusDialog</td>
+  <tr id="sideeffect-factory">
+    <td class="title">ISideEffectFactory for composite ISideEffects</td>
     <td class="content">
-     The <code>org.eclipse.jface.dialogs.StatusDialog</code> and its subclasses are now styled in the dark theme.
-     Before this change, the message area was hard-coded to white.
-     </td>
+    	You can use the <code>ISideEffectFactory</code> to create several <code>ISideEffect</code> instances that share the same life cycle.
+    	<p>
+    	For example, all <code>ISideEffect</code> instances that are created by the <code>ISideEffectFactory</code> obtained from the <code>WidgetSideEffects#createFactory(Widget disposableWidget)</code> method are automatically disposed once the corresponding widget is disposed.
+    	</p>
+    	<p>Example:</p>
+<pre>
+ISWTObservableValue personFirstNameTextObservable = WidgetProperties.text(SWT.Modify)
+	.observe(personFirstNameText);
+ISWTObservableValue personLastNameTextObservable = WidgetProperties.text(SWT.Modify)
+	.observe(personLastNameText);
+
+ISideEffectFactory sideEffectFactory = WidgetSideEffects.createFactory(personFirstNameText);
+
+sideEffectFactory.create(person::getFirstName, personFirstNameText::setText);
+sideEffectFactory.create(personFirstNameTextObservable::getValue, person::setFirstName);
+sideEffectFactory.create(person::getLastName, personLastNameText::setText);
+sideEffectFactory.create(personLastNameTextObservable::getValue, person::setLastName);
+</pre>
+	</td>
   </tr>
 
   <tr id="varargs">
@@ -207,7 +232,62 @@ Job.createSystem(
       </ul>
     </td>
   </tr>
-  
+
+  <tr id="messagedialog-varargs">
+    <td class="title">Additional varargs constructor for MessageDialog</td>
+    <td class="content">
+    	The <code>org.eclipse.jface.dialogs.MessageDialog</code> class has now an additional vararg constructor that simplifies passing button labels.
+    	<p>
+    	Old:
+    	</p>
+<pre>new MessageDialog(shell, "MessageDialog", null, "DialogMessage",
+		MessageDialog.NONE, new String[] { "Button1", "Button2" }, 0);
+</pre>
+    	New:
+<pre>new MessageDialog(shell, "MessageDialog", null, "DialogMessage",
+		MessageDialog.NONE, 0, "Button1", "Button2");
+</pre>
+	</td>
+  </tr>
+
+  <tr id="darktheme-statusdialog">
+    <td class="title">Dark theme styling for StatusDialog</td>
+    <td class="content">
+     The <code>org.eclipse.jface.dialogs.StatusDialog</code> and its subclasses are now styled in the dark theme.
+     Before this change, the message area was hard-coded to white.
+     </td>
+  </tr>
+
+  <tr id="menuitem-tooltips">
+    <td class="title">Tooltips on menu items for Eclipse 4 applications</td>
+    <td class="content">
+    	SWT introduced tooltips for menu items in the Eclipse Mars release. The default SWT renderers have been extended to support these tooltips on menu items, i.e., if
+    	you enter them in your application model, they will be displayed.  
+    	<p>
+      		<img src="images/menuitem-tooltips.png" alt="Menu tooltips in Eclipse 4 RCP"/>
+      	</p>
+	</td>
+  </tr>
+
+  <tr id="directmenuitem-canexecute">
+    <td class="title">Support for @CanExecute of MDirectMenuItem and MDirectToolItem</td>
+    <td class="content">
+    	Previously, methods annotated with @CanExecute were only evaluated on execution for MDirectMenuItems and MDirectToolItems, not on rendering.
+		So if the method annotated with @CanExecute returned false, the rendering was not updated to show the menu/tool item disabled.
+		Now @CanExecute method is also evaluated during rendering, to show the enabled state according to the method result.
+	</td>
+  </tr>
+
+  <tr id="perspective-handlercontainer">
+    <td class="title">Perspective becomes a handler container</td>
+    <td class="content">
+    	In addition to windows and parts, perspectives can now also define handlers. Those handlers will get active
+    	when the containing perspective is active. As before, handlers of more deeply nested containers override less deeply nested ones, i.e., 
+    	handlers defined for parts override handlers for perspectives, while the 
+    	handlers for a perspective override the ones defined for the window.
+	</td>
+  </tr>
+
   <tr id="applicationmodel">
     <td class="title">New API: MApplication#getCommand(String)</td>
     <td class="content">
@@ -238,82 +318,6 @@ Job.createSystem(
      </td>
   </tr>
 
-   <tr id="databindingapi">
-    <td class="title">JFace databinding enhancements</td>
-    <td class="content">
-      The new static <code>IConverter.create(Object, Object, Function)</code> allows to create a converter
-	  using a lambda expression. On a similar note, the static <code>UpdateValueStrategy.create(IConverter)</code>has been added.
-	</td>
-  </tr>
-
-  <tr id="handlerutil-structured-selection">
-    <td class="title">API to get the structured selection</td>
-    <td class="content">
-     The <code>org.eclipse.ui.handlers.HandlerUtil#getCurrentStructuredSelection(event)</code>
-     API has been added to allow easy access to an <code>IStructuredSelection</code> from a handler. Compared to 
-     <code>HandlerUtil#getCurrentSelection(event)</code> this removes the need to cast and check for 
-     null.
-    </td>
-  </tr>
-
-  <tr id="listenerlist">
-    <td class="title">ListenerList generified</td>
-    <td class="content">
-      <code>org.eclipse.core.runtime.ListenerList</code> has been generified and now implements <code>Iterable&lt;E&gt;</code>.
-      <p>Due to Java type system constraints, <code>ListenerList#getListeners()</code> still returns <code>Object[]</code>.
-      Clients should not only add type arguments to the ListenerList, but also convert usages of <code>#getListeners()</code>
-      to an enhanced <code>for</code> loop, thereby taking advantage of the type-safe <code>#iterator()</code>.</p>
-      <p>Old:</p>
-      <pre>ListenerList fInputChangeListeners = new ListenerList();
-...
-Object[] listeners= fInputChangeListeners.getListeners();
-for (int i= 0; i &lt; listeners.length; i++) {
-	((IInputChangedListener) listeners[i]).inputChanged(fInput);
-}</pre>
-      <p>New:</p>
-      <pre>ListenerList&lt;IInputChangedListener&gt; fInputChangeListeners = new ListenerList&lt;&gt;();
-...
-for (IInputChangedListener listener : fInputChangeListeners) {
-	listener.inputChanged(fInput);
-}</pre>
-    </td>
-  </tr>
-
-  <tr id="javax-annotation-package-dependency">
-    <td class="title">Imports of the <code>javax.annotation</code> package no longer require a minimum version</td>
-    <td class="content">
-    	Plug-ins are no longer required to specify a minimum package version when importing the <code>javax.annotation</code> package. 
-    	The Eclipse runtime will resolve all components to the same version (JVM or provided by the Eclipse Platform). 
-    	<p>
-    	This avoids a common error in Eclipse RCP implementations in which <code>@PostConstruct</code> 
-    	was resolved to different classes in the bundle classpath.
-    	This change is backwards compatible, i.e., a dependency with a minimum version still works correctly.
-    	</p>
-    </td>
-  </tr>
-
-  <tr id="create-method-computed-value">
-    <td class="title">New factory method for data binding's ComputedValue</td>
-    <td class="content">
-		An <code>org.eclipse.core.databinding.observable.value.ComputedValue</code> can compute custom values from other tracked getters inside its <code>calculate</code> method.
-		<p>Before this change, you had to create a subclass of <code>ComputedValue</code>, but the new <code>create</code> method, which expects a <code>Supplier&lt;T&gt;</code>
-		allows you to create an instance of <code>ComputedValue</code> by using a lambda expression.</p>
-		<p>Examples:
-		</p>
-		<pre>IObservableValue&lt;Integer&gt; listSizeObservable =
-	ComputedValue.create(() -> observableList.size());</pre>
-		or
-		<pre>IObservableValue&lt;String&gt; fullNameObservable =
-	ComputedValue.create(() -> personFirstNameObservable.getValue() + " "
-		+ personLastNameObservable.getValue());</pre>
-	
-		<p>
-		More details about tracked getters can be found in the <code>org.eclipse.core.databinding.observable.ObservableTracker</code>'s
-		<code>getterCalled(IObservable)</code> method. Almost every <code>IObservable</code>'s get methods are tracked getters. 
-		</p>
-    </td>
-  </tr>
-
   <tr id="mpart-runtime-closeable-change">
     <td class="title">Change closeable attribute of MPart at runtime</td>
     <td class="content">
@@ -335,17 +339,6 @@ for (IInputChangedListener listener : fInputChangeListeners) {
     </td>
   </tr>
 
-
-  <tr id="disable-toolbar-dnd">
-    <td class="title">Disable drag and drop for toolbars</td>
-    <td class="content">
-		You can disable drag and drop of toolbars and tool components by tagging the corresponding model element with the <code>'NoMove'</code> tag.
-		<p>
-			<img src="images/toolbar-disable-drag-and-drop-with-NoMove-tag.png" alt=""/>
-		</p>
-	</td>
-  </tr>
-  
   <tr id="e4-help-support">
     <td class="title">Support for setting the help ID in Eclipse 4 application</td>
     <td class="content">
@@ -356,39 +349,36 @@ for (IInputChangedListener listener : fInputChangeListeners) {
 	</td>
   </tr>
 
-  <tr id="sideeffect-package">
-    <td class="title">Different package for ISideEffect</td>
+  <tr id="no-theme-dnd">
+    <td class="title">Drag and drop for toolbars in Eclipse applications without CSS styling</td>
     <td class="content">
-		The <code>ISideEffect</code> and <code>ISideEffectFactory</code> interfaces and the <code>CompositeSideEffect</code> class
-		have been moved to a new package <code>org.eclipse.core.databinding.observable.sideeffect</code>.
+        The Eclipse styling engine allows to configure drag images via CSS. In previous releases, applications without this setting would not support drag and drop of toolbars.
+    	Eclipse RCP applications without the related CSS styling now support drag and drop of toolbars out of the box. This applies also for applications which disable the CSS-based styling.
 	</td>
   </tr>
 
-  <tr id="sideeffect-factory">
-    <td class="title">ISideEffectFactory for composite ISideEffects</td>
+  <tr id="disable-toolbar-dnd">
+    <td class="title">Disable drag and drop for toolbars</td>
     <td class="content">
-    	You can use the <code>ISideEffectFactory</code> to create several <code>ISideEffect</code> instances that share the same life cycle.
+		You can disable drag and drop of toolbars and tool components by tagging the corresponding model element with the <code>'NoMove'</code> tag.
+		<p>
+			<img src="images/toolbar-disable-drag-and-drop-with-NoMove-tag.png" alt=""/>
+		</p>
+	</td>
+  </tr>
+
+  <tr id="javax-annotation-package-dependency">
+    <td class="title">Imports of the <code>javax.annotation</code> package no longer require a minimum version</td>
+    <td class="content">
+    	Plug-ins are no longer required to specify a minimum package version when importing the <code>javax.annotation</code> package. 
+    	The Eclipse runtime will resolve all components to the same version (JVM or provided by the Eclipse Platform). 
     	<p>
-    	For example, all <code>ISideEffect</code> instances that are created by the <code>ISideEffectFactory</code> obtained from the <code>WidgetSideEffects#createFactory(Widget disposableWidget)</code> method are automatically disposed once the corresponding widget is disposed.
+    	This avoids a common error in Eclipse RCP implementations in which <code>@PostConstruct</code> 
+    	was resolved to different classes in the bundle classpath.
+    	This change is backwards compatible, i.e., a dependency with a minimum version still works correctly.
     	</p>
-    	<p>Example:</p>
-<pre>
-ISWTObservableValue personFirstNameTextObservable = WidgetProperties.text(SWT.Modify)
-	.observe(personFirstNameText);
-ISWTObservableValue personLastNameTextObservable = WidgetProperties.text(SWT.Modify)
-	.observe(personLastNameText);
-
-ISideEffectFactory sideEffectFactory = WidgetSideEffects.createFactory(personFirstNameText);
-
-sideEffectFactory.create(person::getFirstName, personFirstNameText::setText);
-sideEffectFactory.create(personFirstNameTextObservable::getValue, person::setFirstName);
-sideEffectFactory.create(person::getLastName, personLastNameText::setText);
-sideEffectFactory.create(personLastNameTextObservable::getValue, person::setLastName);
-</pre>
-	</td>
+    </td>
   </tr>
-
-
 
 
   <!-- ******************** Equinox ********************** -->
@@ -500,15 +490,51 @@ void myMethod(IProgressMonitor monitor) {
     <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
   </tr>
 
-  <tr id="nomove">
-    <td class="title">Support to create immovable Shells</td>
+  <tr id="swt-requires-java7">
+   <td class="title">SWT requires 1.7 Java runtime</td>
     <td class="content">
-      SWT has added a new style constant <code>SWT.NO_MOVE</code> to create a Shell with no move behavior. Using this style will create the
-      title trim even if no other trim style is specified. The title trim will not be created when <code>SWT.NO_TRIM</code> is specified.
-      Note that this style bit is a hint.
-      <p>
-      	<img src="images/nomove-shell.png" alt=""/>
-      </p>
+  		The SWT projects are now compiled at 1.7 compliance level. As a result, a Java runtime of
+  		1.7 or above is required to run SWT applications.
+    </td>
+  </tr>
+
+  <tr id="high-dpi-api">
+    <td class="title">APIs for high-DPI monitor support</td>
+    <td class="content">
+		Platform-independent high-DPI support has been added to the Win32 and GTK ports.
+		In the past, only the font size was adjusted on those two platforms, which lead to an inconsistent
+		appearance of SWT applications across different platforms.
+		<p>
+		To shield existing clients from resolution differences, SWT now uses the Cocoa model on all three platforms.
+		Existing SWT APIs keep using the well-known coordinate system in SWT points. In high-DPI environments,
+		these SWT points are transparently scaled to native pixels.
+		</p><p>
+		To create DPI-aware <code>org.eclipse.swt.graphics.Image</code>s, use these constructors
+		that have already been provided in the <a href="https://www.eclipse.org/eclipse/news/4.5/platform_isv.php#high-dpi">Mars release</a>:
+		</p>
+		<ul>
+		<li><code>Image(Device, ImageFileNameProvider)</code></li>
+		<li><code>Image(Device, ImageDataProvider)</code></li>
+		</ul>
+		
+		Two new APIs have been added in <code>Image</code> to give you direct access to the pixel data on high-DPI monitors.
+		<ul>
+		<li><code>Image#getImageDataAtCurrentZoom()</code>:
+			Returns an <code>ImageData</code> that contains the full-resolution pixel data at the current OS zoom level</li>
+		<li><code>Image#getBoundsInPixels()</code>:
+			Returns the image dimensions in pixels at the current OS zoom level</li>
+		</ul>
+    </td>
+  </tr>
+
+  <tr id="swt-device-zoom">
+    <td class="title">SWT device zoom</td>
+    <td class="content">
+    	SWT exposes the device zoom level at which it is currently operating via the system property
+    	<p><code>"org.eclipse.swt.internal.deviceZoom"</code></p>
+    	<p>Note: This is a read-only value, so setting it on the command line doesn't make sense.
+    	Furthermore, SWT doesn't use the deviceZoom when HighDPI support is disabled via <code>-Dswt.autoScale=false</code>,
+    	see <a href="platform.html#swt-autoscale-tweaks">Tweaking SWT's auto-scaling</a></p>.
     </td>
   </tr>
 
@@ -527,6 +553,18 @@ void myMethod(IProgressMonitor monitor) {
      However, be aware that changing existing invocations of <code>layout()</code> to <code>requestLayout()</code>
      may break code that assumes that controls are completely sized and positioned at a certain point in time.
      </p>
+    </td>
+  </tr>
+
+  <tr id="nomove">
+    <td class="title">Support to create immovable Shells</td>
+    <td class="content">
+      SWT has added a new style constant <code>SWT.NO_MOVE</code> to create a Shell with no move behavior. Using this style will create the
+      title trim even if no other trim style is specified. The title trim will not be created when <code>SWT.NO_TRIM</code> is specified.
+      Note that this style bit is a hint.
+      <p>
+      	<img src="images/nomove-shell.png" alt=""/>
+      </p>
     </td>
   </tr>
 
@@ -568,44 +606,6 @@ void myMethod(IProgressMonitor monitor) {
     </td>
   </tr>
 
-
-  <tr id="high-dpi-api">
-    <td class="title">APIs for high-DPI monitor support</td>
-    <td class="content">
-		Platform-independent high-DPI support has been added to the Win32 and GTK ports.
-		In the past, only the font size was adjusted on those two platforms, which lead to an inconsistent
-		appearance of SWT applications across different platforms.
-		<p>
-		To shield existing clients from resolution differences, SWT now uses the Cocoa model on all three platforms.
-		Existing SWT APIs keep using the well-known coordinate system in SWT points. In high-DPI environments,
-		these SWT points are transparently scaled to native pixels.
-		</p><p>
-		To create DPI-aware <code>org.eclipse.swt.graphics.Image</code>s, use these constructors
-		that have already been provided in the <a href="https://www.eclipse.org/eclipse/news/4.5/M6/#high-dpi">Mars release</a>:
-		</p>
-		<ul>
-		<li><code>Image(Device, ImageFileNameProvider)</code></li>
-		<li><code>Image(Device, ImageDataProvider)</code></li>
-		</ul>
-		
-		Two new APIs have been added in <code>Image</code> to give you direct access to the pixel data on high-DPI monitors.
-		<ul>
-		<li><code>Image#getImageDataAtCurrentZoom()</code>:
-			Returns an <code>ImageData</code> that contains the full-resolution pixel data at the current OS zoom level</li>
-		<li><code>Image#getBoundsInPixels()</code>:
-			Returns the image dimensions in pixels at the current OS zoom level</li>
-		</ul>
-    </td>
-  </tr>
-
-  <tr id="swt-requires-java7">
-   <td class="title">SWT requires 1.7 Java runtime</td>
-    <td class="content">
-  		The SWT projects are now compiled at 1.7 compliance level. As a result, a Java runtime of
-  		1.7 or above is required to run SWT applications.
-    </td>
-  </tr>
-
   <tr id="link-api">
     <td class="title">API to set Link color</td>
     <td class="content">
@@ -619,16 +619,6 @@ void myMethod(IProgressMonitor monitor) {
     	<p>
     	For an example, see <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet182.java">Snippet182</a>.
     	</p>
-    </td>
-  </tr>
-
-  <tr id="swt-device-zoom">
-    <td class="title">SWT device zoom</td>
-    <td class="content">
-    	SWT exposes the device zoom level at which it is currently operating via the system property
-    	<p><code>"org.eclipse.swt.internal.deviceZoom"</code></p>
-    	<p>Note: This is a read-only value, so setting it on the command line doesn't make sense.
-    	Furthermore, SWT doesn't use the deviceZoom when HighDPI support is disabled via <code>-Dswt.autoScale=false</code></p>
     </td>
   </tr>
 
