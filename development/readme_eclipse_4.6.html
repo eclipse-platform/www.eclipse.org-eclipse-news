@@ -754,6 +754,10 @@ been fully implemented. (bug <a
 </p>
 <h3 id="I-Platform-SWT"><a class="mozTocH3" name="mozTocId554478" />Platform
 - SWT</h3>
+<h4>Non-uniform scaling of text vs. icons when using intermediate scaling factors on high-DPI displays</h4>
+<p>Eclipse automatically scales images on high-DPI monitors based on the resolution of the monitor. However, this scaling works 
+only with integer scaling factors like 100%, 200% etc by default. So, at intermediate scaling factors like 150%, 175% etc., 
+its likely that the icons and text are scaled differently as the text scaling is handled directly by the operating system.</p>
 <h4><a class="mozTocH4" name="mozTocId69222" />Eclipse plug-in based on
 the SWT Browser throws exception</h4>
 <p> The SWT Browser widget uses a platform-specific web browser to
@@ -763,6 +767,12 @@ Browser widget. Supported platforms and prerequisites are listed on the
 SWT FAQ item <a
  href="http://www.eclipse.org/swt/faq.php#browserplatforms"> "Which
 platforms support the SWT Browser?"</a>. </p>
+<h4>SWT Browser widget does not work on some recent Linux versions e.g Ubuntu 16.04</h4>
+<p>Recent Linux versions such as Ubuntu 16.04 do not have the Webkit libraries installed by default, causing the 
+instantiation of the Browser widget to fail. This means that the Internal Web Browser view in Eclipse won't be usable. 
+When running with GTK3, even the Welcome page appears blank (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=492379">492379</a>).
+The workaround is to install the Webkit libraries (libwebkitgtk-3.0 for GTK3 and libwebkitgtk-1.0 for GTK2) from 
+the OS package repositories before using Eclipse and/or SWT.</p>
 <h4><a class="mozTocH4" name="mozTocId519796" />SWT Browser widget
 crashes when run with XULRunner 31 run-time (Linux only)</h4>
 <p> Creation of an SWT Mozilla style Browser with XULRunner 31 run-time
