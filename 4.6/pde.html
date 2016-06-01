@@ -24,6 +24,7 @@ ul {padding-left: 13px;}
 <h2>Plug-in Development Environment</h2>
 <ul>
 	<li><a href="#dialogs-editors-views">Dialogs, Editors, and Views</a></li>
+	<li><a href="#declarative-services">OSGi Declarative Services</a></li>
 	<li><a href="#wizards">Wizards</a></li>
 	<li><a href="#APITools">API Tools</a></li>
 </ul>
@@ -34,6 +35,11 @@ ul {padding-left: 13px;}
   <col />
 </colgroup>
 <tbody>
+
+  <!-- ******************** Dialogs, Editors, and Views ********************** -->
+  <tr>
+    <td id="dialogs-editors-views" class="section" colspan="2"><h2>Dialogs, Editors, and Views</h2></td>
+  </tr>
 
   <tr id="product-editor">
     <td class="title">Product editor "Dependencies" tab renamed to "Content"</td>
@@ -46,10 +52,22 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
-  <tr id="e4wizard">
-    <td class="title">Retirement of the Eclipse 4 project wizard</td>
+  <tr id="pde-debug-option-help">
+    <td class="title">Tooltips for options in Tracing dialog </td>
     <td class="content">
-        As PDE offers now Eclipse 4 RCP templates, the separate Eclipse 4 project generation wizard has been retired.
+    	In the <b>Tracing </b> tab of Eclipse launch configuration, the options now have tooltips which display
+    	more information about that option.
+		<p>
+			<img src="images/pde-tracing-options-help.png" alt="" />
+    	</p>
+    	The information gets extracted from comments in the declaring bundle's .options file.
+    </td>
+  </tr>
+
+  <tr id="pde-project-explorer">
+    <td class="title">PDE perspective uses Project Explorer</td>
+    <td class="content">
+      The PDE perspective now uses the <b>Project Explorer</b> instead of the <b>Package Explorer</b> view by default.
     </td>
   </tr>
 
@@ -61,6 +79,143 @@ ul {padding-left: 13px;}
 		<p>
       		<img src="images/pdewarnings.png" alt="Build warnings"/>
       	</p>
+    </td>
+  </tr>
+
+  <tr id="pde-importpackages">
+    <td class="title">Import and export packages in Plug-in Manifest editor supports prefix wildcard matching by default</td>
+    <td class="content">
+	The import and export package dialog in the <b> Plug-in Manifest editor </b> uses wildcards by default. For example, to add
+	<code>org.eclipse.e4.core.services</code> as package dependency,
+	you can type in <code>services</code> instead of <code>*services</code>.
+    </td>
+  </tr>
+
+  <tr id="pde-plugin-image-browser-filter">
+    <td class="title">Plug-in Image Browser Filtering</td>
+    <td class="content">
+
+     In <b>Plug-in Image Browser</b> view, it is now possible to filter icons by
+     their full path or name.
+
+     <p>
+     Use the new ImageFilter field to provide the search criteria (? = any character, * = any string) 
+     to find the icons with matching path or name. 
+     </p>
+
+     <p>
+      <img src="images/pde-plugin-image-browser-filter.png" alt="" />
+    </p>
+    </td>
+  </tr>
+
+   <tr id="pde-image-browser-pagination">
+    <td class="title">Pagination control in Plug-in Image Browser</td>
+    <td class="content">
+    	In the <b>Plug-in Image Browser</b>,  at the end of the view, there are pagination controls 
+    	to move to the next page of images.
+		<p>
+			<img src="images/pde-plugin-image-browser-pagination.png" alt="" />
+    	</p>
+    </td>
+  </tr>
+
+  <tr id="prompt-for-unsaved-features">
+    <td class="title">Product launch prompts for unsaved features</td>
+    <td class="content">
+      In case you have an unsaved feature included in your product configuration file, 
+      PDE will prompt you to save it before the launch.
+      
+       <p>
+        <img src="images/prompt-unsaved-feature-pde.png" alt=""/>
+      </p>
+      
+    </td>
+  </tr>
+
+  <!-- ******************** OSGi Declarative Services ********************** -->
+  <tr>
+    <td id="declarative-services" class="section" colspan="2"><h2>OSGi Declarative Services</h2></td>
+  </tr>
+
+  <tr id="ds-annotations">
+    <td class="title">Support for OSGi Declarative Services Annotations</td>
+    <td class="content">
+    	OSGi Declarative Services provide a powerful mechanism for developing complex, service-oriented
+    	applications. With proper tooling, annotations, which were added to Declarative Services
+    	in version 1.2, make it easy to generate and maintain the required component descriptor files.
+    	<p>
+    	When enabled, PDE automatically generates and updates Declarative Services component 
+    	descriptor files from appropriately annotated Java source. This is done without requiring 
+    	any additional builder to be configured in your project.
+    	</p>
+    	<p>
+    	When you annotate your component implementation classes with <code>@Component</code>, and any
+    	reference bind methods with <code>@Reference</code>, PDE will validate your annotations
+    	and generate the corresponding component descriptor files. Any errors discovered during validation
+    	are highlighted and reported.
+    	</p>
+    	<p>
+			<img src="images/ds-annotations.png" alt="" />
+    	</p>
+    	<p>
+    	In addition, PDE will also maintain the project's MANIFEST.MF and build.properties file
+    	-- generated component descriptor files are automatically added to the manifest
+    	and included in the build.
+		</p>
+		<p>
+		To enable this feature, go to <b>Preferences</b> or <b>Project Properties &gt; Plug-in Development &gt; DS Annotations</b>
+		and check <b>Generate descriptors from annotated sources</b>. 
+		</p>
+    </td>
+  </tr>
+
+  <tr id="ds-annotation-bapl">
+    <td class="title">DS Annotations Bundle-ActivationPolicy generation</td>
+    <td class="content">
+		The Declarative Service Annotations support can now be configured to generate the bundle header for lazy activation.
+		The <code>Bundle-ActivationPolicy: lazy</code> header is necessary when starting an Eclipse application that uses the Equinox launcher.
+		Otherwise, the bundle that provides the declarative service will not be started automatically and therefore the service won't be available.
+		In a plain OSGi environment, this header is not necessary and might not have any effect. Therefore, it can be configured via preferences 
+		whether the header should be generated or not.
+        <p>
+          <img src="images/ds-annotations-bapl.png" alt="" />
+        </p>
+    </td>
+  </tr>
+
+  <tr id="ds-annotations-template">
+    <td class="title">Updated OSGi Declarative Services Example</td>
+    <td class="content">
+    	The OSGi Declarative Services Example now uses annotations.
+    	<p>
+    	Instead of creating a Component Definition file for each component class and adding it
+    	to the manifest and build.properties, the wizard creates component classes annotated with
+    	the appropriate DS annotations, which are then used by PDE to automatically generate
+    	the corresponding component descriptor files.  
+		</p>
+    </td>
+  </tr>
+
+
+  <!-- ******************** Wizards ********************** -->
+  <tr>
+    <td id="wizards" class="section" colspan="2"><h2>Wizards</h2></td>
+  </tr>
+
+  <tr id="plugin-wizard-activator-creation">
+    <td class="title">New Plug-in wizard does not create activator by default</td>
+    <td class="content">
+	   By default, the new plug-in wizard does not suggest the creation of an activator class anymore. 
+	   Functionality in activators can in most cases be replaced with other means (e.g. OSGi declarative services), and activators
+	   can slow down the startup of an application.
+    </td>
+  </tr>
+  
+  <tr id="e4wizard">
+    <td class="title">Retirement of the Eclipse 4 project wizard</td>
+    <td class="content">
+        As PDE offers now Eclipse 4 RCP templates, the separate Eclipse 4 project generation wizard has been retired.
     </td>
   </tr>
 
@@ -123,172 +278,20 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
-  <tr id="pde-project-explorer">
-    <td class="title">PDE perspective uses Project Explorer</td>
-    <td class="content">
-      The PDE perspective now uses the <b>Project Explorer</b> instead of the <b>Package Explorer</b> view by default.
-    </td>
-  </tr>
-
-  <tr id="pde-importpackages">
-    <td class="title">Import and export packages in Plug-in Manifest editor supports prefix wildcard matching by default</td>
-    <td class="content">
-	The import and export package dialog in the <b> Plug-in Manifest editor </b> uses wildcards by default. For example, to add
-	<code>org.eclipse.e4.core.services</code> as package dependency,
-	you can type in <code>services</code> instead of <code>*services</code>.
-    </td>
-  </tr>
-
-  <tr id="pde-plugin-image-browser-filter">
-    <td class="title">Plug-in Image Browser Filtering</td>
-    <td class="content">
-
-     In <b>Plug-in Image Browser</b> view, it is now possible to filter icons by
-     their full path or name.
-
-     <p>
-     Use the new ImageFilter field to provide the search criteria (? = any character, * = any string) 
-     to find the icons with matching path or name. 
-     </p>
-
-     <p>
-      <img src="images/pde-plugin-image-browser-filter.png" alt="" />
-    </p>
-    </td>
-  </tr>
-
-  <tr id="prompt-for-unsaved-features">
-    <td class="title">Product launch prompts for unsaved features</td>
-    <td class="content">
-      In case you have an unsaved feature included in your product configuration file, 
-      PDE will prompt you to save it before the launch.
-      
-       <p>
-        <img src="images/prompt-unsaved-feature-pde.png" alt=""/>
-      </p>
-      
-    </td>
-  </tr>
-
-
-  <tr id="ds-annotations">
-    <td class="title">Support for OSGi Declarative Services Annotations</td>
-    <td class="content">
-    	OSGi Declarative Services provide a powerful mechanism for developing complex, service-oriented
-    	applications. With proper tooling, annotations, which were added to Declarative Services
-    	in version 1.2, make it easy to generate and maintain the required component descriptor files.
-    	<p>
-    	When enabled, PDE automatically generates and updates Declarative Services component 
-    	descriptor files from appropriately annotated Java source. This is done without requiring 
-    	any additional builder to be configured in your project.
-    	</p>
-    	<p>
-    	When you annotate your component implementation classes with <code>@Component</code>, and any
-    	reference bind methods with <code>@Reference</code>, PDE will validate your annotations
-    	and generate the corresponding component descriptor files. Any errors discovered during validation
-    	are highlighted and reported.
-    	</p>
-    	<p>
-			<img src="images/ds-annotations.png" alt="" />
-    	</p>
-    	<p>
-    	In addition, PDE will also maintain the project's MANIFEST.MF and build.properties file
-    	-- generated component descriptor files are automatically added to the manifest
-    	and included in the build.
-		</p>
-		<p>
-		To enable this feature, go to <b>Preferences</b> or <b>Project Properties &gt; Plug-in Development &gt; DS Annotations</b>
-		and check <b>Generate descriptors from annotated sources</b>. 
-		</p>
-    </td>
-  </tr>
-  <tr id="ds-annotations-template">
-    <td class="title">Updated OSGi Declarative Services Example</td>
-    <td class="content">
-    	The OSGi Declarative Services Example now uses annotations.
-    	<p>
-    	Instead of creating a Component Definition file for each component class and adding it
-    	to the manifest and build.properties, the wizard creates component classes annotated with
-    	the appropriate DS annotations, which are then used by PDE to automatically generate
-    	the corresponding component descriptor files.  
-		</p>
-    </td>
-  </tr>
-  
-   <tr id="pde-image-browser-pagination">
-    <td class="title">Pagination control in Plug-in Image Browser</td>
-    <td class="content">
-    	In the <b>Plug-in Image Browser</b>,  at the end of the view, there are pagination controls 
-    	to move to the next page of images.
-		<p>
-			<img src="images/pde-plugin-image-browser-pagination.png" alt="" />
-    	</p>
-    </td>
-  </tr>
-
-
-  <tr id="pde-debug-option-help">
-    <td class="title">Tooltips for options in Tracing dialog </td>
-    <td class="content">
-    	In the <b>Tracing </b> tab of Eclipse launch configuration, the options now have tooltips which display
-    	more information about that option.
-		<p>
-			<img src="images/pde-tracing-options-help.png" alt="" />
-    	</p>
-    	The information gets extracted from comments in the declaring bundle's .options file.
-    </td>
-  </tr>
-
-
-  <tr id="plugin-wizard-activator-creation">
-    <td class="title">New Plug-in wizard does not create activator by default</td>
-    <td class="content">
-	   By default, the new plug-in wizard does not suggest the creation of an activator class anymore. 
-	   Functionality in activators can in most cases be replaced with other means (e.g. OSGi declarative services), and activators
-	   can slow down the startup of an application.
-    </td>
-  </tr>
-  
-  <tr id="multi-version-baseline-support">
-    <td class="title">Multi-version support for API analysis builder</td>
-    <td class="content">
-	The API Analysis Builder now supports API baselines with multi-version bundles.
-	While doing API analysis for a bundle for which multiple versions exist in the baseline, 
-	the comparisons are performed with the bundle in the baseline which best matches
-	the development bundle that is being built.
-    </td>
-  </tr>
-
-  <tr id="ds-annotation-bapl">
-    <td class="title">DS Annotations Bundle-ActivationPolicy generation</td>
-    <td class="content">
-		The Declarative Service Annotations support added with M6 can now be configured to generate the bundle header for lazy activation.
-		The <code>Bundle-ActivationPolicy: lazy</code> header is necessary when starting an Eclipse application that uses the Equinox launcher.
-		Otherwise, the bundle that provides the declarative service will not be started automatically and therefore the service won't be available.
-		In a plain OSGi environment, this header is not necessary and might not have any effect. Therefore, it can be configured via preferences 
-		whether the header should be generated or not.
-        <p>
-          <img src="images/ds-annotations-bapl.png" alt="" />
-        </p>
-    </td>
-  </tr>
-
-
-  <!-- ******************** Dialogs, Editors, and Views ********************** -->
-  <tr>
-    <td id="dialogs-editors-views" class="section" colspan="2"><h2>Dialogs, Editors, and Views</h2></td>
-  </tr>
-  
-
-  <!-- ******************** Wizards ********************** -->
-  <tr>
-    <td id="wizards" class="section" colspan="2"><h2>Wizards</h2></td>
-  </tr>
-  
 
   <!-- ******************** APITools ********************** -->
   <tr>
     <td id="APITools" class="section" colspan="2"><h2>API Tools</h2></td>
+  </tr>
+
+  <tr id="multi-version-baseline-support">
+    <td class="title">Multi-version support for API analysis builder</td>
+    <td class="content">
+	The API Analysis Builder now supports API baselines with multi-version bundles.
+	While doing API analysis for a bundle for which multiple versions exist in the baseline,
+	the comparisons are performed with the bundle in the baseline which best matches
+	the development bundle that is being built.
+    </td>
   </tr>
 
 </tbody>
