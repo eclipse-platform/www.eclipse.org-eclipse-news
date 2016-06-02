@@ -509,7 +509,7 @@ Eclipse 4.6 Endgame Plan.
 <li><strong><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed) Provide good support for high-DPI displays.</strong>
 	The current support for high-DPI displays has various rendering issues.
 	With Neon we want to provide good support for high-DPI displays.
-	[SWT, Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=382972">382972</a>)
+	[SWT, Platform UI] (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=479614">479614</a>, <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=382972">382972</a>)
 </li>
 
 <li><strong><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> (committed) Add support for Solaris x86 and SPARC 64-bit platforms.</strong>
