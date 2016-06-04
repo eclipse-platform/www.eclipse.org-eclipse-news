@@ -11,9 +11,7 @@ $right_nav = FALSE;
 $keyword = 'eclipse, 4.6, Neon, acknowledgements, acknowledgments, thanks';
 include($App->getProjectCommon());
 
-
 #echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">';
-
 
 #*****************************************************************************
 #
@@ -48,32 +46,18 @@ ob_start();
 
 <div id="midcolumn">
 
-
   <div class="homeitem3col">
 
     <h3>Eclipse Neon Acknowledgements</h3>
 <p class="bg-danger">NOTE: This page is under development.</p>
-    <p>The entire Eclipse and Equinox team would like to thank
-    <!-- the Eclipse Foundation staff for their tireless efforts, including: Denis Roy, Matt Ward, and Mikael Barbero for not only keeping all
+    <p>The entire Eclipse and Equinox team would like to thank the Eclipse Foundation staff for their tireless efforts, including: Denis Roy, Matt Ward, and Mikael Barbero for not only keeping all
       that infrastructure going, but also constantly improving it; Janet Campbell and Sharon Corbett for guiding us through the Eclipse legal process; Wayne Beaton for giving us improved tools to
-      simplify and manage our development process; Ian Skerrett for his help with marketing the Eclipse release; and Mike Milinkovich for running the whole show. In particular, we appreciate the
-      Eclipse Foundation providing resources to allow the building and signing of "Mac Apps" as true applications for MacosX, all propertly signed with the new requirements from Apple.
-    -->
-     </p>
+      simplify and manage our development process; Ian Skerrett and Roxanne Joncas for help with marketing the Eclipse release and providing Logos and artwork; and Mike Milinkovich for running the whole show. In particular, we appreciate the
+      Eclipse Foundation providing development resources through the new <a href="https://eclipse.org/contribute/dev_program.php">Friend of Eclipse Enhancement Program (FEEP)</a>.</p>
     <p>
       We would also like to thank the users and adopters who support our efforts, through a range of activities, including early testing, being a <a href="https://eclipse.org/donate/">Friend of
         Eclipse</a>, contracting special work, or outright employment.
     </p>
-
-    <!--
-    <p>A special mention should be made to thank to Luis Bernardo and the Apache Batik team who provided service versions on some very old versions of the 'org.apache.batik.dom' bundle, for the
-      Neon release train. This was to fix a security issue discovered late in the cycle, and prevented everyone on the release train being required to move up to the latest version at the last minute.
-      One of bundles, the oldest version, was even re-compiled with Java 1.2 libraries, as it was originally, which not only shows the age of the bundle, but shows that team's skill and care at
-      release engineering. Overall, an excellent example of cooperation and collaboration with other Open Source projects, even outside of Eclipse.
-    -->
-    </p>
-
-
     <p>The Platform Resources team would like to thank everyone who has helped by filing bugs, testing and providing patches. Specifically we would like to thank the following people who have
       helped improve the Resources components by their code contributions to this release: Alex Blewitt, Richard Gobeli, Mickael Istria, Markus Keller, Tobias Melcher, Ed Merks, Pascal Rapicault,
       Lars Vogel, Thomas Wolf, Stefan Xenos.</p>
@@ -94,19 +78,20 @@ ob_start();
       Conrad Groth, Eugen Neufeld, Jacek Sieka, Lars Vogel, Marc-Andre Laperle, Marco Hunsicker, Sebastian Ratz, Snjezana Peco, Sopot Cela, Stefan Xenos, Szymon Ptaszkiewicz, Thorsten Hake and Tom Gurney
       for their code contributions. We would like to appreciate Silenio Quarti, Bogdan Gheorghe and Grant Gayed for always supporting the team.
     </p>
-    
-    <p>The release engineering team would like to thank
-    <!-- the many people who helped to improve our build. Also, the webmasters at the Eclipse Foundation for their constant help and education; in
-      particular Mikael Barbero who fixed several show-stopping issues in CBI. I'd also like to thank the Tycho Team for providing fixes and timely updates to Tycho &dash; two releases during Neon!
-    -->
+
+    <p>The release engineering team would like to thank the many people who helped to improve our build
+     as well as the committers who set up and maintain their own Platform HIPP jobs.
+    Also, the webmasters at the Eclipse Foundation for their constant help and education and improvements (especially the nice integration of Gerrit and Bugzilla); also
+      Mikael Barbero who fixed several issues in CBI and greatly improved the signing process.
+      We also thank the Tycho Team for providing fixes and timely updates to Tycho.
     </p>
     <p>The JDT Core team would like to thank everyone who has helped us improve quality by testing and filing good bug reports.We would also like to acknowledge David Williams for all
-     the build and releng support. We would like to thank Alex Blewitt, Alex Panchenko, Alexander Kurtakov, Andreas Sewe, Andrey Loskutov, Carmi Grushko, Dusi Sarath Chandra, 
-     Gabor Kovesdan, Harry Terkelsen, Igor Fedorenko, John Glassmyer, Lars Vogel, Mat Booth, Robert Roth and Sven Strohschein for their contributions to JDT. 
+     the build and releng support. We would like to thank Alex Blewitt, Alex Panchenko, Alexander Kurtakov, Andreas Sewe, Andrey Loskutov, Carmi Grushko, Dusi Sarath Chandra,
+     Gabor Kovesdan, Harry Terkelsen, Igor Fedorenko, John Glassmyer, Lars Vogel, Mat Booth, Robert Roth and Sven Strohschein for their contributions to JDT.
     </p>
-    
-    <p>The JDT Debug team would like to thank everyone who helped improve the Java debugger by filing bugs, testing and providing patches. Specifically we would like to thank Andrey Loskutov (for 
-    contributing to Timeout and Breakpoint related old bugs), Alexander Kurtakov, Jens Schiebel, Jesper Steen Moller (for contributing to Java 8 related bugs), Mat Booth, Matej Spiller Muys (for 
+
+    <p>The JDT Debug team would like to thank everyone who helped improve the Java debugger by filing bugs, testing and providing patches. Specifically we would like to thank Andrey Loskutov (for
+    contributing to Timeout and Breakpoint related old bugs), Alexander Kurtakov, Jens Schiebel, Jesper Steen Moller (for contributing to Java 8 related bugs), Mat Booth, Matej Spiller Muys (for
     working on old performance bug), Noopur Gupta and Stefan Xenos for bug fixes.
     </p>
 
@@ -126,11 +111,11 @@ ob_start();
       Sandra Lions, Sarika Sinha, Stefan Xenos, Szymon Ptaszkiewicz and Till Brychcy.
     </p>
 
-    <p>The Plug-in Development Environment team would like to thank the numerous contributors who continue to improve the component every release. 
+    <p>The Plug-in Development Environment team would like to thank the numerous contributors who continue to improve the component every release.
         Special thanks to Peter Nehrer for contributing DS Annotations Support to PDE and as a result, he was voted in as a committer. We thank
-        Markus Keller for demonstrating high quality bug reporting and providing quality fixes. He was also voted in as a committer at the end of 
+        Markus Keller for demonstrating high quality bug reporting and providing quality fixes. He was also voted in as a committer at the end of
         the release. We appreciate all the contributions from the community and would specifically like to thank Elena Laskavaia, Brian de Alwis, Lars Vogel,
-        Stefan Xenos, Simon Scholz and Alex Blewitt. 
+        Stefan Xenos, Simon Scholz and Alex Blewitt.
       </p>
 
     <p>The p2 team would like to thank
