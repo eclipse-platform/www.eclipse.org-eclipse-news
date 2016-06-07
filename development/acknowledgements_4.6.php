@@ -43,7 +43,13 @@ $pageAuthor    = "David Williams and the Eclipse Project Team";
 # Paste your HTML content between the markers!
 ob_start();
 ?>
-
+<style>
+  table.center {
+    width:92%; 
+    margin-left:4%; 
+    margin-right:4%;
+  }
+</style>
 <div id="midcolumn">
 
   <div class="homeitem3col">
@@ -125,9 +131,7 @@ ob_start();
     <p>
     <h4>Eclipse Platform</h4>
     <h5>Platform SWT</h5>
-    <table
-      width="92%"
-      align="center">
+    <table class="center">
       <tr>
         <td style="width: 23%;">Arun&nbsp;Thondapu</td>
         <td style="width: 23%;">Alexander&nbsp;Kurtakov</td>
@@ -148,9 +152,7 @@ ob_start();
       </tr>
     </table>
     <h5>Platform UI</h5>
-    <table
-      width="92%"
-      align="center">
+    <table class="center">
       <tr>
         <td style="width: 23%;">Steve&nbsp;Francisco</td>
         <td style="width: 23%;">Sopot&nbsp;Cela</td>
@@ -177,9 +179,8 @@ ob_start();
       </tr>
     </table>
     <h5>Platform Resources</h5>
-    <table
-      width="92%"
-      align="center">
+    <table class="center">
+
       <tr>
         <td style="width: 23%;">Dani&nbsp;Megert</td>
         <td style="width: 23%;">Sergey&nbsp;Prigogin</td>
@@ -188,9 +189,8 @@ ob_start();
       </tr>
     </table>
     <h5>Platform Releng</h5>
-    <table
-      width="92%"
-      align="center">
+    <table class="center">
+
       <tr>
         <td style="width: 23%;">David&nbsp;Williams</td>
         <td style="width: 23%;">Dani&nbsp;Megert</td>
@@ -199,9 +199,8 @@ ob_start();
       </tr>
     </table>
     <h5>Platform Documentation</h5>
-    <table
-      width="92%"
-      align="center">
+    <table class="center">
+
       <tr>
         <td style="width: 23%;">Dani&nbsp;Megert</td>
         <td style="width: 23%;">David&nbsp;Williams</td>
@@ -222,9 +221,8 @@ ob_start();
       </tr>
     </table>
     <h5>Platform Text</h5>
-    <table
-      width="92%"
-      align="center">
+    <table class="center">
+
       <tr>
         <td style="width: 23%;">Dani&nbsp;Megert</td>
         <td style="width: 23%;">Markus&nbsp;Keller</td>
@@ -233,9 +231,8 @@ ob_start();
       </tr>
     </table>
     <h5>Platform Debug</h5>
-    <table
-      width="92%"
-      align="center">
+    <table class="center">
+
       <tr>
         <td style="width: 23%;">Sarika&nbsp;Sinha</td>
         <td style="width: 23%;">Dani&nbsp;Megert</td>
@@ -245,9 +242,7 @@ ob_start();
     </table>
 
     <h4>Eclipse JDT</h4>
-    <table
-      width="92%"
-      align="center">
+    <table class="center">
       <tr>
         <td style="width: 23%;">Andrew&nbsp;Clement</td>
         <td style="width: 23%;">Dani&nbsp;Megert</td>
@@ -274,9 +269,7 @@ ob_start();
       </tr>
     </table>
     <h4>Eclipse PDE</h4>
-    <table
-      width="92%"
-      align="center">
+    <table class="center">
       <tr>
         <td style="width: 23%;">Vikas&nbsp;Chandra</td>
         <td style="width: 23%;">Pascal&nbsp;Rapicault</td>
