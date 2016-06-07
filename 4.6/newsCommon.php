@@ -27,6 +27,7 @@ $title = innerHTML($title);
 $pageTitle 		= $title;
 $pageKeywords	= $keyword;
 $pageAuthor		= "";
+$endingBreadCrumbs="<li><a href=\"..\">$title</a></li>";
 
 
 $html = $body;
