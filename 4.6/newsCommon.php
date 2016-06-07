@@ -42,4 +42,3 @@ if (! isset($theme)) {
 
 $App->AddExtraHtmlHeader('<link rel="stylesheet" href="news.css" type="text/css">');
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
-$App->$Breadcrumb->addCrumb($title, "..", "_self");
