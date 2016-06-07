@@ -129,22 +129,22 @@ ob_start();
       width="92%"
       align="center">
       <tr>
-        <td width="23%">Arun&nbsp;Thondapu</td>
-        <td width="23%">Alexander&nbsp;Kurtakov</td>
-        <td width="23%">Lakshmi&nbsp;Shanmugam</td>
-        <td width="23%">Leo&nbsp;Ufimtsev</td>
+        <td style="width: 23%;">Arun&nbsp;Thondapu</td>
+        <td style="width: 23%;">Alexander&nbsp;Kurtakov</td>
+        <td style="width: 23%;">Lakshmi&nbsp;Shanmugam</td>
+        <td style="width: 23%;">Leo&nbsp;Ufimtsev</td>
       </tr>
       <tr>
-        <td width="23%">Lina&nbsp;Kemmel</td>
-        <td width="23%">Markus&nbsp;Keller</td>
-        <td width="23%">Niraj&nbsp;Modi</td>
-        <td width="23%">Sravan&nbsp;Kumar&nbsp;Lakkimsetti</td>
+        <td style="width: 23%;">Lina&nbsp;Kemmel</td>
+        <td style="width: 23%;">Markus&nbsp;Keller</td>
+        <td style="width: 23%;">Niraj&nbsp;Modi</td>
+        <td style="width: 23%;">Sravan&nbsp;Kumar&nbsp;Lakkimsetti</td>
       </tr>
       <tr>
-        <td width="23%">Eric&nbsp;Williams</td>
-        <td width="23%">&nbsp;</td>
-        <td width="23%">&nbsp;</td>
-        <td width="23%">&nbsp;</td>
+        <td style="width: 23%;">Eric&nbsp;Williams</td>
+        <td style="width: 23%;">&nbsp;</td>
+        <td style="width: 23%;">&nbsp;</td>
+        <td style="width: 23%;">&nbsp;</td>
       </tr>
     </table>
     <h5>Platform UI</h5>
@@ -152,28 +152,28 @@ ob_start();
       width="92%"
       align="center">
       <tr>
-        <td width="23%">Steve&nbsp;Francisco</td>
-        <td width="23%">Sopot&nbsp;Cela</td>
-        <td width="23%">Brian&nbsp;de&nbsp;Alwis</td>
-        <td width="23%">Paul&nbsp;Elder</td>
+        <td style="width: 23%;">Steve&nbsp;Francisco</td>
+        <td style="width: 23%;">Sopot&nbsp;Cela</td>
+        <td style="width: 23%;">Brian&nbsp;de&nbsp;Alwis</td>
+        <td style="width: 23%;">Paul&nbsp;Elder</td>
       </tr>
       <tr>
-        <td width="23%">Dirk&nbsp;Fauth</td>
-        <td width="23%">Markus&nbsp;Keller</td>
-        <td width="23%">Andrey&nbsp;Loskutov</td>
-        <td width="23%">Dani&nbsp;Megert</td>
+        <td style="width: 23%;">Dirk&nbsp;Fauth</td>
+        <td style="width: 23%;">Markus&nbsp;Keller</td>
+        <td style="width: 23%;">Andrey&nbsp;Loskutov</td>
+        <td style="width: 23%;">Dani&nbsp;Megert</td>
       </tr>
       <tr>
-        <td width="23%">Eric&nbsp;Moffatt</td>
-        <td width="23%">Sergey&nbsp;Prigogin</td>
-        <td width="23%">Olivier&nbsp;Prouvost</td>
-        <td width="23%">Szymon&nbsp;Ptaszkiewicz</td>
+        <td style="width: 23%;">Eric&nbsp;Moffatt</td>
+        <td style="width: 23%;">Sergey&nbsp;Prigogin</td>
+        <td style="width: 23%;">Olivier&nbsp;Prouvost</td>
+        <td style="width: 23%;">Szymon&nbsp;Ptaszkiewicz</td>
       </tr>
       <tr>
-        <td width="23%">Thomas&nbsp;Schindl</td>
-        <td width="23%">Wojciech&nbsp;Sudol</td>
-        <td width="23%">Paul&nbsp;Webster</td>
-        <td width="23%">Lars&nbsp;Vogel</td>
+        <td style="width: 23%;">Thomas&nbsp;Schindl</td>
+        <td style="width: 23%;">Wojciech&nbsp;Sudol</td>
+        <td style="width: 23%;">Paul&nbsp;Webster</td>
+        <td style="width: 23%;">Lars&nbsp;Vogel</td>
       </tr>
     </table>
     <h5>Platform Resources</h5>
@@ -181,10 +181,10 @@ ob_start();
       width="92%"
       align="center">
       <tr>
-        <td width="23%">Dani&nbsp;Megert</td>
-        <td width="23%">Sergey&nbsp;Prigogin</td>
-        <td width="23%">Szymon&nbsp;Ptaszkiewicz</td>
-        <td width="23%">&nbsp;</td>
+        <td style="width: 23%;">Dani&nbsp;Megert</td>
+        <td style="width: 23%;">Sergey&nbsp;Prigogin</td>
+        <td style="width: 23%;">Szymon&nbsp;Ptaszkiewicz</td>
+        <td style="width: 23%;">&nbsp;</td>
       </tr>
     </table>
     <h5>Platform Releng</h5>
@@ -192,10 +192,10 @@ ob_start();
       width="92%"
       align="center">
       <tr>
-        <td width="23%">David&nbsp;Williams</td>
-        <td width="23%">Dani&nbsp;Megert</td>
-        <td width="23%">Markus&nbsp;Keller</td>
-        <td width="23%">&nbsp;</td>
+        <td style="width: 23%;">David&nbsp;Williams</td>
+        <td style="width: 23%;">Dani&nbsp;Megert</td>
+        <td style="width: 23%;">Markus&nbsp;Keller</td>
+        <td style="width: 23%;">&nbsp;</td>
       </tr>
     </table>
     <h5>Platform Documentation</h5>
@@ -203,22 +203,22 @@ ob_start();
       width="92%"
       align="center">
       <tr>
-        <td width="23%">Dani&nbsp;Megert</td>
-        <td width="23%">David&nbsp;Williams</td>
-        <td width="23%">Jay&nbsp;Arthanareeswaran</td>
-        <td width="23%">Lars&nbsp;Vogel</td>
+        <td style="width: 23%;">Dani&nbsp;Megert</td>
+        <td style="width: 23%;">David&nbsp;Williams</td>
+        <td style="width: 23%;">Jay&nbsp;Arthanareeswaran</td>
+        <td style="width: 23%;">Lars&nbsp;Vogel</td>
       </tr>
       <tr>
-        <td width="23%">Markus&nbsp;Keller</td>
-        <td width="23%">Noopur&nbsp;Gupta</td>
-        <td width="23%">Sarika&nbsp;Sinha</td>
-        <td width="23%">Stephan&nbsp;Herrmann</td>
+        <td style="width: 23%;">Markus&nbsp;Keller</td>
+        <td style="width: 23%;">Noopur&nbsp;Gupta</td>
+        <td style="width: 23%;">Sarika&nbsp;Sinha</td>
+        <td style="width: 23%;">Stephan&nbsp;Herrmann</td>
       </tr>
       <tr>
-        <td width="23%">Szymon&nbsp;Ptaszkiewicz</td>
-        <td width="23%">&nbsp;</td>
-        <td width="23%">&nbsp;</td>
-        <td width="23%">&nbsp;</td>
+        <td style="width: 23%;">Szymon&nbsp;Ptaszkiewicz</td>
+        <td style="width: 23%;">&nbsp;</td>
+        <td style="width: 23%;">&nbsp;</td>
+        <td style="width: 23%;">&nbsp;</td>
       </tr>
     </table>
     <h5>Platform Text</h5>
@@ -226,10 +226,10 @@ ob_start();
       width="92%"
       align="center">
       <tr>
-        <td width="23%">Dani&nbsp;Megert</td>
-        <td width="23%">Markus&nbsp;Keller</td>
-        <td width="23%">&nbsp;</td>
-        <td width="23%">&nbsp;</td>
+        <td style="width: 23%;">Dani&nbsp;Megert</td>
+        <td style="width: 23%;">Markus&nbsp;Keller</td>
+        <td style="width: 23%;">&nbsp;</td>
+        <td style="width: 23%;">&nbsp;</td>
       </tr>
     </table>
     <h5>Platform Debug</h5>
@@ -237,10 +237,10 @@ ob_start();
       width="92%"
       align="center">
       <tr>
-        <td width="23%">Sarika&nbsp;Sinha</td>
-        <td width="23%">Dani&nbsp;Megert</td>
-        <td width="23%">Markus&nbsp;Keller</td>
-        <td width="23%">Michael&nbsp;Rennie</td>
+        <td style="width: 23%;">Sarika&nbsp;Sinha</td>
+        <td style="width: 23%;">Dani&nbsp;Megert</td>
+        <td style="width: 23%;">Markus&nbsp;Keller</td>
+        <td style="width: 23%;">Michael&nbsp;Rennie</td>
       </tr>
     </table>
 
@@ -249,28 +249,28 @@ ob_start();
       width="92%"
       align="center">
       <tr>
-        <td width="23%">Andrew&nbsp;Clement</td>
-        <td width="23%">Dani&nbsp;Megert</td>
-        <td width="23%">Jayaprakash&nbsp;Arthanareeswaran</td>
-        <td width="23%">Jesper&nbsp;Moller</td>
+        <td style="width: 23%;">Andrew&nbsp;Clement</td>
+        <td style="width: 23%;">Dani&nbsp;Megert</td>
+        <td style="width: 23%;">Jayaprakash&nbsp;Arthanareeswaran</td>
+        <td style="width: 23%;">Jesper&nbsp;Moller</td>
       </tr>
       <tr>
-        <td width="23%">Manoj&nbsp;Palat</td>
-        <td width="23%">Markus&nbsp;Keller</td>
-        <td width="23%">Mateusz&nbsp;Matela</td>
-        <td width="23%">Michael&nbsp;Rennie</td>
+        <td style="width: 23%;">Manoj&nbsp;Palat</td>
+        <td style="width: 23%;">Markus&nbsp;Keller</td>
+        <td style="width: 23%;">Mateusz&nbsp;Matela</td>
+        <td style="width: 23%;">Michael&nbsp;Rennie</td>
       </tr>
       <tr>
-        <td width="23%">Noopur&nbsp;Gupta</td>
-        <td width="23%">Olivier&nbsp;Thomann</td>
-        <td width="23%">Sarika&nbsp;Sinha</td>
-        <td width="23%">Sasikanth&nbsp;Bharadwaj</td>
+        <td style="width: 23%;">Noopur&nbsp;Gupta</td>
+        <td style="width: 23%;">Olivier&nbsp;Thomann</td>
+        <td style="width: 23%;">Sarika&nbsp;Sinha</td>
+        <td style="width: 23%;">Sasikanth&nbsp;Bharadwaj</td>
       </tr>
       <tr>
-        <td width="23%">Stefan&nbsp;Xenos</td>
-        <td width="23%">Stephan&nbsp;Herrmann</td>
-        <td width="23%">Till&nbsp;Brychcy</td>
-        <td width="23%">Walter&nbsp;Harley</td>
+        <td style="width: 23%;">Stefan&nbsp;Xenos</td>
+        <td style="width: 23%;">Stephan&nbsp;Herrmann</td>
+        <td style="width: 23%;">Till&nbsp;Brychcy</td>
+        <td style="width: 23%;">Walter&nbsp;Harley</td>
       </tr>
     </table>
     <h4>Eclipse PDE</h4>
@@ -278,16 +278,16 @@ ob_start();
       width="92%"
       align="center">
       <tr>
-        <td width="23%">Vikas&nbsp;Chandra</td>
-        <td width="23%">Pascal&nbsp;Rapicault</td>
-        <td width="23%">Dani&nbsp;Megert</td>
-        <td width="23%">Lars&nbsp;Vogel</td>
+        <td style="width: 23%;">Vikas&nbsp;Chandra</td>
+        <td style="width: 23%;">Pascal&nbsp;Rapicault</td>
+        <td style="width: 23%;">Dani&nbsp;Megert</td>
+        <td style="width: 23%;">Lars&nbsp;Vogel</td>
       </tr>
       <tr>
-        <td width="23%">Curtis&nbsp;Windatt</td>
-        <td width="23%">&nbsp;</td>
-        <td width="23%">&nbsp;</td>
-        <td width="23%">&nbsp;</td>
+        <td style="width: 23%;">Curtis&nbsp;Windatt</td>
+        <td style="width: 23%;">&nbsp;</td>
+        <td style="width: 23%;">&nbsp;</td>
+        <td style="width: 23%;">&nbsp;</td>
       </tr>
     </table>
   </div>
