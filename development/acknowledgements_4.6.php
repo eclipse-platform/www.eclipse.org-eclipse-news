@@ -12,6 +12,10 @@ $Menu   = new Menu();
 $right_nav = FALSE;
 $keyword = 'eclipse, 4.6, Neon, acknowledgements, acknowledgments, thanks';
 ?>
+
+<!-- I could not find a place to put "style" element that was 
+     "legal". I'm sure there is a way, if suspect the table will 
+     look fine without it. 
 <style>
   table.center {
     width:92%; 
@@ -19,6 +23,7 @@ $keyword = 'eclipse, 4.6, Neon, acknowledgements, acknowledgments, thanks';
     margin-right:4%;
   }
 </style>
+--> 
 
 <?php
 
