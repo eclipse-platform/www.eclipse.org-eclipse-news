@@ -50,7 +50,7 @@ ob_start();
 
     <h3>Eclipse Neon Acknowledgements</h3>
 <p class="bg-danger">NOTE: This page is under development.</p>
-    <p>The entire Eclipse and Equinox team would like to thank the Eclipse Foundation staff for their tireless efforts, including: Denis Roy, Matt Ward, and Mikael Barbero for not only keeping all
+    <p>The entire Eclipse team would like to thank the Eclipse Foundation staff for their tireless efforts, including: Denis Roy, Matt Ward, and Mikael Barbero for not only keeping all
       that infrastructure going, but also constantly improving it; Janet Campbell and Sharon Corbett for guiding us through the Eclipse legal process; Wayne Beaton for giving us improved tools to
       simplify and manage our development process; Ian Skerrett and Roxanne Joncas for help with marketing the Eclipse release and providing Logos and artwork; and Mike Milinkovich for running the whole show. In particular, we appreciate the
       Eclipse Foundation providing development resources through the new <a href="https://eclipse.org/contribute/dev_program.php">Friend of Eclipse Enhancement Program (FEEP)</a>.</p>
@@ -118,15 +118,9 @@ ob_start();
         Stefan Xenos, Simon Scholz and Alex Blewitt.
       </p>
 
-    <p>The p2 team would like to thank
-    <!-- the entire Eclipse team and community for supporting us while some major changes went in p2 to put in place the native layout for Mac. A special thanks to
-      David Williams for all his assistance and patience and on getting the build going. Finally, thanks to everyone who provided bug reports and contributed fixes.
-      -->
-      </p>
-
     <h3>Active Committers</h3>
-      <p class="bg-danger">NOTE: This section is left as a place holder and will be updated later.</p>
-    <p>This Eclipse and Equinox release was brought to you by the following committers. These committers were active at the time of the release (that is, one or more commits since previous
+     
+    <p>This Eclipse release was brought to you by the following committers. These committers were active at the time of the release (that is, one or more commits since previous
       release.)</p>
     <p>
     <h4>Eclipse Platform</h4>
@@ -294,34 +288,6 @@ ob_start();
         <td width="23%">&nbsp;</td>
         <td width="23%">&nbsp;</td>
         <td width="23%">&nbsp;</td>
-      </tr>
-    </table>
-    <h4>Equinox</h4>
-    <table
-      width="92%"
-      align="center">
-      <tr>
-        <td width="23%">Thomas&nbsp;Watson</td>
-        <td width="23%">Arun&nbsp;Thondapu</td>
-        <td width="23%">BJ&nbsp;Hargrave</td>
-        <td width="23%">Pascal&nbsp;Rapicault</td>
-      </tr>
-      <tr>
-        <td width="23%">Martin&nbsp;Lippert</td>
-        <td width="23%">Silenio&nbsp;Quarti</td>
-        <td width="23%">Raymond&nbsp;Auge</td>
-        <td width="23%">&nbsp;</td>
-      </tr>
-    </table>
-    <h4>Equinox - p2</h4>
-    <table
-      width="92%"
-      align="center">
-      <tr>
-        <td width="23%">Pascal&nbsp;Rapicault</td>
-        <td width="23%">Tobias&nbsp;Oberlies</td>
-        <td width="23%">Thomas&nbsp;Watson</td>
-        <td width="23%">Susan&nbsp;McCourt</td>
       </tr>
     </table>
   </div>
