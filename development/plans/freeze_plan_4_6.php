@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2016-06-03
+	# Date:			2016-06-07
 	#
 	# Description: Eclipse project Neon release freeze plan
 	#
@@ -41,7 +41,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>June 3 - Submit RC4 to release train</b></p>
+			<p><b>June 7 - Post RC4a builds will only occur if required to meet translation, documentation and Neon goals.</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -217,7 +217,7 @@ ob_start();
 	            <td height="20">&nbsp;&nbsp;<b><a href="#RC4"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> goals</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
-	          <tr class="current">
+	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">3</td>
 	            <td align="right" height="20">Fri</td>
@@ -232,7 +232,7 @@ ob_start();
 			   <tr>
 	            <td height="20"></td>
 	          </tr>
-			  <tr>
+			  <tr class="current">
 	            <td height="20"></td>
 				<td align="right" height="20"></td>
 	            <td align="right" height="20"></td>
