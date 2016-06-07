@@ -1,11 +1,5 @@
 
-<style>
-  table.center {
-    width:92%; 
-    margin-left:4%; 
-    margin-right:4%;
-  }
-</style>
+
 <?php
 //ini_set("display_errors", "true");
 //error_reporting (E_ALL);
@@ -17,7 +11,16 @@ $Nav  = new Nav();
 $Menu   = new Menu();
 $right_nav = FALSE;
 $keyword = 'eclipse, 4.6, Neon, acknowledgements, acknowledgments, thanks';
+?>
+<style>
+  table.center {
+    width:92%; 
+    margin-left:4%; 
+    margin-right:4%;
+  }
+</style>
 
+<?php
 
 
 include($App->getProjectCommon());
