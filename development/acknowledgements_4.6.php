@@ -49,7 +49,7 @@ ob_start();
   <div class="homeitem3col">
 
     <h3>Eclipse Neon Acknowledgements</h3>
-<p class="bg-danger">NOTE: This page is under development.</p>
+
     <p>The entire Eclipse team would like to thank the Eclipse Foundation staff for their tireless efforts, including: Denis Roy, Matt Ward, and Mikael Barbero for not only keeping all
       that infrastructure going, but also constantly improving it; Janet Campbell and Sharon Corbett for guiding us through the Eclipse legal process; Wayne Beaton for giving us improved tools to
       simplify and manage our development process; Ian Skerrett and Roxanne Joncas for help with marketing the Eclipse release and providing Logos and artwork; and Mike Milinkovich for running the whole show. In particular, we appreciate the
