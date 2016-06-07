@@ -293,8 +293,7 @@ ob_start();
   </div>
 
 </div>
-</body>
-</html>
+
 
 
 <?php
