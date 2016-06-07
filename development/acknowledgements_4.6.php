@@ -75,6 +75,8 @@ ob_start();
       helped improve the Resources components by their code contributions to this release: Alex Blewitt, Richard Gobeli, Mickael Istria, Markus Keller, Tobias Melcher, Ed Merks, Pascal Rapicault,
       Lars Vogel, Thomas Wolf, Stefan Xenos.</p>
 
+    <!-- For Neon, we say "Platform UI (and Text)" since they combined near the end of the cycle. 
+         In future versions, should just say "Platform UI" -->
     <p>The Platform UI (and Text) team would like to thank
       everyone who has helped us to improve the quality by testing and reporting bugs and enhancement requests. Special thanks to the following list of
       people, in alphabetical order, who contributed code to the project:
@@ -158,7 +160,7 @@ ob_start();
         <td style="width: 23%;">&nbsp;</td>
       </tr>
     </table>
-    <h5>Platform UI</h5>
+    <h5>Platform UI (and Text)</h5>
     <table style="width:92%; margin-left:4%; margin-right:4%;">
       <tr>
         <td style="width: 23%;">Steve&nbsp;Francisco</td>
@@ -187,7 +189,6 @@ ob_start();
     </table>
     <h5>Platform Resources</h5>
     <table style="width:92%; margin-left:4%; margin-right:4%;">
-
       <tr>
         <td style="width: 23%;">Dani&nbsp;Megert</td>
         <td style="width: 23%;">Sergey&nbsp;Prigogin</td>
@@ -223,16 +224,6 @@ ob_start();
       <tr>
         <td style="width: 23%;">Szymon&nbsp;Ptaszkiewicz</td>
         <td style="width: 23%;">&nbsp;</td>
-        <td style="width: 23%;">&nbsp;</td>
-        <td style="width: 23%;">&nbsp;</td>
-      </tr>
-    </table>
-    <h5>Platform Text</h5>
-    <table style="width:92%; margin-left:4%; margin-right:4%;">
-
-      <tr>
-        <td style="width: 23%;">Dani&nbsp;Megert</td>
-        <td style="width: 23%;">Markus&nbsp;Keller</td>
         <td style="width: 23%;">&nbsp;</td>
         <td style="width: 23%;">&nbsp;</td>
       </tr>
