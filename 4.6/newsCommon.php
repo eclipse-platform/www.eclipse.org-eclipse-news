@@ -27,7 +27,6 @@ $title = innerHTML($title);
 $pageTitle 		= $title;
 $pageKeywords	= $keyword;
 $pageAuthor		= "";
-$endingBreadCrumbs="<li><a href=\"..\">$title</a></li>";
 
 
 $html = $body;
@@ -43,3 +42,4 @@ if (! isset($theme)) {
 
 $App->AddExtraHtmlHeader('<link rel="stylesheet" href="news.css" type="text/css">');
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
+$App->$Breadcrumb->addCrumb($title, "..", "_self");
