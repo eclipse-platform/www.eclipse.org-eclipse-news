@@ -94,11 +94,13 @@ ob_start();
       for their code contributions. We would like to appreciate Silenio Quarti, Bogdan Gheorghe and Grant Gayed for always supporting the team.
     </p>
 
-    <p>The release engineering team would like to thank the many people who helped to improve our build
-     as well as the committers who set up and maintain their own Platform HIPP jobs.
+    <p>The Release Engineering team would like to thank the many people who helped to improve our build
+     as well as the committers who set up and maintain their own Platform HIPP jobs. And a special thanks to other Eclipse projects we prereq: EMF and ECF who 
+     also provide timely updates so that we can be ontime. 
     Also, the webmasters at the Eclipse Foundation for their constant help and education and improvements (especially the nice integration of Gerrit and Bugzilla); also
       Mikael Barbero who fixed several issues in CBI and greatly improved the signing process.
-      We also thank the Tycho Team for providing fixes and timely updates to Tycho.
+      We also thank the other Eclipse projects that make up a part of the infrastructure we 
+      depend on: Tycho, EGit, and Hudson for providing fixes and steady improvements.
     </p>
     <p>The JDT Core team would like to thank everyone who has helped us improve quality by testing and filing good bug reports.We would also like to acknowledge David Williams for all
      the build and releng support. We would like to thank Alex Blewitt, Alex Panchenko, Alexander Kurtakov, Andreas Sewe, Andrey Loskutov, Carmi Grushko, Dusi Sarath Chandra,
