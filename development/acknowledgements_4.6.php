@@ -138,7 +138,7 @@ ob_start();
     <p>
     <h4>Eclipse Platform</h4>
     <h5>Platform SWT</h5>
-    <table class="center">
+    <table style="width:92%; margin-left:4%; margin-right:4%;">
       <tr>
         <td style="width: 23%;">Arun&nbsp;Thondapu</td>
         <td style="width: 23%;">Alexander&nbsp;Kurtakov</td>
@@ -159,7 +159,7 @@ ob_start();
       </tr>
     </table>
     <h5>Platform UI</h5>
-    <table class="center">
+    <table style="width:92%; margin-left:4%; margin-right:4%;">
       <tr>
         <td style="width: 23%;">Steve&nbsp;Francisco</td>
         <td style="width: 23%;">Sopot&nbsp;Cela</td>
@@ -186,7 +186,7 @@ ob_start();
       </tr>
     </table>
     <h5>Platform Resources</h5>
-    <table class="center">
+    <table style="width:92%; margin-left:4%; margin-right:4%;">
 
       <tr>
         <td style="width: 23%;">Dani&nbsp;Megert</td>
@@ -196,7 +196,7 @@ ob_start();
       </tr>
     </table>
     <h5>Platform Releng</h5>
-    <table class="center">
+    <table style="width:92%; margin-left:4%; margin-right:4%;">
 
       <tr>
         <td style="width: 23%;">David&nbsp;Williams</td>
@@ -206,7 +206,7 @@ ob_start();
       </tr>
     </table>
     <h5>Platform Documentation</h5>
-    <table class="center">
+    <table style="width:92%; margin-left:4%; margin-right:4%;">
 
       <tr>
         <td style="width: 23%;">Dani&nbsp;Megert</td>
@@ -228,7 +228,7 @@ ob_start();
       </tr>
     </table>
     <h5>Platform Text</h5>
-    <table class="center">
+    <table style="width:92%; margin-left:4%; margin-right:4%;">
 
       <tr>
         <td style="width: 23%;">Dani&nbsp;Megert</td>
@@ -238,7 +238,7 @@ ob_start();
       </tr>
     </table>
     <h5>Platform Debug</h5>
-    <table class="center">
+    <table style="width:92%; margin-left:4%; margin-right:4%;">
 
       <tr>
         <td style="width: 23%;">Sarika&nbsp;Sinha</td>
@@ -249,7 +249,7 @@ ob_start();
     </table>
 
     <h4>Eclipse JDT</h4>
-    <table class="center">
+    <table style="width:92%; margin-left:4%; margin-right:4%;">
       <tr>
         <td style="width: 23%;">Andrew&nbsp;Clement</td>
         <td style="width: 23%;">Dani&nbsp;Megert</td>
@@ -276,7 +276,7 @@ ob_start();
       </tr>
     </table>
     <h4>Eclipse PDE</h4>
-    <table class="center">
+    <table style="width:92%; margin-left:4%; margin-right:4%;">
       <tr>
         <td style="width: 23%;">Vikas&nbsp;Chandra</td>
         <td style="width: 23%;">Pascal&nbsp;Rapicault</td>
