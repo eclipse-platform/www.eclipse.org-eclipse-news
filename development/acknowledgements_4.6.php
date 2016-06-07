@@ -9,6 +9,15 @@ $Nav  = new Nav();
 $Menu   = new Menu();
 $right_nav = FALSE;
 $keyword = 'eclipse, 4.6, Neon, acknowledgements, acknowledgments, thanks';
+
+<style>
+  table.center {
+    width:92%; 
+    margin-left:4%; 
+    margin-right:4%;
+  }
+</style>
+
 include($App->getProjectCommon());
 
 #echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">';
@@ -43,13 +52,7 @@ $pageAuthor    = "David Williams and the Eclipse Project Team";
 # Paste your HTML content between the markers!
 ob_start();
 ?>
-<style>
-  table.center {
-    width:92%; 
-    margin-left:4%; 
-    margin-right:4%;
-  }
-</style>
+
 <div id="midcolumn">
 
   <div class="homeitem3col">
