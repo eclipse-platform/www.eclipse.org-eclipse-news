@@ -180,23 +180,23 @@ ob_start();
         <td style="width: 23%;">Lars&nbsp;Vogel</td>
         <td style="width: 23%;">Markus&nbsp;Keller</td>
         <td style="width: 23%;">Mickael&nbsp;Istria</td>
-        <td style="width: 23%;">Patrik&nbsp;Suzzi</td>
+        <td style="width: 23%;">Olivier&nbsp;Prouvost</td>
       </tr>
       <tr>
+        <td style="width: 23%;">Patrik&nbsp;Suzzi</td>
         <td style="width: 23%;">Sergey&nbsp;Prigogin</td>
         <td style="width: 23%;">Simon&nbsp;Scholz</td>
         <td style="width: 23%;">Sopot&nbsp;Cela</td>
-        <td style="width: 23%;">Stefan&nbsp;Xenos</td>
       </tr>
       <tr>
+        <td style="width: 23%;">Stefan&nbsp;Xenos</td>
         <td style="width: 23%;">Szymon&nbsp;Ptaszkiewicz</td>
         <td style="width: 23%;">Thomas&nbsp;Schindl</td>
         <td style="width: 23%;">Thomas&nbsp;Watson</td>
-        <td style="width: 23%;">Tony&nbsp;McCrary</td>
       </tr>
       <tr>
+        <td style="width: 23%;">Tony&nbsp;McCrary</td>
         <td style="width: 23%;">Wojciech&nbsp;Sudol</td>
-        <td style="width: 23%;">&nbsp;</td>
         <td style="width: 23%;">&nbsp;</td>
         <td style="width: 23%;">&nbsp;</td>
       </tr>
