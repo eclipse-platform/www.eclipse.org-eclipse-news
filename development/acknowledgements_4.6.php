@@ -165,28 +165,40 @@ ob_start();
     <h5>Platform UI (and Text)</h5>
     <table style="width:92%; margin-left:4%; margin-right:4%;">
       <tr>
-        <td style="width: 23%;">Steve&nbsp;Francisco</td>
-        <td style="width: 23%;">Sopot&nbsp;Cela</td>
-        <td style="width: 23%;">Brian&nbsp;de&nbsp;Alwis</td>
-        <td style="width: 23%;">Paul&nbsp;Elder</td>
-      </tr>
-      <tr>
-        <td style="width: 23%;">Dirk&nbsp;Fauth</td>
-        <td style="width: 23%;">Markus&nbsp;Keller</td>
+        <td style="width: 23%;">Alexander&nbsp;Kurtakov</td>
         <td style="width: 23%;">Andrey&nbsp;Loskutov</td>
+        <td style="width: 23%;">Brian&nbsp;de&nbsp;Alwis</td>
         <td style="width: 23%;">Dani&nbsp;Megert</td>
       </tr>
       <tr>
+        <td style="width: 23%;">Dirk&nbsp;Fauth</td>
         <td style="width: 23%;">Eric&nbsp;Moffatt</td>
-        <td style="width: 23%;">Sergey&nbsp;Prigogin</td>
-        <td style="width: 23%;">Olivier&nbsp;Prouvost</td>
-        <td style="width: 23%;">Szymon&nbsp;Ptaszkiewicz</td>
+        <td style="width: 23%;">Jonas&nbsp;Helming</td>
+        <td style="width: 23%;">Kalyan&nbsp;Prasad</td>
       </tr>
       <tr>
-        <td style="width: 23%;">Thomas&nbsp;Schindl</td>
-        <td style="width: 23%;">Wojciech&nbsp;Sudol</td>
-        <td style="width: 23%;">Paul&nbsp;Webster</td>
         <td style="width: 23%;">Lars&nbsp;Vogel</td>
+        <td style="width: 23%;">Markus&nbsp;Keller</td>
+        <td style="width: 23%;">Mickael&nbsp;Istria</td>
+        <td style="width: 23%;">Patrik&nbsp;Suzzi</td>
+      </tr>
+      <tr>
+        <td style="width: 23%;">Sergey&nbsp;Prigogin</td>
+        <td style="width: 23%;">Simon&nbsp;Scholz</td>
+        <td style="width: 23%;">Sopot&nbsp;Cela</td>
+        <td style="width: 23%;">Stefan&nbsp;Xenos</td>
+      </tr>
+      <tr>
+        <td style="width: 23%;">Szymon&nbsp;Ptaszkiewicz</td>
+        <td style="width: 23%;">Thomas&nbsp;Schindl</td>
+        <td style="width: 23%;">Thomas&nbsp;Watson</td>
+        <td style="width: 23%;">Tony&nbsp;McCrary</td>
+      </tr>
+      <tr>
+        <td style="width: 23%;">Wojciech&nbsp;Sudol</td>
+        <td style="width: 23%;">&nbsp;</td>
+        <td style="width: 23%;">&nbsp;</td>
+        <td style="width: 23%;">&nbsp;</td>
       </tr>
     </table>
     <h5>Platform Resources</h5>
