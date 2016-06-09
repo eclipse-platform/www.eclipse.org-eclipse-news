@@ -8,11 +8,3 @@
 	width: 755px;
 	margin-right: 0;
 }
-
-/* Workaround for https://bugs.eclipse.org/bugs/show_bug.cgi?id=493368#c29 : */
-a[name], a[name]:hover {
-	font-weight: inherit;
-	text-decoration: inherit;
-	color: inherit;
-	background-color: inherit;
-}
