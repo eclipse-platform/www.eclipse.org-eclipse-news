@@ -104,7 +104,7 @@ ob_start();
     </p>
     <p>The JDT Core team would like to thank everyone who has helped us improve quality by testing and filing good bug reports.We would also like to acknowledge David Williams for all
      the build and releng support. We would like to thank Alex Blewitt, Alex Panchenko, Alexander Kurtakov, Andreas Sewe, Andrey Loskutov, Carmi Grushko, Dusi Sarath Chandra,
-     Gabor Kovesdan, Harry Terkelsen, Igor Fedorenko, John Glassmyer, Lars Vogel, Mat Booth, Robert Roth and Sven Strohschein for their contributions to JDT.
+     Gabor Kovesdan, Harry Terkelsen, Igor Fedorenko, John Glassmyer, Lars Vogel, Mat Booth, Noopur Gupta, Robert Roth and Sven Strohschein for their contributions to JDT.
     </p>
 
     <p>The JDT Debug team would like to thank everyone who helped improve the Java debugger by filing bugs, testing and providing patches. Specifically we would like to thank Andrey Loskutov (for
