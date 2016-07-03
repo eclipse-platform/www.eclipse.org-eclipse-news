@@ -237,13 +237,11 @@
   </tr>
 
   <tr id="first-item-platform-dev">
-    <td class="title">Dependency cleanup</td>
+    <td class="title">Option to replace the declarative service implementation</td>
     <td class="content">
-      Removed the bundle dependencies to <code>org.eclipse.osgi.services</code> and replaced them with the necessary package imports.
+      The platform removed the bundle dependencies to <code>org.eclipse.osgi.services</code> and replaced them with the necessary package imports.
 	  Mostly <code>org.osgi.service.event</code> needed to be added to the imported packages. This was necessary to avoid a
-	  uses constraint violation when trying to replace <code>org.eclipse.equinox.ds</code> with <code>org.apache.felix.scr</code>.
-	  For future implementations it needs to be avoided to require the bundle <code>org.eclipse.osgi.services</code> and only
-	  import the necessary packages in order to be able to exchange OSGi compendium implementations.
+	  uses constraint violation when replacing <code>org.eclipse.equinox.ds</code> with <code>org.apache.felix.scr</code>.
     </td>
   </tr>
 
@@ -253,10 +251,12 @@
   </tr>
 
   <tr id="first-item-equinox">
-    <td class="title">Provided Capabilities</td>
+    <td class="title">Several plug-ins define Provided Capabilities metadata</td>
     <td class="content">
-      <code>org.eclipse.equinox.event</code> and <code>org.eclipse.equinox.cm</code> now provide corresponding <em>osgi.service</em>
-	  capabilities. Additionally p2 capabilities are specified to be able to configure non-code dependencies that can be interpreted
+      You can now rely on OSGi Require-Capability meta data in your Eclipse based application for
+	  <code>org.eclipse.equinox.event</code> and <code>org.eclipse.equinox.cm</code> as they now provide 
+	  the corresponding <em>osgi.service</em> capability. 
+	  Additionally p2 capabilities are specified to be able to configure non-code dependencies that can be interpreted
 	  by the p2 resolver.
     </td>
   </tr>
