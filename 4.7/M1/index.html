@@ -237,9 +237,13 @@
   </tr>
 
   <tr id="first-item-platform-dev">
-    <td class="title">First item</td>
+    <td class="title">Dependency cleanup</td>
     <td class="content">
-      Item blurb.
+      Removed the bundle dependencies to <code>org.eclipse.osgi.services</code> and replaced them with the necessary package imports.
+	  Mostly <code>org.osgi.service.event</code> needed to be added to the imported packages. This was necessary to avoid a
+	  uses constraint violation when trying to replace <code>org.eclipse.equinox.ds</code> with <code>org.apache.felix.scr</code>.
+	  For future implementations it needs to be avoided to require the bundle <code>org.eclipse.osgi.services</code> and only
+	  import the necessary packages in order to be able to exchange OSGi compendium implementations.
     </td>
   </tr>
 
@@ -249,9 +253,11 @@
   </tr>
 
   <tr id="first-item-equinox">
-    <td class="title">First item</td>
+    <td class="title">Provided Capabilities</td>
     <td class="content">
-      Item blurb.
+      <code>org.eclipse.equinox.event</code> and <code>org.eclipse.equinox.cm</code> now provide corresponding <em>osgi.service</em>
+	  capabilities. Additionally p2 capabilities are specified to be able to configure non-code dependencies that can be interpreted
+	  by the p2 resolver.
     </td>
   </tr>
 
