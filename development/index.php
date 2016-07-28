@@ -35,14 +35,15 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div id="current" class="homeitem3col">
 			<h3>Releases currently under development</h3>
+			(plans may not yet be live)
 			<ul>
-		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_6.xml">Eclipse Project Neon 4.6 Plan</a><br>
-		        This document lays out the feature and API set for the Neon 4.6 release of the Eclipse Project.</li>
-		      <li><a href="plans/freeze_plan_4_5_1.php">Eclipse Project Mars SR1 Endgame Plan</a><br>
-				Information about how we plan to wrap up the Mars SR1 release (version 4.5.1).</li>
+		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_7.xml">Eclipse Project Oxygen 4.7 Plan</a><br>
+		        This document lays out the feature and API set for the Oxygen 4.7 release of the Eclipse Project.</li>
+		      <li><a href="plans/freeze_plan_4_6_1.php">Eclipse Project Neon.1 Endgame Plan</a><br>
+				Information about how we plan to wrap up the Neon.1 release (version 4.6.1).</li>
 		    </ul>
 		    See also the <a href="https://projects.eclipse.org/projects/eclipse/governance">Eclipse Project on projects.eclipse.org</a>
-		    and the <strong>preliminary</strong> <a href="https://wiki.eclipse.org/Neon/Simultaneous_Release_Plan">Simultaneous Release plan</a>.
+		    and the <strong>preliminary</strong> <a href="https://wiki.eclipse.org/Oxygen/Simultaneous_Release_Plan">Simultaneous Release plan</a>.
       	</div>
 		<div id="development" class="homeitem3col">
 			<h3>Development Process</h3>
@@ -88,6 +89,7 @@ ob_start();
 			    there is a summary of what clients are affected, and steps for clients
 			    to migrate.
 		        <ul>
+		        <li><a href="porting/eclipse_4_6_porting_guide.php">Eclipse Platform 4.6 Porting Guide</a></li>
 		        <li><a href="porting/eclipse_4_5_porting_guide.php">Eclipse Platform 4.5 Porting Guide</a></li>
 		        <li><a href="porting/eclipse_4_4_porting_guide.php">Eclipse Platform 4.4 Porting Guide</a></li>
 		        <li><a href="porting/eclipse_4_3_porting_guide.php">Eclipse Platform 4.3 Porting Guide</a></li>
@@ -130,6 +132,13 @@ ob_start();
 		<div id="past" class="homeitem3col">
 			<h3>Historical information about past releases</h3>
 			<ul>
+		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_6.xml">Eclipse Project Neon 4.6 Plan</a><br>
+		        This document lays out the feature and API set for the Neon 4.6 release of the Eclipse Project.</li>
+
+		      <li><a href="plans/freeze_plan_4_5_2.php">Eclipse Project Mars SR2 Endgame Plan</a><br>
+				Information about how we wrapped up the Mars SR1 release (version 4.5.2).</li>
+		      <li><a href="plans/freeze_plan_4_5_1.php">Eclipse Project Mars SR1 Endgame Plan</a><br>
+				Information about how we wrapped up the Mars SR1 release (version 4.5.1).</li>
 		      <li><a href="plans/freeze_plan_4_5.php">Eclipse Project Mars 4.5 Endgame Plan</a><br>
 				Information about how we wrapped up the Mars release (version 4.5).</li>
 		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_5.xml">Eclipse Project Mars 4.5 Plan</a><br>
