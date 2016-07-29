@@ -260,13 +260,38 @@
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
 
-  <tr id="first-item-jdt">
-    <td class="title">First item</td>
+  <tr id="show-junit-failure-trace-in-console-view">
+    <td class="title">Show JUnit failure trace in Console view</td>
     <td class="content">
-      Item blurb.
+      A new button has been added to the JUnit Failure Trace header to show the stack trace of a failed JUnit test in the Console view.
+      The Console view makes it convenient to view a long and wide stack trace, copy parts of the stack trace and navigate to the classes on the stack trace using hyperlinks. 
+        <p>
+          <img src="images/show-junit-failure-trace-in-console-view.png" alt="" />
+        </p>
     </td>
   </tr>
 
+  <tr id="skip-button-in-organize-imports-dialog">
+    <td class="title">Skip button in Organize Imports dialog</td>
+    <td class="content">
+      While using the Organize Imports dialog to import multiple unresolved types, you can now skip a type without cancelling the whole operation by using the new Skip button.
+      No import statement is added for the skipped type.
+        <p>
+          <img src="images/skip-button-in-organize-imports-dialog.png" alt="" />
+        </p>
+    </td>
+  </tr>
+
+  <tr id="type-name-with-extension-in-new-java-type-creation-wizards">
+    <td class="title">Type name with extension in New Java Type creation wizards</td>
+    <td class="content">
+      New Java Type creation wizards now accept the <code>.java</code> extension with the type name instead of showing the error message: "Type name must not be qualified".
+      For example, to create a new class <code>com.test.C1&lt;T&gt;.java</code>, you can directly paste this qualified type name with extension in the Name field of the New Java Class wizard.
+        <p>
+          <img src="images/type-name-with-extension.png" alt="" />
+        </p>
+    </td>
+  </tr>
 
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
