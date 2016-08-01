@@ -259,10 +259,17 @@ ob_start();
 	        <p>
 			No API changes are expected during a maintenance release. Any exception must be
 			approved by the PMC. No changes are to be released without prior approval
-			and associated bug report. Send the request for approval to the eclipse-pmc
+			and associated bug report. Please send the request for approval to the eclipse-pmc
 			mailing list. If a change is made to API to make it binary compatible with
 			a previous release, technically this is still an API change, and thus it should be treated
 			in the same way as any other API change requests.	
+			</p>
+
+			<strong>Feature work approval</strong>
+	        <p>
+			Any feature work must be approved by the PMC. No changes are to be released without prior approval
+			and associated bug report. Please send the request for approval to the eclipse-pmc
+			mailing list.
 			</p>
 			
 			<strong>Neon Update 1 (4.6.1) Release</strong>
