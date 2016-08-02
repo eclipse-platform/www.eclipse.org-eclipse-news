@@ -298,9 +298,22 @@
   </tr>
 
   <tr id="first-item-pde">
-    <td class="title">First item</td>
+    <td class="title">New Layout Spy tool</td>
     <td class="content">
-      Item blurb.
+      PDE has added a new tool for debugging SWT layouts. To activate it, use the
+      keybinding <b>Ctrl-Alt-Shift-F9</b> from any window. To use it:
+      <ul>
+      <li>Press Select Control and click the control with a problem</li>
+      <li>Turn on "Show Overlay" and navigate the widget hierarchy until you find a
+          control whose boundary is correct (the red rectangle) and whose child's boundary
+          is incorrect (the yellow rectangle).</li>
+      <li>Look at the results of computeSize. If the result of computeSize is correct,
+          the problem is in the parent layout or its attributes. Otherwise the problem
+          is in the child widget.</li>
+      </ul>
+        <p>
+          <img src="images/layout-spy.png" alt="Screenshot of Layout Spy" />
+        </p>
     </td>
   </tr>
 
