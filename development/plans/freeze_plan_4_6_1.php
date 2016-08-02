@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2016-08-01
+	# Date:			2016-08-02
 	#
 	# Description: Eclipse project 4.6.1 release freeze plan
 	#
@@ -205,7 +205,25 @@ ob_start();
 	        <a href="http://dev.eclipse.org/mailman/listinfo/platform-releng-dev">platform-releng-dev@eclipse.org</a> 
 		    developer mailing list. Anyone participating in the endgame should be subscribed 
 			to this list, and should direct any general questions and comments about the process 
-			there as well.</p>			
+			there as well.</p>
+			
+			<strong>API change approval</strong>
+	        <p>
+			No API changes are expected during a maintenance release. Any exception must be
+			approved by the PMC. No changes are to be released without prior approval
+			and associated bug report. Please send the request for approval to the eclipse-pmc
+			mailing list. If a change is made to API to make it binary compatible with
+			a previous release, technically this is still an API change, and thus it should be treated
+			in the same way as any other API change requests.	
+			</p>
+
+			<strong>Feature work approval</strong>
+	        <p>
+			Any feature work must be approved by the PMC. No changes are to be released without prior approval
+			and associated bug report. Please send the request for approval to the eclipse-pmc
+			mailing list.
+			</p>
+
 
 		   <strong>RC1</strong>
 		   <p>
@@ -255,23 +273,6 @@ ob_start();
 	         <p>No test pass is scheduled unless significant contributions occurred. If so, 
 	         then Thursday would be elected for a one day test pass</p>
 	
-			<strong>API change approval</strong>
-	        <p>
-			No API changes are expected during a maintenance release. Any exception must be
-			approved by the PMC. No changes are to be released without prior approval
-			and associated bug report. Please send the request for approval to the eclipse-pmc
-			mailing list. If a change is made to API to make it binary compatible with
-			a previous release, technically this is still an API change, and thus it should be treated
-			in the same way as any other API change requests.	
-			</p>
-
-			<strong>Feature work approval</strong>
-	        <p>
-			Any feature work must be approved by the PMC. No changes are to be released without prior approval
-			and associated bug report. Please send the request for approval to the eclipse-pmc
-			mailing list.
-			</p>
-			
 			<strong>Neon Update 1 (4.6.1) Release</strong>
 			<p>The Neon Update 1 (4.6.1) release should be complete and available for download by 
 	              the end of September 2016 as part of the <a href="http://wiki.eclipse.org/Neon">Neon 
