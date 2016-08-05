@@ -31,153 +31,32 @@
     <col />
   </colgroup>
 
-  <tr>
-    <td id="Instructions" class="section" colspan="2">
-      <h2>Instructions</h2>
-    </td>
-  </tr>
-
-  <tr id="item-name">
-    <td class="title">News item title and description</td>
-    <td class="content">
-        The whole entry should be a blurb pitched to the Eclipse end user community
-        (not just to members of the Eclipse Platform development team).
-      <p>
-        The title should be short and snappy, written in
-        <a href="https://en.wikipedia.org/wiki/Letter_case#Case_styles">sentence case</a>, and using
-        "<a href="https://en.wikipedia.org/wiki/Headlinese#Syntax">headlinese</a>" (compressed style).
-        The title should <em>not</em> use trailing
-        punctuation and a unique id attribute on the &lt;tr&gt; HTML element (id is all-lowercase and hyphen-separated).
-      </p>
-      <p>
-        In the news description, tell
-        users about changes they'll see in the UI. Tell component writers
-        about changes they'll see at the client- and server-side APIs. Try to
-        generate some excitement; save the boring details for the manual; be short and don't repeat yourself. The
-        description should be complete sentences, with trailing punctuation.
-      </p>
-      <p>Make the entry self-contained and mention API classes.
-        Do <em>not</em> link to bugs and don't promote individuals or third-party products.
-      </p>
-      <p>Use active voice (say "you", not "the user"), and follow other advice in the
-        <a href="http://wiki.eclipse.org/Eclipse_Doc_Style_Guide#topic-content">Topic&nbsp;Content</a>
-        section of the Eclipse Doc Style Guidelines.
-      </p>
-      <p>Stick to the default font and size. Make command names (<b>Quick Fix</b>),
-        keyboard shortcuts (<b>Ctrl+1</b>), and preference page paths
-        (<b>Preferences &gt; General &gt; Keys</b>) bold.
-      </p>
-      <p>Do <em>not</em> enclose the first paragraph of an item in <code>&lt;p&gt;&lt;/p&gt;</code> tags.
-      </p>
-      <p>See entries in <a href="../../4.6/M7/index.html">published</a> news documents for correct examples. These published news entries have been already reviewed, while
-         entries in the evolving document may still contain errors.
-      </p>
-    </td>
-  </tr>
-
-  <tr id="screenshots">
-    <td class="title">Screenshots</td>
-    <td class="content">
-        If a small image sheds light, place it below the description, in a separate
-        paragraph. As the majority of the Eclipse users uses Windows 7, regular screen snapshots
-        should be done on Windows 7 if possible, but screenshots from
-        other operating system are also acceptable. Crop
-        out any extraneous stuff to focus the reader's attention on your new
-        feature. The image should be
-        <b>no more than 520 pixels wide</b> and in <b>PNG</b> format (as opposed
-        to GIF, TIF, BMP, or JPG). Use PNG-8 if your image doesn't have a lot of color,
-        or PNG-24 if the screen shot uses enough color to warrant additional color depth.
-        See also the
-        <a href="http://wiki.eclipse.org/Eclipse_Doc_Style_Guide#graphics">Graphics</a>
-        section of the Eclipse Doc Style Guidelines.
-      <p>The Windows <b>Snipping Tool</b> actually saves to PNG on Windows 7 and can easily be
-        used to crop and save screenshots:</p>
-      <ul>
-        <li>Arrange the windows for the shot</li>
-        <li>Use the Windows <b>Snipping Tool</b> to capture part of the screen</li>
-        <li>Use <b>File &gt; Save As</b> to save the screenshot as a PNG</li>
-        <li>Overlays such as red circles or boxes to call out details can be done using Microsoft Paint</li>
-      </ul>
-      <p>Name the file in a way that is appropriate and specific to the item
-        (e.g., key-bindings.png, rather than something generic like image.png).
-        Use all <b>lowercase</b> letters in the image file name, including the &quot;<b>.png</b>&quot;
-        file extension. As a separator, use <b>hyphen</b> &quot;-&quot; rather than
-        underscore
-        &quot;_&quot;. </p>
-      <p>Put all the images in a sibling directory named &quot;images&quot;.
-        This gives XHTML like:<br/>
-        <code>&lt;img src=&quot;images/foo-view.png&quot; alt=&quot;&quot;/&gt;</code><br/>
-        Include a suitable <a href="http://www.w3.org/TR/html4/struct/objects.html#h-13.8"><code>alt</code></a> attribute.
-        The alt text should be empty ("") if the image just illustrates the text.
-        Only use the alt text to add information that is not accessible if the page is rendered without images.
-        Don't write <code>alt="Screenshot of <i>the XY dialog</i>"</code>. Blind users shouldn't have to skip useless repetitions.</p>
-      <p>If the <code>alt</code> attribute text cannot sufficiently replace the image contents
-        (e.g. for a screenshot that shows source code), then enclose the img element in a link
-        to a plain &quot;.txt&quot; file with the same name as the image:<br/>
-        <code>&lt;a href=&quot;images/foo-view.txt&quot;&gt;&lt;img ...</code></p>
-      <p>The images should be left-justified (as opposed to centered). Do not embed the width and height of the image.</p>
-      <p>
-        <img src="https://www.eclipse.org/artwork/images/v2/logo-800x188.png" alt="" />
-      </p>
-      <script type="text/javascript">
-      //<![CDATA[
-      document.addEventListener('load', function markOversizedImages() {
-        var imgs = document.getElementsByTagName("img");
-        for (var i = 0; i < imgs.length; i++) {
-          var img = imgs[i];
-          var w = window.getComputedStyle(img, null).getPropertyValue("width");
-          if (parseInt(w, 10) > 520) {
-            img.style.width = "300px";
-            var filter = "sepia(0.5) blur(2px)";
-            img.style.filter = filter;
-            img.style.webkitFilter = filter;
-            var msg = document.createElement("div");
-            msg.innerHTML = "Image too big. See Instructions &gt; <a href='#screenshots'>Screenshots</a>.<br>"
-                + img.getAttribute("src") + ": width=" + w;
-            msg.style.color = "red";
-            msg.style.fontWeight = "bold";
-            img.parentElement.insertBefore(msg, img);
-          }
-        }
-      }, true);
-      //]]>
-      </script>
-    </td>
-  </tr>
-  <tr id="validation">
-    <td class="title">Validation</td>
-    <td class="content">
-        Use the W3C <a href="http://validator.w3.org/#validate_by_input">XHTML
-        Markup Validation Service</a> to check your document's markup before
-        submitting.
-    </td>
-  </tr>
-   <tr id="css">
-    <td class="title">CSS styling</td>
-    <td class="content">
-        Do <em>not</em> change the style.css file without consulting with the Eclipse Platform project lead. The news entries are
-        aggregated at the end of the development cycle and the CSS files need to be aligned.
-    </td>
-  </tr>
-
-
 
   <tr>
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
   
+   <tr id="always-run-in-background">
+    <td class="title">"Always run in background" enabled by default</td>
+    <td class="content">
+ 		The <b>Always run in background</b> preference is now enabled by default.
+ 		If you prefer to see a progress dialog for long-running operations, you
+ 		can disable this option on the <b>General</b> preference page.
+    </td>
+  </tr>
+
   <tr id="toolbar-improved-default-styling">
     <td class="title">Improved default styling for the toolbar</td>
     <td class="content">
-      The styling of the toolbar has been improved. 
-      The colors for the toolbar in Windows are consistent with the color of the perspective switcher.
+      The styling of the window toolbar has been improved. 
+      On Windows, the toolbar color is now consistent with the color of the perspective switcher.
       
       <p>
         <img src="images/css-styles-windows-toolbar.png" alt=""/>
       </p>
       <p>
-        On Linux and Mac the underline was removed, this gives you a few more pixels on Linux
-        and removes a yellow line on Mac.
+        On Linux and Mac, the separator line was removed, which gives you a few more pixels on Linux
+        and removes a yellow line on the Mac.
       </p>
       <p>
         <img src="images/css-styles-mac-toolbar.png" alt=""/>
@@ -186,11 +65,11 @@
   </tr>
   
   <tr id="flat-gray-forms-based-styling">
-    <td class="title">New default styling for form based user interfaces</td>
+    <td class="title">New default styling for form-based user interfaces</td>
     <td class="content">
-      The default styling for form based user interfaces was changed to use a flat, grey style.
-      This change was inspired by the popular Clean-Sheet CSS styling from Frank Appel.
-      Below you see screenshots of the MANIFEST.MF editor and the Git staging view in this new design.
+      The default styling for form-based user interfaces was changed to use a flat, gray style.
+      This change was inspired by the popular "Clean Sheet" plug-in.
+      Below you see screenshots of the MANIFEST.MF editor and the Git Staging view in this new design.
       <p>
         <img src="images/forms-grey-styling1.png" alt=""/>
       </p>
@@ -204,63 +83,55 @@
   <tr id="open-images-in-eclipse">
     <td class="title">Images are opened in the Eclipse IDE</td>
     <td class="content">
-      You can now open images, like png files, directly in Eclipse.
-      The Eclipse browser has been registered to open files with the png, jpg, jpeg, gif, bmp, ico extensions.
+      Image files are now opened directly in Eclipse by default.
+      The Internal Web Browser has been registered as default editor for files with the png, jpg, jpeg, gif, bmp, and ico extensions.
      <p>
         <img src="images/image-opened-in-eclipse.png" alt=""/>
      </p>
+     Use <b>Open With > System Editor</b> to open files in the default external program.
+    </td>
+  </tr>
+
+  <tr id="copy-build-id-information-in-about-dialog">
+    <td class="title">"Copy Build Id Information" in About dialog</td>
+    <td class="content">
+      In the <b>About</b> dialog, you can use the context menu to copy
+      information about your Eclipse installation.
+      <p>
+        <img src="images/about-dialog-get-build-information.png" alt=""/>
+      </p>
+      The <b>Copy Build Id Information to Clipboard</b> command copies
+      the product name, version, build id, OS, windowing system, and additional
+      OS-specific infos like the GTK or WebKit versions.
+      <p>
+        The command can also be invoked via Quick Access <b>Quick Access</b> (<b>Ctrl+3</b>).
+      </p>
     </td>
   </tr>
 
   <tr id="removed-installation-details-menu-entry">
     <td class="title">Installation Details menu entry removed</td>
     <td class="content">
-      The Installation Details menu entry has been removed.
-      You can access the this dialog via the Help-> About dialog by clicking on the "Installation Details" button or
-      via Quick Access and typing in "Installation Details".
+      The <b>Help &gt; Installation Details</b> menu entry has been removed.
+      You can access this dialog via <b>Help &gt; About &gt; Installation Details</b> or
+      via <b>Quick Access</b> (<b>Ctrl+3</b>) and then typing "Installation Details".
     </td>
   </tr>
 
-  <tr id="maximize-and-minimize-parts-moved-to-windows-appearance-menu">
-    <td class="title">Maximize and Minimize Part now in Windows>Appearance menu</td>
+  <tr id="maximize-and-minimize-window-appearance">
+    <td class="title">Maximize and Minimize via Window &gt; Appearance menu</td>
     <td class="content">
-      Maximize and Minimize Current View or Editor menu items, are now moved
-       from the <em>Navigate</em> menu, to the <em>Window -> Appearance</em> menu.
+      The <b>Maximize</b> and <b>Minimize Active View or Editor</b> menu items have been moved to
+      the <b>Window &gt; Appearance</b> menu. They used to be in the <b>Window &gt; Navigate</b> menu.
     </td>
   </tr>
   
-   <tr id="background-enabled-by-default">
-    <td class="title">The "Run in Background" preference is enabled by default</td>
-    <td class="content">
- 		The default for the "Run in Background" has been changed for the Eclipse IDE, it is now enabled. 
- 		You can change this via the preferences on the General tab. 
- 		Eclipse RCP applications can still customize this preference setting.
-    </td>
-  </tr>
-
-  <tr id="get-build-information-in-about-dialog">
-    <td class="title">Get Build Id Information in About Dialog</td>
-    <td class="content">
-      In the <em>About Dialog</em>, you can use the <em>context menu</em> to copy
-      information about your Eclipse installation.
-      This command now copies to clipboard all the build information, including
-      <em>product name</em>, <em>version</em>, <em>build id</em>, <em>OS</em>
-      and <em>windowing system</em> details.
-      <p>
-        <img src="images/about-dialog-get-build-information.png" alt=""/>
-      </p>
-      <p>
-        Along with <em>windowing system</em> information, the command can report
-        additional info, where applicable, e.g. the gtk or the webkit version.
-       </p>
-    </td>
-  </tr>
   <tr id="terminate-relaunch-history">
-    <td class="title">Terminate and Relaunch from Run menu, Context menu and Tool Bar</td>
+    <td class="title">"Terminate and Relaunch" from Run menu, context menu and tool bar</td>
     <td class="content">
-      A <b>Terminate and Relaunch</b> option is now available while launching from Run menu, Context menu and Tool bar.
+      A <b>Terminate and Relaunch</b> option is now available while launching from Run menu, context menu and tool bar.
       The default setting is to launch without terminating previous launches. To enable automatic termination,
-      select the option "Terminate and Relaunch while launching" on
+      select the option <b>Terminate and Relaunch while launching</b> on
       <b>Preferences &gt; Run/Debug &gt; Launching</b>.
       
       <p>
@@ -270,11 +141,14 @@
 	  <p><img src="images/launch-preference-terminate-relaunch.png" alt="" /></p>
     </td>
   </tr>
+
   <tr id="breakpoint-overview-ruler">
     <td class="title">Breakpoints in Overview Ruler</td>
     <td class="content">
-      <b>Breakpoints</b> are now available in the <b>Overview Ruler<b>.
+      <b>Breakpoints</b> are now visible in the <b>Overview Ruler</b> by default.
 	  <p><img src="images/breakpoint-overview-ruler.png" alt="" /></p>
+	  To configure the rendering of annotations, right-click the overview ruler and choose <b>Preferences...</b>.
+	  This directly opens the preference page <b>General &gt; Editors &gt; Text Editors &gt; Annotations</b>.
     </td>
   </tr>
 
@@ -323,10 +197,11 @@
     <td class="title">New Layout Spy tool</td>
     <td class="content">
       PDE has added a new tool for debugging SWT layouts. To activate it, use the
-      keybinding <b>Ctrl-Alt-Shift-F9</b> from any window. To use it:
+      shortcut <b>Ctrl+Alt+Shift+F9</b> from any window.
+      <p>Usage:</p>
       <ul>
-      <li>Press Select Control and click the control with a problem</li>
-      <li>Turn on "Show Overlay" and navigate the widget hierarchy until you find a
+      <li>Click <b>Select Control</b> then click the control you want to inspect</li>
+      <li>Enable <b>Show Overlay</b> and navigate the widget hierarchy until you find a
           control whose boundary is correct (the red rectangle) and whose child's boundary
           is incorrect (the yellow rectangle).</li>
       <li>Look at the results of computeSize. If the result of computeSize is correct,
@@ -334,7 +209,7 @@
           is in the child widget.</li>
       </ul>
         <p>
-          <img src="images/layout-spy.png" alt="Screenshot of Layout Spy" />
+          <img src="images/layout-spy.png" alt="" />
         </p>
     </td>
   </tr>
@@ -342,11 +217,11 @@
   	<tr id="pde-changed-exec-env-version-problem">
     <td class="title">Changed Execution Environments creates a version problem</td>
     <td class="content">
-       Changing the <b>Execution Environments </b> in a plug-in creates a problem marker indicating that the minor version should be increased. This happens
-       if the minor version is not already increased with respect to the baseline. The preference to control this error is located in
-       <b>Version Management</b> tab of <b>API Errors/Warnings</b> preference page.
+       Changing the <b>Execution Environments </b> in a plug-in now creates a problem marker indicating that the minor version should be increased. This happens
+       if the minor version is not already increased with respect to the baseline. The preference to control the severity of this problem is located in
+       the <b>Version Management</b> tab of the <b>Plug-in Development &gt; API Errors/Warnings</b> preference page.
       <p>
-        <img src="images/pde-changed-exec-env-version-problem.png" alt="Execution Env change causes problem Preference Page"/>
+        <img src="images/pde-changed-exec-env-version-problem.png" alt=""/>
       </p>
     </td>
   	</tr>
@@ -355,10 +230,10 @@
     <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
   </tr>
 
-  <tr id="first-item-platform-dev">
-    <td class="title">Option to replace the declarative service implementation</td>
+  <tr id="declarative-services-replaceable">
+    <td class="title">Declarative services implementation replaceable</td>
     <td class="content">
-      The platform removed the bundle dependencies to <code>org.eclipse.osgi.services</code> and replaced them with the necessary package imports.
+      In platform bundles, the bundle dependencies to <code>org.eclipse.osgi.services</code> have been replaced with the necessary package imports.
 	  Mostly <code>org.osgi.service.event</code> needed to be added to the imported packages. This was necessary to avoid a
 	  uses constraint violation when replacing <code>org.eclipse.equinox.ds</code> with <code>org.apache.felix.scr</code>.
     </td>
@@ -369,13 +244,13 @@
     <td colspan="2" class="section" id="Equinox">Equinox</td>
   </tr>
 
-  <tr id="first-item-equinox">
+  <tr id="provided-capabilities-metadata">
     <td class="title">Several plug-ins define Provided Capabilities metadata</td>
     <td class="content">
-      You can now rely on OSGi Require-Capability meta data in your Eclipse based application for
+      You can now rely on OSGi's <code>Require-Capability</code> meta data in your Eclipse-based application for
 	  <code>org.eclipse.equinox.event</code> and <code>org.eclipse.equinox.cm</code> as they now provide 
-	  the corresponding <em>osgi.service</em> capability. 
-	  Additionally p2 capabilities are specified to be able to configure non-code dependencies that can be interpreted
+	  the corresponding <code>osgi.service</code> capability. 
+	  Additionally, p2 capabilities are specified to be able to configure non-code dependencies that can be interpreted
 	  by the p2 resolver.
     </td>
   </tr>
