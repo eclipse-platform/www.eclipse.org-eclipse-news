@@ -36,6 +36,15 @@
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
   
+  <tr id="unix-platforms-dropped">
+    <td class="title">Dropped support for Unix platforms</td>
+    <td class="content">
+	  Eclipse has dropped support for the following Unix based platforms: AIX, Solaris, HP-UX and s390.
+	  The builds for these platforms are not available on the eclipse.org downloads page.<br><br>
+	  For more information, please read the <a href="https://dev.eclipse.org/mhonarc/lists/eclipse-dev/msg10207.html">announcement</a> made by the Eclipse PMC.
+    </td>
+  </tr>
+  
    <tr id="always-run-in-background">
     <td class="title">"Always run in background" enabled by default</td>
     <td class="content">
@@ -151,7 +160,7 @@
 	  This directly opens the preference page <b>General &gt; Editors &gt; Text Editors &gt; Annotations</b>.
     </td>
   </tr>
-
+  
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
@@ -236,6 +245,13 @@
       In platform bundles, the bundle dependencies to <code>org.eclipse.osgi.services</code> have been replaced with the necessary package imports.
 	  Mostly <code>org.osgi.service.event</code> needed to be added to the imported packages. This was necessary to avoid a
 	  uses constraint violation when replacing <code>org.eclipse.equinox.ds</code> with <code>org.apache.felix.scr</code>.
+    </td>
+  </tr>
+  
+  <tr id="swt-1.8">
+    <td class="title">SWT requires 1.8 Java runtime</td>
+    <td class="content">
+	  The SWT projects are now compiled at 1.8 compliance level. As a result, a Java runtime of 1.8 or above is required to run SWT applications. 
     </td>
   </tr>
 
