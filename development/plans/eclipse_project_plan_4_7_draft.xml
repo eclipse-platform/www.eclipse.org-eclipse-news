@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 10:16 EDT August 1, 2016.
+Last revised 04:04 EDT August 15, 2016.
 
 <!--
 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
@@ -413,7 +413,7 @@ Eclipse 4.7 Endgame Plan.
   
 <!-- ============================================== -->
 
-<p:themes_and_priorities>
+<p:themes_and_priority name="sucker">
 
 <p:preamble>
 We no longer group the plan items into separate themes as this is does not provide real value to our users.
@@ -445,7 +445,7 @@ We no longer group the plan items into separate themes as this is does not provi
     investigating it, we are not yet in a position to commit to it, or to say
     that we won't be able to address it. After due consideration, a proposal
     will either be committed or deferred. In bugzilla, such items are reflected
-    by having a target milestone "4.6" or "---" assigned.</li>
+    by having a target milestone "4.7" or "---" assigned.</li>
   <li><b>Deferred</b> plan item - A reasonable proposal that will not make it in
     to this release for some reason is marked as deferred with a brief note as
     to why it was deferred. Deferred plan items may resurface as committed plan
@@ -472,7 +472,7 @@ We no longer group the plan items into separate themes as this is does not provi
 
 </p:theme>
 
-</p:themes_and_priorities>
+</p:themes_and_priority>
     
 <!-- ============================================== -->
 
