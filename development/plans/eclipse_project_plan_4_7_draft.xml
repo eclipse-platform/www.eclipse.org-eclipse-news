@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 04:04 EDT August 15, 2016.
+Last revised 12:43 EDT August 16, 2016.
 
 <!--
 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
@@ -60,20 +60,6 @@ marks interesting changes since the previous draft of
   also involve a significant change to the API or feature set, or involve a significant
   amount of work. The intent of the plan is to account for all interesting feature
   work. </p>
-<p>The current status of each plan item is noted: </p>
-<ul>
-  <li><b>Committed</b> plan item - A committed plan item is one that we have
-    decided to address for the release.</li>
-  <li><b>Proposed</b> plan item - A proposed plan item is one that we are considering
-    addressing for the release. Although we are actively investigating it, we
-    are not yet in a position to commit to it, or to say that we won't be able
-    to address it. After due consideration, a proposal will either be committed
-    or deferred.</li>
-  <li><b>Deferred</b> plan item - A reasonable proposal that will not make it
-    in to this release for some reason is marked as deferred with a brief note
-    as to why it was deferred. Deferred plan items may resurface as committed
-    plan items at a later point.</li>
-</ul>
 
 </div>
 </p:introduction>
@@ -224,29 +210,8 @@ Eclipse 4.7 Endgame Plan.
 		</tr>
 		<!-- ************ RHEL ************** -->
 		<tr class="c1">
-			<td rowspan="6">Red Hat Enterprise Linux</td>
-			<td rowspan="4">6</td>
-			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">
-				Oracle Java 8u91<br/>
-				IBM Java 8 8.0.3<br/>
-				Open JDK 8u65
-			</td>
-			<td rowspan="4">GTK+ 2</td>
-		</tr>
-		<tr class="c1">
-			<td rowspan="1">x86 64-bit</td>
-		</tr>
-		<tr class="c1">
-			<td rowspan="1">Power 32-bit</td>
-			<td rowspan="2">
-				IBM Java 8 8.0.3
-			</td>
-		</tr>
-		<tr class="c1">
-			<td rowspan="1">Power 64-bit</td>
-		</tr>
-		<tr class="c1">
+			<td rowspan="2">Red Hat Enterprise Linux</td>
+
 			<td rowspan="2">7</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="2">Open JDK 8u65</td>
@@ -418,7 +383,7 @@ Eclipse 4.7 Endgame Plan.
 <p:preamble>
 We no longer group the plan items into separate themes as this is does not provide real value to our users.
 <div>
-<p>Each plan item listed below covers a feature or API that is
+<p>Each plan item listed in the sub-project plans covers a feature or API that is
   to be added to the Eclipse Project deliverables, or some aspect of the Eclipse Project that is
   to be improved. Each plan item has its own entry in the Eclipse bugzilla database, with a title
   and a concise summary (usually a single paragraph) that explains the work item at a suitably
@@ -427,31 +392,14 @@ We no longer group the plan items into separate themes as this is does not provi
   is a significant amount of commonality and shared effort between them. In general,
   many plan items involve coordinated changes to multiple components, and thus
   attempting to separate the items into sections based on sub-project leads to
-  artificial distinctions between them (e.g., Platform Text vs. JDT Text, Platform
-  Debug vs. JDT Debug, etc.). As such, this plan covers the work of all mature projects
+  artificial distinctions between them (e.g., Platform UI vs. JDT UI, Platform
+  Debug vs. JDT Debug, etc.). As such, this plan covers the work of all mature sub-projects
   under the top level Eclipse Project.</p>
 <p>Not all plan items represent the same amount of work; some may be quite
   large, others, quite small. Although some plan items are for work that is 
   more pressing than others, the plan items appear in no particular order.
   See the corresponding bugzilla items for up-to-date status information on
   ongoing work and planned delivery milestones.</p>
-<p>The current status of each plan item is noted:</p>
-<ul>
-  <li><b>Committed</b> plan item - A committed plan item is one that we have
-    decided to address for the release. In bugzilla, this is reflected by
-    having a concrete target milestone assigned.</li>
-  <li><b>Proposed</b> plan item - A proposed plan item is one that we are
-    considering addressing for the release. Although we are actively
-    investigating it, we are not yet in a position to commit to it, or to say
-    that we won't be able to address it. After due consideration, a proposal
-    will either be committed or deferred. In bugzilla, such items are reflected
-    by having a target milestone "4.7" or "---" assigned.</li>
-  <li><b>Deferred</b> plan item - A reasonable proposal that will not make it in
-    to this release for some reason is marked as deferred with a brief note as
-    to why it was deferred. Deferred plan items may resurface as committed plan
-    items at a later point. In bugzilla, such items are reflected by having
-    a target milestone "---" assigned.</li>
-</ul>
 </div>
 </p:preamble>
 
