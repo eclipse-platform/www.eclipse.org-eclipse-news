@@ -35,9 +35,9 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div id="current" class="homeitem3col">
 			<h3>Releases currently under development</h3>
-			(plans may not yet be live)
 			<ul>
-		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_7.xml">Eclipse Project Oxygen 4.7 Plan</a><br>
+		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_7.xml">Eclipse Project Oxygen 4.7 Plan</a>
+		         (<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_7_draft.xml">Draft</a>)<br>
 		        This document lays out the feature and API set for the Oxygen 4.7 release of the Eclipse Project.</li>
 		      <li><a href="plans/freeze_plan_4_6_1.php">Eclipse Project Neon.1 Endgame Plan</a><br>
 				Information about how we plan to wrap up the Neon.1 release (version 4.6.1).</li>
