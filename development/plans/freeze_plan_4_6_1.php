@@ -78,10 +78,10 @@ ob_start();
 			  <tr>
 	            <td class="spacer">&nbsp;</td>
 	          </tr>
-	          <tr class="current">
+	          <tr>
 	            <td></td>
 	            <td class="date">17</td>
-	            <td class="date">Wed 08:00 EDT</td>
+	            <td class="date">Wed 04:00 EDT</td>
 	            <td></td>
 	            <td>Release Candidate 1 build</td>
 	            <td></td>
@@ -97,10 +97,10 @@ ob_start();
 			  <tr>
 	            <td class="spacer">&nbsp;</td>
 	          </tr>
-	          <tr>
+	          <tr class="current">
 	            <td></td>
 	            <td class="date">24</td>
-	            <td class="date">Wed 08:00 EDT</td>
+	            <td class="date">Wed 01:00 EDT</td>
 	            <td></td>
 	            <td>Release Candidate 2 build</td>
 	            <td></td>
@@ -108,7 +108,7 @@ ob_start();
 	          <tr>
 	            <td></td>
 	            <td class="date">25</td>
-	            <td class="date">Thu 08:00 EDT</td>
+	            <td class="date">Thu</td>
 	            <td></td>
 	            <td>1-day test pass against RC2 and sign-off</td>
 	            <td></td>
@@ -124,7 +124,7 @@ ob_start();
 	          <tr>
 	            <td></td>
 	            <td class="date">31</td>
-	            <td class="date">Wed 08:00 EDT</td>
+	            <td class="date">Wed 04:00 EDT</td>
 	            <td></td>
 	            <td>Release Candidate 3 build</td>
 	            <td></td>
@@ -138,7 +138,7 @@ ob_start();
 	          <tr>
 	            <td></td>
 	            <td class="date">1</td>
-	            <td class="date">Thu 08:00 EDT</td>
+	            <td class="date">Thu</td>
 	            <td></td>
 	            <td>1-day test pass against RC3 and sign-off</td>
 	            <td></td>
@@ -157,7 +157,7 @@ ob_start();
 	          <tr>
 	            <td></td>
 	            <td class="date">7</td>
-	            <td class="date">Wed 08:00 EDT</td>
+	            <td class="date">Wed 04:00 EDT</td>
 	            <td></td>
 	            <td>Release Candidate 4 build [if required]</td>
 	            <td></td>
@@ -165,13 +165,13 @@ ob_start();
 	        </table>
 			<p>
 			Here are some holidays during the freeze period to keep in mind:
+			</p>
 			<ul>
 				<li>August 1 - Switzerland</li>
 				<li>August 15 - Bangalore, India</li>
 				<li>Afternoon of September 12 - Zurich, Switzerland</li>
 				<li>September 5 - Bangalore, India</li>
 			</ul>
-			</p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Useful Links</h3>
