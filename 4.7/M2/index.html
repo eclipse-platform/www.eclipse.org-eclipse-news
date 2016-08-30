@@ -228,6 +228,23 @@
     </td>
   </tr>
   
+  <tr id="tweak-gtk-theme">
+    <td class="title">Ability to tweak the GTK+ theme used</td>
+    <td class="content">
+      Ability to tweak GTK+ theme by providing your own css file to extend it has been added. Users can point to their own css file via <i>-Dorg.eclipse.swt.internal.gtk.cssFile=/path/to/my.css</i> property.
+      The following CSS snippet gives the effect below.
+      <pre><i>button:hover {
+  box-shadow: inset 0 0 0 5px #3071A9;
+}
+      </i></pre>
+      
+      <p>
+      <img src="images/tweak-gtk-theme.png" alt="" />
+      </p>
+      <b>Note:</b> Systems with GTK+ 3.20 or newer only.
+    </td>
+  </tr>
+  
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
