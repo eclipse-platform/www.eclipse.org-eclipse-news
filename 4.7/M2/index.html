@@ -301,6 +301,14 @@
     </td>
   </tr>
   
+  <tr id="progress-reporting-performance">
+    <td class="title">Reduced the performance impact of very frequent progress reporting during background process execution</td>
+    <td class="content">
+      When background tasks were frequently updating their progress (by calling <code>IProgressMonitor.setTaskName(String)</code> 
+      very often), the execution was heavily slowed down due to this reporting.
+    </td>
+  </tr>
+  
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
