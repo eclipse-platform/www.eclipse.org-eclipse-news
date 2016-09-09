@@ -228,24 +228,6 @@
     </td>
   </tr>
   
-  
-  <tr id="tweak-gtk-theme">
-    <td class="title">Ability to tweak the GTK+ theme used</td>
-    <td class="content">
-      Ability to tweak GTK+ theme by providing your own css file to extend it has been added. Users can point to their own css file via <i>-Dorg.eclipse.swt.internal.gtk.cssFile=/path/to/my.css</i> property.
-      The following CSS snippet gives the effect below.
-      <pre><i>button:hover {
-  box-shadow: inset 0 0 0 5px #3071A9;
-}
-      </i></pre>
-      
-      <p>
-      <img src="images/tweak-gtk-theme.png" alt="" />
-      </p>
-      <b>Note:</b> Systems with GTK+ 3.20 or newer only.
-    </td>
-  </tr>
-  
   <tr id="simplified-bookmark-task-problems-filter-dialog">
     <td class="title">Simplified the filter dialog for the Problems, Bookmark and Tasks view</td>
     <td class="content">
@@ -408,10 +390,35 @@
     <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
   </tr>
 
-  <tr id="first-item-platform-dev">
-    <td class="title">First item</td>
+  <tr id="tweak-gtk-theme">
+    <td class="title">Ability to tweak the GTK+ theme used</td>
     <td class="content">
-      Item blurb.
+      Ability to tweak GTK+ theme by providing your own css file to extend it has been added. Users can point to their own css file via <i>-Dorg.eclipse.swt.internal.gtk.cssFile=/path/to/my.css</i> property.
+      The following CSS snippet gives the effect below.
+      <pre><i>button:hover {
+  box-shadow: inset 0 0 0 5px #3071A9;
+}
+      </i></pre>
+      
+      <p>
+      <img src="images/tweak-gtk-theme.png" alt="" />
+      </p>
+      <b>Note:</b> Systems with GTK+ 3.20 or newer only.
+    </td>
+  </tr>
+  
+   <tr id="runtime-gtk-css">
+    <td class="title">Ability to apply GTK CSS at runtime</td>
+    <td class="content">
+      GTK+ css can be applied at runtime via Widget.setData(String, Object) and <i>org.eclipse.swt.internal.gtk.css</i> key. <br/><br/>
+      Sample:
+      <pre><i>Button.setData("org.eclipse.swt.internal.gtk.css", "button:hover {background: blue; border-radius: 20px;}")
+      </i></pre>
+      will produce the following on hover:
+      <p>
+      <img src="images/runtime-gtk-css.png" alt="" />
+      </p>
+      <b>Note:</b> Systems with GTK+ 3.20 or newer only.
     </td>
   </tr>
 
