@@ -428,9 +428,20 @@
   </tr>
 
   <tr id="first-item-equinox">
-    <td class="title">First item</td>
+    <td class="title">SubMonitor.step</td>
     <td class="content">
-      Item blurb.
+      SubMonitor has added a new method called <code>step</code> which reports progress and checks cancellation at the
+      same time. Checking cancellation in this way takes less code and is more efficient than checking
+      cancellation using <code>IProgressMonitor.isCanceled()</code>. The new method can be used as a drop-in
+      replacement for <code>IProgressMonitor.worked(int)</code>.
+      <p>
+      Example Usage:</p>
+      <pre><code>SubMonitor subMonitor = SubMonitor.convert(monitor, someCollection.size());
+for (Object next : someCollection) {
+    subMonitor.step(1);
+    // ...do some work...
+}
+      </code></pre>
     </td>
   </tr>
 
