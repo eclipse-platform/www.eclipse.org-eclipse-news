@@ -345,6 +345,20 @@
     </td>
   </tr>
   
+  <tr id="viewercomparator-sorting">
+    <td class="title">Stable sorting in viewers based on ViewerComparator</td>
+    <td class="content">
+      The <code>ViewerComparator</code> ignores now additional decorators during its sorting.
+      This results in stable sorting.
+      For example, if the Git team provider is used, it adds the ">" for changed files. This  additional ">" info is now ignored.
+      <p>
+      You can disable this by setting the system property <code>eclipse.disable.fix.for.bug364735</code> to true. 
+      This temporary system property is planned to be removed, if no issues with the new sorting are discovered.
+      </p>
+
+    </td>
+  </tr>
+  
   <tr id="more-high-resolution-images">
     <td class="title">More high resolution images</td>
     <td class="content">
