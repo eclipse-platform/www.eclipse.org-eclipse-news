@@ -5,7 +5,7 @@
 	# team-leaders.php
 	#
 	# Author: 		
-	# Date:			2016-04-14
+	# Date:			2016-09-12
 	#
 	# Description: Details about the Eclipse Project PMC
 	#
@@ -82,8 +82,7 @@ ob_start();
 			      represents the project in the Eclipse <a href="http://wiki.eclipse.org/Planning_Council">Planning Council</a>, and is also a
 			      a member of the Eclipse <a href="http://wiki.eclipse.org/Architecture_Council">
 			      Architecture Council</a>. He has been elected by the committers to represent them in the <a href="https://eclipse.org/org/foundation/directors.php">Eclipse Foundation Board of Directors</a>.
-			      Dani worked at OTI and now works at IBM Research GmbH. He is one of the initial Eclipse Project committers.
-			      His interests include user interface and API design, editors, software quality and performance.
+			      Dani worked at OTI and now works at IBM Research GmbH. His interests include user interface and API design, editors, software quality and performance.
 		        </li>
 		        <li> 
 		          <b><a name="aleksandar"></a>Aleksandar Kurtakov, Red Hat Inc.</b><br>
