@@ -483,12 +483,24 @@ button.addSelectionListener(widgetSelected( e-> {System.out.print("Hello");}));
     </td>
   </tr>
 
+  <tr id="screenshot-from-junit">
+    <td class="title">Screenshot from JUnit</td>
+    <td class="content">
+      In bundle <code>org.eclipse.test.performance</code>, there's a new API to take a screenshot from a JUnit test:
+      <p><code>
+        org.eclipse.test.Screenshots#takeScreenshot(Class&lt;?&gt; testClass, String name)
+      </code></p>
+      In the Eclipse Platform/SDK builds that are run on Hudson, the PNG files will be saved in a directory that is accessible via
+      <a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.6-201606061100/logs.php#console">Console Output Logs</a>
+      on the Test Results pages.
+    </td>
+  </tr>
 
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
   </tr>
 
-  <tr id="first-item-equinox">
+  <tr id="sub-monitor-step">
     <td class="title">SubMonitor.step</td>
     <td class="content">
       SubMonitor has added a new method called <code>step</code> which reports progress and checks cancellation at the
