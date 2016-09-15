@@ -167,10 +167,10 @@
   </tr>
 
   <tr id="switch-workspace-and-restart-menu-items">
-    <td class="title">Switch workspace and restart menu items</td>
+    <td class="title">Switch Workspace and Restart menu items</td>
     <td class="content">
-      The <em>Switch workspace</em> and <em>Restart</em> menu items are now at the bottom of the <em>File</em> menu:
-      just above the <em>Exit</em> item, for Windows and Linux, and as last menu items for Mac.
+      The <b>Switch Workspace</b> and <b>Restart</b> menu items are now at the bottom of the <em>File</em> menu:
+      just above the <b>Exit</b> item, on Windows and Linux, and as last menu items on the Mac.
 
       <p>
         <img src="images/switch-workspace-restart-menu-items.png" alt=""/>
@@ -179,10 +179,10 @@
   </tr>
 
   <tr id="quick-access-switch-workspace-and-restart-menu-items">
-    <td class="title">Command images displayed in Quick Access</td>
+    <td class="title">Command images shown in Quick Access</td>
     <td class="content">
-      Now <em>Quick Access</em> displays the icons for <em>Commands</em> which defined their image descriptors.
-      When image descriptors are not defined, you still see the default <em>blue ball</em> image.
+      <b>Quick Access</b> (<b>Ctrl+3</b>) now shows the icon for a <b>Command</b> if available.
+      Otherwise, it still shows the default blue ball.
 
       <p>
         <img src="images/command-image-visible-in-quick-access.png" alt=""/>
@@ -190,10 +190,11 @@
     </td>
   </tr>
 
-  <tr id="improved-color-usage-for-popups">
-    <td class="title">Improve usage of color constants for popups</td>
+  <tr id="colors-interactive-popups">
+    <td class="title">Colors in interactive popups</td>
     <td class="content">
-      Popups now use improved color constants.
+      Interactive popups like JDT's <b>Quick Outline</b> don't use the platform's
+      tooltip colors any more, since those were sometimes hard to read.
       <p>
       Old style:
       </p>
@@ -209,39 +210,37 @@
     </td>
   </tr>
   
-  <tr id="improved-tree-key-bindings">
-    <td class="title">Improve tree collapse/expand key bindings</td>
+  <tr id="GTK-tree-key-bindings">
+    <td class="title">GTK tree collapse/expand key bindings</td>
     <td class="content">
-      Added key bindings for <i>left/right arrows</i> to collapse/expand tree nodes in addition to GTK+ default <i>-/+</i> key binding.
-      <b>Note:</b> Systems with GTK+ 3.6 or newer only.
+      On GTK+ 3.6 and later, the <b>Left</b> and <b>Right arrow</b> keys now collapse and expand
+      the current tree item (in addition to the GTK+ default <b>-</b>/<b>+</b> key bindings).
     </td>
   </tr>
   
    <tr id="reduced-gtk-tabs-padding">
-    <td class="title">Reduced TabItems padding to not lose so much space under GTK+</td>
+    <td class="title">Reduced TabItems padding under GTK+</td>
     <td class="content">
-      By default GTK uses a lot of space around TabItems and SWT users are not used to it thus reduced it.
+      On GTK+ 3.20 and later, the padding around around TabItems has been reduced.
       <p>
       <img src="images/reduced-gtk-tabs-padding.png" alt="" />
       </p>
-      <b>Note:</b> Systems with GTK+ 3.20 or newer only.
     </td>
   </tr>
   
   <tr id="simplified-bookmark-task-problems-filter-dialog">
-    <td class="title">Simplified the filter dialog for the Problems, Bookmark and Tasks view</td>
+    <td class="title">Simplified filters dialog for Problems, Bookmarks and Tasks views</td>
     <td class="content">
-      The <em>Filters</em> dialog of the Problems, Bookmark and Tasks view has been renamed and simplified.
-      If you select several filter options, items matching any of these filters will be displayed.
-      User can still define custom filters to specify the items which should be selected.
+      The <b>Filters</b> dialog of the Problems, Bookmarks and Tasks views has been simplified.
+      If you select several configurations, items matching any of these configurations will be shown.
       <p>
-      Old Problems filter dialog:
+      Old dialog in Problems view:
       </p>
       <p>
         <img src="images/old-problems-filter.png" alt=""/>
       </p>
       <p>
-      New Problems filter dialog:
+      New dialog in Problems view:
       </p>
       <p>
         <img src="images/new-problems-filter.png" alt=""/>
@@ -527,14 +526,14 @@ button.addSelectionListener(widgetSelected( e-> {System.out.print("Hello");}));
   </tr>
 
   <tr id="sub-monitor-step">
-    <td class="title">SubMonitor.step</td>
+    <td class="title">SubMonitor#step(int)</td>
     <td class="content">
-      SubMonitor has added a new method called <code>step</code> which reports progress and checks cancellation at the
+      <code>org.eclipse.core.runtime.SubMonitor</code> has a new method <code>step(int work)</code> that reports progress and checks cancellation at the
       same time. Checking cancellation in this way takes less code and is more efficient than checking
-      cancellation using <code>IProgressMonitor.isCanceled()</code>. The new method can be used as a drop-in
-      replacement for <code>IProgressMonitor.worked(int)</code>.
+      cancellation using <code>IProgressMonitor#isCanceled()</code>. The new method can be used as a drop-in
+      replacement for <code>IProgressMonitor#worked(int)</code> in code that already handles <code>OperationCanceledException</code>.
       <p>
-      Example Usage:</p>
+      Example usage:</p>
       <pre><code>SubMonitor subMonitor = SubMonitor.convert(monitor, someCollection.size());
 for (Object next : someCollection) {
     subMonitor.step(1);
