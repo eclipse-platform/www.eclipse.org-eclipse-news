@@ -99,9 +99,9 @@
   </tr>
   
   <tr id="simplified-bookmark-task-problems-filter-dialog">
-    <td class="title">Simplified filters dialog for Problems, Bookmarks and Tasks views</td>
+    <td class="title">Simplified filters dialog for Problems, Bookmarks, and Tasks views</td>
     <td class="content">
-      The <b>Filters</b> dialog of the Problems, Bookmarks and Tasks views has been simplified.
+      The <b>Filters</b> dialog of the Problems, Bookmarks, and Tasks views has been simplified.
       If you select several configurations, items matching any of these configurations will be shown.
       <p>
       Old dialog in Problems view:
@@ -119,17 +119,17 @@
   </tr>
 
   <tr id="improved-visiblity-of-filter-dialog">
-    <td class="title">Improved visibility of the filter dialog for Problems, Bookmark and Tasks view</td>
+    <td class="title">Filter dialog for Problems, Bookmarks, and Tasks views easier to reach</td>
     <td class="content">
-	    The <em>Filters</em> dialog is now accessable from the toolbar for Problems, Bookmark and Tasks view. <em>Filters</em> was previously hidden away in the <em>Views</em> dropdown menu; moving the functionality over  to the toolbar gives the functionality improved visibility and user experience.
+	    The <b>Filters</b> dialog is now accessible from the toolbar of the Problems, Bookmarks, and Tasks views.
       <p>
-      Previous location:
+      Previously, it was only accessible via view menu &gt; <b>Configure Contents...</b>:
       </p>
       <p>
         <img src="images/old-filter-location.png" alt=""/>
       </p>
       <p>
-      New location:
+      Now also as a toolbar button:
       </p>
       <p>
         <img src="images/new-filter-location.png" alt=""/>
@@ -138,19 +138,19 @@
   </tr>
 
   <tr id="quick-access-search-in-help">
-    <td class="title">Quick Access Search Text in Help</td>
+    <td class="title">Quick Access search text in Help</td>
     <td class="content">
-      You can now <em>Search in Help</em> after you enter text in the <em>Quick Access</em> dialog.
-      The option is activated when the <em>filter text</em> is longer than three characters,
-      and is always enabled as last entry in the result table.
+      You can now <b>Search in Help</b> after you've entered text in the <b>Quick Access</b> dialog.
+      The option is shown when the filter text is longer than three characters,
+      and it is always added at the end of the results.
       <p>
-      <em>Search in Help</em> using the new Quick Access dialog:
+      <b>Search in Help</b> using the new Quick Access dialog:
       </p>
       <p>
         <img src="images/quick-access-search-in-help.png" alt=""/>
       </p>
       <p>
-      <em>Search in Help</em> using the standalone dialog:
+      <b>Search in Help</b> using the standalone dialog:
       </p>
       <p>
         <img src="images/quick-access-search-in-help-standalone.png" alt=""/>
@@ -159,28 +159,29 @@
   </tr>
   
   <tr id="editor-selection-dialog-one-click">
-    <td class="title">Improved editor selection dialog</td>
+    <td class="title">Editor selection dialog: Use for all</td>
     <td class="content">
-      The <em>Editor Selection</em> dialog now offers a one-click-option for choosing the editor to open all the files with a given extension.
+      The <b>Editor Selection</b> dialog now offers a one-click option for choosing the editor that
+      should open all files with the same extension in the future.
       <p>
-      Example when selecting "<em>file.xyz</em>" and choosing <em>Open with -&gt; Other...</em>.
+      Example when selecting "file.xyz" and choosing <b>Open with &gt; Other...</b>:
       </p>
       <p>
-        <img src="images/editor-selection-dialog-one-click-for-all-files-by-type.png" alt=""/>
+        <img src="images/editor-selection-dialog-one-click-for-all-files-by-type.png" alt="Highlighted checkbox: Use it for all '*.xyz' files"/>
       </p>
     </td>
   </tr>
 
   <tr id="configurable-left-right-in-compare-editor">
-    <td class="title">Configurable left and right sides in Compare editor</td>
+    <td class="title">Configure left and right sides in Compare editors</td>
     <td class="content">
-      The <em>Compare</em> editor now offers an option to swap left and right sides of the display.
+      <b>Compare</b> editors now offer a button <b>Swap Left and Right View</b>.
       <p>
         <img src="images/compare-editor.png" alt=""/>
       </p>
       <p>
-      The direction of comparison is preserved between invocations of the <em>Compare</em> editor
-      and can also be changed in the <em>Compare/Patch</em> preference page.
+      The direction of comparison is preserved between invocations of the <b>Compare</b> editor
+      and can also be changed in the <b>Compare/Patch</b> preference page.
       </p>
       <p>
         <img src="images/compare-preferences.png" alt=""/>
@@ -188,36 +189,14 @@
     </td>
   </tr>
 
-  <tr id="progress-reporting-performance">
-    <td class="title">Reduced the performance impact of very frequent progress reporting during background process execution</td>
-    <td class="content">
-      When background tasks were frequently updating their progress (by calling <code>IProgressMonitor.setTaskName(String)</code> 
-      very often), the execution was heavily slowed down due to this reporting. Performance tests have shown 2-3 times faster execution times.
-    </td>
-  </tr>
-  
-  <tr id="viewercomparator-sorting">
-    <td class="title">Stable sorting in viewers based on ViewerComparator</td>
-    <td class="content">
-      The <code>ViewerComparator</code> ignores now additional decorators during its sorting.
-      This results in stable sorting.
-      For example, if the Git team provider is used, it adds the ">" for changed files. This  additional ">" info is now ignored.
-      <p>
-      You can disable this by setting the system property <code>eclipse.disable.fix.for.bug364735</code> to true. 
-      This temporary system property is planned to be removed, if no issues with the new sorting are discovered.
-      </p>
-
-    </td>
-  </tr>
-  
   <tr id="more-high-resolution-images">
     <td class="title">More high resolution images</td>
     <td class="content">
-      More images in the old GIF format were replaced by images in the PNG format. In addition high resolution images where added. 
+      More images in the old GIF format were replaced by images in the PNG format. In addition, high resolution images where added. 
       <p>As PNG can handle transparency much better than GIF, the ugly white borders around shapes visible in the dark theme are now gone for these icons.
       </p>
-      <p>So see their complete beauty a high-DPI monitors (e.g Retina-Diplay Mac) is needed.
-        The lower part of the screenshot shows the wizard banner image of the <em>Import Dialog</em> in high resolution.
+      <p>So see their full beauty, a high-DPI monitor (e.g. a Retina Mac) is needed.
+        The lower part of the screenshot shows the wizard banner image of the <b>Import</b> dialog in high resolution.
       </p>
       <p>
         <img src="images/import_before_and_after.png" alt=""/>
@@ -232,11 +211,10 @@
   </tr>
 
   <tr id="filters-from-project-explorer-view-menu">
-    <td class="title">Open Filters from Project Explorer view menu</td>
+    <td class="title">'Filters and Customization...' in Project Explorer</td>
     <td class="content">
-      Now we use the menu item labelled <em>"Filters and Customization.."</em> to open the <em>Filters</em> dialog from the <em>Project Explorer</em> view menu.  
-      <p>The previous value was <em>"Customize View..."</em>.
-      </p>
+      The <b>Customize View...</b> command in the <b>Project Explorer</b>'s view menu has been
+      renamed to <b>Filters and Customization...</b>
       <p>
         <img src="images/filters-and-customization-menu-item.png" alt=""/>
       </p>
@@ -247,7 +225,7 @@
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
 
-   <tr id="step-show-methodresult">
+  <tr id="step-show-methodresult">
     <td class="title">Method result after step operations</td>
     <td class="content">
         During debugging, the last method result (per return or throw) that was observed during <b>Step Into</b>, <b>Step Over</b> or <b>Step Return</b>, is shown as first line in the <b>Variables</b> view.
@@ -261,22 +239,24 @@
     </td>
   </tr>
   
-   <tr id="triggers-for-breakpoints">
+  <tr id="triggers-for-breakpoints">
     <td class="title">Triggers for breakpoints</td>
     <td class="content">
-     Users can now define a set of triggers for the breakpoints in a workspace. 
+     You can now define a set of triggers for the breakpoints in a workspace.
       
       <p>
         <img src="images/trigger-breakpoint-properties.png" alt=""/>
       </p>
-      Any breakpoint can be set as a trigger point by using "Breakpoint Properties..." dialog or Breakpoints view detail pane.
+      Any breakpoint can be set as a trigger point by using <b>Breakpoint Properties...</b> dialog or the Breakpoints view's detail pane.
       <p>
         <img src="images/trigger-breakpoint-view-ruler.png" alt=""/>
       </p>
-      Triggers will be displayed by an overlay of "T" and the breakpoints suppressed by the triggers will be displayed by an overlay of "T" with a cut.
-     
-       All the other breakpoints(suppressed by triggers) will be hit only after any of the trigger point is hit.
-      All the triggers are disabled after a trigger point is hit and will be re enabled after the run.
+      Triggers will be rendered with an overlay of "T" and the breakpoints suppressed by the triggers will be
+      rendered with an overlay of "T" with a cut.
+      <p>
+        All the other breakpoints that are initially suppressed by triggers will be hit only after any of the trigger points has been hit.
+        All the triggers are disabled after a trigger point is hit and will be re-enabled after the run.
+      </p>
     </td>
   </tr>
   
@@ -285,10 +265,10 @@
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
 
- <tr id="pde-reorganized-version-management-tab">
-    <td class="title">Changes in Version Management Preference Tab</td>
+  <tr id="pde-reorganized-version-management-tab">
+    <td class="title">Changes in Version Management preferences tab</td>
     <td class="content">
-      <b>Version Management</b> tab of the <b>Plug-in Development &gt; API Errors/Warnings</b> preference page has been
+      The <b>Version Management</b> tab of the <b>Plug-in Development &gt; API Errors/Warnings</b> preference page has been
       reorganized. The sub-options to control major/minor version change without API breakage/changes have been converted into normal options
       and they are set to warning by default. The option 'Report changed execution environment incompatibility' has been moved
       to the bottom of the tab.
@@ -299,24 +279,22 @@
   </tr>
   
   <tr id="pde-error-log-show-in-console">
-    <td class="title">Context menu in Error Log view has 'Show In Console'</td>
+    <td class="title">Error Log view: 'Show In Console' in context menu</td>
     <td class="content">
-       In the <b>Error Log</b> view, the context menu now has an item 'Show In Console' which shows the selected error in 
-       the <b> Console</b> view.
+       In the <b>Error Log</b> view, the context menu now includes <b>Show In Console</b>, which performs the same
+       action as <b>Show Stack Trace in Console View</b> from the view toolbar.
       <p>
         <img src="images/pde-show-in-console-view-context-menu-error-log-view.png" alt=""/>
       </p>
     </td>
   </tr>
 
- <tr id="pde-default-method-interface">
-    <td class="title">API tools reports default method addition as a breaking change</td>
+  <tr id="pde-default-method-interface">
+    <td class="title">API Tools reports default method addition as a breaking change</td>
     <td class="content">
-       The API tools will report addition of a default method in an API interface (that can be implementable by 
-       clients) as a <a href="https://wiki.eclipse.org/Evolving_Java-based_APIs_2#Evolving_API_Interfaces">
+        The API Tools now report the addition of a default method in an API interface that can be implemented by 
+        clients as a <a href="https://wiki.eclipse.org/Evolving_Java-based_APIs_2#Evolving_API_Interfaces">
         breaking change</a>.
-       
-       
     </td>
   </tr>
 	
@@ -326,35 +304,67 @@
     <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
   </tr>
 
-  <tr id="tweak-gtk-theme">
-    <td class="title">Ability to tweak the GTK+ theme used</td>
+  <tr id="viewercomparator-sorting">
+    <td class="title">Stable sorting in viewers based on ViewerComparator</td>
     <td class="content">
-      Ability to tweak GTK+ theme by providing your own css file to extend it has been added. Users can point to their own css file via <i>-Dorg.eclipse.swt.internal.gtk.cssFile=/path/to/my.css</i> property.
+      The <code>org.eclipse.jface.viewers.ViewerComparator</code> now ignores decorations from a <code>DecoratingLabelProvider</code> during its sorting.
+      For example, if the EGit team provider is used, it prepends "> " for changed files. This additional "> " is now ignored.
+      <p>
+      The goal of this change is to eliminate
+      <code>java.lang.IllegalArgumentException: Comparison method violates its general contract!</code>
+      that could occur when label decorations were updated in the background.
+      </p>
+      <p>
+      For now, you can disable this fix by setting the system property <code>eclipse.disable.fix.for.bug364735</code> to <code>true</code>.
+      This temporary system property is planned to be removed unless issues with the new sorting are discovered.
+      </p>
+
+    </td>
+  </tr>
+  
+  <tr id="progress-reporting-performance">
+    <td class="title">Reduced performance impact of very frequent progress reporting from background jobs</td>
+    <td class="content">
+      When bad code was calling <code>IProgressMonitor#setTaskName(String)</code> very frequently in a background job,
+      the execution was heavily slowed down due to this reporting.
+      A workaround has been added to the jobs framework that throttles processing of excessive task name updates.
+      Performance tests have shown 2-3 times faster execution times for pathologic examples.
+    </td>
+  </tr>
+  
+  <tr id="tweak-gtk-theme">
+    <td class="title">Tweak the GTK+ theme</td>
+    <td class="content">
+      You can now tweak the GTK+ theme by providing your own CSS file to extend the default look.
+      A custom CSS file is registered by a VM argument like this:
+      <pre><code>-Dorg.eclipse.swt.internal.gtk.cssFile=/path/to/my.css</code></pre>
       The following CSS snippet gives the effect below.
-      <pre><i>button:hover {
+      <pre><code>button:hover {
   box-shadow: inset 0 0 0 5px #3071A9;
 }
-      </i></pre>
+      </code></pre>
       
       <p>
       <img src="images/tweak-gtk-theme.png" alt="" />
       </p>
-      <b>Note:</b> Systems with GTK+ 3.20 or newer only.
+      <b>Note:</b> Works on GTK+ 3.20 or later only.
     </td>
   </tr>
   
    <tr id="runtime-gtk-css">
-    <td class="title">Ability to apply GTK CSS at runtime</td>
+    <td class="title">Apply GTK+ CSS at runtime</td>
     <td class="content">
-      GTK+ css can be applied at runtime via Widget.setData(String, Object) and <i>org.eclipse.swt.internal.gtk.css</i> key. <br/><br/>
-      Sample:
-      <pre><i>Button.setData("org.eclipse.swt.internal.gtk.css", "button:hover {background: blue; border-radius: 20px;}")
-      </i></pre>
-      will produce the following on hover:
+      GTK+ CSS can be applied at runtime via <code>Widget#setData(String, Object)</code>
+      using <code>org.eclipse.swt.internal.gtk.css</code> as key.
+      
+      <p>Example:</p>
+      <pre><code>button.setData("org.eclipse.swt.internal.gtk.css", "button:hover {background: blue; border-radius: 20px;}")
+      </code></pre>
+      ... will produce the effect on the right on hover:
       <p>
       <img src="images/runtime-gtk-css.png" alt="" />
       </p>
-      <b>Note:</b> Systems with GTK+ 3.20 or newer only.
+      <b>Note:</b> Works on GTK+ 3.20 or later only.
     </td>
   </tr>
 
