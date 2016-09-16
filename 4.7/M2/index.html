@@ -358,26 +358,6 @@
     </td>
   </tr>
 
-  <tr id="swt-lambda-style-selectionlisteners">
-    <td class="title">Helper methods to create lambda style selection listeners</td>
-    <td class="content">
-      The <code>SelectionListener</code> interface in SWT was enhanced to provide the
-      <code>SelectionListener.widgetSelected</code> and the
-      <code>SelectionListener.widgetDefaultSelected</code> static helper methods to create lambda style listeners.
-
-      <p>Example for adding a selection listener to a button:
-	  </p>
-	  <pre>
-import static org.eclipse.swt.events.SelectionListener.widgetSelected;
-// ....
-
-Button button = new Button(parent, SWT.PUSH);
-button.addSelectionListener(widgetSelected( e-> {System.out.print("Hello");}));
-button.addSelectionListener(widgetSelected( e-> {System.out.print("Hello");}));
-	  </pre>
-    </td>
-  </tr>
-
   <tr id="screenshot-from-junit">
     <td class="title">Screenshot from JUnit</td>
     <td class="content">
