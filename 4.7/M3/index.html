@@ -264,6 +264,28 @@
       	</p>
     </td>
   </tr>
+  <tr id="swt-spies-separated">
+    <td class="title">SWT Spies separated from Tools Plug-in</td>
+    <td class="content">
+        <p>
+        The Sleak and Spy views are now available in a new plug-in, <b>org.eclipse.swt.tools.spies</b>.
+        They were previously part as org.eclipse.swt.tools which depends on JDT. With the new spies
+        plug-in, it is now possible to use the spies without depending on JDT. This makes it especially
+        suitable for inclusion in target definitions and Eclipse RCP applications.
+        </p>
+    </td>
+  </tr>
+
+  <tr id="swt-gtk-theme-property">
+    <td class="title">GTK theme system property</td>
+    <td class="content">
+    <p>
+        SWT now stores the GTK theme used at launch time in a system property, <b>org.eclipse.swt.internal.gtk.theme</b>.
+        This property can help with troubleshooting issues that are specific to certain themes.
+        It can be viewed in Window > Installation Details > Configuration.
+        </p>
+    </td>
+  </tr>
 
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
