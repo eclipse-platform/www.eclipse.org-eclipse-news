@@ -119,7 +119,7 @@ ob_start();
 	          <tr">
 	            <td></td>
 	            <td class="date">16</td>
-	            <td class="date">Wed 01:00 EDT</td>
+	            <td class="date">Wed 04:00 EDT</td>
 	            <td></td>
 	            <td>Release Candidate 2 build</td>
 	            <td></td>
@@ -216,6 +216,9 @@ ob_start();
 	            <td>Simultaneous release train GA Neon.2</td>
 	            <td></td>
 	          </tr>
+	          <tr>
+	            <td class="spacer">&nbsp;</td>
+	          </tr>
 	        </table>
 			<p>
 			Here are some holidays during the freeze period to keep in mind:
@@ -229,7 +232,7 @@ ob_start();
 			<ul>
 			<li><a href="http://www.eclipse.org/eclipse/platform-releng/buildSchedule.html">Build Schedule</a> - details on build times.</li>
 			<li><a href="http://wiki.eclipse.org/Eclipse/Release_checklist">Eclipse Release Checklist</a> - lists various things that need to be checked before each release.</li>
-			<li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse">Eclipse Project Neon Plan</a></li>
+			<li><a href="https://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_6.xml">Eclipse Project Neon Plan</a></li>
 			<li><a href="http://wiki.eclipse.org/index.php/Neon">Neon Simultaneous Release</a></li>
 			</ul>
       	</div>
