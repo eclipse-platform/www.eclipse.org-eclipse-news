@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2016-10-04
+	# Date:			2016-10-05
 	#
 	# Description: Eclipse project 4.6.2 release freeze plan
 	#
@@ -96,6 +96,14 @@ ob_start();
 	          </tr>
 	          <tr>
 	            <td class="spacer">&nbsp;</td>
+	          </tr>
+	          <tr>
+	            <td></td>
+	            <td class="date">8</td>
+	            <td class="date">Tue</td>
+	            <td></td>
+	            <td>Feature and API Freeze</td>
+	            <td></td>
 	          </tr>
 	          <tr>
 	            <td></td>
@@ -239,12 +247,14 @@ ob_start();
 		<div class="homeitem3col">
 			<h3>What is the game plan?</h3>
 			<p> 
-	 		The Eclipse Neon Service Release 1 ("Neon Update 2 (4.6.2)") endgame involves building 
+	 		The Eclipse Neon Service Release 2 ("Neon Update 2 (4.6.2)") endgame involves building 
 	        a series of release candidates leading to the Eclipse project's contribution to the
 	        Neon Update 2 (4.6.2) release. The Eclipse project version number for this release is 4.6.2.
 	        By its nature, this update release contains fixes to a small number 
-	        of serious problems found in the June 2016 Neon (4.6) release. We make and verify each 
-	        fix carefully, so that we do not need to tie up the entire development 
+	        of serious problems found in the June 2016 Neon (4.6) release, , as well as carefully selected
+	        feature and API additions. The new feature and API additions must be low-risk by nature, as well
+	        as tested and proven in master before they can be backported.
+	        We make and verify each changes carefully, so that we do not need to tie up the entire development 
 	        team in time-consuming test passes. As always, we welcome help from the 
 	        community with testing the release candidates. By default, Neon Update 2 (4.6.2)
 	        is supposed to work exactly like the initial Neon (4.6) release except for the problems we intended 
@@ -268,7 +278,7 @@ ob_start();
 			and associated bug report. Please send the request for approval to the eclipse-pmc
 			mailing list. If a change is made to API to make it binary compatible with
 			a previous release, technically this is still an API change, and thus it should be treated
-			in the same way as any other API change requests.	
+			in the same way as any other API change requests.
 			</p>
 
 			<strong>Feature work approval</strong>
@@ -279,13 +289,15 @@ ob_start();
 			</p>
 
 
-		   <strong>RC1</strong>
+		   <strong>RC1 - Feature and API Freeze</strong>
 		   <p>
 		   Release candidate 1 is a warm-up build to ensure the release train build
 		   process is in place and all projects are making contributions. All fixes submitted 
 		   to update stream builds must have a component lead or PMC vote on the bug report,
 		   and the fix must be reviewed by an additional committer (any committer other than
 		   the one who made the fix).
+		   <br>
+		   No new features or APIs are allowed after RC1.
 		   </p>
 
 		   <strong>RC2</strong>
