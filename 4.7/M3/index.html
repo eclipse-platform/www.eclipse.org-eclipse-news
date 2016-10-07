@@ -305,6 +305,24 @@
     </td>
   </tr>
 
+   <tr id="generic-editor">
+    <td class="title">Added an easily-extensible Generic Text Editor</td>
+    <td class="content">
+        With this new editor it is now much easier to extend a new generic editor so you can add support relatively easy for new languages.
+        It is reusing the existing Eclipse editor infrastructure but with the generic editor you don't need to implement an
+        editor to supply functionality for a new file content-type. Instead you make the generic editor smarter by extension points.
+        Here is a simple example of adding some minimal gradle file support:
+        <p>
+        	<img src="images/gradle-code.png" alt=""/>
+        </p>
+        Above you see it is relatively simple to supply the rules for syntax highlighting.
+        The generic editor picks those up through the extension points and here is the editor in action:
+        <p>
+        	<img src="images/gradle-sample.png" alt=""/>
+        </p>
+    </td>
+  </tr>
+
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
