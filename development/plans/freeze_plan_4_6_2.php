@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2016-10-05
+	# Date:			2016-10-10
 	#
 	# Description: Eclipse project 4.6.2 release freeze plan
 	#
@@ -232,6 +232,7 @@ ob_start();
 			Here are some holidays during the freeze period to keep in mind:
 			</p>
 			<ul>
+				<li>October 31 - Bangalore, India</li>
 				<li>November 1 - Bangalore, India</li>
 			</ul>
       	</div>
