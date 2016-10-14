@@ -461,6 +461,24 @@ button.addSelectionListener(widgetSelectedAdapter( e-> {System.out.print("Hello"
         <p>
         	<img src="images/gradle-sample.png" alt=""/>
         </p>
+      </td>
+    </tr>
+
+  <tr id="editor-contenttype-extension">
+    <td class="title">An extension point to associate existing editors and content-types</td>
+    <td class="content">
+      The extension point <code>org.eclipse.ui.editors</code> can now receive a new <code>editorContentTypeBinding</code>
+      child element which allows to define binding of an existing editor for an existing content-type.
+
+      <p>Here is an example:</p>
+      <pre>
+&lt;extension point="org.eclipse.ui.editors">
+  &lt;editorContentTypeBinding
+    contentTypeId="org.eclipse.ui.genericeditor.examples.dotproject"
+    editorId="org.eclipse.ui.genericeditor.GenericEditor">
+  &lt;/editorContentTypeBinding>
+&lt;/extension>
+       </pre>
     </td>
   </tr>
 
