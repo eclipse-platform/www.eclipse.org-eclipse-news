@@ -8,7 +8,7 @@
 
   <body bgcolor="#FFFFFF" text="#000000">
 
-    <h2>Eclipse Release Engineering build schedule</h2>
+    <h2 id="schedule">Eclipse Release Engineering build schedule</h2>
     <h4>Platform, JDT, PDE:
       <a href="http://download.eclipse.org/eclipse/downloads/">Downloads</a>,
       <a href="https://www.eclipse.org/eclipse/development/">Plans</a>;
@@ -18,7 +18,7 @@
       See also the <a href="https://wiki.eclipse.org/Simultaneous_Release">Simultaneous Release</a> plans.
     </h4>
 
-    <font class="indexsub">Last change of static content: 2016-08-23.</font>
+    <font class="indexsub">Last change of static content: 2016-10-20.</font>
 
     <p>
     I-builds use branches specified in <a href="https://git.eclipse.org/c/platform/eclipse.platform.releng.aggregator.git/tree/streams/repositories.txt">repositories.txt</a> file, from
@@ -42,16 +42,16 @@
 
     <iframe src="https://www.google.com/calendar/embed?mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=prfk26fdmpru1mptlb06p0jh4s%40group.calendar.google.com&amp;color=%237A367A" style="border-width:0" scrolling="auto" width="800" height="600" frameborder="0"></iframe>
 
-    <h4>Rebuild Policy</h4>
+    <h4 id="rebuilds">Rebuild Policy</h4>
     <ul>
       <li>Nightly builds - No rebuilds</li>
-      <li>Integration builds - Same day rebuild if compile errors, missing plugins, the build is unusable or if the drops do not get posted.Otherwise, a rebuild the next day at 8:00am.</li>
+      <li>Integration builds - Same day rebuild if compile errors, missing plug-ins, the build is unusable, or if the drops do not get posted. Otherwise, a rebuild the next day at 8:00am.</li>
       <li>Maintenance builds - Rebuild until success</li>
     </ul>
 
     <br>
 
-    <h4>Build Retention Policy</h4>
+    <h4 id="retention">Build Retention Policy</h4>
 
     <p>In an effort to reduce our disk utilization on the eclipse.org infrastructure and reduce the amount of data sent to the mirrors, we have adopted the following build retention policy.</p>
     <ul>
@@ -63,12 +63,12 @@
 
     <br>
 
-    <h4>Build Notes</h4>
+    <h4 id="notes">Build Notes</h4>
 
     <strong>For the 4.<i>&lt;n&gt;</i> Integration builds: </strong>
     <ul>
       <li>build time is 8:00 am (Eastern time) on Tuesday mornings.</li>
-      <li>In the event of an integration build failure due to compile errors, missing plugins or if the drops are not posted,<br>there will be a same day rebuild upon
+      <li>In the event of an integration build failure due to compile errors, missing plug-ins, or if the drops are not posted,<br>there will be a same day rebuild upon
       submission of a fix.</li>
       <li>Otherwise, there will be a rebuild at noon Wednesday morning to accommodate fixes that have a workaround or do not impact the general usability of the build.
       <li>Teams are expected to indicate on the platform-releng-dev mailing list if they intend to contribute to a rebuild.</li>
@@ -83,7 +83,7 @@
 
     <strong>For the 4.<i>&lt;n-1&gt;</i>.x maintenance builds: </strong>
     <ul>
-      <li>Build time is 8:00 am Wednesday (Eastern time)</li>
+      <li>Build time is 4:00 am Wednesday (Eastern time)</li>
       <li>Due to the nature of the fixes in this stream, these builds should not fail. However, if a
       rebuild is requested by one of the teams, it will take place as soon as the build contribution is available.</li>
     </ul>
@@ -103,5 +103,28 @@
     Wednesday     noon build. Failing the Wednesday noon rebuild should be treated as a catastrophic
     failure. In other words, more than two or three of these per year is an unacceptable
     failure rate. </p>
+
+    <h4 id="milestones">Milestone Weeks</h4>
+    Here's the usual schedule for milestone weeks:
+    <ul>
+      <li>Monday: Last day of development (and even then, no "big changes"). After Monday, no feature work or unrelated fixes are allowed -- only regression fixes.</li>
+      <li>Tuesday: All-day test pass. Nobody should develop or fix anything. Literally spend the entire day testing.</li>
+      <li>Wednesday: Fix day with a focus on fixing regressions found during the test day (Tuesday). No unrelated fixes. Review and thoroughly test all commits.
+        <ul>
+          <li>The last Wednesday build is the release candidate every team signs off on Thursday.</li>
+          <li>The "New and Noteworthy" entries are due on Wednesday evening:<br>
+              Git repo: <code>ssh://git.eclipse.org/gitroot/www.eclipse.org/eclipse/news.git</code><br>
+              Gerrit: <code>ssh://git.eclipse.org:29418/www.eclipse.org/eclipse/news.git</code><br>
+              Live website: <a href="https://www.eclipse.org/eclipse/news/4.7/M*/">https://www.eclipse.org/eclipse/news/4.7/M*/</a> (* insert actual milestone version)</li>
+        </ul>
+      </li>
+      <li>Thursday: Sign-off after re-testing, or at least confirming no changes have been made to your component's code since the last time the component was tested well.</li>
+      <li>Friday: Build is officially declared and made available.
+        <ul>
+          <li>The master branch stays closed until the milestone is officially released. (That is, it is not enough that your component has signed off.)</li>
+        </ul>
+      </li>
+    </ul>
+
   </body>
 </html>
