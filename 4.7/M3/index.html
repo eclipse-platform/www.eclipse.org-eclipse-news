@@ -482,6 +482,28 @@ button.addSelectionListener(widgetSelectedAdapter( e-> {System.out.print("Hello"
     </td>
   </tr>
 
+  <tr id="debugging-test-timeouts">
+    <td class="title">Debugging test timeouts</td>
+    <td class="content">
+      In bundle <a href="http://git.eclipse.org/c/platform/eclipse.platform.releng.git/tree/bundles/org.eclipse.test.performance">org.eclipse.test.performance</a>,
+      there's a new API that helps debugging those pesky tests that are freezing / hanging / DNF ("Did not finish")
+      in a remote Hudson build, and you have no clue why, because they always pass locally.
+      <p>
+      If your tests are organized in a JUnit-4-style test suite using the
+      </p>
+      <pre style="margin-left:1em">@RunWith(Suite.class)</pre>
+      <p>
+      annotation, you can just replace that line by
+      </p>
+      <pre style="margin-left:1em">@RunWith(TracingSuite.class)</pre>
+      <p>
+      This will log the start of each atomic test contained in the suite to <code>System.out</code>, and it will try to collect more information
+      after a timeout (stack traces, screenshot). And it will even try to throw an exception in the main thread,
+      so that other tests can proceed. See the Javadoc for configuration options.
+      </p>
+    </td>
+  </tr>
+
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
   </tr>
