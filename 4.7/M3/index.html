@@ -338,10 +338,18 @@
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
 
-  <tr id="first-item-jdt">
-    <td class="title">First item</td>
+  <tr id="remote-java-launch-connection-limits">
+    <td class="title">Remote Java Application <em>Socket Listen</em>
+        type supports multiple incoming connections</td>
     <td class="content">
-      Item blurb.
+      The <em>Remote Java Application</em> launcher's <em>Standard
+      (Socket Listen)</em> mode now supports incoming connections 
+      from multiple VMs.  This is useful for debugging distributed
+      systems.  The connection limit may be set to a fixed number, or
+      <tt>0</tt> for unlimited connections.
+      <p>
+        <img src="images/remote-java-listen-conn-limit.png" alt=""/>
+      </p>
     </td>
   </tr>
 
