@@ -522,16 +522,19 @@ ul {padding-left: 13px;}
       Launching Eclipse with recent Java 9 previews fails with <code>NoClassDefFoundError</code>s
       for <code>javax/annotation/PostConstruct</code> and similar types.
       <p>
-      The workaround is to add the VM arguments
+      The workaround is to add the VM argument
       </p>
-      <pre><b>-addmods java.se.ee</b></pre>
+      <pre><b>--add-modules=java.se.ee</b></pre>
       <p>
       either on the command line <b>after <code>-vmargs</code></b>, or at the end of the
-      <b>eclipse.ini</b> file on <b>two separate lines</b>.
+      <b>eclipse.ini</b> file.
       </p>
       <p>
       At least on Windows, this workaround only seems to work when the <code>-vm</code>
       argument points to a <code>java.exe</code> or <code>javaw.exe</code> (but not when just passing the "bin" folder).
+      </p>
+      <p>
+      (Older Java 9 previews required using the two arguments <code>-addmods java.se.ee</code> , which had to be on two separate lines in eclipse.ini).
       </p>
     </td>
   </tr>
