@@ -36,11 +36,10 @@ ob_start();
 		<div id="current" class="homeitem3col">
 			<h3>Releases currently under development</h3>
 			<ul>
-		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_7.xml">Eclipse Project Oxygen 4.7 Plan</a>
-		         (<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_7_draft.xml">Draft</a>)<br>
+		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_7.xml">Eclipse Project Oxygen 4.7 Plan</a><br>
 		        This document lays out the feature and API set for the Oxygen 4.7 release of the Eclipse Project.</li>
-		      <li><a href="plans/freeze_plan_4_6_1.php">Eclipse Project Neon.1 Endgame Plan</a><br>
-				Information about how we plan to wrap up the Neon.1 release (version 4.6.1).</li>
+		      <li><a href="plans/freeze_plan_4_6_2.php">Eclipse Project Neon.2 Endgame Plan</a><br>
+				Information about how we plan to wrap up the Neon.2 release (version 4.6.2).</li>
 		    </ul>
 		    See also the <a href="https://projects.eclipse.org/projects/eclipse/governance">Eclipse Project on projects.eclipse.org</a>
 		    and the <strong>preliminary</strong> <a href="https://wiki.eclipse.org/Oxygen/Simultaneous_Release_Plan">Simultaneous Release plan</a>.
@@ -132,6 +131,10 @@ ob_start();
 		<div id="past" class="homeitem3col">
 			<h3>Historical information about past releases</h3>
 			<ul>
+		      <li><a href="plans/freeze_plan_4_6_1.php">Eclipse Project Neon.1 Endgame Plan</a><br>
+				Information about how we wrapped up the Neon.1 release (version 4.6.1).</li>
+		      <li><a href="plans/freeze_plan_4_6.php">Eclipse Project Neon Endgame Plan</a><br>
+				Information about how we wrapped up the Neon release (version 4.6).</li>
 		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_6.xml">Eclipse Project Neon 4.6 Plan</a><br>
 		        This document lays out the feature and API set for the Neon 4.6 release of the Eclipse Project.</li>
 
