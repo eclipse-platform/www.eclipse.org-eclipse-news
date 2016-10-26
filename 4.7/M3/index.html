@@ -586,6 +586,42 @@ button.addSelectionListener(widgetSelectedAdapter( e-> {System.out.print("Hello"
     </td>
   </tr>
 
+  <tr id="dependency-injections-for-e3parts">
+    <td class="title">Dependency injection for Eclipse 3.x views available</td>
+    <td class="content">
+      You can now use dependency injection (di) in your Eclipse 3.x. views.
+      You can enable this for a view via the new <b>inject</b> flag in the <code>org.eclipse.ui.views</code> extension.
+
+       <p>
+        	<img src="images/e3-views-enable-di.png" alt=""/>
+        </p>
+       <p>
+      Example usage:</p>
+      <pre><code>public class SampleView extends ViewPart {
+
+	@Inject IWorkbench workbench;
+
+	private TableViewer viewer;
+
+	@Override
+	public void createPartControl(Composite parent) {
+		viewer = new TableViewer(parent, SWT.MULTI | SWT.H_SCROLL | SWT.V_SCROLL);
+
+		viewer.setContentProvider(ArrayContentProvider.getInstance());
+		viewer.setInput(new String[] { "One", "Two", "Three" });
+		viewer.setLabelProvider(new ViewLabelProvider());
+
+		// Create the help context id for the viewer's control
+		workbench.getHelpSystem().setHelp(viewer.getControl(), "test7.viewer");
+	}
+	// more stuff
+}
+      </code></pre>
+
+    </td>
+
+  </tr>
+
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
   </tr>
