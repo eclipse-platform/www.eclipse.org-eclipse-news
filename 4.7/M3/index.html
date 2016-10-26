@@ -492,11 +492,23 @@ button.addSelectionListener(widgetSelectedAdapter( e-> {System.out.print("Hello"
   </tr>
 
   <tr id="button-background-styled">
-    <td class="title">Button widget background color can be styled on Windows</td>
+    <td class="title">SWT <code>Button</code> widget background and foreground color can be styled on Windows</td>
     <td class="content">
-      You can now style the background color of the SWT Button widget on Windows.
+      You can now style the background and foreground color of the SWT <code>Button</code> widget on Windows:
       <p>
         <img src="images/button-background-styled.png" alt=""/>
+      </p>
+      Note: Above implementation is custom paint operation applies to all <code>Button</code> types except <code>SWT.ARROW</code> on Windows.
+    </td>
+  </tr>
+
+  <tr id="new-api-drawable">
+    <td class="title">New API in SWT's <code>Drawable</code> class, gives option to disable high DPI auto-scaling option as per device type</td>
+    <td class="content">
+      Below new API is added to SWT's <code>Drawable</code> class:<br/>
+      <code>boolean Drawable.isAutoScalable()</code>
+      <p>
+        By default this method will return <code>true</code> for all <code>Drawable</code> instances and <code>false</code> for printer devices.
       </p>
     </td>
   </tr>
