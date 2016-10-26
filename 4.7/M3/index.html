@@ -530,14 +530,38 @@ button.addSelectionListener(widgetSelectedAdapter( e-> {System.out.print("Hello"
 &lt;/extension></pre>
         <p>
         Those new extension points receive as arguments regular Platform classes (IPresentationReconcilier, ITextHover, ICompletionProposalComputer)
-       	to add behavior to the generic editor. New new Java API is necessary.
+       	to add behavior to the generic editor. No new Java API is necessary.
        	</p>
        	
         
-        Here is a simple example of adding some minimal gradle file support:
-        <p>
-        	<img src="images/gradle-code.png" alt=""/>
-        </p>
+        Here is a simple example of adding some minimal Gradle syntax highlighting support:
+        <pre><code>
+public class GradlePR extends PresentationReconciler {
+
+	private IToken quoteToken = new Token(new TextAttribute(new Color(Display.getCurrent(), new RGB(139, 69, 19))));
+	private IToken numberToken = new Token(new TextAttribute(new Color(Display.getCurrent(), new RGB(0, 0, 255))));
+	private IToken commentToken = new Token(new TextAttribute(new Color(Display.getCurrent(), new RGB(0, 100, 0))));
+
+	public GradlePR() {
+		RuleBasedScanner scanner = new RuleBasedScanner();
+
+		IRule[] rules = new IRule[5];
+		rules[0] = new SingleLineRule("'", "'", quoteToken);
+		rules[1] = new SingleLineRule("\"","\"", quoteToken);
+		rules[2] = new PatternRule("//", null, commentToken, (char)0, true);
+		rules[3] = new NumberRule(numberToken);
+		
+		rules[4] = new GradleWordRule();
+		
+		scanner.setRules(rules);
+
+		DefaultDamagerRepairer dr = new DefaultDamagerRepairer(scanner);
+		this.setDamager(dr, IDocument.DEFAULT_CONTENT_TYPE);
+		this.setRepairer(dr, IDocument.DEFAULT_CONTENT_TYPE);
+	}
+
+}
+        </code></pre>
         Above you see it is relatively simple to supply the rules for syntax highlighting.
         The generic editor picks those up through the extension points and here is the editor in action:
         <p>
