@@ -472,6 +472,15 @@ button.addSelectionListener(widgetSelectedAdapter( e-> {System.out.print("Hello"
     </td>
   </tr>
 
+  <tr id="composite-changed-deprecated">
+    <td class="title"><code>Composite.changed</code> has has been deprecated</td>
+    <td class="content">
+      The <code>Composite.changed</code> method has never been used in the Eclipse platform and the
+      method never had a well-defined purpose. It is now deprecated. Calling it is now equivalent
+      to calling <code>Composite.layout(Control[], SWT.DEFER)</code>.
+    </td>
+  </tr>
+
    <tr id="generic-editor">
     <td class="title">Added an easily-extensible Generic Text Editor</td>
     <td class="content">
