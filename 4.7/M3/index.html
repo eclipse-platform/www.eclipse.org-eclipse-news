@@ -165,55 +165,15 @@
   <tr>
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
-
-  <tr id="dark-mode-progress-bar">
-    <td class="title">Fixed Progress View colors to match Dark mode correctly</td>
-    <td class="content">
-      The <em>Progress View </em> has been adjusted, to follow the platform theming, e.g., the Eclipse dark theme, correctly.
-      <p>
-      Before:
-      </p>
-      <p>
-        <img src="images/old-progress-view.png" alt=""/>
-      </p>
-      <p>
-      After:
-      </p>
-      <p>
-        <img src="images/new-progress-view.png" alt=""/>
-      </p>
-    </td>
-  </tr>
-  
-  <tr id="dark-mode-search-highlight-color">
-    <td class="title">Fixed highlight colors for the dark theme in the Search view</td>
-    <td class="content">
-      The Search view colors have been adjusted in the dark theme, so that you can now read the highlighted text.
-     <p>
-      <b>Note:</b> Due to Bug 466075, this new setting may be overriden by other plug-ins. For example, currently the Eclipse Git plug-in 
-      overrides this setting.
-      </p> 
-      <p>
-      Before:
-      </p>
-      <p>
-        <img src="images/old-search-result-hightlight-color.png" alt=""/>
-      </p>
-      <p>
-      After:
-      </p>
-      <p>
-        <img src="images/new-search-result-hightlight-color.png" alt=""/>
-      </p>
-    </td>
-  </tr>
   
   <tr id="browsers-linux-update">
-    <td class="title">Update external browsers on Linux</td>
+    <td class="title">External browsers on Linux</td>
     <td class="content">
-      External browsers list on Linux updated to recognize:
+      On Linux, the list of recognized external browsers has been updated to include:
       
       <ul>
+      <li><b>Firefox</b> (/usr/bin/firefox)</li>
+      <li><b>Chrome</b> (/usr/bin/google-chrome)</li>
       <li><b>Chromium</b> (/usr/bin/chromium-browser)</li>
       <li><b>Epiphany/Gnome Web</b> (/usr/bin/epiphany)</li>
       <li><b>Konqueror</b> (/usr/bin/konqueror)</li>
@@ -225,20 +185,20 @@
   </tr>
   
   <tr id="show-revision-history-in-ruler">
-    <td class="title">Improved label for showing the revision history via the text ruler</td>
+    <td class="title">Show Annotation renamed to Show Revision Information</td>
     <td class="content">
-    	The "Show Annotation" entry from CVS in the text editor ruler has been renamed to "Show Revision History". 
-    	This way, you get an idea what this entry does.
+       For files checked out from CVS, the <b>Show Annotation</b> command in the text editor's vertical ruler and in the <b>Team</b> menu
+       has been renamed to <b>Show Revision Information</b>.
        <p>
-        This change has been synchronized with the Eclipse Git team provider, so Git will use the same label.
-      </p>
+         This change has been synchronized with the Eclipse Git team provider, so future versions of EGit will use the same name.
+       </p>
     </td>
   </tr>
 
   <tr id="less-window-margins">
     <td class="title">Reduced window margins</td>
     <td class="content">
-    	The window margins have been reduced to provide you with more useful space in your IDE.
+    	The window margins have been reduced to provide more space in the IDE.
         <p>
       	Old style:
       	</p>
@@ -255,44 +215,33 @@
   </tr>
 
   <tr id="project-explorer-others-working-set">
-    <td class="title">"Other projects" working set in Project Explorer</td>
+    <td class="title">"Other Projects" working set in Project Explorer</td>
     <td class="content">
-    	If you're using the Project Explorer and working sets as top-level element, the <em>Top Level Elements</em> view
-      menu now provides a way to show the <em>Other projects</em> group for projects that aren't part of currently active working set.
+      If you're using the <b>Project Explorer</b> and working sets as top-level elements, the <b>Top Level Elements</b> view
+      menu now provides a way to show an <b>Other Projects</b> group for projects that are not in one of the currently active working sets.
       	<p>
         	<img src="images/other-projects-ws.png" alt=""/>
       	</p>
     </td>
   </tr>
+
   <tr id="project-explorer-recent-filters">
     <td class="title">"Recently used filters" feature in Project Explorer</td>
     <td class="content">
-    	The Project Explorer view now has a "Recent Filters" menu showing the most recently used filters.
+    	The <b>Project Explorer</b> view now has a <b>Recent Filters</b> menu that shows the most recently used filters.
       	<p>
         	<img src="images/recent-filters-project-explorer.png" alt=""/>
       	</p>
-    </td>
-  </tr>
-  <tr id="swt-spies-separated">
-    <td class="title">SWT Spies separated from Tools Plug-in</td>
-    <td class="content">
-        <p>
-        The Sleak and Spy views are now available in a new plug-in, <b>org.eclipse.swt.tools.spies</b>.
-        They were previously part as org.eclipse.swt.tools which depends on JDT. With the new spies
-        plug-in, it is now possible to use the spies without depending on JDT. This makes it especially
-        suitable for inclusion in target definitions and Eclipse RCP applications.
-        </p>
     </td>
   </tr>
 
   <tr id="swt-gtk-theme-property">
     <td class="title">GTK theme system property</td>
     <td class="content">
-    <p>
-        SWT now stores the GTK theme used at launch time in a system property, <b>org.eclipse.swt.internal.gtk.theme</b>.
+        SWT now stores the GTK theme used at launch time in a system property, <code>org.eclipse.swt.internal.gtk.theme</code>.
         This property can help with troubleshooting issues that are specific to certain themes.
-        It can be viewed in Window > Installation Details > Configuration.
-        </p>
+        It can be viewed in <b>About &gt; Installation Details &gt; Configuration</b>.
+        <!-- TODO: Fix the path ^^^^ after bug 490752 has been reverted. -->
     </td>
   </tr>
 
@@ -458,6 +407,16 @@
 
   <tr>
     <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
+  </tr>
+
+  <tr id="swt-spies-separated">
+    <td class="title">SWT spies separated from Tools plug-in</td>
+    <td class="content">
+        The Sleak and Spy views are now available in a new plug-in, <b>org.eclipse.swt.tools.spies</b>.
+        They were previously part of org.eclipse.swt.tools, which depends on JDT. With the new spies
+        plug-in, it is now possible to use the spies without depending on JDT. This makes it especially
+        suitable for inclusion in target definitions and Eclipse RCP applications.
+    </td>
   </tr>
 
    <tr id="application-model-parts-perspective-trimbars">
