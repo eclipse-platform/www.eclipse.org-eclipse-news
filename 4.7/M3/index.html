@@ -34,24 +34,16 @@
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
   
-  <tr id="browsers-linux-update">
-    <td class="title">External browsers on Linux</td>
+  <tr id="problems-and-tasks-copy-details-submenu">
+    <td class="title">Copy Details submenu for Problems and Tasks views</td>
     <td class="content">
-      On Linux, the list of recognized external browsers has been updated to include:
-      
-      <ul>
-      <li><b>Firefox</b> (/usr/bin/firefox)</li>
-      <li><b>Chrome</b> (/usr/bin/google-chrome)</li>
-      <li><b>Chromium</b> (/usr/bin/chromium-browser)</li>
-      <li><b>Epiphany/Gnome Web</b> (/usr/bin/epiphany)</li>
-      <li><b>Konqueror</b> (/usr/bin/konqueror)</li>
-      </ul>
+       You can copy the description or the resource qualified name of an error, warning, or task into the clipboard using commands in the <b>Copy Details</b> context menu.
       <p>
-        <img src="images/browsers-linux-update.png" alt=""/>
+        <img src="images/problems-and-tasks-copy-details-submenu.png" alt=""/>
       </p>
     </td>
   </tr>
-  
+
   <tr id="show-revision-history-in-ruler">
     <td class="title">Show Annotation renamed to Show Revision Information</td>
     <td class="content">
@@ -60,6 +52,27 @@
        <p>
          This change has been synchronized with the Eclipse Git team provider, so future versions of EGit will use the same name.
        </p>
+    </td>
+  </tr>
+
+  <tr id="project-explorer-others-working-set">
+    <td class="title">"Other Projects" working set in Project Explorer</td>
+    <td class="content">
+      If you're using the <b>Project Explorer</b> and working sets as top-level elements, the <b>Top Level Elements</b> view
+      menu now provides a way to show an <b>Other Projects</b> group for projects that are not in one of the currently active working sets.
+      	<p>
+        	<img src="images/other-projects-ws.png" alt=""/>
+      	</p>
+    </td>
+  </tr>
+
+  <tr id="project-explorer-recent-filters">
+    <td class="title">"Recently used filters" feature in Project Explorer</td>
+    <td class="content">
+    	The <b>Project Explorer</b> view now has a <b>Recent Filters</b> menu that shows the most recently used filters.
+      	<p>
+        	<img src="images/recent-filters-project-explorer.png" alt=""/>
+      	</p>
     </td>
   </tr>
 
@@ -82,24 +95,21 @@
     </td>
   </tr>
 
-  <tr id="project-explorer-others-working-set">
-    <td class="title">"Other Projects" working set in Project Explorer</td>
+  <tr id="browsers-linux-update">
+    <td class="title">External browsers on Linux</td>
     <td class="content">
-      If you're using the <b>Project Explorer</b> and working sets as top-level elements, the <b>Top Level Elements</b> view
-      menu now provides a way to show an <b>Other Projects</b> group for projects that are not in one of the currently active working sets.
-      	<p>
-        	<img src="images/other-projects-ws.png" alt=""/>
-      	</p>
-    </td>
-  </tr>
-
-  <tr id="project-explorer-recent-filters">
-    <td class="title">"Recently used filters" feature in Project Explorer</td>
-    <td class="content">
-    	The <b>Project Explorer</b> view now has a <b>Recent Filters</b> menu that shows the most recently used filters.
-      	<p>
-        	<img src="images/recent-filters-project-explorer.png" alt=""/>
-      	</p>
+      On Linux, the list of recognized external browsers has been updated to include:
+      
+      <ul>
+      <li><b>Firefox</b> (/usr/bin/firefox)</li>
+      <li><b>Chrome</b> (/usr/bin/google-chrome)</li>
+      <li><b>Chromium</b> (/usr/bin/chromium-browser)</li>
+      <li><b>Epiphany/Gnome Web</b> (/usr/bin/epiphany)</li>
+      <li><b>Konqueror</b> (/usr/bin/konqueror)</li>
+      </ul>
+      <p>
+        <img src="images/browsers-linux-update.png" alt=""/>
+      </p>
     </td>
   </tr>
 
@@ -138,16 +148,6 @@
     </td>
   </tr>
   
-  <tr id="problems-and-tasks-copy-details-submenu">
-    <td class="title">Copy Details submenu for Problems and Tasks views</td>
-    <td class="content">
-       You can copy the description or the resource qualified name of an error, warning, or task into the clipboard using commands in the <b>Copy Details</b> context menu.
-      <p>
-        <img src="images/problems-and-tasks-copy-details-submenu.png" alt=""/>
-      </p>
-    </td>
-  </tr>
-
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
@@ -166,24 +166,15 @@
       </p>
     </td>
   </tr>
-  
-  <tr id="hide-inherited-object-members">
-    <td class="title">Hide inherited members from java.lang.Object</td>
-    <td class="content">
-      You can hide all inherited members from <code>java.lang.Object</code>
-      in the <b>Quick Outline</b> (<b>Ctrl+O</b>) by using the new filter from the drop-down menu (Ctrl+F10):
-      <p>
-        <img src="images/hide-inherited-object-members.png" alt=""/>
-      </p>
-    </td>
-  </tr>
 
-  <tr id="javadoc-colors">
-    <td class="title">Set colors for Javadoc</td>
+  <tr id="option-disable-hcr">
+    <td class="title">New option to disable HCR</td>
     <td class="content">
-      You can use the new color preferences to set the foreground text color and the background color in the Javadoc view and hovers:
+      You can now disable <a href="https://wiki.eclipse.org/FAQ_What_is_hot_code_replace%3F">Hot Code Replace (HCR)</a> if it causes any trouble
+      or if you want to avoid code changes in a debug target. HCR is enabled by default but can be disabled
+      in <b>Preferences > Java > Debug</b>.
       <p>
-        <img src="images/javadoc-colors.png" alt=""/>
+        <img src="images/option-disable-hcr.png" alt=""/>
       </p>
     </td>
   </tr>
@@ -201,6 +192,27 @@
     </td>
   </tr>
 
+  <tr id="javadoc-colors">
+    <td class="title">Set colors for Javadoc</td>
+    <td class="content">
+      You can use the new color preferences to set the foreground text color and the background color in the Javadoc view and hovers:
+      <p>
+        <img src="images/javadoc-colors.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="hide-inherited-object-members">
+    <td class="title">Hide inherited members from java.lang.Object</td>
+    <td class="content">
+      You can hide all inherited members from <code>java.lang.Object</code>
+      in the <b>Quick Outline</b> (<b>Ctrl+O</b>) by using the new filter from the drop-down menu (Ctrl+F10):
+      <p>
+        <img src="images/hide-inherited-object-members.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
   <tr id="new-java-index">
     <td class="title">New Java index</td>
     <td class="content">
@@ -210,18 +222,6 @@
       </p>
       Currently, the new index shouldn't affect your experience. Once the work is finished,
       we expect big performance improvements for type hierarchies and in scenarios with many JARs.
-    </td>
-  </tr>
-
-  <tr id="option-disable-hcr">
-    <td class="title">New option to disable HCR</td>
-    <td class="content">
-      You can now disable <a href="https://wiki.eclipse.org/FAQ_What_is_hot_code_replace%3F">Hot Code Replace (HCR)</a> if it causes any trouble
-      or if you want to avoid code changes in a debug target. HCR is enabled by default but can be disabled
-      in <b>Preferences > Java > Debug</b>.
-      <p>
-        <img src="images/option-disable-hcr.png" alt=""/>
-      </p>
     </td>
   </tr>
 
@@ -240,6 +240,21 @@
     <p>
         	<img src="images/validate-launch-config-by-default.png" alt=""/>
     </p>
+    </td>
+  </tr>
+
+  <tr id="option">
+    <td class="title">Severity of default method addition in API tooling</td>
+    <td class="content">
+      On the <b>Plug-in Development &gt; API Errors/Warnings</b> preference page in the <b>API Compatibility</b> tab,
+      there is a new option in the <b>Interface</b> section to control the severity of a "default method addition" API change.
+      <p>
+        By default, the option is set to "Error" because adding the same method in multiple interfaces can break
+        existing clients at run time (<a href="http://docs.oracle.com/javase/specs/jls/se8/html/jls-13.html#jls-13.5.6">JLS8 13.5.6</a>).
+      </p>
+      <p>
+        	<img src="images/pde-default-method-addition-api-compat-option.png" alt=""/>
+      </p>
     </td>
   </tr>
 
@@ -262,64 +277,28 @@
     </p>
     </td>
   </tr>
-  
-    <tr id="option">
-    <td class="title">Severity of default method addition in API tooling</td>
-    <td class="content">
-      On the <b>Plug-in Development &gt; API Errors/Warnings</b> preference page in the <b>API Compatibility</b> tab,
-      there is a new option in the <b>Interface</b> section to control the severity of a "default method addition" API change.
-      <p>
-        By default, the option is set to "Error" because adding the same method in multiple interfaces can break
-        existing clients at run time (<a href="http://docs.oracle.com/javase/specs/jls/se8/html/jls-13.html#jls-13.5.6">JLS8 13.5.6</a>).
-      </p>
-      <p>
-        	<img src="images/pde-default-method-addition-api-compat-option.png" alt=""/>
-      </p>
-    </td>
-  </tr>
 
 
   <tr>
     <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
   </tr>
 
-  <tr id="swt-spies-separated">
-    <td class="title">SWT spies separated from Tools plug-in</td>
-    <td class="content">
-        The Sleak and Spy views are now available in a new plug-in, <b>org.eclipse.swt.tools.spies</b>.
-        They were previously part of org.eclipse.swt.tools, which depends on JDT. With the new spies
-        plug-in, it is now possible to use the spies without depending on JDT. This makes it especially
-        suitable for inclusion in target definitions and Eclipse RCP applications.
-    </td>
-  </tr>
-
-   <tr id="application-model-parts-perspective-trimbars">
-    <td class="title">Application model allows toolbar definitions for parts and perspectives</td>
-    <td class="content">
-	  The application model has been extended to support the definition of toolbars (via trimbars) for parts and perspectives. 
-	  This simplifies the implementation of a common requirement in RCP applications. You can now define toolbars specific to a perspective and  
-	  toolbars rendering within the part area via your custom renderer.
-	 <p>
-      Currently the default Eclipse renderers do not use these new elements.  
-     </p>
-    </td>
-  </tr>
-
   <tr id="swt-lambda-style-selectionlisteners">
-    <td class="title">Helper methods to create lambda style selection listeners</td>
+    <td class="title">Lambda as SelectionListener</td>
     <td class="content">
       The <code>SelectionListener</code> interface in SWT was enhanced to provide the
-      <code>SelectionListener.widgetSelectedAdapter</code> and the
-      <code>SelectionListener.widgetDefaultSelectedAdapter</code> static helper methods to create lambda style listeners.
+      <code>SelectionListener#widgetSelectedAdapter(Consumer&lt;SelectionEvent&gt; c)</code> and
+      <code>SelectionListener#widgetDefaultSelectedAdapter(Consumer&lt;SelectionEvent&gt; c)</code>
+      static helper methods that accept lambdas and method references as listeners.
 
       <p>Example for adding a selection listener to a button:
 	  </p>
 	  <pre>
 import static org.eclipse.swt.events.SelectionListener.widgetSelectedAdapter;
-// ....
+// ...
 
 Button button = new Button(parent, SWT.PUSH);
-button.addSelectionListener(widgetSelectedAdapter( e-> {System.out.print("Hello");}));
+button.addSelectionListener(widgetSelectedAdapter(e -> {System.out.print("Hello");}));
 	  </pre>
     </td>
   </tr>
@@ -335,27 +314,26 @@ button.addSelectionListener(widgetSelectedAdapter( e-> {System.out.print("Hello"
     </td>
   </tr>
 
-  <tr id="new-api-drawable">
-    <td class="title">New API in SWT's <code>Drawable</code> class, gives option to disable high DPI auto-scaling option as per device type</td>
-    <td class="content">
-      Below new API is added to SWT's <code>Drawable</code> class:<br/>
-      <code>boolean Drawable.isAutoScalable()</code>
-      <p>
-        By default this method will return <code>true</code> for all <code>Drawable</code> instances and <code>false</code> for printer devices.
-      </p>
-    </td>
-  </tr>
-
   <tr id="composite-changed-deprecated">
-    <td class="title"><code>Composite.changed</code> has has been deprecated</td>
+    <td class="title"><code>Composite#changed(Control[])</code> deprecated</td>
     <td class="content">
-      The <code>Composite.changed</code> method has never been used in the Eclipse platform and the
+      The <code>Composite#changed(Control[])</code> method has never been used in the Eclipse Platform, and the
       method never had a well-defined purpose. It is now deprecated. Calling it is now equivalent
       to calling <code>Composite.layout(Control[], SWT.DEFER)</code>.
     </td>
   </tr>
 
-   <tr id="generic-editor">
+  <tr id="swt-spies-separated">
+    <td class="title">SWT spies separated from Tools plug-in</td>
+    <td class="content">
+        The Sleak and Spy views are now available in a new plug-in, <b>org.eclipse.swt.tools.spies</b>.
+        They were previously part of org.eclipse.swt.tools, which depends on JDT. With the new spies
+        plug-in, it is now possible to use the spies without depending on JDT. This makes it especially
+        suitable for inclusion in target definitions and Eclipse RCP applications.
+    </td>
+  </tr>
+
+  <tr id="generic-editor">
     <td class="title">Added an easily-extensible Generic Text Editor</td>
     <td class="content">
         With this new editor it is now much easier to enrich a new generic editor so you can add support relatively easy for new languages.
@@ -442,25 +420,15 @@ public class GradlePR extends PresentationReconciler {
     </td>
   </tr>
 
-  <tr id="debugging-test-timeouts">
-    <td class="title">Debugging test timeouts</td>
+  <tr id="application-model-parts-perspective-trimbars">
+    <td class="title">Application model allows toolbar definitions for parts and perspectives</td>
     <td class="content">
-      In bundle <a href="http://git.eclipse.org/c/platform/eclipse.platform.releng.git/tree/bundles/org.eclipse.test.performance">org.eclipse.test.performance</a>,
-      there's a new API that helps debugging those pesky tests that are freezing / hanging / DNF ("Did not finish")
-      in a remote Hudson build, and you have no clue why, because they always pass locally.
-      <p>
-      If your tests are organized in a JUnit-4-style test suite using the
-      </p>
-      <pre style="margin-left:1em">@RunWith(Suite.class)</pre>
-      <p>
-      annotation, you can just replace that line by
-      </p>
-      <pre style="margin-left:1em">@RunWith(TracingSuite.class)</pre>
-      <p>
-      This will log the start of each atomic test contained in the suite to <code>System.out</code>, and it will try to collect more information
-      after a timeout (stack traces, screenshot). And it will even try to throw an exception in the main thread,
-      so that other tests can proceed. See the Javadoc for configuration options.
-      </p>
+	  The application model has been extended to support the definition of toolbars (via trimbars) for parts and perspectives. 
+	  This simplifies the implementation of a common requirement in RCP applications. You can now define toolbars specific to a perspective and  
+	  toolbars rendering within the part area via your custom renderer.
+	 <p>
+      Currently, the default Eclipse renderers do not use these new elements.
+     </p>
     </td>
   </tr>
 
@@ -498,6 +466,28 @@ public class GradlePR extends PresentationReconciler {
 
     </td>
 
+  </tr>
+
+  <tr id="debugging-test-timeouts">
+    <td class="title">Debugging test timeouts</td>
+    <td class="content">
+      In bundle <a href="http://git.eclipse.org/c/platform/eclipse.platform.releng.git/tree/bundles/org.eclipse.test.performance">org.eclipse.test.performance</a>,
+      there's a new API that helps debugging those pesky tests that are freezing / hanging / DNF ("Did not finish")
+      in a remote Hudson build, and you have no clue why, because they always pass locally.
+      <p>
+      If your tests are organized in a JUnit-4-style test suite using the
+      </p>
+      <pre style="margin-left:1em">@RunWith(Suite.class)</pre>
+      <p>
+      annotation, you can just replace that line by
+      </p>
+      <pre style="margin-left:1em">@RunWith(TracingSuite.class)</pre>
+      <p>
+      This will log the start of each atomic test contained in the suite to <code>System.out</code>, and it will try to collect more information
+      after a timeout (stack traces, screenshot). And it will even try to throw an exception in the main thread,
+      so that other tests can proceed. See the Javadoc for configuration options.
+      </p>
+    </td>
   </tr>
 
   <tr>
