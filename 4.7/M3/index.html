@@ -230,11 +230,12 @@
   </tr>
 
   <tr id="validate-launch-configuration-activated-by-default">
-    <td class="title">Validate launch configuration activated by default for Eclipse applications</td>
+    <td class="title">Validate launch configuration activated by default</td>
     <td class="content">
-      If you start an Eclipse application, PDE will now, by default, validate the launch configuration. 
-      This helps you to identify missing plug-in dependencies before the actual start of the application and makes it easier for new plug-in and RCP developers to identify this common problem.
-      You can disable this validation. It is located in run configuration, on the plug-in tab. 
+      When you create a new <b>Eclipse Application</b> launch configuration, PDE will now by default enable the option to
+      <b>Validate Plug-ins automatically prior to launching</b>. 
+      This helps you to identify missing plug-in dependencies before the actual start of the application and makes it easier for new plug-in and RCP developers to identify common problems.
+      You can disable this validation in the launch configuration dialog, on the <b>Plug-ins</b> tab. 
     
     <p>
         	<img src="images/validate-launch-config-by-default.png" alt=""/>
@@ -245,17 +246,17 @@
   <tr id="generic-editor-template">
     <td class="title">Added a PDE plug-in project template for the Generic Text Editor</td>
     <td class="content">
-      A plug-in template was added to show off the new extensible generic editor functionality. It will kick start you with a sample .target file editor with syntax highlighting.
+      A plug-in template was added to show off the new extensible generic editor functionality. It will kick-start you with a sample .target file editor with syntax highlighting.
     <p>
         	<img src="images/pde-generic-editor.png" alt=""/>
     </p>
     </td>
   </tr>
   
-    <tr id="search">
-    <td class="title">Plug-in reference searched in feature</td>
+  <tr id="search">
+    <td class="title">Search finds plug-in references in features</td>
     <td class="content">
-     A plug-in search now searches for the plug-in referenced in features also.
+      <b>Search > Plug-ins...</b> for references to a plug-in also finds references to the plug-in in features.
     <p>
         	<img src="images/pde-search-plugin-in-feature.png" alt=""/>
     </p>
@@ -263,14 +264,17 @@
   </tr>
   
     <tr id="option">
-    <td class="title">Option to control severity of default method addition in API tooling</td>
+    <td class="title">Severity of default method addition in API tooling</td>
     <td class="content">
-       In  <b>API Compatibility</b> tab of the <b>Plug-in Development &gt; API Errors/Warnings</b> preference page,
-        there is a new option in <b>Interface</b> section to control severity of 'default method addition' API change. The user can choose
-        to change the default severity of error to warning or ignore.
-    <p>
+      On the <b>Plug-in Development &gt; API Errors/Warnings</b> preference page in the <b>API Compatibility</b> tab,
+      there is a new option in the <b>Interface</b> section to control the severity of a "default method addition" API change.
+      <p>
+        By default, the option is set to "Error" because adding the same method in multiple interfaces can break
+        existing clients at run time (<a href="http://docs.oracle.com/javase/specs/jls/se8/html/jls-13.html#jls-13.5.6">JLS8 13.5.6</a>).
+      </p>
+      <p>
         	<img src="images/pde-default-method-addition-api-compat-option.png" alt=""/>
-    </p>
+      </p>
     </td>
   </tr>
 
