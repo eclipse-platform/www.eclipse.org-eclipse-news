@@ -22,7 +22,6 @@
   <li><a href="#JDT">JDT</a></li>
   <li><a href="#PDE">PDE</a></li>
   <li><a href="#Platform-Dev">Platform Developers</a></li>
-  <li><a href="#Equinox">Equinox</a></li>
 </ul>
 
 <table class="news">
@@ -30,137 +29,6 @@
     <col class="title" />
     <col />
   </colgroup>
-
-  <tr>
-    <td id="Instructions" class="section" colspan="2">
-      <h2>Instructions</h2>
-    </td>
-  </tr>
-
-  <tr id="item-name">
-    <td class="title">News item title and description</td>
-    <td class="content">
-        The whole entry should be a blurb pitched to the Eclipse end user community
-        (not just to members of the Eclipse Platform development team).
-      <p>
-        The title should be short and snappy, written in
-        <a href="https://en.wikipedia.org/wiki/Letter_case#Case_styles">sentence case</a>, and using
-        "<a href="https://en.wikipedia.org/wiki/Headlinese#Syntax">headlinese</a>" (compressed style).
-        The title should <em>not</em> use trailing
-        punctuation and a unique id attribute on the &lt;tr&gt; HTML element (id is all-lowercase and hyphen-separated).
-      </p>
-      <p>
-        In the news description, tell
-        users about changes they'll see in the UI. Tell component writers
-        about changes they'll see at the client- and server-side APIs. Try to
-        generate some excitement; save the boring details for the manual; be short and don't repeat yourself. The
-        description should be complete sentences, with trailing punctuation.
-      </p>
-      <p>Make the entry self-contained and mention API classes.
-        Do <em>not</em> link to bugs and don't promote individuals or third-party products.
-      </p>
-      <p>Use active voice (say "you", not "the user"), and follow other advice in the
-        <a href="http://wiki.eclipse.org/Eclipse_Doc_Style_Guide#topic-content">Topic&nbsp;Content</a>
-        section of the Eclipse Doc Style Guidelines.
-      </p>
-      <p>Stick to the default font and size. Make command names (<b>Quick Fix</b>),
-        keyboard shortcuts (<b>Ctrl+1</b>), and preference page paths
-        (<b>Preferences &gt; General &gt; Keys</b>) bold.
-      </p>
-      <p>Do <em>not</em> enclose the first paragraph of an item in <code>&lt;p&gt;&lt;/p&gt;</code> tags.
-      </p>
-      <p>See entries in <a href="../../4.6/M7/index.html">published</a> news documents for correct examples. These published news entries have been already reviewed, while
-         entries in the evolving document may still contain errors.
-      </p>
-    </td>
-  </tr>
-
-  <tr id="screenshots">
-    <td class="title">Screenshots</td>
-    <td class="content">
-        If a small image sheds light, place it below the description, in a separate
-        paragraph. As the majority of the Eclipse users uses Windows 7, regular screen snapshots
-        should be done on Windows 7 if possible, but screenshots from
-        other operating system are also acceptable. Crop
-        out any extraneous stuff to focus the reader's attention on your new
-        feature. The image should be
-        <b>no more than 520 pixels wide</b> and in <b>PNG</b> format (as opposed
-        to GIF, TIF, BMP, or JPG). Use PNG-8 if your image doesn't have a lot of color,
-        or PNG-24 if the screen shot uses enough color to warrant additional color depth.
-        See also the
-        <a href="http://wiki.eclipse.org/Eclipse_Doc_Style_Guide#graphics">Graphics</a>
-        section of the Eclipse Doc Style Guidelines.
-      <p>The Windows <b>Snipping Tool</b> actually saves to PNG on Windows 7 and can easily be
-        used to crop and save screenshots:</p>
-      <ul>
-        <li>Arrange the windows for the shot</li>
-        <li>Use the Windows <b>Snipping Tool</b> to capture part of the screen</li>
-        <li>Use <b>File &gt; Save As</b> to save the screenshot as a PNG</li>
-        <li>Overlays such as red circles or boxes to call out details can be done using Microsoft Paint</li>
-      </ul>
-      <p>Name the file in a way that is appropriate and specific to the item
-        (e.g., key-bindings.png, rather than something generic like image.png).
-        Use all <b>lowercase</b> letters in the image file name, including the &quot;<b>.png</b>&quot;
-        file extension. As a separator, use <b>hyphen</b> &quot;-&quot; rather than
-        underscore
-        &quot;_&quot;. </p>
-      <p>Put all the images in a sibling directory named &quot;images&quot;.
-        This gives XHTML like:<br/>
-        <code>&lt;img src=&quot;images/foo-view.png&quot; alt=&quot;&quot;/&gt;</code><br/>
-        Include a suitable <a href="http://www.w3.org/TR/html4/struct/objects.html#h-13.8"><code>alt</code></a> attribute.
-        The alt text should be empty ("") if the image just illustrates the text.
-        Only use the alt text to add information that is not accessible if the page is rendered without images.
-        Don't write <code>alt="Screenshot of <i>the XY dialog</i>"</code>. Blind users shouldn't have to skip useless repetitions.</p>
-      <p>If the <code>alt</code> attribute text cannot sufficiently replace the image contents
-        (e.g. for a screenshot that shows source code), then enclose the img element in a link
-        to a plain &quot;.txt&quot; file with the same name as the image:<br/>
-        <code>&lt;a href=&quot;images/foo-view.txt&quot;&gt;&lt;img ...</code></p>
-      <p>The images should be left-justified (as opposed to centered). Do not embed the width and height of the image.</p>
-      <p>
-        <img src="https://www.eclipse.org/artwork/images/v2/logo-800x188.png" alt="" />
-      </p>
-      <script type="text/javascript">
-      //<![CDATA[
-      document.addEventListener('load', function markOversizedImages() {
-        var imgs = document.getElementsByTagName("img");
-        for (var i = 0; i < imgs.length; i++) {
-          var img = imgs[i];
-          var w = window.getComputedStyle(img, null).getPropertyValue("width");
-          if (parseInt(w, 10) > 520) {
-            img.style.width = "300px";
-            var filter = "sepia(0.5) blur(2px)";
-            img.style.filter = filter;
-            img.style.webkitFilter = filter;
-            var msg = document.createElement("div");
-            msg.innerHTML = "Image too big. See Instructions &gt; <a href='#screenshots'>Screenshots</a>.<br>"
-                + img.getAttribute("src") + ": width=" + w;
-            msg.style.color = "red";
-            msg.style.fontWeight = "bold";
-            img.parentElement.insertBefore(msg, img);
-          }
-        }
-      }, true);
-      //]]>
-      </script>
-    </td>
-  </tr>
-  <tr id="validation">
-    <td class="title">Validation</td>
-    <td class="content">
-        Use the W3C <a href="http://validator.w3.org/#validate_by_input">XHTML
-        Markup Validation Service</a> to check your document's markup before
-        submitting.
-    </td>
-  </tr>
-   <tr id="css">
-    <td class="title">CSS styling</td>
-    <td class="content">
-        Do <em>not</em> change the style.css file without consulting with the Eclipse Platform project lead. The news entries are
-        aggregated at the end of the development cycle and the CSS files need to be aligned.
-    </td>
-  </tr>
-
-
 
   <tr>
     <td colspan="2" class="section" id="Platform">Platform</td>
@@ -248,14 +116,11 @@
   <tr id="ctrl-e-command-improvements">
     <td class="title">Ctrl+E command improvements</td>
     <td class="content">
-        You can use the <b>Ctrl+E</b> command to list and filter all the open editors.
+        You can use the <b>Quick Switch Editor</b> (<b>Ctrl+E</b>) command to list and filter all the open editors.
         This works now also if you have selected a view in the editor area.
         You can filter the list using wildcards, and select editors using mouse or keyboard.
         <p>
-        	Now you can also cycle through the list, by keep pressing <b>Ctrl+E</b>, or <em>arrow up/down</em>.
-        </p>
-        <p>
-        	The command dialog is dark theme friendly and easily extensible, to be reused internally.
+        	Now you can also cycle through the list by pressing <b>Ctrl+E</b> again. Or use <b>Arrow Up/Down</b> as before.
         </p>
         <p>
         	<img src="images/ctrl-e-improvements.png" alt=""/>
@@ -264,9 +129,9 @@
   </tr>
 
   <tr id="open-perspective-dialog-description">
-    <td class="title">Perspective description available in Open Perspective Dialog</td>
+    <td class="title">Perspective descriptions in Open Perspective dialog</td>
     <td class="content">
-      You can now see the description for a perspective (if provided by contributing plugin) via F2 in the <em>Open Perspective Dialog</em>.
+      You can now see the description for a perspective (if provided by the contributing plug-in) by pressing <b>F2</b> in the <b>Open Perspective</b> dialog.
       <p>
         <img src="images/open-perspective-dialog-description.png" alt=""/>
       </p>
@@ -274,9 +139,9 @@
   </tr>
   
   <tr id="problems-and-tasks-copy-details-submenu">
-    <td class="title">Copy Details submenu for Problem and Task Views</td>
+    <td class="title">Copy Details submenu for Problems and Tasks views</td>
     <td class="content">
-       You can copy the description or the resource qualified name of an error, warning or task into the clipboard using commands in the <em>Copy Details</em> context menu.
+       You can copy the description or the resource qualified name of an error, warning, or task into the clipboard using commands in the <b>Copy Details</b> context menu.
       <p>
         <img src="images/problems-and-tasks-copy-details-submenu.png" alt=""/>
       </p>
@@ -288,14 +153,14 @@
   </tr>
 
   <tr id="remote-java-launch-connection-limits">
-    <td class="title">Remote Java Application <em>Socket Listen</em>
+    <td class="title">Remote Java Application "Socket Listen"
         type supports multiple incoming connections</td>
     <td class="content">
-      The <em>Remote Java Application</em> launcher's <em>Standard
-      (Socket Listen)</em> mode now supports incoming connections 
+      The <b>Remote Java Application</b> debug configuration's <b>Standard
+      (Socket Listen)</b> connection type now supports incoming connections
       from multiple VMs.  This is useful for debugging distributed
       systems.  The connection limit may be set to a fixed number, or
-      <tt>0</tt> for unlimited connections.
+      <code>0</code> for unlimited connections.
       <p>
         <img src="images/remote-java-listen-conn-limit.png" alt=""/>
       </p>
@@ -303,10 +168,10 @@
   </tr>
   
   <tr id="hide-inherited-object-members">
-    <td class="title">Hide all inherited members from java.lang.Object</td>
+    <td class="title">Hide inherited members from java.lang.Object</td>
     <td class="content">
       You can hide all inherited members from <code>java.lang.Object</code>
-      in the <b>Quick Outline (Ctrl+O)</b> by using the new filter:
+      in the <b>Quick Outline</b> (<b>Ctrl+O</b>) by using the new filter from the drop-down menu (Ctrl+F10):
       <p>
         <img src="images/hide-inherited-object-members.png" alt=""/>
       </p>
@@ -314,9 +179,9 @@
   </tr>
 
   <tr id="javadoc-colors">
-    <td class="title">Set colors for the Javadoc</td>
+    <td class="title">Set colors for Javadoc</td>
     <td class="content">
-      You can use the new color preferences to set the foreground text color and the background color in the Javadoc view and hover:
+      You can use the new color preferences to set the foreground text color and the background color in the Javadoc view and hovers:
       <p>
         <img src="images/javadoc-colors.png" alt=""/>
       </p>
@@ -331,24 +196,29 @@
       <p>
         <img src="images/escape-text-when-pasting.png" alt=""/>
       </p>
+      To paste without escaping, you can either paste outside of a string literal, or you can disable
+      <b>Edit > Smart Insert Mode</b>.
     </td>
   </tr>
 
   <tr id="new-java-index">
     <td class="title">New Java index</td>
     <td class="content">
-      Eclipse 4.7 M3 contains an experimental new Java index which is enabled by default. If you suspect an index-related bug, you can disable the new index from <b>Preferences > Java</b>:
+      Eclipse 4.7 M3 contains an experimental new Java index which is enabled by default. If you suspect an index-related problem, you can disable the new index from <b>Preferences > Java</b>:
       <p>
         <img src="images/new-java-index.png" alt=""/>
       </p>
+      Currently, the new index shouldn't affect your experience. Once the work is finished,
+      we expect big performance improvements for type hierarchies and in scenarios with many JARs.
     </td>
   </tr>
 
   <tr id="option-disable-hcr">
     <td class="title">New option to disable HCR</td>
     <td class="content">
-      You can now disable <a href="https://wiki.eclipse.org/FAQ_What_is_hot_code_replace%3F">Hot Code Replace (HCR)</a> if it causes any trouble (enabled by default).<br/>
-      <b>Preferences > Java > Debug</b>
+      You can now disable <a href="https://wiki.eclipse.org/FAQ_What_is_hot_code_replace%3F">Hot Code Replace (HCR)</a> if it causes any trouble
+      or if you want to avoid code changes in a debug target. HCR is enabled by default but can be disabled
+      in <b>Preferences > Java > Debug</b>.
       <p>
         <img src="images/option-disable-hcr.png" alt=""/>
       </p>
@@ -625,18 +495,6 @@ public class GradlePR extends PresentationReconciler {
     </td>
 
   </tr>
-
-  <tr>
-    <td colspan="2" class="section" id="Equinox">Equinox</td>
-  </tr>
-
-  <tr id="first-item-equinox">
-    <td class="title">First item</td>
-    <td class="content">
-      Item blurb.
-    </td>
-  </tr>
-
 
   <tr>
     <td colspan="2"/>
