@@ -5,7 +5,7 @@
 	# team-leaders.php
 	#
 	# Author: 		
-	# Date:			2016-09-12
+	# Date:			2016-11-08
 	#
 	# Description: Details about the Eclipse Project PMC
 	#
@@ -90,12 +90,19 @@ ob_start();
 					He is very interested in deeper native platform integration both as runtime experience and as distribution channel.
 					He is also interested in growing the contributors and better aligning with modern systems.
 		        </li>
-			<li>
+				<li>
 		          <b><a name="lars"></a>Lars Vogel, vogella GmbH</b><br>
 					Lars represents the user and adopter community of Eclipse. Lars is founder and CEO of the vogella GmbH based in Hamburg, Germany.
 					He is an active Platform UI and PDE committer, contributor to other Eclipse projects and co-leads the <a href="http://www.eclipse.org/e4/">e4</a>  and
 					<a href="https://www.eclipse.org/eclipse/platform-ui/">Platform UI</a> project.
 					His interests include API and UI simplification, code clean and growing the number of committers and contributors in the project.
+		        </li>
+				<li>
+		          <b><a name="sergey"></a>Sergey Prigogin, Google</b><br>
+					Sergey is part of Google's Eclipse team. He is CDT and Platform UI committer and co-leads Platform Resources.
+					His primary areas of interest are C++ parsing, indexing, refactoring and making Eclipse faster and more responsive.
+					He is also interested in growing the number of Platform committers and contributors and making contributing to the
+					Eclipse Platform projects as frictionless as possible.
 		        </li>
 		      </ul>
 		</div>
