@@ -210,6 +210,23 @@
       Item blurb.
     </td>
   </tr>
+  
+  <tr id="api-for-decorated-images">
+    <td class="title">Update in API for decorating images</td>
+    <td class="content">
+      The <em>org.eclipse.jface.viewers.DecorationOverlayIcon</em> class has received a new constructor that allows
+      to more easily define decorated images with <em>ImageDescriptor</em> rather than <em>Image</em>. This allows
+      to prevent API adopters to deal with creation and disposal of the underlying resource when using <em>ImageDescriptor</em>.
+      <p>Example of API usage:</p>
+      <pre>
+ImageDescriptor descriptor = // initial image descriptor
+return new DecorationOverlayIcon(
+	descriptor,
+	PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_DEC_FIELD_ERROR),
+	IDecoration.BOTTOM_LEFT);
+      </pre>
+    </td>
+  </tr>
 
 
   <tr>
