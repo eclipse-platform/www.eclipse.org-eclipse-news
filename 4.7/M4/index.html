@@ -203,11 +203,14 @@
   <tr>
     <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
   </tr>
-
-  <tr id="first-item-platform-dev">
-    <td class="title">First item</td>
+  
+  <tr id="swt-lambda-style-keylistener">
+    <td class="title">Lambda as KeyListener</td>
     <td class="content">
-      Item blurb.
+      The <code>KeyListener</code> interface in SWT was enhanced to provide the
+      <code>KeyListener#keyPressedAdapter(Consumer&lt;KeyEvent&gt; c)</code> and
+      <code>KeyListener#keyReleasedAdapter(Consumer&lt;KeyEvent&gt; c)</code>
+      static helper methods that accept lambdas and method references as listeners.
     </td>
   </tr>
   
