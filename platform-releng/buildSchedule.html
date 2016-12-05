@@ -18,22 +18,18 @@
       See also the <a href="https://wiki.eclipse.org/Simultaneous_Release">Simultaneous Release</a> plans.
     </h4>
 
-    <font class="indexsub">Last change of static content: 2016-10-20.</font>
+    <font class="indexsub">Last change of static content: 2016-12-05.</font>
 
     <p>
-    I-builds use branches specified in <a href="https://git.eclipse.org/c/platform/eclipse.platform.releng.aggregator.git/tree/streams/repositories.txt">repositories.txt</a> file, from
+    I-builds use branches specified in <a href="https://git.eclipse.org/c/platform/eclipse.platform.releng.aggregator.git/tree/production/streams/repositories_master.txt">repositories.txt</a> file, from
     master branch of aggregator (eclipse.platform.releng.aggregator). The projects built are submodules of aggregator so normally
     there is one line in repositories.txt file for each submodule of the aggregator.
-    <br>&nbsp;&nbsp;&nbsp;(usually Tuesdays, 08:00 A.M. <a href="https://en.wikipedia.org/wiki/Eastern_Time_Zone">Eastern Time</a>, EST/EDT, -0400/-0500)
-    </p>
-    <p>
-    N-builds always use 'master' branch of the repositories built.
-    <br>&nbsp;&nbsp;&nbsp;(daily 20:00, Eastern Time (except Saturday: 15:00))
+    <br>&nbsp;&nbsp;&nbsp;(daily 20:00 <a href="https://en.wikipedia.org/wiki/Eastern_Time_Zone">Eastern Time</a>, EST/EDT, -0400/-0500)
     </p>
     <p>
     M-builds use a branch of the aggregator (and therefore a branch of the repositories.txt file)
     and, like I-builds, pull whatever branch is specified in the repositories.txt file.
-    <br>&nbsp;&nbsp;&nbsp;(usually Wednesdays, 04:00 A.M., Eastern Time)
+    <br>&nbsp;&nbsp;&nbsp;(usually Wednesdays, 04:00 a.m., Eastern Time)
     </p>
 
     <p>
@@ -44,9 +40,9 @@
 
     <h4 id="rebuilds">Rebuild Policy</h4>
     <ul>
-      <li>Nightly builds - No rebuilds</li>
-      <li>Integration builds - Same day rebuild if compile errors, missing plug-ins, the build is unusable, or if the drops do not get posted. Otherwise, a rebuild the next day at 8:00am.</li>
-      <li>Maintenance builds - Rebuild until success</li>
+      <li>Mondays' integration builds - rebuild if compile errors, missing plug-ins, the build is unusable, or if the drops do not get posted.</li>
+      <li>Other integration builds - rebuild on request for serious or urgent issues.</li>
+      <li>Maintenance builds - rebuild until success.</li>
     </ul>
 
     <br>
@@ -55,8 +51,9 @@
 
     <p>In an effort to reduce our disk utilization on the eclipse.org infrastructure and reduce the amount of data sent to the mirrors, we have adopted the following build retention policy.</p>
     <ul>
-      <li>Release builds are kept indefinitely and moved to the archive.eclipse.org server as appropriate</li>
-      <li>Four integration and nightly builds are retained</li>
+      <li>Release builds are kept indefinitely and moved to the archive.eclipse.org server as appropriate.</li>
+      <li>The last four integration builds are retained.</li>
+      <li>Mondays' integration builds are retained until the next milestone is available.</li>
       <li>Maintenance builds are kept until a release of the maintenance stream is available.</li>
       <li>Stable builds are retained until a release is available.</li>
     </ul>
@@ -65,25 +62,20 @@
 
     <h4 id="notes">Build Notes</h4>
 
-    <strong>For the 4.<i>&lt;n&gt;</i> Integration builds: </strong>
+    <strong>For the 4.<i>&lt;n&gt;</i> Mondays' integration builds: </strong>
     <ul>
-      <li>build time is 8:00 am (Eastern time) on Tuesday mornings.</li>
+      <li>Build time is 20:00 (Eastern time).</li>
       <li>In the event of an integration build failure due to compile errors, missing plug-ins, or if the drops are not posted,<br>there will be a same day rebuild upon
       submission of a fix.</li>
-      <li>Otherwise, there will be a rebuild at noon Wednesday morning to accommodate fixes that have a workaround or do not impact the general usability of the build.
-      <li>Teams are expected to indicate on the platform-releng-dev mailing list if they intend to contribute to a rebuild.</li>
-      <li> In the event of a double integration build failure, all other work will stop until guaranteed-to-be-successful build contributions are  prepared for a rebuild at 8:00 am Thursday morning.</li>
-      <li> if the Thursday 8:00 am (Eastern time) integration build fails we will rebuild until success </li>
-      <li> once a good integration build is achieved, it will be marked as such on the website.</li>
-      <li> the Releng team will often request a go/no go status from all teams to determine if the build is suitable for the week's testing. If you provide status and then
-      recontribute to a subsequent build, you are required to revalidate the build and provide an updated status.</li>
+      <li> In the event of multiple integration build failures due to problems in the submission (i.e. not infrastructure problems),
+        <br>all other work will stop until guaranteed-to-be-successful build contributions are prepared for a rebuild.</li>
     </ul>
 
     <br>
 
     <strong>For the 4.<i>&lt;n-1&gt;</i>.x maintenance builds: </strong>
     <ul>
-      <li>Build time is 4:00 am Wednesday (Eastern time)</li>
+      <li>Build time is 4:00 am Wednesday (Eastern time).</li>
       <li>Due to the nature of the fixes in this stream, these builds should not fail. However, if a
       rebuild is requested by one of the teams, it will take place as soon as the build contribution is available.</li>
     </ul>
@@ -95,12 +87,11 @@
     An example of a Red X which would *not* require a re-build would be a test which
     failed because the test was bogus. </p>
 
-    <p><strong>IMPORTANT</strong>: This strategy <strong>requires</strong>
-    us to have good build inputs. All teams must use the tools to pre-build and test
-    their submissions. In addition, teams should track the nightly builds to detect
-    integration problems early on. What we want to achieve is for the Tuesday morning
-    4.<i>&lt;n&gt;</i> build to typically be successful, with an infrequent requirement for a
-    Wednesday     noon build. Failing the Wednesday noon rebuild should be treated as a catastrophic
+    <p><strong>IMPORTANT</strong>: Committers are expected to run tests before pushing changes to master or a maintenance branch.
+    In addition, teams should track test failures to detect
+    integration problems early on. What we want to achieve is for the Monday
+    4.<i>&lt;n&gt;</i> I-build to typically be successful, with an infrequent requirement for a rebuild.
+    Failing builds until Wednesday should be treated as a catastrophic
     failure. In other words, more than two or three of these per year is an unacceptable
     failure rate. </p>
 
