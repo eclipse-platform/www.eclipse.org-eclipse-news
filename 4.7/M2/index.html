@@ -382,29 +382,6 @@
   </tr>
 
   <tr>
-    <td colspan="2" class="section" id="Equinox">Equinox</td>
-  </tr>
-
-  <tr id="sub-monitor-step">
-    <td class="title">SubMonitor#step(int)</td>
-    <td class="content">
-      <code>org.eclipse.core.runtime.SubMonitor</code> has a new method <code>step(int work)</code> that reports progress and checks cancellation at the
-      same time. Checking cancellation in this way takes less code and is more efficient than checking
-      cancellation using <code>IProgressMonitor#isCanceled()</code>. The new method can be used as a drop-in
-      replacement for <code>IProgressMonitor#worked(int)</code> in code that already handles <code>OperationCanceledException</code>.
-      <p>
-      Example usage:</p>
-      <pre><code>SubMonitor subMonitor = SubMonitor.convert(monitor, someCollection.size());
-for (Object next : someCollection) {
-    subMonitor.step(1);
-    // ...do some work...
-}
-      </code></pre>
-    </td>
-  </tr>
-
-
-  <tr>
     <td colspan="2"/>
   </tr>
 </table>
