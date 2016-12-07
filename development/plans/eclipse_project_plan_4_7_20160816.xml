@@ -16,11 +16,13 @@
 <p:introduction>
 <div>
 <p>
-Last revised 07:20 EST December 7, 2016.
+Last revised 12:49 EDT August 16, 2016.
 
+<!--
 (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 marks interesting changes since the previous draft of 
-<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_7_20160816.xml">August 16, 2016</a>.)
+<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_7_20151214.xml">December 14, 2015</a>.)
+-->
 
 </p>
 <p><i>Please send comments about this plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
@@ -198,7 +200,7 @@ Eclipse 4.7 Endgame Plan.
 			</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
-				Oracle Java 8u112<br/>
+				Oracle Java 8u91<br/>
 				IBM Java 8 8.0.3
 			</td>
 			<td rowspan="2">Win32</td>
@@ -212,7 +214,7 @@ Eclipse 4.7 Endgame Plan.
 
 			<td rowspan="2">7</td>
 			<td rowspan="1">x86 64-bit</td>
-			<td rowspan="2">Open JDK 8u102</td>
+			<td rowspan="2">Open JDK 8u65</td>
 			<td rowspan="2">GTK+ 3</td>
 		</tr>
 		<tr class="c1">
@@ -224,7 +226,7 @@ Eclipse 4.7 Endgame Plan.
 			<td rowspan="5">12 SP1</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
-				Oracle Java 8u112<br/>
+				Oracle Java 8u91<br/>
 				IBM Java 8 8.0.3
 			</td>
 			<td rowspan="5">GTK+ 3</td>
@@ -250,7 +252,7 @@ Eclipse 4.7 Endgame Plan.
 			<td rowspan="2">14.04</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
-				Oracle Java 8u112<br/>
+				Oracle Java 8u91<br/>
 				IBM Java 8 8.0.3
 
 			</td>
@@ -263,7 +265,7 @@ Eclipse 4.7 Endgame Plan.
 			<td rowspan="2">16.04</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
-				Oracle Java 8u112<br/>
+				Oracle Java 8u91<br/>
 				IBM Java 8 8.0.3
 			</td>
 			<td rowspan="2">GTK+ 3</td>
@@ -278,7 +280,7 @@ Eclipse 4.7 Endgame Plan.
 			<td rowspan="1">10.11</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-				Oracle Java 8u112<br/>
+				Oracle Java 8u91<br/>
 			</td>
 			<td rowspan="1">Cocoa</td>
 		</tr>
@@ -489,7 +491,7 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
   </tbody>
 </table>
 
-<p><b><img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> Table of minimum execution environments by bundle.</b> (See also the
+<p><b>Table of minimum execution environments by bundle.</b> (See also the
   <a href="http://www.eclipse.org/projects/project-plan.php?projectid=rt.equinox#appendix">Equinox Project plan</a>
   for the execution environment requirements of bundles contributed via that project.)</p>
 
@@ -588,20 +590,12 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
       <td><div align="center">1.6</div></td>
     </tr>
     <tr>
-      <td>org.apache.lucene.analyzers-common</td>
-      <td><div align="center">1.8</div></td>
-    </tr>
-    <tr>
-      <td>org.apache.lucene.analyzers-smartcn</td>
-      <td><div align="center">1.8</div></td>
+      <td>org.apache.lucene.analysis</td>
+      <td><div align="center">1.5</div></td>
     </tr>
     <tr>
       <td>org.apache.lucene.core</td>
-      <td><div align="center">1.8</div></td>
-    </tr>
-    <tr>
-      <td>org.apache.lucene.misc</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.5</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ant.core</td>
@@ -629,11 +623,11 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.core.commands</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.contenttype</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.databinding</td>
@@ -641,7 +635,7 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.core.databinding.beans</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.databinding.observable</td>
@@ -653,11 +647,11 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.core.expressions</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.externaltools</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.6</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.filebuffers</td>
@@ -665,7 +659,7 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.core.filesystem</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.jobs</td>
@@ -677,7 +671,7 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.core.resources</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.core.runtime</td>
@@ -685,7 +679,7 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.core.variables</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.cvs</td>
@@ -693,15 +687,15 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.debug.core</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.debug.ui</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.e4.core.commands</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.e4.core.contexts</td>
@@ -721,15 +715,15 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.e4.core.services</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.e4.emf.xpath</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.e4.ui.bindings</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.e4.ui.css.core</td>
@@ -737,15 +731,15 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.e4.ui.css.swt</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.e4.ui.css.swt.theme</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.e4.ui.di</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.e4.ui.dialogs</td>
@@ -757,11 +751,11 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.e4.ui.services</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.e4.ui.widgets</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.e4.ui.workbench</td>
@@ -769,7 +763,7 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.e4.ui.workbench.addons.swt</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.e4.ui.workbench.renderers.swt</td>
@@ -781,7 +775,7 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.e4.ui.workbench3</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.emf.common</td>
@@ -801,19 +795,19 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.help</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.help.base</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.help.ui</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.4</div></td>
     </tr>
     <tr>
       <td>org.eclipse.help.webapp</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt</td>
@@ -825,39 +819,39 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.jdt.apt.core</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.apt.pluggable.core</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.apt.ui</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.compiler.apt</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.compiler.tool</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.core</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.core.manipulation</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.debug</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.debug.ui</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.doc.isv</td>
@@ -869,11 +863,11 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.jdt.junit</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.junit.core</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.junit.runtime</td>
@@ -885,11 +879,11 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.jdt.launching</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jdt.ui</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.jface</td>
@@ -913,11 +907,11 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.ltk.core.refactoring</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ltk.ui.refactoring</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.pde</td>
@@ -969,7 +963,7 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.pde.runtime</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.6</div></td>
     </tr>
     <tr>
       <td>org.eclipse.pde.ua.core</td>
@@ -981,7 +975,7 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.pde.ui</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.pde.ui.templates</td>
@@ -1013,7 +1007,7 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.swt</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.team.core</td>
@@ -1041,11 +1035,11 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.ui</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.browser</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.cheatsheets</td>
@@ -1053,7 +1047,7 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.ui.console</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.editors</td>
@@ -1061,14 +1055,10 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.ui.externaltools</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.forms</td>
-      <td><div align="center">1.8</div></td>
-    </tr>
-    <tr>
-      <td>org.eclipse.ui.genericeditor</td>
       <td><div align="center">1.8</div></td>
     </tr>
     <tr>
@@ -1077,7 +1067,7 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.ui.ide.application</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.intro</td>
@@ -1097,11 +1087,11 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.ui.navigator</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.navigator.resources</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.net</td>
@@ -1109,7 +1099,7 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.ui.themes</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.trace</td>
@@ -1117,7 +1107,7 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.ui.views</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.7</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.views.log</td>
@@ -1125,7 +1115,7 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
     </tr>
     <tr>
       <td>org.eclipse.ui.views.properties.tabbed</td>
-      <td><div align="center">1.8</div></td>
+      <td><div align="center">1.6</div></td>
     </tr>
     <tr>
       <td>org.eclipse.ui.win32</td>
