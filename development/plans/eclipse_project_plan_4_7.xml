@@ -16,11 +16,11 @@
 <p:introduction>
 <div>
 <p>
-Last revised 07:20 EST December 7, 2016.
+Last revised 09:28 EST December 7, 2016.
 
-(<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 marks interesting changes since the previous draft of 
-<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_7_20160816.xml">August 16, 2016</a>.)
+<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_7_20160816.xml">August 16, 2016</a>.
 
 </p>
 <p><i>Please send comments about this plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
@@ -246,20 +246,7 @@ Eclipse 4.7 Endgame Plan.
 		</tr>
 		<!-- ************ Ubuntu ************** -->
 		<tr class="c1">
-			<td rowspan="4">Ubuntu Long Term Support</td>
-			<td rowspan="2">14.04</td>
-			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">
-				Oracle Java 8u112<br/>
-				IBM Java 8 8.0.3
-
-			</td>
-			<td rowspan="2">GTK+ 3</td>
-		</tr>
-		<tr class="c1">
-			<td rowspan="1">x86 64-bit</td>
-		</tr>
-		<tr class="c1">
+			<td rowspan="2">Ubuntu Long Term Support (<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" /> removed 14.04)</td>
 			<td rowspan="2">16.04</td>
 			<td rowspan="1">x86 32-bit</td>
 			<td rowspan="2">
@@ -273,7 +260,7 @@ Eclipse 4.7 Endgame Plan.
 		</tr>
 		
 		<!-- ************ Mac ************** -->
-		<tr class="c1">
+		<tr class="c0">
 			<td rowspan="1">Apple Mac OS X</td>
 			<td rowspan="1">10.11</td>
 			<td rowspan="1">x86 64-bit</td>
