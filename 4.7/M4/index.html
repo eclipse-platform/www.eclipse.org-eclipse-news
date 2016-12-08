@@ -31,155 +31,15 @@
     <col />
   </colgroup>
 
-  <tr>
-    <td id="Instructions" class="section" colspan="2">
-      <h2>Instructions</h2>
-    </td>
-  </tr>
-
-  <tr id="item-name">
-    <td class="title">News item title and description</td>
-    <td class="content">
-        The whole entry should be a blurb pitched to the Eclipse end user community
-        (not just to members of the Eclipse Platform development team).
-      <p>
-        The title should be short and snappy, written in
-        <a href="https://en.wikipedia.org/wiki/Letter_case#Case_styles">sentence case</a>, and using
-        "<a href="https://en.wikipedia.org/wiki/Headlinese#Syntax">headlinese</a>" (compressed style).
-        The title should <b>not</b> use trailing punctuation, and the &lt;tr&gt; XHTML element
-        needs a unique id attribute (value is all-lowercase and hyphen-separated).
-      </p>
-      <p>
-        In the news description, tell
-        users about changes they'll see in the UI. Tell component writers
-        about changes they'll see at the client- and server-side APIs. Try to
-        generate some excitement; save the boring details for the manual; be short and don't repeat yourself. The
-        description should be complete sentences, with trailing punctuation.
-      </p>
-      <p>Make the entry self-contained and mention API classes.
-        Do <b>not</b> link to bugs and don't promote individuals or third-party products.
-      </p>
-      <p>Use active voice (say "you", not "the user"), and follow other advice in the
-        <a href="http://wiki.eclipse.org/Eclipse_Doc_Style_Guide#topic-content">Topic&nbsp;Content</a>
-        section of the Eclipse Doc Style Guidelines.
-      </p>
-      <p>Stick to the default font and size. Make command names (<b>Quick Fix</b>),
-        keyboard shortcuts (<b>Ctrl+1</b>), and preference page paths
-        (<b>Preferences > General > Keys</b>) bold (using <code>&lt;</code>b<code>&gt;</code>).
-        Avoid other emphasis markup, but prefer <code>&lt;</code>b<code>&gt;</code>
-        over <code>&lt;</code>em<code>&gt;</code> if you have to use one.
-      </p>
-      <p>Do <b>not</b> enclose the first paragraph of an item in <code>&lt;p&gt;&lt;/p&gt;</code> tags.
-      </p>
-      <p>See entries in <a href="../../4.6/M7/index.html">published</a> news documents for correct examples. These published news entries have been already reviewed, while
-         entries in the evolving document may still contain errors.
-      </p>
-    </td>
-  </tr>
-
-  <tr id="screenshots">
-    <td class="title">Screenshots</td>
-    <td class="content">
-        If a small image sheds light, place it below the description, in a separate
-        paragraph. As the majority of the Eclipse users uses Windows 7, regular screen snapshots
-        should be done on Windows 7 if possible, but screenshots from
-        other operating system are also acceptable. Crop
-        out any extraneous stuff to focus the reader's attention on your new
-        feature. The image should be
-        <b>no more than 520 pixels wide</b> and in <b>PNG</b> format (as opposed
-        to GIF, TIF, BMP, or JPG). Use PNG-8 if your image doesn't have a lot of color,
-        or PNG-24 if the screen shot uses enough color to warrant additional color depth.
-        See also the
-        <a href="http://wiki.eclipse.org/Eclipse_Doc_Style_Guide#graphics">Graphics</a>
-        section of the Eclipse Doc Style Guidelines.
-      <p>The Windows <b>Snipping Tool</b> actually saves to PNG on Windows 7 and can easily be
-        used to crop and save screenshots:</p>
-      <ul>
-        <li>Arrange the windows for the shot</li>
-        <li>Use the Windows <b>Snipping Tool</b> to capture part of the screen</li>
-        <li>Use <b>File &gt; Save As</b> to save the screenshot as a PNG</li>
-        <li>Overlays such as red circles or boxes to call out details can be done using Microsoft Paint</li>
-      </ul>
-      <p>Name the file in a way that is appropriate and specific to the item
-        (e.g., key-bindings.png, rather than something generic like image.png).
-        Use all <b>lowercase</b> letters in the image file name, including the &quot;<b>.png</b>&quot;
-        file extension. As a separator, use <b>hyphen</b> &quot;-&quot; rather than
-        underscore &quot;_&quot;. The item's id is often a good choice for an image name.</p>
-      <p>Put all the images in a sibling directory named &quot;images&quot;.
-        This gives XHTML like:<br/>
-        <code>&lt;img src=&quot;images/foo-view.png&quot; alt=&quot;&quot;/&gt;</code><br/>
-        Include a suitable <a href="http://www.w3.org/TR/html4/struct/objects.html#h-13.8"><code>alt</code></a> attribute.
-        The alt text should be empty ("") if the image just illustrates the text.
-        Only use the alt text to add information that is not accessible if the page is rendered without images.
-        Don't write <code>alt="Screenshot of <i>the XY dialog</i>"</code>.
-        Blind users shouldn't have to skip useless repetitions, but e.g. a field label can be
-        interesting unless it's already part of the description.</p>
-      <p>If the <code>alt</code> attribute text cannot sufficiently replace the image contents
-        (e.g. for a screenshot that shows source code), then enclose the img element in a link
-        to a plain &quot;.txt&quot; file with the same name as the image:<br/>
-        <code>&lt;a href=&quot;images/foo-view.txt&quot;&gt;&lt;img ...</code></p>
-      <p>The images should be left-justified (as opposed to centered). Do not embed the width and height of the image.</p>
-      <p>
-        <img src="https://www.eclipse.org/artwork/images/v2/logo-800x188.png" alt="" />
-      </p>
-      <script type="text/javascript">
-      //<![CDATA[
-      document.addEventListener('load', function markOversizedImages() {
-        var imgs = document.getElementsByTagName("img");
-        for (var i = 0; i < imgs.length; i++) {
-          var img = imgs[i];
-          var w = window.getComputedStyle(img, null).getPropertyValue("width");
-          if (parseInt(w, 10) > 520) {
-            img.style.width = "300px";
-            var filter = "sepia(0.5) blur(2px)";
-            img.style.filter = filter;
-            img.style.webkitFilter = filter;
-            var msg = document.createElement("div");
-            msg.innerHTML = "Image too big. See Instructions &gt; <a href='#screenshots'>Screenshots</a>.<br>"
-                + img.getAttribute("src") + ": width=" + w;
-            msg.style.color = "red";
-            msg.style.fontWeight = "bold";
-            img.parentElement.insertBefore(msg, img);
-          }
-        }
-      }, true);
-      //]]>
-      </script>
-    </td>
-  </tr>
-  <tr id="css">
-    <td class="title">CSS styling</td>
-    <td class="content">
-        Do <b>not</b> change the style.css file without consulting with the Eclipse Platform project lead. The news entries are
-        aggregated at the end of the development cycle and the CSS files need to be aligned.
-    </td>
-  </tr>
-  <tr id="validation">
-    <td class="title">Validation</td>
-    <td class="content">
-        Use the W3C <a href="http://validator.w3.org/#validate_by_input">XHTML
-        Markup Validation Service</a> to check your document's markup before
-        submitting.
-    </td>
-  </tr>
-
 
   <tr>
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
 
-  <tr id="manually-create-content-types">
-    <td class="title">Create content-type manually</td>
-    <td class="content">
-     From the usual <em>Content Types</em> preference page, users can now define their
-     own content-types manually. User-defined content types are stored in the InstanceScope/workspace.
-    </td>
-  </tr>
-
   <tr id="quick-access-string-matching">
-    <td class="title">Improved String matching in Quick Access</td>
+    <td class="title">Improved string matching in Quick Access</td>
     <td class="content">
-      You can now search for partial descriptions in Quick Access.
+      You can now search for partial descriptions in <b>Quick Access</b> (<b>Ctrl+3</b>).
       The search result matches space-separated words in the search string.
       For example, searching for "clone repo",
       will match the "Clone a Git Repository" command.
@@ -187,7 +47,7 @@
         <img src="images/quick-access-better-string-matching.png" alt=""/>
       </p>
       The improved string matching works also in case of parenthesis,
-      or when the search string matches the provider name.
+      or when the search string matches the category name.
       <p>
         <img src="images/quick-access-better-string-matching-extended.png" alt=""/>
       </p>
@@ -197,21 +57,21 @@
   <tr id="quick-access-filter-previous-choices">
     <td class="title">Filter previous choices in Quick Access</td>
     <td class="content">
-      The Quick Access result list does not show anymore duplicate elements.
-      Now, if a search result element is in previous choices,
-      the same element is displayed only once.
+      The <b>Quick Access</b> (<b>Ctrl+3</b>) result list does not show duplicate elements anymore.
+      Now, if a search result element is already in the "Previous Choices" category,
+      it is no longer shown in another category.
       <p>
         <img src="images/quick-access-filter-previous-choices.png" alt=""/>
       </p>
     </td>
   </tr>
 
-  <tr id="improved-window-title">
-    <td class="title">Improved Window Title</td>
+  <tr id="window-title">
+    <td class="title">Window title configuration</td>
     <td class="content">
       The title window is now simpler and you can configure it from Preferences.
 	  By default the title displays <em>workspace name</em>, <em>editor path</em> and <em>product name</em>.
-	  You can use <em>Preferences &gt; Workspace</em> to display the <em>workspace path</em> instead of its <em>name</em> only.
+	  You can use <b>Preferences &gt; Workspace</b> to display the <em>workspace path</em> instead of its <em>name</em> only.
       <p>
         <img src="images/improved-window-title.png" alt=""/>
       </p>
@@ -219,18 +79,19 @@
   </tr>
   
   <tr id="launch-groups">
-    <td class="title">"Launch Group" Launch Configuration Type</td>
+    <td class="title">"Launch Group" launch configuration type</td>
     <td class="content">
-      The new <em>Launch Group</em> Launch Configuration Type allows to launch multiple other Launch Configurations
-      sequentially with configurable actions after launching each group member:
+      The new <b>Launch Group</b> launch configuration type allows you to launch multiple other launch configurations
+      sequentially, with configurable actions after launching each group member:
       <ul>
-      	<li><em>None</em>: Continue launching the next member right away</li>
-      	<li><em>Wait until terminated</em>: Continue launching the next member only after this member has terminated</li>
-      	<li><em>Delay</em>: Delay launching the next member for a given set of seconds.</li>
+      	<li>None: Continue launching the next member right away</li>
+      	<li>Wait until terminated: Continue launching the next member only after this member has terminated</li>
+      	<li>Delay: Delay launching the next member for a given amount of seconds.</li>
       </ul>
       <p>
         <img src="images/launch-groups.png" alt=""/>
       </p>
+      New launch groups can be created via the <b>Run > Run Configurations...</b> or <b>Run > Debug Configurations...</b> dialogs.
     </td>
   </tr>
 
@@ -265,13 +126,13 @@
   </tr>
 
   <tr id="breakpoints-sort-by">
-    <td class="title">Breakpoints View Sort By</td>
+    <td class="title">Breakpoints view: Sort By > Creation Time</td>
     <td class="content">
-      A new menu in the <em>Breakpoints View</em> named <em>Sort By</em> has been added below <em>Group By</em>.
+      In the <b>Breakpoints</b> view's view menu, a new <b>Sort By</b> option has been added.
       This allows sorting by two ways:
       <ul>
-      	<li><em>Name</em>: Current default sorting order by the displayed name</li>
-      	<li><em>Creation Time</em>: Newly created breakpoints will be shown on top</li>
+      	<li><b>Name</b>: Current default order, sorts by the displayed name</li>
+      	<li><b>Creation Time</b>: Newly created breakpoints will be shown on top</li>
       </ul>
       <p>
         <img src="images/breakpoints-sort-by.png" alt=""/>
@@ -288,13 +149,22 @@
     <td class="content">
       The Javadoc color usage on Linux was inconsistent since GTK 3.04.
       This has been resolved and support for Javadoc on the Eclipse Dark Theme has been added.
-      <p>Before:<br/>
+      <p>
+        Before:
+      </p>
+      <p>
         <img src="images/javadocbefore.png" alt=""/>
       </p>
-      <p>After:<br/>
+      <p>
+        After:
+      </p>
+      <p>
         <img src="images/javadocafter.png" alt=""/>
       </p>
-      <p>Dark theme support:<br/>
+      <p>
+        Dark theme support:
+      </p>
+      <p>
         <img src="images/javadocdarktheme.png" alt=""/>
       </p>
     </td>
@@ -304,9 +174,11 @@
     <td class="title">Open Implementation of selected Type</td>
     <td class="content">
       The <b>Open Implementation</b> hyperlink and the <b>Navigate &gt; Open Implementation</b> action now open the implementation of the selected interface or class also.
+      In the past, <b>Open Implementation</b> was only available for methods.
       <p>
         <img src="images/open-implementation-of-type.png" alt=""/>
       </p>
+      The hyperlink popup shows up when you hold <b>Ctrl</b> (on the Mac: <b>Command</b>), unless you've changed the modifier on the <b>Hyperlinking</b> preference page.
     </td>
   </tr>
 
@@ -314,7 +186,7 @@
     <td class="title">Automatically insert Braces at correct position</td>
     <td class="content">
       The <b>Java &gt; Editor &gt; Typing &gt; Automatically insert at correct position &gt; Braces</b> preference option is now enabled by default.
-      This will automatically insert the Braces when they are required.
+      This will automatically insert the braces where they are required.
       <p>
         <img src="images/auto-insert-braces.png" alt=""/>
       </p>
@@ -330,8 +202,8 @@
     <td class="content">
       You can now organize features into hierarchies by using the nested categories support in the <b>Category Definition</b> editor.
       <p>
-      The created definition can be used as input for the <b>Categorize repository</b> parameter in the <b>File > Export... > Deployable features</b> wizard..
-      They are also visible in the <b>Installation dialog</b>.
+      The created definition can be used as input for the <b>Categorize repository</b> parameter in the <b>File > Export... > Deployable features</b> wizard.
+      They are also visible in the <b>Install</b> dialog.
       </p>
       <p>
         <img src="images/pde-support-for-nested-categories.png" alt=""/>
@@ -342,7 +214,7 @@
   <tr id="new-feature-project-filtered-tree">
     <td class="title">Feature project wizard filtered plugin selection</td>
     <td class="content">
-	  You can now use text filter when selecting plug-ins in the <b>New > Feature Project </b> wizard.
+	  You can now use a text filter when selecting plug-ins in the <b>New > Feature Project</b> wizard.
       <p>
         <img src="images/new-feature-project-filtered-tree.png" alt=""/>
       </p>
@@ -380,12 +252,12 @@
   <tr id="api-for-decorated-images">
     <td class="title">Update in API for decorating images</td>
     <td class="content">
-      The <em>org.eclipse.jface.viewers.DecorationOverlayIcon</em> class has received a new constructor that allows
-      to more easily define decorated images with <em>ImageDescriptor</em> rather than <em>Image</em>. This allows
+      The <code>org.eclipse.jface.viewers.DecorationOverlayIcon</code> class has received a new constructor that allows
+      to more easily define decorated images based on an <code>ImageDescriptor</code> rather than <code>Image</code>. This allows
       to prevent API adopters to deal with creation and disposal of the underlying resource when using <em>ImageDescriptor</em>.
       <p>Example of API usage:</p>
       <pre>
-ImageDescriptor descriptor = // initial image descriptor
+ImageDescriptor descriptor = /*base image descriptor*/;
 return new DecorationOverlayIcon(
 	descriptor,
 	PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_DEC_FIELD_ERROR),
@@ -410,7 +282,8 @@ return new DecorationOverlayIcon(
   <tr id="non-modal-p2-installation-dialog">
     <td class="title">Non-modal Install dialog</td>
     <td class="content">
-      The Install dialog available via <b>Help &gt; Install New Software...</b> is now non-modal.
+      The Install dialog available via <b>Help &gt; Install New Software...</b> is now non-modal,
+      so that you can do something else while waiting for the catalog to be fetched.
     </td>
   </tr>
 
