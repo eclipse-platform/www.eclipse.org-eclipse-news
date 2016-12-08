@@ -170,6 +170,21 @@ table.news tr td.content {vertical-align: top;}
       }, true);
       //]]>
       </script>
+
+     <script type="text/javascript">
+      window.addEventListener('load', function findWrongHighLighter() {
+        var emTags = document.getElementsByTagName("em");
+        for (var i = 0; i < emTags.length; i++) {
+          var tag = emTags[i];
+          var msg = document.createElement("div");
+          msg.innerHTML = "Do not use &lt;em&gt; for highlighting. Prefer the usage of &lt;b&gt; or if you have to, use &lt;code&gt; See Instructions.<br>"
+          msg.style.color = "red";
+          msg.style.fontWeight = "bold";
+          tag.parentElement.insertBefore(msg, tag);
+        }
+      }, true);
+      </script>
+
     </td>
   </tr>
   <tr id="css">
@@ -199,7 +214,6 @@ table.news tr td.content {vertical-align: top;}
       Item blurb.
     </td>
   </tr>
-  
 
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
