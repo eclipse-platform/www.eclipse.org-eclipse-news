@@ -153,7 +153,7 @@
         for (var i = 0; i < emTags.length; i++) {
           var tag = emTags[i];
           var msg = document.createElement("div");
-          msg.innerHTML = "Do not use &lt;em&gt; for highlighting. Prefer the usage of &lt;b&gt; or if you have to, use &lt;code&gt; See Instructions.<br>"
+          msg.innerHTML = "Do not use &lt;em&gt; for highlighting. Prefer the usage of &lt;b&gt;. See Instructions.<br>"
           msg.style.color = "red";
           msg.style.fontWeight = "bold";
           tag.parentElement.insertBefore(msg, tag);
