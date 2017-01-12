@@ -265,10 +265,26 @@
     <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
   </tr>
 
-  <tr id="first-item-platform-dev">
-    <td class="title">First item</td>
+  <tr id="equinox-common-java8-bree">
+    <td class="title">Source-incompatible change in org.eclipse.equinox.common requires Java 8 BREE for some dependant plug-ins</td>
     <td class="content">
-      Item blurb.
+    With <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=509234">bug 509234</a>, <code>org.eclipse.core.runtime.ListenerList</code> 
+    now overrides Java 8 default method <code>Iterable.spliterator()</code> and provides <code>stream()</code> and <code>parallelStream()</code> 
+    methods. Thus it exposes Java 8 types in public API. This is a source-incompatible change that require all plug-ins using 
+    <code>ListenerList</code> to have a minimum BREE set to Java 8 if they want to properly compile against Oxygen and forthcoming 
+    versions (i.e. versions in the <code>[3.9,4.0)</code> range).
+    <p>
+      The typical compile error indicating that you should change your BREE is 
+    </p>
+    <p>
+      <cite>The type <code>java.util.stream.Stream</code> cannot be resolved. It is indirectly referenced from required <code>.class</code> files.</cite>
+    </p>
+    <p>
+    Note that this change is only required when using <code>org.eclipse.core.runtime.ListenerList</code>. However, now that some Java 8 types are being 
+    exposed in the public API, similar changes may be done in other API types. Thus it will require BREE change in plug-ins using these types.
+    </p>
+    Finally, note that this change is binary compatible. Any previously compiled bundle depending on <code>org.eclipse.equinox.common</code> within 
+    the <code>[3.0,4.0)</code> range will continue to work as before.
     </td>
   </tr>
 
