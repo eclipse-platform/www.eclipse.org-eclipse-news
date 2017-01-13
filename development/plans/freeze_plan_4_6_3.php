@@ -101,9 +101,6 @@ ob_start();
 	            <td>February 2017</td>
 	          </tr>
 	          <tr>
-	            <td class="spacer">&nbsp;</td>
-	          </tr>
-	          <tr>
 	            <td></td>
 	            <td class="date">7</td>
 	            <td class="date">Tue</td>
