@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2017-01-13
+	# Date:			2017-01-16
 	#
 	# Description: Eclipse project 4.6.3 release freeze plan
 	#
@@ -182,7 +182,7 @@ ob_start();
 	            <td class="spacer">&nbsp;</td>
 	          </tr>
 	          <tr>
-	            <td>March 2016</td>
+	            <td>March 2017</td>
 	          </tr>
 	          <tr>
 	            <td></td>
@@ -224,7 +224,7 @@ ob_start();
 	            <td class="date">23</td>
 	            <td class="date">Thu</td>
 	            <td></td>
-	            <td>Simultaneous release train GA Neon.2</td>
+	            <td>Simultaneous release train GA Neon.3</td>
 	            <td></td>
 	          </tr>
 	          <tr>
@@ -344,7 +344,7 @@ ob_start();
 	
 			<strong>Neon Update 3 (4.6.3) Release</strong>
 			<p>The Neon Update 3 (4.6.3) release should be complete and available for download by 
-	              the end of December 2016 as part of the <a href="https://wiki.eclipse.org/Neon/Simultaneous_Release_Plan#Neon.2">Neon 
+	              Thursadca, March 23, 2017 as part of the <a href="https://wiki.eclipse.org/Neon/Simultaneous_Release_Plan#Neon.3">Neon 
 	              coordinated service release</a> . If product teams intending 
 	              to ship on Neon Update 3 (4.6.3) uncover further serious defects during the endgame, 
 	              we may schedule additional release candidate builds to incorporate fixes.
