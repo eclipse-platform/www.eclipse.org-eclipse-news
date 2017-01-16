@@ -344,7 +344,7 @@ ob_start();
 	
 			<strong>Neon Update 3 (4.6.3) Release</strong>
 			<p>The Neon Update 3 (4.6.3) release should be complete and available for download by 
-	              Thursadca, March 23, 2017 as part of the <a href="https://wiki.eclipse.org/Neon/Simultaneous_Release_Plan#Neon.3">Neon 
+	              Thursday, March 23, 2017 as part of the <a href="https://wiki.eclipse.org/Neon/Simultaneous_Release_Plan#Neon.3">Neon 
 	              coordinated service release</a> . If product teams intending 
 	              to ship on Neon Update 3 (4.6.3) uncover further serious defects during the endgame, 
 	              we may schedule additional release candidate builds to incorporate fixes.
