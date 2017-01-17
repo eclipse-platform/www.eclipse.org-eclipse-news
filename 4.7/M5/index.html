@@ -300,6 +300,24 @@
     </td>
   </tr>
 
+  <tr id="async-content-assist">
+    <td class="title">Asynchronous content-assistant</td>
+    <td class="content">
+    With <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=251156">bug 251156</a>, <code>org.eclipse.jface.text.contentassist.AsyncContentAssistant</code> 
+    was added as an alternative to the usual <code>org.eclipse.jface.text.contentassist.ContentAssistant</code>. The <code>AsyncContentAssist</code> triggers
+    computation of completion proposal in background and doesn't block the thread invoking the completion. As a result, it will prevent the UI thread to freeze
+    when a completion proposal computer takes too long.
+    <p>
+	    This supports the same API and methods as the usual <code>ContentAssist</code>, so shifting from synchronous/blocking <code>ContentAssistant</code> to asynchronous one only requires
+	    instantiating the <code>AsyncContentAssistant</code> in place of the <code>ContentAssistant</code>. Note that as the computation now happens in background, the <code>IContentAssistProcessor</code>
+	    attached to an <code>AsyncContentAssistant</code> needs to <b>NOT</b> require UI Thread; any <code>IContentAssistProcessor</code> computer requiring the UI Thread will need to be modified
+	    in order to be used with <code>AsyncContentAssistant</code>. The <code>AsyncContentAssistant</code> also provides a way to directly add multiple <code>IContentAssistProcessor</code>s to the content assistant.
+    </p> 
+	<p>
+		The generic and extensible editor has been switched to use this <code>AsyncContentAssistant</code>.
+	</p>    
+    </td>
+  </tr>
 
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
