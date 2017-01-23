@@ -237,6 +237,28 @@
       </p>
     </td>
   </tr>
+  
+  <tr id="improved-launch-groups">
+    <td class="title">Improved Launch Groups</td>
+    <td class="content">
+      The UI for the new Launch Groups feature has been reworked to be more intuitive
+      and user friendly. Also, additional configuration possibilities have been added:
+      <ul>
+      <li>'Wait for console output (regexp)' post launch action: Allows to delay further
+      processing of launch group elements until a certain output (matching a regular expression)
+      appears on the console of the given group element</li>
+      <li>'Adopt launch if already running': Allows to control behaviour of the group when
+      the launch configuration referenced by the launch group element is already running
+      (no matter who launched it). If checked, the launch configuration will not be launched
+      again if it is running already. The existing launch will be adopted by the group (i.e.
+      terminating the group will also terminate this launch). Any configured post launch
+      action will still be executed!
+      </ul>
+      <p>
+      	<img src="images/improved-launch-groups.png" alt="" />
+      </p>
+    </td>
+  </tr>
 
   <tr id="first-item-platform">
     <td class="title">First item</td>
