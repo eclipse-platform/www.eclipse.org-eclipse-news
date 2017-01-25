@@ -413,9 +413,26 @@
   </tr>
 
   <tr id="first-item-equinox">
-    <td class="title">First item</td>
+    <td class="title">New Declarative Services Implementation supporting OSGi R6</td>
     <td class="content">
-      Item blurb.
+      The previous release of Equinox only supported the OSGi R5 specification for the Declarative Services specification.
+      With <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=501950">bug 501950</a> the Apache Felix Declarative Services implementation (<b><code>org.apache.felix.scr</code></b>) is now used as the Declarative Services implementation in the Platform and Equinox.
+      This implementation fully supports the OSGi R6 Declarative Services specification.
+      The Equinox bundle (<b><code>org.eclipse.equinox.ds</code></b>) is still included in order to configure and start the Felix SCR bundle but the Equinox Declarative Service implementation code is no longer shipped within the org.eclipse.equinox.ds bundle.
+
+      <p>
+      The OSGi R6 API for declarative services requires some additional packages (<b><code>org.osgi.util.function</code></b> and <b><code>org.osgi.util.promise</code></b>).  These packages are now exported by the
+      <b><code>org.eclipse.osgi.util</code></b> bundle.  In order to resolve and run the new Declarative Services implementation the following bundles are required in your target:
+      </p>
+      <ul>
+          <li><code>org.apache.felix.scr</code></li>
+          <li><code>org.eclipse.equinox.ds</code></li>
+          <li><code>org.eclipse.osgi.services</code></li>
+          <li><code>org.eclipse.osgi.util</code></li>
+      </ul>
+      <p>
+      The Equinox bundle <b><code>org.eclipse.equinox.util</code></b> is no longer needed for the Felix Declarative Service implementation.
+      </p>
     </td>
   </tr>
 
