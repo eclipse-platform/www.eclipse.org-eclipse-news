@@ -330,6 +330,19 @@
       </p>
     </td>
   </tr>
+  
+    <tr id="pde-api-tools-noimplement-noextend-leak">
+    <td class="title">Types marked with @noimplement and @noextend processed by API leak analysis</td>
+     <td class="content">
+	  Extending or implementing an interface marked as @noimplement will report an API leak. This is because 
+	  adding a field or method to the interface marked as @noimplement may break the client if the client is using 
+	  the extended or implemented type. Also extending a type marked as @extend may indirectly leak API types
+	  if the extended type is further extended by the client. Some of the new type of leak warnings are as below:
+      <p>
+        <img src="images/pde-api-tool-warning-leak-noimplement-noextend.png" alt=""/>
+      </p>
+    </td>
+  </tr>
 
   <tr>
     <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
