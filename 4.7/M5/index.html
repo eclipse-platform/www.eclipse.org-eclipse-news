@@ -31,197 +31,18 @@
     <col />
   </colgroup>
 
-  <tr>
-    <td id="Instructions" class="section" colspan="2">
-      <h2>Instructions</h2>
-    </td>
-  </tr>
-
-  <tr id="item-name">
-    <td class="title">News item title and description</td>
-    <td class="content">
-        The whole entry should be a blurb pitched to the Eclipse end user community
-        (not just to members of the Eclipse Platform development team).
-      <p>
-        The title should be short and snappy, written in
-        <a href="https://en.wikipedia.org/wiki/Letter_case#Case_styles">sentence case</a>, and using
-        "<a href="https://en.wikipedia.org/wiki/Headlinese#Syntax">headlinese</a>" (compressed style).
-        The title should <b>not</b> use trailing punctuation, and the &lt;tr&gt; XHTML element
-        needs a unique id attribute (value is all-lowercase and hyphen-separated).
-      </p>
-      <p>
-        In the news description, tell
-        users about changes they'll see in the UI. Tell component writers
-        about changes they'll see at the client- and server-side APIs. Try to
-        generate some excitement; save the boring details for the manual; be short and don't repeat yourself. The
-        description should be complete sentences, with trailing punctuation.
-      </p>
-      <p>Make the entry self-contained and mention API classes.
-        Do <b>not</b> link to bugs and don't promote individuals or third-party products.
-      </p>
-      <p>Use active voice (say "you", not "the user"), and follow other advice in the
-        <a href="http://wiki.eclipse.org/Eclipse_Doc_Style_Guide#topic-content">Topic&nbsp;Content</a>
-        section of the Eclipse Doc Style Guidelines.
-      </p>
-      <p>Stick to the default font and size. Make command names (<b>Quick Fix</b>),
-        keyboard shortcuts (<b>Ctrl+1</b>), and preference page paths
-        (<b>Preferences > General > Keys</b>) bold (using <code>&lt;</code>b<code>&gt;</code>).
-        Avoid other emphasis markup, but prefer <code>&lt;</code>b<code>&gt;</code>
-        over <code>&lt;</code>em<code>&gt;</code> if you have to use one.
-      </p>
-      <p>Do <b>not</b> enclose the first paragraph of an item in <code>&lt;p&gt;&lt;/p&gt;</code> tags.
-      </p>
-      <p>See entries in <a href="../../4.6/M7/index.html">published</a> news documents for correct examples. These published news entries have been already reviewed, while
-         entries in the evolving document may still contain errors.
-      </p>
-    </td>
-  </tr>
-
-  <tr id="screenshots">
-    <td class="title">Screenshots</td>
-    <td class="content">
-        If a small image sheds light, place it below the description, in a separate
-        paragraph. As the majority of the Eclipse users uses Windows 7, regular screen snapshots
-        should be done on Windows 7 if possible, but screenshots from
-        other operating system are also acceptable. Crop
-        out any extraneous stuff to focus the reader's attention on your new
-        feature. The image should be
-        <b>no more than 520 pixels wide</b> and in <b>PNG</b> format (as opposed
-        to GIF, TIF, BMP, or JPG). Use PNG-8 if your image doesn't have a lot of color,
-        or PNG-24 if the screen shot uses enough color to warrant additional color depth.
-        See also the
-        <a href="http://wiki.eclipse.org/Eclipse_Doc_Style_Guide#graphics">Graphics</a>
-        section of the Eclipse Doc Style Guidelines.
-      <p>The Windows <b>Snipping Tool</b> actually saves to PNG on Windows 7 and can easily be
-        used to crop and save screenshots:</p>
-      <ul>
-        <li>Arrange the windows for the shot</li>
-        <li>Use the Windows <b>Snipping Tool</b> to capture part of the screen</li>
-        <li>Use <b>File &gt; Save As</b> to save the screenshot as a PNG</li>
-        <li>Overlays such as red circles or boxes to call out details can be done using Microsoft Paint</li>
-      </ul>
-      <p>Name the file in a way that is appropriate and specific to the item
-        (e.g., key-bindings.png, rather than something generic like image.png).
-        Use all <b>lowercase</b> letters in the image file name, including the &quot;<b>.png</b>&quot;
-        file extension. As a separator, use <b>hyphen</b> &quot;-&quot; rather than
-        underscore &quot;_&quot;. The item's id is often a good choice for an image name.</p>
-      <p>Put all the images in a sibling directory named &quot;images&quot;.
-        This gives XHTML like:<br/>
-        <code>&lt;img src=&quot;images/foo-view.png&quot; alt=&quot;&quot;/&gt;</code><br/>
-        Include a suitable <a href="http://www.w3.org/TR/html4/struct/objects.html#h-13.8"><code>alt</code></a> attribute.
-        The alt text should be empty ("") if the image just illustrates the text.
-        Only use the alt text to add information that is not accessible if the page is rendered without images.
-        Don't write <code>alt="Screenshot of <i>the XY dialog</i>"</code>.
-        Blind users shouldn't have to skip useless repetitions, but e.g. a field label can be
-        interesting unless it's already part of the description.</p>
-      <p>If the <code>alt</code> attribute text cannot sufficiently replace the image contents
-        (e.g. for a screenshot that shows source code), then enclose the img element in a link
-        to a plain &quot;.txt&quot; file with the same name as the image:<br/>
-        <code>&lt;a href=&quot;images/foo-view.txt&quot;&gt;&lt;img ...</code></p>
-      <p>The images should be left-justified (as opposed to centered). Do not embed the width and height of the image.</p>
-      <p>
-        <img src="https://www.eclipse.org/artwork/images/v2/logo-800x188.png" alt="" />
-      </p>
-      <script type="text/javascript">
-      //<![CDATA[
-      document.addEventListener('load', function markOversizedImages() {
-        var imgs = document.getElementsByTagName("img");
-        for (var i = 0; i < imgs.length; i++) {
-          var img = imgs[i];
-          var w = window.getComputedStyle(img, null).getPropertyValue("width");
-          if (parseInt(w, 10) > 520) {
-            img.style.width = "300px";
-            var filter = "sepia(0.5) blur(2px)";
-            img.style.filter = filter;
-            img.style.webkitFilter = filter;
-            var msg = document.createElement("div");
-            msg.innerHTML = "Image too big. See Instructions &gt; <a href='#screenshots'>Screenshots</a>.<br>"
-                + img.getAttribute("src") + ": width=" + w;
-            msg.style.color = "red";
-            msg.style.fontWeight = "bold";
-            img.parentElement.insertBefore(msg, img);
-          }
-        }
-      }, true);
-      //]]>
-      </script>
-
-      <script type="text/javascript">
-      //<![CDATA[
-      window.addEventListener('load', function findWrongHighLighter() {
-        var emTags = document.getElementsByTagName("em");
-        for (var i = 0; i < emTags.length; i++) {
-          var tag = emTags[i];
-          var msg = document.createElement("div");
-          msg.innerHTML = "Do not use &lt;em&gt; for highlighting. Prefer the usage of &lt;b&gt;. See Instructions.<br>"
-          msg.style.color = "red";
-          msg.style.fontWeight = "bold";
-          tag.parentElement.insertBefore(msg, tag);
-        }
-      }, true);
-      //]]>
-      </script>
-
-    </td>
-  </tr>
-  <tr id="css">
-    <td class="title">CSS styling</td>
-    <td class="content">
-        Do <b>not</b> change the style.css file without consulting with the Eclipse Platform project lead. The news entries are
-        aggregated at the end of the development cycle and the CSS files need to be aligned.
-    </td>
-  </tr>
-  <tr id="validation">
-    <td class="title">Validation</td>
-    <td class="content">
-        Use the W3C <a href="http://validator.w3.org/#validate_by_input">XHTML
-        Markup Validation Service</a> to check your document's markup before
-        submitting.
-    </td>
-  </tr>
-
 
   <tr>
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
 
   <tr id="wildcards-in-quickaccess">
-    <td class="title">Use wildcards in Quick Access</td>
+    <td class="title">Wildcards in Quick Access</td>
     <td class="content">
-      You can now use <b>*</b> and <b>?</b> as wildcards to filter Quick Access items.
-      The search string matches are displayed in bold.
+      You can now use <b>*</b> and <b>?</b> as wildcards to filter <b>Quick Access</b> (<b>Ctrl+3</b>) items.
+      The match ranges are displayed in bold.
       <p>
         <img src="images/quick-access-wildcard-filter.png" alt=""/>
-      </p>
-    </td>
-  </tr>
-
-  <tr id="dynamic-reference-provider">
-    <td class="title">New API for controlling build order</td>
-    <td class="content">
-      The org.eclipse.core.resources.builders extension point now allows extensions to influence the
-      order in which projects are built by supplying an implementation of
-      <code>IDynamicReferenceProvider</code>. This replaces the
-      <code>IProjectDescription.setDynamicReferences</code> API which is now deprecated.
-    </td>
-  </tr>
-
-  <tr id="content-assist-model-editor">
-    <td class="title">Content assist for Feature Name in Model Editor</td>
-    <td class="content">
-      You can now use <b>Ctrl+Space</b> to trigger content assist when selecting the <b>Feature Name</b> in the <b>Model Editor</b>.
-      <p>
-      	<img src="images/content-assist-model-editor.png" alt="" />
-      </p>
-    </td>
-  </tr>
-
-  <tr id="model-editor-improvements">
-    <td class="title">Model Editor Improvements</td>
-    <td class="content">
-      The elements proposed in the <b>Add child</b> menu are now filtered to a minimal list containing allowed elements only.
-      <p>
-      	<img src="images/filter-suggested-elements.png" alt="" />
       </p>
     </td>
   </tr>
@@ -231,23 +52,23 @@
     <td class="content">
       You can now hide and show the bottom status bar via menu:
       <b>Window</b> &gt; <b>Appearance</b> &gt; <b>Hide (Show) Status Bar</b>.
-      The menu item label is consistent with the actual visibility.
       <p>
       	<img src="images/toggle-status-bar-from-menu.png" alt="" />
       </p>
+      In Quick Access, the command is called <b>Toggle Statusbar</b>.
     </td>
   </tr>
   
   <tr id="improved-launch-groups">
     <td class="title">Improved Launch Groups</td>
     <td class="content">
-      The UI for the new Launch Groups feature has been reworked to be more intuitive
+      The UI for the new Launch Groups feature in the Run/Debug Configurations... dialog has been reworked to be more intuitive
       and user friendly. Also, additional configuration possibilities have been added:
       <ul>
       <li>'Wait for console output (regexp)' post launch action: Allows to delay further
       processing of launch group elements until a certain output (matching a regular expression)
-      appears on the console of the given group element</li>
-      <li>'Adopt launch if already running': Allows to control behaviour of the group when
+      appears on the console of the given group element.</li>
+      <li>'Adopt launch if already running': Allows to control the behaviour of the group when
       the launch configuration referenced by the launch group element is already running
       (no matter who launched it). If checked, the launch configuration will not be launched
       again if it is running already. The existing launch will be adopted by the group (i.e.
@@ -259,28 +80,27 @@
       </p>
     </td>
   </tr>
-  <tr id="toggle-trace-point">
-    <td class="title">Toggle Tracepoint</td>
+
+  <tr id="content-assist-model-editor">
+    <td class="title">Content Assist for Feature Name in Model Editor</td>
     <td class="content">
-      New action under <b>Run</b> menu has been added as <b>Toggle Tracepoint</b>.
+      You can now use <b>Ctrl+Space</b> to trigger content assist when selecting the <b>Feature Name</b> in the <b>Model Editor</b>.
       <p>
-      	<img src="images/toggle-trace-point-run.png" alt="" />
-      </p>
-      Toggle Tracepoint action creates a conditional breakpoint with Systrace template printing the class and method name.
-      It's availability is similar to that of the conditional breakpoint.
-      
-       <p>
-      	<img src="images/toggle-trace-point-conditional-breakpoint.png" alt="" />
+      	<img src="images/content-assist-model-editor.png" alt="" />
       </p>
     </td>
   </tr>
 
-  <tr id="first-item-platform">
-    <td class="title">First item</td>
+  <tr id="model-editor-improvements">
+    <td class="title">Model Editor improvements</td>
     <td class="content">
-      Item blurb.
+      The elements proposed in the <b>Add child</b> menu are now filtered to a minimal list containing allowed elements only.
+      <p>
+      	<img src="images/filter-suggested-elements.png" alt="" />
+      </p>
     </td>
   </tr>
+
 
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
@@ -295,6 +115,23 @@
         <p>
           <img src="images/quickfix-move-type-annotation.png" alt="" />
         </p>
+    </td>
+  </tr>
+
+  <tr id="toggle-trace-point">
+    <td class="title">Toggle Tracepoint</td>
+    <td class="content">
+      A new action <b>Run > Toggle Tracepoint</b> has been added.
+      <p>
+      	<img src="images/toggle-trace-point-run.png" alt="" />
+      </p>
+      The action creates a conditional breakpoint using the "systrace" template, which prints the class and method name.
+      <p>
+      	<img src="images/toggle-trace-point-conditional-breakpoint.png" alt="" />
+      </p>
+      This makes use of another new feature of conditional breakpoints: As long as the condition
+      doesn't explicitly return a boolean <code>true</code>, the condition is now considered to implicitly return false,
+      and the breakpoint will not suspend execution.
     </td>
   </tr>
 
@@ -318,8 +155,8 @@
     <td class="title">Target definition files can be edited with the generic editor</td>
     <td class="content">
 	  An extension for the generic editor was supplied so that the target definition files (.target files) can now be
-	  edited via the generic editor. Syntax highlighting for the most used keywords is supported. Autocomplete is also supported
-	  for tags and their attributes, installable units for a given repository and the available versions for a given installable unit.
+	  edited via the generic editor. Syntax highlighting for the most used keywords is supported. Content Assist is also supported
+	  for tags and their attributes, installable units for a given repository, and the available versions for a given installable unit.
       <p>
         <img src="images/target-editor-screenshot.png" alt=""/>
       </p>
@@ -338,11 +175,11 @@
   
     <tr id="pde-api-tools-noimplement-noextend-leak">
     <td class="title">Types marked with @noimplement and @noextend processed by API leak analysis</td>
-     <td class="content">
-	  Extending or implementing an interface marked as @noimplement will report an API leak. This is because 
-	  adding a field or method to the interface marked as @noimplement may break the client if the client is using 
-	  the extended or implemented type. Also extending a type marked as @extend may indirectly leak API types
-	  if the extended type is further extended by the client. Some of the new type of leak warnings are as below:
+    <td class="content">
+	  Extending or implementing an interface marked as @noimplement is now reported as an API leak. This is because 
+	  adding a field or method to the interface marked as @noimplement may break a client that is using 
+	  the extended or implemented type. Also extending a type marked as @noextend may indirectly leak API types
+	  if the extended type is further extended by the client. Some of the new kinds of leak warnings are shown below:
       <p>
         <img src="images/pde-api-tool-warning-leak-noimplement-noextend.png" alt=""/>
       </p>
@@ -351,7 +188,7 @@
    <tr id="pde-api-tools-field-addition-to-class-breaking-change">
     <td class="title">API Tools flags field addition to class as a breaking change</td>
      <td class="content">
-	  Field addition to a class is now flagged as a <a href="https://wiki.eclipse.org/Evolving_Java-based_APIs_2#add-api-field ">breaking change.</a>
+	  The addition of a field to class that is extendable by clients is now flagged as a <a href="https://wiki.eclipse.org/Evolving_Java-based_APIs_2#add-api-field ">breaking change.</a>
 	  On the <b>Plug-in Development &gt; API Errors/Warnings</b> preference page in the <b>API Compatibility</b> tab,
       there is a new option in the <b>Class</b> section to control the severity of a "field addition to class".
       Also there is a new link at the top of <b>API Compatibility</b> tab that has more details on achieving API binary compatibility.
@@ -359,7 +196,7 @@
         <img src="images/pde-api-tools-field-addition-to-class-preference-ui.png" alt=""/>
       </p>
       
-      The field addition error has a quickfix that opens help to explain the incompatibility in greater detail.
+      The field addition error has a Quick Fix that opens help to explain the incompatibility in greater detail.
       <p>
         <img src="images/pde-api-tools-field-addition-to-class-quickfix.png" alt=""/>
       </p>
@@ -375,40 +212,55 @@
     <td class="title">Source-incompatible change in org.eclipse.equinox.common requires Java 8 BREE for some dependant plug-ins</td>
     <td class="content">
     With <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=509234">bug 509234</a>, <code>org.eclipse.core.runtime.ListenerList</code> 
-    now overrides Java 8 default method <code>Iterable.spliterator()</code> and provides <code>stream()</code> and <code>parallelStream()</code> 
-    methods. Thus it exposes Java 8 types in public API. This is a source-incompatible change that require all plug-ins using 
-    <code>ListenerList</code> to have a minimum BREE set to Java 8 if they want to properly compile against Oxygen and forthcoming 
+    now overrides Java 8 default method <code>Iterable#spliterator()</code> and provides <code>stream()</code> and <code>parallelStream()</code> 
+    methods. Thus it exposes Java 8 types in public API. This is a source-incompatible change that requires all plug-ins using 
+    <code>ListenerList</code> to have a minimum BREE set to JavaSE-1.8 if they want to properly compile against Oxygen and forthcoming 
     versions (i.e. versions in the <code>[3.9,4.0)</code> range).
     <p>
-      The typical compile error indicating that you should change your BREE is 
+      The typical compile error indicating that you should change your BREE is:
     </p>
     <p>
       <cite>The type <code>java.util.stream.Stream</code> cannot be resolved. It is indirectly referenced from required <code>.class</code> files.</cite>
     </p>
     <p>
     Note that this change is only required when using <code>org.eclipse.core.runtime.ListenerList</code>. However, now that some Java 8 types are being 
-    exposed in the public API, similar changes may be done in other API types. Thus it will require BREE change in plug-ins using these types.
+    exposed in the public API, similar changes may be done in other API types.
     </p>
     Finally, note that this change is binary compatible. Any previously compiled bundle depending on <code>org.eclipse.equinox.common</code> within 
     the <code>[3.0,4.0)</code> range will continue to work as before.
     </td>
   </tr>
 
+  <tr id="dynamic-reference-provider">
+    <td class="title">New API for controlling build order</td>
+    <td class="content">
+      The <code>org.eclipse.core.resources.builders</code> extension point now allows extensions to influence the
+      order in which projects are built by supplying an implementation of
+      <code>IDynamicReferenceProvider</code>. This replaces the
+      <code>IProjectDescription#setDynamicReferences(IProject[])</code> API, which is now deprecated.
+    </td>
+  </tr>
+
   <tr id="async-content-assist">
     <td class="title">Asynchronous content-assistant</td>
     <td class="content">
-    With <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=251156">bug 251156</a>, <code>org.eclipse.jface.text.contentassist.AsyncContentAssistant</code> 
-    was added as an alternative to the usual <code>org.eclipse.jface.text.contentassist.ContentAssistant</code>. The <code>AsyncContentAssist</code> triggers
-    computation of completion proposal in background and doesn't block the thread invoking the completion. As a result, it will prevent the UI thread to freeze
+    With <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=251156">bug 251156</a>, a new constructor
+    <code>org.eclipse.jface.text.contentassist.ContentAssistant(boolean asynchronous)</code> 
+    was added. An asynchronous <code>ContentAssistant</code> triggers
+    computation of completion proposals in the background and doesn't block the thread invoking the completion. As a result, it will prevent the UI thread to freeze
     when a completion proposal computer takes too long.
     <p>
 	    This supports the same API and methods as the usual <code>ContentAssist</code>, so shifting from synchronous/blocking <code>ContentAssistant</code> to asynchronous one only requires
-	    instantiating the <code>AsyncContentAssistant</code> in place of the <code>ContentAssistant</code>. Note that as the computation now happens in background, the <code>IContentAssistProcessor</code>
-	    attached to an <code>AsyncContentAssistant</code> needs to <b>NOT</b> require UI Thread; any <code>IContentAssistProcessor</code> computer requiring the UI Thread will need to be modified
-	    in order to be used with <code>AsyncContentAssistant</code>. The <code>AsyncContentAssistant</code> also provides a way to directly add multiple <code>IContentAssistProcessor</code>s to the content assistant.
+	    instantiating the <code>ContentAssistant</code> as asynchronous. Note that as the computation now happens in background, the <code>IContentAssistProcessor</code>
+	    attached to an asynchronous <code>ContentAssistant</code> must <b>not</b> require the UI Thread; any <code>IContentAssistProcessor</code> computer requiring the UI Thread will need to be modified
+	    in order to be used with an asynchronous <code>ContentAssistant</code>.
     </p> 
 	<p>
-		The generic and extensible editor has been switched to use this <code>AsyncContentAssistant</code>.
+	    Another new API is <code>ContentAssistant#addContentAssistProcessor(IContentAssistProcessor, String)</code>,
+	    which provides a way to directly add multiple processors to one content assistant.
+    </p> 
+	<p>
+		The generic and extensible editor has been switched to use this asynchronous <code>ContentAssistant</code>.
 	</p>    
     </td>
   </tr>
@@ -417,7 +269,7 @@
     <td colspan="2" class="section" id="Equinox">Equinox</td>
   </tr>
 
-  <tr id="first-item-equinox">
+  <tr id="equinox-ds-felix-scr">
     <td class="title">New Declarative Services Implementation supporting OSGi R6</td>
     <td class="content">
       The previous release of Equinox only supported the OSGi R5 specification for the Declarative Services specification.
@@ -436,7 +288,12 @@
           <li><code>org.eclipse.osgi.util</code></li>
       </ul>
       <p>
-      The Equinox bundle <b><code>org.eclipse.equinox.util</code></b> is no longer needed for the Felix Declarative Service implementation.
+      The Equinox bundle <b><code>org.eclipse.equinox.util</code></b> is no longer needed for the Felix Declarative Services implementation.
+      </p>
+      <p>
+      Note that <code>org.eclipse.equinox.ds</code> automatically sets <code>ds.delayed.keepInstances=true</code>,
+      which avoids failures in existing clients of Equinox DS that assume that
+      component instances are not deactivated when their use count goes to zero.
       </p>
     </td>
   </tr>
