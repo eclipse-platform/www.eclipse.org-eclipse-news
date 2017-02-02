@@ -6,7 +6,7 @@ function innerHTML($el) {
 	$tag = $el->nodeName;
 	$html =  preg_replace('@^<' . $tag . '[^>]*>|</' . $tag . '>$@', '', $html);
 	//update relative links
-	return preg_replace('~href="4\.(\d+)/([^"]+)\.html"~', 'href="4.\$1/$2.php"', $html);
+	return preg_replace('~href="4\.(\d+)/([^"]+)\.html"~', 'href="4.$1/$2.php"', $html);
 }
 
 if(!isset($keyword) OR $keyword == ""){
@@ -54,7 +54,7 @@ $html .= $body;
 $html .='</div></div>';
 
 $html = mb_convert_encoding($html, "HTML-ENTITIES", "auto");
-$App->Promotion = TRUE;	
+$App->Promotion = TRUE;
 
 // if theme is not provided by caller, we specify "current one", explicitly hard-coded
 if (! isset($theme)) {
