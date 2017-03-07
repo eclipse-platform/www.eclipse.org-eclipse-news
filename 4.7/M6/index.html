@@ -283,6 +283,60 @@
       </p>
     </td>
   </tr>
+  <tr id="unlikely-argument-types">
+    <td class="title">Warnings for unlikely argument types</td>
+    <td class="content">
+      Many developers have learned the hard way, that certain uses of Java collections that pass the compiler's
+      type check, may still contain "type errors", resulting in unexpected runtime behaviour. 
+      A new analysis has been added to the Eclipse compiler for Java that will detect the most common bugs in this area.
+      <p>
+      	The common reason behind this problem is the fact that not all methods of those collection types make use of generics in the way one might expect.
+      	As a result it is possible to create a <code>Set&lt;Short></code>, whose <code>add</code> method will only accept arguments of type <code>Short</code>,
+      	yet method <code>remove</code> will happily accept literally any argument, because the method's parameter has type <code>Object</code>.
+      </p> 
+      <p>
+      	Here is a code snippet that seems to add and remove the same element from the set, but at a closer look the <code>remove</code> call has no effect.
+      	What is difficult to see for the naked eye is now flagged by a new warning:
+      </p> 
+      <p>
+      	<a href="images/Unlikely1.txt"><img src="images/unlikely1-basic.png" alt="" /></a>
+      </p>
+      <p>
+      	In a simple world, this would be all there is to say, but over time people have developed various code patterns
+      	that rely on these overly general signatures. Consider the following use of subtyping:
+      </p>
+      <p>
+      	<a href="images/Unlikely2.txt"><img src="images/unlikely2-number-allowed.png" alt="" /></a>
+      </p>
+      <p>
+      	Depending on your coding style this may or may not be accepted as a legitimate short hand for:
+      	<br/><code style="margin-left:2em;">if (n instanceof Short) set.remove((Short) n);</code><br/>
+      	To reduce the churn caused by the new analysis we developed some heuristics that filter out cases where types are "sufficiently similar",
+      	so the above goes unwarned.
+      </p>
+      <p>
+      	As with any heuristic, there is no clear line. This implies that the compiler may show "unwanted" warnings, 
+      	or filter out invocations that are in fact bugs. For the former case, <code>@SuppressWarnings("unlikely-arg-type")</code>
+      	will document the exception both for the user and for the compiler. For the latter case, we provide an option to tighten
+      	the rules, namely to apply strict type compatibility checks instead of said heuristics. For this extra scrutiny you may enable
+      	the sub-option <b>Perform strict analysis against the expected type</b> in <b>Preferences &gt; Java &gt; Compiler &gt; Errors/Warnings &gt; Potential programming problems</b>.
+      </p>
+      <p>
+      	<img src="images/unlikely3-options.png" alt="Preference options" />
+      </p>
+<!-- 
+      With this option enabled, above usage is flagged indeed (and the same for less obvious cases, which would be filtered out by the heuristics):
+      <p>
+      	<a href="images/Unlikely4.txt"><img src="images/unlikely4-number-strict.png" alt="" /></a>
+      </p>
+ -->
+      Similarly, a check with default severity "Info" is offered for unlikely invocations of <code>java.lang.Object.equals(Object)</code> and 
+      <code>java.util.Objects.equals(Object,Object)</code>. 
+      <p>
+      	<a href="images/Unlikely5.txt"><img src="images/unlikely5-equals.png" alt="" /></a>
+      </p>
+    </td>
+  </tr>
 
  <tr id="run-to-line-in-annotation-ruler">
     <td class="title">'Run to Line' on Ctrl+Alt+Click in annotation ruler</td>
