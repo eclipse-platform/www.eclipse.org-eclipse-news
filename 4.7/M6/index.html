@@ -193,7 +193,7 @@
       </p>
     </td>
   </tr>
-  
+
   <tr id="improved-exit-and-restart-dialog">
     <td class="title">Improved exit and restart dialog</td>
     <td class="content">
@@ -206,8 +206,8 @@
       </p>
     </td>
   </tr>
-
-<tr id="watchpoint-condition">
+  
+  <tr id="watchpoint-condition">
     <td class="title">Conditional watchpoint</td>
     <td class="content">
       Like line breakpoint, conditions can now be added to a watchpoint where current value of field can be used for evaluation.
@@ -217,10 +217,55 @@
     </td>
   </tr>
 
-  <tr id="first-item-platform">
-    <td class="title">First item</td>
+  <tr id="di-extension-separation">
+    <td class="title">Separation of DI extension annotations and supplier</td>
     <td class="content">
-      Item blurb.
+      The annotations specified in <code>org.eclipse.e4.core.di.extensions</code> and the corresponding <code>ExtendedObjectSupplier</code> implementations have been separated.
+	  The annotations are still available in the <code>org.eclipse.e4.core.di.extensions</code> bundle. The <code>ExtendedObjectSupplier</code> implementations have beend moved 
+	  to the new <code>org.eclipse.e4.core.di.extensions.supplier</code> bundle. This makes it easier for platform adapters to change the default implementation by providing a 
+	  replacement for the supplier bundle. For <i>plugin based products</i> this means that the new <code>org.eclipse.e4.core.di.extensions.supplier</code> bundle needs to be added
+	  the list of included Plugins. <i>Feature based products</i> should not notice that change.<br>
+	  <p><b>Note:</b><br>In that process <code>org.eclipse.e4.core.di.extensions.EventUtils</code> (only intended to be used for internal testing), was moved to
+	  <code>org.eclipse.e4.core.di.internal.extensions.util.EventUtils</code> in the new bundle.</p>
+    </td>
+  </tr>
+
+  <tr id="di-extension-service">
+    <td class="title">@Service annotation available in DI extensions</td>
+    <td class="content">
+      Added the <code>@Service</code> annotation to <code>org.eclipse.e4.core.di.extensions</code>. You can use this annotation to get OSGi services injected by supporting additional service specific features
+	  like getting services with higher service ranking injected automatically, to get the list of services injected for the given type and to filter for a specific filter by providing an OSGi
+	  LDAP filter.
+	  <pre>public class MyPart {
+		   
+    // highest ranked service
+	
+    @Inject
+    @Service
+    MyOsgiService service;
+			
+}
+</pre>
+	  <pre>public class MyPart {
+
+    // all services sorted by ranking
+
+    @Inject
+    @Service
+    List&lt;MyOsgiService&gt; service; 
+		
+}</pre>
+	  
+<pre>public class MyPart {
+		    
+    // get the highest ranked service that has
+    // the component property connection=online set		
+	
+    @Inject
+    @Service(filterExpression="(connection=online)") 
+    MyOsgiService service;
+			
+}</pre>
     </td>
   </tr>
 
