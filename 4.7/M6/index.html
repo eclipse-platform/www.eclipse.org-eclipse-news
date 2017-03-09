@@ -492,6 +492,25 @@ protected void drawCompositeImage(int width, int height) {
     </td>
   </tr>
 
+  <tr id="accessibletablelistener-getcaption-deprecated">
+    <td class="title">AccessibleTableListener#getCaption method deprecated</td>
+    <td class="content">
+      The <code>AccessibleTableListener#getCaption(AccessibleTableEvent)</code> method corresponds to the 
+      <code>IAccessibleTable2::caption</code> method which has been deprecated by the IA2 accessibility specification 
+      implemented by SWT Accessibility. Instead, an <code>IA2_RELATION_LABELED_BY</code> relation should be used to create a 
+      relation between the table and its caption.
+    </td>
+  </tr>
+
+  <tr id="accessibletablelistener-getsummary-deprecated">
+    <td class="title">AccessibleTableListener#getSummary method deprecated</td>
+    <td class="content">
+      The <code>AccessibleTableListener#getSummary(AccessibleTableEvent)</code> method corresponds to the 
+      <code>IAccessibleTable2::summary</code> method which has been deprecated by the IA2 accessibility specification 
+      implemented by SWT Accessibility. Instead, an <code>IA2_RELATION_DESCRIBED_BY</code> relation should be used
+      to create a relation between the table and its summary.
+    </td>
+  </tr>
 
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
