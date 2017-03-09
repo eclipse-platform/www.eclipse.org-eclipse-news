@@ -31,153 +31,6 @@
     <col />
   </colgroup>
 
-  <tr>
-    <td id="Instructions" class="section" colspan="2">
-      <h2>Instructions</h2>
-    </td>
-  </tr>
-
-  <tr id="item-name">
-    <td class="title">News item title and description</td>
-    <td class="content">
-        The whole entry should be a blurb pitched to the Eclipse end user community
-        (not just to members of the Eclipse Platform development team).
-      <p>
-        The title should be short and snappy, written in
-        <a href="https://en.wikipedia.org/wiki/Letter_case#Case_styles">sentence case</a>, and using
-        "<a href="https://en.wikipedia.org/wiki/Headlinese#Syntax">headlinese</a>" (compressed style).
-        The title should <b>not</b> use trailing punctuation, and the &lt;tr&gt; XHTML element
-        needs a unique id attribute (value is all-lowercase and hyphen-separated).
-      </p>
-      <p>
-        In the news description, tell
-        users about changes they'll see in the UI. Tell component writers
-        about changes they'll see at the client- and server-side APIs. Try to
-        generate some excitement; save the boring details for the manual; be short and don't repeat yourself. The
-        description should be complete sentences, with trailing punctuation.
-      </p>
-      <p>Make the entry self-contained and mention API classes.
-        Do <b>not</b> link to bugs and don't promote individuals or third-party products.
-      </p>
-      <p>Use active voice (say "you", not "the user"), and follow other advice in the
-        <a href="http://wiki.eclipse.org/Eclipse_Doc_Style_Guide#topic-content">Topic&nbsp;Content</a>
-        section of the Eclipse Doc Style Guidelines.
-      </p>
-      <p>Stick to the default font and size. Make command names (<b>Quick Fix</b>),
-        keyboard shortcuts (<b>Ctrl+1</b>), and preference page paths
-        (<b>Preferences > General > Keys</b>) bold (using <code>&lt;</code>b<code>&gt;</code>).
-        Avoid other emphasis markup, but prefer <code>&lt;</code>b<code>&gt;</code>
-        over <code>&lt;</code>em<code>&gt;</code> if you have to use one.
-      </p>
-      <p>Do <b>not</b> enclose the first paragraph of an item in <code>&lt;p&gt;&lt;/p&gt;</code> tags.
-      </p>
-      <p>See entries in <a href="../../4.6/M7/index.html">published</a> news documents for correct examples. These published news entries have been already reviewed, while
-         entries in the evolving document may still contain errors.
-      </p>
-    </td>
-  </tr>
-
-  <tr id="screenshots">
-    <td class="title">Screenshots</td>
-    <td class="content">
-        If a small image sheds light, place it below the description, in a separate
-        paragraph. As the majority of the Eclipse users uses Windows 7, regular screen snapshots
-        should be done on Windows 7 if possible, but screenshots from
-        other operating system are also acceptable. Crop
-        out any extraneous stuff to focus the reader's attention on your new
-        feature. The image should be
-        <b>no more than 520 pixels wide</b> and in <b>PNG</b> format (as opposed
-        to GIF, TIF, BMP, or JPG). Use PNG-8 if your image doesn't have a lot of color,
-        or PNG-24 if the screen shot uses enough color to warrant additional color depth.
-        See also the
-        <a href="http://wiki.eclipse.org/Eclipse_Doc_Style_Guide#graphics">Graphics</a>
-        section of the Eclipse Doc Style Guidelines.
-      <p>The Windows <b>Snipping Tool</b> actually saves to PNG on Windows 7 and can easily be
-        used to crop and save screenshots:</p>
-      <ul>
-        <li>Arrange the windows for the shot</li>
-        <li>Use the Windows <b>Snipping Tool</b> to capture part of the screen</li>
-        <li>Use <b>File &gt; Save As</b> to save the screenshot as a PNG</li>
-        <li>Overlays such as red circles or boxes to call out details can be done using Microsoft Paint</li>
-      </ul>
-      <p>Name the file in a way that is appropriate and specific to the item
-        (e.g., key-bindings.png, rather than something generic like image.png).
-        Use all <b>lowercase</b> letters in the image file name, including the &quot;<b>.png</b>&quot;
-        file extension. As a separator, use <b>hyphen</b> &quot;-&quot; rather than
-        underscore &quot;_&quot;. The item's id is often a good choice for an image name.</p>
-      <p>Put all the images in a sibling directory named &quot;images&quot;.
-        This gives XHTML like:<br/>
-        <code>&lt;img src=&quot;images/foo-view.png&quot; alt=&quot;&quot;/&gt;</code><br/>
-        Include a suitable <a href="http://www.w3.org/TR/html4/struct/objects.html#h-13.8"><code>alt</code></a> attribute.
-        The alt text should be empty ("") if the image just illustrates the text.
-        Only use the alt text to add information that is not accessible if the page is rendered without images.
-        Don't write <code>alt="Screenshot of <i>the XY dialog</i>"</code>.
-        Blind users shouldn't have to skip useless repetitions, but e.g. a field label can be
-        interesting unless it's already part of the description.</p>
-      <p>If the <code>alt</code> attribute text cannot sufficiently replace the image contents
-        (e.g. for a screenshot that shows source code), then enclose the img element in a link
-        to a plain &quot;.txt&quot; file with the same name as the image:<br/>
-        <code>&lt;a href=&quot;images/foo-view.txt&quot;&gt;&lt;img ...</code></p>
-      <p>The images should be left-justified (as opposed to centered). Do not embed the width and height of the image.</p>
-      <p>
-        <img src="https://www.eclipse.org/artwork/images/v2/logo-800x188.png" alt="" />
-      </p>
-      <script type="text/javascript">
-      //<![CDATA[
-      document.addEventListener('load', function markOversizedImages() {
-        var imgs = document.getElementsByTagName("img");
-        for (var i = 0; i < imgs.length; i++) {
-          var img = imgs[i];
-          var w = window.getComputedStyle(img, null).getPropertyValue("width");
-          if (parseInt(w, 10) > 520) {
-            img.style.width = "300px";
-            var filter = "sepia(0.5) blur(2px)";
-            img.style.filter = filter;
-            img.style.webkitFilter = filter;
-            var msg = document.createElement("div");
-            msg.innerHTML = "Image too big. See Instructions &gt; <a href='#screenshots'>Screenshots</a>.<br>"
-                + img.getAttribute("src") + ": width=" + w;
-            msg.style.color = "red";
-            msg.style.fontWeight = "bold";
-            img.parentElement.insertBefore(msg, img);
-          }
-        }
-      }, true);
-      //]]>
-      </script>
-      <script type="text/javascript">
-      //<![CDATA[
-      window.addEventListener('load', function findWrongHighLighter() {
-        var emTags = document.getElementsByTagName("em");
-        for (var i = 0; i < emTags.length; i++) {
-          var tag = emTags[i];
-          var msg = document.createElement("div");
-          msg.innerHTML = "Do not use &lt;em&gt; for highlighting. Prefer the usage of &lt;b&gt;. See Instructions.<br>"
-          msg.style.color = "red";
-          msg.style.fontWeight = "bold";
-          tag.parentElement.insertBefore(msg, tag);
-        }
-      }, true);
-      //]]>
-      </script>
-    </td>
-  </tr>
-  <tr id="css">
-    <td class="title">CSS styling</td>
-    <td class="content">
-        Do <b>not</b> change the style.css file without consulting with the Eclipse Platform project lead. The news entries are
-        aggregated at the end of the development cycle and the CSS files need to be aligned.
-    </td>
-  </tr>
-  <tr id="validation">
-    <td class="title">Validation</td>
-    <td class="content">
-        Use the W3C <a href="http://validator.w3.org/#validate_by_input">XHTML
-        Markup Validation Service</a> to check your document's markup before
-        submitting.
-    </td>
-  </tr>
-
 
   <tr>
     <td colspan="2" class="section" id="Platform">Platform</td>
@@ -186,8 +39,8 @@
   <tr id="patch-diff-generic-editor-extension">
     <td class="title">Generic editor can now read patch and diff files</td>
     <td class="content">
-      An extension was provided to the generic editor so that it now can provide syntax highlighting for files with the '.patch'
-      and '.diff' extension. Right-click the file and choose 'Open with' > 'Generic Text Editor' to see the editor in action.
+      An extension was provided to the generic editor so that it now can provide syntax highlighting for files with the <b>.patch</b>
+      or <b>.diff</b> extension. Right-click the file and choose <b>Open with > Generic Text Editor</b> to see the editor in action.
       <p>
       	<img src="images/patch-diff-editor.png" alt="" />
       </p>
@@ -195,9 +48,9 @@
   </tr>
 
   <tr id="improved-exit-and-restart-dialog">
-    <td class="title">Improved exit and restart dialog</td>
+    <td class="title">Improved exit and restart dialogs</td>
     <td class="content">
-      The exit and restart dialog now uses verbs instead of "OK", making the dialogs more direct and specific.
+      The exit and restart dialogs now use verbs instead of OK/No/Yes, which makes the dialogs more direct and specific.
       <p>
       	<img src="images/confirm-exit-dialog-small.png" alt="" />
       </p>
@@ -206,102 +59,8 @@
       </p>
     </td>
   </tr>
-  
-   <tr id="swt-table-header-styling">
-    <td class="title">Support for setting the foreground and background color of SWT table header </td>
-    <td class="content">
-       On Windows and Linux you can set the foreground and background colors for the table header 
-       via the <code>setHeaderBackground</code> and <code>setHeaderForeground</code> methods.
-      <p>
-      	<img src="images/table-header-colors.png" alt="" />
-      </p>
-    </td>
-  </tr>
-  
-  <tr id="watchpoint-condition">
-    <td class="title">Conditional watchpoint</td>
-    <td class="content">
-      Like line breakpoint, conditions can now be added to a watchpoint where current value of field can be used for evaluation.
-      <p>
-      	<img src="images/watchpoint-condition.png" alt="" />
-      </p>
-    </td>
-  </tr>
 
-  <tr id="di-extension-separation">
-    <td class="title">Separation of DI extension annotations and supplier</td>
-    <td class="content">
-      The annotations specified in <code>org.eclipse.e4.core.di.extensions</code> and the corresponding <code>ExtendedObjectSupplier</code> implementations have been separated.
-	  The annotations are still available in the <code>org.eclipse.e4.core.di.extensions</code> bundle. The <code>ExtendedObjectSupplier</code> implementations have beend moved 
-	  to the new <code>org.eclipse.e4.core.di.extensions.supplier</code> bundle. This makes it easier for platform adapters to change the default implementation by providing a 
-	  replacement for the supplier bundle. For <i>plug-in based products</i> this means that the new <code>org.eclipse.e4.core.di.extensions.supplier</code> bundle needs to be added
-	  the list of included plug-ins. <i>Feature based products</i> should not notice that change.<br/>
-	  <p><b>Note:</b><br/>
-	  In that process <code>org.eclipse.e4.core.di.extensions.EventUtils</code> (only intended to be used for internal testing), was moved to
-	  <code>org.eclipse.e4.core.di.internal.extensions.util.EventUtils</code> in the new bundle.</p>
-    </td>
-  </tr>
 
-  <tr id="di-extension-service">
-    <td class="title">@Service annotation available in DI extensions</td>
-    <td class="content">
-      Added the <code>@Service</code> annotation to <code>org.eclipse.e4.core.di.extensions</code>. You can use this annotation to get OSGi services injected by supporting additional service specific features
-	  like getting services with higher service ranking injected automatically, to get the list of services injected for the given type and to filter for a specific filter by providing an OSGi
-	  LDAP filter.
-	  <pre>public class MyPart {
-		   
-    // highest ranked service
-	
-    @Inject
-    @Service
-    MyOsgiService service;
-			
-}
-</pre>
-	  <pre>public class MyPart {
-
-    // all services sorted by ranking
-
-    @Inject
-    @Service
-    List&lt;MyOsgiService&gt; service; 
-		
-}</pre>
-	  
-<pre>public class MyPart {
-		    
-    // get the highest ranked service that has
-    // the component property connection=online set		
-	
-    @Inject
-    @Service(filterExpression="(connection=online)") 
-    MyOsgiService service;
-			
-}</pre>
-    </td>
-  </tr>
-  <tr id="imperative-expressions">
-    <td class="title">Imperative Expressions</td>
-    <td class="content">
-You can now define visible when expressions for menu items and tool items in an Eclipse 4 fashion by using ImperativeExpressions rather than CoreExpressions.
-<p>
- <img src="images/imperative-expression.png" alt="" />
-</p>
-ImperativeExpressions reference a POJO class with a method being annotated with the new @Evaluate annotation.
-
-<pre>public class TestExpression {
-   @Evaluate
-   public boolean isVisible(EPartService partService,
-          @Optional @Named("myValueToBeChecked") String myValueToBeChecked) {
-
-      return "expectedValue".equals(myValueToBeChecked) &amp;&amp;
-         !partService.getDirtyParts().isEmpty();
-   }
-}</pre>
-The tracking property causes to track the values which are injected so that the visible state will be evaluated on eclipse context changes,
- e.g, when the "myValueToBeChecked" value in the context is changed the visibility check will be run once more.
-    </td>
-  </tr>
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
@@ -317,6 +76,7 @@ The tracking property causes to track the values which are injected so that the 
       </p>
     </td>
   </tr>
+
   <tr id="unlikely-argument-types">
     <td class="title">Warnings for unlikely argument types</td>
     <td class="content">
@@ -325,27 +85,27 @@ The tracking property causes to track the values which are injected so that the 
       A new analysis has been added to the Eclipse compiler for Java that will detect the most common bugs in this area.
       <p>
       	The common reason behind this problem is the fact that not all methods of those collection types make use of generics in the way one might expect.
-      	As a result it is possible to create a <code>Set&lt;Short></code>, whose <code>add</code> method will only accept arguments of type <code>Short</code>,
-      	yet method <code>remove</code> will happily accept literally any argument, because the method's parameter has type <code>Object</code>.
+      	As a result it is possible to create a <code>Set&lt;Short></code>, whose <code>add(Short)</code> method will only accept arguments of type <code>Short</code>,
+      	yet method <code>remove(Object)</code> will happily accept literally any argument, because the method's parameter has type <code>Object</code>.
       </p> 
       <p>
       	Here is a code snippet that seems to add and remove the same element from the set, but at a closer look the <code>remove</code> call has no effect.
       	What is difficult to see for the naked eye is now flagged by a new warning:
       </p> 
       <p>
-      	<a href="images/Unlikely1.txt"><img src="images/unlikely1-basic.png" alt="" /></a>
+      	<a href="images/unlikely1.txt"><img src="images/unlikely1-basic.png" alt="Warning on last line: Unlikely argument type int for remove(Object) on a Collection&lt;Short&gt;" /></a>
       </p>
       <p>
       	In a simple world, this would be all there is to say, but over time people have developed various code patterns
       	that rely on these overly general signatures. Consider the following use of subtyping:
       </p>
       <p>
-      	<a href="images/Unlikely2.txt"><img src="images/unlikely2-number-allowed.png" alt="" /></a>
+      	<a href="images/unlikely2.txt"><img src="images/unlikely2-number-allowed.png" alt="" /></a>
       </p>
       <p>
       	Depending on your coding style this may or may not be accepted as a legitimate short hand for:
       	<br/><code style="margin-left:2em;">if (n instanceof Short) set.remove((Short) n);</code><br/>
-      	To reduce the churn caused by the new analysis we developed some heuristics that filter out cases where types are "sufficiently similar",
+      	To reduce the churn caused by the new analysis, we developed some heuristics that filter out cases where types are "sufficiently similar",
       	so the above goes unwarned.
       </p>
       <p>
@@ -361,23 +121,37 @@ The tracking property causes to track the values which are injected so that the 
 <!-- 
       With this option enabled, above usage is flagged indeed (and the same for less obvious cases, which would be filtered out by the heuristics):
       <p>
-      	<a href="images/Unlikely4.txt"><img src="images/unlikely4-number-strict.png" alt="" /></a>
+      	<a href="images/unlikely4.txt"><img src="images/unlikely4-number-strict.png" alt="" /></a>
       </p>
  -->
       Similarly, a check with default severity "Info" is offered for unlikely invocations of <code>java.lang.Object.equals(Object)</code> and 
       <code>java.util.Objects.equals(Object,Object)</code>. 
       <p>
-      	<a href="images/Unlikely5.txt"><img src="images/unlikely5-equals.png" alt="" /></a>
+      	<a href="images/unlikely5.txt"><img src="images/unlikely5-equals.png" alt="Info on last line: Unlikely argument type for equals(): Name seems to be unrelated to String" /></a>
       </p>
     </td>
   </tr>
 
- <tr id="run-to-line-in-annotation-ruler">
+  <tr id="run-to-line-in-annotation-ruler">
     <td class="title">'Run to Line' on Ctrl+Alt+Click in annotation ruler</td>
     <td class="content">
-      Do Ctrl+Alt+Click on annotation ruler to invoke 'Run to Line' which will take the program execution run to the line of invocation.
+      Hold <b>Ctrl+Alt</b> while clicking the annotation ruler on the left to invoke the <b>Run to Line</b> command.
+      This will resume the suspended thread and make the program execution run to the line of invocation.
       <p>
       	<img src="images/run-to-line.png" alt="" />
+      </p>
+      If the caret is already at the line you want to run to, the old way via
+      <b>Run > Run to Line</b> (<b>Ctrl+R</b>) is still supported.
+    </td>
+  </tr>
+
+  <tr id="watchpoint-condition">
+    <td class="title">Conditional watchpoint</td>
+    <td class="content">
+      Like for line breakpoints, conditions can now also be added to <b>Watchpoints</b>,
+      where the old value of the field can be used as part of the condition.
+      <p>
+      	<img src="images/watchpoint-condition.png" alt="" />
       </p>
     </td>
   </tr>
@@ -385,7 +159,7 @@ The tracking property causes to track the values which are injected so that the 
   <tr id="formatter">
     <td class="title">Code formatter: new way to count comment width</td>
     <td class="content">
-      A new option has been added in the formatter profile editor that makes the formatter
+      A new option has been added in the code formatter profile editor that makes the formatter
       <b>count a comment's width from its starting position</b> instead of the beginning of the line.
       This allows more space for comments in heavily indented blocks of code and for line comments
       added to the right of some code, but at the same time keeps comments that start at the beginning
@@ -400,23 +174,23 @@ The tracking property causes to track the values which are injected so that the 
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
 
-  <tr id="first-item-pde">
+  <tr id="p2-inf-editor">
     <td class="title">p2.inf files open in Properties editor</td>
     <td class="content">
-      The default editor associated with p2.inf file is now the <b>Properties File Editor</b>.
+      The default editor associated with <code>p2.inf</code> files is now the <b>Properties File Editor</b>.
     </td>
   </tr>
     
-    <tr id="quickfix-also-adds-import-statement">
-    <td class="title"> Quickfix to add bundle or package adds the import statement</td>
+  <tr id="quickfix-also-adds-import-statement">
+    <td class="title"> Quick Fix to add bundle or package adds import statement</td>
     <td class="content">
-      The quickfix to add an import package or add a bundle as a dependency also imports the
-      relevant import statement for the relevant type.
+      The <b>Quick Fix</b> that adds an <code>Import-Package</code> or <code>Require-Bundle</code> dependency
+      in the <code>MANIFEST.MF</code> now also adds the relevant import statement for the unresolved type in the Java editor.
     </td>
   </tr>
   
-      <tr id="option-for-field-addition-to-annotation">
-    <td class="title"> Option for field addition to an Annotation</td>
+  <tr id="option-for-field-addition-to-annotation">
+    <td class="title">API Tools: option for field addition to an annotation</td>
     <td class="content">
       On the <b>Plug-in Development &gt; API Errors/Warnings</b> preference page in the <b>API Compatibility</b> tab,
       there is a new option in the <b>Annotation</b> section to control the severity of a "field addition to annotation".
@@ -484,48 +258,138 @@ protected void drawCompositeImage(int width, int height) {
 }
       </pre>
       <p>
-      Hint: Use <code>CompositeImageDescriptor&#8203;#createCachedImageDataProvider(&#8203;Image/&#8203;ImageDescriptor)</code> to create an
+      Hint: Use <code>CompositeImageDescriptor#createCachedImageDataProvider(Image<span style="visibility:hidden">&shy;</span>/ImageDescriptor)</code> to create an
       <code>ImageDataProvider</code>. To calculate the width and height of the image
       that is about to be drawn, you can use
-      <code>CachedImageDataProvider&#8203;#getWidth()/&#8203;getHeight()</code>. These methods
+      <code>CachedImageDataProvider<span style="visibility:hidden">&shy;</span>#getWidth()/<span style="visibility:hidden">&shy;</span>getHeight()</code>. These methods
       already return values in SWT points, so that your code doesn't have to
       deal with device-dependent pixel coordinates.
       </p>
     </td>
   </tr>
 
+  <tr id="swt-table-header-styling">
+    <td class="title">Table header colors</td>
+    <td class="content">
+       On Windows and Linux you can set the foreground and background colors for table headers
+       via the <code>Table#setHeaderForeground/Background(Color)</code> methods.
+      <p>
+      	<img src="images/table-header-colors.png" alt="" />
+      </p>
+    </td>
+  </tr>
+  
   <tr id="accessibletablelistener-getcaption-deprecated">
-    <td class="title">AccessibleTableListener#getCaption method deprecated</td>
+    <td class="title">AccessibleTableListener<span style="word-wrap:break-word;">#</span>getCaption(..) deprecated</td>
     <td class="content">
       The <code>AccessibleTableListener#getCaption(AccessibleTableEvent)</code> method corresponds to the 
-      <code>IAccessibleTable2::caption</code> method which has been deprecated by the IA2 accessibility specification 
+      <code>IAccessibleTable2::caption</code> method, which has been deprecated by the IA2 accessibility specification 
       implemented by SWT Accessibility. Instead, an <code>IA2_RELATION_LABELED_BY</code> relation should be used to create a 
       relation between the table and its caption.
     </td>
   </tr>
 
   <tr id="accessibletablelistener-getsummary-deprecated">
-    <td class="title">AccessibleTableListener#getSummary method deprecated</td>
+    <td class="title">AccessibleTableListener<span style="word-wrap:break-word;">#</span>getSummary(..) deprecated</td>
     <td class="content">
       The <code>AccessibleTableListener#getSummary(AccessibleTableEvent)</code> method corresponds to the 
-      <code>IAccessibleTable2::summary</code> method which has been deprecated by the IA2 accessibility specification 
+      <code>IAccessibleTable2::summary</code> method, which has been deprecated by the IA2 accessibility specification 
       implemented by SWT Accessibility. Instead, an <code>IA2_RELATION_DESCRIBED_BY</code> relation should be used
       to create a relation between the table and its summary.
     </td>
   </tr>
 
+  <tr id="di-extension-separation">
+    <td class="title">Separation of DI extension annotations and supplier</td>
+    <td class="content">
+      The annotations specified in <code>org.eclipse.e4.core.di.extensions</code> and the corresponding <code>ExtendedObjectSupplier</code> implementations have been separated.
+	  The annotations are still available in the <code>org.eclipse.e4.core.di.extensions</code> bundle. The <code>ExtendedObjectSupplier</code> implementations have beend moved 
+	  to the new <code>org.eclipse.e4.core.di.extensions.supplier</code> bundle. This makes it easier for platform adopters to change the default implementation by providing a 
+	  replacement for the supplier bundle.
+	  <p>
+	  For <b>plug-in based products</b> this means that the new <code>org.eclipse.e4.core.di.extensions.supplier</code> bundle needs to be added
+	  the list of included plug-ins. <b>Feature based products</b> should not notice the split.
+	  </p>
+	  <p><b>Note:</b> As part of the re-organization, <code>org.eclipse.e4.core.di.extensions.EventUtils</code> (only intended to be used for internal testing), was moved to
+	  <code>org.eclipse.e4.core.di.internal.extensions.util.EventUtils</code> in the new bundle.</p>
+    </td>
+  </tr>
+
+  <tr id="di-extension-service">
+    <td class="title">@Service annotation available in DI extensions</td>
+    <td class="content">
+      The <code>@Service</code> annotation has been added to <code>org.eclipse.e4.core.di.extensions</code>. You can use this annotation to get OSGi services injected by supporting additional service specific features
+	  like getting services with higher service ranking injected automatically, to get the list of services injected for the given type, and to filter for a specific filter by providing an OSGi
+	  LDAP filter.
+	  <pre>public class MyPart {
+		   
+    // highest ranked service
+	
+    @Inject
+    @Service
+    MyOsgiService service;
+			
+}
+</pre>
+	  <pre>public class MyPart {
+
+    // all services sorted by ranking
+
+    @Inject
+    @Service
+    List&lt;MyOsgiService&gt; service; 
+		
+}</pre>
+	  
+<pre>public class MyPart {
+		    
+    // get the highest ranked service that has
+    // the component property connection=online set		
+	
+    @Inject
+    @Service(filterExpression="(connection=online)") 
+    MyOsgiService service;
+			
+}</pre>
+    </td>
+  </tr>
+  <tr id="imperative-expressions">
+    <td class="title">Imperative Expressions</td>
+    <td class="content">
+You can now define visible-when expressions for menu items and tool items in an Eclipse 4 fashion by using
+<code>ImperativeExpression</code>s rather than <code>CoreExpression</code>s.
+<p>
+ <img src="images/imperative-expression.png" alt="" />
+</p>
+ImperativeExpressions reference a POJO class with a method being annotated with the new <code>@Evaluate</code> annotation.
+
+<pre>public class TestExpression {
+   @Evaluate
+   public boolean isVisible(EPartService partService,
+          @Optional @Named("myValueToBeChecked") String myValueToBeChecked) {
+
+      return "expectedValue".equals(myValueToBeChecked) &amp;&amp;
+         !partService.getDirtyParts().isEmpty();
+   }
+}</pre>
+The tracking property causes to track the values which are injected so that the visible state will be evaluated on eclipse context changes,
+ e.g, when the "myValueToBeChecked" value in the context is changed, the visibility check will be run once more.
+    </td>
+  </tr>
+
+
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
   </tr>
 
-  <tr id="first-item-equinox">
-    <td class="title">Tracing honours -consoleLog</td>
+  <tr id="tracing-consolelog">
+    <td class="title">Tracing honors -consoleLog</td>
     <td class="content">
-      When '-consoleLog' runtime option is specified on command line, Eclipse debug tracing 
-      framework will send trace messages to the System.out too (typically back to the command shell if any).
-      This is especially handy if debugging Eclipse from Eclipse with tracing enabled, so no extra trace file
-      need to be opened to check tracing output, and tracing output appears together with all other debug output
-      in the Console view. 
+      When the <code>-consoleLog</code> runtime option is specified on the command line, the Eclipse debug tracing 
+      framework will send trace messages to System.out too (typically back to the command shell, if any).
+      This is especially handy when debugging Eclipse from Eclipse with tracing enabled, so no extra trace file
+      needs to be opened to check tracing output, and tracing output appears together with all other debug output
+      in the Console view.
     </td>
   </tr>
 
