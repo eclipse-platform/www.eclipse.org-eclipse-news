@@ -234,9 +234,10 @@
       The annotations specified in <code>org.eclipse.e4.core.di.extensions</code> and the corresponding <code>ExtendedObjectSupplier</code> implementations have been separated.
 	  The annotations are still available in the <code>org.eclipse.e4.core.di.extensions</code> bundle. The <code>ExtendedObjectSupplier</code> implementations have beend moved 
 	  to the new <code>org.eclipse.e4.core.di.extensions.supplier</code> bundle. This makes it easier for platform adapters to change the default implementation by providing a 
-	  replacement for the supplier bundle. For <i>plugin based products</i> this means that the new <code>org.eclipse.e4.core.di.extensions.supplier</code> bundle needs to be added
-	  the list of included Plugins. <i>Feature based products</i> should not notice that change.<br>
-	  <p><b>Note:</b><br>In that process <code>org.eclipse.e4.core.di.extensions.EventUtils</code> (only intended to be used for internal testing), was moved to
+	  replacement for the supplier bundle. For <i>plug-in based products</i> this means that the new <code>org.eclipse.e4.core.di.extensions.supplier</code> bundle needs to be added
+	  the list of included plug-ins. <i>Feature based products</i> should not notice that change.<br/>
+	  <p><b>Note:</b><br/>
+	  In that process <code>org.eclipse.e4.core.di.extensions.EventUtils</code> (only intended to be used for internal testing), was moved to
 	  <code>org.eclipse.e4.core.di.internal.extensions.util.EventUtils</code> in the new bundle.</p>
     </td>
   </tr>
@@ -311,7 +312,8 @@ The tracking property causes to track the values which are injected so that the 
       Composite icons such as Java element icons with modifier overlays are now rendered in high resolution
       in environments that support HiDPI images.
       <p>
-      [TODO: add screenshot]
+      <img src="images/jdt-composite-images-hidpi.png" alt="" width="479"
+      style="image-rendering:-moz-crisp-edges;image-rendering:-o-crisp-edges;image-rendering:crisp-edges;"/>
       </p>
     </td>
   </tr>
