@@ -279,7 +279,28 @@
 }</pre>
     </td>
   </tr>
+  <tr id="imperative-expressions">
+    <td class="title">Imperative Expressions</td>
+    <td class="content">
+You can now define visible when expressions for menu items and tool items in an Eclipse 4 fashion by using ImperativeExpressions rather than CoreExpressions.
+<p>
+ <img src="images/imperative-expression.png" alt="" />
+</p>
+ImperativeExpressions reference a POJO class with a method being annotated with the new @Evaluate annotation.
 
+<pre>public class TestExpression {
+   @Evaluate
+   public boolean isVisible(EPartService partService,
+          @Optional @Named("myValueToBeChecked") String myValueToBeChecked) {
+
+      return "expectedValue".equals(myValueToBeChecked) &amp;&amp;
+         !partService.getDirtyParts().isEmpty();
+   }
+}</pre>
+The tracking property causes to track the values which are injected so that the visible state will be evaluated on eclipse context changes,
+ e.g, when the "myValueToBeChecked" value in the context is changed the visibility check will be run once more.
+    </td>
+  </tr>
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
