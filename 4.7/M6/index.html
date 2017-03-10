@@ -269,11 +269,22 @@ protected void drawCompositeImage(int width, int height) {
   </tr>
 
   <tr id="swt-table-header-styling">
-    <td class="title">Table header colors</td>
+    <td class="title">SWT Table header foreground and background color support</td>
     <td class="content">
-       On Windows and Linux you can set the foreground and background colors for table headers
-       via the <code>Table#setHeaderForeground/Background(Color)</code> methods.
-      <p>
+       Added support for table header foreground and background color which currently works on Windows and Linux(GTK3) platforms only.
+       This is a custom paint operation and user can customize the table header via below new API support:
+       <p>
+       	APIs for Table header foreground color:<br/>
+       	<code>Table#getHeaderForeground()</code><br/>
+       	<code>Table#setHeaderForeground(Color)</code><br/>
+       </p>
+       <p>
+       	APIs for Table header background color:<br/>
+       	<code>Table#getHeaderBackground()</code><br/>
+       	<code>Table#setHeaderBackground(Color)</code><br/>
+       </p>
+       <p>
+      	Screen-shot of an SWT Table with customized header on Linux(GTK3):<br/>
       	<img src="images/table-header-colors.png" alt="" />
       </p>
     </td>
