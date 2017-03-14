@@ -258,7 +258,7 @@ protected void drawCompositeImage(int width, int height) {
 }
       </pre>
       <p>
-      Hint: Use <code>CompositeImageDescriptor#createCachedImageDataProvider(Image<span style="visibility:hidden">&shy;</span>/ImageDescriptor)</code> to create an
+      Hint: Use <code>CompositeImageDescriptor<span style="visibility:hidden">&shy;</span>#createCachedImageDataProvider(<span style="visibility:hidden">&shy;</span>Image<span style="visibility:hidden">&shy;</span>/ImageDescriptor)</code> to create an
       <code>ImageDataProvider</code>. To calculate the width and height of the image
       that is about to be drawn, you can use
       <code>CachedImageDataProvider<span style="visibility:hidden">&shy;</span>#getWidth()/<span style="visibility:hidden">&shy;</span>getHeight()</code>. These methods
@@ -269,10 +269,9 @@ protected void drawCompositeImage(int width, int height) {
   </tr>
 
   <tr id="swt-table-header-styling">
-    <td class="title">SWT Table header foreground and background color support</td>
+    <td class="title">SWT Table header colors</td>
     <td class="content">
-       Added support for table header foreground and background color which currently works on Windows and Linux(GTK3) platforms only.
-       This is a custom paint operation and user can customize the table header via below new API support:
+       Support for custom table header foreground and background colors has been added on Windows and Linux (GTK3) platforms.
        <p>
        	APIs for Table header foreground color:<br/>
        	<code>Table#getHeaderForeground()</code><br/>
@@ -283,15 +282,15 @@ protected void drawCompositeImage(int width, int height) {
        	<code>Table#getHeaderBackground()</code><br/>
        	<code>Table#setHeaderBackground(Color)</code><br/>
        </p>
+       Screen-shot of an SWT Table with customized header on Linux (GTK3):
        <p>
-      	Screen-shot of an SWT Table with customized header on Linux(GTK3):<br/>
       	<img src="images/table-header-colors.png" alt="" />
       </p>
     </td>
   </tr>
   
   <tr id="accessibletablelistener-getcaption-deprecated">
-    <td class="title">AccessibleTableListener<span style="word-wrap:break-word;">#</span>getCaption(..) deprecated</td>
+    <td class="title">AccessibleTableListener<span style="visibility:hidden">&shy;</span>#getCaption(..) deprecated</td>
     <td class="content">
       The <code>AccessibleTableListener#getCaption(AccessibleTableEvent)</code> method corresponds to the 
       <code>IAccessibleTable2::caption</code> method, which has been deprecated by the IA2 accessibility specification 
@@ -301,7 +300,7 @@ protected void drawCompositeImage(int width, int height) {
   </tr>
 
   <tr id="accessibletablelistener-getsummary-deprecated">
-    <td class="title">AccessibleTableListener<span style="word-wrap:break-word;">#</span>getSummary(..) deprecated</td>
+    <td class="title">AccessibleTableListener<span style="visibility:hidden">&shy;</span>#getSummary(..) deprecated</td>
     <td class="content">
       The <code>AccessibleTableListener#getSummary(AccessibleTableEvent)</code> method corresponds to the 
       <code>IAccessibleTable2::summary</code> method, which has been deprecated by the IA2 accessibility specification 

@@ -95,6 +95,10 @@ table.news tr td.content {vertical-align: top;}
         over <code>&lt;</code>em<code>&gt;</code> if you have to use one.
       </p>
       <p>Do <b>not</b> enclose the first paragraph of an item in <code>&lt;p&gt;&lt;/p&gt;</code> tags.
+      Later in the entry, prefer <code>&lt;p&gt;</code> over <code>&lt;br/&gt;</code>.
+      </p>
+      <p>To break up very long <code>&lt;code&gt;</code> tags that don't contain whitespace for automatic word-wrap,
+      consider inserting <code>&lt;span style="visibility:hidden"&gt;&amp;shy;&lt;/span&gt;</code> at strategic positions.
       </p>
       <p>See entries in <a href="../../4.6/M7/index.html">published</a> news documents for correct examples. These published news entries have been already reviewed, while
          entries in the evolving document may still contain errors.
@@ -170,8 +174,8 @@ table.news tr td.content {vertical-align: top;}
       }, true);
       //]]>
       </script>
-
-     <script type="text/javascript">
+      <script type="text/javascript">
+      //<![CDATA[
       window.addEventListener('load', function findWrongHighLighter() {
         var emTags = document.getElementsByTagName("em");
         for (var i = 0; i < emTags.length; i++) {
@@ -183,8 +187,8 @@ table.news tr td.content {vertical-align: top;}
           tag.parentElement.insertBefore(msg, tag);
         }
       }, true);
+      //]]>
       </script>
-
     </td>
   </tr>
   <tr id="css">
@@ -207,13 +211,14 @@ table.news tr td.content {vertical-align: top;}
   <tr>
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
-  
+
   <tr id="first-item-platform">
     <td class="title">First item</td>
     <td class="content">
       Item blurb.
     </td>
   </tr>
+
 
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
@@ -230,7 +235,7 @@ table.news tr td.content {vertical-align: top;}
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
-  
+
   <tr id="first-item-pde">
     <td class="title">First item</td>
     <td class="content">
@@ -242,7 +247,7 @@ table.news tr td.content {vertical-align: top;}
   <tr>
     <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
   </tr>
-  
+
   <tr id="first-item-platform-dev">
     <td class="title">First item</td>
     <td class="content">
@@ -254,7 +259,7 @@ table.news tr td.content {vertical-align: top;}
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
   </tr>
-  
+
   <tr id="first-item-equinox">
     <td class="title">First item</td>
     <td class="content">
@@ -266,7 +271,6 @@ table.news tr td.content {vertical-align: top;}
   <tr>
     <td colspan="2"/>
   </tr>
-  
 </table>
 
 <!--
