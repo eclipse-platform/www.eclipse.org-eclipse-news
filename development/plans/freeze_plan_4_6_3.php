@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2017-03-10
+	# Date:			2017-03-23
 	#
 	# Description: Eclipse project 4.6.3 release freeze plan
 	#
@@ -45,7 +45,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>Quiet week/buffer.</b></p>
+			<p><b>Thursday, March 23, 2017: Simultaneous release train GA Neon.3.</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -65,7 +65,7 @@ ob_start();
 	            <td class="spacer">&nbsp;</td>
 	          </tr>
 	          <tr>
-	            <td>Januar 2017</td>
+	            <td>January 2017</td>
 	          </tr>
 	          <tr>
 	            <td></td>
@@ -211,7 +211,7 @@ ob_start();
 	            <td>Simultaneous release train complete with RC4</td>
 	            <td></td>
 	          </tr>
-	          <tr class="current">
+	          <tr>
 	            <td></td>
 	            <td class="date">10 to 22</td>
 	            <td class="date"></td>
@@ -219,7 +219,7 @@ ob_start();
 	            <td>Quiet week/buffer</td>
 	            <td></td>
 	          </tr>
-	          <tr>
+	          <tr class="current">
 	            <td></td>
 	            <td class="date">23</td>
 	            <td class="date">Thu</td>
