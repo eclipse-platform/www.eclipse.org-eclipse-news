@@ -5,7 +5,7 @@
 	# team-leaders.php
 	#
 	# Author: 		
-	# Date:			2016-11-08
+	# Date:			2017-03-31
 	#
 	# Description: Details about the Eclipse Project PMC
 	#
@@ -81,7 +81,7 @@ ob_start();
 			      Dani is one of the initial Eclipse committers. Currently he leads the <a href="https://wiki.eclipse.org/Platform">Platform</a> and the <a href="http://eclipse.org/jdt">JDT</a> subprojects,
 			      represents the project in the Eclipse <a href="http://wiki.eclipse.org/Planning_Council">Planning Council</a>, and is also a
 			      a member of the Eclipse <a href="http://wiki.eclipse.org/Architecture_Council">
-			      Architecture Council</a>. He has been elected by the committers to represent them in the <a href="https://eclipse.org/org/foundation/directors.php">Eclipse Foundation Board of Directors</a>.
+			      Architecture Council</a>.
 			      Dani worked at OTI and now works at IBM Research GmbH. His interests include user interface and API design, editors, software quality and performance.
 		        </li>
 		        <li> 
@@ -96,13 +96,6 @@ ob_start();
 					He is an active Platform UI and PDE committer, contributor to other Eclipse projects and co-leads the <a href="http://www.eclipse.org/e4/">e4</a>  and
 					<a href="https://www.eclipse.org/eclipse/platform-ui/">Platform UI</a> project.
 					His interests include API and UI simplification, code clean and growing the number of committers and contributors in the project.
-		        </li>
-				<li>
-		          <b><a name="sergey"></a>Sergey Prigogin, Google</b><br>
-					Sergey is part of Google's Eclipse team. He is CDT and Platform UI committer and co-leads Platform Resources.
-					His primary areas of interest are C++ parsing, indexing, refactoring and making Eclipse faster and more responsive.
-					He is also interested in growing the number of Platform committers and contributors and making contributing to the
-					Eclipse Platform projects as frictionless as possible.
 		        </li>
 		      </ul>
 		</div>
@@ -173,6 +166,13 @@ ob_start();
 			      e4, and overall platform API quality. John has authored numerous <a href="http://www.eclipse.org/articles/">articles</a> 
 			      and a <a href="http://www.amazon.com/Official-Eclipse-3-0-FAQs/dp/0321268385/ref=sr_1_1?ie=UTF8&s=books&qid=1221163807&sr=8-1">
 			      book</a> on Eclipse.
+		        </li>
+				<li>
+		          <b><a name="sergey"></a>Sergey Prigogin, Google</b><br>
+					Sergey is part of Google's Eclipse team. He is CDT and Platform UI committer and co-leads Platform Resources.
+					His primary areas of interest are C++ parsing, indexing, refactoring and making Eclipse faster and more responsive.
+					He is also interested in growing the number of Platform committers and contributors and making contributing to the
+					Eclipse Platform projects as frictionless as possible.
 		        </li>
 		      </ul>
 		</div>
