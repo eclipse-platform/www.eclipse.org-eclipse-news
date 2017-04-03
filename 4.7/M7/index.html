@@ -187,18 +187,27 @@
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
   
-  <tr id="dark-mode-search-highlight-color">
-    <td class="title">Fixed highlight colors for the dark theme in the Search view</td>
+  <tr id="dark-styling-pseudo-attributes">
+    <td class="title">Support for extending existing CSS preference nodes</td>
     <td class="content">
-      The Search view colors have been adjusted in the dark theme, so that you can now read the highlighted text.
+      CSS definitions for preferences can now use pseudo selectors.
+      This allows that other plug-ins extends preference CSS nodes, instead of overriding them.
+      This makes the default Eclipse dark theme much more consistent and usable.
+      
       <p>
-      Before:
+      Example styling with EGit installed before this development:
       </p>
       <p>
+        <img src="images/code-completion-dark-theme-old.png" alt=""/>
+      </p>
+       <p>
         <img src="images/old-search-result-hightlight-color.png" alt=""/>
       </p>
       <p>
-      After:
+        Example styling with EGit installed after this development:
+      </p>
+      <p>
+        <img src="images/code-completion-dark-theme-new.png" alt=""/>
       </p>
       <p>
         <img src="images/new-search-result-hightlight-color.png" alt=""/>
