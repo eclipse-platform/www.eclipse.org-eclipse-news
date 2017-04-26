@@ -6,7 +6,7 @@
 	#
 	# index.php
 	#
-	# Author: 		
+	# Author: 		Dani Megert
 	# Date:			2017-04-26
 	#
 	# Description: Eclipse project Oxygen release freeze plan
@@ -521,7 +521,7 @@ ob_start();
               prior to release. Person who reported bug should mark the bug as 
               verified once they have retested.</p>
 
-			<a name="FixPassAfterRC3"></a><h4>May June 5 - June 7 - contributions to RC4</h4>
+			<a name="FixPassAfterRC3"></a><h4>June 5 - June 7 - contributions to RC4</h4>
 			<p><b>Focus:</b> Serious defects only; documentation.</p>
             <p><b>Fix approval:</b> Component lead plus one other component lead must 
               approve all work on a component. In addition, any component lead 
