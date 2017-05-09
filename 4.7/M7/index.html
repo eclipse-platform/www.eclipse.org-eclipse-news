@@ -186,14 +186,14 @@
   <tr>
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
-  
+
   <tr id="dark-styling-pseudo-attributes">
     <td class="title">Support for extending existing CSS preference nodes</td>
     <td class="content">
       CSS definitions for preferences can now use pseudo selectors.
       This allows that other plug-ins extends preference CSS nodes, instead of overriding them.
       This makes the default Eclipse dark theme much more consistent and usable.
-      
+
       <p>
       Example styling with EGit installed before this development:
       </p>
@@ -214,7 +214,7 @@
       </p>
     </td>
   </tr>
-  
+
   <tr id="default-dark-styling-table-headers">
     <td class="title">Default styling for table and tree headers</td>
     <td class="content">
@@ -227,7 +227,7 @@
     </p>
     </td>
   </tr>
-  
+
    <tr id="list-dnd-effect">
     <td class="title">DnD source image for List widget (GTK only)</td>
     <td class="content">
@@ -237,7 +237,7 @@
     </p>
     </td>
   </tr>
-  
+
    <tr id="copy-preferences-during-ws-switch">
     <td class="title">Option to copy your preferences during workspace switch</td>
     <td class="content">
@@ -255,7 +255,7 @@
   <tr id="hide-deprecated-fields-and-methods">
     <td class="title">Hide deprecated fields and methods</td>
     <td class="content">
-      You can now hide the deprecated fields and methods in Outline view, Members view, Package Explorer view, Project Explorer view, and 
+      You can now hide the deprecated fields and methods in Outline view, Members view, Package Explorer view, Project Explorer view, and
       Quick Outline by using the new filter from their drop-down menu (<b>Ctrl+F10</b>):
       <p>
         <img src="images/hide-deprecated-fields-and-methods.png" alt=""/>
@@ -266,7 +266,7 @@
   <tr id="group-by-project-in-search-view">
     <td class="title">Group by project in Search view</td>
     <td class="content">
-      The default grouping of the Java search results in Search view has been changed to group by project. Earlier the results were grouped by package. 
+      The default grouping of the Java search results in Search view has been changed to group by project. Earlier the results were grouped by package.
       <p>
         <img src="images/group-by-project-in-search-view.png" alt=""/>
       </p>
@@ -277,7 +277,7 @@
   <tr id="defaults-for-annotation-type-elements-in-javadoc">
     <td class="title">Defaults for annotation type elements in Javadoc</td>
     <td class="content">
-      The default value of an annotation type element is now shown in the Javadoc view and hover. 
+      The default value of an annotation type element is now shown in the Javadoc view and hover.
       <p>
         <img src="images/defaults-for-annotation-type-elements-in-javadoc.png" alt=""/>
       </p>
@@ -291,7 +291,7 @@
       <p>
         <img src="images/new-java-index.png" alt=""/>
       </p>
-      The new <b>Rebuild Index</b> button can be used to delete all information cached in the Java index. 
+      The new <b>Rebuild Index</b> button can be used to delete all information cached in the Java index.
       This can be used to save disk space and fix index corruption.
     </td>
   </tr>
@@ -300,10 +300,15 @@
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
 
-  <tr id="first-item-pde">
-    <td class="title">First item</td>
+  <tr id="manage-versions-for-included-features">
+    <td class="title">Manage versions for included features</td>
     <td class="content">
-      Item blurb.
+      PDE Feature editor allows now managing versions for included features (previously this was possible for included plug-ins only).
+      In the "Included Features" tab a new "Versions..." button has been added, which allows to synchronize the current feature with
+      actual versions of included features or set included feature versions to be synchronized on build.
+      <p>
+        <img src="images/feature_versions.png" alt=""/>
+      </p>
     </td>
   </tr>
 
@@ -339,7 +344,7 @@ Table, Tree {
   <tr id="installation-dialog-progress-reporting">
     <td class="title">Progress reporting in the installation dialog</td>
     <td class="content">
-      If you select an update site the installation dialog now provides progress feedback during the download of the 
+      If you select an update site the installation dialog now provides progress feedback during the download of the
       software catalog.
     <p>
         <img src="images/installation-progress-reporting.png" alt="" />
