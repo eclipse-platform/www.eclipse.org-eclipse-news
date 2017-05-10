@@ -212,12 +212,12 @@
     </td>
   </tr>
   
-     <tr id="a=quick-fix-for-apitool-pde-compiler-problems">
+  <tr id="a-quick-fix-for-apitool-pde-compiler-problems">
     <td class="title">Quick Fix to configure problem severity</td>
     <td class="content">
       You can now configure the severity of an <b>API tools </b>problem or <b>PDE compiler</b> problem by invoking the new <b>Quick Fix (Ctrl+1)</b>.
-      <br>
-      <br>
+      <br/>
+      <br/>
    
       <p>
         <img src="images/pde-configure-problem-api-tool.png" alt=""/>
@@ -226,8 +226,8 @@
       For API tools problem, the quick fix will open the <b> Plug-in Development &gt; Errors/Warnings</b>
        preference page and highlight the configurable problem.
       
-       <br>
-       <br>
+       <br/>
+       <br/>
        
        <p>
         <img src="images/pde-configure-problem-pde-compiler.png" alt=""/>
@@ -254,6 +254,32 @@ Table, Tree {
     swt-header-background-color: #383D3F;
 }
       </pre>
+    </td>
+  </tr>
+
+  <tr id="swt-image-hidpi">
+    <td class="title">New API for high-DPI support</td>
+    <td class="content">
+      Platform-independent high-DPI support has been added to <code>Image</code> class to get <code>ImageData</code> at specific zoom levels:
+      <ul>
+  		<li><code>Image#getImageData(int zoom)</code>: Returns an <code>ImageData</code> for the given zoom level.</li>
+       </ul>
+      <p>
+      Note: this API is mainly intended to be used by custom implementations of <code>ImageDataProvider</code> that draw a
+      composite image at the requested zoom level based on other images. For custom zoom levels, the <code>ImageData</code> 
+      may be an auto-scaled version of the native image and may look more blurred or mangled than expected. 
+      </p>
+    </td>
+  </tr>
+
+  <tr id="swt-image-api-deprecated">
+    <td class="title"><code>Image#getImageDataAtCurrentZoom()</code> deprecated</td>
+    <td class="content">
+      The <code>Image#getImageDataAtCurrentZoom()</code> method is not used in the Eclipse Platform anymore, since the
+      method didn't serve the purpose in a multi-monitor environment, hence it's deprecated.
+      <p>
+      <code>Image.getImageData(int zoom)</code> is the replacement API.
+      </p>
     </td>
   </tr>
 
