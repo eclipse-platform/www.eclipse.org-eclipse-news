@@ -257,6 +257,36 @@ Table, Tree {
     </td>
   </tr>
 
+  <tr id="swt-tree-header-styling">
+    <td class="title">SWT Tree header colors</td>
+    <td class="content">
+       Support for custom tree header foreground and background colors has been added on MAC, Windows and Linux (GTK3) platforms.
+       <p>
+       	APIs for Tree header foreground color:<br/>
+       	<code>Tree#getHeaderForeground()</code><br/>
+       	<code>Tree#setHeaderForeground(Color)</code><br/>
+       </p>
+       <p>
+       	APIs for Tree header background color:<br/>
+       	<code>Tree#getHeaderBackground()</code><br/>
+       	<code>Tree#setHeaderBackground(Color)</code><br/>
+       </p>
+       Screen-shot of an SWT Tree with customized header on Windows:
+       <p>
+      	<img src="images/tree-header-colors.png" alt="" />
+      </p>
+    </td>
+  </tr>
+
+  <tr id="swt-table-header-styling-mac">
+    <td class="title">SWT Table header colors supported on MAC as well</td>
+    <td class="content">
+       Custom table header foreground and background colors APIs initially supported for 
+       <a href="https://www.eclipse.org/eclipse/news/4.7/M6/#swt-table-header-styling">Windows and Linux (GTK3)</a>
+       platforms, has been extended to MAC platform as well. 
+    </td>
+  </tr>
+
   <tr id="swt-image-hidpi">
     <td class="title">New API for high-DPI support</td>
     <td class="content">
@@ -272,13 +302,13 @@ Table, Tree {
     </td>
   </tr>
 
-  <tr id="swt-image-api-deprecated">
-    <td class="title"><code>Image#getImageDataAtCurrentZoom()</code> deprecated</td>
+  <tr id="swt-image-apis-deprecated">
+    <td class="title"><code>Image#getImageDataAtCurrentZoom()</code> and <code>Image#getBoundsInPixels()</code> are deprecated</td>
     <td class="content">
-      The <code>Image#getImageDataAtCurrentZoom()</code> method is not used in the Eclipse Platform anymore, since the
-      method didn't serve the purpose in a multi-monitor environment, hence it's deprecated.
+      The <code>Image#getImageDataAtCurrentZoom()</code> and <code>Image#getBoundsInPixels()</code> APIs didn't serve the purpose
+      in an environment having multiple monitors with different DPIs, hence are deprecated.
       <p>
-      <code>Image.getImageData(int zoom)</code> is the replacement API.
+      <code>Image#getImageData(int zoom)</code> is the replacement API for <code>Image#getImageDataAtCurrentZoom()</code>.
       </p>
     </td>
   </tr>
