@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 11:24 EDT May 12, 2017.
+Last revised 05:59 EDT May 15, 2017.
 
 <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 marks interesting changes since the previous draft of 
@@ -492,7 +492,7 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
   </tr>
   <tr>
     <td>com.jcraft.jsch</td>
-    <td><div align="center">osgi.ee;filter:="(&quot;(osgi.ee=JavaSE)(version=1.5))"</div></td>
+    <td><div align="center">1.5</div></td>
   </tr>
   <tr>
     <td>com.sun.el</td>
@@ -520,23 +520,23 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
   </tr>
   <tr>
     <td>org.apache.ant</td>
-    <td><div align="center">osgi.ee;filter:="(&quot;(osgi.ee=JavaSE)(version=1.8))"</div></td>
+    <td><div align="center">1.8</div></td>
   </tr>
   <tr>
     <td>org.apache.batik.css</td>
-    <td><div align="center">osgi.ee;filter:="(&quot;(osgi.ee=JavaSE)(version=1.6))"</div></td>
+    <td><div align="center">1.6</div></td>
   </tr>
   <tr>
     <td>org.apache.batik.util</td>
-    <td><div align="center">osgi.ee;filter:="(&quot;(osgi.ee=JavaSE)(version=1.6))"</div></td>
+    <td><div align="center">1.6</div></td>
   </tr>
   <tr>
     <td>org.apache.batik.util.gui</td>
-    <td><div align="center">osgi.ee;filter:="(&quot;(osgi.ee=JavaSE)(version=1.6))"</div></td>
+    <td><div align="center">1.6</div></td>
   </tr>
   <tr>
     <td>org.apache.commons.codec</td>
-    <td><div align="center">osgi.ee;filter:="(&quot;(osgi.ee=JavaSE)(version=1.6))"</div></td>
+    <td><div align="center">1.6</div></td>
   </tr>
   <tr>
     <td>org.apache.commons.jxpath</td>
@@ -560,15 +560,15 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
   </tr>
   <tr>
     <td>org.apache.felix.scr</td>
-    <td><div align="center">osgi.ee;filter:="(&quot;(osgi.ee=JavaSE)(version=1.6))"</div></td>
+    <td><div align="center">1.6</div></td>
   </tr>
   <tr>
     <td>org.apache.httpcomponents.httpclient</td>
-    <td><div align="center">osgi.ee;filter:="(&quot;(osgi.ee=JavaSE)(version=1.6))"</div></td>
+    <td><div align="center">1.6</div></td>
   </tr>
   <tr>
     <td>org.apache.httpcomponents.httpcore</td>
-    <td><div align="center">osgi.ee;filter:="(&quot;(osgi.ee=JavaSE)(version=1.6))"</div></td>
+    <td><div align="center">1.6</div></td>
   </tr>
   <tr>
     <td>org.apache.jasper.glassfish</td>
@@ -576,19 +576,19 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
   </tr>
   <tr>
     <td>org.apache.lucene.analyzers-common</td>
-    <td><div align="center">osgi.ee;filter:="(&quot;(osgi.ee=JavaSE)(version=1.8))"</div></td>
+    <td><div align="center">1.8</div></td>
   </tr>
   <tr>
     <td>org.apache.lucene.analyzers-smartcn</td>
-    <td><div align="center">osgi.ee;filter:="(&quot;(osgi.ee=JavaSE)(version=1.8))"</div></td>
+    <td><div align="center">1.8</div></td>
   </tr>
   <tr>
     <td>org.apache.lucene.core</td>
-    <td><div align="center">osgi.ee;filter:="(&quot;(osgi.ee=JavaSE)(version=1.8))"</div></td>
+    <td><div align="center">1.8</div></td>
   </tr>
   <tr>
     <td>org.apache.lucene.misc</td>
-    <td><div align="center">osgi.ee;filter:="(&quot;(osgi.ee=JavaSE)(version=1.8))"</div></td>
+    <td><div align="center">1.8</div></td>
   </tr>
   <tr>
     <td>org.eclipse.ant.core</td>
@@ -1180,7 +1180,7 @@ In the table below, the &quot;4.7 minimum execution environment&quot;
   </tr>
   <tr>
     <td>org.tukaani.xz</td>
-    <td><div align="center">osgi.ee;filter:="(&quot;(osgi.ee=JavaSE)(version=1.4))"</div></td>
+    <td><div align="center">1.4</div></td>
   </tr>
   <tr>
     <td>org.w3c.css.sac</td>
