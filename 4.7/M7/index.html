@@ -36,10 +36,13 @@
   </tr>
 
   <tr id="unix-platforms-dropped">
-    <td class="title">Dropped support for Unix platforms</td>
+    <td class="title">No Linux PPC 32-bit builds</td>
     <td class="content">
-	  Eclipse has dropped support for the following Linux platforms: PPC 32bit
-	  For this platform, no builds are available on the eclipse.org downloads page.
+	  The Eclipse project has dropped support for Linux PPC 32-bit.
+	  For this platform, no builds are available any more.
+	  <p>
+	  For the Photon (4.8) release, we plan to drop support for the ppc64 builds as well, but keep ppc64le.
+	  </p>
     </td>
   </tr>
 
@@ -95,7 +98,7 @@
    <tr id="list-dnd-effect">
     <td class="title">DnD source image for List widget (GTK only)</td>
     <td class="content">
-    Show source image (rows being dragged) when a drag is initiated from a List widget.
+    When items are being dragged from a <code>List</code> widget, their content now moves with the mouse cursor.
     <p>
         <img src="images/listdnd.png" alt="" />
     </p>
@@ -115,12 +118,12 @@
   <tr id="preference-for-problems-decorations-on-startup">
     <td class="title">Option to disable Problems view decoration on startup</td>
     <td class="content">
-    The Problems view icon doesn't show errors/warnings overlays after startup by default,
+    By default, the Problems view icon no longer shows an errors/warnings overlay after startup,
     unless the Problems view is on top of the view stack.
-    To enable the errors/warnings overlays also for the case if the Problems view is not on top of the view stack,
-    a new <b>Show Problems view decorations on startup</b> option is added to the
+    To enable the errors/warnings overlay also if the Problems view is minimized or not on top,
+    a new <b>Show Problems view decorations on startup</b> option has been added to
     <b>Preferences &gt; General &gt; Startup and Shutdown</b>.
-    By default this preference is disabled.
+    By default, this preference is disabled.
     <p>
         <img src="images/problems_view_startup_preference.png" alt="" />
     </p>
@@ -150,9 +153,9 @@
   </tr>
 
   <tr id="group-by-project-in-search-view">
-    <td class="title">Group by project in Search view</td>
+    <td class="title">Group by Project in Search view</td>
     <td class="content">
-      The default grouping of the Java search results in Search view has been changed to group by project. Earlier the results were grouped by package.
+      The default grouping of Java search results in the Search view has been changed to Group by Project. Earlier the results were grouped by package.
       <p>
         <img src="images/group-by-project-in-search-view.png" alt=""/>
       </p>
@@ -178,18 +181,19 @@
         <img src="images/new-java-index.png" alt=""/>
       </p>
       The new <b>Rebuild Index</b> button can be used to delete all information cached in the Java index.
-      This can be used to save disk space and fix index corruption.
+      This can be used to save disk space after the new index got disabled, and to fix index corruption.
     </td>
   </tr>
   
   <tr id="enable-show-logical-structure">
     <td class="title">Show Logical Structure enabled by default</td>
     <td class="content">
-       In the <b> Variables</b> view, the collection objects will be displayed as <b>logical structure</b> by default.
+      In the <b>Variables</b> view, <b>Show Logical Structure</b> is now enabled by default.
+      E.g. collection objects now directly show their contained elements instead of their internal structure.
       <p>
         <img src="images/jdt-debug-show-logical-structure-by-default.png" alt=""/>
       </p>
-      The <b> context menu </b> has the option to select a logical structure and auto enable <b>Show Logical structure</b> for all the collection objects. Edit logical structure menu has been moved to the sub-menu.
+      The <b>Show Logical Structure</b> context menu lets you choose or edit the representation.
        <p>
         <img src="images/jdt-debug-edit-logical-structure-context-menu.png" alt=""/>
       </p>
@@ -214,24 +218,25 @@
   <tr id="manage-versions-for-included-features">
     <td class="title">Manage versions for included features</td>
     <td class="content">
-      <b> PDE Feature editor</b> now allows  managing versions for included features (previously this was possible for included plug-ins only).
-      In the <b>Included Features</b> tab, a new <b>Versions...</b> button has been added, which allows to synchronize the current feature with
-      actual versions of included features or sets included feature versions to be synchronized on build.
+      The <b>PDE Feature editor</b> now allows you to manage versions for included features (previously this was possible for included plug-ins only).
+      In the <b>Included Features</b> tab, a new <b>Versions...</b> button has been added, which allows you to synchronize the current feature with
+      actual versions of included features, or sets included feature versions to be synchronized on build.
       <p>
         <img src="images/pde-version-included-feature.png" alt=""/>
       </p>
     </td>
   </tr>
   
-    <tr id="target-editor-set-active-reload">
+  <tr id="target-editor-set-active-reload">
     <td class="title">Reload Target Editor</td>
     <td class="content">
-   When a target platform is already active, opening the <b>target editor</b> now shows <b>Reload Target Platform</b> instead of <b>Set Active Platform</b>, 
-   and has the same effect as pressing the <b>Reload </b> button in <b> Plug-in Development &gt; Target Platform</b>  preference page. If the target editor is dirty, clicking the
-   link will now  ask the  user to save the target editor and then reload the target.
+      When a target platform is already active, the <b>Target Editor</b> now shows a <b>Reload Target Platform</b> link instead of <b>Set Active Platform</b>. 
+      The reload link has the same effect as pressing the <b>Reload</b> button in the <b>Plug-in Development &gt; Target Platform</b> preference page.
       <p>
         <img src="images/pde-target-editor-reload.png" alt=""/>
       </p>
+      If the .target file has been modified, clicking the
+      link will now ask you to save the target editor and then reload the target.
     </td>
   </tr>
   
@@ -258,17 +263,17 @@
         <img src="images/pde-configure-problem-api-tool.png" alt=""/>
       </p>
      
-      For API tools problem, the quick fix will open the <b> Plug-in Development &gt; Errors/Warnings</b>
-       preference page and highlight the configurable problem.
+      For API tools problems, the Quick Fix will open the <b>Plug-in Development &gt; Errors/Warnings</b>
+      preference page and highlight the configurable problem.
       
-       <br/>
-       <br/>
-       
-       <p>
+      <br/>
+      <br/>
+      
+      <p>
         <img src="images/pde-configure-problem-pde-compiler.png" alt=""/>
       </p>
       
-       For PDE compiler problem, the quick fix will open the <b> Plug-in Development &gt; Compilers</b>
+       For PDE compiler problems, the Quick Fix will open the <b>Plug-in Development &gt; Compilers</b>
        preference page and highlight the configurable problem.
      
     </td>
@@ -316,16 +321,16 @@ Table, Tree {
   <tr id="swt-table-header-styling-mac">
     <td class="title">SWT Table header colors supported on Mac as well</td>
     <td class="content">
-       Custom table header foreground and background colors APIs initially supported for 
+       The custom table header foreground and background colors APIs initially supported for 
        <a href="https://www.eclipse.org/eclipse/news/4.7/M6/#swt-table-header-styling">Windows and Linux (GTK3)</a>
-       platforms, has been extended to Mac platform as well. 
+       platforms now works on the Mac as well. 
     </td>
   </tr>
 
   <tr id="swt-image-hidpi">
-    <td class="title">New API <code>Image#getImageData(int zoom)</code> added</td>
+    <td class="title">New API <code>Image#getImageData(int zoom)</code></td>
     <td class="content">
-      Platform-independent high-DPI support has been added to <code>Image</code> class to get <code>ImageData</code> at specific zoom levels:
+      Platform-independent high-DPI support has been added to the <code>org.eclipse.swt.graphics.Image</code> class to get <code>ImageData</code> at specific zoom levels:
       <ul>
   		<li><code>Image#getImageData(int zoom)</code>: Returns an <code>ImageData</code> for the given zoom level.</li>
        </ul>
@@ -341,7 +346,7 @@ Table, Tree {
     <td class="title"><code>Image#getImageDataAtCurrentZoom()</code> and <code>Image#getBoundsInPixels()</code> are deprecated</td>
     <td class="content">
       The <code>Image#getImageDataAtCurrentZoom()</code> and <code>Image#getBoundsInPixels()</code> APIs didn't serve the purpose
-      in an environment having multiple monitors with different DPIs, hence are deprecated.
+      in an environment having multiple monitors with different DPIs, hence they were deprecated.
       <p>
       <code>Image#getImageData(int zoom)</code> is the replacement API for <code>Image#getImageDataAtCurrentZoom()</code>.
       </p>
@@ -355,7 +360,7 @@ Table, Tree {
   <tr id="installation-dialog-progress-reporting">
     <td class="title">Progress reporting in the installation dialog</td>
     <td class="content">
-      If you select an update site the installation dialog now provides progress feedback during the download of the
+      When you select an update site, the installation dialog now provides progress feedback during the download of the
       software catalog.
     <p>
         <img src="images/installation-progress-reporting.png" alt="" />
