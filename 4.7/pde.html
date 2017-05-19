@@ -1,0 +1,397 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2016. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" type="text/css"/>
+<style type="text/css">
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+/*img {max-width: 520px;}*/
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+ul {padding-left: 13px;}
+</style>
+<title>Eclipse Project Oxygen - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Plug-in Development Environment</h2>
+<ul>
+	<li><a href="#dialogs-editors-views">Dialogs, Editors, and Views</a></li>
+	<li><a href="#declarative-services">OSGi Declarative Services</a></li>
+	<li><a href="#wizards">Wizards</a></li>
+	<li><a href="#APITools">API Tools</a></li>
+</ul>
+
+<table class="news">
+<colgroup>
+  <col class="title" />
+  <col />
+</colgroup>
+<tbody>
+
+  <!-- ******************** Dialogs, Editors, and Views ********************** -->
+  <tr>
+    <td id="dialogs-editors-views" class="section" colspan="2"><h2>Dialogs, Editors, and Views</h2></td>
+  </tr>
+  
+  <tr id="layout-spy">
+    <td class="title">New Layout Spy tool</td>
+    <td class="content">
+      PDE has added a new tool for debugging SWT layouts. To activate it, use the
+      shortcut <b>Ctrl+Alt+Shift+F9</b> from any window.
+      <p>Usage:</p>
+      <ul>
+      <li>Click <b>Select Control</b> then click the control you want to inspect</li>
+      <li>Enable <b>Show Overlay</b> and navigate the widget hierarchy until you find a
+          control whose boundary is correct (the red rectangle) and whose child's boundary
+          is incorrect (the yellow rectangle).</li>
+      <li>Look at the results of computeSize. If the result of computeSize is correct,
+          the problem is in the parent layout or its attributes. Otherwise the problem
+          is in the child widget.</li>
+      </ul>
+        <p>
+          <img src="images/layout-spy.png" alt="" />
+        </p>
+    </td>
+  </tr>
+  
+  <tr id="nested-categories-support">
+    <td class="title">Nested categories support</td>
+    <td class="content">
+      You can now organize features into hierarchies by using the nested categories support in the <b>Category Definition</b> editor.
+      <p>
+      The created definition can be used as input for the <b>Categorize repository</b> parameter in the <b>File > Export... > Deployable features</b> wizard.
+      They are also visible in the <b>Install</b> dialog.
+      </p>
+      <p>
+        <img src="images/pde-support-for-nested-categories.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="manage-versions-for-included-features">
+    <td class="title">Manage versions for included features</td>
+    <td class="content">
+      The <b>PDE Feature editor</b> now allows you to manage versions for included features (previously this was possible for included plug-ins only).
+      In the <b>Included Features</b> tab, a new <b>Versions...</b> button has been added, which allows you to synchronize the current feature with
+      actual versions of included features, or sets included feature versions to be synchronized on build.
+      <p>
+        <img src="images/pde-version-included-feature.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+<tr id="option-for-workspace-overriding-target">
+    <td class="title"> Option for workspace plug-ins overriding target plug-ins </td>
+    <td class="content">
+       On the <b>Plug-in Development </b> preference page, in the <b>General settings for plug-in development</b> section,
+       there is an option to specify if workspace plug-ins should override target platform plug-ins with the same id.
+       By default, this option is enabled.When disabled, all plug-in versions from workspace and target platform will 
+       be used and for a plug-in id, the best available plug-in will be chosen. 
+        <p>
+        	<img src="images/workspace-plugins-override-target.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="pde-error-log-show-in-console">
+    <td class="title">Error Log view: 'Show In Console' in context menu</td>
+    <td class="content">
+       In the <b>Error Log</b> view, the context menu now includes <b>Show In Console</b>, which performs the same
+       action as <b>Show Stack Trace in Console View</b> from the view toolbar.
+      <p>
+        <img src="images/pde-show-in-console-view-context-menu-error-log-view.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="target-editor-set-active-reload">
+    <td class="title">Reload Target Editor</td>
+    <td class="content">
+      When a target platform is already active, the <b>Target Editor</b> now shows a <b>Reload Target Platform</b> link instead of <b>Set Active Platform</b>. 
+      The reload link has the same effect as pressing the <b>Reload</b> button in the <b>Plug-in Development &gt; Target Platform</b> preference page.
+      <p>
+        <img src="images/pde-target-editor-reload.png" alt=""/>
+      </p>
+      If the .target file has been modified, clicking the
+      link will now ask you to save the target editor and then reload the target.
+    </td>
+  </tr>
+  
+  <tr id="target-definition-generic-editor-extension">
+    <td class="title">Target definition files can be edited with the generic editor</td>
+    <td class="content">
+      An extension for the generic editor was supplied so that the target definition files (.target files) can now be
+      edited via the generic editor. Syntax highlighting for the most used keywords is supported. Content Assist is also supported
+      for tags and their attributes, installable units for a given repository, and the available versions for a given installable unit.
+      <p>
+        <img src="images/target-editor-screenshot.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="p2-inf-editor">
+    <td class="title">p2.inf files open in Properties editor</td>
+    <td class="content">
+      The default editor associated with <code>p2.inf</code> files is now the <b>Properties File Editor</b>.
+    </td>
+  </tr>
+  
+  <tr id="search">
+    <td class="title">Search finds plug-in references in features</td>
+    <td class="content">
+      <b>Search > Plug-ins...</b> for references to a plug-in also finds references to the plug-in in features.
+    <p>
+        	<img src="images/pde-search-plugin-in-feature.png" alt=""/>
+    </p>
+    </td>
+  </tr>
+  
+  <tr id="quickfix-also-adds-import-statement">
+    <td class="title"> Quick Fix to add bundle or package adds import statement</td>
+    <td class="content">
+      The <b>Quick Fix</b> that adds an <code>Import-Package</code> or <code>Require-Bundle</code> dependency
+      in the <code>MANIFEST.MF</code> now also adds the relevant import statement for the unresolved type in the Java editor.
+    </td>
+  </tr>
+  
+    <tr id="validate-launch-configuration-activated-by-default">
+    <td class="title">Validate launch configuration activated by default</td>
+    <td class="content">
+      When you create a new <b>Eclipse Application</b> launch configuration, PDE will now by default enable the option to
+      <b>Validate Plug-ins automatically prior to launching</b>. 
+      This helps you to identify missing plug-in dependencies before the actual start of the application and makes it easier for new plug-in and RCP developers to identify common problems.
+      You can disable this validation in the launch configuration dialog, on the <b>Plug-ins</b> tab. 
+    
+    <p>
+        	<img src="images/validate-launch-config-by-default.png" alt=""/>
+    </p>
+    </td>
+  </tr>
+  
+  <tr id="tracing-tab-restore-deault">
+    <td class="title">Tracing tab in launch configuration dialog has restore to defaults options</td>
+    <td class="content">
+       In the launch configuration dialog, on the <b> Tracing</b> tab, there are new options to <b>Restore Selected to Defaults</b>
+       and <b>Restore All to Defaults</b>.
+      <p>
+        <img src="images/pde-restore-default-tracing-tab.png" alt=""/>
+      </p>
+     
+    </td>
+  </tr>
+  
+  <!-- ******************** OSGi Declarative Services ********************** -->
+  <tr>
+    <td id="declarative-services" class="section" colspan="2"><h2>OSGi Declarative Services</h2></td>
+  </tr>
+  
+  <tr id="ds-annotations">
+    <td class="title">Declarative Services Annotations v1.3</td>
+    <td class="content">
+    	Version 1.3 of OSGi Declarative Services delivers a number of improvements, including
+    	Component Property Types for strongly-typed configuration parameter handling,
+    	Field Strategy for dependency injection, service/reference scoping, and others.
+    	<p>
+    	PDE now supports the enhanced annotations and new usage options. It generates component
+    	properties from any Component Property Types that you may use in your component lifecycle
+    	methods. It also creates reference entries from <code>@Reference</code> annotations
+    	specified directly in <code>@Component</code> as well as annotated member fields. New
+    	reference event method signatures are also supported.
+    	</p>
+    	<p>
+			<img src="images/ds-annotations.png" alt="" />
+    	</p>
+    	<p>
+    	    To enable this feature, go to <b>Preferences</b> or <b>Project Properties &gt; Plug-in Development &gt; DS Annotations</b>
+    	    and check <b>Generate descriptors from annotated sources</b>. 
+    	    </p>
+    </td>
+  </tr>
+  
+  <!-- ******************** Wizards ********************** -->
+  <tr>
+    <td id="wizards" class="section" colspan="2"><h2>Wizards</h2></td>
+  </tr>
+  
+  <tr id="generic-editor-template">
+    <td class="title">Added a PDE plug-in project template for the Generic Text Editor</td>
+    <td class="content">
+      A plug-in template was added to show off the new extensible generic editor functionality. It will kick-start you with a sample .target file editor with syntax highlighting.
+    <p>
+        	<img src="images/pde-generic-editor.png" alt=""/>
+    </p>
+    </td>
+  </tr>
+  
+  <tr id="pde-plug-in-template-names">
+    <td class="title">More descriptive plug-in template names</td>
+    <td class="content">
+      The template names for plug-in have been reworked to be more descriptive.
+      <p>
+        <img src="images/pde-plugin-template-names.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="new-feature-project-filtered-tree">
+    <td class="title">Feature project wizard filtered plugin selection</td>
+    <td class="content">
+	  You can now use a text filter when selecting plug-ins in the <b>New > Feature Project</b> wizard.
+      <p>
+        <img src="images/new-feature-project-filtered-tree.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="plugin-and-feature-export-wizards-filtered-selection">
+    <td class="title">Filter in plugin and feature export wizards</td>
+    <td class="content">
+	  You can now use a text filter when selecting plug-ins in the <b>Export.. > Deployable plug-ins and fragments</b> or
+	  features in the <b>Export.. > Deployable features</b> wizards.
+      <p>
+        <img src="images/plugin-and-feature-export-wizards-filtered-selection.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <!-- ******************** APITools ********************** -->
+  <tr>
+    <td id="APITools" class="section" colspan="2"><h2>API Tools</h2></td>
+  </tr>
+
+  <tr id="pde-changed-exec-env-version-problem">
+    <td class="title">Changed Execution Environments creates a version problem</td>
+    <td class="content">
+       Changing the <b>Execution Environments </b> in a plug-in now creates a problem marker indicating that the minor version should be increased. This happens
+       if the minor version is not already increased with respect to the baseline. The preference to control the severity of this problem is located in
+       the <b>Version Management</b> tab of the <b>Plug-in Development &gt; API Errors/Warnings</b> preference page.
+      <p>
+        <img src="images/pde-changed-exec-env-version-problem.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="pde-default-method-interface">
+    <td class="title">API Tools reports default method addition as a breaking change</td>
+    <td class="content">
+        The API Tools now report the addition of a default method in an API interface that can be implemented by 
+        clients as a <a href="https://wiki.eclipse.org/Evolving_Java-based_APIs_2#Evolving_API_Interfaces">
+        breaking change</a>.
+    </td>
+  </tr>
+  
+   <tr id="option">
+    <td class="title">Severity of default method addition in API tooling</td>
+    <td class="content">
+      On the <b>Plug-in Development &gt; API Errors/Warnings</b> preference page in the <b>API Compatibility</b> tab,
+      there is a new option in the <b>Interface</b> section to control the severity of a "default method addition" API change.
+      <p>
+        By default, the option is set to "Error" because adding the same method in multiple interfaces can break
+        existing clients at run time (<a href="http://docs.oracle.com/javase/specs/jls/se8/html/jls-13.html#jls-13.5.6">JLS8 13.5.6</a>).
+      </p>
+      <p>
+        	<img src="images/pde-default-method-addition-api-compat-option.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="pde-api-tools-field-addition-to-class-breaking-change">
+    <td class="title">API Tools flags field addition to class as a breaking change</td>
+     <td class="content">
+       The addition of a field to class that is extendable by clients is now flagged as a <a href="https://wiki.eclipse.org/Evolving_Java-based_APIs_2#add-api-field ">breaking change.</a>
+       On the <b>Plug-in Development &gt; API Errors/Warnings</b> preference page in the <b>API Compatibility</b> tab,
+      there is a new option in the <b>Class</b> section to control the severity of a "field addition to class".
+      Also there is a new link at the top of <b>API Compatibility</b> tab that has more details on achieving API binary compatibility.
+      <p>
+        <img src="images/pde-api-tools-field-addition-to-class-preference-ui.png" alt=""/>
+      </p>
+      
+      The field addition error has a Quick Fix that opens help to explain the incompatibility in greater detail.
+      <p>
+        <img src="images/pde-api-tools-field-addition-to-class-quickfix.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="option-for-field-addition-to-annotation">
+    <td class="title">API Tools: option for field addition to an annotation</td>
+    <td class="content">
+      On the <b>Plug-in Development &gt; API Errors/Warnings</b> preference page in the <b>API Compatibility</b> tab,
+      there is a new option in the <b>Annotation</b> section to control the severity of a "field addition to annotation".
+      <p>
+        <img src="images/pde-field-addition-to-annotation.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="pde-api-tools-noimplement-noextend-leak">
+    <td class="title">Types marked with @noimplement and @noextend processed by API leak analysis</td>
+    <td class="content">
+       Extending or implementing an interface marked as @noimplement is now reported as an API leak. This is because 
+       adding a field or method to the interface marked as @noimplement may break a client that is using 
+       the extended or implemented type. Also extending a type marked as @noextend may indirectly leak API types
+       if the extended type is further extended by the client. Some of the new kinds of leak warnings are shown below:
+      <p>
+        <img src="images/pde-api-tool-warning-leak-noimplement-noextend.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="a-quick-fix-for-apitool-pde-compiler-problems">
+    <td class="title">Quick Fix to configure problem severity</td>
+    <td class="content">
+      You can now configure the severity of an <b>API tools </b>problem or <b>PDE compiler</b> problem by invoking the new <b>Quick Fix (Ctrl+1)</b>.
+      <br/>
+      <br/>
+   
+      <p>
+        <img src="images/pde-configure-problem-api-tool.png" alt=""/>
+      </p>
+     
+      For API tools problems, the Quick Fix will open the <b>Plug-in Development &gt; Errors/Warnings</b>
+      preference page and highlight the configurable problem.
+      
+      <br/>
+      <br/>
+      
+      <p>
+        <img src="images/pde-configure-problem-pde-compiler.png" alt=""/>
+      </p>
+      
+       For PDE compiler problems, the Quick Fix will open the <b>Plug-in Development &gt; Compilers</b>
+       preference page and highlight the configurable problem.
+     
+    </td>
+  </tr>
+  
+  <tr id="pde-reorganized-version-management-tab">
+    <td class="title">Changes in Version Management preferences tab</td>
+    <td class="content">
+      The <b>Version Management</b> tab of the <b>Plug-in Development &gt; API Errors/Warnings</b> preference page has been
+      reorganized. The sub-options to control major/minor version change without API breakage/changes have been converted into normal options
+      and they are set to warning by default. The option 'Report changed execution environment incompatibility' has been moved
+      to the bottom of the tab.
+        <p>
+          <img src="images/pde-version-management-tab-preference.png" alt="" />
+        </p>
+    </td>
+  </tr>
+
+</tbody>
+</table>
+<script type="text/javascript" src="scripts.js"></script>
+
+  <p style="text-align:center">
+    <a href="platform_isv.php">Previous</a> <a style="margin:1em" href=".">Up</a> <span style="color:#808080">Next</span>
+  </p>
+
+</body>
+</html>

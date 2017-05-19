@@ -1,0 +1,462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2016. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" type="text/css"/>
+<style type="text/css">
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+/*img {max-width: 520px;}*/
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+ul {padding-left: 13px;}
+</style>
+<title>Eclipse Project Oxygen - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Java development tools</h2>
+<ul>
+	<li><a href="#JavaEditor">Java Editor</a></li>
+	<li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li>
+	<li><a href="#JavaCompiler">Java Compiler</a></li>
+	<li><a href="#JavaFormatter">Java Formatter</a></li>
+	<li><a href="#Debug">Debug</a></li>
+	<li><a href="#JUnit">JUnit</a></li>
+</ul>
+
+<table class="news">
+<colgroup>
+  <col class="title" />
+  <col />
+</colgroup>
+<tbody>
+
+
+  <!-- ******************* Java Editor ************************************* -->
+  <tr>
+    <td id="JavaEditor" class="section" colspan="2">
+    <h2>Java Editor </h2>
+    </td>
+  </tr>
+  
+  <tr id="open-implementation-of-type">
+    <td class="title">Open Implementation of selected Type</td>
+    <td class="content">
+      The <b>Open Implementation</b> hyperlink and the <b>Navigate &gt; Open Implementation</b> action now open the implementation of the selected interface or class also.
+      In the past, <b>Open Implementation</b> was only available for methods.
+      <p>
+        <img src="images/open-implementation-of-type.png" alt=""/>
+      </p>
+      The hyperlink popup shows up when you hold <b>Ctrl</b> (on the Mac: <b>Command</b>), unless you've changed the modifier on the <b>Hyperlinking</b> preference page.
+    </td>
+  </tr>
+  
+  <tr id="auto-insert-braces">
+    <td class="title">Automatically insert Braces at correct position</td>
+    <td class="content">
+      The <b>Java &gt; Editor &gt; Typing &gt; Automatically insert at correct position &gt; Braces</b> preference option is now enabled by default.
+      This will automatically insert the braces where they are required.
+      <p>
+        <img src="images/auto-insert-braces.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="escape-text-when-pasting">
+    <td class="title">Escape text when pasting into a string literal</td>
+    <td class="content">
+      The <b>Java > Editor > Typing > Escape text when pasting into a string literal</b> preference option is now enabled by default.
+      This will escape the special characters in pasted strings when they are pasted into an existing string literal.
+      <p>
+        <img src="images/escape-text-when-pasting.png" alt=""/>
+      </p>
+      To paste without escaping, you can either paste outside of a string literal, or you can disable
+      <b>Edit > Smart Insert Mode</b>.
+    </td>
+  </tr>
+  
+   <tr id="quickfix-move-type-annotation">
+    <td class="title">Quick Fix to move type annotations</td>
+    <td class="content">
+    	The rules for the placement of Java 8 "type annotations" introduced via JSR 308 are sometimes surprising. 
+    	In case of errors, a new Quick Fix <b>Move type annotation</b> is offered, 
+    	that moves the type annotation to a location that corresponds to what was probably intended. 
+        <p>
+          <img src="images/quickfix-move-type-annotation.png" alt="" />
+        </p>
+    </td>
+  </tr>
+  
+  <tr id="defaults-for-annotation-type-elements-in-javadoc">
+    <td class="title">Defaults for annotation type elements in Javadoc</td>
+    <td class="content">
+      The default value of an annotation type element is now shown in the Javadoc view and hover.
+      <p>
+        <img src="images/defaults-for-annotation-type-elements-in-javadoc.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="javadoc-colors">
+    <td class="title">Set colors for Javadoc</td>
+    <td class="content">
+      You can use the new color preferences to set the foreground text color and the background color in the Javadoc view and hovers:
+      <p>
+        <img src="images/javadoc-colors.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="jdt-javadoc-color-fix">
+    <td class="title">Consistent Javadoc colors usage under Linux</td>
+    <td class="content">
+      The Javadoc color usage on Linux was inconsistent since GTK 3.04.
+      This has been resolved and support for Javadoc on the Eclipse Dark Theme has been added.
+      <p>
+        Before:
+      </p>
+      <p>
+        <img src="images/javadocbefore.png" alt=""/>
+      </p>
+      <p>
+        After:
+      </p>
+      <p>
+        <img src="images/javadocafter.png" alt=""/>
+      </p>
+      <p>
+        Dark theme support:
+      </p>
+      <p>
+        <img src="images/javadocdarktheme.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <!-- ******************* Java Views and Commands ************************************* -->
+  <tr>
+    <td id="JavaViewsAndDialogs" class="section" colspan="2">
+    <h2>Java Views and Dialogs</h2>
+    </td>
+  </tr>
+
+  <tr id="skip-button-in-organize-imports-dialog">
+    <td class="title">Skip button in Organize Imports dialog</td>
+    <td class="content">
+      While using the Organize Imports dialog to import multiple unresolved types, you can now skip a type without cancelling the whole operation by using the new Skip button.
+      No import statement is added for the skipped type.
+        <p>
+          <img src="images/skip-button-in-organize-imports-dialog.png" alt="" />
+        </p>
+    </td>
+  </tr>
+
+  <tr id="hide-inherited-object-members">
+    <td class="title">Hide inherited members from java.lang.Object</td>
+    <td class="content">
+      You can hide all inherited members from <code>java.lang.Object</code>
+      in the <b>Quick Outline</b> (<b>Ctrl+O</b>) by using the new filter from the drop-down menu (Ctrl+F10):
+      <p>
+        <img src="images/hide-inherited-object-members.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="hide-deprecated-fields-and-methods">
+    <td class="title">Hide deprecated fields and methods</td>
+    <td class="content">
+      You can now hide the deprecated fields and methods in Outline view, Members view, Package Explorer view, Project Explorer view, and
+      Quick Outline by using the new filter from their drop-down menu (<b>Ctrl+F10</b>):
+      <p>
+        <img src="images/hide-deprecated-fields-and-methods.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="group-by-project-in-search-view">
+    <td class="title">Group by Project in Search view</td>
+    <td class="content">
+      The default grouping of Java search results in the Search view has been changed to Group by Project. Earlier the results were grouped by package.
+      <p>
+        <img src="images/group-by-project-in-search-view.png" alt=""/>
+      </p>
+      You can use the buttons in the view tool bar to Group by Project, Package, File, or Type.
+    </td>
+  </tr>
+  
+  <tr id="type-name-with-extension-in-new-java-type-creation-wizards">
+    <td class="title">Type name with extension in New Java Type creation wizards</td>
+    <td class="content">
+      New Java Type creation wizards now accept the <code>.java</code> extension with the type name instead of showing the error message: "Type name must not be qualified".
+      For example, to create a new class <code>com.test.C1&lt;T&gt;.java</code>, you can directly paste this qualified type name with extension in the Name field of the New Java Class wizard.
+        <p>
+          <img src="images/type-name-with-extension.png" alt="" />
+        </p>
+    </td>
+  </tr>
+  
+  <tr id="hidpi-jdt-icons">
+    <td class="title">HiDPI JDT icons</td>
+    <td class="content">
+      Composite icons such as Java element icons with modifier overlays are now rendered in high resolution
+      in environments that support HiDPI images.
+      <p>
+      <img src="images/jdt-composite-images-hidpi.png" alt="" width="479"
+      style="image-rendering:-moz-crisp-edges;image-rendering:-o-crisp-edges;image-rendering:crisp-edges;"/>
+      </p>
+    </td>
+  </tr>
+
+  <!-- ******************* Java Compiler ************************************* -->
+  <tr>
+    <td id="JavaCompiler" class="section" colspan="2">
+    <h2>Java Compiler</h2>
+    </td>
+  </tr>
+  
+  <tr id="new-java-index">
+    <td class="title">New Java index</td>
+    <td class="content">
+      Eclipse 4.7 contains an experimental new Java index which is disabled by default. You can enable it from <b>Preferences &gt; Java</b>:
+      <p>
+        <img src="images/new-java-index.png" alt=""/>
+      </p>
+      The new <b>Rebuild Index</b> button can be used to delete all information cached in the Java index.
+      This can be used to save disk space after the new index got disabled, and to fix index corruption.
+    </td>
+  </tr>
+  
+  <tr id="processor-option-variables">
+    <td class="title">Pass compiler options to annotation processors</td>
+    <td class="content">
+      You can now pass compiler options to annotation processors using <code>%variable%</code> syntax in <b>Project > Properties > Java Compiler > Annotation Processing</b>.
+      <p>
+        <img src="images/jdt-apt-processor-option-variables.png" alt=""/>
+      </p>
+      This allows processors to compile Java sources using the Java project's settings without manually maintaining this information in the processor options.
+    </td>
+  </tr>
+  
+  <tr id="unlikely-argument-types">
+    <td class="title">Warnings for unlikely argument types</td>
+    <td class="content">
+      Many developers have learned the hard way, that certain uses of Java collections that pass the compiler's
+      type check, may still contain "type errors", resulting in unexpected runtime behaviour. 
+      A new analysis has been added to the Eclipse compiler for Java that will detect the most common bugs in this area.
+      <p>
+      	The common reason behind this problem is the fact that not all methods of those collection types make use of generics in the way one might expect.
+      	As a result it is possible to create a <code>Set&lt;Short></code>, whose <code>add(Short)</code> method will only accept arguments of type <code>Short</code>,
+      	yet method <code>remove(Object)</code> will happily accept literally any argument, because the method's parameter has type <code>Object</code>.
+      </p> 
+      <p>
+      	Here is a code snippet that seems to add and remove the same element from the set, but at a closer look the <code>remove</code> call has no effect.
+      	What is difficult to see for the naked eye is now flagged by a new warning:
+      </p> 
+      <p>
+      	<a href="images/unlikely1.txt"><img src="images/unlikely1-basic.png" alt="Warning on last line: Unlikely argument type int for remove(Object) on a Collection&lt;Short&gt;" /></a>
+      </p>
+      <p>
+      	In a simple world, this would be all there is to say, but over time people have developed various code patterns
+      	that rely on these overly general signatures. Consider the following use of subtyping:
+      </p>
+      <p>
+      	<a href="images/unlikely2.txt"><img src="images/unlikely2-number-allowed.png" alt="" /></a>
+      </p>
+      <p>
+      	Depending on your coding style this may or may not be accepted as a legitimate short hand for:
+      	<br/><code style="margin-left:2em;">if (n instanceof Short) set.remove((Short) n);</code><br/>
+      	To reduce the churn caused by the new analysis, we developed some heuristics that filter out cases where types are "sufficiently similar",
+      	so the above goes unwarned.
+      </p>
+      <p>
+      	As with any heuristic, there is no clear line. This implies that the compiler may show "unwanted" warnings, 
+      	or filter out invocations that are in fact bugs. For the former case, <code>@SuppressWarnings("unlikely-arg-type")</code>
+      	will document the exception both for the user and for the compiler. For the latter case, we provide an option to tighten
+      	the rules, namely to apply strict type compatibility checks instead of said heuristics. For this extra scrutiny you may enable
+      	the sub-option <b>Perform strict analysis against the expected type</b> in <b>Preferences &gt; Java &gt; Compiler &gt; Errors/Warnings &gt; Potential programming problems</b>.
+      </p>
+      <p>
+      	<img src="images/unlikely3-options.png" alt="Preference options" />
+      </p>
+<!-- 
+      With this option enabled, above usage is flagged indeed (and the same for less obvious cases, which would be filtered out by the heuristics):
+      <p>
+      	<a href="images/unlikely4.txt"><img src="images/unlikely4-number-strict.png" alt="" /></a>
+      </p>
+ -->
+      Similarly, a check with default severity "Info" is offered for unlikely invocations of <code>java.lang.Object.equals(Object)</code> and 
+      <code>java.util.Objects.equals(Object,Object)</code>. 
+      <p>
+      	<a href="images/unlikely5.txt"><img src="images/unlikely5-equals.png" alt="Info on last line: Unlikely argument type for equals(): Name seems to be unrelated to String" /></a>
+      </p>
+    </td>
+  </tr>
+  
+  <!-- ******************* Java Formatter ************************************* -->
+  <tr>
+    <td id="JavaFormatter" class="section" colspan="2">
+    <h2>Java Formatter </h2>
+    </td>
+  </tr>
+  
+  <tr id="formatter">
+    <td class="title">Code formatter: new way to count comment width</td>
+    <td class="content">
+      A new option has been added in the code formatter profile editor that makes the formatter
+      <b>count a comment's width from its starting position</b> instead of the beginning of the line.
+      This allows more space for comments in heavily indented blocks of code and for line comments
+      added to the right of some code, but at the same time keeps comments that start at the beginning
+      of the line from getting too wide and uncomfortable to read.
+      <p>You can change this setting in the <b>Comments</b> section, under the <b>Line width</b> group:</p>
+      <p><img src="images/formatter-comment-width-ui.png" alt="" /></p>
+      <p><a href="images/formatter-comment-width-preview.txt"><img src="images/formatter-comment-width-preview.png" alt="" /></a></p>
+    </td>
+  </tr>
+
+  <!-- *********************** Debug ******************************** -->
+  <tr>
+    <td id="Debug" class="section" colspan="2">
+    <h2>Debug</h2>
+    </td>
+  </tr>
+  
+   <tr id="step-show-methodresult">
+    <td class="title">Method result after step operations</td>
+    <td class="content">
+        During debugging, the last method result (per return or throw) that was observed during <b>Step Into</b>, <b>Step Over</b> or <b>Step Return</b>, is shown as first line in the <b>Variables</b> view.
+        <p>
+          <img src="images/step-show-methodresult.png" alt="" />
+        </p>
+        <p>
+        This can be disabled with the new option
+        <b>Preferences &gt; Java &gt; Debug &gt; Show method result after a step operation (if supported by the VM; may be slow)</b>
+        </p>
+    </td>
+  </tr>
+  
+  <tr id="triggers-for-breakpoints">
+    <td class="title">Triggers for breakpoints</td>
+    <td class="content">
+     You can now define a set of triggers for the breakpoints in a workspace.
+      
+      <p>
+        <img src="images/trigger-breakpoint-properties.png" alt=""/>
+      </p>
+      Any breakpoint can be set as a trigger point by using <b>Breakpoint Properties...</b> dialog or the Breakpoints view's detail pane.
+      <p>
+        <img src="images/trigger-breakpoint-view-ruler.png" alt=""/>
+      </p>
+      Triggers will be rendered with an overlay of "T" and the breakpoints suppressed by the triggers will be
+      rendered with an overlay of "T" with a cut.
+      <p>
+        All the other breakpoints that are initially suppressed by triggers will be hit only after any of the trigger points has been hit.
+        All the triggers are disabled after a trigger point is hit and will be re-enabled after the run.
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="watchpoint-condition">
+    <td class="title">Conditional watchpoint</td>
+    <td class="content">
+      Like for line breakpoints, conditions can now also be added to <b>Watchpoints</b>,
+      where the old value of the field can be used as part of the condition.
+      <p>
+      	<img src="images/watchpoint-condition.png" alt="" />
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="toggle-trace-point">
+    <td class="title">Toggle Tracepoint</td>
+    <td class="content">
+      A new action <b>Run > Toggle Tracepoint</b> has been added.
+      <p>
+      	<img src="images/toggle-trace-point-run.png" alt="" />
+      </p>
+      The action creates a conditional breakpoint using the "systrace" template, which prints the class and method name.
+      <p>
+      	<img src="images/toggle-trace-point-conditional-breakpoint.png" alt="" />
+      </p>
+      This makes use of another new feature of conditional breakpoints: As long as the condition
+      doesn't explicitly return a boolean <code>true</code>, the condition is now considered to implicitly return false,
+      and the breakpoint will not suspend execution.
+    </td>
+  </tr>
+  
+  <tr id="enable-show-logical-structure">
+    <td class="title">Show Logical Structure enabled by default</td>
+    <td class="content">
+      In the <b>Variables</b> view, <b>Show Logical Structure</b> is now enabled by default.
+      E.g. collection objects now directly show their contained elements instead of their internal structure.
+      <p>
+        <img src="images/jdt-debug-show-logical-structure-by-default.png" alt=""/>
+      </p>
+      The <b>Show Logical Structure</b> context menu lets you choose or edit the representation.
+       <p>
+        <img src="images/jdt-debug-edit-logical-structure-context-menu.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="remote-java-launch-connection-limits">
+    <td class="title">Remote Java Application "Socket Listen"
+        type supports multiple incoming connections</td>
+    <td class="content">
+      The <b>Remote Java Application</b> debug configuration's <b>Standard
+      (Socket Listen)</b> connection type now supports incoming connections
+      from multiple VMs.  This is useful for debugging distributed
+      systems.  The connection limit may be set to a fixed number, or
+      <code>0</code> for unlimited connections.
+      <p>
+        <img src="images/remote-java-listen-conn-limit.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="option-disable-hcr">
+    <td class="title">New option to disable HCR</td>
+    <td class="content">
+      You can now disable <a href="https://wiki.eclipse.org/FAQ_What_is_hot_code_replace%3F">Hot Code Replace (HCR)</a> if it causes any trouble
+      or if you want to avoid code changes in a debug target. HCR is enabled by default but can be disabled
+      in <b>Preferences > Java > Debug</b>.
+      <p>
+        <img src="images/option-disable-hcr.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <!-- ******************* JUnit ************************************* -->
+  <tr>
+    <td id="JUnit" class="section" colspan="2">
+    <h2>JUnit</h2>
+    </td>
+  </tr>
+
+  <tr id="show-junit-failure-trace-in-console-view">
+    <td class="title">Show JUnit failure trace in Console view</td>
+    <td class="content">
+      A new button has been added to the JUnit Failure Trace header to show the stack trace of a failed JUnit test in the Console view.
+      The Console view makes it convenient to view a long and wide stack trace, copy parts of the stack trace and navigate to the classes on the stack trace using hyperlinks. 
+        <p>
+          <img src="images/show-junit-failure-trace-in-console-view.png" alt="" />
+        </p>
+    </td>
+  </tr>
+  
+</tbody>
+</table>
+<script type="text/javascript" src="scripts.js"></script>
+
+  <p style="text-align:center">
+    <a href="platform.php">Previous</a> <a style="margin:1em" href=".">Up</a> <a href="platform_isv.php">Next</a>
+  </p>
+
+</body>
+</html>
