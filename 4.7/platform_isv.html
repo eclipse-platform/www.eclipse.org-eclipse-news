@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2016. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page."/>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2017. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page."/>
 <meta http-equiv="Content-Language" content="en-us"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <link rel="STYLESHEET" href="news.css" type="text/css"/>
@@ -17,7 +17,7 @@ table.news tr td.title {vertical-align: top; font-weight: bold;}
 table.news tr td.content {vertical-align: top;}
 ul {padding-left: 13px;}
 </style>
-<title>Eclipse Project Neon - New and Noteworthy</title>
+<title>Eclipse Project Oxygen - New and Noteworthy</title>
 </head>
 
 <body>
@@ -146,19 +146,6 @@ public class GradlePR extends PresentationReconciler {
     </td>
   </tr>
   
-  <tr id="screenshot-from-junit">
-    <td class="title">Screenshot from JUnit</td>
-    <td class="content">
-      In bundle <code>org.eclipse.test.performance</code>, there's a new API to take a screenshot from a JUnit test:
-      <p><code>
-        org.eclipse.test.Screenshots#takeScreenshot(Class&lt;?&gt; testClass, String name)
-      </code></p>
-      In the Eclipse Platform/SDK builds that are run on Hudson, the PNG files will be saved in a directory that is accessible via
-      <a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.6-201606061100/logs.php#console">Console Output Logs</a>
-      on the Test Results pages.
-    </td>
-  </tr>
-  
   <tr id="editor-contenttype-extension">
     <td class="title">An extension point to associate existing editors and content-types</td>
     <td class="content">
@@ -225,6 +212,19 @@ public class GradlePR extends PresentationReconciler {
 
   </tr>
 
+  <tr id="screenshot-from-junit">
+    <td class="title">Screenshot from JUnit</td>
+    <td class="content">
+      In bundle <code>org.eclipse.test.performance</code>, there's a new API to take a screenshot from a JUnit test:
+      <p><code>
+        org.eclipse.test.Screenshots#takeScreenshot(Class&lt;?&gt; testClass, String name)
+      </code></p>
+      In the Eclipse Platform/SDK builds that are run on Hudson, the PNG files will be saved in a directory that is accessible via
+      <a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.6-201606061100/logs.php#console">Console Output Logs</a>
+      on the Test Results pages.
+    </td>
+  </tr>
+  
   <tr id="debugging-test-timeouts">
     <td class="title">Debugging test timeouts</td>
     <td class="content">
@@ -247,23 +247,6 @@ public class GradlePR extends PresentationReconciler {
     </td>
   </tr>
   
-  <tr id="api-for-decorated-images">
-    <td class="title">Update in API for decorating images</td>
-    <td class="content">
-      The <code>org.eclipse.jface.viewers.DecorationOverlayIcon</code> class has received a new constructor that allows
-      to more easily define decorated images based on an <code>ImageDescriptor</code> rather than <code>Image</code>. This allows
-      to prevent API adopters to deal with creation and disposal of the underlying resource when using <em>ImageDescriptor</em>.
-      <p>Example of API usage:</p>
-      <pre>
-ImageDescriptor descriptor = /*base image descriptor*/;
-return new DecorationOverlayIcon(
-	descriptor,
-	PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_DEC_FIELD_ERROR),
-	IDecoration.BOTTOM_LEFT);
-      </pre>
-    </td>
-  </tr>
-
   <tr id="dynamic-reference-provider">
     <td class="title">New API for controlling build order</td>
     <td class="content">
@@ -336,6 +319,23 @@ protected void drawCompositeImage(int width, int height) {
       already return values in SWT points, so that your code doesn't have to
       deal with device-dependent pixel coordinates.
       </p>
+    </td>
+  </tr>
+
+  <tr id="api-for-decorated-images">
+    <td class="title">Update in API for decorating images</td>
+    <td class="content">
+      The <code>org.eclipse.jface.viewers.DecorationOverlayIcon</code> class has received a new constructor that allows
+      to more easily define decorated images based on an <code>ImageDescriptor</code> rather than <code>Image</code>. This allows
+      to prevent API adopters to deal with creation and disposal of the underlying resource when using <em>ImageDescriptor</em>.
+      <p>Example of API usage:</p>
+      <pre>
+ImageDescriptor descriptor = /*base image descriptor*/;
+return new DecorationOverlayIcon(
+	descriptor,
+	PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_DEC_FIELD_ERROR),
+	IDecoration.BOTTOM_LEFT);
+      </pre>
     </td>
   </tr>
 
@@ -423,25 +423,6 @@ The tracking property causes to track the values which are injected so that the 
     <td id="Equinox" class="section" colspan="2"><h2>Equinox Changes</h2></td>
   </tr>
 
-  <tr id="provided-capabilities-metadata">
-    <td class="title">Several plug-ins define Provided Capabilities metadata</td>
-    <td class="content">
-      You can now rely on OSGi's <code>Require-Capability</code> meta data in your Eclipse-based application for
-	  <code>org.eclipse.equinox.event</code> and <code>org.eclipse.equinox.cm</code> as they now provide 
-	  the corresponding <code>osgi.service</code> capability. 
-	  Additionally, p2 capabilities are specified to be able to configure non-code dependencies that can be interpreted
-	  by the p2 resolver.
-    </td>
-  </tr>
-  
-  <tr id="non-modal-p2-installation-dialog">
-    <td class="title">Non-modal Install dialog</td>
-    <td class="content">
-      The Install dialog available via <b>Help &gt; Install New Software...</b> is now non-modal,
-      so that you can do something else while waiting for the catalog to be fetched.
-    </td>
-  </tr>
-
   <tr id="equinox-ds-felix-scr">
     <td class="title">New Declarative Services Implementation supporting OSGi R6</td>
     <td class="content">
@@ -471,17 +452,14 @@ The tracking property causes to track the values which are injected so that the 
     </td>
   </tr>
   
-  <tr id="tracing-consolelog">
-    <td class="title">Tracing honors -consoleLog</td>
+  <tr id="non-modal-p2-installation-dialog">
+    <td class="title">Non-modal Install dialog</td>
     <td class="content">
-      When the <code>-consoleLog</code> runtime option is specified on the command line, the Eclipse debug tracing 
-      framework will send trace messages to System.out too (typically back to the command shell, if any).
-      This is especially handy when debugging Eclipse from Eclipse with tracing enabled, so no extra trace file
-      needs to be opened to check tracing output, and tracing output appears together with all other debug output
-      in the Console view.
+      The Install dialog available via <b>Help &gt; Install New Software...</b> is now non-modal,
+      so that you can do something else while waiting for the catalog to be fetched.
     </td>
   </tr>
-  
+
   <tr id="installation-dialog-progress-reporting">
     <td class="title">Progress reporting in the installation dialog</td>
     <td class="content">
@@ -493,6 +471,28 @@ The tracking property causes to track the values which are injected so that the 
     </td>
   </tr>
 
+  <tr id="provided-capabilities-metadata">
+    <td class="title">Several plug-ins define Provided Capabilities metadata</td>
+    <td class="content">
+      You can now rely on OSGi's <code>Require-Capability</code> meta data in your Eclipse-based application for
+	  <code>org.eclipse.equinox.event</code> and <code>org.eclipse.equinox.cm</code> as they now provide 
+	  the corresponding <code>osgi.service</code> capability. 
+	  Additionally, p2 capabilities are specified to be able to configure non-code dependencies that can be interpreted
+	  by the p2 resolver.
+    </td>
+  </tr>
+  
+  <tr id="tracing-consolelog">
+    <td class="title">Tracing honors -consoleLog</td>
+    <td class="content">
+      When the <code>-consoleLog</code> runtime option is specified on the command line, the Eclipse debug tracing 
+      framework will send trace messages to System.out too (typically back to the command shell, if any).
+      This is especially handy when debugging Eclipse from Eclipse with tracing enabled, so no extra trace file
+      needs to be opened to check tracing output, and tracing output appears together with all other debug output
+      in the Console view.
+    </td>
+  </tr>
+  
   <tr id="equinox-common-java8-bree">
     <td class="title">Source-incompatible change in org.eclipse.equinox.common requires Java 8 BREE for some dependant plug-ins</td>
     <td class="content">
@@ -549,6 +549,16 @@ button.addSelectionListener(widgetSelectedAdapter(e -> {System.out.print("Hello"
     </td>
   </tr>
 
+  <tr id="swt-lambda-style-keylistener">
+    <td class="title">Lambda as KeyListener</td>
+    <td class="content">
+      The <code>KeyListener</code> interface in SWT was enhanced to provide the
+      <code>KeyListener#keyPressedAdapter(Consumer&lt;KeyEvent&gt; c)</code> and
+      <code>KeyListener#keyReleasedAdapter(Consumer&lt;KeyEvent&gt; c)</code>
+      static helper methods that accept lambdas and method references as listeners.
+    </td>
+  </tr>
+
   <tr id="button-background-styled">
     <td class="title">SWT <code>Button</code> widget background and foreground color can be styled on Windows</td>
     <td class="content">
@@ -560,19 +570,46 @@ button.addSelectionListener(widgetSelectedAdapter(e -> {System.out.print("Hello"
     </td>
   </tr>
 
-  <tr id="composite-changed-deprecated">
-    <td class="title"><code>Composite#changed(Control[])</code> deprecated</td>
+  <tr id="runtime-gtk-css">
+    <td class="title">Apply GTK+ CSS at runtime</td>
     <td class="content">
-      The <code>Composite#changed(Control[])</code> method has never been used in the Eclipse Platform, and the
-      method never had a well-defined purpose. It is now deprecated. Calling it is now equivalent
-      to calling <code>Composite.layout(Control[], SWT.DEFER)</code>.
+      GTK+ CSS can be applied at runtime via <code>Widget#setData(String, Object)</code>
+      using <code>org.eclipse.swt.internal.gtk.css</code> as key.
+      
+      <p>Example:</p>
+      <pre><code>button.setData("org.eclipse.swt.internal.gtk.css", "button:hover {background: blue; border-radius: 20px;}")
+      </code></pre>
+      ... will produce the effect on the right on hover:
+      <p>
+      <img src="images/runtime-gtk-css.png" alt="" />
+      </p>
+      <b>Note:</b> Works on GTK+ 3.20 or later only.
     </td>
   </tr>
 
+  <tr id="tweak-gtk-theme">
+    <td class="title">Tweak the GTK+ theme</td>
+    <td class="content">
+      You can now tweak the GTK+ theme by providing your own CSS file to extend the default look.
+      A custom CSS file is registered by a VM argument like this:
+      <pre><code>-Dorg.eclipse.swt.internal.gtk.cssFile=/path/to/my.css</code></pre>
+      The following CSS snippet gives the effect below.
+      <pre><code>button:hover {
+  box-shadow: inset 0 0 0 5px #3071A9;
+}
+      </code></pre>
+      
+      <p>
+      <img src="images/tweak-gtk-theme.png" alt="" />
+      </p>
+      <b>Note:</b> Works on GTK+ 3.20 or later only.
+    </td>
+  </tr>
+  
   <tr id="swt-table-header-styling">
     <td class="title">SWT Table header colors</td>
     <td class="content">
-       Support for custom table header foreground and background colors has been added on Windows and Linux (GTK3) platforms.
+       Support for custom table header foreground and background colors has been added on Mac, Windows and Linux (GTK3) platforms.
        <p>
        	APIs for Table header foreground color:<br/>
        	<code>Table#getHeaderForeground()</code><br/>
@@ -590,19 +627,6 @@ button.addSelectionListener(widgetSelectedAdapter(e -> {System.out.print("Hello"
     </td>
   </tr>
   
-  <tr id="table-header-styling-css">
-    <td class="title">SWT table and tree header styling via CSS</td>
-    <td class="content">
-      You can now style the SWT table and tree headers via the CSS engine.
-      <pre>
-Table, Tree {
-    swt-header-color: #CCC;
-    swt-header-background-color: #383D3F;
-}
-      </pre>
-    </td>
-  </tr>
-
   <tr id="swt-tree-header-styling">
     <td class="title">SWT Tree header colors</td>
     <td class="content">
@@ -624,12 +648,26 @@ Table, Tree {
     </td>
   </tr>
 
-  <tr id="swt-table-header-styling-mac">
-    <td class="title">SWT Table header colors supported on Mac as well</td>
+  <tr id="table-header-styling-css">
+    <td class="title">SWT table and tree header styling via CSS</td>
     <td class="content">
-       The custom table header foreground and background colors APIs initially supported for 
-       <a href="https://www.eclipse.org/eclipse/news/4.7/M6/#swt-table-header-styling">Windows and Linux (GTK3)</a>
-       platforms now works on the Mac as well. 
+      You can now style the SWT table and tree headers via the CSS engine.
+      <pre>
+Table, Tree {
+    swt-header-color: #CCC;
+    swt-header-background-color: #383D3F;
+}
+      </pre>
+    </td>
+  </tr>
+
+  <tr id="swt-spies-separated">
+    <td class="title">SWT spies separated from Tools plug-in</td>
+    <td class="content">
+        The Sleak and Spy views are now available in a new plug-in, <b>org.eclipse.swt.tools.spies</b>.
+        They were previously part of org.eclipse.swt.tools, which depends on JDT. With the new spies
+        plug-in, it is now possible to use the spies without depending on JDT. This makes it especially
+        suitable for inclusion in target definitions and Eclipse RCP applications.
     </td>
   </tr>
 
@@ -679,62 +717,14 @@ Table, Tree {
     </td>
   </tr>
 
-  <tr id="tweak-gtk-theme">
-    <td class="title">Tweak the GTK+ theme</td>
+  <tr id="composite-changed-deprecated">
+    <td class="title"><code>Composite#changed(Control[])</code> deprecated</td>
     <td class="content">
-      You can now tweak the GTK+ theme by providing your own CSS file to extend the default look.
-      A custom CSS file is registered by a VM argument like this:
-      <pre><code>-Dorg.eclipse.swt.internal.gtk.cssFile=/path/to/my.css</code></pre>
-      The following CSS snippet gives the effect below.
-      <pre><code>button:hover {
-  box-shadow: inset 0 0 0 5px #3071A9;
-}
-      </code></pre>
-      
-      <p>
-      <img src="images/tweak-gtk-theme.png" alt="" />
-      </p>
-      <b>Note:</b> Works on GTK+ 3.20 or later only.
+      The <code>Composite#changed(Control[])</code> method has never been used in the Eclipse Platform, and the
+      method never had a well-defined purpose. It is now deprecated. Calling it is now equivalent
+      to calling <code>Composite.layout(Control[], SWT.DEFER)</code>.
     </td>
   </tr>
-  
-  <tr id="runtime-gtk-css">
-    <td class="title">Apply GTK+ CSS at runtime</td>
-    <td class="content">
-      GTK+ CSS can be applied at runtime via <code>Widget#setData(String, Object)</code>
-      using <code>org.eclipse.swt.internal.gtk.css</code> as key.
-      
-      <p>Example:</p>
-      <pre><code>button.setData("org.eclipse.swt.internal.gtk.css", "button:hover {background: blue; border-radius: 20px;}")
-      </code></pre>
-      ... will produce the effect on the right on hover:
-      <p>
-      <img src="images/runtime-gtk-css.png" alt="" />
-      </p>
-      <b>Note:</b> Works on GTK+ 3.20 or later only.
-    </td>
-  </tr>
-
-  <tr id="swt-lambda-style-keylistener">
-    <td class="title">Lambda as KeyListener</td>
-    <td class="content">
-      The <code>KeyListener</code> interface in SWT was enhanced to provide the
-      <code>KeyListener#keyPressedAdapter(Consumer&lt;KeyEvent&gt; c)</code> and
-      <code>KeyListener#keyReleasedAdapter(Consumer&lt;KeyEvent&gt; c)</code>
-      static helper methods that accept lambdas and method references as listeners.
-    </td>
-  </tr>
-
-  <tr id="swt-spies-separated">
-    <td class="title">SWT spies separated from Tools plug-in</td>
-    <td class="content">
-        The Sleak and Spy views are now available in a new plug-in, <b>org.eclipse.swt.tools.spies</b>.
-        They were previously part of org.eclipse.swt.tools, which depends on JDT. With the new spies
-        plug-in, it is now possible to use the spies without depending on JDT. This makes it especially
-        suitable for inclusion in target definitions and Eclipse RCP applications.
-    </td>
-  </tr>
-
 
   </tbody>
 </table>
