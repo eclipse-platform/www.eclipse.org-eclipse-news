@@ -41,11 +41,12 @@ ul {padding-left: 13px;}
   </tr>
 
   <tr id="generic-editor-example">
-    <td class="title">Added an easily-extensible Generic Text Editor</td>
+    <td class="title">Extension points added for Generic Text Editor</td>
     <td class="content">
-        With this new editor it is now much easier to enrich a new generic editor so you can add support relatively easy for new languages.
-        It is reusing the existing Eclipse editor infrastructure but with the generic editor you don't need to implement an
-        editor to supply functionality for a new file content-type. Instead you make the generic editor smarter by extension points.
+        A new extensible <b>Generic Editor</b> has been added which makes it easier 
+        to implement an editor for new languages or new content types. It reuses 
+        the existing Eclipse editor infrastructure. The generic editor can be extended using 
+        extension points instead of implementing an editor to  supply required functionality.
         <p>The following example shows how to contribute features to the generic editor via extensions:</p>
         <pre>
 &lt;extension point="org.eclipse.ui.genericeditor.contentAssistProcessors">
@@ -68,7 +69,7 @@ ul {padding-left: 13px;}
    &lt;/presentationReconciler>
 &lt;/extension></pre>
         <p>
-        Those new extension points receive as arguments regular Platform classes (IPresentationReconcilier, ITextHover, ICompletionProposalComputer)
+        Those new extension points receive as arguments regular Platform classes (<code>IPresentationReconcilier, ITextHover, ICompletionProposalComputer</code>)
        	to add behavior to the generic editor. No new Java API is necessary.
        	</p>
        	
@@ -101,51 +102,14 @@ public class GradlePR extends PresentationReconciler {
 
 }
         </code></pre>
-        Above you see it is relatively simple to supply the rules for syntax highlighting.
-        The generic editor picks those up through the extension points and here is the editor in action:
+        The above example shows that it is relatively simple to supply the rules for syntax highlighting.
+        The generic editor picks-up those through the extension points. <br />Here is the editor in action:
         <p>
         	<img src="images/gradle-sample.png" alt=""/>
         </p>
       </td>
     </tr>
 
-  <tr id="declarative-services-replaceable">
-    <td class="title">Declarative services implementation replaceable</td>
-    <td class="content">
-      In platform bundles, the bundle dependencies to <code>org.eclipse.osgi.services</code> have been replaced with the necessary package imports.
-	  Mostly <code>org.osgi.service.event</code> needed to be added to the imported packages. This was necessary to avoid a
-	  uses constraint violation when replacing <code>org.eclipse.equinox.ds</code> with <code>org.apache.felix.scr</code>.
-    </td>
-  </tr>
-  
-  <tr id="viewercomparator-sorting">
-    <td class="title">Stable sorting in viewers based on ViewerComparator</td>
-    <td class="content">
-      The <code>org.eclipse.jface.viewers.ViewerComparator</code> now ignores decorations from a <code>DecoratingLabelProvider</code> during its sorting.
-      For example, if the EGit team provider is used, it prepends "> " for changed files. This additional "> " is now ignored.
-      <p>
-      The goal of this change is to eliminate
-      <code>java.lang.IllegalArgumentException: Comparison method violates its general contract!</code>
-      that could occur when label decorations were updated in the background.
-      </p>
-      <p>
-      For now, you can disable this fix by setting the system property <code>eclipse.disable.fix.for.bug364735</code> to <code>true</code>.
-      This temporary system property is planned to be removed unless issues with the new sorting are discovered.
-      </p>
-
-    </td>
-  </tr>
-  
-  <tr id="progress-reporting-performance">
-    <td class="title">Reduced performance impact of very frequent progress reporting from background jobs</td>
-    <td class="content">
-      When bad code was calling <code>IProgressMonitor#setTaskName(String)</code> very frequently in a background job,
-      the execution was heavily slowed down due to this reporting.
-      A workaround has been added to the jobs framework that throttles processing of excessive task name updates.
-      Performance tests have shown 2-3 times faster execution times for pathologic examples.
-    </td>
-  </tr>
-  
   <tr id="editor-contenttype-extension">
     <td class="title">An extension point to associate existing editors and content-types</td>
     <td class="content">
@@ -161,123 +125,6 @@ public class GradlePR extends PresentationReconciler {
   &lt;/editorContentTypeBinding>
 &lt;/extension>
        </pre>
-    </td>
-  </tr>
-
-  <tr id="application-model-parts-perspective-trimbars">
-    <td class="title">Application model allows toolbar definitions for parts and perspectives</td>
-    <td class="content">
-	  The application model has been extended to support the definition of toolbars (via trimbars) for parts and perspectives. 
-	  This simplifies the implementation of a common requirement in RCP applications. You can now define toolbars specific to a perspective and  
-	  toolbars rendering within the part area via your custom renderer.
-	 <p>
-      Currently, the default Eclipse renderers do not use these new elements.
-     </p>
-    </td>
-  </tr>
-
-  <tr id="dependency-injections-for-e3parts">
-    <td class="title">Dependency injection for Eclipse 3.x views available</td>
-    <td class="content">
-      You can now use dependency injection (di) in your Eclipse 3.x. views.
-      You can enable this for a view via the new <b>inject</b> flag in the <code>org.eclipse.ui.views</code> extension.
-
-       <p>
-        	<img src="images/e3-views-enable-di.png" alt=""/>
-        </p>
-       <p>
-      Example usage:</p>
-      <pre><code>public class SampleView extends ViewPart {
-
-	@Inject IWorkbench workbench;
-
-	private TableViewer viewer;
-
-	@Override
-	public void createPartControl(Composite parent) {
-		viewer = new TableViewer(parent, SWT.MULTI | SWT.H_SCROLL | SWT.V_SCROLL);
-
-		viewer.setContentProvider(ArrayContentProvider.getInstance());
-		viewer.setInput(new String[] { "One", "Two", "Three" });
-		viewer.setLabelProvider(new ViewLabelProvider());
-
-		// Create the help context id for the viewer's control
-		workbench.getHelpSystem().setHelp(viewer.getControl(), "test7.viewer");
-	}
-	// more stuff
-}
-      </code></pre>
-
-    </td>
-
-  </tr>
-
-  <tr id="screenshot-from-junit">
-    <td class="title">Screenshot from JUnit</td>
-    <td class="content">
-      In bundle <code>org.eclipse.test.performance</code>, there's a new API to take a screenshot from a JUnit test:
-      <p><code>
-        org.eclipse.test.Screenshots#takeScreenshot(Class&lt;?&gt; testClass, String name)
-      </code></p>
-      In the Eclipse Platform/SDK builds that are run on Hudson, the PNG files will be saved in a directory that is accessible via
-      <a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.6-201606061100/logs.php#console">Console Output Logs</a>
-      on the Test Results pages.
-    </td>
-  </tr>
-  
-  <tr id="debugging-test-timeouts">
-    <td class="title">Debugging test timeouts</td>
-    <td class="content">
-      In bundle <a href="http://git.eclipse.org/c/platform/eclipse.platform.releng.git/tree/bundles/org.eclipse.test.performance">org.eclipse.test.performance</a>,
-      there's a new API that helps debugging those pesky tests that are freezing / hanging / DNF ("Did not finish")
-      in a remote Hudson build, and you have no clue why, because they always pass locally.
-      <p>
-      If your tests are organized in a JUnit-4-style test suite using the
-      </p>
-      <pre style="margin-left:1em">@RunWith(Suite.class)</pre>
-      <p>
-      annotation, you can just replace that line by
-      </p>
-      <pre style="margin-left:1em">@RunWith(TracingSuite.class)</pre>
-      <p>
-      This will log the start of each atomic test contained in the suite to <code>System.out</code>, and it will try to collect more information
-      after a timeout (stack traces, screenshot). And it will even try to throw an exception in the main thread,
-      so that other tests can proceed. See the Javadoc for configuration options.
-      </p>
-    </td>
-  </tr>
-  
-  <tr id="dynamic-reference-provider">
-    <td class="title">New API for controlling build order</td>
-    <td class="content">
-      The <code>org.eclipse.core.resources.builders</code> extension point now allows extensions to influence the
-      order in which projects are built by supplying an implementation of
-      <code>IDynamicReferenceProvider</code>. This replaces the
-      <code>IProjectDescription#setDynamicReferences(IProject[])</code> API, which is now deprecated.
-    </td>
-  </tr>
-
-  <tr id="async-content-assist">
-    <td class="title">Asynchronous content-assistant</td>
-    <td class="content">
-    A new constructor
-    <code>org.eclipse.jface.text.contentassist.ContentAssistant(boolean asynchronous)</code> 
-    was added. An asynchronous <code>ContentAssistant</code> triggers
-    computation of completion proposals in the background and doesn't block the thread invoking the completion. As a result, it will prevent the UI thread to freeze
-    when a completion proposal computer takes too long.
-    <p>
-	    This supports the same API and methods as the usual <code>ContentAssist</code>, so shifting from synchronous/blocking <code>ContentAssistant</code> to asynchronous one only requires
-	    instantiating the <code>ContentAssistant</code> as asynchronous. Note that as the computation now happens in background, the <code>IContentAssistProcessor</code>
-	    attached to an asynchronous <code>ContentAssistant</code> must <b>not</b> require the UI Thread; any <code>IContentAssistProcessor</code> computer requiring the UI Thread will need to be modified
-	    in order to be used with an asynchronous <code>ContentAssistant</code>.
-    </p> 
-	<p>
-	    Another new API is <code>ContentAssistant#addContentAssistProcessor(IContentAssistProcessor, String)</code>,
-	    which provides a way to directly add multiple processors to one content assistant.
-    </p> 
-	<p>
-		The generic and extensible editor has been switched to use this asynchronous <code>ContentAssistant</code>.
-	</p>    
     </td>
   </tr>
 
@@ -339,6 +186,80 @@ return new DecorationOverlayIcon(
     </td>
   </tr>
 
+  <tr id="dynamic-reference-provider">
+    <td class="title">New API for controlling build order</td>
+    <td class="content">
+      The <code>org.eclipse.core.resources.builders</code> extension point now allows extensions to influence the
+      order in which projects are built by supplying an implementation of
+      <code>IDynamicReferenceProvider</code>. This replaces the
+      <code>IProjectDescription#setDynamicReferences(IProject[])</code> API, which is now deprecated.
+    </td>
+  </tr>
+
+  <tr id="async-content-assist">
+    <td class="title">Asynchronous content-assistant</td>
+    <td class="content">
+    A new constructor
+    <code>org.eclipse.jface.text.contentassist.ContentAssistant(boolean asynchronous)</code> 
+    was added. An asynchronous <code>ContentAssistant</code> triggers
+    computation of completion proposals in the background and doesn't block the thread invoking the completion. As a result, it will prevent the UI thread to freeze
+    when a completion proposal computer takes too long.
+    <p>
+	    This supports the same API and methods as the usual <code>ContentAssist</code>, so shifting from synchronous/blocking <code>ContentAssistant</code> to asynchronous one only requires
+	    instantiating the <code>ContentAssistant</code> as asynchronous. Note that as the computation now happens in background, the <code>IContentAssistProcessor</code>
+	    attached to an asynchronous <code>ContentAssistant</code> must <b>not</b> require the UI Thread; any <code>IContentAssistProcessor</code> computer requiring the UI Thread will need to be modified
+	    in order to be used with an asynchronous <code>ContentAssistant</code>.
+    </p> 
+	<p>
+	    Another new API is <code>ContentAssistant#addContentAssistProcessor(IContentAssistProcessor, String)</code>,
+	    which provides a way to directly add multiple processors to one content assistant.
+    </p> 
+	<p>
+		The generic and extensible editor has been switched to use this asynchronous <code>ContentAssistant</code>.
+	</p>    
+    </td>
+  </tr>
+
+  <tr id="viewercomparator-sorting">
+    <td class="title">Stable sorting in viewers based on ViewerComparator</td>
+    <td class="content">
+      The <code>org.eclipse.jface.viewers.ViewerComparator</code> now ignores decorations from a <code>DecoratingLabelProvider</code> during its sorting.
+      For example, if the EGit team provider is used, it prepends "> " for changed files. This additional "> " is now ignored.
+      <p>
+      The goal of this change is to eliminate
+      <code>java.lang.IllegalArgumentException: Comparison method violates its general contract!</code>
+      that could occur when label decorations were updated in the background.
+      </p>
+      <p>
+      For now, you can disable this fix by setting the system property <code>eclipse.disable.fix.for.bug364735</code> to <code>true</code>.
+      This temporary system property is planned to be removed unless issues with the new sorting are discovered.
+      </p>
+
+    </td>
+  </tr>
+  
+  <tr id="progress-reporting-performance">
+    <td class="title">Reduced performance impact of very frequent progress reporting from background jobs</td>
+    <td class="content">
+      When bad code was calling <code>IProgressMonitor#setTaskName(String)</code> very frequently in a background job,
+      the execution was heavily slowed down due to this reporting.
+      A workaround has been added to the jobs framework that throttles processing of excessive task name updates.
+      Performance tests have shown 2-3 times faster execution times for pathologic examples.
+    </td>
+  </tr>
+  
+  <tr id="application-model-parts-perspective-trimbars">
+    <td class="title">Application model allows toolbar definitions for parts and perspectives</td>
+    <td class="content">
+	  The application model has been extended to support the definition of toolbars (via trimbars) for parts and perspectives. 
+	  This simplifies the implementation of a common requirement in RCP applications. You can now define toolbars specific to a perspective and  
+	  toolbars rendering within the part area via your custom renderer.
+	 <p>
+      Currently, the default Eclipse renderers do not use these new elements.
+     </p>
+    </td>
+  </tr>
+
   <tr id="di-extension-separation">
     <td class="title">Separation of DI extension annotations and supplier</td>
     <td class="content">
@@ -394,6 +315,51 @@ return new DecorationOverlayIcon(
     </td>
   </tr>
 
+  <tr id="dependency-injections-for-e3parts">
+    <td class="title">Dependency injection for Eclipse 3.x views available</td>
+    <td class="content">
+      You can now use dependency injection (di) in your Eclipse 3.x. views.
+      You can enable this for a view via the new <b>inject</b> flag in the <code>org.eclipse.ui.views</code> extension.
+
+       <p>
+        	<img src="images/e3-views-enable-di.png" alt=""/>
+        </p>
+       <p>
+      Example usage:</p>
+      <pre><code>public class SampleView extends ViewPart {
+
+	@Inject IWorkbench workbench;
+
+	private TableViewer viewer;
+
+	@Override
+	public void createPartControl(Composite parent) {
+		viewer = new TableViewer(parent, SWT.MULTI | SWT.H_SCROLL | SWT.V_SCROLL);
+
+		viewer.setContentProvider(ArrayContentProvider.getInstance());
+		viewer.setInput(new String[] { "One", "Two", "Three" });
+		viewer.setLabelProvider(new ViewLabelProvider());
+
+		// Create the help context id for the viewer's control
+		workbench.getHelpSystem().setHelp(viewer.getControl(), "test7.viewer");
+	}
+	// more stuff
+}
+      </code></pre>
+
+    </td>
+
+  </tr>
+
+  <tr id="declarative-services-replaceable">
+    <td class="title">Declarative services implementation replaceable</td>
+    <td class="content">
+      In platform bundles, the bundle dependencies to <code>org.eclipse.osgi.services</code> have been replaced with the necessary package imports.
+	  Mostly <code>org.osgi.service.event</code> needed to be added to the imported packages. This was necessary to avoid a
+	  uses constraint violation when replacing <code>org.eclipse.equinox.ds</code> with <code>org.apache.felix.scr</code>.
+    </td>
+  </tr>
+  
   <tr id="imperative-expressions">
     <td class="title">Imperative Expressions</td>
     <td class="content">
@@ -418,6 +384,41 @@ The tracking property causes to track the values which are injected so that the 
     </td>
   </tr>
 
+  <tr id="screenshot-from-junit">
+    <td class="title">Screenshot from JUnit</td>
+    <td class="content">
+      In bundle <code>org.eclipse.test.performance</code>, there's a new API to take a screenshot from a JUnit test:
+      <p><code>
+        org.eclipse.test.Screenshots#takeScreenshot(Class&lt;?&gt; testClass, String name)
+      </code></p>
+      In the Eclipse Platform/SDK builds that are run on Hudson, the PNG files will be saved in a directory that is accessible via
+      <a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.6-201606061100/logs.php#console">Console Output Logs</a>
+      on the Test Results pages.
+    </td>
+  </tr>
+  
+  <tr id="debugging-test-timeouts">
+    <td class="title">Debugging test timeouts</td>
+    <td class="content">
+      In bundle <a href="http://git.eclipse.org/c/platform/eclipse.platform.releng.git/tree/bundles/org.eclipse.test.performance">org.eclipse.test.performance</a>,
+      there's a new API that helps debugging those pesky tests that are freezing / hanging / DNF ("Did not finish")
+      in a remote Hudson build, and you have no clue why, because they always pass locally.
+      <p>
+      If your tests are organized in a JUnit-4-style test suite using the
+      </p>
+      <pre style="margin-left:1em">@RunWith(Suite.class)</pre>
+      <p>
+      annotation, you can just replace that line by
+      </p>
+      <pre style="margin-left:1em">@RunWith(TracingSuite.class)</pre>
+      <p>
+      This will log the start of each atomic test contained in the suite to <code>System.out</code>, and it will try to collect more information
+      after a timeout (stack traces, screenshot). And it will even try to throw an exception in the main thread,
+      so that other tests can proceed. See the Javadoc for configuration options.
+      </p>
+    </td>
+  </tr>
+  
   <!-- ******************** Equinox ********************** -->
   <tr>
     <td id="Equinox" class="section" colspan="2"><h2>Equinox Changes</h2></td>
@@ -452,6 +453,17 @@ The tracking property causes to track the values which are injected so that the 
     </td>
   </tr>
   
+  <tr id="provided-capabilities-metadata">
+    <td class="title">Several plug-ins define Provided Capabilities metadata</td>
+    <td class="content">
+      You can now rely on OSGi's <code>Require-Capability</code> metadata in your Eclipse-based application for
+	  <code>org.eclipse.equinox.event</code> and <code>org.eclipse.equinox.cm</code> as they now provide 
+	  the corresponding <code>osgi.service</code> capability. 
+	  Additionally, p2 capabilities are specified to be able to configure non-code dependencies that can be interpreted
+	  by the p2 resolver.
+    </td>
+  </tr>
+  
   <tr id="non-modal-p2-installation-dialog">
     <td class="title">Non-modal Install dialog</td>
     <td class="content">
@@ -471,17 +483,6 @@ The tracking property causes to track the values which are injected so that the 
     </td>
   </tr>
 
-  <tr id="provided-capabilities-metadata">
-    <td class="title">Several plug-ins define Provided Capabilities metadata</td>
-    <td class="content">
-      You can now rely on OSGi's <code>Require-Capability</code> meta data in your Eclipse-based application for
-	  <code>org.eclipse.equinox.event</code> and <code>org.eclipse.equinox.cm</code> as they now provide 
-	  the corresponding <code>osgi.service</code> capability. 
-	  Additionally, p2 capabilities are specified to be able to configure non-code dependencies that can be interpreted
-	  by the p2 resolver.
-    </td>
-  </tr>
-  
   <tr id="tracing-consolelog">
     <td class="title">Tracing honors -consoleLog</td>
     <td class="content">
@@ -559,14 +560,73 @@ button.addSelectionListener(widgetSelectedAdapter(e -> {System.out.print("Hello"
     </td>
   </tr>
 
-  <tr id="button-background-styled">
-    <td class="title">SWT <code>Button</code> widget background and foreground color can be styled on Windows</td>
+  <tr id="swt-image-hidpi">
+    <td class="title">New API <code>Image#getImageData(int zoom)</code></td>
     <td class="content">
-      You can now style the background and foreground color of the SWT <code>Button</code> widget on Windows:
+      Platform-independent high-DPI support has been added to the <code>org.eclipse.swt.graphics.Image</code> class to get <code>ImageData</code> at specific zoom levels:
+      <ul>
+  		<li><code>Image#getImageData(int zoom)</code>: Returns an <code>ImageData</code> for the given zoom level.</li>
+       </ul>
       <p>
-        <img src="images/button-background-styled.png" alt=""/>
+      Note: this API is mainly intended to be used by custom implementations of <code>ImageDataProvider</code> that draw a
+      composite image at the requested zoom level based on other images. For custom zoom levels, the <code>ImageData</code> 
+      may be an auto-scaled version of the native image and may look more blurred or mangled than expected. 
       </p>
-      Note: Above implementation is a custom paint operation that applies to all <code>Button</code> types except <code>SWT.ARROW</code> on Windows.
+    </td>
+  </tr>
+
+  <tr id="swt-table-header-styling">
+    <td class="title">New APIs for Table header colors</td>
+    <td class="content">
+       Support for custom table header foreground and background colors has been added on Mac, Windows and Linux (GTK3) platforms.
+       <p>
+       	APIs for Table header foreground color:<br/>
+       	<code>Table#getHeaderForeground()</code><br/>
+       	<code>Table#setHeaderForeground(Color)</code><br/>
+       </p>
+       <p>
+       	APIs for Table header background color:<br/>
+       	<code>Table#getHeaderBackground()</code><br/>
+       	<code>Table#setHeaderBackground(Color)</code><br/>
+       </p>
+       Screen-shot of an SWT Table with customized header on Linux (GTK3):
+       <p>
+      	<img src="images/table-header-colors.png" alt="" />
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="swt-tree-header-styling">
+    <td class="title">New APIs for Tree header colors</td>
+    <td class="content">
+       Support for custom tree header foreground and background colors has been added on Mac, Windows and Linux (GTK3) platforms.
+       <p>
+       	APIs for Tree header foreground color:<br/>
+       	<code>Tree#getHeaderForeground()</code><br/>
+       	<code>Tree#setHeaderForeground(Color)</code><br/>
+       </p>
+       <p>
+       	APIs for Tree header background color:<br/>
+       	<code>Tree#getHeaderBackground()</code><br/>
+       	<code>Tree#setHeaderBackground(Color)</code><br/>
+       </p>
+       Screen-shot of an SWT Tree with customized header on Windows:
+       <p>
+      	<img src="images/tree-header-colors.png" alt="" />
+      </p>
+    </td>
+  </tr>
+
+  <tr id="table-header-styling-css">
+    <td class="title">Table and Tree header styling via CSS</td>
+    <td class="content">
+      You can now style the SWT table and tree headers via the CSS engine.
+      <pre>
+Table, Tree {
+    swt-header-color: #CCC;
+    swt-header-background-color: #383D3F;
+}
+      </pre>
     </td>
   </tr>
 
@@ -606,58 +666,14 @@ button.addSelectionListener(widgetSelectedAdapter(e -> {System.out.print("Hello"
     </td>
   </tr>
   
-  <tr id="swt-table-header-styling">
-    <td class="title">SWT Table header colors</td>
+  <tr id="button-background-styled">
+    <td class="title">Button widget background and foreground color can be styled on Windows</td>
     <td class="content">
-       Support for custom table header foreground and background colors has been added on Mac, Windows and Linux (GTK3) platforms.
-       <p>
-       	APIs for Table header foreground color:<br/>
-       	<code>Table#getHeaderForeground()</code><br/>
-       	<code>Table#setHeaderForeground(Color)</code><br/>
-       </p>
-       <p>
-       	APIs for Table header background color:<br/>
-       	<code>Table#getHeaderBackground()</code><br/>
-       	<code>Table#setHeaderBackground(Color)</code><br/>
-       </p>
-       Screen-shot of an SWT Table with customized header on Linux (GTK3):
-       <p>
-      	<img src="images/table-header-colors.png" alt="" />
+      You can now style the background and foreground color of the SWT <code>Button</code> widget on Windows:
+      <p>
+        <img src="images/button-background-styled.png" alt=""/>
       </p>
-    </td>
-  </tr>
-  
-  <tr id="swt-tree-header-styling">
-    <td class="title">SWT Tree header colors</td>
-    <td class="content">
-       Support for custom tree header foreground and background colors has been added on Mac, Windows and Linux (GTK3) platforms.
-       <p>
-       	APIs for Tree header foreground color:<br/>
-       	<code>Tree#getHeaderForeground()</code><br/>
-       	<code>Tree#setHeaderForeground(Color)</code><br/>
-       </p>
-       <p>
-       	APIs for Tree header background color:<br/>
-       	<code>Tree#getHeaderBackground()</code><br/>
-       	<code>Tree#setHeaderBackground(Color)</code><br/>
-       </p>
-       Screen-shot of an SWT Tree with customized header on Windows:
-       <p>
-      	<img src="images/tree-header-colors.png" alt="" />
-      </p>
-    </td>
-  </tr>
-
-  <tr id="table-header-styling-css">
-    <td class="title">SWT table and tree header styling via CSS</td>
-    <td class="content">
-      You can now style the SWT table and tree headers via the CSS engine.
-      <pre>
-Table, Tree {
-    swt-header-color: #CCC;
-    swt-header-background-color: #383D3F;
-}
-      </pre>
+      Note: Above implementation is a custom paint operation that applies to all <code>Button</code> types except <code>SWT.ARROW</code> on Windows.
     </td>
   </tr>
 
@@ -668,21 +684,6 @@ Table, Tree {
         They were previously part of org.eclipse.swt.tools, which depends on JDT. With the new spies
         plug-in, it is now possible to use the spies without depending on JDT. This makes it especially
         suitable for inclusion in target definitions and Eclipse RCP applications.
-    </td>
-  </tr>
-
-  <tr id="swt-image-hidpi">
-    <td class="title">New API <code>Image#getImageData(int zoom)</code></td>
-    <td class="content">
-      Platform-independent high-DPI support has been added to the <code>org.eclipse.swt.graphics.Image</code> class to get <code>ImageData</code> at specific zoom levels:
-      <ul>
-  		<li><code>Image#getImageData(int zoom)</code>: Returns an <code>ImageData</code> for the given zoom level.</li>
-       </ul>
-      <p>
-      Note: this API is mainly intended to be used by custom implementations of <code>ImageDataProvider</code> that draw a
-      composite image at the requested zoom level based on other images. For custom zoom levels, the <code>ImageData</code> 
-      may be an auto-scaled version of the native image and may look more blurred or mangled than expected. 
-      </p>
     </td>
   </tr>
 
@@ -698,7 +699,7 @@ Table, Tree {
   </tr>
 
   <tr id="accessibletablelistener-getcaption-deprecated">
-    <td class="title">AccessibleTableListener<span style="visibility:hidden">&shy;</span>#getCaption(..) deprecated</td>
+    <td class="title"><code>AccessibleTableListener<span style="visibility:hidden">&shy;</span>#getCaption(..)</code> deprecated</td>
     <td class="content">
       The <code>AccessibleTableListener#getCaption(AccessibleTableEvent)</code> method corresponds to the 
       <code>IAccessibleTable2::caption</code> method, which has been deprecated by the IA2 accessibility specification 
@@ -708,7 +709,7 @@ Table, Tree {
   </tr>
 
   <tr id="accessibletablelistener-getsummary-deprecated">
-    <td class="title">AccessibleTableListener<span style="visibility:hidden">&shy;</span>#getSummary(..) deprecated</td>
+    <td class="title"><code>AccessibleTableListener<span style="visibility:hidden">&shy;</span>#getSummary(..)</code> deprecated</td>
     <td class="content">
       The <code>AccessibleTableListener#getSummary(AccessibleTableEvent)</code> method corresponds to the 
       <code>IAccessibleTable2::summary</code> method, which has been deprecated by the IA2 accessibility specification 
