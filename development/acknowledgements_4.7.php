@@ -90,10 +90,10 @@ ob_start();
       Thorsten Maack, Tobias Melcher, Victor Rubezhny, Wainer dos Santos Moschetta and Wayne Beaton.
     </p>
 
-    <p>The Platform SWT team would like to thank everyone who helped to improve the toolkit by filing bug reports and enhancement requests, as well as the early adopters who contributed towards
-      improving quality by testing. Special thanks to David Williams for all the releng suppport. We would also like to thank Alexandra Buzila, Alex Blewitt, Andrey Loskutov, Brian de Alwis,
-      Conrad Groth, Eugen Neufeld, Jacek Sieka, Lars Vogel, Marc-Andre Laperle, Marco Hunsicker, Sebastian Ratz, Snjezana Peco, Sopot Cela, Stefan Xenos, Szymon Ptaszkiewicz, Thorsten Hake and Tom Gurney
-      for their code contributions. We would like to appreciate Silenio Quarti, Bogdan Gheorghe and Grant Gayed for always supporting the team.
+    <p>The Platform SWT team would like to thank everyone who helped to improve the toolkit by filing bug reports and enhancement requests, as well as the early adopters who contributed towards improving quality by testing.
+    	Special thanks to Sravan Kumar Lakkimsetti for all the releng suppport. We would also like to thank Andrey Loskutov, Ben Steffensmeier, Christian Mohr, Conrad Groth, David Weiser, Ed Merks, Eugen Neufeld, Fabian Pfaff, 
+    	Gunnar Wagenknecht, Lars Vogel, Marc-Andre Laperle, Martin Oberhuber, Matthias Becker, Mickael Istria, Mikael Barbero, Patrik Suzzi, Phillip Webb, Rolf Theunissen, Rüdiger Herrmann, Sergey Prigogin, Stefan Xenos, 
+    	Szymon Ptaszkiewicz and Till Brychcy for their code contributions. We would like to appreciate Silenio Quarti, Bogdan Gheorghe and Grant Gayed for always supporting the team.
     </p>
 
     <p>The Release Engineering team would like to thank the many people who helped to improve our build
@@ -149,16 +149,16 @@ ob_start();
         <td style="width: 23%;">Arun&nbsp;Thondapu</td>
         <td style="width: 23%;">Alexander&nbsp;Kurtakov</td>
         <td style="width: 23%;">Lakshmi&nbsp;Shanmugam</td>
-        <td style="width: 23%;">Leo&nbsp;Ufimtsev</td>
+        <td style="width: 23%;">Eric&nbsp;Williams</td>
       </tr>
       <tr>
-        <td style="width: 23%;">Lina&nbsp;Kemmel</td>
+        <td style="width: 23%;">Ian&nbsp;Pun</td>
+        <td style="width: 23%;">Leo&nbsp;Ufimtsev</td>
         <td style="width: 23%;">Markus&nbsp;Keller</td>
         <td style="width: 23%;">Niraj&nbsp;Modi</td>
-        <td style="width: 23%;">Sravan&nbsp;Kumar&nbsp;Lakkimsetti</td>
       </tr>
       <tr>
-        <td style="width: 23%;">Eric&nbsp;Williams</td>
+        <td style="width: 23%;">Sravan&nbsp;Kumar&nbsp;Lakkimsetti</td>
         <td style="width: 23%;">&nbsp;</td>
         <td style="width: 23%;">&nbsp;</td>
         <td style="width: 23%;">&nbsp;</td>
