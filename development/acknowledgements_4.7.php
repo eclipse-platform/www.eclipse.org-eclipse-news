@@ -64,7 +64,7 @@ ob_start();
   
     <h3>Eclipse Oxygen Acknowledgements</h3>
     
-    <p class="bg-warning">NOTE: This page is under development.</p>
+    <p class="bg-danger">NOTE: This page is under development.</p>
 
     <p>The entire Eclipse team would like to thank the Eclipse Foundation staff for their tireless efforts, including: Denis Roy, Matt Ward, and Mikael Barbero for not only keeping all
       that infrastructure going, but also constantly improving it; Janet Campbell and Sharon Corbett for guiding us through the Eclipse legal process; Wayne Beaton for giving us improved tools to
