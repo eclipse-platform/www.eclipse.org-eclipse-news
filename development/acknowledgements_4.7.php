@@ -82,12 +82,12 @@ ob_start();
     <p>The Platform UI team would like to thank
       everyone who has helped us to improve the quality by testing and reporting bugs and enhancement requests. Special thanks to the following list of
       people, in alphabetical order, who contributed code to the project:
-      Adam Briska, Alain Bernard, Alena Laskavaia, Alex Blewitt, Alexandra Buzila, Ali Akar, Andreas Mayer, Andreas Sewe, Axel Richard, Bartosz Popiela, Ben Cox, C. Sean Young, Christian Georgi,
-      Christian Pontesegger, Christian Radspieler, Christoph Daniel Schulze, Conrad Groth, Daniel Haftstein, Daniel Jaeger, Daniel Kruegler, Dariusz Stefanowicz, Denis Zygann,
-      Dominic Scharfe, Ed Merks, Elisabeth Bohlig, Eric Williams, Eugen Neufeld, Fabio Zadrozny, Florian We&szlig;ling, Holger Voormann, Jan-Ove Weichel, Jaxsun McCarthy Huggan, Jens Kubler, Jeremie Bresson, Joel Drigo, Kaloyan Raev,
-      Lars Sadau, Leung Wang Hei, Lothar L., Manuel Steurer, Marc-Andre Laperle, Martin Keller, Mat Booth, Matt Biggs, Matthias Becker, Matthias P. Nowak, Mikael Barbero, Noopur Gupta, Philipp Bumann,
-      Phillip Webb, Rainer Pfannkuch, Rene Brandstetter, Robert Roth, Rudiger Herrmann, Sebastian Zarnekow, Sergey Grant, Snjezana Peco, Sravan Kumar Lakkimsetti, Stefan Winkler, Thorsten Hake,
-      Thorsten Maack, Tobias Melcher, Victor Rubezhny, Wainer dos Santos Moschetta and Wayne Beaton.
+      Alena Laskavaia, Andreas Mayer, Axel Richard, Benedikt Kuntz, Björn Michael, Bruno Medeiros, Christian Pontesegger, Conrad Groth, Daniel Raap, 
+      David Weiser, Dawid Pakuła, Denis Forveille, Ed Merks, Eugen Neufeld, Fabian Pfaff, Fabio Zadrozny, Gunnar Wagenknecht, Harald Albers, Ian Pun, Ilya Buziuk,
+	  Jan Rosczak, Jonah Graham, Lars Sadau, Leo Ufimtsev, Lothar Lattermann, Louis-Michel Mathurin, Mario Herzig, Martin Karpisek, 
+	  Matthias Becker, Max Hohenegger, Michal Niewrzal, Mickael Istria, Mikael Barbero, Noopur Gupta, Olivier Prouvost, Paul Punke, Philipp Kunz,  Ralf Petter,
+	  Robert Roth, Rob Stryker, Rüdiger Herrmann, Sebastian Lohmeier, Sebastian Ratz, Sezgin Halibov, Søren Troest, 
+      Sravan Kumar Lakkimsetti, Stephan Wahlbrink, Szymon Ptaszkiewicz, Till Brychcy, Tommy Redel, Vasili Gulevich and Wim Jongman.
     </p>
 
     <p>The Platform SWT team would like to thank everyone who helped to improve the toolkit by filing bug reports and enhancement requests, as well as the early adopters who contributed towards improving quality by testing.
