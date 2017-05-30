@@ -98,9 +98,11 @@ ob_start();
 
     <p>The Release Engineering team would like to thank the many people who helped to improve our build
      as well as the committers who set up and maintain their own Platform HIPP jobs. And a special thanks to other Eclipse projects we prereq: EMF and ECF who 
-     also provide timely updates so that we can be ontime. 
-    Also, the webmasters at the Eclipse Foundation for their constant help and education and improvements (especially the nice integration of Gerrit and Bugzilla); also
-      Mikael Barbero who fixed several issues in CBI and greatly improved the signing process.
+     also provide timely updates so that we can be ontime. Special thanks to the following list of people, in alphabetical order, who contributed code to the project:
+     Andrey Loskutov, Arun Thondapu, Lars Vogel, Mickael Istria, Sarika Sinha, Sopot Cela and Thomas Watson.
+     
+    Also, the webmasters (Frederic Gurr, Denis Roy and Matt Ward) at the Eclipse Foundation for their constant help and education and improvements; also
+      Mikael Barbero who fixed several issues in CBI and greatly improved the signing process and created a new service to create signed dmg for Mac OS X. And      
       We also thank the other Eclipse projects that make up a part of the infrastructure we 
       depend on: Tycho, EGit, and Hudson for providing fixes and steady improvements.
     </p>
@@ -218,9 +220,15 @@ ob_start();
     <table style="width:92%; margin-left:4%; margin-right:4%;">
 
       <tr>
+        <td style="width: 23%;">Alexander&nbsp;Kurtakov</td>
         <td style="width: 23%;">David&nbsp;Williams</td>
         <td style="width: 23%;">Dani&nbsp;Megert</td>
         <td style="width: 23%;">Markus&nbsp;Keller</td>
+      </tr>
+      <tr>
+        <td style="width: 23%;">Sravan&nbsp;Kumar&nbsp;Lakkimsetti</td>
+        <td style="width: 23%;">&nbsp;</td>
+        <td style="width: 23%;">&nbsp;</td>
         <td style="width: 23%;">&nbsp;</td>
       </tr>
     </table>
