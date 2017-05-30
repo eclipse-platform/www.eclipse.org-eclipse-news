@@ -113,17 +113,16 @@ ob_start();
        Stephan Herrmann, Till Brychcy, Timo Kinnunen. We would also like to acknowledge Sravan Kumar Lakkimsetti for all the build and releng support.
     </p>
 
-    <p>The JDT Debug team would like to thank everyone who helped improve the Java debugger by filing bugs, testing and providing patches. Specifically we would like to thank Andrey Loskutov (for
-    contributing to Timeout and Breakpoint related old bugs), Alexander Kurtakov, Jens Schiebel, Jesper Steen Moller (for contributing to Java 8 related bugs), Mat Booth, Matej Spiller Muys (for
-    working on old performance bug), Noopur Gupta and Stefan Xenos for bug fixes.
+    <p>The JDT Debug team would like to thank everyone who helped improve the Java debugger by filing bugs, testing and providing patches. Specifically we would like to thank Brian de Alwis, 
+	Christian Buck, Igor Fedorenko, Josef Lehner, Matthias Becker, Sergey Prigogin and Till Brychcy for features and bug fixes.
     </p>
 
-    <p>The Platform Debug team would like to thank everyone who helped improve the debugger framework by filing bugs, testing and providing patches. Specifically we would like to thank Alex Blewitt,
-     Anton Leherbauer, Ghaith Hachem, Jonah Graham, Lars Vogel, Norman Yee, Ricardo Bochnia, Stefan Xenos and Stephan Wahlbrink for bug fixes, Matthias Becker and Tony McCrary for icons.
+    <p>The Platform Debug team would like to thank everyone who helped improve the debugger framework by filing bugs, testing and providing patches. Specifically we would like to thank Alexander Kurtakov, 
+	Andreas Loth,  David Weiser, Lars Vogel, Markus Duft, Noopur Gupta, Patrik Suzzi, Ralf M Petter, Sergey Prigogin, Till Brychcy and Victor Rubezhny for features and bug fixes.
     </p>
 
     <p>The Platform Ant team would like to thank everyone who helped improve the ant framework by filing bugs, testing and providing patches. Specifically we would like to thank Alexander Kurtakov,
-      David North, Julian Enoch, Kaloyan Raev, Robert Roth and Stefan Xenos for bug fixes.
+     Andreas Sewe, Andrey Loskutov, David Williams, Gunnar Wagenknecht, Lars Vogel, Roland Grunberg and Sravan Kumar Lakkimsetti for bug fixes and providing support in updating Ant to new version.
     </p>
 
 
