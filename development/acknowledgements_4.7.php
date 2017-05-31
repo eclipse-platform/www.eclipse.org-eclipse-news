@@ -133,7 +133,7 @@ ob_start();
 
     <p>The Plug-in Development Environment team would like to thank the numerous contributors who continue to improve the component every release.
         Special thanks to those who contributed code:
-        Abel Hegedus, Alexander Kurtakov, Andrey Loskutov, Brian de Alwis, David Weiser, Elena Laskavaia, Fabian Pfaff, Gunnar Wagenknecht, Julian Honnen, Kevin Townsend, Marc-André Laperle, Matthias Becker, Mickael Istria, Mikaël Barbero, Niklas Mehner, Olivier Prouvost, Patrik Suzzi, Sarika Sinhga, Sergey Prigogin, Sopot Cela, Sravan Kumar Lakkimsetti, Stefan Xenos, Thomas Watson, Torbjörn Svensson and Vincenzo Caselli.
+        Abel Hegedus, Alexander Kurtakov, Andrey Loskutov, Brian de Alwis, David Weiser, Elena Laskavaia, Fabian Pfaff, Gunnar Wagenknecht, Julian Honnen, Kevin Townsend, Marc-André Laperle, Matthias Becker, Mickael Istria, Mikaël Barbero, Niklas Mehner, Olivier Prouvost, Patrik Suzzi, Sarika Sinha, Sergey Prigogin, Sopot Cela, Sravan Kumar Lakkimsetti, Stefan Xenos, Thomas Watson, Torbjörn Svensson and Vincenzo Caselli.
       </p>
 
     <h3>Active Committers</h3>
