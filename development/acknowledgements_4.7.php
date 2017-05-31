@@ -21,7 +21,7 @@ include($App->getProjectCommon());
 # index.php
 #
 # Author:    Vikas Chandra and others on Eclipse Project
-# Date:      2015-06-16
+# Date:      2017-05-31
 #
 # Description: Eclipse project Oxygen release acknowledgments page
 #
@@ -129,8 +129,7 @@ ob_start();
     <p>JDT UI sends thanks to everyone
       who filed good enhancement requests, helped to improve the quality by testing and filing good bug reports, and provided answers on JDT forums/newsgroups.
       Special thanks to those who contributed code:
-      Alex Blewitt, Alexander Kurtakov, Gabor Kovesdan, Harald Albers, Jan Rosczak, John Glassmyer, Kalyan Prasad, Lars Vogel, Manju Mathew, Mateusz Matela, Matthias Becker,
-      Sandra Lions, Sarika Sinha, Stefan Xenos, Szymon Ptaszkiewicz and Till Brychcy.
+      Bj&ouml;rn Michael, Conrad Groth, Jonah Graham, Lars Vogel, Leo Ufimtsev, Mateusz Matela, Matthias Becker, Mickael Istria, Olivier Thomann, Sergey Prigogin, Stefan Xenos, Till Brychcy and Vikas Chandra.
     </p>
 
     <p>The Plug-in Development Environment team would like to thank the numerous contributors who continue to improve the component every release.
