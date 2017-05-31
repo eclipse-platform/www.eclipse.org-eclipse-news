@@ -132,10 +132,8 @@ ob_start();
     </p>
 
     <p>The Plug-in Development Environment team would like to thank the numerous contributors who continue to improve the component every release.
-        Special thanks to Peter Nehrer for contributing DS Annotations Support to PDE and as a result, he was voted in as a committer. We thank
-        Markus Keller for demonstrating high quality bug reporting and providing quality fixes. He was also voted in as a committer at the end of
-        the release. We appreciate all the contributions from the community and would specifically like to thank Elena Laskavaia, Brian de Alwis, Lars Vogel,
-        Stefan Xenos, Simon Scholz and Alex Blewitt.
+        Special thanks to those who contributed code:
+        Abel Hegedus, Alexander Kurtakov, Andrey Loskutov, Brian de Alwis, David Weiser, Elena Laskavaia, Fabian Pfaff, Gunnar Wagenknecht, Julian Honnen, Kevin Townsend, Marc-André Laperle, Matthias Becker, Mickael Istria, Mikaël Barbero, Niklas Mehner, Olivier Prouvost, Patrik Suzzi, Sarika Sinhga, Sergey Prigogin, Sopot Cela, Sravan Kumar Lakkimsetti, Stefan Xenos, Thomas Watson, Torbjörn Svensson and Vincenzo Caselli.
       </p>
 
     <h3>Active Committers</h3>
@@ -300,7 +298,7 @@ ob_start();
       <tr>
         <td style="width: 23%;">Olivier&nbsp;Thomann</td>
         <td style="width: 23%;">Peter&nbsp;Nehrer</td>
-        <td style="width: 23%;">&nbsp;</td>
+        <td style="width: 23%;">Martin&nbsp;Karpisek</td>
         <td style="width: 23%;">&nbsp;</td>
       </tr>
     </table>
