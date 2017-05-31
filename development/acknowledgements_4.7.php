@@ -109,8 +109,8 @@ ob_start();
 
     <p>The JDT Core team would like to thank everyone who has helped us improve quality by testing and filing good bug reports. Special thanks to the following list of
       people, in alphabetical order, who contributed code to the project: Alexander Rookey, Andreas Sewe, Andrey Loskutov, Anton Tanasenko, Brian , Fabian Steeg, 
-      Igor Fedorenko, Jay Arthanareeswaran, Karsten Thoms, Lars Vogel, Manoj Palat, Markus Keller, Mateusz Matela, oliviert , Sasikanth Bharadwaj, Sergey Prigogin, Stefan Xenos,
-       Stephan Herrmann, Till Brychcy, Timo Kinnunen. We would also like to acknowledge Sravan Kumar Lakkimsetti for all the build and releng support.
+      Igor Fedorenko, Karsten Thoms, Lars Vogel, Sergey Prigogin, Timo Kinnunen. 
+      We would also like to acknowledge Sravan Kumar Lakkimsetti for all the build and releng support.
     </p>
 
     <p>The JDT Debug team would like to thank everyone who helped improve the Java debugger by filing bugs, testing and providing patches. Specifically we would like to thank Brian de Alwis, 
@@ -269,24 +269,24 @@ ob_start();
       <tr>
         <td style="width: 23%;">Dani&nbsp;Megert</td>
         <td style="width: 23%;">Jayaprakash&nbsp;Arthanareeswaran</td>
-        <td style="width: 23%;">Jesper&nbsp;Moller</td>
         <td style="width: 23%;">Manoj&nbsp;Palat</td>
+        <td style="width: 23%;">Markus&nbsp;Keller</td>
       </tr>
       <tr>
-        <td style="width: 23%;">Markus&nbsp;Keller</td>
         <td style="width: 23%;">Mateusz&nbsp;Matela</td>
         <td style="width: 23%;">Michael&nbsp;Rennie</td>
         <td style="width: 23%;">Noopur&nbsp;Gupta</td>
+        <td style="width: 23%;">Olivier&nbsp;Thomann</td>
       </tr>
       <tr>
-        <td style="width: 23%;">Olivier&nbsp;Thomann</td>
         <td style="width: 23%;">Sarika&nbsp;Sinha</td>
         <td style="width: 23%;">Sasikanth&nbsp;Bharadwaj</td>
         <td style="width: 23%;">Stefan&nbsp;Xenos</td>
+        <td style="width: 23%;">Stephan&nbsp;Herrmann</td>
       </tr>
       <tr>
-        <td style="width: 23%;">Stephan&nbsp;Herrmann</td>
         <td style="width: 23%;">Till&nbsp;Brychcy</td>
+        <td style="width: 23%;">&nbsp;</td>
         <td style="width: 23%;">&nbsp;</td>
         <td style="width: 23%;">&nbsp;</td>
       </tr>
