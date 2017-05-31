@@ -91,9 +91,8 @@ ob_start();
     </p>
 
     <p>The Platform SWT team would like to thank everyone who helped to improve the toolkit by filing bug reports and enhancement requests, as well as the early adopters who contributed towards improving quality by testing.
-    	Special thanks to Sravan Kumar Lakkimsetti for all the releng suppport. We would also like to thank Andrey Loskutov, Ben Steffensmeier, Christian Mohr, Conrad Groth, David Weiser, Ed Merks, Eugen Neufeld, Fabian Pfaff, 
-    	Gunnar Wagenknecht, Lars Vogel, Marc-Andre Laperle, Martin Oberhuber, Matthias Becker, Mickael Istria, Mikael Barbero, Patrik Suzzi, Phillip Webb, Rolf Theunissen, Rüdiger Herrmann, Sergey Prigogin, Stefan Xenos, 
-    	Szymon Ptaszkiewicz and Till Brychcy for their code contributions. We would like to appreciate Silenio Quarti, Bogdan Gheorghe and Grant Gayed for always supporting the team.
+		We would also like to thank Andrey Loskutov, Ben Steffensmeier, Christian Mohr, Conrad Groth, David Weiser, Ed Merks, Eugen Neufeld, Fabian Pfaff, Gunnar Wagenknecht, Lars Vogel, Marc-Andre Laperle, Martin Oberhuber,
+    	Matthias Becker, Mickael Istria, Mikael Barbero, Patrik Suzzi, Phillip Webb, Rolf Theunissen, Rüdiger Herrmann, Sergey Prigogin, Stefan Xenos, Szymon Ptaszkiewicz and Till Brychcy for their code contributions.
     </p>
 
     <p>The Release Engineering team would like to thank the many people who helped to improve our build
