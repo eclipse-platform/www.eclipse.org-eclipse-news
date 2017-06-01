@@ -75,8 +75,8 @@ ob_start();
         Eclipse</a>, contracting special work, or outright employment.
     </p>
     <p>The Platform Resources team would like to thank everyone who has helped by filing bugs, testing and providing patches. Specifically we would like to thank the following people who have
-      helped improve the Resources components by their code contributions to this release: Alex Blewitt, Richard Gobeli, Mickael Istria, Markus Keller, Tobias Melcher, Ed Merks, Pascal Rapicault,
-      Lars Vogel, Thomas Wolf, Stefan Xenos.</p>
+      helped improve the Resources components by their code contributions to this release: Mikael Barbero, Matthias Becker, Sopot Cela, Conrad Groth, Rüdiger Herrmann, Mickael Istria,
+      Alexander Kurtakov, Sravan Kumar Lakkimsetti, Ed Merks and Sebastian Ratz.</p>
 
 
     <p>The Platform UI team would like to thank
@@ -205,9 +205,15 @@ ob_start();
     <h5>Platform Resources</h5>
     <table style="width:92%; margin-left:4%; margin-right:4%;">
       <tr>
+        <td style="width: 23%;">Markus&nbsp;Keller</td>
+        <td style="width: 23%;">Andrey&nbsp;Loskutov</td>
         <td style="width: 23%;">Dani&nbsp;Megert</td>
         <td style="width: 23%;">Sergey&nbsp;Prigogin</td>
+      </tr>
+      <tr>
         <td style="width: 23%;">Szymon&nbsp;Ptaszkiewicz</td>
+        <td style="width: 23%;">Lars&nbsp;Vogel</td>
+        <td style="width: 23%;">Stefan&nbsp;Xenos</td>
         <td style="width: 23%;">&nbsp;</td>
       </tr>
     </table>
