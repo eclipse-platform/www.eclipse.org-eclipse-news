@@ -155,7 +155,7 @@ ob_start();
         <td style="width: 23%;">&nbsp;</td>
       </tr>
     </table>
-    <h5>Platform UI (and Text)</h5>
+    <h5>Platform UI</h5>
     <table style="width:92%; margin-left:4%; margin-right:4%;">
       <tr>
         <td style="width: 23%;">Alexander&nbsp;Kurtakov</td>
