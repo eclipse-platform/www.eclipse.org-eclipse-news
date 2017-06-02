@@ -63,6 +63,8 @@ ob_start();
   
   
     <h3>Eclipse Oxygen Acknowledgements</h3>
+    
+    <p class="bg-danger">NOTE: This page is under development.</p>
 
     <p>The Platform Resources team would like to thank everyone who has helped by filing bugs, testing and providing patches. Specifically we would like to thank the following people who have
       helped improve the Resources components by their code contributions to this release: Mikael Barbero, Matthias Becker, Sopot Cela, Conrad Groth, Rüdiger Herrmann, Mickael Istria,
