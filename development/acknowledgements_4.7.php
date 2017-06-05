@@ -203,15 +203,15 @@ ob_start();
     <h5>Platform Resources</h5>
     <table style="width:92%; margin-left:4%; margin-right:4%;">
       <tr>
-        <td style="width: 23%;">Markus&nbsp;Keller</td>
         <td style="width: 23%;">Andrey&nbsp;Loskutov</td>
         <td style="width: 23%;">Dani&nbsp;Megert</td>
-        <td style="width: 23%;">Sergey&nbsp;Prigogin</td>
+        <td style="width: 23%;">Lars&nbsp;Vogel</td>
+        <td style="width: 23%;">Markus&nbsp;Keller</td>
       </tr>
       <tr>
-        <td style="width: 23%;">Szymon&nbsp;Ptaszkiewicz</td>
-        <td style="width: 23%;">Lars&nbsp;Vogel</td>
+        <td style="width: 23%;">Sergey&nbsp;Prigogin</td>
         <td style="width: 23%;">Stefan&nbsp;Xenos</td>
+        <td style="width: 23%;">Szymon&nbsp;Ptaszkiewicz</td>
         <td style="width: 23%;">&nbsp;</td>
       </tr>
     </table>
@@ -248,7 +248,7 @@ ob_start();
       </tr>
       <tr>
         <td style="width: 23%;">Szymon&nbsp;Ptaszkiewicz</td>
-        <td style="width: 23%;">&nbsp;</td>
+        <td style="width: 23%;">Vikas&nbsp;Chandra</td>
         <td style="width: 23%;">&nbsp;</td>
         <td style="width: 23%;">&nbsp;</td>
       </tr>
@@ -294,15 +294,15 @@ ob_start();
     <h4>Eclipse PDE</h4>
     <table style="width:92%; margin-left:4%; margin-right:4%;">
       <tr>
-        <td style="width: 23%;">Vikas&nbsp;Chandra</td>
         <td style="width: 23%;">Dani&nbsp;Megert</td>
         <td style="width: 23%;">Lars&nbsp;Vogel</td>
         <td style="width: 23%;">Markus&nbsp;Keller</td>
+        <td style="width: 23%;">Martin&nbsp;Karpisek</td>
       </tr>
       <tr>
         <td style="width: 23%;">Olivier&nbsp;Thomann</td>
         <td style="width: 23%;">Peter&nbsp;Nehrer</td>
-        <td style="width: 23%;">Martin&nbsp;Karpisek</td>
+        <td style="width: 23%;">Vikas&nbsp;Chandra</td>
         <td style="width: 23%;">&nbsp;</td>
       </tr>
     </table>
