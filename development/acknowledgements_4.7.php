@@ -134,6 +134,10 @@ ob_start();
         Abel Hegedus, Alexander Kurtakov, Andrey Loskutov, Brian de Alwis, David Weiser, Elena Laskavaia, Fabian Pfaff, Gunnar Wagenknecht, Julian Honnen, Kevin Townsend, Marc-André Laperle, Matthias Becker, Mickael Istria, Mikaël Barbero, Niklas Mehner, Olivier Prouvost, Patrik Suzzi, Sarika Sinha, Sergey Prigogin, Sopot Cela, Sravan Kumar Lakkimsetti, Stefan Xenos, Thomas Watson, Torbjörn Svensson and Vincenzo Caselli.
       </p>
 
+    <p>The Equinox team would like to thank all the contributors that helped improve the project by filing bug reports and enhancement requests.  We also would like to thank the community of developers that have contributed to the Equinox code base this release:
+       Alena Laskavaia, Andreas Sewe, Andrey Loskutov, Anjum Fatima, Carsten Reckord, David Weiser, Dirk Fauth, Elena Laskavaia, Fabian Pfaff, Jens Kübler, Juan Gonzalez, Julien HENRY, Karsten Thoms, Lars Vogel, Martin Oberhuber, Matthias Becker, Mickael Istria, Mikael Barbero, Mykola Nikishov, Nitin Dahyabhai, Roland Grunberg, Sergey Prigogin, Simon Scholz, Sravan Kumar Lakkimsetti, Szymon Ptaszkiewicz, Till Brychcy
+      </p>
+
     <h3>Active Committers</h3>
      
     <p>This Eclipse release was brought to you by the following committers. These committers were active at the time of the release (that is, one or more commits since previous
@@ -304,6 +308,21 @@ ob_start();
         <td style="width: 23%;">Peter&nbsp;Nehrer</td>
         <td style="width: 23%;">Vikas&nbsp;Chandra</td>
         <td style="width: 23%;">&nbsp;</td>
+      </tr>
+    </table>
+    <h4>Equinox</h4>
+    <table style="width:92%; margin-left:4%; margin-right:4%;">
+      <tr>
+        <td style="width: 23%;">Alexander&nbsp;Kurtakov</td>
+        <td style="width: 23%;">Arun&nbsp;Thondapu</td>
+        <td style="width: 23%;">BJ&nbsp;Hargrave</td>
+        <td style="width: 23%;">Markus&nbsp;Keller</td>
+      </tr>
+      <tr>
+        <td style="width: 23%;">Pascal&nbsp;Rapicault</td>
+        <td style="width: 23%;">Raymond&nbsp;Auge</td>
+        <td style="width: 23%;">Stefan&nbsp;Xenos</td>
+        <td style="width: 23%;">Thomas&nbsp;Watson</td>
       </tr>
     </table>
   </div>
