@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		Dani Megert
-	# Date:			2017-06-05
+	# Date:			2017-06-07
 	#
 	# Description: Eclipse project Oxygen release freeze plan
 	#
@@ -41,7 +41,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>June 5 - Start RC4 fix pass.</b></p>
+			<p><b>June 7 - Release Candidate 4 build.</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -188,7 +188,7 @@ ob_start();
 	            <td height="20">&nbsp;&nbsp;</td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
-	          <tr class="current">
+	          <tr>
 	            <td height="20"></td>
 	            <td align="right" height="20">5</td>
 	            <td align="right" height="20">Mon 08:00 EDT</td>
@@ -197,7 +197,7 @@ ob_start();
 	            <td height="20">&nbsp;&nbsp;<b><a href="#FixPassAfterRC3"><img src="../images/jump_in_black.gif" border="0" hspace="3" width="12" height="10"> details</a></b></td>
 	            <td height="20">&nbsp;&nbsp;</td>
 	          </tr>
-	          <tr>
+	          <tr class="current">
 	            <td height="20"></td>
 	            <td align="right" height="20">7</td>
 	            <td align="right" height="20">Wed 20:00 EDT</td>
