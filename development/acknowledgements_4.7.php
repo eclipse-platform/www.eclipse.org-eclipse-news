@@ -123,7 +123,7 @@ ob_start();
     </p>
 
 
-    <p>JDT UI sends thanks to everyone
+    <p>The JDT UI team sends thanks to everyone
       who filed good enhancement requests, helped to improve the quality by testing and filing good bug reports, and provided answers on JDT forums/newsgroups.
       Special thanks to those who contributed code:
       Bj&ouml;rn Michael, Conrad Groth, Jonah Graham, Lars Vogel, Leo Ufimtsev, Mateusz Matela, Matthias Becker, Mickael Istria, Olivier Thomann, Sergey Prigogin, Stefan Xenos, Till Brychcy and Vikas Chandra.
