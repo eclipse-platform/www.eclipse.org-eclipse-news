@@ -135,7 +135,7 @@ ob_start();
       </p>
 
     <p>The Equinox team would like to thank all the contributors that helped improve the project by filing bug reports and enhancement requests.  We also would like to thank the community of developers that have contributed to the Equinox code base this release:
-       Andreas Sewe, Andrey Loskutov, Anjum Fatima, Carsten Reckord, David Weiser, Dirk Fauth, Elena Laskavaia, Fabian Pfaff, Jens Kübler, Juan Gonzalez, Julien Henry, Karsten Thoms, Lars Vogel, Martin Oberhuber, Matthias Becker, Mickael Istria, Mikael Barbero, Mykola Nikishov, Nitin Dahyabhai, Roland Grunberg, Sergey Prigogin, Simon Scholz, Sravan Kumar Lakkimsetti, Szymon Ptaszkiewicz, Till Brychcy
+       Andreas Sewe, Andrey Loskutov, Anjum Fatima, Carsten Reckord, David Weiser, Dirk Fauth, Elena Laskavaia, Fabian Pfaff, Jens Kübler, Juan Gonzalez, Julien Henry, Karsten Thoms, Lars Vogel, Martin Oberhuber, Matthias Becker, Mickael Istria, Mikael Barbero, Mykola Nikishov, Nitin Dahyabhai, Roland Grunberg, Sergey Prigogin, Simon Scholz, Sravan Kumar Lakkimsetti, Szymon Ptaszkiewicz and Till Brychcy.
       </p>
 
     <h3>Active Committers</h3>
