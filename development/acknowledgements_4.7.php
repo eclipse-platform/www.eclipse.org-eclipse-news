@@ -106,7 +106,7 @@ ob_start();
 
     <p>The JDT Core team would like to thank everyone who has helped us improve quality by testing and filing good bug reports. Special thanks to the following list of
       people, in alphabetical order, who contributed code to the project: Alexander Rookey, Andreas Sewe, Andrey Loskutov, Anton Tanasenko, Brian , Fabian Steeg, 
-      Igor Fedorenko, Karsten Thoms, Lars Vogel, Sergey Prigogin, Timo Kinnunen. 
+      Igor Fedorenko, Karsten Thoms, Lars Vogel, Sergey Prigogin and Timo Kinnunen. 
       We would also like to acknowledge Sravan Kumar Lakkimsetti for all the build and releng support.
     </p>
 
