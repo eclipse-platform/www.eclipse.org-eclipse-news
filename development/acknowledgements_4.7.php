@@ -65,8 +65,8 @@ ob_start();
     <h3>Eclipse Oxygen Acknowledgements</h3>
     
     <p>The entire Eclipse Project team would like to thank the Eclipse Foundation staff for their tireless efforts, including: Denis Roy, Matt Ward, Fred Gurr and Mikael Barbero for not only keeping all
-      that infrastructure going, but also constantly improving it; Sharon Corbett for guiding us through the Eclipse legal process; Stephanie Swart and Wayne Beaton for giving us process support, and improved tools to
-      simplify and manage our development process; Ian Skerrett and Roxanne Joncas for help with marketing the Eclipse release and providing Logos and artwork; and Mike Milinkovich for running the whole show. In particular, we appreciate the Eclipse Foundation providing development resources through the new <a href="https://eclipse.org/contribute/dev_program.php">Friend of Eclipse Enhancement Program (FEEP)</a>.</p>
+      that infrastructure going, but also constantly improving it; Sharon Corbett for guiding us through the Eclipse legal process; Stephanie Swart and Wayne Beaton for giving us process support and improved tools to
+      simplify and manage our development process; Ian Skerrett and Roxanne Joncas for help with marketing the Eclipse release and providing Logos and artwork; and Mike Milinkovich for running the whole show. In particular, we appreciate the Eclipse Foundation for providing development resources through the new <a href="https://eclipse.org/contribute/dev_program.php">Friend of Eclipse Enhancement Program (FEEP)</a>.</p>
     <p>
       We would also like to thank the users and adopters who support our efforts, through a range of activities, including early testing, being a <a href="https://eclipse.org/donate/">Friend of
         Eclipse</a>, contracting special work, or outright employment.
