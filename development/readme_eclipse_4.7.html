@@ -108,8 +108,6 @@ after the release.
                 <li><a href="#mozTocId69222">Eclipse plug-in based on the SWT Browser throws exception</a></li>
                 <li><a href="#mozTocId125696">SWT Browser widget does not work on some recent Linux versions e.g Ubuntu 16.04</a></li>
                 <li><a href="#mozTocId519796">SWT Browser widget crashes when run with XULRunner 31 run-time (Linux only)</a></li>
-                <li><a href="#mozTocId664509">IME conversion problem (Solaris GTK only)</a></li>
-                <li><a href="#mozTocId516202">Eclipse won't start (Linux GTK PPC only)</a></li>
                 <li><a href="#mozTocId238090">Eclipse icon is duplicated in task-bar on Windows</a></li>
                 <li><a href="#mozTocId414883">BIDI Segments in Text controls</a></li>
                 <li><a href="#mozTocId518357">Block Selection functionality provided by StyledText is not BIDI aware</a></li>
@@ -175,12 +173,6 @@ after the release.
             <li><a href="#mozTocId620725">Specifying the Java virtual machine</a></li>
             <li><a href="#mozTocId928700">Mac OS X</a></li>
             <li><a href="#mozTocId221199">Shared Install</a></li>
-            <li><a href="#mozTocId317919">Special Operating System Requirements</a>
-              <ol>
-                <li><a href="#mozTocId914102">AIX</a></li>
-                <li><a href="#mozTocId383156">HPUX</a></li>
-                <li><a href="#mozTocId2011">Solaris</a></li>
-              </ol></li>
           </ol></li>
         <li><a href="#mozTocId575572">Upgrading Workspace from a Previous Release</a>
           <ol>
@@ -832,28 +824,6 @@ after the release.
       class="mozTocH4"
       name="mozTocId519796"> Creation of an SWT Mozilla style Browser with XULRunner 31 run-time crashes on Linux. The workaround is to use other supported XULRunner run-times or webkit which is
       the default on Linux. (bug </a><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=467646">467646</a>)
-  </p>
-  <h4>
-    <a
-      class="mozTocH4"
-      name="mozTocId664509">IME conversion problem (Solaris GTK only)</a>
-  </h4>
-  <p>
-    <a
-      class="mozTocH4"
-      name="mozTocId664509"> When typing Japanese text, the conversion to Kanji must be done one ideogram at a time. (bug </a><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=226636">226636</a>)
-  </p>
-  <h4>
-    <a
-      class="mozTocH4"
-      name="mozTocId516202">Eclipse won't start (Linux GTK PPC only)</a>
-  </h4>
-  <p>
-    <a
-      class="mozTocH4"
-      name="mozTocId516202"> Eclipse fails to create a lock file with reason "No locks available". To launch eclipse you must disable file locking using the osgi.locking property. For example, you
-      could launch eclipse as follows: <br /> <code>eclipse -vmargs -Dosgi.locking=none</code>
-    </a>
   </p>
   <h4>
     <a
@@ -1596,79 +1566,6 @@ after the release.
       name="mozTocId221199"> The startup speed of a shared install can be improved if proper cache information is stored in the shared install area. To achieve this, after unzipping Eclipse
       distribution, run Eclipse once with the "-initialize" option from an account that has a write access to the install directory. See </a><a
       href="%20http://help.eclipse.org/luna/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Freference%2Fmisc%2Fmulti_user_installs.html">shared installs</a> in Eclipse Help for more information.
-  </p>
-  <h3 id="SpecialOSRequirements">
-    <a
-      class="mozTocH3"
-      name="mozTocId317919">Special Operating System Requirements</a>
-  </h3>
-  <h4 id="SpecialOSRequirementsAIX">
-    <a
-      class="mozTocH4"
-      name="mozTocId914102">AIX</a>
-  </h4>
-  <p>
-    <a
-      class="mozTocH4"
-      name="mozTocId914102">In order for this version of Eclipse to run, GTK2 libraries and their dependencies must be installed and available on the library path (i.e. LIBPATH). These libraries
-      are available from http://www-03.ibm.com/systems/power/software/aix/linux/toolbox/alpha.html . To determine the full set of libraries required for installation, download and install the "gtk2"
-      rpm, at which time any missing dependencies will be listed. These dependencies should be available for download from the same site.</a>
-  </p>
-  <p>
-    <a
-      class="mozTocH4"
-      name="mozTocId914102">You can run Eclipse using the VM from IBM Developer Kit for AIX versions 5 and 6. The IBM Developer Kit for AIX can be downloaded from:
-      https://www.ibm.com/developerworks/java/jdk/aix/service.html</a>
-  </p>
-  <h4 id="SpecialOSRequirementsHPUX">
-    <a
-      class="mozTocH4"
-      name="mozTocId383156">HPUX</a>
-  </h4>
-  <p>
-    <a
-      class="mozTocH4"
-      name="mozTocId383156">In order for this version of Eclipse to run, GTK2 libraries must be installed and available on the library path (i.e. LD_LIBRARY_PATH).</a>
-  </p>
-  <p>
-    <a
-      class="mozTocH4"
-      name="mozTocId383156">For example, export LD_LIBRARY_PATH=/opt/gtk_64bit/lib/hpux64/</a>
-  </p>
-  <p>
-    <a
-      class="mozTocH4"
-      name="mozTocId383156">To prevent errors with workspace locking, the following command line should be used to launch Eclipse:</a>
-  </p>
-  <p>
-    <a
-      class="mozTocH4"
-      name="mozTocId383156">"eclipse -vmargs -Dosgi.locking=none"</a>
-  </p>
-  <p>
-    <a
-      class="mozTocH4"
-      name="mozTocId383156">Otherwise, eclipse may fail to create a lock file with reason: "Workspace in use or cannot be created, choose a different one."</a>
-  </p>
-  <p>
-    <a
-      class="mozTocH4"
-      name="mozTocId383156">Note you might also need to add the -d64 option to the vmargs when using an Oracle JRE. (-vmargs -d64)</a>
-  </p>
-  <h4 id="SpecialOSRequirementsSolaris">
-    <a
-      class="mozTocH4"
-      name="mozTocId2011">Solaris</a>
-  </h4>
-  <p>
-    <a
-      class="mozTocH4"
-      name="mozTocId2011">This version of Eclipse works best with the latest version of GTK+ 2, but the earliest version supported is GTK+ 2.10.</a>
-  </p>
-  <p>
-    <a
-      class="mozTocH4"
-      name="mozTocId2011">The GTK libraries must be available on the library path (i.e. LD_LIBRARY_PATH).</a>
   </p>
   <h2 id="Upgrading">
     <a
