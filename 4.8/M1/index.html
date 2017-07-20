@@ -259,11 +259,11 @@ table.news tr td.content {vertical-align: top;}
   </tr>
 
   <tr id="generic-editor-autoeditstrategies">
-    <td class="title">Contribute auto-edit strategies to the Generic Editor</td>
+    <td class="title">Contribute auto-edit strategies and reconcilers to the Generic Editor</td>
     <td class="content">
-      The Generic Editor now supports a new extension point to add an <code>org.eclipse.jface.text.IAutoEditStrategy</code>
-      for a provided content-type.<br/>
-      Typical use cases would be auto-indent, auto-closing braces or other syntax rules...
+      The Generic Editor now supports two new extension points to add an <code>org.eclipse.jface.text.IAutoEditStrategy</code>
+       or <code>org.eclipse.jface.text.reconciler.IReconciler</code> respectively for a provided content-type.<br/>
+      Typical use cases for auto-edit strategies would be auto-indent, auto-closing braces or other syntax rules...
       <pre>
 &lt;extension point="org.eclipse.ui.genericeditor.autoEditStrategies">
     &lt;autoEditStrategy
@@ -271,6 +271,15 @@ table.news tr td.content {vertical-align: top;}
           contentType="org.eclipse.core.runtime.xml"/>
 &lt;/extension>
       </pre>
+      Possible use cases for reconcilers would be code folding or a spell checker...
+      <pre>
+&lt;extension point="org.eclipse.ui.genericeditor.reconcilers">
+    &lt;reconciler
+          class="org.eclipse.ui.genericeditor.demo.TagFoldingReconciler"
+          contentType="org.eclipse.core.runtime.xml"/>
+&lt;/extension>
+      </pre>
+      </p>
     </td>
   </tr>
 
