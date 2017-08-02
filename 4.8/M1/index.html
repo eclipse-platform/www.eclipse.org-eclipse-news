@@ -301,7 +301,25 @@ table.news tr td.content {vertical-align: top;}
       </pre>
     </td>
   </tr>
-
+  
+  <tr id="dropped-xulr-support">
+    <td class="title">Dropped support for XULRunner</td>
+    <td class="content">
+    	  Eclipse/SWT has dropped support for XULRunner as a browser rendering engine on all platforms.
+    	  <p>
+    	  	<code>SWT.MOZILLA</code> style is deprecated. When it is used in the SWT Browser constructor <code>org.eclipse.swt.browser.Browser.Browser(Composite, int)</code>, it'll be ignored and 
+    	  	the browser will be created with <code>SWT.NONE</code> style, if no other style is specified.
+    	  </p>
+    </td>
+  </tr>
+  
+  <tr id="bg-searchbox">
+    <td class="title">Background color for search box on Mac</td>
+    <td class="content">
+      <code>Text.setBackground(Color)</code> can be used to set the background color of a Text widget with <code>SWT.SEARCH</code> style on Mac as well. 
+      This already works on Windows and GTK.
+    </td>
+  </tr>
 
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
