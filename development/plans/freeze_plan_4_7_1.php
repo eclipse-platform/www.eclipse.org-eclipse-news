@@ -16,7 +16,7 @@
 	
 	#
 	# Begin: page-specific settings.  Change these. 
-	$pageTitle 		= "Eclipse Neon Update 1 (4.7.1) Endgame Plan";
+	$pageTitle 		= "Eclipse Oxygen Update 1 (4.7.1) Endgame Plan";
 	$pageKeywords	= "eclipse, 4.7.1, Update 1, milestone, schedule, endgame";
 	$pageAuthor		= "Dani Megert";
 	
@@ -178,30 +178,30 @@ ob_start();
 			<ul>
 			<li><a href="http://www.eclipse.org/eclipse/platform-releng/buildSchedule.html">Build Schedule</a> - details on build times.</li>
 			<li><a href="http://wiki.eclipse.org/Eclipse/Release_checklist">Eclipse Release Checklist</a> - lists various things that need to be checked before each release.</li>
-			<li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse">Eclipse Project Neon Plan</a></li>
-			<li><a href="http://wiki.eclipse.org/index.php/Neon">Neon Simultaneous Release</a></li>
+			<li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse">Eclipse Project Oxygen Plan</a></li>
+			<li><a href="http://wiki.eclipse.org/index.php/Oxygen">Oxygen Simultaneous Release</a></li>
 			</ul>
       	</div>
 		<div class="homeitem3col">
 			<h3>What is the game plan?</h3>
 			<p> 
-	 		The Eclipse Neon Service Release 1 ("Neon Update 1 (4.7.1)") endgame involves building 
+	 		The Eclipse Oxygen Service Release 1 ("Oxygen Update 1 (4.7.1)") endgame involves building 
 	        a series of release candidates leading to the Eclipse project's contribution to the
-	        Neon Update 1 (4.7.1) release. The Eclipse project version number for this release is 4.7.1.
+	        Oxygen Update 1 (4.7.1) release. The Eclipse project version number for this release is 4.7.1.
 	        By its nature, this maintenance release contains fixes to a small number 
-	        of serious problems found in the June 2017 Neon (4.7) release. We make and verify each 
+	        of serious problems found in the June 2017 Oxygen (4.7) release. We make and verify each 
 	        fix carefully, so that we do not need to tie up the entire development 
 	        team in time-consuming test passes. As always, we welcome help from the 
-	        community with testing the release candidates. By default, Neon Update 1 (4.7.1)
-	        is supposed to work exactly like the initial Neon (4.7) release except for the problems we intended 
-	        to fix. All problems fixed in Neon Update 1 (4.7.1) are in the Eclipse bugzilla database 
+	        community with testing the release candidates. By default, Oxygen Update 1 (4.7.1)
+	        is supposed to work exactly like the initial Oxygen (4.7) release except for the problems we intended 
+	        to fix. All problems fixed in Oxygen Update 1 (4.7.1) are in the Eclipse bugzilla database 
 	        and flagged with Target Milestone &quot;4.7.1&quot; (query bugzilla for 
 	        the <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;resolution=FIXED;target_milestone=4.7.1;product=Equinox;product=JDT;product=PDE;product=Platform;classification=Eclipse;classification=RT">complete 
-	        list of bugs fixed in Neon Update 1 (4.7.1)</a>). So we're most interested in identifying 
+	        list of bugs fixed in Oxygen Update 1 (4.7.1)</a>). So we're most interested in identifying 
 	        regressions where we've changed something that we did not intend to.
 	        </p> 
 
-	        <p>General announcements during the Neon Update 1 (4.7.1) endgame are posted to the 
+	        <p>General announcements during the Oxygen Update 1 (4.7.1) endgame are posted to the 
 	        <a href="http://dev.eclipse.org/mailman/listinfo/platform-releng-dev">platform-releng-dev@eclipse.org</a> 
 		    developer mailing list. Anyone participating in the endgame should be subscribed 
 			to this list, and should direct any general questions and comments about the process 
@@ -237,7 +237,7 @@ ob_start();
 		   <strong>RC2</strong>
 		   <p>
 	        Release candidate containing fixes for the majority of known outstanding 
-	        defects that we intend to fix for Neon Update 1 (4.7.1). At the end of RC2 build, 
+	        defects that we intend to fix for Oxygen Update 1 (4.7.1). At the end of RC2 build, 
 	        there should not be any open defects tagged 4.7.1. All fixes submitted 
 	        to maintenance stream builds must have a component lead or PMC vote on the bug report,
 	        and the fix must be reviewed by an additional committer (any committer other than
@@ -251,7 +251,7 @@ ob_start();
 	
 	        <strong>RC3</strong>
 	        <p>Release candidate containing fixes for all known outstanding defects
-	        that we intend to fix for Neon Update 1 (4.7.1). All fixes submitted to RC3 must have a PMC vote on the bug report,
+	        that we intend to fix for Oxygen Update 1 (4.7.1). All fixes submitted to RC3 must have a PMC vote on the bug report,
 	        and the fix must be reviewed by an additional committer (any committer other than
 	        the one who made the fix).
 	        Ensure that all feature/plugin versions have been consistently incremented when needed.
@@ -273,11 +273,11 @@ ob_start();
 	         <p>No test pass is scheduled unless significant contributions occurred. If so, 
 	         then Thursday would be elected for a one day test pass</p>
 	
-			<strong>Neon Update 1 (4.7.1) Release</strong>
-			<p>The Neon Update 1 (4.7.1) release should be complete and available for download by 
-	              the end of September 2017 as part of the <a href="http://wiki.eclipse.org/Neon">Neon 
+			<strong>Oxygen Update 1 (4.7.1) Release</strong>
+			<p>The Oxygen Update 1 (4.7.1) release should be complete and available for download by 
+	              the end of September 2017 as part of the <a href="http://wiki.eclipse.org/Oxygen">Oxygen 
 	              coordinated service release</a> . If product teams intending 
-	              to ship on Neon Update 1 (4.7.1) uncover further serious defects during the endgame, 
+	              to ship on Oxygen Update 1 (4.7.1) uncover further serious defects during the endgame, 
 	              we may schedule additional release candidate builds to incorporate fixes.
 			</p>    
 		</div>
