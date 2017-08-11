@@ -489,717 +489,717 @@ In the table below, the &quot;4.8 minimum execution environment&quot;
       <td width="60"><div align="center"><p align="center"><b>4.8<br/>minimum<br/>execution<br/>environment</b></p></div></td>
     </tr>
     <tr>
-    <td>com.ibm.icu</td>
-    <td><div align="center">1.6</div></td>
-  </tr>
-  <tr>
-    <td>com.jcraft.jsch</td>
-    <td><div align="center">1.5</div></td>
-  </tr>
-  <tr>
-    <td>com.sun.el</td>
-    <td><div align="center">1.5</div></td>
-  </tr>
-  <tr>
-    <td>javax.annotation</td>
-    <td><div align="center">1.6</div></td>
-  </tr>
-  <tr>
-    <td>javax.el</td>
-    <td><div align="center">1.5</div></td>
-  </tr>
-  <tr>
-    <td>javax.inject</td>
-    <td><div align="center">1.5</div></td>
-  </tr>
-  <tr>
-    <td>javax.servlet</td>
-    <td><div align="center">1.7</div></td>
-  </tr>
-  <tr>
-    <td>javax.servlet.jsp</td>
-    <td><div align="center">1.6</div></td>
-  </tr>
-  <tr>
-    <td>org.apache.ant</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.apache.batik.css</td>
-    <td><div align="center">1.6</div></td>
-  </tr>
-  <tr>
-    <td>org.apache.batik.util</td>
-    <td><div align="center">1.6</div></td>
-  </tr>
-  <tr>
-    <td>org.apache.batik.util.gui</td>
-    <td><div align="center">1.6</div></td>
-  </tr>
-  <tr>
-    <td>org.apache.commons.codec</td>
-    <td><div align="center">1.6</div></td>
-  </tr>
-  <tr>
-    <td>org.apache.commons.jxpath</td>
-    <td><div align="center">1.3</div></td>
-  </tr>
-  <tr>
-    <td>org.apache.commons.logging</td>
-    <td><div align="center">F1.0</div></td>
-  </tr>
-  <tr>
-    <td>org.apache.felix.gogo.command</td>
-    <td><div align="center">not specified</div></td>
-  </tr>
-  <tr>
-    <td>org.apache.felix.gogo.runtime</td>
-    <td><div align="center">not specified</div></td>
-  </tr>
-  <tr>
-    <td>org.apache.felix.gogo.shell</td>
-    <td><div align="center">not specified</div></td>
-  </tr>
-  <tr>
-    <td>org.apache.felix.scr</td>
-    <td><div align="center">1.6</div></td>
-  </tr>
-  <tr>
-    <td>org.apache.httpcomponents.httpclient</td>
-    <td><div align="center">1.6</div></td>
-  </tr>
-  <tr>
-    <td>org.apache.httpcomponents.httpcore</td>
-    <td><div align="center">1.6</div></td>
-  </tr>
-  <tr>
-    <td>org.apache.jasper.glassfish</td>
-    <td><div align="center">1.6</div></td>
-  </tr>
-  <tr>
-    <td>org.apache.lucene.analyzers-common</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.apache.lucene.analyzers-smartcn</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.apache.lucene.core</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.apache.lucene.misc</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.ant.core</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.ant.launching</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.ant.ui</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.compare</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.compare.core</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.compare.win32</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.core.commands</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.core.contenttype</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.core.databinding</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.core.databinding.beans</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.core.databinding.observable</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.core.databinding.property</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.core.expressions</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.core.externaltools</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.core.filebuffers</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.core.filesystem</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.core.jobs</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.core.net</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.core.resources</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.core.runtime</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.core.variables</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.cvs</td>
-    <td><div align="center">not specified</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.debug.core</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.debug.ui</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.e4.core.commands</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.e4.core.contexts</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.e4.core.di</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.e4.core.di.annotations</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.e4.core.di.extensions</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.e4.core.di.extensions.supplier</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.e4.core.services</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.e4.emf.xpath</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.e4.ui.bindings</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.e4.ui.css.core</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.e4.ui.css.swt</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.e4.ui.css.swt.theme</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.e4.ui.di</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.e4.ui.dialogs</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.e4.ui.model.workbench</td>
-    <td><div align="center">1.5</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.e4.ui.services</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.e4.ui.widgets</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.e4.ui.workbench</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.e4.ui.workbench.addons.swt</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.e4.ui.workbench.renderers.swt</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.e4.ui.workbench.swt</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.e4.ui.workbench3</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.emf.common</td>
-    <td><div align="center">1.5</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.emf.ecore</td>
-    <td><div align="center">1.5</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.emf.ecore.change</td>
-    <td><div align="center">1.5</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.emf.ecore.xmi</td>
-    <td><div align="center">1.5</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.help</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.help.base</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.help.ui</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.help.webapp</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.jdt</td>
-    <td><div align="center">not specified</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.jdt.annotation</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.jdt.apt.core</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.jdt.apt.pluggable.core</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.jdt.apt.ui</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.jdt.compiler.apt</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.jdt.compiler.tool</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.jdt.core</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.jdt.core.manipulation</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.jdt.debug</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.jdt.debug.ui</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.jdt.doc.isv</td>
-    <td><div align="center">not specified</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.jdt.doc.user</td>
-    <td><div align="center">not specified</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.jdt.junit</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.jdt.junit.core</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.jdt.junit.runtime</td>
-    <td><div align="center">1.4</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.jdt.junit4.runtime</td>
-    <td><div align="center">1.5</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.jdt.launching</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.jdt.ui</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.jface</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.jface.databinding</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.jface.text</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.jsch.core</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.jsch.ui</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.ltk.core.refactoring</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.ltk.ui.refactoring</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.pde</td>
-    <td><div align="center">not specified</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.pde.api.tools</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.pde.api.tools.annotations</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.pde.api.tools.ui</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.pde.build</td>
-    <td><div align="center">1.6</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.pde.core</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.pde.doc.user</td>
-    <td><div align="center">not specified</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.pde.ds.annotations</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.pde.ds.core</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.pde.ds.lib</td>
-    <td><div align="center">1.5</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.pde.ds.ui</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.pde.ds1_2.lib</td>
-    <td><div align="center">1.5</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.pde.genericeditor.extension</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.pde.junit.runtime</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.pde.launching</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.pde.runtime</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.pde.ua.core</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.pde.ua.ui</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.pde.ui</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.pde.ui.templates</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.platform</td>
-    <td><div align="center">F1.0</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.platform.doc.isv</td>
-    <td><div align="center">not specified</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.platform.doc.user</td>
-    <td><div align="center">not specified</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.rcp</td>
-    <td><div align="center">not specified</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.sdk</td>
-    <td><div align="center">not specified</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.search</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.swt</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.team.core</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.team.cvs.core</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.team.cvs.ssh2</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.team.cvs.ui</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.team.genericeditor.diff.extension</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.team.ui</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.text</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.tools.layout.spy</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.ui</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.ui.browser</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.ui.cheatsheets</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.ui.console</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.ui.editors</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.ui.externaltools</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.ui.forms</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.ui.genericeditor</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.ui.ide</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.ui.ide.application</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.ui.intro</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.ui.intro.quicklinks</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.ui.intro.universal</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.ui.monitoring</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.ui.navigator</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.ui.navigator.resources</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.ui.net</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.ui.themes</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.ui.trace</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.ui.views</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.ui.views.log</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.ui.views.properties.tabbed</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.ui.win32</td>
-    <td><div align="center">1.7</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.ui.workbench</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.ui.workbench.texteditor</td>
-    <td><div align="center">1.8</div></td>
-  </tr>
-  <tr>
-    <td>org.eclipse.update.configurator</td>
-    <td><div align="center">F1.0</div></td>
-  </tr>
-  <tr>
-    <td>org.hamcrest.core</td>
-    <td><div align="center">1.5</div></td>
-  </tr>
-  <tr>
-    <td>org.junit</td>
-    <td><div align="center">1.5</div></td>
-  </tr>
-  <tr>
-    <td>org.objectweb.asm</td>
-    <td><div align="center">1.5</div></td>
-  </tr>
-  <tr>
-    <td>org.objectweb.asm.tree</td>
-    <td><div align="center">1.5</div></td>
-  </tr>
-  <tr>
-    <td>org.sat4j.core</td>
-    <td><div align="center">1.5</div></td>
-  </tr>
-  <tr>
-    <td>org.sat4j.pb</td>
-    <td><div align="center">1.5</div></td>
-  </tr>
-  <tr>
-    <td>org.tukaani.xz</td>
-    <td><div align="center">1.4</div></td>
-  </tr>
-  <tr>
-    <td>org.w3c.css.sac</td>
-    <td><div align="center">F1.0</div></td>
-  </tr>
-  <tr>
-    <td>org.w3c.dom.events</td>
-    <td><div align="center">1.3</div></td>
-  </tr>
-  <tr>
-    <td>org.w3c.dom.smil</td>
-    <td><div align="center">F1.0</div></td>
-  </tr>
-  <tr>
-    <td>org.w3c.dom.svg</td>
-    <td><div align="center">F1.0</div></td>
-  </tr>
+      <td>com.ibm.icu</td>
+      <td><div align="center">1.6</div></td>
+    </tr>
+    <tr>
+      <td>com.jcraft.jsch</td>
+      <td><div align="center">osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.5))"</div></td>
+    </tr>
+    <tr>
+      <td>com.sun.el</td>
+      <td><div align="center">1.5</div></td>
+    </tr>
+    <tr>
+      <td>javax.annotation</td>
+      <td><div align="center">1.6</div></td>
+    </tr>
+    <tr>
+      <td>javax.el</td>
+      <td><div align="center">1.5</div></td>
+    </tr>
+    <tr>
+      <td>javax.inject</td>
+      <td><div align="center">1.5</div></td>
+    </tr>
+    <tr>
+      <td>javax.servlet</td>
+      <td><div align="center">1.7</div></td>
+    </tr>
+    <tr>
+      <td>javax.servlet.jsp</td>
+      <td><div align="center">1.6</div></td>
+    </tr>
+    <tr>
+      <td>org.apache.ant</td>
+      <td><div align="center">osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"</div></td>
+    </tr>
+    <tr>
+      <td>org.apache.batik.css</td>
+      <td><div align="center">osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.6))"</div></td>
+    </tr>
+    <tr>
+      <td>org.apache.batik.util</td>
+      <td><div align="center">osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.6))"</div></td>
+    </tr>
+    <tr>
+      <td>org.apache.batik.util.gui</td>
+      <td><div align="center">osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.6))"</div></td>
+    </tr>
+    <tr>
+      <td>org.apache.commons.codec</td>
+      <td><div align="center">osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.6))"</div></td>
+    </tr>
+    <tr>
+      <td>org.apache.commons.jxpath</td>
+      <td><div align="center">1.3</div></td>
+    </tr>
+    <tr>
+      <td>org.apache.commons.logging</td>
+      <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
+      <td>org.apache.felix.gogo.command</td>
+      <td><div align="center">not specified</div></td>
+    </tr>
+    <tr>
+      <td>org.apache.felix.gogo.runtime</td>
+      <td><div align="center">not specified</div></td>
+    </tr>
+    <tr>
+      <td>org.apache.felix.gogo.shell</td>
+      <td><div align="center">not specified</div></td>
+    </tr>
+    <tr>
+      <td>org.apache.felix.scr</td>
+      <td><div align="center">osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.6))"</div></td>
+    </tr>
+    <tr>
+      <td>org.apache.httpcomponents.httpclient</td>
+      <td><div align="center">osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.6))"</div></td>
+    </tr>
+    <tr>
+      <td>org.apache.httpcomponents.httpcore</td>
+      <td><div align="center">osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.6))"</div></td>
+    </tr>
+    <tr>
+      <td>org.apache.jasper.glassfish</td>
+      <td><div align="center">1.6</div></td>
+    </tr>
+    <tr>
+      <td>org.apache.lucene.analyzers-common</td>
+      <td><div align="center">osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"</div></td>
+    </tr>
+    <tr>
+      <td>org.apache.lucene.analyzers-smartcn</td>
+      <td><div align="center">osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"</div></td>
+    </tr>
+    <tr>
+      <td>org.apache.lucene.core</td>
+      <td><div align="center">osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"</div></td>
+    </tr>
+    <tr>
+      <td>org.apache.lucene.misc</td>
+      <td><div align="center">osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ant.core</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ant.launching</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ant.ui</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.compare</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.compare.core</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.compare.win32</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.core.commands</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.core.contenttype</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.core.databinding</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.core.databinding.beans</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.core.databinding.observable</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.core.databinding.property</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.core.expressions</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.core.externaltools</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.core.filebuffers</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.core.filesystem</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.core.jobs</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.core.net</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.core.resources</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.core.runtime</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.core.variables</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.cvs</td>
+      <td><div align="center">not specified</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.debug.core</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.debug.ui</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.e4.core.commands</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.e4.core.contexts</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.e4.core.di</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.e4.core.di.annotations</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.e4.core.di.extensions</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.e4.core.di.extensions.supplier</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.e4.core.services</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.e4.emf.xpath</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.e4.ui.bindings</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.e4.ui.css.core</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.e4.ui.css.swt</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.e4.ui.css.swt.theme</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.e4.ui.di</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.e4.ui.dialogs</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.e4.ui.model.workbench</td>
+      <td><div align="center">1.5</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.e4.ui.services</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.e4.ui.widgets</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.e4.ui.workbench</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.e4.ui.workbench.addons.swt</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.e4.ui.workbench.renderers.swt</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.e4.ui.workbench.swt</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.e4.ui.workbench3</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.emf.common</td>
+      <td><div align="center">1.5</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.emf.ecore</td>
+      <td><div align="center">1.5</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.emf.ecore.change</td>
+      <td><div align="center">1.5</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.emf.ecore.xmi</td>
+      <td><div align="center">1.5</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.help</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.help.base</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.help.ui</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.help.webapp</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jdt</td>
+      <td><div align="center">not specified</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jdt.annotation</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jdt.apt.core</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jdt.apt.pluggable.core</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jdt.apt.ui</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jdt.compiler.apt</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jdt.compiler.tool</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jdt.core</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jdt.core.manipulation</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jdt.debug</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jdt.debug.ui</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jdt.doc.isv</td>
+      <td><div align="center">not specified</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jdt.doc.user</td>
+      <td><div align="center">not specified</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jdt.junit</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jdt.junit.core</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jdt.junit.runtime</td>
+      <td><div align="center">1.4</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jdt.junit4.runtime</td>
+      <td><div align="center">1.5</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jdt.launching</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jdt.ui</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jface</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jface.databinding</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jface.text</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jsch.core</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.jsch.ui</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ltk.core.refactoring</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ltk.ui.refactoring</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.pde</td>
+      <td><div align="center">not specified</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.pde.api.tools</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.pde.api.tools.annotations</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.pde.api.tools.ui</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.pde.build</td>
+      <td><div align="center">1.6</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.pde.core</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.pde.doc.user</td>
+      <td><div align="center">not specified</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.pde.ds.annotations</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.pde.ds.core</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.pde.ds.lib</td>
+      <td><div align="center">1.5</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.pde.ds.ui</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.pde.ds1_2.lib</td>
+      <td><div align="center">1.5</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.pde.genericeditor.extension</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.pde.junit.runtime</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.pde.launching</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.pde.runtime</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.pde.ua.core</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.pde.ua.ui</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.pde.ui</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.pde.ui.templates</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.platform</td>
+      <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.platform.doc.isv</td>
+      <td><div align="center">not specified</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.platform.doc.user</td>
+      <td><div align="center">not specified</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.rcp</td>
+      <td><div align="center">not specified</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.sdk</td>
+      <td><div align="center">not specified</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.search</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.swt</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.team.core</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.team.cvs.core</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.team.cvs.ssh2</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.team.cvs.ui</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.team.genericeditor.diff.extension</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.team.ui</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.text</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.tools.layout.spy</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui.browser</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui.cheatsheets</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui.console</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui.editors</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui.externaltools</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui.forms</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui.genericeditor</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui.ide</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui.ide.application</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui.intro</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui.intro.quicklinks</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui.intro.universal</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui.monitoring</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui.navigator</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui.navigator.resources</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui.net</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui.themes</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui.trace</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui.views</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui.views.log</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui.views.properties.tabbed</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui.win32</td>
+      <td><div align="center">1.7</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui.workbench</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.ui.workbench.texteditor</td>
+      <td><div align="center">1.8</div></td>
+    </tr>
+    <tr>
+      <td>org.eclipse.update.configurator</td>
+      <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
+      <td>org.hamcrest.core</td>
+      <td><div align="center">1.5</div></td>
+    </tr>
+    <tr>
+      <td>org.junit</td>
+      <td><div align="center">1.5</div></td>
+    </tr>
+    <tr>
+      <td>org.objectweb.asm</td>
+      <td><div align="center">1.5</div></td>
+    </tr>
+    <tr>
+      <td>org.objectweb.asm.tree</td>
+      <td><div align="center">1.5</div></td>
+    </tr>
+    <tr>
+      <td>org.sat4j.core</td>
+      <td><div align="center">1.5</div></td>
+    </tr>
+    <tr>
+      <td>org.sat4j.pb</td>
+      <td><div align="center">1.5</div></td>
+    </tr>
+    <tr>
+      <td>org.tukaani.xz</td>
+      <td><div align="center">osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.4))"</div></td>
+    </tr>
+    <tr>
+      <td>org.w3c.css.sac</td>
+      <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
+      <td>org.w3c.dom.events</td>
+      <td><div align="center">1.3</div></td>
+    </tr>
+    <tr>
+      <td>org.w3c.dom.smil</td>
+      <td><div align="center">F1.0</div></td>
+    </tr>
+    <tr>
+      <td>org.w3c.dom.svg</td>
+      <td><div align="center">F1.0</div></td>
+    </tr>
   </tbody>
 </table>
   </p:appendix>  
