@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Language" content="en-us" />
@@ -12,16 +12,13 @@
   (December 9, 2011) which is now available for <a href="http://download.eclipse.org/eclipse/downloads/" target="_top">download</a>.
 Unless otherwise indicated, all entries listed here are available in both the 3.8 and 4.2 development streams.
 See the <a href="buildNotes.php">build notes</a> for details about bugs fixed and other changes.</p>
-<nav id="header-links">
 <ul>
   <li><a href="#JDT">JDT</a></li>
   <li><a href="#PDE">PDE</a></li>
   <li><a href="#Platform">Platform</a></li>
   <li><a href="#Equinox">Equinox</a></li>
 </ul>
-</nav>
 
-<section id="news-content">
 <table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
@@ -132,7 +129,7 @@ class MyClass {
       The new <tt>TreeCursor</tt> class can be used to enable users to navigate a <tt>Tree</tt> control's individual 
       cells, similar to what <tt>TableCursor</tt> makes possible for <tt>Table</tt> controls.  For an example of 
       using <tt>TreeCursor</tt> see <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/plain/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet360.java">Snippet360</a>.
-      <p><img src="images/treecursor.png" alt="Tree Cursor"></p>
+      <p><img src="images/treecursor.png" alt="Tree Cursor" /></p>
       </td>
   </tr>
   <tr id="swt-vo-context-menu">
@@ -162,7 +159,7 @@ class MyClass {
       in a change is checked against the pattern and is considered as matched, if either left or right side 
       of the difference matches. If all diffs in a file match, the file is excluded from the view.
       <p>
-        <img src="images/filters-in-cvs-syncview.png" alt="Preferences for filters in CVS Sync View ">
+        <img src="images/filters-in-cvs-syncview.png" alt="Preferences for filters in CVS Sync View " />
       </p>
     </td>
   </tr>
@@ -172,7 +169,7 @@ class MyClass {
     <td class="content">
       The code driving the debug views (Debug, Variables and Breakpoints) has been substantially refactored to improve its overall quality, stability and
       performance. 
-      <br><br>
+      <br/><br/>
       Some of the more notable changes include:
       <ul>
         <li>There is a 30% improvement in the overall performance of the views</li>
@@ -200,7 +197,7 @@ class MyClass {
       addressed in the next milestone. In either case you can just close or un-maximize the Welcome view to get back to normal.
       </p>
       <p>
-        <img src="images/intro.png" alt="Welcome perspective in Eclipse 4.2">
+        <img src="images/intro.png" alt="Welcome perspective in Eclipse 4.2" />
       </p>
     </td>
   </tr>
@@ -227,7 +224,7 @@ class MyClass {
       web container to support Servlet 3.0 and JSP 2.2.  The Equinox HTTP
       service is required to host the Eclipse user assistence web context
       for serving up help content.
-      <p>
+      <br/><br/>
       For the Juno release, Equinox will no longer support the use of older
       Jetty implementations and we are no longer shipping Jetty 6.  The
       Equinox HTTP service implementation will no longer work with the
@@ -255,7 +252,6 @@ class MyClass {
         <li>org.apache.jasper.glassfish</li>
         <li>com.sun.el</li>
       </ul>
-      </p>
     </td>
   </tr>
 
@@ -263,8 +259,6 @@ class MyClass {
     <td colspan="2">  </td>
   </tr>
 </table>
-</section>
-<aside>
 <p>The above features are just the ones that are new since the previous milestone
 build. Summaries for earlier Juno milestone builds:</p>
 <ul>
@@ -272,6 +266,5 @@ build. Summaries for earlier Juno milestone builds:</p>
   <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.2M2-201109161615/eclipse-news-M2.html">New for Eclipse Juno milestone build M2 (September 16, 2010)</a></li>
   <li><a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.8M1-201108031800/eclipse-news-M1.html">New for Eclipse Juno milestone build M1 (August 5, 2011)</a></li>
 </ul>
-</aside>
 </body>
 </html>
