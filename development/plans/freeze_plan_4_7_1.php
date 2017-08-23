@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		Dani Megert
-	# Date:			2017-08-09
+	# Date:			2017-08-23
 	#
 	# Description: Eclipse project 4.7.1 release freeze plan
 	#
@@ -100,7 +100,7 @@ ob_start();
 	          <tr">
 	            <td></td>
 	            <td class="date">23</td>
-	            <td class="date">Wed 01:00 EDT</td>
+	            <td class="date">Wed 17:00 EDT</td>
 	            <td></td>
 	            <td>Release Candidate 2 build</td>
 	            <td></td>
@@ -124,7 +124,7 @@ ob_start();
 	          <tr>
 	            <td></td>
 	            <td class="date">30</td>
-	            <td class="date">Wed 04:00 EDT</td>
+	            <td class="date">Wed 17:00 EDT</td>
 	            <td></td>
 	            <td>Release Candidate 3 build</td>
 	            <td></td>
@@ -157,7 +157,7 @@ ob_start();
 	          <tr>
 	            <td></td>
 	            <td class="date">6</td>
-	            <td class="date">Wed 04:00 EDT</td>
+	            <td class="date">Wed 17:00 EDT</td>
 	            <td></td>
 	            <td>Release Candidate 4 build [if required]</td>
 	            <td></td>
