@@ -107,7 +107,6 @@ after the release.
                 <li><a href="#mozTocId554478">Non-uniform scaling of text vs. icons when using intermediate scaling factors on high-DPI displays</a></li>
                 <li><a href="#mozTocId69222">Eclipse plug-in based on the SWT Browser throws exception</a></li>
                 <li><a href="#mozTocId125696">SWT Browser widget does not work on some recent Linux versions e.g Ubuntu 16.04</a></li>
-                <li><a href="#mozTocId519796">SWT Browser widget crashes when run with XULRunner 31 run-time (Linux only)</a></li>
                 <li><a href="#mozTocId238090">Eclipse icon is duplicated in task-bar on Windows</a></li>
                 <li><a href="#mozTocId414883">BIDI Segments in Text controls</a></li>
                 <li><a href="#mozTocId518357">Block Selection functionality provided by StyledText is not BIDI aware</a></li>
@@ -813,17 +812,6 @@ after the release.
     Recent Linux versions such as Ubuntu 16.04 do not have the Webkit libraries installed by default, causing the instantiation of the Browser widget to fail. This means that the Internal Web Browser
     view in Eclipse won't be usable. When running with GTK3, even the Welcome page appears blank (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=492379">492379</a>). The workaround is to
     install the Webkit libraries (libwebkitgtk-3.0 for GTK3 and libwebkitgtk-1.0 for GTK2) from the OS package repositories before using Eclipse and/or SWT.
-  </p>
-  <h4>
-    <a
-      class="mozTocH4"
-      name="mozTocId519796">SWT Browser widget crashes when run with XULRunner 31 run-time (Linux only)</a>
-  </h4>
-  <p>
-    <a
-      class="mozTocH4"
-      name="mozTocId519796"> Creation of an SWT Mozilla style Browser with XULRunner 31 run-time crashes on Linux. The workaround is to use other supported XULRunner run-times or webkit which is
-      the default on Linux. (bug </a><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=467646">467646</a>)
   </p>
   <h4>
     <a
