@@ -288,6 +288,20 @@ table.news tr td.content {vertical-align: top;}
 	</td>
   </tr>
 
+ <tr id="generic-editor-aggregates-hover">
+    <td class="title">Generic Editor aggregates hover from multiple sources</td>
+	<td class="content">
+		The hover included in Generic Editor now aggregates the hover content from multiple
+		sources instead of picking only one.
+		<p>This allows for example to contribute 3 distinct
+		hovers for Problem details, code documentation and Debug details via the
+		<code>org.eclipse.ui.genericeditor.hoverProviders</code> extension point, and to get
+		those 3 contributions shown simultaneously when hovering in the Generic Editor.</p>
+		<img src="images/aggregated-hovers.png" alt=""/>
+		<p>Hovers that return <code>null</code> as hover range or hover info for a given
+		location would be ignored.</p>
+	</td>
+  </tr>
 
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
