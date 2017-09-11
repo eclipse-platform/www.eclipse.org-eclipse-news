@@ -316,6 +316,22 @@ table.news tr td.content {vertical-align: top;}
 	</td>
   </tr>
 
+  <tr id="batik-upgrade">
+    <td class="title">CSS Engine upgraded to use Batik 1.9 instead of 1.8</td>
+	<td class="content">
+		The theme engine in Platform UI was upgraded to use Batik 1.9 instead of 1.8.
+		<p>The following Orbit bundle changes happened:
+		<ul>
+			<li><code>org.apache.batik.css</code> was upgraded to version <code>1.9.0</code></li>
+			<li><code>org.apache.batik.util</code> was upgraded to version <code>1.9.0</code></li>
+			<li><code>org.apache.batik.i18n</code> version <code>1.9.0</code> was added</li>
+			<li><code>org.apache.batik.util.gui</code> version <code>1.8.0</code> was removed</li>
+		</ul>
+		</p>
+		<p>No code change is needed to adopt to the migration.</p>
+	</td>
+  </tr>
+
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
   </tr>
