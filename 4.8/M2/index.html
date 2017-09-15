@@ -74,15 +74,15 @@ table.news tr td.content {vertical-align: top;}
   </tr>
 
   <tr id="dark-buttons-mac">
-    <td class="title">Dark buttons on the Mac</td>
+    <td class="title">Dark buttons on Mac</td>
     <td class="content">
-      The button background color can now be styled on the Mac, which is used in the dark design. 
-    <img src="images/dark-mac-buttons.png" alt=""/>
+      The background color of a button can now be styled on the Mac. This is used to style the buttons in the dark theme.
+    <p><img src="images/dark-mac-buttons.png" alt=""/></p>
     </td>
   </tr>
 
   <tr id="swt-gtk3-caret-performance">
-    <td class="title">Caret performance improved on GTK3</td>
+    <td class="title">Improved Caret performance on GTK3</td>
 	<td class="content">Caret performance on the SWT GTK3 port has been enhanced to allow for smoother
 		drawing. Previously the caret stuttered when moved or when other controls in the same
 		shell were manipulated. Now the caret moves smoothly and blinks at a consistent rate.
@@ -244,12 +244,20 @@ table.news tr td.content {vertical-align: top;}
   <tr id="swt-gtk3-transparency-support">
     <td class="title">Transparent color support on GTK3</td>
 	<td class="content">The SWT GTK3 port now includes support for transparent colors.
-		Previously, SWT colors on GTK only supported Red Green and Blue (RGB) values
-		(all colors were opaque by default). Now users can set alpha values to manipulate the transparency
+		Previously, SWT <code>Color</code> on GTK only supported Red, Green and Blue (RGB) values
+		(all colors were opaque by default). Now, users can set alpha values to manipulate the transparency
 		property of SWT colors on GTK3.
 		<p>The image below shows a red Canvas widget that is half transparent (alpha set to 0.5).</p>
 		<img src="images/canvas_red_half_transparent.png" alt=""/>
 	</td>
+  </tr>
+  
+  <tr id="button-bgcolor-mac">
+    <td class="title">Set Button background color on Mac</td>
+    <td class="content">
+      <code>Button.setBackground()</code> can now set the background color for a <code>Button</code> on Mac.
+      <p><img src="images/colored-buttons-mac.png" alt=""/></p>
+    </td>
   </tr>
 
  <tr id="generic-editor-aggregates-hover">
