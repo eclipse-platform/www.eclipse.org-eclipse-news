@@ -26,6 +26,106 @@
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
 
+  <tr id="junit-5-support">
+    <td class="title">Eclipse support for JUnit 5</td>
+    <td class="content">
+    <a href="http://junit.org/junit5/">JUnit 5</a> support is now available in Eclipse.
+    <ul>
+		<li>
+		<p>Create a new JUnit Jupiter test via <b>New JUnit Test Case</b> wizard:</p>
+		<p><img src="images/new-junit-jupiter-test.png" alt=""/></p>
+		</li>
+		
+		<li>
+		<p>Add JUnit 5 library to the build path:</p>
+			<ul>
+				<li>
+				<p>New JUnit Test Case wizard offers to add it while creating a new JUnit Jupiter test:</p>
+				<p><img src="images/add-junit-5-lib.png" alt=""/></p>
+				</li>
+				<li>
+				<p>Quick Fix <b>(Ctrl+1)</b> proposal on <b><code>@Test</code></b>, <b><code>@TestFactory</code></b>, <b><code>@ParameterizedTest</code></b> and <b><code>@RepeatedTest</code></b> annotations:</p>
+				<p><img src="images/add-junit-5-lib-quick-fix.png" alt=""/></p>
+				</li>
+				<li>
+				<p>Add JUnit library in Java Build Path dialog:</p>
+				<p><img src="images/add-junit-5-lib-java-build-path.png" alt=""/></p>
+				</li>
+			</ul>
+		</li>
+		
+		<li>
+		<p>Create a JUnit Jupiter test method with the new <b>test_jupiter</b> template:</p>
+		<p><img src="images/junit-jupiter-test-method-template.png" alt=""/></p>
+		</li>
+		
+		<li>
+		<p>Create a <b><code>@TestFactory</code></b> method with the new <b>test_factory</b> template:</p>
+		<p><img src="images/junit-jupiter-test-factory-template.png" alt=""/></p>
+		</li>
+		
+		<li>
+		<p>JUnit Jupiter’s <code>Assertions</code>, <code>Assumptions</code>, <code>DynamicContainer</code> and <code>DynamicTest</code> classes are now added to <b>Eclipse Favorites</b> by default:</p>
+		<p><img src="images/content-assist-favorites.png" alt=""/></p>
+		<p>This allows you to quickly import the static methods from these classes in your code via Content Assist <b>(Ctrl + Space)</b> and Quick Fix <b>(Ctrl + 1)</b>.</p>
+		</li>
+
+		<li>
+		<p>View all the failures from grouped assertions in the same <b>Result Comparison</b> dialog opened from JUnit view:</p>
+		<p><img src="images/grouped-assertions-result-comparison.png" alt=""/></p>
+		</li>	
+
+		<li>
+		<p>View the number of disabled tests and tests with assumption failures on hover in JUnit view:</p>
+		<p><img src="images/skipped-tests.png" alt=""/></p>
+		</li>
+
+		<li>
+		<p>Use <b>Go to File</b> action or just double-click to navigate to the test from JUnit view even when the test is displayed with a custom name:</p>
+		<p><img src="images/display-name.png" alt=""/></p>
+		</li>
+
+		<li>
+		<p>(Re-)Run a single <b><code>@Nested</code></b> test class by using the <b>Run</b> action in JUnit view or Outline view. 
+		You can even right-click on a nested test class name in the editor and use the <b>Run As</b> action:
+		</p>
+		<p><img src="images/run-nested-class.png" alt=""/></p>
+		</li>
+
+		<li>
+		<p>The <b>Test Method Selection</b> dialog in JUnit launch configuration now shows the method parameter types also:</p>
+		<p><img src="images/test-method-selection-dialog.png" alt=""/></p>
+		</li>
+		
+		<li>
+		<p>You can provide tags to be included in or excluded from a test run via <b>Program arguments</b> in the Arguments tab of JUnit launch configuration. The options are: </p>
+		<ul>
+		<li>--include-tag &lt;String&gt;</li>
+		<li>--exclude-tag &lt;String&gt;</li>
+		</ul>
+		<p>where &lt;String&gt; is a tag to be included in or excluded from the test run. These options can be repeated with newline separation:</p>
+		<p><img src="images/junit-tags.png" alt=""/></p>
+		</li>
+	</ul>
+    
+    <p><b>Note:</b></p>
+    <ul>
+    <li>
+    If you are using an Eclipse workspace where you were running your JUnit 5 tests via <code>@RunWith(JUnitPlatform.class)</code> in Eclipse without JUnit 5 support  
+    then you will have JUnit 4 as the test runner in their launch configurations. Before executing these tests in Eclipse with JUnit 5 support, you should either 
+    change their test runner to JUnit 5 or delete them so that new launch configurations are created with JUnit 5 test runner while running the tests:
+    <p><img src="images/test-runner-update.png" alt=""/></p>
+    </li>
+    <li>
+    We do not support running tests in a setup where an old Eclipse build (not having JUnit 5 support) is using a new Eclipse build (having JUnit 5 support) as target. Also, developers who have 
+    the JDT JUnit runtime bundles <code>(org.eclipse.jdt.junit.runtime, org.eclipse.jdt.junit4.runtime)</code> checked out and pull the latest changes will run into the above issue.
+    You are expected to use a new Eclipse build for the development. 
+    </li>
+    </ul>
+
+    </td>
+  </tr>
+
   <tr>
     <td colspan="2"/>
   </tr>
