@@ -125,7 +125,58 @@
 
     </td>
   </tr>
-
+  <tr id="java-9">
+    <td class="title">Java 9</td>
+    <td class="content">
+      <a href="http://docs.oracle.com/javase/9/">Java&trade; 9</a> is here, and JDT fully supports it:
+		<ul>
+			<li>The Eclipse compiler for Java (ECJ) implements all the new Java 9 <a href="http://docs.oracle.com/javase/9/docs/technotes/guides/language/enhancements.html">language enhancements</a></li>
+			<li>Updated significant features to support Java Modules, such as compiler, search and many editor features.</li>
+		</ul>
+		<p><b>Note:</b>
+    It is not mandatory to run Eclipse with Java Runtime 9 to get the Java 9 support. However,
+    	a Java runtime 9 is required to be on a project's build path
+    	to compile a modular project against the system modules.
+    </p>
+	<ul>
+    <li>
+    <p>When a Java Runtime 9 is added to a project's build path, the system modules
+    are listed under the System library in the package explorer:</p>
+    <p><img src="images/java9-package-explorer.png" alt=""/></p>
+    </li>
+	</ul>
+	<ul>
+    <li>
+    <p>An existing non-modular Java project can be quickly converted to a module by 
+    creating a module-info.java for that project. This feature can be availed once the project has 
+    been moved to compliance 9:</p>
+    <p><img src="images/java9-create-module.png" alt=""/></p>
+    </li>
+	</ul>
+	<ul>
+    <li>
+    <p>With Java 9 support, a library or a container can now be added to the 
+    module path as opposed to the classpath:</p>
+    <p><img src="images/java9-module-path.png" alt=""/></p>
+    </li>
+	</ul>
+	<ul>
+    <li>
+    <p>Once a module has been added to a project's module path, its encapsulation
+    properties can further be modified by clicking on the <b>Is Modular</b> option
+    and editing the Module properties. The following example shows how module <code>module.one</code> can
+    can be made to export its packages in the context of the current Java project.
+     <p><img src="images/java9-module-properties.png" alt=""/></p>
+    </li>
+	</ul>
+	<ul>
+    <li>
+    <p>Java search now includes a new search scope - Module:</p>
+    <p><img src="images/java9-module-search.png" alt=""/></p>
+    </li>
+	</ul>
+    </td>
+  </tr>
   <tr>
     <td colspan="2"/>
   </tr>
