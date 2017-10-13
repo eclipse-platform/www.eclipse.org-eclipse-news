@@ -267,10 +267,30 @@ table.news tr td.content {vertical-align: top;}
     <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
   </tr>
 
-  <tr id="first-item-platform-dev">
-    <td class="title">First item</td>
+  <tr id="throttler-api">
+    <td class="title">Throttler</td>
     <td class="content">
-      Item blurb.
+      UI updates in tight loops can degrade a system's performance, and users are also not capable to read information that fast.
+      In such cases class <code>org.eclipse.jface.util.Throttler</code> can now be used to limit the rate updates on the UI thread
+      with a specified time while executing the task wrapped in a <code>Runnable</code>.
+      <p>
+      An example for a use case are updates to a progress monitor, like in EGit's Import Project wizard. This wizard scans a directory
+      and report any found file to the progress (actually a <code>org.eclipse.jface.wizard.ProgressMonitorPart</code>). This happens
+      so fast that it can't be read, but overall it degrades the wizard's performance.
+      <p>
+      Usage example:
+      <pre>
+public class ProgressMonitorPart extends Composite implements
+        IProgressMonitorWithBlocking {
+    [...]
+    private Throttler throttledUpdate;
+    [...]
+    throttledUpdate = new Throttler(fLabel.getDisplay(), Duration.ofMillis(100), this::updateLabel);
+    [...]
+    protected void queueUpdateLabel() {
+       throttledUpdate.throttledExec();
+    }
+      </pre>
     </td>
   </tr>
 
