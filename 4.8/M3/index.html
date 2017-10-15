@@ -230,6 +230,17 @@ table.news tr td.content {vertical-align: top;}
     <img src="images/preference-import-export.png" alt=""/>
     </td>
   </tr>
+  
+  <tr id="windows-modern-directory-dialog">
+    <td class="title">The DirectoryDialog now uses modern style on Windows Vista and newer</td>
+    <td class="content">
+      The <b>DirectoryDialog</b> has been re-implemented to use modern native widget if running on Windows Vista and newer. 
+      The new look and feel is as illustrated below: 
+      <p>
+        <img src="images/windows-modern-directory-dialog.png" alt=""/>
+      </p>
+    </td>
+  </tr>
 
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
@@ -277,7 +288,7 @@ table.news tr td.content {vertical-align: top;}
       An example for a use case are updates to a progress monitor, like in EGit's Import Project wizard. This wizard scans a directory
       and report any found file to the progress (actually a <code>org.eclipse.jface.wizard.ProgressMonitorPart</code>). This happens
       so fast that it can't be read, but overall it degrades the wizard's performance.
-      <p>
+      </p>
       Usage example:
       <pre>
 public class ProgressMonitorPart extends Composite implements
