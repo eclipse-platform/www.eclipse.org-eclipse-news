@@ -353,6 +353,18 @@ table.news tr td.content {vertical-align: top;}
     </td>
   </tr>
 
+  <tr id="quickfix-nnbd-on-package">
+    <td class="title">Quick Fix to add <code>@NonNullByDefault</code> to packages</td>
+    <td class="content">
+      A new quick fix is offered to fix issues that are reported when the <b>Missing '@NonNullByDefault' annotation on package</b> warning is enabled.
+      <p>If the package already has a <code>package-info.java</code>, the quick fix can be invoked from the editor:</p>  
+      <p><img src="images/add-nnbd-existing-packageinfo.png" alt=""/></p>
+      <p>Otherwise, the quickfix must be invoked from the problems view, and will create a <code>package-info.java</code> with the required annotation:</p>
+      <p><img src="images/add-nnbd-create-packageinfo.png" alt=""/></p>
+      <p>When invoked from the problems view, both variations of the quick fix can fix the problem for multiple packages simultaneously.</p>  
+    </td>
+  </tr>
+
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
