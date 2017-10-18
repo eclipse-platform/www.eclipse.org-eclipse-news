@@ -242,6 +242,23 @@ table.news tr td.content {vertical-align: top;}
     </td>
   </tr>
 
+  <tr id="report-missing-nature-as-marker">
+    <td class="title">Report reference to missing nature as error marker</td>
+    <td class="comment">
+      On the <b>Workspace</b> preference page, there is now a new option to define the severity of an error marker
+      to show on a project when it references a nature that is not available.
+      <p>
+        <img src="images/missing-nature-preference.png" alt=""/>
+      </p>
+      <p>As a typicak error markers, those are reported as decorator in the <b>Project Explorer</b> and as an
+      entry in the <b>Problems</b> view.</p>
+      <p>
+        <img src="images/missing-nature-marker.png" alt=""/>
+      </p>
+      <p>Clients can associate marker resolution factories to these markers, whose type id is <code>org.eclipse.core.resources.unknownNature</code>.</p>
+    </td>
+  </tr>
+
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
