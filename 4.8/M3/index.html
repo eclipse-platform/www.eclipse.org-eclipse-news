@@ -180,11 +180,27 @@ table.news tr td.content {vertical-align: top;}
 	</ul>
 	<ul>
     <li>
-    <p>Once a module has been added to a project's module path, its encapsulation
-    properties can further be modified by clicking on the <b>Is Modular</b> option
-    and editing the Module properties. The following example shows how module <code>module.one</code> can
-    can be made to export its packages in the context of the current Java project:</p>
+    <p>Once an entry has been added to a project's module path, its contents and encapsulation
+    properties can further be modified by double-clicking on the <b>Is modular</b> node
+    (or using the <b>Edit</b> button while <b>Is modular</b> is selected):</p>
+    <ul>
+    <li>
+    On the <b>Contents</b> tab individual modules inside a container like <b>JRE System Library</b>
+    can be included or excluded by moving the module from left-to-right or vice versa.
+    Modules shown in the lower right box are implicitly included, because they are required
+    by one or more modules in the upper right box.
+     <p><img src="images/java9-module-container-contents.png" alt="Configuring the Contents of a module container"/></p>
+     </li>
+    <li>
+    On the <b>Details</b> tab the encapsulation of given modules can be further influenced.
+    The following example shows how module <code>module.one</code>
+    can be made to export one of its packages to the module of the current Java project:
      <p><img src="images/java9-module-properties.png" alt=""/></p>
+     </li>
+    <li>Toggling <b>Defines one or more modules</b> (see above screenshot) lets you specify
+    whether a given regular (non-modular) jar file or project should be considered as an "automatic module".
+    As a consequence of changes here, the entry will move to the Modulepath or Classpath accordingly.</li>
+    </ul>
     </li>
 	</ul>
 	<ul>
