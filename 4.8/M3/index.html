@@ -233,6 +233,36 @@ table.news tr td.content {vertical-align: top;}
       <p>When invoked from the problems view, both variations of the quick fix can fix the problem for multiple packages simultaneously.</p>  
     </td>
   </tr>
+  
+  <tr id="quickfix-for-unresolved-import">
+    <td class="title">Quick Fix to add <code>requires directive</code> to module-info.java</td>
+    <td class="content">
+      A new quick fix is offered on import statements to fix issues that are reported due to <b>missing module dependency</b>.
+      <p>This QuickFix is applicable if the project is a Java9 project and has a <code>module-info.java</code>.</p>
+      <p>The quick fix can be invoked from the editor:</p>  
+      <p><img src="images/java9-module-requires-on-import.png" alt=""/></p>
+      <p>Before the quickFix is applied the module-info file looks as below</p>
+      <p><img src="images/java9-before-adding-module-requires-on-import.png" alt=""/></p>
+      <p>After the quickfix is invoked, <code> module-info.java</code> will be updated to include <code>requires 'MODULE_NAME'</code></p>
+      <p><img src="images/java9-after-adding-module-requires-on-import.png" alt=""/></p>
+    </td>
+  </tr>
+  
+  <tr id="quickfix-for-unresolved-type">
+    <td class="title">Quick Fix to add missing <code>import statement</code> and <code>requires directive</code> for unresolved type</td>
+    <td class="content">
+     <p>This QuickFix is applicable if the project is a Java9 project and has a <code>module-info.java</code> file.</p>
+      <p>A new quick fix is available when you have an unresolved type in a Java file. If the unresolved type can be found in a java9 module, a quick fix will be available to add an import type entry to your file reporting the error and add the required module dependency to <code>module-info.java</code> file.
+      <p>The quick fix can be invoked from the editor:</p>  
+      <p><img src="images/java9-module-requires-and-import-on-missing-type.png" alt=""/></p>
+      <p>Before the quickFix is applied, the module-info file looks as below</p>
+      <p><img src="images/java9-before-adding-module-requires-on-import.png" alt=""/></p>
+      <p>After the quickfix is invoked, <code> module-info.java</code> will be updated to include <code>requires 'MODULE_NAME'</code></p>
+      <p><img src="images/java9-after-adding-module-requires-on-import.png" alt=""/></p>
+      <p>After the quickFix is applied,  the required <code>import</code> statement is added to the file reporting error</p>
+      <p><img src="images/java9-after-adding-import-module-requires-and-import-on-missing-type.png" alt=""/></p>
+    </td>
+  </tr>
 
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
