@@ -264,6 +264,18 @@ table.news tr td.content {vertical-align: top;}
     </td>
   </tr>
 
+  <tr id="quickfix-for-provides-unresolved-type">
+    <td class="title">Quick Fix to create new class or interface for <code>unresolved type</code> on <code>service provider</code> </td>
+    <td class="content">
+     <p>This QuickFix is applicable if the project is a Java9 project and has a <code>module-info.java</code> file.</p>
+      <p>A new quick fix is available when you have an unresolved type on <code>service provider</code> in a provides directive in module-info.java file. If the unresolved type can not be found in the current module, a quick fix will be available to create a new class or an interface in the current module.
+      <p>The quick fix can be invoked from the editor:</p>  
+      <p><img src="images/java9-module-provides-create-class.png" alt=""/></p>
+      <p><img src="images/java9-module-provides-create-interface.png" alt=""/></p>
+      <p>When the service is a class, the quick fix is proposed for creating a class.</p>
+      <p>When the service is an interface or an annotation, two quick fixes are proposed for creating a class or an interface.</p>      
+    </td>
+  </tr>
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
