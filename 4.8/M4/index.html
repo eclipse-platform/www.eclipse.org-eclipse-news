@@ -260,10 +260,23 @@ table.news tr td.content {vertical-align: top;}
     <td colspan="2" class="section" id="Equinox">Equinox</td>
   </tr>
 
-  <tr id="first-item-equinox">
-    <td class="title">First item</td>
+  <tr id="generic-reqs-caps-handling">
+    <td class="title">P2 handles generic bundle requirements/capabilities</td>
     <td class="content">
-      Item blurb.
+        As more OSGi technologies rely heavily on abstract dependencies to wire a consistent application it
+        became important for p2 to have first class handling of such dependencies. You are now able to use p2 to
+        provision "soft" bundle dependencies that can not be expressed as <code>Import-Package</code> or
+        <code>Require-Bundle</code> manifest headers. Such dependencies are described by the 
+        <code>Require-Capability</code> and <code>Provide-Capability</code> manifest headers, which p2 can now process.
+      <p>
+        For example a consumer bundle may import the API package of an OSGi service (<code>Import-Package</code>) and
+        also require an implementation of the API (<code>Require-Capability</code>). A provider bundle may also import
+        the API package in order to implement it (<code>Import-Package</code>) and then declare it
+        provides an implementation of the service (<code>Provide-Capability</code>). The API package can be distributed
+        by a third party that maintains the service specification. When the consumer bundle is provisioned p2 will also
+        provision the API and the provider bundles. The case used to be that p2 would provision only the consumer and
+        the API, leaving to you the task to discover a provider.
+      </p>
     </td>
   </tr>
 
