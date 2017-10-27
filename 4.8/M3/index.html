@@ -39,7 +39,6 @@ table.news tr td.content {vertical-align: top;}
   <li><a href="#JDT">JDT</a></li>
   <li><a href="#PDE">PDE</a></li>
   <li><a href="#Platform-Dev">Platform Developers</a></li>
-  <li><a href="#Equinox">Equinox</a></li>
 </ul>
 
 <table class="news">
@@ -55,7 +54,7 @@ table.news tr td.content {vertical-align: top;}
     <td class="title">Animated waiting cursor on macOS</td>
     <td class="content">
       During long taking UI actions the cursor switches to a waiting cursor. On macOS this used to be a static black/white circle.
-      In Eclipse Photon the macOS system's busy cursor, a spinning blue ball, will be used.
+      From Eclipse Photon the macOS system's busy cursor is changed to a spinning blue ball (also called beach ball).
       <p>
         <img src="images/macos-wait-cursor.png" alt=""/>
       </p>
@@ -71,9 +70,9 @@ table.news tr td.content {vertical-align: top;}
   </tr>
   
   <tr id="windows-modern-directory-dialog">
-    <td class="title">The DirectoryDialog now uses modern style on Windows Vista and newer</td>
+    <td class="title">The DirectoryDialog now uses modern style</td>
     <td class="content">
-      The <b>DirectoryDialog</b> has been re-implemented to use modern native widget if running on Windows Vista and newer. 
+      The <b>DirectoryDialog</b> has been re-implemented to use modern native widget introduced in Windows Vista. 
       The new look and feel is as illustrated below: 
       <p>
         <img src="images/windows-modern-directory-dialog.png" alt=""/>
@@ -89,7 +88,7 @@ table.news tr td.content {vertical-align: top;}
       <p>
         <img src="images/missing-nature-preference.png" alt=""/>
       </p>
-      <p>As a typicak error markers, those are reported as decorator in the <b>Project Explorer</b> and as an
+      <p>As a typical error markers, those are reported as decorator in the <b>Project Explorer</b> and as an
       entry in the <b>Problems</b> view.</p>
       <p>
         <img src="images/missing-nature-marker.png" alt=""/>
@@ -124,23 +123,6 @@ table.news tr td.content {vertical-align: top;}
 
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
-  </tr>
-
-  <tr id="junit5-tags">
-    <td class="title">Configure tags to include and exclude in JUnit launch configuration</td>
-    <td class="content">
-	  You can provide tags to be included in or excluded from a test run in the <b>Configure Tags</b> dialog of JUnit launch configuration:
-	  <p><img src="images/junit-tags.png" alt=""/></p>   
-    </td>
-  </tr>
-  
-  <tr id="junit5-test-reporter-in-console">
-    <td class="title"><code>TestReporter</code> entries displayed in Console view</td>
-    <td class="content">
-	  In JUnit Jupiter, a method parameter of type <code>TestReporter</code> can be used to publish additional data about the current test run which can be viewed in the <b>Console view</b>:
-	  <p><img src="images/junit5-test-reporter.png" alt=""/></p>
-	  <p><img src="images/junit5-test-reporter-console-view.png" alt=""/></p>
-    </td>
   </tr>
 
   <tr id="java-9">
@@ -212,13 +194,20 @@ table.news tr td.content {vertical-align: top;}
     </td>
   </tr>
 
-  <tr id="escape-non-ascii-when-pasting">
-    <td class="title">Escape non-ASCII characters when pasting into a string literal</td>
+  <tr id="junit5-tags">
+    <td class="title">Configure tags to include and exclude in JUnit launch configuration</td>
     <td class="content">
-	  The <b>Java > Editor > Typing > Escape text when pasting into a string literal</b> preference option now has a suboption <b>Use Unicode escape syntax for non-ASCII characters</b>:
-      <p><img src="images/escape-non-ascii-settings.png" alt=""/></p>
-      When enabled, characters outside the visible ASCII range will be replaced by unicode escape sequences when pasted into a string: 
-      <p><img src="images/escape-non-ascii-example.png" alt=""/></p>
+	  You can provide tags to be included in or excluded from a test run in the <b>Configure Tags</b> dialog of JUnit launch configuration:
+	  <p><img src="images/junit-tags.png" alt=""/></p>   
+    </td>
+  </tr>
+  
+  <tr id="junit5-test-reporter-in-console">
+    <td class="title"><code>TestReporter</code> entries displayed in Console view</td>
+    <td class="content">
+	  In JUnit Jupiter, a method parameter of type <code>TestReporter</code> can be used to publish additional data about the current test run which can be viewed in the <b>Console view</b>:
+	  <p><img src="images/junit5-test-reporter.png" alt=""/></p>
+	  <p><img src="images/junit5-test-reporter-console-view.png" alt=""/></p>
     </td>
   </tr>
 
@@ -252,7 +241,7 @@ table.news tr td.content {vertical-align: top;}
     <td class="title">Quick Fix to add missing <code>import statement</code> and <code>requires directive</code> for unresolved type</td>
     <td class="content">
      <p>This QuickFix is applicable if the project is a Java9 project and has a <code>module-info.java</code> file.</p>
-      <p>A new quick fix is available when you have an unresolved type in a Java file. If the unresolved type can be found in a java9 module, a quick fix will be available to add an import type entry to your file reporting the error and add the required module dependency to <code>module-info.java</code> file.
+      <p>A new quick fix is available when you have an unresolved type in a Java file. If the unresolved type can be found in a java9 module, a quick fix will be available to add an import type entry to your file reporting the error and add the required module dependency to <code>module-info.java</code> file.</p>
       <p>The quick fix can be invoked from the editor:</p>  
       <p><img src="images/java9-module-requires-and-import-on-missing-type.png" alt=""/></p>
       <p>Before the quickFix is applied, the module-info file looks as below</p>
@@ -268,7 +257,7 @@ table.news tr td.content {vertical-align: top;}
     <td class="title">Quick Fix to create new class or interface for <code>unresolved type</code> on <code>service provider</code> </td>
     <td class="content">
      <p>This QuickFix is applicable if the project is a Java9 project and has a <code>module-info.java</code> file.</p>
-      <p>A new quick fix is available when you have an unresolved type on <code>service provider</code> in a provides directive in module-info.java file. If the unresolved type can not be found in the current module, a quick fix will be available to create a new class or an interface in the current module.
+      <p>A new quick fix is available when you have an unresolved type on <code>service provider</code> in a provides directive in module-info.java file. If the unresolved type can not be found in the current module, a quick fix will be available to create a new class or an interface in the current module.</p>
       <p>The quick fix can be invoked from the editor:</p>  
       <p><img src="images/java9-module-provides-create-class.png" alt=""/></p>
       <p><img src="images/java9-module-provides-create-interface.png" alt=""/></p>
@@ -276,6 +265,17 @@ table.news tr td.content {vertical-align: top;}
       <p>When the service is an interface or an annotation, two quick fixes are proposed for creating a class or an interface.</p>      
     </td>
   </tr>
+
+  <tr id="escape-non-ascii-when-pasting">
+    <td class="title">Escape non-ASCII characters when pasting into a string literal</td>
+    <td class="content">
+	  The <b>Java > Editor > Typing > Escape text when pasting into a string literal</b> preference option now has a suboption <b>Use Unicode escape syntax for non-ASCII characters</b>:
+      <p><img src="images/escape-non-ascii-settings.png" alt=""/></p>
+      When enabled, characters outside the visible ASCII range will be replaced by unicode escape sequences when pasted into a string: 
+      <p><img src="images/escape-non-ascii-example.png" alt=""/></p>
+    </td>
+  </tr>
+
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
@@ -338,33 +338,17 @@ public class ProgressMonitorPart extends Composite implements
     </td>
   </tr>
 
-
-  <tr>
-    <td colspan="2" class="section" id="Equinox">Equinox</td>
-  </tr>
-
-  <tr id="first-item-equinox">
-    <td class="title">First item</td>
-    <td class="content">
-      Item blurb.
-    </td>
-  </tr>
-
-
   <tr>
     <td colspan="2"/>
   </tr>
 </table>
 
-<!--
 <p>The above features are just the ones that are new since the previous milestone
 build. Summaries for earlier Oxygen milestone builds:</p>
 <ul>
-  <li><a href="https://www.eclipse.org/eclipse/news/4.7/M3/">News for Eclipse Oxygen milestone build M3</a></li>
   <li><a href="https://www.eclipse.org/eclipse/news/4.7/M2/">News for Eclipse Oxygen milestone build M2</a></li>
   <li><a href="https://www.eclipse.org/eclipse/news/4.7/M1/">News for Eclipse Oxygen milestone build M1</a></li>
 </ul>
--->
 
 </body>
 </html>
