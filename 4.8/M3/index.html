@@ -126,7 +126,7 @@ table.news tr td.content {vertical-align: top;}
     <td class="content">
       On the <b>Keys</b> preference page the <b>Export CSV</b> action exports additionally the command id for key bindings.
       <p>
-        <img src="images/export-keys-dialog.png" alt="Keys Preference Page"/></a>
+        <img src="images/export-keys-dialog.png" alt="Keys Preference Page"/>
       </p>
       <p>
         <a href="images/export-keys.csv"><img src="images/export-keys-csv.png" alt="Exported CSV file"/></a>
@@ -204,6 +204,17 @@ table.news tr td.content {vertical-align: top;}
     <li>
     <p>Java search now includes a new search scope - Module:</p>
     <p><img src="images/java9-module-search.png" alt=""/></p>
+    </li>
+	</ul>
+	<ul>
+    <li>
+    <p>When a Java Runtime 9 is added to a project's build path, the launch configurations are created with "Dependencies" tab and not the old "Classpath" tab.</p>
+    <p>User can change the JRE of launch configuration and on the confirmation, the tab changes from "Classpath" to "Dependencies" or vice versa. </p>
+    <p><img src="images/changing-tabs-launch-config.png" alt=""/></p>
+    <p>If Java project is modular and module is described in module_info.java, most of the dependencies will be defined in the Modular Entries.</p>
+    <p><img src="images/modular-dependencies.png" alt=""/></p>
+    <p>If Java project is not modular, most of the dependencies will be defined in the Classpath Entries.</p>
+    <p><img src="images/non-modular-dependencies.png" alt=""/></p>
     </li>
 	</ul>
     </td>
