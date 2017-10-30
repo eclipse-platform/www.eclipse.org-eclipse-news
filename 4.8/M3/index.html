@@ -302,6 +302,17 @@ table.news tr td.content {vertical-align: top;}
     </td>
   </tr>
 
+  <tr id="advanced-source-lookup">
+    <td class="title">Advanced source lookup implementation</td>
+    <td class="content">
+     More precise "advanced" source lookup implementation, particularly useful when debugging applications that load classes dynamically at runtime. 
+     New <code>org.eclipse.jdt.launching.workspaceProjectDescribers</code> extension point can be used to enable advanced source lookup for projects with non-default layout, like PDE Plug-In projects. 
+     New <code>org.eclipse.jdt.launching.sourceContainerResolvers</code> can be used to download sources jar files from remote artifact repositories, like Maven Central or Eclipse P2.
+     <p>Advanced source lookup affects debug launches only and can be enabled or disabled with <b>Java > Debug > Enable advanced source lookup</b> preference option:</p>
+     <p><img src="images/advanced-source-lookup.png" alt=""/></p>
+    </td>
+  </tr>
+
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
