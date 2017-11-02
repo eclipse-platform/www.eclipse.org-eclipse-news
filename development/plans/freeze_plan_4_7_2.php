@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2017-11-01
+	# Date:			2017-11-02
 	#
 	# Description: Eclipse project 4.7.2 release freeze plan
 	#
@@ -99,7 +99,7 @@ ob_start();
 	          </tr>
 	          <tr>
 	            <td></td>
-	            <td class="date">8</td>
+	            <td class="date">7</td>
 	            <td class="date">Tue</td>
 	            <td></td>
 	            <td>Feature and API Freeze</td>
