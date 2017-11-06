@@ -370,12 +370,12 @@ public class ProgressMonitorPart extends Composite implements
   <tr id="adapt-textselection-to-debug-variable">
     <td class="title">Default debug hover contribution on Generic Editor</td>
     <td class="content">
-      Debug framework contributes to the Generic Editor when the hover represented by an <code>ITextSelection</code>
+      The Debug framework contributes to the Generic Editor when the hover represented by an <code>ITextSelection</code>
       can be adapted to an <code>IVariable</code>. So in order to take advantage of debug details on Hover in the Generic
       Editor, you can simply use the <code>org.eclipse.core.runtime.adpaters</code> extension point and define an <code>IAdapterFactory</code>
       from <code>ITextSelection</code> to <code>IVariable</code> to enable this feature.
-      <p>If the current selection cannot be adapted (all adapter factories return null), the the contribution to Generic Editor is ignored.</p>
-      <p>JDT project already contributes such an adapter.</p>
+      <p>If the current selection cannot be adapted (all adapter factories return null), the contribution to Generic Editor is ignored.</p>
+      <p>The JDT project already contributes such an adapter.</p>
     </td>
   </tr>
 
