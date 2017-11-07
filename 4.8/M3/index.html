@@ -327,10 +327,12 @@ table.news tr td.content {vertical-align: top;}
     </td>
   </tr>
   
-     <tr id="pde-smart-import">
-    <td class="title"> PDE UI to contribute extension to "Smart Import"</td>
+  <tr id="pde-smart-import">
+    <td class="title">PDE detects and configure folders as projects during import</td>
     <td class="content">
-		PDE includes the project detection mechanisms (extensions to <code>org.eclipse.ui.ide.projectConfigurators</code>) to detect projects during import via <b>General &gt; File System</b> 
+    	When using the import wizard from <b>File > Open Projects from Filesystem...</b> or <b>File > Import... > General > Projects from Folder or Archive</b>, PDE detects
+    	folders that can be turned into PDE projects (ie folders which contain a <code>META-INF/MANIFEST.MF</code> or a <code>feature.xml</code>) and configure them accordingly.
+    	<p>Note that folders already configured as Eclipse projects (already containing a <code>.project</code> file) will be imported "as it" and won't be reconfigured by PDE.</p>
     </td>
   </tr>
 
