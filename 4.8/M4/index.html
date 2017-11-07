@@ -248,10 +248,18 @@ table.news tr td.content {vertical-align: top;}
     <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
   </tr>
 
-  <tr id="first-item-platform-dev">
-    <td class="title">First item</td>
+  <tr id="generic-editor-highlighter">
+    <td class="title">Contribute highlight reconcilers to the Generic Editor</td>
     <td class="content">
-      Item blurb.
+      The Generic Editor now supports a new extension point to override the default highlighter and add multiple <code>org.eclipse.jface.text.reconciler.IReconciler</code> for highlighting to provided content-types.
+      <p>Reconcilers attached to this extension point that listen to the preference <code>org.eclipse.ui.genericeditor.togglehighlight</code> will be toggled with the "Toggle Highlight" button.</p>
+      <pre>
+&lt;extension point="org.eclipse.ui.genericeditor.highlightReconcilers">
+    &lt;highlightReconciler
+          class="org.eclipse.ui.genericeditor.examples.TagHighlightReconciler"
+          contentType="org.eclipse.core.runtime.xml"/>
+&lt;/extension>
+      </pre>
     </td>
   </tr>
 
