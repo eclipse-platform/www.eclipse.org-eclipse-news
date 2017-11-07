@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2017-11-02
+	# Date:			2017-11-07
 	#
 	# Description: Eclipse project 4.7.2 release freeze plan
 	#
@@ -67,7 +67,7 @@ ob_start();
 	          <tr>
 	            <td></td>
 	            <td class="date">11</td>
-	            <td class="date">Wed 04:00 EDT</td>
+	            <td class="date">Wed 17:00 EDT</td>
 	            <td></td>
 	            <td>Checkpoint build</td>
 	            <td></td>
@@ -99,8 +99,8 @@ ob_start();
 	          </tr>
 	          <tr>
 	            <td></td>
-	            <td class="date">7</td>
-	            <td class="date">Tue</td>
+	            <td class="date">8</td>
+	            <td class="date">Wed</td>
 	            <td></td>
 	            <td>Feature and API Freeze</td>
 	            <td></td>
@@ -108,7 +108,7 @@ ob_start();
 	          <tr>
 	            <td></td>
 	            <td class="date">8</td>
-	            <td class="date">Wed 04:00 EST</td>
+	            <td class="date">Wed 17:00 EST</td>
 	            <td></td>
 	            <td>Release Candidate 1 build</td>
 	            <td></td>
@@ -127,7 +127,7 @@ ob_start();
 	          <tr>
 	            <td></td>
 	            <td class="date">15</td>
-	            <td class="date">Wed 04:00 EST</td>
+	            <td class="date">Wed 17:00 EST</td>
 	            <td></td>
 	            <td>Release Candidate 2 build</td>
 	            <td></td>
@@ -154,7 +154,7 @@ ob_start();
 	          <tr>
 	            <td></td>
 	            <td class="date">22</td>
-	            <td class="date">Wed 04:00 EST</td>
+	            <td class="date">Wed 17:00 EST</td>
 	            <td></td>
 	            <td>Release Candidate 3 build</td>
 	            <td></td>
@@ -181,7 +181,7 @@ ob_start();
 	          <tr>
 	            <td></td>
 	            <td class="date">29</td>
-	            <td class="date">Wed 04:00 EST</td>
+	            <td class="date">Wed 17:00 EST</td>
 	            <td></td>
 	            <td>Release Candidate 4 build [if required]</td>
 	            <td></td>
