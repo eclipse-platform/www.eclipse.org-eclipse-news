@@ -224,6 +224,48 @@ table.news tr td.content {vertical-align: top;}
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
 
+  <tr id="jdt-test-sources">
+    <td class="title">Test sources</td>
+    <td class="content">
+	In the <b>Java Build Path</b> project settings, there is now an attribute <b>Contains test sources</b> to configure 
+	that a source folder contains test sources (Note: test sources must have their own output folder). Similar, for 
+	projects and libraries there is an attribute <b>Visible only for test sources</b>. This setting also exists for 
+	classpath containers, and if it is set to <b>Yes</b> for one of these, this value will be used for all  contained 
+	libraries and projects.
+	<p><img src="images/1-sourcefolder-settings-521330.png" alt=""/></p>
+	<p>Test source folders and dependencies are shown with a darker icon in the build path settings, 
+	the package explorer and other locations. This can be disabled in  <b>Preferences > Java > Appearance</b>. </p>
+	<p><img src="images/2-test-color-settings-521334.png" alt=""/></p>
+	<p>
+	Referenced projects can contain test sources and have test dependencies themselves. Usually, when test sources are 
+	compiled, the test code in projects on the build path will be visible. As this is not always desirable, it can be 
+	changed by setting the new build path attribute <b>Without test code</b>, that is available for projects, to <b>Yes</b>.
+	Build path entries configured like this have a decoration <code>[without test code]</code> after the project name, which can be disabled in <b>Preferences > General > Appearance > Label Decorations</b>.</p> 
+	<p><img src="images/2a-without-test-code-526858.png" alt=""/></p>
+	<p>For each project, compilation is now done in two phases: First all main sources (which cannot see any test-code on 
+	the build-path) and then all test sources.</p>
+	<p><img src="images/3-visibilities-224708.png" alt=""/></p>
+	<p>As a consequence, if the project is a modular Java 9 project, test dependencies like JUnit can not be referenced in 
+	the <code>module-info.java</code>, as they will not be visible while compiling it.
+The solution used to handle this is the same, that Maven uses: When test dependencies are put on the classpath, the module being compiled will automatically be configured to read the unnamed module during the compilation of the test sources, so the test dependencies will be visible.</p>
+<p>Of course, code completion will not suggest test code in main sources:</p>
+<p><img src="images/4a-completion-in-main-521331.png" alt=""/></p>
+<p><img src="images/4b-completion-in-test-521331.png" alt=""/></p>
+<p>There are now two dynamic Java working sets <b>Java Main Sources</b> and <b>Java Test Sources</b> containing the source folders grouped according to value of the <b>Contains test sources</b> attribute. This can for example be used to remove warnings in test sources from the problems view:</p>
+<p><img src="images/5a-problems-view-521336.png" alt=""/></p>
+<p>To achieve this, create a new filter that shows warnings for the <b>Java Main Sources</b> working set and select it with the <b>All Errors on Workspace</b> filter:</p>
+<p><img src="images/5b-problems-view-filters-521336.png" alt=""/></p>
+<p>There are also dedicated filters to quickly remove hits in main code or test code from Java search results:</p>
+<p><img src="images/6-filter-search-result-521332.png" alt=""/></p>
+<p>Similar, there is a filter to remove test code from <b>Call hierarchies</b>:</p>
+<p><img src="images/7-filter-call-hierarchy-521335.png" alt=""/></p>
+<p>Another filter to remove test code exists for <b>Quick type hierarchies</b>:</p>
+<p><img src="images/8-filter-quick-type-hierarchy-521333.png" alt=""/></p>
+<p>Finally, test source folders will be preselected in the <b>New Junit Test Case</b>-Wizard</p>
+<p><img src="images/9-new-junit-332602.png" alt=""/></p>
+    </td>
+  </tr>
+
   <tr id="method-result-and-exception-thrown">
     <td class="title">Value displayed for method exit and expection breakpoints</td>
     <td class="content">
