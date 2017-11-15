@@ -5,7 +5,7 @@
 	# team-leaders.php
 	#
 	# Author: 		
-	# Date:			2017-03-31
+	# Date:			2017-11-15
 	#
 	# Description: Details about the Eclipse Project PMC
 	#
@@ -63,18 +63,6 @@ ob_start();
 			      language design and implementation, semantic content publishing, web development,
 			      and playing the cello. Mike leads the <a href="http://www.eclipse.org/projects/project_summary.php?projectid=eclipse.e4">e4</a>
 				  subproject.
-		        </li>
-		        <li> 
-		          <b><a name="martin"></a>Martin Oberhuber, Wind River</b><br>
-			      Martin is on the PMC representing the Community aspect of Eclipse and
-			      the e4 project. He is a Platform Core Resources and e4 committer,
-			      co-leading the e4 Resources work. Martin also serves on the 
-			      <a href="http://wiki.eclipse.org/DSDP/PMC">DSDP PMC</a> and as 
-			      <a href="/dsdp/tm/">Target Management</a> Project lead, and revitalized
-			      the Eclipse <a href="http://wiki.eclipse.org/Architecture_Council">
-			      Architecture Council</a> as its chair. His interests include programming
-			      languages, patterns and paradigms, optimizing development processes,
-			      skiing, hiking, and playing all sorts of musical instruments.
 		        </li>
 		        <li> 
 		          <b><a name="dani"></a>Dani Megert, IBM Research - Zurich</b><br>
@@ -173,6 +161,18 @@ ob_start();
 					His primary areas of interest are C++ parsing, indexing, refactoring and making Eclipse faster and more responsive.
 					He is also interested in growing the number of Platform committers and contributors and making contributing to the
 					Eclipse Platform projects as frictionless as possible.
+		        </li>
+		        <li> 
+		          <b><a name="martin"></a>Martin Oberhuber, Wind River</b><br>
+			      Martin was on the PMC representing the Community aspect of Eclipse and
+			      the e4 project. He is a Platform Core Resources and e4 committer,
+			      co-leading the e4 Resources work. Martin also serves on the 
+			      <a href="http://wiki.eclipse.org/DSDP/PMC">DSDP PMC</a> and as 
+			      <a href="/dsdp/tm/">Target Management</a> Project lead, and revitalized
+			      the Eclipse <a href="http://wiki.eclipse.org/Architecture_Council">
+			      Architecture Council</a> as its chair. His interests include programming
+			      languages, patterns and paradigms, optimizing development processes,
+			      skiing, hiking, and playing all sorts of musical instruments.
 		        </li>
 		      </ul>
 		</div>
