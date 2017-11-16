@@ -80,15 +80,15 @@ table.news tr td.content {vertical-align: top;}
         <img src="images/windows-modern-directory-dialog.png" alt=""/>
       </p>
       <p>
-		<b>Regarding usage of newer DirectoryDialog on Windows:</b>
-		In old directory dialog, we used to have the option to set a text message to specify the purpose of the directory dialog using <code>DirectoryDialog#setMessage()</code>.
-		This functionality is no more possible with newer directory dialog.
+		<b>Regarding usage of newer <code>DirectoryDialog</code> on Windows:</b>
+		In the old <code>DirectoryDialog</code>, we used to have the option to set a text message to specify the purpose of the <code>DirectoryDialog</code> using <code>DirectoryDialog#setMessage(String)</code>.
+		This functionality is no more possible with the newer <code>DirectoryDialog</code>.
       </p>
       <p>
-		Hence, revisit the usage of <code>DirectoryDialog.setMessage(String)</code> in your projects, and if needed elaborate the DirectoryDialog Title field using <code>DirectoryDialog.setText()</code>.
+		Hence, revisit the usage of <code>DirectoryDialog.setMessage(String)</code> in your projects, and if needed elaborate the Title field of <code>DirectoryDialog</code> using <code>DirectoryDialog.setText(String)</code> method.
       </p>
       <p>
-		Note: Recommend to use minimal set of words in DirectoryDialog Title and avoid making it look clumsy.
+		Note: Recommend to use a minimal set of words in the Title field of <code>DirectoryDialog</code> and avoid making it look clumsy.
       </p>
     </td>
   </tr>
