@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2017-11-07
+	# Date:			2017-11-16
 	#
 	# Description: Eclipse project 4.7.2 release freeze plan
 	#
@@ -45,7 +45,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>Working towards RC1.</b></p>
+			<p><b>Submit RC2 to release train.</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -86,7 +86,7 @@ ob_start();
 	          <tr>
 	            <td>November 2017</td>
 	          </tr>
-	          <tr class="current">
+	          <tr>
 	            <td></td>
 	            <td></td>
 	            <td></td>
@@ -140,7 +140,7 @@ ob_start();
 	            <td>1-day test pass against RC2 and sign-off</td>
 	            <td></td>
 	          </tr>
-	          <tr>
+	          <tr class="current">
 	            <td></td>
 	            <td class="date">17</td>
 	            <td class="date">Fri</td>
