@@ -242,32 +242,15 @@ table.news tr td.content {vertical-align: top;}
       </p>
     </td>
   </tr>
-  
-  <tr id="dialog-settings-customization">
-    <td class="title">Dialog settings customization</td>
-    <td class="content">
-      Platform allows now Eclipse product maintainers to specify initial dialog settings for
-		various bundles by providing following:
-		<ol>
-		<li><b>plugin_customization.ini</b> with an entry in the URL notation like:
-			<p>
-			org.eclipse.ui/default_dialog_settings_rootUrl=http://mycompany/dialog_settings
-			org.eclipse.ui/default_dialog_settings_rootUrl=file:/etc/mycompany/dialog_settings
-			org.eclipse.ui/default_dialog_settings_rootUrl=platform:/plugin/my.company.bundle/dialog_settings
-			</p>
-		</li>
-		<li>
-			Directory at the URL specified above, containing
-			<b>&lt;bundle_id&gt;/dialog_settings.xml</b> files for every bundle to customize,
-			e.g: <b>org.eclipse.jdt.ui/dialog_settings.xml</b>.
-		</li>
-		</ol>
-		AbstractUIPlugin.loadDialogSettings() checks now if the preference
-		<b>org.eclipse.ui/default_dialog_settings_rootUrl</b> is specified and tries to
-		load <b>&lt;default_dialog_settings_rootUrl&gt;/&lt;current_bundle_id&gt;/dialog_settings.xml</b>
-		file in case the workspace has no persisted dialog settings file for the
-		current bundle.
-    </td>
+
+  <tr id="delete-nested-projects">
+  	<td class="title">Delete nested projects</td>
+  	<td class="content">
+  		The <b>Delete Resources</b> dialog now shows a <b>Delete nested projects</b> option to delete all projects whose location on file system is a descendant of one of the selected projects.
+  		<p>
+        <img src="images/delete-nested-projects.png" alt=""/>
+      </p>
+  	</td>
   </tr>
 
   <tr id="debug-perspective-changed">
@@ -336,6 +319,33 @@ table.news tr td.content {vertical-align: top;}
           contentType="org.eclipse.core.runtime.xml"/>
 &lt;/extension>
       </pre>
+    </td>
+  </tr>
+
+  <tr id="dialog-settings-customization">
+    <td class="title">Dialog settings customization</td>
+    <td class="content">
+      Platform allows now Eclipse product maintainers to specify initial dialog settings for
+		various bundles by providing following:
+		<ol>
+		<li><b>plugin_customization.ini</b> with an entry in the URL notation like:
+			<p>
+			org.eclipse.ui/default_dialog_settings_rootUrl=http://mycompany/dialog_settings
+			org.eclipse.ui/default_dialog_settings_rootUrl=file:/etc/mycompany/dialog_settings
+			org.eclipse.ui/default_dialog_settings_rootUrl=platform:/plugin/my.company.bundle/dialog_settings
+			</p>
+		</li>
+		<li>
+			Directory at the URL specified above, containing
+			<b>&lt;bundle_id&gt;/dialog_settings.xml</b> files for every bundle to customize,
+			e.g: <b>org.eclipse.jdt.ui/dialog_settings.xml</b>.
+		</li>
+		</ol>
+		AbstractUIPlugin.loadDialogSettings() checks now if the preference
+		<b>org.eclipse.ui/default_dialog_settings_rootUrl</b> is specified and tries to
+		load <b>&lt;default_dialog_settings_rootUrl&gt;/&lt;current_bundle_id&gt;/dialog_settings.xml</b>
+		file in case the workspace has no persisted dialog settings file for the
+		current bundle.
     </td>
   </tr>
   
