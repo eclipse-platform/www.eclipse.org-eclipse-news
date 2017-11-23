@@ -257,18 +257,18 @@ table.news tr td.content {vertical-align: top;}
     <td class="title">Debug perspective layout changed</td>
     <td class="content">
       Default Debug perspective layout changed, see screenshot below. The aim is to give the editor area
-      more space and to show more relevant information without scrolling. 
+      more space and to show more relevant information without scrolling.
       Display and Expessions views are now shown by default, Problems view replaces Tasks.
       <p>
         <img src="images/debug_perspective_changes.png" alt=""/>
       </p>
     </td>
   </tr>
-  
+
   <tr id="new-top-level-debug-menu">
     <td class="title">New top level Debug menu</td>
     <td class="content">
-      A new Debug menu is added to the Eclipse main menu, see screenshot below. 
+      A new Debug menu is added to the Eclipse main menu, see screenshot below.
       Debug menu should be the home for all debug specific menu entries previously contributed to the &quot;Run&quot; menu.
       <p>
         <img src="images/run_menu_changes.png" alt=""/>
@@ -282,6 +282,16 @@ table.news tr td.content {vertical-align: top;}
       The Export Launch Configurations Wizard is now accessible through the right click menu on Launch Configurations. This wizard is still available with <b>File > Export > Run/Debug > Launch Configurations</b>
       <p>
         <img src="images/right-click-export-launch-config.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="flat-layout-tabbed-properties-view">
+    <td class="title">Flat layout in tabbed properties view</td>
+    <td class="content">
+      In the light theme the tabbed properties view now completely uses the same flat styling as the form-based editors do.
+      <p>
+        <img src="images/prop_light.png" alt=""/>
       </p>
     </td>
   </tr>
@@ -358,8 +368,8 @@ table.news tr td.content {vertical-align: top;}
 		current bundle.
     </td>
   </tr>
-  
-  
+
+
 
 
   <tr>
@@ -372,7 +382,7 @@ table.news tr td.content {vertical-align: top;}
         As more OSGi technologies rely heavily on abstract dependencies to wire a consistent application it
         became important for p2 to have first class handling of such dependencies. You are now able to use p2 to
         provision "soft" bundle dependencies that can not be expressed as <code>Import-Package</code> or
-        <code>Require-Bundle</code> manifest headers. Such dependencies are described by the 
+        <code>Require-Bundle</code> manifest headers. Such dependencies are described by the
         <code>Require-Capability</code> and <code>Provide-Capability</code> manifest headers, which p2 can now process.
       <p>
         For example a consumer bundle may import the API package of an OSGi service (<code>Import-Package</code>) and
