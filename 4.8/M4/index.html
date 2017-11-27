@@ -368,9 +368,30 @@ table.news tr td.content {vertical-align: top;}
 		current bundle.
     </td>
   </tr>
-
-
-
+  <tr id="styledtext-linespacing-provider">
+    <td class="title">Added new API in StyledText to customize different line spacing</td>
+    <td class="content">
+      <code>StyledText.setLineSpacingProvider(StyledTextLineSpacingProvider lineSpacingProvider)</code> can be used to customize different line spacing by implementing the 
+      <code>org.eclipse.swt.custom.StyledTextLineSpacingProvider</code> interface.
+      <p>
+    	For an example, see <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet369.java">Snippet369</a>
+    	which implements <code>org.eclipse.swt.custom.StyledTextLineSpacingProvider</code> interface to customize line spacing according the typed text:
+      </p>
+      <pre>
+text.setLineSpacingProvider(lineIndex -> {
+	String line = text.getLine(lineIndex).trim();
+	try {
+		return Integer.parseInt(line);
+	} catch(NumberFormatException e) {
+		return null;
+	}
+});
+      </pre>
+      <p>
+        <img src="images/styledtext_linespacing_provider.png" alt="" />
+      </p>
+    </td>
+  </tr>
 
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
