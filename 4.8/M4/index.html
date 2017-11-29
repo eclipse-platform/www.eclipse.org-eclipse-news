@@ -305,6 +305,15 @@ table.news tr td.content {vertical-align: top;}
       </p>
     </td>
   </tr>
+  
+  <tr id="lucene-7.0-update">
+    <td class="title">Lucene update</td>
+    <td class="content">
+      Lucene bundles have been updated to version 7.0. The org.apache.lucene.misc bundle is not included as it's no longer needed by the Help system. 
+      This new Lucene version comes with new index version thus clients providing prebuilt indexes have to rebuild them with Lucene 7.0 for the index to be used, 
+      if old version is supplied Eclipse Help system will not use that index and generate a new one locally.
+    </td>
+  </tr>
 
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
