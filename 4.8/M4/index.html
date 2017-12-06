@@ -160,6 +160,21 @@ table.news tr td.content {vertical-align: top;}
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
 
+  <tr id="eclipse-pde-no-automatic-modules">
+    <td class="title">PDE compiler reports absence of Automatic-Module-Name</td>
+    <td class="content">
+     A Manifest builder warning is reported on the manifest file if there is no <code>Automatic-Module-Name </code> header in it 
+     (required for Java 9 compatibility). The quickfix for this problem is to add an <code>Automatic-Module-Name</code> with the same 
+	name as <code>Bundle-SymbolicName</code>. For a newly created plugin project, this is added
+	automatically. On the  <b>Plug-in Development &gt; Compilers</b> preference  page in the
+	<b>Plug-ins</b> tab, there is a new option in the <b>General</b> section to control 
+	the severity of this issue.
+      <p>
+        <img src="images/pde-no-automatic-module-name-report-latest.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
   <tr id="eclipse-rcp-template-icons">
     <td class="title">New icons for the Eclipse 4 RCP template</td>
     <td class="content">
