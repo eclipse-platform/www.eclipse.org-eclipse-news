@@ -248,10 +248,21 @@ table.news tr td.content {vertical-align: top;}
     <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
   </tr>
 
-  <tr id="first-item-platform-dev">
-    <td class="title">First item</td>
+  <tr id="codemining-sourceviewer-support">
+    <td class="title">CodeMining support with SourceViewer</td>
     <td class="content">
-      Item blurb.
+      <p>A <b>code mining</b> represents a <b>content</b> (ex: label, icons) that should be <b>shown along with source text</b>, like the number of references, 
+      a way to run tests (with run/debug icons), etc. The main goal of code mining is to help developer to understand more the written/writing code
+      </p>
+      A code mining is represented by <code>org.eclipse.jface.text.codemining.ICodeMining</code> which are provided by <code>org.eclipse.jface.text.codemining.ICodeMiningProvider</code>
+      The <code>org.eclipse.jface.text.source.ISourceViewerExtension5</code> provides the capability to register <code>org.eclipse.jface.text.codemining.ICodeMiningProvider</code> and update code minings.
+      <p>
+    	The example <a href="http://git.eclipse.org/c/platform/eclipse.platform.text.git/tree/org.eclipse.jface.text.examples/src/org/eclipse/jface/text/examples/codemining/CodeMiningDemo.java">CodeMiningDemo</a> 
+    	draws <b>classes references / implementations</b> code minings:
+      </p>
+      <p>
+        <img src="images/codemining-sourceviewer-support.png" alt="" />
+      </p>
     </td>
   </tr>
 
