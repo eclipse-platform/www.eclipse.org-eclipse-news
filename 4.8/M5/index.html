@@ -281,7 +281,53 @@ table.news tr td.content {vertical-align: top;}
     </td>
   </tr>
 
-
+  <tr id="codemining-extension-point">
+    <td class="title">CodeMining provider Extension point</td>
+    <td class="content">
+      The <b>org.eclipse.ui.workbench.texteditor.codeMiningProviders</b> extension point gives the capability to register code mining providers <code>org.eclipse.jface.text.codemining.ICodeMiningProvider</code> in text editor using <code>ISourceViewerExtension5</code>.
+      Associating providers via this extension doesn't automatically enable code-mining, so that clients are also supposed to use a reconciler or whatever event mechanism to invoke <code>ISourceViewerExtension5.updateCodeMinings()</code>.
+      For instance you can consume the <code>org.eclipse.jface.text.codemining.CodeMiningReconciler</code> to update the registered CodeMining providers. 
+      <p>
+    	The <a href="http://git.eclipse.org/c/platform/eclipse.platform.text.git/tree/org.eclipse.ui.genericeditor.examples">GenericEditor Example</a> display number of referenced projects: 
+      </p>
+      <p>
+        <img src="images/codemining-extension-point.png" alt="" />
+      </p>
+      <p>
+    	This sample consumes the code mining provider <a href="http://git.eclipse.org/c/platform/eclipse.platform.text.git/tree/org.eclipse.ui.genericeditor.examples/src/org/eclipse/ui/genericeditor/examples/dotproject/codemining/ProjectReferencesCodeMiningProvider.java" >ProjectReferencesCodeMiningProvider</a> 
+    	which is registered	with the <code>org.eclipse.ui.workbench.texteditor.codeMiningProviders</code> extension point:
+      </p>
+<pre>
+&lt;extension
+   point="org.eclipse.ui.workbench.texteditor.codeMiningProviders"&gt;
+   &lt;codeMiningProvider
+        class="org.eclipse.ui.genericeditor.examples.dotproject.codemining.ProjectReferencesCodeMiningProvider"
+        id="org.eclipse.ui.genericeditor.examples.dotproject.codemining.references"
+        label="Project references"&gt;
+        &lt;enabledWhen&gt;
+        	  &lt;with variable="editorInput"&gt;
+              &lt;adapt type="org.eclipse.core.resources.IFile"&gt;
+                &lt;test property="org.eclipse.core.resources.contentTypeId" value="org.eclipse.ui.genericeditor.examples.dotproject" /&gt;
+              &lt;/adapt&gt;
+        	  &lt;/with&gt;
+        &lt;/enabledWhen&gt;
+   &lt;/codeMiningProvider&gt;
+&lt;/extension&gt;
+      </pre>    	
+      <p>This code mining provider is updated with the <code>org.eclipse.jface.text.codemining.CodeMiningReconciler</code> reconciler.  
+      </p>
+<pre>
+&lt;extension
+      point="org.eclipse.ui.genericeditor.reconcilers"&gt;
+   &lt;reconciler
+         class="org.eclipse.jface.text.codemining.CodeMiningReconciler"
+         contentType="org.eclipse.ui.genericeditor.examples.dotproject"&gt;
+   &lt;/reconciler&gt;
+&lt;/extension&gt;
+</pre>      
+    </td>
+  </tr>
+  
   <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
   </tr>
