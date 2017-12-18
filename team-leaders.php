@@ -5,7 +5,7 @@
 	# team-leaders.php
 	#
 	# Author: 		
-	# Date:			2017-11-15
+	# Date:			2017-12-18
 	#
 	# Description: Details about the Eclipse Project PMC
 	#
@@ -84,6 +84,12 @@ ob_start();
 					He is an active Platform UI and PDE committer, contributor to other Eclipse projects and co-leads the <a href="http://www.eclipse.org/e4/">e4</a>  and
 					<a href="https://www.eclipse.org/eclipse/platform-ui/">Platform UI</a> project.
 					His interests include API and UI simplification, code clean and growing the number of committers and contributors in the project.
+		        </li>
+				<li>
+		          <b><a name="tom"></a>Tom Watson, IBM Austin/b><br>
+					Tom is one of the initial committers of the Equinox project and was involved in the initial migration of the Eclipse runtime to the OSGi Framework.
+					Currently he leads the Equinox Project, represents IBM in the Eclipse Planning Council, and is also a member of the Eclipse Architecture Council.
+					He focuses is on modularity and the OSGi Framework design and development. Tom is also a leader in the specification development process at the OSGi Alliance.
 		        </li>
 		      </ul>
 		</div>
