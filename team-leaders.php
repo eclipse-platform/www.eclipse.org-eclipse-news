@@ -86,7 +86,7 @@ ob_start();
 					His interests include API and UI simplification, code clean and growing the number of committers and contributors in the project.
 		        </li>
 				<li>
-		          <b><a name="tom"></a>Tom Watson, IBM Austin/b><br>
+		          <b><a name="tom"></a>Tom Watson, IBM Austin</b><br>
 					Tom is one of the initial committers of the Equinox project and was involved in the initial migration of the Eclipse runtime to the OSGi Framework.
 					Currently he leads the Equinox Project, represents IBM in the Eclipse Planning Council, and is also a member of the Eclipse Architecture Council.
 					He focuses is on modularity and the OSGi Framework design and development. Tom is also a leader in the specification development process at the OSGi Alliance.
