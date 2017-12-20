@@ -356,7 +356,7 @@ table.news tr td.content {vertical-align: top;}
          contentType="org.eclipse.ui.genericeditor.examples.dotproject"&gt;
    &lt;/reconciler&gt;
 &lt;/extension&gt;
-</pre>      
+</pre>
     </td>
   </tr>
 
@@ -397,6 +397,20 @@ table.news tr td.content {vertical-align: top;}
 &lt;/extension&gt;
 </pre>
        and also implement <code>org.eclipse.debug.ui.AbstractLaunchConfigurationTab.initializeAttributes()</code> for their specifics tabs.
+    </td>
+  </tr>
+
+  <tr id="styledtext-api">
+    <td class="title">New API for StyledText</td>
+    <td class="content">
+      The new method <code>StyledText#getOffsetAtPoint(Point)</code> is a replacement for
+      <code>StyledText#getOffsetAtLocation(Point)</code>. It behaves similar, except that it does
+      not throw an <code>IllegalArgumentException</code> when no character is at the given location,
+      but returns -1 instead.
+      <p>
+      Using the new method will result in better performance when used in tight loops. Especially the
+      <b>Show Whitespace</b> editor feature benefits from using the new API.
+      </p>
     </td>
   </tr>
 
