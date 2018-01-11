@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 11:25 EST January 10, 2018.
+Last revised 8:58 EST January 11, 2018.
 
 <!--
 <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
@@ -197,15 +197,20 @@ Eclipse 4.8 Endgame Plan.
 			10
 			</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">
+			<td rowspan="1">
 				Oracle Java 8u152<br/>
-				Oracle Java 9.0.1<br/>
 				IBM Java 8 8.0.5
 			</td>
 			<td rowspan="2">Win32</td>
 		</tr>
 		<tr>
 			<td rowspan="1">x86 64-bit</td>
+			<td rowspan="1">
+				Oracle Java 8u152<br/>
+				Oracle Java 9.0.1<br/>
+				IBM Java 8 8.0.5
+			</td>
+			
 		</tr>
 		<!-- ************ RHEL ************** -->
 		<tr class="c1">
@@ -213,7 +218,7 @@ Eclipse 4.8 Endgame Plan.
 
 			<td rowspan="2">7.4</td>
 			<td rowspan="1">x86 64-bit</td>
-			<td rowspan="2">
+			<td rowspan="1">
 				Open JDK 8u152<br/>
 				Open JDK 9.0.1<br/>
 				Oracle Java 8u152<br/>
@@ -224,21 +229,28 @@ Eclipse 4.8 Endgame Plan.
 		</tr>
 		<tr class="c1">
 			<td rowspan="1">Power 64-bit LE</td>
+			<td rowspan="1">
+				IBM Java 8 8.0.5
+			</td>
 		</tr>
 		<!-- ************ SLES ************** -->
 		<tr class="c0">
 			<td rowspan="3">SUSE Linux Enterprise Server</td>
 			<td rowspan="3">12 SP2</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">
+			<td rowspan="1">
 				Oracle Java 8u152<br/>
-				Oracle Java 9.0.1<br/>
 				IBM Java 8 8.0.5
 			</td>
 			<td rowspan="3">GTK+ 3</td>
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">x86 64-bit</td>
+			<td rowspan="1">
+				Oracle Java 8u152<br/>
+				Oracle Java 9.0.1<br/>
+				IBM Java 8 8.0.5
+			</td>
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">Power 64-bit LE</td>
@@ -252,15 +264,19 @@ Eclipse 4.8 Endgame Plan.
 			<td rowspan="2">Ubuntu Long Term Support</td>
 			<td rowspan="2">16.04</td>
 			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="2">
+			<td rowspan="1">
 				Oracle Java 8u152<br/>
-				Oracle Java 9.0.1<br/>
 				IBM Java 8 8.0.5
 			</td>
 			<td rowspan="2">GTK+ 3</td>
 		</tr>
 		<tr class="c1">
 			<td rowspan="1">x86 64-bit</td>
+			<td rowspan="1">
+				Oracle Java 8u152<br/>
+				Oracle Java 9.0.1<br/>
+				IBM Java 8 8.0.5
+			</td>
 		</tr>
 		
 		<!-- ************ Mac ************** -->
