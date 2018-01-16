@@ -212,16 +212,43 @@ table.news tr td.content {vertical-align: top;}
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
 
-  <tr id="first-item-platform">
-    <td class="title">First item</td>
+  <tr id="worker-deobfuscated-platform">
+    <td class="title">Workers use job names as thread names</td>
     <td class="content">
-      Item blurb.
+      Jobs framework now uses <code>Job</code> names for <code>Worker</code> thread names. Previously all
+      running <code>Worker</code>'s got enumerated thread names, without any hint what the
+      current <code>Worker</code> is actually doing:
+      <p>
+        <img src="images/worker_obfuscated.png" alt="Worker names before M5" />
+      </p>
+
+      Now the <code>Job</code> name is added
+      next to the <code>Worker</code> name:
+
+      <p>
+        <img src="images/worker_deobfuscated.png" alt="Worker names after M5" />
+      </p>
     </td>
   </tr>
 
-
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+
+  <tr id="worker-deobfuscated-jdt">
+    <td class="title">Debugger listens to thread name changes</td>
+    <td class="content">
+      Debug view now automatically updates thread names if they are changed in the debuggee JVM. 
+      This shows live information for worker instances, as described above.
+      <p>
+      Technically speaking, Java debugger automatically adds a new (user invisible) breakpoint in the JVM and notifies
+      clients (like Debug view) on a breakpoint hit. If this behavior is undesired for some reason, product owners can disable it via product customization.
+      <p>
+      The property value is:
+      <code>
+      org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.javaDebug.ListenOnThreadNameChanges=false 
+      </code>
+    </td>
   </tr>
 
   <tr id="jdt-test-sources">
