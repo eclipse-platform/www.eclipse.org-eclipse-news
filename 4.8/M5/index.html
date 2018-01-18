@@ -34,8 +34,8 @@ table.news tr td.content {vertical-align: top;}
 
 <body>
 <h1>Eclipse &quot;New and Noteworthy&quot; Template</h1>
-<p>Last revised 2016-11-02.</p>
-<p>This is the template for the &quot;New and Noteworthy&quot; document that
+<p>Last revised 2018-01-18.</p>
+<p>This is the template (in transient state for M5)for the &quot;New and Noteworthy&quot; document that
   accompanies each Eclipse project milestone build.</p>
 <p>Note: This template document is XHTML 1.0 Transitional. Please use the W3C <a href="http://validator.w3.org/#validate_by_input">XHTML
     Markup Validation Service</a> to check your document's markup before submitting.
@@ -244,6 +244,24 @@ table.news tr td.content {vertical-align: top;}
     </td>
   </tr>
   
+  <tr id="module-type-combo">
+    <td class="title">Module Specific Type Declaration Search</td>
+    <td class="content">
+      You can now search for a <b>Type Declaration</b> declared in a specific module or a set of modules.
+      The type declaration with the module should be given as <code>moduleName/[qualification '.']typeName</code> as shown:
+      <p><img src="images/modtype-search-nn.png" alt=""/></p>
+      <p>
+       Alternatively, a set of comma separated modules can be specified as <code>moduleName1, moduleName2/[qualification '.']typeName</code> as shown:
+       </p>
+      <p><img src="images/modtype-search-multi-nn.png" alt=""/></p>
+       <p>
+       You can even search for types in unnammed modules specifically by either specifying ALL-UNNAMED in the module name as <code> ALL-UNNAMED/packageName.typeName</code> or
+       by just omitting the module name as <code>/packageName.typeName</code> as shown below:
+       </p>
+      <p><img src="images/modtype-search-unnammed-nn.png" alt=""/></p>
+    </td>
+  </tr>
+
   <tr id="worker-deobfuscated-jdt">
     <td class="title">Debugger listens to thread name changes</td>
     <td class="content">
