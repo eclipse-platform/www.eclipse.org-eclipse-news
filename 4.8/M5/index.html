@@ -235,6 +235,24 @@ table.news tr td.content {vertical-align: top;}
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
 
+  <tr id="worker-deobfuscated-jdt">
+    <td class="title">Debugger listens to thread name changes</td>
+    <td class="content">
+      Debug view now automatically updates thread names if they are changed in the debuggee JVM. 
+      This shows live information for worker instances, as described above.
+      <p>
+      Technically speaking, Java debugger automatically adds a new (user invisible) breakpoint in the JVM and notifies
+      clients (like Debug view) on a breakpoint hit. If this behavior is undesired for some reason, product owners can disable it via product customization.
+      </p>
+      <p>
+      The property value is:
+      <code>
+      org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.javaDebug.ListenOnThreadNameChanges=false 
+      </code>
+      </p>
+    </td>
+  </tr>
+  
   <tr id="navigate-to-switch">
     <td class="title">Navigate to 'switch' statement</td>
     <td class="content">
@@ -277,24 +295,6 @@ module hello {
        by just omitting the module name as <code>/packageName.typeName</code> as shown below:
        </p>
       <p><img src="images/modtype-search-unnammed-nn.png" alt=""/></p>
-    </td>
-  </tr>
-
-  <tr id="worker-deobfuscated-jdt">
-    <td class="title">Debugger listens to thread name changes</td>
-    <td class="content">
-      Debug view now automatically updates thread names if they are changed in the debuggee JVM. 
-      This shows live information for worker instances, as described above.
-      <p>
-      Technically speaking, Java debugger automatically adds a new (user invisible) breakpoint in the JVM and notifies
-      clients (like Debug view) on a breakpoint hit. If this behavior is undesired for some reason, product owners can disable it via product customization.
-      </p>
-      <p>
-      The property value is:
-      <code>
-      org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.javaDebug.ListenOnThreadNameChanges=false 
-      </code>
-      </p>
     </td>
   </tr>
 
