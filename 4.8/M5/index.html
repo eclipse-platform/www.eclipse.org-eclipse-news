@@ -346,6 +346,8 @@ The solution used to handle this is the same, that Maven uses: When test depende
 <p><img src="images/9-new-junit-332602.png" alt=""/></p>
 <p>In Run and Debug configurations, the <b>Classpath</b> tab (or <b>Dependencies</b> tab when launching with Java 9) contains a new option <b>Exclude Test Code</b>, that is automatically preselected when launching a Java Application from a source folder that is not marked to contain test sources:</p> 
 <p><img src="images/10-launching-529321.png" alt=""/></p>
+<p>When launching with Java 9 and this option is not selected, command line options will automatically be added so modules that have a non-empty classpath read the unnamed module. 
+These command line options are part of what can be overridden using the new <a href="#override-dependencies">Override Dependencies</a> button.</p>  
     </td>
   </tr>
 
