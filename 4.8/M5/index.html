@@ -243,6 +243,24 @@ table.news tr td.content {vertical-align: top;}
       <p><img src="images/navigate-to-switch.png" alt=""/></p>
     </td>
   </tr>
+
+  <tr id="module-info-paste">
+    <td class="title">Paste module-info.java code in Package Explorer</td>
+    <td class="content">
+      You can now paste a snippet of code representing module-info.java directly into a source folder to create a module-info.java file. 
+      For example, copy this code:
+<pre>
+import java.sql.Driver;
+module hello {
+	exports org.example;
+	requires java.sql;
+	provides Driver with org.example.DriverImpl;
+}
+</pre>
+	Then select a source folder in a Java 9 project in the Package Explorer view and use <b>Ctrl+V (Edit &gt; Paste)</b> to paste it.
+	This automatically creates a module-info.java file in the source folder with the copied content.      
+    </td>
+  </tr>
   
   <tr id="module-type-combo">
     <td class="title">Module Specific Type Declaration Search</td>
