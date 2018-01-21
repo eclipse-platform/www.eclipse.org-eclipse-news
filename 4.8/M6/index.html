@@ -29,18 +29,24 @@ table.news tr td.section {font-size: 20px; font-weight: bold;}
 table.news tr td.title {vertical-align: top; font-weight: bold;}
 table.news tr td.content {vertical-align: top;}
   </style>
-<title>Eclipse Project Photon (4.8) M5 - New and Noteworthy</title>
+<title>Eclipse &quot;New and Noteworthy&quot; Template</title>
 </head>
 
 <body>
-<h1>Eclipse Project Photon (4.8) M5 - New and Noteworthy</h1>
+<h1>Eclipse &quot;New and Noteworthy&quot; Template</h1>
+<p>Last revised 2016-11-02.</p>
+<p>This is the template for the &quot;New and Noteworthy&quot; document that
+  accompanies each Eclipse project milestone build.</p>
+<p>Note: This template document is XHTML 1.0 Transitional. Please use the W3C <a href="http://validator.w3.org/#validate_by_input">XHTML
+    Markup Validation Service</a> to check your document's markup before submitting.
+    This will detect screwed up HTML tags, images without an &quot;alt&quot;
+    attribute, and other tedious little details.</p>
 
 <ul>
   <li><a href="#Platform">Platform</a></li>
   <li><a href="#JDT">JDT</a></li>
   <li><a href="#PDE">PDE</a></li>
   <li><a href="#Platform-Dev">Platform Developers</a></li>
-  <li><a href="#JDT-Dev">JDT Developers</a></li>
   <li><a href="#Equinox">Equinox</a></li>
 </ul>
 
@@ -50,89 +56,174 @@ table.news tr td.content {vertical-align: top;}
     <col />
   </colgroup>
 
+  <tr>
+    <td id="Instructions" class="section" colspan="2">
+      <h2>Instructions</h2>
+    </td>
+  </tr>
 
+  <tr id="item-name">
+    <td class="title">News item title and description</td>
+    <td class="content">
+        The whole entry should be a blurb pitched to the Eclipse end user community
+        (not just to members of the Eclipse Platform development team).
+      <p>
+        The title should be short and snappy, written in
+        <a href="https://en.wikipedia.org/wiki/Letter_case#Case_styles">sentence case</a>, and using
+        "<a href="https://en.wikipedia.org/wiki/Headlinese#Syntax">headlinese</a>" (compressed style).
+        The title should <b>not</b> use trailing punctuation, and the &lt;tr&gt; XHTML element
+        needs a unique id attribute (value is all-lowercase and hyphen-separated).
+      </p>
+      <p>
+        In the news description, tell
+        users about changes they'll see in the UI. Tell component writers
+        about changes they'll see at the client- and server-side APIs. Try to
+        generate some excitement; save the boring details for the manual; be short and don't repeat yourself. The
+        description should be complete sentences, with trailing punctuation.
+      </p>
+      <p>Make the entry self-contained and mention API classes.
+        Do <b>not</b> link to bugs and don't promote individuals or third-party products.
+      </p>
+      <p>Use active voice (say "you", not "the user"), and follow other advice in the
+        <a href="http://wiki.eclipse.org/Eclipse_Doc_Style_Guide#topic-content">Topic&nbsp;Content</a>
+        section of the Eclipse Doc Style Guidelines.
+      </p>
+      <p>Stick to the default font and size. Make command names (<b>Quick Fix</b>),
+        keyboard shortcuts (<b>Ctrl+1</b>), and preference page paths
+        (<b>Preferences > General > Keys</b>) bold (using <code>&lt;</code>b<code>&gt;</code>).
+        Avoid other emphasis markup, but prefer <code>&lt;</code>b<code>&gt;</code>
+        over <code>&lt;</code>em<code>&gt;</code> if you have to use one.
+      </p>
+      <p>Do <b>not</b> enclose the first paragraph of an item in <code>&lt;p&gt;&lt;/p&gt;</code> tags.
+      Later in the entry, prefer <code>&lt;p&gt;</code> over <code>&lt;br/&gt;</code>.
+      </p>
+      <p>To break up very long <code>&lt;code&gt;</code> tags that don't contain whitespace for automatic word-wrap,
+      consider inserting <code>&lt;span style="visibility:hidden"&gt;&amp;shy;&lt;/span&gt;</code> at strategic positions.
+      </p>
+      <p>See entries in <a href="../../4.6/M7/index.html">published</a> news documents for correct examples. These published news entries have been already reviewed, while
+         entries in the evolving document may still contain errors.
+      </p>
+    </td>
+  </tr>
+
+  <tr id="screenshots">
+    <td class="title">Screenshots</td>
+    <td class="content">
+        If a small image sheds light, place it below the description, in a separate
+        paragraph. As the majority of the Eclipse users uses Windows 7, regular screen snapshots
+        should be done on Windows 7 if possible, but screenshots from
+        other operating system are also acceptable. Crop
+        out any extraneous stuff to focus the reader's attention on your new
+        feature. The image should be
+        <b>no more than 520 pixels wide</b> and in <b>PNG</b> format (as opposed
+        to GIF, TIF, BMP, or JPG). Use PNG-8 if your image doesn't have a lot of color,
+        or PNG-24 if the screen shot uses enough color to warrant additional color depth.
+        See also the
+        <a href="http://wiki.eclipse.org/Eclipse_Doc_Style_Guide#graphics">Graphics</a>
+        section of the Eclipse Doc Style Guidelines.
+      <p>The Windows <b>Snipping Tool</b> actually saves to PNG on Windows 7 and can easily be
+        used to crop and save screenshots:</p>
+      <ul>
+        <li>Arrange the windows for the shot</li>
+        <li>Use the Windows <b>Snipping Tool</b> to capture part of the screen</li>
+        <li>Use <b>File &gt; Save As</b> to save the screenshot as a PNG</li>
+        <li>Overlays such as red circles or boxes to call out details can be done using Microsoft Paint</li>
+      </ul>
+      <p>Name the file in a way that is appropriate and specific to the item
+        (e.g., key-bindings.png, rather than something generic like image.png).
+        Use all <b>lowercase</b> letters in the image file name, including the &quot;<b>.png</b>&quot;
+        file extension. As a separator, use <b>hyphen</b> &quot;<b>-</b>&quot; rather than
+        underscore, space, or whatnot. The item's id is often a good choice for an image name.</p>
+      <p>Put all the images in a sibling directory named &quot;images&quot;.
+        This gives XHTML like:<br/>
+        <code>&lt;img src=&quot;images/foo-view.png&quot; alt=&quot;&quot;/&gt;</code><br/>
+        Include a suitable <a href="http://www.w3.org/TR/html4/struct/objects.html#h-13.8"><code>alt</code></a> attribute.
+        The alt text should be empty ("") if the image just illustrates the text.
+        Only use the alt text to add information that is not accessible if the page is rendered without images.
+        Don't write <code>alt="Screenshot of <i>the XY dialog</i>"</code>.
+        Blind users shouldn't have to skip useless repetitions, but e.g. a field label can be
+        interesting unless it's already part of the description.</p>
+      <p>If the <code>alt</code> attribute text cannot sufficiently replace the image contents
+        (e.g. for a screenshot that shows source code), then enclose the img element in a link
+        to a plain &quot;.txt&quot; file with the same name as the image:<br/>
+        <code>&lt;a href=&quot;images/foo-view.txt&quot;&gt;&lt;img ...</code></p>
+      <p>The images should be left-justified (as opposed to centered). Do not embed the width and height of the image.</p>
+      <p>
+        <img src="https://www.eclipse.org/artwork/images/v2/logo-800x188.png" alt="" />
+      </p>
+      <script type="text/javascript">
+      //<![CDATA[
+      document.addEventListener('load', function markOversizedImages() {
+        var imgs = document.getElementsByTagName("img");
+        for (var i = 0; i < imgs.length; i++) {
+          var img = imgs[i];
+          var w = window.getComputedStyle(img, null).getPropertyValue("width");
+          if (parseInt(w, 10) > 520) {
+            img.style.width = "300px";
+            var filter = "sepia(0.5) blur(2px)";
+            img.style.filter = filter;
+            img.style.webkitFilter = filter;
+            var msg = document.createElement("div");
+            msg.innerHTML = "Image too big. See Instructions &gt; <a href='#screenshots'>Screenshots</a>.<br>"
+                + img.getAttribute("src") + ": width=" + w;
+            msg.style.color = "red";
+            msg.style.fontWeight = "bold";
+            img.parentElement.insertBefore(msg, img);
+          }
+        }
+      }, true);
+      //]]>
+      </script>
+      <script type="text/javascript">
+      //<![CDATA[
+      window.addEventListener('load', function findWrongHighLighter() {
+        var emTags = document.getElementsByTagName("em");
+        for (var i = 0; i < emTags.length; i++) {
+          var tag = emTags[i];
+          var msg = document.createElement("div");
+          msg.innerHTML = "Do not use &lt;em&gt; for highlighting. Prefer the usage of &lt;b&gt;. See Instructions.<br>"
+          msg.style.color = "red";
+          msg.style.fontWeight = "bold";
+          tag.parentElement.insertBefore(msg, tag);
+        }
+      }, true);
+      //]]>
+      </script>
+    </td>
+  </tr>
+  <tr id="css">
+    <td class="title">CSS styling</td>
+    <td class="content">
+        Do <b>not</b> change the style.css file without consulting with the Eclipse Platform project lead. The news entries are
+        aggregated at the end of the development cycle and the CSS files need to be aligned.
+    </td>
+  </tr>
+  <tr id="validation">
+    <td class="title">Validation</td>
+    <td class="content">
+        Use the W3C <a href="http://validator.w3.org/#validate_by_input">XHTML
+        Markup Validation Service</a> to check your document's markup before
+        submitting.
+    </td>
+  </tr>
 
 
   <tr>
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
 
-  <tr id="worker-deobfuscated-platform">
-    <td class="title">Workers use job names as thread names</td>
+  <tr id="first-item-platform">
+    <td class="title">First item</td>
     <td class="content">
-      The jobs framework now uses <code>Job</code> names for <code>Worker</code> thread names. Previously all
-      running <code>Worker</code>'s got enumerated thread names, without any hint what the
-      current <code>Worker</code> is actually doing:
-      <p>
-        <img src="images/worker_obfuscated.png" alt="Worker names before M5" />
-      </p>
-
-      Now the <code>Job</code> name is added
-      next to the <code>Worker</code> name:
-
-      <p>
-        <img src="images/worker_deobfuscated.png" alt="Worker names after M5" />
-      </p>
+      Item blurb.
     </td>
   </tr>
+
 
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
 
-  <tr id="worker-deobfuscated-jdt">
-    <td class="title">Debugger listens to thread name changes</td>
-    <td class="content">
-      Debug view now automatically updates thread names if they are changed in the debuggee JVM. 
-      This shows live information for worker instances, as described above.
-      <p>
-      Technically speaking, Java debugger automatically adds a new (user invisible) breakpoint in the JVM and notifies
-      clients (like Debug view) on a breakpoint hit. If this behavior is undesired for some reason, product owners can disable it via product customization.
-      </p>
-      <p>
-      The property value is:
-      <code>
-      org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.javaDebug.ListenOnThreadNameChanges=false 
-      </code>
-      </p>
-    </td>
-  </tr>
-  
-  <tr id="navigate-to-switch">
-    <td class="title">Navigate to 'switch' statement</td>
-    <td class="content">
-      You can now <b>Ctrl+click</b> or use <b>Open Declaration (F3)</b> on <code>case</code> or <code>default</code>
-      keywords to quickly navigate to the beginning of the <code>switch</code> statement.
-      <p><img src="images/navigate-to-switch.png" alt=""/></p>
-    </td>
-  </tr>
-
-  <tr id="module-info-paste">
-    <td class="title">Paste module-info.java code in Package Explorer</td>
-    <td class="content">
-      You can now paste a snippet of code representing module-info.java directly into a source folder to create a module-info.java file. 
-      For example, copy this code:
-<pre>
-import java.sql.Driver;
-module hello {
-	exports org.example;
-	requires java.sql;
-	provides Driver with org.example.DriverImpl;
-}
-</pre>
-	Then select a source folder in a Java 9 project in the Package Explorer view and use <b>Ctrl+V (Edit &gt; Paste)</b> to paste it.
-	This automatically creates a module-info.java file in the source folder with the copied content.      
-    </td>
-  </tr>
-
-  <tr id="content-assist-module-declaration-name">
-    <td class="title">Content assist for module declaration name</td>
-    <td class="content">
-      Content assist <b>(Ctrl+Space)</b> support is now available for module declaration name. 
-      <p><img src="images/content-assist-module-declaration-name.png" alt=""/></p>
-    </td>
-  </tr>
-  
   <tr id="jdt-test-sources">
     <td class="title">Test sources</td>
     <td class="content">
@@ -144,12 +235,13 @@ module hello {
 	<p><img src="images/1-sourcefolder-settings-521330.png" alt=""/></p>
 	<p>Test source folders and dependencies are shown with a darker icon in the build path settings, 
 	the package explorer and other locations. This can be disabled in  <b>Preferences > Java > Appearance</b>. </p>
+	<p><img src="images/2-test-color-settings-521334.png" alt=""/></p>
 	<p>
 	Referenced projects can contain test sources and have test dependencies themselves. Usually, when test sources are 
 	compiled, the test code in projects on the build path will be visible. As this is not always desirable, it can be 
 	changed by setting the new build path attribute <b>Without test code</b>, that is available for projects, to <b>Yes</b>.
 	Build path entries configured like this have a decoration <code>[without test code]</code> after the project name, which can be disabled in <b>Preferences > General > Appearance > Label Decorations</b>.</p> 
-	<p><img src="images/2-without-test-code-526858.png" alt=""/></p>
+	<p><img src="images/2a-without-test-code-526858.png" alt=""/></p>
 	<p>For each project, compilation is now done in two phases: First all main sources (which cannot see any test-code on 
 	the build-path) and then all test sources.</p>
 	<p><img src="images/3-visibilities-224708.png" alt=""/></p>
@@ -169,12 +261,8 @@ The solution used to handle this is the same, that Maven uses: When test depende
 <p><img src="images/7-filter-call-hierarchy-521335.png" alt=""/></p>
 <p>Another filter to remove test code exists for <b>Quick type hierarchies</b>:</p>
 <p><img src="images/8-filter-quick-type-hierarchy-521333.png" alt=""/></p>
-<p>Test source folders will be preselected in the <b>New Junit Test Case</b>-Wizard</p>
+<p>Finally, test source folders will be preselected in the <b>New Junit Test Case</b>-Wizard</p>
 <p><img src="images/9-new-junit-332602.png" alt=""/></p>
-<p>In Run and Debug configurations, the <b>Classpath</b> tab (or <b>Dependencies</b> tab when launching with Java 9) contains a new option <b>Exclude Test Code</b>, that is automatically preselected when launching a Java Application from a source folder that is not marked to contain test sources:</p> 
-<p><img src="images/10-launching-529321.png" alt=""/></p>
-<p>When launching with Java 9 and this option is not selected, command line options will automatically be added so modules that have a non-empty classpath read the unnamed module. 
-These command line options are part of what can be overridden using the new <a href="#override-dependencies">Override Dependencies</a> button.</p>  
     </td>
   </tr>
 
@@ -200,21 +288,6 @@ These command line options are part of what can be overridden using the new <a h
       </p>
     </td>
   </tr>
-  
-  <tr id="override-dependencies">
-    <td class="title">Overriding modular build path dependencies for launching</td>
-    <td class="content">
-      Based on Java build path, a Java 9 module can have command line options. These options from build path can be overridden for launching programs in the module.
-      <b>Override Dependencies</b> button has been added to <b>Dependencies</b> tab:
-      <p>
-        <img src="images/override-dependencies-button.png" alt="Override Dependencies button" />
-      </p>
-      Dialog can be used to override modular dependencies:
-      <p>
-        <img src="images/override-dependencies-dialog.png" alt="Override Dependencies dialog" />
-      </p>
-    </td>
-  </tr>
 
   <tr id="prototype-java-launch-configuration">
     <td class="title">Launch configuration prototypes for Java Launch Configurations</td>
@@ -232,29 +305,6 @@ These command line options are part of what can be overridden using the new <a h
       maintains a link to its prototype, but is a complete standalone launch configuration than can be launched, exported, shared, etc.
       <p>
         <img src="images/prototype-tab-java-launch-configuration-2.png" alt="Prototype Tab Java Launch Configuration 2" />
-      </p>
-    </td>
-  </tr>
-
-  <tr id="pde-generic-reqs-caps-handling">
-    <td class="title">PDE handles generic bundle requirements/capabilities</td>
-    <td class="content">
-      Also PDE handles now dependencies described by the
-      <code>Require-Capability</code> and <code>Provide-Capability</code> manifest headers.
-      These dependencies are taken additionally into account when computing the required bundles for a selected set of bundles
-      from the target platform.
-      <p>
-        The most noticable place where this feature is used is the <b>Add Required Plug-ins</b> action on the <b>Plug-ins</b>
-        page of the Eclipse launch configuration editor. For example, a usual effect is that the plug-in <code>org.apache.felix.scr</code>
-        will be additionally selected by the action. This plug-in declares <code>Provide-Capability: osgi.extender</code>, which
-        is consumed as <code>Require-Capability: osgi.extender</code> by some plug-ins.
-      </p>
-      <p>
-        <img src="images/pde-generic-reqs-caps-handling.png" alt="PDE Generic Bundle Requirements/Capabilities Handling" />
-      </p>
-      <p>
-        Further the computation of required plug-ins is performed recursively now until added plug-ins do not introduce more
-        transitive requirements.
       </p>
     </td>
   </tr>
@@ -407,21 +457,6 @@ These command line options are part of what can be overridden using the new <a h
   </tr>
 
   <tr>
-    <td colspan="2" class="section" id="jdt-dev">JDT Developers</td>
-  </tr>
-
-  <tr id="regex-module-declaration-search-api">
-    <td class="title">Support for Regex Module Declaration Search</td>
-    <td class="content">
-      The existing method <code>SearchPattern#createPattern(String , int , int , int )</code> is enhanced for
-      supporting regular expression search for module declarations. Please note that the flag 
-      <code>SearchPattern#R_REGEXP_MATCH</code> used for regular expression search is applicable exclusively for
-      module declarations. No other flag (for eg.<code>SearchPattern#R_CASE_SENSITIVE</code>) should be used in
-      disjunction with this match rule.
-    </td>
-  </tr>
-
-  <tr>
     <td colspan="2" class="section" id="Equinox">Equinox</td>
   </tr>
 
@@ -438,14 +473,15 @@ These command line options are part of what can be overridden using the new <a h
   </tr>
 </table>
 
+<!--
 <p>The above features are just the ones that are new since the previous milestone
-build. Summaries for earlier Photon milestone builds:</p>
+build. Summaries for earlier Oxygen milestone builds:</p>
 <ul>
-  <li><a href="https://www.eclipse.org/eclipse/news/4.8/M4/">News for Eclipse Photon milestone build M4</a></li>
-  <li><a href="https://www.eclipse.org/eclipse/news/4.8/M3/">News for Eclipse Photon milestone build M3</a></li>
-  <li><a href="https://www.eclipse.org/eclipse/news/4.8/M2/">News for Eclipse Photon milestone build M2</a></li>
-  <li><a href="https://www.eclipse.org/eclipse/news/4.8/M1/">News for Eclipse Photon milestone build M1</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.7/M3/">News for Eclipse Oxygen milestone build M3</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.7/M2/">News for Eclipse Oxygen milestone build M2</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.7/M1/">News for Eclipse Oxygen milestone build M1</a></li>
 </ul>
+-->
 
 </body>
 </html>
