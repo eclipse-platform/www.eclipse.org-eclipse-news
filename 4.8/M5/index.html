@@ -378,6 +378,31 @@ These command line options are part of what can be overridden using the new <a h
     </td>
   </tr>
 
+  <tr id="inlined-annotations-action">
+    <td class="title">Action for Inlined Annotations</td>
+    <td class="content">
+      Inlined annotation can define an action to execute when you click on the annotation with <code>Consumer&lt;MouseEvent&gt; getAction(MouseEvent e)</code>.       
+      <p>
+    	The example <a href="http://git.eclipse.org/c/platform/eclipse.platform.text.git/tree/org.eclipse.jface.text.examples/src/org/eclipse/jface/text/examples/sources/inlined/InlinedAnnotationDemo.java">InlinedAnnotationDemo</a> defines 
+    	an action to open the <code>org.eclipse.swt.widgets.ColorDialog</code> when you click on the color annotation:
+      </p>
+      <pre>
+public ColorAnnotation extends LineContentAnnotation {
+...
+  @Override
+  public Consumer&lt;MouseEvent&gt; getAction(MouseEvent e) {
+    return ev -> {
+      // Open the Color dialog when color annotation is clicked
+    };
+  }
+}
+</pre>
+      <p>
+        <img src="images/inlined-annotations-action.png" alt="" />
+      </p>
+    </td>
+  </tr>
+
   <tr id="prototype-launch-configuration">
     <td class="title">Launch configuration prototypes</td>
     <td class="content">
