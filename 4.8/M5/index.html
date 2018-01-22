@@ -179,7 +179,7 @@ These command line options are part of what can be overridden using the new <a h
   </tr>
 
   <tr id="method-result-and-exception-thrown">
-    <td class="title">Value displayed for method exit and expection breakpoints</td>
+    <td class="title">Value displayed for method exit and exception breakpoints</td>
     <td class="content">
       When a <b>method exit breakpoint</b> is hit, the value being returned is now shown in the variables view.
       <img src="images/returningvalue.png" alt=""/>
@@ -235,7 +235,25 @@ These command line options are part of what can be overridden using the new <a h
       </p>
     </td>
   </tr>
+  <tr id="regex-module-declaration-search-api">
+    <td class="title">Trapdoor for Regex Module Declaration Search</td>
+    <td class="content">
+      This is an <b>experimental</b> support provided to invoke the regular expression search for module declarations from jdt ui.
+      This can be considered as a wrapper of the <a href="#top">API change</a>. To invoke the regular expression search from
+      the ui under Java Search, start the expression with "\r " ie a backslash '\', the letter 'r' and a blank ' ' (not tab) 
+      followed by the regex as shown in an example below:
+      <p>
+        <img src="images/mod.regex.trap.png" alt="Trapdoor for regular expression module declaration search" />
+      </p>
+      <b>Note:</b> You should use this only for <b>Declarations</b> search for modules as it is not implemented for module references. Selecting
+      <b>All occurrences</b> in conjunction with regex will default to finding only the Declarations matching the regex ignoring the references.
+    </td>
+  </tr>
 
+
+  <tr>
+    <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
   <tr id="pde-generic-reqs-caps-handling">
     <td class="title">PDE handles generic bundle requirements/capabilities</td>
     <td class="content">
@@ -259,9 +277,6 @@ These command line options are part of what can be overridden using the new <a h
     </td>
   </tr>
 
-  <tr>
-    <td colspan="2" class="section" id="PDE">PDE</td>
-  </tr>
 
   <tr id="prototype-eclipse-launch-configuration">
     <td class="title">Launch configuration prototypes for Eclipse Launch Configurations</td>
