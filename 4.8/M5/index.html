@@ -268,13 +268,15 @@ These command line options are part of what can be overridden using the new <a h
   <tr id="pde-generic-reqs-caps-handling">
     <td class="title">PDE handles generic bundle requirements/capabilities</td>
     <td class="content">
-      Also PDE handles now dependencies described by the
+      PDE now handles dependencies described by the
       <code>Require-Capability</code> and <code>Provide-Capability</code> manifest headers.
       These dependencies are taken additionally into account when computing the required bundles for a selected set of bundles
       from the target platform.
       <p>
-        The most noticable place where this feature is used is the <b>Add Required Plug-ins</b> action on the <b>Plug-ins</b>
-        page of the Eclipse launch configuration editor. For example, a usual effect is that the plug-in <code>org.apache.felix.scr</code>
+        The most noticeable place where this feature is in Eclipse launch configuration page 
+        ie <b>Eclipse launch configuration -> Plug-ins -> Add Required Plug-ins</b>
+        For example, a usual effect is that the plug-in <code>org.apache.felix.scr</code> with the
+        dropdown  "Launch With: plug-ins selected below" selected on Plug-ins tab.
         will be additionally selected by the action. This plug-in declares <code>Provide-Capability: osgi.extender</code>, which
         is consumed as <code>Require-Capability: osgi.extender</code> by some plug-ins.
       </p>
