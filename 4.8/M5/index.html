@@ -98,17 +98,6 @@ table.news tr td.content {vertical-align: top;}
     </td>
   </tr>
   
-  <tr id="group-text-color-stylable-on-windows">
-    <td class="title">Group text color stylable on Windows</td>
-    <td class="content">
-      The group text can now have a different color than the system default.
-      <p>
-        <img src="images/group-text-color-stylable-on-windows.png" alt="Group text in red" />
-      </p>
-    </td>
-  </tr>
-  
-  
   <tr id="navigate-to-switch">
     <td class="title">Navigate to 'switch' statement</td>
     <td class="content">
@@ -442,6 +431,17 @@ public ColorAnnotation extends LineContentAnnotation {
 &lt;/extension&gt;
 </pre>
        and also implement <code>org.eclipse.debug.ui.AbstractLaunchConfigurationTab.initializeAttributes()</code> for their specifics tabs.
+    </td>
+  </tr>
+
+  <tr id="group-text-color-stylable-on-windows">
+    <td class="title">Group widget text color stylable on Windows</td>
+    <td class="content">
+      The <code>Group</code> widget text can now have a different color than the system default. Client can use <code>Group#setForeground(Color)</code>
+      to change the text color. Screen-shot for reference:
+      <p>
+        <img src="images/group-text-color-stylable-on-windows.png" alt="Group text in red" />
+      </p>
     </td>
   </tr>
 
