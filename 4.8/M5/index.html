@@ -143,13 +143,16 @@ module hello {
 	libraries and projects.
 	<p><img src="images/1-sourcefolder-settings-521330.png" alt=""/></p>
 	<p>Test source folders and dependencies are shown with a darker icon in the build path settings, 
-	the package explorer and other locations. This can be disabled in  <b>Preferences > Java > Appearance</b>. </p>
+	the package explorer and other locations. This can be disabled in  <b>Preferences > Java > Appearance</b>: </p>
+	<p><img src="images/1a-modified-test-icon-preferences-530179.png" alt=""/></p>
 	<p>
 	Referenced projects can contain test sources and have test dependencies themselves. Usually, when test sources are 
 	compiled, the test code in projects on the build path will be visible. As this is not always desirable, it can be 
-	changed by setting the new build path attribute <b>Without test code</b>, that is available for projects, to <b>Yes</b>.
-	Build path entries configured like this have a decoration <code>[without test code]</code> after the project name, which can be disabled in <b>Preferences > General > Appearance > Label Decorations</b>.</p> 
+	changed by setting the new build path attribute <b>Without test code</b>, that is available for projects, to <b>Yes</b>.</p>
 	<p><img src="images/2-without-test-code-526858.png" alt=""/></p>
+	<p>Build path entries configured like this have a decoration <code>[without test code]</code> after the project name, 
+	which can be disabled in <b>Preferences > General > Appearance > Label Decorations</b>:</p> 
+	<p><img src="images/2a-without-test-code-decorator-530179.png" alt=""/></p>
 	<p>For each project, compilation is now done in two phases: First all main sources (which cannot see any test-code on 
 	the build-path) and then all test sources.</p>
 	<p><img src="images/3-visibilities-224708.png" alt=""/></p>
