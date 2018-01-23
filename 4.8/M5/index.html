@@ -250,6 +250,20 @@ These command line options are part of what can be overridden using the new <a h
     </td>
   </tr>
 
+  <tr id="nonnullbydefault-per-module">
+    <td class="title">@NonNullByDefault per module</td>
+    <td class="content">
+      If a module is annotated with <code>@NonNullByDefault</code>, the compiler will interpret this
+      as the global default for all types in this module:
+      <code style="margin-left:20pt;color:#646464;">@org.eclipse.jdt.annotation.<strong>NonNullByDefault</strong></code><br/>
+      <code style="margin-left:20pt;"><strong style="color:#7F0055;">module</strong> my.nullsafe.mod { ...</code>
+      <p>Note, however, that this requires an annotation type declared with target <code>ElementType.MODULE</code>.
+      Since the annotation bundle <code>org.eclipse.jdt.annotation</code> is still compatible with Java 8,
+      it cannot yet declare this target. In the interim, a preview version of this bundle with support for
+      modules will be published by other means than the official SDK build.
+      </p> 
+    </td>
+  </tr>
 
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
