@@ -248,6 +248,17 @@ These command line options are part of what can be overridden using the new <a h
       <p>
         <img src="images/mod.regex.trap.png" alt="Trapdoor for regular expression module declaration search" />
       </p>
+      <p>
+      In the above example, all the characters trailing "/r " form a Java regular expression to denote a module name which starts 
+      with zero or more 'n's followed by the string ".ver" and followed again by zero or more number of arbitrary characters.</p>
+      <p>
+      Another example would be to search for all modules that start with <code>java.x</code> followed by zero or more
+      characters which is given by the regular expression  <code>/r java\.x.*</code> - 
+      note the backslash for . to consider this as a "normal" character instead of the special regex]. Yet another example would be
+      search for all module names that start with j followed by zero or more characters and ending with .xml which in regex language 
+      translates to <code>/r j.*\.xml</code> and here please note that the first '.' is the special regex character while the second '.' is
+      escaped to denote that this is a normal character.
+      </p>
       <b>Note:</b> You should use this only for <b>Declarations</b> search for modules as it is not implemented for module references. Selecting
       <b>All occurrences</b> in conjunction with regex will default to finding only the Declarations matching the regex ignoring the references.
     </td>
