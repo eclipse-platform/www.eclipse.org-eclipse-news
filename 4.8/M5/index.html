@@ -522,6 +522,20 @@ public ColorAnnotation extends LineContentAnnotation {
       </p>
     </td>
   </tr>
+  
+  
+  <tr id="webkit2default">
+    <td class="title">Webkit2 is now default Linux/Gtk backend</td>
+    <td class="content">
+      <p>Webkit2 support on Linux/Gtk has been in development for a number of years. Now eclipse switched to use Webkit2 as default.</p>
+      <p>Webkit1 was known to crash at times. Webkit2 is stable and runs in a separate process, thus providing enhanced performance and is more secure.</p>
+      <p>Webkit2 was also necessary because webkit1 is no longer being provided on newer Linux distributions (e.g Fedora 27)</p>
+      <p>To fallback to using webkit1 (if needed), you can set environment variable: <code>export SWT_WEBKIT2=0</code></p>
+      <p>To inspect which version of webkit you're running eclipse under, set variable: <code>export SWT_LIB_VERSIONS=1</code>, launch
+         eclipse/swt and open an internal browser instance. You should see "<code>SWT_LIB  Webkit (1 or 2) </code>" in the console </p>
+         <p>See <a href='https://bugs.eclipse.org/bugs/show_bug.cgi?id=528844'>webkit2 port task</a> for details</p>
+    </td>
+  </tr>
 
   <tr>
     <td colspan="2" class="section" id="JDT-Dev">JDT Developers</td>
