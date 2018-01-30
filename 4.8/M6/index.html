@@ -213,10 +213,18 @@ table.news tr td.content {vertical-align: top;}
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
 
-  <tr id="first-item-platform">
-    <td class="title">First item</td>
+  <tr id="org.eclipse.e4.core.di-api">
+    <td class="title">New API: org.eclipse.e4.core.di</td>
     <td class="content">
-      Item blurb.
+    The package org.eclipse.e4.core.di in bundle org.eclipse.e4.core.di has been released as API.
+    This package contains the following mentionable types:
+    <ul>
+  		<li><b>InjectionException:</b> When using the ContextInjectionFactory to manually trigger dependency injection, all methods eventually throw an InjectionException. By making org.eclipse.e4.core.di API, this InjectionException becomes API, too and can therefore be processed properly.</li>
+  		<li><b>IInjector:</b> To manually trigger dependency injection on a more fine-grained level, e.g. without using the IEclipseContext as an ObjectSupplier.</li>
+  		<li><b>InjectorFactory:</b> To create an instance of IInjector.</li>
+	</ul>
+    	
+      
     </td>
   </tr>
 
