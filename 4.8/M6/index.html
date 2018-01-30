@@ -47,6 +47,7 @@ table.news tr td.content {vertical-align: top;}
   <li><a href="#JDT">JDT</a></li>
   <li><a href="#PDE">PDE</a></li>
   <li><a href="#Platform-Dev">Platform Developers</a></li>
+  <li><a href="#JDT-Dev">JDT Developers</a></li>
   <li><a href="#Equinox">Equinox</a></li>
 </ul>
 
@@ -453,6 +454,23 @@ The solution used to handle this is the same, that Maven uses: When test depende
       Using the new method will result in better performance when used in tight loops. Especially the
       <b>Show Whitespace</b> editor feature benefits from using the new API.
       </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="jdt-dev">JDT Developers</td>
+  </tr>
+
+  <tr id="dom-api-getbinding-change">
+    <td class="title">Package Binding with Recovery. 
+    <p>[NOTE: 4.8 M6 N and N ENTRY - **** DONOT DELETE ***]</p>
+    </td>
+    <td class="content">
+      The existing method <code>IBinding#getJavaElement()</code> now 
+      accommodates recovered packages in which case a null may be
+      returned for such problem package bindings. Pre-Java 9 compliant code
+      will continue to have a non-null return value for this api for packages.
+      
     </td>
   </tr>
 
