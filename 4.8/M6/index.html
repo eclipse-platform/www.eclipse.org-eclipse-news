@@ -213,21 +213,17 @@ table.news tr td.content {vertical-align: top;}
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
 
-  <tr id="org.eclipse.e4.core.di-api">
-    <td class="title">New API: org.eclipse.e4.core.di</td>
+  <tr id="edit-project-natures">
+    <td class="title">Modify project natures</td>
     <td class="content">
-    The package org.eclipse.e4.core.di in bundle org.eclipse.e4.core.di has been released as API.
-    This package contains the following mentionable types:
-    <ul>
-  		<li><b>InjectionException:</b> When using the ContextInjectionFactory to manually trigger dependency injection, all methods eventually throw an InjectionException. By making org.eclipse.e4.core.di API, this InjectionException becomes API, too and can therefore be processed properly.</li>
-  		<li><b>IInjector:</b> To manually trigger dependency injection on a more fine-grained level, e.g. without using the IEclipseContext as an ObjectSupplier.</li>
-  		<li><b>InjectorFactory:</b> To create an instance of IInjector.</li>
-	</ul>
-    	
-      
+      The Project Properties dialog now features a page to add or remove natures on a project.
+      <p>
+        <img src="images/editNatures.png" alt="" />
+      </p>
+      As mentioned on the page, some natures may not properly handle manual addition/removal, so using
+      this can lead to some inconsistencies in those cases.
     </td>
   </tr>
-
 
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
@@ -263,6 +259,20 @@ table.news tr td.content {vertical-align: top;}
       Item blurb.
     </td>
   </tr>
+
+  <tr id="org.eclipse.e4.core.di-api">
+    <td class="title">New API: org.eclipse.e4.core.di</td>
+    <td class="content">
+    The package org.eclipse.e4.core.di in bundle org.eclipse.e4.core.di has been released as API.
+    This package contains the following mentionable types:
+    <ul>
+  		<li><b>InjectionException:</b> When using the ContextInjectionFactory to manually trigger dependency injection, all methods eventually throw an InjectionException. By making org.eclipse.e4.core.di API, this InjectionException becomes API, too and can therefore be processed properly.</li>
+  		<li><b>IInjector:</b> To manually trigger dependency injection on a more fine-grained level, e.g. without using the IEclipseContext as an ObjectSupplier.</li>
+  		<li><b>InjectorFactory:</b> To create an instance of IInjector.</li>
+  	</ul>
+    </td>
+  </tr>
+
 
 
   <tr>
