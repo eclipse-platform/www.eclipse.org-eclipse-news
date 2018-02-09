@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2018-02-05
+	# Date:			2018-02-09
 	#
 	# Description: Eclipse project 4.7.3 release freeze plan
 	#
@@ -45,7 +45,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>Working towards RC1</b></p>
+			<p><b>Working towards RC2</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -84,7 +84,7 @@ ob_start();
 	          <tr>
 	            <td>February 2018</td>
 	          </tr>
-	          <tr class="current">
+	          <tr>
 	            <td></td>
 	            <td class="date">6</td>
 	            <td class="date">Tue</td>
@@ -95,7 +95,7 @@ ob_start();
 	          <tr>
 	            <td></td>
 	            <td class="date">7</td>
-	            <td class="date">Wed 04:00 EST</td>
+	            <td class="date">Wed 17:00 EST</td>
 	            <td></td>
 	            <td>Release Candidate 1 build (warmup)</td>
 	            <td></td>
@@ -111,10 +111,10 @@ ob_start();
 			  <tr>
 	            <td class="spacer">&nbsp;</td>
 	          </tr>
-	          <tr>
+	          <tr class="current">
 	            <td></td>
 	            <td class="date">14</td>
-	            <td class="date">Wed 04:00 EST</td>
+	            <td class="date">Wed 17:00 EST</td>
 	            <td></td>
 	            <td>Release Candidate 2 build</td>
 	            <td></td>
@@ -141,7 +141,7 @@ ob_start();
 	          <tr>
 	            <td></td>
 	            <td class="date">21</td>
-	            <td class="date">Wed 04:00 EST</td>
+	            <td class="date">Wed 17:00 EST</td>
 	            <td></td>
 	            <td>Release Candidate 3 build</td>
 	            <td></td>
