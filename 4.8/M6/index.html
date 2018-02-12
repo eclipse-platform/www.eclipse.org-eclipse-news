@@ -229,13 +229,15 @@ table.news tr td.content {vertical-align: top;}
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
 
-  <tr id="first-item-jdt">
-    <td class="title">First item</td>
+  <tr id="link-in-element-info-jdt">
+    <td class="title">Improved coloring of links in code element information in the dark theme</td>
     <td class="content">
-      Item blurb.
+      The colors of links in code element information controls now take the color settings of the "Hyperlink text color" and the "Active hyperlink text color" from the "Colors & Fonts" preference page into account.
+      This improves readability in the dark theme a lot.
+      <p>Before:</br><img src="images/element_info_before.png" alt="before"></p>
+      <p>After:</br><img src="images/element_info_after.png" alt="after"></p>
     </td>
   </tr>
-
 
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
@@ -280,15 +282,15 @@ table.news tr td.content {vertical-align: top;}
   </tr>
 
   <tr id="dom-api-getbinding-change">
-    <td class="title">Package Binding with Recovery. 
+    <td class="title">Package Binding with Recovery.
     <p>[NOTE: 4.8 M6 N and N ENTRY - **** DONOT DELETE ***]</p>
     </td>
     <td class="content">
-      The existing method <code>IBinding#getJavaElement()</code> now 
+      The existing method <code>IBinding#getJavaElement()</code> now
       accommodates recovered packages in which case a null may be
       returned for such problem package bindings. Pre-Java 9 compliant code
       will continue to have a non-null return value for this api for packages.
-      
+
     </td>
   </tr>
 
