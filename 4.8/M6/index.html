@@ -256,6 +256,20 @@ table.news tr td.content {vertical-align: top;}
       <p><img src="images/update_dialog_dark.png" alt="Update dialog in dark theme"/></p>
     </td>
   </tr>
+  
+  <tr id="parallel-builds-preference">
+    <td class="title">Allow workspace to build projects in parallel</td>
+    <td class="content">
+      The <b>Workspace</b> preference page has a new option to allow workspace to build projects in parallel:
+      <p><img src="images/preferences-simultaneous-builds.png" alt="preference page screenshot"/></p>
+      <p>Under some safe circumstances, the workspace can chose to build independent projects in parallel. In such
+      case, this preference controls the maximum amount of jobs/threads that will be running builds in parallel. A value of
+      <code>1</code> indicates that build won't be parallelized and keep the legacy behavior.</p>
+      <p>The optimal value depends on your machine and workspace projects specificities. We do recommend to try relatively
+      low values (such as <code>4</code>) first which already allow to save time, when projects allow it, while not risking to
+      overload your CPU.</p>
+    </td>
+  </tr>
 
   <tr>
     <td colspan="2" class="section" id="JDT">JDT</td>
@@ -286,7 +300,7 @@ table.news tr td.content {vertical-align: top;}
       The "Generate..." dialogs of the Java tools have been adapted to use verbs instead of OK.
     </td>
   </tr>
-
+  
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
   </tr>
@@ -358,6 +372,25 @@ table.news tr td.content {vertical-align: top;}
     Datetime on Gtk now has support for localized date format.<br/>
     A snippet to demonstrate can be found <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet370.java">Snippet370 </a>.<br/>
     <img src="images/datetime.png" alt="" />
+    </td>
+  </tr>
+
+  <tr id="parallel-build-workspace-description">
+    <td class="title">Configure workspace description to allow independent projects to build in parallel</td>
+    <td class="content">
+      The <code>IWorkspaceDescription</code> has received a new API method <code>setMaxConcurrentBuilds(int n)</code>
+      which allows to configure throttling of how many threads/jobs will be used in case workspace can
+      build independent projects in parallel.
+      <p>At the moment, parallel builds with happen when under safe circumstances, depending on the scheduling rules involved
+      in <code>IncrementalProjectBuilder.getRule()</code>. Having all builders specifying a "relaxed" scheduling rule (not
+      containing workspace root) is a requirement for paralllel builds to happen. As such, to take advantage of parallel
+      builds, consider refining the implementation of <code>getRule()</code> in your builders.</p>
+      <p>Passing a value of <code>1</code> to <code>setMaxConcurrentBuilds(int n)</code> will disable the parallel builds
+      in general, and will make workspace build behave as it's used to, building projects sequentially. This it still the
+      default value and behavior, so it makes parallel builds of independent project an opt-in feature so far.</p> 
+      <p>The optimal value for throttling depends on your machine and workspace projects specificities. We do recommend to try relatively
+      low values (such as <code>4</code>) first which already allow to save time, when projects allow it, while not risking to
+      overload your CPU.</p>
     </td>
   </tr>
 
