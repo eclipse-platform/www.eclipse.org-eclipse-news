@@ -301,11 +301,33 @@ table.news tr td.content {vertical-align: top;}
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
 
+  <tr id="nonnullbydefault-improvements">
+    <td class="title">@NonNullByDefault improvements</td>
+    <td class="content">
+    There are now more ways to define which unannotated locations are implicitly assumed to be annotated as <code>@NonNull</code>:
+      <ul>
+      <li>
+      <code>@NonNullByDefault</code> annotations based on <code>DefaultLocation</code> can be also used if the primary nullness annotations are declaration annotations.
+      </li>
+      <li>
+      Support for <code>@NonNullByDefault</code> annotations that are targeted at parameters has been implemented.
+      </li>
+      <li>
+      Multiple different <code>@NonNullByDefault</code> annotations (especially with different default values) may be placed at the same target, in which the sets of locations are merged.
+      </li>
+      <li>
+      Annotations which use an annotation <code>@TypeQualifierDefault</code> instead of a <code>DefaultLocation</code>-based 
+      value are understood, e.g. <code>@org.springframework.lang.NonNullApi</code>.
+      </li>
+      </ul>
+    </td>
+  </tr>
+
   <tr id="testsources-apt">
     <td class="title">Test sources</td>
     <td class="content">
       There is now support for running Java annotation processors on <a href="../M5/index.html#jdt-test-sources">test sources</a>. 
-      The output folder for files generated for those can be configured in the project properties in
+      The output folder for files generated for these can be configured in the project properties in
       <b>Java Compiler > Annotation Processing</b> as <b>Generated test source directory</b> 
       <p><img src="images/testsources-apt-531072.png" alt=""/></p>
     </td>
