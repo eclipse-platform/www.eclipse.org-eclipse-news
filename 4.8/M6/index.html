@@ -484,13 +484,52 @@ table.news tr td.content {vertical-align: top;}
     <td colspan="2" class="section" id="Equinox">Equinox</td>
   </tr>
 
-  <tr id="first-item-equinox">
-    <td class="title">First item</td>
+  <tr id="equinox-sha-256-checksum">
+    <td class="title">Use SHA-256 to check artifact's data integrity</td>
     <td class="content">
-      Item blurb.
+      To ensure data integrity of artifacts, alongside MD5, p2 now also generates and checks checksums using SHA-256 MessageDigest implementation, provided by any JRE. These checksums stored in two new artifact's metadata properties:
+      <ul>
+	<li><code>download.checksum.sha-256</code></li>
+	<li><code>artifact.checksum.sha-256</code></li>
+      </ul>
+      In standalone applications like a mirror application, use <code>org.eclipse.equinox.artifact.comparator.checksum.sha-256</code> as a comparator ID.
     </td>
   </tr>
 
+  <tr id="equinox-messagedigest-checksum">
+    <td class="title">Support any MessageDigest implementation as artifact's checksum algorithm</td>
+    <td class="content">
+      With new extension point <code>org.eclipse.equinox.p2.artifact.repository.artifactChecksums</code>, it is now possible to contribute any MessageDigest implementation as a way to calculate and check artifact's checksums:
+
+      <ul>
+        <li>Register your contribution:
+        <pre>
+          <code>
+            &ltextension point="org.eclipse.equinox.p2.artifact.repository.artifactChecksums"&gt;
+              &ltartifactChecksum algorithm="TIGER" id="tiger"/&gt;
+            &lt/extension&gt;
+          </code>
+        </pre>
+        </li>
+        <li>In your bundle's Activator, register a SecurityProvider that provides an actual MessageDigest implementation:
+        <pre>
+          <code>
+            public void start(BundleContext context) throws Exception {
+              Security.addProvider(new BouncyCastleProvider());
+            }
+          </code>
+        </pre>
+        </li>
+        <li>Create p2 repository
+        <p>Artifact's checksum will be calculated using your implementation and stored in two new properties, <code>download.checksum.tiger</code> and <code>artifact.checksum.tiger</code>.</p>
+        </li>
+        <li>Consume in p2 client
+        <p>If p2 client has no support for such MessageDigest implementation, it will ignore it.
+        </li>
+      </ul>
+      For more information, check <code>artifactChecksums</code> extension point's documentation.
+    </td>
+  </tr>
 
   <tr>
     <td colspan="2"/>
