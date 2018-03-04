@@ -516,9 +516,9 @@ table.news tr td.content {vertical-align: top;}
         <li>Register your contribution:
         <pre>
           <code>
-            &ltextension point="org.eclipse.equinox.p2.artifact.repository.artifactChecksums"&gt;
-              &ltartifactChecksum algorithm="TIGER" id="tiger"/&gt;
-            &lt/extension&gt;
+            &lt;extension point="org.eclipse.equinox.p2.artifact.repository.artifactChecksums"&gt;
+              &lt;artifactChecksum algorithm="TIGER" id="tiger"/&gt;
+            &lt;/extension&gt;
           </code>
         </pre>
         </li>
@@ -535,7 +535,7 @@ table.news tr td.content {vertical-align: top;}
         <p>Artifact's checksum will be calculated using your implementation and stored in two new properties, <code>download.checksum.tiger</code> and <code>artifact.checksum.tiger</code>.</p>
         </li>
         <li>Consume in p2 client
-        <p>If p2 client has no support for such MessageDigest implementation, it will ignore it.
+        <p>If p2 client has no support for such MessageDigest implementation, it will ignore it.</p>
         </li>
       </ul>
       For more information, check <code>artifactChecksums</code> extension point's documentation.
