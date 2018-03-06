@@ -305,24 +305,29 @@ table.news tr td.content {vertical-align: top;}
   <tr id="nonnullbydefault-improvements">
     <td class="title">@NonNullByDefault improvements</td>
     <td class="content">
-    There are now more ways to define which unannotated locations are implicitly assumed to be annotated as <code>@NonNull</code>:
+    When using annotation-based null analysis, there are now more ways to define which unannotated locations are implicitly assumed to be annotated as <code>@NonNull</code>:
       <ul>
       <li>
-      <code>@NonNullByDefault</code> annotations based on <code>DefaultLocation</code> can be also used if the primary nullness annotations are declaration annotations.
+      <a href="http://help.eclipse.org/topic/org.eclipse.jdt.doc.isv/reference/api/org/eclipse/jdt/annotation/NonNullByDefault.html"><code>@NonNullByDefault</code></a>
+       annotations based on enum <a href="http://help.eclipse.org/topic/org.eclipse.jdt.doc.isv/reference/api/org/eclipse/jdt/annotation/DefaultLocation.html"><code>DefaultLocation</code></a>
+       can be also used if the primary nullness annotations are declaration annotations (previously this was supported only for <code>TYPE_USE</code> annotations).
       </li>
       <li>
       Support for <code>@NonNullByDefault</code> annotations that are targeted at parameters has been implemented.
       </li>
       <li>
-      Multiple different <code>@NonNullByDefault</code> annotations (especially with different default values) may be placed at the same target, in which the sets of locations are merged.
+      Multiple different <code>@NonNullByDefault</code> annotations (especially with different default values) may be placed at the same target,
+       in which case the sets of affected locations are merged.
       </li>
       <li>
-      Annotations which use an annotation <code>@TypeQualifierDefault</code> instead of a <code>DefaultLocation</code>-based
-      value are understood, e.g. <code>@org.springframework.lang.NonNullApi</code>.
+      Annotations which use a meta annotation <code>@TypeQualifierDefault</code>
+      instead of a <code>DefaultLocation</code>-based specification are now understood, too, e.g. 
+      <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/lang/NonNullApi.html"><code>@org.springframework.lang.NonNullApi</code></a>.
       </li>
       </ul>
-      Version 2.2.0 of <code>org.eclipse.jdt.annotations</code>
-      contains a <code>@NonNullByDefault</code> that can be applied to parameter and module declarations (in addition to the previously allowed targets).
+      Version 2.2.0 of bundle <code>org.eclipse.jdt.annotations</code>
+      contains an annotation type <code>NonNullByDefault</code> that can be applied to parameter and 
+      <a href="https://www.eclipse.org/eclipse/news/4.8/M5/#nonnullbydefault-per-module">module declarations</a> (in addition to the previously allowed targets).
     </td>
  	</tr>
 
@@ -370,7 +375,6 @@ table.news tr td.content {vertical-align: top;}
       can be sorted alphabetically</b> when setting the preference "Sort library entries alphatically in Package Explorer"
       on the <b>Java > Appearance</b> preference page:
       <p><img src="images/jdt_sort_library_pref.png" alt=""/></p>
-      <p>
       <table>
         <tr><th>OFF</th><th>ON</th></tr>
         <tr>
