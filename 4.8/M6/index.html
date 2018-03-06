@@ -229,6 +229,7 @@ table.news tr td.content {vertical-align: top;}
     <td class="title">Possibility to configure the color of text editor's range indicator</td>
     <td class="content">
       The text editor's range indicators's color can now be configured via the <b>Colors and Fonts</b> preference page.
+      <p><img src="images/range_ind_pref.png" alt="Range indicator in the Colors and Fonts preference page"/></p>
     </td>
   </tr>
 
@@ -256,16 +257,16 @@ table.news tr td.content {vertical-align: top;}
       <p><img src="images/update_dialog_dark.png" alt="Update dialog in dark theme"/></p>
     </td>
   </tr>
-  
+
   <tr id="font-dark-text-editor">
     <td class="title">Improved text color in text editor for the dark theme</td>
     <td class="content">
       The text editor uses an improved font color in the dark theme so that you can read better.
       <p><br/><img src="images/text-editor-dark-font-new.png" alt="after"/></p>
-   
+
     </td>
   </tr>
-  
+
   <tr id="parallel-builds-preference">
     <td class="title">Allow workspace to build projects in parallel</td>
     <td class="content">
@@ -279,7 +280,7 @@ table.news tr td.content {vertical-align: top;}
       overload your CPU.</p>
     </td>
   </tr>
-  
+
   <tr id="refresh-on-access">
     <td class="title">Refresh on access on by default</td>
     <td class="content">
@@ -287,11 +288,11 @@ table.news tr td.content {vertical-align: top;}
       Other Eclipse based tools like the Spring Tools Suite were missing this customization so that you do not have to manually instruct your IDE to see the update.
     </td>
   </tr>
-  
+
   <tr id="open-resource-dialog-paths">
     <td class="title">Open resource dialog always shows the paths</td>
     <td class="content">
-      You can now use the Open Resource dialog to see the file paths. 
+      You can now use the Open Resource dialog to see the file paths.
       Previously it only showed the paths if there were duplicate entries.
       <p><br/><img src="images//open-resource-dialog.png" alt="after"/></p>
     </td>
@@ -316,21 +317,21 @@ table.news tr td.content {vertical-align: top;}
       Multiple different <code>@NonNullByDefault</code> annotations (especially with different default values) may be placed at the same target, in which the sets of locations are merged.
       </li>
       <li>
-      Annotations which use an annotation <code>@TypeQualifierDefault</code> instead of a <code>DefaultLocation</code>-based 
+      Annotations which use an annotation <code>@TypeQualifierDefault</code> instead of a <code>DefaultLocation</code>-based
       value are understood, e.g. <code>@org.springframework.lang.NonNullApi</code>.
       </li>
       </ul>
       Version 2.2.0 of <code>org.eclipse.jdt.annotations</code>
-      contains a <code>@NonNullByDefault</code> that can be applied to parameter and module declarations (in addition to the previously allowed targets).  
+      contains a <code>@NonNullByDefault</code> that can be applied to parameter and module declarations (in addition to the previously allowed targets).
     </td>
  	</tr>
 
   <tr id="testsources-apt">
     <td class="title">Test sources</td>
     <td class="content">
-      There is now support for running Java annotation processors on <a href="../M5/index.html#jdt-test-sources">test sources</a>. 
+      There is now support for running Java annotation processors on <a href="../M5/index.html#jdt-test-sources">test sources</a>.
       The output folder for files generated for these can be configured in the project properties in
-      <b>Java Compiler > Annotation Processing</b> as <b>Generated test source directory</b> 
+      <b>Java Compiler > Annotation Processing</b> as <b>Generated test source directory</b>
       <p><img src="images/testsources-apt-531072.png" alt=""/></p>
     </td>
   </tr>
@@ -353,7 +354,7 @@ table.news tr td.content {vertical-align: top;}
       <p>After:<br/><img src="images/inherited_after.png" alt="after"/></p>
     </td>
   </tr>
-  
+
    <tr id="generate-dialogs-jdt">
     <td class="title">Generate dialogs use verbs instead of OK</td>
     <td class="content">
@@ -373,7 +374,7 @@ table.news tr td.content {vertical-align: top;}
       <p>After:<br/><img src="images/jdt_library_entries_sorted.png" alt="after"/></p>
     </td>
   </tr>
-  
+
    <tr id="formatter-javadoc">
     <td class="title">Formatter: align Javadoc tags in columns</td>
     <td class="content">
@@ -391,9 +392,9 @@ table.news tr td.content {vertical-align: top;}
   <tr id="testsource-pde">
     <td class="title">Test sources</td>
     <td class="content">
-      Sources folders in plug-in project whose project name ends with ".test" or ".tests, or contains ".tests.", are 
+      Sources folders in plug-in project whose project name ends with ".test" or ".tests, or contains ".tests.", are
       marked to contain <a href="../M5/index.html#jdt-test-sources">test sources</a> when updating the classpath,
-      so the related filtering options in various tools can be used. 
+      so the related filtering options in various tools can be used.
       The exact name matching rule can be configured as regular expression in <b>Preference > Plug-In Development </b> in the group <b>Test plug-in detection</b>. Setting it to an empty value disables this mechanism.
 	  <p>
 	    <img src="images/testsources-pde-526910.png" alt="" />
@@ -482,7 +483,7 @@ table.news tr td.content {vertical-align: top;}
       builds, consider refining the implementation of <code>getRule()</code> in your builders.</p>
       <p>Passing a value of <code>1</code> to <code>setMaxConcurrentBuilds(int n)</code> will disable the parallel builds
       in general, and will make workspace build behave as it's used to, building projects sequentially. This it still the
-      default value and behavior, so it makes parallel builds of independent project an opt-in feature so far.</p> 
+      default value and behavior, so it makes parallel builds of independent project an opt-in feature so far.</p>
       <p>The optimal value for throttling depends on your machine and workspace projects specificities. We do recommend to try relatively
       low values (such as <code>4</code>) first which already allow to save time, when projects allow it, while not risking to
       overload your CPU.</p>
