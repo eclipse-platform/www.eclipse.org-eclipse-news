@@ -472,6 +472,19 @@ table.news tr td.content {vertical-align: top;}
   	</ul>
     </td>
   </tr>
+  
+  <tr id="fontmetrics-api">
+    <td class="title">New API getAverageCharacterWidth added to FontMetrics</td>
+    <td class="content">
+      A new method has been added in <code>FontMetrics</code>:
+      <p><code>double getAverageCharacterWidth()</code></p> which is a replacement for
+      <p><code>int getAverageCharWidth()</code></p> They are similar in function, except that the new method returns the average character width of the Font as 
+      a double-precision floating point value instead of a integer value. 
+      <p>
+      The method <code>FontMetrics#getAverageCharWidth()</code> has been deprecated.
+      </p>
+    </td>
+  </tr>
 
   <tr id="datetime-localization-support">
     <td class="title">Datetime on Gtk now has support for localization</td>
