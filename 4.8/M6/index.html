@@ -78,7 +78,7 @@ table.news tr td.content {vertical-align: top;}
   <tr id="range-indicator-dark-theme">
     <td class="title">Styling for text editor's range indicator</td>
     <td class="content">
-      The Eclipse default dark theme includes styling for the text editor's range indicator.
+      The Eclipse default dark theme now includes styling for the text editor's range indicator.
       <p><img src="images/range_ind_dark.png" alt="Range indicator in the dark theme"/></p>
     </td>
   </tr>
@@ -103,7 +103,7 @@ table.news tr td.content {vertical-align: top;}
   <tr id="font-dark-text-editor">
     <td class="title">Improved text color in text editor for the dark theme</td>
     <td class="content">
-      The text editor uses an improved font color in the dark theme so that you can read better.
+      The text editor now uses an improved font color in the dark theme so that you can read better.
       <p><br/><img src="images/text-editor-dark-font-new.png" alt="after"/></p>
 
     </td>
@@ -112,14 +112,14 @@ table.news tr td.content {vertical-align: top;}
   <tr id="parallel-builds-preference">
     <td class="title">Allow workspace to build projects in parallel</td>
     <td class="content">
-      The <b>Workspace</b> preference page has a new option to allow workspace to build projects in parallel:
+      The <b>Workspace</b> preference page now has a new option to allow workspace to build projects in parallel:
       <p><img src="images/preferences-simultaneous-builds.png" alt="preference page screenshot"/></p>
-      <p>Under some safe circumstances, the workspace can choose to build independent projects in parallel. In such
-      case, this preference controls the maximum amount of jobs/threads that will be running builds in parallel. A value of
-      <code>1</code> indicates that build won't be parallelized and keep the legacy behavior.</p>
-      <p>The optimal value depends on your machine and workspace projects specificities. We do recommend to try relatively
-      low values (such as <code>4</code>) first which already allow to save time, when projects allow it, while not risking to
-      overload your CPU.</p>
+      <p>Under some safe circumstances, the workspace can now choose to build independent projects in parallel. In such
+      case, the maximum amount of jobs/threads that will be running builds in parallel will be controlled by this preference. A value of
+      <code>1</code> will indicate that build won't be parallelized keeping the legacy behavior.</p>
+      <p>The optimal value will depend on the machine and workspace projects specificities. Recommendation is to try relatively
+      low values (such as <code>4</code>) first which will allow to save time, when allowed by projects, while not risking
+      the CPU overload.</p>
     </td>
   </tr>
 
@@ -168,7 +168,7 @@ table.news tr td.content {vertical-align: top;}
       </li>
       </ul>
       Version 2.2.0 of bundle <code>org.eclipse.jdt.annotations</code>
-      contains an annotation type <code>NonNullByDefault</code> that can be applied to parameter and 
+      containing an annotation type <code>NonNullByDefault</code> that can be applied to parameter and 
       <a href="https://www.eclipse.org/eclipse/news/4.8/M5/#nonnullbydefault-per-module">module declarations</a> (in addition to the previously allowed targets).
     </td>
  	</tr>
@@ -187,7 +187,7 @@ table.news tr td.content {vertical-align: top;}
     <td class="title">Improved coloring of links in code element information in the dark theme</td>
     <td class="content">
       The colors of links in code element information controls now take the color settings of the "Hyperlink text color" and the "Active hyperlink text color" from the "Colors &amp; Fonts" preference page into account.
-      This improves readability in the dark theme a lot.
+      The readability in the dark theme has been improved a lot by this.
       <p>Before:<br/><img src="images/element_info_before.png" alt="before"/></p>
       <p>After:<br/><img src="images/element_info_after.png" alt="after"/></p>
     </td>
@@ -214,7 +214,7 @@ table.news tr td.content {vertical-align: top;}
     <td class="content">
       The content of libraries are displayed in the order of the classpath. This makes it difficult to find
       specific libraries by their name, especially when projects have many dependencies. The <b>library entries
-      can be sorted alphabetically</b> when setting the preference "Sort library entries alphatically in Package Explorer"
+      can now be sorted alphabetically</b> when setting the preference "Sort library entries alphatically in Package Explorer"
       on the <b>Java > Appearance</b> preference page:
       <p><img src="images/jdt_sort_library_pref.png" alt=""/></p>
       <table>
@@ -231,7 +231,7 @@ table.news tr td.content {vertical-align: top;}
    <tr id="formatter-javadoc">
     <td class="title">Formatter: align Javadoc tags in columns</td>
     <td class="content">
-      The formatter can now <b>align names and/or descriptions</b> in Javadoc tags in new ways. The selection is available in the formatter profile editor, under <b>Comments &gt; Javadoc</b>.
+      The formatter can now <b>align names and/or descriptions</b> in Javadoc tags in new ways. The formatter profile editor is available for selection, under <b>Comments &gt; Javadoc</b>.
       <p><img src="images/formatter-javadoc-prefs.png" alt=""/></p>
       <p>For example, the <b>Align descriptions, grouped by type</b> setting is now used in the built-in Eclipse profile.</p>
       <p><img src="images/formatter-javadoc-preview.png" alt=""/></p>
@@ -246,7 +246,7 @@ table.news tr td.content {vertical-align: top;}
     <td class="title">Test sources</td>
     <td class="content">
       Sources folders in plug-in projects whose project name ends with ".test" or ".tests", or contains ".tests.", are
-      marked to contain <a href="../M5/index.html#jdt-test-sources">test sources</a> when using <b>Plug-in Tools > Update Classpath...</b>,
+      now marked to contain <a href="../M5/index.html#jdt-test-sources">test sources</a> when using <b>Plug-in Tools > Update Classpath...</b>,
       so the related filtering options in various tools can be used.
       The exact name matching rule can be configured as regular expression in <b>Preference > Plug-In Development </b> in the group <b>Test plug-in detection</b>. Setting it to an empty value disables this mechanism.
 	  <p>
@@ -257,7 +257,7 @@ table.news tr td.content {vertical-align: top;}
   <tr id="update-ui-version">
     <td class="title">Command to update IU versions</td>
     <td class="content">
-      The right-click context menu within <code>.target</code> file source editors contains a new <b>Update IU Versions from Repositories</b> command to update the version attribute of all units to the newest available version.
+      The right-click context menu within <code>.target</code> file source editors now contains a new <b>Update IU Versions from Repositories</b> command to update the version attribute of all units to the newest available version.
 	  <p>Before:</p>
 	  <p>
 	    <img src="images/update_iu_command_before.png" alt="" />
