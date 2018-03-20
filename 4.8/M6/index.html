@@ -238,6 +238,21 @@ table.news tr td.content {vertical-align: top;}
       <p>The setting previously known as <b>Indent Javadoc tags</b> is now called <b>Align descriptions to tag width</b>. The two settings related to <b>@param tags</b> also had their labels changed to better describe what they do.</p>
     </td>
   </tr>
+  
+  <tr id="quickfix-javadoc">
+    <td class="title">QuickFix for <code>unresolved module</code> on module name in <code>requires directive</code></td>
+    <td class="content">
+      A new quickFix  is offered on <b>requires</b> statements in the <b>module-info.java</b> file to fix issues that are reported due to unresolved module.
+      The below quickFix will be provided if the module related to the unresolved module error has its related classpath added to the class path and not to the module path.
+      <p>This quickFix is applicable if the project is a Java9 project and has a module-info.java file</p>
+      <p>This quick Fix can be invoked from the editor.</p> 
+      <p><img src="images/java9-module-requires-move-from-classpath-to-modulepath-quickfix.png" alt=""/></p>
+      <p>Before the quickFix is applied the classpath entries look as below: </p>
+      <p><img src="images/java9-module-requires-move-from-classpath-to-modulepath-CPE-before-quickfix.png" alt=""/></p>
+      <p>After the quickFix is applied the classpath entries look as below: </p>
+      <p><img src="images/java9-module-requires-move-from-classpath-to-modulepath-CPE-after-quickfix.png" alt=""/></p>
+    </td>
+  </tr>
 
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
