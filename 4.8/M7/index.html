@@ -249,6 +249,20 @@ table.news tr td.content {vertical-align: top;}
     </td>
   </tr>
 
+  <tr>
+    <td class="title">QuickFix for <code>Non existing or empty package</code> on <code> exports directive</code></td>
+    <td class="content">
+    <p>A new quick fix is available when you have a <code> non existing or an empty package</code> in an <code>exports directive</code> in module-info.java file.</p>
+	<p>This QuickFix is applicable if the project is a Java9 project or above and has a <code>module-info.java</code> file.</p>
+    <p>The quick fix can be invoked from the editor:</p>  
+    <p><img src="images/java9_quickfix_empty_nonexistant_package_on_exports_directive.png" alt=""/></p>
+    <p>A QuickFix is provided to create either a Class, or an Interface or an Annotation or an Enum in the given package.</p>
+    <p>If the package does not exist, a new package is created and the new element is created in the package.</p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"/>
+  </tr>	
 
   <tr>
     <td colspan="2" class="section" id="PDE">PDE</td>
