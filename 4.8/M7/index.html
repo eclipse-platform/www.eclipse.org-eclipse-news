@@ -273,6 +273,67 @@ table.news tr td.content {vertical-align: top;}
     <td colspan="2" class="section" id="JDT">JDT</td>
   </tr>
 
+  <tr id="java-10">
+    <td class="title">Eclipse support for Java&trade; 10 </td>
+    <td class="content">
+    <a href="http://docs.oracle.com/javase/10/">Java&trade; 10</a> is here, and JDT supports it completely.
+    <ul>
+		<li>The Eclipse compiler for Java (ECJ) implements the new Java 10 <a href="https://docs.oracle.com/javase/10/language">language enhancement</a> 
+		which is the support for <a href="http://openjdk.java.net/jeps/286" target="_top"><b>local variable type inference (JEP 286)</b></a>.</li>
+	</ul>
+	<ul>
+		<li>
+		<p><b>Addition of Java 10 JRE</b></p>
+			<ul>
+				<li>A Java 10 JRE is recognized by Eclipse for launching. It can be added from the <b>Window > Preferences > Java > Installed JREs > Add...</b> page.
+				It can be added from the <b>Package Explorer</b> as well using the project's context menu.</li>
+				<p><img src="images/j10.png" alt=""/></p>
+				
+				<li>An option to set compiler compliance to 10 on a Java project is provided.</li>
+				<p><img src="images/j10.compliance.png" alt=""/></p>
+			</ul>
+		</li>
+
+		<li>
+		<p><b>Support for <code>var</code> compilation</b></p>
+			<ul>
+				<li>Eclipse supports compilation of <code>var</code> as shown below:</li>
+				<p><img src="images/var.compile.png" alt=""/></p>
+			
+				<li>When the type of <code>var</code> cannot be inferred, it is flagged as a compiler error as expected.</li> 
+				An example is shown below:
+				<p><img src="images/var.nocompile.png" alt=""/></p>
+			</ul>
+		</li>
+		
+		<li>
+		<p><b>Code Completion for <code>var</code></b></p>
+			<ul>
+				<li>Code completion is offered at places where <code>var</code> is allowed.</li>
+				<p><img src="images/var.complete.png" alt=""/></p>
+	
+				<li>Code completion of var is not offered at places where <code>var</code> is not allowed.</li>
+				<p><img src="images/var.nocomplete.png" alt=""/></p>
+			</ul>
+		</li>
+		
+		<li>
+		<p>Hover over <code>var</code> shows the javadoc of the inferred type.</p>
+		<p><img src="images/var.hover.png" alt=""/></p>
+		</li>
+		
+		<li>
+		<p>Quick Assist to convert from <code>var</code> to the appropriate type is provided.</p>
+			<p><img src="images/var.vartotype.png" alt=""/></p>
+		</li>
+		
+		<li>
+		<p>Quick Assist to convert from type to <code>var</code> is provided.</p>
+			<p><img src="images/var.typetovar.png" alt=""/></p>
+		</li>
+	</ul>
+  </tr>
+  
   <tr id="first-item-jdt">
     <td class="title">Java code formatter preferences now styled for the dark theme</td>
     <td class="content">
