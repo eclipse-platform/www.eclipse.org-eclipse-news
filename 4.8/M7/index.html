@@ -213,6 +213,16 @@ table.news tr td.content {vertical-align: top;}
     <td colspan="2" class="section" id="Platform">Platform</td>
   </tr>
 
+   <tr id="winxp-dropped">
+    <td class="title">Dropped support for Windows XP</td>
+    <td class="content">
+	  Eclipse/SWT has dropped support for the Windows XP Operating System and other Windows versions older than Windows Vista.
+	  <p>
+	  For more information, please read the <a href="https://dev.eclipse.org/mhonarc/lists/cross-project-issues-dev/msg15385.html">announcement</a> made by the Eclipse PMC.
+	  </p>
+    </td>
+  </tr>
+  
   <tr id="expand_collapse-dark-theme">
     <td class="title">Improved the text editor's expand and collapse nodes for the dark theme</td>
     <td class="content">
@@ -308,7 +318,29 @@ table.news tr td.content {vertical-align: top;}
     </td>
   </tr>
 
-
+ <tr id="monitor-getzoom">
+    <td class="title">New API Monitor#getZoom() added</td>
+    <td class="content">
+		A new API <code>Monitor.getZoom()</code> has been added which returns the zoom value used by SWT for the Monitor.
+		<p>
+		 The zoom value returned by the API is the zoom used by SWT that is controlled by the <code>swt.autoScale</code> property. It may not be the same value 
+		 as that is set in the system. It can be used in other SWT APIs that require zoom as an input such as <code>Image.getImageData(zoom)</code> to get the ImageData 
+		 at the zoom level for the specific Monitor on which it'll be drawn.
+		</p>
+		<p>
+		 There are two use-cases of the API:
+		</p>
+		<ul>
+		 <li>
+		  When the DPI of the monitor changes dynamically, the API can be used to return the new DPI.
+		 </li>
+		 <li>
+		  On platforms that support a multi-monitor setup where different monitors can have different DPIs, the API can be used to get the DPI of the specific monitor 
+		  on which a Control is drawn.
+		 </li>
+		</ul>
+    </td>
+  </tr>
 
   <tr>
     <td colspan="2" class="section" id="JDT-Dev">JDT Developers</td>
@@ -338,8 +370,6 @@ table.news tr td.content {vertical-align: top;}
   </tr>
 </table>
 
-
-<!-- 	UNCOMMENT
 <p>The above features are just the ones that are new since the previous milestone
 build. Summaries for earlier Oxygen milestone builds:</p>
 <ul>
@@ -350,7 +380,6 @@ build. Summaries for earlier Oxygen milestone builds:</p>
   <li><a href="https://www.eclipse.org/eclipse/news/4.7/M2/">News for Eclipse Oxygen milestone build M2</a></li>
   <li><a href="https://www.eclipse.org/eclipse/news/4.7/M1/">News for Eclipse Oxygen milestone build M1</a></li>
 </ul>
--->
 
 </body>
 </html>
