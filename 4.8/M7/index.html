@@ -291,6 +291,28 @@ table.news tr td.content {vertical-align: top;}
     <p>If the package does not exist, a new package is created and the new element is created in the package.</p>
     </td>
   </tr>
+  
+  <tr>
+    <td class="title">New <code>--release</code> on the java compiler preference page</td>
+    <td class="content">
+    <p>A new option <code>--release</code> is available on the java compiler preference page.</p>
+	<p>This option will be enabled only if the JRE being used is a java9 or above.</p>
+	<p>Workspace Preference</p>
+	<p><img src="images/java9_release_option_workspace_preference_page.png" alt=""/></p>
+	<p>Project Preference</p>
+	<p><img src="images/java9_release_option_project_preference_page.png" alt=""/></p>
+    <p>In the past, it was possible to compile for an older version of the Java language.</p>
+    <p>However, the compiler always compiled against the platform APIs that is found in the project's build path.</p>
+    <p><b>For Example:</b> <code> If the JRE being used is  java 1.8 and the compliance level is set to 1.7, the API's that are available are from the Java8  library, even if they were not part of Java 1.7 </code></p>
+    <p>The new --release compiler option now allows the user to configure compilation against a platform API version of user's choice.</p>
+    <p><b>For Example:</b> <code>Using --release option if the JRE being used is 9 and the compliance level is set to 1.7, the API's that are available will be from JRE 1.7 even if JRE 1.7 is not available in your workspace.</code><\p>
+    <p>The --release option supports versions 1.6 and above. That is the --release option is enabled for JRE 9 and above, if the compliance is set to 1.6 or above</p>
+    <p>In the below picture, compliance is set to 1.5, therefore the --release option is disabled.</p>  
+    <p><img src="images/java9_release_option_disabled_project_preference_page.png" alt=""/></p>
+    <p>The --release option is enabled by default for all new projects created using JRE 9 or above.</p> 
+    </td>
+  </tr>
+  
   <tr>
     <td colspan="2"/>
   </tr>	
