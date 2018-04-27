@@ -381,6 +381,21 @@ table.news tr td.content {vertical-align: top;}
     </td>
   </tr>
   
+  <tr id="jdt-remove-redundant-modifiers-cleanup">
+    <td class="title">New Cleanup Action "Remove redundant modifiers"</td>
+    <td class="content">
+      The new cleanup action "Remove redundant modifiers" removes unnecessary modifiers on types, methods and fields. The following modifiers are removed:
+      <ul>
+      <li>Interface field declarations: <code>public</code>, <code>static</code>, <code>final</code>
+      <li>Interface method declarations: <code>public</code>, <code>abstract</code>
+      <li>Nested interfaces: <code>static</code>
+      <li>Method declarations in final classes: <code>final</code>
+      </ul>
+      The cleanup action can be configured as save action on the <i>Unnecessary Code</i> page.
+      <p><img src="images/jdt_remove_redundant_modifiers.png" alt=""/></p>
+    </td>
+  </tr>
+
   <tr>
     <td colspan="2"/>
   </tr>	
