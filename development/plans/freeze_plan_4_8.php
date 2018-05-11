@@ -410,20 +410,9 @@ ob_start();
                 <li>No outstanding P1 defects. </li>
                 <li>As few P2 defects as possible.</li>
       		</ul>
-			<h4><a name="TestPassBeforeRC1"></a>Test pass prior to RC1</h4>
-			<p>Two day test pass involving entire community, using the M7 build (also called RC0).
-			The goal of this test pass is to get broad testing coverage of the workflows,
-			features, and platforms that aren't regularly tested during our day to day development.
-			Committers should take the opportunity to browse through New & Noteworthy
-			documents from past milestones and give all the new features for the release
-			a good workout.
-			</p>
-			<h4><a name="TestPassBeforeRC2"></a>Test pass prior to RC2</h4>
+			<h4><a name="TestPassUsingRC1"></a>Test pass using RC1</h4>
 			<p>Full day test pass involving entire community, using 
-            the most recent nightly build to help stabilize HEAD for the upcoming RC2 build.
-            Committers with high priority fixes to make for RC2 can opt out of testing
-            to focus on getting in fixes.  However, all committers should be working
-            with the test candidate build.
+            the most recent build to help stabilize RC1.
       		<h4><a name="RC2"></a>RC2 Goals</h4>
       		<ul>
                 <li>Final artwork in place.
@@ -433,10 +422,7 @@ ob_start();
       		</ul>
       		<h4><a name="TestPassUsingRC2"></a>Test pass using RC2</h4>
             <p>Concerted 1-day testing effort on RC2 involving
-              entire community including all component teams. In an effort to
-              mix things up and hold off the onset of &quot;tester
-              fatigue&quot;, each component team will be designating one team
-              member that will be assigned to test some other component.</p>
+              entire community.</p>
              <h4><a name="RC3"></a>RC3 Goals</h4>
               <ul>
                 <li>Accurate prioritization of all outstanding defects.
@@ -445,7 +431,7 @@ ob_start();
               </ul>
              <h4><a name="TestPassUsingRC3"></a>Test pass using RC3</h4>
             <p>Concerted 1-day testing effort on RC3 involving
-              entire community including all component teams, searching for
+              entire community, searching for
               regressions and on the lookout for undiscovered &quot;stop
               ship&quot; defects.</p>
              <h4><a name="RC4"></a>RC4 Goals</h4>
