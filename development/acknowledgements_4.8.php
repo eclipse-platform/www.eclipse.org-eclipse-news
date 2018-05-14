@@ -183,24 +183,24 @@ ob_start();
         <td style="width: 23%;">Lars&nbsp;Vogel</td>
         <td style="width: 23%;">Markus&nbsp;Keller</td>
         <td style="width: 23%;">Mickael&nbsp;Istria</td>
-        <td style="width: 23%;">Olivier&nbsp;Prouvost</td>
+        <td style="width: 23%;">Noopur&nbsp;Gupta</td>
       </tr>
       <tr>
+        <td style="width: 23%;">Olivier&nbsp;Prouvost</td>
         <td style="width: 23%;">Patrik&nbsp;Suzzi</td>
         <td style="width: 23%;">Sergey&nbsp;Prigogin</td>
         <td style="width: 23%;">Simon&nbsp;Scholz</td>
-        <td style="width: 23%;">Sopot&nbsp;Cela</td>
       </tr>
       <tr>
+      <td style="width: 23%;">Sopot&nbsp;Cela</td>
         <td style="width: 23%;">Stefan&nbsp;Xenos</td>
         <td style="width: 23%;">Szymon&nbsp;Ptaszkiewicz</td>
         <td style="width: 23%;">Thomas&nbsp;Schindl</td>
-        <td style="width: 23%;">Thomas&nbsp;Watson</td>
       </tr>
       <tr>
+        <td style="width: 23%;">Thomas&nbsp;Watson</td>
         <td style="width: 23%;">Tony&nbsp;McCrary</td>
         <td style="width: 23%;">Wojciech&nbsp;Sudol</td>
-        <td style="width: 23%;">&nbsp;</td>
         <td style="width: 23%;">&nbsp;</td>
       </tr>
     </table>
@@ -274,24 +274,24 @@ ob_start();
       	<td style="width: 23%;">Andrey&nbsp;Loskutov</td>
         <td style="width: 23%;">Dani&nbsp;Megert</td>
         <td style="width: 23%;">Jayaprakash&nbsp;Arthanareeswaran</td>
-        <td style="width: 23%;">Manoj&nbsp;Palat</td>
+        <td style="width: 23%;">Kalyan&nbsp;Prasad</td>
       </tr>
       <tr>
+        <td style="width: 23%;">Manoj&nbsp;Palat</td>
         <td style="width: 23%;">Markus&nbsp;Keller</td>
         <td style="width: 23%;">Mateusz&nbsp;Matela</td>
         <td style="width: 23%;">Noopur&nbsp;Gupta</td>
-        <td style="width: 23%;">Olivier&nbsp;Thomann</td>
       </tr>
       <tr>
+        <td style="width: 23%;">Olivier&nbsp;Thomann</td>
         <td style="width: 23%;">Sarika&nbsp;Sinha</td>
         <td style="width: 23%;">Sasikanth&nbsp;Bharadwaj</td>
         <td style="width: 23%;">Stefan&nbsp;Xenos</td>
-        <td style="width: 23%;">Stephan&nbsp;Herrmann</td>
       </tr>
       <tr>
+        <td style="width: 23%;">Stephan&nbsp;Herrmann</td>
         <td style="width: 23%;">Till&nbsp;Brychcy</td>
-        <td style="width: 23%;">&nbsp;</td>
-        <td style="width: 23%;">&nbsp;</td>
+        <td style="width: 23%;">Vikas&nbsp;Chandra</td>
         <td style="width: 23%;">&nbsp;</td>
       </tr>
     </table>
@@ -304,10 +304,10 @@ ob_start();
         <td style="width: 23%;">Martin&nbsp;Karpisek</td>
       </tr>
       <tr>
+        <td style="width: 23%;">Noopur&nbsp;Gupta</td>
         <td style="width: 23%;">Olivier&nbsp;Thomann</td>
         <td style="width: 23%;">Peter&nbsp;Nehrer</td>
         <td style="width: 23%;">Vikas&nbsp;Chandra</td>
-        <td style="width: 23%;">&nbsp;</td>
       </tr>
     </table>
     <h4>Equinox</h4>
