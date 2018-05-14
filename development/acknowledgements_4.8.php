@@ -23,16 +23,16 @@ include($App->getProjectCommon());
 # Author:    Sravan Kumar Lakkimsetti and others on Eclipse Project
 # Date:      2018-05-10
 #
-# Description: Eclipse project Oxygen release acknowledgments page
+# Description: Eclipse project Photon release acknowledgments page
 #
 #
 #****************************************************************************
 
 #
 # Begin: page-specific settings.  Change these.
-$pageTitle     = "Eclipse Oxygen Acknowledgements";
-$pageKeywords  = "eclipse, 4.7, Oxygen, acknowledgements, acknowledgments, thanks";
-$pageAuthor    = "Vikas Chandra and the Eclipse Project Team";
+$pageTitle     = "Eclipse Photon Acknowledgements";
+$pageKeywords  = "eclipse, 4.8, Photon, acknowledgements, acknowledgments, thanks";
+$pageAuthor    = "Sravan Kumar Lakkimsetti and the Eclipse Project Team";
 
 # Add page-specific Nav bars here
 # Format is Link text, link URL (can be http://www.someothersite.com/), target (_self, _blank), level (1, 2 or 3)
@@ -62,7 +62,7 @@ ob_start();
   <div class="homeitem3col">
   
   
-    <h3>Eclipse Oxygen Acknowledgements</h3>
+    <h3>Eclipse Photon Acknowledgements</h3>
     
     <p>The entire Eclipse Project team would like to thank the Eclipse Foundation staff for their tireless efforts, including: Denis Roy, Matt Ward, Fred Gurr and Mikael Barbero for not only keeping all
       that infrastructure going, but also constantly improving it; Sharon Corbett for guiding us through the Eclipse legal process; Stephanie Swart and Wayne Beaton for giving us process support and improved tools to
