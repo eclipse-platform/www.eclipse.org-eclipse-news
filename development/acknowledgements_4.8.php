@@ -20,8 +20,8 @@ include($App->getProjectCommon());
 #
 # index.php
 #
-# Author:    Vikas Chandra and others on Eclipse Project
-# Date:      2017-05-31
+# Author:    Sravan Kumar Lakkimsetti and others on Eclipse Project
+# Date:      2018-05-10
 #
 # Description: Eclipse project Oxygen release acknowledgments page
 #
