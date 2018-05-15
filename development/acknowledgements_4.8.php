@@ -123,10 +123,8 @@ ob_start();
     </p>
 
 
-    <p>The JDT UI team sends thanks to everyone
-      who filed good enhancement requests, helped to improve the quality by testing and filing good bug reports, and provided answers on JDT forums/newsgroups.
-      Special thanks to those who contributed code:
-      Bj&ouml;rn Michael, Conrad Groth, Jonah Graham, Lars Vogel, Leo Ufimtsev, Mateusz Matela, Matthias Becker, Mickael Istria, Olivier Thomann, Sergey Prigogin, Stefan Xenos, Till Brychcy and Vikas Chandra.
+    <p>The JDT UI team sends thanks to everyone who filed good enhancement requests, helped to improve the quality by testing and filing good bug reports, and provided answers on JDT forums/newsgroups. Special thanks to those who contributed code: 
+    Alexander Kurtakov, Angelo ZERR, Brian de Alwis, David Weiser, Guillermo Gutierrez Almazor, Igor Fedorenko, Jonas Hungershausen, Karsten Thoms, Kenneth Styrberg, Lars Vogel, Matthias Becker, Michael Keppler, Michal Niewrzal, Mickael Istria, Roland Grunberg, Simeon Andreev and Sravan Kumar Lakkimsetti.
     </p>
 
     <p>The Plug-in Development Environment team would like to thank the numerous contributors who continue to improve the component every release.
