@@ -295,6 +295,21 @@ table.news tr td.content {vertical-align: top;}
       <p><img src="images/jdt_remove_redundant_modifiers.png" alt=""/></p>
     </td>
   </tr>
+  
+  <tr id="jdt-complier-compliance-preference">
+    <td class="title">New Compiler Building preference <code>Compiler Compliance does not match used JRE</code></td>
+    <td class="content">
+     A new preference <code>Compiler Compliance does not match used JRE</code> is added to Complier Preference Building Page. 
+     <p>This preference indicate the severity of the problem reported when project's used JRE does not match the 
+     compiler compliance level selected. (e.g. a project using JRE 1.8 as JRE System Library, 
+     and the compiler compliance is set to 1.7).</p>
+     <p> The value of this preference is by default WARNING. </p>
+     <p> If the JRE being used is 9 or above and the <code>--release </code> 
+     option is selected and even if the complier compliance does not match the JRE being used, this </p>
+     <p> This preference can be set as shown below: </p>
+     <p><img src="images/jdt_compiler_compliance_mismatch_JRE.png" alt=""/></p>
+    </td>
+  </tr>
 
   <tr>
     <td colspan="2"/>
