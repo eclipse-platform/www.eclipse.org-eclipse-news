@@ -272,25 +272,25 @@ ob_start();
       	<td style="width: 23%;">Andrey&nbsp;Loskutov</td>
         <td style="width: 23%;">Dani&nbsp;Megert</td>
         <td style="width: 23%;">Jayaprakash&nbsp;Arthanareeswaran</td>
-        <td style="width: 23%;">Kalyan&nbsp;Prasad</td>
+        <td style="width: 23%;">Jesper&nbsp;Steen&nbsp;Møller</td>
       </tr>
       <tr>
+        <td style="width: 23%;">Kalyan&nbsp;Prasad</td>
         <td style="width: 23%;">Manoj&nbsp;Palat</td>
         <td style="width: 23%;">Markus&nbsp;Keller</td>
         <td style="width: 23%;">Mateusz&nbsp;Matela</td>
-        <td style="width: 23%;">Noopur&nbsp;Gupta</td>
       </tr>
       <tr>
+        <td style="width: 23%;">Noopur&nbsp;Gupta</td>
         <td style="width: 23%;">Olivier&nbsp;Thomann</td>
         <td style="width: 23%;">Sarika&nbsp;Sinha</td>
         <td style="width: 23%;">Sasikanth&nbsp;Bharadwaj</td>
-        <td style="width: 23%;">Stefan&nbsp;Xenos</td>
       </tr>
       <tr>
+        <td style="width: 23%;">Stefan&nbsp;Xenos</td>
         <td style="width: 23%;">Stephan&nbsp;Herrmann</td>
         <td style="width: 23%;">Till&nbsp;Brychcy</td>
         <td style="width: 23%;">Vikas&nbsp;Chandra</td>
-        <td style="width: 23%;">&nbsp;</td>
       </tr>
     </table>
     <h4>Eclipse PDE</h4>
