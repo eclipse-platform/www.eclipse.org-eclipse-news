@@ -89,8 +89,8 @@ ob_start();
     </p>
 
     <p>The Platform SWT team would like to thank everyone who helped to improve the toolkit by filing bug reports and enhancement requests, as well as the early adopters who contributed towards improving quality by testing.
-		We would also like to thank Andrey Loskutov, Andrey Mozzhuhin, Angelo Zerr, Arne Deutsch, Christian Georgi, Ed Merks, Fabio Zadrozny, Gunnar Wagenknecht, Ian Pun, Janis Danisevskis, Karsten Thoms, Laeubi, Lucas Bullen, 
-		Martin Karpisek, Mat Booth, Mikael Barbero, Minnist, Ncazottes, Nikita Nemkin, René Purrio, Roland Grunberg, Rolf Theunissen, Simeon Andreev, Stefan Winkler, Thorsten Hake, Till Brychcy, Tobias Melcher, Tom Schindl and 
+		We would also like to thank Andrey Loskutov, Andrey Mozzhuhin, Angelo Zerr, Arne Deutsch, Christian Georgi, Ed Merks, Fabio Zadrozny, Gunnar Wagenknecht, Janis Danisevskis, Karsten Thoms, Laeubi, Lucas Bullen, 
+		Martin Karpisek, Mat Booth, Mikael Barbero, Minnist, Nicolas Cazottes, Nikita Nemkin, René Purrio, Roland Grunberg, Rolf Theunissen, Simeon Andreev, Stefan Winkler, Thorsten Hake, Till Brychcy, Tobias Melcher, Tom Schindl and 
 		Torbjörn Svensson for their code contributions.
     </p>
 
@@ -160,7 +160,7 @@ ob_start();
       </tr>
       <tr>
         <td style="width: 23%;">Sravan&nbsp;Kumar&nbsp;Lakkimsetti</td>
-        <td style="width: 23%;">&nbsp;</td>
+        <td style="width: 23%;">Conrad&nbsp;Groth</td>
         <td style="width: 23%;">&nbsp;</td>
         <td style="width: 23%;">&nbsp;</td>
       </tr>
