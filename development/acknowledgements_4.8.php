@@ -89,8 +89,9 @@ ob_start();
     </p>
 
     <p>The Platform SWT team would like to thank everyone who helped to improve the toolkit by filing bug reports and enhancement requests, as well as the early adopters who contributed towards improving quality by testing.
-		We would also like to thank Andrey Loskutov, Ben Steffensmeier, Christian Mohr, Conrad Groth, David Weiser, Ed Merks, Eugen Neufeld, Fabian Pfaff, Gunnar Wagenknecht, Lars Vogel, Marc-Andre Laperle, Martin Oberhuber,
-    	Matthias Becker, Mickael Istria, Mikael Barbero, Patrik Suzzi, Phillip Webb, Rolf Theunissen, Rüdiger Herrmann, Sergey Prigogin, Stefan Xenos, Szymon Ptaszkiewicz and Till Brychcy for their code contributions.
+		We would also like to thank Andrey Loskutov, Andrey Mozzhuhin, Angelo Zerr, Arne Deutsch, Christian Georgi, Ed Merks, Fabio Zadrozny, Gunnar Wagenknecht, Ian Pun, Janis Danisevskis, Karsten Thoms, Laeubi, Lucas Bullen, 
+		Martin Karpisek, Mat Booth, Mikael Barbero, Minnist, Ncazottes, Nikita Nemkin, René Purrio, Roland Grunberg, Rolf Theunissen, Simeon Andreev, Stefan Winkler, Thorsten Hake, Till Brychcy, Tobias Melcher, Tom Schindl and 
+		Torbjörn Svensson for their code contributions.
     </p>
 
     <p>The Release Engineering team would like to thank the many people who helped to improve our build
@@ -273,7 +274,7 @@ ob_start();
       	<td style="width: 23%;">Andrey&nbsp;Loskutov</td>
         <td style="width: 23%;">Dani&nbsp;Megert</td>
         <td style="width: 23%;">Jayaprakash&nbsp;Arthanareeswaran</td>
-        <td style="width: 23%;">Jesper&nbsp;Steen&nbsp;M�ller</td>
+        <td style="width: 23%;">Jesper&nbsp;Steen&nbsp;M�ller</td>
       </tr>
       <tr>
         <td style="width: 23%;">Kalyan&nbsp;Prasad</td>
