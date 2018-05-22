@@ -110,16 +110,17 @@ ob_start();
       We would also like to acknowledge Sravan Kumar Lakkimsetti for all the build and releng support.
     </p>
 
-    <p>The JDT Debug team would like to thank everyone who helped improve the Java debugger by filing bugs, testing and providing patches. Specifically we would like to thank Brian de Alwis, 
-	Christian Buck, Igor Fedorenko, Josef Lehner, Matthias Becker, Sergey Prigogin and Till Brychcy for features and bug fixes.
+    <p>The JDT Debug team would like to thank everyone who helped improve the Java debugger by filing bugs, testing and providing patches. Specifically we would like to thank Alexander Kurtakov, 
+    Axel Richard, Brian de Alwis, Frank Benoit, Gregory Amerson, Karsten Thoms, Lucas Bullen, Matthias Becker, Mickael Istria, Mikael Barbero, Roland Grunberg, Sravan Kumar Lakkimsetti  and Tom Schindl for features and bug fixes.
     </p>
 
-    <p>The Platform Debug team would like to thank everyone who helped improve the debugger framework by filing bugs, testing and providing patches. Specifically we would like to thank Alexander Kurtakov, 
-	Andreas Loth,  David Weiser, Lars Vogel, Markus Duft, Noopur Gupta, Patrik Suzzi, Ralf M Petter, Sergey Prigogin, Till Brychcy and Victor Rubezhny for features and bug fixes.
+    <p>The Platform Debug team would like to thank everyone who helped improve the debugger framework by filing bugs, testing and providing patches. Specifically we would like to thank Andreas Loth, 
+    Andreas Sewe,  Armin Beil, Axel Richard, David Weiser, Fabian Pfaff, Ian Pun, Igor Fedorenko, Jonas Hungershausen, Karthik Bhat, Lars Neumeier, Markus Duft, Martin Schreiber, Michael Keppler, René Purrio, 
+    Simeon Andreev and Tobias Melcher for features and bug fixes.
     </p>
-
-    <p>The Platform Ant team would like to thank everyone who helped improve the ant framework by filing bugs, testing and providing patches. Specifically we would like to thank Alexander Kurtakov,
-     Andreas Sewe, Andrey Loskutov, David Williams, Gunnar Wagenknecht, Lars Vogel, Roland Grunberg and Sravan Kumar Lakkimsetti for bug fixes and providing support in updating Ant to new version.
+    
+    <p>The Platform Ant team would like to thank everyone who helped improve the ant framework by filing bugs, testing and providing patches. Specifically we would like to thank Jay Arthanareeswaran, 
+    Michael Keppler and Roland Grunberg for bug fixes and providing support in updating Ant to new version.
     </p>
 
 
