@@ -95,14 +95,13 @@ ob_start();
     </p>
 
     <p>The Release Engineering team would like to thank the many people who helped to improve our build
-     as well as the committers who set up and maintain their own Platform HIPP jobs. And a special thanks to other Eclipse projects we prereq: EMF and ECF who 
+     as well as the committers who set up and maintain their own Platform JIPP jobs. And a special thanks to other Eclipse projects we prereq: EMF and ECF who 
      also provide timely updates so that we can be ontime. Special thanks to the following list of people, in alphabetical order, who contributed code to the project:
-     Andrey Loskutov, Arun Thondapu, Lars Vogel, Mickael Istria, Sarika Sinha, Sopot Cela and Thomas Watson.
+     Frederic Gurr, Jay Arthanareeswaran, Mat Booth, Mikael Barbero, René Purrio, Vikas Chandra.
      
-    Also, the webmasters (Frederic Gurr, Denis Roy and Matt Ward) at the Eclipse Foundation for their constant help and education and improvements; also
-      Mikael Barbero who fixed several issues in CBI and greatly improved the signing process and created a new service to create signed dmg for Mac OS X. And      
+    Also, the webmasters (Frederic Gurr, Denis Roy, Matt Ward and Mikael Barbero) at the Eclipse Foundation for their constant help and education and improvements. And      
       we also thank the other Eclipse projects that make up a part of the infrastructure we 
-      depend on: Tycho, EGit, and Hudson for providing fixes and steady improvements.
+      depend on: Tycho, EGit, Hudson and Jenkins for providing fixes and steady improvements.
     </p>
 
     <p>The JDT Core team would like to thank everyone who has helped us improve quality by testing and filing good bug reports. Special thanks to the following list of
@@ -144,128 +143,61 @@ ob_start();
       release.)</p>
     <p>
     <h4>Eclipse Platform</h4>
-    <h5>Platform SWT</h5>
     <table style="width:92%; margin-left:4%; margin-right:4%;">
       <tr>
-        <td style="width: 23%;">Arun&nbsp;Thondapu</td>
-        <td style="width: 23%;">Alexander&nbsp;Kurtakov</td>
-        <td style="width: 23%;">Lakshmi&nbsp;Shanmugam</td>
-        <td style="width: 23%;">Eric&nbsp;Williams</td>
+      	<td style="width: 23%;">Alexander&nbsp;Kurtakov</td>
+      	<td style="width: 23%;">Andrey&nbsp;Loskutov</td>
+      	<td style="width: 23%;">Arun&nbsp;Thondapu</td>
+      	<td style="width: 23%;">Brian&nbsp;de&nbsp;Alwis</td>
       </tr>
       <tr>
-        <td style="width: 23%;">Ian&nbsp;Pun</td>
-        <td style="width: 23%;">Leo&nbsp;Ufimtsev</td>
-        <td style="width: 23%;">Markus&nbsp;Keller</td>
-        <td style="width: 23%;">Niraj&nbsp;Modi</td>
+      	<td style="width: 23%;">Conrad&nbsp;Groth</td>
+      	<td style="width: 23%;">Dani&nbsp;Megert</td>
+      	<td style="width: 23%;">David&nbsp;Williams</td>
+      	<td style="width: 23%;">Dirk&nbsp;Fauth</td>
       </tr>
       <tr>
-        <td style="width: 23%;">Sravan&nbsp;Kumar&nbsp;Lakkimsetti</td>
-        <td style="width: 23%;">Conrad&nbsp;Groth</td>
-        <td style="width: 23%;">&nbsp;</td>
-        <td style="width: 23%;">&nbsp;</td>
-      </tr>
-    </table>
-    <h5>Platform UI</h5>
-    <table style="width:92%; margin-left:4%; margin-right:4%;">
-      <tr>
-        <td style="width: 23%;">Alexander&nbsp;Kurtakov</td>
-        <td style="width: 23%;">Andrey&nbsp;Loskutov</td>
-        <td style="width: 23%;">Brian&nbsp;de&nbsp;Alwis</td>
-        <td style="width: 23%;">Dani&nbsp;Megert</td>
+      	<td style="width: 23%;">Eric&nbsp;Williams</td>
+      	<td style="width: 23%;">Ian&nbsp;Pun</td>
+      	<td style="width: 23%;">Jay&nbsp;Arthanareeswaran</td>
+      	<td style="width: 23%;">Jonas&nbsp;Helming</td>
       </tr>
       <tr>
-        <td style="width: 23%;">Dirk&nbsp;Fauth</td>
-        <td style="width: 23%;">Eric&nbsp;Moffatt</td>
-        <td style="width: 23%;">Jonas&nbsp;Helming</td>
-        <td style="width: 23%;">Kalyan&nbsp;Prasad</td>
+      	<td style="width: 23%;">Kalyan&nbsp;Prasad</td>
+      	<td style="width: 23%;">Karsten&nbsp;Thoms</td>
+      	<td style="width: 23%;">Lakshmi&nbsp;Shanmugam</td>
+      	<td style="width: 23%;">Lars&nbsp;Vogel</td>
       </tr>
       <tr>
-        <td style="width: 23%;">Lars&nbsp;Vogel</td>
-        <td style="width: 23%;">Markus&nbsp;Keller</td>
-        <td style="width: 23%;">Mickael&nbsp;Istria</td>
-        <td style="width: 23%;">Noopur&nbsp;Gupta</td>
-      </tr>
-      <tr>
-        <td style="width: 23%;">Olivier&nbsp;Prouvost</td>
-        <td style="width: 23%;">Patrik&nbsp;Suzzi</td>
-        <td style="width: 23%;">Sergey&nbsp;Prigogin</td>
-        <td style="width: 23%;">Simon&nbsp;Scholz</td>
-      </tr>
-      <tr>
-      <td style="width: 23%;">Sopot&nbsp;Cela</td>
-        <td style="width: 23%;">Stefan&nbsp;Xenos</td>
-        <td style="width: 23%;">Szymon&nbsp;Ptaszkiewicz</td>
-        <td style="width: 23%;">Thomas&nbsp;Schindl</td>
-      </tr>
-      <tr>
-        <td style="width: 23%;">Thomas&nbsp;Watson</td>
-        <td style="width: 23%;">Tony&nbsp;McCrary</td>
-        <td style="width: 23%;">Wojciech&nbsp;Sudol</td>
-        <td style="width: 23%;">&nbsp;</td>
-      </tr>
-    </table>
-    <h5>Platform Resources</h5>
-    <table style="width:92%; margin-left:4%; margin-right:4%;">
-      <tr>
-        <td style="width: 23%;">Andrey&nbsp;Loskutov</td>
-        <td style="width: 23%;">Dani&nbsp;Megert</td>
-        <td style="width: 23%;">Lars&nbsp;Vogel</td>
-        <td style="width: 23%;">Markus&nbsp;Keller</td>
-      </tr>
-      <tr>
-        <td style="width: 23%;">Sergey&nbsp;Prigogin</td>
-        <td style="width: 23%;">Stefan&nbsp;Xenos</td>
-        <td style="width: 23%;">Szymon&nbsp;Ptaszkiewicz</td>
-        <td style="width: 23%;">&nbsp;</td>
-      </tr>
-    </table>
-    <h5>Platform Releng</h5>
-    <table style="width:92%; margin-left:4%; margin-right:4%;">
-
-      <tr>
-        <td style="width: 23%;">Alexander&nbsp;Kurtakov</td>
-        <td style="width: 23%;">David&nbsp;Williams</td>
-        <td style="width: 23%;">Dani&nbsp;Megert</td>
-        <td style="width: 23%;">Markus&nbsp;Keller</td>
-      </tr>
-      <tr>
-        <td style="width: 23%;">Sravan&nbsp;Kumar&nbsp;Lakkimsetti</td>
-        <td style="width: 23%;">&nbsp;</td>
-        <td style="width: 23%;">&nbsp;</td>
-        <td style="width: 23%;">&nbsp;</td>
-      </tr>
-    </table>
-    <h5>Platform Documentation</h5>
-    <table style="width:92%; margin-left:4%; margin-right:4%;">
-
-      <tr>
-        <td style="width: 23%;">Dani&nbsp;Megert</td>
-        <td style="width: 23%;">David&nbsp;Williams</td>
-        <td style="width: 23%;">Jay&nbsp;Arthanareeswaran</td>
-        <td style="width: 23%;">Lars&nbsp;Vogel</td>
-      </tr>
-      <tr>
-        <td style="width: 23%;">Markus&nbsp;Keller</td>
-        <td style="width: 23%;">Noopur&nbsp;Gupta</td>
-        <td style="width: 23%;">Sarika&nbsp;Sinha</td>
-        <td style="width: 23%;">Stephan&nbsp;Herrmann</td>
-      </tr>
-      <tr>
-        <td style="width: 23%;">Szymon&nbsp;Ptaszkiewicz</td>
-        <td style="width: 23%;">Vikas&nbsp;Chandra</td>
-        <td style="width: 23%;">&nbsp;</td>
-        <td style="width: 23%;">&nbsp;</td>
-      </tr>
-    </table>
-    <h5>Platform Debug</h5>
-    <table style="width:92%; margin-left:4%; margin-right:4%;">
-
-      <tr>
-        <td style="width: 23%;">Andrey&nbsp;Loskutov</td>
-        <td style="width: 23%;">Dani&nbsp;Megert</td>
-        <td style="width: 23%;">Markus&nbsp;Keller</td>
-        <td style="width: 23%;">Sarika&nbsp;Sinha</td>
-      </tr>
+      <td style="width: 23%;">Leo&nbsp;Ufimtsev</td>
+      <td style="width: 23%;">Markus&nbsp;Keller</td>
+      <td style="width: 23%;">Mickael&nbsp;Istria</td>
+      <td style="width: 23%;">Niraj&nbsp;Modi</td>
+     </tr>
+     <tr>
+     	<td style="width: 23%;">Noopur&nbsp;Gupta</td>
+     	<td style="width: 23%;">Olivier&nbsp;Prouvost</td>
+     	<td style="width: 23%;">Patrik&nbsp;Suzzi</td>
+     	<td style="width: 23%;">Sarika&nbsp;Sinha</td>
+     </tr>
+     <tr>
+     	<td style="width: 23%;">Simon&nbsp;Scholz</td>
+     	<td style="width: 23%;">Sopot&nbsp;Cela</td>
+     	<td style="width: 23%;">Sravan&nbsp;Kumar&nbsp;Lakkimsetti</td>
+     	<td style="width: 23%;">Stefan&nbsp;Xenos</td>
+     </tr>
+     <tr>
+     	<td style="width: 23%;">Stephan&nbsp;Herrmann</td>
+     	<td style="width: 23%;">Szymon&nbsp;Ptaszkiewicz</td>
+     	<td style="width: 23%;">Thomas&nbsp;Schindl</td>
+     	<td style="width: 23%;">Thomas&nbsp;Watson</td>
+     </tr>
+     <tr>
+     	<td style="width: 23%;">Tony&nbsp;McCrary</td>
+     	<td style="width: 23%;">&nbsp;</td>
+     	<td style="width: 23%;">&nbsp;</td>
+     	<td style="width: 23%;">&nbsp;</td>
+     </tr>
     </table>
 
     <h4>Eclipse JDT</h4>
