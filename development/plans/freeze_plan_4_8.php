@@ -486,7 +486,7 @@ ob_start();
 
 			<a name="FixPassAfterRC2"></a><h4>May 28 - 30 - contributions to RC3</h4>
 			<p><b>Focus:</b> Serious defects only; documentation.</p>
-            <p><b>Fix approval:</b> Two additional committers and a component lead must +1 your bug report (3 people who are not the one making the change). All changes 
+            <p><b>Fix approval:</b> Two additional committers and a project lead must +1 your bug report (3 people who are not the one making the change). All changes 
               must have their associated bug reports tagged 4.8 RC3. Ongoing changes 
               to component documentation, tests or examples do not require approval.
               <br>
@@ -505,8 +505,8 @@ ob_start();
 
 			<a name="FixPassAfterRC3"></a><h4>June 4 - June 6 - contributions to RC4</h4>
 			<p><b>Focus:</b> Serious defects only; documentation.</p>
-            <p><b>Fix approval:</b> Component lead plus one other component lead must 
-              approve all work on a component. In addition, any component lead 
+            <p><b>Fix approval:</b> Project lead plus one other project lead must 
+              approve all work on a component. In addition, any project lead 
               can veto a change with cause. No changes are to be released without 
               associated bug report tagged 4.8 RC4 including risk assessment and 
               prior approvals. Ongoing changes to component documentation, tests or examples do 
