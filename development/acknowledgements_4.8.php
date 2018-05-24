@@ -71,37 +71,22 @@ ob_start();
       We would also like to thank the users and adopters who support our efforts, through a range of activities, including early testing, being a <a href="https://eclipse.org/donate/">Friend of
         Eclipse</a>, contracting special work, or outright employment.
     </p>
+    
+     <p>
+      A special thanks goes to Holger Vormann for his Eclipse IDE promotion videos.
+    </p>
 
-    <p>The Platform Resources team would like to thank everyone who has helped by filing bugs, testing and providing patches. Specifically we would like to thank the following people who have
-      helped improve the Resources components by their code contributions to this release: Mikael Barbero, Matthias Becker, Sopot Cela, Conrad Groth, Rüdiger Herrmann, Mickael Istria,
-      Alexander Kurtakov, Sravan Kumar Lakkimsetti, Ed Merks and Sebastian Ratz.</p>
-
-
-    <p>The Platform UI team would like to thank
-      everyone who has helped us to improve the quality by testing and reporting bugs and enhancement requests. Special thanks to the following list of
+  
+    <p>The Platform team would like to thank
+      everyone who has helped us to improve the quality by testing and reporting bugs and enhancement requests. And a special thanks to other Eclipse projects we prereq: EMF and ECF who 
+     also provide timely updates so that we can be ontime. Special thanks to the following list of
       people, in alphabetical order, who contributed code to the project:
-      Andreas Mayer, Axel Richard, Benedikt Kuntz, Björn Michael, Bruno Medeiros, Christian Pontesegger, Conrad Groth, Daniel Raap, 
-      David Weiser, Dawid Pakuła, Denis Forveille, Ed Merks, Elena Laskavaia, Eugen Neufeld, Fabian Pfaff, Fabio Zadrozny, Gunnar Wagenknecht, Harald Albers, Ian Pun, Ilya Buziuk,
-	  Jan Rosczak, Jonah Graham, Lars Sadau, Leo Ufimtsev, Lothar Lattermann, Louis-Michel Mathurin, Mario Herzig, Martin Karpisek, 
-	  Matthias Becker, Max Hohenegger, Michal Niewrzal, Mickael Istria, Mikael Barbero, Noopur Gupta, Olivier Prouvost, Paul Punke, Philipp Kunz,  Ralf Petter,
-	  Robert Roth, Rob Stryker, Rüdiger Herrmann, Sebastian Lohmeier, Sebastian Ratz, Sezgin Halibov, Søren Troest, 
-      Sravan Kumar Lakkimsetti, Stephan Wahlbrink, Szymon Ptaszkiewicz, Till Brychcy, Tommy Redel, Vasili Gulevich and Wim Jongman.
+     Alexander Kurtakov, Alexandra Buzila, Alex Say, Andreas Loth, Andreas Sewe, Andrey Loskutov, Andrey Mozzhuhin, Angelo Zerr, Armin Beil, Arne Deutsch, Arun Thondapu, Asma Smaoui, Ataul Ahmad, Axel Richard, Benjamin Leipold, Björn Arnelid, Brian de Alwis, Carsten Reckord, Christian Georgi, Christoph Läubrich, Christoph Stanik, Conrad Groth, Daniel Kruegler, Daniel Megert, Dani Megert, Darrel Karisch, David Weiser, David Williams, Dawid Pakuła, Dirk Fauth, Ed Merks, Erdal Karaca, Eric Williams, Etienne Reichenbach, Fabian Pfaff, Fabio Zadrozny, Gunnar Wagenknecht, Hilger Steenblock, Holger Voormann, Ian Pun, Igor Fedorenko, Janis Danisevskis, Jens Lidestrom, Jens Reimann, Joachim Kaesser, John Arthorne, John Hendrikx, Jonas Helming, Jonas Hungershausen, Julian Honnen, Kaloyan Raev, Kalyan Prasad, Karsten Thoms, Karthik Bhat, Kim Moir, Klara Ward, Lakshmi Shanmugam, Lars Neumeier, Lars Sadau, Lars Vogel, Leo Ufimtsev, Lucas Bullen, Marco Maccaferri, Markus Duft, Markus Keller, Marlo Häring, Martin Karpisek, Martin Schreiber, Mat Booth, Matthias Becker, Michael Keppler, Michal Niewrzal, Mickael Istria, Mikael Barbero, Nikita Nemkin, Niraj Modi, Noopur Gupta, Olivier Prouvost, Patrik Suzzi, Paul Webster, Peter Severin, Philip Langer, Philippe Brossel, René Purrio, Roland Grunberg, Rolf Theunissen, Sarika Sinha, Sebastian Ratz, Shawn Kleese, Simeon Andreev, Simon Scholz, Sopot Cela, Sravan Kumar Lakkimsetti, Stefan Nöbauer, Stefan Prieschl, Stefan Winkler, Stephan Wahlbrink, Thanh Ha, Thomas Watson, Thorsten Hake, Till Brychcy, Tobias Eichhorn, Tobias Melcher, Tom Bergmann, Tom Schindl, Torbjörn Svensson, Tu Ton, Unai Martinez, Vasili Gulevich, Vikas Chandra, Wayne Beaton and Wim Jongman
     </p>
 
-    <p>The Platform SWT team would like to thank everyone who helped to improve the toolkit by filing bug reports and enhancement requests, as well as the early adopters who contributed towards improving quality by testing.
-		We would also like to thank Andrey Loskutov, Andrey Mozzhuhin, Angelo Zerr, Arne Deutsch, Christian Georgi, Ed Merks, Fabio Zadrozny, Gunnar Wagenknecht, Janis Danisevskis, Karsten Thoms, Laeubi, Lucas Bullen, 
-		Martin Karpisek, Mat Booth, Mikael Barbero, Minnist, Nicolas Cazottes, Nikita Nemkin, René Purrio, Roland Grunberg, Rolf Theunissen, Simeon Andreev, Stefan Winkler, Thorsten Hake, Till Brychcy, Tobias Melcher, Tom Schindl and 
-		Torbjörn Svensson for their code contributions.
-    </p>
-
-    <p>The Release Engineering team would like to thank the many people who helped to improve our build
-     as well as the committers who set up and maintain their own Platform JIPP jobs. And a special thanks to other Eclipse projects we prereq: EMF and ECF who 
-     also provide timely updates so that we can be ontime. Special thanks to the following list of people, in alphabetical order, who contributed code to the project:
-     Frederic Gurr, Jay Arthanareeswaran, Mat Booth, Mikael Barbero, Ren� Purrio, Vikas Chandra.
-     
     Also, the webmasters (Frederic Gurr, Denis Roy, Matt Ward and Mikael Barbero) at the Eclipse Foundation for their constant help and education and improvements. And      
       we also thank the other Eclipse projects that make up a part of the infrastructure we 
-      depend on: Tycho, EGit, Hudson and Jenkins for providing fixes and steady improvements.
+      depend on: Tycho, EGit, Jenkins for providing fixes and steady improvements.
     </p>
 
     <p>The JDT Core team would like to thank everyone who has helped us improve quality by testing and filing good bug reports. Special thanks to the following list of
@@ -112,15 +97,6 @@ ob_start();
 
     <p>The JDT Debug team would like to thank everyone who helped improve the Java debugger by filing bugs, testing and providing patches. Specifically we would like to thank Alexander Kurtakov, 
     Axel Richard, Brian de Alwis, Frank Benoit, Gregory Amerson, Karsten Thoms, Lucas Bullen, Matthias Becker, Mickael Istria, Mikael Barbero, Roland Grunberg, Sravan Kumar Lakkimsetti  and Tom Schindl for features and bug fixes.
-    </p>
-
-    <p>The Platform Debug team would like to thank everyone who helped improve the debugger framework by filing bugs, testing and providing patches. Specifically we would like to thank Andreas Loth, 
-    Andreas Sewe,  Armin Beil, Axel Richard, David Weiser, Fabian Pfaff, Ian Pun, Igor Fedorenko, Jonas Hungershausen, Karthik Bhat, Lars Neumeier, Markus Duft, Martin Schreiber, Michael Keppler, Ren� Purrio, 
-    Simeon Andreev and Tobias Melcher for features and bug fixes.
-    </p>
-    
-    <p>The Platform Ant team would like to thank everyone who helped improve the ant framework by filing bugs, testing and providing patches. Specifically we would like to thank Jay Arthanareeswaran, 
-    Michael Keppler and Roland Grunberg for bug fixes and providing support in updating Ant to new version.
     </p>
 
 
