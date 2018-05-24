@@ -73,7 +73,7 @@ ob_start();
     </p>
     
      <p>
-      A special thanks goes to Holger Vormann for his Eclipse IDE promotion videos.
+      A special thanks goes to Holger Voormann for his Eclipse IDE promotion videos.
     </p>
 
   
