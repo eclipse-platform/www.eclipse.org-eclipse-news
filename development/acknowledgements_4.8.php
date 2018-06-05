@@ -106,7 +106,7 @@ ob_start();
 
     <p>The Plug-in Development Environment team would like to thank the numerous contributors who continue to improve the component every release.
         Special thanks to those who contributed code:
-        Abel Hegedus, Alexander Kurtakov, Andrey Loskutov, Brian de Alwis, David Weiser, Elena Laskavaia, Fabian Pfaff, Gunnar Wagenknecht, Julian Honnen, Kevin Townsend, Marc-André Laperle, Matthias Becker, Mickael Istria, Mikaël Barbero, Niklas Mehner, Olivier Prouvost, Patrik Suzzi, Sarika Sinha, Sergey Prigogin, Sopot Cela, Sravan Kumar Lakkimsetti, Stefan Xenos, Thomas Watson, Torbjörn Svensson and Vincenzo Caselli.
+       Andreas Sewe, Arne Deutsch, Christian Dietrich, Ed Merks, Fabian Pfaff, Jonas Hungershausen, Karsten Thoms, Lucas Bullen, Matthias Becker, Michael Keppler, Mickael Istria , Moritz Aleithe, Olivier Prouvost, Taras Lungol and Till Brychcy.
       </p>
 
     <p>The Equinox team would like to thank all the contributors that helped improve the project by filing bug reports and enhancement requests.  We also would like to thank the community of developers that have contributed to the Equinox code base this release:
@@ -182,7 +182,7 @@ ob_start();
       	<td style="width: 23%;">Andrey&nbsp;Loskutov</td>
         <td style="width: 23%;">Dani&nbsp;Megert</td>
         <td style="width: 23%;">Jayaprakash&nbsp;Arthanareeswaran</td>
-        <td style="width: 23%;">Jesper&nbsp;Steen&nbsp;M�ller</td>
+        <td style="width: 23%;">Jesper&nbsp;Steen&nbsp;Moller</td>
       </tr>
       <tr>
         <td style="width: 23%;">Kalyan&nbsp;Prasad</td>
@@ -206,15 +206,20 @@ ob_start();
     <h4>Eclipse PDE</h4>
     <table style="width:92%; margin-left:4%; margin-right:4%;">
       <tr>
+        <td style="width: 23%;">Alexander&nbsp;Kurtakov</td>
+        <td style="width: 23%;">Andrey&nbsp;Loskutov</td>
         <td style="width: 23%;">Dani&nbsp;Megert</td>
         <td style="width: 23%;">Lars&nbsp;Vogel</td>
-        <td style="width: 23%;">Markus&nbsp;Keller</td>
-        <td style="width: 23%;">Martin&nbsp;Karpisek</td>
       </tr>
       <tr>
+        <td style="width: 23%;">Markus&nbsp;Keller</td>
+        <td style="width: 23%;">Martin&nbsp;Karpisek</td>
         <td style="width: 23%;">Noopur&nbsp;Gupta</td>
-        <td style="width: 23%;">Olivier&nbsp;Thomann</td>
         <td style="width: 23%;">Peter&nbsp;Nehrer</td>
+      </tr>
+      <tr>
+ 
+        <td style="width: 23%;">Sopot&nbsp;Cela</td>
         <td style="width: 23%;">Vikas&nbsp;Chandra</td>
       </tr>
     </table>
