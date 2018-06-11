@@ -104,7 +104,7 @@ after the release.
               </ol></li>
             <li><a href="#mozTocId554478">Platform - SWT</a>
               <ol>
-                <li><a href="#mozTocId535123">Black bands may appear in the toolbar widget in light and dark themes</a></li>
+                <li><a href="#mozTocId534426">Usage of swt.autoScale and GDK_SCALE flag on GTK platforms</a></li>
                 <li><a href="#mozTocId554478">Non-uniform scaling of text vs. icons when using intermediate scaling factors on high-DPI displays</a></li>
                 <li><a href="#mozTocId69222">Eclipse plug-in based on the SWT Browser throws exception</a></li>
                 <li><a href="#mozTocId238090">Eclipse icon is duplicated in task-bar on Windows</a></li>
@@ -784,12 +784,13 @@ after the release.
   <h4>
     <a
       class="mozTocH4"
-      name="mozTocId535123">Black bands may appear in the toolbar widget in light and dark themes on GTK3</a>
+      name="mozTocId534426">Usage of swt.autoScale and GDK_SCALE flag on GTK platforms</a>
   </h4>
   <p>
     <a
       class="mozTocH4"
-      name="mozTocId535123">Black bands may appear in the toolbar widget in light and dark themes on GTK3 with X11 backend when the scale factor is set 2 or above. The workaround is to use Classic theme or the High contrast theme in Eclipse. </a>
+      name="mozTocId534426">With new implementation of hi-dpi support we are directly working with GTK3. So the users may see non-uniform scaling when you use swt.autoScale and GDK_SCALE flags. 
+      Workaround is to set the scalefactor in display settings.</a>
   </p>
   <h4>
     <a
