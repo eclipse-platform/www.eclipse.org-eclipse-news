@@ -49,6 +49,15 @@ ul {padding-left: 13px;}
   <tr>
     <td id="pde-compiler" class="section" colspan="2"><h2>PDE Compiler</h2></td>
   </tr>
+  <tr id="builder-scheduling-rule">
+    <td class="title">Relaxed scheduling rule for builders</td>
+    <td class="content">
+      The scheduling rule for PDE builders was relaxed. Instead of using the workspace
+      root, it now uses a composition of all PDE projects.
+     	<p>As a result, distinct PDE projects won't build in parallel, but PDE doesn't prevent
+     	independent non-PDE projects from building in parallel.</p>
+    </td>
+  </tr>
 
 </tbody>
 </table>
