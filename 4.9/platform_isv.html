@@ -47,8 +47,37 @@ ul {padding-left: 13px;}
       Type parameters have been added to relevant classes and methods in the
       <code>org.eclipse.core.databinding</code> bundle. This includes
       <code>DataBindingContext</code>, <code>IConverter</code> and <code>IValidator</code>.
+      This makes code using these classes more explicit and clear and
+      can help catching bugs in an early stage.
       </p>
-    </td>
+      <p>
+      Code example:
+      
+      <pre>
+    IObservableValue&lt;String&gt; o1 = ...;
+    IObservableValue&lt;Integer&gt; o2 = ...;
+    DataBindingContext cont = ...;
+    IConverter&lt;String, Integer&gt; c = IConverter.create(String.class, Integer.class, Integer::decode);
+    UpdateValueStrategy&lt;String, Integer&gt; s = new UpdateValueStrategy&lt;&gt;();
+    s.setConverter(c);
+    cont.bindValue(o1, o2, s, null);
+      </pre>
+      </p>
+      <p>
+      These changes is part of an ongoing effort to make the databinding API more typesafe. 
+      This effort started with the addition of type parameters to the bundles
+      <code>org.eclipse.core.databinding.property</code> and
+      <code>org.eclipse.core.databinding.observable</code>, and will continue with the bundles
+      <code>org.eclipse.core.databinding.beans</code> and <code>org.eclipse.jface.databinding</code>
+      in a future release.
+      </p>
+      <p>
+      Note: Users of databinding API:s that are not yet updated to take advantage of the type 
+      parameters will find that the new type parameters cause raw type warnings in their code. 
+      The best way to handle warnings from code that can't be updated is often to suppress these 
+      warnings using <code>@SuppressWarnings("rawtypes")</code>. Since the implementation of 
+      the databinding classes has not changed, suppressing warnings is a safe thing to do in this
+      case.
   </tr>
 
   <!-- *********************** SWT *********************** -->
