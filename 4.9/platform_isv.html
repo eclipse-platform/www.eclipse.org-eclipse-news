@@ -43,16 +43,14 @@ ul {padding-left: 13px;}
   <tr id="type-parameters-core-databinding">
     <td class="title">Type parameters on Core Databinding classes</td>
     <td class="content">
-      <p>
       Type parameters have been added to relevant classes and methods in the
       <code>org.eclipse.core.databinding</code> bundle. This includes
       <code>DataBindingContext</code>, <code>IConverter</code> and <code>IValidator</code>.
       This makes code using these classes more explicit and clear and
       can help catching bugs in an early stage.
-      </p>
       <p>
       Code example:
-      
+      </p>
       <pre>
     IObservableValue&lt;String&gt; o1 = ...;
     IObservableValue&lt;Integer&gt; o2 = ...;
@@ -62,7 +60,6 @@ ul {padding-left: 13px;}
     s.setConverter(c);
     cont.bindValue(o1, o2, s, null);
       </pre>
-      </p>
       <p>
       These changes is part of an ongoing effort to make the databinding API more typesafe. 
       This effort started with the addition of type parameters to the bundles
@@ -78,6 +75,8 @@ ul {padding-left: 13px;}
       warnings using <code>@SuppressWarnings("rawtypes")</code>. Since the implementation of 
       the databinding classes has not changed, suppressing warnings is a safe thing to do in this
       case.
+      </p>
+    </td>
   </tr>
   
   <!-- *********************** SWT *********************** -->
