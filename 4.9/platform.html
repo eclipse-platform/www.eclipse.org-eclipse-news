@@ -158,6 +158,17 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="linux-file-system-provider-millisecond-precision">
+    <td class="title">Linux file system provider millisecond precision</td>
+    <td class="content">
+      <p>
+      The native file system provider for Linux based operating system now provides millisecond precision and has improved performance.
+      The old precision  provided seconds precision: it contained no millisecond component, despite being in millisecond unit.
+      The old precision can be restored by specifying the command line argument: <i>-Declipse.filesystem.useNatives.modificationTimestampMillisecondsResolution=false</i>. 
+      </p>
+    </td>
+  </tr>
+
 </tbody>
 </table>
 <script type="text/javascript" src="scripts.js"></script>
