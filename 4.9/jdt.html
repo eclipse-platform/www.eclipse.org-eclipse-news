@@ -96,7 +96,18 @@ ul {padding-left: 13px;}
     <h2>Debug</h2>
     </td>
   </tr>
-
+	<tr id="step_result_timeout">
+		<td class="title">Timeout for result of step operation</td>
+		<td class="content">
+			Observing the result of step operations may slow down execution, which may be unusable if the step takes already long.
+			Therefore a timeout (default: 7000 ms) has been introduced after which the observation mechanism is disabled until the end of the step operation.
+			<p>
+				<img src="images/result_timeout_537142.png" alt="" />
+			</p>
+			<p>
+			The timeout can be configured in <b>Preferences > Java > Debug > Don't show if step operation takes longer than (ms)</b>.
+			</p>
+		</td>
   <!-- *********************** JDT Developers ******************************** -->
   <tr>
     <td id="JDTDev" class="section" colspan="2">
