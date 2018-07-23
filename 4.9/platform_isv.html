@@ -78,10 +78,19 @@ ul {padding-left: 13px;}
       </p>
     </td>
   </tr>
-  
+
   <!-- *********************** SWT *********************** -->
   <tr>
     <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
+  </tr>
+
+  <tr id="alt-gr-display-post">
+  	<td class="title">New SWT.ALT_GR constant and support for non-US keyboard layouts</td>
+  	<td class="content">
+  		SWT on GTK3 has added a <code>SWT.ALT_GR</code> constant which can be used to generate special characters requiring the AltGr modifier using
+  		the <code>Display.post(Event)</code> method. The <code>Display.post(Event)</code> method now supports simulating key events for non-US
+  		keyboard layouts and the option to send key modifiers together with key characters in a single event.
+  	</td>
   </tr>
 
   </tbody>
