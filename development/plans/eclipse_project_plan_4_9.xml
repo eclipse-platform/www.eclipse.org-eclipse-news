@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 11:47 EST July 24, 2018.
+Last revised 11:35 EST July 24, 2018.
 
 <!--
 <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
@@ -258,24 +258,7 @@ Eclipse 4.9 Endgame Plan.
 
 		<!-- ************ Ubuntu ************** -->
 		<tr class="c1">
-			<td rowspan="3">Ubuntu Long Term Support</td>
-			<td rowspan="2">16.04</td>
-			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="1">
-				Oracle Java 8u172<br/>
-				IBM Java 8 8.0.5
-			</td>
-			<td rowspan="3">GTK+ 3</td>
-		</tr>
-		<tr class="c1">
-			<td rowspan="1">x86 64-bit</td>
-			<td rowspan="1">
-				Oracle Java 8u172<br/>
-				Oracle Java 10.0.1<br/>
-				IBM Java 8 8.0.5
-			</td>
-		</tr>
-		<tr class="c1">
+			<td rowspan="1">Ubuntu Long Term Support</td>
 		    <td rowspan="1">18.04</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
@@ -283,6 +266,7 @@ Eclipse 4.9 Endgame Plan.
 				Oracle Java 10.0.1<br/>
 				IBM Java 8 8.0.5
 			</td>
+			<td rowspan="1">GTK+ 3</td>
 		</tr>
 		
 		<!-- ************ Mac ************** -->
