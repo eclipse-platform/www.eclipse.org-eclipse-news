@@ -159,6 +159,16 @@ ul {padding-left: 13px;}
       </p>
     </td>
   </tr>
+  <tr id="disable_thread_name_changes">
+  <td class="title">Option to disable thread name changes in Debug View</td>
+    <td class="content">
+        Thread name changes in the debuggee JVM are reflected in the Debug View. A VM option can now be used to disable this behavior,
+        in case the JVM communication necessary for the name updates is not desired.
+      <p>
+        The functionality can be disabled by specifying the following VM option <b>-Dorg.eclipse.jdt.internal.debug.core.model.ThreadNameChangeListener.disable=true</b>.
+      </p>
+    </td>
+  </tr>
   <!-- *********************** JDT Developers ******************************** -->
   <tr>
     <td id="JDTDev" class="section" colspan="2">
