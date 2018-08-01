@@ -46,36 +46,33 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
-	<tr id="minimap">
-		<td class="title">Minimap</td>
-		<td class="content">
-			The Minimap gives you a high level overview of the
-			content of the current activate text editor which aids in
-			navigating and understanding the code.
-			<p>
-				You can open the Minimap by pressing CTRL+3 en typing "minimap".<br />
-				The Minimap can also be opened through the <b>Window</b> menu by
-				selecting <b>Show view / Other</b> and then <b>General /
-					Minimap</b>:
-			</p>
-			<p>
-				<img src="images/minimap-show-view.png" alt="" />
-			</p> 
-			Here are some screenshots of the Minimap:
-			<ul>
-				<li>in Light theme:
-					<p>
-								<img src="images/minimap-in-light-theme.png" alt="" />
-							</p>
-						</li>
-						<li>in Dark theme:
-							<p>
-								<img src="images/minimap-in-dark-theme.png" alt="" />
-							</p>
-						</li>
-					</ul> 
-				</td>
-			</tr>
+  <tr id="minimap">
+  	<td class="title">Minimap</td>
+  	<td class="content">
+	  The Minimap gives you a high level overview of the content of the current active text editor which aids in
+	  navigation and better understanding of the code.
+	  <p>
+	  	The Minimap view can be opened by typing "minimap" in the <b>Quick Access</b> search box.<br/>
+	  	It can also be opened from the <b>Window > Show View > Other...</b> menu and then selecting <b>General > Minimap</b> in the <b>Show View</b> dialog.
+	  </p>
+	  <p>
+	  	<img src="images/minimap-show-view.png" alt="" />
+	  </p> 
+	  	Here are the screenshots of the Minimap:
+	  <ul>
+	  	<li>In Light theme:
+	  		<p>
+	  		 <img src="images/minimap-in-light-theme.png" alt="" />
+	  		</p>
+	  	</li>
+	  	<li>In Dark theme:
+	  		<p>
+	  		 <img src="images/minimap-in-dark-theme.png" alt="" />
+	  		</p>
+	  	</li>
+	  </ul> 
+	</td>
+  </tr>
 
 <!-- ******************* Editors ************************************* -->
   <tr>
@@ -99,19 +96,23 @@ ul {padding-left: 13px;}
   </tr>
 
   <tr id="platform-team-gsettings-migration">
-    <td class="title">Proxy settings migrated from GSettings instead of GConf</td>
+    <td class="title">Proxy settings migrated to use GSettings instead of GConf</td>
     <td class="content">
       The <b>Preferences > General > Network Connections</b> preference page, now uses GSettings to detect proxy settings instead of GConf.
-      GConf has been deprecated for several years and isn't even available on some systems anymore. GSettings is the latest and up-to-date
-      method of fetching system settings from GNOME.
+      <p>
+       GConf has been deprecated for several years and isn't available on some systems anymore. GSettings is the latest and up-to-date
+       method of fetching system settings from GNOME.
+      </p>
     </td>
   </tr>
 
   <tr id="hide-quick-access-per-default">
-    <td class="title">Preference to hide the Quick Access field by default</td>
+    <td class="title">Hidden flag to hide the Quick Access field by default</td>
     <td class="content">
-      To hide the quick access search field (located at top right) per default, its now possible to specify the following preference: <b>org.eclipse.ui/hideQuickAccessPerDefault=true</b>.
-      The field can be restored as usual, by right clicking on the area it occupies and choosing the restore menu entry.
+      It's now possible to hide the <b>Quick Access</b> search field (located at top right) by default, by specifying the following preference: <b>org.eclipse.ui/hideQuickAccessPerDefault=true</b>.
+      <p>
+       The field can be restored by right clicking on the area it occupies and choosing the restore menu item.
+      </p>
     </td>
   </tr>
 
@@ -132,20 +133,18 @@ ul {padding-left: 13px;}
   <tr id="batik-update-1.10">
     <td class="title">Batik 1.10 update</td>
     <td class="content">
-      <p>
-      Version of Batik included is update to 1.10 to fix <a href="https://nvd.nist.gov/vuln/detail/CVE-2018-8013">CVE-2018-8013</a>. 
-      </p>
+      Version of Batik included is updated to 1.10 to fix <a href="https://nvd.nist.gov/vuln/detail/CVE-2018-8013">CVE-2018-8013</a>. 
     </td>
   </tr>
 
   <tr id="linux-file-system-provider-millisecond-precision">
     <td class="title">Linux file system provider millisecond precision</td>
     <td class="content">
-      <p>
       The native file system provider for Linux based operating system now provides millisecond precision and has improved performance.
-      The old precision  provided seconds precision: it contained no millisecond component, despite being in millisecond unit.
-      The old precision can be restored by specifying the command line argument: <i>-Declipse.filesystem.useNatives.modificationTimestampMillisecondsResolution=false</i>. 
-      </p>
+      The old precision provided seconds precision. It contained no millisecond component, despite being in millisecond unit.
+      <p>
+       The old precision can be restored by specifying the command line argument:<pre><code>-Declipse.filesystem.useNatives.modificationTimestampMillisecondsResolution=false</code></pre>
+      <p> 
     </td>
   </tr>
 

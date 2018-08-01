@@ -68,15 +68,15 @@ ul {padding-left: 13px;}
     <h2>Java Editor </h2>
     </td>
   </tr>
-	<tr id="bread_crumb_dark">
-		<td class="title">Improved breakcrumb for the dark theme</td>
+	<tr id="breadcrumb-dark">
+		<td class="title">Improved Breadcrumb for the dark theme</td>
 		<td class="content">
-			The breakcrumb in the Java Editor now uses a dark background in the dark theme.
+			The <b>Breadcrumb</b> in the <b>Java Editor</b> now uses a dark background in the dark theme.
 			<p>
-				<img src="images/breadcrumb_dark_and_light.png" alt="Breadcrum in dark theme" />
+			 <img src="images/breadcrumb_dark_and_light.png" alt="Breadcrumb in dark theme" />
 			</p>
 			<p>
-				In the light theme the breakcrumb no longer uses a gradient but now uses a flat look style.
+				In the light theme, the <b>Breadcrumb</b> uses a flat look style instead of a gradient.
 			</p>
 		</td>
 	</tr>
@@ -87,27 +87,27 @@ ul {padding-left: 13px;}
     <h2>Java Views and Dialogs</h2>
     </td>
   </tr>
-	<tr id="step_compiler_compliance">
-		<td class="title">Quick Fix for the JRE Compiler Compliance Problem Marker</td>
+	<tr id="step-compiler-compliance">
+		<td class="title">Quick Fix for JRE Compiler Compliance Problem Marker</td>
 		<td class="content">
-			A new quickfix is provided on the <b>JRE Compiler Compilance Problem Marker</b> which is created if the compiler compliance 
-			does not match the JRE being used. This quickFix provides the option of opening the Compiler Compliance page of the
+			A new quick fix is provided on the <b>JRE Compiler Compilance Problem Marker</b> which is created if the compiler compliance 
+			does not match the JRE being used. This quick fix provides the option of opening the <b>Compiler Compliance</b> page of the
 			project to fix this issue. 
 			<p>
-				<img src="images/quickfix_open_cc_page.png" alt="" />
+			 <img src="images/quickfix_open_cc_page.png" alt="" />
 			</p>
 			<p>
-			Selecting this option opens the Compiler Compliance property page for the specified project as below.
+			 Selecting this option opens the <b>Compiler Compliance</b> property page for the specified project as seen below.
 			</p>
 			<p>
-				<img src="images/quickfix_cc_page.png" alt="" />
+			 <img src="images/quickfix_cc_page.png" alt="" />
 			</p>			
 		</td>
   </tr>
-  <tr id="open_type_full_path">
+  <tr id="open-type-full-path">
     <td class="title">Open Type dialog now always shows the full path</td>
     <td class="content">
-      The Open Type dialog now always shows the full path of every item found.
+      The <b>Open Type</b> dialog now always shows the full path of all the matching items.
       <p>
         <img src="images/open_type_full_path.png" alt="" />
       </p>
@@ -133,64 +133,66 @@ ul {padding-left: 13px;}
     <h2>Debug</h2>
     </td>
   </tr>
-	<tr id="step_result_timeout">
-		<td class="title">Timeout for result of step operation</td>
-		<td class="content">
-			Observing the result of step operations may slow down execution, which may be unusable if the step takes already long.
-			Therefore a timeout (default: 7000 ms) has been introduced after which the observation mechanism is disabled until the end of the step operation.
-			<p>
-				<img src="images/result_timeout_537142.png" alt="" />
-			</p>
-			<p>
-			The timeout can be configured in <b>Preferences > Java > Debug > Don't show if step operation takes longer than (ms)</b>.
-			</p>
-		</td>
-	</tr>
-  <tr id="step_result_hide">
+  <tr id="step-result-timeout">
+	<td class="title">Timeout for result of step operation</td>
+	<td class="content">
+		Observing the result of step operations may slow down execution, which may be unusable if the step takes long already.
+		Therefore a timeout (default: 7000 ms) has been introduced after which the observation mechanism is disabled until the end of the step operation.
+		<p>
+		 <img src="images/result_timeout_537142.png" alt="" />
+		</p>
+		<p>
+		 The timeout can be configured in <b>Preferences > Java > Debug > Don't show if step operation takes longer than (ms)</b>.
+		</p>
+	</td>
+  </tr>
+  
+  <tr id="step-result-hide">
     <td class="title">Option to hide running threads in Debug view</td>
     <td class="content">
-      New Debug view option has been introduced to show or hide running threads. Hiding running threads can be useful when debugging heavily multithreaded application, when it is difficult to find threads stopped at breakpoints among hundreds or thousands of running threads.
+      A new option has been introduced in the <b>Debug</b> view to show or hide running threads. Hiding running threads can be useful when debugging heavily multithreaded application, when it is difficult to find threads stopped at breakpoints among hundreds or thousands of running threads.
       <p>
         <img src="images/hide-running-threads.png" alt="" width="100%"/>
       </p>
     </td>
   </tr>
-  <tr id="show_command_line">
+  
+  <tr id="show-command-line">
     <td class="title">Show Command Line button in Launch Configuration</td>
     <td class="content">
-      New Button <b>Show Command Line</b> has been added in Java launch configuraion dialog. 
+      A new button <b>Show Command Line</b> has been added in the <b>Java Launch Configuration</b> dialog. 
       <p>
-        <img src="images/show_command_line.png" alt="" width="100%"/>
+        <img src="images/show_command_line.png" alt=""/>
       </p>
-      Button will open a dialog to show the command line used for launching.
+      Clicking the button will open a dialog to show the command line used for launching the application.
       <p>
-        <img src="images/show_command_line_detail.png" alt="" width="100%"/>
+        <img src="images/show_command_line_detail.png" alt=""/>
       </p>
     </td>
   </tr>
-  <tr id="disable_thread_name_changes">
+  <tr id="disable-thread-name-changes">
   <td class="title">Option to disable thread name changes in Debug View</td>
     <td class="content">
-        Thread name changes in the debuggee JVM are reflected in the Debug View. A VM option can now be used to disable this behavior,
+        Thread name changes in the debuggee JVM are reflected in the <b>Debug</b> View. A VM option can now be used to disable this behavior,
         in case the JVM communication necessary for the name updates is not desired.
       <p>
-        The functionality can be disabled by specifying the following VM option <b>-Dorg.eclipse.jdt.internal.debug.core.model.ThreadNameChangeListener.disable=true</b>.
+        The functionality can be disabled by specifying the following VM option <pre><code>-Dorg.eclipse.jdt.internal.debug.core.model.ThreadNameChangeListener.disable=true</code></pre>
       </p>
     </td>
   </tr>
-  <tr id="support_long_classpath">
+  <tr id="support-long-classpath">
     <td class="title">Support for long classpath/modulepath</td>
     <td class="content">
       Classpath and/or modulepath are now shortened if longer than current operating system limits.
       <p>If a temporary jar is needed to shorten the classpath (Java 8 and previous versions), a dialog opens for confirmation.</p>
       <p>
-        <img src="images/enable-classpathonly-dialog.png" alt="" width="100%"/>
+       <img src="images/enable-classpathonly-dialog.png" alt="" width="100%"/>
       </p>
       <p>
-      The option <b>Use temporary jar to specify classpath (to avoid classpath length limitations)</b> is available in the Classpath tab for the run/debug configuration.
+       The option <b>Use temporary jar to specify classpath (to avoid classpath length limitations)</b> is available in the <b>Classpath</b> tab of the <b>Run/Debug Configuration</b> dialog.
       </p>
       <p>
-        <img src="images/enable-classpathonly-option.png" alt="" width="100%"/>
+       <img src="images/enable-classpathonly-option.png" alt="" width="100%"/>
       </p>
     </td>
   </tr>
