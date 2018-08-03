@@ -127,6 +127,22 @@ ul {padding-left: 13px;}
     <h2>Java Formatter </h2>
     </td>
   </tr>
+  <tr id="compact-loops">
+    <td class="title">Keep simple loops in one line</td>
+    <td class="content">
+      New formatter settings have been added that make it possible to keep the bodies of simple loops (without braces) in the same line as their headers, similar to previously existing setting for simple 'if' statements.
+      Different kind of loops ('for', 'while', 'do while') can be controlled independently.
+      The settings can be found in the profile editor under <b>New Lines > In control statements > Simple Loops</b>.
+      <p>
+        <img src="images/formatter-compact-loops.png" alt="" />
+      </p>
+      There's also a new setting to control how these loops should be handled if they exceed the maximum line width.
+      It's located under <b>Line Wrapping > Wrapping settings > Statements > Compact loops ('for', 'while', 'do while')</b>.
+      <p>
+        <img src="images/formatter-compact-loops-wrap.png" alt="" />
+      </p>
+    </td>
+  </tr>
 
   <!-- *********************** Debug ******************************** -->
   <tr>
