@@ -27,6 +27,7 @@ ul {padding-left: 13px;}
 	<li><a href="#Java9">Java&trade; 9 Support</a></li>
 	<li><a href="#JUnit">JUnit</a></li>
 	<li><a href="#JavaEditor">Java Editor</a></li>
+	<li><a href="#JavaCodeGeneration">Java Code Generation</a></li>
 	<li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li>
 	<li><a href="#JavaCompiler">Java Compiler</a></li>
 	<li><a href="#JavaFormatter">Java Formatter</a></li>
@@ -80,6 +81,32 @@ ul {padding-left: 13px;}
 			</p>
 		</td>
 	</tr>
+	
+  <!-- ******************* Java Code Generation ************************************* -->
+  <tr>
+    <td id="JavaCodeGeneration" class="section" colspan="2">
+    <h2>Java Code Generation</h2>
+    </td>
+  </tr>
+	<tr id="java7-hashcode-equals">
+		<td class="title">Improved hashCode() and equals() generation</td>
+		<td class="content">
+			A new option in the <b>Source > Generate hashCode() and equals()...</b> tool allows you to create implementations using the 
+			Java 7 <code>Objects.equals</code> and <code>Objects.hash</code> methods. 
+			<p>
+			 <img src="images/hashcode-equals-dialog.png" alt="" />
+			</p>
+			<p>
+			The above setup generates the following code:
+			</p>
+			<p>
+			 <a href="images/HashCodeEquals.java.txt"><img src="images/hashcode-equals-generation.png" alt="" /></a>
+			</p>
+			Additionally, arrays are handled more cleverly. The generation prefers the <code>Arrays.deepHashCode</code> and <code>Arrays.deepEquals</code> 
+			methods when dealing with <code>Object[]</code>, <code>Serializable[]</code> and <code>Cloneable[]</code> or any 
+			type variables extending these types.
+		</td>
+  </tr>
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
   <tr>
