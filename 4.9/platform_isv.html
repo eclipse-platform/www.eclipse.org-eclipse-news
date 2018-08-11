@@ -79,6 +79,36 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="generic-editor-folding">
+    <td class="title">Contribute folding to the Generic Editor</td>
+    <td class="content">
+      The Generic Editor provide a new extension point <code>org.eclipse.ui.genericeditor.foldingReconcilers</code> to customize folding.
+      <p>This example shows how LSP4E could contribute folding reconciler only for editor input supporting a language server:</p>
+      <pre>
+&lt;extension
+      point="org.eclipse.ui.genericeditor.foldingReconcilers">
+   &lt;foldingReconciler
+         class="org.eclipse.lsp4e.operations.folding.FoldingReconciler"
+         contentType="org.eclipse.core.runtime.text">
+      &lt;enabledWhen>
+         &lt;with
+               variable="editorInput">
+            &lt;test
+                  property="org.eclipse.lsp4e.hasLanguageServer">
+            &lt;/test>
+         &lt;/with>
+      &lt;/enabledWhen>
+   &lt;/foldingReconciler>
+&lt;/extension>
+      </pre>
+        When no other folding reconciler is registered for current document,
+        the generic editor uses a strategy which folds blocks of lines based on whitespaces and indentation:
+	    <p>
+	      <img src="images/generic-editor-folding.png" alt="" />
+	    </p>
+    </td>
+  </tr>
+
   <!-- *********************** SWT *********************** -->
   <tr>
     <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
