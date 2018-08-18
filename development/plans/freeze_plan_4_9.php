@@ -16,7 +16,7 @@
 	
 	#
 	# Begin: page-specific settings.  Change these. 
-	$pageTitle 		= "Eclipse 2018-09 (4.9) Endgame Plan";
+	$pageTitle 		= "Eclipse 2018-09 (4.9) End Game Plan";
 	$pageKeywords	= "eclipse, 4.9, 2018-09, milestone, schedule, endgame";
 	$pageAuthor		= "Dani Megert";
 	
