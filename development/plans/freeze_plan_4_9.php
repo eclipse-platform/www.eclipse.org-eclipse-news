@@ -45,7 +45,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>August 18, 2018 - Weekly maintenance builds.</b></p>
+			<p><b>August 18, 2018 - Weekly I-builds.</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -58,7 +58,7 @@ ob_start();
 	            <td></td>
 	            <td></td>
 	            <td></td>
-	            <td>Weekly maintenance builds</td>
+	            <td>Weekly I-builds</td>
 	            <td></td>
 	          </tr>
 			  <tr>
@@ -72,7 +72,7 @@ ob_start();
 	            <td></td>
 	            <td></td>
 	            <td></td>
-	            <td>Weekly maintenance builds</td>
+	            <td>Weekly I-builds</td>
 	            <td></td>
 	          </tr>
 			  <tr>
@@ -162,7 +162,7 @@ ob_start();
 			
 			<strong>API change approval</strong>
 	        <p>
-			No API changes are expected during a maintenance release. Any exception must be
+			No API changes are expected after RC1. Any exception must be
 			approved by the PMC. No changes are to be released without prior approval
 			and associated bug report. Please send the request for approval to the eclipse-pmc
 			mailing list. If a change is made to API to make it binary compatible with
@@ -180,9 +180,7 @@ ob_start();
 
 		   <strong>RC1</strong>
 		   <p>
-		   Release candidate 1 is a warm-up build to ensure the release train build
-		   process is in place and all projects are making contributions. All fixes submitted 
-		   to maintenance stream builds must have a component lead or PMC vote on the bug report,
+		   All fixes submitted must have a component lead or PMC vote on the bug report,
 		   and the fix must be reviewed by an additional committer (any committer other than
 		   the one who made the fix).
 		   </p>
@@ -192,7 +190,7 @@ ob_start();
 	        Release candidate containing fixes for the majority of known outstanding 
 	        defects that we intend to fix for 2018-09 (4.9). At the end of RC2 build, 
 	        there should not be any open defects tagged 4.9. All fixes submitted 
-	        to maintenance stream builds must have a component lead or PMC vote on the bug report,
+	        must have a component lead or PMC vote on the bug report,
 	        and the fix must be reviewed by an additional committer (any committer other than
 	        the one who made the fix).
 	        </p>      
