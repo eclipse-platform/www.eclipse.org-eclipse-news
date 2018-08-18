@@ -200,30 +200,6 @@ ob_start();
 	        all component teams. The goal is to verify all the fixes and check for any regressions.
 			</p>
 	
-	        <strong>RC3</strong>
-	        <p>Release candidate containing fixes for all known outstanding defects
-	        that we intend to fix for 2018-09 (4.9). All fixes submitted to RC3 must have a PMC vote on the bug report,
-	        and the fix must be reviewed by an additional committer (any committer other than
-	        the one who made the fix).
-	        Ensure that all feature/plugin versions have been consistently incremented when needed.
-	        </p>
-	
-	        <strong>Test pass using RC3</strong>
-	        <p>Concerted 1-day testing effort using RC3 involving entire community 
-	           including all component teams. The goal is to verify all the fixes, check 
-	           for any regressions and sanity check our RC3 candidate.
-	         </p>
-	
-	         <strong>RC4</strong>
-	         <p>Release candidate 4, if required, to fix problems detected during the test pass.
-	         We expect NO CHANGE at this point. If you find a show stopper, please notify ASAP the 
-	         <a href="http://dev.eclipse.org/mailman/listinfo/eclipse-pmc">eclipse-pmc@eclipse.org</a> mailing list.
-	         All fixes submitted to RC4 must have a PMC vote on the bug report and be reviewed
-	         by an additional committer (any committer other than the one who made the fix).
-	         </p>
-	         <p>No test pass is scheduled unless significant contributions occurred. If so, 
-	         then Thursday would be elected for a one day test pass</p>
-	
 			<strong>2018-09 (4.9) Release</strong>
 			<p>The 2018-09 (4.9) release should be complete and available for download by 
 	              September 19, 2018 as part of the <a href="">2018-09 
