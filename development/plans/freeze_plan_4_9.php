@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		Dani Megert
-	# Date:			2018-08-18
+	# Date:			2018-08-20
 	#
 	# Description: Eclipse project 4.9 release freeze plan
 	#
@@ -45,7 +45,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>August 18, 2018 - Weekly I-builds.</b></p>
+			<p><b>August 20, 2018 - Weekly I-builds.</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -151,7 +151,7 @@ ob_start();
 	        2018-09 (4.9) release. The Eclipse project version number for this release is 4.9.
 			As always, we welcome help from the 
 	        community with testing the release candidates. By default, 2018-09 (4.9)
-	        is supposed to work exactly like the Photon (4.8) release All new features and problems fixed in 2018-09 (4.9) are in the Eclipse bugzilla database.
+	        is supposed to work exactly like the Photon (4.8) release. All new features and problems fixed in 2018-09 (4.9) are in the Eclipse bugzilla database.
 	        </p> 
 
 	        <p>General announcements during the 2018-09 (4.9) endgame are posted to the 
