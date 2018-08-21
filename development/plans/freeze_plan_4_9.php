@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		Dani Megert
-	# Date:			2018-08-20
+	# Date:			2018-08-21
 	#
 	# Description: Eclipse project 4.9 release freeze plan
 	#
@@ -45,7 +45,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>August 20, 2018 - Weekly I-builds.</b></p>
+			<p><b>August 21, 2018 - Weekly I-builds.</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -77,6 +77,14 @@ ob_start();
 	          </tr>
 			  <tr>
 	            <td class="spacer">&nbsp;</td>
+	          </tr>
+	          <tr>
+	            <td></td>
+	            <td class="date">29</td>
+	            <td class="date">Wed 20:00 EDT</td>
+	            <td></td>
+	            <td>API freeze</td>
+	            <td></td>
 	          </tr>
 	          <tr>
 	            <td></td>
