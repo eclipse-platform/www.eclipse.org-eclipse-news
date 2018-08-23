@@ -74,6 +74,17 @@ ul {padding-left: 13px;}
 	</td>
   </tr>
 
+  <tr id="zoomchanged">
+  	<td class="title">Restart Eclipse when zoom changes for primary monitor.</td>
+  	<td class="content">
+	  When user changes the OS zoom setting and if it leads to a change in SWT zoom for primary monitor, Eclipse prompts user to restart to apply the zoom changes.
+	  On Windows10, below dialog is prompted to the user for confirmation on Eclipse SDK restart action:
+	  <p>
+	  	<img src="images/restart_dialog_zoom_changed.png" alt="" />
+	  </p>
+	  <p>Note: This feature is not supported on platforms that do not have this concept. Currently supported on Windows10 only.</p>
+	</td>
+  </tr>
 <!-- ******************* Editors ************************************* -->
   <tr>
     <td id="Editor" class="section" colspan="2">
