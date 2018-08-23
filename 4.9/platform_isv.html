@@ -141,6 +141,17 @@ ul {padding-left: 13px;}
   	</td>
   </tr>
 
+  <tr id="zoom-changed-api">
+    <td class="title">New event SWT.ZoomChanged added</td>
+    <td class="content">
+      A new event type <code>SWT.ZoomChanged</code> has been added to SWT to notify clients that SWT zoom has changed.
+      Listeners for ZoomChanged event should be added to a Shell. The event's detail field contains the new zoom SWT level.
+      <p>
+      Note: This operation is a hint and is not supported on platforms that do not have this concept. Currently supported on Windows10 only.
+      </p>
+    </td>
+  </tr>
+
   </tbody>
 </table>
 <script type="text/javascript" src="scripts.js"></script>
