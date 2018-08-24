@@ -109,6 +109,27 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="generic-editor-character-pair-matcher">
+    <td class="title">Contribute character pair matcher to the Generic Editor</td>
+    <td class="content">
+      The Generic Editor provide a new extension point <code>org.eclipse.ui.genericeditor.characterPairMatchers</code> to customize character pair matchers (matching brackets).
+      <p>The <a href="http://git.eclipse.org/c/platform/eclipse.platform.text.git/tree/org.eclipse.ui.genericeditor.examples">Generic Editor examples</a> shows how to manage matching 
+      bracket for tag elements of .project file:</p>
+      <pre>
+&lt;extension
+      point="org.eclipse.ui.genericeditor.characterPairMatchers"&gt;
+   &lt;characterPairMatcher
+         class="org.eclipse.ui.genericeditor.examples.dotproject.TagCharacterPairMatcher"
+         contentType="org.eclipse.ui.genericeditor.examples.dotproject"&gt;
+   &lt;/characterPairMatcher&gt;
+&lt;/extension&gt;
+      </pre>
+	  <p>
+	    <img src="images/generic-editor-character-pair-matcher.png" alt="" />
+	  </p>      
+    </td>
+  </tr>
+
   <!-- *********************** SWT *********************** -->
   <tr>
     <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
