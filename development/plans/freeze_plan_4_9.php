@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		Dani Megert
-	# Date:			2018-08-21
+	# Date:			2018-08-27
 	#
 	# Description: Eclipse project 4.9 release freeze plan
 	#
@@ -16,7 +16,7 @@
 	
 	#
 	# Begin: page-specific settings.  Change these. 
-	$pageTitle 		= "Eclipse 2018-09 (4.9) End Game Plan";
+	$pageTitle 		= "Eclipse 2018-09 (4.9) Endgame Plan";
 	$pageKeywords	= "eclipse, 4.9, 2018-09, milestone, schedule, endgame";
 	$pageAuthor		= "Dani Megert";
 	
@@ -45,7 +45,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>August 21, 2018 - Weekly I-builds.</b></p>
+			<p><b>August 27, 2018 - Daily I-builds.</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -58,7 +58,7 @@ ob_start();
 	            <td></td>
 	            <td></td>
 	            <td></td>
-	            <td>Weekly I-builds</td>
+	            <td>Daily I-builds</td>
 	            <td></td>
 	          </tr>
 			  <tr>
@@ -67,12 +67,12 @@ ob_start();
 	          <tr>
 	            <td>August 2018</td>
 	          </tr>
-	          <tr>
+	          <tr class="current">
 	            <td></td>
 	            <td></td>
 	            <td></td>
 	            <td></td>
-	            <td>Weekly I-builds</td>
+	            <td>Daily I-builds</td>
 	            <td></td>
 	          </tr>
 			  <tr>
