@@ -188,7 +188,7 @@ ob_start();
 
 		   <strong>RC1</strong>
 		   <p>
-		   All fixes submitted must have a component lead or PMC vote on the bug report,
+		   All fixes submitted must have a project lead or PMC vote on the bug report,
 		   and the fix must be reviewed by an additional committer (any committer other than
 		   the one who made the fix).
 		   </p>
@@ -198,7 +198,7 @@ ob_start();
 	        Release candidate containing fixes for the majority of known outstanding 
 	        defects that we intend to fix for 2018-09 (4.9). At the end of RC2 build, 
 	        there should not be any open defects tagged 4.9. All fixes submitted 
-	        must have a component lead or PMC vote on the bug report,
+	        must have a project lead or PMC vote on the bug report,
 	        and the fix must be reviewed by an additional committer (any committer other than
 	        the one who made the fix).
 	        </p>      
