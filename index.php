@@ -5,7 +5,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2014-04-28
+	# Date:			2018-08-28
 	#
 	# Description: The main entry point for the Eclipse Project Web page
 	#
@@ -54,7 +54,7 @@ ob_start();
 				can find the current release here.  Or, download the latest stable and integration builds if you want
 				to try out the newest features under development, or get started with contributing to the project.
       	   </li>
-      	   <li><a href="../documentation/main.html">Documentation</a><br>
+      	   <li><a href="http://help.eclipse.org/photon/index.jsp">Documentation</a><br>
 				Browse the documentation included with Eclipse Project releases.
       	   </li>
       	 </ul>

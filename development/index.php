@@ -5,7 +5,7 @@
 	# index.php
 	#
 	# Author: 		
-	# Date:			2011-08-05
+	# Date:			2018-08-28
 	#
 	# Description: Eclipse project development main page
 	#
@@ -36,13 +36,13 @@ ob_start();
 		<div id="current" class="homeitem3col">
 			<h3>Releases currently under development</h3>
 			<ul>
-		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_7.xml">Eclipse Project Oxygen 4.7 Plan</a><br>
-		        This document lays out the feature and API set for the Oxygen 4.7 release of the Eclipse Project.</li>
-		      <li><a href="plans/freeze_plan_4_7.php">Eclipse Project Oxygen Endgame Plan</a><br>
-				Information about how we plan to wrap up the Oxygen release (version 4.7).</li>
+		      <li><a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_9.xml">Eclipse Project 2018-09 (4.9) Plan</a><br>
+		        This document lays out the feature and API set for the 2018-09 (4.9) release of the Eclipse Project.</li>
+		      <li><a href="plans/freeze_plan_4_9.php">Eclipse Project 2018-09 (4.9) Endgame Plan</a><br>
+				Information about how we plan to wrap up the 2018-09 (4.9) release.</li>
 		    </ul>
 		    See also the <a href="https://projects.eclipse.org/projects/eclipse/governance">Eclipse Project on projects.eclipse.org</a>
-		    and the <strong>preliminary</strong> <a href="https://wiki.eclipse.org/Oxygen/Simultaneous_Release_Plan">Simultaneous Release plan</a>.
+		    and the <strong>preliminary</strong> <a href="https://wiki.eclipse.org/SimRel/2018-09/Simultaneous_Release_Plan">Simultaneous Release plan</a>.
       	</div>
 		<div id="development" class="homeitem3col">
 			<h3>Development Process</h3>
