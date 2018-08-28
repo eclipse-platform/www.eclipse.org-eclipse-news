@@ -54,7 +54,7 @@ ob_start();
 				can find the current release here.  Or, download the latest stable and integration builds if you want
 				to try out the newest features under development, or get started with contributing to the project.
       	   </li>
-      	   <li><a href="http://help.eclipse.org/photon/index.jsp">Documentation</a><br>
+      	   <li><a href="http://help.eclipse.org/">Documentation</a><br>
 				Browse the documentation included with Eclipse Project releases.
       	   </li>
       	 </ul>
