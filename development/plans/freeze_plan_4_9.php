@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		Dani Megert
-	# Date:			2018-08-27
+	# Date:			2018-08-30
 	#
 	# Description: Eclipse project 4.9 release freeze plan
 	#
@@ -45,7 +45,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>August 27, 2018 - Daily I-builds.</b></p>
+			<p><b>August 31, 2018 - Submit RC1 to release train.</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -67,7 +67,7 @@ ob_start();
 	          <tr>
 	            <td>August 2018</td>
 	          </tr>
-	          <tr class="current">
+	          <tr>
 	            <td></td>
 	            <td></td>
 	            <td></td>
@@ -94,7 +94,7 @@ ob_start();
 	            <td>Release Candidate 1 build</td>
 	            <td></td>
 	          </tr>
-	          <tr>
+	          <tr class="current">
 	            <td></td>
 	            <td class="date">31</td>
 	            <td class="date">Fri</td>
