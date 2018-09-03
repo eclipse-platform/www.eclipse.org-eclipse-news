@@ -144,18 +144,18 @@ ob_start();
       </tr>
       <tr>
         <td style="width: 23%;">Matt&nbsp;Booth</td>
+        <td style="width: 23%;">Matthias&nbsp;Becker</td>
         <td style="width: 23%;">Mickael&nbsp;Istria</td>
         <td style="width: 23%;">Niraj&nbsp;Modi</td>
-     	<td style="width: 23%;">Noopur&nbsp;Gupta</td>
      </tr>
      <tr>
+     	<td style="width: 23%;">Noopur&nbsp;Gupta</td>
      	<td style="width: 23%;">Olivier&nbsp;Prouvost</td>
      	<td style="width: 23%;">Patrik&nbsp;Suzzi</td>
      	<td style="width: 23%;">Sarika&nbsp;Sinha</td>
-     	<td style="width: 23%;">Simon&nbsp;Scholz</td>
      </tr>
      <tr>
-     	<td style="width: 23%;">Sopot&nbsp;Cela</td>
+     	<td style="width: 23%;">Simon&nbsp;Scholz</td>
      	<td style="width: 23%;">Sravan&nbsp;Kumar&nbsp;Lakkimsetti</td>
      	<td style="width: 23%;">Stefan&nbsp;Xenos</td>
      	<td style="width: 23%;">Stephan&nbsp;Herrmann</td>
