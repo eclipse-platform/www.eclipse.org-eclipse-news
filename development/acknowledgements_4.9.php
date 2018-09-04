@@ -108,7 +108,7 @@ ob_start();
       </p>
 
     <p>The Equinox team would like to thank all the contributors that helped improve the project by filing bug reports and enhancement requests.  We also would like to thank the community of developers that have contributed to the Equinox code base this release:
-       Alexander Kurtakov, Andrey Loskutov, Gunnar Wagenknecht, Jan, Joshua Matsuoka, Karsten Thoms, Lars Vogel, Lucas Bullen, Mat Booth, Michael Keppler, Mykola Nikishov, nicolatimeus, Rahul Shinde, Scott Tustison, Sravan Kumar Lakkimsetti, Thomas Watson, Till Brychcy and Todor Boev.
+       Andrey Loskutov, Gunnar Wagenknecht, Jan, Joshua Matsuoka, Karsten Thoms, Lars Vogel, Lucas Bullen, Mat Booth, Michael Keppler, Mykola Nikishov, nicolatimeus, Rahul Shinde, Scott Tustison and Till Brychcy.
       </p>
 
     <h3>Active Committers</h3>
@@ -126,45 +126,39 @@ ob_start();
       </tr>
       <tr>
       	<td style="width: 23%;">Dani&nbsp;Megert</td>
-      	<td style="width: 23%;">David&nbsp;Williams</td>
       	<td style="width: 23%;">Dirk&nbsp;Fauth</td>
+      	<td style="width: 23%;">Ed&nbsp;Merks</td>
       	<td style="width: 23%;">Eric&nbsp;Williams</td>
       </tr>
       <tr>
-      	<td style="width: 23%;">Ian&nbsp;Pun</td>
-      	<td style="width: 23%;">Jay&nbsp;Arthanareeswaran</td>
-      	<td style="width: 23%;">Jonas&nbsp;Helming</td>
       	<td style="width: 23%;">Kalyan&nbsp;Prasad</td>
-      </tr>
-      <tr>
       	<td style="width: 23%;">Karsten&nbsp;Thoms</td>
       	<td style="width: 23%;">Lakshmi&nbsp;Shanmugam</td>
       	<td style="width: 23%;">Lars&nbsp;Vogel</td>
-        <td style="width: 23%;">Leo&nbsp;Ufimtsev</td>
       </tr>
       <tr>
+        <td style="width: 23%;">Leo&nbsp;Ufimtsev</td>
+      	<td style="width: 23%;">Lucas&nbsp;Bullen</td>
         <td style="width: 23%;">Matt&nbsp;Booth</td>
         <td style="width: 23%;">Matthias&nbsp;Becker</td>
+      </tr>
+      <tr>
         <td style="width: 23%;">Mickael&nbsp;Istria</td>
         <td style="width: 23%;">Niraj&nbsp;Modi</td>
-     </tr>
-     <tr>
      	<td style="width: 23%;">Noopur&nbsp;Gupta</td>
      	<td style="width: 23%;">Olivier&nbsp;Prouvost</td>
+     </tr>
+     <tr>
      	<td style="width: 23%;">Patrik&nbsp;Suzzi</td>
      	<td style="width: 23%;">Sarika&nbsp;Sinha</td>
+     	<td style="width: 23%;">Simon&nbsp;Andreev</td>
+     	<td style="width: 23%;">Simon&nbsp;Scholz</td>
      </tr>
      <tr>
-     	<td style="width: 23%;">Simon&nbsp;Scholz</td>
      	<td style="width: 23%;">Sravan&nbsp;Kumar&nbsp;Lakkimsetti</td>
      	<td style="width: 23%;">Stefan&nbsp;Xenos</td>
-     	<td style="width: 23%;">Stephan&nbsp;Herrmann</td>
-     </tr>
-     <tr>
-     	<td style="width: 23%;">Szymon&nbsp;Ptaszkiewicz</td>
      	<td style="width: 23%;">Thomas&nbsp;Schindl</td>
-     	<td style="width: 23%;">Thomas&nbsp;Watson</td>
-     	<td style="width: 23%;">Tony&nbsp;McCrary</td>
+     	<td style="width: 23%;">Wim&nbsp;Jongman</td>
      </tr>
     </table>
 
@@ -219,15 +213,15 @@ ob_start();
     <table style="width:92%; margin-left:4%; margin-right:4%;">
       <tr>
         <td style="width: 23%;">Alexander&nbsp;Kurtakov</td>
-        <td style="width: 23%;">Arun&nbsp;Thondapu</td>
-        <td style="width: 23%;">BJ&nbsp;Hargrave</td>
-        <td style="width: 23%;">Markus&nbsp;Keller</td>
-      </tr>
-      <tr>
+        <td style="width: 23%;">Mickael&nbsp;Istria</td>
         <td style="width: 23%;">Pascal&nbsp;Rapicault</td>
         <td style="width: 23%;">Raymond&nbsp;Auge</td>
-        <td style="width: 23%;">Stefan&nbsp;Xenos</td>
+      </tr>
+      <tr>
+     	<td style="width: 23%;">Sravan&nbsp;Kumar&nbsp;Lakkimsetti</td>
         <td style="width: 23%;">Thomas&nbsp;Watson</td>
+        <td style="width: 23%;">Todor&nbsp;Boev</td>
+        <td style="width: 23%;">&nbsp;</td>
       </tr>
     </table>
   </div>
