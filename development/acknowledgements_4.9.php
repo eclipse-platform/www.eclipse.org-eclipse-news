@@ -81,7 +81,7 @@ ob_start();
       everyone who has helped us to improve the quality by testing and reporting bugs and enhancement requests. And a special thanks to other Eclipse projects we prereq: EMF and ECF who 
      also provide timely updates so that we can be ontime. Special thanks to the following list of
       people, in alphabetical order, who contributed code to the project:
-     Alexander Kurtakov, Andrey Loskutov, Angelo Zerr, Arne Deutsch, Brian de Alwis, Carsten Reckord, Christian Dietrich, Christoph Luder, Dani Megert, Dawid Pakuła, Dominic Scharfe, Ed Merks, Eric Williams, Etienne Reichenbach, Gunnar Wagenknecht, Jens Lidestrom, Jonah Graham, Jonas Hungershausen, Julian Honnen, Kalyan Prasad Tatavarthi, Karsten Thoms, Lakshmi Shanmugam, Lars Vogel, Leo Ufimtsev, Lucas Bullen, Marcus Hoepfner, Mat Booth, Matthias Becker, Matthias Mailänder, Michael Keppler, Mickael Istria, Mykola Nikishov, Niraj Modi, Olivier Prouvost, Patrik Suzzi, Roland Grunberg, Sarika Sinha, Simeon Andreev, Simon Scholz, Sravan Kumar Lakkimsetti, Stefan Winkler, Stefan Xenos, Thomas Wolf, Till Brychcy, Tom Schindl, Wim Jongman and Xi Yan.
+     Angelo Zerr, Arne Deutsch, Carsten Reckord, Christian Dietrich, Christoph Luder, Dawid Pakuła, Dominic Scharfe, Etienne Reichenbach, Gunnar Wagenknecht, Jens Lidestrom, Jonah Graham, Jonas Hungershausen, Julian Honnen, Marcus Hoepfner, Matthias Mailänder, Michael Keppler, Mykola Nikishov, Roland Grunberg, Stefan Winkler, Thomas Wolf, Till Brychcy and Xi Yan.
     </p>
 
     Also, the webmasters (Frederic Gurr, Denis Roy, Matt Ward and Mikael Barbero) at the Eclipse Foundation for their constant help and education and improvements. And      
