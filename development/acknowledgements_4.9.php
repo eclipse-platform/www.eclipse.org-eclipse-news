@@ -89,19 +89,11 @@ ob_start();
       depend on: Tycho, EGit, Jenkins for providing fixes and steady improvements.
     </p>
 
-    <p>The JDT Core team would like to thank everyone who has helped us improve quality by testing and filing good bug reports. Special thanks to the following list of
-      people, in alphabetical order, who contributed code to the project: Alexander Kurtakov, Andrey Loskutov, Jayaprakash Arthanareeswaran, Kalyan Prasad Tatavarthi, Lars Vogel, Lucas Bullen, Manoj Palat, Mateusz Matela, Reto Weiss, Sarika Sinha, Sravan Kumar Lakkimsetti, Stephan Herrmann, Till Brychcy and Vikas Chandra.
+    <p>The JDT team would like to thank everyone who filed good enhancement requests, helped us improve quality by testing and filing good bug reports, and provided answers on JDT forums/newsgroups. Special thanks to the following list of
+      people, in alphabetical order, who contributed code to the project: Alexander Kurtakov,  Cedric Chabanois, Fabian Pfaff, Igor Fedorenko, Jeff Johnston, Jens Reimann, Jonas Hungershausen, Karsten Thoms, Lars Vogel, Lucas Bullen, Matthias Becker, Pierre-Yves B, Reto Weiss, Roland Grunberg, Simeon Andreev, Sravan Kumar Lakkimsetti and Wim Jongman for features and bug fixes.
       We would also like to acknowledge Sravan Kumar Lakkimsetti for all the build and releng support.
     </p>
-
-    <p>The JDT Debug team would like to thank everyone who helped improve the Java debugger by filing bugs, testing and providing patches. Specifically we would like to thank Alexander Kurtakov, Andrey Loskutov, Cedric Chabanois, Dani Megert, Igor Fedorenko, Jayaprakash Arthanareeswaran, Kalyan Prasad Tatavarti, Lars Vogel, Sarika Sinha, Simeon Andreev and Till Brychcy for features and bug fixes.
-    </p>
-
-
-    <p>The JDT UI team sends thanks to everyone who filed good enhancement requests, helped to improve the quality by testing and filing good bug reports, and provided answers on JDT forums/newsgroups. Special thanks to those who contributed code: 
-    Andrey Loskutov, Dani Megert, Fabian Pfaff, Jeff Johnston, Jens Reimann, Jonas Hungershausen, Kalyan Prasad Tatavarthi, Karsten Thoms, Lars Vogel, Mateusz Matela, Matthias Becker, Noopur Gupta, Pierre-Yves B, Roland Grunberg, Sarika Sinha, Stephan Herrmann, Till Brychcy, Vikas Chandra and Wim Jongman.
-    </p>
-
+    
     <p>The Plug-in Development Environment team would like to thank the numerous contributors who continue to improve the component every release.
         Special thanks to those who contributed code:
        Fabian Pfaff, Jeff Johnston, Jens Reimann, Jonas Hungershausen, Kalyan Prasad Tatavarthi, Mateusz Matela, Matthias Becker, Michael Keppler, Mickael Istria, Pierre-Yves B, Roland Grunberg, Sarika Sinha, Stephan Herrmann, Till Brychcy and Wim Jongman.
