@@ -57,6 +57,28 @@ ul {padding-left: 13px;}
 		</td>
 	</tr>
 	
+	<tr id="create-abstract-method">
+		<td class="title">Quick fix to create abstract methods</td>
+		<td class="content">
+			The existing quick fix to create missing methods has been improved to create abstract method declarations. The option
+			only appears when the target class is an abstract class.
+			<p>
+				<img src="images/quickfix_create_abstract_method_1.png" alt="" />
+			</p>
+		</td>
+	</tr>
+
+    <tr id="convert-to-static-import">
+        <td class="title">Quick fix to convert to static import</td>
+        <td class="content">
+            A new quick fix has been implemented that allows the user to convert static field accesses and static methods to use a static import.
+            It's also possible to replace all occurrences at the same time.
+            <p>
+                <img src="images/quickfix_convert_to_static_import.png" alt="" />
+            </p>
+        </td>
+    </tr>
+	
   <!-- ******************* Java Code Generation ************************************* -->
   <tr>
     <td id="JavaCodeGeneration" class="section" colspan="2">
@@ -82,28 +104,6 @@ ul {padding-left: 13px;}
 			type variables extending these types.
 		</td>
   </tr>
-
-	<tr id="create-abstract-method">
-		<td class="title">Quick fix to create abstract methods</td>
-		<td class="content">
-			The existing quick fix to create missing methods has been improved to create abstract method declarations. The option
-			only appears when the target class is an abstract class.
-			<p>
-				<img src="images/quickfix_create_abstract_method_1.png" alt="" />
-			</p>
-		</td>
-	</tr>
-
-    <tr id="convert-to-static-import">
-        <td class="title">Quick fix to convert to static import</td>
-        <td class="content">
-            A new quick fix has been implemented that allows the user to convert static field accesses and static methods to use a static import.
-            It's also possible to replace all occurrences at the same time.
-            <p>
-                <img src="images/quickfix_convert_to_static_import.png" alt="" />
-            </p>
-        </td>
-    </tr>
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
   <tr>
@@ -150,7 +150,9 @@ ul {padding-left: 13px;}
     <td class="content">
       New formatter settings have been added that make it possible to keep the bodies of simple loops (without braces) in the same line as their headers, similar to previously existing setting for simple 'if' statements.
       Different kind of loops ('for', 'while', 'do while') can be controlled independently.
+      <p>
       The settings can be found in the profile editor under <b>New Lines > In control statements > Simple Loops</b>.
+      </p>
       <p>
         <img src="images/formatter-compact-loops.png" alt="" />
       </p>
@@ -162,7 +164,7 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   <tr id="align-spaces">
-    <td class="title">Aling items in columns</td>
+    <td class="title">Align items in columns</td>
     <td class="content">
       A feature previously known as <b>align fields in columns</b> has been expanded and can now be used for <b>variable declarations</b> and <b>assignment statements</b> as well.
       <p>An option has also been added to <b>always align with spaces</b>, even if tabs are used for general indentation.
