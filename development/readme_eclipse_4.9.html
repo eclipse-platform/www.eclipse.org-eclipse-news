@@ -307,7 +307,7 @@ after the release.
       name="mozTocId693657">Here are some common problems that can cause Eclipse not to start:</a>
   </p>
   <ul>
-      <li>Running Eclipse with Java SE 9 may require additional configuration. Please refer to <a href="https://wiki.eclipse.org/Configure_Eclipse_for_Java_9">this page</a> for more details.</li>
+      <li>Running Eclipse with Java SE 9 and above may require additional configuration. Please refer to <a href="https://wiki.eclipse.org/Configure_Eclipse_for_Java_9">this page</a> for more details.</li>
     <li><a
       class="mozTocH4"
       name="mozTocId693657">As shown </a><a href="#TargetOperatingEnvironments">above</a>, Eclipse 4.8 requires at least a Java SE 8. Perhaps an older version of the VM is being found in your path. To
@@ -417,11 +417,11 @@ after the release.
     <li><a href="http://download.eclipse.org/eclipse/downloads/">http://download.eclipse.org/eclipse/downloads/</a></li>
   </ul>
   <p>
-    It is imperative that 64-bit builds are downloaded and used if a 64-bit Java runtime environment has been installed. Below are two sample tarball names of version 4.6 of the Eclipse SDK packaged
+    It is imperative that 64-bit builds are downloaded and used if a 64-bit Java runtime environment has been installed. Below are two sample tarball names of version 4.9 of the Eclipse SDK packaged
     for 32-bit and 64-bit processors.<br />
-    <code>eclipse-SDK-4.6-linux-gtk.tar.gz (32-bit)</code>
+    <code>eclipse-SDK-4.9-linux-gtk.tar.gz (32-bit)</code>
     <br />
-    <code>eclipse-SDK-4.6-linux-gtk-x86_64.tar.gz (64-bit)</code>
+    <code>eclipse-SDK-4.9-linux-gtk-x86_64.tar.gz (64-bit)</code>
   </p>
   <p>
     To run Eclipse with an alternate Java runtime environment, the path to the Java virtual machine's binary must be identified. With an Eclipse installation from the distribution, altering the $PATH
@@ -1686,53 +1686,53 @@ after the release.
   <h3>
     <a
       class="mozTocH3"
-      name="mozTocId759237">Interoperability of Release 4.8 with previous releases</a>
+      name="mozTocId759237">Interoperability of Release 4.9 with previous releases</a>
   </h3>
   <h4>
     <a
       class="mozTocH4"
-      name="mozTocId226004">Sharing projects between heterogeneous Eclipse 4.8 and 4.7</a>
+      name="mozTocId226004">Sharing projects between heterogeneous Eclipse 4.9 and 4.8</a>
   </h4>
   <p>Special care is required when a project in a team repository is being loaded and operated on by developers using Eclipse-based products based on different feature or plug-in versions. The
     general problem is that the existence, contents, and interpretation of metadata files in the workspaces may be specific to a particular feature or plug-in version, and differ between versions. The
     workspace compatibility guarantees only cover cases where all developers upgrade their Eclipse workspaces in lock step. In those cases there should be no problem with shared metadata. However,
-    when some developers are working in Eclipse 4.8 while others are working in Eclipse 3.x, there are no such guarantees. This section provides advice for what to do and not to do. It addresses the
+    when some developers are working in Eclipse 4.9 while others are working in Eclipse 3.x, there are no such guarantees. This section provides advice for what to do and not to do. It addresses the
     specific issues with the Eclipse SDK.</p>
-  <p>The typical failure mode is noticed by the 4.8 user. 4.8 metadata is lost when a 4.7 user saves changes and then commits the updated metadata files to the repository. Here's how things
+  <p>The typical failure mode is noticed by the 4.9 user. 4.9 metadata is lost when a 4.8 user saves changes and then commits the updated metadata files to the repository. Here's how things
     typically go awry:</p>
   <ul>
-    <li>A user working in Eclipse 4.8 creates or modifies a project in a way that results in changes to a shared metadata file that rely on 4.8-specific information. The user then commits the
+    <li>A user working in Eclipse 4.9 creates or modifies a project in a way that results in changes to a shared metadata file that rely on 4.9-specific information. The user then commits the
       updated project files, including the shared metadata file, to the shared repository.</li>
     <li><a
       class="mozTocH4"
-      name="mozTocId226004">Another user working in Eclipse 4.7 or earlier shares this project from the same repository. The 4.8-specific information in the shared metadata file is not understood
-        by Eclipse 4.7, and is generally discarded or ignored without warning. The user modifies the project in a way that results in changes to the shared metadata file, causing the shared metadata
-        file to be rewritten without any of the 4.8-specific information. The user commits the updated project files, including the shared metadata file, to the shared repository. The user is
+      name="mozTocId226004">Another user working in Eclipse 4.8 or earlier shares this project from the same repository. The 4.9-specific information in the shared metadata file is not understood
+        by Eclipse 4.8, and is generally discarded or ignored without warning. The user modifies the project in a way that results in changes to the shared metadata file, causing the shared metadata
+        file to be rewritten without any of the 4.9-specific information. The user commits the updated project files, including the shared metadata file, to the shared repository. The user is
         generally unaware that shared information has just been lost as a result of their actions.</a></li>
     <li><a
       class="mozTocH4"
-      name="mozTocId226004">A user working in Eclipse 4.8 picks up the changes to a project from the shared repository, including the updated shared metadata file. The user may be unaware that
+      name="mozTocId226004">A user working in Eclipse 4.9 picks up the changes to a project from the shared repository, including the updated shared metadata file. The user may be unaware that
         they have just taken a retrograde step until later when things start to malfunction.</a></li>
   </ul>
   <p>
     <a
       class="mozTocH4"
-      name="mozTocId226004">Here are some things to watch out for when sharing projects between Eclipse 4.8 and earlier releases:</a>
+      name="mozTocId226004">Here are some things to watch out for when sharing projects between Eclipse 4.9 and earlier releases:</a>
   </p>
   <ul>
     <li><a
       class="mozTocH4"
-      name="mozTocId226004"><b>Virtual folders</b> - Eclipse 4.8 supports a notion of <i>virtual folders</i> that did not exist in Eclipse 3.5 or earlier. If such virtual folders are created in
-        4.8, and the project is subsequently loaded into an Eclipse 3.5 or earlier workspace, these folders will not be recognized. Recommendation: avoid creating virtual folders where project
+      name="mozTocId226004"><b>Virtual folders</b> - Eclipse 4.9 supports a notion of <i>virtual folders</i> that did not exist in Eclipse 3.5 or earlier. If such virtual folders are created in
+        4.9, and the project is subsequently loaded into an Eclipse 3.5 or earlier workspace, these folders will not be recognized. Recommendation: avoid creating virtual folders where project
         compatibility with Eclipse 3.5 or earlier is required.</a></li>
     <li><a
       class="mozTocH4"
-      name="mozTocId226004"><b>Resource filters</b> - Eclipse 4.8 supports a notion of <i>resource filters</i> that did not exist in Eclipse 3.5 or earlier. If such filters are added to resources
-        in 4.8, and the project is subsequently loaded into an Eclipse 3.5 or earlier workspace, these filters will not be recognized. Recommendation: avoid creating resource filters where project
+      name="mozTocId226004"><b>Resource filters</b> - Eclipse 4.9 supports a notion of <i>resource filters</i> that did not exist in Eclipse 3.5 or earlier. If such filters are added to resources
+        in 4.9, and the project is subsequently loaded into an Eclipse 3.5 or earlier workspace, these filters will not be recognized. Recommendation: avoid creating resource filters where project
         compatibility with Eclipse 3.5 or earlier is required.</a></li>
     <li><a
       class="mozTocH4"
-      name="mozTocId226004"><b>Predefined path variables</b> - Eclipse 4.8 supports a set of built in path variables that can be used as the basis for linked resource locations. Such variables
+      name="mozTocId226004"><b>Predefined path variables</b> - Eclipse 4.9 supports a set of built in path variables that can be used as the basis for linked resource locations. Such variables
         will not be defined automatically in Eclipse 3.5 or earlier. If compatibility with 3.5 or earlier workspace is required, users on 3.5 or earlier workspaces will need to define such path
         variables manually.</a></li>
   </ul>
