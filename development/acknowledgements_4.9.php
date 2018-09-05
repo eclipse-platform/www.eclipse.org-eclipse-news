@@ -104,7 +104,7 @@ ob_start();
 
     <p>The Plug-in Development Environment team would like to thank the numerous contributors who continue to improve the component every release.
         Special thanks to those who contributed code:
-       Alexander Kurtakov, Andrey Loskutov, Dani Megert, Fabian Pfaff, Jeff Johnston, Jens Reimann, Jonas Hungershausen, Kalyan Prasad Tatavarthi, Karsten Thoms, Lars Vogel, Lucas Bullen, Mateusz Matela, Matthias Becker, Michael Keppler, Mickael Istria, Noopur Gupta, Pierre-Yves B, Roland Grunberg, Sarika Sinha, Stephan Herrmann, Till Brychcy, Vikas Chandra and Wim Jongman.
+       Fabian Pfaff, Jeff Johnston, Jens Reimann, Jonas Hungershausen, Kalyan Prasad Tatavarthi, Mateusz Matela, Matthias Becker, Michael Keppler, Mickael Istria, Pierre-Yves B, Roland Grunberg, Sarika Sinha, Stephan Herrmann, Till Brychcy and Wim Jongman.
       </p>
 
     <p>The Equinox team would like to thank all the contributors that helped improve the project by filing bug reports and enhancement requests.  We also would like to thank the community of developers that have contributed to the Equinox code base this release:
@@ -195,16 +195,17 @@ ob_start();
         <td style="width: 23%;">Alexander&nbsp;Kurtakov</td>
         <td style="width: 23%;">Andrey&nbsp;Loskutov</td>
         <td style="width: 23%;">Dani&nbsp;Megert</td>
-        <td style="width: 23%;">Lars&nbsp;Vogel</td>
+        <td style="width: 23%;">Karsten&nbsp;Thoms</td> 
       </tr>
       <tr>
+        <td style="width: 23%;">Lars&nbsp;Vogel</td>
+        <td style="width: 23%;">Lucas&nbsp;Bullen</td>
         <td style="width: 23%;">Markus&nbsp;Keller</td>
         <td style="width: 23%;">Martin&nbsp;Karpisek</td>
-        <td style="width: 23%;">Noopur&nbsp;Gupta</td>
-        <td style="width: 23%;">Peter&nbsp;Nehrer</td>
       </tr>
       <tr>
- 
+      	<td style="width: 23%;">Noopur&nbsp;Gupta</td>
+        <td style="width: 23%;">Peter&nbsp;Nehrer</td>
         <td style="width: 23%;">Sopot&nbsp;Cela</td>
         <td style="width: 23%;">Vikas&nbsp;Chandra</td>
       </tr>
