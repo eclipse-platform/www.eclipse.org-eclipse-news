@@ -66,7 +66,7 @@ ob_start();
     
     <p>The entire Eclipse Project team would like to thank the Eclipse Foundation staff for their tireless efforts, including: Denis Roy, Matt Ward, Fred Gurr and Mikael Barbero for not only keeping all
       that infrastructure going, but also constantly improving it; Sharon Corbett for guiding us through the Eclipse legal process; Stephanie Swart and Wayne Beaton for giving us process support and improved tools to
-      simplify and manage our development process; Ian Skerrett and Roxanne Joncas for help with marketing the Eclipse release and providing Logos and artwork; and Mike Milinkovich for running the whole show. In particular, we appreciate the Eclipse Foundation for providing development resources through the new <a href="https://eclipse.org/contribute/dev_program.php">Friend of Eclipse Enhancement Program (FEEP)</a>.</p>
+      simplify and manage our development process; Ian Skerrett and Roxanne Joncas for help with marketing the Eclipse release and providing Logos and artwork; and Mike Milinkovich for running the whole show. 
     <p>
       We would also like to thank the users and adopters who support our efforts, through a range of activities, including early testing, being a <a href="https://eclipse.org/donate/">Friend of
         Eclipse</a>, contracting special work, or outright employment.
@@ -160,22 +160,16 @@ ob_start();
       	<td style="width: 23%;">Andrey&nbsp;Loskutov</td>
         <td style="width: 23%;">Dani&nbsp;Megert</td>
         <td style="width: 23%;">Jayaprakash&nbsp;Arthanareeswaran</td>
-        <td style="width: 23%;">Jesper&nbsp;Steen&nbsp;Moller</td>
-      </tr>
-      <tr>
         <td style="width: 23%;">Kalyan&nbsp;Prasad</td>
+      </tr>
+      <tr>
         <td style="width: 23%;">Manoj&nbsp;Palat</td>
-        <td style="width: 23%;">Markus&nbsp;Keller</td>
         <td style="width: 23%;">Mateusz&nbsp;Matela</td>
-      </tr>
-      <tr>
         <td style="width: 23%;">Noopur&nbsp;Gupta</td>
-        <td style="width: 23%;">Olivier&nbsp;Thomann</td>
         <td style="width: 23%;">Sarika&nbsp;Sinha</td>
-        <td style="width: 23%;">Sasikanth&nbsp;Bharadwaj</td>
       </tr>
       <tr>
-        <td style="width: 23%;">Stefan&nbsp;Xenos</td>
+        <td style="width: 23%;">Sasikanth&nbsp;Bharadwaj</td>
         <td style="width: 23%;">Stephan&nbsp;Herrmann</td>
         <td style="width: 23%;">Till&nbsp;Brychcy</td>
         <td style="width: 23%;">Vikas&nbsp;Chandra</td>
@@ -192,14 +186,8 @@ ob_start();
       <tr>
         <td style="width: 23%;">Lars&nbsp;Vogel</td>
         <td style="width: 23%;">Lucas&nbsp;Bullen</td>
-        <td style="width: 23%;">Markus&nbsp;Keller</td>
-        <td style="width: 23%;">Martin&nbsp;Karpisek</td>
-      </tr>
-      <tr>
-      	<td style="width: 23%;">Noopur&nbsp;Gupta</td>
-        <td style="width: 23%;">Peter&nbsp;Nehrer</td>
-        <td style="width: 23%;">Sopot&nbsp;Cela</td>
         <td style="width: 23%;">Vikas&nbsp;Chandra</td>
+        <td style="width: 23%;">&nbsp;</td>
       </tr>
     </table>
     <h4>Equinox</h4>
@@ -207,13 +195,13 @@ ob_start();
       <tr>
         <td style="width: 23%;">Alexander&nbsp;Kurtakov</td>
         <td style="width: 23%;">Mickael&nbsp;Istria</td>
-        <td style="width: 23%;">Pascal&nbsp;Rapicault</td>
         <td style="width: 23%;">Raymond&nbsp;Auge</td>
+     	<td style="width: 23%;">Sravan&nbsp;Kumar&nbsp;Lakkimsetti</td>
       </tr>
       <tr>
-     	<td style="width: 23%;">Sravan&nbsp;Kumar&nbsp;Lakkimsetti</td>
         <td style="width: 23%;">Thomas&nbsp;Watson</td>
         <td style="width: 23%;">Todor&nbsp;Boev</td>
+        <td style="width: 23%;">&nbsp;</td>
         <td style="width: 23%;">&nbsp;</td>
       </tr>
     </table>
