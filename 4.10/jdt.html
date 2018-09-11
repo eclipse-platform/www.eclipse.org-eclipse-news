@@ -104,6 +104,18 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="disable-thread-name-changes">
+  <td class="title">Make JDT builder use null as scheduling rule</td>
+    <td class="content">
+       By configuring the <b>org.eclipse.jdt.core/useNullSchedulingRule</b> preference to true, the JDT builder will use <tt>null</tt>
+       as scheduling rule instead of the workspace root. The preference can be change using typical Prefrences APIs, or by editing this
+       the <tt>plugin_customization.ini</tt> file of your application.
+       <p> This prevents the Java builder from locking the whole workspace. The user can continue to work in parallel and other builders
+       can also run in parallel, which results in faster builds and faster UI feedback.</p>
+       <p>As of 4.10, this is considered as a an experimental feature and is introduced mainly for testing purpose.</p>
+    </td>
+  </tr>
+
 </tbody>
 </table>
 <script type="text/javascript" src="scripts.js"></script>
