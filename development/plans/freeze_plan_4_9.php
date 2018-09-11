@@ -45,7 +45,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>August 31, 2018 - Submit RC1 to release train.</b></p>
+			<p><b>September 19, 2018 - GA.</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -94,7 +94,7 @@ ob_start();
 	            <td>Release Candidate 1 build</td>
 	            <td></td>
 	          </tr>
-	          <tr class="current">
+	          <tr>
 	            <td></td>
 	            <td class="date">31</td>
 	            <td class="date">Fri</td>
@@ -132,7 +132,7 @@ ob_start();
 	            <td>Submit to release train</td>
 	            <td></td>
 	          </tr>
-	          <tr>
+	          <tr class="current">
 	            <td></td>
 	            <td class="date">19</td>
 	            <td class="date">Wed</td>
