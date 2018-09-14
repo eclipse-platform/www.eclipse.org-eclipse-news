@@ -29,27 +29,18 @@ table.news tr td.section {font-size: 20px; font-weight: bold;}
 table.news tr td.title {vertical-align: top; font-weight: bold;}
 table.news tr td.content {vertical-align: top;}
   </style>
-<title>Eclipse &quot;New and Noteworthy&quot; Template</title>
+<title>Eclipse &quot;New and Noteworthy&quot; Instructions</title>
 </head>
 
 <body>
-<h1>Eclipse &quot;New and Noteworthy&quot; Template</h1>
-<p>Last revised 2016-11-02.</p>
-<p>This is the template for the &quot;New and Noteworthy&quot; document that
-  accompanies each Eclipse project milestone build.</p>
-<p>Note: This template document is XHTML 1.0 Transitional. Please use the W3C <a href="http://validator.w3.org/#validate_by_input">XHTML
+<h1>Eclipse &quot;New and Noteworthy&quot; Instructions page</h1>
+<p>Last revised 2018-09-14.</p>
+<p>This is the instructions page for the &quot;New and Noteworthy&quot; document that
+  accompanies each Eclipse project milestone and release build.</p>
+<p>Note: This document is XHTML 1.0 Transitional. Please use the W3C <a href="http://validator.w3.org/#validate_by_input">XHTML
     Markup Validation Service</a> to check your document's markup before submitting.
     This will detect screwed up HTML tags, images without an &quot;alt&quot;
     attribute, and other tedious little details.</p>
-
-<ul>
-  <li><a href="#Platform">Platform</a></li>
-  <li><a href="#JDT">JDT</a></li>
-  <li><a href="#PDE">PDE</a></li>
-  <li><a href="#Platform-Dev">Platform Developers</a></li>
-  <li><a href="#JDT-Dev">JDT Developers</a></li>
-  <li><a href="#Equinox">Equinox</a></li>
-</ul>
 
 <table class="news">
   <colgroup>
@@ -60,6 +51,20 @@ table.news tr td.content {vertical-align: top;}
   <tr>
     <td id="Instructions" class="section" colspan="2">
       <h2>Instructions</h2>
+    </td>
+  </tr>
+
+  <tr id="content-org">
+    <td class="title">Content Organization</td>
+    <td class="content">
+        Starting from Eclipse 4.9, we only have 2 milestones per release. Hence, we have a rolling New and Noteworthy document for the release and do not create separate document for each milestone anymore.
+        <p>The New and Noteworthy content is contained in 4 pages and are grouped based on the component they belong to.
+          The pages are platform.html, jdt.html, platform_isv.html and pde.html. The platform_isv.html page contains the entries for new APIs in Platform, SWT and Equinox.
+          The index.html page describes the release and contains links to the component news pages.
+        </p>
+        <p>Add the entry to the appropriate section in the corresponding html document.
+          If required, you can add a new section to the document to highlight a feature, for example see : <a href="4.8/jdt.html#JUnit">JUnit support</a>.
+        </p>
     </td>
   </tr>
 
@@ -104,6 +109,19 @@ table.news tr td.content {vertical-align: top;}
       <p>See entries in <a href="../../4.6/M7/index.html">published</a> news documents for correct examples. These published news entries have been already reviewed, while
          entries in the evolving document may still contain errors.
       </p>
+    </td>
+  </tr>
+
+  <tr id="bug-number">
+    <td class="title">Bug number in entry</td>
+    <td class="content">
+        Add a link to the associated bug as a <b>comment</b> in the entry.
+        <p>This makes it easier to find the associated bug in order to get more details about the entry, add comments or report problems.
+          Also, users will be able to find the bug number associated with an entry in the news page by viewing it's html source.
+        </p>
+        For an example, see this <a href="4.9/jdt.html#show-command-line">entry</a>.
+        <p>Note: Do <b>not</b> link to bugs in the entry.
+        </p>
     </td>
   </tr>
 
@@ -208,91 +226,9 @@ table.news tr td.content {vertical-align: top;}
     </td>
   </tr>
 
-
-  <tr>
-    <td colspan="2" class="section" id="Platform">Platform</td>
-  </tr>
-
-  <tr id="first-item-platform">
-    <td class="title">First item</td>
-    <td class="content">
-      Item blurb.
-    </td>
-  </tr>
-
-
-  <tr>
-    <td colspan="2" class="section" id="JDT">JDT</td>
-  </tr>
-
-  <tr id="first-item-jdt">
-    <td class="title">First item</td>
-    <td class="content">
-      Item blurb.
-    </td>
-  </tr>
-
-
-  <tr>
-    <td colspan="2" class="section" id="PDE">PDE</td>
-  </tr>
-
-  <tr id="first-item-pde">
-    <td class="title">First item</td>
-    <td class="content">
-      Item blurb.
-    </td>
-  </tr>
-
-
-  <tr>
-    <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
-  </tr>
-
-  <tr id="first-item-platform-dev">
-    <td class="title">First item</td>
-    <td class="content">
-      Item blurb.
-    </td>
-  </tr>
-
- <tr>
-    <td colspan="2" class="section" id="JDT-Dev">JDT Developers</td>
-  </tr>
-
-  <tr id="first-item-jdt-dev">
-    <td class="title">First item</td>
-    <td class="content">
-      Item blurb.
-    </td>
-  </tr>
-
-  <tr>
-    <td colspan="2" class="section" id="Equinox">Equinox</td>
-  </tr>
-
-  <tr id="first-item-equinox">
-    <td class="title">First item</td>
-    <td class="content">
-      Item blurb.
-    </td>
-  </tr>
-
-
   <tr>
     <td colspan="2"/>
   </tr>
 </table>
-
-<!--
-<p>The above features are just the ones that are new since the previous milestone
-build. Summaries for earlier Oxygen milestone builds:</p>
-<ul>
-  <li><a href="https://www.eclipse.org/eclipse/news/4.7/M3/">News for Eclipse Oxygen milestone build M3</a></li>
-  <li><a href="https://www.eclipse.org/eclipse/news/4.7/M2/">News for Eclipse Oxygen milestone build M2</a></li>
-  <li><a href="https://www.eclipse.org/eclipse/news/4.7/M1/">News for Eclipse Oxygen milestone build M1</a></li>
-</ul>
--->
-
 </body>
 </html>
