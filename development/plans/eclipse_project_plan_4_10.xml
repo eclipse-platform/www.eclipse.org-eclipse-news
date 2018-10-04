@@ -189,18 +189,10 @@ Eclipse 4.10 Endgame Plan.
 		</tr>
 		<!-- ************ WINDOWS ************** -->
 		<tr class="c0">
-			<td rowspan="2">Windows</td>
-			<td rowspan="2">7<br/>
+			<td rowspan="1">Windows</td>
+			<td rowspan="1">7<br/>
 			10
 			</td>
-			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="1">
-				Oracle Java 8u181<br/>
-				IBM Java 8 8.0.5
-			</td>
-			<td rowspan="2">Win32</td>
-		</tr>
-		<tr>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
 				Oracle Java 8u181<br/>
@@ -233,22 +225,15 @@ Eclipse 4.10 Endgame Plan.
 		</tr>
 		<!-- ************ SLES ************** -->
 		<tr class="c0">
-			<td rowspan="3">SUSE Linux Enterprise Server</td>
-			<td rowspan="3">12 SP2</td>
-			<td rowspan="1">x86 32-bit</td>
-			<td rowspan="1">
-				Oracle Java 8u181<br/>
-				IBM Java 8 8.0.5
-			</td>
-			<td rowspan="3">GTK+ 3</td>
-		</tr>
-		<tr class="c0">
+			<td rowspan="2">SUSE Linux Enterprise Server</td>
+			<td rowspan="2">12 SP2</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
 				Oracle Java 8u181<br/>
 				Oracle Java 11<br/>
 				IBM Java 8 8.0.5
 			</td>
+			<td rowspan="2">GTK+ 3</td>
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">Power 64-bit LE</td>
