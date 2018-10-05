@@ -210,7 +210,7 @@ Eclipse 4.10 Endgame Plan.
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
 				Open JDK 8u181<br/>
-				Open JDK 10.0.2<br/>
+				Open JDK 11<br/>
 				Oracle Java 8u181<br/>
 				Oracle Java 11<br/>
 				IBM Java 8 8.0.5
@@ -226,7 +226,7 @@ Eclipse 4.10 Endgame Plan.
 		<!-- ************ SLES ************** -->
 		<tr class="c0">
 			<td rowspan="2">SUSE Linux Enterprise Server</td>
-			<td rowspan="2">12 SP2</td>
+			<td rowspan="2">15</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
 				Oracle Java 8u181<br/>
@@ -258,11 +258,12 @@ Eclipse 4.10 Endgame Plan.
 		<!-- ************ Mac ************** -->
 		<tr class="c0">
 			<td rowspan="1">Apple Mac OS X</td>
-			<td rowspan="2">10.12<br/>
-			10.13
+			<td rowspan="2">10.13<br/>
+			10.14
 			</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
+				Open JDK 11<br/>
 				Oracle Java 8u181<br/>
 				Oracle Java 11
 			</td>
