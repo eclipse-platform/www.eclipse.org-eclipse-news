@@ -23,8 +23,7 @@ ul {padding-left: 13px;}
 <body>
 <h2>Java development tools</h2>
 <ul>
-	<li><a href="#Java10">Java&trade; 10 Support</a></li>
-	<li><a href="#Java9">Java&trade; 9 Support</a></li>
+	<li><a href="#Java10">Java&trade; 11 Support</a></li>
 	<li><a href="#JUnit">JUnit</a></li>
 	<li><a href="#JavaEditor">Java Editor</a></li>
 	<li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li>
@@ -41,17 +40,29 @@ ul {padding-left: 13px;}
 </colgroup>
 <tbody>
 
-  <!-- ******************* Java 10 Support ************************************* -->
+  <!-- ******************* Java 11 Support ************************************* -->
   <tr>
-    <td id="Java10" class="section" colspan="2">
-    <h2>Java&trade; 10 Support </h2>
+    <td id="Java11" class="section" colspan="2">
+    <h2>Java&trade; 11 Support </h2>
     </td>
   </tr>
 
-   <!-- ******************* Java 9 Support ************************************* -->
-  <tr>
-    <td id="Java9" class="section" colspan="2">
-    <h2>Java&trade; 9 Support </h2>
+  <tr id="java-11"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=531708 -->
+    <td class="title">Eclipse support for Java&trade; 11</td>
+    <td class="content">
+      <a href="https://docs.oracle.com/en/java/javase/11/">Java&trade; 11</a> is here, and JDT supports it completely.
+    	<ul>
+		  <li>The Eclipse compiler for Java (ECJ) implements the new Java 11 <a href="https://docs.oracle.com/en/java/javase/11/language">language enhancements</a>.</li>
+		  <li>For an informal list of examples of Java 11 features, please have a look <a href="https://wiki.eclipse.org/Java11/Examples">here</a>.</li>
+		</ul>
+    </td>
+  </tr>
+
+  <tr id="quickfix-change-compliance-11"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=536176 -->
+    <td class="title">Quick fix to change project compliance and JRE to 11</td>
+    <td class="content">
+    A quick fix <b>Change project compliance and JRE to 11</b> is provided to quickly change the current project to be compatible with Java 11.
+    <p><img src="images/quickfix-change-compliance-11.png" alt=""/></p>
     </td>
   </tr>
 
