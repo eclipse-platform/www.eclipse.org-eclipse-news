@@ -24,7 +24,7 @@ ul {padding-left: 13px;}
 <h2>Java development tools</h2>
 <ul>
 	<li><a href="#Java10">Java&trade; 11 Support</a></li>
-	<!--<li><a href="#JUnit">JUnit</a></li>
+	<!--<li><a href="#JUnit">JUnit</a></li>-->
 	<!--<li><a href="#JavaEditor">Java Editor</a></li>                      -->
 	<!--<li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li>  -->
 	<!--<li><a href="#JavaCompiler">Java Compiler</a></li>                  -->
@@ -139,9 +139,9 @@ ul {padding-left: 13px;}
   <tr id="null-scheduling-rule"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=531554 -->
   <td class="title">Make JDT builder use null as scheduling rule</td>
     <td class="content">
-       By configuring the <b>org.eclipse.jdt.core/useNullSchedulingRule</b> preference to true, the JDT builder will use <tt>null</tt>
+       By configuring the <b>org.eclipse.jdt.core/useNullSchedulingRule</b> preference to true, the JDT builder will use <code>null</code>
        as the scheduling rule instead of the workspace root. The preference can be changed using the Preferences APIs, or by editing
-       the <tt>plugin_customization.ini</tt> file of your application.
+       the <code>plugin_customization.ini</code> file of your application.
        <p> This prevents the Java builder from locking the whole workspace. The user can continue to work in parallel and other builders
        can also run in parallel, which results in faster builds and faster UI feedback.</p>
        <p>As of 4.10, this is considered as an experimental feature and is introduced mainly for testing purposes.</p>
