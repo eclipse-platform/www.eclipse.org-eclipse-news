@@ -17,19 +17,19 @@ table.news tr td.title {vertical-align: top; font-weight: bold;}
 table.news tr td.content {vertical-align: top;}
 ul {padding-left: 13px;}
 </style>
-<title>Eclipse Project Photon - New and Noteworthy</title>
+<title>Eclipse Project 2018-12 - New and Noteworthy</title>
 </head>
 
 <body>
 <h2>Java development tools</h2>
 <ul>
 	<li><a href="#Java10">Java&trade; 11 Support</a></li>
-	<li><a href="#JUnit">JUnit</a></li>
-	<li><a href="#JavaEditor">Java Editor</a></li>
-	<li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li>
-	<li><a href="#JavaCompiler">Java Compiler</a></li>
-	<li><a href="#JavaFormatter">Java Formatter</a></li>
-	<li><a href="#Debug">Debug</a></li>
+	<!--<li><a href="#JUnit">JUnit</a></li>
+	<!--<li><a href="#JavaEditor">Java Editor</a></li>                      -->
+	<!--<li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li>  -->
+	<!--<li><a href="#JavaCompiler">Java Compiler</a></li>                  -->
+	<!--<li><a href="#JavaFormatter">Java Formatter</a></li>                -->
+	<!--<li><a href="#Debug">Debug</a></li>-->
 	<li><a href="#JDTDev">JDT Developers</a></li>
 </ul>
 
@@ -67,47 +67,58 @@ ul {padding-left: 13px;}
   </tr>
 
   <!-- ******************* JUnit ************************************* -->
+  <!--
   <tr>
     <td id="JUnit" class="section" colspan="2">
     <h2>JUnit</h2>
     </td>
   </tr>
+  -->
 
   <!-- ******************* Java Editor ************************************* -->
+  <!--
   <tr>
     <td id="JavaEditor" class="section" colspan="2">
     <h2>Java Editor </h2>
     </td>
   </tr>
+  -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
+  <!--
   <tr>
     <td id="JavaViewsAndDialogs" class="section" colspan="2">
     <h2>Java Views and Dialogs</h2>
     </td>
   </tr>
+  -->
 
   <!-- ******************* Java Compiler ************************************* -->
+  <!--
   <tr>
     <td id="JavaCompiler" class="section" colspan="2">
     <h2>Java Compiler</h2>
     </td>
   </tr>
+  -->
 
   <!-- ******************* Java Formatter ************************************* -->
+  <!--
   <tr>
     <td id="JavaFormatter" class="section" colspan="2">
     <h2>Java Formatter </h2>
     </td>
   </tr>
+  -->
 
   <!-- *********************** Debug ******************************** -->
+  <!--
   <tr>
     <td id="Debug" class="section" colspan="2">
     <h2>Debug</h2>
     </td>
   </tr>
-
+  -->
   <!-- *********************** JDT Developers ******************************** -->
   <tr>
     <td id="JDTDev" class="section" colspan="2">
@@ -115,15 +126,15 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
-  <tr id="disable-thread-name-changes"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=531554 -->
+  <tr id="null-scheduling-rule"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=531554 -->
   <td class="title">Make JDT builder use null as scheduling rule</td>
     <td class="content">
        By configuring the <b>org.eclipse.jdt.core/useNullSchedulingRule</b> preference to true, the JDT builder will use <tt>null</tt>
-       as scheduling rule instead of the workspace root. The preference can be change using typical Prefrences APIs, or by editing this
+       as the scheduling rule instead of the workspace root. The preference can be changed using the Preferences APIs, or by editing
        the <tt>plugin_customization.ini</tt> file of your application.
        <p> This prevents the Java builder from locking the whole workspace. The user can continue to work in parallel and other builders
        can also run in parallel, which results in faster builds and faster UI feedback.</p>
-       <p>As of 4.10, this is considered as a an experimental feature and is introduced mainly for testing purpose.</p>
+       <p>As of 4.10, this is considered as an experimental feature and is introduced mainly for testing purposes.</p>
     </td>
   </tr>
 

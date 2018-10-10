@@ -17,16 +17,16 @@ table.news tr td.title {vertical-align: top; font-weight: bold;}
 table.news tr td.content {vertical-align: top;}
 ul {padding-left: 13px;}
 </style>
-<title>Eclipse Project Photon - New and Noteworthy</title>
+<title>Eclipse Project 2018-12 - New and Noteworthy</title>
 </head>
 
 <body>
 <h2>Platform and Equinox</h2>
 
 <ul>
-	<li><a href="#ViewsAndDialogs">Views, Dialogs and Toolbar</a></li>
-	<li><a href="#Editor">Editors</a></li>
-	<li><a href="#Debug">Debug</a></li>
+	<!--<li><a href="#ViewsAndDialogs">Views, Dialogs and Toolbar</a></li>-->
+	<!--<li><a href="#Editor">Editors</a></li>-->
+	<!--<li><a href="#Debug">Debug</a></li>-->
 	<li><a href="#Preferences">Preferences</a></li>
 	<li><a href="#StylingThemes">Themes and Styling </a></li>
 	<li><a href="#GeneralUpdates">General Updates</a></li>
@@ -40,25 +40,31 @@ ul {padding-left: 13px;}
 <tbody>
 
   <!-- ******************* Views, Dialogs and Toolbar ************************************* -->
+  <!--
   <tr>
     <td id="ViewsAndDialogs" class="section" colspan="2">
     <h2>Views, Dialogs and Toolbar </h2>
     </td>
   </tr>
+  -->
 
   <!-- ******************* Editors ************************************* -->
+  <!--
   <tr>
     <td id="Editor" class="section" colspan="2">
     <h2>Editors </h2>
     </td>
   </tr>
+  -->
 
   <!-- ******************* Debug ************************************* -->
+  <!--
   <tr>
     <td id="Debug" class="section" colspan="2">
     <h2>Debug </h2>
     </td>
   </tr>
+  -->
 
   <!-- ****************** Preferences ************************************* -->
   <tr>
@@ -70,7 +76,7 @@ ul {padding-left: 13px;}
   <tr id="advanced-font-search"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=539235 -->
 	<td class="title">Advanced font search</td>
 	<td class="content">
-			The Colors and Font dialog now supports searching for Font, Font Height and Font Style in
+			The <b>Colors and Font</b> preference page now supports searching for font, font height and font style in
 			addition to the already searchable primary description of the font.
 		<p>
 			The new search capability enables you to quickly see where a font is used or where a specific 
@@ -91,16 +97,16 @@ ul {padding-left: 13px;}
     <h2>Themes and Styling </h2>
     </td>
   </tr>
-  <tr id="chevron-drawing">
+  <tr id="chevron-drawing"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=535068 -->
       <td class="title"><a href="#chevron-drawing">Improved drawing of the chevron button of tab folders</a></td>
       <td class="content">
-          If a tab folder contains more tabs than can be displayed the so called chevron button is displayed showing the number of tabs not beeing displayed.<br/>
-          This chevron button no longer has transparency artefacts. This makes it much more readable especially in the dark theme but also on normal resolution displays.
+          When a CTabfolder contains more tabs than that can be displayed, the so called chevron button appears showing the number of tabs that are hidden.<br/>
+          This chevron button doesn't have transparency artifacts anymore, making it more readable especially in the dark theme.
           <p><img src="images/dark_high_res.png" alt="Chevron image in dark theme before and after"></p>
           <p><img src="images/light_high_res.png" alt="Chevron image in light theme before and after"></p>
-          The number shown on the chevron button is limited to 99. Above 99 it shows the string "99+".
+          The number shown on the chevron button is limited to 99. When greater than 99 it shows the string "99+".
           On macOS this text is no longer truncated.
-          <p><img src="images/truncated.png" alt="Truncted number of tabs before and after"></p>
+          <p><img src="images/truncated.png" alt="Truncated number of tabs before and after"></p>
       </td>
   </tr>
 
@@ -113,8 +119,8 @@ ul {padding-left: 13px;}
   <tr id="gtk2-removal"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=530841 -->
       <td class="title"><a href="#gtk2-removal">Dropped support for GTK2</a></td>
       <td class="content">
-          GTK2 is no longer a supported target environment for SWT-GTK in 4.10, and Eclipse/SWT applications will no longer run on GTK2. Furthermore the SWT_GTK3
-	  environment variable is ignored, as only GTK3 is supported now.
+          GTK2 is no longer a supported target environment for SWT on Linux in 4.10, and Eclipse/SWT applications will no longer run on GTK2. Furthermore the SWT_GTK3
+          environment variable is ignored, as only GTK3 is supported now.
       </td>
   </tr>
 

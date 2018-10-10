@@ -17,15 +17,15 @@ table.news tr td.title {vertical-align: top; font-weight: bold;}
 table.news tr td.content {vertical-align: top;}
 ul {padding-left: 13px;}
 </style>
-<title>Eclipse Project Photon - New and Noteworthy</title>
+<title>Eclipse Project 2018-12 - New and Noteworthy</title>
 </head>
 
 <body>
 <h2>Plug-in Development Environment</h2>
 <ul>
-	<li><a href="#dialogs-wizards-views">Dialogs, Wizards and Views</a></li>
+	<!--<li><a href="#dialogs-wizards-views">Dialogs, Wizards and Views</a></li>-->
 	<li><a href="#editors">Editors</a></li>
-	<li><a href="#pde-compiler">PDE Compiler</a></li>
+	<!--<li><a href="#pde-compiler">PDE Compiler</a></li>-->
 </ul>
 
 <table class="news">
@@ -36,9 +36,11 @@ ul {padding-left: 13px;}
 <tbody>
 
   <!-- ******************** Dialogs, Editors and Views ********************** -->
+  <!--
   <tr>
     <td id="dialogs-wizards-views" class="section" colspan="2"><h2>Dialogs, Wizards and Views</h2></td>
   </tr>
+  -->
 
   <!-- ******************** Editors ********************** -->
   <tr>
@@ -46,16 +48,18 @@ ul {padding-left: 13px;}
   </tr>
   
    <tr id="asynchronous-code-completion-manifest"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=539234 -->
-   <td class="title">Asynchronous in MANIFEST.MF editor</td>
+   <td class="title">Asynchronous content-assist in manifest editor</td>
     <td class="content">
-      The code completion in the MANIFEST.MF editor has been changed to be non-blocking.
+      The code completion in the MANIFEST.MF editor has been changed to be asynchronous so that the UI is not blocked anymore.
     </td>
   </tr>
 
   <!-- ******************** PDE Compiler ********************** -->
+  <!--
   <tr>
     <td id="pde-compiler" class="section" colspan="2"><h2>PDE Compiler</h2></td>
   </tr>
+  -->
 
 </tbody>
 </table>
