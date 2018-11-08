@@ -26,7 +26,7 @@ ul {padding-left: 13px;}
 	<li><a href="#Java10">Java&trade; 11 Support</a></li>
 	<li><a href="#JUnit">JUnit</a></li>
 	<!--<li><a href="#JavaEditor">Java Editor</a></li>                      -->
-	<!--<li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li>  -->
+	<li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li>
 	<!--<li><a href="#JavaCompiler">Java Compiler</a></li>                  -->
 	<!--<li><a href="#JavaFormatter">Java Formatter</a></li>                -->
 	<!--<li><a href="#Debug">Debug</a></li>-->
@@ -157,13 +157,27 @@ ul {padding-left: 13px;}
   -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
-  <!--
   <tr>
     <td id="JavaViewsAndDialogs" class="section" colspan="2">
     <h2>Java Views and Dialogs</h2>
     </td>
   </tr>
-  -->
+  <tr id="build-path-problems"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=539998 -->
+                        <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=540119 -->
+    <td class="title">Build path problems</td>
+    <td class="content">
+      If a project which only has main source folders depends on a project which only has test source folders, a build path error is reported now.
+      This can be disabled in <b>Preferences > Java > Compiler > Building</b> or the corresponding project specific settings. 
+      <p>
+          <img src="images/mainonly-withtestonly-dep-539998.png" alt="" />
+      </p>
+      <p>A quick fix <b>Configure problem severity</b> that opens this settings page is now offered for configurable build path problems reported in the problems view.
+      </p>
+      <p>
+          <img src="images/buildpath-quickfix-540119.png" alt="" />
+      </p>
+    </td>
+  </tr>
 
   <!-- ******************* Java Compiler ************************************* -->
   <!--
