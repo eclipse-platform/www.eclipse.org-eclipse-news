@@ -24,7 +24,7 @@ ul {padding-left: 13px;}
 <h2>Platform and Equinox API</h2>
   <ul>
     <li><a href="#Platform">Platform Changes</a></li>
-    <!--<li><a href="#SWT">SWT Changes</a></li>         -->
+    <li><a href="#SWT">SWT Changes</a></li>
     <!--<li><a href="#Equinox">Equinox Changes</a></li> -->
   </ul>
 
@@ -65,11 +65,29 @@ ul {padding-left: 13px;}
   </tr>
 
   <!-- *********************** SWT *********************** -->
-  <!--
+
   <tr>
     <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
   </tr>
-  -->
+
+  <tr id="styledtext-line-vertical-indent"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=539618 -->
+    <td class="title">API added to customize line vertical indent in StyledText</td>
+    <td class="content">
+      A new API <code>StyledText.setLineVerticalIndent(int lineIndex, int verticalLineIndent)</code> has been added to customize the vertical indent of a specified line.
+      The corresponding getter <code>StyledText.getLineVerticalIndent(int index)</code> has also been added.
+      <p>
+    	For an example, see <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet374.java">Snippet374</a>
+    	which sets the vertical indent for the first line:
+      </p>
+      <pre>
+text.setText("word1 word2 word3 word4");
+text.setLineVerticalIndent(0, 20);
+      </pre>
+      <p>
+        <img src="images/styledtext_line_vertical_indent.png" alt="" />
+      </p>
+    </td>
+  </tr>
 
   </tbody>
 </table>
