@@ -226,7 +226,10 @@ Eclipse 4.10 Endgame Plan.
 		<!-- ************ SLES ************** -->
 		<tr class="c0">
 			<td rowspan="2">SUSE Linux Enterprise Server</td>
-			<td rowspan="2">15</td>
+			<td rowspan="2">
+				12 SP3<br/>
+				15
+			</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
 				Oracle Java 8u181<br/>
@@ -258,8 +261,9 @@ Eclipse 4.10 Endgame Plan.
 		<!-- ************ Mac ************** -->
 		<tr class="c0">
 			<td rowspan="1">Apple Mac OS X</td>
-			<td rowspan="2">10.13<br/>
-			10.14
+			<td rowspan="2">
+				10.13<br/>
+				10.14
 			</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
