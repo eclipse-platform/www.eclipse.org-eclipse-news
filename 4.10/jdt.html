@@ -28,7 +28,7 @@ ul {padding-left: 13px;}
 	<!--<li><a href="#JavaEditor">Java Editor</a></li>                      -->
 	<li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li>
 	<!--<li><a href="#JavaCompiler">Java Compiler</a></li>                  -->
-	<!--<li><a href="#JavaFormatter">Java Formatter</a></li>                -->
+	<li><a href="#JavaFormatter">Java Formatter</a></li>
 	<!--<li><a href="#Debug">Debug</a></li>-->
 	<li><a href="#JDTDev">JDT Developers</a></li>
 </ul>
@@ -201,14 +201,32 @@ ul {padding-left: 13px;}
   -->
 
   <!-- ******************* Java Formatter ************************************* -->
-  <!--
   <tr>
     <td id="JavaFormatter" class="section" colspan="2">
     <h2>Java Formatter </h2>
     </td>
   </tr>
-  -->
-
+  <tr id="one-line">
+    <td class="title">Keep braced code on one line</td>
+    <td class="content">
+      Previously, the code formatter profile had a set of settings to control whether to put line breaks between empty braces of various kind.
+      Now they have been replaced with more general settings that can additionally <b>keep fragments of braced code on one line</b> when they contain <b>only one item</b> (for example one statement in a code block) or when they have more items but can still <b>fit in the maximum line width</b>.
+      The options can also be set to <b>preserve existing state</b> so that the user can decide on each case individually.
+      <p>
+      While previously there was only one setting for empty code blocks, now there are separate settings for <b>loops, 'if then' statements and lambdas</b>.
+      </p>
+      <p>
+      A special option to <b>keep 'return' or 'throw' clause on one line in 'if then' statements</b> is still available.
+      Similarly, there's a new specific setting for <b>simple getters and setters</b>.
+      </p>
+      <p>
+      The settings can be found in the profile editor under <b>New Lines > Keep braced code on one line</b>.
+      </p>
+      <p>
+        <img src="images/formatter-oneline.png" alt="" />
+      </p>
+    </td>
+  </tr>
   <!-- *********************** Debug ******************************** -->
   <!--
   <tr>
