@@ -132,6 +132,20 @@ ul {padding-left: 13px;}
           environment variable is ignored, as only GTK3 is supported now.
       </td>
   </tr>
+  <tr id="link-handlers"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=530833 -->
+      <td class="title"><a href="#link-handlers">Added support for custom URL schemes</a></td>
+      <td class="content">
+          Eclipse platform now can handle custom URL schemes. Clicking on a link with such a specific URL scheme starts up Eclipse (if not yet running) and then handles the clicked link.
+          An URL scheme defines the context and thus defines the type of URL, which determines the interpretation of the following URL part. Examples of popular schemes include <code>https</code>, <code>ssh</code> and <code>git</code>.
+          <p>
+          Plugins can add handlers for custom URL schemes via the extension point <code>org.eclipse.urischeme.uriSchemeHandlers</code>.
+          </p>
+          <p>
+          Via the "Link Handlers" preference page a user can control which URL schemes should be handled or not by the current Eclipse installation.
+          </p>
+          <p><img src="images/linkHandlers.png" alt="The 'Link Handlers' preference page"/></p>
+      </td>
+  </tr>
 
 </tbody>
 </table>
