@@ -144,8 +144,7 @@ ob_start();
 	        a series of release candidates leading to the Eclipse project's contribution to the
 	        2018-12 (4.10) release. The Eclipse project version number for this release is 4.10.
 			As always, we welcome help from the 
-	        community with testing the release candidates. By default, 2018-12 (4.10)
-	        is supposed to work exactly like the Photon (4.8) release. All new features and problems fixed in 2018-12 (4.10) are in the Eclipse bugzilla database.
+	        community with testing the release candidates. All new features and problems fixed in 2018-12 (4.10) are in the Eclipse bugzilla database.
 	        </p> 
 
 	        <p>General announcements during the 2018-12 (4.10) endgame are posted to the 
