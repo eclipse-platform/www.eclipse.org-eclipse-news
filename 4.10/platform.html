@@ -46,10 +46,10 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
-  <tr id="ctrl-e-show-path">
-	<td class="title">Ctrl+E shows path</td>
+  <tr id="ctrl-e-show-path"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=539446 -->
+	<td class="title">Quick Switch Editor dialog shows path</td>
 	<td class="content">
-	  The <b>Ctrl+E</b> dialog for Editor selection now shows both the filename and the path of the
+	  The <b>Quick Switch Editor (Ctrl+E)</b> dialog for editor selection now also shows the path along with filename of the
 	  resource currently being edited.
 	  <p>
 	  	<img src="images/ctrl-e-show-path.png" alt="" />
@@ -58,9 +58,9 @@ ul {padding-left: 13px;}
   </tr>
 
   <tr id="workspace-dialog-directory-proposals"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=539235 -->
-    <td class="title">Choose Workspace dialog now offers completion proposals</td>
+    <td class="title">Workspace selection dialog offers completion proposals</td>
     <td class="content">
-      The <b>Choose Workspace</b> dialog now shows completion proposals, making it easier to pick a workspace with the keyboard.
+      The <b>Workspace selection</b> dialog now shows completion proposals, making it easier to pick a workspace with the keyboard.
       <p>
         <img src="images/choose_workspace_dialog_proposals.png" alt="" />
       </p>
@@ -129,17 +129,17 @@ ul {padding-left: 13px;}
       </td>
   </tr>
   <tr id="read-only-combo"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=508634 -->
-      <td class="title"><a href="#read-only-combo">SWT on Windows support theming of read only ComboBox</a></td>
+      <td class="title"><a href="#read-only-combo">Styling of Read-only Combo on Windows</a></td>
       <td class="content">
-          SWT on Windows now support changing background and foreground color for a read only ComboBox.
+          SWT now supports changing the background and foreground color of a <code>SWT.READ_ONLY</code> Combo on Windows.
           <p><img src="images/readonly_combo_windows.png" alt="Read only ComboBox on Windows"/></p>
       </td>
   </tr>
   
    <tr id="dark-theme-combo-win"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=508634 -->
-      <td class="title"><a href="#dark-theme-combo-win">ComboBoxes in the Windows dark theme are styled</a></td>
+      <td class="title"><a href="#dark-theme-combo-win">Combo box styled in Windows Dark theme</a></td>
       <td class="content">
-          Leveraging the new SWT support, the dark theme on Windows now also styles the CombosBoxes.
+          Leveraging the SWT support to style the Read-only Combo, Combo boxes are now styled in the Dark theme on Windows.
           <p>Old style:</p>
           <p><img src="images/old-dark-combo-win.png" alt=""/></p>
           <p>New style:</p>
@@ -153,25 +153,28 @@ ul {padding-left: 13px;}
     <h2>General Updates </h2>
     </td>
   </tr>
+  <tr id="link-handlers"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=530833 -->
+      <td class="title"><a href="#link-handlers">Added support for custom URL schemes</a></td>
+      <td class="content">
+          Eclipse platform can now handle custom URL schemes. When you click on a link with such a specific URL scheme, Eclipse first starts (if it's not running yet) and then handles the clicked link.
+          <p>
+          An URL scheme defines the context and thus defines the type of URL, which determines the interpretation of the following URL part.
+          Examples of a few popular schemes include <code>https</code>, <code>ssh</code> and <code>git</code>.
+          </p>
+          <p>
+          You can control the URL schemes should be handled by the current Eclipse installation via the <b>General > Link Handlers</b> preference page.
+          </p>
+          <p><img src="images/linkHandlers.png" alt="The 'Link Handlers' preference page"/></p>
+          <p>
+          Plugins can add handlers for custom URL schemes via the extension point <code>org.eclipse.urischeme.uriSchemeHandlers</code>.
+          </p>
+      </td>
+  </tr>
   <tr id="gtk2-removal"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=530841 -->
       <td class="title"><a href="#gtk2-removal">Dropped support for GTK2</a></td>
       <td class="content">
           GTK2 is no longer a supported target environment for Eclipse/SWT on Linux in 4.10, and Eclipse/SWT applications will no longer run on GTK2. Furthermore the <code>SWT_GTK3</code>
           environment variable is ignored, as only GTK3 is supported now.
-      </td>
-  </tr>
-  <tr id="link-handlers"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=530833 -->
-      <td class="title"><a href="#link-handlers">Added support for custom URL schemes</a></td>
-      <td class="content">
-          Eclipse platform now can handle custom URL schemes. Clicking on a link with such a specific URL scheme starts up Eclipse (if not yet running) and then handles the clicked link.
-          An URL scheme defines the context and thus defines the type of URL, which determines the interpretation of the following URL part. Examples of popular schemes include <code>https</code>, <code>ssh</code> and <code>git</code>.
-          <p>
-          Plugins can add handlers for custom URL schemes via the extension point <code>org.eclipse.urischeme.uriSchemeHandlers</code>.
-          </p>
-          <p>
-          Via the "Link Handlers" preference page a user can control which URL schemes should be handled or not by the current Eclipse installation.
-          </p>
-          <p><img src="images/linkHandlers.png" alt="The 'Link Handlers' preference page"/></p>
       </td>
   </tr>
 

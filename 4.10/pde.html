@@ -42,16 +42,17 @@ ul {padding-left: 13px;}
     <td id="dialogs-wizards-views" class="section" colspan="2"><h2>Dialogs, Wizards and Views</h2></td>
   </tr>
   
-    <tr id="module-info-file-creation-on-pde-project"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=527052 -->
-   <td class="title">Module-info.java can be created on PDE project</td>
+   <tr id="module-info-file-creation-on-pde-project"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=527052 -->
+   <td class="title">module-info.java can be created on Plug-in projects</td>
     <td class="content">
-      It is possible to create module-info.java file on PDE project. 
-       <p>
+     You can now create a module-info.java file on a plug-in project using the <b>Configure &gt; Create modeule-info.java</b>
+     context menu.
+     <p>
         <img src="images/pde-create-module-info.png" alt="" />
-    </p>
-      However, the module-info file created and the existing manifest file may not be synchronized. There is a warning
-      dialog to inform user of this.
-          <p>
+     </p>
+      However, the module-info file that is created and the manifest file in the project may not be synchronized. 
+      A warning dialog is shown that informs user about this issue.
+     <p>
         <img src="images/pde-module-info-sync-warning.png" alt="" />
     </p>
     </td>
@@ -102,7 +103,7 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   
-  </tr><tr id="disable-api-analysis-builder">  <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=539408 -->
+  <tr id="disable-api-analysis-builder">  <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=539408 -->
   <td class="title">Option added for disabling API analysis </td>
     <td class="content">
        A new option that disables API analysis builder has been 
@@ -117,15 +118,18 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   
-    </tr><tr id="possible-api-baseline-mismatch">  <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=538904 -->
+  <tr id="possible-api-baseline-mismatch">  <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=538904 -->
   <td class="title">Report possible API baseline mismatch </td>
     <td class="content">
       API tools now identifies a situation when none of the workspace projects is in the baseline and reports
-      that as a possible API baseline mismatch. The error/warning is controlled by <i>Missing API baseline</i> option in
+      it as a possible API baseline mismatch.
+      <p>
+       The error/warning is controlled by <b>Missing API baseline</b> option in
        <b>Plug-in Development &gt; API Errors/Warnings</b> preference page.
-           <p>
+      </p>
+      <p>
         <img src="images/pde-possible-baseline-mismatch.png" alt="" />
-    </p>
+      </p>
     </td>
   </tr>
 
