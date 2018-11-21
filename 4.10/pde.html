@@ -45,8 +45,15 @@ ul {padding-left: 13px;}
     <tr id="module-info-file-creation-on-pde-project"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=527052 -->
    <td class="title">Module-info.java can be created on PDE project</td>
     <td class="content">
-      It is possible to create module-info.java file on PDE project. However, the module-info file created and the
-      existing manifest file may not be synchronized.
+      It is possible to create module-info.java file on PDE project. 
+       <p>
+        <img src="images/pde-create-module-info.png" alt="" />
+    </p>
+      However, the module-info file created and the existing manifest file may not be synchronized. There is a warning
+      dialog to inform user of this.
+          <p>
+        <img src="images/pde-module-info-sync-warning.png" alt="" />
+    </p>
     </td>
   </tr>
 
