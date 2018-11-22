@@ -17,7 +17,7 @@ table.news tr td.title {vertical-align: top; font-weight: bold;}
 table.news tr td.content {vertical-align: top;}
 ul {padding-left: 13px;}
 </style>
-<title>Eclipse Project 2018-12 - New and Noteworthy</title>
+<title>Eclipse Project 4.10 - New and Noteworthy</title>
 </head>
 
 <body>
@@ -25,7 +25,6 @@ ul {padding-left: 13px;}
 <ul>
 	<li><a href="#dialogs-wizards-views">Dialogs, Wizards and Views</a></li>
 	<li><a href="#editors">Editors</a></li>
-	<!--<li><a href="#pde-compiler">PDE Compiler</a></li>-->
 	<li><a href="#APITools">API Tools</a></li>
 </ul>
 
@@ -45,13 +44,13 @@ ul {padding-left: 13px;}
    <tr id="module-info-file-creation-on-pde-project"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=527052 -->
    <td class="title">module-info.java can be created on Plug-in projects</td>
     <td class="content">
-     You can now create a module-info.java file on a plug-in project using the <b>Configure &gt; Create modeule-info.java</b>
+     You can now create a module-info.java file on a plug-in project using the <b>Configure &gt; Create module-info.java</b>
      context menu.
      <p>
         <img src="images/pde-create-module-info.png" alt="" />
      </p>
       However, the module-info file that is created and the manifest file in the project may not be synchronized. 
-      A warning dialog is shown that informs user about this issue.
+      A warning dialog is shown to inform users about this issue.
      <p>
         <img src="images/pde-module-info-sync-warning.png" alt="" />
     </p>
@@ -73,21 +72,14 @@ ul {padding-left: 13px;}
   <tr id="target-definition-code-mining"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=534758 -->
    <td class="title">Code mining in Target Definition editor</td>
     <td class="content">
-      Allow to activate and to reload the target definition from the text editor.
+      You can now activate or reload a target platform by clicking-on the corresponding code-mining in the <b>Target definition editor</b>.
      <p>
         <img src="images/target-definition-code-mining.png" alt="" />
      </p>
     </td>
   </tr>
 
-  <!-- ******************** PDE Compiler ********************** -->
-  <!--
-  <tr>
-    <td id="pde-compiler" class="section" colspan="2"><h2>PDE Compiler</h2></td>
-  </tr>
-  -->
-  
-   <!-- ******************** APITools ********************** -->
+  <!-- ******************** APITools ********************** -->
   <tr>
     <td id="APITools" class="section" colspan="2"><h2>API Tools</h2></td>
   </tr>
@@ -95,8 +87,8 @@ ul {padding-left: 13px;}
   <tr id="breaking-interface-implementation-reported"> <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=539244 -->
     <td class="title">Breaking interface implementation to class reported</td>
     <td class="content">
-	If a class implements an interface or extends an abstract class that can cause
-	a breaking change in the client, this is reported by API tools.
+	When a class implements an interface or extends an abstract class that can cause
+	a breaking change in the client, it is reported as a problem by API tools.
 	 <p>
         <img src="images/breaking-change-by-interface-abs-class-add-to-class.png" alt="" />
     </p>
@@ -104,7 +96,7 @@ ul {padding-left: 13px;}
   </tr>
   
   <tr id="disable-api-analysis-builder">  <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=539408 -->
-  <td class="title">Option added for disabling API analysis </td>
+  <td class="title">Option added for disabling API analysis</td>
     <td class="content">
        A new option that disables API analysis builder has been 
        added on the <b>Plug-in Development </b> preference page.
@@ -119,7 +111,7 @@ ul {padding-left: 13px;}
   </tr>
   
   <tr id="possible-api-baseline-mismatch">  <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=538904 -->
-  <td class="title">Report possible API baseline mismatch </td>
+  <td class="title">Report possible API baseline mismatch</td>
     <td class="content">
       API tools now identifies a situation when none of the workspace projects is in the baseline and reports
       it as a possible API baseline mismatch.

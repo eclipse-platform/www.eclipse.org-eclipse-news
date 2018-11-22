@@ -17,19 +17,17 @@ table.news tr td.title {vertical-align: top; font-weight: bold;}
 table.news tr td.content {vertical-align: top;}
 ul {padding-left: 13px;}
 </style>
-<title>Eclipse Project 2018-12 - New and Noteworthy</title>
+<title>Eclipse Project 4.10 - New and Noteworthy</title>
 </head>
 
 <body>
 <h2>Java development tools</h2>
 <ul>
-	<li><a href="#Java10">Java&trade; 11 Support</a></li>
-	<li><a href="#JUnit">JUnit</a></li>
-	<!--<li><a href="#JavaEditor">Java Editor</a></li>                      -->
+	<li><a href="#Java11">Java&trade; 11 Support</a></li>
+	<li><a href="#JavaEditor">Java Editor</a></li>
 	<li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li>
-	<!--<li><a href="#JavaCompiler">Java Compiler</a></li>                  -->
 	<li><a href="#JavaFormatter">Java Formatter</a></li>
-	<!--<li><a href="#Debug">Debug</a></li>-->
+	<li><a href="#JUnit">JUnit</a></li>
 	<li><a href="#JDTDev">JDT Developers</a></li>
 </ul>
 
@@ -61,8 +59,8 @@ ul {padding-left: 13px;}
   <tr id="java-11-jre"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=535986 -->
     <td class="title">Addition of Java 11 JRE</td>
     <td class="content">
-		A Java 11 JRE is recognized by Eclipse for launching. It can be added from the <b>Window > Preferences > Java > Installed JREs > Add...</b> page.
-		It can be added from the <b>Package Explorer</b> as well using the project's context menu.
+		A Java 11 JRE is recognized by Eclipse for launching. It can be added from the <b>Window &gt; Preferences &gt; Java &gt; Installed JREs &gt; Add...</b> page.
+		It can also be added from the <b>Package Explorer</b> using the project's context menu.
 		<p><img src="images/j11.png" alt=""/></p>
 		An option to set compiler compliance to 11 on a Java project is also provided.
     </td>
@@ -80,7 +78,7 @@ ul {padding-left: 13px;}
      <td class="title">Quick assist to add 'var' type to lambda parameters</td>
      <td class="content">
          A new quick assist has been implemented that allows the user to add 'var' type to lambda parameters.
-        This quick assist is only available if the project is a Java 11 project or above.
+        This quick assist is only available if the project compliance is Java 11 or above.
      <p>
        <img src="images/quickassist_add_var_lambda_parameter_types.png" alt="" />
      </p>
@@ -91,7 +89,7 @@ ul {padding-left: 13px;}
       <td class="title">Quick assist to replace lambda parameter types with 'var'</td>
       <td class="content">
           A new quick assist has been implemented that allows the user to replace lambda parameter types with 'var'.
-          This quick assist is only available if the project is a Java 11 project or above.
+          This quick assist is only available if the project compliance is Java 11 or above.
           <p>
               <img src="images/quickassist_replace_lambda_parameter_types_with_var.png" alt="" />
           </p>
@@ -102,13 +100,19 @@ ul {padding-left: 13px;}
       <td class="title">Quick assist to replace 'var' in lambda parameter types with inferred types</td>
       <td class="content">
           A new quick assist has been implemented that allows the user to replace 'var' in lambda parameter types with inferred types.
-          This quick assist is only available if the project is a Java 11 project or above.
+          This quick assist is only available if the project compliance is Java 11 or above.
           <p>
               <img src="images/quickassist_replace_var_in_lambda_parameter_types_with_inferred_types.png" alt="" />
           </p>
       </td>
   </tr>
     
+  <!-- ******************* Java Editor ************************************* -->
+  <tr>
+    <td id="JavaEditor" class="section" colspan="2">
+    <h2>Java Editor </h2>
+    </td>
+  </tr>
   <tr id="remove-lambda-parameter-types"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=535690 -->
       <td class="title">Quick assist to remove lambda parameter types</td>
       <td class="content">
@@ -118,19 +122,19 @@ ul {padding-left: 13px;}
           </p>
       </td>
   </tr>
-
   <tr id="localVariable-var-support"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=535671 -->
-      <td class="title">Option of declaring local variable type as 'var' while extracting local variable</td>
+      <td class="title">Extract local variable to var type</td>
       <td class="content">
-          An additional option of declaring local variable type as 'var' while extracting local variable is provided.
-          This option is only available if the project is a Java 10 project or above.
-          If selected, the local variable type will be 'var' as shown in the picture below.          
+          When extracting to a local variable, an option to declare the local variable type as 'var' has been provided.
+          This option is only available if the project compliance is Java 10 or above.
+          <p>
+          When you select this option, the local variable type will be 'var' as shown below:
+          </p>
           <p>
               <img src="images/extract_local_variable_var_support.png" alt="" />
           </p>
       </td>
   </tr>
-
   <tr id="new-module-declaration"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=514054 -->
       <td class="title">Template to create module declaration</td>
       <td class="content">
@@ -141,39 +145,6 @@ ul {padding-left: 13px;}
       </td>
   </tr>
 
-  <!-- ******************* JUnit ************************************* -->
-  <tr>
-    <td id="JUnit" class="section" colspan="2">
-    <h2>JUnit</h2>
-    </td>
-  </tr>
-
-  <tr id="junit-5.3.1"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=536354 -->
-      <td class="title">JUnit 5.3.1</td>
-      <td class="content">
-          <a href="https://junit.org/junit5/docs/current/release-notes/index.html#release-notes-5.3.1">JUnit 5.3.1</a> is here and Eclipse has been updated to use it.
-      </td>
-  </tr>
-
-  <tr id="quick-assist-junit-test-case"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=525632 -->
-      <td class="title">Quick assist to create JUnit test case</td>
-      <td class="content">
-          You can now open the JUnit Test Case wizard quickly by invoking the new <b>Quick Assist (Ctrl+1)</b> on a type declaration: 
-          <p>
-              <img src="images/quick_assist_junit_test_case.png" alt="" />
-          </p>
-      </td>
-  </tr>
-
-  <!-- ******************* Java Editor ************************************* -->
-  <!--
-  <tr>
-    <td id="JavaEditor" class="section" colspan="2">
-    <h2>Java Editor </h2>
-    </td>
-  </tr>
-  -->
-
   <!-- ******************* Java Views and Dialogs ************************************* -->
   <tr>
     <td id="JavaViewsAndDialogs" class="section" colspan="2">
@@ -182,10 +153,10 @@ ul {padding-left: 13px;}
   </tr>
   <tr id="build-path-problems"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=539998 -->
                         <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=540119 -->
-    <td class="title">Build path problems</td>
+    <td class="title">New Build path problem reported</td>
     <td class="content">
-      If a project which only has main source folders depends on a project which only has test source folders, a build path error is reported now.
-      This can be disabled in <b>Preferences > Java > Compiler > Building</b> or the corresponding project specific settings. 
+      If a project which only has main source folders depends on a project which only has test source folders, a build path error is now reported.
+      This can be disabled in <b>Preferences &gt; Java &gt; Compiler &gt; Building</b> or in the corresponding project specific settings. 
       <p>
           <img src="images/mainonly-withtestonly-dep-539998.png" alt="" />
       </p>
@@ -204,36 +175,27 @@ ul {padding-left: 13px;}
       <p>
           <img src="images/jdt-disable-completion-insertion-triggers.png" alt="" />
       </p>
-      <p>If selected, the pre-defined trigger characters to insert a completion proposal will be ignored while typing. Here, the proposal can be inserted by pressing <strong>Enter</strong>.</p>
+      <p>When this preference is selected, the pre-defined trigger characters to insert a completion proposal will be ignored while typing. Here, the proposal can be inserted by pressing <strong>Enter</strong>.</p>
       <p>Disabling insertion triggers is usually convenient to avoid insertion of undesired proposals when the content assist pop-up is shown too often. For example, when too many characters are used as triggers for auto activation of code assist.</p>
       </td>
   </tr>
   
   <tr id="Create-module-info-on-projects-below-9"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=526643 -->
-    <td class="title">Option 'Create module-info.java' on projects using java 8 and below</td>
+    <td class="title">Create module-info.java on projects using Java 8 and below</td>
     <td class="content">
-      The Option <b>Create module-info.java</b> will be converting the existing Project using java 8 or below, to use the best available JRE greater than or equal to Java 9. This will also bring up the 'Create module-info.java' dialog.
-      The highest available JRE will be selected. The compliance setting for the project will be updated accordingly. 
+      When you select the option <b>Create module-info.java</b> on a project with compliance set to Java 8 or below, the project is now modified to use the best available JRE with version greater than or equal to Java 9. 
+      The highest available JRE is selected and the compliance setting for the project is also updated accordingly. After the project has been updated, it will bring up the <b>Create module-info.java</b> dialog.
       <p>
           <img src="images/create_module_info_support_java_8_below_projects_option.png" alt="" />
       </p>
-      <p>If the above option is selected on projects using JRE less than Java 9, the below dialog will appear if an appropriate JRE greater than or equal to Java 9 is present in the workspace.</p> 
+      <p>If the above option is selected on a project using JRE less than Java 9, the below dialog will appear if an appropriate JRE with version greater than or equal to Java 9 is present in the workspace.</p> 
       <p>
           <img src="images/create_module_info_support_java_8_below_projects_compliance_change.png" alt="" />
       </p>
       <p>Selecting 'No' would leave the project unchanged.</p>
-      <p>Selecting 'Yes' would add the suggested  JRE to build path, remove the old JRE from build path, update the compiler compliance accordingly and open the 'Create module-info.java' dialog.</p>
+      <p>Selecting 'Yes' would add the suggested JRE to build path, remove the old JRE from build path, update the compiler compliance accordingly and open the <b>Create module-info.java</b> dialog.</p>
       </td>
   </tr>
-
-  <!-- ******************* Java Compiler ************************************* -->
-  <!--
-  <tr>
-    <td id="JavaCompiler" class="section" colspan="2">
-    <h2>Java Compiler</h2>
-    </td>
-  </tr>
-  -->
 
   <!-- ******************* Java Formatter ************************************* -->
   <tr>
@@ -255,21 +217,38 @@ ul {padding-left: 13px;}
       Similarly, there's a new specific setting for <b>simple getters and setters</b>.
       </p>
       <p>
-      The settings can be found in the profile editor under <b>New Lines > Keep braced code on one line</b>.
+      The settings can be found under <b>New Lines &gt; Keep braced code on one line</b> in the Profile Editor (<b>Preferences &gt; Java &gt; Code Style &gt; Formatter &gt; Edit...</b>).
       </p>
       <p>
         <img src="images/formatter-oneline.png" alt="" />
       </p>
     </td>
   </tr>
-  <!-- *********************** Debug ******************************** -->
-  <!--
+  
+  <!-- ******************* JUnit ************************************* -->
   <tr>
-    <td id="Debug" class="section" colspan="2">
-    <h2>Debug</h2>
+    <td id="JUnit" class="section" colspan="2">
+    <h2>JUnit</h2>
     </td>
   </tr>
-  -->
+
+  <tr id="junit-5.3.1"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=536354 -->
+      <td class="title">JUnit 5.3.1</td>
+      <td class="content">
+          <a href="https://junit.org/junit5/docs/current/release-notes/index.html#release-notes-5.3.1">JUnit 5.3.1</a> is here and Eclipse has been updated to use it.
+      </td>
+  </tr>
+
+  <tr id="quick-assist-junit-test-case"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=525632 -->
+      <td class="title">Quick assist to create JUnit test case</td>
+      <td class="content">
+          You can now open the <b>New JUnit Test Case</b> wizard quickly by invoking <b>Quick Assist (Ctrl+1)</b> on a type declaration: 
+          <p>
+              <img src="images/quick_assist_junit_test_case.png" alt="" />
+          </p>
+      </td>
+  </tr>
+  
   <!-- *********************** JDT Developers ******************************** -->
   <tr>
     <td id="JDTDev" class="section" colspan="2">

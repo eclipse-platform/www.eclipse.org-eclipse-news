@@ -17,7 +17,7 @@ table.news tr td.title {vertical-align: top; font-weight: bold;}
 table.news tr td.content {vertical-align: top;}
 ul {padding-left: 13px;}
 </style>
-<title>Eclipse Project 2018-12 - New and Noteworthy</title>
+<title>Eclipse Project 4.10 - New and Noteworthy</title>
 </head>
 
 <body>
@@ -65,11 +65,17 @@ ul {padding-left: 13px;}
   </tr>
 
   <!-- *********************** SWT *********************** -->
-
   <tr>
     <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
   </tr>
 
+  <tr id="read-only-combo"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=508634 -->
+      <td class="title"><a href="#read-only-combo">Styling of Read-only Combo on Windows</a></td>
+      <td class="content">
+          Setting the background and foreground color of a <code>SWT.READ_ONLY Combo</code> on Windows is now supported.
+          <p><img src="images/readonly_combo_windows.png" alt="Read only ComboBox on Windows"/></p>
+      </td>
+  </tr>
   <tr id="styledtext-line-vertical-indent"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=539618 -->
     <td class="title">API added to customize line vertical indent in StyledText</td>
     <td class="content">

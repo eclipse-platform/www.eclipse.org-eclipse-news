@@ -17,7 +17,7 @@ table.news tr td.title {vertical-align: top; font-weight: bold;}
 table.news tr td.content {vertical-align: top;}
 ul {padding-left: 13px;}
 </style>
-<title>Eclipse Project 2018-12 - New and Noteworthy</title>
+<title>Eclipse Project 4.10 - New and Noteworthy</title>
 </head>
 
 <body>
@@ -49,8 +49,7 @@ ul {padding-left: 13px;}
   <tr id="ctrl-e-show-path"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=539446 -->
 	<td class="title">Quick Switch Editor dialog shows path</td>
 	<td class="content">
-	  The <b>Quick Switch Editor (Ctrl+E)</b> dialog for editor selection now also shows the path along with filename of the
-	  resource currently being edited.
+	  The <b>Quick Switch Editor (Ctrl+E)</b> dialog for editor selection now shows the path of the resource along with it's filename.
 	  <p>
 	  	<img src="images/ctrl-e-show-path.png" alt="" />
 	  </p>
@@ -66,24 +65,6 @@ ul {padding-left: 13px;}
       </p>
     </td>
   </tr>
-
-  <!-- ******************* Editors ************************************* -->
-  <!--
-  <tr>
-    <td id="Editor" class="section" colspan="2">
-    <h2>Editors </h2>
-    </td>
-  </tr>
-  -->
-
-  <!-- ******************* Debug ************************************* -->
-  <!--
-  <tr>
-    <td id="Debug" class="section" colspan="2">
-    <h2>Debug </h2>
-    </td>
-  </tr>
-  -->
 
   <!-- ****************** Preferences ************************************* -->
   <tr>
@@ -119,7 +100,7 @@ ul {padding-left: 13px;}
   <tr id="chevron-drawing"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=535068 -->
       <td class="title"><a href="#chevron-drawing">Improved drawing of the chevron button of tab folders</a></td>
       <td class="content">
-          When a CTabfolder contains more tabs than that can be displayed, the so called chevron button appears showing the number of tabs that are hidden.<br/>
+          When a CTabfolder contains more tabs than that can be displayed, the chevron button appears showing the number of tabs that are hidden.<br/>
           This chevron button doesn't have transparency artifacts anymore, making it more readable especially in the dark theme.
           <p><img src="images/dark_high_res.png" alt="Chevron image in dark theme before and after"/></p>
           <p><img src="images/light_high_res.png" alt="Chevron image in light theme before and after"/></p>
@@ -128,15 +109,7 @@ ul {padding-left: 13px;}
           <p><img src="images/truncated.png" alt="Truncated number of tabs before and after"/></p>
       </td>
   </tr>
-  <tr id="read-only-combo"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=508634 -->
-      <td class="title"><a href="#read-only-combo">Styling of Read-only Combo on Windows</a></td>
-      <td class="content">
-          SWT now supports changing the background and foreground color of a <code>SWT.READ_ONLY</code> Combo on Windows.
-          <p><img src="images/readonly_combo_windows.png" alt="Read only ComboBox on Windows"/></p>
-      </td>
-  </tr>
-  
-   <tr id="dark-theme-combo-win"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=508634 -->
+  <tr id="dark-theme-combo-win"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=508634 -->
       <td class="title"><a href="#dark-theme-combo-win">Combo box styled in Windows Dark theme</a></td>
       <td class="content">
           Leveraging the SWT support to style the Read-only Combo, Combo boxes are now styled in the Dark theme on Windows.
