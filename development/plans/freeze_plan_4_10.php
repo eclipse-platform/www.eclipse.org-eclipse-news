@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		Dani Megert
-	# Date:			2018-11-19
+	# Date:			2018-11-22
 	#
 	# Description: Eclipse project 4.10 release freeze plan
 	#
@@ -175,7 +175,7 @@ ob_start();
 		   <p>
 		   All fixes submitted must have a project lead or PMC vote on the bug report,
 		   and the fix must be reviewed by an additional committer (any committer other than
-		   the one who made the fix).
+		   the one who made the fix). Ongoing changes to documentation, tests or examples do not require approval.
 		   </p>
 
 		   <strong>RC2</strong>
@@ -185,7 +185,7 @@ ob_start();
 	        there should not be any open defects tagged 4.10. All fixes submitted 
 	        must have a project lead or PMC vote on the bug report,
 	        and the fix must be reviewed by an additional committer (any committer other than
-	        the one who made the fix).
+	        the one who made the fix). Ongoing changes to documentation, tests or examples do not require approval.
 	        </p>      
 	
 	        <strong>Test pass using RC2</strong>
