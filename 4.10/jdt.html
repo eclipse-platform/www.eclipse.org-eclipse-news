@@ -212,20 +212,17 @@ ul {padding-left: 13px;}
   <tr id="Create-module-info-on-projects-below-9"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=526643 -->
     <td class="title">Option 'Create module-info.java' on projects using java 8 and below</td>
     <td class="content">
-      The Option <b>Create module-info.java</b> will be converting the existing Project using java 8 or below to use the best available JRE more than or equal to Java 9. This will also a bring up the 'Create module-info.java' dialog.
-      <p>The compliance setting for the project will be updated accordingly.</p> 
+      The Option <b>Create module-info.java</b> will be converting the existing Project using java 8 or below, to use the best available JRE greater than or equal to Java 9. This will also bring up the 'Create module-info.java' dialog.
+      The highest available JRE will be selected. The compliance setting for the project will be updated accordingly. 
       <p>
           <img src="images/create_module_info_support_java_8_below_projects_option.png" alt="" />
       </p>
-      <p>If the above option is selected on projects using Java 8 or below JRE, the below dialog will appear if an appropriate JRE equal to 9 or above is present in the workspace.</p> 
+      <p>If the above option is selected on projects using JRE less than Java 9, the below dialog will appear if an appropriate JRE greater than or equal to Java 9 is present in the workspace.</p> 
       <p>
           <img src="images/create_module_info_support_java_8_below_projects_compliance_change.png" alt="" />
       </p>
       <p>Selecting 'No' would leave the project unchanged.</p>
-      <p>Selecting 'Yes' would add the suggested  JRE to build path and remove the old JRE from build path and update the compiler compliance accordingly and the below dialog is opened.</p>
-      <p>
-          <img src="images/create_module_info.png" alt="" />
-      </p>
+      <p>Selecting 'Yes' would add the suggested  JRE to build path, remove the old JRE from build path, update the compiler compliance accordingly and open the 'Create module-info.java' dialog.</p>
       </td>
   </tr>
 
