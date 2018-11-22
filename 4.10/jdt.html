@@ -144,6 +144,28 @@ ul {padding-left: 13px;}
           </p>
       </td>
   </tr>
+  <tr id="jdt-codemining"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=529127 -->
+    <td class="title">Show implementations and references count on editor as Code Minings</td>
+    <td class="content">
+      Java Editor can now show the number of implementations or references for a Java element as decorative text in the editor (Code Mining).
+      <p>
+          <img src="images/jdt-codemining-references-implementations.png" alt="" />
+      </p>
+      <p>
+        This can be enabled in <b>Preferences > Java > Editor > Code Minings</b>:
+      </p>
+      <p>
+          <img src="images/jdt-codemining-preferences.png" alt="" />
+      </p>
+      <p>
+      	Clicking <i>references</i> launches the <b>Search</b> of reference:
+      </p>
+      <p>
+        <img src="images/jdt-codemining-references-search.png" alt="" />
+      </p>
+      <p>This is implemented using the <a href="https://www.eclipse.org/eclipse/news/4.8/M5/#codemining-extension-point">Code Mining extension-point</a>.</p>
+    </td>
+  </tr>
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
   <tr>
