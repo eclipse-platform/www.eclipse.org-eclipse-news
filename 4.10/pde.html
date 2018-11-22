@@ -42,14 +42,14 @@ ul {padding-left: 13px;}
   </tr>
   
    <tr id="module-info-file-creation-on-pde-project"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=527052 -->
-   <td class="title">module-info.java can be created on Plug-in projects</td>
+   <td class="title">Plug-in project can be converted to modular project</td>
     <td class="content">
-     You can now create a module-info.java file on a plug-in project using the <b>Configure &gt; Create module-info.java</b>
-     context menu.
+     You can now convert a plug-in project to a modular project by selecting the <b>Configure &gt; Create module-info.java</b>
+     context menu. This creates the module-info.java file for the project.
      <p>
         <img src="images/pde-create-module-info.png" alt="" />
      </p>
-      However, the module-info file that is created and the manifest file in the project may not be synchronized. 
+      However, the module-info.java file that is created and the manifest file in the project may not be synchronized. 
       A warning dialog is shown to inform users about this issue.
      <p>
         <img src="images/pde-module-info-sync-warning.png" alt="" />

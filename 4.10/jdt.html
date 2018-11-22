@@ -181,19 +181,20 @@ ul {padding-left: 13px;}
   </tr>
   
   <tr id="Create-module-info-on-projects-below-9"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=526643 -->
-    <td class="title">Create module-info.java on projects using Java 8 and below</td>
+    <td class="title">Convert project using Java 8 or below to modular project</td>
     <td class="content">
-      When you select the option <b>Create module-info.java</b> on a project with compliance set to Java 8 or below, the project is now modified to use the best available JRE with version greater than or equal to Java 9. 
-      The highest available JRE is selected and the compliance setting for the project is also updated accordingly. After the project has been updated, it will bring up the <b>Create module-info.java</b> dialog.
+      You can now convert a project with compliance set to Java 8 or below to a modular project by selecting the <b>Create module-info.java</b> context menu on the project.
       <p>
           <img src="images/create_module_info_support_java_8_below_projects_option.png" alt="" />
       </p>
-      <p>If the above option is selected on a project using JRE less than Java 9, the below dialog will appear if an appropriate JRE with version greater than or equal to Java 9 is present in the workspace.</p> 
+      <p>When you select the above option on a project using JRE less than Java 9, the below dialog will appear if an appropriate JRE with version greater than or equal to Java 9 is present in the workspace. 
+      The highest available JRE is selected and the compliance setting for the project is also updated accordingly. 
+      </p>
       <p>
           <img src="images/create_module_info_support_java_8_below_projects_compliance_change.png" alt="" />
       </p>
-      <p>Selecting 'No' would leave the project unchanged.</p>
-      <p>Selecting 'Yes' would add the suggested JRE to build path, remove the old JRE from build path, update the compiler compliance accordingly and open the <b>Create module-info.java</b> dialog.</p>
+      <p>Selecting 'Yes' adds the suggested JRE to build path, removes the old JRE from build path, updates the compiler compliance accordingly and opens the <b>Create module-info.java</b> dialog.</p>
+      <p>Selecting 'No' leaves the project unchanged.</p>
       </td>
   </tr>
 
