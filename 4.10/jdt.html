@@ -113,6 +113,28 @@ ul {padding-left: 13px;}
     <h2>Java Editor </h2>
     </td>
   </tr>
+  <tr id="jdt-codemining"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=529127 -->
+    <td class="title">Code Mining support in Java Editor</td>
+    <td class="content">
+      Java Editor can now show the number of implementations and references for a Java element as decorative text (Code Mining) in the editor.
+      <p>
+          <img src="images/jdt-codemining-references-implementations.png" alt="" />
+      </p>
+      <p>
+        This can be enabled in <b>Preferences &gt; Java &gt; Editor &gt; Code Minings</b>:
+      </p>
+      <p>
+          <img src="images/jdt-codemining-preferences.png" alt="" />
+      </p>
+      <p>
+      	Clicking on <b>references</b> launches the search of references:
+      </p>
+      <p>
+        <img src="images/jdt-codemining-references-search.png" alt="" />
+      </p>
+      <p>This is implemented using the <a href="https://www.eclipse.org/eclipse/news/4.8/M5/#codemining-extension-point">Code Mining extension-point</a>.</p>
+    </td>
+  </tr>
   <tr id="remove-lambda-parameter-types"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=535690 -->
       <td class="title">Quick assist to remove lambda parameter types</td>
       <td class="content">
@@ -144,28 +166,6 @@ ul {padding-left: 13px;}
           </p>
       </td>
   </tr>
-  <tr id="jdt-codemining"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=529127 -->
-    <td class="title">Show implementations and references count on editor as Code Minings</td>
-    <td class="content">
-      Java Editor can now show the number of implementations or references for a Java element as decorative text in the editor (Code Mining).
-      <p>
-          <img src="images/jdt-codemining-references-implementations.png" alt="" />
-      </p>
-      <p>
-        This can be enabled in <b>Preferences > Java > Editor > Code Minings</b>:
-      </p>
-      <p>
-          <img src="images/jdt-codemining-preferences.png" alt="" />
-      </p>
-      <p>
-      	Clicking <i>references</i> launches the <b>Search</b> of reference:
-      </p>
-      <p>
-        <img src="images/jdt-codemining-references-search.png" alt="" />
-      </p>
-      <p>This is implemented using the <a href="https://www.eclipse.org/eclipse/news/4.8/M5/#codemining-extension-point">Code Mining extension-point</a>.</p>
-    </td>
-  </tr>
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
   <tr>
@@ -193,11 +193,11 @@ ul {padding-left: 13px;}
   <tr id="ignore-completion-proposal-insertion-triggers"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=348857 -->
     <td class="title">Disable completion insertion triggers</td>
     <td class="content">
-      The <b>Preferences &gt; Java &gt; Editor &gt; Content-Assist</b> page shows a new option <b>Disable insertion triggers except 'Enter'.</b> 
+      A new option <b>Disable insertion triggers except 'Enter'</b> has been added to the <b>Preferences &gt; Java &gt; Editor &gt; Content-Assist</b> page.
+      <p>When this preference is selected, the pre-defined trigger characters to insert a completion proposal will be ignored while typing. Here, the proposal can be inserted by pressing <b>Enter</b>.</p>
       <p>
           <img src="images/jdt-disable-completion-insertion-triggers.png" alt="" />
       </p>
-      <p>When this preference is selected, the pre-defined trigger characters to insert a completion proposal will be ignored while typing. Here, the proposal can be inserted by pressing <strong>Enter</strong>.</p>
       <p>Disabling insertion triggers is usually convenient to avoid insertion of undesired proposals when the content assist pop-up is shown too often. For example, when too many characters are used as triggers for auto activation of code assist.</p>
       </td>
   </tr>
