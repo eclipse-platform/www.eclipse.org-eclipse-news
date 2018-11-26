@@ -69,6 +69,15 @@ ul {padding-left: 13px;}
     <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
   </tr>
 
+  <tr id="experimental-gtk4-support"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=541173 -->
+      <td class="title"><a href="#experimental-gtk4-support">Added experimental support for GTK4</a></td>
+      <td class="content">
+          SWT has introduced basic, experimental support for <b>GTK4</b>. The GTK bindings can be built using the build script 
+          (<a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/bundles/org.eclipse.swt/Eclipse%20SWT%20PI/gtk/library/build.sh">build.sh</a>) with the arguments <code>-gtk4 install</code>.
+          Currently only <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet1.java">Snippet1</a> works,
+          further GTK4 support will be introduced in the Eclipse 4.11 release.
+      </td>
+  </tr>
   <tr id="read-only-combo"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=508634 -->
       <td class="title"><a href="#read-only-combo">Styling of Read-only Combo on Windows</a></td>
       <td class="content">
