@@ -111,7 +111,7 @@ ob_start();
     <h4>Eclipse Platform</h4>
     <table style="width:92%; margin-left:4%; margin-right:4%;">
       <tr>
-      	<td style="width: 23%;">Alexander&nbsp;	`Kurtakov</td>
+      	<td style="width: 23%;">Alexander&nbsp;Kurtakov</td>
       	<td style="width: 23%;">Andrey&nbsp;Loskutov</td>
       	<td style="width: 23%;">Dani&nbsp;Megert</td>
       	<td style="width: 23%;">Ed&nbsp;Merks</td>
