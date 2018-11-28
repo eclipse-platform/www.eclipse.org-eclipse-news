@@ -21,7 +21,7 @@ include($App->getProjectCommon());
 # index.php
 #
 # Author:    Sravan Kumar Lakkimsetti and others on Eclipse Project
-# Date:      2018-11-27
+# Date:      2018-11-28
 #
 # Description: Eclipse project 2018-12 release acknowledgments page
 #
@@ -64,9 +64,10 @@ ob_start();
   
     <h3>Eclipse 2018-12 Acknowledgements</h3>
     
-    <p>The entire Eclipse Project team would like to thank the Eclipse Foundation staff for their tireless efforts, including: Denis Roy, Matt Ward, Fred Gurr and Mikael Barbero for not only keeping all
-      that infrastructure going, but also constantly improving it; Sharon Corbett for guiding us through the Eclipse legal process; Stephanie Swart and Wayne Beaton for giving us process support and improved tools to
-      simplify and manage our development process; Ian Skerrett and Roxanne Joncas for help with marketing the Eclipse release and providing Logos and artwork; and Mike Milinkovich for running the whole show. 
+    <p>The entire Eclipse Project team would like to thank the Eclipse Foundation staff for their tireless efforts, including: Denis Roy, Matt Ward, Fred Gurr and Mikael Barbero for not only 
+    keeping all that infrastructure going, but also constantly improving it; Sharon Corbett for guiding us through the Eclipse legal process; Cydnie Smith and Wayne Beaton for giving us process 
+    support and improved tools to simplify and manage our development process; Thabang Mashologu and Stephanie Swart for help with marketing the release and providing Logos and artwork; 
+    and Mike Milinkovich for running the whole show. 
     <p>
       We would also like to thank the users and adopters who support our efforts, through a range of activities, including early testing, being a <a href="https://eclipse.org/donate/">Friend of
         Eclipse</a>, contracting special work, or outright employment.
