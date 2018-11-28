@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		Dani Megert
-	# Date:			2018-11-22
+	# Date:			2018-11-28
 	#
 	# Description: Eclipse project 4.10 release freeze plan
 	#
@@ -45,7 +45,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>November 19, 2018 - Daily I-builds.</b></p>
+			<p><b>November 28, 2018 - API and feature freeze - Release Candidate 1 build</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -53,7 +53,7 @@ ob_start();
 	          <tr>
 	            <td>November 2018</td>
 	          </tr>
-	          <tr class="current">
+	          <tr>
 	            <td></td>
 	            <td></td>
 	            <td></td>
@@ -64,7 +64,7 @@ ob_start();
 			  <tr>
 	            <td class="spacer">&nbsp;</td>
 	          </tr>
-	          <tr>
+	          <tr class="current">
 	            <td></td>
 	            <td class="date">28</td>
 	            <td class="date">Wed 18:00 EST</td>
@@ -72,7 +72,7 @@ ob_start();
 	            <td>API and feature freeze</td>
 	            <td></td>
 	          </tr>
-	          <tr>
+	          <tr class="current">
 	            <td></td>
 	            <td class="date">28</td>
 	            <td class="date">Wed 18:00 EST</td>
@@ -175,7 +175,9 @@ ob_start();
 		   <p>
 		   All fixes submitted must have a project lead or PMC vote on the bug report,
 		   and the fix must be reviewed by an additional committer (any committer other than
-		   the one who made the fix). Ongoing changes to documentation, tests or examples do not require approval.
+		   the one who made the fix). A positive review from a project lead or PMC member means
+		   implicit approval and no vote is needed on the bug report.
+		   Ongoing changes to documentation, tests or examples do not require approval.
 		   </p>
 
 		   <strong>RC2</strong>
@@ -185,7 +187,9 @@ ob_start();
 	        there should not be any open defects tagged 4.10. All fixes submitted 
 	        must have a project lead or PMC vote on the bug report,
 	        and the fix must be reviewed by an additional committer (any committer other than
-	        the one who made the fix). Ongoing changes to documentation, tests or examples do not require approval.
+	        the one who made the fix). A positive review from a project lead or PMC member means
+		    implicit approval and no vote is needed on the bug report.
+		    Ongoing changes to documentation, tests or examples do not require approval.
 	        </p>      
 	
 	        <strong>Test pass using RC2</strong>
