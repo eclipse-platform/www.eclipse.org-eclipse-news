@@ -22,23 +22,20 @@ ul {padding-left: 13px;}
 
 <body>
 <h2>Platform and Equinox</h2>
-
 <ul>
-	<li><a href="#ViewsAndDialogs">Views, Dialogs and Toolbar</a></li>
-	<!--<li><a href="#Editor">Editors</a></li>-->
-	<!--<li><a href="#Debug">Debug</a></li>-->
-	<li><a href="#Preferences">Preferences</a></li>
-	<li><a href="#StylingThemes">Themes and Styling </a></li>
-	<li><a href="#GeneralUpdates">General Updates</a></li>
+    <li><a href="#ViewsAndDialogs">Views, Dialogs and Toolbar</a></li>
+    <li><a href="#Preferences">Preferences</a></li>
+    <li><a href="#StylingThemes">Themes and Styling</a></li>
+    <li><a href="#GeneralUpdates">General Updates</a></li>
 </ul>
 
+<!-- ****************** START OF N&N TABLE ****************** -->
 <table class="news">
 <colgroup>
   <col class="title" />
   <col />
 </colgroup>
 <tbody>
-
   <!-- ******************* Views, Dialogs and Toolbar ************************************* -->
   <tr>
     <td id="ViewsAndDialogs" class="section" colspan="2">
@@ -65,6 +62,7 @@ ul {padding-left: 13px;}
       </p>
     </td>
   </tr>
+  <!-- ******************* End of Views, Dialogs and Toolbar ************************************* -->
 
   <!-- ****************** Preferences ************************************* -->
   <tr>
@@ -74,22 +72,23 @@ ul {padding-left: 13px;}
   </tr>
   
   <tr id="advanced-font-search"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=539235 -->
-	<td class="title">Advanced font search</td>
-	<td class="content">
-			The <b>Colors and Font</b> preference page now supports searching for font, font height and font style in
-			addition to the already searchable primary description of the font.
-		<p>
-			The new search capability enables you to quickly see where a font is used or where a specific 
-			style or size is used.
-		</p>
-		<p>
-			Examples of search texts are: "segoe", "consolas 10", "consolas 9 bold", "italic bold", "semibold".
-		</p>
-		<p>
-		 	<img src="images/advanced-font-search.png.png" alt="example image of advanced font search"/>
-	    </p>
-	</td>
+  <td class="title">Advanced font search</td>
+  <td class="content">
+      The <b>Colors and Font</b> preference page now supports searching for font, font height and font style in
+      addition to the already searchable primary description of the font.
+      <p>
+        The new search capability enables you to quickly see where a font is used or where a specific 
+        style or size is used.
+      </p>
+      <p>
+        Examples of search texts are: "segoe", "consolas 10", "consolas 9 bold", "italic bold", "semibold".
+      </p>
+      <p>
+        <img src="images/advanced-font-search.png.png" alt="example image of advanced font search"/>
+      </p>
+      </td>
   </tr>
+  <!-- ****************** End of Preferences ************************************* -->
 
   <!-- ******************* Themes and Styling ************************************* -->
   <tr>
@@ -119,6 +118,7 @@ ul {padding-left: 13px;}
           <p><img src="images/newdark-combo-win.png" alt=""/></p>
       </td>
   </tr>
+  <!-- ******************* End of Themes and Styling ************************************* -->
 
   <!-- ******************* General Updates ************************************* -->
   <tr>
@@ -131,15 +131,15 @@ ul {padding-left: 13px;}
       <td class="content">
           Eclipse platform can now handle custom URL schemes. When you click on a link with such a specific URL scheme, Eclipse first starts (if it's not running yet) and then handles the clicked link.
           <p>
-          An URL scheme defines the context and thus defines the type of URL, which determines the interpretation of the following URL part.
-          Examples of a few popular schemes include <code>https</code>, <code>ssh</code> and <code>git</code>.
+            An URL scheme defines the context and thus defines the type of URL, which determines the interpretation of the following URL part.
+            Examples of a few popular schemes include <code>https</code>, <code>ssh</code> and <code>git</code>.
           </p>
           <p>
-          You can control the URL schemes that should be handled by the current Eclipse installation via the <b>General &gt; Link Handlers</b> preference page.
+            You can control the URL schemes that should be handled by the current Eclipse installation via the <b>General &gt; Link Handlers</b> preference page.
           </p>
           <p><img src="images/linkHandlers.png" alt="The 'Link Handlers' preference page"/></p>
           <p>
-          Plugins can add handlers for custom URL schemes via the extension point <code>org.eclipse.urischeme.uriSchemeHandlers</code>.
+            Plugins can add handlers for custom URL schemes via the extension point <code>org.eclipse.urischeme.uriSchemeHandlers</code>.
           </p>
       </td>
   </tr>
@@ -150,14 +150,14 @@ ul {padding-left: 13px;}
           environment variable is ignored, as only GTK3 is supported now.
       </td>
   </tr>
-
+  <!-- ******************* End of General Updates ************************************* -->
 </tbody>
 </table>
-<script type="text/javascript" src="scripts.js"></script>
+<!-- ****************** END OF N&N TABLE ****************** -->
 
+<script type="text/javascript" src="scripts.js"></script>
   <p style="text-align:center">
     <span style="color:#808080">Previous</span> <a style="margin:1em" href=".">Up</a> <a href="jdt.php">Next</a>
   </p>
-
 </body>
 </html>
