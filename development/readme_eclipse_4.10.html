@@ -153,6 +153,9 @@ after the release.
                 <li><a href="#mozTocId73293">Importing in Eclipse application fails if plug-in exists in host workspace</a></li>
                 <li><a href="#mozTocId914239">Reusing a workspace after changing architectures silently breaks PDE models</a></li>
                 <li><a href="#mozTocId624312">Missing @since tag API Tools problems on interface fields containing @noreference tag</a></li>
+                <li><a href="#mozTocId624319">"Premature end of file" error in creating a new target file</a></li>
+               </ol></li>
+                
               </ol></li>
           </ol></li>
         <li><a href="#mozTocId19817">Running Eclipse</a>
@@ -1418,6 +1421,17 @@ after the release.
       that cannot support the @noreference restriction. The tag was allowed in previous releases and this usage will now be considered an API change requiring a @since tag. It is recommended that you
       create an API Tools filter for the missing @since tag problem. This filter can be removed as soon as the API baseline has been regenerated. (bug </a><a
       href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=402393">402393</a>)
+  </p>
+    <h4>
+    <a
+      class="mozTocH4"
+      name="mozTocId624319">"Premature end of file" error in creating a new target file</a>
+  </h4>
+  <p>
+    <a
+      class="mozTocH4"
+       name="mozTocId624319">On Mac and linux machines, there is a "Premature end of file" error in creating a new target file. Restarting eclipse may fix this issue.(bug </a><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=541678">541678</a>)
+
   </p>
   <h2 id="RunningEclipse">
     <a
