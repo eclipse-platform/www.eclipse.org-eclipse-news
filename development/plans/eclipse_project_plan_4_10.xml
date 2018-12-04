@@ -279,6 +279,12 @@ Eclipse 4.10 Endgame Plan.
 <p>As stated above, <i>we expect that Eclipse works fine on other current
   Java VM and OS versions but we cannot flag these as reference platforms without
   significant community support for testing them.</i></p>
+<p>With respect to GTK+ 3 versions: the <i>guaranteed</i> version of GTK+ 3 which Eclipse SDK 4.10
+will run on is 3.20 or newer. Eclipse SDK 4.10 will run on older GTK+ 3 versions no older than
+3.8.0, however we cannot flag these as reference versions without significant community support for testing and/or development of fixes. Bugs only reproducible on GTK+ 3 versions older than 3.20 will
+be given a lower priority (or may not be fixed at all), compared to bugs which are reproducible
+on the target environments listed above.
+</p>
 </div>
 
 <p:internationalization>
