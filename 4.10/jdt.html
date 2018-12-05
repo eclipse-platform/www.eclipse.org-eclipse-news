@@ -161,13 +161,22 @@ ul {padding-left: 13px;}
   <tr id="localVariable-var-support"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=535671 -->
       <td class="title">Extract local variable to var type</td>
       <td class="content">
-          When extracting to a local variable, an option to declare the local variable type as 'var' has been provided.
+          When extracting to a local variable using drop down menu as shown below, an option to declare the local variable type as 'var' has been provided.
           This option is only available if the project compliance is Java 10 or above.
           <p>
-          When you select this option, the local variable type will be 'var' as shown below:
+              <img src="images/extract_local_variable_drop_down.png" alt="" />
           </p>
           <p>
-              <img src="images/extract_local_variable_var_support.png" alt="" />
+          When you select this option highlighted in red colored rectangle below, the local variable type will be 'var'.
+          </p>
+          <p>
+              <img src="images/declare_local_variable type_as_var_option_in_extract_local_variable.png" alt="" />
+          </p>
+          <p>
+          Result selecting "Declare the local variable type as <b>'var'</b>"  is given below.    
+          </p>          
+          <p>
+              <img src="images/declare_local_variable type_as_var_result.png" alt="" />
           </p>
       </td>
   </tr>
