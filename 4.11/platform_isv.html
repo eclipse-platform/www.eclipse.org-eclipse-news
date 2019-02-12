@@ -82,6 +82,23 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   
+  <tr id="dynamic-marker-help"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=543466 -->
+    <td class="title">Contribute dynamic marker help</td>
+    <td class="content">
+      The <code>org.eclipse.ui.ide.markerHelp</code> extension point now allows to specify a help context provider instead of a static help context.
+      <p>This example shows how to specify such a help context provider</p>
+      <pre>
+&lt;extension
+      point=&quot;org.eclipse.ui.ide.markerHelp&quot;&gt;
+   &lt;markerHelp
+         helpContextProvider=&quot;org.eclipse.ui.ExampleContextProvider&quot;
+         markerType=&quot;ExamplePlugin.custom_marker&quot;&gt;
+   &lt;/markerHelp&gt;
+&lt;/extension&gt;
+      </pre>
+      The class needs to implement <code>org.eclipse.ui.IMarkerHelpContextProvider</code>.
+    </td>
+  </tr>
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
