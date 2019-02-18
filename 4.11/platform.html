@@ -198,6 +198,17 @@ ul {padding-left: 13px;}
       Startup and interactive performance of multiple operations have been again improved in this release.
     </td>
   </tr>
+  
+  <tr id="widget-factories"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=539014 -->
+   <td class="title">Widget factories</td>
+    <td class="content">
+      Factories for some SWT widgets have been created. They follow the same approach as GridLayoutFactory and GridDataFactory. Means a fluent, re-usable API.
+      The entry point is WidgetFactory.
+      <p>To create a button for instance:<br />
+      <code>WidgetFactory.button(SWT.PUSH).text("Click me!").onSelect(event -> buttonClicked(event).create(parent);</code></p>
+      This is work in progress and more factories will follow.
+    </td>
+  </tr>
 </tbody>
 </table>
 <!-- ****************** END OF N&N TABLE ****************** -->
