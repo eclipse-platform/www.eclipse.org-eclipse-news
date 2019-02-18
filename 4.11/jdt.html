@@ -24,10 +24,10 @@ ul {padding-left: 13px;}
 <h2>Java development tools</h2>
 <ul>
 	<!-- <li><a href="#Java12">Java&trade; 12 Support</a></li> -->
+	<li><a href="#JUnit">JUnit</a></li>
 	<li><a href="#JavaEditor">Java Editor</a></li>
 	<!-- <li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li> -->
 	<li><a href="#JavaFormatter">Java Formatter</a></li>
-	<!-- <li><a href="#JUnit">JUnit</a></li> -->
 	<!-- <li><a href="#JDTDev">JDT Developers</a></li> -->
 </ul>
 
@@ -47,6 +47,27 @@ ul {padding-left: 13px;}
   </tr>
   -->
   <!-- ******************* End of Java 12 Support ************************************* -->
+
+  <!-- ******************* JUnit ************************************* -->
+  <tr>
+    <td id="JUnit" class="section" colspan="2">
+    <h2>JUnit</h2>
+    </td>
+  </tr>
+  <tr id="junit-5.4"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=543821 -->
+      <td class="title">JUnit 5.4</td>
+      <td class="content">
+          <a href="https://junit.org/junit5/docs/5.4.0/release-notes/">JUnit 5.4</a> is here and Eclipse JDT has been updated to use this version.
+      </td>
+  </tr>
+  <tr id="junit-test-factory"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=544484 -->
+      <td class="title">Test factory template</td>
+      <td class="content">
+          JUnit Jupiter now allows test factory methods to return a single <code>DynamicNode</code>. The <code>test_factory</code> template has been updated to include <code>DynamicNode</code> in the return type.
+          <img src="images/junit-test-template.png" alt="" />
+      </td>
+  </tr>
+  <!-- ******************* End of JUnit ************************************* -->
 
   <!-- ******************* Java Editor ************************************* -->
   <tr>
@@ -136,16 +157,6 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   <!-- ******************* End of Java Formatter ************************************* -->
-
-  <!-- ******************* JUnit ************************************* -->
-  <!--
-  <tr>
-    <td id="JUnit" class="section" colspan="2">
-    <h2>JUnit</h2>
-    </td>
-  </tr>
-  -->
-  <!-- ******************* End of JUnit ************************************* -->
   
   <!-- *********************** JDT Developers ******************************** -->
   <!--
