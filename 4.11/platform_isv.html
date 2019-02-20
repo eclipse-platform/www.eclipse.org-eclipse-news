@@ -50,6 +50,19 @@ ul {padding-left: 13px;}
       <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=50517">Details can be found on bug 50517.</a> 
     </td>
   </tr>
+  
+  
+  <tr id="non-persisted-ui"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=378815 -->
+    <td class="title">Transient UI Elements</td>
+     <td class="content">
+      UI model elements can be marked as transient, which means they do not get persisted when the
+      application is closed. This allows to create views and other UI elements dynamically from code
+      without the need to clean them up properly before the workbench is closed. It also allows to contribute static model fragments which are not persisted and therefore removed once 
+      the plug-in gets uninstalled.
+      <p>To mark an element as transient simply call
+      <code>uiElement.getPersistedState().put(IWorkbench.PERSIST_STATE, "false");</code></p>.
+     </td>
+   </tr>  
 
   <!-- ******************** End of Platform ********************** -->
 
