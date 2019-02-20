@@ -174,6 +174,14 @@ ul {padding-left: 13px;}
       </p> 
     </td>
   </tr>  
+   <tr id="css-value-unset"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=544352 -->
+   <td class="title">CSS value 'unset'</td>
+    <td class="content">
+      The value <code>unset</code> is now supported as CSS value and is mapped to the Java value <code>null</code>. 
+      When e.g. used for the <code>background-color</code> property, the
+      widget will revert to the specific native look, if it has one, or inherit the background from the parent widget. 
+    </td>
+  </tr>  
   
   <!-- ******************* End of Themes and Styling ************************************* -->
 
