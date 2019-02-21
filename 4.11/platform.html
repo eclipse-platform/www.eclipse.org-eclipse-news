@@ -166,14 +166,6 @@ ul {padding-left: 13px;}
       </p> 
     </td>
   </tr>  
-   <tr id="css-value-unset"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=544352 -->
-   <td class="title">CSS value 'unset'</td>
-    <td class="content">
-      The value <code>unset</code> is now supported as CSS value and is mapped to the Java value <code>null</code>. 
-      When e.g. used for the <code>background-color</code> property, the
-      widget will revert to the specific native look, if it has one, or inherit the background from the parent widget. 
-    </td>
-  </tr>  
   
   <!-- ******************* End of Themes and Styling ************************************* -->
 
@@ -190,17 +182,7 @@ ul {padding-left: 13px;}
       The startup and interactive performance of multiple operations has been improved again in this release.
     </td>
   </tr>
-  
-  <tr id="widget-factories"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=539014 -->
-   <td class="title">Widget factories</td>
-    <td class="content">
-      Factories for some SWT widgets have been created. They follow the same approach as GridLayoutFactory and GridDataFactory. Means a fluent, re-usable API.
-      The entry point is WidgetFactory.
-      <p>To create a button for instance:<br />
-      <code>WidgetFactory.button(SWT.PUSH).text("Click me!").onSelect(event -> buttonClicked(event).create(parent);</code></p>
-      This is work in progress and more factories will follow.
-    </td>
-  </tr>
+
 </tbody>
 </table>
 <!-- ****************** END OF N&N TABLE ****************** -->

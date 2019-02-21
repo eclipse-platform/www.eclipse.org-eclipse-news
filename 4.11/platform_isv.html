@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2018. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page."/>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2018, 2019. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page."/>
 <meta http-equiv="Content-Language" content="en-us"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <link rel="STYLESHEET" href="news.css" type="text/css"/>
@@ -43,11 +43,9 @@ ul {padding-left: 13px;}
    <td class="title">Error Log view moved to Platform</td>
     <td class="content">
       The Error Log view has been moved from the PDE project to the Platform project. 
-      ISV's should examine their build infrastructure for inclusion of the <strong>org.eclipse.ui.views.log</strong> 
+      ISVs should examine their build infrastructure for inclusion of the <strong>org.eclipse.ui.views.log</strong> 
       plug-in. The inclusion in your own features and/or products may be redundant because this 
-      view now ships with the base platform. 
-      <br/> 
-      <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=50517">Details can be found on bug 50517.</a> 
+      view now ships with the base platform. See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=50517">bug 50517</a> for details. 
     </td>
   </tr>
   
@@ -60,10 +58,19 @@ ul {padding-left: 13px;}
       without the need to clean them up properly before the workbench is closed. It also allows to contribute static model fragments which are not persisted and therefore removed once 
       the plug-in gets uninstalled.
       <p>To mark an element as transient simply call
-      <code>uiElement.getPersistedState().put(IWorkbench.PERSIST_STATE, "false");</code></p>.
+      <code>uiElement.getPersistedState().put(IWorkbench.PERSIST_STATE, "false");</code></p>
      </td>
    </tr>  
-
+  
+  <tr id="css-value-unset"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=544352 -->
+   <td class="title">CSS value 'unset'</td>
+    <td class="content">
+      The value <code>unset</code> is now supported as CSS value and is mapped to the Java value <code>null</code>. 
+      For example, when used for the <code>background-color</code> property, the
+      widget will revert to the specific native look, if it has one, or inherit the background from the parent widget. 
+    </td>
+  </tr> 
+  
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
@@ -83,6 +90,17 @@ ul {padding-left: 13px;}
       <p><img src="images/StyledText-mouse-navigation.png" alt=""/></p>
      </td>
    </tr>
+   
+  <tr id="widget-factories"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=539014 -->
+   <td class="title">Widget factories</td>
+    <td class="content">
+      New widget factories have been created for some SWT widgets. They follow the same approach as <code>GridLayoutFactory</code> and <code>GridDataFactory</code> i.e. a fluent, re-usable API.
+      <p>The entry point is <code>WidgetFactory</code>.</p>
+      <p>For example, to create a button:</p>
+      <code>WidgetFactory.button(SWT.PUSH).text("Click me!").onSelect(event -> buttonClicked(event).create(parent);</code>
+      <p>This is a work in progress and more factories will follow soon.</p>
+    </td>
+  </tr>
   
   <!-- *********************** End of SWT *********************** -->
 </tbody>
