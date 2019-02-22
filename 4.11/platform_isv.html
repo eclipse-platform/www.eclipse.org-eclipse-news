@@ -69,7 +69,18 @@ ul {padding-left: 13px;}
       For example, when used for the <code>background-color</code> property, the
       widget will revert to the specific native look, if it has one, or inherit the background from the parent widget. 
     </td>
-  </tr> 
+  </tr>
+  
+  <tr id="widget-factories"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=539014 -->
+   <td class="title">Widget factories</td>
+    <td class="content">
+      New widget factories have been created for some SWT widgets. They follow the same approach as <code>GridLayoutFactory</code> and <code>GridDataFactory</code> i.e. a fluent, re-usable API.
+      <p>The entry point is <code>WidgetFactory</code>.</p>
+      <p>For example, to create a button:</p>
+      <code>WidgetFactory.button(SWT.PUSH).text("Click me!").onSelect(event -> buttonClicked(event).create(parent);</code>
+      <p>This is a work in progress and more factories will follow soon.</p>
+    </td>
+  </tr>
   
   <!-- ******************** End of Platform ********************** -->
 
@@ -91,17 +102,6 @@ ul {padding-left: 13px;}
      </td>
    </tr>
    
-  <tr id="widget-factories"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=539014 -->
-   <td class="title">Widget factories</td>
-    <td class="content">
-      New widget factories have been created for some SWT widgets. They follow the same approach as <code>GridLayoutFactory</code> and <code>GridDataFactory</code> i.e. a fluent, re-usable API.
-      <p>The entry point is <code>WidgetFactory</code>.</p>
-      <p>For example, to create a button:</p>
-      <code>WidgetFactory.button(SWT.PUSH).text("Click me!").onSelect(event -> buttonClicked(event).create(parent);</code>
-      <p>This is a work in progress and more factories will follow soon.</p>
-    </td>
-  </tr>
-  
   <!-- *********************** End of SWT *********************** -->
 </tbody>
 </table>
