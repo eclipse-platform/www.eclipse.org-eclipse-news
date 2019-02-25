@@ -155,6 +155,19 @@ ul {padding-left: 13px;}
       </p>
     </td>
   </tr>
+  <tr id="wrap-chained-conditionals"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=544514 -->
+    <td class="title">Wrapping setting for chained conditional expressions</td>
+    <td class="content">
+      A chain of <b>nested conditional expressions</b> (using ternary operator) can be now wrapped as a single group, with all of them indented at the same level.
+      It's only possible for right-sided nesting.
+      <p>
+      Find the <b>Chained conditionals</b> setting in the Profile Editor under the <b>Line Wrapping &gt; Wrapping settings &gt; Other expressions</b> subsection.
+      </p>
+      <p>
+        <img src="images/formatter-wrap-chained-conditionals.png" alt="" />
+      </p>
+    </td>
+  </tr>
   <tr id="javadoc-tags-indent"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=542964 -->
     <td class="title">Indent Javadoc tag descriptions</td>
     <td class="content">
