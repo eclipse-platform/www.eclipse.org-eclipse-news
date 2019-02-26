@@ -42,7 +42,7 @@ ul {padding-left: 13px;}
   <tr id="move-error-log"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=50517 -->
    <td class="title">Error Log view moved to Platform</td>
     <td class="content">
-      The Error Log view has been moved from the PDE project to the Platform project. 
+      The <b>Error Log</b> view has been moved from the PDE project to the Platform project. 
       ISVs should examine their build infrastructure for inclusion of the <strong>org.eclipse.ui.views.log</strong> 
       plug-in. The inclusion in your own features and/or products may be redundant because this 
       view now ships with the base platform. See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=50517">bug 50517</a> for details. 
@@ -65,9 +65,9 @@ ul {padding-left: 13px;}
   <tr id="css-value-unset"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=544352 -->
    <td class="title">CSS value 'unset'</td>
     <td class="content">
-      The value <code>unset</code> is now supported as CSS value and is mapped to the Java value <code>null</code>. 
-      For example, when used for the <code>background-color</code> property, the
-      widget will revert to the specific native look, if it has one, or inherit the background from the parent widget. 
+      The value <code>unset</code> is now supported as CSS value and is mapped to the Java value <code>null</code>.
+      <p>For example, when used for the <code>background-color</code> property, the
+      widget will revert to the specific native look, if it has one, or inherit the background from the parent widget.</p>
     </td>
   </tr>
   
@@ -92,8 +92,8 @@ ul {padding-left: 13px;}
   <tr id="mouse-navigation-styledtext"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=542777 -->
     <td class="title">Mouse navigation support for StyledText</td>
      <td class="content">
-      The StyledText widget now supports mouse navigation scrolling similar to most web browsers.
-      When enabled, a StyledText widget can be scrolled by clicking the mouse's scroll wheel,
+      The <code>StyledText</code> widget now supports mouse navigation scrolling similar to most web browsers.
+      When enabled, a <code>StyledText</code> widget can be scrolled by clicking the mouse's scroll wheel,
       and then moving the mouse. Clicking the scroll wheel again cancels the scrolling, and returns
       the widget to its default state.
       <p>To enable mouse navigation, simply call:
