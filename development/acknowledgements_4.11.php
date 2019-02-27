@@ -82,7 +82,7 @@ ob_start();
       everyone who has helped us to improve the quality by testing and reporting bugs and enhancement requests. And a special thanks to other Eclipse projects we prereq: EMF and ECF who 
      also provide timely updates so that we can be ontime. Special thanks to the following list of
       people, in alphabetical order, who contributed code to the project:
-     Alexandr Miloslavskiy, Andrzej Witecki, Bing-Yi Wong, Björn Michael, Christian Pontesegger, Denis Ungemach, Elliott Baron, Fabian Pfaff, Jayaprakash Arthanareeswaran, Jens Reimann, Jonas Hungershausen, Julian Honnen, Kit Lo, Laurent Caron, Manoj Palat, Marcus Hoepfner, Matthew Khouzam, Mike Marchand, Mykola Nikishov, Mykola Zakharchuk, Nikita Nemkin, Phillip Webb, Ralph Gerbig, Reto Weiss, Roland Grunberg, Rolf Theunissen, Sebastian Ratz, Stephan Herrmann, Thomas Wolf, Tim Neumann, Umair Sair, Vikas Chandra and Vladimir Piskarev.
+     Alexander Kurtakov, Alexandr Miloslavskiy, Andrey Loskutov, Andrzej Witecki, Bing-Yi Wong, Björn Michael, Brian de Alwis, Christian Pontesegger, Dani Megert, Denis Ungemach, Ed Merks, Elliott Baron, Eric Williams, Fabian Pfaff, Jayaprakash Arthanareeswaran, Jens Reimann, Jonas Hungershausen, Julian Honnen, Kalyan Prasad Tatavarthi, Karsten Thoms, Kit Lo, Lakshmi Priya Shanmugam, Lars Vogel, Laurent Caron, Manoj Palat, Marcus Hoepfner, Mat Booth, Matthew Khouzam, Matthias Becker, Michael Keppler, Mickael Istria, Mike Marchand, Mykola Nikishov, Mykola Zakharchuk, Nikita Nemkin, Niraj Modi, Noopur Gupta, Phillip Webb, Ralph Gerbig, Reto Weiss, Roland Grunberg, Rolf Theunissen, Sarika Sinha, Sebastian Ratz, Simeon Andreev, Simon Scholz, Sravan Kumar Lakkimsetti, Stephan Herrmann, Thomas Watson, Thomas Wolf, Till Brychcy, Tim Neumann, Tom Schindl, Umair Sair, Vikas Chandra, Vladimir Piskarev, Wim Jongman and Xi Yan.
     </p>
 
     Also, the webmasters (Frederic Gurr, Denis Roy, Matt Ward and Mikael Barbero) at the Eclipse Foundation for their constant help and education and improvements. And      
@@ -91,17 +91,17 @@ ob_start();
     </p>
 
     <p>The JDT team would like to thank everyone who filed good enhancement requests, helped us improve quality by testing and filing good bug reports, and provided answers on JDT forums/newsgroups. Special thanks to the following list of
-      people, in alphabetical order, who contributed code to the project: Andrey Loskutov, Christoph Langer, Fabian Pfaff, Igor Fedorenko, Jeff Johnston, Kenneth, Mark Hoffmann, Matthias Becker, Mickael Istria, Motonori Iwanuro, Niraj Modi, Paul Pazderski, Pierre-Yves B.  Shawn Kleese, Simeon Andreev and Sravan Kumar Lakkimsetti for features and bug fixes.
+      people, in alphabetical order, who contributed code to the project: Alexander Kurtakov, Andrey Loskutov, Christoph Langer, Dani Megert, Fabian Pfaff, Igor Fedorenko, Jayaprakash Arthanareeswaran, Jeff Johnston, Kalyan Prasad Tatavarthi, Kenneth, Manoj Palat, Mark Hoffmann, Mateusz Matela, Matthias Becker, Mickael Istria, Motonori Iwamuro, Niraj Modi, Noopur Gupta, Paul Pazderski, Pierre-Yves B., Roland Grunberg, Sarika Sinha, Shawn Kleese, Simeon Andreev, Sravan Kumar Lakkimsetti, Stephan Herrmann, Till Brychcy and Vikas Chandra for features and bug fixes.
       We would also like to acknowledge Niraj Modi for all the build and releng support.
     </p>
     
     <p>The Plug-in Development Environment team would like to thank the numerous contributors who continue to improve the component every release.
         Special thanks to those who contributed code:
-       Alexander Fedorov, Kit Lo, Matthias Becker, Mykola Zakharchuk, Niraj Modi, Simeon Andreev, Sravan Kumar Lakkimsetti and Wim Jongman.
+       Alexander Fedorov, Alexander Kurtakov, Andrey Loskutov, Dani Megert, Julian Honnen, Karsten Thoms, Kit Lo, Lars Vogel, Matthias Becker, Mykola Zakharchuk, Niraj Modi, Simeon Andreev, Sravan Kumar Lakkimsetti, Vikas Chandra and Wim Jongman.
       </p>
 
     <p>The Equinox team would like to thank all the contributors that helped improve the project by filing bug reports and enhancement requests.  We also would like to thank the community of developers that have contributed to the Equinox code base this release:
-       Anjum Fatima, Jürgen Bogdahn, Julian Honnen, Karsten Thoms, Michael Keppler, Niraj Modi and Sebastian Ratz.
+       Alexander Kurtakov, Andrey Loskutov, Anjum Fatima, Jürgen Bogdahn, Julian Honnen, Karsten Thoms, Lars Vogel, Michael Keppler, Mykola Nikishov, Niraj Modi, Raymond Auge, Sebastian Ratz, Sravan Kumar Lakkimsetti and Thomas Watson.
       </p>
 
     <h3>Active Committers</h3>
