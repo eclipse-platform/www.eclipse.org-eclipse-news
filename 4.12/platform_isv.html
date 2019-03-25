@@ -38,6 +38,23 @@ ul {padding-left: 13px;}
   <tr>
     <td id="Platform" class="section" colspan="2"><h2>Platform Changes</h2></td>
   </tr>
+
+  <tr id="compare-merge-generic-editor"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=545531 -->
+   <td class="title">Compare/merge files using Generic Editor extensions</td>
+    <td class="content">
+      To leverage the extensions for Generic Editor (syntax highlighting, hover...) when
+      comparing files, you can now simply associate the <code>org.eclipse.ui.genericeditor.compareViewer</code>
+      to the desired file content-types. This will automatically add to the compare view most extensions
+      contributed to the Generic Editor.
+      <pre>
+&lt;extension point="org.eclipse.compare.contentMergeViewers">
+   &lt;contentTypeBinding
+         contentMergeViewerId="org.eclipse.ui.genericeditor.compareViewer"
+         contentTypeId="org.eclipse.wildwebdeveloper.parent"/>
+&lt;/extension>
+      </pre>
+    </td>
+  </tr>
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
