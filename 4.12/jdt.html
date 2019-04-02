@@ -35,7 +35,7 @@ ul {padding-left: 13px;}
 </ul>
 
 <!-- ****************** START OF N&N TABLE****************** -->
-<table class="news">
+<table class="news" >
 <colgroup>
   <col class="title" />
   <col />
@@ -43,7 +43,7 @@ ul {padding-left: 13px;}
 <tbody>
 
   <!-- ******************* Java 12 Support ************************************* -->
-  <tr>
+  <tr >
     <td id="Java12" class="section" colspan="2">
     <h2>Java&trade; 12 Support </h2>
     </td>
@@ -127,13 +127,23 @@ ul {padding-left: 13px;}
   <!-- ******************* End of JUnit ************************************* -->
 
   <!-- ******************* Java Editor ************************************* -->
-  <!--
   <tr>
     <td id="JavaEditor" class="section" colspan="2">
     <h2>Java Editor </h2>
     </td>
   </tr>
-  -->
+
+  <tr id="parameter-name-codemoning"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=529011 -->
+   <td class="title">Show method parameter names on code as code mining decorations</td>
+    <td class="content">
+      In the <i>Java > Editor > Code Mining</i>, you can now enable the <i>Show parameter names</i>
+      option. This will show the paremeter name in method or constructor calls, for cases where the
+      resolution may not be obvious for a human reader.
+      <p>
+        <img src="images/parameter-name-codeminings.png"/>
+      </p>
+    </td>
+  </tr>
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
