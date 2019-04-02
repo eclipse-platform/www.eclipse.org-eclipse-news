@@ -55,6 +55,27 @@ ul {padding-left: 13px;}
       </pre>
     </td>
   </tr>
+
+  <tr id="quick-access-customization"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=162006 -->
+   <td class="title">Extensible Quick Access content</td>
+    <td class="content">
+      The Quick Access feature (usually accessible with <code>Ctrl+3</code> shortcut) now provides
+      a new <code>org.eclipse.ui.quickAccess</code> extension point to add more content by providing
+      an extra <code>provider</code>.
+      <p>Classes in package <code>org.eclipse.ui.quickaccess</code> have been made API for this use-case.</p>
+      <p>
+      The following example shows how Run and Launch Configurations are made available in Quick Access:
+      <pre>
+&lt;extension point="org.eclipse.ui.quickAccess">
+   &lt;provider class="org.eclipse.debug.internal.ui.quickaccess.RunQuickAccessProvider"/>
+   &lt;provider class="org.eclipse.debug.internal.ui.quickaccess.DebugQuickAccessProvider"/>
+&lt;/extension>
+      </pre>
+      The providers extension the <code>org.eclipse.ui.quickaccess.QuickAccessProvider</code> class, which
+      is responsible for returning some <code>org.eclipse.ui.quickaccess.QuickAccessElement</code>.
+      </p>
+    </td>
+  </tr>
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
