@@ -46,6 +46,21 @@ ul {padding-left: 13px;}
     <h2>Java&trade; 12 Support </h2>
     </td>
   </tr>
+  
+  <tr id="switch-spaces"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=545423 -->
+    <td class="title">White space in 'switch'</td>
+    <td class="content">
+      As Java 12 introduced some new features into the <i>switch</i> construct, the formatter profile has some new settings for it.
+	  Namely, they control spaces around the <i>arrow operator</i> (separately for <i>case</i> and <i>default</i>) and around commas in <i>multi-value case</i>.
+      <p>
+      The settings can be found in the Profile Editor (<b>Preferences &gt; Java &gt; Code Style &gt; Formatter &gt; Edit...</b>) under the <b>White space &gt; Control statements &gt; 'switch'</b> subsection.
+      </p>
+      <p>
+        <img src="images/formatter-switch.png" alt="" />
+      </p>
+    </td>
+  </tr>
+  	
   <!-- ******************* End of Java 12 Support ************************************* -->
 
   <!-- ******************* JUnit ************************************* -->
@@ -85,19 +100,6 @@ ul {padding-left: 13px;}
     <td id="JavaFormatter" class="section" colspan="2">
     <h2>Java Formatter </h2>
     </td>
-    <tr id="switch-spaces"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=545423 -->
-    <td class="title">White space in 'switch'</td>
-    <td class="content">
-      As Java 12 introduced some new features into the <i>switch</i> construct, the formatter profile has some new settings for it.
-	  Namely, they control spaces around the <i>arrow operator</i> (separately for <i>case</i> and <i>default</i>) and around commas in <i>multi-value case</i>.
-      <p>
-      The settings can be found in the Profile Editor (<b>Preferences &gt; Java &gt; Code Style &gt; Formatter &gt; Edit...</b>) under the <b>White space &gt; Control statements &gt; 'switch'</b> subsection.
-      </p>
-      <p>
-        <img src="images/formatter-switch.png" alt="" />
-      </p>
-    </td>
-  </tr>
   </tr>
   <!-- ******************* End of Java Formatter ************************************* -->
   
