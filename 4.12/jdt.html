@@ -133,7 +133,7 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
-  <tr id="parameter-name-codemoning"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=529011 -->
+  <tr id="parameter-name-codemining"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=529011 -->
    <td class="title">Show method parameter names on code as code mining decorations</td>
     <td class="content">
       In the <i>Java > Editor > Code Mining</i>, you can now enable the <i>Show parameter names</i>
@@ -141,6 +141,18 @@ ul {padding-left: 13px;}
       resolution may not be obvious for a human reader.
       <p>
         <img src="images/parameter-name-codeminings.png"/>
+      </p>
+    </td>
+  </tr>
+  <tr id="service-provider-constructor-quick-fix"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=541261 -->
+   <td class="title">Additional quick fixes for service provider constructors</td>
+    <td class="content">
+      If a service defined in a <code>module-info.java</code> file has a service provider implementation whose no-arg constructor is not visible, or non existent, offer appropriate quick fixes.
+      <p>
+        <img src="images/service-provider-create-constructor.png"/>
+      </p>
+         <p>
+        <img src="images/service-provider-change-constructor-visibility.png"/>
       </p>
     </td>
   </tr>
