@@ -24,10 +24,10 @@ ul {padding-left: 13px;}
 <h2>Java development tools</h2>
 <ul>
 	<li><a href="#Java12">Java&trade; 12 Support</a></li>
-	<!--
-	<li><a href="#JUnit">JUnit</a></li>
 	<li><a href="#JavaEditor">Java Editor</a></li>
 	<li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li>
+	<!--
+	<li><a href="#JUnit">JUnit</a></li>
 	<li><a href="#JavaFormatter">Java Formatter</a></li>
 	<li><a href="#Debug">Debug</a></li>
 	<li><a href="#JDTDev">JDT Developers</a></li>
@@ -147,13 +147,27 @@ ul {padding-left: 13px;}
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
-  <!--
   <tr>
     <td id="JavaViewsAndDialogs" class="section" colspan="2">
     <h2>Java Views and Dialogs</h2>
     </td>
   </tr>
-  -->
+  
+  
+  <tr id="comment-generation-checkbox"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=545011 -->
+   <td class="title">Checkbox to control comment generation in modules and packages</td>
+    <td class="content">
+      There is an option to control comment generation while creating <code> module-info.java </code>
+      or <code> package-info.java</code>.
+      <p>
+        <img src="images/module-info-comment-generation-check-box.png"/>
+      </p>
+         <p>
+        <img src="images/package-info-comment-generation-checkbox.png"/>
+      </p>
+    </td>
+  </tr>
+ 
   <!-- ******************* End of Java Views and Dialogs ************************************* -->
 
   <!-- ******************* Java Compiler ************************************* -->
