@@ -55,8 +55,8 @@ ul {padding-left: 13px;}
     <tr id="pde-restriction-removal-reported"> <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=327452 -->
     <td class="title">Removing API restriction results in API error</td>
     <td class="content">
-	Removing PDE API tools restriction like <code> @noextend, @noimplement </code> and <code> @noinstantiate </code>results in incompatible bundle verion API tool error since the clients can have 
-	access to more usage of the APIs. The quickfix would prompt the user to increase the minor version.
+	Removing PDE API tools restriction like <code>@noextend</code>, <code>@noimplement</code> and <code>@noinstantiate</code> now results in an incompatible bundle version API tool error, since clients of this code can 
+	access more APIs afterwards. A quick fix for this error is available, and it increases the minor version to reflect the code changes.
 	 <p>
         <img src="images/pde-remove-restriction.png" alt="" />
     </p>
