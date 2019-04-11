@@ -52,7 +52,7 @@ ul {padding-left: 13px;}
   <tr id="quickfix-change-compliance-12"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=543781 -->
     <td class="title">Change project compliance and JRE to 12</td>
     <td class="content">
-      A quick fix <b>Change project compliance and JRE to 12</b> is provided to quickly change the current project to be compatible with Java 12:
+      A quick fix <b>Change project compliance and JRE to 12</b> is provided to quickly change the current project to be compatible with Java 12.
     <p>
       <img src="images/quickfix-change-compliance-12.png" alt=""/>
     </p>
@@ -63,7 +63,7 @@ ul {padding-left: 13px;}
     <td class="title">Enable preview features</td>
     <td class="content">
       You can enable preview features in Java 12 using <b>Preferences &gt; Java &gt; Compiler &gt; Enable preview features</b> option.
-      You can configure the problem severity of these preview features using <b>Preview features with severity level</b>:   
+      You can configure the problem severity of these preview features using the <b>Preview features with severity level</b>. 
     <p>
       <img src="images/enable-preview.png" alt=""/>
     </p>
@@ -73,7 +73,7 @@ ul {padding-left: 13px;}
   <tr id="quickfix-enable-preview-12"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=544257 -->
     <td class="title">Set Enable preview features</td>
     <td class="content">
-      A quick fix to <b>Enable preview features</b> option in preferences:
+      A quick fix to <b>Enable preview features</b> option in preferences is provided.
     <p>
       <img src="images/enable_preview_features_quickfix.png" alt=""/>
     </p>
@@ -83,7 +83,7 @@ ul {padding-left: 13px;}
   <tr id="quickfix-configure-severity-12"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=543669 -->
     <td class="title">Configure problem severity of preview features</td>
     <td class="content">
-      A quick fix <b>Configure problem severity</b> is provided to update the problem severity of preview features in Java 12:
+      A quick fix <b>Configure problem severity</b> is provided to update the problem severity of preview features in Java 12.
     <p>
       <img src="images/quickfix-configure-severity-12.png" alt=""/>
     </p>
@@ -93,7 +93,7 @@ ul {padding-left: 13px;}
   <tr id="quickfix-default-switch-statement"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=543665 -->
     <td class="title">Add default case to switch statement</td>
     <td class="content">
-      A quick fix <b>Add 'default' case</b> is provided to add default case to enhanced switch statement in Java 12:
+      A quick fix <b>Add 'default' case</b> is provided to add default case to enhanced switch statement in Java 12.
     <p>
       <img src="images/quickfix-default-switch-statement.png" alt=""/>
     </p>
@@ -103,7 +103,7 @@ ul {padding-left: 13px;}
   <tr id="quickfix-missing-case-switch-statement"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=545259 -->
     <td class="title">Add missing case statements to switch statement</td>
     <td class="content">
-      A quick fix <b>Add missing case statements</b> is provided for enhanced switch statement in Java 12:
+      A quick fix <b>Add missing case statements</b> is provided for enhanced switch statement in Java 12.
     <p>
       <img src="images/quickfix-missing-case-switch-statement.png" alt=""/>
     </p>
@@ -113,10 +113,10 @@ ul {padding-left: 13px;}
   <tr id="switch-spaces"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=545423 -->
     <td class="title">Whitespace in 'switch'</td>
     <td class="content">
-      As Java 12 introduced some new features into the <i>switch</i> construct, the formatter profile has some new settings for it.
-	  Namely, they control spaces around the <i>arrow operator</i> (separately for <i>case</i> and <i>default</i>) and around commas in <i>multi-value case</i>.
+      As Java 12 introduced some new features into the <code>switch</code> construct, the formatter profile has some new settings for it.
+	  Namely, they control spaces around the arrow operator (separately for <code>case</code> and <code>default</code>) and around commas in multi-value case.
       <p>
-      The settings can be found in the Profile Editor (<b>Preferences &gt; Java &gt; Code Style &gt; Formatter &gt; Edit...</b>) under the <b>White space &gt; Control statements &gt; 'switch'</b> subsection.
+       The settings can be found in the <b>Profile Editor</b> (<b>Preferences &gt; Java &gt; Code Style &gt; Formatter &gt; Edit...</b>) under the <b>White space &gt; Control statements &gt; 'switch'</b> subsection.
       </p>
       <p>
         <img src="images/formatter-switch.png" alt="" />
@@ -146,24 +146,27 @@ ul {padding-left: 13px;}
   <tr id="parameter-name-codemining"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=529011 -->
    <td class="title">Show method parameter names on code as code mining decorations</td>
     <td class="content">
-      In the <i>Java > Editor > Code Mining</i>, you can now enable the <i>Show parameter names</i>
-      option. This will show the parameter name in method or constructor calls, for cases where the
-      resolution may not be obvious for a human reader. For example, if the parameter value is an exact 
-      match of the parameter name or has parameter name as its substring, it is not shown.
+      In the <b>Java &gt; Editor &gt; Code Mining</b> preference, you can now enable the <b>Show parameter names</b>
+      option. This will show the parameter name in method or constructor calls, for cases where the resolution may 
+      not be obvious for a human reader.
       <p>
-        <img src="images/parameter-name-codeminings.png"/>
+       For example, the code mining will be shown if the argument name in the method call is not an exact match of the parameter name or 
+       if the argument name doesn't contain the parameter name as a substring.
+      </p>
+      <p>
+        <img src="images/parameter-name-codeminings.png" alt=""/>
       </p>
     </td>
   </tr>
   <tr id="service-provider-constructor-quick-fix"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=541261 -->
    <td class="title">Additional quick fixes for service provider constructors</td>
     <td class="content">
-      If a service defined in a <code>module-info.java</code> file has a service provider implementation whose no-arg constructor is not visible, or non existent, offer appropriate quick fixes.
+      Appropriate quick fixes are offered when a service defined in a <code>module-info.java</code> file has a service provider implementation whose no-arg constructor is not visible, or is non-existent.
       <p>
-        <img src="images/service-provider-create-constructor.png"/>
+        <img src="images/service-provider-create-constructor.png" alt=""/>
       </p>
          <p>
-        <img src="images/service-provider-change-constructor-visibility.png"/>
+        <img src="images/service-provider-change-constructor-visibility.png" alt=""/>
       </p>
     </td>
   </tr>
@@ -180,13 +183,13 @@ ul {padding-left: 13px;}
   <tr id="comment-generation-checkbox"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=545011 -->
    <td class="title">Checkbox to control comment generation in modules and packages</td>
     <td class="content">
-      There is an option to control comment generation while creating <code>module-info.java</code>
+      An option is now available to control the comment generation while creating <code>module-info.java</code>
       or <code>package-info.java</code>.
       <p>
-        <img src="images/module-info-comment-generation-check-box.png"/>
+        <img src="images/module-info-comment-generation-check-box.png" alt=""/>
       </p>
          <p>
-        <img src="images/package-info-comment-generation-checkbox.png"/>
+        <img src="images/package-info-comment-generation-checkbox.png" alt=""/>
       </p>
     </td>
   </tr>
@@ -195,7 +198,7 @@ ul {padding-left: 13px;}
       <td class="content">
           The Quick Assist for creating getter or setter methods from fields no longer forces creating both.
           <p>
-              <img src="images/getter-setter-dialog-new.png" alt="" />
+              <img src="images/getter-setter-dialog-new.png" alt=""/>
           </p>
       </td>
   </tr>
@@ -245,26 +248,30 @@ ul {padding-left: 13px;}
   <tr id="javadoc-support-tags"> 
    <td class="title">Support for new Javadoc tags</td>
     <td class="content">
-      The following javadoc tags are supported and auto-complete now works for these tags. <br><br>
-		Tags introduced in JDK 8:
-		<code><br>
-		@apiNote<br>
-		@implSpec<br>
-		@implNote<br>
-		</code> <br>
-		
-		Tags introduced in JDK 9:
-		<code><br>
-		@index<br>
-		@hidden<br>
-		@provides<br>
-		@uses<br>
-		</code><br>
-		
-		Tags introduced in JDK 10:
-		<code><br>
+      The following javadoc tags are supported and auto-complete now works for these tags.
+      <p>
+		Tags introduced in JDK 8:<br/>
+		<code>
+		@apiNote<br/>
+		@implSpec<br/>
+		@implNote
+		</code>
+	  </p>
+	  <p>
+		Tags introduced in JDK 9:<br/>
+		<code>
+		@index<br/>
+		@hidden<br/>
+		@provides
+		@uses
+		</code>
+	  </p>
+	  <p>
+		Tags introduced in JDK 10:<br/>
+		<code>
 		@summary
-		</code><br>
+		</code>
+	  </p>
     </td>
   </tr>
  

@@ -23,10 +23,10 @@ ul {padding-left: 13px;}
 <body>
 <h2>Platform and Equinox</h2>
 <ul>
-    <li><a href="#ViewsAndDialogs">Views, Dialogs and Toolbar</a></li>
-    <li><a href="#Preferences">Preferences</a></li>
+    <li><a href="#ViewsAndDialogs">Views, Dialogs and Wizards</a></li>
+    <!--<li><a href="#Preferences">Preferences</a></li>
     <li><a href="#StylingThemes">Themes and Styling</a></li>
-    <li><a href="#GeneralUpdates">General Updates</a></li>
+    <li><a href="#GeneralUpdates">General Updates</a></li>-->
 </ul>
 
 <!-- ****************** START OF N&N TABLE ****************** -->
@@ -36,49 +36,43 @@ ul {padding-left: 13px;}
   <col />
 </colgroup>
 <tbody>
-  <!-- ******************* Views, Dialogs and Toolbar ************************************* -->
+  <!-- ******************* Views, Dialogs and Wizards ************************************* -->
   <tr>
     <td id="ViewsAndDialogs" class="section" colspan="2">
-    <h2>Views, Dialogs and Toolbar </h2>
+    <h2>Views, Dialogs and Wizards </h2>
     </td>
   </tr>
-  <!-- ******************* End of Views, Dialogs and Toolbar ************************************* -->
-
-  <!-- ****************** Preferences ************************************* -->
-  <tr>
-    <td id="Preferences" class="section" colspan="2">
-    <h2>Preferences </h2>
-    </td>
-  </tr>
-  <!-- ****************** End of Preferences ************************************* -->
-
-
-
-  <!-- ******************* General Updates ************************************* -->
-  <tr>
-    <td id="GeneralUpdates" class="section" colspan="2">
-    <h2>General Updates </h2>
-    </td>
-  </tr>
-
+  
   <tr id="pass-directory-to-launcher"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=500388 -->
-   <td class="title">Passing directory to launcher drive to import wizard</td>
+   <td class="title">Smart import of directory passed on command-line</td>
     <td class="content">
-      When passing a directory to the launcher (such as <code>eclipse .</code> or <code>eclipse ~/git/eclipse.platform.ui</code>),
-      the generic "smart" project import wizard is shown and suggests a plan to import the project into the workspace.
+      When a directory name is passed to the Eclipse launcher on command-line (such as <code>eclipse .</code> or <code>eclipse ~/git/eclipse.platform.ui</code>),
+      the generic "smart" <b>Import projects</b> wizard is shown and suggests a plan to import the project into the workspace.
       <p>
         <img src="images/pass-directory-to-launcher.png" alt="" />
       </p> 
     </td>
   </tr>
-  <tr id="gdkpixbuf-imageloader">
-  	<td class="title">New native implementation of ImageLoader on GTK</td>
-  	<td class="content">
-  		The implementation of <code>ImageLoader</code> on GTK is now using native GdkPixbuf API for image loading and saving. 
-  		Loading and saving images with <code>ImageLoader</code> on GTK now have native performance, with ~200% increase 
-  		in loading time for JPEG files. ImageLoader has better GIF animation support and is able to support more image formats. 
-  	</td>
+  <!-- ******************* End of Views, Dialogs and Wizards ************************************* -->
+
+  <!-- ****************** Preferences ************************************* -->
+  <!--
+  <tr>
+    <td id="Preferences" class="section" colspan="2">
+    <h2>Preferences </h2>
+    </td>
   </tr>
+  -->
+  <!-- ****************** End of Preferences ************************************* -->
+
+  <!-- ******************* General Updates ************************************* -->
+  <!--
+  <tr>
+    <td id="GeneralUpdates" class="section" colspan="2">
+    <h2>General Updates </h2>
+    </td>
+  </tr>
+  -->
   <!-- ******************* End of General Updates ************************************* -->
 </tbody>
 </table>

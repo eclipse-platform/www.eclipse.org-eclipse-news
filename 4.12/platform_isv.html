@@ -42,7 +42,7 @@ ul {padding-left: 13px;}
   <tr id="compare-merge-generic-editor"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=545531 -->
    <td class="title">Compare/merge files using Generic Editor extensions</td>
     <td class="content">
-      To leverage the extensions for Generic Editor (syntax highlighting, hover...) when
+      To leverage the extensions for <b>Generic Editor</b> (syntax highlighting, hover...) when
       comparing files, you can now simply associate the <code>org.eclipse.ui.genericeditor.compareViewer</code>
       to the desired file content-types. This will automatically add to the compare view most extensions
       contributed to the Generic Editor.
@@ -58,17 +58,19 @@ ul {padding-left: 13px;}
   <tr id="quick-access-customization"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=162006 -->
    <td class="title">Extensible Quick Access content</td>
     <td class="content">
-      The Quick Access feature (usually accessible with <code>Ctrl+3</code> shortcut) now provides
+      The <b>Quick Access</b> search (accessible with <code>Ctrl+3</code> shortcut) now provides
       a new <code>org.eclipse.ui.quickAccess</code> extension point to add more content by providing
-      an extra <code>provider</code>.
+      an additional <code>provider</code>.
       <p>Classes in package <code>org.eclipse.ui.quickaccess</code> have been made API for this use-case.</p>
       <p>
       The following example shows how Run and Launch Configurations are made available in Quick Access:
+      </p>
       <pre>
 &lt;extension point="org.eclipse.ui.quickAccess">
    &lt;provider class="org.eclipse.debug.internal.ui.quickaccess.RunQuickAccessProvider"/>
    &lt;provider class="org.eclipse.debug.internal.ui.quickaccess.DebugQuickAccessProvider"/>
 &lt;/extension></pre>
+ 	 <p>
       The providers extend the <code>org.eclipse.ui.quickaccess.QuickAccessProvider</code> class, which
       is responsible for returning some <code>org.eclipse.ui.quickaccess.QuickAccessElement</code>.
       </p>
@@ -79,6 +81,21 @@ ul {padding-left: 13px;}
   <!-- *********************** SWT *********************** -->
   <tr>
     <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
+  </tr>
+  
+  <tr id="gdkpixbuf-imageloader">
+  	<td class="title">New native implementation of ImageLoader on GTK</td>
+  	<td class="content">
+  		The implementation of <code>ImageLoader</code> on GTK now uses the native <code>GdkPixbuf</code> API for image loading and saving.
+  		<p>
+  		 Key highlights of the new ImageLoader on GTK:
+  		</p>
+  		 <ul>
+  		 	<li>Loading and saving images has native performance, with ~200% increase in loading time for JPEG files</li>
+  		 	<li>Better GIF animation support</li>
+  		 	<li>Support for more image formats</li>
+  		 </ul>
+  	</td>
   </tr>
   <!-- *********************** End of SWT *********************** -->
 
