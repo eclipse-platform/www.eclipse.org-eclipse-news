@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 11:28 EST April 3, 2019.
+Last revised 10:00 EST April 12, 2019.
 
 <!--
 <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
@@ -298,6 +298,12 @@ will run on is 3.20 or newer. Eclipse SDK 4.12 will run on older GTK 3 versions 
 3.10.0, however we cannot flag these as reference versions without significant community support for testing and/or development of fixes. Bugs only reproducible on GTK 3 versions older than 3.20 will
 be given a lower priority (or may not be fixed at all), compared to bugs which are reproducible
 on the target environments listed above.
+</p>
+
+<p>With respect to GTK 3 themes: Adwaita theme is guaranteed to work. Eclipse SDK will run with other GTK 3 themes,
+however we cannot flag these as reference versions without significant community support for testing and/or development
+of fixes. Bugs that are reproducible only with themes other than Adwaita will be given a lower priority (or may not be fixed at all),
+compared to bugs which are reproducible on the target environments listed above.
 </p>
 </div>
 
