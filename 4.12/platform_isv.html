@@ -76,13 +76,94 @@ ul {padding-left: 13px;}
       </p>
     </td>
   </tr>
+
+  <tr id="type-parameters-beans-jface-databinding"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=531748 -->
+    <td class="title">Type parameters on Beans and JFace databinding classes</td>
+    <td class="content">
+      Type parameters have been added to relevant classes and methods in the
+      <a href="https://help.eclipse.org/2019-06/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Freference%2Fapi%2Forg%2Feclipse%2Fcore%2Fdatabinding%2Fbeans%2Fpackage-summary.html">
+      <code>org.eclipse.core.databinding.beans</code></a> and
+      <a href="https://help.eclipse.org/2019-06/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Freference%2Fapi%2Forg%2Feclipse%2Fjface%2Fdatabinding%2Fswt%2Fpackage-summary.html">
+      <code>org.eclipse.jface.databinding</code></a> bundles. This makes code using
+      these classes more explicit and clear and can help catching bugs in an early stage.
+      These changes complete the effort to use generics to improve the databinding framework,
+      which was started several years ago. If you use these databinding bundles you should be
+      able to get rid of many raw type warnings which have been unavoidable for a long time.
+      <p>
+      Example:
+	  </p>
+<pre>
+// The BeanProperties.value method returns a IBeanValueProperty&lt;Bean, String&gt;
+IObservableValue&lt;String&gt; nameModel =
+    BeanProperties.value(Bean.class, "name", String.class).observe(bean);
+// The WidgetProperties.text method returns a IWidgetValueProperty&lt;Text, String&gt;
+IObservableValue&lt;String&gt; nameTarget = WidgetProperties.text().observe(textControl);
+
+dataBindingContext.bindValue(nameTarget, nameModel);
+</pre>
+      <p>
+      The changes are fully binary compatible and no behaviour is changed.
+      </p><p><b>Tips for using the typed databinding API</b>
+      </p>
+	  <ul>
+	  <li>
+      Using the <code>UpdateValueStrategy.create</code> method to create update strategies with a converter
+	  avoids the need to specify type arguments:
+<pre>
+dataBindingContext.bindValue(ageTarget, ageModel,
+    UpdateValueStrategy.create(converter), null);
+</pre>
+      </li><li>
+      It is often easier to work out the types when sub-expressions are assigned to variables:
+<pre>
+UpdateValueStrategy&lt;String, Integer&gt; toModel = new UpdateValueStrategy&gt;&lt;();
+toModel.setConverter(converter);
+toModel.setAfterConvertValidator(validator);
+dataBindingContext.bindValue(target, model, toModel, null);
+</pre>
+      </li><li>
+      New methods for creating typed versions of property objects have been added in some places:
+<pre>
+// Returns a IViewerValuePropert&lt;Viewer, ModelObject&gt;
+ViewerProperties.singleSelection(ModelObject.class)
+</pre>
+      </li><li>Upgrading to Java 10 lets you use the <code>var</code> keyword, which avoids much
+	  of the verbosity of using property objects with type parameters:
+<pre>
+var text = WidgetProperties.text();
+</pre>
+      </li>
+	  </ul>
+      <p>
+      <b>Note about typed property factory classes:</b> To avoid causing compile errors for clients new versions of
+	  property factory classes that returns typed property objectshave been created. This applies for the
+	  following classes: <code>WidgetProperties</code>, <code>ViewerProperties</code>,
+	  <code>BeanProperties</code> and <code>PojoProperties</code>.
+      </p><p>
+	  To start using these classes simple replace the import of the untyped factory classes an import of the
+	  typed version.
+      </p><p>
+	  <b>Note about EMF Databinding:</b> EMF Databinding has not been updated with type parameters. That can make it
+      awkward to use EMF Databinding together with the generified databinding API:s. A good strategy for working
+      around that is to create factory methods for EMF properties with generic types as their return values:
+	  </p>
+<pre>
+@SuppressWarnings("unchecked")
+public static IValueProperty&lt;ModelEObject, String&gt; name(EditingDomain editingDomain) {
+    return EMFEditProperties.value(editingDomain, ModelPackage.Literals.MODEL_EOBJECT__NAME);
+}
+</pre>
+
+    </td>
+  </tr>
+
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
   <tr>
     <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
   </tr>
-  
+
   <tr id="gdkpixbuf-imageloader">
   	<td class="title">New native implementation of ImageLoader on GTK</td>
   	<td class="content">
