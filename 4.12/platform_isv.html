@@ -97,6 +97,17 @@ ul {padding-left: 13px;}
   		 </ul>
   	</td>
   </tr>
+
+  <tr id="display-dispose-gtk"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=531634 -->
+  	<td class="title">Display.Close and Display.Dispose events are now supported on GTK on logoff/shutdown</td>
+  	<td class="content">
+		This works on GNOME and XFCE (> 4.13) sessions.<br><br>This brings Linux in line with Windows and Mac OS implementations:
+		<ul>
+		<li><code>Display.Close</code> can set the <code>Event.doit</code> to <code>false</code> to send a "not ready" hint to session manager. However, the session manager will usually ignore this hint and continue logoff/shutdown anyway. The time limit imposed by session manager is 1 second, so it is not suitable for showing the user any UI.</li>
+		<li><code>Display.Dispose</code> lets you run any final cleanup, such as saving settings on exit. Also, any code you have after a <code>while (!xxx.isDisposed())</code> loop will run now. The time limit imposed by session manager is 10 seconds.</li>
+		</ul>
+  	</td>
+  </tr>
   <!-- *********************** End of SWT *********************** -->
 
 </tbody>
