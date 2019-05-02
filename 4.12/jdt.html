@@ -214,6 +214,41 @@ ul {padding-left: 13px;}
           </p>
       </td>
   </tr>
+  <tr id="buildpath-module-dependencies"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=546352 -->
+  	<td class="title">New UI for configuring <b>Module Dependencies</b></td>
+  	<td class="content">
+  		The <b>Java Build Path</b> configuration now has a new tab <b>Module Dependencies</b>,
+  		which will gradually replace the options previously hidden behind the <b>Is Modular</b>
+  		node on other tabs of this dialog. The new tab provides an intuitive way for configuring all
+  		those module-related options for which Java 9 had introduced new command line options
+  		like <code>--limit-modules</code> etc.
+  		<p>
+  			<a href="images/module-dependencies.png"><img src="images/module-dependencies-cropped.png" alt="Module Dependencies dialog"/></a>
+  		</p>
+  		<p>
+  			The dialog focuses on how to build one Java Project, here "org.greetings".
+		</p><p>
+  			Below this focus module, the left hand pane shows all modules that participate in the build,
+  			where decorations A and S mark automatic modules and system modules, respectively. The extent
+  			of system modules (from JRE) can be modified with the <b>Add System Module...</b> and
+  			<b>Remove</b> buttons (corresponds to <code>--add-modules</code> and <code>--limit-modules</code>).
+ 		</p><p>
+  			When a module is selected in the left hand pane, the right hand pane allows to configure
+  			the following properties for this module:
+  		</p>
+		<dl>
+		<dt><b>Read Module...</b></dt>
+		<dd>Select additional modules that should be accessible from the
+			selected module (corresponds to <code>--add-reads</code>)</dd>
+		<dt><b>Expose Package...</b></dt>
+		<dd>Select additional packages to be exposed ("exports" or "opens")
+			from the selected module (corresponds to <code>--add-exports</code> or <code>--add-opens</code>)</dd>
+		<dt><b>Patch with...</b></dt>
+		<dd>Add more packages and classes to the selected module
+			(corresponds to <code>--patch-module</code>)</dd>
+		</dl>
+  	</td>
+  </tr>
  
   <!-- ******************* End of Java Views and Dialogs ************************************* -->
 
