@@ -160,6 +160,34 @@ public static IValueProperty&lt;ModelEObject, String&gt; name(EditingDomain edit
     </td>
   </tr>
 
+  <tr id="cnf-tooltip-support"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=178017 -->
+    <td class="title">ToolTip Support for CommonViewers</td>
+    <td class="content">
+      It is now possible to provide tootips to <code>CommonViewer</code>s via <code>ILabelProvider</code>s.
+      <p>To do this, two steps are necessary:</p>
+      <ol>
+        <li>Enable tooltip support for the respective viewer by setting the option <code>org.eclipse.ui.navigator.enableTooltipSupport</code> to 
+          <code>true</code> in the extension declaration, as in
+<pre>
+&lt;extension point=&quot;org.eclipse.ui.navigator.viewer&quot;&gt;
+  &lt;viewer id=&quot;org.eclipse.ui.example.cnf.viewer&quot;&gt;
+    &lt;!-- ... --&gt;
+    &lt;options&gt;
+      <b>&lt;property
+        name=&quot;org.eclipse.ui.navigator.enableTooltipSupport&quot;
+        value=&quot;true&quot; /&gt;</b>
+    &lt;/options&gt;
+  &lt;/viewer&gt;
+&lt;/extension&gt;
+</pre></li>
+        <li>Contribute an <code>ILabelProvider</code> which also implements <code>org.eclipse.jface.viewers.IToolTipProvider</code>.
+        The tooltip text can be provided by the method <code>getToolTipText(Object element)</code>
+        following the same rules as <code>getText(Object element)</code>. I.e., the non-null, non-empty string
+        obtained from the highest-ranked label provider is used as the tooltip.
+        </li>
+      </ol>
+    </td>
+  </tr>
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
