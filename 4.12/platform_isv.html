@@ -59,20 +59,23 @@ ul {padding-left: 13px;}
    <td class="title">Extensible Quick Access content</td>
     <td class="content">
       The <b>Quick Access</b> search (accessible with <code>Ctrl+3</code> shortcut) now provides
-      a new <code>org.eclipse.ui.quickAccess</code> extension point to add more content by providing
-      an additional <code>provider</code>.
+      a new <code>org.eclipse.ui.quickAccess</code> extension point to contribute additional content.
       <p>Classes in package <code>org.eclipse.ui.quickaccess</code> have been made API for this use-case.</p>
       <p>
       The following example shows how Run and Launch Configurations are made available in Quick Access:
       </p>
       <pre>
 &lt;extension point="org.eclipse.ui.quickAccess">
-   &lt;provider class="org.eclipse.debug.internal.ui.quickaccess.RunQuickAccessProvider"/>
-   &lt;provider class="org.eclipse.debug.internal.ui.quickaccess.DebugQuickAccessProvider"/>
+   &lt;computer class="org.eclipse.debug.internal.ui.quickaccess.RunQuickAccessProvider" name="%Run.name"/>
+   &lt;computer class="org.eclipse.debug.internal.ui.quickaccess.DebugQuickAccessProvider" name="%Debug.name"/>
 &lt;/extension></pre>
- 	 <p>
-      The providers extend the <code>org.eclipse.ui.quickaccess.QuickAccessProvider</code> class, which
+    	 <p>
+      The computers implement the <code>org.eclipse.ui.quickaccess.IQuickAccessComputer</code> class, which
       is responsible for returning some <code>org.eclipse.ui.quickaccess.QuickAccessElement</code>.
+      </p>
+      <p>
+      Computers are only contributing when there host bundle is started, bundle will not be started automatically
+      when querying Quick Access.
       </p>
     </td>
   </tr>
