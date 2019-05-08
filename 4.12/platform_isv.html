@@ -74,7 +74,7 @@ ul {padding-left: 13px;}
       is responsible for returning some <code>org.eclipse.ui.quickaccess.QuickAccessElement</code>.
       </p>
       <p>
-      Computers are only contributing when there host bundle is started, bundle will not be started automatically
+      Computers are only contributing when their host bundle is started, bundles will not be started automatically
       when querying Quick Access.
       </p>
     </td>
@@ -139,15 +139,15 @@ var text = WidgetProperties.text();
 	  </ul>
       <p>
       <b>Note about typed property factory classes:</b> To avoid causing compile errors for clients new versions of
-	  property factory classes that returns typed property objectshave been created. This applies for the
+	  property factory classes that return typed property objects have been created. This applies for the
 	  following classes: <code>WidgetProperties</code>, <code>ViewerProperties</code>,
 	  <code>BeanProperties</code> and <code>PojoProperties</code>.
       </p><p>
-	  To start using these classes simple replace the import of the untyped factory classes an import of the
+	  To start using these classes simply replace the import of the untyped factory classes by an import of the
 	  typed version.
       </p><p>
 	  <b>Note about EMF Databinding:</b> EMF Databinding has not been updated with type parameters. That can make it
-      awkward to use EMF Databinding together with the generified databinding API:s. A good strategy for working
+      awkward to use EMF Databinding together with the generified databinding APIs. A good strategy for working
       around that is to create factory methods for EMF properties with generic types as their return values:
 	  </p>
 <pre>
@@ -163,7 +163,7 @@ public static IValueProperty&lt;ModelEObject, String&gt; name(EditingDomain edit
   <tr id="cnf-tooltip-support"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=178017 -->
     <td class="title">ToolTip Support for CommonViewers</td>
     <td class="content">
-      It is now possible to provide tootips to <code>CommonViewer</code>s via <code>ILabelProvider</code>s.
+      It is now possible to provide tooltips to <code>CommonViewer</code>s via <code>ILabelProvider</code>s.
       <p>To do this, two steps are necessary:</p>
       <ol>
         <li>Enable tooltip support for the respective viewer by setting the option <code>org.eclipse.ui.navigator.enableTooltipSupport</code> to 
@@ -215,8 +215,8 @@ public static IValueProperty&lt;ModelEObject, String&gt; name(EditingDomain edit
   	<td class="content">
 		This works on GNOME and XFCE (> 4.13) sessions. This brings Linux in line with Windows and Mac OS implementations:
 		<ul>
-		<li><code>Display.Close</code> can set the <code>Event.doit</code> to <code>false</code> to send a "not ready" hint to session manager. However, the session manager will usually ignore this hint and continue logoff/shutdown anyway. The time limit imposed by session manager is 1 second, so it is not suitable for showing the user any UI.</li>
-		<li><code>Display.Dispose</code> lets you run any final cleanup, such as saving settings on exit. Also, any code you have after a <code>while (!xxx.isDisposed())</code> loop will run now. The time limit imposed by session manager is 10 seconds.</li>
+		<li><code>Display.Close</code> can set the <code>Event.doit</code> to <code>false</code> to send a "not ready" hint to the session manager. However, the session manager will usually ignore this hint and continue logoff/shutdown anyway. The time limit imposed by the session manager is 1 second, so it is not suitable for showing the user any UI.</li>
+		<li><code>Display.Dispose</code> lets you run any final cleanup, such as saving settings on exit. Also, any code you have after a <code>while (!xxx.isDisposed())</code> loop will run now. The time limit imposed by the session manager is 10 seconds.</li>
 		</ul>
   	</td>
   </tr>
