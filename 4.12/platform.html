@@ -53,7 +53,23 @@ ul {padding-left: 13px;}
       </p> 
     </td>
   </tr>
-  <!-- ******************* End of Views, Dialogs and Wizards ************************************* -->
+
+  <tr id="launch-config-quickaccess"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=545544 -->
+    <td class="title">Launch Run and Debug configurations from Quick Access</td>
+      <td class="content">
+      From the Quick Access proposals (usually accessible with <code>Ctrl+3</code> shortcut) you can now
+      directly launch any of the Run or Debug configuration available in your workspace.
+      <p>
+        <img src="images/run-debug-quickaccess.png"/>
+      </p>
+      <p>
+      Note: for performance reason, the extra Quick Access entries are only visible if the <code>org.eclipse.debug.ui</code>
+      bundle was already activated by some previous action in the workbench (like editing some launch configuration, or expanding the
+      <i>Run As...</i> menus).
+      </p>
+    </td>
+  </tr>
+  <!-- ******************* End of Views, Dialogs and Toolbar ************************************* -->
 
   <!-- ****************** Preferences ************************************* -->
   <!--
