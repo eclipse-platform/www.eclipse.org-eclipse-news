@@ -188,6 +188,41 @@ public static IValueProperty&lt;ModelEObject, String&gt; name(EditingDomain edit
       </ol>
     </td>
   </tr>
+  
+  <tr id="wizard-dialog-nonmodal"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=147762 -->
+   <td class="title">Wizards can now be nonmodal</td>
+    <td class="content">
+    We have introduced new API to <code>WizardDialog</code> to enable a wizard to be nonmodal.
+	<p>
+		When a dialog is modal it means that the underlying window can not be used. Eclipse Wizard Dialogs are modal by default. There are cases where it is desired that the dialog is not modal but that the underlying window can be reached WHILE the user is finishing the wizard.
+		The following API methods are added to the JFace <code>WizardDialog</code>.
+		<ul>
+			<li><code>public WizardDialog setModal(boolean modal)</code></li>
+			<li><code>public boolean isModal()</code></li>
+		</ul>
+	</p>
+	<p>
+		In addition, the following methods have been made public to allow full control over the shell style of the <code>WizardDialog</code>.
+		<ul>
+			<li><code>public void setShellStyle(int newShellStyle)</code></li>
+			<li><code>public int getShellStyle()</code></li>
+		</ul>
+	</p>
+	<p>
+		You can now use the following code:
+		<code><br/>
+			<br/>WizardDialog d = new WizardDialog(shell, wizard);
+			<br/>d.setModal(false);
+			<br/>d.open();
+		</code>
+	</p>
+	<p>
+		or fluent
+		<code><br/><br/>
+			new WizardDialog(shell, wizard).setModal(false).open();
+		</code>
+	</p>
+  </tr>
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
