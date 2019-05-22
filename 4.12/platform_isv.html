@@ -229,7 +229,23 @@ public static IValueProperty&lt;ModelEObject, String&gt; name(EditingDomain edit
   <tr>
     <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
   </tr>
-
+ 
+ <tr id="dark-theme-mac"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=540357 -->
+  	<td class="title">Dark mode support on macOS</td>
+  	<td class="content">
+  		An SWT application on macOS 10.14 can now be launched in dark theme and all the controls are rendered with the native dark appearance.
+  		The application will automatically launch in the light or dark theme based on the System appearance (set in System preferences). 
+  		<p>
+  			You need to launch the application with <code>org.eclipse.swt.display.useSystemTheme=true</code> system property to enable this behavior.
+  			The default value of this property is false.
+  		</p>
+  		Screenshot of an SWT application in dark theme:
+  		<p>
+  			<img src="images/dark-theme-swt-app.png" alt="swt application in dark theme"/>
+  		</p>
+  	</td>
+  </tr>
+  
   <tr id="gdkpixbuf-imageloader">
   	<td class="title">New native implementation of ImageLoader on GTK</td>
   	<td class="content">
