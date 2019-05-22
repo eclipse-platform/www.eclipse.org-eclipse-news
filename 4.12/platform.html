@@ -88,7 +88,22 @@ ul {padding-left: 13px;}
       </td>
     </tr>
     
-    <tr id="dark-theme-mac"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=466511 -->
+    <tr id="dark-theme-background-lines"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=544360 -->
+     <td class="title">Table/Tree background lines shown in dark theme</td>
+      <td class="content">
+        In dark theme, the Table and Trees in Eclipse now show the alternating dark lines 
+        in the background when <code>setLinesVisible(true)</code> is set. 
+        Earlier they had a gray background even if line visibility was true.
+        <p>
+        	Example of a Tree and Table in Eclipse with alternating dark lines in the background:
+        </p>
+        <p>
+          <img src="images/dark-theme-alternating-lines.png" alt="Tree and Table in Eclipse with alternating dark lines in the background" />
+        </p>
+      </td>
+    </tr>
+    
+    <tr id="view-menu"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=466511 -->
      <td class="title">Improved View Menu Icon</td>
       <td class="content">
         The icon used for the view menu has been improved. It is now crisp on high 
