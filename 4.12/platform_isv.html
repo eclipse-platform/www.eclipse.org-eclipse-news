@@ -223,6 +223,17 @@ public static IValueProperty&lt;ModelEObject, String&gt; name(EditingDomain edit
 		</code>
 	</p>
   </tr>
+  
+  <tr id="swt-lines-visible"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=544360 -->
+   <td class="title">CSS attribute swt-lines-visible</td>
+    <td class="content">
+      A new css attribute 'swt-lines-visible' is supported on <code>Table</code> and <code>Tree</code> widgets and is mapped to <code>getLinesVisible()</code>.
+      <p>
+      	For example: The value of this property is true if <code>Tree.getLinesVisible()</code> returns true, else the value is false.
+      </p>
+    </td>
+  </tr>
+  
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
@@ -271,6 +282,7 @@ public static IValueProperty&lt;ModelEObject, String&gt; name(EditingDomain edit
 		</ul>
   	</td>
   </tr>
+  
   <!-- *********************** End of SWT *********************** -->
 
 </tbody>
