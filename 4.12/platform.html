@@ -26,7 +26,7 @@ ul {padding-left: 13px;}
     <li><a href="#ViewsAndDialogs">Views, Dialogs and Wizards</a></li>
     <!--<li><a href="#Preferences">Preferences</a></li>-->
     <li><a href="#StylingThemes">Themes and Styling</a></li>
-    <!--<li><a href="#GeneralUpdates">General Updates</a></li>-->
+    <li><a href="#GeneralUpdates">General Updates</a></li>
 </ul>
 
 <!-- ****************** START OF N&N TABLE ****************** -->
@@ -118,14 +118,31 @@ ul {padding-left: 13px;}
     <!-- ******************* End of Themes and Styling ************************************* -->
   
 
-  <!-- ******************* General Updates ************************************* -->
-  <!--
-  <tr>
-    <td id="GeneralUpdates" class="section" colspan="2">
-    <h2>General Updates </h2>
-    </td>
-  </tr>
-  -->
+    <!-- ******************* General Updates ************************************* -->
+    <tr>
+      <td id="GeneralUpdates" class="section" colspan="2">
+      <h2>General Updates </h2>
+      </td>
+    </tr>
+
+    <tr id="parallel-bundle-activation"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=540507 -->
+     <td class="title">Support activating bundles in parallel</td>
+      <td class="content">
+        When the Equinox OSGi Framework is launched the installed bundles are activated
+        according to their configured start-level.  The bundles with lower start-levels are
+        activated first.  Bundles within the same start-level are activated sequentially from
+        a single thread.  A new configuration option has been added (<code>equinox.start.level.thread.count</code>)
+        that enables the framework to start bundles within the same start-level in parallel. The
+        default value is <code>1</code> which keeps the previous behavior of activating bundles from a
+        single thread. Setting the value to <code>0</code> enables parallel activation using a
+        thread count equal to <code>Runtime.getRuntime().availableProcessors()</code>.  Setting the
+        value to a number greater than <code>1</code> will use the specified number as the thread
+        count for parallel bundle activation.
+        <p>The default is <code>1</code> because of the risk of possible deadlock when
+        activating bundles in parallel.  Extensive testing must be done on the set of bundle
+        installed in the framework before considering enabling this option in a product.</p>
+      </td>
+    </tr>
   <!-- ******************* End of General Updates ************************************* -->
 </tbody>
 </table>
