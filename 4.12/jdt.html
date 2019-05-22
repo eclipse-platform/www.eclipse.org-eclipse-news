@@ -338,13 +338,25 @@ ul {padding-left: 13px;}
   <!-- ******************* End of Java Views and Dialogs ************************************* -->
 
   <!-- ******************* Java Compiler ************************************* -->
-  <!--
+
   <tr>
     <td id="JavaCompiler" class="section" colspan="2">
     <h2>Java Compiler</h2>
     </td>
   </tr>
-  -->
+  <tr id="new-java-index">
+    <td class="title">New Java index retired</td>
+    <td class="content">
+      Eclipse 4.7 introduced an experimental new Java index which was disabled by default.<br/>
+      Due to lack of resources to properly support all Java 9+ language changes,
+      this index is not available anymore starting with Eclipse 4.12.
+      <p>
+      The preference to enable it in <b>Preferences &gt; Java</b> is removed and the old index will be always used.
+      </p>
+      Note: <b>Preferences &gt; Java &gt; Rebuild Index</b> button can be used to delete the existing index files and free disk space.
+    </td>
+  </tr>
+
   <!-- ******************* End of Java Compiler ************************************* -->
 
   <!-- ******************* Java Formatter ************************************* -->
