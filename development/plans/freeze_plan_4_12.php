@@ -199,7 +199,7 @@ ob_start();
 	
 			<strong>2019-06 (4.12) Release</strong>
 			<p>The 2019-06 (4.12) release should be complete and available for download by 
-	              March 20, 2019 as part of the <a href="https://wiki.eclipse.org/Category:SimRel-2019-06">2019-06 Simultaneous Release</a>. If product teams intending 
+	              June 19, 2019 as part of the <a href="https://wiki.eclipse.org/Category:SimRel-2019-06">2019-06 Simultaneous Release</a>. If product teams intending 
 	              to ship on 2019-06 (4.12) uncover further serious defects during the endgame, 
 	              we may schedule additional release candidate builds to incorporate fixes.
 			</p>    
