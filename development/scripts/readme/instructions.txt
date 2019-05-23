@@ -1,0 +1,12 @@
+This file contains the instructions to the run the scripts in this directory.
+
+1. Edit generatereadme.sh
+Example - 
+If 4.11 is the current release
+sed  -e 's/4\.11/4\.12/g'  readme_eclipse.html > readme_eclipse_new.html
+sed -i -e 's/4_11/4_12/g' readme_eclipse_new.html
+sed -i -e 's/4\.10/4\.11/g' readme_eclipse_new.html
+2. Run generatereadme.sh 
+
+Example:
+generatereadme.sh 
