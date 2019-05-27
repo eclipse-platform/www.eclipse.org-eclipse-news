@@ -52,7 +52,7 @@ ul {padding-left: 13px;}
   <tr id="quickfix-change-compliance-12"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=543781 -->
     <td class="title">Change project compliance and JRE to 12</td>
     <td class="content">
-      A quick fix <b>Change project compliance and JRE to 12</b> is provided to quickly change the current project to be compatible with Java 12.
+      A quick fix <b>Change project compliance and JRE to 12</b> is provided to change the current project to be compatible with Java 12.
     <p>
       <img src="images/quickfix-change-compliance-12.png" alt=""/>
     </p>
@@ -62,8 +62,8 @@ ul {padding-left: 13px;}
   <tr id="enable-preview"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=542579 -->
     <td class="title">Enable preview features</td>
     <td class="content">
-      You can enable preview features in Java 12 using <b>Preferences &gt; Java &gt; Compiler &gt; Enable preview features</b> option.
-      You can configure the problem severity of these preview features using the <b>Preview features with severity level</b>. 
+      Preview features in Java 12 can be enabled using <b>Preferences &gt; Java &gt; Compiler &gt; Enable preview features</b> option.
+      The problem severity of these preview features can be configured using the <b>Preview features with severity level</b> option. 
     <p>
       <img src="images/enable-preview.png" alt=""/>
     </p>
@@ -134,7 +134,7 @@ ul {padding-left: 13px;}
     <td class="title">Whitespace in 'switch'</td>
     <td class="content">
       As Java 12 introduced some new features into the <code>switch</code> construct, the formatter profile has some new settings for it.
-	  Namely, they control spaces around the arrow operator (separately for <code>case</code> and <code>default</code>) and around commas in multi-value case.
+	  Namely, they control spaces around the arrow operator (separately for <code>case</code> and <code>default</code>) and around commas in a multi-value case.
       <p>
        The settings can be found in the <b>Profile Editor</b> (<b>Preferences &gt; Java &gt; Code Style &gt; Formatter &gt; Edit...</b>) under the <b>White space &gt; Control statements &gt; 'switch'</b> subsection.
       </p>
@@ -177,7 +177,7 @@ ul {padding-left: 13px;}
    <td class="title">Show method parameter names on code as code mining decorations</td>
     <td class="content">
       In the <b>Java &gt; Editor &gt; Code Mining</b> preferences, you can now enable the <b>Show parameter names</b>
-      option. This will show the parameter name in method or constructor calls, for cases where the resolution may 
+      option. This will show the parameter names in method or constructor calls, for cases where the resolution may 
       not be obvious for a human reader.
       <p>
        For example, the code mining will be shown if the argument name in the method call is not an exact match of the parameter name or 
@@ -198,7 +198,7 @@ ul {padding-left: 13px;}
         <img src="images/method-implementation-codeminings.png" alt=""/>
       </p>
       <p>
-      Clicking on method implementations brings up the <b>Search</b> view which shows all implementations
+      Clicking on method implementations brings up the <b>Search</b> view that shows all implementations
       of the method in sub-types.
       </p>
       <p>
@@ -234,7 +234,7 @@ ul {padding-left: 13px;}
       <td class="title">Template to create Switch Labeled Statement and Switch Expressions</td>
       <td class="content">
           The Java Editor now offers new template for the creation of a Switch Labeled Statement as well as Switch Expressions.
-          On a switch statement 3 new templates <b>Switch Labeled Statement</b>, <b>Switch Case Expression </b> and <b> Switch Labeled Expression</b>
+          On a switch statement, three new templates, <b>Switch Labeled Statement</b>, <b>Switch Case Expression </b> and <b> Switch Labeled Expression</b>
           templates are available as shown below. These new Templates are available on Java Projects having Java 12 compliance or above. 
           <p>
               <img src="images/switch_labeled_statement.png" alt="" />
@@ -246,8 +246,8 @@ ul {padding-left: 13px;}
               <img src="images/switch_labeled_expression.png" alt="" />
           </p>
           
-          If <b>switch</b> is being used as an expression , then only <b>Switch Case Expression </b> and <b> Switch Labeled Expression</b>
-          templates are available as shown below 
+          If <b>switch</b> is being used as an expression, then only <b>Switch Case Expression</b> and <b>Switch Labeled Expression</b>
+          templates are available as shown below:
           <p>
               <img src="images/switch_expression_templates.png" alt="" />
           </p>
@@ -294,7 +294,7 @@ ul {padding-left: 13px;}
   <tr id="getter-setter-quick-assist"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=232920 -->
       <td class="title">Create getter or setter quick assist</td>
       <td class="content">
-          The Quick Assist for creating getter or setter methods from fields no longer forces creating both.
+          The quick assist for creating getter or setter methods from fields no longer forces creating both.
           <p>
               <img src="images/getter-setter-dialog-new.png" alt=""/>
           </p>
@@ -335,13 +335,13 @@ ul {padding-left: 13px;}
   			the following properties for this module:
   		</p>
 		<dl>
-		<dt><b>Read Module...</b></dt>
+		<dt><b>Read Module:</b></dt>
 		<dd>Select additional modules that should be accessible from the
 			selected module (corresponds to <code>--add-reads</code>)</dd>
-		<dt><b>Expose Package...</b></dt>
+		<dt><b>Expose Package:</b></dt>
 		<dd>Select additional packages to be exposed ("exports" or "opens")
 			from the selected module (corresponds to <code>--add-exports</code> or <code>--add-opens</code>)</dd>
-		<dt><b>Patch with...</b></dt>
+		<dt><b>Patch with:</b></dt>
 		<dd>Add more packages and classes to the selected module
 			(corresponds to <code>--patch-module</code>)</dd>
 		</dl>
@@ -391,7 +391,7 @@ ul {padding-left: 13px;}
    <tr id="run-to-line-in-annotation-ruler"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=498428 -->
     <td class="title">'Run to Line' on Ctrl+Alt+Click in annotation ruler</td>
     <td class="content">
-      Do Ctrl+Alt+Click on annotation ruler to invoke 'Run to Line' which will take the program execution run to the line of invocation.
+      A new shortcut, Ctrl+Alt+Click, has been added to the annotation ruler that will invoke 'Run to Line' and take the program execution to the line of invocation.
       <p>
       	<img src="images/run-to-line.png" alt="" />
       </p>
@@ -430,7 +430,7 @@ ul {padding-left: 13px;}
   <tr id="javadoc-support-tags"> 
    <td class="title">Support for new Javadoc tags</td>
     <td class="content">
-      The following Javadoc tags are supported and auto-complete now works for these tags.
+      The following Javadoc tags are now supported by the compiler and auto-complete.
       <p>
 		Tags introduced in JDK 8:<br/>
 		<code>@apiNote</code><br/>
