@@ -45,7 +45,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>Contributing to 4.12 M3 on Friday May 24</b></p>
+			<p><b>API and feature freeze and Release Candidate 1 build on Wednesday, May 29</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -53,7 +53,7 @@ ob_start();
 	          <tr>
 	            <td>May 2019</td>
 	          </tr>
-	          <tr class="current">
+	          <tr>
 	            <td></td>
 	            <td></td>
 	            <td></td>
@@ -64,7 +64,7 @@ ob_start();
 			  <tr>
 	            <td class="spacer">&nbsp;</td>
 	          </tr>
-	          <tr>
+	          <tr class="current">
 	            <td></td>
 	            <td class="date">29</td>
 	            <td class="date">Wed 18:00 EST</td>
@@ -72,7 +72,7 @@ ob_start();
 	            <td>API and feature freeze</td>
 	            <td></td>
 	          </tr>
-	          <tr>
+	          <tr class="current">
 	            <td></td>
 	            <td class="date">29</td>
 	            <td class="date">Wed 18:00 EST</td>
