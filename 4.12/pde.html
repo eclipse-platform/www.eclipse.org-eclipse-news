@@ -92,35 +92,36 @@ ul {padding-left: 13px;}
       named <code>org.eclipse.pde.api.tools.apiAnalysis</code>.
       <p>
         It can receive the following parameters:
-        <ul>
-        <li><code>-project &lt;/path/to/project></code> configures which project should be analyzed. It has to be a valid Plugin Project containing a .project file.</li>
-        <li><code>-dependencyList &lt;/path/to/a/dependencyList.txt></code> configures the target platform for the analysis. This file will be parsed, using new lines and
-           colon (:) as separator and all tokens that match a path on the filesystem will be added to the Target Platform.</li>
-        <li><code>-baseline &lt;default|/path/to/baseline.target></code> specifies the baseline to use for comparison. If omitted of <code>default</code>, it is the current
-           running platform. If a path to a <code>.target</code> file is specified, it will resolve the target definition and use the included bundles as baseline.</li>
-        <li><code>-failOnError</code> If present, the application will return an error (non-<code>0</code>) in case of API errors.</li>
-        </ul>
       </p>
+       <ul>
+       <li><code>-project &lt;/path/to/project></code> configures which project should be analyzed. It has to be a valid Plugin Project containing a .project file.</li>
+       <li><code>-dependencyList &lt;/path/to/a/dependencyList.txt></code> configures the target platform for the analysis. This file will be parsed, using new lines and
+          colon (:) as separator and all tokens that match a path on the filesystem will be added to the Target Platform.</li>
+       <li><code>-baseline &lt;default|/path/to/baseline.target></code> specifies the baseline to use for comparison. If omitted of <code>default</code>, it is the current
+          running platform. If a path to a <code>.target</code> file is specified, it will resolve the target definition and use the included bundles as baseline.</li>
+       <li><code>-failOnError</code> If present, the application will return an error (non-<code>0</code>) in case of API errors.</li>
+       </ul>
       <p>
         The API analysis uses the project settings, but forces the <em>incompatible api component version report major without breaking change</em> and <em>incompatible api  component version report minor without api change</em>
         rules breakage to be reported as errors.
       </p>
       <p>
         Example of invocation can look like:
-        <pre>./eclipse -project /home/mistria/sandbox/org.eclipse.e4.ui.css.core  -dependencyList /home/mistria/sandbox/org.eclipse.e4.ui.css.core/dependencies.txt -failOnError</pre>
       </p>
+      <pre>./eclipse -project /home/mistria/sandbox/org.eclipse.e4.ui.css.core  -dependencyList /home/mistria/sandbox/org.eclipse.e4.ui.css.core/dependencies.txt -failOnError</pre>
       <p>
         Additionally to the potential non-<code>0</code> result, example of output can look like:
-        <pre>
+      </p>
+      <pre>
 1 API ERRORS
 * Marker [on: /org.eclipse.e4.ui.css.core/META-INF/MANIFEST.MF, id: 80, type: org.eclipse.pde.api.tools.version_numbering, attributes: [apiMarkerID: 4, charEnd: 228, charStart: 210, description: , lineNumber: 7, message: The minor version should be the same for version 0.11.400, since no new APIs have been added since version 0.12.700, messagearguments: 0.11.400#0.12.700, problemid: 926941240, severity: 2, sourceId: API Tools, version: 0.12.700.qualifier], created: 5/16/19, 5:36 PM]
 1 API warnings
 * Marker [on: /org.eclipse.e4.ui.css.core, id: 81, type: org.eclipse.pde.api.tools.api_usage, attributes: [apiMarkerID: 3, charEnd: -1, charStart: -1, lineNumber: 0, message: Execution environment references were not checked for 'org.eclipse.e4.ui.css.core' because no environment descriptions are installed. , messagearguments: org.eclipse.e4.ui.css.core, problemid: 665845798, severity: 1, sourceId: API Tools], created: 5/16/19, 5:36 PM]
-        </pre>
-      </p>
+      </pre>
       <p>
         Here is an example of how this could be used in Tycho to trigger API checks in a Tycho build, in <code>pom.xml</code>
-        <pre>
+      </p>
+      <pre>
 &lt;project>
 	[...]	
 	&lt;build>
@@ -191,8 +192,7 @@ ul {padding-left: 13px;}
 		&lt;/plugins>
 	&lt;/build>
 &lt;/project>
-        </pre>
-      </p>
+      </pre>
     </td>
   </tr>
   <!-- ******************** End of APITools ********************** -->
