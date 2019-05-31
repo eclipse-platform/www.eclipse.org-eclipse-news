@@ -44,10 +44,11 @@ ul {padding-left: 13px;}
   </tr>
   
   <tr id="pass-directory-to-launcher"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=500388 -->
-   <td class="title">Smart import of directory passed on command-line</td>
+   <td class="title">Import project passing it as command-line argument</td>
     <td class="content">
-      When a directory name is passed to the Eclipse launcher on command-line (such as <code>eclipse .</code> or <code>eclipse ~/git/eclipse.platform.ui</code>),
-      the generic "smart" <b>Import projects</b> wizard is shown and suggests a plan to import the project into the workspace.
+      You can import a project by passing its path as parameter to the launcher.
+      The command would look like <code>eclipse /path/to/project</code> on Linux and Windows, or
+      <code>open Eclipse.app -a /path/to/project</code> on macOS.
       <p>
         <img src="images/pass-directory-to-launcher.png" alt="" />
       </p> 
