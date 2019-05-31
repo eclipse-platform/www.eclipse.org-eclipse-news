@@ -108,16 +108,20 @@ ul {padding-left: 13px;}
       <p>
         Example of invocation can look like:
       </p>
-      <pre>./eclipse -project /home/mistria/sandbox/org.eclipse.e4.ui.css.core  -dependencyList /home/mistria/sandbox/org.eclipse.e4.ui.css.core/dependencies.txt -failOnError</pre>
+      <p>
+      <code>./eclipse -project /home/mistria/sandbox/org.eclipse.e4.ui.css.core  -dependencyList /home/mistria/sandbox/org.eclipse.e4.ui.css.core/dependencies.txt -failOnError</code>
+      </p>
       <p>
         Additionally to the potential non-<code>0</code> result, example of output can look like:
       </p>
-      <pre>
+      <p>
+      <code>
 1 API ERRORS
 * Marker [on: /org.eclipse.e4.ui.css.core/META-INF/MANIFEST.MF, id: 80, type: org.eclipse.pde.api.tools.version_numbering, attributes: [apiMarkerID: 4, charEnd: 228, charStart: 210, description: , lineNumber: 7, message: The minor version should be the same for version 0.11.400, since no new APIs have been added since version 0.12.700, messagearguments: 0.11.400#0.12.700, problemid: 926941240, severity: 2, sourceId: API Tools, version: 0.12.700.qualifier], created: 5/16/19, 5:36 PM]
 1 API warnings
 * Marker [on: /org.eclipse.e4.ui.css.core, id: 81, type: org.eclipse.pde.api.tools.api_usage, attributes: [apiMarkerID: 3, charEnd: -1, charStart: -1, lineNumber: 0, message: Execution environment references were not checked for 'org.eclipse.e4.ui.css.core' because no environment descriptions are installed. , messagearguments: org.eclipse.e4.ui.css.core, problemid: 665845798, severity: 1, sourceId: API Tools], created: 5/16/19, 5:36 PM]
-      </pre>
+      </code>
+      </p>
       <p>
         Here is an example of how this could be used in Tycho to trigger API checks in a Tycho build, in <code>pom.xml</code>
       </p>
