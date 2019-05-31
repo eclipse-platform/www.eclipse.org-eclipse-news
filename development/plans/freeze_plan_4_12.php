@@ -72,7 +72,7 @@ ob_start();
 	            <td>API and feature freeze</td>
 	            <td></td>
 	          </tr>
-	          <tr class="current">
+	          <tr>
 	            <td></td>
 	            <td class="date">29</td>
 	            <td class="date">Wed 18:00 EST</td>
