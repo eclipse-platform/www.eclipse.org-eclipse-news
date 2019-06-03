@@ -26,7 +26,7 @@ ul {padding-left: 13px;}
     <li><a href="#ViewsAndDialogs">Views, Dialogs and Wizards</a></li>
     <!--<li><a href="#Preferences">Preferences</a></li>-->
     <li><a href="#StylingThemes">Themes and Styling</a></li>
-    <li><a href="#GeneralUpdates">General Updates</a></li>
+    <li><a href="#Equinox">Equinox</a></li>
 </ul>
 
 <!-- ****************** START OF N&N TABLE ****************** -->
@@ -44,9 +44,9 @@ ul {padding-left: 13px;}
   </tr>
   
   <tr id="pass-directory-to-launcher"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=500388 -->
-   <td class="title">Import project passing it as command-line argument</td>
+   <td class="title">Import project by passing it as command-line argument</td>
     <td class="content">
-      You can import a project by passing its path as parameter to the launcher.
+      You can import a project into Eclipse by passing its path as a parameter to the launcher.
       The command would look like <code>eclipse /path/to/project</code> on Linux and Windows, or
       <code>open Eclipse.app -a /path/to/project</code> on macOS.
       <p>
@@ -58,15 +58,15 @@ ul {padding-left: 13px;}
   <tr id="launch-config-quickaccess"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=545544 -->
     <td class="title">Launch Run and Debug configurations from Quick Access</td>
       <td class="content">
-      From the Quick Access proposals (usually accessible with <code>Ctrl+3</code> shortcut) you can now
-      directly launch any of the Run or Debug configuration available in your workspace.
+      From the <b>Quick Access</b> proposals (accessible with <code>Ctrl+3</code> shortcut) you can now
+      directly launch any of the Run or Debug configurations available in your workspace.
       <p>
         <img src="images/run-debug-quickaccess.png" alt="" />
       </p>
       <p>
-      Note: for performance reason, the extra Quick Access entries are only visible if the <code>org.eclipse.debug.ui</code>
-      bundle was already activated by some previous action in the workbench (like editing some launch configuration, or expanding the
-      <i>Run As...</i> menus).
+      <b>Note:</b> For performance reasons, the extra <b>Quick Access</b> entries are only visible if the <code>org.eclipse.debug.ui</code>
+      bundle was already activated by some previous action in the workbench such as editing a launch configuration, or expanding the
+      <i>Run As...</i> menus.
       </p>
     </td>
   </tr>
@@ -89,21 +89,6 @@ ul {padding-left: 13px;}
       </td>
     </tr>
     
-    <tr id="dark-theme-background-lines"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=544360 -->
-     <td class="title">Table/Tree background lines shown in dark theme on Mac</td>
-      <td class="content">
-        In dark theme on Mac, the Table and Trees in Eclipse now show the alternating dark lines 
-        in the background when <code>setLinesVisible(true)</code> is set. 
-        Earlier they had a gray background even if line visibility was true.
-        <p>
-        	Example of a Tree and Table in Eclipse with alternating dark lines in the background:
-        </p>
-        <p>
-          <img src="images/dark-theme-alternating-lines.png" alt="Tree and Table in Eclipse with alternating dark lines in the background" />
-        </p>
-      </td>
-    </tr>
-    
     <tr id="view-menu"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=466511 -->
      <td class="title">Improved View Menu Icon</td>
       <td class="content">
@@ -114,18 +99,8 @@ ul {padding-left: 13px;}
           <img src="images/view_menu.png" alt="" />
         </p>
       </td>
-    </tr>  
-
-    <!-- ******************* End of Themes and Styling ************************************* -->
-  
-
-    <!-- ******************* General Updates ************************************* -->
-    <tr>
-      <td id="GeneralUpdates" class="section" colspan="2">
-      <h2>General Updates </h2>
-      </td>
     </tr>
-
+    
     <tr id="mac-hidpi"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=489451 -->
      <td class="title">High resolution images drawn on Mac</td>
       <td class="content">
@@ -139,27 +114,54 @@ ul {padding-left: 13px;}
           <img src="images/hidpi-mac-new-behavior.png" alt="" />
         </p>
       </td>
-    </tr>  
+    </tr>
+    
+    <tr id="dark-theme-background-lines"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=544360 -->
+     <td class="title">Table/Tree background lines shown in dark theme on Mac</td>
+      <td class="content">
+        In dark theme on Mac, the <code>Table</code> and <code>Trees</code> in Eclipse now show the alternating dark lines 
+        in the background when <code>setLinesVisible(true)</code> is set. 
+        Earlier they had a gray background even if line visibility was true.
+        <p>
+        	Example of a Tree and Table in Eclipse with alternating dark lines in the background:
+        </p>
+        <p>
+          <img src="images/dark-theme-alternating-lines.png" alt="Tree and Table in Eclipse with alternating dark lines in the background" />
+        </p>
+      </td>
+    </tr>
+    <!-- ******************* End of Themes and Styling ************************************* -->
+  
+
+    <!-- ******************* Equinox ************************************* -->
+    <tr>
+      <td id="Equinox" class="section" colspan="2">
+      <h2>Equinox</h2>
+      </td>
+    </tr>
 
     <tr id="parallel-bundle-activation"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=540507 -->
      <td class="title">Support activating bundles in parallel</td>
       <td class="content">
-        When the Equinox OSGi Framework is launched the installed bundles are activated
-        according to their configured start-level.  The bundles with lower start-levels are
-        activated first.  Bundles within the same start-level are activated sequentially from
-        a single thread.  A new configuration option has been added (<code>equinox.start.level.thread.count</code>)
+        When the <b>Equinox OSGi Framework</b> is launched the installed bundles are activated
+        according to their configured start-level. The bundles with lower start-levels are
+        activated first. Bundles within the same start-level are activated sequentially from
+        a single thread.
+        <p>
+        A new configuration option <code>equinox.start.level.thread.count</code> has been added 
         that enables the framework to start bundles within the same start-level in parallel. The
         default value is <code>1</code> which keeps the previous behavior of activating bundles from a
         single thread. Setting the value to <code>0</code> enables parallel activation using a
-        thread count equal to <code>Runtime.getRuntime().availableProcessors()</code>.  Setting the
+        thread count equal to <code>Runtime.getRuntime().availableProcessors()</code>. Setting the
         value to a number greater than <code>1</code> will use the specified number as the thread
         count for parallel bundle activation.
+        </p>
         <p>The default is <code>1</code> because of the risk of possible deadlock when
         activating bundles in parallel.  Extensive testing must be done on the set of bundle
         installed in the framework before considering enabling this option in a product.</p>
       </td>
     </tr>
-  <!-- ******************* End of General Updates ************************************* -->
+  <!-- ******************* End of Equinox ************************************* -->
 </tbody>
 </table>
 <!-- ****************** END OF N&N TABLE ****************** -->

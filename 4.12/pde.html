@@ -43,7 +43,7 @@ ul {padding-left: 13px;}
   <tr id="pde-target-platform-preferences"> <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=546400 -->
     <td class="title">Target Platform preferences</td>
     <td class="content">
-	The Target Platform preference page now allows to change the height balance between "Target definitions" and "Locations" areas.
+	The <b>Preferences &gt; Plug-in Development &gt; Target Platform</b> preference page now allows to change the height balance between 'Target definitions' and 'Locations' areas.
     </td>
   </tr>
   <!--
@@ -57,9 +57,9 @@ ul {padding-left: 13px;}
     <td id="editors" class="section" colspan="2"><h2>Editors</h2></td>
   </tr>
   <tr id="pde-category-editor-source"> <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=546803 https://bugs.eclipse.org/bugs/show_bug.cgi?id=547322 -->
-    <td class="title">"Source" tab for Product and Category Editor</td>
+    <td class="title">'Source' tab for Product and Category Editor</td>
     <td class="content">
-	Both the Product and Category Editors now have a "Source" tab to enable direct access to their manifests.
+	The <b>Product Editor</b> and <b>Category Editor</b> now have a 'Source' tab to enable direct access to their manifests.
     <p>
         <img src="images/pde-category-editor-source.png" alt="" />
     </p>
@@ -94,10 +94,10 @@ ul {padding-left: 13px;}
         It can receive the following parameters:
       </p>
        <ul>
-       <li><code>-project &lt;/path/to/project></code> configures which project should be analyzed. It has to be a valid Plugin Project containing a .project file.</li>
+       <li><code>-project &lt;/path/to/project></code> configures which project should be analyzed. It has to be a valid Plug-in project containing a .project file.</li>
        <li><code>-dependencyList &lt;/path/to/a/dependencyList.txt></code> configures the target platform for the analysis. This file will be parsed, using new lines and
           colon (:) as separator and all tokens that match a path on the filesystem will be added to the Target Platform.</li>
-       <li><code>-baseline &lt;default|/path/to/baseline.target></code> specifies the baseline to use for comparison. If omitted of <code>default</code>, it is the current
+       <li><code>-baseline &lt;default|/path/to/baseline.target></code> specifies the baseline to use for comparison. If omitted or <code>default</code>, it is the current
           running platform. If a path to a <code>.target</code> file is specified, it will resolve the target definition and use the included bundles as baseline.</li>
        <li><code>-failOnError</code> If present, the application will return an error (non-<code>0</code>) in case of API errors.</li>
        </ul>

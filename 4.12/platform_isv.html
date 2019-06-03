@@ -161,9 +161,9 @@ public static IValueProperty&lt;ModelEObject, String&gt; name(EditingDomain edit
   </tr>
 
   <tr id="cnf-tooltip-support"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=178017 -->
-    <td class="title">ToolTip Support for CommonViewers</td>
+    <td class="title">Tooltip support for CommonViewers</td>
     <td class="content">
-      It is now possible to provide tooltips to <code>CommonViewer</code>s via <code>ILabelProvider</code>s.
+      It is now possible to provide tooltips to <code>CommonViewer</code> via <code>ILabelProvider</code>.
       <p>To do this, two steps are necessary:</p>
       <ol>
         <li>Enable tooltip support for the respective viewer by setting the option <code>org.eclipse.ui.navigator.enableTooltipSupport</code> to 
@@ -190,12 +190,13 @@ public static IValueProperty&lt;ModelEObject, String&gt; name(EditingDomain edit
   </tr>
   
   <tr id="wizard-dialog-nonmodal"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=147762 -->
-   <td class="title">Wizards can now be nonmodal</td>
+   <td class="title">Wizards can now be non-modal</td>
     <td class="content">
-    We have introduced new API to <code>WizardDialog</code> to enable a wizard to be nonmodal.
+    New APIs have been added to <code>WizardDialog</code> to enable a wizard to be non-modal.
 	<p>
-		When a dialog is modal it means that the underlying window can not be used. Eclipse Wizard Dialogs are modal by default. There are cases where it is desired that the dialog is not modal but that the underlying window can be reached WHILE the user is finishing the wizard.
-		The following API methods are added to the JFace <code>WizardDialog</code>.
+		When a dialog is modal it means that the underlying window can not be used. Eclipse Wizard Dialogs are modal by default. 
+		There are cases where it is desired that the dialog is not modal but that the underlying window can be reached <b>while</b> the user is finishing the wizard.
+		The following API methods are added to the JFace <code>WizardDialog</code> class.
 	</p>
 	<ul>
 		<li><code>public WizardDialog setModal(boolean modal)</code></li>
@@ -228,7 +229,7 @@ public static IValueProperty&lt;ModelEObject, String&gt; name(EditingDomain edit
   <tr id="swt-lines-visible"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=544360 -->
    <td class="title">CSS attribute swt-lines-visible</td>
     <td class="content">
-      A new css attribute 'swt-lines-visible' is supported on <code>Table</code> and <code>Tree</code> widgets and is mapped to <code>getLinesVisible()</code>.
+      A new css attribute <code>'swt-lines-visible'</code> is supported on <code>Table</code> and <code>Tree</code> widgets and is mapped to <code>getLinesVisible()</code>.
       <p>
       	For example: The value of this property is true if <code>Tree.getLinesVisible()</code> returns true, else the value is false.
       </p>
@@ -243,7 +244,7 @@ public static IValueProperty&lt;ModelEObject, String&gt; name(EditingDomain edit
   </tr>
  
  <tr id="dark-theme-mac"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=540357 -->
-  	<td class="title">Dark mode support on macOS</td>
+  	<td class="title">Dark mode support on Mac</td>
   	<td class="content">
   		An SWT application on macOS 10.14 can now be launched in dark theme and all the controls are rendered with the native dark appearance.
   		The application will automatically launch in the light or dark theme based on the System appearance (set in System preferences). 
@@ -259,9 +260,9 @@ public static IValueProperty&lt;ModelEObject, String&gt; name(EditingDomain edit
   </tr>
 
   <tr id="display-dispose-gtk"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=531634 -->
-  	<td class="title">Display.Close and Display.Dispose events are now supported on GTK on logoff/shutdown</td>
+  	<td class="title">Display.Close and Display.Dispose events sent on GTK on logoff/shutdown</td>
   	<td class="content">
-		This works on GNOME and XFCE (> 4.13) sessions. This brings Linux in line with Windows and Mac OS implementations:
+		<code>Display.Close</code> and <code>Display.Dispose</code> events are now supported on GTK on logoff/shutdown. This works on GNOME and XFCE (> 4.13) sessions. This brings Linux/GTK in line with the Windows and Mac implementations:
 		<ul>
 		<li><code>Display.Close</code> can set the <code>Event.doit</code> to <code>false</code> to send a "not ready" hint to the session manager. However, the session manager will usually ignore this hint and continue logoff/shutdown anyway. The time limit imposed by the session manager is 1 second, so it is not suitable for showing the user any UI.</li>
 		<li><code>Display.Dispose</code> lets you run any final cleanup, such as saving settings on exit. Also, any code you have after a <code>while (!xxx.isDisposed())</code> loop will run now. The time limit imposed by the session manager is 10 seconds.</li>

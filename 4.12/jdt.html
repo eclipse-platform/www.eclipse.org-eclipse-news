@@ -93,7 +93,7 @@ ul {padding-left: 13px;}
   <tr id="quickfix-default-switch-statement"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=543665 -->
     <td class="title">Add default case to switch statement</td>
     <td class="content">
-      A quick fix <b>Add 'default' case</b> is provided to add default case to enhanced switch statement in Java 12.
+      A quick fix <b>Add 'default' case</b> is provided to add default case to a enhanced switch statement in Java 12.
     <p>
       <img src="images/quickfix-default-switch-statement.png" alt=""/>
     </p>
@@ -103,7 +103,7 @@ ul {padding-left: 13px;}
   <tr id="quickfix-missing-case-switch-statement"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=545259 -->
     <td class="title">Add missing case statements to switch statement</td>
     <td class="content">
-      A quick fix <b>Add missing case statements</b> is provided for enhanced switch statement in Java 12.
+      A quick fix <b>Add missing case statements</b> is provided for a enhanced switch statement in Java 12.
     <p>
       <img src="images/quickfix-missing-case-switch-statement.png" alt=""/>
     </p>
@@ -113,7 +113,7 @@ ul {padding-left: 13px;}
   <tr id="quickfix-default-switch-expression"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=545256 -->
     <td class="title">Add default case to switch expression</td>
     <td class="content">
-      A quick fix <b>Add 'default' case</b> is provided to add default case to switch expression.
+      A quick fix <b>Add 'default' case</b> is provided to add default case to a switch expression.
     <p>
       <img src="images/quickfix-default-switch-expression.png" alt=""/>
     </p>
@@ -131,10 +131,10 @@ ul {padding-left: 13px;}
   </tr>
 
   <tr id="switch-spaces"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=545423 -->
-    <td class="title">Whitespace in 'switch'</td>
+    <td class="title">Format whitespaces in 'switch'</td>
     <td class="content">
       As Java 12 introduced some new features into the <code>switch</code> construct, the formatter profile has some new settings for it.
-	  Namely, they control spaces around the arrow operator (separately for <code>case</code> and <code>default</code>) and around commas in a multi-value case.
+	  The settings allow you to control spaces around the arrow operator (separately for <code>case</code> and <code>default</code>) and around commas in a multi-value case.
       <p>
        The settings can be found in the <b>Profile Editor</b> (<b>Preferences &gt; Java &gt; Code Style &gt; Formatter &gt; Edit...</b>) under the <b>White space &gt; Control statements &gt; 'switch'</b> subsection.
       </p>
@@ -147,7 +147,7 @@ ul {padding-left: 13px;}
   <tr id="split-switch-case-labels"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=545261 -->
     <td class="title">Split Switch Case Labels</td>
     <td class="content">
-      As Java 12 introduced the ability to group multiple <code>switch</code> case labels into a single case expression, we introduce a quick assist that allows these grouped labels to be split into separate case statements.
+      As Java 12 introduced the ability to group multiple <code>switch</code> case labels into a single case expression, a quick assist is provided that allows these grouped labels to be split into separate case statements.
       <p>
         <img src="images/split-switch-case-labels.png" alt="" />
       </p>
@@ -174,10 +174,10 @@ ul {padding-left: 13px;}
   </tr>
 
   <tr id="parameter-name-codemining"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=529011 -->
-   <td class="title">Show method parameter names on code as code mining decorations</td>
+   <td class="title">Show method parameter names on code as code minings</td>
     <td class="content">
       In the <b>Java &gt; Editor &gt; Code Mining</b> preferences, you can now enable the <b>Show parameter names</b>
-      option. This will show the parameter names in method or constructor calls, for cases where the resolution may 
+      option. This will show the parameter names as code minings in method or constructor calls, for cases where the resolution may 
       not be obvious for a human reader.
       <p>
        For example, the code mining will be shown if the argument name in the method call is not an exact match of the parameter name or 
@@ -189,7 +189,7 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   <tr id="method-implementation-codemining"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=529011 -->
-   <td class="title">Show implementations of methods as part of code mining decorations</td>
+   <td class="title">Show number of implementations of methods as code minings</td>
     <td class="content">
       In the <b>Java &gt; Editor &gt; Code Mining</b> preferences, selecting <b>Show implementations</b>
       with the <b>Show References (including implementations) for</b> -> <b>Methods</b> option now shows
@@ -207,7 +207,7 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   <tr id="ctrl-click-codemining"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=529011 -->
-   <td class="title">Ctrl+Click on single implementation/reference code mining opens editor</td>
+   <td class="title">Open single implementation/reference in editor from code mining</td>
     <td class="content">
       When the <b>Java &gt; Editor &gt; Code Mining</b> preferences are enabled and a single implementation or reference is shown, moving the cursor over the annotation and using <b>Ctrl+Click</b> will open the editor and display the single implementation or reference.
       <p>
@@ -215,7 +215,6 @@ ul {padding-left: 13px;}
       </p>
     </td>
   </tr>
-
 
   <tr id="service-provider-constructor-quick-fix"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=541261 -->
    <td class="title">Additional quick fixes for service provider constructors</td>
@@ -233,9 +232,9 @@ ul {padding-left: 13px;}
   <tr id="new-switch_labeled_statment_expression_template"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=545417 -->
       <td class="title">Template to create Switch Labeled Statement and Switch Expressions</td>
       <td class="content">
-          The Java Editor now offers new template for the creation of a Switch Labeled Statement as well as Switch Expressions.
-          On a switch statement, three new templates, <b>Switch Labeled Statement</b>, <b>Switch Case Expression </b> and <b> Switch Labeled Expression</b>
-          templates are available as shown below. These new Templates are available on Java Projects having Java 12 compliance or above. 
+          The <b>Java Editor</b> now offers new templates for the creation of switch labeled statements and switch expressions.
+          On a switch statement, three new templates: <b>switch labeled statement</b>, <b>switch case expression</b> and <b>switch labeled expression</b>
+           are available as shown below. These new templates are available on Java projects having compliance level of Java 12 or above. 
           <p>
               <img src="images/switch_labeled_statement.png" alt="" />
           </p>
@@ -246,7 +245,7 @@ ul {padding-left: 13px;}
               <img src="images/switch_labeled_expression.png" alt="" />
           </p>
           
-          If <b>switch</b> is being used as an expression, then only <b>Switch Case Expression</b> and <b>Switch Labeled Expression</b>
+          If <b>switch</b> is being used as an expression, then only <b>switch case expression</b> and <b>switch labeled expression</b>
           templates are available as shown below:
           <p>
               <img src="images/switch_expression_templates.png" alt="" />
@@ -254,7 +253,6 @@ ul {padding-left: 13px;}
            
       </td>
   </tr>
-
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
@@ -264,11 +262,10 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   
-  
   <tr id="comment-generation-checkbox"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=545011 -->
-   <td class="title">Checkbox to control comment generation in modules and packages</td>
+   <td class="title">Enable comment generation in modules and packages</td>
     <td class="content">
-      An option is now available to control the comment generation while creating <code>module-info.java</code>
+      An option is now available to enable/disable the comment generation while creating <code>module-info.java</code>
       or <code>package-info.java</code>.
       <p>
         <img src="images/module-info-comment-generation-check-box.png" alt=""/>
@@ -279,9 +276,9 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   <tr id="getter-setter-quick-assist"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=232920 -->
-      <td class="title">Create getter or setter quick assist</td>
+      <td class="title">Improved 'create getter and setter' quick assist</td>
       <td class="content">
-          The quick assist for creating getter or setter methods from fields no longer forces creating both.
+          The quick assist for creating getter and setter methods from fields no longer forces you to create both.
           <p>
               <img src="images/getter-setter-dialog-new.png" alt=""/>
           </p>
@@ -345,15 +342,15 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   <tr id="new-java-index">
-    <td class="title">New Java index retired</td>
+    <td class="title">Experimental Java index retired</td>
     <td class="content">
-      Eclipse 4.7 introduced an experimental new Java index which was disabled by default.<br/>
+      Eclipse 4.7 introduced a new experimental Java index which was disabled by default.<br/>
       Due to lack of resources to properly support all Java 9+ language changes,
       this index is not available anymore starting with Eclipse 4.12.
       <p>
       The preference to enable it in <b>Preferences &gt; Java</b> is removed and the old index will be always used.
       </p>
-      Note: <b>Preferences &gt; Java &gt; Rebuild Index</b> button can be used to delete the existing index files and free disk space.
+      <b>Note:</b> <b>Preferences &gt; Java &gt; Rebuild Index</b> button can be used to delete the existing index files and free disk space.
     </td>
   </tr>
 
@@ -378,7 +375,7 @@ ul {padding-left: 13px;}
    <tr id="run-to-line-in-annotation-ruler"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=498428 -->
     <td class="title">'Run to Line' on Ctrl+Alt+Click in annotation ruler</td>
     <td class="content">
-      A new shortcut, Ctrl+Alt+Click, has been added to the annotation ruler that will invoke 'Run to Line' and take the program execution to the line of invocation.
+      A new shortcut, <b>Ctrl+Alt+Click</b>, has been added to the annotation ruler that will invoke the <b>'Run to Line'</b> command and take the program execution to the line of invocation.
       <p>
       	<img src="images/run-to-line.png" alt="" />
       </p>
@@ -386,9 +383,9 @@ ul {padding-left: 13px;}
   </tr>
   
   <tr id="content-assist-debug-shell"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=546071 -->
-    <td class="title">Content assist for Debug Shell</td>
+    <td class="title">Content assist in Debug Shell</td>
     <td class="content">
-      Content assist <b>(Ctrl+Space)</b> support is now available for Debug Shell. 
+      Content assist <b>(Ctrl+Space)</b> support is now available in the <b>Debug Shell</b>. 
       <p><img src="images/content-assist-debug-shell.png" alt=""/></p>
     </td>
   </tr>
@@ -396,7 +393,7 @@ ul {padding-left: 13px;}
   <tr id="jstc-clear-initial-message"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=343023 -->
     <td class="title">Clear Java Stack Trace Console usage hint on first edit</td>
     <td class="content">
-      The Java Stack Trace Console shows a usage hint when opened the first time. This message is now automatically removed 
+      The <b>Java Stack Trace Console</b> shows a usage hint when opened the first time. This message is now automatically removed 
       when the user starts typing or pasting a stack trace.
       <p><img src="images/jstc-initial-clear.png" alt=""/></p>
     </td>
