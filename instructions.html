@@ -231,6 +231,21 @@ table.news tr td.content {vertical-align: top;}
         Use the W3C <a href="http://validator.w3.org/#validate_by_input">XHTML
         Markup Validation Service</a> to check your document's markup before
         submitting.
+        <p>
+         Run <b>scripts/validateHtmlNewsRepo.sh</b> to validate the html files in a release folder using a script.
+         Instructions can be found in scripts/instructions.txt.
+        </p>
+    </td>
+  </tr>
+  <tr id="init">
+    <td class="title">Initialization</td>
+    <td class="content">
+        To create the directory and all the related content for a new release, use the 4.x-template directory.
+        Replace 4.x in the html files with the eclipse project's release version and YYYY-MM with the SimRel release name.
+        <p>
+         Run <b>scripts/applyTemplate.sh</b> to automatically do these steps for you. 
+         Instructions to run the script can be found in scripts/instructions.txt.
+    	</p>
     </td>
   </tr>
 
