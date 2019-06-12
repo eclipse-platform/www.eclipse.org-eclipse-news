@@ -44,6 +44,22 @@ ul {padding-left: 13px;}
   <tr>
     <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
   </tr>
+
+	<tr id="gdkpixbuf-imageloader">
+  	<td class="title">New native implementation of ImageLoader on GTK</td>
+  	<td class="content">
+  		The implementation of <code>ImageLoader</code> on GTK now uses the native <code>GdkPixbuf</code> API for image loading and saving.
+  		<p>
+  		 Key highlights of the new ImageLoader on GTK:
+  		</p>
+  		 <ul>
+  		 	<li>Loading and saving images has native performance, with ~200% increase in loading time for JPEG files</li>
+  		 	<li>Better GIF animation support</li>
+  		 	<li>Support for more image formats</li>
+  		 </ul>
+  	</td>
+  </tr>
+
   <!-- *********************** End of SWT *********************** -->
 
 </tbody>
