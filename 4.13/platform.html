@@ -42,7 +42,16 @@ ul {padding-left: 13px;}
     <h2>Views, Dialogs and Toolbar </h2>
     </td>
   </tr>
-
+  <tr id="save-action-project-explorer"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=211520 -->
+     <td class="title">Save editor when Project Explorer have focus</td>
+      <td class="content">
+      You can now save the active editor when the <b>Project Explorer</b> has focus. In case some extensions contribute <b>Saveables</b> to the Project Explorer, 
+      then those extensions are honored and the save action on Project Explorer will save the provided saveable item instead of the active editor.
+		<p>
+		<img src="images/save_project_explorer.png" alt=""/>
+		</p>
+      </td>
+    </tr>
   <tr id="showin-action-project-explorer"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=314642 -->
     <td class="title">"Show In" context menu is available for normal resources</td>
     <td class="content">
