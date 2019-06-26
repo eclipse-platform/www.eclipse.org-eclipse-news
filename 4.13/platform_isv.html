@@ -84,6 +84,16 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="swt-gtk-input-methods"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=548628 -->
+    <td class="title">Input method switching on GTK</td>
+    <td class="content">
+      Early versions of GTK3 allowed the input method to be changed at the application level. This
+			functionality has been deprecated for quite some time, and has now been removed from SWT.
+      <p>To change the input method, please use the global input method settings available in the desktop
+			environment.</p>
+    </td>
+  </tr>
+
   <!-- *********************** End of SWT *********************** -->
 
 </tbody>
