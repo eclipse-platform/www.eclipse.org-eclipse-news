@@ -25,7 +25,7 @@ ul {padding-left: 13px;}
 <ul>
 	<li><a href="#dialogs-wizards-views">Dialogs, Wizards and Views</a></li>
 	<!-- <li><a href="#editors">Editors</a></li> -->
-	<!-- <li><a href="#APITools">API Tools</a></li> -->
+	<li><a href="#APITools">API Tools</a></li>
 	<!-- <li><a href="#pde-compiler">PDE Compiler</a></li> -->
 </ul>
 
@@ -61,9 +61,23 @@ ul {padding-left: 13px;}
   <!-- ******************** End of Editors ********************** -->
 
   <!-- ******************** APITools ********************** -->
-  <!-- <tr> -->
-    <!-- <td id="APITools" class="section" colspan="2"><h2>API Tools</h2></td> -->
-  <!-- </tr> -->
+  <tr>
+    <td id="APITools" class="section" colspan="2"><h2>API Tools</h2></td>
+  </tr>
+
+  <tr id="quickfix-for-first-api-addition"> <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=243878 -->
+    <td class="title">Add missing since tag after version update quickfix</td>
+    <td class="content">
+	In cases of first API addition or first API breaking change, there is a quickfix that adds first
+	updates the version appropriately and then adds the since tag based on the updated version.
+	 <p>
+        <img src="images/pde-api-addition.png" alt="" />
+    </p>
+    </td>
+  </tr>
+  
+
+  </tr>
   <!-- ******************** End of APITools ********************** -->
   
    <!-- ******************** PDE Compiler ********************** -->
