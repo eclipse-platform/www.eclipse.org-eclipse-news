@@ -48,7 +48,8 @@ ul {padding-left: 13px;}
   <tr id="javax-injext">
   <td class="title">Bundle org.eclipse.core.runtime no longer reexports javax.inject</td>
   <td class="content">
-  		The org.eclipse.core.runtime bundle had <b>optional</b> dependency and reexported it. Technically it's not a breaking change as <code>javax.inject</code> was never
+  		The org.eclipse.core.runtime bundle had <code>javax.inject</code> as <b>optional</b> dependency, which it
+		previously reexported, but not anymore. Technically it's not a breaking change as <code>javax.inject</code> was never
 		guaranteed to be there thus whether it is reexported or not was not certain. Eclipse Platform can not guarantee the API stability of this package so it makes no 
 		sense to make such a promise. Clients have to <code>Import-Package: javax.inject</code> explicitly if they need it.
   </td>
