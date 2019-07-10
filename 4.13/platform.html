@@ -26,8 +26,8 @@ ul {padding-left: 13px;}
     <li><a href="#ViewsAndDialogs">Views, Dialogs and Toolbar</a></li>
     <li><a href="#Debug">Debug</a></li>
     <li><a href="#Preferences">Preferences</a></li>
-    <li><a href="#StylingThemes">Themes and Styling</a></li>
-    <li><a href="#GeneralUpdates">General Updates</a></li>
+    <!--<li><a href="#StylingThemes">Themes and Styling</a></li>
+    <li><a href="#GeneralUpdates">General Updates</a></li>-->
 </ul>
 
 <!-- ****************** START OF N&N TABLE ****************** -->
@@ -45,28 +45,28 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   <tr id="save-action-project-explorer"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=211520 -->
-     <td class="title">Save editor when Project Explorer have focus</td>
+     <td class="title">Save editor when Project Explorer has focus</td>
       <td class="content">
-      You can now save the active editor when the <b>Project Explorer</b> has focus. In case some extensions contribute <b>Saveables</b> to the Project Explorer, 
-      then those extensions are honored and the save action on Project Explorer will save the provided saveable item instead of the active editor.
+      You can now save the active editor even when the <b>Project Explorer</b> has focus. In cases where an extension contributes <b>Saveables</b> to the Project Explorer, 
+      the extension is honored and the save action on the Project Explorer will save the provided saveable item instead of the active editor.
 		<p>
 		<img src="images/save_project_explorer.png" alt=""/>
 		</p>
       </td>
     </tr>
   <tr id="showin-action-project-explorer"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=314642 -->
-    <td class="title">"Show In" context menu is available for normal resources</td>
+    <td class="title">"Show In" context menu available for normal resources</td>
     <td class="content">
-		  <b>"Show In"</b>context menu is now available for an element inside a resource project on <b>Project Explorer</b>.
+		  <b>"Show In"</b>context menu is now available for an element inside a resource project on the <b>Project Explorer</b>.
 		  <p>
 		    <img src="images/showin_project_explorer.png" alt=""/>
 		  </p>
     </td>
   </tr>
   <tr id="external-tool-showcommandline"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=548886 -->
-    <td class="title">Show Command Line for external tool program launch</td>
+    <td class="title">Show Command Line for external program launch</td>
     <td class="content">
-		  The launch configuration dialog for external program launches now support the "Show Command Line" button.
+		  The <b>External Tools Configuration</b> dialog for launching an external program now supports the "Show Command Line" button.
 		  <p>
 		    <img src="images/external-tool-showcommandline.png" alt=""/>
 		  </p>
@@ -85,12 +85,12 @@ ul {padding-left: 13px;}
     <td class="title">Improved usability of Environment tab in Launch Configurations</td>
      <td class="content">
        <p>
-         You can now double-click on an environment variable name or value and start editing it directly from the table.
+         In the <b>Environment Tab</b> of the <b>Launch Configuration</b> dialog, you can now double-click on an environment variable name or value and start editing it directly from the table.
        </p>
        <p>
         <img src="images/environment-variable-inline-editing.png" alt=""/>
       </p>
-        Right-clicking on the environment variable table now opens a context menu, allowing for quick Addition, Removal, Copying, and Pasting of environment variables.
+        Right-clicking on the environment variable table now opens a context menu, allowing for quick addition, removal, copying, and pasting of environment variables.
        <p>
         <img src="images/environment-variable-context-menu.png" alt=""/>
       </p>
@@ -107,32 +107,31 @@ ul {padding-left: 13px;}
   </tr>
 
  <tr id="close-editors-autoamatically"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=490353 -->
-     <td class="title">Close editors automatically activated with a default of 99</td>
+     <td class="title">Enabled Close editors automatically with a default of 99</td>
       <td class="content">
-	    The preference to close editors has been activated with a value of 99.
-		If you continue to open editors, old editors will be closed to protect you
-		from performance regressions.
-		You can adjust the setting in the preference via the General -> Editors -> Close editors automatically setting.
+        The preference to close editors automatically is now enabled and the value of number of open editors before closing set to 99.
+        If you continue to open editors, old editors will be closed to protect you from performance problems.
+        You can modify this setting in the <b>Preferences</b> dialog via the <b>General &gt; Editors &gt; Close editors automatically</b> preference.
       </td>
     </tr>
   <!-- ****************** End of Preferences ************************************* -->
 
-
-
   <!-- ******************* Themes and Styling ************************************* -->
-  <tr>
+  <!--<tr>
     <td id="StylingThemes" class="section" colspan="2">
     <h2>Themes and Styling </h2>
     </td>
   </tr>
+  -->
   <!-- ******************* End of Themes and Styling ************************************* -->
 
   <!-- ******************* General Updates ************************************* -->
-  <tr>
+  <!--<tr>
     <td id="GeneralUpdates" class="section" colspan="2">
     <h2>General Updates </h2>
     </td>
   </tr>
+  -->
   <!-- ******************* End of General Updates ************************************* -->
 </tbody>
 </table>

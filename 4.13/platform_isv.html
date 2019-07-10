@@ -41,17 +41,23 @@ ul {padding-left: 13px;}
   <tr id="multiline-sfe">
   <td class="title">Multiline Support for StringFieldEditor</td>
   <td class="content">
-  		The implementation of <code>StringFieldEditor</code> now provides the option to use multi-line Text widget, suitable
-  		for editing larger String values in a preferences page.
+  		The implementation of <code>StringFieldEditor</code> now provides the option to use a multi-line Text widget, suitable
+  		for editing larger String values in a preference page.
   </td>
   </tr>
   <tr id="javax-injext">
   <td class="title">Bundle org.eclipse.core.runtime no longer reexports javax.inject</td>
   <td class="content">
-  		The org.eclipse.core.runtime bundle had <code>javax.inject</code> as <b>optional</b> dependency, which it
-		previously reexported, but not anymore. Technically it's not a breaking change as <code>javax.inject</code> was never
+  		The org.eclipse.core.runtime bundle had <code>javax.inject</code> as an <b>optional</b> dependency, which it
+		previously reexported, but not anymore.
+		<p>
+		Technically, it's not a breaking change as <code>javax.inject</code> was never
 		guaranteed to be there thus whether it is reexported or not was not certain. Eclipse Platform can not guarantee the API stability of this package so it makes no 
-		sense to make such a promise. Clients have to <code>Import-Package: javax.inject</code> explicitly if they need it.
+		sense to make such a promise.
+		</p>
+		<p>
+		Clients have to <code>Import-Package: javax.inject</code> explicitly if they need it.
+		</p>
   </td>
   </tr>
   <!-- ******************** End of Platform ********************** -->
@@ -93,9 +99,9 @@ ul {padding-left: 13px;}
   </tr>
 
   <tr id="win32-text-search-cancel"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=293230 -->
-    <td class="title">Search text widgets on Windows</td>
+    <td class="title">Search/Cancel icons supported in Text widget on Windows</td>
     <td class="content">
-      To match Cocoa and GTK, the Windows port of SWT gained support for displaying <code>SWT.ICON_SEARCH</code> and <code>SWT.ICON_CANCEL</code> text widget styles.
+      The Text widget on Windows now supports displaying the search and cancel icons for <code>SWT.ICON_SEARCH</code> and <code>SWT.ICON_CANCEL</code> styles respectively.
       <p><img src="images/win32-text-search-cancel.png" alt="Text widget with search and clear buttons"/></p>
     </td>
   </tr>
@@ -104,16 +110,16 @@ ul {padding-left: 13px;}
     <td class="title">Input method switching on GTK</td>
     <td class="content">
       Early versions of GTK3 allowed the input method to be changed at the application level. This
-			functionality has been deprecated for quite some time, and has now been removed from SWT.
+      functionality has been deprecated for quite some time, and has now been removed from SWT.
       <p>To change the input method, please use the global input method settings available in the desktop
-			environment.</p>
+       environment.</p>
     </td>
   </tr>
 
   <tr id="swt-snippet-explorer"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=547934 -->
     <td class="title">SWT Snippet Explorer</td>
     <td class="content">
-      The <a href="https://www.eclipse.org/swt/snippets/">SWT Snippets</a> now include a simple application which can list, search and launch single or 
+      The <a href="https://www.eclipse.org/swt/snippets/">SWT Snippets</a> project in the <a href="https://git.eclipse.org/c/platform/eclipse.platform.swt.git/">SWT repository</a> now includes a simple application called SnippetExplorer which can list, search and launch single or 
       multiple snippets at once. It also shows the snippets description, source code and a preview image where applicable.
       <p><img src="images/swt-snippet-explorer.png" alt=""/></p>
     </td>
