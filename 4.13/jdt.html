@@ -23,6 +23,7 @@ ul {padding-left: 13px;}
 <body>
 <h2>Java development tools</h2>
 <ul>
+	<li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li>
 	<li><a href="#Debug">Debug</a></li>
 </ul>
 
@@ -34,6 +35,25 @@ ul {padding-left: 13px;}
 </colgroup>
 <tbody>
 
+
+  <!-- ******************* Java Views and Dialogs ************************************* -->
+  <tr>
+    <td id="JavaViewsAndDialogs" class="section" colspan="2">
+    <h2>Java Views and Dialogs</h2>
+    </td>
+  </tr>
+  
+  <tr id="comment-generation-checkbox"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=32205 -->
+   <td class="title">Synchronize standard and error output in console</td>
+    <td class="content">
+      The current Eclipse console view can not ensure that mixed standard and error output is shown in the same order
+      as it is produced by the running process. For Java Applications the launch configuration Common Tab now
+      provide an option to merge standard and error output. This ensures that standard and error output is shown in the
+      same order it was produced but at the same time disables the individual coloring of error output.
+      <p><img src="images/merge-process-output.png" alt="Differences between merging enabled and disabled"/></p>
+    </td>
+  </tr>
+  <!-- ******************* End of Java Views and Dialogs ************************************* -->
   
   <!-- *********************** Debug ******************************** -->
   <tr>
