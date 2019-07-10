@@ -82,7 +82,7 @@ ul {padding-left: 13px;}
   	</td>
   </tr>
 
-	<tr id="gtk-toolitem-padding">
+	<tr id="gtk-toolitem-padding"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=395296 -->
   	<td class="title">Reduced ToolItem padding on GTK</td>
   	<td class="content">
   		A fix in ToolItem has greatly reduced the size of some ToolBars on GTK.
@@ -92,7 +92,7 @@ ul {padding-left: 13px;}
   		</p>
 			<p>
 				EGit's Rebase Interactive view is a good example of this fix. In the following screenshot, the ToolBar shown on top has
-				the fix applied, compared to the ToolBar on the bottom which is much larger.
+				the fix applied, compared to the larger, unpatched ToolBar on the bottom.
 			</p>
       <p><img src="images/gtk-toolitem-padding.png" alt="ToolItems with reduced padding compared to before"/></p>
   	</td>
