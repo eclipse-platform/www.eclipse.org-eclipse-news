@@ -44,11 +44,11 @@ ul {padding-left: 13px;}
   </tr>
   
   <tr id="comment-generation-checkbox"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=32205 -->
-   <td class="title">Synchronize standard and error output in console</td>
+    <td class="title">Synchronize standard and error output in console</td>
     <td class="content">
-      The current Eclipse console view can not ensure that mixed standard and error output is shown in the same order
-      as it is produced by the running process. For Java Applications the launch configuration Common Tab now
-      provide an option to merge standard and error output. This ensures that standard and error output is shown in the
+      The Eclipse <b>Console view</b> currently can not ensure that mixed standard and error output is shown in the same order
+      as it is produced by the running process. For Java Applications the launch configuration <b>Common Tab</b> now
+      provides an option to merge standard and error output. This ensures that standard and error output is shown in the
       same order it was produced but at the same time disables the individual coloring of error output.
       <p><img src="images/merge-process-output.png" alt="Differences between merging enabled and disabled"/></p>
     </td>
@@ -61,10 +61,10 @@ ul {padding-left: 13px;}
     <h2>Debug</h2>
     </td>
   </tr>
-    <tr id="enhanced-patch-module-support"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=546738 -->
+  <tr id="enhanced-patch-module-support"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=546738 -->
     <td class="title">Enhanced support for --patch-module during launch</td>
     <td class="content">
-      The Java Launch Configuration now supports patching of different modules by different sources during the launch. It can be verified in the <b>Override Dependencies...</b> dialog
+      The Java Launch Configuration now supports patching of different modules by different sources during the launch. This can be verified in the <b>Override Dependencies...</b> dialog
       in the <b>Dependencies</b> tab in a Java Launch Configuration.
       <p><img src="images/launch-dependencies.png" alt=""/></p>
       <p><img src="images/enhanced-patch-module.png" alt=""/></p>

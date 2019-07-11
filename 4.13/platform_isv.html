@@ -41,23 +41,23 @@ ul {padding-left: 13px;}
   <tr id="multiline-sfe">
   <td class="title">Multiline Support for StringFieldEditor</td>
   <td class="content">
-  		The implementation of <code>StringFieldEditor</code> now provides the option to use a multi-line Text widget, suitable
-  		for editing larger String values in a preference page.
+    The implementation of <code>StringFieldEditor</code> now provides the option to use a multi-line Text widget, suitable
+    for editing larger String values in a preference page.
   </td>
   </tr>
   <tr id="javax-injext">
   <td class="title">Bundle org.eclipse.core.runtime no longer reexports javax.inject</td>
   <td class="content">
-  		The org.eclipse.core.runtime bundle had <code>javax.inject</code> as an <b>optional</b> dependency, which it
-		previously reexported, but not anymore.
-		<p>
-		Technically, it's not a breaking change as <code>javax.inject</code> was never
-		guaranteed to be there thus whether it is reexported or not was not certain. Eclipse Platform can not guarantee the API stability of this package so it makes no 
-		sense to make such a promise.
-		</p>
-		<p>
-		Clients have to <code>Import-Package: javax.inject</code> explicitly if they need it.
-		</p>
+    The org.eclipse.core.runtime bundle had <code>javax.inject</code> as an <b>optional</b> dependency, which it
+    previously reexported, but not anymore.
+    <p>
+     Technically, it's not a breaking change as <code>javax.inject</code> was never
+     guaranteed to be there thus whether it is reexported or not was not certain. Eclipse Platform can not guarantee the API stability of this package so it makes no 
+     sense to make such a promise.
+    </p>
+    <p>
+     Clients have to <code>Import-Package: javax.inject</code> explicitly if they need it.
+    </p>
   </td>
   </tr>
   <!-- ******************** End of Platform ********************** -->
@@ -67,41 +67,42 @@ ul {padding-left: 13px;}
     <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
   </tr>
 
-	<tr id="gdkpixbuf-imageloader">
-  	<td class="title">New native implementation of ImageLoader on GTK</td>
-  	<td class="content">
-  		The implementation of <code>ImageLoader</code> on GTK now uses the native <code>GdkPixbuf</code> API for image loading and saving.
-  		<p>
-  		 Key highlights of the new ImageLoader on GTK:
-  		</p>
-  		 <ul>
-  		 	<li>Loading and saving images has native performance, with a significant speedup especially in loading JPEG files</li>
-  		 	<li>Better GIF animation support</li>
-  		 	<li>Support for more image formats</li>
-  		 </ul>
-  	</td>
+  <tr id="gdkpixbuf-imageloader"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=545032 -->
+    <td class="title">New native implementation of ImageLoader on GTK</td>
+    <td class="content">
+      The implementation of <code>ImageLoader</code> on GTK now uses the native <code>GdkPixbuf</code> API for image loading and saving.
+      <p>
+       Key highlights of the new ImageLoader on GTK:
+      </p>
+      <ul>
+       <li>Loading and saving images has native performance, with a significant speedup especially in loading JPEG files</li>
+       <li>Better GIF animation support</li>
+       <li>Support for more image formats</li>
+      </ul>
+    </td>
   </tr>
 
-	<tr id="gtk-toolitem-padding"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=395296 -->
-  	<td class="title">Reduced ToolItem padding on GTK</td>
-  	<td class="content">
-  		A fix in ToolItem has greatly reduced the size of some ToolBars on GTK.
-  		<p>
-  			Previously, all ToolItems were the same size as the largest ToolItem in a given ToolBar. With this fix, ToolItems are
-				now independently sized, which reduces the total size of ToolBars that contained large items.
-  		</p>
-			<p>
-				EGit's Rebase Interactive view is a good example of this fix. In the following screenshot, the ToolBar shown on top has
-				the fix applied, compared to the larger, unpatched ToolBar on the bottom.
-			</p>
-      <p><img src="images/gtk-toolitem-padding.png" alt="ToolItems with reduced padding compared to before"/></p>
-  	</td>
+  <tr id="gtk-toolitem-padding"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=395296 -->
+    <td class="title">Reduced ToolItem padding on GTK</td>
+    <td class="content">
+      A fix in ToolItem has greatly reduced the size of some ToolBars on GTK.
+      <p>
+       Previously, all ToolItems were the same size as the largest ToolItem in a given ToolBar. With this fix, ToolItems are
+      now independently sized, which reduces the total size of ToolBars that contained large items.
+      </p>
+     <p>
+      EGit's Rebase Interactive view is a good example of this fix. In the following screenshot, the ToolBar shown on top has
+      the fix applied, compared to the larger, unpatched ToolBar on the bottom.
+     </p>
+     <p><img src="images/gtk-toolitem-padding.png" alt="ToolItems with reduced padding compared to before"/></p>
+    </td>
   </tr>
 
   <tr id="win32-text-search-cancel"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=293230 -->
     <td class="title">Search/Cancel icons supported in Text widget on Windows</td>
     <td class="content">
       The Text widget on Windows now supports displaying the search and cancel icons for <code>SWT.ICON_SEARCH</code> and <code>SWT.ICON_CANCEL</code> styles respectively.
+      With the Windows support added, these style APIs are now supported on all the three platforms and are no longer marked as a <code>HINT</code>.
       <p><img src="images/win32-text-search-cancel.png" alt="Text widget with search and clear buttons"/></p>
     </td>
   </tr>
@@ -111,8 +112,7 @@ ul {padding-left: 13px;}
     <td class="content">
       Early versions of GTK3 allowed the input method to be changed at the application level. This
       functionality has been deprecated for quite some time, and has now been removed from SWT.
-      <p>To change the input method, please use the global input method settings available in the desktop
-       environment.</p>
+      <p>To change the input method, please use the global input method settings available in the desktop environment.</p>
     </td>
   </tr>
 
