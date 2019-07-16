@@ -93,6 +93,25 @@ ul {padding-left: 13px;}
   </tr>
   <!--************************ End of Debug ******************************** -->
 
+  <!-- *********************** Clean Up & Save Action ******************************** -->
+  <tr>
+    <td id="CleanUpSaveAction" class="section" colspan="2">
+    <h2>Clean Up and Save Action</h2>
+    </td>
+  </tr>
+  <tr id="enhanced-redundant-modifier-removal"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=549242 -->
+    <td class="title">Improved redundant modifier removal</td>
+    <td class="content">
+      <i>Remove redundant modifier</i> now also removes useless <code>abstract</code> modifier on the interfaces.
+      <p><img src="images/abstract-removal-feature.png" alt=""/></p>
+      For the given code:
+      <p><img src="images/abstract-removal-before.png" alt=""/></p>
+      You get this:
+      <p><img src="images/abstract-removal-after.png" alt=""/></p>
+    </td>
+  </tr>
+  <!--************************ End of Clean up & Save Action ******************************** -->
+
   <!-- ******************* Java Build ************************************* -->
   <tr>
     <td id="JavaBuild" class="section" colspan="2">
