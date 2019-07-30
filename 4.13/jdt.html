@@ -93,6 +93,26 @@ ul {padding-left: 13px;}
   </tr>
   <!--************************ End of Debug ******************************** -->
 
+  <!-- ******************* Java Build ************************************* -->
+  <tr>
+    <td id="JavaBuild" class="section" colspan="2">
+    <h2>Java Build</h2>
+    </td>
+  </tr>
+
+  <tr id="full-build-on-jdt-core-settings-change"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=549457 -->
+    <td class="title">Full build on JDT core preferences change</td>
+    <td class="content">
+      Manually changing the settings file <b>.settings/org.eclipse.jdt.core.prefs</b> of a project
+      will result in a full project build, if the workspace auto-build is on. For example, pulling
+      different settings from a git repository or generating the settings with a tool will now trigger a build.
+      Note that this includes timestamp changes, even if actual settings file contents were not changed.
+      <p>For the 4.13 release, it is possible to disable this new behavior with the VM property:
+      <b>-Dorg.eclipse.jdt.core.disableAutoBuildOnSettingsChange=true</b>.
+      It is planned to remove this VM property in a future release.</p>
+    </td>
+  </tr>
+  <!-- ******************* End of Java Build ************************************* -->
 </tbody>
 </table>
 <!-- ****************** END OF N&N TABLE ****************** -->
