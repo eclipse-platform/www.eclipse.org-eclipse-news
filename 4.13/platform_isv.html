@@ -25,6 +25,7 @@ ul {padding-left: 13px;}
   <ul>
     <li><a href="#Platform">Platform Changes</a></li>
     <li><a href="#SWT">SWT Changes</a></li>
+    <li><a href="#JFace">JFace Changes</a></li>
   </ul>
 
 <!-- ****************** START OF N&N TABLE****************** -->
@@ -136,6 +137,37 @@ ul {padding-left: 13px;}
   </tr>
 
   <!-- *********************** End of SWT *********************** -->
+
+  <!-- *********************** JFace *********************** -->
+  <tr>
+    <td id="JFace" class="section" colspan="2"><h2>JFace Changes</h2></td>
+  </tr>
+
+  <tr id="columnViewEditor-cycleTabTraversal">  <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=549194 -->
+    <td class="title">New ColumnViewerEditor tab traversal added</td>
+    <td class="content">
+      Tabbing to the start or end of a viewer (during an inline edit) is
+      now possible by passing
+      <b><code>ColumnViewerEditor.TABBING_CYCLE_IN_VIEWER</code></b> as a feature when calling
+      <code>TableViewerEditor.create(viewer,
+        editorActivationStrategy, feature)</code> or <code>TreeViewerEditor.create(viewer, editorActivationStrategy,
+        feature)</code>.
+      <p>
+        With this new feature flag enabled:
+      </p>
+      <ul>
+        <li>
+          Pressing <b>Tab</b> while editing the <b>last item</b> in a
+          viewer starts an inline edit on the <b>first item</b>.
+        </li>
+        <li>
+          Pressing <b>Shift+Tab</b> while editing the first item starts an
+          inline edit on the last item.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <!-- *********************** End of JFace *********************** -->
 
 </tbody>
 </table>
