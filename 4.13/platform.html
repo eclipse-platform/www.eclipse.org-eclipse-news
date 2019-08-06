@@ -201,6 +201,23 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   
+  <tr id="help-system-dark"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=532185 -->
+    <td class="title">Display of Help Contents Respects OS Level Theme</td>
+    <td class="content">
+      <p>
+        More and more operating systems provide a system wide dark theme. Eclipse now respects this system wide theme setting 
+        when the Eclipse help contents is displayed in an external browser. Prerequisite for this is a browser that support 
+        the <em><a href="https://caniuse.com/#search=prefers-color-scheme">prefers-color-scheme</a></em> CSS media query. As of writing this the following browser versions support it:
+        <ul>
+          <li>Firefox version 67</li>
+          <li>Chrome version 76</li>
+          <li>Safari version 12.1</li>
+        </ul>
+      </p>
+        <p> 
+          <img src="images/help_system_dark.png" alt="Eclipse help content in dark theme" style="width: 100%" ></p>
+      </td>
+  </tr>  
   <!-- ******************* End of Themes and Styling ************************************* -->
 
   <!-- ******************* General Updates ************************************* -->
