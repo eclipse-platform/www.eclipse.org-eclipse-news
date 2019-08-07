@@ -43,19 +43,30 @@ ul {padding-left: 13px;}
   <tr id="generic-editor-icon"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=513034 -->
     <td class="title">A generic editor can now show content-type-specific icons.</td>
     <td class="content">
-    An extension was provided to the generic editor so that it now can provide icons for content-type.See extension point <b>org.eclipse.ui.genericeditor.icons</b> for more details.      <p>
-      	<img src="images/generic-editor-icon.png" alt="" />
+      An extension was provided to the generic editor so that it now can provide icons for content-type.See extension point <b>org.eclipse.ui.genericeditor.icons</b> for more details.
+      <p>
+        <img src="images/generic-editor-icon.png" alt="" />
       </p>
     </td>
   </tr>
  
-  <tr id="multiline-sfe">
+  <tr id="multiline-sfe"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=548650 -->
   <td class="title">Multiline Support for StringFieldEditor</td>
   <td class="content">
     The implementation of <code>StringFieldEditor</code> now provides the option to use a multi-line Text widget, suitable
     for editing larger String values in a preference page.
   </td>
   </tr>
+
+  <tr id="request-specific-quickaccess"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=548058 -->
+  <td class="title">API to compute Quick Access proposals according to user input</td>
+  <td class="content">
+    An extension interface <b><code>org.eclipse.ui.quickaccess.IQuickAccessComputerExtension</code></b> to use as extension to
+    <code>org.eclipse.ui.quickaccess.IQuickAccessComputer</code> when using extension point <code>org.eclipse.ui.quickaccess/computer</code>
+    was added. This provides the ability to compute a new extra set of proposals whenever filter change.
+  </td>
+  </tr>
+
   <tr id="javax-injext">
   <td class="title">Bundle org.eclipse.core.runtime no longer reexports javax.inject</td>
   <td class="content">
