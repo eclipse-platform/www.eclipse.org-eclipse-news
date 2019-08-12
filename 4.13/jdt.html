@@ -74,6 +74,16 @@ ul {padding-left: 13px;}
       <p><img src="images/foreachcollectionafter.png" alt="for loop using Collections after"/></p>
     </td>
   </tr>
+
+  <tr id="javadoc-for-module-info"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=546350 -->
+    <td class="title">Javadoc comment generation for module</td>
+    <td class="content">
+      Adding a Javadoc comment to a Java module (module-info.java) will result in automatic annotations being added per the new module comment preferences.
+    <p><img src="images/modulejavadocprefs.png" alt="Javadoc module comment preferences"/></p>
+      The $(tags) directive will add @uses and @provides tags for all <b>uses</b> and <b>provides</b> module statements.
+    <p><img src="images/modulejavadoc.png" alt="Javadoc module comment example"/></p>
+    </td>
+  </tr>
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- *********************** Debug ******************************** -->
