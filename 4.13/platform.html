@@ -26,8 +26,8 @@ ul {padding-left: 13px;}
     <li><a href="#ViewsAndDialogs">Views, Dialogs and Toolbar</a></li>
     <li><a href="#Debug">Debug</a></li>
     <li><a href="#Preferences">Preferences</a></li>
-    <!--<li><a href="#StylingThemes">Themes and Styling</a></li>
-    <li><a href="#GeneralUpdates">General Updates</a></li>-->
+    <li><a href="#StylingThemes">Themes and Styling</a></li>
+    <li><a href="#GeneralUpdates">General Updates</a></li>
 </ul>
 
 <!-- ****************** START OF N&N TABLE ****************** -->
@@ -179,12 +179,20 @@ ul {padding-left: 13px;}
   <!-- ****************** End of Preferences ************************************* -->
 
   <!-- ******************* Themes and Styling ************************************* -->
-  <!--<tr>
+  <tr>
     <td id="StylingThemes" class="section" colspan="2">
     <h2>Themes and Styling </h2>
     </td>
   </tr>
-  -->
+  
+  <tr id="start-in-dark-theme"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=547038 -->
+    <td class="title">Start automatically in dark theme based on OS theme</td>
+    <td class="content">
+      On Linux and Mac, Eclipse can now start automatically in dark theme when the OS theme is dark.
+      This works by default, that is on a new workspace or when the user has not explicitly set or changed the theme in Eclipse.
+    </td>
+  </tr>
+  
   <!-- ******************* End of Themes and Styling ************************************* -->
 
   <!-- ******************* General Updates ************************************* -->
