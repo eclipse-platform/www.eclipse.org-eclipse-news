@@ -40,7 +40,7 @@ ul {padding-left: 13px;}
   <tr>
     <td id="dialogs-wizards-views" class="section" colspan="2"><h2>Dialogs, Wizards and Views</h2></td>
   </tr>
-  <tr id="feature-launch-startlevels"> <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=331595 -->
+  <tr id="feature-launch-startlevels"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=331595 -->
     <td class="title">Configure start levels for feature based launch</td>
     <td class="content">
       Feature-based launch configurations now support custom start levels and auto-start properties for individual plugins.
@@ -54,6 +54,27 @@ ul {padding-left: 13px;}
       </p>
       <p>
        <img src="images/feature-launch-startlevels.png" alt="" />
+      </p>
+    </td>
+  </tr>
+  <tr id="features-view"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=543217 -->
+    <td class="title">New Features view</td>
+    <td class="content">
+      You can now view the structure of features in your workspace projects using the new <b>Features</b> view.
+      <p>
+       To open the view, go to the <b>Show View</b> dialog (<b>Window &gt; Show View &gt; Other...</b>) and choose it from
+			 the <b>Plug-in Development</b> category.
+      </p>
+			<p>
+       <img src="images/show-view-dialog.png" alt="" />
+      </p>
+      <p>
+       By default the view shows only features, with child features listed under their parents rather than at the top level.
+			 The buttons on the view's toolbar allow plugins/fragments included within a feature to be shown, child features to be
+			 shown at the top level, and for the hierarchy to be inverted (to show the features including each feature).
+      </p>
+      <p>
+       <img src="images/features-view.png" alt="" />
       </p>
     </td>
   </tr>
