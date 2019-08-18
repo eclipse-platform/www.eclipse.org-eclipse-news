@@ -82,6 +82,17 @@ ul {padding-left: 13px;}
     </p>
   </td>
   </tr>
+
+  <tr id="non-persisted-ui"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=544871 -->
+  <td class="title">E4XMIResource optionally filters Transient UI Elements</td>
+  <td class="content">
+      When using the E4XMIResource directly, transient UI elements are no longer filtered by default.
+      Note that transient UI elements are filtered by default when saved from the application.
+      
+      <p>To filter transient UI elements, call the save method with the new option
+      <code>options.put(E4XMIResource.OPTION_FILTER_PERSIST_STATE, Boolean.TRUE); resource.save(options);</code></p>
+  </td>
+  </tr>
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
