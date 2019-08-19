@@ -75,7 +75,7 @@ ul {padding-left: 13px;}
   <tr id="showin-action-project-explorer"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=314642 -->
     <td class="title">"Show In" context menu available for normal resources</td>
     <td class="content">
-      <b>"Show In"</b>context menu is now available for an element inside a resource project on the <b>Project Explorer</b>.
+      The <b>Show In</b> context menu is now available for an element inside a resource project on the <b>Project Explorer</b>.
       <p>
        <img src="images/showin_project_explorer.png" alt=""/>
       </p>
@@ -84,7 +84,7 @@ ul {padding-left: 13px;}
 
   <tr id="project-explorer-normal-resource-inline-rename"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=548877 -->
     <td class="title">
-            Inline rename for normal resources while in Project Explorer.
+            Inline rename for normal resources while in Project Explorer
     </td>
     <td class="content">
 	  In the Project Explorer, renaming (with the <b><code>F2</code></b> shortcut or Rename context-menu) will start an inline rename for normal resources.
@@ -99,7 +99,7 @@ ul {padding-left: 13px;}
     <td class="title">Show colors for additions and deletions in Compare viewer</td>
     <td class="content">
       In simple cases (2-way comparison, no merge, no conflict), the Compare viewer now shows different
-      colors for addition, deletion and edition of text.
+      colors, depending on whether text has been added, removed or modified.
       <p>
         <img src="images/compare-editor-colors.png" alt=""/>
       </p>
@@ -114,12 +114,12 @@ ul {padding-left: 13px;}
     <tr id="shorter-dialog-texts"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=549939 -->
     <td class="title">Shorter dialog text</td>
     <td class="content">
-      Several dialog texts have been shortened. This allows you to capture the important information faster
-      Old:
+      Several dialog texts have been shortened. This allows you to capture the important information faster.
+      <p>Previously:</p>
       <p>
         <img src="images/long-dialog-text.png" alt=""/>
       </p>
-      New:
+      <p>New:</p>
        <p>
         <img src="images/short-dialog.png" alt=""/>
       </p>
@@ -147,9 +147,7 @@ ul {padding-left: 13px;}
   <tr id="environment-table-improvements"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=548344 and https://bugs.eclipse.org/bugs/show_bug.cgi?id=548520 -->
     <td class="title">Improved usability of Environment tab in Launch Configurations</td>
     <td class="content">
-      <p>
-        In the <b>Environment Tab</b> of the <b>Launch Configuration</b> dialog, you can now double-click on an environment variable name or value and start editing it directly from the table.
-      </p>
+      In the <b>Environment Tab</b> of the <b>Launch Configuration</b> dialog, you can now double-click on an environment variable name or value and start editing it directly from the table.
       <p>
        <img src="images/environment-variable-inline-editing.png" alt=""/>
       </p>
@@ -179,10 +177,10 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
-  <tr id="close-editors-autoamatically"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=490353 -->
-    <td class="title">Enabled Close editors automatically with a default of 99</td>
+  <tr id="close-editors-automatically"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=490353 -->
+    <td class="title">Close editors automatically when reaching 99 open editors</td>
     <td class="content">
-      The preference to close editors automatically is now enabled and the value of number of open editors before closing set to 99.
+      The preference to close editors automatically is now enabled by default. It will be triggered when you have opened 99 files.
       If you continue to open editors, old editors will be closed to protect you from performance problems.
       You can modify this setting in the <b>Preferences</b> dialog via the <b>General &gt; Editors &gt; Close editors automatically</b> preference.
     </td>
@@ -209,7 +207,7 @@ ul {padding-left: 13px;}
       <p>
         <img src="images/freeze-event.png" alt="" />
       </p>
-      You can disable this monitor or tweak its settings via the preferences as despicted in the following screenshot.
+      You can disable the monitoring or tweak its settings via the preferences as shown in the following screenshot.
       <p>
         <img src="images/ui-monitor-preference.png" alt="" />
       </p>
@@ -238,11 +236,9 @@ ul {padding-left: 13px;}
   <tr id="help-system-dark"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=532185 -->
     <td class="title">Display of Help Contents Respects OS Level Theme</td>
     <td class="content">
-      <p>
         More and more operating systems provide a system wide dark theme. Eclipse now respects this system wide theme setting 
         when the Eclipse help contents is displayed in an external browser. Prerequisite for this is a browser that support 
         the <em><a href="https://caniuse.com/#search=prefers-color-scheme">prefers-color-scheme</a></em> CSS media query. As of writing this the following browser versions support it:
-      </p>
       <ul>
         <li>Firefox version 67</li>
         <li>Chrome version 76</li>
@@ -254,23 +250,19 @@ ul {padding-left: 13px;}
   <tr id="help-system-svg"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=548008 -->
     <td class="title">Help Contents Uses High Resolution Icons</td>
     <td class="content">
-      <p>
         The help system itself as well as the help content of the <em>Eclipse Platform</em>, the <em>Java Development Tooling</em> and
         the <em>Plug-in Development Environment</em> now use high resolution icons.
         They are now crisp on high resolution displays and also looks much better in the dark theme.
-      </p>
         <p>
-          <img src="images/help_system_high_res.png" alt="Eclipse help with high resultion icons" style="width: 100%"/></p>
+          <img src="images/help_system_high_res.png" alt="Eclipse help with high resolution icons" style="width: 100%"/></p>
       </td>
   </tr>
   <tr id="styling-forms"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=549969 -->
     <td class="title">Improve Dark Theme on Windows</td>
     <td class="content">
-      <p>
-        Labels, Sections, Checkboxes, Radio Buttons, FormTexts and Sashes on forms now use the correct background color in the dark mode on windows.
-      </p>
+      Labels, Sections, Checkboxes, Radio Buttons, FormTexts and Sashes on forms now use the correct background color in the dark mode on windows.
       <p> 
-          <img src="images/correct_backgrounds.png" alt="Old and New styling of froms" style="width: 100%"/>
+          <img src="images/correct_backgrounds.png" alt="Old and New styling of forms" style="width: 100%"/>
       </p>
       </td>
   </tr>
@@ -291,11 +283,10 @@ ul {padding-left: 13px;}
   <tr id="show-keybinding"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=540440 -->
     <td class="title">Show Key Bindings When Command is Invoked</td>
     <td class="content">
-      <p>
         For learning purposes, presentations or screen casts it is very helpful to show the corresponding 
         key binding when a command is invoked. Whenever the command is invoked (may it via the key 
         binding or via menu interaction) the key binding, the command's name and description are shown 
-        on the screen.</p>
+        on the screen.
         <p> 
           <img src="images/show_key_bindings.png" alt="Key binding of triggered command shown on screen" style="width: 90%"/></p>
         <p>

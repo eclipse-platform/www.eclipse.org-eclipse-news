@@ -41,9 +41,9 @@ ul {padding-left: 13px;}
   </tr>
  
   <tr id="generic-editor-icon"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=513034 -->
-    <td class="title">A generic editor can now show content-type-specific icons.</td>
+    <td class="title">Content-type-specific icons in generic editor</td>
     <td class="content">
-      An extension was provided to the generic editor so that it now can provide icons for content-type.See extension point <b>org.eclipse.ui.genericeditor.icons</b> for more details.
+      An extension was added to the generic editor so that it now can provide icons for content-type. See extension point <b>org.eclipse.ui.genericeditor.icons</b> for more details.
       <p>
         <img src="images/generic-editor-icon.png" alt="" />
       </p>
@@ -118,14 +118,14 @@ ul {padding-left: 13px;}
   <tr id="gtk-toolitem-padding"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=395296 -->
     <td class="title">Reduced ToolItem padding on GTK</td>
     <td class="content">
-      A fix in ToolItem has greatly reduced the size of some ToolBars on GTK.
+      A fix in <code>ToolItem</code> has greatly reduced the size of some toolbars on GTK.
       <p>
-       Previously, all ToolItems were the same size as the largest ToolItem in a given ToolBar. With this fix, ToolItems are
-      now independently sized, which reduces the total size of ToolBars that contained large items.
+       Previously, all <code>ToolItem</code>s were the same size as the largest of them in a given toolbar. With this fix, items are
+      now independently sized, which reduces the total size of toolbars that contain large items.
       </p>
      <p>
-      EGit's Rebase Interactive view is a good example of this fix. In the following screenshot, the ToolBar shown on top has
-      the fix applied, compared to the larger, unpatched ToolBar on the bottom.
+      EGit's Rebase Interactive view is a good example of this fix. In the following screenshot, the toolbar shown on top has
+      the fix applied, compared to the larger, unpatched toolbar on the bottom.
      </p>
      <p><img src="images/gtk-toolitem-padding.png" alt="ToolItems with reduced padding compared to before"/></p>
     </td>
