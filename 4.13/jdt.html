@@ -25,6 +25,7 @@ ul {padding-left: 13px;}
 <ul>
 	<li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li>
 	<li><a href="#JavaEditor">Java Editor</a></li>
+	<li><a href="#JavaFormatter">Java Formatter</a></li>
 	<li><a href="#Debug">Debug</a></li>
 </ul>
 
@@ -85,6 +86,59 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   <!-- ******************* End of Java Editor ************************************* -->
+
+  <!-- ******************* Java Formatter ************************************* -->
+  <tr>
+    <td id="JavaFormatter" class="section" colspan="2">
+    <h2>Java Formatter </h2>
+    </td>
+  </tr>
+  <tr id="remove-excess-blank-lines"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=549255 -->
+    <td class="title">Remove excess blank lines</td>
+    <td class="content">
+      All the settings in the <b>Blank lines</b> section can now be configured to <b>remove excess blank lines</b>, effectively taking precedence over the <i>Number of empty lines to preserve</i> setting.
+      Each setting has its own button to turn the feature on, right next to its number control.
+      The button is enabled only if the selected number of lines is smaller than the <i>Number of empty lines to preserve</i>, because otherwise any excess lines are removed anyway.
+      <p>
+        <img src="images/formatter-remove-excess-blank-lines.png" alt="" />
+      </p>
+    </td>
+  </tr>
+  <tr id="blank-lines-changes"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=550083 -->
+    <td class="title">Changes in blank lines settings</td>
+    <td class="content">
+      There's quite a lot of changes in the <b>Blank lines</b> section of the formatter profile.
+      <p>
+        Some of the existing subsections and settings are now phrased diferrently to better express their function:
+      </p>
+      <ul>
+        <li>The <b>Blank lines within class declarations</b> subsection is now <b>Blank lines within type declaration</b></li>
+        <li><b>Before first declaration</b> is now <b>Before first member declaration</b></li>
+        <li><b>Before declarations of the same kind</b> is now <b>Between member declarations of different kind</b></li>
+        <li><b>Before member class declarations</b> is now <b>Between member type declarations</b></li>
+        <li><b>Before field declarations</b> is now <b>Between field declarations</b></li>
+        <li><b>Before metohd declarations</b> is now <b>Between method/constructor declarations</b></li>
+      </ul>
+      <p>
+        More importantly, a few <b>new settings have been added</b> to support more places where the number of empty lines can be controlled:
+      </p>
+      <ul>
+        <li><b>After last member declaration</b> in a type (to complement previously existing <b>Before first member declaration</b> setting)</li>
+        <li><b>Between abstract method declarations</b> in a type (these cases were previously handled by <b>Between method/constructor declarations</b>)</li>
+        <li><b>At end of method/constructor body</b> (to complement previously existing <b>At beginning of method/constructor body</b> setting)</li>
+        <li><b>At beginning of code block</b> and <b>At end of code block</b></li>
+        <li><b>Before statement with code block</b> and <b>After statement with code block</b></li>
+        <li><b>Between statement groups in 'switch'</b></li>
+      </ul>
+      <p>
+        Most of the new settings have been put in a new subsection <b>Blank lines within method/constructor declarations</b>.
+      </p>
+      <p>
+        <img src="images/formatter-new-blank-lines-settings.png" alt="" />
+      </p>
+    </td>
+  </tr>
+  <!-- ******************* End of Java Formatter ************************************* -->
 
   <!-- *********************** Debug ******************************** -->
   <tr>
