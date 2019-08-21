@@ -102,6 +102,20 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   
+   <tr id="optimization-pde-api-tools-build"> 
+     <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=344110 -->
+	 <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=344163 -->
+	 <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=549630 -->
+    <td class="title">Optimization in  API tools builder </td>
+    <td class="content">
+      There are various optimizations that are done for API analysis builder which has
+      improved the performance in some scenarios tremendously.
+	   <li>Changing 'Missing API baseline' preference updates the marker appropriately instead of doing a full build.</li>
+	   <li>Removing baseline removes all markers which requires a baseline instead of a full build.</li>
+	  <li>Removing API Use Scan location removes the relevant markers instead of doing a full build. </li>
+    </td>
+  </tr>
+  
     <tr id="full-build-on-pde-api-tools-settings-change"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=549838 -->
     <td class="title">Full build on API tools preferences change</td>
     <td class="content">
@@ -113,7 +127,6 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   
-  </tr>
   <!-- ******************** End of APITools ********************** -->
   
    <!-- ******************** PDE Compiler ********************** -->
