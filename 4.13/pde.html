@@ -102,6 +102,17 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   
+    <tr id="full-build-on-pde-api-tools-settings-change"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=549838 -->
+    <td class="title">Full build on API tools preferences change</td>
+    <td class="content">
+      Manually changing the settings file <b>.settings/org.eclipse.pde.api.tools.prefs</b> of a project
+      will result in a full project build, if the workspace auto-build is on. 
+      <p>For the 4.13 release, it is possible to disable this new behavior with the VM property:
+      <b><nobr>-Dorg.eclipse.disableAutoBuildOnSettingsChange=true</nobr></b>.
+      It is planned to remove this VM property in a future release.</p>
+    </td>
+  </tr>
+  
   </tr>
   <!-- ******************** End of APITools ********************** -->
   
