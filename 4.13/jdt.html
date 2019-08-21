@@ -68,12 +68,21 @@ ul {padding-left: 13px;}
   <tr id="foreach-loop-collections"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=548002 -->
     <td class="title">Convert to enhanced 'for' loop using Collections</td>
     <td class="content">
-      The Java quickfix <b>Convert to enhanced 'for' loop</b> is now offered on 'for' loops that are iterating through Collections.  The
+      The Java quickfix/cleanup <b>Convert to enhanced 'for' loop</b> is now offered on 'for' loops that are iterating through Collections.  The
       loop must reference the <b>size</b> method as part of the condition and if accessing elements in the body, must use the <b>get</b>
       method.  All other Collection methods other than <b>isEmpty</b> invalidate the quickfix being offered.
       <p><img src="images/foreachcollectionbefore.png" alt="for loop using Collections before"/></p>
       <p><img src="images/foreachcollectionquickfix.png" alt="for loop using Collections quickfix"/></p>
       <p><img src="images/foreachcollectionafter.png" alt="for loop using Collections after"/></p>
+    </td>
+  </tr>
+
+  <tr id="final-fields-quickfix"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=83544 -->
+    <td class="title">Initialize 'final' fields</td>
+    <td class="content">
+      A Java quickfix is now offered to initialize an uninitialized <b>final</b> field in the class constructor.  The fix will initialize a <b>String</b> to the empty string, a numeric base type to 0, and for class fields it initializes them using their default constructor if available or <b>null</b> if no default constructor exists.
+      <p><img src="images/finalquickfix1.png" alt="unitialized final field before"/></p>
+      <p><img src="images/finalquickfix2.png" alt="final field initialized in constructor"/></p>
     </td>
   </tr>
 
