@@ -26,7 +26,7 @@ ul {padding-left: 13px;}
 	<li><a href="#dialogs-wizards-views">Dialogs, Wizards and Views</a></li>
 	<!-- <li><a href="#editors">Editors</a></li> -->
 	<li><a href="#APITools">API Tools</a></li>
-	<!-- <li><a href="#pde-compiler">PDE Compiler</a></li> -->
+	<li><a href="#pde-compiler">PDE Compiler</a></li>
 </ul>
 
 <!-- ****************** START OF N&N TABLE****************** -->
@@ -117,9 +117,21 @@ ul {padding-left: 13px;}
   <!-- ******************** End of APITools ********************** -->
   
    <!-- ******************** PDE Compiler ********************** -->
-  <!-- <tr> -->
-    <!-- <td id="pde-compiler" class="section" colspan="2"><h2>PDE Compiler</h2></td> -->
-  <!-- </tr> -->
+   <tr> 
+     <td id="pde-compiler" class="section" colspan="2"><h2>PDE Compiler</h2></td> 
+   </tr> 
+   
+    <tr id="full-build-on-pde-compiler-settings-change"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=549839 -->
+    <td class="title">Full build on PDE compiler preferences change</td>
+    <td class="content">
+      Manually changing the settings file <b>.settings/org.eclipse.pde.prefs</b> of a project
+      will result in a full project build, if the workspace auto-build is on. 
+      <p>For the 4.13 release, it is possible to disable this new behavior with the VM property:
+      <b><nobr>-Dorg.eclipse.disableAutoBuildOnSettingsChange=true</nobr></b>.
+      It is planned to remove this VM property in a future release.</p>
+    </td>
+  </tr>
+   
    <!-- ******************** End of PDE Compiler ********************** --> 
   
 </tbody>
