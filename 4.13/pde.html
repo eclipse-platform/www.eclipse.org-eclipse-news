@@ -109,12 +109,17 @@ ul {padding-left: 13px;}
     <td class="title">Optimization in  API tools builder </td>
     <td class="content">
       There are various optimizations that are done for API analysis builder which has
-      improved the performance in some scenarios tremendously.
+      improved the performance in some scenarios tremendously. 
       <ul>
-	   <li>Changing 'Missing API baseline' preference updates the marker appropriately instead of doing a full build.</li>
-	   <li>Removing baseline removes all markers which requires a baseline instead of a full build.</li>
-	   <li>Removing API Use Scan location removes the relevant markers instead of doing a full build.</li>
+	   <li>Changing 'Missing API baseline' option in <b>Preferences &gt; Plug-in Development &gt; API Baselines</b> preference page 
+	   updates the marker appropriately instead of doing a full build.</li>
+	   <li>Removing or unchecking baseline in  <b>Preferences &gt; Plug-in Development &gt; API Baselines</b> preference page  removes all markers 
+	   which requires a baseline instead of a full build.</li>
+	   <li>Removing or unchecking all API Use Scan locations  in <b>Preferences &gt; Plug-in Development &gt; API Use Scans</b> preference page  removes the relevant markers instead of doing a full build.</li>
       </ul>
+      <p>
+      For example, changing 'Missing API baseline' option in <code>org.eclipse.jdt.core</code> finishes instantaneously instead of 3 to 4 seconds earlier.
+      </p
     </td>
   </tr>
   
