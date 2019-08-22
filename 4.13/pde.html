@@ -110,9 +110,11 @@ ul {padding-left: 13px;}
     <td class="content">
       There are various optimizations that are done for API analysis builder which has
       improved the performance in some scenarios tremendously.
+      <ul>
 	   <li>Changing 'Missing API baseline' preference updates the marker appropriately instead of doing a full build.</li>
 	   <li>Removing baseline removes all markers which requires a baseline instead of a full build.</li>
-	  <li>Removing API Use Scan location removes the relevant markers instead of doing a full build. </li>
+	   <li>Removing API Use Scan location removes the relevant markers instead of doing a full build.</li>
+      </ul>
     </td>
   </tr>
   
@@ -122,7 +124,7 @@ ul {padding-left: 13px;}
       Manually changing the settings file <b>.settings/org.eclipse.pde.api.tools.prefs</b> of a project
       will result in a full project build, if the workspace auto-build is on. 
       <p>For the 4.13 release, it is possible to disable this new behavior with the VM property:
-      <b><nobr>-Dorg.eclipse.disableAutoBuildOnSettingsChange=true</nobr></b>.
+      <b><span style="white-space: nowrap;">-Dorg.eclipse.disableAutoBuildOnSettingsChange=true</span></b>.
       It is planned to remove this VM property in a future release.</p>
     </td>
   </tr>
@@ -140,7 +142,7 @@ ul {padding-left: 13px;}
       Manually changing the settings file <b>.settings/org.eclipse.pde.prefs</b> of a project
       will result in a full project build, if the workspace auto-build is on. 
       <p>For the 4.13 release, it is possible to disable this new behavior with the VM property:
-      <b><nobr>-Dorg.eclipse.disableAutoBuildOnSettingsChange=true</nobr></b>.
+      <b><span style="white-space: nowrap;">-Dorg.eclipse.disableAutoBuildOnSettingsChange=true</span></b>.
       It is planned to remove this VM property in a future release.</p>
     </td>
   </tr>
