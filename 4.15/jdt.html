@@ -95,6 +95,21 @@ ul {padding-left: 13px;}
       Opened Java file editors need to be closed and reopened for this option to be effective.</p>
     </td>
   </tr>
+
+  <tr id="improve-lambda"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=550394 -->
+    <td class="title">Lambda expression enhancements</td>
+    <td class="content">
+      Simplifies the lambda expression and the method reference syntax. This feature is enabled only for Java 8 and higher.
+      Parenthesis are not needed for a single untyped parameter, return statement is not needed for a single expression and
+      brackets are not needed for a single statement.
+      It replaces a lambda expression by a creation or a method reference when possible.
+      <p><img src="images/lambda-expression-enhancements.png" alt=""/></p>
+      For the given code:
+      <p><img src="images/lambda-expression-enhancements-before.png" alt=""/></p>
+      You get this:
+      <p><img src="images/lambda-expression-enhancements-after.png" alt=""/></p>
+    </td>
+  </tr>
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
