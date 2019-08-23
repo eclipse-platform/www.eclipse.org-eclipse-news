@@ -93,6 +93,19 @@ ul {padding-left: 13px;}
       <code>options.put(E4XMIResource.OPTION_FILTER_PERSIST_STATE, Boolean.TRUE); resource.save(options);</code></p>
   </td>
   </tr>
+  
+  <tr id="monitor-logging"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=482062 -->
+  <td class="title">Tracing option for correct progress reporting usage</td>
+  <td class="content">
+      Earlier releases added support for tracing the correct usage of progress monitors. Unfortunately this was forgotten to document in previous noteworthy documents.
+      
+      <p>To enable this tracing add org.eclipse.equinox.common/progress_monitors=true in your ".options" file and start Eclipse via the -debug flag or use the tracing option in the launch configuration.
+      </p>
+        <p>
+        <img src="images/progress-monitor.png" alt="" />
+      </p>
+  </td>
+  </tr>
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
