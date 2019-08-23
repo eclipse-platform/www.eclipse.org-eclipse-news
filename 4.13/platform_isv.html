@@ -93,7 +93,12 @@ ul {padding-left: 13px;}
       <code>options.put(E4XMIResource.OPTION_FILTER_PERSIST_STATE, Boolean.TRUE); resource.save(options);</code></p>
   </td>
   </tr>
-  
+   <tr id="logging-api"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=550347  -->
+  <td class="title">Simplified Platform logging API</td>
+  <td class="content">
+      Platform provides convenient logging API, <code>Platform.getLog(Class)</code>  and  <code>Platform.getLog(log(Class, IStatus status)</code> which can be used to reduce client code necessary for logging.
+  </td>
+  </tr>
   <tr id="monitor-logging"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=482062 -->
   <td class="title">Tracing option for correct progress reporting usage</td>
   <td class="content">
