@@ -2,11 +2,15 @@ This file contains the instructions to the run the scripts in this directory.
 
 1. Edit generatereadme.sh
 Example - 
-If 4.11 is the current release
-sed  -e 's/4\.11/4\.12/g'  readme_eclipse.html > readme_eclipse_new.html
-sed -i -e 's/4_11/4_12/g' readme_eclipse_new.html
-sed -i -e 's/4\.10/4\.11/g' readme_eclipse_new.html
+If Read Me is generated for 4.12
+sed -i -e 's/4\.11/4\.12/g'  readme_eclipse.html 
+sed -i -e 's/4_11/4_12/g' readme_eclipse.html
+sed -i -e 's/4\.10/4\.11/g' readme_eclipse.html
 2. Run generatereadme.sh 
+3. Validate the generated readme.html
+4. Update the Last Modified Date
+5. Check if Copyright date needs an update
+6. Delete readme_eclipse_old.html
 
 Example:
 generatereadme.sh 
