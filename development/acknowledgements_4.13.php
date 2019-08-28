@@ -13,6 +13,7 @@ $right_nav = FALSE;
 $keyword = 'eclipse, 4.13, 2019-09, acknowledgements, acknowledgments, thanks';
 
 include($App->getProjectCommon());
+header('Content-type: text/plain; charset=utf-8');
 
 #echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">';
 
