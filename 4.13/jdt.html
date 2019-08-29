@@ -86,6 +86,26 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="autoboxing-unboxing"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=549242 -->
+    <td class="title">Autoboxing and Unboxing</td>
+    <td class="content">
+      Use Autoboxing and Unboxing when possible. Those features are enabled only for Java 5 and higher.
+      <p><img src="images/autoboxing-unboxing-feature.png" alt=""/></p>
+    </td>
+  </tr>
+
+  <tr id="enhanced-redundant-modifier-removal"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=549242 -->
+    <td class="title">Improved redundant modifier removal</td>
+    <td class="content">
+      <b>Remove redundant modifier</b> now also removes useless <code>abstract</code> modifier on the interfaces.
+      <p><img src="images/abstract-removal-feature.png" alt=""/></p>
+      For the given code:
+      <p><img src="images/abstract-removal-before.png" alt=""/></p>
+      You get this:
+      <p><img src="images/abstract-removal-after.png" alt=""/></p>
+    </td>
+  </tr>
+
   <tr id="javadoc-for-module-info"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=546350 -->
     <td class="title">Javadoc comment generation for module</td>
     <td class="content">
@@ -180,32 +200,6 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   <!--************************ End of Debug ******************************** -->
-
-  <!-- *********************** Clean Up & Save Action ******************************** -->
-  <tr>
-    <td id="CleanUpSaveAction" class="section" colspan="2">
-    <h2>Clean Up and Save Action</h2>
-    </td>
-  </tr>
-  <tr id="autoboxing-unboxing"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=549242 -->
-    <td class="title">Autoboxing and Unboxing</td>
-    <td class="content">
-      Use Autoboxing and Unboxing when possible. Those features are enabled only for Java 5 and higher.
-      <p><img src="images/autoboxing-unboxing-feature.png" alt=""/></p>
-    </td>
-  </tr>
-  <tr id="enhanced-redundant-modifier-removal"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=549242 -->
-    <td class="title">Improved redundant modifier removal</td>
-    <td class="content">
-      <b>Remove redundant modifier</b> now also removes useless <code>abstract</code> modifier on the interfaces.
-      <p><img src="images/abstract-removal-feature.png" alt=""/></p>
-      For the given code:
-      <p><img src="images/abstract-removal-before.png" alt=""/></p>
-      You get this:
-      <p><img src="images/abstract-removal-after.png" alt=""/></p>
-    </td>
-  </tr>
-  <!--************************ End of Clean up & Save Action ******************************** -->
 
   <!-- ******************* Java Build ************************************* -->
   <tr>
