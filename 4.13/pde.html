@@ -43,12 +43,12 @@ ul {padding-left: 13px;}
   <tr id="feature-launch-startlevels"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=331595 -->
     <td class="title">Configure start levels for feature based launch</td>
     <td class="content">
-      Feature-based launch configurations now support custom start levels and auto-start properties for individual plugins.
+      <b>Feature-based Launch Configuration</b> now supports custom start levels and auto-start properties for individual plugins.
       <p>
        To configure them, you need to add the plugins via <b>Add Plug-ins...</b> first.
       </p>
       <p>
-       When launching a feature-based <b>product</b>, defined start levels and selected features are automatically
+       When launching a feature-based product, defined start levels and selected features are automatically
        filled out in the created launch configuration. You can then select <b>features selected below</b> to
        convert it to feature-based without any further configuration. 
       </p>
@@ -57,6 +57,7 @@ ul {padding-left: 13px;}
       </p>
     </td>
   </tr>
+  
   <tr id="features-view"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=543217 -->
     <td class="title">New Features view</td>
     <td class="content">
@@ -111,15 +112,15 @@ ul {padding-left: 13px;}
       There are various optimizations that are done for API analysis builder which has
       improved the performance in some scenarios tremendously. 
       <ul>
-	   <li>Changing 'Missing API baseline' option in <b>Preferences &gt; Plug-in Development &gt; API Baselines</b> preference page 
+	   <li>Changing <b>Missing API baseline</b> option in <b>Preferences &gt; Plug-in Development &gt; API Baselines</b> preference page 
 	   updates the marker appropriately instead of doing a full build.</li>
 	   <li>Removing or unchecking baseline in  <b>Preferences &gt; Plug-in Development &gt; API Baselines</b> preference page  removes all markers 
 	   which requires a baseline instead of a full build.</li>
 	   <li>Removing or unchecking all API Use Scan locations  in <b>Preferences &gt; Plug-in Development &gt; API Use Scans</b> preference page  removes the relevant markers instead of doing a full build.</li>
       </ul>
       <p>
-      For example, changing 'Missing API baseline' option in <code>org.eclipse.jdt.core</code> finishes instantaneously instead of 3 to 4 seconds earlier.
-      </p
+      For example, changing <b>Missing API baseline</b> option in <code>org.eclipse.jdt.core</code> finishes instantaneously instead of 3 to 4 seconds earlier.
+      </p>
     </td>
   </tr>
   

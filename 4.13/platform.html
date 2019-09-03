@@ -60,7 +60,6 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
-
   <tr id="save-action-project-explorer"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=211520 -->
     <td class="title">Save editor when Project Explorer has focus</td>
     <td class="content">
@@ -83,36 +82,50 @@ ul {padding-left: 13px;}
   </tr>
 
   <tr id="project-explorer-normal-resource-inline-rename"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=548877 -->
-    <td class="title">
-            Inline rename for normal resources while in Project Explorer
-    </td>
+    <td class="title">Inline rename for normal resources while in Project Explorer</td>
     <td class="content">
-	  In the <b>Project Explorer</b>, renaming (with the <b>F2</b> shortcut or Rename context-menu) will start an inline rename for normal resources.
-	  After hitting <b>Enter</b>, a dialog will let you review the rename operation before performing the rename.
-         <p>
-            <img src="images/project-explorer-inline-normal.png" alt="" />
-         </p>
+	  In the <b>Project Explorer</b>, renaming (with the <b>F2</b> shortcut or <b>Rename</b> context-menu) will start an inline rename for normal resources.
+	  After hitting the Enter key, a dialog will let you review the rename operation before performing the rename.
+      <p>
+       <img src="images/project-explorer-inline-normal.png" alt=""/>
+      </p>
     </td>
   </tr>
 
   <tr id="colors-in-compareviewer"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=450320 -->
     <td class="title">Show colors for additions and deletions in Compare viewer</td>
     <td class="content">
-      In simple cases (2-way comparison, no merge, no conflict), the Compare viewer now shows different
-      colors, depending on whether text has been added, removed or modified.
+      In simple cases such as a 2-way comparison or a 3-way comparison with no merges and conflicts, the <b>Compare Viewer</b> now shows different colors, 
+	  depending on whether text has been added, removed or modified. The default colors are green, red and black respectively.
       <p>
         <img src="images/compare-editor-colors.png" alt=""/>
       </p>
       <p>
-        Default colors are respectfully green, red and black, but this can be customized through usual
-        theme customization approaches, including using related entries in the <b>Colors and Fonts</b>
-        preference page.
+      	The colors can be customized through usual theme customization approaches, including using related entries in the <b>Colors and Fonts</b>
+      	preference page.
       </p>
     </td>
   </tr>
   
-    <tr id="shorter-dialog-texts"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=549939 -->
-    <td class="title">Shorter dialog text</td>
+  <tr id="editor-status-line"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=549604 -->
+    <td class="title">Editor status line shows more selection details</td>
+    <td class="content">
+      The status line for <b>Text Editors</b> now shows the cursor position, and when the editor has something selected, 
+      shows the number of characters in the selection as well. This also works in the block selection mode.
+      <p>
+      	These two new additions to the status line can be disabled via the <b>General &gt; Editors &gt; Text Editors</b> preference page.
+      </p>
+      <p>
+        <img src="images/selection-count.png" alt=""/>
+      </p>
+      <p>
+        <img src="images/selection-offset.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="shorter-dialog-texts"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=549939 -->
+   <td class="title">Shorter dialog text</td>
     <td class="content">
       Several dialog texts have been shortened. This allows you to capture the important information faster.
       <p>Previously:</p>
@@ -125,26 +138,11 @@ ul {padding-left: 13px;}
       </p>
     </td>
   </tr>
+  
   <tr id="close-project-via-middle-click"><!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=549894 -->
 	<td class="title">Close project via middle-click</td>
     <td class="content">
 	  In the <b> Project Explorer</b>, you can now close a project using middle-click.
-    </td>
-  </tr>
-  
-  <tr id="editor-status-line"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=549604 -->
-    <td class="title">Editor status line shows more selection details</td>
-    <td class="content">
-      Status line for text editors shows now cursor position, and if editor has something selected, 
-      the number of characters in the selection (works also in block selection mode). 
-      Both new additions to the status line can be disabled via preferences 
-      (General - Editors - Text Editors).
-      <p>
-        <img src="images/selection-count.png" alt=""/>
-      </p>
-      <p>
-        <img src="images/selection-offset.png" alt=""/>
-      </p>
     </td>
   </tr>
 
@@ -174,7 +172,7 @@ ul {padding-left: 13px;}
   <tr id="external-tool-showcommandline"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=548886 -->
     <td class="title">Show Command Line for external program launch</td>
     <td class="content">
-      The <b>External Tools Configuration</b> dialog for launching an external program now supports the "Show Command Line" button.
+      The <b>External Tools Configuration</b> dialog for launching an external program now supports the <b>Show Command Line</b> button.
       <p>
        <img src="images/external-tool-showcommandline.png" alt=""/>
       </p>
@@ -203,8 +201,8 @@ ul {padding-left: 13px;}
     <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=548057 -->
     <td class="title">In-table color previews for Text Editor appearance color options</td>
     <td class="content">
-      You can now see all the colors currently being used in Eclipse's text editors from the Appearance Color
-      Options table, located in <b>Preferences &gt; General &gt; Editors &gt; Text Editor</b>.
+      You can now see all the colors currently being used in <b>Text Editors</b> from the Appearance color
+      options table, located in the <b>Preferences &gt; General &gt; Editors &gt; Text Editor</b> page.
       <p>
         <img src="images/text-editors-color-intable.png" alt="" />
       </p>
@@ -213,14 +211,14 @@ ul {padding-left: 13px;}
   
    <tr id="ui-freeze-monitor">
     <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=548385 -->
-    <td class="title">Automatic detection of UI freezes in the Eclipse SDK build</td>
+    <td class="title">Automatic detection of UI freezes in the Eclipse SDK</td>
     <td class="content">
-      The SDK build has been configured to show stack traces for UI freezes in the <b>Error Log</b> view by default for new workspaces.
-      You can use this information to identify and report slow parts of the IDE.
+      The Eclipse SDK has been configured to show stack traces for UI freezes in the <b>Error Log</b> view by default for new workspaces.
+      You can use this information to identify and report slow parts of the Eclipse IDE.
       <p>
         <img src="images/freeze-event.png" alt="" />
       </p>
-      You can disable the monitoring or tweak its settings via the preferences as shown in the following screenshot.
+      You can disable the monitoring or tweak its settings via the options in the <b>General &gt; UI Responsiveness Monitoring</b> preference page as shown below.
       <p>
         <img src="images/ui-monitor-preference.png" alt="" />
       </p>
@@ -247,11 +245,14 @@ ul {padding-left: 13px;}
   </tr>
   
   <tr id="help-system-dark"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=532185 -->
-    <td class="title">Display of Help Contents Respects OS Level Theme</td>
+    <td class="title">Display of Help content respects OS theme</td>
     <td class="content">
-        More and more operating systems provide a system wide dark theme. Eclipse now respects this system wide theme setting 
-        when the Eclipse help contents is displayed in an external browser. Prerequisite for this is a browser that support 
-        the <em><a href="https://caniuse.com/#search=prefers-color-scheme">prefers-color-scheme</a></em> CSS media query. As of writing this the following browser versions support it:
+      More and more operating systems provide a system wide dark theme. Eclipse now respects this system wide theme setting 
+      when the Eclipse help content is displayed in an external browser. A prerequisite for this is a browser that supports 
+      the <em><a href="https://caniuse.com/#search=prefers-color-scheme">prefers-color-scheme</a></em> CSS media query. 
+      <p>
+      	As of writing this the following browser versions support it:
+      </p>
       <ul>
         <li>Firefox version 67</li>
         <li>Chrome version 76</li>
@@ -260,22 +261,24 @@ ul {padding-left: 13px;}
       <img src="images/help_system_dark.png" alt="Eclipse help content in dark theme" style="width: 100%"/>
       </td>
   </tr>
+  
   <tr id="help-system-svg"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=548008 -->
-    <td class="title">Help Contents Uses High Resolution Icons</td>
+    <td class="title">Help content uses high resolution icons</td>
     <td class="content">
-        The help system itself as well as the help content of the <b>Eclipse Platform</b>, the <b>Java Development Tooling</b> and
+        The <b>Help System</b> as well as the help content of the <b>Eclipse Platform</b>, the <b>Java Development Tooling</b> and
         the <b>Plug-in Development Environment</b> now use high resolution icons.
         They are now crisp on high resolution displays and also looks much better in the dark theme.
         <p>
           <img src="images/help_system_high_res.png" alt="Eclipse help with high resolution icons" style="width: 100%"/></p>
       </td>
   </tr>
+  
   <tr id="styling-forms"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=549969 -->
-    <td class="title">Improve Dark Theme on Windows</td>
+    <td class="title">Improved dark theme on Windows</td>
     <td class="content">
       Labels, Sections, Checkboxes, Radio Buttons, FormTexts and Sashes on forms now use the correct background color in the dark mode on windows.
       <p> 
-          <img src="images/correct_backgrounds.png" alt="Old and New styling of forms" style="width: 100%"/>
+       <img src="images/correct_backgrounds.png" alt="Old and New styling of forms" style="width: 100%"/>
       </p>
       </td>
   </tr>
@@ -287,25 +290,27 @@ ul {padding-left: 13px;}
     <h2>General Updates </h2>
     </td>
   </tr>
-  <tr id="ui-erformance"> <!-- multiple bugs -->
+  <tr id="ui-performance"> <!-- multiple bugs -->
     <td class="title">Interactive performance</td>
     <td class="content">
-    	Interactive performance has again been improved in this release and multiple UI freezes have been fixed.
+    	Interactive performance has been further improved in this release and several UI freezes have been fixed.
     </td>
   </tr>
+  
   <tr id="show-keybinding"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=540440 -->
-    <td class="title">Show Key Bindings When Command is Invoked</td>
+    <td class="title">Show key bindings when command is invoked</td>
     <td class="content">
-        For learning purposes, presentations or screen casts it is very helpful to show the corresponding 
-        key binding when a command is invoked. Whenever the command is invoked (may it via the key 
-        binding or via menu interaction) the key binding, the command's name and description are shown 
-        on the screen.
-        <p> 
-          <img src="images/show_key_bindings.png" alt="Key binding of triggered command shown on screen" style="width: 90%"/></p>
-        <p>
-        You can activate this in the <b>Preferences</b> dialog via the <em>Show key binding when command is invoked</em> check box on the <b>General &gt; Keys</b> preference page.
-        To toggle this setting quickly the command 'Toggle Whether to Show Key Binding' can be used (e.g. via the quick access).
-        </p>    
+      For presentations, screen casts and learning purposes, it is very helpful to show the corresponding 
+      key binding when a command is invoked. When the command is invoked (via a key 
+      binding or menu interaction) the key binding, the command's name and description are shown 
+      on the screen.
+      <p> 
+       <img src="images/show_key_bindings.png" alt="Key binding of triggered command shown on screen" style="width: 90%"/>
+      </p>
+      <p>
+       You can activate this in the <b>Preferences</b> dialog via the <em>Show key binding when command is invoked</em> check box on the <b>General &gt; Keys</b> preference page.
+       To toggle this setting quickly the command 'Toggle Whether to Show Key Binding' can be used (e.g. via the quick access).
+      </p>    
       </td>
   </tr>
     <!-- ******************* End of General Updates ************************************* -->
