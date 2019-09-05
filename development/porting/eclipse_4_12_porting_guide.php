@@ -8,5 +8,5 @@ $Menu 	= new Menu();
 /* un-comment to use 100% of the content box
 $right_nav = FALSE;
 */	
-$keyword = 'Eclipse 4.9, API contract compatibility, migrating 4.8 plug-ins to 4.9';
+$keyword = 'Eclipse 4.12, API contract compatibility, migrating 4.11 plug-ins to 4.12';
 require_once($_SERVER['DOCUMENT_ROOT'] ."/eclipse/development/nova/_projectCommon.php");
