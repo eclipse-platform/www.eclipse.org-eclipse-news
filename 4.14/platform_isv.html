@@ -38,6 +38,25 @@ ul {padding-left: 13px;}
   <tr>
     <td id="Platform" class="section" colspan="2"><h2>Platform Changes</h2></td>
   </tr>
+
+  <tr id="text-selection-no-ui-thread"> <!-- https://bugs.eclipse.org/547683 -->
+    <td class="title">Get TextViewer selection out of UI-Thread</td>
+    <td class="content">
+      A new extension interface <b>ITextViewerExtension9</b> for ITextViewer was added. This extension interface
+      adds a new method <b>getLastKnownSelection</b> to get the text selection for the viewer, with constraint (by API contract) that this method
+      can be called <em>outside of the UI Thread</em>.
+      <p>This method allows to build extensions (like completion proposal computer, hovers and others) that can
+      work outside of the UI Thread, as separate job, without blocking the UI but that still require access to the
+      text selection.</p>
+      <p>The <em>TextViewer</em> concrete implementation (used by most textual editors) has been
+      enriched to implement this interface and provide associated method.</p>
+      <p>NOTE: since selection can change in the UI Thread while this method may be running in the non-UI Thread, it can
+      happen that the getLastKnownSelection method returns a selection that's no more up-to-date. Special care should be
+      taken if having the very current selection is important in your code; but experience with adoption of this method
+      in typical cases has shown that this is rarely the case, and that if your code needs to react to selection changes,
+      using a ISelectionLister should be preferred.</p>
+    </td>
+  </tr>
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
