@@ -57,6 +57,30 @@ ul {padding-left: 13px;}
       using a ISelectionLister should be preferred.</p>
     </td>
   </tr>
+
+  <tr id="display-helper-lambda"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=551211 -->
+    <td class="title">Easier usage of DisplayHelper</td>
+    <td class="content">
+      The <b>org.eclipse.ui.tests.harness.util.DisplayHelper</b> that's often conveniently
+      used in tests to automate wait on asynchronous UI results now offers a more concise
+      syntax, relying on the new static <b>waitForCondition(display, timeout, condition)</b>
+      method.
+      <p>Former constructs like
+<pre>
+assertTrue(new DisplayHelper() {
+	@Override
+	public void condition() {
+		return some.boolean() &amp;&amp; expression;
+	}
+}.waitForCondition(display, 1000));
+</pre>
+can now be replaced by
+<pre>
+assertTrue(DisplayHelper.waitForCondition()display, 1000, () -> some.boolean() &amp;&amp; expression))
+</pre>
+      </p>
+     </td>
+  </tr>
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
