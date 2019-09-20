@@ -58,6 +58,25 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="quick-assist-extension-point"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=544448 -->
+    <td class="title">Quick assist extension point for Generic Editor </td>
+    <td class="content">
+    A new extension point <b><code>org.eclipse.ui.genericeditor.quickAssistProcessors</code></b> has been added to allow contributing to the quick assist in the generic editor.
+	<p>
+	The following example shows how to contribute to the Generic Editor's quick assist:
+	<pre>
+&lt;extension point=&quot;org.eclipse.ui.genericeditor.quickAssistProcessors&quot;&gt;
+	&lt;quickAssistProcessor
+             class=&quot;org.eclipse.ui.genericeditor.tests.contributions.MockQuickAssistProcessor&quot;
+             contentType=&quot;org.eclipse.ui.genericeditor.tests.content-type&quot;&gt;
+	&lt;/quickAssistProcessor&gt;
+&lt;/extension&gt;
+	</pre>
+	</p>
+	The contributing extension must provide a class which implements <code>org.eclipse.jface.text.quickassist.IQuickAssistProcessor</code>.
+    </td>
+  </tr>
+
   <tr id="display-helper-lambda"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=551211 -->
     <td class="title">Easier usage of DisplayHelper</td>
     <td class="content">
