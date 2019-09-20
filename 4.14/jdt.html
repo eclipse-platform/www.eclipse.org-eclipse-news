@@ -121,6 +121,20 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="push-down-negation"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=550913 -->
+    <td class="title">Push negation down in expression</td>
+    <td class="content">
+      The Java cleanup/save action <b>Push down negation</b> reduces the double negation by reverting the arithmetic expressions. For instance:
+      <p>
+       <code>!!isValid;</code> gets <code>isValid;</code>
+      </p>
+      <p>
+       <code>!(a != b);</code> gets <code>(a == b);</code>
+      </p>
+      <p><img src="images/push-down-negation.png" alt="Push negation down cleanup"/></p>
+    </td>
+  </tr>
+
   <tr id="templates-empty-java-file"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=505610 -->
     <td class="title">Provide templates for empty Java source files</td>
     <td class="content">
@@ -151,7 +165,6 @@ the resources of the <code>try-with-resources</code> statement.  If there are se
 	  <p><img src="images/tryWithResource3.png" alt=""/></p>
     </td>
   </tr>
-
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
