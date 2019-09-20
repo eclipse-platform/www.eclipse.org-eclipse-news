@@ -87,6 +87,16 @@ assertTrue(DisplayHelper.waitForCondition()display, 1000, () -> some.boolean() &
   <tr>
     <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
   </tr>
+  <tr id="toolitem-disabled-image"> <!-- https://bugs.eclipse.org/302918 -->
+    <td class="title">setDisabledImage() now implemented for ToolItems on GTK</td>
+    <td class="content">
+      <code>setDisabledImage()</code> is now fully implemented for SWT-GTK ToolItems, and greatly improves the ability
+			to distinguish a disabled ToolItem from an enabled one.
+			<p>Below is a screenshot comparing the two;
+			the left ToolBar demonstrates the implemented API, whereas the right one does not.</p>
+			<p><img src="images/toolitem-disabled-comparison.png" alt="ToolBar comparison"/></p>
+    </td>
+  </tr>
   <!-- *********************** End of SWT *********************** -->
 
 </tbody>
