@@ -40,38 +40,36 @@ ul {padding-left: 13px;}
   </tr>
 
   <tr id="text-selection-no-ui-thread"> <!-- https://bugs.eclipse.org/547683 -->
-    <td class="title">Get TextViewer selection out of UI-Thread</td>
+    <td class="title">Get TextViewer selection out of UI thread</td>
     <td class="content">
-      A new extension interface <b>ITextViewerExtension9</b> for ITextViewer was added. This extension interface
-      adds a new method <b>getLastKnownSelection</b> to get the text selection for the viewer, with constraint (by API contract) that this method
-      can be called <em>outside of the UI Thread</em>.
-      <p>This method allows to build extensions (like completion proposal computer, hovers and others) that can
-      work outside of the UI Thread, as separate job, without blocking the UI but that still require access to the
+      A new extension interface <b><code>ITextViewerExtension9</code></b> was added to <code>ITextViewer</code>. This extension interface
+      adds a new method <code>getLastKnownSelection</code> to get the text selection for the viewer, with constraint (by API contract) that this method
+      can be called <em>outside of the UI thread</em>.
+      <p>This method allows to build extensions (like completion proposal computers, hovers and others) that can
+      work outside of the UI thread, as separate job, without blocking the UI but that still require access to the
       text selection.</p>
       <p>The <em>TextViewer</em> concrete implementation (used by most textual editors) has been
       enriched to implement this interface and provide associated method.</p>
-      <p>NOTE: since selection can change in the UI Thread while this method may be running in the non-UI Thread, it can
+      <p>NOTE: since selection can change in the UI thread while this method may be running in the non-UI thread, it can
       happen that the getLastKnownSelection method returns a selection that's no more up-to-date. Special care should be
       taken if having the very current selection is important in your code; but experience with adoption of this method
       in typical cases has shown that this is rarely the case, and that if your code needs to react to selection changes,
-      using a ISelectionLister should be preferred.</p>
+      using an ISelectionListener should be preferred.</p>
     </td>
   </tr>
 
   <tr id="quick-assist-extension-point"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=544448 -->
-    <td class="title">Quick assist extension point for Generic Editor </td>
+    <td class="title">Quick assist extension point for Generic Editor</td>
     <td class="content">
     A new extension point <b><code>org.eclipse.ui.genericeditor.quickAssistProcessors</code></b> has been added to allow contributing to the quick assist in the generic editor.
 	<p>
 	The following example shows how to contribute to the Generic Editor's quick assist:
-	<pre>
-&lt;extension point=&quot;org.eclipse.ui.genericeditor.quickAssistProcessors&quot;&gt;
-	&lt;quickAssistProcessor
-             class=&quot;org.eclipse.ui.genericeditor.tests.contributions.MockQuickAssistProcessor&quot;
-             contentType=&quot;org.eclipse.ui.genericeditor.tests.content-type&quot;&gt;
-	&lt;/quickAssistProcessor&gt;
-&lt;/extension&gt;
-	</pre>
+	<pre>&lt;extension point=&quot;org.eclipse.ui.genericeditor.quickAssistProcessors&quot;&gt;
+    &lt;quickAssistProcessor
+        class=&quot;org.eclipse.ui.genericeditor.tests.contributions.MockQuickAssistProcessor&quot;
+        contentType=&quot;org.eclipse.ui.genericeditor.tests.content-type&quot;&gt;
+    &lt;/quickAssistProcessor&gt;
+&lt;/extension&gt;</pre>
 	</p>
 	The contributing extension must provide a class which implements <code>org.eclipse.jface.text.quickassist.IQuickAssistProcessor</code>.
     </td>
@@ -80,17 +78,17 @@ ul {padding-left: 13px;}
   <tr id="display-helper-lambda"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=551211 -->
     <td class="title">Easier usage of DisplayHelper</td>
     <td class="content">
-      The <b>org.eclipse.ui.tests.harness.util.DisplayHelper</b> that's often conveniently
+      The <b><code>org.eclipse.ui.tests.harness.util.DisplayHelper</code></b> that's often conveniently
       used in tests to automate wait on asynchronous UI results now offers a more concise
-      syntax, relying on the new static <b>waitForCondition(display, timeout, condition)</b>
+      syntax, relying on the new static <code>waitForCondition(display, timeout, condition)</code>
       method.
       <p>Former constructs like
 <pre>
 assertTrue(new DisplayHelper() {
-	@Override
-	public void condition() {
-		return some.boolean() &amp;&amp; expression;
-	}
+    @Override
+    public void condition() {
+        return some.boolean() &amp;&amp; expression;
+    }
 }.waitForCondition(display, 1000));
 </pre>
 can now be replaced by
@@ -109,7 +107,7 @@ assertTrue(DisplayHelper.waitForCondition()display, 1000, () -> some.boolean() &
   <tr id="toolitem-disabled-image"> <!-- https://bugs.eclipse.org/302918 -->
     <td class="title">setDisabledImage() now implemented for ToolItems on GTK</td>
     <td class="content">
-      <code>setDisabledImage()</code> is now fully implemented for SWT-GTK ToolItems, and greatly improves the ability
+      <b><code>setDisabledImage()</code></b> is now fully implemented for SWT-GTK ToolItems, and greatly improves the ability
 			to distinguish a disabled ToolItem from an enabled one.
 			<p>Below is a screenshot comparing the two;
 			the left ToolBar demonstrates the implemented API, whereas the right one does not.</p>
