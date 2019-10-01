@@ -62,6 +62,19 @@ ul {padding-left: 13px;}
     <h2>Java Editor </h2>
     </td>
   </tr>
+
+  <tr id="unnecessary-array-creation"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=550129 -->
+    <td class="title">Remove unnecessary array creation</td>
+    <td class="content">
+      A new cleanup option: <b>Remove unnecessary array creation</b> will remove array creation for a <code>varargs</code> parameter.
+      <p><img src="images/unnecessary-array-creation-option.png" alt=""/></p>
+      For the given code:
+      <p><img src="images/unnecessary-array-creation-before.png" alt=""/></p>
+      You get this:
+      <p><img src="images/unnecessary-array-creation-after.png" alt=""/></p>
+    </td>
+  </tr>
+
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
