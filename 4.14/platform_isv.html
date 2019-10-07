@@ -98,6 +98,28 @@ assertTrue(DisplayHelper.waitForCondition()display, 1000, () -> some.boolean() &
       </p>
      </td>
   </tr>
+
+  <tr id="selection_listener_factory"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=550329 -->
+    <td class="title">Selection Listener Factory</td>
+    <td class="content">
+       New API was introduced to make participants of the selection framework more efficient.
+       <p>
+         Selection listeners are notified of all selections in the workbench. This
+         means that the listener is always required to filter unwanted selections. In
+         addition, the listener has to make sure not to waste cycles in the UI
+         thread, for instance, not update the UI while it is invisible.
+       <p>
+         This filtering generally requires <u>a lot</u> of boilerplate code while,
+         ideally, you only want to receive selections that are of interest.
+       <p>
+         This factory takes care of many practical filtering scenarios by allowing the
+         creation of an intermediate selection service that only calls you back with
+         selections you can work with.
+       <p>
+         See usage examples in the <a href="https://git.eclipse.org/r/plugins/gitiles/platform/eclipse.platform.ui/+/master/bundles/org.eclipse.ui.workbench/Eclipse%20UI/org/eclipse/ui/SelectionListenerFactory.java#30">SelectionListenerFactory</a> documentation.
+    </td>
+  </tr>
+
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
