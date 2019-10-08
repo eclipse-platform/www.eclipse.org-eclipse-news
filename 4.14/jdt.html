@@ -107,6 +107,38 @@ ul {padding-left: 13px;}
     <h2>Debug</h2>
     </td>
   </tr>
+
+  <tr id="exception-instance-recurrence"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=284158 -->
+    <td class="title">No suspending on exception recurrence</td>
+    <td class="content">
+      A new option has been added for exception breakpoints: <b>Suspend on recurrence per instance</b> controls 
+      whether the same exception <em>instance</em> may cause the debugger to suspend more than once.
+      <p>This option is relevant when debugging an application that has <code>try</code> blocks at several levels of the architecture.
+        In this situation an exception breakpoint may fire multiple times for the same actual exception <em>instance</em>: 
+        A <code>throw</code> statement inside a <code>catch</code> block may re-throw the same exception.
+        The same holds for each <code>finally</code> block or <em>try-with-resources</em> block.  
+      </p>
+      <p>When the debugger stops due to an exception breakpoint, you may want to continue your debug session by pressing
+      	<b>Resume</b> (<b>F8</b>), but all that catching and re-throwing will force you to observe
+      	all locations where the same exception will surface again and again. Suspending at all <code>try</code> blocks
+      	on the call stack may also spoil your context of open Java editors, by opening more editors of classes that are
+      	likely irrelevant for the debugging task at hand.</p>
+      <p>The JDT Debugger will now detect this situation, and the first time it notices the same exception instance
+      	recurring at the surface, a new question dialog is shown:
+      </p>
+      <p><img src="images/dialog-exception-recurrence.png" alt="Dialog: Repeated exception occurrence"/></p>
+      <p>If you select <b>Skip</b> in this dialog, the given exception breakpoint will be configured
+      	to never suspend on any exception instance that you have already dismissed by pressing <b>Resume</b>.
+      	Still, new instances of the same exception type will cause suspending when they are thrown.
+      </p>
+      <p>Your choice will be stored in the breakpoint, and can be directly modified also in the breakpoint editor:
+      </p>
+      <p><img src="images/option-exception-recurrence.png" alt="Option: Suspend on recurrence per instance"/></p>
+      <p>Even after choosing <b>Skip</b>, resp. <b>only once</b>, you can have the old behavior
+      	simply by pressing <b>Step Return</b> (<b>F7</b>) instead of <b>Resume</b>.</p>
+    </td>
+  </tr>
+
   <!--************************ End of Debug ******************************** -->
 
   <!-- *********************** JDT Developers ******************************** -->
