@@ -61,6 +61,24 @@ ul {padding-left: 13px;}
        <p>Loading the proposals has been improved to reduce amount and durations of UI freezes when loading proposals.</p>
     </td>
   </tr>
+
+  <tr id="quick-text-search-in-Find-Actions">
+    <td class="title">Find Actions also find text in file contents</td>
+    <td class="content">
+       <em>Find Actions</em> is now extended by the Quick Text Search feature to also include
+       in the proposals the potential text match in file contents.
+       <p>
+         <img src="images/file-content-find-action.png" alt=""/>
+       </p>
+      <p>
+      If the Quick Text Search bundle wasn't started yet, you may miss those matches. In this case, you can ask directly Find Actions to activate the Quick Text Serach by looking
+      for a <em>Activate bundle for 'File Content' proposals</em> entry.
+      </p>
+      <p>
+        <img src="images/activate-file-content.png" alt="Activate File Contents"/>
+      </p>
+    </td>
+  </tr>
   <!-- ******************* End of Views, Dialogs and Toolbar ************************************* -->
 
   <!-- ******************* Text Editors ************************************* -->
@@ -70,7 +88,7 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
-  <tr id="delete-spaces-as-tabs">
+  <tr id="delete-spaces-as-tabs"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=483846 -->
     <td class="title">Backspace/delete can treat spaces as tabs</td>
     <td class="content">
       If you use the <b>Insert spaces for tabs</b> option, now you can also change the backspace and delete keys behavior to remove multiple spaces at once, as if they were a tab.
@@ -125,6 +143,21 @@ ul {padding-left: 13px;}
       </p>
        <p>New:<br/>
         <img src="images/pom_dark_new.png" alt=""/>
+      </p>
+  	  </td>
+  </tr>
+
+    <tr id="perspective-switcher"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=551390 -->
+    <td class="title">Perspective switcher gets aligned with normal toolbar styling </td>
+    <td class="content">
+    	The special styling and the related code of the internal perspective switcher class has been removed to make the toolbar look
+    	consistent. This also reduces OS specific styling issues with the perspective switcher. 
+    	
+      <p>Old:
+        <img src="images/old-perspective-switcher.png" alt=""/>
+      </p>
+       <p>New:
+        <img src="images/new-perspective-switcher.png" alt=""/>
       </p>
   	  </td>
   </tr>
