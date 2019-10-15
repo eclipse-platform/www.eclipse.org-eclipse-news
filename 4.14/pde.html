@@ -25,7 +25,7 @@ ul {padding-left: 13px;}
 <ul>
 	<li><a href="#dialogs-wizards-views">Dialogs, Wizards and Views</a></li>
 	<!-- <li><a href="#editors">Editors</a></li> -->
-	<!-- <li><a href="#APITools">API Tools</a></li> -->
+	<li><a href="#APITools">API Tools</a></li>
 	<!-- <li><a href="#pde-compiler">PDE Compiler</a></li> -->
 </ul>
 
@@ -64,11 +64,27 @@ ul {padding-left: 13px;}
   <!-- ******************** End of Editors ********************** -->
 
   <!-- ******************** APITools ********************** -->
-  <!--
   <tr>
     <td id="APITools" class="section" colspan="2"><h2>API Tools</h2></td>
   </tr>
-  -->
+
+  <tr id="apiDescription-generator-app"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=551417 -->
+    <td class="title">Application to generate API descriptor manifest</td>
+    <td class="content">
+      Additionally to the legacy Ant tasks, PDE now provides a direct Eclipse application to generate API manifest
+      (typically <code>.api_description</code> files).
+      <p>
+        Application id is <code>org.eclipse.pde.api.tools.apiGeneration</code> and it's arguments are the same as
+        for Ant tasks. So the application can typically be invoked with  command lines like
+        <code>./eclipse -application org.eclipse.pde.api.tools.apiGeneration
+        -projectName org.eclipse.pde.ui
+        -project /home/vikas/git/eclipse.pde.ui/ui/org.eclipse.pde.ui
+        -binary /home/vikas/git/eclipse.pde.ui/ui/org.eclipse.pde.ui/target/org.eclipse.pde.ui-3.11.200-SNAPSHOT.jar
+        -target /home/vikas/git/eclipse.pde.ui/ui/org.eclipse.pde.ui/target/
+        </code>.
+      </p>
+    </td>
+  </tr>
   <!-- ******************** End of APITools ********************** -->
   
    <!-- ******************** PDE Compiler ********************** -->
