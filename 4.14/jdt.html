@@ -27,7 +27,7 @@ ul {padding-left: 13px;}
 	<li><a href="#JUnit">JUnit</a></li>
 	<li><a href="#JavaEditor">Java Editor</a></li>
 	<!-- <li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li> -->
-	<!-- <li><a href="#JavaFormatter">Java Formatter</a></li> -->
+	<li><a href="#JavaFormatter">Java Formatter</a></li>
 	<li><a href="#Debug">Debug</a></li>
 	<!-- <li><a href="#JDTDev">JDT Developers</a></li> -->
 </ul>
@@ -138,13 +138,25 @@ ul {padding-left: 13px;}
   <!-- ******************* End of Java Compiler ************************************* -->
 
   <!-- ******************* Java Formatter ************************************* -->
-  <!--
   <tr>
     <td id="JavaFormatter" class="section" colspan="2">
     <h2>Java Formatter </h2>
     </td>
   </tr>
-  -->
+
+  <tr id="formatter-text-block"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=551984 -->
+    <td class="title">Formatting of text blocks</td>
+    <td class="content">
+      The code formatter can now handle <b>text blocks</b>, which is a preview feature added in Java 13.
+      It's controlled by the <b>Text block indentation</b> setting, found right in the <b>Indentation</b> section.
+      <p>By default, text block lines are indented the same way as wrapped code lines, that is with two extra tabs relative
+      to the starting indentation (or whatever is set as <b>Default indentation for wrapped lines</b> in the <b>Line Wrapping</b> section).
+      You can also set it to use only one tab for indentation (<b>Indent by one</b>), align all lines to the position of the opening quotes
+      (<b>Indent on column</b>), or preserve the original formatting (<b>Do not touch</b>).
+      </p>
+      <p><img src="images/formatter-text-block.png" alt=""/></p>
+    </td>
+  </tr>
   <!-- ******************* End of Java Formatter ************************************* -->
   
   <!-- *********************** Debug ******************************** -->
