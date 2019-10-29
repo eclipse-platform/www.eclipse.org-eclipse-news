@@ -136,6 +136,14 @@ assertTrue(DisplayHelper.waitForCondition(display, 1000, () -> some.boolean() &a
 			<p><img src="images/toolitem-disabled-comparison.png" alt="ToolBar comparison"/></p>
     </td>
   </tr>
+  <tr id="image-svg-gtk"> <!-- https://bugs.eclipse.org/545804 -->
+    <td class="title">SVG Image API added, implemented on GTK</td>
+    <td class="content">
+      SWT now has API to support SVG images, <b><code>SWT.IMAGE_SVG</code></b>, which allows <b><code>ImageLoader</code></b> to load
+			them.
+			<p>Currently this functionality is only implemented for SWT-GTK, on all other platforms the API is a HINT.</p>
+		</td>
+  </tr>
   <!-- *********************** End of SWT *********************** -->
 
 </tbody>
