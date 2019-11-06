@@ -72,13 +72,12 @@ ul {padding-left: 13px;}
        </ul>
        These change can greatly improve the experience if you're using a screen reader as it relies on a more standardized focus state. This also
        leverages all the default and usual accessibility features of dialogs (moveable, resizable...).
-       
        <p>Loading the proposals has been improved to reduce amount and durations of UI freezes when loading proposals.</p>
     </td>
   </tr>
 
-  <tr id="quick-text-search-in-Find-Actions">
-    <td class="title">Find Actions also find text in file contents</td>
+  <tr id="quick-text-search-in-Find-Actions"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=551970 -->
+    <td class="title">Find Actions finds text in file contents</td>
     <td class="content">
        <em>Find Actions</em> is now extended by the Quick Text Search feature to also include
        in the proposals the potential text match in file contents.
@@ -92,6 +91,17 @@ ul {padding-left: 13px;}
       <p>
         <img src="images/activate-file-content.png" alt="Activate File Contents"/>
       </p>
+    </td>
+  </tr>
+
+  <tr id="open-file-find-actions"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=552714 -->
+    <td class="title">Find Actions lists workspace files</td>
+    <td class="content">
+       <em>Find Actions</em> is now extended to list available workspace files and allow opening
+        them upon selection.
+       <p>
+         <img src="images/find-actions-resources.png" alt=""/>
+       </p>
     </td>
   </tr>
   <!-- ******************* End of Views, Dialogs and Toolbar ************************************* -->
