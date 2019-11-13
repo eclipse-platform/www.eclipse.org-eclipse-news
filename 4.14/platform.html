@@ -104,6 +104,23 @@ ul {padding-left: 13px;}
        </p>
     </td>
   </tr>
+
+ <tr id="project-explorer-inline-rename"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=550560 -->
+    <td class="title">
+            Inline rename for simple resources while in Project Explorer.
+    </td>
+    <td class="content">
+      <p>
+	  In the Project Explorer, renaming (with the <b><code>F2</code></b> shortcut or Rename context-menu) will start an inline rename for normal resources <b>when other files aren't affected by the rename.</b>
+	  </p>
+         <p>
+            <img src="images/project-explorer-inline-renaming.png" alt="" />
+         </p>
+	  <p>
+	  In cases where other files are affected by the rename, or the rename operation is customized, the rename dialog will appear as it previously did.
+      </p>
+    </td>
+  </tr>
   <!-- ******************* End of Views, Dialogs and Toolbar ************************************* -->
 
   <!-- ******************* Text Editors ************************************* -->
