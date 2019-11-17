@@ -165,7 +165,7 @@ ob_start();
 
 			<strong>Feature work approval</strong>
 	        <p>
-			Any feature work must be approved by the PMC. No changes are to be released without prior approval
+			Any feature work after RC1 must be approved by the PMC. No changes are to be released without prior approval
 			and associated bug report. Please send the request for approval to the eclipse-pmc
 			mailing list.
 			</p>
