@@ -115,6 +115,21 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="try-with-resources"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=473276 -->
+    <td class="title">Try-With-Resources quickfix</td>
+    <td class="content">
+      A quickfix has been added to create a <code>try-with-resources</code> statement based on selected lines.  Lines that are selected
+must start with declarations of objects that implement <code>AutoCloseable</code>.  These declarations are added as
+the resources of the <code>try-with-resources</code> statement.  If there are selected statements that are not eligible resources (such as Objects that don't implement <code>AutoCloseable</code>), then the first such statement and all following selected statements will be placed in the <code>try-with-resources</code> body.
+	  <p>Method before applying Try-With-Resources:</p>
+      <p><img src="images/tryWithResource1.png" alt=""/></p>
+	  <p>Selecting all lines inside the method then using the short-cut <b>Ctrl+1</b> and clicking on <b>Surround with try-with-resources</b> from list:</p>
+      <p><img src="images/tryWithResource2.png" alt=""/></p>
+      <p>results in:</p>
+	  <p><img src="images/tryWithResource3.png" alt=""/></p>
+    </td>
+  </tr>
+
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
