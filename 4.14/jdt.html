@@ -203,8 +203,9 @@ the resources of the <code>try-with-resources</code> statement.  If there are se
   <tr id="exception-instance-recurrence"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=284158 -->
     <td class="title">No suspending on exception recurrence</td>
     <td class="content">
-      A new option has been added for exception breakpoints: <b>Suspend on recurrence per instance</b> controls 
+      A new workspace preference has been added for exception breakpoints: <b>Suspend policy for recurring exception instances</b> controls 
       whether the same exception <em>instance</em> may cause the debugger to suspend more than once.
+      <p><img src="images/preference-exception-recurrence.png" alt="Preferences: Java > Debug"/></p>
       <p>This option is relevant when debugging an application that has <code>try</code> blocks at several levels of the architecture.
         In this situation an exception breakpoint may fire multiple times for the same actual exception <em>instance</em>: 
         A <code>throw</code> statement inside a <code>catch</code> block may re-throw the same exception.
@@ -219,14 +220,13 @@ the resources of the <code>try-with-resources</code> statement.  If there are se
       	recurring at the surface, a new question dialog is shown:
       </p>
       <p><img src="images/dialog-exception-recurrence.png" alt="Dialog: Repeated exception occurrence"/></p>
-      <p>If you select <b>Skip</b> in this dialog, the given exception breakpoint will be configured
-      	to never suspend on any exception instance that you have already dismissed by pressing <b>Resume</b>.
+      <p>If you select <b>Skip</b> in this dialog, the current exception instance will be dismissed for good.
       	Still, new instances of the same exception type will cause suspending when they are thrown.
       </p>
-      <p>Your choice will be stored in the breakpoint, and can be directly modified also in the breakpoint editor:
+      <p>If you check <b>Remember my decision</b> your choice will be stored in the mentioned workspace preference
+      	to be effective for all exception breakpoints.
       </p>
-      <p><img src="images/option-exception-recurrence.png" alt="Option: Suspend on recurrence per instance"/></p>
-      <p>Even after choosing <b>Skip</b>, resp. <b>only once</b>, you can have the old behavior
+      <p>Even after choosing <b>Skip</b> &mdash; resp. <b>Only once</b> in the preferences &mdash; you can have the old behavior
       	simply by pressing <b>Step Return</b> (<b>F7</b>) instead of <b>Resume</b>.</p>
     </td>
   </tr>
