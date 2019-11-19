@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		Dani Megert
-	# Date:			2019-11-17
+	# Date:			2019-11-18
 	#
 	# Description: Eclipse project 4.14 release freeze plan
 	#
@@ -45,7 +45,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>Sunday, November 17: Working towardss M3 next Friday</b></p>
+			<p><b>Sunday, November 17: Working towards M3 next Friday</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
