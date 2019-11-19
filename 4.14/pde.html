@@ -116,6 +116,23 @@ ul {padding-left: 13px;}
       </p>
     </td>
   </tr>
+  
+      <tr id="report-error-on-unnecessary-change"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=551197 -->
+    <td class="title">Report unnecessary change in minor and micro version</td>
+    <td class="content">
+     <p>
+      In addition to reporting minor version change without API changes, API tools now also reports the following unnecessary
+      minor and micro version change. <br>
+      <li>Minor version increased when major version was already increased in the release </li>
+      <li>Micro version increased when minor version or major version was already increased in the release.</li> <br>
+      
+      The preference option <b>Report minor version change without API changes:</b> has been renamed to 
+      <b>Report unnecessary minor or micro version change:</b>.
+       </p>
+      
+    </td>
+  	</tr>
+  
   <!-- ******************** End of APITools ********************** -->
   
    <!-- ******************** PDE Compiler ********************** -->
