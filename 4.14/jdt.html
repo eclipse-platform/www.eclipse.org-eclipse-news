@@ -64,6 +64,28 @@ ul {padding-left: 13px;}
            </p>
       </td>
   </tr>
+  <tr id="Text_Block_Creation_Keyboard_ShortCut"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=550113 -->
+      <td class="title">Keyboard shortcut for Text Block creation</td>
+      <td class="content">
+           A keyboard shortcut <b> Ctrl + Shift + ' </b>is added in the Java Editor for <b>text blocks</b>, which is a preview feature 
+           added in Java 13.
+           <p>
+           Conditions under which this keyboard shortcut works are: 
+           </p>
+           <ul>
+           <li>The Java Project should have a compliance of 13 or above and the preview features should be enabled.</li>
+           <li>The selection in the editor should not be part of a string or a comment or a text block.</li>
+           </ul>
+           <p> Examples: </p>
+           <p><img src="images/textblock-pre-creation1.png" alt=""/></p>
+      	   Pressing the shortcut, you get this:
+      	   <p><img src="images/textblock-post-creation1.png" alt=""/></p>
+      	   <p> You can also encompass a selected text in text block as below</p>
+      	   <p><img src="images/textblock-pre-creation2.png" alt=""/></p>
+      	   Pressing the shortcut, you get this:
+      	   <p><img src="images/textblock-post-creation2.png" alt=""/></p>
+      </td>
+  </tr>
   <!-- ******************* End of Java 13 Support ************************************* -->
 
   <!-- ******************* JUnit ************************************* -->
