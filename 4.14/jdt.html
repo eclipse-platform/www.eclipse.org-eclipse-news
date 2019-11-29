@@ -126,10 +126,10 @@ ul {padding-left: 13px;}
     <td class="content">
       The Java cleanup/save action <b>Push down negation</b> reduces the double negation by reverting the arithmetic expressions. For instance:
       <p>
-       <code>!!isValid;</code> gets <code>isValid;</code>
+       <code>!!isValid;</code> becomes <code>isValid;</code>
       </p>
       <p>
-       <code>!(a != b);</code> gets <code>(a == b);</code>
+       <code>!(a != b);</code> becomes <code>(a == b);</code>
       </p>
       <p><img src="images/push-down-negation.png" alt="Push negation down cleanup"/></p>
     </td>
@@ -167,11 +167,11 @@ the resources of the <code>try-with-resources</code> statement.  If there are se
   </tr>
 
   <tr id="module-javadoc-checking"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=549855 -->
-    <td class="title">Javadoc tag checking for module</td>
+    <td class="title">Javadoc tag checking for modules</td>
     <td class="content">
-      Support has been added to check the Javadoc for a module-info file and report
+      Support has been added to check the Javadoc of a module-info.java file to report
 missing and duplicate <code>@uses</code> and <code>@provides</code> tags depending on
-the compiler settings (<b>Preferences->Java->Compiler->Javadoc</b>).
+the compiler settings (<b>Preferences &gt; Java &gt; Compiler &gt; Javadoc</b>).
       <p><img src="images/checkModuleJavadoc.png" alt=""/></p>
     </td>
   </tr>
