@@ -24,10 +24,10 @@ ul {padding-left: 13px;}
 <h2>Java development tools</h2>
 <ul>
 	<li><a href="#Java13">Java&trade; 13 Support</a></li>
-	<li><a href="#JUnit">JUnit</a></li>
 	<li><a href="#JavaEditor">Java Editor</a></li>
 	<!-- <li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li> -->
 	<li><a href="#JavaFormatter">Java Formatter</a></li>
+	<li><a href="#JUnit">JUnit</a></li>
 	<li><a href="#Debug">Debug</a></li>
 	<li><a href="#JDTDev">JDT Developers</a></li>
 </ul>
@@ -48,7 +48,7 @@ ul {padding-left: 13px;}
    <tr id="Java_13"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=539066 -->
       <td class="title">Java 13</td>
       <td class="content">
-          <a href="http://jdk.java.net/13/">Java 13</a> is available and Eclipse JDT supports Java 13 for 4.14. 
+          <a href="http://jdk.java.net/13/">Java 13</a> is available and Eclipse JDT supports Java 13 for the Eclipse 4.14 release. 
           <p>
           The release notably includes the following Java 13 features:
            <br/>
@@ -67,7 +67,7 @@ ul {padding-left: 13px;}
   <tr id="Text_Block_Creation_Keyboard_ShortCut"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=550113 -->
       <td class="title">Keyboard shortcut for Text Block creation</td>
       <td class="content">
-           A keyboard shortcut <b> Ctrl + Shift + ' </b>is added in the Java Editor for <b>text blocks</b>, which is a preview feature 
+           A keyboard shortcut <b>Ctrl + Shift + ' </b>is added in the Java Editor for <b>text blocks</b>, which is a preview feature 
            added in Java 13.
            <p>
            Conditions under which this keyboard shortcut works are: 
@@ -80,27 +80,13 @@ ul {padding-left: 13px;}
            <p><img src="images/textblock-pre-creation1.png" alt=""/></p>
       	   Pressing the shortcut gives:
       	   <p><img src="images/textblock-post-creation1.png" alt=""/></p>
-      	   <p> You can also encompass a selected text in text block as below</p>
+      	   <p> You can also encompass a selected text in text block as below:</p>
       	   <p><img src="images/textblock-pre-creation2.png" alt=""/></p>
-      	   Pressing the shortcut, you get this:
+      	   On pressing the shortcut, you get this:
       	   <p><img src="images/textblock-post-creation2.png" alt=""/></p>
       </td>
   </tr>
   <!-- ******************* End of Java 13 Support ************************************* -->
-
-  <!-- ******************* JUnit ************************************* -->
-  <tr>
-    <td id="JUnit" class="section" colspan="2">
-    <h2>JUnit</h2>
-    </td>
-  </tr>
-	<tr id="junit-runtime-bree"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=551728 -->
-      <td class="title">BREE update for org.eclipse.jdt.junit.runtime</td>
-      <td class="content">
-        The bundle required execution environment for the <code>org.eclipse.jdt.junit.runtime</code> bundle is now J2SE-1.5.
-      </td>
-    </tr>
-  <!-- ******************* End of JUnit ************************************* -->
 
   <!-- ******************* Java Editor ************************************* -->
   <tr>
@@ -112,11 +98,11 @@ ul {padding-left: 13px;}
   <tr id="unnecessary-array-creation"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=550129 -->
     <td class="title">Remove unnecessary array creation</td>
     <td class="content">
-      A new cleanup option <b>Remove unnecessary array creation</b> has been added. It will remove explicit array creation for <code>varargs</code> parameters.
+      A new cleanup action <b>Remove unnecessary array creation</b> has been added. It will remove explicit array creation for <code>varargs</code> parameters.
       <p><img src="images/unnecessary-array-creation-option.png" alt=""/></p>
       For the given code:
       <p><img src="images/unnecessary-array-creation-before.png" alt=""/></p>
-      You get this:
+      After cleanup, you get this:
       <p><img src="images/unnecessary-array-creation-after.png" alt=""/></p>
     </td>
   </tr>
@@ -124,13 +110,12 @@ ul {padding-left: 13px;}
   <tr id="push-down-negation"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=550913 -->
     <td class="title">Push negation down in expression</td>
     <td class="content">
-      The Java cleanup/save action <b>Push down negation</b> reduces the double negation by reverting the arithmetic expressions. For instance:
+      A new Java cleanup/save action <b>Push down negation</b> has been added. It reduces the double negation by reverting the arithmetic expressions.
       <p>
-       <code>!!isValid;</code> becomes <code>isValid;</code>
+      For instance:
       </p>
-      <p>
-       <code>!(a != b);</code> becomes <code>(a == b);</code>
-      </p>
+      <p><code>!!isValid;</code> becomes <code>isValid;</code></p>
+      <p><code>!(a != b);</code> becomes <code>(a == b);</code></p>
       <p><img src="images/push-down-negation.png" alt="Push negation down cleanup"/></p>
     </td>
   </tr>
@@ -146,22 +131,27 @@ ul {padding-left: 13px;}
   <tr id="postfix-completion"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=458804 -->
     <td class="title">Postfix completion proposal category</td>
     <td class="content">
-      Postfix completion allows certain kinds of language constructs to be applied to the previously entered text. For example entering <code>"input text".var</code> and selecting the <b>var - Creates a new variable</b> proposal, will result in <code>String name = "input text"</code>.
+      Postfix completion allows certain kinds of language constructs to be applied to the previously entered text.
+      <p>For example: Entering <code>"input text".var</code> and selecting the <b>var - Creates a new variable</b> proposal, will result in <code>String name = "input text"</code>.</p>
       <p><img src="images/postfix-completion.png" alt=""/></p>
     </td>
   </tr>
 
   <tr id="try-with-resources"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=473276 -->
-    <td class="title">Try-With-Resources quickfix</td>
+    <td class="title">try-with-resources quickfix</td>
     <td class="content">
-      A quickfix has been added to create a <code>try-with-resources</code> statement based on selected lines.  Lines that are selected
-must start with declarations of objects that implement <code>AutoCloseable</code>.  These declarations are added as
-the resources of the <code>try-with-resources</code> statement.  If there are selected statements that are not eligible resources (such as Objects that don't implement <code>AutoCloseable</code>), then the first such statement and all following selected statements will be placed in the <code>try-with-resources</code> body.
-	  <p>Method before applying Try-With-Resources:</p>
+      A <b>quickfix</b> has been added to create a <code>try-with-resources</code> statement based on the selected lines. Lines that are selected
+	  must start with declarations of objects that implement <code>AutoCloseable</code>. These declarations are added as
+	  the resources of the <code>try-with-resources</code> statement. 
+	  <p>
+	   If there are selected statements that are not eligible resources (such as Objects that don't implement <code>AutoCloseable</code>), 
+	   then the first such statement and all the following selected statements will be placed in the <code>try-with-resources</code> body.
+	  </p> 
+	  Method before applying try-with-resources:
       <p><img src="images/tryWithResource1.png" alt=""/></p>
-	  <p>Selecting all lines inside the method then using the short-cut <b>Ctrl+1</b> and clicking on <b>Surround with try-with-resources</b> from list:</p>
+	  Select all the lines inside the method, then use the short-cut <b>Ctrl+1</b> and click on <b>Surround with try-with-resources</b> from the list:
       <p><img src="images/tryWithResource2.png" alt=""/></p>
-      <p>results in:</p>
+      This results in:
 	  <p><img src="images/tryWithResource3.png" alt=""/></p>
     </td>
   </tr>
@@ -170,8 +160,8 @@ the resources of the <code>try-with-resources</code> statement.  If there are se
     <td class="title">Javadoc tag checking for modules</td>
     <td class="content">
       Support has been added to check the Javadoc of a module-info.java file to report
-missing and duplicate <code>@uses</code> and <code>@provides</code> tags depending on
-the compiler settings (<b>Preferences &gt; Java &gt; Compiler &gt; Javadoc</b>).
+	  missing and duplicate <code>@uses</code> and <code>@provides</code> tags depending on
+      the compiler settings (<b>Preferences &gt; Java &gt; Compiler &gt; Javadoc</b>).
       <p><img src="images/checkModuleJavadoc.png" alt=""/></p>
     </td>
   </tr>
@@ -222,7 +212,7 @@ the compiler settings (<b>Preferences &gt; Java &gt; Compiler &gt; Javadoc</b>).
   <tr id="formatter-javadoc-tags-blank-lines"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=54627 -->
     <td class="title">Blank lines between Javadoc tags</td>
     <td class="content">
-      The code formatter can now <b>divide Javadoc tags into groups</b> (by type, for example <code>@param</code>, <code>@throws</code>, <code>@returns</code>) and <b>separate these groups with blank lines</b>.
+      The code formatter can now divide Javadoc tags into groups (by type, for example <code>@param</code>, <code>@throws</code>, <code>@returns</code>) and separate these groups with blank lines.
       This feature can be turned on in the <b>Comments &gt; Javadocs</b> section by checking the <b>Blank lines between tags of different type</b> box.
       <p><img src="images/formatter-javadoc-tags-blank-lines.png" alt=""/></p>
     </td>
@@ -231,13 +221,27 @@ the compiler settings (<b>Preferences &gt; Java &gt; Compiler &gt; Javadoc</b>).
   <tr id="formatter-space-before-not"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=552919 -->
     <td class="title">Space after not operator</td>
     <td class="content">
-      A new setting has been added to control whether a <b>space should be added after the not (<code>!</code>) operator</b>, independently from other unary operators.
+      A new setting has been added to control whether a space should be added <b>after not (<code>!</code>) operator</b>, independently from other unary operators.
       To find it, expand sections <b>Whitespace &gt; Expressions &gt; Unary operators</b> and go to the last checkbox.
       <p><img src="images/formatter-space-after-not.png" alt=""/></p>
     </td>
   </tr>
 
   <!-- ******************* End of Java Formatter ************************************* -->
+  
+   <!-- ******************* JUnit ************************************* -->
+  <tr>
+    <td id="JUnit" class="section" colspan="2">
+    <h2>JUnit</h2>
+    </td>
+  </tr>
+	<tr id="junit-runtime-bree"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=551728 -->
+      <td class="title">BREE update for org.eclipse.jdt.junit.runtime</td>
+      <td class="content">
+        The Bundle Required Execution Environment (BREE) for the <code>org.eclipse.jdt.junit.runtime</code> bundle is now J2SE-1.5.
+      </td>
+    </tr>
+  <!-- ******************* End of JUnit ************************************* -->
   
   <!-- *********************** Debug ******************************** -->
   <tr>
@@ -255,14 +259,14 @@ the compiler settings (<b>Preferences &gt; Java &gt; Compiler &gt; Javadoc</b>).
       <p>This option is relevant when debugging an application that has <code>try</code> blocks at several levels of the architecture.
         In this situation an exception breakpoint may fire multiple times for the same actual exception <em>instance</em>: 
         A <code>throw</code> statement inside a <code>catch</code> block may re-throw the same exception.
-        The same holds for each <code>finally</code> block or <em>try-with-resources</em> block.  
+        The same holds for each <code>finally</code> block or <code>try-with-resources</code> block.  
       </p>
       <p>When the debugger stops due to an exception breakpoint, you may want to continue your debug session by pressing
       	<b>Resume</b> (<b>F8</b>), but all that catching and re-throwing will force you to observe
       	all locations where the same exception will surface again and again. Suspending at all <code>try</code> blocks
       	on the call stack may also spoil your context of open Java editors, by opening more editors of classes that are
       	likely irrelevant for the debugging task at hand.</p>
-      <p>The JDT Debugger will now detect this situation, and the first time it notices the same exception instance
+      <p>The <b>JDT Debugger</b> will now detect this situation, and the first time it notices the same exception instance
       	recurring at the surface, a new question dialog is shown:
       </p>
       <p><img src="images/dialog-exception-recurrence.png" alt="Dialog: Repeated exception occurrence"/></p>
@@ -287,18 +291,18 @@ the compiler settings (<b>Preferences &gt; Java &gt; Compiler &gt; Javadoc</b>).
   </tr>
 
   <tr id="completion-ext-flag-uithread"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=538630 -->
-    <td class="title">Flag whether content assist extension needs to run in UI Thread</td>
+    <td class="title">Flag whether content assist extension needs to run in UI thread</td>
     <td class="content">
       The existing <code>org.eclipse.jdt.ui.javaCompletionProposalComputer</code>, <code>org.eclipse.jdt.ui.javadocCompletionProposalComputer</code>
       and <code>org.eclipse.jdt.ui.javaCompletionProposalSorters</code> extension points now allow a new attribute <b>requiresUIThread</b> that allows
-      a developer to declare whether running in the UI Thread is required or not.
+      a developer to declare whether running in the UI thread is required or not.
       <p>
-        This information will be used by the Content Assist operation to allow some optimizations and prevent UI Freezes by reducing the amount of
-        work happening in the UI Thread.
+        This information will be used by the <b>Content Assist</b> operation to allow some optimizations and prevent UI freezes by reducing the amount of
+        work happening in the UI thread.
       </p>
       <p>
         To preserve backward compatibility, the default value for this attribute (if unset) is <code>true</code>, meaning the extension is expected to
-        run in the UI Thread.
+        run in the UI thread.
       </p>
     </td>
   </tr>

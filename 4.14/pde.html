@@ -44,9 +44,9 @@ ul {padding-left: 13px;}
   <tr id="features-view-update"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=550316 -->
     <td class="title">Target Platform in Features view</td>
     <td class="content">
-      You can now view the structure of features in the target platform (as well as in your workspace projects) using the <b>Features</b> view.
+      Using the <b>Features</b> view you can now view the structure of features in the target platform in addition to the ones in your workspace projects.
       <p>
-        Features from workspace projects are shown first, followed by ones from the target platform.
+        Features from workspace projects are shown first, followed by the ones from the target platform.
       </p>
       <p>
         <img src="images/features-view-with-target-platform-support.png" alt="" />
@@ -77,7 +77,7 @@ ul {padding-left: 13px;}
   <tr id="BREE-dependencies-warning"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=552194 -->
     <td class="title">Detect bundle's BREE lower than its dependencies</td>
     <td class="content">
-		A warning will now appear in the <b>plug-in manifest editor</b> when a bundle's dependency requires a higher execution environment than what is currently set.
+		A warning will now appear in the <b>Plug-in manifest editor</b> when a bundle's dependency requires a higher execution environment than what is currently set.
 	   <p>
 		The provided quick fix can automatically set the appropriate execution environment.
 	  </p>
@@ -85,7 +85,7 @@ ul {padding-left: 13px;}
         <img src="images/BREE-dependencies-warning.png" alt="" />
       </p>
 	  <p>
-		A new PDE compiler preference <b>Bundle BREE lower than its dependencies</b> has been added to allow the issue to display an error marker, or be ignored. By default, it is set to warning.
+		A new PDE compiler preference <b>Bundle BREE lower than its dependencies</b> has been added to configure the severity of the problem. By default, it is set to warning.
 	  </p>
   		<p>
         <img src="images/pde-compilers-versioning.png" alt="" />
@@ -105,8 +105,8 @@ ul {padding-left: 13px;}
       In addition to the legacy Ant tasks, PDE now provides a direct Eclipse application to generate API manifest
       (typically <code>.api_description</code> files).
       <p>
-        Application id is <code>org.eclipse.pde.api.tools.apiGeneration</code> and it's arguments are the same as
-        for Ant tasks. So the application can typically be invoked with  command lines like
+        The Application id is <code>org.eclipse.pde.api.tools.apiGeneration</code> and it's arguments are the same as
+        for Ant tasks. The application can typically be invoked with command line as shown below:
         <code>./eclipse -application org.eclipse.pde.api.tools.apiGeneration
         -projectName org.eclipse.pde.ui
         -project /home/git/eclipse.pde.ui/ui/org.eclipse.pde.ui
@@ -115,9 +115,9 @@ ul {padding-left: 13px;}
         </code>.
       </p>
       <p>
-      This application can also be run using the launch configuration UI and selecting 
-      <b>org.eclipse.pde.api.tools.apiGeneration </b> application as shown below. The relevant arguments needs 
-      to be passed in the program arguments.
+      This application can also be run using the Eclipse launch configuration UI and selecting 
+      <b>org.eclipse.pde.api.tools.apiGeneration </b> application as shown below. The required arguments should  
+      be specified in the program arguments.
       </p>
        <p>
        <img src="images/pde-api-generation-application-ui.png" alt="" />
@@ -141,8 +141,8 @@ ul {padding-left: 13px;}
        <img src="images/pde-unnecessary-ver-increase-new.png" alt="" />
       </p>
       
-      The preference option <b>Report minor version change without API changes:</b> has been renamed to 
-      <b>Report unnecessary minor or micro version change:</b>. 
+      The preference option <b>Report minor version change without API changes</b> has been renamed to 
+      <b>Report unnecessary minor or micro version change</b>. 
    
       
     </td>
