@@ -45,7 +45,8 @@ ul {padding-left: 13px;}
     <td id="Java13" class="section" colspan="2">
     <h2>Java 13 Support </h2></td>
   </tr>
-   <tr id="Java_13"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=539066 -->
+
+  <tr id="Java_13"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=539066 -->
       <td class="title">Java 13</td>
       <td class="content">
           <a href="http://jdk.java.net/13/">Java 13</a> is available and Eclipse JDT supports Java 13 for the Eclipse 4.14 release. 
@@ -64,6 +65,7 @@ ul {padding-left: 13px;}
            </p>
       </td>
   </tr>
+
   <tr id="Text_Block_Creation_Keyboard_ShortCut"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=550113 -->
       <td class="title">Keyboard shortcut for Text Block creation</td>
       <td class="content">
@@ -78,12 +80,12 @@ ul {padding-left: 13px;}
            </ul>
            <p> Examples: </p>
            <p><img src="images/textblock-pre-creation1.png" alt=""/></p>
-      	   Pressing the shortcut gives:
-      	   <p><img src="images/textblock-post-creation1.png" alt=""/></p>
-      	   <p> You can also encompass a selected text in text block as below:</p>
-      	   <p><img src="images/textblock-pre-creation2.png" alt=""/></p>
-      	   On pressing the shortcut, you get this:
-      	   <p><img src="images/textblock-post-creation2.png" alt=""/></p>
+           Pressing the shortcut gives:
+           <p><img src="images/textblock-post-creation1.png" alt=""/></p>
+           <p> You can also encompass a selected text in text block as below:</p>
+           <p><img src="images/textblock-pre-creation2.png" alt=""/></p>
+           On pressing the shortcut, you get this:
+           <p><img src="images/textblock-post-creation2.png" alt=""/></p>
       </td>
   </tr>
   <!-- ******************* End of Java 13 Support ************************************* -->
@@ -141,18 +143,18 @@ ul {padding-left: 13px;}
     <td class="title">try-with-resources quickfix</td>
     <td class="content">
       A <b>quickfix</b> has been added to create a <code>try-with-resources</code> statement based on the selected lines. Lines that are selected
-	  must start with declarations of objects that implement <code>AutoCloseable</code>. These declarations are added as
-	  the resources of the <code>try-with-resources</code> statement. 
-	  <p>
-	   If there are selected statements that are not eligible resources (such as Objects that don't implement <code>AutoCloseable</code>), 
-	   then the first such statement and all the following selected statements will be placed in the <code>try-with-resources</code> body.
-	  </p> 
-	  Method before applying try-with-resources:
+      must start with declarations of objects that implement <code>AutoCloseable</code>. These declarations are added as
+      the resources of the <code>try-with-resources</code> statement. 
+      <p>
+       If there are selected statements that are not eligible resources (such as Objects that don't implement <code>AutoCloseable</code>), 
+       then the first such statement and all the following selected statements will be placed in the <code>try-with-resources</code> body.
+      </p> 
+      Method before applying try-with-resources:
       <p><img src="images/tryWithResource1.png" alt=""/></p>
-	  Select all the lines inside the method, then use the short-cut <b>Ctrl+1</b> and click on <b>Surround with try-with-resources</b> from the list:
+      Select all the lines inside the method, then use the short-cut <b>Ctrl+1</b> and click on <b>Surround with try-with-resources</b> from the list:
       <p><img src="images/tryWithResource2.png" alt=""/></p>
       This results in:
-	  <p><img src="images/tryWithResource3.png" alt=""/></p>
+      <p><img src="images/tryWithResource3.png" alt=""/></p>
     </td>
   </tr>
 
@@ -160,7 +162,7 @@ ul {padding-left: 13px;}
     <td class="title">Javadoc tag checking for modules</td>
     <td class="content">
       Support has been added to check the Javadoc of a module-info.java file to report
-	  missing and duplicate <code>@uses</code> and <code>@provides</code> tags depending on
+      missing and duplicate <code>@uses</code> and <code>@provides</code> tags depending on
       the compiler settings (<b>Preferences &gt; Java &gt; Compiler &gt; Javadoc</b>).
       <p><img src="images/checkModuleJavadoc.png" alt=""/></p>
     </td>
@@ -262,22 +264,22 @@ ul {padding-left: 13px;}
         The same holds for each <code>finally</code> block or <code>try-with-resources</code> block.  
       </p>
       <p>When the debugger stops due to an exception breakpoint, you may want to continue your debug session by pressing
-      	<b>Resume</b> (<b>F8</b>), but all that catching and re-throwing will force you to observe
-      	all locations where the same exception will surface again and again. Suspending at all <code>try</code> blocks
-      	on the call stack may also spoil your context of open Java editors, by opening more editors of classes that are
-      	likely irrelevant for the debugging task at hand.</p>
+       <b>Resume</b> (<b>F8</b>), but all that catching and re-throwing will force you to observe
+       all locations where the same exception will surface again and again. Suspending at all <code>try</code> blocks
+       on the call stack may also spoil your context of open Java editors, by opening more editors of classes that are
+       likely irrelevant for the debugging task at hand.</p>
       <p>The <b>JDT Debugger</b> will now detect this situation, and the first time it notices the same exception instance
-      	recurring at the surface, a new question dialog is shown:
+       recurring at the surface, a new question dialog is shown:
       </p>
       <p><img src="images/dialog-exception-recurrence.png" alt="Dialog: Repeated exception occurrence"/></p>
       <p>If you select <b>Skip</b> in this dialog, the current exception instance will be dismissed for good.
-      	Still, new instances of the same exception type will cause suspending when they are thrown.
+       Still, new instances of the same exception type will cause suspending when they are thrown.
       </p>
       <p>If you check <b>Remember my decision</b> your choice will be stored in the mentioned workspace preference
-      	to be effective for all exception breakpoints.
+       to be effective for all exception breakpoints.
       </p>
       <p>Even after choosing <b>Skip</b> &mdash; resp. <b>Only once</b> in the preferences &mdash; you can have the old behavior
-      	simply by pressing <b>Step Return</b> (<b>F7</b>) instead of <b>Resume</b>.</p>
+       simply by pressing <b>Step Return</b> (<b>F7</b>) instead of <b>Resume</b>.</p>
     </td>
   </tr>
 

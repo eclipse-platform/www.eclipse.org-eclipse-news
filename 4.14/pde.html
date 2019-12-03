@@ -24,7 +24,7 @@ ul {padding-left: 13px;}
 <h2>Plug-in Development Environment</h2>
 <ul>
 	<li><a href="#dialogs-wizards-views">Dialogs, Wizards and Views</a></li>
-	 <li><a href="#editors">Editors</a></li>
+	<li><a href="#editors">Editors</a></li>
 	<li><a href="#APITools">API Tools</a></li>
 	<!-- <li><a href="#pde-compiler">PDE Compiler</a></li> -->
 </ul>
@@ -77,19 +77,19 @@ ul {padding-left: 13px;}
   <tr id="BREE-dependencies-warning"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=552194 -->
     <td class="title">Detect bundle's BREE lower than its dependencies</td>
     <td class="content">
-		A warning will now appear in the <b>Plug-in manifest editor</b> when a bundle's dependency requires a higher execution environment than what is currently set.
-	   <p>
-		The provided quick fix can automatically set the appropriate execution environment.
-	  </p>
-      <p>
-        <img src="images/BREE-dependencies-warning.png" alt="" />
-      </p>
-	  <p>
-		A new PDE compiler preference <b>Bundle BREE lower than its dependencies</b> has been added to configure the severity of the problem. By default, it is set to warning.
-	  </p>
-  		<p>
-        <img src="images/pde-compilers-versioning.png" alt="" />
-      </p>
+     A warning will now appear in the <b>Plug-in manifest editor</b> when a bundle's dependency requires a higher execution environment than what is currently set.
+     <p>
+      The provided quick fix can automatically set the appropriate execution environment.
+     </p>
+     <p>
+      <img src="images/BREE-dependencies-warning.png" alt="" />
+     </p>
+     <p>
+      A new PDE compiler preference <b>Bundle BREE lower than its dependencies</b> has been added to configure the severity of the problem. By default, it is set to warning.
+     </p>
+     <p>
+      <img src="images/pde-compilers-versioning.png" alt="" />
+     </p>
     </td>
   </tr>
   <!-- ******************** End of Editors ********************** -->
@@ -124,43 +124,36 @@ ul {padding-left: 13px;}
       </p>
     </td>
   </tr>
-  
-      <tr id="report-error-on-unnecessary-change"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=551197 -->
+
+  <tr id="report-error-on-unnecessary-change"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=551197 -->
     <td class="title">Report unnecessary change in minor and micro version</td>
     <td class="content">
-     <p>
       In addition to reporting minor version change without API changes, API tools now also reports the following unnecessary
       minor and micro version change. 
-      </p>
       <ul>
       <li>Minor version increased when major version was already increased in the release </li>
       <li>Micro version increased when minor version or major version was already increased in the release.</li> 
       </ul>
- 
+
       <p>
        <img src="images/pde-unnecessary-ver-increase-new.png" alt="" />
       </p>
       
       The preference option <b>Report minor version change without API changes</b> has been renamed to 
       <b>Report unnecessary minor or micro version change</b>. 
-   
-      
     </td>
-  	</tr>
-  	
-  	  <tr id="expanded-reduced-superinterface-error-detail"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=551146 -->
+  </tr>
+
+  <tr id="expanded-reduced-superinterface-error-detail"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=551146 -->
     <td class="title">Expanded or reduced super interface API tool error has details</td>
     <td class="content">
-   
       The API tool error <b>Expanded or reduced super interface</b> now mentions which interface was added or removed
       from the super interfaces hierarchy.
-       <p>
+      <p>
        <img src="images/pde-expanded-reduced-interface.png" alt="" />
       </p>
- 
-      
     </td>
-  	</tr>
+  </tr>
   
   <!-- ******************** End of APITools ********************** -->
   

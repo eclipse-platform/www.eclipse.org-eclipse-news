@@ -62,16 +62,16 @@ ul {padding-left: 13px;}
     <td class="title">Quick assist extension point for Generic Editor</td>
     <td class="content">
     A new extension point <b><code>org.eclipse.ui.genericeditor.quickAssistProcessors</code></b> has been added to allow contributing to the quick assist in the generic editor.
-	<p>
-	The following example shows how to contribute to the Generic Editor's quick assist:
-	</p>
-	<pre>&lt;extension point=&quot;org.eclipse.ui.genericeditor.quickAssistProcessors&quot;&gt;
+    <p>
+     The following example shows how to contribute to the Generic Editor's quick assist:
+    </p>
+    <pre>&lt;extension point=&quot;org.eclipse.ui.genericeditor.quickAssistProcessors&quot;&gt;
     &lt;quickAssistProcessor
         class=&quot;org.eclipse.ui.genericeditor.tests.contributions.MockQuickAssistProcessor&quot;
         contentType=&quot;org.eclipse.ui.genericeditor.tests.content-type&quot;&gt;
     &lt;/quickAssistProcessor&gt;
 &lt;/extension&gt;</pre>
-	The contributing extension must provide a class which implements <code>org.eclipse.jface.text.quickassist.IQuickAssistProcessor</code>.
+    The contributing extension must provide a class which implements <code>org.eclipse.jface.text.quickassist.IQuickAssistProcessor</code>.
     </td>
   </tr>
 
@@ -126,7 +126,6 @@ assertTrue(DisplayHelper.waitForCondition(display, 1000, () -> some.boolean() &a
       You can now update the icon of a Part in a Part Stack by setting its icon URI at any time. There is no need to modify the part's transient data anymore.
    </td>
   </tr>
-
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
@@ -137,29 +136,30 @@ assertTrue(DisplayHelper.waitForCondition(display, 1000, () -> some.boolean() &a
     <td class="title">Disabled Toolbar items on GTK</td>
     <td class="content">
       <b><code>ToolItem.setDisabledImage()</code></b> is now fully implemented for ToolItems on Linux/GTK, and greatly improves the ability
-			to distinguish a disabled ToolItem from an enabled one.
-			<p>Below is a screenshot with disabled toolbar buttons;
-			the left toolbar shows the current implementation, the right one the shows the old implementation.</p>
-			<p><img src="images/toolitem-disabled-comparison.png" alt="ToolBar comparison"/></p>
-			<p>
-			 This API is already works on Windows and macOS.
-			</p>
+      to distinguish a disabled ToolItem from an enabled one.
+      <p>Below is a screenshot with disabled toolbar buttons;
+      the left toolbar shows the current implementation, the right one the shows the old implementation.</p>
+      <p><img src="images/toolitem-disabled-comparison.png" alt="ToolBar comparison"/></p>
+      <p>
+       This API is already works on Windows and macOS.
+      </p>
     </td>
   </tr>
+
   <tr id="image-svg-gtk"> <!-- https://bugs.eclipse.org/545804 -->
     <td class="title">SVG Image API added, implemented on GTK</td>
     <td class="content">
-      SWT now has an API to support SVG images, <b><code>SWT.IMAGE_SVG</code></b>, which allows <code>ImageLoader</code> to load
-			them.
-			<p>Currently this functionality is only implemented on Linux/GTK, on all other platforms the API is a HINT.</p>
-		</td>
+      SWT now has an API to support SVG images, <b><code>SWT.IMAGE_SVG</code></b>, which allows <code>ImageLoader</code> to load them.
+      <p>Currently this functionality is only implemented on Linux/GTK, on all other platforms the API is a HINT.</p>
+    </td>
   </tr>
+
   <tr id="ccombo-alignment"> <!-- https://bugs.eclipse.org/349112 -->
     <td class="title">Set alignment for CCombo</td>
     <td class="content">
-    	The <code>CCombo</code> widget can now align the text field content. The alignment is not applied on the drop-down list. 
-		<p><img src="images/ccombo-alignment.png" alt="Aligned CCombo widgets"/></p>
-	</td>
+     The <code>CCombo</code> widget can now align the text field content. The alignment is not applied on the drop-down list. 
+     <p><img src="images/ccombo-alignment.png" alt="Aligned CCombo widgets"/></p>
+    </td>
   </tr>
   <!-- *********************** End of SWT *********************** -->
 
