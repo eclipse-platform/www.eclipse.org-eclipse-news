@@ -157,10 +157,10 @@ assertTrue(DisplayHelper.waitForCondition(display, 1000, () -> some.boolean() &a
   <tr id="ccombo-alignment"> <!-- https://bugs.eclipse.org/349112 -->
     <td class="title">Set alignment for CCombo</td>
     <td class="content">
-     The <code>CCombo</code> widget can now align the text field content. The alignment is not applied on the drop-down list.
-     <p>Alignment on CCombo can be specified at the time of CCombo instance creation or using <code>setAlignment()</code> API on an existing CCombo instance.
-     Additionally you can get the value of CCombo's alignment using <code>getAlignment()</code> API.</p>
-     <p>Below screen-shot shows possible CCombo alignments:</p>
+     The <code>CCombo</code> widget can now align the text field content, the alignment is not applied to the drop-down list.
+     <p>The alignment for <code>CCombo</code> can be specified as a style bit in the constructor or using the <code>CCombo.setAlignment()</code> method.
+     You can also get the value of the <code>CCombo</code>'s alignment using <code>getAlignment()</code> method.</p>
+     <p>The below screen-shot shows possible <code>CCombo</code> alignments:</p>
      <p><img src="images/ccombo-alignment.png" alt="Aligned CCombo widgets"/></p>
     </td>
   </tr>
