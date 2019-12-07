@@ -23,4 +23,4 @@ For more Information:
 For more details, see the [How to Contribute][2] page on the team wiki.
 
 [1]: https://git.eclipse.org/r/#/admin/projects/www.eclipse.org/eclipse/news
-[2]: http://wiki.eclipse.org/Platform_UI/How_to_Contribute
+[2]: https://wiki.eclipse.org/Platform_UI/How_to_Contribute
