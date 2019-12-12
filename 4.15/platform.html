@@ -84,6 +84,13 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+   <tr id="redraw-treeviewer"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=553787 and https://bugs.eclipse.org/bugs/show_bug.cgi?id=553788 -->
+    <td class="title">Redrawn turned off by default during collapse and expand operations in treeviewer</td>
+    <td class="content">
+		To improve interactive performance treeviewers redraw is turned off by default during the collapse and expand operation.
+		This significantly improves these operations compare to drawing these updates synchronously.
+    </td>
+  </tr>
   <!-- ******************* End of General Updates ************************************* -->
 </tbody>
 </table>
