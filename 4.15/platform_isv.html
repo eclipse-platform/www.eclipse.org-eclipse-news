@@ -38,6 +38,36 @@ ul {padding-left: 13px;}
   <tr>
     <td id="Platform" class="section" colspan="2"><h2>Platform Changes</h2></td>
   </tr>
+
+ <tr id="labelProvider-lambda"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=558205 -->
+    <td class="title">Easier usage of LabelProvider and ColumnLabelProvider</td>
+    <td class="content">
+      The <b><code>org.eclipse.jface.viewers.LabelProvider</code></b> and <b><code>org.eclipse.jface.viewers.ColumnLabelProvider</code></b> classes now 
+		support Lambda functions for their <b><code>getText()</code></b> and <b><code>getImage()</code></b> methods. 
+		<p>
+		This is provided through the new static methods <b><code>createImageProvider()</code></b> and <b><code>createTextProvider()</code></b> respectively.
+		For use cases where the LabelProvider should implement both the <b><code>getText()</code></b> and <b><code>getImage()</code></b> methods, the static method <b><code>createTextImageProvider()</code></b> can be used.
+		</p>
+      <p>Former constructs like:</p>
+<pre>
+viewer.setLabelProvider(new LabelProvider() {
+	@Override
+	public String getText(Object element) {
+		return element.toString();
+	}
+	@Override
+	public Image getImage(Object element) {
+		return defaultImage;
+	}
+});
+</pre>
+can now be replaced by:
+<pre>
+viewer.setLabelProvider(LabelProvider.createTextImageProvider(element -> element.toString(),
+	element -> defaultImage));
+</pre>
+     </td>
+  </tr>
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
