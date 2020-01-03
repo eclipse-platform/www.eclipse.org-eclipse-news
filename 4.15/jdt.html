@@ -62,7 +62,24 @@ ul {padding-left: 13px;}
     <h2>Java Editor </h2>
     </td>
   </tr>
-  <!-- ******************* End of Java Editor ************************************* -->
+  <tr id="try-with-resources"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=473276 -->
+    <td class="title">Wrap in optional quick fix</td>
+    <td class="content">
+      A <b>quickfix</b> has been added to wrap an <code>Optional</code> statement. 
+      <p>
+       The options for a primitive statement are: <code>Optional.empty()</code> and <code>Optional.of()</code>. Type statements
+       also have <code>Optional.ofNullable()</code>.
+      </p> 
+      <p>Example for type objects:</p>
+      <p><img src="images/wrapOptional1.png" alt=""/></p>
+      and example for primitive:
+      <p><img src="images/wrapOptional2.png" alt=""/></p>
+      Selecting <b>Wrap with nullable Optional</b> for type object results in:
+      <p><img src="images/wrapOptional4.png" alt=""/></p>
+      and for primitive, selecting <b>Wrap with Optional</b> results in:
+      <p><img src="images/wrapOptional3.png" alt=""/></p>
+    </td>
+  </tr>  <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
   <tr>
