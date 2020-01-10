@@ -296,7 +296,7 @@ Eclipse 4.15 Endgame Plan.
   significant community support for testing them.</i></p>
 <p>With respect to GTK 3 versions: the <i>guaranteed</i> version of GTK 3 which Eclipse SDK 4.15
 will run on is 3.20 or newer. Eclipse SDK 4.15 will run on older GTK 3 versions no older than
-3.10.0, however we cannot flag these as reference versions without significant community support for testing and/or development of fixes. Bugs only reproducible on GTK 3 versions older than 3.20 will
+3.14.0, however we cannot flag these as reference versions without significant community support for testing and/or development of fixes. Bugs only reproducible on GTK 3 versions older than 3.20 will
 be given a lower priority (or may not be fixed at all), compared to bugs which are reproducible
 on the target environments listed above.
 </p>
