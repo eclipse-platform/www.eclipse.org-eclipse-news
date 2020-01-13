@@ -64,6 +64,23 @@ ul {padding-left: 13px;}
       <p>These APIs have already been commonly used by dependency injection in E4 RCP applications, but have only been marked as provisional APIs thus far. The provisional flag has now been removed.</p>
     </td>
   </tr>
+  <tr id="saferunner-with-results"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=558642 -->
+    <td class="title">Saferunner can return results</td>
+    <td class="content">
+	    SafeRunner now supports runnables that return a result.<br />
+	    <code>T run(ISafeRunnableWithResult<T> code);</code>
+	    <p>Example:<br>
+	    <pre><code>int result = SafeRunner.run(new ISafeRunnableWithResult<Integer>() {
+		    @Override
+		    public Integer runWithResult() throws Exception {
+		  	  return 42;
+		    }
+		});</code></pre></p>
+	    <p>Using lambda:<br />
+	    <pre><code>int result = SafeRunner.run(() -> 42);</code></pre>
+	    </p>
+    </td>
+  </tr>
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
