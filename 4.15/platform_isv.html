@@ -68,19 +68,32 @@ viewer.setLabelProvider(LabelProvider.createTextImageProvider(element -> element
 </pre>
      </td>
   </tr>
+
+	<tr id="project-explorer-initial-layout-preference"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=491185 -->
+		<td class="title">Preference to force default layout in Project Explorer to Flat</td>
+		<td class="content">
+			As default Project Layout in Project Explorer has been switched to hierarchical, a new preference
+			is available for RCP providers who want to force Flat layout by default instead. The preference is
+			<code>org.eclipse.ui.navigator.resources/defaultToFlatLayout</code> and can be set to <code>true</code>
+			in <code>plugin_customization.ini</code> or programatically <i>before</i> Project Explorer opens for
+			the first time, in order to force a Flat project layout. Subsequent change to this preference after
+			first initialization of Project Explorer will have no effect.
+		</td>
+	</tr>
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
   <tr>
     <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
-			<tr id="webkit1-removal"> <!-- https://bugs.eclipse.org/558070 -->
-		  <td class="title">WebKit1 Support Removed</td>
-		  <td class="content">
-		    As of 4.15 M1, SWT-GTK will no longer support WebKit1 as a Browser backend. Only WebKit2 is supported, and
-				all WebKit1 code has been removed.
-			</td>
-		</tr>
   </tr>
+
+	<tr id="webkit1-removal"> <!-- https://bugs.eclipse.org/558070 -->
+		<td class="title">WebKit1 Support Removed</td>
+		<td class="content">
+			As of 4.15 M1, SWT-GTK will no longer support WebKit1 as a Browser backend. Only WebKit2 is supported, and
+			all WebKit1 code has been removed.
+		</td>
+	</tr>
   <!-- *********************** End of SWT *********************** -->
 
 </tbody>
