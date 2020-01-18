@@ -84,14 +84,14 @@ ul {padding-left: 13px;}
   <tr id="non-blocking-completion"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=531061 -->
     <td class="title">Option for non-blocking Java completion</td>
     <td class="content">
-      Code completion in the Java editor can now be run in a separate non-UI Thread to prevent from
-      UI Freezes in case of long computation. To enable this non-blocking computation, go to <b>Preferences >
+      Code completion in the Java editor can now be run in a separate non-UI thread to prevent from
+      UI freezes in case of long computation. To enable this non-blocking computation, go to <b>Preferences >
       Java > Editor > Content Assist > Advanced</b> and check <b>Do not block UI Thread while computing completion
       proposals</b>. This option is currently disabled by default.
       <p>Non-blocking completion is useful when completion proposals are long to compute, as it will still allow
       to type or use other parts of the IDE in the meantime.</p>
       <p>Some completion participants may prevent this option from being effective (typically if the Java completion extension
-      don't declare <code>requiresUIThread="false"</code>), so UI Thread may still be used even if this option is set.<br/>
+      doesn't declare <code>requiresUIThread="false"</code>), so the UI thread may still be used even if this option is set.<br/>
       Opened Java file editors need to be closed and reopened for this option to be effective.</p>
     </td>
   </tr>
