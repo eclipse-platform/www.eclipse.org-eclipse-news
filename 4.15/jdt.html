@@ -119,6 +119,20 @@ ul {padding-left: 13px;}
     <h2>Java Formatter </h2>
     </td>
   </tr>
+
+  <tr id="formatter-application"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=543363 -->
+    <td class="title">Java formatter application requires a workspace</td>
+    <td class="content">
+      The Java formatter application will provide a sensible error message if a workspace
+      is required but not provided (<code>-data</code> command line option). This also enables
+      the <code>-help</code> option to be run on the formatter without a workspace specified.
+      <p>A new bundle services the <code>org.eclipse.jdt.core.JavaCodeFormatter</code> application.
+      This new bundle is part of the JDT feature. Users who are not using the JDT feature
+      to define their set of bundles will need to add <code>org.eclipse.jdt.core.formatterapp</code>
+      to their set of bundles.</p>
+    </td>
+  </tr>
+
   <!-- ******************* End of Java Formatter ************************************* -->
   
   <!-- *********************** Debug ******************************** -->
@@ -133,6 +147,14 @@ ul {padding-left: 13px;}
   <tr>
     <td id="JDTDev" class="section" colspan="2">
     <h2>JDT Developers</h2>
+    </td>
+  </tr>
+
+  <tr id="new-formatterapp-bundle"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=543363 -->
+    <td class="title">New bundle <code>org.eclipse.jdt.core.formatterapp</code></td>
+    <td class="content">
+      The entry point of the <code>org.eclipse.jdt.core.JavaCodeFormatter</code> application has been
+      moved to a new bundle, <code>org.eclipse.jdt.core.formatterapp</code>.
     </td>
   </tr>
   <!-- *********************** End of JDT Developers ******************************** -->
