@@ -103,6 +103,23 @@ ul {padding-left: 13px;}
     <h2>Preferences </h2>
     </td>
   </tr>
+
+	<tr id="resource-rename-mode-preference"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=560091 -->
+		<td class="title">Preference for resource rename mode: inline or dialog</td>
+		<td class="content">
+			This preference allows to configure resource renaming behavior in <b>Project Explorer</b>:
+			either an inlined text field or a dialog. Without specifiying the preference,
+			renaming is done inlined. The preference is found directly in the <b>General</b> preferences page.
+			<p>The preference can also be specified via product customization:
+			<ul>
+			<li>org.eclipse.ui.workbench/RESOURCE_RENAME_MODE=inline</li>
+			<li>org.eclipse.ui.workbench/RESOURCE_RENAME_MODE=dialog</li>
+			</ul>
+			</p>
+			<p><b>Note</b> that renames that would affect more than 1 resource are always performed with a dialog.</p>
+			<p><img src="images/resource-rename-mode-preference.png" alt="Rename mode in General preference page"/></p>
+		</td>
+	</tr>
   <!-- ****************** End of Preferences ************************************* -->
 
   <!-- ******************* Themes and Styling ************************************* -->
