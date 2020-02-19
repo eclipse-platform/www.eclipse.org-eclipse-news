@@ -185,6 +185,47 @@ ul {padding-left: 13px;}
       	</p>
     </td>
   </tr>
+  <tr id="resource-leak-analysis"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=463320 -->
+    <td class="title">Resource leak analysis improved</td>
+    <td class="content">
+    	Resource leak analysis has been improved in several ways.
+    	<p>
+    		Most importantly, the analysis now consistently considers resources (=values of type <code>AutoCloseable</code>)
+    		which are acquired using a method call, where previously under some circumstances resource allocation
+    		got unnoticed if it was wrapped in a factory method, like in the following example:
+    	</p>
+ 		<pre>
+	makePrintWriter("/tmp/log.txt").printf("%d", 42);
+	// a PrintWriter is never closed!
+		</pre>
+    	<p>
+    		Second, resource leak analysis now leverages knowledge about well-known resource classes that support fluent programming,
+    		i.e., instance methods which return <code>this</code> to enable chains of method calls. Where a naive analysis
+    		could consider the method result as a new resource coming into scope, special knowledge about these classes
+    		informs the analysis that it is one and the same resource. This concerns the following system classes:
+    	</p>
+   		<dl>
+   			<dt>from java.io</dt>
+   			<dd>CharArrayWriter, Console, PrintStream, PrintWriter, StringWriter, Writer</dd>
+   			<dt>from java.nio.channels</dt>
+   			<dd>AsynchronousFileChannel, AsynchronousServerSocketChannel, FileChannel, NetworkChannel, SeekableByteChannel,
+   				SelectableChannel, Selector, ServerSocketChannel</dd>
+			<dt>from java.util</dt>
+			<dd>Formatter</dd>
+   		</dl>
+   		<p>
+   			The following example is now understood to be safe, because analysis understands that the resource
+   			returned by <code>append()</code> is the same as the initial <code>pw</code>:
+   		</p>
+ 		<pre>
+	PrintWriter pw = new new PrintWriter("/tmp/log.txt");
+	pw.printf("%d", 42).append(" is the answer").close();
+		</pre>
+    	<p>
+    		Generally, resource leak analysis was made more precise regarding several specific situations.
+    	</p>
+    </td>
+  </tr>
   <!-- ******************* End of Java Compiler ************************************* -->
 
   <!-- ******************* Java Formatter ************************************* -->
