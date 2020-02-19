@@ -150,6 +150,41 @@ ul {padding-left: 13px;}
     <h2>Java Compiler</h2>
     </td>
   </tr>
+
+  <tr id="null-legacy-interface"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=482242 -->
+    <td class="title">Warn when legacy code can taint null-checked values</td>
+    <td class="content">
+      When using null-annotations for advanced null analysis, it is inherently tricky to combine your
+      code with "legacy" code that has no null annotations and has not been blessed by such analysis.
+    	<p>Previously, Eclipse would only warn you when you <em>obtain</em> a dubious value <em>from</em> a legacy API,
+	    	but it would keep silent in the opposite case: <em>passing</em> a value of an annotated type
+	    	<em>into</em> legacy API. Still in specific situations this can cause a
+	    	<code>NullPointerException</code> to be thrown in your null-checked code:
+    	</p>
+      	<p>
+        	<img src="images/null-into-nonnull-list.png" alt=""/>
+      	</p>
+    	<p>
+    		The console shows an exception thrown from within your checked main method (see the
+    		class-level <code>@NonNullByDefault</code>).
+    		It also shows the new warning, which Eclipse raises to alert you of this danger.
+      	</p>
+    	<p>
+    		<em>Hint:</em> the shown code assumes the list <code>names</code> to have type <code>List&lt;@NonNull&nbsp;String&gt;</code>,
+    		but the legacy method <code>Legacy.printNames()</code> succeeds to taint this list
+    		by inserting a <code>null</code> element.
+    		This goes unnoticed because that method views the list has having type <code>List&lt;String&gt;</code>,
+    		with no nullness constraint on the type argument.
+		</p>
+		<p>
+			By default this problem is raised at level <code>info</code>,
+			but the severity can be configured in the compiler settings:
+    	</p>
+      	<p>
+        	<img src="images/configure-null-vs-legacy-problem.png" alt=""/>
+      	</p>
+    </td>
+  </tr>
   <!-- ******************* End of Java Compiler ************************************* -->
 
   <!-- ******************* Java Formatter ************************************* -->
