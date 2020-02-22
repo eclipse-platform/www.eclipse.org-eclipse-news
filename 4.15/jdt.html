@@ -111,6 +111,18 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="map-method"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=551614 -->
+    <td class="title">Directly use Map method</td>
+    <td class="content">
+      Some map manipulations are unnecessarily verbose. The new cleanup option <b>Operate on Maps directly</b> calls methods on a map instead of calling the same methods on the key set or the values.<br>Beware! If you create <code>Map</code> implementations that don't follow the Map specification, this cleanup may break the behavior (a <code>size()</code> method that changes the values, an iterator that destroys the items...).
+      <p><img src="images/map-method-preferences.png" alt="Preferences"/></p>
+      For the given code:
+      <p><img src="images/map-method-before.png" alt="Before"/></p>
+      You get this:
+      <p><img src="images/map-method-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
   <tr id="uppercase-literal-suffix"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=552456 -->
     <td class="title">Uppercase for long literal suffix</td>
     <td class="content">
