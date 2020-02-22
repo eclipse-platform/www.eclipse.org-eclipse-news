@@ -202,10 +202,10 @@ ul {padding-left: 13px;}
     		which are acquired using a method call, where previously under some circumstances resource allocation
     		got unnoticed if it was wrapped in a factory method, like in the following example:
     	</p>
- 		<pre>
-	makePrintWriter("/tmp/log.txt").printf("%d", 42);
-	// a PrintWriter is never closed!
-		</pre>
+<pre>
+makePrintWriter("/tmp/log.txt").printf("%d", 42);
+// a PrintWriter is never closed!
+</pre>
     	<p>
     		Second, resource leak analysis now leverages knowledge about well-known resource classes that support fluent programming,
     		i.e., instance methods which return <code>this</code> to enable chains of method calls. Where a naive analysis
@@ -225,10 +225,10 @@ ul {padding-left: 13px;}
    			The following example is now understood to be safe, because analysis understands that the resource
    			returned by <code>append()</code> is the same as the initial <code>pw</code>:
    		</p>
- 		<pre>
-	PrintWriter pw = new new PrintWriter("/tmp/log.txt");
-	pw.printf("%d", 42).append(" is the answer").close();
-		</pre>
+<pre>
+PrintWriter pw = new PrintWriter("/tmp/log.txt");
+pw.printf("%d", 42).append(" is the answer").close();
+</pre>
     	<p>
     		Generally, resource leak analysis was made more precise regarding several specific situations.
     	</p>
