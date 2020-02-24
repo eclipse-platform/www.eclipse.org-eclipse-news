@@ -27,6 +27,7 @@ ul {padding-left: 13px;}
 	<!--<li><a href="#JUnit">JUnit</a></li> -->
 	<li><a href="#JavaEditor">Java Editor</a></li>
 	<!--<li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li> -->
+	<li><a href="#JavaCompiler">Java Compiler</a></li>
 	<li><a href="#JavaFormatter">Java Formatter</a></li>
 	<!--<li><a href="#Debug">Debug</a></li> -->
 	<li><a href="#JDTDev">JDT Developers</a></li>
@@ -114,7 +115,7 @@ ul {padding-left: 13px;}
   <tr id="map-method"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=551614 -->
     <td class="title">Directly use Map method</td>
     <td class="content">
-      Some map manipulations are unnecessarily verbose. The new cleanup option <b>Operate on Maps directly</b> calls methods on a map instead of calling the same methods on the key set or the values.<br>Beware! If you create <code>Map</code> implementations that don't follow the Map specification, this cleanup may break the behavior (a <code>size()</code> method that changes the values, an iterator that destroys the items...).
+      Some map manipulations are unnecessarily verbose. The new cleanup option <b>Operate on Maps directly</b> calls methods on a map instead of calling the same methods on the key set or the values.<br/>Beware! If you create <code>Map</code> implementations that don't follow the Map specification, this cleanup may break the behavior (a <code>size()</code> method that changes the values, an iterator that destroys the items...).
       <p><img src="images/map-method-preferences.png" alt="Preferences"/></p>
       For the given code:
       <p><img src="images/map-method-before.png" alt="Before"/></p>
@@ -155,7 +156,7 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
-  <tr id="surround with try-with-resources"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=553113 -->
+  <tr id="surround-with-try-with-resources"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=553113 -->
     <td class="title">Surround with "try-with-resources" block</td>
     <td class="content">
       Corresponding to the quick-fix which will surround a selection with a "try-with-resources" block, a new
@@ -168,7 +169,7 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
-  <tr id="module-info javadoc quickfix"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=553111 -->
+  <tr id="module-info-javadoc-quickfix"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=553111 -->
     <td class="title">module-info Javadoc quickfixes</td>
     <td class="content">
       New <b>quickfixes</b> have been added for missing and duplicate Javadoc tags for a <b>module-info</b> file.
