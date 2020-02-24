@@ -71,11 +71,9 @@ ul {padding-left: 13px;}
   </tr>
 
   <tr id="formfeed-character"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=553282 -->
-    <td class="title">Interpretation of form feed in Console View</td>
+    <td class="title">Interpretation of form feed and vertical tab in Console View</td>
     <td class="content">
-      The interpretation of ASCII control characters in <b>Console</b> was extended to recognize the characters
-      form feed (<abbr title="ASCII code 0x0C"><code>\f</code></abbr>) and vertical tab
-      (<abbr title="ASCII code 0x0B"><code>\v</code></abbr>).
+      The interpretation of ASCII control characters in <b>Console</b> was extended to recognize the characters: <abbr title="ASCII code 0x0C"><code>\f</code></abbr> - form feed and <abbr title="ASCII code 0x0B"><code>\v</code></abbr> - vertical tab (in languages that support it).
       <p>
       This feature is disabled by default. You can enable it on the <b>Run/Debug &gt; Console</b> preference page.
       </p>
