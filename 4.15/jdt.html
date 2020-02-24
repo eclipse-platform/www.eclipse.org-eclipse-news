@@ -154,6 +154,20 @@ ul {padding-left: 13px;}
       already exists (like when changing an existing import). Now this extra semicolon is no longer inserted.
     </td>
   </tr>
+
+  <tr id="surround with try-with-resources"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=553113 -->
+    <td class="title">Surround with "try-with-resources" block</td>
+    <td class="content">
+      Corresponding to the quick-fix which will surround a selection with a "try-with-resources" block, a new
+      action has been added to the <b>Surround With</b> menu. Selecting lines as follows:
+      <p><img src="images/surroundwithresources1.png" alt=""/></p>
+      <p>and then right-clicking and selecting <b>Surround With -> Try-with-resources Block</b></p>
+      <p><img src="images/surroundwithresources.png" alt=""/></p>
+      <p>results in:</p>
+      <p><img src="images/surroundwithresources2.png" alt=""/></p>
+    </td>
+  </tr>
+
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* 
