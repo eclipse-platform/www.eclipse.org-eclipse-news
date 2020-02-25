@@ -132,6 +132,24 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="subtype-code-completion"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=277691 -->
+    <td class="title">Subtype code completion</td>
+    <td class="content">
+      Content Assists will prioritize displaying constructor completions whose
+      declaring type inherits from the expected return type within the
+      completion context. For example, completing on :
+
+      <p><code>Queue&lt;String&gt; queue = new L</code></p>
+
+      <p>
+      prioritizes constructors for <code><b>LinkedBlockingQueue</b></code>, <code><b>LinkedBlockingDeQueue</b></code> and <code><b>LinkedList</b></code>.
+      </p>
+      <p>
+        <img src="images/subtype-code-completion.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
   <tr id="subword-code-completion"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=559496 -->
     <td class="title">Subword code completion</td>
     <td class="content">
