@@ -42,12 +42,12 @@ ul {padding-left: 13px;}
  <tr id="labelProvider-lambda"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=558205 -->
     <td class="title">Easier usage of LabelProvider and ColumnLabelProvider</td>
     <td class="content">
-      The <b><code>org.eclipse.jface.viewers.LabelProvider</code></b> and <b><code>org.eclipse.jface.viewers.ColumnLabelProvider</code></b> classes now 
-		support lambda functions for their <b><code>getText()</code></b> and <b><code>getImage()</code></b> methods. 
-		<p>
-		This is provided through the new static methods <b><code>createImageProvider()</code></b> and <b><code>createTextProvider()</code></b> respectively.
-		For use cases where the LabelProvider should implement both the <b><code>getText()</code></b> and <b><code>getImage()</code></b> methods, the static method <b><code>createTextImageProvider()</code></b> can be used.
-		</p>
+      The <code>org.eclipse.jface.viewers.LabelProvider</code> and <code>org.eclipse.jface.viewers.ColumnLabelProvider</code> classes now 
+      support lambda functions for their <code>getText()</code> and <code>getImage()</code> methods. 
+      This is provided through the new static methods <code>createImageProvider()</code> and <code>createTextProvider()</code> respectively.
+      <p>
+        For use cases where the LabelProvider should implement both the <code>getText()</code> and <code>getImage()</code> methods, the static method <code>createTextImageProvider()</code> can be used.
+      </p>
       <p>Former constructs like:</p>
 <pre>
 viewer.setLabelProvider(new LabelProvider() {
@@ -61,7 +61,7 @@ viewer.setLabelProvider(new LabelProvider() {
     }
 });
 </pre>
-can now be replaced by:
+    can now be replaced by:
 <pre>
 viewer.setLabelProvider(LabelProvider.createTextImageProvider(element -> element.toString(),
     element -> defaultImage));
@@ -69,17 +69,52 @@ viewer.setLabelProvider(LabelProvider.createTextImageProvider(element -> element
      </td>
   </tr>
 
-	<tr id="project-explorer-initial-layout-preference"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=491185 -->
-		<td class="title">Preference to force default layout in Project Explorer to Flat</td>
-		<td class="content">
-			As default Project Layout in Project Explorer has been switched to hierarchical, a new preference
-			is available for RCP providers who want to force Flat layout by default instead. The preference is
-			<code>org.eclipse.ui.navigator.resources/defaultToFlatLayout</code> and can be set to <code>true</code>
-			in <code>plugin_customization.ini</code> or programatically <i>before</i> Project Explorer opens for
-			the first time, in order to force a Flat project layout. Subsequent change to this preference after
-			first initialization of Project Explorer will have no effect.
-		</td>
-	</tr>
+  <tr id="project-explorer-initial-layout-preference"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=491185 -->
+    <td class="title">Preference to change default layout to flat in Project Explorer</td>
+    <td class="content">
+      In Eclipse 4.15, the default project layout in the <b>Project Explorer</b> has been switched to <b>hierarchical layout</b>, and a new preference
+      is available for RCP providers who want to force <b>flat layout</b> by default instead.
+      <p>
+        The preference is <code>org.eclipse.ui.navigator.resources/defaultToFlatLayout</code> and can be set to <code>true</code>
+        in <code>plugin_customization.ini</code> or programatically <i>before</i> Project Explorer opens for
+        the first time, in order to force a flat project layout. Subsequent change to this preference after
+        first initialization of Project Explorer will have no effect.
+      </p>
+    </td>
+  </tr>
+
+  <tr id="disable-swt-addons"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=394231 -->
+    <td class="title">Allow configuration of enabled SWT add-ons in application model</td>
+    <td class="content">
+      Loading the add-ons for SWT, automatically enables all the add-ons (Drag'n'Drop, MinMax, Split, Cleanup).
+      You can now disable unwanted add-ons using tags (DisableDnDAddon, DisableMinMaxAddon, ...) on the application model.
+    </td>
+  </tr>
+
+  <tr id="cheatsheet-hyperlinks"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=559885 -->
+    <td class="title">Hyperlink support in cheatsheet item description</td>
+    <td class="content">
+      You can now add hyperlinks in a cheat sheet item description.
+      <p><img src="images/hyperlinks.png" alt=""/></p>
+      <p>Hyperlinks are expressed using <code>&lt;a href="URL"&gt;display link&lt;/a&gt;</code>, where URL
+        is a valid URL to an external web site or a CheatSheet URL that represents a CheatSheat action.</p>
+      <p>All cheat sheet URLs have the following
+        form: <code>http://org.eclipse.ui.cheatsheet/&lt;action_name&gt;?param1=value1&amp;param2=value2</code>
+        and will be processed by the cheat sheet framework.</p>
+      <p>The following predefined actions are included in the cheat sheet framework:</p>
+      <ul>
+        <li>showView - activates view with given view id</li>
+        <li>execute - executes the specified command</li>
+      </ul>
+      <p>Examples:</p>
+      <ul>
+        <li>Execute command: <code>&lt;a href="http://org.eclipse.ui.cheatsheet/execute?command=org.eclipse.search.ui.openSearchDialog"&gt;Open Search Dialog&lt;/a&gt;</code><br/></li>
+        <li>Show view: <code>&lt;a href="http://org.eclipse.ui.cheatsheet/showView?id=org.eclipse.pde.runtime.LogView"&gt;Show Error Log&lt;/a&gt;</code></li>
+        <li>External: <code>&lt;a href="https://eclipse.org"&gt;eclipse.org&lt;/a&gt;</code></li>
+      </ul>
+    </td>
+  </tr>
+
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
@@ -87,13 +122,29 @@ viewer.setLabelProvider(LabelProvider.createTextImageProvider(element -> element
     <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
   </tr>
 
-	<tr id="webkit1-removal"> <!-- https://bugs.eclipse.org/558070 -->
-		<td class="title">WebKit1 Support Removed</td>
-		<td class="content">
-			As of 4.15 M1, SWT-GTK will no longer support WebKit1 as a browser backend. Only WebKit2 is supported, and
-			all WebKit1 code has been removed.
-		</td>
-	</tr>
+  <tr id="CTabItem"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=559986 -->
+    <td class="title">New APIs to style CTabItem</td>
+    <td class="content">
+      New APIs have been added to <code>CTabItem</code> to set the foreground color and selection foreground color of an individual <code>CTabItem</code>.
+      <p>
+        <code>
+          CTabItem.setForeground()<br/>
+          CTabItem.getForeground()<br/>
+          CTabItem.setSelectionForeground()<br/>
+          CTabItem.getSelectionForeground()
+        </code>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="webkit1-removal"> <!-- https://bugs.eclipse.org/558070 -->
+    <td class="title">WebKit1 support dropped</td>
+    <td class="content">
+      Starting from Eclipse 4.15, SWT/GTK no longer supports WebKit1 as a browser backend. Only WebKit2 is supported, and
+      all WebKit1 code has been removed.
+    </td>
+  </tr>
+
   <!-- *********************** End of SWT *********************** -->
 
 </tbody>

@@ -24,7 +24,6 @@ ul {padding-left: 13px;}
 <h2>Platform and Equinox</h2>
 <ul>
     <li><a href="#ViewsAndDialogs">Views, Dialogs and Toolbar</a></li>
-    <!-- <li><a href="#Text Editors">Text Editors</a></li> -->
     <li><a href="#Debug">Debug</a></li>
     <li><a href="#Preferences">Preferences</a></li>
     <li><a href="#StylingThemes">Themes and Styling</a></li>
@@ -45,23 +44,15 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
-	<tr id="project-explorer-default-to-hierarchical"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=491185 -->
-		<td class="title">Projects layout made hierarchical by default in Project Explorer</td>
-		<td class="content">
-			To better handle multi-module, nested and hierarchical projects, the default Project Layout in Project Explorer
-			view has been changed from <i>Flat</i> to <i>Hierarchical</i>.
-			<p>You can still restore the layout to <i>Flat</i> in the usual <code>&#8942;</code> view menu.</p>
-		</td>
-	</tr>
-  <!-- ******************* End of Views, Dialogs and Toolbar ************************************* -->
-
-  <!-- ******************* Text Editors ************************************* 
-  <tr>
-    <td id="TextEditors" class="section" colspan="2">
-    <h2>Text Editors </h2>
+  <tr id="project-explorer-default-to-hierarchical"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=491185 -->
+    <td class="title">Hierarchical project layout by default in Project Explorer</td>
+    <td class="content">
+      To better handle multi-module, nested and hierarchical projects, the default project layout in <b>Project Explorer</b>
+      view has been changed from <i>Flat</i> to <i>Hierarchical</i>.
+      <p>You can restore the layout to <i>Flat</i> using the view menu (<b>&#8942;</b>).</p>
     </td>
-  </tr> -->
-  <!-- ******************* End of Text Editors ************************************* -->
+  </tr>
+  <!-- ******************* End of Views, Dialogs and Toolbar ************************************* -->
 
   <!-- ****************** Debug ************************************* -->
   <tr>
@@ -71,15 +62,16 @@ ul {padding-left: 13px;}
   </tr>
 
   <tr id="formfeed-character"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=553282 -->
-    <td class="title">Interpretation of form feed and vertical tab in Console View</td>
+    <td class="title">Console View now interprets form feed and vertical tab characters</td>
     <td class="content">
-      The interpretation of ASCII control characters in <b>Console</b> was extended to recognize the characters: <abbr title="ASCII code 0x0C"><code>\f</code></abbr> - form feed and <abbr title="ASCII code 0x0B"><code>\v</code></abbr> - vertical tab (in languages that support it).
+      The interpretation of ASCII control characters in the <b>Console View</b> was extended to recognize the characters: <abbr title="ASCII code 0x0C"><code>\f</code></abbr> - form feed 
+      and <abbr title="ASCII code 0x0B"><code>\v</code></abbr> - vertical tab (in languages that support it).
       <p>
-      This feature is disabled by default. You can enable it on the <b>Run/Debug &gt; Console</b> preference page.
+        This feature is disabled by default. You can enable it on the <b>Run/Debug &gt; Console</b> preference page.
       </p>
       <p>
-       <img src="images/formfeed.png"
-       alt="Result of formfeed interpretation. Insert newline and indent next line to column where formfeed was found in previous line."/>
+        <img src="images/formfeed.png"
+        alt="Result of formfeed interpretation. Insert newline and indent next line to column where formfeed was found in previous line."/>
       </p>
     </td>
   </tr>
@@ -87,9 +79,9 @@ ul {padding-left: 13px;}
   <tr id="termination-time"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=251642 -->
     <td class="title">Termination time in Console View</td>
     <td class="content">
-      The <b>Console</b> View label will now show the termination time of a process additional to the launch time.
+      The <b>Console View</b> label will now show the termination time of a process in addition to the launch time.
       <p>
-       <img src="images/process-termination-time.png" alt=""/>
+        <img src="images/process-termination-time.png" alt=""/>
       </p>
     </td>
   </tr>
@@ -102,22 +94,21 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
-	<tr id="resource-rename-mode-preference"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=560100 -->
-		<td class="title">Preference for resource rename mode: inline or dialog</td>
-		<td class="content">
-			This preference allows to configure resource renaming behavior in <b>Project Explorer</b>:
-			either an inlined text field or a dialog. Without specifiying the preference,
-			renaming is done inlined. The preference is found directly in the <b>General</b> preferences page.
-			<br/><br/>
-			The preference can also be specified via product customization:
-			<ul>
-			<li>org.eclipse.ui.workbench/RESOURCE_RENAME_MODE=inline</li>
-			<li>org.eclipse.ui.workbench/RESOURCE_RENAME_MODE=dialog</li>
-			</ul>
-			<p><b>Note</b> that renames that would affect more than 1 resource are always performed with a dialog.</p>
-			<p><img src="images/resource-rename-mode-preference.png" alt="Rename mode in General preference page"/></p>
-		</td>
-	</tr>
+  <tr id="resource-rename-mode-preference"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=560100 -->
+    <td class="title">Preference to select resource rename mode</td>
+    <td class="content">
+      A preference has been added in the <b>General</b> preferences page, that allows you to select the resource renaming mode 
+      in the <b>Project Explorer</b>: either open an inlined text field or a dialog. By default, the inline rename mode is selected.
+      <br/><br/>
+      The preference can also be specified via product customization:
+      <ul>
+        <li>org.eclipse.ui.workbench/RESOURCE_RENAME_MODE=inline</li>
+        <li>org.eclipse.ui.workbench/RESOURCE_RENAME_MODE=dialog</li>
+      </ul>
+      <p><b>Note:</b> Rename that would affect more than 1 resource is always performed with a dialog.</p>
+      <p><img src="images/resource-rename-mode-preference.png" alt="Rename mode in General preference page"/></p>
+    </td>
+</tr>
   <!-- ****************** End of Preferences ************************************* -->
 
   <!-- ******************* Themes and Styling ************************************* -->
@@ -126,19 +117,13 @@ ul {padding-left: 13px;}
     <h2>Themes and Styling </h2>
     </td>
   </tr>
-   <tr id="CTabItem"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=559986 -->
-    <td class="title">More styling options for CTabItem</td>
+  <tr id="dark_welcome"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=559611 -->
+    <td class="title">Welcome screen in dark theme</td>
     <td class="content">
-		On a CTabItem you can now set an individual foreground color and an individual selection foreground color.
+      When Eclipse is in dark theme, the welcome screen also appears dark on macOS and Linux.
+      <p><img src="images/dark_welcome.png" alt="Welcome screen in dark theme" width="608"/></p>
     </td>
   </tr>
-	<tr id="dark_welcome"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=559611 -->
-		<td class="title">Welcome screen in dark theme</td>
-		<td class="content">
-			The dark theme setting is now taken into account by the welcome screen on macOS and Linux.
-			<p><img src="images/dark_welcome.png" alt="Welcome screen in dark theme" width="608"/></p>
-		</td>
-	</tr>
   <!-- ******************* End of Themes and Styling ************************************* -->
 
   <!-- ******************* General Updates ************************************* -->
@@ -148,52 +133,21 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
-   <tr id="disable-swt-addons"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=394231 -->
-    <td class="title">Allow configuration of enabled SWT addons in application model</td>
-    <td class="content">
-		Loading the addons for SWT automatically enabled all addons (Drag'n'Drop, MinMax, Split, Cleanup).
-		Using tags (DisableDnDAddon, DisableMinMaxAddon, ...) on the application model, developers can now disable unwanted addons. 
-    </td>
-  </tr>
-
-   <tr id="redraw-treeviewer"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=553787 and https://bugs.eclipse.org/bugs/show_bug.cgi?id=553788 -->
-    <td class="title">Redrawn turned off by default during collapse and expand operations in tree viewer</td>
-    <td class="content">
-		To improve interactive performance, redraw is turned off by default during the collapse and expand operation of tree viewers.
-		This significantly improves these operations compared to drawing the updates synchronously.
-    </td>
-  </tr>
-
-   <tr id="ui-performance"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=553533 and https://bugs.eclipse.org/bugs/show_bug.cgi?id=553535 -->
+  <tr id="ui-performance"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=553533 and https://bugs.eclipse.org/bugs/show_bug.cgi?id=553535 -->
     <td class="title">Interactive performance</td>
     <td class="content">
       Interactive performance has been further improved in this release.
     </td>
   </tr>
 
-   <tr id="cheatsheet-hyperlinks"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=559885 -->
-    <td class="title">Hyperlink support in cheatsheet item description</td>
+  <tr id="redraw-treeviewer"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=553787 and https://bugs.eclipse.org/bugs/show_bug.cgi?id=553788 -->
+    <td class="title">Redraw is turned off by default during collapse and expand operations in tree viewer</td>
     <td class="content">
-    Now you can put hyperlinks in cheat sheet item description.
-    <p><img src="images/hyperlinks.png" alt=""/></p>
-    <p>Hyperlinks are expressed using <code>&lt;a href="URL"&gt;diplay link&lt;/a&gt;</code>, where URL
-    is a valid URL to an external web site or a CheatSheet URL that represents a CheatSheat action.</p>
-    <p>All cheat sheet URLs have the following
-    form: <code>http://org.eclipse.ui.cheatsheet/&lt;action_name&gt;?param1=value1&amp;param2=value2</code>
-    and will be processed by the cheat sheet framework.</p>
-    <p>The following predefined actions are included in the cheat sheet framework:</p>
-    <ul>
-      <li>showView - activates view with given view id</li>
-      <li>execute - executes the specified command</li>
-    </ul>
-    <p>Examples:</p>
-    <ul>
-      <li>Execute command: <code>&lt;a href="http://org.eclipse.ui.cheatsheet/execute?command=org.eclipse.search.ui.openSearchDialog"&gt;Open Search Dialog&lt;/a&gt;</code><br/></li>
-      <li>Show view: <code>&lt;a href="http://org.eclipse.ui.cheatsheet/showView?id=org.eclipse.pde.runtime.LogView"&gt;Show Error Log&lt;/a&gt;</code></li>
-      <li>External: <code>&lt;a href="https://eclipse.org"&gt;eclipse.org&lt;/a&gt;</code></li>
-    </ul>
+      To improve interactive performance, redraw is turned off by default during the collapse and expand operation of tree viewers.
+      This significantly improves these operations compared to drawing the updates synchronously.
     </td>
   </tr>
+
   <!-- ******************* End of General Updates ************************************* -->
 </tbody>
 </table>
