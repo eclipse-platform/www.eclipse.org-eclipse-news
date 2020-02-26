@@ -125,13 +125,17 @@ viewer.setLabelProvider(LabelProvider.createTextImageProvider(element -> element
   <tr id="CTabItem"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=559986 -->
     <td class="title">New APIs to style CTabItem</td>
     <td class="content">
-      New APIs have been added to <code>CTabItem</code> to set the foreground color and selection foreground color of an individual <code>CTabItem</code>.
+      New APIs have been added to <code>CTabItem</code> to set the foreground color and selection foreground color of the individual <code>CTabItem</code>.
       <p>
         <code>
-          CTabItem.setForeground()<br/>
-          CTabItem.getForeground()<br/>
-          CTabItem.setSelectionForeground()<br/>
-          CTabItem.getSelectionForeground()
+          public void CTabItem.setForeground(Color color)<br/>
+          public Color CTabItem.getForeground()<br/>
+        </code>
+      </p>
+      <p>
+        <code>
+          public void CTabItem.setSelectionForeground(Color color)<br/>
+          public Color CTabItem.getSelectionForeground()
         </code>
       </p>
     </td>
