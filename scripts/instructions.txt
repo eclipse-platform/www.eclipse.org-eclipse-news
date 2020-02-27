@@ -58,9 +58,9 @@ Steps to copy the news content for a release from news repo to doc bundle in pla
 Pre-requisite to run the perl scripts:
 ==============================================
 1. Install perl
-2. Install XML::Simple using this command.
+2. Install HTML::TokeParser::Simple using this command.
 
-cpan install XML::Simple
+cpan install HTML::TokeParser::Simple
 ===============================================
 Steps:
 ===============================================
@@ -80,7 +80,12 @@ perl parseHtml.pl <release-version> <path-of-news-repo> <path-of-platform-common
 Example:
 perl parseHtml.pl 4.12 /Users/Shared/Git2/news /Users/Shared/Git2/eclipse.platform.common
 
-3. Run validateHtmlDocBundle.sh with platform doc repo location
+3. Manual edits
+The following steps are not automated and needs to be done manually.
+- Update the topics_WhatsNew.xml in the 4 projects corresponding to the *whatsnew.html files.
+- Update the versions to current version in *whatsnew.html files.
+
+4. Run validateHtmlDocBundle.sh with platform doc repo location
 This validates the html files with the w3 html validator service
 
 ./validateHtmlDocBundle.sh <path-of-platform-common-repo>

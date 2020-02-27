@@ -16,10 +16,9 @@
 
 use strict;
 use warnings;
+
 use feature qw(say);
 use File::Copy;
-use lib "/Users/lakshmip/perl5/perlbrew/perls/perl-5.28.0/lib/site_perl/5.28.0/";
-#use lib "/Users/<user>/perl5/perlbrew/perls/perl-5.28.0/lib/site_perl/5.28.0/"; //update with correct path and uncomment
 use HTML::TokeParser::Simple;
 
 use constant RELEASE_DIR => $ARGV[0];
@@ -127,25 +126,5 @@ sub copyImageFiles {
 		say $input_file;
 		say $output_file;
 		copy ($input_file, $output_file);
-	}
-}
-
-#
-# Remove footer section
-#
-sub removeFooter {
-	my ($file) = @_;
-	
-	say "================================================================";
-	say "Remove footer from ${file}";
-	say "================================================================";
-	
-	my $data = HTML::TokeParser::Simple->new($file);
-	while ( my $token = $data->get_token ) {
-    	if ( $token->is_end_tag('table') ) {
-            my $name = $token->get_attr('src');
-            say $name;
-        }
-        
 	}
 }
