@@ -45,7 +45,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>Saturday, March 14: Quiet period - waiting for GA</b></p>
+			<p><b>Wednesday, March 18: GA</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -118,7 +118,7 @@ ob_start();
 	            <td>Submit RC2 to release train</td>
 	            <td></td>
 	          </tr>
-	          <tr>
+              <tr class="current">
 	            <td></td>
 	            <td class="date">18</td>
 	            <td class="date">Wed</td>
