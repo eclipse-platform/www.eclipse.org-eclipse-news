@@ -94,6 +94,27 @@ ul {padding-left: 13px;}
       <p><img src="images/jdtNonBlockingCompletionPref.png" width="400px"/></p>
     </td>
   </tr>
+
+  <tr id="variable-type-inference"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=553025 -->
+    <td class="title">Local variable type inference</td>
+    <td class="content">
+      A new clean up has been added that makes use of the <code>var</code> keyword for the local variable when it is possible and is enabled only for Java 10 and higher.
+      <p>
+        The clean up replaces the explicit variable type by <code>var</code> when this type can be known by the variable initialization.
+        It also replaces the diamond operator in instance creation by a parameterized type.
+        Eventually, it adds a suffix to initialization number literal to match the variable type.
+        In any case, the variable type is still exactly the same.
+      </p>
+      <p>
+        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Use the local variable type inference</b> on the <b>Code Style</b> tab.
+      </p>
+      <p><img src="images/var-preferences.png" alt="Preferences"/></p>
+      For the given code:
+      <p><img src="images/var-before.png" alt="Before"/></p>
+      You get this after the clean up:
+      <p><img src="images/var-after.png" alt="After"/></p>
+    </td>
+  </tr>
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
