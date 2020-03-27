@@ -62,6 +62,18 @@ ul {padding-left: 13px;}
     <h2>Java Editor </h2>
     </td>
   </tr>
+
+  <tr id="default-non-blocking-completion"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=558893 -->
+    <td class="title">Non-blocking Java code completion</td>
+    <td class="content">
+      By default, code completion in the Java editor is now configured to be computed (when possible) in a separate non-UI thread
+      in order to prevent UI freezes in case of long computations.
+      <p>Users can restore to legacy behavior in Preferences &gt; Java &gt; Editor &gt; Content Assist &gt; Advanced by unticking the
+      <em>enable non-blocking completion</em> checkbox; integrators
+      can change the value of the <code>org.eclipse.jdt.ui.content_assist_noUIThread_computation</code> to <code>false</code>.</p>
+      <p><img src="images/jdtNonBlockingCompletionPref.png" width="400px"/></p>
+    </td>
+  </tr>
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
@@ -78,6 +90,7 @@ ul {padding-left: 13px;}
     <h2>Java Compiler</h2>
     </td>
   </tr>
+
   <!-- ******************* End of Java Compiler ************************************* -->
 
   <!-- ******************* Java Formatter ************************************* -->
