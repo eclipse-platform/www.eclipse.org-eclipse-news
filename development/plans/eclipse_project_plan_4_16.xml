@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 06:00 EDT April 1, 2020.
+Last revised 08:24 EDT April 1, 2020.
 
 <!--
 <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
@@ -102,11 +102,17 @@ marks interesting changes since the previous draft of
 <p:milestone date="2020-04-17" milestone=""><div>CQ Submission Deadline</div></p:milestone>
 <p:milestone date="2020-05-01" milestone="M2"><div>4.16 M2 (only submit I-build)</div></p:milestone>
 <p:milestone date="2020-05-22" milestone="M3"><div>4.16 M3</div></p:milestone>
+<!--
+NOTE: This is only necessary once per year. For us with the 202x-03 release.
 <p:milestone date="2020-05-29" milestone=""><div>IP Log Submission Deadline</div></p:milestone>
+-->
 <p:milestone date="2020-05-29" milestone="RC1"><div>4.16 RC1 - <b>API and feature freeze</b></div></p:milestone>
+<!--
+NOTE: This is only necessary once per year. For us with the 202x-03 release.
 <p:milestone date="2020-06-05" milestone=""><div>Review Material Submission Deadline</div></p:milestone>
+-->
 <p:milestone date="2020-06-05" milestone=""><div>New and Noteworthy Material Deadline</div></p:milestone>
-<p:milestone date="2020-06-06" milestone="RC2"><div>4.16 RC2</div></p:milestone>
+<p:milestone date="2020-06-05" milestone="RC2"><div>4.16 RC2</div></p:milestone>
 <p:milestone date="2020-06-17" milestone="GA"><div>4.16 GA</div></p:milestone>
 
 <p:postamble>
