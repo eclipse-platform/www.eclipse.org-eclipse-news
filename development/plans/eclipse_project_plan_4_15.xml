@@ -361,7 +361,7 @@ compared to bugs which are reproducible on the target environments listed above.
   
 <p><strong>Workspace Compatibility:</strong> Eclipse SDK 4.15 will be upwards
   workspace-compatible with earlier 3.x and 4.x versions of the Eclipse SDK unless noted.
-  This means that workspaces and projects created with Eclipse SDK 4.14, 4.3, .. 3.0 can be successfully
+  This means that workspaces and projects created with Eclipse SDK 4.14, 4.13, .. 3.0 can be successfully
   opened by Eclipse SDK 4.15 and upgraded to a 4.15 workspace. This includes both
   hidden metadata, which is localized to a particular workspace, as well as metadata
   files found within a workspace project (e.g., the .project file), which may
