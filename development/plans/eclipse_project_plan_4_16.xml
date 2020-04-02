@@ -205,13 +205,13 @@ Eclipse 4.15 Endgame Plan.
 			</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-				OpenJDK 8u232 (LTS)<br/>
-				OpenJDK 11.0.5 (LTS)<br/>
-				OpenJDK 13.0.1<br/>
-				Oracle Java 8u231<br/>
-				Oracle Java 11.0.5 (LTS)<br/>
-				Oracle Java 13.0.1<br/>
-				IBM Java 8 8.0.5
+				OpenJDK 8u241 (LTS)<br/>
+				OpenJDK 11.0.6 (LTS)<br/>
+				OpenJDK 14<br/>
+				Oracle Java 8u241<br/>
+				Oracle Java 11.0.6 (LTS)<br/>
+				Oracle Java 14<br/>
+				IBM Java 8 8.0.6
 			</td>
 			<td rowspan="1">Win32</td>
 		</tr>
@@ -219,25 +219,25 @@ Eclipse 4.15 Endgame Plan.
 		<tr class="c1">
 			<td rowspan="2">Red Hat Enterprise Linux</td>
 
-			<td rowspan="2">7.7<br/>
-			8
+			<td rowspan="2">7.8<br/>
+			8.1
 			</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-				OpenJDK 8u232 (LTS)<br/>
-				OpenJDK 11.0.5 (LTS)<br/>
-				OpenJDK 13.0.1<br/>
-				Oracle Java 8u231<br/>
-				Oracle Java 11.0.5 (LTS)<br/>
-				Oracle Java 13.0.1<br/>
-				IBM Java 8 8.0.5
+				OpenJDK 8u241 (LTS)<br/>
+				OpenJDK 11.0.6 (LTS)<br/>
+				OpenJDK 14<br/>
+				Oracle Java 8u241<br/>
+				Oracle Java 11.0.6 (LTS)<br/>
+				Oracle Java 14<br/>
+				IBM Java 8 8.0.6
 			</td>
 			<td rowspan="2">GTK 3</td>
 		</tr>
 		<tr class="c1">
 			<td rowspan="1">Power 64-bit LE</td>
 			<td rowspan="1">
-				IBM Java 8 8.0.5
+				IBM Java 8 8.0.6
 			</td>
 		</tr>
 		<!-- ************ SLES ************** -->
@@ -248,17 +248,17 @@ Eclipse 4.15 Endgame Plan.
 			</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-				Oracle Java 8u231<br/>
-				Oracle Java 11.0.5 (LTS)<br/>
-				Oracle Java 13.0.1<br/>
-				IBM Java 8 8.0.5
+				Oracle Java 8u241<br/>
+				Oracle Java 11.0.6 (LTS)<br/>
+				Oracle Java 14<br/>
+				IBM Java 8 8.0.6
 			</td>
 			<td rowspan="2">GTK 3</td>
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">Power 64-bit LE</td>
 			<td rowspan="1">
-				IBM Java 8 8.0.5
+				IBM Java 8 8.0.6
 			</td>
 		</tr>
 
@@ -268,10 +268,10 @@ Eclipse 4.15 Endgame Plan.
 		    <td rowspan="1">18.04</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-				Oracle Java 8u231<br/>
-				Oracle Java 11.0.5 (LTS)<br/>
-				Oracle Java 13.0.1<br/>
-				IBM Java 8 8.0.5
+				Oracle Java 8u241<br/>
+				Oracle Java 11.0.6 (LTS)<br/>
+				Oracle Java 14<br/>
+				IBM Java 8 8.0.6
 			</td>
 			<td rowspan="1">GTK 3</td>
 		</tr>
@@ -285,10 +285,10 @@ Eclipse 4.15 Endgame Plan.
 			</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-				OpenJDK 8u232 (LTS)<br/>
+				OpenJDK 8u241 (LTS)<br/>
 				OpenJDK 11.0.5 (LTS)<br/>
 				OpenJDK 13.0.1<br/>
-				Oracle Java 8u231<br/>
+				Oracle Java 8u241<br/>
 				Oracle Java 11.0.5 (LTS)<br/>
 				Oracle Java 13.0.1
 			</td>
