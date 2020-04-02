@@ -24,7 +24,7 @@ https://validator.w3.org/check?uri=http%3A%2F%2Fwww.eclipse.org%2Feclipse%2Fdeve
   <p>
     <a
       class="mozTocH1"
-      name="mozTocId299852">Last revised February 25, 2019</a>
+      name="mozTocId299852">Last revised April 2, 2020</a>
   </p>
   <!-- 
 This following link to www.eclipse.org should be commented out
@@ -64,6 +64,7 @@ after the release.
             <li><a href="#mozTocId758150">General problems</a></li>
             <li><a href="#mozTocId559320">General - Startup</a>
               <ol>
+                <li><a href="#mozTocId561273">Eclipse fails to start on macOS with Java 14</a></li>
                 <li><a href="#mozTocId693657">Installation/Configuration issues that can cause Eclipse to fail start</a></li>
                 <li><a href="#mozTocId337416"> Invalid characters in install directory prevents Eclipse from starting </a></li>
                 <li><a href="#mozTocId639565">Hanging during class loading when out of permanent generation memory</a></li>
@@ -285,6 +286,19 @@ after the release.
       class="mozTocH3"
       name="mozTocId559320">General - Startup</a>
   </h3>
+  <h4>
+    <a
+      class="mozTocH4"
+      name="mozTocId561273">Eclipse fails to start on macOS with Java 14</a>
+  </h4>
+  <p>
+      Eclipse fails to launch with OpenJDK 14 and OpenJDK 11.0.6 on macOS (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=561273">561273</a>) with the following error message:
+      <code>
+        Error: could not find libjava.dylib
+        Failed to GetJREPath().
+      </code> 
+      The problem has been fixed in OpenJDK and is expected to be available in the next update of OpenJDK 11 (11.0.7) and OpenJDK 14 (14.0.1).
+  </p>
   <h4>
     <a
       class="mozTocH4"
