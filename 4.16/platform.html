@@ -68,7 +68,26 @@ ul {padding-left: 13px;}
   <!-- ****************** Preferences ************************************* -->
   <tr>
     <td id="Preferences" class="section" colspan="2">
-    <h2>Preferences </h2>
+      <h2>Preferences </h2>
+    </td>
+  </tr>
+
+  <tr id="create-subfolder"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=550898 -->
+    <td class="title">Verify installation operations against current JRE</td>
+    <td class="content">
+      A new option (on by default) is available in the <b>Install/Update</b> preference page:
+      <i>Verify provisioning operation is compatible with current running JRE</i>. This enabled
+      some extra check when installing, updating or uninstalling content using the standard dialogs
+      so the operation will fail with a useful message if the units you're installing are requiring
+      a newer or incompatible Java runtime than the one that's currently in use to run the IDE.
+      <p> 
+        <img src="images/incompatibleJREPref.png" alt=""/>
+      </p>
+      Here is how the error message looks like, for example when you're trying to install a unit
+      that requires Java 14 and you're running the Eclipse IDE with an older Java version:
+      <p> 
+        <img src="images/incompatibleJREMessage.png" alt=""/>
+      </p>
     </td>
   </tr>
   <!-- ****************** End of Preferences ************************************* -->
