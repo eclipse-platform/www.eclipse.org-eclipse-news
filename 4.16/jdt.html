@@ -50,7 +50,8 @@ ul {padding-left: 13px;}
       <td class="content">
           <a href="http://jdk.java.net/14/">Java 14</a> is out and Eclipse JDT supports Java 14 for 4.16. 
           <p>
-          <p>
+          </p>
+
           The release notably includes the following Java 14 features:
            <ul>
              <li><a href="http://openjdk.java.net/jeps/361">JEP 361: Switch Expressions (Standard)</a></li>
@@ -58,7 +59,7 @@ ul {padding-left: 13px;}
              <li><a href="http://openjdk.java.net/jeps/368">JEP 368: Text Blocks (Second Preview)</a></li>
              <li><a href="http://openjdk.java.net/jeps/305">JEP 305: Pattern Matching for Instanceof (Preview)</a></li>
            </ul>
-           </p>
+
            <p>
            Please note that the <em>enable preview features</em> option should be on for <a href="http://openjdk.java.net/projects/jdk/14/">preview language features</a>.
            For an informal introduction of the support, 
@@ -78,6 +79,17 @@ ul {padding-left: 13px;}
     <td class="content">
       You can use the <code>new_record</code> template to create a record in an empty <code>.java</code> file:
       <p><img src="images/newrecord.png" alt=""/></p>
+    </td>
+  </tr>
+  <tr id="new-record-creation-wizard"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=553473 -->
+    <td class="title">Record Creation Wizard</td>
+    <td class="content">
+     Right Click on the Project > New > Record (or) 
+     Right Click on the Project > New > Other and search for Record (or) 
+     Right Click on the Project > New > Other > Java > Record.
+     The Record creation wizard comes up as shown below.
+      <p><img src="images/fileAddJ14RecordCreation.png" alt=""/></p>
+     [note: In older workspaces Record option may not appear diectly under New menu in java perspective. To resolve this, use a new workspace or relaunch eclipse with -clearPersistedState for the same workspace] 
     </td>
   </tr>
   <!-- ******************* End of Java 14 Support ************************************* -->
@@ -105,7 +117,7 @@ ul {padding-left: 13px;}
       <p>Users can restore the legacy behavior in Preferences &gt; Java &gt; Editor &gt; Content Assist &gt; Advanced by unticking the
       <em>enable non-blocking completion</em> checkbox; integrators
       can change the value of the <code>org.eclipse.jdt.ui.content_assist_noUIThread_computation</code> to <code>false</code>.</p>
-      <p><img src="images/jdtNonBlockingCompletionPref.png" width="400px"/></p>
+      <p><img src="images/jdtNonBlockingCompletionPref.png" alt="" width="400px"/></p>
     </td>
   </tr>
 
