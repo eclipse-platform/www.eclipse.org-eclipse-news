@@ -79,6 +79,19 @@ ul {padding-left: 13px;}
     <h2>Themes and Styling </h2>
     </td>
   </tr>
+  <tr id="win-dark-scrollbars"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=444560 -->
+    <td class="title"><a href="#win-dark-scrollbars">Support for dark scrollbars on Windows</a></td>
+    <td class="content">
+      Support for dark scrollbars on Windows, sharing a screen-grab of how the dark-themed scrollbars look on Windows10:
+      <p> 
+       <img src="images/win_dark_Scrollbars.png" alt="Support for dark scrollbars on Windows" /></p>
+      <p>
+        On <b>Windows10</b> the dark scrollbars can be enabled/configured using the <code>org.eclipse.swt.internal.win32.enableDarkScrollbars</code>
+        Java property. E.g. to enable dark scrollbars, add this VM argument in eclipse.ini or on the command line after <b><code>-vmargs</code></b>:
+      </p>
+      <pre><b>-Dorg.eclipse.swt.internal.win32.enableDarkScrollbars=true</b></pre>
+    </td>
+  </tr>
   <!-- ******************* End of Themes and Styling ************************************* -->
 
   <!-- ******************* General Updates ************************************* -->
@@ -93,8 +106,8 @@ ul {padding-left: 13px;}
       For presentations, screen casts and learning purposes, it is very helpful to show the corresponding 
       key binding when a command is invoked. This was added some releases ago.
       <p> 
-       <img src="images/show_keybindings.png" alt="Key binding of triggered command shown on screen" style="width: 50%"></p>
-      </p
+       <img src="images/show_keybindings.png" alt="Key binding of triggered command shown on screen" style="width: 50%" />
+      </p>
       <p>It is now possible to enable this feature separately for keyboard interaction and mouse clicks. So you can enable it for mouse clicks only, for keyboard interaction only or for both. 
       Enabling this only for mouse clicks is very helpful for users who want to learn existing key bindings.
       </p>
@@ -102,7 +115,8 @@ ul {padding-left: 13px;}
       To change this setting quickly the command 'Toggle Show Key Bindings' can be used (e.g. via the find actions dialog).
       </p>
       <p> 
-       <img src="images/show_keybindings_pref.png" alt="Key binding of triggered command shown on screen" style="width: 50%"></p>
+       <img src="images/show_keybindings_pref.png" alt="Key binding of triggered command shown on screen" style="width: 50%" />
+      </p>
       </td>
   </tr>
   <!-- ******************* End of General Updates ************************************* -->
