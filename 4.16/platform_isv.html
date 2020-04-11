@@ -39,13 +39,13 @@ ul {padding-left: 13px;}
     <td id="Platform" class="section" colspan="2"><h2>Platform Changes</h2></td>
   </tr>
   <tr id="browserviewer-invokes-urihandler"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=561974 -->
-    <td class="title"><a href="#browserviewer-invokes-urihandler">BrowserViewer invokes URISchemHandler extensions</a></td>
+    <td class="title"><a href="#browserviewer-invokes-urihandler">BrowserViewer uses URISchemeHandler extensions</a></td>
     <td class="content">
-      The <code>BrowserViewer</code> now checks the extensions to <code>org.eclipse.urischeme.uriSchemeHandlers</code> so
-      that when following hyperlink to non-default supported web browser URI schemes, the extensions are checked and if one can
+      The <code>BrowserViewer</code> now uses the extensions to <code>org.eclipse.urischeme.uriSchemeHandlers</code>.
+      When clicking a hyperlink with a non-default supported web browser URI scheme, the extensions are checked and if one can
       handle the URI scheme, it will be triggered.
       <p>One example is Marketplace Client providing support for <code>eclipse+mpc://...</code> URIs, so using the BrowserViewer and
-      clicking a <code>eclipse+mpc://...</code> link target will then open the Marketplace Client wizard.</p> 
+      clicking an <code>eclipse+mpc://...</code> link target will then open the Marketplace Client wizard.</p> 
     </td>
   </tr>
   <!-- ******************** End of Platform ********************** -->

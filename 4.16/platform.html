@@ -45,9 +45,9 @@ ul {padding-left: 13px;}
   </tr>
   
     <tr id="create-subfolder"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=550898 -->
-    <td class="title">Create subfolder from the new file wizard.</td>
+    <td class="title">Create missing folders from the new file wizard</td>
     <td class="content">
-	You can now create folder directly via the new file wizard.
+	You can now create missing folders directly via the new file wizard, without explicitly creating folders beforehand.
 	  <p> 
        <img src="images/file-and-folder.png" alt=""/>
       </p>
@@ -72,13 +72,13 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
-  <tr id="create-subfolder"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=550898 -->
+  <tr id="create-subfolder"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=483383 -->
     <td class="title">Verify installation operations against current JRE</td>
     <td class="content">
       A new option (on by default) is available in the <b>Install/Update</b> preference page:
-      <i>Verify provisioning operation is compatible with current running JRE</i>. This enabled
+      <i>Verify provisioning operation is compatible with current running JRE</i>. This enables
       some extra check when installing, updating or uninstalling content using the standard dialogs
-      so the operation will fail with a useful message if the units you're installing are requiring
+      so the operation will fail with a useful message if the units you're installing require
       a newer or incompatible Java runtime than the one that's currently in use to run the IDE.
       <p> 
         <img src="images/incompatibleJREPref.png" alt=""/>
@@ -101,11 +101,11 @@ ul {padding-left: 13px;}
   <tr id="win-dark-scrollbars"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=444560 -->
     <td class="title"><a href="#win-dark-scrollbars">Support for dark scrollbars on Windows</a></td>
     <td class="content">
-      Support for dark scrollbars on Windows, sharing a screen-grab of how the dark-themed scrollbars look on Windows10:
+      Support for dark scrollbars on Windows, sharing a screen-grab of how the dark-themed scrollbars look on Windows 10:
       <p> 
        <img src="images/win_dark_Scrollbars.png" alt="Support for dark scrollbars on Windows" /></p>
       <p>
-        On <b>Windows10</b> the dark scrollbars can be enabled/configured using the <code>org.eclipse.swt.internal.win32.enableDarkScrollbars</code>
+        On <b>Windows 10</b> the dark scrollbars can be enabled/configured using the <code>org.eclipse.swt.internal.win32.enableDarkScrollbars</code>
         Java property. E.g. to enable dark scrollbars, add this VM argument in eclipse.ini or on the command line after <b><code>-vmargs</code></b>:
       </p>
       <pre><b>-Dorg.eclipse.swt.internal.win32.enableDarkScrollbars=true</b></pre>
