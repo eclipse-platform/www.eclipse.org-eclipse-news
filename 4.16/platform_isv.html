@@ -48,6 +48,15 @@ ul {padding-left: 13px;}
       clicking an <code>eclipse+mpc://...</code> link target will then open the Marketplace Client wizard.</p> 
     </td>
   </tr>
+  <tr id="eclipse-command-url-handler"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=562049 -->
+    <td class="title"><a href="#eclipse-command-url-handler">Handle eclipse+command:// URLs</a></td>
+    <td class="content">
+      <b>eclipse+command://</b> Link handler makes the Eclipse application start a command.
+      <p>Such URLs have the form <code>eclipse+command://commandId?param1Id=value&amp;param2Id=value</code>.
+      <br/>For example, to open a preference page: <code>eclipse+command://org.eclipse.ui.window.preferences?preferencePageId=org.eclipse.ui.browser.preferencePage</code></p>.
+      <p>This link handler must be activated from the <i>Link handlers</i> preference page to bind the Eclipse application with this URL scheme in the OS.</p>
+    </td>
+  </tr>
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
