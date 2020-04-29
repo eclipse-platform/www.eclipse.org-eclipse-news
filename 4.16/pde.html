@@ -52,6 +52,32 @@ ul {padding-left: 13px;}
   <tr>
     <td id="APITools" class="section" colspan="2"><h2>API Tools</h2></td>
   </tr>
+  
+    <tr id="since-tag-operation-quickfixes-multifix"> <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=539406 -->
+    <td class="title">Since tag operation quick fixes are multi-fix</td>
+    <td class="content">
+      All errors or warnings that are fixed by since tag operations like adding missing since tag or 
+      correcting invalid since tag can now be fixed in one go by applying the quickfix after selecting
+      all similar since tag errors or warnings.
+    
+      <p>
+       <img src="images/pde-since-tag-operation-quickfixes-multifix.png" alt="" />
+      </p>
+
+    </td>
+  </tr>
+
+  <tr id="pde-version-error-hover-detail"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=562225 -->
+    <td class="title">Hover on version error in Manifest gives details</td>
+    <td class="content">
+      Hovering on a version error in Manifest editor now gives the list of changes that requires the
+      version to be changed. For minor version change, it lists all the compatible changes and for major
+      version change, it lists all the breaking changes.
+      <p>
+       <img src="images/pde-hover-version-error-manifest-details.png" alt="" />
+      </p>
+    </td>
+  </tr>
   <!-- ******************** End of APITools ********************** -->
   
    <!-- ******************** PDE Compiler ********************** -->
