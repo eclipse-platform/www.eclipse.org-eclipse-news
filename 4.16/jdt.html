@@ -28,8 +28,9 @@ ul {padding-left: 13px;}
 	<li><a href="#JavaEditor">Java Editor</a></li>
 	<!-- <li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li> -->
 	<li><a href="#JavaFormatter">Java Formatter</a></li>
-	<!-- <li><a href="#Debug">Debug</a></li>
-	<li><a href="#JDTDev">JDT Developers</a></li> -->
+	<!-- <li><a href="#Debug">Debug</a></li> -->
+    <li><a href="#Preferences">Preferences</a></li>
+	<!-- <li><a href="#JDTDev">JDT Developers</a></li> -->
 </ul>
 
 <!-- ****************** START OF N&N TABLE ****************** -->
@@ -184,6 +185,25 @@ ul {padding-left: 13px;}
     </td>
   </tr> -->
   <!--************************ End of Debug ******************************** -->
+
+  <!-- ****************** Preferences ************************************* -->
+  <tr>
+    <td id="Preferences" class="section" colspan="2">
+      <h2>Preferences </h2>
+    </td>
+  </tr>
+
+  <tr id="substring-matching-default"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=561264 -->
+    <td class="title">Substring Matching</td>
+    <td class="content">
+      The Content Assist preference option <b>Show Substring Matches</b> has been removed and the feature is now always enabled.
+      <p>
+        Any application/user can still disable it using the VM property:
+        <b><span style="white-space: nowrap;">-Djdt.codeCompleteSubstringMatch=false</span></b>
+      </p>
+    </td>
+  </tr>
+  <!-- ****************** End of Preferences ************************************* -->
 
   <!-- *********************** JDT Developers ******************************** -->
   <!-- <tr>
