@@ -122,6 +122,29 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="merge-conditional"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=562592 -->
+    <td class="title">Merge control workflows</td>
+    <td class="content">
+      A new clean up has been added that merges conditions of if/else if/else that have the same blocks when it is possible.
+      <p>
+        The code in the blocks should be the same.
+        An else block may be different and won't be merged.
+        One condition may be made opposite to allow the merge.
+        The conditions are merged with <code>||</code> to keep the control workflow the same.
+        Parenthesis is added to avoid priority issue.
+        Most of the brackets, formatting and comments are kept.
+      </p>
+      <p>
+        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Merge conditions of if/else if/else that have the same blocks</b> on the <b>Unnecessary Code</b> tab.
+      </p>
+      <p><img src="images/merge-control-workflows-preferences.png" alt="Preferences"/></p>
+      For the given code:
+      <p><img src="images/merge-control-workflows-before.png" alt="Before"/></p>
+      You get this after the clean up:
+      <p><img src="images/merge-control-workflows-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
   <tr id="variable-type-inference"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=553025 -->
     <td class="title">Local variable type inference</td>
     <td class="content">
