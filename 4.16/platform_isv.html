@@ -76,11 +76,15 @@ ul {padding-left: 13px;}
       Support for dark scrollbars on Windows, sharing a screen-grab of how the dark-themed scrollbars look on Windows 10:
       <p> 
        <img src="images/win_dark_Scrollbars.png" alt="Support for dark scrollbars on Windows" /></p>
-      <p>
-        On <b>Windows 10</b> the dark scrollbars can be enabled/configured using the <code>org.eclipse.swt.internal.win32.enableDarkScrollbars</code>
-        Java property. E.g. to enable dark scrollbars, add this VM argument in eclipse.ini or on the command line after <b><code>-vmargs</code></b>:
+      <p> Dark scroll bars can be enabled via setting below key/value pair on the <code>display</code> instance something as below:
+      <code>display.setData("org.eclipse.swt.internal.win32.useDarkModeExplorerTheme", true);</code>
       </p>
-      <pre><b>-Dorg.eclipse.swt.internal.win32.enableDarkScrollbars=true</b></pre>
+      <p>
+        On <b>Windows 10</b> the dark theme tweaks including the dark scrollbars can be disabled using the <code>org.eclipse.swt.internal.win32.disableCustomThemeTweaks</code>
+        Java property.<br/> For Example. add this VM argument in eclipse.ini or on the command line after <b><code>-vmargs</code></b>:
+      </p>
+      <pre><b>-Dorg.eclipse.swt.internal.win32.disableCustomThemeTweaks=true</b></pre>
+      Note: Once this Java Property is set then above <code>display.setData()</code> won't come into effect.
     </td>
   </tr>
   <!-- *********************** End of SWT *********************** -->
