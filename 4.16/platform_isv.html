@@ -70,6 +70,17 @@ ul {padding-left: 13px;}
   <tr>
     <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
   </tr>
+  <tr id="win-ligatures-support"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=562165 -->
+    <td class="title"><a href="#win-ligatures-support">Support for ligatures on Windows</a></td>
+    <td class="content">
+      On Windows support for ligatures is added for <code>StyledText</code> Widget, sharing a screen-grab of how the ligatures look on Windows 10:
+      <p> 
+       <img src="images/win_ligatures_support_with_FiraCode_font.png" alt="Support for ligatures on Windows" />
+      </p>
+      <p> Pre-requisite to this features support is <a href="https://github.com/tonsky/FiraCode/tree/master/distr">Fira Code</a> font which supports the ligatures.
+      </p>
+  </td>
+  </tr>
   <tr id="win-dark-scrollbars"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=444560 -->
     <td class="title"><a href="#win-dark-scrollbars">Support for dark scrollbars on Windows</a></td>
     <td class="content">
