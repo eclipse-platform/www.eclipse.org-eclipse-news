@@ -44,8 +44,8 @@ ul {padding-left: 13px;}
       The <code>BrowserViewer</code> now uses the extensions to <code>org.eclipse.urischeme.uriSchemeHandlers</code>.
       When clicking a hyperlink with a non-default supported web browser URI scheme, the extensions are checked and if one can
       handle the URI scheme, it will be triggered.
-      <p>One example is Marketplace Client providing support for <code>eclipse+mpc://...</code> URIs, so using the BrowserViewer and
-      clicking an <code>eclipse+mpc://...</code> link target will then open the Marketplace Client wizard.</p> 
+      <p>One example is Marketplace Client providing support for <code>eclipse+mpc://...</code> URIs. Using the BrowserViewer and
+      clicking an <code>eclipse+mpc://...</code> link target will open the Marketplace Client wizard.</p> 
     </td>
   </tr>
   <tr id="eclipse-command-url-handler"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=562049 -->
@@ -53,15 +53,15 @@ ul {padding-left: 13px;}
     <td class="content">
       <b>eclipse+command://</b> Link handler makes the Eclipse application start a command.
       <p>Such URLs have the form <code>eclipse+command://commandId?param1Id=value&amp;param2Id=value</code>.
-      <br/>For example, to open a preference page: <code>eclipse+command://org.eclipse.ui.window.preferences?preferencePageId=org.eclipse.ui.browser.preferencePage</code></p>.
+      <br/>For example, to open a preference page: <code>eclipse+command://org.eclipse.ui.window.preferences?preferencePageId=org.eclipse.ui.browser.preferencePage</code></p>
       <p>This link handler must be activated from the <i>Link handlers</i> preference page to bind the Eclipse application with this URL scheme in the OS.</p>
     </td>
   </tr>
   <tr id="e4-core-di-extensions"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=539149 -->
     <td class="title"><a href="#e4-core-di-extensions">org.eclipse.e4.core.di.extensions APIs made public</a></td>
     <td class="content">
-      The dependency injection annotation APIs in <code>org.eclipse.e4.core.di.extensions</code> such as <code>@EventTopic</code> have been made official API.
-      <p>These APIs have already been commonly used by dependency injection in E4 RCP applications, but have only been marked as provisional API thus far. The provisional flag has now been removed.</p>
+      The dependency injection annotation APIs in <code>org.eclipse.e4.core.di.extensions</code> such as <code>@EventTopic</code> have been made an official API.
+      <p>These APIs have already been commonly used by dependency injection in E4 RCP applications, but have only been marked as provisional APIs thus far. The provisional flag has now been removed.</p>
     </td>
   </tr>
   <!-- ******************** End of Platform ********************** -->
