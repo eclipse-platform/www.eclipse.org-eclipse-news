@@ -45,7 +45,7 @@ ul {padding-left: 13px;}
       When clicking a hyperlink with a non-default supported web browser URI scheme, the extensions are checked and if one can
       handle the URI scheme, it will be triggered.
       <p>One example is Marketplace Client providing support for <code>eclipse+mpc://...</code> URIs. Using the BrowserViewer and
-      clicking an <code>eclipse+mpc://...</code> link target will open the Marketplace Client wizard.</p> 
+      clicking an <code>eclipse+mpc://...</code> link target will open the Marketplace Client wizard.</p>
     </td>
   </tr>
   <tr id="eclipse-command-url-handler"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=562049 -->
@@ -81,6 +81,51 @@ ul {padding-left: 13px;}
       </p>
   </td>
   </tr>
+  <tr id="win-dark-tweaks">
+    <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=444560 -->
+    <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=560284 -->
+    <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=560316 -->
+    <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=560358 -->
+    <td class="title"><a href="#win-dark-tweaks">Dark theme tweaks Windows</a></td>
+    <td class="content">
+      Various tweaks were implemented to improve dark theme experience on Windows, where OS supported dark theme is not quite there yet:
+	  <ul>
+		<li><a href="platform_isv.html#win-dark-scrollbars">Dark scrollbars (only on Win10)</a></li>
+	    <li>Custom colors for Menu bar:
+	      	<p> For Example. dark menu can be enabled via setting below key/value pairs on the <code>display</code> instance something as below:
+	      		<code>display.setData("org.eclipse.swt.internal.win32.menuBarForegroundColor", new Color(display, 0xD0, 0xD0, 0xD0));</code><br/>
+	      		<code>display.setData("org.eclipse.swt.internal.win32.menuBarBackgroundColor", new Color(display, 0x30, 0x30, 0x30));</code><br/>
+	      		<code>display.setData("org.eclipse.swt.internal.win32.menuBarBorderColor", new Color(display, 0x50, 0x50, 0x50));</code><br/>
+	      	</p>
+      	</li>
+		<li>Custom color for Table header lines:
+			<p> For Example. table header line color for dark theme can be enabled via setting below key/value pair on the <code>display</code> instance something as below:
+	      		<code>display.setData("org.eclipse.swt.internal.win32.Table.headerLineColor", new Color(display, 0x50, 0x50, 0x50));</code>
+	      	</p>
+      	</li>
+		<li>Dark theme compatible Control borders:
+			<p> For Example. dark border for below supported controls can be enabled via setting below key/value pair on the <code>display</code> instance something as below:
+				<code>display.setData("org.eclipse.swt.internal.win32.Canvas.use_WS_BORDER", true);</code><br/>
+				<code>display.setData("org.eclipse.swt.internal.win32.List.use_WS_BORDER", true);</code><br/>
+				<code>display.setData("org.eclipse.swt.internal.win32.Table.use_WS_BORDER", true);</code><br/>
+				<code>display.setData("org.eclipse.swt.internal.win32.Text.use_WS_BORDER", true);</code><br/>
+				<code>display.setData("org.eclipse.swt.internal.win32.Tree.use_WS_BORDER", true);</code><br/>
+			</p>
+		</li>
+	  </ul>
+	  Here's how dark menu, table header and text border looks like in Eclipse:
+      <p>
+       <img src="images/dark_menu_textBroder_table.png" alt="Support for dark scrollbars on Windows" />
+      </p>
+      <p>
+        On <b>Windows 10</b> all the <a href="platform_isv.html#win-dark-tweaks">dark theme tweaks</a> including the <a href="platform_isv.html#win-dark-scrollbars">dark scrollbars</a> can be disabled using the 
+        <code>org.eclipse.swt.internal.win32.disableCustomThemeTweaks</code> Java property.<br/>
+        For Example. add this VM argument in eclipse.ini or on the command line after <b><code>-vmargs</code></b>:
+      </p>
+      <pre><b>-Dorg.eclipse.swt.internal.win32.disableCustomThemeTweaks=true</b></pre>
+      Note: Once this Java Property is set then all above <code>display.setData()</code> won't come into effect.
+    </td>
+  </tr>
   <tr id="win-dark-scrollbars"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=444560 -->
     <td class="title"><a href="#win-dark-scrollbars">Support for dark scrollbars on Windows</a></td>
     <td class="content">
@@ -91,11 +136,12 @@ ul {padding-left: 13px;}
       <code>display.setData("org.eclipse.swt.internal.win32.useDarkModeExplorerTheme", true);</code>
       </p>
       <p>
-        On <b>Windows 10</b> the dark theme tweaks including the dark scrollbars can be disabled using the <code>org.eclipse.swt.internal.win32.disableCustomThemeTweaks</code>
-        Java property.<br/> For Example. add this VM argument in eclipse.ini or on the command line after <b><code>-vmargs</code></b>:
+        On <b>Windows 10</b> all the <a href="platform_isv.html#win-dark-tweaks">dark theme tweaks</a> including the <a href="platform_isv.html#win-dark-scrollbars">dark scrollbars</a> can be disabled using the 
+        <code>org.eclipse.swt.internal.win32.disableCustomThemeTweaks</code> Java property.<br/>
+        For Example. add this VM argument in eclipse.ini or on the command line after <b><code>-vmargs</code></b>:
       </p>
       <pre><b>-Dorg.eclipse.swt.internal.win32.disableCustomThemeTweaks=true</b></pre>
-      Note: Once this Java Property is set then above <code>display.setData()</code> won't come into effect.
+      Note: Once this Java Property is set then all above <code>display.setData()</code> won't come into effect.
     </td>
   </tr>
    <tr id="gtk-min-version"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=561047 -->
