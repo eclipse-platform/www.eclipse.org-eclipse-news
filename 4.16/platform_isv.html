@@ -148,6 +148,14 @@ ul {padding-left: 13px;}
       Starting from Eclipse 4.16 SWT/GTK no longer supports versions of GTK older than 3.20.
      </td>
   </tr>
+  
+  <tr id="swt-no-disposal-needed"> <!-- https://bugs.eclipse.org/563018 -->
+    <td class="title">Colors don't need to be disposed</td>
+    <td class="content">
+      Starting from Eclipse 4.16, SWT no longer requires Colors to be disposed as for a few versions they have not allocated
+      any OS resources.
+    </td>
+  </tr>
   <!-- *********************** End of SWT *********************** -->
 
 </tbody>
