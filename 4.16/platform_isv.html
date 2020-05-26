@@ -156,6 +156,25 @@ ul {padding-left: 13px;}
       any OS resources.
     </td>
   </tr>
+  
+    <tr id="sleak-save"> <!-- https://bugs.eclipse.org/563451 -->
+    <td class="title">S-Leak SWT Tool has save options</td>
+    <td class="content">
+      Add a save to file option for <a href="https://www.eclipse.org/swt/tools.php">S-Leak</a>. Two new buttons are added,
+      save and save as.
+      <p>
+        When saving, there are some options to control saving:
+      </p>
+        <ul>
+          <li>save to incrementing file numbers to make it easier to
+        capture multiple files without prompts</li>
+          <li>save the preview to png files cross referenced to the
+        main text file</li>
+          <li>include stack traces if "Stack" is checked</li>
+        </ul>
+    </td>
+  </tr>
+  
   <!-- *********************** End of SWT *********************** -->
 
 </tbody>
