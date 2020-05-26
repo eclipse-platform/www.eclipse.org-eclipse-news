@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		Dani Megert
-	# Date:			2020-05-20
+	# Date:			2020-05-26
 	#
 	# Description: Eclipse project 4.16 release freeze plan
 	#
@@ -45,7 +45,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>Wednesday, June 20: working towards M3</b></p>
+			<p><b>Tuesday, May 26: working towards RC1</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -58,7 +58,7 @@ ob_start();
 	            <td></td>
 	            <td></td>
 	            <td></td>
-	            <td>Two daily I-builds starting on 18th</td>
+	            <td>Two daily I-builds towards RC1</td>
 	            <td></td>
 	          </tr>
 			  <tr>
