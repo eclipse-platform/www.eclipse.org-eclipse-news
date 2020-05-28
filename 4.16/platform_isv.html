@@ -69,7 +69,7 @@ ul {padding-left: 13px;}
     <td class="content">
 	    SafeRunner now supports runnables that return a result.<br />
 	    <code>T run(ISafeRunnableWithResult<T> code);</code>
-	    <p>Example:<br>
+	    <p>Example:<br/>
 	    <pre><code>int result = SafeRunner.run(new ISafeRunnableWithResult<Integer>() {
 		    @Override
 		    public Integer runWithResult() throws Exception {
@@ -106,15 +106,15 @@ ul {padding-left: 13px;}
       Various tweaks were implemented to improve dark theme experience on Windows, where OS supported dark theme is not quite there yet:
 	  <ul>
 		<li><a href="platform_isv.html#win-dark-scrollbars">Dark scrollbars (only on Win10)</a></li>
-	    <li>Custom colors for Menu bar:
-	      	<p> For Example. dark menu can be enabled via setting below key/value pairs on the <code>display</code> instance something as below:
+	    <li>Custom colors for <code>Menu</code> bar:
+	      	<p> For Example. dark <code>Menu</code> can be enabled via setting below key/value pairs on the <code>display</code> instance something as below:
 	      		<code>display.setData("org.eclipse.swt.internal.win32.menuBarForegroundColor", new Color(display, 0xD0, 0xD0, 0xD0));</code><br/>
 	      		<code>display.setData("org.eclipse.swt.internal.win32.menuBarBackgroundColor", new Color(display, 0x30, 0x30, 0x30));</code><br/>
 	      		<code>display.setData("org.eclipse.swt.internal.win32.menuBarBorderColor", new Color(display, 0x50, 0x50, 0x50));</code><br/>
 	      	</p>
       	</li>
-		<li>Custom color for Table header lines:
-			<p> For Example. table header line color for dark theme can be enabled via setting below key/value pair on the <code>display</code> instance something as below:
+		<li>Custom color for <code>Table</code> header lines:
+			<p> For Example. <code>Table</code> header line color for dark theme can be enabled via setting below key/value pair on the <code>display</code> instance something as below:
 	      		<code>display.setData("org.eclipse.swt.internal.win32.Table.headerLineColor", new Color(display, 0x50, 0x50, 0x50));</code>
 	      	</p>
       	</li>
@@ -126,12 +126,17 @@ ul {padding-left: 13px;}
 				<code>display.setData("org.eclipse.swt.internal.win32.Text.use_WS_BORDER", true);</code><br/>
 				<code>display.setData("org.eclipse.swt.internal.win32.Tree.use_WS_BORDER", true);</code><br/>
 			</p>
+			Here's how dark <code>Menu</code>, <code>Table</code> header and <code>Text</code> border looks like in Eclipse:<br/>
+			<img src="images/dark_menu_textBroder_table.png" alt="Support for dark menu, table header and text border on Windows"/>
+		</li>
+		<li>Custom color for disabled <code>Label</code> foreground color:
+			<p> For Example. disabled <code>Label</code> foreground color for dark theme can be enabled via setting below key/value pair on the <code>display</code> instance something as below:
+		  		<code>display.setData("org.eclipse.swt.internal.win32.Label.disabledForegroundColor", new Color(display, 0x80, 0x80, 0x80));</code>
+		  	</p>
+			Here's how dark disabled <code>Label</code> looks like in Eclipse:<br/>
+			<img src="images/dark_disabled_label.png" alt="Support for dark disabled label on Windows" />
 		</li>
 	  </ul>
-	  Here's how dark menu, table header and text border looks like in Eclipse:
-      <p>
-       <img src="images/dark_menu_textBroder_table.png" alt="Support for dark scrollbars on Windows" />
-      </p>
       <p>
         On <b>Windows 10</b> all the <a href="platform_isv.html#win-dark-tweaks">dark theme tweaks</a> including the <a href="platform_isv.html#win-dark-scrollbars">dark scrollbars</a> can be disabled using the 
         <code>org.eclipse.swt.internal.win32.disableCustomThemeTweaks</code> Java property.<br/>
@@ -144,9 +149,8 @@ ul {padding-left: 13px;}
   <tr id="win-dark-scrollbars"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=444560 -->
     <td class="title"><a href="#win-dark-scrollbars">Support for dark scrollbars on Windows</a></td>
     <td class="content">
-      Support for dark scrollbars on Windows, sharing a screen-grab of how the dark-themed scrollbars look on Windows 10:
-      <p> 
-       <img src="images/win_dark_Scrollbars.png" alt="Support for dark scrollbars on Windows" /></p>
+      Support for dark scrollbars on Windows, sharing a screen-grab of how the dark-themed scrollbars look on Windows 10:<br/>
+      <img src="images/win_dark_Scrollbars.png" alt="Support for dark scrollbars on Windows" />
       <p> Dark scroll bars can be enabled via setting below key/value pair on the <code>display</code> instance something as below:
       <code>display.setData("org.eclipse.swt.internal.win32.useDarkModeExplorerTheme", true);</code>
       </p>
