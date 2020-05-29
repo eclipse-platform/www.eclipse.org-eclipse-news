@@ -24,13 +24,9 @@ ul {padding-left: 13px;}
 <h2>Java development tools</h2>
 <ul>
 	<li><a href="#Java14">Java&trade; 14 Support</a></li>
-	<!-- <li><a href="#JUnit">JUnit</a></li> -->
 	<li><a href="#JavaEditor">Java Editor</a></li>
-	<!-- <li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li> -->
 	<li><a href="#JavaFormatter">Java Formatter</a></li>
-	<!-- <li><a href="#Debug">Debug</a></li> -->
     <li><a href="#Preferences">Preferences</a></li>
-	<!-- <li><a href="#JDTDev">JDT Developers</a></li> -->
 </ul>
 
 <!-- ****************** START OF N&N TABLE ****************** -->
@@ -71,7 +67,7 @@ ul {padding-left: 13px;}
   <tr id="jdk-compliance-14"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=551493 -->
     <td class="title">Set JDK Compliance to 14</td>
     <td class="content">
-      You can set the JDK compliance to 14 and enable the preview features in Preferences &gt; Java &gt; Compiler: 
+      You can set the JDK compliance to 14 and enable the preview features in <b>Preferences &gt; Java &gt; Compiler:</b>
       <p><img src="images/jdk-compliance-14.png" alt=""/></p>
     </td>
   </tr>
@@ -85,9 +81,12 @@ ul {padding-left: 13px;}
   <tr id="new-record-creation-wizard"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=553473 -->
     <td class="title">Record Creation Wizard</td>
     <td class="content">
-     Right Click on the Project > New > Record (or) 
-     Right Click on the Project > New > Other and search for Record (or) 
-     Right Click on the Project > New > Other > Java > Record.
+     You can create a new record using the Record creation wizard that can be opened by:
+     <ul>
+      <li>Right Click on the <b>Project > New > Record</b></li> 
+      <li>Right Click on the <b>Project > New > Other and search for Record</b></li> 
+      <li>Right Click on the <b>Project > New > Other > Java > Record</b></li>
+     </ul>
      The Record creation wizard comes up as shown below.
       <p><img src="images/fileAddJ14RecordCreation.png" alt=""/></p>
      <em>Note: In older workspaces the "Record" entry may not appear directly under the "New" menu in the Java perspective. To resolve this, either use a new workspace or launch eclipse with the option <code>-clearPersistedState</code> for your existing workspace.</em> 
@@ -96,22 +95,14 @@ ul {padding-left: 13px;}
   <tr id="enable-preview"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=560576 -->
     <td class="title">Enable preview features</td>
     <td class="content">
-      You can now quickly enable the preview features on an applicable Java project by right-clicking on it and selecting Configure &gt; Enable preview features: 
+      You can now quickly enable the preview features on an applicable Java project by right-clicking on it and selecting <b>Configure &gt; Enable preview features</b>: 
       <p><img src="images/enable-preview.png" alt=""/></p>
-      You can also change the default severity (warning) of the preview features compile problem in the opened project properties dialog:
-      <p><img src="images/preview-severity.png" alt=""/></p>        
+      You can also change the default severity (warning) of the preview features compile problem in the opened <b>Project properties</b> dialog:
+      <p><img src="images/preview-severity.png" alt=""/></p>
     </td>
   </tr>
   <!-- ******************* End of Java 14 Support ************************************* -->
   
-  <!-- ******************* JUnit ************************************* -->
-  <!-- <tr>
-    <td id="JUnit" class="section" colspan="2">
-    <h2>JUnit</h2>
-    </td>
-  </tr> -->
-  <!-- ******************* End of JUnit ************************************* -->
-
   <!-- ******************* Java Editor ************************************* -->
   <tr>
     <td id="JavaEditor" class="section" colspan="2">
@@ -122,10 +113,10 @@ ul {padding-left: 13px;}
   <tr id="default-non-blocking-completion"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=558893 -->
     <td class="title">Non-blocking Java code completion</td>
     <td class="content">
-      By default, code completion in the Java editor is now configured to be computed (when possible) in a separate non-UI thread
+      By default, code completions in the <b>Java editor</b> is now configured to be computed (when possible) in a separate non-UI thread
       in order to prevent UI freezes in case of long computations.
-      <p>Users can restore the legacy behavior in Preferences &gt; Java &gt; Editor &gt; Content Assist &gt; Advanced by unticking the
-      <em>enable non-blocking completion</em> checkbox; integrators
+      <p>Users can restore the legacy behavior in <b>Preferences &gt; Java &gt; Editor &gt; Content Assist &gt; Advanced</b> by unchecking the
+      <b>enable non-blocking completion</b> checkbox; integrators
       can change the value of the <code>org.eclipse.jdt.ui.content_assist_noUIThread_computation</code> to <code>false</code>.</p>
       <p><img src="images/jdtNonBlockingCompletionPref.png" alt=""/></p>
     </td>
@@ -180,7 +171,7 @@ ul {padding-left: 13px;}
     <td class="content">
       A new clean up has been added that replaces eager logical operators by lazy operators when it is possible.
       <p>
-        The clean up respectively replaces <code>|</code> and <code>&</code> by <code>||</code> and <code>&&</code> when the following operands can't make side effect.
+        The clean up respectively replaces <code>|</code> and <code>&amp;</code> by <code>||</code> and <code>&amp;&amp;</code> when the following operands can't make side effect.
         Any assignments, increments, decrements, object creations or method call may cause side effect.
         So, in such case, it will keep the eager operator.
         It also leaves the binary operations as it is.
@@ -205,23 +196,6 @@ ul {padding-left: 13px;}
   </tr>
   <!-- ******************* End of Java Editor ************************************* -->
 
-  <!-- ******************* Java Views and Dialogs ************************************* -->
-  <!-- <tr>
-    <td id="JavaViewsAndDialogs" class="section" colspan="2">
-    <h2>Java Views and Dialogs</h2>
-    </td>
-  </tr> -->
-  <!-- ******************* End of Java Views and Dialogs ************************************* -->
-
-  <!-- ******************* Java Compiler ************************************* -->
-  <!-- <tr>
-    <td id="JavaCompiler" class="section" colspan="2">
-    <h2>Java Compiler</h2>
-    </td>
-  </tr> -->
-
-  <!-- ******************* End of Java Compiler ************************************* -->
-
   <!-- ******************* Java Formatter ************************************* -->
   <tr>
     <td id="JavaFormatter" class="section" colspan="2">
@@ -231,22 +205,14 @@ ul {padding-left: 13px;}
   <tr id="formatter-records"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=559954 -->
     <td class="title">Record declarations support</td>
     <td class="content">
-      A lot of new settings has appeared in the formatter profile to control the formatting of <b>record declarations</b>.
+      A lot of new settings have appeared in the formatter profile to control the formatting of <b>record declarations</b>.
       They are very similar to existing settings related to other type declarations.
-      To see them all, you can use the filter field and type in the keyword <em>record</em>.
+      To see them all, you can use the filter field and type in the keyword <code>record</code>.
       <p><img src="images/formatter-records.png" alt=""/></p>
     </td>
   </tr>
   <!-- ******************* End of Java Formatter ************************************* -->
   
-  <!-- *********************** Debug ******************************** -->
-  <!-- <tr>
-    <td id="Debug" class="section" colspan="2">
-    <h2>Debug</h2>
-    </td>
-  </tr> -->
-  <!--************************ End of Debug ******************************** -->
-
   <!-- ****************** Preferences ************************************* -->
   <tr>
     <td id="Preferences" class="section" colspan="2">
@@ -257,22 +223,15 @@ ul {padding-left: 13px;}
   <tr id="substring-matching-default"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=561264 -->
     <td class="title">Substring Matching</td>
     <td class="content">
-      The Content Assist preference option <b>Show Substring Matches</b> has been removed and the feature is now always enabled.
+      The content assist preference option <b>Show Substring Matches</b> has been removed and the feature is now always enabled.
       <p>
-        Any application/user can still disable it using the VM property:
+        Any application or user can still disable it using the VM property:
         <b><span style="white-space: nowrap;">-Djdt.codeCompleteSubstringMatch=false</span></b>
       </p>
     </td>
   </tr>
   <!-- ****************** End of Preferences ************************************* -->
 
-  <!-- *********************** JDT Developers ******************************** -->
-  <!-- <tr>
-    <td id="JDTDev" class="section" colspan="2">
-    <h2>JDT Developers</h2>
-    </td>
-  </tr> -->
-  <!-- *********************** End of JDT Developers ******************************** -->
 </tbody>
 </table>
 <!-- ****************** END OF N&N TABLE ****************** -->

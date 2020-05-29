@@ -24,10 +24,9 @@ ul {padding-left: 13px;}
 <h2>Platform and Equinox</h2>
 <ul>
     <li><a href="#ViewsAndDialogs">Views, Dialogs and Toolbar</a></li>
-    <li><a href="#Debug">Debug</a></li>
-    <!-- <li><a href="#Text Editors">Text Editors</a></li>  -->
-    <li><a href="#Preferences">Preferences</a></li>
     <li><a href="#StylingThemes">Themes and Styling</a></li>
+    <li><a href="#Preferences">Preferences</a></li>
+    <li><a href="#Debug">Debug</a></li>
     <li><a href="#GeneralUpdates">General Updates</a></li>
 </ul>
 
@@ -45,48 +44,64 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   
-    <tr id="create-subfolder"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=550898 -->
-    <td class="title">Create missing folders from the new file wizard</td>
+   <tr id="create-subfolder"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=550898 -->
+    <td class="title">Create missing folders from the New File wizard</td>
     <td class="content">
-	You can now create missing folders directly via the new file wizard, without explicitly creating folders beforehand.
-	  <p> 
-       <img src="images/file-and-folder.png" alt=""/>
-      </p>
+     You can now create missing folders directly via the New File wizard, without explicitly creating folders beforehand.
+     <p> 
+      <img src="images/file-and-folder.png" alt=""/>
+     </p>
     </td>
-     
    </tr>
   
   <!-- ******************* End of Views, Dialogs and Toolbar ************************************* -->
 
-<!-- ****************** Debug ************************************* -->
+  <!-- ******************* Themes and Styling ************************************* -->
   <tr>
-    <td id="Debug" class="section" colspan="2">
-    <h2>Debug </h2>
+    <td id="StylingThemes" class="section" colspan="2">
+    <h2>Themes and Styling </h2>
     </td>
   </tr>
-
-  <tr id="import-selectall"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=456304 -->
-    <td class="title">Import of breakpoints now supports "Select All" and "Deselect All"</td>
+    <tr id="win-dark-theme-scrollbars"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=561588 -->
+    <td class="title"><a href="#win-dark-theme-scrollbars">Native dark scrollbars in Windows dark theme</a></td>
     <td class="content">
-      You can now use <b>Select All</b> or <b>Deselect All</b> buttons to select or deselect all the breakpoint markers
-      during import of <b>breakpoints</b>.
-      <p>
-        <img src="images/import-selectall.png" alt=""/>
+      The Eclipse dark theme now uses the native dark scrollbars and retired the software solution for the editor area.
+      <p> 
+       <img src="images/dark-theme-scrollbars.png" alt="" />
       </p>
     </td>
   </tr>
-
-  <!-- ****************** End of Debug ************************************* -->
-
-
-  <!-- ******************* Text Editors ************************************* -->
-  <!-- <tr>
-    <td id="TextEditors" class="section" colspan="2">
-    <h2>Text Editors </h2>
+  
+  <tr id="light-theme-win10"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=551462 -->
+    <td class="title"><a href="#light-theme-win10">Eclipse toolbar's styling on Windows aligned with Win 10</a></td>
+    <td class="content">
+      The default Eclipse light theme has been updated to align better with the Windows 10 default theme.
+      <p> 
+        Old:
+      </p>
+      <p>
+        <img src="images/old-light-theme.png" alt="" />
+      </p>
+      <p> 
+        New:
+      </p>
+      <p>
+        <img src="images/new-light-theme.png" alt="" />
+      </p>
     </td>
-  </tr> -->
-  <!-- ******************* End of Views, Dialogs and Toolbar ************************************* -->
-
+  </tr>
+  
+   <tr id="dark-toolbars"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=539661 -->
+    <td class="title"><a href="#dark-toolbars">Consistent toolbar colors in dark theme</a></td>
+    <td class="content">
+        The toolbar styling in the dark theme is now consistent.
+      <p>
+        <img src="images/dark-theme-toolbar.png" alt="" />
+      </p>
+    </td>
+  </tr>
+  <!-- ******************* End of Themes and Styling ************************************* -->
+  
   <!-- ****************** Preferences ************************************* -->
   <tr>
     <td id="Preferences" class="section" colspan="2">
@@ -116,11 +131,11 @@ ul {padding-left: 13px;}
   <tr id="round-tabs-preference"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=562221 -->
     <td class="title">Preference to use round tabs</td>
     <td class="content">
-	Square tabs are now used by default for the IDE's views.
-	<p> 
-   		<img src="images/dark_theme_square_tabs.png" alt=""/>
+    Square tabs are now used by default for the IDE's views.
+    <p> 
+        <img src="images/dark_theme_square_tabs.png" alt=""/>
     </p>
-	<p>In order to switch back to using round tabs, a preference has been added.</p>
+    <p>In order to switch back to using round tabs, a preference has been added.</p>
     <p> 
         <img src="images/round_tabs_preference_option.png" alt=""/>
     </p>
@@ -133,69 +148,33 @@ ul {padding-left: 13px;}
   <tr id="inline-rename-mode-preference"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=560536 -->
     <td class="title">Preference to inline rename resource</td>
     <td class="content">
-      The <b>preference</b> to rename resource inline or by dialog was added in 4.15 as a radio button has now been changed to a check box. 
+      The <a href="https://www.eclipse.org/eclipse/news/4.15/platform.php#resource-rename-mode-preference">preference</a> to rename resource inline or by dialog was added in 4.15 as a radio button and has now been changed to a check box. 
       <p> 
         <img src="images/inlineRenameResource.png" alt=""/>
       </p>
     </td>
   </tr>
   <!-- ****************** End of Preferences ************************************* -->
-
-  <!-- ******************* Themes and Styling ************************************* -->
-  <tr>
-    <td id="StylingThemes" class="section" colspan="2">
-    <h2>Themes and Styling </h2>
-    </td>
-  </tr>
-    <tr id="win-dark-theme-scrollbars"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=561588 -->
-    <td class="title"><a href="#win-dark-theme-scrollbars">Enabled the native dark scrollbars for the Windows dark theme</a></td>
-    <td class="content">
-      The Eclipse Dark theme enabled the SWT support for dark scrollbars and retired the software solution for the editor area.
-      <p> 
-       <img src="images/dark-theme-scrollbars.png" alt="" /></p>
-    </td>
-  </tr>
-  <tr id="square-ctabs"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=538740 -->
-    <td class="title"><a href="#square-ctabs">Added support for square CTabs</a></td>
-    <td class="content">
-        Square tabs can be enabled in CSS by specifying an swt-corner-radius of 0.
-      <p>
-        <img src="images/dark-theme-square-tabs.png" alt="" />
-      </p>
-      <p>
-        <img src="images/light-theme-square-tabs.png" alt="" />
-      </p>
-    </td>
-  </tr>
-  <tr id="light-theme-win10"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=551462 -->
-    <td class="title"><a href="#light-theme-win10">Align Eclipse Windows toolbar default styling with Win 10</a></td>
-    <td class="content">
-        The default light theme has been updated to align better with the Win10 default theme.
-      <p> 
-        Old:
-      </p>
-      <p>
-        <img src="images/old-light-theme.png" alt="" />
-      </p>
-      <p> 
-        New:
-      </p>
-      <p>
-        <img src="images/new-light-theme.png" alt="" />
-      </p>
-    </td>
-  </tr>
   
-   <tr id="dark-toolbars"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=539661 -->
-    <td class="title"><a href="#dark-toolbars">Dark theme toolbar bars colors are consistent</a></td>
+  <!-- ****************** Debug ************************************* -->
+  <tr>
+    <td id="Debug" class="section" colspan="2">
+    <h2>Debug </h2>
+    </td>
+  </tr>
+
+  <tr id="import-selectall"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=456304 -->
+    <td class="title">'Select All' and 'Deselect All' for Import breakpoints wizard</td>
     <td class="content">
-        The toolbar styling in the dark theme is now consistent.
+      You can now use <b>Select All</b> or <b>Deselect All</b> buttons to select or deselect all the breakpoint markers
+      during import of breakpoints.
       <p>
-        <img src="images/dark-theme-toolbar.png" alt="" />
+        <img src="images/import-selectall.png" alt=""/>
       </p>
     </td>
   </tr>
-  <!-- ******************* End of Themes and Styling ************************************* -->
+
+  <!-- ****************** End of Debug ************************************* -->
 
   <!-- ******************* General Updates ************************************* -->
   <tr>
@@ -212,7 +191,7 @@ ul {padding-left: 13px;}
        <img src="images/show_keybindings.png" alt="Key binding of triggered command shown on screen" style="width: 50%" />
       </p>
       <p>It is now possible to enable this feature separately for keyboard interaction and mouse clicks. So you can enable it for mouse clicks only, for keyboard interaction only or for both. 
-      Enabling this only for mouse clicks is very helpful for users who want to learn existing key bindings.
+       Enabling this only for mouse clicks is very helpful for users who want to learn existing key bindings.
       </p>
       <p>You can enable this on the <b>Preferences</b> dialog via the <em>Show key binding when command is invoked</em> group on the <b>General &gt; Keys</b> preference page.
       To change this setting quickly the command 'Toggle Show Key Bindings' can be used (e.g. via the find actions dialog).
