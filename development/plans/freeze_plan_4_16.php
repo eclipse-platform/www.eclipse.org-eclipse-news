@@ -45,7 +45,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>Tuesday, May 26: working towards RC1</b></p>
+			<p><b>Saturday, May 30: working towards RC2</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
@@ -53,7 +53,7 @@ ob_start();
 	          <tr>
 	            <td>May 2020</td>
 	          </tr>
-	          <tr class="current">
+	          <tr>
 	            <td></td>
 	            <td></td>
 	            <td></td>
@@ -80,7 +80,7 @@ ob_start();
 	            <td>Release Candidate 1 build</td>
 	            <td></td>
 	          </tr>
-	          <tr>
+	          <tr class="current">
 	            <td></td>
 	            <td class="date">29</td>
 	            <td class="date">Fri</td>
