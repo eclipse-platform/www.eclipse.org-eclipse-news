@@ -91,6 +91,23 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   
+  <tr id="round-tabs-preference"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=562221 -->
+    <td class="title">Sqaure tabs for views</td>
+    <td class="content">
+    Square tabs are now used by default for the IDE's views.
+    <p> 
+        <img src="images/dark_theme_square_tabs.png" alt=""/>
+    </p>
+    <p>In order to switch back to using round tabs, a preference has been added.</p>
+    <p> 
+        <img src="images/round_tabs_preference_option.png" alt=""/>
+    </p>
+    <p> 
+      Please note that the classic themes have been configured to ignore this setting so that they remain unchanged.
+    </p>
+    </td>
+  </tr>
+  
    <tr id="dark-toolbars"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=539661 -->
     <td class="title"><a href="#dark-toolbars">Consistent toolbar colors in dark theme</a></td>
     <td class="content">
@@ -98,25 +115,6 @@ ul {padding-left: 13px;}
       <p>
         <img src="images/dark-theme-toolbar.png" alt="" />
       </p>
-    </td>
-  </tr>
-
-   <tr id="active-tab-highlight-css"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=497586 -->
-    <td class="title"><a href="#active-tab-highlight-css">Active tab highlight CSS option</a></td>
-    <td class="content">
-        The active tab can now be highlighted by using the <code>swt-selected-tab-highlight</code> CSS property. 
-		By default, the highlight is placed at the top of the tab, but it can be changed by using the boolean CSS property <code>swt-selected-highlight-top</code>.
-		
-		<p>
-		Here's how it looks when enabled with the dark theme.
-        <img src="images/active-tab-highlight-css-pref.png" alt="" />
-		</p>
-
-		Example usage in CSS: </br>
-		<code># Set the selected tab highlight color </code><br>
-		<code>swt-selected-tab-highlight: white;</code></br>
-		<code># Set whether the highlight should be on top or bottom of the tab (default is true) <code></br>
-		<code>swt-selected-highlight-top: false;</code> </br>
     </td>
   </tr>
   <!-- ******************* End of Themes and Styling ************************************* -->
@@ -147,23 +145,6 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
-  <tr id="round-tabs-preference"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=562221 -->
-    <td class="title">Preference to use round tabs</td>
-    <td class="content">
-    Square tabs are now used by default for the IDE's views.
-    <p> 
-        <img src="images/dark_theme_square_tabs.png" alt=""/>
-    </p>
-    <p>In order to switch back to using round tabs, a preference has been added.</p>
-    <p> 
-        <img src="images/round_tabs_preference_option.png" alt=""/>
-    </p>
-    <p> 
-      Please note that the classic themes have been configured to ignore this setting so that they remain unchanged.
-    </p>
-    </td>
-  </tr>
-  
   <tr id="inline-rename-mode-preference"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=560536 -->
     <td class="title">Preference to inline rename resource</td>
     <td class="content">

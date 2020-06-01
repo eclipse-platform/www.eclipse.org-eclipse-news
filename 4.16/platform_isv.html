@@ -84,6 +84,27 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   
+  <tr id="active-tab-highlight-css"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=497586 -->
+   <td class="title"><a href="#active-tab-highlight-css">Active tab highlight CSS option</a></td>
+   <td class="content">
+    The active tab can now be highlighted by using the <code>swt-selected-tab-highlight</code> CSS property. 
+    By default, the highlight is placed at the top of the tab, but it can be changed by using the boolean CSS property <code>swt-selected-highlight-top</code>.
+    
+    <p>
+     Here's how it looks when enabled with the dark theme:
+     <img src="images/active-tab-highlight-css-pref.png" alt="" />
+    </p>
+    
+    Example usage in CSS:
+    <pre>
+     <code># Set the selected tab highlight color </code>
+     <code>swt-selected-tab-highlight: white;</code>
+     <code># Set whether the highlight should be on top or bottom of the tab (default is true)</code>
+     <code>swt-selected-highlight-top: false;</code>
+    </pre>
+   </td>
+  </tr>
+  
   <tr id="square-ctabs"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=538740 -->
     <td class="title"><a href="#square-ctabs">Added support for square CTabs</a></td>
     <td class="content">
