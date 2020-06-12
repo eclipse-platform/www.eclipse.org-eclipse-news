@@ -43,6 +43,17 @@ ul {padding-left: 13px;}
     <h2>Views, Dialogs and Toolbar </h2>
     </td>
   </tr>
+  
+   <tr id="remove-gifs"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=550832 -->
+    <td class="title">Remove gifs from views</td>
+    <td class="content">
+     Several years ago the iconc of the platform views were migrated to png files.
+     As already opened views store their reference to the image the gif files have been left in the code.
+     These have been removed now. If you use the same workspace for multiple years, and view icons are missing due to that removal, you have to close and reopen the view.
+    </td>
+   </tr>
+   
+   
   <!-- ******************* End of Views, Dialogs and Toolbar ************************************* -->
 
   <!-- ******************* Text Editors ************************************* -->
