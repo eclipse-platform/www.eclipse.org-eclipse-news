@@ -52,7 +52,13 @@ ul {padding-left: 13px;}
      These have been removed now. If you use the same workspace for multiple years, and view icons are missing due to that removal, you have to close and reopen the view.
     </td>
    </tr>
-
+   <tr id="confirm-on-exit"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=564618 -->
+    <td class="title">Default changed for confirm on exit for last window</td>
+    <td class="content">
+	 By default, Eclipse now closes if you select the close icon on the last window  without additional confirmation dialog.
+	 If you want to get a confirmation dialog, you can enable that via Window-> Preferences -> General -> Startup and Shutdown -> Confirm exit when closing last window
+    </td>
+   </tr>
 
   <!-- ******************* End of Views, Dialogs and Toolbar ************************************* -->
 
