@@ -44,10 +44,26 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+   <tr id="adjustable-view-fonts"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=540299 -->
+    <td class="title">Adjustable view fonts</td>
+    <td class="content">
+     The font used for tree & table views can now be customized with a font preference.
+	 This preference, called "Tree and Table font for views" can be found in Window-> Preferences -> General -> Appearance -> Colors and Fonts, under the "View and Editor Folders" category.
+	 <p>
+        <img src="images/adjustable-view-font-preference.png" alt="" />
+     </p>
+	
+	The Project Explorer is an example of a view that gets affected by this font preference.
+	<p>
+		<img src="images/adjustable-view-font.png" alt=""/> 
+	</p>
+    </td>
+   </tr>
+
    <tr id="remove-gifs"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=550832 -->
     <td class="title">Remove gifs from views</td>
     <td class="content">
-     Several years ago the iconc of the platform views were migrated to png files.
+     Several years ago the icons of the platform views were migrated to png files.
      As already opened views store their reference to the image the gif files have been left in the code.
      These have been removed now. If you use the same workspace for multiple years, and view icons are missing due to that removal, you have to close and reopen the view.
     </td>
