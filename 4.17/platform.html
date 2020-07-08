@@ -27,6 +27,7 @@ ul {padding-left: 13px;}
     <li><a href="#TextEditors">Text Editors</a></li>
     <li><a href="#Preferences">Preferences</a></li>
     <li><a href="#StylingThemes">Themes and Styling</a></li>
+    <li><a href="#Debug">Debug</a></li>
     <li><a href="#GeneralUpdates">General Updates</a></li>
 </ul>
 
@@ -140,6 +141,27 @@ ul {padding-left: 13px;}
   </tr>
 
   <!-- ******************* End of Themes and Styling ************************************* -->
+  
+  <!-- ****************** Debug ************************************* -->
+  <tr>
+    <td id="Debug" class="section" colspan="2">
+    <h2>Debug </h2>
+    </td>
+  </tr>
+
+  <tr id="console-null-byte"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=306131 -->
+    <td class="title">Filter null bytes from console output</td>
+    <td class="content">
+      The interpretation of ASCII control characters in the <b>Console View</b> was extended to recognize the characters: <abbr title="ASCII code 0x00"><code>\0</code></abbr> - null byte.
+      If interpretation is enabled any null byte will be stripped and not shown in console view. This is most relevant for the Linux platform where a null byte in console view 
+      cause anything after on the same line to be not rendered.
+      <p>
+        This feature is disabled by default. You can enable it on the <b>Run/Debug &gt; Console</b> preference page.
+      </p>
+    </td>
+  </tr>
+
+  <!-- ****************** End of Debug ************************************* -->
 
   <!-- ******************* General Updates ************************************* -->
   <tr>
