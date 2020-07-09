@@ -88,7 +88,7 @@ ul {padding-left: 13px;}
    <tr id="print-header-date"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=533429 -->
     <td class="title">Printing editor content adds date in header</td>
     <td class="content">
-	 Printing editor content now includes the current date additional to the filename in the header of each printed page.
+	 Printing editor content now includes the current date in addition to the filename in the header of each printed page.
      <p>
        <img src="images/print-header-date.png" alt="" />
      </p>
@@ -153,8 +153,8 @@ ul {padding-left: 13px;}
     <td class="title">Filter null bytes from console output</td>
     <td class="content">
       The interpretation of ASCII control characters in the <b>Console View</b> was extended to recognize the characters: <abbr title="ASCII code 0x00"><code>\0</code></abbr> - null byte.
-      If interpretation is enabled any null byte will be stripped and not shown in console view. This is most relevant for the Linux platform where a null byte in console view 
-      cause anything after on the same line to be not rendered.
+      If interpretation is enabled, any null byte will be stripped and not shown in console view. This is most relevant for the Linux platform where a null byte in console view 
+      causes anything after it on the same line to be not rendered.
       <p>
         This feature is disabled by default. You can enable it on the <b>Run/Debug &gt; Console</b> preference page.
       </p>
