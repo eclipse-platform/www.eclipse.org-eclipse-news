@@ -69,6 +69,13 @@ descriptor = ImageDescriptor.createFromURL(url);
   <tr>
     <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
   </tr>
+  <tr id="swt-device-free-constructors"> <!-- https://bugs.eclipse.org/563560 -->
+    <td class="title">Colors have new Device free constructors</td>
+    <td class="content">
+      Starting from Eclipse 4.16, SWT no longer required Colors to be disposed, with Eclipse 4.17
+      new constructors are available which don't require a Device when creating Colors.
+    </td>
+  </tr>
   <!-- *********************** End of SWT *********************** -->
 
 </tbody>
