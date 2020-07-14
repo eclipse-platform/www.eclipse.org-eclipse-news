@@ -205,13 +205,10 @@ Eclipse 4.17 Endgame Plan.
 			</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-				OpenJDK 8u252 (LTS)<br/>
 				OpenJDK 11.0.7 (LTS)<br/>
 				OpenJDK 14.0.1<br/>
-				Oracle Java 8u251<br/>
 				Oracle Java 11.0.7 (LTS)<br/>
 				Oracle Java 14.0.1<br/>
-				IBM Java 8 8.0.6
 			</td>
 			<td rowspan="1">Win32</td>
 		</tr>
@@ -224,20 +221,17 @@ Eclipse 4.17 Endgame Plan.
 			</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-				OpenJDK 8u252 (LTS)<br/>
 				OpenJDK 11.0.7 (LTS)<br/>
 				OpenJDK 14.0.1<br/>
-				Oracle Java 8u251<br/>
 				Oracle Java 11.0.7 (LTS)<br/>
 				Oracle Java 14.0.1<br/>
-				IBM Java 8 8.0.6
 			</td>
 			<td rowspan="2">GTK 3</td>
 		</tr>
 		<tr class="c1">
 			<td rowspan="1">Power 64-bit LE</td>
 			<td rowspan="1">
-				IBM Java 8 8.0.6
+				OpenJDK 11.0.7 (LTS)
 			</td>
 		</tr>
 		<!-- ************ SLES ************** -->
@@ -248,17 +242,15 @@ Eclipse 4.17 Endgame Plan.
 			</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-				Oracle Java 8u251<br/>
-				Oracle Java 11.0.7 (LTS)<br/>
-				Oracle Java 14.0.1<br/>
-				IBM Java 8 8.0.6
+				OpenJDK 11.0.7 (LTS)<br/>
+				OpenJDK 14.0.1<br/>
 			</td>
 			<td rowspan="2">GTK 3</td>
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">Power 64-bit LE</td>
 			<td rowspan="1">
-				IBM Java 8 8.0.6
+				OpenJDK 11.0.7 (LTS)
 			</td>
 		</tr>
 
@@ -268,10 +260,8 @@ Eclipse 4.17 Endgame Plan.
 		    <td rowspan="1">20.04</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-				Oracle Java 8u251<br/>
-				Oracle Java 11.0.7 (LTS)<br/>
-				Oracle Java 14.0.1<br/>
-				IBM Java 8 8.0.6
+				OpenJDK 11.0.7 (LTS)<br/>
+				OpenJDK 14.0.1<br/>
 			</td>
 			<td rowspan="1">GTK 3</td>
 		</tr>
@@ -285,10 +275,8 @@ Eclipse 4.17 Endgame Plan.
 			</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-				OpenJDK 8u252 (LTS)<br/>
 				OpenJDK 11.0.7 (LTS)<br/>
 				OpenJDK 14.0.1<br/>
-				Oracle Java 8u251<br/>
 				Oracle Java 11.0.7 (LTS)<br/>
 				Oracle Java 14.0.1
 			</td>
