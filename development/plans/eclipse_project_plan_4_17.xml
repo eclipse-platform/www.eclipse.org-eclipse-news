@@ -324,7 +324,7 @@ compared to bugs which are reproducible on the target environments listed above.
   <a href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_17_porting_guide.html" target="_top">
     <em>Eclipse 4.17 Plug-in Migration Guide</em>
   </a>. Programs that use affected APIs and extension points will need to be ported
-  to Eclipse SDK 4.16 APIs. Downward contract compatibility
+  to Eclipse SDK 4.17 APIs. Downward contract compatibility
   is not supported. There is no guarantee that compliance with Eclipse SDK 4.17
   APIs would ensure compliance with Eclipse SDK 4.16 APIs. Refer to
   <a href="http://wiki.eclipse.org/index.php/Evolving_Java-based_APIs">
