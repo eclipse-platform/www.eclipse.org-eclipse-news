@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 04:00 EDT July 14, 2020.
+Last revised 9:37 EDT July 14, 2020.
 
 <!--
 <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
@@ -29,7 +29,7 @@ marks interesting changes since the previous draft of
   mailing list.</i>
 </p>
 <p>This document lays out the feature and API set for the next feature release
-  of the Eclipse SDK after 4.17, designated release 4.17 and code-named 2020-09.
+  of the Eclipse SDK after 4.16, designated release 4.17 and code-named 2020-09.
 </p>
 
 <p>Plans do not materialize out of nowhere, nor are they entirely static. To
@@ -146,10 +146,10 @@ Eclipse 4.17 Endgame Plan.
   environments, requiring their source code to only reference facilities available
   in particular class libraries (e.g. Java 5, Java 6, etc).</p>
 <p>
-  In general, the 4.17 release of the Eclipse Project is developed on Java SE 8 VMs.
+  In general, the 4.17 release of the Eclipse Project is developed on Java SE 11 VMs.
   As such, the Eclipse SDK as a whole
   is targeted at all modern, desktop Java VMs. Most functionality is available for
-  Java SE 8 level development everywhere, and extended development capabilities are made
+  Java SE 11 level development everywhere, and extended development capabilities are made
   available on the VMs that support them.</p>
 <p>There are many different implementations of the Java Platform running atop
   a variety of operating systems. We focus our testing on a handful of
@@ -316,42 +316,42 @@ compared to bugs which are reproducible on the target environments listed above.
 <p:compatibility_with_previous_releases>
 <div>
 
-<h3>Compatibility of Release 4.17 with 4.17</h3>
-<p>Eclipse 4.17 will be compatible with Eclipse 4.17 (and all earlier 3.x versions).</p>
+<h3>Compatibility of Release 4.17 with 4.16</h3>
+<p>Eclipse 4.17 will be compatible with Eclipse 4.16 (and all earlier 3.x versions).</p>
 
 <p><strong>API Contract Compatibility:</strong> Eclipse SDK 4.17 will be upwards
-  contract-compatible with Eclipse SDK 4.17 except in those areas noted in the
+  contract-compatible with Eclipse SDK 4.16 except in those areas noted in the
   <a href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_17_porting_guide.html" target="_top">
     <em>Eclipse 4.17 Plug-in Migration Guide</em>
   </a>. Programs that use affected APIs and extension points will need to be ported
-  to Eclipse SDK 4.17 APIs. Downward contract compatibility
+  to Eclipse SDK 4.16 APIs. Downward contract compatibility
   is not supported. There is no guarantee that compliance with Eclipse SDK 4.17
-  APIs would ensure compliance with Eclipse SDK 4.17 APIs. Refer to
+  APIs would ensure compliance with Eclipse SDK 4.16 APIs. Refer to
   <a href="http://wiki.eclipse.org/index.php/Evolving_Java-based_APIs">
     <em>Evolving Java-based APIs</em>
   </a> for a discussion of the kinds of API changes that maintain contract compatibility.</p>
   
 <p><strong>Binary (plug-in) Compatibility:</strong> Eclipse SDK 4.17 will be upwards
-  binary-compatible with Eclipse SDK 4.17 except in those areas noted in the
+  binary-compatible with Eclipse SDK 4.16 except in those areas noted in the
   <a href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_17_porting_guide.html" target="_top">
     <em>Eclipse 4.17 Plug-in Migration Guide</em>
   </a>. Downward plug-in compatibility is not supported. Plug-ins for Eclipse SDK
-  4.17 will not be usable in Eclipse SDK 4.17. Refer to
+  4.17 will not be usable in Eclipse SDK 4.16. Refer to
   <a href="http://wiki.eclipse.org/index.php/Evolving_Java-based_APIs">
     <em>Evolving Java-based APIs</em>
   </a> for a discussion of the kinds of API changes that maintain binary compatibility.</p>
   
 <p><strong>Source Compatibility:</strong> Eclipse SDK 4.17 will be upwards source-compatible
-  with Eclipse SDK 4.17 except in the areas noted in the
+  with Eclipse SDK 4.16 except in the areas noted in the
   <a href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_17_porting_guide.html" target="_top">
     <em>Eclipse 4.17 Plug-in Migration Guide</em>
   </a>. This means that source files written
-  to use Eclipse SDK 4.17 APIs might successfully compile and run against Eclipse
+  to use Eclipse SDK 4.16 APIs might successfully compile and run against Eclipse
   SDK 4.17 APIs, although this is not guaranteed. Downward source compatibility
   is not supported. If source files use new Eclipse SDK APIs, they will not be
   usable with an earlier version of the Eclipse SDK. </p>
   
-<p><strong>Workspace Compatibility:</strong> Eclipse SDK 4.17 will be upwards
+<p><strong>Workspace Compatibility:</strong> Eclipse SDK 4.16 will be upwards
   workspace-compatible with earlier 3.x and 4.x versions of the Eclipse SDK unless noted.
   This means that workspaces and projects created with Eclipse SDK 4.16, 4.15, 4.14, .. 3.0 can be successfully
   opened by Eclipse SDK 4.17 and upgraded to a 4.17 workspace. This includes both
