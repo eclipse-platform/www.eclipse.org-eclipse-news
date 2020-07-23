@@ -82,6 +82,26 @@ ul {padding-left: 13px;}
      </p>
     </td>
   </tr>
+
+  <tr id="objects-equals"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=562077 -->
+    <td class="title">Objects.equals()</td>
+    <td class="content">
+      A new clean up has been added that makes use of <code>Objects.equals()</code> to implement the <code>equals(Object)</code> method.
+      <p>
+        It reduces the code and improves the reading.
+        The cleanup is only available for Java 7 or higher.
+        Although this kind of comparison is almost exclusively seen in the <code>equals(Object)</code> method, it can also reduce code in other methods.
+      </p>
+      <p>
+        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Use Objects.equals() in the equals method implementation</b> on the <b>Unnecessary Code</b> tab.
+      </p>
+      <p><img src="images/objects-equals-preferences.png" alt="Preferences" width="800 px"/></p>
+      For the given code:
+      <p><img src="images/objects-equals-before.png" alt="Before"/></p>
+      You get this after the clean up:
+      <p><img src="images/objects-equals-after.png" alt="After"/></p>
+    </td>
+  </tr>
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
