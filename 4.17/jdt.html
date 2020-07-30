@@ -173,6 +173,17 @@ ul {padding-left: 13px;}
       <p><img src="images/anon-instance-inspection.png" alt=""/></p>
     </td>
   </tr>
+  <tr id="helpful nullpointer exceptions"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=551483 -->
+    <td class="title">JEP 358: Helpful NullPointerExceptions</td>
+    <td class="content">
+      The <b>JDT debugger</b> has now a checkbox option to activate the command line support for <a href="https://openjdk.java.net/jeps/358">JEP 358</a>.
+      This is disabled below Java 14 and enabled by default for Java programs launched with Java 14 and above.
+      <p><b>-XX:+ShowCodeDetailsInExceptionMessages</b></p>
+      <p><img src="images/helpfulNullPointerExceptions.png" alt=""/></p>
+      JVM is now capable of analyzing which variable was null at the point of NullPointerException and describe the variable with a null-detail message in the NPE.
+      
+    </td>
+  </tr>
 
   <!--************************ End of Debug ******************************** -->
 
