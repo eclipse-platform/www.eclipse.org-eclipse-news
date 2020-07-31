@@ -69,6 +69,14 @@ descriptor = ImageDescriptor.createFromURL(url);
   <tr>
     <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
   </tr>
+  <tr id="swt-chromium"> <!-- https://bugs.eclipse.org/549585 -->
+    <td class="title">Support for Chromium browser renderer</td>
+    <td class="content">
+      SWT now supports Chromium as a browser renderer on all platforms using a new <code>SWT.CHROMIUM</code> constant. Please see this 
+      <a href="https://www.eclipse.org/swt/faq.php#howusechromium">FAQ</a> entry for details on using the Chromium style browser.
+    </td>
+  </tr>
+
   <tr id="swt-device-free-constructors"> <!-- https://bugs.eclipse.org/563560 -->
     <td class="title">Colors have new Device free constructors</td>
     <td class="content">
