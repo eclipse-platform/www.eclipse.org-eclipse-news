@@ -102,6 +102,27 @@ ul {padding-left: 13px;}
       <p><img src="images/objects-equals-after.png" alt="After"/></p>
     </td>
   </tr>
+
+  <tr id="regex"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=561769 -->
+    <td class="title">Precompiles the regular expressions</td>
+    <td class="content">
+      A new clean up has been added that optimizes the regular expression execution by precompiling it.
+      <p>
+        It replaces some usages of <code>java.lang.String</code> by usages of <code>java.util.regex.Pattern</code>.
+        The cleanup is done only if it is sure that the string is used as a regular expression.
+        If there is any doubt, nothing is done.
+        The regular expression must be explicitly used several times to be sure the cleanup is useful.
+      </p>
+      <p>
+        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Precompiles reused regular expressions</b> on the <b>Code Style</b> tab.
+      </p>
+      <p><img src="images/regex-preferences.png" alt="Preferences" width="800 px"/></p>
+      For the given code:
+      <p><img src="images/regex-before.png" alt="Before"/></p>
+      You get this after the clean up:
+      <p><img src="images/regex-after.png" alt="After"/></p>
+    </td>
+  </tr>
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
