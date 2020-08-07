@@ -63,6 +63,18 @@ descriptor = ImageDescriptor.createFromURL(url);
 </code></pre>
 	</td>
   </tr>
+
+	<tr id="system-color-in-workbench-css"><!-- https://bugs.eclipse.org/565775 -->
+		<td class="title"><a href="#system-color-in-workbench-css">Use System colors in workbench CSS theme files</a></td>
+		<td class="content">
+			In workbench theme CSS files, you can now reference the system colors defined by SWT. To do so, use the
+			SWT field name replacing uderscores <code>_</code> by dashes <code>-</code> and prefixing with hash <code>#</code>.
+			<p>
+			For example, to reference the system color <code>SWT.COLOR_LIST_SELECTION_BACKGROUND</code>, you can use
+			<code>#COLOR-LIST-SELECTION-BACKGROUND</code> in your .css files.
+			</p>
+		</td>
+	</tr>
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
