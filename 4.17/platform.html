@@ -96,30 +96,36 @@ ul {padding-left: 13px;}
   <tr id="multiple-last-edit-locations"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=72773 -->
     <td class="title">Multiple Last Edit Locations</td>
     <td class="content">
-      <b>Last Edit Location</b> navigation is now expanded to remember multiple edit locations.  
+      <b>Previous Edit Location</b> navigation (formerly named Last Edit Location) is now expanded to remember multiple edit locations.  
     <p>
       The last 15 edit locations are now remembered.  For convenience, similar edit locations in close proximity to each other are also merged so that each of the 15 remembered locations remains distinct.
     </p>
       <p>
-        <img src="images/multiple-last-edit-locations.png" alt="new menu item: Next Edit History" />
+        <img src="images/multiple-last-edit-locations.png" alt="new menu item: Previous Edit Location" />
       </p>
    
       <h4>How to use</h4>
-
+      <p>Two new keyboard shortcuts are introduced:</p>
       <ul>
         <li>
-      <b>Ctrl+Q</b> keyboard shortcut continues to work same as before, navigating to the most recent edit location, and normal GUI menu navigation likewise can be used same as before.  
+      <b>Ctrl+Alt+LEFT_ARROW</b> (or on Mac <b>Ctrl+Opt+LEFT_ARROW</b>) navigates to the most recent edit location, just as <b>Ctrl+Q</b> always has in prior releases.
       <p>
-        However, now continuing to hold <b>Ctrl</b> and then pressing <b>Q</b> again begins a traversal through the history of prior edit locations, with each additional press of <b>Q</b> moving a step further back in history.  Once traversal stops, future <b>Ctrl+Q</b> actions are now temporarily anchored to this older historical location for easy exploration of that code region.
+        However, now continuing to hold <b>Ctrl+Alt</b> and then pressing <b>LEFT_ARROW</b> again begins a traversal through the history of prior edit locations, with each additional press of <b>LEFT_ARROW</b> moving a step further back in history.  
+        Once traversal stops, future <b>Ctrl+Alt+LEFT_ARROW</b> actions are now temporarily anchored to this older historical location for easy exploration of that code region.
+      </p>
+      <p>
+        The classic <b>Ctrl+Q</b> mapping has been likewise enhanced with this new functionality, so that <b>Ctrl+Q</b> and <b>Ctrl+Alt+LEFT_ARROW</b> are synonymous.
       </p>
     </li>
     <li>
-      <b>Ctrl+Alt+Q</b> (or on Mac <b>Ctrl+Opt+Q</b>) conversely moves the anchor <i>forward</i> through edit history, so after traversing backward with <b>Ctrl+Q</b>, you can go forward again by repeatedly pressing <b>Ctrl+Alt+Q</b> (or on Mac <b>Ctrl+Opt+Q</b>).  A new menu item has likewise been added for this forward navigation as well.
+      <b>Ctrl+Alt+RIGHT_ARROW</b> (or on Mac <b>Ctrl+Opt+RIGHT_ARROW</b>) conversely moves the anchor <i>forward</i> through edit history, so after traversing backward with <b>Ctrl+Alt+LEFT_ARROW</b>, you can go forward again by holding <b>Ctrl+Alt</b> and repeatedly pressing <b>RIGHT_ARROW</b>.  
+      A new menu item has likewise been added for this forward navigation as well.
     </li>
     </ul>
 
       <p>
-        New edit locations are always inserted at the end, so original historical ordering is always maintained.  New edits also reset the last location "anchor" back to the most recent edit, so that pressing <b>Ctrl+Q</b> once again brings you to the most recent edit rather than a historical one.
+        New edit locations are always inserted at the end, so original historical ordering is always maintained.  
+        New edits also reset the last location "anchor" back to the most recent edit, so that pressing <b>Ctrl+Alt+LEFT_ARROW</b> once again brings you to the most recent edit rather than a historical one.
       </p>
     </td>
   </tr>
