@@ -24,9 +24,9 @@ ul {padding-left: 13px;}
 <h2>Plug-in Development Environment</h2>
 <ul>
 	<li><a href="#dialogs-wizards-views">Dialogs, Wizards and Views</a></li>
-	<li><a href="#editors">Editors</a></li>
-	<li><a href="#APITools">API Tools</a></li>
-	<li><a href="#pde-compiler">PDE Compiler</a></li>
+	<!-- <li><a href="#editors">Editors</a></li>-->
+	<!-- <li><a href="#APITools">API Tools</a></li>-->
+	<!-- <li><a href="#pde-compiler">PDE Compiler</a></li>-->
 </ul>
 
 <!-- ****************** START OF N&N TABLE****************** -->
@@ -39,6 +39,14 @@ ul {padding-left: 13px;}
   <!-- ******************** Dialogs, Wizard and Views ********************** -->
   <tr>
     <td id="dialogs-wizards-views" class="section" colspan="2"><h2>Dialogs, Wizards and Views</h2></td>
+  </tr>
+    <tr id="perfect_plugin_match_dialog"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=561861 -->
+    <td class="title">Perfect matches appear first in  plugin selection dialog</td>
+    <td class="content">
+    Within plugin selection dialogs,  perfect plug-in name match appears as the first result ( in preference to substring plug-in name matches), 
+    ensuring that users no longer have to scroll the alphabetically sorted plugin list to find their desired result. 
+      <p><img src="images/pde-exact-match-preferred-in-plugin-dialog.png" alt="Perfect matches appear first in  plugin selection dialog"/></p>
+    </td>
   </tr>
   <!-- ******************** End ofDialogs, Wizard and Views ********************** -->
   
