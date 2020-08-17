@@ -184,6 +184,20 @@ ul {padding-left: 13px;}
       
     </td>
   </tr>
+  <tr id="variables-actual-type"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=547096 -->
+    <td class="title">Actual type in Variables view</td>
+    <td class="content">
+	  The option <b>Show Type Names</b> in the <b>Variables</b> and <b>Expressions</b> views now displays the value's actual type instead of its declared type.
+	  This simplifies debugging especially when variable details (<code>toString()</code>) is shown <b>As the label for all variables</b>.
+	  <p>To enable <b>Show Type Names</b> in the <b>Variables</b> view, column mode must be disabled (<b>View Menu &gt; Layout &gt; Show Columns</b>).</p>
+	  <p>Example:</p><pre>
+	Object s = "some string";
+	Collection&lt;?&gt; c = Arrays.asList(s, 1);
+	// breakpoint
+	  </pre>
+      <p><img src="images/variables-actual-type.png" alt=""/></p>      
+    </td>
+  </tr>
 
   <!--************************ End of Debug ******************************** -->
 
