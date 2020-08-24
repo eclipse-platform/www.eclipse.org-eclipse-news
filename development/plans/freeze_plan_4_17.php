@@ -66,7 +66,7 @@ ob_start();
 	          </tr>
 	          <tr>
 	            <td></td>
-	            <td class="date">27</td>
+	            <td class="date">26</td>
 	            <td class="date">Wed 18:00 EST</td>
 	            <td></td>
 	            <td>API and feature freeze</td>
