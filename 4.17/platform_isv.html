@@ -103,6 +103,31 @@ descriptor = ImageDescriptor.createFromURL(url);
       Starting from Eclipse 4.16, SWT no longer required Colors to be disposed, with Eclipse 4.17
       new constructors are available which don't require a Device when creating Colors.
     </td>
+
+  </tr>
+   <tr id="dark-win32-combo"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=562454 -->
+    <td class="title"><a href="#dark-win32-menus">Improved dark theme Combo under Windows</a></td>
+    <td class="content">
+      SWT supports improved dark theme <code>Combo</code> under Windows as below:
+      <p>
+        Old:
+      </p>
+      <p>
+        <img src="images/combo-win32-dark-old.png" alt="" />
+      </p>
+      <p>
+        New:
+      </p>
+      <p>
+        <img src="images/combo-win32-dark-new.png" alt="" />
+      </p>
+      <p>
+        On <b>Windows 10</b>, all the dark theme tweaks including the <a href="platform_isv.html#dark-win32-combo">dark combo</a> can be disabled using the 
+        <code>org.eclipse.swt.internal.win32.disableCustomThemeTweaks</code> Java property.<br/>
+        For Example: add this VM argument in eclipse.ini or on the command line after <b><code>-vmargs</code></b>:
+      </p>
+      <pre><b>-Dorg.eclipse.swt.internal.win32.disableCustomThemeTweaks=true</b></pre>
+    </td>
   </tr>
   <!-- *********************** End of SWT *********************** -->
 
