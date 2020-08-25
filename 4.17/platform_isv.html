@@ -105,10 +105,36 @@ descriptor = ImageDescriptor.createFromURL(url);
     </td>
 
   </tr>
-   <tr id="dark-win32-combo"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=562454 -->
+
+  <tr id="dark-win32-menu"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=562454 -->
+    <td class="title"><a href="#dark-win32-menus">Support for dark theme Menu under Windows10</a></td>
+    <td class="content">
+      SWT supports dark theme <code>Menu</code> under Windows10 as below:
+      <p>
+        Old:
+      </p>
+      <p>
+        <img src="images/menu-background-old.png" alt="" />
+      </p>
+      <p>
+        New:
+      </p>
+      <p>
+        <img src="images/menu-background-dark.png" alt="" />
+      </p>
+      <p>
+        On <b>Windows 10</b>, all the dark theme tweaks including the <a href="platform_isv.html#dark-win32-menu">dark menu</a> can be disabled using the 
+        <code>org.eclipse.swt.internal.win32.disableCustomThemeTweaks</code> Java property.<br/>
+        For Example: add this VM argument in eclipse.ini or on the command line after <b><code>-vmargs</code></b>:
+      </p>
+      <pre><b>-Dorg.eclipse.swt.internal.win32.disableCustomThemeTweaks=true</b></pre>
+    </td>
+  </tr>
+
+  <tr id="dark-win32-combo"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=562454 -->
     <td class="title"><a href="#dark-win32-menus">Improved dark theme Combo under Windows</a></td>
     <td class="content">
-      SWT supports improved dark theme <code>Combo</code> under Windows as below:
+      SWT supports improved dark theme <code>Combo</code> under Windows10 as below:
       <p>
         Old:
       </p>
