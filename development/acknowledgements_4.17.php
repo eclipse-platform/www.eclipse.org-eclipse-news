@@ -65,7 +65,7 @@ ob_start();
   
     <h3>Eclipse 2020-09 Acknowledgements</h3>
     
-    <p>The entire Eclipse Project team would like to thank the Eclipse Foundation staff for their tireless efforts, including: Denis Roy, Matt Ward, Fred Gurr and Mikael Barbero for not only 
+    <p>The entire Eclipse Project team would like to thank the Eclipse Foundation staff for their tireless efforts, including: Denis Roy, Matt Ward, Frederic Gurr and Mika&#xEB;l Barbero for not only 
     keeping all that infrastructure going, but also constantly improving it; Sharon Corbett for guiding us through the Eclipse legal process; Wayne Beaton for giving us process 
     support and improved tools to simplify and manage our development process; Thabang Mashologu and Christie Witt for help with marketing the release and providing Logos and artwork; 
     and Mike Milinkovich for running the whole show. 
