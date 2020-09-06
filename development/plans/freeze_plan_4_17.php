@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		Dani Megert
-	# Date:			2020-08-24
+	# Date:			2020-09-16
 	#
 	# Description: Eclipse project 4.17 release freeze plan
 	#
@@ -45,12 +45,12 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>Daily builds towards RC1</b></p>
+			<p><b>Released</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
 	        <table class="schedule" border="0" cellspacing="0" align="center" width=100%>
-	          <tr class="current">
+	          <tr>
 	            <td>August 2020</td>
 	          </tr>
 	          <tr>
@@ -118,7 +118,7 @@ ob_start();
 	            <td>Submit RC2 to release train</td>
 	            <td></td>
 	          </tr>
-              <tr>
+              <tr class="current">
 	            <td></td>
 	            <td class="date">16</td>
 	            <td class="date">Wed</td>
