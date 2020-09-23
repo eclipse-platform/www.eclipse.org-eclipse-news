@@ -75,7 +75,6 @@ ul {padding-left: 13px;}
 		<p>You can change the default in the Java > Editor > Content Assist preference page.</p>
     </td>
   </tr>
-  </tr>
 
   <tr id="quick-assist-junit-test-case"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=565600 -->
       <td class="title">Quick assist to create new implementation</td>
@@ -117,6 +116,16 @@ ul {padding-left: 13px;}
     <td id="Debug" class="section" colspan="2">
     <h2>Debug</h2>
     </td>
+  </tr>
+  <tr id="launch-with-argfile"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=565902 -->
+      <td class="title">Support for @argfiles when launching</td>
+      <td class="content">
+          A new checkbox was added to the Arguments tab for Java based launch configurations (Java Application, JUnit, and others) for writing arguments into an @argfile.
+          This is disabled below Java 9 and can be enabled for Java programs launched with Java 9 and above.
+          <p>
+            <img src="images/launch-with-argfile.png" alt="screenshot showing new checkbox" />
+          </p>
+      </td>
   </tr>
   <!--************************ End of Debug ******************************** -->
 
