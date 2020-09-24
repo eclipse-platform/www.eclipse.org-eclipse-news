@@ -109,6 +109,21 @@ ul {padding-left: 13px;}
     <h2>Java Formatter </h2>
     </td>
   </tr>
+
+  <tr id="formatter-wrap-annotations"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567160 -->
+    <td class="title"><a href="#formatter-wrap-annotations">Annotations wrapping</a></td>
+    <td class="content">
+      The formatter now allows more control over <b>how multiple annotations on a single element should be divided into lines</b>.
+      Previously, they could either all be placed in a single line along with the annotated element, or each in a separate line.
+      The settings that controlled this behavior (in the <b>New Lines &gt; After annotations</b> section) now only control a line break between the last annotation and the annotated element.
+      Line breaks between annotations are controlled by a new group of settings in the <b>Line Wrapping &gt; Wrapping Settings &gt; Annotations</b> section.
+      <p>Just like with standard wrapping settings, they can be set to keep everything in a single line (<b>Do not wrap</b>), each annotation in a separate line (<b>Wrap all elements</b>), or only break lines that exceed the width limit (<b>Wrap where necessary</b>).
+      The last option along with the <b>Never join already wrapped lines</b> setting effectively means manual control over each case.
+      The annotation wrapping settings differ from other wrapping settings in that the indentation control is not available.</p>
+      <p>The formatter configuration sections can be found in the <b>Profile Editor</b> (<b>Preferences &gt; Java &gt; Code Style &gt; Formatter &gt; Edit...</b>).</p>
+      <p><img src="images/formatter-wrap-annotations.png" alt=""/></p>
+    </td>
+  </tr>
   <!-- ******************* End of Java Formatter ************************************* -->
   
   <!-- *********************** Debug ******************************** -->
