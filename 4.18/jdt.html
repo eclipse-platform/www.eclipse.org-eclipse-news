@@ -85,6 +85,39 @@ ul {padding-left: 13px;}
           </p>
       </td>
   </tr>
+
+  <tr id="bitwise-expressions"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567298 -->
+    <td class="title"><a href="#bitwise-expressions">Bitwise expressions in comparisons</a></td>
+    <td class="content">
+      A new clean up has been added that replaces the <code>&gt;</code> operator by <code>!=</code> when the comparison
+      expression has a bitwise expression operand and a <code>0</code> operand.
+      <p>
+        This resolves an anti-pattern for such kind of comparisons, which can also be a bug when the bitwise expression
+        is involving a negative constant value. This code smell is further described by the FindBugs project
+        as bug description <a href="http://findbugs.sourceforge.net/bugDescriptions.html#BIT_SIGNED_CHECK">"BIT: Check for sign of bitwise operation"</a>.
+      </p>
+      <p>
+        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Compare with != 0 for bitwise expression</b> on the <b>Code Style</b> tab.
+      </p>
+      <p><img src="images/bitwise-expressions-preferences.png" alt="Preferences" width="620 px"/></p>
+      <p>
+        <table>
+          <tr><td style="border-top: none">For the given code:</td><td style="border-top: none">You get this after the clean up:</td></tr>
+          <tr>
+            <td style="border-top: none"><img src="images/bitwise-expressions-before.png" alt="Before" width="290 px"/></td>
+            <td style="border-top: none"><img src="images/bitwise-expressions-after.png" alt="After" width="290 px"/></td>
+          </tr>
+        </table>
+      </p>
+<!--
+      For the given code:
+      <p><img src="images/bitwise-expressions-before.png" alt="Before" width="350 px"/></p>
+      You get this after the clean up:
+      <p><img src="images/bitwise-expressions-after.png" alt="After" width="350 px"/></p>
+-->
+    </td>
+  </tr>
+
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
