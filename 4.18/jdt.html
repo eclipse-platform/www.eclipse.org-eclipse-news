@@ -349,6 +349,27 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="redundant-return"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567286 -->
+    <td class="title"><a href="#redundant-return">Redundant return</a></td>
+    <td class="content">
+      A new clean up has been added that removes useless lone <code>return</code> at the end of a method or lambda.
+      <p>
+        The cleanup checks that there is no value on the <code>return</code> statement.
+      </p>
+      <p>
+        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Remove useless return</b> box on the <b>Unnecessary Code</b> tab.
+      </p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/redundant-return-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/redundant-return-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
