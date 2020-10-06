@@ -223,6 +223,27 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="redundant-super"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567148 -->
+    <td class="title"><a href="#redundant-super">Unnecessary super() call</a></td>
+    <td class="content">
+      A new clean up has been added that removes call to super constructor with empty arguments.
+      <p>
+        Such a call is redundant. See JLS section 12.5 for more info.
+      </p>
+      <p>
+        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Remove redundant super() call in constructor</b> box on the <b>Unnecessary Code</b> tab.
+      </p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/redundant-super-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/redundant-super-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
