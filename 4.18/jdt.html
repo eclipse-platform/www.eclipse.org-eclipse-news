@@ -226,7 +226,7 @@ ul {padding-left: 13px;}
   <tr id="redundant-super"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567148 -->
     <td class="title"><a href="#redundant-super">Unnecessary super() call</a></td>
     <td class="content">
-      A new clean up has been added that removes call to super constructor with empty arguments.
+      A new clean up has been added that removes call to <code>super</code> constructor with empty arguments.
       <p>
         Such a call is redundant. See JLS section 12.5 for more info.
       </p>
@@ -241,6 +241,27 @@ ul {padding-left: 13px;}
         One gets:
       </p>
       <p><img src="images/redundant-super-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
+  <tr id="redundant-falling-blocks"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567553 -->
+    <td class="title"><a href="#redundant-falling-blocks">Redundant falling through blocks</a></td>
+    <td class="content">
+      A new clean up has been added that detects a list of statements that ends with a jump statement (<code>return</code>, <code>break</code>, <code>continue</code> or <code>throw</code>), but below is the same list of statements.
+      <p>
+        It detects similar statements. It also checks that the declarations of the variables in the statements are the same. It looks for redundant statements into <code>if</code>, <code>else</code>, <code>catch</code> and <code>finally</code> but not in loops.
+      </p>
+      <p>
+        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Remove redundant end of block with jump statement</b> box on the <b>Unnecessary Code</b> tab.
+      </p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/redundant-falling-blocks-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/redundant-falling-blocks-after.png" alt="After"/></p>
     </td>
   </tr>
 
