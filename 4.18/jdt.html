@@ -177,6 +177,31 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="pattern-matching"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=566001 -->
+    <td class="title"><a href="#pattern-matching">Pattern matching for instanceof</a></td>
+    <td class="content">
+      A new clean up has been added that uses pattern matching for the <code>instanceof</code> operator when possible.
+      <p>
+      It is only enabled for Java 14 or higher enabling the feature preview.
+      </p>
+      <p>
+      The variable must be final.
+      </p>
+      <p>
+        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Pattern matching for instanceof</b> box on the <b>Unnecessary Code</b> tab.
+      </p>
+      <p><img src="images/pattern-matching-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/pattern-matching-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/pattern-matching-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
