@@ -307,6 +307,27 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="map-cloning"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567262 -->
+    <td class="title"><a href="#map-cloning">Initialize map at creation</a></td>
+    <td class="content">
+      A new clean up has been added that replaces creating a new <code>Map</code>, then invoking <code>Map.putAll()</code> on it, by creating the new <code>Map</code> with the other <code>Map</code> as parameter.
+      <p>
+        Only well known map classes are refactored to avoid behavior changes. The cleanup is enabled only if there is no useful instantiation parameters.
+      </p>
+      <p>
+        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Initialize map at creation</b> box on the <b>Unnecessary Code</b> tab.
+      </p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/map-cloning-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/map-cloning-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
