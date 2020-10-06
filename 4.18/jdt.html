@@ -265,6 +265,27 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="if-condition"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567599 -->
+    <td class="title"><a href="#if-condition">Redundant if condition</a></td>
+    <td class="content">
+      A new clean up has been added that removes a condition on an else that is negative to the condition of the previous if.
+      <p>
+        The condition must be passive. The removed code should not throw an expected exception. The cleanup uses a deep condition comparison algorithm. 
+      </p>
+      <p>
+        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Redundant if condition</b> box on the <b>Unnecessary Code</b> tab.
+      </p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/if-condition-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/if-condition-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
