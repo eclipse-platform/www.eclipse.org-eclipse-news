@@ -123,12 +123,12 @@ ul {padding-left: 13px;}
     <td class="content">
       A new quick-assist and clean up has been added that converts switch statements to new switch expressions (Java 14 or higher) where possible.
       <p>
-      Switch statements that use control statements such as nested switch statements, if/else blocks, for/while loops are not considered as is the case
-      for return/continue statements.  All cases
-      of the switch statement must either have a last assignment statement that sets the same variable/field as other cases or else has a <b>throw</b> statement.
-      Fall-through is allowed between cases but only if there are no other statements between.  The
-      switch statement must have a <b>default</b> case unless the switch expression
-      is an enum type and all possible enum values are represented in the cases.
+        Switch statements that use control statements such as nested switch statements, if/else blocks, for/while loops are not considered as is the case
+        for return/continue statements.  All cases
+        of the switch statement must either have a last assignment statement that sets the same variable/field as other cases or else has a <b>throw</b> statement.
+        Fall-through is allowed between cases but only if there are no other statements between.  The
+        switch statement must have a <b>default</b> case unless the switch expression
+        is an enum type and all possible enum values are represented in the cases.
       </p>
       <p>
         To select the quick-assist, click <b>CTRL+1</b> on the targeted switch statement and select <b>Convert to switch expression</b> if offered.
@@ -153,14 +153,14 @@ ul {padding-left: 13px;}
     <td class="content">
       A new clean up has been added that uses <code>Collection.addAll()</code>, <code>Collection.removeAll()</code>, <code>Collections.addAll()</code> or <code>Collections.removeAll()</code> instead of a <code>for</code> loop.
       <p>
-      It refactors <code>for</code> loops with index, <code>for</code> loops with iterator and <code>foreach</code> loops.
+        It refactors <code>for</code> loops with index, <code>for</code> loops with iterator and <code>foreach</code> loops.
       </p>
       <p>
-      It only uses <code>Collection.removeAll()</code> on <code>Set</code> because the behavior may change on list with double values.
+        It only uses <code>Collection.removeAll()</code> on <code>Set</code> because the behavior may change on list with double values.
       </p>
       <p>
-      If the source is an array, the list is raw and the JVM is Java 1.5 or higher, we use Arrays.asList() to handle the erasure type.
-      It doesn't decrease the performance.
+        If the source is an array, the list is raw and the JVM is Java 1.5 or higher, we use Arrays.asList() to handle the erasure type.
+        It doesn't decrease the performance.
       </p>
       <p>
         To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Add or remove elements in collections without loop</b> box on the <b>Code Style</b> tab.
@@ -182,10 +182,10 @@ ul {padding-left: 13px;}
     <td class="content">
       A new clean up has been added that uses pattern matching for the <code>instanceof</code> operator when possible.
       <p>
-      It is only enabled for Java 14 or higher enabling the feature preview.
+        It is only enabled for Java 14 or higher enabling the feature preview.
       </p>
       <p>
-      The variable must be final.
+        The variable must be final.
       </p>
       <p>
         To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Pattern matching for instanceof</b> box on the <b>Unnecessary Code</b> tab.
@@ -199,6 +199,27 @@ ul {padding-left: 13px;}
         One gets:
       </p>
       <p><img src="images/pattern-matching-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
+  <tr id="arrays-fill"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567264 -->
+    <td class="title"><a href="#arrays-fill">Use Arrays.fill()</a></td>
+    <td class="content">
+      A new clean up has been added that replaces for loops to use <code>Arrays.fill()</code> where possible.
+      <p>
+        The value must be hard-coded.
+      </p>
+      <p>
+        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Use Arrays.fill()</b> box on the <b>Unnecessary Code</b> tab.
+      </p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/arrays-fill-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/arrays-fill-after.png" alt="After"/></p>
     </td>
   </tr>
 
