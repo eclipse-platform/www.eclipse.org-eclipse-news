@@ -393,6 +393,25 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="boolean-literal"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567560 -->
+    <td class="title"><a href="#boolean-literal">Prefer boolean literal</a></td>
+    <td class="content">
+      A new clean up has been added that replaces <code>Boolean.TRUE</code>/<code>Boolean.FALSE</code> by <code>true</code>/<code>false</code> when used as primitive.
+      <p>
+        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Prefer boolean literals</b> box on the <b>Optimization</b> tab.
+      </p>
+      <p><img src="images/boolean-literal-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/boolean-literal-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/boolean-literal-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
