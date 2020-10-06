@@ -131,7 +131,7 @@ ul {padding-left: 13px;}
       is an enum type and all possible enum values are represented in the cases.
       </p>
       <p>
-        To select the quick-assist, click <b>CTRL+1</b> on the targetted switch statement and select <b>Convert to switch expression</b> if offered.
+        To select the quick-assist, click <b>CTRL+1</b> on the targeted switch statement and select <b>Convert to switch expression</b> if offered.
       </p>
       <p>
         To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Convert to switch expression</b> box on the <b>Code Style</b> tab.
@@ -145,6 +145,35 @@ ul {padding-left: 13px;}
         One gets:
       </p>
       <p><img src="images/switch-expressions-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
+  <tr id="add-remove"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567335 -->
+    <td class="title"><a href="#add-remove">Add or remove elements in collections without loop</a></td>
+    <td class="content">
+      A new clean up has been added that uses <code>Collection.addAll()</code>, <code>Collection.removeAll()</code>, <code>Collections.addAll()</code> or <code>Collections.removeAll()</code> instead of a <code>for</code> loop.
+      <p>
+      It refactors <code>for</code> loops with index, <code>for</code> loops with iterator and <code>foreach</code> loops.
+      </p>
+      <p>
+      It only uses <code>Collection.removeAll()</code> on <code>Set</code> because the behavior may change on list with double values.
+      </p>
+      <p>
+      If the source is an array, the list is raw and the JVM is Java 1.5 or higher, we use Arrays.asList() to handle the erasure type.
+      It doesn't decrease the performance.
+      </p>
+      <p>
+        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Add or remove elements in collections without loop</b> box on the <b>Code Style</b> tab.
+      </p>
+      <p><img src="images/add-remove-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/add-remove-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/add-remove-after.png" alt="After"/></p>
     </td>
   </tr>
 
