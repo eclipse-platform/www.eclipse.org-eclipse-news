@@ -117,22 +117,22 @@ ul {padding-left: 13px;}
   </tr>
 
   <tr id="switch-expressions"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=545342 -->
-    <td class="title"><a href="#switch-expressions">Convert to Switch Expression</a></td>
+    <td class="title"><a href="#switch-expressions">Convert to switch expression</a></td>
     <td class="content">
-      A new quick-assist and clean up has been added that converts switch statements to new switch expressions (Java 14 or higher) where possible.
+      A new quick assist and clean up has been added that converts switch statements to switch expressions (Java 14 or higher) where possible.
       <p>
         Switch statements that use control statements such as nested switch statements, if/else blocks, for/while loops are not considered as is the case
         for return/continue statements.  All cases
-        of the switch statement must either have a last assignment statement that sets the same variable/field as other cases or else has a <b>throw</b> statement.
-        Fall-through is allowed between cases but only if there are no other statements between.  The
+        of the switch statement must either have a last assignment statement that sets the same variable/field as other cases, or else has a <b>throw</b> statement.
+        Fall-through is allowed between cases but only if there are no other statements in between.  The
         switch statement must have a <b>default</b> case unless the switch expression
         is an enum type and all possible enum values are represented in the cases.
       </p>
       <p>
-        To select the quick-assist, click <b>CTRL+1</b> on the targeted switch statement and select <b>Convert to switch expression</b> if offered.
+        To apply the quick assist, press <b>Ctrl+1</b> on the target switch statement and select <b>Convert to switch expression</b>, if offered.
       </p>
       <p>
-        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Convert to switch expression</b> box on the <b>Code Style</b> tab.
+        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Convert to switch expression</b> check box on the <b>Code Style</b> tab.
       </p>
       <p><img src="images/switch-expressions-preferences.png" alt="Preferences"/></p>
       <p>
