@@ -208,7 +208,7 @@ ul {padding-left: 13px;}
         The value must be hard-coded.
       </p>
       <p>
-        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Use Arrays.fill()</b> box on the <b>Unnecessary Code</b> tab.
+        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Use Arrays.fill()</b> check box on the <b>Unnecessary Code</b> tab.
       </p>
       <p>
         For the given code:
@@ -229,7 +229,7 @@ ul {padding-left: 13px;}
         Such a call is redundant. See JLS section 12.5 for more info.
       </p>
       <p>
-        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Remove redundant super() call in constructor</b> box on the <b>Unnecessary Code</b> tab.
+        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Remove redundant super() call in constructor</b> check box on the <b>Unnecessary Code</b> tab.
       </p>
       <p>
         For the given code:
@@ -245,12 +245,12 @@ ul {padding-left: 13px;}
   <tr id="redundant-falling-blocks"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567553 -->
     <td class="title"><a href="#redundant-falling-blocks">Redundant falling through blocks</a></td>
     <td class="content">
-      A new clean up has been added that detects a list of statements that ends with a jump statement (<code>return</code>, <code>break</code>, <code>continue</code> or <code>throw</code>), but below is the same list of statements.
+      A new clean up has been added that detects a list of statements that ends with a jump statement (<code>return</code>, <code>break</code>, <code>continue</code> or <code>throw</code>), and has the same list of statements below that.
       <p>
-        It detects similar statements. It also checks that the declarations of the variables in the statements are the same. It looks for redundant statements into <code>if</code>, <code>else</code>, <code>catch</code> and <code>finally</code> but not in loops.
+        It detects similar statements. It also checks that the declarations of the variables in the statements are the same. It looks for redundant statements in <code>if</code>, <code>else</code>, <code>catch</code> and <code>finally</code> but not in loops.
       </p>
       <p>
-        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Remove redundant end of block with jump statement</b> box on the <b>Unnecessary Code</b> tab.
+        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Remove redundant end of block with jump statement</b> check box on the <b>Unnecessary Code</b> tab.
       </p>
       <p>
         For the given code:
@@ -266,12 +266,12 @@ ul {padding-left: 13px;}
   <tr id="if-condition"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567599 -->
     <td class="title"><a href="#if-condition">Redundant if condition</a></td>
     <td class="content">
-      A new clean up has been added that removes a condition on an else that is negative to the condition of the previous if.
+      A new clean up has been added that removes a condition on an <code>else</code> that is negative to the condition of the previous <code>if</code>.
       <p>
         The condition must be passive. The removed code should not throw an expected exception. The cleanup uses a deep condition comparison algorithm. 
       </p>
       <p>
-        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Redundant if condition</b> box on the <b>Unnecessary Code</b> tab.
+        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Redundant if condition</b> check box on the <b>Unnecessary Code</b> tab.
       </p>
       <p>
         For the given code:
@@ -287,12 +287,12 @@ ul {padding-left: 13px;}
   <tr id="collection-cloning"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=566996 -->
     <td class="title"><a href="#collection-cloning">Initialize collection at creation</a></td>
     <td class="content">
-      A new clean up has been added that replaces creating a new <code>Collection</code>, then invoking <code>Collection.addAll()</code> on it, by creating the new <code>Collection</code> with the other <code>Collection</code> as parameter.
+      A new clean up has been added that replaces the creation of a new <code>Collection</code>, then invoking <code>Collection.addAll()</code> on it, by the creation of the new <code>Collection</code> with the other <code>Collection</code> as parameter.
       <p>
         Only well known collection classes are refactored to avoid behavior changes. The cleanup is enabled only if there is no useful instantiation parameters.
       </p>
       <p>
-        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Initialize collection at creation</b> box on the <b>Unnecessary Code</b> tab.
+        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Initialize collection at creation</b> check box on the <b>Unnecessary Code</b> tab.
       </p>
       <p>
         For the given code:
@@ -313,7 +313,7 @@ ul {padding-left: 13px;}
         Only well known map classes are refactored to avoid behavior changes. The cleanup is enabled only if there is no useful instantiation parameters.
       </p>
       <p>
-        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Initialize map at creation</b> box on the <b>Unnecessary Code</b> tab.
+        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Initialize map at creation</b> check box on the <b>Unnecessary Code</b> tab.
       </p>
       <p>
         For the given code:
@@ -329,12 +329,12 @@ ul {padding-left: 13px;}
   <tr id="embedded-if"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=565912 -->
     <td class="title"><a href="#embedded-if">Raise embedded if into parent if</a></td>
     <td class="content">
-      A new clean up has been added that merges inner if statement into the parent if statement.
+      A new clean up has been added that merges inner <code>if</code> statement into the parent <code>if</code> statement.
       <p>
         The cleanup checks that there is no <code>else</code> statement.
       </p>
       <p>
-        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Raise embedded if into parent if</b> box on the <b>Unnecessary Code</b> tab.
+        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Raise embedded if into parent if</b> check box on the <b>Unnecessary Code</b> tab.
       </p>
       <p>
         For the given code:
@@ -355,7 +355,7 @@ ul {padding-left: 13px;}
         The cleanup checks that there is no value on the <code>return</code> statement.
       </p>
       <p>
-        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Remove useless return</b> box on the <b>Unnecessary Code</b> tab.
+        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Remove useless return</b> check box on the <b>Unnecessary Code</b> tab.
       </p>
       <p>
         For the given code:
@@ -378,7 +378,7 @@ ul {padding-left: 13px;}
         A <code>continue</code> statement is kept if it has a label.
       </p>
       <p>
-        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Remove useless continue</b> box on the <b>Unnecessary Code</b> tab.
+        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Remove useless continue</b> check box on the <b>Unnecessary Code</b> tab.
       </p>
       <p>
         For the given code:
@@ -396,7 +396,7 @@ ul {padding-left: 13px;}
     <td class="content">
       A new clean up has been added that replaces <code>Boolean.TRUE</code>/<code>Boolean.FALSE</code> by <code>true</code>/<code>false</code> when used as primitive.
       <p>
-        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Prefer boolean literals</b> box on the <b>Optimization</b> tab.
+        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Prefer boolean literals</b> check box on the <b>Optimization</b> tab.
       </p>
       <p><img src="images/boolean-literal-preferences.png" alt="Preferences" width="800 px"/></p>
       <p>
@@ -460,7 +460,7 @@ ul {padding-left: 13px;}
   <tr id="launch-with-argfile"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=565902 -->
       <td class="title">Support for @argfiles when launching</td>
       <td class="content">
-          A new checkbox was added to the Arguments tab for Java based launch configurations (Java Application, JUnit, and others) for writing arguments into an @argfile.
+          A new check box was added to the Arguments tab for Java based launch configurations (Java Application, JUnit, and others) for writing arguments into an @argfile.
           This is disabled below Java 9 and can be enabled for Java programs launched with Java 9 and above.
           <p>
             <img src="images/launch-with-argfile.png" alt="screenshot showing new checkbox" />
