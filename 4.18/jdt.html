@@ -157,11 +157,11 @@ ul {padding-left: 13px;}
         It only uses <code>Collection.removeAll()</code> on <code>Set</code> because the behavior may change on list with double values.
       </p>
       <p>
-        If the source is an array, the list is raw and the JVM is Java 1.5 or higher, we use Arrays.asList() to handle the erasure type.
+        If the source is an array, the list is raw, and the Java version is 1.5 or higher, we use Arrays.asList() to handle the erasure type.
         It doesn't decrease the performance.
       </p>
       <p>
-        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Add or remove elements in collections without loop</b> box on the <b>Code Style</b> tab.
+        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Add or remove elements in collections without loop</b> check box on the <b>Code Style</b> tab.
       </p>
       <p><img src="images/add-remove-preferences.png" alt="Preferences" width="800 px"/></p>
       <p>
