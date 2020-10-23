@@ -38,6 +38,23 @@ ul {padding-left: 13px;}
   <tr>
     <td id="Platform" class="section" colspan="2"><h2>Platform Changes</h2></td>
   </tr>
+  <tr id="high-dpi-sceme"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567898 -->
+   <td class="title"><a href="#high-dpi-sceme">JFace ImageDescriptor supports alternative naming scheme for high dpi</a></td>
+    <td class="content">
+    	<p>Currently ImageDescriptor automatically provides higher DPI images if a
+		resource exits that ends with @x2 or @1.5</p>
+		<p>
+		This can rapidly blows the number of images required if multiple resolutions
+		are used as there are duplications (e.g. 16x16@2x is the same as 32x32 icon).The second limitation is that only
+		two fixed zoom levels are supported at the moment.
+		</p>
+		<p>It is now possible to use an alternative naming scheme
+		where icon resources are organized in folders holding the resolution in
+		folder-name (e.g. icons/16x16/icon1.png, icons/32x32/icon1.png and so
+		on). This also has the advantage that it is possible to use other
+		scaling factors beside the 150/200% currently supported.</p>
+    </td>
+  </tr>
   
   <tr id="dialog-settings-provider"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=549929 -->
    <td class="title"><a href="#dialog-settings-provider">IDialogSettingsProvider</a></td>
