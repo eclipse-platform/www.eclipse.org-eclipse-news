@@ -21,7 +21,7 @@ Last revised 9:37 EDT November 3, 2020.
 <!--
 <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
 marks interesting changes since the previous draft of 
-<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_17_20171216.xml">December 16, 2017</a>.
+<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_18.xml">December 16, 2017</a>.
 -->
 
 </p>
@@ -205,10 +205,10 @@ Eclipse 4.18 Endgame Plan.
 			</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-				OpenJDK 11.0.7 (LTS)<br/>
-				OpenJDK 14.0.1<br/>
-				Oracle Java 11.0.7 (LTS)<br/>
-				Oracle Java 14.0.1<br/>
+				OpenJDK 11.0.9 (LTS)<br/>
+				OpenJDK 15.0.1<br/>
+				Oracle Java 11.0.9 (LTS)<br/>
+				Oracle Java 15.0.1<br/>
 			</td>
 			<td rowspan="1">Win32</td>
 		</tr>
@@ -216,41 +216,41 @@ Eclipse 4.18 Endgame Plan.
 		<tr class="c1">
 			<td rowspan="2">Red Hat Enterprise Linux</td>
 
-			<td rowspan="2">7.8<br/>
-			8.1
+			<td rowspan="2">7.9<br/>
+			8.2
 			</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-				OpenJDK 11.0.7 (LTS)<br/>
-				OpenJDK 14.0.1<br/>
-				Oracle Java 11.0.7 (LTS)<br/>
-				Oracle Java 14.0.1<br/>
+				OpenJDK 11.0.9 (LTS)<br/>
+				OpenJDK 15.0.1<br/>
+				Oracle Java 11.0.9 (LTS)<br/>
+				Oracle Java 15.0.1<br/>
 			</td>
 			<td rowspan="2">GTK 3</td>
 		</tr>
 		<tr class="c1">
 			<td rowspan="1">Power 64-bit LE</td>
 			<td rowspan="1">
-				OpenJDK 11.0.7 (LTS)
+				OpenJDK 11.0.9 (LTS)
 			</td>
 		</tr>
 		<!-- ************ SLES ************** -->
 		<tr class="c0">
 			<td rowspan="2">SUSE Linux Enterprise Server</td>
 			<td rowspan="2">
-				15 SP1
+				15 SP2
 			</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-				OpenJDK 11.0.7 (LTS)<br/>
-				OpenJDK 14.0.1<br/>
+				OpenJDK 11.0.9 (LTS)<br/>
+				OpenJDK 15.0.1<br/>
 			</td>
 			<td rowspan="2">GTK 3</td>
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">Power 64-bit LE</td>
 			<td rowspan="1">
-				OpenJDK 11.0.7 (LTS)
+				OpenJDK 11.0.9 (LTS)
 			</td>
 		</tr>
 
@@ -260,8 +260,8 @@ Eclipse 4.18 Endgame Plan.
 		    <td rowspan="1">20.04</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-				OpenJDK 11.0.7 (LTS)<br/>
-				OpenJDK 14.0.1<br/>
+				OpenJDK 11.0.9 (LTS)<br/>
+				OpenJDK 15.0.1<br/>
 			</td>
 			<td rowspan="1">GTK 3</td>
 		</tr>
@@ -275,10 +275,10 @@ Eclipse 4.18 Endgame Plan.
 			</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-				OpenJDK 11.0.7 (LTS)<br/>
-				OpenJDK 14.0.1<br/>
-				Oracle Java 11.0.7 (LTS)<br/>
-				Oracle Java 14.0.1
+				OpenJDK 11.0.9 (LTS)<br/>
+				OpenJDK 15.0.1<br/>
+				Oracle Java 11.0.9 (LTS)<br/>
+				Oracle Java 15.0.1
 			</td>
 			<td rowspan="1">Cocoa</td>
 		</tr>
