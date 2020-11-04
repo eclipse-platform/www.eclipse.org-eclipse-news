@@ -55,6 +55,24 @@ ul {padding-left: 13px;}
 		scaling factors beside the 150/200% currently supported.</p>
     </td>
   </tr>
+  <tr id="slice-monitor"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567808 -->
+   <td class="title"><a href="#slice-monitor">Slicing Support for IProgressMonitor</a></td>
+    <td class="content">
+    	<p>Previously it was possible to split a <code>IProgressMonitor</code> using <code>SubMonitor</code> class, while this works good in a linear workflow, it does not work well in distributed flows where each item want's to report progress independently.
+			Another drawback was, as the original progress monitor has no way to know about the split it is not possible to handle this in a user-friendly fashion e.g. it was not possible for a User-Control to show the progress independently.
+		</p>
+		<p>To overcome this limitations a new way of slicing a monitor was added <code>IProgressMonitor#slice(int work)</code> with the following properties:
+		<ul>
+			<li>slice is default implemented with a very basic slicing facility that can be override by implementations if required</li>
+			<li>the returned monitor behaves as if one has created a fresh instance with the given amount of work (that implies that the caller of slice(...) is responsible to call "done" on the returned monitor if no longer needed)</li>
+			<li>whenever a full work unit is reported on the slice it is propagated to the parent</li>
+			<li>it is safe to use slices in another thread</li>
+			<li>it is possible to create more than one slice without influence the others</li>
+		</ul>
+		For further details on usage check the javadoc of the new method.
+		</p>
+    </td>
+  </tr>	
   <tr id="dialog-adapterfactory-as-service"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567344 -->
    <td class="title"><a href="#dialog-adapterfactory-as-service">IAdapterFactory as Service</a></td>
     <td class="content">
