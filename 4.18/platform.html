@@ -43,6 +43,18 @@ ul {padding-left: 13px;}
     <h2>Views, Dialogs and Toolbar </h2>
     </td>
   </tr>
+
+  <tr id="configuration-filter"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=494579 -->
+    <td class="title"><a href="#configuration-filter">Filter field for configuration details</a></td>
+    <td class="content">
+      A filter field has been added to the Installation Details / Configuration tab.
+      This allows much faster lookup of specific information from the system details by showing
+      only lines containing the filter criteria.
+      <p>
+        <img src="images/configuration-filter.png" alt="Configuration Filter"/>
+      </p>
+    </td>
+  </tr>
   <!-- ******************* End of Views, Dialogs and Toolbar ************************************* -->
 
   <!-- ******************* Text Editors ************************************* -->
@@ -52,12 +64,12 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   
-   <tr id="store-default-editor"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=491853 -->
+  <tr id="store-default-editor"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=491853 -->
     <td class="title"><a href="#store-default-editor">Open-with does not store the editor relationship anymore</a></td>
     <td class="content">
-	The menu entry "Open With > ..." does not store the selected editor as default editor for the selected file as this was in most cases undesired and lead to confusion.
-	Also removing this association was not easy for the end user.
-	The user can still assign a editor to a certain file type via  the "Open With > Other..." dialog.
+      The menu entry "Open With > ..." does not store the selected editor as default editor for the selected file as this was in most cases undesired and lead to confusion.
+      Also removing this association was not easy for the end user.
+      The user can still assign a editor to a certain file type via  the "Open With > Other..." dialog.
     </td>
   </tr>
   <!-- ******************* End of Text Editors ************************************* -->
@@ -77,7 +89,7 @@ ul {padding-left: 13px;}
       This setting persists the current state of the "Word wrap" toggle
       on the console view between user sessions. By default, word wrapping is
       disabled on console output.
-      <p> 
+      <p>
         <img src="images/console-preferences-word-wrap.png" alt=""/>
       </p>
     </td>
