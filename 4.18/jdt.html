@@ -506,6 +506,14 @@ ul {padding-left: 13px;}
           </p>
       </td>
   </tr>
+  
+  <tr id="logicalstructure-gc"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=537399 -->
+      <td class="title">Stabilized logical structures in Variables view with active GC</td>
+      <td class="content">
+          The <b>Debug</b> view no longer breaks when logical structures are shown while the application's garbage collector is active
+          (<code>com.sun.jdi.ObjectCollectedException occurred while retrieving value</code>).
+      </td>
+  </tr>
   <!--************************ End of Debug ******************************** -->
 
   <!-- *********************** JDT Developers ******************************** -->
