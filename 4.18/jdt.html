@@ -249,6 +249,30 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="redundant-comparison-statement"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567567 -->
+    <td class="title"><a href="#redundant-comparison-statement">Redundant comparison statement</a></td>
+    <td class="content">
+      Removes useless bad value checks before assignments or <code>return</code> statements. Such useless bad value checks are comparing an expression against bad value, then either assigning bad value or the expression depending on the result of the bad value check. It is simpler to directly assign the expression.
+      <p>
+        The expression should be passive.
+      </p>
+      <p>
+        The excluded value should be hard coded.
+      </p>
+      <p>
+        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Remove redundant comparison statement</b> check box on the <b>Unnecessary Code</b> tab.
+      </p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/redundant-comparison-statement-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/redundant-comparison-statement-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
   <tr id="redundant-super"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567148 -->
     <td class="title"><a href="#redundant-super">Unnecessary super() call</a></td>
     <td class="content">
