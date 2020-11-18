@@ -445,6 +445,24 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="overridden-assignment"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567977 -->
+    <td class="title"><a href="#overridden-assignment">Remove overridden assignment</a></td>
+    <td class="content">
+      A new clean up has been added that removes passive assignment when the variable is reassigned before being read.
+      <p>
+        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Remove overridden assignment</b> check box on the <b>Unnecessary Code</b> tab.
+      </p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/overridden-assignment-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/overridden-assignment-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
   <tr id="embedded-if"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=565912 -->
     <td class="title"><a href="#embedded-if">Raise embedded if into parent if</a></td>
     <td class="content">
