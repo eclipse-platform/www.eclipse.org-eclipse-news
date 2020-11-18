@@ -144,6 +144,27 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="else-if"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567779 -->
+    <td class="title"><a href="#else-if">Uses the else-if pseudo keyword</a></td>
+    <td class="content">
+      A new clean up has been added that combines nested <code>if</code> statement in <code>else</code> block to <code>else if</code>.
+      <p>
+        Beware for any comments after the <code>else</code> keyword. It will be lost.
+      </p>
+      <p>
+        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Combine nested 'if' statement in 'else' block to 'else if'</b> check box on the <b>Code Style</b> tab.
+      </p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/else-if-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/else-if-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
   <tr id="bitwise-expressions"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567298 -->
     <td class="title"><a href="#bitwise-expressions">Bitwise expressions in comparisons</a></td>
     <td class="content">
