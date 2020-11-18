@@ -79,7 +79,7 @@ ul {padding-left: 13px;}
     	<p>Previously <code>IAdapterFactory</code> has to be registered via plugin.xml, this has the disadvantage that one has to keep code with xml in sync (e.g. the adapter classes has to be provided in xml and in the IAdapterFactory.getAdapterList()). Also the code is bound to the static Extension Point Model that means that it has to gather all necessary dependencies from external (static) sources as there is no injection mechanism available.</p>
     	<p>From now on it is possible to also register an OSGi Service for this purpose and thus can take advantage of Declarative Services for example or even specialized construction and registration with plain OSGi mechanism.
     	The service must only supply a string property (or even multiple ones) with <code>IAdapterFactory.SERVICE_PROPERTY_ADAPTABLE_CLASS</code> that promotes the types that can be adapted.
-    	The code then activates the service upon first request of the adaptation of adaptable class and calls IAdapterFactory.getAdapterList() to find out the adapter classes.<br>
+    	The code then activates the service upon first request of the adaptation of adaptable class and calls IAdapterFactory.getAdapterList() to find out the adapter classes.<br/>
     	If even more laziness is required a list of adapter classes can be declared via the <code>IAdapterFactory.SERVICE_PROPERTY_ADAPTER_NAMES</code> service-property and the activation of the service will even be further delayed to the point where an actual adaptation of adaptable class for one of the static available types is requested.</p>
     </td>
   </tr>	
@@ -126,7 +126,34 @@ ul {padding-left: 13px;}
       
     </td>
   </tr>	
-  
+
+	<tr id="unit-test-view"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=507626 -->
+		<td class="title"><a href="#unit-test-view">Generic Unit Test View and extension point</a></td>
+		<td class="content">
+			A generic <strong>Unit Test</strong> view was added in a new <code>org.eclipse.unittest.ui</code> plugin.
+			It allows extenders to add support for reports and management of test executions in any test engine through
+			a common view, by adding an extension to
+			<code>org.eclipse.unittest.ui.unittestViewSupport</code> extension point for the specific test engine.
+			<p>Extensions typically deal with receiving input from an <code>ILaunch</code>
+			(eg parse output or receive notifications through some protocol specific to the test engine) and to
+			populate the Test Session model with information about execution of the tests. Extensions also provide
+			some implementation of the typical UI actions available for a given test session: re-run a specific set
+			of tests, open file for a given stack element...).</p>
+			<p>The <code>org.eclipse.unittest.ui</code> plugin is currently not included in Eclipse Platform, SDK or
+			other products; it's available for installation from the Eclipse project p2 repository. Consumers would
+			typically need to include this bundle in there target-platform explicitly to provide an extension for
+			the Unit Test view.</p>
+			<p>Examples of consumers are:
+			<ul>
+			<li><code>org.eclipse.jdt.unittest.ui.jdt</code> bundle which provides alternative launchers for JUnit,
+			using the new Unit Test view for report</li>
+			<li>Corrosion plugin uses this Unit Test view to build support for Rust/Cargo test execution reporting, and</li>
+			<li>CDT also has some experimental code to use this view for C/C++ test report instead of a specific view.</li>
+			</ul>
+			</p>
+		</td>
+	</tr>
+ 
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
