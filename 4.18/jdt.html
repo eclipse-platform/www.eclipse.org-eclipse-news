@@ -558,6 +558,30 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="try-with-resource"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=568088 -->
+    <td class="title"><a href="#try-with-resource">Use try-with-resource</a></td>
+    <td class="content">
+      A new clean up has been added that changes code to make use of Java 7 try-with-resources feature. In particular, it removes now useless <code>finally</code> clauses.
+      <p>
+        It may move an inner closeable assignment as a resource. It handles <code>finally</code> with a simple <code>close()</code> invocation, a null-check and remaining statements below.
+      </p>
+      <p>
+        It is only enabled from Java 7 and it also handles the Java 9 syntax.
+      </p>
+      <p>
+        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Use try-with-resource</b> check box on the <b>Unnecessary Code</b> tab.
+      </p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/try-with-resource-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/try-with-resource-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
   <tr id="break-loop"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=568050 -->
     <td class="title"><a href="#break-loop">Exit loop earlier</a></td>
     <td class="content">
