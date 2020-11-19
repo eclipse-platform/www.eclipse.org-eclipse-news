@@ -224,6 +224,27 @@ ul {padding-left: 13px;}
       <p><img src="images/atomic-object-after.png" alt="After"/></p>
     </td>
   </tr>
+
+  <tr id="pull-up-assignment"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=568188 -->
+    <td class="title"><a href="#pull-up-assignment">Pull up assignment</a></td>
+    <td class="content">
+      A new clean up has been added that moves assignments inside an <code>if</code> condition above the <code>if</code> node.
+      <p>
+        It improves the readability of the code.
+      </p>
+      <p>
+        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Pull up assignment</b> check box on the <b>Code Style</b> tab.
+      </p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/pull-up-assignment-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/pull-up-assignment-after.png" alt="After"/></p>
+    </td>
+  </tr>
   
   <tr id="add-remove"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567335 -->
     <td class="title"><a href="#add-remove">Add or remove elements in collections without loop</a></td>
