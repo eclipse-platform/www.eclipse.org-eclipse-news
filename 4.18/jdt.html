@@ -558,6 +558,30 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="break-loop"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=568050 -->
+    <td class="title"><a href="#break-loop">Exit loop earlier</a></td>
+    <td class="content">
+      A new clean up has been added that adds a <code>break</code> to avoid passive <code>for</code> loop iterations.
+      <p>
+        The inner assignments must not do other different assignments after (assign other values or assign into other variables).
+      </p>
+      <p>
+        There must be no side effects after the first assignments.
+      </p>
+      <p>
+        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Exit loop earlier</b> check box on the <b>Optimization</b> tab.
+      </p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/break-loop-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/break-loop-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
   <tr id="boolean-literal"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567560 -->
     <td class="title"><a href="#boolean-literal">Prefer boolean literal</a></td>
     <td class="content">
