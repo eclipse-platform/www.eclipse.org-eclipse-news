@@ -367,6 +367,30 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="redundant-null-check"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=568412 -->
+    <td class="title"><a href="#redundant-null-check">Evaluate without null check</a></td>
+    <td class="content">
+      A new clean up has been added that removes redundant null checks.
+      <p>
+        It removes null check on value before <code>equals()</code> or <code>equalsIgnoreCase()</code> method and before <code>instanceof</code> expression.
+      </p>
+      <p>
+        It only removes redundant passive expressions.
+      </p>
+      <p>
+        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Evaluate without null check</b> check box on the <b>Unnecessary Code</b> tab.
+      </p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/redundant-null-check-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/redundant-null-check-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
   <tr id="double-negation"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=568409 -->
     <td class="title"><a href="#double-negation">Avoid double negation</a></td>
     <td class="content">
