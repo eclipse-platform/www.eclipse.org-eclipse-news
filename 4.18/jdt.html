@@ -302,6 +302,39 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="xor"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=568615 -->
+    <td class="title"><a href="#xor">Use '==' or '^' on booleans</a></td>
+    <td class="content">
+      A new clean up has been added that replaces <code>(X && !Y) || (!X && Y)</code> by <code>X ^ Y</code> and replaces <code>(X && Y) || (!X && !Y)</code> by <code>X == Y</code>.
+      <p>
+        It only works on boolean.
+      </p>
+      <p>
+        It works with lazy or eager operators.
+      </p>
+      <p>
+        The operands must be passive.
+      </p>
+      <p>
+        It does not matter an operand is on the left or right.
+      </p>
+      <p>
+        It does a deep negation expression analyze.
+      </p>
+      <p>
+        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Use '==' or '^' on booleans</b> check box on the <b>Duplicate Code</b> tab.
+      </p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/xor-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/xor-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
   <tr id="hash"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567692 -->
     <td class="title"><a href="#hash">Use Objects.hash()</a></td>
     <td class="content">
