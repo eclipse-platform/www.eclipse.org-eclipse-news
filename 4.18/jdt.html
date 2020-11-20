@@ -245,6 +245,36 @@ ul {padding-left: 13px;}
       <p><img src="images/pull-up-assignment-after.png" alt="After"/></p>
     </td>
   </tr>
+
+  <tr id="use-switch"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=568611 -->
+    <td class="title"><a href="#use-switch">Use switch</a></td>
+    <td class="content">
+      A new clean up has been added that replaces <code>if</code>/<code>else</code> <code>if</code>/<code>else</code> blocks to use <code>switch</code> when possible.
+      <p>
+        It converts to <code>switch</code> when there are more than two cases.
+      </p>
+      <p>
+        It does not convert if the discriminant can be <code>null</code>, that is to say only primitive.
+      </p>
+      <p>
+        It does a variable conflict analyze.
+      </p>
+      <p>
+        The case value can be literals or constants.
+      </p>
+      <p>
+        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Convert if/else if/else chain to switch</b> check box on the <b>Code Style</b> tab.
+      </p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/use-switch-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/use-switch-after.png" alt="After"/></p>
+    </td>
+  </tr>
   
   <tr id="add-remove"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567335 -->
     <td class="title"><a href="#add-remove">Add elements in collections without loop</a></td>
