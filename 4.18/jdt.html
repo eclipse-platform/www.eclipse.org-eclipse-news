@@ -647,6 +647,33 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="stringbuilder"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=568472 -->
+    <td class="title"><a href="#stringbuilder">Use StringBuilder</a></td>
+    <td class="content">
+      A new clean up has been added that replaces <code>String</code> concatenation by <code>StringBuilder</code> when possible.
+      <p>
+        It uses <code>StringBuffer</code> for Java 1.4-.
+      </p>
+      <p>
+        It only replaces strings on several statements and the concatenation should have more than two pieces.
+      </p>
+      <p>
+        The variable should be only concatenated and it should retrieve the string once.
+      </p>
+      <p>
+        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Replace String concatenation by StringBuilder</b> check box on the <b>Optimization</b> tab.
+      </p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/stringbuilder-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/stringbuilder-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
   <tr id="primitive-serialization"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=568327 -->
     <td class="title"><a href="#primitive-serialization">Primitive serialization</a></td>
     <td class="content">
