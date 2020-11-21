@@ -201,30 +201,6 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
-  <tr id="atomic-object"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=568009 -->
-    <td class="title"><a href="#atomic-object">Uses atomic objects</a></td>
-    <td class="content">
-      A new clean up has been added that replaces an array with one index by an atomic object when used as a reference.
-      <p>
-        This cleanup only runs for Java 5 or higher.
-      </p>
-      <p>
-        The array should be local and used in an anonymous class or a lambda expression.
-      </p>
-      <p>
-        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Use atomic objects as reference</b> check box on the <b>Code Style</b> tab.
-      </p>
-      <p>
-        For the given code:
-      </p>
-      <p><img src="images/atomic-object-before.png" alt="Before"/></p>
-      <p>
-        One gets:
-      </p>
-      <p><img src="images/atomic-object-after.png" alt="After"/></p>
-    </td>
-  </tr>
-
   <tr id="pull-up-assignment"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=568188 -->
     <td class="title"><a href="#pull-up-assignment">Pull up assignment</a></td>
     <td class="content">
