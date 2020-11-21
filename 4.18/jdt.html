@@ -302,6 +302,28 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="ternary-operator"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=568822 -->
+    <td class="title"><a href="#ternary-operator">Use ternary operator</a></td>
+    <td class="content">
+      A new clean up has been added that replaces <code>(X && Y) || (!X && Z)</code> by <code>X ? Y : Z</code>.
+      <p>
+        The operands must be passive and boolean.
+      </p>
+      <p>
+        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Replace (X && Y) || (!X && Z) by X ? Y : Z</b> check box on the <b>Duplicate Code</b> tab.
+      </p>
+      <p><img src="images/ternary-operator-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/ternary-operator-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/ternary-operator-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
   <tr id="xor"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=568615 -->
     <td class="title"><a href="#xor">Use '==' or '^' on booleans</a></td>
     <td class="content">
@@ -332,6 +354,48 @@ ul {padding-left: 13px;}
         One gets:
       </p>
       <p><img src="images/xor-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
+  <tr id="redundant-falling-blocks"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567553 -->
+    <td class="title"><a href="#redundant-falling-blocks">Redundant falling through blocks</a></td>
+    <td class="content">
+      A new clean up has been added that detects a list of statements that ends with a jump statement (<code>return</code>, <code>break</code>, <code>continue</code> or <code>throw</code>), and has the same list of statements below that.
+      <p>
+        It detects similar statements. It also checks that the declarations of the variables in the statements are the same. It looks for redundant statements in <code>if</code>, <code>else</code>, <code>catch</code> and <code>finally</code> but not in loops.
+      </p>
+      <p>
+        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Remove redundant end of block with jump statement</b> check box on the <b>Duplicate Code</b> tab.
+      </p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/redundant-falling-blocks-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/redundant-falling-blocks-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
+  <tr id="if-condition"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567599 -->
+    <td class="title"><a href="#if-condition">Redundant if condition</a></td>
+    <td class="content">
+      A new clean up has been added that removes a condition on an <code>else</code> that is negative to the condition of the previous <code>if</code>.
+      <p>
+        The condition must be passive. The removed code should not throw an expected exception. The cleanup uses a deep condition comparison algorithm. 
+      </p>
+      <p>
+        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Redundant if condition</b> check box on the <b>Duplicate Code</b> tab.
+      </p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/if-condition-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/if-condition-after.png" alt="After"/></p>
     </td>
   </tr>
 
@@ -492,48 +556,6 @@ ul {padding-left: 13px;}
         One gets:
       </p>
       <p><img src="images/redundant-super-after.png" alt="After"/></p>
-    </td>
-  </tr>
-
-  <tr id="redundant-falling-blocks"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567553 -->
-    <td class="title"><a href="#redundant-falling-blocks">Redundant falling through blocks</a></td>
-    <td class="content">
-      A new clean up has been added that detects a list of statements that ends with a jump statement (<code>return</code>, <code>break</code>, <code>continue</code> or <code>throw</code>), and has the same list of statements below that.
-      <p>
-        It detects similar statements. It also checks that the declarations of the variables in the statements are the same. It looks for redundant statements in <code>if</code>, <code>else</code>, <code>catch</code> and <code>finally</code> but not in loops.
-      </p>
-      <p>
-        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Remove redundant end of block with jump statement</b> check box on the <b>Unnecessary Code</b> tab.
-      </p>
-      <p>
-        For the given code:
-      </p>
-      <p><img src="images/redundant-falling-blocks-before.png" alt="Before"/></p>
-      <p>
-        One gets:
-      </p>
-      <p><img src="images/redundant-falling-blocks-after.png" alt="After"/></p>
-    </td>
-  </tr>
-
-  <tr id="if-condition"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567599 -->
-    <td class="title"><a href="#if-condition">Redundant if condition</a></td>
-    <td class="content">
-      A new clean up has been added that removes a condition on an <code>else</code> that is negative to the condition of the previous <code>if</code>.
-      <p>
-        The condition must be passive. The removed code should not throw an expected exception. The cleanup uses a deep condition comparison algorithm. 
-      </p>
-      <p>
-        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Redundant if condition</b> check box on the <b>Unnecessary Code</b> tab.
-      </p>
-      <p>
-        For the given code:
-      </p>
-      <p><img src="images/if-condition-before.png" alt="Before"/></p>
-      <p>
-        One gets:
-      </p>
-      <p><img src="images/if-condition-after.png" alt="After"/></p>
     </td>
   </tr>
 
