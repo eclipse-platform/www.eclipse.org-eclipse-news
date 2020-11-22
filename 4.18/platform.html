@@ -27,6 +27,7 @@ ul {padding-left: 13px;}
     <li><a href="#TextEditors">Text Editors</a></li>
     <li><a href="#Preferences">Preferences</a></li>
     <li><a href="#StylingThemes">Themes and Styling</a></li>
+    <li><a href="#Debug">Debug</a></li>
 </ul>
 
 <!-- ****************** START OF N&N TABLE ****************** -->
@@ -165,6 +166,23 @@ ul {padding-left: 13px;}
 
 
   <!-- ******************* End of Themes and Styling ************************************* -->
+
+  <!-- ****************** Debug ************************************* -->
+  <tr>
+    <td id="Debug" class="section" colspan="2">
+    <h2>Debug </h2>
+    </td>
+  </tr>
+
+  <tr id="terminate-descendants"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567345 -->
+    <td class="title">Terminate descendants of operating-system processes launched by Eclipse</td>
+    <td class="content">
+      Some kind of launch-configurations start an operating-system processes when launched from Eclipse.
+      When you terminate the corresponding process before it completes (for example by clicking the <b>terminate</b> button, the red rectangle) that operating-system process is destroyed.
+      Now the descendants of that process, its child-processes created by the main-process and their children recursively, are destroyed too.
+  </td>
+  </tr>
+  <!-- ****************** End of Debug ************************************* -->
 
   <!-- ******************* General Updates ************************************* -->
 
