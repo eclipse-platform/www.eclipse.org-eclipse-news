@@ -103,6 +103,10 @@ ob_start();
     <p>The Equinox team would like to thank all the contributors that helped improve the project by filing bug reports and enhancement requests.  We also would like to thank the community of developers that have contributed to the Equinox code base this release:
        Alexander Kurtakov, Andrey Loskutov, Carsten Hammer, Christoph L&#xE4ubrich, Dirk Fauth, Lars Vogel, Mykola Nikishov, Sravan Kumar Lakkimsetti, Thomas Watson and Will Rogers.
       </p>
+      
+     <p>The Eclipse project and its contributors also want to deeply thank Daniel Megert, who was one of the initial committers, a project lead and a PMC member for many years, a mentor to many other contributors, and who contributed to the continued success of the Eclipse project on many leadership,
+      technical and process aspects beyond what a few words can say. Dani passed away during the development of Eclipse 4.18.
+     </p>
 
   </div>
 
