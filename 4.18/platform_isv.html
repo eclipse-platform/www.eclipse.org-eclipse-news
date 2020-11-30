@@ -153,6 +153,23 @@ ul {padding-left: 13px;}
 			</p>
 		</td>
 	</tr>
+  <tr id="lines-visible-css"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567821 -->
+   <td class="title"><a href="#lines-visible-css">Lines visible CSS option</a></td>
+   <td class="content">
+    Visibility of lines in trees and tables can now be configured using the <code>swt-lines-visible</code> CSS property. 
+    <p>
+     Here's how it looks when lines are disabled in the dark theme on Windows: <br/>
+     <img src="images/lines-visible-false.png" alt="" />
+    </p>
+    
+    Example usage in CSS:
+    <pre>
+     <code>Tree, Table {</code>
+     <code>  swt-lines-visible: false;</code>
+     <code>}</code>
+    </pre>
+   </td>
+  </tr>
  
   <!-- ******************** End of Platform ********************** -->
 
