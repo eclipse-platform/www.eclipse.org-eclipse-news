@@ -41,35 +41,38 @@ ul {padding-left: 13px;}
   <tr id="high-dpi-sceme"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567898 -->
    <td class="title"><a href="#high-dpi-sceme">JFace ImageDescriptor supports alternative naming scheme for high dpi</a></td>
     <td class="content">
-    	<p>Currently ImageDescriptor automatically provides higher DPI images if a
-		resource exits that ends with @x2 or @1.5</p>
+    	<p>Currently <code>ImageDescriptor</code> automatically provides higher DPI images if a
+		resource exits that ends with <b>@x2</b> or <b>@1.5</b>.</p>
 		<p>
 		This can rapidly blows the number of images required if multiple resolutions
-		are used as there are duplications (e.g. 16x16@2x is the same as 32x32 icon).The second limitation is that only
+		are used as there are duplications (e.g. 16x16@2x is the same as 32x32 icon). The second limitation is that only
 		two fixed zoom levels are supported at the moment.
 		</p>
 		<p>It is now possible to use an alternative naming scheme
 		where icon resources are organized in folders holding the resolution in
 		folder-name (e.g. icons/16x16/icon1.png, icons/32x32/icon1.png and so
 		on). This also has the advantage that it is possible to use other
-		scaling factors beside the 150/200% currently supported.</p>
+		scaling factors beside the 150/200% that are currently supported.</p>
     </td>
   </tr>
   <tr id="slice-monitor"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567808 -->
    <td class="title"><a href="#slice-monitor">Slicing Support for IProgressMonitor</a></td>
     <td class="content">
-    	<p>Previously it was possible to split a <code>IProgressMonitor</code> using <code>SubMonitor</code> class, while this works good in a linear workflow, it does not work well in distributed flows where each item want's to report progress independently.
-			Another drawback was, as the original progress monitor has no way to know about the split it is not possible to handle this in a user-friendly fashion e.g. it was not possible for a User-Control to show the progress independently.
+    	<p>Previously it was possible to split a <code>IProgressMonitor</code> using <code>SubMonitor</code> class, while this works good in a linear workflow, it does not work well in distributed flows where each item wants to report progress independently.
+			Another drawback was, as the original progress monitor has no way to know about the split, it's not possible to handle this in a user-friendly fashion. For e.g. it was not possible for a User-Control to show the progress independently.
 		</p>
-		<p>To overcome this limitations a new way of slicing a monitor was added <code>IProgressMonitor#slice(int work)</code> with the following properties:
+		<p>
+		 To overcome this limitations a new way of slicing a monitor was added <code>IProgressMonitor#slice(int work)</code> with the following properties:
+		</p>
 		<ul>
-			<li>slice is default implemented with a very basic slicing facility that can be override by implementations if required</li>
+			<li>slice is default implemented with a very basic slicing facility that can be overriden by implementations if required</li>
 			<li>the returned monitor behaves as if one has created a fresh instance with the given amount of work (that implies that the caller of slice(...) is responsible to call "done" on the returned monitor if no longer needed)</li>
 			<li>whenever a full work unit is reported on the slice it is propagated to the parent</li>
 			<li>it is safe to use slices in another thread</li>
-			<li>it is possible to create more than one slice without influence the others</li>
+			<li>it is possible to create more than one slice without influence on the others</li>
 		</ul>
-		For further details on usage check the javadoc of the new method.
+		<p>
+		 For further details on usage, check the javadoc of the new method.
 		</p>
     </td>
   </tr>	
@@ -93,7 +96,7 @@ ul {padding-left: 13px;}
   </tr>	
 
   <tr id="dialog-settings-platform"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=549929 -->
-   <td class="title"><a href="#dialog-settings-platform">PlatformUI</a></td>
+   <td class="title"><a href="#dialog-settings-platform">PlatformUI dialog settings</a></td>
     <td class="content">
     	<code>PlatformUI.getDialogSettingsProvider(Bundle)</code> has become the central place 
     	for getting bundle based dialog settings.
@@ -143,14 +146,13 @@ ul {padding-left: 13px;}
 			other products; it's available for installation from the Eclipse project p2 repository. Consumers would
 			typically need to include this bundle in there target-platform explicitly to provide an extension for
 			the Unit Test view.</p>
-			<p>Examples of consumers are:
+			<p>Examples of consumers are:</p>
 			<ul>
-			<li><code>org.eclipse.jdt.unittest.ui.jdt</code> bundle which provides alternative launchers for JUnit,
-			using the new Unit Test view for report</li>
-			<li>Corrosion plugin uses this Unit Test view to build support for Rust/Cargo test execution reporting, and</li>
-			<li>CDT also has some experimental code to use this view for C/C++ test report instead of a specific view.</li>
+			 <li><code>org.eclipse.jdt.unittest.ui.jdt</code> bundle which provides alternative launchers for JUnit,
+			  using the new Unit Test view for report</li>
+			 <li>Corrosion plugin uses this Unit Test view to build support for Rust/Cargo test execution reporting, and</li>
+			 <li>CDT also has some experimental code to use this view for C/C++ test report instead of a specific view.</li>
 			</ul>
-			</p>
 		</td>
 	</tr>
   <tr id="lines-visible-css"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567821 -->

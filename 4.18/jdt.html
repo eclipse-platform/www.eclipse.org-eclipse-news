@@ -74,11 +74,11 @@ ul {padding-left: 13px;}
   <tr id="completion-overwrites"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=423642 -->
     <td class="title"><a href="#completion-overwrites">Completion overwrites in Java editor</a></td>
     <td class="content">
-    	The Java editor now uses Completion overwrites as the default.
+    	The <b>Java Editor</b> now uses Completion overwrites as the default.
 		If Completion overwrites is on, the completion text replaces the characters following the caret position until the end of the word.
 		If Completion inserts is on, the completion text is inserted at the caret position, so it never overwrites any existing text. 
 		Note that pressing <code>Ctrl</code> when applying a completion proposal toggles between the two insertion modes.
-		<p>You can change the default in the Java &gt; Editor &gt; Content Assist preference page.</p>
+		<p>You can change the default in the <b>Java &gt; Editor &gt; Content Assist</b> preference page.</p>
     </td>
   </tr>
 
@@ -86,8 +86,10 @@ ul {padding-left: 13px;}
     <td class="title">Insert best guessed parameters in Java editor</td>
     <td class="content">
       Instead of simply inserting the method parameter names as placeholders, when a method is completed,
-      the Java editor now inserts the best guessed parameters by default.
-    <p>You can change the default in the Java &gt; Editor &gt; Content Assist preference page.</p>
+      the <b>Java Editor</b> now inserts the best guessed parameters by default.
+    <p>You can change the default in the <b>=]
+    Java &gt; Editor &gt; Content Assist</b>
+     preference page.</p>
     </td>
   </tr>
 
@@ -138,7 +140,7 @@ ul {padding-left: 13px;}
       <p>
         To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Convert to switch expression</b> check box on the <b>Code Style</b> tab.
       </p>
-      <p><img src="images/switch-expressions-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p><img src="images/switch-expressions-preferences.png" alt="Preferences" width="800"/></p>
       <p>
         For the given code:
       </p>
@@ -184,19 +186,19 @@ ul {padding-left: 13px;}
       <p>
         To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Compare with != 0 for bitwise expression</b> on the <b>Code Style</b> tab.
       </p>
-      <p><img src="images/bitwise-expressions-preferences.png" alt="Preferences" width="620 px"/></p>
+      <p><img src="images/bitwise-expressions-preferences.png" alt="Preferences" width="620"/></p>
       <table>
           <tr><td style="border-top: none">For the given code:</td><td style="border-top: none">You get this after the clean up:</td></tr>
           <tr>
-            <td style="border-top: none"><img src="images/bitwise-expressions-before.png" alt="Before" width="290 px"/></td>
-            <td style="border-top: none"><img src="images/bitwise-expressions-after.png" alt="After" width="290 px"/></td>
+            <td style="border-top: none"><img src="images/bitwise-expressions-before.png" alt="Before" width="290"/></td>
+            <td style="border-top: none"><img src="images/bitwise-expressions-after.png" alt="After" width="290"/></td>
           </tr>
       </table>
 <!--
       For the given code:
-      <p><img src="images/bitwise-expressions-before.png" alt="Before" width="350 px"/></p>
+      <p><img src="images/bitwise-expressions-before.png" alt="Before" width="350"/></p>
       You get this after the clean up:
-      <p><img src="images/bitwise-expressions-after.png" alt="After" width="350 px"/></p>
+      <p><img src="images/bitwise-expressions-after.png" alt="After" width="350"/></p>
 -->
     </td>
   </tr>
@@ -266,7 +268,7 @@ ul {padding-left: 13px;}
       <p>
         To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Add elements in collections without loop</b> check box on the <b>Code Style</b> tab.
       </p>
-      <p><img src="images/add-remove-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p><img src="images/add-remove-preferences.png" alt="Preferences" width="800"/></p>
       <p>
         For the given code:
       </p>
@@ -281,14 +283,14 @@ ul {padding-left: 13px;}
   <tr id="ternary-operator"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=568822 -->
     <td class="title"><a href="#ternary-operator">Use ternary operator</a></td>
     <td class="content">
-      A new clean up has been added that replaces <code>(X && Y) || (!X && Z)</code> by <code>X ? Y : Z</code>.
+      A new clean up has been added that replaces <code>(X &amp;&amp; Y) || (!X &amp;&amp; Z)</code> by <code>X ? Y : Z</code>.
       <p>
         The operands must be passive and boolean.
       </p>
       <p>
-        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Replace (X && Y) || (!X && Z) by X ? Y : Z</b> check box on the <b>Duplicate Code</b> tab.
+        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Replace (X &amp;&amp; Y) || (!X &amp;&amp; Z) by X ? Y : Z</b> check box on the <b>Duplicate Code</b> tab.
       </p>
-      <p><img src="images/ternary-operator-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p><img src="images/ternary-operator-preferences.png" alt="Preferences" width="800"/></p>
       <p>
         For the given code:
       </p>
@@ -303,7 +305,7 @@ ul {padding-left: 13px;}
   <tr id="xor"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=568615 -->
     <td class="title"><a href="#xor">Use '==' or '^' on booleans</a></td>
     <td class="content">
-      A new clean up has been added that replaces <code>(X && !Y) || (!X && Y)</code> by <code>X ^ Y</code> and replaces <code>(X && Y) || (!X && !Y)</code> by <code>X == Y</code>.
+      A new clean up has been added that replaces <code>(X &amp;&amp; !Y) || (!X &amp;&amp; Y)</code> by <code>X ^ Y</code> and replaces <code>(X &amp;&amp; Y) || (!X &amp;&amp; !Y)</code> by <code>X == Y</code>.
       <p>
         It only works on boolean.
       </p>
@@ -389,7 +391,7 @@ ul {padding-left: 13px;}
       <p>
         To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Use Objects.hash()</b> check box on the <b>Unnecessary Code</b> tab.
       </p>
-      <p><img src="images/hash-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p><img src="images/hash-preferences.png" alt="Preferences" width="800"/></p>
       <p>
         For the given code:
       </p>
@@ -764,7 +766,7 @@ ul {padding-left: 13px;}
       <p>
         To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Prefer boolean literals</b> check box on the <b>Optimization</b> tab.
       </p>
-      <p><img src="images/boolean-literal-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p><img src="images/boolean-literal-preferences.png" alt="Preferences" width="800"/></p>
       <p>
         For the given code:
       </p>
@@ -786,9 +788,9 @@ ul {padding-left: 13px;}
   </tr>
   
     <tr id="search-permitted-types"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=564624 -->
-      <td class="title">Fine-grain search for permitted types</td>
+      <td class="title">Fine-grained search for permitted types</td>
       <td class="content">
-      	  You can perform a fine-grain search for permitted type declarations in the Search dialog <b>(Ctrl+H)</b> &gt; Java Search &gt; Limit To &gt; Match Locations with the new option:
+      	  You can perform a fine-grained search for permitted type declarations in the <b>Search dialog (Ctrl+H) &gt; Java Search &gt; Limit To &gt; Match Locations</b> with the new option:
           <p>
             <img src="images/search_permitted_type.png" alt="" />
           </p>
@@ -798,20 +800,22 @@ ul {padding-left: 13px;}
   <tr id="package-explorer-lib-sortedbydefault"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=568877 -->
       <td class="title">Sort library entries alphabetically in Package Explorer enabled by default</td>
       <td class="content">
-      	The Preferences > Java > Appearance > [x] Sort library entries alphabetically in Package Explorer is now enabled by default.
+      	The <b>Preferences > Java > Appearance > [x] Sort library entries alphabetically in Package Explorer</b> is now enabled by default.
       	This makes it easier for you to see if a library is available or not.
-      	If you want to see the order in which the libraries are added to the classpath, e.g. to understand classpath loading issues, you can disable the preference.
+      	<p>
+      	 If you want to see the order in which the libraries are added to the classpath, e.g. to understand classpath loading issues, you can disable the preference.
+      	</p>
       </td>
   </tr>
   
   <!-- ******************* End of Java Views and Dialogs ************************************* -->
 
   <!-- ******************* Java Compiler ************************************* -->
-  <tr>
+  <!--<tr>
     <td id="JavaCompiler" class="section" colspan="2">
     <h2>Java Compiler</h2>
     </td>
-  </tr>
+  </tr>-->
   <!-- ******************* End of Java Compiler ************************************* -->
 
   <!-- ******************* Java Formatter ************************************* -->
@@ -846,7 +850,7 @@ ul {padding-left: 13px;}
   <tr id="launch-with-argfile"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=565902 -->
       <td class="title">Support for @argfiles when launching</td>
       <td class="content">
-          A new check box was added to the Arguments tab for Java based launch configurations (Java Application, JUnit, and others) for writing arguments into an @argfile.
+          A new check box was added to the <b>Arguments</b> tab for Java based launch configurations (Java Application, JUnit, and others) for writing arguments into an @argfile.
           This is disabled below Java 9 and can be enabled for Java programs launched with Java 9 and above.
           <p>
             <img src="images/launch-with-argfile.png" alt="screenshot showing new checkbox" />
