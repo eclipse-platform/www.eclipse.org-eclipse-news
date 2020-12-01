@@ -34,14 +34,14 @@ cd $1
 
 echo "Replacing 4.x with $1 to files in `pwd`"
 
-sed -i .bak "s/4\.x/$1/g" index.html
-sed -i .bak "s/4\.x/$1/g" jdt.html
-sed -i .bak "s/4\.x/$1/g" pde.html
-sed -i .bak "s/4\.x/$1/g" platform.html
-sed -i .bak "s/4\.x/$1/g" platform_isv.html
+sed -i'.bak' -e "s/4\.x/$1/g" index.html
+sed -i'.bak' -e "s/4\.x/$1/g" jdt.html
+sed -i'.bak' -e "s/4\.x/$1/g" pde.html
+sed -i'.bak' -e "s/4\.x/$1/g" platform.html
+sed -i'.bak' -e "s/4\.x/$1/g" platform_isv.html
 
 echo "Replacing YYYY-MM with $2 in index.html"
-sed -i .bak "s/YYYY-MM/$2/g" index.html
+sed -i'.bak' -e "s/YYYY-MM/$2/g" index.html
 
 echo "Deleting backup files"
 rm *.html.bak
