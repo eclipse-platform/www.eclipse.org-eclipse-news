@@ -65,7 +65,7 @@ cpan install HTML::TokeParser::Simple
 Steps:
 ===============================================
 1. Run copyNewsToDocBundle.pl with 3 arguments - release folder name, news repo location, platform doc repo location
-This copies the html content for the specific release from the news repo to platform common repo
+This copies the news content from the *.html files for the specific release from the news repo to platform common repo.
 
 perl copyNewsToDocBundle.pl <release-version> <path-of-news-repo> <path-of-platform-common-repo>
 
