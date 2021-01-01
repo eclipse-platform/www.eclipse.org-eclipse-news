@@ -51,6 +51,21 @@ ul {padding-left: 13px;}
   <!-- ******************** APITools ********************** -->
   <tr>
     <td id="APITools" class="section" colspan="2"><h2>API Tools</h2></td>
+   </tr>
+       <tr id="pde-compiler-info-sev"> <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=569528 -->
+    <td class="title"><a href="#pde-warn-missing-bundle-from-baseline">Warn missing bundle from the baseline</a></td>
+    <td class="content">
+   	  In <b>Preferences &gt; Plug-in Development &gt; API Baselines</b>, there is a new option to warn about missing bundle from the baseline.
+      <p>
+       <img src="images/pde-new-option.png" alt="" />
+      </p>
+       The default severity for this option is warning and for the plug-ins that are not present in currently set active API baseline, API tools reports
+       the warning as below.
+      <p>
+       <img src="images/pde-warn-missing-bundle-from-baseline.png" alt="" />
+      </p>
+    </td>
+    
   </tr>
   <!-- ******************** End of APITools ********************** -->
   
