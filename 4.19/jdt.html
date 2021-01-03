@@ -61,7 +61,29 @@ ul {padding-left: 13px;}
   <!-- ******************* Java Editor ************************************* -->
   <tr>
     <td id="JavaEditor" class="section" colspan="2">
-    <h2>Java Editor </h2>
+    <h2>Java Editor</h2>
+    </td>
+  </tr>
+
+  <tr id="multi-catch"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569879 -->
+    <td class="title"><a href="#multi-catch">Multi-catch</a></td>
+    <td class="content">
+      A new clean up has been added that refactors catch clauses with the same body to use Java 7's multi-catch.
+      <p>
+        The feature is enabled only with Java 7 or higher.
+      </p>
+      <p>
+        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Use Multi-catch</b> check box on the <b>Java Feature</b> tab.
+      </p>
+      <p><img src="images/multi-catch-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/multi-catch-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/multi-catch-after.png" alt="After"/></p>
     </td>
   </tr>
   <!-- ******************* End of Java Editor ************************************* -->
