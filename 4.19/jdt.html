@@ -114,6 +114,20 @@ ul {padding-left: 13px;}
       <p><img src="images/control-flow-merge-after.png" alt="After"/></p>
     </td>
   </tr>
+  
+  <tr id="restricted-identifier-preference"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569759 -->
+    <td class="title"><a href="#restricted-identifier-preference">'Restricted identifiers' preference to color restricted identifiers</a></td>
+    <td class="content">
+      A new preference 'Restricted identifiers' has been added under  Java > Editor > Syntax Coloring , under the Java Category.
+      <p>
+         Some identifiers (for eg. var ,yield, record etc..) are restricted identifiers because they are not allowed in some contexts.
+         Semantic highlighting options for such identifiers can be controlled by the language element <strong>Restricted identifiers</strong> 
+         under <strong>Java</strong> category. in the preference page <strong>Java</strong> > <strong>Editor</strong> > <strong>Syntax Coloring</strong>.
+         This preference is highlighted in the image below.
+      </p>
+      <p><img src="images/restricted-identifier-preference.png" alt="After"/></p>
+    </td>
+  </tr>
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
