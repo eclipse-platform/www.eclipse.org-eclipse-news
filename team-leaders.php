@@ -49,8 +49,7 @@ ob_start();
         are further divided into component teams, each of who has a leader that 
         is responsible for its overall success. We have listed just the PMC and 
         subproject leaders here but you will encounter many dedicated Eclipse 
-        Project committers and developers in the <a href="../newsgroups/index.html" target="_top">newsgroup</a> 
-        and <a href="http://www.eclipse.org/mail/index_all.php" target="_top">mailing lists</a>.</p>
+        Project committers and developers in the <a href="http://www.eclipse.org/mail/index_all.php" target="_top">mailing lists</a>.</p>
 
 		<div class="homeitem3col">
 			<h3>Project Management Committee Members</h3>
