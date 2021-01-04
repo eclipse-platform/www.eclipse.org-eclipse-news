@@ -65,15 +65,6 @@ ob_start();
 				  subproject.
 		        </li>
 		        <li> 
-		          <b><a name="dani"></a>Dani Megert, IBM Research - Zurich</b><br>
-			      Dani is one of the initial Eclipse committers. Currently he leads the <a href="https://wiki.eclipse.org/Platform">Platform</a> and the <a href="http://eclipse.org/jdt">JDT</a> subprojects,
-			      represents the project in the Eclipse <a href="http://wiki.eclipse.org/Planning_Council">Planning Council</a>, and is also a
-			      a member of the Eclipse <a href="http://wiki.eclipse.org/Architecture_Council">
-			      Architecture Council</a>.
-			      He has been elected by the committers to represent them in the <a href="https://eclipse.org/org/foundation/directors.php">Eclipse Foundation Board of Directors</a>.
-			      Dani worked at OTI and now works at IBM Research GmbH. His interests include user interface and API design, editors, software quality and performance.
-		        </li>
-		        <li> 
 		          <b><a name="aleksandar"></a>Aleksandar Kurtakov, Red Hat Inc.</b><br>
 					Aleksandar is part of Red Hat's Eclipse team. He is Platform SWT committer, Tools PMC member and leads the <a href="http://www.eclipse.org/linuxtools/">Linux Tools</a> project.
 					He is very interested in deeper native platform integration both as runtime experience and as distribution channel.
@@ -180,6 +171,15 @@ ob_start();
 			      Architecture Council</a> as its chair. His interests include programming
 			      languages, patterns and paradigms, optimizing development processes,
 			      skiing, hiking, and playing all sorts of musical instruments.
+		        </li>
+		         <li> 
+		          <b><a name="dani"></a>Dani Megert, IBM Research - Zurich</b><br>
+			      Dani is one of the initial Eclipse committers.He led the <a href="https://wiki.eclipse.org/Platform">Platform</a> and the <a href="http://eclipse.org/jdt">JDT</a> subprojects,
+			      represented the project in the Eclipse <a href="http://wiki.eclipse.org/Planning_Council">Planning Council</a>, and was also a
+			      a member of the Eclipse <a href="http://wiki.eclipse.org/Architecture_Council">
+			      Architecture Council</a>.
+			      He was elected by the committers to represent them in the <a href="https://eclipse.org/org/foundation/directors.php">Eclipse Foundation Board of Directors</a>.
+			      Dani worked at OTI and IBM Research GmbH. His interests included user interface and API design, editors, software quality and performance.
 		        </li>
 		      </ul>
 		</div>
