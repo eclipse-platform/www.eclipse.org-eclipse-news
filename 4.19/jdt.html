@@ -136,6 +136,21 @@ ul {padding-left: 13px;}
     <h2>Java Views and Dialogs</h2>
     </td>
   </tr>
+  
+  <tr id="parallel-index-search"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567521 -->
+      <td class="title"><a href="#parallel-index-search">Parallel index search</a></td>
+      <td class="content">
+      	  New preference option was added and enabled by default:
+      	  <b>Preferences > Java > [x] Enable parallel index search</b>.  
+      	  Depending on available hardware, this option should improve performance 
+      	  for all index based Java search operations, but could also lead to possible regressions. 
+      	  To switch back to the old sequantial index search, turn this option off: 
+          <p>
+            <img src="images/parallel-index-search.png" alt="" />
+          </p>
+      </td>
+  </tr>
+  
   <!-- ******************* End of Java Views and Dialogs ************************************* -->
 
   <!-- ******************* Java Compiler ************************************* -->
