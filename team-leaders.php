@@ -56,7 +56,7 @@ ob_start();
 			<h3>Project Management Committee Members</h3>
 		      <ul>
 		        <li> 
-		          <b><a name="McQ"></a>Mike ("McQ") Wilson, IBM Ottawa</b><br>
+		          <b><a id="McQ"></a>Mike ("McQ") Wilson, IBM Ottawa</b><br>
 			      McQ is the overall lead for the Eclipse Project aka PMC Lead.
 			      He is a senior architect of the Eclipse SDK, a member of the Eclipse <a href="http://wiki.eclipse.org/Architecture_Council">
 			      Architecture Council</a> and one of the original Eclipse Founders. His interests include computer
@@ -65,20 +65,20 @@ ob_start();
 				  subproject.
 		        </li>
 		        <li> 
-		          <b><a name="aleksandar"></a>Aleksandar Kurtakov, Red Hat Inc.</b><br>
+		          <b><a id="aleksandar"></a>Aleksandar Kurtakov, Red Hat Inc.</b><br>
 					Aleksandar is part of Red Hat's Eclipse team. He is Platform SWT committer, Tools PMC member and leads the <a href="http://www.eclipse.org/linuxtools/">Linux Tools</a> project.
 					He is very interested in deeper native platform integration both as runtime experience and as distribution channel.
 					He is also interested in growing the contributors and better aligning with modern systems.
 		        </li>
 				<li>
-		          <b><a name="lars"></a>Lars Vogel, vogella GmbH</b><br>
+		          <b><a id="lars"></a>Lars Vogel, vogella GmbH</b><br>
 					Lars represents the user and adopter community of Eclipse. Lars is founder and CEO of the vogella GmbH based in Hamburg, Germany.
 					He is an active Platform UI and PDE committer, contributor to other Eclipse projects and co-leads the <a href="http://www.eclipse.org/e4/">e4</a>  and
 					<a href="https://www.eclipse.org/eclipse/platform-ui/">Platform UI</a> project.
 					His interests include API and UI simplification, code clean and growing the number of committers and contributors in the project.
 		        </li>
 				<li>
-		          <b><a name="tom"></a>Tom Watson, IBM Austin</b><br>
+		          <b><a id="tom"></a>Tom Watson, IBM Austin</b><br>
 					Tom is one of the initial committers of the Equinox project and was involved in the initial migration of the Eclipse runtime to the OSGi Framework.
 					Currently he leads the Equinox Project, represents IBM in the Eclipse Planning Council, and is also a member of the Eclipse Architecture Council.
 					He focuses is on modularity and the OSGi Framework design and development. Tom is also a leader in the specification development process at the OSGi Alliance.
@@ -90,14 +90,14 @@ ob_start();
 			The following are Eclipse Project PMC Emeriti:
 		      <ul>
 		        <li> 
-		          <b><a name="erich"></a>Erich Gamma</b><br>
+		          <b><a id="erich"></a>Erich Gamma</b><br>
 					Erich was the original lead of the Eclipse Java development environment.
 					Prior to working on Eclipse he contributed to VA/Micro Edition (part
 					of IBM's Java solution for embedded device programming). Erich is well known for
 					his work on Design Patterns and <a href="http://www.junit.org/" target="_top">JUnit</a>.
 		        </li>
 		        <li> 
-		          <b><a name="kevin"></a>Kevin Haaland</b><br>
+		          <b><a id="kevin"></a>Kevin Haaland</b><br>
 					Kevin was a key contributor to the design and implementation of the
 					Platform UI. He was previously component lead for the Platform UI, and
 					has a long history of building user interface technology at OTI. In a past
@@ -105,7 +105,7 @@ ob_start();
 					the IBM VA/Java project.
 		        </li>
 		        <li> 
-		          <b><a name="jeff"></a>Jeff McAffer</b><br>
+		          <b><a id="jeff"></a>Jeff McAffer</b><br>
 		           Jeff McAffer co-led the RT Equinox project and is the Founder of <a href="http://code9.com">Code 9</a>.
 			       He is one of the architects of the Eclipse Platform and a co-author of
 			       <a href="http://eclipsercp.org">The Eclipse Rich Client Platform</a> (Addison-Wesley).
@@ -115,7 +115,7 @@ ob_start();
 			       and a PhD at the University of Tokyo.
 		        </li>
 		        <li> 
-		          <b><a name="andrew"></a>Andrew Overholt, Mozilla</b><br>
+		          <b><a id="andrew"></a>Andrew Overholt, Mozilla</b><br>
 					Andrew works on open source technologies at Mozilla in Toronto.
 					He has been involved with the Eclipse community since 2005
 					and is a member of the Eclipse <a href="http://wiki.eclipse.org/Architecture_Council">Architecture Council</a>.
@@ -123,7 +123,7 @@ ob_start();
 					Eclipse community and to improve native platform integration.
 		        </li>
 		        <li> 
-		          <b><a name="philippe"></a>Philippe Mulet</b><br>
+		          <b><a id="philippe"></a>Philippe Mulet</b><br>
 					Philippe is a former PMC and JDT project lead. Prior to Eclipse,
 					Philippe was responsible for the compiler and codeassist in IBM VA/Java
 					and VA/Micro Edition. Philippe was a member of the expert group on compiler
@@ -131,21 +131,21 @@ ob_start();
 					performance, scalability and meta-level architectures.
 		        </li>
 		        <li>
-		          <b><a name="steve"></a>Steve Northover</b><br>
+		          <b><a id="steve"></a>Steve Northover</b><br>
 			      Steve Northover is the father of SWT (the Standard Widget Toolkit). Prior to
 			      working on Eclipse, he worked on IBM Smalltalk, VA/Java, VA/Micro Edition.
 			      His interests include programming languages, API design, operating systems,
 			      user interfaces and code optimization.
 		        </li>
 		        <li> 
-		          <b><a name="johnw"></a>John Wiegand</b><br>
+		          <b><a id="johnw"></a>John Wiegand</b><br>
 					John was a principal architect for the platform infrastructure. John played
 					a central role in the development of IBM VA/Java, VA/Micro Edition, and
 					Eclipse. His interests are in the areas of performance, scalability,
 					compilers, and just about anything that's hard.
 		        </li>
 		        <li> 
-		          <b><a name="john"></a>John Arthorne</b><br>
+		          <b><a id="john"></a>John Arthorne</b><br>
 			      John has worked on the <a href="http://eclipse.org/eclipse">Eclipse</a> and <a href="http://eclipse.org/equinox">Equinox</a> 
 			      projects for the past decade in many different areas. He was the main developer on the resource model for many years, 
 			      and designed the platform's concurrency infrastructure. In recent years he has focused on the Orion project, provisioning (p2), 
@@ -154,14 +154,14 @@ ob_start();
 			      book</a> on Eclipse.
 		        </li>
 				<li>
-		          <b><a name="sergey"></a>Sergey Prigogin, Google</b><br>
+		          <b><a id="sergey"></a>Sergey Prigogin, Google</b><br>
 					Sergey is part of Google's Eclipse team. He is CDT and Platform UI committer and co-leads Platform Resources.
 					His primary areas of interest are C++ parsing, indexing, refactoring and making Eclipse faster and more responsive.
 					He is also interested in growing the number of Platform committers and contributors and making contributing to the
 					Eclipse Platform projects as frictionless as possible.
 		        </li>
 		        <li> 
-		          <b><a name="martin"></a>Martin Oberhuber, Wind River</b><br>
+		          <b><a id="martin"></a>Martin Oberhuber, Wind River</b><br>
 			      Martin was on the PMC representing the Community aspect of Eclipse and
 			      the e4 project. He is a Platform Core Resources and e4 committer,
 			      co-leading the e4 Resources work. Martin also serves on the 
@@ -173,7 +173,7 @@ ob_start();
 			      skiing, hiking, and playing all sorts of musical instruments.
 		        </li>
 		         <li> 
-		          <b><a name="dani"></a>Dani Megert, IBM Research - Zurich</b><br>
+		          <b><a id="dani"></a>Dani Megert, IBM Research - Zurich</b><br>
 			      Dani is one of the initial Eclipse committers.He led the <a href="https://wiki.eclipse.org/Platform">Platform</a> and the <a href="http://eclipse.org/jdt">JDT</a> subprojects,
 			      represented the project in the Eclipse <a href="http://wiki.eclipse.org/Planning_Council">Planning Council</a>, and was also a
 			      a member of the Eclipse <a href="http://wiki.eclipse.org/Architecture_Council">
