@@ -189,14 +189,14 @@ ob_start();
 	<!-- remove the entire <div> tag to omit the right column!  -->
 	<div id="rightcolumn">
 		<div class="sideitem">
-			<h6>Subproject Leads</h6>
+			<h6>Subprojects</h6>
 			<ul>
-				<li><a href="http://wiki.eclipse.org/Platform">Platform</a><br> -- <a href="#dani">Dani Megert</a></li>
-				<li><a href="http://www.eclipse.org/jdt/" target="_top">JDT</a><br> -- <a href="#dani">Dani Megert</a></li>
-				<li><a href="http://www.eclipse.org/pde/">PDE</a><br> -- Vikas Chandra and Curtis Windatt</a></li>
-				<li><a href="http://www.eclipse.org/e4/" target="_top">e4</a><br> -- <a href="#dani">Dani Megert</a> and Lars Vogel</li>
-      		</ul>				
-		</div>
+				<li><a href="https://projects.eclipse.org/projects/eclipse.platform">Platform</a></li>
+				<li><a href="https://projects.eclipse.org/projects/eclipse.jdt">JDT</a></li>
+				<li><a href="https://projects.eclipse.org/projects/eclipse.pde">PDE</a></li>
+				<li><a href="https://projects.eclipse.org/projects/eclipse.equinox">Equinox</a></li>
+				<li><a href="https://projects.eclipse.org/projects/eclipse.e4">e4</a></li>
+      		</ul>		
 	</div>
 
 <?php
