@@ -44,6 +44,29 @@ ul {padding-left: 13px;}
   <tr>
     <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
   </tr>
+  <tr id="resource-disposal-tracking"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569752 -->
+   <td class="title"><a href="#resource-disposal-tracking">Resource disposal tracking</a></td>
+    <td class="content">
+	New <code>org.eclipse.swt.graphics.Resource.trackNonDisposed(boolean)</code> and 
+	 <code>org.eclipse.swt.graphics.Resource.trackNonDisposed(boolean,NonDisposedReporter)</code> API  
+	is added which allows to track not properly disposed SWT resources.
+	A custom <code>NonDisposedReporter</code> can be supplied to define how not disposed
+	SWT resources should be reported.
+	<p>
+	Additionally, 
+	<code>"org.eclipse.swt.graphics.Resource.reportNonDisposed"</code> system
+	property can be specified with following values:
+	<ul>
+	<li>if set to "true", SWT will report not disposed SWT resource without
+	allocating exception at SWT resource creation time.
+	</li>
+	<li>
+	if set to "stacks", SWT will aditionally report the stack recorded at
+	resource creation time.
+	</li>
+	
+    </td>
+  </tr>
   <!-- *********************** End of SWT *********************** -->
 
 </tbody>
