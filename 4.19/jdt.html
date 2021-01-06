@@ -149,6 +149,35 @@ ul {padding-left: 13px;}
       <p><img src="images/restricted-identifier-preference.png" alt=""/></p>
     </td>
   </tr>
+  <tr id="annotate-for-source-folders"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=509397 -->
+    <td class="title"><a href="#annotate-for-source-folders">Externally annotate sources</a></td>
+    <td class="content">
+      The concept of external null annotations has been extended to apply to source folders, too.
+      <p>
+        External annotations had been <a href="https://www.eclipse.org/eclipse/news/4.5/jdt.php#external-annotations">introduced in Eclipse 4.5</a>
+        in order to overlay not-editable library classes with null annotations to specify the null contract
+        against which library calls should be analysed.
+        You can now apply the same concept for another kind of classes that should not be edited: generated source code.
+      </p>
+      <p>
+        In the <strong>Java Build Path</strong> dialog, also source folders now have a node "External annotations"
+        where a path to Eclipse External Annotation files (.eea) can be configured.
+      </p>
+      <p><img src="images/annotate-sources-config.png" alt="Configure Annotation Path"/></p>
+      <p>
+        Given a project that is configured for annotation based null analysis, and given a Java class
+        inside a source folder configured for external annotations, the editor now offers a quick assist (<strong>Ctrl+1</strong>)
+        for annotating individual type references in the signatures of methods and fields.
+      </p>
+      <p><img src="images/annotate-sources-assist.png" alt="Configure Annotation Path"/></p>
+      <p>
+        The selected option will record that the return type should be interpreted as <code>@NonNull List&lt;Attribute&gt;</code>
+        (the popup to the right showing the internal format how this annotation will be stored in an .eea file).
+        With this annotation in place, the annotated signature will be shown in hovers and will be used for null analysis:
+      </p>
+      <p><img src="images/annotate-sources-effect.png" alt="Configure Annotation Path"/></p>
+    </td>
+  </tr>
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
