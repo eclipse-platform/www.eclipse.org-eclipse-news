@@ -99,34 +99,48 @@ ul {padding-left: 13px;}
   </tr>
 
   <tr id="control-flow-merge"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=568656 -->
-    <td class="title"><a href="#control-flow-merge">Extract common code from if/else statement</a></td>
+    <td class="title"><a href="#control-flow-merge">Pull down common code from if/else statement</a></td>
     <td class="content">
-      A new clean up has been added that extracts common code from all <code>if</code> / <code>else if</code> / <code>else</code> statements at the end of each block.
+      A new clean up has been added that extracts common ending code from a <code>if</code> / <code>else if</code> / <code>else</code> control flow.
       <p>
         Ultimately it removes the empty and passive <code>if</code> conditions.
       </p>
       <p>
-        The statement matching performs a deep analysis. All the blocks may end with the same statements, or the blocks with different code may end with a jump statement (<code>return</code>, <code>throw</code>, <code>continue</code> or <code>break</code>).
+        The duplicate code should not rely on variables declared in the block.
       </p>
       <p>
-        To apply the clean up, select <b>Extract common code from if/else statement</b> check box on the <b>Duplicate code</b> tab in your clean up profile.
+        The control flow should have an <code>else</code> clause.
+      </p>
+      <p>
+        The statement matching performs a deep analysis. All the blocks should end with the same statements, or the blocks with different code should fall through with a jump statement (<code>return</code>, <code>throw</code>, <code>continue</code> or <code>break</code>).
+      </p>
+      <p>
+        To apply the clean up, select <b>Pull down common code from if/else statement</b> check box on the <b>Duplicate code</b> tab in your clean up profile.
       </p>
       <p><img src="images/control-flow-merge-preferences.png" alt="Preferences" width="800 px"/></p>
       <p>
         For the given code:
       </p>
-      <p><img src="images/control-flow-merge-before.png" alt="Before"/></p>
+      <p><img src="images/control-flow-merge-before.png" alt="Before cleaning similar tails of blocks"/></p>
       <p>
         One gets:
       </p>
-      <p><img src="images/control-flow-merge-after.png" alt="After"/></p>
+      <p><img src="images/control-flow-merge-after.png" alt="After cleaning similar tails of blocks"/></p>
+      <p>
+        And for the given code where almost all tails of blocks are identical but one block falls through:
+      </p>
+      <p><img src="images/control-flow-merge-jump-statement-before.png" alt="Before cleaning jump statement"/></p>
+      <p>
+        The identical tails of blocks have been pulled down below from the control flow and the falling through block have been left as it is:
+      </p>
+      <p><img src="images/control-flow-merge-jump-statement-after.png" alt="After cleaning jump statement"/></p>
     </td>
   </tr>
   
   <tr id="restricted-identifier-preference"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569759 -->
     <td class="title"><a href="#restricted-identifier-preference">Coloring restricted identifiers</a></td>
     <td class="content">
-      A new option named <b>Restricted identifiers</b> has been added under Java category in Java &gt; Editor &gt; Syntax Coloring perferences.
+      A new option named <b>Restricted identifiers</b> has been added under Java category in Java &gt; Editor &gt; Syntax Coloring preferences.
       <p>
          Some identifiers (e.g. var, yield, record etc.) are restricted identifiers because they are not allowed in some contexts.
          Semantic highlighting options for such identifiers can be controlled by the element <strong>Restricted identifiers</strong> 
