@@ -66,25 +66,25 @@ ul {padding-left: 13px;}
   </tr>
 
   <tr id="java-feature"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569711 -->
-    <td class="title"><a href="#java-feature">Java Feature tab</a></td>
+    <td class="title"><a href="#java-feature">Java Feature Clean Ups</a></td>
     <td class="content">
-      A new tab has been added that gathers cleanups that introduce the use of features from different Java versions.
+      A new tab named <b>Java Feature</b> has been added to the clean up preferences. It lists the clean up options that introduce the use of language features from different Java versions.
       <p>
-        Use those cleanups if you just have upgraded your JVM.
+        You can use these clean ups while upgrading the Java version in your code.
       </p>
       <p><img src="images/multi-catch-preferences.png" alt="Preferences" width="800 px"/></p>
     </td>
   </tr>
 
   <tr id="multi-catch"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569879 -->
-    <td class="title"><a href="#multi-catch">Multi-catch</a></td>
+    <td class="title"><a href="#multi-catch">Multi-catch clean up</a></td>
     <td class="content">
-      A new clean up has been added that refactors catch clauses with the same body to use Java 7's multi-catch.
+      A new clean up has been added that converts catch clauses with same body to Java 7's multi-catch.
       <p>
         The feature is enabled only with Java 7 or higher.
       </p>
       <p>
-        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Use Multi-catch</b> check box on the <b>Java Feature</b> tab.
+        To apply the clean up, select <b>Use Multi-catch</b> check box on the <b>Java Feature</b> tab in your clean up profile.
       </p>
       <p><img src="images/multi-catch-preferences.png" alt="Preferences" width="800 px"/></p>
       <p>
@@ -99,20 +99,17 @@ ul {padding-left: 13px;}
   </tr>
 
   <tr id="control-flow-merge"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=568656 -->
-    <td class="title"><a href="#control-flow-merge">Pull down common code from if/else statement</a></td>
+    <td class="title"><a href="#control-flow-merge">Extract common code from if/else statement</a></td>
     <td class="content">
-      A new clean up has been added that factorizes common code from all <code>if</code> / <code>else if</code> / <code>else</code> statements at the end of each blocks.
+      A new clean up has been added that extracts common code from all <code>if</code> / <code>else if</code> / <code>else</code> statements at the end of each block.
       <p>
         Ultimately it removes the empty and passive <code>if</code> conditions.
       </p>
       <p>
-        The statement matching does a deep analyze.
+        The statement matching performs a deep analysis. All the blocks may end with the same statements, or the blocks with different code may end with a jump statement (<code>return</code>, <code>throw</code>, <code>continue</code> or <code>break</code>).
       </p>
       <p>
-        All the blocks may end with the same statements, or the blocks with different code may end with a jump statement (<code>return</code>, <code>throw</code>, <code>continue</code> or <code>break</code>).
-      </p>
-      <p>
-        To apply the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog, select <b>Extract common code from if/else statement</b> check box on the <b>Duplicate code</b> tab.
+        To apply the clean up, select <b>Extract common code from if/else statement</b> check box on the <b>Duplicate code</b> tab in your clean up profile.
       </p>
       <p><img src="images/control-flow-merge-preferences.png" alt="Preferences" width="800 px"/></p>
       <p>
@@ -127,16 +124,15 @@ ul {padding-left: 13px;}
   </tr>
   
   <tr id="restricted-identifier-preference"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569759 -->
-    <td class="title"><a href="#restricted-identifier-preference">'Restricted identifiers' preference to color restricted identifiers</a></td>
+    <td class="title"><a href="#restricted-identifier-preference">Coloring restricted identifiers</a></td>
     <td class="content">
-      A new preference 'Restricted identifiers' has been added under  Java > Editor > Syntax Coloring , under the Java Category.
+      A new option named <b>Restricted identifiers</b> has been added under Java category in Java &gt; Editor &gt; Syntax Coloring perferences.
       <p>
-         Some identifiers (for eg. var ,yield, record etc..) are restricted identifiers because they are not allowed in some contexts.
-         Semantic highlighting options for such identifiers can be controlled by the language element <strong>Restricted identifiers</strong> 
-         under <strong>Java</strong> category. in the preference page <strong>Java</strong> > <strong>Editor</strong> > <strong>Syntax Coloring</strong>.
-         This preference is highlighted in the image below.
+         Some identifiers (e.g. var, yield, record etc.) are restricted identifiers because they are not allowed in some contexts.
+         Semantic highlighting options for such identifiers can be controlled by the element <strong>Restricted identifiers</strong> 
+         under <strong>Java</strong> category in <strong>Java</strong> &gt; <strong>Editor</strong> &gt; <strong>Syntax Coloring</strong> preference page.
       </p>
-      <p><img src="images/restricted-identifier-preference.png" alt="After"/></p>
+      <p><img src="images/restricted-identifier-preference.png" alt=""/></p>
     </td>
   </tr>
   <!-- ******************* End of Java Editor ************************************* -->
@@ -151,11 +147,11 @@ ul {padding-left: 13px;}
   <tr id="parallel-index-search"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567521 -->
       <td class="title"><a href="#parallel-index-search">Parallel index search</a></td>
       <td class="content">
-      	  New preference option was added and enabled by default:
-      	  <b>Preferences > Java > [x] Enable parallel index search</b>.  
-      	  Depending on available hardware, this option should improve performance 
+      	  A new preference option has been added and enabled by default:
+      	  <b>Preferences &gt; Java &gt; Enable parallel index search</b>.  
+      	  Depending on the available hardware, this option should improve performance 
       	  for all index based Java search operations, but could also lead to possible regressions. 
-      	  To switch back to the old sequantial index search, turn this option off: 
+      	  To switch back to the old sequential index search, turn this option off: 
           <p>
             <img src="images/parallel-index-search.png" alt="" />
           </p>
@@ -190,9 +186,9 @@ ul {padding-left: 13px;}
   <tr id="toggle-tracepoints"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569135 -->
       <td class="title"><a href="#toggle-tracepoints">Toggle tracepoints in editor ruler</a></td>
       <td class="content">
-          A new "Toggle Tracepoint" menu entry was added to the Java editor line ruler.
-          Both the new menu and existing one under global "Run" menu have new icon, and both supports now
-          not only Java source but also Java class files.
+          A new "Toggle Tracepoint" context-menu entry has been added to the Java editor line ruler.
+          Both the "Toggle Tracepoint" options i.e. the new context-menu entry and the existing option under "Run" menu have a new icon 
+          and are now available for Java class files also along with Java source files.
           <p>
             <img src="images/toggle-tracepoints.png" alt="screenshot showing new menu" />
           </p>
