@@ -101,18 +101,15 @@ ul {padding-left: 13px;}
   <tr id="control-flow-merge"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=568656 -->
     <td class="title"><a href="#control-flow-merge">Pull down common code from if/else statement</a></td>
     <td class="content">
-      A new clean up has been added that extracts common ending code from a <code>if</code> / <code>else if</code> / <code>else</code> control flow.
+      A new clean up has been added that extracts common code from the end of an <code>if</code> / <code>else if</code> / <code>else</code> control flow.
       <p>
         Ultimately it removes the empty and passive <code>if</code> conditions.
       </p>
       <p>
-        The duplicate code should not rely on variables declared in the block.
+        The control flow should have an <code>else</code> clause and the duplicate code should not rely on variables declared in the block.
       </p>
       <p>
-        The control flow should have an <code>else</code> clause.
-      </p>
-      <p>
-        The statement matching performs a deep analysis. All the blocks should end with the same statements, or the blocks with different code should fall through with a jump statement (<code>return</code>, <code>throw</code>, <code>continue</code> or <code>break</code>).
+        The statement matching performs a deep analysis. All the blocks should end with the same set of statements, or the blocks with different code should fall through with a jump statement (<code>return</code>, <code>throw</code>, <code>continue</code> or <code>break</code>).
       </p>
       <p>
         To apply the clean up, select <b>Pull down common code from if/else statement</b> check box on the <b>Duplicate code</b> tab in your clean up profile.
@@ -127,11 +124,11 @@ ul {padding-left: 13px;}
       </p>
       <p><img src="images/control-flow-merge-after.png" alt="After cleaning similar tails of blocks"/></p>
       <p>
-        And for the given code where almost all tails of blocks are identical but one block falls through:
+        And for the given code where all tails of blocks are identical except one block which falls through:
       </p>
       <p><img src="images/control-flow-merge-jump-statement-before.png" alt="Before cleaning jump statement"/></p>
       <p>
-        The identical tails of blocks have been pulled down below from the control flow and the falling through block have been left as it is:
+        The identical tails of blocks have been pulled down from the control flow and the falling through block has been left as it is:
       </p>
       <p><img src="images/control-flow-merge-jump-statement-after.png" alt="After cleaning jump statement"/></p>
     </td>
