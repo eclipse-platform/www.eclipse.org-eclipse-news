@@ -67,6 +67,15 @@ ul {padding-left: 13px;}
 	
     </td>
   </tr>
+  
+   <tr id="icu-e4-feature"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569421 -->
+   <td class="title"><a href="#icu-e4-feature">Moved com.ibm.icu from org.eclipse.e4.rcp to org.eclipse.rcp feature</a></td>
+    <td class="content">
+		As the usage of the com.ibm.icu plug-in is planned to be removed from the platform it has been removed from the org.eclipse.e4.rcp feature as e4 RCP applications do not require it since the 4.18 release.
+		It has been added to the org.eclipse.rcp features for now to ensure e3 applications  which may use it and the Eclipse IDE to work correctly.
+		If you e4 RCP application uses it, you can include it in your custom feature.  
+    </td>
+  </tr>
   <!-- *********************** End of SWT *********************** -->
 
 </tbody>
