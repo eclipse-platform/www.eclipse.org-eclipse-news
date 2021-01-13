@@ -76,6 +76,27 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="pattern-matching"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=566001 -->
+    <td class="title"><a href="#pattern-matching">Pattern matching for instanceof</a></td>
+    <td class="content">
+      A new clean up has been added that uses pattern matching for the <code>instanceof</code> operator when possible.
+      <p>
+        It is only applicable for Java 15 or higher when preview features are enabled.
+      </p>
+      <p>
+        To apply the clean up, select <b>Pattern matching for instanceof</b> check box on the <b>Java Feature</b> tab in your clean up profile.
+      </p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/pattern-matching-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/pattern-matching-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
   <tr id="multi-catch"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569879 -->
     <td class="title"><a href="#multi-catch">Multi-catch clean up</a></td>
     <td class="content">
