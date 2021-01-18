@@ -38,6 +38,20 @@ ul {padding-left: 13px;}
   <tr>
     <td id="Platform" class="section" colspan="2"><h2>Platform Changes</h2></td>
   </tr>
+
+  <tr id="improved-contentassist"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=508821 -->
+    <td class="title">Content-assist contributor allows more flexible control of completion triggers</td>
+    <td class="content">
+      IContentAssistProcessor has a new extension interface IContentAssistProcessorExtension that allows to get context information for activation computation: 
+      <ul>
+      <li><i>IContentAssistProcessorExtension.isCompletionProposalAutoActivation(char, ITextViewer, int)</i></li>
+      <li><i>IContentAssistProcessorExtension.isContextInformationAutoActivation(char, ITextViewer, int)</i></li>
+      </ul>
+      <p>
+       This allows for example to compute the activation chars based on the location or properties/content of the document.
+      </p>
+    </td>
+  </tr>
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
@@ -49,13 +63,14 @@ ul {padding-left: 13px;}
     <td class="content">
 	New <code>org.eclipse.swt.graphics.Resource.setNonDisposeHandler</code> API
 	is added which allows to track not properly disposed SWT resources.
-	This API accepts a custom <code>Consumer&lt;Error&gt;</Error></code> callback to
+	This API accepts a custom <code>Consumer&lt;Error></code> callback to
 	receive detected errors.
 	<p>
 	Alternatively, <code>"org.eclipse.swt.graphics.Resource.reportNonDisposed"</code>
 	system property can be set to <code>true</code>. In this case, SWT will report
 	these errors to <code>stderr</code> without the need to modify application's
 	code.
+	</p>
     </td>
   </tr>
 
