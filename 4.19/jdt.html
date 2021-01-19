@@ -154,7 +154,6 @@ ul {padding-left: 13px;}
       <p><img src="images/control-flow-merge-jump-statement-after.png" alt="After cleaning jump statement"/></p>
     </td>
   </tr>
-  
   <tr id="restricted-identifier-preference"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569759 -->
     <td class="title"><a href="#restricted-identifier-preference">Coloring restricted identifiers</a></td>
     <td class="content">
@@ -194,6 +193,17 @@ ul {padding-left: 13px;}
         With this annotation in place, the annotated signature will be shown in hovers and will be used for null analysis:
       </p>
       <p><img src="images/annotate-sources-effect.png" alt="Configure Annotation Path"/></p>
+    </td>
+  </tr>
+  <tr id="create-permitted-type-declaration"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=570440 -->
+    <td class="title"><a href="#create-permitted-type-declaration">Create permitted type declaration</a></td>
+    <td class="content">
+      You can use the following quick fixes (<strong>Ctrl+1</strong>) to create a new permitted class or interface declaration:
+      <p><img src="images/create-permitted-type-declaration.png" alt=""/></p>
+      <p>
+      The created type will declare the sealed type as its super type and 
+      it can be declared as final, non-sealed, or sealed with the available quick fixes for further inheritance control.
+      </p>
     </td>
   </tr>
   <!-- ******************* End of Java Editor ************************************* -->
