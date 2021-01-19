@@ -47,33 +47,24 @@ ul {padding-left: 13px;}
   <tr id="resource-disposal-tracking"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569752 -->
    <td class="title"><a href="#resource-disposal-tracking">Resource disposal tracking</a></td>
     <td class="content">
-	New <code>org.eclipse.swt.graphics.Resource.trackNonDisposed(boolean)</code> and 
-	 <code>org.eclipse.swt.graphics.Resource.trackNonDisposed(boolean, NonDisposedReporter)</code> APIs  
-	are added which allow to track not properly disposed SWT resources.
-	A custom <code>NonDisposedReporter</code> can be supplied to define how not disposed
-	SWT resources should be reported.
+	New <code>org.eclipse.swt.graphics.Resource.setNonDisposeHandler</code> API
+	is added which allows to track not properly disposed SWT resources.
+	This API accepts a custom <code>Consumer&ltError&gt</code> callback to
+	receive detected errors.
 	<p>
-	Additionally, 
-	<code>"org.eclipse.swt.graphics.Resource.reportNonDisposed"</code> system
-	property can be specified with following values:
-	<ul>
-	<li>if set to <code>true</code>, SWT will report not disposed SWT resource without
-	allocating exception at SWT resource creation time.
-	</li>
-	<li>
-	if set to <code>stacks</code>, SWT will aditionally report the stack recorded at
-	resource creation time.
-	</li>
-	
+	Alternatively, <code>"org.eclipse.swt.graphics.Resource.reportNonDisposed"</code>
+	system property can be set to <code>true</code>. In this case, SWT will report
+	these errors to <code>stderr</code> without the need to modify application's
+	code.
     </td>
   </tr>
-  
+
    <tr id="icu-e4-feature"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569421 -->
    <td class="title"><a href="#icu-e4-feature">Moved com.ibm.icu from org.eclipse.e4.rcp to org.eclipse.rcp feature</a></td>
     <td class="content">
 		As the usage of the com.ibm.icu plug-in is planned to be removed from the platform it has been removed from the org.eclipse.e4.rcp feature as e4 RCP applications do not require it since the 4.18 release.
 		It has been added to the org.eclipse.rcp features for now to ensure e3 applications  which may use it and the Eclipse IDE to work correctly.
-		If you e4 RCP application uses it, you can include it in your custom feature.  
+		If you e4 RCP application uses it, you can include it in your custom feature.
     </td>
   </tr>
   <!-- *********************** End of SWT *********************** -->
