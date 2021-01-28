@@ -229,6 +229,14 @@ ul {padding-left: 13px;}
       </td>
   </tr>
   
+  <tr id="mockito-static-imports"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=562639 -->
+      <td class="title"><a href="#mockito-static-imports">static import org.mockito.Mockito.*  available as favorite</a></td>
+      <td class="content">
+      	Imports for static org.mockito.Mockito.* are added to the Java favorites in the preferences under Java -> Editor -> Content Assists -> Favorites.
+      	This way the organize imports action in the IDE will automatically add static imports to this class in your use the Mockito library in your tests.
+       </td>
+  </tr>
+  
   <!-- ******************* End of Java Views and Dialogs ************************************* -->
 
   <!-- ******************* Java Compiler ************************************* -->
