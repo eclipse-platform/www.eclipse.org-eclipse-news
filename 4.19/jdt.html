@@ -206,6 +206,21 @@ ul {padding-left: 13px;}
       </p>
     </td>
   </tr>
+    <tr id="try-with-resources-quick-assist"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=570184 -->
+    <td class="title"><a href="#try-with-resources-quick-assist">Quick assist to create try-with-resources</a></td>
+    <td class="content">
+      For expressions returning a type that is <code>AutoClosable</code> there's a new quick assist (<b>Ctrl+1</b>) available: <b>Assign to new local variable in try-with-resources</b>.
+      <p><img src="images/try-with-resources-before.png" alt="Bef"/></p>
+      <p>
+      It creates a new try-with-resources block with the expression assigned to a resource variable.
+      The variable type and name can be selected from a few suggestions:
+      </p>
+      <p><img src="images/try-with-resources-after.png" alt=""/></p>
+      <p>
+      The default hotkey sequence for this quick assist is <b>Ctrl+2</b> followed by <b>T</b>.
+      </p>
+    </td>
+  </tr>
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
