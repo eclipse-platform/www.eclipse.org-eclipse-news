@@ -52,6 +52,13 @@ ul {padding-left: 13px;}
       </p>
     </td>
   </tr>
+   <tr id="marker-create-api"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=570914 -->
+    <td class="title">Atomic IMarker creation API with attributes in IResources</td>
+    <td class="content">
+      The <code>IResource.createMarker(type, attribute)</code> API has been created to allow atomic creation of markers.
+      Using this new API should be preferred, as this reduces the resource change notification of the old usage in which the marker creation and then each attribute setter triggers a resource change notification.
+    </td>
+  </tr>
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
