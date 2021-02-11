@@ -59,6 +59,16 @@ ul {padding-left: 13px;}
       Using this new API should be preferred, as this reduces the resource change notification of the old usage in which the marker creation and then each attribute setter triggers a resource change notification.
     </td>
   </tr>
+  </tr>
+   <tr id="clean-with-args"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=552606 -->
+    <td class="title">IncrementalProjectBuilder can optionally implement new clean with arguments method</td>
+    <td class="content">
+      The <code>IncrementalProjectBuilder</code> API can optionally be extended by clients implementing the new <code>IIncrementalProjectBuilder2</code> interface that provides
+      a new <code>clean(Map&lt;String, String&gt;, IProgressMonitor)</code> method that will be called instead of the existing <code>clean(IProgressMonitor)</code>.
+      The new <code>clean</code> method passes the map of arguments from <code>IWorkspace.build()</code> or <code>IProject.build()</code> to the client for <code>clean</code> in the same way that it is done for the
+      <code>build</code> method.
+    </td>
+  </tr>
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
