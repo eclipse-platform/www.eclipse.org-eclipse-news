@@ -221,6 +221,18 @@ ul {padding-left: 13px;}
       </p>
     </td>
   </tr>
+  <tr id="add-catch-to-try-with-resources-assists"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=570762 -->
+    <td class="title"><a href="#add-catch-to-try-with-resources-assists">Add catch clause to try-with-resources assists</a></td>
+    <td class="content">
+      There are multiple assists to surround auto-closeable statements in a try-with-resources statement including <b>Surround with -> Try-with-resources Block</b>.  Now, all forms will add
+      a <code>catch</code> clause for any exceptions (such as <code>IOException</code>) thrown by the auto-close if not already handled via an existing <code>catch</code> clause 
+      or <code>throws</code> directive.  In the case where the existing code catches or throws an exception that sub-classes the exceptions of the new <code>catch</code> clause, an 
+      additional <code>catch</code> clause will be added to rethrow the exception to ensure code logic remains consistent.
+      <p><img src="images/add-catch-clause-to-try-with-resources-before.png" alt=""/></p>
+      <p><img src="images/add-catch-clause-to-try-with-resources-after.png" alt=""/</p>
+    </td>
+  </tr>
+
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
