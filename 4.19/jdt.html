@@ -141,6 +141,28 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="convert-fields"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=570029 -->
+    <td class="title"><a href="#convert-fields">Convert fields into local variables</a></td>
+    <td class="content">
+      A new clean up has been added that refactors a field into a local variable if its use is only local.
+      <p>
+        The previous value should not be read. The field should be <code>private</code>. The field should not be <code>final</code>. The field should be primitive. The field should not have annotations.
+      </p>
+      <p>
+        To apply the clean up, select <b>Convert fields into local variables if the use is only local</b> check box on the <b>Optimization</b> tab in your clean up profile.
+      </p>
+      <p><img src="images/optimization-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/convert-fields-before.png" alt="Before cleaning similar tails of blocks"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/convert-fields-after.png" alt="After cleaning similar tails of blocks"/></p>
+    </td>
+  </tr>
+
   <tr id="static-inner-class"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569847 -->
     <td class="title"><a href="#static-inner-class">Static inner class</a></td>
     <td class="content">
