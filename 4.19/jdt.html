@@ -65,6 +65,28 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="extract-increment"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=570011 -->
+    <td class="title"><a href="#extract-increment">Extract increment</a></td>
+    <td class="content">
+      A new clean up has been added that moves increment or decrement outside an expression.
+      <p>
+        It moves before the prefix expressions, it moves after the postfix expressions, it converts as postfix expressions, it does not move increments from loop condition and it does not cleanup several increments in the same statement.
+      </p>
+      <p>
+        To apply the clean up, select <b>Extract increment/decrement from statement</b> check box on the <b>Code Style</b> tab in your clean up profile.
+      </p>
+      <p><img src="images/code-style-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/extract-increment-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/extract-increment-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
   <tr id="java-feature"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569711 -->
     <td class="title"><a href="#java-feature">Java Feature Clean Ups</a></td>
     <td class="content">
