@@ -119,6 +119,25 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="static-inner-class"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569847 -->
+    <td class="title"><a href="#static-inner-class">Static inner class</a></td>
+    <td class="content">
+      A new clean up has been added that makes inner class <code>static</code> if it doesn't use top level class members.
+      <p>
+        To apply the clean up, select <b>Make inner classes static where possible</b> check box on the <b>Optimization</b> tab in your clean up profile.
+      </p>
+      <p><img src="images/optimization-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/static-inner-class-before.png" alt="Before cleaning similar tails of blocks"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/static-inner-class-after.png" alt="After cleaning similar tails of blocks"/></p>
+    </td>
+  </tr>
+
   <tr id="control-flow-merge"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=568656 -->
     <td class="title"><a href="#control-flow-merge">Pull down common code from if/else statement</a></td>
     <td class="content">
