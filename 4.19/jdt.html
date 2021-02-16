@@ -296,6 +296,31 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="unlooped-while"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=570375 -->
+    <td class="title"><a href="#unlooped-while">Unlooped while</a></td>
+    <td class="content">
+      A new clean up has been added that replaces a <code>while</code> loop that always terminates during the first iteration by an <code>if</code>.
+      <p>
+        The loop should not contain any <code>continue</code> statement.
+      </p>
+      <p>
+        The loop should only contain <code>break</code> statements without statements after.
+      </p>
+      <p>
+        To apply the clean up, select <b>Convert loop into if when possible</b> check box on the <b>Unnecessary code</b> tab in your clean up profile.
+      </p>
+      <p><img src="images/unnecessary-code-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/unlooped-while-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/unlooped-while-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
   <tr id="source-fixing"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=570773 -->
     <td class="title"><a href="#source-fixing">Source Fixing Clean Ups</a></td>
     <td class="content">
