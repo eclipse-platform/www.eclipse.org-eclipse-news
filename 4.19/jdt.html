@@ -155,6 +155,31 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="substring"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569800 -->
+    <td class="title"><a href="#substring">String.substring()</a></td>
+    <td class="content">
+      A new clean up has been added that removes the second <code>substring()</code> parameter if this parameter is the length of the string. It's the default value.
+      <p>
+        It must reference the same expression.
+      </p>
+      <p>
+        The expression must be passive.
+      </p>
+      <p>
+        To apply the clean up, select <b>Redundant String.substring() parameter</b> check box on the <b>Unnecessary code</b> tab in your clean up profile.
+      </p>
+      <p><img src="images/unnecessary-code-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/substring-before.png" alt="Before cleaning similar tails of blocks"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/substring-after.png" alt="After cleaning similar tails of blocks"/></p>
+    </td>
+  </tr>
+
   <tr id="source-fixing"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=570773 -->
     <td class="title"><a href="#source-fixing">Source Fixing Clean Ups</a></td>
     <td class="content">
