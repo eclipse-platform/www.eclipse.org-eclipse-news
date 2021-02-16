@@ -155,11 +155,11 @@ ul {padding-left: 13px;}
       <p>
         For the given code:
       </p>
-      <p><img src="images/convert-fields-before.png" alt="Before cleaning similar tails of blocks"/></p>
+      <p><img src="images/convert-fields-before.png" alt="Before"/></p>
       <p>
         One gets:
       </p>
-      <p><img src="images/convert-fields-after.png" alt="After cleaning similar tails of blocks"/></p>
+      <p><img src="images/convert-fields-after.png" alt="After"/></p>
     </td>
   </tr>
 
@@ -174,11 +174,33 @@ ul {padding-left: 13px;}
       <p>
         For the given code:
       </p>
-      <p><img src="images/static-inner-class-before.png" alt="Before cleaning similar tails of blocks"/></p>
+      <p><img src="images/static-inner-class-before.png" alt="Before"/></p>
       <p>
         One gets:
       </p>
-      <p><img src="images/static-inner-class-after.png" alt="After cleaning similar tails of blocks"/></p>
+      <p><img src="images/static-inner-class-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
+  <tr id="primitive-parsing"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=570168 -->
+    <td class="title"><a href="#primitive-parsing">Primitive parsing</a></td>
+    <td class="content">
+      A new clean up has been added that avoids to create primitive wrapper when parsing a string.
+      <p>
+        The object should be used as a primitive and not as a wrapper.
+      </p>
+      <p>
+        To apply the clean up, select <b>Primitive parsing</b> check box on the <b>Optimization</b> tab in your clean up profile.
+      </p>
+      <p><img src="images/optimization-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/primitive-parsing-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/primitive-parsing-after.png" alt="After"/></p>
     </td>
   </tr>
 
@@ -235,11 +257,11 @@ ul {padding-left: 13px;}
       <p>
         For the given code:
       </p>
-      <p><img src="images/substring-before.png" alt="Before cleaning similar tails of blocks"/></p>
+      <p><img src="images/substring-before.png" alt="Before"/></p>
       <p>
         One gets:
       </p>
-      <p><img src="images/substring-after.png" alt="After cleaning similar tails of blocks"/></p>
+      <p><img src="images/substring-after.png" alt="After"/></p>
     </td>
   </tr>
 
@@ -266,11 +288,11 @@ ul {padding-left: 13px;}
       <p>
         For the given code:
       </p>
-      <p><img src="images/unreachable-block-before.png" alt="Before cleaning similar tails of blocks"/></p>
+      <p><img src="images/unreachable-block-before.png" alt="Before"/></p>
       <p>
         One gets:
       </p>
-      <p><img src="images/unreachable-block-after.png" alt="After cleaning similar tails of blocks"/></p>
+      <p><img src="images/unreachable-block-after.png" alt="After"/></p>
     </td>
   </tr>
 
