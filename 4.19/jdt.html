@@ -180,6 +180,37 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="unreachable-block"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569845 -->
+    <td class="title"><a href="#unreachable-block">Unreachable block</a></td>
+    <td class="content">
+      A new clean up has been added that detects two <code>if</code> conditions that are identical and removes the second one.
+      <p>
+        The conditions should be passive.
+      </p>
+      <p>
+        No exceptions should be awaited.
+      </p>
+      <p>
+        It doesn't create unreachable code below the <code>if</code> statement which would create a compile error.
+        That is to say it avoids the case where only the removed block doesn't fall through, all the other cases fall through,
+        there are an <code>else</code> clause (not only <code>if</code>/<code>else</code> clauses)
+        and a statement after the control workflow.
+      </p>
+      <p>
+        To apply the clean up, select <b>Unreachable block</b> check box on the <b>Unnecessary code</b> tab in your clean up profile.
+      </p>
+      <p><img src="images/unnecessary-code-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/unreachable-block-before.png" alt="Before cleaning similar tails of blocks"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/unreachable-block-after.png" alt="After cleaning similar tails of blocks"/></p>
+    </td>
+  </tr>
+
   <tr id="source-fixing"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=570773 -->
     <td class="title"><a href="#source-fixing">Source Fixing Clean Ups</a></td>
     <td class="content">
