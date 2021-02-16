@@ -154,6 +154,18 @@ ul {padding-left: 13px;}
       <p><img src="images/control-flow-merge-jump-statement-after.png" alt="After cleaning jump statement"/></p>
     </td>
   </tr>
+
+  <tr id="source-fixing"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=570773 -->
+    <td class="title"><a href="#source-fixing">Source Fixing Clean Ups</a></td>
+    <td class="content">
+      A new tab named <b>Source Fixing</b> has been added to the clean up preferences. It lists the clean up options that fixes the behavior of the code. The <b>Compare with != 0 for bitwise expression</b> clean up option from <b>Code style</b> tab have also been moved to this new tab. 
+      <p>
+        ⚠️ Use it carefully. You may get an unexpected behavior. It may trigger zombie code. A zombie code is a dead code that is dead because an error occurs before. The day someone fixes the error, the zombie code comes back to life and alters the behavior. Although most of the cleanups need review, those ones need testing.
+      </p>
+      <p><img src="images/source-fixing-preferences.png" alt="Preferences" width="800 px"/></p>
+    </td>
+  </tr>
+
   <tr id="restricted-identifier-preference"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569759 -->
     <td class="title"><a href="#restricted-identifier-preference">Coloring restricted identifiers</a></td>
     <td class="content">
