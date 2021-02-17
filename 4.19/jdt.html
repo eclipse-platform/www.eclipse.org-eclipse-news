@@ -94,7 +94,7 @@ ul {padding-left: 13px;}
       <p>
         You can use these clean ups while upgrading the Java version in your code.
       </p>
-      <p><img src="images/multi-catch-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p><img src="images/java-feature-preferences.png" alt="Preferences" width="800 px"/></p>
     </td>
   </tr>
 
@@ -108,6 +108,7 @@ ul {padding-left: 13px;}
       <p>
         To apply the clean up, select <b>Pattern matching for instanceof</b> check box on the <b>Java Feature</b> tab in your clean up profile.
       </p>
+      <p><img src="images/java-feature-preferences.png" alt="Preferences" width="800 px"/></p>
       <p>
         For the given code:
       </p>
@@ -116,6 +117,33 @@ ul {padding-left: 13px;}
         One gets:
       </p>
       <p><img src="images/pattern-matching-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
+  <tr id="comparator-comparing"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=570413 -->
+    <td class="title"><a href="#comparator-comparing">Use Comparator.comparing()</a></td>
+    <td class="content">
+      A new clean up has been added that replaces a plain comparator instance by a lambda expression passed to a <code>Comparator.comparing()</code> method.
+      <p>
+        The feature is enabled only with Java 8 or higher.
+      </p>
+      <p>
+        The <code>Comparator</code> type must be inferred by the destination of the comparator.
+        The algorithm of the comparator must be standard and based on one field or method.
+        The cleanup can handle the null values and reversed orders.
+      </p>
+      <p>
+        To apply the clean up, select <b>Use Comparator.comparing()</b> check box on the <b>Java Feature</b> tab in your clean up profile.
+      </p>
+      <p><img src="images/java-feature-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/comparator-comparing-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/comparator-comparing-after.png" alt="After"/></p>
     </td>
   </tr>
 
@@ -129,7 +157,7 @@ ul {padding-left: 13px;}
       <p>
         To apply the clean up, select <b>Use Multi-catch</b> check box on the <b>Java Feature</b> tab in your clean up profile.
       </p>
-      <p><img src="images/multi-catch-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p><img src="images/java-feature-preferences.png" alt="Preferences" width="800 px"/></p>
       <p>
         For the given code:
       </p>
