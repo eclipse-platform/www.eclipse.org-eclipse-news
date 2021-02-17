@@ -233,6 +233,29 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="primitive-comparison"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=570589 -->
+    <td class="title"><a href="#primitive-comparison">Primitive comparison</a></td>
+    <td class="content">
+      A new clean up has been added that replaces the <code>compareTo()</code> method by a comparison on primitive.
+      <p>
+        It improves the space and time performance.
+        The compared value must be a primitive.
+      </p>
+      <p>
+        To apply the clean up, select <b>Primitive comparison</b> check box on the <b>Optimization</b> tab in your clean up profile.
+      </p>
+      <p><img src="images/optimization-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/primitive-comparison-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/primitive-comparison-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
   <tr id="primitive-parsing"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=570168 -->
     <td class="title"><a href="#primitive-parsing">Primitive parsing</a></td>
     <td class="content">
