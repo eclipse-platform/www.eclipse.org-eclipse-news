@@ -7,17 +7,17 @@
 	# index.php
 	#
 	# Author: 		Sravan Kumar Lakkimsetti
-	# Date:			2020-11-17
+	# Date:			2021-02-18
 	#
-	# Description: Eclipse project 4.18 release freeze plan
+	# Description: Eclipse project 4.19 release freeze plan
 	#
 	#
 	#****************************************************************************
 	
 	#
 	# Begin: page-specific settings.  Change these. 
-	$pageTitle 		= "Eclipse 2020-12 (4.18) Endgame Plan";
-	$pageKeywords	= "eclipse, 4.18, 2020-12, milestone, schedule, endgame";
+	$pageTitle 		= "Eclipse 2021-03 (4.19) Endgame Plan";
+	$pageKeywords	= "eclipse, 4.19, 2021-03, milestone, schedule, endgame";
 	$pageAuthor		= "Sravan Kumar Lakkimsetti";
 	
 	# Add page-specific Nav bars here
@@ -51,7 +51,7 @@ ob_start();
 			<h3>Detailed Timeline</h3>
 	        <table class="schedule" border="0" cellspacing="0" align="center" width=100%>
 	          <tr>
-	            <td>November 2020</td>
+	            <td>February 2021</td>
 	          </tr>
 	          <tr>
 	            <td></td>
@@ -66,7 +66,7 @@ ob_start();
 	          </tr>
 	          <tr>
 	            <td></td>
-	            <td class="date">25</td>
+	            <td class="date">24</td>
 	            <td class="date">Wed 18:00 EST</td>
 	            <td></td>
 	            <td>API and feature freeze</td>
@@ -74,7 +74,7 @@ ob_start();
 	          </tr>
 	          <tr>
 	            <td></td>
-	            <td class="date">25</td>
+	            <td class="date">24</td>
 	            <td class="date">Wed 18:00 EST</td>
 	            <td></td>
 	            <td>Release Candidate 1 build</td>
@@ -82,21 +82,21 @@ ob_start();
 	          </tr>
 	          <tr>
 	            <td></td>
-	            <td class="date">27</td>
+	            <td class="date">26</td>
 	            <td class="date">Fri</td>
 	            <td></td>
 	            <td>Submit RC1 to release train</td>
 	            <td></td>
 	          </tr>
 	          <tr>
-	            <td>December 2020</td>
+	            <td>March 2020</td>
 	          </tr>
 			  <tr>
 	            <td class="spacer">&nbsp;</td>
 	          </tr>
 	          <tr>
 	            <td></td>
-	            <td class="date">2</td>
+	            <td class="date">3</td>
 	            <td class="date">Wed 18:00 EST</td>
 	            <td></td>
 	            <td>Release Candidate 2 build</td>
@@ -104,7 +104,7 @@ ob_start();
 	          </tr>
 	          <tr>
 	            <td></td>
-	            <td class="date">3</td>
+	            <td class="date">4</td>
 	            <td class="date">Thu</td>
 	            <td></td>
 	            <td>1-day test pass against RC2 and sign-off</td>
@@ -112,7 +112,7 @@ ob_start();
 	          </tr>
 	          <tr>
 	            <td></td>
-	            <td class="date">4</td>
+	            <td class="date">5</td>
 	            <td class="date">Fri</td>
 	            <td></td>
 	            <td>Submit RC2 to release train</td>
@@ -120,7 +120,7 @@ ob_start();
 	          </tr>
               <tr class="current">
 	            <td></td>
-	            <td class="date">16</td>
+	            <td class="date">17</td>
 	            <td class="date">Wed</td>
 	            <td></td>
 	            <td>GA</td>
@@ -133,21 +133,21 @@ ob_start();
 			<ul>
 			<li><a href="http://www.eclipse.org/eclipse/platform-releng/buildSchedule.html">Build Schedule</a> - details on build times.</li>
 			<li><a href="http://wiki.eclipse.org/Eclipse/Release_checklist">Eclipse Release Checklist</a> - lists various things that need to be checked before each release.</li>
-			<li><a href="https://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_18.xml">Eclipse Project 4.18 Plan</a></li>
-			<li><a href="https://wiki.eclipse.org/Category:SimRel-2020-12">2020-12 Simultaneous Release</a></li>
+			<li><a href="https://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_18.xml">Eclipse Project 4.19 Plan</a></li>
+			<li><a href="https://wiki.eclipse.org/Category:SimRel-2021-03">2021-03 Simultaneous Release</a></li>
 			</ul>
       	</div>
 		<div class="homeitem3col">
 			<h3>What is the game plan?</h3>
 			<p> 
-	 		The Eclipse 2020-12 (4.18) release endgame involves building 
+	 		The Eclipse 2021-03 (4.19) release endgame involves building 
 	        a series of release candidates leading to the Eclipse project's contribution to the
-	        2020-12 (4.18) release. The Eclipse project version number for this release is 4.18.
+	        2021-03 (4.19) release. The Eclipse project version number for this release is 4.19.
 			As always, we welcome help from the 
-	        community with testing the release candidates. All new features and problems fixed in 2020-12 (4.18) are in the Eclipse bugzilla database.
+	        community with testing the release candidates. All new features and problems fixed in 2021-03 (4.19) are in the Eclipse bugzilla database.
 	        </p> 
 
-	        <p>General announcements during the 2020-12 (4.18) endgame are posted to the 
+	        <p>General announcements during the 2021-03 (4.19) endgame are posted to the 
 	        <a href="http://dev.eclipse.org/mailman/listinfo/platform-releng-dev">platform-releng-dev@eclipse.org</a> 
 		    developer mailing list. Anyone participating in the endgame should be subscribed 
 			to this list, and should direct any general questions and comments about the process 
@@ -183,8 +183,8 @@ ob_start();
 		   <strong>RC2</strong>
 		   <p>
 	        Release candidate containing fixes for the majority of known outstanding 
-	        defects that we intend to fix for 2020-12 (4.18). At the end of RC2 build, 
-	        there should not be any open defects tagged 4.18. All fixes submitted 
+	        defects that we intend to fix for 2021-03 (4.19). At the end of RC2 build, 
+	        there should not be any open defects tagged 4.19. All fixes submitted 
 	        must have a project lead or PMC vote on the bug report,
 	        and the fix must be reviewed by an additional committer (any committer other than
 	        the one who made the fix). A positive review from a project lead or PMC member means
@@ -197,10 +197,10 @@ ob_start();
 	        all component teams. The goal is to verify all the fixes and check for any regressions.
 			</p>
 	
-			<strong>2020-12 (4.18) Release</strong>
-			<p>The 2020-12 (4.18) release should be complete and available for download by 
-	              December 16, 2020 as part of the <a href="https://wiki.eclipse.org/Category:SimRel-2020-12">2020-12 Simultaneous Release</a>. If product teams intending 
-	              to ship on 2020-12 (4.18) uncover further serious defects during the endgame, 
+			<strong>2021-03 (4.19) Release</strong>
+			<p>The 2021-03 (4.19) release should be complete and available for download by 
+	              March 17, 2020 as part of the <a href="https://wiki.eclipse.org/Category:SimRel-2021-03">2021-03 Simultaneous Release</a>. If product teams intending 
+	              to ship on 2021-03 (4.19) uncover further serious defects during the endgame, 
 	              we may schedule additional release candidate builds to incorporate fixes.
 			</p>    
 		</div>
