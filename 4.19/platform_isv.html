@@ -66,7 +66,7 @@ ul {padding-left: 13px;}
       a new <code>clean(Map&lt;String, String&gt;, IProgressMonitor)</code> method that will be called instead of the existing <code>clean(IProgressMonitor)</code>.
       The new <code>clean</code> method passes the map of arguments from <code>IWorkspace.build()</code> or <code>IProject.build()</code> to the client for <code>clean</code> in the same way that it is done for the
       <code>build</code> method.
-    </td>Microsoft Edge
+    </td>
   </tr>
   <tr id="improved-ui-syncronize"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=563459 -->
     <td class="title">Enhanced UISynchronize</td>
@@ -125,6 +125,18 @@ ul {padding-left: 13px;}
       <p>
        Note that the result of combining maximum size with full screen mode is platform specific and in general not recommended.
       </p>
+    </td>
+  </tr>
+  <tr id="swt-edge"> <!-- https://bugs.eclipse.org/538991 -->
+    <td class="title"><a href="#swt-edge">Support(currently experimental) for Chromium-based Edge browser renderer</a></td>
+    <td class="content">
+      SWT now supports Edge as a browser renderer on Windows10 using a new <code>SWT.EDGE</code> constant.
+      <ul>
+      <li>Please note that Edge integration is currently experimental, it ISN'T a drop-in replacement for the old IE back-end.</li>
+      <li>There are differences in behavior and missing APIs.</li>
+      <li>Eclipse has multiple issues when running with Edge as a default.</li>
+      <li>Please see this <a href="https://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/bundles/org.eclipse.swt/Readme.WebView2.md">Readme</a> entry for details on using the Edge style browser.</li>
+      </ul>
     </td>
   </tr>
   <!-- *********************** End of SWT *********************** -->
