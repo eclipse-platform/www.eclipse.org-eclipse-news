@@ -133,7 +133,7 @@ ob_start();
 			<ul>
 			<li><a href="http://www.eclipse.org/eclipse/platform-releng/buildSchedule.html">Build Schedule</a> - details on build times.</li>
 			<li><a href="http://wiki.eclipse.org/Eclipse/Release_checklist">Eclipse Release Checklist</a> - lists various things that need to be checked before each release.</li>
-			<li><a href="https://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_18.xml">Eclipse Project 4.19 Plan</a></li>
+			<li><a href="https://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_19.xml">Eclipse Project 4.19 Plan</a></li>
 			<li><a href="https://wiki.eclipse.org/Category:SimRel-2021-03">2021-03 Simultaneous Release</a></li>
 			</ul>
       	</div>
