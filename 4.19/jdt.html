@@ -76,7 +76,7 @@ ul {padding-left: 13px;}
       <p>
         To apply the clean up, select <b>Reduce indentation when possible</b> check box on the <b>Code Style</b> tab in your clean up profile.
       </p>
-      <p><img src="images/code-style-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p><img src="images/reduce-indentation-preferences.png" alt="Preferences" width="800 px"/></p>
       <p>
         For the given code:
       </p>
@@ -93,12 +93,44 @@ ul {padding-left: 13px;}
     <td class="content">
       A new clean up has been added that moves increment or decrement outside an expression.
       <p>
-        It moves before the prefix expressions, it moves after the postfix expressions, it converts as postfix expressions, it does not move increments from loop condition and it does not cleanup several increments in the same statement.
+        A prefix increment/decrement (<code>++i</code>) first changes the value of the variable and then returns the updated value.
+        A postfix increment/decrement (<code>i++</code>) first returns the original value and then changes the value of the variable.
+      </p>
+      <p>
+        But let's look at this code:
+      </p>
+      <p>
+        <pre>int i = j++;</pre>
+      </p>
+      <p>
+        Most of the developers hardly remember which from the increment or the assignment comes first. One way to make the code obvious is to write the increment/decrement in a dedicated statement:
+      </p>
+      <p>
+        <pre>int i = j;
+j++;</pre>
+      </p>
+      <p>
+        And so for the prefix expressions:
+      </p>
+      <p>
+        <pre>int i = ++j;</pre>
+      </p>
+      <p>
+        ...it goes like this:
+      </p>
+      <p>
+        <pre>j++;
+int i = j;</pre>
+      </p>
+      <p>
+        The cleanup moves a prefix expression above the statement and a postfix expression below.
+        It does not move increments from loop condition and it does not cleanup several increments in the same statement.
+        The increment/decrement is always rewritten as a postfix expression for standardization.
       </p>
       <p>
         To apply the clean up, select <b>Extract increment/decrement from statement</b> check box on the <b>Code Style</b> tab in your clean up profile.
       </p>
-      <p><img src="images/code-style-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p><img src="images/extract-increment-preferences.png" alt="Preferences" width="800 px"/></p>
       <p>
         For the given code:
       </p>
@@ -131,7 +163,7 @@ ul {padding-left: 13px;}
       <p>
         To apply the clean up, select <b>Pattern matching for instanceof</b> check box on the <b>Java Feature</b> tab in your clean up profile.
       </p>
-      <p><img src="images/java-feature-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p><img src="images/pattern-matching-preferences.png" alt="Preferences" width="800 px"/></p>
       <p>
         For the given code:
       </p>
@@ -158,7 +190,7 @@ ul {padding-left: 13px;}
       <p>
         To apply the clean up, select <b>Use Comparator.comparing()</b> check box on the <b>Java Feature</b> tab in your clean up profile.
       </p>
-      <p><img src="images/java-feature-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p><img src="images/comparator-comparing-preferences.png" alt="Preferences" width="800 px"/></p>
       <p>
         For the given code:
       </p>
@@ -180,7 +212,7 @@ ul {padding-left: 13px;}
       <p>
         To apply the clean up, select <b>Use Multi-catch</b> check box on the <b>Java Feature</b> tab in your clean up profile.
       </p>
-      <p><img src="images/java-feature-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p><img src="images/multi-catch-preferences.png" alt="Preferences" width="800 px"/></p>
       <p>
         For the given code:
       </p>
@@ -202,7 +234,7 @@ ul {padding-left: 13px;}
       <p>
         To apply the clean up, select <b>Convert fields into local variables if the use is only local</b> check box on the <b>Optimization</b> tab in your clean up profile.
       </p>
-      <p><img src="images/optimization-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p><img src="images/convert-fields-preferences.png" alt="Preferences" width="800 px"/></p>
       <p>
         For the given code:
       </p>
@@ -221,7 +253,7 @@ ul {padding-left: 13px;}
       <p>
         To apply the clean up, select <b>Make inner classes static where possible</b> check box on the <b>Optimization</b> tab in your clean up profile.
       </p>
-      <p><img src="images/optimization-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p><img src="images/static-inner-class-preferences.png" alt="Preferences" width="800 px"/></p>
       <p>
         For the given code:
       </p>
@@ -243,7 +275,7 @@ ul {padding-left: 13px;}
       <p>
         To apply the clean up, select <b>Use String::replace instead of String::replaceAll when no regex used</b> check box on the <b>Optimization</b> tab in your clean up profile.
       </p>
-      <p><img src="images/optimization-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p><img src="images/string-replace-preferences.png" alt="Preferences" width="800 px"/></p>
       <p>
         For the given code:
       </p>
@@ -266,7 +298,7 @@ ul {padding-left: 13px;}
       <p>
         To apply the clean up, select <b>Primitive comparison</b> check box on the <b>Optimization</b> tab in your clean up profile.
       </p>
-      <p><img src="images/optimization-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p><img src="images/primitive-comparison-preferences.png" alt="Preferences" width="800 px"/></p>
       <p>
         For the given code:
       </p>
@@ -288,7 +320,7 @@ ul {padding-left: 13px;}
       <p>
         To apply the clean up, select <b>Primitive parsing</b> check box on the <b>Optimization</b> tab in your clean up profile.
       </p>
-      <p><img src="images/optimization-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p><img src="images/primitive-parsing-preferences.png" alt="Preferences" width="800 px"/></p>
       <p>
         For the given code:
       </p>
@@ -349,7 +381,7 @@ ul {padding-left: 13px;}
       <p>
         To apply the clean up, select <b>Redundant String.substring() parameter</b> check box on the <b>Unnecessary code</b> tab in your clean up profile.
       </p>
-      <p><img src="images/unnecessary-code-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p><img src="images/substring-preferences.png" alt="Preferences" width="800 px"/></p>
       <p>
         For the given code:
       </p>
@@ -380,7 +412,7 @@ ul {padding-left: 13px;}
       <p>
         To apply the clean up, select <b>Unreachable block</b> check box on the <b>Unnecessary code</b> tab in your clean up profile.
       </p>
-      <p><img src="images/unnecessary-code-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p><img src="images/unreachable-block-preferences.png" alt="Preferences" width="800 px"/></p>
       <p>
         For the given code:
       </p>
@@ -405,7 +437,7 @@ ul {padding-left: 13px;}
       <p>
         To apply the clean up, select <b>Convert loop into if when possible</b> check box on the <b>Unnecessary code</b> tab in your clean up profile.
       </p>
-      <p><img src="images/unnecessary-code-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p><img src="images/unlooped-while-preferences.png" alt="Preferences" width="800 px"/></p>
       <p>
         For the given code:
       </p>
@@ -445,7 +477,7 @@ ul {padding-left: 13px;}
       <p>
         To apply the clean up, select <b>Avoid Object::equals or String::equalsIgnoreCase on null objects</b> check box on the <b>Source Fixing</b> tab in your clean up profile.
       </p>
-      <p><img src="images/source-fixing-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p><img src="images/invert-equals-preferences.png" alt="Preferences" width="800 px"/></p>
       <p>
         For the given code:
       </p>
@@ -470,7 +502,7 @@ ul {padding-left: 13px;}
       <p>
         To apply the clean up, select <b>Compare to zero</b> check box on the <b>Source Fixing</b> tab in your clean up profile.
       </p>
-      <p><img src="images/source-fixing-preferences.png" alt="Preferences" width="800 px"/></p>
+      <p><img src="images/comparison-zero-preferences.png" alt="Preferences" width="800 px"/></p>
       <p>
         For the given code:
       </p>
