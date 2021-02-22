@@ -69,6 +69,7 @@ ob_start();
     keeping all that infrastructure going, but also constantly improving it; Sharon Corbett for guiding us through the Eclipse legal process; Wayne Beaton for giving us process 
     support and improved tools to simplify and manage our development process; Thabang Mashologu for help with marketing the release and providing Logos and artwork; 
     and Mike Milinkovich for running the whole show. 
+    </p>
     <p>
       We would also like to thank the users and adopters who support our efforts, through a range of activities, including early testing, being a <a href="https://eclipse.org/donate/">Friend of
         Eclipse</a>, contracting special work, or outright employment.
@@ -87,6 +88,7 @@ ob_start();
      We would also like to acknowledge Sravan Kumar Lakkimsetti for all the build and releng support.
     </p>
 
+    <p>
     We also thank the other Eclipse projects that make up a part of the infrastructure we 
       depend on: Tycho, Orbit, EGit, EMF, ECF  for providing fixes and steady improvements.
     </p>
