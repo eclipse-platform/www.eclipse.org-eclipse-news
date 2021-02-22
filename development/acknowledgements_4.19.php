@@ -88,7 +88,7 @@ ob_start();
     </p>
 
     We also thank the other Eclipse projects that make up a part of the infrastructure we 
-      depend on: Tycho, EGit, EMF, ECF  for providing fixes and steady improvements.
+      depend on: Tycho, Orbit, EGit, EMF, ECF  for providing fixes and steady improvements.
     </p>
 
     <p>The JDT team would like to thank everyone who filed good enhancement requests, helped us improve quality by testing and filing good bug reports, and provided answers on JDT forums/newsgroups. Special thanks to the following list of
