@@ -68,21 +68,6 @@ ul {padding-left: 13px;}
       <code>build</code> method.
     </td>
   </tr>
-  <tr id="improved-ui-syncronize"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=563459 -->
-    <td class="title">Enhanced UISynchronize</td>
-    <td class="content">
-      UISynchronize now contains these new handy methods: 
-      <ul>
-      <li><i>UISynchronize.exec(Runnable)</i> can be called from any thread, the given code is executed either directly (if called form the UI-Thread) or dispatched if called from a non-UI thread.</li>
-      <li><i>UISynchronize.call(Callable&lt;T>)</i> same as the runnable variant but can return a value to the caller.</li>
-      <li><i>UISynchronize.busyExec(Runnable)</i> allow to execute code outside the UI and showing a busy indicator while the code is running.</li>
-      <li><i>UISynchronize.busyCall(Callable&lt;T>)</i> same as the runnable variant but can return a value to the caller.</li>
-      </ul>
-      <p>
-       You can find some more details and usage-examples in <a href="https://xn--lubisoft-0za.gmbh/en/articles/improved-uisynchronize/">this article</a>.
-      </p>
-    </td>
-  </tr>
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
