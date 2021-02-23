@@ -88,6 +88,22 @@ ul {padding-left: 13px;}
       </p>
     </td>
   </tr>
+
+  <tr id="termination-of-descendants-is-configurable"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=570480 -->
+    <td class="title">Termination of child-processes of launched OS-processes can be configured</td>
+    <td class="content">
+	Since Eclipse <a href="https://www.eclipse.org/eclipse/news/4.18/platform.php#terminate-descendants">4.18</a> child-processes (descendants) of an operating-system process launched from Eclipse are terminated too,
+	when the launched process is terminated (for example by clicking the terminate button).
+    <p>
+    It is now possible to configure in the Launch-Configuration if the child-processes of a launched process should be terminated too or if they should stay alive, in case the launched processes is terminated.
+    You can control this with the check-box <b>Terminate child-processes if terminating the launched process</b> in the <b>Common</b> tab of the Run/Debug configurations dialog.
+    By default this check-box is selected and child-processes are termianted too. 
+    </p>
+      <p>
+        <img src="images/configure-child-process-termination.png" alt=""/>
+      </p>
+  </td>
+  </tr>
   <!-- ****************** End of Debug ************************************* -->
 
   <!-- ****************** Preferences ************************************* -->
