@@ -106,27 +106,27 @@ ul {padding-left: 13px;}
         But let's look at this code:
       </p>
       <p>
-        <pre>int i = j++;</pre>
+        <div style="display: block;unicode-bidi: embed;font-family: monospace;white-space: pre;">int i = j++;</div>
       </p>
       <p>
         Most of the developers hardly remember which from the increment or the assignment comes first. One way to make the code obvious is to write the increment/decrement in a dedicated statement:
       </p>
       <p>
-        <pre>int i = j;
-j++;</pre>
+        <div style="display: block;unicode-bidi: embed;font-family: monospace;white-space: pre;">int i = j;
+j++;</div>
       </p>
       <p>
         And so for the prefix expressions:
       </p>
       <p>
-        <pre>int i = ++j;</pre>
+        <div style="display: block;unicode-bidi: embed;font-family: monospace;white-space: pre;">int i = ++j;</div>
       </p>
       <p>
         ...it goes like this:
       </p>
       <p>
-        <pre>j++;
-int i = j;</pre>
+        <div style="display: block;unicode-bidi: embed;font-family: monospace;white-space: pre;">j++;
+int i = j;</div>
       </p>
       <p>
         The cleanup moves a prefix expression above the statement and a postfix expression below.
@@ -272,14 +272,14 @@ int i = j;</pre>
   </tr>
 
   <tr id="string-replace"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=571040 -->
-    <td class="title"><a href="#string-replace">Use String::replace</a></td>
+    <td class="title"><a href="#string-replace">Use String.replace()</a></td>
     <td class="content">
       A new clean up has been added that replaces <code>String.replaceAll()</code> by <code>String.replace()</code> when the pattern is a plain text.
       <p>
         The pattern must be constant.
       </p>
       <p>
-        To apply the clean up, select <b>Use String::replace instead of String::replaceAll when no regex used</b> check box on the <b>Optimization</b> tab in your clean up profile.
+        To apply the clean up, select <b>Use String.replace() instead of String.replaceAll() when no regex used</b> check box on the <b>Optimization</b> tab in your clean up profile.
       </p>
       <p><img src="images/string-replace-preferences.png" alt="Preferences" width="800 px"/></p>
       <p>
@@ -467,7 +467,7 @@ int i = j;</pre>
   </tr>
 
   <tr id="invert-equals"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=571184 -->
-    <td class="title"><a href="#invert-equals">Object::equals on non null</a></td>
+    <td class="title"><a href="#invert-equals">Object.equals() on non null</a></td>
     <td class="content">
       A new clean up has been added that inverts calls to <code>Object.equals(Object)</code> and <code>String.equalsIgnoreCase(String)</code> to avoid useless null pointer exception.
       </p>
@@ -481,7 +481,7 @@ int i = j;</pre>
         Beware! By avoiding null pointer exceptions, the behavior may change!
       </p>
       <p>
-        To apply the clean up, select <b>Avoid Object::equals or String::equalsIgnoreCase on null objects</b> check box on the <b>Source Fixing</b> tab in your clean up profile.
+        To apply the clean up, select <b>Avoid Object.equals() or String.equalsIgnoreCase() on null objects</b> check box on the <b>Source Fixing</b> tab in your clean up profile.
       </p>
       <p><img src="images/invert-equals-preferences.png" alt="Preferences" width="800 px"/></p>
       <p>
