@@ -84,7 +84,7 @@ ob_start();
       everyone who has helped us to improve the quality by testing and reporting bugs and enhancement requests. And a special thanks to other Eclipse projects we prereq: EMF and ECF who 
      also provide timely updates so that we can be ontime. Special thanks to the following list of
       people, in alphabetical order, who contributed code to the project:
-     Alexander Kurtakov, Alexandra Buzila, Alexandr Miloslavskiy, Alex Blewitt, Andrey Loskutov, Carsten Hammer, Christian Gabrisch, Christoph L&#xE4;ubrich, Dieter Mai, Eike Stepper, Hannes Wellmann, Holger Voormann, Jay Arthanareeswaran, Jens Lidestrom, J&#xF6;rg Kubitz, Jonah Graham, Kalyan Prasad Tatavarthi, Karsten Thoms, Kirill Balod, Kit Lo, Lakshmi Priya Shanmugam, Lars Vogel, Matthias Becker, Mauro Garcia, Mickael Istria, Nikita Nemkin, Niraj Modi, Nitin Dahyabhai, Noopur Gupta, Paul Pazderski, Prashant Bhuruk, Robert Roth, Rolf Theunissen, Sarika Sinha, Sebastian Ratz, Simeon Andreev, Soraphol Damrongpiriyapong, Sravan Kumar Lakkimsetti, Stefan Katscher, Thomas Singer, Thomas Wolf, Torbj&#xF6;rn Svensson, Victor Rubezhny, Vikas Chandra and Wim Jongman.
+     Alexander Kurtakov, Alexandra Buzila, Alexandr Miloslavskiy, Alex Blewitt, Andrew Johnson, Andrey Loskutov, Carsten Hammer, Christian Gabrisch, Christoph L&#xE4;ubrich, Dieter Mai, Eike Stepper, Hannes Wellmann, Holger Voormann, Jay Arthanareeswaran, Jens Lidestrom, J&#xF6;rg Kubitz, Jonah Graham, Kalyan Prasad Tatavarthi, Karsten Thoms, Kirill Balod, Kit Lo, Lakshmi Priya Shanmugam, Lars Vogel, Matthias Becker, Mauro Garcia, Mickael Istria, Nikita Nemkin, Niraj Modi, Nitin Dahyabhai, Noopur Gupta, Paul Pazderski, Prashant Bhuruk, Robert Roth, Rolf Theunissen, Sarika Sinha, Sebastian Ratz, Simeon Andreev, Soraphol Damrongpiriyapong, Sravan Kumar Lakkimsetti, Stefan Katscher, Thomas Singer, Thomas Wolf, Torbj&#xF6;rn Svensson, Victor Rubezhny, Vikas Chandra and Wim Jongman.
      We would also like to acknowledge Sravan Kumar Lakkimsetti for all the build and releng support.
     </p>
 
@@ -94,7 +94,7 @@ ob_start();
     </p>
 
     <p>The JDT team would like to thank everyone who filed good enhancement requests, helped us improve quality by testing and filing good bug reports, and provided answers on JDT forums/newsgroups. Special thanks to the following list of
-      people, in alphabetical order, who contributed code to the project: Alexander Kurtakov, Alex Blewitt, Andrey Loskutov, Carsten Hammer, Fabrice Tiercelin, Gayan Perera, Jay Arthanareeswaran, Jeff Johnston, Jinbo Wang, J&#xF6;rg Kubitz, Julian Honnen, Kalyan Prasad Tatavarthi, Lars Vogel, Manoj Palat, Mateusz Matela, Michael Keppler, Noopur Gupta, Roland Grunberg, Sarika Sinha, Sravan Kumar Lakkimsetti, Stephan Herrmann and Vikas Chandra for features and bug fixes.
+      people, in alphabetical order, who contributed code to the project: Alexander Kurtakov, Alex Blewitt, Andrey Loskutov, Carsten Hammer, Fabrice Tiercelin, Gayan Perera, Gunnar Wagenknecht, Jay Arthanareeswaran, Jeff Johnston, Jinbo Wang, J&#xF6;rg Kubitz, Julian Honnen, Kalyan Prasad Tatavarthi, Lars Vogel, Manoj Palat, Mateusz Matela, Michael Keppler, Mikael Sterner, Niraj Modi, Noopur Gupta, Roland Grunberg, Sarika Sinha, Sravan Kumar Lakkimsetti, Stephan Herrmann and Vikas Chandra for features and bug fixes.
     </p>
     
     <p>The Plug-in Development Environment team would like to thank the numerous contributors who continue to improve the component every release.
