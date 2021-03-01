@@ -42,30 +42,41 @@ ul {padding-left: 13px;}
   <tr id="improved-contentassist"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=508821 -->
     <td class="title">Content-assist contributor allows more flexible control of completion triggers</td>
     <td class="content">
-      IContentAssistProcessor has a new extension interface IContentAssistProcessorExtension that allows to get context information for activation computation: 
+      <code>IContentAssistProcessor</code> has a new extension interface <code>IContentAssistProcessorExtension</code> that allows to get context information for activation computation: 
       <ul>
-      <li><i>IContentAssistProcessorExtension.isCompletionProposalAutoActivation(char, ITextViewer, int)</i></li>
-      <li><i>IContentAssistProcessorExtension.isContextInformationAutoActivation(char, ITextViewer, int)</i></li>
+      <li><code>IContentAssistProcessorExtension.isCompletionProposalAutoActivation(char, ITextViewer, int)</code></li>
+      <li><code>IContentAssistProcessorExtension.isContextInformationAutoActivation(char, ITextViewer, int)</code></li>
       </ul>
       <p>
        This allows for example to compute the activation chars based on the location or properties/content of the document.
       </p>
     </td>
   </tr>
-   <tr id="marker-create-api"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=570914 -->
-    <td class="title">Atomic IMarker creation API with attributes in IResource</td>
+  
+  <tr id="marker-create-api"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=570914 -->
+    <td class="title">API for Atomic IMarker creation with attributes</td>
     <td class="content">
-      The <code>IResource.createMarker(type, attribute)</code> API has been created to allow atomic creation of markers.
-      Using this new API should be preferred, as this reduces the resource change notifications and is in general 2x faster as two separate calls to create marker and set attributes on it.
+     The <code>IResource.createMarker(type, attribute)</code> API has been created to allow atomic creation of markers.
+     Using this new API should be preferred, as this reduces the resource change notifications and is in general 2x faster as two separate calls to create marker and set attributes on it.
     </td>
   </tr>
-   <tr id="clean-with-args"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=552606 -->
+  
+  <tr id="clean-with-args"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=552606 -->
     <td class="title">IncrementalProjectBuilder can optionally implement new clean with arguments method</td>
     <td class="content">
-      The <code>IncrementalProjectBuilder</code> API can optionally be extended by clients implementing the new <code>IIncrementalProjectBuilder2</code> interface that provides
+      The <code>IncrementalProjectBuilder</code> API can optionally be extended by clients implementing the new <code>IIncrementalProjectBuilder2</code> interface. It provides
       a new <code>clean(Map&lt;String, String&gt;, IProgressMonitor)</code> method that will be called instead of the existing <code>clean(IProgressMonitor)</code>.
       The new <code>clean</code> method passes the map of arguments from <code>IWorkspace.build()</code> or <code>IProject.build()</code> to the client for <code>clean</code> in the same way that it is done for the
       <code>build</code> method.
+    </td>
+  </tr>
+  
+  <tr id="icu-e4-feature"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569421 -->
+   <td class="title"><a href="#icu-e4-feature">Moved com.ibm.icu from org.eclipse.e4.rcp to org.eclipse.rcp feature</a></td>
+    <td class="content">
+      As the usage of the <i>com.ibm.icu</i> plug-in is planned to be removed from the platform, it has been removed from the <i>org.eclipse.e4.rcp</i> feature as e4 RCP applications do not require it since the 4.18 release.
+      It has been added to the <i>org.eclipse.rcp></i> features for now to ensure e3 applications which may use it and the Eclipse IDE to work correctly.
+      If your e4 RCP application uses it, you can include it in your custom feature.
     </td>
   </tr>
   <!-- ******************** End of Platform ********************** -->
@@ -78,8 +89,8 @@ ul {padding-left: 13px;}
    <td class="title"><a href="#resource-disposal-tracking">Resource disposal tracking</a></td>
     <td class="content">
       New <code>org.eclipse.swt.graphics.Resource.setNonDisposeHandler</code> API
-      is added which allows to track not properly disposed SWT resources.
-      This API accepts a custom <code>Consumer&lt;Error></code> callback to
+      is added which allows to track SWT resources that were not properly disposed.
+      The API accepts a custom <code>Consumer&lt;Error></code> callback to
       receive detected errors.
       <p>
         Alternatively, <code>"org.eclipse.swt.graphics.Resource.reportNonDisposed"</code>
@@ -89,23 +100,14 @@ ul {padding-left: 13px;}
       </p>
     </td>
   </tr>
-
-  <tr id="icu-e4-feature"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569421 -->
-   <td class="title"><a href="#icu-e4-feature">Moved com.ibm.icu from org.eclipse.e4.rcp to org.eclipse.rcp feature</a></td>
-    <td class="content">
-      As the usage of the com.ibm.icu plug-in is planned to be removed from the platform it has been removed from the org.eclipse.e4.rcp feature as e4 RCP applications do not require it since the 4.18 release.
-      It has been added to the org.eclipse.rcp features for now to ensure e3 applications  which may use it and the Eclipse IDE to work correctly.
-      If you e4 RCP application uses it, you can include it in your custom feature.
-    </td>
-  </tr>
-
   <tr id="shell-set-maximum-size"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=74001 -->
-    <td class="title"><a href="#shell-set-maximum-size">Shell Maximum Size</a></td>
+    <td class="title"><a href="#shell-set-maximum-size">API for Shell maximum size</a></td>
     <td class="content">
-      Developers can now specify the maximum size of the SWT shell. The shell will not be resizable to a larger width or height than specified.
+      You can now specify the maximum size of the SWT <code>Shell</code>. The Shell will not be resizable to a larger width or height than that specified.
       <ul>
-      <li>Use <i>setMaximumSize(width, height)</i> or <i>setMaximumSize(point)</i> to specify a maximum size for your shell. The shell will be resized if it's currently larger than the specified size.</li>
-      <li>Use <i>getMaximumSize()</i> to query the currently set maximum size.</li>
+      <li>Use <code>setMaximumSize(width, height)</code> or <code>setMaximumSize(point)</code> to specify a maximum size for your shell. 
+       The shell will be resized if it's currently larger than the specified size.</li>
+      <li>Use <code>getMaximumSize()</code> to query the currently set maximum size.</li>
       </ul>
       <p>
        Note that the result of combining maximum size with full screen mode is platform specific and in general not recommended.
@@ -113,14 +115,14 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   <tr id="browser-edge"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=538991 -->
-    <td class="title">Edge back-end for the Browser widget</td>
+    <td class="title">Edge back-end support for Browser</td>
     <td class="content">
-      On Windows, Browser widget supports a new back-end based on the WebView2 component (Microsoft Edge).
+      On Windows, the <code>Browser</code> widget supports a new back-end based on the WebView2 component (Microsoft Edge).
       Use the <code>SWT.EDGE</code> style constant to enable it.
       <p>
         Note that this integration is experimental and not a drop-in replacement for the older Internet Explorer back-end.
         There are missing features and significant differences in behavior.
-        Eclipse Platform has multiple issues when running with Edge as a default.
+        There are some known issues when running Eclipse IDE with Edge as the default browser.
       </p>
       <p>
         For additional information, see SWT FAQ entries
@@ -139,7 +141,6 @@ ul {padding-left: 13px;}
       </p>
     </td>
   </tr>
-    
   <!-- *********************** End of SWT *********************** -->
 
 </tbody>

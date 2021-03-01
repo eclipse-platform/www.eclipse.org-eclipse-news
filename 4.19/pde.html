@@ -46,25 +46,25 @@ ul {padding-left: 13px;}
     <td id="editors" class="section" colspan="2"><h2>Editors</h2></td>
   </tr>
   <tr id="pde-editor-enhancements"> <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=568865 -->
-    <td class="title"><a href="#pde-editor-enhancements">include/exclude bundles directly from the target definition view</a></td>
+    <td class="title"><a href="#pde-editor-enhancements">Include/exclude bundles directly from the target definition view</a></td>
     <td class="content">
-      It is now possible to include/exclude a bundle from within the directly from the target definition view, check the "Show location content" button, select a bundle and the remove button turns into an exclude action.
+      It is now possible to include and exclude a bundle directly from the target definition view. You should check the <b>Show location content</b> button, select a bundle and then the <b>Remove</b> button turns into an <b>Exclude</b> action.
    	  <p>
        <img src="images/pde_excl_incl_01.png" alt="" />
       </p>
-      Of course it is possible to include excluded items afterwards
-       <p>
+      Of course, it's possible to include excluded items later.
+      <p>
        <img src="images/pde_excl_incl_02.png" alt="" />
       </p>
-      The changes are now directly reflected in the content tab as well
-       <p>
+      The changes are now directly reflected in the <b>Content</b> tab as well.
+      <p>
        <img src="images/pde_excl_incl_03.png" alt="" />
       </p>
       If multiple items are selected and are of different state, the button turns into a toggle one.
        <p>
        <img src="images/pde_excl_incl_04.png" alt="" />
       </p>
-      This feature mainly demonstrates the power of the recent <a href="#pde-api-enhancements">API enhancements</a>.
+      This feature demonstrates the power of the recent <a href="#pde-api-enhancements">API enhancements</a>.
     </td>
   </tr>
   <!-- ******************** End of Editors ********************** -->
@@ -73,7 +73,7 @@ ul {padding-left: 13px;}
   <tr>
     <td id="APITools" class="section" colspan="2"><h2>API Tools</h2></td>
    </tr>
-       <tr id="pde-compiler-info-sev"> <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=569528 -->
+   <tr id="pde-compiler-info-sev"> <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=569528 -->
     <td class="title"><a href="#pde-warn-missing-bundle-from-baseline">Warning for missing bundle in API baseline</a></td>
     <td class="content">
    	  In <b>Preferences &gt; Plug-in Development &gt; API Baselines</b>, there is a new option to warn about missing bundle from the API baseline.
@@ -88,7 +88,7 @@ ul {padding-left: 13px;}
     </td>
       </tr>
    <tr id="pde-api-exporttext"> <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=570433 -->
-    <td class="title"><a href="#pde-api-exporttext">Better explanation text for exported packages in the editor</a></td>
+    <td class="title"><a href="#pde-api-exporttext">Improved text for exported packages in the editor</a></td>
     <td class="content">
    	  <p>The text of exported packages have been improved and the reference to the strict mode has been removed, as Equinox does not support this mode since a while. 
    	  </p>
@@ -97,10 +97,6 @@ ul {padding-left: 13px;}
       </p>
     </td>
   </tr>
-    
-    
-    
-
   <!-- ******************** End of APITools ********************** -->
   
    <!-- ******************** PDE Compiler ********************** -->
@@ -114,18 +110,18 @@ ul {padding-left: 13px;}
   <tr id="pde-api-enhancements"> <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=568865 -->
     <td class="title"><a href="#pde-api-enhancements">New advanced editing capabilities for custom target platforms</a></td>
     <td class="content">
-   	  <p>The API for adding custom Target-Platform-Locations has been refactored and existing implementation where cleaned up to support more advanced editing capabilities.
-   	  This has been done by merging the functionality of the previous interfaces <code>ITargetLocationEditor</code> and <code>ITargetLocationUpdater</code> has been incorporated into the new interface <code>ITargetLocationHandler</code>,
-   	  it is now only needed to implement this interface and override the default implemented methods as desired.
-   	  </p>
-   	  <p>
-   	  All methods for editing a target location now using a TreePath so it is possible to also edit child items, beside this, the new API offers the following new capabilities
-   	  </p>
-   	  <ul>
-   	  	<li>canRemove/remove - ability to add custom remove operations for sub-items</li>
-   	  	<li>canEnable/canDisable/toggle - ability to provide an alternative to remove operation where items are only disabled instead of completely removed from the target</li>
-   	  	<li>reload - ability to get notification about user request to reload the target</li>
-   	  </ul>
+    <p>The API for adding custom Target-Platform-Locations has been refactored and the existing implementation was cleaned up to support more advanced editing capabilities.
+     This has been done by merging the functionality of the previous interfaces <code>ITargetLocationEditor</code> and <code>ITargetLocationUpdater</code>. They have been incorporated into the new interface <code>ITargetLocationHandler</code>,
+     and now you only need to implement this interface and override the default implemented methods as desired.
+    </p>
+    <p>
+    All methods for editing a target location now use a TreePath, so it's possible to also edit child items. Additionally, the new API offers the following new capabilities:
+    </p>
+    <ul>
+     <li><code>canRemove/remove</code> - Ability to add custom remove operations for sub-items</li>
+     <li><code>canEnable/canDisable/toggle</code> - Ability to provide an alternative to remove operation where items are only disabled instead of completely removed from the target</li>
+     <li><code>reload</code> - Ability to get notification about user request to reload the target</li>
+      </ul>
     </td>
   </tr>
   <!-- ******************** End of API Enhancements ********************** -->
