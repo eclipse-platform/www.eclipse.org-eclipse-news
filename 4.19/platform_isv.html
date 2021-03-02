@@ -74,8 +74,8 @@ ul {padding-left: 13px;}
   <tr id="icu-e4-feature"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569421 -->
    <td class="title"><a href="#icu-e4-feature">Moved com.ibm.icu from org.eclipse.e4.rcp to org.eclipse.rcp feature</a></td>
     <td class="content">
-      As the usage of the <i>com.ibm.icu</i> plug-in is planned to be removed from the platform, it has been removed from the <i>org.eclipse.e4.rcp</i> feature as e4 RCP applications do not require it since the 4.18 release.
-      It has been added to the <i>org.eclipse.rcp></i> features for now to ensure e3 applications which may use it and the Eclipse IDE to work correctly.
+      As the usage of the <b>com.ibm.icu</b> plug-in is planned to be removed from the platform, it has been removed from the <b>org.eclipse.e4.rcp</b> feature as e4 RCP applications do not require it since the 4.18 release.
+      It has been added to the <b>org.eclipse.rcp</b> features for now to ensure e3 applications which may use it and the Eclipse IDE to work correctly.
       If your e4 RCP application uses it, you can include it in your custom feature.
     </td>
   </tr>
@@ -86,14 +86,14 @@ ul {padding-left: 13px;}
     <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
   </tr>
   <tr id="resource-disposal-tracking"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569752 -->
-   <td class="title"><a href="#resource-disposal-tracking">Resource disposal tracking</a></td>
+   <td class="title"><a href="#resource-disposal-tracking">API for Resource disposal tracking</a></td>
     <td class="content">
       New <code>org.eclipse.swt.graphics.Resource.setNonDisposeHandler</code> API
       is added which allows to track SWT resources that were not properly disposed.
       The API accepts a custom <code>Consumer&lt;Error></code> callback to
       receive detected errors.
       <p>
-        Alternatively, <code>"org.eclipse.swt.graphics.Resource.reportNonDisposed"</code>
+        Alternatively, <code>org.eclipse.swt.graphics.Resource.reportNonDisposed</code>
         system property can be set to <code>true</code>. In this case, SWT will report
         these errors to <code>stderr</code> without the need to modify application's
         code.

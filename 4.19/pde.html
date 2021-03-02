@@ -48,7 +48,7 @@ ul {padding-left: 13px;}
   <tr id="pde-editor-enhancements"> <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=568865 -->
     <td class="title"><a href="#pde-editor-enhancements">Include/exclude bundles directly from the target definition view</a></td>
     <td class="content">
-      It is now possible to include and exclude a bundle directly from the target definition view. You should check the <b>Show location content</b> button, select a bundle and then the <b>Remove</b> button turns into an <b>Exclude</b> action.
+      It is now possible to include and exclude a bundle directly from the <b>Target Definition</b> view. You should check the <b>Show location content</b> button, select a bundle and then the <b>Remove</b> button turns into an <b>Exclude</b> action.
    	  <p>
        <img src="images/pde_excl_incl_01.png" alt="" />
       </p>
@@ -60,7 +60,7 @@ ul {padding-left: 13px;}
       <p>
        <img src="images/pde_excl_incl_03.png" alt="" />
       </p>
-      If multiple items are selected and are of different state, the button turns into a toggle one.
+      If multiple items are selected and are of different state, the button turns into a <b>Toggle</b> one.
        <p>
        <img src="images/pde_excl_incl_04.png" alt="" />
       </p>
@@ -90,7 +90,7 @@ ul {padding-left: 13px;}
    <tr id="pde-api-exporttext"> <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=570433 -->
     <td class="title"><a href="#pde-api-exporttext">Improved text for exported packages in the editor</a></td>
     <td class="content">
-   	  <p>The text of exported packages have been improved and the reference to the strict mode has been removed, as Equinox does not support this mode since a while. 
+   	  <p>The text for <b>Exported Packages</b> was improved and the reference to the strict mode was removed, as Equinox does not support this mode since a while. 
    	  </p>
    	   <p>
        <img src="images/pde-export-text.png" alt="" />
@@ -110,8 +110,8 @@ ul {padding-left: 13px;}
   <tr id="pde-api-enhancements"> <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=568865 -->
     <td class="title"><a href="#pde-api-enhancements">New advanced editing capabilities for custom target platforms</a></td>
     <td class="content">
-    <p>The API for adding custom Target-Platform-Locations has been refactored and the existing implementation was cleaned up to support more advanced editing capabilities.
-     This has been done by merging the functionality of the previous interfaces <code>ITargetLocationEditor</code> and <code>ITargetLocationUpdater</code>. They have been incorporated into the new interface <code>ITargetLocationHandler</code>,
+    <p>The API for adding custom Target-Platform-Locations was refactored and the existing implementation was cleaned up to support more advanced editing capabilities.
+     This was done by merging the functionality of the previous interfaces <code>ITargetLocationEditor</code> and <code>ITargetLocationUpdater</code>. They have been incorporated into the new interface <code>ITargetLocationHandler</code>,
      and now you only need to implement this interface and override the default implemented methods as desired.
     </p>
     <p>

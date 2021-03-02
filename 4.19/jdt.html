@@ -88,7 +88,7 @@ ul {padding-left: 13px;}
   <tr id="add-catch-to-try-with-resources-assists"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=570762 -->
     <td class="title"><a href="#add-catch-to-try-with-resources-assists">Add catch clause to try-with-resources assists</a></td>
     <td class="content">
-      There are multiple assists to surround auto-closeable statements in a try-with-resources statement including <b>Surround with -> Try-with-resources Block</b>.  Now, all forms will add
+      There are multiple assists to surround auto-closeable statements in a try-with-resources statement including <b>Surround with &gt; Try-with-resources Block</b>.  Now, all forms will add
       a <code>catch</code> clause for any exceptions (such as <code>IOException</code>) thrown by the auto-close if not already handled via an existing <code>catch</code> clause 
       or <code>throws</code> directive.  In the case where the existing code catches or throws an exception that sub-classes the exceptions of the new <code>catch</code> clause, an 
       additional <code>catch</code> clause will be added to rethrow the exception to ensure code logic remains consistent.
@@ -97,12 +97,12 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   <tr id="create-permitted-type-declaration"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=570440 -->
-    <td class="title"><a href="#create-permitted-type-declaration">Create permitted type declaration</a></td>
+    <td class="title"><a href="#create-permitted-type-declaration">Quick fix to create permitted type declaration</a></td>
     <td class="content">
-      You can use the following quick fixes (<strong>Ctrl+1</strong>) to create a new permitted class or interface declaration:
+      You can use the following quick fixes (<b>Ctrl+1</b>) to create a new permitted class or interface declaration:
       <p><img src="images/create-permitted-type-declaration.png" alt=""/></p>
       <p>
-      The created type will declare the sealed type as its super type and 
+      The created type will declare the <code>sealed</code> type as its super type and 
       it can be declared as final, non-sealed, or sealed with the available quick fixes for further inheritance control.
       </p>
     </td>
@@ -110,7 +110,7 @@ ul {padding-left: 13px;}
   <tr id="java-feature"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569711 -->
     <td class="title"><a href="#java-feature">Java Feature clean ups</a></td>
     <td class="content">
-      A new tab named <b>Java Feature</b> has been added to the clean up preferences. It lists the clean up options that introduce the use of language features from different Java versions. Relevant clean up options from other tabs have also been moved to this new tab. 
+      A new tab named <b>Java Feature</b> has been added to the <b>Clean Up </b>preferences. It lists the clean up options that introduce the use of language features from different Java versions. Relevant clean up options from other tabs have also been moved to this new tab. 
       <p>
         You can use these clean ups while upgrading the Java version in your code.
       </p>
@@ -493,7 +493,7 @@ int i = j;</span>
   <tr id="source-fixing"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=570773 -->
     <td class="title"><a href="#source-fixing">Source Fixing clean ups</a></td>
     <td class="content">
-      A new tab named <b>Source Fixing</b> has been added to the clean up preferences. It lists the clean up options that fixes the behavior of the code. The <b>Compare with != 0 for bitwise expression</b> clean up option from <b>Code style</b> tab have also been moved to this new tab. 
+      A new tab named <b>Source Fixing</b> has been added to the <b>Clean Up</b> preferences. It lists the clean up options that fixes the behavior of the code. The <b>Compare with != 0 for bitwise expression</b> clean up option from <b>Code style</b> tab have also been moved to this new tab. 
       <p>
         ⚠️ Use it carefully. You may get an unexpected behavior. It may trigger zombie code. A zombie code is a dead code that is dead because an error occurs before. The day someone fixes the error, the zombie code comes back to life and alters the behavior. Although most of the cleanups need review, those ones need testing.
       </p>
@@ -504,9 +504,7 @@ int i = j;</span>
   <tr id="invert-equals"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=571184 -->
     <td class="title"><a href="#invert-equals">Object.equals() on non null clean up</a></td>
     <td class="content">
-      <p>
       A new clean up has been added that inverts calls to <code>Object.equals(Object)</code> and <code>String.equalsIgnoreCase(String)</code> to avoid useless null pointer exception.
-      </p>
       <p>
         The caller must be nullable.
       </p>
@@ -536,7 +534,7 @@ int i = j;</span>
     <td class="content">
       A new clean up has been added that fixes <code>Comparable.compareTo()</code> usage.
       <p>
-        The developer is not supposed to predict the <code>1</code> and <code>-1</code> values; them is supposed to get zero or a value lesser or greater than zero.
+        The code is not supposed to predict the <code>1</code> and <code>-1</code> values; it is supposed to get zero or a value lesser or greater than zero.
       </p>
       <p>
         Beware! The behavior may change if you implement a custom comparator!
@@ -583,8 +581,8 @@ int i = j;</span>
       A new option named <b>Restricted identifiers</b> has been added under Java category in <b>Java &gt; Editor &gt; Syntax Coloring</b> preferences.
       <p>
        Some identifiers (e.g. var, yield, record etc.) are restricted identifiers because they are not allowed in some contexts.
-       Semantic highlighting options for such identifiers can be controlled by the element <strong>Restricted identifiers</strong> 
-       under <strong>Java</strong> category in <strong>Java</strong> &gt; <strong>Editor</strong> &gt; <strong>Syntax Coloring</strong> preference page.
+       Semantic highlighting options for such identifiers can be controlled by the element <b>Restricted identifiers</b> 
+       under <b>Java</b> category in <b>Java &gt; Editor &gt; Syntax Coloring</b> preference page.
       </p>
       <p><img src="images/restricted-identifier-preference.png" alt=""/></p>
     </td>
@@ -600,13 +598,13 @@ int i = j;</span>
         You can now apply the same concept for another kind of classes that should not be edited: generated source code.
       </p>
       <p>
-        In the <strong>Java Build Path</strong> dialog, also source folders now have a node "External annotations"
+        In the <b>Java Build Path</b> dialog, also source folders now have a node <b>External annotations</b> 
         where a path to Eclipse External Annotation files (.eea) can be configured.
       </p>
       <p><img src="images/annotate-sources-config.png" alt="Configure Annotation Path"/></p>
       <p>
         Given a project that is configured for annotation based null analysis, and given a Java class
-        inside a source folder configured for external annotations, the editor now offers a quick assist (<strong>Ctrl+1</strong>)
+        inside a source folder configured for external annotations, the editor now offers a quick assist (<b>Ctrl+1</b>)
         for annotating individual type references in the signatures of methods and fields.
       </p>
       <p><img src="images/annotate-sources-assist.png" alt="Configure Annotation Path"/></p>
