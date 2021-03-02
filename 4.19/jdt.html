@@ -106,27 +106,27 @@ ul {padding-left: 13px;}
         But let's look at this code:
       </p>
       <p>
-        <div style="display: block;unicode-bidi: embed;font-family: monospace;white-space: pre;">int i = j++;</div>
+        <span style="display: block;unicode-bidi: embed;font-family: monospace;white-space: pre;">int i = j++;</span>
       </p>
       <p>
         Most of the developers hardly remember which from the increment or the assignment comes first. One way to make the code obvious is to write the increment/decrement in a dedicated statement:
       </p>
       <p>
-        <div style="display: block;unicode-bidi: embed;font-family: monospace;white-space: pre;">int i = j;
-j++;</div>
+        <span style="display: block;unicode-bidi: embed;font-family: monospace;white-space: pre;">int i = j;
+j++;</span>
       </p>
       <p>
         And so for the prefix expressions:
       </p>
       <p>
-        <div style="display: block;unicode-bidi: embed;font-family: monospace;white-space: pre;">int i = ++j;</div>
+        <span style="display: block;unicode-bidi: embed;font-family: monospace;white-space: pre;">int i = ++j;</span>
       </p>
       <p>
         ...it goes like this:
       </p>
       <p>
-        <div style="display: block;unicode-bidi: embed;font-family: monospace;white-space: pre;">j++;
-int i = j;</div>
+        <span style="display: block;unicode-bidi: embed;font-family: monospace;white-space: pre;">j++;
+int i = j;</span>
       </p>
       <p>
         The cleanup moves a prefix expression above the statement and a postfix expression below.
@@ -469,6 +469,7 @@ int i = j;</div>
   <tr id="invert-equals"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=571184 -->
     <td class="title"><a href="#invert-equals">Object.equals() on non null</a></td>
     <td class="content">
+      <p>
       A new clean up has been added that inverts calls to <code>Object.equals(Object)</code> and <code>String.equalsIgnoreCase(String)</code> to avoid useless null pointer exception.
       </p>
       <p>
@@ -595,7 +596,7 @@ int i = j;</div>
       or <code>throws</code> directive.  In the case where the existing code catches or throws an exception that sub-classes the exceptions of the new <code>catch</code> clause, an 
       additional <code>catch</code> clause will be added to rethrow the exception to ensure code logic remains consistent.
       <p><img src="images/add-catch-clause-to-try-with-resources-before.png" alt=""/></p>
-      <p><img src="images/add-catch-clause-to-try-with-resources-after.png" alt=""/</p>
+      <p><img src="images/add-catch-clause-to-try-with-resources-after.png" alt=""/></p>
     </td>
   </tr>
 
