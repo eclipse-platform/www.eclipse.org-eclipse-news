@@ -14,17 +14,21 @@
 
 #!/bin/sh
 
-if [ "x$1" == "x"  ] && [ "x$2" == "x"  ]; then
+if [ "x$1" == "x"  ] || [ "x$2" == "x"  ]; then
  echo "Usage error: Pass release version and simrel release name as arguments"
  echo "For example: ./applyTemplate.sh 4.13 2019-09"
- exit
+ exit 1
 fi
 
 cd ..
 echo "In parent directory of scripts `pwd`"
 
-echo "Delete existing directory $1"
-rm -r $1
+echo "Checking if directory $1 already exists"
+if [ -d $1 ] 
+then
+   echo "Error: Directory $1 already exists. Exiting..."
+   exit 1
+fi
 
 echo "Applying template for $1"
 cp -R '4.x-template' $1

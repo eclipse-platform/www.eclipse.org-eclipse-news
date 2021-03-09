@@ -13,7 +13,8 @@ List of scripts in the script directory:
 ===============================================================================================================================
 1. applyTemplate.sh
 Creates the folder structure for a release using the 4.x-template.
-Run the applyTemplate.sh script from the scripts directory
+Run the applyTemplate.sh script from the scripts directory. Script will exit if directory for the <platform-release-version> 
+already exists.
 
 ./applyTemplate.sh <platform-release-version> <simrel-release-name>
 
