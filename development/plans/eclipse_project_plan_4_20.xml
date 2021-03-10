@@ -205,10 +205,10 @@ Eclipse 4.20 Endgame Plan.
 			</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-				OpenJDK 11.0.9 (LTS)<br/>
-				OpenJDK 15.0.1<br/>
-				Oracle Java 11.0.9 (LTS)<br/>
-				Oracle Java 15.0.1<br/>
+				OpenJDK 11.0.10 (LTS)<br/>
+				OpenJDK 15.0.2<br/>
+				Oracle Java 11.0.10 (LTS)<br/>
+				Oracle Java 15.0.2<br/>
 			</td>
 			<td rowspan="1">Win32</td>
 		</tr>
@@ -217,21 +217,21 @@ Eclipse 4.20 Endgame Plan.
 			<td rowspan="2">Red Hat Enterprise Linux</td>
 
 			<td rowspan="2">7.9<br/>
-			8.2
+			8.3
 			</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-				OpenJDK 11.0.9 (LTS)<br/>
-				OpenJDK 15.0.1<br/>
-				Oracle Java 11.0.9 (LTS)<br/>
-				Oracle Java 15.0.1<br/>
+				OpenJDK 11.0.10 (LTS)<br/>
+				OpenJDK 15.0.2<br/>
+				Oracle Java 11.0.10 (LTS)<br/>
+				Oracle Java 15.0.2<br/>
 			</td>
 			<td rowspan="2">GTK 3</td>
 		</tr>
 		<tr class="c1">
 			<td rowspan="1">Power 64-bit LE</td>
 			<td rowspan="1">
-				OpenJDK 11.0.9 (LTS)
+				OpenJDK 11.0.10 (LTS)
 			</td>
 		</tr>
 		<!-- ************ SLES ************** -->
@@ -242,15 +242,15 @@ Eclipse 4.20 Endgame Plan.
 			</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-				OpenJDK 11.0.9 (LTS)<br/>
-				OpenJDK 15.0.1<br/>
+				OpenJDK 11.0.10 (LTS)<br/>
+				OpenJDK 15.0.2<br/>
 			</td>
 			<td rowspan="2">GTK 3</td>
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">Power 64-bit LE</td>
 			<td rowspan="1">
-				OpenJDK 11.0.9 (LTS)
+				OpenJDK 11.0.10 (LTS)
 			</td>
 		</tr>
 
@@ -260,8 +260,8 @@ Eclipse 4.20 Endgame Plan.
 		    <td rowspan="1">20.04</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-				OpenJDK 11.0.9 (LTS)<br/>
-				OpenJDK 15.0.1<br/>
+				OpenJDK 11.0.10 (LTS)<br/>
+				OpenJDK 15.0.2<br/>
 			</td>
 			<td rowspan="1">GTK 3</td>
 		</tr>
@@ -275,10 +275,10 @@ Eclipse 4.20 Endgame Plan.
 			</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-				OpenJDK 11.0.9 (LTS)<br/>
-				OpenJDK 15.0.1<br/>
-				Oracle Java 11.0.9 (LTS)<br/>
-				Oracle Java 15.0.1
+				OpenJDK 11.0.10 (LTS)<br/>
+				OpenJDK 15.0.2<br/>
+				Oracle Java 11.0.10 (LTS)<br/>
+				Oracle Java 15.0.2
 			</td>
 			<td rowspan="1">Cocoa</td>
 		</tr>
@@ -343,7 +343,7 @@ compared to bugs which are reproducible on the target environments listed above.
   
 <p><strong>Source Compatibility:</strong> Eclipse SDK 4.20 will be upwards source-compatible
   with Eclipse SDK 4.19 except in the areas noted in the
-  <a href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_18_porting_guide.html" target="_top">
+  <a href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_20_porting_guide.html" target="_top">
     <em>Eclipse 4.20 Plug-in Migration Guide</em>
   </a>. This means that source files written
   to use Eclipse SDK 4.19 APIs might successfully compile and run against Eclipse
