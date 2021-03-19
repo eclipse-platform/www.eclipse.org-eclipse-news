@@ -38,6 +38,15 @@ ul {padding-left: 13px;}
   <tr>
     <td id="Platform" class="section" colspan="2"><h2>Platform Changes</h2></td>
   </tr>
+
+  <tr id="jetty-10-update"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569804 -->
+    <td class="title">Embedded Jetty server updated to version 10.x</td>
+    <td class="content">
+      Jetty Server used by Help system is updated to version 10.x. As this version requires Servlet API 4.x the opportunity is used to move to the new Jakarta Servlet name of the library.
+      Bundle symbolic name becomes jakarta.servlet-api from the old javax.servlet one. One of the Jetty bundles org.eclipse.jetty.continuation has been removed from Jetty 10 releases 
+      thus it's no longer part of Eclipse Platform content too.
+    </td>
+  </tr>
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
