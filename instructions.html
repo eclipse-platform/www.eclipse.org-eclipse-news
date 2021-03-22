@@ -118,6 +118,38 @@ table.news tr td.content {vertical-align: top;}
     </td>
   </tr>
 
+  <tr id="tips-tricks">
+    <td class="title">Adding an entry to Tips and Tricks document</td>
+    <td class="content">
+    	You can add eligible news items to the Tips and Tricks documents of JDT, Platform, and PDE 
+    	present in the <code>*.doc.user</code> projects of the <code>ssh://user_id@git.eclipse.org:29418/platform/eclipse.platform.common.git</code> repository.
+    	
+    	<p>
+    	Add the "new.png" icon using <code>&lt;img src="images/new.png" alt=""&gt;</code> before the title of your entry. 
+    	These icons will be kept until the next June release of the Eclipse IDE and will be cleared after that. 
+    	</p>
+    	
+    	<p>
+    	Keep the entry short and relevant as a tip instead of making it descriptive as a news item. 
+    	</p>
+    	
+    	<p>
+    	Add "tips" tag on the "Whiteboard" field of the corresponding bug for quick querying of the added tips.
+    	</p>
+
+		<p>You are also encouraged to attach a small video or animated GIF to the associated bug displaying the item in action. 
+		This attachment can be used with the entry description to spread the word about it on social media platforms.
+		</p>
+		
+        <p>Do <b>not</b> link to bugs in the entry. Only add the bug number in the commit message when committing the entry.
+        </p>
+        
+        <p>
+        Note: Please use the W3C <a href="https://validator.w3.org/#validate_by_input">XHTML Markup Validation Service</a> to check your document's markup before submitting as an invalid document can lead to build failure.
+        </p>
+    </td>
+  </tr>
+
   <tr id="bug-number">
     <td class="title">Bug number for an entry</td>
     <td class="content">
