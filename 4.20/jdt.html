@@ -72,6 +72,29 @@ ul {padding-left: 13px;}
     <h2>Java Editor </h2>
     </td>
   </tr>
+  
+  <tr id="operand-factorization"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569666 -->
+    <td class="title"><a href="#operand-factorization">Operand factorization clean up</a></td>
+    <td class="content">
+      A new clean up has been added that replaces <code>(X && Y) || (X && Z)</code> by <code>(X && (Y || Y))</code>.
+      <p>
+        The operands must be passive and primitive.
+      </p>
+      <p>
+        To apply the clean up, select <b>Replace (X &amp;&amp; Y) || (X &amp;&amp; Z) by (X &amp;&amp; (Y || Z))</b> check box on the <b>Duplicate code</b> tab in your clean up profile.
+      </p>
+      <p><img src="images/operand-factorization-preferences.png" alt="Preferences" width="800"/></p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/operand-factorization-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/operand-factorization-after.png" alt="After"/></p>
+    </td>
+  </tr>
+  
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
