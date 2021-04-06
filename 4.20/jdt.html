@@ -187,6 +187,28 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   
+  <tr id="return-without-assignment"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=572537 -->
+    <td class="title"><a href="#return-without-assignment">Remove variable assignment before return clean up</a></td>
+    <td class="content">
+      A new clean up has been added that removes unnecessary local variable declaration or unnecessary variable assignment before a return statement.
+      <p>
+        An explicit type is added for arrays.
+      </p>
+      <p>
+        To apply the clean up, select <b>Remove variable assignment before return</b> check box on the <b>Unnecessary Code</b> tab in your clean up profile.
+      </p>
+      <p><img src="images/return-without-assignment-preferences.png" alt="Preferences" width="800"/></p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/return-without-assignment-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/return-without-assignment-after.png" alt="After"/></p>
+    </td>
+  </tr>
+  
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
