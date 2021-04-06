@@ -209,6 +209,26 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   
+  <tr id="system-properties"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=571823 -->
+    <td class="title"><a href="#replace-system-properties">Replace System.getProperty() calls clean up</a></td>
+    <td class="content">
+      A new clean up has been added that replaces certain <code>System.getProperty()</code> calls with alternative Java method calls or constants instead.  Using these calls/constants may end up using system defaults (e.g. system default file separator) and thus can no longer be overridden at runtime.
+      <p>
+        To apply the clean up, select <b>Replace system property with constant</b> check box on the <b>Java Feature</b> tab in your clean up profile.  This
+enables you to check one or more sub-options: <b>File separator</b>, <b>Path separator</b>, <b>Line separator</b>, <b>File encoding</b>, or <b>Boolean property</b>.  The last option is used for arbitrary boolean options specified by <b>-Dsome-arbitrary-option</b>.
+      </p>
+      <p><img src="images/system-properties-preferences.png" alt="Preferences"/></p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/system-properties-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/system-properties-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
