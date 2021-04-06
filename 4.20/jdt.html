@@ -98,7 +98,7 @@ ul {padding-left: 13px;}
   <tr id="operand-factorization"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569666 -->
     <td class="title"><a href="#operand-factorization">Operand factorization clean up</a></td>
     <td class="content">
-      A new clean up has been added that replaces <code>(X && Y) || (X && Z)</code> by <code>(X && (Y || Y))</code>.
+      A new clean up has been added that replaces <code>(X &amp;&amp; Y) || (X &amp;&amp; Z)</code> by <code>(X &amp;&amp; (Y || Y))</code>.
       <p>
         The operands must be passive and primitive.
       </p>
@@ -260,6 +260,17 @@ enables you to check one or more sub-options: <b>File separator</b>, <b>Path sep
     <td id="Debug" class="section" colspan="2">
     <h2>Debug</h2>
     </td>
+  </tr>
+  <tr id="configuration-copyjars"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=571719 -->
+      <td class="title"><a href="#copy-jars">Copy Run Configuration item details</a></td>
+      <td class="content">
+          A new <b>Copy</b> button has been added to the <b>Dependencies/Classpath</b> tab of Run Configuration dialog.
+          This can be used to copy the details of the selected item.
+          <p>
+            <img src="images/configuration-copyjars.png" alt="screenshot showing new menu" />
+          </p>
+      </td>
+
   </tr>
   <!--************************ End of Debug ******************************** -->
 
