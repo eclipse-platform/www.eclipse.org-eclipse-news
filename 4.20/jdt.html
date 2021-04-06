@@ -73,6 +73,28 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   
+  <tr id="use-instanceof"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569835 -->
+    <td class="title"><a href="#use-instanceof">Use instanceof</a></td>
+    <td class="content">
+      A new clean up has been added that uses an <code>instanceof</code> expression to check an object against a hardcoded class.
+      <p>
+        The expression must be a supertype of the targeted class.
+      </p>
+      <p>
+        To apply the clean up, select <b>Use instanceof keyword instead of Class.isInstance()</b> check box on the <b>Code Style</b> tab in your clean up profile.
+      </p>
+      <p><img src="images/use-instanceof-preferences.png" alt="Preferences" width="800"/></p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/use-instanceof-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/use-instanceof-after.png" alt="After"/></p>
+    </td>
+  </tr>
+  
   <tr id="operand-factorization"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569666 -->
     <td class="title"><a href="#operand-factorization">Operand factorization clean up</a></td>
     <td class="content">
