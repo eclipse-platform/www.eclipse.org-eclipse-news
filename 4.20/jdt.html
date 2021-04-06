@@ -139,6 +139,31 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   
+  <tr id="implicit-comparator"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=572426 -->
+    <td class="title"><a href="#implicit-comparator">Implicit comparator clean up</a></td>
+    <td class="content">
+      A new clean up has been added that removes the comparator declaration if it is the default one.
+      <p>
+        The declared comparator should be an equivalent to the natural order.
+        It removes anonymous class, lambda, <code>Comparator.comparing()</code>, <code>Comparator.naturalOrder()</code> and <code>null</code>.
+        It applies on <code>List.sort(Comparator)</code>, <code>Collections.sort(List, Comparator)</code>, <code>Collections.max(Collection, Comparator)</code> and <code>Collections.min(Collection, Comparator)</code>.
+        If the comparator is used in the method <code>List.sort(Comparator)</code>, the method is converted into <code>Collections.sort(List)</code>.
+      </p>
+      <p>
+        To apply the clean up, select <b>Use implicit comparator when possible</b> check box on the <b>Unnecessary Code</b> tab in your clean up profile.
+      </p>
+      <p><img src="images/implicit-comparator-preferences.png" alt="Preferences" width="800"/></p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/implicit-comparator-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/implicit-comparator-after.png" alt="After"/></p>
+    </td>
+  </tr>
+  
   <tr id="array-with-curly"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=571977 -->
     <td class="title"><a href="#array-with-curly">Initialize array with curly clean up</a></td>
     <td class="content">
