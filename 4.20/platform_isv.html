@@ -43,8 +43,122 @@ ul {padding-left: 13px;}
     <td class="title">Embedded Jetty server updated to version 10.x</td>
     <td class="content">
       Jetty Server used by Help system is updated to version 10.x. As this version requires Servlet API 4.x the opportunity is used to move to the new Jakarta Servlet name of the library.
-      Bundle symbolic name becomes jakarta.servlet-api from the old javax.servlet one. One of the Jetty bundles org.eclipse.jetty.continuation has been removed from Jetty 10 releases 
+      Bundle symbolic name becomes jakarta.servlet-api from the old javax.servlet one. One of the Jetty bundles org.eclipse.jetty.continuation has been removed from Jetty 10 releases
       thus it's no longer part of Eclipse Platform content too.
+    </td>
+  </tr>
+
+  <tr id="register-model-fragment"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=571866 -->
+    <td class="title">Register Model Fragments via Manifest header</td>
+    <td class="content">
+      It is now possible to register model fragments via the newly introduced Manifest Header <code>Model-Fragment</code>. This way it is not necessary to create a <i>plugin.xml</i> that contains
+      an extension to the extension point <code>org.eclipse.e4.workbench.model</code>.
+      <p>
+        To register a fragment via Manifest header, you can now simply an entry similar to the following snippet to the MANIFEST.MF of the contributing bundle:
+      </p>
+      <p>
+        <code>Model-Fragment: fragment.e4xmi;apply=always</code>
+      </p>
+      <p>
+        The <code>apply</code> attribute is optional and defaults to <code>always</code>. It can have the same values as specified in the extension point:
+        <ul>
+          <li>always: each time the application started potentially replacing existing model elements and loosing information stored</li>
+          <li>initial: only when coming from a none persistent state</li>
+          <li>notexists: only if the given element does not exist already in the model</li>
+        </ul>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="register-model-processor"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=571866 -->
+    <td class="title">Register Model Processor via DS</td>
+    <td class="content">
+      It is now possible to register model processors as declarative service. The model processor needs to implement the service interface <code>IModelProcessorContribution</code> to get
+      registered. This way it is not necessary to create a <i>plugin.xml</i> that contains an extension to the extension point <code>org.eclipse.e4.workbench.model</code>.
+
+      <p>
+        The model processor is registered via DS, the execution is triggered via the Eclipse injection mechanism. The processor execution at registration time needs to be placed in a method
+        annotated with <code>@Execute</code>. Additionally it is possible to add a method annotated with <code>@PreDestroy</code> which gives the opportunity to cleanup in case the bundle
+        that provides the model processor contribution is stopped.
+      </p>
+      <p>
+        <pre>
+@Component
+public class ExampleProcessorContribution implements IModelProcessorContribution {
+
+    @Execute
+    public void execute() {
+        System.out.println("Processor executed");
+    }
+
+    @PreDestroy
+    public void preDestroy() {
+        System.out.println("Processor killed");
+    }
+}
+        </pre>
+      </p>
+      <p>
+        It is also possible to re-use existing model processor POJO implementations and register them via an <code>IModelProcessorContribution</code>. For this the method <code>getProcessorClass()</code>
+        needs to be overridden to return the class of the model processor POJO. In this case there is no support for handling the stopping of the contributing bundle.
+      </p>
+      <p>
+        <pre>
+@Component
+public class ExampleProcessorContribution implements IModelProcessorContribution {
+
+    @Override
+    public Class<?> getProcessorClass() {
+        return ExampleProcessor.class;
+    }
+}
+        </pre>
+      </p>
+      <p>
+        The <code>IModelProcessorContribution</code> supports two service properties for configuration:
+        <ul>
+          <li>beforefragment: specifies if the processor has to be invoked before model fragments are added. If not specified it defaults to <code>true</code>.</li>
+          <li>apply: defines in which case a processor is run. If not specified it defaults to <i>always</i>.<br>
+            Possible values are:
+            <ul>
+              <li>always: each time the application started</li>
+              <li>initial: only when coming from a none persistent state</li>
+            </ul>
+          </li>
+        </ul>
+      </p>
+      <p>
+        <pre>
+@Component(property = {
+    IModelProcessorContribution.BEFORE_FRAGMENT_PROPERTY_PREFIX + "false",
+    IModelProcessorContribution.APPLY_PROPERTY_PREFIX + "initial"
+})
+public class ExampleProcessorContribution implements IModelProcessorContribution { ... }
+        </pre>
+      </p>
+      <p>
+        You can also specify model elements that should be added to the context that is used to invoke the processor. This is necessary as the processor is invoked on application context level.
+        To specify such model elements you need to override the method <code>getModelElements()</code>
+      </p>
+      <p>
+        <pre>
+@Component(property = {
+		IModelProcessorContribution.BEFORE_FRAGMENT_PROPERTY_PREFIX + "false"
+})
+public class ExampleProcessorContribution implements IModelProcessorContribution {
+
+    @Execute
+    public void execute(@Named("org.eclipse.example.partstack") MPartStack myTest) {
+        System.out.println("Processor executed: " + myTest.getElementId());
+    }
+
+    @Override
+    public List<ModelElement> getModelElements() {
+        return Arrays.asList(new ModelElement("org.eclipse.example.partstack"));
+    }
+}
+        </pre>
+      </p>
     </td>
   </tr>
   <!-- ******************** End of Platform ********************** -->
