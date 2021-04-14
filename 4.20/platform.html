@@ -75,6 +75,13 @@ ul {padding-left: 13px;}
     <h2>General Updates </h2>
     </td>
   </tr>
+  <tr id="swt-gtk-disable-insert-emoji"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=572829 -->
+    <td class="title">Option to disable "Insert Emoji" menu entry on Linux</td>
+    <td class="content">
+      On Linux it is now possible to disable the "Insert Emoji" context menu entry of text fields, on GTK 3.22.20 and upward. This can be done with the following command line argument for Eclipse:
+      <p>-DSWT_GTK_INPUT_HINT_NO_EMOJI=true</p>
+    </td>
+  </tr>
   <!-- ******************* End of General Updates ************************************* -->
 </tbody>
 </table>
