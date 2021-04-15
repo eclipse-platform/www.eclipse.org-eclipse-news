@@ -55,6 +55,33 @@ ul {padding-left: 13px;}
   </tr>
   <!-- *********************** End of SWT *********************** -->
 
+  <!-- ******************** Platform ********************** -->
+  <tr>
+    <td id="p2" class="section" colspan="2"><h2>p2 Changes</h2></td>
+  </tr>
+
+  <tr id="pgp-signature-verification"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=570907 -->
+    <td class="title">Verify PGP signatures during installation</td>
+    <td class="content">
+      When installing some artifact with p2, and those artifacts have the <code>pgp.signatures</code>
+      property set, the signatures will be verified during installation and installation will fail if a signature
+      couldn't be verified.
+      <p>Reasons of failures would be:
+      <ul>
+        <li>Signature is not well formatted (it must be armoured PGP blocks) or is intrisically wrong (eg the
+        signature has been modified in a way that makes it totally invalid).</li>
+        <li>No public key was found that matches the signature. Public keys are expected to be provided as value of
+        the <code>pgp.publicKeys</code> property either on the artifact metadata or, usually better, on the artifact
+        repository, in armoured form.</li>
+        <li>The signature and a matching public key were found, but the verification process shows that the signature
+        is incorrect. This usually means the signature was meant for another artifact.</li>
+      </ul>
+      Each one of those reasons will make the build fail, as they are security threats. It is assumed that any
+      signed artifact can be successfully verified for all given signatures to continue installation.
+      </p>
+    </td>
+  </tr>
+  <!-- ******************** End of Platform ********************** -->
 </tbody>
 </table>
 <!-- ****************** END OF N&N TABLE ****************** -->
