@@ -73,6 +73,21 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   
+  <tr id="foreach-expression-type"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=572932 -->
+    <td class="title"><a href="#foreach-expression-type">Better type for the local variable creation quickfix</a></td>
+    <td class="content">
+      The quick fix <b>Create a new local variable</b> has been enhanced. When it creates a variable that is the expression on which a foreach loop iterates, its type is an array of the type of the loop parameter:
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/foreach-expression-type-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/foreach-expression-type-after.png" alt="After"/></p>
+    </td>
+  </tr>
+  
   <tr id="use-instanceof"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569835 -->
     <td class="title"><a href="#use-instanceof">Use instanceof</a></td>
     <td class="content">
