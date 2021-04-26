@@ -43,6 +43,16 @@ ul {padding-left: 13px;}
     <h2>Views, Dialogs and Toolbar </h2>
     </td>
   </tr>
+
+  <tr id="export-certificate-at-install"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=573111 -->
+  	<td class="title">Export certificate during installation</td>
+  	<td class="content">
+  		When installing software into the workbench and that software is signed but with an untrusted certificate,
+  		the dialog to review trusted certificates now shows an button to <b>📥 Export...</b> the selected certifiacte
+  		into their own <code>*.der</code> file. This can facilitate review of the certificate, for example in order to
+  		get it audited by some other external service, tool or workflow before approval.
+  	</td>
+  </tr>
   <!-- ******************* End of Views, Dialogs and Toolbar ************************************* -->
 
   <!-- ******************* Text Editors ************************************* -->
