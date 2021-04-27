@@ -40,6 +40,15 @@ ul {padding-left: 13px;}
   <tr>
     <td id="dialogs-wizards-views" class="section" colspan="2"><h2>Dialogs, Wizards and Views</h2></td>
   </tr>
+
+  <tr id="pde-version-error-hover-detail"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=572924 -->
+    <td class="title">Preference option enabling non-disposed SWT Resources error handling </td>
+    <td class="content">
+      The preference option <b>Enable SWT reporting of non-disposed resources when creating a new launch configuration</b>
+      has been added to <b>Plug-in Development</b> preference page to enable adding <code>-Dorg.eclipse.swt.graphics.Resource.reportNonDisposed=true</code>
+      to VM arguments when creating a new launch configuration.
+    </td>
+  </tr>
   <!-- ******************** End ofDialogs, Wizard and Views ********************** -->
   
   <!-- ******************** Editors ********************** -->
