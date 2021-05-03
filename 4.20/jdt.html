@@ -252,6 +252,16 @@ enables you to check one or more sub-options: <b>File separator</b>, <b>Path sep
     <h2>Java Views and Dialogs</h2>
     </td>
   </tr>
+  <tr id="search-filter-static-imports"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=570469 -->
+    <td class="title"><a href="#search-filter-static-imports">Differentiate search filter for normal imports from static imports</a></td>
+    <td class="content">
+        The search view now supports a new filter dedicated for <b>static imports</b>. Consequently, the existing imports filter is dedicated for non-static imports only. 
+        As a result, you will now by default find statically imported references of a class or an interface.
+        <p>
+          <img src="images/static-import-filter.png" alt="screenshot showing a static import search filter" />
+        </p>
+    </td>
+  </tr>
   <!-- ******************* End of Java Views and Dialogs ************************************* -->
 
   <!-- ******************* Java Compiler ************************************* -->
