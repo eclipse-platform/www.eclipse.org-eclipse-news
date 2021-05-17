@@ -174,6 +174,39 @@ public class ExampleProcessorContribution implements IModelProcessorContribution
       </p>
     </td>
   </tr>
+
+  <tr id="simpler-status-creation"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=573093 -->
+    <td class="title">New static methods to ease Status creation</td>
+    <td class="content">
+      <p>
+        New API methods in <code>Status</code>
+        (<a href="https://help.eclipse.org/latest/topic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/core/runtime/Status.html"><code>org.eclipse.core.runtime.Status</code></a>)
+        makes it easier and less verbose
+        to make <code>Status</code> object for error handling. There are methods called <code>info</code>, <code>warning</code>
+        and <code>error</code> for creating status objects of those severities. These methods simplify the API
+        by using StackWalker API (introdcued in Java 9) to automatically determine the Plug-in ID. The existing constructors
+        for more fine grained control still continue to exist and may be the most suitable when using Status objects in
+        non-error handling cases as explicitly passing the plug-in id in by String can be faster than automatically
+        determining it.
+      </p>
+      <p>
+        A couple of examples of before and after with the new API:
+        <ul>
+          <li>
+            <p>Creating a warning Status</p>
+            Existing API: <pre>IStatus status = new Status(IStatus.WARNING, UIPlugin.PLUGIN_ID, IStatus.OK, message, null));</pre>
+            New static helper methods: <pre>IStatus status = Status.warning(message);</pre>
+          </li>
+          <li>
+            <p>Throwing a CoreException:</p>
+            Existing API: <pre>throw new CoreException(new Status(IStatus.ERROR, UIPlugin.PLUGIN_ID, message, e));</pre>
+            New static helper methods: <pre>throw new CoreException(Status.error(message, e));</pre>
+          </li>
+        </ul>
+      </p>
+    </td>
+  </tr>
+
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
