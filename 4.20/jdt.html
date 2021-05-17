@@ -157,6 +157,25 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   
+  <tr id="one-falling-through-if"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=572790 -->
+    <td class="title"><a href="#one-falling-through-if">One if rather than duplicate blocks that fall through clean up</a></td>
+    <td class="content">
+      A new clean up has been added that merges consecutive <code>if</code> statements with same code block that end with a jump statement.
+      <p>
+        To apply the clean up, select <b>Single 'if' statement rather than duplicate blocks that fall through</b> check box on the <b>Duplicate code</b> tab in your clean up profile.
+      </p>
+      <p><img src="images/one-falling-through-if-preferences.png" alt="Preferences" width="800"/></p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/one-falling-through-if-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/one-falling-through-if-after.png" alt="After"/></p>
+    </td>
+  </tr>
+  
   <tr id="valueof-rather-than-instantiation"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=572234 -->
     <td class="title"><a href="#valueof-rather-than-instantiation">valueOf() rather than instantiation clean up</a></td>
     <td class="content">
