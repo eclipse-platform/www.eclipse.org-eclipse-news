@@ -218,8 +218,10 @@ Eclipse 4.20 Endgame Plan.
 
 			<td rowspan="2">8.3
 			</td>
-			<td rowspan="1">x86 64-bit</td>
-			<td rowspan="1">aarch64</td>
+			<td rowspan="1">
+				x86 64-bit<br/>
+				aarch64<br/>
+			</td>
 			<td rowspan="1">
 				OpenJDK 11.0.10 (LTS)<br/>
 				OpenJDK 16.0.1<br/>
@@ -258,8 +260,10 @@ Eclipse 4.20 Endgame Plan.
 		<tr class="c1">
 			<td rowspan="1">Ubuntu Long Term Support</td>
 		    <td rowspan="1">20.04</td>
-			<td rowspan="1">x86 64-bit</td>
-			<td rowspan="1">aarch64</td>
+			<td rowspan="1">
+				x86 64-bit<br/>
+				aarch64<br/>
+			</td>
 			<td rowspan="1">
 				OpenJDK 11.0.10 (LTS)<br/>
 				OpenJDK 16.0.1<br/>
