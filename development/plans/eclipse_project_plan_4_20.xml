@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 9:37 EDT March 9, 2021.
+Last revised 6:00 EDT May 18, 2021.
 
 <!--
 <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
@@ -206,9 +206,9 @@ Eclipse 4.20 Endgame Plan.
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
 				OpenJDK 11.0.10 (LTS)<br/>
-				OpenJDK 15.0.2<br/>
+				OpenJDK 16.0.1<br/>
 				Oracle Java 11.0.10 (LTS)<br/>
-				Oracle Java 15.0.2<br/>
+				Oracle Java 16.0.1<br/>
 			</td>
 			<td rowspan="1">Win32</td>
 		</tr>
@@ -219,11 +219,12 @@ Eclipse 4.20 Endgame Plan.
 			<td rowspan="2">8.3
 			</td>
 			<td rowspan="1">x86 64-bit</td>
+			<td rowspan="1">aarch64</td>
 			<td rowspan="1">
 				OpenJDK 11.0.10 (LTS)<br/>
-				OpenJDK 15.0.2<br/>
+				OpenJDK 16.0.1<br/>
 				Oracle Java 11.0.10 (LTS)<br/>
-				Oracle Java 15.0.2<br/>
+				Oracle Java 16.0.1<br/>
 			</td>
 			<td rowspan="2">GTK 3</td>
 		</tr>
@@ -242,7 +243,7 @@ Eclipse 4.20 Endgame Plan.
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
 				OpenJDK 11.0.10 (LTS)<br/>
-				OpenJDK 15.0.2<br/>
+				OpenJDK 16.0.1<br/>
 			</td>
 			<td rowspan="2">GTK 3</td>
 		</tr>
@@ -258,9 +259,10 @@ Eclipse 4.20 Endgame Plan.
 			<td rowspan="1">Ubuntu Long Term Support</td>
 		    <td rowspan="1">20.04</td>
 			<td rowspan="1">x86 64-bit</td>
+			<td rowspan="1">aarch64</td>
 			<td rowspan="1">
 				OpenJDK 11.0.10 (LTS)<br/>
-				OpenJDK 15.0.2<br/>
+				OpenJDK 16.0.1<br/>
 			</td>
 			<td rowspan="1">GTK 3</td>
 		</tr>
@@ -275,9 +277,9 @@ Eclipse 4.20 Endgame Plan.
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
 				OpenJDK 11.0.10 (LTS)<br/>
-				OpenJDK 15.0.2<br/>
+				OpenJDK 16.0.1<br/>
 				Oracle Java 11.0.10 (LTS)<br/>
-				Oracle Java 15.0.2
+				Oracle Java 16.0.1
 			</td>
 			<td rowspan="1">Cocoa</td>
 		</tr>
