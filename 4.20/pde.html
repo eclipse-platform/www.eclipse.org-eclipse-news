@@ -41,6 +41,28 @@ ul {padding-left: 13px;}
     <td id="dialogs-wizards-views" class="section" colspan="2"><h2>Dialogs, Wizards and Views</h2></td>
   </tr>
 
+  <tr id="unit-test-view"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=573076 -->
+	<td class="title"><a href="#pde-rreports-to-unit-test-view">PDE supports the Generic Unit Test Result View</a></td>
+	<td class="content">
+		PDE is added with an experimental feature <strong>"Eclipse Plug-in Test runner client for UnitTest View"</strong> 
+		that adds a launch configuration and launch shortcut to execute unit tests reporting the results to the 
+		<strong>Generic Unit Test View</strong>.
+		The feature is to be installed explicitly:
+		<p>
+       		<img src="images/pde-install-unittest-view-support.png" alt="" />
+      	</p> 
+		A launch configuration and launch shortcut are added in order to allow the users to run/debug 
+		JUnit Plug-in Tests :
+		<p>
+       		<img src="images/pde-run-with-unittest-view.png" alt="" />
+      	</p>
+      	while displaying the results in <strong>Generic Unit Test View</strong>:
+		<p>
+       		<img src="images/pde-unittest-view-results.png" alt="" />
+      	</p> 		
+	</td>
+  </tr>
+
   <tr id="pde-enable-swt-resource"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=572924 -->
     <td class="title">Preference option enabling non-disposed SWT Resources error handling</td>
     <td class="content">
