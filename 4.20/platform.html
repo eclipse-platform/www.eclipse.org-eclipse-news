@@ -82,6 +82,21 @@ ul {padding-left: 13px;}
   <tr>
     <td id="Preferences" class="section" colspan="2">
     <h2>Preferences </h2>
+
+    </td>
+  </tr>
+  <tr id="history-for-derived-files"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=573421 -->
+    <td class="title">History for derived files</td>
+    <td class="content">
+      The Local <b>History for derived files</b> is now <b>disabled</b> by default.
+      The behaviour can now be configured to the previous (enabled) behaviour in the preferences of the "Local History".
+      Just check the checkbox "History for derived files".
+      "Derived files" are for example automatically created as the output of java annotation processing or xtext. 
+      As beeing automatically created one could also recreate old versions of the output by compiling older versions of the input.
+      Therefore it was just wasted time and space to store a history of the derived files for most users.
+      <p>
+        <img src="images/history-for-derived-files-preferences.png" alt=""/>
+      </p>
     </td>
   </tr>
   <!-- ****************** End of Preferences ************************************* -->
