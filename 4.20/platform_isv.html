@@ -194,7 +194,7 @@ public class ExampleProcessorContribution implements IModelProcessorContribution
         <ul>
           <li>
             <p>Creating a warning Status</p>
-            Existing API: <pre>IStatus status = new Status(IStatus.WARNING, UIPlugin.PLUGIN_ID, IStatus.OK, message, null));</pre>
+            Existing API: <pre>IStatus status = new Status(IStatus.WARNING, UIPlugin.PLUGIN_ID, IStatus.OK, message, null);</pre>
             New static helper methods: <pre>IStatus status = Status.warning(message);</pre>
           </li>
           <li>
