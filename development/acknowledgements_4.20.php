@@ -22,7 +22,7 @@ header('Content-type: text/plain; charset=utf-8');
 # index.php
 #
 # Author:    Sravan Kumar Lakkimsetti and others on Eclipse Project
-# Date:      2021-02-19
+# Date:      2021-05-25
 #
 # Description: Eclipse project 2021-06 release acknowledgments page
 #
@@ -103,7 +103,7 @@ ob_start();
       </p>
 
     <p>The Equinox team would like to thank all the contributors that helped improve the project by filing bug reports and enhancement requests.  We also would like to thank the community of developers that have contributed to the Equinox code base this release:
-       Alexander Kurtakov, Andrey Loskutov, Carsten Hammer, Christoph Laeubrich, Ed Merks, Jeff Johnston, Jonah Graham, Karsten Thoms, Lakshmi Shanmugam, Lars Vogel, Laurent Goubet, Mickael Istria, Sravan Kumar Lakkimsetti, Thomas Watson and Torbj&#xD6;rn Svensson.
+       Alexander Kurtakov, Andrey Loskutov, Carsten Hammer, Christoph L&#xE4;ubrich, Ed Merks, Jeff Johnston, Jonah Graham, Karsten Thoms, Lakshmi Shanmugam, Lars Vogel, Laurent Goubet, Mickael Istria, Sravan Kumar Lakkimsetti, Thomas Watson and Torbj&#xF6;rn Svensson.
       </p>
 
   </div>
