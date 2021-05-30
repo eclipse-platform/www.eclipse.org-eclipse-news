@@ -45,20 +45,20 @@ ul {padding-left: 13px;}
   </tr>
 
   <tr id="export-certificate-at-install"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=573111 -->
-  	<td class="title">Export certificate during installation</td>
-  	<td class="content">
-  		When installing software into the workbench and that software is signed but with an untrusted certificate,
-  		the dialog to review trusted certificates now shows an button to <b>📥 Export...</b> the selected certifiacte
-  		into their own <code>*.der</code> file. This can facilitate review of the certificate, for example in order to
-  		get it audited by some other external service, tool or workflow before approval.
-  	</td>
+    <td class="title">Export certificate during installation</td>
+    <td class="content">
+      When installing a software into the workbench and the software is signed but with an untrusted certificate,
+      the dialog to review trusted certificates now shows a button to <b>📥 Export...</b> the selected certificate
+      into their own <code>*.der</code> file. This can facilitate review of the certificate, for example in order to
+      get it audited by some other external service, tool or workflow before approval.
+    </td>
   </tr>
 
   <tr id="quick-text-search"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567062 -->
-    <td class="title">Quick Search mention max occurences reached</td>
+    <td class="title">Quick Search mentions max occurrences reached</td>
     <td class="content">
       The <b>Quick Search</b> dialog features a label to depict the number of matches that were found. 
-      Additionally, if the result set exceeds a now configurable limit, the label shows that the limit has been reached and the search process stopped. 
+      Additionally, if the result set exceeds a now configurable limit, the label shows that the limit has been reached and the search process stops. 
       Besides this new "Max Results" configuration option, the preference page has been overhauled with information decorators to describe the properties in more detail. 
       <p>
         <img src="images/quick-search.png" alt=""/>
@@ -90,12 +90,14 @@ ul {padding-left: 13px;}
   <tr id="history-for-derived-files"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=573421 -->
     <td class="title">History for derived files</td>
     <td class="content">
-      The Local <b>History for derived files</b> is now <b>disabled</b> by default.
-      The behaviour can now be configured to the previous (enabled) behaviour in the preferences of the "Local History".
-      Just check the checkbox "History for derived files".
-      "Derived files" are for example automatically created as the output of java annotation processing or xtext. 
-      As beeing automatically created one could also recreate old versions of the output by compiling older versions of the input.
-      Therefore it was just wasted time and space to store a history of the derived files for most users.
+      The Local history for derived files is now <b>disabled</b> by default.
+      The behaviour can now be configured to the previous (enabled) behaviour in <b>Preferences &gt; General &gt; Workspace &gt; Local History</b> page,
+      by checking the <b>History for derived files</b> checkbox.
+      <p>
+       Derived files are for example automatically created as the output of java annotation processing or XText. 
+       As they are automatically created one could also recreate old versions of the output by compiling older versions of the input, 
+       thereby wasting time and space to store the history of the derived files for most users.
+      </p>
       <p>
         <img src="images/history-for-derived-files-preferences.png" alt=""/>
       </p>
@@ -122,15 +124,12 @@ ul {padding-left: 13px;}
   <tr id="eclipse-mac-aarch64"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=565690 -->
     <td class="title">Eclipse support for Mac AArch64(Arm64)</td>
     <td class="content">
-      Eclipse downloads for the Mac AArch64(Arm64) architecture are now available. Please note that a Mac AArch64 JVM is required to run Eclipse for Mac AArch64.
-      Eclipse and SWT for Mac x86_64 architecture can already run on Apple Silicon hardware under Rosetta translation mode using a x86_64 JVM.
-    </td>
-  </tr>
-  <tr id="swt-gtk-disable-insert-emoji"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=572829 -->
-    <td class="title">Option to disable "Insert Emoji" menu entry on Linux</td>
-    <td class="content">
-      On Linux it is now possible to disable the "Insert Emoji" context menu entry of text fields, on GTK 3.22.20 and upward. This can be done with the following command line argument for Eclipse:
-      <p>-DSWT_GTK_INPUT_HINT_NO_EMOJI=true</p>
+      Eclipse SDK downloads for the Mac AArch64(Arm64) architecture are now available. Please note that a Mac AArch64 JVM is required to run Eclipse for Mac AArch64.
+      Eclipse for Mac AArch64 will be formally supported as a <a href="https://www.eclipse.org/projects/project-plan.php?planurl=https://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_20.xml#target_environments">target environment</a> 
+      in a future release.
+      <p>
+       Eclipse and SWT for Mac x86_64 architecture can already run on Apple Silicon hardware under Rosetta translation mode using a x86_64 JVM.
+      </p>
     </td>
   </tr>
   <tr id="ant-version-upgrade"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=572447 -->

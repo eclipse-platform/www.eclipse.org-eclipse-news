@@ -74,7 +74,7 @@ ul {padding-left: 13px;}
   </tr>
   
   <tr id="foreach-expression-type"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=572932 -->
-    <td class="title"><a href="#foreach-expression-type">Better type for the local variable creation quickfix</a></td>
+    <td class="title"><a href="#foreach-expression-type">Better type for the local variable creation quick fix</a></td>
     <td class="content">
       The quick fix <b>Create a new local variable</b> has been enhanced. When it creates a variable that is the expression on which a foreach loop iterates, its type is an array of the type of the loop parameter:
       <p>
@@ -318,10 +318,12 @@ ul {padding-left: 13px;}
   <tr id="system-properties"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=571823 -->
     <td class="title"><a href="#replace-system-properties">Replace System.getProperty() calls clean up</a></td>
     <td class="content">
-      A new clean up has been added that replaces certain <code>System.getProperty()</code> calls with alternative Java method calls or constants instead.  Using these calls/constants may end up using system defaults (e.g. system default file separator) and thus can no longer be overridden at runtime.
+      A new clean up has been added that replaces certain <code>System.getProperty()</code> calls with alternative Java method calls or constants instead. 
+      Using these calls/constants may end up using system defaults (e.g. system default file separator) and thus can no longer be overridden at runtime.
       <p>
-        To apply the clean up, select <b>Replace system property with constant</b> check box on the <b>Java Feature</b> tab in your clean up profile.  This
-enables you to check one or more sub-options: <b>File separator</b>, <b>Path separator</b>, <b>Line separator</b>, <b>File encoding</b>, or <b>Boolean property</b>.  The last option is used for arbitrary boolean options specified by <b>-Dsome-arbitrary-option</b>.
+        To apply the clean up, select <b>Replace system property with constant</b> check box on the <b>Java Feature</b> tab in your clean up profile. This
+        enables you to check one or more sub-options: <b>File separator</b>, <b>Path separator</b>, <b>Line separator</b>, <b>File encoding</b>, or <b>Boolean property</b>. 
+        The last option is used for arbitrary boolean options specified by <b>-Dsome-arbitrary-option</b>.
       </p>
       <p><img src="images/system-properties-preferences.png" alt="Preferences"/></p>
       <p>
@@ -346,7 +348,7 @@ enables you to check one or more sub-options: <b>File separator</b>, <b>Path sep
   <tr id="search-filter-static-imports"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=570469 -->
     <td class="title"><a href="#search-filter-static-imports">Differentiate search filter for normal imports from static imports</a></td>
     <td class="content">
-        The search view now supports a new filter dedicated for <b>static imports</b>. Consequently, the existing imports filter is dedicated for non-static imports only. 
+        The <b>Search</b> view now supports a new filter dedicated for <b>static imports</b>. Consequently, the existing imports filter is dedicated for non-static imports only. 
         As a result, you will now by default find statically imported references of a class or an interface.
         <p>
           <img src="images/static-import-filter.png" alt="screenshot showing a static import search filter" />
@@ -367,15 +369,14 @@ enables you to check one or more sub-options: <b>File separator</b>, <b>Path sep
    <tr id="cleanup-profile-updated"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=530122 -->
     <td class="title"><a href="#cleanup-profile-updated">Default Java cleanup profile of Eclipse has been updated</a></td>
     <td class="content">
-		The default cleanup profile of the Java development tools have been updated to include more cleanups. All included cleanups have been well tested and proven to be stable in the Eclipse  code base.
-		Please see the preference under Java -> Clean-up for details.
-		<p>
-          <img src="images/cleanup-profile.png" alt="screenshot showing a the new cleanup profile" />
-        </p>
+      The default cleanup profile of the Java development tools has been updated to include more cleanups. All included cleanups have been well tested and proven to be stable in the Eclipse code base.
+      Please see the preference under <b>Java &gt; Clean-up</b> for details.
+      <p>
+        <img src="images/cleanup-profile.png" alt="screenshot showing a the new cleanup profile" />
+      </p>
 		
     </td>
   </tr>
-  
   
   <!-- ******************* End of Java Views and Dialogs ************************************* -->
 
@@ -415,12 +416,12 @@ enables you to check one or more sub-options: <b>File separator</b>, <b>Path sep
   <tr id="debug-hover-chain-fields"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=572629 -->
     <td class="title"><a href="#chain-fields">Debug hover for chain of variables</a></td>
     <td class="content">
-      When hovering over chain of variables now the debug hover will show the variable value under the cursor.
+      When hovering over chain of variables, the debug hover will now show the variable value under the cursor.
       <p>
         <img src="images/debug_hover_chain_var.png" alt="hover popup on variable" />
       </p>
       <p>
-        It even works for array length
+        It even works for array length.
       </p>
       <p>
         <img src="images/debug_hover_array_length.png" alt="hover popup on array length" />
