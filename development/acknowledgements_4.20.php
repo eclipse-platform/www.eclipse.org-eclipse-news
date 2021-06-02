@@ -84,7 +84,7 @@ ob_start();
       everyone who has helped us to improve the quality by testing and reporting bugs and enhancement requests. And a special thanks to other Eclipse projects we prereq: EMF and ECF who 
      also provide timely updates so that we can be ontime. Special thanks to the following list of
       people, in alphabetical order, who contributed code to the project:
-     Adrien Thierry, Alexander Kurtakov, Alexandr Miloslavskiy, Alex Blewitt, Andrew Johnson, Andrey Loskutov, BJ Hargrave, Carsten Hammer, Dirk Fauth, Frank Benoit, Hannes Niederhausen, Hannes Wellmann, Harald Hermann, Holger Voormann, Jan Poganski, Jayaprakash Arthanareeswaran, Jeff Johnston, J&#xF6;rg Kubitz, Jonah Graham, Julian Honnen, Julian Ruppel, Kalyan Prasad Tatavarthi, Kit Lo, Lakshmi P Shanmugam, Lakshmi Shanmugam, Lars Vogel, Matthias Becker, Mickael Istria, Nicolas Beaudrot, Nikita Nemkin, Niraj Modi, Rolf Theunissen, Sarika Sinha, Sebastian Ratz, Simeon Andreev, Soraphol Damrongpiriyapong, Sravan Kumar Lakkimsetti, Thomas Wolf, Victor Rubezhny, Vikas Chandra and Wim Jongman.
+     Adrien Thierry, Alexander Kurtakov, Alexandr Miloslavskiy, Alex Blewitt, Andrew Johnson, Andrey Loskutov, BJ Hargrave, Carsten Hammer, Dirk Fauth, Frank Benoit, Gunnar Wagenknecht, Hannes Niederhausen, Hannes Wellmann, Harald Hermann, Holger Voormann, Jan Poganski, Jayaprakash Arthanareeswaran, Jeff Johnston, J&#xF6;rg Kubitz, Jonah Graham, Julian Honnen, Julian Ruppel, Kalyan Prasad Tatavarthi, Kit Lo, Lakshmi P Shanmugam, Lakshmi Shanmugam, Lars Vogel, Matthias Becker, Mickael Istria, Nicolas Beaudrot, Nikita Nemkin, Niraj Modi, Rolf Theunissen, Sarika Sinha, Sebastian Ratz, Simeon Andreev, Soraphol Damrongpiriyapong, Sravan Kumar Lakkimsetti, Thomas Wolf, Torbj&#xF6;rn Svensson, Victor Rubezhny, Vikas Chandra and Wim Jongman.
      We would also like to acknowledge Kit Lo for all the build and releng support.
     </p>
 
@@ -103,7 +103,7 @@ ob_start();
       </p>
 
     <p>The Equinox team would like to thank all the contributors that helped improve the project by filing bug reports and enhancement requests.  We also would like to thank the community of developers that have contributed to the Equinox code base this release:
-       Alexander Kurtakov, Andrey Loskutov, Carsten Hammer, Christoph L&#xE4;ubrich, Ed Merks, Jeff Johnston, Jonah Graham, Karsten Thoms, Lakshmi Shanmugam, Lars Vogel, Laurent Goubet, Mickael Istria, Sravan Kumar Lakkimsetti, Thomas Watson and Torbj&#xF6;rn Svensson.
+       Alexander Kurtakov, Andrey Loskutov, Carsten Hammer, Christoph L&#xE4;ubrich, Ed Merks, Jeff Johnston, Jonah Graham, Karsten Thoms, Lakshmi Shanmugam, Lars Vogel, Laurent Goubet, Mickael Istria, Mikael &#xC5;sberg, Sravan Kumar Lakkimsetti, Thomas Watson and Torbj&#xF6;rn Svensson.
       </p>
 
   </div>
