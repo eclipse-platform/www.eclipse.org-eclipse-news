@@ -194,6 +194,44 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   
+  <tr id="isblank"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=573289 -->
+    <td class="title"><a href="#isblank">Uses String.isBlank() clean up</a></td>
+    <td class="content">
+      A new clean up has been added that replaces the check of the emptiness of <code>String.strip()</code> by the use of <code>String.isBlank()</code>.
+      <p>
+        It avoids the cost of the creation of a stripped string.
+      </p>
+      <p>
+        You may use Java 11 or higher to use it.
+      </p>
+      <p>
+         In order to apply this cleanup also to <code>trim().isEmpty()</code>,
+         you might consider to replace
+         <code>trim()</code>, which exists since the beginning of Java, with
+         <code>strip()</code> that has been introduced in Java 11 together with <code>isBlank()</code>,
+      </p>
+      <p>
+         But watch out, <code>trim()</code> and <code>strip()</code> differ:
+         <code>trim()</code> removes leading and trailing characters with an ASCII code up to 32,
+         including some non white space ASCII control characters and
+         missing some Unicode white space characters,
+         whereas <code>strip()</code> removes all and only leading and trailing white space.
+      </p>
+      <p>
+        To apply the clean up, select <b>String.isBlank() rather than String.strip().isEmpty()</b> check box on the <b>Optimization</b> tab in your clean up profile.
+      </p>
+      <p><img src="images/isblank-preferences.png" alt="Preferences" width="800"/></p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/isblank-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/isblank-after.png" alt="After"/></p>
+    </td>
+  </tr>
+  
   <tr id="valueof-rather-than-instantiation"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=572234 -->
     <td class="title"><a href="#valueof-rather-than-instantiation">valueOf() rather than instantiation clean up</a></td>
     <td class="content">
