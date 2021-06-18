@@ -43,6 +43,20 @@ ul {padding-left: 13px;}
     <h2>Views, Dialogs and Toolbar </h2>
     </td>
   </tr>
+
+  <tr id="new-message-dialog"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=552909 -->
+    <td class="title">New clean message dialog api</td>
+    <td class="content">
+      A new API in the class PlainMessageDialog is introduced. It uses a builder pattern to create an immutable instance of PlainMessageDialog. It has a clean API and consists of methods for e.g. the button labels, the message and the image.
+      <p>Example Usage:<br />
+        <code>int answer = PlainMessageDialog.getBuilder(myShell, "The new dialog").image(SWT.ICON_Question).message("Like it?").buttLabels(Arrays.asList(IDialogConstants.YES_LABEL, IDialogConstants.NO_LABEL)).build().open();</code>
+      </p>
+      <p>
+        <img src="images/plain_message_dialog_usage.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
   <!-- ******************* End of Views, Dialogs and Toolbar ************************************* -->
 
   <!-- ******************* Text Editors ************************************* -->
