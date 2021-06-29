@@ -64,6 +64,31 @@ ul {padding-left: 13px;}
     <h2>Java Editor </h2>
     </td>
   </tr>
+
+  <tr id="stringbuffer-to-stringbuilder"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569835 -->
+    <td class="title"><a href="#stringbuffer-to-stringbuilder">Use StringBuilder instead of StringBuffer clean up</a></td>
+    <td class="content">
+      A new clean up has been added that converts code to use <code>StringBuilder</code> (added in Java 1.5) rather than <code>StringBuffer</code> which has synchronized methods and is slower than using <code>StringBuilder</code>.
+      <p>
+        There is a sub-option where changes will only occur to local variables which is on by default.  When this sub-option is on, changes will only occur to <code>StringBuffer</code> variables that are local to a method.  When a method calls other methods with such variables or assigns to/from fields/parameters, the method contents will not be converted.  It is permitted to append <code>StringBuffer</code> fields or parameters to local <code>StringBuffer</code> variables which can then still be converted to <code>StringBuilder</code>.
+      </p>
+      <p>
+      When the option is selected and the sub-option for local variables is off,all usage of <code>StringBuffer</code> in the selected files are changed to <code>StringBuilder</code> regardless of usage.  It should be noted that in this case, the clean up will not track down non-selected classes and methods that are referenced and might require changes to compile successfully.
+      <p>
+        To apply the clean up, select the <b>Use StringBuilder instead of StringBuffer</b> check box on the <b>Optimization</b> tab in your clean up profile.  To specify just for local variables, select the <b>Only for local variables</b> check box found just below.
+      </p>
+      <p><img src="images/stringbuffer-to-stringbuilder-prefs.png" alt="Preferences" width="800"/></p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/stringbuffer-to-stringbuilder-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/stringbuffer-to-stringbuilder-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
