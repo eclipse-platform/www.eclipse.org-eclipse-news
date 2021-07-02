@@ -44,6 +44,15 @@ ul {padding-left: 13px;}
   <tr>
     <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
   </tr>
+
+  <tr id="styled-text-multi-selection"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=562676 -->
+    <td class="title">StyledText API to use multiple carets or selection ranges</td>
+    <td class="content">
+      StyledText widget now has a new <code>setSelectionRanges(int[] ranges)</code> API which allows to pass
+      an arbitraty number of selection ranges. When multiple ranges are used, the text widget will display them
+      as distinct carets and selection ranges and will allow simultaneous edits at those locations.
+    </td>
+  </tr>
   <!-- *********************** End of SWT *********************** -->
 
   <!-- *********************** p2 *********************** -->
