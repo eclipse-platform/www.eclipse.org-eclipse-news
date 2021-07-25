@@ -27,6 +27,7 @@ ul {padding-left: 13px;}
 	<li><a href="#JUnit">JUnit</a></li>
 	<li><a href="#JavaEditor">Java Editor</a></li>
 	<li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li>
+	<li><a href="#JavaCompiler">Java Compiler</a></li>
 	<li><a href="#JavaFormatter">Java Formatter</a></li>
 	<li><a href="#Debug">Debug</a></li>
 	<li><a href="#JDTDev">JDT Developers</a></li>
@@ -134,6 +135,37 @@ ul {padding-left: 13px;}
     <h2>Java Compiler</h2>
     </td>
   </tr>
+    <tr id="external_annotations_all_locations"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=574603 -->
+    <td class="title">Find external annotations anywhere</td>
+    <td class="content">
+      External annotations, which are used for annotation based null analysis, can now be associated 
+      to unannotated classes more freely.
+      <p>Previously, all external annotations where declared per build path entry. I.e., whenever a project of yours
+      uses a library for which external annotations exist, you would need to explicitly declare where
+      the corresponding external annotations for this particular library can be found.</p>
+      <p>A new compiler preference has been added by which you can instruct the compiler to search
+      for external annotations in all build path locations of the current project.</p>
+      <p><img src="images/external_annotations_all_locations.png" alt=""/></p>
+      <p>
+      When enabled, this strategy will be applied to all class files encountered during compilation.</p>
+      <p>Some examples, where this option is useful:</p>
+      <ul><li>A project A contains generated sources (in a separate source folder), which are decorated using
+      external annotations in the same project. When project A ships a jar containing also the external annotations,
+      any client of A will immediately see the generated classes with their external annotations applied.</li>
+      <li>When dedicated jars have been created, each containing external annotations for a set of libraries,
+      you only have to add these annotation jars to your build path and enable the new option, without worrying
+      which annotation jar corresponds to which individual dependency (dependencies).
+      The compiler will match external annotations to class files with no further help.
+      </li>
+      </ul>
+      <p>For batch compilation a corresponding option already exists. To match the above strategy in CI-builds,
+      just add the following to the compiler command line (verbatim):
+      <br/>
+      	<code>-annotationpath CLASSPATH</code>
+      </p>
+    </td>
+  </tr> 
+
   <!-- ******************* End of Java Compiler ************************************* -->
 
   <!-- ******************* Java Formatter ************************************* -->
