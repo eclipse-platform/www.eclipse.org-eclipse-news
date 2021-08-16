@@ -38,6 +38,16 @@ ul {padding-left: 13px;}
   <tr>
     <td id="Platform" class="section" colspan="2"><h2>Platform Changes</h2></td>
   </tr>
+  <tr id="path-to-bundlepool-launcher-dir"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=573131 -->
+    <td class="title">Path to bundlepool expressed using @launcher.dir</td>
+    <td class="content">
+      When creating a bundlepool installation of eclipse, the location of the bundlepool is expressed using the @launcher.dir varliable.
+      The launcher, typically eclipse.exe, will replace the string "@launcher.dir" with the location where the launcher is located on disk at startup.
+      This delayed resolution of the bundlepool location allows the bundled pool and the eclipse installations to be relocated in the file system as
+      long as the internal relationship stays the same. Previously, the path to the bundlepool (expressed using the "-install" launcher option) was
+      always an absolute path and produced when the installation took place.
+    </td>
+  </tr>
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
