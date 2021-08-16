@@ -244,6 +244,18 @@ ul {padding-left: 13px;}
     <h2>Debug</h2>
     </td>
   </tr>
+  <tr id="debug-intrim-eval"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=574395 -->
+    <td class="title"><a href="#debug-intrim-eval">Evaluate variables in current execution stack</a></td>
+    <td class="content">
+        In debug mode, regardless of the selected stack frame now you can evaluate variables which are
+        in the scope of the current execution stack frame and stack frames below it which are defined in 
+        the current focused java class. 
+        <p>
+          <img src="images/debug_eval_intrim_stack.png" alt="screenshot showing evaluation result" />
+        </p>
+    </td>
+  </tr>
+ 
   <!--************************ End of Debug ******************************** -->
 
   <!-- *********************** JDT Developers ******************************** -->
