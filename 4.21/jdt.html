@@ -91,23 +91,29 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
-  <tr id="performance-tab"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=575129 -->
-    <td class="title"><a href="#performance-tab">Performance clean up tab</a></td>
+  <tr id="while-to-do-while"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=572574 -->
+    <td class="title"><a href="#while-to-do-while">Convert while to do/while</a></td>
     <td class="content">
-      The <b>Optimization</b> tab in your clean up profile has been renamed <b>Performance</b> to disambiguate the content.
-      <p><img src="images/stringbuffer-to-stringbuilder-prefs.png" alt="Preferences" width="800"/></p>
+      A new quick-assist has been added to convert appropriate <b>while</b> loops into <b>do/while</b> loops.  Appropriate <b>while</b> loops require the first evaluation of the while expression is guaranteed to be true and that the evaluation is passive.
+      <p>
+        For the following loop:
+      </p>
+      <p><img src="images/while-to-do-while-before.png" alt="Before"/></p>
+      <p>
+        One is offered:
+      </p>
+      <p><img src="images/while-to-do-while-after.png" alt="After"/></p>
     </td>
   </tr>
 
   <tr id="mockitomatchers"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=575246 -->
-    <td class="title"><a href="#mockitomatchers">org.mockito.ArgumentMatchers.* added to favorites in Java tooling</a></td>
+    <td class="title"><a href="#mockitomatchers">mockito ArgumentMatchers.* added to favorites in Java tooling</a></td>
     <td class="content">
       Mockito based tests frequently use <code>org.mockito.ArgumentMatchers.*</code>.  
       This has been added to the Java favorites in the preferences under Java &gt; Editor &gt; Content Assist &gt; Favorites.
 	  This way the organize imports action in the IDE will automatically add static imports for these classes if you use them in your tests.
     </td>
   </tr>
-  
 
   <tr id="declare-as-super-interface"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=573980 -->
     <td class="title"><a href="#declare-sealed-interface-as-super-interface">Quick fix to declare sealed interface as super interface</a></td>
