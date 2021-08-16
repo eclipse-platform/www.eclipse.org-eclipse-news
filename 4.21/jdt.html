@@ -106,6 +106,25 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="extract-superclass-enhancement"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=573884 -->
+    <td class="title"><a href="#extract-superclass-enhancement">Extract Superclass Enhancement</a></td>
+    <td class="content">
+      The <b>Extract Superclass</b> refactoring has been enhanced to support movement of uninitialized non-static final fields.  In the past, a warning was issued for extracting uninitialized non-static final fields as the resultant code would be in error.  The refactoring has been enhanced to add additional parameters to the moved constructors and to pass initialization values from the original class constructors.
+      <p>
+        For the following class:
+      </p>
+      <p><img src="images/extract-superclass-original-before.png" alt="Before"/></p>
+      <p>
+        Extracting to Superclass and choosing all fields, one gets:
+      </p>
+      <p><img src="images/extract-superclass-original-after.png" alt="After"/></p>
+      <p>
+	and
+      </p>
+      <p><img src="images/extract-superclass-superclass-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
   <tr id="raw-paste"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=5222184 -->
     <td class="title"><a href="#raw-paste">Raw Paste</a></td>
     <td class="content">
