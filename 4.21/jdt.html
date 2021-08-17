@@ -57,6 +57,16 @@ ul {padding-left: 13px;}
     <h2>JUnit</h2>
     </td>
   </tr>
+  
+  <tr id="mockitomatchers"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=575246 -->
+    <td class="title"><a href="#mockitomatchers">mockito ArgumentMatchers.* added to favorites in Java tooling</a></td>
+    <td class="content">
+      Mockito based tests frequently use <code>org.mockito.ArgumentMatchers.*</code>.  
+      This has been added to the Java favorites in the preferences under Java &gt; Editor &gt; Content Assist &gt; Favorites.
+	  This way the organize imports action in the IDE will automatically add static imports for these classes if you use them in your tests.
+    </td>
+  </tr>
+
   <!-- ******************* End of JUnit ************************************* -->
 
   <!-- ******************* Java Editor ************************************* -->
@@ -129,15 +139,6 @@ ul {padding-left: 13px;}
     <td class="title"><a href="#raw-paste">Raw Paste</a></td>
     <td class="content">
       A new menu item has been added for doing a raw paste when editing Java files.  The menu item <b>Raw Paste</b> can be found in the <b>Edit</b> pull-down menu and by right-clicking in the edit window to bring up the context-menu.  The menu item performs a paste action but toggles off the smart insert feature, if required, and restores it, if necessary, after the paste.  For end-users in smart insert mode, this is the same as doing a <b>Shift+Ctrl+Insert</b> followed by <b>Ctrl+V</b>, followed by <b>Shift+Ctrl+Insert</b> to retoggle into smart insert mode again.
-    </td>
-  </tr>
-
-  <tr id="mockitomatchers"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=575246 -->
-    <td class="title"><a href="#mockitomatchers">mockito ArgumentMatchers.* added to favorites in Java tooling</a></td>
-    <td class="content">
-      Mockito based tests frequently use <code>org.mockito.ArgumentMatchers.*</code>.  
-      This has been added to the Java favorites in the preferences under Java &gt; Editor &gt; Content Assist &gt; Favorites.
-	  This way the organize imports action in the IDE will automatically add static imports for these classes if you use them in your tests.
     </td>
   </tr>
 
