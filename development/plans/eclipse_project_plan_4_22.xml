@@ -72,7 +72,7 @@ marks interesting changes since the previous draft of
 <p>The release deliverables have the same form as previous releases, namely: </p>
 <ul>
   <li>Source code release for all Eclipse Project deliverables, available as
-    versions tagged &quot;R4_21&quot; in the Eclipse Project <a href="http://git.eclipse.org">Git
+    versions tagged &quot;R4_22&quot; in the Eclipse Project <a href="http://git.eclipse.org">Git
     repositories</a>.</li>
   <li>Eclipse SDK (runtime binary and SDK for Equinox, Platform, JDT, and PDE) (downloadable).</li>
   <li>Eclipse Equinox (runtime and source repositories) (downloadable).</li>
@@ -117,7 +117,7 @@ NOTE: This is only necessary once per year. For us with the 202x-03 release.
 
 <p:postamble>
 <div>
-<p>Our target is to complete 4.22 in September 2021.
+<p>Our target is to complete 4.22 in December 2021.
   All release deliverables will be available for download as soon as the release has been
   tested and validated in the target operating configurations listed below.</p>
 <p>PMC approval is required for API changes and additions after M3.</p>
@@ -125,7 +125,7 @@ NOTE: This is only necessary once per year. For us with the 202x-03 release.
 <!-- 
 Eclipse 4.22 Endgame Plan.
  -->
-<a href="http://www.eclipse.org/eclipse/development/plans/freeze_plan_4_21.php">Eclipse 4.22 Endgame Plan</a>.
+<a href="http://www.eclipse.org/eclipse/development/plans/freeze_plan_4_22.php">Eclipse 4.22 Endgame Plan</a>.
 
 </p>
 </div>
@@ -326,7 +326,7 @@ compared to bugs which are reproducible on the target environments listed above.
 
 <p><strong>API Contract Compatibility:</strong> Eclipse SDK 4.22 will be upwards
   contract-compatible with Eclipse SDK 4.21 except in those areas noted in the
-  <a href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_21_porting_guide.html" target="_top">
+  <a href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_22_porting_guide.html" target="_top">
     <em>Eclipse 4.22 Plug-in Migration Guide</em>
   </a>. Programs that use affected APIs and extension points will need to be ported
   to Eclipse SDK 4.22 APIs. Downward contract compatibility
@@ -338,7 +338,7 @@ compared to bugs which are reproducible on the target environments listed above.
   
 <p><strong>Binary (plug-in) Compatibility:</strong> Eclipse SDK 4.22 will be upwards
   binary-compatible with Eclipse SDK 4.21 except in those areas noted in the
-  <a href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_21_porting_guide.html" target="_top">
+  <a href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_22_porting_guide.html" target="_top">
     <em>Eclipse 4.22 Plug-in Migration Guide</em>
   </a>. Downward plug-in compatibility is not supported. Plug-ins for Eclipse SDK
   4.22 will not be usable in Eclipse SDK 4.21. Refer to
@@ -348,7 +348,7 @@ compared to bugs which are reproducible on the target environments listed above.
   
 <p><strong>Source Compatibility:</strong> Eclipse SDK 4.22 will be upwards source-compatible
   with Eclipse SDK 4.21 except in the areas noted in the
-  <a href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_21_porting_guide.html" target="_top">
+  <a href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_22_porting_guide.html" target="_top">
     <em>Eclipse 4.22 Plug-in Migration Guide</em>
   </a>. This means that source files written
   to use Eclipse SDK 4.21 APIs might successfully compile and run against Eclipse
