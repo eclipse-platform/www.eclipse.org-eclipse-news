@@ -82,6 +82,13 @@ ob_start();
 					Currently he leads the Equinox Project, represents IBM in the Eclipse Planning Council, and is also a member of the Eclipse Architecture Council.
 					He focuses is on modularity and the OSGi Framework design and development. Tom is also a leader in the specification development process at the OSGi Alliance.
 		        </li>
+		        <li>
+		          <b><a id="tom"></a>Jay Arthanareeswaran, IBM India</b><br>
+					Jay is a long time committer and a lead of the Eclipse JDT subproject. In his current role, 
+					Jay is responsible for the Eclipse Compiler, especially supporting new Java Language features. 
+					In the past, he has also contributed to the Orion and Flux Projects. Jay has been an Eclipse
+					user since its inception.
+		        </li>
 		      </ul>
 		</div>
 		<div class="homeitem3col">
