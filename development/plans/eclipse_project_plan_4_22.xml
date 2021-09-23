@@ -272,29 +272,31 @@ Eclipse 4.22 Endgame Plan.
 		</tr>
 		
 		<!-- ************ Mac ************** -->
-		<tr class="c0">
+		<tr class="c1">
 			<td rowspan="2">Apple macOS</td>
 			<td rowspan="1">
 				10.15<br/>
 				11
 			</td>
-			<td rowspan="1">
-				11
-			</td>
+			
 			<td rowspan="1">x86 64-bit</td>
-			<td rowspan="1">arm64 (M1)</td>
+			
 			<td rowspan="1">
 				OpenJDK 11.0.10 (LTS)<br/>
 				OpenJDK 17<br/>
 				Oracle Java 11.0.10 (LTS)<br/>
 				Oracle Java 17
 			</td>
-			<td rowspan="1">
-				OpenJDK 17(LTS)<br/>
-				Oracle Java 17
-			</td>
+			
 			<td rowspan="2">Cocoa</td>
 		</tr>
+ 	    <tr class="c0">
+			<td rowspan="1">11</td>
+			<td rowspan="1">
+				M1 (arm64)
+			</td>
+            <td rowspan="1">OpenJDK 17</td>
+   		</tr>
 	</table>
  </center>
 
