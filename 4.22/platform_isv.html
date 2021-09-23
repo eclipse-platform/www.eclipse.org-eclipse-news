@@ -57,11 +57,11 @@ ul {padding-left: 13px;}
   <tr id="syncCall"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=575823 -->
     <td class="title">Display.syncCall() returns a value from swt thread.</td>
     <td class="content">
-      Do you need a user feedback (or any value from swt widget) in a background thread from SWT thread? You can get it now even easier then using Display.syncExec():<br>
+      Do you need a user feedback (or any value from swt widget) in a background thread from SWT thread? You can get it now even easier then using Display.syncExec():<br/>
       <pre><code>
 Object result = Display.getDefault().syncCall(()-> myQuestion())
       </code></pre>
-      Display.syncCall(...) calls the given function in swt thread and returns the value back to the calling thread.<br>
+      Display.syncCall(...) calls the given function in swt thread and returns the value back to the calling thread.<br/>
       SyncCall also forwards checked Exceptions. For example:
       <pre><code>
 try {
@@ -70,6 +70,16 @@ try {
 	/* handle exception in background thread */
 }
       </code></pre>
+    </td>
+  </tr>
+    <tr id="emptinessChanged"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=553598 -->
+    <td class="title">Tree fires SWT.EmptinessChanged event.</td>
+    <td class="content">
+      SWT <code>Tree</code> widget now fires <code>SWT.EmptinessChanged</code> event on below two conditions:
+      <ul>
+    	<li>After first tree item addition.</li>
+    	<li>On last tree item removal.</li>
+      </ul>
     </td>
   </tr>
   <!-- *********************** End of SWT *********************** -->
