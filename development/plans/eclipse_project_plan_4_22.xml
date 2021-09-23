@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 7:00 EDT September 7, 2021.
+Last revised 7:00 EDT September 23, 2021.
 
 <!--
 <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
@@ -273,16 +273,24 @@ Eclipse 4.22 Endgame Plan.
 		
 		<!-- ************ Mac ************** -->
 		<tr class="c0">
-			<td rowspan="1">Apple macOS</td>
-			<td rowspan="2">
+			<td rowspan="2">Apple macOS</td>
+			<td rowspan="1">
 				10.15<br/>
 				11
 			</td>
+			<td rowspan="1">
+				11
+			</td>
 			<td rowspan="1">x86 64-bit</td>
+			<td rowspan="1">arm64 (M1)</td>
 			<td rowspan="1">
 				OpenJDK 11.0.10 (LTS)<br/>
 				OpenJDK 17<br/>
 				Oracle Java 11.0.10 (LTS)<br/>
+				Oracle Java 17
+			</td>
+			<td rowspan="1">
+				OpenJDK 17(LTS)<br/>
 				Oracle Java 17
 			</td>
 			<td rowspan="1">Cocoa</td>
