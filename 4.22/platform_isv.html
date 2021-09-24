@@ -48,6 +48,15 @@ ul {padding-left: 13px;}
       may need to be customized to handle this <code>IMultiTextSelection</code> more specifically.</p>
     </td>
   </tr>
+
+  <tr id="IFindReplaceTargetExtension4"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=575382 -->
+    <td class="title">Enable "Select All" with IFindReplaceTargetExtension4</td>
+    <td class="content">
+      The extension interface <code>IFindReplaceTargetExtension4</code> can be added to existing <code>IFindReplaceTarget</code>
+      implementations in order to enable the <i>Select All</i> feature from the Find/Replace dialog. It consists of addition of
+      a single <code>setSelection(IRegion[] regions)</code> method.
+    </td>
+  </tr>
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
