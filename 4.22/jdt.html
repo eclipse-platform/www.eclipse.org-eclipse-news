@@ -64,6 +64,27 @@ ul {padding-left: 13px;}
     <h2>Java Editor </h2>
     </td>
   </tr>
+
+  <tr id="strconcat-to-textblock"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=575634 -->
+    <td class="title"><a href="#strconcat-to-textblock">Convert String concat to Text block</a></td>
+    <td class="content">
+      A new cleanup and quick-assist has been added to convert appropriate String concatenations into Java <b>Text Blocks</b>.  Appropriate String concatenations must have at least 3 non-empty substrings with one per line and the Java level must be 15 or higher. Line comments for all substrings but the last line will be lost after conversion.  Spaces at the end of substrings preceding the newline will result in <b>\s</b> being substituted while substrings that do not end with newlines will have a <b>\</b> added at the end of the line to preserve concatenation.
+      <p>
+        To apply the cleanup, select the <b>Convert String concatenation to Text Block</b> checkbox on the <b>Java Feature</b> tab in your cleanup profile:
+      <p><img src="images/strconcat-to-textblock-cleanup.png" alt="Pref"/></p>
+      <p>
+        With the cleanup, the following:
+      </p>
+      <p><img src="images/strconcat-to-textblock-before.png" alt="Before"/></p>
+      <p>
+        Is changed to:
+      </p>
+      <p><img src="images/strconcat-to-textblock-after.png" alt="After"/></p>
+      <p>To change a single String concatenation, a quick-assist has been added that can be activated with <b>CTRL+1</b> with the cursor located anywhere in the appropriate concatenation.
+      </p>
+    </td>
+  </tr>
+
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
