@@ -56,6 +56,18 @@ ul {padding-left: 13px;}
     <h2>JUnit</h2>
     </td>
   </tr>
+
+  <tr id="junit-record"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=575762 -->
+    <td class="title"><a href="#junit-record">Support execution of JUnit tests that are records</a></td>
+    <td class="content">
+      For Java 16 and up, JUnit tests can now be implemented as records.  Right-clicking on an invidiual test or the record itself and selecting <b>Run as</b> will allow executing the test via either the <b>JUnit Plug-in Test</b> or <b>JUnit Test</b> context menu choices.
+    <p>The following is an example of such a test:
+    </p>
+    <p><img src="images/junit-record.png" alt="JUnit test as record"/></p>
+
+    </td>
+  </tr>
+
   <!-- ******************* End of JUnit ************************************* -->
 
   <!-- ******************* Java Editor ************************************* -->
