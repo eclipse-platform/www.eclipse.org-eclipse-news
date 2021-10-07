@@ -90,8 +90,29 @@ try {
     	<li>On last tree item removal.</li>
       </ul>
     </td>
+    
   </tr>
   <!-- *********************** End of SWT *********************** -->
+
+  <!-- *********************** p2 *********************** -->
+
+  <tr>
+    <td id="p2" class="section" colspan="2"><h2>p2 Changes</h2></td>
+  </tr>
+  
+  <tr id="logUnsafe"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=576429 https://bugs.eclipse.org/bugs/show_bug.cgi?id=576428 -->
+    <td class="title">Log unsafe transport or verification technologies used at installation</td>
+    <td class="content">
+    When installing from a repository, p2 now logs a warning in case some technologies used for the installation are considered unsafe.
+    Here are the cases covered so far and that will trigger a logged warning:
+    <ul>
+    <li><code>http</code> repositories are used (<code>http</code> repositories expose to CVE-2021-41033)</li>
+    <li>Artifact checksums are either missing, or none of the available digest algorithms is considered safe (eg md5).</li>
+    </ul>
+    </td>
+  </tr>
+  <!-- *********************** End of p2 *********************** -->
+
 
 </tbody>
 </table>
