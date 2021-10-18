@@ -69,6 +69,7 @@ ul {padding-left: 13px;}
   </tr>
   <!-- ******************* End of Java 17 Support ************************************* -->
 
+
   <!-- ******************* JUnit ************************************* -->
   <tr>
     <td id="JUnit" class="section" colspan="2">
@@ -124,6 +125,20 @@ ul {padding-left: 13px;}
     <h2>Java Views and Dialogs</h2>
     </td>
   </tr>
+
+  <tr id="CallHierarchy"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=533524 -->
+    <td class="title">Improved lambda support in the Call Hierarchy view</td>
+    <td class="content">
+      The Call Hierarchy view is enhanced with showing not only the callers of the lambda function, but the callers of the declaring function too.
+      <p>For the following code:</p>
+      <p><img src="images/callhier-code.png" alt="Sample code"/></p>
+      <p>Checking the callers of the <i>function()</i>, will show this:</p>
+      <p><img src="images/callhier-result.png" alt="CallHierarchy result"/></p>
+      <p>The <i>[declaration]</i> node in the tree is the new addition, which shows the callers of the <i>definer()</i> function, in this case, only the <i>main()</i> function.</p>
+    </td>
+  </tr>
+
+
   <!-- ******************* End of Java Views and Dialogs ************************************* -->
 
   <!-- ******************* Java Compiler ************************************* -->
