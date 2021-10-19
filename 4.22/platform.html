@@ -43,6 +43,19 @@ ul {padding-left: 13px;}
     <h2>Views, Dialogs and Toolbar </h2>
     </td>
   </tr>
+
+  <tr id="launch-config-view"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=513735 -->
+    <td class="title">Launch Configuration View</td>
+    <td class="content">
+      The new Launch Configuration View allows quick access to all your launch configuration without the need to enter the
+      launch dialogs.
+      <p><img src="images/launch-config-view2.png" alt = "" width="600px"/></p>
+      <p>You can launch (run, debug, profile, etc.) as well as terminate and/or relaunch running configurations
+      directly from the view.
+      </p>
+      <p>The view also provides API which allows third party contributions to hook into the view and provide "launchables".</p>
+    </td>
+  </tr>
   <!-- ******************* End of Views, Dialogs and Toolbar ************************************* -->
 
   <!-- ******************* Text Editors ************************************* -->
@@ -57,7 +70,7 @@ ul {padding-left: 13px;}
     <td class="content">
       Support for multiple selection has been added to Text Editors. Multi selections allow most edit operations (text replacement or insertion,
       extend selection to next work or to next line, copy/paste...) to apply simulteneously on all ranges.
-      <p><img src="images/multi-carets.png"/></p>
+      <p><img src="images/multi-carets.png" alt=""/></p>
       <p>Multiple strategies are available to enable multi-selections:
       <ul>
       <li>Turn a block selection into a multi-selection using the <i>To multi-selection</i> command,</li>
