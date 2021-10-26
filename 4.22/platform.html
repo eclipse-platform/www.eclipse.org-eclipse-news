@@ -49,11 +49,20 @@ ul {padding-left: 13px;}
     <td class="content">
       The new Launch Configuration View allows quick access to all your launch configuration without the need to enter the
       launch dialogs.
-      <p><img src="images/launch-config-view2.png" alt = "" width="600px"/></p>
+      <p><img src="images/launch-config-view2.png" alt = "" width="600"/></p>
       <p>You can launch (run, debug, profile, etc.) as well as terminate and/or relaunch running configurations
       directly from the view.
       </p>
       <p>The view also provides API which allows third party contributions to hook into the view and provide "launchables".</p>
+    </td>
+  </tr>
+  <tr id="defaultShowIn"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=575453 -->
+    <td class="title">Double click on Problem without File shows in default view</td>
+    <td class="content">
+	  Double click on Problems executes "Go to Resource". But there are cases where no File (column "Path") is associated with the Problem.
+	  In that cases "Go to Resources" can not be executed. Instead the default "Show In" action is now executed. 
+      <p><img src="images/Problems_DoubleClick.png" alt = "" width="892"/></p>
+	  This default depends on the perspective. 
     </td>
   </tr>
   <!-- ******************* End of Views, Dialogs and Toolbar ************************************* -->

@@ -57,6 +57,25 @@ ul {padding-left: 13px;}
       a single <code>setSelection(IRegion[] regions)</code> method.
     </td>
   </tr>
+  <tr id="defaultShowIn"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=575453 -->
+    <td class="title">Double click on Problem without File shows in default view</td>
+    <td class="content">
+	  Double click on Problems executes "Go to Resource". But there are cases where no File (column "Path") is associated with the Problem.
+	  In that cases "Go to Resources" can not be executed. Instead the new <b>defaultShowIn</b> view is opened. 
+	  It is optional and can be configured per <code>perspective</code> using the <code>defaultShowIn</code> attribute. Example:
+	  <pre><code>
+      &lt;perspective
+            name="MyPerspective"
+            icon="$nl$/icons/eview16/plugins.png"
+            class="org.eclipse.pde.internal.ui.PDEPerspective"
+            <b>defaultShowIn="org.eclipse.ui.navigator.ProjectExplorer"</b>
+            id="org.eclipse.pde.ui.PDEPerspective"&gt;
+         &lt;description&gt;My own Perspective&lt;/description&gt;
+      &lt;/perspective&gt;
+	  </code></pre>
+	  The default is also moved to the top of the "Show In" Context Menu.
+    </td>
+  </tr>
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
