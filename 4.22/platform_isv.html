@@ -76,6 +76,16 @@ ul {padding-left: 13px;}
 	  The default is also moved to the top of the "Show In" Context Menu.
     </td>
   </tr>
+  <tr id="imageCache"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=576740 -->
+    <td class="title">Resource cache in jface</td>
+    <td class="content">
+	We added a LRU cache for image resources. It can be disable with system property:
+ 	<code>org.eclipse.jface.resource.cacheSize=0</code><br/>
+	The default cacheSize is 300.<br/> 
+	In the eclipse IDE it is used to automatically cache the icons of the toolbars.<br/>
+	See	<code>DeviceResourceDescriptor(boolean shouldBeCached)</code> for details. 
+    </td>
+  </tr>
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
