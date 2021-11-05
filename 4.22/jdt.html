@@ -117,6 +117,18 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="surround-with-try-resources-quickfix"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=575634 -->
+    <td class="title"><a href="#surround-with-try-with-resources-quickfix">Surround with try-with-resources quickfix</a></td>
+    <td class="content">
+      A new quickfix has been created to offer <b>Surround with try-with-resources</b> for resource leaks and potential resource leaks when the resource in question implements AutoCloseable.
+      <p>
+        Examples of quickfix:
+      </p>
+      <p><img src="images/unclosed-closeable.png" alt="Unclosed Resource"/></p>
+      <p><img src="images/potential-unclosed-closeable.png" alt="Potentially Unclosed Resource"/></p>
+    </td>
+  </tr>
+
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
