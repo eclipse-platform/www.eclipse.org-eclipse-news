@@ -102,7 +102,7 @@ ul {padding-left: 13px;}
     <td class="content">
       A new cleanup and quick-assist has been added to convert appropriate String concatenations into Java <b>Text Blocks</b>.  Appropriate String concatenations must have at least 3 non-empty substrings with one per line and the Java level must be 15 or higher. Line comments for all substrings but the last line will be lost after conversion.  Spaces at the end of substrings preceding the newline will result in <b>\s</b> being substituted while substrings that do not end with newlines will have a <b>\</b> added at the end of the line to preserve concatenation.
       <p>
-        To apply the cleanup, select the <b>Convert String concatenation to Text Block</b> checkbox on the <b>Java Feature</b> tab in your cleanup profile:
+        To apply the cleanup, select the <b>Convert String concatenation to Text Block</b> checkbox on the <b>Java Feature</b> tab in your cleanup profile:</p>
       <p><img src="images/strconcat-to-textblock-cleanup.png" alt="Pref"/></p>
       <p>
         With the cleanup, the following:
@@ -147,6 +147,20 @@ ul {padding-left: 13px;}
       <p>Checking the callers of the <i>function()</i>, will show this:</p>
       <p><img src="images/callhier-result.png" alt="CallHierarchy result"/></p>
       <p>The <i>[declaration]</i> node in the tree is the new addition, which shows the callers of the <i>definer()</i> function, in this case, only the <i>main()</i> function.</p>
+    </td>
+  </tr>
+
+  <tr id="OpenTypeSelectionDialog"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=447798 -->
+    <td class="title">Paste into Open Type dialog</td>
+    <td class="content">
+	If text is pasted into the <i>Open Type</i> dialog then it is automatically cleaned up to the included type name by best effort.<br/>
+	The heuristics support:
+	<ul>
+	<li> Path of .java or .class files.<br/>
+	<code>C:\dev\src\p\MyType.java</code> &rarr; <b><code>MyType</code></b></li>
+	<li> Lines from Stacktraces.<br/>
+	<code>o.e.u.i.Workbench$$Lambda$152/0x00000001002a1928.run(Unknown Source)</code> &rarr; <b><code>o.e.u.i.Workbench</code></b></li>
+	</ul>
     </td>
   </tr>
 
