@@ -67,8 +67,7 @@ ob_start();
     
     <p>The entire Eclipse Project team would like to thank the Eclipse Foundation staff for their tireless efforts, including: Denis Roy, Matt Ward, Eric Poirier, Frederic Gurr and Mika&#xEB;l Barbero for not only 
     keeping all that infrastructure going, but also constantly improving it; Sharon Corbett for guiding us through the Eclipse legal process; Wayne Beaton for giving us process 
-    support and improved tools to simplify and manage our development process; Thabang Mashologu for help with marketing the release and providing Logos and artwork; 
-    and Mike Milinkovich for running the whole show. 
+    support and improved tools to simplify and manage our development process; and Mike Milinkovich for running the whole show. 
     </p>
     <p>
       We would also like to thank the users and adopters who support our efforts, through a range of activities, including early testing, being a <a href="https://eclipse.org/donate/">Friend of
@@ -81,8 +80,8 @@ ob_start();
 
   
     <p>The Platform team would like to thank
-      everyone who has helped us to improve the quality by testing and reporting bugs and enhancement requests. And a special thanks to other Eclipse projects we prereq: EMF and ECF who 
-     also provide timely updates so that we can be ontime. Special thanks to the following list of
+      everyone who has helped us to improve the quality by testing and reporting bugs and enhancement requests. And a special thanks to other Eclipse projects we build upon: EMF and ECF who 
+     also provide timely updates so that we can release on time. Special thanks to the following list of
       people, in alphabetical order, who contributed code to the project:
      Alexander Fedorov, Alexander Kurtakov, Alexandr Miloslavskiy, Andrey Loskutov, Carsten Hammer, Christoph L&#xE4;ubrich, Dennis Hendriks, Eclipse Releng Bot, Ed Merks, Eike Stepper, Jeff Johnston, Joel Majano, J&#xF6;rg Kubitz, John Dallaway, Jonah Graham, Kalyan Prasad Tatavarthi, Karsten Thoms, Kit Lo, Lakshmi Shanmugam, Lars Vogel, Marcus Hoepfner, Markus Duft, Matthias Becker, Michael Keppler, Mickael Istria, Mykola Zakharchuk, Nikita Nemkin, Niraj Modi, Noopur Gupta, Rolf Theunissen, Rub&#xE9;n Porras Campo, Sarika Sinha, Sebastian Ratz, Serban Ionica, Simeon Andreev, Sravan Kumar Lakkimsetti, Thomas Wolf and Torbj&#xF6;rn Svensson.
      We would also like to acknowledge Kit Lo for all the build and releng support.
