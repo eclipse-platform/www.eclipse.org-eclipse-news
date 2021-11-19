@@ -42,7 +42,7 @@ ul {padding-left: 13px;}
   <tr id="IMultiTextSelection"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=466532 -->
     <td class="title">New API for JFace TextViewers: IMultiTextSelection</td>
     <td class="content">
-      JFace Text now supports a new type of <code>ITextSelection</code> that allows to keep track of multiple simulteneous
+      JFace Text now supports a new type of <code>ITextSelection</code> that allows to keep track of multiple simultaneous
       selections or caret locations. The new interface is <code>IMultiTextSelection</code>.
       <p>Most text manipulation operations are capable of working with <code>IMultiTextSelection</code>. Some other operations
       may need to be customized to handle this <code>IMultiTextSelection</code> more specifically.</p>
@@ -61,7 +61,7 @@ ul {padding-left: 13px;}
     <td class="title">Double click on Problem without File shows in default view</td>
     <td class="content">
 	  Double click on Problems executes "Go to Resource". But there are cases where no File (column "Path") is associated with the Problem.
-	  In that cases "Go to Resources" can not be executed. Instead the new <b>defaultShowIn</b> view is opened. 
+	  In those cases "Go to Resources" cannot be executed. Instead the new <b>defaultShowIn</b> view is opened. 
 	  It is optional and can be configured per <code>perspective</code> using the <code>defaultShowIn</code> attribute. Example:
 	  <pre><code>
       &lt;perspective
@@ -77,13 +77,13 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   <tr id="imageCache"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=576740 -->
-    <td class="title">Resource cache in jface</td>
+    <td class="title">Resource cache in Jface</td>
     <td class="content">
 	We added a LRU cache for image resources. It can be disable with system property:
  	<code>org.eclipse.jface.resource.cacheSize=0</code><br/>
 	The default cacheSize is 300.<br/> 
 	In the eclipse IDE it is used to automatically cache the icons of the toolbars.<br/>
-	See	<code>DeviceResourceDescriptor(boolean shouldBeCached)</code> for details. 
+	See <code>DeviceResourceDescriptor(boolean shouldBeCached)</code> for details. 
     </td>
   </tr>
   <!-- ******************** End of Platform ********************** -->
@@ -113,25 +113,21 @@ ul {padding-left: 13px;}
   
   
   <tr id="syncCall"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=575823 -->
-    <td class="title">Display.syncCall() returns a value from swt thread.</td>
+    <td class="title">Display.syncCall() returns a value from SWT thread</td>
     <td class="content">
       Do you need a user feedback (or any value from swt widget) in a background thread from SWT thread? You can get it now even easier then using Display.syncExec():<br/>
-      <pre><code>
-Object result = Display.getDefault().syncCall(()-> myQuestion())
-      </code></pre>
+      <pre><code>Object result = Display.getDefault().syncCall(()-> myQuestion())</code></pre>
       Display.syncCall(...) calls the given function in swt thread and returns the value back to the calling thread.<br/>
       SyncCall also forwards checked Exceptions. For example:
-      <pre><code>
-try {
+      <pre><code>try {
 	int read = Display.getDefault().syncCall(()->System.in.read());
 } catch (IOException e) {
 	/* handle exception in background thread */
-}
-      </code></pre>
+}</code></pre>
     </td>
   </tr>
     <tr id="emptinessChanged"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=553598 -->
-    <td class="title">Tree fires SWT.EmptinessChanged event.</td>
+    <td class="title">Tree fires SWT.EmptinessChanged event</td>
     <td class="content">
       SWT <code>Tree</code> widget now fires <code>SWT.EmptinessChanged</code> event on below two conditions:
       <ul>

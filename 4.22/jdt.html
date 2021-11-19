@@ -61,9 +61,9 @@ ul {padding-left: 13px;}
            <a href="https://openjdk.java.net/jeps/409"> JEP 409: Sealed Classes (Final)</a>.
            </p>
            <p>
-           Please note that preview option should be on for <a href="http://openjdk.java.net/projects/jdk/17/"> preview language features</a>.
+           Please note that preview option should be on for <a href="http://openjdk.java.net/projects/jdk/17/">preview language features</a>.
            For an informal introduction of the support, 
-           please refer to <a href="https://wiki.eclipse.org/Java17/Examples"> Java 17 Examples wiki</a>. 
+           please refer to <a href="https://wiki.eclipse.org/Java17/Examples">Java 17 Examples wiki</a>. 
            </p>
       </td>
   </tr>
@@ -154,10 +154,10 @@ ul {padding-left: 13px;}
   <tr id="CallHierarchy"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=533524 -->
     <td class="title">Improved lambda support in the Call Hierarchy view</td>
     <td class="content">
-      The Call Hierarchy view is enhanced with showing not only the callers of the lambda function, but the callers of the declaring function too.
+      The <b>Call Hierarchy</b> view is enhanced with showing not only the callers of the lambda function, but the callers of the declaring function too.
       <p>For the following code:</p>
       <p><img src="images/callhier-code.png" alt="Sample code"/></p>
-      <p>Checking the callers of the <i>function()</i>, will show this:</p>
+      <p>Checking the callers of the <i>function()</i> will show this:</p>
       <p><img src="images/callhier-result.png" alt="CallHierarchy result"/></p>
       <p>The <i>[declaration]</i> node in the tree is the new addition, which shows the callers of the <i>definer()</i> function, in this case, only the <i>main()</i> function.</p>
     </td>
@@ -207,7 +207,7 @@ ul {padding-left: 13px;}
     <td class="title">Label Objects during debugging</td>
     <td class="content">
       During debugging a Java application, often we have to deal with lot's of object instances, and it's not always easy to distinguish between them.
-      That's why the experience is improved, with the ability to set label on individual objects.
+      That's why the experience is improved, with the ability to set a label on individual objects.
       <p><img src="images/label-object-menu.png" alt="Menu item"/></p>
       <p>After setting a label, everywhere the object appears it is displayed with a distinctive color and with the label:</p>
       <p><img src="images/label-object-result.png" alt="Objects with Label"/></p>
