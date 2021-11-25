@@ -83,7 +83,7 @@ ob_start();
       everyone who has helped us to improve the quality by testing and reporting bugs and enhancement requests. And a special thanks to other Eclipse projects we build upon: EMF and ECF who 
      also provide timely updates so that we can release on time. Special thanks to the following list of
       people, in alphabetical order, who contributed code to the project:
-     Alexander Fedorov, Alexander Kurtakov, Alexandr Miloslavskiy, Andrey Loskutov, Carsten Hammer, Christoph L&#xE4;ubrich, Dennis Hendriks, Eclipse Releng Bot, Ed Merks, Eike Stepper, Jeff Johnston, Joel Majano, J&#xF6;rg Kubitz, John Dallaway, Jonah Graham, Kalyan Prasad Tatavarthi, Karsten Thoms, Kit Lo, Lakshmi Shanmugam, Lars Vogel, Marcus Hoepfner, Markus Duft, Matthias Becker, Michael Keppler, Mickael Istria, Mykola Zakharchuk, Nikita Nemkin, Niraj Modi, Noopur Gupta, Rolf Theunissen, Rub&#xE9;n Porras Campo, Sarika Sinha, Sebastian Ratz, Serban Ionica, Simeon Andreev, Sravan Kumar Lakkimsetti, Thomas Wolf and Torbj&#xF6;rn Svensson.
+     Alexander Fedorov, Alexander Kurtakov, Alexandr Miloslavskiy, Andrey Loskutov, Carsten Hammer, Christoph L&#xE4;ubrich, Dennis Hendriks, Eclipse Releng Bot, Ed Merks, Eike Stepper, Jeff Johnston, Joel Majano, J&#xF6;rg Kubitz, John Dallaway, Jonah Graham, Kalyan Prasad Tatavarthi, Karsten Thoms, Kit Lo, Lakshmi Shanmugam, Lars Vogel, Marcus Hoepfner, Markus Duft, Matthias Becker, Michael Keppler, Mickael Istria, Mykola Zakharchuk, Nikita Nemkin, Niraj Modi, Noopur Gupta, Rolf Theunissen, Rub&#xE9;n Porras Campo, Sarika Sinha, Sebastian Ratz, Serban Ionica, Simeon Andreev, Sravan Kumar Lakkimsetti, Thomas Wolf, Torbj&#xF6;rn Svensson and Vikas Chandra.
      We would also like to acknowledge Kit Lo for all the build and releng support.
     </p>
 
@@ -98,7 +98,7 @@ ob_start();
     
     <p>The Plug-in Development Environment team would like to thank the numerous contributors who continue to improve the component every release.
         Special thanks to those who contributed code:
-       Alexander Kurtakov, Andrey Loskutov, Christoph L&#xE4;ubrich, Christoph LÃ¤ubrich, Eike Stepper, Hannes Wellmann, J&#xF6;rg Kubitz, Julian Honnen, Kit Lo, Lars Vogel, Michael Keppler, Vikas Chandra and Wim Jongman.
+       Alexander Kurtakov, Andrey Loskutov, Christoph L&#xE4;ubrich, Eike Stepper, Hannes Wellmann, J&#xF6;rg Kubitz, Julian Honnen, Kit Lo, Lars Vogel, Michael Keppler, Olivier Prouvost, Vikas Chandra and Wim Jongman.
       </p>
 
     <p>The Equinox team would like to thank all the contributors that helped improve the project by filing bug reports and enhancement requests.  We also would like to thank the community of developers that have contributed to the Equinox code base this release:
