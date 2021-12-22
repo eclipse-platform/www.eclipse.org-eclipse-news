@@ -96,6 +96,24 @@ ul {padding-left: 13px;}
     <h2>Debug</h2>
     </td>
   </tr>
+  
+  <tr id="finalFields"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=577564  -->
+    <td class="title">Warning about changing final fields</td>
+    <td class="content">
+      <p>Since Eclipse 3.1 Eclipse Java debugger allows changes on final field values.
+      While technically possible, the consequences of such changees are not trivial, 
+      could affect seemingly unrelated code and lead to various dangerous effects.
+      </p>
+      <p>Therefore, with Eclipse 4.23 Java debugger shows now a new warning:
+      </p> 
+      <p><img src="images/final_modification_warning.png" alt="Debugger warning"/></p>
+      <p>This warning is enabled by default and can be disabled via preferences:</p>
+      <p><img src="images/final_modification_option.png" alt="Updated preferences"/></p>
+      <p>Additionally, <i>"org.eclipse.debug.ui.variableValueEditors"</i> extension point
+      is updated to allow custom products contribute their own <i>"variableValueEditor"</i> 
+      implementations to existing debug models and have even more control over final fields modifications.</p>
+    </td>
+  </tr>
   <!--************************ End of Debug ******************************** -->
 
   <!-- *********************** JDT Developers ******************************** -->
