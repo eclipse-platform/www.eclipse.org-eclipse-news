@@ -64,6 +64,24 @@ ul {padding-left: 13px;}
     <h2>Java Editor </h2>
     </td>
   </tr>
+  <tr id="codeassist-module"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=566060 -->
+    <td class="title"><a href="#codeassist-module">Code assist support for module in @see, @link and @linkplain javadoc tags</a></td>
+    <td class="content">
+      New code assist support has been added for modules in @see, @link and @linkplain javadoc tags for projects with Java level 15 or higher.
+      <p>
+          The below image shows the module names that this project has access to being suggested, when <b>'Ctrl + Space'</b> is pressed at the cursor location.
+      </p>
+      <p><img src="images/codeassist-module-name.png" alt="module"/></p>
+      <p>
+          The below image shows the packages that the above selected module exports, when <b>'Ctrl + Space'</b> is pressed at the cursor location.
+      </p>
+      <p><img src="images/codeassist-module-packages.png" alt="package"/></p>
+      <p>
+          The below image shows the classes in the above selected package, when <b>'Ctrl + Space'</b> is pressed at the cursor location.
+      </p>
+      <p><img src="images/codeassist-module-package-classes.png" alt="class"/></p>
+    </td>
+  </tr>
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
