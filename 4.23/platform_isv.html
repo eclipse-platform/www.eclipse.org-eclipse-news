@@ -46,6 +46,20 @@ ul {padding-left: 13px;}
   </tr>
   <!-- *********************** End of SWT *********************** -->
 
+  <!-- ******************** Equinox ********************** -->
+  <tr>
+    <td id="Equinox" class="section" colspan="2"><h2>Equinox p2 Changes</h2></td>
+  </tr>
+  
+	<tr id="trusted-pgp-key-extension"> <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=577248 -->
+		<td class="title"><a href="#trusted-pgp-key-extension">Define trusted PGP keys in extensions</a></td>
+		<td class="content">
+			The <code>org.eclipse.p2.engine.pgp</code> extension-point was added to p2. It allows plugins
+			define some PGP public keys that are to be considered as trusted by default.
+			<p>>Changes to contribution while upgrading or removing those plugins will directly impact the
+			set of trusted keys without further action.</p>
+		</td>
+	</tr>
 </tbody>
 </table>
 <!-- ****************** END OF N&N TABLE ****************** -->
