@@ -68,6 +68,33 @@ ul {padding-left: 13px;}
 		<h2>Preferences </h2>
 		</td>
 	</tr>
+
+	<tr id="large-file-associations"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=577289 -->
+		<td class="title"><a href="#large-file-associations">Large File Association preferences</a></td>
+		<td class="content">
+			<p>With <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=577289">bug 577289</a> a new set of preferences
+			is added, that can specify which editor is used to open large files of a specific type. This allows users
+			to specify editors that scale better for large project files: e.g. a text editor for large generated sources,
+			or an external editor for very large files that are not handled well by Eclipse editors.</p>
+			<p>The preferences can be set via the respective preference page: <b>General -> Editors -> Large File Associations</b></p>
+			<p><img src="images/large_file_associations_preference_page.png" alt="Large File Associations preference page" width="500", height="489"/></p>
+			<p>The preferences can also be via product customization (<b>-productCustomization &lt;path to file&gt;</b>), e.g. contents:</p>
+			<pre>
+# all types with a preference, needed by the preference page UI
+org.eclipse.ui.workbench/largeFileLimits_types=java,xml,txt
+org.eclipse.ui.workbench/largeFileLimits_disabled=cpp
+
+# default, show prompt for all to types that don't have a preference
+org.eclipse.ui.workbench/largeFileLimits_default_enabled=true
+org.eclipse.ui.workbench/largeFileLimits_default_value=100000
+
+# specific editor associations per type and file size
+org.eclipse.ui.workbench/largeFileLimits.java=4096,org.eclipse.ui.DefaultTextEditor,8192,largeFileLimits_prompt
+org.eclipse.ui.workbench/largeFileLimits.xml=1048576,org.eclipse.ui.DefaultTextEditor,77777,Emacs
+org.eclipse.ui.workbench/largeFileLimits.txt=2048,largeFileLimits_prompt
+			</pre>
+		</td>
+	</tr>
 	<!-- ****************** End of Preferences ************************************* -->
 
 	<!-- ******************* Themes and Styling ************************************* -->
