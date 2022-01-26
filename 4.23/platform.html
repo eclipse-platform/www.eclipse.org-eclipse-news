@@ -78,7 +78,7 @@ ul {padding-left: 13px;}
 			or an external editor for very large files that are not handled well by Eclipse editors.</p>
 			<p>The preferences can be set via the respective preference page: <b>General -> Editors -> Large File Associations</b></p>
 			<p><img src="images/large_file_associations_preference_page.png" alt="Large File Associations preference page" width="500", height="489"/></p>
-			<p>The preferences can also be via product customization (<b>-productCustomization &lt;path to file&gt;</b>), e.g. contents:</p>
+			<p>The preferences can also be via product customization (<code>-productCustomization &lt;path to file&gt;</code>), e.g. contents:</p>
 			<pre>
 # all types with a preference, needed by the preference page UI
 org.eclipse.ui.workbench/largeFileLimits_types=java,xml,txt
@@ -109,6 +109,20 @@ org.eclipse.ui.workbench/largeFileLimits.txt=2048,largeFileLimits_prompt
 	<tr>
 		<td id="GeneralUpdates" class="section" colspan="2">
 		<h2>General Updates </h2>
+		</td>
+	</tr>
+	
+	<tr id="process-pid"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=574403 -->
+		<td class="title"><a href="#process-pid">Process ID in Debugger</a></td>
+		<td class="content">
+			<p>Eclipse Debug framework can now show process ID (pid) of started processes.
+			The pid is shown (if supported by the concrete debugger implementation) in the Console 
+			view description and properties page for the process. This should work out of the box for all 
+			processes using or extending <code>org.eclipse.debug.core.model.RuntimeProcess</code>, and can be 
+			easily added to other processes by specifying <code>IProcess.ATTR_PROCESS_ID</code> process attribute.
+			</p>
+			<p>Additionally to that, Java debugger shows now process id for the process element in the Debug view.</p>
+			<p><img src="images/show_pid.png" alt="Debugger shows process ID"/></p>
 		</td>
 	</tr>
 	<!-- ******************* End of General Updates ************************************* -->
