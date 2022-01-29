@@ -113,6 +113,20 @@ ul {padding-left: 13px;}
     <h2>Java Formatter </h2>
     </td>
   </tr>
+  <tr id="formatter-switch-case"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=578122  -->
+                                  <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=578446  -->
+    <td class="title">New options for switch/case constructs</td>
+    <td class="content">
+      A few new settings have been implemented in the Java Formatter that allow more control over <b>switch constructs introduced in Java 14</b>.
+      <p>In the <b>Line Wrapping</b> section, we can decide to allow <b>wrapping in switch cases: before or after an arrow,
+      and also inside lists of expressions to match</b> (this can be controlled separately for switch expressions and switch statements).</p>
+      <p><img src="images/formatter-switch-wrapping.png" alt="Switch case wrapping"/></p>
+      <p>In the <b>Keep braced code on one line</b> section there are two new options for a more compact formatting of <b>code blocks in switch cases with arrows</b>
+      or even <b>whole switch expressions/statements</b>.</p>
+      <p><img src="images/formatting-switch-oneline.png" alt="Switch on one line"/></p>
+      <p>The formatter configuration sections can be found in the <b>Profile Editor</b> (<b>Preferences &gt; Java &gt; Code Style &gt; Formatter &gt; Edit...</b>).</p>
+    </td>
+  </tr>
   <!-- ******************* End of Java Formatter ************************************* -->
   
   <!-- *********************** Debug ******************************** -->
