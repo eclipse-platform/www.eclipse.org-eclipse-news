@@ -127,6 +127,17 @@ ul {padding-left: 13px;}
       <p>The formatter configuration sections can be found in the <b>Profile Editor</b> (<b>Preferences &gt; Java &gt; Code Style &gt; Formatter &gt; Edit...</b>).</p>
     </td>
   </tr>
+  <tr id="formatter-wrap-invocation"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=578115  -->
+    <td class="title">Method invocation wrapping indentation</td>
+    <td class="content">
+      It turns out it's not obvious how to <b>indent a wrapped method invocation</b> when the preceeding expression itself is complex enough to also be wrapped into multiple lines.
+      Should the indentation be added to the existing indentation at the end of the expression, or just reset and assume that only the indentation of expression's first line matters?
+      <p>Previously only the former behavior was available, now there's a setting to choose the latter.
+      The checkbox called <b>Indent from the base expression's first line</b> is located in the <b>Line Wrapping &gt; Wrapping settings &gt; Function calls</b> section,
+      right under the <b>Qualified invocations</b> setting.</p>
+      <p><img src="images/formatter-invocation-wrapping.png" alt="Method invocation wrapping"/></p>
+    </td>
+  </tr>
   <!-- ******************* End of Java Formatter ************************************* -->
   
   <!-- *********************** Debug ******************************** -->
