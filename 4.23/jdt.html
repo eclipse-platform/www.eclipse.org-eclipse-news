@@ -182,6 +182,16 @@ ul {padding-left: 13px;}
       <p>This works for watches and inspected objects too.</p>
     </td>
   </tr>
+
+  <tr id="open-field-declaration"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=577622 -->
+    <td class="title">Open field declaration</td>
+    <td class="content">
+      <p>During debugging, for a variable, previously it was only possible to navigate to the actual or to the declared type of that variable.
+        With the new 'Open Field Declaration' context menu item, it is extended to go to the declaration of that field, which can be especially helpful,
+        if the object is inside a deep class inheritance hierarchy.</p>
+      <p><img src="images/open-field-declaration-menuitem.png" alt="Open Field Declaration"/></p>
+    </td>
+  </tr>
   <!--************************ End of Debug ******************************** -->
 
   <!-- *********************** JDT Developers ******************************** -->
