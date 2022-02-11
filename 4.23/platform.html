@@ -117,7 +117,11 @@ org.eclipse.ui.workbench/largeFileLimits.txt=2048,largeFileLimits_prompt
 		<td class="content">
 			<p>Eclipse Debug framework can now show process ID (pid) of started processes.
 			The pid is shown (if supported by the concrete debugger implementation) in the Console 
-			view description and properties page for the process. This should work out of the box for all 
+			view description and properties page for the process. 
+			</p>
+			<p><img src="images/process_properties.png" alt="Process properties page shows process ID"/></p>
+			<p>
+			This should work out of the box for all 
 			processes using or extending <code>org.eclipse.debug.core.model.RuntimeProcess</code>, and can be 
 			easily added to other processes by specifying <code>IProcess.ATTR_PROCESS_ID</code> process attribute.
 			</p>
