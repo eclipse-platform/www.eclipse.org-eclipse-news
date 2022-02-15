@@ -47,6 +47,15 @@ ul {padding-left: 13px;}
 			on of those <code>LineEndCodeMining</code> additionally to existing ones. 
 		</td>
 	</tr>
+
+	<tr id="debug-value-code-mining"> <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=507546 -->
+		<td class="title"><a href="#debug-value-code-mining">Contribute adapter to display debug value code minings</a></td>
+		<td class="content">
+			In order to make debug values visible inline for users who enabled this feature, your debugger support can contribute
+			and adapter from <code>ITextSelection</code> to <code>IVariable</code>. The Debug framework will then lookup available
+			variables for the files being edited and display their value inline.
+		</td>
+	</tr>
 	<!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
