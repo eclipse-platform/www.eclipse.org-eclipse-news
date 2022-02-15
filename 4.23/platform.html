@@ -62,12 +62,13 @@ ul {padding-left: 13px;}
 	</tr>
 
 	<tr id="inline-debug-values"> <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=507546 -->
-		<td class="title"><a href="#dinline-debug-values">Show some debug values inline</a></td>
+		<td class="title"><a href="#dinline-debug-values">Debuggers can show values inline</a></td>
 		<td class="content">
-			In the <i>Run/Debug</i> preference page now shows a new option to allow to show debug
-			values inline. When enabled, this will prompt debug values as a code minings on the end
+			The <i>Run/Debug</i> preference page now shows a new option to allow to show debug
+			values inline. When enabled, this will print debug values as a code minings annotation on the end
 			of line. The values shown would then react to change in the debug context as you navigate
-			in the stack frame.
+			through the execution. As this requires extra effort for the debuggers to enable it, not all
+			debuggers may support it yet.
 			<p>
 				<img width="800px" src="images/debug-value-inline.png" alt=""/>
 			</p>
