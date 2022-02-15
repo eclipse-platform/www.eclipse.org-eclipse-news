@@ -62,6 +62,7 @@
 		<li><a href="#editors">Editors</a></li>
 		<li><a href="#APITools">API Tools</a></li>
 		<li><a href="#pde-compiler">PDE Compiler</a></li>
+		<li><a href="#pde-launching">PDE Launching</a></li>
 	</ul>
 
 	<!-- ****************** START OF N&N TABLE****************** -->
@@ -164,6 +165,35 @@
 				</td>
 			</tr>
 			<!-- ******************** End of PDE Compiler ********************** -->
+
+			<!-- ******************** PDE Launching ********************** -->
+			<tr>
+				<td id="pde-launching" class="section" colspan="2">
+					<h2>PDE Launching</h2>
+				</td>
+			</tr>
+			<tr id="eclipse-applications-launching">
+			<!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=576888
+				https://bugs.eclipse.org/bugs/show_bug.cgi?id=576889
+				https://bugs.eclipse.org/bugs/show_bug.cgi?id=576890
+				https://bugs.eclipse.org/bugs/show_bug.cgi?id=351396
+				https://bugs.eclipse.org/bugs/show_bug.cgi?id=577118
+				https://bugs.eclipse.org/bugs/show_bug.cgi?id=576887
+				 -->
+				<td class="title"><a href="#eclipse-applications-launching">Improved launching of Eclipse/Equinox applications</a></td>
+				<td class="content">
+					Launching Eclipse- and Equinox-application based on Features has been reworked to automatically add included and required Features and their content,
+					to obey the specified version match-rules of required Plug-ins and Features
+					and to ignore included Plug-ins or Features if the specified environment does not match the target environment.
+					<p>
+					When you <code>Add Required Plug-ins</code> to a Plug-in based Eclipse/Equinox application launch, 'test'-fragments are not added anymore only because their host participates in the launch.
+					The same applies for launches based on Features where requirements are added automatically.
+					Furthermore the handling of multiple versions of bundles with the same symbolic-name has been refined for Plug-in and Feature based launches.
+					</p>
+				</td>
+			</tr>
+
+			<!-- ******************** End of PDE Launching ********************** -->
 
 		</tbody>
 	</table>
