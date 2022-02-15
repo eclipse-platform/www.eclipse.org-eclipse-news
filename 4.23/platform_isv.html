@@ -107,6 +107,24 @@ ul {padding-left: 13px;}
 			set of trusted keys without further action.</p>
 		</td>
 	</tr>
+
+	<tr>
+		<td id="Equinox" class="section" colspan="2"><h2>Equinox Framework Changes</h2></td>
+	</tr>
+
+	<tr id="improved-bundle-file-location"> <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=577574 -->
+		<td class="title"><a href="#improved-bundle-file-location">Determining a bundle's file location has be improved</a></td>
+		<td class="content">
+			The location of a bundle in the local file system can now be obtained by adapting the bundle to the <code>File</code> class:
+			<code>org.osgi.framework.Bundle.adapt(java.io.File.class)</code>
+			<br>
+			A more conventient way is to call the new method <code>getBundleFileLocation(Bundle)</code> in <code>org.eclipse.core.runtime.FileLocator</code>
+			, which returns an <code>Optional</code> to reflect the fact that not in all cases the file-system location of a bundle can be determined.
+			This methods is intended as replacement for <code>FileLocator.getBundleFile(Bundle)</code> and does not throw an <code>IOException</code>.
+			Both methods now run significantly faster than <code>FileLocator.getBundleFile(Bundle)</code> did before.
+		</td>
+	</tr>
+
 </tbody>
 </table>
 <!-- ****************** END OF N&N TABLE ****************** -->
