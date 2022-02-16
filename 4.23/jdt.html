@@ -202,6 +202,19 @@ ul {padding-left: 13px;}
       <p><img src="images/open-field-declaration-menuitem.png" alt="Open Field Declaration"/></p>
     </td>
   </tr>
+  
+  <tr id="lambda-entry-declaration"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=486264 -->
+    <td class="title">Lambda Entry Breakpoint</td>
+    <td class="content">
+      <p>During debugging, you can now add entry breakpoints for Lambda expressions which will enable the debugger to stop at the entry of lambda expression instead of stopping at the first expression of the line.
+       You can see the breakpoint in the Breakpoints view indicated by the implemented Functional Interface. Double clicking the breakpoint in Breakpoints view will display the associated Lambda Expression in the editor.
+       </p>
+       <p>You can add new Lambda Entry breakpoint by selecting the <b>Toggle Lambda Entry Breakpoint</b> from the <b>Ruler</b> context menu or <b>Run</b>  menu. You can select a particular lambda expression to add the breakpoint,
+       if none is selected the entry breakpoint is added to the first lambda expression on the line. You can add only one breakpoint one a line.
+      </p>
+      <p><img src="images/lambda_entry_breakpoint.png" alt="Lambda Entry Breakpoint"/></p>
+    </td>
+  </tr>
   <!--************************ End of Debug ******************************** -->
 
   <!-- *********************** JDT Developers ******************************** -->
