@@ -107,7 +107,7 @@ ul {padding-left: 13px;}
   <tr id="show-implementations-of-callee"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=577919 -->
     <td class="title"><a href="#show-implementations-of-callee">Show implementations of callee</a></td>
     <td class="content">
-      The call hierarchy view can now show implementating methods as potential callee methods when viewing callees.
+      The call hierarchy view can now show implementing methods as potential callee methods when viewing callees.
       <p><img src="images/callee_on_implementations.png" alt="Callee call hierarchy"/></p>
       This behavior can be controlled from following preference
       <p><img src="images/callee_preference.png" alt="Call hierarchy preference"/></p>
@@ -147,7 +147,7 @@ ul {padding-left: 13px;}
   <tr id="formatter-wrap-invocation"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=578115  -->
     <td class="title">Method invocation wrapping indentation</td>
     <td class="content">
-      It turns out it's not obvious how to <b>indent a wrapped method invocation</b> when the preceeding expression itself is complex enough to also be wrapped into multiple lines.
+      It turns out it's not obvious how to <b>indent a wrapped method invocation</b> when the preceding expression itself is complex enough to also be wrapped into multiple lines.
       Should the indentation be added to the existing indentation at the end of the expression, or just reset and assume that only the indentation of expression's first line matters?
       <p>Previously only the former behavior was available, now there's a setting to choose the latter.
       The checkbox called <b>Indent from the base expression's first line</b> is located in the <b>Line Wrapping &gt; Wrapping settings &gt; Function calls</b> section,
@@ -168,7 +168,7 @@ ul {padding-left: 13px;}
     <td class="title">Warning about changing final fields</td>
     <td class="content">
       <p>Since Eclipse 3.1 Eclipse Java debugger allows changes on final field values.
-      While technically possible, the consequences of such changees are not trivial, 
+      While technically possible, the consequences of such changes are not trivial, 
       could affect seemingly unrelated code and lead to various dangerous effects.
       </p>
       <p>Therefore, with Eclipse 4.23 Java debugger shows now a new warning:
@@ -183,7 +183,7 @@ ul {padding-left: 13px;}
   </tr>
 
   <tr id="labels-in-expressions-view"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=577103  -->
-    <td class="title">Highlight labelled objects in the "Expressions" view too</td>
+    <td class="title">Highlight labeled objects in the "Expressions" view too</td>
     <td class="content">
       <p>Since Eclipse 4.22, the Java debugger allows to label object instances with custom strings.
         This feature has been extended to show those labels in the Expressions view, highlighted with red color by default.
