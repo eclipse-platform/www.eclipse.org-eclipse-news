@@ -142,6 +142,28 @@
       </p>
     </td>
   </tr>
+  <tr id="pde-editor-include"> <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=577184 -->
+    <td class="title"><a href="#pde-editor-include">Reference an existing target inside another one</a></td>
+    <td class="content">
+      It is now possible to reference an existing target file inside another target: 
+   	  <p>
+       <img src="images/include_target_1.png" alt="" />
+      </p>
+      <p>
+       <img src="images/include_target_2.png" alt="" />
+      </p>
+      <p>
+       <img src="images/include_target_3.png" alt="" />
+      </p>
+      This could be used for different purpose:
+      <ul>
+      	<li>You could use a target from a remote location (e.g. github-repository using http-protocol) in your local IDE.</li>
+      	<li>You could use a target deployed at a maven repository using the mvn:&lt;groupid&gt;:&lt;artifactid&gt;:&lt;version&gt; (this requires m2eclipse with PDE integration)</li>
+      	<li>You could extend an existing local target using eclipse-variables</li>
+      	<li>You could combine any of the above options</li>
+      </ul>
+    </td>
+  </tr>
   <!-- ******************** End of Editors ********************** -->
 
 			<!-- ******************** APITools ********************** -->
