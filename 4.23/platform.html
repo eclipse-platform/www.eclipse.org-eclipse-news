@@ -52,6 +52,20 @@ ul {padding-left: 13px;}
 			the trusted public PGP keys will install without prompting the <i>Trust</i> dialog.
 		</td>
 	</tr>
+	<tr id="ProgressStableSort"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=578643 -->
+		<td class="title"><a href="#ProgressStableSort">Stable Sort Order in Progress View</a></td>
+		<td class="content">
+			The Progress View will not move Jobs down anymore. That makes it easier to hit the right cancel button. New Jobs are always added at the bottom. 
+			<p>
+				Old behaviour: long running job jumps around.
+				<img width="739px" src="images/progress_old.gif" alt="wild moving"/>
+			</p>
+			<p>
+				New behaviour: long running job stays top.
+				<img width="628px" src="images/progress_new.gif" alt="stays top"/>
+			</p>
+		</td>
+	</tr>
 	<!-- ******************* End of Views, Dialogs and Toolbar ************************************* -->
 
 	<!-- ******************* Debug ************************************* -->
@@ -62,7 +76,7 @@ ul {padding-left: 13px;}
 	</tr>
 
 	<tr id="inline-debug-values"> <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=507546 -->
-		<td class="title"><a href="#dinline-debug-values">Debuggers can show values inline</a></td>
+		<td class="title"><a href="#inline-debug-values">Debuggers can show values inline</a></td>
 		<td class="content">
 			The <i>Run/Debug</i> preference page now shows a new option to allow to show debug
 			values inline. When enabled, this will print debug values as a code minings annotation on the end
@@ -122,7 +136,7 @@ org.eclipse.ui.workbench/largeFileLimits.txt=2048,largeFileLimits_prompt
 	</tr>
 	
 	<tr id="win32-dark-buttons-css"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=577042 -->
-	<td class="title"><a href="#win32-dark-buttons">Windows dark theme uses natively styled buttons</a></td>
+	<td class="title"><a href="#win32-dark-buttons-css">Windows dark theme uses natively styled buttons</a></td>
 	<td class="content">
 		The buttons on Windows OS is now using native support in the dark theme.
 		<p>
