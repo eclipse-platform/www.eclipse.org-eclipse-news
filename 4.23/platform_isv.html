@@ -104,7 +104,21 @@ ul {padding-left: 13px;}
       <pre><b>-Dorg.eclipse.swt.internal.win32.disableCustomThemeTweaks=true</b></pre>
 	</td>
   </tr>
-  
+
+  <tr id="sleak-view-improvements"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=578696 -->
+    <td class="title"><a href="#sleak-view-improvements">Sleak view improvements</a></td>
+    <td class="content">
+      The Sleak view now also lists non-disposed Widget objects, where previously it listed non-disposed Resource objects only.
+      This can be used to check for widget leaks, e.g. if a view leaks Menu objects or if a view operation results
+      in adding more and more widgets to the view.
+      <p>The Sleak view snap and diff buttons are now merged to one button,
+      the non-disposed objects summary is shown on mouse-over in the object table,
+      as well as the stack traces area and the object table are now separated by a draggable Sash.
+      </p>
+      <p><img src="images/sleak_view_improvements.png" alt="Sleak view improvements"/></p>
+    </td>
+  </tr>
+
   <!-- *********************** End of SWT *********************** -->
 
   <!-- ******************** Equinox ********************** -->
