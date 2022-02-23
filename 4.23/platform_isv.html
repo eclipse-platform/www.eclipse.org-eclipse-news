@@ -48,6 +48,33 @@ ul {padding-left: 13px;}
 		</td>
 	</tr>
 	
+
+
+	
+	<tr id="fluent-databinding-api"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=552667 -->
+		<td class="title"><a href="#fluent-databinding-api">New fluent databinding API</a></td>
+		<td class="content">
+			A new fluent API for the databinding framework has been added.
+			<p>
+			This API is a facade for the traditional databinding API that is based
+			on <code>DataBindingContext</code> and <code>UpdateValueStrategy</code>. It provides
+			short-hands, extra type safety and better readability.
+			</p>
+			The following is a usage example:
+			<pre><code>
+Bind.twoWay()
+	.from(value)
+	.validateAfterConvert(modelValidator)
+	.convertTo(IConverter.create(i -> Objects.toString(i, "")))
+	.convertFrom(IConverter.create(s -> s.isEmpty() ? 0 : Integer.decode(s)))
+	.to(WidgetProperties.text(SWT.Modify).observe(text))
+	.validateBeforeSet(widgetValidator)
+	.bind(bindingContext);
+			</code></pre>
+		</td>
+	</tr>
+	
+	
 	<tr id="notification-api"> <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=575091 -->
 		<td class="title"><a href="#notification-api">Notification builder</a></td>
 		<td class="content">
