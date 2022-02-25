@@ -24,12 +24,12 @@ ul {padding-left: 13px;}
 <h2>Java development tools</h2>
 <ul>
 	<!--<li><a href="#JavaXX">Java&trade; XX Support</a></li>-->
-	<li><a href="#JUnit">JUnit</a></li>
+	<!--<li><a href="#JUnit">JUnit</a></li>-->
 	<li><a href="#JavaEditor">Java Editor</a></li>
 	<li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li>
 	<li><a href="#JavaFormatter">Java Formatter</a></li>
 	<li><a href="#Debug">Debug</a></li>
-	<li><a href="#JDTDev">JDT Developers</a></li>
+	<!--<li><a href="#JDTDev">JDT Developers</a></li>-->
 </ul>
 
 <!-- ****************** START OF N&N TABLE ****************** -->
@@ -50,14 +50,6 @@ ul {padding-left: 13px;}
   -->
   <!-- ******************* End of Java XX Support ************************************* -->
 
-  <!-- ******************* JUnit ************************************* -->
-  <tr>
-    <td id="JUnit" class="section" colspan="2">
-    <h2>JUnit</h2>
-    </td>
-  </tr>
-  <!-- ******************* End of JUnit ************************************* -->
-
   <!-- ******************* Java Editor ************************************* -->
   <tr>
     <td id="JavaEditor" class="section" colspan="2">
@@ -69,15 +61,15 @@ ul {padding-left: 13px;}
     <td class="content">
       New code assist support has been added for modules in @see, @link and @linkplain javadoc tags for projects with Java level 15 or higher.
       <p>
-          The below image shows the module names that this project has access to being suggested, when <b>'Ctrl + Space'</b> is pressed at the cursor location.
+          In the below image: When <b>'Ctrl + Space'</b> is pressed at the cursor location, the module names that this project has access to are suggested.
       </p>
       <p><img src="images/codeassist-module-name.png" alt="module"/></p>
       <p>
-          The below image shows the packages that the above selected module exports, when <b>'Ctrl + Space'</b> is pressed at the cursor location.
+          In the below image: When <b>'Ctrl + Space'</b> is pressed at the cursor location, the packages that the above selected module exports are shown.
       </p>
       <p><img src="images/codeassist-module-packages.png" alt="package"/></p>
       <p>
-          The below image shows the classes in the above selected package, when <b>'Ctrl + Space'</b> is pressed at the cursor location.
+          In the below image: When <b>'Ctrl + Space'</b> is pressed at the cursor location, the classes in the above selected package are shown.
       </p>
       <p><img src="images/codeassist-module-package-classes.png" alt="class"/></p>
     </td>
@@ -85,14 +77,16 @@ ul {padding-left: 13px;}
   <tr id="save-to-static-favorites"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=577232 -->
     <td class="title"><a href="#save-to-static-favorites">Save to static favorites</a></td>
     <td class="content">
-      A new content assist has been added to save a static import to the <b>Preferences -> Java -> Editor -> Content Assist -> Favorites</b> list of static members to propose via content assist.  To invoke the new feature, perform a <b>Ctrl + 1</b> on the desired static import to add:
+      A new quick assist has been added to save a static import to the <b>Preferences &gt; Java &gt; Editor &gt; Content Assist &gt; Favorites</b> list of static members to propose via content assist.
+      To invoke the new feature, perform a <b>Ctrl + 1</b> on the desired static import to add:
       <p><img src="images/save-to-static-favorites.png" alt="class"/></p>
     </td>
   </tr>
   <tr id="extract-lambda-body-to-method"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=558292 -->
     <td class="title"><a href="#extract-lambda-body-to-method">Extract lambda body to method</a></td>
     <td class="content">
-      A new content assist has been added to extract the body of a lambda to a method. To invoke the new feature, perform a <b>Ctrl + 1</b> within the selected lambda body:
+      A new quick assist has been added to extract the body of a lambda to a method.
+      To invoke the new feature, perform a <b>Ctrl + 1</b> within the selected lambda body:
       <p><img src="images/extract-lambda-body-to-method.png" alt="class"/></p>
     </td>
   </tr>
@@ -107,22 +101,14 @@ ul {padding-left: 13px;}
   <tr id="show-implementations-of-callee"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=577919 -->
     <td class="title"><a href="#show-implementations-of-callee">Show implementations of callee</a></td>
     <td class="content">
-      The call hierarchy view can now show implementing methods as potential callee methods when viewing callees.
+      The <b>Call Hierarchy</b> view can now show implementing methods as potential callee methods when viewing callees.
       <p><img src="images/callee_on_implementations.png" alt="Callee call hierarchy"/></p>
-      This behavior can be controlled from following preference
+      This behavior can be controlled using the following preference:
       <p><img src="images/callee_preference.png" alt="Call hierarchy preference"/></p>
     </td>
   </tr>
 
   <!-- ******************* End of Java Views and Dialogs ************************************* -->
-
-  <!-- ******************* Java Compiler ************************************* -->
-  <tr>
-    <td id="JavaCompiler" class="section" colspan="2">
-    <h2>Java Compiler</h2>
-    </td>
-  </tr>
-  <!-- ******************* End of Java Compiler ************************************* -->
 
   <!-- ******************* Java Formatter ************************************* -->
   <tr>
@@ -134,7 +120,7 @@ ul {padding-left: 13px;}
                                   <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=578446  -->
     <td class="title">New options for switch/case constructs</td>
     <td class="content">
-      A few new settings have been implemented in the Java Formatter that allow more control over <b>switch constructs introduced in Java 14</b>.
+      A few new settings have been implemented in the <b>Java Formatter</b> that allow more control over switch constructs introduced in Java 14.
       <p>In the <b>Line Wrapping</b> section, we can decide to allow <b>wrapping in switch cases: before or after an arrow,
       and also inside lists of expressions to match</b> (this can be controlled separately for switch expressions and switch statements).</p>
       <p><img src="images/formatter-switch-wrapping.png" alt="Switch case wrapping"/></p>
@@ -147,7 +133,7 @@ ul {padding-left: 13px;}
   <tr id="formatter-wrap-invocation"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=578115  -->
     <td class="title">Method invocation wrapping indentation</td>
     <td class="content">
-      It turns out it's not obvious how to <b>indent a wrapped method invocation</b> when the preceding expression itself is complex enough to also be wrapped into multiple lines.
+      It turns out that it's not obvious how to indent a wrapped method invocation when the preceding expression itself is complex enough to also be wrapped into multiple lines.
       Should the indentation be added to the existing indentation at the end of the expression, or just reset and assume that only the indentation of expression's first line matters?
       <p>Previously only the former behavior was available, now there's a setting to choose the latter.
       The checkbox called <b>Indent from the base expression's first line</b> is located in the <b>Line Wrapping &gt; Wrapping settings &gt; Function calls</b> section,
@@ -167,38 +153,35 @@ ul {padding-left: 13px;}
   <tr id="finalFields"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=577564  -->
     <td class="title">Warning about changing final fields</td>
     <td class="content">
-      <p>Since Eclipse 3.1 Eclipse Java debugger allows changes on final field values.
+      Since Eclipse 3.1 <b>Eclipse Java debugger</b> allows changes on final field values.
       While technically possible, the consequences of such changes are not trivial, 
       could affect seemingly unrelated code and lead to various dangerous effects.
-      </p>
-      <p>Therefore, with Eclipse 4.23 Java debugger shows now a new warning:
-      </p> 
+      <p>Therefore, with Eclipse 4.23 Java debugger shows a new warning:</p> 
       <p><img src="images/final_modification_warning.png" alt="Debugger warning"/></p>
       <p>This warning is enabled by default and can be disabled via preferences:</p>
       <p><img src="images/final_modification_option.png" alt="Updated preferences"/></p>
-      <p>Additionally, <i>"org.eclipse.debug.ui.variableValueEditors"</i> extension point
-      is updated to allow custom products contribute their own <i>"variableValueEditor"</i> 
-      implementations to existing debug models and have even more control over final fields modifications.</p>
+      <p>Additionally, <code>org.eclipse.debug.ui.variableValueEditors</code> extension point
+      is updated to allow custom products to contribute their own <code>variableValueEditor</code> 
+      implementations to existing debug models and have even more control over final field modifications.</p>
     </td>
   </tr>
 
   <tr id="labels-in-expressions-view"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=577103  -->
-    <td class="title">Highlight labeled objects in the "Expressions" view too</td>
+    <td class="title">Highlight labelled objects in the "Expressions" view too</td>
     <td class="content">
-      <p>Since Eclipse 4.22, the Java debugger allows to label object instances with custom strings.
-        This feature has been extended to show those labels in the Expressions view, highlighted with red color by default.
-      </p>
+      Since Eclipse 4.22, the <b>Java debugger</b> allows to label object instances with custom strings.
+      This feature has been extended to show those labels in the <b>Expressions</b> view, highlighted with red color by default.
       <p><img src="images/labels_in_expressionview.png" alt="Expression view"/></p>
-      <p>This works for watches and inspected objects too.</p>
+      <p>This works for watched and inspected objects too.</p>
     </td>
   </tr>
 
   <tr id="open-field-declaration"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=577622 -->
     <td class="title">Open field declaration</td>
     <td class="content">
-      <p>During debugging, for a variable, previously it was only possible to navigate to the actual or to the declared type of that variable.
-        With the new 'Open Field Declaration' context menu item, it is extended to go to the declaration of that field, which can be especially helpful,
-        if the object is inside a deep class inheritance hierarchy.</p>
+      During debugging, for a variable, previously it was only possible to navigate to the actual or to the declared type of that variable.
+      With the new <b>Open Field Declaration</b> context menu item, it is extended to go to the declaration of that field. This can be especially helpful,
+      if the object is inside a deep class inheritance hierarchy.
       <p><img src="images/open-field-declaration-menuitem.png" alt="Open Field Declaration"/></p>
     </td>
   </tr>
@@ -206,24 +189,16 @@ ul {padding-left: 13px;}
   <tr id="lambda-entry-declaration"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=486264 -->
     <td class="title">Lambda Entry Breakpoint</td>
     <td class="content">
-      <p>During debugging, you can now add entry breakpoints for Lambda expressions which will enable the debugger to stop at the entry of lambda expression instead of stopping at the first expression of the line.
-       You can see the breakpoint in the Breakpoints view indicated by the implemented Functional Interface. Double clicking the breakpoint in Breakpoints view will display the associated Lambda Expression in the editor.
-       </p>
-       <p>You can add new Lambda Entry breakpoint by selecting the <b>Toggle Lambda Entry Breakpoint</b> from the <b>Ruler</b> context menu or <b>Run</b>  menu. You can select a particular lambda expression to add the breakpoint,
-       if none is selected the entry breakpoint is added to the first lambda expression on the line. You can add only one breakpoint one a line.
+      During debugging, you can now add entry breakpoints for Lambda expressions which will enable the debugger to stop at the entry of lambda expression instead of stopping at the first expression of the line.
+      You can see the breakpoint in the <b>Breakpoints</b> view indicated by the implemented functional interface. Double clicking the breakpoint in Breakpoints view will display the associated Lambda Expression in the editor.
+      <p>
+       You can add new Lambda Entry breakpoint by selecting the <b>Toggle Lambda Entry Breakpoint</b> from the <b>Ruler</b> context menu or <b>Run</b>  menu. You can select a particular lambda expression to add the breakpoint,
+       if none is selected the entry breakpoint is added to the first lambda expression on the line. You can add only one breakpoint per line.
       </p>
       <p><img src="images/lambda_entry_breakpoint.png" alt="Lambda Entry Breakpoint"/></p>
     </td>
   </tr>
   <!--************************ End of Debug ******************************** -->
-
-  <!-- *********************** JDT Developers ******************************** -->
-  <tr>
-    <td id="JDTDev" class="section" colspan="2">
-    <h2>JDT Developers</h2>
-    </td>
-  </tr>
-  <!-- *********************** End of JDT Developers ******************************** -->
 </tbody>
 </table>
 <!-- ****************** END OF N&N TABLE ****************** -->
