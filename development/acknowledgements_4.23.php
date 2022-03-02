@@ -108,7 +108,7 @@ ob_start();
     <br/> 
     <h4>In Memoriam - Kit H Lo</h4>
     
-    <p>Eclipse project and its committers want to take a moment to remember with gratitude and deeply thank Kit Lo, passed away on Saturday, Feb 26th, 2022. 
+    <p>Eclipse project and its committers want to take a moment to remember with gratitude and deeply thank Kit Lo, who passed away on Saturday, Feb 26th, 2022. 
        Kit Lo was the Technical Lead for IBM Eclipse SDK, based out of IBM RTP lab. Kit has been with IBM for 32+ years, working in various roles and different teams.
        In the past decade, Kit was the lead for Translation/Globalization efforts across various products. About 5 years ago, Kit took up
        the IES Technical Lead role. Kit was a very hard worker, continuous learner and always willing to go the extra mile to help those in need. Kit was also very
