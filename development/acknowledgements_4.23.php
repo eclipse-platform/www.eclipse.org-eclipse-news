@@ -104,6 +104,14 @@ ob_start();
     <p>The Equinox team would like to thank all the contributors that helped improve the project by filing bug reports and enhancement requests.  We also would like to thank the community of developers that have contributed to the Equinox code base this release:
        Alexander Kurtakov, Andrey Loskutov, Christoph L&#xE4;ubrich, Ed Merks, Hannes Wellmann, Jared Anderson, Joerg Kubitz, Martin D'Aloia, Mickael Istria, Sravan Kumar Lakkimsetti, Thomas Watson and Vikas Chandra.
       </p>
+    
+    <p>Eclipse project and its committers also want to deeply thank Kit Lo, Technical Lead for IBM Eclipse SDK, based out of IBM RTP lab, passed
+       away on Saturday, Feb 26th, 2022. He was on a routine run on Saturday and collapsed on the way. Kit has been with IBM for 32+ years, working in various
+       roles and different teams. In the past decade, Kit was the lead for Translation/Globalization efforts across various products. About 5 years ago, Kit took up
+       the IES Technical Lead role. Kit was a very hard worker, continuous learner and always willing to go the extra mile to help those in need. Kit was also very
+       active in Eclipse Open Source Community. He was the co-lead for Eclipse Babel project (community driven translation of strings in Eclipse distribution) and
+       in the past year, he also took up the additional role of Eclipse IDE Release Engineer.
+      </p>
 
   </div>
 
