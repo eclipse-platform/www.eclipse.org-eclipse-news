@@ -7,7 +7,7 @@
 	# index.php
 	#
 	# Author: 		Sravan Kumar Lakkimsetti
-	# Date:			2022-02-18
+	# Date:			2022-03-16
 	#
 	# Description: Eclipse project 4.23 release freeze plan
 	#
@@ -45,7 +45,7 @@ ob_start();
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
 			<h3>Status</h3>
-			<p><b>Two daily I-builds towards RC1</b></p>
+			<p><b>Released</b></p>
       	</div>
 		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
