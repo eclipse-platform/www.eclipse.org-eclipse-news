@@ -64,6 +64,28 @@ ul {padding-left: 13px;}
     <h2>Java Editor </h2>
     </td>
   </tr>
+  
+  <tr id="strconcat-to-textblock"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=561484 -->
+    <td class="title"><a href="#strconcat-to-textblock">Remove unused private method parameters</a></td>
+    <td class="content">
+      A new cleanup and quick-assist has been added to remove unused parameters of private methods. If removing parameters might
+      lead to a conflict with an another method, the private method is renamed to be unique. The cleanup is not available if there 
+      is a method reference to the method, as in <code>stream.filter(MyClass::foo)</code>
+      <p>
+        To apply the cleanup, select the <b>Remove unused private method parameters</b> checkbox on the <b>Unnecessary Code</b> tab in your cleanup profile:</p>
+      <p><img src="images/remove_param_1.png" alt="Preference"/></p>
+      <p>
+        With the cleanup, the following:
+      </p>
+      <p><img src="images/remove_param_2.png" alt="Before"/></p>
+      <p>
+        Is changed to:
+      </p>
+      <p><img src="images/remove_param_3.png" alt="After"/></p>
+      <p>To remove a single parameter, a quick-assist has been added that can be activated with <b>CTRL+1</b> with the cursor located anywhere on the parameter.
+      </p>
+    </td>
+  </tr>
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
