@@ -27,6 +27,7 @@ ul {padding-left: 13px;}
     <li><a href="#TextEditors">Text Editors</a></li>
     <li><a href="#Preferences">Preferences</a></li>
     <li><a href="#StylingThemes">Themes and Styling</a></li>
+    <li><a href="#Debug">Debug</a></li>
     <li><a href="#GeneralUpdates">General Updates</a></li>
 </ul>
 
@@ -77,12 +78,31 @@ ul {padding-left: 13px;}
   </tr>
   <!-- ******************* End of Themes and Styling ************************************* -->
 
+<!-- *********************** Debug ******************************** -->
+  <tr>
+    <td id="Debug" class="section" colspan="2">
+    <h2>Debug</h2>
+    </td>
+  </tr>
+  
+  <tr id="debug-monitor-thread-names"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=579064 -->
+    <td class="title"><a href="#debug-monitor-thread-names">Debug thread names</a></td>
+    <td class="content">
+      The daemon threads for monitoring the streams of a debugged programm now have names
+      containing PID and launch config name of the debugged process.<br />
+      Like: <tt>&quot;Output Stream Monitor for PID $PID$ $ILaunchConfiguration.name$&quot;</tt>.<br />
+      There are 4 threads per process: Output Stream Monitor, Input Stream Monitor, Error Stream Monitor, Process monitor.
+    </td>
+  </tr>
+  <!--************************ End of Debug ******************************** -->
+
   <!-- ******************* General Updates ************************************* -->
   <tr>
     <td id="GeneralUpdates" class="section" colspan="2">
     <h2>General Updates </h2>
     </td>
   </tr>
+
   <!-- ******************* End of General Updates ************************************* -->
 </tbody>
 </table>
