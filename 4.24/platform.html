@@ -95,6 +95,17 @@ ul {padding-left: 13px;}
     <h2>Preferences </h2>
     </td>
   </tr>
+
+
+  <tr id="no-explicit-encoding-project-warning"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=479451 -->
+    <td class="title"><a href="#no-explicit-encoding-project-warning">Warning for projects with no explicit default encoding</a></td>
+    <td class="content">
+      <p>A warning marker is now created for projects with no explicit default encoding. The marker has a quick-fix,
+      that sets the project default encoding to the workspace encoding.</p>
+      <p>Having explicit project encoding eases sharing projects between workspaces with different encodings.</p>
+      <p><img src="images/no-explicit-encoding-project-warning.png" alt="warning marker and quick-fix"/></p>
+    </td>
+  </tr>
   <!-- ****************** End of Preferences ************************************* -->
 
   <!-- ******************* Themes and Styling ************************************* -->
