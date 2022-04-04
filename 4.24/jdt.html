@@ -118,6 +118,20 @@ ul {padding-left: 13px;}
     <h2>Debug</h2>
     </td>
   </tr>
+  
+  <tr id="debug-stack"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=547041 -->
+    <td class="title"><a href="#debug-stack">Console supports stack from Debug view</a></td>
+    <td class="content">
+      <p>
+      Surprisingly enough, Java Stack Trace Console never supported navigation to
+      Java types for Java stack traces copied from Debug view via "Copy Stack" action.
+      Now the console will underline type names and line numbers and clicking on
+      links will jump to the corresponding source code. If the type name is not unique,
+      default "Select type" dialog will appear to allow selection of the right type.
+      </p>
+      <p><img src="images/java_stack_console.png" alt="Console shows links to Java types"/></p>
+    </td>
+  </tr>
   <!--************************ End of Debug ******************************** -->
 
   <!-- *********************** JDT Developers ******************************** -->
