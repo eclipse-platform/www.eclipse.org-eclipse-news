@@ -104,6 +104,46 @@ ul {padding-left: 13px;}
   </tr>
 
 
+  <tr id="explicit-encoding-workspaces"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=516583 -->
+    <td class="title"><a href="#explicit-encoding-workspaces">Explicit encoding set for new workspaces</a></td>
+    <td class="content">
+    <p>
+	If Eclipse is started without explicit default encoding set, <b>UTF-8</b> will be set as default encoding
+	for new workspaces.
+	</p>
+	<p>
+	In case some encoding was specified at Eclipse startup either as JVM
+	system property <code>-Dfile.encoding=XYZ</code>
+	or by product customization preference <code>org.eclipse.core.resources/encoding=XYZ</code>
+	, this custom encoding will be persisted as default encoding for new workspaces.
+	</p>
+	<p>
+		After that all new projects created in new workspaces will also have
+		explicit default encoding set (they will derive that from the workspace encoding
+		and not from some random encoding taken from current OS settings).
+	</p>
+	<p>
+		Existing workspaces or projects with encoding already set will be not
+		affected and will keep their original encoding.
+	</p>
+    </td>
+  </tr>
+  
+  <tr id="explicit-encoding-projects"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=479450 -->
+    <td class="title"><a href="#explicit-encoding-projects">Explicit encoding set for new projects</a></td>
+    <td class="content">
+      <p>All new projects created with 4.24 release will have explicit
+		default project encoding set after creation,
+		based on the workspace default encoding.
+	    </p>
+		<p>
+		As a result, a new project will always have
+		<code>.settings/org.eclipse.core.resources.prefs</code>
+		file generated, containing information about project default encoding.
+	  </p>
+    </td>
+  </tr>
+  
   <tr id="no-explicit-encoding-project-warning"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=479451 -->
     <td class="title"><a href="#no-explicit-encoding-project-warning">Warning for projects with no explicit default encoding</a></td>
     <td class="content">
