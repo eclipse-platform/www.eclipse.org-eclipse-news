@@ -1,0 +1,8 @@
+Boolean b = Boolean.getBoolean("arbitrarykey");
+Boolean b2 = Boolean.getBoolean("arbitrarykey");
+Integer i = Integer.getInteger("arbitrarykey");
+Integer i2 = Integer.getInteger("arbitrarykey");
+Integer i3 = Integer.getInteger("arbitrarykey", 15);
+Long l = Long.getLong("arbitrarykey");
+Long l2 = Long.getLong("arbitrarykey");
+Long l3 = Long.getLong("arbitrarykey", 15);

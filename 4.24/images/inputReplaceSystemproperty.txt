@@ -1,0 +1,8 @@
+Boolean b = Boolean.parseBoolean(System.getProperty("arbitrarykey"));
+Boolean b2 = Boolean.parseBoolean(System.getProperty("arbitrarykey", "false"));
+Integer i = Integer.parseInt(System.getProperty("arbitrarykey"));
+Integer i2 = Integer.parseInt(System.getProperty("arbitrarykey","0"));
+Integer i3 = Integer.parseInt(System.getProperty("arbitrarykey","15"));
+Long l = Long.parseLong(System.getProperty("arbitrarykey"));
+Long l2 = Long.parseLong(System.getProperty("arbitrarykey" ,"0"));
+Long l3 = Long.parseLong(System.getProperty("arbitrarykey" ,"15"));

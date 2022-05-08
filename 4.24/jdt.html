@@ -124,6 +124,21 @@ ul {padding-left: 13px;}
         <p><img src="images/extend_interface_assist.png" alt="Before" /></p>
         </td>
     </tr>
+	
+  <tr id="replace-system-properties"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=571823 -->
+    <td class="title"><a href="#replace-system-properties">Extend Replace System.getProperty() calls clean up</a></td>
+    <td class="content">
+      The existing clean up has been extended to replace more <code>System.getProperty()</code> calls with suitable Java method calls instead. 
+      <p>
+        For the given code:
+      </p>
+      <p><a href="images/inputReplaceSystemproperty.txt"><img src="images/inputReplaceSystemproperty.png" alt="follow link for source"/></a></p>
+      <p>
+        One gets:
+      </p>
+      <p><a href="images/resultReplaceSystemproperty.txt"><img src="images/resultReplaceSystemproperty.png" alt="follow link for source"/></a></p>
+    </td>
+  </tr>
 <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
