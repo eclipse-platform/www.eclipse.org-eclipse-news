@@ -1,4 +1,4 @@
-This project contains all news and northworty for each eclipse release. 
+This project contains all the news and notehworthy for each eclipse release. 
 
-[You can access to the the different pages here](https://www.eclipse.org/eclipse/news/). 
+[You can access to the the different releases here](https://www.eclipse.org/eclipse/news/). 
 
