@@ -124,6 +124,19 @@ ul {padding-left: 13px;}
         <p><img src="images/extend_interface_assist.png" alt="Before" /></p>
         </td>
     </tr>
+    
+    <tr id="create_sub_type_for_sealed_type"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=577317 -->
+        <td class="title"><a href="#create_sub_type_for_sealed_type">Create sub type for sealed super type</a></td>
+        <td class="content">
+            A new set of quick-fixes has been added to create sub-type for a sealed type which does not have any permitted types. When selected the new Type wizard opens up.
+            <p>These quick fixes have been added to fix the error : 
+            <code>Sealed class or interface lacks the permits clause and no class or interface from the same compilation unit declares Cls1 as its direct superclass or superinterface</code></p>
+        <p>As shown below, two new quick fixes have been added to create sub type for a sealed super class.</p>
+        <p><img src="images/permitted_sub_class.png" alt="Before" /></p>
+        <p>As shown below, six new quick fixes have been added to create sub type for a sealed super interface.</p>
+        <p><img src="images/permitted_sub_type.png" alt="Before" /></p>
+        </td>
+    </tr>
 <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
