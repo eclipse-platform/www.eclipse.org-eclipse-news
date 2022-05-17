@@ -24,7 +24,7 @@ ul {padding-left: 13px;}
 <h2>Plug-in Development Environment</h2>
 <ul>
 	<li><a href="#dialogs-wizards-views">Dialogs, Wizards and Views</a></li>
-	<!-- <li><a href="#editors">Editors</a></li> -->
+	<li><a href="#editors">Editors</a></li>
 	<!-- <li><a href="#APITools">API Tools</a></li> -->
 	<!-- <li><a href="#pde-compiler">PDE Compiler</a></li> -->
 </ul>
@@ -56,15 +56,65 @@ ul {padding-left: 13px;}
 	<img src="images/eventSpyInPde.png"  alt="" />
                 </td>
    </tr>
+  <tr id="auto-add-requirements-launches">
+    <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=544838 -->
+    <td class="title"><a href="#auto-add-requirements-launches">Include requirements automatically when launching an application</a></td>
+    <td class="content">
+      The Launch-Configuration Wizard offers a new option in the <b>Plug-ins</b> tab to include required but missing plug-ins or features automatically while launching an Eclipse- or Equinox-application.
+      By default this is enabled for Launch-Configuration based on Features and disabled for those based on products, which reflects the previous behavior.
+      <p>
+      Missing plug-ins/features are only added to the launched application but not to the Launch-Configuration.
+      This allows to specify only the 'root' features/plug-ins you actually want in your application and to let Eclipse include only the minimal set of requirements in each launch.
+      Consequently new dependencies don't have to be added to the Launch-Configuration anymore.
+      </p>
+      <p><img src="images/autoIncludeLaunch.png" alt="Automatically include requirements in launch"/></p>
+    </td>
+   </tr>
 
   <!-- ******************** End ofDialogs, Wizard and Views ********************** -->
   
   <!-- ******************** Editors ********************** -->
-  <!--
   <tr>
     <td id="editors" class="section" colspan="2"><h2>Editors</h2></td>
   </tr>
-  -->
+  <tr id="auto-add-requirements-products">
+    <!-- 
+	https://bugs.eclipse.org/bugs/show_bug.cgi?id=570760
+    https://github.com/eclipse-pde/eclipse.pde/pull/7
+    -->
+    <td class="title"><a href="#auto-add-requirements-products">Include requirements automatically when launching a product</a></td>
+    <td class="content">
+      The <b>Product-Editor</b> offers a new option in the <b>Contents</b> tab to include required but missing features or plug-ins automatically when launching the product from the IDE.
+      <p>
+      This controls if the corresponding option, which is described above, is activated or not for the Launch-Configuration associated with the product-launch.
+      By default this option is enabled for Feature and Plug-in based products to behave the same like when the product is build with Eclipse-Tycho.
+      </p>
+      <p><img src="images/autoIncludeProduct.png" alt="Automatically include requirements in product"/></p>
+    </td>
+   </tr>
+
+  <tr id="launching-alignment">
+    <!-- 
+      https://bugs.eclipse.org/bugs/show_bug.cgi?id=340350
+      https://github.com/eclipse-pde/eclipse.pde/pull/107
+      https://bugs.eclipse.org/bugs/show_bug.cgi?id=578644
+     -->
+    <td class="title"><a href="#launching-alignment">Products launched from the IDE now better behave like products build with Maven/Eclipse-Tycho</a></td>
+    <td class="content">
+      Launching a Product from within the IDE via the Product-Editor has been improved in the following aspects to result in an application whose set of Plug-ins/Features is as close as possible to what is assembled when the product is build by Maven and Eclipse-Tycho:
+      <ul>
+        <li>Launching a product based on Features creates a Feature-based Launch-Configuration</li>
+        <li>Missing requirements are included by default (as described above)</li>
+        <li>When launching a Plugin-based product optional requirements are ignored by default when computing missing requirements</li>
+        <li>When automatically including requirements Fragments are not added just because their host-plug-in is included</li>
+      </ul>
+      Together with the <a href="https://www.eclipse.org/eclipse/news/4.23/pde.php#eclipse-applications-launching">Improved launching of Eclipse/Equinox applications</a> in the previous release Eclipse 2022-03 it is now much simpler to set up products.
+      As an example, to create the Eclipse-SDK as a Product you only have to create a Product with basic settings via the Wizard, configure it to use Features and add the <code>org.eclipse.sdk</code> Feature.
+      The Product is ready to launch.
+      If you want git support, just add the <code>org.eclipse.egit</code> Feature and in case you want to develop Maven-Projects in your Product, just add <code>org.eclipse.m2e.feature</code>.
+    </td>
+   </tr>
+
   <!-- ******************** End of Editors ********************** -->
 
   <!-- ******************** APITools ********************** -->
