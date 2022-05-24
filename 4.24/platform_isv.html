@@ -56,10 +56,10 @@ ul {padding-left: 13px;}
 	</td>
   </tr>
   <tr id="EclipseContextFactory"> <!-- https://github.com/eclipse-platform/eclipse.platform.runtime/issues/43 -->
-	<td class="title"><a href="#EclipseContextFactory">New EclipseContextFactory<br/>.getServiceContext(Class<?>) method</a></td>
+	<td class="title"><a href="#EclipseContextFactory">New EclipseContextFactory<br/>.getServiceContext(Class&lt;?&gt;) method</a></td>
 	<td class="content">
 		<p>
-		There is now a new <code>EclipseContextFactory.getServiceContext(Class<?>)</code> method that could be used to acquire an E4 Service Context containing all OSGi services using a context class.
+		There is now a new <code>EclipseContextFactory.getServiceContext(Class&lt;?&gt;)</code> method that could be used to acquire an E4 Service Context containing all OSGi services using a context class.
 		This becomes handy in situations where you neither has an E4 context nor an OSGi context at hand (e.g. E3 legacy code) but still want to inject some fields or create injected objects.
 		</p>
 	</td>
@@ -86,7 +86,7 @@ ul {padding-left: 13px;}
 	</td>
   </tr>
   <!-- *********************** End of SWT *********************** -->
-  <td colspan="2">	
+  <tr><td colspan="2"/></tr>
 </tbody>
 </table>
 <!-- ****************** END OF N&N TABLE ****************** -->
