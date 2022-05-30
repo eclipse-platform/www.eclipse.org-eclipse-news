@@ -26,9 +26,9 @@ ul {padding-left: 13px;}
     <li><a href="#ViewsAndDialogs">Views, Dialogs and Toolbar</a></li>
     <li><a href="#TextEditors">Text Editors</a></li>
     <li><a href="#Preferences">Preferences</a></li>
-    <li><a href="#StylingThemes">Themes and Styling</a></li>
+    <!-- <li><a href="#StylingThemes">Themes and Styling</a></li> -->
     <li><a href="#Debug">Debug</a></li>
-    <li><a href="#GeneralUpdates">General Updates</a></li>
+    <!-- <li><a href="#GeneralUpdates">General Updates</a></li> -->
 </ul>
 
 <!-- ****************** START OF N&N TABLE ****************** -->
@@ -46,16 +46,16 @@ ul {padding-left: 13px;}
   </tr>
   
     <tr id="welcomescreen"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=579463 -->
-    <td class="title"><a href="#welcomescreen">Welcome screen not changing the visibility of the toolbars anymore</a></td>
+    <td class="title"><a href="#welcomescreen">Welcome screen doesn't change toolbar visibility anymore</a></td>
     <td class="content">
- 	  The welcome screen will not hide the toolbars anymore in its maximized state to behave similar like a regular view. 
+ 	  The Welcome screen will not hide the toolbars anymore in its maximized state to behave similar like a regular view. 
     </td>
   </tr>
   
   <tr id="quickaccess-filesystem"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=576341 -->
     <td class="title"><a href="#codeassist-module">Find Actions can open files from file system</a></td>
     <td class="content">
-      The <em>Find Actions</em> command, usually accessible with <b>Ctrl+3</b>, now allows to open
+      The <b>Find Actions</b> command, usually accessible with <b>Ctrl+3</b>, now allows to open
       a file if the query is the path of an existing file on the filesystem.
     </td>
   </tr>
@@ -71,9 +71,9 @@ ul {padding-left: 13px;}
   <tr id="multi-select-commands"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=576377 -->
     <td class="title"><a href="#multi-select-commands">Action commands for multiple carets/selections</a></td>
     <td class="content">
-      Text editors now provide various commands to support multiple carets/selections that can be bound to 
+      <b>Text editors</b> now provide various commands to support multiple carets/selections that can be bound to 
       user-defined keyboard shortcuts for easy selection of text regions in text editors. No default
-      keys have been assigned yet (suggestions below), but can be assigned via Window/Preferences/Keys:
+      keys have been assigned yet (suggestions below), but can be assigned via <b>Window &gt; Preferences &gt; Keys</b>:
       <dl>
         <dt><b>Multi selection down relative to anchor selection</b></dt>
           <dd>Search next matching region and add it to the current selection, or remove first element from current multi-selection (e.g. <b>Ctrl-Alt-J</b>).</dd>
@@ -88,7 +88,7 @@ ul {padding-left: 13px;}
         <dt><b>Multi caret down</b></dt>
           <dd>Add a new caret/multi selection below the current line, or remove the first caret/multi selection (e.g. <b>Ctrl-Alt-Shift-Down</b>).</dd>  
       </dl>
-      Besides that the display of multiple carets on the Windows platform has been improved to provide a
+      In addition to the above, the display of multiple carets on the Windows platform has been improved to provide a
       more stable user experience.<br/><br/>
       <img width="700" src="images/multi-selection-demo.gif" alt="multi selection demo"/>
     </td>
@@ -107,12 +107,10 @@ ul {padding-left: 13px;}
   <tr id="explicit-encoding-workspaces"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=516583 -->
     <td class="title"><a href="#explicit-encoding-workspaces">Explicit encoding set for new workspaces</a></td>
     <td class="content">
-    <p>
-	If Eclipse is started without explicit default encoding set, <b>UTF-8</b> will be set as default encoding
+	If Eclipse is started without explicit default encoding set, <b>UTF-8</b> will be set as the default encoding
 	for new workspaces.
-	</p>
 	<p>
-	In case some encoding was specified at Eclipse startup either as JVM
+	In case some encoding was specified at Eclipse startup either as a JVM
 	system property <code>-Dfile.encoding=XYZ</code>
 	or by product customization preference <code>org.eclipse.core.resources/encoding=XYZ</code>
 	, this custom encoding will be persisted as default encoding for new workspaces.
@@ -156,11 +154,13 @@ ul {padding-left: 13px;}
   <!-- ****************** End of Preferences ************************************* -->
 
   <!-- ******************* Themes and Styling ************************************* -->
+  <!--
   <tr>
     <td id="StylingThemes" class="section" colspan="2">
     <h2>Themes and Styling </h2>
     </td>
   </tr>
+  -->
   <!-- ******************* End of Themes and Styling ************************************* -->
 
 <!-- *********************** Debug ******************************** -->
@@ -182,13 +182,15 @@ ul {padding-left: 13px;}
   <!--************************ End of Debug ******************************** -->
 
   <!-- ******************* General Updates ************************************* -->
+  <!--
   <tr>
     <td id="GeneralUpdates" class="section" colspan="2">
     <h2>General Updates </h2>
     </td>
   </tr>
-
+  -->	
   <!-- ******************* End of General Updates ************************************* -->
+  <tr><td colspan="2"/></tr>
 </tbody>
 </table>
 <!-- ****************** END OF N&N TABLE ****************** -->
