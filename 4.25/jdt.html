@@ -85,6 +85,24 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="convert-to-switch-expression"> <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/106 -->
+    <td class="title"><a href="#convert-to-switch-expression">Convert to switch expression</a></td>
+    <td class="content">
+      The clean-up to convert to use a switch expression where possible has been enhanced to recognize switch statements that have every case either end in a return statement or a throw of an exception.  In such a case the switch statement is converted into a return of a switch expression.
+      <p>
+        To apply the cleanup, select the Java 14 <b>Convert to switch expression where possible</b> checkbox on the <b>Java Feature</b> tab in your cleanup profile.
+      </p>
+      <p>
+        With the cleanup, the following:
+      </p>
+      <p><img src="images/convert-to-switch-expression-before.png" alt="Before"/></p>
+      <p>
+        Is changed to:
+      </p>
+      <p><img src="images/convert-to-switch-expression-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
