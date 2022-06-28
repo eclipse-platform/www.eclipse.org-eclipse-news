@@ -27,6 +27,7 @@ ul {padding-left: 13px;}
     <li><a href="#TextEditors">Text Editors</a></li>
     <li><a href="#Preferences">Preferences</a></li>
     <li><a href="#StylingThemes">Themes and Styling</a></li>
+    <li><a href="#Debug">Debug</a></li>
     <li><a href="#GeneralUpdates">General Updates</a></li>
 </ul>
 
@@ -78,6 +79,33 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   <!-- ******************* End of Themes and Styling ************************************* -->
+
+<!-- *********************** Debug ******************************** -->
+  <tr>
+    <td id="Debug" class="section" colspan="2">
+    <h2>Debug</h2>
+    </td>
+  </tr>
+  
+  <tr id="debug-system-encoding"> <!-- https://github.com/eclipse-platform/eclipse.platform.debug/issues/42 -->
+    <td class="title"><a href="#debug-system-encoding">System encoding for Console</a></td>
+    <td class="content">
+    <p>
+      New launch configuration attribute is added to allow processes start with system encoding. 
+      As a result, Java processes can start without specifying explicit "-Dfile.encoding=" option, so JVM will use
+      system defaults defined by user environment.
+      </p>
+      <img  src="images/system_encoding.png" alt=""/>
+      <p>
+      API notes: if <code>DebugPlugin.ATTR_FORCE_SYSTEM_CONSOLE_ENCODING<code/> attribute is set, 
+      <code>ILaunchManager.getEncoding(ILaunchConfiguration)<code/>
+      will return the value of <code>Platform.getSystemCharset()</code> and 
+      <code>ILaunchConfiguration.getAttribute(DebugPlugin.ATTR_CONSOLE_ENCODING, null)</code>
+      will return <code>null</code>, indicating that default system value should be used.
+      </p>
+    </td>
+  </tr>
+  <!--************************ End of Debug ******************************** -->
 
   <!-- ******************* General Updates ************************************* -->
   <tr>
