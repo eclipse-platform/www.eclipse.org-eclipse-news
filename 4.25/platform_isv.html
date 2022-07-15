@@ -57,8 +57,23 @@ ul {padding-left: 13px;}
   <tr id="CTabFolder-setSelectionBarThickness"> <!-- https://github.com/eclipse-platform/eclipse.platform.swt/pull/55 -->
     <td class="title"><a href="#CTabFolder-setSelectionBarThickness">Configure highlight bar thickness on CTabFolder</a></td>
     <td class="content">
-		The CTabFolder has a new <code>setSelectionBarThickness</code> that allows to configure how the highlight bar is rendered.
-		Setting it to <code>0</code> does hide the highlight bar.
+		The <code>CTabFolder</code> now has a new API <code>setSelectionBarThickness</code> that allows to configure how the highlight bar is rendered.
+      <p>Old look and feel:</p>
+      <img  src="images/ctabfolder-before.png" alt="" />
+      <p>Note:- above can be achieved using <code>CTabFolder#setSelectionBarThickness(0)</code>:</p>
+      <p>New look and feel:</p>
+      <img  src="images/ctabfolder-after.png" alt=""/>
+    </td>
+  </tr>
+
+  <tr id="MessageBox-setButtonLabels"> <!-- https://github.com/eclipse-platform/eclipse.platform.swt/issues/233 -->
+    <td class="title"><a href="#MessageBox-setButtonLabels">Set custom text for <code>MessageDialog</code>'s buttons</a></td>
+    <td class="content">
+		The <code>MessageBox</code> now has a new API <code>setButtonLabels(Map&#60;Integer&#44; String&#62; labels)</code> that allows to configure the text of buttons.
+      <p>Old behavior:</p>
+      <img  src="images/messageBox-before.png" alt="" />
+      <p>New behavior: We can now set custom button text using <code>MessageBox#setButtonLabels(Map.of(SWT.YES, "Close"))</code>:</p>
+      <img  src="images/messageBox-after.png" alt=""/>
     </td>
   </tr>
   <!-- *********************** End of SWT *********************** -->
