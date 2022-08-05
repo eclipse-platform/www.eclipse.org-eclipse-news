@@ -116,6 +116,37 @@ ul {padding-left: 13px;}
       </p>
     </td>
   </tr>
+
+  <tr id="debug-ansi-support"> <!-- https://github.com/eclipse-platform/eclipse.platform.debug/issues/47 -->
+    <td class="title"><a href="#debug-ansi-support">Support for ANSI escape codes in Console</a></td>
+    <td class="content">
+      <p>Console interprets ANSI escape codes to produce styled output.</p>
+
+      <p>Supports 16 colors / 256 colors / true-colors for foreground and background, color palettes,
+        and attributes like bold, italic, underline, invert, conceal, strike, crossed-out, framed:</p>
+      <p><img src="images/ansi_sample.png" width="100%" alt=""/></p>
+
+      <p>Only <code>"CSI n m"</code>
+        (<a href="https://en.wikipedia.org/wiki/ANSI_escape_code#SGR_(Select_Graphic_Rendition)_parameters">SGR,
+        Select Graphic Rendition</a>) control sequences are supported.<br/>
+        They set display attributes, but cannot be used to change the content of the output
+        (erase actions, cursor positioning, scrolling).<br/>
+        Non-SGR sequences are not interpreted, but recognized and hidden, so you will not see them.</p>
+
+      <p>This functionality is available for all the text output to the standard output or standard error.
+        It is works for Java, C/C++, Perl, Python, shell, Groovy, Maven, any Eclipse supported language.</p>
+      <p>Easy to control from the icons in the console toolbar:</p>
+      <p><img src="images/ansi_toolbar.png" alt=""/></p>
+      <ul>
+        <li>Copy the text to Clipboard, including the escapes characters</li>
+        <li>Enable / disable the interpretation of the ANSI controls (show them "as is")</li>
+        <li>Show the Preferences dialog</li>
+      </ul>
+
+      <p>Preferences:</p>
+      <p><img src="images/ansi_prefs.png" width="100%" alt=""/></p>
+    </td>
+  </tr>
   <!--************************ End of Debug ******************************** -->
 
   <!-- ******************* General Updates ************************************* -->
