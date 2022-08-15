@@ -135,6 +135,17 @@ ul {padding-left: 13px;}
     <h2>Debug</h2>
     </td>
   </tr>
+
+  <tr id="doubleclick-in-debug-popups"> <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/85 -->
+    <td class="title"><a href="#doubleclick-in-debug-popups">Double clicking in the "AllReferences and "AllInstances" popup navigates to the type</a></td>
+    <td class="content">
+      <p>
+        Previously, the "All References" and "All Instances" popup wasn't acted on clicking on any of the shown items, this is improved, so if the selected variable or field type's source code is available, the editor tries to open it, and navigate to the declaration.
+      </p>
+      <p><img src="images/all-references-popup.png" alt="Popup"/></p>
+    </td>
+  </tr>
+
   <!--************************ End of Debug ******************************** -->
 
   <!-- *********************** JDT Developers ******************************** -->
