@@ -23,10 +23,10 @@ ul {padding-left: 13px;}
 <body>
 <h2>Plug-in Development Environment</h2>
 <ul>
-	<li><a href="#dialogs-wizards-views">Dialogs, Wizards and Views</a></li>
+	<!--<li><a href="#dialogs-wizards-views">Dialogs, Wizards and Views</a></li>
 	<li><a href="#editors">Editors</a></li>
 	<li><a href="#APITools">API Tools</a></li>
-	<li><a href="#pde-compiler">PDE Compiler</a></li>
+	<li><a href="#pde-compiler">PDE Compiler</a></li> -->
 	<li><a href="#GeneralUpdates">General Updates</a></li>
 </ul>
 
@@ -37,29 +37,6 @@ ul {padding-left: 13px;}
   <col />
 </colgroup>
 <tbody>
-  <!-- ******************** Dialogs, Wizard and Views ********************** -->
-  <tr>
-    <td id="dialogs-wizards-views" class="section" colspan="2"><h2>Dialogs, Wizards and Views</h2></td>
-  </tr>
-  <!-- ******************** End ofDialogs, Wizard and Views ********************** -->
-  
-  <!-- ******************** Editors ********************** -->
-  <tr>
-    <td id="editors" class="section" colspan="2"><h2>Editors</h2></td>
-  </tr>
-  <!-- ******************** End of Editors ********************** -->
-
-  <!-- ******************** APITools ********************** -->
-  <tr>
-    <td id="APITools" class="section" colspan="2"><h2>API Tools</h2></td>
-  </tr>
-  <!-- ******************** End of APITools ********************** -->
-  
-   <!-- ******************** PDE Compiler ********************** -->
-  <tr>
-    <td id="pde-compiler" class="section" colspan="2"><h2>PDE Compiler</h2></td>
-  </tr>
-   <!-- ******************** End of PDE Compiler ********************** --> 
    <!-- ******************* General Updates ************************************* -->
   <tr>
     <td id="GeneralUpdates" class="section" colspan="2"><h2>General Updates </h2> </td>
@@ -78,11 +55,11 @@ ul {padding-left: 13px;}
 	<tr id="default-osgi-annotations">
 		<td class="title"><a href="#default-osgi-annotations">Support for the OSGi Bundle and Versioning Annotations</a></td>
 		<td class="content">
-			<p>PDE now supports the <a href="https://docs.osgi.org/specification/osgi.core/7.0.0/framework.api.html#org.osgi.annotation.bundle">OSGi Bundle</a> and 
+			PDE now supports the <a href="https://docs.osgi.org/specification/osgi.core/7.0.0/framework.api.html#org.osgi.annotation.bundle">OSGi Bundle</a> and 
 			<a href="https://docs.osgi.org/specification/osgi.core/7.0.0/framework.api.html#org.osgi.annotation.versioning">OSGi Versioning</a> annotations to be used in a Plugin Project.
-			</p>
 			<p>
-			To <b>enable</b> the annotations one only needs to add them to the target platform e.g. with the following locations:
+			To enable the annotations you only need to add them to the target platform e.g. with the following locations:
+			</p>
 			<pre>
 &lt;target name="annotations"&gt;
 	&lt;locations&gt;
@@ -110,9 +87,9 @@ ul {padding-left: 13px;}
 &lt;/target&gt;
 			</pre>
 			but of course any other source is accepted (e.g. directory locations or update-sites).
-			</p>
 			<p>
-			You can now <b>use</b> them for example the following way on a package-info.java:
+			For example, you can now <b>use</b> them in the following way on a package-info.java:
+			</p>
 			<pre>
 @org.osgi.annotation.bundle.Export
 @org.osgi.annotation.versioning.Version("1.0")
@@ -128,18 +105,21 @@ public interface ProviderInterface {
 }
 			</pre>
 			and then they can be processed by other tools (e.g. bnd or tycho).
-			</p>
+			PDE now also supports the <code>@Export</code> and <code>@Version</code> annotations, if you put them on a <code>package-info.java</code> file like this:
 			<p>
-			<b>PDE</b> has now also support for the <code>@Export</code> and <code>@Version</code> annotations, if you put them on a <code>package-info.java</code> file like this:
-			<img src="images/bunde-export-version-header.png" />
+			<img src="images/bunde-export-version-header.png" alt=""/>
+			</p>
 			the <code>MANIFEST.MF</code> is updated accordingly
-			<img src="images/manifest-example.png" />
+			<p>
+			<img src="images/manifest-example.png" alt=""/>
 			</p>
 			<p>
 			The same works for <code>@Header</code> annotation, adding this like this:
-			<img src="images/header-example.png" />
-			this results in an extra header added to the <code>MANIFEST.MF</code>
-			<img src="images/manifest-example2.png" /> 
+			<img src="images/header-example.png" alt=""/>
+			</p>
+			this results in an extra header being added to the <code>MANIFEST.MF</code>
+			<p>
+			<img src="images/manifest-example2.png" alt=""/> 
 			</p>
 		</td>
 	</tr>
