@@ -26,10 +26,10 @@ ul {padding-left: 13px;}
 	<!--<li><a href="#JavaXX">Java&trade; XX Support</a></li>-->
 	<li><a href="#JUnit">JUnit</a></li>
 	<li><a href="#JavaEditor">Java Editor</a></li>
-	<li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li>
-	<li><a href="#JavaFormatter">Java Formatter</a></li>
+	<!--<li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li>-->
+	<!--<li><a href="#JavaFormatter">Java Formatter</a></li>-->
 	<li><a href="#Debug">Debug</a></li>
-	<li><a href="#JDTDev">JDT Developers</a></li>
+	<!--<li><a href="#JDTDev">JDT Developers</a></li>-->
 </ul>
 
 <!-- ****************** START OF N&N TABLE ****************** -->
@@ -58,11 +58,12 @@ ul {padding-left: 13px;}
   </tr>
 
   <tr id="junit5-test-suite-wizard-support"> <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/168 -->
-    <td class="title"><a href="#junit5-test-suite-wizard-support">test suite wizard JUnit 5 support</a></td>
+    <td class="title"><a href="#junit5-test-suite-wizard-support">Test Suite wizard supports JUnit 5</a></td>
     <td class="content">
-      The <b>New JUnit Test Suite Wizard</b> has been enhanced to now allow the creation of a JUnit 5 test suite using the <b>@Suite</b> annotation.  To open the <b>New JUnit Test Suite Wizard</b> for the current package, go to <b>New &gt; Other &gt; Java &gt; JUnit &gt; JUnit Test Suite</b>.
+      The <b>New JUnit Test Suite Wizard</b> has been enhanced to now allow the creation of a JUnit 5 test suite using the <b>@Suite</b> annotation. 
+      To open the <b>New JUnit Test Suite Wizard</b> for the current package, go to <b>New &gt; Other &gt; Java &gt; JUnit &gt; JUnit Test Suite</b>.
 
-      <p
+      <p>
         The following shows what the wizard now looks like:
       </p>
       <p><img src="images/test-suite-wizard-junit5.png" alt="Test Suite Wizard"/></p>
@@ -85,7 +86,8 @@ ul {padding-left: 13px;}
   <tr id="while-to-enhanced-for"> <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/55 -->
     <td class="title"><a href="#while-to-enhanced-for">Convert while loops to enhanced for loops</a></td>
     <td class="content">
-      The clean-up to convert to use enhanced for loops where possible has been enhanced to convert eligible while statements that use an iterator into enhanced for loops.  The current clean-up already support converting for loops using an iterator into an enhanced for loop.
+      The clean-up to convert to enhanced 'for' loops where possible has been enhanced to convert eligible while statements that use an iterator into enhanced for loops. 
+      The current clean-up already supports converting 'for' loops using an iterator into an enhanced 'for' loop.
       <p>
         To apply the cleanup, select the Java 5 <b>Convert to enhanced 'for' loops</b> checkbox on the <b>Java Feature</b> tab in your cleanup profile.
       </p>
@@ -105,7 +107,8 @@ ul {padding-left: 13px;}
   <tr id="convert-to-switch-expression"> <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/106 -->
     <td class="title"><a href="#convert-to-switch-expression">Convert to switch expression</a></td>
     <td class="content">
-      The clean-up to convert to use a switch expression where possible has been enhanced to recognize switch statements that have every case either end in a return statement or a throw of an exception.  In such a case the switch statement is converted into a return of a switch expression.
+      The clean-up to convert to a switch expression where possible has been enhanced to recognize switch statements that have every case either end in a return statement or a throw of an exception. 
+      In such a case the switch statement is converted into a return of a switch expression.
       <p>
         To apply the cleanup, select the Java 14 <b>Convert to switch expression where possible</b> checkbox on the <b>Java Feature</b> tab in your cleanup profile.
       </p>
@@ -114,7 +117,7 @@ ul {padding-left: 13px;}
       </p>
       <p><img src="images/convert-to-switch-expression-before.png" alt="Before"/></p>
       <p>
-        Is changed to:
+        is changed to:
       </p>
       <p><img src="images/convert-to-switch-expression-after.png" alt="After"/></p>
     </td>
@@ -122,30 +125,6 @@ ul {padding-left: 13px;}
 
   <!-- ******************* End of Java Editor ************************************* -->
 
-  <!-- ******************* Java Views and Dialogs ************************************* -->
-  <tr>
-    <td id="JavaViewsAndDialogs" class="section" colspan="2">
-    <h2>Java Views and Dialogs</h2>
-    </td>
-  </tr>
-  <!-- ******************* End of Java Views and Dialogs ************************************* -->
-
-  <!-- ******************* Java Compiler ************************************* -->
-  <tr>
-    <td id="JavaCompiler" class="section" colspan="2">
-    <h2>Java Compiler</h2>
-    </td>
-  </tr>
-  <!-- ******************* End of Java Compiler ************************************* -->
-
-  <!-- ******************* Java Formatter ************************************* -->
-  <tr>
-    <td id="JavaFormatter" class="section" colspan="2">
-    <h2>Java Formatter </h2>
-    </td>
-  </tr>
-  <!-- ******************* End of Java Formatter ************************************* -->
-  
   <!-- *********************** Debug ******************************** -->
   <tr>
     <td id="Debug" class="section" colspan="2">
@@ -154,24 +133,16 @@ ul {padding-left: 13px;}
   </tr>
 
   <tr id="doubleclick-in-debug-popups"> <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/85 -->
-    <td class="title"><a href="#doubleclick-in-debug-popups">Double clicking in the "AllReferences and "AllInstances" popup navigates to the type</a></td>
+    <td class="title"><a href="#doubleclick-in-debug-popups">Double click in "All References and "All Instances" pop-up to navigate to Type</a></td>
     <td class="content">
-      <p>
-        Previously, the "All References" and "All Instances" popup wasn't acted on clicking on any of the shown items, this is improved, so if the selected variable or field type's source code is available, the editor tries to open it, and navigate to the declaration.
-      </p>
+       Previously, clicking on any of the shown items in the "All References" and "All Instances" popup wasn't acted upon. 
+       This is now improved - if the selected variable or field type's source code is available, the editor tries to open it, and navigate to the declaration.
       <p><img src="images/all-references-popup.png" alt="Popup"/></p>
     </td>
   </tr>
 
   <!--************************ End of Debug ******************************** -->
 
-  <!-- *********************** JDT Developers ******************************** -->
-  <tr>
-    <td id="JDTDev" class="section" colspan="2">
-    <h2>JDT Developers</h2>
-    </td>
-  </tr>
-  <!-- *********************** End of JDT Developers ******************************** -->
   <tr><td colspan="2"/></tr>
 </tbody>
 </table>
