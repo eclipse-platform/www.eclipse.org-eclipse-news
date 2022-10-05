@@ -44,6 +44,15 @@ ul {padding-left: 13px;}
   <tr>
     <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
   </tr>
+
+  <tr id="styled-text-multi-selection"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=562676 -->
+    <td class="title">StyledText copy to clipboard now also adds HTML format</td>
+    <td class="content">
+      StyledText widget now adds HTML format when copying to the clipboard, in addition to plain text and RTF.<br/>
+      Many web-based applications don't support RTF, so it was not possible to copy and paste styled text (and preserve fonts, colors, and so on).<br/>
+      By adding HTML to the clipboard this is now possible.
+    </td>
+  </tr>
   <!-- *********************** End of SWT *********************** -->
   <tr><td colspan="2"/></tr>
 </tbody>
