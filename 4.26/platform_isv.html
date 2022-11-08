@@ -59,8 +59,8 @@ worker threads, as there is no guarantee that the next execution is done
 in the same worker.</p>
 <p>To fix this indeterministic behavior all events for the same Job instance will
 now be sent one after the other. It is still not defined in which thread
-the notification happens, but the new implementation will not call any
-IJobChangeListener until all pending events for the jobs are processed
+job events will be sent, but the new implementation will not call any
+IJobChangeListener until all pending events for the same job instance are processed
 by all registered IJobChangeListener. The new implementation will also
 wait with any job state change until all calls to IJobChangeListener for
 that job returned.</p>
@@ -98,8 +98,8 @@ snippet can now deadlock:</p>
 methods that result in IJobChangeEvent being sent: Job.schedule(),
 cancel(), wakeUp(), sleep() and JobManager shutdown. Make sure all
 IJobChangeListener implementations do not block and return promptly.</p>
-<p>Due to the extreme risk the new Implementation tries to identify
-non-conforming IJobChangeListener and do a fall back: When a
+<p>Due to the extreme risk the new implementation tries to identify
+non-conforming IJobChangeListener and do a fall back: when an
 IJobChangeEvent is not handled within 3 seconds a timeout error is
 logged with stacktraces of the competing threads and the JobManager will
 no longer wait - until JVM is restarted. Further calls to
@@ -109,7 +109,7 @@ to the changed JobManager implementation that may be undetected by
 JobManager.</p> 
 <p>Also note that it is undefined in which thread IJobChangeListener methods are called. 
 Clients may have relied on the old implementation which called done() in the UI (SWT) thread for UIJob - but that is not the case anymore - it may happen in a background thread.</p>
-<strong>So better check your IJobChangeListener!</strong></p>
+<strong>It is recommended to check existing IJobChangeListener implementations for possible regressions if updating to the new target platform.</strong></p>
       </td>
   </tr>
   
