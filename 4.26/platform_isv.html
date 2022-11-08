@@ -107,7 +107,7 @@ IJobChangeListener may occur in non deterministic order and JobManager.join(fami
 too soon. It is however possible, that there may also be some deadlocks in clients code due
 to the changed JobManager implementation that may be undetected by
 JobManager.</p> 
-<p>Also note that it is undefined in which thread the IJobChangeListener is called. 
+<p>Also note that it is undefined in which thread IJobChangeListener methods are called. 
 Clients may have relied on the old implementation which called done() in the UI (SWT) thread for UIJob - but that is not the case anymore - it may happen in a background thread.</p>
 <strong>So better check your IJobChangeListener!</strong></p>
       </td>
