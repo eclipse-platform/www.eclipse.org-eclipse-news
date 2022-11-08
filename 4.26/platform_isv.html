@@ -104,7 +104,7 @@ IJobChangeEvent is not handled within 3 seconds a Timeout error is
 logged with stacktraces of the competing threads and the JobManager will
 no longer wait - until JVM is restarted. Further calls to
 IJobChangeListener may occur in non deterministic order and JobManager.join(family) can return
-too soon! However there may also be some deadlocks in Clients code due
+too soon. It is however possible, that there may also be some deadlocks in clients code due
 to the changed JobManager implementation that may be undetected by
 JobManager.</p> 
 <p>Also note that it is undefined in which thread the IJobChangeListener is called. 
