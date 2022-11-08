@@ -101,7 +101,7 @@ IJobChangeListener implementations do not block and return promptly.</p>
 <p>Due to the extreme risk the new Implementation tries to identify
 non-conforming IJobChangeListener and do a fall back: When a
 IJobChangeEvent is not handled within 3 seconds a Timeout error is
-logged with stacktraces of the competing Threads and the JobManager will
+logged with stacktraces of the competing threads and the JobManager will
 no longer wait - until JVM is restarted. Further calls to
 IJobChangeListener may occur in random order and join(family) can return
 too soon! However there may also be some deadlocks in Clients code due
