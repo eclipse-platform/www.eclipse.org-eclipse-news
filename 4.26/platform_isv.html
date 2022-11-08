@@ -58,7 +58,7 @@ Even multiple notifications could have happened in parallel in various
 worker threads, as there is no guarantee that the next execution is done
 in the same worker.</p>
 <p>To fix this indeterministic behavior all notifications for a Job will
-now be done one after the other. It is still not defined in which Thread
+now be sent one after the other. It is still not defined in which thread
 the notification happens, but the new implementation will not call any
 IJobChangeListener until all pending events for the jobs are processed
 by all registered IJobChangeListener. The new implementation will also
