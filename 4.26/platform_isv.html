@@ -100,7 +100,7 @@ cancel(), wakeUp(), sleep() and JobManager shutdown. Make sure all
 IJobChangeListener implementations do not block and return promptly.</p>
 <p>Due to the extreme risk the new Implementation tries to identify
 non-conforming IJobChangeListener and do a fall back: When a
-IJobChangeEvent is not handled within 3 seconds a Timeout error is
+IJobChangeEvent is not handled within 3 seconds a timeout error is
 logged with stacktraces of the competing threads and the JobManager will
 no longer wait - until JVM is restarted. Further calls to
 IJobChangeListener may occur in non deterministic order and JobManager.join(family) can return
