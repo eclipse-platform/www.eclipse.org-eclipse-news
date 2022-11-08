@@ -38,6 +38,81 @@ ul {padding-left: 13px;}
   <tr>
     <td id="Platform" class="section" colspan="2"><h2>Platform Changes</h2></td>
   </tr>
+  <tr id="JobManager_Implementation"> 
+  <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=574883 -->
+  <!-- https://github.com/eclipse-platform/eclipse.platform/commit/dc7bfe70caa56ad3a63b3181dad3364ec7498cf7 -->
+    <td class="title">JobManager implementation changes</td>
+    <td class="content">
+  <h2 id="possible-deadlock-in-ijobchangelistener">Possible deadlock in IJobChangeListener</h2>
+<p>Attention: The JobManager implementation was changed! The old
+JobMangager implementation notified IJobChangeListener about various
+IJobChangeEvent without strict order in various Threads. For example
+scheduled() was called in a Thread that did call schedule() on a Job
+while done() was normally called within a Worker Thread. In case of a
+repeated schedule() both Notifications could run in parallel. That was a
+race condition. The Listener could not deterministically know if the Job
+was still scheduled or already done. As a consequence a join() could
+have returned too early or the Progress View did not show Jobs that did
+still run. And probably many other things went wrong totally unnoticed.
+Even multiple notifications could have happened in parallel in various
+Worker Threads, as there is no guarantee that the next execution is done
+in the same Worker.</p>
+<p>To fix this indeterministic behavior all notifications for a Job will
+now be done one after the other. It is still not defined in which Thread
+the notification happens, but the new implementation will not call any
+IJobChangeListener until all pending events for the jobs are processed
+by all registered IJobChangeListener. The new implementation will also
+wait with any job state change until all calls to IJobChangeListener for
+that job returned.</p>
+<p>The IJobChangeListener javadoc clearly specifies &quot;whether the state
+change occurs before, during, or after listeners are notified is
+unspecified.&quot; - and the implementation changed within that broad
+specification. Unfortunately some IJobChangeListener around rely on the
+old implementation. They may now deadlock. For example the following
+snippet can now deadlock:</p>
+<pre><code> job.schedule(); <span class="hljs-comment">// may result in done();</span>
+ <span class="hljs-keyword">synchronized</span> (lock){
+  <span class="hljs-keyword">boolean</span> schedule = ...; <span class="hljs-comment">// lock needed for reasons</span>
+  <span class="hljs-keyword">if</span> (schedule ) job.schedule(); <span class="hljs-comment">// schedule() will notify scheduled()</span>
+  <span class="hljs-comment">// - which may not return before previous Notifications return!</span>
+ }
+
+ <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">done</span><span class="hljs-params">(IJobChangeEvent event)</span> </span>{
+  <span class="hljs-comment">// can not enter while other Thread holds lock:</span>
+  <span class="hljs-keyword">synchronized</span> (lock) {<span class="hljs-comment">// possible deadlock</span>
+  }
+ }
+</code></pre><p>Instead use:</p>
+<pre><code> job.schedule();
+ <span class="hljs-keyword">boolean</span> schedule;
+ <span class="hljs-keyword">synchronized</span> (lock) {
+  schedule=...; <span class="hljs-comment">// lock needed for reasons</span>
+ }
+ <span class="hljs-keyword">if</span> (schedule) job.schedule();
+
+ <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">done</span><span class="hljs-params">(IJobChangeEvent event)</span> </span>{
+  <span class="hljs-keyword">synchronized</span> (lock) {<span class="hljs-comment">// OK</span>
+  }
+ }
+</code></pre><p>The same problem may occur on all IJobChangeListener methods and all
+methods that result in IJobChangeEvent being sent: Job.schedule(),
+cancel(), wakeUp(), sleep() and JobManager shutdown. Make sure all
+IJobChangeListener implementations do not block and return promptly.</p>
+<p>Due to the extreme risk the new Implementation tries to identify
+non-conforming IJobChangeListener and do a fall back: When a
+IJobChangeEvent is not handled within 3 seconds a Timeout error is
+logged with stacktraces of the competing Threads and the JobManager will
+no longer wait - until JVM is restarted. Further calls to
+IJobChangeListener may occur in random order and join(family) can return
+too soon! However there may also be some deadlocks in Clients code due
+to the changed JobManager implementation that may be undetected by
+JobManager.</p> 
+<p>Also note that it is undefined in which thread the IJobChangeListener is called. 
+Clients may have relied on the old implementation which called done() in the UI (SWT) thread for UIJob - but that is not the case anymore - it may happen in a background thread.</p>
+<strong>So better check your IJobChangeListener!</strong></p>
+      </td>
+  </tr>
+  
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
