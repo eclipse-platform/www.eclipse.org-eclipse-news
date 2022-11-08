@@ -47,7 +47,7 @@ ul {padding-left: 13px;}
 <p>Attention: The JobManager implementation was changed! The old
 JobMangager implementation notified IJobChangeListener about various
 IJobChangeEvent without strict order in various threads. For example
-scheduled() was called in a Thread that did call schedule() on a Job
+scheduled() was called in a thread that did call schedule() on a job
 while done() was normally called within a Worker Thread. In case of a
 repeated schedule() both Notifications could run in parallel. That was a
 race condition. The Listener could not deterministically know if the Job
