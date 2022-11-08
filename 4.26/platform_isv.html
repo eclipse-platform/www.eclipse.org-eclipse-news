@@ -55,7 +55,7 @@ was still scheduled or already done. As a consequence a join() could
 have returned too early or the Progress View did not show jobs that did
 still run. And probably many other things went wrong totally unnoticed.
 Even multiple notifications could have happened in parallel in various
-Worker Threads, as there is no guarantee that the next execution is done
+worker threads, as there is no guarantee that the next execution is done
 in the same Worker.</p>
 <p>To fix this indeterministic behavior all notifications for a Job will
 now be done one after the other. It is still not defined in which Thread
