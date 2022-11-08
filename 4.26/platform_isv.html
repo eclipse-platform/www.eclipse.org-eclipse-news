@@ -50,7 +50,7 @@ IJobChangeEvent without strict order in various threads. For example
 scheduled() was called in a thread that did call schedule() on a job
 while done() was normally called within a worker thread. In case of a
 repeated schedule() both notifications could run in parallel. That was a
-race condition. The Listener could not deterministically know if the Job
+race condition. The listener could not deterministically know if the job
 was still scheduled or already done. As a consequence a join() could
 have returned too early or the Progress View did not show Jobs that did
 still run. And probably many other things went wrong totally unnoticed.
