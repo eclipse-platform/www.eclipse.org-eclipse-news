@@ -49,7 +49,7 @@ JobMangager implementation notified IJobChangeListener about various
 IJobChangeEvent without strict order in various threads. For example
 scheduled() was called in a thread that did call schedule() on a job
 while done() was normally called within a worker thread. In case of a
-repeated schedule() both Notifications could run in parallel. That was a
+repeated schedule() both notifications could run in parallel. That was a
 race condition. The Listener could not deterministically know if the Job
 was still scheduled or already done. As a consequence a join() could
 have returned too early or the Progress View did not show Jobs that did
