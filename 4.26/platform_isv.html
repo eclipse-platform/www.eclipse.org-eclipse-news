@@ -46,7 +46,7 @@ ul {padding-left: 13px;}
   <h2 id="possible-deadlock-in-ijobchangelistener">Possible deadlock in IJobChangeListener</h2>
 <p>Attention: The JobManager implementation was changed! The old
 JobMangager implementation notified IJobChangeListener about various
-IJobChangeEvent without strict order in various Threads. For example
+IJobChangeEvent without strict order in various threads. For example
 scheduled() was called in a Thread that did call schedule() on a Job
 while done() was normally called within a Worker Thread. In case of a
 repeated schedule() both Notifications could run in parallel. That was a
