@@ -105,6 +105,19 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="smarter-extract-local"> <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/66 -->
+    <td class="title"><a href="#smarter-extract-local">Extract local variable improved</a></td>
+    <td class="content">
+      The extract local variable refactoring available from <b>Refactor -> Extract Local Variable</b> has been improved to recognize
+      situations where adding the local variable may cause a NullPointerException as it precedes code used to check for null.  In these cases, 
+      the positioning of the local variable is altered so the null check occurs before the variable declaration.
+      <p>For example, in the following class, a call to the String length() method is made after verifying the String variable is not null.</p>
+      <p><img src="images/extract-local-var-before.png" alt="Before"/></p>
+      <p>If we select the <b>s.length()</b> call and choose to extract this to a local variable to replace all occurrences, the result is:</p>
+      <p><img src="images/extract-local-var-after.png" alt="Before"/></p>
+      <p>Note how the declaration is after the if statement to ensure that the check for null occurs first</p>
+    </td>
+  </tr>
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
