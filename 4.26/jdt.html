@@ -85,6 +85,26 @@ ul {padding-left: 13px;}
     <h2>Java Editor </h2>
     </td>
   </tr>
+
+  <tr id="new-class-assists"> <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/295 -->
+    <td class="title"><a href="#new-class-assists">New assists for class</a></td>
+    <td class="content">
+      Some existing actions found in the <b>Source</b> menu have been made available as quick assists for a class.  These actions are:
+      <ol>
+      <li>Generate getters and setters</li>
+      <li>Generate hashCode()/equals() methods</li>
+      <li>Generate toString() method</li>
+      </ol>
+      <p>All three actions require that there at least be one field in the class and that the action is required: namely, that getters/setters, 
+       hashCode()/equals(), or toString() methods do not already exist.  Each action will bring up a dialog for the user to make additional
+       specifications (e.g. which fields to use).
+      </p>
+      <p>To use the quick assist, select a class and specify <b>CTRL+1</b>.
+      </p>
+      <p><img src="images/new-class-assists.png" alt="New Assists"/></p>
+    </td>
+  </tr>
+
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
