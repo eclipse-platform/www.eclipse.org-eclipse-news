@@ -44,7 +44,7 @@ ul {padding-left: 13px;}
     <td class="title">JobManager implementation changes</td>
     <td class="content">
   <h2 id="possible-deadlock-in-ijobchangelistener">Possible deadlock in IJobChangeListener</h2>
-<p>Attention: The JobManager implementation was changed! The old
+<p><b>Attention:</b> The JobManager implementation was changed! The old
 JobMangager implementation notified IJobChangeListener about various
 IJobChangeEvent without strict order in various threads. For example
 scheduled() was called in a thread that did call schedule() on a job
@@ -107,9 +107,11 @@ IJobChangeListener may occur in non deterministic order and JobManager.join(fami
 too soon. It is however possible, that there may also be some deadlocks in clients code due
 to the changed JobManager implementation that may be undetected by
 JobManager.</p> 
-<p>Also note that it is undefined in which thread IJobChangeListener methods are called. 
-Clients may have relied on the old implementation which called done() in the UI (SWT) thread for UIJob - but that is not the case anymore - it may happen in a background thread.</p>
-<strong>It is recommended to check existing IJobChangeListener implementations for possible regressions if updating to the new target platform.</strong></p>
+<p>
+Also note that it is undefined in which thread IJobChangeListener methods are called. 
+Clients may have relied on the old implementation which called done() in the UI (SWT) thread for UIJob - but that is not the case anymore - it may happen in a background thread.
+</p>
+<strong>It is recommended to check existing IJobChangeListener implementations for possible regressions if updating to the new target platform.</strong>
       </td>
   </tr>
   
@@ -123,7 +125,7 @@ Clients may have relied on the old implementation which called done() in the UI 
   <tr id="styled-text-multi-selection"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=562676 -->
     <td class="title">StyledText copy to clipboard now also adds HTML format</td>
     <td class="content">
-      StyledText widget now adds HTML format when copying to the clipboard, in addition to plain text and RTF.<br/>
+      <code>StyledText</code> widget now adds HTML format when copying to the clipboard, in addition to plain text and RTF.<br/>
       Many web-based applications don't support RTF, so it was not possible to copy and paste styled text (and preserve fonts, colors, and so on).<br/>
       By adding HTML to the clipboard this is now possible.
     </td>
@@ -136,7 +138,8 @@ Clients may have relied on the old implementation which called done() in the UI 
 
 <script type="text/javascript" src="scripts.js"></script>
   <p style="text-align:center">
-    <a href="jdt.php">Previous</a> <a style="margin:1em" href=".">Up</a> <a href="pde.php">Next</a>
+    <a href="jdt.php">Previous</a> <a style="margin:1em" href=".">Up</a> 
+    <!--<a href="pde.php">Next</a>-->
   </p>
 </body>
 </html>

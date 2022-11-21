@@ -24,12 +24,7 @@ ul {padding-left: 13px;}
 <h2>Java development tools</h2>
 <ul>
 	<li><a href="#Java19">Java 19 Support</a></li>
-	<li><a href="#JUnit">JUnit</a></li>
 	<li><a href="#JavaEditor">Java Editor</a></li>
-	<li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li>
-	<li><a href="#JavaFormatter">Java Formatter</a></li>
-	<li><a href="#Debug">Debug</a></li>
-	<li><a href="#JDTDev">JDT Developers</a></li>
 </ul>
 
 <!-- ****************** START OF N&N TABLE ****************** -->
@@ -71,14 +66,6 @@ ul {padding-left: 13px;}
   </tr>
   <!-- ******************* End of Java 19 Support ************************************* -->
 
-  <!-- ******************* JUnit ************************************* -->
-  <tr>
-    <td id="JUnit" class="section" colspan="2">
-    <h2>JUnit</h2>
-    </td>
-  </tr>
-  <!-- ******************* End of JUnit ************************************* -->
-
   <!-- ******************* Java Editor ************************************* -->
   <tr>
     <td id="JavaEditor" class="section" colspan="2">
@@ -89,14 +76,14 @@ ul {padding-left: 13px;}
   <tr id="new-class-assists"> <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/295 -->
     <td class="title"><a href="#new-class-assists">New assists for class</a></td>
     <td class="content">
-      Some existing actions found in the <b>Source</b> menu have been made available as quick assists for a class.  These actions are:
+      Some existing actions found in the <b>Source</b> menu have been made available as quick assists for a class. These actions are:
       <ol>
       <li>Generate getters and setters</li>
       <li>Generate hashCode()/equals() methods</li>
       <li>Generate toString() method</li>
       </ol>
-      <p>All three actions require that there at least be one field in the class and that the action is required: namely, that getters/setters, 
-       hashCode()/equals(), or toString() methods do not already exist.  Each action will bring up a dialog for the user to make additional
+      <p>All three actions require that there at least be one field in the class and that the action is required: namely, that <code>getters/setters, 
+       hashCode()/equals(), or toString()</code> methods do not already exist. Each action will bring up a dialog for the user to make additional
        specifications (e.g. which fields to use).
       </p>
       <p>To use the quick assist, select a class and specify <b>CTRL+1</b>.
@@ -106,9 +93,9 @@ ul {padding-left: 13px;}
   </tr>
 
   <tr id="smarter-extract-local"> <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/66 -->
-    <td class="title"><a href="#smarter-extract-local">Extract local variable improved</a></td>
+    <td class="title"><a href="#smarter-extract-local">Improved 'Extract local variable'</a></td>
     <td class="content">
-      The extract local variable refactoring available from <b>Refactor -> Extract Local Variable</b> has been improved to recognize
+      The extract local variable refactoring available from <b>Refactor &gt; Extract Local Variable</b> has been improved to recognize
       situations where adding the local variable may cause a NullPointerException as it precedes code used to check for null.  In these cases, 
       the positioning of the local variable is altered so the null check occurs before the variable declaration.
       <p>For example, in the following class, a call to the String length() method is made after verifying the String variable is not null.</p>
@@ -120,45 +107,6 @@ ul {padding-left: 13px;}
   </tr>
   <!-- ******************* End of Java Editor ************************************* -->
 
-  <!-- ******************* Java Views and Dialogs ************************************* -->
-  <tr>
-    <td id="JavaViewsAndDialogs" class="section" colspan="2">
-    <h2>Java Views and Dialogs</h2>
-    </td>
-  </tr>
-  <!-- ******************* End of Java Views and Dialogs ************************************* -->
-
-  <!-- ******************* Java Compiler ************************************* -->
-  <tr>
-    <td id="JavaCompiler" class="section" colspan="2">
-    <h2>Java Compiler</h2>
-    </td>
-  </tr>
-  <!-- ******************* End of Java Compiler ************************************* -->
-
-  <!-- ******************* Java Formatter ************************************* -->
-  <tr>
-    <td id="JavaFormatter" class="section" colspan="2">
-    <h2>Java Formatter </h2>
-    </td>
-  </tr>
-  <!-- ******************* End of Java Formatter ************************************* -->
-  
-  <!-- *********************** Debug ******************************** -->
-  <tr>
-    <td id="Debug" class="section" colspan="2">
-    <h2>Debug</h2>
-    </td>
-  </tr>
-  <!--************************ End of Debug ******************************** -->
-
-  <!-- *********************** JDT Developers ******************************** -->
-  <tr>
-    <td id="JDTDev" class="section" colspan="2">
-    <h2>JDT Developers</h2>
-    </td>
-  </tr>
-  <!-- *********************** End of JDT Developers ******************************** -->
   <tr><td colspan="2"/></tr>
 </tbody>
 </table>
@@ -166,7 +114,8 @@ ul {padding-left: 13px;}
 
 <script type="text/javascript" src="scripts.js"></script>
   <p style="text-align:center">
-    <a href="platform.php">Previous</a> <a style="margin:1em" href=".">Up</a> <a href="platform_isv.php">Next</a>
+    <!--<a href="platform.php">Previous</a>-->
+    <a style="margin:1em" href=".">Up</a> <a href="platform_isv.php">Next</a>
   </p>
 </body>
 </html>
