@@ -130,6 +130,27 @@ Clients may have relied on the old implementation which called done() in the UI 
       By adding HTML to the clipboard this is now possible.
     </td>
   </tr>
+  <tr id="display-executor"> <!-- https://github.com/eclipse-platform/eclipse.platform.swt/issues/64 -->
+    <td class="title">Integration of the Display with the Executor Framework</td>
+    <td class="content">
+      <p>
+	      The Display class of SWT now implements <code>java.util.concurrent.Executor</code> of the <a href="https://docs.oracle.com/javase/tutorial/essential/concurrency/exinter.html">Java Executor Framework</a>.
+	      Such an <code>Executor</code> executes the given runnable in the user-interface thread of the Display:
+      </p>
+      <ul>
+ 		<li>If the calling thread is the user-interface thread of this display it is
+ 			executed immediately and the method returns after the command has run, as with
+ 			the method {@link Display#syncExec(Runnable)}.
+ 		</li>
+ 		<li>In all other cases the <code>run()</code> method of the runnable is asynchronously executed as with the method
+ 			{@link Display#asyncExec(Runnable)} at the next reasonable opportunity. The caller of this method continues to
+ 			run in parallel, and is not notified when the runnable has completed.
+ 		</li>
+ 	   </ul>
+ 	   <p>This can be used in cases where one want to execute some piece of code that should be guaranteed to run in the user-interface thread regardless of the current thread,
+ 	   or for example togehter with the <code>java.util.concurrent.CompletableFuture</code> to write non-blocking code more easier.</p>
+    </td>
+  </tr>
   <!-- *********************** End of SWT *********************** -->
   <tr><td colspan="2"/></tr>
 </tbody>
