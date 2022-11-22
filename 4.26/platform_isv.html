@@ -114,6 +114,22 @@ Clients may have relied on the old implementation which called done() in the UI 
 <strong>It is recommended to check existing IJobChangeListener implementations for possible regressions if updating to the new target platform.</strong>
       </td>
   </tr>
+
+  <tr id="uiJob-factories"> 
+  <!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/387 -->
+  <!-- https://github.com/eclipse-platform/eclipse.platform.ui/commit/c76ca290f10a714c782bfbf7b89d9a3d77a584a8 -->
+    <td class="title">Static factories added for UIJob</td>
+    <td class="content">
+		To the classes <code>org.eclipse.ui.progress.UIJob</code> and <code>org.eclipse.e4.ui.progress.UIJob</code> static factory methods have been added, that create and return <code>UIJob</code>-instance.
+		Their signature is similar to those in the <code>Job</code> class:
+		<ul>
+			<li><code>public static UIJob create(String name, IJobFunction function)</code></li>
+			<li><code>public static UIJob create(String name, ICoreRunnable runnable)</code></li>
+		</ul>
+		Please beware that, if you used <code>UIJob.create()</code> before, which was discouraged, because you used to call a static method from the super-class, the result is now different.
+		
+    </td>
+  </tr>
   
   <!-- ******************** End of Platform ********************** -->
 
