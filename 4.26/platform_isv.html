@@ -25,6 +25,7 @@ ul {padding-left: 13px;}
   <ul>
     <li><a href="#Platform">Platform Changes</a></li>
     <li><a href="#SWT">SWT Changes</a></li>
+    <li><a href="#GeneralUpdates">General Updates</a></li>
   </ul>
 
 <!-- ****************** START OF N&N TABLE****************** -->
@@ -149,22 +150,20 @@ Clients may have relied on the old implementation which called done() in the UI 
   <tr id="display-executor"> <!-- https://github.com/eclipse-platform/eclipse.platform.swt/issues/64 -->
     <td class="title">Integration of the Display with the Executor Framework</td>
     <td class="content">
-      <p>
-	      The Display class of SWT now implements <code>java.util.concurrent.Executor</code> of the <a href="https://docs.oracle.com/javase/tutorial/essential/concurrency/exinter.html">Java Executor Framework</a>.
-	      Such an <code>Executor</code> executes the given runnable in the user-interface thread of the Display:
-      </p>
+     The <code>Display</code> class of SWT now implements <code>java.util.concurrent.Executor</code> of the <a href="https://docs.oracle.com/javase/tutorial/essential/concurrency/exinter.html">Java Executor Framework</a>.
+     Such an <code>Executor</code> executes the given runnable in the user-interface thread of the Display:
       <ul>
  		<li>If the calling thread is the user-interface thread of this display it is
  			executed immediately and the method returns after the command has run, as with
- 			the method {@link Display#syncExec(Runnable)}.
+ 			the method <code>Display#syncExec(Runnable)</code>.
  		</li>
  		<li>In all other cases the <code>run()</code> method of the runnable is asynchronously executed as with the method
- 			{@link Display#asyncExec(Runnable)} at the next reasonable opportunity. The caller of this method continues to
+ 			<code>Display#asyncExec(Runnable)</code> at the next reasonable opportunity. The caller of this method continues to
  			run in parallel, and is not notified when the runnable has completed.
  		</li>
  	   </ul>
  	   <p>This can be used in cases where one want to execute some piece of code that should be guaranteed to run in the user-interface thread regardless of the current thread,
- 	   or for example togehter with the <code>java.util.concurrent.CompletableFuture</code> to write non-blocking code more easier.</p>
+ 	   or for example together with the <code>java.util.concurrent.CompletableFuture</code> to write non-blocking code more easier.</p>
     </td>
   </tr>
   <!-- *********************** End of SWT *********************** -->
@@ -179,10 +178,8 @@ Clients may have relied on the old implementation which called done() in the UI 
     <!-- https://github.com/eclipse-platform/eclipse.platform.releng.aggregator/issues/588 -->
     <td class="title">Migration to SLF4J 1.7.36 from Maven-Central</td>
     <td class="content">
-      <p>
       The Eclipse Platform migrated to the SLF4J artifacts from Maven-Central in version 1.7.36.
       With this migration the <code>Bundle-SymbolicName</code> changed from <code>org.slf4j.api</code> to <code>slf4j.api</code>.
-      </p>
       <p>
       Furthermore the way how a SLF4J-binding Plugin is wired to the slf4j-api Plugin has changed.
       Previously with the artifacts provided by Eclipse Orbit, each binding had a separate fragment whose host was the <code>org.slf4j.api</code> Plugin and that required the binding Plugin.
