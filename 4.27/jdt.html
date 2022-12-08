@@ -52,6 +52,80 @@ ul {padding-left: 13px;}
 
   <!-- ******************* JUnit ************************************* -->
   <tr>
+    <td id="ECJ" class="section" colspan="2">
+    <h2>Eclipse compiler for Java (ECJ)</h2>
+    </td>
+  </tr>
+  <tr id="ecj-separated-from-core"> <!-- https://github.com/eclipse-jdt/eclipse.jdt.core/pull/182 -->
+    <td class="title"><a href="#ecj-separated-from-core">ECJ separated from JDT Core</a></td>
+    <td class="content">
+      <p>
+      Historically the code for ECJ was always in the same <code>org.eclipse.jdt.core</code>
+       project that also contained the code for the Java support in the IDE, just in a different source folder.
+      The well known standalone ECJ compiler library that could be used outside of 
+      Eclipse (for compilation with external tooling) was generated out of this 
+      core bundle at build time and was not included in the default SDK (because 
+      it contained subset of packages and classes provided by <code>org.eclipse.jdt.core</code>).
+      </p>
+      <p>
+      This lead to few issues, with both Eclipse / standalone use of the ECJ compiler.
+      The (non-JDT) code inside Eclipse that required "default" <code>javax.tools.JavaCompiler</code>
+      API implementation and had no need for full JDT / workspace support 
+      was not able to use <code>org.eclipse.jdt.core</code> without pulling in
+      <code>org.eclipse.core.resources</code> bundle and so the dependency to the workspace.
+      Another interesting side effect of hosting ECJ code next to IDE code inside
+      same <code>org.eclipse.jdt.core</code> bundle was that developers couldn't see 
+      if the ECJ code per mistake got some dependency to the IDE. 
+      </p>
+      <p>
+      To resolve these (and other) problems, the ECJ code is moved from <code>org.eclipse.jdt.core</code>
+      to dedicated <code>org.eclipse.jdt.core.compiler.batch</code> project and will be
+      deployed as a separated bundle.
+      The <code>org.eclipse.jdt.core.compiler.batch</code> is now included in SDK
+      as a regular Eclipse bundle and can be compiled / deployed / used separately
+      from <code>org.eclipse.jdt.core</code> bundle.
+      All of ECJ packages are re-exported by <code>org.eclipse.jdt.core</code>, therefore
+      from OSGI point of view, all 3rd party code that used some compiler related API 
+      from <code>org.eclipse.jdt.core</code> doesn't require any change.
+      The <code>org.eclipse.jdt.core.compiler.batch</code> bundle itself doesn't have any dependencies
+      and so can be used in Eclipse products that do not use workspace concepts.
+      </p>
+      <p>
+      However, no change is without side effects.
+      </p>
+      <p>
+      <b>Known problems with the split of the ECJ from core bundle</b>
+      </p>
+      <p>
+      <ul>
+      <li>
+      As part of the <code>org.eclipse.jdt.core.compiler.batch</code> code separation from 
+      <code>org.eclipse.jdt.core</code>, the two fragments of <code>org.eclipse.jdt.core</code> - 
+      <code>org.eclipse.jdt.compiler.apt</code> and <code>org.eclipse.jdt.compiler.tool</code>
+      were merged into <code>org.eclipse.jdt.core.compiler.batch</code>.
+      So if some target definition, launch configuration or build file referenced the two fragments, these
+      references can and should be removed now.
+      </li>
+      <li>
+      Another issue might affect standalone (non OSGI based) applications that
+      were using <code>org.eclipse.jdt.core</code> as a "simple" Java library 
+      (which jdt.core never was).
+      So for example code that had <code>org.eclipse.jdt.core_XYZ.jar</code> on 
+      classpath and tried to call this outside Eclipse:
+      <pre>ASTParser parser = ASTParser.newParser(AST.getJLSLatest());</pre>
+      would fail now with <pre>NoClassDefFoundError: org.eclipse.jdt.internal.compiler.env.ICompilationUnit</pre> 
+      because <code>org.eclipse.jdt.core.dom.ASTParser</code> uses internally ECJ 
+      APIs and they are now ... surprise ... moved to <code>org.eclipse.jdt.core.compiler.batch</code>
+      jar. To fix this error, <code>org.eclipse.jdt.core.compiler.batch</code> library
+      should be added to the application classpath.
+      </li>
+      </ul>
+      </p>
+    </td>
+  </tr>
+  
+  <!-- ******************* JUnit ************************************* -->
+  <tr>
     <td id="JUnit" class="section" colspan="2">
     <h2>JUnit</h2>
     </td>
