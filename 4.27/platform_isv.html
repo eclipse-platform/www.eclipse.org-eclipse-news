@@ -38,6 +38,47 @@ ul {padding-left: 13px;}
   <tr>
     <td id="Platform" class="section" colspan="2"><h2>Platform Changes</h2></td>
   </tr>
+      <tr id="Migrate_Perspectives">
+        <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=570471 -->
+        <!-- https://github.com/eclipse-platform/eclipse.platform.ui.tools/commit/fb53ad7d761f82c0488624792f98a61d1a26a60a -->
+        <td class="title">Persistence and migration of perspectives</td>
+        <td class="content">
+          <h2 id="migration">Migrate and apply existing 3.x perspectives on e4 applications</h2>
+          <p>To support migrating existing user-specific perspectives from the 3.x applications a 
+            new API was added to the platform.ui.tools:
+            <code>org.eclipse.e4.tools.compatibiliy.migration.PerspectiveMigrator</code>.
+          </p>
+          <p>To directly apply an existing perspective to the running e4 application:</p>
+          <pre><code> /* loadMemento is something that you have to implement yourself.
+ You can find examples on how to do so online or 
+ in the org.eclipse.e4.tools.compatibility.migration.tests.E4MigrationToolTest . */
+ IMemento storedPerspective = loadMemento();
+ PerspectiveMigration.apply3xWorkbenchState(storedPerspective);
+          </code></pre>
+          <p>Alternatively you can convert the stored perspective to an <code>MApplication</code>:</p>
+          <pre><code> /* loadMemento is something that you have to implement yourself.
+ You can find examples on how to do so online or 
+ in the org.eclipse.e4.tools.compatibility.migration.tests.E4MigrationToolTest . */
+ IMemento storedPerspective = loadMemento();
+ MApplication mApplication = PerspectiveMigration.convertToMApplication(storedPerspective);
+          </code></pre>
+          <h2 id="persistence">Store and load perspectives of e4 applications</h2>
+          <p>e4 does not allow to load and store perspectives in the same way it was possible in 3.x .
+            In order to do so a new API was added to the platform.ui.tools:
+            <code>org.eclipse.e4.tools.persistence.PerspectivePersister</code>.
+          </p>
+          <p>To store a perspective of the running e4 application using its id:</p>
+          <pre><code> String serializedPerspective = PerspectivePersister.serializePerspectiveAndPartStates("myPerspectiveId"); 
+ // store the way you like
+ storePerspective(serializedPerspective);
+          </code></pre>
+          <p>To load a stored perspective:</p>
+          <pre><code> // load corresponding to the way you store
+ String serializedPerspective = loadStoredPerspective();
+ PerspectivePersister.restoreWorkbenchState(serializedPerspective);
+          </code></pre>
+        </td>
+      </tr>
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
