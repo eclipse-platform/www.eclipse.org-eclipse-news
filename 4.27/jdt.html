@@ -178,6 +178,44 @@ ul {padding-left: 13px;}
     <h2>JDT Developers</h2>
     </td>
   </tr>
+  <tr id="new-old-jdt-views"> <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/387 
+  								   https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/364 -->
+    <td class="title"><a href="#new-old-jdt-views">Four new views added to SDK</a></td>
+    <td class="content">
+      <p>
+      Following four new Java / JDT related views are shipped now by default with the Eclipse SDK:
+      <ol>
+      <li><code>Abstract Syntax Tree</code></li>
+      <li><code>Bytecode</code></li>
+      <li><code>Bytecode Reference</code></li>
+      <li><code>Java Element</code></li>
+      </ol>
+      </p>
+	  <p><img src="images/new-jdt-views-list.png" alt="List of views"/></p>
+      <p>
+      All four views are actually not new, however they were previously only available for installation 
+      via Eclipse Marketplace and not included in the SDK itself.
+      Now they are shipped with SDK package and also will be available for installation in other packages
+      via <a href="https://download.eclipse.org/eclipse/updates/latest/">https://download.eclipse.org/eclipse/updates/latest/</a> 
+      update site.
+      </p> 
+      <p>
+      <ul>
+      <li>
+      <code>Bytecode</code> and <code>Bytecode Reference</code> views are of general use for advanced Java developers
+      interested how the Java code compiled to the class files, independently
+      if the class file was compiled by Eclipse or by other Java compiler.
+      </li>
+      <li>
+      <code>Abstract Syntax Tree</code> and <code>Java Element</code> views are
+      showing JDT internal representation of the Java code and are useful mostly for JDT developers only.
+      </li>
+      </ul>
+      </p> 
+	  <p><img src="images/new-jdt-views-content.png" alt="Views with some content"/></p>
+      </p>
+    </td>
+  </tr>
   <!-- *********************** End of JDT Developers ******************************** -->
   <tr><td colspan="2"/></tr>
 </tbody>
