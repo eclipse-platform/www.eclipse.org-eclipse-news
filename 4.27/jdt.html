@@ -144,6 +144,16 @@ ul {padding-left: 13px;}
       <p>To set the new option, go to: <b>Preferences &gt; Java &gt; Editor &gt; Code Minings</b>
       </p>
       <p><img src="images/new-code-mining-pref.png" alt="New Code Mining Preference"/></p>
+
+  <tr id="javadoc-inline-return"> <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/340 -->
+    <td class="title"><a href="#javadoc-inline-return">Javadoc inline @return</a></td>
+    <td class="content">
+      As of Java 16, the Javadoc <b>@return</b> tag can be specified as an inline tag (with curly braces) in a method's Javadoc comment.  When used it generates both the method description and the <b>Returns</b> section of the Javadoc for the method.  It is specified as follows: {<b>@return </b><i>&lt;return description&gt;}</i></b>.  The generated Javadoc will show: <b>Returns</b> <i>&lt;return description&gt;</i><b>.</b> for the method's main description and will use the same description to generate the <b>Returns</b> section.  In the case where both the inline <b>@return</b> tag and block <b>@return</b> tag are specified, the new inline tag will override.
+
+     <p>Support has been added in Eclipse to recognize the inline version of the tag and show the proper Javadoc hover.</p>
+
+     <p>For details on the inline <b>@return</b> tag, see: <a href="https://docs.oracle.com/en/java/javase/19/docs/specs/javadoc/doc-comment-spec.html#return">Javadoc Comment Spec</a></p>
+      <p><img src="images/javadoc-inline-return.png" alt="Using new inline return tag"/></p>
     </td>
   </tr>
   <!-- ******************* End of Java Editor ************************************* -->
