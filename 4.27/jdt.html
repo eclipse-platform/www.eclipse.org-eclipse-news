@@ -130,6 +130,16 @@ ul {padding-left: 13px;}
     <h2>JUnit</h2>
     </td>
   </tr>
+  <tr id="junit-subpackage-support"> <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/424 -->
+    <td class="title"><a href="#junit-subpackage-support">Launch JUnit tests in subpackages</a></td>
+    <td class="content">
+      Previously, if one selected a package in the explorer that contained JUnit tests and subpackages that also contained JUnit tests, only the tests directly owned by the package would be run.  The functionality has been enhanced so that JUnit tests in subpackages will be found by the JUnitLauncher and launched as well.
+      <p>For example, in the following project, selecting the package <b>test</b> and right-clicking to <b>Run as &gt; JUnit Plug-in Test</b><p>
+      <p><img src="images/junit-subpackage-before.png" alt="Before"/></p>
+      <p>will result in:</p>
+      <p><img src="images/junit-subpackage-results.png" alt="JUnit results"/></p>
+    </td>
+  </tr>
   <!-- ******************* End of JUnit ************************************* -->
 
   <!-- ******************* Java Editor ************************************* -->
@@ -146,6 +156,7 @@ ul {padding-left: 13px;}
       <p><img src="images/new-code-mining-pref.png" alt="New Code Mining Preference"/></p>
     </td>
   </tr>
+
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
