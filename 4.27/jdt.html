@@ -24,11 +24,12 @@ ul {padding-left: 13px;}
 <h2>Java development tools</h2>
 <ul>
 	<!--<li><a href="#JavaXX">Java&trade; XX Support</a></li>-->
+	<li><a href="#JavaCompiler">Java Compiler</a></li>
 	<li><a href="#JUnit">JUnit</a></li>
 	<li><a href="#JavaEditor">Java Editor</a></li>
-	<li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li>
-	<li><a href="#JavaFormatter">Java Formatter</a></li>
-	<li><a href="#Debug">Debug</a></li>
+	<!--li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li-->
+	<!--li><a href="#JavaFormatter">Java Formatter</a></li-->
+	<!--li><a href="#Debug">Debug</a></li-->
 	<li><a href="#JDTDev">JDT Developers</a></li>
 </ul>
 
@@ -50,9 +51,9 @@ ul {padding-left: 13px;}
   -->
   <!-- ******************* End of Java XX Support ************************************* -->
 
-  <!-- ******************* JUnit ************************************* -->
+  <!-- ******************* Java Compiler ************************************* -->
   <tr>
-    <td id="ECJ" class="section" colspan="2">
+    <td id="JavaCompiler" class="section" colspan="2">
     <h2>Eclipse compiler for Java (ECJ)</h2>
     </td>
   </tr>
@@ -96,7 +97,6 @@ ul {padding-left: 13px;}
       <p>
       <b>Known problems with the split of the ECJ from core bundle</b>
       </p>
-      <p>
       <ul>
       <li>
       As part of the <code>org.eclipse.jdt.core.compiler.batch</code> code separation from 
@@ -120,7 +120,6 @@ ul {padding-left: 13px;}
       should be added to the application classpath.
       </li>
       </ul>
-      </p>
     </td>
   </tr>
   
@@ -134,7 +133,7 @@ ul {padding-left: 13px;}
     <td class="title"><a href="#junit-subpackage-support">Launch JUnit tests in subpackages</a></td>
     <td class="content">
       Previously, if one selected a package in the explorer that contained JUnit tests and subpackages that also contained JUnit tests, only the tests directly owned by the package would be run.  The functionality has been enhanced so that JUnit tests in subpackages will be found by the JUnitLauncher and launched as well.
-      <p>For example, in the following project, selecting the package <b>test</b> and right-clicking to <b>Run as &gt; JUnit Plug-in Test</b><p>
+      <p>For example, in the following project, selecting the package <b>test</b> and right-clicking to <b>Run as &gt; JUnit Plug-in Test</b></p>
       <p><img src="images/junit-subpackage-before.png" alt="Before"/></p>
       <p>will result in:</p>
       <p><img src="images/junit-subpackage-results.png" alt="JUnit results"/></p>
@@ -148,17 +147,20 @@ ul {padding-left: 13px;}
     <h2>Java Editor </h2>
     </td>
   </tr>
+  <tr id="new-code-mining-preference">
   <td class="title"><a href="#new-code-mining-preference">New code mining preference</a></td>
    <td class="content">
       In the past, the code minings for method references used the <b>Search</b> preferences page setting: <b>Ignore potential matches</b> to determine if inexact matches should be filtered out.  By default, this setting is false and so code mining could result in a number of entries that were only potential matches.  To make this more intuitive and to change the default behavior, the <b>Code Mining</b> preference page has been enhanced to have its own setting: <b>Ignore inexact matches</b> which by default is set to true.
       <p>To set the new option, go to: <b>Preferences &gt; Java &gt; Editor &gt; Code Minings</b>
       </p>
       <p><img src="images/new-code-mining-pref.png" alt="New Code Mining Preference"/></p>
+   </td>
+  </tr>
 
   <tr id="javadoc-inline-return"> <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/340 -->
     <td class="title"><a href="#javadoc-inline-return">Javadoc inline @return</a></td>
     <td class="content">
-      As of Java 16, the Javadoc <b>@return</b> tag can be specified as an inline tag (with curly braces) in a method's Javadoc comment.  When used it generates both the method description and the <b>Returns</b> section of the Javadoc for the method.  It is specified as follows: {<b>@return </b><i>&lt;return description&gt;}</i></b>.  The generated Javadoc will show: <b>Returns</b> <i>&lt;return description&gt;</i><b>.</b> for the method's main description and will use the same description to generate the <b>Returns</b> section.  In the case where both the inline <b>@return</b> tag and block <b>@return</b> tag are specified, the new inline tag will override.
+      As of Java 16, the Javadoc <b>@return</b> tag can be specified as an inline tag (with curly braces) in a method's Javadoc comment.  When used it generates both the method description and the <b>Returns</b> section of the Javadoc for the method.  It is specified as follows: {<b>@return </b><i>&lt;return description&gt;}</i>.  The generated Javadoc will show: <b>Returns</b> <i>&lt;return description&gt;</i>. for the method's main description and will use the same description to generate the <b>Returns</b> section.  In the case where both the inline <b>@return</b> tag and block <b>@return</b> tag are specified, the new inline tag will override.
 
      <p>Support has been added in Eclipse to recognize the inline version of the tag and show the proper Javadoc hover.</p>
 
@@ -168,38 +170,6 @@ ul {padding-left: 13px;}
   </tr>
 
   <!-- ******************* End of Java Editor ************************************* -->
-
-  <!-- ******************* Java Views and Dialogs ************************************* -->
-  <tr>
-    <td id="JavaViewsAndDialogs" class="section" colspan="2">
-    <h2>Java Views and Dialogs</h2>
-    </td>
-  </tr>
-  <!-- ******************* End of Java Views and Dialogs ************************************* -->
-
-  <!-- ******************* Java Compiler ************************************* -->
-  <tr>
-    <td id="JavaCompiler" class="section" colspan="2">
-    <h2>Java Compiler</h2>
-    </td>
-  </tr>
-  <!-- ******************* End of Java Compiler ************************************* -->
-
-  <!-- ******************* Java Formatter ************************************* -->
-  <tr>
-    <td id="JavaFormatter" class="section" colspan="2">
-    <h2>Java Formatter </h2>
-    </td>
-  </tr>
-  <!-- ******************* End of Java Formatter ************************************* -->
-  
-  <!-- *********************** Debug ******************************** -->
-  <tr>
-    <td id="Debug" class="section" colspan="2">
-    <h2>Debug</h2>
-    </td>
-  </tr>
-  <!--************************ End of Debug ******************************** -->
 
   <!-- *********************** JDT Developers ******************************** -->
   <tr>
@@ -211,7 +181,6 @@ ul {padding-left: 13px;}
   								   https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/364 -->
     <td class="title"><a href="#new-old-jdt-views">Four new views added to SDK</a></td>
     <td class="content">
-      <p>
       Following four new Java / JDT related views are shipped now by default with the Eclipse SDK:
       <ol>
       <li><code>Abstract Syntax Tree</code></li>
@@ -219,7 +188,6 @@ ul {padding-left: 13px;}
       <li><code>Bytecode Reference</code></li>
       <li><code>Java Element</code></li>
       </ol>
-      </p>
 	  <p><img src="images/new-jdt-views-list.png" alt="List of views"/></p>
       <p>
       All four views are actually not new, however they were previously only available for installation 
@@ -228,7 +196,6 @@ ul {padding-left: 13px;}
       via <a href="https://download.eclipse.org/eclipse/updates/latest/">https://download.eclipse.org/eclipse/updates/latest/</a> 
       update site.
       </p> 
-      <p>
       <ul>
       <li>
       <code>Bytecode</code> and <code>Bytecode Reference</code> views are of general use for advanced Java developers
@@ -240,9 +207,7 @@ ul {padding-left: 13px;}
       showing JDT internal representation of the Java code and are useful mostly for JDT developers only.
       </li>
       </ul>
-      </p> 
 	  <p><img src="images/new-jdt-views-content.png" alt="Views with some content"/></p>
-      </p>
     </td>
   </tr>
   <!-- *********************** End of JDT Developers ******************************** -->
