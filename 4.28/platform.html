@@ -76,6 +76,21 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="launch-debug-shortcuts-expanded">
+    <!-- https://github.com/eclipse-platform/eclipse.platform.debug/pull/122 -->
+    <td class="title">Launch/Debug context menus directly shows relevant launch configurations</td>
+    <td class="content">
+      In the "Run As/Debug As" context-menus, the shortcuts that can resolve directly to 1 or several
+      launch configurations (ie shortcuts which implement <code>ILaunchShortcut2</code>) are replaced by
+      the resolved launch directly.
+      <p>This allows to more directly know which launch configuration will be used for the Run or Debug
+      session so it will be easier to identify it afterwards if you intend to tweak it. It is also useful
+      in case you have setup multiple launch configurations of the same for the project and often want to
+      run different ones; for example for A/B testing or for distinct build actions.</p>
+	  </p>
+    </td>
+  </tr>
+
   <!-- ******************* End of General Updates ************************************* -->
   <tr><td colspan="2"/></tr>
 </tbody>
