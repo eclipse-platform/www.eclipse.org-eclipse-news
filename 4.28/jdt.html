@@ -96,6 +96,20 @@ ul {padding-left: 13px;}
     <h2>Debug</h2>
     </td>
   </tr>
+  <tr id="new-code-mining-preference">
+  <td class="title"><a href="#new-launch-config-name-preferences">New launch config name preference</a></td>
+   <td class="content">
+        For launch configurations, a name is often generated on behalf of the user which is simply the type name of the Java application, Java applet, or the JUnit test class.  In some instances, a user may have classes with the same name in different packages or projects.  Creating launch configurations for each will reuse the type name and add <b>(nn)</b> for each configuration created after the first.  Looking in the <b>Run Configurations</b> or <b>Debug Configurations</b> dialogs or the pull-down for <b>Run</b> or <b>Debug</b>, it may be difficult to determine via the name which type the configuration is referring to.
+	<p>To alleviate this, a new set of preferences has been added to specify that the launch configuration name generated use the fully qualified type name.  Once set, new configurations (either manually created in the <b>Run Configurations</b> or <b>Debug Configurations</b> dialogs or as a result of specifying <b>Run as...</b> or <b>Debug as...</b> from the context menu will qualify the generated name.  Existing configurations are not altered.
+	</p>
+	<p>To specify the new preferences, go to <b>Preferences &gt; Java &gt; Launching</b>
+	</p>
+	<p><img src="images/new-launch-name-prefs.png" alt="New Launch Config Name Preferences"/></p>
+	<p>Launching a Java application results in:</p>
+	<p><img src="images/new-launch-config.png" alt="New Launch Config for Java Application"/></p>
+   </td>
+  </tr>
+
   <!--************************ End of Debug ******************************** -->
 
   <!-- *********************** JDT Developers ******************************** -->
