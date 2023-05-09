@@ -54,12 +54,16 @@ ul {padding-left: 13px;}
     <!-- https://github.com/eclipse-platform/eclipse.platform/pull/429/commits/00a41e5445dc9e3263109bd0ce4c3abac7100739 -->
     <td class="title">Influence "Ignore Whitespace" in Compare</td>
     <td class="content">
-      The "Ignore White Space" context menu action in the eclipse compare view is ignoring all whitespace in the source code including the significant one.
-      But whitespace differences e.g. in string literals in Java code may be important.</br>
-      It is now possible to to hook into the ignore whitespace algorithm by providing an implementation of the new <code>IIgnoreWhitespaceContributor</code> interface.
-      Return an instance of this interface in your redefinition of the <code>createIgnoreWhitespaceContributor</code> method in your sub-class of <code>TextMergeViewer</code>.</br>
-      Your implementation is called in the "Ignore White Space" action for each found whitespace difference.
-      Your implementation can decide whether the whitespace difference should be ignored or not.
+      The "Ignore White Space" context menu action in the Eclipse Compare editor ignores all whitespace, including what may be semantically significant whitespace.
+      For example, in Java a whitespace difference in a string literal is semantically significant while trailing whitespace is not.
+      <p>
+      It is now possible to hook into the ignore-whitespace algorithm by providing an implementation of the new <code>IIgnoreWhitespaceContributor</code> interface.
+      Return an instance of this interface in your override of the <code>createIgnoreWhitespaceContributor</code> method in your sub-class of <code>TextMergeViewer</code>.
+      </p>
+      <p>
+      Your implementation is called for each detected whitespace difference when "Ignore White Space" is enabled.
+      Your implementation can decide whether that whitespace difference should be ignored or not.
+      </p>
     </td>
   </tr>
   <!-- ******************** End of Platform ********************** -->
