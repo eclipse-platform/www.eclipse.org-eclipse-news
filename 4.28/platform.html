@@ -111,6 +111,15 @@ ul {padding-left: 13px;}
 	This can be relevant inside a corporate environment where the firewall may introduce certificates into the network traffic that are not recognized by the cacerts of the Java runtime,
 	i.e., this may be used to avoid "PKIX path validation failed" exceptions that can otherwise be fixed only by importing the firewall certificate into the Java runtime's cacerts.
 	</p>
+	<p>
+	These rules can be specified as configuration-scoped preferences available via the <b>Authorities</b> tab of the <b>Install/Update &rarr; Trust</b> preferences:
+	</p>
+    <p>
+    <img src="images/ProtocolRulesPreferences.png" alt="Protocol Rules Preferences" style="max-width: 100%;"/>
+    </p
+    <p>
+    The default preference value of each rule is determined by the corresponding system property.
+    </p>
     </td>
   </tr>
 
