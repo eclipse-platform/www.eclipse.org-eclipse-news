@@ -66,6 +66,20 @@ ul {padding-left: 13px;}
       </p>
     </td>
   </tr>
+  <tr id="editor-onboarding">
+    <!-- https://github.com/eclipse-platform/eclipse.platform.ui/issues/633 -->
+    <!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/78 -->
+    <td class="title">Onboarding information in editor area</td>
+    <td class="content">
+      The editor area now shows the most important and useful commands and their key binding when no editor is open.
+      The information shown is dependent on the currently active perspective.
+      Perspective have to provide these details by providing an extension to the <code>org.eclipse.ui.perspectiveExtensions</code> extension point.
+      Provide and image in the <code>editorOnboardingImage</code> attribute and an short text in the <code>editorOnboardingText</code> attribute of the <code>perspectiveExtension</code> element.
+      Up to 5 commands can be provided in the <code>editorOnboardingCommand</code>.
+      For more details refer to the extension point's documentation. The <code>org.eclipse.ui.resourcePerspective</code> perspective can be used as an example.
+    </td>
+  </tr>
+
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
