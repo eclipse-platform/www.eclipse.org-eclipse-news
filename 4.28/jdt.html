@@ -88,6 +88,18 @@ ul {padding-left: 13px;}
     <h2>Java Formatter </h2>
     </td>
   </tr>
+  <tr id="new-javadoc-html-formatting-option">
+  <td class="title"><a href="#new-javadoc-html-formatting-option">New Javadoc html format option</a></td>
+  <td class="content">
+      When the formatter option <b>Comments &gt; Javadocs &gt; Format HTML tags</b> is selected, the default behavior for block tags (&lt;pre&gt;, &lt;p&gt;, &lt;dl&gt;, &lt;ul&gt;, &lt;ol&gt;, &lt;hr&gt;, and &lt;dir&gt;) is to put each tag and it's closing tag on separate lines.  A new sub-option: <b>Do not put block tags on separate lines</b> has been added to specify not to do this and instead have the tags start on a new line and have their closing tags end a line.
+  <p>For example, without the option, the following:</p>
+  <p><img src="images/javadoc-html-sample.png" alt="Javadoc sample unformatted"/></p>
+  <p>is formatted to:</p>
+  <p><img src="images/javadoc-default-html-format.png" alt="Javadoc default html format"/></p>
+  <p>and with the option specified, is formatted:</p>
+  <p><img src="images/javadoc-new-html-format.png" alt="Javadoc new html format"/></p>
+  </td>
+  </tr>
   <!-- ******************* End of Java Formatter ************************************* -->
   
   <!-- *********************** Debug ******************************** -->
@@ -96,7 +108,7 @@ ul {padding-left: 13px;}
     <h2>Debug</h2>
     </td>
   </tr>
-  <tr id="new-code-mining-preference">
+  <tr id="new-launch-config-name-preferences">
   <td class="title"><a href="#new-launch-config-name-preferences">New launch config name preference</a></td>
    <td class="content">
         For launch configurations, a name is often generated on behalf of the user which is simply the type name of the Java application, Java applet, or the JUnit test class.  In some instances, a user may have classes with the same name in different packages or projects.  Creating launch configurations for each will reuse the type name and add <b>(nn)</b> for each configuration created after the first.  Looking in the <b>Run Configurations</b> or <b>Debug Configurations</b> dialogs or the pull-down for <b>Run</b> or <b>Debug</b>, it may be difficult to determine via the name which type the configuration is referring to.
