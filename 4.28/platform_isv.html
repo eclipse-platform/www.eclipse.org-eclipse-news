@@ -80,6 +80,19 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="ipath-enhancements">
+    <!-- https://github.com/eclipse-equinox/equinox/pull/228 -->
+    <!-- https://github.com/eclipse-equinox/equinox/pull/259 -->
+    <td class="title">Enhanced IPath creation and conversion</td>
+    <td class="content">
+      The <code>IPath</code> interface now provides various static factory methods to create <code>IPath</code> instances from portable, Linux or Windows path strings as well as from <code>java.io.File</code> or <code>java.nio.file.Path</code> objects.
+      You can now create an <code>IPath</code> completely without referring to <code>org.eclipse.core.runtime.Path</code>.
+      <br/>
+      Furthermore <code>IPath.toPath()</code> was added, which converts an <code>IPath</code> to a equivalent <code>java.nio.file.Path</code> object.
+    </td>
+  </tr>
+
+
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
