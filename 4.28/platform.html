@@ -227,8 +227,27 @@ ul {padding-left: 13px;}
       <p>This allows to more directly know which launch configuration will be used for the Run or Debug
       session so it will be easier to identify it afterwards if you intend to tweak it. It is also useful
       in case you have setup multiple launch configurations of the same for the project and often want to
-      run different ones; for example for A/B testing or for distinct build actions.</p>
+      run different ones; for example for A/B testing or for distinct build actions.
 	  </p>
+    </td>
+  </tr>
+
+  <tr id="slf4j.api-version-2">
+    <!-- https://github.com/eclipse-platform/eclipse.platform.releng.aggregator/issues/588 -->
+    <!-- https://github.com/eclipse-platform/eclipse.platform.releng.aggregator/pull/981 -->
+    <td class="title">Logging API SLF4J version 2</td>
+    <td class="content">
+      The Eclipse Platform is now shipped with <code>slf4j.api</code> version 2 by default.
+      But even for version 2 the back-ward compatibility of the package <code>org.sfl4j</code> (but only for that package) has not been broken and <code>slf4j.api</code> exports the package <code>org.sfl4j</code> in version 1 and 2.
+      Therefore Plug-ins that only import and use the package org.slf4j in version 1 don't have to be touched.
+      <p>
+      Besides breaking changes in the other <code>sfl4j</code> packages than <code>org.sfl4j</code>, version 2 has also changed the way to connect the <code>slf4j.api</code> bundle to a logging-backend to use Java's <code>ServiceLoader</code> mechanism.
+      Consequently you have to make sure that the logging-backend used in your application uses is compatible with <code>slf4j.api</code> version 2.
+      Additionally a <em>OSGi Service Loader Mediator</em> is needed to permit Java's <code>ServiceLoader</code> access to the the provider bundle.
+      To fulfill this requirement Eclipse Platform ships <code>org.apache.aries.spifly.dynamic.bundle</code> by default.
+      If you assemble a final application you have to ensure that this bundle is automatically activated during startup.
+      For an Eclipse Product this can be achieved by assigning the Plug-in <code>org.apache.aries.spifly.dynamic.bundle</code> a suitable start-level in the <code>Configuration</code> section of your product.
+      </p>
     </td>
   </tr>
 
