@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="default_style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse Project Neon (4.6) M3 News</title>
+</head>
+<body>
+<h1>Eclipse Project Neon (4.6) M3 - New and Noteworthy</h1>
+<p>Here are some of the more noteworthy things available in the Neon milestone build M3
+  which is now available for <a href="http://download.eclipse.org/eclipse/downloads/#4.6_Stable_Build" target="_top">download</a>.
+  <br/>
+  We also recommend to read the Tips and Tricks, either via <b>Help &gt; Tips and Tricks...</b> or online for
+  <a href="http://help.eclipse.org/topic/org.eclipse.platform.doc.user/tips/platform_tips.html">Platform</a>,
+  <a href="http://help.eclipse.org/topic/org.eclipse.jdt.doc.user/tips/jdt_tips.html">JDT</a>, and
+  <a href="http://help.eclipse.org/topic/org.eclipse.pde.doc.user/tips/pde_tips.htm">PDE</a>.
+</p>
+
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#Platform-Dev">Platform Developers</a></li>
+  <li><a href="#JDT">JDT</a></li>
+  <li><a href="#Equinox">Equinox</a></li>
+</ul>
+
+<table class="news">
+  <colgroup>
+    <col class="title" />
+    <col />
+  </colgroup>
+
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+  
+  <tr id="hidetoolbars">
+    <td class="title">Hide the window toolbars</td>
+    <td class="content">
+     	You can use the <b>Toggle Visibility of all Toolbars</b> command (via Quick Access: <b>Ctrl+3</b> or <b>Command+3</b>) to hide
+     	all currently visible toolbars of the currently window. Selecting the command again, reveals these toolbars again. 
+     	This allows the developer to maximize the space 
+     	available for editors and views. If you minimize a stack after you selected this command, 
+     	the minimized stack will be visible until you trigger the command to hide the toolbars again. This allows
+     	you to decide which minimized stacks are currently useful for you.
+     	<p>
+     		The following is a screenshot of the IDE with a maximized Java editor and several toolbars visible. 
+     	</p>
+      	<p>
+      		<img src="images/ide-with-toolbars.png" alt=""/>
+      	</p>
+      	<p>
+      		The next screenshot shows the same maximized editor but with hidden toolbars.
+      	</p>
+      	<p>
+      		<img src="images/ide-full-screen.png" alt=""/>
+      	</p>
+    </td>
+  </tr>
+
+  <tr id="workspaceselection">
+    <td class="title">Changes to the Eclipse workspace launcher</td>
+    <td class="content">
+      The Eclipse workspace selection dialog wording was adjusted, as new Eclipse users reported that 
+      usage of the term workspace was not well explained. The old text also implied that projects 
+      need to be stored in the workspace, but that's not necessary. 
+      <p>
+        The recent directory list was also increased to 10. It used to be 5. You can still adjust this value on
+        <b>Preferences &gt; General &gt; Startup and Shutdown &gt; Workspaces</b>.
+      </p>
+      <p>
+        The reworked dialog looks like this:
+      </p>
+      <p>
+        <img src="images/newlauncher.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="gtk3-menus">
+    <td class="title">Improved menu support on GTK3</td>
+    <td class="content">
+      The SWT GTK3 port has received an update to its menus as part of the push to update SWT
+      to GTK3. Here are some of the notable changes.
+      <p>Padding: By default, SWT menus now look similar to those in OS X: Text is not strictly aligned.
+         This is due to a new way in which menus are constructed in GTK3 (see <a href="https://wiki.gnome.org/HowDoI/GMenu#Icons">
+         https://wiki.gnome.org/HowDoI/GMenu#Icons</a> for more details). In order to align all text entries in a menu, simply launch
+         the SWT application with the environment variable <b>SWT_PADDED_MENU_ITEMS=1</b>.</p>
+      <p>Checkboxes and images: On GTK2.x, a menu entry was limited to either a checkbox <i>or</i> an image.
+         On GTK3, SWT now supports menu entries that contain both an image and a checkbox.</p>
+      <p>The image below shows a screenshot of the default GTK3 menu on the left,
+         compared to an aligned GTK3 menu on the right.</p>
+          <img src="images/gtk3-menu-comparison.png" alt=""/>
+    </td>
+  </tr>
+
+  <tr id="ant-version-upgrade">
+    <td class="title">Ant 1.9.6</td>
+    <td class="content">
+      Eclipse has adopted Ant version 1.9.6.
+    </td>
+  </tr>
+
+
+  <tr>
+    <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
+  </tr>
+
+  <tr id="nomove">
+    <td class="title">Support to create immovable Shells</td>
+    <td class="content">
+      SWT has added a new style constant <code>SWT.NO_MOVE</code> to create a Shell with no move behavior. Using this style will create the
+      title trim even if no other trim style is specified. The title trim will not be created when <code>SWT.NO_TRIM</code> is specified.
+      Note that this style bit is a hint.
+      <p>
+      	<img src="images/nomove-shell.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+
+  <tr id="if-null-templates">
+    <td class="title">ifNotNull/ifNull templates</td>
+    <td class="content">
+      The Java editor now offers default templates for creating "== null" and "!= null" checks.
+      <p>
+        <img src="images/if-null-template.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="info-severity">
+    <td class="title">New problem severity level to indicate information</td>
+    <td class="content">
+      You can now specify <b>Info</b> as a severity level for the problems detected by the Eclipse Java compiler.
+        <p>
+          <img src="images/info-severity.png" alt=""/>
+        </p>      
+      When specified, the information issued by the compiler will be represented as shown here:
+        <p>
+          <img src="images/info-in-problems-view.png" alt=""/>
+        </p>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td colspan="2" class="section" id="Equinox">Equinox</td>
+  </tr>
+
+  <tr id="adapters">
+    <td class="title">Adapters.adapt(...) API</td>
+    <td class="content">
+      <code>org.eclipse.core.runtime.Adapters.adapt(...)</code> provides a new unified way to access every kind of adapter. It checks for
+      implemented interfaces, IAdaptable, and adapters registered with the adapter manager.
+      It may also activate plug-ins if necessary to provide the requested adapter.
+      And it also performs a null check on the source object, so calling code doesn't have to do that. 
+<pre><code>// Old way
+IResource selectedResource;
+if (selection instanceof IAdaptable) {
+  selectedResource = ((IAdaptable)selection).getAdapter(IResource.class);
+}
+
+// New way
+IResource selectedResource = Adapters.adapt(selection, IResource.class);
+</code></pre>
+    </td>
+  </tr>
+
+  <tr id="submonitor.split">
+    <td class="title">SubMonitor.split</td>
+    <td class="content">
+      <code>org.eclipse.core.runtime.SubMonitor.split(...)</code> is an easy, efficient way to check for Job cancellation without any
+      boilerplate. It creates a new child progress monitor, checks for cancellation, and 
+      throws OperationCanceledException if necessary. Using this instead of SubMonitor.newChild
+      or SubProgressMonitor will guarantee that your Jobs respond to cancellation quickly.
+
+<pre><code>
+// Old way
+void myMethod(IProgressMonitor monitor) {
+  SubMonitor subMonitor = SubMonitor.convert(monitor, 2);
+  if (subMonitor.isCanceled()) {
+    throw new OperationCanceledException();
+  }
+  childMethod1(subMonitor.newChild(1));
+  if (subMonitor.isCanceled()) {
+    throw new OperationCanceledException();
+  }
+  childMethod2(subMonitor.newChild(1));
+}
+
+// New way
+void myMethod(IProgressMonitor monitor) {
+  SubMonitor subMonitor = SubMonitor.convert(monitor, 2);
+  childMethod1(subMonitor.split(1));
+  childMethod2(subMonitor.split(1));
+}
+</code></pre>
+    </td>
+  </tr>
+
+  <tr id="suppress_iscanceled">
+    <td class="title">SUPPRESS_ISCANCELED</td>
+    <td class="content">
+      SubMonitor.SUPPRESS_ISCANCELED allows you to suppress cancellation checks without
+      also suppressing progress reporting. This should be used in place of a null progress
+      monitor when running a critical section that shouldn't be cancelled.
+<pre><code>
+// Old way
+void myMethod(IProgressMonitor monitor) {
+  SubMonitor subMonitor = SubMonitor.convert(monitor, 2);
+  uncancellableMethod(null);
+  subMonitor.worked(1)
+  cancellableMethod(subMonitor.newChild(1));
+}
+
+// New way
+void myMethod(IProgressMonitor monitor) {
+  SubMonitor subMonitor = SubMonitor.convert(monitor, 2);
+  uncancellableMethod(subMonitor.newChild(1,
+      SubMonitor.SUPPRESS_ISCANCELED | SubMonitor.SUPPRESS_BEGINTASK);
+  cancellableMethod(subMonitor.newChild(1));
+}</code></pre>
+    </td>
+    </tr>
+  <tr>
+    <td colspan="2"/>
+  </tr>
+</table>
+
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Neon milestone builds:</p>
+<ul>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.6/M2/">News for Eclipse Neon milestone build M2</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.6/M1/">News for Eclipse Neon milestone build M1</a></li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style type="text/css">
+p, table, td, th {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt}
+pre {  font-family: "Courier New", Courier, mono; font-size: 10pt}
+h2 { font-family: verdana, arial, helvetica, geneva; font-size: 18pt; font-weight: bold ; line-height: 14px}
+code {  font-family: "Courier New", Courier, mono; font-size: 10pt}
+sup {  font-family: verdana, arial, helvetica, geneva; font-size: 10px}
+h3 {  font-family: verdana, arial, helvetica, geneva; font-size: 14pt; font-weight: bold}
+li {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt}
+h1 {  font-family: verdana, arial, helvetica, geneva; font-size: 24pt; font-weight: bold}
+body {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt; margin-top: 5mm; margin-left: 3mm}
+.indextop { font-size: x-large; font-family: verdana, arial, helvetica, sans-serif; font-weight: bold}
+.indexsub { font-size: xx-small; font-family: verdana, arial, helvetica, sans-serif; color: #8080FF}
+a.bar:link {  text-decoration: none; color: #FFFFFF}
+a.bar:visited {  color: #FFFFFF; text-decoration: none}
+a.bar:hover {  color: #FFFFFF; text-decoration: underline}
+a.bar {  color: #FFFFFF}
+
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+  </style>
+<title>Eclipse Project Photon (4.8) M4 - New and Noteworthy</title>
+</head>
+
+<body>
+<h1>Eclipse Project Photon (4.8) M4 - New and Noteworthy</h1>
+
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#JDT">JDT</a></li>
+  <li><a href="#PDE">PDE</a></li>
+  <li><a href="#Platform-Dev">Platform Developers</a></li>
+  <li><a href="#Equinox">Equinox</a></li>
+</ul>
+
+<table class="news">
+  <colgroup>
+    <col class="title" />
+    <col />
+  </colgroup>
+
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+
+  <tr id="quickaccess-matches-preference-keywords">
+    <td class="title">Quick-Access matches Preference pages by keyword</td>
+    <td class="content">
+      Quick-Access (<code>Ctrl+3</code>) now also returns Preference pages that have a keyword matching user
+      input.
+      <p>
+        <img src="images/quickAccessMatchesPrefKeywords.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="browser-autorefresh">
+    <td class="title">Browser Editor can toggle auto-refresh</td>
+    <td class="content">
+      The Browser Editor now contains a drop down option for enabling auto-refresh for local pages. When enabled, the Browser Editor will automatically refresh if the opened file is edited and saved.
+      <p>
+        <img src="images/browser-autorefresh.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="perfect-match-first-selection-dialogs">
+    <td class="title">Perfect matches appear first in selection dialogs</td>
+    <td class="content">
+      Within selection dialogs, including <b>Open Type</b> and <b>Open Resource</b>, perfect matches appear as the first result, ensuring that users no longer have to scroll through historical matches and the alphabetically sorted list to find their desired result.
+      <p>
+        <img src="images/perfect-match-first-search.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="delete-nested-projects">
+  	<td class="title">Delete nested projects</td>
+  	<td class="content">
+  		The <b>Delete Resources</b> dialog now shows a <b>Delete nested projects</b> option to delete all projects whose location on file system is a descendant of one of the selected projects.
+  		<p>
+        <img src="images/delete-nested-projects.png" alt=""/>
+      </p>
+  	</td>
+  </tr>
+
+  <tr id="debug-perspective-changed">
+    <td class="title">Debug perspective layout changed</td>
+    <td class="content">
+      Default Debug perspective layout changed, see screenshot below. The aim is to give the editor area
+      more space and to show more relevant information without scrolling.
+      Display view, Expressions view and Project Explorer are now shown by default, Problems view replaces Tasks.
+      <p>
+        <img src="images/debug_perspective_changes.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="export-launch-configurations">
+    <td class="title">Right click option to export Launch Configurations</td>
+    <td class="content">
+      The Export Launch Configurations Wizard is now accessible through the right click menu on Launch Configurations. This wizard is still available with <b>File > Export > Run/Debug > Launch Configurations</b>
+      <p>
+        <img src="images/right-click-export-launch-config.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="flat-layout-tabbed-properties-view">
+    <td class="title">Flat layout in tabbed properties view</td>
+    <td class="content">
+      In the light theme the tabbed properties view now completely uses the same flat styling as the form-based editors do.
+      <p>
+        <img src="images/prop_light.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="open-close-workingset-projects">
+    <td class="title">Open/Close Projects by Working Set in Project Explorer</td>
+    <td class="content">
+      The ability to Open, Close, Close Unrelated, and Build all appropriate projects in a Working Set has been added to the right click menu of Working Sets in the Project Explorer.
+      <p>
+        <img src="images/open_close_workingsets.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="lucene-7.0-update">
+    <td class="title">Lucene update</td>
+    <td class="content">
+      Lucene bundles have been updated to version 7.0. The org.apache.lucene.misc bundle is not included as it's no longer needed by the Help system. 
+      This new Lucene version comes with new index version thus clients providing prebuilt indexes have to rebuild them with Lucene 7.0 for the index to be used, 
+      if the old version is supplied, Eclipse Help system will not use that index and generate a new one locally.
+    </td>
+  </tr>
+
+  <tr id="cvs-removal">
+    <td class="title">Removed CVS from SDK product</td>
+    <td class="content">
+      CVS support is not included in the SDK anymore. The CVS feature can be installed from the platform update site.
+    </td>
+  </tr>
+
+  <tr id="e4-tools">
+    <td class="title">Added e4 tools to SDK product</td>
+    <td class="content">
+      The e4 tools for developing e4 based IDE and RCP components are now included in the SDK.
+      The tooling can be removed via the installation details dialog.
+    </td>
+  </tr>
+
+  <tr id="gtk3-accessibility">
+    <td class="title">Accessibility support on GTK3</td>
+    <td class="content">
+      Significant improvements have been made in the <b>Accessibility</b> support on the SWT Linux/GTK3 port. Prior to M4, accessibility support on GTK3 was limited and often led to assistive technologies not interacting properly with SWT.
+      <p>As of M4, Eclipse on Linux is accessible again. Users are able to use assistive technologies seamlessly with SWT GTK3, just as they were able to with GTK2, and without any hangs or crashes.</p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
+
+  <tr id="eclipse-pde-no-automatic-modules">
+    <td class="title">PDE compiler reports absence of Automatic-Module-Name</td>
+    <td class="content">
+     A Manifest builder warning is reported on the manifest file if there is no <code>Automatic-Module-Name </code> header in it 
+     (required for Java 9 compatibility). The quickfix for this problem is to add an <code>Automatic-Module-Name</code> with the same 
+	name as <code>Bundle-SymbolicName</code>. For a newly created plugin project, this is added
+	automatically. On the  <b>Plug-in Development &gt; Compilers</b> preference  page in the
+	<b>Plug-ins</b> tab, there is a new option in the <b>General</b> section to control 
+	the severity of this issue.
+      <p>
+        <img src="images/pde-no-automatic-module-name-report-latest.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="eclipse-rcp-template-icons">
+    <td class="title">New icons for the Eclipse 4 RCP template</td>
+    <td class="content">
+      The Eclipse 4 RCP template has been updated to use material design like icons.
+      <p>
+        <img src="images/eclipse-4-rcp-icons.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
+  </tr>
+
+  <tr id="generic-editor-highlighter">
+    <td class="title">Contribute highlight reconcilers to the Generic Editor</td>
+    <td class="content">
+      The Generic Editor now supports a new extension point to override the default highlighter and add multiple <code>org.eclipse.jface.text.reconciler.IReconciler</code> for highlighting to provided content-types.
+      <p>Reconcilers attached to this extension point that listen to the preference <code>org.eclipse.ui.genericeditor.togglehighlight</code> will be toggled with the "Toggle Highlight" button.</p>
+      <pre>
+&lt;extension point="org.eclipse.ui.genericeditor.highlightReconcilers">
+    &lt;highlightReconciler
+          class="org.eclipse.ui.genericeditor.examples.TagHighlightReconciler"
+          contentType="org.eclipse.core.runtime.xml"/>
+&lt;/extension>
+      </pre>
+    </td>
+  </tr>
+
+  <tr id="dialog-settings-customization">
+    <td class="title">Dialog settings customization</td>
+    <td class="content">
+      Platform now allows Eclipse product maintainers to specify initial dialog settings for
+		various bundles by providing following:
+		<ol>
+		<li><b>plugin_customization.ini</b> with an entry in the URL notation like:
+			<p>
+			org.eclipse.ui/default_dialog_settings_rootUrl=http://mycompany/dialog_settings
+			org.eclipse.ui/default_dialog_settings_rootUrl=file:/etc/mycompany/dialog_settings
+			org.eclipse.ui/default_dialog_settings_rootUrl=platform:/plugin/my.company.bundle/dialog_settings
+			</p>
+		</li>
+		<li>
+			Directory at the URL specified above, containing
+			<b>&lt;bundle_id&gt;/dialog_settings.xml</b> files for every bundle to customize,
+			e.g: <b>org.eclipse.jdt.ui/dialog_settings.xml</b>.
+		</li>
+		</ol>
+		AbstractUIPlugin.loadDialogSettings() now checks if the preference
+		<b>org.eclipse.ui/default_dialog_settings_rootUrl</b> is specified and tries to
+		load <b>&lt;default_dialog_settings_rootUrl&gt;/&lt;current_bundle_id&gt;/dialog_settings.xml</b>
+		file in case the workspace has no persisted dialog settings file for the
+		current bundle.
+    </td>
+  </tr>
+  <tr id="styledtext-linespacing-provider">
+    <td class="title">Added new API in StyledText to customize different line spacing</td>
+    <td class="content">
+      <code>StyledText.setLineSpacingProvider(StyledTextLineSpacingProvider lineSpacingProvider)</code> can be used to customize different line spacing by implementing the 
+      <code>org.eclipse.swt.custom.StyledTextLineSpacingProvider</code> interface.
+      <p>
+    	For an example, see <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet369.java">Snippet369</a>
+    	which implements <code>org.eclipse.swt.custom.StyledTextLineSpacingProvider</code> interface to customize line spacing according the typed text:
+      </p>
+      <pre>
+text.setLineSpacingProvider(lineIndex -> {
+	String line = text.getLine(lineIndex).trim();
+	try {
+		return Integer.parseInt(line);
+	} catch(NumberFormatException e) {
+		return null;
+	}
+});
+      </pre>
+      <p>
+        <img src="images/styledtext_linespacing_provider.png" alt="" />
+      </p>
+    </td>
+  </tr>
+
+  <tr id="inlined-annotations-support">
+    <td class="title">Inlined annotation support</td>
+    <td class="content">
+      <code>org.eclipse.jface.text.source.inlined.InlinedAnnotationSupport</code> draws the content of the annotations in the StyledText without the actual payload text nor modifying line numbers.
+      Each annotation takes care of placing the necessary space, vertically or horizontally, in the StyledText widget to draw the content.
+      <p>
+    	The example <a href="http://git.eclipse.org/c/platform/eclipse.platform.text.git/tree/org.eclipse.jface.text.examples/src/org/eclipse/jface/text/examples/sources/inlined/InlinedAnnotationDemo.java">InlinedAnnotationDemo</a> draws:
+      </p>
+      <ul>
+    	<li>the <b>colorized square</b> of the rgb color declaration in the <b>line content</b> (use of LineContentAnnotation)</li>
+    	<li>the result <b>status (OK! / ERROR!)</b> of parse of rgb color declaration in the <b>line header</b> (use of LineHeaderAnnotation)</li>
+      </ul>
+      <p>
+        <img src="images/inlined_annotations_support.png" alt="" />
+      </p>
+    </td>
+  </tr>
+
+  <tr id="removal-eclipse-update">
+    <td class="title">Removal of Update Manager API</td>
+    <td class="content">
+      The Update Manager API was dropped in favor of p2. All remaining references to the API have now finally been removed. The org.eclipse.update.* bundles are removed from all configurations.
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="Equinox">Equinox</td>
+  </tr>
+
+  <tr id="generic-reqs-caps-handling">
+    <td class="title">P2 handles generic bundle requirements/capabilities</td>
+    <td class="content">
+        As more OSGi technologies rely heavily on abstract dependencies to wire a consistent application it
+        became important for p2 to have first class handling of such dependencies. You are now able to use p2 to
+        provision "soft" bundle dependencies that cannot be expressed as <code>Import-Package</code> or
+        <code>Require-Bundle</code> manifest headers. Such dependencies are described by the
+        <code>Require-Capability</code> and <code>Provide-Capability</code> manifest headers, which p2 can now process.
+      <p>
+        For example, a consumer bundle may import the API package of an OSGi service (<code>Import-Package</code>) and
+        also require an implementation of the API (<code>Require-Capability</code>). A provider bundle may also import
+        the API package in order to implement it (<code>Import-Package</code>) and then declare it
+        provides an implementation of the service (<code>Provide-Capability</code>). The API package can be distributed
+        by a third party that maintains the service specification. When the consumer bundle is provisioned p2 will also
+        provision the API and the provider bundles. The case used to be that p2 would provision only the consumer and
+        the API, leaving to you the task to discover a provider.
+      </p>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td colspan="2"/>
+  </tr>
+</table>
+
+
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Photon milestone builds:</p>
+<ul>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.8/M3/">News for Eclipse Photon milestone build M3</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.8/M2/">News for Eclipse Photon milestone build M2</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.8/M1/">News for Eclipse Photon milestone build M1</a></li>
+</ul>
+
+<script type="text/javascript" src="../scripts.js"></script>
+
+</body>
+</html>

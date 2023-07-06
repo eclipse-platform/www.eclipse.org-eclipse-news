@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="default_style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse Project 4.5 M4 News</title>
+</head>
+<body>
+<h1>Eclipse Project 4.5 M4 - New and Noteworthy</h1>
+<p>Here are some of the more noteworthy things available in the Mars milestone build M4 (2014-12-12)
+  which is now available for <a href="http://download.eclipse.org/eclipse/downloads/#4.5_Stable_Build" target="_top">download</a>.
+  <br/>
+  We also recommend to read the Tips and Tricks, either via <b>Help &gt; Tips and Tricks...</b> or online for
+  <a href="http://help.eclipse.org/topic/org.eclipse.platform.doc.user/tips/platform_tips.html">Platform</a>,
+  <a href="http://help.eclipse.org/topic/org.eclipse.jdt.doc.user/tips/jdt_tips.html">JDT</a>, and
+  <a href="http://help.eclipse.org/topic/org.eclipse.pde.doc.user/tips/pde_tips.htm">PDE</a>.
+</p>
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#JDT">JDT</a></li>
+  <li><a href="#PDE">PDE</a></li>
+  <li><a href="#Equinox">Equinox</a></li>
+</ul>
+
+<table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
+
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+
+
+  <tr id="css-inherit-prop">
+    <td class="title">New 'inherit' value for CSS properties</td>
+    <td class="content">
+		When CSS property gets 'inherit' value then the parent's value will be applied. See more in <b><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=419377">bug 419377</a></b>
+        <p>
+          <img src="images/css-inherit-prop.png" alt="" />
+        </p>
+    </td>
+  </tr>
+
+  <tr id="apply-git-patch">
+    <td class="title">Apply Patch... wizard more resilient</td>
+    <td class="content">
+      Patches that have been created via "<code>git format-patch</code>" sometimes couldn't be
+      applied successfully using Eclipse's <b>Team &gt; Apply Patch...</b> wizard.
+      <p>
+      Now, the wizard properly skips lines that are not part of an actual file diff section
+      (e.g. the <code>--&crarr;2.1.1</code> that Git appends).
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="Job-groups-api">
+    <td class="title">Job groups API</td>
+    <td class="content">
+	A JobGroup API (<code>org.eclipse.core.runtime.jobs.JobGroup</code>) has been added that makes it
+	easier to implement parallel algorithms in Eclipse.
+	<p>Job groups provide a simple way to manage a set of Eclipse Jobs that are responsible
+	for pieces of the same large task. The API supports throttling, joining, cancellation,
+	combined progress and error reporting for all of the jobs in the group. The job grouping
+	functionality can be used to implement performance critical algorithms using cooperating
+	jobs. More information can be found in
+	<b><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=432049">bug 432049</a></b>.</p>
+    </td>
+  </tr>
+
+  <tr id="stdin-file">
+    <td class="title">Assigning stdin to a file</td>
+    <td class="content">
+        Stdin can now be assigned to a file in the "Common" tab of launch configuration dialogs.
+        <p>
+          <img src="images/stdin-file.png" alt="" />
+        </p>
+    </td>
+  </tr>
+
+  <tr id="scroll-lock">
+    <td class="title">Automatic scroll lock in Console view</td>
+    <td class="content">
+		Scrolling up in the <b>Console</b> view using keys, mouse wheel, or scroll bar now automatically enables the <b>Scroll Lock</b> mode.
+		<p>
+		When you scroll down to the end of the console, the scroll lock is automatically released again.
+		</p>
+    </td>
+  </tr>
+
+  <tr id="console-output-limit">
+    <td class="title">Console output limit</td>
+    <td class="content">
+		<b>Preferences &gt; Run/Debug &gt; Console &gt; Console buffer size (characters)</b>
+		is now only limited by the amount of characters the Console view can render.
+		<p>
+		The arbitrary limit of 1 million characters has been removed.
+		</p>
+    </td>
+  </tr>
+
+  <tr id="menuitem-tooltip">
+    <td class="title">Added API to set tooltip for MenuItem</td>
+    <td class="content">
+		SWT now supports setting a tooltip on menu items via <code>MenuItem.setToolTipText()</code>. 
+		<p>
+		For an example, see the <b>Menu</b> tab in the <a href="https://www.eclipse.org/swt/examples.php">ControlExample</a>.</p>
+		<p>
+          <img src="images/tooltip.png" alt="" />
+        </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+
+  <tr id="loop-flows">
+    <td class="title">Improved flow analysis for loops</td>
+    <td class="content">
+		Flow analysis has been improved to more precisely capture the flow of null values in loops.
+		This mainly achieves a reduction of false positive reports from null analysis.
+        <p>
+          <a href="images/loop-flows.txt"><img src="images/loop-flows.png" alt="" /></a>
+        </p>
+		<p>
+		Previously, example method "test1" would raise a potential null pointer warning at point (3).
+		To correct this issue the merging of information leading towards point (3) has been 
+		improved to correctly see that the null value from point (1) can never reach point (3).
+		</p><p>
+		In example method "test2" JDT previously reported a redundant null check at (3),
+		because analysis didn't see that the assignment directly above could indeed assign a non-null value.
+		</p><p>
+		In example method "test3" it was reported that "o can only be null" at (3), 
+		because the information from the two null-assignments wrongly overruled the one assignment from non-null.
+		With improved analysis this is now softened to saying "o may be null".
+		</p><p>
+		The graph on the right hand side illustrates the new composition of flow information:
+		for each relevant point (3) inside a loop, the analysis first merges the flows that lead into (1).
+		This result is concatenated with the partial flow (b.c), which leads from the loop start to point (3).
+		Improved precision has thus been achieved within the design limits of a single AST traversal 
+		in order to minimize impact on compiler performance.
+		</p>
+    </td>
+  </tr>
+
+  <tr id="junit-rerun">
+	<td class="title">Re-run parameterized JUnit tests</td>
+	<td class="content">
+		The JUnit view now allows you to re-run groups of parameterized tests, or actually any
+		kind of tests that are run by a specialized runner and add another level of grouping
+		in the JUnit view.
+		<p>
+			<img src="images/junit-rerun-parameterized.png" alt="'Rerun' in context menu of the parameter of a" />
+		</p>
+		<p>
+			See the full story in
+			<a href="http://blog.moritz.eysholdt.de/2014/11/new-eclipse-junit-feature-run-subtrees.html">Moritz' Blog</a>.
+		</p>
+	</td>
+  </tr>
+
+  <tr id="unused-exception-parameters">
+    <td class="title">Unused exception parameters</td>
+    <td class="content">
+		A new compiler option to report unused exception parameters in try-catch statements has been added. The option
+		is set to <code>Ignore</code> by default.
+        <p>
+          <img src="images/unused-exception.png" alt="" />
+        </p>
+        (In earlier Mars milestones, detection for unused exception parameters was added as part of
+        the old "Value of parameter is not used" option. But since it turned out that there are
+        situations were not using an exception parameter actually makes sense, we've reverted the old option
+        to only apply to method parameters.)
+    </td>
+  </tr>
+
+  <tr id="formatter-extension">
+	<td class="title">Extension point for third-party formatters</td>
+	<td class="content">
+		JDT now provides an extension point (<code>org.eclipse.jdt.core.javaFormatter</code>) to allow third-party source code formatters as extensions.
+		<p>
+			<img src="images/java-formatter.png" alt="" />
+		</p>
+		The default code formatter is used if no third-party formatter is provided.
+	</td>
+  </tr>
+  
+  <tr>
+    <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
+
+  <tr id="pde-target-editor-retains-selection">
+    <td class="title">Target editor retains selection </td>
+    <td class="content">
+      In the <b> Target Editor</b>, while editing an existing software site location, 
+      the <b>  Edit Software Site </b>  dialog now opens with the appropriate selection.
+        
+    </td>
+  </tr>
+  		
+  <tr id="pde-api-use-scan">
+    <td class="title">API use scan report specifies additional filters used </td>
+    <td class="content">
+      <b> API use scan report</b>  specifies the location of additional filters (.api_filter files)
+      used during the scan. It also reports the number of illegal references filtered out due to 
+      additional filters used.
+      <p>
+        <img src="images/pde-additional-filter-information.png" alt="Additional Filter Information"/>
+      </p>
+    </td>
+  </tr>
+ 
+  <tr id="pde-error-log-size">
+    <td class="title">Option to set maximum log size</td>
+    <td class="content">
+      In the <b>Error Log</b> view, on the <b>view menu &gt; Filters...</b> dialog, there now is an option to set
+      the maximum log size that can be read by the Error Log view. If the size of the error log exceeds
+      this limit, a warning is logged.
+      <p>
+        <img src="images/pde-logsize-filter-dialog.png" alt="Maximum log size in filter log dialog"/>
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="Equinox">Equinox</td>
+  </tr>
+
+  <tr id="default-gtk3">
+    <td class="title">GTK+ 3 used by default on Linux distributions (when installed and available)</td>
+    <td class="content">
+      SWT and Eclipse will use the GTK+ 3 libraries by default on all Linux platforms,
+      whenever GTK+ 3 is installed and available (including GTK+ 3.10 and above). 
+      <p>You can force Eclipse to use GTK+ 2 port by setting the environment 
+      variable <code>SWT_GTK3</code> to 0 or using the launcher parameter <code>--launcher.GTK_version</code> flag in .ini file, if needed.
+      (For example: export SWT_GTK3=0) </p> 
+    </td>
+  </tr>
+    
+  <tr id="gtk-supported-versions-update">
+  	<td class="title">Dropped support for GTK+ 2 versions older than 2.18 in Eclipse launcher</td>
+  	<td class="content">
+  		GTK+ 2.18.0 or later (and its dependencies) will be the pre-requisites necessary to 
+  		run Eclipse successfully on all Linux/UNIX platforms as opposed to GTK+ 2.10.0 earlier.
+  		Support for all versions older than 2.18 has been dropped effective Mars M3 milestone release.
+  		<p>
+  		Note: As of now, Eclipse shows the following error dialog, which allows you to run even when
+  		a GTK+ version older than 2.18.0 is detected. But that behavior will soon be changed to not run 
+  		Eclipse with unsupported GTK+ versions.
+  		</p>
+  		<p>
+          <img src="images/gtk-version-warning.png" alt="" />
+        </p>
+  		
+  	</td>
+  </tr>
+
+  <tr id="p2-native-dependencies">
+    <td class="title">Prompt for native dependencies</td>
+    <td class="content">
+      It is now possible with p2 to express dependencies on OS packages and prompt the user to install those when they are not installed.
+	<p><img src="images/os-prompt.png" alt="" /></p>
+	<p>This functionality can be enabled by a new touchpoint instruction. For example:</p> 
+	<pre>org.eclipse.equinox.p2.touchpoint.natives.checkAndPromptNativePackage(distro:debian,package:handbrake,comparator:ge,version:0.9);</pre>
+	<p>At this point, the support is limited to Ubuntu.
+	<a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Equinox&amp;component=p2">Contributions</a> to add this support for other OS are welcomed.</p>
+	<p>Integration with Tycho is available from 0.23.0-SNAPSHOT and above.</p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"/>
+  </tr>
+</table>
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Mars milestone builds:</p>
+<ul>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.5/M3/">News for Eclipse Mars milestone build M3</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.5/M2/">News for Eclipse Mars milestone build M2</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.5/M1/">News for Eclipse Mars milestone build M1</a></li>
+</ul>
+</body>
+</html>

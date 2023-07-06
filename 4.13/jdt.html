@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2018, 2020. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" type="text/css"/>
+<style type="text/css">
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+/*img {max-width: 520px;}*/
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+ul {padding-left: 13px;}
+</style>
+<title>Eclipse Project 4.13 - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Java development tools</h2>
+<ul>
+	<li><a href="#Java12">Java 13 Support</a></li>
+	<li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li>
+	<li><a href="#JavaEditor">Java Editor</a></li>
+	<li><a href="#JavaFormatter">Java Formatter</a></li>
+	<li><a href="#JUnit">JUnit</a></li>
+	<li><a href="#Debug">Debug</a></li>
+</ul>
+
+<!-- ****************** START OF N&N TABLE****************** -->
+<table class="news">
+<colgroup>
+  <col class="title" />
+  <col />
+</colgroup>
+<tbody>
+
+  <!-- ******************* Java 13 Support ************************************* -->
+  <tr>
+    <td id="Java13" class="section" colspan="2">
+    <h2>Java 13 Support </h2></td>
+  </tr>
+   <tr id="Java_13"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=539066 -->
+      <td class="title">Java 13</td>
+      <td class="content">
+          Eclipse 4.14 needs to be used for <a href="http://jdk.java.net/13/">Java 13</a> support. 
+          <p>
+          The release notably includes the following Java 13 features:
+           <br/>
+           <a href="http://openjdk.java.net/jeps/354"> JEP 354: Switch Expressions (Preview)</a>.
+           <br/>
+           <a href="http://openjdk.java.net/jeps/355"> JEP 355: Text Blocks (Preview)</a>.
+           </p>
+           <p>
+           Please note that these are <a href="http://openjdk.java.net/jeps/13"> preview language feature</a>
+           and hence enable preview option should be on.
+           For an informal introduction of the support, 
+           please refer to <a href="https://wiki.eclipse.org/Java13/Examples"> Java 13 Examples wiki</a>. 
+           </p>
+      </td>
+  </tr>
+  <!-- ******************* End of Java 13 Support ************************************* -->
+
+  <!-- ******************* Java Views and Dialogs ************************************* -->
+  <tr>
+    <td id="JavaViewsAndDialogs" class="section" colspan="2">
+    <h2>Java Views and Dialogs</h2>
+    </td>
+  </tr>
+  
+  <tr id="console-output-synchronization"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=32205 -->
+    <td class="title">Synchronize standard and error output in console</td>
+    <td class="content">
+      The Eclipse <b>Console view</b> currently can not ensure that mixed standard and error output is shown in the same order
+      as it is produced by the running process. For Java applications the launch configuration <b>Common Tab</b> now
+      provides an option to merge standard and error output. This ensures that standard and error output is shown in the
+      same order it was produced but at the same time disables the individual coloring of error output.
+      <p><img src="images/merge-process-output.png" alt="Differences between merging enabled and disabled"/></p>
+    </td>
+  </tr>
+  <!-- ******************* End of Java Views and Dialogs ************************************* -->
+  
+  <!-- ******************* Java Editor ************************************* -->
+  <tr>
+    <td id="JavaEditor" class="section" colspan="2">
+    <h2>Java Editor</h2>
+    </td>
+  </tr>
+
+  <tr id="foreach-loop-collections"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=548002 -->
+    <td class="title">Convert to enhanced 'for' loop using Collections</td>
+    <td class="content">
+      The Java quickfix/cleanup <b>Convert to enhanced 'for' loop</b> is now offered on <code>for</code> loops that are iterating through Collections.  The
+      loop must reference the <code>size</code> method as part of the condition and if accessing elements in the body, must use the <code>get</code>
+      method.  All other Collection methods other than <code>isEmpty</code> invalidate the quickfix being offered.
+      <p><img src="images/foreachcollectionbefore.png" alt="for loop using Collections before"/></p>
+      <p><img src="images/foreachcollectionquickfix.png" alt="for loop using Collections quickfix"/></p>
+      <p><img src="images/foreachcollectionafter.png" alt="for loop using Collections after"/></p>
+    </td>
+  </tr>
+
+  <tr id="final-fields-quickfix"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=83544 -->
+    <td class="title">Initialize 'final' fields</td>
+    <td class="content">
+      A Java quickfix is now offered to initialize an uninitialized <code>final</code> field in the class constructor.  The fix will initialize a <code>String</code> to the empty string, a numeric base type to 0, and for class fields it initializes them using their default constructor if available or <code>null</code> if no default constructor exists.
+      <p><img src="images/finalquickfix1.png" alt="unitialized final field before"/></p>
+      <p><img src="images/finalquickfix2.png" alt="final field initialized in constructor"/></p>
+    </td>
+  </tr>
+
+  <tr id="autoboxing-unboxing"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=549242 -->
+    <td class="title">Autoboxing and Unboxing</td>
+    <td class="content">
+      Use Autoboxing and Unboxing when possible. These features are enabled only for Java 5 and higher.
+      <p><img src="images/autoboxing-unboxing-feature.png" alt=""/></p>
+    </td>
+  </tr>
+
+  <tr id="enhanced-redundant-modifier-removal"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=549242 -->
+    <td class="title">Improved redundant modifier removal</td>
+    <td class="content">
+      <b>Remove redundant modifier</b> now also removes useless <code>abstract</code> modifier on the interfaces.
+      <p><img src="images/abstract-removal-feature.png" alt=""/></p>
+      For the given code:
+      <p><img src="images/abstract-removal-before.png" alt=""/></p>
+      You get this:
+      <p><img src="images/abstract-removal-after.png" alt=""/></p>
+    </td>
+  </tr>
+
+  <tr id="javadoc-for-module-info"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=546350 -->
+    <td class="title">Javadoc comment generation for module</td>
+    <td class="content">
+      Adding a Javadoc comment to a Java module (module-info.java) will result in automatic annotations being added per the new module comment preferences.
+      <p><img src="images/modulejavadocprefs.png" alt="Javadoc module comment preferences"/></p>
+      <p>
+       The <code>$(tags)</code> directive will add <code>@uses</code> and <code>@provides</code> tags for all <b>uses</b> and <b>provides</b> module statements.
+      </p>
+      <p><img src="images/modulejavadoc.png" alt="Javadoc module comment example"/></p>
+    </td>
+  </tr>
+  <tr id="chain-completion"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=544108 -->
+    <td class="title">Chain Completion Code Assist</td>
+    <td class="content">
+      <p>
+      Code assist for "Chain Template Proposals" will be available. These will traverse reachable local variables, fields, and methods, to produce a chain whose return type is compatible with the expected type in a particular context.
+      </p>
+      <p>
+      The preference to enable the feature can be found in the Advanced sub-menu of the Content Assist menu group (<b>Preferences &gt; Java &gt; Editor &gt; Content Assist &gt; Advanced</b>) .
+      </p>
+      <p><img src="images/chain-completion.png" alt="Chain completion code assist"/></p>
+    </td>
+  </tr>
+  <!-- ******************* End of Java Editor ************************************* -->
+
+  <!-- ******************* Java Formatter ************************************* -->
+  <tr>
+    <td id="JavaFormatter" class="section" colspan="2">
+    <h2>Java Formatter </h2>
+    </td>
+  </tr>
+  <tr id="remove-excess-blank-lines"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=549255 -->
+    <td class="title">Remove excess blank lines</td>
+    <td class="content">
+      All the settings in the <b>Blank lines</b> section can now be configured to <b>remove excess blank lines</b>, effectively taking precedence over the <i>Number of empty lines to preserve</i> setting.
+      Each setting has its own button to turn the feature on, right next to its number control.
+      The button is enabled only if the selected number of lines is smaller than the <i>Number of empty lines to preserve</i>, because otherwise any excess lines are removed anyway.
+      <p>
+        <img src="images/formatter-remove-excess-blank-lines.png" alt="" />
+      </p>
+    </td>
+  </tr>
+  <tr id="blank-lines-changes"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=550083 -->
+    <td class="title">Changes in blank lines settings</td>
+    <td class="content">
+      There's quite a lot of changes in the <b>Blank lines</b> section of the formatter profile.
+      <p>
+        Some of the existing subsections and settings are now phrased differently to better express their function:
+      </p>
+      <ul>
+        <li>The <i>Blank lines within class declarations</i> subsection is now <i>Blank lines within type declaration</i></li>
+        <li><i>Before first declaration</i> is now <i>Before first member declaration</i></li>
+        <li><i>Before declarations of the same kind</i> is now <i>Between member declarations of different kind</i></li>
+        <li><i>Before member class declarations</i> is now <i>Between member type declarations</i></li>
+        <li><i>Before field declarations</i> is now <i>Between field declarations</i></li>
+        <li><i>Before method declarations</i> is now <i>Between method/constructor declarations</i></li>
+      </ul>
+      <p>
+        More importantly, a few new settings have been added to support more places where the number of empty lines can be controlled:
+      </p>
+      <ul>
+        <li><i>After last member declaration</i> in a type (to complement previously existing <i>Before first member declaration</i> setting)</li>
+        <li><i>Between abstract method declarations</i> in a type (these cases were previously handled by <i>Between method/constructor declarations</i>)</li>
+        <li><i>At end of method/constructor body</i> (to complement previously existing <i>At beginning of method/constructor body</i> setting)</li>
+        <li><i>At beginning of code block</i> and <i>At end of code block</i></li>
+        <li><i>Before statement with code block</i> and <i>After statement with code block</i></li>
+        <li><i>Between statement groups in 'switch'</i></li>
+      </ul>
+      <p>
+        Most of the new settings have been put in a new subsection <b>Blank lines within method/constructor declarations</b>.
+      </p>
+      <p>
+        <img src="images/formatter-new-blank-lines-settings.png" alt="" />
+      </p>
+    </td>
+  </tr>
+  <!-- ******************* End of Java Formatter ************************************* -->
+
+<!-- ******************* JUnit ************************************* -->
+  <tr>
+    <td id="JUnit" class="section" colspan="2">
+    <h2>JUnit</h2>
+    </td>
+  </tr>
+  <tr id="junit-5.5.1"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=548964 -->
+      <td class="title">JUnit 5.5.1</td>
+      <td class="content">
+          <a href="https://junit.org/junit5/docs/5.5.1/release-notes/">JUnit 5.5.1</a> is here and Eclipse JDT has been updated to use this version.
+      </td>
+  </tr>
+  <!-- ******************* End of JUnit ************************************* -->
+  
+  <!-- *********************** Debug ******************************** -->
+  <tr>
+    <td id="Debug" class="section" colspan="2">
+    <h2>Debug</h2>
+    </td>
+  </tr>
+  <tr id="enhanced-patch-module-support"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=546738 -->
+    <td class="title">Enhanced support for --patch-module during launch</td>
+    <td class="content">
+      The <b>Java Launch Configuration</b> now supports patching of different modules by different sources during the launch. This can be verified in the <b>Override Dependencies...</b> dialog
+      in the <b>Dependencies</b> tab in a Java Launch Configuration.
+      <p><img src="images/launch-dependencies.png" alt=""/></p>
+      <p><img src="images/enhanced-patch-module.png" alt=""/></p>
+    </td>
+  </tr>
+  <!--************************ End of Debug ******************************** -->
+
+  <!-- ******************* Java Build ************************************* -->
+  <tr>
+    <td id="JavaBuild" class="section" colspan="2">
+    <h2>Java Build</h2>
+    </td>
+  </tr>
+
+  <tr id="full-build-on-jdt-core-settings-change"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=549457 -->
+    <td class="title">Full build on JDT core preferences change</td>
+    <td class="content">
+      Manually changing the settings file <b>.settings/org.eclipse.jdt.core.prefs</b> of a project
+      will result in a full project build, if the workspace auto-build is on. For example, pulling
+      different settings from a git repository or generating the settings with a tool will now trigger a build.
+      Note that this includes timestamp changes, even if actual settings file contents were not changed.
+      <p>For the 4.13 release, it is possible to disable this new behavior with the VM property:
+      <b><span style="white-space: nowrap;">-Dorg.eclipse.disableAutoBuildOnSettingsChange=true</span></b>.
+      It is planned to remove this VM property in a future release.</p>
+    </td>
+  </tr>
+  <!-- ******************* End of Java Build ************************************* -->
+</tbody>
+</table>
+<!-- ****************** END OF N&N TABLE ****************** -->
+
+<script type="text/javascript" src="scripts.js"></script>
+  <p style="text-align:center">
+    <a href="platform.php">Previous</a> <a style="margin:1em" href=".">Up</a> <a href="platform_isv.php">Next</a>
+  </p>
+</body>
+</html>

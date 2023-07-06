@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="default_style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse Project 4.3 M4 News</title>
+</head>
+<body>
+<h1>Eclipse Project 4.3 M4 - New and Noteworthy</h1>
+<p>Here are some of the more noteworthy things available in milestone build M4 
+  (December 14, 2012) which is now available for <a href="http://download.eclipse.org/eclipse/downloads/" target="_top">download</a>.
+</p>
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#JDT">JDT</a></li>
+  <li><a href="#PDE">PDE</a></li>
+</ul>
+
+<table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+  
+  <tr id="performance">
+    <td class="title">Performance enhancements</td>
+    <td class="content">
+      Significant performance enhancements have been made in the Platform user interface in this milestone. In particular, some applications
+      that were experiencing slow editor opening, closing, and switching are now much faster. Editor selection changes and the <b>Open Resource</b>
+      dialog have also been made faster. A number of leaks have been addressed to avoid long-running applications don't run out of memory.
+      <p><img src="images/speed.jpg" alt="Speedometer" /><br/>
+	  <small>Photographer: YtseJam Photography / Creative Commons Attribution 2.0</small>
+	  </p>
+	</td>
+  </tr>
+
+  <tr id="gtk3">
+    <td class="title">SWT for GTK3</td>
+    <td class="content">
+      32-bit and 64-bit GTK3 have joined the lineup of supported configurations for which SWT and Eclipse are routinely built. This implementation is currently early access. Everyone is encouraged to download and test these new builds, and to log bugs in <a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Platform">bugzilla</a>.
+      <p>Note to load the SWT GTK3 libraries, you must set an environment variable SWT_GTK3 prior to starting Eclipse. (ex. export SWT_GTK3=1)</p>
+      <p><img src="images/gtk3.png" alt="GTK3 Control Example"/></p>  
+	</td>
+  </tr>
+
+  <tr id="ant-augment">
+    <td class="title">Support for the Ant augment task</td>
+    <td class="content">
+      The Ant editor now has support for the Ant augment task. More information about the augment task can be found on the Apache help site 
+      <a href="http://ant.apache.org/manual/Tasks/augment.html">here</a>. 
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+  
+  <tr id="stacktrace-paste">
+    <td class="title">Paste direct to a new stacktrace console</td>
+    <td class="content">
+      Previously, when creating a new Java stacktrace console, you would have to select and delete the default text prompting you to paste
+      a stacktrace. In 4.3M4 you can simply paste the stacktrace in and the default text will be auto-deleted for you.
+    </td>
+  </tr>
+
+  <tr id="xml-dom-structure">
+    <td class="title">XML DOM logical structures</td>
+    <td class="content">
+      JDT now provides a default logical structure for XML DOMs, which can be used during debugging to view the children and attributes of a node as simple arrays.
+      <p>
+      <img src="images/dom-structure.png" alt="Variables view showing the XML DOM logical structure"/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="combine-strings">
+    <td class="title">Quick assist to combine Strings</td>
+    <td class="content">
+      The new <b>Combine to single String</b> quick assist (<b>Ctrl+1</b>) replaces String concatenations
+      with a single String literal. 
+      <p>
+        <img src="images/combine-strings.png" alt="String s = &quot;Delete &quot; + &quot;two&quot; + &quot; files?&quot; // becomes: String s = &quot;Delete two files?&quot;"/>
+      </p>
+    </td>
+  </tr>
+  
+    <tr id="inherit-null-annotations">
+    <td class="title">Option to inherit null annotations</td>
+    <td class="content">
+        JDT has a new option controlling how to interpret null annotations in the presence of inheritance.
+        This should facilitate the migration towards null annotations in projects with
+        mixed code ownership.
+      <p>For the sake of code readability, JDT expects null annotations of an overridden
+        method to be repeated in overriding methods. In the following example the analysis
+        normally complains that <code>arg</code> is not annotated in <code>ClientClass</code>,
+        which means, this class doesn't formally conform to the contract of its super-interface.
+      </p>
+      <p><img title="Example for inheritance of null annotations" src="images/inherit-null-annotations-example.png"/></p>
+      <p>Starting with 4.3M4 this behavior can be changed by selecting the option
+        <strong>Inherit null annotations</strong>.
+      </p>
+      <p><img title="Option for inheritance of null annotations" src="images/inherit-null-annotations-option.png"/></p>
+      <p>In this new mode the analysis implicitly fills in all missing annotations
+        in overriding methods and uses the annotations from the overridden method.
+        In the above example the error will go away, and analysis concludes that the
+        code is actually safe, which is likely when the contract had already been
+        defined in the javadoc comment and the implementor actually adheres to that
+        contract. If, on the other hand, the implementation does not comply with the
+        inherited specification, new errors will be reported as shown below.
+      </p>
+      <p><img title="Negative example for inheritance of null annotations" src="images/inherit-null-annotations-example2.png"/></p>
+      <p>If inheritance of null annotations encounters any ambiguity or conflict
+        the analysis falls back to requiring explicit annotations.
+      </p>
+    </td>
+  </tr>
+
+  <tr id="close-quietly">
+    <td class="title">Leak analysis respects well-known utilities</td>
+    <td class="content">
+        JDT's analysis for resource leaks has been made aware of well known utilities
+        from google and apache libraries.
+      <p>Generally, this analysis looks for <code>close()</code> method calls
+        directly on a resource (any value of type <code>Closeable</code>).
+        However, in order to reduce boilerplate exception handling, several libraries
+        are providing methods like <code>closeQuietly(Closeable)</code>.
+        Previously, the analysis would complain about the missing call to <code>close()</code>
+        as shown below:
+      </p>
+      <p><img title="Example for close quietly" src="images/close-quietly-example.png"/></p>
+      <p>This warning is not relevant and will no longer be reported.
+        To achieve this, JDT now hardcodes a (short) white list of functions that
+        are known to safely close a given resource.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
+
+  <tr id="import-package">
+    <td class="title">New import package quick fixes</td>
+    <td class="content">
+      New quick fixes are available when you have an unresolved type in a Java file.  If the unresolved type
+      can be found in a package exported by a plug-in, a quick fix will be available to add an import
+      package entry to your plug-in manifest.  There is also a quick fix to add the exporting plug-in to
+      your manifest's require bundle header.
+      <p>
+      <img src="images/import-package.png" alt="Import package quick fix on an unresolved type"/>
+      </p>
+      <p>
+      If a package providing the type is available but the package is not exported by its plug-in, a quick fix will
+      offer to fix the providing plug-in's manifest. Only plug-ins in the workspace can be modified this
+      way.
+      </p>
+      <p>
+      <img src="images/export-package.png" alt="Export package quick fix on an unresolved type that is not exported"/>
+      </p>
+    </td>
+  </tr>
+
+  <tr> 
+    <td colspan="2">  </td>
+  </tr>
+</table>
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Kepler milestone builds:</p>
+<ul>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.3M3-201210312000/news/">New for Eclipse Kepler milestone build M3 (November 2, 2012)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.3M2-201209201300/news/">New for Eclipse Kepler milestone build M2 (September 21, 2012)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.3M1-201208101300/news/">New for Eclipse Kepler milestone build M1 (August 10, 2012)</a></li>
+</ul>
+</body>
+</html>

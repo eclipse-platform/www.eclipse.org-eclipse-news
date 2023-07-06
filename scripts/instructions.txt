@@ -1,0 +1,98 @@
+This file contains the instructions to the run the scripts in this directory.
+
+===============================================================================================================================
+List of scripts in the script directory:
+===============================================================================================================================
+1. applyTemplate.sh
+2. w3cValidateHtmlFile.sh
+3. validateHtmlDocBundle.sh
+4. validateHtmlNewsRepo.sh
+5. copyNewsToDocBundle.pl
+6. parseHtml.pl
+
+===============================================================================================================================
+1. applyTemplate.sh
+Creates the folder structure for a release using the 4.x-template.
+Run the applyTemplate.sh script from the scripts directory. Script will exit if directory for the <platform-release-version> 
+already exists.
+
+./applyTemplate.sh <platform-release-version> <simrel-release-name>
+
+For example:
+./applyTemplate.sh 4.13 2019-09
+===============================================================================================================================
+
+===============================================================================================================================
+2. w3cValidateHtmlFile.sh
+Validates an html file with the w3 markup validator service to catch html errors
+
+./w3cValidateHtmlFile.sh <html-file-to-be-validated>
+===============================================================================================================================
+
+===============================================================================================================================
+3. validateHtmlDocBundle.sh
+This validates the new and noteworthy html files with the w3 html validator service
+Run validateHtmlDocBundle.sh with platform doc repo location
+
+./validateHtmlDocBundle.sh <path-of-platform-common-repo>
+
+Example:
+./validateHtmlDocBundle.sh /Users/Shared/Git2/eclipse.platform.common
+===============================================================================================================================
+
+===============================================================================================================================
+4. validateHtmlNewsRepo.sh
+Run validateHtmlNewsRepo.sh with location of release folder in news repo
+This validates the html files with the w3 html validator service
+
+./validateHtmlNewsRepo.sh <path-of-news-repo>/<version-folder>
+
+Example:
+./validateHtmlNewsRepo.sh /Users/Shared/Git2/news/4.12
+===============================================================================================================================
+
+===============================================================================================================================
+Steps to copy the news content for a release from news repo to doc bundle in platform common repo:
+===============================================================================================================================
+
+==============================================
+Pre-requisite to run the perl scripts:
+==============================================
+1. Install perl
+2. Install HTML::TokeParser::Simple using this command.
+
+cpan install HTML::TokeParser::Simple
+===============================================
+Steps:
+===============================================
+1. Run copyNewsToDocBundle.pl with 3 arguments - release folder name, news repo location, platform doc repo location
+This copies the news content from the *.html files for the specific release from the news repo to platform common repo.
+
+perl copyNewsToDocBundle.pl <release-version> <path-of-news-repo> <path-of-platform-common-repo>
+
+Example:
+perl copyNewsToDocBundle.pl 4.12 /Users/Shared/Git2/news /Users/Shared/Git2/eclipse.platform.common
+
+2. Run parseHtml.pl with 3 arguments - release folder name, news repo location, platform doc repo location
+This parses the html files for image file names and copies the images for the specific release from news repo to respective image folders in platform common repo 
+
+perl parseHtml.pl <release-version> <path-of-news-repo> <path-of-platform-common-repo>
+
+Example:
+perl parseHtml.pl 4.12 /Users/Shared/Git2/news /Users/Shared/Git2/eclipse.platform.common
+
+3. Manual edits
+The following steps are not automated and needs to be done manually.
+- Update the topics_WhatsNew.xml in the 4 projects corresponding to the *whatsnew.html files.
+- Update the versions to current version in *whatsnew.html files.
+- Add target="_blank" to anchor tags '<a href="https '  
+( for eg <a href="https://help.eclipse.org/latest/topic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/core/runtime/Status.html"><code>org.eclipse.core.runtime.Status</code></a>
+becomes <a href="https://help.eclipse.org/latest/topic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/core/runtime/Status.html" target="_blank"><code>org.eclipse.core.runtime.Status</code></a>)
+- Ensure all title has href tag with ID  so that link of the individual N&N are clickable in eclipse help ( for eg   <td class="title">Micro is changed to service</td> to <td class="title"><a href="#micro-to-service">Micro is changed to service</a></td>)
+4. Run validateHtmlDocBundle.sh with platform doc repo location
+This validates the html files with the w3 html validator service
+
+./validateHtmlDocBundle.sh <path-of-platform-common-repo>
+
+Example:
+./validateHtmlDocBundle.sh /Users/Shared/Git2/eclipse.platform.common

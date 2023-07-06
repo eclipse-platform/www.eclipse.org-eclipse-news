@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="default_style.css" type="text/css" title="main" media="screen" />
+<style type="text/css">
+p, table, td, th {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt}
+pre {  font-family: "Courier New", Courier, mono; font-size: 10pt}
+h2 { font-family: verdana, arial, helvetica, geneva; font-size: 18pt; font-weight: bold ; line-height: 14px}
+code {  font-family: "Courier New", Courier, mono; font-size: 10pt}
+sup {  font-family: verdana, arial, helvetica, geneva; font-size: 10px}
+h3 {  font-family: verdana, arial, helvetica, geneva; font-size: 14pt; font-weight: bold}
+li {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt}
+h1 {  font-family: verdana, arial, helvetica, geneva; font-size: 24pt; font-weight: bold}
+body {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt; margin-top: 5mm; margin-left: 3mm}
+.indextop { font-size: x-large; font-family: verdana, arial, helvetica, sans-serif; font-weight: bold}
+.indexsub { font-size: xx-small; font-family: verdana, arial, helvetica, sans-serif; color: #8080FF}
+a.bar:link {  text-decoration: none; color: #FFFFFF}
+a.bar:visited {  color: #FFFFFF; text-decoration: none}
+a.bar:hover {  color: #FFFFFF; text-decoration: underline}
+a.bar {  color: #FFFFFF}
+
+table.news td {border-top: solid thin black;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; width: 30%; font-weight: bold;}
+table.news tr td.content {vertical-align: top; width: 70%;}
+</style>
+<title>Eclipse Project 4.3 M1 News</title>
+</head>
+<body>
+<h1>Eclipse Project 4.3 M1 - New and Noteworthy</h1>
+<p>Here are some of the more noteworthy things available in milestone build M1 
+  (August 10, 2012) which is now available for <a href="http://download.eclipse.org/eclipse/downloads/" target="_top">download</a>.
+</p>
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#JDT">JDT</a></li>
+</ul>
+
+<table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+  <tr id="ua-lucene">
+    <td class="title">Migrated to Lucene 3.5</td>
+    <td class="content">
+      The Eclipse platform help system has migrated from Lucene 2.9.1 to Lucene 3.5.
+      This change brings improved performance and many bug fixes in help search.
+      Some old help system API related to Lucene has been changed or removed as part
+      of this fix. Refer to the platform 4.3 migration guide for more details.
+    </td>
+  </tr>
+
+
+  <tr>
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+  <tr id="convert-if-else-to-switch">
+    <td class="title">New 'Convert if-else to switch' quick assist</td>
+    <td class="content">
+      The new <b>Convert 'if-else' to 'switch'</b> quick assist (<b>Ctrl+1</b>) allows you to convert an if-else statement to 
+      an equivalent switch statement.
+      <p><img src="images/convert-if-else-to-switch.png" alt=""/></p>
+      
+      This quick assist is the reverse of the existing <b>Convert 'switch' to 'if-else'</b> quick assist.
+    </td>
+  </tr>
+  <tr id="tolerateIllegalAmbiguousVarargsInvocation">
+    <td class="title">Force Eclipse to compile (illegal) ambiguous varargs code</td>
+    <td class="content"> JDK 6 and below had a bug and considered the code below legal.
+	However, this bug was fixed in JDK 7 and the code now reports an ambiguous invocation error at the call site for test(..).
+	Eclipse Juno followed and fixed this across all compliance levels.
+	<p><a href="images/illegal-ambiguous-varargs-error.txt"><img src="images/illegal-ambiguous-varargs-error.png" alt="follow link for source"/></a></p>
+	<p>If you still want the above code to compile in compliance &lt; 1.7, to mimic JDK 6 or below, you can use the
+	system property <b>tolerateIllegalAmbiguousVarargsInvocation</b> to force Eclipse to tolerate such ambiguous varargs cases.
+	This property can e.g. be set in the eclipse.ini file after the -vmargs setting:</p>
+	<pre><code>...
+-vmargs
+-DtolerateIllegalAmbiguousVarargsInvocation=true
+...</code></pre>
+	<p><i>Note</i>: With this setting, Eclipse also	mimics JDK 6 and below in raising an error in other cases that are legal in both JDK 7 and Eclipse:</p>
+	<p><a href="images/illegal-ambiguous-varargs-error2.txt"><img src="images/illegal-ambiguous-varargs-error2.png" alt="follow link for source"/></a></p>
+	
+	</td>
+  </tr>
+  <tr id="new-batch-compiler-options">
+    <td class="title">New batch compiler options</td>
+    <td class="content"> If you use the ECJ batch compiler using the command line or Ant tasks, you can now configure the following options which previously could only be set through
+	the <b>Preferences &gt; Java &gt; Compiler &gt; Errors/Warnings</b> page:
+	<ul>
+      <li>invalidJavadoc: set all warnings for malformed Javadoc tags</li>
+      <li>invalidJavadocTag: validate Javadoc tag arguments</li>
+      <li>invalidJavadocTagDep: validate deprecated references in Javadoc tag args</li>
+      <li>invalidJavadocTagNotVisible: validate non-visible references in Javadoc tag args</li>
+      <li>invalidJavadocVisibility(&lt;visibility&gt;): specify visibility modifier for malformed Javadoc tag warnings</li>
+      <li>missingJavadocTags: enable detection of missing Javadoc tags</li>
+      <li>missingJavadocTagsOverriding: detect missing Javadoc tags in overriding methods</li>
+      <li>missingJavadocTagsMethod: detect missing Javadoc tags for method type parameter</li>
+      <li>missingJavadocTagsVisibility(&lt;visibility&gt;): specify visibility modifier for missing Javadoc tags warnings</li>
+      <li>missingJavadocComments: detect missing Javadoc comments</li>
+      <li>missingJavadocCommentsOverriding: detect missing Javadoc tags in overriding methods</li>
+      <li>missingJavadocCommentsVisibility(&lt;visibility&gt;): specify visibility modifier for missing Javadoc comments warnings</li>
+      <li>nullAnnotConflict: detect conflict between null annotation specified and nullness inferred. Is effective only with nullAnnot option enabled</li>
+      <li>nullAnnotRedundant: detect redundant specification of null annotation. Is effective only with nullAnnot option enabled</li>
+      <li>nullUncheckedConversion: detect unchecked conversion from non-annotated type to @NonNull type. Is effective only with nullAnnot option enabled</li>
+      <li>unusedParam: detect unused parameter</li>
+      <li>unusedParamOverriding: detect unused parameter for overriding method</li>
+      <li>unusedParamImplementing: detect unused parameter for implementing method</li>
+      <li>unusedParamIncludeDoc: detect unused parameter documented in comment tag</li>
+      <li>unusedThrownWhenOverriding: detect unused declared thrown exception in overriding method</li>
+      <li>unusedThrownIncludeDocComment: detect unused declared thrown exception, documented in a comment tag</li>
+      <li>unusedThrownExemptExceptionThrowable: detect unused declared thrown exception, exempt Exception and Throwable</li>
+	</ul>
+	<p> For more information on using batch compiler options, please refer to <b>Help &gt; Java Development User Guide &gt; Tasks &gt; Compiling Java Code &gt; Using the batch compiler</b>.</p>
+    </td>
+  </tr>
+  <tr id="content-assist-TL_CONSTRUCTOR_START">
+    <td class="title">New API to indicate content assist requested on the start of a constructor</td>
+    <td class="content">
+      org.eclipse.jdt.core.CompletionContext.TL_CONSTRUCTOR_START:
+      <pre>
+	  /**
+	   * The completed token is the first token of a constructor
+	   * invocation expression.
+	   * e.g.
+	   * 
+	   * public class X {
+	   *   public void bar() {
+	   *     new Foo| // completion occurs at |
+	   *   }
+	   * }
+	   */
+	</pre>
+    </td>
+  </tr>
+
+
+  <tr> 
+    <td colspan="2">  </td>
+  </tr>
+</table>
+</body>
+</html>

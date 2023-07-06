@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2018. This page is made available under license. For full details, see the LEGAL section in the documentation that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" type="text/css"/>
+<style type="text/css">
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+/*img {max-width: 520px;}*/
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+ul {padding-left: 13px;}
+</style>
+<title>Eclipse Project 4.10 - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Platform and Equinox</h2>
+<ul>
+    <li><a href="#ViewsAndDialogs">Views, Dialogs and Toolbar</a></li>
+    <li><a href="#Preferences">Preferences</a></li>
+    <li><a href="#StylingThemes">Themes and Styling</a></li>
+    <li><a href="#GeneralUpdates">General Updates</a></li>
+</ul>
+
+<!-- ****************** START OF N&N TABLE ****************** -->
+<table class="news">
+<colgroup>
+  <col class="title" />
+  <col />
+</colgroup>
+<tbody>
+  <!-- ******************* Views, Dialogs and Toolbar ************************************* -->
+  <tr>
+    <td id="ViewsAndDialogs" class="section" colspan="2">
+    <h2>Views, Dialogs and Toolbar </h2>
+    </td>
+  </tr>
+
+  <tr id="ctrl-e-show-path"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=539446 -->
+	<td class="title">Quick Switch Editor dialog shows path</td>
+	<td class="content">
+	  The <b>Quick Switch Editor (Ctrl+E)</b> dialog for editor selection now shows the path of the resource along with its filename.
+	  <p>
+	  	<img src="images/ctrl-e-show-path.png" alt="" />
+	  </p>
+	</td>
+  </tr>
+
+  <tr id="workspace-dialog-directory-proposals"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=538480 -->
+    <td class="title">Workspace selection dialog offers completion proposals</td>
+    <td class="content">
+      The <b>Workspace selection</b> dialog now shows completion proposals making it easier to pick a workspace with the keyboard.
+      <p>
+        <img src="images/choose_workspace_dialog_proposals.png" alt="" />
+      </p>
+    </td>
+  </tr>
+  <!-- ******************* End of Views, Dialogs and Toolbar ************************************* -->
+
+  <!-- ****************** Preferences ************************************* -->
+  <tr>
+    <td id="Preferences" class="section" colspan="2">
+    <h2>Preferences </h2>
+    </td>
+  </tr>
+  
+  <tr id="advanced-font-search"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=539235 -->
+  <td class="title">Advanced font search</td>
+  <td class="content">
+      The <b>Colors and Font</b> preference page now supports searching for font, font height and font style in
+      addition to the already searchable primary description of the font.
+      <p>
+        The new search capability enables you to quickly see where a font is used or where a specific 
+        style or size is used.
+      </p>
+      <p>
+        Examples of search texts are: "segoe", "consolas 10", "consolas 9 bold", "italic bold", "semibold".
+      </p>
+      <p>
+        <img src="images/advanced-font-search.png.png" alt="example image of advanced font search"/>
+      </p>
+      </td>
+  </tr>
+  <!-- ****************** End of Preferences ************************************* -->
+
+  <!-- ******************* Themes and Styling ************************************* -->
+  <tr>
+    <td id="StylingThemes" class="section" colspan="2">
+    <h2>Themes and Styling </h2>
+    </td>
+  </tr>
+  <tr id="chevron-drawing"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=535068 -->
+      <td class="title">Improved drawing of the chevron button of tab folders</td>
+      <td class="content">
+          When a CTabfolder contains more tabs than that can be displayed, the chevron button appears showing the number of tabs that are hidden.<br/>
+          This chevron button doesn't have transparency artifacts anymore, making it more readable especially in the dark theme.
+          <p><img src="images/dark_high_res.png" alt="Chevron image in dark theme before and after"/></p>
+          <p><img src="images/light_high_res.png" alt="Chevron image in light theme before and after"/></p>
+          The number shown on the chevron button is limited to 99. When greater than 99 it shows the string "99+".
+          On macOS this text is no longer truncated.
+          <p><img src="images/truncated.png" alt="Truncated number of tabs before and after"/></p>
+      </td>
+  </tr>
+  <tr id="dark-theme-combo-win"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=508634 -->
+      <td class="title"><a href="#dark-theme-combo-win">Combo box styled in Windows Dark theme</a></td>
+      <td class="content">
+          Leveraging the SWT support to style the read-only Combo, the combo boxes are now styled in the Dark theme on Windows.
+          <p>Old style:</p>
+          <p><img src="images/old-dark-combo-win.png" alt=""/></p>
+          <p>New style:</p>
+          <p><img src="images/newdark-combo-win.png" alt=""/></p>
+      </td>
+  </tr>
+  <!-- ******************* End of Themes and Styling ************************************* -->
+
+  <!-- ******************* General Updates ************************************* -->
+  <tr>
+    <td id="GeneralUpdates" class="section" colspan="2">
+    <h2>General Updates </h2>
+    </td>
+  </tr>
+  <tr id="link-handlers"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=530833 -->
+      <td class="title">Added support for custom URL schemes</td>
+      <td class="content">
+          Eclipse platform can now handle custom URL schemes. When you click on a link with a specific custom URL scheme, Eclipse first starts (if it's not running yet) and then handles the clicked link.
+          <p>
+            An URL scheme defines the context and thus defines the type of URL, which determines the interpretation of the following URL part.
+            Examples of a few popular schemes include <code>https</code>, <code>ssh</code> and <code>git</code>.
+          </p>
+          <p>
+            You can control the URL schemes that should be handled by the current Eclipse installation via the <b>General &gt; Link Handlers</b> preference page.
+          </p>
+          <p><img src="images/linkHandlers.png" alt="The 'Link Handlers' preference page"/></p>
+          <p>
+            Plugins can add handlers for custom URL schemes via the extension point <code>org.eclipse.urischeme.uriSchemeHandlers</code>.
+          </p>
+      </td>
+  </tr>
+  <tr id="java32-removal"> <!--  https://bugs.eclipse.org/bugs/show_bug.cgi?id=536766 -->
+      <td class="title">Dropped support for 32-bit platforms</td>
+      <td class="content">
+          Eclipse and eclipse based applications no longer run on 32 bit platforms or 32 bit JVM. Only 64-bit platforms/JVM are supported.
+      </td>
+  </tr>  
+  <tr id="gtk2-removal"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=530841 -->
+      <td class="title">Dropped support for GTK2</td>
+      <td class="content">
+          GTK2 is no longer a supported target environment for Eclipse/SWT on Linux in 4.10, and Eclipse/SWT applications will no longer run on GTK2. Furthermore the <code>SWT_GTK3</code>
+          environment variable is ignored, as only GTK3 is supported now.
+      </td>
+  </tr>
+  <!-- ******************* End of General Updates ************************************* -->
+</tbody>
+</table>
+<!-- ****************** END OF N&N TABLE ****************** -->
+
+<script type="text/javascript" src="scripts.js"></script>
+  <p style="text-align:center">
+    <span style="color:#808080">Previous</span> <a style="margin:1em" href=".">Up</a> <a href="jdt.php">Next</a>
+  </p>
+</body>
+</html>

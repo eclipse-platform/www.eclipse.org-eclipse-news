@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2020. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" type="text/css"/>
+<style type="text/css">
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+/*img {max-width: 520px;}*/
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+ul {padding-left: 13px;}
+</style>
+<title>Eclipse Project 4.17 - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Java development tools</h2>
+<ul>
+	<!--li><a href="#JavaXX">Java&trade; XX Support</a></li-->
+	<li><a href="#Java15">Java 15 Support</a></li>
+	<li><a href="#JUnit">JUnit</a></li>
+	<li><a href="#JavaEditor">Java Editor</a></li>
+	<li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li>
+	<li><a href="#JavaFormatter">Java Formatter</a></li>
+	<li><a href="#Debug">Debug</a></li>
+	<!--li><a href="#JDTDev">JDT Developers</a></li-->
+</ul>
+
+<!-- ****************** START OF N&N TABLE ****************** -->
+<table class="news">
+<colgroup>
+  <col class="title" />
+  <col />
+</colgroup>
+<tbody>
+
+ <!-- ******************* Java 15 Support ************************************* -->
+  <tr>
+    <td id="Java15" class="section" colspan="2">
+    <h2>Java&trade; 15 Support </h2></td>
+  </tr>
+   <tr id="Java_15"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=559959 -->
+      <td class="title">Java 15</td>
+      <td class="content">
+          <a href="http://jdk.java.net/15/">Java 15</a> is out and Eclipse JDT supports Java 15 for 4.17 via 
+          <a href="https://marketplace.eclipse.org/content/java-15-support-eclipse-2020-09-417/"> Marketplace</a>. 
+          <p></p>
+          <p>
+          The release notably includes the following Java 15 features:
+           <br/>
+           <a href="https://openjdk.java.net/jeps/378"> JEP 378: Text Blocks (Standard)</a>.
+           <br/>
+           <a href="https://openjdk.java.net/jeps/384"> JEP 384: Records (Second Preview)</a>.
+           <br/>
+           <a href="https://openjdk.java.net/jeps/375"> JEP 375: Pattern Matching for Instanceof (Second Preview)</a>.
+           <br/>
+           <a href="https://openjdk.java.net/jeps/360"> JEP 360: Sealed Classes (Preview)</a>.
+           </p>
+           <p>
+           Please note that preview option should be on for <a href="http://openjdk.java.net/projects/jdk/15/"> preview language features</a>.
+           For an informal introduction of the support, 
+           please refer to <a href="https://wiki.eclipse.org/Java15/Examples"> Java 15 Examples wiki</a>. 
+           </p>
+      </td>
+  </tr>
+  <!-- ******************* End of Java 15 Support ************************************* -->
+
+  <!-- ******************* JUnit ************************************* -->
+  <tr>
+    <td id="JUnit" class="section" colspan="2">
+    <h2>JUnit</h2>
+    </td>
+  </tr>
+  <tr id="junit-collapse-all"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=564964 -->
+    <td class="title"><a href="#junit-collapse-all">Collapse all nodes in JUnit view</a></td>
+    <td class="content">
+     JUnit view now provides a context-menu option to collapse all nodes: 
+     <p><img src="images/junit-collapse-all.png" alt=""/></p>
+    </td>
+  </tr>
+
+  <tr id="junit-sort-time"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=219466 -->
+    <td class="title"><a href="#junit-sort-time">Sort test results by execution time</a></td>
+    <td class="content">
+     JUnit view now provides the ability to sort results by execution time.
+     By default, results will be sorted by execution order.  Choosing <b>Sort By &gt; Execution Time</b>
+     from the <b>JUnit View</b> menu will reorder the results once all tests are complete.  While tests are still running, they will be shown in
+     execution order.
+     <p><img src="images/junit-sort-time-before.png" alt=""/></p>
+     <p>
+     Sorting by execution order results in:
+     </p>
+     <p><img src="images/junit-sort-time-after.png" alt=""/></p>
+    </td>
+  </tr>
+  <!-- ******************* End of JUnit ************************************* -->
+
+  <!-- ******************* Java Editor ************************************* -->
+  <tr>
+    <td id="JavaEditor" class="section" colspan="2">
+    <h2>Java Editor </h2>
+    </td>
+  </tr>
+  <tr id="content-assist-substring-types"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=481323 -->
+    <td class="title"><a href="#content-assist-substring-types">Substring/Subword matches for types</a></td>
+    <td class="content">
+     Content Assist now fully supports both substring and subword matches for types:
+     <p><img src="images/substring-types.png" alt=""/></p>
+     <p>
+         Substring matches are always shown and subword matches can be enabled/disabled with the existing <b>Show subword matches</b> option on the
+         <b>Java &gt; Editor &gt; Content Assist</b> preference page.
+     </p>
+    </td>
+  </tr>
+
+  <tr id="optimization"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=565630 -->
+    <td class="title"><a href="#optimization">Optimization tab</a></td>
+    <td class="content">
+      A new tab has been added that gathers cleanups that improve the time performance: the existing lazy operator cleanup and the regex precompiler cleanup. As of Eclipse 2021-09, the tab will be named <b>Performance</b>.
+      <p><img src="images/regex-preferences.png" alt="Preferences" width="800 px"/></p>
+    </td>
+  </tr>
+
+  <tr id="objects-equals"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=562077 -->
+    <td class="title"><a href="#objects-equals">Objects.equals()</a></td>
+    <td class="content">
+      A new clean up has been added that makes use of <code>Objects.equals()</code> to implement the <code>equals(Object)</code> method.
+      <p>
+        It reduces the code and improves the reading.
+        The cleanup is only available for Java 7 or higher.
+        Although this kind of comparison is almost exclusively seen in the <code>equals(Object)</code> method, it can also reduce code in other methods.
+      </p>
+      <p>
+        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Use Objects.equals() in the equals method implementation</b> on the <b>Unnecessary Code</b> tab.
+      </p>
+      <p><img src="images/objects-equals-preferences.png" alt="Preferences" width="800 px"/></p>
+      For the given code:
+      <p><img src="images/objects-equals-before.png" alt="Before"/></p>
+      You get this after the clean up:
+      <p><img src="images/objects-equals-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
+  <tr id="regex"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=561769 -->
+    <td class="title"><a href="#regex">Precompiles the regular expressions</a></td>
+    <td class="content">
+      A new clean up has been added that optimizes the regular expression execution by precompiling it.
+      <p>
+        It replaces some usages of <code>java.lang.String</code> by usages of <code>java.util.regex.Pattern</code>.
+        The cleanup is done only if it is sure that the string is used as a regular expression.
+        If there is any doubt, nothing is done.
+        The regular expression must be explicitly used several times to be sure the cleanup is useful.
+      </p>
+      <p>
+        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Precompiles reused regular expressions</b> on the <b>Optimization</b> tab (the <b>Performance</b> tab in Eclipse 2021-09).
+      </p>
+      <p><img src="images/regex-preferences.png" alt="Preferences" width="800 px"/></p>
+      For the given code:
+      <p><img src="images/regex-before.png" alt="Before"/></p>
+      You get this after the clean up:
+      <p><img src="images/regex-after.png" alt="After"/></p>
+    </td>
+  </tr>
+  
+  <tr id="String.format-quickfix"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=565040 -->
+    <td class="title"><a href="#String.format-quickfix">String.format quickfix</a></td>
+    <td class="content">
+	  A new quickfix has been added to replace string concatenation with <code>String.format</code>, similar to the existing ones for <code>StringBuilder</code> and <code>MessageFormat</code>.
+      <p><img src="images/String.format-quickfix.png" alt=""/></p>
+    </td>
+  </tr>
+
+  <tr id="method_reference-quickfix"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=516504 -->
+    <td class="title"><a href="#method_reference-quickfix">Method reference quickfix</a></td>
+    <td class="content">
+	  A new quickfix has been added to create missing methods for method references.
+	  <p><b>NOTE! Current restriction is that this quickfix is only available on current class.</b></p>
+	  <p><b>NOTE! Expect current implementation to work on simple cases only.
+	  <br/>Method references invoking nested generics or type parameters might be problematic to resolve correct.</b></p>
+      
+      <p><img src="images/methodreference_1.png" alt=""/></p>
+      
+    </td>
+  </tr>
+  <!-- ******************* End of Java Editor ************************************* -->
+
+  <!-- ******************* Java Views and Dialogs ************************************* -->
+  <tr>
+    <td id="JavaViewsAndDialogs" class="section" colspan="2">
+    <h2>Java Views and Dialogs</h2>
+    </td>
+  </tr>
+
+  <tr id="toggle-code-minings"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=563199 -->
+    <td class="title"><a href="#toggle-code-minings">Toggle Code Minings From Find Actions Menu</a></td>
+    <td class="content">
+      The code minings within an editor can be enabled/disabled through the Find Actions menu (<b>Ctrl+3</b>).
+      <p><img src="images/toggle-code-minings.png" alt=""/></p>
+    </td>
+  </tr>
+  <!-- ******************* End of Java Views and Dialogs ************************************* -->
+
+  <!-- ******************* Java Compiler ************************************* -->
+  <!--tr>
+    <td id="JavaCompiler" class="section" colspan="2">
+    <h2>Java Compiler</h2>
+    </td>
+  </tr-->
+  <!-- ******************* End of Java Compiler ************************************* -->
+
+  <!-- ******************* Java Formatter ************************************* -->
+  <tr>
+    <td id="JavaFormatter" class="section" colspan="2">
+    <h2>Java Formatter </h2>
+    </td>
+  </tr>
+
+  <tr id="formatter-wrap-assert"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=563558 -->
+    <td class="title"><a href="#formatter-wrap-assert">Assert statement wrapping</a></td>
+    <td class="content">
+      A new setting in the Formatter profile controls <b>line wrapping of assert statements</b>.
+      A line wrap can be added between the assert condition and its error message.
+      The setting can be found in the <b>Profile Editor</b> (<b>Preferences &gt; Java &gt; Code Style &gt; Formatter &gt; Edit...</b>) in the <b>Line Wrapping &gt; Wrapping Settings &gt; Statemtens &gt; 'assert' messages</b> node.
+      <p><img src="images/formatter-wrap-assert.png" alt=""/></p>
+    </td>
+  </tr>
+  <!-- ******************* End of Java Formatter ************************************* -->
+  
+  <!-- *********************** Debug ******************************** -->
+  <tr>
+    <td id="Debug" class="section" colspan="2">
+    <h2>Debug</h2>
+    </td>
+  </tr>
+  <tr id="anonymous-class-inspection"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=549952 -->
+    <td class="title"><a href="#anonymous-class-inspection">Anonymous class instance in evaluation</a></td>
+    <td class="content">
+      The <b>JDT debugger</b> is now capable of inspecting/evaluating expressions with anonymous class instances.
+      <p><img src="images/anon-instance-inspection-code.png" alt=""/></p>
+      <p><img src="images/anon-instance-inspection.png" alt=""/></p>
+    </td>
+  </tr>
+  <tr id="helpful-nullpointer-exceptions"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=551483 -->
+    <td class="title"><a href="#helpful-nullpointer-exceptions">JEP 358: Helpful NullPointerExceptions</a></td>
+    <td class="content">
+      The <b>JDT debugger</b> has now a checkbox option to activate the command line support for <a href="https://openjdk.java.net/jeps/358">JEP 358</a>.
+      This is disabled below Java 14 and enabled by default for Java programs launched with Java 14 and above.
+      <p><b>-XX:+ShowCodeDetailsInExceptionMessages</b></p>
+      <p><img src="images/helpfulNullPointerExceptions.png" alt=""/></p>
+      JVM is now capable of analyzing which variable was null at the point of NullPointerException and describe the variable with a null-detail message in the NPE.
+      
+    </td>
+  </tr>
+  <tr id="variables-actual-type"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=547096 -->
+    <td class="title"><a href="#variables-actual-type">Actual type in Variables view</a></td>
+    <td class="content">
+	  The option <b>Show Type Names</b> in the <b>Variables</b> and <b>Expressions</b> views now displays the value's actual type instead of its declared type.
+	  This simplifies debugging especially when variable details (<code>toString()</code>) is shown <b>As the label for all variables</b>.
+	  <p>To enable <b>Show Type Names</b> in the <b>Variables</b> view, column mode must be disabled (<b>View Menu &gt; Layout &gt; Show Columns</b>).</p>
+	  <p>Example:</p><pre>
+	Object s = "some string";
+	Collection&lt;?&gt; c = Arrays.asList(s, 1);
+	// breakpoint
+	  </pre>
+      <p><img src="images/variables-actual-type.png" alt=""/></p>      
+    </td>
+  </tr>
+
+  <!--************************ End of Debug ******************************** -->
+
+  <!-- *********************** JDT Developers ******************************** -->
+  <!--tr>
+    <td id="JDTDev" class="section" colspan="2">
+    <h2>JDT Developers</h2>
+    </td>
+  </tr-->
+  <!-- *********************** End of JDT Developers ******************************** -->
+</tbody>
+</table>
+<!-- ****************** END OF N&N TABLE ****************** -->
+
+<script type="text/javascript" src="scripts.js"></script>
+  <p style="text-align:center">
+    <a href="platform.php">Previous</a> <a style="margin:1em" href=".">Up</a> <a href="platform_isv.php">Next</a>
+  </p>
+</body>
+</html>

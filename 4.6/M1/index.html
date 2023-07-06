@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="default_style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse Project Neon (4.6) M1 News</title>
+</head>
+<body>
+<h1>Eclipse Project Neon (4.6) M1 - New and Noteworthy</h1>
+<p>Here are some of the more noteworthy things available in the Neon milestone build M1
+  which is now available for <a href="http://download.eclipse.org/eclipse/downloads/#4.6_Stable_Build" target="_top">download</a>.
+  <br/>
+  We also recommend to read the Tips and Tricks, either via <b>Help &gt; Tips and Tricks...</b> or online for
+  <a href="http://help.eclipse.org/topic/org.eclipse.platform.doc.user/tips/platform_tips.html">Platform</a>,
+  <a href="http://help.eclipse.org/topic/org.eclipse.jdt.doc.user/tips/jdt_tips.html">JDT</a>, and
+  <a href="http://help.eclipse.org/topic/org.eclipse.pde.doc.user/tips/pde_tips.htm">PDE</a>.
+</p>
+
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#Platform-Dev">Platform Developers</a></li>
+  <li><a href="#PDE">PDE</a></li>
+</ul>
+
+<table class="news">
+  <colgroup>
+    <col class="title" />
+    <col />
+  </colgroup>
+
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+
+  <tr id="theming-enablement">
+    <td class="title">Preference setting to disable the Eclipse styling (CSS based theming)</td>
+    <td class="content">
+    	You can disable the CSS-based styling of the Eclipse IDE via
+    	<b>Preferences &gt; General &gt; Appearance &gt; Enable theming</b>.
+    	This will prevent Eclipse from rendering custom colors, shades, and borders, and may result in better performance.
+    	<p>
+      		<img src="images/enable-disable-theming.png" alt=""/>
+      	</p>
+	</td>
+  </tr>
+
+
+  <tr>
+    <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
+  </tr>
+
+  <tr id="no-theme-dnd">
+    <td class="title">Drag and drop for toolbars in Eclipse applications without CSS styling</td>
+    <td class="content">
+        The Eclipse styling engine allows to configure drag images via CSS. In previous releases, applications without this setting would not support drag and drop of toolbars.
+    	Eclipse RCP applications without the related CSS styling now support drag and drop of toolbars out of the box. This applies also for applications which disable the CSS-based styling.
+	</td>
+  </tr>
+
+  <tr id="messagedialog-varargs">
+    <td class="title">Additional varargs constructor for MessageDialog</td>
+    <td class="content">
+    	The <code>org.eclipse.jface.dialogs.MessageDialog</code> class has now an additional vararg constructor that simplifies passing button labels.
+    	<p>
+    	Old:
+    	</p>
+<pre>new MessageDialog(shell, "MessageDialog", null, "DialogMessage",
+		MessageDialog.NONE, new String[] { "Button1", "Button2" }, 0);
+</pre>
+    	New:
+<pre>new MessageDialog(shell, "MessageDialog", null, "DialogMessage",
+		MessageDialog.NONE, 0, "Button1", "Button2");
+</pre>
+	</td>
+  </tr>
+
+  <tr id="workbenchlogger-debug">
+    <td class="title">Workbench logger supports debug level</td>
+    <td class="content">
+    	Previously, the workbench logger wrote a trace when <code>Logger#debug(Throwable)</code> was called,
+    	even if the application was not started in debug mode.
+    	Now, log entries on the debug level are ignored, unless the application is started with the debug flag (-debug).
+	</td>
+  </tr>
+
+  <tr id="directmenuitem-canexecute">
+    <td class="title">Support for @CanExecute of MDirectMenuItem and MDirectToolItem</td>
+    <td class="content">
+    	Previously, methods annotated with @CanExecute were only evaluated on execution for MDirectMenuItems and MDirectToolItems, not on rendering.
+		So if the method annotated with @CanExecute returned false, the rendering was not updated to show the menu/tool item disabled.
+		Now @CanExecute method is also evaluated during rendering, to show the enabled state according to the method result.
+	</td>
+  </tr>
+
+
+  <tr>
+    <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
+  
+   <tr id="product-editor">
+    <td class="title">Product editor "Dependencies" tab renamed to "Content"</td>
+    <td class="content">
+        The "Dependencies" tab in the product editor was renamed to the more descriptive term "Content".
+        This avoids confusion with the "Dependencies" tab in the MANIFEST.MF editor.
+ 	   <p>
+      		<img src="images/producteditor.png" alt="New label for content in the product"/>
+       </p>
+	</td>
+  </tr>
+  
+  <tr id="e4wizard">
+    <td class="title">Retirement of the Eclipse 4 project wizard</td>
+    <td class="content">
+        As PDE offers now Eclipse 4 RCP templates, the separate Eclipse 4 project generation wizard has been retired.
+	</td>
+  </tr>
+  
+  <tr>
+    <td colspan="2"/>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="default_style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse Project 4.4 M4 News</title>
+</head>
+<body>
+<h1>Eclipse Project 4.4 M4 - New and Noteworthy</h1>
+<p>Here are some of the more noteworthy things available in milestone build M4 
+  (December 13, 2013) which is now available for <a href="http://download.eclipse.org/eclipse/downloads/" target="_top">download</a>.
+  <br/>
+  We also recommend to read the Tips and Tricks, either via <b>Help &gt; Tips and Tricks...</b> or online for
+  <a href="http://help.eclipse.org/topic/org.eclipse.platform.doc.user/tips/platform_tips.html">Platform</a>,
+  <a href="http://help.eclipse.org/topic/org.eclipse.jdt.doc.user/tips/jdt_tips.html">JDT</a>, and
+  <a href="http://help.eclipse.org/topic/org.eclipse.pde.doc.user/tips/pde_tips.htm">PDE</a>.
+</p>
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#JDT">JDT</a></li>
+  <li><a href="#Equinox">Equinox</a></li>
+</ul>
+
+<table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+   <tr id="split-editors"> 
+    <td class="title">Split Editors</td>
+    <td class="content">
+     Finally, <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=8009">Bug 8009</a> has been addressed! You can now split / unsplit
+     the currently active editor. Just use one of the new key bindings
+     supplied in Luna M4:
+     <ul>
+     <li><b>Ctrl+_</b> splits the editor one above the other</li>
+     <li><b>Ctrl+{</b> splits the editor side by side</li>
+     <li>Re-applying the command to an already split editor reverts it to only have one pane.</li>
+     </ul>
+    <p><img src="images/split_editors.png" alt=""/></p>
+    <p>Try it out on <i>your</i> favorite editor!</p>
+    </td>
+  </tr>
+  <tr id="swt-needs-1.5"> 
+    <td class="title">SWT requires JRE 1.5</td>
+    <td class="content">
+      The SWT project has moved to Java 1.5 compliance level. SWT applications will now require JRE 1.5 or higher to run.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+  <tr id="beta-java8"> 
+    <td class="title">Java&trade; 8 feature patch</td>
+    <td class="content">
+        The Eclipse support for Java&trade; 8 is making very good progress. Interested parties can take a sneak preview using the following
+        <a href="https://wiki.eclipse.org/JDT/Eclipse_Java_8_Support_%28BETA%29"> install instructions</a>.
+    </td>
+  </tr>
+  <tr id="ecj-needs-1.5"> 
+    <td class="title">ECJ requires 1.6 JRE</td>
+    <td class="content">
+     The JDT Core project has moved to Java 1.6 compliance level. This means the command line compiler now requires JRE 1.6 or above to run.
+    </td>
+  </tr>
+  <tr id="quickfix-create-for-loop">
+    <td class="title">Quick Fixes to create 'for' loops</td>
+    <td class="content">
+      A set of new quick fixes can create <code>for</code> loops that iterate over a given expression.
+      <p>
+      For arrays:
+      </p>
+      <ul>
+      <li>Create an enhanced <code>for</code> loop</li>
+      <li>Create a <code>for</code> loop using an index</li>
+      </ul>
+      <p><a href="images/quickfix-create-for-loop-array.txt"><img src="images/quickfix-create-for-loop-array.png" alt=""/></a></p>
+      For <code>Collection</code>s:
+      <ul>
+      <li>Create an enhanced <code>for</code> loop</li>
+      <li>Create a <code>for</code> loop using an <code>Iterator</code></li>
+      </ul>
+      For <code>List</code>s:
+      <ul>
+      <li>Create a <code>for</code> loop using an index and <code>get(i)</code></li>
+      </ul>
+      <p><a href="images/quickfix-create-for-loop-collection.txt"><img src="images/quickfix-create-for-loop-collection.png" alt=""/></a></p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="section" id="Equinox">Equinox</td>
+  </tr>
+  <tr> 
+    <td class="title">Framework Trace Options</td>
+    <td class="content">
+      The new OSGi framework implementation now supports many of the 
+      previously supported trace options and adds a few more trace options
+      to help debug issues with the framework.  The following trace options 
+      are now implemented:
+      <dl>
+         <dt>debug/bundleTime</dt>
+           <dd>Prints out timing information for bundle activation</dd>
+         <dt>debug/cachedmanifest</dt>
+           <dd>Debug the caching of bundle headers</dd>
+         <dt>debug/location</dt>
+           <dd>Prints out location service debug information</dd>
+         <dt>debug/startlevel</dt>
+           <dd>Prints out start level service debug information</dd>
+         <dt>monitor/activation</dt>
+           <dd>Monitor persistent bundle activation</dd>
+         <dt>resolver/providers</dt>
+           <dd>Prints out information about matching capabilities returned to the resolver and why any were filtered out</dd>
+         <dt>resolver/hooks</dt>
+           <dd>Prints out information about capabilities or resources that were filtered by resolver hooks</dd>
+         <dt>resolver/uses</dt>
+           <dd>Prints out information about uses constraint violations</dd>
+         <dt>resolver/wiring</dt>
+           <dd>Prints out wiring information after the resolve process completes</dd>
+         <dt>resolver/report</dt>
+           <dd>Prints out the resolution report information</dd>
+         <dt>resolver</dt>
+           <dd>enables all resolver trace options</dd>
+      </dl>
+    </td>
+  </tr>
+
+</table>
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Luna milestone builds:</p>
+<ul>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M3-201310302000/news/">New for Eclipse Luna milestone build M3 (November 1, 2013)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M2-201309182000/news/">New for Eclipse Luna milestone build M2 (September 20, 2013)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M1-201308072000/news/">New for Eclipse Luna milestone build M1 (August 9, 2013)</a></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2018, 2019. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" type="text/css"/>
+<style type="text/css">
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+/*img {max-width: 520px;}*/
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+ul {padding-left: 13px;}
+</style>
+<title>Eclipse Project 4.26 - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Platform and Equinox API</h2>
+  <ul>
+    <li><a href="#Platform">Platform Changes</a></li>
+    <li><a href="#SWT">SWT Changes</a></li>
+    <li><a href="#GeneralUpdates">General Updates</a></li>
+  </ul>
+
+<!-- ****************** START OF N&N TABLE****************** -->
+<table class="news">
+<colgroup>
+  <col class="title" />
+  <col />
+</colgroup>
+<tbody>
+  <!-- ******************** Platform ********************** -->
+  <tr>
+    <td id="Platform" class="section" colspan="2"><h2>Platform Changes</h2></td>
+  </tr>
+  <tr id="JobManager_Implementation"> 
+  <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=574883 -->
+  <!-- https://github.com/eclipse-platform/eclipse.platform/commit/dc7bfe70caa56ad3a63b3181dad3364ec7498cf7 -->
+    <td class="title">JobManager implementation changes</td>
+    <td class="content">
+  <h2 id="possible-deadlock-in-ijobchangelistener">Possible deadlock in IJobChangeListener</h2>
+<p><b>Attention:</b> The JobManager implementation was changed! The old
+JobMangager implementation notified IJobChangeListener about various
+IJobChangeEvent without strict order in various threads. For example
+scheduled() was called in a thread that did call schedule() on a job
+while done() was normally called within a worker thread. In case of a
+repeated schedule() both notifications could run in parallel. That was a
+race condition. The listener could not deterministically know if the job
+was still scheduled or already done. As a consequence a join() could
+have returned too early or the Progress View did not show jobs that did
+still run. And probably many other things went wrong totally unnoticed.
+Even multiple notifications could have happened in parallel in various
+worker threads, as there is no guarantee that the next execution is done
+in the same worker.</p>
+<p>To fix this indeterministic behavior all events for the same Job instance will
+now be sent one after the other. It is still not defined in which thread
+job events will be sent, but the new implementation will not call any
+IJobChangeListener until all pending events for the same job instance are processed
+by all registered IJobChangeListener. The new implementation will also
+wait with any job state change until all calls to IJobChangeListener for
+that job returned.</p>
+<p>The IJobChangeListener javadoc clearly specifies &quot;whether the state
+change occurs before, during, or after listeners are notified is
+unspecified.&quot; - and the implementation changed within that broad
+specification. Unfortunately some IJobChangeListener around rely on the
+old implementation. They may now deadlock. For example the following
+snippet can now deadlock:</p>
+<pre><code> job.schedule(); // may result in done();
+ synchronized (lock){
+  boolean schedule = ...; // lock needed for reasons
+  if (schedule ) job.schedule(); // schedule() will notify scheduled()
+  // - which may not return before previous Notifications return!
+ }
+
+ public void done(IJobChangeEvent event) {
+  // can not enter while other Thread holds lock:
+  synchronized (lock) {// possible deadlock
+  }
+ }
+</code></pre><p>Instead use:</p>
+<pre><code> job.schedule();
+ boolean schedule;
+ synchronized (lock) {
+  schedule=...; // lock needed for reasons
+ }
+ if (schedule) job.schedule();
+
+ public void done(IJobChangeEvent event) {
+  synchronized (lock) {// OK
+  }
+ }
+</code></pre><p>The same problem may occur on all IJobChangeListener methods and all
+methods that result in IJobChangeEvent being sent: Job.schedule(),
+cancel(), wakeUp(), sleep() and JobManager shutdown. Make sure all
+IJobChangeListener implementations do not block and return promptly.</p>
+<p>Due to the extreme risk the new implementation tries to identify
+non-conforming IJobChangeListener and do a fall back: when an
+IJobChangeEvent is not handled within 3 seconds a timeout error is
+logged with stacktraces of the competing threads and the JobManager will
+no longer wait - until JVM is restarted. Further calls to
+IJobChangeListener may occur in non deterministic order and JobManager.join(family) can return
+too soon. It is however possible, that there may also be some deadlocks in clients code due
+to the changed JobManager implementation that may be undetected by
+JobManager.</p> 
+<p>
+Also note that it is undefined in which thread IJobChangeListener methods are called. 
+Clients may have relied on the old implementation which called done() in the UI (SWT) thread for UIJob - but that is not the case anymore - it may happen in a background thread.
+</p>
+<strong>It is recommended to check existing IJobChangeListener implementations for possible regressions if updating to the new target platform.</strong>
+      </td>
+  </tr>
+
+  <tr id="uiJob-factories"> 
+  <!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/387 -->
+  <!-- https://github.com/eclipse-platform/eclipse.platform.ui/commit/c76ca290f10a714c782bfbf7b89d9a3d77a584a8 -->
+    <td class="title">Static factories added for UIJob</td>
+    <td class="content">
+		To the classes <code>org.eclipse.ui.progress.UIJob</code> and <code>org.eclipse.e4.ui.progress.UIJob</code> static factory methods have been added, that create and return <code>UIJob</code>-instance.
+		Their signature is similar to those in the <code>Job</code> class:
+		<ul>
+			<li><code>public static UIJob create(String name, IJobFunction function)</code></li>
+			<li><code>public static UIJob create(String name, ICoreRunnable runnable)</code></li>
+		</ul>
+		Please beware that, if you used <code>UIJob.create()</code> before, which was discouraged, because you used to call a static method from the super-class, the result is now different.
+		
+    </td>
+  </tr>
+  
+  <!-- ******************** End of Platform ********************** -->
+
+  <!-- *********************** SWT *********************** -->
+  <tr>
+    <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
+  </tr>
+
+  <tr id="styled-text-multi-selection"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=562676 -->
+    <td class="title">StyledText copy to clipboard now also adds HTML format</td>
+    <td class="content">
+      <code>StyledText</code> widget now adds HTML format when copying to the clipboard, in addition to plain text and RTF.<br/>
+      Many web-based applications don't support RTF, so it was not possible to copy and paste styled text (and preserve fonts, colors, and so on).<br/>
+      By adding HTML to the clipboard this is now possible.
+    </td>
+  </tr>
+  <tr id="display-executor"> <!-- https://github.com/eclipse-platform/eclipse.platform.swt/issues/64 -->
+    <td class="title">Integration of the Display with the Executor Framework</td>
+    <td class="content">
+     The <code>Display</code> class of SWT now implements <code>java.util.concurrent.Executor</code> of the <a href="https://docs.oracle.com/javase/tutorial/essential/concurrency/exinter.html">Java Executor Framework</a>.
+     Such an <code>Executor</code> executes the given runnable in the user-interface thread of the Display:
+      <ul>
+ 		<li>If the calling thread is the user-interface thread of this display it is
+ 			executed immediately and the method returns after the command has run, as with
+ 			the method <code>Display#syncExec(Runnable)</code>.
+ 		</li>
+ 		<li>In all other cases the <code>run()</code> method of the runnable is asynchronously executed as with the method
+ 			<code>Display#asyncExec(Runnable)</code> at the next reasonable opportunity. The caller of this method continues to
+ 			run in parallel, and is not notified when the runnable has completed.
+ 		</li>
+ 	   </ul>
+ 	   <p>This can be used in cases where one want to execute some piece of code that should be guaranteed to run in the user-interface thread regardless of the current thread,
+ 	   or for example together with the <code>java.util.concurrent.CompletableFuture</code> to write non-blocking code more easier.</p>
+    </td>
+  </tr>
+  <!-- *********************** End of SWT *********************** -->
+
+  <!-- ******************* General Updates ************************************* -->
+  <tr>
+    <td id="GeneralUpdates" class="section" colspan="2">
+    <h2>General Updates </h2>
+    </td>
+  </tr>
+    <tr id="slf4j">
+    <!-- https://github.com/eclipse-platform/eclipse.platform.releng.aggregator/issues/588 -->
+    <td class="title">Migration to SLF4J 1.7.36 from Maven-Central</td>
+    <td class="content">
+      The Eclipse Platform migrated to the SLF4J artifacts from Maven-Central in version 1.7.36.
+      With this migration the <code>Bundle-SymbolicName</code> changed from <code>org.slf4j.api</code> to <code>slf4j.api</code>.
+      <p>
+      Furthermore the way how a SLF4J-binding Plugin is wired to the slf4j-api Plugin has changed.
+      Previously with the artifacts provided by Eclipse Orbit, each binding had a separate fragment whose host was the <code>org.slf4j.api</code> Plugin and that required the binding Plugin.
+      The <code>slf4j.api</code> Plugin from Maven-Central instead imports the package <code>org.slf4j.impl</code>, which is exported by each binding Plugin.
+      Consequently, unlike before, <code>slf4j.api</code> does not resolve if no binding is present.
+      If you want to disable logging with slf4j, you can add the <code>slf4j-nop</code> binding to your application or product.
+      </p>
+      <p>
+      Additionally the <code>slf4j.api</code> Plugin as well as <code>org.apache.commons.logging</code> have been removed from all Features of the Eclipse Platform to enable Application/Product builders to freely choose the logging-framework and bridging strategy eventually used in their product.
+      If nothing is chosen explicitly P2 assembles a minimal result depending on the available Plugins.
+      </p>
+    </td>
+  </tr>
+  
+  <!-- ******************* End of General Updates ************************************* -->
+
+  <tr><td colspan="2"/></tr>
+</tbody>
+</table>
+<!-- ****************** END OF N&N TABLE ****************** -->
+
+<script type="text/javascript" src="scripts.js"></script>
+  <p style="text-align:center">
+    <a href="jdt.php">Previous</a> <a style="margin:1em" href=".">Up</a> 
+    <!--<a href="pde.php">Next</a>-->
+  </p>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="default_style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse Project 4.5 M3 News</title>
+</head>
+<body>
+<h1>Eclipse Project 4.5 M3 - New and Noteworthy</h1>
+<p>Here are some of the more noteworthy things available in the Mars milestone build M3 (2014-10-31)
+  which is now available for <a href="http://download.eclipse.org/eclipse/downloads/#4.5_Stable_Build" target="_top">download</a>.
+  <br/>
+  We also recommend to read the Tips and Tricks, either via <b>Help &gt; Tips and Tricks...</b> or online for
+  <a href="http://help.eclipse.org/topic/org.eclipse.platform.doc.user/tips/platform_tips.html">Platform</a>,
+  <a href="http://help.eclipse.org/topic/org.eclipse.jdt.doc.user/tips/jdt_tips.html">JDT</a>, and
+  <a href="http://help.eclipse.org/topic/org.eclipse.pde.doc.user/tips/pde_tips.htm">PDE</a>.
+</p>
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#JDT">JDT</a></li>
+  <li><a href="#PDE">PDE</a></li>
+  <li><a href="#Equinox">Equinox</a></li>
+</ul>
+
+<table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
+
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+
+  <tr id="ui-responsiveness-monitoring">
+    <td class="title">UI responsiveness monitoring</td>
+    <td class="content">
+      You can enable automatic detection of periods when the Eclipse user interface is unresponsive:
+          <p>
+            <img src="images/ui-responsiveness-monitoring.png" alt="" />
+          </p>
+      <p>UI freezes longer than the warning threshold are logged to the Eclipse error log
+      as warnings. The logged messages include one or more stack traces of the display
+      thread. Longer UI freezes are logged as errors and include stack traces of all threads.
+      Please keep in mind that capturing stack traces of all threads involves extra
+      overhead, so setting the error threshold below 1 second is not recommended.</p>
+      <p>A UI freeze is logged at the end of the freeze or after the deadlock threshold has
+      expired, whichever comes first. The latter condition facilitates logging of indefinite
+      UI freezes caused by deadlocks.</p>
+      <p>Please file bugs for the UI freezes you encounter, describe what you were doing
+      at the time, and include the messages from the error log related to the freeze.</p> 
+    </td>
+  </tr>
+  
+  <tr id="perspectivemenu">
+    <td class="title">Perspective menu entries grouped</td>
+    <td class="content">
+      The entries related to perspectives have been grouped into one menu entry to simplify the Window menu.
+          <p>
+            <img src="images/perspectivemenu.png" alt="" />
+          </p>
+    </td>
+  </tr>
+
+  <tr id="terminate-all-action">
+    <td class="title">'Terminate/Disconnect All' in Console view</td>
+    <td class="content">
+      You can invoke the <b>Terminate/Disconnect All</b> action from the Console view's context menu:
+          <p>
+            <img src="images/console-terminate-disconnect-all.png" alt="" />
+          </p>
+    </td>
+  </tr>
+
+  <tr id="ant-version-upgrade">
+    <td class="title">Ant 1.9.4</td>
+    <td class="content">
+      Eclipse has adopted Ant version 1.9.4.
+    </td>
+  </tr>
+
+  <tr id="date-time-on-gtk-spin-button">
+	<td class="title">The DateTime widget now uses GtkSpinButton on UNIX/Linux platforms</td>
+    <td class="content">
+      The DateTime widget has been re-implemented to use the GtkSpinButton widget for
+      <code>SWT.DATE</code> and <code>SWT.TIME</code> styles. The new look and feel is as illustrated below:
+      <p><b>GTK+ 2:</b></p>
+          <p>
+            <img src="images/gtk2-date-time.png" alt="" />
+          </p>
+      <p><b>GTK+ 3:</b></p>
+          <p>
+            <img src="images/gtk3-date-time.png" alt="" />
+          </p>
+    </td>    
+  </tr>
+
+  <tr id="sleep-wakeup-deprecated-replaced">
+    <td class="title">New monitoring events added in place of SWT.Sleep and SWT.Wakeup</td>
+    <td class="content">
+        The <code>SWT.Sleep</code> and <code>SWT.Wakeup</code> events have been deprecated
+        in favor of the more generic events <code>SWT.PreExternalEventDispatch</code> and 
+        <code>SWT.PostExternalEventDispatch</code>, respectively. Clients that were written
+        using the old event names should be updated to refer to the new events.
+    </td>
+  </tr>
+
+  <tr id="gtk-supported-versions-update">
+  	<td class="title">Dropped support for GTK+ 2 versions older than 2.18</td>
+  	<td class="content">
+  		GTK+ 2.18.0 or later (and its dependencies) will be the pre-requisites necessary to 
+  		run Eclipse successfully on all Linux/UNIX platforms as opposed to GTK+ 2.10.0 earlier.
+  		Support for all versions older than 2.18 has been dropped effective Mars M3 milestone release.
+  		<p>
+  		Note: As of now, Eclipse logs a warning and continues to run when a GTK+ version older than 2.18.0
+  		is detected, but that behavior will soon be changed to not run Eclipse with unsupported versions.
+  		</p>
+  	</td>
+  </tr>
+  
+  <tr id="runtime-locale-type-change">
+    <td class="title">Changed type of TranslationService.LOCALE</td>
+    <td class="content">
+      The type of the <code>LOCALE</code> value in the application context was changed from
+      <code>String</code> to <code>Locale</code> (for performance reasons).
+      <p>If you are injecting <code>org.eclipse.e4.core.services.translation.TranslationService.LOCALE</code> in your code, you
+      need to change the type from <code>String</code> to <code>Locale</code>.</p> 
+    </td>
+  </tr>
+
+
+  <tr>
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+
+  <tr id="infer-lambda-parameter-types">
+    <td class="title">Add inferred lambda parameter types</td>
+    <td class="content">
+      You can explicitly add the inferred types of the parameters in a lambda expression by invoking the <b>Quick Assist (Ctrl+1) - Add inferred lambda parameter types</b>:
+          <p>
+            <img src="images/infer-lambda-parameter-types.png" alt="" />
+          </p>
+    </td>
+  </tr>
+
+  <tr id="convert-method-reference-to-lambda">
+    <td class="title">Convert method reference to lambda and back</td>
+    <td class="content">
+      New <b>Quick Assists (Ctrl+1)</b> have been added to convert...
+      <ul>
+        <li>from method reference to lambda expression:
+	      <p>
+	        <img src="images/convert-to-lambda.png" alt="Integer::toHexString" />
+	      </p>
+	    </li>
+        <li>from lambda expression to method reference:
+	      <p>
+	        <img src="images/convert-to-method-reference.png" alt="t -> Integer.toHexString(t)" />
+	      </p>
+	    </li>
+	  </ul>
+    </td>
+  </tr>
+
+  <tr id="final-watchpoint">
+    <td class="title">Add Watchpoint for final variables</td>
+    <td class="content">
+      You can now add a Watchpoint for non-constant final variables:
+          <p>
+            <img src="images/final-watchpoint.png" alt="" />
+          </p>
+      This cannot be implemented for final variables with compile-time constant values
+      because Java compiles the constant value into class files and leaves no
+      trace of a field access at points where the final field is read.
+    </td>
+   </tr>
+
+
+  <tr>
+    <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
+
+  <tr id="wildcard-support-plugins-features">
+    <td class="title">Added wildcard support for selecting plug-ins</td>
+    <td class="content">
+      Wildcard support and implicit prefix completion already worked in some plug-in selection dialogs.
+      Now, it works in all such dialogs, e.g. in the product editor or in the target definition.
+      Due to the implicit "*" at the beginning of the pattern, you can just type "platf" to find "org.eclipse.platform".
+          <p>
+            <img src="images/plugin-selection-without-wildcards.png" alt="" />
+          </p>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td colspan="2" class="section" id="Equinox">Equinox</td>
+  </tr>
+
+  <tr id="jetty9">
+    <td class="title">Updated to Jetty version 9</td>
+    <td class="content">
+      Updated to the Jetty version 9.2.3 to provide the servlet container for the Equinox Http Service implementation.  Jetty 9 implements the Servlet 3.1 specification.  Both Jetty 9 and Servlet 3.1 require Java 7.  Java 7 is now required in order to run the Equinox Http Service and the Eclipse Help system.
+    </td>
+  </tr>
+
+  <tr id="http-white-board">
+    <td class="title">New Http Whiteboard implementation</td>
+    <td class="content">
+      <ul>
+        <li>New implementation of Http Whiteboard Draft specification. See <a href="http://www.osgi.org/Specifications/Drafts">Current Drafts</a>.</li>
+        <li>Simplify your web development by using whiteboard pattern to create assemblies of servlets, filters, context listeners and grouping them logically in shared contexts.</li>
+        <li>The implementation is a near feature complete implementation of the draft specification.</li>
+        <li>In addition to the Http Whiteboard specification, the Equinox Http Service implementation provides a complete imperative API in order to support the traditional direct registration programming model.</li>
+        <li>Supports Servlet 3.0 features.</li>
+        <li>Ongoing work will continue to provide more tests, improve support for Servlet 3.1 features and to improve stability and performance.</li>
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"/>
+  </tr>
+</table>
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Mars milestone builds:</p>
+<ul>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.5/M2/">News for Eclipse Mars milestone build M2</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.5/M1/">News for Eclipse Mars milestone build M1</a></li>
+</ul>
+</body>
+</html>

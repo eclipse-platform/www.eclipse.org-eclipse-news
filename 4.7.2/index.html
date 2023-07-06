@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse Project Oxygen.2 (4.7.2) News</title>
+</head>
+<body>
+<h1>Eclipse Project Oxygen.2 (4.7.2) - New and Noteworthy</h1>
+<p>Here are some of the noteworthy things available in the Oxygen.2 update release
+  which is now available for <a href="http://download.eclipse.org/eclipse/downloads/#Latest_Release" target="_top">download</a>.
+</p>
+
+<ul>
+  <li><a href="#JDT">JDT</a></li>
+</ul>
+
+<table class="news">
+  <colgroup>
+    <col class="title" />
+    <col />
+  </colgroup>
+
+  <tr>
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+
+  <tr>
+    <td class="title">QuickFix for <code>unresolved type</code> on service provider in a <code> provides directive</code></td>
+    <td class="content">
+    <p>A new quick fix is available when you have an unresolved type on <code>service provider</code> in a provides directive in module-info.java file. If the unresolved type can not be found in the current module, a quick fix will be available to create a new class or an interface in the current module.</p>
+	<p>This QuickFix is applicable if the project is a Java9 project and has a <code>module-info.java</code> file.</p>
+    <p>The quick fix can be invoked from the editor:</p>  
+    <p><img src="images/java9-module-provides-create-class.png" alt=""/></p>
+    <p><img src="images/java9-module-provides-create-interface.png" alt=""/></p>
+    <p>When the service is a class, the quick fix is proposed for creating a class.</p>
+    <p>When the service is an interface or an annotation, two quick fixes are proposed for creating a class or an interface.</p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"/>
+  </tr>
+  
+
+</table>
+
+<p>The above features are just the ones that are new in the Oxygen.2 update release.
+See also the <a href="https://www.eclipse.org/eclipse/news/4.7.1a/">News for Eclipse Oxygen.1a</a>.
+</p>
+
+</body>
+</html>

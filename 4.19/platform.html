@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2018, 2019. This page is made available under license. For full details, see the LEGAL section in the documentation that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" type="text/css"/>
+<style type="text/css">
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+/*img {max-width: 520px;}*/
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+ul {padding-left: 13px;}
+</style>
+<title>Eclipse Project 4.19 - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Platform and Equinox</h2>
+<ul>
+    <!--<li><a href="#ViewsAndDialogs">Views, Dialogs and Toolbar</a></li>-->
+    <li><a href="#TextEditors">Text Editors</a></li>
+    <li><a href="#Debug">Debug</a></li>
+    <li><a href="#Preferences">Preferences</a></li>
+   <!-- <li><a href="#StylingThemes">Themes and Styling</a></li>-->
+    <li><a href="#GeneralUpdates">General Updates</a></li>
+</ul>
+
+<!-- ****************** START OF N&N TABLE ****************** -->
+<table class="news">
+<colgroup>
+  <col class="title" />
+  <col />
+</colgroup>
+<tbody>
+  <!-- ******************* Views, Dialogs and Toolbar ************************************* -->
+
+  <!-- ******************* End of Views, Dialogs and Toolbar ************************************* -->
+
+  <!-- ******************* Text Editors ************************************* -->
+  <tr>
+    <td id="TextEditors" class="section" colspan="2">
+    <h2>Text Editors </h2>
+    </td>
+  </tr>
+
+  <tr id="editors-horizontal-scroll"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=205137 -->
+    <td class="title">Horizontal Scrolling in Text Editor</td>
+    <td class="content">
+      You can now scroll horizontally in the <b>Text Editor</b> using <b>Shift+Mouse Wheel</b> and <b>touchpad gestures</b> on Windows.
+      Horizontal scrolling with touchpad already works on Linux and macOS.
+    </td>
+  </tr>
+  <!-- ******************* End of Text Editors ************************************* -->
+
+  <!-- ****************** Debug ************************************* -->
+  <tr>
+    <td id="Debug" class="section" colspan="2">
+    <h2>Debug </h2>
+    </td>
+  </tr>
+
+  <tr id="console-find-next-find-previous"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=45017 -->
+    <td class="title">Find Next/Previous in Console View</td>
+    <td class="content">
+      In the <b>Console</b> view, you can repeat your last search in the forward or backward direction 
+      in the following ways: 
+      <ul>
+      <li>Right-click in the Console view, then select <b>Find Next</b> or <b>Find Previous</b>.</li>
+      <li>Use the keyboard shortcuts <b>Ctrl+K</b> or <b>Ctrl+Shift+K</b>.</li>
+      </ul>
+      <p>
+       <img src="images/console-find-next-find-previous-45017.png" width="700" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="disable-all-breakpoints"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569281 -->
+    <td class="title">Disable All in Breakpoints view</td>
+    <td class="content">
+      In the <b>Breakpoints</b> view, you can disable all the breakpoints using the new <b>Disable All</b> context-menu option available on right-click.
+      <p>
+       <img src="images/disable-allbreakpoints.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="termination-of-descendants-is-configurable"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=570480 -->
+    <td class="title">Termination of child processes of launched OS processes can be configured</td>
+    <td class="content">
+	Since Eclipse <a href="https://www.eclipse.org/eclipse/news/4.18/platform.php#terminate-descendants">4.18</a> child processes (descendants) of an operating system process launched from Eclipse are terminated too,
+	when the launched process is terminated (for example by clicking the terminate button).
+    <p>
+    It is now possible to configure in the Launch Configuration whether the child processes of a launched process should be terminated too or if they should stay alive, in case the launched processes is terminated.
+    You can control this with the checkbox <b>Terminate child processes if terminating the launched process</b> in the <b>Common</b> tab of the <b>Run/Debug Configurations</b> dialog.
+    By default this checkbox is selected and child processes are terminated too. 
+    </p>
+      <p>
+        <img src="images/configure-child-process-termination.png" alt=""/>
+      </p>
+  </td>
+  </tr>
+  <!-- ****************** End of Debug ************************************* -->
+
+  <!-- ****************** Preferences ************************************* -->
+  <tr>
+    <td id="Preferences" class="section" colspan="2">
+    <h2>Preferences </h2>
+    </td>
+  </tr>
+  
+  <tr id="browsers-windows-update"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=564999 -->
+    <td class="title">External browsers on Windows</td>
+    <td class="content">
+      On Windows, the list of recognized External web browsers has been updated to include:
+      
+      <ul>
+      <li><b>Microsoft Edge</b> (<i>%ProgramFiles(x86)%</i>\Microsoft\Edge\Application\msedge.exe)</li>
+      </ul>
+      <p>
+        <img src="images/browsers-windows-update.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  <!-- ****************** End of Preferences ************************************* -->
+
+  <!-- ******************* Themes and Styling ************************************* -->
+
+  <!-- ******************* End of Themes and Styling ************************************* -->
+
+  <!-- ******************* General Updates ************************************* -->
+  <tr>
+    <td id="GeneralUpdates" class="section" colspan="2">
+    <h2>General Updates </h2>
+    </td>
+  </tr>
+  <tr id="linux-equinox-security-jna"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=566639 -->
+    <td class="title">Equinox Linux Security JNA Fragment</td>
+    <td class="content">
+      A new fragment has been added for Linux password security using JNA. This new fragment replaces the old JNI x86_64-specific fragment and supports all Linux architectures. 
+    </td>
+  </tr>
+  <!-- ******************* End of General Updates ************************************* -->
+  <!-- ******************* End of General Updates ************************************* -->
+</tbody>
+</table>
+<!-- ****************** END OF N&N TABLE ****************** -->
+
+<script type="text/javascript" src="scripts.js"></script>
+  <p style="text-align:center">
+    <span style="color:#808080">Previous</span> <a style="margin:1em" href=".">Up</a> <a href="jdt.php">Next</a>
+  </p>
+</body>
+</html>

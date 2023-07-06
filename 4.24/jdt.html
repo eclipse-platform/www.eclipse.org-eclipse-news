@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2018, 2022. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" type="text/css"/>
+<style type="text/css">
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+/*img {max-width: 520px;}*/
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+ul {padding-left: 13px;}
+</style>
+<title>Eclipse Project 4.24 - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Java development tools</h2>
+<ul>
+	<!--<li><a href="#JavaXX">Java&trade; XX Support</a></li>-->
+	<li><a href="#Java18">Java 18 Support</a></li>
+	<li><a href="#JUnit">JUnit</a></li>
+	<li><a href="#JavaEditor">Java Editor</a></li>
+	<!-- <li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li> -->
+	<!-- <li><a href="#JavaFormatter">Java Formatter</a></li> -->
+	<li><a href="#Debug">Debug</a></li>
+	<!-- <li><a href="#JDTDev">JDT Developers</a></li> -->
+</ul>
+
+<!-- ****************** START OF N&N TABLE ****************** -->
+<table class="news">
+<colgroup>
+  <col class="title" />
+  <col />
+</colgroup>
+<tbody>
+<!-- ******************* Java 18 Support ************************************* -->
+  <tr>
+    <td id="Java18" class="section" colspan="2">
+    <h2>Java&trade; 18 Support </h2></td>
+  </tr>
+   <tr id="Java_18"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=570733 -->
+      <td class="title">Java 18</td>
+      <td class="content">
+          <a href="https://jdk.java.net/18/">Java 18</a> is out and Eclipse JDT supports Java 18 in 4.24. 
+          <p></p>
+          <p>
+          The release notably includes the following Java 18 features:
+           <br/>
+           <a href="https://openjdk.java.net/jeps/420"> JEP 420: Pattern Matching for switch (Second Preview)</a>.
+           <br/>
+           <a href="https://openjdk.java.net/jeps/413"> JEP 413: Code Snippets in Java API Documentation</a>.
+           </p>
+           <p>
+           Please note that preview option should be on for <a href="https://openjdk.java.net/projects/jdk/18/">preview language features</a>.
+           For an informal introduction of the support, 
+           please refer to <a href="https://wiki.eclipse.org/Java18/Examples">Java 18 Examples wiki</a>. 
+           </p>
+      </td>
+  </tr>
+  <!-- ******************* End of Java 18 Support ************************************* -->
+
+
+  <!-- ******************* JUnit ************************************* -->
+  <tr>
+    <td id="JUnit" class="section" colspan="2">
+    <h2>JUnit</h2>
+    </td>
+  </tr>
+  <tr id="junit5-rerun-failures-first"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=578747 -->
+    <td class="title"><a href="#junit5-rerun-failures-first">JUnit 5 'Rerun failures first' support</a></td>
+    <td class="content">
+      Support for rerunning a test with failures first from the <b>JUnit View</b> is now supported for JUnit 5 tests.  This support already existed for JUnit4 tests but was previously disabled for JUnit5 testing.
+      <p>
+        To run, click on the <b>Rerun Test - Failures First</b> button in the JUnit view.</p>
+      <p><img src="images/run-failures-first-before.png" alt="Before"/></p>
+      <p>
+        After pressing the button:
+      </p>
+      <p><img src="images/run-failures-first-after.png" alt="After"/></p>
+    </td>
+  </tr>
+  <!-- ******************* End of JUnit ************************************* -->
+
+  <!-- ******************* Java Editor ************************************* -->
+  <tr>
+    <td id="JavaEditor" class="section" colspan="2">
+    <h2>Java Editor </h2>
+    </td>
+  </tr>
+  
+  <tr id="strconcat-to-textblock"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=561484 -->
+    <td class="title"><a href="#strconcat-to-textblock">Remove unused private method parameters</a></td>
+    <td class="content">
+      A new <b>cleanup</b> and <b>quick-assist</b> has been added to remove unused parameters of private methods. If removing parameters might
+      lead to a conflict with an another method, the private method is renamed to be unique. The cleanup is not available if there 
+      is a method reference to the method, as in <code>stream.filter(MyClass::foo)</code>
+      <p>
+        To apply the cleanup, select the <b>Remove unused private method parameters</b> checkbox on the <b>Unnecessary Code</b> tab in your cleanup profile:</p>
+      <p><img src="images/remove_param_1.png" alt="Preference"/></p>
+      <p>
+        With the cleanup, the following code:
+      </p>
+      <p><img src="images/remove_param_2.png" alt="Before"/></p>
+      <p>
+        changes to:
+      </p>
+      <p><img src="images/remove_param_3.png" alt="After"/></p>
+      <p>To remove a single parameter, a quick-assist has been added that can be activated with <b>CTRL+1</b> with the cursor located anywhere on the parameter.
+      </p>
+    </td>
+    </tr>
+
+    <tr id="extend_interface_assist"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567666 -->
+        <td class="title"><a href="#extend_interface_assist">Extend Interface</a></td>
+        <td class="content">
+            A new <b>quick-assist</b> has been added to extend an Interface. When selected, the new Interface wizard opens up.
+        <p><img src="images/extend_interface_assist.png" alt="Before" /></p>
+        </td>
+    </tr>
+
+  <tr id="extend-system-properties"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=571823 -->
+    <td class="title"><a href="#extend-system-properties">Extend Replace System.getProperty() calls clean up</a></td>
+    <td class="content">
+      The existing clean up has been extended to replace more <code>System.getProperty()</code> calls with suitable Java method calls instead. 
+      The previous <b>Boolean type property</b> option has been renamed to <b>Boxed type property</b> and now handles Boolean, Integer, and Long.
+      To specify, select the <b>Replace sytem property with constant</b> option and the sub-option: <b>Boxed type property</b> on the <b>Java Feature</b> page of your cleanup profile. 
+      <p>
+      <img src="images/systemproperty-option.png" alt="Options"/>
+      </p>
+      <p>
+        For the given code:
+      </p>
+      <p><img src="images/systemproperty-before.png" alt="Before"/></p>
+      <p>
+        One gets:
+      </p>
+      <p><img src="images/systemproperty-after.png" alt="After"/></p>
+    </td>
+  </tr>
+    
+    <tr id="create_sub_type_for_sealed_type"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=577317 -->
+        <td class="title"><a href="#create_sub_type_for_sealed_type">Create sub type for sealed super type</a></td>
+        <td class="content">
+            A new set of <b>quick-fixes</b> has been added to create sub-type for a sealed type which does not have any permitted types. When selected, the appropriate new <b>Class/Record/Interface wizard</b> opens up.
+            <p>These quick fixes have been added to fix the error : 
+            <code>Sealed class or interface lacks the permits clause and no class or interface from the same compilation unit declares Cls1 as its direct superclass or superinterface</code></p>
+        <p>As shown below, two new quick fixes have been added to create sub-type for a sealed super class.</p>
+        <p><img src="images/permitted_sub_class.png" alt="Before" /></p>
+        <p>As shown below, six new quick fixes have been added to create sub-type for a sealed super interface.</p>
+        <p><img src="images/permitted_sub_type.png" alt="Before" /></p>
+        </td>
+    </tr>
+<!-- ******************* End of Java Editor ************************************* -->
+
+  <!-- ******************* Java Views and Dialogs ************************************* -->
+  <!--
+  <tr>
+    <td id="JavaViewsAndDialogs" class="section" colspan="2">
+    <h2>Java Views and Dialogs</h2>
+    </td>
+  </tr>
+  -->
+  <!-- ******************* End of Java Views and Dialogs ************************************* -->
+
+  <!-- ******************* Java Compiler ************************************* -->
+  <!--
+  <tr>
+    <td id="JavaCompiler" class="section" colspan="2">
+    <h2>Java Compiler</h2>
+    </td>
+  </tr>
+  -->
+  <!-- ******************* End of Java Compiler ************************************* -->
+
+  <!-- ******************* Java Formatter ************************************* -->
+  <!--
+  <tr>
+    <td id="JavaFormatter" class="section" colspan="2">
+    <h2>Java Formatter </h2>
+    </td>
+  </tr>
+  -->
+  <!-- ******************* End of Java Formatter ************************************* -->
+  
+  <!-- *********************** Debug ******************************** -->
+  <tr>
+    <td id="Debug" class="section" colspan="2">
+    <h2>Debug</h2>
+    </td>
+  </tr>
+  
+  <tr id="debug-stack"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=547041 -->
+    <td class="title"><a href="#debug-stack">Console support for stack from Debug view</a></td>
+    <td class="content">
+      Surprisingly enough, <b>Java Stack Trace Console</b> never supported navigation to
+      Java types for Java stack traces copied from <b>Debug</b> view via <b>Copy Stack</b> action.
+      <p>
+       Now, the console will underline type names and line numbers and clicking on
+       links will jump to the corresponding source code. If the type name is not unique,
+       default <b>Select type</b> dialog will appear to allow selection of the right type.
+      </p>
+      <p><img src="images/java_stack_console.png" alt="Console shows links to Java types"/></p>
+    </td>
+  </tr>
+  <!--************************ End of Debug ******************************** -->
+
+  <!-- *********************** JDT Developers ******************************** -->
+  <!--
+  <tr>
+    <td id="JDTDev" class="section" colspan="2">
+    <h2>JDT Developers</h2>
+    </td>
+  </tr>
+  -->
+  <!-- *********************** End of JDT Developers ******************************** -->
+  <tr><td colspan="2"/></tr>
+</tbody>
+</table>
+<!-- ****************** END OF N&N TABLE ****************** -->
+
+<script type="text/javascript" src="scripts.js"></script>
+  <p style="text-align:center">
+    <a href="platform.php">Previous</a> <a style="margin:1em" href=".">Up</a> <a href="platform_isv.php">Next</a>
+  </p>
+</body>
+</html>

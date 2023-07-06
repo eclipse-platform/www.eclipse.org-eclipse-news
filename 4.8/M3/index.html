@@ -1,0 +1,424 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style type="text/css">
+p, table, td, th {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt}
+pre {  font-family: "Courier New", Courier, mono; font-size: 10pt}
+h2 { font-family: verdana, arial, helvetica, geneva; font-size: 18pt; font-weight: bold ; line-height: 14px}
+code {  font-family: "Courier New", Courier, mono; font-size: 10pt}
+sup {  font-family: verdana, arial, helvetica, geneva; font-size: 10px}
+h3 {  font-family: verdana, arial, helvetica, geneva; font-size: 14pt; font-weight: bold}
+li {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt}
+h1 {  font-family: verdana, arial, helvetica, geneva; font-size: 24pt; font-weight: bold}
+body {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt; margin-top: 5mm; margin-left: 3mm}
+.indextop { font-size: x-large; font-family: verdana, arial, helvetica, sans-serif; font-weight: bold}
+.indexsub { font-size: xx-small; font-family: verdana, arial, helvetica, sans-serif; color: #8080FF}
+a.bar:link {  text-decoration: none; color: #FFFFFF}
+a.bar:visited {  color: #FFFFFF; text-decoration: none}
+a.bar:hover {  color: #FFFFFF; text-decoration: underline}
+a.bar {  color: #FFFFFF}
+
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+  </style>
+<title>Eclipse Project Photon (4.8) M3 - New and Noteworthy</title>
+</head>
+
+<body>
+<h1>Eclipse Project Photon (4.8) M3 - New and Noteworthy</h1>
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#JDT">JDT</a></li>
+  <li><a href="#PDE">PDE</a></li>
+  <li><a href="#Platform-Dev">Platform Developers</a></li>
+</ul>
+
+<table class="news">
+  <colgroup>
+    <col class="title" />
+    <col />
+  </colgroup>
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+
+  <tr id="macos-waiting-cursor">
+    <td class="title">Animated waiting cursor on macOS</td>
+    <td class="content">
+      During long taking UI actions the cursor switches to a waiting cursor. On macOS this used to be a static black/white circle.
+      From Eclipse Photon the macOS system's busy cursor is changed to a spinning blue ball (also called beach ball).
+      <p>
+        <img src="images/macos-wait-cursor.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="preference-import-export-buttons">
+    <td class="title">Import/export preferences from preference dialog</td>
+    <td class="content">
+     Easily accessible buttons for opening the <b>Import/Export</b> preferences wizards have been added to the lower left corner of the <b>Preferences</b> dialog. The wizards are still accessible through the <b>File > Import...</b> and <b>File > Export...</b> wizards.
+     <p>
+    <img src="images/preference-import-export.png" alt=""/>
+    </p>
+    </td>
+  </tr>
+  
+  <tr id="windows-modern-directory-dialog">
+    <td class="title">The DirectoryDialog now uses modern style</td>
+    <td class="content">
+      The <b>DirectoryDialog</b> has been re-implemented to use modern native widget introduced in Windows Vista. 
+      The new look and feel is as illustrated below: 
+      <p>
+        <img src="images/windows-modern-directory-dialog.png" alt=""/>
+      </p>
+      <p>
+		<b>Regarding usage of newer <code>DirectoryDialog</code> on Windows:</b>
+		In the old <code>DirectoryDialog</code>, we used to have the option to set a text message to specify the purpose of the <code>DirectoryDialog</code> using <code>DirectoryDialog#setMessage(String)</code>.
+		This functionality is no more possible with the newer <code>DirectoryDialog</code>.
+      </p>
+      <p>
+		Hence, revisit the usage of <code>DirectoryDialog.setMessage(String)</code> in your projects, and if needed elaborate the Title field of <code>DirectoryDialog</code> using <code>DirectoryDialog.setText(String)</code> method.
+      </p>
+      <p>
+		Note: Recommend to use a minimal set of words in the Title field of <code>DirectoryDialog</code> and avoid making it look clumsy.
+      </p>
+    </td>
+  </tr>
+
+  <tr id="report-missing-nature-as-marker">
+    <td class="title">Report reference to missing nature as error marker</td>
+    <td class="comment">
+      On the <b>Workspace</b> preference page, there is now a new option to define the severity of an error marker
+      to show on a project when it references a nature that is not available.
+      <p>
+        <img src="images/missing-nature-preference.png" alt=""/>
+      </p>
+      <p>As a typical error markers, those are reported as decorator in the <b>Project Explorer</b> and as an
+      entry in the <b>Problems</b> view.</p>
+      <p>
+        <img src="images/missing-nature-marker.png" alt=""/>
+      </p>
+      <p>Clients can associate marker resolution factories to these markers, whose type id is <code>org.eclipse.core.resources.unknownNature</code>.</p>
+    </td>
+  </tr>
+
+  <tr id="open-resource-highlighting">
+    <td class="title">Expanded Highlighting in Open Resource Dialog</td>
+    <td class="content">
+      The Open Resource dialog now shows you how the search term matches the found resources by highlighting the names based on camel-case and pattern ( * and ? ) searches.
+      <p>
+        <img src="images/open-resource-highlight.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="unde-redo-toolbar">
+    <td class="title">Undo/Redo Toolbar Buttons</td>
+    <td class="content">
+      The main toolbar can now show Undo and Redo buttons.
+      <p>
+        <img src="images/undo-redo-toolbar.png" alt=""/>
+      </p>
+      <p>The buttons are not available by default. They can be added via <b>Window > Perspective > Customize Perspective...</b>:</p>
+      <p>
+        <img src="images/undo-redo-customize.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="keys-export-commandid-csv">
+    <td class="title">Export command id of key bindings to CSV</td>
+    <td class="content">
+      On the <b>Keys</b> preference page the <b>Export CSV</b> action exports additionally the command id for key bindings.
+      <p>
+        <img src="images/export-keys-dialog.png" alt="Keys Preference Page"/>
+      </p>
+      <p>
+        <a href="images/export-keys.csv"><img src="images/export-keys-csv.png" alt="Exported CSV file"/></a>
+      </p>
+    </td>
+    
+  </tr>
+  
+  <tr id="close-newly-imported-projects-upon-completion">
+    <td class="title">Close newly imported projects upon completion</td>
+    <td class="content">
+      The import wizard offers you the option to close the newly imported projects upon completion of the import process.
+	  This might be beneficial if you're importing many projects and/or some projects have time-consuming builders configured.
+	  This affects the wizards reachable via <b>File > Open Projects...</b>, <b>File > Import... > Existing Projects into Workspace</b>
+	  and <b>File > Import > Projects from Folder or Archive</b>
+      <p>
+        <img src="images/close-newly-imported-projects-upon-completion.png" alt="Smart Import Wizard"/>
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+
+  <tr id="java-9">
+    <td class="title">Eclipse support for Java&trade; 9</td>
+    <td class="content">
+      <a href="http://docs.oracle.com/javase/9/">Java&trade; 9</a> is here, and JDT fully supports it:
+		<ul>
+			<li>The Eclipse compiler for Java (ECJ) implements all the new Java 9 <a href="http://docs.oracle.com/javase/9/docs/technotes/guides/language/enhancements.html">language enhancements</a></li>
+			<li>Updated significant features to support Java Modules, such as compiler, search and many editor features.</li>
+		</ul>
+		<p><b>Note:</b>
+    It is not mandatory to run Eclipse with Java Runtime 9 to get the Java 9 support. However,
+    	a Java runtime 9 is required to be on a project's build path
+    	to compile a modular project against the system modules.
+    </p>
+	<ul>
+    <li>
+    <p>When a Java Runtime 9 is added to a project's build path, the system modules
+    are listed under the System library in the package explorer:</p>
+    <p><img src="images/java9-package-explorer.png" alt=""/></p>
+    </li>
+	</ul>
+	<ul>
+    <li>
+    <p>An existing non-modular Java project can be quickly converted to a module by 
+    creating a module-info.java for that project. This feature can be availed once the project has 
+    been moved to compliance 9:</p>
+    <p><img src="images/java9-create-module.png" alt=""/></p>
+    </li>
+	</ul>
+	<ul>
+    <li>
+    <p>With Java 9 support, a library or a container can now be added to the 
+    module path as opposed to the classpath:</p>
+    <p><img src="images/java9-module-path.png" alt=""/></p>
+    </li>
+	</ul>
+	<ul>
+    <li>
+    <p>Once an entry has been added to a project's module path, its contents and encapsulation
+    properties can further be modified by double-clicking on the <b>Is modular</b> node
+    (or using the <b>Edit</b> button while <b>Is modular</b> is selected):</p>
+    <ul>
+    <li>
+    On the <b>Contents</b> tab individual modules inside a container like <b>JRE System Library</b>
+    can be included or excluded by moving the module from left-to-right or vice versa.
+    Modules shown in the lower right box are implicitly included, because they are required
+    by one or more modules in the upper right box.
+     <p><img src="images/java9-module-container-contents.png" alt="Configuring the Contents of a module container"/></p>
+     </li>
+    <li>
+    On the <b>Details</b> tab the encapsulation of given modules can be further influenced.
+    The following example shows how module <code>module.one</code>
+    can be made to export one of its packages to the module of the current Java project:
+     <p><img src="images/java9-module-properties.png" alt=""/></p>
+     </li>
+    <li>Toggling <b>Defines one or more modules</b> (see above screenshot) lets you specify
+    whether a given regular (non-modular) jar file or project should be considered as an "automatic module".
+    As a consequence of changes here, the entry will move to the Modulepath or Classpath accordingly.</li>
+    </ul>
+    </li>
+	</ul>
+	<ul>
+    <li>
+    <p>Java search now includes a new search scope - Module:</p>
+    <p><img src="images/java9-module-search.png" alt=""/></p>
+    </li>
+	</ul>
+	<ul>
+    <li>
+    <p>When a Java Runtime 9 is added to a project's build path, the launch configurations are created with "Dependencies" tab and not the old "Classpath" tab.</p>
+    <p>User can change the JRE of launch configuration and on the confirmation, the tab changes from "Classpath" to "Dependencies" or vice versa. </p>
+    <p><img src="images/changing-tabs-launch-config.png" alt=""/></p>
+    <p>If Java project is modular and module is described in module_info.java, most of the dependencies will be defined in the Modular Entries.</p>
+    <p><img src="images/modular-dependencies.png" alt=""/></p>
+    <p>If Java project is not modular, most of the dependencies will be defined in the Classpath Entries.</p>
+    <p><img src="images/non-modular-dependencies.png" alt=""/></p>
+    </li>
+	</ul>
+	<ul>
+	<li>
+	<p>A new quick fix is offered on import statements to fix issues that are reported due to <b>missing module dependency</b></p>
+    <p>This QuickFix is applicable if the project is a Java9 project and has a <code>module-info.java</code>.</p>
+    <p>The quick fix can be invoked from the editor:</p>  
+    <p><img src="images/java9-module-requires-on-import.png" alt=""/></p>
+    <p>Before the quickFix is applied the module-info file looks as below</p>
+    <p><img src="images/java9-before-adding-module-requires-on-import.png" alt=""/></p>
+    <p>After the quickfix is invoked, <code> module-info.java</code> will be updated to include <code>requires 'MODULE_NAME'</code></p>
+    <p><img src="images/java9-after-adding-module-requires-on-import.png" alt=""/></p>    
+	</li>
+	</ul>
+	<ul>
+	<li>
+	<p>A new quick fix is available when you have an unresolved type in a Java file. If the unresolved type can be found in a java9 module, a quick fix will be available to add an import type entry to your file reporting the error and add the required module dependency to <code>module-info.java</code> file.</p>	
+	<p>This QuickFix is applicable if the project is a Java9 project and has a <code>module-info.java</code> file.</p>
+    <p>The quick fix can be invoked from the editor:</p>  
+    <p><img src="images/java9-module-requires-and-import-on-missing-type.png" alt=""/></p>
+    <p>Before the quickFix is applied, the module-info file looks as below</p>
+    <p><img src="images/java9-before-adding-module-requires-on-import.png" alt=""/></p>
+    <p>After the quickfix is invoked, <code> module-info.java</code> will be updated to include <code>requires 'MODULE_NAME'</code></p>
+    <p><img src="images/java9-after-adding-module-requires-on-import.png" alt=""/></p>
+    <p>After the quickFix is applied,  the required <code>import</code> statement is added to the file reporting error</p>
+    <p><img src="images/java9-after-adding-import-module-requires-and-import-on-missing-type.png" alt=""/></p>
+    </li>
+    </ul>
+    <ul>
+	<li>
+	<p>A new quick fix is available when you have an unresolved type on <code>service provider</code> in a provides directive in module-info.java file. If the unresolved type can not be found in the current module, a quick fix will be available to create a new class or an interface in the current module.</p>
+	<p>This QuickFix is applicable if the project is a Java9 project and has a <code>module-info.java</code> file.</p>
+    <p>The quick fix can be invoked from the editor:</p>  
+    <p><img src="images/java9-module-provides-create-class.png" alt=""/></p>
+    <p><img src="images/java9-module-provides-create-interface.png" alt=""/></p>
+    <p>When the service is a class, the quick fix is proposed for creating a class.</p>
+    <p>When the service is an interface or an annotation, two quick fixes are proposed for creating a class or an interface.</p>
+    </li>
+    </ul> 
+    </td>
+  </tr>
+
+  <tr id="junit5-tags">
+    <td class="title">Configure tags to include and exclude in JUnit launch configuration</td>
+    <td class="content">
+	  You can provide tags to be included in or excluded from a test run in the <b>Configure Tags</b> dialog of JUnit launch configuration:
+	  <p><img src="images/junit-tags.png" alt=""/></p>   
+    </td>
+  </tr>
+  
+  <tr id="junit5-test-reporter-in-console">
+    <td class="title"><code>TestReporter</code> entries displayed in Console view</td>
+    <td class="content">
+	  In JUnit Jupiter, a method parameter of type <code>TestReporter</code> can be used to publish additional data about the current test run which can be viewed in the <b>Console view</b>:
+	  <p><img src="images/junit5-test-reporter.png" alt=""/></p>
+	  <p><img src="images/junit5-test-reporter-console-view.png" alt=""/></p>
+    </td>
+  </tr>
+
+  <tr id="quickfix-nnbd-on-package">
+    <td class="title">Quick Fix to add <code>@NonNullByDefault</code> to packages</td>
+    <td class="content">
+      A new quick fix is offered to fix issues that are reported when the <b>Missing '@NonNullByDefault' annotation on package</b> warning is enabled.
+      <p>If the package already has a <code>package-info.java</code>, the quick fix can be invoked from the editor:</p>  
+      <p><img src="images/add-nnbd-existing-packageinfo.png" alt=""/></p>
+      <p>Otherwise, the quickfix must be invoked from the problems view, and will create a <code>package-info.java</code> with the required annotation:</p>
+      <p><img src="images/add-nnbd-create-packageinfo.png" alt=""/></p>
+      <p>When invoked from the problems view, both variations of the quick fix can fix the problem for multiple packages simultaneously.</p>  
+    </td>
+  </tr>
+  
+  <tr id="escape-non-ascii-when-pasting">
+    <td class="title">Escape non-ASCII characters when pasting into a string literal</td>
+    <td class="content">
+	  The <b>Java > Editor > Typing > Escape text when pasting into a string literal</b> preference option now has a suboption <b>Use Unicode escape syntax for non-ASCII characters</b>:
+      <p><img src="images/escape-non-ascii-settings.png" alt=""/></p>
+      When enabled, characters outside the visible ASCII range will be replaced by unicode escape sequences when pasted into a string: 
+      <p><img src="images/escape-non-ascii-example.png" alt=""/></p>
+    </td>
+  </tr>
+
+  <tr id="advanced-source-lookup">
+    <td class="title">Advanced source lookup implementation</td>
+    <td class="content">
+     More precise "advanced" source lookup implementation, particularly useful when debugging applications that load classes dynamically at runtime. 
+     New <code>org.eclipse.jdt.launching.workspaceProjectDescribers</code> extension point can be used to enable advanced source lookup for projects with non-default layout, like PDE Plug-In projects. 
+     New <code>org.eclipse.jdt.launching.sourceContainerResolvers</code> can be used to download sources jar files from remote artifact repositories, like Maven Central or Eclipse P2.
+     <p>Advanced source lookup affects debug launches only and can be enabled or disabled with <b>Java > Debug > Enable advanced source lookup</b> preference option:</p>
+     <p><img src="images/advanced-source-lookup.png" alt=""/></p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
+
+  <tr id="option-to-control-pde-compiler">
+    <td class="title">New option to control PDE compiler warning</td>
+    <td class="content">
+      There is an option to control the PDE compiler issue "Bundles with a Service-Component should set the Bundle-ActivationPolicy to lazy."
+      By default, this is set to warning.
+      <img src="images/pde-compiler-warning-option.png" alt=""/>
+    </td>
+  </tr>
+  
+  <tr id="env-argument-tag-generic-target-editor">
+    <td class="title">Support for environment argument tags in generic editor</td>
+    <td class="content">
+      For the target files, highlighting and auto-complete are supported for environment argument tags in Generic Text Editor and the Target Editor Source tab.
+      <img src="images/tp-enviro-support.png" alt=""/>
+    </td>
+  </tr>
+  
+  <tr id="pde-smart-import">
+    <td class="title">PDE detects and configure folders as projects during import</td>
+    <td class="content">
+    	When using the import wizard from <b>File > Open Projects from Filesystem...</b> or <b>File > Import... > General > Projects from Folder or Archive</b>, PDE detects
+    	folders that can be turned into PDE projects (ie folders which contain a <code>META-INF/MANIFEST.MF</code> or a <code>feature.xml</code>) and configure them accordingly.
+    	<p>Note that folders already configured as Eclipse projects (already containing a <code>.project</code> file) will be imported "as it" and won't be reconfigured by PDE.</p>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
+  </tr>
+
+  <tr id="throttler-api">
+    <td class="title">Throttler</td>
+    <td class="content">
+      UI updates in tight loops can degrade a system's performance, and users are also not capable to read information that fast.
+      In such cases class <code>org.eclipse.jface.util.Throttler</code> can now be used to limit the rate updates on the UI thread
+      with a specified time while executing the task wrapped in a <code>Runnable</code>.
+      <p>
+      An example for a use case are updates to a progress monitor, like in EGit's Import Project wizard. This wizard scans a directory
+      and report any found file to the progress (actually a <code>org.eclipse.jface.wizard.ProgressMonitorPart</code>). This happens
+      so fast that it can't be read, but overall it degrades the wizard's performance.
+      </p>
+      Usage example:
+      <pre>
+public class ProgressMonitorPart extends Composite implements
+        IProgressMonitorWithBlocking {
+    [...]
+    private Throttler throttledUpdate;
+    [...]
+    throttledUpdate = new Throttler(fLabel.getDisplay(), Duration.ofMillis(100), this::updateLabel);
+    [...]
+    protected void queueUpdateLabel() {
+       throttledUpdate.throttledExec();
+    }
+      </pre>
+    </td>
+  </tr>
+
+  <tr id="adapt-textselection-to-debug-variable">
+    <td class="title">Default debug hover contribution on Generic Editor</td>
+    <td class="content">
+      The Debug framework contributes to the Generic Editor when the hover represented by an <code>ITextSelection</code>
+      can be adapted to an <code>IVariable</code>. So in order to take advantage of debug details on Hover in the Generic
+      Editor, you can simply use the <code>org.eclipse.core.runtime.adpaters</code> extension point and define an <code>IAdapterFactory</code>
+      from <code>ITextSelection</code> to <code>IVariable</code> to enable this feature.
+      <p>If the current selection cannot be adapted (all adapter factories return null), the contribution to Generic Editor is ignored.</p>
+      <p>The JDT project already contributes such an adapter.</p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"/>
+  </tr>
+</table>
+
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Photon milestone builds:</p>
+<ul>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.8/M2/">News for Eclipse Photon milestone build M2</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.8/M1/">News for Eclipse Photon milestone build M1</a></li>
+</ul>
+
+<script type="text/javascript" src="../scripts.js"></script>
+
+</body>
+</html>

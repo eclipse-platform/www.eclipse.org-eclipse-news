@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2018, 2019. This page is made available under license. For full details, see the LEGAL section in the documentation that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" type="text/css"/>
+<style type="text/css">
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+/*img {max-width: 520px;}*/
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+ul {padding-left: 13px;}
+</style>
+<title>Eclipse Project 4.13 - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Platform and Equinox</h2>
+<ul>
+    <li><a href="#ViewsAndDialogs">Views, Dialogs and Toolbar</a></li>
+    <li><a href="#Debug">Debug</a></li>
+    <li><a href="#Preferences">Preferences</a></li>
+    <li><a href="#StylingThemes">Themes and Styling</a></li>
+    <li><a href="#GeneralUpdates">General Updates</a></li>
+</ul>
+
+<!-- ****************** START OF N&N TABLE ****************** -->
+<table class="news">
+<colgroup>
+  <col class="title" />
+  <col />
+</colgroup>
+<tbody>
+
+  <!-- ******************* Views, Dialogs and Toolbar ************************************* -->
+  <tr>
+    <td id="ViewsAndDialogs" class="section" colspan="2">
+    <h2>Views, Dialogs and Toolbar </h2>
+    </td>
+  </tr>
+
+  <tr id="quick-text-search"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=548518 -->
+    <td class="title">Quick Search</td>
+    <td class="content">
+       The new <b>Quick Search</b> dialog provides a convenient, simple and fast way to run a textual 
+      search across your workspace and jump to matches in your code. The dialog provides a quick overview 
+      showing matching lines of text at a glance. It updates as quickly as you can type and allows for quick 
+      navigation using only the keyboard. A typical workflow starts by pressing the keyboard shortcut <b>Ctrl+Alt+Shift+L </b>
+      (or<b> Cmd+Alt+Shift+L</b>  on Mac). Typing a few letters updates the search result as you type. Use <b>Up-Down</b> arrow keys 
+      to select a match, then hit <b>Enter</b> to open it in an editor.  
+      <p>
+       <img src="images/quick-search.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="save-action-project-explorer"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=211520 -->
+    <td class="title">Save editor when Project Explorer has focus</td>
+    <td class="content">
+      You can now save the active editor even when the <b>Project Explorer</b> has focus. In cases where an extension contributes <b>Saveables</b> to the Project Explorer, 
+      the extension is honored and the save action on the Project Explorer will save the provided saveable item instead of the active editor.
+      <p>
+       <img src="images/save_project_explorer.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="showin-action-project-explorer"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=314642 -->
+    <td class="title">"Show In" context menu available for normal resources</td>
+    <td class="content">
+      The <b>Show In</b> context menu is now available for an element inside a resource project on the <b>Project Explorer</b>.
+      <p>
+       <img src="images/showin_project_explorer.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="colors-in-compareviewer"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=450320 -->
+    <td class="title">Show colors for additions and deletions in Compare viewer</td>
+    <td class="content">
+      In simple cases such as a 2-way comparison or a 3-way comparison with no merges and conflicts, the <b>Compare Viewer</b> now shows different colors, 
+	  depending on whether text has been added, removed or modified. The default colors are green, red and black respectively.
+      <p>
+        <img src="images/compare-editor-colors.png" alt=""/>
+      </p>
+      <p>
+      	The colors can be customized through usual theme customization approaches, including using related entries in the <b>Colors and Fonts</b>
+      	preference page.
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="editor-status-line"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=549604 -->
+    <td class="title">Editor status line shows more selection details</td>
+    <td class="content">
+      The status line for <b>Text Editors</b> now shows the cursor position, and when the editor has something selected, 
+      shows the number of characters in the selection as well. This also works in the block selection mode.
+      <p>
+      	These two new additions to the status line can be disabled via the <b>General &gt; Editors &gt; Text Editors</b> preference page.
+      </p>
+      <p>
+        <img src="images/selection-count.png" alt=""/>
+      </p>
+      <p>
+        <img src="images/selection-offset.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="shorter-dialog-texts"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=549939 -->
+   <td class="title">Shorter dialog text</td>
+    <td class="content">
+      Several dialog texts have been shortened. This allows you to capture the important information faster.
+      <p>Previously:</p>
+      <p>
+        <img src="images/long-dialog-text.png" alt=""/>
+      </p>
+      <p>Now:</p>
+       <p>
+        <img src="images/short-dialog.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="close-project-via-middle-click"><!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=549894 -->
+	<td class="title">Close project via middle-click</td>
+    <td class="content">
+	  In the <b> Project Explorer</b>, you can now close a project using middle-click.
+    </td>
+  </tr>
+
+  <!-- ******************* End of Views, Dialogs and Toolbar ************************************* -->
+
+  <!-- ****************** Debug ************************************* -->
+  <tr>
+    <td id="Debug" class="section" colspan="2">
+    <h2>Debug </h2>
+    </td>
+  </tr>
+
+  <tr id="environment-table-improvements"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=548344 and https://bugs.eclipse.org/bugs/show_bug.cgi?id=548520 -->
+    <td class="title">Improved usability of Environment tab in Launch Configurations</td>
+    <td class="content">
+      In the <b>Environment Tab</b> of the <b>Launch Configuration</b> dialog, you can now double-click on an environment variable name or value and start editing it directly from the table.
+      <p>
+       <img src="images/environment-variable-inline-editing.png" alt=""/>
+      </p>
+       Right-clicking on the environment variable table now opens a context menu, allowing for quick addition, removal, copying, and pasting of environment variables.
+      <p>
+       <img src="images/environment-variable-context-menu.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="external-tool-showcommandline"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=548886 -->
+    <td class="title">Show Command Line for external program launch</td>
+    <td class="content">
+      The <b>External Tools Configuration</b> dialog for launching an external program now supports the <b>Show Command Line</b> button.
+      <p>
+       <img src="images/external-tool-showcommandline.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <!-- ****************** End of Debug ************************************* -->
+
+  <!-- ****************** Preferences ************************************* -->
+  <tr>
+    <td id="Preferences" class="section" colspan="2">
+    <h2>Preferences </h2>
+    </td>
+  </tr>
+
+  <tr id="close-editors-automatically"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=490353 -->
+    <td class="title">Close editors automatically when reaching 99 open editors</td>
+    <td class="content">
+      The preference to close editors automatically is now enabled by default. It will be triggered when you have opened 99 files.
+      If you continue to open editors, old editors will be closed to protect you from performance problems.
+      You can modify this setting in the <b>Preferences</b> dialog via the <b>General &gt; Editors &gt; Close editors automatically</b> preference.
+    </td>
+  </tr>
+
+  <tr id="text-editors-color-preview">
+    <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=548057 -->
+    <td class="title">In-table color previews for Text Editor appearance color options</td>
+    <td class="content">
+      You can now see all the colors currently being used in <b>Text Editors</b> from the Appearance color
+      options table, located in the <b>Preferences &gt; General &gt; Editors &gt; Text Editor</b> page.
+      <p>
+        <img src="images/text-editors-color-intable.png" alt="" />
+      </p>
+    </td>
+  </tr>
+  
+   <tr id="ui-freeze-monitor">
+    <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=548385 -->
+    <td class="title">Automatic detection of UI freezes in the Eclipse SDK</td>
+    <td class="content">
+      The Eclipse SDK has been configured to show stack traces for UI freezes in the <b>Error Log</b> view by default for new workspaces.
+      You can use this information to identify and report slow parts of the Eclipse IDE.
+      <p>
+        <img src="images/freeze-event.png" alt="" />
+      </p>
+      You can disable the monitoring or tweak its settings via the options in the <b>General &gt; UI Responsiveness Monitoring</b> preference page as shown below.
+      <p>
+        <img src="images/ui-monitor-preference.png" alt="" />
+      </p>
+      
+    </td>
+	    
+  </tr>
+
+  <!-- ****************** End of Preferences ************************************* -->
+
+  <!-- ******************* Themes and Styling ************************************* -->
+  <tr>
+    <td id="StylingThemes" class="section" colspan="2">
+    <h2>Themes and Styling </h2>
+    </td>
+  </tr>
+  
+  <tr id="start-in-dark-theme"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=547038 -->
+    <td class="title">Start automatically in dark theme based on OS theme</td>
+    <td class="content">
+      On Linux and Mac, Eclipse can now start automatically in dark theme when the OS theme is dark.
+      This works by default, that is on a new workspace or when the user has not explicitly set or changed the theme in Eclipse.
+    </td>
+  </tr>
+  
+  <tr id="help-system-dark"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=532185 -->
+    <td class="title">Display of Help content respects OS theme</td>
+    <td class="content">
+      More and more operating systems provide a system wide dark theme. Eclipse now respects this system wide theme setting 
+      when the Eclipse help content is displayed in an external browser. A prerequisite for this is a browser that supports 
+      the <em><a href="https://caniuse.com/#search=prefers-color-scheme">prefers-color-scheme</a></em> CSS media query. 
+      <p>
+      	As of writing this the following browser versions support it:
+      </p>
+      <ul>
+        <li>Firefox version 67</li>
+        <li>Chrome version 76</li>
+        <li>Safari version 12.1</li>
+      </ul>
+      <img src="images/help_system_dark.png" alt="Eclipse help content in dark theme" style="width: 100%"/>
+      </td>
+  </tr>
+  
+  <tr id="help-system-svg"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=548008 -->
+    <td class="title">Help content uses high resolution icons</td>
+    <td class="content">
+        The <b>Help System</b> as well as the help content of the <b>Eclipse Platform</b>, the <b>Java Development Tooling</b> and
+        the <b>Plug-in Development Environment</b> now use high resolution icons.
+        They are now crisp on high resolution displays and also looks much better in the dark theme.
+        <p>
+          <img src="images/help_system_high_res.png" alt="Eclipse help with high resolution icons" style="width: 100%"/></p>
+      </td>
+  </tr>
+  
+  <tr id="styling-forms"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=549969 -->
+    <td class="title">Improved dark theme on Windows</td>
+    <td class="content">
+      Labels, Sections, Checkboxes, Radio Buttons, FormTexts and Sashes on forms now use the correct background color in the dark mode on windows.
+      <p> 
+       <img src="images/correct_backgrounds.png" alt="Old and New styling of forms" style="width: 100%"/>
+      </p>
+      </td>
+  </tr>
+  <!-- ******************* End of Themes and Styling ************************************* -->
+
+  <!-- ******************* General Updates ************************************* -->
+  <tr>
+    <td id="GeneralUpdates" class="section" colspan="2">
+    <h2>General Updates </h2>
+    </td>
+  </tr>
+  <tr id="ui-performance"> <!-- multiple bugs -->
+    <td class="title">Interactive performance</td>
+    <td class="content">
+    	Interactive performance has been further improved in this release and several UI freezes have been fixed.
+    </td>
+  </tr>
+  
+  <tr id="show-keybinding"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=540440 -->
+    <td class="title">Show key bindings when command is invoked</td>
+    <td class="content">
+      For presentations, screen casts and learning purposes, it is very helpful to show the corresponding 
+      key binding when a command is invoked. When the command is invoked (via a key 
+      binding or menu interaction) the key binding, the command's name and description are shown 
+      on the screen.
+      <p> 
+       <img src="images/show_key_bindings.png" alt="Key binding of triggered command shown on screen" style="width: 90%"/>
+      </p>
+      <p>
+       You can activate this in the <b>Preferences</b> dialog via the <em>Show key binding when command is invoked</em> check box on the <b>General &gt; Keys</b> preference page.
+       To toggle this setting quickly the command 'Toggle Whether to Show Key Binding' can be used (e.g. via the quick access).
+      </p>    
+      </td>
+  </tr>
+    <!-- ******************* End of General Updates ************************************* -->
+</tbody>
+</table>
+<!-- ****************** END OF N&N TABLE ****************** -->
+
+<script type="text/javascript" src="scripts.js"></script>
+  <p style="text-align:center">
+    <span style="color:#808080">Previous</span> <a style="margin:1em" href=".">Up</a> <a href="jdt.php">Next</a>
+  </p>
+</body>
+</html>

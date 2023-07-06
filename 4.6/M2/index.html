@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="default_style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse Project Neon (4.6) M2 News</title>
+</head>
+<body>
+<h1>Eclipse Project Neon (4.6) M2 - New and Noteworthy</h1>
+<p>Here are some of the more noteworthy things available in the Neon milestone build M2 
+  which is now available for <a href="http://download.eclipse.org/eclipse/downloads/#4.6_Stable_Build" target="_top">download</a>.
+  <br/>
+  We also recommend to read the Tips and Tricks, either via <b>Help &gt; Tips and Tricks...</b> or online for
+  <a href="http://help.eclipse.org/topic/org.eclipse.platform.doc.user/tips/platform_tips.html">Platform</a>,
+  <a href="http://help.eclipse.org/topic/org.eclipse.jdt.doc.user/tips/jdt_tips.html">JDT</a>, and
+  <a href="http://help.eclipse.org/topic/org.eclipse.pde.doc.user/tips/pde_tips.htm">PDE</a>.
+</p>
+
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#Platform-Dev">Platform Developers</a></li>
+  <li><a href="#PDE">PDE</a></li>
+</ul>
+
+<table class="news">
+  <colgroup>
+    <col class="title" />
+    <col />
+  </colgroup>
+
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+
+  <tr id="search-binary-files">
+    <td class="title">Search in binary files</td>
+    <td class="content">
+      The <b>Search &gt; File...</b> dialog has a new option to search in binary files as well.
+      <p>
+        <img src="images/search-binary-files.png" alt=""/>
+      </p>
+      By default, the option is disabled, and matches are only reported in files that have the <i>Text</i>
+      content type, or in files that have no content type and don't contain the null character (\u0000).
+	</td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
+  </tr>
+  
+  <tr id="menuitem-tooltips">
+    <td class="title">Tooltips on menu items for Eclipse 4 applications</td>
+    <td class="content">
+    	SWT introduced tooltips for menu items in the Eclipse Mars release. The default SWT renderers have been extended to support these tooltips on menu items, i.e., if
+    	you enter them in your application model, they will be displayed.  
+    	<p>
+      		<img src="images/menuitem-tooltips.png" alt="Menu tooltips in Eclipse 4 RCP"/>
+      	</p>
+	</td>
+  </tr>
+
+
+  <tr id="perspective-handlercontainer">
+    <td class="title">Perspective becomes a handler container</td>
+    <td class="content">
+    	In addition to windows and parts, perspectives can now also define handlers. Those handlers will get active
+    	when the containing perspective is active. As before, handlers of more deeply nested containers override less deeply nested ones, i.e., 
+    	handlers defined for parts override handlers for perspectives, while the 
+    	handlers for a perspective override the ones defined for the window.
+	</td>
+  </tr>
+
+  <tr id="job-create">
+    <td class="title">New Job creation methods</td>
+    <td class="content">
+    	Three new static methods for creating jobs have been added to
+    	the <code>org.eclipse.core.runtime.jobs.Job</code> class. These methods are particularly
+    	convenient with lambdas. For example, to do an asynchronous resource refresh, you can write: 
+<pre>
+IResource resource = ...;
+Job.create("Refreshing files",
+    monitor -> resource.refreshLocal(IResource.DEPTH_INFINITE, monitor)
+).schedule();
+</pre>
+If you want the job to be hidden from the user, you can write: 
+<pre>
+IResource resource = ...;
+Job.createSystem(
+    monitor -> resource.refreshLocal(IResource.DEPTH_INFINITE, monitor)
+).schedule();
+</pre>
+	</td>
+  </tr>
+
+  <tr id="icorerunnable">
+    <td class="title">ICoreRunnable interface</td>
+    <td class="content">
+        The job creation methods described above use the new
+        <code>org.eclipse.core.runtime.ICoreRunnable</code> functional interface. This interface is
+        functionally equivalent and is intended as a replacement for
+        <code>org.eclipse.core.resources.IWorkspaceRunnable</code>. All new code should use
+        <code>ICoreRunnable</code> instead of <code>IWorkspaceRunnable</code>.
+	</td>
+  </tr>
+
+  <tr id="databinding-generics">
+    <td class="title">Adding generics to Eclipse data binding</td>
+    <td class="content">
+        The org.eclipse.core.databinding.property and org.eclipse.core.databinding.observable plug-ins have been generified. Further generics work
+        is planned for later milestones.
+	</td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
+   <tr id="pdebuildwarning">
+    <td class="title">Warnings for missing build entries for model fragments and the application model</td>
+    <td class="content">
+    	If an Eclipse 4 model fragment or application model file is not included in the build.properties file, 
+    	PDE will issue warnings.  
+		<p>
+      		<img src="images/pdewarnings.png" alt="Build warnings"/>
+      	</p>
+	</td>
+  </tr>
+  
+  
+  <tr>
+    <td colspan="2"/>
+  </tr>
+</table>
+
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Neon milestone builds:</p>
+<ul>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.6/M1/">News for Eclipse Neon milestone build M1</a></li>
+</ul>
+
+</body>
+</html>

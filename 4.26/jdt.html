@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2018, 2019. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" type="text/css"/>
+<style type="text/css">
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+/*img {max-width: 520px;}*/
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+ul {padding-left: 13px;}
+</style>
+<title>Eclipse Project 4.26 - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Java development tools</h2>
+<ul>
+	<li><a href="#Java19">Java 19 Support</a></li>
+	<li><a href="#JavaEditor">Java Editor</a></li>
+</ul>
+
+<!-- ****************** START OF N&N TABLE ****************** -->
+<table class="news">
+<colgroup>
+  <col class="title" />
+  <col />
+</colgroup>
+<tbody>
+
+   <!-- ******************* Java 19 Support ************************************* -->
+  <tr>
+    <td id="Java19" class="section" colspan="2">
+    <h2>Java&trade; 19 Support </h2>
+    </td>
+  </tr>
+  <tr id="Java_19"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=575752 -->
+      <td class="title">Java 19</td>
+      <td class="content">
+          <a href="http://jdk.java.net/19/">Java 19</a> is out and Eclipse JDT supports Java 19 in 4.26. 
+          <p></p>
+          <p>
+          The release notably includes the following Java 19 features:
+           <br/>
+           <a href="https://openjdk.java.net/jeps/405"> JEP 405: Record Patterns (Preview)</a>.
+           <br/>
+           <a href="https://openjdk.java.net/jeps/427"> JEP 427: Pattern Matching for Switch (Third Preview)</a>.
+           <br/>
+           <a href="https://openjdk.java.net/jeps/425"> JEP 425: Virtual Threads (Preview)</a>.
+           <br/>
+           <a href="https://openjdk.java.net/jeps/428"> JEP 428: Structured Concurrency (Incubator)</a>.
+           </p>
+           <p>
+           Please note that preview option should be on for <a href="http://openjdk.java.net/projects/jdk/19/"> preview language features</a>.
+           For an informal introduction of the support, 
+           please refer to <a href="https://wiki.eclipse.org/Java19/Examples"> Java 19 Examples wiki</a>. 
+           </p>
+      </td>
+  </tr>
+  <!-- ******************* End of Java 19 Support ************************************* -->
+
+  <!-- ******************* Java Editor ************************************* -->
+  <tr>
+    <td id="JavaEditor" class="section" colspan="2">
+    <h2>Java Editor </h2>
+    </td>
+  </tr>
+
+  <tr id="new-class-assists"> <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/295 -->
+    <td class="title"><a href="#new-class-assists">New assists for class</a></td>
+    <td class="content">
+      Some existing actions found in the <b>Source</b> menu have been made available as quick assists for a class. These actions are:
+      <ol>
+      <li>Generate getters and setters</li>
+      <li>Generate hashCode()/equals() methods</li>
+      <li>Generate toString() method</li>
+      </ol>
+      <p>All three actions require that there at least be one field in the class and that the action is required: namely, that <code>getters/setters, 
+       hashCode()/equals(), or toString()</code> methods do not already exist. Each action will bring up a dialog for the user to make additional
+       specifications (e.g. which fields to use).
+      </p>
+      <p>To use the quick assist, select a class and specify <b>CTRL+1</b>.
+      </p>
+      <p><img src="images/new-class-assists.png" alt="New Assists"/></p>
+    </td>
+  </tr>
+
+  <tr id="smarter-extract-local"> <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/66 -->
+    <td class="title"><a href="#smarter-extract-local">Improved 'Extract local variable'</a></td>
+    <td class="content">
+      The extract local variable refactoring available from <b>Refactor &gt; Extract Local Variable</b> has been improved to recognize
+      situations where adding the local variable may cause a NullPointerException as it precedes code used to check for null.  In these cases, 
+      the positioning of the local variable is altered so the null check occurs before the variable declaration.
+      <p>For example, in the following class, a call to the String length() method is made after verifying the String variable is not null.</p>
+      <p><img src="images/extract-local-var-before.png" alt="Before"/></p>
+      <p>If we select the <b>s.length()</b> call and choose to extract this to a local variable to replace all occurrences, the result is:</p>
+      <p><img src="images/extract-local-var-after.png" alt="Before"/></p>
+      <p>Note how the declaration is after the if statement to ensure that the check for null occurs first</p>
+    </td>
+  </tr>
+  <!-- ******************* End of Java Editor ************************************* -->
+
+  <tr><td colspan="2"/></tr>
+</tbody>
+</table>
+<!-- ****************** END OF N&N TABLE ****************** -->
+
+<script type="text/javascript" src="scripts.js"></script>
+  <p style="text-align:center">
+    <!--<a href="platform.php">Previous</a>-->
+    <a style="margin:1em" href=".">Up</a> <a href="platform_isv.php">Next</a>
+  </p>
+</body>
+</html>

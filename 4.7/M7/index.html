@@ -1,0 +1,389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse Project Oxygen (4.7) M7 News</title>
+</head>
+<body>
+<h1>Eclipse Project Oxygen (4.7) M7 - New and Noteworthy</h1>
+<p>Here are some of the more noteworthy things available in the Oxygen milestone build M7
+  which is now available for <a href="http://download.eclipse.org/eclipse/downloads/#4.7_Stable_Builds" target="_top">download</a>.
+  <br/>
+  We also recommend to read the Tips and Tricks, either via <b>Help &gt; Tips and Tricks...</b> or online for
+  <a href="http://help.eclipse.org/topic/org.eclipse.platform.doc.user/tips/platform_tips.html">Platform</a>,
+  <a href="http://help.eclipse.org/topic/org.eclipse.jdt.doc.user/tips/jdt_tips.html">JDT</a>, and
+  <a href="http://help.eclipse.org/topic/org.eclipse.pde.doc.user/tips/pde_tips.htm">PDE</a>.
+</p>
+
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#JDT">JDT</a></li>
+  <li><a href="#PDE">PDE</a></li>
+  <li><a href="#Platform-Dev">Platform Developers</a></li>
+  <li><a href="#Equinox">Equinox</a></li>
+</ul>
+
+<table class="news">
+  <colgroup>
+    <col class="title" />
+    <col />
+  </colgroup>
+
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+
+  <tr id="unix-platforms-dropped">
+    <td class="title">No Linux PPC 32-bit builds</td>
+    <td class="content">
+	  The Eclipse project has dropped support for Linux PPC 32-bit.
+	  For this platform, no builds are available any more.
+	  <p>
+	  For the Photon (4.8) release, we plan to drop support for the ppc64 builds as well, but keep ppc64le.
+	  </p>
+    </td>
+  </tr>
+
+  <tr id="eclipse-as-signed-dmg">
+    <td class="title">Eclipse as Apple disk image</td>
+    <td class="content">
+      Eclipse SDK and Eclipse Platform products are delivered as signed Apple disk images on Mac OS X.
+      For this platform, builds are available in signed dmg (Apple Disk Image) format on the download page.
+    </td>
+  </tr>
+
+  <tr id="dark-styling-pseudo-attributes">
+    <td class="title">Support for extending existing CSS preference nodes</td>
+    <td class="content">
+      CSS definitions for preferences can now use pseudo selectors.
+      This allows that other plug-ins extend preference CSS nodes, instead of overriding them.
+      This makes the default Eclipse dark theme much more consistent and usable.
+
+      <p>
+      Example styling with EGit installed before this development:
+      </p>
+      <p>
+        <img src="images/code-completion-dark-theme-old.png" alt=""/>
+      </p>
+       <p>
+        <img src="images/old-search-result-hightlight-color.png" alt=""/>
+      </p>
+      <p>
+        Example styling with EGit installed after this development:
+      </p>
+      <p>
+        <img src="images/code-completion-dark-theme-new.png" alt=""/>
+      </p>
+      <p>
+        <img src="images/new-search-result-hightlight-color.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="default-dark-styling-table-headers">
+    <td class="title">Default styling for table and tree headers</td>
+    <td class="content">
+    The Eclipse default dark theme includes styling for the table and tree headers (which is now also supported on the Mac platform).
+    <p>
+        <img src="images/styled_table_header_dark_theme.png" alt="" />
+    </p>
+    <p>
+        <img src="images/styled_tree_header_dark_theme.png" alt="" />
+    </p>
+    </td>
+  </tr>
+
+   <tr id="list-dnd-effect">
+    <td class="title">DnD source image for List widget (GTK only)</td>
+    <td class="content">
+    When items are being dragged from a <code>List</code> widget, their content now moves with the mouse cursor.
+    <p>
+        <img src="images/listdnd.png" alt="" />
+    </p>
+    </td>
+  </tr>
+
+  <tr id="copy-preferences-during-ws-switch">
+    <td class="title">Option to copy your preferences during workspace switch</td>
+    <td class="content">
+    You can now copy your preferences during a switch to a new or existing workspace.
+    <p>
+        <img src="images/copy-preferences-ws-switch.png" alt="" />
+    </p>
+    </td>
+  </tr>
+
+  <tr id="preference-for-problems-decorations-on-startup">
+    <td class="title">Option to disable Problems view decoration on startup</td>
+    <td class="content">
+    By default, the <b>Problems</b> view icon no longer shows an errors/warnings overlay after startup,
+    unless the Problems view is on top of the view stack.
+    To enable the errors/warnings overlay also if the Problems view is minimized or not on top,
+    a new <b>Show Problems view decorations on startup</b> option has been added to
+    <b>Preferences &gt; General &gt; Startup and Shutdown</b>.
+    By default, this preference is disabled.
+    <p>
+        <img src="images/problems-view-startup-preference.png" alt="" />
+    </p>
+    </td>
+  </tr>
+
+  <tr id="ant-version-upgrade">
+    <td class="title">Ant 1.10.1</td>
+    <td class="content">
+      Eclipse has adopted Ant version 1.10.1.
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+
+  <tr id="hide-deprecated-fields-and-methods">
+    <td class="title">Hide deprecated fields and methods</td>
+    <td class="content">
+      You can now hide the deprecated fields and methods in Outline view, Members view, Package Explorer view, Project Explorer view, and
+      Quick Outline by using the new filter from their drop-down menu (<b>Ctrl+F10</b>):
+      <p>
+        <img src="images/hide-deprecated-fields-and-methods.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="group-by-project-in-search-view">
+    <td class="title">Group by Project in Search view</td>
+    <td class="content">
+      The default grouping of Java search results in the Search view has been changed to Group by Project. Earlier the results were grouped by package.
+      <p>
+        <img src="images/group-by-project-in-search-view.png" alt=""/>
+      </p>
+      You can use the buttons in the view tool bar to Group by Project, Package, File, or Type.
+    </td>
+  </tr>
+
+  <tr id="defaults-for-annotation-type-elements-in-javadoc">
+    <td class="title">Defaults for annotation type elements in Javadoc</td>
+    <td class="content">
+      The default value of an annotation type element is now shown in the Javadoc view and hover.
+      <p>
+        <img src="images/defaults-for-annotation-type-elements-in-javadoc.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="new-java-index">
+    <td class="title">New Java index</td>
+    <td class="content">
+      The experimental new Java index added in Eclipse 4.7 M3 has been disabled by default. You can enable it from <b>Preferences &gt; Java</b>:
+      <p>
+        <img src="images/new-java-index.png" alt=""/>
+      </p>
+      The new <b>Rebuild Index</b> button can be used to delete all information cached in the Java index.
+      This can be used to save disk space after the new index got disabled, and to fix index corruption.
+    </td>
+  </tr>
+  
+  <tr id="enable-show-logical-structure">
+    <td class="title">Show Logical Structure enabled by default</td>
+    <td class="content">
+      In the <b>Variables</b> view, <b>Show Logical Structure</b> is now enabled by default.
+      E.g. collection objects now directly show their contained elements instead of their internal structure.
+      <p>
+        <img src="images/jdt-debug-show-logical-structure-by-default.png" alt=""/>
+      </p>
+      The <b>Show Logical Structure</b> context menu lets you choose or edit the representation.
+       <p>
+        <img src="images/jdt-debug-edit-logical-structure-context-menu.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="processor-option-variables">
+    <td class="title">Pass compiler options to annotation processors</td>
+    <td class="content">
+      You can now pass compiler options to annotation processors using <code>%variable%</code> syntax in <b>Project > Properties > Java Compiler > Annotation Processing</b>.
+      <p>
+        <img src="images/jdt-apt-processor-option-variables.png" alt=""/>
+      </p>
+      This allows processors to compile Java sources using the Java project's settings without manually maintaining this information in the processor options.
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
+
+  <tr id="manage-versions-for-included-features">
+    <td class="title">Manage versions for included features</td>
+    <td class="content">
+      The <b>PDE Feature editor</b> now allows you to manage versions for included features (previously this was possible for included plug-ins only).
+      In the <b>Included Features</b> tab, a new <b>Versions...</b> button has been added, which allows you to synchronize the current feature with
+      actual versions of included features, or sets included feature versions to be synchronized on build.
+      <p>
+        <img src="images/pde-version-included-feature.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="target-editor-set-active-reload">
+    <td class="title">Reload Target Editor</td>
+    <td class="content">
+      When a target platform is already active, the <b>Target Editor</b> now shows a <b>Reload Target Platform</b> link instead of <b>Set Active Platform</b>. 
+      The reload link has the same effect as pressing the <b>Reload</b> button in the <b>Plug-in Development &gt; Target Platform</b> preference page.
+      <p>
+        <img src="images/pde-target-editor-reload.png" alt=""/>
+      </p>
+      If the .target file has been modified, clicking the
+      link will now ask you to save the target editor and then reload the target.
+    </td>
+  </tr>
+  
+  <tr id="tracing-tab-restore-deault">
+    <td class="title">Tracing tab in launch configuration dialog has restore to defaults options</td>
+    <td class="content">
+       In the launch configuration dialog, on the <b> Tracing</b> tab, there are new options to <b>Restore Selected to Defaults</b>
+       and <b>Restore All to Defaults</b>.
+      <p>
+        <img src="images/pde-restore-default-tracing-tab.png" alt=""/>
+      </p>
+     
+    </td>
+  </tr>
+  
+  <tr id="a-quick-fix-for-apitool-pde-compiler-problems">
+    <td class="title">Quick Fix to configure problem severity</td>
+    <td class="content">
+      You can now configure the severity of an <b>API tools </b>problem or <b>PDE compiler</b> problem by invoking the new <b>Quick Fix (Ctrl+1)</b>.
+      <br/>
+      <br/>
+   
+      <p>
+        <img src="images/pde-configure-problem-api-tool.png" alt=""/>
+      </p>
+     
+      For API tools problems, the Quick Fix will open the <b>Plug-in Development &gt; Errors/Warnings</b>
+      preference page and highlight the configurable problem.
+      
+      <br/>
+      <br/>
+      
+      <p>
+        <img src="images/pde-configure-problem-pde-compiler.png" alt=""/>
+      </p>
+      
+       For PDE compiler problems, the Quick Fix will open the <b>Plug-in Development &gt; Compilers</b>
+       preference page and highlight the configurable problem.
+     
+    </td>
+  </tr>
+
+
+  <tr>
+    <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
+  </tr>
+
+  <tr id="table-header-styling-css">
+    <td class="title">SWT table and tree header styling via CSS</td>
+    <td class="content">
+      You can now style the SWT table and tree headers via the CSS engine.
+      <pre>
+Table, Tree {
+    swt-header-color: #CCC;
+    swt-header-background-color: #383D3F;
+}
+      </pre>
+    </td>
+  </tr>
+
+  <tr id="swt-tree-header-styling">
+    <td class="title">SWT Tree header colors</td>
+    <td class="content">
+       Support for custom tree header foreground and background colors has been added on Mac, Windows and Linux (GTK3) platforms.
+       <p>
+       	APIs for Tree header foreground color:<br/>
+       	<code>Tree#getHeaderForeground()</code><br/>
+       	<code>Tree#setHeaderForeground(Color)</code><br/>
+       </p>
+       <p>
+       	APIs for Tree header background color:<br/>
+       	<code>Tree#getHeaderBackground()</code><br/>
+       	<code>Tree#setHeaderBackground(Color)</code><br/>
+       </p>
+       Screen-shot of an SWT Tree with customized header on Windows:
+       <p>
+      	<img src="images/tree-header-colors.png" alt="" />
+      </p>
+    </td>
+  </tr>
+
+  <tr id="swt-table-header-styling-mac">
+    <td class="title">SWT Table header colors supported on Mac as well</td>
+    <td class="content">
+       The custom table header foreground and background colors APIs initially supported for 
+       <a href="https://www.eclipse.org/eclipse/news/4.7/M6/#swt-table-header-styling">Windows and Linux (GTK3)</a>
+       platforms now works on the Mac as well. 
+    </td>
+  </tr>
+
+  <tr id="swt-image-hidpi">
+    <td class="title">New API <code>Image#getImageData(int zoom)</code></td>
+    <td class="content">
+      Platform-independent high-DPI support has been added to the <code>org.eclipse.swt.graphics.Image</code> class to get <code>ImageData</code> at specific zoom levels:
+      <ul>
+  		<li><code>Image#getImageData(int zoom)</code>: Returns an <code>ImageData</code> for the given zoom level.</li>
+       </ul>
+      <p>
+      Note: this API is mainly intended to be used by custom implementations of <code>ImageDataProvider</code> that draw a
+      composite image at the requested zoom level based on other images. For custom zoom levels, the <code>ImageData</code> 
+      may be an auto-scaled version of the native image and may look more blurred or mangled than expected. 
+      </p>
+    </td>
+  </tr>
+
+  <tr id="swt-image-apis-deprecated">
+    <td class="title"><code>Image#getImageDataAtCurrentZoom()</code> and <code>Image#getBoundsInPixels()</code> are deprecated</td>
+    <td class="content">
+      The <code>Image#getImageDataAtCurrentZoom()</code> and <code>Image#getBoundsInPixels()</code> APIs didn't serve the purpose
+      in an environment having multiple monitors with different DPIs, hence they were deprecated.
+      <p>
+      <code>Image#getImageData(int zoom)</code> is the replacement API for <code>Image#getImageDataAtCurrentZoom()</code>.
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="Equinox">Equinox</td>
+  </tr>
+
+  <tr id="installation-dialog-progress-reporting">
+    <td class="title">Progress reporting in the installation dialog</td>
+    <td class="content">
+      When you select an update site, the installation dialog now provides progress feedback during the download of the
+      software catalog.
+    <p>
+        <img src="images/installation-progress-reporting.png" alt="" />
+    </p>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td colspan="2"/>
+  </tr>
+</table>
+
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Oxygen milestone builds:</p>
+<ul>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.7/M6/">News for Eclipse Oxygen milestone build M6</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.7/M5/">News for Eclipse Oxygen milestone build M5</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.7/M4/">News for Eclipse Oxygen milestone build M4</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.7/M3/">News for Eclipse Oxygen milestone build M3</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.7/M2/">News for Eclipse Oxygen milestone build M2</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.7/M1/">News for Eclipse Oxygen milestone build M1</a></li>
+</ul>
+
+</body>
+</html>

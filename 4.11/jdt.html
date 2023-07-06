@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2018, 2019. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" type="text/css"/>
+<style type="text/css">
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+/*img {max-width: 520px;}*/
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+ul {padding-left: 13px;}
+</style>
+<title>Eclipse Project 4.11 - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Java development tools</h2>
+<ul>
+	<li><a href="#Java12">Java 12 Support</a></li>
+	<li><a href="#JUnit">JUnit</a></li>
+	<li><a href="#JavaEditor">Java Editor</a></li>
+	<!-- <li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li> -->
+	<li><a href="#JavaFormatter">Java Formatter</a></li>
+	<li><a href="#Debug">Debug</a></li>
+	<!-- <li><a href="#JDTDev">JDT Developers</a></li> -->
+</ul>
+
+<!-- ****************** START OF N&N TABLE****************** -->
+<table class="news">
+<colgroup>
+  <col class="title" />
+  <col />
+</colgroup>
+<tbody>
+  <!-- ******************* Java 12 Support ************************************* -->
+  <tr>
+    <td id="Java12" class="section" colspan="2">
+    <h2>Java 12 Support </h2></td>
+  </tr>
+   <tr id="Java 12"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=536055 -->
+      <td class="title">Java 12</td>
+      <td class="content">
+          <a href="http://jdk.java.net/12/">Java 12</a> is out and Eclipse JDT supports Java 12 for 4.11 via 
+          <a href="https://marketplace.eclipse.org/content/java-12-support-eclipse-2019-03-411"> Marketplace</a>. 
+          The release notably includes the following Java 12 feature:
+           <a href="http://openjdk.java.net/jeps/325"> JEP 325: Switch Expressions (Preview)</a>.
+           Please note that this is a <a href="http://openjdk.java.net/jeps/12"> preview language feature</a>
+           and hence enable preview option should be on.
+           <br></br>
+           For an informal introduction of the support, 
+           please refer to <a href="https://wiki.eclipse.org/Java12/Examples"> Java 12 Examples wiki</a>. 
+      </td>
+  </tr>
+  <!-- ******************* End of Java 12 Support ************************************* -->
+
+  <!-- ******************* JUnit ************************************* -->
+  <tr>
+    <td id="JUnit" class="section" colspan="2">
+    <h2>JUnit</h2>
+    </td>
+  </tr>
+  <tr id="junit-5.4"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=543821 -->
+      <td class="title">JUnit 5.4</td>
+      <td class="content">
+          <a href="https://junit.org/junit5/docs/5.4.0/release-notes/">JUnit 5.4</a> is here and Eclipse JDT has been updated to use this version.
+      </td>
+  </tr>
+  <tr id="junit-test-factory"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=544484 -->
+      <td class="title">Test factory template</td>
+      <td class="content">
+          JUnit Jupiter now allows test factory methods to return a single <code>DynamicNode</code>. The <code>test_factory</code> template has been updated to include <code>DynamicNode</code> in the return type.
+          <img src="images/junit-test-template.png" alt="" />
+      </td>
+  </tr>
+  <!-- ******************* End of JUnit ************************************* -->
+
+  <!-- ******************* Java Editor ************************************* -->
+  <tr>
+    <td id="JavaEditor" class="section" colspan="2">
+    <h2>Java Editor </h2>
+    </td>
+  </tr>
+  <tr id="default-constant-values"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=516379 -->
+      <td class="title">Default and constant values in content assist information pop-up</td>
+      <td class="content">
+      	  The additional information pop-up of a content assist proposal now shows the default value of an annotation type element: 
+          <p>
+              <img src="images/default-value-annotation-type-elelemt.png" alt="" />
+          </p>
+          <p>and the value of a constant:</p>
+          <p>
+              <img src="images/constant-value.png" alt="" />
+          </p>
+      </td>
+  </tr>
+  <tr id="service-provider-quick-fix"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=526339 -->
+      <td class="title">Create service provider method</td>
+      <td class="content">
+          If a service defined in a <code>module-info.java</code> file has an invalid service provider implementation, a <strong>Quick Fix (Ctrl + 1)</strong> is now available to create the new provider method:
+          <p>
+              <img src="images/service-provider-proposal.png" alt="" />
+          </p>
+          <p>
+              <img src="images/service-provider-linked-proposal.png" alt="" />
+          </p>
+      </td>
+  </tr>
+  <!-- ******************* End of Java Editor ************************************* -->
+
+  <!-- ******************* Java Views and Dialogs ************************************* -->
+  <!--
+  <tr>
+    <td id="JavaViewsAndDialogs" class="section" colspan="2">
+    <h2>Java Views and Dialogs</h2>
+    </td>
+  </tr>
+  -->
+  <!-- ******************* End of Java Views and Dialogs ************************************* -->
+
+  <!-- ******************* Java Compiler ************************************* -->
+  <!--
+  <tr>
+    <td id="JavaCompiler" class="section" colspan="2">
+    <h2>Java Compiler</h2>
+    </td>
+  </tr>
+  -->
+  <!-- ******************* End of Java Views and Dialogs ************************************* -->
+
+  <!-- ******************* Java Formatter ************************************* -->
+  <tr>
+    <td id="JavaFormatter" class="section" colspan="2">
+    <h2>Java Formatter </h2>
+    </td>
+  </tr>
+  <tr id="wrap-binary-expressions"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=543080 -->
+    <td class="title">Line wrapping settings for binary operators</td>
+    <td class="content">
+      Instead of a single line wrapping setting for binary expressions, there's now a whole section of settings for various kinds of <b>binary operators</b> (multiplicative, additive, logical, etc.).
+      There are settings for <i>relational</i> (including equality) and <i>shift operators</i>, which were not covered by the old setting.
+      Also, <i>string concatenation</i> can now be treated differently from arithmetic sum.
+      <p>
+      The settings can be found in the Profile Editor (<b>Preferences &gt; Java &gt; Code Style &gt; Formatter &gt; Edit...</b>) under the <b>Line Wrapping &gt; Wrapping settings &gt; Binary expressions</b> subsection.
+      </p>
+      <p>
+        <img src="images/formatter-wrap-binary-expressions.png" alt="" />
+      </p>
+    </td>
+  </tr>
+  <tr id="spaces-binary-expressions"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=543475 -->
+    <td class="title">White space settings for binary operators</td>
+    <td class="content">
+      The white space around operators in <b>binary expressions</b> can now be controlled separately for different groups of operators, consistent with the line wrapping settings.
+      <p>
+      The new <b>Binary operators</b> sub-section has been added under <b>White Space &gt; Expressions</b> in the Formatter profile editor.
+      </p>
+      <p>
+        <img src="images/formatter-spaces-binary-expressions.png" alt="" />
+      </p>
+    </td>
+  </tr>
+  <tr id="wrap-chained-conditionals"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=544514 -->
+    <td class="title">Wrapping setting for chained conditional expressions</td>
+    <td class="content">
+      A chain of <i>nested conditional expressions</i> (using ternary operator) can be now wrapped as a single group, with all of them indented at the same level.
+      It's only possible for right-sided nesting.
+      <p>
+      Find the <b>Chained conditionals</b> setting in the Profile Editor under the <b>Line Wrapping &gt; Wrapping settings &gt; Other expressions</b> subsection.
+      </p>
+      <p>
+        <img src="images/formatter-wrap-chained-conditionals.png" alt="" />
+      </p>
+    </td>
+  </tr>
+  <tr id="javadoc-tags-indent"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=542964 -->
+    <td class="title">Indent Javadoc tag descriptions</td>
+    <td class="content">
+      The Formatter Profile has a new setting that indents wrapped Javadoc tag descriptions.
+      It's called <i>Indent other tag descriptions when wrapped</i>, in contrast to the preexisting <i>Indent wrapped @param/@throws descriptions</i> setting.
+      It affects tags like <code>@return</code> or <code>@deprecated</code>.
+      <p>
+      The settings can be found in the Profile Editor (<b>Preferences &gt; Java &gt; Code Style &gt; Formatter &gt; Edit...</b>) under the <b>Comments &gt; Javadocs</b> section.
+      </p>
+      <p>
+        <img src="images/formatter-indent-tags.png" alt="" />
+      </p>
+    </td>
+  </tr>
+  <!-- ******************* End of Java Formatter ************************************* -->
+  
+  <!-- *********************** Debug ******************************** -->
+  <tr>
+    <td id="Debug" class="section" colspan="2">
+    <h2>Debug</h2>
+    </td>
+  </tr>
+  <tr id="expression-history"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=334991 -->
+    <td class="title">History for expressions in the Variables view</td>
+    <td class="content">
+      The <b>Variables</b> view now stores a history of the expressions used in the <b>Detail</b> pane. You can choose a <i>previously entered expression</i> for a variable from the new drop-down menu. 
+      The expression will be copied to the Detail pane where you can select it to perform various actions present in the context menu.
+      <p>
+        <img src="images/expressions-history.png" alt="" />
+      </p>
+    </td>
+  </tr>
+  
+  <!-- *********************** JDT Developers ******************************** -->
+  <!--
+  <tr>
+    <td id="JDTDev" class="section" colspan="2">
+    <h2>JDT Developers</h2>
+    </td>
+  </tr>
+  -->
+  <!-- *********************** End of JDT Developers ******************************** -->
+</tbody>
+</table>
+<!-- ****************** END OF N&N TABLE ****************** -->
+
+<script type="text/javascript" src="scripts.js"></script>
+  <p style="text-align:center">
+    <a href="platform.php">Previous</a> <a style="margin:1em" href=".">Up</a> <a href="platform_isv.php">Next</a>
+  </p>
+</body>
+</html>

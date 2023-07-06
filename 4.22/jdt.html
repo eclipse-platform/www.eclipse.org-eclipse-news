@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2018, 2019. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" type="text/css"/>
+<style type="text/css">
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+/*img {max-width: 520px;}*/
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+ul {padding-left: 13px;}
+</style>
+<title>Eclipse Project 4.22 - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Java development tools</h2>
+<ul>
+	<!--<li><a href="#JavaXX">Java&trade; XX Support</a></li>-->
+	<li><a href="#Java17">Java 17 Support</a></li>
+	<li><a href="#JUnit">JUnit</a></li>
+	<li><a href="#JavaEditor">Java Editor</a></li>
+	<li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li>
+	<!--<li><a href="#JavaFormatter">Java Formatter</a></li>-->
+	<li><a href="#Debug">Debug</a></li>
+	<!--<li><a href="#JDTDev">JDT Developers</a></li>-->
+</ul>
+
+<!-- ****************** START OF N&N TABLE ****************** -->
+<table class="news">
+<colgroup>
+  <col class="title" />
+  <col />
+</colgroup>
+<tbody>
+
+ <!-- ******************* Java 17 Support ************************************* -->
+  <tr>
+    <td id="Java17" class="section" colspan="2">
+    <h2>Java&trade; 17 Support </h2></td>
+  </tr>
+   <tr id="Java_17"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=570733 -->
+      <td class="title">Java 17</td>
+      <td class="content">
+          <a href="http://jdk.java.net/17/">Java 17</a> is out and Eclipse JDT supports Java 17 in 4.22. 
+          <p></p>
+          <p>
+          The release notably includes the following Java 17 features:
+           <br/>
+           <a href="https://openjdk.java.net/jeps/306"> JEP 306: Restore Always-Strict Floating-Point Semantics</a>.
+           <br/>
+           <a href="https://openjdk.java.net/jeps/406"> JEP 406: Pattern Matching for switch (Preview)</a>.
+           <br/>
+           <a href="https://openjdk.java.net/jeps/409"> JEP 409: Sealed Classes (Final)</a>.
+           </p>
+           <p>
+           Please note that preview option should be on for <a href="http://openjdk.java.net/projects/jdk/17/">preview language features</a>.
+           For an informal introduction of the support, 
+           please refer to <a href="https://wiki.eclipse.org/Java17/Examples">Java 17 Examples wiki</a>. 
+           </p>
+      </td>
+  </tr>
+  <!-- ******************* End of Java 17 Support ************************************* -->
+
+
+  <!-- ******************* JUnit ************************************* -->
+  <tr>
+    <td id="JUnit" class="section" colspan="2">
+    <h2>JUnit</h2>
+    </td>
+  </tr>
+
+  <tr id="junit-record"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=575762 -->
+    <td class="title"><a href="#junit-record">Support execution of JUnit tests that are records</a></td>
+    <td class="content">
+      For Java 16 and up, JUnit tests can now be implemented as records.  Right-clicking on an individual test or the record itself and selecting <b>Run as</b> will allow executing the test via either the <b>JUnit Plug-in Test</b> or <b>JUnit Test</b> context menu choices.
+    <p>The following is an example of such a test:
+    </p>
+    <p><img src="images/junit-record.png" alt="JUnit test as record"/></p>
+    </td>
+  </tr>
+
+  <tr id="junit-5.8.1"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=576389 -->
+      <td class="title">JUnit 5.8.1</td>
+      <td class="content">
+          <a href="https://junit.org/junit5/docs/5.8.1/release-notes/">JUnit 5.8.1</a> is here and Eclipse JDT has been updated to use this version.
+      </td>
+  </tr>
+  
+  <tr id="junit-4.13.2"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=576591 -->
+      <td class="title">JUnit 4.13.2</td>
+      <td class="content">
+          <a href="https://github.com/junit-team/junit4/blob/main/doc/ReleaseNotes4.13.2.md">JUnit 4.13.2</a> is here and Eclipse JDT has been updated to use this version.
+      </td>
+  </tr>
+  
+  <!-- ******************* End of JUnit ************************************* -->
+
+  <!-- ******************* Java Editor ************************************* -->
+  <tr>
+    <td id="JavaEditor" class="section" colspan="2">
+    <h2>Java Editor </h2>
+    </td>
+  </tr>
+
+  <tr id="strconcat-to-textblock"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=575634 -->
+    <td class="title"><a href="#strconcat-to-textblock">Convert String concat to Text block</a></td>
+    <td class="content">
+      A new cleanup and quick-assist has been added to convert appropriate String concatenations into Java <b>Text Blocks</b>.  Appropriate String concatenations must have at least 3 non-empty substrings with one per line and the Java level must be 15 or higher. Line comments for all substrings but the last line will be lost after conversion.  Spaces at the end of substrings preceding the newline will result in <b>\s</b> being substituted while substrings that do not end with newlines will have a <b>\</b> added at the end of the line to preserve concatenation.
+      <p>
+        To apply the cleanup, select the <b>Convert String concatenation to Text Block</b> checkbox on the <b>Java Feature</b> tab in your cleanup profile:</p>
+      <p><img src="images/strconcat-to-textblock-cleanup.png" alt="Pref"/></p>
+      <p>
+        With the cleanup, the following:
+      </p>
+      <p><img src="images/strconcat-to-textblock-before.png" alt="Before"/></p>
+      <p>
+        Is changed to:
+      </p>
+      <p><img src="images/strconcat-to-textblock-after.png" alt="After"/></p>
+      <p>To change a single String concatenation, a quick-assist has been added that can be activated with <b>CTRL+1</b> with the cursor located anywhere in the appropriate concatenation.
+      </p>
+    </td>
+  </tr>
+
+  <tr id="surround-with-try-resources-quickfix"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=575634 -->
+    <td class="title"><a href="#surround-with-try-with-resources-quickfix">Surround with try-with-resources quickfix</a></td>
+    <td class="content">
+      A new quickfix has been created to offer <b>Surround with try-with-resources</b> for resource leaks and potential resource leaks when the resource in question implements AutoCloseable.
+      <p>
+        Examples of quickfix:
+      </p>
+      <p><img src="images/unclosed-closeable.png" alt="Unclosed Resource"/></p>
+      <p><img src="images/potential-unclosed-closeable.png" alt="Potentially Unclosed Resource"/></p>
+    </td>
+  </tr>
+
+  <!-- ******************* End of Java Editor ************************************* -->
+
+  <!-- ******************* Java Views and Dialogs ************************************* -->
+  <tr>
+    <td id="JavaViewsAndDialogs" class="section" colspan="2">
+    <h2>Java Views and Dialogs</h2>
+    </td>
+  </tr>
+
+  <tr id="CallHierarchy"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=533524 -->
+    <td class="title">Improved lambda support in the Call Hierarchy view</td>
+    <td class="content">
+      The <b>Call Hierarchy</b> view is enhanced with showing not only the callers of the lambda function, but the callers of the declaring function too.
+      <p>For the following code:</p>
+      <p><img src="images/callhier-code.png" alt="Sample code"/></p>
+      <p>Checking the callers of the <i>function()</i> will show this:</p>
+      <p><img src="images/callhier-result.png" alt="CallHierarchy result"/></p>
+      <p>The <i>[declaration]</i> node in the tree is the new addition, which shows the callers of the <i>definer()</i> function, in this case, only the <i>main()</i> function.</p>
+    </td>
+  </tr>
+
+  <tr id="OpenTypeSelectionDialog"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=447798 -->
+    <td class="title">Paste into Open Type dialog</td>
+    <td class="content">
+	If text is pasted into the <i>Open Type</i> dialog then it is automatically cleaned up to the included type name by best effort.<br/>
+	The heuristics support:
+	<ul>
+	<li> Path of .java or .class files.<br/>
+	<code>C:\dev\src\p\MyType.java</code> &rarr; <b><code>MyType</code></b></li>
+	<li> Lines from Stacktraces.<br/>
+	<code>o.e.u.i.Workbench$$Lambda$152/0x00000001002a1928.run(Unknown Source)</code> &rarr; <b><code>o.e.u.i.Workbench</code></b></li>
+	</ul>
+    </td>
+  </tr>
+
+
+  <!-- ******************* End of Java Views and Dialogs ************************************* -->
+
+  <!-- ******************* Java Compiler ************************************* -->
+  <!-- <tr>
+    <td id="JavaCompiler" class="section" colspan="2">
+    <h2>Java Compiler</h2>
+    </td>
+  </tr>-->
+  <!-- ******************* End of Java Compiler ************************************* -->
+
+  <!-- ******************* Java Formatter ************************************* -->
+ <!--   <tr>
+    <td id="JavaFormatter" class="section" colspan="2">
+    <h2>Java Formatter </h2>
+    </td>
+  </tr> -->
+  <!-- ******************* End of Java Formatter ************************************* -->
+  
+  <!-- *********************** Debug ******************************** -->
+  <tr>
+    <td id="Debug" class="section" colspan="2">
+    <h2>Debug</h2>
+    </td>
+  </tr>
+
+  <tr id="label-objects"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=576670  -->
+    <td class="title">Label Objects during debugging</td>
+    <td class="content">
+      During debugging a Java application, often we have to deal with lot's of object instances, and it's not always easy to distinguish between them.
+      That's why the experience is improved, with the ability to set a label on individual objects.
+      <p><img src="images/label-object-menu.png" alt="Menu item"/></p>
+      <p>After setting a label, everywhere the object appears it is displayed with a distinctive color and with the label:</p>
+      <p><img src="images/label-object-result.png" alt="Objects with Label"/></p>
+    </td>
+  </tr>
+  <!--************************ End of Debug ******************************** -->
+
+  <!-- *********************** JDT Developers ******************************** -->
+   <!-- <tr>
+    <td id="JDTDev" class="section" colspan="2">
+    <h2>JDT Developers</h2>
+    </td>
+  </tr> -->
+  <!-- *********************** End of JDT Developers ******************************** -->
+</tbody>
+</table>
+<!-- ****************** END OF N&N TABLE ****************** -->
+
+<script type="text/javascript" src="scripts.js"></script>
+  <p style="text-align:center">
+    <a href="platform.php">Previous</a> <a style="margin:1em" href=".">Up</a> <a href="platform_isv.php">Next</a>
+  </p>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2018, 2019. This page is made available under license. For full details, see the LEGAL section in the documentation that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" type="text/css"/>
+<style type="text/css">
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+/*img {max-width: 520px;}*/
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+ul {padding-left: 13px;}
+</style>
+<title>Eclipse Project 4.21 - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Platform and Equinox</h2>
+<ul>
+    <li><a href="#ViewsAndDialogs">Views, Dialogs and Toolbar</a></li>
+    <!--<li><a href="#TextEditors">Text Editors</a></li> -->
+    <!--<li><a href="#Preferences">Preferences</a></li> -->
+    <li><a href="#StylingThemes">Themes and Styling</a></li>
+    <li><a href="#GeneralUpdates">General Updates</a></li>
+</ul>
+
+<!-- ****************** START OF N&N TABLE ****************** -->
+<table class="news">
+<colgroup>
+  <col class="title" />
+  <col />
+</colgroup>
+<tbody>
+  <!-- ******************* Views, Dialogs and Toolbar ************************************* -->
+  <tr>
+    <td id="ViewsAndDialogs" class="section" colspan="2">
+    <h2>Views, Dialogs and Toolbar </h2>
+    </td>
+  </tr>
+
+  <tr id="new-message-dialog"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=552909 -->
+    <td class="title">New clean message dialog api</td>
+    <td class="content">
+      A new API in the class PlainMessageDialog is introduced. It uses a builder pattern to create an immutable instance of PlainMessageDialog. It has a clean API and consists of methods for e.g. the button labels, the message and the image.
+      <p>Example Usage:<br />
+        <code>int answer = PlainMessageDialog.getBuilder(myShell, "The new dialog").image(SWT.ICON_Question).message("Like it?").buttLabels(Arrays.asList(IDialogConstants.YES_LABEL, IDialogConstants.NO_LABEL)).build().open();</code>
+      </p>
+      <p>
+        <img src="images/plain_message_dialog_usage.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="persist-accepted-licences"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=574622 -->
+    <td class="title">Accepted licenses remembered permanently</td>
+    <td class="content">
+      Before accepted licenses were only remembered during runtime and not persisted between restarts.
+      The user selection of accepted licenses is now persisted between restarts.
+    </td>
+  </tr>
+
+  <!-- ******************* End of Views, Dialogs and Toolbar ************************************* -->
+
+  <!-- ******************* Text Editors ************************************* -->
+ <!--  <tr>
+    <td id="TextEditors" class="section" colspan="2">
+    <h2>Text Editors </h2>
+    </td>
+  </tr>-->
+  <!-- ******************* End of Text Editors ************************************* -->
+
+  <!-- ****************** Preferences ************************************* -->
+ <!--  <tr>
+    <td id="Preferences" class="section" colspan="2">
+    <h2>Preferences </h2>
+    </td>
+  </tr>-->
+  <!-- ****************** End of Preferences ************************************* -->
+
+  <!-- ******************* Themes and Styling ************************************* -->
+  <tr>
+    <td id="StylingThemes" class="section" colspan="2">
+    <h2>Themes and Styling </h2>
+    </td>
+     </tr>
+     
+   	<tr id="new-close-icon"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=501491 -->
+    <td class="title">New close icon on tabs</td>
+    <td class="content">
+      The drawing of the close icon of tabs has been updated to align better with the operating system.
+      <p>
+      	Old:
+      </p>
+      <p>
+        <img src="images/old-light-x.png" alt=""/>
+      </p>
+      <p>
+        <img src="images/old-dark-x.png" alt=""/>
+      </p>
+      
+      <p>
+      	New:
+      </p>
+      <p>
+        <img src="images/new-light-x.png" alt=""/>
+      </p>
+      <p>
+        <img src="images/new-dark-x.png" alt=""/>
+      </p>
+      
+    </td>
+ 
+    
+  </tr>
+  <tr id="eclipse-win-dark-themed-tooltips"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=574685 -->
+    <td class="title">Eclipse Windows now supports dark-theme tool-tips</td>
+    <td class="content">
+      Eclipse on Windows now support dark-theme tool-tips.
+      Refer below screens-shot which show various tool-tips@dark-theme:
+      <img src="images/swt-win-darkthemed-tooltips.png" alt=""/>
+    </td>
+  </tr>
+  <!-- ******************* End of Themes and Styling ************************************* -->
+
+  <!-- ******************* General Updates ************************************* -->
+  <tr>
+    <td id="GeneralUpdates" class="section" colspan="2">
+    <h2>General Updates </h2>
+    </td>
+  </tr>
+  <tr id="new-griddatafactory-method"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=548829 -->
+    <td class="title">New method <code>create(int style)</code> in GridDataFactory</td>
+    <td class="content">
+      GridDataFactory contains a new static method <code>create(int style)</code> which returns a new GridDataFactory instance.<br />
+      This method is similar to <code>new GridData(int style)</code>.
+    </td>
+  </tr>
+  <tr id="swt-java11"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=574702 -->
+  	<td class="title">Minimum Java version for SWT</td>
+  	<td class="content">
+  		SWT now requires minimum Java 11 to run SWT. 
+  	</td>
+  </tr>
+  <tr id="ant-version-upgrade"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=574832 -->
+    <td class="title"><a href="#ant-version-upgrade">Ant 1.10.11</a></td>
+    <td class="content">
+      Eclipse has adopted Ant version 1.10.11.
+    </td>
+  </tr>
+
+  <!-- ******************* End of General Updates ************************************* -->
+</tbody>
+</table>
+<!-- ****************** END OF N&N TABLE ****************** -->
+
+<script type="text/javascript" src="scripts.js"></script>
+  <p style="text-align:center">
+    <span style="color:#808080">Previous</span> <a style="margin:1em" href=".">Up</a> <a href="jdt.php">Next</a>
+  </p>
+</body>
+</html>

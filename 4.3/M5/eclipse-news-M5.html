@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="default_style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse Project 4.3 M5 News</title>
+</head>
+<body>
+<h1>Eclipse Project 4.3 M5 - New and Noteworthy</h1>
+<p>Here are some of the more noteworthy things available in milestone build M5 
+  (February 1, 2013) which is now available for <a href="http://download.eclipse.org/eclipse/downloads/" target="_top">download</a>.
+</p>
+<ul>
+  <li><a href="#JDT">JDT</a></li>
+  <li><a href="#PDE">PDE</a></li>
+  <li><a href="#Platform">Platform</a></li>
+</ul>
+
+<table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
+  <tr>
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+  <tr id="null-annotations-for-fields">
+    <td class="title">Null annotations for fields</td>
+    <td class="content">
+      The annotation-based null analysis &mdash; first released with Eclipse Indigo &mdash; has been extended
+      to apply also to fields. If enabled, this analysis will now detect the following problems
+      concerning any field annotated with <code>@NonNull</code>:
+      <ul>
+      <li>If the field is not properly initialized to a non-null value.</li>
+      <li>If a value is assigned to the field that is not known to be non-null.</li>
+      </ul>
+      <p>In return to these obligations, dereferencing a <code>@NonNull</code> field is regarded as always safe.
+      </p>
+      <p>If a field is marked as <code>@Nullable</code>, generally every direct dereference
+      	of the field is flagged as a potential null pointer access. Even a null check for such a field is not
+      	a perfect protection due to dangers of side effects, effects via aliased references, and concurrency.</p>
+      <p>As a compromise between safety and convenience, the compiler can be configured to apply
+      	<strong>"syntactic null analysis for fields"</strong>.
+      	With this option enabled, the compiler syntactically recognizes
+      	a narrow range of code patterns where a null-check of a field is <em>directly</em> followed by
+      	a dereference or an assignment to a <code>@NonNull</code> variable. For these particular situations,
+      	no problem will be reported.</p>
+      <p>In the following example, the check in line 12 properly protects the access in line 13, whereas
+      	the knowledge that field <code>nullable</code> holds a non-null value (in line 15) is spoiled by
+      	the intermediate statement in line 16.</p>
+	  <p><a href="images/null-annotations-for-fields-examples.txt"><img src="images/null-annotations-for-fields-examples.png" alt=""/></a></p>
+      <p>This is the option that enables the syntactic analysis (under the heading <strong>Java Compiler &gt; Errors/Warnings</strong>):</p>
+	  <p><img src="images/option-syntactic-null-analysis-for-fields.png" alt=""/></p>
+	</td>
+  </tr>   
+  <tr id="Support-for-package-Javadoc-in-Javadoc-hover-and-view">
+    <td class="title">Support for package Javadoc in Javadoc hover and view</td>
+    <td class="content">
+      The Javadoc hover and view now display package Javadoc from either the package-info.java or the package.html file.
+      <p><img src="images/package-javadoc-hover-examples.png" alt=""/></p>
+    </td>
+  </tr>
+  <tr id="Quick-Assist-for-unused-type-parameters">
+    <td class="title">Quick Assist for unused type parameters</td>
+    <td class="content">
+      The Java editor now provides a Quick Assist (<b>Ctrl+1</b>) to remove or document unused type parameters.
+      <p><img src="images/quickassist-for-unused-type-parameter-example.png" alt=""/></p>
+    </td>
+  </tr>
+  <tr id="pre-fill-package-name">
+	<td class="title">Pre-filling package name in creation wizards</td>
+	<td class="content">
+      All the type and package creation wizards now pre-fill the package name
+      if a suitable package name can be suggested for the selected project or source folder.
+      <p><img src="images/pre-fill-package-name.png" alt=""/></p>
+      <p>The suggested package name is the name of the project if the source folder does not contain any package
+      and if the project name is a valid package name.
+      In case of type creation wizards, if the source folder contains exactly one package then the name of that package
+      is used as the suggested package name.</p>
+  </td>
+  </tr>
+  
+  
+  <tr>
+    <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
+  
+  <tr id="bundles-in-category-editor">
+    <td class="title">Bundles in the category editor</td>
+    <td class="content">
+      The category editor now supports putting individual bundles into categories.
+      <p>      
+      The category editor creates a category.xml that can define categories that the contents of
+      a p2 repository should be organized into.  Previously only features could be specified as belonging
+      to a category and be visible to users.  Now individual bundles can be added to the category.xml.
+      </p>
+      <p>
+      <img src="images/category-editor.png" alt="Category editor can include individual bundles"/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="plugin-classpath-contributors">
+    <td class="title">New API to contribute to the classpath of plug-in projects</td>
+    <td class="content">
+      New API in PDE allows you to add additional classpath entries to a plug-in project.  Contribute a 
+      <em>Plug-in Classpath Contributor</em> via the <em>org.eclipse.pde.core.pluginClasspathContributors</em>
+      extension point.  Whenever the PDE classpath is computed or a new plug-in dependency is added, your classpath
+      contributor will be queried for additional entries.
+      <p>
+      If you are using Equinox Adapter hooks to load additional libraries at runtime you can use this API to add 
+      the correct libraries to the classpath at build time.
+      </p>
+      <p>
+      <img src="images/classpath-contributor.png" alt="An example classpath contributor extension"/>
+      </p>
+      </td>
+  </tr>
+  
+  <tr id="update-classpath-workspace">
+    <td class="title">Updating the classpath requires a workspace lock</td>
+    <td class="content">
+      When a change is made to a plug-in that forces a classpath update, an update job is created that
+      modifies the Plug-in Dependencies classpath container in the background. This job now acquires a workspace lock
+      to prevent other operations such as builders from running on a stale classpath.
+      <p>
+      This behaviour can be enabled in 4.2.2 by setting the system property <em>pde.lockWorkspaceForClasspath</em> to 
+      true.
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="api-use-filters">
+    <td class="title">Problem filters apply to API Tools use scans</td>
+    <td class="content">
+      Problem filter files (.api_filter) can be used to filter problems reported by the API Tools analysis
+      task and the workspace analysis builder.  These filter files can now be applied to API Tools use scans.
+      Reference problems that are filtered out of the analysis results can be also filtered from the results
+      of use scans.
+      <p>
+      Filters are specified in the task using the same property as the analysis task.  Set the <em>filters</em>
+      attribute on the <em>apitooling.apiuse</em> task, specifying the root directory of API filter files.  Each
+      filter file must be in a folder with a filename matching the component name the filter file applies to.
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="missing-filters-on-tasks">
+    <td class="title">API Tools tasks warn about missing include or exclude files</td>
+    <td class="content">
+      Many of the API Tools tasks, including Analysis, API Use, and API Freeze, provide <em>includelist</em> and
+      <em>excludelist</em> attributes which can be used to limit the reported problems. Previously,
+      if you set an include or exclude list, but the file wasn't found, the task would continue without warning
+      about the incorrect filtering.  Now a missing include or exclude list will result in the task failing with
+      an explanation.
+      <p>
+      <img src="images/missing-include.png" alt="Example console output for missing include"/>
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+
+  <tr id="detect-shared-install-change">
+    <td class="title">Detection of shared install changes</td>
+    <td class="content">
+	  When Eclipse is running in a read-only folder (also known as shared install) and the read-only
+	  installation has changed (e.g. new plugins installed, new version of Eclipse installed), Eclipse 
+	  will now detect this change and warn that your personal additional plugins have been uninstalled.
+	  In the next milestone, this warning will be replaced by a migration dialog allowing you to 
+	  reinstall your plugins.
+	  <p>
+      <img src="images/install-modified.png" alt="Dialog warning about a modified install"/>
+      </p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2">  </td>
+  </tr>
+</table>
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Kepler milestone builds:</p>
+<ul>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.3M4-201212140730/news/">New for Eclipse Kepler milestone build M4 (December 14, 2012)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.3M3-201210312000/news/">New for Eclipse Kepler milestone build M3 (November 2, 2012)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.3M2-201209201300/news/">New for Eclipse Kepler milestone build M2 (September 21, 2012)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.3M1-201208101300/news/">New for Eclipse Kepler milestone build M1 (August 10, 2012)</a></li>
+</ul>
+</body>
+</html>

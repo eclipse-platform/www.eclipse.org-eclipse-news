@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2018, 2019. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" type="text/css"/>
+<style type="text/css">
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+/*img {max-width: 520px;}*/
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+ul {padding-left: 13px;}
+</style>
+<title>Eclipse Project 4.11 - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Platform and Equinox API</h2>
+  <ul>
+    <li><a href="#Platform">Platform Changes</a></li>
+    <li><a href="#SWT">SWT Changes</a></li>
+  </ul>
+
+<!-- ****************** START OF N&N TABLE****************** -->
+<table class="news">
+<colgroup>
+  <col class="title" />
+  <col />
+</colgroup>
+<tbody>
+  <!-- ******************** Platform ********************** -->
+  <tr>
+    <td id="Platform" class="section" colspan="2"><h2>Platform Changes</h2></td>
+  </tr>
+
+  <tr id="move-error-log"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=50517 -->
+   <td class="title">Error Log view moved to Platform</td>
+    <td class="content">
+      The <b>Error Log</b> view has been moved from the PDE project to the Platform project. 
+      ISVs should examine their build infrastructure for inclusion of the <strong>org.eclipse.ui.views.log</strong> 
+      plug-in. The inclusion in your own features and/or products may be redundant because this 
+      view now ships with the base platform. See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=50517">bug 50517</a> for details. 
+    </td>
+  </tr>
+  
+  
+  <tr id="non-persisted-ui"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=378815 -->
+    <td class="title">Transient UI Elements</td>
+     <td class="content">
+      UI model elements can be marked as transient, which means they do not get persisted when the
+      application is closed. This allows to create views and other UI elements dynamically from code
+      without the need to clean them up properly before the workbench is closed. It also allows to contribute static model fragments which are not persisted and therefore removed once 
+      the plug-in gets uninstalled.
+      <p>To mark an element as transient simply call
+      <code>uiElement.getPersistedState().put(IWorkbench.PERSIST_STATE, "false");</code></p>
+     </td>
+   </tr>  
+  
+  <tr id="css-value-unset"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=544352 -->
+   <td class="title">CSS value 'unset'</td>
+    <td class="content">
+      The value <code>unset</code> is now supported as CSS value and is mapped to the Java value <code>null</code>.
+      <p>For example, when used for the <code>background-color</code> property, the
+      widget will revert to the specific native look, if it has one, or inherit the background from the parent widget.</p>
+    </td>
+  </tr>
+  
+  <tr id="widget-factories"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=539014 -->
+   <td class="title">Widget factories</td>
+    <td class="content">
+      New widget factories have been created for some SWT widgets. They follow the same approach as <code>GridLayoutFactory</code> and <code>GridDataFactory</code> i.e. a fluent, re-usable API.
+      <p>The entry point is <code>WidgetFactory</code>.</p>
+      <p>For example, to create a button:</p>
+      <code>WidgetFactory.button(SWT.PUSH).text("Click me!").onSelect(event -> buttonClicked(event).create(parent);</code>
+      <p>This is a work in progress and more factories will follow soon.</p>
+    </td>
+  </tr>
+  
+  <tr id="dynamic-marker-help"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=543466 -->
+    <td class="title">Contribute dynamic marker help</td>
+    <td class="content">
+      The <code>org.eclipse.ui.ide.markerHelp</code> extension point now allows to specify a help context provider instead of a static help context.
+      <p>This example shows how to specify such a help context provider</p>
+      <pre>
+&lt;extension
+      point=&quot;org.eclipse.ui.ide.markerHelp&quot;&gt;
+   &lt;markerHelp
+         helpContextProvider=&quot;org.eclipse.ui.ExampleContextProvider&quot;
+         markerType=&quot;ExamplePlugin.custom_marker&quot;&gt;
+   &lt;/markerHelp&gt;
+&lt;/extension&gt;
+      </pre>
+      The class needs to implement <code>org.eclipse.ui.IMarkerHelpContextProvider</code>.
+    </td>
+  </tr>
+  <!-- ******************** End of Platform ********************** -->
+
+  <!-- *********************** SWT *********************** -->
+  <tr>
+    <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
+  </tr>
+  
+  <tr id="mouse-navigation-styledtext"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=542777 -->
+    <td class="title">Mouse navigation support for StyledText</td>
+     <td class="content">
+      The <code>StyledText</code> widget now supports mouse navigation scrolling similar to most web browsers.
+      When enabled, a <code>StyledText</code> widget can be scrolled by clicking the mouse's scroll wheel,
+      and then moving the mouse. Clicking the scroll wheel again cancels the scrolling, and returns
+      the widget to its default state.
+      <p>To enable mouse navigation, simply call:
+      <code>StyledText.setMouseNavigatorEnabled(true);</code></p>
+      <p><img src="images/StyledText-mouse-navigation.png" alt=""/></p>
+     </td>
+   </tr>
+   
+  <!-- *********************** End of SWT *********************** -->
+</tbody>
+</table>
+<!-- ****************** END OF N&N TABLE ****************** -->
+
+<script type="text/javascript" src="scripts.js"></script>
+  <p style="text-align:center">
+    <a href="jdt.php">Previous</a> <a style="margin:1em" href=".">Up</a> <a href="pde.php">Next</a>
+  </p>
+</body>
+</html>

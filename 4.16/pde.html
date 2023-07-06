@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2018. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" type="text/css"/>
+<style type="text/css">
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+/*img {max-width: 520px;}*/
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+ul {padding-left: 13px;}
+</style>
+<title>Eclipse Project 4.16 - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Plug-in Development Environment</h2>
+<ul>
+	<li><a href="#APITools">API Tools</a></li>
+</ul>
+
+<!-- ****************** START OF N&N TABLE****************** -->
+<table class="news">
+<colgroup>
+  <col class="title" />
+  <col />
+</colgroup>
+<tbody>
+  <!-- ******************** APITools ********************** -->
+  <tr>
+    <td id="APITools" class="section" colspan="2"><h2>API Tools</h2></td>
+  </tr>
+  
+    <tr id="since-tag-operation-quickfixes-multifix"> <!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=539406 -->
+    <td class="title">@since tag quick fixes are multi-fix</td>
+    <td class="content">
+      All errors and warnings that can be fixed by <code>@since</code> tag operations such as adding missing 
+      <code>@since</code> tag, correcting invalid <code>@since</code> tag can now be fixed in one go by the quick fix. 
+      You can select all the <code>@since</code> tag errors and warnings and apply the quick fix (Ctrl + 1).
+      <p>
+       <img src="images/pde-since-tag-operation-quickfixes-multifix.png" alt="" />
+      </p>
+    </td>
+  </tr>
+
+  <tr id="pde-version-error-hover-detail"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=562225 -->
+    <td class="title">Hover to see version error details in Manifest</td>
+    <td class="content">
+      Hovering on a version error in the Manifest editor now shows the list of changes that requires the
+      version to be changed. For the minor version change, it lists all the compatible changes and for the major
+      version change, it lists all the breaking changes.
+      <p>
+       <img src="images/pde-hover-version-error-manifest-details.png" alt="" />
+      </p>
+    </td>
+  </tr>
+  <!-- ******************** End of APITools ********************** -->
+  
+</tbody>
+</table>
+<!-- ****************** END OF N&N TABLE ****************** -->
+
+<script type="text/javascript" src="scripts.js"></script>
+  <p style="text-align:center">
+    <a href="platform_isv.php">Previous</a> <a style="margin:1em" href=".">Up</a> <span style="color:#808080">Next</span>
+  </p>
+</body>
+</html>

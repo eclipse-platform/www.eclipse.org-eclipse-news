@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="default_style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse Project 4.4 M6 News</title>
+</head>
+<body>
+<h1>Eclipse Project 4.4 M6 - New and Noteworthy</h1>
+<p>Here are some of the more noteworthy things available in milestone build M6 
+  (March 7, 2014) which is now available for <a href="http://download.eclipse.org/eclipse/downloads/" target="_top">download</a>.
+  <br/>
+  We also recommend to read the Tips and Tricks, either via <b>Help &gt; Tips and Tricks...</b> or online for
+  <a href="http://help.eclipse.org/topic/org.eclipse.platform.doc.user/tips/platform_tips.html">Platform</a>,
+  <a href="http://help.eclipse.org/topic/org.eclipse.jdt.doc.user/tips/jdt_tips.html">JDT</a>, and
+  <a href="http://help.eclipse.org/topic/org.eclipse.pde.doc.user/tips/pde_tips.htm">PDE</a>.
+</p>
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#PDE">PDE</a></li>
+  <li><a href="#Equinox">Equinox</a></li>
+</ul>
+
+<table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+  <tr id="swt-webkit">
+    <td class="title">Experimental support for WebKit2 added to the SWT Browser</td>
+    <td class="content">
+      The SWT Browser now has preliminary support for WebKit2. To try it out, create a browser
+      widget with style <code>SWT.WEBKIT</code>, and set the environment variable SWT_WEBKIT2
+      to 1. This is only supported with GTK+ 3.x; if GTK+ 3 is disabled the browser will 
+      fallback to WebKit1.
+    </td>
+  </tr>
+  <tr id="swt-gtk-problem"> 
+    <td class="title">SWT does not work on Linux with GTK+ 3 version &gt; 3.8.x</td>
+    <td class="content">
+        The Linux GTK+ 3 port of SWT is currently broken for GTK+ versions above 3.8.x.
+        This primarily affects users running Fedora 20, Ubuntu 14.04 (Alpha builds), openSUSE 13.1 and any other Linux distributions that bundle GTK+ 3.10.x.
+        In those setups, the launcher will automatically switch back to GTK+ 2.
+        For more details see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=421127">bug 421127</a>.
+    </td>
+  </tr>
+  <tr id="bidi-segments">
+    <td class="title">BIDI segments support for Combo on Windows</td>
+    <td class="content">
+      The <code>Combo</code> widget now supports the same <code>SegmentListener</code> API as <code>Text</code>.
+      This allows an application to specify
+      segment boundaries and Unicode Control Characters to use in the segment boundaries.
+      <p>
+      <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet332.java"> 
+      Snippet332</a> shows how to accomplish RTL override in a Combo.
+      </p>
+      <p><img src="images/combo-bidi-segments.png" alt=""/></p>
+      <p>JFace clients can use <code>BidiUtils#applyBidiProcessing(...)</code> to set pre-defined text types.</p>
+    </td>
+  </tr>
+  <tr id="darktheme">
+    <td class="title">Dark theme</td>
+    <td class="content">
+      A new experimental CSS theme based on a community contribution has been added. This popular community
+      theme demonstrates the capabilities of the current CSS styling. This new theme helps the Platform team
+      to continue to improve these capabilities.
+     
+      <p>
+          CSS theming in Eclipse 4 does currently not allow to configure the syntax highlighting in text editors (e.g. 
+          the Java editor), so it is recommended to use the dark theme together with additional settings as for 
+          example provided by the <a href="http://eclipsecolorthemes.org/">Eclipse color theme project</a>.
+       </p>
+       <p>
+      <img src="images/darktheme.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  <tr id="OpenAsProject">
+    <td class="title">Open as project</td>
+    <td class="content">
+      In the <b>Project Explorer</b>, a folder that contains a <code>.project</code> file and whose related project
+      isn't already in the workspace now shows an <b>Open As Project</b> context menu entry that imports the folder
+      as existing project into the workspace.
+      <p><img src="images/OpenAsProject.png" alt=""/></p>
+    </td>
+  </tr>
+  <tr id="launch-options">
+    <td class="title">Updated launch options</td>
+    <td class="content">
+      The default preference for the fall-back behavior of context-sensitive launching has been changed to launch the previous application.
+      <p>
+      <img src="images/launch-options.png" alt=""/>
+      </p>
+      <p>
+      Existing workspaces that use the "Always launch the previously launched application" option are not affected by this change.
+      </p>
+    </td>
+  </tr>
+  <tr id="MLocalizable">
+    <td class="title">MLocalizable mixin interface</td>
+    <td class="content">
+      Changed the way in which localization is done in the application model. While before EOperations (methods) where used to get
+	  a localized value, now volatile, transient, derived, unchangeable EStructuralFeatures are used. Doing this enables to send 
+	  notifications if a localizable value has changed. To mark EClasses who hold localizable informations and to inform them
+	  externally about a changed Locale, the <code>MLocalizable</code> mixin interface is introduced, which contains the single method 
+	  <code>updateLocalization()</code>. This enables to generically search the model for model elements affected by a Locale change and 
+	  force them sending out updates.
+    </td>
+  </tr>
+  <tr id="Locale_Change_Propagation">
+    <td class="title">Locale change propagation</td>
+    <td class="content">
+      Introduced the <code>ILocaleChangeService</code> which need to be used to change a Locale at runtime. Using this service will:
+	  <ol>
+	    <li>Update the Locale in the application context.</li>
+	    <li>Inform all model elements of an application that implement <code>MLocalization</code> about the change.</li>
+	    <li>Post an event via event broker.</li>
+	  </ol>
+    </td>
+  </tr>
+  <tr id="Locale_Change_Consumption">
+    <td class="title">Locale change consumption</td>
+    <td class="content">
+      There are now three ways to get informed about a Locale change:
+	  <ol>
+	    <li>Via event broker by listening to the topic <i>org/eclipse/e4/core/NLS/LOCALE_CHANGE</i></li>
+	    <li>Via dependency injection by getting the value for <code>TranslationService.LOCALE</code> injected (e.g. via method injection)</li>
+	    <li>Via attaching to the model events listening to the newly introduced LOCALIZED-Features</li>
+	  </ol>
+	  <b>Note:</b> The renderers need to be modified to listen to the LOCALIZED-Features, otherwise the Locale change at runtime isn't supported!
+    </td>
+  </tr>
+  <tr id="ResourceBundleProvider">
+    <td class="title">ResourceBundleProvider</td>
+    <td class="content">
+      Introduced the <code>ResourceBundleProvider</code> service to abstract out the reference to <code>BundleLocalization</code> OSGi service.
+	  This way users are able to change how ResourceBundles should be looked up within their Eclipse application, e.g. using class-based 
+	  ResourceBundles, loading translations out of a database, loading ResourceBundles from a server by using a different ResourceBundle.Control.
+	  The default implementation <code>DefaultResourceBundleProvider</code> is internally using <code>BundleLocalization</code> to keep the
+	  known default behaviour.
+    </td>
+  </tr>
+  <tr id="TranslationService">
+    <td class="title">TranslationService update</td>
+    <td class="content">
+      The <code>TranslationService</code>, that is used to localize the application model, had several downsides regarding extensibility.
+	  A lot of code needed to be copied in order to create a custom <code>TranslationService</code> that retrieves translations from a different location 
+	  than the OSGi-ResourceBundle. To make it easier for users to implement a custom <code>TranslationService</code>, the API was modified. The method 
+	  <code>getResourceString(String, ResourceBundle)</code> is moved from <code>BundleTranslationProvider</code> to <code>TranslationService</code> with 
+	  protected visibility, as it contains the logic to retrieve and transform the translation key that is set in the application model. The default
+	  implementation <code>BundleTranslationProvider</code> is now using the <code>ResourceBundleHelper</code> in combination with the 
+	  <code>ResourceBundleProvider</code>. This way the localization of the application model and the localization via new message extension are using 
+	  the same mechanisms. As a small enhancement, this also enables the usage of dot separated keys for translating the application model.
+	  <p>
+	  Also with M6 the package <code>org.eclipse.e4.core.services.translation</code> is released as API.
+	  </p>
+    </td>
+  </tr>
+  <tr id="CSSIncludes">
+    <td class="title">CSS includes </td>
+    <td class="content">
+      CSS files for Eclipse can now include other CSS files via the 
+      <code>@import url("platform:/plugin/Bundle-Symbolic-Name/path/file.extension");</code> statement. This allows easy reuse of 
+      existing style sheets.
+    </td>
+  </tr>
+  <tr id="css-bridge"> 
+    <td class="title">CSS&nbsp;bridge</td>
+    <td class="content">
+     The CSS support for the 3.x theme element definitions is now available (the CSS bridge), for more details see the following bugs:
+	 <ul>
+	  <li><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=419016" target="_blank">Bug 419016</a></li>
+	  <li><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=419018" target="_blank">Bug 419018</a></li>
+	  <li><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=429338" target="_blank">Bug 429338</a></li>
+     </ul>
+	 The use cases for the bridge:
+	 <ul>
+		<li>
+			Using the Color and FontDefinitions in the CSS style sheet:
+			<p>
+				<img src="images/css-bridge/using-definitions.png" alt=""/>
+			</p>
+		</li>
+		<li>
+			Overriding of the definitions in the CSS style sheet:
+			<p>
+				<img src="images/css-bridge/overriding-definitions.png" alt=""/>
+			</p>
+		</li>
+		<li>
+			Adding the new definitions with the CSS style sheet:
+			<p>
+				<img src="images/css-bridge/new-definitions.png" alt=""/>
+			</p>
+		</li>
+	 </ul>
+	 The 3.x theme definitions overridden or added in the CSS style sheet are merged with the current 3.x theme.<br/>
+	 After switching the 3.x theme they are re-merged with the new theme.<br/><br/>
+	 The new definitions added with the CSS file (the last use case) are available in the CSS theme that provides it.<br/>
+	 After switching the CSS theme the definitions can be unavailable in the theme registries when the new theme doesn't re-define it.
+	 So using such definitions out of the CSS files, we have to be prepared for such situation and use proper default values in the case when some definitions are missing.
+    </td>
+  </tr>
+  <tr id="theme-association"> 
+    <td class="title">New 'themeAssociation' element of the 'org.eclipse.e4.ui.css.swt.theme' extension&nbsp;point</td>
+    <td class="content">
+     Currently the user is able to connect the CSS theme with proper 3.x theme. After defining the proper association between themes, 
+	 when user changes the CSS theme with the combo in the preference dialog, the proper 3.x theme will be set automatically.
+	 <p>
+		<img src="images/theme-association.png" alt=""/>
+	</p>
+	</td>
+  </tr>
+  <tr>
+    <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
+  <tr id="trace-std-out">
+    <td class="title">Print debug trace to the standard output stream</td>
+    <td class="content">
+      On the <b>General &gt; Tracing</b> preference page you can now choose to have the output of debug trace statements
+      being sent to the standard output stream.
+      <p>
+      <img src="images/trace-output.png" alt="The tracing preference page with output to standard output stream option"/>
+      </p>
+    </td>
+  </tr>
+  <tr id="os-arch-system-props">
+    <td class="title">Products can specify OS/arch system properties</td>
+    <td class="content">
+      In the <b>Product Editor</b> you can now add system properties that will only apply to a single OS, a single architecture or a 
+      an OS/architecture combination.
+      <p>
+      <img src="images/osarch-systemprops.png" alt="The product editor showing os/arch system properties"/>
+      </p>
+    </td>
+  </tr>
+  <tr id="os-arch-vm-args">
+    <td class="title">Products can specify OS/arch launch arguments</td>
+    <td class="content">
+      In the <b>Product Editor</b> you can now add program and VM arguments to all platforms, a specific operating system or
+      a specific architecture/OS combination. A preview area shows the complete list of arguments that will apply to the selected
+      OS and architecture.
+      <p>
+      <img src="images/osarch-args.png" alt="The product editor showing os/arch vm arguments"/>
+      </p>
+    </td>
+  </tr>
+
+  <tr> 
+    <td colspan="2">  </td>
+  </tr>
+</table>
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Luna milestone builds:</p>
+<ul>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M5-201401231600/news/">New for Eclipse Luna milestone build M5 (January 24, 2014)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M4-201312121600/news/">New for Eclipse Luna milestone build M4 (December 13, 2013)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M3-201310302000/news/">New for Eclipse Luna milestone build M3 (November 1, 2013)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M2-201309182000/news/">New for Eclipse Luna milestone build M2 (September 20, 2013)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M1-201308072000/news/">New for Eclipse Luna milestone build M1 (August 9, 2013)</a></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2018, 2019. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" type="text/css"/>
+<style type="text/css">
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+/*img {max-width: 520px;}*/
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+ul {padding-left: 13px;}
+</style>
+<title>Eclipse Project 4.27 - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Java development tools</h2>
+<ul>
+	<!--<li><a href="#JavaXX">Java&trade; XX Support</a></li>-->
+	<li><a href="#JavaCompiler">Java Compiler</a></li>
+	<li><a href="#JUnit">JUnit</a></li>
+	<li><a href="#JavaEditor">Java Editor</a></li>
+	<!--li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li-->
+	<!--li><a href="#JavaFormatter">Java Formatter</a></li-->
+	<!--li><a href="#Debug">Debug</a></li-->
+	<li><a href="#JDTDev">JDT Developers</a></li>
+</ul>
+
+<!-- ****************** START OF N&N TABLE ****************** -->
+<table class="news">
+<colgroup>
+  <col class="title" />
+  <col />
+</colgroup>
+<tbody>
+
+  <!-- ******************* Java XX Support ************************************* -->
+  <!--
+  <tr>
+    <td id="JavaXX" class="section" colspan="2">
+    <h2>Java&trade; XX Support </h2>
+    </td>
+  </tr>
+  -->
+  <!-- ******************* End of Java XX Support ************************************* -->
+
+  <!-- ******************* Java Compiler ************************************* -->
+  <tr>
+    <td id="JavaCompiler" class="section" colspan="2">
+    <h2>Eclipse compiler for Java (ECJ)</h2>
+    </td>
+  </tr>
+  <tr id="ecj-separated-from-core"> <!-- https://github.com/eclipse-jdt/eclipse.jdt.core/pull/182 -->
+    <td class="title"><a href="#ecj-separated-from-core">ECJ separated from JDT Core</a></td>
+    <td class="content">
+      <p>
+      Historically the code for ECJ was always in the same <code>org.eclipse.jdt.core</code>
+       project that also contained the code for the Java support in the IDE, just in a different source folder.
+      The well known standalone ECJ compiler library that could be used outside of 
+      Eclipse (for compilation with external tooling) was generated out of this 
+      core bundle at build time and was not included in the default SDK (because 
+      it contained subset of packages and classes provided by <code>org.eclipse.jdt.core</code>).
+      </p>
+      <p>
+      This lead to few issues, with both Eclipse / standalone use of the ECJ compiler.
+      The (non-JDT) code inside Eclipse that required "default" <code>javax.tools.JavaCompiler</code>
+      API implementation and had no need for full JDT / workspace support 
+      was not able to use <code>org.eclipse.jdt.core</code> without pulling in
+      <code>org.eclipse.core.resources</code> bundle and so the dependency to the workspace.
+      Another interesting side effect of hosting ECJ code next to IDE code inside
+      same <code>org.eclipse.jdt.core</code> bundle was that developers couldn't see 
+      if the ECJ code per mistake got some dependency to the IDE. 
+      </p>
+      <p>
+      To resolve these (and other) problems, the ECJ code is moved from <code>org.eclipse.jdt.core</code>
+      to dedicated <code>org.eclipse.jdt.core.compiler.batch</code> project and will be
+      deployed as a separated bundle.
+      The <code>org.eclipse.jdt.core.compiler.batch</code> is now included in SDK
+      as a regular Eclipse bundle and can be compiled / deployed / used separately
+      from <code>org.eclipse.jdt.core</code> bundle.
+      All of ECJ packages are re-exported by <code>org.eclipse.jdt.core</code>, therefore
+      from OSGI point of view, all 3rd party code that used some compiler related API 
+      from <code>org.eclipse.jdt.core</code> doesn't require any change.
+      The <code>org.eclipse.jdt.core.compiler.batch</code> bundle itself doesn't have any dependencies
+      and so can be used in Eclipse products that do not use workspace concepts.
+      </p>
+      <p>
+      However, no change is without side effects.
+      </p>
+      <p>
+      <b>Known problems with the split of the ECJ from core bundle</b>
+      </p>
+      <ul>
+      <li>
+      As part of the <code>org.eclipse.jdt.core.compiler.batch</code> code separation from 
+      <code>org.eclipse.jdt.core</code>, the two fragments of <code>org.eclipse.jdt.core</code> - 
+      <code>org.eclipse.jdt.compiler.apt</code> and <code>org.eclipse.jdt.compiler.tool</code>
+      were merged into <code>org.eclipse.jdt.core.compiler.batch</code>.
+      So if some target definition, launch configuration or build file referenced the two fragments, these
+      references can and should be removed now.
+      </li>
+      <li>
+      Another issue might affect standalone (non OSGI based) applications that
+      were using <code>org.eclipse.jdt.core</code> as a "simple" Java library 
+      (which jdt.core never was).
+      So for example code that had <code>org.eclipse.jdt.core_XYZ.jar</code> on 
+      classpath and tried to call this outside Eclipse:
+      <pre>ASTParser parser = ASTParser.newParser(AST.getJLSLatest());</pre>
+      would fail now with <pre>NoClassDefFoundError: org.eclipse.jdt.internal.compiler.env.ICompilationUnit</pre> 
+      because <code>org.eclipse.jdt.core.dom.ASTParser</code> uses internally ECJ 
+      APIs and they are now ... surprise ... moved to <code>org.eclipse.jdt.core.compiler.batch</code>
+      jar. To fix this error, <code>org.eclipse.jdt.core.compiler.batch</code> library
+      should be added to the application classpath.
+      </li>
+      </ul>
+    </td>
+  </tr>
+  
+  <!-- ******************* JUnit ************************************* -->
+  <tr>
+    <td id="JUnit" class="section" colspan="2">
+    <h2>JUnit</h2>
+    </td>
+  </tr>
+  <tr id="junit-subpackage-support"> <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/424 -->
+    <td class="title"><a href="#junit-subpackage-support">Launch JUnit tests in subpackages</a></td>
+    <td class="content">
+      Previously, if one selected a package in the explorer that contained JUnit tests and subpackages that also contained JUnit tests, only the tests directly owned by the package would be run.  The functionality has been enhanced so that JUnit tests in subpackages will be found by the JUnitLauncher and launched as well.
+      <p>For example, in the following project, selecting the package <b>test</b> and right-clicking to <b>Run as &gt; JUnit Plug-in Test</b></p>
+      <p><img src="images/junit-subpackage-before.png" alt="Before"/></p>
+      <p>will result in:</p>
+      <p><img src="images/junit-subpackage-results.png" alt="JUnit results"/></p>
+    </td>
+  </tr>
+  <!-- ******************* End of JUnit ************************************* -->
+
+  <!-- ******************* Java Editor ************************************* -->
+  <tr>
+    <td id="JavaEditor" class="section" colspan="2">
+    <h2>Java Editor </h2>
+    </td>
+  </tr>
+  <tr id="new-code-mining-preference">
+  <td class="title"><a href="#new-code-mining-preference">New code mining preference</a></td>
+   <td class="content">
+      In the past, the code minings for method references used the <b>Search</b> preferences page setting: <b>Ignore potential matches</b> to determine if inexact matches should be filtered out.  By default, this setting is false and so code mining could result in a number of entries that were only potential matches.  To make this more intuitive and to change the default behavior, the <b>Code Mining</b> preference page has been enhanced to have its own setting: <b>Ignore inexact matches</b> which by default is set to true.
+      <p>To set the new option, go to: <b>Preferences &gt; Java &gt; Editor &gt; Code Minings</b>
+      </p>
+      <p><img src="images/new-code-mining-pref.png" alt="New Code Mining Preference"/></p>
+   </td>
+  </tr>
+
+  <tr id="javadoc-inline-return"> <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/340 -->
+    <td class="title"><a href="#javadoc-inline-return">Javadoc inline @return</a></td>
+    <td class="content">
+      As of Java 16, the Javadoc <b>@return</b> tag can be specified as an inline tag (with curly braces) in a method's Javadoc comment.  When used it generates both the method description and the <b>Returns</b> section of the Javadoc for the method.  It is specified as follows: {<b>@return </b><i>&lt;return description&gt;}</i>.  The generated Javadoc will show: <b>Returns</b> <i>&lt;return description&gt;</i>. for the method's main description and will use the same description to generate the <b>Returns</b> section.  In the case where both the inline <b>@return</b> tag and block <b>@return</b> tag are specified, the new inline tag will override.
+
+     <p>Support has been added in Eclipse to recognize the inline version of the tag and show the proper Javadoc hover.</p>
+
+     <p>For details on the inline <b>@return</b> tag, see: <a href="https://docs.oracle.com/en/java/javase/19/docs/specs/javadoc/doc-comment-spec.html#return">Javadoc Comment Spec</a></p>
+      <p><img src="images/javadoc-inline-return.png" alt="Using new inline return tag"/></p>
+    </td>
+  </tr>
+
+  <!-- ******************* End of Java Editor ************************************* -->
+
+  <!-- *********************** JDT Developers ******************************** -->
+  <tr>
+    <td id="JDTDev" class="section" colspan="2">
+    <h2>JDT Developers</h2>
+    </td>
+  </tr>
+  <tr id="new-old-jdt-views"> <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/387 
+  								   https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/364 -->
+    <td class="title"><a href="#new-old-jdt-views">Four new views added to SDK</a></td>
+    <td class="content">
+      Following four new Java / JDT related views are shipped now by default with the Eclipse SDK:
+      <ol>
+      <li><code>Abstract Syntax Tree</code></li>
+      <li><code>Bytecode</code></li>
+      <li><code>Bytecode Reference</code></li>
+      <li><code>Java Element</code></li>
+      </ol>
+	  <p><img src="images/new-jdt-views-list.png" alt="List of views"/></p>
+      <p>
+      All four views are actually not new, however they were previously only available for installation 
+      via Eclipse Marketplace and not included in the SDK itself.
+      Now they are shipped with SDK package and also will be available for installation in other packages
+      via <a href="https://download.eclipse.org/eclipse/updates/latest/">https://download.eclipse.org/eclipse/updates/latest/</a> 
+      update site.
+      </p> 
+      <ul>
+      <li>
+      <code>Bytecode</code> and <code>Bytecode Reference</code> views are of general use for advanced Java developers
+      interested how the Java code compiled to the class files, independently
+      if the class file was compiled by Eclipse or by other Java compiler.
+      </li>
+      <li>
+      <code>Abstract Syntax Tree</code> and <code>Java Element</code> views are
+      showing JDT internal representation of the Java code and are useful mostly for JDT developers only.
+      </li>
+      </ul>
+	  <p><img src="images/new-jdt-views-content.png" alt="Views with some content"/></p>
+    </td>
+  </tr>
+  <!-- *********************** End of JDT Developers ******************************** -->
+  <tr><td colspan="2"/></tr>
+</tbody>
+</table>
+<!-- ****************** END OF N&N TABLE ****************** -->
+
+<script type="text/javascript" src="scripts.js"></script>
+  <p style="text-align:center">
+    <a href="platform.php">Previous</a> <a style="margin:1em" href=".">Up</a> <a href="platform_isv.php">Next</a>
+  </p>
+</body>
+</html>

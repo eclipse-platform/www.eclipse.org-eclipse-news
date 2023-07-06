@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2018, 2019. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" type="text/css"/>
+<style type="text/css">
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+/*img {max-width: 520px;}*/
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+ul {padding-left: 13px;}
+</style>
+<title>Eclipse Project 4.25 - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Platform and Equinox API</h2>
+  <ul>
+    <li><a href="#Platform">Platform Changes</a></li>
+    <li><a href="#SWT">SWT Changes</a></li>
+  </ul>
+
+<!-- ****************** START OF N&N TABLE****************** -->
+<table class="news">
+<colgroup>
+  <col class="title" />
+  <col />
+</colgroup>
+<tbody>
+  <!-- ******************** Platform ********************** -->
+  <tr>
+    <td id="Platform" class="section" colspan="2"><h2>Platform Changes</h2></td>
+  </tr>
+  
+    
+  <tr id="less-icons-in-message-dialogs"> <!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/181-->
+    <td class="title"><a href="#less-icons-in-message-dialogs">MessageDialog not using icons for user facing dialogs.</a></td>
+    <td class="content">
+		The <code>org.eclipse.jface.dialogs.MessageDialog</code> has been updated to not use icons for user facing dialogs of type <code>QUESTION, QUESTION_WITH_CANCEL and CONFIRM</code> 
+		to align with the UI guidelines regarding such dialogs for the various operating systems.
+    </td>
+  </tr>
+  <!-- ******************** End of Platform ********************** -->
+
+  <!-- *********************** SWT *********************** -->
+  <tr>
+    <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
+  </tr>
+
+  <tr id="CTabFolder-setSelectionBarThickness"> <!-- https://github.com/eclipse-platform/eclipse.platform.swt/pull/55 -->
+    <td class="title"><a href="#CTabFolder-setSelectionBarThickness">Configure highlight bar thickness on CTabFolder</a></td>
+    <td class="content">
+      The <code>CTabFolder</code> now has a new API <code>setSelectionBarThickness(int thickness)</code> that allows to set the thickness of the highlight bar in the selected tab.
+      
+      <p>By default a highlight bar is now drawn in the selected tab. You can switch to the old look without highlight bar by using <code>CTabFolder#setSelectionBarThickness(0)</code>.</p>
+      <p>Old look and feel:</p>
+      <img  src="images/ctabfolder-before.png" alt="" />
+      <p>New look and feel:</p>
+      <img  src="images/ctabfolder-after.png" alt=""/>
+    </td>
+  </tr>
+
+  <tr id="MessageBox-setButtonLabels"> <!-- https://github.com/eclipse-platform/eclipse.platform.swt/issues/233 -->
+    <td class="title"><a href="#MessageBox-setButtonLabels">Set custom text for MessageBox's buttons</a></td>
+    <td class="content">
+		The <code>MessageBox</code> now has a new API <code>setButtonLabels(Map&#60;Integer&#44; String&#62; labels)</code> that allows to configure the text on the buttons.
+      <p>Old behavior:</p>
+      <img  src="images/messageBox-before.png" alt="" />
+      <p>New behavior: You can now set custom text for the buttons using <code>MessageBox#setButtonLabels(Map.of(SWT.YES, "Close"))</code>:</p>
+      <img  src="images/messageBox-after.png" alt=""/>
+    </td>
+  </tr>
+  <!-- *********************** End of SWT *********************** -->
+  <tr><td colspan="2"/></tr>
+</tbody>
+</table>
+<!-- ****************** END OF N&N TABLE ****************** -->
+
+<script type="text/javascript" src="scripts.js"></script>
+  <p style="text-align:center">
+    <a href="jdt.php">Previous</a> <a style="margin:1em" href=".">Up</a> <a href="pde.php">Next</a>
+  </p>
+</body>
+</html>
