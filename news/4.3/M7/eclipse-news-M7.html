@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="default_style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse Project 4.3 M7 News</title>
+</head>
+<body>
+<h1>Eclipse Project 4.3 M7 - New and Noteworthy</h1>
+<p>Here are some of the more noteworthy things available in milestone build M7 
+(May 3, 2013) which is now available for <a href="http://download.eclipse.org/eclipse/downloads/" target="_top">download</a>.
+</p>
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#JDT">JDT</a></li>
+  <li><a href="#PDE">PDE</a></li>
+</ul>
+
+<table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+  <tr id="e4-api">
+    <td class="title">Initial Eclipse 4 API released</td>
+    <td class="content">
+      As was announced at EclipseCon this year, the first set of official API based on the new Eclipse 
+      Platform 4 architecture is now available. This is the first step in allowing developers to use the 
+      new simpler and more powerful mechanisms to build Eclipse plug-ins and applications.
+    <p>
+      This API is comprised of two basic concepts:
+    </p><p>
+      <b>The user interface model</b>: The content of this model describes the structure of the user interface.
+      The Eclipse Platform reacts to changes in this model by updating the presentation, and the complete
+      model is now available through the new API.
+    </p><p>
+      Note that the model represents everything on the screen and these elements can be modified
+      by your code (see the example below).
+    </p><p>
+      <b>IEclipseContext / Dependency Injection (DI)</b>: Contexts are containers of UI runtime state
+      including all the available services. The typical Eclipse Platform 4 pattern is that contributions
+      are created and configured through dependency injection based on state and services found in the local
+      context for that model element.
+    </p><p>
+      Here are a few links to more information about the UI Model, the services and DI (the Javadoc and supporting
+      Eclipse documentation will be available before Kepler is released):
+    </p>
+    <ul>
+      <li><a href="http://www.eclipsecon.org/2013/sites/eclipsecon.org.2013/files/FormalAPI.pdf">EclipseCon 2013 API Slides</a></li>
+      <li><a href="http://www.vogella.com/articles/EclipseRCP/article.html">Lars' RCP Tutorial</a></li>
+      <li><a href="http://www.vogella.com/articles/Eclipse4Services/article.html">Lars' Services Tutorial</a></li>
+      <li><a href="http://eclipsesource.com/blogs/2013/04/18/eclipse-4-e4-tutorial-behavior-annotations/">Jonas Helming's DI Tutorials</a></li>
+    </ul>
+    <p>
+      There is quite a lot of information already available for Eclipse Platform 4. While parts of the API are just being
+      formalized now, most of the concepts and API existed in provisional form in previous Eclipse 4 releases.
+    </p><p>
+      Just to give a taste of what working in a modeled UI is all about, here's a code snippet showing
+      how to get a 'standard' Command handler to toggle the visibility of the 'Quick Access' text field
+      that appears in the top trim. First we gain access to the model by getting the MApplication as a
+      'service'. Form there we can access the EModelService and use it to find the model element
+      representing the search in the UI. Then it's just a simple matter of toggling the element's
+      'toBeRendered' flag to get it to (dis)appear.
+    </p>
+    <pre>
+public Object execute(ExecutionEvent event) throws ExecutionException {
+  IWorkbenchWindow window = HandlerUtil.getActiveWorkbenchWindowChecked(event);		
+  MApplication theApp = (MApplication) window.getService(MApplication.class);
+  MWindow activeWin = theApp.getSelectedElement();
+  EModelService ms = activeWin.getContext().get(EModelService.class);
+  EPartService ps = activeWin.getContext().get(EPartService.class);
+  MToolControl search = (MToolControl) ms.find("SearchField", activeWin);
+  if (search != null) {
+    search.setToBeRendered(!search.isToBeRendered());
+    window.getShell().layout(true, true);
+  }
+  return null;
+}
+      </pre>
+    </td>
+  </tr>
+
+  <tr id="xulrunner64">
+    <td class="title">XULRunner on 64-bit Windows</td>
+    <td class="content">The browser widget now supports the embedding of XULRunner on Windows x86_64.</td>
+  </tr> 
+
+  <tr id="open-resource-buttons">
+    <td class="title">Open Resource dialog enhancements</td>
+    <td class="content">
+      The <b>Open Resource</b> (<b>Ctrl+Shift+R</b>) dialog now offers direct access to the
+      <b>Show In</b> and <b>Open With</b> menus via drop-down buttons. On platforms that
+      support mnemonics, the buttons are also accessible via <b>Alt+W</b> and <b>Alt+H</b>.
+      <p><img src="images/open-resource-buttons.png" alt=""/></p>
+    </td>
+  </tr>
+  
+  <tr id="remediation"> 
+    <td class="title">Installation Remediation</td>
+    <td class="content">
+	 In order to help you deal with dependency errors while installing software, the various installation wizards now contain 
+	 a new wizard page. This page, called <b>remediation</b>, proposes various solutions in order to help you proceed 
+	 with the installation, even when the exact change you requested is not possible.
+	 <p>
+	 The picture below shows a screenshot of this page in action. In this particular case the user is trying to install something
+	 that is conflicting with what is installed, and the wizard gives the option to update what is installed so that the installation
+	 can proceed.
+	 </p>
+     <p><img src="images/remediation.png" alt=""/></p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+  
+  <tr id="remove-type-arguments">
+    <td class="title">Remove type arguments after content assist</td>
+    <td class="content">
+     Ever encountered a case where content assist added type arguments for a generic type, but you do not want them
+     because you need the <code>.class</code> literal or you want to invoke a static method?
+     Now, rather than deleting all the arguments manually, 
+     you can just delete the '<code>&lt;</code>' and that will remove the entire text up to '<code>&gt;</code>'.
+    </td>
+  </tr>
+  <tr id="proposals-without-prefix">
+    <td class="title">Template and keyword proposals without prefix</td>
+    <td class="content">
+      Content assist now proposes templates and keywords without needing a prefix first:
+      <p><img src="images/content-assist.png" alt=""/></p>
+    </td>
+  </tr>
+  <tr id="semicolon-key-inserts-method">
+    <td class="title">Use ';' key to insert method invocation</td>
+    <td class="content">
+    Irrespective of the return type of a method, you can now use the semicolon (<b>;</b>) key to select any method invocation proposal
+    from the content assist popup. The '<code>;</code>' will be appended at the end of the method invocation.
+    </td>
+  </tr>   
+  <tr id="semicolon-appended-for-void-methods">
+    <td class="title">Content assist appends ';' to void methods</td>
+    <td class="content">
+    If a void method is selected during content assist, then a semicolon is now automatically
+    appended at the end of the method invocation.
+    </td>
+  </tr>
+  <tr id="test-templates">
+    <td class="title">JUnit test templates</td>
+    <td class="content">
+      The JUnit test templates have been renamed to show the JUnit 4 template before the JUnit 3 template:
+      <p><img src="images/junit-templates.png" alt="'test' for JUnit 4; 'test3' for JUnit 3"/></p>
+    </td>
+  </tr>
+  <tr id="junit-view-assumptions">
+    <td class="title">JUnit view shows assumption failures</td>
+    <td class="content">
+      The JUnit view now counts <code>@Ignore</code>d tests and tests that didn't meet
+      an assumption as "skipped' tests. The skipped tests also got new icons, and
+      tests with an assumption failure no longer get the 'passed' checkmark.
+      <p><img src="images/junit-view-assumptions.png" alt="Test cases using @Ignore and Assume.assumeFalse(true)"/></p>
+    </td>
+  </tr>
+  <tr id="create-loop-variable">
+    <td class="title">Quick Fix to create 'for' loop variable</td>
+    <td class="content">
+      The new <b>Create loop variable</b> quick fix corrects an incomplete 'for' loop
+      by adding the type of the loop variable.
+      <p><img src="images/create-loop-variable.png" alt="Corrects 'for (e: elements) {}' to 'for (ElementType e: elements) {}'"/></p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
+  <tr id="auto-start-all-plugins">
+    <td class="title">Default start level settings apply to all plug-ins</td>
+    <td class="content">
+      When editing the <b>Plug-ins</b> tab of an <b>Eclipse Application</b> launch configuration, the <b>Default
+      Start level</b> and <b>Default Auto-start</b> settings chosen at the top of the tab will be used when launching with
+      all workspace and enabled target plug-ins.  Previously this setting would only be used when launching a
+      specific list of plug-ins.
+      <p><img src="images/autostart-all-plugins.png" alt="All plug-ins selected on the tab"/></p>
+      <p><img src="images/autostart-levels.png" alt="Different default start level settings"/></p>
+    </td>
+  </tr>
+  <tr id="pde-run-remembers-selection">
+    <td class="title">Running from PDE editors remembers previous launch</td>
+    <td class="content">
+      The PDE editors allow applications to be launched from the top toolbar of the <b>Manifest</b>, <b>Plug-in</b>
+      and <b>Product</b> editors.  By default PDE only provides one type of application to launch.  However, if you have additional tooling
+      installed such as RAP Tools, different application launches will be available in a drop down menu.
+      <p><img src="images/launch-order.png" alt="Ordering of launches in editor"/></p>
+      <p>
+      This menu now remembers which application was launched most recently and puts it at the top of the list.  The most
+      recent choice will be launched if the run button is pressed.  The order is saved between workbench
+      restarts.
+      </p>
+    </td>
+  </tr>
+  <tr id="pde-junit-e4">
+    <td class="title">JUnit plug-in tests can run on Eclipse platform 4 workbench</td>
+    <td class="content">
+      Applications that use the Eclipse Platform 4 workbench API can now
+      use <b>JUnit Plug-in Test</b> launch configurations to test their plug-ins. Previously 
+      the tests would require the 3.x workbench API from the <code>org.eclipse.ui</code> bundle to 
+      hook into the workbench lifecycle.
+    </td>
+  </tr>
+  <tr id="support-pre-osgi-bundles">
+    <td class="title">API Tools has limited support for pre-OSGi Eclipse plug-ins</td>
+    <td class="content">
+      Eclipse plug-ins created before 3.1 did not contain an OSGi bundle manifest.  API Tools
+      can now convert the pre-OSGi plug-ins to valid components in an API baseline.  This allows
+      analysis, use and freeze scans to process plug-ins that depend on pre-OSGi plug-ins instead
+      of failing to resolve.
+      <p><img src="images/use-scan.png" alt="Use scan launch configuration with pre-OSGi plug-ins"/></p>
+      <p>
+      An OSGi runtime is required to do the conversion.  Tasks run using Eclipse AntRunner
+      or the API Use Report external tools launch configuration can convert the plug-ins.  Tasks
+      run from the command line Ant runner will skip pre-OSGi plug-ins.
+      </p>
+    </td>
+  </tr>
+    <tr id="noreference-types">
+    <td class="title">API Tools allows @noreference Javadoc tag on types</td>
+    <td class="content">
+      API Tools now allows the use of the <code>@noreference</code> Javadoc tag on types (classes, interfaces,
+      annotations and enums).
+      <p><img src="images/no-reference.png" alt="Type defining noreference Javadoc tag"/></p>
+      <p>Placing this tag restricts the API so that any reference to that type or its members
+      will be flagged as invalid API use.</p>
+      <p><img src="images/using-no-reference.png" alt="Class trying to reference a type marked as noreference"/></p>
+      <p>
+      To mark a type in an API package as not being API, tag it as <code>@noreference</code>,
+      <code>@noextend</code> and <code>@noinstantiate</code> (or <code>@noimplement</code>).  This ensures that
+      no client can access it via valid API and the type could later be removed.
+      </p>
+    </td>
+  </tr>
+    <tr id="api-tags-check-visibility">
+    <td class="title">API Tools Javadoc tags check visibility</td>
+    <td class="content">
+      A member that is not publicly visible, such as a method or field marked private, is not part 
+      of API.  Any API Tools Javadoc tags on it are invalid.  Now, API Tools will also check if a
+      member is not visible because of the visibility of an enclosing type.  If the member is not visible,
+      any tags on it will be considered invalid.
+      <p><img src="images/api-parent-not-visible.png" alt="Javadoc tag flagged as invalid because member is not visible"/></p>
+      <p>
+      Tag validation is turned off by default.  To turn it on for your API Tools enabled project, open 
+      <b>Project Properties > Plug-in Development > API Errors/Warnings</b>.  Set 
+      <b>API Use > General > Unsupported use of API Javadoc tags</b> to <code>Warning</code> or <code>Error</code>.
+      </p>
+    </td>
+  </tr>
+
+  <tr> 
+    <td colspan="2">  </td>
+  </tr>
+</table>
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Kepler milestone builds:</p>
+<ul>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.3M6-201303141330/news/">New for Eclipse Kepler milestone build M6 (March 15, 2013)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.3M5a-201302041400/news/">New for Eclipse Kepler milestone build M5a (February 5, 2013)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.3M4-201212140730/news/">New for Eclipse Kepler milestone build M4 (December 14, 2012)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.3M3-201210312000/news/">New for Eclipse Kepler milestone build M3 (November 2, 2012)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.3M2-201209201300/news/">New for Eclipse Kepler milestone build M2 (September 21, 2012)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.3M1-201208101300/news/">New for Eclipse Kepler milestone build M1 (August 10, 2012)</a></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style type="text/css">
+p, table, td, th {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt}
+pre {  font-family: "Courier New", Courier, mono; font-size: 10pt}
+h2 { font-family: verdana, arial, helvetica, geneva; font-size: 18pt; font-weight: bold ; line-height: 14px}
+code {  font-family: "Courier New", Courier, mono; font-size: 10pt}
+sup {  font-family: verdana, arial, helvetica, geneva; font-size: 10px}
+h3 {  font-family: verdana, arial, helvetica, geneva; font-size: 14pt; font-weight: bold}
+li {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt}
+h1 {  font-family: verdana, arial, helvetica, geneva; font-size: 24pt; font-weight: bold}
+body {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt; margin-top: 5mm; margin-left: 3mm}
+.indextop { font-size: x-large; font-family: verdana, arial, helvetica, sans-serif; font-weight: bold}
+.indexsub { font-size: xx-small; font-family: verdana, arial, helvetica, sans-serif; color: #8080FF}
+a.bar:link {  text-decoration: none; color: #FFFFFF}
+a.bar:visited {  color: #FFFFFF; text-decoration: none}
+a.bar:hover {  color: #FFFFFF; text-decoration: underline}
+a.bar {  color: #FFFFFF}
+
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+  </style>
+<title>Eclipse Project Photon (4.8) M2 - New and Noteworthy</title>
+</head>
+
+<body>
+<h1>Eclipse Project Photon (4.8) M2 - New and Noteworthy
+</h1>
+<p>Here are some of the more noteworthy things available in the Photon milestone build M2
+  which is now available for <a href="http://download.eclipse.org/eclipse/downloads/#4.8_Stable_Builds" target="_top">download</a>.
+  <br />
+  We also recommend to read the Tips and Tricks, either via <b>Help &gt; Tips and Tricks...</b> or online for
+  <a href="http://help.eclipse.org/topic/org.eclipse.platform.doc.user/tips/platform_tips.html">Platform</a>,
+  <a href="http://help.eclipse.org/topic/org.eclipse.jdt.doc.user/tips/jdt_tips.html">JDT</a>, and
+  <a href="http://help.eclipse.org/topic/org.eclipse.pde.doc.user/tips/pde_tips.htm">PDE</a>.
+</p>
+
+
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#JDT">JDT</a></li>
+  <li><a href="#PDE">PDE</a></li>
+  <li><a href="#Platform-Dev">Platform Developers</a></li>
+
+</ul>
+
+<table class="news">
+  <colgroup>
+    <col class="title" />
+    <col />
+  </colgroup>
+
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+
+  <tr id="contenttype-filename-pattern">
+    <td class="title">Associate content type with a file name pattern</td>
+    <td class="content">
+      From the <b>Preferences > General > Content Types</b> preference page, you can now
+      associate a content type with a file name pattern and use <code>?</code> or <code>*</code> wildcards at any place in that pattern
+      (respectively to match any character or any string).
+    <img src="images/wildcard-content-type-association.png" alt=""/>
+    </td>
+  </tr>
+
+  <tr id="dark-buttons-mac">
+    <td class="title">Dark buttons on Mac</td>
+    <td class="content">
+      The background color of a button can now be styled on the Mac. This is used to style the buttons in the dark theme.
+    <p><img src="images/dark-mac-buttons.png" alt=""/></p>
+    </td>
+  </tr>
+
+  <tr id="swt-gtk3-caret-performance">
+    <td class="title">Improved caret performance on GTK3</td>
+	<td class="content">Caret performance on the SWT GTK3 port has been enhanced to allow for smoother
+		drawing. Previously the caret stuttered when moved or when other controls in the same
+		shell were manipulated. Now the caret moves smoothly and blinks at a consistent rate.
+	</td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+
+  <tr id="jdt-syntaxcoloring-dark">
+    <td class="title">Improved Java syntax coloring in the dark theme</td>
+    <td class="content">
+    To improve readability in the dark theme, bold style usage has been reduced and some colors that were too close to each other have been altered. 
+    <p><img src="images/java-syntax-dark.png" alt=""/></p>    
+    </td>
+  </tr>
+
+  <tr id="junit-5-support">
+    <td class="title">Eclipse support for JUnit 5</td>
+    <td class="content">
+    <a href="http://junit.org/junit5/">JUnit 5</a> support is now available in Eclipse. Try it out with Eclipse Photon (4.8) M2 build or 
+    any of the available options from <a href="https://marketplace.eclipse.org/content/junit-5-support-oxygen">Eclipse Marketplace</a>.
+    <ul>
+		<li>
+		<p>Create a new JUnit Jupiter test via <b>New JUnit Test Case</b> wizard:</p>
+		<p><img src="images/new-junit-jupiter-test.png" alt=""/></p>
+		</li>
+		
+		<li>
+		<p>Add JUnit 5 library to the build path:</p>
+			<ul>
+				<li>
+				<p>New JUnit Test Case wizard offers to add it while creating a new JUnit Jupiter test:</p>
+				<p><img src="images/add-junit-5-lib.png" alt=""/></p>
+				</li>
+				<li>
+				<p>Quick Fix <b>(Ctrl+1)</b> proposal on <b><code>@Test</code></b>, <b><code>@TestFactory</code></b>, <b><code>@ParameterizedTest</code></b> and <b><code>@RepeatedTest</code></b> annotations:</p>
+				<p><img src="images/add-junit-5-lib-quick-fix.png" alt=""/></p>
+				</li>
+				<li>
+				<p>Add JUnit library in Java Build Path dialog:</p>
+				<p><img src="images/add-junit-5-lib-java-build-path.png" alt=""/></p>
+				</li>
+			</ul>
+		</li>
+		
+		<li>
+		<p>Create a JUnit Jupiter test method with the new <b>test_jupiter</b> template:</p>
+		<p><img src="images/junit-jupiter-test-method-template.png" alt=""/></p>
+		</li>
+		
+		<li>
+		<p>Create a <b><code>@TestFactory</code></b> method with the new <b>test_factory</b> template:</p>
+		<p><img src="images/junit-jupiter-test-factory-template.png" alt=""/></p>
+		</li>
+		
+		<li>
+		<p>JUnit Jupiter’s <code>Assertions</code>, <code>Assumptions</code>, <code>DynamicContainer</code> and <code>DynamicTest</code> classes are now added to <b>Eclipse Favorites</b> by default:</p>
+		<p><img src="images/content-assist-favorites.png" alt=""/></p>
+		<p>This allows you to quickly import the static methods from these classes in your code via Content Assist <b>(Ctrl + Space)</b> and Quick Fix <b>(Ctrl + 1)</b>.</p>
+		</li>
+
+		<li>
+		<p>View all the failures from grouped assertions in the same <b>Result Comparison</b> dialog opened from JUnit view:</p>
+		<p><img src="images/grouped-assertions-result-comparison.png" alt=""/></p>
+		</li>	
+
+		<li>
+		<p>View the number of disabled tests and tests with assumption failures on hover in JUnit view:</p>
+		<p><img src="images/skipped-tests.png" alt=""/></p>
+		</li>
+
+		<li>
+		<p>Use <b>Go to File</b> action or just double-click to navigate to the test from JUnit view even when the test is displayed with a custom name:</p>
+		<p><img src="images/display-name.png" alt=""/></p>
+		</li>
+
+		<li>
+		<p>(Re-)Run a single <b><code>@Nested</code></b> test class by using the <b>Run</b> action in JUnit view or Outline view. 
+		You can even right-click on a nested test class name in the editor and use the <b>Run As</b> action:
+		</p>
+		<p><img src="images/run-nested-class.png" alt=""/></p>
+		</li>
+
+		<li>
+		<p>The <b>Test Method Selection</b> dialog in JUnit launch configuration now shows the method parameter types also:</p>
+		<p><img src="images/test-method-selection-dialog.png" alt=""/></p>
+		</li>
+		
+		<li>
+		<p>Note: This functionality has been replaced with the new <a href="https://www.eclipse.org/eclipse/news/4.8/M3/#junit5-tags">Configure Tags</a> dialog in M3.</p>
+		<p>You can provide tags to be included in or excluded from a test run via <b>Program arguments</b> in the Arguments tab of JUnit launch configuration. The options are: </p>
+		<ul>
+		<li>--include-tag &lt;String&gt;</li>
+		<li>--exclude-tag &lt;String&gt;</li>
+		</ul>
+		<p>where &lt;String&gt; is a tag to be included in or excluded from the test run. These options can be repeated with newline separation:</p>
+		<p><img src="images/junit-tags.png" alt=""/></p>
+		</li>
+	</ul>
+    
+    <p><b>Note:</b></p>
+    <ul>
+    <li>
+    If you are using an Eclipse workspace where you were running your JUnit 5 tests via <code>@RunWith(JUnitPlatform.class)</code> in Eclipse without JUnit 5 support  
+    then you will have JUnit 4 as the test runner in their launch configurations. Before executing these tests in Eclipse with JUnit 5 support, you should either 
+    change their test runner to JUnit 5 or delete them so that new launch configurations are created with JUnit 5 test runner while running the tests:
+    <p><img src="images/test-runner-update.png" alt=""/></p>
+    </li>
+    <li>
+    We do not support running tests in a setup where an old Eclipse build (not having JUnit 5 support) is using a new Eclipse build (having JUnit 5 support) as target. Also, developers who have 
+    the JDT JUnit runtime bundles <code>(org.eclipse.jdt.junit.runtime, org.eclipse.jdt.junit4.runtime)</code> checked out and pull the latest changes will run into the above issue.
+    You are expected to use a new Eclipse build for the development. 
+    </li>
+    </ul>
+
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
+
+  <tr id="target-editor-source-tab">
+    <td class="title">Source tab added to target definition editor</td>
+    <td class="content">
+      Within the current default <b>Target Definition Editor</b>,
+        a <b>'Source'</b> tab has been added which contains the Extension Based Text Editor's Target Definition Editor.
+        The editor is concurrent with the other tabs and the update made will be mirrored between the tabs.
+      <img src="images/target-editor-source-tab.png" alt=""/>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
+  </tr>
+
+  <tr id="swt-lambda-style-keylistener">
+    <td class="title">Lambda as Listener</td>
+	<td class="content">Listener interfaces in SWT
+		were enhanced to provide static helper methods that accept
+		lambdas and method references as listeners. These methods are alternatives to using Adapter classes.
+		<ul>
+			<li><code>org.eclipse.swt.events.ControlListener</code></li>
+			<li><code>org.eclipse.swt.events.ExpandListener</code></li>
+			<li><code>org.eclipse.swt.events.MenuListener</code></li>
+			<li><code>org.eclipse.swt.events.TreeListener</code></li>
+			<li><code>org.eclipse.swt.events.MouseTrackListener</code></li>
+			<li><code>org.eclipse.swt.events.ShellListener</code></li>
+			<li><code>org.eclipse.swt.custom.ControlListener</code></li>
+			<li><code>org.eclipse.swt.browser.LocationListener</code></li>
+			<li><code>org.eclipse.swt.browser.ProgressListener</code></li>
+			<li><code>org.eclipse.swt.browser.VisibilityWindowListener</code></li>
+		</ul>
+	</td>
+  </tr>
+
+  <tr id="swt-gtk3-transparency-support">
+    <td class="title">Transparent color support on GTK3</td>
+	<td class="content">The SWT GTK3 port now includes support for transparent colors.
+		Previously, SWT <code>Color</code> on GTK only supported Red, Green and Blue (RGB) values
+		(all colors were opaque by default). Now, users can set alpha values to manipulate the transparency
+		property of SWT colors on GTK3.
+		<p>The image below shows a red Canvas widget that is half transparent (alpha set to 0.5).</p>
+		<img src="images/canvas_red_half_transparent.png" alt=""/>
+	</td>
+  </tr>
+  
+  <tr id="button-bgcolor-mac">
+    <td class="title">Set Button background color on Mac</td>
+    <td class="content">
+      <code>Button.setBackground()</code> can now set the background color for a <code>Button</code> on Mac.
+      <p><img src="images/colored-buttons-mac.png" alt=""/></p>
+    </td>
+  </tr>
+
+ <tr id="generic-editor-aggregates-hover">
+    <td class="title">Generic Editor aggregates hover from multiple sources</td>
+	<td class="content">
+		The hover included in Generic Editor now aggregates the hover content from multiple
+		sources instead of picking only one.
+		<p>This allows for example to contribute 3 distinct
+		hovers for Problem details, code documentation and Debug details via the
+		<code>org.eclipse.ui.genericeditor.hoverProviders</code> extension point, and to get
+		those 3 contributions shown simultaneously when hovering in the Generic Editor.</p>
+		<img src="images/aggregated-hovers.png" alt=""/>
+		<p>Hovers that return <code>null</code> as hover range or hover info for a given
+		location would be ignored.</p>
+	</td>
+  </tr>
+
+  <tr id="batik-upgrade">
+    <td class="title">CSS Engine upgraded to use Batik 1.9 instead of 1.8</td>
+	<td class="content">
+		The theme engine in Platform UI was upgraded to use Batik 1.9 instead of 1.8.
+		<p>The following Orbit bundle changes happened:</p>
+		<ul>
+			<li><code>org.apache.batik.css</code> was upgraded to version <code>1.9.0</code></li>
+			<li><code>org.apache.batik.util</code> was upgraded to version <code>1.9.0</code></li>
+			<li><code>org.apache.batik.i18n</code> version <code>1.9.0</code> was added</li>
+			<li><code>org.apache.batik.util.gui</code> version <code>1.8.0</code> was removed</li>
+		</ul>
+		<p>No code change is needed to adopt to the migration.</p>
+	</td>
+  </tr>
+
+  <tr>
+    <td colspan="2"/>
+  </tr>
+</table>
+
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Photon milestone builds:</p>
+<ul>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.8/M1/">News for Eclipse Photon milestone build M1</a></li>
+</ul>
+
+<script type="text/javascript" src="../scripts.js"></script>
+
+</body>
+</html>

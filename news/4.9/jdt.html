@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2018. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" type="text/css"/>
+<style type="text/css">
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+/*img {max-width: 520px;}*/
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+ul {padding-left: 13px;}
+</style>
+<title>Eclipse Project 4.9 - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Java development tools</h2>
+<ul>
+	<li><a href="#JavaEditor">Java Editor</a></li>
+	<li><a href="#JavaCodeGeneration">Java Code Generation</a></li>
+	<li><a href="#JavaViewsAndDialogs">Java Views and Dialogs</a></li>
+	<li><a href="#JavaFormatter">Java Formatter</a></li>
+	<li><a href="#Debug">Debug</a></li>
+</ul>
+
+<table class="news">
+<colgroup>
+  <col class="title" />
+  <col />
+</colgroup>
+<tbody>
+
+
+  <!-- ******************* Java Editor ************************************* -->
+  <tr>
+    <td id="JavaEditor" class="section" colspan="2">
+    <h2>Java Editor </h2>
+    </td>
+  </tr>
+	<tr id="breadcrumb-dark">
+		<td class="title">Improved Breadcrumb for Dark theme</td>
+		<td class="content">
+			The <b>Breadcrumb</b> in the <b>Java Editor</b> now uses a dark background in the Dark theme.
+			<p>
+			 <img src="images/breadcrumb_dark_and_light.png" alt="Breadcrumb in dark theme" />
+			</p>
+			<p>
+				In the Light theme, the <b>Breadcrumb</b> uses a flat look style instead of a gradient.
+			</p>
+		</td>
+	</tr>
+	
+	<tr id="create-abstract-method">
+		<td class="title">Quick fix to create abstract methods</td>
+		<td class="content">
+			The existing quick fix to create missing methods has been improved to create abstract method declarations. The option
+			only appears when the target class is an abstract class.
+			<p>
+				<img src="images/quickfix_create_abstract_method_1.png" alt="" />
+			</p>
+		</td>
+	</tr>
+
+    <tr id="convert-to-static-import">
+        <td class="title">Quick fix to convert to static import</td>
+        <td class="content">
+            A new quick fix has been implemented that allows the user to convert static field accesses and static methods to use a static import.
+            It's also possible to replace all occurrences at the same time.
+            <p>
+                <img src="images/quickfix_convert_to_static_import.png" alt="" />
+            </p>
+        </td>
+    </tr>
+	
+  <!-- ******************* Java Code Generation ************************************* -->
+  <tr>
+    <td id="JavaCodeGeneration" class="section" colspan="2">
+    <h2>Java Code Generation</h2>
+    </td>
+  </tr>
+	<tr id="java7-hashcode-equals">
+		<td class="title">Improved hashCode() and equals() generation</td>
+		<td class="content">
+			A new option in the <b>Source > Generate hashCode() and equals()...</b> tool allows you to create implementations using the 
+			Java 7 <code>Objects.equals</code> and <code>Objects.hash</code> methods. 
+			<p>
+			 <img src="images/hashcode-equals-dialog.png" alt="" />
+			</p>
+			<p>
+			The above setup generates the following code:
+			</p>
+			<p>
+			 <a href="images/HashCodeEquals.java.txt"><img src="images/hashcode-equals-generation.png" alt="" /></a>
+			</p>
+			Additionally, arrays are handled more cleverly. The generation prefers the <code>Arrays.deepHashCode</code> and <code>Arrays.deepEquals</code> 
+			methods when dealing with <code>Object[]</code>, <code>Serializable[]</code> and <code>Cloneable[]</code> or any 
+			type variables extending these types.
+		</td>
+  </tr>
+
+  <!-- ******************* Java Views and Dialogs ************************************* -->
+  <tr>
+    <td id="JavaViewsAndDialogs" class="section" colspan="2">
+    <h2>Java Views and Dialogs</h2>
+    </td>
+  </tr>
+	<tr id="step-compiler-compliance">
+		<td class="title">Quick Fix for JRE Compiler Compliance Problem Marker</td>
+		<td class="content">
+			A new quick fix is provided on the <b>JRE Compiler Compilance</b> problem marker which is created when the compiler compliance 
+			does not match the JRE being used. This quick fix provides the option of opening the <b>Compiler Compliance</b> page of the
+			project to fix the issue. 
+			<p>
+			 <img src="images/quickfix_open_cc_page.png" alt="" />
+			</p>
+			<p>
+			 Selecting this option opens the <b>Compiler Compliance</b> property page for the specified project as shown below.
+			</p>
+			<p>
+			 <img src="images/quickfix_cc_page.png" alt="" />
+			</p>			
+		</td>
+  </tr>
+  
+  <tr id="open-type-full-path">
+    <td class="title">Open Type dialog now always shows the full path</td>
+    <td class="content">
+      The <b>Open Type</b> dialog now always shows the full path of all the matching items.
+      <p>
+        <img src="images/open_type_full_path.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <!-- ******************* Java Formatter ************************************* -->
+  <tr>
+    <td id="JavaFormatter" class="section" colspan="2">
+    <h2>Java Formatter </h2>
+    </td>
+  </tr>
+  <tr id="compact-loops">
+    <td class="title">Keep simple loops in one line</td>
+    <td class="content">
+      New formatter settings have been added that make it possible to keep the bodies of simple loops (without braces) in the same line as their headers, similar to previously existing setting for simple 'if' statements.
+      Different kind of loops ('for', 'while', 'do while') can be controlled independently.
+      <p>
+      The settings can be found in the profile editor under <b>New Lines > In control statements > Simple Loops</b>.
+      </p>
+      <p>
+        <img src="images/formatter-compact-loops.png" alt="" />
+      </p>
+      There's also a new setting to control how these loops should be handled if they exceed the maximum line width.
+      It's located under <b>Line Wrapping > Wrapping settings > Statements > Compact loops ('for', 'while', 'do while')</b>.
+      <p>
+        <img src="images/formatter-compact-loops-wrap.png" alt="" />
+      </p>
+    </td>
+  </tr>
+  <tr id="align-spaces">
+    <td class="title">Align items in columns</td>
+    <td class="content">
+      A feature previously known as <b>align fields in columns</b> has been expanded and can now be used for <b>variable declarations</b> and <b>assignment statements</b> as well.
+      <p>An option has also been added to <b>always align with spaces</b>, even if tabs are used for general indentation.
+      This is very similar to the <b>Use spaces to indent wrapped lines</b> option and is useful to make the code look good in editors with differing tab width.</p>
+      <p>All the settings related to aligning are now in the new preferences subsection: <b>Indentation > Align items in columns</b>.</p>
+      <p>
+        <img src="images/formatter-align-in-columns.png" alt="" />
+      </p>
+    </td>
+  </tr>
+
+  <!-- *********************** Debug ******************************** -->
+  <tr>
+    <td id="Debug" class="section" colspan="2">
+    <h2>Debug</h2>
+    </td>
+  </tr>
+  <tr id="step-result-timeout">
+	<td class="title">Timeout for result of step operation</td>
+	<td class="content">
+		Observing the result of step operations may slow down execution, which may be unusable if the step takes long already.
+		Therefore a timeout (default: 7000 ms) has been introduced after which the observation mechanism is disabled until the end of the step operation.
+		<p>
+		 <img src="images/result_timeout_537142.png" alt="" />
+		</p>
+		<p>
+		 The timeout can be configured in <b>Preferences > Java > Debug > Don't show if step operation takes longer than (ms)</b>.
+		</p>
+	</td>
+  </tr>
+  
+  <tr id="step-result-hide">
+    <td class="title">Option to hide running threads in Debug view</td>
+    <td class="content">
+      A new option has been introduced in the <b>Debug</b> view to show or hide running threads. 
+      <p>
+       Hiding running threads can be useful when debugging heavily multithreaded application, when it is difficult to find threads stopped at breakpoints among hundreds or thousands of running threads.
+      </p>
+      <p>
+        <img src="images/hide-running-threads.png" alt="" width="100%"/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="show-command-line">
+    <td class="title">Show Command Line button in Launch Configuration</td><!--https://bugs.eclipse.org/bugs/show_bug.cgi?id=312397-->
+    <td class="content">
+      A new button <b>Show Command Line</b> has been added in the <b>Java Launch Configuration</b> dialog. 
+      <p>
+        <img src="images/show_command_line.png" alt=""/>
+      </p>
+      Clicking the button will open a dialog to show the command line used for launching the application.
+      <p>
+        <img src="images/show_command_line_detail.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  <tr id="disable-thread-name-changes">
+  <td class="title">Option to disable thread name changes in Debug View</td>
+    <td class="content">
+        Thread name changes in the debuggee JVM are reflected in the <b>Debug</b> View. A VM option can now be used to disable this behavior,
+        in case the JVM communication necessary for the name updates is not desired.
+      <p>
+        The functionality can be disabled by specifying the following VM option
+      </p>
+      <pre><code>-Dorg.eclipse.jdt.internal.debug.core.model.ThreadNameChangeListener.disable=true</code></pre>
+    </td>
+  </tr>
+  <tr id="support-long-classpath">
+    <td class="title">Support for long classpath/modulepath</td>
+    <td class="content">
+      Classpath and/or modulepath are now shortened if they are longer than current operating system limits.
+      <p>If a temporary jar is needed to shorten the classpath (Java 8 and previous versions), a dialog is shown asking for confirmation.</p>
+      <p>
+       <img src="images/enable-classpathonly-dialog.png" alt="" width="100%"/>
+      </p>
+      <p>
+       The option <b>Use temporary jar to specify classpath (to avoid classpath length limitations)</b> is available in the <b>Classpath</b> tab of the <b>Run/Debug Configuration</b> dialog.
+      </p>
+      <p>
+       <img src="images/enable-classpathonly-option.png" alt="" width="100%"/>
+      </p>
+    </td>
+  </tr>
+
+</tbody>
+</table>
+<script type="text/javascript" src="scripts.js"></script>
+
+  <p style="text-align:center">
+    <a href="platform.php">Previous</a> <a style="margin:1em" href=".">Up</a> <a href="platform_isv.php">Next</a>
+  </p>
+
+</body>
+</html>

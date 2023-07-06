@@ -1,0 +1,506 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse Project Oxygen (4.7) M3 News</title>
+</head>
+<body>
+<h1>Eclipse Project Oxygen (4.7) M3 - New and Noteworthy</h1>
+<p>Here are some of the more noteworthy things available in the Oxygen milestone build M3
+  which is now available for <a href="http://download.eclipse.org/eclipse/downloads/#4.7_Stable_Builds" target="_top">download</a>.
+  <br/>
+  We also recommend to read the Tips and Tricks, either via <b>Help &gt; Tips and Tricks...</b> or online for
+  <a href="http://help.eclipse.org/topic/org.eclipse.platform.doc.user/tips/platform_tips.html">Platform</a>,
+  <a href="http://help.eclipse.org/topic/org.eclipse.jdt.doc.user/tips/jdt_tips.html">JDT</a>, and
+  <a href="http://help.eclipse.org/topic/org.eclipse.pde.doc.user/tips/pde_tips.htm">PDE</a>.
+</p>
+
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#JDT">JDT</a></li>
+  <li><a href="#PDE">PDE</a></li>
+  <li><a href="#Platform-Dev">Platform Developers</a></li>
+</ul>
+
+<table class="news">
+  <colgroup>
+    <col class="title" />
+    <col />
+  </colgroup>
+
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+  
+  <tr id="problems-and-tasks-copy-details-submenu">
+    <td class="title">Copy Details submenu for Problems and Tasks views</td>
+    <td class="content">
+       You can copy the description or the resource qualified name of an error, warning, or task into the clipboard using commands in the <b>Copy Details</b> context menu.
+      <p>
+        <img src="images/problems-and-tasks-copy-details-submenu.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="show-revision-history-in-ruler">
+    <td class="title">Show Annotation renamed to Show Revision Information</td>
+    <td class="content">
+       For files checked out from CVS, the <b>Show Annotation</b> command in the text editor's vertical ruler and in the <b>Team</b> menu
+       has been renamed to <b>Show Revision Information</b>.
+       <p>
+         This change has been synchronized with the Eclipse Git team provider, so future versions of EGit will use the same name.
+       </p>
+    </td>
+  </tr>
+
+  <tr id="project-explorer-others-working-set">
+    <td class="title">"Other Projects" working set in Project Explorer</td>
+    <td class="content">
+      If you're using the <b>Project Explorer</b> and working sets as top-level elements, the <b>Top Level Elements</b> view
+      menu now provides a way to show an <b>Other Projects</b> group for projects that are not in one of the currently active working sets.
+      	<p>
+        	<img src="images/other-projects-ws.png" alt=""/>
+      	</p>
+    </td>
+  </tr>
+
+  <tr id="project-explorer-recent-filters">
+    <td class="title">"Recently used filters" feature in Project Explorer</td>
+    <td class="content">
+    	The <b>Project Explorer</b> view now has a <b>Recent Filters</b> menu that shows the most recently used filters.
+      	<p>
+        	<img src="images/recent-filters-project-explorer.png" alt=""/>
+      	</p>
+    </td>
+  </tr>
+
+  <tr id="less-window-margins">
+    <td class="title">Reduced window margins</td>
+    <td class="content">
+    	The window margins have been reduced to provide more space in the IDE.
+        <p>
+      	Old style:
+      	</p>
+      	<p>
+        	<img src="images/window-margins-old.png" alt=""/>
+      	</p>
+      	<p>
+      	New style (see the reduced space below the Quick Access box).
+      	</p>
+      	<p>
+        	<img src="images/window-margins-new.png" alt=""/>
+      	</p>
+    </td>
+  </tr>
+
+  <tr id="browsers-linux-update">
+    <td class="title">External browsers on Linux</td>
+    <td class="content">
+      On Linux, the list of recognized external browsers has been updated to include:
+      
+      <ul>
+      <li><b>Firefox</b> (/usr/bin/firefox)</li>
+      <li><b>Chrome</b> (/usr/bin/google-chrome)</li>
+      <li><b>Chromium</b> (/usr/bin/chromium-browser)</li>
+      <li><b>Epiphany/Gnome Web</b> (/usr/bin/epiphany)</li>
+      <li><b>Konqueror</b> (/usr/bin/konqueror)</li>
+      </ul>
+      <p>
+        <img src="images/browsers-linux-update.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="swt-gtk-theme-property">
+    <td class="title">GTK theme system property</td>
+    <td class="content">
+        SWT now stores the GTK theme used at launch time in a system property, <code>org.eclipse.swt.internal.gtk.theme</code>.
+        This property can help with troubleshooting issues that are specific to certain themes.
+        It can be viewed in <b>About &gt; Installation Details &gt; Configuration</b>.
+        <!-- TODO: Fix the path ^^^^ after bug 490752 has been reverted. -->
+    </td>
+  </tr>
+
+  <tr id="ctrl-e-command-improvements">
+    <td class="title">Ctrl+E command improvements</td>
+    <td class="content">
+        You can use the <b>Quick Switch Editor</b> (<b>Ctrl+E</b>) command to list and filter all the open editors.
+        This works now also if you have selected a view in the editor area.
+        You can filter the list using wildcards, and select editors using mouse or keyboard.
+        <p>
+        	Now you can also cycle through the list by pressing <b>Ctrl+E</b> again. Or use <b>Arrow Up/Down</b> as before.
+        </p>
+        <p>
+        	<img src="images/ctrl-e-improvements.png" alt=""/>
+        </p>
+    </td>
+  </tr>
+
+  <tr id="open-perspective-dialog-description">
+    <td class="title">Perspective descriptions in Open Perspective dialog</td>
+    <td class="content">
+      You can now see the description for a perspective (if provided by the contributing plug-in) by pressing <b>F2</b> in the <b>Open Perspective</b> dialog.
+      <p>
+        <img src="images/open-perspective-dialog-description.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr>
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+
+  <tr id="remote-java-launch-connection-limits">
+    <td class="title">Remote Java Application "Socket Listen"
+        type supports multiple incoming connections</td>
+    <td class="content">
+      The <b>Remote Java Application</b> debug configuration's <b>Standard
+      (Socket Listen)</b> connection type now supports incoming connections
+      from multiple VMs.  This is useful for debugging distributed
+      systems.  The connection limit may be set to a fixed number, or
+      <code>0</code> for unlimited connections.
+      <p>
+        <img src="images/remote-java-listen-conn-limit.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="option-disable-hcr">
+    <td class="title">New option to disable HCR</td>
+    <td class="content">
+      You can now disable <a href="https://wiki.eclipse.org/FAQ_What_is_hot_code_replace%3F">Hot Code Replace (HCR)</a> if it causes any trouble
+      or if you want to avoid code changes in a debug target. HCR is enabled by default but can be disabled
+      in <b>Preferences > Java > Debug</b>.
+      <p>
+        <img src="images/option-disable-hcr.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="escape-text-when-pasting">
+    <td class="title">Escape text when pasting into a string literal</td>
+    <td class="content">
+      The <b>Java > Editor > Typing > Escape text when pasting into a string literal</b> preference option is now enabled by default.
+      This will escape the special characters in pasted strings when they are pasted into an existing string literal.
+      <p>
+        <img src="images/escape-text-when-pasting.png" alt=""/>
+      </p>
+      To paste without escaping, you can either paste outside of a string literal, or you can disable
+      <b>Edit > Smart Insert Mode</b>.
+    </td>
+  </tr>
+
+  <tr id="javadoc-colors">
+    <td class="title">Set colors for Javadoc</td>
+    <td class="content">
+      You can use the new color preferences to set the foreground text color and the background color in the Javadoc view and hovers:
+      <p>
+        <img src="images/javadoc-colors.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="hide-inherited-object-members">
+    <td class="title">Hide inherited members from java.lang.Object</td>
+    <td class="content">
+      You can hide all inherited members from <code>java.lang.Object</code>
+      in the <b>Quick Outline</b> (<b>Ctrl+O</b>) by using the new filter from the drop-down menu (Ctrl+F10):
+      <p>
+        <img src="images/hide-inherited-object-members.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="new-java-index">
+    <td class="title">New Java index</td>
+    <td class="content">
+      Eclipse 4.7 M3 contains an experimental new Java index which is enabled by default. If you suspect an index-related problem, you can disable the new index from <b>Preferences > Java</b>:
+      <p>
+        <img src="images/new-java-index.png" alt=""/>
+      </p>
+      Currently, the new index shouldn't affect your experience. Once the work is finished,
+      we expect big performance improvements for type hierarchies and in scenarios with many JARs.
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
+
+  <tr id="validate-launch-configuration-activated-by-default">
+    <td class="title">Validate launch configuration activated by default</td>
+    <td class="content">
+      When you create a new <b>Eclipse Application</b> launch configuration, PDE will now by default enable the option to
+      <b>Validate Plug-ins automatically prior to launching</b>. 
+      This helps you to identify missing plug-in dependencies before the actual start of the application and makes it easier for new plug-in and RCP developers to identify common problems.
+      You can disable this validation in the launch configuration dialog, on the <b>Plug-ins</b> tab. 
+    
+    <p>
+        	<img src="images/validate-launch-config-by-default.png" alt=""/>
+    </p>
+    </td>
+  </tr>
+
+  <tr id="option">
+    <td class="title">Severity of default method addition in API tooling</td>
+    <td class="content">
+      On the <b>Plug-in Development &gt; API Errors/Warnings</b> preference page in the <b>API Compatibility</b> tab,
+      there is a new option in the <b>Interface</b> section to control the severity of a "default method addition" API change.
+      <p>
+        By default, the option is set to "Error" because adding the same method in multiple interfaces can break
+        existing clients at run time (<a href="http://docs.oracle.com/javase/specs/jls/se8/html/jls-13.html#jls-13.5.6">JLS8 13.5.6</a>).
+      </p>
+      <p>
+        	<img src="images/pde-default-method-addition-api-compat-option.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="generic-editor-template">
+    <td class="title">Added a PDE plug-in project template for the Generic Text Editor</td>
+    <td class="content">
+      A plug-in template was added to show off the new extensible generic editor functionality. It will kick-start you with a sample .target file editor with syntax highlighting.
+    <p>
+        	<img src="images/pde-generic-editor.png" alt=""/>
+    </p>
+    </td>
+  </tr>
+  
+  <tr id="search">
+    <td class="title">Search finds plug-in references in features</td>
+    <td class="content">
+      <b>Search > Plug-ins...</b> for references to a plug-in also finds references to the plug-in in features.
+    <p>
+        	<img src="images/pde-search-plugin-in-feature.png" alt=""/>
+    </p>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
+  </tr>
+
+  <tr id="swt-lambda-style-selectionlisteners">
+    <td class="title">Lambda as SelectionListener</td>
+    <td class="content">
+      The <code>SelectionListener</code> interface in SWT was enhanced to provide the
+      <code>SelectionListener#widgetSelectedAdapter(Consumer&lt;SelectionEvent&gt; c)</code> and
+      <code>SelectionListener#widgetDefaultSelectedAdapter(Consumer&lt;SelectionEvent&gt; c)</code>
+      static helper methods that accept lambdas and method references as listeners.
+
+      <p>Example for adding a selection listener to a button:
+	  </p>
+	  <pre>
+import static org.eclipse.swt.events.SelectionListener.widgetSelectedAdapter;
+// ...
+
+Button button = new Button(parent, SWT.PUSH);
+button.addSelectionListener(widgetSelectedAdapter(e -> {System.out.print("Hello");}));
+	  </pre>
+    </td>
+  </tr>
+
+  <tr id="button-background-styled">
+    <td class="title">SWT <code>Button</code> widget background and foreground color can be styled on Windows</td>
+    <td class="content">
+      You can now style the background and foreground color of the SWT <code>Button</code> widget on Windows:
+      <p>
+        <img src="images/button-background-styled.png" alt=""/>
+      </p>
+      Note: Above implementation is a custom paint operation that applies to all <code>Button</code> types except <code>SWT.ARROW</code> on Windows.
+    </td>
+  </tr>
+
+  <tr id="composite-changed-deprecated">
+    <td class="title"><code>Composite#changed(Control[])</code> deprecated</td>
+    <td class="content">
+      The <code>Composite#changed(Control[])</code> method has never been used in the Eclipse Platform, and the
+      method never had a well-defined purpose. It is now deprecated. Calling it is now equivalent
+      to calling <code>Composite.layout(Control[], SWT.DEFER)</code>.
+    </td>
+  </tr>
+
+  <tr id="swt-spies-separated">
+    <td class="title">SWT spies separated from Tools plug-in</td>
+    <td class="content">
+        The Sleak and Spy views are now available in a new plug-in, <b>org.eclipse.swt.tools.spies</b>.
+        They were previously part of org.eclipse.swt.tools, which depends on JDT. With the new spies
+        plug-in, it is now possible to use the spies without depending on JDT. This makes it especially
+        suitable for inclusion in target definitions and Eclipse RCP applications.
+    </td>
+  </tr>
+
+  <tr id="generic-editor">
+    <td class="title">Added an easily-extensible Generic Text Editor</td>
+    <td class="content">
+        With this new editor it is now much easier to enrich a new generic editor so you can add support relatively easy for new languages.
+        It is reusing the existing Eclipse editor infrastructure but with the generic editor you don't need to implement an
+        editor to supply functionality for a new file content-type. Instead you make the generic editor smarter by extension points.
+        <p>The following example shows how to contribute features to the generic editor via extensions:</p>
+        <pre>
+&lt;extension point="org.eclipse.ui.genericeditor.contentAssistProcessors">
+   &lt;contentAssistProcessor
+         class="org.eclipse.ui.genericeditor.examples.dotproject.NaturesAndProjectsContentAssistProcessor"
+         contentType="org.eclipse.ui.genericeditor.examples.dotproject">
+   &lt;/contentAssistProcessor>
+&lt;/extension>
+&lt;extension point="org.eclipse.ui.genericeditor.hoverProviders">
+   &lt;hoverProvider
+         class="org.eclipse.ui.genericeditor.examples.dotproject.NatureLabelHoverProvider"
+         contentType="org.eclipse.ui.genericeditor.examples.dotproject"
+         id="natureLabelHoverProvider">
+   &lt;/hoverProvider>
+&lt;/extension>
+&lt;extension point="org.eclipse.ui.genericeditor.presentationReconcilers">
+   &lt;presentationReconciler
+         class="org.eclipse.ui.genericeditor.examples.dotproject.BlueTagsPresentationReconciler"
+         contentType="org.eclipse.ui.genericeditor.examples.dotproject">
+   &lt;/presentationReconciler>
+&lt;/extension></pre>
+        <p>
+        Those new extension points receive as arguments regular Platform classes (IPresentationReconcilier, ITextHover, ICompletionProposalComputer)
+       	to add behavior to the generic editor. No new Java API is necessary.
+       	</p>
+       	
+        
+        Here is a simple example of adding some minimal Gradle syntax highlighting support:
+        <pre><code>
+public class GradlePR extends PresentationReconciler {
+
+	private IToken quoteToken = new Token(new TextAttribute(new Color(Display.getCurrent(), new RGB(139, 69, 19))));
+	private IToken numberToken = new Token(new TextAttribute(new Color(Display.getCurrent(), new RGB(0, 0, 255))));
+	private IToken commentToken = new Token(new TextAttribute(new Color(Display.getCurrent(), new RGB(0, 100, 0))));
+
+	public GradlePR() {
+		RuleBasedScanner scanner = new RuleBasedScanner();
+
+		IRule[] rules = new IRule[5];
+		rules[0] = new SingleLineRule("'", "'", quoteToken);
+		rules[1] = new SingleLineRule("\"","\"", quoteToken);
+		rules[2] = new PatternRule("//", null, commentToken, (char)0, true);
+		rules[3] = new NumberRule(numberToken);
+		
+		rules[4] = new GradleWordRule();
+		
+		scanner.setRules(rules);
+
+		DefaultDamagerRepairer dr = new DefaultDamagerRepairer(scanner);
+		this.setDamager(dr, IDocument.DEFAULT_CONTENT_TYPE);
+		this.setRepairer(dr, IDocument.DEFAULT_CONTENT_TYPE);
+	}
+
+}
+        </code></pre>
+        Above you see it is relatively simple to supply the rules for syntax highlighting.
+        The generic editor picks those up through the extension points and here is the editor in action:
+        <p>
+        	<img src="images/gradle-sample.png" alt=""/>
+        </p>
+      </td>
+    </tr>
+
+  <tr id="editor-contenttype-extension">
+    <td class="title">An extension point to associate existing editors and content-types</td>
+    <td class="content">
+      The extension point <code>org.eclipse.ui.editors</code> can now receive a new <code>editorContentTypeBinding</code>
+      child element which allows to define binding of an existing editor for an existing content-type.
+
+      <p>Here is an example:</p>
+      <pre>
+&lt;extension point="org.eclipse.ui.editors">
+  &lt;editorContentTypeBinding
+    contentTypeId="org.eclipse.ui.genericeditor.examples.dotproject"
+    editorId="org.eclipse.ui.genericeditor.GenericEditor">
+  &lt;/editorContentTypeBinding>
+&lt;/extension>
+       </pre>
+    </td>
+  </tr>
+
+  <tr id="application-model-parts-perspective-trimbars">
+    <td class="title">Application model allows toolbar definitions for parts and perspectives</td>
+    <td class="content">
+	  The application model has been extended to support the definition of toolbars (via trimbars) for parts and perspectives. 
+	  This simplifies the implementation of a common requirement in RCP applications. You can now define toolbars specific to a perspective and  
+	  toolbars rendering within the part area via your custom renderer.
+	 <p>
+      Currently, the default Eclipse renderers do not use these new elements.
+     </p>
+    </td>
+  </tr>
+
+  <tr id="dependency-injections-for-e3parts">
+    <td class="title">Dependency injection for Eclipse 3.x views available</td>
+    <td class="content">
+      You can now use dependency injection (di) in your Eclipse 3.x. views.
+      You can enable this for a view via the new <b>inject</b> flag in the <code>org.eclipse.ui.views</code> extension.
+
+       <p>
+        	<img src="images/e3-views-enable-di.png" alt=""/>
+        </p>
+       <p>
+      Example usage:</p>
+      <pre><code>public class SampleView extends ViewPart {
+
+	@Inject IWorkbench workbench;
+
+	private TableViewer viewer;
+
+	@Override
+	public void createPartControl(Composite parent) {
+		viewer = new TableViewer(parent, SWT.MULTI | SWT.H_SCROLL | SWT.V_SCROLL);
+
+		viewer.setContentProvider(ArrayContentProvider.getInstance());
+		viewer.setInput(new String[] { "One", "Two", "Three" });
+		viewer.setLabelProvider(new ViewLabelProvider());
+
+		// Create the help context id for the viewer's control
+		workbench.getHelpSystem().setHelp(viewer.getControl(), "test7.viewer");
+	}
+	// more stuff
+}
+      </code></pre>
+
+    </td>
+
+  </tr>
+
+  <tr id="debugging-test-timeouts">
+    <td class="title">Debugging test timeouts</td>
+    <td class="content">
+      In bundle <a href="http://git.eclipse.org/c/platform/eclipse.platform.releng.git/tree/bundles/org.eclipse.test.performance">org.eclipse.test.performance</a>,
+      there's a new API that helps debugging those pesky tests that are freezing / hanging / DNF ("Did not finish")
+      in a remote Hudson build, and you have no clue why, because they always pass locally.
+      <p>
+      If your tests are organized in a JUnit-4-style test suite using the
+      </p>
+      <pre style="margin-left:1em">@RunWith(Suite.class)</pre>
+      <p>
+      annotation, you can just replace that line by
+      </p>
+      <pre style="margin-left:1em">@RunWith(TracingSuite.class)</pre>
+      <p>
+      This will log the start of each atomic test contained in the suite to <code>System.out</code>, and it will try to collect more information
+      after a timeout (stack traces, screenshot). And it will even try to throw an exception in the main thread,
+      so that other tests can proceed. See the Javadoc for configuration options.
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"/>
+  </tr>
+</table>
+
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Oxygen milestone builds:</p>
+<ul>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.7/M2/">News for Eclipse Oxygen milestone build M2</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.7/M1/">News for Eclipse Oxygen milestone build M1</a></li>
+</ul>
+
+</body>
+</html>

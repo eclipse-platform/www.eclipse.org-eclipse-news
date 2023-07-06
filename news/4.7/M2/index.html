@@ -1,0 +1,396 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse Project Oxygen (4.7) M2 News</title>
+</head>
+<body>
+<h1>Eclipse Project Oxygen (4.7) M2 - New and Noteworthy</h1>
+<p>Here are some of the more noteworthy things available in the Oxygen milestone build M2
+  which is now available for <a href="http://download.eclipse.org/eclipse/downloads/#4.7_Stable_Builds" target="_top">download</a>.
+  <br/>
+  We also recommend to read the Tips and Tricks, either via <b>Help &gt; Tips and Tricks...</b> or online for
+  <a href="http://help.eclipse.org/topic/org.eclipse.platform.doc.user/tips/platform_tips.html">Platform</a>,
+  <a href="http://help.eclipse.org/topic/org.eclipse.jdt.doc.user/tips/jdt_tips.html">JDT</a>, and
+  <a href="http://help.eclipse.org/topic/org.eclipse.pde.doc.user/tips/pde_tips.htm">PDE</a>.
+</p>
+
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#JDT">JDT</a></li>
+  <li><a href="#PDE">PDE</a></li>
+  <li><a href="#Platform-Dev">Platform Developers</a></li>
+  <li><a href="#Equinox">Equinox</a></li>
+</ul>
+
+<table class="news">
+  <colgroup>
+    <col class="title" />
+    <col />
+  </colgroup>
+
+
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+
+  <tr id="configurable-left-right-in-compare-editor">
+    <td class="title">Configure left and right sides in Compare editors</td>
+    <td class="content">
+      <b>Compare</b> editors now offer a button <b>Swap Left and Right View</b>.
+      <p>
+        <img src="images/compare-editor.png" alt=""/>
+      </p>
+      <p>
+      The direction of comparison is preserved between invocations of the <b>Compare</b> editor
+      and can also be changed in the <b>Compare/Patch</b> preference page.
+      </p>
+      <p>
+        <img src="images/compare-preferences.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="switch-workspace-and-restart-menu-items">
+    <td class="title">'Switch Workspace' and 'Restart' menu items</td>
+    <td class="content">
+      The <b>Switch Workspace</b> and <b>Restart</b> menu items are now at the bottom of the <b>File</b> menu:
+      just above the <b>Exit</b> item on Windows and Linux, and as last menu items on the Mac.
+
+      <p>
+        <img src="images/switch-workspace-restart-menu-items.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="quick-access-search-in-help">
+    <td class="title">Quick Access search text in Help</td>
+    <td class="content">
+      You can now <b>Search in Help</b> after you've entered text in the <b>Quick Access</b> dialog.
+      The option is shown when the filter text is longer than three characters,
+      and it is always added at the end of the results.
+      <p>
+      <b>Search in Help</b> using the new Quick Access dialog:
+      </p>
+      <p>
+        <img src="images/quick-access-search-in-help.png" alt=""/>
+      </p>
+      <p>
+      <b>Search in Help</b> using the standalone dialog:
+      </p>
+      <p>
+        <img src="images/quick-access-search-in-help-standalone.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="quick-access-icons">
+    <td class="title">Command icons shown in Quick Access</td>
+    <td class="content">
+      <b>Quick Access</b> (<b>Ctrl+3</b>) now shows the icon for a <b>Command</b> if available.
+      Otherwise, it still shows the default blue ball.
+
+      <p>
+        <img src="images/command-image-visible-in-quick-access.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="colors-interactive-popups">
+    <td class="title">Colors in interactive popups</td>
+    <td class="content">
+      Interactive popups like JDT's <b>Quick Outline</b> don't use the platform's
+      tooltip colors any more, since those were sometimes hard to read.
+      <p>
+      Old style:
+      </p>
+      <p>
+        <img src="images/old-popup-color-constants.png" alt=""/>
+      </p>
+      <p>
+      New style:
+      </p>
+      <p>
+        <img src="images/new-popup-color-constants.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="GTK-tree-key-bindings">
+    <td class="title">GTK tree collapse/expand key bindings</td>
+    <td class="content">
+      On GTK+ 3.6 and later, the <b>Left</b> and <b>Right arrow</b> keys now collapse and expand
+      the current tree item (in addition to the GTK+ default <b>-</b>/<b>+</b> key bindings).
+    </td>
+  </tr>
+  
+   <tr id="reduced-gtk-tabs-padding">
+    <td class="title">Reduced TabItems padding under GTK+</td>
+    <td class="content">
+      On GTK+ 3.20 and later, the padding around TabItems has been reduced.
+      <p>
+      <img src="images/reduced-gtk-tabs-padding.png" alt="" />
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="simplified-bookmark-task-problems-filter-dialog">
+    <td class="title">Simplified filters dialog for Problems, Bookmarks, and Tasks views</td>
+    <td class="content">
+      The <b>Filters</b> dialog of the Problems, Bookmarks, and Tasks views has been simplified.
+      If you select several configurations, items matching any of these configurations will be shown.
+      <p>
+      Old dialog in Problems view:
+      </p>
+      <p>
+        <img src="images/old-problems-filter.png" alt=""/>
+      </p>
+      <p>
+      New dialog in Problems view:
+      </p>
+      <p>
+        <img src="images/new-problems-filter.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="improved-visiblity-of-filter-dialog">
+    <td class="title">Filter dialog for Problems, Bookmarks, and Tasks views easier to reach</td>
+    <td class="content">
+	    The <b>Filters</b> dialog is now accessible from the toolbar of the Problems, Bookmarks, and Tasks views.
+      <p>
+      Previously, it was only accessible via view menu &gt; <b>Configure Contents...</b>:
+      </p>
+      <p>
+        <img src="images/old-filter-location.png" alt=""/>
+      </p>
+      <p>
+      Now also as a toolbar button:
+      </p>
+      <p>
+        <img src="images/new-filter-location.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="editor-selection-dialog-one-click">
+    <td class="title">Editor selection dialog: Use for all</td>
+    <td class="content">
+      The <b>Editor Selection</b> dialog now offers a one-click option for choosing the editor that
+      should open all files with the same extension in the future.
+      <p>
+      Example when selecting "file.xyz" and choosing <b>Open with &gt; Other...</b>:
+      </p>
+      <p>
+        <img src="images/editor-selection-dialog-one-click-for-all-files-by-type.png" alt="Highlighted checkbox: Use it for all '*.xyz' files"/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="more-high-resolution-images">
+    <td class="title">More high resolution images</td>
+    <td class="content">
+      More images in the old GIF format were replaced by images in the PNG format. In addition, high resolution images where added. 
+      <p>As PNG can handle transparency much better than GIF, the ugly white borders around shapes visible in the dark theme are now gone for these icons.
+      </p>
+      <p>To see their full beauty, a high-DPI monitor (e.g. a Retina Mac) is needed.
+        The lower part of the screenshot shows the wizard banner image of the <b>Import</b> dialog in high resolution.
+      </p>
+      <p>
+        <img src="images/import-before-and-after.png" alt=""/>
+      </p>
+      <p>
+        The right part of the screenshot shows all the icons in high resolution.
+      </p>
+      <p>
+        <img src="images/customize-navigator-before-and-after.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="filters-from-project-explorer-view-menu">
+    <td class="title">'Filters and Customization...' in Project Explorer</td>
+    <td class="content">
+      The <b>Customize View...</b> command in the <b>Project Explorer</b>'s view menu has been
+      renamed to <b>Filters and Customization...</b>
+      <p>
+        <img src="images/filters-and-customization-menu-item.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr>
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+
+  <tr id="step-show-methodresult">
+    <td class="title">Method result after step operations</td>
+    <td class="content">
+        During debugging, the last method result (per return or throw) that was observed during <b>Step Into</b>, <b>Step Over</b> or <b>Step Return</b>, is shown as first line in the <b>Variables</b> view.
+        <p>
+          <img src="images/step-show-methodresult.png" alt="" />
+        </p>
+        <p>
+        This can be disabled with the new option
+        <b>Preferences &gt; Java &gt; Debug &gt; Show method result after a step operation (if supported by the VM; may be slow)</b>
+        </p>
+    </td>
+  </tr>
+  
+  <tr id="triggers-for-breakpoints">
+    <td class="title">Triggers for breakpoints</td>
+    <td class="content">
+     You can now define a set of triggers for the breakpoints in a workspace.
+      
+      <p>
+        <img src="images/trigger-breakpoint-properties.png" alt=""/>
+      </p>
+      Any breakpoint can be set as a trigger point by using <b>Breakpoint Properties...</b> dialog or the Breakpoints view's detail pane.
+      <p>
+        <img src="images/trigger-breakpoint-view-ruler.png" alt=""/>
+      </p>
+      Triggers will be rendered with an overlay of "T" and the breakpoints suppressed by the triggers will be
+      rendered with an overlay of "T" with a cut.
+      <p>
+        All the other breakpoints that are initially suppressed by triggers will be hit only after any of the trigger points has been hit.
+        All the triggers are disabled after a trigger point is hit and will be re-enabled after the run.
+      </p>
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
+
+  <tr id="pde-reorganized-version-management-tab">
+    <td class="title">Changes in Version Management preferences tab</td>
+    <td class="content">
+      The <b>Version Management</b> tab of the <b>Plug-in Development &gt; API Errors/Warnings</b> preference page has been
+      reorganized. The sub-options to control major/minor version change without API breakage/changes have been converted into normal options
+      and they are set to warning by default. The option 'Report changed execution environment incompatibility' has been moved
+      to the bottom of the tab.
+        <p>
+          <img src="images/pde-version-management-tab-preference.png" alt="" />
+        </p>
+    </td>
+  </tr>
+  
+  <tr id="pde-error-log-show-in-console">
+    <td class="title">Error Log view: 'Show In Console' in context menu</td>
+    <td class="content">
+       In the <b>Error Log</b> view, the context menu now includes <b>Show In Console</b>, which performs the same
+       action as <b>Show Stack Trace in Console View</b> from the view toolbar.
+      <p>
+        <img src="images/pde-show-in-console-view-context-menu-error-log-view.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="pde-default-method-interface">
+    <td class="title">API Tools reports default method addition as a breaking change</td>
+    <td class="content">
+        The API Tools now report the addition of a default method in an API interface that can be implemented by 
+        clients as a <a href="https://wiki.eclipse.org/Evolving_Java-based_APIs_2#Evolving_API_Interfaces">
+        breaking change</a>.
+    </td>
+  </tr>
+	
+
+
+  <tr>
+    <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
+  </tr>
+
+  <tr id="viewercomparator-sorting">
+    <td class="title">Stable sorting in viewers based on ViewerComparator</td>
+    <td class="content">
+      The <code>org.eclipse.jface.viewers.ViewerComparator</code> now ignores decorations from a <code>DecoratingLabelProvider</code> during its sorting.
+      For example, if the EGit team provider is used, it prepends "> " for changed files. This additional "> " is now ignored.
+      <p>
+      The goal of this change is to eliminate
+      <code>java.lang.IllegalArgumentException: Comparison method violates its general contract!</code>
+      that could occur when label decorations were updated in the background.
+      </p>
+      <p>
+      For now, you can disable this fix by setting the system property <code>eclipse.disable.fix.for.bug364735</code> to <code>true</code>.
+      This temporary system property is planned to be removed unless issues with the new sorting are discovered.
+      </p>
+
+    </td>
+  </tr>
+  
+  <tr id="progress-reporting-performance">
+    <td class="title">Reduced performance impact of very frequent progress reporting from background jobs</td>
+    <td class="content">
+      When bad code was calling <code>IProgressMonitor#setTaskName(String)</code> very frequently in a background job,
+      the execution was heavily slowed down due to this reporting.
+      A workaround has been added to the jobs framework that throttles processing of excessive task name updates.
+      Performance tests have shown 2-3 times faster execution times for pathologic examples.
+    </td>
+  </tr>
+  
+  <tr id="tweak-gtk-theme">
+    <td class="title">Tweak the GTK+ theme</td>
+    <td class="content">
+      You can now tweak the GTK+ theme by providing your own CSS file to extend the default look.
+      A custom CSS file is registered by a VM argument like this:
+      <pre><code>-Dorg.eclipse.swt.internal.gtk.cssFile=/path/to/my.css</code></pre>
+      The following CSS snippet gives the effect below.
+      <pre><code>button:hover {
+  box-shadow: inset 0 0 0 5px #3071A9;
+}
+      </code></pre>
+      
+      <p>
+      <img src="images/tweak-gtk-theme.png" alt="" />
+      </p>
+      <b>Note:</b> Works on GTK+ 3.20 or later only.
+    </td>
+  </tr>
+  
+   <tr id="runtime-gtk-css">
+    <td class="title">Apply GTK+ CSS at runtime</td>
+    <td class="content">
+      GTK+ CSS can be applied at runtime via <code>Widget#setData(String, Object)</code>
+      using <code>org.eclipse.swt.internal.gtk.css</code> as key.
+      
+      <p>Example:</p>
+      <pre><code>button.setData("org.eclipse.swt.internal.gtk.css", "button:hover {background: blue; border-radius: 20px;}")
+      </code></pre>
+      ... will produce the effect on the right on hover:
+      <p>
+      <img src="images/runtime-gtk-css.png" alt="" />
+      </p>
+      <b>Note:</b> Works on GTK+ 3.20 or later only.
+    </td>
+  </tr>
+
+  <tr id="screenshot-from-junit">
+    <td class="title">Screenshot from JUnit</td>
+    <td class="content">
+      In bundle <code>org.eclipse.test.performance</code>, there's a new API to take a screenshot from a JUnit test:
+      <p><code>
+        org.eclipse.test.Screenshots#takeScreenshot(Class&lt;?&gt; testClass, String name)
+      </code></p>
+      In the Eclipse Platform/SDK builds that are run on Hudson, the PNG files will be saved in a directory that is accessible via
+      <a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.6-201606061100/logs.php#console">Console Output Logs</a>
+      on the Test Results pages.
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"/>
+  </tr>
+</table>
+
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Oxygen milestone builds:</p>
+<ul>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.7/M1/">News for Eclipse Oxygen milestone build M1</a></li>
+</ul>
+
+</body>
+</html>

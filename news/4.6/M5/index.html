@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse Project Neon (4.6) M5 News</title>
+</head>
+<body>
+<h1>Eclipse Project Neon (4.6) M5 - New and Noteworthy</h1>
+<p>Here are some of the more noteworthy things available in the Neon milestone build M5
+  which is now available for <a href="http://download.eclipse.org/eclipse/downloads/#4.6_Stable_Build" target="_top">download</a>.
+  <br/>
+  We also recommend to read the Tips and Tricks, either via <b>Help &gt; Tips and Tricks...</b> or online for
+  <a href="http://help.eclipse.org/topic/org.eclipse.platform.doc.user/tips/platform_tips.html">Platform</a>,
+  <a href="http://help.eclipse.org/topic/org.eclipse.jdt.doc.user/tips/jdt_tips.html">JDT</a>, and
+  <a href="http://help.eclipse.org/topic/org.eclipse.pde.doc.user/tips/pde_tips.htm">PDE</a>.
+</p>
+
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#JDT">JDT</a></li>
+  <li><a href="#PDE">PDE</a></li>
+  <li><a href="#Platform-Dev">Platform Developers</a></li>
+</ul>
+
+<table class="news">
+  <colgroup>
+    <col class="title" />
+    <col />
+  </colgroup>
+
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+
+  <tr id="workspace-launcher-platform">
+    <td class="title">Directly start previously selected workspaces in the launcher</td>
+    <td class="content">
+      The workspace selection dialog now allows you to start a previously selected 
+      workspace directly via a link. The path to 
+      the workspace is shortened. The full path is available if you hover over the link.
+      <p>
+      You can remove existing entries via the context menu.
+     </p>
+     <p>
+      <img src="images/recent-workspace-launcher.png" alt="" />
+    </p>
+    </td>
+  </tr>
+  
+  <tr id="text-editor-selection-strategy">
+    <td class="title">Selecting the text editor for unassociated file types</td>
+    <td class="content">
+      On the <b>Preferences &gt; General &gt; Editors &gt; File Association</b> page, you can now define an editor selection
+      strategy for unassociated file types. Three strategies are proposed out-of-the-box:
+      <ul>
+        <li><b>System Editor; if none: Text Editor</b> (default) will open the system editor associated with the file, if available. If no system editor
+          is associated with the given file, fall back to the Eclipse Text Editor</li>
+        <li><b>Text Editor</b> will always open Eclipse's Text Editor on unassociated file types</li>
+        <li><b>Ask via pop-up</b> will open the same dialog as using <b>Open With &gt; Other...</b> on a file and let you choose which
+          editor to use (inside or outside the IDE)</li> 
+      </ul>
+     <p>
+      Keep in mind that in any case, it's possible to assign an editor for an unassociated file type either via this same preference page,
+      or via the <b>Open With &gt; Other...</b> context-menu on the file.
+     </p>
+     <p>
+      The implementation comes with a new extension-point <code>org.eclipse.ui.ide.unknownEditorStrategy</code>
+      that allows external contributions of additional strategies.
+     </p>
+     <p>
+       <b>Note:</b> Problems were found with the <b>Ask via pop-up</b> strategy. We'll fix them in M6.
+     </p>
+    </td>
+  </tr>
+  
+  <tr id="mac-default-theme-enhancement">
+    <td class="title">Improvements in the Mac default theme</td>
+    <td class="content">
+      The look of the toolbar in the Mac default theme was adjusted to align with other Mac applications.
+     <p>
+      Old styling:
+     </p> 
+     <p>
+      <img src="images/mac-theme-old-toolbar.png" alt="" />
+    </p>
+     <p>
+      New toolbar styling:
+     </p> 
+      <p>
+      <img src="images/mac-theme-new-toolbar.png" alt="" />
+    </p>
+    </td>
+  </tr>
+  
+  <tr id="perspective-switcher-default-display">
+    <td class="title">Perspective names hidden by default</td>
+    <td class="content">
+      To save space in the toolbar, the perspective switcher has been changed to show only the icons of perspectives by default.
+      You can show the text again via the context menu.
+      <p>New default:</p>
+      <p>
+        <img src="images/perspective-switcher-notext.png" alt=""/>
+      </p>
+      <p>Old default:</p>
+      <p>
+        <img src="images/perspective-switcher-withtext.png" alt=""/>
+      </p>
+      
+    </td>
+  </tr>
+
+  <tr id="date-variable-format">
+    <td class="title">'date' template variable with custom format</td>
+    <td class="content">
+     The 'date' variable, supported in editor and code templates, now allows you to specify which format to use when inserting the current date (or time).
+     <p>
+       <img src="images/date-variable-format.png" alt="Example: ${d:date('EEEE dd MM yyyy HH:mm:ss', 'fr_CH')}"/>
+     </p>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+
+  <tr id="code-completion-highlighting">
+    <td class="title">Content Assist highlights matched characters</td>
+    <td class="content">
+      The Content Assist popup now highlights the matched characters in proposals.
+      <p>
+        <img src="images/code-completion-highlighting.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="substring-code-completion">
+    <td class="title">Substring code completion</td>
+    <td class="content">
+      Content Assist now supports substring patterns. Enter any part of the desired proposal's text, and Content Assist will find it!
+      For example, completing on <code>selection</code> proposes all results containing <code>selection</code> as a substring.
+      <p>
+        <img src="images/substring-code-completion.png" alt="Popup with proposals like addSelectionListener(..), getSelection(), etc."/>
+      </p>      
+      <p>
+        This feature can be disabled using the <b>Show substring matches</b> option on the
+        <b>Java &gt; Editor &gt; Content Assist</b> preference page.
+      </p>
+    </td>
+  </tr>
+
+  <tr id="info-problem-decorator">
+    <td class="title">Problem decorator for Info severity</td>
+    <td class="content">
+      A new decorator (<img src="images/info_co.png"  alt=""/>) has been added to indicate information severity problems detected by the Eclipse Java Compiler.
+      <p>
+        <img src="images/info-problem-decorator.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="configure-problem-severity">
+    <td class="title">Quick Fix to configure problem severity</td>
+    <td class="content">
+     You can now configure the severity of a compiler problem by invoking the new <b>Quick Fix (Ctrl+1)</b> which opens the <b>Java &gt; Compiler &gt; Errors/Warnings</b>
+     preference page and highlights the configurable problem.
+      <p>
+        <img src="images/configure-problem-severity.png" alt=""/>
+      </p>
+     The Quick Fix icon may look familiar to you. In older Eclipse versions, this was a toolbar button in enriched hovers
+     (i.e., you had to press F2 or move the mouse into the hover to see it). 
+    </td>
+  </tr>
+
+  <tr id="configure-null-annotations">
+    <td class="title">Multiple sets of null annotations</td>
+    <td class="content">
+     You can now configure annotation-based null analysis to use multiple sets of annotation types.
+     This is relevant if your project uses 3rd party libraries that already use null annotations in their API,
+     where the annotations used in a library may be different from those used in the current project.
+     <p>
+	     Please open the dialog for configuring null annotation types from the project properties
+		 at <b>Java Compiler &gt; Errors/Warnings &gt; Null analysis</b>:
+     </p>
+      <p>
+        <img src="images/prefs-errors-warnings.png" alt=""/>
+      </p>
+      <p>In the dialog that opens, only one <em>primary</em> set of annotations is supported &mdash;
+        these are the annotations which JDT actively uses in Quick Fixes, error messages etc.
+        These annotations must be present on the project's build path.
+      </p>
+      <p>	
+      	You can now add an arbitrary number of <em>secondary</em> null annotation types,
+      	to be evaluated when reading class files external to the project.
+      	Within the configuration dialog, Content Assist is offered based on accessible annotation types,
+      	but for secondary annotation types unresolved names will be tolerated.
+      	This avoids the need to bloat the build path with transitive compile-time dependencies.
+      	</p> 
+      <p>
+        <img src="images/annotation-selection.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
+
+  <tr id="prompt-for-unsaved-features">
+    <td class="title">Product launch prompts for unsaved features</td>
+    <td class="content">
+      In case you have an unsaved feature included in your product configuration file, 
+      PDE will prompt you to save it before the launch.
+      
+       <p>
+        <img src="images/prompt-unsaved-feature-pde.png" alt=""/>
+      </p>
+      
+    </td>
+  </tr>
+
+
+  <tr>
+    <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
+  </tr>
+
+  <tr id="handlerutil-structured-selection">
+    <td class="title">API to get the structured selection</td>
+    <td class="content">
+     The <code>org.eclipse.ui.handlers.HandlerUtil#getCurrentStructuredSelection(event)</code>
+     API has been added to allow easy access to an <code>IStructuredSelection</code> from a handler. Compared to 
+     <code>HandlerUtil#getCurrentSelection(event)</code> this removes the need to cast and check for 
+     null.
+    </td>
+  </tr>
+
+  <tr id="listenerlist">
+    <td class="title">ListenerList generified</td>
+    <td class="content">
+      <code>org.eclipse.core.runtime.ListenerList</code> has been generified and now implements <code>Iterable&lt;E&gt;</code>.
+      <p>Due to Java type system constraints, <code>ListenerList#getListeners()</code> still returns <code>Object[]</code>.
+      Clients should not only add type arguments to the ListenerList, but also convert usages of <code>#getListeners()</code>
+      to an enhanced <code>for</code> loop, thereby taking advantage of the type-safe <code>#iterator()</code>.</p>
+      <p>Old:</p>
+      <pre>ListenerList fInputChangeListeners = new ListenerList();
+...
+Object[] listeners= fInputChangeListeners.getListeners();
+for (int i= 0; i &lt; listeners.length; i++) {
+	((IInputChangedListener) listeners[i]).inputChanged(fInput);
+}</pre>
+      <p>New:</p>
+      <pre>ListenerList&lt;IInputChangedListener&gt; fInputChangeListeners = new ListenerList&lt;&gt;();
+...
+for (IInputChangedListener listener : fInputChangeListeners) {
+	listener.inputChanged(fInput);
+}</pre>
+    </td>
+  </tr>
+
+  <tr id="text-direction-setting">
+    <td class="title">SWT Control and Custom Control Examples support setting the text direction</td>
+    <td class="content">
+      Options to specify the text direction were added to the SWT Control and Custom Control Examples.
+      Support for the <a href="https://www.eclipse.org/eclipse/news/4.6/M4/#auto-text-direction">AUTO text direction</a>
+      for SWT widgets was introduced in the Eclipse 4.6 M4 milestone.
+      <p>
+        <img src="images/text-direction.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"/>
+  </tr>
+</table>
+
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Neon milestone builds:</p>
+<ul>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.6/M4/">News for Eclipse Neon milestone build M4</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.6/M3/">News for Eclipse Neon milestone build M3</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.6/M2/">News for Eclipse Neon milestone build M2</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.6/M1/">News for Eclipse Neon milestone build M1</a></li>
+</ul>
+
+</body>
+</html>

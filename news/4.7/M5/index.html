@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse Project Oxygen (4.7) M5 News</title>
+</head>
+<body>
+<h1>Eclipse Project Oxygen (4.7) M5 - New and Noteworthy</h1>
+<p>Here are some of the more noteworthy things available in the Oxygen milestone build M5
+  which is now available for <a href="http://download.eclipse.org/eclipse/downloads/#4.7_Stable_Builds" target="_top">download</a>.
+  <br/>
+  We also recommend to read the Tips and Tricks, either via <b>Help &gt; Tips and Tricks...</b> or online for
+  <a href="http://help.eclipse.org/topic/org.eclipse.platform.doc.user/tips/platform_tips.html">Platform</a>,
+  <a href="http://help.eclipse.org/topic/org.eclipse.jdt.doc.user/tips/jdt_tips.html">JDT</a>, and
+  <a href="http://help.eclipse.org/topic/org.eclipse.pde.doc.user/tips/pde_tips.htm">PDE</a>.
+</p>
+
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#JDT">JDT</a></li>
+  <li><a href="#PDE">PDE</a></li>
+  <li><a href="#Platform-Dev">Platform Developers</a></li>
+  <li><a href="#Equinox">Equinox</a></li>
+</ul>
+
+<table class="news">
+  <colgroup>
+    <col class="title" />
+    <col />
+  </colgroup>
+
+
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+
+  <tr id="wildcards-in-quickaccess">
+    <td class="title">Wildcards in Quick Access</td>
+    <td class="content">
+      You can now use <b>*</b> and <b>?</b> as wildcards to filter <b>Quick Access</b> (<b>Ctrl+3</b>) items.
+      The match ranges are displayed in bold.
+      <p>
+        <img src="images/quick-access-wildcard-filter.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="hide-show-status-bar">
+    <td class="title">Show/hide Status Bar</td>
+    <td class="content">
+      You can now hide and show the bottom status bar via menu:
+      <b>Window</b> &gt; <b>Appearance</b> &gt; <b>Hide (Show) Status Bar</b>.
+      <p>
+      	<img src="images/toggle-status-bar-from-menu.png" alt="" />
+      </p>
+      In Quick Access, the command is called <b>Toggle Statusbar</b>.
+    </td>
+  </tr>
+  
+  <tr id="improved-launch-groups">
+    <td class="title">Improved Launch Groups</td>
+    <td class="content">
+      The UI for the new Launch Groups feature in the Run/Debug Configurations... dialog has been reworked to be more intuitive
+      and user friendly. Also, additional configuration possibilities have been added:
+      <ul>
+      <li>'Wait for console output (regexp)' post launch action: Allows to delay further
+      processing of launch group elements until a certain output (matching a regular expression)
+      appears on the console of the given group element.</li>
+      <li>'Adopt launch if already running': Allows to control the behaviour of the group when
+      the launch configuration referenced by the launch group element is already running
+      (no matter who launched it). If checked, the launch configuration will not be launched
+      again if it is running already. The existing launch will be adopted by the group (i.e.
+      terminating the group will also terminate this launch). Any configured post launch
+      action will still be executed!</li>
+      </ul>
+      <p>
+      	<img src="images/improved-launch-groups.png" alt="" />
+      </p>
+    </td>
+  </tr>
+
+  <tr id="content-assist-model-editor">
+    <td class="title">Content Assist for Feature Name in Model Editor</td>
+    <td class="content">
+      You can now use <b>Ctrl+Space</b> to trigger content assist when selecting the <b>Feature Name</b> in the <b>Model Editor</b>.
+      <p>
+      	<img src="images/content-assist-model-editor.png" alt="" />
+      </p>
+    </td>
+  </tr>
+
+  <tr id="model-editor-improvements">
+    <td class="title">Model Editor improvements</td>
+    <td class="content">
+      The elements proposed in the <b>Add child</b> menu are now filtered to a minimal list containing allowed elements only.
+      <p>
+      	<img src="images/filter-suggested-elements.png" alt="" />
+      </p>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+
+   <tr id="quickfix-move-type-annotation">
+    <td class="title">Quick Fix to move type annotations</td>
+    <td class="content">
+    	The rules for the placement of Java 8 "type annotations" introduced via JSR 308 are sometimes surprising. 
+    	In case of errors, a new Quick Fix <b>Move type annotation</b> is offered, 
+    	that moves the type annotation to a location that corresponds to what was probably intended. 
+        <p>
+          <img src="images/quickfix-move-type-annotation.png" alt="" />
+        </p>
+    </td>
+  </tr>
+
+  <tr id="toggle-trace-point">
+    <td class="title">Toggle Tracepoint</td>
+    <td class="content">
+      A new action <b>Run > Toggle Tracepoint</b> has been added.
+      <p>
+      	<img src="images/toggle-trace-point-run.png" alt="" />
+      </p>
+      The action creates a conditional breakpoint using the "systrace" template, which prints the class and method name.
+      <p>
+      	<img src="images/toggle-trace-point-conditional-breakpoint.png" alt="" />
+      </p>
+      This makes use of another new feature of conditional breakpoints: As long as the condition
+      doesn't explicitly return a boolean <code>true</code>, the condition is now considered to implicitly return false,
+      and the breakpoint will not suspend execution.
+    </td>
+  </tr>
+
+
+  <tr>
+    <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
+
+  <tr id="plugin-and-feature-export-wizards-filtered-selection">
+    <td class="title">Filter in plugin and feature export wizards</td>
+    <td class="content">
+	  You can now use a text filter when selecting plug-ins in the <b>Export.. > Deployable plug-ins and fragments</b> or
+	  features in the <b>Export.. > Deployable features</b> wizards.
+      <p>
+        <img src="images/plugin-and-feature-export-wizards-filtered-selection.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="target-definition-generic-editor-extension">
+    <td class="title">Target definition files can be edited with the generic editor</td>
+    <td class="content">
+	  An extension for the generic editor was supplied so that the target definition files (.target files) can now be
+	  edited via the generic editor. Syntax highlighting for the most used keywords is supported. Content Assist is also supported
+	  for tags and their attributes, installable units for a given repository, and the available versions for a given installable unit.
+      <p>
+        <img src="images/target-editor-screenshot.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="pde-plug-in-template-names">
+    <td class="title">More descriptive plug-in template names</td>
+    <td class="content">
+      The template names for plug-in have been reworked to be more descriptive.
+      <p>
+        <img src="images/pde-plugin-template-names.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+  
+    <tr id="pde-api-tools-noimplement-noextend-leak">
+    <td class="title">Types marked with @noimplement and @noextend processed by API leak analysis</td>
+    <td class="content">
+	  Extending or implementing an interface marked as @noimplement is now reported as an API leak. This is because 
+	  adding a field or method to the interface marked as @noimplement may break a client that is using 
+	  the extended or implemented type. Also extending a type marked as @noextend may indirectly leak API types
+	  if the extended type is further extended by the client. Some of the new kinds of leak warnings are shown below:
+      <p>
+        <img src="images/pde-api-tool-warning-leak-noimplement-noextend.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+   <tr id="pde-api-tools-field-addition-to-class-breaking-change">
+    <td class="title">API Tools flags field addition to class as a breaking change</td>
+     <td class="content">
+	  The addition of a field to class that is extendable by clients is now flagged as a <a href="https://wiki.eclipse.org/Evolving_Java-based_APIs_2#add-api-field ">breaking change.</a>
+	  On the <b>Plug-in Development &gt; API Errors/Warnings</b> preference page in the <b>API Compatibility</b> tab,
+      there is a new option in the <b>Class</b> section to control the severity of a "field addition to class".
+      Also there is a new link at the top of <b>API Compatibility</b> tab that has more details on achieving API binary compatibility.
+      <p>
+        <img src="images/pde-api-tools-field-addition-to-class-preference-ui.png" alt=""/>
+      </p>
+      
+      The field addition error has a Quick Fix that opens help to explain the incompatibility in greater detail.
+      <p>
+        <img src="images/pde-api-tools-field-addition-to-class-quickfix.png" alt=""/>
+      </p>
+      
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
+  </tr>
+
+  <tr id="equinox-common-java8-bree">
+    <td class="title">Source-incompatible change in org.eclipse.equinox.common requires Java 8 BREE for some dependant plug-ins</td>
+    <td class="content">
+    With <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=509234">bug 509234</a>, <code>org.eclipse.core.runtime.ListenerList</code> 
+    now overrides Java 8 default method <code>Iterable#spliterator()</code> and provides <code>stream()</code> and <code>parallelStream()</code> 
+    methods. Thus it exposes Java 8 types in public API. This is a source-incompatible change that requires all plug-ins using 
+    <code>ListenerList</code> to have a minimum BREE set to JavaSE-1.8 if they want to properly compile against Oxygen and forthcoming 
+    versions (i.e. versions in the <code>[3.9,4.0)</code> range).
+    <p>
+      The typical compile error indicating that you should change your BREE is:
+    </p>
+    <p>
+      <cite>The type <code>java.util.stream.Stream</code> cannot be resolved. It is indirectly referenced from required <code>.class</code> files.</cite>
+    </p>
+    <p>
+    Note that this change is only required when using <code>org.eclipse.core.runtime.ListenerList</code>. However, now that some Java 8 types are being 
+    exposed in the public API, similar changes may be done in other API types.
+    </p>
+    Finally, note that this change is binary compatible. Any previously compiled bundle depending on <code>org.eclipse.equinox.common</code> within 
+    the <code>[3.0,4.0)</code> range will continue to work as before.
+    </td>
+  </tr>
+
+  <tr id="dynamic-reference-provider">
+    <td class="title">New API for controlling build order</td>
+    <td class="content">
+      The <code>org.eclipse.core.resources.builders</code> extension point now allows extensions to influence the
+      order in which projects are built by supplying an implementation of
+      <code>IDynamicReferenceProvider</code>. This replaces the
+      <code>IProjectDescription#setDynamicReferences(IProject[])</code> API, which is now deprecated.
+    </td>
+  </tr>
+
+  <tr id="async-content-assist">
+    <td class="title">Asynchronous content-assistant</td>
+    <td class="content">
+    With <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=251156">bug 251156</a>, a new constructor
+    <code>org.eclipse.jface.text.contentassist.ContentAssistant(boolean asynchronous)</code> 
+    was added. An asynchronous <code>ContentAssistant</code> triggers
+    computation of completion proposals in the background and doesn't block the thread invoking the completion. As a result, it will prevent the UI thread to freeze
+    when a completion proposal computer takes too long.
+    <p>
+	    This supports the same API and methods as the usual <code>ContentAssist</code>, so shifting from synchronous/blocking <code>ContentAssistant</code> to asynchronous one only requires
+	    instantiating the <code>ContentAssistant</code> as asynchronous. Note that as the computation now happens in background, the <code>IContentAssistProcessor</code>
+	    attached to an asynchronous <code>ContentAssistant</code> must <b>not</b> require the UI Thread; any <code>IContentAssistProcessor</code> computer requiring the UI Thread will need to be modified
+	    in order to be used with an asynchronous <code>ContentAssistant</code>.
+    </p> 
+	<p>
+	    Another new API is <code>ContentAssistant#addContentAssistProcessor(IContentAssistProcessor, String)</code>,
+	    which provides a way to directly add multiple processors to one content assistant.
+    </p> 
+	<p>
+		The generic and extensible editor has been switched to use this asynchronous <code>ContentAssistant</code>.
+	</p>    
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="Equinox">Equinox</td>
+  </tr>
+
+  <tr id="equinox-ds-felix-scr">
+    <td class="title">New Declarative Services Implementation supporting OSGi R6</td>
+    <td class="content">
+      The previous release of Equinox only supported the OSGi R5 specification for the Declarative Services specification.
+      With <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=501950">bug 501950</a> the Apache Felix Declarative Services implementation (<b><code>org.apache.felix.scr</code></b>) is now used as the Declarative Services implementation in the Platform and Equinox.
+      This implementation fully supports the OSGi R6 Declarative Services specification.
+      The Equinox bundle (<b><code>org.eclipse.equinox.ds</code></b>) is still included in order to configure and start the Felix SCR bundle but the Equinox Declarative Service implementation code is no longer shipped within the org.eclipse.equinox.ds bundle.
+
+      <p>
+      The OSGi R6 API for declarative services requires some additional packages (<b><code>org.osgi.util.function</code></b> and <b><code>org.osgi.util.promise</code></b>).  These packages are now exported by the
+      <b><code>org.eclipse.osgi.util</code></b> bundle.  In order to resolve and run the new Declarative Services implementation the following bundles are required in your target:
+      </p>
+      <ul>
+          <li><code>org.apache.felix.scr</code></li>
+          <li><code>org.eclipse.equinox.ds</code></li>
+          <li><code>org.eclipse.osgi.services</code></li>
+          <li><code>org.eclipse.osgi.util</code></li>
+      </ul>
+      <p>
+      The Equinox bundle <b><code>org.eclipse.equinox.util</code></b> is no longer needed for the Felix Declarative Services implementation.
+      </p>
+      <p>
+      Note that <code>org.eclipse.equinox.ds</code> automatically sets <code>ds.delayed.keepInstances=true</code>,
+      which avoids failures in existing clients of Equinox DS that assume that
+      component instances are not deactivated when their use count goes to zero.
+      </p>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td colspan="2"/>
+  </tr>
+</table>
+
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Oxygen milestone builds:</p>
+<ul>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.7/M4/">News for Eclipse Oxygen milestone build M4</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.7/M3/">News for Eclipse Oxygen milestone build M3</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.7/M2/">News for Eclipse Oxygen milestone build M2</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.7/M1/">News for Eclipse Oxygen milestone build M1</a></li>
+</ul>
+
+</body>
+</html>

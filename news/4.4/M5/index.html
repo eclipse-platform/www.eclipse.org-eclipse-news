@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="default_style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse Project 4.4 M5 News</title>
+</head>
+<body>
+<h1>Eclipse Project 4.4 M5 - New and Noteworthy</h1>
+<p>Here are some of the more noteworthy things available in milestone build M5 
+  (January 24, 2014) which is now available for <a href="http://download.eclipse.org/eclipse/downloads/" target="_top">download</a>.
+  <br/>
+  We also recommend to read the Tips and Tricks, either via <b>Help &gt; Tips and Tricks...</b> or online for
+  <a href="http://help.eclipse.org/topic/org.eclipse.platform.doc.user/tips/platform_tips.html">Platform</a>,
+  <a href="http://help.eclipse.org/topic/org.eclipse.jdt.doc.user/tips/jdt_tips.html">JDT</a>, and
+  <a href="http://help.eclipse.org/topic/org.eclipse.pde.doc.user/tips/pde_tips.htm">PDE</a>.
+</p>
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#JDT">JDT</a></li>
+</ul>
+
+<table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
+
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+     <tr id="minimized-stack-option"> 
+    <td class="title">New option for minimized stacks</td>
+    <td class="content">
+    We've extended the MinMaxAddon to have two different display modes:
+    <ul>
+    <li>Use Overlays: This is the current mode where showing a view in a
+    minimized stack opens it in a 'fly out', overlaying part of the
+    presentation.</li>
+    <li>Show in the Original Location: This is a new mode that will temporarily put the
+    stack back into the perspective layout while one of its views is active. This
+    has the advantage that the minimized view won't overlay anything in the
+    current presentation (e.g. your editor...).</li>
+    </ul>
+    <p>
+    In order to access the new mode, right-click on the <b>Restore</b> button
+    of a minimized stack and select the <b>Show in the Original Location</b> menu item (see image
+    below). Note that this change is global, so once it's set, all minimized
+    stacks will use the selected mode.</p>
+    <p><img src="images/restore-btn.png" alt=""/></p>
+
+    <p>Here's what the current mode looks like:</p>
+    <p><img src="images/use-overlays.png" alt=""/></p>
+    <p>Here's what the new mode looks like. Note how the editor
+    has been pushed to the right rather than being obscured:</p>
+    <p><img src="images/no-overlays.png" alt=""/></p>
+    <p>
+    We're really interested in your feedback on this! The initial response
+    has been positive enough that we're considering making the non-overlay
+    mode the default. What do you think? (Post your comments on <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=426556">bug 426556</a>).
+    </p>
+    </td>
+  </tr>
+
+  <tr id="workspaceLock">
+    <td class="title">Removed WorkspaceLock API</td>
+    <td class="content">
+      The <code>WorkspaceLock</code> API allowed a special client (usually Platform UI) to
+      hook into the locking protocols used by the workspace implementation. This hook
+      was used to mitigate deadlocks due to interaction with synchronous SWT events,
+      and was never intended to be used by other clients. In the 3.0 release this API
+      was deprecated in favor of a more general API provided by the <code>org.eclipse.core.jobs</code>
+      bundle. Invoking this API has had no effect since the 3.0 release. The specific API
+      being removed includes:
+      <ul>
+        <li>The <code>org.eclipse.core.resources.WorkspaceLock</code> class.</li>
+        <li>The method <code>org.eclipse.core.resources.IWorkspace#setWorkspaceLock</code></li>
+      </ul>
+      Clients that directly use an API listed above should remove any references to it.
+    </td>
+  </tr>
+  <tr id="incrementalProjectBuilder-getRule">
+    <td class="title">Removed IncrementalProjectBuilder#getRule() API</td>
+    <td class="content">
+      The <code>IncrementalProjectBuilder#getRule()</code> method returned a scheduling rule 
+      that was required for building the project by the builder. This method was intended to be used by the builder framework only.
+      In the 3.6 release this method was deprecated in favor of a more general method <code>IncrementalProjectBuilder#getRule(int, Map)</code>. 
+      The specific API being removed includes:
+      <ul>
+        <li>The method <code>org.eclipse.core.resources.IncrementalProjectBuilder#getRule()</code></li>
+      </ul>
+      Clients that directly call the API listed above should remove any references to it
+      or replace them with calls to <code>IncrementalProjectBuilder#getRule(int, Map)</code>. Clients that implement the API listed
+      above should implement <code>IncrementalProjectBuilder#getRule(int, Map)</code> instead.
+    </td>
+  </tr>
+  <tr id="swt-gtk-problem"> 
+    <td class="title">SWT does not work on Linux with GTK+ 3 version &gt; 3.8.x</td>
+    <td class="content">
+        The Linux GTK+ 3 port of SWT is currently broken for GTK+ versions above 3.8.x.
+        This primarily affects users running Fedora 20, Ubuntu 14.04 (Alpha builds), openSUSE 13.1 and any other Linux distributions that bundle GTK+ 3.10.x.
+        As a workaround, users are advised to switch back to GTK+ 2 by setting the environment variable <code>SWT_GTK3</code> to <code>0</code>.
+        For more details see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=421127">bug 421127</a>.
+    </td>
+  </tr>
+  <tr id="swt-xulrunner24"> 
+    <td class="title">SWT Browser now supports XULRunner 24.x</td>
+    <td class="content">
+        An SWT Browser created with style <code>SWT.MOZILLA</code> can now be used with the XULRunner 24.x runtime.
+    </td>
+  </tr>
+  <tr id="sleep-monitor-api"> 
+    <td class="title">Added API for sleep monitoring</td>
+    <td class="content">
+        SWT has added two new events, <code>SWT.Sleep</code> and <code>SWT.Wakeup</code>,
+        which are sent before the <code>Display</code> event loop goes into sleep and after
+        it wakes up from sleep respectively. These events can e.g. be used to monitor the duration
+        of sleep time in SWT applications.
+    </td>
+  </tr>
+
+
+  <tr>
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+  <tr id="syntax-color">
+    <td class="title">Enabled coloring of variables</td>
+    <td class="content">
+     Parameter variables and local variables are now colored by default:
+     <p><img src="images/variable-coloring.png" alt=""/></p>
+     This can be disabled or configured with different colors and styles on the <b>Java &gt; Editor &gt; Syntax Coloring</b> preference page.
+    </td>
+  </tr>
+
+
+  <tr> 
+    <td colspan="2">  </td>
+  </tr>
+</table>
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Luna milestone builds:</p>
+<ul>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M4-201312121600/news/">New for Eclipse Luna milestone build M4 (December 13, 2013)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M3-201310302000/news/">New for Eclipse Luna milestone build M3 (November 1, 2013)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M2-201309182000/news/">New for Eclipse Luna milestone build M2 (September 20, 2013)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M1-201308072000/news/">New for Eclipse Luna milestone build M1 (August 9, 2013)</a></li>
+</ul>
+</body>
+</html>

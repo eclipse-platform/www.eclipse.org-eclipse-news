@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2018. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" type="text/css"/>
+<style type="text/css">
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+/*img {max-width: 520px;}*/
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+ul {padding-left: 13px;}
+</style>
+<title>Eclipse Project 4.22 - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Plug-in Development Environment</h2>
+<ul>
+	<li><a href="#dialogs-wizards-views">Dialogs, Wizards and Views</a></li>
+<!--	<li><a href="#editors">Editors</a></li>-->
+<!--	<li><a href="#APITools">API Tools</a></li>-->
+	<li><a href="#pde-compiler">PDE Compiler</a></li>
+</ul>
+
+<!-- ****************** START OF N&N TABLE****************** -->
+<table class="news">
+<colgroup>
+  <col class="title" />
+  <col />
+</colgroup>
+<tbody>
+  <!-- ******************** Dialogs, Wizard and Views ********************** -->
+  <tr>
+    <td id="dialogs-wizards-views" class="section" colspan="2"><h2>Dialogs, Wizards and Views</h2></td>
+  </tr>
+  
+  
+  <tr id="model-spy"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=498252 -->
+	<td class="title"><a href="#mode-spy">Model spy migrated to PDE</a></td>
+	<td class="content">
+		The model spy which allows to view and adjust the Eclipse application model has been integrated into PDE.
+		You can open it via Windows > Spies > Model Spy.
+		  <p><img src="images/model-spy.png" alt=""/></p>
+		
+	</td>
+  </tr>
+  
+   <tr id="css-spy"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=576300 -->
+	<td class="title"><a href="#css-spy">CSS spy migrated to PDE</a></td>
+	<td class="content">
+		The CSS spy which allows to view and edit the current CSS styling of your IDE or your RCP application has been integrated into PDE.
+		You can open it via Windows > Spies > CSS Spy.
+		  <p><img src="images/css-spy.png" alt=""/></p>
+		
+	</td>
+  </tr>
+  
+  
+  <!-- ******************** End ofDialogs, Wizard and Views ********************** -->
+  
+  <!-- ******************** Editors ********************** -->
+  <!-- <tr>
+    <td id="editors" class="section" colspan="2"><h2>Editors</h2></td>
+  </tr> -->
+  <!-- ******************** End of Editors ********************** -->
+
+  <!-- ******************** APITools ********************** -->
+ <!--  <tr>
+    <td id="APITools" class="section" colspan="2"><h2>API Tools</h2></td>
+  </tr>-->
+  <!-- ******************** End of APITools ********************** -->
+  
+   <!-- ******************** PDE Compiler ********************** -->
+  <tr>
+    <td id="pde-compiler" class="section" colspan="2"><h2>PDE Compiler</h2></td>
+  </tr>
+    <tr id="quickfix-for-redundant"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=575611 -->
+    <td class="title">Quickfix for "Automatic-Module-Name header is redundant"</td>
+    <td class="content">
+      A new quick-assist has been added for fixing "Automatic-Module-Name header is redundant" problem. The quickfix removes automatic module name header from the manifest file.
+      
+   	  <p>
+       <img src="images/pde-remove-automatic-module-name.png" alt="" />
+      </p>
+    </td>
+  	</tr>
+   <!-- ******************** End of PDE Compiler ********************** --> 
+  
+</tbody>
+</table>
+<!-- ****************** END OF N&N TABLE ****************** -->
+
+<script type="text/javascript" src="scripts.js"></script>
+  <p style="text-align:center">
+    <a href="platform_isv.php">Previous</a> <a style="margin:1em" href=".">Up</a> <span style="color:#808080">Next</span>
+  </p>
+</body>
+</html>

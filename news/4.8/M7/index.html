@@ -1,0 +1,402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style type="text/css">
+p, table, td, th {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt}
+pre {  font-family: "Courier New", Courier, mono; font-size: 10pt}
+h2 { font-family: verdana, arial, helvetica, geneva; font-size: 18pt; font-weight: bold ; line-height: 14px}
+code {  font-family: "Courier New", Courier, mono; font-size: 10pt}
+sup {  font-family: verdana, arial, helvetica, geneva; font-size: 10px}
+h3 {  font-family: verdana, arial, helvetica, geneva; font-size: 14pt; font-weight: bold}
+li {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt}
+h1 {  font-family: verdana, arial, helvetica, geneva; font-size: 24pt; font-weight: bold}
+body {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt; margin-top: 5mm; margin-left: 3mm}
+.indextop { font-size: x-large; font-family: verdana, arial, helvetica, sans-serif; font-weight: bold}
+.indexsub { font-size: xx-small; font-family: verdana, arial, helvetica, sans-serif; color: #8080FF}
+a.bar:link {  text-decoration: none; color: #FFFFFF}
+a.bar:visited {  color: #FFFFFF; text-decoration: none}
+a.bar:hover {  color: #FFFFFF; text-decoration: underline}
+a.bar {  color: #FFFFFF}
+
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+  </style>
+<title>Eclipse &quot;New and Noteworthy&quot; Template</title>
+</head>
+
+<body>
+<h1>Eclipse Project Photon (4.8) M7 - New and Noteworthy</h1>
+
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#JDT">JDT</a></li>
+  <li><a href="#Platform-Dev">Platform Developers</a></li>
+  <li><a href="#JDT-Dev">JDT Developers</a></li>
+  <li><a href="#Equinox">Equinox</a></li>
+</ul>
+
+<table class="news">
+  <colgroup>
+    <col class="title" />
+    <col />
+  </colgroup>
+
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+
+   <tr id="winxp-dropped">
+    <td class="title">Dropped support for Windows XP</td>
+    <td class="content">
+	  Eclipse/SWT has dropped support for the Windows XP Operating System and other Windows versions older than Windows Vista.
+	  <p>
+	  For more information, please read the <a href="https://dev.eclipse.org/mhonarc/lists/cross-project-issues-dev/msg15385.html">announcement</a> made by the Eclipse PMC.
+	  </p>
+    </td>
+  </tr>
+
+  <tr id="expand_collapse-dark-theme">
+    <td class="title">Improved the text editor's expand and collapse nodes for the dark theme</td>
+    <td class="content">
+      The collapse and expand nodes in the text editor's left hand side ruler were improved for the dark theme.
+      <p><img src="images/expand_old_new.png" alt="old and new version of the icons"/></p>
+
+    </td>
+  </tr>
+  <tr id="occurrences_generic_editor-dark-theme">
+    <td class="title">Improved the generic editor's mark occurrences annotation color for the dark theme</td>
+    <td class="content">
+      The occurrences annotation marker color in the generic editor's left hand side ruler were improved for the dark theme. Image is zoomed for better visibility.
+      <p><img src="images/annotations.png" alt="old and new version of occurrence annotation"/></p>
+
+    </td>
+  </tr>
+  <tr id="occurrences_label_generic_editor-dark-theme">
+    <td class="title">Improved the generic editor's mark occurrences annotation label</td>
+    <td class="content">
+      The occurrences annotation marker label has been improved to show the word occurring rather than the line. In the image below, see the difference between old label at the top and the new one at the bottom.
+      <p><img src="images/annotationlabel.png" alt="old and new version of occurrence annotation"/></p>
+
+    </td>
+  </tr>
+
+  <tr id="canvas-css-styling">
+    <td class="title">Canvas elements are  styled in the default dark theme</td>
+    <td class="content">
+      The default dark theme now contains CSS for styling Canvas elements by default.
+      <p><b>Old:</b></p>
+      <p><img src="images/color-fonts-canvas-old.png" alt=""/></p>
+      <p><b>New:</b></p>
+      <p><img src="images/color-fonts-canvas-new.png" alt=""/></p>
+
+    </td>
+  </tr>
+
+  <tr id="detach-editor-view">
+    <td class="title">Detach view or editor via its context menu</td>
+    <td class="content">
+      You can now detach a view or an editor via its context menu.
+      <p><img src="images/detach-editor.png" alt=""/></p>
+
+    </td>
+  </tr>
+
+  <tr id="links_in-dark-theme">
+    <td class="title">Consistently use blue color for links in the dark theme</td>
+    <td class="content">
+      Links now consistently use a light blue color in the dark theme. One example where this was very visible is PDE's manifest editor:
+      <p><img src="images/links_in_dark_theme.png" alt="PDE's mantifest editor showing before and after"/></p>
+    </td>
+  </tr>
+
+  <tr id="tree-table-scaling">
+    <td class="title">Improved Tree and Table widget scaling at high DPI on Windows</td>
+    <td class="content">
+      Trees and Tables scale Checkboxes and expand/collapse buttons properly.
+      <p><img src="images/tree-table-scaling.png" alt="Tree widget image before and after"/></p>
+    </td>
+  </tr>
+
+  <tr id="gtk3-theme-override-support">
+    <td class="title">GTK_THEME override support for SWT-GTK3</td>
+    <td class="content">
+      Eclipse SWT on GTK3.14+ now supports the use of GTK_THEME as an environment variable. SWT applications are correctly styled
+      when using the GTK_THEME environment variable to override the system theme, and/or specify a dark variant. Below are the before
+      and after screenshots of ControlExample running with GTK_THEME=Adwaita:dark set.
+      <p><b>Before:</b><br/><img src="images/gtk3-theme-override-support-before.png" alt="before"/></p>
+      <p><b>After:</b><br/><img src="images/gtk3-theme-override-support-after.png" alt="after"/></p>
+    </td>
+  </tr>
+
+  <tr id="swt-gtk3-memory-usage">
+    <td class="title">Improved memory usage on SWT-GTK3</td>
+    <td class="content">
+      Eclipse SWT on GTK3 has reduced memory usage after resolving a memory leak in setBackground/setForeground Color machinery. The leak
+      was approximately 50MB/hour and affected clients running SWT on GTK3.14+.
+    </td>
+  </tr>
+  
+  <tr id="ant-version-upgrade">
+    <td class="title">Ant 1.10.3</td>
+    <td class="content">
+      Eclipse has adopted Ant version 1.10.3.
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+
+  <tr id="java-10">
+    <td class="title">Eclipse support for Java&trade; 10 </td>
+    <td class="content">
+    <a href="http://docs.oracle.com/javase/10/">Java&trade; 10</a> is here, and JDT supports it completely.
+    <ul>
+		<li>The Eclipse compiler for Java (ECJ) implements the new Java 10 <a href="https://docs.oracle.com/javase/10/language">language enhancement</a>
+		which is the support for <a href="http://openjdk.java.net/jeps/286" target="_top"><b>local variable type inference (JEP 286)</b></a>.</li>
+	</ul>
+	<ul>
+		<li>
+		<p><b>Addition of Java 10 JRE</b></p>
+			<ul>
+				<li>A Java 10 JRE is recognized by Eclipse for launching. It can be added from the <b>Window > Preferences > Java > Installed JREs > Add...</b> page.
+				It can be added from the <b>Package Explorer</b> as well using the project's context menu.
+				<p><img src="images/j10.png" alt=""/></p>
+				</li>
+
+				<li>An option to set compiler compliance to 10 on a Java project is provided.
+				<p><img src="images/j10.compliance.png" alt=""/></p>
+				</li>
+			</ul>
+		</li>
+
+		<li>
+		<p><b>Support for <code>var</code> compilation</b></p>
+			<ul>
+				<li>Eclipse supports compilation of <code>var</code> as shown below:
+				<p><img src="images/var.compile.png" alt=""/></p>
+				</li>
+
+				<li>When the type of <code>var</code> cannot be inferred, it is flagged as a compiler error as expected.
+				An example is shown below:
+				<p><img src="images/var.nocompile.png" alt=""/></p>
+				</li>
+			</ul>
+		</li>
+
+		<li>
+		<p><b>Code Completion for <code>var</code></b></p>
+			<ul>
+				<li>Code completion is offered at places where <code>var</code> is allowed.
+				<p><img src="images/var.complete.png" alt=""/></p>
+				</li>
+
+				<li>Code completion of var is not offered at places where <code>var</code> is not allowed.
+				<p><img src="images/var.nocomplete.png" alt=""/></p>
+				</li>
+			</ul>
+		</li>
+
+		<li>
+		<p>Hover over <code>var</code> shows the javadoc of the inferred type.</p>
+		<p><img src="images/var.hover.png" alt=""/></p>
+		</li>
+
+		<li>
+		<p>Quick Assist to convert from <code>var</code> to the appropriate type is provided.</p>
+			<p><img src="images/var.vartotype.png" alt=""/></p>
+		</li>
+
+		<li>
+		<p>Quick Assist to convert from type to <code>var</code> is provided.</p>
+			<p><img src="images/var.typetovar.png" alt=""/></p>
+		</li>
+	</ul>
+   </td>
+  </tr>
+
+  <tr id="formatter-dark-theme">
+    <td class="title">Java code formatter preferences now styled for the dark theme</td>
+    <td class="content">
+      The formatter preferences tree styling has been fixed to work properly in the dark theme.
+    </td>
+  </tr>
+
+  <tr id="quickfix-change-compliance-10">
+    <td class="title">Quick fix to change project compliance and JRE to 10</td>
+    <td class="content">
+    A quick fix <b>Change project compliance and JRE to 10</b> is provided to quickly change the current project to be compatible with Java 10.
+    <p><img src="images/quickfix-change-compliance-10.png" alt=""/></p>
+    </td>
+  </tr>
+
+  <tr id="quickfix-exports-not-existing-or-empty-package">
+    <td class="title">Quick fix for <code>Non-existing or empty package</code> on <code> exports directive</code></td>
+    <td class="content">
+    <p>A new quick fix is available when you have a <code> non-existing or an empty package</code> in an <code>exports directive</code> in module-info.java file.</p>
+	<p>This quick fix is applicable if the project is a Java9 project or above and has a <code>module-info.java</code> file.</p>
+    <p>The quick fix can be invoked from the editor:</p>
+    <p><img src="images/java9_quickfix_empty_nonexistant_package_on_exports_directive.png" alt=""/></p>
+    <p>A quick fix is provided to create either a Class, or an Interface or an Annotation or an Enum in the given package.</p>
+    <p>If the package does not exist, a new package is created and the new element is created in the package.</p>
+    </td>
+  </tr>
+
+  <tr id="java-compiler-preference-release-option">
+    <td class="title">New <code>--release</code> on the Java compiler preference page</td>
+    <td class="content">
+    <p>A new option <code>--release</code> is available on the Java compiler preference page.</p>
+	<p>This option will be enabled only if the JRE being used is a Java 9 or above.</p>
+	<p>Workspace Preference:</p>
+	<p><img src="images/java9_release_option_workspace_preference_page.png" alt=""/></p>
+	<p>Project Preference:</p>
+	<p><img src="images/java9_release_option_project_preference_page.png" alt=""/></p>
+    <p>In the past, it was possible to compile for an older version of the Java language.</p>
+    <p>However, the compiler always compiled against the platform APIs that is found in the project's build path.</p>
+    <p><b>For Example:</b> If the JRE being used is  java 1.8 and the compliance level is set to 1.7, the API's that are available are from the Java8  library, even if they were not part of Java 1.7.</p>
+    <p>The new --release compiler option now allows the user to configure compilation against a platform API version of user's choice.</p>
+    <p><b>For Example:</b> Using --release option if the JRE being used is 9 and the compliance level is set to 1.7, the API's that are available will be from JRE 1.7 even if JRE 1.7 is not available in your workspace.</p>
+    <p>The --release option supports versions 1.6 and above. That is the --release option is enabled for JRE 9 and above, if the compliance is set to 1.6 or above</p>
+    <p>In the below picture, compliance is set to 1.5, therefore the --release option is disabled.</p>
+    <p><img src="images/java9_release_option_disabled_project_preference_page.png" alt=""/></p>
+    <p>The --release option is enabled by default for all new projects created using JRE 9 or above.</p>
+    </td>
+  </tr>
+  
+  <tr id="java-compiler-release-option-behavior">
+    <td class="title">Use <code>--release</code> option for Default Access rules and EE descriptor</td>
+    <td class="content">
+    <p>Java 9 onwards, Access rules intrinsic to JRE will not be available by default. Users must use the --release option to configure compilation against the version of Java library of his or her preference.</p>
+    <p>From Java 10 and beyond, API tools Execution Environment Descriptions will not be provided to determine if references are present in execution environment or not. Users must  use the --release option to configure compilation
+     against platform API of his or her preference. If the user intends to enforce a particular version of Java for determining Java API references in a project, he or she can store this preference in the project settings.</p>
+
+    </td>
+  </tr>
+
+  <tr id="jdt-remove-redundant-modifiers-cleanup">
+    <td class="title">New Cleanup Action "Remove redundant modifiers"</td>
+    <td class="content">
+      The new cleanup action "Remove redundant modifiers" removes unnecessary modifiers on types, methods and fields. The following modifiers are removed:
+      <ul>
+      <li>Interface field declarations: <code>public</code>, <code>static</code>, <code>final</code></li>
+      <li>Interface method declarations: <code>public</code>, <code>abstract</code></li>
+      <li>Nested interfaces: <code>static</code></li>
+      <li>Method declarations in final classes: <code>final</code></li>
+      </ul>
+      The cleanup action can be configured as save action on the <i>Unnecessary Code</i> page.
+      <p><img src="images/jdt_remove_redundant_modifiers.png" alt=""/></p>
+    </td>
+  </tr>
+  
+  <tr id="jdt-complier-building-preference">
+    <td class="title">New preference added "Compiler Compliance does not match used JRE"</td>
+    <td class="content">
+     A new preference <b>Compiler Compliance does not match used JRE</b> is added to Compiler Preference Building Page. 
+     <p>This preference indicate the severity of the problem reported when project's used JRE does not match the 
+     compiler compliance level selected. (e.g. a project using JRE 1.8 as JRE System Library, 
+     and the compiler compliance is set to 1.7).</p>
+     <p> The value of this preference is by default WARNING. </p>
+     <p> If the JRE being used is 9 or above and the <b>--release</b> option is selected and even if the compiler 
+     compliance does not match the JRE being used, this option will be ignored.</p> 
+     <p> This preference can be set as shown below: </p>
+     <p><img src="images/jdt_compiler_compliance_mismatch_JRE.png" alt=""/></p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"/>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
+  </tr>
+
+  <tr id="generic-editor-enablewhen">
+    <td class="title">Support 'enabledWhen' for the all Generic Editor extension points</td>
+    <td class="content">
+      All extension points targeting the Generic Edtor (<code>autoEditStrategies</code>, <code>contentAssistProcessors</code>, <code>highlightReconcilers</code>,
+      <code>hoverProviders</code>, <code>presentationReconcilers</code>, <code>reconcilers</code>) now allows an <code>enabledWhen</code> child elements for
+      contributions. This <code>enableWhen</code> is a Core Expression that controls whether the declared extension is enabled when insantiating the editor.
+      The evaluation context defines extra variables you can use in the expression: <code>viewer</code>, <code>editor</code> and <code>editorInput</code>.
+      <p>This example shows how LSP4E contributes server highlight reconciler only for editor input supporting a language server:</p>
+      <pre>
+&lt;extension
+      point="org.eclipse.ui.genericeditor.highlightReconcilers">
+   &lt;highlightReconciler
+         class="org.eclipse.lsp4e.operations.highlight.HighlightReconciler"
+         contentType="org.eclipse.core.runtime.text">
+      &lt;enabledWhen>
+         &lt;with
+               variable="editorInput">
+            &lt;test
+                  property="org.eclipse.lsp4e.hasLanguageServer">
+            &lt;/test>
+         &lt;/with>
+      &lt;/enabledWhen>
+   &lt;/highlightReconciler>
+&lt;/extension>
+      </pre>
+    </td>
+  </tr>
+
+ <tr id="monitor-getzoom">
+    <td class="title">New API Monitor#getZoom() added</td>
+    <td class="content">
+		A new API <code>Monitor.getZoom()</code> has been added which returns the zoom value used by SWT for the Monitor.
+		<p>
+		 The zoom value returned by the API is the zoom used by SWT that is controlled by the <code>swt.autoScale</code> property. It may not be the same value
+		 as that is set in the system. It can be used in other SWT APIs that require zoom as an input such as <code>Image.getImageData(zoom)</code> to get the ImageData
+		 at the zoom level for the specific Monitor on which it'll be drawn.
+		</p>
+		<p>
+		 There are two use-cases of the API:
+		</p>
+		<ul>
+		 <li>
+		  When the DPI of the monitor changes dynamically, the API can be used to return the new DPI.
+		 </li>
+		 <li>
+		  On platforms that support a multi-monitor setup where different monitors can have different DPIs, the API can be used to get the DPI of the specific monitor
+		  on which a Control is drawn.
+		 </li>
+		</ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="JDT-Dev">JDT Developers</td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="Equinox">Equinox</td>
+  </tr>
+
+
+  <tr>
+    <td colspan="2"/>
+  </tr>
+</table>
+
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Photon milestone builds:</p>
+<ul>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.8/M6/">News for Eclipse Photon milestone build M6</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.8/M5/">News for Eclipse Photon milestone build M5</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.8/M4/">News for Eclipse Photon milestone build M4</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.8/M3/">News for Eclipse Photon milestone build M3</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.8/M2/">News for Eclipse Photon milestone build M2</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.8/M1/">News for Eclipse Photon milestone build M1</a></li>
+</ul>
+
+<script type="text/javascript" src="../scripts.js"></script>
+
+</body>
+</html>

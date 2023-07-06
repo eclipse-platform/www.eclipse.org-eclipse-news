@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse Project Neon (4.6) M4 News</title>
+</head>
+<body>
+<h1>Eclipse Project Neon (4.6) M4 - New and Noteworthy</h1>
+<p>Here are some of the more noteworthy things available in the Neon milestone build M4
+  which is now available for <a href="http://download.eclipse.org/eclipse/downloads/#4.6_Stable_Build" target="_top">download</a>.
+  <br/>
+  We also recommend to read the Tips and Tricks, either via <b>Help &gt; Tips and Tricks...</b> or online for
+  <a href="http://help.eclipse.org/topic/org.eclipse.platform.doc.user/tips/platform_tips.html">Platform</a>,
+  <a href="http://help.eclipse.org/topic/org.eclipse.jdt.doc.user/tips/jdt_tips.html">JDT</a>, and
+  <a href="http://help.eclipse.org/topic/org.eclipse.pde.doc.user/tips/pde_tips.htm">PDE</a>.
+</p>
+
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#Platform-Dev">Platform Developers</a></li>
+  <li><a href="#JDT">JDT</a></li>
+  <li><a href="#PDE">PDE</a></li>
+  <li><a href="#Equinox">Equinox</a></li>
+</ul>
+
+<table class="news">
+  <colgroup>
+    <col class="title" />
+    <col />
+  </colgroup>
+
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+
+  <tr id="word-wrap">
+    <td class="title">Word wrap in text editors</td>
+    <td class="content">
+      A <b>Toggle Word Wrap</b> button has been added to the workbench toolbar. Shortcut: <b>Alt+Shift+Y</b>.
+      <p>
+      <img src="images/word-wrap.png" alt="" />
+      </p>
+      <p>
+        By default, text editors are opened with word wrap disabled.
+      </p>
+    </td>
+  </tr>
+
+  <tr id="text-zoom-commands">
+  	<td class="title">Commands and shortcuts to zoom in text editors</td>
+  	<td class="content">
+    In text editors, you can now use <b>Zoom In</b> (<b>Ctrl++</b> or <b>Ctrl+=</b>) and <b>Zoom Out</b> (<b>Ctrl+-</b>) commands
+    to increase and decrease the font size.
+    <p>
+      Like a change in the <b>General &gt; Appearance &gt; Colors and Fonts</b> preference page, the commands persistently
+      change the font size in all editors of the same type. If the editor type's font is configured to use a default font,
+      then that default font will be zoomed.
+    </p>
+    </td>
+  </tr>
+
+  <tr id="pinch-to-zoom">
+    <td class="title">Pinch to zoom in text editors</td>
+    <td class="content">
+      To temporarily zoom the editor font in text editors, use a "<b>pinch</b>" gesture on a touchpad.
+      Put two fingers on the touchpad and move them apart or together.
+      <p>
+        To reset the original font size, rotate two fingers by at least 45°, or close and reopen the editor (<b>Navigate &gt; Back</b>).
+      </p>
+      <p>
+        Those gestures only affect the current editor. Changes are neither propagated to other editors nor persisted.
+      </p>
+      <p>
+        Note: SWT currently only supports these gestures on OS X and on Windows systems that use the native
+        multi-touch support. Touchpads that emulate mouse move/scroll events don't support gestures.
+        Gesture support on GTK is not implemented yet.
+      </p>
+    </td>
+  </tr>
+
+  <tr id="wayland-launching">
+    <td class="title">Eclipse workspace launcher now fully functional on Wayland</td>
+    <td class="content">
+      Eclipse has been updated to include improved support for the Wayland display manager.
+      <p>Previously, launching Eclipse on Wayland was possible only if not using the native launcher due to a bug that would
+         cause the workspace launcher to hang and eventually crash. This has now been fixed, allowing
+         Eclipse to launch on Wayland just as it would on X11.</p>
+    </td>
+  </tr>
+  
+  <tr id="new-button-workingset">
+    <td class="title">"New..." button for creating Working Sets</td>
+    <td class="content">
+        A <b>New...</b> button has been added to the <code>WorkingSetConfigurationBlock</code>:
+      <p>
+        <img src="images/new-button-workingsetconfigurationblock.png" alt="" />
+      </p>
+      <p>
+        This saves quite a few clicks when creating new Working Sets.
+      </p>
+    </td>
+  </tr>
+ 
+  <tr>
+    <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
+  </tr>
+
+  <tr id="i-side-effect">
+    <td class="title">ISideEffect databinding API</td>
+    <td class="content">
+      <code>org.eclipse.core.databinding.observable.ISideEffect</code> allows you to react
+      to changes in observables without attaching listeners. For example, the
+      following code will bind the text "Your username is: xxxx" to a label and
+      will update the label whenever the username changes.
+
+      <pre>
+        IObservableValue&lt;String&gt; username = ...
+        Label yourUsername = ...
+
+        ISideEffect sideEffect = ISideEffect.create(
+        	() -&gt; {return "Your username is: " + username.getValue();},
+          	yourUsername::setText);
+      </pre>
+
+      ISideEffects will automatically determine which observables to
+      listen to, can react to changes in multiple observables,
+      and will avoid performing excessive updates if the observables fire
+      many change events in a short period of time.
+    </td>
+  </tr>
+  
+  <tr id="swt-requestlayout">
+    <td class="title">New API added to Control for more efficient processing of layout requests</td>
+    <td class="content">
+     SWT has added a new <code>requestLayout()</code> method to the <code>Control</code> and <code>Composite</code> classes. 
+     This method does essentially the same thing as <pre> <code>widget.getShell().layout(new Control[] {widget}, SWT.DEFER);</code> </pre>
+     <p>
+     The snippet, above, is currently the most efficient method of triggering layouts in SWT, 
+     but most developers are unaware of this. Most Eclipse developers invoke <code>Composite.layout()</code>, 
+     which is worse in the sense of performance. This new API is intended to make it easier for developers 
+     to adopt the more efficient mechanism as opposed to using <code>Composite#layout()</code>.
+     </p>
+     <p>
+     However, be aware that changing existing invocations of <code>layout()</code> to <code>requestLayout()</code>
+     may break code that assumes that controls are completely sized and positioned at a certain point in time.
+     </p>
+    </td>
+  </tr>
+  
+  <tr id="darktheme-statusdialog">
+    <td class="title">Dark theme styling for StatusDialog</td>
+    <td class="content">
+     The <code>org.eclipse.jface.dialogs.StatusDialog</code> and its subclasses are now styled in the dark theme.
+     Before this change, the message area was hard-coded to white.
+     </td>
+  </tr>
+
+  <tr id="varargs">
+    <td class="title">APIs changed to varags</td>
+    <td class="content">
+      A few platform APIs have been changed to allow varargs invocation:
+      <ul>
+        <li><code>org.eclipse.jface.viewers.StructuredViewer#setFilters(ViewerFilter...)</code></li>
+        <li><code>org.eclipse.jface.databinding.viewers.ViewerSupport#bind(*, IValueProperty...)</code></li>
+        <li><code>org.eclipse.swt.graphics.PaletteData#PaletteData(RGB...)</code></li>
+        <li><code>org.eclipse.swt.widgets.Combo#setItems(String...)</code></li>
+      </ul>
+    </td>
+  </tr>
+  
+  <tr id="applicationmodel">
+    <td class="title">New API: MApplication#getCommand(String)</td>
+    <td class="content">
+      <code>MApplication#getCommand(String)</code> 
+      is a faster way to access a command directly via id. This new API is used by the Eclipse IDE
+      to speed up its application launching.
+     </td>
+  </tr>
+
+  <tr id="epartservice-switchperspective">
+    <td class="title">API for switching perspectives</td>
+    <td class="content">
+     The <code>EPartService#switchPerspective(String/MPerspective)</code>
+     API has been added.
+    </td>
+  </tr>
+
+  <tr id="access-application-context">
+    <td class="title">New API for accessing the application context</td>
+    <td class="content">
+      The <code>IEclipseContext</code> of the <code>MApplication</code> object can now be directly accessed via a child context, via the <code>IWorkbench.APPLICATION_CONTEXT_KEY</code> key.
+      <pre>
+      // this is a child context
+      IEclipseContext ctx =...;
+      // get the application context
+      IEclipseContext applicationContext = ctx.get(IWorkbench.APPLICATION_CONTEXT_KEY);
+      </pre>
+     </td>
+  </tr>
+
+   <tr id="databindingapi">
+    <td class="title">JFace databinding enhancements</td>
+    <td class="content">
+      The new static <code>IConverter.create(Object, Object, Function)</code> allows to create a converter
+	  using a lambda expression. On a similar note, the static <code>UpdateValueStrategy.create(IConverter)</code>has been added.
+	</td>
+  </tr>
+
+  <tr id="auto-text-direction">
+    <td class="title">A new style constant to indicate Bidi "auto" text direction</td>
+    <td class="content">
+		A new text direction constant <code>SWT.AUTO_TEXT_DIRECTION</code> has been introduced to indicate
+		Bidi "auto" text direction. This is now also supported by the StyledText control.
+	<p>
+		Auto text direction was introduced in the Mars (4.5) release as a bitwise OR of
+		<code>SWT.LEFT_TO_RIGHT | SWT.RIGHT_TO_LEFT</code>
+		and it was already implemented in all native controls.
+		Now, <code>SWT.AUTO_TEXT_DIRECTION</code> is a dedicated SWT constant for this.
+	</p>
+	<p>
+		Behavior: When <code>SWT.AUTO_TEXT_DIRECTION</code> is set, the text direction is derived from the direction of the first strong Bidi character.
+	</p>
+	<p>
+		Note: This is a HINT and it works on Windows only.
+	</p>
+	<p>
+		Usage: <code>control.setTextDirection(SWT.AUTO_TEXT_DIRECTION);</code>
+	</p>
+      <p>
+        <img src="images/auto-text-direction.png" alt="" />
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+
+  <tr id="rename-options">
+    <td class="title">Rename options</td>
+    <td class="content">
+      The <b>Refactor &gt; Rename</b> popup now shows an <b>Options...</b> link which opens 
+      the full <b>Rename dialog</b> that provides more options like renaming a field's getter and setter methods.
+       <p>
+        <img src="images/rename-options.png" alt=""/>
+      </p>
+      The dialog can still be opened via the menu button in the popup or by pressing <b>Alt+Shift+R</b> again.
+      The in-place mode can be disabled entirely via
+      <b>Preferences &gt; Java &gt; Rename in editor without dialog</b>.
+    </td>
+  </tr>
+
+
+  <tr>
+    <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
+
+   <tr id="plug-in-with-an-e4-swt-view">
+    <td class="title">Plug-in template with an Eclipse 4 SWT view</td>
+    <td class="content">
+      In the plug-in templates, it is now possible to choose:
+        plug-in with an Eclipse 4 SWT view.
+
+    <p>
+      To get this template, create a new plug-in project and answer 'no' to the question:
+      Would you like to create a Rich Client Application?
+    </p>
+
+    <p>
+      Then, the 'Plug-in with an Eclipse 4 SWT View' template will be proposed in the list:
+    </p>
+
+    <p>
+      <img src="images/plug-in-with-an-e4-swt-view.png" alt="" />
+    </p>
+    <p>
+      The generated plug-in will contain a model fragment with a sample E4 view that:
+    </p>
+      <ul>
+       <li> manages the single and the multiple selection using the injection mechanism</li>
+       <li> is added to any E3 compat or pure E4 application thanks to the 'xpath:/' notation</li>
+       <li> is present in the <b>Window &gt; Show view</b> dialog </li>
+      </ul>
+
+    </td>
+  </tr>
+
+  <tr id="plug-in-with-an-e4-handler">
+    <td class="title">Plug-in template with an Eclipse 4 Handler</td>
+    <td class="content">
+      In the plug-in templates, it is now possible to choose:
+        plug-in with an Eclipse 4 handler.
+
+    <p>
+      To get this template, create a new plug-in project and answer 'no' to the question:
+      Would you like to create a Rich Client Application?
+    </p>
+
+    <p>
+      Then, the 'Plug-in with an Eclipse 4 Handler' template will be proposed in the list:
+    </p>
+
+    <p>
+      <img src="images/plug-in-with-an-e4-handler.png" alt="" />
+    </p>
+    <p>
+      The generated plug-in will contain a model fragment with a sample E4 hello world command that appears:
+    </p>
+      <ul>
+       <li> in the 'E4 Handler' main menu </li>
+       <li> in the 'E4 Handler' submenu in any popup menu </li>
+      </ul>
+
+    </td>
+  </tr>
+
+  <tr id="pde-project-explorer">
+    <td class="title">PDE perspective uses Project Explorer</td>
+    <td class="content">
+      The PDE perspective now uses the <b>Project Explorer</b> instead of the <b>Package Explorer</b> view by default.
+    </td>
+  </tr>
+
+  <tr id="pde-importpackages">
+    <td class="title">Import and export packages in Plug-in Manifest editor supports prefix wildcard matching by default</td>
+    <td class="content">
+	The import and export package dialog in the <b> Plug-in Manifest editor </b> uses wildcards by default. For example, to add
+	<code>org.eclipse.e4.core.services</code> as package dependency,
+	you can type in <code>services</code> instead of <code>*services</code>.
+    </td>
+  </tr>
+
+  <tr id="pde-plugin-image-browser-filter">
+    <td class="title">Plug-in Image Browser Filtering</td>
+    <td class="content">
+
+     In <b>Plug-in Image Browser</b> view, it is now possible to filter icons by
+     their full path or name.
+
+     <p>
+     Use the new ImageFilter field to provide the search criteria (? = any character, * = any string) 
+     to find the icons with matching path or name. 
+     </p>
+
+     <p>
+      <img src="images/pde-plugin-image-browser-filter.png" alt="" />
+    </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="Equinox">Equinox</td>
+  </tr>
+
+  <tr id="startup-performance-equinox">
+    <td class="title">Startup time improvements</td>
+    <td class="content">
+      Equinox applied various improvements that reduce the startup time for the Eclipse IDE and other OSGi-based applications.
+    </td>
+  </tr>
+
+   <tr id="export-preferences-equinox">
+    <td class="title">Export Preferences uses alphabetic order</td>
+    <td class="content">
+      When you export your preference settings via <b>File &gt; Export... &gt; Preferences</b>, the preferences are now sorted alphabetically in the resulting file.
+    </td>
+  </tr>
+  
+   <tr id="declarative-services-equinox">
+    <td class="title">Equinox defines Declaratives Services via Require-Capability</td>
+    <td class="content">
+      Following the OSGi specification, the Equinox Declarative Services implementation defines its capabilities via Require-Capability. This
+      will allow the Eclipse IDE to change its dependencies and make the Declarative Services implementation exchangeable.
+    </td>
+  </tr>
+
+
+  <tr>
+    <td colspan="2"/>
+  </tr>
+</table>
+
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Neon milestone builds:</p>
+<ul>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.6/M3/">News for Eclipse Neon milestone build M3</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.6/M2/">News for Eclipse Neon milestone build M2</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.6/M1/">News for Eclipse Neon milestone build M1</a></li>
+</ul>
+
+</body>
+</html>

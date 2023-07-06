@@ -1,0 +1,34 @@
+name: Update to next release
+on:
+  milestone:
+    types: [created]
+
+permissions:
+  contents: read
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    if: contains(github.event.milestone.description, 'Release')
+    permissions:
+      pull-requests: write
+      contents: write
+    steps:
+    - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
+      with:
+        ref: master
+    - name: Create new release folder
+      run: |
+        name=$(echo ${{ github.event.milestone.due_on }} | cut -d- -f-2)
+        cd scripts
+        ./applyTemplate.sh ${{ github.event.milestone.title }} $name
+    - name: Create Pull Request for Release ${{ github.event.milestone.title }}
+      uses: peter-evans/create-pull-request@153407881ec5c347639a548ade7d8ad1d6740e38 # v5.0.2
+      with:
+        commit-message: Prepare Release ${{ github.event.milestone.title }}
+        branch: prepare_R${{ github.event.milestone.title }}
+        title: Prepare Release ${{ github.event.milestone.title }}
+        body: A new Release Milstone was created, please review the changes and merge if appropriate.
+        delete-branch: true
+        milestone: ${{ github.event.milestone.number }}
+

@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2018, 2019. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" type="text/css"/>
+<style type="text/css">
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+/*img {max-width: 520px;}*/
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+ul {padding-left: 13px;}
+</style>
+<title>Eclipse Project 4.16 - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Java development tools</h2>
+<ul>
+    <li><a href="#Java14">Java&trade; 14 Support</a></li>
+    <li><a href="#JavaEditor">Java Editor</a></li>
+    <li><a href="#JavaFormatter">Java Formatter</a></li>
+    <li><a href="#Debug">Debug</a></li>
+    <li><a href="#Preferences">Preferences</a></li>
+</ul>
+
+<!-- ****************** START OF N&N TABLE ****************** -->
+<table class="news">
+<colgroup>
+  <col class="title" />
+  <col />
+</colgroup>
+<tbody>
+
+  <!-- ******************* Java 14 Support ************************************* -->
+  <tr>
+    <td id="Java14" class="section" colspan="2">
+    <h2>Java&trade; 14 Support </h2></td>
+  </tr>
+   <tr id="Java_14"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=549808 -->
+      <td class="title">Java 14</td>
+      <td class="content">
+          <a href="http://jdk.java.net/14/">Java 14</a> is out and Eclipse JDT supports Java 14 for 4.16. 
+          <p>
+          </p>
+
+          The release notably includes the following Java 14 features:
+           <ul>
+             <li><a href="http://openjdk.java.net/jeps/361">JEP 361: Switch Expressions (Standard)</a></li>
+             <li><a href="http://openjdk.java.net/jeps/359">JEP 359: Records (Preview)</a></li>
+             <li><a href="http://openjdk.java.net/jeps/368">JEP 368: Text Blocks (Second Preview)</a></li>
+             <li><a href="http://openjdk.java.net/jeps/305">JEP 305: Pattern Matching for Instanceof (Preview)</a></li>
+           </ul>
+
+           <p>
+           Please note that the <a href="#enable-preview">enable preview features</a> option should be on for <a href="http://openjdk.java.net/projects/jdk/14/">preview language features</a>.
+           For an informal introduction of the support, 
+           please refer to the <a href="https://wiki.eclipse.org/Java14/Examples">Java 14 Examples wiki</a>. 
+           </p>
+      </td>
+  </tr>
+  <tr id="jdk-compliance-14"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=551493 -->
+    <td class="title">Set JDK Compliance to 14</td>
+    <td class="content">
+      You can set the JDK compliance to 14 and enable the preview features in <b>Preferences &gt; Java &gt; Compiler:</b>
+      <p><img src="images/jdk-compliance-14.png" alt=""/></p>
+    </td>
+  </tr>
+  <tr id="new-record-template"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=553479 -->
+    <td class="title">Template to create new record</td>
+    <td class="content">
+      You can use the <code>new_record</code> template to create a record in an empty <code>.java</code> file:
+      <p><img src="images/newrecord.png" alt=""/></p>
+    </td>
+  </tr>
+  <tr id="new-record-creation-wizard"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=553473 -->
+    <td class="title">Record Creation Wizard</td>
+    <td class="content">
+     You can create a new record using the Record creation wizard that can be opened by:
+     <ul>
+      <li>Right Click on the <b>Project > New > Record</b></li> 
+      <li>Right Click on the <b>Project > New > Other and search for Record</b></li> 
+      <li>Right Click on the <b>Project > New > Other > Java > Record</b></li>
+     </ul>
+     The Record creation wizard comes up as shown below.
+      <p><img src="images/fileAddJ14RecordCreation.png" alt=""/></p>
+     <em>Note: In older workspaces the "Record" entry may not appear directly under the "New" menu in the Java perspective. To resolve this, either use a new workspace or launch eclipse with the option <code>-clearPersistedState</code> for your existing workspace.</em> 
+    </td>
+  </tr>
+  <tr id="enable-preview"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=560576 -->
+    <td class="title">Enable preview features</td>
+    <td class="content">
+      You can now quickly enable the preview features on an applicable Java project by right-clicking on it and selecting <b>Configure &gt; Enable preview features</b>: 
+      <p><img src="images/enable-preview.png" alt=""/></p>
+      You can also change the default severity (warning) of the preview features compile problem in the opened <b>Project properties</b> dialog:
+      <p><img src="images/preview-severity.png" alt=""/></p>
+    </td>
+  </tr>
+  <!-- ******************* End of Java 14 Support ************************************* -->
+  
+  <!-- ******************* Java Editor ************************************* -->
+  <tr>
+    <td id="JavaEditor" class="section" colspan="2">
+    <h2>Java Editor </h2>
+    </td>
+  </tr>
+
+  <tr id="default-non-blocking-completion"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=558893 -->
+    <td class="title">Non-blocking Java code completion</td>
+    <td class="content">
+      By default, code completions in the <b>Java editor</b> are now configured to be computed (when possible) in a separate non-UI thread
+      in order to prevent UI freezes in case of long computations.
+      <p>Users can restore the legacy behavior in <b>Preferences &gt; Java &gt; Editor &gt; Content Assist &gt; Advanced</b> by unchecking the
+      <b>enable non-blocking completion</b> checkbox; integrators
+      can change the value of the <code>org.eclipse.jdt.ui.content_assist_noUIThread_computation</code> to <code>false</code>.</p>
+      <p><img src="images/jdtNonBlockingCompletionPref.png" alt=""/></p>
+    </td>
+  </tr>
+
+  <tr id="merge-conditional"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=562592 -->
+    <td class="title">Merge control workflows</td>
+    <td class="content">
+      A new clean up has been added that merges conditions of if/else if/else that have the same blocks when it is possible.
+      <p>
+        The code in the blocks should be the same.
+        An else block may be different and won't be merged.
+        One condition may be made opposite to allow the merge.
+        The conditions are merged with <code>||</code> to keep the control workflow the same.
+        Parenthesis is added to avoid priority issue.
+        Most of the brackets, formatting and comments are kept.
+      </p>
+      <p>
+        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Merge conditions of if/else if/else that have the same blocks</b> on the <b>Unnecessary Code</b> tab.
+      </p>
+      <p><img src="images/merge-control-workflows-preferences.png" alt="Preferences"/></p>
+      For the given code:
+      <p><img src="images/merge-control-workflows-before.png" alt="Before"/></p>
+      You get this after the clean up:
+      <p><img src="images/merge-control-workflows-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
+  <tr id="variable-type-inference"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=553025 -->
+    <td class="title">Local variable type inference</td>
+    <td class="content">
+      A new clean up has been added that makes use of the <code>var</code> keyword for the local variable when it is possible and is enabled only for Java 10 and higher.
+      <p>
+        The clean up replaces the explicit variable type by <code>var</code> when this type can be known by the variable initialization.
+        It also replaces the diamond operator in instance creation by a parameterized type.
+        Eventually, it adds a suffix to initialization number literal to match the variable type.
+        In any case, the variable type is still exactly the same.
+      </p>
+      <p>
+        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Use the local variable type inference</b> on the <b>Code Style</b> tab.
+      </p>
+      <p><img src="images/var-preferences.png" alt="Preferences"/></p>
+      For the given code:
+      <p><img src="images/var-before.png" alt="Before"/></p>
+      You get this after the clean up:
+      <p><img src="images/var-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
+  <tr id="lazy-logical"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=551600 -->
+    <td class="title">Prefer lazy logical operators</td>
+    <td class="content">
+      A new clean up has been added that replaces eager logical operators by lazy operators when it is possible.
+      <p>
+        The clean up respectively replaces <code>|</code> and <code>&amp;</code> by <code>||</code> and <code>&amp;&amp;</code> when the following operands can't make side effect.
+        Any assignments, increments, decrements, object creations or method call may cause side effect.
+        So, in such case, it will keep the eager operator.
+        It also leaves the binary operations as it is.
+      </p>
+      <p>
+        To select the clean up, invoke <b>Source &gt; Clean Up...</b>, use a custom profile, and on the <b>Configure...</b> dialog select <b>Use the lazy logical operator</b> on the <b>Code Style</b> tab.
+      </p>
+      <p><img src="images/lazy-logical-preferences.png" alt="Preferences"/></p>
+      For the given code:
+      <p><img src="images/lazy-logical-before.png" alt="Before"/></p>
+      You get this after the clean up:
+      <p><img src="images/lazy-logical-after.png" alt="After"/></p>
+    </td>
+  </tr>
+
+  <tr id="quickfix-switch-expression-return-to-yield"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=563209 -->
+    <td class="title">Quick fix to change return statement to yield statement in Switch Expression</td>
+    <td class="content">
+      A quick fix has been added to convert a <code>return</code> statement in a <code>Switch Expression</code> to <code>yield</code> statement. 
+      <p><img src="images/quickfix-switch-expression-return-to-yield.png" alt=""/></p>
+    </td>
+  </tr>
+  <!-- ******************* End of Java Editor ************************************* -->
+
+  <!-- ******************* Java Formatter ************************************* -->
+  <tr>
+    <td id="JavaFormatter" class="section" colspan="2">
+    <h2>Java Formatter </h2>
+    </td>
+  </tr>
+  <tr id="formatter-records"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=559954 -->
+    <td class="title">Record declarations support</td>
+    <td class="content">
+      A lot of new settings have appeared in the formatter profile to control the formatting of <b>record declarations</b>.
+      They are very similar to existing settings related to other type declarations.
+      To see them all, you can use the filter field and type in the keyword <code>record</code>.
+      <p><img src="images/formatter-records.png" alt=""/></p>
+    </td>
+  </tr>
+  <!-- ******************* End of Java Formatter ************************************* -->
+  
+  <!-- *********************** Debug ******************************** -->
+  <tr>
+    <td id="Debug" class="section" colspan="2">
+    <h2>Debug</h2>
+    </td>
+  </tr>
+
+  <tr id="synthetic-variables-inspection"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=562795 -->
+    <td class="title">Synthetic variables inspection</td>
+    <td class="content">
+      The <b>JDT debugger</b> is now capable of inspecting synthetic variables which are generated by the Java compilers.
+      One such example is debugging the following method <code>java.util.stream.ReferencePipeline.filter(Predicate&lt;? super P_OUT&gt;)</code>
+      and inspecting the <code>predicate</code> variable.
+      <p>Before:</p>
+      <p><img src="images/synthetic_var_without_fix.png" alt=""/></p>
+      <p>Now:</p>
+      <p><img src="images/synthetic_var_with_fix.png" alt=""/></p>
+    </td>
+  </tr>
+  <!--************************ End of Debug ******************************** -->
+
+  <!-- ****************** Preferences ************************************* -->
+  <tr>
+    <td id="Preferences" class="section" colspan="2">
+      <h2>Preferences </h2>
+    </td>
+  </tr>
+
+  <tr id="substring-matching-default"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=561264 -->
+    <td class="title">Substring Matching</td>
+    <td class="content">
+      The content assist preference option <b>Show Substring Matches</b> has been removed and the feature is now always enabled.
+      <p>
+        Any application or user can still disable it using the VM property:
+        <b><span style="white-space: nowrap;">-Djdt.codeCompleteSubstringMatch=false</span></b>
+      </p>
+    </td>
+  </tr>
+  <!-- ****************** End of Preferences ************************************* -->
+
+</tbody>
+</table>
+<!-- ****************** END OF N&N TABLE ****************** -->
+
+<script type="text/javascript" src="scripts.js"></script>
+  <p style="text-align:center">
+    <a href="platform.php">Previous</a> <a style="margin:1em" href=".">Up</a> <a href="platform_isv.php">Next</a>
+  </p>
+</body>
+</html>

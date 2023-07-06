@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="default_style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse Project 4.4 M7 News</title>
+</head>
+<body>
+<h1>Eclipse Project 4.4 M7 - New and Noteworthy</h1>
+<p>Here are some of the more noteworthy things available in milestone build M7 
+  (May 2, 2014) which is now available for <a href="http://download.eclipse.org/eclipse/downloads/" target="_top">download</a>.
+  <br/>
+  We also recommend to read the Tips and Tricks, either via <b>Help &gt; Tips and Tricks...</b> or online for
+  <a href="http://help.eclipse.org/topic/org.eclipse.platform.doc.user/tips/platform_tips.html">Platform</a>,
+  <a href="http://help.eclipse.org/topic/org.eclipse.jdt.doc.user/tips/jdt_tips.html">JDT</a>, and
+  <a href="http://help.eclipse.org/topic/org.eclipse.pde.doc.user/tips/pde_tips.htm">PDE</a>.
+</p>
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#JDT">JDT</a></li>
+  <li><a href="#PDE">PDE</a></li>
+</ul>
+
+<table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
+
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+  
+  <tr id="darktheme-improments">
+    <td class="title">Improvements in the dark theme</td>
+    <td class="content">
+      <p>
+      The dark theme has been customized to work better on Window, Linux and Mac. 
+      </p>
+      <img src="images/darklinux.png" alt="Dark theme improvements"/>
+      <p>
+      The platform also supports that projects can extend existing themes like the dark theme with settings for fitting 
+      syntax coloring. See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=433475">bug 433475</a> for details.
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="ide-icons">
+    <td class="title">Platform icons converted to png files</td>
+    <td class="content">
+      Based on a community contribution, lots of of the existing GIF icons in the Eclipse platform have been replaced by PNG files. This makes Eclipse icons look better on a dark background, as
+      for example the toolbar on Mac OS X or on a dark theme.
+      <p><img src="images/iconupdate.png" alt="New platform icons"/></p>
+    </td>
+  </tr>
+  <tr id="os-ubuntu"> 
+    <td class="title">Ubuntu menu integration </td>
+    <td class="content">
+       In cooperation with Canonical, the Platform team worked on the support of Eclipse in Ubuntu 14.04. Ubuntu 14.04 supports the Eclipse 4 menu implementation, which had issues
+       in Ubuntu 13.04 and 13.10. For more details, see bugs <a href="https://bugs.launchpad.net/appmenu-gtk/+bug/613119">Eclipse menu does not render correctly in unity bar</a> and <a href="https://bugs.launchpad.net/ubuntu/+source/unity-gtk-module/+bug/1208019">Eclipse menus doesn't show up in Saucy</a>.
+    </td>
+  </tr>
+  <tr id="appmodel-perspective"> 
+    <td class="title">Model dynamics - perspectives</td>
+    <td class="content">
+        The renderer of the application model supports now that the icons of perspectives are exchanged at runtime. Such a change is immediately reflected in the user interface.
+    </td>
+  </tr>
+  <tr id="eclipse-api"> 
+    <td class="title">EMenuService released as API</td>
+    <td class="content">
+        The <code>EMenuService</code> service has been released as API. RCP clients must adjust their package imports to <code>org.eclipse.e4.ui.services</code>.  
+    </td>
+  </tr>
+  <tr id="osgi-integration"> 
+    <td class="title">Improved OSGi integration</td>
+    <td class="content">
+        Eclipse implementations can retrieve the OSGI <code>BundleContext</code> via an extended object supplier and the <code>@Inject @OSGiBundle</code> annotations. 
+    </td>
+  </tr>
+  <tr id="code-cleanup"> 
+    <td class="title">Platform code improvements</td>
+    <td class="content">
+       During the last milestones, the platform team has invested in cleaning up the existing codes basis to simplify contributions by new and existing contributors. 
+       For more details, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=420779">bug 420779</a>.
+       During this update, several plug-ins have been upgraded to require Java 1.6 instead of Java 1.4 or Java 1.5.
+    </td>
+  </tr>
+
+  <tr id="java7-filesystem-fragment">
+    <td class="title">New filesystem fragment for Java 7 API</td>
+    <td class="content">
+      A new filesystem fragment supporting Java 7 file API has been added. The
+      new fragment named <code>org.eclipse.core.filesystem.java7</code> allows
+      to retrieve information about files like attributes, file length,
+      permissions, etc. on operating systems that already have JRE supporting
+      Java 7 API but don't have any native Eclipse filesystem fragment. There are three
+      different types of filesystems supported:
+      <ul>
+        <li>DOS/Windows filesystems,</li>
+        <li>POSIX compliant filesystems, and</li>
+        <li>filesystems that are neither DOS/Windows nor POSIX compliant.</li>
+      </ul>
+      The new fragment will be loaded and used automatically when you run
+      Eclipse with JRE 7 or newer and no native filesystem fragment applicable
+      for your operating system can be found.
+    </td>
+  </tr>
+  <tr id="styledtext-bidi">
+    <td class="title">Set text direction for the <code>StyledText</code> widget on Windows</td>
+    <td class="content">
+      The <code>StyledText</code> widget now supports setting the text direction via the 
+      <code>setTextDirection(int)</code> API on the Windows platform. The <code>setTextDirection 
+      (int)</code> and <code>getTextDirection ()</code> APIs are also added to <code>TextLayout</code> 
+      (implemented only on Windows currently).
+    </td>
+  </tr>
+  <tr id="windows-taskbar-grouping">
+    <td class="title">SWT applications will not be grouped together in the Windows taskbar by default</td>
+    <td class="content">
+      SWT does not initialize the <b>AppUserModelID</b> (which is used by Windows for taskbar grouping) 
+      to "SWT" by default anymore. SWT applications which desire to be grouped together in the
+      Windows taskbar should set an appropriate application name before creating the
+      <code>Display</code> object as shown below:
+      <pre>
+Display.setAppName("APP_NAME"); // APP_NAME will used as AppUserModelID
+Display display = new Display();</pre> 
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+
+  <tr id="java-8">
+    <td class="title">Java 8</td>
+    <td class="content">
+      <a href="http://docs.oracle.com/javase/8/">Java&trade; 8</a> is here, and JDT fully supports it:
+		<ul>
+			<li>The Eclipse compiler for Java (ECJ) implements all the new Java 8 <a href="http://docs.oracle.com/javase/8/docs/technotes/guides/language/enhancements.html">language enhancements</a></li>
+			<li>Updated significant features to support Java 8, such as Search and Refactoring</li>
+			<li>New formatter options for lambdas</li>
+			<li>Quick Assist and Clean Up to migrate anonymous class creations to lambda expressions and back:
+				<p>Before:</p>
+				<p><img src="images/convert-to-lambda-1.png" alt="anonymous class with a 1-line method body"/></p>
+				<p>After the Quick Assist (<b>Ctrl+1</b>), the 6 lines are condensed into 1:</p>
+				<p><img src="images/convert-to-lambda-2.png" alt="lambda expression -- everything on 1 line"/></p>
+			</li>
+		</ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
+
+  <tr id="ApiToolsJava8"> 
+    <td class="title">Java 8 support for API Tools complete</td>
+    <td class="content">
+       API Tools now has full support for Java 8.  This includes illegal use, binary comparisons, restriction validation (for both
+       javadoc tags and annotations), and completion proposals.  Support has been added for the following code structures:
+       <ul>
+       <li>Default Methods</li>
+       <li>Type Annotations</li>
+       <li>Lambda Expressions</li>
+       <li>Method References</li>
+       </ul>
+       <p>There is also a new <b>JavaSE-1.8</b> execution environment fragment available. Update the <b>API Tools Execution 
+       Environment Descriptions</b> feature.  API tools now uses the 5.0.1 release of ASM to read Java 8 class files.</p>
+    </td>       
+  </tr>
+  <tr id="product-add-update-sites"> 
+    <td class="title">Product can add p2 update sites</td>
+    <td class="content">
+      A new page has been added to the <b>Product Editor</b> where you can add p2 repository update sites.  When your product
+      is exported, the list of update sites will be added to the repository list that p2 uses to check for updates.  You can
+      set a site as disabled to have it visible on the <b>Install/Update > Available Software Sites</b> preference page, but it
+      will not be used during install/update operations unless the user enables it first.
+      <p>
+      <img src="images/updatePage.png" alt="Update page in the product editor"/>
+      </p>
+    </td>
+  </tr>
+  <tr id="product-custom-start-levels"> 
+    <td class="title">Product can define custom default start levels</td>
+    <td class="content">
+      On the <b>Configuration</b> page of the <b>Product Editor</b>, there is a new button: <b>Add Recommended...</b>.  When pressed,
+      a dialog will open offering to add a list of recommended custom start levels to your product definition. This is helpful
+      for new product developers as they may not be aware that some plug-ins require custom start levels to function correctly. The 
+      operation will not overwrite any existing custom start levels you have set previously. 
+      <p>
+      <img src="images/startLevels.png" alt="Product editor start levels with add recommended button"/>
+      </p>
+      <p>
+      This is the list of recommended start levels currently provided:
+      </p>
+<pre>org.eclipse.core.runtime@start
+org.eclipse.equinox.common@2:start
+org.eclipse.equinox.ds@2:start
+org.eclipse.equinox.event@2:start
+org.eclipse.equinox.simpleconfigurator@1:start
+org.eclipse.equinox.p2.reconciler.dropins@start</pre>
+    </td>
+  </tr>
+  <tr id="pdeNoUnboundEE"> 
+    <td class="title">Launch configurations don't select unbound execution environment</td>
+    <td class="content">
+       When creating a new launch configuration, PDE examines the list of plug-ins to be launched and selects the lowest
+       execution environment (EE) that supports each plug-in's required EE.  However, this could lead to selecting an EE
+       that no installed JRE matches.  With no bound JRE, launching with that execution environment would always fail. 
+       Now, when choosing an execution environment, any plug-in that requires an unbound EE will be ignored.
+    </td>
+  </tr>
+  <tr id="pdeDeprecatedExtensions"> 
+    <td class="title">Plug-in editor indicates deprecated extension elements</td>
+    <td class="content">
+       When editing the extensions of a plug-in, you now have a visual indication that an extension element or attribute
+       has been deprecated.
+       <ul>
+         <li>Icons in the tree are marked with a warning decoration:
+         <p><img src="images/deprecatedExtension1.png" alt="Deprecated extension in tree"/></p>
+         </li>
+         <li>Menu items are marked with <i>(deprecated)</i>:
+         <p><img src="images/deprecatedExtension2.png" alt="Deprecated extension in menu"/></p>
+         </li>
+         <li>Details of elements include deprecation information and deprecated attributes are marked with <i>(!)</i>:
+         <p><img src="images/deprecatedExtension3.png" alt="Deprecated extension in details"/></p>
+         </li>
+       </ul>
+    </td>
+  </tr>
+  <tr id="pdeNewIcons"> 
+    <td class="title">New eclipse launcher icons</td>
+    <td class="content">
+       PDE has a new set of icons used in preference pages, launch configurations and editors.  These new icons match the new platform icons.
+       <p><img src="images/pdeIcons.png" alt="New PDE launcher icons"/></p>
+    </td>
+  </tr>
+  <tr id="pdeBuildConfigurator"> 
+    <td class="title">PDE Build depends on org.eclipse.update.configurator</td>
+    <td class="content">
+       PDE Build now has a non-optional dependency on <code>org.eclipse.update.configurator [3.1.0,4.0.0)</code>.  Functionality
+       from that bundle is required by PDE Build and previously was added via an optional dependency on <code>org.eclipse.core.runtime.compatibility</code>.
+       If this optional dependency was missing, PDE Build or PDE UI operations could fail with cryptic errors.
+    </td>
+  </tr>
+
+  <tr> 
+    <td colspan="2">  </td>
+  </tr>
+</table>
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Luna milestone builds:</p>
+<ul>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M6-201403061200/news/">New for Eclipse Luna milestone build M6 (March 14, 2014)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M5-201401231600/news/">New for Eclipse Luna milestone build M5 (January 24, 2014)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M4-201312121600/news/">New for Eclipse Luna milestone build M4 (December 13, 2013)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M3-201310302000/news/">New for Eclipse Luna milestone build M3 (November 1, 2013)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M2-201309182000/news/">New for Eclipse Luna milestone build M2 (September 20, 2013)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M1-201308072000/news/">New for Eclipse Luna milestone build M1 (August 9, 2013)</a></li>
+</ul>
+</body>
+</html>

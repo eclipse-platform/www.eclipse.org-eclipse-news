@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2018, 2019. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" type="text/css"/>
+<style type="text/css">
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+/*img {max-width: 520px;}*/
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+ul {padding-left: 13px;}
+</style>
+<title>Eclipse Project 4.19 - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Platform and Equinox API</h2>
+  <ul>
+    <li><a href="#Platform">Platform Changes</a></li>
+    <li><a href="#SWT">SWT Changes</a></li>
+  </ul>
+
+<!-- ****************** START OF N&N TABLE****************** -->
+<table class="news">
+<colgroup>
+  <col class="title" />
+  <col />
+</colgroup>
+<tbody>
+  <!-- ******************** Platform ********************** -->
+  <tr>
+    <td id="Platform" class="section" colspan="2"><h2>Platform Changes</h2></td>
+  </tr>
+
+  <tr id="improved-contentassist"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=508821 -->
+    <td class="title">Content-assist contributor allows more flexible control of completion triggers</td>
+    <td class="content">
+      <code>IContentAssistProcessor</code> has a new extension interface <code>IContentAssistProcessorExtension</code> that allows to get context information for activation computation: 
+      <ul>
+      <li><code>IContentAssistProcessorExtension.isCompletionProposalAutoActivation(char, ITextViewer, int)</code></li>
+      <li><code>IContentAssistProcessorExtension.isContextInformationAutoActivation(char, ITextViewer, int)</code></li>
+      </ul>
+      <p>
+       This allows for example to compute the activation chars based on the location or properties/content of the document.
+      </p>
+    </td>
+  </tr>
+
+  <tr id="generic-editor-completion-osgi-service"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=570459 -->
+    <td class="title">Contribute to content-assist for Generic Editor with OSGi services</td>
+    <td class="content">
+      Assitionally to usual extension-point, you can now also contribute to the Generic Editor content-assist
+      by registering some <code>IContentAssistProcessor</code> as OSGi service.
+    </td>
+  </tr>
+
+  <tr id="marker-create-api"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=570914 -->
+    <td class="title">API for Atomic IMarker creation with attributes</td>
+    <td class="content">
+     The <code>IResource.createMarker(type, attribute)</code> API has been created to allow atomic creation of markers.
+     Using this new API should be preferred, as this reduces the resource change notifications and is in general 2x faster as two separate calls to create marker and set attributes on it.
+    </td>
+  </tr>
+  
+  <tr id="clean-with-args"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=552606 -->
+    <td class="title">IncrementalProjectBuilder can optionally implement new clean with arguments method</td>
+    <td class="content">
+      The <code>IncrementalProjectBuilder</code> API can optionally be extended by clients implementing the new <code>IIncrementalProjectBuilder2</code> interface. It provides
+      a new <code>clean(Map&lt;String, String&gt;, IProgressMonitor)</code> method that will be called instead of the existing <code>clean(IProgressMonitor)</code>.
+      The new <code>clean</code> method passes the map of arguments from <code>IWorkspace.build()</code> or <code>IProject.build()</code> to the client for <code>clean</code> in the same way that it is done for the
+      <code>build</code> method.
+    </td>
+  </tr>
+  
+  <tr id="icu-e4-feature"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569421 -->
+   <td class="title"><a href="#icu-e4-feature">Moved com.ibm.icu from org.eclipse.e4.rcp to org.eclipse.rcp feature</a></td>
+    <td class="content">
+      As the usage of the <b>com.ibm.icu</b> plug-in is planned to be removed from the platform, it has been removed from the <b>org.eclipse.e4.rcp</b> feature as e4 RCP applications do not require it since the 4.18 release.
+      It has been added to the <b>org.eclipse.rcp</b> features for now to ensure e3 applications which may use it and the Eclipse IDE to work correctly.
+      If your e4 RCP application uses it, you can include it in your custom feature.
+    </td>
+  </tr>
+  <!-- ******************** End of Platform ********************** -->
+
+  <!-- *********************** SWT *********************** -->
+  <tr>
+    <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
+  </tr>
+  <tr id="resource-disposal-tracking"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=569752 -->
+   <td class="title"><a href="#resource-disposal-tracking">API for Resource disposal tracking</a></td>
+    <td class="content">
+      New <code>org.eclipse.swt.graphics.Resource.setNonDisposeHandler</code> API
+      is added which allows to track SWT resources that were not properly disposed.
+      The API accepts a custom <code>Consumer&lt;Error></code> callback to
+      receive detected errors.
+      <p>
+        Alternatively, <code>org.eclipse.swt.graphics.Resource.reportNonDisposed</code>
+        system property can be set to <code>true</code>. In this case, SWT will report
+        these errors to <code>stderr</code> without the need to modify application's
+        code.
+      </p>
+    </td>
+  </tr>
+  <tr id="shell-set-maximum-size"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=74001 -->
+    <td class="title"><a href="#shell-set-maximum-size">API for Shell maximum size</a></td>
+    <td class="content">
+      You can now specify the maximum size of the SWT <code>Shell</code>. The Shell will not be resizable to a larger width or height than that specified.
+      <ul>
+      <li>Use <code>setMaximumSize(width, height)</code> or <code>setMaximumSize(point)</code> to specify a maximum size for your shell. 
+       The shell will be resized if it's currently larger than the specified size.</li>
+      <li>Use <code>getMaximumSize()</code> to query the currently set maximum size.</li>
+      </ul>
+      <p>
+       Note that the result of combining maximum size with full screen mode is platform specific and generally not recommended.
+      </p>
+    </td>
+  </tr>
+  <tr id="browser-edge"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=538991 -->
+    <td class="title">Edge back-end support for Browser</td>
+    <td class="content">
+      On Windows, the <code>Browser</code> widget supports a new back-end based on the WebView2 component (Microsoft Edge).
+      Use the <code>SWT.EDGE</code> style constant to enable it.
+      <p>
+        Note that this integration is experimental and not a drop-in replacement for the older Internet Explorer back-end.
+        There are missing features and significant differences in behavior.
+        There are some known issues when running Eclipse IDE with Edge as the default browser.
+      </p>
+      <p>
+        For additional information, see SWT FAQ entries
+        <a href="https://www.eclipse.org/swt/faq.php#howuseedge">How do I explicitly use Edge as the Browser's underlying renderer</a> and
+        <a href="https://www.eclipse.org/swt/faq.php#edgelimitations">What are the limitations of Edge Browser renderer</a>.
+      </p>
+    </td>
+  </tr>
+  <tr id="mac-arm64"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=565690 -->
+    <td class="title">SWT support for Mac Arm64</td>
+    <td class="content">
+      The SWT libraries for Mac Arm64 (AArch64) architecture are available for testing. It's marked as Early access due to limited testing.
+      Please note that a Arm64 JVM is required to run it.
+      <p>
+       Eclipse and SWT for Mac x86_64 architecture can already run on Apple Silicon hardware under Rosetta translation mode using a x86_64 JVM.
+      </p>
+    </td>
+  </tr>
+  <!-- *********************** End of SWT *********************** -->
+
+</tbody>
+</table>
+<!-- ****************** END OF N&N TABLE ****************** -->
+
+<script type="text/javascript" src="scripts.js"></script>
+  <p style="text-align:center">
+    <a href="jdt.php">Previous</a> <a style="margin:1em" href=".">Up</a> <a href="pde.php">Next</a>
+  </p>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2020. This page is made available under license. For full details, see the LEGAL section in the documentation that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" type="text/css"/>
+<style type="text/css">
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+/*img {max-width: 520px;}*/
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+ul {padding-left: 13px;}
+</style>
+<title>Eclipse Project 4.17 - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Platform and Equinox</h2>
+<ul>
+    <li><a href="#ViewsAndDialogs">Views, Dialogs and Toolbar</a></li>
+    <li><a href="#TextEditors">Text Editors</a></li>
+    <!--li><a href="#Preferences">Preferences</a></li-->
+    <li><a href="#StylingThemes">Themes and Styling</a></li>
+    <li><a href="#Debug">Debug</a></li>
+    <li><a href="#GeneralUpdates">General Updates</a></li>
+</ul>
+
+<!-- ****************** START OF N&N TABLE ****************** -->
+<table class="news">
+<colgroup>
+  <col class="title" />
+  <col />
+</colgroup>
+<tbody>
+  <!-- ******************* Views, Dialogs and Toolbar ************************************* -->
+  <tr>
+    <td id="ViewsAndDialogs" class="section" colspan="2">
+    <h2>Views, Dialogs and Toolbar </h2>
+    </td>
+  </tr>
+
+   <tr id="adjustable-view-fonts"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=540299 -->
+    <td class="title"><a href="#adjustable-view-fonts">Adjustable view fonts</a></td>
+    <td class="content">
+     The font used for tree and table views can now be customized with a font preference.
+	 This preference is called "Tree and Table font for views" and can be found in Window &gt; Preferences &gt; General &gt; Appearance &gt; Colors and Fonts under the "View and Editor Folders" category.
+	 <p>
+        <img src="images/adjustable-view-font-preference.png" alt="" />
+     </p>
+	
+	The Project Explorer is an example of a view that gets affected by this font preference.
+	<p>
+		<img src="images/adjustable-view-font.png" alt=""/> 
+	</p>
+    </td>
+   </tr>
+
+   <tr id="remove-gifs"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=550832 -->
+    <td class="title"><a href="#remove-gifs">Remove gifs from views</a></td>
+    <td class="content">
+     Several years ago, the icons of the platform views were migrated to .png files.
+     As already opened views store their reference to the image, the .gif files were left in the code.
+     These have been removed now. If you are using the same workspace for multiple years and view icons are missing due to that removal, you have to close and reopen the view.
+    </td>
+   </tr>
+   <tr id="confirm-on-exit"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=564618 -->
+    <td class="title"><a href="#confirm-on-exit">Default changed for confirm on exit for last window</a></td>
+    <td class="content">
+	 By default, Eclipse now closes if you select the close icon on the last window  without additional confirmation dialog.
+	 If you want to get a confirmation dialog, you can enable that via Window &gt; Preferences &gt; General &gt; Startup and Shutdown &gt; Confirm exit when closing last window.
+    </td>
+   </tr>
+   
+   <tr id="workspace-migration"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=565948, https://bugs.eclipse.org/bugs/show_bug.cgi?id=566049 -->
+    <td class="title"><a href="#workspace-migration">Workbench models created in releases before 2014 are not automatically converted</a></td>
+    <td class="content">
+ 		Workbench models (workbench.xmi) stored in workspaces created with releases before 2014 and never opened with a later release are not automatically converted anymore if opened with the 2020-09 release.
+   	</td>
+   </tr>
+
+  <!-- ******************* End of Views, Dialogs and Toolbar ************************************* -->
+
+  <!-- ******************* Text Editors ************************************* -->
+  <tr>
+    <td id="TextEditors" class="section" colspan="2">
+    <h2>Text Editors </h2>
+    </td>
+  </tr>
+
+  <tr id="multiple-last-edit-locations"><!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=72773 -->
+    <td class="title"><a href="#multiple-last-edit-locations">Multiple Last Edit Locations</a></td>
+    <td class="content">
+      <b>Previous Edit Location</b> navigation (formerly named Last Edit Location) is now expanded to remember multiple edit locations.  
+    <p>
+      The last 15 edit locations are now remembered.  For convenience, similar edit locations in close proximity to each other are also merged so that each of the 15 remembered locations remains distinct.
+    </p>
+      <p>
+        <img src="images/multiple-last-edit-locations.png" alt="new menu item: Previous Edit Location" />
+      </p>
+   
+      <h4>How to use</h4>
+      <p>Two new keyboard shortcuts are introduced:</p>
+      <ul>
+        <li>
+      <b>Ctrl+Alt+LEFT_ARROW</b> (or on Mac <b>Ctrl+Opt+LEFT_ARROW</b>) navigates to the most recent edit location, just as <b>Ctrl+Q</b> always has in prior releases.
+      <p>
+        However, now continuing to hold <b>Ctrl+Alt</b> and then pressing <b>LEFT_ARROW</b> again begins a traversal through the history of prior edit locations, with each additional press of <b>LEFT_ARROW</b> moving a step further back in history.  
+        Once traversal stops, future <b>Ctrl+Alt+LEFT_ARROW</b> actions are now temporarily anchored to this older historical location for easy exploration of that code region.
+      </p>
+      <p>
+        The classic <b>Ctrl+Q</b> mapping has been likewise enhanced with this new functionality, so that <b>Ctrl+Q</b> and <b>Ctrl+Alt+LEFT_ARROW</b> are synonymous.
+      </p>
+    </li>
+    <li>
+      <b>Ctrl+Alt+RIGHT_ARROW</b> (or on Mac <b>Ctrl+Opt+RIGHT_ARROW</b>) conversely moves the anchor <i>forward</i> through edit history, so after traversing backward with <b>Ctrl+Alt+LEFT_ARROW</b>, you can go forward again by holding <b>Ctrl+Alt</b> and repeatedly pressing <b>RIGHT_ARROW</b>.  
+      A new menu item has likewise been added for this forward navigation as well.
+    </li>
+    </ul>
+
+      <p>
+        New edit locations are always inserted at the end, so original historical ordering is always maintained.  
+        New edits also reset the last location "anchor" back to the most recent edit, so that pressing <b>Ctrl+Alt+LEFT_ARROW</b> once again brings you to the most recent edit rather than a historical one.
+      </p>
+    </td>
+  </tr>
+
+   <tr id="print-header-date"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=533429 -->
+    <td class="title"><a href="#print-header-date">Printing editor content adds date in header</a></td>
+    <td class="content">
+	 Printing editor content now includes the current date in addition to the filename in the header of each printed page.
+     <p>
+       <img src="images/print-header-date.png" alt="" />
+     </p>
+    </td>
+   </tr>
+  <!-- ******************* End of Text Editors ************************************* -->
+
+  <!-- ****************** Preferences ************************************* -->
+  <!--tr>
+    <td id="Preferences" class="section" colspan="2">
+    <h2>Preferences </h2>
+    </td>
+  </tr-->
+  <!-- ****************** End of Preferences ************************************* -->
+
+  <!-- ******************* Themes and Styling ************************************* -->
+  <tr>
+    <td id="StylingThemes" class="section" colspan="2">
+    <h2>Themes and Styling </h2>
+    </td>
+  </tr>
+
+  <tr id="gtk-light-theme"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=563403 -->
+    <td class="title"><a href="#gtk-light-theme">Improved GTK light theme</a></td>
+    <td class="content">
+      The GTK light theme has been updated to align better with the default GTK3 Adwaita theme.
+      <p>
+        Old:
+      </p>
+      <p>
+        <img src="images/gtk-light-old.png" alt="" />
+      </p>
+      <p>
+        New:
+      </p>
+      <p>
+        <img src="images/gtk-light-new.png" alt="" />
+      </p>
+    </td>
+  </tr>
+  
+   <tr id="dark-win32-menu"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=562454 -->
+    <td class="title"><a href="#dark-win32-menu">Windows menus are styled in the dark theme</a></td>
+    <td class="content">
+      SWT now natively styles the menu under Windows in the dark theme.
+      <p>
+        Old:
+      </p>
+      <p>
+        <img src="images/menu-background-old.png" alt="" />
+      </p>
+      <p>
+        New:
+      </p>
+      <p>
+        <img src="images/menu-background-dark.png" alt="" />
+      </p>
+    </td>
+  </tr>
+  
+   <tr id="dark-win32-combo"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=562454 -->
+    <td class="title"><a href="#dark-win32-combo">Dropbox boxes (Combos) are styled under Windows in the dark theme</a></td>
+    <td class="content">
+      SWT now natively styles drop-down boxes under Windows in the dark theme.
+      <p>
+        Old:
+      </p>
+      <p>
+        <img src="images/combo-win32-dark-old.png" alt="" />
+      </p>
+      <p>
+        New:
+      </p>
+      <p>
+        <img src="images/combo-win32-dark-new.png" alt="" />
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="dark-selection-highlighter"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=563496 -->
+    <td class="title"><a href="#dark-selection-highlighter">Selection highlighter for dark theme</a></td>
+    <td class="content">
+      The active tab selection highlighter has been enabled for Eclipse's default dark themes. This will help users identify which tab is active at a glance.
+      <p>
+        <img src="images/dark-selection-highlighter.png" alt="" />
+      </p>
+    </td>
+  </tr>
+
+
+  <tr id="dark-selection-win32-highlighter"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=562043 -->
+    <td class="title"><a href="#dark-selection-win32-highlighter">Selection highlighter for tables under Windows in the dark theme</a></td>
+    <td class="content">
+      SWT now natively supports selection highlighter in tables under Windows in the dark theme.
+      <p>
+        <img src="images/selection-highlight.png" alt="" />
+      </p>
+    </td>
+  </tr>
+  <!-- ******************* End of Themes and Styling ************************************* -->
+  
+  <!-- ****************** Debug ************************************* -->
+  <tr>
+    <td id="Debug" class="section" colspan="2">
+    <h2>Debug </h2>
+    </td>
+  </tr>
+
+  <tr id="console-null-byte"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=306131 -->
+    <td class="title"><a href="#console-null-byte">Filter null bytes from console output</a></td>
+    <td class="content">
+      The interpretation of ASCII control characters in the <b>Console View</b> was extended to recognize the characters: <abbr title="ASCII code 0x00"><code>\0</code></abbr> - null byte.
+      If interpretation is enabled, any null byte will be stripped and not shown in console view. This is most relevant for the Linux platform where a null byte in console view 
+      causes anything after it on the same line to be not rendered.
+      <p>
+        This feature is disabled by default. You can enable it on the <b>Run/Debug &gt; Console</b> preference page.
+      </p>
+    </td>
+  </tr>
+
+  <!-- ****************** End of Debug ************************************* -->
+
+  <!-- ******************* General Updates ************************************* -->
+  <tr>
+    <td id="GeneralUpdates" class="section" colspan="2">
+    <h2>General Updates </h2>
+    </td>
+  </tr>
+  <tr id="arm64"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=565419 -->
+    <td class="title"><a href="#arm64">Builds for Linux AArch64 (aka Arm64) added</a></td>
+    <td class="content">
+      Binaries for Linux AArch64 (Arm64) are available for testing. With the raising popularity of this architecture people can continue using the Eclipse IDE even when changing their machine.
+    </td>
+  </tr>
+  <!-- ******************* End of General Updates ************************************* -->
+</tbody>
+</table>
+<!-- ****************** END OF N&N TABLE ****************** -->
+
+<script type="text/javascript" src="scripts.js"></script>
+  <p style="text-align:center">
+    <span style="color:#808080">Previous</span> <a style="margin:1em" href=".">Up</a> <a href="jdt.php">Next</a>
+  </p>
+</body>
+</html>

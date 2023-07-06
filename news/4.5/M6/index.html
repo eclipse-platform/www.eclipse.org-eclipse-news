@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="default_style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse Project 4.5 M6 News</title>
+</head>
+<body>
+<h1>Eclipse Project 4.5 M6 - New and Noteworthy</h1>
+<p>Here are some of the more noteworthy things available in the Mars milestone build M6 (2015-03-20)
+  which is now available for <a href="http://download.eclipse.org/eclipse/downloads/#4.5_Stable_Build" target="_top">download</a>.
+  <br/>
+  We also recommend to read the Tips and Tricks, either via <b>Help &gt; Tips and Tricks...</b> or online for
+  <a href="http://help.eclipse.org/topic/org.eclipse.platform.doc.user/tips/platform_tips.html">Platform</a>,
+  <a href="http://help.eclipse.org/topic/org.eclipse.jdt.doc.user/tips/jdt_tips.html">JDT</a>, and
+  <a href="http://help.eclipse.org/topic/org.eclipse.pde.doc.user/tips/pde_tips.htm">PDE</a>.
+</p>
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#JDT">JDT</a></li>
+  <li><a href="#Equinox">Equinox</a></li>
+</ul>
+
+<table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
+
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+
+  <tr id="macapp">
+    <td class="title">Mac OS X distribution now an Application Bundle</td>
+    <td class="content">
+      For Mars M6, the Eclipse SDK for OS X is now distributed in a more standard "Mac App" format, 
+      instead of the "directory format" we have used in the past. See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=431116">bug 431116</a> 
+      for background, current status, and pointers to remaining work planned.
+      <p id="updatecaution"><strong>CAUTION:</strong> Current Mac users can <strong>not use "update"</strong> to Mars M6. In fact, 
+      for M6, <strong>doing so will break your installation!</strong> You need to start with a fresh download.
+      </p>
+      <p>In the event that 
+      you updated before reading this, and have ended up with a broken installation, see
+      <a href="https://wiki.eclipse.org/Platform-releng/Issues_related_to_Mac_App_installations">Issues related to Mac App installations</a>
+      for the steps to recover your installation, after getting a fresh download.</p>
+    </td>
+  </tr>
+  
+  <tr id="default_heap_size">
+    <td class="title">Default max heap size increased to 1024 MB</td>
+    <td class="content">
+       To improve the "out of the box" user experience on today's modern hardware,
+       the default maximum heap size (-Xmx VM argument) has been increased from 512M to 1024M.
+       And the initial heap size (-Xms) has been increased from 40M to 256M.
+    </td>
+  </tr>
+
+  <tr id="close-tabs-menus">
+    <td class="title">Close Tabs to the Left/Right</td>
+    <td class="content">
+      The context menu of editor and view tabs now offer <b>Close Tabs to the Left</b> and <b>Close Tabs to the Right</b> menu.
+      <p>
+        <img src="images/close-tabs-menus.png" alt="" />
+      </p>
+     </td>
+  </tr>
+
+  <tr id="print-button-hidden">
+    <td class="title">Print button hidden by default</td>
+    <td class="content">
+      The <b>Print</b> button on the main toolbar is now hidden by default.
+      <p>The button can be added back to the toolbar via the <b>Customize Perspective</b> dialog.
+      To open this dialog, right-click on the current perspective button and select the <b>Customize...</b> menu item.
+      </p>
+      <p>
+      In the <b>Tool Bar Visibility</b> tab, expand <b>File</b>, select <b>Print</b>, and click <b>OK</b>.
+      </p>
+      <p>
+        <img src="images/show-print-button.png" alt="" />
+      </p>
+     </td>
+  </tr>
+
+  <tr id="mru-tabs">
+    <td class="title">"Visible tabs shown on overflow" behavior decoupled from appearance theme</td>
+    <td class="content">
+      In Eclipse 4.2, the non-"Classic" themes introduced a new strategy to select the editor tabs shown
+      when there's not enough screen space to show all tabs. The new strategy shows a sliding
+      window of tabs in their original opening sequence, cutting off tabs at the beginning and/or end of
+      the full sequence.
+      
+      <p>In classic versions of Eclipse (before 4.2, and later with a "Classic" theme), the strategy
+      was to show the most recently used tabs (MRU), i.e. the "working set" of tabs you're currently using.
+      </p>
+      
+      <p>The coupling of behavior with styling (themes) was found to be problematic, and the
+      tab visibility has has been turned into a separate preference. See
+      <b>Preferences &gt; General &gt; Appearance &gt; Show most recently used tabs</b>.
+      </p>
+      
+      <p>
+        <img src="images/mru-preference.png" alt="" />
+      </p>
+      
+      <p>
+      By default, the option is <b>disabled</b>. Users of a "Classic" theme need to enable it manually
+      to keep the behavior they're used to.
+      </p>
+      
+      <p>
+      Plugin developers and Eclipse product owners can change via preferences whether
+      the CSS theme or a user preference should control this option, and
+      whether MRU should be enabled by default. The preferences are for the
+      "org.eclipse.e4.ui.workbench.renderers.swt" plug-in, and the keys are:
+      </p>
+      <ul>
+      <li>
+      "MRUControlledByCSS" (default is "false"),
+      </li>
+      <li>
+      "enableMRUDefault" (default is "false"),
+      </li>
+      <li>"enableMRU" (default is "false").
+      </li>
+      </ul>
+    </td>
+  </tr>
+
+  <tr id="AbstractSelectionDialog">
+    <td class="title">New API: AbstractSelectionDialog</td>
+    <td class="content">
+      <code>org.eclipse.jface.dialogs.AbstractSelectionDialog</code> is an enhanced version of the existing
+      <code>org.eclipse.ui.dialogs.SelectionDialog</code>.
+      It has been added to the org.eclipse.jface bundle, where it is also available for Eclipse 4 RCP applications.
+      
+      <p>The AbstractSelectionDialog API supports generics and varargs.
+      </p>
+     </td>
+  </tr>
+
+  <tr id="css-transparency">
+    <td class="title">CSS support for new COLOR-TRANSPARENT constant</td>
+    <td class="content">
+      The CSS engine now supports the COLOR-TRANSPARENT property. The implementation uses SWT's new SWT#COLOR_TRANSPARENT pseudo-color.
+      COLOR-TRANSPARENT allowed to simplify the dark theme significantly.
+      <!-- TODO: Could add a link to an API description, but not to a bug. -->
+    </td>
+  </tr>
+
+  <tr id="high-dpi">
+    <td class="title">APIs for high-DPI monitor support</td>
+    <td class="content">
+      New APIs have been added to provide support for rendering high-resolution images on high-DPI monitors.
+      <p>
+      Two constructors have been added to the <code>Image</code> class. They accept
+      image-provider callbacks that allow clients to supply resolution-dependent versions
+      of images:
+      </p>
+      <pre>public interface ImageDataProvider {
+	public ImageData getImageData (int zoom);
+}
+public interface ImageFileNameProvider {
+	public String getImagePath (int zoom);
+}</pre>
+      
+      <p>
+      Depending on the user's monitor configuration, SWT will request images with the
+      corresponding zoom level. Here's an example that displays 3 original images,
+      followed by variants whose resolution changes depending your monitor's resolution:
+      <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/plain/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet367.java">Snippet367.java</a>.
+      </p>
+      
+      <p>
+      Note that this is just the first step to support high-resolution images in
+      SWT and Eclipse-based applications. Work is underway to adopt the new APIs in
+      the platform. Furthermore, more work in SWT is required to properly
+      support drawing into high-resolution images via <code>GC</code>.
+      </p>
+  	</td>
+  </tr>
+  
+  <tr id="evaluate">
+    <td class="title">API to choose security context in Browser#evaluate()</td>
+    <td class="content">
+		A new API <code>Browser#evaluate(String script, boolean trusted)</code> has been added that allows the client to run
+		Javascript code in the Chrome security context or in the normal security context for <code>SWT.MOZILLA</code>
+		style browsers.
+	</td>
+  </tr>
+
+
+  <tr>
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+  <tr id="hotkey-skip-all-breakpoints">
+    <td class="title">Shortcut for Skip All Breakpoints</td>
+    <td class="content">
+  		<b>Ctrl+Alt+B</b> has been added as the shortcut for <b>Skip All Breakpoints</b>.
+  		<p>
+        <img src="images/skip-all-breakpoints.png" alt=""/>
+        </p>
+    </td>
+   </tr>
+   
+  <tr id="ecj-requries-17">
+    <td class="title">ECJ requires 1.7 Java runtime</td>
+    <td class="content">
+  		JDT Core projects are now compiled at 1.7 compliance level. As a result, a Java Runtime of
+  		1.7 or above is required to run the Eclipse compiler.
+    </td>
+  </tr>
+  
+  <tr id="external-annotations">
+    <td class="title">External annotations</td>
+    <td class="content">
+      Annotation-based null analysis can now leverage externally defined annotations that are attached to a library.
+      <p>
+      	Previously, annotation-based null analysis was significantly limited by the fact
+      	that many 3<sup>rd</sup> party libraries have no null annotations in their API.
+      	This implied that any errors caused at this interface could not be detected by the analysis,
+      	and even worse, implementors of library-defined interfaces could not use any intended contracts,
+      	because any null annotations in overriding methods were flagged as incompatible with the super version.
+      </p>
+      <p>
+      	JDT now supports the concept of "external annotations".
+      	A user can specify null annotations in separate files and attach these to a given library.
+      	The compiler will take external null annotations into consideration for its null analysis.
+      </p>
+      <p><strong>Configuration:</strong></p>
+      <p><img src="images/external-annotation-configuration.png" title="Preferences &gt; Java &gt; Installed JREs &gt; Edit" alt="Preferences &gt; Java &gt; Installed JREs &gt; Edit"/></p>
+      <p>External annotations can be provided as a directory tree of individual text files or as a zip file.
+      	External annotations can be attached to a JRE (per workspace) and to arbitrary libraries (per project).
+      </p>
+      <ul>
+      <li>See below for creating external annotations using the new command <b>Annotate</b></li>
+      <li>See <a href="https://wiki.eclipse.org/JDT_Core/Null_Analysis/External_Annotations">the wiki</a> for the full story.</li>
+      </ul>
+    </td>
+  </tr>
+  
+  <tr id="annotate-command">
+    <td class="title">Annotate command</td>
+    <td class="content">
+      A new command <b>Annotate</b> is provided when browsing attached source code of a library using the class file editor.
+      <p>
+      	Two pre-requisites must be met for using this command:
+      </p>
+      <ul>
+     	<li>The project is configured to use annotation-based null analysis.</li>
+     	<li>An existing workspace folder has been specified as the external annotation location for a given library.</li>
+      </ul>
+      <p>
+      	Users may select any type in the signature of a library method or field, and invoke <b>Annotate</b> -
+      	either using the context menu, or by pressing <b>Ctrl+1</b>.
+      	Proposals will be offered for marking the selected type as <code>@NonNull</code> or <code>@Nullable</code>.
+      	All method parameters, return types and field types can be annotated.
+      	Additionally when Java 8 is used, details like type arguments and type bounds etc. can be annotated.
+      </p>
+      <p><img src="images/annotate-map-return.png" alt=""/></p>
+      <p>After selecting a proposal, the compiler will immediately leverage the new annotation for its null analysis.
+      </p>
+      <p><img src="images/map-get-error.png" alt=""/></p>
+    </td>
+  </tr>
+
+  <tr><td colspan="2" class="section" id="Equinox">Equinox</td></tr>
+
+   <tr id="getAdapter">
+    <td class="title">IAdaptable#getAdapter(Class) generified</td>
+    <td class="content">
+      The <code>org.eclipse.core.runtime.IAdaptable</code> interface has been enhanced to return the requested type from
+      its <code>getAdapter</code> method:
+      
+      <pre>public &lt;T&gt; T getAdapter(Class &lt;T&gt; adapter);</pre>
+      
+      <p>Implementations of this method should also be updated. This has already been done
+      for some platform APIs like <code>org.eclipse.ui.part.WorkbenchPart</code>. Callers and implementers
+      of these APIs can see compile errors or warnings due to this binary-compatible change.</p>
+      
+      <p>For more information, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=442021#c25">bug 442021</a>.</p>
+     </td>
+  </tr>
+
+</table>
+
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Mars milestone builds:</p>
+<ul>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.5/M5/">News for Eclipse Mars milestone build M5</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.5/M4/">News for Eclipse Mars milestone build M4</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.5/M3/">News for Eclipse Mars milestone build M3</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.5/M2/">News for Eclipse Mars milestone build M2</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.5/M1/">News for Eclipse Mars milestone build M1</a></li>
+</ul>
+</body>
+</html>

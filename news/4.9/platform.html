@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2018. This page is made available under license. For full details, see the LEGAL section in the documentation that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" type="text/css"/>
+<style type="text/css">
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+/*img {max-width: 520px;}*/
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+ul {padding-left: 13px;}
+</style>
+<title>Eclipse Project 4.9 - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Platform and Equinox</h2>
+
+<ul>
+	<li><a href="#ViewsAndDialogs">Views, Dialogs and Toolbar</a></li>
+	<li><a href="#Preferences">Preferences</a></li>
+	<li><a href="#GeneralUpdates">General Updates</a></li>
+</ul>
+
+<table class="news">
+<colgroup>
+  <col class="title" />
+  <col />
+</colgroup>
+<tbody>
+
+  <!-- ******************* Views, Dialogs and Toolbar ************************************* -->
+  <tr>
+    <td id="ViewsAndDialogs" class="section" colspan="2">
+    <h2>Views, Dialogs and Toolbar </h2>
+    </td>
+  </tr>
+
+  <tr id="minimap">
+  	<td class="title">Minimap</td>
+  	<td class="content">
+	  The <b>Minimap</b> gives you a high level overview of the content of the current active text editor which aids in
+	  navigation and better understanding of the code.
+	  <p>
+	  	The <b>Minimap</b> view can be opened by typing "minimap" in the <b>Quick Access</b> search box.<br/>
+	  	It can also be opened from the <b>Window > Show View > Other...</b> menu and then selecting <b>General > Minimap</b> in the <b>Show View</b> dialog.
+	  </p>
+	  <p>
+	  	<img src="images/minimap-show-view.png" alt="" />
+	  </p> 
+	  	Here are the screenshots of the Minimap:
+	  <ul>
+	  	<li>In Light theme:
+	  		<p>
+	  		 <img src="images/minimap-in-light-theme.png" alt="" />
+	  		</p>
+	  	</li>
+	  	<li>In Dark theme:
+	  		<p>
+	  		 <img src="images/minimap-in-dark-theme.png" alt="" />
+	  		</p>
+	  	</li>
+	  </ul> 
+	</td>
+  </tr>
+
+	<tr id="markers-on-hierarchy">
+		<td class="title">Project Explorer shows problem markers on project hierarchy</td>
+		<td class="content">
+			When using the <b>Projects Presentation > Hierarchical</b> mode of <b>Project Explorer</b>, the error
+			markers from child projects are now reported to the parent nodes, including the parent projects
+			and folders from other projects.
+			<p>This allows you to easily detect errors and navigate through them from the <b>Project Explorer</b> when
+			the project hierarchy is collapsed.</p>
+			<p>
+				<img src="images/markers_on_hierarchy.png" alt=""/>
+			</p>
+		</td>
+	</tr>
+
+
+  <tr id="zoom-changed">
+  	<td class="title">Restart Eclipse when zoom changes for primary monitor</td>
+  	<td class="content">
+	  When the SWT zoom changes for the primary monitor, you are prompted to restart Eclipse to apply the changes.
+	  <p>On Windows 10 with <a href="https://www.eclipse.org/swt/faq.php#win10dpiawareness">dpiAwareness</a> settings enabled, a dialog to restart the Eclipse SDK is prompted as shown below:</p>
+	  <p>
+	  	<img src="images/restart_dialog_zoom_changed.png" alt="" />
+	  </p>
+	  <p>Note: This feature is currently supported on Windows 10 only.</p>
+	</td>
+  </tr>
+
+  <!-- ****************** Preferences ************************************* -->
+  <tr>
+    <td id="Preferences" class="section" colspan="2">
+    <h2>Preferences </h2>
+    </td>
+  </tr>
+
+  <tr id="platform-team-gsettings-migration">
+    <td class="title">Proxy settings migrated to use GSettings instead of GConf</td>
+    <td class="content">
+      The <b>Preferences > General > Network Connections</b> preference page, now uses GSettings to detect proxy settings instead of GConf.
+      <p>
+       GConf has been deprecated for several years and isn't available on some systems anymore. GSettings is the latest and up-to-date
+       method of fetching system settings from GNOME.
+      </p>
+    </td>
+  </tr>
+
+  <tr id="hide-quick-access-per-default">
+    <td class="title">Hidden flag to hide the Quick Access field by default</td>
+    <td class="content">
+      It's now possible to hide the <b>Quick Access</b> search field (located at top right) by default, by specifying the following preference: <b>org.eclipse.ui/hideQuickAccessPerDefault=true</b>.
+      <p>
+       The field can be restored by right clicking on the area it occupies and choosing the <b>Restore Hidden Toolbar Entries</b> menu item.
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="history-selection">
+    <td class="title">Link History view with selection</td>
+    <td class="content">
+      The <b>History</b> view is now linked with the current user selection by default.
+    </td>
+  </tr>
+
+  <!-- ******************* General Updates ************************************* -->
+  <tr>
+    <td id="GeneralUpdates" class="section" colspan="2">
+    <h2>General Updates </h2>
+    </td>
+  </tr>
+
+	<tr id="ant-version-upgrade">
+    <td class="title">Ant 1.10.5</td>
+    <td class="content">
+      Eclipse has adopted Ant version 1.10.5.
+    </td>
+  </tr>
+  <tr id="batik-update-1.10">
+    <td class="title">Batik 1.10 update</td>
+    <td class="content">
+      The version of Batik included was updated to 1.10 to fix <a href="https://nvd.nist.gov/vuln/detail/CVE-2018-8013">CVE-2018-8013</a>. 
+    </td>
+  </tr>
+
+  <tr id="linux-file-system-provider-millisecond-precision">
+    <td class="title">Linux file system provider millisecond precision</td>
+    <td class="content">
+      The native file system provider for Linux based operating system now provides millisecond precision and has improved performance.
+      The old precision provided seconds precision. It contained no millisecond component, despite being in millisecond unit.
+       The old precision can be restored by specifying the command line argument:<pre><code>-Declipse.filesystem.useNatives.modificationTimestampMillisecondsResolution=false</code></pre>
+    </td>
+  </tr>
+
+</tbody>
+</table>
+<script type="text/javascript" src="scripts.js"></script>
+
+  <p style="text-align:center">
+    <span style="color:#808080">Previous</span> <a style="margin:1em" href=".">Up</a> <a href="jdt.php">Next</a>
+  </p>
+
+</body>
+</html>

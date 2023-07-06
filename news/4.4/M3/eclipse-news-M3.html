@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="default_style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse Project 4.4 M3 News</title>
+</head>
+<body>
+<h1>Eclipse Project 4.4 M3 - New and Noteworthy</h1>
+<p>Here are some of the more noteworthy things available in milestone build M3 
+  (November 1, 2013) which is now available for <a href="http://download.eclipse.org/eclipse/downloads/" target="_top">download</a>.
+</p>
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#PDE">PDE</a></li>
+  <li><a href="#Equinox">Equinox</a></li>
+</ul>
+
+<table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+
+  <tr id="gtk3-as-default"> 
+    <td class="title">GTK+ 3 used by default</td>
+    <td class="content">
+      SWT and Eclipse will now use the GTK+ 3 libraries by default on all Linux/Unix platforms,
+      whenever GTK+ 3 is installed and available. Previously SWT defaulted to using GTK+ 2.
+      <p>The GTK+ 3 port of SWT is still early access and you can force Eclipse to use the 
+      more stable GTK+2 port by setting the environment variable SWT_GTK3 to 0, if needed.
+      (For example: export SWT_GTK3=0) </p>
+    </td>
+  </tr>
+
+  <tr id="styled-text-api"> 
+    <td class="title">Added new API in StyledText to get text selection state</td>
+    <td class="content">
+      <code>StyledText.isTextSelected()</code> can be used to quickly determine whether any text
+      in the widget is selected or not.
+    </td>
+  </tr>
+
+  <tr id="import-filter-conflicts"> 
+    <td class="title">Filter conflicting projects during import</td>
+    <td class="content">
+      When importing existing projects, you can now filter out any
+      conflicting projects (projects that are already present in your workspace).
+      <p><img src="images/import-filter-conflicts-before.png" alt="filter conflicting projects"/></p>
+    </td>
+  </tr>
+
+  <tr id="batik-1-7">
+    <td class="title">Updated to Batik 1.7</td>
+    <td class="content">The Platform now includes a newer version of Apache Batik, version 1.7.0. 
+    This new version is being used for CSS parsing in the declarative styling engine, and is 
+    notably faster than the previous version.
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
+
+  <tr id="api-tools-annotations">
+    <td class="title">Annotation support in API Tools</td>
+    <td class="content">
+          API Tools now provides support for using annotations to describe your API usage. Prior to the new annotation support you would have, for example,
+          used the <code>&#64;noreference</code> Javadoc tag to indicate noone should use the tagged type / member. Now you can add the <code>&#64;NoReference</code>
+          annotation (in Java 1.5+ source) to the member directly without the need for Javadoc.
+      <img src="images/annotation-example.png" alt="The &#64;NoExtend annotation being used on a class"/>
+      <p>
+        To make the transition from Javadoc tags to the new annotation support, API Tools provides a conversion wizard that is found 
+        using the <strong>Plug-in Tools &gt; Convert API Tools Javadoc tags...</strong> command for a selected project. The wizard can convert all existing Javadoc tags to their annotation
+        equivalent, update the <code>build.properties</code> file and optionally remove all of the old Javadoc tags.
+      </p>
+      <img src="images/javadoc-conversion.png" alt="The Javadoc conversion wizard"/>
+    </td>
+  </tr>
+
+  <tr id="target-status">
+    <td class="title">Updated target platform state in the status bar</td>
+    <td class="content">
+          In 4.4 M2 you could add the target platform indicator to the status bar allowing easy access to the preferences to customize it. Now this 
+          indicator has been updated to show problems with the target platform (if any). The state of the target platform is immediately apparent based on its 
+          icon / decoration and any problems are added to the tooltip.
+      <img src="images/target-status.png" alt="The target platform state in the status bar showing an error"/>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="Equinox">Equinox</td>
+  </tr>
+
+  <tr id="framework-update">
+    <td class="title">Equinox OSGi framework update</td>
+
+    <td class="content">
+      The Equinox Framework implementation has been updated to implement the latest
+      API available for the upcoming OSGi R6 Core Framework specification 
+      (to be finalized in March 2014).  See 
+      <a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M2-201309182000/news/#Equinox">Equinox M2 News</a>
+      for the complete list.  The following had some additional functionality added since M2:
+      <ul>
+         <li> Clarification of hooks on the system bundle
+             (<a href="https://github.com/osgi/design/tree/master/rfcs/rfc0198">RFC 198</a>).
+             The framework must honor the results of bundle collision hooks when the system
+             bundle context is used to install bundles.
+         </li>
+         <li> Extension Bundle Activators
+             (<a href="https://github.com/osgi/design/tree/master/rfcs/rfc0204">RFC 204</a>).
+             New API added to allow the Framework to be initialized with a list of
+             framework listeners that can capture errors that occur while initializing the
+             framework.
+         </li>
+      </ul>
+    </td>
+  </tr>
+  <tr id="region-update">
+    <td class="title">Equinox Regions update</td>
+
+    <td class="content">
+      The Equinox Regions has added a new namespace for sharing bundle lifecycle 
+      operations between regions.  In previous versions of Equinox regions the only way 
+      to share bundle lifecycle operations across different regions was to share complete
+      bundles which also shared all capabilities provided by the bundle.  Now it is
+      possible to use the org.eclipse.equinox.allow.bundle.lifecycle namespace to share
+      only the bundle lifecycle operations between different regions.
+      (see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=418224">bug 418224</a>)
+    </td>
+  </tr>
+
+  <tr> 
+    <td colspan="2">  </td>
+  </tr>
+</table>
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Luna milestone builds:</p>
+<ul>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M2-201309182000/news/">New for Eclipse Luna milestone build M2 (September 20, 2013)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.4M1-201308072000/news/">New for Eclipse Luna milestone build M1 (August 9, 2013)</a></li>
+</ul>
+</body>
+</html>

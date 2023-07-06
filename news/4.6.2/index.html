@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse Project Neon.2 (4.6.2) News</title>
+</head>
+<body>
+<h1>Eclipse Project Neon.2 (4.6.2) - New and Noteworthy</h1>
+<p>Here are some of the more noteworthy things available in the Neon.2 update release
+  which is now available for <a href="http://download.eclipse.org/eclipse/downloads/#Latest_Release" target="_top">download</a>.
+</p>
+
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+<!--
+  <li><a href="#JDT">JDT</a></li>
+-->
+  <li><a href="#PDE">PDE</a></li>
+  <li><a href="#Platform-Dev">Platform Developers</a></li>
+<!--
+  <li><a href="#Equinox">Equinox</a></li>
+-->
+</ul>
+
+<table class="news">
+  <colgroup>
+    <col class="title" />
+    <col />
+  </colgroup>
+
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+
+  <tr id="toolbar-improved-default-styling">
+    <td class="title">Improved default styling for the toolbar (new in 4.6.1)</td>
+    <td class="content">
+      The styling of the window toolbar has been improved. 
+      On Windows, the toolbar color is now consistent with the color of the perspective switcher.
+      
+      <p>
+        <img src="images/css-styles-windows-toolbar.png" alt=""/>
+      </p>
+      <p>
+        On Linux and Mac, the separator line was removed, which gives you a few more pixels on Linux
+        and removes a yellow line on the Mac.
+      </p>
+      <p>
+        <img src="images/css-styles-mac-toolbar.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="open-images-in-eclipse">
+    <td class="title">Images are opened in the Eclipse IDE (new in 4.6.1)</td>
+    <td class="content">
+      Image files are now opened directly in Eclipse by default.
+      The Internal Web Browser has been registered as default editor for files with the png, jpg, jpeg, gif, bmp, and ico extensions.
+     <p>
+        <img src="images/image-opened-in-eclipse.png" alt=""/>
+     </p>
+     Use <b>Open With > System Editor</b> to open files in the default external program.
+    </td>
+  </tr>
+
+  <tr id="terminate-relaunch-history">
+    <td class="title">"Terminate and Relaunch" from Run menu, context menu and tool bar (new in 4.6.1)</td>
+    <td class="content">
+      A <b>Terminate and Relaunch</b> option is now available while launching from Run menu, context menu and tool bar.
+      The default setting is to launch without terminating previous launches. To enable automatic termination,
+      select the option <b>Terminate and Relaunch while launching</b> on
+      <b>Preferences &gt; Run/Debug &gt; Launching</b>.
+      
+      <p>
+        The behavior not selected on the preference page can also be activated on-demand by holding
+        the <b>Shift</b> key while launching the configuration from history.
+      </p>
+	  <p><img src="images/launch-preference-terminate-relaunch.png" alt="" /></p>
+    </td>
+  </tr>
+
+  <tr id="quick-access-icons">
+    <td class="title">Command icons shown in Quick Access (new in 4.6.1)</td>
+    <td class="content">
+      <b>Quick Access</b> (<b>Ctrl+3</b>) now shows the icon for a <b>Command</b> if available.
+      Otherwise, it still shows the default blue ball.
+
+      <p>
+        <img src="images/command-image-visible-in-quick-access.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="configurable-left-right-in-compare-editor">
+    <td class="title">Configure left and right sides in Compare editors (new in 4.6.2)</td>
+    <td class="content">
+      <b>Compare</b> editors now offer a button <b>Swap Left and Right View</b>.
+      <p>
+        <img src="images/compare-editor.png" alt=""/>
+      </p>
+      <p>
+      The direction of comparison is preserved between invocations of the <b>Compare</b> editor
+      and can also be changed in the <b>Compare/Patch</b> preference page.
+      </p>
+      <p>
+        <img src="images/compare-preferences.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+
+<!--
+  <tr>
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+-->
+
+
+  <tr>
+    <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
+
+  <tr id="validate-launch-configuration-activated-by-default">
+    <td class="title">Validate launch configuration activated by default (new in 4.6.2)</td>
+    <td class="content">
+      When you create a new <b>Eclipse Application</b> launch configuration, PDE will now by default enable the option to
+      <b>Validate Plug-ins automatically prior to launching</b>. 
+      This helps you to identify missing plug-in dependencies before the actual start of the application and makes it easier for new plug-in and RCP developers to identify common problems.
+      You can disable this validation in the launch configuration dialog, on the <b>Plug-ins</b> tab. 
+    
+    <p>
+        	<img src="images/validate-launch-config-by-default.png" alt=""/>
+    </p>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
+  </tr>
+
+  <tr id="viewercomparator-sorting">
+    <td class="title">Stable sorting in viewers based on ViewerComparator (new in 4.6.2)</td>
+    <td class="content">
+      The <code>org.eclipse.jface.viewers.ViewerComparator</code> now ignores decorations from a <code>DecoratingLabelProvider</code> during its sorting.
+      For example, if the EGit team provider is used, it prepends "> " for changed files. This additional "> " is now ignored.
+      <p>
+      The goal of this change is to eliminate
+      <code>java.lang.IllegalArgumentException: Comparison method violates its general contract!</code>
+      that could occur when label decorations were updated in the background.
+      </p>
+      <p>
+      For now, you can disable this fix by setting the system property <code>eclipse.disable.fix.for.bug364735</code> to <code>true</code>.
+      This temporary system property is planned to be removed unless issues with the new sorting are discovered.
+      </p>
+
+    </td>
+  </tr>
+
+
+<!--
+  <tr>
+    <td colspan="2" class="section" id="Equinox">Equinox</td>
+  </tr>
+-->
+
+  <tr>
+    <td colspan="2"/>
+  </tr>
+</table>
+
+<p>The above features are just the ones that are new in the Neon.1 and Neon.2 update releases.
+See also the <a href="https://www.eclipse.org/eclipse/news/4.6/">News for Eclipse Neon</a>.
+Neon.3 was a bug-fix release without notable new features.
+</p>
+
+</body>
+</html>

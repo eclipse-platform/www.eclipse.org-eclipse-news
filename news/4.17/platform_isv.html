@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2020. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" type="text/css"/>
+<style type="text/css">
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+/*img {max-width: 520px;}*/
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+ul {padding-left: 13px;}
+</style>
+<title>Eclipse Project 4.17 - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Platform and Equinox API</h2>
+  <ul>
+    <li><a href="#Platform">Platform Changes</a></li>
+    <li><a href="#SWT">SWT Changes</a></li>
+  </ul>
+
+<!-- ****************** START OF N&N TABLE****************** -->
+<table class="news">
+<colgroup>
+  <col class="title" />
+  <col />
+</colgroup>
+<tbody>
+  <!-- ******************** Platform ********************** -->
+  <tr>
+    <td id="Platform" class="section" colspan="2"><h2>Platform Changes</h2></td>
+  </tr>
+  <tr id="deferred-image-descriptor"><!-- https://bugs.eclipse.org/477391 -->
+    <td class="title"><a href="#deferred-image-descriptor">DeferredImageDescriptor API</a></td>
+    <td class="content">
+	  The <code>DeferredImageDescriptor</code> API has been added to JFace
+	  allowing the creation of <code>ImageDescriptor</code> instances from
+	  a URL, where the calculation of the URL is potentially costly
+	  (because it might involve searching through multiple directories or
+	  bundles/fragments on disk).
+	  <p>The new API can be called using
+	  <code>ImageDescriptor.createFromSupplier</code> along with a
+	  <code>Supplier&lt;URL&gt;</code> which will calculate on demand the
+	  URL when the image is acessed for the first time. This allows images
+	  registered at startup in an <code>ImageRegistry</code> to be deferred
+	  until the first time the image is shown on screen.</p>
+	  <p>Old way:</p>
+<pre><code>URL url = FileLocator.find(bundle, path);
+descriptor = ImageDescriptor.createFromURL(url);
+</code></pre>
+	  <p>New way:</p>
+<pre><code>descriptor = ImageDescriptor.createFromURLSupplier(
+  () -&gt; FileLocator.find(bundle, path)
+);
+</code></pre>
+	</td>
+  </tr>
+
+	<tr id="system-color-in-workbench-css"><!-- https://bugs.eclipse.org/565775 -->
+		<td class="title"><a href="#system-color-in-workbench-css">Use System colors in workbench CSS theme files</a></td>
+		<td class="content">
+			In workbench theme CSS files, you can now reference the system colors defined by SWT. To do so, use the
+			SWT field name replacing uderscores <code>_</code> by dashes <code>-</code> and prefixing with hash <code>#</code>.
+			<p>
+			For example, to reference the system color <code>SWT.COLOR_LIST_SELECTION_BACKGROUND</code>, you can use
+			<code>#COLOR-LIST-SELECTION-BACKGROUND</code> in your .css files.
+			</p>
+		</td>
+	</tr>
+		
+	
+  <tr id="widget-factories"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=551589 -->
+   <td class="title"><a href="#widget-factories">Additional widget factories</a></td>
+    <td class="content">
+      Factories for additional SWT widgets have been created: SashFactory, ShellFactory and SectionFactory.
+    </td>
+  </tr>	
+  <!-- ******************** End of Platform ********************** -->
+
+  <!-- *********************** SWT *********************** -->
+  <tr>
+    <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
+  </tr>
+  <tr id="swt-chromium"> <!-- https://bugs.eclipse.org/549585 -->
+    <td class="title"><a href="#swt-chromium">Support for Chromium browser renderer</a></td>
+    <td class="content">
+      SWT now supports Chromium as a browser renderer on all platforms using a new <code>SWT.CHROMIUM</code> constant. Please see this 
+      <a href="https://www.eclipse.org/swt/faq.php#howusechromium">FAQ</a> entry for details on using the Chromium style browser.
+    </td>
+  </tr>
+
+  <tr id="swt-device-free-constructors"> <!-- https://bugs.eclipse.org/563560 -->
+    <td class="title"><a href="#swt-device-free-constructors">Colors have new Device free constructors</a></td>
+    <td class="content">
+      Starting from Eclipse 4.16, SWT no longer required Colors to be disposed, with Eclipse 4.17
+      new constructors are available which don't require a Device when creating Colors.
+    </td>
+
+  </tr>
+
+  <tr id="dark-win32-menu"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=562454 -->
+    <td class="title"><a href="#dark-win32-menu">Support for dark theme Menu under Windows10</a></td>
+    <td class="content">
+      SWT supports dark theme <code>Menu</code> under Windows10 as below:
+      <p>
+        Old:
+      </p>
+      <p>
+        <img src="images/menu-background-old.png" alt="" />
+      </p>
+      <p>
+        New:
+      </p>
+      <p>
+        <img src="images/menu-background-dark.png" alt="" />
+      </p>
+      <p>
+        On <b>Windows 10</b>, all the dark theme tweaks including the <a href="#dark-win32-menu">dark menu</a> can be disabled using the 
+        <code>org.eclipse.swt.internal.win32.disableCustomThemeTweaks</code> Java property.<br/>
+        For Example: add this VM argument in eclipse.ini or on the command line after <b><code>-vmargs</code></b>:
+      </p>
+      <pre><b>-Dorg.eclipse.swt.internal.win32.disableCustomThemeTweaks=true</b></pre>
+    </td>
+  </tr>
+
+  <tr id="dark-win32-combo"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=562454 -->
+    <td class="title"><a href="#dark-win32-combo">Improved dark theme Combo under Windows</a></td>
+    <td class="content">
+      SWT supports improved dark theme <code>Combo</code> under Windows10 as below:
+      <p>
+        Old:
+      </p>
+      <p>
+        <img src="images/combo-win32-dark-old.png" alt="" />
+      </p>
+      <p>
+        New:
+      </p>
+      <p>
+        <img src="images/combo-win32-dark-new.png" alt="" />
+      </p>
+      <p>
+        On <b>Windows 10</b>, all the dark theme tweaks including the <a href="#dark-win32-combo">dark combo</a> can be disabled using the 
+        <code>org.eclipse.swt.internal.win32.disableCustomThemeTweaks</code> Java property.<br/>
+        For Example: add this VM argument in eclipse.ini or on the command line after <b><code>-vmargs</code></b>:
+      </p>
+      <pre><b>-Dorg.eclipse.swt.internal.win32.disableCustomThemeTweaks=true</b></pre>
+    </td>
+  </tr>
+  <!-- *********************** End of SWT *********************** -->
+
+</tbody>
+</table>
+<!-- ****************** END OF N&N TABLE ****************** -->
+
+<script type="text/javascript" src="scripts.js"></script>
+  <p style="text-align:center">
+    <a href="jdt.php">Previous</a> <a style="margin:1em" href=".">Up</a> <a href="pde.php">Next</a>
+  </p>
+</body>
+</html>

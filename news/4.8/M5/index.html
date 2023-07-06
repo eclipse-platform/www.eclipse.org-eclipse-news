@@ -1,0 +1,570 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style type="text/css">
+p, table, td, th {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt}
+pre {  font-family: "Courier New", Courier, mono; font-size: 10pt}
+h2 { font-family: verdana, arial, helvetica, geneva; font-size: 18pt; font-weight: bold ; line-height: 14px}
+code {  font-family: "Courier New", Courier, mono; font-size: 10pt}
+sup {  font-family: verdana, arial, helvetica, geneva; font-size: 10px}
+h3 {  font-family: verdana, arial, helvetica, geneva; font-size: 14pt; font-weight: bold}
+li {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt}
+h1 {  font-family: verdana, arial, helvetica, geneva; font-size: 24pt; font-weight: bold}
+body {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt; margin-top: 5mm; margin-left: 3mm}
+.indextop { font-size: x-large; font-family: verdana, arial, helvetica, sans-serif; font-weight: bold}
+.indexsub { font-size: xx-small; font-family: verdana, arial, helvetica, sans-serif; color: #8080FF}
+a.bar:link {  text-decoration: none; color: #FFFFFF}
+a.bar:visited {  color: #FFFFFF; text-decoration: none}
+a.bar:hover {  color: #FFFFFF; text-decoration: underline}
+a.bar {  color: #FFFFFF}
+
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+  </style>
+<title>Eclipse Project Photon (4.8) M5 - New and Noteworthy</title>
+</head>
+
+<body>
+<h1>Eclipse Project Photon (4.8) M5 - New and Noteworthy</h1>
+
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#JDT">JDT</a></li>
+  <li><a href="#PDE">PDE</a></li>
+  <li><a href="#Platform-Dev">Platform Developers</a></li>
+  <li><a href="#JDT-Dev">JDT Developers</a></li>
+</ul>
+
+<table class="news">
+  <colgroup>
+    <col class="title" />
+    <col />
+  </colgroup>
+
+
+
+
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+
+  <tr id="worker-deobfuscated-platform">
+    <td class="title">Workers use job names as thread names</td>
+    <td class="content">
+      The jobs framework now uses <code>Job</code> names for <code>Worker</code> thread names. Previously all
+      running <code>Worker</code>'s got enumerated thread names, without any hint what the
+      current <code>Worker</code> is actually doing:
+      <p>
+        <img src="images/worker_obfuscated.png" alt="Worker names before M5" />
+      </p>
+
+      Now the <code>Job</code> name is added
+      next to the <code>Worker</code> name:
+
+      <p>
+        <img src="images/worker_deobfuscated.png" alt="Worker names after M5" />
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+
+  <tr id="worker-deobfuscated-jdt">
+    <td class="title">Debugger listens to thread name changes</td>
+    <td class="content">
+      Debug view now automatically updates thread names if they are changed in the debuggee JVM. 
+      This shows live information for worker instances, as described above.
+      <p>
+      Technically speaking, Java debugger automatically adds a new (user invisible) breakpoint in the JVM and notifies
+      clients (like Debug view) on a breakpoint hit. If this behavior is undesired for some reason, product owners can disable it via product customization.
+      </p>
+      <p>
+      The property value is:
+      <code>
+      org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.javaDebug.ListenOnThreadNameChanges=false 
+      </code>
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="navigate-to-switch">
+    <td class="title">Navigate to 'switch' statement</td>
+    <td class="content">
+      You can now <b>Ctrl+click</b> or use <b>Open Declaration (F3)</b> on <code>case</code> or <code>default</code>
+      keywords to quickly navigate to the beginning of the <code>switch</code> statement.
+      <p><img src="images/navigate-to-switch.png" alt=""/></p>
+    </td>
+  </tr>
+
+  <tr id="module-info-paste">
+    <td class="title">Paste module-info.java code in Package Explorer</td>
+    <td class="content">
+      You can now paste a snippet of code representing module-info.java directly into a source folder to create a module-info.java file. 
+      For example, copy this code:
+<pre>
+import java.sql.Driver;
+module hello {
+	exports org.example;
+	requires java.sql;
+	provides Driver with org.example.DriverImpl;
+}
+</pre>
+	Then select a source folder in a Java 9 project in the Package Explorer view and use <b>Ctrl+V (Edit &gt; Paste)</b> to paste it.
+	This automatically creates a module-info.java file in the source folder with the copied content.      
+    </td>
+  </tr>
+
+  <tr id="content-assist-module-declaration-name">
+    <td class="title">Content assist for module declaration name</td>
+    <td class="content">
+      Content assist <b>(Ctrl+Space)</b> support is now available for module declaration name. 
+      <p><img src="images/content-assist-module-declaration-name.png" alt=""/></p>
+    </td>
+  </tr>
+
+  <tr id="formatter-profile">
+    <td class="title">New formatter profile page</td>
+    <td class="content">
+      The formatter profile preference page <b>(Java &gt; Code Style &gt; Formatter &gt; Edit...)</b> has a new look which
+      makes it much easier to set preferences for formatting Java code. Instead of multiple tabs, all preferences are
+      presented in an expandable tree.
+      <p><img src="images/formatter-profile-overview.png" alt=""/></p>
+      <p>You can use <b>filtering</b> to display only settings with names matching a specific phrase. Filtering by values is also
+      possible (prefix a value filter with a tilde).</p>
+      <p><img src="images/formatter-profile-filtering.png" alt="Example filtering by word 'lambda'"/></p>
+      <p>Most sections have a <b>"Modify all"</b> button in their header that lets you set all their preferences to the same value
+      with one click.</p>
+      <p><img src="images/formatter-profile-modify-all.png" alt=""/></p>
+      <p>Some preferences have more convenient controls. For example, number values can be easily modified with arrow buttons.
+      Wrap policy settings are controlled by simple toolbars so that you can see and compare multiple policies at once.</p>
+      <p><img src="images/formatter-profile-wrap-settings.png" alt=""/></p>
+      <p>In the preview panel you can now use your own code to immediately see how it will be affected by the modified settings.
+      You can also see the raw form of standard preview samples and make temporary modifications to them.</p>
+      <p><img src="images/formatter-profile-preview.png" alt="New buttons: 'View/edit raw code' and 'Custom preview contents'"/></p>
+    </td>
+  </tr>
+  
+  <tr id="jdt-test-sources">
+    <td class="title">Test sources</td>
+    <td class="content">
+	In the <b>Java Build Path</b> project settings, there is now an attribute <b>Contains test sources</b> to configure 
+	that a source folder contains test sources (Note: test sources must have their own output folder). Similar, for 
+	projects and libraries there is an attribute <b>Visible only for test sources</b>. This setting also exists for 
+	classpath containers, and if it is set to <b>Yes</b> for one of these, this value will be used for all  contained 
+	libraries and projects.
+	<p><img src="images/1-sourcefolder-settings-521330.png" alt=""/></p>
+	<p>Test source folders and dependencies are shown with a darker icon in the build path settings, 
+	the package explorer and other locations. This can be disabled in  <b>Preferences > Java > Appearance</b>: </p>
+	<p><img src="images/1a-modified-test-icon-preferences-530179.png" alt=""/></p>
+	<p>
+	Referenced projects can contain test sources and have test dependencies themselves. Usually, when test sources are 
+	compiled, the test code in projects on the build path will be visible. As this is not always desirable, it can be 
+	changed by setting the new build path attribute <b>Without test code</b>, that is available for projects, to <b>Yes</b>.</p>
+	<p><img src="images/2-without-test-code-526858.png" alt=""/></p>
+	<p>Build path entries configured like this have a decoration <code>[without test code]</code> after the project name, 
+	which can be disabled in <b>Preferences > General > Appearance > Label Decorations</b>:</p> 
+	<p><img src="images/2a-without-test-code-decorator-530179.png" alt=""/></p>
+	<p>For each project, compilation is now done in two phases: First all main sources (which cannot see any test-code on 
+	the build-path) and then all test sources.</p>
+	<p><img src="images/3-visibilities-224708.png" alt=""/></p>
+	<p>As a consequence, if the project is a modular Java 9 project, test dependencies like JUnit can not be referenced in 
+	the <code>module-info.java</code>, as they will not be visible while compiling it.
+The solution used to handle this is the same, that Maven uses: When test dependencies are put on the classpath, the module being compiled will automatically be configured to read the unnamed module during the compilation of the test sources, so the test dependencies will be visible.</p>
+<p>Of course, code completion will not suggest test code in main sources:</p>
+<p><img src="images/4a-completion-in-main-521331.png" alt=""/></p>
+<p><img src="images/4b-completion-in-test-521331.png" alt=""/></p>
+<p>There are now two dynamic Java working sets <b>Java Main Sources</b> and <b>Java Test Sources</b> containing the source folders grouped according to value of the <b>Contains test sources</b> attribute. This can for example be used to remove warnings in test sources from the problems view:</p>
+<p><img src="images/5a-problems-view-521336.png" alt=""/></p>
+<p>To achieve this, create a new filter that shows warnings for the <b>Java Main Sources</b> working set and select it with the <b>All Errors on Workspace</b> filter:</p>
+<p><img src="images/5b-problems-view-filters-521336.png" alt=""/></p>
+<p>There are also dedicated filters to quickly remove hits in main code or test code from Java search results:</p>
+<p><img src="images/6-filter-search-result-521332.png" alt=""/></p>
+<p>Similar, there is a filter to remove test code from <b>Call hierarchies</b>:</p>
+<p><img src="images/7-filter-call-hierarchy-521335.png" alt=""/></p>
+<p>Another filter to remove test code exists for <b>Quick type hierarchies</b>:</p>
+<p><img src="images/8-filter-quick-type-hierarchy-521333.png" alt=""/></p>
+<p>Test source folders will be preselected in the <b>New JUnit Test Case</b>-Wizard</p>
+<p><img src="images/9-new-junit-332602.png" alt=""/></p>
+<p>In Run and Debug configurations, the <b>Classpath</b> tab (or <b>Dependencies</b> tab when launching with Java 9) contains a new option <b>Exclude Test Code</b>, that is automatically preselected when launching a Java Application from a source folder that is not marked to contain test sources:</p> 
+<p><img src="images/10-launching-529321.png" alt=""/></p>
+<p>When launching with Java 9 and this option is not selected, command line options will automatically be added so modules that have a non-empty classpath read the unnamed module. 
+These command line options are part of what can be overridden using the new <a href="#override-dependencies">Override Dependencies</a> button.</p>  
+    </td>
+  </tr>
+  
+  <tr id="method-result-and-exception-thrown">
+    <td class="title">Value displayed for method exit and exception breakpoints</td>
+    <td class="content">
+      When a <b>method exit breakpoint</b> is hit, the value being returned is now shown in the variables view.
+      <img src="images/returningvalue.png" alt=""/>
+      <p>
+      Similar, when an <b>exception breakpoint</b> is hit, the exception being thrown is shown.
+      <img src="images/throwingexception.png" alt=""/>
+      </p>
+    </td>
+  </tr>
+
+  <tr id="debug-shell">
+    <td class="title">Display view now named Debug Shell</td>
+    <td class="content">
+      The Display view has been renamed to <b>Debug Shell</b> to better match the features and purpose of this feature.
+      A line of Java comment have also been added to the view on fresh open to encourage trying it further.
+      <p>
+        <img src="images/debugShell.png" alt="Debug Shell" />
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="override-dependencies">
+    <td class="title">Overriding modular build path dependencies for launching</td>
+    <td class="content">
+      Based on Java build path, a Java 9 module can have command line options. These options from build path can be overridden for launching programs in the module.
+      <b>Override Dependencies</b> button has been added to <b>Dependencies</b> tab:
+      <p>
+        <img src="images/override-dependencies-button.png" alt="Override Dependencies button" />
+      </p>
+      Dialog can be used to override modular dependencies:
+      <p>
+        <img src="images/override-dependencies-dialog.png" alt="Override Dependencies dialog" />
+      </p>
+    </td>
+  </tr>
+
+  <tr id="prototype-java-launch-configuration">
+    <td class="title">Launch configuration prototypes for Java Launch Configurations</td>
+    <td class="content">
+      A Java Launch Configuration can now be based on a prototype.
+      <p>
+        <img src="images/prototype-java-launch-configuration.png" alt="Prototype Java Launch Configuration" />
+      </p>
+      A prototype seeds attributes in its associated Java Launch Configurations with the settings specified in the Prototype tab.
+      <p>
+        <img src="images/prototype-tab-java-launch-configuration-1.png" alt="Prototype Tab Java Launch Configuration 1" />
+      </p>
+      Once a Java Launch Configuration has been created, you can override any initial settings from the prototype.
+      You can also reset the settings of a Java Launch Configuration with the ones from its prototype. A Java Launch Configuration 
+      maintains a link to its prototype, but is a complete stand-alone launch configuration than can be launched, exported, shared, etc.
+      <p>
+        <img src="images/prototype-tab-java-launch-configuration-2.png" alt="Prototype Tab Java Launch Configuration 2" />
+      </p>
+    </td>
+  </tr>
+  <tr id="trapdoor-regex-module">
+    <td class="title">Option for Regex in Module Declaration Search</td>
+    <td class="content">
+      This is an <b>experimental</b> support provided to allow the regular expression usage in search field while searching for module declaration.
+      This can be considered as a wrapper of the <a href="#regex-module-declaration-search-api">API change</a>. To invoke the regular expression search from
+      the search field under Java Search, start the expression with "/r " ie a slash '/', the letter 'r' and a blank ' ' (not tab) 
+      followed by a regex, an example of which is shown below:
+      <p>
+        <img src="images/mod.regex.trap.png" alt="Trapdoor for regular expression module declaration search" />
+      </p>
+      <p>
+      In the above example, all the characters trailing "/r " form a Java regular expression to denote a module name which starts 
+      with zero or more 'n's followed by the string ".ver" and followed again by zero or more number of arbitrary characters.</p>
+      <p>
+      Another example would be to search for all modules that start with <code>java.x</code> followed by zero or more
+      characters which is given by the regular expression  <code>/r java\.x.*</code> - 
+      note the backslash for . to consider this as a "normal" character instead of the special regex]. Yet another example would be
+      search for all module names that start with j followed by zero or more characters and ending with .xml which in regex language 
+      translates to <code>/r j.*\.xml</code> and here please note that the first '.' is the special regex character while the second '.' is
+      escaped to denote that this is a normal character.
+      </p>
+      <b>Note:</b> You should use this only for <b>Declarations</b> search for modules as it is not implemented for module references. Selecting
+      <b>All occurrences</b> in conjunction with regex will default to finding only the Declarations matching the regex ignoring the references.
+    </td>
+  </tr>
+
+  <tr id="nonnullbydefault-per-module">
+    <td class="title">@NonNullByDefault per module</td>
+    <td class="content">
+      If a module is annotated with <code>@NonNullByDefault</code>, the compiler will interpret this
+      as the global default for all types in this module:
+      <code style="margin-left:20pt;color:#646464;">@org.eclipse.jdt.annotation.<strong>NonNullByDefault</strong></code><br/>
+      <code style="margin-left:20pt;"><strong style="color:#7F0055;">module</strong> my.nullsafe.mod { ...</code>
+      <p>Note, however, that this requires an annotation type declared with target <code>ElementType.MODULE</code>.
+      Since the annotation bundle <code>org.eclipse.jdt.annotation</code> is still compatible with Java 8,
+      it cannot yet declare this target. In the interim, a preview version of this bundle with support for
+      modules will be published by other means than the official SDK build.
+      </p> 
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
+  <tr id="pde-generic-reqs-caps-handling">
+    <td class="title">PDE handles generic bundle requirements/capabilities</td>
+    <td class="content">
+      PDE now handles dependencies described by the
+      <code>Require-Capability</code> and <code>Provide-Capability</code> manifest headers.
+      These dependencies are taken additionally into account when computing the required bundles for a selected set of bundles
+      from the target platform.
+      <p>
+        The most noticeable place where this feature is in the Eclipse launch configuration page 
+        i.e. <b>Eclipse launch configuration -> Plug-ins -> Add Required Plug-ins</b>
+        For example, a usual effect is that the plug-in <code>org.apache.felix.scr</code> with the
+        dropdown  "Launch With: plug-ins selected below" selected on Plug-ins tab.
+        will be additionally selected by the action. This plug-in declares <code>Provide-Capability: osgi.extender</code>, which
+        is consumed as <code>Require-Capability: osgi.extender</code> by some plug-ins.
+      </p>
+      <p>
+        Further the computation of required plug-ins is performed recursively now until added plug-ins do not introduce more
+        transitive requirements.
+      </p>
+    </td>
+  </tr>
+
+
+  <tr id="prototype-eclipse-launch-configuration">
+    <td class="title">Launch configuration prototypes for Eclipse Launch Configurations</td>
+    <td class="content">
+      An Eclipse Launch Configuration can now be based on a prototype.
+      <p>
+        <img src="images/prototype-eclipse-launch-configuration.png" alt="Prototype Eclipse Launch Configuration" />
+      </p>
+      A prototype seeds attributes in its associated Eclipse Launch Configurations with the settings specified in the Prototype tab.
+      <p>
+        <img src="images/prototype-tab-eclipse-launch-configuration-1.png" alt="Prototype Tab Eclipse Launch Configuration 1" />
+      </p>
+      Once an Eclipse Launch Configuration has been created, you can override any initial settings from the prototype.
+      You can also reset the settings of an Eclipse Launch Configuration with the ones from its prototype. An Eclipse Launch Configuration 
+      maintains a link to its prototype, but is a complete stand-alone launch configuration than can be launched, exported, shared, etc.
+      <p>
+        <img src="images/prototype-tab-eclipse-launch-configuration-2.png" alt="Prototype Tab Eclipse Launch Configuration 2" />
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
+  </tr>
+
+  <tr id="codemining-sourceviewer-support">
+    <td class="title">CodeMining support with SourceViewer</td>
+    <td class="content">
+      <p>A <b>code mining</b> represents a <b>content</b> (ex: label, icons) that should be <b>shown along with source text</b>, like the number of references, 
+      a way to run tests (with run/debug icons), etc. The main goal of code mining is to help developer to understand more the written/writing code
+      </p>
+      A code mining is represented by <code>org.eclipse.jface.text.codemining.ICodeMining</code> which are provided by <code>org.eclipse.jface.text.codemining.ICodeMiningProvider</code>
+      The <code>org.eclipse.jface.text.source.ISourceViewerExtension5</code> provides the capability to register <code>org.eclipse.jface.text.codemining.ICodeMiningProvider</code> and update code minings.
+      <p>
+    	The example <a href="http://git.eclipse.org/c/platform/eclipse.platform.text.git/tree/org.eclipse.jface.text.examples/src/org/eclipse/jface/text/examples/codemining/CodeMiningDemo.java">CodeMiningDemo</a> 
+    	draws <b>classes references / implementations</b> code minings:
+      </p>
+      <p>
+        <img src="images/codemining-sourceviewer-support.png" alt="" />
+      </p>
+    </td>
+  </tr>
+
+  <tr id="codemining-extension-point">
+    <td class="title">CodeMining provider Extension point</td>
+    <td class="content">
+      The <b>org.eclipse.ui.workbench.texteditor.codeMiningProviders</b> extension point gives the capability to register code mining providers <code>org.eclipse.jface.text.codemining.ICodeMiningProvider</code> in text editor using <code>ISourceViewerExtension5</code>.
+      Associating providers via this extension doesn't automatically enable code-mining, so that clients are also supposed to use a reconciler or whatever event mechanism to invoke <code>ISourceViewerExtension5.updateCodeMinings()</code>.
+      For instance you can consume the <code>org.eclipse.jface.text.codemining.CodeMiningReconciler</code> to update the registered CodeMining providers. 
+      <p>
+    	The <a href="http://git.eclipse.org/c/platform/eclipse.platform.text.git/tree/org.eclipse.ui.genericeditor.examples">GenericEditor Example</a> display number of referenced projects: 
+      </p>
+      <p>
+        <img src="images/codemining-extension-point.png" alt="" />
+      </p>
+      <p>
+    	This sample consumes the code mining provider <a href="http://git.eclipse.org/c/platform/eclipse.platform.text.git/tree/org.eclipse.ui.genericeditor.examples/src/org/eclipse/ui/genericeditor/examples/dotproject/codemining/ProjectReferencesCodeMiningProvider.java" >ProjectReferencesCodeMiningProvider</a> 
+    	which is registered	with the <code>org.eclipse.ui.workbench.texteditor.codeMiningProviders</code> extension point:
+      </p>
+<pre>
+&lt;extension
+   point="org.eclipse.ui.workbench.texteditor.codeMiningProviders"&gt;
+   &lt;codeMiningProvider
+        class="org.eclipse.ui.genericeditor.examples.dotproject.codemining.ProjectReferencesCodeMiningProvider"
+        id="org.eclipse.ui.genericeditor.examples.dotproject.codemining.references"
+        label="Project references"&gt;
+        &lt;enabledWhen&gt;
+        	  &lt;with variable="editorInput"&gt;
+              &lt;adapt type="org.eclipse.core.resources.IFile"&gt;
+                &lt;test property="org.eclipse.core.resources.contentTypeId" value="org.eclipse.ui.genericeditor.examples.dotproject" /&gt;
+              &lt;/adapt&gt;
+        	  &lt;/with&gt;
+        &lt;/enabledWhen&gt;
+   &lt;/codeMiningProvider&gt;
+&lt;/extension&gt;
+      </pre>    	
+      <p>This code mining provider is updated with the <code>org.eclipse.jface.text.codemining.CodeMiningReconciler</code> reconciler.  
+      </p>
+<pre>
+&lt;extension
+      point="org.eclipse.ui.genericeditor.reconcilers"&gt;
+   &lt;reconciler
+         class="org.eclipse.jface.text.codemining.CodeMiningReconciler"
+         contentType="org.eclipse.ui.genericeditor.examples.dotproject"&gt;
+   &lt;/reconciler&gt;
+&lt;/extension&gt;
+</pre>
+    </td>
+  </tr>
+
+  <tr id="inlined-annotations-action">
+    <td class="title">Action for Inlined Annotations</td>
+    <td class="content">
+      Inlined annotation can define an action to execute when you click on the annotation with <code>Consumer&lt;MouseEvent&gt; getAction(MouseEvent e)</code>.       
+      <p>
+    	The example <a href="http://git.eclipse.org/c/platform/eclipse.platform.text.git/tree/org.eclipse.jface.text.examples/src/org/eclipse/jface/text/examples/sources/inlined/InlinedAnnotationDemo.java">InlinedAnnotationDemo</a> defines 
+    	an action to open the <code>org.eclipse.swt.widgets.ColorDialog</code> when you click on the color annotation:
+      </p>
+      <pre>
+public ColorAnnotation extends LineContentAnnotation {
+...
+  @Override
+  public Consumer&lt;MouseEvent&gt; getAction(MouseEvent e) {
+    return ev -> {
+      // Open the Color dialog when color annotation is clicked
+    };
+  }
+}
+</pre>
+      <p>
+        <img src="images/inlined-annotations-action.png" alt="" />
+      </p>
+    </td>
+  </tr>
+
+  <tr id="prototype-launch-configuration">
+    <td class="title">Launch configuration prototypes</td>
+    <td class="content">
+      A launch configuration can now be based on a prototype.
+      <p>
+        <img src="images/prototype-java-launch-configuration.png" alt="Prototype Launch Configuration" />
+      </p>
+      A prototype seeds attributes in its associated launch configurations with the settings specified in the Prototype tab.
+      <p>
+        <img src="images/prototype-tab-java-launch-configuration-1.png" alt="Prototype Tab Launch Configuration 1" />
+      </p>
+      Once a launch configuration has been created, you can override any initial settings from the prototype.
+      You can also reset the settings of a launch configuration with the ones from its prototype. A launch configuration maintains 
+      a link to its prototype, but is a complete stand-alone launch configuration than can be launched, exported, shared, etc.
+      <p>
+        <img src="images/prototype-tab-java-launch-configuration-2.png" alt="Prototype Tab Launch Configuration 2" />
+      </p>
+      Prototypes are already enabled for JDT and PDE launch configurations.
+      Others projects have to enable prototypes in <code>org.eclipse.debug.core.launchConfigurationTypes</code> extension point:
+<pre>
+&lt;extension
+    point="org.eclipse.debug.core.launchConfigurationTypes"&gt;
+    &lt;launchConfigurationType
+      <b>allowPrototypes="true"</b>
+      delegate="org.eclipse.jdt.launching.sourcelookup.advanced.AdvancedJavaLaunchDelegate"
+      delegateDescription="%localJavaApplicationDelegate.description"
+      delegateName="%eclipseJDTLauncher.name"
+      id="org.eclipse.jdt.launching.localJavaApplication"
+      migrationDelegate="org.eclipse.jdt.internal.launching.JavaMigrationDelegate"
+      modes="run, debug"
+      name="%localJavaApplication"
+      sourceLocatorId="org.eclipse.jdt.launching.sourceLocator.JavaSourceLookupDirector"
+      sourcePathComputerId="org.eclipse.jdt.launching.sourceLookup.javaSourcePathComputer"&gt;
+    &lt;/launchConfigurationType&gt;
+&lt;/extension&gt;
+</pre>
+       and also implement <code>org.eclipse.debug.ui.AbstractLaunchConfigurationTab.initializeAttributes()</code> for their specifics tabs.
+    </td>
+  </tr>
+
+  <tr id="group-text-color-stylable-on-windows">
+    <td class="title">Group widget text color stylable on Windows</td>
+    <td class="content">
+      The <code>Group</code> widget text can now have a different color than the system default. Client can use <code>Group#setForeground(Color)</code>
+      to change the text color. Screen-shot for reference:
+      <p>
+        <img src="images/group-text-color-stylable-on-windows.png" alt="Group text in red" />
+      </p>
+    </td>
+  </tr>
+
+  <tr id="styledtext-api">
+    <td class="title">New API getOffsetAtLocation(Point) added to StyledText</td>
+    <td class="content">
+      The new method <code>StyledText#getOffsetAtPoint(Point)</code> is a replacement for
+      <code>StyledText#getOffsetAtLocation(Point)</code>. It behaves similar, except that it does
+      not throw an <code>IllegalArgumentException</code> when no character is at the given location,
+      but returns -1 instead.
+      <p>
+      Using the new method will result in better performance when used in tight loops. Especially the
+      <b>Show Whitespace</b> editor feature benefits from using the new API.
+      </p>
+      <p>
+      The method <code>StyledText#getOffsetAtLocation(Point)</code> has been deprecated.
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="openurl-api">
+    <td class="title">New event SWT.OpenUrl added</td>
+    <td class="content">
+      A new event type <code>SWT.OpenUrl</code> has been added to SWT to notify clients that an URL should be opened.
+      Listeners for OpenUrl event should be added to a Display. The event's text field contains the URL to be opened.
+      <p>
+      URLs can be passed to Eclipse in the same way in which file paths are passed from the command line (i.e, as arguments to the default action
+      <code>--launcher.openFile</code>). An URL can also be passed by configuring a custom URL handler for the platform.
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="webkit2default">
+    <td class="title">Webkit2 is now the default Browser renderer on Linux/GTK</td>
+    <td class="content">
+      <a href='https://www.eclipse.org/eclipse/news/4.4/M6/#swt-webkit'>Preliminary support for Webkit2</a> on Linux/GTK was added in Eclipse Luna.
+      Webkit2 support is now complete and has replaced Webkit1 as the default renderer for the SWT Browser widget on Linux/GTK.
+      <p>Webkit1 was known to crash at times. Webkit2 is stable and runs in a separate process, thus providing enhanced performance and is more secure.</p>
+      <p>Webkit2 was also necessary because Webkit1 is no longer being provided on newer Linux distributions (e.g Fedora 27)</p>
+      <p>To fallback to using Webkit1 (if needed), you can set the environment variable using: <code>export SWT_WEBKIT2=0</code></p>
+      <p>To inspect which version of Webkit you're running Eclipse under, set variable: <code>export SWT_LIB_VERSIONS=1</code>, launch
+         Eclipse/SWT and open an internal browser instance. You should see "<code>SWT_LIB  Webkit (1 or 2) </code>" in the console </p>
+         <p>See <a href='https://bugs.eclipse.org/bugs/show_bug.cgi?id=528844'>Webkit2 port bug</a> for more details.</p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="JDT-Dev">JDT Developers</td>
+  </tr>
+
+  <tr id="regex-module-declaration-search-api">
+    <td class="title">Support for Regex Module Declaration Search</td>
+    <td class="content">
+      The existing method <code>SearchPattern#createPattern(String , int , int , int )</code> is enhanced for
+      supporting regular expression search for module declarations. Please note that the flag 
+      <code>SearchPattern#R_REGEXP_MATCH</code> used for regular expression search is applicable exclusively for
+      module declarations. No other flag (for eg.<code>SearchPattern#R_CASE_SENSITIVE</code>) should be used in
+      disjunction with this match rule.
+    </td>
+  </tr>
+
+
+  <tr>
+    <td colspan="2"/>
+  </tr>
+</table>
+
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Photon milestone builds:</p>
+<ul>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.8/M4/">News for Eclipse Photon milestone build M4</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.8/M3/">News for Eclipse Photon milestone build M3</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.8/M2/">News for Eclipse Photon milestone build M2</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.8/M1/">News for Eclipse Photon milestone build M1</a></li>
+</ul>
+
+<script type="text/javascript" src="../scripts.js"></script>
+
+</body>
+</html>

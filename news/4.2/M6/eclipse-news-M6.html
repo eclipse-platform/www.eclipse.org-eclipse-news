@@ -1,0 +1,447 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="default_style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse 3.8 and 4.2 M6 News</title>
+</head>
+<body>
+<h1>Eclipse 3.8 and 4.2 M6 - New and Noteworthy</h1>
+<p>While there were lineups outside tech stores around the world today for a 
+shiny new piece of <a href="http://arstechnica.com/apple/news/2012/03/ipad-3-teardown-my-god-its-full-of-lithium-ions.ars">fruit</a>,
+today is also notable for a new stable build towards the <a href="http://wiki.eclipse.org/Juno">Juno</a> release
+of the Eclipse platform. Here are some of the more noteworthy things available in milestone build M6 
+  (March 16, 2012) which is now available for <a href="http://download.eclipse.org/eclipse/downloads/" target="_top">download</a>.
+Unless otherwise indicated, all entries listed here are available in both the 3.8 and 4.2 development streams.
+See the <a href="buildNotes.php">build notes</a> for details about bugs fixed and other changes.</p>
+<ul>
+  <li><a href="#Equinox">Equinox</a></li>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#JDT">JDT</a></li>
+  <li><a href="#PDE">PDE</a></li>
+</ul>
+
+<table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
+  <tr>
+    <td colspan="2" class="section" id="Equinox">Equinox</td>
+  </tr>
+  <tr id="osgi-core-5">
+    <td class="title">OSGi Core Release 5</td>
+    <td class="content">
+      With this milestone the Equinox OSGi Framework implements the 
+      draft OSGi Core Release 5 (R5) specification.  The OSGi Core 
+      R5 specification is an incremental change from the R4.3 
+      specification.  A majority of the changes included in
+      the Core R5 specification are in support of the upcoming
+      OSGi Enterprise Release 5 specification.  A public draft of
+      the specification will be available 
+      <a href="http://www.osgi.org/Specifications/Drafts">here</a>
+      by March 26, 2012.  The final version will be available 
+      <a href="http://www.osgi.org/Download/File?url=/download/osgi.core-5.0.0-pfd.pdf">here</a>
+      shortly after that.
+    </td>
+  </tr>
+  <tr id="publisher-negation-requirements">
+    <td class="title">Publisher Support for Negation Requirements</td>
+    <td class="content">
+      The p2 publisher can now publish <b>negation</b> requirements.
+      A negation requirement is a requirement that <b>must not</b>
+      be present.  For example, the Rich Ajax Platform (RAP) can 
+      declare a negation requirement on the Eclipse Platform, meaning
+      that RAP won't be installable into your IDE.<br/>
+      Negation requirements are specified using the p2.inf file.  
+      Details are available on the <a href="http://wiki.eclipse.org/Equinox/p2/Customizing_Metadata#Capability_Advice:">Wiki</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+
+  <tr id="XULRunner">
+    <td class="title"> XULRunner 10</td>
+    <td class="content">
+      The SWT browser now supports embedding XULRunner 10.0.x (note that XULRunner versions 4.x - 9.x are not supported).  
+      Apps wishing to use this must ship a XULRunner 10 runtime and explicitly point at it as described in 
+      <a href="http://www.eclipse.org/swt/faq.php#specifyxulrunner">the FAQ</a> .
+    </td>
+  </tr>
+ 
+  <tr id="ContextMenuTrigger">
+    <td class="title">Provide context menu trigger</td>
+    <td class="content">
+      <tt>MenuDetectEvent</tt> now fills in the event <tt>detail</tt> field to indicate
+      whether the context menu is being triggered by the <tt>SWT.MENU_MOUSE</tt> or <tt>SWT.MENU_KEYBOARD</tt>.
+      If the <tt>event.detail</tt> is <tt>SWT.MENU_KEYBOARD</tt>, custom controls can appropriately position
+      the context menu based on current focus or selection.
+    </td>
+  </tr>
+  <tr id="CustomColors">
+    <td class="title">Set/get custom colors in ColorDialog</td>
+    <td class="content">
+      <tt>ColorDialog</tt> now supports <tt>getRGBs()</tt> and <tt>setRGBs(RGB [])</tt> to allow applications
+      to retrieve, save, and restore any custom colors that the user selected in the dialog.
+      <p><img src="images/custom-colors.png" alt="Custom Colors section of a win32 ColorDialog"/></p>
+    </td>
+  </tr>
+
+  <tr id="BIDI">
+    <td class="title">BIDI segments on text widget</td>
+    <td class="content">
+      The <tt>Text</tt> widget now supports adding <tt>SegmentListener</tt> for BIDI support. This allows BIDI ordering to be applied to segments of the text instead of the entire text.
+    </td>
+  </tr>
+  
+  <tr id="Browser">
+    <td class="title">Browser Function Access</td>
+    <td class="content">
+      <tt>BrowserFunction</tt> can now be installed into specific frames.
+    </td>
+  </tr>
+  
+  <tr id="JarLoading">
+    <td class="title">SWT Runtime introspection</td>
+    <td class="content">
+      <tt>SWT.isLoadable()</tt> can be used to determine whether the SWT implementation can be loaded in the current running environment.
+    </td>
+  </tr>
+
+  <tr id="Overlay">
+    <td class="title">Overlay scrollbars</td>
+    <td class="content">
+      <tt>Scrollable.getScrollbarsMode()</tt> can be used to determine whether the platform shows overlay scrollbars.
+    </td>
+  </tr>
+
+  <tr id="relaunchlast-api">
+    <td class="title">RelaunchLastAction has been made API</td>
+    <td class="content">
+      The internal class <code>RelaunchLastAction</code> has been promoted to API and can be found in the 
+      <code>org.eclipse.debug.ui.actions</code> package.
+    </td>
+  </tr>
+
+  <tr id="expression-view-constant-api">
+    <td class="title">Add new expression image constant has been made API</td>
+    <td class="content">
+      The constant <code>IDebugUIConstants.IMG_OBJ_ADD_NEW_EXPRESSION</code> has been added to API to allow consumers who 
+      extend or use the <b>Expressions</b> view look-and-feel to use the <b>Add New Expression</b> icon 
+      (<img src="images/monitorexpression_tsk.gif" alt="The add new expression icon"/>).
+    </td>
+  </tr>
+
+  <tr id="toggle-bp-target-mgr-api">
+    <td class="title">Toggle breakpoints target manager has been made API</td>
+    <td class="content">
+      The interface <code>org.eclipse.debug.ui.actions.IToggleBreakpointsTargetManager</code> has been made API to allow clients
+      access to known <code>IToggleBreakpointTarget</code>s. The new API can be accessed via 
+      <code>org.eclipse.debug.ui.DebugUITools#getToggleBreakpointsTargetManager()</code>
+    </td>
+  </tr>
+  
+  <tr id="bp-types-contribution-api">
+  	<td class="title">BreakpointTypesContribution has been made API</td>
+  	<td class="content">
+  		The class <code>org.eclipse.debug.ui.actions.BreakpointTypesContribution</code> has been added to API. This class 
+  		can be reused by clients to add a breakpoint type action in the editor gutter context menu to match the action(s) that appear in the 
+  		<b>Run &gt; Breakpoint Types</b> menu. 
+  	</td>
+  </tr>
+
+  <tr id="var-view-find-override">
+  	<td class="title">Find action can be customised in Variables View specialisations</td>
+  	<td class="content">
+  		Consumer now have the ability to completely override the behaviour of the <b>Find...</b> action in the <b>Variables View</b> and any of
+  		its sub-classes, e.g. <b>Expressions View</b>, <b>Modules View</b>, etc.
+  		<p>
+  			To replace the default <b>Find...</b> actions clients must provide an adapter for the 
+  			interface <code>org.eclipse.debug.internal.ui.viewers.model.provisional.IViewActionProvider</code>.
+  		</p>
+  		<p>
+  			For more information see the Javadoc for <code>org.eclipse.debug.internal.ui.viewers.model.provisional.IViewActionProvider</code>
+  			with an example available in the <code>org.eclipse.debug.examples.ui</code> bundle found in the Platform Debug Git repo.
+  		</p>
+  	</td>
+  </tr>
+  <tr id="launch-config-name-validation">
+  	<td class="title">Improved launch configuration name validation</td>
+  	<td class="content">
+  		Now if you create a launch configuration with the name of an existing configuration, the type of the conflicting configuration
+  		is noted in the error message.
+  		<p><img src="images/lcd-name-error.png" alt="Launch configuration dialog showing name conflict error"/></p>
+  	</td>
+  </tr>
+  
+  <tr>
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+  
+  <tr id="ignore-warnings-source-folders">
+    <td class="title">Selectively ignore errors/warnings from source folders</td>
+    <td class="content">
+        You can now configure JDT to ignore optional errors/warnings from certain source folders. 
+		<b>Project properties &gt; Java Build Path &gt; Compiler &gt; Source</b>.
+		<p><img src="images/ignore-warnings-source-folders.png" alt="Java Build path page with 'Ignore optional compile problems' highlighted"/></p>
+        <p>
+		With this option set to <b>Yes</b>, JDT will suppress errors/warnings configured in the 
+		<b>Preferences &gt; Java &gt; Compiler &gt; Errors/Warnings</b> page. This can be desirable
+		for source folders that contain auto-generated classes or tests.
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="quick-outline-camel-case">
+    <td class="title">CamelCase in Quick Outline</td>
+    <td class="content">
+        The <b>Quick Outline (Ctrl+O)</b> and <b>Quick Hierarchy (Ctrl+T)</b> in the Java Editor now also
+        support camelCase matching on the element name, quite similar to the Open Type dialog and Content Assist.
+		<p><img src="images/quick-outline-camel-case.png" alt="Quick Outline of StyledText with pattern 'gCa'"/></p>
+		The * and ? wildcards still work, of course.
+    </td>
+  </tr>
+  
+  <tr id="improved-null-analysis-problems">
+    <td class="title">Improved messages for null analysis problems</td>
+    <td class="content">
+        The wording of several error messages and compiler options in
+        <b>Preferences &gt; Java &gt; Compiler &gt; Errors/Warnings &gt; Null analysis</b> has been improved:
+		<ul>
+		<li><b>Violation of null specification</b><br/>
+			<img src="images/new-null-analysis-message1.png" alt="This option produces the
+			'Null type mismatch: required '@NonNull String' but the provided value is specified as @Nullable' warning"/>
+			<p>Here, 'in' is not a legal return value because of the @Nullable annotation in its <b>declaration</b>.</p>
+		</li>
+		<li><b>Conflict between null annotations and null inference</b><br/>
+			<img src="images/new-null-analysis-message2.png" alt="This option produces the
+			'Null type mismatch: required @NonNull String but the provided value is inferred as @Nullable' warning"/>
+			<p>Here, 'local' is not a legal return value, because flow analysis for the un-annotated variable 'local' <b>infers</b> that 
+			it can be null on some path.</p>
+		</li>
+		<li><b>Unchecked conversion from non-annotated type to @NonNull type</b><br/>
+			<img src="images/new-null-analysis-message3.png" alt="This option produces the
+			'Null type safety: The expression of type String needs unchecked conversion to conform to @NonNull String' warning"/>
+			<p>Here, the return value from 'getLegacyValue()' may or may not be compatible to '@NonNull String'. 
+			Similar to converting a legacy raw type to a generic type, also here essential type information is missing 
+			since 'getLegacyValue()' has no @NonNull or @Nullable annotation.</p>
+		</li>
+		</ul>
+	</td>
+  </tr>
+  
+  <tr id="missing-non-null-by-default-annotation">
+    <td class="title">Detection of missing default nullness annotation</td>
+    <td class="content">
+        You can now configure JDT to detect a missing default nullness annotation when using the annotation-based null analysis.
+        When <b>Preferences &gt; Java &gt; Compiler &gt; Errors/Warnings &gt; Null analysis &gt; Missing '@NonNullByDefault' annotation on package</b>
+        is enabled, JDT will issue an error/warning in the following cases:
+		<ul>
+		<li> When a package does not contain an '@NonNullByDefault' annotation in the package-info.java:
+		<p><img src="images/missing-nonnullbydefault-package.png" alt="Missing @NonNullByDefault annotation on package warning"/></p>
+		</li>
+		<li> When a type inside a default package does not contain a default nullness annotation.
+		<p><img src="images/missing-nonnullbydefault-type.png" alt="Missing @NonNullByDefault annotation on type warning"/></p>
+		</li>
+		</ul>
+		<p> Note that the option <b>Use non-null as workspace wide (or project-wide) default</b> has been withdrawn. 
+		Instead, you can enable the <b>Missing '@NonNullByDefault' annotation on package</b> option and make sure you specify the default nullness 
+		annotation on all types/packages.</p>
+	</td>
+  </tr>
+  
+    <tr id="Assert-like-java-assert-null-analysis">
+    <td class="title">Null analysis treats org.eclipse.core.runtime.Assert like Java assert</td>
+    <td class="content">
+        Since <b>org.eclipse.core.runtime.Assert</b> is often used just like the Java <b>assert</b> keyword, JDT's null analysis considers
+		the boolean expression passed into the former as always true after the Assert reference, since if the condition did turn out to be false,
+		the control flow will never go further than the org.eclipse.core.runtime.Assert reference.
+		<p><img src="images/assert-warnings.png" alt="Code snippet showing the boolean expression passed into org.eclipse.core.runtime.Assert.isLegal(..) is considered true after the call"/></p>
+	</td>
+  </tr>
+  
+  <tr id="null-analysis-fields-withdrawn">
+    <td class="title">Null analysis for fields withdrawn</td>
+    <td class="content">
+		"No man loves the bearer of bad tidings", said Sophocles.
+       While we're proud to announce all the recent enhancements in JDT's null analysis, we have decided to withdraw the support added 
+	   for null analysis of fields in Juno M5 so that a more general and configurable solution could be considered in future without 
+	   being constrained by the present implementation.
+	   Stay tuned!
+	</td>
+  </tr>
+  
+  <tr id="resource-leak-default-warning">
+    <td class="title">Resource leak detection improved and enabled by default</td>
+    <td class="content">
+        Resource leak detection as introduced in JDT Juno M3 is now less aggressive if a resource
+		is shared between methods, possibly via a field, where any party accessing the resource
+		could possibly issue the desired call to close(). This, along with some fine tuning of the
+		analysis, results in a greatly reduced number of false positives. Thus, the detection of a
+		definite resource leak is now much more reliable and reporting is set to <b>warning</b> by default.
+		This can be configured in the <b>Java &gt; Compiler &gt; Errors/Warnings</b> preference page.
+		
+		<p><img src="images/resource-leak-default-warning.png" alt="Errors/Warnings page with 'Resource leaks' highlighted"/></p>
+	</td>
+  </tr>
+  
+  <tr id="incomplete-switch-over-enum">
+    <td class="title">Incomplete switch over enum</td>
+    <td class="content">
+        JDT now raises a new warning whenever a switch on an enum value lacks a default case, and the option 
+		<b>Preferences &gt; Java &gt; Compiler &gt; Errors/Warnings &gt; Incomplete 'switch' cases over enum</b> is enabled.
+		<p><img src="images/switch-case-enum.png" alt="Warning on switch over enum with missing default case"/></p>
+		<p> Note that in cases like the above, the warning also helps to understand another
+		error against the last statement:<br/>
+		"The local variable printString may not have been initialized"
+		is reported because clients could possibly call the method <code>print(Color)</code> with an 
+		enum value that is not known at the time of compiling this method.</p>
+	</td>
+  </tr>
+  
+  <tr id="show-monitors-default">
+    <td class="title">Show Monitors on by default</td>
+    <td class="content">
+      The default setting for displaying monitor information in the <b>Debug</b> view is now set to <em>on</em>.
+      This change only affects new workspaces and does not change existing settings.
+      <p>
+      Showing monitor information can be turned on or off using the <b>Java &gt; Show Monitors</b> view action
+      within the <b>Debug</b> view.
+      </p>
+    </td>
+  </tr>
+  <tr id="toggle-bp-mod-keys">
+    <td class="title">Toggle breakpoint modifier keys</td>
+    <td class="content">
+      There is now support for modifier keys while toggling breakpoints in the Java editor:
+      <ul>
+        <li><p>Holding the <b>Ctrl</b> key while double-clicking (toggling) a breakpoint will cause the <b>Properties 
+        dialog</b> for that breakpoint to be displayed (on the Mac, use <b>Command</b>)</p>
+        </li>
+        <li>Holding the <b>Alt</b> key while double-clicking (toggling) a breakpoint will <b>enable / disable</b> that breakpoint</li>
+      </ul>
+      If there is no existing breakpoint, a normal breakpoint toggle takes place even if a modifier key is held down.
+    </td>
+  </tr>
+
+  <tr id="bracket-matching">
+	<td class="title">Improved bracket matching support in Java editor</td>
+	<td class="content">
+		The Java editor now supports highlighting of enclosing brackets.
+		<p><img src="images/enclosing-brackets.png" alt="Enclosing brackets"/></p>
+		
+		This can be configured on the <b>Java &gt; Editor</b> preference page.
+		<p><img src="images/bracket-highlighting-preferences.png" alt="Preferences for bracket highlighting"/></p>
+		
+		<p>Also, the <b>Navigate &gt; Go To &gt; Matching Bracket</b> action <b>(Ctrl+Shift+P)</b> now works everywhere in a file. If a bracket is not selected 
+		before invoking the action, the action navigates to the nearest enclosing end bracket. On invoking the action a second time, it
+		navigates to the corresponding start bracket. On the third invocation, the original selection is restored.</p>
+		
+		<p>Furthermore, the start bracket is now highlighted when the caret is before (not after) the end bracket.</p>  
+		<p><img src="images/matching-bracket.png" alt="Matching bracket example"/></p>
+	</td>
+  </tr>
+
+  <tr id="default-implementations-for-correction-proposals">
+	<td class="title">Default implementations for correction proposals</td>
+	<td class="content">
+		JDT now provides the following default implementations for correction proposals that can be used to contribute quick fixes and quick assists.
+		<ul>
+			<li><code>org.eclipse.jdt.ui.text.java.correction.ChangeCorrectionProposal</code></li>
+			<li><code>org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal</code></li>
+			<li><code>org.eclipse.jdt.ui.text.java.correction.ASTRewriteCorrectionProposal</code></li>
+		</ul>
+		This makes it easier to implement quick fixes/assists that operate on .java files and use an ASTRewrite.
+	</td>
+  </tr>
+  
+  <tr id="errors-warnings-highlight">
+    <td class="title">Highlighting on Errors/Warnings preference pages</td>
+    <td class="content">
+        On Errors/Warnings preference pages, it is sometimes hard to see which item is selected, especially
+        when you opened the dialog via the "Configure Problem Severity" button.
+        <p><img src="images/configure-problem-severity.png" alt="Configure Problem Severity button in Java Editor problem hover"/></p>
+        Now, an arrow highlights the selected item, and another arrow highlights the item under the mouse.
+        <p><img src="images/errors-warnings-highlight.png" alt="Highlighting in preference pages"/></p>
+        The highlighting also works on the PDE and API Tools preference pages.
+    </td>
+  </tr>
+  
+  
+  <tr>
+    <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
+  <tr id="target-configure-phase">
+    <td class="title">Target definition configure phase</td>
+    <td class="content">
+     When working with a target definition containing a software site location (such as a p2 repository) it is now possible to change whether the p2 configuration phase should be run when resolving the target.  By default the configuration phase is not included.  Changing the setting will change all locations in the target definition.
+     <p><img src="images/configurephase.png" alt="Configure phase option"/></p>
+    </td>
+  </tr>
+
+  <tr id="product-add-required">
+    <td class="title">Add required in feature based product</td>
+    <td class="content">
+     The product editor now has an <b>Add Required</b> button when editing a feature based product.  Pressing the button will add all the features that are required by the features already in the product configuration.
+     <p><img src="images/addrequired.png" alt="Add required button"/></p>
+    </td>
+  </tr>
+
+  <tr id="extensions-editor-enhancements">
+    <td class="title">Extension editor enhancements</td>
+    <td class="content">
+     Several improvements have been made to the extensions tab of the <b>Plug-in Editor</b>.
+     <p><img src="images/extensions2.png" alt="Extensions editor enhancements"/></p>  
+    <ul>
+      <li><b>Filter related:</b> Available by right clicking and pressing <b>Filter Related</b>, only extensions that are related (same id, label, class, etc) will be displayed in the tree</li>
+      <li><b>Filter enhancements:</b> The standard filter textbox now supports multiple filters separated by "/", matches are bolded, and the filter applies to extension attributes</li>
+      <li><b>Label improvements:</b> More items will display icons and labels, class names are displayed without package name</li>
+      <li><b>Accelerated scrolling:</b> Pressing <b>Ctrl</b> while scrolling does fast scrolling</li>
+      <li><b>Better expansion:</b> The expand state of selected items can be toggled with a new action</li>
+      <li><b>Search workspace:</b> Search the workspace for extensions related to items in the editor</li>
+    </ul>
+    </td>
+  </tr>
+
+  <tr id="workspace-deletion-cancel">
+    <td class="title">Workspace deletion is cancelable</td>
+    <td class="content">
+     Eclipse and OSGi launch configurations have the option to delete the workspace and configuration folders before launching.  This can be a long running operation with large workspaces.  The operation is now cancelable which will stop the launch.
+    </td>
+  </tr>
+
+  <tr id="api-tracing">
+    <td class="title">API Tools tracing</td>
+    <td class="content">
+     API Tools has added all debug tracing settings to the <b>Tracing</b> preference page where they can be enabled and disabled as needed without restarting.
+     <p><img src="images/tracing.png" alt="API Tools tracing"/></p>
+    </td>
+  </tr>
+
+  <tr id="ee-cleanup">
+    <td class="title">EE descriptions updated</td>
+    <td class="content">
+     The API Tools execution environment descriptions have been
+     updated with more accurate package information and have been renamed for easier installation.
+     To turn on warnings for invalid references to classes or methods that are not available in the configured execution environment, use the
+     <b>Plug-in Development &gt; API Errors/Warnings</b> preference page.
+     <p>The execution environment descriptions can be installed from the Eclipse update site
+     (<a href="http://download.eclipse.org/eclipse/updates/3.8-I-builds">http://download.eclipse.org/eclipse/updates/3.8-I-builds</a>)
+     under the <b>API Tools Execution Environment Descriptions</b> category.</p>
+     <p><img src="images/eedesc.png" alt="Updated EE descriptions"/></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2">  </td>
+  </tr>
+</table>
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Juno milestone builds:</p>
+<ul>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.2M5-201201271145/eclipse-news-M5.html">New for Eclipse Juno milestone build M5 (January 27, 2012)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.2M4-201112092100/eclipse-news-M4.html">New for Eclipse Juno milestone build M4 (December 9, 2011)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.2M3-201110281100/eclipse-news-M3.html">New for Eclipse Juno milestone build M3 (October 28, 2011)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.2M2-201109161615/eclipse-news-M2.html">New for Eclipse Juno milestone build M2 (September 16, 2011)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.8M1-201108031800/eclipse-news-M1.html">New for Eclipse Juno milestone build M1 (August 5, 2011)</a></li>
+</ul>
+</body>
+</html>

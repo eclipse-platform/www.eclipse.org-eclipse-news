@@ -1,0 +1,460 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style type="text/css">
+p, table, td, th {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt}
+pre {  font-family: "Courier New", Courier, mono; font-size: 10pt}
+h2 { font-family: verdana, arial, helvetica, geneva; font-size: 18pt; font-weight: bold ; line-height: 14px}
+code {  font-family: "Courier New", Courier, mono; font-size: 10pt}
+sup {  font-family: verdana, arial, helvetica, geneva; font-size: 10px}
+h3 {  font-family: verdana, arial, helvetica, geneva; font-size: 14pt; font-weight: bold}
+li {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt}
+h1 {  font-family: verdana, arial, helvetica, geneva; font-size: 24pt; font-weight: bold}
+body {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt; margin-top: 5mm; margin-left: 3mm}
+.indextop { font-size: x-large; font-family: verdana, arial, helvetica, sans-serif; font-weight: bold}
+.indexsub { font-size: xx-small; font-family: verdana, arial, helvetica, sans-serif; color: #8080FF}
+a.bar:link {  text-decoration: none; color: #FFFFFF}
+a.bar:visited {  color: #FFFFFF; text-decoration: none}
+a.bar:hover {  color: #FFFFFF; text-decoration: underline}
+a.bar {  color: #FFFFFF}
+
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+  </style>
+<title>Eclipse Project Photon (4.8) M6 - New and Noteworthy</title>
+</head>
+
+<body>
+<h1>Eclipse Project Photon (4.8) M6 - New and Noteworthy</h1>
+
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#JDT">JDT</a></li>
+  <li><a href="#PDE">PDE</a></li>
+  <li><a href="#Platform-Dev">Platform Developers</a></li>
+  <li><a href="#JDT-Dev">JDT Developers</a></li>
+  <li><a href="#Equinox">Equinox</a></li>
+</ul>
+
+<table class="news">
+  <colgroup>
+    <col class="title" />
+    <col />
+  </colgroup>
+
+ 
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+
+  <tr id="edit-project-natures">
+    <td class="title">Modify project natures</td>
+    <td class="content">
+      The Project Properties dialog now features a page to add or remove natures on a project.
+      <p>
+        <img src="images/editNatures.png" alt="" />
+      </p>
+      As mentioned on the page, some natures may not properly handle manual addition/removal, so using
+      this can lead to some inconsistencies in those cases.
+    </td>
+  </tr>
+
+  <tr id="range-indicator-color">
+    <td class="title">Possibility to configure the color of text editor's range indicator</td>
+    <td class="content">
+      The text editor's range indicators's color can now be configured via the <b>Colors and Fonts</b> preference page.
+      <p><img src="images/range_ind_pref.png" alt="Range indicator in the Colors and Fonts preference page"/></p>
+    </td>
+  </tr>
+
+  <tr id="range-indicator-dark-theme">
+    <td class="title">Styling for text editor's range indicator</td>
+    <td class="content">
+      The Eclipse default dark theme now includes styling for the text editor's range indicator.
+      <p><img src="images/range_ind_dark.png" alt="Range indicator in the dark theme"/></p>
+    </td>
+  </tr>
+
+  <tr id="text-editor-icons-dark-theme">
+    <td class="title">Improved text operation icons for the dark theme</td>
+    <td class="content">
+      The block selection, word warp and show whitespace icons have been adjusted to look good in the dark theme.
+      <p>Before:<br/><img src="images/old-text-toolbar-entries.png" alt="before"/></p>
+      <p>After:<br/><img src="images/new-text-toolbar-entries.png" alt="after"/></p>
+    </td>
+  </tr>
+
+  <tr id="popup-dialog-dark-theme">
+    <td class="title">Improved popup dialogs for the dark theme</td>
+    <td class="content">
+      Popup dialogs as for example the platform's update notification popup now uses a dark background and a light foreground color in the dark theme.
+      <p><img src="images/update_dialog_dark.png" alt="Update dialog in dark theme"/></p>
+    </td>
+  </tr>
+
+  <tr id="font-dark-text-editor">
+    <td class="title">Improved text color in text editor for the dark theme</td>
+    <td class="content">
+      The text editor now uses an improved font color in the dark theme so that you can read better.
+      <p><br/><img src="images/text-editor-dark-font-new.png" alt="after"/></p>
+
+    </td>
+  </tr>
+
+  <tr id="parallel-builds-preference">
+    <td class="title">Allow workspace to build projects in parallel</td>
+    <td class="content">
+      The <b>Workspace</b> preference page now has a new option to allow the workspace to build projects in parallel:
+      <p><img src="images/preferences-simultaneous-builds.png" alt="preference page screenshot"/></p>
+      <p>Under some safe circumstances, the workspace can now choose to build independent projects in parallel. In such
+      case, the maximum amount of jobs/threads that will be running builds in parallel will be controlled by this preference. A value of
+      <code>1</code> will indicate that build won't be parallelized keeping the legacy behavior.</p>
+      <p>The optimal value will depend on the machine and workspace projects specificities. Recommendation is to try relatively
+      low values (such as <code>4</code>) first which will allow to save time, when allowed by projects, while not risking
+      the CPU overload.</p>
+    </td>
+  </tr>
+
+  <tr id="refresh-on-access">
+    <td class="title">Refresh on access on by default</td>
+    <td class="content">
+      For years the Eclipse IDE is shipping with a customization that files are automatically refreshed if the user accesses them.
+      Other Eclipse based tools like the Spring Tools Suite were missing this customization, so now they do not have to manually instruct their IDE to see the update.
+    </td>
+  </tr>
+
+  <tr id="open-resource-dialog-paths">
+    <td class="title">Open resource dialog always shows the paths</td>
+    <td class="content">
+      You can now use the Open Resource dialog to see the file paths.
+      Previously it only showed the paths if there were duplicate entries.
+      <p><br/><img src="images//open-resource-dialog.png" alt="after"/></p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+
+  <tr id="nonnullbydefault-improvements">
+    <td class="title">@NonNullByDefault improvements</td>
+    <td class="content">
+    When using annotation-based null analysis, there are now more ways to define which unannotated locations are implicitly assumed to be annotated as <code>@NonNull</code>:
+      <ul>
+      <li>
+      <a href="http://help.eclipse.org/topic/org.eclipse.jdt.doc.isv/reference/api/org/eclipse/jdt/annotation/NonNullByDefault.html"><code>@NonNullByDefault</code></a>
+       annotations based on enum <a href="http://help.eclipse.org/topic/org.eclipse.jdt.doc.isv/reference/api/org/eclipse/jdt/annotation/DefaultLocation.html"><code>DefaultLocation</code></a>
+       can be also used if the primary nullness annotations are declaration annotations (previously this was supported only for <code>TYPE_USE</code> annotations).
+      </li>
+      <li>
+      Support for <code>@NonNullByDefault</code> annotations that are targeted at parameters has been implemented.
+      </li>
+      <li>
+      Multiple different <code>@NonNullByDefault</code> annotations (especially with different default values) may be placed at the same target,
+       in which case the sets of affected locations are merged.
+      </li>
+      <li>
+      Annotations which use a meta annotation <code>@TypeQualifierDefault</code>
+      instead of a <code>DefaultLocation</code>-based specification are now understood, too, e.g. 
+      <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/lang/NonNullApi.html"><code>@org.springframework.lang.NonNullApi</code></a>.
+      </li>
+      </ul>
+      Version 2.2.0 of bundle <code>org.eclipse.jdt.annotations</code>
+      containing an annotation type <code>NonNullByDefault</code> that can be applied to parameter and 
+      <a href="https://www.eclipse.org/eclipse/news/4.8/M5/#nonnullbydefault-per-module">module declarations</a> (in addition to the previously allowed targets).
+    </td>
+ 	</tr>
+
+  <tr id="testsources-apt">
+    <td class="title">Test sources</td>
+    <td class="content">
+      There is now support for running Java annotation processors on <a href="../M5/index.html#jdt-test-sources">test sources</a>.
+      The output folder for files generated for these can be configured in the project properties in
+      <b>Java Compiler > Annotation Processing</b> as <b>Generated test source directory</b>
+      <p><img src="images/testsources-apt-531072.png" alt=""/></p>
+    </td>
+  </tr>
+
+  <tr id="link-in-element-info-jdt">
+    <td class="title">Improved coloring of links in code element information in the dark theme</td>
+    <td class="content">
+      The colors of links in code element information controls now take the color settings of the "Hyperlink text color" and the "Active hyperlink text color" from the "Colors &amp; Fonts" preference page into account.
+      The readability in the dark theme has been improved a lot by this.
+      <p>Before:<br/><img src="images/element_info_before.png" alt="before"/></p>
+      <p>After:<br/><img src="images/element_info_after.png" alt="after"/></p>
+    </td>
+  </tr>
+
+  <tr id="inherited-members-quick-outline-jdt">
+    <td class="title">Improved coloring of inherited members in the Quick Outline in the dark theme</td>
+    <td class="content">
+      The Eclipse default dark theme now includes styling of inherited members in JDT's <b>Quick Outline</b>. This improves readability in the dark theme a lot. The color can be configured via the "Java > Inherited Members" color definition on the <b>Colors and Fonts</b> preference page.
+      <p>Before:<br/><img src="images/inherited_before.png" alt="before"/></p>
+      <p>After:<br/><img src="images/inherited_after.png" alt="after"/></p>
+    </td>
+  </tr>
+
+   <tr id="generate-dialogs-jdt">
+    <td class="title">Generate dialogs use verbs instead of OK</td>
+    <td class="content">
+      The "Generate..." dialogs of the Java tools have been adapted to use verbs instead of OK.
+    </td>
+  </tr>
+
+   <tr id="sort-library-entries-jdt">
+    <td class="title">Sort library entries alphabetically in Package Explorer</td>
+    <td class="content">
+      The content of libraries are displayed in the order of the classpath. This makes it difficult to find
+      specific libraries by their name, especially when projects have many dependencies. The <b>library entries
+      can now be sorted alphabetically</b> when setting the preference "Sort library entries alphabetically in Package Explorer"
+      on the <b>Java > Appearance</b> preference page:
+      <p><img src="images/jdt_sort_library_pref.png" alt=""/></p>
+      <table>
+        <tr><th>OFF</th><th>ON</th></tr>
+        <tr>
+          <td><img src="images/jdt_library_entries_unsorted.png" alt="before" style="width:240px"/></td>
+          <td><img src="images/jdt_library_entries_sorted.png" alt="before" style="width:240px"/></td>
+        </tr>
+      </table>
+      <p>The <b>default</b> for this preference is <b>OFF</b>.</p>
+    </td>
+  </tr>
+
+   <tr id="formatter-javadoc">
+    <td class="title">Formatter: align Javadoc tags in columns</td>
+    <td class="content">
+      The formatter can now <b>align names and/or descriptions</b> in Javadoc tags in new ways. The formatter profile editor is available for selection, under <b>Comments &gt; Javadoc</b>.
+      <p><img src="images/formatter-javadoc-prefs.png" alt=""/></p>
+      <p>For example, the <b>Align descriptions, grouped by type</b> setting is now used in the built-in Eclipse profile.</p>
+      <p><img src="images/formatter-javadoc-preview.png" alt=""/></p>
+      <p>The setting previously known as <b>Indent Javadoc tags</b> is now called <b>Align descriptions to tag width</b>. The two settings related to <b>@param tags</b> also had their labels changed to better describe what they do.</p>
+    </td>
+  </tr>
+  
+  <tr id="quickfix-javadoc">
+    <td class="title">QuickFix for <code>unresolved module</code> on module name in <code>requires directive</code></td>
+    <td class="content">
+      A new quickFix  is offered on <b>requires</b> statements in the <b>module-info.java</b> file to fix issues that are reported due to unresolved module.
+      The below quickFix will be provided if the module related to the unresolved module error has its related classpath added to the class path and not to the module path.
+      <p>This quickFix is applicable if the project is a Java9 project and has a module-info.java file</p>
+      <p>This quick Fix can be invoked from the editor.</p> 
+      <p><img src="images/java9-module-requires-move-from-classpath-to-modulepath-quickfix.png" alt=""/></p>
+      <p>Before the quickFix is applied the classpath entries look as below: </p>
+      <p><img src="images/java9-module-requires-move-from-classpath-to-modulepath-CPE-before-quickfix.png" alt=""/></p>
+      <p>After the quickFix is applied the classpath entries look as below: </p>
+      <p><img src="images/java9-module-requires-move-from-classpath-to-modulepath-CPE-after-quickfix.png" alt=""/></p>
+    </td>
+  </tr>
+  
+  <tr id="newproject-modulefile">
+    <td class="title">Creation of <code>module-info.java file</code> on creation of a <code>New Java9 Project</code></td>
+    <td class="content">
+      A new feature  is offered on creation of a java project with compliance Java9 or above for the creation of module-info.java file.
+      <p>A new checkbox is added in page 2 of the project creation page, highlighted in RED in the Page 2 image below. </p>
+      <p> Page 1 </p>
+      <p><img src="images/create_Java_Project_1.png" alt=""/></p>
+      <p> Page 2 </p>
+      <p><img src="images/create_Java_Project_2.png" alt=""/></p>
+      <p>The new  checkbox for the creation of module-info.java file is checked by default</p>
+      <p>If this checkbox is checked, upon project creation the below dialog will appear for creation of a new <code> module-info.java </code> file </p>
+      <p><img src="images/create_module_info.png" alt=""/></p>
+      <p>Selecting <code>Don't Create</code> in the above dialog does not create the module-info.java file, but creates the project.</p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
+  <tr id="testsource-pde">
+    <td class="title">Test sources</td>
+    <td class="content">
+      Sources folders in plug-in projects whose project name ends with ".test" or ".tests", or contains ".tests.", are
+      now marked to contain <a href="../M5/index.html#jdt-test-sources">test sources</a> when using <b>Plug-in Tools > Update Classpath...</b>,
+      so the related filtering options in various tools can be used.
+      The exact name matching rule can be configured as regular expression in <b>Preference > Plug-In Development </b> in the group <b>Test plug-in detection</b>. Setting it to an empty value disables this mechanism.
+	  <p>
+	    <img src="images/testsources-pde-526910.png" alt="" />
+	  </p>
+    </td>
+  </tr>
+  <tr id="update-ui-version">
+    <td class="title">Command to update IU versions</td>
+    <td class="content">
+      The right-click context menu within <code>.target</code> file source editors now contains a new <b>Update IU Versions from Repositories</b> command to update the version attribute of all units to the newest available version.
+	  <p>Before:</p>
+	  <p>
+	    <img src="images/update_iu_command_before.png" alt="" />
+	  </p>
+	  <p>After:</p>
+	  <p>
+	    <img src="images/update_iu_command_after.png" alt="" />
+	  </p>
+    </td>
+  </tr>
+  <tr id="target-source-editor-dark-theme">
+    <td class="title">Improved coloring of the target file editor in the dark theme</td>
+    <td class="content">
+      The text colors for <code>.target</code> file source editors have been updated to be more legible in the dark theme.
+	  <p>Before:</p>
+	  <p>
+	    <img src="images/target-editor-dark-before.png" alt="" />
+	  </p>
+	  <p>After:</p>
+	  <p>
+	    <img src="images/target-editor-dark-after.png" alt="" />
+	  </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="Platform-Dev">Platform Developers</td>
+  </tr>
+
+  <tr id="org.eclipse.e4.core.di-api">
+    <td class="title">New API: org.eclipse.e4.core.di</td>
+    <td class="content">
+    The package org.eclipse.e4.core.di in bundle org.eclipse.e4.core.di has been released as API.
+    This package contains the following mentionable types:
+    <ul>
+  		<li><b>InjectionException:</b> When using the ContextInjectionFactory to manually trigger dependency injection, all methods eventually throw an InjectionException. By making org.eclipse.e4.core.di API, this InjectionException becomes API, too and can therefore be processed properly.</li>
+  		<li><b>IInjector:</b> To manually trigger dependency injection on a more fine-grained level, e.g. without using the IEclipseContext as an ObjectSupplier.</li>
+  		<li><b>InjectorFactory:</b> To create an instance of IInjector.</li>
+  	</ul>
+    </td>
+  </tr>
+  
+  <tr id="fontmetrics-api">
+    <td class="title">New API getAverageCharacterWidth added to FontMetrics</td>
+    <td class="content">
+      A new method has been added in <code>FontMetrics</code>:
+      <p><code>double getAverageCharacterWidth()</code></p> which is a replacement for
+      <p><code>int getAverageCharWidth()</code></p> They are similar in function, except that the new method returns the average character width of the Font as 
+      a double-precision floating point value instead of a integer value. 
+      <p>
+      The method <code>FontMetrics#getAverageCharWidth()</code> has been deprecated.
+      </p>
+    </td>
+  </tr>
+
+  <tr id="datetime-localization-support">
+    <td class="title">Datetime on Gtk now has support for localization</td>
+    <td class="content">
+    Datetime on Gtk now has support for localized date format.<br/>
+    A snippet to demonstrate can be found <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet370.java">Snippet370 </a>.<br/>
+    <img src="images/datetime.png" alt="" />
+    </td>
+  </tr>
+
+  <tr id="parallel-build-workspace-description">
+    <td class="title">Configure workspace description to allow independent projects to build in parallel</td>
+    <td class="content">
+      The <code>IWorkspaceDescription</code> has received a new API method <code>setMaxConcurrentBuilds(int n)</code>
+      which allows to configure throttling of how many threads/jobs will be used in case workspace can
+      build independent projects in parallel.
+      <p>At the moment, parallel builds with happen when under safe circumstances, depending on the scheduling rules involved
+      in <code>IncrementalProjectBuilder.getRule()</code>. Having all builders specifying a "relaxed" scheduling rule (not
+      containing workspace root) is a requirement for paralllel builds to happen. As such, to take advantage of parallel
+      builds, consider refining the implementation of <code>getRule()</code> in your builders.</p>
+      <p>Passing a value of <code>1</code> to <code>setMaxConcurrentBuilds(int n)</code> will disable the parallel builds
+      in general, and will make workspace build behave as it's used to, building projects sequentially. This it still the
+      default value and behavior, so it makes parallel builds of independent project an opt-in feature so far.</p>
+      <p>The optimal value for throttling depends on your machine and workspace projects specificities. We do recommend to try relatively
+      low values (such as <code>4</code>) first which already allow to save time, when projects allow it, while not risking to
+      overload your CPU.</p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="JDT-Dev">JDT Developers</td>
+  </tr>
+
+  <tr id="dom-api-getbinding-change">
+    <td class="title">Package binding with recovery
+    </td>
+    <td class="content">
+      The existing method <code>IBinding#getJavaElement()</code> now
+      accommodates recovered packages in which case a null may be
+      returned for such problem package bindings. Pre-Java 9 compliant code
+      will continue to have a non-null return value for this api for packages.
+
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="Equinox">Equinox</td>
+  </tr>
+
+  <tr id="equinox-sha-256-checksum">
+    <td class="title">Use SHA-256 to check artifact's data integrity</td>
+    <td class="content">
+      To ensure data integrity of artifacts, alongside MD5, p2 now also generates and checks checksums using SHA-256 MessageDigest implementation, provided by any JRE. These checksums stored in two new artifact's metadata properties:
+      <ul>
+	<li><code>download.checksum.sha-256</code></li>
+	<li><code>artifact.checksum.sha-256</code></li>
+      </ul>
+      In standalone applications like a mirror application, use <code>org.eclipse.equinox.artifact.comparator.checksum.sha-256</code> as a comparator ID.
+    </td>
+  </tr>
+
+  <tr id="equinox-messagedigest-checksum">
+    <td class="title">Support any MessageDigest implementation as artifact's checksum algorithm</td>
+    <td class="content">
+      With new extension point <code>org.eclipse.equinox.p2.artifact.repository.artifactChecksums</code>, it is now possible to contribute any MessageDigest implementation as a way to calculate and check artifact's checksums:
+
+      <ul>
+        <li>Register your contribution:
+        <pre>
+          <code>
+            &lt;extension point="org.eclipse.equinox.p2.artifact.repository.artifactChecksums"&gt;
+              &lt;artifactChecksum algorithm="TIGER" id="tiger"/&gt;
+            &lt;/extension&gt;
+          </code>
+        </pre>
+        </li>
+        <li>In your bundle's Activator, register a SecurityProvider that provides an actual MessageDigest implementation:
+        <pre>
+          <code>
+            public void start(BundleContext context) throws Exception {
+              Security.addProvider(new BouncyCastleProvider());
+            }
+          </code>
+        </pre>
+        </li>
+        <li>Create p2 repository
+        <p>Artifact's checksum will be calculated using your implementation and stored in two new properties, <code>download.checksum.tiger</code> and <code>artifact.checksum.tiger</code>.</p>
+        </li>
+        <li>Consume in p2 client
+        <p>If p2 client has no support for such MessageDigest implementation, it will ignore it.</p>
+        </li>
+      </ul>
+      For more information, check <code>artifactChecksums</code> extension point's documentation.
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"/>
+  </tr>
+</table>
+
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Photon milestone builds:</p>
+<ul>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.8/M5/">News for Eclipse Photon milestone build M5</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.8/M4/">News for Eclipse Photon milestone build M4</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.8/M3/">News for Eclipse Photon milestone build M3</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.8/M2/">News for Eclipse Photon milestone build M2</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.8/M1/">News for Eclipse Photon milestone build M1</a></li>
+</ul>
+
+<script type="text/javascript" src="../scripts.js"></script>
+
+</body>
+</html>

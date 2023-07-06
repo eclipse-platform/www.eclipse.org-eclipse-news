@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2018, 2019. This page is made available under license. For full details, see the LEGAL section in the documentation that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" type="text/css"/>
+<style type="text/css">
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+/*img {max-width: 520px;}*/
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+ul {padding-left: 13px;}
+</style>
+<title>Eclipse Project 4.11 - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Platform and Equinox</h2>
+<ul>
+    <li><a href="#ViewsAndDialogs">Views, Dialogs and Toolbar</a></li>
+    <!-- <li><a href="#Preferences">Preferences</a></li> -->
+    <li><a href="#StylingThemes">Themes and Styling</a></li>
+    <li><a href="#GeneralUpdates">General Updates</a></li>
+</ul>
+
+<!-- ****************** START OF N&N TABLE ****************** -->
+<table class="news">
+<colgroup>
+  <col class="title" />
+  <col />
+</colgroup>
+<tbody>
+  <!-- ******************* Views, Dialogs and Toolbar ************************************* -->
+  <tr>
+    <td id="ViewsAndDialogs" class="section" colspan="2">
+    <h2>Views, Dialogs and Toolbar </h2>
+    </td>
+  </tr>
+
+  <tr id="package-explorer-user-filter"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=226046 -->
+   <td class="title">User defined resource filters in Project Explorer</td>
+    <td class="content">
+      The <b>Filters and Customization...</b> menu in <b>Project Explorer</b> now shows an additional <b>User filters</b>
+      tab which can be used to exclude some resources from Project Explorer based on their name.
+      <p>Full name and regular expressions are supported.</p>
+      <p>
+        <img src="images/user-filters.png" alt="" />
+      </p> 
+    </td>
+  </tr> 
+  
+  <tr id="add-error-log"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=50517 -->
+   <td class="title">Error Log view added to Platform</td>
+    <td class="content">
+      The <b>Error Log</b> view has been moved from the PDE project to the Platform project. See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=50517" >bug 50517</a> for details. 
+    </td>
+  </tr>  
+  
+  <tr id="copy-installation-details"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=537944 -->
+   <td class="title">Copy to clipboard in Installation Details</td>
+    <td class="content">
+      A copy to clipboard action has been added to all tabs of the <b>Installation Details</b> dialog.
+      <p>
+        <img src="images/copy-installation-details.png" alt="" />
+      </p>
+    </td>
+  </tr>  
+  
+  <tr id="env-var-copy-paste"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=459906 -->
+   <td class="title">Copy &amp; paste of Environment Variables</td>
+    <td class="content">
+      The <b>Environment</b> tab in a <b>Launch configuration</b> dialog supports copy &amp;
+      paste actions now. The environment variables are transferred as text data, so it is not only possible
+      to copy &amp; paste between two different launch configurations, but also between
+      the launch configuration and e.g. some text editor or the command line.
+      <p>
+        <img src="images/env-var-copy-paste.png" alt="" />
+      </p>
+      <p>
+      This feature is available in all launch configurations which use the common <b>Environment</b> tab.
+      </p>
+    </td>
+  </tr>
+
+  <tr id="onboarding-text"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=543746 -->
+    <td class="title">Useful links to add projects to empty workspace</td>
+     <td class="content">
+      When Eclipse IDE is started for the first time or with a new workspace, it may not be intuitive for new users on how to proceed.  
+      To help the users in getting started, the following useful links have been provided to add a project to the workspace:
+      <ul>
+        <li>Perspective specific project creation wizard</li>
+        <li>Generic New Project wizard</li>
+        <li>Import projects wizard</li>
+       </ul>
+       <p>
+         <img src="images/ProjectExplorer.png" alt=""/>
+       </p>
+     </td>
+   </tr>  
+
+  <tr id="mnemonics-context-menu-error-log"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=343976 -->
+    <td class="title">New mnemonics in Error Log view</td>
+     <td class="content">
+      New mnemonics have been added for <b>Export Entry...</b> and <b>Event Detail</b> entries in the context menu of <b>Error Log</b> view.
+              <p>
+        <img src="images/mneumonics.png" alt="" />
+      </p>
+     </td>
+   </tr>  
+   
+  <!-- ******************* End of Views, Dialogs and Toolbar ************************************* -->
+
+  <!-- ****************** Preferences ************************************* -->
+  <!--
+  <tr>
+    <td id="Preferences" class="section" colspan="2">
+    <h2>Preferences </h2>
+    </td>
+  </tr>
+  -->
+  <!-- ****************** End of Preferences ************************************* -->
+
+  <!-- ******************* Themes and Styling ************************************* -->
+  <tr>
+    <td id="StylingThemes" class="section" colspan="2">
+    <h2>Themes and Styling </h2>
+    </td>
+  </tr>
+  
+  <tr id="dark-theme-mac"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=544039 -->
+   <td class="title">Improved Dark theme for Mac</td>
+    <td class="content">
+      The Dark theme for Mac has been improved to use the colors from the macOS system dark appearance.
+      Some of the notable changes in Eclipse IDE are the dark window title bar, menus, file dialogs, combos and buttons.
+      <p>
+      	Note: This change is available on macOS Mojave and later.
+      </p>
+      <p>Before:</p>
+      <p>
+      	<img src="images/darktheme-before.png" alt="" />
+      </p>
+      <p>After:</p> 
+      <p>
+        <img src="images/darktheme-after.png" alt="" />
+      </p> 
+    </td>
+  </tr>  
+
+   <tr id="dark-theme-windows"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=139791 -->
+   <td class="title">Improved Dark theme for Windows</td>
+    <td class="content">
+      The drawing operations have been improved in Windows so the custom drawn icons look better now. For example, check the close icon below.
+       <p>Before:</p>
+       <p>
+        <img src="images/closebutton_before.png" alt="" />
+      </p>
+      <p>After:</p> 
+      <p>
+        <img src="images/closebutton_after.png" alt="" />
+      </p> 
+    </td>
+  </tr>  
+  
+  <!-- ******************* End of Themes and Styling ************************************* -->
+
+  <!-- ******************* General Updates ************************************* -->
+  <tr>
+    <td id="GeneralUpdates" class="section" colspan="2">
+    <h2>General Updates </h2>
+    </td>
+  </tr>
+
+  <tr id="performance-improvements"> <!-- several bugs, only a summary point here -->
+   <td class="title">Performance improvements</td>
+    <td class="content">
+      The startup and interactive performance of multiple operations has been improved again in this release.
+    </td>
+  </tr>
+  <!-- ******************* End of General Updates ************************************* -->
+</tbody>
+</table>
+<!-- ****************** END OF N&N TABLE ****************** -->
+
+<script type="text/javascript" src="scripts.js"></script>
+  <p style="text-align:center">
+    <span style="color:#808080">Previous</span> <a style="margin:1em" href=".">Up</a> <a href="jdt.php">Next</a>
+  </p>
+</body>
+</html>

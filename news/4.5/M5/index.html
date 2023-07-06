@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="default_style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse Project 4.5 M5 News</title>
+</head>
+<body>
+<h1>Eclipse Project 4.5 M5 - New and Noteworthy</h1>
+<p>Here are some of the more noteworthy things available in the Mars milestone build M5 (2015-01-30)
+  which is now available for <a href="http://download.eclipse.org/eclipse/downloads/#4.5_Stable_Build" target="_top">download</a>.
+  <br/>
+  We also recommend to read the Tips and Tricks, either via <b>Help &gt; Tips and Tricks...</b> or online for
+  <a href="http://help.eclipse.org/topic/org.eclipse.platform.doc.user/tips/platform_tips.html">Platform</a>,
+  <a href="http://help.eclipse.org/topic/org.eclipse.jdt.doc.user/tips/jdt_tips.html">JDT</a>, and
+  <a href="http://help.eclipse.org/topic/org.eclipse.pde.doc.user/tips/pde_tips.htm">PDE</a>.
+</p>
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#PDE">PDE</a></li>
+</ul>
+
+<table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
+
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+
+  <tr id="perspective_customization">
+    <td class="title">Perspective Customization</td>
+    <td class="content">
+      After 3 years of absence the <b>Customize Perspective Dialog</b> and <b>Reset Perspective</b> are back to Eclipse.
+      The dialog which allows to configure the visible menu, toolbar, action sets
+      and shortcuts was broken starting with Eclipse 4.2, together with the the ability to reset the perspective.
+      <p>
+        <img src="images/cpd_toolbar_compare_M4_M5.png" alt="Configuring toolbars" />
+      </p>
+      <p>
+        <img src="images/cpd_menubar_compare_M4_M5.png" alt="Configuring menus" />
+      </p>
+      <p>
+        <img src="images/cpd_actionsets_compare_M4_M5.png" alt="Configuring action sets" />
+      </p>
+      <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=420956">bug 420956</a>.</p>
+     </td>
+   </tr>
+
+  <tr id="nested-projects">
+    <td class="title">Nested/Hierarchical view of projects</td>
+    <td class="content">
+      The <b>Project Explorer</b> now provides the ability to view the projects in a hierarchical (a.k.a. nested) form. For modular
+      projects, this allows to have your Project Explorer mapping more closely the organization of your modules as they are on the
+      file system. This hierarchical view of projects often makes easier to navigate modular projects.
+      <p>Hierarchical view of projects can be triggered from the <b>Project Explorer</b> view menu, under the <b>Projects Presentation</b> item.</p>
+      <p>
+      <img align="middle" src="images/nested-projects-menu.png" alt="Hierarchical view of projects can be triggered from the Project Explorer view menu, under the Projects Presentation item"/>
+      </p>
+      <p>
+        Then it makes the folders that are at the same location as a project replaced by the project, and the projects that are nested under
+        other projects will not be shown as root elements.</p>
+      <p><img align="middle" src="images/nested-projects.png" alt=""/></p>
+      <p>This implementation relies on the Common Navigator Framework.</p>
+    </td>
+  </tr>
+
+  <tr id="workspace-location-in-prefs">
+    <td class="title">Workspace location in preferences</td>
+    <td class="content">
+      The <b>Workspace</b> preference page now shows the current workspace path.  In addition the path can be configured to appear in the
+      window title, a feature that previously was only available through the <code>-showLocation</code> command line argument.
+      This argument is still in effect and overrides the preference.
+      <p>
+        <img src="images/workspace-in-prefs.png" alt="Show the workspace in preferences and in window title" />
+      </p>
+    </td>
+  </tr>
+
+  <tr id="css-section-prop">
+    <td class="title">New CSS properties for the Section title bar</td>
+    <td class="content">
+		The Forms Section title bar can now be styled with special CSS properties for a Section:
+		<p>
+        	<img src="images/section_css.png"  alt="CSS for Section"/>
+    	</p>
+    	<p>
+    		By using the same color for the background-color-titlebar and
+    		background-color-gradient-titlebar CSS property,
+    		like in the sample above, you get a solid background color.
+    	</p>
+        <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=431635">bug 431635</a>.</p>
+    </td>
+  </tr>
+   <tr id="css-section-multiple">
+    <td class="title">Support for multiple style sheet rules for the same selector</td>
+    <td class="content">
+		The CSS engines now scans all style sheets and combines all matching rules into a common style. This allows plug-ins to override previously defined styles:
+		<p>
+        	<img src="images/css_override.png"  alt="CSS override"/>
+    	</p>
+        <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=458342">bug 458342</a>.</p>
+    </td>
+  </tr>
+  
+  <tr id="darktheme-section-titlebar">
+    <td class="title">Improved look for Forms based editors in the dark theme</td>
+    <td class="content">
+		Using the new CSS capabilities in M5 to style the Section, the dark theme has been improved.
+		
+		<p>
+		The following image demonstrates the old look of the Section title bar,
+		where the title bar had a hard coded white gradient.
+	
+        </p>
+       <p>
+        	<img src="images/dark_theme_old_pde.png"  alt="Section in the dark theme before M5"/>
+    	</p>
+    	<p>
+		The following image demonstrates the new default look in the platform dark theme.
+    	</p>
+    	<p>
+        	<img src="images/dark_theme_new_pde.png"  alt="Section in the dark theme with M5"/>
+    	</p>
+        <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=430205">bug 430205</a>.</p>
+    </td>
+  </tr>
+  
+   <tr id="help-service">
+    <td class="title">Provisional EHelpService service</td>
+    <td class="content">
+		M5 provides the provisional help service <code>EHelpService</code> in the <code>IEclipseContext</code>. 
+		<code>EHelpService</code> is a thin wrapper to the <code>WorkbenchHelpSystem</code> in the Eclipse IDE and allows customers to
+		provide their custom implementation in Eclipse RCP applications.
+    </td>
+  </tr>
+  
+    <tr id="uimonitoring_deadlock">
+    <td class="title">Improved reporting of UI freezes and potential deadlocks</td>
+    <td class="content">
+      The interactive UI monitoring reporting has been improved to provide better error messages in case of
+      potential deadlocks.
+      <p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=458311">bug 458311</a>.</p>
+     </td>
+   </tr>
+
+   <tr id="message_registry">
+    <td class="title">Message registry</td>
+    <td class="content">
+    	Added support for binding control attributes for localization to a value of a messages class.
+    	By using such a binding, the dynamic update of widgets due to locale changes at runtime  (<i>Eclipse Translation Pattern</i>)
+    	gets easier to implement, since the localized widgets (e.g. <code>Labels</code>, <code>Buttons</code>, etc.)
+		are managed by the message registry.
+    	<p>
+    	To use the message binding for a messages class named <code>MyMessages</code>, you need to create a specialized 
+    	<code>BaseMessageRegistry</code> class like shown below:
+    	</p>
+    	<pre>@Creatable
+public class MyMessageRegistry extends BaseMessageRegistry&lt;MyMessages&gt; {
+
+	@Override
+	@Inject
+	public void updateMessages(@Translation MyMessages messages) {
+		super.updateMessages(messages);
+	}
+}</pre>
+    	<p>
+    	It can then be used like this:
+    	</p>
+    	<pre>@Inject
+MyMessageRegistry registry;
+
+@PostConstruct
+public void init(Composite parent) {
+	Label myFirstLabel = new Label(parent, SWT.WRAP);
+	Label mySecondLabel = new Label(parent, SWT.NONE);
+	Label myThirdLabel = new Label(parent, SWT.NONE);
+	
+	// bind myFirstLabel via method reference
+	registry.register(myFirstLabel::setText, (m) -> m.firstLabelMessage);
+	// bind mySecondLabel via method name
+	registry.register(mySecondLabel, "setText", "secondLabelMe
+	ssage");
+	// bind myThirdLabel via property name
+	registry.registerProperty(myThirdLabel, "text", "thirdLabelMessage");
+}</pre>
+    	<p>
+    	The <code>BaseMessageRegistry</code> supports bindings for Java version before Java 8.
+    	</p>
+    </td>
+  </tr>
+
+  <tr><td class="title">Text search speedup</td>
+    <td class="content">
+        Text search has been sped up by a factor 3x-4x for full workspace searches on multi-core machines.
+        <p>Text search now uses the <code>JobGroup</code> API added with Eclipse 4.5 (<code>org.eclipse.core.runtime.jobs.JobGroup</code>) to parallelize its processing.</p>
+    	<p>For more information see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441016">bug 441016</a>.</p>
+    </td>
+  </tr>
+
+  <tr id="transparent-bg">
+  <td class="title">Transparent background for Control</td>
+    <td class="content">
+    	SWT has added support to set a <code>Control</code>'s background as transparent. The <code>Color</code> class now supports specifying an alpha value (integer: 0 to 255) for transparency.
+    	Calling <code>Control#setBackground(Color color)</code> with a transparent color (color with alpha value '0'), sets the control's background as transparent.
+		<p><b>List of new classes and APIs:</b></p>
+		<ul>
+			<li>Class: <code>org.eclipse.swt.graphics.RGBA</code></li>
+			<li>Constant: <code>SWT.COLOR_TRANSPARENT</code> - This is a default transparent color</li>
+			<li>Methods added in <code>org.eclipse.swt.graphics.Color</code></li>
+			<li><ul>
+				<li><code>public Color (Device device, int red, int green, int blue, int alpha)</code></li>
+				<li><code>public Color (Device device, RGB rgb, int alpha)</code></li>
+				<li><code>public Color (Device device, RGBA rgba)</code></li>
+				<li><code>public RGBA getRGBA </code>()</li>
+				<li><code>public int getAlpha ()</code></li>
+			</ul></li>
+		</ul>
+		<p><b>Note:</b></p>
+    	<ul>
+    		<li>Currently, SWT honors only extreme values for alpha i.e, '0'(transparent) or '255'(opaque).</li>
+    		<li>Setting transparent background color fails for some controls on all platforms, they show the default background color instead. For e.g. Text, Combo.</li>
+    		<li>Setting transparent background color for some controls works on GTK3 only, it fails on other platforms. For e.g. Table, Tree.</li>
+    	</ul>
+		For an example on using the new APIs, see <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet365.java">Snippet365</a>.
+		<p>
+			<b>Snippet365 in action</b> (Controls with <code>SWT.COLOR_TRANSPARENT</code> background and Shell with gradient background image)
+		</p>
+		<p>
+        	<img src="images/transparent_control_background.png" alt="Transparent Background on Control widgets" />
+      	</p>
+    </td>
+  </tr>
+
+  <tr id="swt-tools">
+    <td class="title">SWT Tools</td>
+    <td class="content">
+		<a href="https://www.eclipse.org/swt/tools.php">SWT Tools</a> are now available in the Eclipse Platform p2 repository.
+		SWT Tools provides tools for developing SWT itself (JNIGen) but also general purpose tools like  <b>Sleak</b> 
+		(monitors the creation and disposal of SWT graphics resources) and <b>SWT Spy</b> (prints out information like style, layout and parent 
+		about the widget under the cursor).
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
+
+  	<tr id="pde-target-editor-reload">
+    <td class="title">Reload button added in target editor </td>
+    <td class="content">
+       In the <b>Target Editor</b>, on the <b>Locations</b> section, there is a reload button that clears the cached 
+       p2 profile and then resolves the target. This button is helpful in scenarios where the target editor is left in inconsistent
+       state due to issues like unstable network connection.
+      <p>
+        <img src="images/pde-target-editor-reload-button.png" alt="Target Editor Reload Button"/>
+      </p>
+    </td>
+  	</tr>
+  	
+  	
+  	 <tr id="pde-perspective-open-view">
+    <td class="title"> Show view in plug-in perspective has changed </td>
+    <td class="content">
+       In the <b>Plug-in Development Perspective</b>, the default <b>Show View menu</b> now has 
+      <p>
+        <img src="images/pde-45M5-showViewInPDEPerspective.png" alt="Show View in PDE Perspective 45M5"/>
+      </p>
+      
+       In contrast, the default Show View menu earlier had
+      <p>
+        <img src="images/pde-45M4orbefore-showViewInPDEPerspective.png" alt="Show View in PDE Perspective 45M4 or before"/>
+      </p>
+      
+      
+    </td>
+  	</tr>
+  	
+  	
+  <tr>
+    <td colspan="2"/>
+  </tr>
+</table>
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Mars milestone builds:</p>
+<ul>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.5/M4/">News for Eclipse Mars milestone build M4</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.5/M3/">News for Eclipse Mars milestone build M3</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.5/M2/">News for Eclipse Mars milestone build M2</a></li>
+  <li><a href="https://www.eclipse.org/eclipse/news/4.5/M1/">News for Eclipse Mars milestone build M1</a></li>
+</ul>
+</body>
+</html>

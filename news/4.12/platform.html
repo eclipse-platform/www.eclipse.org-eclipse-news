@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2018, 2019. This page is made available under license. For full details, see the LEGAL section in the documentation that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" type="text/css"/>
+<style type="text/css">
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+/*img {max-width: 520px;}*/
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+ul {padding-left: 13px;}
+</style>
+<title>Eclipse Project 4.12 - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Platform and Equinox</h2>
+<ul>
+    <li><a href="#ViewsAndDialogs">Views, Dialogs and Wizards</a></li>
+    <!--<li><a href="#Preferences">Preferences</a></li>-->
+    <li><a href="#StylingThemes">Themes and Styling</a></li>
+    <li><a href="#Equinox">Equinox</a></li>
+</ul>
+
+<!-- ****************** START OF N&N TABLE ****************** -->
+<table class="news">
+<colgroup>
+  <col class="title" />
+  <col />
+</colgroup>
+<tbody>
+  <!-- ******************* Views, Dialogs and Wizards ************************************* -->
+  <tr>
+    <td id="ViewsAndDialogs" class="section" colspan="2">
+    <h2>Views, Dialogs and Wizards </h2>
+    </td>
+  </tr>
+  
+  <tr id="pass-directory-to-launcher"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=500388 -->
+   <td class="title">Import project by passing it as command-line argument</td>
+    <td class="content">
+      You can import a project into Eclipse by passing its path as a parameter to the launcher.
+      The command would look like <code>eclipse /path/to/project</code> on Linux and Windows, or
+      <code>open -a Eclipse.app /path/to/project</code> on macOS.
+      <p>
+        <img src="images/pass-directory-to-launcher.png" alt="" />
+      </p> 
+    </td>
+  </tr>
+
+  <tr id="launch-config-quickaccess"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=545544 -->
+    <td class="title">Launch Run and Debug configurations from Quick Access</td>
+      <td class="content">
+      From the <b>Quick Access</b> proposals (accessible with <code>Ctrl+3</code> shortcut) you can now
+      directly launch any of the Run or Debug configurations available in your workspace.
+      <p>
+        <img src="images/run-debug-quickaccess.png" alt="" />
+      </p>
+      <p>
+      <b>Note:</b> For performance reasons, the extra <b>Quick Access</b> entries are only visible if the <code>org.eclipse.debug.ui</code>
+      bundle was already activated by some previous action in the workbench such as editing a launch configuration, or expanding the
+      <i>Run As...</i> menus.
+      </p>
+    </td>
+  </tr>
+  <!-- ******************* End of Views, Dialogs and Toolbar ************************************* -->
+
+  <!-- ****************** Preferences ************************************* -->
+  <!--
+  <tr>
+    <td id="Preferences" class="section" colspan="2">
+    <h2>Preferences </h2>
+    </td>
+  </tr>
+  -->
+  <!-- ****************** End of Preferences ************************************* -->
+
+    <!-- ******************* Themes and Styling ************************************* -->
+    <tr>
+      <td id="StylingThemes" class="section" colspan="2">
+      <h2>Themes and Styling </h2>
+      </td>
+    </tr>
+    
+    <tr id="view-menu"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=466511 -->
+     <td class="title">Improved View Menu Icon</td>
+      <td class="content">
+        The icon used for the view menu has been improved. It is now crisp on high 
+        resolution displays and also looks much better in the dark theme.
+        <p>Compare the old version at the top and the new version at the bottom:</p>
+        <p>
+          <img src="images/view_menu.png" alt="" />
+        </p>
+      </td>
+    </tr>
+    
+    <tr id="mac-hidpi"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=489451 -->
+     <td class="title">High resolution images drawn on Mac</td>
+      <td class="content">
+        On Mac, images and text are now drawn in high resolution during GC operations.
+        You can see crisp images on high resolution displays in the editor rulers, forms, etc in Eclipse.
+        <p>Compare the old version at the top and the new version at the bottom:</p>
+        <p>
+          <img src="images/hidpi-mac-old-behavior.png" alt="" />
+        </p>
+        <p>
+          <img src="images/hidpi-mac-new-behavior.png" alt="" />
+        </p>
+      </td>
+    </tr>
+    
+    <tr id="dark-theme-background-lines"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=544360 -->
+     <td class="title">Table/Tree background lines shown in dark theme on Mac</td>
+      <td class="content">
+        In dark theme on Mac, the <code>Table</code> and <code>Trees</code> in Eclipse now show the alternating dark lines 
+        in the background when <code>setLinesVisible(true)</code> is set. 
+        Earlier they had a gray background even if line visibility was true.
+        <p>
+        	Example of a Tree and Table in Eclipse with alternating dark lines in the background:
+        </p>
+        <p>
+          <img src="images/dark-theme-alternating-lines.png" alt="Tree and Table in Eclipse with alternating dark lines in the background" />
+        </p>
+      </td>
+    </tr>
+    <!-- ******************* End of Themes and Styling ************************************* -->
+  
+
+    <!-- ******************* Equinox ************************************* -->
+    <tr>
+      <td id="Equinox" class="section" colspan="2">
+      <h2>Equinox</h2>
+      </td>
+    </tr>
+
+    <tr id="parallel-bundle-activation"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=540507 -->
+     <td class="title">Support activating bundles in parallel</td>
+      <td class="content">
+        When the <b>Equinox OSGi Framework</b> is launched the installed bundles are activated
+        according to their configured start-level. The bundles with lower start-levels are
+        activated first. Bundles within the same start-level are activated sequentially from
+        a single thread.
+        <p>
+        A new configuration option <code>equinox.start.level.thread.count</code> has been added 
+        that enables the framework to start bundles within the same start-level in parallel. The
+        default value is <code>1</code> which keeps the previous behavior of activating bundles from a
+        single thread. Setting the value to <code>0</code> enables parallel activation using a
+        thread count equal to <code>Runtime.getRuntime().availableProcessors()</code>. Setting the
+        value to a number greater than <code>1</code> will use the specified number as the thread
+        count for parallel bundle activation.
+        </p>
+        <p>The default is <code>1</code> because of the risk of possible deadlock when
+        activating bundles in parallel.  Extensive testing must be done on the set of bundle
+        installed in the framework before considering enabling this option in a product.</p>
+      </td>
+    </tr>
+  <!-- ******************* End of Equinox ************************************* -->
+</tbody>
+</table>
+<!-- ****************** END OF N&N TABLE ****************** -->
+
+<script type="text/javascript" src="scripts.js"></script>
+  <p style="text-align:center">
+    <span style="color:#808080">Previous</span> <a style="margin:1em" href=".">Up</a> <a href="jdt.php">Next</a>
+  </p>
+</body>
+</html>

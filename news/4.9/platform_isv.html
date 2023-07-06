@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2018. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" type="text/css"/>
+<style type="text/css">
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+/*img {max-width: 520px;}*/
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+ul {padding-left: 13px;}
+</style>
+<title>Eclipse Project 4.9 - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Platform and Equinox API</h2>
+  <ul>
+    <li><a href="#Platform">Platform Changes</a></li>
+    <li><a href="#SWT">SWT Changes</a></li>
+  </ul>
+
+<table class="news">
+<colgroup>
+  <col class="title" />
+  <col />
+</colgroup>
+<tbody>
+
+  <!-- ******************** Platform ********************** -->
+  <tr>
+    <td id="Platform" class="section" colspan="2"><h2>Platform Changes</h2></td>
+  </tr>
+  
+    <tr id="e4-lifecycle-annotations">
+    <td class="title">Graduation of E4 Lifecycle Annotations</td>
+    <td class="content">
+      Four annotations that have been preliminary API for some time have been graduated.
+      The relevant classes are in package         
+      <a href="http://help.eclipse.org/2018-09/topic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/e4/ui/workbench/lifecycle/package-summary.html">
+     	 org.eclipse.e4.ui.workbench.lifecycle
+      </a>
+      in the <code>org.eclipse.e4.ui.workbench</code> bundle. This includes
+      <code>PostContextCreate</code>, <code>PreSave</code>, <code>ProcessAdditions</code> 
+      and <code>ProcessRemovals</code>.
+      <p>
+        These changes are part of an ongoing effort to finalize the E4 API. 
+      </p>     
+    </td>
+  </tr>
+
+  <tr id="type-parameters-core-databinding">
+    <td class="title">Type parameters on Core Databinding classes</td>
+    <td class="content">
+      Type parameters have been added to relevant classes and methods in the
+      <code>org.eclipse.core.databinding</code> bundle. This includes
+      <code>DataBindingContext</code>, <code>IConverter</code> and <code>IValidator</code>.
+      This makes code using these classes more explicit and clear and
+      can help catching bugs in an early stage.
+      <p>
+      Code example:
+      </p>
+      <pre>
+    IObservableValue&lt;String&gt; o1 = ...;
+    IObservableValue&lt;Integer&gt; o2 = ...;
+    DataBindingContext cont = ...;
+    IConverter&lt;String, Integer&gt; c = IConverter.create(String.class, Integer.class, Integer::decode);
+    UpdateValueStrategy&lt;String, Integer&gt; s = new UpdateValueStrategy&lt;&gt;();
+    s.setConverter(c);
+    cont.bindValue(o1, o2, s, null);
+      </pre>
+      <p>
+      These changes are part of an ongoing effort to make the databinding API more typesafe. 
+      This effort started with the addition of type parameters to the bundles
+      <code>org.eclipse.core.databinding.property</code> and
+      <code>org.eclipse.core.databinding.observable</code>, and will continue with the bundles
+      <code>org.eclipse.core.databinding.beans</code> and <code>org.eclipse.jface.databinding</code>
+      in a future release.
+      </p>
+      <p>
+      Note: Users of databinding APIs that are not yet updated to take advantage of the type 
+      parameters will find that the new type parameters cause raw type warnings in their code. 
+      The best way to handle warnings from code that can't be updated is often to suppress these 
+      warnings using <code>@SuppressWarnings("rawtypes")</code>. Since the implementation of 
+      the databinding classes has not changed, suppressing warnings is a safe thing to do in this
+      case.
+      </p>
+    </td>
+  </tr>
+
+  <tr id="generic-editor-folding">
+    <td class="title">Contribute folding to the Generic Editor</td>
+    <td class="content">
+      The Generic Editor provides a new extension point <code>org.eclipse.ui.genericeditor.foldingReconcilers</code> to customize folding.
+      <p>This example shows how LSP4E could contribute folding reconciler only for editor input supporting a language server:</p>
+      <pre>
+&lt;extension
+      point="org.eclipse.ui.genericeditor.foldingReconcilers">
+   &lt;foldingReconciler
+         class="org.eclipse.lsp4e.operations.folding.FoldingReconciler"
+         contentType="org.eclipse.core.runtime.text">
+      &lt;enabledWhen>
+         &lt;with
+               variable="editorInput">
+            &lt;test
+                  property="org.eclipse.lsp4e.hasLanguageServer">
+            &lt;/test>
+         &lt;/with>
+      &lt;/enabledWhen>
+   &lt;/foldingReconciler>
+&lt;/extension>
+      </pre>
+        When no other folding reconciler is registered for current document,
+        the generic editor uses a strategy which folds blocks of lines based on whitespaces and indentation:
+	    <p>
+	      <img src="images/generic-editor-folding.png" alt="" />
+	    </p>
+    </td>
+  </tr>
+
+  <tr id="generic-editor-character-pair-matcher">
+    <td class="title">Contribute character pair matcher to the Generic Editor</td>
+    <td class="content">
+      The Generic Editor provides a new extension point <code>org.eclipse.ui.genericeditor.characterPairMatchers</code> to customize character pair matchers (matching brackets).
+      <p>The <a href="http://git.eclipse.org/c/platform/eclipse.platform.text.git/tree/org.eclipse.ui.genericeditor.examples">Generic Editor examples</a> shows how to manage matching 
+      bracket for tag elements of .project file:</p>
+      <pre>
+&lt;extension
+      point="org.eclipse.ui.genericeditor.characterPairMatchers"&gt;
+   &lt;characterPairMatcher
+         class="org.eclipse.ui.genericeditor.examples.dotproject.TagCharacterPairMatcher"
+         contentType="org.eclipse.ui.genericeditor.examples.dotproject"&gt;
+   &lt;/characterPairMatcher&gt;
+&lt;/extension&gt;
+      </pre>
+	  <p>
+	    <img src="images/generic-editor-character-pair-matcher.png" alt="" />
+	  </p>      
+    </td>
+  </tr>
+
+  <!-- *********************** SWT *********************** -->
+  <tr>
+    <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
+  </tr>
+  
+  <tr id="calendar-weeknumbers">
+    <td class="title">Display week numbers in DateTime calendar</td>
+    <td class="content">
+      <p>
+       The <code>SWT.DateTime</code> calendar widget will now display week numbers, when the <code>SWT.CALENDAR_WEEKNUMBERS</code> style flag is set.
+      </p>
+      <p>
+        <img src="images/calendar-weeknumbers.png" alt="" />
+      </p>
+      <p>
+      	Note: This is a HINT and currently only works on Windows and Linux/GTK.
+      </p>
+    </td>
+  </tr>
+
+  <tr id="alt-gr-display-post">
+  	<td class="title">New SWT.ALT_GR constant and support for non-US keyboard layouts</td>
+  	<td class="content">
+  		SWT on GTK3 has added a <code>SWT.ALT_GR</code> constant which can be used to generate special characters requiring the AltGr modifier using
+  		the <code>Display.post(Event)</code> method. 
+  		<p>
+  		 The <code>Display.post(Event)</code> method now supports simulating key events for non-US
+  		 keyboard layouts and the option to send key modifiers together with key characters in a single event.
+  		</p>
+  	</td>
+  </tr>
+
+  <tr id="zoom-changed-api">
+    <td class="title">New event SWT.ZoomChanged added</td>
+    <td class="content">
+      A new event type <code>SWT.ZoomChanged</code> has been added to SWT to notify clients that the SWT zoom has changed.
+      Listeners for the ZoomChanged event should be added to a <code>Shell</code>. The event's detail field contains the new SWT zoom level.
+      <p>
+      Note: This operation is a hint and is supported on Windows 10 only.
+      </p>
+    </td>
+  </tr>
+
+  <tr id="dark-theme-table-tree-header">
+    <td class="title">Improved Table and Tree header under dark theme</td>
+    <td class="content">
+      SWT on Windows has made the following improvements to <code>Table</code> and <code>Tree</code> headers, which improves their visibility in Dark theme:
+      <ul>
+		<li> Add a new line separator between header and the first row.</li>
+		<li> Draw the header column separators always (irrespective of the value of <code>getLinesVisible()</code>).</li>
+      </ul>
+      <p>
+        <img src="images/dark_theme_table_header.png" alt="" />
+      </p>
+    </td>
+  </tr>
+
+  </tbody>
+</table>
+<script type="text/javascript" src="scripts.js"></script>
+
+  <p style="text-align:center">
+    <a href="jdt.php">Previous</a> <a style="margin:1em" href=".">Up</a> <a href="pde.php">Next</a>
+  </p>
+
+</body>
+</html>

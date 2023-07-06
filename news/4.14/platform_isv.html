@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2018, 2019. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="STYLESHEET" href="news.css" type="text/css"/>
+<style type="text/css">
+body {max-width: 900px;}
+table.news col.title {width: 30%;}
+/*img {max-width: 520px;}*/
+table.news {table-layout: fixed; border-collapse: collapse; width: 100%;}
+table.news td {border-top: solid thin black; padding: 10px; overflow: visible;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; font-weight: bold;}
+table.news tr td.content {vertical-align: top;}
+ul {padding-left: 13px;}
+</style>
+<title>Eclipse Project 4.14 - New and Noteworthy</title>
+</head>
+
+<body>
+<h2>Platform and Equinox API</h2>
+  <ul>
+    <li><a href="#Platform">Platform Changes</a></li>
+    <li><a href="#SWT">SWT Changes</a></li>
+  </ul>
+
+<!-- ****************** START OF N&N TABLE****************** -->
+<table class="news">
+<colgroup>
+  <col class="title" />
+  <col />
+</colgroup>
+<tbody>
+  <!-- ******************** Platform ********************** -->
+  <tr>
+    <td id="Platform" class="section" colspan="2"><h2>Platform Changes</h2></td>
+  </tr>
+
+  <tr id="text-selection-no-ui-thread"> <!-- https://bugs.eclipse.org/547683 -->
+    <td class="title">Get TextViewer selection out of UI thread</td>
+    <td class="content">
+      A new extension interface <b><code>ITextViewerExtension9</code></b> was added to <code>ITextViewer</code>. This extension interface
+      adds a new method <code>getLastKnownSelection</code> to get the text selection for the viewer, with constraint (by API contract) that this method
+      can be called <em>outside of the UI thread</em>.
+      <p>This method allows to build extensions (like completion proposal computers, hovers and others) that can
+      work outside of the UI thread, as a separate job, without blocking the UI but that still require access to the
+      text selection.</p>
+      <p>The <code>TextViewer</code> concrete implementation (used by most textual editors) has been
+      enriched to implement this interface and provide associated method.</p>
+      <p><b>NOTE:</b> Since selection can change in the UI thread while this method may be running in the non-UI thread, it can
+      happen that the <code>getLastKnownSelection</code> method returns a selection that's no more up-to-date. Special care should be
+      taken if having the very current selection is important in your code; but experience with adoption of this method
+      in typical cases has shown that this is rarely the case, and that if your code needs to react to selection changes,
+      using an <code>ISelectionListener</code> should be preferred.</p>
+    </td>
+  </tr>
+
+  <tr id="quick-assist-extension-point"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=544448 -->
+    <td class="title">Quick assist extension point for Generic Editor</td>
+    <td class="content">
+    A new extension point <b><code>org.eclipse.ui.genericeditor.quickAssistProcessors</code></b> has been added to allow contributing to the quick assist in the generic editor.
+    <p>
+     The following example shows how to contribute to the Generic Editor's quick assist:
+    </p>
+    <pre>&lt;extension point=&quot;org.eclipse.ui.genericeditor.quickAssistProcessors&quot;&gt;
+    &lt;quickAssistProcessor
+        class=&quot;org.eclipse.ui.genericeditor.tests.contributions.MockQuickAssistProcessor&quot;
+        contentType=&quot;org.eclipse.ui.genericeditor.tests.content-type&quot;&gt;
+    &lt;/quickAssistProcessor&gt;
+&lt;/extension&gt;</pre>
+    The contributing extension must provide a class which implements <code>org.eclipse.jface.text.quickassist.IQuickAssistProcessor</code>.
+    </td>
+  </tr>
+
+  <tr id="display-helper-lambda"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=551211 -->
+    <td class="title">Easier usage of DisplayHelper</td>
+    <td class="content">
+      The <b><code>org.eclipse.ui.tests.harness.util.DisplayHelper</code></b> that's often conveniently
+      used in tests to automate wait on asynchronous UI results now offers a more concise
+      syntax, relying on the new static <code>waitForCondition(display, timeout, condition)</code>
+      method.
+      <p>Former constructs like:</p>
+<pre>
+assertTrue(new DisplayHelper() {
+    @Override
+    public void condition() {
+        return some.boolean() &amp;&amp; expression;
+    }
+}.waitForCondition(display, 1000));
+</pre>
+can now be replaced by:
+<pre>
+assertTrue(DisplayHelper.waitForCondition(display, 1000, () -> some.boolean() &amp;&amp; expression))
+</pre>
+     </td>
+  </tr>
+
+  <tr id="selection_listener_factory"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=550329 -->
+    <td class="title">Selection Listener Factory</td>
+    <td class="content">
+       A new API was introduced to make participants of the Selection framework more efficient.
+       <p>
+         Selection listeners are notified of all selections in the Workbench. This
+         means that the listener is always required to filter unwanted selections. In
+         addition, the listener has to make sure not to waste cycles in the UI
+         thread, for instance, not update the UI while it is invisible.
+       </p><p>
+         This filtering generally requires <i>a lot</i> of boilerplate code while,
+         ideally, you only want to receive selections that are of interest.
+       </p><p>
+         This factory takes care of many practical filtering scenarios by allowing the
+         creation of an intermediate selection service that only calls you back with
+         selections you can work with.
+       </p><p>
+         See usage examples in the <a href="https://git.eclipse.org/r/plugins/gitiles/platform/eclipse.platform.ui/+/master/bundles/org.eclipse.ui.workbench/Eclipse%20UI/org/eclipse/ui/SelectionListenerFactory.java#30">SelectionListenerFactory</a> documentation.
+       </p>
+    </td>
+  </tr>
+  
+  <tr id="update-part-icon"> <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=475357 -->
+   <td class="title">Update the icon of a Part at runtime</td>
+    <td class="content">
+      You can now update the icon of a Part in a part stack by setting its icon URI at any time. There is no need to modify the part's transient data anymore.
+   </td>
+  </tr>
+  <!-- ******************** End of Platform ********************** -->
+
+  <!-- *********************** SWT *********************** -->
+  <tr>
+    <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
+  </tr>
+  <tr id="toolitem-disabled-image"> <!-- https://bugs.eclipse.org/302918 -->
+    <td class="title">Disabled toolbar items on GTK</td>
+    <td class="content">
+      <b><code>ToolItem.setDisabledImage()</code></b> is now fully implemented for ToolItem on Linux/GTK, and greatly improves the ability
+      to distinguish a disabled ToolItem from an enabled one.
+      <p>Below is a screenshot with disabled toolbar buttons;
+      the left toolbar shows the current implementation, the right one the shows the old implementation.</p>
+      <p><img src="images/toolitem-disabled-comparison.png" alt="ToolBar comparison"/></p>
+      <p>
+       This API already worked on Windows and macOS.
+      </p>
+    </td>
+  </tr>
+
+  <tr id="image-svg-gtk"> <!-- https://bugs.eclipse.org/545804 -->
+    <td class="title">SVG image API added and implemented on GTK</td>
+    <td class="content">
+      SWT now has an API to support SVG images, <b><code>SWT.IMAGE_SVG</code></b>, which allows <code>ImageLoader</code> to load them.
+      <p>Currently this functionality is only implemented on Linux/GTK, on all other platforms the API is a HINT.</p>
+    </td>
+  </tr>
+
+  <tr id="ccombo-alignment"> <!-- https://bugs.eclipse.org/349112 -->
+    <td class="title">Set alignment for CCombo</td>
+    <td class="content">
+     The <code>CCombo</code> widget can now align the text field content, the alignment is not applied to the drop-down list.
+     <p>The alignment for <code>CCombo</code> can be specified as a style bit in the constructor or using the <code>CCombo.setAlignment()</code> method.
+     You can also get the value of the <code>CCombo</code>'s alignment using <code>getAlignment()</code> method.</p>
+     <p>The below screen-shot shows possible <code>CCombo</code> alignments:</p>
+     <p><img src="images/ccombo-alignment.png" alt="Aligned CCombo widgets"/></p>
+    </td>
+  </tr>
+  <!-- *********************** End of SWT *********************** -->
+
+</tbody>
+</table>
+<!-- ****************** END OF N&N TABLE ****************** -->
+
+<script type="text/javascript" src="scripts.js"></script>
+  <p style="text-align:center">
+    <a href="jdt.php">Previous</a> <a style="margin:1em" href=".">Up</a> <a href="pde.php">Next</a>
+  </p>
+</body>
+</html>

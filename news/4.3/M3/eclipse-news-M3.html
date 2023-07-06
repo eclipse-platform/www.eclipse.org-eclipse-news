@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="default_style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse Project 4.3 M3 News</title>
+</head>
+<body>
+<h1>Eclipse Project 4.3 M3 - New and Noteworthy</h1>
+<p>Here are some of the more noteworthy things available in milestone build M3 
+  (November 2, 2012) which is now available for <a href="http://download.eclipse.org/eclipse/downloads/" target="_top">download</a>.
+</p>
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#JDT">JDT</a></li>
+  <li><a href="#PDE">PDE</a></li>
+</ul>
+
+<table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+  <tr id="x-start-on-first-thread">
+    <td class="title">Option to omit -XstartOnFirstThread</td>
+    <td class="content">
+      If you are launching an SWT program on Mac OS X, you can now selectively add / remove the <code>-XstartOnFirstThread</code> VM argument
+      in the event your VM does not support it. This option can be configured per launch configuration and is available on the standard Arguments
+      tab for Java configurations (Java Application, Eclipse, etc.).
+      <p><img src="images/x-start-on-first-thread.png" alt="New VM preference allowing users to selectively add the -XstartOnFirstThread argument per-configuration"/></p>
+    </td>
+  </tr>
+  <tr id="only-include-exported-entries">
+    <td class="title">Global preference to include exported entries during launching</td>
+    <td class="content">
+      A new global preference has been added so you can only allow exported classpath entries to be used during launching. Previously, this 
+      was only customizable per launch configuration on the default classpath entry on the Java Classpath tab. The new preference does not affect 
+      launch configuration data, so no migration is needed.
+      
+      <p>
+      The new preference can be found on the <b>Java &gt; Debug</b> preference page.
+      <br/><img src="images/only-include-exported.png" alt="New global preference to only include exported classpath entries"/>
+      </p>
+    </td>
+  </tr>
+  <tr id="launch-dialog-warnings">
+    <td class="title">Launch configuration dialog can show warnings</td>
+    <td class="content">
+      Previously, contributors could only set an 'ok' or an 'error' state in their launch configuration tags / groups. Now,
+      contributors can set a warning state with a message for their tabs / groups - possibly warning users about set options
+      that might be problematic, but do not necessarily need to prevent launching.
+      <p><img src="images/lcd-warnings.png" alt="Launch configuration dialog showing warning message / state"/></p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+  <tr id="javadoc-view-target">
+    <td class="title">Javadoc view resolves enclosing method call and keeps last target</td>
+    <td class="content">
+      The <b>Javadoc</b> and <b>Declaration</b> views now try to find the enclosing method call
+      if the selection or caret position doesn't resolve to a valid Java element.
+      <p>
+        <img src="images/javadoc-view-target.png" alt="'String.copyValueOf(data, offset, count)', with 'data' selected."/>
+      </p>
+      Furthermore, they keep the last resolved target element even if no new target can be resolved.
+    </td>
+  </tr>
+  
+  <tr id="unused-type-parameter">
+    <td class="title">Detection of unused type parameters</td>
+    <td class="content">
+      The compiler can now detect unused type parameters:
+      <p>
+        <img src="images/unused-type-parameter.png" alt=""/>
+      </p>
+      <p>
+        The <b>Unused type parameter</b> diagnostic is set to Ignore by default and can be enabled on the 
+		<b>Java &gt; Compiler &gt; Errors/Warnings</b>
+		preference page.
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="unused-type-parameter">
+    <td class="title">Option to omit @Override for interface methods</td>
+    <td class="content">
+      Eclipse can add <code>@Override</code> annotations for overriding methods:
+      <p>
+        <img src="images/override-annotation-code-style.png" alt="Code Style preference page"/>
+      </p>
+      <p>
+        If your code uses Java 1.6 or higher, the <code>@Override</code> annotation is also added to
+        methods that override an interface method. If you don't want to use <code>@Override</code>
+        in this case, then follow the link and disable the corresponding compiler option:
+      </p>
+      <p>
+        <img src="images/override-annotation-compiler.png" alt="Errors/Warnings preference page, checkbox 'Include implementations of interface methods (1.6 or higher)'"/>
+      </p>
+      <p>
+        You may also want to enable the diagnostic for Missing '@Override' annotation.   
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
+  
+  <tr id="additional-type-info">
+    <td class="title">Javadoc hover available in plug-in manifest editor</td>
+    <td class="content">
+      When editing the plugin.xml or manifest.mf files using the <b>Plug-in Manifest Editor</b>, 
+      opening content assist for type proposals will now display additional javadoc information.
+      <p>
+        <img src="images/additional-type-info.png" alt="Additional info javadoc hover for type proposals"/>
+      </p>
+    </td>
+  </tr>
+  
+    <tr id="plugin-image-view">
+    <td class="title">Plug-in image browser view</td>
+    <td class="content">
+      A new view has been added to PDE.  The <b>Plug-in Image Browser</b> view displays icons and other
+      images from your target platform, running application or current workspace. 
+      <p>
+      	When an image is selected, additional information is displayed at the bottom of the view.  The
+        reference text can be used in plug-in extensions to refer to images in other bundles.
+      </p>
+      <p>
+        <img src="images/plugin-image-view.png" alt="The plug-in image browser view"/>
+      </p>
+    </td>
+  </tr>
+  
+    <tr id="default-launch-ee">
+    <td class="title">Launch configurations choose default execution environment</td>
+    <td class="content">
+      New PDE launch configurations (Eclipse Application, JUnit Plug-in Test, OSGi Framework) will
+      use a default execution environment to determine which Java runtime environment to launch with.
+      The launch configuration can be changed to use a different execution environment or a specific
+      JRE on the <b>Main</b> tab.
+      <p>
+        To find a valid execution environment, all known environments are checked against each bundle 
+        or plug-in that will be launched. Only an execution environment that is valid for all
+        plug-ins and bundles will be selected.  If no valid environment is found, a default JRE
+        will be chosen as before.
+      </p>
+      <p>
+        <img src="images/default-launch-ee.png" alt="Java runtime settings on the Main tab of PDE launch configurations"/>
+      </p>
+      <p>
+      	The JRE associated with the selected execution environment will be used to launch. To change 
+      	which JRE is associated with an execution environment, use the <b>Preferences > Java > Installed JREs > 
+      	Execution Environments</b> preference page.
+      </p>
+    </td>
+  </tr>
+    <tr id="pde-5-bree">
+    <td class="title">PDE UI requires a 1.5 EE</td>
+    <td class="content">
+      The bundle required execution environment for the PDE UI bundles org.eclipse.pde.core and
+      org.eclipse.pde.ui is now J2SE-1.5.
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2">  </td>
+  </tr>
+</table>
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Kepler milestone builds:</p>
+<ul>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.3M2-201209201300/news/">New for Eclipse Kepler milestone build M2 (September 21, 2012)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.3M1-201208101300/news/">New for Eclipse Kepler milestone build M1 (August 10, 2012)</a></li>
+</ul>
+</body>
+</html>

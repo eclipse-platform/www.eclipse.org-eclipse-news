@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="default_style.css" type="text/css" title="main" media="screen" />
+<title>Eclipse Project 4.3 M6 News</title>
+</head>
+<body>
+<h1>Eclipse Project 4.3 M6 - New and Noteworthy</h1>
+<p>Here are some of the more noteworthy things available in milestone build M6 
+  (March 15, 2013) which is now available for <a href="http://download.eclipse.org/eclipse/downloads/" target="_top">download</a>.
+</p>
+<ul>
+  <li><a href="#Platform">Platform</a></li>
+  <li><a href="#JDT">JDT</a></li>
+  <li><a href="#PDE">PDE</a></li>
+</ul>
+
+<!-- IMPORTANT: Follow instructions in ../whats-new-template/eclipse-whats-new-template.html -->
+
+<table class="news" border="0" cellpadding="10" cellspacing="0" width="80%">
+  <tr>
+    <td colspan="2" class="section" id="Platform">Platform</td>
+  </tr>
+  <tr id="migrationWizard">
+    <td class="title">Migration Wizard</td>
+    <td class="content">
+     Building on the changes introduced in M5 to detect changes in shared installs, Eclipse now includes a migration wizard to help users through the re-ininstallation of their plug-ins.
+	 <p>This wizard is presented in two situations. First, when a read-only installation of Eclipse is being changed (i.e. Eclipse is being updated or plugins are added / remove), second when a new read-only installation of Eclipse is run for the first time.</p>
+     <p><img src="images/migration-wizard.png" alt=""/></p>
+    </td>
+  </tr>
+  <tr id="linkColor">
+    <td class="title">BIDI Text Direction</td>
+    <td class="content">
+     New API has been added to allow text direction to be set independent of the widget orientation. For more info see <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet364.java">Snippet 364</a>.
+     <p><img src="images/bidi.png" alt=""/></p>
+    </td>
+  </tr>
+  <tr id="bidi">
+    <td class="title">New SWT color constant for hyperlinks</td>
+    <td class="content">
+     A new constant (SWT_COLOR_LINK_FOREGROUND) has been added that will return the native color of hyperlinks on all platforms.
+     <p><img src="images/linkColor.png" alt=""/></p>
+    </td>
+  </tr>
+  <tr id="whole-word-option">
+    <td class="title">Whole word option on File Search page</td>
+    <td class="content">
+     The <b>File Search</b> page now allows to search for words via a new option:
+     <p><img src="images/whole-word-option.png" alt=""/></p>
+    </td>
+  </tr>
+  <tr id="use-last-page-option">
+    <td class="title">Open Search dialog on last used page</td>
+    <td class="content">
+     The Search dialog can now be configured to open on the last used page, instead of computing the best matching page based on the current selection:
+     <p><img src="images/use-last-page-option.png" alt=""/></p>
+    </td>
+  </tr>
+ 
+  <tr>
+    <td colspan="2" class="section" id="JDT">JDT</td>
+  </tr>
+  <tr id="convert-to-if-return">
+    <td class="title">'Convert to if-!-return' Quick Assist</td>
+    <td class="content">
+     Ever encountered a long <code>if</code> statement that can be safely inverted to an early return, so that you can ignore the code that follows, and make it easier to understand? 
+     Now, you can just use a Quick Assist <b>(Ctrl+1)</b> on the <code>if</code> statement to do this refactoring:
+     <p><img src="images/convert-to-if-!-return.png" alt=""/></p>
+    </td>
+  </tr>
+
+  <tr id="linked-Javadoc-package-names">
+   <td class="title">Package names are linked in Javadoc hover and view</td>
+   <td class="content">
+     You can now click individual package names displayed in the header of the Javadoc hover or the Javadoc view to see the package Javadoc:
+     <p><img src="images/javadoc-package-names-linked.png" alt=""/></p>
+   </td>
+  </tr>
+   <tr id="InfoViews-should-indicate-when-linking-is-outOfSync">
+   <td class="title">Javadoc and Declaration view indicate when out of sync</td>
+   <td class="content">
+     The Javadoc and Declaration view now indicate when their content is no longer in sync with the current selection:
+     <p><img src="images/declaration-view-indicating-outofsync.png" alt=""/></p>
+   </td>
+  </tr>
+  
+  <tr id="junit-4-11">
+    <td class="title">Only one JUnit (4.11)</td>
+    <td class="content">
+        The org.junit bundle has been updated to
+        <a href="http://htmlpreview.github.com/?https://github.com/junit-team/junit/blob/master/doc/ReleaseNotes4.11.html">JUnit 4.11</a>.
+      <p>
+        At the same time, our good old friend org.junit_3.8.2 has been retired, and the org.junit4 compatibility bundle
+        has also been removed. Your <code>Require-Bundle:</code> entries should just point to
+        <code>org.junit;bundle-version="4.11.0"</code> (or an earlier version, if you like).
+      </p>
+      <p>Note that JUnit 4 still contains the JUnit 3 APIs. If you need org.junit_3.8.2 back for
+        whatever reason, you can still get it from <a href="http://download.eclipse.org/tools/orbit/downloads/">Orbit</a>.
+      </p>
+    </td>
+  </tr>
+  
+  <tr id="debug-improved-generics-eval">
+   <td class="title">Improved evaluation of generics while debugging</td>
+   <td class="content">
+     Significant improvements have been made in the debug evaluation engine to support the use of
+     generics. This impacts the use of conditional breakpoints, the display view, the expressions view,
+     and the inspect/display/execute actions. Previously, evaluations acting on classes with generics
+     would sometimes encounter compilation errors.
+   </td>
+  </tr>
+  
+  <tr id="debug-ext-source-api">
+   <td class="title">API to contribute location information for non-standard JRE / JDK libraries</td>
+   <td class="content">
+     JDT Debug now provides an extension point <code>org.eclipse.jdt.launching.libraryLocationResolvers</code>
+     that you can use to contribute location information for non-standard JRE / JDK libraries.  For example,
+     this extension point can be used to provide Javadoc and source locations for JARs in the ext location
+     of a JRE.
+     <p>
+     Extenders must provide an implementation of <code>org.eclipse.jdt.launching.ILibraryLocationResolver</code>
+     which can provide package roots, source paths, Javadoc locations and index locations for a library.
+     </p> 
+   </td>
+  </tr>
+  
+  <tr>
+    <td colspan="2" class="section" id="PDE">PDE</td>
+  </tr>
+  <tr id="api-unresolved-bundles">
+   <td class="title">API Tools Analysis and Freeze tasks can run with unresolved bundles</td>
+   <td class="content">
+	 The API Tools <b>Analysis</b> and <b>API Freeze</b> Ant tasks will now process bundles
+	 with resolver errors such as missing dependencies.  This means you can now get analysis results
+	 for an incomplete product.
+	 <p>
+     The Ant tasks produce reports based on a reference baseline and a profile.  Previously both 
+     the baseline and the profile had to describe complete products.  Any bundle that had resolver 
+     errors due to missing dependencies would be skipped.  Now these bundles will be processed.
+     </p>
+     <p>
+     Resolver errors can affect the results, therefore a list of resolver errors is included in the XML output
+     and warnings are added to the HTML report. To return to the old behavior of skipping
+     unresolved bundles, you can set <code>processunresolvedbundles="false"</code> on your Ant task.
+     </p>
+     <p>
+     <img src="images/unresolved-analysis.png" alt="Unresolved bundle in the analysis task"/>
+     </p>
+   </td>
+  </tr>
+
+  <tr> 
+    <td colspan="2">  </td>
+  </tr>
+</table>
+<p>The above features are just the ones that are new since the previous milestone
+build. Summaries for earlier Kepler milestone builds:</p>
+<ul>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.3M5a-201302041400/news/">New for Eclipse Kepler milestone build M5a (February 5, 2013)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.3M4-201212140730/news/">New for Eclipse Kepler milestone build M4 (December 14, 2012)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.3M3-201210312000/news/">New for Eclipse Kepler milestone build M3 (November 2, 2012)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.3M2-201209201300/news/">New for Eclipse Kepler milestone build M2 (September 21, 2012)</a></li>
+  <li><a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.3M1-201208101300/news/">New for Eclipse Kepler milestone build M1 (August 10, 2012)</a></li>
+</ul>
+</body>
+</html>
